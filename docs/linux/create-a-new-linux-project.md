@@ -1,16 +1,16 @@
 ---
-title: 在 Visual Studio 中新建 C++ Linux 项目
-ms.date: 10/24/2019
+title: 在 Visual Studio 中创建 Linux MSBuild C++ 项目
+ms.date: 08/04/2020
 description: 在 Visual Studio 中新建一个基于 MSBuild 的 Linux 项目。
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 1e79dd50756b71aabae7ccec75e57178898e7720
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364354"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043845"
 ---
-# <a name="create-a-new-linux-project"></a>新建 Linux 项目
+# <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中创建 Linux MSBuild C++ 项目
 
 ::: moniker range="vs-2015"
 
@@ -42,7 +42,7 @@ Linux 项目在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置 Linux 项目](configure-a-linux-project.md)
+[配置 MSBuild Linux 项目](configure-a-linux-project.md)
 
 ::: moniker-end
 
@@ -72,6 +72,6 @@ Linux 项目在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置 Linux 项目](configure-a-linux-project.md)
+[配置 Linux MSBuild 项目](configure-a-linux-project.md)
 
 ::: moniker-end

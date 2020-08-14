@@ -1,15 +1,16 @@
 ---
-title: 在 Visual Studio 中配置 C++ Linux 项目
-ms.date: 06/22/2020
+title: 在 Visual Studio 中配置 Linux MSBuild C++ 项目
+ms.date: 08/06/2020
+description: 在 Visual Studio 中配置基于 MSBuild 的 Linux 项目，以便可以生成它。
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
+ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269736"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88043858"
 ---
-# <a name="configure-a-linux-project"></a>配置 Linux 项目
+# <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中配置 Linux MSBuild C++ 项目
 
 ::: moniker range="vs-2015"
 
@@ -17,7 +18,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-本主题介绍如何配置 C++ Linux 项目，如[在 Visual Studio 中新建 C++ Linux 项目](create-a-new-linux-project.md)中所述。 对于 CMake Linux 项目，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
+本主题介绍如何配置基于 MSBuild 的 Linux 项目，如[在 Visual Studio 中创建 Linux MSBuild C++ 项目](create-a-new-linux-project.md)中所述。 对于 Linux CMake 项目，请参阅[配置 Linux CMake 项目](cmake-linux-project.md)。
 
 可以将 Linux 项目配置为以物理 Linux 计算机、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about) (WSL) 为目标。
 
