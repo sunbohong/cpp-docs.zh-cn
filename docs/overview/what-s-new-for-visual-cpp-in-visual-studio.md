@@ -3,12 +3,12 @@ title: Visual Studio 中的 C++ 新变化
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 28b3708c8064623a364b7a60eb63c508808b0a0b
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: 509c9d458360c2ba8f46054b69de38aad8bbf56a
+ms.sourcegitcommit: 8140647370017b885432349ce89f187c3068b46a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389995"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88144173"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
@@ -636,7 +636,7 @@ C++ 是通用 Windows 应用工作负荷的可选组件。 目前，必须手动
 
 添加了“Windows 应用程序打包项目”项目模板，极大地简化了使用桌面桥打包桌面应用程序的工作。 可在“文件 | 新建 | 项目 | 已安装 | Visual C++ | 通用 Windows 平台”下获得此模板。 有关详细信息，请参阅[使用 Visual Studio（桌面桥）打包应用](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
-在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它可便于使用任何符合标准的 C++ 编译器来使用和创作 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [C++/WinRT：适用于 Windows 运行时的现代 C++](https://moderncpp.com/)。
+在编写新代码时可使用 C ++ / WinRT，它是 Windows 运行时的标准 C ++ 语言投影，仅在头文件中实现。 它可便于使用任何符合标准的 C++ 编译器来使用和创作 Windows 运行时 API。 C++/WinRT 旨在为 C++ 开发人员提供对新式 Windows API 的优先访问权限。 有关详细信息，请参阅 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)。
 
 自 Windows SDK Insider Preview 内部版本 17025 起，C++/WinRT 包含在 Windows SDK 中。 有关详细信息，请参阅 [C++/WinRT is now included the Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/)（C++/WinRT 现在包含在 Windows SDK 中）。
 
