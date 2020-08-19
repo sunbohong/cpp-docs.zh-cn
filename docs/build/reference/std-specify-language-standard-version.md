@@ -6,14 +6,14 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: eef44858064b89d4a836c80a48552599bceec242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9755194d70774f27af4c5174151588cc03d5f97a
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223819"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610954"
 ---
-# <a name="std-specify-language-standard-version"></a>`/std`（指定语言标准版本）
+# <a name="std-specify-language-standard-version"></a>`/std` (指定语言标准版本) 
 
 从 C++ 语言标准的指定版本启用支持的 C++ 语言功能。
 
@@ -21,17 +21,17 @@ ms.locfileid: "87223819"
 
 > **`/std:c++14`**\
 > **`/std:c++17`**\
-> **`/std:c++latest`**]
+> **`/std:c++latest`**
 
 ## <a name="remarks"></a>备注
 
-此 **`/std`** 选项在 Visual Studio 2017 和更高版本中可用。 它用于控制在代码编译期间启用的特定于版本的 ISO c + + 编程语言标准功能。 此选项允许你禁用对某些新语言和库功能的支持：可能会破坏符合特定语言标准版本的现有代码的支持。 默认情况下， **`/std:c++14`** 指定，这将禁用在更高版本的 c + + 语言标准中找到的语言和标准库功能。 使用 **`/std:c++17`** 启用 c + + 17 标准特定功能和行为。 若要显式启用当前实现的编译器和标准库功能建议用于下一草案标准，请使用 **`/std:c++latest`** 。 所有 c + + 20 功能都需要 **`/std:c++latest`** ; 实现完成后， **`/std:c++20`** 将启用一个新选项。
+此 **`/std`** 选项在 Visual Studio 2017 和更高版本中可用。 它用于控制在代码编译期间启用的特定于版本的 ISO c + + 编程语言标准功能。 此选项允许你禁用对某些新语言和库功能的支持：可能会破坏符合特定语言标准版本的现有代码的支持。 默认情况下， **`/std:c++14`** 指定，这将禁用在更高版本的 c + + 语言标准中找到的语言和标准库功能。 使用  **`/std:c++17`** 启用 c + + 17 标准特定功能和行为。 若要显式启用当前实现的编译器和标准库功能建议用于下一草案标准，请使用 **`/std:c++latest`** 。 所有 c + + 20 功能都需要 **`/std:c++latest`** ; 实现完成后， **`/std:c++20`** 将启用一个新选项。
 
 默认 **`/std:c++14`** 选项启用由 MSVC 编译器实现的 c + + 14 功能集。 此选项将禁用编译器和标准库支持，以对在较新版本的语言标准中更改或新增的功能禁用该功能。 它不会禁用先前版本的 MSVC 编译器已经实现的 c + + 17 功能。 若要避免对已对 Visual Studio 2015 Update 2 之前或之前的功能具有依赖关系的用户进行重大更改，则在指定选项时，这些功能仍保持启用状态 **`/std:c++14`** ：
 
 - [`auto`With 大括号内的规则](https://wg21.link/n3922)
 
-- [`typename`模板模板中的参数](https://wg21.link/n4051)
+- [`typename` 模板模板中的参数](https://wg21.link/n4051)
 
 - [删除三字符组](https://wg21.link/n4086)
 
@@ -39,7 +39,7 @@ ms.locfileid: "87223819"
 
 - [u8 字符文本](https://wg21.link/n4267)
 
-当你指定可用时，将启用哪一列表 c + + 14 和 c + + 17 功能 **`/std:c++14`** 。 有关详细信息，请参阅[Microsoft c + + 语言一致性表](../../overview/visual-cpp-language-conformance.md)中的说明。
+当你指定可用时，将启用哪一列表 c + + 14 和 c + + 17 功能 **`/std:c++14`** 。 有关详细信息，请参阅 [Microsoft c + + 语言一致性表](../../overview/visual-cpp-language-conformance.md)中的说明。
 
 **`/std:c++17`** 选项启用 MSVC 编译器实现的一组完整的 c + + 17 功能。 此选项对 c + + 17 之后新增或更改的功能禁用编译器和标准库支持。 这包括 c + + 标准的工作草稿和缺陷更新版本中的 C + + 17 更改。
 
@@ -53,7 +53,7 @@ ms.locfileid: "87223819"
 **`/std:c++14`** **`/std:c++latest`** 从 Visual Studio 2015 Update 3 开始提供和选项。 **`/std:c++17`** 从 Visual Studio 2017 版本15.3 开始，可以使用选项。 如上所述，某些 c + + 17 标准行为是通过选项启用的 **`/std:c++14`** ，但所有其他 c + + 17 功能都是通过启用的 **`/std:c++17`** 。 在实现完成之前，c + + 20 功能处于启用状态 **`/std:c++latest`** 。
 
 > [!NOTE]
-> 根据 MSVC 编译器版本或更新级别，在指定选项时，c + + 17 功能可能未完全实现或完全一致 **`/std:c++17`** 。 有关 Visual C++ 中的 c + + 语言一致性概述，请参阅[Microsoft c + + 语言一致性表](../../overview/visual-cpp-language-conformance.md)。
+> 根据 MSVC 编译器版本或更新级别，在指定选项时，c + + 17 功能可能未完全实现或完全一致 **`/std:c++17`** 。 有关 Visual C++ 中的 c + + 语言一致性概述，请参阅 [Microsoft c + + 语言一致性表](../../overview/visual-cpp-language-conformance.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 

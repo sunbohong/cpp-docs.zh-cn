@@ -4,12 +4,12 @@ ms.date: 02/26/2020
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e100913cf4f0d84eac0e5891edb053918aec67f4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c52434fa4b652d52baea70df705920db4ee68a5f
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190489"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610838"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>C++ 项目的 MSBuild 内部项
 
@@ -23,15 +23,15 @@ ms.locfileid: "87190489"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *版本* \\ VCTargets\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *版本*\\
 
   包含目标使用的主要目标文件 (.targets) 和属性文件 (.props)。 默认情况下，$(VCTargetsPath) 宏引用此目录。 *版本*占位符引用 visual studio 版本： V160 for visual studio 2019、V150 For visual studio 2017。
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *版本* \\ VCTargets \\ 平台 \\ *平台*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *版本* \\ 平台 \\ *平台*\\
 
   包含特定于平台的目标文件和属性文件，这些文件会覆盖其父目录中的目标和属性。 此目录还包含定义此目录中的目标所使用的任务的 DLL。 “platform”占位符表示 ARM、Win32 或 x64 子目录**。
 
-- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *版本* \\ VCTargets \\ 平台 \\ *平台* \\ PlatformToolsets \\ *工具集*\\
+- % VSINSTALLDIR% MSBuild \\ Microsoft \\ VC \\ *版本* \\ 平台 \\ *平台* \\ PlatformToolsets \\ *工具集*\\
 
   包含让生成可通过使用指定工具集生成 C++ 应用程序的目录**。 “platform”占位符表示 ARM、Win32 或 x64 子目录**。 *工具集*占位符表示工具集子目录。
 
@@ -51,21 +51,21 @@ ms.locfileid: "87190489"
 
 ### <a name="visual-studio-2015-and-earlier"></a>Visual Studio 2015 及更早版本
 
-- *驱动器*： \\ Program Files *（X86）* \\ MSBuild \\ Microsoft .cpp （x86） \\ v4.0 \\ *版本*\\
+- *驱动器*： \\ 程序文件* (x86) * \\ MSBuild \\ (x86) v2.0 \\ \\ *版本*\\
 
   包含目标使用的主要目标文件 (.targets) 和属性文件 (.props)。 默认情况下，$(VCTargetsPath) 宏引用此目录。
 
-- *驱动器*： \\ Program Files *（X86）* \\ MSBuild \\ Microsoft .cpp v2.0 \\ \\ *版本* \\ 平台 \\ *平台*\\
+- *驱动器*： \\ Program Files * (x86) * \\ MSBuild v2.0 \\ \\ \\ *版本* \\ 平台 \\ *平台*\\
 
   包含特定于平台的目标文件和属性文件，这些文件会覆盖其父目录中的目标和属性。 此目录还包含定义此目录中的目标所使用的任务的 DLL。 “platform”占位符表示 ARM、Win32 或 x64 子目录**。
 
-- *驱动器*： \\ Program Files *（X86）* \\ MSBuild \\ Microsoft .cpp v2.0 \\ \\ *版本* \\ 平台 \\ *平台* \\ PlatformToolsets \\ *工具集*\\
+- *驱动器*： \\ Program Files * (x86) * \\ MSBuild v2.0 \\ \\ \\ *版本* \\ 平台 \\ *平台* \\ PlatformToolsets \\ *工具集*\\
 
   包含让生成可通过使用指定工具集生成 C++ 应用程序的目录**。 *版本*占位符是 V110 For visual studio 2012、V120 for Visual Studio 2013 和 visual studio 2015 的 V140。 “platform”占位符表示 ARM、Win32 或 x64 子目录**。 *工具集*占位符表示工具集子目录。 例如，使用 Visual Studio 2015 工具集生成 Windows 应用程序是 v140 的。 或者，使用 Visual Studio 2013 工具集为 Windows XP 构建 v120_xp。
 
-- *驱动器*： \\ Program Files *（X86）* \\ MSBuild \\ Microsoft .cpp v2.0 \\ \\ 平台 \\ *平台* \\ PlatformToolsets \\ *工具集*\\
+- *驱动器*： \\ Program Files * (x86) * \\ MSBuild v2.0 v2.0 \\ \\ \\ \\ *平台平台* \\ PlatformToolsets \\ *工具集*\\
 
-  允许生成生成 Visual Studio 2008 或 Visual Studio 2010 应用程序的路径不包括*版本*。 在这些版本中，*平台*占位符表示 Itanium、Win32 或 x64 子目录。 “toolset”占位符表示 v90 或 v100 工具集子目录**。
+  允许生成生成 Visual Studio 2008 或 Visual Studio 2010 应用程序的路径不包括 *版本*。 在这些版本中， *平台* 占位符表示 Itanium、Win32 或 x64 子目录。 “toolset”占位符表示 v90 或 v100 工具集子目录**。
 
 ## <a name="support-files"></a>支持文件
 
@@ -74,8 +74,8 @@ ms.locfileid: "87190489"
 | 分机 | 说明 |
 | --------- | ----------- |
 | .targets | 包含指定由目标执行的任务的 `Target` XML 元素。 可能还包含 `PropertyGroup`、`ItemGroup`、`ItemDefinitionGroup` 和用户定义的 `Item` 元素，这些元素用于将文件和命令行选项分配给任务参数。<br /><br /> 有关详细信息，请参阅 [Target 元素 (MSBuild)](/visualstudio/msbuild/target-element-msbuild)。 |
-| .props | 包含 `Property Group` 和用户定义的 `Property` XML 元素，这些元素指定在生成过程中使用的文件和参数设置。<br /><br /> 还可能包含 `ItemDefinitionGroup` 和用户定义的 `Item` XML 元素，这些元素指定其他设置。 项定义组中定义的项与属性类似，但无法从命令行访问。 Visual Studio 项目文件经常使用项（而不是属性）来表示设置。<br /><br /> 有关详细信息，请参阅[ItemGroup 元素（msbuild）](/visualstudio/msbuild/itemgroup-element-msbuild)、 [ItemDefinitionGroup 元素（Msbuild）](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)和[Item 元素（msbuild）](/visualstudio/msbuild/item-element-msbuild)。 |
-| .xml | 包含声明和初始化 IDE 用户界面元素的 XML 元素。 例如，属性表、属性页、textbox 控件和 listbox 控件。<br /><br /> .xml 文件直接支持 IDE，而不是 MSBuild。 不过 IDE 属性的值分配给生成属性和项。<br /><br /> 大多数 .xml 文件都位于特定于区域设置的子目录中。 例如，美国英语地区的文件位于 $ （VCTargetsPath） \\ 1033 中 \\ 。 |
+| .props | 包含 `Property Group` 和用户定义的 `Property` XML 元素，这些元素指定在生成过程中使用的文件和参数设置。<br /><br /> 还可能包含 `ItemDefinitionGroup` 和用户定义的 `Item` XML 元素，这些元素指定其他设置。 项定义组中定义的项与属性类似，但无法从命令行访问。 Visual Studio 项目文件经常使用项（而不是属性）来表示设置。<br /><br /> 有关详细信息，请参阅 [ItemGroup 元素 (msbuild) ](/visualstudio/msbuild/itemgroup-element-msbuild)、 [ItemDefinitionGroup 元素 (Msbuild) ](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild)和 [Item 元素 (msbuild) ](/visualstudio/msbuild/item-element-msbuild)。 |
+| .xml | 包含声明和初始化 IDE 用户界面元素的 XML 元素。 例如，属性表、属性页、textbox 控件和 listbox 控件。<br /><br /> .xml 文件直接支持 IDE，而不是 MSBuild。 不过 IDE 属性的值分配给生成属性和项。<br /><br /> 大多数 .xml 文件都位于特定于区域设置的子目录中。 例如，美国英语地区的文件位于 $ (VCTargetsPath) \\ 1033 \\ 。 |
 
 ## <a name="user-targets-and-properties"></a>用户目标和属性
 
@@ -105,14 +105,14 @@ ms.locfileid: "87190489"
 
 ### <a name="targets"></a>目标
 
-Visual Studio 支持文件中有数百个目标。 但是大多数目标都是面向系统的，用户可以忽略。 大多数系统目标以下划线（）作为前缀 `_` ，或者名称以 "PrepareFor"、"计算"、"早于"、"After"、"Pre" 或 "Post" 开头。
+Visual Studio 支持文件中有数百个目标。 但是大多数目标都是面向系统的，用户可以忽略。 大多数系统目标都以下划线 (`_`) ，或者名称以 "PrepareFor"、"计算"、"早于"、"After"、"Pre" 或 "Post" 开头。
 
 下表列出了一些有用的面向用户的目标。
 
 | 目标 | 描述 |
 | ------ | ----------- |
 | BscMake | 执行 Microsoft 浏览信息维护实用工具 (bscmake.exe)。 |
-| 生成 | 生成项目。<br /><br /> 此目标是项目的默认值。 |
+| 构建 | 生成项目。<br /><br /> 此目标是项目的默认值。 |
 | ClCompile | 执行 MSVC 编译器工具 (cl.exe)。 |
 | clean | 删除临时生成文件和中间生成文件。 |
 | Lib | 执行 Microsoft 32 位库管理器工具 (lib.exe)。 |

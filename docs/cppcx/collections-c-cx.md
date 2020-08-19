@@ -2,16 +2,16 @@
 title: 集合 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: c8b844cd2500df7ab9069ac1586a352c639e17bd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
+ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233504"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88610941"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 
-在 c + +/CX 程序中，可以自由使用标准模板库（STL）容器或任何其他用户定义的集合类型。 但是，当你在 Windows 运行时的应用程序二进制接口（ABI）之间来回传递集合（例如，传递到 XAML 控件或 JavaScript 客户端）时，必须使用 Windows 运行时集合类型。
+在 c + +/CX 程序中，你可以免费使用标准模板库 (STL) 容器或任何其他用户定义的集合类型。 但是，当你在 Windows 运行时应用程序二进制接口之间来回传递集合时 (ABI) ，例如，传递到 XAML 控件或 JavaScript 客户端时，必须使用 Windows 运行时集合类型。
 
 Windows 运行时定义集合和相关类型的接口，并且 c + +/CX 在集合 .h 头文件中提供具体的 c + + 实现。 下图显示了各个集合类型之间的关系：
 
@@ -39,7 +39,7 @@ Windows 运行时定义集合和相关类型的接口，并且 c + +/CX 在集�
 > [!IMPORTANT]
 > 如果您要在自己的程序中传递序列，请使用 `Vector` 或 `std::vector` ，因为它们比 `IVector`更高效。 在通过 ABI 传递容器时，仅使用 `IVector` 。
 >
-> Windows 运行时类型系统不支持交错数组的概念，因此不能将 IVector<Platform：： Array \<T>> 作为返回值或方法参数传递。 要跨 ABI 传递交错数组或一系列序列，请使用 `IVector<IVector<T>^>`。
+> Windows 运行时类型系统不支持交错数组的概念，因此不能将 `IVector<Platform::Array<T>>` 作为返回值或方法参数传递。 要跨 ABI 传递交错数组或一系列序列，请使用 `IVector<IVector<T>^>`。
 
 `Vector<T>` 提供添加、移除和访问集合项所需的方法，并且，它可以隐式转换为 `IVector<T>`。 还可以对 `Vector<T>`的实例使用 STL 算法。 下面的示例演示一些基本用法。 此处的 [begin 函数](../cppcx/begin-function.md) 和 [end 函数](../cppcx/end-function.md) 来自 `Platform::Collections` 命名空间而非 `std` 命名空间。
 
@@ -98,7 +98,7 @@ void FindButton(UIElementCollection^ col)
 
 集合分为四种类别：序列集合和关联集合各自的可修改版本和只读版本。 此外，通过提供简化集合访问的三个迭代器类，c + +/CX 增强了集合。
 
-可以更改可修改集合的元素，但是，只读集合的元素（称作 *视图*）只能读取。 [Platform：： collection：： Vector](../cppcx/platform-collections-vector-class.md)或[platform：： Collection：： VectorView](../cppcx/platform-collections-vectorview-class.md)集合的元素可以通过使用迭代器或集合的[Vector：： GetAt](../cppcx/platform-collections-vector-class.md#getat)和索引进行访问。 可以使用集合的[Map：： Lookup](../cppcx/platform-collections-map-class.md#lookup)和键访问关联集合的元素。
+可以更改可修改集合的元素，但是，只读集合的元素（称作 *视图*）只能读取。 [Platform：： collection：： Vector](../cppcx/platform-collections-vector-class.md)或[platform：： Collection：： VectorView](../cppcx/platform-collections-vectorview-class.md)集合的元素可以通过使用迭代器或集合的[Vector：： GetAt](../cppcx/platform-collections-vector-class.md#getat)和索引进行访问。 可以使用集合的 [Map：： Lookup](../cppcx/platform-collections-map-class.md#lookup) 和键访问关联集合的元素。
 
 [Platform：：集合：： Map 类](../cppcx/platform-collections-map-class.md)<br/>
 可修改的关联集合。 映射元素为键/值对。 支持查找键以检索其关联值，也支持遍历所有键值对。
@@ -121,21 +121,21 @@ void FindButton(UIElementCollection^ col)
 满足 STL 可变随机访问迭代器要求的 STL 迭代器。
 
 [Platform：：集合：： VectorViewIterator 类](../cppcx/platform-collections-vectorviewiterator-class.md)<br/>
-满足 STL **`const`** 随机访问迭代器要求的 STL 迭代器。
+满足 STL  **`const`** 随机访问迭代器要求的 STL 迭代器。
 
 ### <a name="begin-and-end-functions"></a>begin() 和 end() 函数
 
-为简化使用 STL 以处理 `Vector` 、 `VectorView` 、 `Map` 、 `MapView` 和任意 `Windows::Foundation::Collections` 对象，c + +/cx 支持对[begin 函数](../cppcx/begin-function.md)和[end 函数](../cppcx/end-function.md)非成员函数的重载。
+为简化使用 STL 以处理 `Vector` 、 `VectorView` 、 `Map` 、 `MapView` 和任意 `Windows::Foundation::Collections` 对象，c + +/cx 支持对 [begin 函数](../cppcx/begin-function.md) 和 [end 函数](../cppcx/end-function.md) 非成员函数的重载。
 
 下表列出可用迭代器和函数。
 
 |迭代器|函数|
 |---------------|---------------|
-|[Platform：：集合：： VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> （在内部存储[Windows：： Foundation：：集合：： \<T> IVector](/uwp/api/windows.foundation.collections.ivector-1)和 int。）|[开始](../cppcx/begin-function.md) / [end](../cppcx/end-function.md)（[Windows：： Foundation：：集合：： IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1)）|
-|[Platform：：集合：： VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> （在内部[存储 \<T> IVectorView](/uwp/api/windows.foundation.collections.ivectorview-1)^ 和 int。）|[开始](../cppcx/begin-function.md) / [结束](../cppcx/end-function.md)（[IVectorView \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)^）|
-|[Platform：：集合：： InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> （在内部[存储 \<T> iiterator<t>](/uwp/api/windows.foundation.collections.iiterator-1)^ 和 T。）|[开始](../cppcx/begin-function.md) / [end](../cppcx/end-function.md) （[iiterable<t> \<T> ](/uwp/api/windows.foundation.collections.iiterable-1)）|
-|[Platform：：集合：： InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> （在内部[存储 \<T> iiterator<t>](/uwp/api/windows.foundation.collections.iiterator-1)^ 和 T。）|[开始](../cppcx/begin-function.md) / [结束](../cppcx/end-function.md)（[IMap \<K,V> ](/uwp/api/windows.foundation.collections.imap-2)。|
-|[Platform：：集合：： InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> （在内部[存储 \<T> iiterator<t>](/uwp/api/windows.foundation.collections.iiterator-1)^ 和 T。）|[开始](../cppcx/begin-function.md) / [end](../cppcx/end-function.md) （[Windows：： Foundation：：集合：： IMapView](/uwp/api/windows.foundation.collections.imapview-2)）|
+|[Platform：：集合：： VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br />  (在内部存储[Windows：： Foundation：：集合：： \<T> IVector](/uwp/api/windows.foundation.collections.ivector-1)和 int。 ) |[开始](../cppcx/begin-function.md) / [结束](../cppcx/end-function.md) ([Windows：： Foundation：：集合：： IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1)) |
+|[Platform：：集合：： VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br />  (在内部[存储 \<T> IVectorView](/uwp/api/windows.foundation.collections.ivectorview-1)^ 和 int ) |[开始](../cppcx/begin-function.md) / [结束](../cppcx/end-function.md) ([IVectorView \<T> ](/uwp/api/windows.foundation.collections.ivectorview-1)^) |
+|[Platform：：集合：： InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br />  (在内部[存储 \<T> iiterator<t>](/uwp/api/windows.foundation.collections.iiterator-1)^ 和 T。 ) |[开始](../cppcx/begin-function.md) / [结束](../cppcx/end-function.md) ([iiterable<t> \<T> ](/uwp/api/windows.foundation.collections.iiterable-1)) |
+|[Platform：：集合：： InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br />  (在内部[存储 \<T> iiterator<t>](/uwp/api/windows.foundation.collections.iiterator-1)^ 和 T。 ) |[开始](../cppcx/begin-function.md) /  ([IMap \<K,V> ](/uwp/api/windows.foundation.collections.imap-2)[结束](../cppcx/end-function.md)。|
+|[Platform：：集合：： InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br />  (在内部[存储 \<T> iiterator<t>](/uwp/api/windows.foundation.collections.iiterator-1)^ 和 T。 ) |[开始](../cppcx/begin-function.md) / [结束](../cppcx/end-function.md) ([Windows：： Foundation：：集合：： IMapView](/uwp/api/windows.foundation.collections.imapview-2)) |
 
 ### <a name="collection-change-events"></a>集合更改事件
 
