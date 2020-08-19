@@ -25,16 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 968582feccd8ba9252ca009699eef6eae2c5c3d6
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167820"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562211"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 
-CAtlTransactionManager 类提供内核事务管理器（KTM）函数的包装器。
+CAtlTransactionManager 类提供 (KTM) 函数的内核事务管理器的包装。
 
 > [!IMPORTANT]
 > 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
@@ -49,14 +49,14 @@ class CAtlTransactionManager;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
 |[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager 析构函数。|
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager 构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
 |[关闭](#close)|关闭事务句柄。|
 |[提交](#commit)|请求提交事务。|
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **标头：** atltransactionmanager
 
-## <a name="catltransactionmanager"></a><a name="dtor"></a>~ CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="dtor"></a>  ~ CAtlTransactionManager
 
 CAtlTransactionManager 析构函数。
 
@@ -104,7 +104,7 @@ virtual ~CAtlTransactionManager();
 
 在正常处理过程中，将自动提交和关闭事务。 如果在异常展开期间调用了析构函数，则事务将回滚并关闭。
 
-## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a>CAtlTransactionManager
+## <a name="catltransactionmanager"></a><a name="catltransactionmanager"></a> CAtlTransactionManager
 
 CAtlTransactionManager 构造函数。
 
@@ -122,7 +122,7 @@ TRUE 表示在构造函数中自动创建事务处理程序。 FALSE 指示它�
 
 ### <a name="remarks"></a>备注
 
-## <a name="close"></a><a name="close"></a>封闭
+## <a name="close"></a><a name="close"></a> 封闭
 
 关闭事务句柄。
 
@@ -136,9 +136,9 @@ inline BOOL Close();
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`CloseHandle`函数。 方法自动在析构函数中调用。
+此包装器调用 `CloseHandle` 函数。 方法自动在析构函数中调用。
 
-## <a name="commit"></a><a name="commit"></a>立即
+## <a name="commit"></a><a name="commit"></a> 立即
 
 请求提交事务。
 
@@ -152,9 +152,9 @@ inline BOOL Commit();
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`CommitTransaction`函数。 方法自动在析构函数中调用。
+此包装器调用 `CommitTransaction` 函数。 方法自动在析构函数中调用。
 
-## <a name="create"></a><a name="create"></a>创建
+## <a name="create"></a><a name="create"></a> 创建
 
 创建事务句柄。
 
@@ -168,9 +168,9 @@ inline BOOL Create();
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`CreateTransaction`函数。 检查
+此包装器调用 `CreateTransaction` 函数。 检查
 
-## <a name="createfile"></a><a name="createfile"></a>CreateFile
+## <a name="createfile"></a><a name="createfile"></a> CreateFile
 
 创建文件、文件流或目录作为事务处理操作。
 
@@ -191,7 +191,7 @@ inline HANDLE CreateFile(
 要创建或打开的对象的名称。
 
 *dwDesiredAccess*<br/>
-对对象的访问，可将其汇总为读取、写入和/或两者（零）。 最常使用的值 GENERIC_READ、GENERIC_WRITE 或二者都是 GENERIC_READ &#124; GENERIC_WRITE。
+对对象的访问，可将其汇总为读取、写入和/或都不 (零) 。 最常使用的值 GENERIC_READ、GENERIC_WRITE 或二者都是 GENERIC_READ &#124; GENERIC_WRITE。
 
 *dwShareMode*<br/>
 对象的共享模式，可以是读取、写入、删除、删除、所有这些操作，也可以是 none：0，FILE_SHARE_DELETE，FILE_SHARE_READ，FILE_SHARE_WRITE。
@@ -203,7 +203,7 @@ inline HANDLE CreateFile(
 对存在但不存在的文件执行的操作。 此参数必须是以下值之一，这些值不能是组合的： CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING 或 TRUNCATE_EXISTING。
 
 *dwFlagsAndAttributes*<br/>
-文件属性和标志。 此参数可以包含可用文件属性（FILE_ATTRIBUTE_ *）的任意组合。 所有其他文件特性都覆盖 FILE_ATTRIBUTE_NORMAL。 此参数还可以包含用于控制缓冲行为、\*访问模式和其他特殊用途标志的标志（FILE_FLAG_）组合。 这些值与任何 FILE_ATTRIBUTE_\*值组合在一起。
+文件属性和标志。 此参数可以包含可用文件属性的任意组合 (FILE_ATTRIBUTE_ * ) 。 所有其他文件特性都覆盖 FILE_ATTRIBUTE_NORMAL。 此参数还可以包含标志 (FILE_FLAG_) 组合， \* 以控制缓冲行为、访问模式和其他特殊用途标志。 这些值与任何 FILE_ATTRIBUTE_ 值组合在一起 \* 。
 
 *hTemplateFile*<br/>
 具有 GENERIC_READ 访问权限的模板文件的有效句柄。 模板文件提供要创建的文件的文件属性和扩展属性。 此参数可以为 NULL。
@@ -214,9 +214,9 @@ inline HANDLE CreateFile(
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`CreateFileTransacted`函数。
+此包装器调用 `CreateFileTransacted` 函数。
 
-## <a name="deletefile"></a><a name="deletefile"></a>DeleteFile
+## <a name="deletefile"></a><a name="deletefile"></a> DeleteFile
 
 删除作为事务处理操作的现有文件。
 
@@ -231,9 +231,9 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`DeleteFileTransacted`函数。
+此包装器调用 `DeleteFileTransacted` 函数。
 
-## <a name="findfirstfile"></a><a name="findfirstfile"></a>FindFirstFile
+## <a name="findfirstfile"></a><a name="findfirstfile"></a> FindFirstFile
 
 在目录中搜索文件或子目录作为事务处理操作。
 
@@ -246,20 +246,20 @@ inline HANDLE FindFirstFile(
 ### <a name="parameters"></a>参数
 
 *lpFileName*<br/>
-要搜索的目录或路径以及文件名。 此参数可以包含通配符，如星号（*）或问号（）。
+要搜索的目录或路径以及文件名。 此参数可以包含通配符，如星号 ( * ) 或问号 ( # A3。
 
 *pNextInfo*<br/>
 指向 WIN32_FIND_DATA 结构的指针，该结构接收找到的文件或子目录的相关信息。
 
 ### <a name="return-value"></a>返回值
 
-如果该函数成功，则返回值是在对`FindNextFile`或`FindClose`的后续调用中使用的搜索句柄。 如果函数在*lpFileName*参数中的搜索字符串中未能找到文件，则返回值为 INVALID_HANDLE_VALUE。
+如果该函数成功，则返回值是在对或的后续调用中使用的搜索句柄 `FindNextFile` `FindClose` 。 如果函数在 *lpFileName* 参数中的搜索字符串中未能找到文件，则返回值为 INVALID_HANDLE_VALUE。
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`FindFirstFileTransacted`函数。
+此包装器调用 `FindFirstFileTransacted` 函数。
 
-## <a name="getfileattributes"></a><a name="getfileattributes"></a>GetFileAttributes
+## <a name="getfileattributes"></a><a name="getfileattributes"></a> GetFileAttributes
 
 检索指定文件或目录的文件系统属性作为事务处理操作。
 
@@ -274,9 +274,9 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`GetFileAttributesTransacted`函数。
+此包装器调用 `GetFileAttributesTransacted` 函数。
 
-## <a name="getfileattributesex"></a><a name="getfileattributesex"></a>GetFileAttributesEx
+## <a name="getfileattributesex"></a><a name="getfileattributesex"></a> GetFileAttributesEx
 
 检索指定文件或目录的文件系统属性作为事务处理操作。
 
@@ -296,13 +296,13 @@ inline BOOL GetFileAttributesEx(
 要检索的属性信息的级别。
 
 *lpFileInformation*<br/>
-指向接收属性信息的缓冲区的指针。 存储在此缓冲区中的属性信息的类型由*fInfoLevelId*的值确定。 如果*fInfoLevelId*参数为 GetFileExInfoStandard，则此参数指向 WIN32_FILE_ATTRIBUTE_DATA 结构。
+指向接收属性信息的缓冲区的指针。 存储在此缓冲区中的属性信息的类型由 *fInfoLevelId*的值确定。 如果 *fInfoLevelId* 参数为 GetFileExInfoStandard，则此参数指向 WIN32_FILE_ATTRIBUTE_DATA 结构。
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`GetFileAttributesTransacted`函数。
+此包装器调用 `GetFileAttributesTransacted` 函数。
 
-## <a name="gethandle"></a><a name="gethandle"></a>GetHandle
+## <a name="gethandle"></a><a name="gethandle"></a> GetHandle
 
 返回事务句柄。
 
@@ -312,11 +312,11 @@ HANDLE GetHandle() const;
 
 ### <a name="return-value"></a>返回值
 
-返回类的事务句柄。 如果`CAtlTransactionManager`未附加到句柄，则返回 NULL。
+返回类的事务句柄。 如果未 `CAtlTransactionManager` 附加到句柄，则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="isfallback"></a><a name="isfallback"></a>IsFallback
+## <a name="isfallback"></a><a name="isfallback"></a> IsFallback
 
 确定是否启用回退调用。
 
@@ -330,7 +330,7 @@ BOOL IsFallback() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="m_bfallback"></a><a name="m_bfallback"></a>m_bFallback
+## <a name="m_bfallback"></a><a name="m_bfallback"></a> m_bFallback
 
 如果支持回退，则为 TRUE;否则为 FALSE。
 
@@ -340,7 +340,7 @@ BOOL m_bFallback;
 
 ### <a name="remarks"></a>备注
 
-## <a name="m_htransaction"></a><a name="m_htransaction"></a>m_hTransaction
+## <a name="m_htransaction"></a><a name="m_htransaction"></a> m_hTransaction
 
 事务句柄。
 
@@ -350,7 +350,7 @@ HANDLE m_hTransaction;
 
 ### <a name="remarks"></a>备注
 
-## <a name="movefile"></a><a name="movefile"></a>MoveFile
+## <a name="movefile"></a><a name="movefile"></a> MoveFile
 
 将现有文件或目录（包括其子级）作为事务处理操作移动。
 
@@ -368,9 +368,9 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`MoveFileTransacted`函数。
+此包装器调用 `MoveFileTransacted` 函数。
 
-## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a>RegCreateKeyEx
+## <a name="regcreatekeyex"></a><a name="regcreatekeyex"></a> RegCreateKeyEx
 
 创建指定的注册表项，并将其与事务关联。 如果该键已存在，则该函数将打开它。
 
@@ -408,10 +408,10 @@ inline LSTATUS RegCreateKeyEx(
 指定密钥的访问权限的掩码。
 
 *lpSecurityAttributes*<br/>
-指向 SECURITY_ATTRIBUTES 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果*lpSecurityAttributes*为 NULL，则不能继承句柄。
+指向 SECURITY_ATTRIBUTES 结构的指针，此结构确定返回的句柄是否由子进程继承。 如果 *lpSecurityAttributes* 为 NULL，则不能继承句柄。
 
 *phkResult*<br/>
-指向一个变量的指针，该变量接收已打开或已创建的键的句柄。 如果该密钥不是预定义的注册表项之一，请在`RegCloseKey`使用完该句柄后调用该函数。
+指向一个变量的指针，该变量接收已打开或已创建的键的句柄。 如果该密钥不是预定义的注册表项之一，请在 `RegCloseKey` 使用完该句柄后调用该函数。
 
 *lpdwDisposition*<br/>
 指向一个变量的指针，该变量接收以下某个处置值： REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。
@@ -422,9 +422,9 @@ inline LSTATUS RegCreateKeyEx(
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`RegCreateKeyTransacted`函数。
+此包装器调用 `RegCreateKeyTransacted` 函数。
 
-## <a name="regdeletekey"></a><a name="regdeletekey"></a>RegDeleteKey
+## <a name="regdeletekey"></a><a name="regdeletekey"></a> RegDeleteKey
 
 从指定的特定于平台的注册表视图中删除子项及其值作为事务处理操作。
 
@@ -434,10 +434,11 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
-|---------------|-----------------|
-|*hKey*|打开的注册表项的句柄。|
-|*lpSubKey*|要删除的密钥的名称。|
+*hKey*\
+打开的注册表项的句柄。
+
+*lpSubKey*\
+要删除的密钥的名称。
 
 ### <a name="return-value"></a>返回值
 
@@ -445,9 +446,9 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`RegDeleteKeyTransacted`函数。
+此包装器调用 `RegDeleteKeyTransacted` 函数。
 
-## <a name="regopenkeyex"></a><a name="regopenkeyex"></a>RegOpenKeyEx
+## <a name="regopenkeyex"></a><a name="regopenkeyex"></a> RegOpenKeyEx
 
 打开指定的注册表项，并将其与事务关联。
 
@@ -475,7 +476,7 @@ inline LSTATUS RegOpenKeyEx(
 指定密钥的访问权限的掩码。
 
 *phkResult*<br/>
-指向一个变量的指针，该变量接收已打开或已创建的键的句柄。 如果该密钥不是预定义的注册表项之一，请在`RegCloseKey`使用完该句柄后调用该函数。
+指向一个变量的指针，该变量接收已打开或已创建的键的句柄。 如果该密钥不是预定义的注册表项之一，请在 `RegCloseKey` 使用完该句柄后调用该函数。
 
 ### <a name="return-value"></a>返回值
 
@@ -483,9 +484,9 @@ inline LSTATUS RegOpenKeyEx(
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`RegOpenKeyTransacted`函数。
+此包装器调用 `RegOpenKeyTransacted` 函数。
 
-## <a name="rollback"></a><a name="rollback"></a>回退
+## <a name="rollback"></a><a name="rollback"></a> 回退
 
 请求回滚事务。
 
@@ -499,9 +500,9 @@ inline BOOL Rollback();
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`RollbackTransaction`函数。
+此包装器调用 `RollbackTransaction` 函数。
 
-## <a name="setfileattributes"></a><a name="setfileattributes"></a>SetFileAttributes
+## <a name="setfileattributes"></a><a name="setfileattributes"></a> SetFileAttributes
 
 将文件或目录的属性设置为事务处理操作。
 
@@ -515,11 +516,11 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 文件或目录的名称。
 
 *dwAttributes*<br/>
-要为文件设置的文件特性。 有关详细信息，请参阅[SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw)。
+要为文件设置的文件特性。 有关详细信息，请参阅 [SetFileAttributesTransacted](/windows/win32/api/winbase/nf-winbase-setfileattributestransactedw)。
 
 ### <a name="remarks"></a>备注
 
-此包装器调用`SetFileAttributesTransacted`函数。
+此包装器调用 `SetFileAttributesTransacted` 函数。
 
 ## <a name="see-also"></a>另请参阅
 

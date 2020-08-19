@@ -8,12 +8,12 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-ms.openlocfilehash: 611fe53b960a7c8f80990240aa4fc8ac4affb606
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6522b1877dd2517032fc140de42671353ce9c357
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187395"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561396"
 ---
 # <a name="__if_exists-statement"></a>__if_exists 语句
 
@@ -29,12 +29,13 @@ statements
 
 #### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*identifier*|要测试其存在性的标识符。|
-|*前瞻性*|*标识符*存在时要执行的一个或多个语句。|
+*identifier*\
+要测试其存在性的标识符。
 
-## <a name="remarks"></a>备注
+*前瞻性*\
+*标识符*存在时要执行的一个或多个语句。
+
+## <a name="remarks"></a>注解
 
 > [!CAUTION]
 > 若要获得最可靠的结果，请使用 **`__if_exists`** 以下约束中的语句。
@@ -47,7 +48,7 @@ statements
 
 - 在测试重载函数时，不能测试特定形式的重载。
 
-语句的补集 **`__if_exists`** 是[__if_not_exists](../cpp/if-not-exists-statement.md)语句。
+语句的补集 **`__if_exists`** 是 [__if_not_exists](../cpp/if-not-exists-statement.md) 语句。
 
 ## <a name="example"></a>示例
 

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: 4f999eaa4a5c1ea7e9672a5efdc6000a4d3d9759
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fba77be22796f3cb5495543d262dd270ac13d598
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457415"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560590"
 ---
-# <a name="isstandardlayout-class"></a>is_standard_layout 类
+# <a name="is_standard_layout-class"></a>is_standard_layout 类
 
 测试类型是否为标准布局。
 
@@ -27,20 +27,19 @@ struct is_standard_layout;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*Ty*|要查询的类型|
+*Ty*\
+要查询的类型
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-如果类型*Ty*是具有内存中成员对象的标准布局的类, 则此类型谓词的实例为 true; 否则为 false。
+如果类型 *Ty* 是具有内存中成员对象的标准布局的类，则此类型谓词的实例为 true; 否则为 false。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

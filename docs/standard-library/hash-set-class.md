@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 5dacf0b80acfd376db6738ef0d3bdc881c4c1736
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 01076d29a18a2b051695955e9409d8b77d22c313
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212314"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561175"
 ---
 # <a name="hash_set-class"></a>hash_set 类
 
@@ -140,9 +140,9 @@ Hash_set 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_set 作为关联容器。 Hash_set 的元素是唯一的，并用作其自己的排序键。 此类结构的模型是排序列表，如关键字排序列表，其中关键字只能出现一次。 如果允许关键字多次出现，那么相应的容器结构应该是 hash_multiset。 如果需要将值附加到唯一关键字的列表，则包含此数据的适当结构应为 hash_map。 如果键不唯一，则应选择 hash_multimap 作为容器。
 
-Hash_set 通过调用 value_compare 类型的存储哈希对象，对其控制的序列进行排序 `Traits` 。 [value_compare](#value_compare) 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类*hash_compare<键的对象相同，> 更少 \<Key> 。* 具体而言，对于类型为 Key 的所有值 `key` ，调用特征（ `key` ）会生成类型 size_t 的值的分布。
+Hash_set 通过调用 value_compare 类型的存储哈希对象，对其控制的序列进行排序 `Traits` 。 [value_compare](#value_compare) 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 *hash_compare<键的对象相同，> 更少 \<Key> 。* 具体而言，对于类型为 Key 的所有值 `key` ，调用特征 (`key`) 会生成 size_t 类型的值的分布。
 
-通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这会导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词*f*（ *x*， *y*）是包含两个参数对象（x 和 y）和一个返回值（true 或 false）的函数对象。 如果二元谓词具有非自反性、反对称性和传递性且等效可传递，对 hash_set 进行的排序将为严格弱排序，其中两个对象 *x* 和 *y* 定义为在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
+通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这会导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f* ( *x*， *y*) 是具有两个参数对象（x 和 y）和一个返回值（true 或 false）的函数对象。 如果二元谓词具有非自反性、反对称性和传递性且等效可传递，对 hash_set 进行的排序将为严格弱排序，其中两个对象 *x* 和 *y* 定义为在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
 受控序列中元素的实际顺序取决于哈希函数、排序函数和存储在容器对象中的哈希表的当前大小。 无法确定哈希表的当前大小，因此通常无法预测受控序列中元素的顺序。 插入元素不会使迭代器失效，移除元素仅会使专门指向已移除元素的迭代器失效。
 
@@ -150,7 +150,7 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[hash_set](#hash_set)|构造一个空的或者是其他某个 `hash_set` 的全部或部分副本的 `hash_set`。|
 
@@ -206,7 +206,7 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 
 ### <a name="operators"></a>运算符
 
-|操作员|描述|
+|运算符|说明|
 |-|-|
 |[hash_set：： operator =](#op_eq)|将一个 `hash_set` 中的元素替换为另一 `hash_set` 副本。|
 
@@ -216,7 +216,7 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 
 **命名空间：** stdext
 
-## <a name="hash_setallocator_type"></a><a name="allocator_type"></a>hash_set：： allocator_type
+## <a name="hash_setallocator_type"></a><a name="allocator_type"></a> hash_set：： allocator_type
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -229,15 +229,15 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>备注
 
-`allocator_type`是模板参数*分配*器的同义词。
+`allocator_type` 是模板参数 *分配*器的同义词。
 
-有关*分配*器的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题的 "备注" 部分。
+有关 *分配*器的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 ### <a name="example"></a>示例
 
 有关使用 `allocator_type` 的示例，请参阅 [get_allocator](#get_allocator) 的示例。
 
-## <a name="hash_setbegin"></a><a name="begin"></a>hash_set：： begin
+## <a name="hash_setbegin"></a><a name="begin"></a> hash_set：： begin
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -298,7 +298,7 @@ The first element of hs1 is 1
 The first element of hs1 is now 2
 ```
 
-## <a name="hash_setcbegin"></a><a name="cbegin"></a>hash_set：： cbegin
+## <a name="hash_setcbegin"></a><a name="cbegin"></a> hash_set：： cbegin
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -345,7 +345,7 @@ int main( )
 The first element of hs1 is 1
 ```
 
-## <a name="hash_setcend"></a><a name="cend"></a>hash_set：： cend
+## <a name="hash_setcend"></a><a name="cend"></a> hash_set：： cend
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -393,7 +393,7 @@ int main( )
 The last element of hs1 is 3
 ```
 
-## <a name="hash_setclear"></a><a name="clear"></a>hash_set：： clear
+## <a name="hash_setclear"></a><a name="clear"></a> hash_set：： clear
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -437,7 +437,7 @@ The size of the hash_set is initially 2.
 The size of the hash_set after clearing is 0.
 ```
 
-## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a>hash_set：： const_iterator
+## <a name="hash_setconst_iterator"></a><a name="const_iterator"></a> hash_set：： const_iterator
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -456,7 +456,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 有关使用 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。
 
-## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a>hash_set：： const_pointer
+## <a name="hash_setconst_pointer"></a><a name="const_pointer"></a> hash_set：： const_pointer
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -471,9 +471,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_pointer` 类型不能用于修改元素的值。
 
-在大多数情况下，应该使用[const_iterator](#const_iterator)来访问 hash_set 对象中的元素 **`const`** 。
+在大多数情况下，应该使用 [const_iterator](#const_iterator) 来访问 hash_set 对象中的元素 **`const`** 。
 
-## <a name="hash_setconst_reference"></a><a name="const_reference"></a>hash_set：： const_reference
+## <a name="hash_setconst_reference"></a><a name="const_reference"></a> hash_set：： const_reference
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -520,7 +520,7 @@ int main( )
 The first element in the hash_set is 10.
 ```
 
-## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_set：： const_reverse_iterator
+## <a name="hash_setconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> hash_set：： const_reverse_iterator
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -539,7 +539,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例
 
-## <a name="hash_setcount"></a><a name="count"></a>hash_set：： count
+## <a name="hash_setcount"></a><a name="count"></a> hash_set：： count
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -565,7 +565,7 @@ size_type count(const Key& key) const;
 
 成员函数返回在以下范围内的元素数目：
 
-\[lower_bound （*key*）、upper_bound （*key*））。
+\[ lower_bound (*密钥*) ，upper_bound () *密钥* ) 。
 
 ### <a name="example"></a>示例
 
@@ -603,7 +603,7 @@ The number of elements in hs1 with a sort key of 1 is: 1.
 The number of elements in hs1 with a sort key of 2 is: 0.
 ```
 
-## <a name="hash_setcrbegin"></a><a name="crbegin"></a>hash_set：： crbegin
+## <a name="hash_setcrbegin"></a><a name="crbegin"></a> hash_set：： crbegin
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -655,7 +655,7 @@ int main( )
 The first element in the reversed hash_set is 30.
 ```
 
-## <a name="hash_setcrend"></a><a name="crend"></a>hash_set：： crend
+## <a name="hash_setcrend"></a><a name="crend"></a> hash_set：： crend
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -708,7 +708,7 @@ int main( )
 The last element in the reversed hash_set is 10.
 ```
 
-## <a name="hash_setdifference_type"></a><a name="difference_type"></a>hash_set：:d ifference_type
+## <a name="hash_setdifference_type"></a><a name="difference_type"></a> hash_set：:d ifference_type
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -785,7 +785,7 @@ The number '20' occurs 1 times in hash_set hs1.
 The number of elements in the hash_set hs1 is: 2.
 ```
 
-## <a name="hash_setemplace"></a><a name="emplace"></a>hash_set：： emplace
+## <a name="hash_setemplace"></a><a name="emplace"></a> hash_set：： emplace
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -801,9 +801,8 @@ emplace(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*初始值*|要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
+*初始值*\
+要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。
 
 ### <a name="return-value"></a>返回值
 
@@ -837,7 +836,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a>hash_set：： emplace_hint
+## <a name="hash_setemplace_hint"></a><a name="emplace_hint"></a> hash_set：： emplace_hint
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -853,10 +852,11 @@ iterator emplace(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*初始值*|要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
-|*_Where*|开始搜索正确插入点的位置。 （如果插入点紧随 *_Where*，则可能会在分期常量时间内（而不是对数时间）进行插入。|
+*初始值*\
+要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。
+
+*_Where*\
+开始搜索正确插入点的位置。 如果插入点紧随 *_Where*，则 (插入会发生在分期常量时间内，而不是对数时间。 ) 
 
 ### <a name="return-value"></a>返回值
 
@@ -892,7 +892,7 @@ int main( )
 After the emplace insertion, hs3 contains a.
 ```
 
-## <a name="hash_setempty"></a><a name="empty"></a>hash_set：： empty
+## <a name="hash_setempty"></a><a name="empty"></a> hash_set：： empty
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -905,7 +905,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果 hash_set 为空，则为; 否则为。**`false`** 如果 hash_set 不是空的。
+**`true`** 如果 hash_set 为空，则为; 否则为。 **`false`** 如果 hash_set 不是空的。
 
 ### <a name="remarks"></a>备注
 
@@ -941,7 +941,7 @@ The hash_set hs1 is not empty.
 The hash_set hs2 is empty.
 ```
 
-## <a name="hash_setend"></a><a name="end"></a>hash_set：： end
+## <a name="hash_setend"></a><a name="end"></a> hash_set：： end
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -960,7 +960,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-`end`用于测试迭代器是否已到达其 hash_set 的末尾。 不应对 `end` 返回的值取消引用。
+`end` 用于测试迭代器是否已到达其 hash_set 的末尾。 不应对 `end` 返回的值取消引用。
 
 ### <a name="example"></a>示例
 
@@ -1004,7 +1004,7 @@ The last element of hs1 is 3
 The last element of hs1 is now 2
 ```
 
-## <a name="hash_setequal_range"></a><a name="equal_range"></a>hash_set：： equal_range
+## <a name="hash_setequal_range"></a><a name="equal_range"></a> hash_set：： equal_range
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1026,7 +1026,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 一对迭代器，其中第一个是键的 [lower_bound](../standard-library/set-class.md#lower_bound)，第二个是键的 [upper_bound](../standard-library/set-class.md#upper_bound)。
 
-若要访问成员函数返回的 pr 对的第一个迭代器，请使用 `pr`. **首先**，若要取消引用下限迭代器，请使用 \* （ `pr` 。 **第一个**）。 若要访问成员函数返回的 `pr` 对的第二个迭代器，请使用 `pr`. **其次**，若要取消引用上限迭代器，请使用 \* （ `pr` 。 **second**）。
+若要访问成员函数返回的 pr 对的第一个迭代器，请使用 `pr`. **首先**，若要取消引用下限迭代器，请使用 \* ( `pr` 。 **第一个**) 。 若要访问成员函数返回的 `pr` 对的第二个迭代器，请使用 `pr`. **其次**，若要取消引用上限迭代器，请使用 \* ( `pr` 。 **第二**) 。
 
 ### <a name="remarks"></a>备注
 
@@ -1089,7 +1089,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The hash_set hs1 doesn't have an element with a key greater than or equal to 40.
 ```
 
-## <a name="hash_seterase"></a><a name="erase"></a>hash_set：： erase
+## <a name="hash_seterase"></a><a name="erase"></a> hash_set：： erase
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1209,7 +1209,7 @@ After another element (unique for hash_set) with a key
 equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.
 ```
 
-## <a name="hash_setfind"></a><a name="find"></a>hash_set：： find
+## <a name="hash_setfind"></a><a name="find"></a> hash_set：： find
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1287,7 +1287,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setget_allocator"></a><a name="get_allocator"></a>hash_set：： get_allocator
+## <a name="hash_setget_allocator"></a><a name="get_allocator"></a> hash_set：： get_allocator
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1300,9 +1300,9 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>返回值
 
-Hash_set 用于管理内存的分配器，即模板参数*分配*器。
+Hash_set 用于管理内存的分配器，即模板参数 *分配*器。
 
-有关*分配*器的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题的 "备注" 部分。
+有关 *分配*器的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 ### <a name="remarks"></a>备注
 
@@ -1363,7 +1363,7 @@ int main( )
 }
 ```
 
-## <a name="hash_sethash_set"></a><a name="hash_set"></a>hash_set：： hash_set
+## <a name="hash_sethash_set"></a><a name="hash_set"></a> hash_set：： hash_set
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1419,13 +1419,20 @@ hash_set(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*Fc-al*|要用于此 `hash_set` 对象的存储分配器类，默认为 `Allocator`。|
-|*压缩*|用于对 `hash_set` 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。|
-|*Right*|所构造的 `hash_set` 要作为其副本的 `hash_set`。|
-|*First*|要复制的范围元素中的第一个元素的位置。|
-|*时间*|要复制的元素范围以外的第一个元素的位置。|
+*Fc-al*\
+要用于此 `hash_set` 对象的存储分配器类，默认为 `Allocator`。
+
+*压缩*\
+用于对 `hash_set` 中元素排序的类型 `const Traits` 的比较函数，默认为 `hash_compare`。
+
+*然后*\
+所构造的 `hash_set` 要作为其副本的 `hash_set`。
+
+*1*\
+要复制的范围元素中的第一个元素的位置。
+
+*时间*\
+要复制的元素范围以外的第一个元素的位置。
 
 ### <a name="remarks"></a>备注
 
@@ -1447,7 +1454,7 @@ hash_set(
 
 `hash_set` 容器中元素的实际顺序取决于哈希函数、排序函数和哈希表的当前大小，且通常无法进行预测，而在设置容器中则可对其进行预测，因为在设置容器中其仅由排序函数决定。
 
-## <a name="hash_setinsert"></a><a name="insert"></a>hash_set：： insert
+## <a name="hash_setinsert"></a><a name="insert"></a> hash_set：： insert
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1472,13 +1479,20 @@ void insert(
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*初始值*|要插入 `hash_set` 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。|
-|*Where*|开始搜索正确插入点的位置。 （如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。）|
-|*First*|要从 `hash_set` 中复制的第一个元素的位置。|
-|*时间*|要从 `hash_set` 中复制的最后一个元素以外的位置。|
-|*IList*|从中复制元素的 initializer_list。|
+*初始值*\
+要插入 `hash_set` 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。
+
+*其中*\
+开始搜索正确插入点的位置。 （如果插入点紧随 `_Where`，则插入可发生在分期常量时间内，而非对数时间内。）
+
+*1*\
+要从 `hash_set` 中复制的第一个元素的位置。
+
+*时间*\
+要从 `hash_set` 中复制的最后一个元素以外的位置。
+
+*IList*\
+从中复制元素的 initializer_list。
 
 ### <a name="return-value"></a>返回值
 
@@ -1494,7 +1508,7 @@ void insert(
 
 第三个成员函数将元素值序列插入到 `hash_set`，它对应于迭代器在指定 `hash_set` 的范围 [ `First`, `Last`) 中所处理的每一个元素。
 
-## <a name="hash_setiterator"></a><a name="iterator"></a>hash_set：： iterator
+## <a name="hash_setiterator"></a><a name="iterator"></a> hash_set：： iterator
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1513,7 +1527,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 有关如何声明和使用 `iterator` 的示例，请参阅 [begin](#begin) 的示例。
 
-## <a name="hash_setkey_comp"></a><a name="key_comp"></a>hash_set：： key_comp
+## <a name="hash_setkey_comp"></a><a name="key_comp"></a> hash_set：： key_comp
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1526,9 +1540,9 @@ key_compare key_comp() const;
 
 ### <a name="return-value"></a>返回值
 
-返回 hash_set 用来对其元素进行排序的函数对象，这是模板参数的*特征*。
+返回 hash_set 用来对其元素进行排序的函数对象，这是模板参数的 *特征*。
 
-有关*特征*的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题。
+有关 *特征* 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题。
 
 ### <a name="remarks"></a>备注
 
@@ -1589,7 +1603,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setkey_compare"></a><a name="key_compare"></a>hash_set：： key_compare
+## <a name="hash_setkey_compare"></a><a name="key_compare"></a> hash_set：： key_compare
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1602,9 +1616,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>备注
 
-`key_compare`是模板参数*特征*的同义词。
+`key_compare` 是模板参数 *特征*的同义词。
 
-有关*特征*的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题。
+有关 *特征* 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题。
 
 请注意，`key_compare` 和 [value_compare](#value_compare) 皆是模板参数 *Traits* 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
 
@@ -1612,7 +1626,7 @@ typedef Traits key_compare;
 
 有关如何声明和使用 `key_compare` 的示例，请参阅 [key_comp](#key_comp) 的示例。
 
-## <a name="hash_setkey_type"></a><a name="key_type"></a>hash_set：： key_type
+## <a name="hash_setkey_type"></a><a name="key_type"></a> hash_set：： key_type
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1625,9 +1639,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-`key_type`是模板参数*键*的同义词。
+`key_type` 是模板参数 *键*的同义词。
 
-有关*密钥*的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题的 "备注" 部分。
+有关 *密钥*的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 请注意，`key_type` 和 [value_type](#value_type) 皆是模板参数 *Key* 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
 
@@ -1635,7 +1649,7 @@ typedef Key key_type;
 
 有关如何声明和使用 `key_type` 的示例，请参阅 [value_type](#value_type) 的示例。
 
-## <a name="hash_setlower_bound"></a><a name="lower_bound"></a>hash_set：： lower_bound
+## <a name="hash_setlower_bound"></a><a name="lower_bound"></a> hash_set：： lower_bound
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1709,7 +1723,7 @@ The hash_set hs1 doesn't have an element with a key of 40.
 The element of hs1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="hash_setmax_size"></a><a name="max_size"></a>hash_set：： max_size
+## <a name="hash_setmax_size"></a><a name="max_size"></a> hash_set：： max_size
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1747,7 +1761,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setoperator"></a><a name="op_eq"></a>hash_set：： operator =
+## <a name="hash_setoperator"></a><a name="op_eq"></a> hash_set：： operator =
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1762,9 +1776,8 @@ hash_set& operator=(hash_set&& right);
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|-|-|
-|*然后*|要复制到 `hash_set` 中的 [hash_set](../standard-library/hash-set-class.md)。|
+*然后*\
+要复制到 `hash_set` 中的 [hash_set](../standard-library/hash-set-class.md)。
 
 ### <a name="remarks"></a>备注
 
@@ -1808,7 +1821,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setpointer"></a><a name="pointer"></a>hash_set：:p ointer
+## <a name="hash_setpointer"></a><a name="pointer"></a> hash_set：:p ointer
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1825,7 +1838,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
 
 在大多数情况下，应使用 [iterator](#iterator) 访问 hash_set 对象中的元素。
 
-## <a name="hash_setrbegin"></a><a name="rbegin"></a>hash_set：： rbegin
+## <a name="hash_setrbegin"></a><a name="rbegin"></a> hash_set：： rbegin
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1908,7 +1921,7 @@ The reversed hash_set is: 30 20 10
 After the erasure, the first element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreference"></a><a name="reference"></a>hash_set：： reference
+## <a name="hash_setreference"></a><a name="reference"></a> hash_set：： reference
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -1958,7 +1971,7 @@ The first element in the hash_set is 10.
 The first element in the hash_set is now 15.
 ```
 
-## <a name="hash_setrend"></a><a name="rend"></a>hash_set：： rend
+## <a name="hash_setrend"></a><a name="rend"></a> hash_set：： rend
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2044,7 +2057,7 @@ The reversed hash_set is: 30 20 10 .
 After the erasure, the last element in the reversed hash_set is 20.
 ```
 
-## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a>hash_set：： reverse_iterator
+## <a name="hash_setreverse_iterator"></a><a name="reverse_iterator"></a> hash_set：： reverse_iterator
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2063,7 +2076,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。
 
-## <a name="hash_setsize"></a><a name="size"></a>hash_set：： size
+## <a name="hash_setsize"></a><a name="size"></a> hash_set：： size
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2110,7 +2123,7 @@ The hash_set length is 1.
 The hash_set length is now 2.
 ```
 
-## <a name="hash_setsize_type"></a><a name="size_type"></a>hash_set：： size_type
+## <a name="hash_setsize_type"></a><a name="size_type"></a> hash_set：： size_type
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2127,7 +2140,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 
 有关如何声明和使用 `size_type` 的示例，请参阅 [size](#size) 的示例
 
-## <a name="hash_setswap"></a><a name="swap"></a>hash_set：： swap
+## <a name="hash_setswap"></a><a name="swap"></a> hash_set：： swap
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2201,7 +2214,7 @@ After swapping with hs2, list hs1 is: 200 100.
 After swapping with hs3, list hs1 is: 300.
 ```
 
-## <a name="hash_setupper_bound"></a><a name="upper_bound"></a>hash_set：： upper_bound
+## <a name="hash_setupper_bound"></a><a name="upper_bound"></a> hash_set：： upper_bound
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2275,7 +2288,7 @@ The first element of hs1 with a key greater than
 that of the initial element of hs1 is: 20.
 ```
 
-## <a name="hash_setvalue_comp"></a><a name="value_comp"></a>hash_set：： value_comp
+## <a name="hash_setvalue_comp"></a><a name="value_comp"></a> hash_set：： value_comp
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2288,9 +2301,9 @@ value_compare value_comp() const;
 
 ### <a name="return-value"></a>返回值
 
-返回 hash_set 用来对其元素进行排序的函数对象，即模板参数*比较*。
+返回 hash_set 用来对其元素进行排序的函数对象，即模板参数 *比较*。
 
-有关*比较*的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题的 "备注" 部分。
+有关 *比较*的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 ### <a name="remarks"></a>备注
 
@@ -2300,7 +2313,7 @@ value_compare value_comp() const;
 
 **`true`** 如果 `_xVal` `_yVal` 在排序顺序中先于且不等于，则返回。
 
-请注意， [value_compare](../standard-library/set-class.md#value_compare)和[key_compare](../standard-library/set-class.md#key_compare)都是模板参数*比较*的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
+请注意， [value_compare](../standard-library/set-class.md#value_compare) 和 [key_compare](../standard-library/set-class.md#key_compare) 都是模板参数 *比较*的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
@@ -2351,7 +2364,7 @@ int main( )
 }
 ```
 
-## <a name="hash_setvalue_compare"></a><a name="value_compare"></a>hash_set：： value_compare
+## <a name="hash_setvalue_compare"></a><a name="value_compare"></a> hash_set：： value_compare
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。
@@ -2364,17 +2377,17 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>备注
 
-`value_compare`是模板参数*特征*的同义词。
+`value_compare` 是模板参数 *特征*的同义词。
 
-有关*特征*的详细信息，请参阅[hash_set 类](../standard-library/hash-set-class.md)主题。
+有关 *特征* 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题。
 
-请注意， [key_compare](#key_compare)和 `value_compare` 都是模板参数*特征*的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
+请注意， [key_compare](#key_compare) 和 `value_compare` 都是模板参数 *特征*的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
 有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](#value_comp) 的示例。
 
-## <a name="hash_setvalue_type"></a><a name="value_type"></a>hash_set：： value_type
+## <a name="hash_setvalue_type"></a><a name="value_type"></a> hash_set：： value_type
 
 > [!NOTE]
 > 此 API 已废弃不用。 替代项为 [unordered_set 类](../standard-library/unordered-set-class.md)。

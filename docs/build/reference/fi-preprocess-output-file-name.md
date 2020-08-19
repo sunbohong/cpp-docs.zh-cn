@@ -1,6 +1,6 @@
 ---
 title: /Fi（预处理输出文件名）
-ms.date: 11/04/2016
+ms.date: 08/12/2020
 f1_keywords:
 - /Fi
 helpviewer_keywords:
@@ -9,45 +9,64 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 990c48a72c3f6017d893ddf9b46bcbb737bfb634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82bf09a8f01f656f90ad9971530b05f108fc95a4
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271250"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561084"
 ---
-# <a name="fi-preprocess-output-file-name"></a>/Fi（预处理输出文件名）
+# <a name="fi-preprocess-output-file-name"></a>`/Fi` (预处理输出文件名) 
 
-指定的输出文件的名称[/P （预处理到文件）](p-preprocess-to-a-file.md)编译器选项将预处理的输出。
+指定[ `/P` (预处理到文件) ](p-preprocess-to-a-file.md)编译器选项写入预处理输出的输出文件的名称。
 
 ## <a name="syntax"></a>语法
 
-```
-/Fipathname
-```
+> **`/Fi`**_`pathname`_
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|`pathname`|由生成的名称和输出文件的路径 **/P**编译器选项。|
+*`pathname`*\
+编译器选项生成的输出文件的相对或绝对路径和文件名 **`/P`** 。 或， *`.i`* 当指定多个输入文件时，输出文件的目录路径。 不要在选项和之间加空格 **`/Fi`** *`pathname`* 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-使用 **/Fi**编译器选项结合 **/P**编译器选项。
+结合使用 **`/Fi`** 编译器选项和 **`/P`** 编译器选项。 如果 **`/P`** 未指定，则 **`/Fi`** 会导致命令行警告 D9007。
 
-如果您仅指定一个路径的`pathname`参数，该源代码文件的基名称用作预处理的输出文件的基名称。 `pathname`参数不需要特定文件扩展名。 但是，如果未指定文件扩展名，则使用".i"的扩展。
+如果仅指定目录路径 (以反斜杠) 为参数结尾的路径 **`\`** *`pathname`* ，则源文件的基名称将用作预处理输出文件的基名称。 *`pathname`* 参数不需要特定的文件扩展名。 但是，如果不指定文件扩展名，则使用扩展名 ". i"。
 
-## <a name="example"></a>示例
+### <a name="example"></a>示例
 
-下面的命令行对 PROGRAM.cpp 进行预处理，保留注释，添加[#line](../../preprocessor/hash-line-directive-c-cpp.md)指令，并将结果写入到 MYPROCESS.i 文件。
+以下命令行预处理 *`PROGRAM.cpp`* 、保留注释、添加 [`#line`](../../preprocessor/hash-line-directive-c-cpp.md) 指令，并将结果写入 *`MYPROCESS.i`* 文件：
 
-```
+```cmd
 CL /P /FiMYPROCESS.I PROGRAM.CPP
 ```
 
-## <a name="see-also"></a>请参阅
+此命令行 *`main.cpp`* *`helper.cpp`* *`main.i`* *`helper.i`* 在名为的子目录中预处理和 into *`preprocessed`* ：
+
+```cmd
+CL /P /Fi".\\preprocessed\\" main.cpp helper.cpp
+```
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
+
+1. 打开源文件或项目的 " **属性页** " 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **预处理器**" 属性页。
+
+1. 将 " **预处理到文件** " 属性设置为 **"是"**。
+
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
+
+1. **`/Fi`** *`pathname`* 在 "**附加选项**" 框中输入编译器选项。 为项目设置此属性时，只指定目录路径，而不指定文件名。
+
+### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
+
+- 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[/P（预处理到文件）](p-preprocess-to-a-file.md)<br/>
+[`/P` (预处理到文件) ](p-preprocess-to-a-file.md)<br/>
 [指定路径名](specifying-the-pathname.md)

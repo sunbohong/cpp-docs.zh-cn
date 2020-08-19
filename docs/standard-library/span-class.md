@@ -1,5 +1,5 @@
 ---
-title: span 类（c + + 标准库） |Microsoft Docs
+title: 范围类 (c + + 标准库) |Microsoft Docs
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,14 +51,14 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 86ef4afcb5e6e7a9d244a8c2f2126bec7e1ace75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217449"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560447"
 ---
-# <a name="span-class-c-standard-library"></a>span 类（c + + 标准库）
+# <a name="span-class-c-standard-library"></a>范围类 (c + + 标准库) 
 
 为一系列连续的对象提供轻量视图。 跨度提供一种安全的方法，可在内存中循环访问（例如，存储在内置数组、或中的对象），并对这些对象进行索引。 `std::array` `std::vector`
 
@@ -75,10 +75,11 @@ class span;
 
 ### <a name="template-parameters"></a>模板参数
 
-|参数|描述|
-|-|-|
-|`T`| 范围中元素的类型。 |
-|`Extent`| 如果在编译时指定，则为跨距中的元素数。 否则， `std::dynamic_extent` 如果在运行时将指定元素的数量，则为。 |
+`T`\
+ 范围中元素的类型。
+
+`Extent`\
+ 如果在编译时指定，则为跨距中的元素数。 否则，  `std::dynamic_extent` 如果在运行时将指定元素的数量，则为。
 
 [扣缴指南](#deduction_guides)
 
@@ -120,7 +121,7 @@ class span;
 |[span：： operator =](#op_eq)| 替换跨度。|
 |[span：：运算符\[\]](#op_at)| 获取指定位置处的元素。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 所有 `span` 成员函数都具有恒定的时间复杂性。
 
@@ -270,7 +271,7 @@ int main()
 using element_type = T;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 创建范围时，将从模板参数获取类型 `T` 。
 
@@ -336,7 +337,7 @@ constexpr iterator end() const noexcept;
 
 指向刚超出范围末尾的迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `end` 用于测试迭代器是否超过了其范围的末尾。
 
@@ -371,7 +372,7 @@ template <size_t count> constexpr auto first() const noexcept;
 
 包含 `count` 此范围前面的元素的范围。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果可能，请使用此函数的模板版本在 `count` 编译时验证，并保留有关范围的信息，因为它返回的是一个固定区范围。
 
@@ -451,7 +452,7 @@ int main()
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此类型充当范围内的元素的迭代器。
 
@@ -496,7 +497,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 包含 `count` 此范围中最后一个元素的范围。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果可能，请使用此函数的模板版本在 `count` 编译时验证，并保留有关范围的信息，因为它返回的是一个固定区范围。
 
@@ -549,7 +550,7 @@ constexpr reference operator[](size_type offset) const;
 
 ### <a name="return-value"></a>返回值
 
-对位置*偏移量*处的元素的引用。 如果该位置无效，则该行为是不确定的。
+对位置 *偏移量*处的元素的引用。 如果该位置无效，则该行为是不确定的。
 
 ### <a name="example"></a>示例
 
@@ -588,7 +589,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 `*this`
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 赋值将对数据指针和大小进行浅表复制。 浅表副本是安全的，因为 `span` 不会为其包含的元素分配内存。
 
@@ -740,9 +741,9 @@ constexpr reverse_iterator rend() const noexcept;
 
 反向迭代器指向反向范围中最后一个元素之后的占位符;也就是说，非反向范围中第一个元素之前的占位符。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`rend`与反向跨度一起使用，正如[span：： end](#end)用于跨距。 用于测试反向迭代器是否已到达其跨度的终点。
+`rend` 与反向跨度一起使用，正如 [span：： end](#end) 用于跨距。 用于测试反向迭代器是否已到达其跨度的终点。
 
 返回的值 `rend` 不应被取消引用。
 
@@ -890,7 +891,7 @@ int main()
 
 ## <a name="spanspan"></a><a name="span"></a> `span::span`
 
-`span`函数.
+`span` 函数.
 
 ```cpp
 constexpr span() noexcept
@@ -954,7 +955,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *迅驰*\
 从此范围构造范围。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 跨度不会释放范围内的项的存储，因为它不拥有其中的对象的存储。
 
@@ -962,7 +963,7 @@ span(const span<T, OtherExtent>& other) noexcept
 |---------|---------|
 |`span()` | 构造空范围。 仅当模板参数为或时，才考虑重载解析过程 `Extent` `0` `dynamic_extent` 。|
 |`span(It first, size_type count)` | 从迭代器中的第一个元素构造范围 `count` `first` 。  仅当模板参数不为时，才考虑重载解析过程 `Extent` `dynamic_extent` 。 |
-|`span(It first, End last)` | 从迭代器中的元素构造范围 `first` 直到到达结束为止 `last` 。 仅当模板参数不为时，才考虑重载解析过程 `Extent` `dynamic_extent` 。 `It`必须是 `contiguous_iterator` 。  |
+|`span(It first, End last)` | 从迭代器中的元素构造范围 `first` 直到到达结束为止 `last` 。 仅当模板参数不为时，才考虑重载解析过程 `Extent` `dynamic_extent` 。 `It` 必须是 `contiguous_iterator` 。  |
 |`span(array<T, N>& arr) noexcept;`<br /><br />`span(const array<T, N>& arr) noexcept;`<br /><br />`span(type_identity_t<element_type> (&arr)[N]) noexcept;` |  从 `N` 指定数组的元素构造范围。 仅当模板参数 `Extent` 为或相等时才考虑重载解析过程 `dynamic_extent` `N` 。 |
 |`span(R&& r)` |  从范围构造范围。 如果模板参数不是，则仅参与重载决策 `Extent` `dynamic_extent` 。|
 |`span(const span& other)` |  编译器生成的复制构造函数。 数据指针的浅表副本是安全的，因为跨距不会分配内存来保存元素。 |
@@ -1006,7 +1007,7 @@ constexpr auto subspan() const noexcept
 ### <a name="parameters"></a>参数
 
 *计*\
-要放入 subspan 中的元素的数目。 如果 `count` 为 `dynamic_extent` （默认值），则从 subspan `offset` 到此跨度的末尾。
+要放入 subspan 中的元素的数目。 如果 `count` `dynamic_extent` (默认值) ，则从 subspan `offset` 到此跨度的末尾。
 
 *抵销*\
 此范围中启动 subspan 的位置。
@@ -1015,7 +1016,7 @@ constexpr auto subspan() const noexcept
 
 `offset`从此范围中开始的范围。 包含 `count` 元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数的模板版本可用来检查编译时的计数，该计数通过返回一段固定区来保留范围的相关信息。
 
@@ -1086,7 +1087,7 @@ int main()
 2
 ```
 
-## <a name="deduction-guides"></a><a name="deduction_guides"></a>扣缴指南
+## <a name="deduction-guides"></a><a name="deduction_guides"></a> 扣缴指南
 
 为范围提供以下扣缴指南。
 

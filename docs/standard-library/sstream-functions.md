@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - sstream/std::swap
 ms.assetid: bc9607e8-7c6b-44ef-949b-19e917b450ad
-ms.openlocfilehash: bdf7cd26b25680eb7e5270fdc8ae7dac0d10f70f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 722cba257b12bb753aaa61ac2f430df76c2ceb93
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81336657"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560369"
 ---
 # <a name="ltsstreamgt-functions"></a>&lt;sstream&gt; 函数
 
 ||
 |-|
-|[交换](#sstream_swap)|
+|[swap](#sstream_swap)|
 
-## <a name="swap"></a><a name="sstream_swap"></a>交换
+## <a name="swap"></a><a name="sstream_swap"></a> 购
 
 交换两个 `sstream` 对象间的值。
 
@@ -45,15 +45,16 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-|参数|说明|
-|---------------|-----------------|
-|*离开*|引用 `sstream` 对象。|
-|*对*|引用 `sstream` 对象。|
+*左中*\
+引用 `sstream` 对象。
 
-### <a name="remarks"></a>备注
+*然后*\
+引用 `sstream` 对象。
+
+### <a name="remarks"></a>注解
 
 该模板函数执行 `left.swap(right)`。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<溪流>](../standard-library/sstream.md)
+[\<sstream>](../standard-library/sstream.md)

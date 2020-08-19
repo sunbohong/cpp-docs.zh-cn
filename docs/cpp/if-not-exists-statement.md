@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-ms.openlocfilehash: 3e0eb550830a1689d440e3b471759a98f1eef0ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e99fcee440bd69eabafec693df99d347f3aee828
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187252"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560278"
 ---
 # <a name="__if_not_exists-statement"></a>__if_not_exists 语句
 
@@ -27,12 +27,13 @@ statements
 
 #### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*identifier*|要测试其存在性的标识符。|
-|*前瞻性*|如果*标识符*不存在，要执行的一个或多个语句。|
+*identifier*\
+要测试其存在性的标识符。
 
-## <a name="remarks"></a>备注
+*前瞻性*\
+如果 *标识符* 不存在，要执行的一个或多个语句。
+
+## <a name="remarks"></a>注解
 
 > [!CAUTION]
 > 若要获得最可靠的结果，请使用 **`__if_not_exists`** 以下约束中的语句。
@@ -45,11 +46,11 @@ statements
 
 - 在测试重载函数时，不能测试特定形式的重载。
 
-语句的补集 **`__if_not_exists`** 是[__if_exists](../cpp/if-exists-statement.md)语句。
+语句的补集 **`__if_not_exists`** 是 [__if_exists](../cpp/if-exists-statement.md) 语句。
 
 ## <a name="example"></a>示例
 
-有关如何使用的示例 **`__if_not_exists`** ，请参阅[__if_exists 语句](../cpp/if-exists-statement.md)。
+有关如何使用的示例 **`__if_not_exists`** ，请参阅 [__if_exists 语句](../cpp/if-exists-statement.md)。
 
 ## <a name="see-also"></a>另请参阅
 

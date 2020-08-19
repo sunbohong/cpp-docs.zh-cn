@@ -9,12 +9,12 @@ helpviewer_keywords:
 - stdext::allocator_variable_size
 - stdext::allocators [C++], allocator_variable_size
 ms.assetid: c3aa4105-ae45-4385-bbbe-9f23060478cb
-ms.openlocfilehash: 4e4c5ab0167d49c9ee892f39f18892edd004c3f6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 24769962d615c75f4573a6261b6000fadf39b218
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623708"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561344"
 ---
 # <a name="allocator_variable_size-class"></a>allocator_variable_size 类
 
@@ -29,11 +29,10 @@ class allocator_variable_size;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*Type*|由分配器分配元素类型。|
+*类别*\
+由分配器分配元素类型。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 [ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏将此类作为以下语句中的*name*参数传递：`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_variable_size), SYNC_DEFAULT, allocator_variable_size);`
 

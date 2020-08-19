@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2779e643b15179b0017535fbfbb144f94e1aedbe
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752997"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562007"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 类
 
-扩展`CAutoHideDockSite` [CDockSite 类](../../mfc/reference/cdocksite-class.md)以实现自动隐藏停靠窗格。
+`CAutoHideDockSite`扩展[CDockSite 类](../../mfc/reference/cdocksite-class.md)以实现自动隐藏停靠窗格。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +45,7 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|名称|说明|
+|“属性”|说明|
 |`CAutoHideDockSite::CAutoHideDockSite`|构造 `CAutoHideDockSite` 对象。|
 |`CAutoHideDockSite::~CAutoHideDockSite`|析构函数。|
 
@@ -53,28 +53,28 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|名称|说明|
-|`CAutoHideDockSite::AllowShowOnPaneMenu`|指示 是否`CAutoHideDockSite`显示在窗格菜单上。|
-|[CAutoHideDock网站：：接受窗格](#canacceptpane)|确定基本窗格对象是否派生自[CMFCAutoHideBar 类](../../mfc/reference/cmfcautohidebar-class.md)。|
-|[CAutoHideDock网站：:DockPane](#dockpane)|将窗格停靠到此`CAuotHideDockSite`对象。|
-|[CAutoHideDock网站：：获得对齐](#getalignrect)|在屏幕坐标中检索停靠站点的大小。|
-|[CAutoHideDock网站：重新定位窗格](#repositionpanes)|`CAutoHideDockSite`使用全局边距和按钮间距重绘 上的窗格。|
-|[CAutoHideDock网站：：设置偏移左](#setoffsetleft)|设置停靠栏左侧的边距。|
-|[CAutoHideDock网站：：设置偏移权](#setoffsetright)|设置停靠栏右侧的边距。|
-|[CAutoHideDock网站：：取消设置自动隐藏模式](#unsetautohidemode)|调用[CMFCAutoHideBar：：取消设置 AutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode)上`CAutoHideDockSite`的对象。|
+|“属性”|说明|
+|`CAutoHideDockSite::AllowShowOnPaneMenu`|指示是否在 `CAutoHideDockSite` 窗格菜单上显示。|
+|[CAutoHideDockSite：： CanAcceptPane](#canacceptpane)|确定基窗格对象是否派生自 [CMFCAutoHideBar 类](../../mfc/reference/cmfcautohidebar-class.md)。|
+|[CAutoHideDockSite：:D ockPane](#dockpane)|将一个窗格停靠到此 `CAuotHideDockSite` 对象。|
+|[CAutoHideDockSite：： GetAlignRect](#getalignrect)|检索停靠站点的大小（以屏幕坐标表示）。|
+|[CAutoHideDockSite：： RepositionPanes](#repositionpanes)|`CAutoHideDockSite`用全局边距和按钮间距重绘上的窗格。|
+|[CAutoHideDockSite：： SetOffsetLeft](#setoffsetleft)|设置停靠栏左侧的边距。|
+|[CAutoHideDockSite：： SetOffsetRight](#setoffsetright)|设置停靠栏右侧的边距。|
+|[CAutoHideDockSite：： UnSetAutoHideMode](#unsetautohidemode)|为中的对象调用 [CMFCAutoHideBar：： UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) `CAutoHideDockSite` 。|
 
 ### <a name="data-members"></a>数据成员
 
 |||
 |-|-|
 |名称|说明|
-|[CAutoHideDock网站：m_nExtraSpace](#m_nextraspace)|定义工具栏和停靠栏边缘之间的空间大小。 此空间从左边缘或上边缘测量，具体取决于停靠空间的对齐方式。|
+|[CAutoHideDockSite：： m_nExtraSpace](#m_nextraspace)|定义工具栏和停靠栏边缘之间的空间大小。 此空间是从左边缘或上边缘测量的，具体取决于停靠空间的对齐方式。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-当您调用[CFrameWndEx：：启用自动隐藏窗格时](../../mfc/reference/cframewndex-class.md#enableautohidepanes)，框架会自动创建一个`CAutoHideDockSite`对象。 在大多数情况下，您不必直接实例化或使用此类。
+调用 [CFrameWndEx：： EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes)时，框架会自动创建 `CAutoHideDockSite` 对象。 在大多数情况下，您不必直接实例化或使用此类。
 
-停靠栏是停靠窗格左侧和[CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)左侧之间的间隙。
+停靠栏是停靠窗格左侧与 [CMFCAutoHideButton 类](../../mfc/reference/cmfcautohidebutton-class.md)左侧之间的差距。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -90,17 +90,17 @@ class CAutoHideDockSite : public CDockSite
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何从`CAutoHideDockSite``CMFCAutoHideBar`对象检索对象，以及如何设置停靠栏的左右边距。
+下面的示例演示如何 `CAutoHideDockSite` 从对象中检索对象 `CMFCAutoHideBar` ，以及如何设置停靠栏的左边距和右边距。
 
 [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxautohidedocksite.h
+**标头：** afxautohidedocksite
 
-## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a>CAutoHideDock网站：：接受窗格
+## <a name="cautohidedocksitecanacceptpane"></a><a name="canacceptpane"></a> CAutoHideDockSite：： CanAcceptPane
 
-确定基本窗格是[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)对象还是派生自`CMFCAutoHideBar`。
+确定基窗格是 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 对象还是派生自 `CMFCAutoHideBar` 。
 
 ```
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
@@ -108,22 +108,20 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 ### <a name="parameters"></a>参数
 
-|||
-|-|-|
-|参数|说明|
-|*pBar*|[在]框架测试的基本窗格。|
+*pBar*\
+中框架测试的基本窗格。
 
 ### <a name="return-value"></a>返回值
 
-如果*pBar*派生自`CMFCAutoHideBar`，则为 TRUE。否则。
+如果 *pBar* 是从派生的，则为 TRUE `CMFCAutoHideBar` ;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果基础窗格对象派生自`CMFCAutoHideBar`，它可以包含 。 `CAutoHideDockSite`
+如果基窗格对象是从派生的 `CMFCAutoHideBar` ，则它可以包含 `CAutoHideDockSite` 。
 
-## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a>CAutoHideDock网站：:DockPane
+## <a name="cautohidedocksitedockpane"></a><a name="dockpane"></a> CAutoHideDockSite：:D ockPane
 
-将窗格停靠到此[CAutoHideDockSite 对象](../../mfc/reference/cautohidedocksite-class.md)。
+将一个窗格停靠到此 [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) 对象。
 
 ```
 virtual void DockPane(
@@ -134,22 +132,24 @@ virtual void DockPane(
 
 ### <a name="parameters"></a>参数
 
-|||
-|-|-|
-|参数|说明|
-|*pwnd*|[在]框架停靠的窗格。|
-|*基方法*|[在]窗格的停靠选项。|
-|*lpRect*|[在]指定停靠窗格边界的矩形。|
+*pWnd*\
+中框架停靠的窗格。
 
-### <a name="remarks"></a>备注
+*dockMethod*\
+中窗格的停靠选项。
 
-默认实现不使用参数*dockMethod，* 这是为将来使用而提供的。
+*lpRect*\
+中指定停靠窗格边界的矩形。
 
-如果*lpRect*为 NULL，则框架将窗格置于停靠站点上的默认位置。 如果停靠站点是水平的，则默认位置位于停靠站点的最左侧。 否则，默认位置位于停靠站点的顶部。
+### <a name="remarks"></a>注解
 
-## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a>CAutoHideDock网站：：获得对齐
+默认实现不使用提供的参数 *dockMethod*供将来使用。
 
-在屏幕坐标中检索停靠站点的大小。
+如果 *lpRect* 为 NULL，框架会将窗格置于停靠站点的默认位置。 如果停靠站点是水平的，则默认位置位于停靠站点的最左侧。 否则，默认位置位于停靠站点的顶部。
+
+## <a name="cautohidedocksitegetalignrect"></a><a name="getalignrect"></a> CAutoHideDockSite：： GetAlignRect
+
+检索停靠站点的大小（以屏幕坐标表示）。
 
 ```cpp
 void GetAlignRect(CRect& rect) const;
@@ -157,28 +157,26 @@ void GetAlignRect(CRect& rect) const;
 
 ### <a name="parameters"></a>参数
 
-|||
-|-|-|
-|参数|说明|
-|*矩形*|[在]对矩形的引用。 该方法在此矩形中存储停靠站点的大小。|
+*rect*\
+中对矩形的引用。 方法在此矩形中存储停靠站点的大小。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-矩形会针对偏移边距进行调整，以便不包含它们。
+为偏移边距调整矩形，使其不包括在内。
 
-## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a>CAutoHideDock网站：m_nExtraSpace
+## <a name="cautohidedocksitem_nextraspace"></a><a name="m_nextraspace"></a> CAutoHideDockSite：： m_nExtraSpace
 
-[CAutoHideDockSite 类](../../mfc/reference/cautohidedocksite-class.md)和[CMFCAutoHideBar 类](../../mfc/reference/cmfcautohidebar-class.md)对象边缘之间的空间大小。
+[CAutoHideDockSite 类](../../mfc/reference/cautohidedocksite-class.md)和[CMFCAutoHideBar 类](../../mfc/reference/cmfcautohidebar-class.md)对象的边缘之间的空间大小。
 
 ```
 static int m_nExtraSpace;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`CMFCAutoHideBar`当 停靠在 时`CAutoHideDockSite`，它不应占用整个停靠站点。 此全局变量控制 的`CMFCAutoHideBar`左侧或顶部边框与相应`CAutoHideDockSite`边之间的额外空间。 使用上边缘还是左边缘取决于当前对齐方式。
+当 `CMFCAutoHideBar` 停靠在上时 `CAutoHideDockSite` ，它不应占用整个停靠站点。 此全局变量控制的左边缘或上边框与相应边缘之间的额外空间 `CMFCAutoHideBar` `CAutoHideDockSite` 。 是否使用上边缘或左边缘取决于当前对齐方式。
 
-## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a>CAutoHideDock网站：：设置偏移左
+## <a name="cautohidedocksitesetoffsetleft"></a><a name="setoffsetleft"></a> CAutoHideDockSite：： SetOffsetLeft
 
 设置停靠栏左侧的边距。
 
@@ -188,14 +186,14 @@ void SetOffsetLeft(int nOffset);
 
 ### <a name="parameters"></a>参数
 
-*n偏移*<br/>
-[在]新的偏移量。
+*nOffset*<br/>
+中新偏移量。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)对象以静态方式放置在`CAutoHideDockSite`对象上。 这意味着用户无法手动更改`CMFCAutoHideBar`对象的位置。 该方法`SetOffsetLeft`控制 左侧`CMFCAutoHideBar`和 左侧之间的间距`CAutoHideDockSite`。
+[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 对象以静态方式定位在 `CAutoHideDockSite` 对象上。 这意味着用户不能手动更改对象的位置 `CMFCAutoHideBar` 。 方法控制左侧和左侧的左侧 `SetOffsetLeft` 之间的间距 `CMFCAutoHideBar` ，并控制 `CAutoHideDockSite` 。
 
-## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a>CAutoHideDock网站：：设置偏移权
+## <a name="cautohidedocksitesetoffsetright"></a><a name="setoffsetright"></a> CAutoHideDockSite：： SetOffsetRight
 
 设置停靠栏右侧的边距。
 
@@ -205,16 +203,16 @@ void SetOffsetRight(int nOffset);
 
 ### <a name="parameters"></a>参数
 
-*n偏移*<br/>
-[在]新的偏移量。
+*nOffset*<br/>
+中新偏移量。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)对象以静态方式放置在`CAutoHideDockSite`对象上。 这意味着用户无法手动更改`CMFCAutoHideBar`对象的位置。 该方法`SetOffsetRight`控制 右侧`CMFCAutoHideBar`和 右侧之间的间距`CAutoHideDockSite`。
+[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 对象以静态方式定位在 `CAutoHideDockSite` 对象上。 这意味着用户不能手动更改对象的位置 `CMFCAutoHideBar` 。 方法控制右端和右侧的右端 `SetOffsetRight` 之间的间距 `CMFCAutoHideBar` `CAutoHideDockSite` 。
 
-## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a>CAutoHideDock网站：重新定位窗格
+## <a name="cautohidedocksiterepositionpanes"></a><a name="repositionpanes"></a> CAutoHideDockSite：： RepositionPanes
 
-重绘[CAutoHideDockSite 上的](../../mfc/reference/cautohidedocksite-class.md)窗格。
+重绘 [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)上的窗格。
 
 ```
 virtual void RepositionPanes(CRect& rectNewClientArea);
@@ -222,18 +220,16 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>参数
 
-|||
-|-|-|
-|参数|说明|
-|*rectNewClient区域*|[在]保留值。|
+*rectNewClientArea*\
+中保留值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-默认实现不使用*rectNewClientArea*。 它使用全局工具栏边距和按钮间距重绘窗格。
+默认实现不使用 *rectNewClientArea*。 它将用全局工具栏边距和按钮间距重绘窗格。
 
-## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a>CAutoHideDock网站：：取消设置自动隐藏模式
+## <a name="cautohidedocksiteunsetautohidemode"></a><a name="unsetautohidemode"></a> CAutoHideDockSite：： UnSetAutoHideMode
 
-调用[CMFCAutoHideBar：：取消设置停靠站点上的对象的自动隐藏模式](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode)。
+为停靠站点上的对象调用 [CMFCAutoHideBar：： UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) 。
 
 ```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
@@ -241,17 +237,15 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 
 ### <a name="parameters"></a>参数
 
-|||
-|-|-|
-|参数|说明|
-|*pAutoHideToolbar*|[在]指向 位于 上的[CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)对象窗格`CAutoHideDockSite`的指针。|
+*pAutoHideToolbar*\
+中指向位于的 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 对象窗格的指针 `CAutoHideDockSite` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此方法搜索包含*pAutoHideToolbar*的行。 它调用`CMFCAutoHideBar.UnSetAutoHideMode`该行上`CMFCAutoHideBar`的所有对象。 如果未找到*pAutoHideToolbar*或它是 NULL，则此方法将`CMFCAutoHideBar.UnSetAutoHideMode`调用 上`CMFCAutoHideBar``CAutoHideDockSite`的所有对象。
+此方法搜索包含 *pAutoHideToolbar*的行。 它调用 `CMFCAutoHideBar.UnSetAutoHideMode` `CMFCAutoHideBar` 该行上的所有对象。 如果找不到 *pAutoHideToolbar* 或它为 NULL，此方法将调用 `CMFCAutoHideBar.UnSetAutoHideMode` 上的所有 `CMFCAutoHideBar` 对象 `CAutoHideDockSite` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
-[CDockSite Class](../../mfc/reference/cdocksite-class.md)
+[CDockSite 类](../../mfc/reference/cdocksite-class.md)

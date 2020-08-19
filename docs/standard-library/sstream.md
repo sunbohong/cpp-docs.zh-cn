@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 6ab2164e4969a2320f67d479062808b33b0869f9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6edb38e6f6c818415e9e0813b359e8e0ea6ca099
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212132"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560291"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
-定义多个类模板，这些模板支持对存储在已分配的数组对象中的序列进行 iostreams 操作。 此类序列可轻松地与类模板[basic_string](../standard-library/basic-string-class.md)的对象相互转换。
+定义多个类模板，这些模板支持对存储在已分配的数组对象中的序列进行 iostreams 操作。 此类序列可轻松地与类模板 [basic_string](../standard-library/basic-string-class.md)的对象相互转换。
 
 ## <a name="syntax"></a>语法
 
@@ -70,12 +70,13 @@ void swap (
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*左中*|引用 `sstream` 对象。|
-|*然后*|引用 `sstream` 对象。|
+*左中*\
+引用 `sstream` 对象。
 
-## <a name="remarks"></a>备注
+*然后*\
+引用 `sstream` 对象。
+
+## <a name="remarks"></a>注解
 
 类型的对象 `char *` 可使用中的功能 [\<strstream>](../standard-library/strstream.md) 进行流式处理。 但是，已弃用 \<strstream>，建议使用 \<sstream>。
 

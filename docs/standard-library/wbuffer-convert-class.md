@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: 8de0091af93120290105ce7603fae5acff257b76
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ba8c98075741ae6cb8db0ecdfcb1e18cf4f4f89c
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688546"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88561110"
 ---
 # <a name="wbuffer_convert-class"></a>wbuffer_convert 类
 
@@ -27,15 +27,18 @@ class wbuffer_convert
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*Codecvt*|表示转换对象的[区域设置](../standard-library/locale-class.md)方面。|
-|*Elem*|宽字符元素类型。|
-|*特征*|与 Elem 关联的特征。|
+*Codecvt*\
+表示转换对象的[区域设置](../standard-library/locale-class.md)方面。
 
-## <a name="remarks"></a>备注
+*Elem*\
+宽字符元素类型。
 
-此类模板描述了一个流缓冲区，该缓冲区控制 `_Elem` 的类型的元素（其字符特征由类 `Traits`、和从类型 `std::streambuf` 的字节流缓冲区中进行描述）的传输。
+*特征*\
+与 Elem** 关联的特征。
+
+## <a name="remarks"></a>注解
+
+此类模板描述了一个流缓冲区，该缓冲区控制类型的元素 `_Elem` （其字符特征由类描述 `Traits` ）与类型的字节流缓冲区之间的传输 `std::streambuf` 。
 
 一系列 `Elem` 值与多字节序列之间的转换由类 `Codecvt<Elem, char, std::mbstate_t>` 的对象执行，这符合标准代码转换方面 `std::codecvt<Elem, char, std::mbstate_t>` 的要求。
 
