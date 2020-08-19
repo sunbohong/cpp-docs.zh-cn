@@ -122,7 +122,7 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl：： SetItem](#setitem)|设置标头控件中指定项的属性。|
 |[CHeaderCtrl：： SetOrderArray](#setorderarray)|设置标头控件中项的从左到右的顺序。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 标头控件是一个窗口，该窗口通常位于一组文本或数字的列的上方。 它包含每一列的标题，并可划分为多个部分。 用户可以拖动分隔部分的分隔线，设置每列的宽度。 有关标头控件的图例，请参阅 [标题控件](/windows/win32/Controls/header-controls)。
 
@@ -180,7 +180,7 @@ BOOL ClearAllFilters();
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法实现 Win32 消息 [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter) 的行为，其列值为-1，如 Windows SDK 中所述。
 
@@ -205,7 +205,7 @@ BOOL ClearFilter(int nColumn);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法实现 Win32 消息 [HDM_CLEARFILTER](/windows/win32/Controls/hdm-clearfilter)的行为，如 Windows SDK 中所述。
 
@@ -243,7 +243,7 @@ virtual BOOL Create(
 
 如果初始化成功，则为非零值;否则为零。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以通过 `CHeaderCtrl` 两个步骤构造对象。 首先，调用构造函数，然后调用 `Create` ，它会创建标头控件并将其附加到 `CHeaderCtrl` 对象。
 
@@ -313,7 +313,7 @@ virtual BOOL CreateEx(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 `CreateEx` 而不是 `Create` 来应用扩展的 windows 样式，该样式由 Windows 扩展样式指定为在 **WS_EX_**。
 
@@ -334,7 +334,7 @@ CImageList* CreateDragImage(int nIndex);
 
 如果成功，则为指向 [CImageList](../../mfc/reference/cimagelist-class.md) 对象的指针;否则为 NULL。 返回的列表仅包含一个图像。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_CREATEDRAGIMAGE](/windows/win32/Controls/hdm-createdragimage)的行为，如 Windows SDK 中所述。 提供它是为了支持标头项拖放。
 
@@ -374,7 +374,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 指向 [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 结构的指针，该结构描述要绘制的项。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `itemAction`结构的成员 `DRAWITEMSTRUCT` 定义要执行的绘图操作。
 
@@ -410,7 +410,7 @@ BOOL EditFilter(
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法实现 Win32 消息 [HDM_EDITFILTER](/windows/win32/Controls/hdm-editfilter)的行为，如 Windows SDK 中所述。
 
@@ -430,7 +430,7 @@ int GetBitmapMargin() const;
 
 位图边距的宽度（以像素为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_GETBITMAPMARGIN](/windows/win32/Controls/hdm-getbitmapmargin)的行为，如 Windows SDK 中所述。
 
@@ -450,7 +450,7 @@ int GetFocusedItem() const;
 
 具有焦点的标头项的从零开始的索引。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法发送 Windows SDK 中描述的 [HDM_GETFOCUSEDITEM](/windows/win32/Controls/hdm-getfocuseditem) 消息。
 
@@ -478,7 +478,7 @@ CImageList* GetImageList() const;
 
 指向 [CImageList](../../mfc/reference/cimagelist-class.md) 对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_GETIMAGELIST](/windows/win32/Controls/hdm-getimagelist)的行为，如 Windows SDK 中所述。 `CImageList`返回的指针指向的对象是临时对象，并在下一次空闲时处理时删除。
 
@@ -550,7 +550,7 @@ BOOL GetItemDropDownRect(
 
 如果此函数成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法发送 Windows SDK 中描述的 [HDM_GETITEMDROPDOWNRECT](/windows/win32/Controls/hdm-getitemdropdownrect) 消息。
 
@@ -588,7 +588,7 @@ BOOL GetItemRect(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法实现 Win32 消息 [HDM_GETITEMRECT](/windows/win32/Controls/hdm-getitemrect)的行为，如 Windows SDK 中所述。
 
@@ -614,7 +614,7 @@ BOOL GetOrderArray(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_GETORDERARRAY](/windows/win32/Controls/hdm-getorderarray)的行为，如 Windows SDK 中所述。 提供它是为了支持标头项排序。
 
@@ -639,7 +639,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 如果此函数成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果标题控件包含的项数超过了可以同时显示的项数，则控件可以显示一个滚动到不可见项的溢出按钮。 标头控件必须具有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 样式，才能显示溢出按钮。 边框包含溢出按钮，仅当显示溢出按钮时才存在。 有关详细信息，请参阅 [标题控件样式](/windows/win32/Controls/header-control-styles)。
 
@@ -674,7 +674,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 位于指定位置的标头项的从零开始的索引（如果有）;否则为-1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法发送 Windows SDK 中描述的 [HDM_HITTEST](/windows/win32/Controls/hdm-hittest) 消息。
 
@@ -733,7 +733,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数用于为要占用给定矩形的新标头控件确定适当的维度。
 
@@ -758,7 +758,7 @@ int OrderToIndex(int nOrder) const;
 
 项的索引，它基于其在标头控件中的顺序。 索引从左到右，从0开始计数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 宏 [HDM_ORDERTOINDEX](/windows/win32/controls/hdm-ordertoindex)的行为，如 Windows SDK 中所述。 提供它是为了支持标头项排序。
 
@@ -779,7 +779,7 @@ int SetBitmapMargin(int nWidth);
 
 位图边距的宽度（以像素为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_SETBITMAPMARGIN](/windows/win32/Controls/hdm-setbitmapmargin)的行为，如 Windows SDK 中所述。
 
@@ -804,7 +804,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 
 正在修改的筛选器控件的索引。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_SETFILTERCHANGETIMEOUT](/windows/win32/Controls/hdm-setfilterchangetimeout)的行为，如 Windows SDK 中所述。
 
@@ -829,7 +829,7 @@ BOOL SetFocusedItem(int iItem);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法发送 Windows SDK 中描述的 [HDM_SETFOCUSEDITEM](/windows/win32/Controls/hdm-setfocuseditem) 消息。
 
@@ -866,7 +866,7 @@ int SetHotDivider(int nIndex);
 
 突出显示的分隔线的索引。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_SETHOTDIVIDER](/windows/win32/Controls/hdm-sethotdivider)的行为，如 Windows SDK 中所述。 提供它是为了支持标头项拖放。
 
@@ -891,7 +891,7 @@ CImageList* SetImageList(CImageList* pImageList);
 
 指向之前分配给标头控件的 [CImageList](../../mfc/reference/cimagelist-class.md) 对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [HDM_SETIMAGELIST](/windows/win32/Controls/hdm-setimagelist)的行为，如 Windows SDK 中所述。 `CImageList`返回的指针指向的对象是临时对象，并在下一次空闲时处理时删除。
 
@@ -947,7 +947,7 @@ BOOL SetOrderArray(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 宏 [HDM_SETORDERARRAY](/windows/win32/Controls/hdm-setorderarray)的行为，如 Windows SDK 中所述。 提供它是为了支持标头项排序。
 

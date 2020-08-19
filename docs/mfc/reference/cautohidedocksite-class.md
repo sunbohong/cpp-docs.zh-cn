@@ -70,7 +70,7 @@ class CAutoHideDockSite : public CDockSite
 |名称|说明|
 |[CAutoHideDockSite：： m_nExtraSpace](#m_nextraspace)|定义工具栏和停靠栏边缘之间的空间大小。 此空间是从左边缘或上边缘测量的，具体取决于停靠空间的对齐方式。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 调用 [CFrameWndEx：： EnableAutoHidePanes](../../mfc/reference/cframewndex-class.md#enableautohidepanes)时，框架会自动创建 `CAutoHideDockSite` 对象。 在大多数情况下，您不必直接实例化或使用此类。
 
@@ -115,7 +115,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 如果 *pBar* 是从派生的，则为 TRUE `CMFCAutoHideBar` ;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果基窗格对象是从派生的 `CMFCAutoHideBar` ，则它可以包含 `CAutoHideDockSite` 。
 
@@ -141,7 +141,7 @@ virtual void DockPane(
 *lpRect*\
 中指定停靠窗格边界的矩形。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现不使用提供的参数 *dockMethod*供将来使用。
 
@@ -160,7 +160,7 @@ void GetAlignRect(CRect& rect) const;
 *rect*\
 中对矩形的引用。 方法在此矩形中存储停靠站点的大小。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 为偏移边距调整矩形，使其不包括在内。
 
@@ -172,7 +172,7 @@ void GetAlignRect(CRect& rect) const;
 static int m_nExtraSpace;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当 `CMFCAutoHideBar` 停靠在上时 `CAutoHideDockSite` ，它不应占用整个停靠站点。 此全局变量控制的左边缘或上边框与相应边缘之间的额外空间 `CMFCAutoHideBar` `CAutoHideDockSite` 。 是否使用上边缘或左边缘取决于当前对齐方式。
 
@@ -189,7 +189,7 @@ void SetOffsetLeft(int nOffset);
 *nOffset*<br/>
 中新偏移量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 对象以静态方式定位在 `CAutoHideDockSite` 对象上。 这意味着用户不能手动更改对象的位置 `CMFCAutoHideBar` 。 方法控制左侧和左侧的左侧 `SetOffsetLeft` 之间的间距 `CMFCAutoHideBar` ，并控制 `CAutoHideDockSite` 。
 
@@ -206,7 +206,7 @@ void SetOffsetRight(int nOffset);
 *nOffset*<br/>
 中新偏移量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 对象以静态方式定位在 `CAutoHideDockSite` 对象上。 这意味着用户不能手动更改对象的位置 `CMFCAutoHideBar` 。 方法控制右端和右侧的右端 `SetOffsetRight` 之间的间距 `CMFCAutoHideBar` `CAutoHideDockSite` 。
 
@@ -223,7 +223,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 *rectNewClientArea*\
 中保留值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现不使用 *rectNewClientArea*。 它将用全局工具栏边距和按钮间距重绘窗格。
 
@@ -240,7 +240,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 *pAutoHideToolbar*\
 中指向位于的 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 对象窗格的指针 `CAutoHideDockSite` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法搜索包含 *pAutoHideToolbar*的行。 它调用 `CMFCAutoHideBar.UnSetAutoHideMode` `CMFCAutoHideBar` 该行上的所有对象。 如果找不到 *pAutoHideToolbar* 或它为 NULL，此方法将调用 `CMFCAutoHideBar.UnSetAutoHideMode` 上的所有 `CMFCAutoHideBar` 对象 `CAutoHideDockSite` 。
 

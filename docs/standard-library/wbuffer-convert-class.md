@@ -36,7 +36,7 @@ class wbuffer_convert
 *特征*\
 与 Elem** 关联的特征。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类模板描述了一个流缓冲区，该缓冲区控制类型的元素 `_Elem` （其字符特征由类描述 `Traits` ）与类型的字节流缓冲区之间的传输 `std::streambuf` 。
 

@@ -30,7 +30,7 @@ class allocator_unbounded;
 *类别*\
 由分配器分配元素类型。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 [ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏将此类作为以下语句中的*name*参数传递：`ALLOCATOR_DECL(CACHE_FREELIST(stdext::allocators::max_unbounded), SYNC_DEFAULT, allocator_unbounded);`
 

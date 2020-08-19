@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: aa5012f6657b2676756d1d8023274a524b451df3
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 30e0f7902a8af435b46aaedf0b38661b7a6604a8
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617465"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88562592"
 ---
 # <a name="allocator_newdel-class"></a>allocator_newdel 类
 
-实现一个分配器，该分配器使用**运算符 delete**来释放内存块，使用**new 运算符**分配内存块。
+实现一个分配器，该分配器使用 **运算符 delete** 来释放内存块，使用 **new 运算符** 分配内存块。
 
 ## <a name="syntax"></a>语法
 
@@ -29,9 +29,8 @@ class allocator_newdel;
 
 ### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*Type*|由分配器分配元素类型。|
+*类别*\
+由分配器分配元素类型。
 
 ## <a name="remarks"></a>备注
 

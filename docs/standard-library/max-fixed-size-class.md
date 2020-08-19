@@ -74,7 +74,7 @@ void allocated(std::size_t _Nx = 1);
 *_Nx*\
 增量值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不执行任何操作。 此成员函数在每次成功调用后调用 `cache_freelist::allocate` 到运算符 **`new`** 。 参数 *_Nx* 是由运算符分配的块区中的内存块数 **`new`** 。
 
@@ -91,7 +91,7 @@ void deallocated(std::size_t _Nx = 1);
 *_Nx*\
 增量值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不执行任何操作。 此成员函数在每次调用后调用 `cache_freelist::deallocate` 到运算符 **`delete`** 。 参数 *_Nx* 是由运算符释放的块区中的内存块数 **`delete`** 。
 
@@ -107,7 +107,7 @@ bool full();
 
 **`true`** 如果 `Max <= _Nblocks` 为，则为; 否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回，则将 **`true`** `deallocate` 内存块置于可用列表中; 如果返回 false，则 `deallocate` 调用运算符 **`delete`** 来释放块。
 
@@ -119,7 +119,7 @@ bool full();
 max_fixed_size();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该构造函数将存储的值 `_Nblocks` 初始化为零。
 
@@ -131,7 +131,7 @@ max_fixed_size();
 void released();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 逐量减小存储值 `_Nblocks`。 `released`每当当前[max 类](../standard-library/allocators-header.md)的成员函数 `cache_freelist::allocate` 从空闲列表中删除内存块时，将调用该成员函数。
 
@@ -143,7 +143,7 @@ void released();
 void saved();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数逐量增加存储值 `_Nblocks`。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。
 

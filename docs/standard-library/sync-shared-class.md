@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 
 指向已分配对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数会锁定互斥体，调用 `cache.allocate(count)`、解除对互斥体的锁定并返回之前调用 `cache.allocate(count)` 的结果。 `cache` 表示当前缓存对象。
 
@@ -86,7 +86,7 @@ void deallocate(void* ptr, std::size_t count);
 *计*\
 要从存储中释放的对象数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数会锁定互斥体，调用 `cache.deallocate(ptr, count)`其中 `cache` 表示缓存对象），然后取消对该互斥体的锁定。
 
@@ -110,7 +110,7 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 **`true`** 如果的结果 `cache.equals(Other.cache)` （其中 `cache` 表示缓存对象）为，则为 **`true`** ; 否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 

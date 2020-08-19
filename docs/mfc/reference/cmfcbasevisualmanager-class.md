@@ -81,7 +81,7 @@ class CMFCBaseVisualManager: public CObject
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|调用 `CloseThemeData` 中获得的所有句柄 `UpdateSystemColors` 。|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|调用 `OpenThemeData` 以获取用于绘制各种控件的句柄：窗口、工具栏、按钮等。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 不需要直接实例化此类的对象。
 
@@ -105,7 +105,7 @@ class CMFCBaseVisualManager: public CObject
 void CleanUpThemes();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅限内部使用。
 
@@ -159,7 +159,7 @@ virtual BOOL DrawCheckBox(
 
 如果启用主题 API，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 *NState*的值对应于下面的复选框样式。
 
@@ -411,7 +411,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
 void UpdateSystemColors();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅限内部使用。
 

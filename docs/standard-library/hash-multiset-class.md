@@ -118,7 +118,7 @@ class hash_multiset
 *器*\
 一种类型，它表示存储的分配器对象，该分配器对象封装有关 hash_multiset的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Key>`。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 hash_multiset 是：
 
@@ -246,7 +246,7 @@ iterator begin();
 
 一个双向迭代器，发现 hash_multiset 中的第一个元素或空 hash_multiset 后的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将的返回值 `begin` 分配给，则 `const_iterator` 不能修改 hash_multiset 对象中的元素。 如果将的返回值 `begin` 分配给，则 `iterator` 可以修改 hash_multiset 对象中的元素。
 
@@ -305,7 +305,7 @@ const_iterator cbegin() const;
 
 一个常量双向迭代器，用于发现 [hash_multiset](../standard-library/hash-multiset-class.md) 中的第一个元素或空 `hash_multiset` 后的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改 `hash_multiset` 对象中的元素。
 
@@ -352,7 +352,7 @@ const_iterator cend() const;
 
 用于发现 [hash_multiset](../standard-library/hash-multiset-class.md) 中最后一个元素之后的位置的常量双向迭代器。 如果 `hash_multiset` 为空，则 `hash_multiset::cend == hash_multiset::begin`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否已到达其 `hash_multiset` 的末尾。 不应对 `cend` 返回的值取消引用。
 
@@ -396,7 +396,7 @@ The last element of hs1 is 3
 void clear();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -440,7 +440,7 @@ The size of the hash_multiset after clearing is 0.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_iterator` 类型不能用于修改元素的值。
 
@@ -459,7 +459,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_pointer` 类型不能用于修改元素的值。
 
@@ -476,7 +476,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -523,7 +523,7 @@ The first element in the hash_multiset is 10.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问 hash_multiset。
 
@@ -551,7 +551,7 @@ size_type count(const Key& key) const;
 
 带有指定了参数的键的 hash_multiset 中的元素数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回在以下范围内的元素数目：
 
@@ -609,7 +609,7 @@ const_reverse_iterator crbegin() const;
 
 发现反向 [hash_multiset](../standard-library/hash-multiset-class.md) 中的第一个元素或发现曾是非反向 `hash_multiset` 中的最后一个元素的常量反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crbegin` 用于反向 `hash_multiset`，正如 [hash_multiset::begin](#begin) 用于 `hash_multiset` 一样。
 
@@ -661,7 +661,7 @@ const_reverse_iterator crend() const;
 
 一个常量反向双向迭代器，用于发现反向 [hash_multiset](../standard-library/hash-multiset-class.md) 中最后一个元素之后的位置（非反向 `hash_multiset` 中第一个元素之前的位置）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crend` 用于反向 `hash_multiset`，正如 [hash_multiset::end](#end) 用于 `hash_multiset` 一样。
 
@@ -710,7 +710,7 @@ The last element in the reversed hash_multiset is 10.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 [ `first`, `last`) 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
 
@@ -800,7 +800,7 @@ iterator insert(ValTy&& val);
 
 `emplace` 成员函数将返回一个指向新元素插入位置的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -854,7 +854,7 @@ iterator insert(
 
 [hash_multiset::emplace](#emplace) 成员函数将返回一个指向 `hash_multiset` 中新元素插入位置的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果插入点紧随 *其后，则*在分期常量时间内（而不是对数时间）进行插入。
 
@@ -899,7 +899,7 @@ bool empty() const;
 
 **`true`** 如果 hash_multiset 为空，则为; 否则为。 **`false`** 如果 hash_multiset 不是空的。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -950,7 +950,7 @@ iterator end();
 
 用于发现 hash_multiset 中最后一个元素之后的位置的双向迭代器。 如果 hash_multiset 为空，则 hash_multiset::end == hash_multiset::begin。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `end` 用于测试迭代器是否已到达其 hash_multiset 的末尾。 不应对 `end` 返回的值取消引用。
 
@@ -1116,7 +1116,7 @@ size_type erase(const key_type& key);
 
 对于前两个成员函数，可为指定已移除的任何元素之外保留的第一个元素；如果此类元素不存在，则为指向 hash_multiset 末尾的指针。 对于第三个成员函数，是已从 hash_multiset 中移除的元素的数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数从不引发异常。
 
@@ -1228,7 +1228,7 @@ const_iterator find(const Key& key) const;
 
 一个 [迭代器](#iterator) 或 [const_iterator](#const_iterator)，此迭代器发现等效于指定键的元素的位置，或者如果找不到此键的匹配项，则发现 hash_multiset 中最后一个元素后面的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数返回一个迭代器，该迭代器将 hash_multiset 中其排序键 `equivalent` 与二元谓词下的参数键相对应的元素，该谓词基于小于比较关系进行排序。
 
@@ -1301,7 +1301,7 @@ Allocator get_allocator() const;
 
 有关 `Allocator` 的详细信息，请参阅 [hash_multiset 类](../standard-library/hash-multiset-class.md)主题的备注部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_multiset 类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。
 
@@ -1429,7 +1429,7 @@ hash_multiset(
 *IList*\
 包含要复制的元素的 initializer_list。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所有构造函数存储一类分配器对象，此对象管理 `hash_multiset` 的内存存储，且稍后可通过调用 [hash_multiset::get_allocator](#get_allocator) 返回此对象。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。
 
@@ -1512,7 +1512,7 @@ iterator insert(
 
 第三个个成员函数将元素值序列插入到 hash_multiset，它对应于迭代器在指定的 hash_multiset 的范围 [ `first`, `last`) 中所处理的每一个元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 插入提示版本（而不是对数时间），如果插入点紧随其后，则插入可能发生在分期常量时间*内。*
 
@@ -1527,7 +1527,7 @@ iterator insert(
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 `iterator` 可用于修改元素的值。
 
@@ -1552,7 +1552,7 @@ key_compare key_comp() const;
 
 有关 *特征* 的详细信息，请参阅 [hash_multiset 类](../standard-library/hash-multiset-class.md) 主题。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 存储对象用于定义成员函数：
 
@@ -1622,7 +1622,7 @@ int main( )
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `key_compare` 是模板参数 *特征*的同义词。
 
@@ -1645,7 +1645,7 @@ typedef Traits key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `key_type` 是模板参数 *键*的同义词。
 
@@ -1679,7 +1679,7 @@ iterator lower_bound(const Key& key);
 
 一个 [iterator](#iterator) 或 [const_iterator](#const_iterator)，其会发现 hash_multiset 中其键等于或大于参数键的第一个元素的位置，或如果未找到键的匹配项，则发现 hash_multiset 中最后一个元素之后的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -1739,7 +1739,7 @@ size_type max_size() const;
 
 hash_multiset 的最大可取长度。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -1780,7 +1780,7 @@ hash_multiset& operator=(hash_multiset&& right);
 *然后*\
 [hash_multiset](../standard-library/hash-multiset-class.md)，正在复制到 `hash_multiset`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 清除中的任何现有元素后 `hash_multiset` ，会 `operator=` 将的内容复制或移动*right*到 `hash_multiset` 。
 
@@ -1833,7 +1833,7 @@ int main( )
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 `pointer` 可用于修改元素的值。
 
@@ -1856,7 +1856,7 @@ reverse_iterator rbegin();
 
 发现反向 hash_multiset 中的第一个元素或发现曾是非反向 hash_multiset 中的最后一个元素的反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rbegin` 用于反向 hash_multiset，正如 [begin](#begin) 用于 hash_multiset 一样。
 
@@ -1933,7 +1933,7 @@ After the erasure, the first element in the reversed hash_multiset is 20.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -1989,7 +1989,7 @@ reverse_iterator rend();
 
 用于发现反向 hash_multiset 中最后一个元素之后的位置（非反向 hash_multiset 中第一个元素之前的位置）的反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rend` 用于反向 hash_multiset，正如 [end](#end) 用于 hash_multiset 一样。
 
@@ -2069,7 +2069,7 @@ After the erasure, the last element in the reversed hash_multiset is 20.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `reverse_iterator` 类型用于反向循环访问 hash_multiset。
 
@@ -2092,7 +2092,7 @@ size_type size() const;
 
 hash_multiset 的当前长度。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2135,7 +2135,7 @@ The hash_multiset length is now 2.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2157,7 +2157,7 @@ void swap(hash_multiset& right);
 *然后*\
 参数 hash_multiset，提供要与目标 hash_multiset 进行交换的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不会使后列项无效：用于在正在交换元素的两个 hash_multiset 中指定元素的任何引用、指针或迭代器。
 
@@ -2237,7 +2237,7 @@ iterator upper_bound(const Key& key);
 
 一个 [iterator](#iterator) 或 [const_iterator](#const_iterator)，其会发现 hash_multiset 中其键大于参数键的第一个元素的位置，或如果未找到键的匹配项，则发现 hash_multiset 中最后一个元素之后的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2310,7 +2310,7 @@ value_compare value_comp() const;
 
 有关 *特征* 的详细信息，请参阅 [hash_multiset 类](../standard-library/hash-multiset-class.md) 主题。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 存储对象用于定义成员函数：
 
@@ -2385,7 +2385,7 @@ vc2( 2,3 ) returns value of false, where vc2 is the function object of hms2.
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `value_compare` 是模板参数 *特征*的同义词。
 

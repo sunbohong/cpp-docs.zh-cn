@@ -58,7 +58,7 @@ namespace std
 
 `make_exception_ptr`函数返回一个 `exception_ptr` 对象，该对象引用由*e*参数指定的异常。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 ### <a name="scenario"></a>方案
 

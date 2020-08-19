@@ -76,7 +76,7 @@ void swap (
 *然后*\
 引用 `sstream` 对象。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类型的对象 `char *` 可使用中的功能 [\<strstream>](../standard-library/strstream.md) 进行流式处理。 但是，已弃用 \<strstream>，建议使用 \<sstream>。
 

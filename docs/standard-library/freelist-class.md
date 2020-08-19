@@ -36,7 +36,7 @@ class freelist : public Max
 *数量*\
 max 类表示可存储在空闲列表中的元素的最大数量。 max 类可以是 [max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类模板管理一个大小为*Sz*的内存块列表，该列表的最大长度由最大传入的 max 类*确定。*
 
@@ -67,7 +67,7 @@ max 类表示可存储在空闲列表中的元素的最大数量。 max 类可�
 freelist();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="freelistpop"></a><a name="pop"></a> freelist：:p op
 
@@ -81,7 +81,7 @@ void *pop();
 
 返回指向从列表中删除的内存块的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果列表为空，则成员函数返回 NULL。 否则，成员函数从列表中删除第一个内存块。
 
@@ -102,7 +102,7 @@ bool push(void* ptr);
 
 **`true`** 如果 `full` max 类的函数返回 **`false`** ，则为; 否则该 `push` 函数返回 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 `full` max 类的函数返回，则 **`false`** 此成员函数会将由 *ptr* 指向的内存块添加到列表的开头。
 

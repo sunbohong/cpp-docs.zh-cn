@@ -126,7 +126,7 @@ class hash_map
 *器*\
 一种表示存储的分配器对象的类型，该分配器对象封装有关 hash_map 的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为分配器 \<pair <const `Key`, `Type`>>。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 hash_map 是：
 
@@ -263,7 +263,7 @@ const Type& at(const Key& key) const;
 
 对找到的元素数据值的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果未找到参数键值，函数将引发类 [out_of_range 类](../standard-library/out-of-range-class.md)的对象。
 
@@ -414,7 +414,7 @@ const_iterator cend() const;
 
 用于发现 [hash_map](../standard-library/hash-map-class.md) 中最后一个元素之后的位置的常量双向迭代器。 如果 `hash_map` 为空，则 `hash_map::cend == hash_map::begin`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否已到达其 `hash_map` 的末尾。
 
@@ -461,7 +461,7 @@ The value of last element of hm1 is 30.
 void clear();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -511,7 +511,7 @@ The size of the hash_map after clearing is 0.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_iterator` 类型不能用于修改元素的值。
 
@@ -536,7 +536,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_pointer` 类型不能用于修改元素的值。
 
@@ -553,7 +553,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -609,7 +609,7 @@ The data value of the first element in the hash_map is 10.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse)iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问 hash_map。
 
@@ -643,7 +643,7 @@ size_type count(const Key& key) const;
 
 如果 hash_map 包含其排序键与参数键匹配的元素，则返回 1；如果 hash_map 不包含具有匹配键的元素，则返回 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回以下范围内的元素 *x* 的数量
 
@@ -710,7 +710,7 @@ const_reverse_iterator crbegin() const;
 
 发现反向 [hash_map](../standard-library/hash-map-class.md) 中的第一个元素或发现曾是非反向 `hash_map` 中的最后一个元素的常量反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crbegin` 用于反向 hash_map，正如 [begin](#begin) 用于 `hash_map` 一样。
 
@@ -762,7 +762,7 @@ const_reverse_iterator crend() const;
 
 用于发现反向 [hash_map](../standard-library/hash-map-class.md) 中最后一个元素之后的位置（非反向 `hash_map` 中第一个元素之前的位置）的常量反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crend` 用于反向 `hash_map`，正如 [hash_map::end](#end) 用于 `hash_map` 一样。
 
@@ -897,7 +897,7 @@ emplace(
 
 若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问 **`bool`** `pr` 此成员函数返回的对的组件，请使用 `pr.second` ，若要对其取消引用，请使用 `*(pr.second)` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 元素的 [hash_map::value_type](#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
@@ -956,7 +956,7 @@ iterator emplace_hint(
 
 [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) 成员函数返回一个迭代器，此迭代器指向 `hash_map` 中插入的新元素的位置或具有等效顺序的现有元素的所在位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 元素的 [hash_map::value_type](#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
@@ -1006,7 +1006,7 @@ bool empty() const;
 
 **`true`** 如果 hash_map 为空，则为; 否则为。 **`false`** 如果 hash_map 不是空的。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -1059,7 +1059,7 @@ iterator end();
 
 用于发现 hash_map 中最后一个元素之后的位置的双向迭代器。 如果 hash_map 为空，则 hash_map::end == hash_map::begin。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `end` 用于测试迭代器是否已到达其 hash_map 的末尾。
 
@@ -1137,7 +1137,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 若要访问成员函数返回的 `pr` 对的第一个迭代器，请使用 `pr`. **首先** ，若要取消引用下限迭代器，请使用 \* ( `pr` 。 **第一个**) 。 若要访问成员函数返回的 `pr` 对的第二个迭代器，请使用 `pr`. **其次** ，若要取消引用上限迭代器，请使用 \* ( `pr` 。 **第二**) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -1235,7 +1235,7 @@ size_type erase(const key_type& key);
 
 对于第三个成员函数，则返回已从 hash_map 中移除的元素的数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数从不引发异常。
 
@@ -1346,7 +1346,7 @@ const_iterator find(const Key& key) const;
 
 一个迭代器，此迭代器发现具有指定键的元素的位置，或者如果找不到此键的匹配项，则发现 hash_map 中最后一个元素后面的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `find` 返回一个迭代器，此迭代器用于解决 hash_map 中其排序键与二元谓词下的参数键等效的元素，该谓词基于小于比较关系进行排序。
 
@@ -1418,7 +1418,7 @@ Allocator get_allocator() const;
 
 hash_map 使用的分配器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_map 类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。
 
@@ -1550,7 +1550,7 @@ hash_map(
 *IList*\
 initializer_list
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所有构造函数存储一类分配器对象，此对象管理 hash_map 的内存存储，且稍后可通过调用 [get_allocator](#get_allocator) 进行返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。
 
@@ -1621,7 +1621,7 @@ iterator insert(
 
 最后两个 `insert` 成员函数与前两个成员函数的行为相同，不同之处在于它们移动构造插入的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 元素的 [value_type](../standard-library/map-class.md#value_type) 是一个对，因此元素的值为一个有序对，其中第一个组件相当于键值，第二个组件相当于该元素的数据值。
 
@@ -1748,7 +1748,7 @@ After the move insertion, hm4 contains:
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `iterator`定义的 hash_map 指向作为[value_type](#value_type)的对象的元素，它的类型为 `pair<const Key, Type>` ，其第一个成员是元素的键，第二个成员是元素所持有的映射基准。
 
@@ -1777,7 +1777,7 @@ key_compare key_comp() const;
 
 返回 hash_map 用来对其元素进行排序的函数对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 存储对象会定义成员函数
 
@@ -1849,7 +1849,7 @@ int main( )
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `key_compare` 是模板参数 `Traits` 的同义词。
 
@@ -1870,7 +1870,7 @@ typedef Traits key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `key_type` 是模板参数 `Key` 的同义词。
 
@@ -1904,7 +1904,7 @@ const_iterator lower_bound(const Key& key) const;
 
 如果将 `lower_bound` 的返回值赋给 `const_iterator`，则无法修改 hash_map 对象。 如果将的返回值 `lower_bound` 分配给 `iterator` ，则可以修改 hash_map 的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -1968,7 +1968,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 typedef Type mapped_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 `mapped_type` 是模板参数 `Type` 的同义词。
 
@@ -1993,7 +1993,7 @@ size_type max_size() const;
 
 hash_map 的最大可取长度。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2039,7 +2039,7 @@ Type& operator[](Key&& key);
 
 对插入元素的数据值的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果未找到自变量键值，则它将与数据类型的默认值一起插入。
 
@@ -2131,7 +2131,7 @@ hash_map& operator=(hash_map&& right);
 *然后*\
 正在复制到 `hash_map` 的 [hash_map 类](../standard-library/hash-map-class.md)。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 清除中的任何现有元素后 `hash_map` ，会 `operator=` 将的内容复制或移动*right*到 `hash_map` 。
 
@@ -2184,7 +2184,7 @@ int main( )
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 `pointer` 可用于修改元素的值。
 
@@ -2207,7 +2207,7 @@ reverse_iterator rbegin();
 
 发现反向 hash_map 中的第一个元素或发现曾是非反向 hash_map 中的最后一个元素的反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rbegin` 用于反向 hash_map，正如 [begin](#begin) 用于 hash_map 一样。
 
@@ -2285,7 +2285,7 @@ After the erasure, the first element in the reversed hash_map is 2.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2354,7 +2354,7 @@ reverse_iterator rend();
 
 用于发现反向 hash_map 中最后一个元素之后的位置（非反向 hash_map 中第一个元素之前的位置）的反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rend` 用于反向 hash_map，正如 [end](#end) 用于 hash_map 一样。
 
@@ -2438,7 +2438,7 @@ After the erasure, the last element in the reversed hash_map is 2.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `reverse_iterator` 类型无法修改元素的值，它用于反向循环访问 hash_map。
 
@@ -2467,7 +2467,7 @@ size_type size() const;
 
 hash_map 的当前长度。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2513,7 +2513,7 @@ The hash_map length is now 2.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2535,7 +2535,7 @@ void swap(hash_map& right);
 *然后*\
 参数 hash_map 提供与目标 hash_map 进行交换的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不会使得用以在所含元素正进行交换的两个 hash_map 中指定元素的任何引用、指针或迭代器无效。
 
@@ -2617,7 +2617,7 @@ const_iterator upper_bound(const Key& key) const;
 
 如果将返回值赋给 `const_iterator`，则无法修改 hash_map 对象。 如果将返回值赋给 `iterator` ，则可以修改 hash_map 的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -2686,7 +2686,7 @@ value_compare value_comp() const;
 
 返回 hash_map 用来对其元素进行排序的比较函数对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于 hash_map *m*，如果两个元素 *e1* (*版 k1*， *d1*) and *e2* (*k2*， *d2*) 是类型 [value_type](#value_type)的对象，其中 *版 k1* 和 *k2* 是其类型的键 [key_type](#key_type) ， *d1* 和 *d2* 是其类型 [mapped_type](#mapped_type)的数据，则 `m.value_comp()(e1, e2)` 等效于 `m.key_comp()(k1, k2)` 。 存储对象会定义成员函数
 
@@ -2750,7 +2750,7 @@ int main( )
 typedef pair<const Key, Type> value_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `value_type` 声明为 `pair<const key_type, mapped_type>` ，而不是 `pair<key_type, mapped_type>` ，因为不能使用非常量迭代器或引用更改关联容器的键。
 

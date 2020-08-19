@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 97d81401cfd01d6d39457a9d63c39bc25901128e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219347"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560955"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
 扩展整数基元，有助于防止整数溢出，并便于比较不同类型的整数。
 
 > [!NOTE]
-> 最新版本的 SafeInt 库位于 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。 若要使用 SafeInt 库，请克隆存储库，并`#include "SafeInt.hpp"`
+> 最新版本的 SafeInt 库位于 [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) 。 若要使用 SafeInt 库，请克隆存储库，并 `#include "SafeInt.hpp"`
 
 ## <a name="syntax"></a>语法
 
@@ -33,23 +33,29 @@ class SafeInt;
 
 ### <a name="parameters"></a>参数
 
-| 模板  |  描述 |
-|--------|------------|
-| T         |  `SafeInt` 替换的整数或布尔参数的类型。 |
-| E         |  定义错误处理策略的枚举数据类型。 |
-| U         |  辅助操作数的整数或布尔参数的类型。 |
+*`T`*\
+`SafeInt` 替换的整数或布尔参数的类型。
 
-| 参数  |  描述 |
-|---------|-----------------|
-| rhs**      |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
-| *i*        |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
-| *带宽*     |  [输入] 输入参数，表示多个独立函数中的运算符的右侧值。 |
+*`E`*\
+定义错误处理策略的枚举数据类型。
+
+*`U`*\
+辅助操作数的整数或布尔参数的类型。
+
+*rhs*\
+[输入] 输入参数，表示多个独立函数中的运算符的右侧值。
+
+*看到*\
+[输入] 输入参数，表示多个独立函数中的运算符的右侧值。
+
+*带宽*\
+[输入] 输入参数，表示多个独立函数中的运算符的右侧值。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-| “属性”                          |  描述 |
+| “属性”                          |  说明 |
 |---------------------------|--------------------|
 | [SafeInt：： SafeInt](#safeint)  |  默认构造函数。 |
 
@@ -174,7 +180,7 @@ class SafeInt;
 
 `SafeInt` 和整型类型之间的比较运算可以在任意一个方向上执行。 例如，`SafeInt<int>(x) < y` 和 `y> SafeInt<int>(x)` 都是有效的，返回的结果也相同。
 
-许多二进制运算符不支持使用两种不同 `SafeInt` 的类型。 其中一个例子就是 `&` 运算符。 `SafeInt<T, E> & int`支持，但 `SafeInt<T, E> & SafeInt<U, E>` 不支持。 在后一个示例中，编译器不知道返回什么类型的参数。 此问题的一个解决方案是，将第二个参数强制转换回基类型。 通过使用相同参数，可以借助 `SafeInt<T, E> & (U)SafeInt<U, E>` 完成此操作。
+许多二进制运算符不支持使用两种不同 `SafeInt` 的类型。 其中一个例子就是 `&` 运算符。 `SafeInt<T, E> & int` 支持，但 `SafeInt<T, E> & SafeInt<U, E>` 不支持。 在后一个示例中，编译器不知道返回什么类型的参数。 此问题的一个解决方案是，将第二个参数强制转换回基类型。 通过使用相同参数，可以借助 `SafeInt<T, E> & (U)SafeInt<U, E>` 完成此操作。
 
 > [!NOTE]
 > 对于任何位运算，两个不同的参数应大小相同。 如果大小不同，编译器便会抛出 [ASSERT](../mfc/reference/diagnostic-services.md#assert) 异常。 无法保证此操作的结果是准确的。 若要解决此问题，请强制转换较小的参数，直到其大小与较大参数相同。
@@ -248,7 +254,7 @@ int main()
 
 **命名空间：** 无
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt：： SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a> SafeInt：： SafeInt
 
 构造 `SafeInt` 对象。
 
@@ -277,11 +283,11 @@ SafeInt (const U& i)
 `u`<br/>
 [输入] U 类型的 `SafeInt`。新 `SafeInt` 对象的值与 u** 相同，但类型为 T。
 
-`U`存储在中的数据的类型 `SafeInt` 。 这可以是布尔类型、字符类型或整数类型。 如果它是整数类型，它可以是有符号或无符号的，并且可以介于8到64位之间。
+`U` 存储在中的数据的类型 `SafeInt` 。 这可以是布尔类型、字符类型或整数类型。 如果它是整数类型，它可以是有符号或无符号的，并且可以介于8到64位之间。
 
 ### <a name="remarks"></a>备注
 
-构造函数的输入参数 i** 或 u** 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数， `SafeInt` 类将调用[static_assert](../cpp/static-assert.md)以指示无效的输入参数。
+构造函数的输入参数 i** 或 u** 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数， `SafeInt` 类将调用 [static_assert](../cpp/static-assert.md) 以指示无效的输入参数。
 
 使用模板类型 `U` 的构造函数自动将输入参数转换为 `T` 指定的类型。 `SafeInt` 类转换数据，而不会有任何数据丢失。 `E`如果无法在 `T` 不丢失数据的情况下将数据转换为类型，它将报告错误处理程序。
 

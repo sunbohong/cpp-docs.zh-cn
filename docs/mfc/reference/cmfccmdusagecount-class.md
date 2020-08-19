@@ -70,7 +70,7 @@ class CMFCCmdUsageCount : public CObject
 |`m_nStartCount`|用于确定此对象是否已收集最小跟踪数据量的开始计数器。|
 |`m_nTotalUsage`|所有跟踪的命令的计数。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CMFCCmdUsageCount`类将每个数字 Windows 消息标识符映射到32位无符号整数计数器。 `CMFCToolBar` 使用此类显示经常使用的工具栏项。 有关的详细信息 `CMFCToolBar` ，请参阅 [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)。
 
@@ -99,7 +99,7 @@ void AddCmd(UINT uiCmd);
 *uiCmd*\
 中指定要递增的命令计数器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果该条目不存在，则此方法会将新条目添加到命令计数的映射结构中 `m_CmdUsage` 。
 
@@ -140,7 +140,7 @@ BOOL HasEnoughInformation() const;
 
 如果此对象已接收到最小数量的跟踪数据，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 `m_nTotalUsage` 所有跟踪命令的总数等于或大于初始计数，则此方法将返回一个非零值 `m_nStartCount` 。 默认情况下，框架设置初始计数0。 可以通过使用 [CMFCCmdUsageCount：： SetOptions](#setoptions) 方法来重写此值。
 
@@ -163,7 +163,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 
 如果经常使用命令，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果命令使用总数为0，则此方法返回 0 `m_nTotalUsage` 。 否则，如果使用指定命令的百分比大于最小百分比，此方法将返回非零值 `m_nMinUsagePercentage` 。 默认情况下，框架将最小百分比设置为5。 可以通过使用 [CMFCCmdUsageCount：： SetOptions](#setoptions) 方法来重写此值。 如果最小百分比为0，则如果指定的命令计数大于0，则此方法将返回非零值。
 
@@ -177,7 +177,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 void Reset();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法以清除命令计数的映射结构中的所有条目， `m_CmdUsage` 并将其重置为 `m_nTotalUsage` 0。
 
@@ -194,7 +194,7 @@ virtual void Serialize(CArchive& ar);
 *ar*\
 中 `CArchive` 要从或序列化到的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法会序列化命令计数的映射结构，以及 `m_CmdUsage` `m_nTotalUsage` 从或到指定存档的总命令用法。
 
@@ -222,7 +222,7 @@ static BOOL __stdcall SetOptions(
 
 如果该方法成功，则为 TRUE; 如果 *nMinUsagePercentage* 参数大于或等于100，则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法会将共享 `CMFCCmdUsageCount` 类数据成员 `m_nStartCount` 和 `m_nMinUsagePercentage` 分别设置为 *nStartCount* 和 *nMinUsagePercentage*。 `m_nStartCount` 由 [CMFCCmdUsageCount：： HasEnoughInformation](#hasenoughinformation) 方法使用，以确定此对象是否收集了最少的跟踪数据量。 `m_nMinUsagePercentage`[CMFCCmdUsageCount：： IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)方法使用来确定是否经常使用给定命令。
 

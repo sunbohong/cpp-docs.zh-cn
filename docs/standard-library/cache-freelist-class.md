@@ -36,7 +36,7 @@ class cache_freelist
 *数量*\
 表示释放列表的最大大小的 max 类。 其可以是 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 Cache_freelist 类模板维护一个大小为 *Sz*的内存块的免费列表。 当可用列表已满时，它将使用 **运算符 delete** 来释放内存块。 当可用列表为空时，它将使用 **operator new** 来分配新的内存块。 可用列表的最大大小由 *最* 大参数中传递的类 max 类确定。
 
@@ -78,7 +78,7 @@ void *allocate(std::size_t count);
 
 指向已分配对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_freelistcache_freelist"></a><a name="cache_freelist"></a> cache_freelist：： cache_freelist
 
@@ -88,7 +88,7 @@ void *allocate(std::size_t count);
 cache_freelist();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_freelistdeallocate"></a><a name="deallocate"></a> cache_freelist：:d eallocate
 
@@ -106,7 +106,7 @@ void deallocate(void* ptr, std::size_t count);
 *计*\
 要从存储中释放的对象数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 

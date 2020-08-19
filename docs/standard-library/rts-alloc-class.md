@@ -35,7 +35,7 @@ class rts_alloc
 *区*\
 数组中包含的缓存实例的类型。 它可以是 [`cache_chunklist`](../standard-library/cache-chunklist-class.md) 、 [`cache_freelist`](../standard-library/cache-freelist-class.md) 或 [`cache_suballoc`](../standard-library/cache-suballoc-class.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类模板包含多个块分配器实例，并确定在运行时（而不是在编译时）用于分配或解除分配的实例。 它与不能编译重新绑定的编译器一起使用。
 
@@ -70,7 +70,7 @@ void *allocate(std::size_t count);
 
 指向已分配对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回 `caches[_IDX].allocate(count)` ，其中索引由 `_IDX` 所请求的块大小 *计数*确定，如果 *count* 太大，则返回 `operator new(count)` 。 用于表示缓存对象的 `cache`。
 
@@ -90,7 +90,7 @@ void deallocate(void* ptr, std::size_t count);
 *计*\
 要从存储中释放的对象数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将调用 `caches[_IDX].deallocate(ptr, count)` ，其中索引由 `_IDX` 所请求的块大小 *计数*确定，如果 *count* 太大，则返回 `operator delete(ptr)` 。
 
@@ -110,7 +110,7 @@ bool equals(const sync<_Cache>& _Other) const;
 *_Other*\
 要用于比较是否相等的缓存对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **`true`** 如果的结果 `caches[0].equals(other.caches[0])` ，则为; 否则为 **`false`** 。 `caches` 表示缓存对象的数组。
 

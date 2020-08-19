@@ -35,7 +35,7 @@ statements
 *前瞻性*\
 *标识符*存在时要执行的一个或多个语句。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 > [!CAUTION]
 > 若要获得最可靠的结果，请使用 **`__if_exists`** 以下约束中的语句。

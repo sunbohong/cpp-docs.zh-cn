@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 411c4c386031bd44a0303e6cfeec1fbea7ea2dda
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
+ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213211"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88560629"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -26,24 +26,25 @@ static_assert( constant-expression, string-literal );
 static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 ```
 
-#### <a name="parameters"></a>参数
+### <a name="parameters"></a>参数
 
-|参数|描述|
-|---------------|-----------------|
-|*常量表达式*|可以转换为布尔值的整型常量表达式。<br /><br /> 如果计算出的表达式为零（false），则显示*字符串*参数，且编译失败并出现错误。 如果表达式不为零（true），则 **`static_assert`** 声明无效。|
-|*string-literal*|如果*常量表达式*参数为零，则显示一条消息。 消息是编译器的[基本字符集](../c-language/ascii-character-set.md)中的字符串;也就是说，不能是[多字节或宽字符](../c-language/multibyte-and-wide-characters.md)。|
+*常量表达式*\
+可以转换为布尔值的整型常量表达式。 如果计算出的表达式为零 (false) ，则显示 *字符串* 参数，且编译失败并出现错误。 如果表达式为非零 () ，则 **`static_assert`** 声明不起作用。
+
+*字符串-文本*\
+如果 *常量表达式* 参数为零，则显示一条消息。 消息是编译器的 [基本字符集](../c-language/ascii-character-set.md) 中的字符串;也就是说，不能是 [多字节或宽字符](../c-language/multibyte-and-wide-characters.md)。
 
 ## <a name="remarks"></a>备注
 
-声明的*常量表达式*参数 **`static_assert`** 表示*软件断言*。 软件断言指定在程序的某个特定点应满足的条件。 如果条件为 true，则 **`static_assert`** 声明不起作用。 如果条件为 false，则断言失败，编译器会在*字符串*参数中显示消息，并且编译将失败并出现错误。 在 Visual Studio 2017 和更高版本中，字符串参数是可选的。
+声明的 *常量表达式* 参数 **`static_assert`** 表示 *软件断言*。 软件断言指定在程序的某个特定点应满足的条件。 如果条件为 true，则 **`static_assert`** 声明不起作用。 如果条件为 false，则断言失败，编译器会在 *字符串* 参数中显示消息，并且编译将失败并出现错误。 在 Visual Studio 2017 和更高版本中，字符串参数是可选的。
 
-**`static_assert`** 声明在编译时测试软件断言。 与此相反， [Assert 宏和 _assert 和 _wassert 函数](../c-runtime-library/reference/assert-macro-assert-wassert.md)在运行时测试软件断言，并在空间或时间内产生运行时成本。 **`static_assert`** 声明对调试模板尤其有用，因为模板参数可以包含在*常数表达式*参数中。
+**`static_assert`** 声明在编译时测试软件断言。 与此相反， [Assert 宏和 _assert 和 _wassert 函数](../c-runtime-library/reference/assert-macro-assert-wassert.md) 在运行时测试软件断言，并在空间或时间内产生运行时成本。 **`static_assert`** 声明对调试模板尤其有用，因为模板参数可以包含在*常数表达式*参数中。
 
-**`static_assert`** 当遇到声明时，编译器将检查声明中的语法错误。 如果*表达式*参数不依赖于模板参数，则编译器会立即计算此参数。 否则，在对模板进行实例化时，编译器将计算*常数表达式*参数。 因此，当遇到声明时，编译器可能一次发布一个诊断消息，而在对模板进行实例化时也是如此。
+**`static_assert`** 当遇到声明时，编译器将检查声明中的语法错误。 如果 *表达式* 参数不依赖于模板参数，则编译器会立即计算此参数。 否则，在对模板进行实例化时，编译器将计算 *常数表达式* 参数。 因此，当遇到声明时，编译器可能一次发布一个诊断消息，而在对模板进行实例化时也是如此。
 
-可以 **`static_assert`** 在命名空间、类或块范围内使用关键字。 （ **`static_assert`** 从技术上讲，关键字是声明，即使它不会将新名称引入到程序中，因为它可以在命名空间范围内使用。）
+可以 **`static_assert`** 在命名空间、类或块范围内使用关键字。  (**`static_assert`** 关键字在技术上是声明，尽管它不会将新名称引入到程序中，因为它可以在命名空间范围内使用。 ) 
 
-## <a name="description"></a>描述
+## <a name="description"></a>说明
 
 在下面的示例中， **`static_assert`** 声明具有命名空间范围。 由于编译器知道类型 `void *` 的大小，因此可以立即计算表达式。
 
@@ -55,7 +56,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 
 ## <a name="description"></a>说明
 
-在下面的示例中， **`static_assert`** 声明具有类范围。 **`static_assert`** 验证模板参数是否为*纯旧数据*（POD）类型。 在声明 **`static_assert`** 声明时，编译器将检查声明，但在中实例化类模板之前，不会计算*常数表达式*参数 `basic_string` `main()` 。
+在下面的示例中， **`static_assert`** 声明具有类范围。 **`static_assert`** 验证模板参数是否为*纯旧数据* (POD) 类型。 在声明 **`static_assert`** 声明时，编译器将检查声明，但在中实例化类模板之前，不会计算 *常数表达式* 参数 `basic_string` `main()` 。
 
 ## <a name="example"></a>示例
 
@@ -106,7 +107,7 @@ public:
 ## <a name="see-also"></a>另请参阅
 
 [断言和用户提供的消息 (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
-[#error 指令（C/c + +）](../preprocessor/hash-error-directive-c-cpp.md)<br/>
+[ (C/c + + 的 #error 指令) ](../preprocessor/hash-error-directive-c-cpp.md)<br/>
 [assert 宏、_assert、_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
 [模板](../cpp/templates-cpp.md)<br/>
 [ASCII 字符集](../c-language/ascii-character-set.md)<br/>

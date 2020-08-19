@@ -33,7 +33,7 @@ class cache_chunklist
 *Sz*\
 数组中要分配的元素数目。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类模板使用 **new 运算符** 来分配原始内存块，suballocating 块在需要时为内存块分配存储;它将已释放的内存块存储在单独的可用列表中，用于每个块区，并在不使用任何内存块时使用 **运算符 delete** 解除块。
 
@@ -75,7 +75,7 @@ void *allocate(std::size_t count);
 
 指向已分配对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a> cache_chunklist：： cache_chunklist
 
@@ -85,7 +85,7 @@ void *allocate(std::size_t count);
 cache_chunklist();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a> cache_chunklist：:d eallocate
 
@@ -103,7 +103,7 @@ void deallocate(void* ptr, std::size_t count);
 *计*\
 要从存储中释放的对象数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 

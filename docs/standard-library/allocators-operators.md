@@ -43,7 +43,7 @@ bool operator!=(
 
 **`true`** 如果分配器对象不相等，则为; 否则为。 **`false`** 如果分配器对象相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板运算符返回 `!(left == right)`。
 
@@ -70,7 +70,7 @@ bool operator==(
 
 **`true`** 如果分配器对象相等，则为; **`false`** 如果分配器对象不相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板运算符返回 `left.equals(right)`。
 

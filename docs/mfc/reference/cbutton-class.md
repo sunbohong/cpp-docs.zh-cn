@@ -137,7 +137,7 @@ class CButton : public CWnd
 |[CButton：： SetState](#setstate)|设置按钮控件的突出显示状态。|
 |[CButton：： SetTextMargin](#settextmargin)|设置按钮控件的边距。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 按钮控件是一个可单击和关闭的小矩形子窗口。 按钮可以单独使用，也可以在组中使用，也可以标记或显示而不显示文本。 当用户单击按钮时，该按钮通常会改变外观。
 
@@ -232,7 +232,7 @@ virtual BOOL Create(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以通过 `CButton` 两个步骤构造对象。 首先，调用构造函数，然后调用 `Create` ，它创建 Windows 按钮控件并将其附加到 `CButton` 对象。
 
@@ -267,7 +267,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 指向 [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 结构的长指针。 结构包含有关要绘制的项的信息以及所需的绘图类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所有者描述的按钮具有 BS_OWNERDRAW 样式集。 重写此成员函数以实现所有者描述的对象的绘制 `CButton` 。 在成员函数终止之前，应用程序应还原 (为在 *lpDrawItemStruct* 中提供的显示上下文选择的 GDI) 对象的所有图形设备接口。
 
@@ -382,7 +382,7 @@ BOOL GetIdealSize(SIZE* psize);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数模拟 BCM_GETIDEALSIZE 消息的功能，如 Windows SDK 的 " [按钮](/windows/win32/controls/buttons) " 一节中所述。
 
@@ -403,7 +403,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数模拟 BCM_GETIMAGELIST 消息的功能，如 Windows SDK 的 " [按钮](/windows/win32/controls/buttons) " 一节中所述。
 
@@ -431,11 +431,11 @@ BOOL GetNote(
 
 第一个重载中的 [CString](../../atl-mfc-shared/using-cstring.md) 对象，该对象包含与当前命令链接控件关联的注释文本。
 
-- 或 -
+-或-
 
 在第二个重载中，如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 的控件。
 
@@ -453,7 +453,7 @@ UINT GetNoteLength() const;
 
 当前命令链接控件的注释文本长度（16位 Unicode 字符）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 的控件。
 
@@ -471,7 +471,7 @@ TCHAR GetSplitGlyph() const;
 
 与当前拆分按钮控件关联的标志符号字符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 标志符号是特定字体中的字符的物理表示形式。 例如，拆分按钮控件可能使用 Unicode 检查标记字符的标志符号修饰 (U + 2713) 。
 
@@ -491,7 +491,7 @@ CImageList* GetSplitImageList() const;
 
 指向 [CImageList](../../mfc/reference/cimagelist-class.md) 对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -514,7 +514,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -537,7 +537,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -557,7 +557,7 @@ UINT GetSplitStyle() const;
 
 拆分按钮样式的按位组合。 有关详细信息，请参阅 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 结构的成员。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -585,7 +585,7 @@ UINT GetState() const;
 |BST_PUSHED|0x0004|按钮控件处于按下状态。|
 |BST_FOCUS|0x0008|按钮控件具有焦点。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 具有 "BS_3STATE" 或 "BS_AUTO3STATE" 按钮样式的按钮控件创建一个具有第三个状态的复选框，该状态为 "不确定" 状态。 "不确定" 状态指示复选框既未选中也未取消选中。
 
@@ -610,11 +610,11 @@ BOOL GetTextMargin(RECT* pmargin);
 
 返回文本的边距。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数模拟 BCM_GETTEXTMARGIN 消息的功能，如 Windows SDK 的 " [按钮](/windows/win32/controls/buttons) " 一节中所述。
 
@@ -635,7 +635,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 先前与按钮关联的位图的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该位图将自动置于按钮的图符上，默认居中。 如果位图对于按钮而言太大，则会将其剪裁到两侧。 您可以选择其他对齐选项，其中包括：
 
@@ -677,7 +677,7 @@ void SetButtonStyle(
 *bRedraw*<br/>
 指定是否要重新绘制该按钮。 非零值将重绘按钮。 0值不会重绘按钮。 默认情况下，此按钮将被重绘。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 `GetButtonStyle` 成员函数检索按钮样式。 "完成" 按钮样式的低序位字是按钮特定样式。
 
@@ -704,7 +704,7 @@ void SetCheck(int nCheck);
 |BST_CHECKED|将按钮状态设置为 "已选中"。|
 |BST_INDETERMINATE|将按钮状态设置为 "不确定"。 仅当按钮具有 BS_3STATE 或 BS_AUTO3STATE 样式时，才可以使用此值。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数对按钮不起作用。
 
@@ -729,7 +729,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 
 先前与按钮关联的游标的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 光标将自动置于按钮的图符上，默认居中。 如果该按钮的光标太大，则会将其剪裁到两侧。 您可以选择其他对齐选项，其中包括：
 
@@ -768,7 +768,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 拆分按钮控件的样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON，由按钮和下拉箭头组成。 有关详细信息，请参阅 [按钮样式](/windows/win32/Controls/button-styles)。 通常，当用户单击下拉箭头时，将设置下拉状态。 使用此方法以编程方式设置控件的下拉状态。 下拉箭头绘制为灰色，以指示状态。
 
@@ -803,7 +803,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果按钮或命令链接控件需要提升的安全权限才能执行某一操作，请将该控件设置为 " `elevation required` 状态"。 然后，Windows 会在控件上显示 (UAC) 盾牌的用户帐户控制。 有关详细信息，请参阅[用户帐户控制](/windows/win32/uxguide/winenv-uac)。
 
@@ -826,7 +826,7 @@ HICON SetIcon(HICON hIcon);
 
 先前与按钮关联的图标的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该图标将自动置于按钮的图符上，默认居中。 如果此图标对于按钮而言太大，则会将其剪裁到两侧。 您可以选择其他对齐选项，其中包括：
 
@@ -865,7 +865,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 如果成功，则返回 TRUE，否则返回 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数模拟 BCM_SETIMAGELIST 消息的功能，如 Windows SDK 的 " [按钮](/windows/win32/controls/buttons) " 一节中所述。
 
@@ -886,7 +886,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_COMMANDLINK 或 BS_DEFCOMMANDLINK 的控件。
 
@@ -921,7 +921,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -946,7 +946,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -969,7 +969,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -1004,7 +1004,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -1041,7 +1041,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
@@ -1074,7 +1074,7 @@ void SetState(BOOL bHighlight);
 *bHighlight*<br/>
 指定是否突出显示该按钮。 非零值突出显示按钮;0值会删除任何突出显示。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 突出显示会影响按钮控件的外部。 它不会影响单选按钮或复选框的复选状态。
 
@@ -1101,7 +1101,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 如果成功，则返回 TRUE，否则返回 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数模拟 BCM_SETTEXTMARGIN 消息的功能，如 Windows SDK 的 " [按钮](/windows/win32/controls/buttons) " 一节中所述。
 

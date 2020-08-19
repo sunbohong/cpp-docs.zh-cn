@@ -43,7 +43,7 @@ allocator 类。
 *Tr*\
 字符串的基本元素上专用的字符特征。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类模板描述了一个对象，该对象控制从类[basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem，Tr，> 的流缓冲区提取元素和编码对象， <  **Elem** **Tr** `Alloc` 其字符特征由*Elem*类*Tr*确定，其元素由类*分配*的分配器进行分配。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
 
@@ -114,7 +114,7 @@ basic_istringstream(
 *然后*\
 `basic_istringstream` 对象的右值引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个构造函数通过调用[basic_istream](../standard-library/basic-istream-class.md) (`sb`) （其中 `sb` 是类[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem` 、 `Tr` 、> 的存储对象）来初始化基类 `Alloc` 。 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
 
@@ -135,7 +135,7 @@ basic_istringstream& operator=(basic_istringstream&& right);
 *然后*\
 对 `basic_istringstream` 对象的右值引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员运算符将对象的内容替换为 *右侧*的内容，被视为右值引用移动赋值。
 
@@ -175,7 +175,7 @@ void str(
 
 返回类[basic_string](../standard-library/basic-string-class.md) <  **Elem**， **Tr**，> 的对象 `Alloc` ，其受控序列是** \* 此**控制的序列的副本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个成员函数返回[rdbuf](#rdbuf)  ->  [str](../standard-library/basic-stringbuf-class.md#str)。 第二个成员函数 `rdbuf`  -> ) 调用**str** ( `_Newstr` 。
 
@@ -196,7 +196,7 @@ void swap(basic_istringstream& right);
 *然后*\
 对 `basic_istringstream` 对象的左值引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员函数将交换此对象的值和 *权限*的值。
 

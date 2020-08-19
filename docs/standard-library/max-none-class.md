@@ -68,7 +68,7 @@ void allocated(std::size_t _Nx = 1);
 *_Nx*\
 增量值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不执行任何操作。 它在每次成功调用后调用 `cache_freelist::allocate` 到运算符 **`new`** 。 参数 *_Nx* 是由运算符分配的块区中的内存块数 **`new`** 。
 
@@ -85,7 +85,7 @@ void deallocated(std::size_t _Nx = 1);
 *_Nx*\
 增量值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不执行任何操作。 此成员函数在每次调用后调用 `cache_freelist::deallocate` 到运算符 **`delete`** 。 参数 *_Nx* 是由运算符释放的块区中的内存块数 **`delete`** 。
 
@@ -101,7 +101,7 @@ bool full();
 
 此成员函数总是返回 **`true`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数由 `cache_freelist::deallocate` 调用。 如果调用返回，则将 **`true`** `deallocate` 内存块置于可用列表中; 如果返回，则 **`false`** `deallocate` 调用运算符 **`delete`** 来解除分配块。
 
@@ -113,7 +113,7 @@ bool full();
 void released();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不执行任何操作。 每当当前 max 类的 `released` 成员函数从空闲列表中删除内存块时，`cache_freelist::allocate` 将对其进行调用。
 
@@ -125,7 +125,7 @@ void released();
 void saved();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数不执行任何操作。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。
 

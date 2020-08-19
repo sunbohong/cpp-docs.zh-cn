@@ -33,7 +33,7 @@ statements
 *前瞻性*\
 如果 *标识符* 不存在，要执行的一个或多个语句。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 > [!CAUTION]
 > 若要获得最可靠的结果，请使用 **`__if_not_exists`** 以下约束中的语句。

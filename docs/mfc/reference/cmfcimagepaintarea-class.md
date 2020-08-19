@@ -53,7 +53,7 @@ class CMFCImagePaintArea : public CButton
 |[CMFCImagePaintArea：： SetColor](#setcolor)|设置当前绘图颜色。|
 |[CMFCImagePaintArea：： SetMode](#setmode)|设置当前的绘制模式。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类不适于在您的代码中直接使用。
 
@@ -119,7 +119,7 @@ void SetBitmap(CBitmap* pBitmap);
 *pBitmap*\
 中要显示的新位图图像。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *pBitmap* 为 NULL，则此方法将可修改的绘制区域的大小设置为零。 否则，它会将可修改的绘制区域的大小设置为所提供的位图图像的大小。
 
@@ -136,7 +136,7 @@ void SetColor(COLORREF color);
 *颜色*\
 中新的绘图颜色。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从 "图像编辑器" 调色板栏或颜色选取器中选择颜色时，框架会调用此方法以更新当前绘图颜色。 初始绘图颜色为黑色 (COLORREF 值为 0) 。
 

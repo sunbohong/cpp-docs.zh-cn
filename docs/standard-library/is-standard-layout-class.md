@@ -30,7 +30,7 @@ struct is_standard_layout;
 *Ty*\
 要查询的类型
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 如果类型 *Ty* 是具有内存中成员对象的标准布局的类，则此类型谓词的实例为 true; 否则为 false。
 

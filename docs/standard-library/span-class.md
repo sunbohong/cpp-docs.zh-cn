@@ -121,7 +121,7 @@ class span;
 |[span：： operator =](#op_eq)| 替换跨度。|
 |[span：：运算符\[\]](#op_at)| 获取指定位置处的元素。 |
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 所有 `span` 成员函数都具有恒定的时间复杂性。
 
@@ -271,7 +271,7 @@ int main()
 using element_type = T;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 创建范围时，将从模板参数获取类型 `T` 。
 
@@ -337,7 +337,7 @@ constexpr iterator end() const noexcept;
 
 指向刚超出范围末尾的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `end` 用于测试迭代器是否超过了其范围的末尾。
 
@@ -372,7 +372,7 @@ template <size_t count> constexpr auto first() const noexcept;
 
 包含 `count` 此范围前面的元素的范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果可能，请使用此函数的模板版本在 `count` 编译时验证，并保留有关范围的信息，因为它返回的是一个固定区范围。
 
@@ -452,7 +452,7 @@ int main()
 using iterator = implementation-defined-iterator-type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类型充当范围内的元素的迭代器。
 
@@ -497,7 +497,7 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 包含 `count` 此范围中最后一个元素的范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果可能，请使用此函数的模板版本在 `count` 编译时验证，并保留有关范围的信息，因为它返回的是一个固定区范围。
 
@@ -589,7 +589,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 
 `*this`
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 赋值将对数据指针和大小进行浅表复制。 浅表副本是安全的，因为 `span` 不会为其包含的元素分配内存。
 
@@ -741,7 +741,7 @@ constexpr reverse_iterator rend() const noexcept;
 
 反向迭代器指向反向范围中最后一个元素之后的占位符;也就是说，非反向范围中第一个元素之前的占位符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rend` 与反向跨度一起使用，正如 [span：： end](#end) 用于跨距。 用于测试反向迭代器是否已到达其跨度的终点。
 
@@ -955,7 +955,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *迅驰*\
 从此范围构造范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 跨度不会释放范围内的项的存储，因为它不拥有其中的对象的存储。
 
@@ -1016,7 +1016,7 @@ constexpr auto subspan() const noexcept
 
 `offset`从此范围中开始的范围。 包含 `count` 元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的模板版本可用来检查编译时的计数，该计数通过返回一段固定区来保留范围的相关信息。
 

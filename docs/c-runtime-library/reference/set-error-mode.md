@@ -57,7 +57,7 @@ int _set_error_mode(
 
 如果出现错误，则返回旧设置或 -1。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 通过设置 **__error_mode**的值来控制错误输出接收器。 例如，可以将输出定向到标准错误或使用 **MessageBox** API。
 

@@ -51,7 +51,7 @@ void swap(
 *然后*\
 引用 `sstream` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该模板函数执行 `left.swap(right)`。
 

@@ -33,7 +33,7 @@ class cache_suballoc
 *Sz*\
 数组中要分配的元素数目。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 当可用列表为空时，cache_suballoc 类模板会将已释放的内存块存储在自由列表中，其长度 `freelist<sizeof(Type), max_unbounded>` 不受限制**operator new** 、使用和 suballocates 内存块。
 
@@ -75,7 +75,7 @@ void *allocate(std::size_t count);
 
 指向已分配对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a> cache_suballoc：： cache_suballoc
 
@@ -85,7 +85,7 @@ void *allocate(std::size_t count);
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a> cache_suballoc：:d eallocate
 
@@ -103,7 +103,7 @@ void deallocate(void* ptr, std::size_t count);
 *计*\
 要从存储中释放的对象数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 

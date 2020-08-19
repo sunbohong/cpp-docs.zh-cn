@@ -33,7 +33,7 @@ ms.locfileid: "88561383"
 
 *表达式*参数的类型。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **`decltype`** Visual Studio 2010 或更高版本中支持类型说明符，可与本机代码或托管代码一起使用。 Visual Studio 2015 及更高版本支持 `decltype(auto)` (C++14)。
 

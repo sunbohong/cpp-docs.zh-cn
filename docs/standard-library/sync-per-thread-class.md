@@ -35,7 +35,7 @@ class sync_per_thread
 *区*\
 与同步筛选器相关联的缓存类型。 它可以是 [`cache_chunklist`](../standard-library/cache-chunklist-class.md) 、 [`cache_freelist`](../standard-library/cache-freelist-class.md) 或 [`cache_suballoc`](../standard-library/cache-suballoc-class.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 使用 `sync_per_thread` 的分配器可比较相等，尽管不能从一个线程释放另一个线程中分配的块。 使用其中一个分配器时，任一线程中的内存块都不应对其他线程可见。 实际上，这意味着单个线程只能访问使用其中一个分配器的容器。
 
@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 *计*\
 数组中要分配的元素数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在属于当前线程的缓存对象上，成员函数将返回调用 `cache::allocate(count)` 的结果。 如果没有为当前线程分配任何缓存对象，它首先会分配一个缓存对象。
 
@@ -86,7 +86,7 @@ void deallocate(void* ptr, std::size_t count);
 *计*\
 要从存储中释放的对象数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在属于当前线程的缓存对象上，成员函数调用 `deallocate`。 如果没有为当前线程分配任何缓存对象，它首先会分配一个缓存对象。
 
@@ -110,7 +110,7 @@ bool equals(const sync<Cache>& Other) const;
 
 **`false`** 如果尚未为此对象或当前线程中的 *其他* 缓存对象分配缓存对象，则为。 否则，它会返回将 `operator==` 应用到两个缓存对象的结果。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>另请参阅
 

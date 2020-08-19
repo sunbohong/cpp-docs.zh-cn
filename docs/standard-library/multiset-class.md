@@ -219,7 +219,7 @@ C++ 标准库多重集合类为：
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `allocator_type` 是模板参数 `Allocator` 的同义词。
 
@@ -294,7 +294,7 @@ const_iterator cbegin() const;
 
 **`const`** 双向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾 (空范围) 的位置 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
@@ -320,7 +320,7 @@ const_iterator cend() const;
 
 **`const`** 双向访问迭代器，它指向刚超出范围末尾的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
@@ -382,7 +382,7 @@ The size of the multiset after clearing is 0.
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_iterator` 类型不能用于修改元素的值。
 
@@ -398,7 +398,7 @@ typedef implementation-defined const_iterator;
 typedef typename allocator_type::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_pointer` 类型不能用于修改元素的值。
 
@@ -453,7 +453,7 @@ The first element in the multiset is 10.
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问多重集。
 
@@ -478,7 +478,7 @@ size_type count(const Key& key) const;
 
 multiset 中其排序键与参数键匹配的元素数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回以下范围内的元素 *x* 的数量
 
@@ -538,7 +538,7 @@ const_reverse_iterator crbegin() const;
 
 一个发现反向多重集中的第一个元素或发现非反向多重集中的最后一个元素的的常量反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crbegin` 用于反向多重集，正如 begin 用于多重集一样。
 
@@ -586,7 +586,7 @@ const_reverse_iterator crend() const;
 
 用于发现反向多重集中最后一个元素之后的位置（非反向多重集中第一个元素之前的位置）的常量反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crend` 用于反向多重集，正如 [end](#end) 用于多重集一样。
 
@@ -628,7 +628,7 @@ int main() {
 typedef typename allocator_type::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 [ `first`, `last`) 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
 
@@ -710,7 +710,7 @@ iterator emplace(Args&&... args);
 
 指向新插入的元素的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对容器元素的引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。
 
@@ -780,7 +780,7 @@ iterator emplace_hint(
 
 指向新插入的元素的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对容器元素的引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。
 
@@ -845,7 +845,7 @@ iterator end();
 
 超过末尾迭代器。 如果多重集为空，则 `multiset::end() == multiset::begin()`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **end** 用于测试迭代器是否超过多重集的末尾。
 
@@ -968,7 +968,7 @@ size_type erase(
 
 对于第三个成员函数，则返回已从多重集中移除的元素的数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关代码示例，请参阅 [set::erase](../standard-library/set-class.md#erase)。
 
@@ -991,7 +991,7 @@ const_iterator find(const Key& key) const;
 
 引用具有指定键的元素的位置的迭代器，如果找不到该键的匹配项，则引用这个多重集中 (`multiset::end()`) 最后一个元素后面的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回引用多重集中其键与二元谓词下的参数 *键* 等效的元素的迭代器，该谓词基于小于比较关系进行排序。
 
@@ -1070,7 +1070,7 @@ allocator_type get_allocator() const;
 
 多重集使用的分配器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 多重集类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。
 
@@ -1193,7 +1193,7 @@ IList);
 
 附带提示的单个元素的成员函数 (3) 和 (4) 返回迭代器，该迭代器指向将新元素插入到多重集合中的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指针或引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。
 
@@ -1323,7 +1323,7 @@ key_compare key_comp() const;
 
 有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 存储对象用于定义以下成员函数：
 
@@ -1392,7 +1392,7 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of ms2.
 typedef Compare key_compare;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `key_compare` 是模板参数 `Compare` 的同义词。
 
@@ -1410,7 +1410,7 @@ typedef Compare key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `key_type` 是模板参数 `Key` 的同义词。
 
@@ -1591,7 +1591,7 @@ multiset (
 *IList*\
 从中复制元素的 initializer_list。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所有构造函数存储一种类型的分配器对象，此类对象管理多重集的内存存储，且事后可通过调用 [get_allocator](#get_allocator) 返回。 此分配器参数在类声明中常省略，并预处理用于代替备用分配器的宏。
 
@@ -1725,7 +1725,7 @@ multiset& operator=(multiset&& right);
 *然后*\
 从中复制或移动元素的 `multiset`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `operator=`根据*right* `multiset` 所使用的)  (左值或右值的引用类型，将元素直接复制或移动到此。 放弃 `operator=` executes 之前此 `multiset` 中的元素。
 
@@ -1774,7 +1774,7 @@ int main( )
 typedef typename allocator_type::pointer pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **pointer** 类型可用于修改元素的值。
 
@@ -1794,7 +1794,7 @@ reverse_iterator rbegin();
 
 一个发现反向多重集中的第一个元素或发现非反向多重集中的最后一个元素的的反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rbegin` 用于反向多重集，正如 rbegin 用于多重集。
 
@@ -1907,7 +1907,7 @@ reverse_iterator rend();
 
 用于发现反向多重集中最后一个元素之后的位置（非反向多重集中第一个元素之前的位置）的反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rend` 用于反向多重集，正如 [end](#end) 用于多重集一样。
 
@@ -1974,7 +1974,7 @@ int main() {
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `reverse_iterator` 类型用于反向循环访问多重集。
 
@@ -2049,7 +2049,7 @@ void swap(
 *然后*\
 参数多重集提供与目标多重集进行交换的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数不会使在彼此交换元素的两个多重集中指定元素的任何引用、指针或迭代器无效。
 
@@ -2185,7 +2185,7 @@ value_compare value_comp() const;
 
 有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 存储对象用于定义以下成员函数：
 
@@ -2254,7 +2254,7 @@ vc2( 2,3 ) returns value of false, where vc2 is the function object of ms2.
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `value_compare` 是模板参数 `Compare` 的同义词。
 
@@ -2274,7 +2274,7 @@ typedef key_compare value_compare;
 typedef Key value_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `value_type` 是模板参数 `Key` 的同义词。
 
