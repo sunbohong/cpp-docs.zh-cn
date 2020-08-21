@@ -48,6 +48,8 @@
       href: ../linux/cmake-linux-project.md
     - name: 配置 Linux CMake 项目
       href: ../linux/cmake-linux-configure.md
+    - name: 配置 CMake 调试会话
+      href: ../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json
     - name: 教程：在 Visual Studio 中创建 C++ 跨平台项目
       href: ../build/get-started-linux-cmake.md
 - name: 配置 Linux 项目以使用地址擦除器
