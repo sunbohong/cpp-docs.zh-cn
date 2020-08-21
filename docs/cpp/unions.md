@@ -1,47 +1,50 @@
 ---
-title: Unions
-ms.date: 05/06/2019
+title: union
+description: 标准 c + + union class 类型和关键字的说明、其使用和限制。
+ms.date: 08/18/2020
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
-- class types [C++], unions as
+- class type [C++], union as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 5010512b2c5f19a236d2f44bd3acf00097a3e168
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+no-loc:
+- union
+- struct
+- enum
+- class
+- static
+ms.openlocfilehash: a4dc07df5e7858dffe62478509ee1d8dc759ce96
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213133"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722175"
 ---
-# <a name="unions"></a>Unions
+# `union`
 
 > [!NOTE]
-> 在 c + + 17 和更高版本中， **std：： variant**类是联合的一种类型安全的替代类。
+> 在 c + + 17 和更高版本中， `std::variant` class 是的类型安全的替代项 union 。
 
-**`union`** 是用户定义的类型，其中的所有成员共享相同的内存位置。 这意味着在任何给定时间，联合都不能包含来自其成员列表的多个对象。 这还意味着无论联合具有多少成员，它始终仅使用足以存储最大成员的内存。
+**`union`** 是用户定义的类型，其中的所有成员共享相同的内存位置。 此定义意味着，在任何给定时间， union 都不能包含来自其成员列表的多个对象。 这也意味着无论有多少个成员 union ，它始终只使用足够的内存来存储最大的成员。
 
-具有大量对象和/或内存有限时，联合可用于节省内存。 但是，需要格外小心才能正确使用它们，因为由你负责确保可始终访问写入的最后一个成员。 如果任何成员类型具有不常用构造函数，则必须编写附加代码来显式构造和销毁该成员。 使用联合之前，应考虑是否可以使用基类和派生类来更好地表示尝试解决的问题。
+union当有大量对象和内存有限时，可以使用来保存内存。 但是， union 正确使用需要特别注意。 您需要负责确保您始终访问您所分配的同一成员。 如果任何成员类型具有非普通用户 struct 或，则必须编写额外的代码以显式设置 struct 并销毁该成员。 使用之前，请 union 考虑您尝试解决的问题是否可以通过使用基 class 类型和派生类型来更好地表示 class 。
 
 ## <a name="syntax"></a>语法
 
-```cpp
-union [name]  { member-list };
-```
+> **`union`***`tag`* <sub>opt</sub> **`{`** opt *`member-list`***`};`**
 
 ### <a name="parameters"></a>参数
 
-*name*<br/>
-为联合提供的类型名称。
+*`tag`*<br/>
+为提供的类型名称 union 。
 
-*成员列表*<br/>
-联合可以包含的成员。 请参阅“备注”。
+*`member-list`*<br/>
+union可以包含的成员。
 
-## <a name="remarks"></a>备注
+## <a name="declare-a-no-locunion"></a>声明一个 union
 
-## <a name="declaring-a-union"></a>声明联合
-
-使用关键字开始联合的声明 **`union`** ，并将成员列表括在大括号中：
+使用关键字开始的声明 union **`union`** ，并将成员列表括在大括号中：
 
 ```cpp
 // declaring_a_union.cpp
@@ -54,6 +57,7 @@ union RecordType    // Declare a simple union type
     double d;
     int *int_ptr;
 };
+
 int main()
 {
     RecordType t;
@@ -62,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="using-unions"></a>使用联合
+## <a name="use-a-no-locunion"></a>使用 union
 
-在前面的示例中，任何访问联合的代码都需要了解保存数据的成员。 此问题最常见的解决方案是将联合以及其他枚举成员（指示当前存储在联合中的数据的类型）放入一个结构中。 这称为可*区分联合*，下面的示例演示基本模式。
+在前面的示例中，访问的任何代码都 union 需要知道哪个成员保存了数据。 此问题的最常见解决方案称为可*区分 union *。 它将 union 放在中 struct ，并包含一个 enum 成员，该成员指示当前存储在中的成员类型 union 。 下面的示例演示了基本模式：
 
 ```cpp
 #include <queue>
@@ -107,16 +111,27 @@ struct Input
 void Process_Temp(TempData t) {}
 void Process_Wind(WindData w) {}
 
-// Container for all the data records
-queue<Input> inputs;
-void Initialize();
+void Initialize(std::queue<Input>& inputs)
+{
+    Input first;
+    first.type = WeatherDataType::Temperature;
+    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
+    inputs.push(first);
+
+    Input second;
+    second.type = WeatherDataType::Wind;
+    second.wind = { 204, 1418859354, 14, 27 };
+    inputs.push(second);
+}
 
 int main(int argc, char* argv[])
 {
-    Initialize();
+    // Container for all the data records
+    queue<Input> inputs;
+    Initialize(inputs);
     while (!inputs.empty())
     {
-        Input i = inputs.front();
+        Input const i = inputs.front();
         switch (i.type)
         {
         case WeatherDataType::Temperature:
@@ -133,29 +148,17 @@ int main(int argc, char* argv[])
     }
     return 0;
 }
-
-void Initialize()
-{
-    Input first, second;
-    first.type = WeatherDataType::Temperature;
-    first.temp = { 101, 1418855664, 91.8, 108.5, 67.2 };
-    inputs.push(first);
-
-    second.type = WeatherDataType::Wind;
-    second.wind = { 204,1418859354, 14, 27 };
-    inputs.push(second);
-}
 ```
 
-在前面的示例中，请注意 Input 结构中的联合没有名称。 这是匿名联合，可以访问其成员，如同它们是结构的直接成员一样。 有关匿名联合的详细信息，请参阅下面一节。
+在前面的示例中， union 中的 `Input` struct 没有名称，因此称为 *匿名* union 。 其成员可以直接访问，就像它们是的成员一样 struct 。 有关如何使用匿名的详细信息 union ，请参阅[anonymous union ](#anonymous_unions)部分。
 
-当然，上面的示例演示的问题也可以通过以下方法解决：使用派生自公共基类的类，并基于容器中每个对象的运行时类型对代码进行分支。 这可以生成更易于维护和理解的代码，但是也可能比使用联合更慢。 此外，通过联合可以存储完全不相关的类型，并动态更改存储的值的类型，而无需更改联合变量本身的类型。 因此可以创建其元素存储不同类型的不同值的 MyUnionType 异类数组。
+前面的示例演示了一个问题，还可以通过使用 class 从公共基派生的类型来解决该问题 class 。 您可以基于容器中每个对象的运行时类型对代码进行分支。 你的代码可能更易于维护和理解，但它也可能比使用更慢 union 。 此外，使用 union 可以存储不相关的类型。 union利用，可以在不更改变量本身类型的情况下动态更改存储值的类型 union 。 例如，可以创建的异类数组 `MyUnionType` ，其元素存储不同类型的不同值。
 
-请注意，可能会很容易误用前面示例中的 `Input` 结构。 完全由用户负责正确使用鉴别器来访问保存数据的成员。 你可以通过使联合成为专用并提供特殊访问函数（如下一个示例所示）来防止误用。
+`Input`在示例中，可以轻松地滥用 struct 。 用户需要正确使用鉴别器来访问保存数据的成员。 您可以通过创建 union **`private`** 和提供特殊的访问功能来防止滥用，如下面的示例中所示。
 
-## <a name="unrestricted-unions-c11"></a>无限制的联合 (C++11)
+## <a name="unrestricted-no-locunion-c11"></a>无限制 union (c + + 11) 
 
-在 C++03 及更低版本中，联合可以包含具有类类型的非静态数据成员，只要该类型没有用户提供的构造函数、析构函数或赋值运算符即可。 在 C++11 中，消除了这些限制。 如果在联合中包含这样一个成员，则编译器会自动将不是用户提供的任何特殊成员函数标记为已删除。 如果联合是类或结构中的匿名联合，则类或结构的不是用户提供的任何特殊成员函数都会标记为已删除。 下面的示例演示如何处理联合的某个成员具有需要此特殊处理的成员的情况：
+在 c + + 03 及更早版本中， union 可以包含 static 具有类型的非数据成员，前提是 class 该类型没有用户提供的 struct or、de struct or 或赋值运算符。 在 C++11 中，消除了这些限制。 如果在中包含此类成员 union ，则编译器会自动标记不是用户提供的任何特殊成员函数 **`deleted`** 。 如果 union 是 union 或内的匿名，则 class struct 或不是用户提供的任何特殊成员函数 class struct 都将标记为 **`deleted`** 。 下面的示例演示如何处理这种情况。 的成员之一 union 具有要求此特殊处理的成员：
 
 ```cpp
 // for MyVariant
@@ -513,99 +516,13 @@ int main()
     char c;
     cin >> c;
 }
-#include <queue>
-#include <iostream>
-using namespace std;
-
-enum class WeatherDataType
-{
-    Temperature, Wind
-};
-
-struct TempData
-{
-    TempData() : StationId(""), time(0), current(0), maxTemp(0), minTemp(0) {}
-    TempData(string id, time_t t, double cur, double max, double min)
-        : StationId(id), time(t), current(cur), maxTemp(max), minTemp(0) {}
-    string StationId;
-    time_t time = 0;
-    double current;
-    double maxTemp;
-    double minTemp;
-};
-
-struct WindData
-{
-    int StationId;
-    time_t time;
-    int speed;
-    short direction;
-};
-
-struct Input
-{
-    Input() {}
-    Input(const Input&) {}
-
-    ~Input()
-    {
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-    }
-
-    WeatherDataType type;
-    void SetTemp(const TempData& td)
-    {
-        type = WeatherDataType::Temperature;
-
-        // must use placement new because of string member!
-        new(&temp) TempData(td);
-    }
-
-    TempData GetTemp()
-    {
-        if (type == WeatherDataType::Temperature)
-            return temp;
-        else
-            throw logic_error("Can't return TempData when Input holds a WindData");
-    }
-    void SetWind(WindData wd)
-    {
-        // Explicitly delete struct member that has a
-        // non-trivial constructor
-        if (type == WeatherDataType::Temperature)
-        {
-            temp.StationId.~string();
-        }
-        wind = wd; //placement new not required.
-    }
-    WindData GetWind()
-    {
-        if (type == WeatherDataType::Wind)
-        {
-            return wind;
-        }
-        else
-            throw logic_error("Can't return WindData when Input holds a TempData");
-    }
-
-private:
-
-    union
-    {
-        TempData temp;
-        WindData wind;
-    };
-};
 ```
 
-联合不能存储引用。 联合不支持继承，因此联合本身不能用作基类、继承自另一个类或具有虚函数。
+union无法存储引用。 union也不支持继承。 这意味着不能使用 union 作为基 class ，也不能从另一个中继承，也不能 class 具有虚函数。
 
-## <a name="initializing-unions"></a>初始化联合
+## <a name="initialize-a-no-locunion"></a>初始化 union
 
-可以通过指定包含在括号中的表达式来在相同语句中声明并初始化联合。 计算该表达式并将其分配给联合的第一个字段。
+可以 union 通过分配括在大括号中的表达式，在同一语句中声明和初始化。 计算表达式并将其分配给的第一个字段 union 。
 
 ```cpp
 #include <iostream>
@@ -623,7 +540,7 @@ int main()
     union NumericType Values = { 10 };   // iValue = 10
     cout << Values.iValue << endl;
     Values.dValue = 3.1416;
-    cout << Values.dValue) << endl;
+    cout << Values.dValue << endl;
 }
 /* Output:
 10
@@ -631,32 +548,30 @@ int main()
 */
 ```
 
-`NumericType` 联合排列在内存中（概念性的），如下图所示。
+`NumericType` union (在概念上按) 排列，如下图所示。
 
-![数值类型联合中的数据存储](../cpp/media/vc38ul1.png "NumericType 联合中的数据存储") <br/>
-NumericType 联合中的数据存储
+![数据在数值类型中的存储：：：非 loc (联合) ：：：](../cpp/media/vc38ul1.png "将数据存储在 NumericType：：： no (联合) ：：：") <br/>
+数据存储在 `NumericType`union
 
-## <a name="anonymous-unions"></a><a name="anonymous_unions"></a>匿名联合
+## <a name="anonymous-no-locunion"></a><a name="anonymous_unions"></a> 匿名 union
 
-匿名联合是在没有*类名称*或*声明符列表*的情况下声明的联合。
+匿名 union 是在没有或的情况下声明的 *`class-name`* *`declarator-list`* 。
 
-```cpp
-union  {  member-list  }
-```
+> **`union  {`**  *`member-list`*  **`}`**
 
-匿名联合中声明的名称可直接使用，就像非成员变量一样。 因此，匿名联合中声明的名称必须在周边范围中是唯一的。
+直接使用在匿名中声明的名称 union ，就像非成员变量一样。 这意味着，匿名中声明的名称在 union 周围范围内必须是唯一的。
 
-除了对命名联合的限制之外，匿名联合还服从以下附加限制：
+匿名 union 受以下其他限制的约束：
 
-- 还必须将它们声明为 **`static`** 在文件或命名空间范围中声明的。
+- 如果在文件或命名空间范围中声明，则还必须将其声明为 **`static`** 。
 
-- 它们只能具有 **`public`** 成员; **`private`** 而 **`protected`** 匿名联合中的成员则生成错误。
+- 它只能具有 **`public`** 成员; 匿名拥有 **`private`** 和 **`protected`** 中的成员会 union 生成错误。
 
-- 它们不能具有函数成员。
+- 它不能包含成员函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](../cpp/classes-and-structs-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
-class<br/>
-[struct](../cpp/struct-cpp.md)
+[`class`](../cpp/class-cpp.md)<br/>
+[`struct`](../cpp/struct-cpp.md)

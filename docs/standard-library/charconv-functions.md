@@ -1,18 +1,19 @@
 ---
 title: '&lt;charconv &gt; 函数'
-ms.date: 07/22/2020
+description: 描述 <charconv> 将整数或浮点值转换为字符或从字符转换的库函数
+ms.date: 08/20/2020
 f1_keywords:
 - charconv/std::to_chars
 - charconv/std::from_chars
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: 92f838ededad3e2b8493e934ae2b614247f18458
-ms.sourcegitcommit: 4eda68a0b3c23d8cefa56b7ba11583412459b32f
+ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
+ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565944"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88722149"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 函数
 
@@ -36,7 +37,7 @@ ms.locfileid: "87565944"
 将整数或浮点值转换为的序列 **`char`** 。
 
 `value`通过填充范围 \[ `first` 、 `last`) 、where \[ `first` 、 `last`) 必须为有效范围来转换为字符串。
-返回[to_chars_result 结构](to-chars-result-structure.md)。 如果转换成功，则为 `to_char_result.ec` ，成员 `ptr` 是所写入字符的一-后端指针。 否则， `to_char_result.ec` 具有值，其值为， `errc::value_too_large` `to_char_result.ptr` `last` 且 \[ `first` 未指定) 范围内的内容 `last` 。
+返回 [to_chars_result 结构](to-chars-result-structure.md)。 如果转换成功，则为 `to_char_result.ec` ，成员 `ptr` 是所写入字符的一-后端指针。 否则， `to_char_result.ec` 具有值，其值为， `errc::value_too_large` `to_char_result.ptr` `last` 且 \[ `first` 未指定) 范围内的内容 `last` 。
 
 `to_chars`如果您提供不足大的缓冲区来保存结果，则唯一可能会失败的方法是。
 
@@ -84,30 +85,26 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 对于整数转换，是转换为字符时要使用的基 `value` 。 必须介于2和36（含）之间。 不会有前导零。 范围为 10. 35 (包含) 的数字表示为小写字符 a。z
 
 *bcp.fmt*\
-对于浮点转换，为用于指定要使用的转换格式（如科学、固定或十六进制）的位掩码。 有关详细信息，请参阅[chars_format](chars-format-class.md) 。
+对于浮点转换，为用于指定要使用的转换格式（如科学、固定或十六进制）的位掩码。 有关详细信息，请参阅 [chars_format](chars-format-class.md) 。
 
 *precision*\
 对于浮点转换，为转换后的值的精度位数。
 
 ### <a name="return-value"></a>返回值
 
-包含转换结果的[to_chars_result](to-chars-result-structure.md) 。
+包含转换结果的 [to_chars_result](to-chars-result-structure.md) 。
 
 ### <a name="remarks"></a>备注
 
-采用[chars_format](chars-format-class.md)参数的函数会确定转换说明符，就像它们是按如下方式使用一样：如果为，则转换说明符为; (如果为，则在结果) ，如果为，则为; `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` `fmt` `chars_format::hex` `'g'` 如果 `fmt` 为， `chars_format::general` 则为。 指定最短的固定表示法仍可能会导致长时间的输出，因为当值非常大或很小时，可能是最短的表示形式。
+采用 [chars_format](chars-format-class.md) 参数的函数会确定转换说明符，就像它们是按如下方式使用一样：如果为，则转换说明符为; (如果为，则在结果) ，如果为，则为; `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` `fmt` `chars_format::hex` `'g'` 如果 `fmt` 为， `chars_format::general` 则为。 指定最短的固定表示法仍可能会导致长时间的输出，因为当值非常大或很小时，可能是最短的表示形式。
 
 下表描述了和参数的不同组合的转换 `fmt` 行为 `precision` 。 "最短往返行为" 一词是指写入所需的最少位数，以便使用相应的函数分析该表示形式 `from_chars` 会完全恢复值。
 
-| `fmt`and `precision` 组合 | Output |
+| `fmt` and `precision` 组合 | 输出 |
 |--|--|
 |  两者均未选中 | 无论是固定的还是科学记数法，都要将其作为 tiebreaker 进行修复。</br>此行为不能由采用参数的任何重载模拟 `fmt` 。 |
 | `fmt` | 指定格式的最短往返行为，如最短科学格式。 |
 | `fmt` 和 `precision` | 使用遵循样式的给定精度， `printf()` 无需最短的往返行为。 |
-
-### <a name="return-value"></a>返回值
-
-保存转换结果的[to_chars_result](to-chars-result-structure.md) 。
 
 ### <a name="example"></a>示例
 
@@ -184,7 +181,7 @@ from_chars_result from_chars(const char* first, const char* last, long double& v
 对于整数转换，是要在转换过程中使用的基。 必须介于2和36（含）之间。
 
 *bcp.fmt*\
-对于浮点转换，则为要转换的字符序列的格式。 有关详细信息，请参阅[chars_format](chars-format-class.md) 。
+对于浮点转换，则为要转换的字符序列的格式。 有关详细信息，请参阅 [chars_format](chars-format-class.md) 。
 
 ### <a name="remarks"></a>备注
 
@@ -192,7 +189,7 @@ from_chars_result from_chars(const char* first, const char* last, long double& v
 
 分析字符时，不忽略空格。 `strtod()`例如，缓冲区的开头必须是有效的数字表示形式。
 
-返回[from_chars_result 结构](from-chars-result-structure.md)。
+返回 [from_chars_result 结构](from-chars-result-structure.md)。
 
 如果没有任何字符匹配数字模式， `value` 则未修改， `from_chars_result.ptr` 指向 `first` ，并 `from_chars_result.ec` 为 `errc::invalid_argument` 。
 
@@ -245,7 +242,7 @@ int main()
 
 /std： c + + 17 或更高版本是必需的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<charconv>](charconv.md)  
 往返的最[短十进制字符串](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 
