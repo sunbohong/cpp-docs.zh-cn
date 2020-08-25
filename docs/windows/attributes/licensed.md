@@ -1,17 +1,17 @@
 ---
-title: 已授权（c + + COM 特性）
+title: " (c + + COM 特性) "
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.licensed
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 53b1a356f3a7e224cb85c15b8aa725a5f0469157
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 07a2b68517721ac4244fc1952e4fe3c5f2fbb153
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201708"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832485"
 ---
 # <a name="licensed"></a>licensed
 
@@ -50,9 +50,7 @@ public:
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|否|

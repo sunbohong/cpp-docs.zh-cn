@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: 3d8bfc40c3c9e937ad5acd7228e49877af65204a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ee960b27651489ac1c196789d41a6c5ee396b260
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562150"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831146"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 类
 
@@ -37,23 +37,21 @@ class CMFCImagePaintArea : public CButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCImagePaintArea：： CMFCImagePaintArea](#cmfcimagepaintarea)|构造 `CMFCImagePaintArea` 对象。|
 |`CMFCImagePaintArea::~CMFCImagePaintArea`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCImagePaintArea：： GetMode](#getmode)|检索当前的绘制模式。|
 |[CMFCImagePaintArea：： SetBitmap](#setbitmap)|设置图片区域的位图图像。|
 |[CMFCImagePaintArea：： SetColor](#setcolor)|设置当前绘图颜色。|
 |[CMFCImagePaintArea：： SetMode](#setmode)|设置当前的绘制模式。|
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此类不适于在您的代码中直接使用。
 
@@ -119,7 +117,7 @@ void SetBitmap(CBitmap* pBitmap);
 *pBitmap*\
 中要显示的新位图图像。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 *pBitmap* 为 NULL，则此方法将可修改的绘制区域的大小设置为零。 否则，它会将可修改的绘制区域的大小设置为所提供的位图图像的大小。
 
@@ -136,7 +134,7 @@ void SetColor(COLORREF color);
 *颜色*\
 中新的绘图颜色。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 从 "图像编辑器" 调色板栏或颜色选取器中选择颜色时，框架会调用此方法以更新当前绘图颜色。 初始绘图颜色为黑色 (COLORREF 值为 0) 。
 

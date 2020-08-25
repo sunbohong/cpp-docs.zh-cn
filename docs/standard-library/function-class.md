@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: ed00d8e3a94b03a5d44194b880218ded7a6dc0e8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182494"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831458"
 ---
 # <a name="function-class"></a>function 类
 
@@ -85,7 +85,7 @@ public:
 *Ax150*\
 allocator 函数。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 类模板是调用签名为的调用包装器 `Ret(T1, T2, ..., TN)` 。 你可以使用它在统一包装器中包含各种可调用对象。
 
@@ -107,19 +107,19 @@ allocator 函数。
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[函数](#function)|构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[result_type](#result_type)|存储的可调对象的返回类型。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[assign](#assign)|将可调用对象分配给此函数对象。|
 |[swap](#swap)|交换两个可调用对象。|
@@ -128,13 +128,13 @@ allocator 函数。
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[运算符未指定](#op_unspecified)|测试存储的可调用对象是否存在。|
-|[operator （）](#op_call)|调用可调用的对象。|
+|[运算符 ( # B1 ](#op_call)|调用可调用的对象。|
 |[operator =](#op_eq)|替换存储的可调用对象。|
 
-## <a name="assign"></a><a name="assign"></a>将
+## <a name="assign"></a><a name="assign"></a> 将
 
 将可调用对象分配给此函数对象。
 
@@ -161,9 +161,9 @@ template <class Fx, class Alloc>
 *Ax150*\
 分配器对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-每个成员函数将 `callable object` 保留的替换 **`*this`** 为作为传递的可调用对象 `operand` 。 这两个方法都将存储分配给分配器对象*Ax*。
+每个成员函数将 `callable object` 保留的替换 **`*this`** 为作为传递的可调用对象 `operand` 。 这两个方法都将存储分配给分配器对象 *Ax*。
 
 ## <a name="function"></a><a name="function"></a> 函数
 
@@ -208,7 +208,7 @@ template <class Fx, class Alloc>
 *_Fnref*\
 要包装的可调用对象引用。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 前两个构造函数构造一个空 `function` 对象。 接下来的三个构造函数构造一个 `function` 对象，它保存作为操作数传递的可调用对象。 最后两个构造函数使用分配器对象 Ax 分配存储。
 
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="operator-unspecified"></a><a name="op_unspecified"></a>运算符未指定
+## <a name="operator-unspecified"></a><a name="op_unspecified"></a> 运算符未指定
 
 测试存储的可调用对象是否存在。
 
@@ -290,7 +290,7 @@ g is empty (correct).
 operator unspecified();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 仅当对象不为空时，运算符才会返回一个可转换为且为 true 的值 **`bool`** 。 可将它用于测试对象是否为空。
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="operator"></a><a name="op_call"></a>operator （）
+## <a name="operator"></a><a name="op_call"></a> 运算符 ( # A1
 
 调用可调用的对象。
 
@@ -343,7 +343,7 @@ result_type operator()(
 *tN*\
 第 N 个调用参数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数返回 `INVOKE(fn, t1, t2, ..., tN, Ret)` ，其中 `fn` 是存储在中的目标对象 **`*this`** 。 可以使用它来调用包装的可调用对象。
 
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 替换存储的可调用对象。
 
@@ -402,7 +402,7 @@ template <class Fty>
 *fnref*\
 要包装的可调用对象引用。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 每个运算符都 **`*this`** 用作为操作数传递的可调用对象替换持有的可调用对象。
 
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a><a name="result_type"></a>result_type
+## <a name="result_type"></a><a name="result_type"></a> result_type
 
 存储的可调对象的返回类型。
 
@@ -465,7 +465,7 @@ val == -3
 typedef Ret result_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 typedef 是模板调用签名内类型 `Ret` 的同义词。 你可以使用它来确定包装的可调用对象的返回类型。
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a><a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a> 购
 
 交换两个可调用对象。
 
@@ -512,7 +512,7 @@ void swap(function& right);
 *然后*\
 要进行交换的函数对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数交换和右之间的目标 **`*this`** 对象*right*。 它定时执行此操作且不引发异常。
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a><a name="target"></a>靶
+## <a name="target"></a><a name="target"></a> 靶
 
 测试存储的可调用对象是否可按指定方式调用。
 
@@ -574,11 +574,11 @@ template <class Fty2>
 *Fty2*\
 要测试的目标可调用对象类型。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-类型*Fty2*对于参数类型和返回类型必须是可调用的 `T1, T2, ..., TN` `Ret` 。 如果 `target_type() == typeid(Fty2)`，则成员模板函数返回目标对象的地址；否则返回 0。
+类型 *Fty2* 对于参数类型和返回类型必须是可调用的 `T1, T2, ..., TN` `Ret` 。 如果 `target_type() == typeid(Fty2)`，则成员模板函数返回目标对象的地址；否则返回 0。
 
-类型*Fty2*可用于参数类型 `T1, T2, ..., TN` 和返回类型（ `Ret` 如果为类型的左值 `fn, t1, t2, ..., tN` `Fty2, T1, T2, ..., TN` 分别 `INVOKE(fn, t1, t2, ..., tN)` 是格式正确的，如果 `Ret` 不是 **`void`** ，则转换为） `Ret` 。
+类型 *Fty2* 可用于参数类型 `T1, T2, ..., TN` 和返回类型（ `Ret` 如果为类型的左值 `fn, t1, t2, ..., tN` `Fty2, T1, T2, ..., TN` 分别 `INVOKE(fn, t1, t2, ..., tN)` 是格式正确的，如果 `Ret` 不是 **`void`** ，则转换为） `Ret` 。
 
 ### <a name="example"></a>示例
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a><a name="target_type"></a>target_type
+## <a name="target_type"></a><a name="target_type"></a> target_type
 
 获取有关可调用对象的类型信息。
 
@@ -627,7 +627,7 @@ no target == true
 const std::type_info& target_type() const;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果为空，则成员函数将返回; `typeid(void)` **`*this`** 否则返回 `typeid(T)` ，其中 `T` 是目标对象的类型。
 

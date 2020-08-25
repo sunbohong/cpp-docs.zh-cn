@@ -1,17 +1,17 @@
 ---
-title: nonextensible （C++ COM 特性）
+title: 'nonextensible (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonextensible
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: 2a1cd4d685e2fd141c6e11feaea488f44a884c80
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 01f89c4a06a8e90fd6a539fa5a5a85ebb8067d40
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214647"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833031"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -25,13 +25,13 @@ ms.locfileid: "80214647"
 
 ## <a name="remarks"></a>备注
 
-**Nonextensible** C++特性具有与[nonextensible](/windows/win32/Midl/nonextensible) MIDL 特性相同的功能。
+**Nonextensible** c + + 特性具有与[nonextensible](/windows/win32/Midl/nonextensible) MIDL 特性相同的功能。
 
-使用**nonextensible**还需要[oleautomation](oleautomation.md)属性。
+使用 **nonextensible** 还需要 [oleautomation](oleautomation.md) 属性。
 
 ## <a name="example"></a>示例
 
-下面的代码演示**nonextensible**属性的一种用法：
+下面的代码演示 **nonextensible** 属性的一种用法：
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -50,13 +50,11 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|**接口**|
-|**可重复**|否|
-|**必需的特性**|`dual` 和 `oleautomation`或 `dispinterface`|
+|**适用于**|**interface**|
+|**且**|否|
+|**必需属性**|`dual` and `oleautomation` 、or `dispinterface`|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

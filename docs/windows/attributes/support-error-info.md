@@ -1,17 +1,17 @@
 ---
-title: support_error_info （c + + COM 特性）
+title: 'support_error_info (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: f23241cf5478fa52d9d649acfb4c836b8b9d8f13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cf02af793b97c55de4c52280ad2795a460a98d9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211952"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832173"
 ---
 # <a name="support_error_info"></a>support_error_info
 
@@ -28,7 +28,7 @@ ms.locfileid: "87211952"
 *error_interface*<br/>
 实现的接口的标识符 `IErrorInfo` 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **support_error_info** C++ 属性实现针对将目标对象遇到的详细上下文错误返回到客户端的支持。 为了使对象支持错误，接口的方法 `IErrorInfo` 必须由对象实现。 有关详细信息，请参阅 [支持 IDispatch 和 IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md)。
 
@@ -60,9 +60,7 @@ class CMyClass
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**|
 |**且**|是|

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 28efe75c3c825c04c88f9f2263a3db2d83d4f3af
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561318"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834292"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 类
 
@@ -53,17 +53,15 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|构造并初始化一个 `CMFCBaseVisualManager` 对象。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCBaseVisualManager：:D rawCheckBox](#drawcheckbox)|使用当前 Windows 主题绘制复选框控件。|
 |[CMFCBaseVisualManager：:D rawComboBorder](#drawcomboborder)|使用当前 Windows 主题绘制组合框边框。|
 |[CMFCBaseVisualManager：:D rawComboDropButton](#drawcombodropbutton)|使用当前 Windows 主题绘制组合框下拉按钮。|
@@ -75,13 +73,12 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|||
-|-|-|
 |名称|说明|
+|-|-|
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|调用 `CloseThemeData` 中获得的所有句柄 `UpdateSystemColors` 。|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|调用 `OpenThemeData` 以获取用于绘制各种控件的句柄：窗口、工具栏、按钮等。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 不需要直接实例化此类的对象。
 
@@ -105,7 +102,7 @@ class CMFCBaseVisualManager: public CObject
 void CleanUpThemes();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 仅限内部使用。
 
@@ -159,7 +156,7 @@ virtual BOOL DrawCheckBox(
 
 如果启用主题 API，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 *NState*的值对应于下面的复选框样式。
 
@@ -411,7 +408,7 @@ virtual WinXpTheme GetStandardWindowsTheme();
 void UpdateSystemColors();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 仅限内部使用。
 

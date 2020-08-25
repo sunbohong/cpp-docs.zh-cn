@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: c29b173a1dcf29c297e41f136044599fbd5218a5
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: db79473f5d4264b869eeac334fa7957cfe553364
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446458"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830938"
 ---
 # <a name="masm-operators-reference"></a>MASM 运算符引用
 
@@ -18,13 +18,17 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`*`乘](operator-multiply.md)<br/>[`+`把](operator-add.md)<br/>[`-`（减或取反）](operator-subtract-2.md)
+      [`*` (乘) ](operator-multiply.md)\
+      [`+` (添加) ](operator-add.md)\
+      [`-` (减或取反) ](operator-subtract-2.md)
    :::column-end:::
    :::column span="":::
-      [`.`定义域](operator-dot.md)<br/>[`/`拆分](operator-subtract-1.md)
+      [`.` (字段) ](operator-dot.md)\
+      [`/` (相除) ](operator-subtract-1.md)
    :::column-end:::
    :::column span="":::
-      [`[]`编入](operator-brackets.md)<br/>[`MOD`剩下](operator-mod.md)
+      [`[]` (索引) ](operator-brackets.md)\
+      [`MOD` (余数) ](operator-mod.md)
    :::column-end:::
 :::row-end:::
 
@@ -32,13 +36,25 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`!`（运行时逻辑非）](operator-logical-not-masm-run-time.md)<br/>[`!=`（运行时不等于）](operator-not-equal-masm.md)<br/>[`||`（运行时逻辑或）](operator-logical-or.md)<br/>[`&&`（运行时逻辑与）](operator-logical-and-masm-run-time.md)<br/>[`<`（运行时小于）](operator-less-than-masm-run-time.md)
+      [`!` (运行时逻辑 not) ](operator-logical-not-masm-run-time.md)\
+      [`!=` (运行时不相等) ](operator-not-equal-masm.md)\
+      [`||` (运行时逻辑或) ](operator-logical-or.md)\
+      [`&&` (运行时逻辑与) ](operator-logical-and-masm-run-time.md)\
+      [`<` (运行时小于) ](operator-less-than-masm-run-time.md)
    :::column-end:::
    :::column span="":::
-      [`<=`（运行时小于或等于）](operator-less-or-equal-masm-run-time.md)<br/>[`==`（运行时相等）](operator-equal-masm-run-time.md)<br/>[`>`（运行时大于）](operator-greater-than-masm-run-time.md)<br/>[`>=`（运行时大于或等于）](operator-greater-or-equal-masm-run-time.md)<br/>[`&`（运行时位与）](operator-bitwise-and.md)
+      [`<=` (运行时小于或等于) ](operator-less-or-equal-masm-run-time.md)\
+      [`==` (运行时等于) ](operator-equal-masm-run-time.md)\
+      [`>` (运行时大于) ](operator-greater-than-masm-run-time.md)\
+      [`>=` (运行时大于或等于) ](operator-greater-or-equal-masm-run-time.md)\
+      [`&` (运行时位与) ](operator-bitwise-and.md)
    :::column-end:::
    :::column span="":::
-      [`CARRY?`（运行时执行测试）](operator-carry-q.md)<br/>[`OVERFLOW?`（运行时溢出测试）](operator-overflow-q.md)<br/>[`PARITY?`（运行时奇偶测试）](operator-parity-q.md)<br/>[`SIGN?`（运行时签名测试）](operator-sign-q.md)<br/>[`ZERO?`（运行时零测试）](operator-zero-q.md)
+      [`CARRY?` (运行时执行测试) ](operator-carry-q.md)\
+      [`OVERFLOW?` (运行时溢出测试) ](operator-overflow-q.md)\
+      [`PARITY?` (运行时奇偶校验测试) ](operator-parity-q.md)\
+      [`SIGN?` (运行时签名测试) ](operator-sign-q.md)\
+      [`ZERO?` (运行时零测试) ](operator-zero-q.md)
    :::column-end:::
 :::row-end:::
 
@@ -46,13 +62,16 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`AND`（位与）](operator-and.md)<br/>[`NOT`（位非）](operator-not.md)
+      [`AND` (位与) ](operator-and.md)\
+      [`NOT` (按位 not) ](operator-not.md)
    :::column-end:::
    :::column span="":::
-      [`OR`（位或）](operator-or.md)<br/>[`SHL`（向左移动位）](operator-shl.md)
+      [`OR` (位或) ](operator-or.md)\
+      [`SHL` 左 (移位位数) ](operator-shl.md)
    :::column-end:::
    :::column span="":::
-      [`SHR`（向右移位）](operator-shr.md)<br/>[`XOR`（位异或）](operator-xor.md)
+      [`SHR` 向右 (移位位数) ](operator-shr.md)\
+      [`XOR` (按位异或) ](operator-xor.md)
    :::column-end:::
 :::row-end:::
 
@@ -60,13 +79,15 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`!`（字符文本）](operator-logical-not-masm.md)<br/>[`%`（视为文本）](operator-percent.md)
+      [`!` (字符文本) ](operator-logical-not-masm.md)\
+      [`%` (视为文本) ](operator-percent.md)
    :::column-end:::
    :::column span="":::
-      [`;;`（视为注释）](operator-semicolons.md)<br/>[`< >`（视为一个文本）](operator-literal.md)
+      [`;;` (视为注释) ](operator-semicolons.md)\
+      [`< >` (视为一个文本) ](operator-literal.md)
    :::column-end:::
    :::column span="":::
-      [`& &`（替换参数值）](operator-logical-and-masm.md)
+      [`& &` (替换参数值) ](operator-logical-and-masm.md)
    :::column-end:::
 :::row-end:::
 
@@ -74,13 +95,17 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`' '`（视为 string）](operator-single-quote.md)<br/>[`" "`（视为 string）](operator-double-quote.md)<br/>`:`（本地标签定义）
+      [`' '` (视为 string) ](operator-single-quote.md)\
+      [`" "` (视为 string) ](operator-double-quote.md)\
+      `:` (本地标签定义) 
    :::column-end:::
    :::column span="":::
-      `::`（寄存器段和偏移量）<br/>`::`（全局标签定义）
+      `::` (注册段和偏移量) \
+      `::` (全局标签定义) 
    :::column-end:::
    :::column span="":::
-      [`;`（视为注释）](operator-semicolon.md)<br/>[`DUP`（重复声明）](operator-dup.md)
+      [`;` (视为注释) ](operator-semicolon.md)\
+      [`DUP` (重复声明) ](operator-dup.md)
    :::column-end:::
 :::row-end:::
 
@@ -88,10 +113,10 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`MASK`（获取记录或字段位掩码）](operator-mask.md)
+      [`MASK` (获取记录或字段位掩码) ](operator-mask.md)
    :::column-end:::
    :::column span="2":::
-      [`WIDTH`（获取记录或字段宽度）](operator-width.md)
+      [`WIDTH` (获取记录或字段宽度) ](operator-width.md)
    :::column-end:::
 :::row-end:::
 
@@ -99,13 +124,16 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`EQ`=](operator-eq.md)<br/>[`GE`（大于或等于）](operator-ge.md)
+      [`EQ` (等于) ](operator-eq.md)\
+      [`GE` (大于或等于) ](operator-ge.md)
    :::column-end:::
    :::column span="":::
-      [`GT`（大于）](operator-gt.md)<br/>[`LE`（小于或等于）](operator-le.md)
+      [`GT` (大于) ](operator-gt.md)\
+      [`LE` (小于或等于) ](operator-le.md)
    :::column-end:::
    :::column span="":::
-      [`LT`（小于）](operator-lt.md)<br/>[`NE`（不等于）](operator-ne.md)
+      [`LT` (小于) ](operator-lt.md)\
+      [`NE` (不等于) ](operator-ne.md)
    :::column-end:::
 :::row-end:::
 
@@ -113,13 +141,17 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`:`（段重写）](operator-colon.md)<br/>`::`（寄存器段和偏移量）<br/>[`IMAGEREL`（图像相对偏移量）](operator-imagerel.md)
+      [`:` (段重写) ](operator-colon.md)\
+      `::` (注册段和偏移量) \
+      [`IMAGEREL` (图像相对偏移) ](operator-imagerel.md)
    :::column-end:::
    :::column span="":::
-      [`LROFFSET`（加载器解析偏移量）](operator-lroffset.md)<br/>[`OFFSET`（段相对偏移量）](operator-offset.md)
+      [`LROFFSET` (加载器解析的偏移量) ](operator-lroffset.md)\
+      [`OFFSET` (段相对偏移) ](operator-offset.md)
    :::column-end:::
    :::column span="":::
-      [`SECTIONREL`（节相对偏移量）](operator-sectionrel.md)<br/>[`SEG`（获取段）](operator-seg.md)
+      [`SECTIONREL` (节相对偏移) ](operator-sectionrel.md)\
+      [`SEG` (获取段) ](operator-seg.md)
    :::column-end:::
 :::row-end:::
 
@@ -127,17 +159,30 @@ ms.locfileid: "86446458"
 
 :::row:::
    :::column span="":::
-      [`HIGH`（高8位，最低16位）](operator-high.md)<br/>[`HIGH32`（64位高32位）](operator-high32.md)<br/>[`HIGHWORD`（高16位，最低32位）](operator-highword.md)<br/>[`LENGTH`（数组中的元素数）](operator-length.md)<br/>[`LENGTHOF`（数组中的元素数）](operator-lengthof.md)<br/>[`LOW`（低8位）](operator-low.md)
+      [`HIGH` (高8位，最低16位) ](operator-high.md)\
+      [`HIGH32` 64位 (高32位) ](operator-high32.md)\
+      [`HIGHWORD` (高16位的最低32位) ](operator-highword.md)\
+      [`LENGTH` 数组中 (元素数) ](operator-length.md)\
+      [`LENGTHOF` 数组中 (元素数) ](operator-lengthof.md)\
+      [`LOW` (低8位) ](operator-low.md)
    :::column-end:::
    :::column span="":::
-      [`LOW32`（低32位）](operator-low32.md)<br/>[`LOWWORD`（低16位）](operator-lowword.md)<br/>[`OPATTR`（获取参数类型信息）](operator-opattr.md)<br/>[`PTR`（指向或类型的指针）](operator-ptr.md)<br/>[`SHORT`（标记短标签类型）](operator-short.md)
+      [`LOW32` (低32位) ](operator-low32.md)\
+      [`LOWWORD` (低16位) ](operator-lowword.md)\
+      [`OPATTR` (获取参数类型信息) ](operator-opattr.md)\
+      [`PTR` 指向或类型的 (指针) ](operator-ptr.md)\
+      [`SHORT` 标记简短标签类型 () ](operator-short.md)
    :::column-end:::
    :::column span="":::
-      [`SIZE`（类型或变量的大小）](operator-size.md)<br/>[`SIZEOF`（类型或变量的大小）](operator-sizeof.md)<br/>[`THIS`（当前位置）](operator-this.md)<br/>[`TYPE`（获取表达式类型）](operator-type.md)<br/>[`.TYPE`（获取参数类型信息）](operator-dot-type.md)
+      [`SIZE` 类型或变量的 (大小) ](operator-size.md)\
+      [`SIZEOF` 类型或变量的 (大小) ](operator-sizeof.md)\
+      [`THIS` (当前位置) ](operator-this.md)\
+      [`TYPE` (获取表达式类型) ](operator-type.md)\
+      [`.TYPE` (获取参数类型信息) ](operator-dot-type.md)
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

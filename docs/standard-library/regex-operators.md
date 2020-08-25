@@ -10,22 +10,24 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3117ce7e962468855172a463c375392930e7c81
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366421"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833226"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 运算符
 
-||||
-|-|-|-|
-|[操作员！](#op_neq)|[算子&gt;](#op_gt)|[算子&gt;=](#op_gt_eq)|
-|[算子&lt;](#op_lt)|[算子&lt;&lt;](#op_lt_lt)|[算子&lt;=](#op_lt_eq)|
-|[运算符*](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[操作员&gt;](#op_gt)\
+[操作员&gt;=](#op_gt_eq)\
+[操作员&lt;](#op_lt)\
+[操作员&lt;&lt;](#op_lt_lt)\
+[操作员&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>操作员！
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 比较各对象之间是否不等于。
 
@@ -66,22 +68,22 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>参数
 
-*比比*\
+*BidIt*\
 迭代器类型。
 
 *IOtraits*\
 字符串特征类。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 要比较的左边的对象。
 
-*对*\
+*然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 各模板运算符返回 `!(left == right)`。
 
@@ -144,7 +146,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 操作员&lt;
 
 比较各对象之间是否存在“小于”关系。
 
@@ -181,24 +183,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*比比*\
+*BidIt*\
 迭代器类型。
 
 *IOtraits*\
 字符串特征类。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 要比较的左边的对象。
 
-*对*\
+*然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-每个模板运算符将其参数转换为字符串类型，并且仅在*左侧*的转换值比*右*的转换值小于 时才返回 true。
+每个模板运算符将其参数转换为字符串类型，并且仅当转换 *后的值* 与 *right*的转换值小于时才返回 true。
 
 ### <a name="example"></a>示例
 
@@ -254,7 +256,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 操作员&lt;&lt;
 
 在流中插入 sub_match。
 
@@ -266,25 +268,25 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>参数
 
-*埃莱姆*\
+*Elem*\
 元素类型。
 
 *IOtraits*\
 字符串特征类。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*比比*\
+*BidIt*\
 迭代器类型。
 
-*操作系统*\
+*o*\
 输出流。
 
-*对*\
+*然后*\
 要插入的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 模板运算符返回 `os << right.str()`。
 
@@ -314,7 +316,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 操作员&lt;=
 
 比较各对象之间是否存在“小于”或“等于”关系。
 
@@ -351,22 +353,22 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*比比*\
+*BidIt*\
 迭代器类型。
 
 *IOtraits*\
 字符串特征类。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 要比较的左边的对象。
 
-*对*\
+*然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 各模板运算符返回 `!(right < left)`。
 
@@ -424,7 +426,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>运算符*
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 比较各对象之间是否等于。
 
@@ -465,32 +467,32 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>参数
 
-*比比*\
+*BidIt*\
 迭代器类型。
 
 *IOtraits*\
 字符串特征类。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 要比较的左边的对象。
 
-*对*\
+*然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 每个模板运算符将每个参数转换为字符串类型，并比较转换对象是否相等，然后返回相应结果。
 
 当模板运算符将其参数转换为字符串类型时，它会使用以下转换中适用的第一个转换：
 
-其类型为类模板`match_results`的专门化或通过`sub_match`调用成员函数转换的`str`参数;
+其类型是类模板的专用化 `match_results` 或 `sub_match` 通过调用成员函数进行转换的参数 `str` ;
 
-类型为类模板`basic_string`的专门化的参数保持不变;
+类型为类模板专用化的参数 `basic_string` 是不变的;
 
-所有其他参数类型都通过将参数值传递给构造函数来转换，以便对类模板`basic_string`进行适当的专门化。
+所有其他参数类型通过将参数值传递给构造函数来实现类模板的适当特殊化，从而转换 `basic_string` 。
 
 ### <a name="example"></a>示例
 
@@ -551,7 +553,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 操作员&gt;
 
 比较各对象之间是否存在“大于”关系。
 
@@ -588,22 +590,22 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*比比*\
+*BidIt*\
 迭代器类型。
 
 *IOtraits*\
 字符串特征类。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 要比较的左边的对象。
 
-*对*\
+*然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 各模板运算符返回 `right < left`。
 
@@ -661,7 +663,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 操作员&gt;=
 
 比较各对象之间是否存在“大于”或“等于”关系。
 
@@ -698,22 +700,22 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>参数
 
-*比比*\
+*BidIt*\
 迭代器类型。
 
 *IOtraits*\
 字符串特征类。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 要比较的左边的对象。
 
-*对*\
+*然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 各模板运算符返回 `!(left < right)`。
 
@@ -773,11 +775,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>另请参阅
 
-[\<正则>](../standard-library/regex.md)\
-[regex_constants类](../standard-library/regex-constants-class.md)\
-[regex_error类](../standard-library/regex-error-class.md)\
-[\<正则表达式>函数](../standard-library/regex-functions.md)\
-[regex_iterator类](../standard-library/regex-iterator-class.md)\
-[regex_token_iterator类](../standard-library/regex-token-iterator-class.md)\
-[regex_traits类](../standard-library/regex-traits-class.md)\
-[\<正则>类型](../standard-library/regex-typedefs.md)
+[\<regex>](../standard-library/regex.md)\
+[regex_constants 类](../standard-library/regex-constants-class.md)\
+[regex_error 类](../standard-library/regex-error-class.md)\
+[\<regex> 函数](../standard-library/regex-functions.md)\
+[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
+[regex_traits 类](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

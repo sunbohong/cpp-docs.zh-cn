@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: d1a521f8ac0a33dbc59d789e506ac1dd9c906e3e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9160cfd847977f98ac22eecd72632822c751a3aa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562046"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834227"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 类
 
@@ -37,23 +37,21 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|默认构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCTabDropTarget：： System.windows.uielement.ondragenter](#ondragenter)|当用户将对象拖到选项卡窗口时由框架调用。  (重写 [COleDropTarget：： system.windows.uielement.ondragenter](../../mfc/reference/coledroptarget-class.md#ondragenter)。 ) |
 |[CMFCTabDropTarget：： System.windows.uielement.ondragleave](#ondragleave)|当用户将对象拖到具有焦点的选项卡窗口之外时由框架调用。  (重写 [COleDropTarget：： system.windows.uielement.ondragleave](../../mfc/reference/coledroptarget-class.md#ondragleave)。 ) |
 |[CMFCTabDropTarget：： System.windows.uielement.ondragover](#ondragover)|当用户将对象拖动到具有焦点的选项卡窗口时由框架调用。  (重写 [COleDropTarget：： system.windows.uielement.ondragover](../../mfc/reference/coledroptarget-class.md#ondragover)。 ) |
 |[CMFCTabDropTarget::OnDropEx](#ondropex)|当用户在拖动操作结束时释放鼠标按钮时，由框架调用。  (重写 [COleDropTarget：： OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。 ) |
 |[CMFCTabDropTarget：： Register](#register)|将控件注册为一个可以作为 OLE 拖放操作的目标的控件。|
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此类提供对类的拖放支持 `CMFCBaseTabCtrl` 。 如果你的应用程序使用 [AfxOleInit](ole-initialization.md#afxoleinit) 函数初始化 OLE 库，则 `CMFCBaseTabCtrl` 对象会自行注册以进行拖放操作。
 
@@ -119,7 +117,7 @@ virtual DROPEFFECT OnDragEnter(
 
 - DROPEFFECT_SCROLL
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果工具栏框架未处于自定义模式或剪贴板数据格式不可用，则此方法将返回 DROPEFFECT_NONE。 否则，它将返回 `CMFCBaseTabCtrl::OnDragEnter` 通过提供的参数调用的结果。
 
@@ -138,7 +136,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 *pWnd*\
 中用.
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法调用 `CMFCBaseTabCtrl::OnDragLeave` 方法来执行拖动操作。
 
@@ -182,7 +180,7 @@ virtual DROPEFFECT OnDragOver(
 
 - DROPEFFECT_SCROLL
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法使在拖动操作发生活动时光标下的选项卡处于活动状态。 如果工具栏框架未处于自定义模式或剪贴板数据格式不可用，它将返回 DROPEFFECT_NONE。 否则，它将返回 `CMFCBaseTabCtrl::OnDragOver` 通过提供的参数调用的结果。
 
@@ -232,7 +230,7 @@ virtual DROPEFFECT OnDropEx(
 
 - DROPEFFECT_SCROLL
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `CMFCBaseTabCtrl::OnDrop`如果工具栏框架处于自定义模式且剪贴板数据格式可用，则此方法将调用。 如果对的调用 `CMFCBaseTabCtrl::OnDrop` 返回非零值，则此方法将返回 *dropEffect*指定的默认 drop 效果。 否则，此方法将返回 DROPEFFECT_NONE。 有关 drop 特效的详细信息，请参阅 [COleDropTarget：： OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。
 
@@ -255,7 +253,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 
 如果注册成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法调用 [COleDropTarget：： register](../../mfc/reference/coledroptarget-class.md#register) 来注册控件以便进行拖放操作。
 

@@ -1,17 +1,17 @@
 ---
-title: hidden （c + + COM 特性）
+title: '隐藏 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: e0e3c5cb0355f3bedd8ecee57b034f0d9dde87df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffa1ce01cfd570de7b699e415f10b27acf525047
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224430"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830951"
 ---
 # <a name="hidden"></a>隐藏
 
@@ -33,13 +33,11 @@ ms.locfileid: "87224430"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**interface**、 **`class`** ， **`struct`** 、method、property|
 |**且**|否|
-|**必需属性**|**coclass** （应用于 **`class`** 或时 **`struct`** ）|
+|**必需属性**|**coclass**当应用于 **`class`** 或) 时，组件类 (**`struct`**|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

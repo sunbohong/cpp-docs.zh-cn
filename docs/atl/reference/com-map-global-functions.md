@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-ms.openlocfilehash: c4ce7c7a68c0744ad65ef4914088fa12d3340628
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adf4e06eb46aed74d08071dccce1db549ca31226
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326694"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833590"
 ---
 # <a name="com-map-global-functions"></a>COM 映射全局函数
 
-这些函数为 COM 映射`IUnknown`实现提供支持。
+这些函数为 COM 映射实现提供支持 `IUnknown` 。
 
-|||
+|函数|说明|
 |-|-|
-|[AtlInternalQueryInterface](#atlinternalqueryinterface)|委托给`IUnknown`非聚合对象的。|
-|[InlineIsEqualIUnknown](#inlineisequaliunknown)|生成用于比较接口与`IUnknown`的有效代码。|
+|[AtlInternalQueryInterface](#atlinternalqueryinterface)|委托给 `IUnknown` 非聚合对象的。|
+|[InlineIsEqualIUnknown](#inlineisequaliunknown)|生成用于比较接口的有效代码 `IUnknown` 。|
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlbase.h
+**标头：** atlbase。h
 
-## <a name="atlinternalqueryinterface"></a><a name="atlinternalqueryinterface"></a>atl 内部查询接口
+## <a name="atlinternalqueryinterface"></a><a name="atlinternalqueryinterface"></a> AtlInternalQueryInterface
 
 检索指向所请求的接口的指针。
 
@@ -41,33 +41,33 @@ HRESULT AtlInternalQueryInterface(
 
 ### <a name="parameters"></a>参数
 
-*p*<br/>
-[在]指向对象的指针，其中包含向 公开的接口的 COM 映射`QueryInterface`。
+*pThis*<br/>
+中指向对象的指针，该对象包含向公开的接口的 COM 映射 `QueryInterface` 。
 
-*p条目*<br/>
-[在]访问可用接口`_ATL_INTMAP_ENTRY`映射的结构数组。
+*pEntries*<br/>
+中一组 `_ATL_INTMAP_ENTRY` 结构，可访问可用接口的映射。
 
-*Iid*<br/>
-[在]请求的接口的 GUID。
+*iid*<br/>
+中所请求的接口的 GUID。
 
 *ppvObject*<br/>
-[出]指向*iid*中指定的接口指针，如果找不到接口，则指向 NULL 中的指针。
+弄指向在 *iid*中指定的接口指针的指针; 如果找不到接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值之一。
+标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`AtlInternalQueryInterface` 仅处理 COM 映射表中的接口。 如果对象是聚合的，`AtlInternalQueryInterface`则不委托给外部未知对象。 您可以使用宏[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)或其变体之一在 COM 地图表中输入接口。
+`AtlInternalQueryInterface` 仅处理 COM 映射表中的接口。 如果对象已聚合，则 `AtlInternalQueryInterface` 不会委托给外部未知。 您可以将接口输入到 COM 映射表中，其中的宏 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 或其变量之一。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]
 
-## <a name="inlineisequaliunknown"></a><a name="inlineisequaliunknown"></a>内联不相等
+## <a name="inlineisequaliunknown"></a><a name="inlineisequaliunknown"></a> InlineIsEqualIUnknown
 
-调用此函数，用于 测试`IUnknown`的特殊情况。
+对于测试的特殊情况，请调用此函数 `IUnknown` 。
 
 ```
 BOOL InlineIsEqualUnknown(REFGUID rguid1);
@@ -76,9 +76,9 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
 ### <a name="parameters"></a>参数
 
 *rguid1*<br/>
-[在]要与`IID_IUnknown`的 GUID 进行比较。
+中要比较的 GUID `IID_IUnknown` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [函数](../../atl/reference/atl-functions.md)<br/>
 [COM 映射宏](../../atl/reference/com-map-macros.md)

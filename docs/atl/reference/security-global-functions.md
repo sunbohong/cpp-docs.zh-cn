@@ -1,5 +1,5 @@
 ---
-title: 安全全局功能
+title: 安全全局函数
 ms.date: 11/04/2016
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
@@ -16,21 +16,21 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 682d44aa80f5d6de521223dfd67db2813cb6738c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b42fe10ef1de517677b35a9fe54d0c6a04ff748
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326025"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834487"
 ---
-# <a name="security-global-functions"></a>安全全局功能
+# <a name="security-global-functions"></a>安全全局函数
 
-这些函数支持修改 SID 和 ACL 对象。
+这些函数为修改 SID 和 ACL 对象提供支持。
 
 > [!IMPORTANT]
-> 下表中列出的函数不能在 Windows 运行时中执行的应用程序中使用。
+> 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|||
+|名称|说明|
 |-|-|
 |[AtlGetDacl](#atlgetdacl)|调用此函数可检索指定对象的自由访问控制列表 (DACL) 信息。|
 |[AtlSetDacl](#atlsetdacl)|调用此函数可设置指定对象的自由访问控制列表 (DACL) 信息。|
@@ -44,14 +44,14 @@ ms.locfileid: "81326025"
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlgetdacl"></a><a name="atlgetdacl"></a>AtlGetDacl
+## <a name="atlgetdacl"></a><a name="atlgetdacl"></a> AtlGetDacl
 
 调用此函数可检索指定对象的自由访问控制列表 (DACL) 信息。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlGetDacl(
@@ -63,28 +63,28 @@ inline bool AtlGetDacl(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理要为其检索安全信息的对象。
+要检索其安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *pDacl*<br/>
-指向包含检索的安全信息的 DACL 对象的指针。
+指向包含检索到的安全信息的 DACL 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-在调试生成中，如果*hObject*或*pDacl*无效，将发生断言错误。
+在调试版本中，如果 *hObject* 或 *pDacl* 无效，则会发生断言错误。
 
-## <a name="atlsetdacl"></a><a name="atlsetdacl"></a>阿特尔塞特达克
+## <a name="atlsetdacl"></a><a name="atlsetdacl"></a> AtlSetDacl
 
 调用此函数可设置指定对象的自由访问控制列表 (DACL) 信息。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlSetDacl(
@@ -97,35 +97,35 @@ inline bool AtlSetDacl(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理为其设置安全信息的对象。
+要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *rDacl*<br/>
 包含新安全信息的 DACL。
 
-*dw继承流控制*<br/>
-继承流控件。 此值可以是 0（默认值）、PROTECTED_DACL_SECURITY_INFORMATION或UNPROTECTED_DACL_SECURITY_INFORMATION。
+*dwInheritanceFlowControl*<br/>
+继承流控制。 此值可以是 0 (默认) 、PROTECTED_DACL_SECURITY_INFORMATION 或 UNPROTECTED_DACL_SECURITY_INFORMATION。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-在调试生成中，如果*hObject*无效，或者*dwInheritFlowControl*不是三个允许的值之一，则会发生断言错误。
+在调试版本中，如果 *hObject* 无效或 *dwInheritanceFlowControl* 不是三个允许的值之一，则将发生断言错误。
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlgetgroupsid"></a><a name="atlgetgroupsid"></a>AtlGetGroupSid
+## <a name="atlgetgroupsid"></a><a name="atlgetgroupsid"></a> AtlGetGroupSid
 
 调用此函数可检索对象的组安全标识符 (SID)。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlGetGroupSid(
@@ -137,13 +137,13 @@ inline bool AtlGetGroupSid(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理从中检索安全信息的对象。
+要从中检索安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *pSid*<br/>
-指向将包含`CSid`新安全信息的对象的指针。
+指向对象的指针， `CSid` 该对象将包含新的安全信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -151,14 +151,14 @@ inline bool AtlGetGroupSid(
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlsetgroupsid"></a><a name="atlsetgroupsid"></a>AtlSetGroupSid
+## <a name="atlsetgroupsid"></a><a name="atlsetgroupsid"></a> AtlSetGroupSid
 
 调用此函数可设置对象的组安全标识符 (SID)。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlSetGroupSid(
@@ -170,13 +170,13 @@ inline bool AtlSetGroupSid(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理为其设置安全信息的对象。
+要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *rSid*<br/>
-包含`CSid`新安全信息的对象。
+`CSid`包含新安全信息的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -184,14 +184,14 @@ inline bool AtlSetGroupSid(
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlgetownersid"></a><a name="atlgetownersid"></a>AtlGetOwnerSid
+## <a name="atlgetownersid"></a><a name="atlgetownersid"></a> AtlGetOwnerSid
 
 调用此函数可检索对象的所有者安全标识符 (SID)。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlGetOwnerSid(
@@ -203,13 +203,13 @@ inline bool AtlGetOwnerSid(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理从中检索安全信息的对象。
+要从中检索安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *pSid*<br/>
-指向将包含`CSid`新安全信息的对象的指针。
+指向对象的指针， `CSid` 该对象将包含新的安全信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -217,14 +217,14 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlsetownersid"></a><a name="atlsetownersid"></a>AtlSetOwnerSid
+## <a name="atlsetownersid"></a><a name="atlsetownersid"></a> AtlSetOwnerSid
 
 调用此函数可设置对象的所有者安全标识符 (SID)。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlSetOwnerSid(
@@ -236,13 +236,13 @@ inline bool AtlSetOwnerSid(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理为其设置安全信息的对象。
+要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *rSid*<br/>
-包含`CSid`新安全信息的对象。
+`CSid`包含新安全信息的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -250,14 +250,14 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlgetsacl"></a><a name="atlgetsacl"></a>阿特尔茨萨克
+## <a name="atlgetsacl"></a><a name="atlgetsacl"></a> AtlGetSacl
 
 调用此函数可检索指定对象的系统访问控制列表 (SACL) 信息。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlGetSacl(
@@ -270,35 +270,35 @@ inline bool AtlGetSacl(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理从中检索安全信息的对象。
+要从中检索安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *pSacl*<br/>
-指向 SACL 对象的指针，该对象将包含检索到的安全信息。
+指向将包含检索到的安全信息的 SACL 对象的指针。
 
-*b 请求需要的权限*<br/>
-如果为 true，则函数将尝试启用SE_SECURITY_NAME权限，并在完成后还原它。
+*bRequestNeededPrivileges*<br/>
+如果为 true，则函数将尝试启用 SE_SECURITY_NAME 权限，并在完成时将其还原。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果要`AtlGetSacl`在许多不同的对象上多次调用，则在调用函数之前启用SE_SECURITY_NAME权限将更为高效，将*bRequestDSs特权*设置为 false。
+如果在 `AtlGetSacl` 多个不同的对象上调用多次，则在调用函数之前启用一次 SE_SECURITY_NAME 特权将更有效，并将 *bRequestNeededPrivileges* 设置为 false。
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlsetsacl"></a><a name="atlsetsacl"></a>阿特尔塞特萨克
+## <a name="atlsetsacl"></a><a name="atlsetsacl"></a> AtlSetSacl
 
 调用此函数可设置指定对象的系统访问控制列表 (SACL) 信息。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlSetSacl(
@@ -312,40 +312,40 @@ inline bool AtlSetSacl(
 ### <a name="parameters"></a>参数
 
 *hObject*<br/>
-处理为其设置安全信息的对象。
+要为其设置安全信息的对象的句柄。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*hObject*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *hObject* 参数标识的对象的类型。
 
 *rSacl*<br/>
 包含新安全信息的 SACL。
 
-*dw继承流控制*<br/>
-继承流控件。 此值可以是 0（默认值）、PROTECTED_SACL_SECURITY_INFORMATION或UNPROTECTED_SACL_SECURITY_INFORMATION。
+*dwInheritanceFlowControl*<br/>
+继承流控制。 此值可以是 0 (默认) 、PROTECTED_SACL_SECURITY_INFORMATION 或 UNPROTECTED_SACL_SECURITY_INFORMATION。
 
-*b 请求需要的权限*<br/>
-如果为 true，则函数将尝试启用SE_SECURITY_NAME权限，并在完成后还原它。
+*bRequestNeededPrivileges*<br/>
+如果为 true，则函数将尝试启用 SE_SECURITY_NAME 权限，并在完成时将其还原。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-在调试生成中，如果*hObject*无效，或者*dwInheritFlowControl*不是三个允许的值之一，则会发生断言错误。
+在调试版本中，如果 *hObject* 无效或 *dwInheritanceFlowControl* 不是三个允许的值之一，则将发生断言错误。
 
-如果要`AtlSetSacl`在许多不同的对象上多次调用，则在调用函数之前启用SE_SECURITY_NAME权限将更为高效，将*bRequestDSs特权*设置为 false。
+如果在 `AtlSetSacl` 多个不同的对象上调用多次，则在调用函数之前启用一次 SE_SECURITY_NAME 特权将更有效，并将 *bRequestNeededPrivileges* 设置为 false。
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="atlgetsecuritydescriptor"></a><a name="atlgetsecuritydescriptor"></a>AtlGet 安全描述器
+## <a name="atlgetsecuritydescriptor"></a><a name="atlgetsecuritydescriptor"></a> AtlGetSecurityDescriptor
 
 调用此函数可检索给定对象的安全说明符。
 
 > [!IMPORTANT]
-> 此函数不能在 Windows 运行时中执行的应用程序中使用。
+> 此函数不能用于在 Windows 运行时中执行的应用程序。
 
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -360,33 +360,33 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="parameters"></a>参数
 
-*pszObject名称*<br/>
-指向 null 端接字符串的指针，该字符串指定从中检索安全信息的对象的名称。
+*pszObjectName*<br/>
+指向以 null 结尾的字符串的指针，该字符串指定要从中检索安全信息的对象的名称。
 
-*对象类型*<br/>
-指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)枚举中的值，该枚举指示*pszObjectName*参数标识的对象类型。
+*ObjectType*<br/>
+指定 [SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type) 枚举中的一个值，该值指示由 *pszObjectName* 参数标识的对象的类型。
 
-*p 安全描述器*<br/>
+*pSecurityDescriptor*<br/>
 接收请求的安全描述符的对象。
 
-*请求信息*<br/>
-一组[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位标志，指示要检索的安全信息的类型。 此参数可以是以下值的组合。
+*requestedInfo*<br/>
+一组 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) 位标志，用于指示要检索的安全信息的类型。 此参数可以是下列值的组合。
 
-*b 请求需要的权限*<br/>
-如果为 true，则函数将尝试启用SE_SECURITY_NAME权限，并在完成后还原它。
+*bRequestNeededPrivileges*<br/>
+如果为 true，则函数将尝试启用 SE_SECURITY_NAME 权限，并在完成时将其还原。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果要`AtlGetSecurityDescriptor`在许多不同的对象上多次调用，则在调用函数之前启用SE_SECURITY_NAME权限将更为高效，将*bRequestDSs特权*设置为 false。
+如果在 `AtlGetSecurityDescriptor` 多个不同的对象上调用多次，则在调用函数之前启用一次 SE_SECURITY_NAME 特权将更有效，并将 *bRequestNeededPrivileges* 设置为 false。
 
 ### <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [函数](../../atl/reference/atl-functions.md)

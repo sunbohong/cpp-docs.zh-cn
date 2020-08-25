@@ -1,17 +1,17 @@
 ---
-title: 同步（C++ COM 特性）
+title: " (c + + COM 特性同步) "
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: a0f4702de4cfde8586cc573f9ff5a6195984d207
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a7edbaa4e572af18bec9b3b6bef54594d6511390
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214508"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831666"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -25,15 +25,15 @@ ms.locfileid: "80214508"
 
 ## <a name="remarks"></a>备注
 
-**Synchronize** C++特性实现对同步对象的目标方法的支持。 同步允许多个对象使用公共资源（如类的方法），方法是控制目标方法的访问。
+**同步**c + + 属性实现对同步对象的目标方法的支持。 同步允许多个对象使用公共资源 (例如类的方法) 通过控制目标方法的访问。
 
-此属性插入的代码在目标方法的开头调用正确的 `Lock` 方法（由线程模型确定）。 退出该方法时，会自动调用 `Unlock`。 有关这些函数的详细信息，请参阅[CComAutoThreadModule：： Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
+此属性插入的代码调用正确的 `Lock` 方法， (由目标方法开头的线程模型) 确定。 退出该方法时， `Unlock` 将自动调用。 有关这些函数的详细信息，请参阅 [CComAutoThreadModule：： Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果应用 `progid`，则还会应用 `vi_progid` 和 `coclass`。
+此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果 `progid` 应用了，则 `vi_progid` `coclass` 还会应用。
 
 ## <a name="example"></a>示例
 
-下面的代码为 `CMyClass` 对象的 `UpdateBalance` 方法提供同步。
+下面的代码为对象的方法提供同步 `UpdateBalance` `CMyClass` 。
 
 ```cpp
 // cpp_attr_ref_synchronize.cpp
@@ -62,13 +62,11 @@ class CMyClass {
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|类方法、方法|
-|**可重复**|否|
-|**必需的特性**|以下一项或多项操作： `coclass`、`progid`或 `vi_progid`。|
+|**适用于**|类方法、方法|
+|**且**|否|
+|**必需属性**|以下一项或多项操作： `coclass` 、 `progid` 或 `vi_progid` 。|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

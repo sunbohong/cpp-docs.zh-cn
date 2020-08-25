@@ -1,21 +1,21 @@
 ---
-title: id （C++ COM 特性）
+title: 'id (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f67bf21fbe0040884cba4a54ed8d2a230cb20cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168052"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88830548"
 ---
 # <a name="id"></a>id
 
-为成员函数指定*dispid*参数（属性或方法在接口或调度接口中）。
+在接口或调度接口) 中，为成员函数指定一个用于 (属性或方法的 *dispid* 参数。
 
 ## <a name="syntax"></a>语法
 
@@ -23,14 +23,14 @@ ms.locfileid: "80168052"
 [ id(dispid) ]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dispid*<br/>
 接口方法的调度 ID。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Id** C++特性具有与[id](/windows/win32/Midl/id) MIDL 特性相同的功能。
+**Id** c + + 属性具有与[id](/windows/win32/Midl/id) MIDL 属性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -38,13 +38,11 @@ ms.locfileid: "80168052"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|接口方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
@@ -54,6 +52,6 @@ ms.locfileid: "80168052"
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>
 [数据成员特性](data-member-attributes.md)<br/>
-[defaultvalue](defaultvalue.md)<br/>
+[值](defaultvalue.md)<br/>
 [in](in-cpp.md)<br/>
 [out](out-cpp.md)

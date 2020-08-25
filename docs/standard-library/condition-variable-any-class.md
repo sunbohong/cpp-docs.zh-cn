@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 9187bddef456f131982d39fd64dacea5953b959b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9dc73de515aa8e321dbb28ca4a859b256613fbfe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222558"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831472"
 ---
 # <a name="condition_variable_any-class"></a>condition_variable_any 类
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[condition_variable_any](#condition_variable_any)|构造 `condition_variable_any` 对象。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[notify_all](#notify_all)|取消阻止正在等待 `condition_variable_any` 对象的所有线程。|
 |[notify_one](#notify_one)|取消阻止正在等待 `condition_variable_any` 对象的某个线程。|
@@ -53,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|阻止某个线程，并设置线程阻止的时间间隔。|
 |[wait_until](#wait_until)|阻止某个线程，并设置线程阻止的最大时间点。|
 
-## <a name="condition_variable_any"></a><a name="condition_variable_any"></a>condition_variable_any
+## <a name="condition_variable_any"></a><a name="condition_variable_any"></a> condition_variable_any
 
 构造 `condition_variable_any` 对象。
 
@@ -61,11 +61,11 @@ class condition_variable_any;
 condition_variable_any();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果没有足够的内存，构造函数将抛出包含 `not_enough_memory` 错误代码的 [system_error](../standard-library/system-error-class.md) 对象。 如果由于某些其他资源不可用导致无法构造该对象，则构造函数将抛出包含 `resource_unavailable_try_again` 错误代码的 `system_error` 对象。
 
-## <a name="notify_all"></a><a name="notify_all"></a>notify_all
+## <a name="notify_all"></a><a name="notify_all"></a> notify_all
 
 取消阻止正在等待 `condition_variable_any` 对象的所有线程。
 
@@ -73,7 +73,7 @@ condition_variable_any();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a><a name="notify_one"></a>notify_one
+## <a name="notify_one"></a><a name="notify_one"></a> notify_one
 
 取消阻止正在 `condition_variable_any` 对象上等待的某个线程。
 
@@ -81,7 +81,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a><a name="wait"></a>再
+## <a name="wait"></a><a name="wait"></a> 再
 
 阻止线程。
 
@@ -101,7 +101,7 @@ void wait(Lock& Lck, Predicate Pred);
 *Pred*\
 返回或的任何 **`true`** 表达式 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一种方法进行阻止，直到通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all) 对 `condition_variable_any` 对象发出信号。 它还可错误唤醒。
 
@@ -112,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a><a name="wait_for"></a>wait_for
+## <a name="wait_for"></a><a name="wait_for"></a> wait_for
 
 阻止某个线程，并设置线程阻止的时间间隔。
 
@@ -139,11 +139,11 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 `cv_status::timeout`如果*Rel_time*已过，则第一种方法返回。 否则，该方法将返回 `cv_status::no_timeout`。
 
-第二个方法返回*Pred*的值。
+第二个方法返回 *Pred*的值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一种方法将在 `condition_variable_any` 通过调用[notify_one](../standard-library/condition-variable-class.md#notify_one)或[notify_all](../standard-library/condition-variable-class.md#notify_all)或*Rel_time*时间间隔结束前终止对象。 它还可错误唤醒。
+第一种方法将在 `condition_variable_any` 通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all)或 *Rel_time* 时间间隔结束前终止对象。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 
@@ -155,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a><a name="wait_until"></a>wait_until
+## <a name="wait_until"></a><a name="wait_until"></a> wait_until
 
 阻止某个线程，并设置线程阻止的最大时间点。
 
@@ -194,11 +194,11 @@ Mutex 对象。
 
 `cv_status` `cv_status::timeout` 如果等待*Abs_time*结束时，返回类型的方法将返回。 否则，方法返回 `cv_status::no_timeout`。
 
-返回的方法 **`bool`** 返回*Pred*的值。
+返回的方法 **`bool`** 返回 *Pred*的值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一种方法将在 `condition_variable` 对象通过调用[notify_one](../standard-library/condition-variable-class.md#notify_one)或[notify_all](../standard-library/condition-variable-class.md#notify_all)或*Abs_time*之前被阻塞。 它还可错误唤醒。
+第一种方法将在 `condition_variable` 对象通过调用 [notify_one](../standard-library/condition-variable-class.md#notify_one) 或 [notify_all](../standard-library/condition-variable-class.md#notify_all)或 *Abs_time*之前被阻塞。 它还可错误唤醒。
 
 第二种方法实际上执行以下代码。
 

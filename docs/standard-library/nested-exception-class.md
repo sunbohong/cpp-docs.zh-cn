@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 6ae95880f0bc18928ed9bd4f6b6da14722f6ec60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ab48f714e8b4de1a47674f1af8fe25467279f94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212184"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836434"
 ---
 # <a name="nested_exception-class"></a>nested_exception 类
 
@@ -32,24 +32,24 @@ class nested_exception {
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
-|[operator =](#op_as)||
+|[operator =](#op_as)|赋值运算符。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[rethrow_nested](#rethrow_nested)|引发存储的异常。|
 |[nested_ptr](#nested_ptr)|返回存储的异常。|
 
-### <a name="operator"></a><a name="op_as"></a>operator =
+### <a name="operator"></a><a name="op_as"></a> operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a><a name="nested_ptr"></a>nested_ptr
+### <a name="nested_ptr"></a><a name="nested_ptr"></a> nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -59,13 +59,13 @@ exception_ptr nested_ptr() const;
 
 由此对象捕获的存储异常 `nested_exception` 。
 
-### <a name="rethrow_nested"></a><a name="rethrow_nested"></a>rethrow_nested
+### <a name="rethrow_nested"></a><a name="rethrow_nested"></a> rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
 ```
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果 `nested_ptr()` 返回一个 null 指针，则该函数将调用 `std::terminate()` 。 否则，它会引发由捕获的存储异常 **`*this`** 。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c743b91e40c05a35bd5c4d3c0d2e70ecc645714
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321680"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833928"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 属性页向导
 
@@ -26,7 +26,7 @@ ms.locfileid: "81321680"
 
 此向导[将属性页添加到 ATL 项目](../../atl/reference/adding-an-atl-property-page.md)，或添加到支持 ATL 的 MFC 项目。 ATL 属性页提供用户界面，用于设置一个或多个 COM 对象的属性，或用于调用一个或多个 COM 对象的方法。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 自 Visual Studio 2008 起，此向导生成的注册脚本在 HKEY_CURRENT_USER****（而不是 HKEY_LOCAL_MACHINE****）下注册它的 COM 组件。 若要修改此行为，请设置 ATL 向导的“为所有用户注册组件”**** 选项。
 
@@ -41,9 +41,8 @@ ms.locfileid: "81321680"
 
 提供为了实现对象而创建的 C++ 类的信息。
 
-|||
-|-|-|
 |术语|定义|
+|-|-|
 |**短名称**|设置对象的缩写名称。 你提供的名称决定了“类”和“组件类”**** 名称、“.cpp 文件”**** 和“.h 文件”**** 名称、“类型”**** 名称和“编程 ID”****，除非你单独更改这些字段。|
 |**.h 文件**|为新项目的类的头文件设置名称。 默认情况下，此名称以你在“短名称”**** 中提供的名称为依据。 单击省略号按钮以将该文件名保存至所选择的位置，或追加到某个现有文件的类声明中。 如果你选择现有文件，除非你单击向导中的“完成”****，否则向导不会将文件保存到选定位置。<br /><br /> 向导不会覆盖文件。 如果选择现有文件的名称，当你单击“完成”时，向导会询问你是否要将该类声明追加至文件的内容中****。 单击“是”，则追加该文件；单击“否”，则返回至向导并指定另一个文件名********。|
 |**类**|设置用于实现对象的类的名称。 此名称以你在“短名称”**** 中提供的名称为依据，跟在典型的类名前缀“C”后面。|
@@ -54,14 +53,14 @@ ms.locfileid: "81321680"
 
 提供对象的 COM 功能的相关信息。
 
-- **科班**
+- **Coclass**
 
    设置包含对象支持的接口列表的组件类的名称。
 
    > [!NOTE]
    > 如果使用特性创建项目，或在此向导页上指明属性页使用特性，便无法更改这一选项，因为 ATL 不包括 `coclass` 特性。
 
-- **Type**
+- **类型**
 
    设置注册表中显示的对象说明
 

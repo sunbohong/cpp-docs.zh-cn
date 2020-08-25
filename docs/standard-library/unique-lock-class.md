@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 189fd70ce10b6067646553f2b92a8fc09239d054
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be53f66296612f1b44790393907028bfc4d062ff
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212030"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834214"
 ---
 # <a name="unique_lock-class"></a>unique_lock 类
 
@@ -32,20 +32,20 @@ class unique_lock;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`mutex_type`|模板参数 `Mutex` 的同义词。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[unique_lock](#unique_lock)|构造 `unique_lock` 对象。|
 |[~ unique_lock 析构函数](#dtorunique_lock_destructor)|释放与 `unique_lock` 对象关联的所有资源。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[lock](#lock)|阻止调用线程，直到线程获取关联的 `mutex` 的所有权。|
 |[终端](#mutex)|检索指向关联的 `mutex` 的存储指针。|
@@ -59,7 +59,7 @@ class unique_lock;
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |[operator bool](#op_bool)|指定调用线程是否具有关联的 `mutex` 的所有权。|
 |[operator =](#op_eq)|从指定对象复制存储的 `mutex` 指针和关联的所有权状态。|
@@ -74,7 +74,7 @@ class unique_lock;
 
 **命名空间:** std
 
-## <a name="lock"></a><a name="lock"></a>住
+## <a name="lock"></a><a name="lock"></a> 住
 
 阻止调用线程，直到线程获取关联的 `mutex` 的所有权。
 
@@ -82,7 +82,7 @@ class unique_lock;
 void lock();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果存储的 `mutex` 指针为 NULL，则此方法将[system_error](../standard-library/system-error-class.md)引发一个错误代码为的 system_error `operation_not_permitted` 。
 
@@ -90,7 +90,7 @@ void lock();
 
 否则，此方法将对 `lock` 关联调用 `mutex` ，并将内部线程所有权标志设置为 **`true`** 。
 
-## <a name="mutex"></a><a name="mutex"></a>终端
+## <a name="mutex"></a><a name="mutex"></a> 终端
 
 检索指向关联的 `mutex` 的存储指针。
 
@@ -98,7 +98,7 @@ void lock();
 mutex_type *mutex() const noexcept;
 ```
 
-## <a name="operator-bool"></a><a name="op_bool"></a>operator bool
+## <a name="operator-bool"></a><a name="op_bool"></a> operator bool
 
 指定调用线程是否具有关联的 mutex 的所有权。
 
@@ -110,7 +110,7 @@ explicit operator bool() noexcept
 
 **`true`** 如果线程拥有互斥体，则为; 否则为。否则为 **`false`** 。
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 从指定对象复制存储的 `mutex` 指针和关联的所有权状态。
 
@@ -127,13 +127,13 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 `*this`
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果调用线程拥有以前关联的 `mutex`，则此方法在 `mutex` 上调用 `unlock` 之前，将分配新值。
 
-在复制后，此方法将*其他*设置为默认构造状态。
+在复制后，此方法将 *其他* 设置为默认构造状态。
 
-## <a name="owns_lock"></a><a name="owns_lock"></a>owns_lock
+## <a name="owns_lock"></a><a name="owns_lock"></a> owns_lock
 
 指定调用线程是否拥有关联的 `mutex`。
 
@@ -145,7 +145,7 @@ bool owns_lock() const noexcept;
 
 **`true`** 如果线程拥有， `mutex` 则为; 否则为 **`false`** 。
 
-## <a name="release"></a><a name="release"></a>拆卸
+## <a name="release"></a><a name="release"></a> 拆卸
 
 解除 `unique_lock` 对象与关联的 `mutex` 对象的关联。
 
@@ -157,11 +157,11 @@ mutex_type *release() noexcept;
 
 存储的 `mutex` 指针的上一个值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法将存储的指针的值设置 `mutex` 为0，并将内部 `mutex` 所有权标志设置为 **`false`** 。
 
-## <a name="swap"></a><a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a> 购
 
 将关联的 `mutex` 和所有权状态与指定对象的互换。
 
@@ -174,7 +174,7 @@ void swap(unique_lock& Other) noexcept;
 *以外*\
 `unique_lock` 对象。
 
-## <a name="try_lock"></a><a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a> try_lock
 
 在不阻止的情况下尝试获取关联 `mutex` 的所有权。
 
@@ -186,13 +186,13 @@ bool try_lock() noexcept;
 
 **`true`** 如果该方法成功获取的所有权 `mutex` ，则为; 否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果存储的 `mutex` 指针为 NULL，则该方法将[system_error](../standard-library/system-error-class.md)引发一个错误代码为的 system_error `operation_not_permitted` 。
 
 如果调用线程已拥有 `mutex`，则此方法将引发一个错误代码为 `resource_deadlock_would_occur` 的 `system_error`。
 
-## <a name="try_lock_for"></a><a name="try_lock_for"></a>try_lock_for
+## <a name="try_lock_for"></a><a name="try_lock_for"></a> try_lock_for
 
 在不阻止的情况下尝试获取关联 `mutex` 的所有权。
 
@@ -211,13 +211,13 @@ bool try_lock_for(
 
 **`true`** 如果该方法成功获取的所有权 `mutex` ，则为; 否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果存储的 `mutex` 指针为 NULL，则该方法将[system_error](../standard-library/system-error-class.md)引发一个错误代码为的 system_error `operation_not_permitted` 。
 
 如果调用线程已拥有 `mutex`，则此方法将引发一个错误代码为 `resource_deadlock_would_occur` 的 `system_error`。
 
-## <a name="try_lock_until"></a><a name="try_lock_until"></a>try_lock_until
+## <a name="try_lock_until"></a><a name="try_lock_until"></a> try_lock_until
 
 在不阻止的情况下尝试获取关联 `mutex` 的所有权。
 
@@ -237,13 +237,13 @@ bool try_lock_until(const xtime* Abs_time);
 
 **`true`** 如果该方法成功获取的所有权 `mutex` ，则为; 否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果存储的 `mutex` 指针为 NULL，则该方法将[system_error](../standard-library/system-error-class.md)引发一个错误代码为的 system_error `operation_not_permitted` 。
 
 如果调用线程已拥有 `mutex`，则此方法将引发一个错误代码为 `resource_deadlock_would_occur` 的 `system_error`。
 
-## <a name="unique_lock-constructor"></a><a name="unique_lock"></a>unique_lock 构造函数
+## <a name="unique_lock-constructor"></a><a name="unique_lock"></a> unique_lock 构造函数
 
 构造 `unique_lock` 对象。
 
@@ -285,15 +285,15 @@ unique_lock(mutex_type& Mtx,
 *以外*\
 `unique_lock` 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一个构造函数将构造一个对象，该对象包含值为 0 的关联 mutex 指针。
 
-第二个构造函数将关联的互斥体状态从*其他*。 移动后，*其他*将不再与互斥体相关联。
+第二个构造函数将关联的互斥体状态从 *其他*。 移动后， *其他* 将不再与互斥体相关联。
 
-剩余的构造函数存储 & *mtx.exe*作为存储 `mutex` 指针。 如果第二个参数存在，则由它确定 `mutex` 的所有权。
+剩余的构造函数存储 & *mtx.exe* 作为存储 `mutex` 指针。 如果第二个参数存在，则由它确定 `mutex` 的所有权。
 
-|||
+|名称|说明|
 |-|-|
 |`No argument`|通过在关联的 `mutex` 对象上调用 `lock` 方法，获取所有权。|
 |`Adopt`|已假定所有权。 调用构造函数时，必须锁定 `Mtx`。|
@@ -310,11 +310,11 @@ unique_lock(mutex_type& Mtx,
 ~unique_lock() noexcept;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果调用线程拥有关联的 `mutex`，则析构函数通过调用 `mutex` 对象上的 unlock 来释放所有权。
 
-## <a name="unlock"></a><a name="unlock"></a>解锁
+## <a name="unlock"></a><a name="unlock"></a> 解锁
 
 释放关联的 `mutex` 的所有权。
 
@@ -322,7 +322,7 @@ unique_lock(mutex_type& Mtx,
 void unlock();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果调用线程没有关联的 `mutex`，则此方法将引发一个错误代码为 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
 

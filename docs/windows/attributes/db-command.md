@@ -1,17 +1,17 @@
 ---
-title: db_command （c + + COM 特性）
+title: 'db_command (c + + COM 特性) '
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: ff1a9c55dc859016e5fc4210e96bc3fcf1b1fec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232776"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831367"
 ---
 # <a name="db_command"></a>db_command
 
@@ -44,7 +44,7 @@ ms.locfileid: "87232776"
 
 ** 绑定参数块的定义如下：
 
-> **（ \[ ** *bindtype* **]** *szVar1* \[ ， *szVar2* \[ ， *nVar3* \[ ，...]]] **）**
+> ** (\[ ***bindtype* **]** *szVar1* \[ ， *szVar2* \[ ， *nVar3* \[ ，...]]] **) **
 
 其中：
 
@@ -54,7 +54,7 @@ ms.locfileid: "87232776"
 
   - ** \[ db_column]** 将每个成员变量绑定到行集中的列。
 
-  - ** \[ bindto]** （与** \[ db_column]** 相同）。
+  - ** \[ bindto]** (与** \[ db_column]**) 相同。
 
   - ** \[ in]** 将成员变量绑定为输入参数。
 
@@ -62,13 +62,13 @@ ms.locfileid: "87232776"
 
   - ** \[ 在中，out]** 将成员变量绑定为输入/输出参数。
 
-- *szVarX*， *nVarX*解析为当前范围内的成员变量。
+- *szVarX*， *nVarX* 解析为当前范围内的成员变量。
 
 - **)** 标记数据绑定块的结束位置。
 
-如果命令字符串包含一个或多个说明符（例如 \[ in]、 \[ out] 或 \[ in/out]）， **db_command**会生成参数映射。
+如果命令字符串包含一个或多个说明符（例如 \[ in]、 \[ out] 或 \[ in/out]）， **db_command** 会生成参数映射。
 
-如果命令字符串包含一个或多个参数（如 \[ db_column] 或 \[ bindto]）， **db_command**会生成一个行集和一个访问器映射以服务这些绑定变量。 有关详细信息，请参阅 [db_accessor](db-accessor.md) 。
+如果命令字符串包含一个或多个参数（如 \[ db_column] 或 \[ bindto]）， **db_command** 会生成一个行集和一个访问器映射以服务这些绑定变量。 有关详细信息，请参阅 [db_accessor](db-accessor.md) 。
 
 > [!NOTE]
 > \[*bindtype*]在类级别使用**db_command**时，句法和*bindings*参数无效。
@@ -86,26 +86,26 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-*name*<br/>
-可有可无用于处理行集的句柄名称。 如果指定名称 **， **db_command** 会生成具有指定名称 ** 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 **，则无法向用户返回多个行的结果。
+name <br/>
+ (可选) 用于处理行集的句柄名称。 如果指定名称 **， **db_command** 会生成具有指定名称 ** 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 **，则无法向用户返回多个行的结果。
 
 *source_name*<br/>
-可有可无对 `CSession` 其应用了属性的类的变量或实例 `db_source` 。 请参阅 [db_source](db-source.md)。
+ (可选) 在其 `CSession` 上应用了属性的类的变量或实例 `db_source` 。 请参阅 [db_source](db-source.md)。
 
 执行**db_command** 检查，确认用于 *source_name* 的变量有效，使指定的变量位于函数或全局范围内。
 
 *hresult*<br/>
-可有可无标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
+ (可选) 标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
 *绑定*<br/>
-可有可无允许你将绑定参数与 OLE DB 命令分离。
+ (可选的) 允许您将绑定参数与 OLE DB 命令分离。
 
 如果为*绑定*指定一个值， **db_command**将分析关联的值，而不会分析 \[ *bindtype*] 参数。 这种用法允许使用 OLE DB 提供程序语法。 若要禁用分析，但不绑定参数，请指定 `Bindings=""` 。
 
-如果未指定*绑定*的值， **db_command**将分析绑定参数块，查找 "**（**"，后面跟有 **\[** _bindtype_**]** 一个或多个前面声明的 c + + 成员变量，后跟一个或多个以前声明的 c + + 成员变量，后跟 "**）**"。 将从生成的命令中去除括号间的所有文本，并且这些参数将用于为此命令构造列和参数绑定。
+如果未指定*绑定*的值， **db_command**将分析绑定参数块，查找 "** (**"，后面跟有 **\[** _bindtype_一个或多个以前声明的 c + + 成员变量，后跟一个或多个以前声明的 c + + 成员变量，后跟 "**) **"。**]** 将从生成的命令中去除括号间的所有文本，并且这些参数将用于为此命令构造列和参数绑定。
 
 *bulk_fetch*<br/>
-可有可无一个整数值，该值指定要提取的行数。
+ (可选) 指定要提取的行数的整数值。
 
 默认值为 1，指定单行提取（行集将为 [CRowset](../../data/oledb/crowset-class.md)类型）。
 
@@ -113,7 +113,7 @@ TCHAR m_state[3] = 'CA';
 
 如果 *bulk_fetch* 小于 1， `SetRows` 将返回零。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **db_command** 创建 [CCommand](../../data/oledb/ccommand-class.md) 对象，OLE DB 使用者使用该对象来执行命令。
 
@@ -127,7 +127,7 @@ TCHAR m_state[3] = 'CA';
 
 本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command** 创建并读取行集，在行集上可以调用向导生成的函数（例如 [OpenAll 和 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)）和 `CRowset` 成员函数（例如 [MoveNext](../../data/oledb/crowset-movenext.md)）。
 
-请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何在开发环境中执行此操作的信息，请参阅[如何：连接到数据库和浏览现有对象](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)和[添加新连接](/visualstudio/data-tools/add-new-connections)。
+请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何在开发环境中执行此操作的信息，请参阅 [如何：连接到数据库和浏览现有对象](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) 和 [添加新连接](/visualstudio/data-tools/add-new-connections)。
 
 ```cpp
 // db_command.h
@@ -238,9 +238,7 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**、 **`struct`** 、成员、方法、本地|
 |**且**|否|

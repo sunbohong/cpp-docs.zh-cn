@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 140836f45ed2f4088bc0baed67676f93cb268d01
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746834"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832108"
 ---
 # <a name="cstringdata-class"></a>CStringData 类
 
@@ -40,71 +40,71 @@ struct CStringData
 
 ### <a name="methods"></a>方法
 
-|||
+|名称|说明|
 |-|-|
-|[AddRef](#addref)|增加字符串数据对象的引用计数。|
-|[数据](#data)|检索字符串对象的字符数据。|
-|[IsLocked](#islocked)|确定关联的字符串对象的缓冲区是否锁定。|
+|[AddRef](#addref)|递增字符串数据对象的引用计数。|
+|[data](#data)|检索字符串对象的字符数据。|
+|[IsLocked](#islocked)|确定关联的字符串对象的缓冲区是否被锁定。|
 |[IsShared](#isshared)|确定关联的字符串对象的缓冲区当前是否共享。|
 |[Lock](#lock)|锁定关联的字符串对象的缓冲区。|
-|[发布](#release)|释放指定的字符串对象。|
-|[解 锁](#unlock)|解锁关联的字符串对象的缓冲区。|
+|[版本](#release)|释放指定的字符串对象。|
+|[解锁](#unlock)|解锁关联的字符串对象的缓冲区。|
 
 ### <a name="data-members"></a>数据成员
 
-|||
+|名称|说明|
 |-|-|
-|[nAlloc 长度](#nalloclength)|s 中`XCHAR`分配的数据的长度（不包括终止 null）|
-|[n数据长度](#ndatalength)|s 中`XCHAR`当前使用的数据的长度（不包括终止 null）|
+|[nAllocLength](#nalloclength)|中已分配数据的长度 `XCHAR` (不包括终止 null) |
+|[nDataLength](#ndatalength)|S 中当前使用的数据的长度 `XCHAR` (不包括终止 null) |
 |[nRefs](#nrefs)|对象的当前引用计数。|
-|[普斯特林姆格](#pstringmgr)|指向此字符串对象的字符串管理器的指针。|
+|[pStringMgr](#pstringmgr)|指向此字符串对象的字符串管理器的指针。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-此类只能由实现自定义字符串管理器的开发人员使用。 有关自定义字符串管理器的详细信息，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)
+此类应仅由实现自定义字符串管理器的开发人员使用。 有关自定义字符串管理器的详细信息，请参阅 [内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)
 
-此类封装了与较高字符串对象（如[CStringT、CSimpleStringT](../../atl-mfc-shared/reference/cstringt-class.md)或[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)对象）关联的各种类型的信息和数据。 [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md) 每个较高的字符串对象都包含指向其关联`CStringData`对象的指针，允许多个字符串对象指向同一字符串数据对象。 此关系由`nRefs``CStringData`对象的引用计数 （ ） 表示。
+此类封装了各种类型的信息和与更高的字符串对象相关的数据，例如 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)、 [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)或 [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md) 对象。 每个较高的字符串对象都包含指向其关联对象的指针 `CStringData` ，允许多个字符串对象指向相同的字符串数据对象。 此关系由对象的引用计数 (`nRefs`) 表示 `CStringData` 。
 
 > [!NOTE]
-> 在某些情况下，字符串类型（如`CFixedString`） 不会与多个较高字符串对象共享字符串数据对象。 有关此的详细信息，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+> 在某些情况下，字符串类型 (如 `CFixedString`) 将不会共享包含多个字符串对象的字符串数据对象。 有关此内容的详细信息，请参阅 [内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-此数据由：
+此数据由以下内容组成：
 
-- 字符串的内存管理器[（IAtlStringMgr](../../atl-mfc-shared/reference/iatlstringmgr-class.md)类型）。
+- 内存管理器 (类型为 [IAtlStringMgr](../../atl-mfc-shared/reference/iatlstringmgr-class.md)) 字符串。
 
-- 字符串的当前长度 （ [nData 长度](#ndatalength)） 。
+- 当前长度 ( 字符串的 [nDataLength](#ndatalength)) 。
 
-- 字符串的分配长度 （ [nAlloc 长度](#nalloclength)） 。 出于性能原因，这可能与当前字符串长度不同
+- 分配的长度 ( 字符串的 [nAllocLength](#nalloclength)) 。 出于性能原因，这可能不同于当前字符串长度
 
-- `CStringData`对象的当前引用计数 （ [nRefs](#nrefs)） . 此值用于确定共享同一`CStringData`对象的字符串对象数。
+- 对象的当前引用计数 ( [nRefs](#nrefs)) `CStringData` 。 此值用于确定共享同一对象的字符串对象的数量 `CStringData` 。
 
-- 字符串的实际字符缓冲区 （[数据](#data)） .
+- 实际字符缓冲区 ( 字符串的 [数据](#data)) 。
 
    > [!NOTE]
-   > 字符串对象的实际字符缓冲区由字符串管理器分配并追加到该对象。 `CStringData`
+   > 字符串对象的实际字符缓冲区由字符串管理器分配，并追加到 `CStringData` 对象。
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlsimpstr.h
+**标头：** atlsimpstr
 
-## <a name="cstringdataaddref"></a><a name="addref"></a>弦数据：：添加参考
+## <a name="cstringdataaddref"></a><a name="addref"></a> CStringData：： AddRef
 
-增加字符串对象的引用计数。
+递增字符串对象的引用计数。
 
 ```cpp
 void AddRef() throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-增加字符串对象的引用计数。
+递增字符串对象的引用计数。
 
 > [!NOTE]
-> 不要在具有负引用计数的字符串上调用此方法，因为负计数表示字符串缓冲区已锁定。
+> 不要对引用计数为负值的字符串调用此方法，因为负计数指示字符串缓冲区已锁定。
 
-## <a name="cstringdatadata"></a><a name="data"></a>弦乐数据：:d
+## <a name="cstringdatadata"></a><a name="data"></a> CStringData：:d ata
 
-返回指向字符串对象字符缓冲区的指针。
+返回指向字符串对象的字符缓冲区的指针。
 
 ```cpp
 void* data() throw();
@@ -114,16 +114,16 @@ void* data() throw();
 
 指向字符串对象的字符缓冲区的指针。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-调用此函数以返回关联字符串对象的当前字符缓冲区。
+调用此函数可返回关联字符串对象的当前字符缓冲区。
 
 > [!NOTE]
-> 此缓冲区不是由对象分配，`CStringData`而是由字符串管理器在需要时分配。 分配时，缓冲区将追加到字符串数据对象。
+> 此缓冲区不是由对象分配， `CStringData` 而是在需要时由字符串管理器分配。 当分配时，缓冲区将追加到字符串数据对象。
 
-## <a name="cstringdataislocked"></a><a name="islocked"></a>CStringData：：锁定
+## <a name="cstringdataislocked"></a><a name="islocked"></a> CStringData：： IsLocked
 
-确定字符缓冲区是否锁定。
+确定字符缓冲区是否已锁定。
 
 ```
 bool IsLocked() const throw();
@@ -131,15 +131,15 @@ bool IsLocked() const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果缓冲区已锁定，则返回 TRUE;否则 FALSE。
+如果缓冲区被锁定，则返回 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-调用此函数以确定字符串对象的字符缓冲区当前是否锁定。
+调用此函数可确定字符串对象的字符缓冲区当前是否处于锁定状态。
 
-## <a name="cstringdataisshared"></a><a name="isshared"></a>CStringData：：共享
+## <a name="cstringdataisshared"></a><a name="isshared"></a> CStringData::IsShared
 
-确定字符缓冲区是否共享。
+确定是否共享字符缓冲区。
 
 ```
 bool IsShared() const throw();
@@ -147,28 +147,28 @@ bool IsShared() const throw();
 
 ### <a name="return-value"></a>返回值
 
-如果缓冲区是共享的，则返回 TRUE;否则 FALSE。
+如果缓冲区是共享的，则返回 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-调用此函数以确定字符串数据对象的字符缓冲区当前是否在多个字符串对象之间共享。
+调用此函数可确定字符串数据对象的字符缓冲区当前是否在多个字符串对象之间共享。
 
-## <a name="cstringdatalock"></a><a name="lock"></a>弦数据：锁定
+## <a name="cstringdatalock"></a><a name="lock"></a> CStringData：： Lock
 
-锁定关联字符串对象的字符缓冲区。
+锁定关联的字符串对象的字符缓冲区。
 
 ```cpp
 void Lock() throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-调用此函数以锁定字符串数据对象的字符缓冲区。 当开发人员需要直接访问字符缓冲区时，将使用锁定和解锁。 锁定的一个好示例通过`CSimpleStringT`的[LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[解锁缓冲区](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示。
+调用此函数可锁定字符串数据对象的字符缓冲区。 当开发人员需要直接访问字符缓冲区时，可以使用锁定和解锁。 [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示了锁定的一个很好示例 `CSimpleStringT` 。
 
 > [!NOTE]
-> 仅当缓冲区未在较高的字符串对象之间共享时，才能锁定字符缓冲区。
+> 只有在更高版本的字符串对象之间未共享缓冲区时，才可以锁定字符缓冲区。
 
-## <a name="cstringdatanalloclength"></a><a name="nalloclength"></a>CStringData：：nAlloc长度
+## <a name="cstringdatanalloclength"></a><a name="nalloclength"></a> CStringData::nAllocLength
 
 已分配的字符缓冲区的长度。
 
@@ -176,11 +176,11 @@ void Lock() throw();
 int nAllocLength;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-将分配的数据缓冲区的长度存储在 s`XCHAR`中（不包括终止 null）。
+在中存储已分配数据缓冲区的长度， `XCHAR` 不包括终止 null)  (。
 
-## <a name="cstringdatandatalength"></a><a name="ndatalength"></a>CStringData：n数据长度
+## <a name="cstringdatandatalength"></a><a name="ndatalength"></a> CStringData::nDataLength
 
 字符串对象的当前长度。
 
@@ -188,11 +188,11 @@ int nAllocLength;
 int nDataLength;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-将当前使用的数据的长度存储在 s`XCHAR`中（不包括终止 null）。
+将当前使用的数据的长度存储 `XCHAR` (不包括终止 null) 。
 
-## <a name="cstringdatanrefs"></a><a name="nrefs"></a>CStringData：：nRefs
+## <a name="cstringdatanrefs"></a><a name="nrefs"></a> CStringData::nRefs
 
 字符串数据对象的引用计数。
 
@@ -200,11 +200,11 @@ int nDataLength;
 long nRefs;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-存储字符串数据对象的引用计数。 此计数指示与字符串数据对象关联的较高字符串对象的数量。 负值表示字符串数据对象当前已锁定。
+存储字符串数据对象的引用计数。 此计数指示与字符串数据对象相关联的字符串对象的数量。 负值表示字符串数据对象当前已锁定。
 
-## <a name="cstringdatapstringmgr"></a><a name="pstringmgr"></a>弦乐数据：:pStringMgr
+## <a name="cstringdatapstringmgr"></a><a name="pstringmgr"></a> CStringData：:p StringMgr
 
 关联的字符串对象的内存管理器。
 
@@ -212,27 +212,27 @@ long nRefs;
 IAtlStringMgr* pStringMgr;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-存储关联字符串对象的内存管理器。 有关内存管理器和字符串的详细信息，请参阅[内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+存储关联的字符串对象的内存管理器。 有关内存管理器和字符串的详细信息，请参阅 [内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-## <a name="cstringdatarelease"></a><a name="release"></a>CStringData：：发布
+## <a name="cstringdatarelease"></a><a name="release"></a> CStringData：： Release
 
-取消字符串数据对象的引用计数。
+递减字符串数据对象的引用计数。
 
 ```cpp
 void Release() throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-调用此函数以递减引用计数，在引用计数达到零`CStringData`时释放结构。 这通常在删除字符串对象时完成，因此不再需要引用字符串数据对象。
+如果引用数达到零，则调用此函数以减少引用计数，释放 `CStringData` 结构。 这通常是在删除字符串对象时完成的，因此不再需要引用字符串数据对象。
 
-例如，以下代码将调用`CStringData::Release`与 关联的`str1`字符串数据对象。
+例如，以下代码将 `CStringData::Release` 为与关联的字符串数据对象调用 `str1` ：
 
 [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]
 
-## <a name="cstringdataunlock"></a><a name="unlock"></a>CStringData：：解锁
+## <a name="cstringdataunlock"></a><a name="unlock"></a> CStringData：： Unlock
 
 解锁关联的字符串对象的字符缓冲区。
 
@@ -240,16 +240,16 @@ void Release() throw();
 void Unlock() throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-调用此函数以解锁字符串数据对象的字符缓冲区。 一旦缓冲区解锁，它是可共享的，可以进行引用计数。
+调用此函数可解锁字符串数据对象的字符缓冲区。 锁定缓冲区后，它是可共享的，并且可以进行引用计数。
 
 > [!NOTE]
-> 每个`Lock`调用都必须与 相应的调用`Unlock`匹配。
+> 对的每个调用 `Lock` 必须通过对的相应调用进行匹配 `Unlock` 。
 
-当开发人员必须确保字符串数据不共享时，将使用锁定和解锁。 锁定的一个好示例通过`CSimpleStringT`的[LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[解锁缓冲区](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示。
+当开发人员必须确保不共享字符串数据时，可以使用锁定和解锁。 [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示了锁定的一个很好示例 `CSimpleStringT` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

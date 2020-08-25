@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-ms.openlocfilehash: d36e3a301aa5b861c296b0bb4859e9442dbdb75e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 92408e91b41b474da3a2da6ad0646feb3a6b8fc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560876"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831835"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 类
 
@@ -33,23 +33,21 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|构造 `CMFCRibbonCustomizePropertyPage` 对象。|
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|将自定义类别添加到 " **命令** " 组合框。|
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|由框架用于创建此类类型的动态实例。|
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|由框架用于获取指向与此类类型相关联的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象的指针。|
 |[CMFCRibbonCustomizePropertyPage：： OnOK](#onok)|当用户在 "**自定义**" 对话框中单击 **"确定"** 时由系统调用。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 如果要将自定义命令添加到 " **自定义** " 对话框，则必须处理 AFX_WM_ON_RIBBON_CUSTOMIZE 消息。 在消息处理程序中，实例化 `CMFCRibbonCustomizePropertyPage` 堆栈上的对象。 创建自定义命令列表，然后调用 `AddCustomCategory` 以将新页面添加到 " **自定义** " 对话框。
 
@@ -97,7 +95,7 @@ void AddCustomCategory(
 *lstIDS*\
 中包含要在自定义类别中显示的功能区命令 Id。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法将名为 *lpszName* 的类别添加到 " **命令** " 组合框中。 当用户选择类别时， *lstIDS* 中指定的命令将显示在命令列表中。
 
@@ -122,7 +120,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 virtual void OnOK();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 默认实现将在 " **自定义** " 对话框中选择的选项应用于快速访问工具栏。
 

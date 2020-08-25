@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: de2c6c45e4a91aa4efa0ebacba4019be74e03c72
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560863"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88831796"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 类
 
@@ -43,25 +43,22 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|构造 `CMFCRibbonSeparator` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|将分隔符添加到 "**自定义**" 对话框的 "**命令**" 列表中。  (重写 [CMFCRibbonBaseElement：： AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。 ) |
 |`CMFCRibbonSeparator::CreateObject`|由框架用于创建此类类型的动态实例。|
 |`CMFCRibbonSeparator::GetThisClass`|由框架用于获取指向与此类类型相关联的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象的指针。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|||
-|-|-|
 |名称|说明|
+|-|-|
 |[CMFCRibbonSeparator：： CopyFrom](#copyfrom)|一种从另一个对象设置分隔符的成员变量的复制方法。|
 |[CMFCRibbonSeparator：： GetRegularSize](#getregularsize)|返回分隔符的大小。|
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|指示此是否为分隔符。|
@@ -69,7 +66,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |[CMFCRibbonSeparator：： OnDraw](#ondraw)|由系统调用，用于在功能区或快速访问工具栏上绘制分隔符。|
 |[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|由系统调用，用于在 **命令** 列表中绘制分隔符。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 功能区分隔符是以逻辑方式分隔功能区元素的垂直或水平线条。 可以在功能区控件、主应用程序菜单、功能区状态栏和快速访问工具栏上绘制分隔符。
 
@@ -133,7 +130,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 *bIsHoriz*<br/>
 中如果为 TRUE，则分隔符为水平;如果为 FALSE，则分隔符是垂直的。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 在应用程序菜单中使用水平分隔符。 在工具栏中使用垂直分隔符。
 
@@ -197,7 +194,7 @@ virtual BOOL IsTabStop() const;
 
 对于此类始终为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 功能区分隔符不是制表位。
 

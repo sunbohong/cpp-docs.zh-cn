@@ -1,17 +1,17 @@
 ---
-title: local （C++ COM 特性）
+title: 'local (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: d3710eee748a43a1daa5c07d8b3feb6beb8f64fa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dea62653478e451af00fa47b72984f3b580aadc0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214742"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834084"
 ---
 # <a name="local-c"></a>local (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214742"
 
 ## <a name="remarks"></a>备注
 
-**本地** C++特性具有与[本地](/windows/win32/Midl/local)MIDL 特性相同的功能。
+**本地**c + + 特性具有与[本地](/windows/win32/Midl/local)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -33,13 +33,11 @@ ms.locfileid: "80214742"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|**interface**、interface 方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**interface**、interface 方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|`dispinterface`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

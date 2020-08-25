@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 68b1865fd9c45c3782917edba273083dac086548
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212119"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833175"
 ---
 # <a name="ltstringgt"></a>&lt;字符串&gt;
 
@@ -59,9 +59,9 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 ### <a name="specialized-template-functions"></a>专用化模板函数
 
-|||
+|名称|说明|
 |-|-|
-|hash|生成字符串的哈希。|
+|`hash`|生成字符串的哈希。|
 |[swap](../standard-library/string-functions.md#swap)|交换两个字符串的字符数组。|
 |[stod](../standard-library/string-functions.md#stod)|将字符序列转换为 **`double`** 。|
 |[stof](../standard-library/string-functions.md#stof)|将字符序列转换为 **`float`** 。|
@@ -75,20 +75,20 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 ### <a name="functions"></a>函数
 
-|函数|描述|
+|函数|说明|
 |-|-|
 |[getline 模板](../standard-library/string-functions.md#getline)|将字符串从输入流中一行一行地提取出来。|
 
 ### <a name="classes"></a>类
 
-|类|描述|
+|类|说明|
 |-|-|
 |[basic_string 类](../standard-library/basic-string-class.md)|一个类模板，用于描述可存储任意类似于字符的对象序列的对象。|
 |[char_traits 结构](../standard-library/char-traits-struct.md)|一个类模板，用于描述与类型 CharType 的字符关联的特性。|
 
 ### <a name="specializations"></a>专用化
 
-|||
+|名称|说明|
 |-|-|
 |[char_traits \<char> 结构](../standard-library/char-traits-char-struct.md)|一个结构，它是模板结构 `char_traits` \<CharType> 对类型的元素的专用化 **`char`** 。|
 |[char_traits<wchar_t> 结构](../standard-library/char-traits-wchar-t-struct.md)|一个结构，它是模板结构 `char_traits` \<CharType> 对类型的元素的专用化 **`wchar_t`** 。|
