@@ -36,7 +36,7 @@ ms.locfileid: "88833850"
 
 这些函数支持文本编码和解码。
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[AtlGetHexValue](#atlgethexvalue)|调用此函数可获取十六进制数字的数值。|
 |[AtlGetVersion](#atlgetversion)|调用此函数可获取正在使用的 ATL 库的版本。  |

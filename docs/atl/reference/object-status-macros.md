@@ -15,7 +15,7 @@ ms.locfileid: "88835228"
 
 此宏可设置属于 ActiveX 控件的标志。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DECLARE_OLEMISC_STATUS](#declare_olemisc_status)|在 ATL ActiveX 控件中用于设置 OLEMISC 标志。|
 

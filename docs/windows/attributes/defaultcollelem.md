@@ -46,7 +46,7 @@ __interface IMyForm
 
 ## <a name="requirements"></a>要求
 
-| 特性上下文 | 值 |
+| 特性上下文 | “值” |
 |-|-|
 |**适用于**|接口方法|
 |**且**|否|

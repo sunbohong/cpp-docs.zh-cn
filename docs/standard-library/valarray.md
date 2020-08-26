@@ -34,7 +34,7 @@ ms.locfileid: "88840136"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的绝对值。|
 |[acos](../standard-library/valarray-functions.md#acos)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反余弦值。|
@@ -58,7 +58,7 @@ ms.locfileid: "88840136"
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator！ =](../standard-library/valarray-operators.md#op_neq)|测试两个相同大小的 valarray 的对应元素是否不相等或者 valarray 的所有元素是否都不等于 valarray 元素类型的指定值。|
 |[操作员](../standard-library/valarray-operators.md#op_mod)|获取 valarray 的元素类型的指定值除以两个大小相同的 valarray 的对应元素所得的余数或除以 valarray 所得的余数，或 valarray 除以指定值所得的余数。|
@@ -81,7 +81,7 @@ ms.locfileid: "88840136"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[gslice 类](../standard-library/gslice-class.md)|用于定义 valarray 多维切分的 valarray 实用程序类。|
 |[gslice_array 类](../standard-library/gslice-array-class.md)|一个内部的辅助类模板，它通过提供由 valarray 的常规切片定义的子集数组之间的操作来支持常规切片对象。|
@@ -93,7 +93,7 @@ ms.locfileid: "88840136"
 
 ### <a name="specializations"></a>专用化
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[valarray \<bool> 类](../standard-library/valarray-bool-class.md)|类模板的专用版本 valarray \<**Type**> 类型的元素 **`bool`** 。|
 

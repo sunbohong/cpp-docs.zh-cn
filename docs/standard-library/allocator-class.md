@@ -83,13 +83,13 @@ class allocator
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[分配器](#allocator)|用于创建 `allocator` 对象的构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[const_pointer](#const_pointer)|提供指向由分配器管理的对象类型的常量指针的类型。|
 |[const_reference](#const_reference)|提供对由分配器管理的对象类型的常量引用的类型。|
@@ -113,7 +113,7 @@ class allocator
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator =](#op_eq)|将一个 `allocator` 对象分配给另一个 `allocator` 对象。|
 

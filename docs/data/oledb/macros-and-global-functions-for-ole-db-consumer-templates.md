@@ -112,13 +112,13 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="global-functions"></a>全局函数
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AtlTraceErrorRecords](#atltraceerrorrecords)|如果返回错误，则将 OLE DB 错误记录信息转储到转储设备。|
 
 ## <a name="accessor-map-macros"></a>访问器映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_ACCESSOR](#begin_accessor)|标记访问器项的开头。|
 |[BEGIN_ACCESSOR_MAP](#begin_accessor_map)|标记取值函数映射条目的开始。|
@@ -127,7 +127,7 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="column-map-macros"></a>列映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_COLUMN_MAP](#begin_column_map)|标记用户记录类中的列映射条目的开头。|
 |[BLOB_ENTRY](#blob_entry)|用于将二进制大型对象绑定 (BLOB) 。|
@@ -167,14 +167,14 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="command-macros"></a>命令宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[DEFINE_COMMAND](#define_command)|指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 仅接受与指定的应用程序类型匹配 (ANSI 或 Unicode) 的字符串类型。 建议使用 [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) 而不是 DEFINE_COMMAND。|
 |[DEFINE_COMMAND_EX](#define_command_ex)|指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 支持 ANSI 和 Unicode 应用程序。|
 
 ## <a name="parameter-map-macros"></a>参数映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_PARAM_MAP](#begin_param_map)|标记用户记录类中参数映射条目的开头。|
 |[END_PARAM_MAP](#end_param_map)|标记参数映射项的结尾。|

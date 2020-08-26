@@ -44,19 +44,19 @@ class error_code;
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[error_code](#error_code)|构造 `error_code` 类型的对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[value_type](#value_type)|表示存储的错误代码值的类型。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[assign](#assign)|向错误代码分配错误代码值和类别。|
 |[category](#category)|返回错误类别。|
@@ -66,7 +66,7 @@ class error_code;
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator = =](#op_eq_eq)|测试各 `error_code` 对象是否相等。|
 |[operator！ =](#op_neq)|测试各 `error_code` 对象是否不相等。|

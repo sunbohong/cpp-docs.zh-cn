@@ -46,7 +46,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 
 ### <a name="function-templates"></a>函数模板
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|搜索相等或满足指定条件的两个相邻元素。|
 |[all_of](algorithm-functions.md#all_of)|**`true`** 当给定范围内的每个元素都存在条件时返回。|

@@ -33,13 +33,13 @@ template <class... Types>
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[变量](#variant)|构造 `variant` 类型的对象。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[emplace](#emplace)|创建新的包含值。|
 |[index](#index)|返回包含的值的索引。|
@@ -48,7 +48,7 @@ template <class... Types>
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator =](#op_eq)|将变体替换为另一种变体的副本。|
 

@@ -67,19 +67,19 @@ class bitset
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[位组](#bitset)|构造 `bitset\<N>` 类的对象并将位初始化为零、某个指定值或从字符串中的字符获取的值。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[element_type](#element_type)|一种类型，它是数据类型的同义词 **`bool`** ，可用于引用中的元素位 `bitset` 。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[一切](#all)|测试此中的所有位 `bitset` 以确定它们是否都设置为 **`true`** 。|
 |[any](#any)|成员函数测试序列中是否有任何位设置为 1。|
@@ -96,13 +96,13 @@ class bitset
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[reference](#reference)|一个代理类，它提供对 `bitset`（用于将单个位作为 `bitset` 类的 `operator[]` 的帮助程序类进行访问和操作）中包含的位的引用。|
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator！ =](#op_neq)|测试目标 `bitset` 是否与指定的 `bitset` 不相等。|
 |[运算符&=](#op_and_eq)|使用逻辑 `AND` 操作执行位组的按位组合。|
