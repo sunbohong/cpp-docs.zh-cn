@@ -124,16 +124,16 @@ f1_keywords:
 - _Scanf_s_format_string_
 - _Printf_format_string_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-ms.openlocfilehash: 4d0325fbab2f27da2556e2c252e35711d9b42789
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b1831a2a504bb12473f564cd914340bc429fab8d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231255"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836669"
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>注释函数参数和返回值
 
-本文介绍了简单函数参数（标量）的批注的典型用法，以及大多数类型的缓冲区。 本文还介绍了批注的常见用法模式。 有关与函数相关的其他注释，请参阅[注释函数行为](../code-quality/annotating-function-behavior.md)。
+本文介绍了简单函数参数（标量）的批注的典型用法，以及大多数类型的缓冲区。 本文还介绍了批注的常见用法模式。 有关与函数相关的其他注释，请参阅 [注释函数行为](../code-quality/annotating-function-behavior.md)。
 
 ## <a name="pointer-parameters"></a>指针参数
 
@@ -175,20 +175,20 @@ ms.locfileid: "87231255"
 
 - `_In_reads_or_z_(s)`
 
-     指向数组的指针，该数组以 null 值终止或具有已知的大小，或者两者都具有已知的大小。 直到空终止符的元素，或者， `s` 如果没有空终止符，则必须在预状态中有效。 如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。 （用于 `strn` 系列。）
+     指向数组的指针，该数组以 null 值终止或具有已知的大小，或者两者都具有已知的大小。 直到空终止符的元素，或者， `s` 如果没有空终止符，则必须在预状态中有效。 如果大小是已知的（以字节为单位），则 `s` 按元素大小进行缩放。 用于系列的 (`strn` 。 ) 
 
 - `_Out_writes_(s)`
 
      `_Out_writes_bytes_(s)`
 
-     一个指针，指向 `s` 将由函数编写的元素数组（resp）。 数组元素不必在预处理中有效，并且在 post 状态中有效的元素数是未指定的。 如果参数类型上存在批注，则它们将在 post 状态下应用。 例如，考虑下面的代码。
+     一个指针，指向 `s` 由函数写入)  (的元素数组。 数组元素不必在预处理中有效，并且在 post 状态中有效的元素数是未指定的。 如果参数类型上存在批注，则它们将在 post 状态下应用。 例如，考虑下面的代码。
 
      ```cpp
      typedef _Null_terminated_ wchar_t *PWSTR;
      void MyStringCopy(_Out_writes_(size) PWSTR p1, _In_ size_t size, _In_ PWSTR p2);
      ```
 
-     在此示例中，调用方 `size` 为提供元素的缓冲区 `p1` 。 `MyStringCopy`使其中一些元素有效。 更重要的 `_Null_terminated_` 是，上的批注 `PWSTR` 表示 `p1` 在 post 状态下以 null 结尾。 通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。
+     在此示例中，调用方 `size` 为提供元素的缓冲区 `p1` 。 `MyStringCopy` 使其中一些元素有效。 更重要的 `_Null_terminated_` 是，上的批注 `PWSTR` 表示 `p1` 在 post 状态下以 null 结尾。 通过这种方式，有效元素的数目仍是明确定义的，但不需要特定元素计数。
 
      `_bytes_`变体提供的大小以字节为单位，而不是元素。 仅当大小不能表示为元素时才使用此变量。 例如， **`char`** `_bytes_` 仅当使用的类似函数时，字符串才使用变体 **`wchar_t`** 。
 
@@ -247,7 +247,7 @@ ms.locfileid: "87231255"
 
 - `_In_reads_to_ptr_(p)`
 
-     指向数组的指针 `p - _Curr_` （即， `p` 减 `_Curr_` ）是有效的表达式。 之前的元素 `p` 必须在预状态中有效。
+     指向数组的指针，该数组的 `p - _Curr_` (为， `p` 减去 `_Curr_`) 是有效的表达式。 之前的元素 `p` 必须在预状态中有效。
 
     例如：
 
@@ -257,30 +257,52 @@ ms.locfileid: "87231255"
 
 - `_In_reads_to_ptr_z_(p)`
 
-     指向以 null 结尾的数组的指针，该数组的表达式 `p - _Curr_` （即 `p` 减 `_Curr_` ）为有效的表达式。 之前的元素 `p` 必须在预状态中有效。
+     指向以 null 结尾的数组的指针，该数组的表达式 `p - _Curr_` (为， `p` 减去 `_Curr_`) 是有效的表达式。 之前的元素 `p` 必须在预状态中有效。
 
 - `_Out_writes_to_ptr_(p)`
 
-     指向数组的指针 `p - _Curr_` （即， `p` 减 `_Curr_` ）是有效的表达式。 之前的元素 `p` 无需在预状态中有效，并且在 post 状态中必须有效。
+     指向数组的指针，该数组的 `p - _Curr_` (为， `p` 减去 `_Curr_`) 是有效的表达式。 之前的元素 `p` 无需在预状态中有效，并且在 post 状态中必须有效。
 
 - `_Out_writes_to_ptr_z_(p)`
 
-     指向以 null 结尾的数组的指针 `p - _Curr_` （即， `p` 减 `_Curr_` ）是有效的表达式。 之前的元素 `p` 无需在预状态中有效，并且在 post 状态中必须有效。
+     指向以 null 结尾的数组的指针，该数组的 `p - _Curr_` (为， `p` 减去 `_Curr_`) 是有效的表达式。 之前的元素 `p` 无需在预状态中有效，并且在 post 状态中必须有效。
 
 ## <a name="optional-pointer-parameters"></a>可选指针参数
 
 当指针参数批注包含时 `_opt_` ，它指示参数可以为 null。 否则，批注的行为与不包含的版本相同 `_opt_` 。 下面列出了 `_opt_` 指针参数批注的变体：
 
 :::row:::
-    :::column:::
-        `_In_opt_`<br /><br /> `_Out_opt_`<br /><br /> `_Inout_opt_`<br /><br /> `_In_opt_z_`<br /><br /> `_Inout_opt_z_`<br /><br /> `_In_reads_opt_`<br /><br /> `_In_reads_bytes_opt_`<br /><br /> `_In_reads_opt_z_`
-    :::column-end:::
-    :::column:::
-        `_Out_writes_opt_`<br /><br /> `_Out_writes_opt_z_`<br /><br /> `_Inout_updates_opt_`<br /><br /> `_Inout_updates_bytes_opt_`<br /><br /> `_Inout_updates_opt_z_`<br /><br /> `_Out_writes_to_opt_`<br /><br /> `_Out_writes_bytes_to_opt_`<br /><br /> `_Out_writes_all_opt_`<br /><br /> `_Out_writes_bytes_all_opt_`
-    :::column-end:::
-    :::column:::
-        `_Inout_updates_to_opt_`<br /><br /> `_Inout_updates_bytes_to_opt_`<br /><br /> `_Inout_updates_all_opt_`<br /><br /> `_Inout_updates_bytes_all_opt_`<br /><br /> `_In_reads_to_ptr_opt_`<br /><br /> `_In_reads_to_ptr_opt_z_`<br /><br /> `_Out_writes_to_ptr_opt_`<br /><br /> `_Out_writes_to_ptr_opt_z_`
-    :::column-end:::
+   :::column:::
+      `_In_opt_`\
+      `_Out_opt_`\
+      `_Inout_opt_`\
+      `_In_opt_z_`\
+      `_Inout_opt_z_`\
+      `_In_reads_opt_`\
+      `_In_reads_bytes_opt_`\
+      `_In_reads_opt_z_`
+   :::column-end:::
+   :::column:::
+      `_Out_writes_opt_`\
+      `_Out_writes_opt_z_`\
+      `_Inout_updates_opt_`\
+      `_Inout_updates_bytes_opt_`\
+      `_Inout_updates_opt_z_`\
+      `_Out_writes_to_opt_`\
+      `_Out_writes_bytes_to_opt_`\
+      `_Out_writes_all_opt_`\
+      `_Out_writes_bytes_all_opt_`
+   :::column-end:::
+   :::column:::
+      `_Inout_updates_to_opt_`\
+      `_Inout_updates_bytes_to_opt_`\
+      `_Inout_updates_all_opt_`\
+      `_Inout_updates_bytes_all_opt_`\
+      `_In_reads_to_ptr_opt_`\
+      `_In_reads_to_ptr_opt_z_`\
+      `_Out_writes_to_ptr_opt_`\
+      `_Out_writes_to_ptr_opt_z_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="output-pointer-parameters"></a>输出指针参数
@@ -439,17 +461,30 @@ ms.locfileid: "87231255"
 函数的返回值与 `_Out_` 参数类似，但在不同的取消引用级别，无需考虑指向结果的指针的概念。 对于以下批注，返回值为批注对象：标量、指向结构的指针或指向缓冲区的指针。 这些批注具有与对应批注相同的语义 `_Out_` 。
 
 :::row:::
-    :::column:::
-        `_Ret_z_`<br /><br /> `_Ret_writes_(s)`<br /><br /> `_Ret_writes_bytes_(s)`<br /><br /> `_Ret_writes_z_(s)`<br /><br /> `_Ret_writes_to_(s,c)`<br /><br /> `_Ret_writes_maybenull_(s)`<br /><br /> `_Ret_writes_to_maybenull_(s)`<br /><br /> `_Ret_writes_maybenull_z_(s)`
-    :::column-end:::
-    :::column:::
-        `_Ret_maybenull_`<br /><br /> `_Ret_maybenull_z_`<br /><br /> `_Ret_null_`<br /><br /> `_Ret_notnull_`<br /><br /> `_Ret_writes_bytes_to_`<br /><br /> `_Ret_writes_bytes_maybenull_`<br /><br /> `_Ret_writes_bytes_to_maybenull_`
-    :::column-end:::
+   :::column:::
+      `_Ret_z_`\
+      `_Ret_writes_(s)`\
+      `_Ret_writes_bytes_(s)`\
+      `_Ret_writes_z_(s)`\
+      `_Ret_writes_to_(s,c)`\
+      `_Ret_writes_maybenull_(s)`\
+      `_Ret_writes_to_maybenull_(s)`\
+      `_Ret_writes_maybenull_z_(s)`
+   :::column-end:::
+   :::column:::
+      `_Ret_maybenull_`\
+      `_Ret_maybenull_z_`\
+      `_Ret_null_`\
+      `_Ret_notnull_`\
+      `_Ret_writes_bytes_to_`\
+      `_Ret_writes_bytes_maybenull_`\
+      `_Ret_writes_bytes_to_maybenull_`
+   :::column-end:::
 :::row-end:::
 
 ## <a name="format-string-parameters"></a>格式字符串参数
 
-- `_Printf_format_string_`指示参数是要在表达式中使用的格式字符串 `printf` 。
+- `_Printf_format_string_` 指示参数是要在表达式中使用的格式字符串 `printf` 。
 
      **示例**
 
@@ -464,7 +499,7 @@ ms.locfileid: "87231255"
     }
     ```
 
-- `_Scanf_format_string_`指示参数是要在表达式中使用的格式字符串 `scanf` 。
+- `_Scanf_format_string_` 指示参数是要在表达式中使用的格式字符串 `scanf` 。
 
      **示例**
 
@@ -479,7 +514,7 @@ ms.locfileid: "87231255"
     }
     ```
 
-- `_Scanf_s_format_string_`指示参数是要在表达式中使用的格式字符串 `scanf_s` 。
+- `_Scanf_s_format_string_` 指示参数是要在表达式中使用的格式字符串 `scanf_s` 。
 
      **示例**
 
@@ -512,7 +547,7 @@ ms.locfileid: "87231255"
 
      `_Field_range_(low, hi)`
 
-     参数、字段或结果的范围（包含）从 `low` 到到 `hi` 。 等效于 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` 应用于批注对象的，以及相应的前置状态或后状态条件。
+     参数、字段或结果在范围 (包含) 从 `low` 到 `hi` 。 等效于 `_Satisfies_(_Curr_ >= low && _Curr_ <= hi)` 应用于批注对象的，以及相应的前置状态或后状态条件。
 
     > [!IMPORTANT]
     > 尽管名称包含 "in" 和 "out"，但和的语义 `_In_` 并 `_Out_` 不适**not**用于这些注释。

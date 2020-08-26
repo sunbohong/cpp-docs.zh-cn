@@ -1,17 +1,17 @@
 ---
-title: unique （c + + COM 特性）
+title: 'c + + COM (唯一) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: a46d607ef03fcb75fea31835726d0e2d95e71df8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b0bd5be19baddaed367bb619135be5cea8e7677
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201019"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836151"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -33,9 +33,7 @@ ms.locfileid: "87201019"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`typedef`**、 **`struct`** 、 **`union`** 、interface 参数、interface 方法|
 |**且**|否|

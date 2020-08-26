@@ -1,17 +1,17 @@
 ---
-title: transmit_as （c + + COM 特性）
+title: 'transmit_as (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: a34d57cc60dcc65e8b111c595fdd819dea407b78
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9483bfd7ca95aa1121beb56aac8a286c25fa17cb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201123"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840799"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -28,13 +28,13 @@ ms.locfileid: "87201123"
 *type*<br/>
 指定在客户端和服务器之间传输的数据类型。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Transmit_as** c + + 特性具有与[transmit_as](/windows/win32/Midl/transmit-as) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**transmit_as**特性：
+下面的代码演示如何使用 **transmit_as** 特性：
 
 ```cpp
 // cpp_attr_ref_transmit_as.cpp
@@ -66,9 +66,7 @@ struct _TREE_NODE_TYPE * right;
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`typedef`**|
 |**且**|否|

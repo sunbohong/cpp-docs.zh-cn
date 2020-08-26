@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: 8b8e433b5ea1283fb60273a2fd21106c65867c0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb63451c8789f7d390e2387ed8fadae23d1c7a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230254"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846519"
 ---
 # <a name="bernoulli_distribution-class"></a>bernoulli_distribution 类
 
@@ -69,14 +69,12 @@ public:
 *URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 类描述产生类型的值的分布 **`bool`** ，根据伯努利分布离散概率函数进行分布。 下表链接到有关各个成员的文章。
 
-||||
-|-|-|-|
-|[bernoulli_distribution](#bernoulli_distribution)|`bernoulli_distribution::p`|`bernoulli_distribution::param`|
-|`bernoulli_distribution::operator()`||[param_type](#param_type)|
+[bernoulli_distribution](#bernoulli_distribution)\
+[param_type](#param_type)
 
 属性函数 `p()` 将返回当前存储的分布参数值 `p`。
 
@@ -158,7 +156,7 @@ true :::::::::::::::::::::::::::::::::::::::::
 
 **命名空间:** std
 
-## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a>bernoulli_distribution：： bernoulli_distribution
+## <a name="bernoulli_distributionbernoulli_distribution"></a><a name="bernoulli_distribution"></a> bernoulli_distribution：： bernoulli_distribution
 
 构造分布。
 
@@ -175,7 +173,7 @@ explicit bernoulli_distribution(const param_type& parm);
 *parm*\
 用于构造分布的 `param_type` 结构。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 ≤ p ≤ 1.0`
 
@@ -183,11 +181,11 @@ explicit bernoulli_distribution(const param_type& parm);
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a>bernoulli_distribution：:p aram_type
+## <a name="bernoulli_distributionparam_type"></a><a name="param_type"></a> bernoulli_distribution：:p aram_type
 
 包含分布的参数。
 
-struct param_type {typedef bernoulli_distribution distribution_type; param_type （double p = 0.5）; double p （） const;
+struct param_type {typedef bernoulli_distribution distribution_type; param_type (双 p = 0.5) ; double p ( # A3 const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
@@ -196,7 +194,7 @@ struct param_type {typedef bernoulli_distribution distribution_type; param_type 
 *h-p*\
 存储的 `p` 分布参数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 ≤ p ≤ 1.0`
 

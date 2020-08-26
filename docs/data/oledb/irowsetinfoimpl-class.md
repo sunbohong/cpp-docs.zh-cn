@@ -25,16 +25,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: cf72aabce58237f470d536c02727f442404db030
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210439"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840383"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
 
-提供[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))接口的实现。
+提供 [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) 接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -45,13 +45,13 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
    public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自 `IRowsetInfoImpl`的类。
+派生自的类 `IRowsetInfoImpl` 。
 
 *PropClass*<br/>
-用户可定义的属性类，默认值为*T*。
+用户可定义的属性类，默认值为 *T*。
 
 ## <a name="requirements"></a>要求
 
@@ -61,19 +61,19 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ### <a name="interface-methods"></a>接口方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[GetProperties](#getproperties)|返回行集合支持的所有属性的当前设置。|
 |[GetReferencedRowset](#getreferencedrowset)|返回一个接口指针，该指针指向应用书签的行集。|
 |[GetSpecification](#getspecification)|返回对象（命令或会话）上用于创建此行集合的接口指针。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-行集的必需接口。 此类通过使用在命令类中定义的[属性集](../../data/oledb/begin-propset-map.md)来实现行集属性。 尽管行集类看起来是使用 command 类的属性集，但在通过命令或会话对象创建行集时，将使用其自己的运行时属性副本来提供行集。
+行集的必需接口。 此类通过使用在命令类中定义的 [属性集](../../data/oledb/begin-propset-map.md) 来实现行集属性。 尽管行集类看起来是使用 command 类的属性集，但在通过命令或会话对象创建行集时，将使用其自己的运行时属性副本来提供行集。
 
-## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl：： GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl：： GetProperties
 
-返回 `DBPROPSET_ROWSET` 组中属性的当前设置。
+返回组中的属性的当前设置 `DBPROPSET_ROWSET` 。
 
 ### <a name="syntax"></a>语法
 
@@ -84,11 +84,11 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
    DBPROPSET** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IRowsetInfo：： GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) 。
 
-## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl：： GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a> IRowsetInfoImpl：： GetReferencedRowset
 
 返回一个接口指针，该指针指向应用书签的行集。
 
@@ -100,11 +100,11 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
    IUnknown** ppReferencedRowset);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IRowsetInfo：： GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) 。 *IOrdinal*参数必须是 bookmark 列。
 
-## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl：： GetSpecification
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a> IRowsetInfoImpl：： GetSpecification
 
 返回对象（命令或会话）上用于创建此行集合的接口指针。
 
@@ -115,13 +115,13 @@ STDMETHOD (GetSpecification )(REFIID riid,
    IUnknown** ppSpecification);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IRowsetInfo：： GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-将此方法与[IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)一起使用可从数据源对象检索属性。
+将此方法与 [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) 一起使用可从数据源对象检索属性。
 
 ## <a name="see-also"></a>另请参阅
 

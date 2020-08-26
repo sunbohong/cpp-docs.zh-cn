@@ -1,21 +1,21 @@
 ---
-title: appobject （c + + COM 特性）
+title: 'appobject (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.appobject
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: ae3547a32e6d5984a9ef95e495ba119c3a2ed385
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6562702a93273e4fc24ba138a1eb20b1ab6b076e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222155"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836343"
 ---
 # <a name="appobject"></a>appobject
 
-将 coclass 标识为与完整 .exe 应用程序关联的应用程序对象，并指示 coclass 的函数和属性在此[类型库](../../mfc/automation-clients-using-type-libraries.md)中全局可用。
+将 coclass 标识为与完整 .exe 应用程序关联的应用程序对象，并指示 coclass 的函数和属性在此 [类型库](../../mfc/automation-clients-using-type-libraries.md)中全局可用。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +29,7 @@ ms.locfileid: "87222155"
 
 ## <a name="example"></a>示例
 
-下面的代码演示了一个简单的类定义，该定义前面有一个包含**appobject**的特性块：
+下面的代码演示了一个简单的类定义，该定义前面有一个包含 **appobject**的特性块：
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -48,9 +48,7 @@ class A : public ICustom {
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|否|

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: d0bba986889dfbd17fddcd0c6985c082f6f74c29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3054a29bd1bc82861461851d4403a7095ac1fcbd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230241"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846506"
 ---
 # <a name="binomial_distribution-class"></a>binomial_distribution 类
 
@@ -77,16 +77,14 @@ public:
 *URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 类模板描述产生用户指定的整型值的分布，如果未提供任何值，则 **`int`** 根据二项式分布离散概率函数进行分布。 下表链接到有关各个成员的文章。
 
-||||
-|-|-|-|
-|[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
-|`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
+[binomial_distribution](#binomial_distribution)\
+[param_type](#param_type)
 
-属性成员 `t()` 和 `p()` 分别返回当前存储的分布参数值*t*和*p* 。
+属性成员 `t()` 和 `p()` 分别返回当前存储的分布参数值 *t* 和 *p* 。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -231,7 +229,7 @@ Histogram for 100 samples:
 
 **命名空间:** std
 
-## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a>binomial_distribution：： binomial_distribution
+## <a name="binomial_distributionbinomial_distribution"></a><a name="binomial_distribution"></a> binomial_distribution：： binomial_distribution
 
 构造分布。
 
@@ -251,15 +249,15 @@ explicit binomial_distribution(const param_type& parm);
 *parm*\
 用于构造分布的 `param_type` 结构。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前置条件：** `0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 
-第一个构造函数将构造一个对象，该对象的存储的*p*值保留值*p* ，并且存储的*t*值保留值*t*。
+第一个构造函数将构造一个对象，该对象的存储的 *p* 值保留值 *p* ，并且存储的 *t* 值保留值 *t*。
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="binomial_distributionparam_type"></a><a name="param_type"></a>binomial_distribution：:p aram_type
+## <a name="binomial_distributionparam_type"></a><a name="param_type"></a> binomial_distribution：:p aram_type
 
 存储分布的所有参数。
 
@@ -286,7 +284,7 @@ struct param_type {
 *然后*\
 要与它进行比较的 `param_type` 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前置条件：** `0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 

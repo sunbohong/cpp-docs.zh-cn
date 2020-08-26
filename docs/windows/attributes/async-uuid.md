@@ -1,17 +1,17 @@
 ---
-title: async_uuid （C++ COM 特性）
+title: 'async_uuid (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 537bd6d645532d9d5d20b740125c66f3953239bc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cb0abdcedc26c5ffe197e52d5da4fbad1ec516d2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168455"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836239"
 ---
 # <a name="async_uuid"></a>async_uuid
 
@@ -23,14 +23,14 @@ ms.locfileid: "80168455"
 [async_uuid (uuid)]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *uuid*<br/>
 标识接口版本的 UUID。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Async_uuid** C++特性具有与[async_uuid](/windows/win32/Midl/async-uuid) MIDL 特性相同的功能。
+**Async_uuid** c + + 特性具有与[async_uuid](/windows/win32/Midl/async-uuid) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -48,14 +48,12 @@ __interface ICustom {
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|`interface`|
-|**可重复**|否|
-|**必需的特性**|无|
-|**无效的特性**|**双** **调度接口**|
+|**适用于**|`interface`|
+|**且**|否|
+|**必需属性**|无|
+|**无效的特性**|**双****调度接口**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

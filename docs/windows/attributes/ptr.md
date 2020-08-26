@@ -1,17 +1,17 @@
 ---
-title: ptr （c + + COM 特性）
+title: 'ptr (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ptr
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 9e45cd529562fe238f96f98cf7f91e15df34270a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c01fe93d8c4092b3a4754b0c70ff161d66dfe49f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224378"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839863"
 ---
 # <a name="ptr"></a>ptr
 
@@ -33,11 +33,9 @@ ms.locfileid: "87224378"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用于**|Interface 参数、interface 方法、**`typedef`**|
+|**适用于**|Interface 参数、interface 方法、 **`typedef`**|
 |**且**|否|
 |**必需属性**|无|
 |**无效的特性**|无|

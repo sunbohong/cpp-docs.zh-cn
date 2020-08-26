@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: ae213768e30fa8120a80aaa30b3fe1b53e802d78
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fdada7f02115f44aa6a7e3c5e9bdfdf5e65f8b2f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920272"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846584"
 ---
 # <a name="_access-_waccess"></a>_access、_waccess
 
@@ -63,7 +63,7 @@ int _waccess(
 
 ### <a name="parameters"></a>参数
 
-*path*<br/>
+*路径*<br/>
 文件或目录路径。
 
 *mode*<br/>
@@ -71,21 +71,21 @@ int _waccess(
 
 ## <a name="return-value"></a>返回值
 
-如果该文件具有给定的模式，则每个函数将返回 0。 如果命名文件不存在或没有给定模式，则函数返回-1;在这种情况`errno`下，设置如下表所示。
+如果该文件具有给定的模式，则每个函数将返回 0。 如果命名文件不存在或没有给定模式，则函数返回-1;在这种情况下， `errno` 设置如下表所示。
 
-|||
-|-|-|
-`EACCES`|拒绝访问：文件的权限设置不允许指定的访问权限。
-`ENOENT`|未找到文件名或路径。
-`EINVAL`|参数无效。
+| 值 | 说明 |
+|--|--|
+| `EACCES` | 拒绝访问：文件的权限设置不允许指定的访问权限。 |
+| `ENOENT` | 未找到文件名或路径。 |
+| `EINVAL` | 参数无效。 |
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-与文件一起使用时， **_access**函数确定指定的文件或目录是否存在并具有由*mode*值指定的属性。 与目录一起使用时， **_access**仅确定指定的目录是否存在;在 Windows 2000 和更高版本的操作系统中，所有目录都具有读取和写入访问权限。
+与文件一起使用时， **_access** 函数确定指定的文件或目录是否存在并具有由 *mode*值指定的属性。 与目录一起使用时， **_access** 仅确定指定的目录是否存在;在 Windows 2000 和更高版本的操作系统中，所有目录都具有读取和写入访问权限。
 
-|*模式*值|文件检查内容|
+|*模式* 值|文件检查内容|
 |------------------|---------------------|
 |00|仅检查是否存在|
 |02|只写|
@@ -96,9 +96,9 @@ int _waccess(
 
 **_waccess**是 **_access**的宽字符版本;**_waccess**的*path*参数是宽字符字符串。 否则 **_waccess**和 **_access**的行为相同。
 
-此函数验证其参数。 如果*path*为 NULL 或*模式*未指定有效模式，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。
+此函数验证其参数。 如果 *path* 为 NULL 或 *模式* 未指定有效模式，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，则该函数将 `errno` 设置为 `EINVAL` 并返回 -1。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -108,14 +108,14 @@ int _waccess(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_access**|\<io.h>|\<errno.h>|
 |**_waccess**|\<wchar.h> 或 \<io.h>|\<errno.h>|
 
 ## <a name="example"></a>示例
 
-下面的示例使用 **_access**来检查名为 crt_ACCESS 的文件。C，查看其是否存在以及是否允许写入。
+下面的示例使用 **_access** 来检查名为 crt_ACCESS 的文件。C，查看其是否存在以及是否允许写入。
 
 ```C
 // crt_access.c

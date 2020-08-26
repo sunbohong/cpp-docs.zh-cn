@@ -56,23 +56,33 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecfcf88b09a4383fc050e9737a0ffe7203f9a050
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351666"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839720"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 函数
 
 此系列中的每个函数都会加载并执行新进程：
 
-|||
-|-|-|
-|[_execl，_wexecl](../c-runtime-library/reference/execl-wexecl.md)|[_execv、_wexecv](../c-runtime-library/reference/execv-wexecv.md)|
-|[_execle，_wexecle](../c-runtime-library/reference/execle-wexecle.md)|[_execve、_wexecve](../c-runtime-library/reference/execve-wexecve.md)|
-|[_execlp、_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)|[_execvp、_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)|
-|[_execlpe、_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)|[_execvpe，_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)|
+:::row:::
+   :::column span="":::
+      [_execl，_wexecl](../c-runtime-library/reference/execl-wexecl.md)\
+      [_execv，_wexecv](../c-runtime-library/reference/execv-wexecv.md)\
+      [_execle，_wexecle](../c-runtime-library/reference/execle-wexecle.md)
+   :::column-end:::
+   :::column span="":::
+      [_execve，_wexecve](../c-runtime-library/reference/execve-wexecve.md)\
+      [_execlp，_wexeclp](../c-runtime-library/reference/execlp-wexeclp.md)\
+      [_execvp，_wexecvp](../c-runtime-library/reference/execvp-wexecvp.md)
+   :::column-end:::
+   :::column span="":::
+      [_execlpe，_wexeclpe](../c-runtime-library/reference/execlpe-wexeclpe.md)\
+      [_execvpe，_wexecvpe](../c-runtime-library/reference/execvpe-wexecvpe.md)
+   :::column-end:::
+:::row-end:::
 
 函数名称末尾的字母可确定该变量。
 
@@ -83,7 +93,7 @@ ms.locfileid: "81351666"
 |`p`|`PATH` 环境变量用于查找要执行的文件。|
 |`v`|将指向命令行参数的指针数组 `argv` 传递给 `_exec`。 通常在新进程的参数数量可变时使用。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 每个 `_exec` 函数都会加载并执行新进程。 所有 `_exec` 函数均使用同一个操作系统函数 ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw))。 `_exec` 函数将适当自动处理多字节字符字符串参数，从而根据当前正在使用的多字节代码页识别多字节字符序列。 `_wexec` 函数是 `_exec` 函数的宽字符版本。 `_wexec` 函数的行为与其对应系列 `_exec` 完全相同，差别在于这些函数不处理多字节字符字符串。
 
@@ -118,7 +128,7 @@ ms.locfileid: "81351666"
 
 `_execv`、`_execve`、`_execvp` 和 `_execvpe` 调用在新进程的参数数量可变时很有用。 将指向参数的指针作为数组 `argv` 进行传递。 参数 `argv`[0] 通常是一个指向 `cmdname` 的指针。 参数 `argv`[1] 到 `argv`[`n`] 指向构成新参数列表的字符字符串。 参数 `argv`[`n`+1] 必须是一个 NULL 指针，用以标记参数列表的末尾****。
 
-在进行 `_exec` 调用时打开的文件在新进程中仍然保持打开状态。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 调用中，新进程将继承调用进程的环境。 通过 `_execle` 参数传递环境设置的列表，`_execlpe`、`_execve`、`_execvpe` 和 `envp` 调用可更改新进程的环境。 `envp` 是一个字符指针数组，其中每个元素（最后一个元素除外）均指向定义环境变量的以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。 （请注意，`value`未以双引号括起来。数组的最后一`envp`个元素应为**NULL**。 当 `envp` 本身是 NULL 时，新进程将继承调用进程的环境设置****。
+在进行 `_exec` 调用时打开的文件在新进程中仍然保持打开状态。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 调用中，新进程将继承调用进程的环境。 通过 `_execle` 参数传递环境设置的列表，`_execlpe`、`_execve`、`_execvpe` 和 `envp` 调用可更改新进程的环境。 `envp` 是一个字符指针数组，其中每个元素（最后一个元素除外）均指向定义环境变量的以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。  (请注意， `value` 未用双引号引起来。 ) 数组的最后一个元素 `envp` 应为 **NULL**。 当 `envp` 本身是 NULL 时，新进程将继承调用进程的环境设置****。
 
 使用一个  函数执行的程序将始终加载到内存中，如同已将该程序的 .exe 文件头中的最大分配字段设置为默认值 0xFFFFH。
 
@@ -241,7 +251,7 @@ int main( int ac, char* av[] )
 [进程和环境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [中止](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn, _wspawn 函数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn，_wspawn 函数](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](../c-runtime-library/reference/system-wsystem.md)

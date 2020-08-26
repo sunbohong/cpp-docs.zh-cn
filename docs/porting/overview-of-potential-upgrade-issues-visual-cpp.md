@@ -2,12 +2,12 @@
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231632"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839668"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
-（在 Microsoft Visual C++ 6.0 及更早版本中， **`wchar_t`** 未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。）C + + 标准要求 **`wchar_t`** 是内置类型。 使用 typedef 版本可能导致可移植性问题。 如果从 Visual Studio 的早期版本升级并遇到编译器错误 C2664，因为代码尝试将隐式转换 **`wchar_t`** 为，所以 **`unsigned short`** 建议更改代码以修复错误，而不是设置 `/Zc:wchar_t-` 。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+Microsoft Visual C++ 6.0 及更早版本中的 (**`wchar_t`** 未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。 ) c + + 标准要求 **`wchar_t`** 是内置类型。 使用 typedef 版本可能导致可移植性问题。 如果从 Visual Studio 的早期版本升级并遇到编译器错误 C2664，因为代码尝试将隐式转换 **`wchar_t`** 为，所以 **`unsigned short`** 建议更改代码以修复错误，而不是设置 `/Zc:wchar_t-` 。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用链接器选项 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升级。
 
@@ -98,9 +98,8 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 下表显示自 Studio 2015 开始内容已更改的库。 若要升级，需要将第二列中的新库名称添加到第一列的库中。 其中一些库是导入库，但这并不重要。
 
-|||
-|-|-|
 |如果你使用的是：|需要使用以下库：|
+|-|-|
 |LIBCMT.lib|libcmt.lib、libucrt.lib、libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib、libucrtd.lib、libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib、ucrt.lib、vcruntime.lib|
@@ -124,7 +123,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 如果错误为 C2371 且涉及 `stdint` 类型，这可能意味着该类型是在代码或第三方 lib 文件中的标头中定义的。 升级时，应该消除类型的任何自定义定义 \<stdint.h> ，但首先将自定义定义与当前标准定义进行比较，以确保不会引入新问题。
 
-您可以按**F12** （"**访问定义**"）来查看所述类型的定义位置。
+可以按 **F12** (**中转到 "定义** ") ，以查看相关类型的定义位置。
 
 此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++” > “高级”页，并将“显示包含文件”设置为“是”********************。 然后重新生成项目，并在输出窗口中查看 `#include` 列表。 每个标头在包含它的标头下都是缩进的。
 
@@ -150,13 +149,13 @@ C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动�
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>使用安全 CRT 函数的警告
 
-多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 若要为解决方案中的所有项目禁用警告，请打开 "**视图**"  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择 "**属性**"。 在“配置属性” > “C/C++” > “高级”下的“属性页”中，选择“禁用特定警告”********************。 **** 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。 （请勿包含 "C" 前缀。）有关详细信息，请参阅[移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
+多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 若要为解决方案中的所有项目禁用警告，请打开 "**视图**"  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择 "**属性**"。 在“配置属性” > “C/C++” > “高级”下的“属性页”中，选择“禁用特定警告”********************。 **** 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。  (不包含前缀 "C"。 ) 有关详细信息，请参阅 [移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>对 Windows API 或已过时 SDK 进行的更改所导致的错误
 
 多年来，已添加若干 Windows API 和数据类型，有时还会对其进行更改或删除。 此外，不属于核心操作系统的其他 SDK 也是添了又删。 因此，较旧的程序可能包含对已不存在的 API 的调用。 它们还可能包含对已不受支持的其它 Microsoft SDK 中 API 的调用。 如果错误涉及 Windows API 或较旧 Microsoft SDK 中的 API，则 API 可能已删除且/或已被更新、更安全的函数取代。
 
-有关特定 Windows API 的当前 API 集和支持的最低操作系统的详细信息，请参阅适用于[桌面 Windows 应用程序的 Api 索引](/windows/win32/apiindex/api-index-portal)和导航到相关的 api。
+有关特定 Windows API 的当前 API 集和支持的最低操作系统的详细信息，请参阅适用于 [桌面 Windows 应用程序的 Api 索引](/windows/win32/apiindex/api-index-portal) 和导航到相关的 api。
 
 ### <a name="windows-version"></a>Windows 版本
 
@@ -180,7 +179,7 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 和 MBCS/ASCII
 
-在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 若要为解决方案中的所有项目禁用该选项，请打开 "**视图**  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择"**属性**"。 在“属性页”对话框中，选择“配置属性” > “C/C++” > “高级”****************。 在 "**禁用特定警告**" 属性中，打开下拉箭头，然后选择 "**编辑**"。 在文本框中输入 4996。 （请勿包含 "C" 前缀。）选择 **"确定"** 保存属性，然后选择 **"确定"** 保存更改。
+在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 若要为解决方案中的所有项目禁用该选项，请打开 "**视图**  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择"**属性**"。 在“属性页”对话框中，选择“配置属性” > “C/C++” > “高级”****************。 在 "  **禁用特定警告** " 属性中，打开下拉箭头，然后选择 " **编辑**"。 在文本框中输入 4996。  (不包含 "C" 前缀。 ) 选择 **"确定"** 保存属性，然后选择 **"确定"** 保存更改。
 
 有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 与 Unicode 的一般信息，请参阅 Visual C++ 和[国际化](../c-runtime-library/internationalization.md)[中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)。
 

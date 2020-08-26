@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: c6d81f253016d3a292dd50b16c19f76a05e75e56
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 97a93e000b3e12d8ec4824100059581216b1b8d9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752415"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840760"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 类
 
-禁用弹出式菜单动画。
+禁用弹出菜单动画。
 
 ## <a name="syntax"></a>语法
 
@@ -29,62 +29,59 @@ class CMFCDisableMenuAnimation
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
+|“属性”|说明|
 |-|-|
-|名称|说明|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|构造 `CMFCDisableMenuAnimation` 对象。|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
+|“属性”|说明|
 |-|-|
-|名称|说明|
-|[CMFC禁用菜单动画：：恢复](#restore)|还原框架用于显示弹出式菜单的上一个动画。|
+|[CMFCDisableMenuAnimation：： Restore](#restore)|还原框架用于显示弹出菜单的以前的动画。|
 
 ### <a name="data-members"></a>数据成员
 
-|||
-|-|-|
 |名称|说明|
-|`CMFCDisableMenuAnimation::m_animType`|存储以前的弹出式菜单动画类型。|
+|-|-|
+|`CMFCDisableMenuAnimation::m_animType`|存储上一个弹出菜单动画类型。|
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-使用此帮助器类可暂时禁用弹出式菜单动画（例如，处理鼠标或键盘命令时）。
+使用此帮助器类可暂时禁用弹出菜单动画 (例如，在处理鼠标或键盘命令) 时。
 
-对象`CMFCDisableMenuAnimation`在其生存期内禁用弹出式菜单动画。 构造函数将当前弹出式菜单动画类型存储在字段中，`m_animType`并将当前动画类型设置为`CMFCPopupMenu::NO_ANIMATION`。 析构函数还原以前的动画类型。
+`CMFCDisableMenuAnimation`对象在其生存期内禁用弹出菜单动画。 构造函数将当前的弹出菜单动画类型存储在字段中 `m_animType` ，并将当前的动画类型设置为 `CMFCPopupMenu::NO_ANIMATION` 。 析构函数将还原以前的动画类型。
 
-您可以在堆栈上`CMFCDisableMenuAnimation`创建对象，以在整个单个函数中禁用弹出菜单动画。 如果要在函数之间禁用弹出菜单动画，请在堆上创建`CMFCDisableMenuAnimation`一个对象，然后在要还原弹出菜单动画时将其删除。
+您可以 `CMFCDisableMenuAnimation` 在堆栈上创建一个对象，以禁用整个单个函数的弹出菜单动画。 如果要禁用函数之间的弹出菜单动画，请 `CMFCDisableMenuAnimation` 在该堆上创建一个对象，并在需要还原弹出菜单动画时将其删除。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用堆栈临时禁用菜单动画。
+下面的示例演示如何使用堆栈暂时禁用菜单动画。
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
-[CMFC禁用菜单动画](../../mfc/reference/cmfcdisablemenuanimation-class.md)
+[CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxpopupmenu.h
+**标头：** afxpopupmenu
 
-## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFC禁用菜单动画：：恢复
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a> CMFCDisableMenuAnimation：： Restore
 
-还原框架用于显示弹出式菜单的上一个动画。
+还原框架用于显示弹出菜单的以前的动画。
 
 ```cpp
 void Restore ();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`CMFCDisableMenuAnimation`析构函数调用此方法以还原框架用于显示弹出式菜单的上一个动画。
+析构函数调用此方法 `CMFCDisableMenuAnimation` 来还原框架用于显示弹出菜单的以前的动画。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)

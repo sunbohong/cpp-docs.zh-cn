@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: e34704b0ad8cf8fbaf8ee9514583f9597be40122
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215395"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840019"
 ---
 # <a name="variant-class"></a>variant 类
 
@@ -33,13 +33,13 @@ template <class... Types>
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[变量](#variant)|构造 `variant` 类型的对象。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[emplace](#emplace)|创建新的包含值。|
 |[index](#index)|返回包含的值的索引。|
@@ -48,11 +48,11 @@ template <class... Types>
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator =](#op_eq)|将变体替换为另一种变体的副本。|
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 创建新的包含值。
 
@@ -67,7 +67,7 @@ template <size_t I, class U, class... Args>
     variant_alternative_t<I, variant<Types...>>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="index"></a><a name="index"></a>编入
+## <a name="index"></a><a name="index"></a> 编入
 
 返回包含的值的索引。
 
@@ -75,7 +75,7 @@ template <size_t I, class U, class... Args>
 constexpr size_t index() const noexcept;
 ```
 
-## <a name="variant"></a><a name="variant"></a>变体
+## <a name="variant"></a><a name="variant"></a> 变体
 
 构造 `variant` 类型的对象。 还包含析构函数。
 
@@ -119,7 +119,7 @@ template <class Alloc, size_t I, class U, class... Args>
 *Fc-al*\
 要用于此对象的分配器类。
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 将变体替换为另一种变体的副本。
 
@@ -130,13 +130,13 @@ template <class T>
     variant& operator=(T&&) noexcept(see below);
 ```
 
-## <a name="swap"></a><a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a> 购
 
 ```cpp
 void swap(variant&) noexcept(see below);
 ```
 
-## <a name="valueless_by_exception"></a><a name="valueless"></a>valueless_by_exception
+## <a name="valueless_by_exception"></a><a name="valueless"></a> valueless_by_exception
 
 **`false`** 如果变量包含值，则返回。
 

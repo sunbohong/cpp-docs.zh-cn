@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 37399bb50f195c683b52eea4c8fadf8679d62852
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233088"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846454"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -36,7 +36,7 @@ ms.locfileid: "87233088"
 
 ### <a name="manipulators"></a>操控器
 
-|||
+|名称|说明|
 |-|-|
 |[ws](../standard-library/istream-functions.md#ws)|跳过流中的空白。|
 |[swap](../standard-library/istream-functions.md#istream_swap)|交换两个流对象。|
@@ -52,7 +52,7 @@ ms.locfileid: "87233088"
 |类|说明|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可以完成输入和输出的流类。|
-|[basic_istream](../standard-library/basic-istream-class.md)|类模板描述了一个对象，该对象控制从流缓冲区提取元素和编码对象，该缓冲区包含类型为的元素 `Elem` （也称为[char_type](../standard-library/basic-ios-class.md#char_type)），其字符特征由类 `Tr` （也称为[traits_type](../standard-library/basic-ios-class.md#traits_type)）确定。|
+|[basic_istream](../standard-library/basic-istream-class.md)|类模板描述了一个对象，该对象控制从流缓冲区提取元素和编码对象，该缓冲区包含类型为的元素 `Elem` （也称为 [char_type](../standard-library/basic-ios-class.md#char_type)），其字符特征由类 `Tr` （也称为 [traits_type](../standard-library/basic-ios-class.md#traits_type)）确定。|
 
 ## <a name="see-also"></a>另请参阅
 

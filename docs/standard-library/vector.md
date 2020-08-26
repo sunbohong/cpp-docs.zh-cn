@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 4e9f3e4a35cd772897e326fafedf359062e6128b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224521"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840006"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -22,7 +22,7 @@ ms.locfileid: "87224521"
 > [!NOTE]
 > \<vector>该库还使用该 `#include <initializer_list>` 语句。
 
-有关类 `vector` 的详细信息，请参阅 [vector 类](../standard-library/vector-class.md)。 有关专用化的信息 `vector<bool>` ，请[参阅 \<bool> vector 类](../standard-library/vector-bool-class.md)。
+有关类 `vector` 的详细信息，请参阅 [vector 类](../standard-library/vector-class.md)。 有关专用化的信息 `vector<bool>` ，请 [参阅 \<bool> vector 类](../standard-library/vector-bool-class.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -93,7 +93,7 @@ void swap (
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[操作员!=](../standard-library/vector-operators.md#op_neq)|测试运算符左侧的向量对象是否等于右侧的向量对象。|
 |[运算符<](../standard-library/vector-operators.md#op_lt)|测试运算符左侧的向量对象是否小于右侧的向量对象。|
@@ -104,13 +104,13 @@ void swap (
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
 |[vector 类](../standard-library/vector-class.md)|序列容器的一个类模板，它将给定类型的元素以线性排列方式进行排列，并且允许快速随机访问任何元素。|
 
 ### <a name="specializations"></a>专用化
 
-|||
+|名称|说明|
 |-|-|
 |hash|返回向量的哈希值。|
 |[vector \<bool> 类](../standard-library/vector-bool-class.md)|针对类型的元素的类模板向量的完全专用化，它 **`bool`** 具有专用化所使用的基础类型的分配器。|

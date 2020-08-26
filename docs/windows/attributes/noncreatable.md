@@ -1,17 +1,17 @@
 ---
-title: noncreatable （c + + COM 特性）
+title: 'noncreatable (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.noncreatable
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: c5d51d7c5628a875f036b4e48b03b317490b37ff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b645d6d6cbcaeff346437d6457360ecdef8d3190
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224391"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840552"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -27,7 +27,7 @@ ms.locfileid: "87224391"
 
 **Noncreatable** c + + 特性具有与[noncreatable](/windows/win32/Midl/noncreatable) MIDL 特性相同的功能，并且会自动传递到生成的。IDL 文件。
 
-如果在使用 ATL 的项目中使用此属性，则该属性的行为将发生更改。 除了上述行为，该特性还将插入[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)宏。 此宏向 ATL 指示不能在外部创建对象。
+如果在使用 ATL 的项目中使用此属性，则该属性的行为将发生更改。 除了上述行为，该特性还将插入 [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) 宏。 此宏向 ATL 指示不能在外部创建对象。
 
 ## <a name="example"></a>示例
 
@@ -51,9 +51,7 @@ class CMyClass : public A
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|否|

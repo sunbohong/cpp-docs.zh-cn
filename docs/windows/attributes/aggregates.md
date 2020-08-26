@@ -1,5 +1,5 @@
 ---
-title: 聚合（c + + COM 特性）
+title: " (c + + COM 特性聚合) "
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregates
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: 65a166faa9380272c87af92ebaf8294c0e0b1af3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e745cae5710bbf8df1314ec20a4a0b72545c0591
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217280"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836356"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -34,7 +34,7 @@ ms.locfileid: "87217280"
 *variable_name*<br/>
 要插入的变量的名称。 此变量包含所 `IUnknown` 聚合的对象的。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 应用于对象时， **aggregates** C++ 属性会为所聚合的对象（由 `clsid`指定）实现外部包装器。
 
@@ -79,9 +79,7 @@ struct CObject : IObject
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|是|

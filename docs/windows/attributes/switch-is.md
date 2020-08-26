@@ -1,17 +1,17 @@
 ---
-title: switch_is （c + + COM 特性）
+title: 'switch_is (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_is
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: 85ee066a12d4297d9a782ae07ef0fa16798f1616
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b017ba6dd2bbdfab7bfb5fa2dbf19e613e14772b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228045"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840528"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -33,9 +33,7 @@ ms.locfileid: "87228045"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`typedef`**|
 |**且**|否|

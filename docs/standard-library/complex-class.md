@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: db2f8b2f889d9454db737cf5b2a39b414f1d67f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230086"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836539"
 ---
 # <a name="complex-class"></a>complex 类
 
@@ -46,26 +46,26 @@ class complex
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[过于](#complex)|构造一个具有指定实部和虚部的复数，或作为某些其他复数的副本的复数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[value_type](#value_type)|该类型代表用于表示复数的实部和虚部的数据类型。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[imag](#imag)|提取复数的虚分量。|
 |[real](#real)|提取复数的实分量。|
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[运算符 * =](#op_star_eq)|用一个系数乘以目标复数，这可能是复数或与复数的实部和虚部相同的类型。|
 |[运算符 + =](#op_add_eq)|向目标复数添加一个数，其中所添加的数可能是复数或与所添加的复数的实部和虚部相同的类型。|
@@ -73,7 +73,7 @@ class complex
 |[operator/=](#op_div_eq)|用一个除数除以目标复数，这可能是复数或与复数的实部和虚部相同的类型。|
 |[operator =](#op_eq)|向目标复数分配一个数，其中所分配的数可能是复数或与所分配的复数的实部和虚部相同的类型。|
 
-## <a name="complex"></a><a name="complex"></a>过于
+## <a name="complex"></a><a name="complex"></a> 过于
 
 构造一个具有指定实部和虚部的复数，或作为某些其他复数的副本的复数。
 
@@ -98,7 +98,7 @@ constexpr complex(
 *complexNum*\
 一个复数，其实部和虚部用于初始化正在构造的复数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一个构造函数将存储的实部初始化为* \_ RealVal* ，将存储的虚部初始化为* \_ Imagval*。 第二个构造函数将存储的实部初始化为 `complexNum.real()` ，将存储的虚部初始化为 `complexNum.imag()` 。
 
@@ -157,7 +157,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a><a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a> imag
 
 提取复数的虚分量。
 
@@ -176,9 +176,9 @@ T imag(const T& right);
 
 复数的虚部。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-对于复数*a + bi*，虚部或 Component 是*Im （a + bi） = b*。
+对于复数 *a + bi*，虚部或 Component 是 *Im (a + bi) = b*。
 
 ### <a name="example"></a>示例
 
@@ -211,7 +211,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="operator"></a><a name="op_star_eq"></a>运算符 * =
+## <a name="operator"></a><a name="op_star_eq"></a> 运算符 * =
 
 用一个系数乘以目标复数，这可能是复数或与复数的实部和虚部相同的类型。
 
@@ -233,7 +233,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 已使用指定为参数的数乘以复数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-## <a name="operator"></a><a name="op_add_eq"></a>运算符 + =
+## <a name="operator"></a><a name="op_add_eq"></a> 运算符 + =
 
 向目标复数添加一个数，其中所添加的数可能是复数或与所添加的复数的实部和虚部相同的类型。
 
@@ -318,7 +318,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 已为复数添加了指定为参数的数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -399,7 +399,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a><a name="operator-_eq"></a>operator-=
+## <a name="operator-"></a><a name="operator-_eq"></a> operator-=
 
 从目标复数减去一个数，其中所减去的数可能是复数或与所添加的复数的实部和虚部相同的类型。
 
@@ -424,7 +424,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 已为复数从中减去了指定为参数的数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -507,7 +507,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="operator"></a><a name="op_div_eq"></a>operator/=
+## <a name="operator"></a><a name="op_div_eq"></a> operator/=
 
 用一个除数除以目标复数，这可能是复数或与复数的实部和虚部相同的类型。
 
@@ -532,7 +532,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 将复数除以指定为参数的数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -611,7 +611,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 向目标复数分配一个数，其中所分配的数可能是复数或与所分配的复数的实部和虚部相同的类型。
 
@@ -631,7 +631,7 @@ complex<Type>& operator=(const Type& right);
 
 为复数分配了指定为参数的数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -689,7 +689,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a><a name="real"></a>实际上
+## <a name="real"></a><a name="real"></a> 实际上
 
 获取或设置复数的实分量。
 
@@ -708,9 +708,9 @@ T real(const T& right);
 
 复数的实部。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-对于复数*a + bi*，实部或组件是*Re （a + bi） = a*。
+对于复数 *a + bi*，实部或组件会 *重新 (+ bi) = a*。
 
 ### <a name="example"></a>示例
 
@@ -743,7 +743,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 该类型代表用于表示复数的实部和虚部的数据类型。
 
@@ -751,9 +751,9 @@ The imaginary part of c1 is c1.imag() = 3.
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`value_type`是类复杂模板参数的同义词 `Type` 。
+`value_type` 是类复杂模板参数的同义词 `Type` 。
 
 ### <a name="example"></a>示例
 

@@ -1,17 +1,17 @@
 ---
-title: pointer_default （C++ COM 特性）
+title: 'pointer_default (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pointer_default
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e4e5ce03e8c0e6ca19814f5d228305b0d97322f9
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166531"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836187"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -23,14 +23,14 @@ ms.locfileid: "80166531"
 [ pointer_default(value) ]
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *value*<br/>
-一个值，用于描述指针类型： **ptr**、 **ref**或**unique**。
+一个值，用于描述指针类型： **ptr**、 **ref**或 **unique**。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Pointer_default** C++特性具有与[pointer_default](/windows/win32/Midl/pointer-default) MIDL 特性相同的功能。
+**Pointer_default** c + + 特性具有与[pointer_default](/windows/win32/Midl/pointer-default) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -38,13 +38,11 @@ ms.locfileid: "80166531"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|**接口**|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**interface**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

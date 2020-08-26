@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-ms.openlocfilehash: 9a822e635ea3a1fd035a6a4b1d2b38250c96158a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 623593e723b26244cc82e9eeed3e32657cca0b94
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217839"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846480"
 ---
 # <a name="bitset-class"></a>bitset 类
 
@@ -57,9 +57,9 @@ class bitset
 *北*\
 使用在 `size_t` 编译时必须已知的类型的非零整数指定位组对象中的位数。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-与类似的[矢量 \<bool> 类](../standard-library/vector-bool-class.md)不同，位组类没有迭代器，也不是 c + + 标准库容器。 它还不同于 vector，这一点与 vector 的不同之处在于 \<bool> ：在声明** \<N\> 位组**时，根据模板参数*N*指定的大小在编译时固定的某些特定大小。
+与类似的 [矢量 \<bool> 类](../standard-library/vector-bool-class.md)不同，位组类没有迭代器，也不是 c + + 标准库容器。 它还不同于 vector，这一点与 vector 的不同之处在于 \<bool> ：在声明** \<N\> 位组**时，根据模板参数*N*指定的大小在编译时固定的某些特定大小。
 
 如果某个位的值为 1，则该位已设置；如果其值为 0，则该位已重置。 翻转或反转某个位就是将其值从 1 更改到 0 或从 0 到 1。 bitset 中的 *N* 个位由从 0 到 *N* - 1 的整数值索引，其中 0 索引第一个位的位置，*N* - 1 索引最后一个位的位置。
 
@@ -67,42 +67,42 @@ class bitset
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[位组](#bitset)|构造 `bitset\<N>` 类的对象并将位初始化为零、某个指定值或从字符串中的字符获取的值。|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[element_type](#element_type)|一种类型，它是数据类型的同义词 **`bool`** ，可用于引用中的元素位 `bitset` 。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[一切](#all)|测试此中的所有位 `bitset` 以确定它们是否都设置为 **`true`** 。|
-|[随时](#any)|成员函数测试序列中是否有任何位设置为 1。|
+|[any](#any)|成员函数测试序列中是否有任何位设置为 1。|
 |[计数](#count)|成员函数返回位序列中设置的位数。|
 |[flip](#flip)|反转 `bitset` 中的所有位的值或反转位于指定位置的单个位。|
 |[无](#none)|测试 `bitset` 对象中是否不存在任何已设置为 1 的位。|
 |[reset](#reset)|将 `bitset` 中的所有位重置为 0 或将位于指定位置的位重置为 0。|
 |[set](#set)|将 `bitset` 中的所有位设置为 1 或将位于指定位置的位设置为 1。|
 |[大小](#size)|返回 `bitset` 对象中的位数。|
-|[考试](#test)|测试 `bitset` 中指定位置处的位是否设置为 1。|
+|[测试](#test)|测试 `bitset` 中指定位置处的位是否设置为 1。|
 |[to_string](#to_string)|将 `bitset` 对象转换为字符串表示形式。|
 |[to_ullong](#to_ullong)|以形式返回中位值的总和 `bitset` **`unsigned long long`** 。|
 |[to_ulong](#to_ulong)|`bitset`如果用于初始化，则将对象转换为将 **`unsigned long`** 生成所包含的位序列的 `bitset` 。|
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
 |[reference](#reference)|一个代理类，它提供对 `bitset`（用于将单个位作为 `bitset` 类的 `operator[]` 的帮助程序类进行访问和操作）中包含的位的引用。|
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator！ =](#op_neq)|测试目标 `bitset` 是否与指定的 `bitset` 不相等。|
 |[运算符&=](#op_and_eq)|使用逻辑 `AND` 操作执行位组的按位组合。|
@@ -116,13 +116,13 @@ class bitset
 |[运算符&#124;=](#op_or_eq)|使用非独占 `OR` 操作执行位组的按位组合。|
 |[运算符 ~](#op_not)|反转目标 `bitset` 中的所有位并返回结果。|
 
-### <a name="structures"></a>結構
+### <a name="structures"></a>结构
 
-|||
+|名称|说明|
 |-|-|
 |[hash](#hash)||
 
-### <a name="all"></a><a name="all"></a>一切
+### <a name="all"></a><a name="all"></a> 一切
 
 测试此位组中的所有位以确定它们是否都设置为 true。
 
@@ -134,7 +134,7 @@ bool all() const;
 
 如果此集中的所有位都为 true，则返回 true。 **`false`** 如果一个或多个位为 false，则返回。
 
-### <a name="any"></a><a name="any"></a>随时
+### <a name="any"></a><a name="any"></a> 随时
 
 测试序列中是否有任何位设置为 1。
 
@@ -144,7 +144,7 @@ bool any() const;
 
 #### <a name="return-value"></a>返回值
 
-**`true`** 如果位组中的任何位设置为1，则为;**`false`** 如果所有位均为0。
+**`true`** 如果位组中的任何位设置为1，则为; **`false`** 如果所有位均为0。
 
 #### <a name="example"></a>示例
 
@@ -197,7 +197,7 @@ The reset bitset is: ( 00000 )
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="bitset"></a><a name="bitset"></a>位组
+### <a name="bitset"></a><a name="bitset"></a> 位组
 
 构造 `bitset\<N>` 类的对象并将位初始化为零、某个指定值或从字符串中的字符获取的值。
 
@@ -233,7 +233,7 @@ explicit bitset(
 *初始值*\
 使用其二进制表示法初始化正在构造的位组中的位的无符号整数。
 
-*字符串*\
+*str*\
 由 0 和 1 组成的用于初始化位组位值的字符串。
 
 *_CStr*\
@@ -242,7 +242,7 @@ explicit bitset(
 *_Pos*\
 字符串中的字符位置，从左到右计数，且从 0 开始，用于初始化位组中的第一位。
 
-*计*\
+*count*\
 字符串中的字符数，用于提供位组中位的初始值。
 
 *_Zero*\
@@ -251,7 +251,7 @@ explicit bitset(
 *_One*\
 用于表示 1 的字符。 默认值为“1”。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 可使用三个构造函数构造 `bitset\<N>` 类的对象：
 
@@ -263,9 +263,9 @@ explicit bitset(
 
 还提供了两个构造函数模板：
 
-- 第一个构造函数模板构造 `bitset\<N>` 类的对象并初始化由 0 和 1 组成的字符串中提供的字符中的位。 如果字符串的任何字符为非 0 或非 1，则该构造函数引发 [invalid argument](../standard-library/invalid-argument-class.md) 类的对象。 如果指定的位置（*_Pos*）超出了字符串的长度，则构造函数将引发类[out_of_range](../standard-library/out-of-range-class.md)的对象。 该构造函数只设置位置 `_Pos + j` 处的字符串中的字符为 1 的位组中 *j* 位置处的位。 默认情况下， *_Pos*为0。
+- 第一个构造函数模板构造 `bitset\<N>` 类的对象并初始化由 0 和 1 组成的字符串中提供的字符中的位。 如果字符串的任何字符为非 0 或非 1，则该构造函数引发 [invalid argument](../standard-library/invalid-argument-class.md) 类的对象。 如果 (*_Pos*) 指定的位置超出了字符串的长度，则构造函数将引发类 [out_of_range](../standard-library/out-of-range-class.md)的对象。 该构造函数只设置位置 `_Pos + j` 处的字符串中的字符为 1 的位组中 *j* 位置处的位。 默认情况下， *_Pos* 为0。
 
-- 第二个构造函数模板类似于第一个，但包含一个附加参数（*count*），用于指定要初始化的位数。 它还具有两个可选参数， *_Zero*和 *_One*，这表示*str*中的哪个字符将分别解释为0位和1位。
+- 第二个构造函数模板类似于第一个，但包含一个 (*计数*) 的附加参数，用于指定要初始化的位数。 它还具有两个可选参数， *_Zero* 和 *_One*，这表示 *str* 中的哪个字符将分别解释为0位和1位。
 
 #### <a name="example"></a>示例
 
@@ -342,7 +342,7 @@ The set of bits in bitset<11> b6( bitval5, 3, 5 ) is ( 00000010011 ).
 The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).
 ```
 
-### <a name="count"></a><a name="count"></a>计
+### <a name="count"></a><a name="count"></a> 计
 
 返回位序列中设置的位数。
 
@@ -396,7 +396,7 @@ The collection of flipped bits in the modified bitset is: ( 11011 )
 The number of bits in the bitset set to 1 is: 4.
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 一种类型，它是数据类型的同义词 **`bool`** ，可用于引用位组中的元素位。
 
@@ -452,7 +452,7 @@ Bitset b1 modified by b1[2] = 1 is: ( 110 )
 The bit at position 2 of bitset b1has a value of 1.
 ```
 
-### <a name="flip"></a><a name="flip"></a>翻转
+### <a name="flip"></a><a name="flip"></a> 翻转
 
 反转位组中的所有位的值或反转位于指定位置的单个位。
 
@@ -470,7 +470,7 @@ bitset\<N>& flip(size_t _Pos);
 
 对其调用了成员函数且经过修改的位组副本。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果指定为参数的位置大于** \<** *N* **> 位组**的大小*N* ，则第二个成员函数将引发[out_of_range](../standard-library/out-of-range-class.md)异常。
 
@@ -525,14 +525,14 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 11111  The bit flipped is in position 4.
 ```
 
-### <a name="hash"></a><a name="hash"></a>代码
+### <a name="hash"></a><a name="hash"></a> 代码
 
 ```cpp
 template <class T> struct hash;
 template <size_t N> struct hash<bitset<N>>;
 ```
 
-### <a name="none"></a><a name="none"></a>内容
+### <a name="none"></a><a name="none"></a> 内容
 
 测试位组对象中是否不存在任何已设置为 1 的位。
 
@@ -542,7 +542,7 @@ bool none() const;
 
 #### <a name="return-value"></a>返回值
 
-**`true`** 如果位组中没有任何位设置为1，则为;**`false`** 如果至少有一个位已设置为1，则为。
+**`true`** 如果位组中没有任何位设置为1，则为; **`false`** 如果至少有一个位已设置为1，则为。
 
 #### <a name="example"></a>示例
 
@@ -589,7 +589,7 @@ At least one of the bits in bitset b1 is set to 1.
 None of the bits in bitset b1 are set to 1.
 ```
 
-### <a name="operator"></a><a name="op_neq"></a>operator！ =
+### <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 测试目标位组是否与指定的位组不相等。
 
@@ -604,9 +604,9 @@ bool operator!=(const bitset\<N>& right) const;
 
 #### <a name="return-value"></a>返回值
 
-**`true`** 如果位组不同，则为;**`false`** 如果它们相同，则为。
+**`true`** 如果位组不同，则为; **`false`** 如果它们相同，则为。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 位组必须大小相同才能由成员运算符函数测试是否不相等。
 
@@ -651,7 +651,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatoramp"></a><a name="op_and_eq"></a>操作员&amp;=
+### <a name="operatoramp"></a><a name="op_and_eq"></a> 操作员&amp;=
 
 使用逻辑 `AND` 操作执行位组的按位组合。
 
@@ -668,7 +668,7 @@ bitset\<N>& operator&=(const bitset\<N>& right);
 
 在将 `AND` 位组指定为参数时，由按位运算生成的已修改目标位组。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 `AND`如果每个位都为 true，则运算符将返回两个位 **`true`** ; 否则，将返回它们的组合 **`false`** 。
 
@@ -718,7 +718,7 @@ the target bitset b1 becomes:   ( 00011 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_lshift"></a>操作员\<\<
+### <a name="operator"></a><a name="op_lshift"></a> 操作员\<\<
 
 将位组中的位向左侧移动指定数目的位置并将结果返回到新的位组。
 
@@ -735,9 +735,9 @@ bitset\<N> operator<<(size_t _Pos) const;
 
 将位向左侧移动所需数目的位置后的修改位组。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
-成员运算符函数返回**位组**（ ** \* this**） **<<= pos，** 其中将 [<<=](#op_lshift_eq) 位组中的位向左移动指定数目的位置并将结果返回到目标位组。
+成员运算符函数返回** \* 此**)<<的**位组** ( **，** 其中将 [<<=](#op_lshift_eq) 位组中的位向左移动指定数目的位置并将结果返回到目标位组。
 
 #### <a name="example"></a>示例
 
@@ -770,7 +770,7 @@ int main( )
 }
 ```
 
-### <a name="operatorltlt"></a><a name="op_lshift_eq"></a>操作员&lt;&lt;=
+### <a name="operatorltlt"></a><a name="op_lshift_eq"></a> 操作员&lt;&lt;=
 
 将位组中的位向左侧移动指定数目的位置并将结果返回到目标位组。
 
@@ -787,7 +787,7 @@ bitset\<N>& operator<<=(size_t _Pos);
 
 经过修改的目标位组，以便已将位向左侧移动所需数目的位置。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果不存在要移动到此位置的元素，则函数将位清除为 0 值。
 
@@ -817,7 +817,7 @@ After shifting the bits 2 positions to the left,
 the target bitset b1 becomes: ( 11100 ).
 ```
 
-### <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+### <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 测试目标位组是否与指定的位组相等。
 
@@ -832,9 +832,9 @@ bool operator==(const bitset\<N>& right) const;
 
 #### <a name="return-value"></a>返回值
 
-**`true`** 如果位组相同，则为; 否则为。**`false`** 如果它们不同，则为。
+**`true`** 如果位组相同，则为; 否则为。 **`false`** 如果它们不同，则为。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 位组必须大小相同才能由成员运算符函数测试是否相等。
 
@@ -878,7 +878,7 @@ Bitset b1 is the same as bitset b2.
 Bitset b1 is different from bitset b3.
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift"></a>操作员&gt;&gt;
+### <a name="operatorgtgt"></a><a name="op_rshift"></a> 操作员&gt;&gt;
 
 将位组中的位向右侧移动指定数目的位置并将结果返回到新的位组。
 
@@ -931,7 +931,7 @@ After shifting the bits 1 position to the right,
 the bitset b3 is: ( 01110 ).
 ```
 
-### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a>操作员&gt;&gt;=
+### <a name="operatorgtgt"></a><a name="op_rshift_eq"></a> 操作员&gt;&gt;=
 
 将位组中的位向右侧移动指定数目的位置并将结果返回到目标位组。
 
@@ -948,7 +948,7 @@ bitset\<N>& operator>>=(size_t _Pos);
 
 经过修改的目标位组，以便已将位向右侧移动所需数目的位置。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果不存在要移动到此位置的元素，则函数将位清除为 0 值。
 
@@ -979,7 +979,7 @@ After shifting the bits 2 positions to the right,
 the target bitset b1 becomes: ( 00111 ).
 ```
 
-### <a name="operator"></a><a name="op_at"></a>运算符 []
+### <a name="operator"></a><a name="op_at"></a> 运算符 []
 
 如果位组可修改，则返回对位组中指定位置处的位的引用；否则返回该位置处的位值。
 
@@ -993,7 +993,7 @@ reference operator[](size_t _Pos);
 *_Pos*\
 位在位组内所处的位置。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 在生成中将[ \_ 迭代器 \_ 调试 \_ 级别](../standard-library/iterator-debug-level.md)定义为1或2时，如果尝试访问位组边界以外的元素，则可执行文件中会出现运行时错误。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -1023,7 +1023,7 @@ int main( )
 }
 ```
 
-### <a name="operator"></a><a name="op_xor_eq"></a>operator ^ =
+### <a name="operator"></a><a name="op_xor_eq"></a> operator ^ =
 
 使用独占 `OR` 操作执行位组的按位组合。
 
@@ -1040,9 +1040,9 @@ bitset\<N>& operator^=(const bitset\<N>& right);
 
 将位组指定为参数，由按位异 `OR` 操作生成的经过修改的目标位组。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
-如果至少有一位（但不是两者），则由 xor**或**运算符组合的两个位为 **`true`** **`true`** ; 否则，它们的组合返回 **`false`** 。
+如果至少有一位（但不是两者），则由 xor **或** 运算符组合的两个位为 **`true`** **`true`** ; 否则，它们的组合返回 **`false`** 。
 
 位组必须大小相同才能由成员运算符函数使用异 `OR` 运算符按位组合。
 
@@ -1089,7 +1089,7 @@ the target bitset b1 becomes:   ( 01100 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator124"></a><a name="op_or_eq"></a>运算符&#124;=
+### <a name="operator124"></a><a name="op_or_eq"></a> 运算符&#124;=
 
 使用非独占 `OR` 操作执行位组的按位组合。
 
@@ -1106,7 +1106,7 @@ bitset\<N>& operator|=(const bitset\<N>& right);
 
 将位组指定为参数，由按位非独占 `OR` 操作生成的经过修改的目标位组。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果至少有一个位为，则两个位由非独占 `OR` 运算符返回 **`true`** **`true`** ; 如果两个位都为 **`false`** ，则它们的组合返回 **`false`** 。
 
@@ -1156,7 +1156,7 @@ the target bitset b1 becomes:   ( 01111 ).
 The parameter bitset b2 remains: ( 01011 ).
 ```
 
-### <a name="operator"></a><a name="op_not"></a>运算符 ~
+### <a name="operator"></a><a name="op_not"></a> 运算符 ~
 
 反转目标位组中的所有位并返回结果。
 
@@ -1201,7 +1201,7 @@ Bitset b2 = ~b1 is: ( 11000 ).
 Bitset b3 = b1.flip( ) is: ( 11000 ).
 ```
 
-### <a name="reference"></a><a name="reference"></a>对
+### <a name="reference"></a><a name="reference"></a> 对
 
 一个代理类，它提供对位组（用于将单个位作为位组类的 `operator[]` 的帮助程序类进行访问和操作）中包含的位的引用。
 
@@ -1229,7 +1229,7 @@ public:
 
 对由类引用的第一个、第二个和第五个成员函数的自变量位置指定的位组中的位的引用，并在 **`true`** **`false`** 位组中为类引用的第三个和第四个成员函数反映修改后的位的值。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 `reference` 类仅作为位组 `operator[]` 的帮助程序类存在。 成员类描述可以访问位组中的单个位的对象。 让*b*成为类型为 **`bool`** 、类型为**位组 \<** *N* **> **的*x*和*y*对象的对象，以及此类对象内的*i*和*j*有效位置。 表示法 *x [i]* 引用位组 *x* 中的 *i* 位置上的位。 `reference` 类的成员函数按顺序提供以下操作：
 
@@ -1237,8 +1237,8 @@ public:
 |---------------|----------------|
 |*x*[*i*] = *b*|**`bool`** 将值*b*存储在位组*x*中的位位置*i* 。|
 |*x*[*i*] = *y*[*j*]|将位 *y*[ *j*] 的值存储在位组 *x* 中的位位置 *i* 上。|
-|*b* = ~ *x*[*i*]|将位*x*[ *i*] 的翻转值存储在 **`bool`** *b*中。|
-|*b*  = *x*[*i*]|将位*x*[ *i*] 的值存储在 **`bool`** *b*中。|
+|*b* = ~ *x*[*i*]|将位 *x*[ *i*] 的翻转值存储在 **`bool`** *b*中。|
+|*b*  = *x*[*i*]|将位 *x*[ *i*] 的值存储在 **`bool`** *b*中。|
 |*x*[*i*]。 `flip`( )|将位 *x*[ *i*] 的翻转值存储在 *x* 中的位位置 *i* 后面。|
 
 #### <a name="example"></a>示例
@@ -1323,7 +1323,7 @@ it becomes ( 00110 ).
 After a second flip, the value of the position 4 bit in b2 is now: 1.
 ```
 
-### <a name="reset"></a><a name="reset"></a>&
+### <a name="reset"></a><a name="reset"></a> &
 
 将位组中的所有位重置为 0 或将位于指定位置的位重置为 0。
 
@@ -1341,7 +1341,7 @@ bitset\<N>& reset(size_t _Pos);
 
 对其调用成员函数的位组副本。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果指定的位置大于位组的大小，则第二个成员函数引发 [out_of_range](../standard-library/out-of-range-class.md) 异常。
 
@@ -1383,7 +1383,7 @@ The collecion of bits obtained from resetting all
 the elements of the bitset b1 is: ( 00000 )
 ```
 
-### <a name="set"></a><a name="set"></a>字符集
+### <a name="set"></a><a name="set"></a> 字符集
 
 将位组中的所有位设置为 1 或将位于指定位置的位设置为 1。
 
@@ -1407,7 +1407,7 @@ bitset\<N>& set(
 
 对其调用成员函数的位组副本。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果指定的位置大于位组的大小，则第二个成员函数引发 [out_of_range](../standard-library/out-of-range-class.md) 异常。
 
@@ -1449,7 +1449,7 @@ The collecion of bits obtained from setting all the
 elements of the bitset b1 is: ( 11111 )
 ```
 
-### <a name="size"></a><a name="size"></a>规格
+### <a name="size"></a><a name="size"></a> 规格
 
 返回 bitset 对象中的位数。
 
@@ -1459,7 +1459,7 @@ size_t size() const;
 
 #### <a name="return-value"></a>返回值
 
-位组中的位数*N* \<N> 。
+位组中的位数 *N* \<N> 。
 
 #### <a name="example"></a>示例
 
@@ -1491,7 +1491,7 @@ The set of bits in bitset<5> b1( 6 ) is: ( 00110 )
 The number of bits in bitset b1 is: 5.
 ```
 
-### <a name="test"></a><a name="test"></a>考试
+### <a name="test"></a><a name="test"></a> 考试
 
 测试位组中指定位置处的位是否设置为 1。
 
@@ -1508,11 +1508,11 @@ bool test(size_t _Pos) const;
 
 **`true`** 如果参数位置指定的位设置为1，则为; 否则为。否则为 **`false`** 。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 成员函数引发 [out_of_range](../standard-library/out-of-range-class.md)
 
-### <a name="to_string"></a><a name="to_string"></a>to_string
+### <a name="to_string"></a><a name="to_string"></a> to_string
 
 将位组对象转换为字符串表示形式。
 
@@ -1560,7 +1560,7 @@ The string returned from the bitset b1
   by the member function to_string( ) is: 00111.
 ```
 
-### <a name="to_ullong"></a><a name="to_ullong"></a>to_ullong
+### <a name="to_ullong"></a><a name="to_ullong"></a> to_ullong
 
 返回一个 **`unsigned long long`** 值，该值包含与位组对象的内容相同的位集。
 
@@ -1574,13 +1574,13 @@ unsigned long long to_ullong() const;
 
 #### <a name="exceptions"></a>例外
 
-如果位序列中有任何位的位值无法表示为类型的值，则引发一个[overflow_error](overflow-error-class.md)对象 **`unsigned long long`** 。
+如果位序列中有任何位的位值无法表示为类型的值，则引发一个 [overflow_error](overflow-error-class.md) 对象 **`unsigned long long`** 。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 返回位序列中作为的位值的总和 **`unsigned long long`** 。
 
-### <a name="to_ulong"></a><a name="to_ulong"></a>to_ulong
+### <a name="to_ulong"></a><a name="to_ulong"></a> to_ulong
 
 将位组对象转换为整数，该整数将生成在用于初始化位组时所包含的位的序列。
 
@@ -1592,11 +1592,11 @@ unsigned long to_ulong( ) const;
 
 一个整数，如果用于位组的初始化中，将在位组中生成位。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 应用成员函数将返回与位组中包含的位序列具有相同的1位和0位的整数。
 
-如果位序列中有任何位的位值无法表示为类型的值，则成员函数将引发一个[overflow_error](overflow-error-class.md)对象 **`unsigned long`** 。
+如果位序列中有任何位的位值无法表示为类型的值，则成员函数将引发一个 [overflow_error](overflow-error-class.md) 对象 **`unsigned long`** 。
 
 #### <a name="example"></a>示例
 

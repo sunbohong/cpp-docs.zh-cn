@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 2c73967d287ade86e2657af70592845d2cc2085e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185029"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846558"
 ---
 # <a name="platformtype-class"></a>Platform::Type 类
 
-包含有关类型的运行时信息，尤其是字符串名称和类型代码。 通过对任何对象调用[object：： GetType](../cppcx/platform-object-class.md#gettype) ，或对类或结构名称使用[typeid](../extensions/typeid-cpp-component-extensions.md)运算符来获得。
+包含有关类型的运行时信息，尤其是字符串名称和类型代码。 通过对任何对象调用 [object：： GetType](../cppcx/platform-object-class.md#gettype) ，或对类或结构名称使用 [typeid](../extensions/typeid-cpp-component-extensions.md) 运算符来获得。
 
 ## <a name="syntax"></a>语法
 
@@ -29,27 +29,27 @@ public ref class Platform::Type :
 
 ### <a name="remarks"></a>备注
 
-`Type`类在必须通过使用 **`if`** **`switch`** 根据对象的运行时类型进行分支的或语句来直接处理的应用程序中很有用。 描述类型类别的类型代码是使用[type：： GetTypeCode](#gettypecode)成员函数检索的。
+`Type`类在必须通过使用 **`if`** **`switch`** 根据对象的运行时类型进行分支的或语句来直接处理的应用程序中很有用。 描述类型类别的类型代码是使用 [type：： GetTypeCode](#gettypecode) 成员函数检索的。
 
 ## <a name="public-methods"></a>公共方法
 
-|||
-|-|-|
-|[Type::GetTypeCode 方法](#gettypecode)|返回对象的 [Platform::TypeCode 枚举](../cppcx/platform-typecode-enumeration.md) 值。|
-|[Type：： ToString 方法](#tostring)|返回在其元数据中指定的类型的名称。|
+| 名称 | 说明 |
+|--|--|
+| [Type::GetTypeCode 方法](#gettypecode) | 返回对象的 [Platform::TypeCode 枚举](../cppcx/platform-typecode-enumeration.md) 值。 |
+| [Type：： ToString 方法](#tostring) | 返回在其元数据中指定的类型的名称。 |
 
 ## <a name="public-properties"></a>公共属性
 
-|||
-|-|-|
-|[类型：： FullName](#fullname)|返回表示类型的完全限定名称的 [Platform::String 类](../cppcx/platform-string-class.md)^，并使用 . （点）作为分隔符，而不是：：（双冒号）-例如 `MyNamespace.MyClass` 。|
+| 名称 | 说明 |
+|--|--|
+| [类型：： FullName](#fullname) | 返回表示类型的完全限定名称的 [Platform::String 类](../cppcx/platform-string-class.md)^，并使用 .  (点) 作为分隔符，而不是：： (双冒号) ，例如 `MyNamespace.MyClass` 。 |
 
 ## <a name="conversion-operators"></a>转换运算符
 
-|||
-|-|-|
-|[运算符类型 ^](../cppcx/operator-type-hat.md)|实现从 `Windows::UI::Xaml::Interop::TypeName` 到 `Platform::Type`的转换。|
-|[运算符 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|实现从 `Platform::Type` 到 `Windows::UI::Xaml::Interop::TypeName`的转换。|
+| 名称 | 说明 |
+|--|--|
+| [运算符类型 ^](../cppcx/operator-type-hat.md) | 实现从 `Windows::UI::Xaml::Interop::TypeName` 到 `Platform::Type`的转换。 |
+| [运算符 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md) | 实现从 `Platform::Type` 到 `Windows::UI::Xaml::Interop::TypeName`的转换。 |
 
 ### <a name="requirements"></a>要求
 
@@ -61,7 +61,7 @@ public ref class Platform::Type :
 
 **Metadata：** platform.string
 
-## <a name="typefullname-property"></a><a name="fullname"></a>Type：： FullName 属性
+## <a name="typefullname-property"></a><a name="fullname"></a> Type：： FullName 属性
 
 检索窗体中当前类型的完全限定名称 `Namespace.Type` 。
 
@@ -88,7 +88,7 @@ MainPage::MainPage()
 }
 ```
 
-## <a name="typegettypecode-method"></a><a name="gettypecode"></a>Type：： GetTypeCode 方法
+## <a name="typegettypecode-method"></a><a name="gettypecode"></a> Type：： GetTypeCode 方法
 
 检索内置类型数值类型类别。
 
@@ -102,11 +102,11 @@ Platform::TypeCode GetTypeCode();
 
 Platform::TypeCode 枚举值之一。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-GetTypeCode （）成员方法的等效项是 **`typeid`** 属性。
+GetTypeCode ( # A1 成员方法的等效项是 **`typeid`** 属性。
 
-## <a name="typetostring-method"></a><a name="tostring"></a>Type：： ToString 方法
+## <a name="typetostring-method"></a><a name="tostring"></a> Type：： ToString 方法
 
 检索类型的名称。
 

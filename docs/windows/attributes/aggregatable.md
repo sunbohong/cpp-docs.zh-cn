@@ -1,17 +1,17 @@
 ---
-title: 可聚合（c + + COM 特性）
+title: '可聚合 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.aggregatable
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 883094c85418c15455a020cfe73538a6576eddd0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224482"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836369"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -26,17 +26,17 @@ ms.locfileid: "87224482"
 ### <a name="parameters"></a>参数
 
 *value*<br/>
-可有可无用于指示 COM 对象何时可以聚合的参数：
+ (可选) 用于指示 COM 对象何时可以聚合的参数：
 
-- `never`无法聚合 COM 对象。
+- `never` 无法聚合 COM 对象。
 
-- `allowed`COM 对象可以直接创建，也可以进行聚合。 这是默认值。
+- `allowed` COM 对象可以直接创建，也可以进行聚合。 这是默认值。
 
-- `always`不能直接创建 COM 对象，只能对其进行聚合。 调用 `CoCreateInstance` 此对象时，必须指定聚合对象的 `IUnknown` 接口（控制 `IUnknown` ）。
+- `always` 不能直接创建 COM 对象，只能对其进行聚合。 调用 `CoCreateInstance` 此对象时，必须指定聚合对象的 `IUnknown` 接口 (控制 `IUnknown`) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-可**聚合**c + + 属性具有与可[聚合](/windows/win32/Midl/aggregatable)MIDL 属性相同的功能。 这意味着编译器会将可**聚合**特性传递到生成的 .idl 文件。
+可 **聚合** c + + 属性具有与可 [聚合](/windows/win32/Midl/aggregatable) MIDL 属性相同的功能。 这意味着编译器会将可 **聚合** 特性传递到生成的 .idl 文件。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果 `progid` 应用了，则 `vi_progid` `coclass` 还会应用。
 
@@ -68,9 +68,7 @@ class CMyClass {};
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|否|

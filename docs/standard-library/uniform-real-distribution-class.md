@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: fc003ebe9301c3648b47c796910d20096e7ef23d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ba2ec419e524ca571120fe82c7cbf63c1a97eaaa
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217358"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839590"
 ---
 # <a name="uniform_real_distribution-class"></a>uniform_real_distribution 类
 
@@ -74,14 +74,12 @@ public:
 *RealType*\
 浮点结果类型，默认为 **`double`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 类模板描述了一个包含专用分布，该分布使用一个分布生成用户指定的整型浮点类型的值，以便每个值都可能相同。 下表链接到有关各个成员的文章。
 
-||||
-|-|-|-|
-|[uniform_real_distribution](#uniform_real_distribution)|`uniform_real_distribution::a`|`uniform_real_distribution::param`|
-|`uniform_real_distribution::operator()`|`uniform_real_distribution::b`|[param_type](#param_type)|
+[uniform_real_distribution](#uniform_real_distribution)\
+[param_type](#param_type)|
 
 属性成员 `a()` 将返回分布当前存储的下限，而 `b()` 将返回当前存储的上限。 对于此分布类，这些最小值和最大值与公共属性函数返回的值相同， `min()` 并 `max()` 在主题中进行了介绍 [\<random>](../standard-library/random.md) 。
 
@@ -178,7 +176,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a>uniform_real_distribution：： uniform_real_distribution
+## <a name="uniform_real_distributionuniform_real_distribution"></a><a name="uniform_real_distribution"></a> uniform_real_distribution：： uniform_real_distribution
 
 构造分布。
 
@@ -198,15 +196,15 @@ explicit uniform_real_distribution(const param_type& parm);
 *parm*\
 用于构造分布的 `param_type` 结构。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`a < b`
 
-第一个构造函数将构造一个对象，其存储*的*值保留值*a* ，并且存储的*b*值保留值*b*。
+第一个构造函数将构造一个对象，其存储 *的* 值保留值 *a* ，并且存储的 *b* 值保留值 *b*。
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a>uniform_real_distribution：:p aram_type
+## <a name="uniform_real_distributionparam_type"></a><a name="param_type"></a> uniform_real_distribution：:p aram_type
 
 存储分布的所有参数。
 
@@ -233,7 +231,7 @@ struct param_type {
 *然后*\
 要与它进行比较的 `param_type` 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`a < b`
 
