@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
-ms.openlocfilehash: f41c5b238f74e85bc18e9ff5c3aa6a0050fe27e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d8a4e9196e27933c75a32c256114e968b55678a6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376922"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834890"
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; 枚举
 
-## <a name="memory_order-enum"></a><a name="memory_order_enum"></a>memory_order枚举
+## <a name="memory_order-enum"></a><a name="memory_order_enum"></a> memory_order 枚举
 
 为内存位置上的同步操作提供符号名称。 这些操作将影响一个线程内的分配如何在另一个线程内变得可见。
 
@@ -32,7 +32,7 @@ typedef enum memory_order {
 
 ### <a name="enumeration-members"></a>枚举成员
 
-|||
+|名称|说明|
 |-|-|
 |`memory_order_relaxed`|无需排序。|
 |`memory_order_consume`|加载操作将充当内存位置上的消耗操作。|
@@ -43,4 +43,4 @@ typedef enum memory_order {
 
 ## <a name="see-also"></a>另请参阅
 
-[\<原子>](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

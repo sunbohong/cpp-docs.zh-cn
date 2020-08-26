@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: eb782b0d16c4bc826da4ea9291756f34ca0eaf29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215408"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840136"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "87215408"
 > [!NOTE]
 > \<valarray>库使用 "#include <initializer_list>" 语句。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 这些类模板和函数允许使用异常纬度来提高性能。 具体而言，返回类型的任何函数 `valarray<T1>` 都可能返回某个其他类型 T2 的对象。 在这种情况下，任何接受类型的一个或多个参数的函数 `valarray<T2>` 必须具有接受这些参数的任意组合的重载，每个重载都替换为类型 T2 的参数。
 
@@ -34,7 +34,7 @@ ms.locfileid: "87215408"
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的绝对值。|
 |[acos](../standard-library/valarray-functions.md#acos)|对输入 valarray 的元素进行操作，返回的 valarray 的元素等于输入 valarray 的元素的反余弦值。|
@@ -58,7 +58,7 @@ ms.locfileid: "87215408"
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator！ =](../standard-library/valarray-operators.md#op_neq)|测试两个相同大小的 valarray 的对应元素是否不相等或者 valarray 的所有元素是否都不等于 valarray 元素类型的指定值。|
 |[操作员](../standard-library/valarray-operators.md#op_mod)|获取 valarray 的元素类型的指定值除以两个大小相同的 valarray 的对应元素所得的余数或除以 valarray 所得的余数，或 valarray 除以指定值所得的余数。|
@@ -81,7 +81,7 @@ ms.locfileid: "87215408"
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
 |[gslice 类](../standard-library/gslice-class.md)|用于定义 valarray 多维切分的 valarray 实用程序类。|
 |[gslice_array 类](../standard-library/gslice-array-class.md)|一个内部的辅助类模板，它通过提供由 valarray 的常规切片定义的子集数组之间的操作来支持常规切片对象。|
@@ -93,7 +93,7 @@ ms.locfileid: "87215408"
 
 ### <a name="specializations"></a>专用化
 
-|||
+|名称|说明|
 |-|-|
 |[valarray \<bool> 类](../standard-library/valarray-bool-class.md)|类模板的专用版本 valarray \<**Type**> 类型的元素 **`bool`** 。|
 

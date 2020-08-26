@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: 2c2f8b787e5366ec893538a88049f6f53dc35caf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9adee1e8b6a46c239aaf6a3c404277b34efd00e2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327386"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834747"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound 类
 
-此类是[SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound)结构的包装器。
+此类是 [SAFEARRAYBOUND](/windows/win32/api/oaidl/ns-oaidl-safearraybound) 结构的包装器。
 
 ## <a name="syntax"></a>语法
 
@@ -33,24 +33,24 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 ### <a name="methods"></a>方法
 
-|||
+|函数|说明|
 |-|-|
-|[CComSafeArray绑定](#ccomsafearraybound)|构造函数。|
-|[GetCount](#getcount)|调用此方法以返回元素数。|
-|[获取下限](#getlowerbound)|调用此方法以返回下限。|
-|[获取上部](#getupperbound)|调用此方法以返回上限。|
-|[设置计数](#setcount)|调用此方法以设置元素数。|
-|[设置下限](#setlowerbound)|调用此方法以设置下限。|
+|[CComSafeArrayBound](#ccomsafearraybound)|构造函数。|
+|[GetCount](#getcount)|调用此方法以返回元素的数目。|
+|[GetLowerBound](#getlowerbound)|调用此方法以返回下限。|
+|[System.array.getupperbound](#getupperbound)|调用此方法以返回上限。|
+|[SetCount](#setcount)|调用此方法可设置元素的数目。|
+|[SetLowerBound](#setlowerbound)|调用此方法可以设置下限。|
 
 ### <a name="operators"></a>运算符
 
-|||
+|操作员|说明|
 |-|-|
-|[运算符 |](#operator_eq)|将`CComSafeArrayBound`设为新值。|
+|[operator =](#operator_eq)|将设置 `CComSafeArrayBound` 为新值。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-此类是[CComSafeArray](../../atl/reference/ccomsafearray-class.md)`SAFEARRAYBOUND`使用的结构的包装器。 它提供了查询和设置`CComSafeArray`对象单个维度的上限和下限及其包含的元素数的方法。 多维`CComSafeArray`对象使用`CComSafeArrayBound`对象数组，每个维度一个。 因此，当使用[GetCount](#getcount)等方法时，请注意此方法不会返回多维数组中的元素总数。
+此类是 `SAFEARRAYBOUND` [CComSafeArray](../../atl/reference/ccomsafearray-class.md)使用的结构的包装器。 它提供用于查询和设置对象的单个维度的上限和下限 `CComSafeArray` 以及它所包含的元素数的方法。 多维 `CComSafeArray` 对象使用对象的数组 `CComSafeArrayBound` ，每个维度对应一个对象。 因此，使用 [GetCount](#getcount)等方法时，请注意，此方法不会返回多维数组中的元素总数。
 
 **标头：** atlsafe.h
 
@@ -58,7 +58,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 
 **标头：** atlsafe.h
 
-## <a name="ccomsafearrayboundccomsafearraybound"></a><a name="ccomsafearraybound"></a>CComSafeArray绑定：：CcomSafearray绑定
+## <a name="ccomsafearrayboundccomsafearraybound"></a><a name="ccomsafearraybound"></a> CComSafeArrayBound::CComSafeArrayBound
 
 构造函数。
 
@@ -72,15 +72,15 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 数组中的元素数。
 
 *lLowerBound*<br/>
-对数组进行编号的下限。
+数组的编号下限。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果要从C++程序访问阵列，建议将下限定义为 0。 如果数组要与其他语言（如 Visual Basic）一起使用，则最好使用不同的下限值。
+如果要从 c + + 程序访问数组，则建议将下限定义为0。 如果数组要与其他语言（如 Visual Basic）一起使用，则最好使用其他下限值。
 
-## <a name="ccomsafearrayboundgetcount"></a><a name="getcount"></a>CComSafeArray绑定：：获取计数
+## <a name="ccomsafearrayboundgetcount"></a><a name="getcount"></a> CComSafeArrayBound：： GetCount
 
-调用此方法以返回元素数。
+调用此方法以返回元素的数目。
 
 ```
 ULONG GetCount() const throw();
@@ -88,13 +88,13 @@ ULONG GetCount() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回元素数。
+返回元素的数目。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果关联的`CComSafeArray`对象表示多维数组，则此方法将仅返回最右侧维度中的元素总数。 使用[CComSafeArray：getCount](../../atl/reference/ccomsafearray-class.md#getcount)获取元素的总数。
+如果关联的 `CComSafeArray` 对象表示一个多维数组，则此方法将仅返回最右侧维度中的元素总数。 使用 [CComSafeArray：： GetCount](../../atl/reference/ccomsafearray-class.md#getcount) 获取元素总数。
 
-## <a name="ccomsafearrayboundgetlowerbound"></a><a name="getlowerbound"></a>CComSafeArray绑定：：获取下限
+## <a name="ccomsafearrayboundgetlowerbound"></a><a name="getlowerbound"></a> CComSafeArrayBound::GetLowerBound
 
 调用此方法以返回下限。
 
@@ -104,9 +104,9 @@ LONG GetLowerBound() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`CComSafeArrayBound`对象的下限。
+返回对象的下限 `CComSafeArrayBound` 。
 
-## <a name="ccomsafearrayboundgetupperbound"></a><a name="getupperbound"></a>CComSafeArray绑定：：获取上部
+## <a name="ccomsafearrayboundgetupperbound"></a><a name="getupperbound"></a> CComSafeArrayBound：： System.array.getupperbound
 
 调用此方法以返回上限。
 
@@ -116,15 +116,15 @@ LONG GetUpperBound() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`CComSafeArrayBound`对象的上限。
+返回对象的上限 `CComSafeArrayBound` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-上限取决于元素数和下限值。 例如，如果下限为 0，元素数为 10，则上限将自动设置为 9。
+上限取决于元素数和下限值。 例如，如果下限为0，元素数为10，则上限将自动设置为9。
 
-## <a name="ccomsafearrayboundoperator-"></a><a name="operator_eq"></a>CComSafeArray绑定：：操作员 |
+## <a name="ccomsafearrayboundoperator-"></a><a name="operator_eq"></a> CComSafeArrayBound：： operator =
 
-将`CComSafeArrayBound`设为新值。
+将设置 `CComSafeArrayBound` 为新值。
 
 ```
 CComSafeArrayBound& operator= (const CComSafeArrayBound& bound) throw();
@@ -141,15 +141,15 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
 
 ### <a name="return-value"></a>返回值
 
-返回指向对象的`CComSafeArrayBound`指针。
+返回一个指向对象的指针 `CComSafeArrayBound` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-可以使用`CComSafeArrayBound`现有`CComSafeArrayBound`分配对象，也可以通过提供元素数来分配该对象，在这种情况下，默认情况下下限设置为 0。
+`CComSafeArrayBound`可以使用现有的 `CComSafeArrayBound` 或通过提供元素数来分配对象，在这种情况下，下限默认设置为0。
 
-## <a name="ccomsafearrayboundsetcount"></a><a name="setcount"></a>CComSafeArray绑定：：设置计数
+## <a name="ccomsafearrayboundsetcount"></a><a name="setcount"></a> CComSafeArrayBound::SetCount
 
-调用此方法以设置元素数。
+调用此方法可设置元素的数目。
 
 ```
 ULONG SetCount(ULONG ulCount) throw();
@@ -162,11 +162,11 @@ ULONG SetCount(ULONG ulCount) throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`CComSafeArrayBound`对象中的元素数。
+返回对象中的元素数 `CComSafeArrayBound` 。
 
-## <a name="ccomsafearrayboundsetlowerbound"></a><a name="setlowerbound"></a>CComSafeArray绑定：：设置下限
+## <a name="ccomsafearrayboundsetlowerbound"></a><a name="setlowerbound"></a> CComSafeArrayBound::SetLowerBound
 
-调用此方法以设置下限。
+调用此方法可以设置下限。
 
 ```
 LONG SetLowerBound(LONG lLowerBound) throw();
@@ -179,13 +179,13 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`CComSafeArrayBound`对象的新下限。
+返回对象的新下限 `CComSafeArrayBound` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果要从 Visual C++ 程序访问阵列，建议将下限定义为 0。 如果数组要与其他语言（如 Visual Basic）一起使用，则最好使用不同的下限值。
+如果要从 Visual C++ 程序访问该数组，则建议将下限定义为0。 如果数组要与其他语言（如 Visual Basic）一起使用，则最好使用其他下限值。
 
-上限取决于元素数和下限值。 例如，如果下限为 0，元素数为 10，则上限将自动设置为 9。
+上限取决于元素数和下限值。 例如，如果下限为0，元素数为10，则上限将自动设置为9。
 
 ## <a name="see-also"></a>另请参阅
 

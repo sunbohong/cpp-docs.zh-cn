@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: fe59c58659252f5d799339fdd83237e56f81a2ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf5cd289ab0ee02d6c9e09e95d01008191899cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232958"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832641"
 ---
 # <a name="poisson_distribution-class"></a>poisson_distribution 类
 
@@ -70,14 +70,12 @@ public:
 *IntType*\
 整数结果类型，默认为 **`int`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 类模板介绍使用泊松分布产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
 
-||||
-|-|-|-|
-|[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|
-|`poisson_distribution::operator()`||[param_type](#param_type)|
+[poisson_distribution](#poisson_distribution)\
+[param_type](#param_type)
 
 属性函数 `mean()` 将返回存储的分布参数 *mean* 的值。
 
@@ -196,7 +194,7 @@ Distribution for 100 samples:
 
 **命名空间:** std
 
-## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a>poisson_distribution：:p oisson_distribution
+## <a name="poisson_distributionpoisson_distribution"></a><a name="poisson_distribution"></a> poisson_distribution：:p oisson_distribution
 
 构造分布。
 
@@ -213,7 +211,7 @@ explicit binomial_distribution(const param_type& parm);
 *parm*\
 用于构造分布的参数结构。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 < mean`
 
@@ -221,7 +219,7 @@ explicit binomial_distribution(const param_type& parm);
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="poisson_distributionparam_type"></a><a name="param_type"></a>poisson_distribution：:p aram_type
+## <a name="poisson_distributionparam_type"></a><a name="param_type"></a> poisson_distribution：:p aram_type
 
 存储分布的参数。
 
@@ -240,7 +238,7 @@ struct param_type {
 
 请参阅 [poisson_distribution](#poisson_distribution) 的构造函数参数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 < mean`
 

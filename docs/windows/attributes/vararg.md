@@ -1,17 +1,17 @@
 ---
-title: vararg （C++ COM 特性）
+title: 'vararg (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vararg
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: 4761f65e0862a8de07330305b292b5b3501cac68
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: edfcfdb32abeaff487134eac35033117b470d7d2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166011"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832966"
 ---
 # <a name="vararg"></a>vararg
 
@@ -25,11 +25,11 @@ ms.locfileid: "80166011"
 
 ## <a name="remarks"></a>备注
 
-**Vararg** C++特性具有与[vararg](/windows/win32/Midl/vararg) MIDL 特性相同的功能。
+**Vararg** c + + 特性具有与[vararg](/windows/win32/Midl/vararg) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**vararg**：
+下面的代码演示如何使用 **vararg**：
 
 ```cpp
 // cpp_attr_ref_vararg.cpp
@@ -47,13 +47,11 @@ __interface X : public IUnknown
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|接口方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

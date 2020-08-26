@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 1f2c8cce234910fbf69a35c8f8ef2fb0fe2a41c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e652b18b723e2a58c1f4673baf180a14db93477
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203867"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88834773"
 ---
 # <a name="auto_ptr-class"></a>auto_ptr 类
 
@@ -61,9 +61,9 @@ class auto_ptr {
 *ptr*\
 指定用于替换已存储指针的指针。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-类模板将一个名为的智能指针描述 `auto_ptr` 为分配的对象。 指针必须为 null 或指定所分配的对象 **`new`** 。 如果 `auto_ptr` 的存储值已分配给其他对象，则它将转移所有权。 （它在使用 null 指针进行传输后替换存储的值）。的析构函数将 `auto_ptr<Type>` 删除已分配的对象。 `auto_ptr<Type>` 可确保在块失去控制权时（甚至在已引发异常的情况下）自动删除已分配的对象。 不应构造两个拥有相同对象的 `auto_ptr<Type>` 对象。
+类模板将一个名为的智能指针描述 `auto_ptr` 为分配的对象。 指针必须为 null 或指定所分配的对象 **`new`** 。 如果 `auto_ptr` 的存储值已分配给其他对象，则它将转移所有权。  (在使用 null 指针进行传输后替换存储的值。 ) 的析构函数 `auto_ptr<Type>` 删除分配的对象。 `auto_ptr<Type>` 可确保在块失去控制权时（甚至在已引发异常的情况下）自动删除已分配的对象。 不应构造两个拥有相同对象的 `auto_ptr<Type>` 对象。
 
 可以将 `auto_ptr<Type>` 对象作为函数调用的参数按值传递。 `auto_ptr` 不能是任何标准库容器的元素。 你无法使用 C++ 标准库容器可靠地管理一系列 `auto_ptr<Type>` 对象。
 
@@ -71,19 +71,19 @@ class auto_ptr {
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[auto_ptr](#auto_ptr)|`auto_ptr` 类型的对象的构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[element_type](#element_type)|类型是模板参数 `Type` 的同义词。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[get](#get)|该成员函数将返回存储的指针 `myptr`。|
 |[拆卸](#release)|该成员将存储的指针 `myptr` 替换为 Null 指针，并返回以前存储的指针。|
@@ -91,7 +91,7 @@ class auto_ptr {
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator =](#op_eq)|一个赋值运算符，用于将所有权从一个 `auto_ptr` 对象转移到到其他对象。|
 |[操作员](#op_star)|`auto_ptr` 类型的对象的取消引用运算符。|
@@ -99,7 +99,7 @@ class auto_ptr {
 |[运算符 auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|将某种 `auto_ptr` 强制转换为另一种 `auto_ptr`。|
 |[运算符 auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|将 `auto_ptr` 强制转换为 `auto_ptr_ref`。|
 
-### <a name="auto_ptr"></a><a name="auto_ptr"></a>auto_ptr
+### <a name="auto_ptr"></a><a name="auto_ptr"></a> auto_ptr
 
 `auto_ptr` 类型的对象的构造函数。
 
@@ -122,11 +122,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 *然后*\
 由构造函数复制的 `auto_ptr` 对象。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
-第一个构造函数在中存储*ptr* `myptr` ，并将存储的指针存储到所分配的对象。 第二个构造函数通过存储*权限*来传输存储在*右侧*的指针的所有权。 [版本](#release) `myptr` 。
+第一个构造函数在中存储 *ptr* `myptr` ，并将存储的指针存储到所分配的对象。 第二个构造函数通过存储*权限*来传输存储在*右侧*的指针的所有权。 [版本](#release) `myptr` 。
 
-第三个构造函数的行为与第二个相同，只不过它会存储 `right` 。 `ref`. `release`在中 `myptr` ，其中 `ref` 是存储在中的引用 `right` 。
+第三个构造函数的行为与第二个相同，只不过它会存储 `right` 。 `ref`. `release` 在中 `myptr` ，其中 `ref` 是存储在中的引用 `right` 。
 
 如果指向的指针 `Other` 可以隐式转换为指向的指针，则模板构造函数的行为与第二个构造函数的行为相同 `Type` 。
 
@@ -189,7 +189,7 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-### <a name="element_type"></a><a name="element_type"></a>element_type
+### <a name="element_type"></a><a name="element_type"></a> element_type
 
 类型是模板参数 `Type` 的同义词。
 
@@ -197,7 +197,7 @@ Destructing 00311AF8
 typedef Type element  _type;
 ```
 
-### <a name="get"></a><a name="get"></a>获取
+### <a name="get"></a><a name="get"></a> 获取
 
 该成员函数将返回存储的指针 `myptr`。
 
@@ -256,7 +256,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="operator"></a><a name="op_eq"></a>operator =
+### <a name="operator"></a><a name="op_eq"></a> operator =
 
 一个赋值运算符，用于将所有权从一个 `auto_ptr` 对象转移到到其他对象。
 
@@ -276,15 +276,15 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 对类型为 `auto_ptr<Type>` 的对象的引用。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 赋值将计算表达式的值 `delete myptr` ，但仅在存储的指针由于赋值而更改时才会 `myptr` 发生。 然后，它会通过存储*权限*来转移存储在*右侧*的指针的所有权。[版本](#release) `myptr` 。 函数返回__ \* this__。
 
 #### <a name="example"></a>示例
 
-有关使用成员运算符的示例，请参阅[auto_ptr](#auto_ptr)。
+有关使用成员运算符的示例，请参阅 [auto_ptr](#auto_ptr)。
 
-### <a name="operator"></a><a name="op_star"></a>操作员
+### <a name="operator"></a><a name="op_star"></a> 操作员
 
 `auto_ptr` 类型的对象的取消引用运算符。
 
@@ -296,15 +296,15 @@ Type& operator*() const throw();
 
 对指针所拥有的类型的对象的引用 `Type` 。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 间接运算符返回 `*`[get](#get)。 因此，存储的指针不能为空。
 
 #### <a name="example"></a>示例
 
-有关如何使用成员函数的示例，请参阅[auto_ptr](#auto_ptr)。
+有关如何使用成员函数的示例，请参阅 [auto_ptr](#auto_ptr)。
 
-### <a name="operator-gt"></a><a name="op_arrow"></a>操作员&gt;
+### <a name="operator-gt"></a><a name="op_arrow"></a> 操作员&gt;
 
 允许成员访问的运算符。
 
@@ -316,15 +316,15 @@ Type * operator->() const throw();
 
 拥有的对象的成员 `auto_ptr` 。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
-选择运算符返回[get](#get) `( )` ，以便表达式*ap* ->  **成员**的行为与（ *ap*）相同。 **get**（））->**成员**，其中， *ap*是类的对象 `auto_ptr` \< **Type**> 。 因此，存储的指针不能为 null，并且 `Type` 必须是包含成员的类、结构或联合类型 `member` 。
+选择运算符返回[get](#get) `( )` ，以便表达式*ap* ->  **成员**的行为与 ( *ap*相同。 **获取** ( ) ) ->**成员**，其中， *ap*是类的对象 `auto_ptr` \< **Type**> 。 因此，存储的指针不能为 null，并且 `Type` 必须是包含成员的类、结构或联合类型 `member` 。
 
 #### <a name="example"></a>示例
 
-有关如何使用成员函数的示例，请参阅[auto_ptr](#auto_ptr)。
+有关如何使用成员函数的示例，请参阅 [auto_ptr](#auto_ptr)。
 
-### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a>运算符 auto_ptr &lt; 其他&gt;
+### <a name="operator-auto_ptrltothergt"></a><a name="op_auto_ptr_lt_other_gt"></a> 运算符 auto_ptr &lt; 其他&gt;
 
 将某种 `auto_ptr` 强制转换为另一种 `auto_ptr`。
 
@@ -335,7 +335,7 @@ operator auto _ptr<Other>() throw();
 
 #### <a name="return-value"></a>返回值
 
-类型强制转换运算符返回 `auto_ptr` \< **Other**> （ ** \* this**）。
+类型强制转换运算符返回 `auto_ptr` \< **Other**> ** \* 此**)  (。
 
 #### <a name="example"></a>示例
 
@@ -354,7 +354,7 @@ int main()
 }
 ```
 
-### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a>运算符 auto_ptr_ref &lt; 其他&gt;
+### <a name="operator-auto_ptr_refltothergt"></a><a name="op_auto_ptr_ref_lt_other_gt"></a> 运算符 auto_ptr_ref &lt; 其他&gt;
 
 将 `auto_ptr` 强制转换为 `auto_ptr_ref`。
 
@@ -365,7 +365,7 @@ operator auto _ptr  _ref<Other>() throw();
 
 #### <a name="return-value"></a>返回值
 
-类型强制转换运算符返回**auto_ptr_ref** \< **Other**> （ ** \* this**）。
+类型强制转换运算符返回**auto_ptr_ref** \< **Other**> ** \* 此**)  ( auto_ptr_ref。
 
 #### <a name="example"></a>示例
 
@@ -415,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-### <a name="release"></a><a name="release"></a>拆卸
+### <a name="release"></a><a name="release"></a> 拆卸
 
 该成员将存储的指针 `myptr` 替换为 Null 指针，并返回以前存储的指针。
 
@@ -427,7 +427,7 @@ Type *release() throw();
 
 以前存储的指针。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 该成员将存储的指针 `myptr` 替换为 Null 指针，并返回以前存储的指针。
 
@@ -477,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-### <a name="reset"></a><a name="reset"></a>&
+### <a name="reset"></a><a name="reset"></a> &
 
 成员函数计算表达式的 `delete myptr` 值，但仅在存储的指针值因函数调用而更改时才计算 `myptr` 。 然后它将存储的指针替换为 `ptr`。
 

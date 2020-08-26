@@ -1,17 +1,17 @@
 ---
-title: wire_marshal （c + + COM 特性）
+title: 'wire_marshal (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.wire_marshal
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: ff01d20117e2f04aca96b0fee7489d7195cc7488
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 04d6e7dcc887815b6f1b3becd67bd11bef4a81d7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213770"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832876"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -29,7 +29,7 @@ ms.locfileid: "87213770"
 
 ## <a name="example"></a>示例
 
-以下代码演示了如何使用**wire_marshal**：
+以下代码演示了如何使用 **wire_marshal**：
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -49,9 +49,7 @@ ms.locfileid: "87213770"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`typedef`**|
 |**且**|否|

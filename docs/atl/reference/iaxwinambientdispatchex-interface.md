@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: f4816846801e388619db62998ec979a1100916ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f052c39424fc2ee6f43f249e3034be7c464d016c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329982"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833382"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 接口
 
-此接口为托管控件实现补充环境属性。
+此接口实现寄宿控件的补充环境属性。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -32,35 +32,35 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ### <a name="methods"></a>方法
 
-|||
+|名称|说明|
 |-|-|
-|[设置环境调度](#setambientdispatch)|调用此方法是为了使用用户定义的接口补充默认环境属性接口。|
+|[SetAmbientDispatch](#setambientdispatch)|调用此方法以使用用户定义的接口来补充默认环境属性接口。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-此接口包含在以静态链接到 ATL 和主机 ActiveX 控件的 ATL 应用程序中，尤其是具有环境属性的 ActiveX 控件。 不包括此接口将生成此断言："您是否忘记将 LIBID 传递给 CComModule：：Init"
+将此接口包含在静态链接到 ATL 和宿主 ActiveX 控件的 ATL 应用程序中，尤其是具有环境属性的 ActiveX 控件。 不包含此接口将生成此断言： "您是否忘记将 LIBID 传递到 CComModule：： Init"
 
-此接口由 ATL 的 ActiveX 控件托管对象公开。 派生自[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)，`IAxWinAmbientDispatchEx`添加了一种方法，允许您用您自己的一种来补充 ATL 提供的环境属性接口。
+此接口由 ATL 的 ActiveX 控件宿主对象公开。 派生自 [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)， `IAxWinAmbientDispatchEx` 它添加了一个方法，该方法允许你使用自己的方法来补充 ATL 提供的环境属性接口。
 
-<xref:System.Windows.Forms.AxHost>将尝试加载有关`IAxWinAmbientDispatch`和`IAxWinAmbientDispatchEx`从包含代码的类型库的类型信息。
+<xref:System.Windows.Forms.AxHost> 将尝试 `IAxWinAmbientDispatch` `IAxWinAmbientDispatchEx` 从包含代码的类型库中加载和类型信息。
 
-如果要链接到 ATL90.dll，AXHost 将从 DLL 中的类型库中加载类型信息。 **AXHost**
+如果要链接到 ATL90.dll， **AXHost** 将从 DLL 中的类型库加载类型信息。
 
-有关详细信息[，请参阅使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md)。
+有关更多详细信息，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md) 。
 
 ## <a name="requirements"></a>要求
 
-此接口的定义有多种形式可用，如下表所示。
+此接口的定义以多种形式提供，如下表所示。
 
 |定义类型|文件|
 |---------------------|----------|
-|Idl|atliface.idl|
+|.IDL|atliface .idl|
 |类型库|ATL.dll|
-|C++|atliface.h （也包含在 ATLBase.h 中）|
+|C++|atliface 也包含在 Atlbase.h 中 () |
 
-## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a>IAxwin 环境调度Ex：：设置环境调度
+## <a name="iaxwinambientdispatchexsetambientdispatch"></a><a name="setambientdispatch"></a> IAxWinAmbientDispatchEx::SetAmbientDispatch
 
-调用此方法是为了使用用户定义的接口补充默认环境属性接口。
+调用此方法以使用用户定义的接口来补充默认环境属性接口。
 
 ```
 virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
@@ -73,11 +73,11 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 ### <a name="return-value"></a>返回值
 
-返回成功S_OK，或失败时返回错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-当`SetAmbientDispatch`使用指向新接口的指针调用时，如果[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)尚未提供这些属性，则此新接口将用于调用托管控件要求的任何属性或方法。
+当 `SetAmbientDispatch` 使用指向新接口的指针调用时，如果 [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)未提供这些属性，则此新接口将用于调用寄宿控件要求的任何属性或方法。
 
 ## <a name="see-also"></a>另请参阅
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 6764e37b994ed76d27f88e3bdc8ec137d5e2f600
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 59911d8a61a05de9ec92f4152b2835da3cf82f7f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232984"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832719"
 ---
 # <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution 类
 
@@ -83,16 +83,14 @@ public:
 *RealType*\
 浮点结果类型，默认为 **`double`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 此示例分布包含以等概率分布在每个区间中的不等宽区间。 有关其他采样分布的信息，请参阅 [piecewise_linear_distribution 类](../standard-library/piecewise-linear-distribution-class.md)和 [discrete_distribution](../standard-library/discrete-distribution-class.md)。
 
 下表链接到有关各个成员的文章：
 
-||||
-|-|-|-|
-|[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|
-|`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|
+[piecewise_constant_distribution](#piecewise_constant_distribution)\
+[param_type](#param_type)
 
 属性函数 `intervals()` 将返回 `vector<result_type>` 以及分布的存储区间集。
 
@@ -218,7 +216,7 @@ Distribution for 100 samples:
 
 **命名空间:** std
 
-## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a>piecewise_constant_distribution：:p iecewise_constant_distribution
+## <a name="piecewise_constant_distributionpiecewise_constant_distribution"></a><a name="piecewise_constant_distribution"></a> piecewise_constant_distribution：:p iecewise_constant_distribution
 
 构造分布。
 
@@ -275,7 +273,7 @@ xmax\
 *parm*\
 用于构造分布的参数结构。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 默认构造函数将设置存储参数，以便存在一个概率密度为 1 的 0 到 1 的区间。
 
@@ -308,7 +306,7 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
     UnaryOperation weightfunc);
 ```
 
-构造一个在 [] 上均匀分布的*计数*间隔的分布对象 `xmin,xmax` ，根据函数*weightfunc*分配每个间隔权重，而*weightfunc*必须接受一个参数并具有一个返回值，这两个参数都可转换为 **`double`** 。 **前提条件：**`xmin < xmax`
+构造一个在 [] 上均匀分布的 *计数* 间隔的分布对象 `xmin,xmax` ，根据函数 *weightfunc*分配每个间隔权重，而 *weightfunc* 必须接受一个参数并具有一个返回值，这两个参数都可转换为 **`double`** 。 **前提条件：**`xmin < xmax`
 
 定义为以下内容的构造函数
 
@@ -316,9 +314,9 @@ piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
 
-使用*parm*作为存储的参数结构，构造分布对象。
+使用 *parm* 作为存储的参数结构，构造分布对象。
 
-## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a>piecewise_constant_distribution：:p aram_type
+## <a name="piecewise_constant_distributionparam_type"></a><a name="param_type"></a> piecewise_constant_distribution：:p aram_type
 
 存储分布的所有参数。
 
@@ -342,7 +340,7 @@ struct param_type {
 
 请参阅 [piecewise_constant_distribution](#piecewise_constant_distribution) 的构造函数参数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`xmin < xmax`
 

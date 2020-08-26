@@ -1,17 +1,17 @@
 ---
-title: immediatebind （C++ COM 特性）
+title: 'immediatebind (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.immediatebind
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-ms.openlocfilehash: d0fb85a3f5642bc5fffcad29892ca15bb13a1ce0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5241a6972ea0444a980e3e868c44e7e0c15dc64
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166909"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833044"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -25,7 +25,7 @@ ms.locfileid: "80166909"
 
 ## <a name="remarks"></a>备注
 
-**Immediatebind** C++特性具有与[immediatebind](/windows/win32/Midl/immediatebind) MIDL 特性相同的功能。
+**Immediatebind** c + + 特性具有与[immediatebind](/windows/win32/Midl/immediatebind) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -33,13 +33,11 @@ ms.locfileid: "80166909"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|接口方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

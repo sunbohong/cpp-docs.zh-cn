@@ -6,16 +6,16 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-ms.openlocfilehash: 5029227078ac0af9ebdd0c74522a7b0ae8ea4d42
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0351cd0fad1d0fc838c75d3cdbd809a04b0fb393
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228513"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832290"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt; 和 &gt; &gt; 运算符
 
-`CArchive`提供了 <\< and >> 的运算符，用于写入和读取文件的简单数据类型以及 `CObject` 和。
+`CArchive` 提供了 <\< and >> 的运算符，用于写入和读取文件的简单数据类型以及 `CObject` 和。
 
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>通过存档在文件中存储对象
 
@@ -35,25 +35,44 @@ ms.locfileid: "87228513"
 
 [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]
 
-上面的代码模板与为文档的函数创建的一个程序向导 `Serialize` （派生自的类）完全相同 `CDocument` 。 此代码模板帮助你编写更易于查看的代码，因为存储代码和加载代码应始终并行，如以下示例中所示：
+上述代码模板与执行程序向导为文档的函数创建的代码模板完全相同， `Serialize` (派生自) 的类 `CDocument` 。 此代码模板帮助你编写更易于查看的代码，因为存储代码和加载代码应始终并行，如以下示例中所示：
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-库将 **<\<** and **>>** 运算符定义为 `CArchive` 第一个操作数，将以下数据类型和类类型定义为第二个操作数：
+库将 **`<<`** 和运算符定义为 **`>>`** `CArchive` 第一个操作数，将以下数据类型和类类型定义为第二个操作数：
 
-||||
-|-|-|-|
-|`CObject*`|**大小**和`CSize`|**`float`**|
-|**单字**|`CString`|**点**和`CPoint`|
-|`DWORD`|**位**|`RECT` 和 `CRect`|
-|**双精度**|**漫长**|`CTime` 和 `CTimeSpan`|
-|`Int`|**COleCurrency**|`COleVariant`|
-|`COleDateTime`|`COleDateTimeSpan`||
+:::row:::
+   :::column span="":::
+      `BYTE`\
+      `CObject*`\
+      `COleCurrency`\
+      `COleDateTime`\
+      `COleDateTimeSpan`
+   :::column-end:::
+   :::column span="":::
+      `COleVariant`\
+      `CString`\
+      `CTime` 和 `CTimeSpan`\
+      `Double`
+   :::column-end:::
+   :::column span="":::
+      `DWORD`\
+      `Float`\
+      `Int`\
+      `LONG`
+   :::column-end:::
+   :::column span="":::
+      `POINT` 和 `CPoint`\
+      `RECT` 和 `CRect`\
+      `SIZE` 和 `CSize`\
+      `WORD`
+   :::column-end:::
+:::row-end:::
 
 > [!NOTE]
-> 通过存档存储和加载 `CObject` 需要额外考虑。 有关详细信息，请参阅[通过存档存储和加载 cobject](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
+> 通过存档存储和加载 `CObject` 需要额外考虑。 有关详细信息，请参阅 [通过存档存储和加载 cobject](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
 
-**CArchive <\<** and **> > **运算符始终返回对对象的引用，该 `CArchive` 对象是第一个操作数。 这使您可以链接运算符，如下所示：
+`CArchive` **`<<`** 和 **`>>`** 运算符始终返回对对象的引用 `CArchive` ，该对象是第一个操作数。 这使您可以链接运算符，如下所示：
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

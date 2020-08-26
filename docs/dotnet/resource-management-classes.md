@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-ms.openlocfilehash: 0113412fb86f7e0b326f4fa48462f8073f7754cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fd88bf359cbc3221a8f2a259d031bdbd6b581f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384826"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835007"
 ---
 # <a name="resource-management-classes"></a>资源管理类
 
@@ -22,11 +22,12 @@ ms.locfileid: "62384826"
 
 ## <a name="in-this-section"></a>本节内容
 
-|||
-|-|-|
-|[auto_gcroot](../dotnet/auto-gcroot.md)|在本机类型中嵌入虚拟句柄。|
-|[auto_handle](../dotnet/auto-handle.md)|在托管类型中嵌入虚拟句柄。|
+[auto_gcroot](../dotnet/auto-gcroot.md)\
+在本机类型中嵌入虚拟句柄。
 
-## <a name="see-also"></a>请参阅
+[auto_handle](../dotnet/auto-handle.md)\
+在托管类型中嵌入虚拟句柄。
 
-[C++ 支持库](../dotnet/cpp-support-library.md)
+## <a name="see-also"></a>另请参阅
+
+[C + + 支持库](../dotnet/cpp-support-library.md)

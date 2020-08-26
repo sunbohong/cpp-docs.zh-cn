@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1ed8d61a52c11ab48fe6f762ff342ea88d107b14
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687141"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88832693"
 ---
 # <a name="pointer_traits-struct"></a>pointer_traits 结构
 
-提供 `allocator_traits` 类型的对象所需的信息，以描述指针类型为 `Ptr` 的分配器。
+提供类型的对象所需的信息， `allocator_traits` 以描述带有指针类型的分配器 `Ptr` 。
 
 ## <a name="syntax"></a>语法
 
@@ -48,11 +48,11 @@ struct Ptr
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |`typedef T2 difference_type`|如果 `Ptr::difference_type` 类型存在，则类型 `T2` 为此类型，否则为 `ptrdiff_t`。 如果 `Ptr` 是原始指针，则类型为 `ptrdiff_t`。|
 |`typedef T1 element_type`|如果 `Ptr::element_type` 类型存在，则类型 `T1` 为此类型，否则为 `Ty`。 如果 `Ptr` 是原始指针，则类型为 `Ty`。|
@@ -60,17 +60,17 @@ struct Ptr
 
 ### <a name="structs"></a>结构
 
-|||
+|名称|说明|
 |-|-|
 |`rebind`|尝试将基础指针类型转换为指定类型。|
 
 ### <a name="methods"></a>方法
 
-|“属性”|描述|
+|名称|说明|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|将任意引用转换为 `Ptr` 类的对象。|
 
-### <a name="pointer_to"></a>pointer_to
+### <a name="pointer_to"></a><a name="pointer_to"></a> pointer_to
 
 存在 `Ptr::pointer_to(obj)` 时，则为返回该函数的静态方法。 否则，无法将任意引用转换为 `Ptr` 类的对象。 如果 `Ptr` 是原始指针，则此方法将返回 `addressof(obj)`。
 
