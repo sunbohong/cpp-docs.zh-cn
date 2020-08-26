@@ -4,12 +4,12 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c096203ae056c96c87d67a491d3c84b3d1fb3a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366795"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845349"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 C++ 工具和功能
 
@@ -315,9 +315,8 @@ Linux：
 
 ## <a name="platforms"></a>平台
 
-||||||
-|-|-|-|-|-|
 |Platform|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
+|-|-|-|-|-|
 |Windows 桌面||X|X|X|
 |通用 Windows 平台（手机、平板电脑、PC、Xbox、IoT 和 HoloLens）|X||X|X|
 |Linux|X|X|
@@ -457,9 +456,8 @@ Linux：
 
 ## <a name="application-lifecycle-management-tools"></a>Application Lifecycle Management 工具
 
-||||||
-|-|-|-|-|-|
 |工具|Visual Studio Express for Windows|Visual Studio Express for Windows Desktop|Visual Studio Professional/Community|Visual Studio Enterprise|
+|-|-|-|-|-|
 |单元测试（本机框架）|X|X|X|X|
 |单元测试（托管框架）||X|X|X|
 |代码覆盖率||||X|

@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-ms.openlocfilehash: 5a96ffd15bb28022b3000252307c75b3383ac59c
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: 821fb1637306c70d850f12fc1b954860557f47f7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373744"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840435"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>如何：将自定义工具集成到项目属性中
 
@@ -17,7 +17,7 @@ ms.locfileid: "86373744"
 
 “属性页”窗口的“配置属性”部分显示名为“规则”的设置组    。 每个规则都包含一个工具或一组功能的设置。 例如，“链接器”规则包含链接器工具的设置  。 规则中的设置可以细分为各种类别  。
 
-本文档说明如何在包含自定义工具属性的设置目录中创建文件，以便在 Visual Studio 启动时加载这些属性。 有关如何修改该文件的信息，请参阅 Visual Studio 项目团队博客上的[平台可扩展性第 2 部分](https://docs.microsoft.com/archive/blogs/vsproject/platform-extensibility-part-2)。
+本文档说明如何在包含自定义工具属性的设置目录中创建文件，以便在 Visual Studio 启动时加载这些属性。 有关如何修改该文件的信息，请参阅 Visual Studio 项目团队博客上的[平台可扩展性第 2 部分](/archive/blogs/vsproject/platform-extensibility-part-2)。
 
 ### <a name="to-add-or-change-project-properties"></a>添加或更改项目属性
 

@@ -4,18 +4,18 @@ description: GitHub 上的存档 Visual Studio C++ 示例存储库中提供的�
 ms.date: 03/23/2020
 ms.technology: cpp-language
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-ms.openlocfilehash: cb8d2aa8322cb3e9bfc30dc9ad041e7c70662049
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 56e9cfe72e58a12fb381c88616496820908006c8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226758"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846363"
 ---
 # <a name="visual-studio-c-samples"></a>Visual Studio C++ 示例
 
 Visual Studio C++ 示例可在 Web 上找到。 Microsoft 已生成许多 C++ 示例，这些示例演示了跨多种技术的不同功能。 下面介绍是一些查找其他示例的位置：
 
-- [Microsoft Docs 示例 - C++](https://docs.microsoft.com/samples/browse/?term=c%2B%2B)
+- [Microsoft Docs 示例 - C++](/samples/browse/?term=c%2B%2B)
 
 - [GitHub 上的 Windows 示例](https://microsoft.github.io/windows/)
 
@@ -25,7 +25,7 @@ Visual Studio C++ 示例可在 Web 上找到。 Microsoft 已生成许多 C++ �
 
 - [ADO 代码示例](/office/client-developer/access/desktop-database-reference/ado-code-examples-in-microsoft-visual-c)
 
-- [Windows 硬件开发示例](https://docs.microsoft.com/samples/browse/?products=windows-wdk)
+- [Windows 硬件开发示例](/samples/browse/?products=windows-wdk)
 
 ## <a name="archived-c-samples-on-github"></a>GitHub 上的存档 C++ 示例
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
-ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
+ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865047"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833395"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>教程：vcperf 和 Windows Performance Analyzer
 
@@ -35,7 +35,7 @@ WPA 是 Windows 评估和部署工具包 (ADK) 中提供的跟踪查看器。 �
 
 注意：安装 Windows Performance Analyzer 需要 Windows 8 或更高版本的操作系统。
 
-1. 转到 Windows ADK [下载页](https://docs.microsoft.com/windows-hardware/get-started/adk-install)。
+1. 转到 Windows ADK [下载页](/windows-hardware/get-started/adk-install)。
 
 1. 下载并安装最新版 Windows ADK。
 

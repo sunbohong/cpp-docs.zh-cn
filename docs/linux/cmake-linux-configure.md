@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中配置 Linux CMake 项目
 description: 如何在 Visual Studio 中配置 Linux CMake 设置
 ms.date: 08/08/2020
-ms.openlocfilehash: d39423b803b66d6bdf55cc67d488e74ccb682323
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4bc6d5d82a0f1cd21e8f989eb92b431d38b2bf5c
+ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88047741"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88659339"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>在 Visual Studio 中配置 Linux CMake 项目
 
@@ -145,7 +145,7 @@ Visual Studio 语言设置不会传播到 Linux 目标，因为 Visual Studio �
 
 ## <a name="next-steps"></a>后续步骤
 
-[配置 CMake 调试会话](../build/configure-cmake-debugging-sessions.md)
+[配置 CMake 调试会话](../build/configure-cmake-debugging-sessions.md?toc=/cpp/linux/toc.json&bc=/cpp/_breadcrumb/toc.json)
 
 ## <a name="see-also"></a>另请参阅
 

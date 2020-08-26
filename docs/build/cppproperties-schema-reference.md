@@ -3,12 +3,12 @@ title: CppProperties.json 参考
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 2409c1d93d4e9d814407dbd4334daa73ae630775
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224053"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837900"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json 参考
 
@@ -18,7 +18,7 @@ ms.locfileid: "87224053"
 
 一个配置可能会有以下列出的其中几个属性：
 
-|||
+|名称|说明|
 |-|-|
 |`inheritEnvironments`| 指定哪些环境适用于此配置。|
 |`name`|将出现在 C++ 配置下拉菜单中的配置名称|
@@ -125,7 +125,7 @@ Visual Studio 2019 版本 16.3 及更早版本  ：使用环境时，必须在 `
 
 可访问 CppProperties.json  中的下列内置宏：
 
-|||
+|宏|描述|
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
 |`${projectRoot}`| CppProperties.json  所在文件夹的完整路径|

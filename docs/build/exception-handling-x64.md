@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 75658e2c86ffb1a75d5f66e873e0648a8ebae29e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224040"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835046"
 ---
 # <a name="x64-exception-handling"></a>x64 异常处理
 
@@ -24,7 +24,7 @@ x64 上的结构化异常处理和 C++ 异常处理编码约定和行为的概�
 
 基于表的异常处理要求分配堆栈空间或调用另一个函数（例如非叶函数）的所有函数都有一个表条目。 函数表条目的格式为：
 
-|||
+|大小|值|
 |-|-|
 |ULONG|函数起始地址|
 |ULONG|函数结束地址|
@@ -36,7 +36,7 @@ RUNTIME_FUNCTION 结构必须在内存中为 DWORD 对齐。 所有地址都相�
 
 展开数据信息结构用于记录函数对堆栈指针的影响，以及非易失寄存器在堆栈上保存的位置：
 
-|||
+|大小|值|
 |-|-|
 |UBYTE：3|Version|
 |UBYTE：5|Flags|
@@ -49,14 +49,14 @@ RUNTIME_FUNCTION 结构必须在内存中为 DWORD 对齐。 所有地址都相�
 
 (1) 异常处理程序
 
-|||
+|大小|值|
 |-|-|
 |ULONG|异常处理程序的地址|
 |变量|特定于语言的处理程序数据（可选）|
 
 (2) 链式展开信息
 
-|||
+|大小|值|
 |-|-|
 |ULONG|函数起始地址|
 |ULONG|函数结束地址|
@@ -114,7 +114,7 @@ UNWIND_INFO 结构必须在内存中为 DWORD 对齐。 下面是每个字段的
 
 展开代码数组用于记录 prolog 中影响非易失性寄存器和 RSP 的操作序列。 每个代码项都具有以下格式：
 
-|||
+|大小|值|
 |-|-|
 |UBYTE|prolog 中的偏移|
 |UBYTE：4|展开操作代码|
@@ -180,7 +180,7 @@ UNWIND_INFO 结构必须在内存中为 DWORD 对齐。 下面是每个字段的
 
   压入计算机帧。  此展开代码用于记录硬件中断或异常的影响。 有两种形式。 如果操作信息等于 0，则其中一帧已压入堆栈：
 
-  |||
+  |位置|值|
   |-|-|
   |RSP+32|SS|
   |RSP+24|旧 RSP|
@@ -190,7 +190,7 @@ UNWIND_INFO 结构必须在内存中为 DWORD 对齐。 下面是每个字段的
 
   如果操作信息等于 1，则其中一帧已压入：
 
-  |||
+  |位置|值|
   |-|-|
   |RSP+40|SS|
   |RSP+32|旧 RSP|
@@ -221,7 +221,7 @@ UNWIND_INFO 结构必须在内存中为 DWORD 对齐。 下面是每个字段的
 
 操作信息位的含义取决于操作代码。 若要对常规用途（整数）寄存器进行编码，请使用此映射：
 
-|||
+|bit|注册|
 |-|-|
 |0|RAX|
 |1|RCX|

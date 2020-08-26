@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: 7b1cea29a782f291f1e85f7a143730825958d91b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 425fa0bb6b7aab502ce493ced8b587fad8ce59a8
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229774"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88833343"
 ---
 # <a name="optimization-best-practices"></a>优化最佳做法
 
@@ -40,7 +40,7 @@ Visual Studio 支持“按配置优化”(PGO)  。 此优化使用应用程序�
 
 已删除 `/Op` 编译器选项，并添加了以下四个处理浮点优化的编译器选项：
 
-|||
+|选项|说明|
 |-|-|
 |**`/fp:precise`**|这是默认的建议，应在大多数情况下使用。|
 |**`/fp:fast`**|如果性能是最重要的，则推荐使用，例如在游戏中。 这将产生最快的性能。|

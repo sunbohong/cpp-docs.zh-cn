@@ -3,12 +3,12 @@ title: Launch.vs.json 架构参考 (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 0410f22a680d5bfc12270ff686938a54e2e8a8fd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223949"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841982"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Launch.vs.json 架构参考 (C++)
 
@@ -16,9 +16,8 @@ ms.locfileid: "87223949"
 
 ## <a name="default-properties"></a>默认属性
 
-||||
+|属性|类型|说明|
 |-|-|-|
-|**Property**|**Type**|**说明**|
 |`name`|string|指定调试目标下拉列表中条目的名称。|
 |`type`|string|指定项目是 dll 还是 .exe（默认为 .exe）|
 |`project`|string|指定项目文件的相对路径。|
@@ -36,9 +35,8 @@ ms.locfileid: "87223949"
 
 ## <a name="c-linux-properties"></a>C++ Linux 属性
 
-||||
+|属性|类型|说明|
 |-|-|-|
-|**Property**|**Type**|**说明**|
 |`program`|string|远程计算机上的程序可执行文件的完整路径。 使用 CMake 时，宏 `${debugInfo.fullTargetPath}` 可用作此字段的值。|
 |`processId`|integer|要将调试程序附加到的可选进程 ID。|
 |`sourceFileMap`|对象 (object)|传递给调试引擎的可选源文件映射。 格式：`{ "\<Compiler source location>": "\<Editor source location>" }` 或 `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`。 示例：`{ "/home/user/foo": "C:\\foo" }` 或 `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`。 请参阅[源文件映射选项](#source_file_map_options)。|
@@ -67,7 +65,7 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 
 与 `setupCommands` 属性配合使用：
 
-||||
+|属性|类型|说明|
 |-|-|-|
 |`text`|string|要执行的调试程序命令。|
 |`description`|string|命令的可选说明。|
@@ -77,7 +75,7 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 
 与 `pipeTransport` 属性配合使用：
 
-||||
+|属性|类型|说明|
 |-|-|-|
 |`pipeCwd`|string|管道程序工作目录的完全限定的路径。|
 |`pipeProgram`|string|要执行的完全限定的管道命令。|
@@ -90,7 +88,7 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 
 与 `sourceFileMap` 属性配合使用：
 
-||||
+|属性|类型|说明|
 |-|-|-|
 |`editorPath`|string|编辑器要查找的源代码的位置。|
 |`useForBreakpoints`|boolean|设置断点时，应使用此源映射。 如果为 `false`，则只有文件名和行号用于设置断点。 如果为 `true`，则只有在使用此源映射时，才会使用文件的完整路径和行号设置断点。 否则，设置断点时将仅使用文件名和行号。 默认为 `true`。|

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e7fd5bd93198c494f18fe18755d13d40fe7fbf96
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215993"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845128"
 ---
 # <a name="add-a-member-variable"></a>添加成员变量
 
@@ -80,13 +80,15 @@ ms.locfileid: "87215993"
 
     有关类型的信息，请参阅[基础类型](../cpp/fundamental-types-cpp.md)。
 
-    |||
-    |-|-|
-    |**`char`**|**`short`**|
-    |**`double`**|**`unsigned char`**|
-    |**`float`**|**`unsigned int`**|
-    |**`int`**|**`unsigned long`**|
-    |**`long`**||
+    - **`char`**
+    - **`double`**
+    - **`float`**
+    - **`int`**
+    - **`long`**
+    - **`short`**
+    - **`unsigned char`**
+    - **`unsigned int`**
+    - **`unsigned long`**
 
   - 如果要添加一个对话框控件的成员变量，则此框填入控件或值的返回对象的类型。 如果选择“控件”，则“变量类型”指定在“控件 ID”框中选择的控件的基类  。 如果对话框控件可以包含一个值，并且你选择了“值”，则“变量类型”指定控件可以包含的值的适当类型 。 有关详细信息，请参阅[对话框控件和变量类型](#dialog-box-controls-and-variable-types)。
 

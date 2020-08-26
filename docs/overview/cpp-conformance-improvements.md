@@ -3,12 +3,12 @@ title: C++ 的符合性改进
 ms.date: 08/04/2020
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
-ms.openlocfilehash: ea0b871651d1cf0c8719e8d5f22df5ab42e69e14
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807818"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841384"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -1937,7 +1937,7 @@ void sample(A<0> *p)
 
 - 使用 `/clr` 进行编译，且其中一个操作数是对象字段或数组元素时。
 
-当编译器无法保证从左到右计算时，它将发出警告 [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017)。 只有在 `/std:c++17` 或更高版本已指定时，编译器才会生成此警告，因为这些运算符的从左到右顺序要求是在 C++17 中引入的。
+当编译器无法保证从左到右计算时，它将发出警告 [C4866](../error-messages/compiler-warnings/c4866.md)。 只有在 `/std:c++17` 或更高版本已指定时，编译器才会生成此警告，因为这些运算符的从左到右顺序要求是在 C++17 中引入的。
 
 若要解决此警告，请先考虑是否需要从左到右计算操作数。 例如，当操作数的计算可能产生与顺序相关的副作用时，可能就需要从左到右计算。 在许多情况下，操作数的计算顺序没有明显的影响。 如果计算顺序必须是从左到右，则考虑是否可以改为通过常量引用来传递操作数。 此更改可消除以下代码示例中的警告：
 
