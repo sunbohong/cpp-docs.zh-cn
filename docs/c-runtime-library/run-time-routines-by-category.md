@@ -7,12 +7,12 @@ helpviewer_keywords:
 - categories, run-time functions
 - functions [CRT]
 ms.assetid: de6f5ac4-2226-4dad-be9f-deeb31138c9d
-ms.openlocfilehash: 4da18db2278a38fd7c59010d2c64d5cb804ad4eb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: be58ce7550c8f15c1c12eafa1dd4187f12fb71cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444806"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846337"
 ---
 # <a name="universal-c-runtime-routines-by-category"></a>按类别分的通用 C 运行时例程
 
@@ -22,20 +22,35 @@ ms.locfileid: "79444806"
 
 UCRT 库例程的主要类别是：
 
-|||
-|-|-|
-|[参数访问](../c-runtime-library/argument-access.md)|[缓冲区操作](../c-runtime-library/buffer-manipulation.md)|
-|[字节分类](../c-runtime-library/byte-classification.md)|[字符分类](../c-runtime-library/character-classification.md)|
-|[复杂数学支持](../c-runtime-library/complex-math-support.md)||
-|[数据对齐](../c-runtime-library/data-alignment.md)|[数据转换](../c-runtime-library/data-conversion.md)|
-|[调试例程](../c-runtime-library/debug-routines.md)|[目录控制](../c-runtime-library/directory-control.md)|
-|[错误处理](../c-runtime-library/error-handling-crt.md)|[异常处理例程](../c-runtime-library/exception-handling-routines.md)|
-|[文件处理](../c-runtime-library/file-handling.md)|[浮点支持](../c-runtime-library/floating-point-support.md)|
-|[输入和输出](../c-runtime-library/input-and-output.md)|[国际化](../c-runtime-library/internationalization.md)|
-|[内存分配](../c-runtime-library/memory-allocation.md)|[进程和环境控制](../c-runtime-library/process-and-environment-control.md)|
-|[稳定性](../c-runtime-library/robustness.md)|[运行时错误检查](../c-runtime-library/run-time-error-checking.md)|
-|[搜索和排序](../c-runtime-library/searching-and-sorting.md)|[字符串操作](../c-runtime-library/string-manipulation-crt.md)|
-|[系统调用](../c-runtime-library/system-calls.md)|[时间管理](../c-runtime-library/time-management.md)|
+:::row:::
+   :::column span="":::
+      [参数访问](../c-runtime-library/argument-access.md)\
+      [缓冲区操作](../c-runtime-library/buffer-manipulation.md)\
+      [字节分类](../c-runtime-library/byte-classification.md)\
+      [字符分类](../c-runtime-library/character-classification.md)\
+      [复杂数学支持](../c-runtime-library/complex-math-support.md)\
+      [数据对齐](../c-runtime-library/data-alignment.md)\
+      [数据转换](../c-runtime-library/data-conversion.md)\
+      [调试例程](../c-runtime-library/debug-routines.md)\
+      [目录控件](../c-runtime-library/directory-control.md)\
+      [错误处理](../c-runtime-library/error-handling-crt.md)\
+      [异常处理例程](../c-runtime-library/exception-handling-routines.md)\
+      [文件处理](../c-runtime-library/file-handling.md)
+   :::column-end:::
+   :::column span="":::
+      [浮点支持](../c-runtime-library/floating-point-support.md)\
+      [输入和输出](../c-runtime-library/input-and-output.md)\
+      [国际化](../c-runtime-library/internationalization.md)\
+      [内存分配](../c-runtime-library/memory-allocation.md)\
+      [进程和环境控制](../c-runtime-library/process-and-environment-control.md)\
+      [强健](../c-runtime-library/robustness.md)\
+      [运行时错误检查](../c-runtime-library/run-time-error-checking.md)\
+      [搜索和排序](../c-runtime-library/searching-and-sorting.md)\
+      [字符串操作](../c-runtime-library/string-manipulation-crt.md)\
+      [系统调用](../c-runtime-library/system-calls.md)\
+      [时间管理](../c-runtime-library/time-management.md)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>另请参阅
 

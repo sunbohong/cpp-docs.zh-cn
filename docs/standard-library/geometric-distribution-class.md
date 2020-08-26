@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 6a9e2c55da7278c50d43a63a4cce79d2a21f573c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98ecbc96d104a900d222c660de7f16563f566a9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233179"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837874"
 ---
 # <a name="geometric_distribution-class"></a>geometric_distribution 类
 
@@ -72,14 +72,12 @@ public:
 *URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 类模板描述了使用几何分布产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
 
-||||
-|-|-|-|
-|[geometric_distribution](#geometric_distribution)|`geometric_distribution::p`|`geometric_distribution::param`|
-|`geometric_distribution::operator()`||[param_type](#param_type)|
+[geometric_distribution](#geometric_distribution)\
+[param_type](#param_type)
 
 属性函数 `p()` 将返回存储的分布参数 `p` 的值。
 
@@ -209,7 +207,7 @@ Distribution for 100 samples:
 
 **命名空间:** std
 
-## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a>geometric_distribution：： geometric_distribution
+## <a name="geometric_distributiongeometric_distribution"></a><a name="geometric_distribution"></a> geometric_distribution：： geometric_distribution
 
 构造分布。
 
@@ -226,7 +224,7 @@ explicit geometric_distribution(const param_type& parm);
 *parm*\
 用于构造分布的参数结构。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 < p && p < 1.0`
 
@@ -234,7 +232,7 @@ explicit geometric_distribution(const param_type& parm);
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="geometric_distributionparam_type"></a><a name="param_type"></a>geometric_distribution：:p aram_type
+## <a name="geometric_distributionparam_type"></a><a name="param_type"></a> geometric_distribution：:p aram_type
 
 存储分布的参数。
 
@@ -257,7 +255,7 @@ struct param_type {
 *然后*\
 与此比较的 `param_type` 实例。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 < p && p < 1.0`
 

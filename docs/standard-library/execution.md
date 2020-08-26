@@ -1,19 +1,19 @@
 ---
-title: '&lt;执行&gt;'
+title: '&lt;操作&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 81e9aa63265c367412fda709aacd5ca3953e9fdf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445026"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835931"
 ---
-# <a name="ltexecutiongt"></a>&lt;执行&gt;
+# <a name="ltexecutiongt"></a>&lt;操作&gt;
 
 介绍并行算法的执行策略。
 
@@ -32,7 +32,7 @@ namespace std::execution {
 
 ### <a name="classes-and-structs"></a>类和结构
 
-|||
+|名称|说明|
 |-|-|
 |[is_execution_policy 结构](is-execution-policy-struct.md)|检测执行策略，以排除其他不明确的重载决策参与的函数签名。|
 |[parallel_policy 类](parallel-policy-class.md)|用作消除并行算法重载的唯一类型，并指示并行算法的执行可能会并行化。|
@@ -41,12 +41,12 @@ namespace std::execution {
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<执行 >
+**标头：**\<execution>
 
 **命名空间：** stdext
 
 ## <a name="see-also"></a>另请参阅
 
-[头文件引用](cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](cpp-standard-library-reference.md)
+[标头文件引用](cpp-standard-library-header-files.md)\
+[C + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](cpp-standard-library-reference.md)

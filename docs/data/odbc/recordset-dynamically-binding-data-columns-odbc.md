@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403863"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837783"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>记录集：动态绑定数据列 (ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "86403863"
 - [如何在运行时动态绑定列](#_core_how_to_bind_columns_dynamically)。
 
 > [!NOTE]
-> 本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用的是批量提取行，则通常不建议使用所述的技术。 有关批量行提取的详细信息，请参阅[记录集：批量提取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+> 本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果使用的是批量提取行，则通常不建议使用所述的技术。 有关批量行提取的详细信息，请参阅 [记录集：批量提取记录 (ODBC) ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> 当可能动态绑定列时
 
@@ -45,7 +45,7 @@ ms.locfileid: "86403863"
 
 记录集仍包含在设计时所知的列的数据成员。 它还包含少量的额外代码，这些代码用于动态确定是否已向目标表添加了任何新列，如果是，则将这些新列绑定到动态分配的存储（而不是记录集数据成员）。
 
-本主题不涵盖其他动态绑定情况，例如删除的表或列。 对于这些情况，需要更直接地使用 ODBC API 调用。 有关信息，请参阅[ODBC 程序员参考](/sql/odbc/reference/odbc-programmer-s-reference)。
+本主题不涵盖其他动态绑定情况，例如删除的表或列。 对于这些情况，需要更直接地使用 ODBC API 调用。 有关信息，请参阅 [ODBC 程序员参考](/sql/odbc/reference/odbc-programmer-s-reference)。
 
 ## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> 如何动态绑定列
 
@@ -92,12 +92,12 @@ ms.locfileid: "86403863"
 
 需要使用的四个列表如下表所示。
 
-|||
-|-|-|
-|**Current-Table-Columns**| （图中的列表 1）数据源上的表中当前列的列表。 此列表可能与记录集中当前绑定的列的列表匹配。|
-|**Bound-Recordset-Columns**| （图中的列表 2）记录集中绑定的列的列表。 这些列已在 `DoFieldExchange` 函数中包含了 RFX 语句。|
-|**Columns-To-Bind-Dynamically**| （图中的列表 3）位于表中但不在记录集中的列的列表。 这些列表是你想要动态绑定的列表。|
-|**Dynamic-Column-Values**| （图中的列表 4）包含从动态绑定的列中检索到的值的存储空间的列表。 此列表的元素与“Columns-to-Bind-Dynamically”中的元素一一对应。|
+| 列出 | 说明 |
+|--|--|
+| **Current-Table-Columns** | （图中的列表 1）数据源上的表中当前列的列表。 此列表可能与记录集中当前绑定的列的列表匹配。 |
+| **Bound-Recordset-Columns** | （图中的列表 2）记录集中绑定的列的列表。 这些列已在 `DoFieldExchange` 函数中包含了 RFX 语句。 |
+| **Columns-To-Bind-Dynamically** | （图中的列表 3）位于表中但不在记录集中的列的列表。 这些列表是你想要动态绑定的列表。 |
+| **Dynamic-Column-Values** | （图中的列表 4）包含从动态绑定的列中检索到的值的存储空间的列表。 此列表的元素与“Columns-to-Bind-Dynamically”中的元素一一对应。 |
 
 ### <a name="building-your-lists"></a><a name="_core_building_your_lists"></a> 生成你的列表
 
@@ -139,14 +139,14 @@ ms.locfileid: "86403863"
 
 1. 生成 Dynamic-Column-Values（与 Columns-to-Bind-Dynamically 并行）以包含每列中数据的值。
 
-   例如，该图显示了包含一个元素的动态列值（列表4）： `CString` 包含当前记录的实际电话号码的对象： "555-1212"。
+   例如，该图显示了动态列值 (List 4) ，其中一个元素是 `CString` 包含当前记录的实际电话号码的对象： "555-1212"。
 
    在最常见的情况下，Dynamic-Column-Values 具有 `CString` 类型的元素。 如果要处理不同数据类型的列，则需要可以包含各种类型元素的列表。
 
 上述过程的结果是两个主要列表：列到绑定-动态包含列的名称和包含当前记录的列中的值的动态列值。
 
 > [!TIP]
-> 如果新列不全是相同的数据类型，则可能需要一个额外的并行列表，其中包含以某种方式定义列列表中每个对应元素的类型的项。 （为此，如有需要，可以使用值 AFX_RFX_BOOL、AFX_RFX_BYTE 等。 这些常量在 AFXDB 中定义。H.）选择列表类型，具体取决于列数据类型的表示方式。
+> 如果新列不全是相同的数据类型，则可能需要一个额外的并行列表，其中包含以某种方式定义列列表中每个对应元素的类型的项。 （为此，如有需要，可以使用值 AFX_RFX_BOOL、AFX_RFX_BYTE 等。 这些常量在 AFXDB 中定义。H. ) 根据您表示列数据类型的方式选择列表类型。
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 添加 RFX 调用以绑定列
 
@@ -174,4 +174,4 @@ RFX_Text( pFX,
 ## <a name="see-also"></a>另请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：处理大数据项（ODBC）](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[记录集：处理 (ODBC) 的大型数据项 ](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

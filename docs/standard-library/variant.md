@@ -5,12 +5,12 @@ f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 6074c80b20ae0c69d34768bc16d7aaae16c99579
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232815"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835657"
 ---
 # <a name="ltvariantgt"></a>&lt;变量&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "87232815"
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator = =](../standard-library/forward-list-operators.md#op_eq_eq)|测试运算符左侧的变量对象是否等于右侧的变体对象。|
 |[operator！ =](../standard-library/forward-list-operators.md#op_neq)|测试运算符左侧的变量对象是否不等于右侧的变体对象。|
@@ -37,24 +37,24 @@ ms.locfileid: "87232815"
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[get](../standard-library/variant-functions.md#get)|获取对象的变体。|
 |[get_if](../standard-library/variant-functions.md#get_if)|获取对象的变体（如果存在）。|
 |[holds_alternative](../standard-library/variant-functions.md#holds_alternative)|**`true`** 如果变量存在，则返回。|
-|[swap](../standard-library/variant-functions.md#swap)|交换**变体**。|
-|[参阅](../standard-library/variant-functions.md#visit)|移到下一个**变体**。|
+|[swap](../standard-library/variant-functions.md#swap)|交换 **变体**。|
+|[参阅](../standard-library/variant-functions.md#visit)|移到下一个 **变体**。|
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
 |[bad_variant_access](../standard-library/bad-variant-access-class.md)|引发以报告对变体对象的值的无效访问的对象。|
 |[变量](../standard-library/variant.md)|要保存其替代类型之一的值或没有值的对象。|
 
 ### <a name="structs"></a>结构
 
-|||
+|名称|说明|
 |-|-|
 |[hash](../standard-library/hash-structure.md)||
 |[monostate](../standard-library/monostate-structure.md)|用于使变体类型成为默认可构造的变量的替代类型。|
@@ -64,7 +64,7 @@ ms.locfileid: "87232815"
 
 ### <a name="objects"></a>对象
 
-|||
+|名称|说明|
 |-|-|
 |[variant_npos](../standard-library/variant-functions.md#variant_npos)||
 

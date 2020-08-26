@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 0401d2e9b5849bdd9f00628107a142606f5f6933
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f8c60b5f4523caf19e432ff853d49ad57fd277a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219126"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835800"
 ---
 # <a name="fisher_f_distribution-class"></a>fisher_f_distribution 类
 
@@ -75,14 +75,12 @@ public:
 *URNG*\
 统一随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **`double`** 如果未根据费舍尔的 F-分布提供和分布任何类型，则类模板将描述产生用户指定的浮点类型或类型的值的分布。 下表链接到有关各个成员的文章。
 
-||||
-|-|-|-|
-|[fisher_f_distribution](#fisher_f_distribution)|`fisher_f_distribution::m`|`fisher_f_distribution::param`|
-|`fisher_f_distribution::operator()`|`fisher_f_distribution::n`|[param_type](#param_type)|
+[fisher_f_distribution](#fisher_f_distribution)\
+[param_type](#param_type)
 
 属性函数 `m()` 和 `n()` 将分别返回存储的分布参数 `m` 和 `n` 的值。
 
@@ -237,7 +235,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a>fisher_f_distribution：： fisher_f_distribution
+## <a name="fisher_f_distributionfisher_f_distribution"></a><a name="fisher_f_distribution"></a> fisher_f_distribution：： fisher_f_distribution
 
 构造分布。
 
@@ -257,7 +255,7 @@ explicit fisher_f_distribution(const param_type& parm);
 *parm*\
 用于构造分布的 `param_type` 结构。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前置条件：** `0.0 < m` 和 `0.0 < n`
 
@@ -265,7 +263,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a>fisher_f_distribution：:p aram_type
+## <a name="fisher_f_distributionparam_type"></a><a name="param_type"></a> fisher_f_distribution：:p aram_type
 
 存储分布的参数。
 
@@ -292,7 +290,7 @@ struct param_type {
 *然后*\
 要与它进行比较的 `param_type` 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前置条件：** `0.0 < m` 和 `0.0 < n`
 

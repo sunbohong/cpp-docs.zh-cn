@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: eb00945084affb2be9299953e5ca9352c56d3b32
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6f7b11c360f58e6a838b22fbf2c68366dce973a3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688095"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846285"
 ---
 # <a name="discard_block_engine-class"></a>discard_block_engine 类
 
@@ -26,34 +26,36 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>参数
 
-*引擎*\
+*搜索引擎优化*\
 基引擎类型。
 
-*P* \
+*H-p*\
 **块大小**。 每个块中的值数。
 
-*R*\
-**已使用的块**。 已使用的每个块中的值数。 其余部分将被丢弃（`P`  -  `R`）。 **前提条件**：`0 < R ≤ P`
+*迅驰*\
+**已使用的块**。 已使用的每个块中的值数。 其余部分将被丢弃 (`P`  -  `R`) 。 **前提条件**： `0 < R ≤ P`
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-||||
-|-|-|-|
-|`discard_block_engine::discard_block_engine`|`discard_block_engine::base`|`discard_block_engine::discard`|
-|`discard_block_engine::operator()`|`discard_block_engine::base_type`|`discard_block_engine::seed`|
+`discard_block_engine::discard_block_engine`\
+`discard_block_engine::base`\
+`discard_block_engine::base_type`\
+`discard_block_engine::discard`\
+`discard_block_engine::operator()`\
+`discard_block_engine::seed`
 
-有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 此类模板通过丢弃由其基引擎返回的某些值，来描述生成值的引擎适配器。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：**\<random>
 
 **命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<random>](../standard-library/random.md)

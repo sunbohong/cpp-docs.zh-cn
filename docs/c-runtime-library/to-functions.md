@@ -23,23 +23,22 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301686"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836073"
 ---
 # <a name="to-functions"></a>to 函数
 
 每个 **to** 函数及其关联的宏（如果有），将单个字符转换为另一个字符。
 
-|||
-|-|-|
-|[__toascii](../c-runtime-library/reference/toascii-toascii.md)|[toupper、_toupper、towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|
-|[tolower、tolower、towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)||
+[__toascii](../c-runtime-library/reference/toascii-toascii.md)\
+[tolower、_tolower、towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
+[toupper、_toupper、towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **to** 函数和宏转换如下所示。
 
@@ -53,7 +52,7 @@ ms.locfileid: "75301686"
 |`_toupper`|`_toupper`|将 `c` 转换为大写|
 |`towupper`|无|将 c 转换为相应的宽字符大写字母|
 
-若要将 **的函数版本用于同时定义为宏的** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。
+若要将 ** 的函数版本用于同时定义为宏的 ** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。
 
 `__toascii` 例程集将除低顺序 7 位以外的所有 `c` 设置为 0，使转换后的值表示 ASCII 字符集中的字符。 如果 `c` 已表示 ASCII 字符，则 `c` 保持不变。
 
@@ -67,7 +66,7 @@ ms.locfileid: "75301686"
 
 - 是 `tolower` 和 **toupper** 区域设置独立的、速度更快的版本。
 
-- 仅当 **isascii(** `c` **)** 和 **isupper(** `c` **)** 或 **islower(** `c` **)** 分别不为零时可用。
+- 仅当**isascii (** `c` **) **并且**isupper (** `c` **) **或**islower (** `c` **) **分别为非零值时才可使用。
 
 - 如果 `c` 不是用于转换的正确大小写的 ASCII 字母，则结果不确定。
 
@@ -119,4 +118,4 @@ sOME OF these LETTERS ARE cAPITALS.
 
 [数据转换](../c-runtime-library/data-conversion.md)<br/>
 [区域设置](../c-runtime-library/locale.md)<br/>
-[is、isw 例程](../c-runtime-library/is-isw-routines.md)
+[为，isw 例程](../c-runtime-library/is-isw-routines.md)

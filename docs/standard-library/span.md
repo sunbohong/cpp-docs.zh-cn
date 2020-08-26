@@ -5,18 +5,18 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813530"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846181"
 ---
 # <a name="ltspangt"></a>&lt;格&gt;
 
 `span`是一个视图，它是一系列连续的对象。 它提供快速且不安全的访问。 与 `vector` 或不同 `array` ，它不会 "拥有" 它提供访问权限的元素。
 
-有关详细信息，请参阅[span 类](span-class.md)。 下面是如何使用范围的示例：
+有关详细信息，请参阅 [span 类](span-class.md) 。 下面是如何使用范围的示例：
 
 ```cpp
 #include <span>
@@ -56,30 +56,30 @@ int main()
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|:-|
 |[格](span-class.md)| 提供对一系列连续对象的视图。 |
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|:-|
 |[operator =](span-class.md#op_eq)| 跨度赋值 |
 |[操作员\[\]](span-class.md#op_at)| 元素访问 |
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|:-|
 | [as_bytes](span-functions.md#as_bytes)| 获取跨度的基础只读字节。 |
 | [as_writable_bytes](span-functions.md#as_writable_bytes) | 获取跨度的基础字节。 |
 
 ### <a name="constants"></a>常量
 
-|||
+|名称|说明|
 |-|:-|
 | **dynamic_extent** | 指示范围大小在运行时确定，而不是在编译时确定。 如果范围中的元素数量在编译时是已知的，则会将其指定为 `Extent` 模板参数。 如果在运行时之前不知道该数字，请改为指定 `dynamic_extent` 。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

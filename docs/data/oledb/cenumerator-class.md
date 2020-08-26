@@ -22,16 +22,16 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: 2a48acb8a961d76c34d2ba85ede5c827c880f400
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214914"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838147"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
 
-使用 OLE DB 枚举器对象，该对象公开[ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))接口以返回描述所有数据源和枚举器的行集。
+使用 OLE DB 枚举器对象，该对象公开 [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) 接口以返回描述所有数据源和枚举器的行集。
 
 ## <a name="syntax"></a>语法
 
@@ -48,17 +48,17 @@ class CEnumerator :
 
 ### <a name="methods"></a>方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[查找](#find)|搜索可用的提供程序（数据源），查找一个具有指定名称的提供程序。|
 |[GetMoniker](#getmoniker)|检索当前记录的 `IMoniker` 接口。|
 |[打开](#open)|打开枚举器。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 您可以 `ISourcesRowset` 从此类间接检索数据。
 
-## <a name="cenumeratorfind"></a><a name="find"></a>CEnumerator：： Find
+## <a name="cenumeratorfind"></a><a name="find"></a> CEnumerator：： Find
 
 在可用提供程序之间查找指定名称。
 
@@ -77,11 +77,11 @@ bool Find(TCHAR* szSearchName) throw();
 
 **`true`** 如果找到该名称，则为。 否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此名称映射到 `SOURCES_NAME` [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85))接口的成员。
+此名称映射到 `SOURCES_NAME` [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) 接口的成员。
 
-## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a>CEnumerator：： GetMoniker
+## <a name="cenumeratorgetmoniker"></a><a name="getmoniker"></a> CEnumerator：： GetMoniker
 
 分析显示名称以提取可转换为名字对象的字符串的组件。
 
@@ -97,7 +97,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>参数
 
 *ppMoniker*<br/>
-弄从当前行的显示名称（[CEnumeratorAccessor：： m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)）分析的名字对象。
+弄从当前行的 [CEnumeratorAccessor：： m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md))  (的显示名称分析的名字对象。
 
 *lpszDisplayName*<br/>
 中要分析的显示名称。
@@ -106,9 +106,9 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 标准的 HRESULT。
 
-## <a name="cenumeratoropen"></a><a name="open"></a>CEnumerator：： Open
+## <a name="cenumeratoropen"></a><a name="open"></a> CEnumerator：： Open
 
-绑定枚举器的名字对象（如果已指定），然后通过调用[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85))检索枚举器的行集。
+绑定枚举器的名字对象（如果已指定），然后通过调用 [ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85))检索枚举器的行集。
 
 ### <a name="syntax"></a>语法
 

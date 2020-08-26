@@ -1,17 +1,17 @@
 ---
-title: ref （c + + COM 特性）
+title: 'ref (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ref
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: 6cf78930b19891832369e9b96c0a761d2752e4a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 92b3c7b2cddf17a70a949914ef82540457696f20
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232737"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846103"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "87232737"
 
 ## <a name="example"></a>示例
 
-下面的代码演示如何使用**ref**特性：
+下面的代码演示如何使用 **ref** 特性：
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -45,9 +45,7 @@ __interface IFireTabCtrl
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`typedef`**、interface 参数、interface 方法|
 |**且**|否|

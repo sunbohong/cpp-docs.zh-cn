@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: 6a68f25f153a0ad2cf42ebfaa374ff63c5746fcd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aa72f090a006d6936339582a919b0faf5cab6b03
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326302"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835345"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 接口
 
-`IWorkerThreadClient`是[CWorkerThread](../../atl/reference/cworkerthread-class.md)类的客户端实现的接口。
+`IWorkerThreadClient` 是由 [CWorkerThread](../../atl/reference/cworkerthread-class.md) 类的客户端实现的接口。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -33,22 +33,22 @@ __interface IWorkerThreadClient
 
 ### <a name="methods"></a>方法
 
-|||
+|名称|说明|
 |-|-|
-|[关闭手柄](#closehandle)|实现此方法以关闭与此对象关联的句柄。|
-|[执行](#execute)|实现此方法，当与此对象关联的句柄发出信号时执行代码。|
+|[CloseHandle](#closehandle)|实现此方法可关闭与此对象关联的句柄。|
+|[执行](#execute)|实现此方法以在与此对象关联的句柄变为已终止时执行代码。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-当您有代码需要在工作线程上执行以响应变为信号的句柄时，实现此接口。
+当你的代码需要在工作线程上执行，以响应句柄变为信号时，实现此接口。
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlutil.h
+**标头：** atlutil
 
-## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a>IWorkerThread客户端：：关闭句柄
+## <a name="iworkerthreadclientclosehandle"></a><a name="closehandle"></a> IWorkerThreadClient：： CloseHandle
 
-实现此方法以关闭与此对象关联的句柄。
+实现此方法可关闭与此对象关联的句柄。
 
 ```
 HRESULT CloseHandle(HANDLE  hHandle);
@@ -61,21 +61,21 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 ### <a name="return-value"></a>返回值
 
-返回成功时S_OK，或失败时出现错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-传递给此方法的句柄以前通过调用[CWorkerThread：：addHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
+传递给此方法的句柄以前通过调用 [CWorkerThread：： AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
 
 ### <a name="example"></a>示例
 
-以下代码显示了`IWorkerThreadClient::CloseHandle`的简单实现。
+下面的代码演示的简单实现 `IWorkerThreadClient::CloseHandle` 。
 
 [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]
 
-## <a name="iworkerthreadclientexecute"></a><a name="execute"></a>IWorkerThread客户端：执行
+## <a name="iworkerthreadclientexecute"></a><a name="execute"></a> IWorkerThreadClient：： Execute
 
-实现此方法，当与此对象关联的句柄发出信号时执行代码。
+实现此方法以在与此对象关联的句柄变为已终止时执行代码。
 
 ```
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
@@ -83,23 +83,23 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 
 ### <a name="parameters"></a>参数
 
-*德帕拉姆*<br/>
-用户参数。
+*dwParam*<br/>
+User 参数。
 
 *hObject*<br/>
 已发出信号的句柄。
 
 ### <a name="return-value"></a>返回值
 
-返回成功时S_OK，或失败时出现错误 HRESULT。
+如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-传递给此方法的句柄和 DWORD/指针以前通过调用[CWorkerThread：：addHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
+传递给此方法的句柄和 DWORD/指针以前通过调用 [CWorkerThread：： AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
 
 ### <a name="example"></a>示例
 
-以下代码显示了`IWorkerThreadClient::Execute`的简单实现。
+下面的代码演示的简单实现 `IWorkerThreadClient::Execute` 。
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 

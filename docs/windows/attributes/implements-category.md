@@ -1,17 +1,17 @@
 ---
-title: implements_category （c + + COM 特性）
+title: 'implements_category (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements_category
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: 067a3a183820b09112217647e20d12b592540613
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd9a4de8834bc22368393e9ea4639884785af0f2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224417"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846116"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -28,9 +28,9 @@ ms.locfileid: "87224417"
 *implements_category*<br/>
 已实现类别的 ID。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Implements_category** c + + 特性指定由目标类实现的组件类别。 这是通过创建类别映射并添加由**implements_category**属性指定的单独条目来完成的。 有关详细信息，请参阅[组件类别及其工作原理](/windows/win32/com/component-categories-and-how-they-work)。
+**Implements_category** c + + 特性指定由目标类实现的组件类别。 这是通过创建类别映射并添加由 **implements_category** 属性指定的单独条目来完成的。 有关详细信息，请参阅 [组件类别及其工作原理](/windows/win32/com/component-categories-and-how-they-work)。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果 `progid` 应用了，则 `vi_progid` `coclass` 还会应用。
 
@@ -53,13 +53,11 @@ class CMyClass {};
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|是|
-|**必需属性**|以下项之一： `coclass` 、 `progid` 或`vi_progid`|
+|**必需属性**|以下项之一： `coclass` 、 `progid` 或 `vi_progid`|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 182db37a2a42ec91066b58903c873d3e9c8289f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216487"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838252"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 类
 
@@ -57,7 +57,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[AddProperty](#addproperty)|向属性集添加属性。|
 |[CDBPropSet](#cdbpropset)|构造函数。|
@@ -65,15 +65,15 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>运算符
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[operator =](#op_equal)|将一个属性集的内容分配给另一个。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 OLE DB 提供程序和使用者使用 `DBPROPSET` 结构来传递 `DBPROP` 结构的数组。 每个 `DBPROP` 结构都表示一个可以设置的属性。
 
-## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet：： AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a> CDBPropSet：： AddProperty
 
 向属性集添加属性。
 
@@ -124,7 +124,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 **`true`** 如果已成功添加属性，则为。 否则为 **`false`** 。
 
-## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet：： CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> CDBPropSet：： CDBPropSet
 
 构造函数。 初始化 `rgProperties` `cProperties` DBPROPSET 结构的、和 `guidPropertySet` 字段。 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
 
@@ -146,7 +146,7 @@ CDBPropSet();
 *propset*<br/>
 [in] 复制构造的另一个 `CDBPropSet` 对象。
 
-## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet：： SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a> CDBPropSet：： SetGUID
 
 设置 `guidPropertySet` 结构中的字段 `DBPROPSET` 。
 
@@ -159,13 +159,13 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>参数
 
 *guid*<br/>
-中用于设置 `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的字段的 GUID。
+中用于设置 `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的字段的 GUID。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此字段也可以通过[构造函数](../../data/oledb/cdbpropset-cdbpropset.md)进行设置。
+此字段也可以通过 [构造函数](../../data/oledb/cdbpropset-cdbpropset.md) 进行设置。
 
-## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet：： operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet：： operator =
 
 将一个属性集的内容分配给另一属性集。
 

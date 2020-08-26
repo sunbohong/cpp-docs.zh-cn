@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: a7df541049aafd191e969eaa392ab3706f171926
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13eea1101abca0f79f0d7c15405ceb3118707b67
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224599"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845648"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
@@ -23,9 +23,9 @@ ms.locfileid: "87224599"
 
 **命名空间:** std
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-类型的对象使用 `strstream` **`char`** *，即 C 字符串。 用于 [\<sstream>](../standard-library/sstream.md) 处理[basic_string](../standard-library/basic-string-class.md)类型的对象。
+类型的对象使用 `strstream` **`char`** *，即 C 字符串。 用于 [\<sstream>](../standard-library/sstream.md) 处理 [basic_string](../standard-library/basic-string-class.md)类型的对象。
 
 > [!NOTE]
 > \<strstream> 中的类已弃用。 请考虑转而使用 \<sstream> 中的类。
@@ -34,7 +34,7 @@ ms.locfileid: "87224599"
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
 |[strstreambuf 类](../standard-library/strstreambuf-class.md)|此类描述一个流缓冲区，该缓冲区控制元素与数组对象中存储的元素序列之间的来回传输 **`char`** 。|
 |[istrstream 类](../standard-library/istrstream-class.md)|此类描述了一种对象，该对象可控制从 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区提取元素和编码对象。|

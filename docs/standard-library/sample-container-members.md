@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: 21d3660661e3987d1b9477bb6298373033946c06
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228110"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846259"
 ---
 # <a name="sample-container-members"></a>示例容器成员
 
@@ -20,7 +20,7 @@ ms.locfileid: "87228110"
 
 ## <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|描述可用作受控序列常量迭代器的对象。|
 |[const_reference](../standard-library/container-class-const-reference.md)|描述可用作受控序列元素的常量引用的对象。|
@@ -34,7 +34,7 @@ ms.locfileid: "87228110"
 
 ## <a name="member-functions"></a>成员函数
 
-|||
+|名称|说明|
 |-|-|
 |[准备](../standard-library/container-class-begin.md)|该成员函数返回一个迭代器，指向序列的第一个元素（或刚超出空序列末尾的位置）。|
 |[清除](../standard-library/container-class-clear.md)|调用 [erase](../standard-library/container-class-erase.md)（[begin](../standard-library/container-class-begin.md) 和 [end](../standard-library/container-class-end.md)）。|

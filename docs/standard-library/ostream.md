@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 37642cbcbe57fba54f071a8fc94af53c97684a36
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffcb6c7b2f95b0b62659f6080c9ed0d1f111237c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228136"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846389"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-定义[basic_ostream](../standard-library/basic-ostream-class.md)的类模板，该模板用于调节 iostreams 的插入。 此标头还定义了若干相关的操控程序。 （此标头通常包含在另一个 iostream 标头中。 很少会直接包含它。）
+定义 [basic_ostream](../standard-library/basic-ostream-class.md)的类模板，该模板用于调节 iostreams 的插入。 此标头还定义了若干相关的操控程序。 （此标头通常包含在另一个 iostream 标头中。 很少会直接包含它。）
 
 ## <a name="syntax"></a>语法
 
@@ -34,7 +34,7 @@ ms.locfileid: "87228136"
 
 ### <a name="manipulators"></a>操控器
 
-|||
+|名称|说明|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|终止行并刷新缓冲区。|
 |[结尾](../standard-library/ostream-functions.md#ends)|终止字符串。|

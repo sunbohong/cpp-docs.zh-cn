@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f5de7914f76d70d4bc618508d6a13ed0bdaf13df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 16471f0986d58e38fed436b2921ce3f8a3e89325
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193531"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835774"
 ---
 # <a name="forward_list-class"></a>forward_list 类
 
@@ -106,9 +106,9 @@ class forward_list
 *器*\
 存储的分配器对象，用于封装有关 forward_list 的内存分配和解除分配的详细信息。 此参数是可选的。 默认值为分配器<`Type`>。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-`forward_list`对象通过基于[分配器类](../standard-library/allocator-class.md)的存储对象（通常称为）为其控制的*Allocator*序列分配并释放存储 `std::allocator)` 。 有关详细信息，请参阅[分配器](../standard-library/allocators.md)。 分配器对象必须与类型的对象具有相同的外部接口 `allocator` 。
+`forward_list`对象可为其控制的序列分配并释放存储，并通过类*分配*器的存储对象（基于[分配器类](../standard-library/allocator-class.md) (常见称为）来控制存储 `std::allocator)` 。 有关详细信息，请参阅[分配器](../standard-library/allocators.md)。 分配器对象必须与类型的对象具有相同的外部接口 `allocator` 。
 
 > [!NOTE]
 > 分配容器对象时，不会复制存储的分配器对象。
@@ -121,13 +121,13 @@ class forward_list
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[forward_list](#forward_list)|构造 `forward_list` 类型的对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，用于表示转发列表对象的分配器类。|
 |[const_iterator](#const_iterator)|一种类型，用于为转发列表提供常量迭代器。|
@@ -142,7 +142,7 @@ class forward_list
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[assign](#assign)|清除转发列表中的元素，并将一组新的元素复制到目标转发列表。|
 |[before_begin](#before_begin)|返回寻址转发列表中第一个元素之前的位置的迭代器。|
@@ -174,11 +174,11 @@ class forward_list
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator =](#op_eq)|将转发列表的元素替换为另一个转发列表的副本。|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 一种类型，用于表示转发列表对象的分配器类。
 
@@ -186,11 +186,11 @@ class forward_list
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `allocator_type` 是模板参数 Allocator 的同义词。
 
-## <a name="assign"></a><a name="assign"></a>将
+## <a name="assign"></a><a name="assign"></a> 将
 
 清除转发列表中的元素，并将一组新的元素复制到目标转发列表。
 
@@ -214,7 +214,7 @@ void assign(InputIterator First, InputIterator Last);
 *时间*\
 替换范围的结束处。
 
-*计*\
+*count*\
 要分配的元素数。
 
 *初始值*\
@@ -226,7 +226,7 @@ void assign(InputIterator First, InputIterator Last);
 *IList*\
 要复制的 initializer_list。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 forward_list 是整数类型，则第一个成员函数的行为与 `assign((size_type)First, (Type)Last)` 相同。 否则，第一个成员函数将由控制的序列替换 **`*this`** 为序列 [ `First, Last)` ，该序列不能与初始受控序列重叠。
 
@@ -234,7 +234,7 @@ void assign(InputIterator First, InputIterator Last);
 
 第三个成员函数将 initializer_list 的元素复制到 forward_list 中。
 
-## <a name="before_begin"></a><a name="before_begin"></a>before_begin
+## <a name="before_begin"></a><a name="before_begin"></a> before_begin
 
 返回寻址转发列表中第一个元素之前的位置的迭代器。
 
@@ -247,9 +247,9 @@ iterator before_begin();
 
 恰好指向序列的第一个元素之前位置（或恰好在空序列末尾的位置之前）的正向迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-## <a name="begin"></a><a name="begin"></a>准备
+## <a name="begin"></a><a name="begin"></a> 准备
 
 返回寻址转发列表中第一个元素的迭代器。
 
@@ -262,9 +262,9 @@ iterator begin();
 
 指向序列第一个元素（或刚超出空序列末尾的位置）的正向迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-## <a name="cbefore_begin"></a><a name="cbefore_begin"></a>cbefore_begin
+## <a name="cbefore_begin"></a><a name="cbefore_begin"></a> cbefore_begin
 
 返回寻址转发列表中第一个元素之前的位置的常量迭代器。
 
@@ -276,9 +276,9 @@ const_iterator cbefore_begin() const;
 
 恰好指向序列的第一个元素之前位置（或恰好在空序列末尾的位置之前）的正向迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 返回一个 **`const`** 迭代器，该迭代器用于寻址范围内的第一个元素。
 
@@ -288,13 +288,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-一个 **`const`** 向前访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()` ）。
+一个 **`const`** 向前访问迭代器，指向范围的第一个元素，或刚超出空范围末尾 (空范围) 的位置 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `begin()` `cbegin()` 。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 **`const`**) 容器 `begin()` `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -303,7 +303,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 返回一个 **`const`** 迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
 
@@ -315,11 +315,11 @@ const_iterator cend() const;
 
 指向恰好超出范围末尾位置的向前访问迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `end()` `cend()` 。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 **`const`**) 容器 `end()` `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -331,7 +331,7 @@ auto i2 = Container.cend();
 
 不应对 `cend` 返回的值取消引用。
 
-## <a name="clear"></a><a name="clear"></a>清除
+## <a name="clear"></a><a name="clear"></a> 清除
 
 清除转发列表中的所有元素。
 
@@ -339,11 +339,11 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此成员函数调用 `erase_after(before_begin(), end()).`
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 一种类型，用于为转发列表提供常量迭代器。
 
@@ -351,11 +351,11 @@ void clear();
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `const_iterator` 描述为可用作受控序列的常量向前迭代器的对象。 在此处描述为实现定义的类型的同义词。
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 一种类型，它提供指向 **`const`** 转发列表中的元素的指针。
 
@@ -364,9 +364,9 @@ typedef typename Allocator::const_pointer
     const_pointer;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 一种类型，用于提供对转发列表中元素的常量引用。
 
@@ -374,9 +374,9 @@ typedef typename Allocator::const_pointer
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 一种有符号整数类型，可用于表示转发列表中某个范围类迭代器所指向元素之间的元素数目。
 
@@ -384,11 +384,11 @@ typedef typename Allocator::const_reference const_reference;
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `difference_type` 描述一个对象，可以表示受控序列中任意两个元素的地址之间的差异。
 
-## <a name="emplace_after"></a><a name="emplace_after"></a>emplace_after
+## <a name="emplace_after"></a><a name="emplace_after"></a> emplace_after
 
 在指定位置之后移动构造新元素。
 
@@ -409,11 +409,11 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 指定新插入元素的迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此成员函数插入一个元素，其中包含构造函数参数*val* ，紧跟在受控序列中*位置*指向的元素之后。 否则，其行为与 [forward_list :: insert_after](#insert_after) 相同。
+此成员函数插入一个元素，其中包含构造函数参数 *val* ，紧跟在受控序列中 *位置* 指向的元素之后。 否则，其行为与 [forward_list :: insert_after](#insert_after) 相同。
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 在列表的起始位置添加一个就地构造的元素。
 
@@ -427,13 +427,13 @@ template <class Type>
 *初始值*\
 添加到转发列表开头的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此成员函数在受控序列末尾插入具有构造函数参数 `_ val` 的元素。
 
 如果引发了异常，该容器将保持不变，并重新引发该异常。
 
-## <a name="empty"></a><a name="empty"></a>空白处
+## <a name="empty"></a><a name="empty"></a> 空白处
 
 测试转发列表是否为空。
 
@@ -445,7 +445,7 @@ bool empty() const;
 
 **`true`** 如果转发列表为空，则为;否则为 **`false`** 。
 
-## <a name="end"></a><a name="end"></a>端面
+## <a name="end"></a><a name="end"></a> 端面
 
 返回寻址转发列表中最后一个元素之后的位置的迭代器。
 
@@ -458,7 +458,7 @@ iterator end();
 
 指向刚超出序列末尾位置的正向迭代器。
 
-## <a name="erase_after"></a><a name="erase_after"></a>erase_after
+## <a name="erase_after"></a><a name="erase_after"></a> erase_after
 
 删除转发列表中指定位置之后的元素。
 
@@ -482,9 +482,9 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 一个迭代器，它指定已删除的任何元素之外保留的第一个元素或 [forward_list::end](#end)（若此类元素不存在）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员函数删除受控序列*中*紧靠后的元素。
+第一个成员函数删除受控序列 *中*紧靠后的元素。
 
 第二个成员函数将删除 `( first,  last)` 范围中受控序列的元素（不包括任一终点）。
 
@@ -492,7 +492,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 成员函数从不引发异常。
 
-## <a name="forward_list"></a><a name="forward_list"></a>forward_list
+## <a name="forward_list"></a><a name="forward_list"></a> forward_list
 
 构造 `forward_list` 类型的对象。
 
@@ -536,23 +536,23 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 *IList*\
 要复制的 initializer_list。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-所有构造函数都存储[分配器](../standard-library/allocator-class.md)并初始化受控序列。 分配器对象*是参数（* 如果存在）。 对于复制构造函数，则为 `right.get_allocator()`。 否则为 `Allocator()`。
+所有构造函数都存储[分配器](../standard-library/allocator-class.md)并初始化受控序列。 分配器对象 *是参数（* 如果存在）。 对于复制构造函数，则为 `right.get_allocator()`。 否则为 `Allocator()`。
 
 前两个构造函数指定一个空的初始受控序列。
 
-第三个构造函数指定值的*计数*元素的重复 `Type()` 。
+第三个构造函数指定值的 *计数* 元素的重复 `Type()` 。
 
 第四个和第五个构造函数指定值*Val*的*计数*元素的重复。
 
-第六个构造函数指定由*Right*控制的序列副本。 如果 `InputIterator` 是整数类型，则接下来的两个构造函数指定 `(size_type)First` 元素的重复元素，元素的值为 `(Type)Last`。 否则，接下来两个构造函数指定序列 `[First, Last)`。
+第六个构造函数指定由 *Right*控制的序列副本。 如果 `InputIterator` 是整数类型，则接下来的两个构造函数指定 `(size_type)First` 元素的重复元素，元素的值为 `(Type)Last`。 否则，接下来两个构造函数指定序列 `[First, Last)`。
 
 第九个和第十个构造函数与第六个构造函数相同，但它具有 [rvalue](../cpp/rvalue-reference-declarator-amp-amp.md) 引用。
 
 最后一个构造函数指定具有类 `initializer_list<Type>` 的对象的初始受控序列。
 
-## <a name="front"></a><a name="front"></a>主
+## <a name="front"></a><a name="front"></a> 主
 
 返回对转发列表中第一个元素的引用。
 
@@ -565,7 +565,7 @@ const_reference front() const;
 
 对受控序列的第一个元素的引用，必须为非空。
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 返回用于构造转发列表的分配器对象的一个副本。
 
@@ -577,7 +577,7 @@ allocator_type get_allocator() const;
 
 存储的 [allocator](../standard-library/allocator-class.md) 对象。
 
-## <a name="insert_after"></a><a name="insert_after"></a>insert_after
+## <a name="insert_after"></a><a name="insert_after"></a> insert_after
 
 在转发列表中的指定位置之后添加元素。
 
@@ -614,11 +614,11 @@ template <class InputIterator>
 
 一个迭代器，指定新插入的元素（仅限第一个和最后一个成员函数）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-每个成员函数在由控制的序列中的*位置*指向的元素之后插入，这是由剩余操作数指定的序列。
+每个成员函数在由控制的序列中的 *位置* 指向的元素之后插入，这是由剩余操作数指定的序列。
 
-第一个成员函数插入具有值*Val*的元素，并返回指定新插入的元素的迭代器。
+第一个成员函数插入具有值 *Val* 的元素，并返回指定新插入的元素的迭代器。
 
 第二个成员函数插入值*Val*的*计数*元素的重复。
 
@@ -632,7 +632,7 @@ template <class InputIterator>
 
 如果在一个或多个元素插入过程中引发异常，则容器将保持不变并重新引发异常。
 
-## <a name="iterator"></a><a name="iterator"></a>器
+## <a name="iterator"></a><a name="iterator"></a> 器
 
 一种类型，用于为转发列表提供迭代器。
 
@@ -640,11 +640,11 @@ template <class InputIterator>
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `iterator` 描述为可用作受控序列的前向迭代器的对象。 在此处描述为实现定义的类型的同义词。
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 返回转发列表的最大长度。
 
@@ -656,9 +656,9 @@ size_type max_size() const;
 
 该对象可控制的最长序列的长度。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-## <a name="merge"></a><a name="merge"></a>merge
+## <a name="merge"></a><a name="merge"></a> merge
 
 将两个排序序列合并为一个以线性时间排序的序列。 将元素从参数列表中删除，并将它们插入此 `forward_list`。 调用 `merge` 之前，这两个列表应该按相同的比较函数对象排序。 合并的列表将按该比较函数对象进行排序。
 
@@ -676,17 +676,17 @@ template <class Predicate>
 *压缩*\
 用于对元素进行排序的比较函数对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`forward_list::merge`从中移除元素 `forward_list` `right` ，并将其插入到此中 `forward_list` 。 这两个序列必须由相同的谓词进行排序，如下所述。 合并的序列也可按该比较函数对象进行排序。
+`forward_list::merge` 从中移除元素 `forward_list` `right` ，并将其插入到此中 `forward_list` 。 这两个序列必须由相同的谓词进行排序，如下所述。 合并的序列也可按该比较函数对象进行排序。
 
-对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。 （元素按 `ascending` 顺序排序。）第二个成员函数将在 `! comp(*Pj, *Pi)` 每次进行排序 `i < j` 。
+对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。  (元素按 `ascending` 顺序排序 ) 。第二个成员函数将在 `! comp(*Pj, *Pi)` 每次 `i < j` 进行排序。
 
 原始受控序列中没有元素对在所生成的受控序列中反向。 如果所生成的受控序列中的一对元素经比较相等 (`!(*Pi < *Pj) && !(*Pj < *Pi)`)，则来自原始受控序列的元素在来自由 `right` 控制的序列的元素之前显示。
 
 仅当 `comp` 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的顺序保留，并重新引发异常。
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 将转发列表的元素替换为另一个转发列表的副本。
 
@@ -704,9 +704,9 @@ forward_list& operator=(forward_list&& right);
 *IList*\
 一个用括号括起来的初始化表达式列表，其行为类似于类型 `Type` 的元素的序列。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员运算符将受控序列替换为由*right*控制的序列副本。
+第一个成员运算符将受控序列替换为由 *right*控制的序列副本。
 
 第二个成员操作符从类 `initializer_list<Type>` 的对象替换受控序列。
 
@@ -720,7 +720,7 @@ forward_list& operator=(forward_list&& right);
 typedef typename Allocator::pointer pointer;
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 删除转发列表起始处的一个元素。
 
@@ -728,13 +728,13 @@ typedef typename Allocator::pointer pointer;
 void pop_front();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 转发列表的第一个元素必须为非空。
 
 成员函数从不引发异常。
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 在转发列表起始处添加一个元素。
 
@@ -748,11 +748,11 @@ void push_front(Type&& val);
 *初始值*\
 添加到转发列表开头的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果引发了异常，该容器将保持不变，并重新引发该异常。
 
-## <a name="reference"></a><a name="reference"></a>对
+## <a name="reference"></a><a name="reference"></a> 对
 
 一种类型，用于提供对转发列表中元素的引用。
 
@@ -760,7 +760,7 @@ void push_front(Type&& val);
 typedef typename Allocator::reference reference;
 ```
 
-## <a name="remove"></a><a name="remove"></a>取消
+## <a name="remove"></a><a name="remove"></a> 取消
 
 清除转发列表中与指定值匹配的元素。
 
@@ -773,13 +773,13 @@ void remove(const Type& val);
 *初始值*\
 一个值，如果某个元素包含该值，则会导致从列表中删除该元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数从受控序列删除由迭代器 `P` 指定的所有元素，其中 `*P ==  val`。
 
 成员函数从不引发异常。
 
-## <a name="remove_if"></a><a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a> remove_if
 
 将满足指定谓词的元素从转发列表中清除。
 
@@ -793,13 +793,13 @@ template <class Predicate>
 *pred*\
 一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数从受控序列删除由迭代器 `P` 指定的所有元素，其中 `pred(*P)` 为 true。
 
-仅当*pred*引发异常时才会发生异常。 在这种情况下，受控序列以未指定的状态保留，并重新引发异常。
+仅当 *pred* 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的状态保留，并重新引发异常。
 
-## <a name="resize"></a><a name="resize"></a>调节
+## <a name="resize"></a><a name="resize"></a> 调节
 
 为转发列表指定新的大小。
 
@@ -816,11 +816,11 @@ void resize(size_type _Newsize, const Type& val);
 *初始值*\
 要用于填充的值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数同时确保列表之后中的元素数 *_Newsize*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `Type()` ，而第二个成员函数则追加值为*val*的元素。 若要使受控序列更短，两个成员函数可有效地调用 `erase_after(begin() + _Newsize - 1, end())`。
+成员函数同时确保列表之后中的元素数 *_Newsize*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `Type()` ，而第二个成员函数则追加值为 *val*的元素。 若要使受控序列更短，两个成员函数可有效地调用 `erase_after(begin() + _Newsize - 1, end())`。
 
-## <a name="reverse"></a><a name="reverse"></a>反向
+## <a name="reverse"></a><a name="reverse"></a> 反向
 
 颠倒转发列表中元素的顺序。
 
@@ -828,7 +828,7 @@ void resize(size_type _Newsize, const Type& val);
 void reverse();
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 一种类型，用于表示两个元素之间的无符号距离。
 
@@ -836,11 +836,11 @@ void reverse();
 typedef typename Allocator::size_type size_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 无符号的整数类型描述可表示任何受控序列长度的对象。
 
-## <a name="sort"></a><a name="sort"></a>进行
+## <a name="sort"></a><a name="sort"></a> 进行
 
 按升序或按谓词指定的顺序排列元素。
 
@@ -855,15 +855,15 @@ void sort(Predicate pred);
 *pred*\
 排序谓词。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 两个成员函数通过谓词对受控序列中的元素排序，如下所述。
 
-对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。 （元素按 `ascending` 顺序排序。）成员模板函数将在 `! pred(*Pj, *Pi)` 每次进行排序 `i < j` 。 原始受控序列中没有排序的元素对在所生成的受控序列中反向。 （排序是稳定的。）
+对于在 `i` 和 `j` 位置指定元素的迭代器 `Pi` 和 `Pj`，第一个成员函数每当 `i < j` 时采用顺序 `!(*Pj < *Pi)`。  (元素按 `ascending` 顺序排序。 ) 成员模板函数将在 `! pred(*Pj, *Pi)` 每次进行 `i < j` 排序。 原始受控序列中没有排序的元素对在所生成的受控序列中反向。 （排序是稳定的。）
 
-仅当*pred*引发异常时才会发生异常。 在这种情况下，受控序列以未指定的顺序保留，并重新引发异常。
+仅当 *pred* 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的顺序保留，并重新引发异常。
 
-## <a name="splice_after"></a><a name="splice_after"></a>splice_after
+## <a name="splice_after"></a><a name="splice_after"></a> splice_after
 
 从源 forward_list 中删除元素并将其插入到目标 forward_list 中。
 
@@ -907,13 +907,13 @@ void splice_after(
 *时间*\
 要从源 forward_list 中进行插入的范围之外的第一个位置。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一对成员函数将由*源*控制的序列插入到由*Where*指向的受控序列中的元素之后。 它还将从*源*中删除所有元素。 （ `&Source` 不得等于 **`this`** 。）
+第一对成员函数将由 *源* 控制的序列插入到由 *Where*指向的受控序列中的元素之后。 它还将从 *源*中删除所有元素。  (`&Source` 不得等于 **`this`** 。 ) 
 
 第二对成员函数删除由*源*控制的序列中的*Iter*之后的元素，并将其插入到由*Where*指向的受控序列中的元素之后。 （如果 `Where == Iter || Where == ++Iter`，则不会发生更改。）
 
-第三对成员函数（范围接合）将由源控制的序列中由源控制的子范围直接插入到 `(First, Last)` 由*Where*指向的受控序列中的元素之后。 *Source* 它还会删除由*源*控制的序列中的原始子范围。 （如果为 `&Source == this` ，则范围 `(First, Last)` 不能包含指向的元素。 *Where*）
+第三对成员函数 (范围拼接) `(First, Last)` 从*由*源控制的序列插入由*源*控制的子范围。 它还会删除由 *源*控制的序列中的原始子范围。  (如果 `&Source == this` 为，则范围 `(First, Last)` 不能包含指向的元素。 *Where*) 
 
 如果范围接合插入 `N` 个元素和 `&Source != this`，则类 [iterator](#iterator) 的对象会递增 `N` 次。
 
@@ -992,7 +992,7 @@ int main()
 Beginning state of lists:c1 = (10) (11)c2 = (20) (21) (22)c3 = (30) (31)c4 = (40) (41) (42) (43)After splicing c1 into c2:c1 =c2 = (20) (21) (10) (11) (22)After splicing the first element of c3 into c2:c3 = (30)c2 = (20) (21) (31) (10) (11) (22)After splicing a range of c4 into c2:c4 = (40) (41)c2 = (20) (21) (42) (43) (31) (10) (11) (22)
 ```
 
-## <a name="swap"></a><a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a> 购
 
 交换两个转发列表的元素。
 
@@ -1005,11 +1005,11 @@ void swap(forward_list& right);
 *然后*\
 提供要交换的元素的转发列表。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数交换和右之间的受控 **`*this`** 序列*right*。 如果 `get_allocator() ==  right.get_allocator()`，它在固定时间内执行此操作，它不引发任何异常，不使任何引用、指针或指定两个受控序列中的元素的迭代器失效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。
 
-## <a name="unique"></a><a name="unique"></a>针对
+## <a name="unique"></a><a name="unique"></a> 针对
 
 删除来自每个连续的相等元素组的第一个元素之外的所有元素。
 
@@ -1024,7 +1024,7 @@ void unique(BinaryPredicate comp);
 *压缩*\
 用于比较连续元素的二元谓词。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 保留每个唯一元素的第一个元素，并删除其余元素。 元素必须进行排序，以使具有相等值的元素在列表中相邻。
 
@@ -1034,7 +1034,7 @@ void unique(BinaryPredicate comp);
 
 仅当 `comp` 引发异常时才会发生异常。 在这种情况下，受控序列以未指定的状态保留，并重新引发异常。
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 一种类型，用于表示转发列表中存储的元素的类型。
 
@@ -1042,6 +1042,6 @@ void unique(BinaryPredicate comp);
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 类型是模板参数 `Type` 的同义词。

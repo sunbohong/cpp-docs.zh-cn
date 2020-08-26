@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211843"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838095"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 类
 
@@ -55,18 +55,18 @@ class CManualAccessor : public CAccessorBase
 
 ### <a name="methods"></a>方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[AddBindEntry](#addbindentry)|向输出列添加绑定项。|
 |[AddParameterEntry](#addparameterentry)|向参数访问器添加参数项。|
 |[CreateAccessor](#createaccessor)|为列绑定结构分配内存并初始化列数据成员。|
 |[CreateParameterAccessor](#createparameteraccessor)|为参数绑定结构分配内存并初始化参数数据成员。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-使用 `CManualAccessor`，可以通过运行时函数调用指定参数和输出列绑定。
+使用 `CManualAccessor` ，可以通过运行时函数调用指定参数和输出列绑定。
 
-## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor：： AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a> CManualAccessor：： AddBindEntry
 
 向输出列添加绑定项。
 
@@ -80,14 +80,14 @@ void AddBindEntry(DBORDINAL nOrdinal,
    void* pStatus = NULL) throw ();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 中列号。
 
-wType<br/>
+wType <br/>
 中数据类型。
 
 *nColumnSize*<br/>
@@ -102,13 +102,13 @@ wType<br/>
 *pStatus*<br/>
 中指向要绑定到列状态的变量的指针（如果需要）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-若要使用此函数，必须先调用[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 不能添加比 `CreateAccessor`中指定的列数更多的条目。
+若要使用此函数，必须先调用 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 不能添加比中指定的列数更多的项 `CreateAccessor` 。
 
-## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor：： AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor：： AddParameterEntry
 
-向参数输入结构添加参数项。
+   将参数项添加到参数项结构。
 
 ### <a name="syntax"></a>语法
 
@@ -121,14 +121,14 @@ void AddParameterEntry(DBORDINAL nOrdinal,
    DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 中参数编号。
 
-wType<br/>
+wType <br/>
 中数据类型。
 
 *nColumnSize*<br/>
@@ -146,11 +146,11 @@ wType<br/>
 *eParamIO*<br/>
 中指定与绑定关联的参数是否为输入、输入/输出或输出参数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-若要使用此函数，必须先调用[CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
+若要使用此函数，必须先调用 [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
 
-## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor：： CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor：： CreateAccessor
 
 为列绑定结构分配内存并初始化列数据成员。
 
@@ -162,10 +162,10 @@ HRESULT CreateAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nBindEntries*<br/>
-中列数。 此数字应匹配对[CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md)函数的调用数。
+中列数。 此数字应匹配对 [CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) 函数的调用数。
 
 *pBuffer*<br/>
 中指向存储输出列的缓冲区的指针。
@@ -177,11 +177,11 @@ HRESULT CreateAccessor(int nBindEntries,
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-在调用 `CManualAccessor::AddBindEntry` 函数之前调用此函数。
+在调用函数之前调用此函数 `CManualAccessor::AddBindEntry` 。
 
-## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor：： CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a> CManualAccessor：： CreateParameterAccessor
 
 为参数绑定结构分配内存并初始化参数数据成员。
 
@@ -193,7 +193,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nBindEntries*<br/>
 中列数。
@@ -208,9 +208,9 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-在调用[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，必须调用此函数。
+在调用 [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，必须调用此函数。
 
 ## <a name="see-also"></a>另请参阅
 

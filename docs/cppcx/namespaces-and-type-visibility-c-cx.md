@@ -2,12 +2,12 @@
 title: 命名空间和类型可见性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: cbfbd8c27065121eb176d9a62662eab7e1f4271b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230969"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837796"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 
@@ -28,15 +28,14 @@ ms.locfileid: "87230969"
 
 使用以下访问修饰符控制元数据可见性和源代码可访问性。
 
-||||
-|-|-|-|
-|修饰符|含义|是否发送到元数据|
-|private|默认可访问性。 与在标准 C++ 中的含义一样。|否|
-|受保护|与在标准 C++ 中的含义一样（在应用程序或组件中以及元数据中）。|是|
-|公共|与在标准 C++ 中的含义一样。|是|
-|`public protected` - 或 - `protected public`|元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。|是|
-|`protected private` 或 `private protected`|在元数据中不可见；应用程序或组件中的受保护的可访问性。||
-|`internal` 或 `private public`|成员在应用程序或组件中是公共的，但在元数据中不可见。|否|
+| 修饰符 | 含义 | 是否发送到元数据 |
+|--|--|--|
+| **`private`** | 默认可访问性。 与在标准 C++ 中的含义一样。 | 否 |
+| **`protected`** | 与在标准 C++ 中的含义一样（在应用程序或组件中以及元数据中）。 | 是 |
+| **`public`** | 与在标准 C++ 中的含义一样。 | 是 |
+| **`public protected`** 或 **`protected public`** | 元数据中的受保护的可访问性，应用程序或组件中的公共可访问性。 | 是 |
+| **`protected private`** 或 **`private protected`** | 在元数据中不可见；应用程序或组件中的受保护的可访问性。 |  |
+| **`internal`** 或 **`private public`** | 成员在应用程序或组件中是公共的，但在元数据中不可见。 | 否 |
 
 ## <a name="windows-runtime-namespaces"></a>Windows 运行时命名空间
 
@@ -46,13 +45,12 @@ Windows API 包含在 Windows：：命名空间中声明的类型 \* 。 这些�
 
 C + +/CX 将这些命名空间中的某些类型定义为 Windows 运行时类型系统的投影过程的一部分。
 
-|||
-|-|-|
-|**Namespace**|**说明**|
-|default|包含内置数值和 char16 类型。 这些类型在每个命名空间的范围内，并且 **`using`** 永远不需要语句。|
-|平台|主要包含与 Windows 运行时类型（如、、和）相对应的公共类型 `Array<T>` `String` `Guid` `Boolean` 。 另外还包括专用帮助程序类型（如 `Platform::Agile<T>` 和 `Platform::Box<T>`）。|
-|Platform::Collections|包含实现 Windows 运行时集合接口、等的具体集合类 `IVector` `IMap` 。 这些类型在标头文件 collection.h 而非 platform.winmd 中定义。|
-|Platform::Details|包含编译器使用而不适合公共使用的类型。|
+| 命名空间 | 说明 |
+|--|--|
+| 默认值 | 包含内置数值和 char16 类型。 这些类型在每个命名空间的范围内，并且 **`using`** 永远不需要语句。 |
+| `Platform` | 主要包含与 Windows 运行时类型（如、、和）相对应的公共类型 `Array<T>` `String` `Guid` `Boolean` 。 另外还包括专用帮助程序类型（如 `Platform::Agile<T>` 和 `Platform::Box<T>`）。 |
+| `Platform::Collections` | 包含实现 Windows 运行时集合接口、等的具体集合类 `IVector` `IMap` 。 这些类型在标头文件 collection.h 而非 platform.winmd 中定义。 |
+| `Platform::Details` | 包含编译器使用而不适合公共使用的类型。 |
 
 ## <a name="see-also"></a>另请参阅
 

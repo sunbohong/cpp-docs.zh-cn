@@ -1,17 +1,17 @@
 ---
-title: defaultvtable （c + + COM 特性）
+title: 'defaultvtable (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvtable
 helpviewer_keywords:
 - defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-ms.openlocfilehash: 2da0d8070f961f1ae0fc075585eb28881f712fb4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6b1d6960a065bf2df46852d3df1ca53d4239f1bc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215252"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839486"
 ---
 # <a name="defaultvtable"></a>defaultvtable
 
@@ -28,13 +28,13 @@ ms.locfileid: "87215252"
 *interface*<br/>
 要使 COM 对象具有默认 vtable 的指定接口。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Defaultvtable** c + + 特性具有与[defaultvtable](/windows/win32/Midl/defaultvtable) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示使用**defaultvtable**指定默认接口的类上的属性：
+下面的代码演示使用 **defaultvtable** 指定默认接口的类上的属性：
 
 ```cpp
 // cpp_attr_ref_defaultvtable.cpp
@@ -64,9 +64,7 @@ class CMyC3 : public IMyI3 {};
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|否|

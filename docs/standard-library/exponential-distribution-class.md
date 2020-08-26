@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: db176bef55455c0553e5865e268c4e4e8fed089d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212353"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88835904"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution 类
 
@@ -73,14 +73,12 @@ public:
 *URNG*\
 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **`double`** 如果未根据指数分布提供和分布任何类型，则类模板将描述产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
 
-||||
-|-|-|-|
-|[exponential_distribution](#exponential_distribution)|`exponential_distribution::lambda`|`exponential_distribution::param`|
-|`exponential_distribution::operator()`||[param_type](#param_type)|
+[exponential_distribution](#exponential_distribution)\
+[param_type](#param_type)
 
 属性成员函数 `lambda()` 将返回存储的分布参数 `lambda` 的值。
 
@@ -171,7 +169,7 @@ Distribution for 10 samples:
 
 **命名空间:** std
 
-## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a>exponential_distribution：： exponential_distribution
+## <a name="exponential_distributionexponential_distribution"></a><a name="exponential_distribution"></a> exponential_distribution：： exponential_distribution
 
 构造分布。
 
@@ -188,7 +186,7 @@ explicit exponential_distribution(const param_type& parm);
 *parm*\
 用于构造分布的参数包。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 < lambda`
 
@@ -196,7 +194,7 @@ explicit exponential_distribution(const param_type& parm);
 
 第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
-## <a name="exponential_distributionparam_type"></a><a name="param_type"></a>exponential_distribution：:p aram_type
+## <a name="exponential_distributionparam_type"></a><a name="param_type"></a> exponential_distribution：:p aram_type
 
 存储分布的参数。
 
@@ -219,7 +217,7 @@ struct param_type {
 *然后*\
 要与它进行比较的 `param_type` 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **前提条件：**`0.0 < lambda`
 
