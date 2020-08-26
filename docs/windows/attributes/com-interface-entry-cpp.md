@@ -1,17 +1,17 @@
 ---
-title: com_interface_entry （c + + COM 特性）
+title: 'com_interface_entry (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.com_interface_entry
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 06df146ea47428ee782da7a93c2da7097e110324
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8339afb97df57f5080629dfed08823c5c091c5a3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215343"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844114"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -27,15 +27,15 @@ ms.locfileid: "87215343"
 ### <a name="parameters"></a>参数
 
 *com_interface_entry*<br/>
-一个字符串，其中包含该项的实际文本。 有关可能值的列表，请参阅[COM_INTERFACE_ENTRY 宏](../../atl/reference/com-interface-entry-macros.md)。
+一个字符串，其中包含该项的实际文本。 有关可能值的列表，请参阅 [COM_INTERFACE_ENTRY 宏](../../atl/reference/com-interface-entry-macros.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Com_interface_entry** c + + 特性将字符串的 unabridged 内容插入目标对象的 com 接口映射。 如果将特性应用于目标对象一次，则会将该项插入到现有接口映射的开头。 如果该属性重复应用到同一个目标对象，则这些条目将按接收顺序插入到接口映射的开头。
 
 此属性要求 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 属性（或隐含这些属性之一的其他属性）也应用于同一个元素。 如果使用任何单个属性，则会自动应用另外两个属性。 例如，如果 `progid` 应用了，则 `vi_progid` `coclass` 还会应用。
 
-由于**com_interface_entry**的第一次使用导致新接口插入到接口映射的开头，因此它必须是下列 COM_INTERFACE_ENTRY 类型之一：
+由于 **com_interface_entry** 的第一次使用导致新接口插入到接口映射的开头，因此它必须是下列 COM_INTERFACE_ENTRY 类型之一：
 
 - COM_INTERFACE_ENTRY
 
@@ -105,9 +105,7 @@ END_COM_MAP()
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|是|

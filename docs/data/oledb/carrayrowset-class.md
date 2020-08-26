@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212259"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843243"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 
@@ -62,7 +62,7 @@ class CArrayRowset :
    protected CBulkRowset <TAccessor>
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
 您希望集合使用的访问器类的类型。
@@ -75,26 +75,26 @@ class CArrayRowset :
 
 ### <a name="methods"></a>方法
 
-|||
-|-|-|
-|[CArrayRowset](#carrayrowset)|构造函数。|
-|[快照](#snapshot)|将整个行集读入内存。|
+| 名称 | 说明 |
+|--|--|
+| [CArrayRowset](#carrayrowset) | 构造函数。 |
+| [快照](#snapshot) | 将整个行集读入内存。 |
 
 ### <a name="operators"></a>运算符
 
-|||
-|-|-|
-|[操作员&#91;&#93;](#operator)|访问行集合的元素。|
+| 名称 | 说明 |
+|--|--|
+| [运算符&#91;&#93;](#operator) | 访问行集合的元素。 |
 
 ### <a name="data-members"></a>数据成员
 
-|||
-|-|-|
-|[CArrayRowset::m_nRowsRead](#nrowsread)|已读取的行数。|
+| 名称 | 说明 |
+|--|--|
+| [CArrayRowset::m_nRowsRead](#nrowsread) | 已读取的行数。 |
 
-## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset：： CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a> CArrayRowset：： CArrayRowset
 
-创建新的 `CArrayRowset` 对象。
+创建一个新的 `CArrayRowset` 对象。
 
 ### <a name="syntax"></a>语法
 
@@ -102,12 +102,12 @@ class CArrayRowset :
 CArrayRowset(int nMax = 100000);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *N 每天*<br/>
 [in] 行集中的最大行数。
 
-## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset：： Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a> CArrayRowset：： Snapshot
 
 将整个行集读入内存，并创建该行集的图像或快照。
 
@@ -117,7 +117,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset：： operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a> CArrayRowset：： operator
 
 提供用于访问行集中的行的类似数组的语法。
 
@@ -127,7 +127,7 @@ HRESULT Snapshot() throw();
 TAccessor & operator[](int nrow);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
 一个指定存储在行集中的访问器类型的模板化参数。
@@ -139,11 +139,11 @@ TAccessor & operator[](int nrow);
 
 请求行的内容。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果*nRow*超过行集中的行数，则会引发异常。
+如果 *nRow* 超过行集中的行数，则会引发异常。
 
-## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset：： m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a> CArrayRowset：： m_nRowsRead
 
 包含已读取的行集中的行数。
 

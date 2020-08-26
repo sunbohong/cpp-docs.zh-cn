@@ -25,16 +25,16 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: e29883b2a42010daee19f915c49c31686b232cf6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233452"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843295"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
 
-OLE DB 模板中的所有访问器都从此类派生。 `CAccessorBase`允许一个行集管理多个访问器。 它还提供了参数和输出列的绑定。
+OLE DB 模板中的所有访问器都从此类派生。 `CAccessorBase` 允许一个行集管理多个访问器。 它还提供了参数和输出列的绑定。
 
 ## <a name="syntax"></a>语法
 
@@ -46,19 +46,19 @@ OLE DB 模板中的所有访问器都从此类派生。 `CAccessorBase`允许一
 
 ### <a name="methods"></a>方法
 
-|||
-|-|-|
-|[关闭](#close)|关闭访问器。|
-|[GetHAccessor](#geth)|检索访问器句柄。|
-|[GetNumAccessors](#getnum)|检索类创建的取值函数数目。|
-|[IsAutoAccessor](#isauto)|测试指定的访问器是否为 autoaccessor。|
-|[ReleaseAccessors](#release)|释放访问器。|
+| 名称 | 说明 |
+|--|--|
+| [关闭](#close) | 关闭访问器。 |
+| [GetHAccessor](#geth) | 检索访问器句柄。 |
+| [GetNumAccessors](#getnum) | 检索类创建的取值函数数目。 |
+| [IsAutoAccessor](#isauto) | 测试指定的访问器是否为 autoaccessor。 |
+| [ReleaseAccessors](#release) | 释放访问器。 |
 
 ## <a name="requirements"></a>要求
 
 **标头:** atldbcli.h
 
-## <a name="caccessorbaseclose"></a><a name="close"></a>CAccessorBase：： Close
+## <a name="caccessorbaseclose"></a><a name="close"></a> CAccessorBase：： Close
 
 关闭访问器。
 
@@ -70,9 +70,9 @@ void Close();
 
 ### <a name="remarks"></a>备注
 
-必须先调用[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) 。
+必须先调用 [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) 。
 
-## <a name="caccessorbasegethaccessor"></a><a name="geth"></a>CAccessorBase：： GetHAccessor
+## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase：： GetHAccessor
 
 检索指定访问器的访问器句柄。
 
@@ -91,7 +91,7 @@ HACCESSOR GetHAccessor(ULONG nAccessor) const;
 
 访问器句柄。
 
-## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a>CAccessorBase：： GetNumAccessors
+## <a name="caccessorbasegetnumaccessors"></a><a name="getnum"></a> CAccessorBase：： GetNumAccessors
 
 检索类创建的取值函数数目。
 
@@ -105,7 +105,7 @@ ULONG GetNumAccessors() const;
 
 类创建的取值函数数目。
 
-## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a>CAccessorBase：： IsAutoAccessor
+## <a name="caccessorbaseisautoaccessor"></a><a name="isauto"></a> CAccessorBase：： IsAutoAccessor
 
 如果在移动操作过程中自动为访问器检索数据，则返回 true。
 
@@ -124,7 +124,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 
 **`true`** 如果访问器是 autoaccessor，则返回。 否则，它将返回 **`false`** 。
 
-## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a>CAccessorBase：： ReleaseAccessors
+## <a name="caccessorbasereleaseaccessors"></a><a name="release"></a> CAccessorBase：： ReleaseAccessors
 
 释放由类创建的访问器。
 
@@ -143,9 +143,9 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-从[CAccessorRowset：： Close](../../data/oledb/caccessorrowset-close.md)调用。
+从 [CAccessorRowset：： Close](../../data/oledb/caccessorrowset-close.md)调用。
 
 ## <a name="see-also"></a>另请参阅
 

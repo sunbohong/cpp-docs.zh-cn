@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: c9c03eb688a71e0587ca4faa14d89d8487d4ec59
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617418"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844803"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits 类
 
-类模板描述补充*分配器类型*的对象。 分配器类型是描述分配器对象的任何类型，它用于管理已分配的存储。 具体而言，对于任何分配器类型 `Alloc`，可以使用 `allocator_traits<Alloc>` 来确定支持分配器的容器所需的所有信息。 有关详细信息，请参阅默认的 [allocator 类](allocator-class.md)。
+类模板描述补充 *分配器类型*的对象。 分配器类型是描述分配器对象的任何类型，它用于管理已分配的存储。 具体而言，对于任何分配器类型 `Alloc`，可以使用 `allocator_traits<Alloc>` 来确定支持分配器的容器所需的所有信息。 有关详细信息，请参阅默认的 [allocator 类](allocator-class.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -62,7 +62,7 @@ template <class Alloc>
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |`allocator_type`|该类型是模板参数 `Alloc`的同义词。|
 |`const_pointer`|如果该类型的形式正确，则此类型为 `Alloc::const_pointer`，否则，此类型为 `pointer_traits<pointer>::rebind<const value_type>`。|
@@ -80,16 +80,16 @@ template <class Alloc>
 
 以下静态方法调用给定分配器参数上的相应的方法。
 
-|||
+|名称|说明|
 |-|-|
-|[allocate](#allocate)|使用给定的分配器参数分配内存的静态方法。|
+|[分配](#allocate)|使用给定的分配器参数分配内存的静态方法。|
 |[构造](#construct)|使用指定的分配器构造对象的静态方法。|
 |[写意](#deallocate)|使用指定的分配器释放指定的对象数的静态方法。|
 |[破坏](#destroy)|使用指定的分配器调用对象上的构造函数而不释放其内存的静态方法。|
 |[max_size](#max_size)|可以分配使用指定的分配器确定对象的最大数目的静态方法。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|在指定的分配器上调用 `select_on_container_copy_construction` 的静态方法。|
 
-### <a name="allocate"></a><a name="allocate"></a>分配
+### <a name="allocate"></a><a name="allocate"></a> 分配
 
 使用给定的分配器参数分配内存的静态方法。
 
@@ -105,7 +105,7 @@ static pointer allocate(Alloc& al, size_type count,
 *fc-al*\
 分配器对象。
 
-*计*\
+*count*\
 要分配的元素数量。
 
 *提示*\
@@ -119,7 +119,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 第二种方法返回 `al.allocate(count, hint)`（如果该表达式形式正确）；否则返回 `al.allocate(count)`。
 
-### <a name="construct"></a><a name="construct"></a>构造
+### <a name="construct"></a><a name="construct"></a> 构造
 
 使用指定的分配器构造对象的静态方法。
 
@@ -139,11 +139,11 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 *args*\
 传递给对象构造函数的参数列表。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果该表达式形式正确，则静态成员函数调用 `al.construct(ptr, args...)`；否则计算 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` 的结果。
 
-### <a name="deallocate"></a><a name="deallocate"></a>写意
+### <a name="deallocate"></a><a name="deallocate"></a> 写意
 
 使用指定的分配器释放指定的对象数的静态方法。
 
@@ -161,16 +161,16 @@ static void deallocate(Alloc al,
 *ptr*\
 指向要释放对象的起始位置的指针。
 
-*计*\
+*count*\
 要释放对象的数量。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 此方法调用 `al.deallocate(ptr, count)`。
 
 此方法不会引发任何操作。
 
-### <a name="destroy"></a><a name="destroy"></a>破坏
+### <a name="destroy"></a><a name="destroy"></a> 破坏
 
 使用指定的分配器调用对象上的构造函数而不释放其内存的静态方法。
 
@@ -187,11 +187,11 @@ template <class Uty>
 *ptr*\
 指向对象位置的指针。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果该表达式形式正确，则此方法调用 `al.destroy(ptr)`；否则计算 `ptr->~Uty()` 的结果。
 
-### <a name="max_size"></a><a name="max_size"></a>max_size
+### <a name="max_size"></a><a name="max_size"></a> max_size
 
 可以分配使用指定的分配器确定对象的最大数目的静态方法。
 
@@ -204,11 +204,11 @@ static size_type max_size(const Alloc& al);
 *fc-al*\
 分配器对象。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 如果该表达式形式正确，则此方法返回 `al.max_size()`；否则返回 `numeric_limits<size_type>::max()`。
 
-### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a><a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 在指定的分配器上调用 `select_on_container_copy_construction` 的静态方法。
 
@@ -225,6 +225,6 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 `al.select_on_container_copy_construction()`如果此类型格式正确，此方法将返回; 否则返回*al*。
 
-#### <a name="remarks"></a>备注
+#### <a name="remarks"></a>注解
 
 此方法用于在所关联的容器为构造副本时指定分配器。

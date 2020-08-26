@@ -8,20 +8,19 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9e572e4ba8cb4c6cb15329342a7947c35ece7270
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373141"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844257"
 ---
 # <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 函数
 
-|||
-|-|-|
-|[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
+[交换 (unordered_map) ](#swap) 
+[交换 (unordered_multimap) ](#swap_function_multimap)
 
-## <a name="swap-unordered_map"></a><a name="swap"></a>交换 （unordered_map）
+## <a name="swap-unordered_map"></a><a name="swap"></a> 交换 (unordered_map) 
 
 交换两个容器的内容。
 
@@ -34,30 +33,30 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*关键*\
+*按键*\
 键类型。
 
-*泰*\
+*Ty*\
 映射类型。
 
-*散 列*\
+*代码*\
 哈希函数对象类型。
 
 *Pred*\
 相等比较函数对象类型。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 第一个要交换的容器。
 
-*对*\
+*然后*\
 第二个要交换的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-模板函数执行`left.`[unordered_map：：交换](../standard-library/unordered-map-class.md#swap)`(right)`。
+模板函数执行 `left.` [unordered_map：： swap](../standard-library/unordered-map-class.md#swap) `(right)` 。
 
 ### <a name="example"></a>示例
 
@@ -114,7 +113,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>交换 （unordered_multimap）
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a> 交换 (unordered_multimap) 
 
 交换两个容器的内容。
 
@@ -127,30 +126,30 @@ void swap(
 
 ### <a name="parameters"></a>参数
 
-*关键*\
+*按键*\
 键类型。
 
-*泰*\
+*Ty*\
 映射类型。
 
-*散 列*\
+*代码*\
 哈希函数对象类型。
 
 *Pred*\
 相等比较函数对象类型。
 
-*Alloc*\
+*分配*\
 allocator 类。
 
-*离开*\
+*左中*\
 第一个要交换的容器。
 
-*对*\
+*然后*\
 第二个要交换的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-模板函数执行`left.`[unordered_multimap：：交换](../standard-library/unordered-multimap-class.md#swap)`(right)`。
+模板函数执行 `left.` [unordered_multimap：： swap](../standard-library/unordered-multimap-class.md#swap) `(right)` 。
 
 ### <a name="example"></a>示例
 

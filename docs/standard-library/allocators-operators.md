@@ -5,20 +5,19 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: 2d2f928ab3773ed8e0b0afdc0113db2ef5b2a3dd
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 969c9f8e05a9fafad4d3a1102060e2b3d4d0eb2e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561213"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844777"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 运算符
 
 这些是在分配器中定义的全局模板运算符函数 &lt; &gt; 。 有关类成员运算符函数的详细说明，请参阅类文档。
 
-|||
-|-|-|
-|[operator！ =](#op_neq)|[operator = =](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[operator = =](#op_eq_eq)
 
 ## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
@@ -43,7 +42,7 @@ bool operator!=(
 
 **`true`** 如果分配器对象不相等，则为; 否则为。 **`false`** 如果分配器对象相等，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 模板运算符返回 `!(left == right)`。
 
@@ -70,7 +69,7 @@ bool operator==(
 
 **`true`** 如果分配器对象相等，则为; **`false`** 如果分配器对象不相等，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此模板运算符返回 `left.equals(right)`。
 

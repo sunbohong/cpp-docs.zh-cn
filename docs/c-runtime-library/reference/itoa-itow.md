@@ -113,16 +113,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216929"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843490"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
-将整数转换为字符串。 提供这些函数的更多安全版本;请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
+将整数转换为字符串。 提供这些函数的更多安全版本;请参阅 [_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -186,25 +186,25 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 保存转换结果的缓冲区。
 
 *基数*<br/>
-用于转换值的基数，*该值*必须在2-36 范围内。
+用于转换值的基数， *该值*必须在2-36 范围内。
 
 *大小*<br/>
-缓冲区的长度（以字符类型的单位表示）。 此参数是从 c + + 中的*buffer*参数推断出来的。
+缓冲区的长度（以字符类型的单位表示）。 此参数是从 c + + 中的 *buffer* 参数推断出来的。
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数均返回一个指向*缓冲区*的指针。 无错误返回。
+其中每个函数均返回一个指向 *缓冲区*的指针。 无错误返回。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函数将给定*值*参数的数字转换为以 null 结尾的字符串，并将结果（最多33个字符用于 **_itoa**、 **_ltoa**和 **_ultoa**，以及65（最多个 **_i64toa** **字符）放**入*缓冲区*。 如果*基数*等于10并且*值*为负，则存储字符串的第一个字符为减号（ **-** ）。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函数分别是 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**的宽字符版本。
+**_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函数将给定*值*参数的数字转换为以 null 结尾的字符串，并将 (、 **_Itoa**和 **_ltoa 的结果**_ultoa 最多33个字符**65，在***缓冲区***中存储 _i64toa 和** **_ui64toa**) 的结果。 如果 *基数* 等于10并且 *值* 为负，则存储字符串的第一个字符为减号 (**-**) 。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函数分别是 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**的宽字符版本。
 
 > [!IMPORTANT]
-> 这些函数可以写入超过太小缓冲区末尾的部分。 若要防止缓冲区溢出，请确保*缓冲区*的大小足以容纳转换后的数字加上尾随的 null 字符和符号字符。 这些函数的误用可能导致代码中出现严重的安全问题。
+> 这些函数可以写入超过太小缓冲区末尾的部分。 若要防止缓冲区溢出，请确保 *缓冲区* 的大小足以容纳转换后的数字加上尾随的 null 字符和符号字符。 这些函数的误用可能导致代码中出现严重的安全问题。
 
-由于可能存在安全问题，因此默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此函数或变量可能不安全。请考虑**改用*safe_function* **。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 建议更改源代码，以使用警告消息所建议的*safe_function* 。 更安全的函数不能写入超过指定缓冲区大小的字符。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
+由于可能存在安全问题，因此默认情况下，这些函数会导致弃用警告 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)： **此函数或变量可能不安全。请考虑**改用 *safe_function* **。若要禁用弃用，请使用 _CRT_SECURE_NO_WARNINGS。** 建议更改源代码，以使用警告消息所建议的 *safe_function* 。 更安全的函数不能写入超过指定缓冲区大小的字符。 有关详细信息，请参阅 [_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
 
-若要在不使用弃用警告的情况下使用这些函数，请在包含任何 CRT 标头之前定义 **_CRT_SECURE_NO_WARNINGS**预处理器宏。 可以在开发人员命令提示符下的命令行中执行此操作，方法是将 **/D_CRT_SECURE_NO_WARNINGS**编译器选项添加到**cl**命令。 否则，在源文件中定义宏。 如果使用预编译标头，请在预编译标头包含文件、 *pch* （Visual Studio 2017 及更早版本）的顶部定义宏（*stdafx.h* ）。 若要在源代码中定义宏，请在包含任何 CRT 标头之前使用 **#define**指令，如以下示例中所示：
+若要在不使用弃用警告的情况下使用这些函数，请在包含任何 CRT 标头之前定义 **_CRT_SECURE_NO_WARNINGS** 预处理器宏。 可以在开发人员命令提示符下的命令行中执行此操作，方法是将 **/D_CRT_SECURE_NO_WARNINGS** 编译器选项添加到 **cl** 命令。 否则，在源文件中定义宏。 如果使用预编译标头，请在 Visual Studio 2017 和更早) 版本中预编译标头包含文件、 *pch* (*stdafx.h* 的顶部定义宏。 若要在源代码中定义宏，请在包含任何 CRT 标头之前使用 **#define** 指令，如以下示例中所示：
 
 ```C
 By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
@@ -215,9 +215,9 @@ By default, this function's global state is scoped to the application. To change
 
 在 c + + 中，这些函数具有调用更安全的副本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-POSIX 名称**itoa**、 **ltoa**和**ultoa**作为 **_itoa**、 **_ltoa**和 **_ultoa**函数的别名存在。 POSIX 名称已弃用，因为它们不遵循 ISO C 的特定于实现的全局函数名称约定。默认情况下，这些函数会导致弃用警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)：**此项的 POSIX 名称已弃用。请改用与 ISO C 和 c + + 一致的名称：** *new_name*。 建议更改源代码以使用这些函数的更安全版本， **_itoa_s**、 **_ltoa_s**或 **_ultoa_s**。 有关详细信息，请参阅[_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
+POSIX 名称 **itoa**、 **ltoa**和 **ultoa** 作为 **_itoa**、 **_ltoa**和 **_ultoa** 函数的别名存在。 POSIX 名称已弃用，因为它们不遵循 ISO C 的特定于实现的全局函数名称约定。默认情况下，这些函数会导致弃用警告 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)： **此项的 POSIX 名称已弃用。请改用与 ISO C 和 c + + 一致的名称：** *new_name*。 建议更改源代码以使用这些函数的更安全版本， **_itoa_s**、 **_ltoa_s**或 **_ultoa_s**。 有关详细信息，请参阅 [_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
 
-对于源代码可移植性，你可能想要在代码中保留 POSIX 名称。 若要在不使用弃用警告的情况下使用这些函数，请在包含任何 CRT 标头之前定义 **_CRT_NONSTDC_NO_WARNINGS**和 **_CRT_SECURE_NO_WARNINGS**预处理器宏。 可以在开发人员命令提示符下的命令行中执行此操作，方法是将 **/D_CRT_SECURE_NO_WARNINGS**和 **/D_CRT_NONSTDC_NO_WARNINGS**编译器选项添加到**cl**命令。 否则，在源文件中定义宏。 如果使用预编译标头，请在预编译头包含文件的顶部定义宏。 若要在源代码中定义宏，请在包含任何 CRT 标头之前使用 **#define**指令，如以下示例中所示：
+对于源代码可移植性，你可能想要在代码中保留 POSIX 名称。 若要在不使用弃用警告的情况下使用这些函数，请在包含任何 CRT 标头之前定义 **_CRT_NONSTDC_NO_WARNINGS** 和 **_CRT_SECURE_NO_WARNINGS** 预处理器宏。 可以在开发人员命令提示符下的命令行中执行此操作，方法是将 **/D_CRT_SECURE_NO_WARNINGS** 和 **/D_CRT_NONSTDC_NO_WARNINGS** 编译器选项添加到 **cl** 命令。 否则，在源文件中定义宏。 如果使用预编译标头，请在预编译头包含文件的顶部定义宏。 若要在源代码中定义宏，请在包含任何 CRT 标头之前使用 **#define** 指令，如以下示例中所示：
 
 ```C
 #define _CRT_NONSTDC_NO_WARNINGS 1
@@ -227,13 +227,12 @@ POSIX 名称**itoa**、 **ltoa**和**ultoa**作为 **_itoa**、 **_ltoa**和 **_
 
 ### <a name="maximum-conversion-count-macros"></a>最大转换计数宏
 
-为了帮助您为转换创建安全缓冲区，CRT 包含了一些便利的宏。 它们定义了转换若干公共基类型的每个整数类型的最大可能值（包括 null 结束符和符号字符）所需的缓冲区大小。 若要确保转换缓冲区足够大，以便在*基数*指定的基础中接收任何转换，请在分配缓冲区时使用其中一个已定义的宏。 这有助于防止在将整型类型转换为字符串时出现缓冲区溢出错误。 当你在源中包括 stdlib.h 或 wchar 时，将定义这些宏。
+为了帮助您为转换创建安全缓冲区，CRT 包含了一些便利的宏。 它们定义了转换若干公共基类型的每个整数类型的最大可能值（包括 null 结束符和符号字符）所需的缓冲区大小。 若要确保转换缓冲区足够大，以便在 *基数*指定的基础中接收任何转换，请在分配缓冲区时使用其中一个已定义的宏。 这有助于防止在将整型类型转换为字符串时出现缓冲区溢出错误。 当你在源中包括 stdlib.h 或 wchar 时，将定义这些宏。
 
 若要在字符串转换函数中使用其中一种宏，请声明相应字符类型的转换缓冲区，并将该宏值用于 integer 类型，将 base 作为缓冲区维度。 此表列出了适用于所列基的每个函数的宏：
 
-||||
-|-|-|-|
 |函数|radix|宏|
+|-|-|-|
 |**_itoa**， **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
 |**_ltoa**， **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
 |**_ultoa**， **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
@@ -274,7 +273,7 @@ int main()
 
 ## <a name="example"></a>示例
 
-此示例演示如何使用一些整数转换函数。 请注意，使用 **_CRT_SECURE_NO_WARNINGS**宏使警告 C4996 安静。
+此示例演示如何使用一些整数转换函数。 请注意，使用 **_CRT_SECURE_NO_WARNINGS** 宏使警告 C4996 安静。
 
 ```C
 // crt_itoa.c

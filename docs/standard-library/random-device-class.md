@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: 396f172d6a7f9fed72e19917a528f561d0110470
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320270"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843542"
 ---
 # <a name="random_device-class"></a>random_device 类
 
@@ -51,12 +51,11 @@ public:
 
 ## <a name="members"></a>成员
 
-|||
-|-|-|
-|[random_device](#random_device)|[熵](#entropy)|
-|[random_device：：操作员（）](#op_call)||
+[random_device](#random_device)\
+[信息量](#entropy)\
+[random_device：： operator ( # B1 ](#op_call)
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 该类描述了随机数的源，按 ISO C++ 标准，允许但不要求它为非确定性的或进行安全加密。 在 Visual Studio 实现中，产生的值是非确定性的且进行了安全加密，但是比从引擎和引擎适配器中创建的生成器运行得更慢（例如，对于大多数应用程序而言，会选择高质量且快速的引擎 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)）。
 
@@ -64,7 +63,7 @@ public:
 
 无法保证 `random_device` 产生非阻止调用。
 
-通常，`random_device` 用于设定使用引擎或引擎适配器创建的其他生成器的种子。 有关详细信息，请参阅[\<随机>](../standard-library/random.md)。
+通常，`random_device` 用于设定使用引擎或引擎适配器创建的其他生成器的种子。 有关详细信息，请参阅 [\<random>](../standard-library/random.md)。
 
 ## <a name="example"></a>示例
 
@@ -100,15 +99,15 @@ a random value == 3633694716
 a random value == 213725214
 ```
 
-这是简化的示例，不代表此生成器的一般使用案例。 有关更具代表性的代码示例，请参阅[\<随机>](../standard-library/random.md)。
+这是简化的示例，不代表此生成器的一般使用案例。 有关更具代表性的代码示例，请参阅 [\<random>](../standard-library/random.md) 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：**\<random>
 
 **命名空间:** std
 
-## <a name="random_devicerandom_device"></a><a name="random_device"></a>random_device：random_device
+## <a name="random_devicerandom_device"></a><a name="random_device"></a> random_device：： random_device
 
 构造生成器。
 
@@ -116,11 +115,11 @@ a random value == 213725214
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 构造函数将按需初始化生成器，从而忽略字符串参数。 如果无法初始化 `random_device`，将引发派生自 [exception](../standard-library/exception-class.md) 的实现定义的类型的值。
 
-## <a name="random_deviceentropy"></a><a name="entropy"></a>random_device：熵
+## <a name="random_deviceentropy"></a><a name="entropy"></a> random_device：：熵
 
 估计源的随机性。
 
@@ -128,11 +127,11 @@ random_device(const std::string& = "");
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数将返回源的随机性的估计（以位为单位）。
 
-## <a name="random_deviceoperator"></a><a name="op_call"></a>random_device：：操作员（）
+## <a name="random_deviceoperator"></a><a name="op_call"></a> random_device：： operator ( # A1
 
 返回随机值。
 
@@ -140,10 +139,10 @@ double entropy() const noexcept;
 result_type operator()();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 返回由成员函数 `min()` 和 `max()` 确定的在闭区间 [`min, max`] 中均匀分布的值。 如果无法获取随机数，将引发派生自 [exception](../standard-library/exception-class.md) 的实现定义的类型的值。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<随机>](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

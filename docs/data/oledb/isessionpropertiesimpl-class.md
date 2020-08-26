@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 0b36e4f85b855f162e11d96f8fef296c6c07597f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210296"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844829"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 类
 
-提供[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))接口的实现。
+提供 [ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85)) 接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -32,13 +32,13 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
    public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自 `ISessionPropertiesImpl`的类。
+派生自的类 `ISessionPropertiesImpl` 。
 
 *PropClass*<br/>
-用户可定义的属性类，默认值为*T*。
+用户可定义的属性类，默认值为 *T*。
 
 ## <a name="requirements"></a>要求
 
@@ -48,18 +48,18 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ### <a name="interface-methods"></a>接口方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[GetProperties](#getproperties)|返回当前在会话中设置的会话属性组中的属性列表。|
 |[SetProperties](#setproperties)|设置会话属性组中的属性。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-会话上的必需接口。 此类通过调用由[属性集映射](../../data/oledb/begin-propset-map.md)定义的静态函数来实现会话属性。 应在会话类中指定属性集映射。
+会话上的必需接口。 此类通过调用由 [属性集映射](../../data/oledb/begin-propset-map.md)定义的静态函数来实现会话属性。 应在会话类中指定属性集映射。
 
-## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>ISessionPropertiesImpl：： GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl：： GetProperties
 
-返回当前在会话上设置 `DBPROPSET_SESSION` 属性组中的属性列表。
+返回当前在会话中设置的属性组中的属性列表 `DBPROPSET_SESSION` 。
 
 ### <a name="syntax"></a>语法
 
@@ -70,13 +70,13 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
    DBPROPSET ** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[ISessionProperties：： GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) 。
 
-## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>ISessionPropertiesImpl：： SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a> ISessionPropertiesImpl：： SetProperties
 
-设置 `DBPROPSET_SESSION` 属性组中的属性。
+设置属性组中的属性 `DBPROPSET_SESSION` 。
 
 ### <a name="syntax"></a>语法
 
@@ -85,7 +85,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[ISessionProperties：： SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) 。
 

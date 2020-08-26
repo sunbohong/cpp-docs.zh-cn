@@ -9,23 +9,25 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3d799bd584f45e93668c1ac2a753c82f41220773
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364910"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844660"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 运算符
 
-数组\<>标头包括这些**数组**非成员比较模板函数。
+\<array>标头包含这些**数组**非成员比较模板函数。
 
-||||
-|-|-|-|
-|[操作员！](#op_neq)|[算子&gt;](#op_gt)|[算子&gt;=](#op_gt_eq)|
-|[算子&lt;](#op_lt)|[算子&lt;=](#op_lt_eq)|[运算符*](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[操作员&gt;](#op_gt)\
+[操作员&gt;=](#op_gt_eq)\
+[操作员&lt;](#op_lt)\
+[操作员&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operator"></a><a name="op_neq"></a>操作员！
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 数组比较，不等于。
 
@@ -38,19 +40,19 @@ bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*泰*\
+*Ty*\
 元素的类型。
 
-*N*\
+*北*\
 数组大小。
 
-*离开*\
+*左中*\
 要比较的左容器。
 
-*对*\
+*然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此模板函数返回 `!(left == right)`。
 
@@ -98,7 +100,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 操作员&lt;
 
 数组的比较，小于。
 
@@ -111,21 +113,21 @@ bool operator<(
 
 ### <a name="parameters"></a>参数
 
-*泰*\
+*Ty*\
 元素的类型。
 
-*N*\
+*北*\
 数组大小。
 
-*离开*\
+*左中*\
 要比较的左容器。
 
-*对*\
+*然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-模板函数重载`operator<`以比较类模板数组[Class](../standard-library/array-class-stl.md)的两个对象。 该函数返回 `lexicographical_compare(left.begin(), left.end(), right.begin())`。
+`operator<`用于比较类模板[数组类](../standard-library/array-class-stl.md)的两个对象的模板函数重载。 该函数返回 `lexicographical_compare(left.begin(), left.end(), right.begin())`。
 
 ### <a name="example"></a>示例
 
@@ -171,7 +173,7 @@ false
 true
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 操作员&lt;=
 
 数组的比较，小于或等于。
 
@@ -184,19 +186,19 @@ bool operator<=(
 
 ### <a name="parameters"></a>参数
 
-*泰*\
+*Ty*\
 元素的类型。
 
-*N*\
+*北*\
 数组大小。
 
-*离开*\
+*左中*\
 要比较的左容器。
 
-*对*\
+*然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此模板函数返回 `!(right < left)`。
 
@@ -244,7 +246,7 @@ true
 false
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>运算符*
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 数组比较，等于。
 
@@ -257,21 +259,21 @@ bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*泰*\
+*Ty*\
 元素的类型。
 
-*N*\
+*北*\
 数组大小。
 
-*离开*\
+*左中*\
 要比较的左容器。
 
-*对*\
+*然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-模板函数重载`operator==`以比较类模板数组[Class](../standard-library/array-class-stl.md)的两个对象。 该函数返回 `equal(left.begin(), left.end(), right.begin())`。
+`operator==`用于比较类模板[数组类](../standard-library/array-class-stl.md)的两个对象的模板函数重载。 该函数返回 `equal(left.begin(), left.end(), right.begin())`。
 
 ### <a name="example"></a>示例
 
@@ -317,7 +319,7 @@ true
 false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 操作员&gt;
 
 数组比较，大于。
 
@@ -330,19 +332,19 @@ bool operator>(
 
 ### <a name="parameters"></a>参数
 
-*泰*\
+*Ty*\
 元素的类型。
 
-*N*\
+*北*\
 数组大小。
 
-*离开*\
+*左中*\
 要比较的左容器。
 
-*对*\
+*然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此模板函数返回 `(right < left)`。
 
@@ -390,7 +392,7 @@ false
 true
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 操作员&gt;=
 
 数组比较，大于或等于。
 
@@ -403,19 +405,19 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*泰*\
+*Ty*\
 元素的类型。
 
-*N*\
+*北*\
 数组大小。
 
-*离开*\
+*左中*\
 要比较的左容器。
 
-*对*\
+*然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此模板函数返回 `!(left < right)`。
 
@@ -465,4 +467,4 @@ false
 
 ## <a name="see-also"></a>另请参阅
 
-[\<数组>](../standard-library/array.md)
+[\<array>](../standard-library/array.md)

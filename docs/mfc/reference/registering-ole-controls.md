@@ -5,12 +5,12 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 0471bad0793779d0bc13a2bee41957381f56389f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5468f3d4b730cc0b81a6ab814d495b061d292f20
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214017"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88843568"
 ---
 # <a name="registering-ole-controls"></a>注册 OLE 控件
 
@@ -20,7 +20,7 @@ ms.locfileid: "87214017"
 
 ### <a name="registering-ole-controls"></a>注册 OLE 控件
 
-|||
+|名称|说明|
 |-|-|
 |[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|将控件的类添加到注册数据库。|
 |[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|将控件属性页添加到注册数据库。|
@@ -30,7 +30,7 @@ ms.locfileid: "87214017"
 
 一般在控件 DLL 的 `AfxOleRegisterTypeLib` 实现中调用 `DllRegisterServer`。 同样，`AfxOleUnregisterTypeLib` 由 `DllUnregisterServer` 调用。 `AfxOleRegisterControlClass`、`AfxOleRegisterPropertyPageClass` 和 `AfxOleUnregisterClass` 一般由控件的类工厂或属性页的 `UpdateRegistry` 成员函数调用。
 
-## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass
+## <a name="afxoleregistercontrolclass"></a><a name="afxoleregistercontrolclass"></a> AfxOleRegisterControlClass
 
 向 Windows 注册数据库注册 control 类。
 
@@ -68,19 +68,19 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 *nRegFlags*<br/>
 包含一个或多个以下标志：
 
-- `afxRegInsertable`允许控件显示在 OLE 对象的 "插入对象" 对话框中。
+- `afxRegInsertable` 允许控件显示在 OLE 对象的 "插入对象" 对话框中。
 
-- `afxRegApartmentThreading`将注册表中的线程模型设置为 ThreadingModel = 单元。
+- `afxRegApartmentThreading` 将注册表中的线程模型设置为 ThreadingModel = 单元。
 
-- `afxRegFreeThreading`将注册表中的线程模型设置为 ThreadingModel = Free。
+- `afxRegFreeThreading` 将注册表中的线程模型设置为 ThreadingModel = Free。
 
-   可以合并这两个标志 `afxRegApartmentThreading` ，并 `afxRegFreeThreading` 设置 ThreadingModel = Both。 有关线程模型注册的详细信息，请参阅 Windows SDK 中的[InprocServer32](/windows/win32/com/inprocserver32) 。
+   可以合并这两个标志 `afxRegApartmentThreading` ，并 `afxRegFreeThreading` 设置 ThreadingModel = Both。 有关线程模型注册的详细信息，请参阅 Windows SDK 中的 [InprocServer32](/windows/win32/com/inprocserver32) 。
 
 > [!NOTE]
-> 在 mfc 4.2 之前的 MFC 版本中， **`int`** *nRegFlags*参数是一个布尔参数*bInsertable*，该参数允许或禁止从 "插入对象" 对话框插入控件。
+> 在 mfc 4.2 之前的 MFC 版本中， **`int`** *nRegFlags* 参数是一个布尔参数 *bInsertable*，该参数允许或禁止从 "插入对象" 对话框插入控件。
 
 *dwMiscStatus*<br/>
-包含一个或多个以下状态标志（有关标志的说明，请参阅 Windows SDK 中的 OLEMISC 枚举）：
+包含一个或多个以下状态标志 (有关标志的说明，请参阅 Windows SDK) 中的 OLEMISC 枚举：
 
 - OLEMISC_RECOMPOSEONRESIZE
 
@@ -133,9 +133,9 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 如果控件类已注册，则为非零值;否则为0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-这允许控件由 OLE 控件识别的容器使用。 `AfxOleRegisterControlClass`用系统上的控件的名称和位置更新注册表，还会在注册表中设置控件支持的线程模型。 有关详细信息，请参阅[技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)"OLE 控件中的单元模型线程处理" 和 Windows SDK 中的[进程和线程](/windows/win32/ProcThread/about-processes-and-threads)。
+这允许控件由 OLE 控件识别的容器使用。 `AfxOleRegisterControlClass` 用系统上的控件的名称和位置更新注册表，还会在注册表中设置控件支持的线程模型。 有关详细信息，请参阅 [技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)"OLE 控件中的单元模型线程处理" 和 Windows SDK 中的 [进程和线程](/windows/win32/ProcThread/about-processes-and-threads) 。
 
 ### <a name="example"></a>示例
 
@@ -149,9 +149,9 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxctl。h
+  **标头** afxctl。h
 
-## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass
+## <a name="afxoleregisterpropertypageclass"></a><a name="afxoleregisterpropertypageclass"></a> AfxOleRegisterPropertyPageClass
 
 向 Windows 注册数据库注册属性页类。
 
@@ -177,24 +177,24 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 *nRegFlags*<br/>
 可能包含标志：
 
-- `afxRegApartmentThreading`将注册表中的线程模型设置为 ThreadingModel = 单元。
+- `afxRegApartmentThreading` 将注册表中的线程模型设置为 ThreadingModel = 单元。
 
 > [!NOTE]
-> 在 MFC 4.2 之前的 MFC 版本中， **`int`** *nRegFlags*参数不可用。 另请注意，该 `afxRegInsertable` 标志不是属性页的有效选项，如果已设置，则将在 MFC 中引发断言
+> 在 MFC 4.2 之前的 MFC 版本中， **`int`** *nRegFlags* 参数不可用。 另请注意，该 `afxRegInsertable` 标志不是属性页的有效选项，如果已设置，则将在 MFC 中引发断言
 
 ### <a name="return-value"></a>返回值
 
 如果控件类已注册，则为非零值;否则为0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-这允许由 OLE 控件识别的容器使用属性页。 `AfxOleRegisterPropertyPageClass`用属性页名称及其在系统上的位置更新注册表，还会在注册表中设置控件支持的线程模型。 有关详细信息，请参阅[技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)"OLE 控件中的单元模型线程处理" 和 Windows SDK 中的[进程和线程](/windows/win32/ProcThread/about-processes-and-threads)。
+这允许由 OLE 控件识别的容器使用属性页。 `AfxOleRegisterPropertyPageClass` 用属性页名称及其在系统上的位置更新注册表，还会在注册表中设置控件支持的线程模型。 有关详细信息，请参阅 [技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)"OLE 控件中的单元模型线程处理" 和 Windows SDK 中的 [进程和线程](/windows/win32/ProcThread/about-processes-and-threads) 。
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxctl。h
+  **标头** afxctl。h
 
-## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib
+## <a name="afxoleregistertypelib"></a><a name="afxoleregistertypelib"></a> AfxOleRegisterTypeLib
 
 将类型库注册到 Windows 数据库并允许类型库由 OLE 控件可识别的其他容器使用。
 
@@ -224,7 +224,7 @@ BOOL AfxOleRegisterTypeLib(
 
 如果已注册类型库，则为非零；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数将在注册表中更新类型库名称及其在系统中的位置。
 
@@ -236,9 +236,9 @@ BOOL AfxOleRegisterTypeLib(
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxdisp.h&gt
+  **标头** afxdisp.h&gt
 
-## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a>AfxOleUnregisterClass
+## <a name="afxoleunregisterclass"></a><a name="afxoleunregisterclass"></a> AfxOleUnregisterClass
 
 从 Windows 注册数据库中删除控件或属性页类项。
 
@@ -260,9 +260,9 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxctl。h
+  **标头** afxctl。h
 
-## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib
+## <a name="afxoleunregistertypelib"></a><a name="afxoleunregistertypelib"></a> AfxOleUnregisterTypeLib
 
 调用此函数可从 Windows 注册数据库中删除类型库条目。
 
@@ -285,7 +285,7 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 
 ### <a name="requirements"></a>要求
 
-  **标头**afxdisp.h&gt
+  **标头** afxdisp.h&gt
 
 ## <a name="see-also"></a>另请参阅
 

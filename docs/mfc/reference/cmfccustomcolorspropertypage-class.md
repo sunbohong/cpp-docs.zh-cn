@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: d4bdd1524f71bfba33e9090058fce26763a862bf
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 07b369e8c47419db31bed3e49e159e3e7925d5ae
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561123"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844530"
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 类
 
@@ -29,21 +29,19 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |`CMFCCustomColorsPropertyPage::CMFCCustomColorsPropertyPage`|默认构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
-|-|-|
 |“属性”|说明|
+|-|-|
 |`CMFCCustomColorsPropertyPage::CreateObject`|由框架用于创建此类类型的动态实例。|
 |`CMFCCustomColorsPropertyPage::GetThisClass`|由框架用于获取指向与此类类型相关联的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象的指针。|
 |[CMFCCustomColorsPropertyPage：： Setup](#setup)|设置属性页的颜色部分。|
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `CMFCColorDialog`类使用此类来显示自定义颜色属性页。 有关的详细信息 `CMFCColorDialog` ，请参阅 [CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。
 
@@ -93,7 +91,7 @@ void Setup(
 *B*\
 中RGB 值的蓝色分量。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法将更新当前的 RGB 和关联的 HLS (色调、亮度和饱和度) 属性页的颜色值。 当框架初始化 "颜色" 对话框或用户按下鼠标左键时， [CMFCColorDialog：： SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) 方法会调用此方法。 有关的详细信息 `CMFCColorDialog` ，请参阅 [CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)。
 

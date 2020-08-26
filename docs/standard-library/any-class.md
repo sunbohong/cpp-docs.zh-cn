@@ -15,12 +15,12 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: defec0f6ab8f59219afddcefc67ea93435347978
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203957"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844738"
 ---
 # <a name="any-class"></a>任何类
 
@@ -38,13 +38,13 @@ class any
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[随时](#any)|构造 `any` 类型的对象。|
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[emplace](#emplace)|设置任意值。|
 |[has_value](#has_value)|**`true`** 如果有值，则返回。|
@@ -54,11 +54,11 @@ class any
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator =](#op_eq)|将 any 替换为另一个的副本。|
 
-## <a name="any"></a><a name="any"></a>随时
+## <a name="any"></a><a name="any"></a> 随时
 
 构造 `any` 类型的对象。 还包含析构函数。
 
@@ -76,7 +76,7 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 设置任意值。
 
@@ -87,7 +87,7 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 **`true`** 如果有值，则返回。
 
@@ -95,7 +95,7 @@ template <class T, class U, class... Args>
 bool has_value() const noexcept;
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 将 any 替换为另一个的副本。
 
@@ -111,7 +111,7 @@ template <class T>
 *然后*\
 正在复制到 any 的。
 
-## <a name="reset"></a><a name="reset"></a>&
+## <a name="reset"></a><a name="reset"></a> &
 
 重置 any。
 
@@ -119,7 +119,7 @@ template <class T>
 void reset() noexcept;
 ```
 
-## <a name="swap"></a><a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a> 购
 
 交换两个对象。
 

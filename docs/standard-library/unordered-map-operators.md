@@ -5,20 +5,21 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 6a22ccfaf77c3be524bf7127eac3d76c7be827ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ecedcfa8444b5cbae8fbe64b528a593ed3498b4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201851"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844244"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 运算符
 
-|||||
-|-|-|-|-|
-|[operator！ =](#op_neq)|[operator = =](#op_eq_eq)|[operator！ =](#op_neq_multimap)|[operator = =](#op_eq_eq_multimap)|
+[unordered_map：： operator！ =](#op_neq)\
+[unordered_map：： operator = =](#op_eq_eq)\
+[unordered_multimap：： operator！ =](#op_neq_multimap)\
+[unordered_multimap：： operator = =](#op_eq_eq_multimap)
 
-## <a name="operator"></a><a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 测试位于运算符左侧的 [unordered_map](../standard-library/unordered-map-class.md) 对象是否与位于右侧的 unordered_map 对象不相等。
 
@@ -36,9 +37,9 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果 unordered_maps 不相等，则为; 否则为。**`false`** 如果它们相等，则为。
+**`true`** 如果 unordered_maps 不相等，则为; 否则为。 **`false`** 如果它们相等，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 在其中存储元素的二元顺序不会影响 unordered_map 对象之间的比较。 如果两个 unordered_map 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_map 相等。 否则，它们不相等。
 
@@ -72,17 +73,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**输出：**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 测试位于运算符左侧的 [unordered_map](../standard-library/unordered-map-class.md) 对象是否与位于右侧的 unordered_map 对象相等。
 
@@ -100,9 +99,9 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果 unordered_maps 相等，则为; 否则为。**`false`** 如果它们不相等，则为。
+**`true`** 如果 unordered_maps 相等，则为; 否则为。 **`false`** 如果它们不相等，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 在其中存储元素的二元顺序不会影响 unordered_map 对象之间的比较。 如果两个 unordered_map 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_map 相等。 否则，它们不相等。
 
@@ -136,17 +135,15 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
 
-**输出：**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
-
-## <a name="operator"></a><a name="op_neq_multimap"></a>operator！ =
+## <a name="operator"></a><a name="op_neq_multimap"></a> operator！ =
 
 测试位于运算符左侧的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 对象是否与位于右侧的 unordered_multimap 对象不相等。
 
@@ -164,9 +161,9 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果 unordered_multimaps 不相等，则为; 否则为。**`false`** 如果它们相等，则为。
+**`true`** 如果 unordered_multimaps 不相等，则为; 否则为。 **`false`** 如果它们相等，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 在其中存储元素的二元顺序不会影响 unordered_multimap 对象之间的比较。 如果两个 unordered_multimap 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_multimap 相等。 否则，它们不相等。
 
@@ -201,17 +198,15 @@ int main( )
    cout << "um1 != um3: " << (um1 != um3) << endl;
    cout << "um2 != um3: " << (um2 != um3) << endl;
 }
+
+/* Output:
+um1 != um2: true
+um1 != um3: false
+um2 != um3: true
+*/
 ```
 
-**输出：**
-
-`um1 != um2: true`
-
-`um1 != um3: false`
-
-`um2 != um3: true`
-
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a> operator = =
 
 测试位于运算符左侧的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 对象是否与位于右侧的 unordered_multimap 对象相等。
 
@@ -229,9 +224,9 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果 unordered_multimaps 相等，则为; 否则为。**`false`** 如果它们不相等，则为。
+**`true`** 如果 unordered_multimaps 相等，则为; 否则为。 **`false`** 如果它们不相等，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 在其中存储元素的二元顺序不会影响 unordered_multimap 对象之间的比较。 如果两个 unordered_multimap 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_multimap 相等。 否则，它们不相等。
 
@@ -266,15 +261,13 @@ int main( )
    cout << "um1 == um3: " << (um1 == um3) << endl;
    cout << "um2 == um3: " << (um2 == um3) << endl;
 }
+
+/* Output:
+um1 == um2: false
+um1 == um3: true
+um2 == um3: false
+*/
 ```
-
-**输出：**
-
-`um1 == um2: false`
-
-`um1 == um3: true`
-
-`um2 == um3: false`
 
 ## <a name="see-also"></a>另请参阅
 
