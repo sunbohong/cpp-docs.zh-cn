@@ -18,22 +18,24 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: e7321831b9356fdb9ae5ce147319726def69efc7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215564"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845024"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
 
-||||
-|-|-|-|
-|[operator！ =](#op_neq)|[操作员&gt;](#op_gt)|[操作员&gt;=](#op_gt_eq)|
-|[操作员&lt;](#op_lt)|[操作员&lt;&lt;](#op_lt_lt)|[操作员&lt;=](#op_lt_eq)|
-|[operator = =](#op_eq_eq)|
+[operator！ =](#op_neq)\
+[操作员&gt;](#op_gt)\
+[操作员&gt;=](#op_gt_eq)\
+[操作员&lt;](#op_lt)\
+[操作员&lt;&lt;](#op_lt_lt)\
+[操作员&lt;=](#op_lt_eq)\
+[operator = =](#op_eq_eq)
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 操作员&gt;=
 
 确定一个 `thread::id` 对象是否大于或等于另一个。
 
@@ -55,11 +57,11 @@ bool operator>= (
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数不引发任何异常。
 
-## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 操作员&gt;
 
 确定一个 `thread::id` 对象是否大于另一个。
 
@@ -81,11 +83,11 @@ bool operator> (
 
 `Right < Left`
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数不引发任何异常。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 操作员&lt;=
 
 确定一个 `thread::id` 对象是否小于或等于另一个。
 
@@ -107,11 +109,11 @@ bool operator<= (
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数不引发任何异常。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 操作员&lt;
 
 确定一个 `thread::id` 对象是否小于另一个。
 
@@ -133,13 +135,13 @@ bool operator<(
 
 **`true`** 如果在合计*顺序中**靠左*，则为;否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该运算符定义所有 `thread::id` 对象的总排序。 这些对象可以用作关联容器中的键。
 
 此函数不引发任何异常。
 
-## <a name="operator"></a><a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 比较两个 `thread::id` 对象是否相等。
 
@@ -161,11 +163,11 @@ bool operator!= (
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数不引发任何异常。
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 比较两个 `thread::id` 对象是否相等。
 
@@ -187,11 +189,11 @@ bool operator== (
 
 **`true`** 如果两个对象表示相同的执行线程，或者如果这两个对象都不表示执行线程，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数不引发任何异常。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 操作员&lt;&lt;
 
 将 `thread::id` 对象的文本表示形式插入流。
 
@@ -213,9 +215,9 @@ basic_ostream<Elem, Tr>& operator<<(
 
 *Ostr*。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此函数将*Id*插入*Ostr*。
+此函数将 *Id* 插入 *Ostr*。
 
 如果两个`thread::id` 对象相等，这些对象的文本表示形式相同。
 

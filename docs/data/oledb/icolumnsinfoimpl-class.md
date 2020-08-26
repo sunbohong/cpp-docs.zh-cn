@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 39aa3f5e89746d48057e0e8efe6fe62b1c2d8921
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 05e902e09c51012bd456751fb701ce2508a2fc16
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210860"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845596"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl 类
 
-提供[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))接口的实现。
+提供 [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) 接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -46,10 +46,10 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
    public CDBIDOps
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自 `IColumnsInfoImpl`的类。
+派生自的类 `IColumnsInfoImpl` 。
 
 ## <a name="requirements"></a>要求
 
@@ -59,16 +59,16 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 
 ### <a name="methods"></a>方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|返回大多数使用方需要的列元数据。|
 |[MapColumnIDs](#mapcolumnids)|返回行集合中列序号的数组，这些列序号由指定的列 ID 标识。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-行集和命令的必需接口。 若要修改提供程序的 `IColumnsInfo` 实现的行为，需要修改提供程序列映射。
+行集和命令的必需接口。 若要修改提供程序的实现行为 `IColumnsInfo` ，需要修改提供程序列映射。
 
-## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>IColumnsInfoImpl：： GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a> IColumnsInfoImpl：： GetColumnInfo
 
 返回大多数使用方需要的列元数据。
 
@@ -80,11 +80,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
    OLECHAR** ppStringsBuffer);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
-## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>IColumnsInfoImpl：： MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a> IColumnsInfoImpl：： MapColumnIDs
 
 返回行集合中列序号的数组，这些列序号由指定的列 ID 标识。
 
@@ -96,7 +96,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
    DBORDINAL rgColumns[]);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IColumnsInfo：： MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) 。
 

@@ -14,21 +14,22 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 130328ca07de28e14eedd7fdc99fb8946f26c5cb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232854"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845037"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函数
 
-||||
-|-|-|-|
-|[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+[get_id](#get_id)\
+[sleep_for](#sleep_for)\
+[sleep_until](#sleep_until)\
+[购](#swap)\
+[yield](#yield)
 
-## <a name="get_id"></a><a name="get_id"></a>get_id
+## <a name="get_id"></a><a name="get_id"></a> get_id
 
 唯一标识当前的执行线程。
 
@@ -40,7 +41,7 @@ thread::id this_thread::get_id() noexcept;
 
 类型为 [thread:: id](../standard-library/thread-class.md) 的对象，用于唯一标识当前的执行线程。
 
-## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a> sleep_for
 
 阻止调用线程。
 
@@ -55,11 +56,11 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 用于指定时间间隔的 [duration](../standard-library/duration-class.md) 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-函数会阻止调用线程，至少*Rel_time*指定的时间。 此函数不引发任何异常。
+函数会阻止调用线程，至少 *Rel_time*指定的时间。 此函数不引发任何异常。
 
-## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
 阻止调用线程，至少直到指定的时间。
 
@@ -75,11 +76,11 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 表示时间点。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此函数不引发任何异常。
 
-## <a name="swap"></a><a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a> 购
 
 交换两个 `thread` 对象的状态。
 
@@ -95,11 +96,11 @@ void swap(thread& Left, thread& Right) noexcept;
 *然后*\
 正确的 `thread` 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 函数调用 `Left.swap(Right)`。
 
-## <a name="yield"></a><a name="yield"></a>产生
+## <a name="yield"></a><a name="yield"></a> 产生
 
 表示要运行其他线程的操作系统，即使当前线程会照常继续运行。
 

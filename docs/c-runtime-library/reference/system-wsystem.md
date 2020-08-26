@@ -35,12 +35,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 09353c9cda2bc85d91f57806bc3497e49a19f803
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 15e4637d709fdf4600ecb4c66c7d4a75c4fa07eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912390"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844972"
 ---
 # <a name="system-_wsystem"></a>system、_wsystem
 
@@ -67,9 +67,9 @@ int _wsystem(
 
 ## <a name="return-value"></a>返回值
 
-如果*命令*为**NULL** ，并且找到命令解释器，则返回一个非零值。 如果未找到命令解释器，则返回0，并将**errno**设置为**ENOENT**。 如果*命令*不为**NULL**，则**系统**返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值-1 表示错误， **errno**设置为以下值之一：
+如果 *命令* 为 **NULL** ，并且找到命令解释器，则返回一个非零值。 如果未找到命令解释器，则返回0，并将 **errno** 设置为 **ENOENT**。 如果 *命令* 不为 **NULL**，则 **系统** 返回由命令解释器返回的值。 仅当命令解释器返回值 0 时，它才会返回值 0。 返回值-1 表示错误， **errno** 设置为以下值之一：
 
-|||
+| 值 | 说明 |
 |-|-|
 | **E2BIG** | 自变量列表（与系统相关）太大。 |
 | **ENOENT** | 无法找到命令解释器。 |
@@ -78,15 +78,15 @@ int _wsystem(
 
 有关这些返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlis 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**系统**函数将*命令*传递到命令解释器，后者将字符串作为操作系统命令执行。 **system**使用**COMSPEC**和**PATH**环境变量来定位命令解释器文件 cmd.exe。 如果*command*为**NULL**，则该函数只检查命令解释器是否存在。
+**系统**函数将*命令*传递到命令解释器，后者将字符串作为操作系统命令执行。 **系统** 使用 **COMSPEC** 和 **PATH** 环境变量查找 CMD.exe 的命令解释器文件。 如果 *command* 为 **NULL**，则该函数只检查命令解释器是否存在。
 
-你必须通过使用[fflush](fflush.md)或[_flushall](flushall.md)显式刷新，或在调用**system**之前关闭任何流。
+你必须通过使用 [fflush](fflush.md) 或 [_flushall](flushall.md)显式刷新，或在调用 **system**之前关闭任何流。
 
 **_wsystem**是**系统**的宽字符版本;**_wsystem**的*命令*参数是宽字符字符串。 否则这些函数具有相同行为。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -96,7 +96,7 @@ int _wsystem(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**系统**|\<process.h> 或 \<stdlib.h>|
 |**_wsystem**|\<process.h> 或 \<stdlib.h> 或 \<wchar.h>|
@@ -105,7 +105,7 @@ int _wsystem(
 
 ## <a name="example"></a>示例
 
-此示例使用**SYSTEM**键入一个文本文件。
+此示例使用 **SYSTEM** 键入一个文本文件。
 
 ```C
 // crt_system.c
@@ -135,7 +135,7 @@ Line two.
 ## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[_exec，_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_flushall](flushall.md)<br/>
-[_spawn, _wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn，_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

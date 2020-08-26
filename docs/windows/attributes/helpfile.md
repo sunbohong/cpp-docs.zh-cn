@@ -1,17 +1,17 @@
 ---
-title: 帮助帮助（c + + COM 特性）
+title: '帮助 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 641823779346bf5417ec0db26b83083fa949e960
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 385c6da6a432f0954e62c9f16a22f0b70b73b317
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222116"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845232"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -28,9 +28,9 @@ ms.locfileid: "87222116"
 *filename*<br/>
 包含帮助主题的文件的名称。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-"**帮助**程序" c + + 属性与 "[帮助](/windows/win32/Midl/helpfile)台 MIDL" 特性具有相同的功能。
+" **帮助** 程序" c + + 属性与 " [帮助](/windows/win32/Midl/helpfile) 台 MIDL" 特性具有相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -38,11 +38,9 @@ ms.locfileid: "87222116"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用于**|**interface**、 **`typedef`** ， **`class`** 、method、**`property`**|
+|**适用于**|**interface**、 **`typedef`** ， **`class`** 、method、 **`property`**|
 |**且**|否|
 |**必需属性**|无|
 |**无效的特性**|无|

@@ -28,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 91b015eb9005a9b447cdd9d74a38d7169bd90a73
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913395"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845167"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-执行排序数组的二进制搜索。 此函数是一种具有安全增强功能的[bsearch](bsearch.md)版本，如[CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
+执行排序数组的二进制搜索。 此函数是一种具有安全增强功能的 [bsearch](bsearch.md) 版本，如 [CRT 中的安全功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 ## <a name="syntax"></a>语法
 
@@ -67,28 +67,27 @@ void *bsearch_s(
 元素的宽度。
 
 *并排*\
-比较两个元素的回调函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*该键*进行比较的数组元素的指针。
+比较两个元素的回调函数。 第一个参数是 *上下文* 指针。 第二个参数是指向搜索 *键* 的指针。 第三个参数是指向要与 *该键*进行比较的数组元素的指针。
 
 *快捷*\
 指向可在比较函数中访问的对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-**bsearch_s**返回一个指针，该指针指向由*base*指向的数组中的*键*的匹配项。 如果未找到*键*，则该函数返回**NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
+**bsearch_s**返回一个指针，该指针指向由*base*指向的数组中的*键*的匹配项。 如果未找到 *键* ，则该函数返回 **NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
-如果向函数传递了无效参数，则它将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果向函数传递了无效参数，则它将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **EINVAL** ，并且该函数将返回 **NULL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
-|||||||
+|*键*|*base*|*并排*|*数字*|width |**`errno`**|
 |-|-|-|-|-|-|
-|*键*|*base*|*并排*|*数字*|width |**errno**|
-|**Null**|any|any|any|any|**EINVAL**|
-|any|**Null**|any|!= 0|any|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
-|any|any|**Null**|一个|any|**EINVAL**|
+|any|any|**NULL**|一个|any|**EINVAL**|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Bsearch_s**函数对*数字*元素的已排序数组执行二进制搜索，其中每个*宽度*字节大小均为大小。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较，并返回以下指定其关系的值之一：
 
@@ -98,13 +97,13 @@ void *bsearch_s(
 |0|键等于数组元素。|
 |> 0|键大于数组元素。|
 
-如果搜索的数据结构是对象的一部分，并且 compare 函数需要访问该对象的成员，则*上下文*指针可能会很有用。 *Compare*函数可以将 void 指针转换为适当的对象类型并访问该对象的成员。 添加*上下文*参数会使**bsearch_s**更安全，因为其他上下文可用于避免与使用静态变量关联的重入 bug，以使数据可供*compare*函数使用。
+如果搜索的数据结构是对象的一部分，并且 compare 函数需要访问该对象的成员，则 *上下文* 指针可能会很有用。 *Compare*函数可以将 void 指针转换为适当的对象类型并访问该对象的成员。 添加 *上下文* 参数会使 **bsearch_s** 更安全，因为其他上下文可用于避免与使用静态变量关联的重入 bug，以使数据可供 *compare* 函数使用。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> 和 \<search.h>|
 

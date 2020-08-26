@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: cff1ca374c9489cb9c5df0dad153c4bf7a4cbc9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: aeeca008499ca43cdcebd008390e5cb6c5a9e63c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210777"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845518"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 类
 
-提供[IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85))接口的实现。
+提供 [IDBCreateSession](/previous-versions/windows/desktop/ms724076(v=vs.85)) 接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +31,7 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
    : public IDBCreateSession
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
 你的类，派生自
@@ -47,15 +47,15 @@ Session 对象。
 
 ### <a name="interface-methods"></a>接口方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[CreateSession](#createsession)|从数据源对象创建新的会话，并返回新创建的会话上所请求的接口。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 数据源对象上的必需接口。
 
-## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a>IDBCreateSessionImpl：： CreateSession
+## <a name="idbcreatesessionimplcreatesession"></a><a name="createsession"></a> IDBCreateSessionImpl：： CreateSession
 
 从数据源对象创建新的会话，并返回新创建的会话上所请求的接口。
 
@@ -67,7 +67,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
    IUnknown ** ppDBSession);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IDBCreateSession：： CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 。
 

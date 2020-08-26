@@ -1,6 +1,6 @@
 ---
 title: outp、outpw、_outp、_outpw _outpd
-description: 描述 Microsoft C 运行时库（CRT）中过时和删除的 outp、outpw、_outp、_outpw 和 _outpd 函数。
+description: 描述 Microsoft C 运行时库 (CRT) 中已过时和已删除的 outp、outpw、_outp、_outpw 和 _outpd 函数。
 ms.date: 12/09/2019
 api_name:
 - _outpd
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: c66710fe31b5a657a4976bea7f0aa52aac3e3825
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404055"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837081"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw _outpd
 
-在端口、字节（ `outp` 、 `_outp` ）、字（ `outpw` 、 `_outpw` ）或双字（ `_outpd` ）输出。
+在端口、字节 (`outp` 、 `_outp`) 、单词 (`outpw` 、 `_outpw`) 或双字 (`_outpd`) 中输出。
 
 > [!IMPORTANT]
 > 这些函数已过时。 从 Visual Studio 2015 开始，它们在 CRT 中不可用。
@@ -85,15 +85,15 @@ unsigned long _outpd(
 
 这些函数返回数据输出。 无错误返回。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-`_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *端口*参数可以是 0-65535 范围内的任何无符号整数。 *data_byte*可以是 0-255 范围内的任意整数。 *data_word*可以是整数范围内的任何值、无符号短整数和无符号长整数。
+`_outp`、 `_outpw`和 `_outpd` 函数分别将字节、字和双字写入指定的输出端口。 *端口*参数可以是 0-65535 范围内的任何无符号整数。 *data_byte* 可以是 0-255 范围内的任意整数。 *data_word* 可以是整数范围内的任何值、无符号短整数和无符号长整数。
 
 由于这些函数直接写入到 i/o 端口，因此不能在用户模式 Windows 代码中使用它们。
 
-有关在 Windows 操作系统中使用 i/o 端口的信息，请参阅[串行通信](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10))。
+有关在 Windows 操作系统中使用 i/o 端口的信息，请参阅 [串行通信](/previous-versions/ff802693(v=msdn.10))。
 
-`outp`和 `outpw` 名称是和函数的旧的、不推荐使用的名称 `_outp` `_outpw` 。 有关详细信息，请参阅[POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+`outp`和 `outpw` 名称是和函数的旧的、不推荐使用的名称 `_outp` `_outpw` 。 有关详细信息，请参阅 [POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 ## <a name="requirements"></a>要求
 

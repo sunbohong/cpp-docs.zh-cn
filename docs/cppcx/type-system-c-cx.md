@@ -2,16 +2,16 @@
 title: 类型系统 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: b9d26f0fc79b2dc5000be6e6a06f51efd3f0b53f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221544"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845141"
 ---
 # <a name="type-system-ccx"></a>类型系统 (C++/CX)
 
-通过使用 Windows 运行时体系结构，你可以使用 c + +/CX、Visual Basic、Visual c # 和 JavaScript 来编写直接访问 Windows API 并与其他 Windows 运行时应用程序和组件互操作的应用程序和组件。 用 c + + 编写的通用 Windows 平台应用程序编译为在 CPU 中直接执行的本机代码。 通用 Windows 平台用 c # 编写的应用或 Visual Basic 编译为 Microsoft 中间语言（MSIL）并在公共语言运行时（CLR）中执行。 用 JavaScript 编写的通用 Windows 平台应用在运行时环境中执行。 Windows 运行时操作系统组件本身以 c + + 编写并作为本机代码运行。 所有这些组件和通用 Windows 平台应用直接通过 Windows 运行时应用程序二进制接口（ABI）进行通信。
+通过使用 Windows 运行时体系结构，你可以使用 c + +/CX、Visual Basic、Visual c # 和 JavaScript 来编写直接访问 Windows API 并与其他 Windows 运行时应用程序和组件互操作的应用程序和组件。 用 c + + 编写的通用 Windows 平台应用程序编译为在 CPU 中直接执行的本机代码。 通用 Windows 平台用 c # 编写的应用或 Visual Basic 编译为 Microsoft 中间语言 (MSIL) 并在公共语言运行时 (CLR) 执行。 用 JavaScript 编写的通用 Windows 平台应用在运行时环境中执行。 Windows 运行时操作系统组件本身以 c + + 编写并作为本机代码运行。 所有这些组件和通用 Windows 平台应用直接通过 Windows 运行时应用程序二进制接口与 (ABI) 通信。
 
 为在现代 c + + 中支持 Windows 运行时，Microsoft 创建了 c + +/CX C + +/CX 提供基础 Windows 运行时类型的内置基类型和实现，这些类型使 c + + 应用程序和组件能够通过 ABI 与用其他语言编写的应用程序进行通信。 您可以使用任何 Windows 运行时类型，也可以创建类、结构、接口以及其他通用 Windows 平台应用程序和组件可以使用的其他用户定义的类型。 使用 c + +/CX 编写的通用 Windows 平台应用程序也可以使用常规的 c + + 类和结构，前提是它们没有公共可访问性。
 
@@ -29,23 +29,22 @@ ms.locfileid: "87221544"
 
 ## <a name="windows-metadata-winmd-files"></a>Windows 元数据 (.winmd) 文件
 
-在编译用 c + + 编写的通用 Windows 平台应用程序时，编译器将生成本机代码中的可执行文件，并且还会生成一个单独的 Windows 元数据（winmd）文件，其中包含对公共 Windows 运行时类型的说明，其中包括类、结构、枚举、接口、参数化接口和委托。 元数据的格式类似于在 .NET Framework 程序集中使用的格式。  在 C++ 组件中，.winmd 文件只包含元数据；可执行代码位于单独的文件中。 Windows 附带的 Windows 运行时组件就是这种情况。 WinMD 文件名必须与源代码中的根命名空间的前缀匹配或为该前缀。 （对于 .NET Framework 语言，.winmd 文件同时包含代码和元数据，正如一个 .NET Framework 程序集。）
+在编译用 c + + 编写的通用 Windows 平台应用程序时，编译器将生成本机代码中的可执行文件，并且还会生成一个单独的 Windows 元数据 () 文件，其中包含对公共 Windows 运行时类型的说明，包括类、结构、枚举、接口、参数化接口和委托。 元数据的格式类似于在 .NET Framework 程序集中使用的格式。  在 C++ 组件中，.winmd 文件只包含元数据；可执行代码位于单独的文件中。 Windows 附带的 Windows 运行时组件就是这种情况。 WinMD 文件名必须与源代码中的根命名空间的前缀匹配或为该前缀。 （对于 .NET Framework 语言，.winmd 文件同时包含代码和元数据，正如一个 .NET Framework 程序集。）
 
 .winmd 文件中的元数据表示你的代码的已发布图面。 无论这些其他应用程序用什么语言编写，已发布的类型对其他通用 Windows 平台均可见。 因此，元数据（或已发布的代码）只能包含由 Windows 运行时类型系统指定的类型。 特定于 C++ 的语言构造（如规则类、数组、模板或 STL 容器）不能在元数据中发布，因为 Javascript 或 C# 客户端应用程序不知道如何处理它们。
 
 类型或方法在元数据中是否可见取决于应用于它们的可访问性修饰符。 若要可见，必须在命名空间中声明类型，而且必须声明为公共类型。 允许在你的代码中将非公共 ref 类作为内部帮助程序类型，它在元数据中正好不可见。 即使在公共 ref 类中，也非所有成员都必然可见。 下表列出了公共 ref 类中 c + + 访问说明符与 Windows 运行时元数据可见性之间的关系：
 
-|||
-|-|-|
-|**在元数据中发布**|**未在元数据中发布**|
-|公共|private|
-|protected|内部|
-|公共受保护|私有受保护|
+| 在元数据中发布 | 未在元数据中发布 |
+|--|--|
+| 公共 | private |
+| protected | 内部 |
+| 公共受保护 | 私有受保护 |
 
 可以使用 **“对象浏览器”** 查看 .winmd 文件的内容。 Windows 附带的 Windows 运行时组件位于 Windows winmd 文件中。 默认 winmd 文件包含 c + +/CX 中使用的基本类型，而 platform.string 包含平台命名空间中的其他类型。 默认情况下，这三个 winmd 文件包含在通用 Windows 平台应用的每个 c + + 项目中。
 
 > [!TIP]
-> [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 中的类型没有出现在 .winmd 文件中，因为它们不是公共类型。 它们是 `Windows::Foundation::Collections`中定义的接口的私有 C++ 特定实现。 用 JavaScript 或 c # 编写的 Windows 运行时应用程序不知道[Platform：：集合：： Vector 类](../cppcx/platform-collections-vector-class.md)的定义，但它可以使用 `Windows::Foundation::Collections::IVector` 。 `Platform::Collections` 类型在 collection.h 中定义。
+> [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 中的类型没有出现在 .winmd 文件中，因为它们不是公共类型。 它们是 `Windows::Foundation::Collections`中定义的接口的私有 C++ 特定实现。 用 JavaScript 或 c # 编写的 Windows 运行时应用程序不知道 [Platform：：集合：： Vector 类](../cppcx/platform-collections-vector-class.md) 的定义，但它可以使用 `Windows::Foundation::Collections::IVector` 。 `Platform::Collections` 类型在 collection.h 中定义。
 
 ## <a name="windows-runtime-type-system-in-ccx"></a>C + +/CX 中的 Windows 运行时类型系统
 
@@ -57,7 +56,7 @@ ms.locfileid: "87221544"
 
 Windows API 本身已重创为按命名空间组织的分解类库。  所有 Windows 运行时组件都在 Windows. * 命名空间中声明。
 
-有关详细信息，请参阅[命名空间和类型可见性](../cppcx/namespaces-and-type-visibility-c-cx.md)。
+有关详细信息，请参阅 [命名空间和类型可见性](../cppcx/namespaces-and-type-visibility-c-cx.md)。
 
 ### <a name="fundamental-types"></a>基本类型
 
@@ -77,9 +76,9 @@ Windows 运行时字符串是16位 UNICODE 字符的不可变序列。 Windows �
 
 ### <a name="arrays"></a>数组
 
-Windows 运行时支持任何类型的一维数组。 不支持数组的数组。  在 c + +/CX 中，Windows 运行时数组投影为[Platform：： Array 类](../cppcx/platform-array-class.md)。
+Windows 运行时支持任何类型的一维数组。 不支持数组的数组。  在 c + +/CX 中，Windows 运行时数组投影为 [Platform：： Array 类](../cppcx/platform-array-class.md)。
 
-有关详细信息，请参阅[Array And WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+有关详细信息，请参阅 [Array And WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
 
 ### <a name="ref-classes-and-structs"></a>Ref 类和结构
 
@@ -93,7 +92,7 @@ Windows 运行时类在 c + +/CX 中投影为 ref 类或 ref 结构，因为它�
 
 为防止进一步派生，必须将具有公共构造函数的 ref 类声明为密封类。
 
-有关详细信息，请参阅[Ref 类和结构](../cppcx/ref-classes-and-structs-c-cx.md)
+有关详细信息，请参阅 [Ref 类和结构](../cppcx/ref-classes-and-structs-c-cx.md)
 
 ### <a name="value-classes-and-structs"></a>值类和结构
 
@@ -117,9 +116,9 @@ Windows 运行时类在 c + +/CX 中投影为 ref 类或 ref 结构，因为它�
 
 ### <a name="windows-runtime-collections-in-ccx"></a>C + +/CX 中的 Windows 运行时集合
 
-Windows 运行时为每种语言以自己的方式实现的集合类型定义一组接口。 C + +/CX 在[Platform：： collection：： Vector 类](../cppcx/platform-collections-vector-class.md)、 [Platform：： Collection：： Map 类](../cppcx/platform-collections-map-class.md)和其他相关具体集合类型（与其标准模板库（STL）对应项）之间提供实现。
+Windows 运行时为每种语言以自己的方式实现的集合类型定义一组接口。 C + +/CX 在 [Platform：： collection：： Vector 类](../cppcx/platform-collections-vector-class.md)、 [Platform：： Collection：： Map 类](../cppcx/platform-collections-map-class.md)和其他相关具体集合类型中提供实现，这些类型与它们的标准模板库 (STL) 对应项兼容。
 
-有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
+有关详细信息，请参阅 [集合](../cppcx/collections-c-cx.md)。
 
 ### <a name="template-ref-classes"></a>模板 ref 类
 
@@ -177,7 +176,7 @@ C++/CX 支持标准 C++ 强制转换运算符 [static_cast](../cpp/static-cast-o
 
 描述如何使用 Windows 运行时系统类型使用的同一特性将公共 Api 标记为已弃用。
 
-有关详细信息，请参阅[弃用类型和成员](../cppcx/deprecating-types-and-members-c-cx.md)。
+有关详细信息，请参阅 [弃用类型和成员](../cppcx/deprecating-types-and-members-c-cx.md)。
 
 ## <a name="see-also"></a>另请参阅
 

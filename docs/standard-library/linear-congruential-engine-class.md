@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8701570787275e853543e723f6461b8ad460f96f
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689437"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845440"
 ---
 # <a name="linear_congruential_engine-class"></a>linear_congruential_engine 类
 
@@ -45,38 +45,40 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>参数
 
-*UIntType* \
-无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md)。
+*UIntType*\
+无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-*一个*\
-**乘数**。 **前置条件**：请参阅“备注”部分。
+*的*\
+**乘法器**。 **前置条件**：请参阅“备注”部分。
 
-*C* \
+*Ansi-c*\
 **递增**。 **前置条件**：请参阅“备注”部分。
 
-*M* \
-**取模**。 **前置条件**：请参阅“备注”。
+*年*\
+**模数**。 **前置条件**：请参阅“备注”。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
-||||
-|-|-|-|
-|`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|
-|`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|
+`linear_congruential_engine::linear_congruential_engine`
+`linear_congruential_engine::discard`\
+`linear_congruential_engine::max`\
+`linear_congruential_engine::min`\
+`linear_congruential_engine::operator()`\
+`linear_congruential_engine::seed`
 
 `default_seed` 是定义为 `1u` 且用作 `linear_congruential_engine::seed` 和单个值的构造函数的默认参数值的成员常量。
 
-有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md)。
+有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-@No__t_0 类模板是最简单的生成器引擎，但不是最快或最高的质量。 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) 是对此引擎的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
+`linear_congruential_engine`类模板是最简单的生成器引擎，但不是最快或最高的质量。 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) 是对此引擎的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
 
-此引擎使用重复关系( *period*) `x(i) = (A * x(i-1) + C) mod M` 产生用户指定的无符号整型值。
+此引擎使用重复关系 ( *period*) 生成用户指定的无符号整型值 `x(i) = (A * x(i-1) + C) mod M` 。
 
-如果*M*为零，则 `numeric_limits<result_type>::max() + 1` 用于此取模运算的值。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
+如果 *M* 为零，则用于此取模运算的值是 `numeric_limits<result_type>::max() + 1` 。 引擎的状态是返回的最后一个值，或是种子值（如果尚未对 `operator()` 进行调用）。
 
-如果*M*不为零，则模板参数*A*和*C*的值必须小于*M*。
+如果 *M* 不为零，则模板参数 *A* 和 *C* 的值必须小于 *M*。
 
 虽然可以从此引擎直接构造生成器，但也可以使用其中一个预定义的 typedef。
 
@@ -96,10 +98,10 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：**\<random>
 
 **命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<random>](../standard-library/random.md)

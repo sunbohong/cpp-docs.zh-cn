@@ -18,27 +18,31 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2455655404bd61c220ebe4e3d018bc81204fa51e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365680"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845362"
 ---
 # <a name="vprintf-functions"></a>vprintf 函数
 
 每个 `vprintf` 函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到特定目标。 函数在执行参数验证过程中会有所不同，无论函数是采用宽字符字符串还是单字节字符串、是否具有输出目标以及是否支持指定格式字符串中使用的参数的顺序。
 
-|||
-|-|-|
-|[_vcprintf、_vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md)|[vfprintf、vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)|
-|[_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)|[vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|
-|[vprintf、vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)|[_vprintf_p、_vprintf_p_l、_vwprintf_p、_vwprintf_p_l](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)|
-|[vprintf_s、_vprintf_s_l、vwprintf_s、_vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)|[vsprintf、vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)|
-|[_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)|[vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|
-|[_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|[_vsnprintf、_vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)|
+[_vcprintf，_vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md)\
+[vfprintf、vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)\
+[_vfprintf_p、_vfprintf_p_l、_vfwprintf_p _vfwprintf_p_l](../c-runtime-library/reference/vfprintf-p-vfprintf-p-l-vfwprintf-p-vfwprintf-p-l.md)\
+[vfprintf_s、_vfprintf_s_l、vfwprintf_s _vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)\
+[vprintf、vwprintf](../c-runtime-library/reference/vprintf-vprintf-l-vwprintf-vwprintf-l.md)\
+[_vprintf_p、_vprintf_p_l、_vwprintf_p _vwprintf_p_l](../c-runtime-library/reference/vprintf-p-vprintf-p-l-vwprintf-p-vwprintf-p-l.md)\
+[vprintf_s、_vprintf_s_l、vwprintf_s _vwprintf_s_l](../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)\
+[_vscprintf、_vscprintf_l、_vscwprintf _vscwprintf_l](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)\
+[_vsnprintf，_vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 
+[vsprintf、vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)\
+[_vsprintf_p、_vsprintf_p_l、_vswprintf_p _vswprintf_p_l](../c-runtime-library/reference/vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)\
+[vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `vprintf` 函数类似于下表中列出的其对应函数。 但是，每个 `vprintf` 函数接受一个指向参数列表的指针，而每个对应函数都接受一个参数列表。
 
@@ -46,8 +50,8 @@ ms.locfileid: "81365680"
 
 |函数|对应函数|输出目标|参数验证|位置参数支持|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|检查是否为 NULL。|否|
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|检查是否为 NULL。|否|
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|控制台|检查是否为 NULL。|否|
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|控制台|检查是否为 NULL。|否|
 |`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*流*|检查是否为 NULL。|否|
 |vfprintf_p****|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|是|
 |`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*流*|检查是否为 NULL 以及格式是否有效。|否|
@@ -81,7 +85,7 @@ ms.locfileid: "81365680"
 
 具有 _p **** 后缀的这些函数的版本提供指定所提供的参数在格式字符串中替换的顺序的功能。 有关详细信息，请参阅 [printf_p 位置参数](../c-runtime-library/printf-p-positional-parameters.md)。
 
-对于**vsprintf** `_vsnprintf` ，`_vsnwprintf``vswprintf`和 ， 如果在重叠的字符串之间发生复制， 行为未定义。
+对于 **vsprintf**、 `vswprintf` `_vsnprintf` 和 `_vsnwprintf` ，如果在重叠的字符串之间发生复制，则该行为是不确定的。
 
 > [!IMPORTANT]
 > 确保 format ** 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。 如果使用这些函数的安全版本（_s **** 或 _p **** 后缀），如果用户提供的字符串包含无效的格式化字符，则用户提供的格式字符串可能会触发无效参数异常。
@@ -91,5 +95,5 @@ ms.locfileid: "81365680"
 [流 I/O](../c-runtime-library/stream-i-o.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
-[冲刺， _sprintf_l， 瑞典， _swprintf_l， \__swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)

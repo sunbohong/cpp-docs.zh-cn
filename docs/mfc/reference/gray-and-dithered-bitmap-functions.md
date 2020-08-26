@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: a220596b880ee74d5f9ebf683d087156224ee7c5
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 57f163fd36c0f25508d94a84495fcaf1956e277d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81751475"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837198"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和抖色位图函数
 
@@ -24,7 +24,7 @@ MFC 提供了两个函数为位图提供已禁用控件的外观。
 
 ![灰色图标版本与原始图标版本之比较](../../mfc/reference/media/vcgraybitmap.gif "灰色图标版本与原始图标版本之比较")
 
-|||
+|名称|说明|
 |-|-|
 |[AfxDrawGrayBitmap](#afxdrawgraybitmap)|绘制灰色版本的位图。|
 |[AfxGetGrayBitmap](#afxgetgraybitmap)|复制灰色版本的位图。|
@@ -35,12 +35,12 @@ MFC 还提供了两个函数以将位图背景替换为抖色样式。
 
 ![抖动图标版本与原始图标版本之比较](../../mfc/reference/media/vcditheredbitmap.gif "抖动图标版本与原始图标版本之比较")
 
-|||
+|名称|说明|
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|绘制抖色背景位图。|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|复制抖色背景位图。|
 
-## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>AfxDraw灰色位图
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a> AfxDrawGrayBitmap
 
 绘制灰色版本的位图。
 
@@ -61,16 +61,16 @@ void AFXAPI AfxDrawGrayBitmap(
 *x*<br/>
 目标 x 坐标。
 
-*Y*<br/>
+*y*<br/>
 目标 y 坐标。
 
-*rSrc*<br/>
+*.Rsrc*<br/>
 源位图。
 
-*cr背景*<br/>
+*crBackground*<br/>
 新背景色（通常为灰色，如 COLOR_MENU）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 使用 `AfxDrawGrayBitmap` 绘制的位图将具有禁用控件的外观。
 
@@ -84,7 +84,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 **标头:** afxwin.h
 
-## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>AfxGet格雷比特图
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a> AfxGetGrayBitmap
 
 复制灰色版本的位图。
 
@@ -97,16 +97,16 @@ void AFXAPI AfxGetGrayBitmap(
 
 ### <a name="parameters"></a>参数
 
-*rSrc*<br/>
+*.Rsrc*<br/>
 源位图。
 
 *pDest*<br/>
 目标位图。
 
-*cr背景*<br/>
+*crBackground*<br/>
 新背景色（通常为灰色，如 COLOR_MENU）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 使用 `AfxGetGrayBitmap` 复制的位图将具有禁用控件的外观。
 
@@ -120,9 +120,9 @@ void AFXAPI AfxGetGrayBitmap(
 
 **标头:** afxwin.h
 
-## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a> AfxDrawDitheredBitmap
 
-绘制位图，将其背景替换为抖抖（跳棋）图案。
+绘制位图，并将其背景替换为抖动 (检查器) 模式。
 
 ```cpp
 void AFXAPI AfxDrawDitheredBitmap(
@@ -142,10 +142,10 @@ void AFXAPI AfxDrawDitheredBitmap(
 *x*<br/>
 目标 x 坐标。
 
-*Y*<br/>
+*y*<br/>
 目标 y 坐标。
 
-*rSrc*<br/>
+*.Rsrc*<br/>
 源位图。
 
 *cr1*<br/>
@@ -154,9 +154,9 @@ void AFXAPI AfxDrawDitheredBitmap(
 *cr2*<br/>
 另一种递色，通常为浅灰色 (COLOR_MENU)。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-源位图在目标 DC 上绘制，其双色 *（cr1*和*cr2）* 格格模式取代了位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。
+源位图是在目标 DC 上绘制的，其中包含双色 (*cr1* 和 *cr2*) 棋盘模式，用来替换位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。
 
 ![抖动图标版本与原始图标版本之比较](../../mfc/reference/media/vcditheredbitmap.gif "抖动图标版本与原始图标版本之比较")
 
@@ -168,7 +168,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 **标头:** afxwin.h
 
-## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>AfxGetDitheredBitmap
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a> AfxGetDitheredBitmap
 
 复制位图，并将其背景替换为递色（棋盘格）图案。
 
@@ -182,7 +182,7 @@ void AFXAPI AfxGetDitheredBitmap(
 
 ### <a name="parameters"></a>参数
 
-*rSrc*<br/>
+*.Rsrc*<br/>
 源位图。
 
 *pDest*<br/>
@@ -194,9 +194,9 @@ void AFXAPI AfxGetDitheredBitmap(
 *cr2*<br/>
 另一种递色，通常为浅灰色 (COLOR_MENU)。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-源位图以双色 *（cr1*和*cr2）* 的方格模式复制到目标位图，替换源位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。
+源位图复制到目标位图，其中包含双色 (*cr1* 和 *cr2*) 棋盘模式，用来替换源位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。
 
 ![抖动图标版本与原始图标版本之比较](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
 
@@ -208,6 +208,6 @@ void AFXAPI AfxGetDitheredBitmap(
 
 **标头:** afxwin.h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

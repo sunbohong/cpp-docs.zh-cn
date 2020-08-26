@@ -1,17 +1,17 @@
 ---
-title: max_is （c + + COM 特性）
+title: 'max_is (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.max_is
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 2e30595a549eefc6a5eecc27be98ded5221dcc16
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 409211bc59d9df8a82a9f452efeff6b6db0fde39
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87201305"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837107"
 ---
 # <a name="max_is"></a>max_is
 
@@ -28,15 +28,13 @@ ms.locfileid: "87201305"
 *expression*<br/>
 一个或多个 C 语言表达式。 允许空参数槽。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Max_is** c + + 特性具有与[max_is](/windows/win32/Midl/max-is) MIDL 特性相同的功能。
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|或中的字段 **`struct`** **`union`** ，接口参数，接口方法|
 |**且**|否|
@@ -47,7 +45,7 @@ ms.locfileid: "87201305"
 
 ## <a name="example"></a>示例
 
-有关如何指定数组的部分的示例，请参阅[first_is](first-is.md) 。
+有关如何指定数组的部分的示例，请参阅 [first_is](first-is.md) 。
 
 ## <a name="see-also"></a>另请参阅
 

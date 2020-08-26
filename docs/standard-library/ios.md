@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 59ff0d1a9538bd43cc2164306e6a37a3b307067d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8ba03e5ab5dd90a6f29e08b01576803a00f0bd24
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212262"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845479"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ ms.locfileid: "87212262"
 
 ## <a name="requirements"></a>要求
 
-**标头**：\<ios>
+**标头**： \<ios>
 
 **命名空间:** std
 
 > [!NOTE]
 > \<ios>库使用 `#include <iosfwd>` 语句。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-一大组函数为操控器。 中声明的操控器会 \<ios> 改变存储在类[ios_base](../standard-library/ios-base-class.md)的参数对象中的值。 其他操控器对由派生自此类的类型的对象控制的流执行操作，如[basic_istream](../standard-library/basic-istream-class.md)或[basic_ostream](../standard-library/basic-ostream-class.md)一个类模板的专用化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)（**str**）清除对象中的格式标志 `ios_base::skipws` `str` ，该标志可以是以下类型之一。
+一大组函数为操控器。 中声明的操控器会 \<ios> 改变存储在类 [ios_base](../standard-library/ios-base-class.md)的参数对象中的值。 其他操控器对由派生自此类的类型的对象控制的流执行操作，如 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md)一个类模板的专用化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws) (**Str**) 会清除对象中的格式标志 `ios_base::skipws` `str` ，它可以是以下类型之一。
 
 还可以通过将操控器插入到输出流中或从输入流提取操控器对其进行调用，原因是为派生自 `ios_base` 的类提供了专门的插入和提取操作。 例如：
 
@@ -43,7 +43,7 @@ istr>> noskipws;
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|支持旧 iostream 库中的 ios 类。|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|支持内部操作。|
@@ -54,9 +54,9 @@ istr>> noskipws;
 
 ### <a name="manipulators"></a>操控器
 
-|||
+|名称|说明|
 |-|-|
-|[boolalpha](../standard-library/ios-functions.md#boolalpha)|指定类型为[bool](../cpp/bool-cpp.md)的变量在 **`true`** 流中显示为或 **`false`** 。|
+|[boolalpha](../standard-library/ios-functions.md#boolalpha)|指定类型为 [bool](../cpp/bool-cpp.md) 的变量在 **`true`** 流中显示为或 **`false`** 。|
 |[十进制](../standard-library/ios-functions.md#dec)|指定以十进制计数法形式显示整数变量。|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|配置 `ios_base` 对象的标记以使用浮点值的默认显示格式。|
 |[fixed](../standard-library/ios-functions.md#fixed)|指定浮点数以自动设置小数点表示法显示。|
@@ -83,7 +83,7 @@ istr>> noskipws;
 
 ### <a name="error-reporting"></a>错误报告
 
-|||
+|名称|说明|
 |-|-|
 |[io_errc](../standard-library/ios-functions.md#io_errc)||
 |[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
@@ -93,9 +93,9 @@ istr>> noskipws;
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|类模板描述了依赖于模板参数的输入流（类模板[basic_istream](../standard-library/basic-istream-class.md)）和输出流（属于类模板[basic_ostream](../standard-library/basic-ostream-class.md)）所共有的存储和成员函数。|
+|[basic_ios](../standard-library/basic-ios-class.md)|类模板描述了 basic_istream 类模板 (的两个输入流所共有的存储和成员函数[basic_istream](../standard-library/basic-istream-class.md)) 和 (依赖于模板参数的类模板[basic_ostream](../standard-library/basic-ostream-class.md)) 的输出流。|
 |[fpos](../standard-library/fpos-class.md)|类模板描述了一个对象，该对象可以存储还原任何流内的任意文件位置指示器所需的所有信息。|
 |[ios_base](../standard-library/ios-base-class.md)|此类描述了不依赖模板参数的输入和输出流通用的存储和成员函数。|
 

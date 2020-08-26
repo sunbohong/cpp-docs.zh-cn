@@ -11,16 +11,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4a4978401ba90e3a7a91ac40cc1b0668adf12ee8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210712"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845544"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 类
 
-提供[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))接口的实现。
+提供 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) 接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -30,10 +30,10 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
    : public IDBCreateCommand
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自 `IDBCreateCommandImpl`的会话对象。
+派生自的会话对象 `IDBCreateCommandImpl` 。
 
 *CommandClass*<br/>
 Command 类。
@@ -46,15 +46,15 @@ Command 类。
 
 ### <a name="interface-methods"></a>接口方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[CreateCommand](#createcommand)|创建新的命令。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 用于获取新命令的 session 对象上的可选接口。
 
-## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a>IDBCreateCommandImpl：： CreateCommand
+## <a name="idbcreatecommandimplcreatecommand"></a><a name="createcommand"></a> IDBCreateCommandImpl：： CreateCommand
 
 创建新的命令并返回所请求的接口。
 
@@ -66,13 +66,13 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
    IUnknown ** ppvCommand);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IDBCreateCommand：： CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 。
 
-一些参数对应于*OLE DB 程序员的*不同名称的引用参数，如 `IDBCreateCommand::CreateCommand`中所述：
+一些参数对应于不同名称 *OLE DB 程序员引用* 参数，如中所述 `IDBCreateCommand::CreateCommand` ：
 
-|OLE DB 模板参数|*OLE DB 程序员引用*参数|
+|OLE DB 模板参数|*OLE DB 程序员引用* 参数|
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 

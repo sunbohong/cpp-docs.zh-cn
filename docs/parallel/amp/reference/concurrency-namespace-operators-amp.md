@@ -2,22 +2,34 @@
 title: 并发命名空间运算符 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 03079f8899f3b13c8509e1affd10a82191b1817c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b6353e1edbe216dcb8aa5a342e139d826b82c6c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228474"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845336"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>并发命名空间运算符 (AMP)
 
-||||
-|-|-|-|
-|[operator！ =](#operator_neq)|[操作员](#operator_mod)|[操作员](#operator_star)|
-|[operator +](#operator_add)|[操作员](#operator-)|[操作员](#operator_div)|
-|[operator = =](#operator_eq_eq)|
+:::row:::
+   :::column span="":::
+      [`operator==`](#operator_eq_eq)\
+      [`operator!=`](#operator_neq)
+   :::column-end:::
+   :::column span="":::
+      [`operator+`](#operator_add)\
+      [`operator-`](#operator-)
+   :::column-end:::
+   :::column span="":::
+      [`operator*`](#operator_star)\
+      [`operator/`](#operator_div)
+   :::column-end:::
+   :::column span="":::
+      [`operator%`](#operator_mod)
+   :::column-end:::
+:::row-end:::
 
-## <a name="operator"></a><a name="operator_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="operator_eq_eq"></a> operator = =
 
 确定指定的参数是否相等。
 
@@ -46,7 +58,7 @@ bool operator== (
 
 **`true`** 如果元组相同，则为;否则为 **`false`** 。
 
-## <a name="operator"></a><a name="operator_neq"></a>operator！ =
+## <a name="operator"></a><a name="operator_neq"></a> operator！ =
 
 确定指定的参数是否不相等。
 
@@ -75,7 +87,7 @@ bool operator!= (
 
 **`true`** 如果元组不相等，则为;否则为 **`false`** 。
 
-## <a name="operator"></a><a name="operator_add"></a>operator +
+## <a name="operator"></a><a name="operator_add"></a> operator +
 
 计算指定参数的按组件的和。
 
@@ -120,7 +132,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 
 指定参数的按组件的和。
 
-## <a name="operator-"></a><a name="operator-"></a>操作员
+## <a name="operator-"></a><a name="operator-"></a> 操作员
 
 计算指定参数之间的以组件为的差。
 
@@ -165,7 +177,7 @@ _Tuple_type<_Rank>   operator-(
 
 指定参数之间的以组件为方差。
 
-## <a name="operator"></a><a name="operator_star"></a>操作员
+## <a name="operator"></a><a name="operator_star"></a> 操作员
 
 计算指定参数的按组件的积。
 
@@ -202,7 +214,7 @@ _Tuple_type<_Rank>   operator*(
 
 指定参数的按组件的积。
 
-## <a name="operator"></a><a name="operator_div"></a>操作员
+## <a name="operator"></a><a name="operator_div"></a> 操作员
 
 计算指定参数的按分量的商。
 
@@ -239,7 +251,7 @@ _Tuple_type<_Rank>   operator/(
 
 指定参数的按组件的商。
 
-## <a name="operator"></a><a name="operator_mod"></a>操作员
+## <a name="operator"></a><a name="operator_mod"></a> 操作员
 
 按指定的第二个参数计算第一个指定参数的模数。
 

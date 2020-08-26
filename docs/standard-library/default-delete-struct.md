@@ -5,16 +5,16 @@ f1_keywords:
 - memory/std::default_delete
 helpviewer_keywords:
 - default_delete struct
-ms.openlocfilehash: e9e1fcc68539e55486f4ea27e6dd5c49bed11fdf
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 8baa9f5d294cf083fd55414cd529e438f328d1a1
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269259"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845076"
 ---
-# <a name="defaultdelete-struct"></a>default_delete 结构
+# <a name="default_delete-struct"></a>default_delete 结构
 
-执行除法运算的预定义的函数对象 (`operator/`) 对其自变量。
+一个预定义的函数对象，它对其参数 () 执行除法运算 `operator/` 。
 
 ## <a name="syntax"></a>语法
 
@@ -25,25 +25,25 @@ template <class T>
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<memory>
+**标头：**\<memory>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="members"></a>成员
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[default_delete](#default_delete)|`default_delete` 类型的对象的构造函数。|
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
-|[operator()](#op_paren)|引用运算符来访问`default_delete`。|
+|[运算符 ( # B1 ](#op_paren)|要访问的引用运算符 `default_delete` 。|
 
-## <a name="default_delete"></a> default_delete
+## <a name="default_delete"></a><a name="default_delete"></a> default_delete
 
 `default_delete` 类型的对象的构造函数。
 
@@ -53,14 +53,14 @@ template <class U>
     default_delete(const default_delete<U>&) noexcept;
 ```
 
-## <a name="op_paren"></a> operator()
+## <a name="operator"></a><a name="op_paren"></a> 运算符 ( # A1
 
-引用运算符来访问`default_delete`。
+要访问的引用运算符 `default_delete` 。
 
 ```cpp
 void operator()(T*) const;
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<memory>](../standard-library/memory.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220439"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88844959"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 
@@ -51,11 +51,11 @@ class CRestrictions :
 
 ### <a name="methods"></a>方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[打开](#open)|根据用户提供的限制返回结果集。|
 
-## <a name="crestrictionsopen"></a><a name="open"></a>CRestrictions：： Open
+## <a name="crestrictionsopen"></a><a name="open"></a> CRestrictions：： Open
 
 根据用户提供的限制返回结果集。
 
@@ -82,17 +82,17 @@ HRESULT Open(const CSession& session,
 中指定架构行集的限制。
 
 *bBind*<br/>
-中指定是否自动绑定列映射。 默认值为 **`true`** ，这将导致自动绑定列映射。 将*bBind*设置为可 **`false`** 阻止自动绑定列映射，以便可以手动绑定。 （手动绑定对 OLAP 用户特别感兴趣。）
+中指定是否自动绑定列映射。 默认值为 **`true`** ，这将导致自动绑定列映射。 将 *bBind* 设置为可 **`false`** 阻止自动绑定列映射，以便可以手动绑定。  (手动绑定对 OLAP 用户特别感兴趣。 ) 
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 最多可在架构行集中指定7个限制。
 
-有关每个架构行集的定义限制的信息，请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
+有关每个架构行集的定义限制的信息，请参阅 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
 ## <a name="see-also"></a>另请参阅
 

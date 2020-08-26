@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b4309e794a83e6c13dcf0051791cd1762a6d5012
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210686"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845557"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 类
 
-提供[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))接口的实现。
+提供 [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85)) 接口的实现。
 
 ## <a name="syntax"></a>语法
 
@@ -33,10 +33,10 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *T*<br/>
-派生自 `IConvertTypeImpl`的类。
+派生自的类 `IConvertTypeImpl` 。
 
 ## <a name="requirements"></a>要求
 
@@ -46,15 +46,15 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 ### <a name="interface-methods"></a>接口方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[CanConvert](#canconvert)|提供有关命令或行集上类型转换的可用性的信息。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-此接口对命令行集和索引行集是必需的。 `IConvertTypeImpl` 通过委托到 OLE DB 提供的转换对象来实现接口。
+此接口对命令行集和索引行集是必需的。 `IConvertTypeImpl` 通过委托给 OLE DB 提供的转换对象来实现接口。
 
-## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl：： CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a> IConvertTypeImpl：： CanConvert
 
 提供有关命令或行集上类型转换的可用性的信息。
 
@@ -66,13 +66,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
    DBCONVERTFLAGS dwConvertFlags);
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 请参阅*OLE DB 程序员参考*中的[IConvertType：： CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-使用 `MSADC.DLL`中 OLE DB 数据转换。
+使用中的 OLE DB 数据转换 `MSADC.DLL` 。
 
 ## <a name="see-also"></a>另请参阅
 

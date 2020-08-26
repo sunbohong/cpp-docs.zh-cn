@@ -17,43 +17,90 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 16caacb77e052eebc8e2cd101990ee373535bd6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62893d4af1633bc2c89d2d6a0fa71309a0411ad5
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171146"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88836837"
 ---
 # <a name="reserved-words"></a>保留字
 
-链接器保留以下单词。 仅当名称括在双引号（""）中时，才可以将这些名称用作[module 定义语句](module-definition-dot-def-files.md)中的参数。
+链接器保留以下单词。 仅当名称括在双引号中时，才可以将这些名称用作 [module 定义语句](module-definition-dot-def-files.md) 中的参数 ( "" ) 。
 
-||||
-|-|-|-|
-|**APPLOADER**<sup>1</sup>|**INITINSTANCE**<sup>2</sup>|**预加载**|
-|**基座**|**IOPL**|**专有**|
-|**编写**|**库**<sup>1</sup>|**PROTMODE**<sup>2</sup>|
-|**规范**|**LOADONCALL**<sup>1</sup>|**纯**<sup>1</sup>|
-|**数据**|**LONGNAMES**<sup>2</sup>|**只读**|
-|**DESCRIPTION**|**可移动**<sup>1</sup>|**READWRITE**|
-|**DEV386**|**可移动**<sup>1</sup>|**REALMODE**<sup>1</sup>|
-|**可放弃**|**多个**|**常驻**|
-|**动态**|**NAME**|**RESIDENTNAME**<sup>1</sup>|
-|**仅执行**|**Newfiles.format.ps1xml**<sup>2</sup>|**个**|
-|**EXECUTEONLY**|**NODATA**<sup>1</sup>|**边**|
-|**EXECUTEREAD**|**NOIOPL**<sup>1</sup>|**共享**|
-|**EXETYPE**|**NONAME**|**单个**|
-|**EXPORTS**|**NONCONFORMING**不符合<sup>1</sup>|**STACKSIZE**|
-|**固定**<sup>1</sup>|**NONDISCARDABLE**|**STUB**|
-|**函数**<sup>2</sup>|**NONE**|**VERSION**|
-|**HEAPSIZE**|**非共享**|**WINDOWAPI**|
-|**导**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
-|**非纯**<sup>1</sup>|**对象**|**WINDOWS**|
-|**包含**<sup>2</sup>|**旧**<sup>1</sup>||
+:::row:::
+   :::column span="":::
+      **`APPLOADER`**<sup>2</sup>\
+      **`BASE`**\
+      **`CODE`**\
+      **`CONFORMING`**\
+      **`DATA`**\
+      **`DESCRIPTION`**\
+      **`DEV386`**\
+      **`DISCARDABLE`**\
+      **`DYNAMIC`**\
+      **`EXECUTE-ONLY`**\
+      **`EXECUTEONLY`**\
+      **`EXECUTEREAD`**\
+      **`EXETYPE`**\
+      **`EXPORTS`**\
+      `FIXED`<sup>1</sup>
+   :::column-end:::
+   :::column span="":::
+      **`FUNCTIONS`**<sup>pps-2</sup>\
+      **`HEAPSIZE`**\
+      **`IMPORTS`**\
+      **`IMPURE`**<sup>2</sup>\
+      **`INCLUDE`**<sup>pps-2</sup>\
+      **`INITINSTANCE`**<sup>pps-2</sup>\
+      **`IOPL`**\
+      **`LIBRARY`**<sup>2</sup>\
+      **`LOADONCALL`**<sup>2</sup>\
+      **`LONGNAMES`**<sup>pps-2</sup>\
+      **`MOVABLE`**<sup>2</sup>\
+      **`MOVEABLE`**<sup>2</sup>\
+      **`MULTIPLE`**\
+      **`NAME`**\
+      `NEWFILES`<sup>2</sup>
+   :::column-end:::
+   :::column span="":::
+      **`NODATA`**<sup>2</sup>\
+      **`NOIOPL`**<sup>2</sup>\
+      **`NONAME`**\
+      **`NONCONFORMING`**<sup>2</sup>\
+      **`NONDISCARDABLE`**\
+      **`NONE`**\
+      **`NONSHARED`**\
+      **`NOTWINDOWCOMPAT`**<sup>2</sup>\
+      **`OBJECTS`**\
+      **`OLD`**<sup>2</sup>\
+      **`PRELOAD`**\
+      **`PRIVATE`**\
+      **`PROTMODE`**<sup>pps-2</sup>\
+      **`PURE`**<sup>2</sup>\
+      **`READONLY`**
+   :::column-end:::
+   :::column span="":::
+      **`READWRITE`**\
+      **`REALMODE`**<sup>2</sup>\
+      **`RESIDENT`**\
+      **`RESIDENTNAME`**<sup>2</sup>\
+      **`SECTIONS`**\
+      **`SEGMENTS`**\
+      **`SHARED`**\
+      **`SINGLE`**\
+      **`STACKSIZE`**\
+      **`STUB`**\
+      **`VERSION`**\
+      **`WINDOWAPI`**\
+      **`WINDOWCOMPAT`**\
+      **`WINDOWS`**
+   :::column-end:::
+:::row-end:::
 
-<sup>1</sup>链接器在遇到此字词时发出警告（"忽略"）。 但仍保留该单词。
+<sup>1</sup> 链接器在遇到此字词时发出警告 ( "已忽略" ) 。 但仍保留该单词。
 
-<sup>2</sup>链接器忽略此词，但不发出警告。
+<sup>2</sup> 链接器忽略此词，但不发出警告。
 
 ## <a name="see-also"></a>另请参阅
 

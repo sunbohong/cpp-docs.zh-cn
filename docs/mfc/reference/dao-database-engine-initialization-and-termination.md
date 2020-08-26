@@ -5,27 +5,27 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: 62460e8e55f70b8cb0743f1d044636d25121050d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a70dd396a87315a96224edccf13250a2927cd99
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365897"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837588"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO 数据库引擎初始化和终止
 
-DAO 与 Access 数据库一起使用，并通过 Office 2013 支持。 DAO 3.6 是最终版本，它被视为过时版本。 使用 MFC DAO 对象时，必须先初始化 DAO 数据库引擎然后终止，您的应用程序或 DLL 才能退出。 `AfxDaoInit` 和 `AfxDaoTerm` 这两个函数将执行这些任务。
+DAO 与 Access 数据库结合使用，并受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 使用 MFC DAO 对象时，必须先初始化 DAO 数据库引擎然后终止，您的应用程序或 DLL 才能退出。 `AfxDaoInit` 和 `AfxDaoTerm` 这两个函数将执行这些任务。
 
 ### <a name="dao-database-engine-initialization-and-termination"></a>DAO 数据库引擎初始化和终止
 
-|||
+|名称|说明|
 |-|-|
 |[AfxDaoInit](#afxdaoinit)|初始化 DAO 数据库引擎。|
 |[AfxDaoTerm](#afxdaoterm)|终止 DAO 数据库引擎。|
 
-## <a name="afxdaoinit"></a><a name="afxdaoinit"></a>阿FXDaoinit
+## <a name="afxdaoinit"></a><a name="afxdaoinit"></a> AfxDaoInit
 
-此功能初始化 DAO 数据库引擎。
+此函数初始化 DAO 数据库引擎。
 
 ```
 
@@ -34,17 +34,17 @@ void AfxDaoInit();
 throw(CDaoException*);
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-在大多数情况下，您不需要调用`AfxDaoInit`，因为应用程序在需要时会自动调用它。
+大多数情况下，不需要调用， `AfxDaoInit` 因为应用程序会在需要时自动调用它。
 
-有关相关信息，以及调用`AfxDaoInit`的示例，请参阅[技术说明 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
+有关相关信息以及调用的示例 `AfxDaoInit` ，请参阅 [技术说明 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdao.h
+  **标头** afxdao
 
-## <a name="afxdaoterm"></a><a name="afxdaoterm"></a>阿FXDaoterm
+## <a name="afxdaoterm"></a><a name="afxdaoterm"></a> AfxDaoTerm
 
 此函数终止 DAO 数据库引擎。
 
@@ -53,17 +53,17 @@ throw(CDaoException*);
 void AfxDaoTerm();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-通常，您只需要在常规 MFC DLL 中调用此函数;否则，只需在常规 MFC DLL 中调用此函数。应用程序在需要时将自动调用`AfxDaoTerm`。
+通常，只需在常规 MFC DLL 中调用此函数;当需要时，应用程序将自动调用 `AfxDaoTerm` 。
 
-在常规 MFC DLL`AfxDaoTerm`中`ExitInstance`，在函数之前调用，但之后所有 MFC DAO 对象已销毁。
+在常规 MFC Dll 中，在 `AfxDaoTerm` 函数之前调用 `ExitInstance` ，但在销毁所有 MFC DAO 对象之后。
 
-有关相关信息，请参阅[技术说明 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
+有关相关信息，请参阅 [技术说明 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。
 
 ### <a name="requirements"></a>要求
 
-  **标题**afxdao.h
+  **标头** afxdao
 
 ## <a name="see-also"></a>另请参阅
 

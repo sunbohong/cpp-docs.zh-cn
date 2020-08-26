@@ -1,21 +1,21 @@
 ---
-title: helpcontext （c + + COM 特性）
+title: 'helpcontext (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 77c085f96e778b19886c4e6e3c8f07b43fbe8f2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 60e6bf66e088872a357751e4a7b7e043cd9b4dfc
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211978"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845245"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-指定一个上下文 ID，该 ID 允许用户在**帮助**文件中查看有关此元素的信息。
+指定一个上下文 ID，该 ID 允许用户在 **帮助** 文件中查看有关此元素的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -26,9 +26,9 @@ ms.locfileid: "87211978"
 ### <a name="parameters"></a>参数
 
 *id*<br/>
-帮助主题的上下文 ID。 有关上下文 Id 的详细信息，请参阅[HTML 帮助：程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md)。
+帮助主题的上下文 ID。 有关上下文 Id 的详细信息，请参阅 [HTML 帮助：程序的上下文相关帮助](../../mfc/html-help-context-sensitive-help-for-your-programs.md) 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Helpcontext** c + + 特性具有与[helpcontext](/windows/win32/Midl/helpcontext) MIDL 特性相同的功能。
 
@@ -38,9 +38,7 @@ ms.locfileid: "87211978"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**interface**、 **`typedef`** ， **`class`** 、method、property|
 |**且**|否|

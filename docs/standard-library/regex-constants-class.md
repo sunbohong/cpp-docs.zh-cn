@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331960"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845050"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 命名空间
 
@@ -107,7 +107,7 @@ namespace regex_constants {
 
 命名空间 `regex_constants` 封装若干标记类型及其关联的标记值。
 
-|||
+|名称|说明|
 |-|-|
 |[error_type](#error_type)|用于报告正则表达式语法错误的标志。|
 |[match_flag_type](#match_flag_type)|正则表达式匹配选项的标志。|
@@ -115,11 +115,11 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<regex 1>
+**标头：**\<regex>
 
 **命名空间:** std
 
-## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants：error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a> regex_constants：： error_type
 
 用于报告正则表达式语法错误的标志。
 
@@ -144,7 +144,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该类型是一个枚举类型，它描述可保留错误标志的对象。 非重复的标志值为：
 
@@ -180,7 +180,7 @@ enum error_type
 
 `error_backref` - 表达式中包含无效的向后引用
 
-## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants：：match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a> regex_constants：： match_flag_type
 
 正则表达式匹配选项的标志。
 
@@ -204,7 +204,7 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该类型是位掩码类型，用于描述针对替换文本时使用的正则表达式和格式标志匹配文本序列时使用的选项。 可与 `|`组合使用的选项。
 
@@ -238,7 +238,7 @@ enum match_flag_type
 
 `format_first_only` - 不搜索第一个匹配项之后的匹配项
 
-## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants：syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a> regex_constants：： syntax_option_type
 
 用于选择语法选项的标志。
 
@@ -260,7 +260,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该类型为位掩码类型，用于描述编译正则表达式时要使用的语言说明符和语法修饰符。 可与 `|`组合使用的选项。 一次不能使用多于一个语言说明符。
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>另请参阅
 
-[\<正则>](../standard-library/regex.md)\
-[regex_error类](../standard-library/regex-error-class.md)\
-[\<正则表达式>函数](../standard-library/regex-functions.md)\
-[regex_iterator类](../standard-library/regex-iterator-class.md)\
-[\<正则>运算符](../standard-library/regex-operators.md)\
-[regex_token_iterator类](../standard-library/regex-token-iterator-class.md)\
-[regex_traits类](../standard-library/regex-traits-class.md)\
-[\<正则>类型](../standard-library/regex-typedefs.md)
+[\<regex>](../standard-library/regex.md)\
+[regex_error 类](../standard-library/regex-error-class.md)\
+[\<regex> 函数](../standard-library/regex-functions.md)\
+[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[\<regex> 运算符](../standard-library/regex-operators.md)\
+[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
+[regex_traits 类](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

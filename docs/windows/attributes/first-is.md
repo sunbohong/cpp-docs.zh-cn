@@ -1,17 +1,17 @@
 ---
-title: first_is （c + + COM 特性）
+title: 'first_is (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 192d08471241526cace895bd5a5147070316cd6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1a06206d7df4dace3f749fdc8ceae7f68aaf095c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228058"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845258"
 ---
 # <a name="first_is"></a>first_is
 
@@ -28,7 +28,7 @@ ms.locfileid: "87228058"
 *expression*<br/>
 一个或多个 C 语言表达式。 允许空参数槽。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **First_is** c + + 特性具有与[first_is](/windows/win32/Midl/first-is) MIDL 特性相同的功能。
 
@@ -58,9 +58,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|或中的字段 **`struct`** **`union`** ，接口参数，接口方法|
 |**且**|否|

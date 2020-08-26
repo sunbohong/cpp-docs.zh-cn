@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: e193af8cb5c92f4a3f1ca7381783d90102e0764f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 6a824aceae39d5aa6685176354c48a9457a40e9e
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561812"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88837614"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -269,7 +269,7 @@ class CTreeCtrl : public CWnd
 |[CTreeCtrl：： SortChildren](#sortchildren)|对给定父项的子级进行排序。|
 |[CTreeCtrl：： SortChildrenCB](#sortchildrencb)|使用应用程序定义的排序函数对给定父项的子级进行排序。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 "树视图控件" 是显示项的分层列表的窗口，例如文档中的标题、索引中的条目或磁盘上的文件和目录。 每个项包含一个标签和一个可选位图图像，且每个项可以有一个与之关联的子项列表。 通过单击项，用户可以展开和折叠关联的子项列表。
 
@@ -327,7 +327,7 @@ virtual BOOL Create(
 
 如果初始化成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果要将树控件创建为某个其他窗口的子窗口，请使用 `Create` 成员函数。 如果使用创建树控件 `Create` ，则除了其他树视图样式以外，还必须将其传递 WS_VISIBLE。
 
@@ -373,7 +373,7 @@ virtual BOOL CreateEx(
 
 如果成功，则为非零; 否则为0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 使用 `CreateEx` 由 Windows 扩展样式指定的扩展 Windows 样式，而不是 [Create](#create) **WS_EX_**。
 
@@ -394,7 +394,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 指向将拖动位图添加到的图像列表的指针，如果成功，则为; 否则为。否则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 应用程序使用图像列表函数在拖动项时显示图像。
 
@@ -464,7 +464,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 
 如果成功，则为指向 `CEdit` 用于编辑项文本的对象的指针; 否则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 编辑是通过使用包含文本的单行编辑控件替换项的文本来完成的。
 
@@ -489,7 +489,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow) 消息。
 
@@ -510,7 +510,7 @@ BOOL EnsureVisible(HTREEITEM hItem);
 
 如果系统滚动树视图控件中的项以确保指定的项可见，则返回 TRUE。 否则，返回值为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果需要，函数将扩展父项或滚动树视图控件，使该项可见。
 
@@ -670,7 +670,7 @@ DWORD GetExtendedStyle() const;
 
 一个值，该值包含当前树视图控件的扩展样式的按位组合 (或) 。 有关详细信息，请参阅 [树形视图控件扩展样式](/windows/win32/Controls/tree-view-control-window-extended-styles)。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle) 消息。
 
@@ -711,7 +711,7 @@ CImageList* GetImageList(UINT nImageList) const;
 
 如果成功，则为指向控件的图像列表的指针;否则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 树视图控件中的每一项都可以有一对关联的位图图像。 选择项时，将显示一个图像，而当项处于未选中状态时显示另一个图像。 例如，当某个项处于选中状态时，它可能会显示一个打开的文件夹，并显示未选择的关闭文件夹。
 
@@ -812,7 +812,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 指定项处于展开状态时要显示的图像的索引。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) 消息。 该消息将返回描述树视图控件项的 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 结构，然后此方法将 `iExpandedImage` 从该结构中检索成员。
 
@@ -858,7 +858,7 @@ BOOL GetItemImage(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 图像显示在项标签的左侧。 选择项时，将显示一个图像，而当项处于未选中状态时显示另一个图像。 例如，当某个项处于选中状态时，它可能会显示一个打开的文件夹，并显示未选择的关闭文件夹。
 
@@ -894,7 +894,7 @@ BOOL GetItemPartRect(
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 每个树控件项都由一个图形矩形界定。 只要单击该矩形中的某个点，就会被称为 " *命中*"。 此方法返回最大的矩形，以便在单击矩形中的某个点时，将命中由 *hItem* 参数标识的项。
 
@@ -985,7 +985,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 项的扩展状态。 有关详细信息，请参阅 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 结构的成员。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_GETITEM](/windows/win32/Controls/tvm-getitem) 消息。 该消息返回描述树视图控件项的 [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 结构，此方法 `uStateEx` 从该结构中检索成员。
 
@@ -1022,7 +1022,7 @@ HTREEITEM GetLastVisibleItem() const;
 
 如果方法成功，则为最后一个未展开节点项的句柄;否则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem) 消息。 有关详细信息，请参阅该消息的 *标记* 参数中的 TVGN_LASTVISIBLE 标志。
 
@@ -1098,7 +1098,7 @@ HTREEITEM GetNextItem(
 
 如果成功，则为下一项的句柄;否则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果要检索的项是树的根节点，则此函数将返回 NULL。 例如，如果您将此消息与树视图根节点的第一级子节点上的 TVGN_PARENT 标志一起使用，则该消息将返回 NULL。
 
@@ -1167,7 +1167,7 @@ HTREEITEM GetParentItem(HTREEITEM hItem) const;
 
 父项的句柄;否则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果指定项的父项为树的根节点，则此函数将返回 NULL。
 
@@ -1245,7 +1245,7 @@ UINT GetScrollTime() const;
 
 最长滚动时间（以毫秒为单位）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此成员函数实现 Win32 消息 [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)的行为，如 Windows SDK 中所述。
 
@@ -1261,7 +1261,7 @@ UINT GetSelectedCount();
 
 选定项的数目。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount) 消息。
 
@@ -1309,7 +1309,7 @@ CToolTipCtrl* GetToolTips() const;
 
 指向要由树控件使用的 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 对象的指针。 如果 [Create](#create) 成员函数使用样式 TVS_NOTOOLTIPS，则不会使用任何工具提示，并返回 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 的 MFC 实现将 `GetToolTips` 返回一个 `CToolTipCtrl` 对象，该对象由树控件使用，而不是工具提示控件的句柄。
 
@@ -1360,13 +1360,12 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 占用指定点的树视图项的句柄; 如果没有项占据点，则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 调用此函数时， *pt* 参数指定要测试的点的坐标。 该函数返回位于指定点处的项的句柄; 如果没有项，则返回 NULL。 此外， *pFlags* 参数包含一个值，该值指示指定点的位置。 可能的值包括：
 
-|||
+|值|说明|
 |-|-|
-|值|含义|
 |TVHT_ABOVE|工作区之上。|
 |TVHT_BELOW|低于工作区。|
 |TVHT_NOWHERE|在工作区中，但在最后一项下。|
@@ -1379,7 +1378,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 |TVHT_ONITEMSTATEICON|处于用户定义状态的树视图项的状态图标上。|
 |TVHT_TOLEFT|工作区的左侧。|
 |TVHT_TORIGHT|到工作区右侧。|
-|||
 
 ### <a name="example"></a>示例
 
@@ -1452,7 +1450,7 @@ HTREEITEM InsertItem(
 
 如果成功，则为新项的句柄;否则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该示例显示了在插入树控件项时可能需要使用该函数的每个版本的情况。
 
@@ -1477,7 +1475,7 @@ BOOL ItemHasChildren(HTREEITEM hItem) const;
 
 如果由 *hItem* 指定的树项具有子项，则为非零值;如果不是，则为0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果是这样，则可以使用 [CTreeCtrl：： GetChildItem](#getchilditem) 来检索这些子项目。
 
@@ -1502,7 +1500,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 与 `HTREEITEM` *uAccId* 参数相对应的树视图项的句柄 () 。 有关详细信息，请参阅[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)结构的*hItem*成员。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 辅助功能辅助工具是帮助残障人士使用计算机的应用程序。 接口使用可访问性标识符 `IAccessible` 来唯一指定窗口中的元素。 有关辅助功能标识符的详细信息，请在 [Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)中搜索 "关于 Active Accessibility 支持" 主题。
 
@@ -1537,7 +1535,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 与 *hItem* 参数相对应的可访问性标识符。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 辅助功能辅助工具是帮助残障人士使用计算机的应用程序。 接口使用可访问性标识符 `IAccessible` 来唯一指定窗口中的元素。 有关辅助功能标识符的详细信息，请在 [Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)中搜索 "关于 Active Accessibility 支持" 主题。
 
@@ -1583,7 +1581,7 @@ BOOL Select(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 *nCode* 包含 TVGN_CARET 的值，则父窗口将接收 TVN_SELCHANGING 并 TVN_SELCHANGED 通知消息。 此外，如果指定的项是折叠的父项的子项，则将展开其父项列表以显示指定项。 在这种情况下，父窗口会接收 TVN_ITEMEXPANDING 并 TVN_ITEMEXPANDED 通知消息。
 
@@ -1629,7 +1627,7 @@ BOOL SelectItem(HTREEITEM hItem);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 *hItem* 为 NULL，则此函数不选择任何项。
 
@@ -1654,7 +1652,7 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 函数向窗口发送一条消息，其中包含 TVM_SELECTITEM 和 TVGN_FIRSTVISIBLE 消息参数。
 
@@ -1684,7 +1682,7 @@ BOOL SetAutoscrollInfo(
 
 始终返回 TRUE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 自动滚动参数用于滚动查看当前不可见的项。 树视图控件必须具有 TVS_EX_AUTOHSCROLL 扩展样式，该样式在 [树视图控件扩展样式](/windows/win32/Controls/tree-view-control-window-extended-styles)中进行了介绍。
 
@@ -1745,7 +1743,7 @@ BOOL SetCheck(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 检查树控件项 ( 如果将 *查看* 设置为 TRUE) ，则该项将显示旁边的复选标记。
 
@@ -1781,7 +1779,7 @@ DWORD SetExtendedStyle(
 
 一个值，该值包含以前的扩展控件样式。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法清除 *dwExMask* 参数中指定的样式，并设置 *dwExStyles* 参数中指定的样式。 只有与 *dwExMask* 中的位相对应的扩展样式发生更改。
 
@@ -1944,7 +1942,7 @@ BOOL SetItem(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 在 `TVITEM` 结构中， `hItem` 成员标识项， `mask` 成员指定要设置的特性。
 
@@ -2002,7 +2000,7 @@ BOOL SetItemExpandedImageIndex(
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) 消息。 此方法将 *iExpandedImage* 参数分配给 `iExpandedImage` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 结构的成员，然后在消息中使用该结构。
 
@@ -2065,7 +2063,7 @@ BOOL SetItemImage(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 树视图控件中的每一项都可以有一对关联的位图图像。 图像显示在项标签的左侧。 选择项时，将显示一个图像，而当项处于未选中状态时显示另一个图像。 例如，当某个项处于选中状态时，它可能会显示一个打开的文件夹，并显示未选择的关闭文件夹。
 
@@ -2103,7 +2101,7 @@ BOOL SetItemState(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有关状态的信息，请参阅 [CTreeCtrl：： GetItem](#getitem)。
 
@@ -2133,7 +2131,7 @@ BOOL SetItemStateEx(
 
 如果此方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法发送 Windows SDK 中描述的 [TVM_SETITEM](/windows/win32/Controls/tvm-setitem) 消息。 此方法将 *uStateEx* 参数分配给 `uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 结构的成员，然后在消息中使用该结构。
 
@@ -2192,7 +2190,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 
 上一行的颜色。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此成员函数实现 Win32 消息 [TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)的行为，如 Windows SDK 中所述。
 
@@ -2217,7 +2215,7 @@ UINT SetScrollTime(UINT uScrollTime);
 
 上一个最长滚动时间（以毫秒为单位）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此成员函数实现 Win32 消息 [TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)的行为，如 Windows SDK 中所述。
 
@@ -2259,7 +2257,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 指向 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 对象的指针，该对象包含控件以前使用的工具提示; 如果以前未使用任何工具提示，则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 若要使用工具提示，请在创建对象时指示 TVS_NOTOOLTIPS 样式 `CTreeCtrl` 。
 
@@ -2280,7 +2278,7 @@ void ShowInfoTip(HTREEITEM hItem);
 *hItem*\
 中控件中的树视图项的句柄。 有关详细信息，请参阅 `hItem` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw) 结构的成员。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有关 tooltip 和信息提示之间的区别的详细信息，请在 [Microsoft 开发人员网络](https://go.microsoft.com/fwlink/p/?linkid=56322)上搜索 "Tooltip 和信息提示" 主题。
 
@@ -2303,7 +2301,7 @@ BOOL SortChildren(HTREEITEM hItem);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `SortChildren` 不会通过树递归;只有 *hItem* 的直接子项才会进行排序。
 
@@ -2328,7 +2326,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果第一个 `lpfnCompare` 项应在第二个项的前面，则此结构的比较函数必须返回一个负值，如果第一项应在第二个项后，则返回零; 如果两个项相等，则返回零。
 
