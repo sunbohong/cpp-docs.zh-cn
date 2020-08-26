@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212118"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838459"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 
@@ -113,7 +113,7 @@ template <class TAccessor>
 class CBulkRowset : public CRowset<TAccessor>
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
 一个访问器类。
@@ -126,7 +126,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ### <a name="methods"></a>方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[AddRefRows](#addrefrows)|递增引用计数。|
 |[CBulkRowset](#cbulkrowset)|构造函数。|
@@ -136,7 +136,7 @@ class CBulkRowset : public CRowset<TAccessor>
 |[MovePrev](#moveprev)|移至前一行。|
 |[MoveToBookmark](#movetobookmark)|提取书签所标记的行，或从该书签指定偏移量处的行。|
 |[MoveToRatio](#movetoratio)|从行集中的小数位置开始提取行。|
-|[ReleaseRows](#releaserows)|将当前行（`m_nCurrentRow`）设置为零并释放所有行。|
+|[ReleaseRows](#releaserows)|将当前行 (`m_nCurrentRow`) 设置为零，并释放所有行。|
 |[SetRows](#setrows)|设置通过一个调用检索的行句柄的数目。|
 
 ## <a name="example"></a>示例
@@ -145,9 +145,9 @@ class CBulkRowset : public CRowset<TAccessor>
 
 [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
-## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a>CBulkRowset：： AddRefRows
+## <a name="cbulkrowsetaddrefrows"></a><a name="addrefrows"></a> CBulkRowset：： AddRefRows
 
-调用[IRowset：： AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85))来递增当前从大容量行集中检索到的所有行的引用计数。
+调用 [IRowset：： AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) 来递增当前从大容量行集中检索到的所有行的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -159,7 +159,7 @@ HRESULT AddRefRows() throw();
 
 标准的 HRESULT。
 
-## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a>CBulkRowset：： CBulkRowset
+## <a name="cbulkrowsetcbulkrowset"></a><a name="cbulkrowset"></a> CBulkRowset：： CBulkRowset
 
 创建一个新的 `CBulkRowset` 对象并将默认行数设置为 10。
 
@@ -169,7 +169,7 @@ HRESULT AddRefRows() throw();
 CBulkRowset();
 ```
 
-## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a>CBulkRowset：： MoveFirst
+## <a name="cbulkrowsetmovefirst"></a><a name="movefirst"></a> CBulkRowset：： MoveFirst
 
 检索第一行数据。
 
@@ -183,7 +183,7 @@ HRESULT MoveFirst() throw();
 
 标准的 HRESULT。
 
-## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a>CBulkRowset：： MoveLast
+## <a name="cbulkrowsetmovelast"></a><a name="movelast"></a> CBulkRowset：： MoveLast
 
 移到最后一行。
 
@@ -197,7 +197,7 @@ HRESULT MoveLast() throw();
 
 标准的 HRESULT。
 
-## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a>CBulkRowset：： MoveNext
+## <a name="cbulkrowsetmovenext"></a><a name="movenext"></a> CBulkRowset：： MoveNext
 
 检索下一行数据。
 
@@ -211,7 +211,7 @@ HRESULT MoveNext() throw();
 
 标准的 HRESULT。 当到达行集的末尾时，将返回 DB_S_ENDOFROWSET。
 
-## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a>CBulkRowset：： MovePrev
+## <a name="cbulkrowsetmoveprev"></a><a name="moveprev"></a> CBulkRowset：： MovePrev
 
 移至前一行。
 
@@ -225,9 +225,9 @@ HRESULT MovePrev() throw();
 
 标准的 HRESULT。
 
-## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a>CBulkRowset：： MoveToBookmark
+## <a name="cbulkrowsetmovetobookmark"></a><a name="movetobookmark"></a> CBulkRowset：： MoveToBookmark
 
-提取书签标记的行，或从该书签指定偏移量（*lSkip*）的行。
+提取书签所标记的行，或从该书签 (*lSkip*) 的指定偏移量处的行。
 
 ### <a name="syntax"></a>语法
 
@@ -236,19 +236,19 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    DBCOUNTITEM lSkip = 0) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-*书签*<br/>
+bookmark<br/>
 [in] 标记要从其提取数据的位置的书签。
 
 *lSkip*<br/>
-[in] 从书签到目标行的行数。 如果*lSkip*为零，则提取的第一行是带有书签的行。 如果*lSkip*为1，则提取的第一行是位于书签的行之后的行。 如果*lSkip*为-1，则提取的第一行是位于书签的行前面的行。
+[in] 从书签到目标行的行数。 如果 *lSkip* 为零，则提取的第一行是带有书签的行。 如果 *lSkip* 为1，则提取的第一行是位于书签的行之后的行。 如果 *lSkip* 为-1，则提取的第一行是位于书签的行前面的行。
 
 ### <a name="return-value"></a>返回值
 
 请参阅*OLE DB 程序员参考*中的[IRowset：：：](/previous-versions/windows/desktop/ms716988(v=vs.85))
 
-## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a>CBulkRowset：： MoveToRatio
+## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a> CBulkRowset：： MoveToRatio
 
 从行集中的小数位置开始提取行。
 
@@ -259,7 +259,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator)throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *nNumerator*<br/>
 中用于确定从中提取数据的小数位置的分子。
@@ -271,17 +271,17 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`MoveToRatio` 根据以下公式大致提取行：
+`MoveToRatio` 按照以下公式大致提取行：
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
 其中 `RowsetSize` 是行集的大小，以行为单位。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅*OLE DB 程序员参考*中的[IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 。
 
-## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a>CBulkRowset：： ReleaseRows
+## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a> CBulkRowset：： ReleaseRows
 
-调用[IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85))以递减当前从大容量行集中检索到的所有行的引用计数。
+调用 [IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) 以递减当前从大容量行集中检索到的所有行的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -293,7 +293,7 @@ HRESULT ReleaseRows() throw();
 
 标准的 HRESULT。
 
-## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a>CBulkRowset：： SetRows
+## <a name="cbulkrowsetsetrows"></a><a name="setrows"></a> CBulkRowset：： SetRows
 
 设置每个调用检索的行句柄数量。
 
@@ -303,12 +303,12 @@ HRESULT ReleaseRows() throw();
 void SetRows(DBROWCOUNT nRows) throw();
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
-nRows<br/>
+nRows**<br/>
 [in] 行集的新大小（行数）。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果调用此函数，则它必须在行集之前打开。
 

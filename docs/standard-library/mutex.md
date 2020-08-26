@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: e17488023d8de6eb5d341c719be8f1b36c14ffcd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228175"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838540"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
 包含标准标头 \<mutex> 以定义类 `mutex` 、 `recursive_mutex` 、 `timed_mutex` 和 `recursive_timed_mutex` ; 模板 `lock_guard` 和 `unique_lock` ; 以及用于定义互斥代码区域的支持类型和函数。
 
 > [!WARNING]
-> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （当目标平台为 Windows XP 时除外）。 在中定义的类型 \<mutex> 不应与任何 ConcRT 类型或函数一起使用。
+> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元，不再使用 ConcRT (除非目标平台是 Windows XP) 。 在中定义的类型 \<mutex> 不应与任何 ConcRT 类型或函数一起使用。
 
 ## <a name="requirements"></a>要求
 
@@ -24,7 +24,7 @@ ms.locfileid: "87228175"
 
 **命名空间:** std
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 > [!NOTE]
 > 在使用 **/clr**编译的代码中，此标头被阻止。
@@ -51,10 +51,10 @@ ms.locfileid: "87228175"
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
 |[lock_guard 类](../standard-library/lock-guard-class.md)|表示可进行实例化以创建其析构函数解锁 `mutex` 的对象的模板。|
-|[mutex 类（c + + 标准库）](../standard-library/mutex-class-stl.md)|表示互斥体类型。 使用此类型的对象以在程序内强制实现互相排斥。|
+|[mutex 类 (c + + 标准库) ](../standard-library/mutex-class-stl.md)|表示互斥体类型。 使用此类型的对象以在程序内强制实现互相排斥。|
 |[recursive_mutex 类](../standard-library/recursive-mutex-class.md)|表示互斥体类型。 与 `mutex` 类相反，为已锁定的对象调用锁定方法的行为是有明确定义的。|
 |[recursive_timed_mutex 类](../standard-library/recursive-timed-mutex-class.md)|表示定时互斥体类型。 使用此类型的对象以在程序内强制实现有时间限制的互相排斥。 与 `timed_mutex` 类型的对象不同，为 `recursive_timed_mutex` 对象调用锁定方法的效果是有明确定义的。|
 |[scoped_lock 类](../standard-library/scoped-lock-class.md)||
@@ -63,7 +63,7 @@ ms.locfileid: "87228175"
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|提供在执行期间只调用一次指定的可调用对象的机制。|
 |[lock](../standard-library/mutex-functions.md#lock)|尝试在不死锁的情况下锁定所有自变量。|
@@ -72,7 +72,7 @@ ms.locfileid: "87228175"
 
 ### <a name="structs"></a>结构
 
-|||
+|名称|说明|
 |-|-|
 |[adopt_lock_t 结构](../standard-library/adopt-lock-t-structure.md)|表示用于定义 `adopt_lock` 的类型。|
 |[defer_lock_t 结构](../standard-library/defer-lock-t-structure.md)|表示定义用于选择 `unique_lock` 的重载构造函数之一的 `defer_lock` 对象的类型。|
@@ -81,7 +81,7 @@ ms.locfileid: "87228175"
 
 ### <a name="variables"></a>变量
 
-|||
+|名称|说明|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|表示可传递给 `lock_guard` 和 `unique_lock` 的构造函数，以指示同样传递给该构造函数的互斥体对象已锁定的对象。|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数不应锁定同样传递给它的互斥体对象。|

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: 3c95f4a982e23d757b330ecadcae5cfbfd6fd531
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213068"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839122"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
@@ -38,7 +38,7 @@ ref class Map sealed;
 *C*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下， [std：： \<K> equal_to](../standard-library/equal-to-struct.md)。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 允许的类型是：
 
@@ -52,21 +52,21 @@ ref class Map sealed;
 
 - 公共枚举类
 
-**UnorderedMap**基本上是支持存储 Windows 运行时类型的[std：： unordered_map](../standard-library/unordered-map-class.md)的包装。 它是在公共 Windows 运行时接口之间传递的[Windows：： Foundation：：集合：： IMap](/uwp/api/windows.foundation.collections.imap-2)和[IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2)类型的具体实现。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::UnorderedMap` 类型，则将引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)可修复该错误。
+**UnorderedMap** 基本上是支持存储 Windows 运行时类型的 [std：： unordered_map](../standard-library/unordered-map-class.md) 的包装。 它是在公共 Windows 运行时接口之间传递的 [Windows：： Foundation：：集合：： IMap](/uwp/api/windows.foundation.collections.imap-2) 和 [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) 类型的具体实现。 如果你尝试在公共返回值或参数中使用 `Platform::Collections::UnorderedMap` 类型，则将引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IMap](/uwp/api/windows.foundation.collections.imap-2)可修复该错误。
 
-有关详细信息，请参阅[集合](../cppcx/collections-c-cx.md)。
+有关详细信息，请参阅 [集合](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[UnorderedMap：： UnorderedMap](#ctor)|初始化 Map 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[UnorderedMap：： Clear](#clear)|从当前 Map 对象中移除所有键值对。|
 |[UnorderedMap：： First](#first)|返回指定映射中第一个元素的迭代器。|
@@ -79,10 +79,9 @@ ref class Map sealed;
 
 ### <a name="events"></a>事件
 
-|||
-|-|-|
-|名称|描述|
-|[Map：： MapChanged](#mapchanged)事件|当映射更改时发生。|
+| 名称 | 说明 |
+|--|--|
+| [Map：： MapChanged](#mapchanged) 事件 | 当映射更改时发生。 |
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -94,7 +93,7 @@ ref class Map sealed;
 
 **命名空间：** Platform::Collections
 
-## <a name="unorderedmapclear-method"></a><a name="clear"></a>UnorderedMap：： Clear 方法
+## <a name="unorderedmapclear-method"></a><a name="clear"></a> UnorderedMap：： Clear 方法
 
 从当前 UnorderedMap 对象中移除所有键值对。
 
@@ -104,7 +103,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="unorderedmapfirst-method"></a><a name="first"></a>UnorderedMap：： First 方法
+## <a name="unorderedmapfirst-method"></a><a name="first"></a> UnorderedMap：： First 方法
 
 返回一个迭代器，该迭代器指定无序映射中的第一个[Windows \<K,V> ：： Foundation：：集合：： IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
@@ -120,11 +119,11 @@ virtual Windows::Foundation::Collections::IIterator<
 
 指定映射中第一个元素的迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-保存第一个（）返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myUnorderedMap->First();`。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myUnorderedMap->First();` 。
 
-## <a name="unorderedmapgetview-method"></a><a name="getview"></a>UnorderedMap：： GetView 方法
+## <a name="unorderedmapgetview-method"></a><a name="getview"></a> UnorderedMap：： GetView 方法
 
 返回当前 UnorderedMap 的只读视图;即实现[Windows：： Foundation：：集合：： IMapView：： IMapView](/uwp/api/windows.foundation.collections.imapview-2)接口的[Platform：：集合：： UnorderedMapView 类](../cppcx/platform-collections-unorderedmapview-class.md)。
 
@@ -138,7 +137,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 一个 `UnorderedMapView` 对象。
 
-## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a>UnorderedMap：： HasKey 方法
+## <a name="unorderedmaphaskey-method"></a><a name="haskey"></a> UnorderedMap：： HasKey 方法
 
 确定当前 UnorderedMap 中是否包含指定键。
 
@@ -152,14 +151,14 @@ bool HasKey(
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
+*键*<br/>
 用于定位 UnorderedMap 元素的键。 *键*类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
 **`true`** 如果找到该键，则为;否则为 **`false`** 。
 
-## <a name="unorderedmapinsert-method"></a><a name="insert"></a>UnorderedMap：： Insert 方法
+## <a name="unorderedmapinsert-method"></a><a name="insert"></a> UnorderedMap：： Insert 方法
 
 将指定的键值对添加到当前 UnorderedMap 对象中。
 
@@ -174,7 +173,7 @@ virtual bool Insert(
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
+*键*<br/>
 键值对中的键部分。 *键*类型为 typename *K*。
 
 *value*<br/>
@@ -182,9 +181,9 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果当前映射中现有元素的键与*键*匹配，并且该元素的值部分设置为*value*。 **`false`** 如果当前映射中没有任何现有元素匹配*键*，并且*键*和*值*参数成为键值对并随后添加到当前 UnorderedMap 中，则为。
+**`true`** 如果当前映射中现有元素的键与 *键* 匹配，并且该元素的值部分设置为 *value*。 **`false`** 如果当前映射中没有任何现有元素匹配 *键* ，并且 *键* 和 *值* 参数成为键值对并随后添加到当前 UnorderedMap 中，则为。
 
-## <a name="unorderedmaplookup-method"></a><a name="lookup"></a>UnorderedMap：： Lookup 方法
+## <a name="unorderedmaplookup-method"></a><a name="lookup"></a> UnorderedMap：： Lookup 方法
 
 检索与类型 K 的指定键关联的类型 V 的值。
 
@@ -198,14 +197,14 @@ V Lookup(
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
+*键*<br/>
 用于定位 UnorderedMap 中的元素的键。 *键*类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-与*键*配对的值。 返回值的类型为 typename *V*。
+与 *键*配对的值。 返回值的类型为 typename *V*。
 
-## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a>UnorderedMap：： MapChanged
+## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a> UnorderedMap：： MapChanged
 
 项目插入到映射中或从映射中移除时引发。
 
@@ -223,7 +222,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 Windows 运行时美国 c # 或 Visual Basic 项目 IMap \<K,V> 作为 IDictionary 的应用 \<K,V> 。
 
-## <a name="unorderedmapremove-method"></a><a name="remove"></a>UnorderedMap：： Remove 方法
+## <a name="unorderedmapremove-method"></a><a name="remove"></a> UnorderedMap：： Remove 方法
 
 从 UnorderedMap 对象中删除指定的键值对。
 
@@ -236,10 +235,10 @@ virtual void Remove(
 
 ### <a name="parameters"></a>参数
 
-*key*<br/>
+*键*<br/>
 键值对中的键部分。 *键*类型为 typename *K*。
 
-## <a name="unorderedmapsize-method"></a><a name="size"></a>UnorderedMap：： Size 方法
+## <a name="unorderedmapsize-method"></a><a name="size"></a> UnorderedMap：： Size 方法
 
 返回 UnorderedMap 中的[Windows：： Foundation：：集合：： IKeyValuePair \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素的数目。
 
@@ -253,7 +252,7 @@ virtual property unsigned int Size;
 
 UnorderedMap 中的元素数目。
 
-## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a>UnorderedMap：： UnorderedMap 构造函数
+## <a name="unorderedmapunorderedmap-constructor"></a><a name="ctor"></a> UnorderedMap：： UnorderedMap 构造函数
 
 初始化 UnorderedMap 类的新实例。
 
@@ -347,13 +346,13 @@ UnorderedMap(
 可比较两个键以确定它们是否相等的函数对象。 此参数默认为[std：： equal_to \<K> ](../standard-library/equal-to-struct.md)。
 
 *H*<br/>
-可以为键生成哈希值的函数对象。 对于类支持的键类型，此参数默认为 "[哈希类 1](../standard-library/hash-class.md) "。
+可以为键生成哈希值的函数对象。 对于类支持的键类型，此参数默认为 " [哈希类 1](../standard-library/hash-class.md) "。
 
 *m*<br/>
 用于初始化当前 UnorderedMap 的[std：： unordered_map](../standard-library/unordered-map-class.md)的引用、[左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 *il*<br/>
-Std： [： initializer_list](../standard-library/initializer-list-class.md) [std：:p](../standard-library/pair-structure.md)用于初始化地图的空气对象。
+Std： [： initializer_list](../standard-library/initializer-list-class.md) [std：:p](../standard-library/pair-structure.md) 用于初始化地图的空气对象。
 
 *first*<br/>
 用于初始化当前 UnorderedMap 的一系列元素中的第一个元素的输入迭代器。

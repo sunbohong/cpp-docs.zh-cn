@@ -5,16 +5,16 @@ helpviewer_keywords:
 - CMFCPrintPreviewToolBar class [MFC]
 - CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
-ms.openlocfilehash: ac1fba453a539c6c311e672c1b26e34a3bf81ffd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee66c5faf12a8fd651c481f058c24b649a6c2fb4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403615"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838641"
 ---
 # <a name="cmfcprintpreviewtoolbar-class"></a>CMFCPrintPreviewToolBar 类
 
-在打印预览工具栏。
+打印预览上的工具栏。
 
 ## <a name="syntax"></a>语法
 
@@ -26,17 +26,15 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|||
+|“属性”|说明|
 |-|-|
-|名称|描述|
 |`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|||
+|“属性”|说明|
 |-|-|
-|名称|描述|
-|`CMFCPrintPreviewToolBar::GetThisClass`|由框架用于获取一个指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)与此类类型相关联的对象。|
+|`CMFCPrintPreviewToolBar::GetThisClass`|由框架用于获取指向与此类类型相关联的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象的指针。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,9 +56,9 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxpreviewviewex.h
+**标头：** afxpreviewviewex
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

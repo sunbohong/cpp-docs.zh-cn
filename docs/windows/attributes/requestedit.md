@@ -1,17 +1,17 @@
 ---
-title: requestedit （C++ COM 特性）
+title: 'requestedit (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requestedit
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: ec9e516157f2b6ea2a64875f30d2b03412c6eb46
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d5cf2bb8fab75c64d74a2f28964b3019200dad51
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214560"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88846012"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214560"
 
 ## <a name="remarks"></a>备注
 
-**Requestedit** C++特性具有与[requestedit](/windows/win32/Midl/requestedit) MIDL 特性相同的功能。
+**Requestedit** c + + 特性具有与[requestedit](/windows/win32/Midl/requestedit) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -33,13 +33,11 @@ ms.locfileid: "80214560"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|接口方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

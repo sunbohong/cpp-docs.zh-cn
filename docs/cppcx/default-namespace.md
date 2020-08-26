@@ -2,16 +2,16 @@
 title: default 命名空间
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5696730bcef08ad11be4a2b689e95eb3c13e11eb
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740515"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845700"
 ---
 # <a name="default-namespace"></a>default 命名空间
 
-命名空间涵盖C++/cx 支持的内置类型`default`
+`default`命名空间涵盖 c + + 支持的内置类型/cx
 
 ## <a name="syntax"></a>语法
 
@@ -23,16 +23,16 @@ namespace default;
 
 所有内置类型都继承以下成员。
 
-|||
-|-|-|
-|[default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md)|确定指定的对象是否等于当前对象。|
-|[default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md)|返回此实例的哈希代码。|
-|[default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md)|返回表示当前类型的字符串。|
-|[default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md)|返回表示当前类型的字符串。|
+| 名称 | 说明 |
+|--|--|
+| [default::(type_name)::Equals](../cppcx/default-type-name-equals-method.md) | 确定指定对象是否等于当前对象。 |
+| [default::(type_name)::GetHashCode](../cppcx/default-type-name-gethashcode-method.md) | 返回此实例的哈希代码。 |
+| [default::(type_name)::GetType](../cppcx/default-type-name-gettype-method.md) | 返回表示当前类型的字符串。 |
+| [default::(type_name)::ToString](../cppcx/default-type-name-tostring-method.md) | 返回表示当前类型的字符串。 |
 
 ### <a name="built-in-types"></a>内置类型
 
-|name|描述|
+|名称|说明|
 |----------|-----------------|
 |`char16`|表示 Unicode (UTF-16) 码位的 16 位非数字值。|
 |`float32`|32 位 IEEE 754 浮点数。|
@@ -50,6 +50,6 @@ namespace default;
 
 **标头：** vccorlib.h
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)
+[C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)

@@ -1,17 +1,17 @@
 ---
-title: ms_union （C++ COM 特性）
+title: 'ms_union (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.ms_union
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166635"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838836"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -25,11 +25,11 @@ ms.locfileid: "80166635"
 
 ## <a name="remarks"></a>备注
 
-**Ms_union** C++特性具有与[ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 特性相同的功能。
+**Ms_union** c + + 特性具有与[ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示**ms_union**的位置：
+下面的代码演示 **ms_union**的位置：
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -56,13 +56,11 @@ __interface IFireTabCtrl {
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|Nonencapsulated 联合|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|Nonencapsulated 联合|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|`dispinterface`|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

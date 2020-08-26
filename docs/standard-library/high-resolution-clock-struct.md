@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 850d5e3a5434aa44e23a7f74aeb9c306ab6c0a8e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a79cb91a6b0e6ca633540fd37f7a0e1ece53b712
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203203"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845778"
 ---
 # <a name="steady_clock-struct"></a>steady_clock 结构
 
-表示一个*high_resolution*时钟。
+表示一个 *high_resolution* 时钟。
 
 ## <a name="syntax"></a>语法
 
@@ -33,7 +33,7 @@ class high_resolution_clock
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`duration`|`nanoseconds`在中定义的的同义词 \<chrono> 。|
 |`period`|`nano`在中定义的的同义词 \<ratio> 。|
@@ -42,12 +42,12 @@ class high_resolution_clock
 
 ## <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |`now`|返回当前时间作为 `time_point` 值。|
 
 ## <a name="constants"></a>常量
 
-|名称|描述|
+|名称|说明|
 |----------|-----------------|
 |`is_steady`|保存 **`true`** 。 `high_resolution_clock` 是*稳定的*。|

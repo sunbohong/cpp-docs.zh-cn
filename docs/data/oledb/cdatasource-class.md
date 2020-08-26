@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f6b5182fdc451217e2f61642f96e77f679c45d37
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216500"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838342"
 ---
 # <a name="cdatasource-class"></a>CDataSource 类
 
@@ -81,25 +81,25 @@ class CDataSource
 
 ### <a name="methods"></a>方法
 
-|||
+| 名称 | 说明 |
 |-|-|
 |[关闭](#close)|关闭连接。|
 |[GetInitializationString](#getinitializationstring)|检索当前打开的数据源的初始化字符串。|
 |[GetProperties](#getproperties)|获取当前为连接的数据源设置的属性的值。|
 |[GetProperty](#getproperty)|获取当前为连接的数据源设置的单个属性的值。|
-|[打开](#open)|使用 `CLSID` 、 `ProgID` 或 `CEnumerator` 调用方提供的名字对象创建与提供程序（数据源）的连接。|
+|[打开](#open)|使用 `CLSID` 、 `ProgID` 或 `CEnumerator` 调用方提供的名字对象 (数据源) 创建与提供程序的连接。|
 |[OpenFromFileName](#openfromfilename)|从由用户提供的文件名指定的文件打开数据源。|
 |[OpenFromInitializationString](#openfrominitializationstring)|打开由初始化字符串指定的数据源。|
 |[OpenWithPromptFileName](#openwithpromptfilename)|允许用户选择之前创建的数据链接文件来打开对应的数据源。|
 |[OpenWithServiceComponents](#openwithservicecomponents)|使用“数据链接”对话框打开数据源对象。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-可以为单个连接创建一个或多个数据库会话。 这些会话由 `CSession` 表示。 在使用创建会话之前，必须先调用[CDataSource：： open](../../data/oledb/cdatasource-open.md)以便打开连接 `CSession::Open` 。
+可以为单个连接创建一个或多个数据库会话。 这些会话由 `CSession` 表示。 在使用创建会话之前，必须先调用 [CDataSource：： open](../../data/oledb/cdatasource-open.md) 以便打开连接 `CSession::Open` 。
 
-有关如何使用的示例 `CDataSource` ，请参阅[CatDB](../../overview/visual-cpp-samples.md)示例。
+有关如何使用的示例 `CDataSource` ，请参阅 [CatDB](../../overview/visual-cpp-samples.md) 示例。
 
-## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource：： Close
+## <a name="cdatasourceclose"></a><a name="close"></a> CDataSource：： Close
 
 通过释放指针来关闭连接 `m_spInit` 。
 
@@ -109,7 +109,7 @@ class CDataSource
 void Close() throw();
 ```
 
-## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource：： GetInitializationString
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a> CDataSource：： GetInitializationString
 
 检索当前打开的数据源的初始化字符串。
 
@@ -132,11 +132,11 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 生成的初始化字符串可用于稍后重新打开此数据源连接。
 
-## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>CDataSource：： GetProperties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a> CDataSource：： GetProperties
 
 返回为连接的数据源对象请求的属性信息。
 
@@ -157,11 +157,11 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-若要获取单个属性，请使用[GetProperty](../../data/oledb/cdatasource-getproperty.md)。
+若要获取单个属性，请使用 [GetProperty](../../data/oledb/cdatasource-getproperty.md)。
 
-## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource：： GetProperty
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource：： GetProperty
 
 返回连接的数据源对象的指定属性的值。
 
@@ -188,11 +188,11 @@ HRESULT GetProperty(const GUID& guid,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-若要获取多个属性，请使用[GetProperties](../../data/oledb/cdatasource-getproperties.md)。
+若要获取多个属性，请使用 [GetProperties](../../data/oledb/cdatasource-getproperties.md)。
 
-## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource：： Open
+## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource：： Open
 
 使用、或名字对象打开与数据源的连接， `CLSID` `ProgID` 或者使用 `CEnumerator` 定位符对话框提示用户。
 
@@ -240,10 +240,10 @@ HRESULT Open(LPCSTR szProgID,
 #### <a name="parameters"></a>参数
 
 *clsid*<br/>
-中`CLSID`数据访问接口的。
+中 `CLSID` 数据访问接口的。
 
 *pPropSet*<br/>
-中指向包含要设置的属性和值的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。
+中指向包含要设置的属性和值的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。
 
 *nPropertySets*<br/>
 中在*传入 ppropset*参数中传递的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。
@@ -258,16 +258,16 @@ HRESULT Open(LPCSTR szProgID,
 [in] 用户的密码。
 
 *nInitMode*<br/>
-[in] 数据库初始化模式。 有关有效初始化模式的列表，请参阅 Windows SDK 中*OLE DB 程序员参考*中的[初始化属性](/previous-versions/windows/desktop/ms723127(v=vs.85))。 如果*nInitMode*为零，则不会在用于打开连接的属性集中包含初始化模式。
+[in] 数据库初始化模式。 有关有效初始化模式的列表，请参阅 Windows SDK 中*OLE DB 程序员参考*中的[初始化属性](/previous-versions/windows/desktop/ms723127(v=vs.85))。 如果 *nInitMode* 为零，则不会在用于打开连接的属性集中包含初始化模式。
 
 *szProgID*<br/>
 [in] 一个程序标识符。
 
 *枚举器*<br/>
-中一个[CEnumerator](../../data/oledb/cenumerator-class.md)对象，用于在调用方未指定时获取用于打开连接的名字对象 `CLSID` 。
+中一个 [CEnumerator](../../data/oledb/cenumerator-class.md) 对象，用于在调用方未指定时获取用于打开连接的名字对象 `CLSID` 。
 
 *hWnd*<br/>
-[in] 将成为对话框父级的窗口的句柄。 使用使用*hWnd*参数的函数重载将自动调用服务组件;有关详细信息，请参阅备注。
+[in] 将成为对话框父级的窗口的句柄。 使用使用 *hWnd* 参数的函数重载将自动调用服务组件;有关详细信息，请参阅备注。
 
 *dwPromptOptions*<br/>
 [in] 确定要显示的定位器对话框的样式。 请参阅 Msdasc.h 了解可能的值。
@@ -276,11 +276,11 @@ HRESULT Open(LPCSTR szProgID,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-使用*hWnd*参数的方法重载在 oledb32.dll 中打开包含服务组件的数据源对象;此 DLL 包含服务组件功能（如资源池、自动事务登记等）的实现。 有关详细信息，请参阅[OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
+使用 *hWnd* 参数的方法重载在 oledb32.dll 中打开包含服务组件的数据源对象;此 DLL 包含服务组件功能（如资源池、自动事务登记等）的实现。 有关详细信息，请参阅 [OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
 
-不使用*hWnd*参数的方法重载打开数据源对象，而不使用 oledb32.dll 中的服务组件。 使用这些函数重载打开的[CDataSource](../../data/oledb/cdatasource-class.md)对象将无法利用服务组件的任何功能。
+不使用 *hWnd* 参数的方法重载打开数据源对象，而不使用 oledb32.dll 中的服务组件。 使用这些函数重载打开的 [CDataSource](../../data/oledb/cdatasource-class.md) 对象将无法利用服务组件的任何功能。
 
 ### <a name="example"></a>示例
 
@@ -288,7 +288,7 @@ HRESULT Open(LPCSTR szProgID,
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource：： OpenFromFileName
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a> CDataSource：： OpenFromFileName
 
 从由用户提供的文件名指定的文件打开数据源。
 
@@ -303,17 +303,17 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] 文件的名称，通常是数据源连接 (.UDL) 文件。
 
-有关数据链接文件（.udl 文件）的详细信息，请参阅 Windows SDK 中的[数据链接 API 概述](/previous-versions/windows/desktop/ms718102(v=vs.85))。
+有关)  ( 的数据链接文件的详细信息，请参阅 Windows SDK 中的 [数据链接 API 概述](/previous-versions/windows/desktop/ms718102(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅[OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
+此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅 [OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
 
-## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource：： OpenFromInitializationString
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a> CDataSource：： OpenFromInitializationString
 
 打开由用户提供的初始化字符串指定的数据源。
 
@@ -330,19 +330,19 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 中初始化字符串。
 
 *fPromptForInfo*<br/>
-中如果将此参数设置为 **`true`** ，则 `OpenFromInitializationString` 会将 DBPROP_INIT_PROMPT 属性设置为 DBPROMPT_COMPLETEREQUIRED，这将指定仅在需要更多信息时提示用户。 这对于以下情况非常有用：初始化字符串指定了需要密码的数据库，但该字符串不包含密码。 尝试连接到数据库时，系统将提示用户输入密码（或任何其他缺少的信息）。
+中如果将此参数设置为 **`true`** ，则 `OpenFromInitializationString` 会将 DBPROP_INIT_PROMPT 属性设置为 DBPROMPT_COMPLETEREQUIRED，这将指定仅在需要更多信息时提示用户。 这对于以下情况非常有用：初始化字符串指定了需要密码的数据库，但该字符串不包含密码。 尝试连接到数据库时，系统将提示用户输入密码 (或任何其他缺少的信息) 。
 
-默认值为 **`false`** ，该值指定不会提示用户（将 DBPROP_INIT_PROMPT 设置为 DBPROMPT_NOPROMPT）。
+默认值为 **`false`** ，该值指定不会提示用户 (将 DBPROP_INIT_PROMPT 设置为 DBPROMPT_NOPROMPT) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。
 
-## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource：： OpenWithPromptFileName
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a> CDataSource：： OpenWithPromptFileName
 
 此方法通过对话框提示用户，然后使用由用户指定的文件打开数据源。
 
@@ -369,11 +369,11 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅[OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
+此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅 [OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
 
-## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource：： OpenWithServiceComponents
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a> CDataSource：： OpenWithServiceComponents
 
 使用 oledb32.dll 中的服务组件打开数据源对象。
 
@@ -392,24 +392,24 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 #### <a name="parameters"></a>参数
 
 *clsid*<br/>
-中`CLSID`数据访问接口的。
+中 `CLSID` 数据访问接口的。
 
 *szProgID*<br/>
 [in] 数据提供程序的程序 ID。
 
 *传入 ppropset*<br/>
-中指向包含要设置的属性和值的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。 如果数据源对象进行初始化，则属性必须属于数据源属性组。 如果在*传入 ppropset*中多次指定同一个属性，则使用哪个值是特定于提供程序的。 如果*ulPropSets*为零，则忽略此参数。
+中指向包含要设置的属性和值的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。 如果数据源对象进行初始化，则属性必须属于数据源属性组。 如果在 *传入 ppropset*中多次指定同一个属性，则使用哪个值是特定于提供程序的。 如果 *ulPropSets* 为零，则忽略此参数。
 
 *ulPropSets*<br/>
-中在*传入 ppropset*参数中传递的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。 如果此值为零，则提供程序将忽略*传入 ppropset*。
+中在*传入 ppropset*参数中传递的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。 如果此值为零，则提供程序将忽略 *传入 ppropset*。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅[OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
+此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅 [OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
 
 ## <a name="see-also"></a>另请参阅
 

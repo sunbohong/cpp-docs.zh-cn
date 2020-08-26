@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 0ddb15507c97c0dfff48575e476b57fe91359239
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610902"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839135"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -90,10 +90,9 @@ ref class Map sealed;
 
 ### <a name="events"></a>事件
 
-|||
-|-|-|
-|名称|说明|
-|[Map：： MapChanged](#mapchanged) 事件|当映射更改时发生。|
+| 名称 | 说明 |
+|--|--|
+| [Map：： MapChanged](#mapchanged) 事件 | 当映射更改时发生。 |
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -132,7 +131,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 ### <a name="remarks"></a>注解
 
-保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myMap->First();`。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myMap->First();` 。
 
 ## <a name="mapgetview-method"></a><a name="getview"></a> Map：： GetView 方法
 

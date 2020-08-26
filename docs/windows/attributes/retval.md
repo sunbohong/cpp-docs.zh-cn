@@ -1,17 +1,17 @@
 ---
-title: retval （C++ COM 特性）
+title: 'retval (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.retval
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-ms.openlocfilehash: 5aded4588614eb4171e31a588f125ea8aa8de7ee
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f90893390bc67cb495e646f61e3d61a994e42e50
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166336"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845986"
 ---
 # <a name="retval"></a>retval
 
@@ -25,9 +25,9 @@ ms.locfileid: "80166336"
 
 ## <a name="remarks"></a>备注
 
-**Retval** C++特性具有与[retval](/windows/win32/Midl/retval) MIDL 特性相同的功能。
+**Retval** c + + 特性具有与[retval](/windows/win32/Midl/retval) MIDL 特性相同的功能。
 
-**retval**必须出现在函数声明中的最后一个参数上。
+**retval** 必须出现在函数声明中的最后一个参数上。
 
 ## <a name="example"></a>示例
 
@@ -35,13 +35,11 @@ ms.locfileid: "80166336"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|Interface 参数，interface 方法|
-|**可重复**|否|
-|**必需的特性**|**out**|
+|**适用于**|Interface 参数，interface 方法|
+|**且**|否|
+|**必需属性**|**out**|
 |**无效的特性**|**in**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
@@ -49,5 +47,5 @@ ms.locfileid: "80166336"
 ## <a name="see-also"></a>另请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
-[参数特性](parameter-attributes.md)<br/>
+[参数属性](parameter-attributes.md)<br/>
 [方法特性](method-attributes.md)

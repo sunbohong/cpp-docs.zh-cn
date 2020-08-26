@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 7713fe3f7cff4b80ce72927fa970e03914f94346
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: dd0c55091d3dff641993fa593e656e2825da7c73
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373599"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88839240"
 ---
 # <a name="language-strings"></a>Language Strings
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 和 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅[附录 a：](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)以 MS-LCID 显示的产品行为 \[ ]： Windows 语言代码标识符（LCID）参考。 语言字符串可以是支持语言列表的“语言”**** 和“语言标记”**** 列中的任意值。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/win32/intl/nls--name-based-apis-sample)。
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 和 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函数均可在不使用 Unicode 代码页的操作系统上使用 Windows NLS API 支持的语言。 有关操作系统版本支持的语言的列表，请参阅 [附录 a：产品行为](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) in \[ MS-LCID]： Windows 语言代码标识符 (LCID) 引用。 语言字符串可以是支持语言列表的“语言”**** 和“语言标记”**** 列中的任意值。 有关枚举可用区域设置名称和相关值的代码示例，请参阅 [NLS：基于名称的 API 示例](/windows/win32/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-language-strings"></a>其他受支持的语言字符串
 
@@ -21,9 +21,9 @@ Microsoft C 运行时库实现还支持下面这些语言字符串：
 
 |语言字符串|等效区域设置名称|
 |---------------------|----------------------------|
-|美国|en-US|
-|american english|en-US|
-|american-english|en-US|
+|美国|zh-CN|
+|american english|zh-CN|
+|american-english|zh-CN|
 |澳大利亚|en-AU|
 |比利时|nl-BE|
 |加拿大|en-CA|
@@ -35,7 +35,7 @@ Microsoft C 运行时库实现还支持下面这些语言字符串：
 |chinese-singapore|zh-SG|
 |chinese-traditional|zh-TW|
 |dutch-belgian|nl-BE|
-|english-american|en-US|
+|english-american|zh-CN|
 |english-aus|en-AU|
 |english-belize|en-BZ|
 |english-can|en-CA|
@@ -46,8 +46,8 @@ Microsoft C 运行时库实现还支持下面这些语言字符串：
 |english-south africa|en-ZA|
 |english-trinidad y tobago|en-TT|
 |english-uk|en-GB|
-|english-us|en-US|
-|english-usa|en-US|
+|english-us|zh-CN|
+|english-usa|zh-CN|
 |french-belgian|fr-BE|
 |french-canadian|fr-CA|
 |french-luxembourg|fr-LU|
@@ -84,8 +84,8 @@ Microsoft C 运行时库实现还支持下面这些语言字符串：
 |swedish-finland|sv-FI|
 |瑞士|de-CH|
 |uk|en-GB|
-|us|en-US|
-|usa|en-US|
+|us|zh-CN|
+|usa|zh-CN|
 
 ## <a name="see-also"></a>另请参阅
 

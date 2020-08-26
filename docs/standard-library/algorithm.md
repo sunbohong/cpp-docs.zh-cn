@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: a2a48eec2ed75fffd711a8704cb8c896f8ee7242
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205530"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845817"
 ---
 # <a name="ltalgorithmgt"></a>&lt;算法&gt;
 
@@ -28,7 +28,7 @@ ms.locfileid: "87205530"
 > [!NOTE]
 > \<algorithm>该库还使用该 `#include <initializer_list>` 语句。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 C++ 标准库算法可在多种数据结构上运算，因此属于通用算法。 可用 C++ 标准库运算的数据结构不仅包括 C++ 标准库容器类（例如 `vector` 和 `list`），还包括程序定义的数据结构和满足特定算法要求的元素数组。 C++ 标准库算法通过迭代器间接访问并遍历容器元素来实现这种通用性。
 
@@ -46,7 +46,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 
 ### <a name="function-templates"></a>函数模板
 
-|||
+|名称|说明|
 |-|-|
 |[adjacent_find](algorithm-functions.md#adjacent_find)|搜索相等或满足指定条件的两个相邻元素。|
 |[all_of](algorithm-functions.md#all_of)|**`true`** 当给定范围内的每个元素都存在条件时返回。|
@@ -96,7 +96,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[move_backward](algorithm-functions.md#move_backward)|将一个迭代器的元素移动到另一迭代器。 移动从指定范围的最后一个元素开始，并在此范围的第一个元素结束。|
 |[next_permutation](algorithm-functions.md#next_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
 |[none_of](algorithm-functions.md#none_of)|**`true`** 当给定范围内的元素内从不出现条件时，返回。|
-|[nth_element](algorithm-functions.md#nth_element)|对一系列元素进行分区，正确找到范围中序列的第*n*个元素，以使其前面的所有元素都小于或等于该元素，并且序列后面的所有元素都大于或等于此元素。|
+|[nth_element](algorithm-functions.md#nth_element)|对一系列元素进行分区，正确找到范围中序列的第 *n*个元素，以使其前面的所有元素都小于或等于该元素，并且序列后面的所有元素都大于或等于此元素。|
 |[partial_sort](algorithm-functions.md#partial_sort)|将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。|
 |[依据](algorithm-functions.md#partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。|

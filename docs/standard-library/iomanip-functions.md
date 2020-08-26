@@ -26,23 +26,28 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f4ef061e49bda027b0a8a65449c7c71cd765dcf1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228240"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88845752"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
-||||
-|-|-|-|
-|[get_money](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money](#iomanip_put_money)|
-|[put_time](#iomanip_put_time)|[quoted](#quoted)|[resetiosflags](#resetiosflags)|
-|[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
-|[setprecision](#setprecision)|[setw](#setw)|
+[get_money](#iomanip_get_money)\
+[get_time](#iomanip_get_time)\
+[put_money](#iomanip_put_money)\
+[put_time](#iomanip_put_time)\
+[带引号](#quoted)\
+[resetiosflags](#resetiosflags)\
+[setbase](#setbase)\
+[setfill](#setfill)\
+[setiosflags](#setiosflags)\
+[setprecision](#setprecision)\
+[setw](#setw)
 
-## <a name="get_money"></a><a name="iomanip_get_money"></a>get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a> get_money
 
 使用所需格式从流中提取货币值，然后在参数中返回值。
 
@@ -59,13 +64,13 @@ T7 get_money(Money& amount, bool use_intl);
 *use_intl*\
 如果为 **`true`** ，则使用国际格式。 默认值为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-操控器会返回一个对象，该对象在从流中提取时 `str` ，其行为与一个 `formatted input function` ，它为 `get` 与关联的区域设置 facet 调用成员函数 `money_get` `str` ，并使用*use_intl*来指示国际格式。 如果成功，则调用将按提取的货币值存储*量*。 此操控器随后返回 `str`。
+操控器会返回一个对象，该对象在从流中提取时 `str` ，其行为与一个 `formatted input function` ，它为 `get` 与关联的区域设置 facet 调用成员函数 `money_get` `str` ，并使用 *use_intl* 来指示国际格式。 如果成功，则调用将按提取的货币值存储 *量* 。 此操控器随后返回 `str`。
 
-`Money`的类型必须为 **`long double`** 或的实例化，其 `basic_string` 元素和特征参数与相同 `str` 。
+`Money` 的类型必须为 **`long double`** 或的实例化，其 `basic_string` 元素和特征参数与相同 `str` 。
 
-## <a name="get_time"></a><a name="iomanip_get_time"></a>get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a> get_time
 
 使用所需格式从流中提取时间值。 在参数中返回值作为时间结构。
 
@@ -82,11 +87,11 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 *time_format*\
 要用于获取时间值的所需格式。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此操控器会返回一个对象，该对象在从流 `str` 中提取时会表现为 `formatted input function`，它为与 `str` 关联的区域设置 Facet `time_get` 调用成员函数 `get`，其使用 `tptr` 来指示时间结构，使用 `fmt` 来指示 null 终止格式字符串的开头。 如果成功，则调用会将与任何提取时间字段关联的值存储在时间结构中。 此操控器随后返回 `str`。
 
-## <a name="put_money"></a><a name="iomanip_put_money"></a>put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a> put_money
 
 使用所需格式将货币金额插入流中。
 
@@ -107,13 +112,13 @@ T8 put_money(const Money& amount, bool use_intl);
 
 返回 `str`。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功，则调用将 `amount` 以适当的格式插入，并使用*use_intl*来指示国际格式，并将 `str.fill()` 用作填充元素。 此操控器随后返回 `str`。
+此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功，则调用将 `amount` 以适当的格式插入，并使用 *use_intl* 来指示国际格式，并将 `str.fill()` 用作填充元素。 此操控器随后返回 `str`。
 
-`Money`的类型必须为 **`long double`** 或的实例化，其 `basic_string` 元素和特征参数与相同 `str` 。
+`Money` 的类型必须为 **`long double`** 或的实例化，其 `basic_string` 元素和特征参数与相同 `str` 。
 
-## <a name="put_time"></a><a name="iomanip_put_time"></a>put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a> put_time
 
 使用指定格式将时间值从时间结构写入流中。
 
@@ -130,11 +135,11 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 *time_format*\
 用来写入时间值的所需格式。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用*time_ptr*来指示时间结构，并*time_format*以指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
+操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用 *time_ptr* 来指示时间结构，并 *time_format* 以指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
 
-## <a name="quoted"></a><a name="quoted"></a>带引号
+## <a name="quoted"></a><a name="quoted"></a> 带引号
 
 **（C++14 中的新增功能）** 一个 iostream 操控程序，它使用 >> and << 运算符，使字符串能方便地往返进出流。
 
@@ -148,7 +153,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 ### <a name="parameters"></a>参数
 
 *字符串*\
-Std：： string、char \* 、字符串文本或原始字符串文本或其中任何一个的宽版本（例如 std：： wstring、wchar_t \* ）。
+Std：： string、char \* 、字符串文本或原始字符串文本或其任意 (（例如 std：： wstring、wchar_t) ）的广泛版本。 \*
 
 *后面*\
 一个用户指定的字符或宽字符，用作字符串开头和结尾的分隔符。
@@ -156,7 +161,7 @@ Std：： string、char \* 、字符串文本或原始字符串文本或其中�
 *esc*\
 一个用户指定的字符或宽字符，用作字符串内转义序列的转义字符。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 请参阅[使用插入运算符并控制格式](../standard-library/using-insertion-operators-and-controlling-format.md)。
 
@@ -301,7 +306,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a><a name="resetiosflags"></a>resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a> resetiosflags
 
 清除指定标志。
 
@@ -322,7 +327,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 有关使用 `resetiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
 
-## <a name="setbase"></a><a name="setbase"></a>setbase
+## <a name="setbase"></a><a name="setbase"></a> setbase
 
 为整数设置基数。
 
@@ -351,7 +356,7 @@ T3 setbase(int base);
 
 有关使用 `setbase` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
 
-## <a name="setfill"></a><a name="setfill"></a>setfill
+## <a name="setfill"></a><a name="setfill"></a> setfill
 
 设置用于在右对齐显示中填充空格的字符。
 
@@ -373,7 +378,7 @@ T4 setfill(Elem Ch);
 
 有关使用 `setfill` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
 
-## <a name="setiosflags"></a><a name="setiosflags"></a>setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a> setiosflags
 
 设置指定标志。
 
@@ -394,7 +399,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 有关使用 `setiosflags` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
 
-## <a name="setprecision"></a><a name="setprecision"></a>setprecision
+## <a name="setprecision"></a><a name="setprecision"></a> setprecision
 
 为浮点值设置精度。
 
@@ -415,7 +420,7 @@ T5 setprecision(streamsize Prec);
 
 有关使用 `setprecision` 的示例，请参阅 [setw](../standard-library/iomanip-functions.md#setw)。
 
-## <a name="setw"></a><a name="setw"></a>setw
+## <a name="setw"></a><a name="setw"></a> setw
 
 为流中下一元素指定显示字段的宽度。
 
@@ -432,7 +437,7 @@ T6 setw(streamsize Wide);
 
 操控器返回一个对象，该对象在从流中提取或插入到流 `str` 中时调用 `str.` [width](../standard-library/ios-base-class.md#width) `(Wide)` ，然后返回 `str` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 setw 仅设置流中下一元素的宽度，并且必须插入在要对其指定宽度的每个元素之前。
 

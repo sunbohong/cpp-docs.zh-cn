@@ -88,12 +88,12 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-ms.openlocfilehash: ae2ea172b331472e6ea28c175ad2c7a10ae621a0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1edcabf526d0f3aa2ba52ba3fd0fc656c5ae6b9c
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220946"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88838538"
 ---
 # <a name="deque-class"></a>deque 类
 
@@ -114,7 +114,7 @@ class deque
 *器*\
 表示所存储分配器对象的类型，该分配器对象封装有关 deque 的内存分配和解除分配的详细信息。 此参数是可选的，默认值为**分配 \<Type> **器。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 容器类型选择通常应根据应用程序所需的搜索和插入的类型。 当对任何元素的随机访问超出限制并且仅要求在序列的末尾插入或删除元素时，[矢量](../standard-library/vector-class.md)应作为用于管理序列的首选容器。 当在序列内任何位置的高效插入和删除（采用常量时间）超出限制时，list 容器的性能会很优异。 序列中间的此类操作需要元素副本和与序列中的元素数量成正比的分配（线性时间）。
 
@@ -136,13 +136,13 @@ class deque
 
 ### <a name="constructors"></a>构造函数
 
-|||
+|名称|说明|
 |-|-|
 |[deque](#deque)|构造一个 `deque`。 提供了多个构造函数来以不同的方式设置新的内容 `deque` ：空; 加载了指定数量的空元素; 从另一个移动或复制内容 `deque` ; 使用迭代器复制或移动内容; 以及将一个元素复制到 `deque` `count` 次。 一些构造函数可实现使用自定义 `allocator` 创建元素。|
 
 ### <a name="typedefs"></a>Typedef
 
-|||
+|名称|说明|
 |-|-|
 |[allocator_type](#allocator_type)|一种类型，此类型表示 `allocator` 对象的 `deque` 类。|
 |[const_iterator](#const_iterator)|一种类型，它提供可访问和读取中的元素的随机访问迭代器 `deque`**`const`**|
@@ -159,7 +159,7 @@ class deque
 
 ### <a name="functions"></a>函数
 
-|||
+|名称|说明|
 |-|-|
 |[assign](#assign)|将元素从 `deque` 中清除并将新的元素序列复制到目标 `deque`。|
 |[at](#at)|返回对 `deque` 中指定位置的元素的引用。|
@@ -193,12 +193,12 @@ class deque
 
 ### <a name="operators"></a>运算符
 
-|||
+|名称|说明|
 |-|-|
 |[operator&#91;&#93;](#op_at)|返回对指定位置的 `deque` 元素的引用。|
 |[operator =](#op_eq)|将 `deque` 的元素替换为另一个 `deque` 的副本。|
 
-## <a name="allocator_type"></a><a name="allocator_type"></a>allocator_type
+## <a name="allocator_type"></a><a name="allocator_type"></a> allocator_type
 
 一个类型，它代表 deque 对象的分配器类。
 
@@ -206,7 +206,7 @@ class deque
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `allocator_type` 是模板参数 `Allocator` 的同义词。
 
@@ -214,7 +214,7 @@ typedef Allocator allocator_type;
 
 请参阅 [get_allocator](#get_allocator) 的示例。
 
-## <a name="assign"></a><a name="assign"></a>将
+## <a name="assign"></a><a name="assign"></a> 将
 
 将元素从 deque 中擦除并将一组新的元素复制到目标 deque。
 
@@ -248,7 +248,7 @@ void assign(initializer_list<Type> IList);
 *IList*\
 要插入 deque 中的 initializer_list。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 清除 deque 中的任何现有元素后，`assign` 将原始列表或其他 deque 中的一系列指定的元素插入目标 deque 中，或将指定值的新元素副本插入目标 deque 中。
 
@@ -306,7 +306,7 @@ int main()
 d1 = 5678c1 =102030c1 =5060c1 =4444444
 ```
 
-## <a name="at"></a><a name="at"></a>最
+## <a name="at"></a><a name="at"></a> 最
 
 返回对 deque 中指定位置的元素的引用。
 
@@ -323,7 +323,7 @@ const_reference at(size_type pos) const;
 
 ### <a name="return-value"></a>返回值
 
-如果*pos*大于 deque 的大小， `at` 则会引发异常。
+如果 *pos* 大于 deque 的大小， `at` 则会引发异常。
 
 ### <a name="return-value"></a>返回值
 
@@ -357,7 +357,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="back"></a><a name="back"></a>返回
+## <a name="back"></a><a name="back"></a> 返回
 
 返回对 deque 中最后一个元素的引用。
 
@@ -370,7 +370,7 @@ const_reference back() const;
 
 deque 的最后一个元素。 如果 deque 为空，则返回值不确定。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `back` 的返回值赋给了`const_reference`，则无法修改 deque 对象。 如果 `back` 的返回值赋给了 `reference`，则可以修改 deque 对象。
 
@@ -406,7 +406,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a>准备
+## <a name="begin"></a><a name="begin"></a> 准备
 
 返回一个迭代器，此迭代器用于发现 deque 中第一个元素的位置。
 
@@ -419,7 +419,7 @@ iterator begin();
 
 一个随机访问迭代器，此迭代器用于发现 deque 中第一个元素的位置或空 deque 之后的位置。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `begin` 的返回值赋给了`const_iterator`，则无法修改 deque 对象。 如果将的返回值 `begin` 分配给 `iterator` ，则可以修改 deque 对象。
 
@@ -458,7 +458,7 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a><a name="cbegin"></a>cbegin
+## <a name="cbegin"></a><a name="cbegin"></a> cbegin
 
 返回一个 **`const`** 迭代器，该迭代器用于寻址范围内的第一个元素。
 
@@ -468,13 +468,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-一个 **`const`** 随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()` ）。
+一个 **`const`** 随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾 (空范围) 的位置 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `begin()` `cbegin()` 。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 **`const`**) 容器 `begin()` `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -484,7 +484,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a><a name="cend"></a>cend
+## <a name="cend"></a><a name="cend"></a> cend
 
 返回一个 **`const`** 迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
 
@@ -496,11 +496,11 @@ const_iterator cend() const;
 
 指向刚超出范围末尾的位置的随机访问迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `end()` `cend()` 。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 **`const`**) 容器 `end()` `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -512,7 +512,7 @@ auto i2 = Container.cend();
 
 不应对 `cend` 返回的值取消引用。
 
-## <a name="clear"></a><a name="clear"></a>清除
+## <a name="clear"></a><a name="clear"></a> 清除
 
 清除 deque 的所有元素。
 
@@ -548,7 +548,7 @@ The size of the deque is initially 3
 The size of the deque after clearing is 0
 ```
 
-## <a name="const_iterator"></a><a name="const_iterator"></a>const_iterator
+## <a name="const_iterator"></a><a name="const_iterator"></a> const_iterator
 
 一种类型，它提供可访问和读取 deque 中的元素的随机访问迭代器 **`const`** 。
 
@@ -556,7 +556,7 @@ The size of the deque after clearing is 0
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `const_iterator` 类型不能用于修改元素的值。
 
@@ -564,7 +564,7 @@ typedef implementation-defined const_iterator;
 
 请参阅 [back](#back) 的示例。
 
-## <a name="const_pointer"></a><a name="const_pointer"></a>const_pointer
+## <a name="const_pointer"></a><a name="const_pointer"></a> const_pointer
 
 提供指向 **`const`** deque 中元素的指针。
 
@@ -572,11 +572,11 @@ typedef implementation-defined const_iterator;
 typedef typename Allocator::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `const_pointer` 类型不能用于修改元素的值。 [iterator](#iterator) 更常用于访问 deque 元素。
 
-## <a name="const_reference"></a><a name="const_reference"></a>const_reference
+## <a name="const_reference"></a><a name="const_reference"></a> const_reference
 
 一种类型，该类型提供对 **`const`** 存储在 deque 中的元素的引用，以便读取和执行 **`const`** 操作。
 
@@ -584,7 +584,7 @@ typedef typename Allocator::const_pointer const_pointer;
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `const_reference` 类型不能用于修改元素的值。
 
@@ -620,7 +620,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a>const_reverse_iterator
+## <a name="const_reverse_iterator"></a><a name="const_reverse_iterator"></a> const_reverse_iterator
 
 一种类型，它提供可读取 deque 中的任何元素的随机访问迭代器 **`const`** 。
 
@@ -628,7 +628,7 @@ The second element is 20
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问 deque。
 
@@ -636,7 +636,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 有关如何声明和使用迭代器的示例，请参阅 [rbegin](#rbegin) 的示例。
 
-## <a name="crbegin"></a><a name="crbegin"></a>crbegin
+## <a name="crbegin"></a><a name="crbegin"></a> crbegin
 
 返回一个指向反向 deque 中第一个元素的常量迭代器。
 
@@ -648,7 +648,7 @@ const_reverse_iterator crbegin() const;
 
 发现反向 [deque](../standard-library/deque-class.md) 中的第一个元素或发现曾是非反向 `deque` 中的最后一个元素的常量反向随机访问迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 返回值为 `crbegin` 时，无法修改 `deque` 对象。
 
@@ -685,7 +685,7 @@ The first element of deque is 1.
 The first element of the reversed deque is 2.
 ```
 
-## <a name="crend"></a><a name="crend"></a>crend
+## <a name="crend"></a><a name="crend"></a> crend
 
 返回一个常量迭代器，此迭代器用于发现反向 deque 中最后一个元素之后的位置。
 
@@ -697,7 +697,7 @@ const_reverse_iterator crend() const;
 
 用于寻址反向 [deque](../standard-library/deque-class.md) 中最后一个元素之后的位置（非反向 deque 中第一个元素之前的位置）的常量反向随机存取迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `crend` 用于反向 `deque`，正如 [array::cend](../standard-library/array-class-stl.md#cend) 用于 `deque` 一样。
 
@@ -734,7 +734,7 @@ int main( )
 1
 ```
 
-## <a name="deque"></a><a name="deque"></a>deque
+## <a name="deque"></a><a name="deque"></a> deque
 
 构造一个 deque，它具有特定大小或它的元素具有特定值，或具有特定分配器或作为其他 deque 的全部或部分副本。
 
@@ -787,21 +787,21 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 *IList*\
 要复制的 initializer_list。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-所有构造函数都存储一个分配器对象（*Al*）并初始化 deque。
+所有构造函数都存储一个分配器对象 (*Al*) 并初始化 deque。
 
-前两个构造函数指定一个空的初始 deque;第二个还指定要使用的分配器类型（ `_Al` ）。
+前两个构造函数指定一个空的初始 deque;第二个还指定要使用的分配器类型 (`_Al`) 。
 
 第三个构造函数指定类 `count` 的默认值的指定数量 (`Type`) 的元素的重复。
 
-第四个和第五个构造函数指定值的（*Count*）个元素的重复 `val` 。
+第四个和第五个构造函数指定 (*计数*) 元素的重复值 `val` 。
 
-第六个构造函数指定 deque*权限*的副本。
+第六个构造函数指定 deque *权限*的副本。
 
 第七个和第八个构造函数复制 deque 的范围 `[First, Last)`。
 
-第七个构造函数移动 deque*权限*。
+第七个构造函数移动 deque *权限*。
 
 第八个构造函数复制 initializer_list 的内容。
 
@@ -1011,7 +1011,7 @@ int main( )
 }
 ```
 
-## <a name="difference_type"></a><a name="difference_type"></a>difference_type
+## <a name="difference_type"></a><a name="difference_type"></a> difference_type
 
 一个类型，此类型提供引用同一 deque 中的元素的两个迭代器之间的差异。
 
@@ -1019,7 +1019,7 @@ int main( )
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `difference_type` 也可以被描述为两个指针之间的元素数目。
 
@@ -1066,7 +1066,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a><a name="emplace"></a>emplace
+## <a name="emplace"></a><a name="emplace"></a> emplace
 
 将适当构造的元素插入到指定位置的 deque 中。
 
@@ -1088,7 +1088,7 @@ iterator emplace(
 
 该函数将返回一个迭代器，指向 deque 中新元素的插入位置。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 任何插入操作都可能产生巨额开销，请参阅 `deque`，了解有关 `deque` 性能的讨论。
 
@@ -1134,7 +1134,7 @@ v1 = 10 20 30
 vv1[0] = 10 20 30
 ```
 
-## <a name="emplace_back"></a><a name="emplace_back"></a>emplace_back
+## <a name="emplace_back"></a><a name="emplace_back"></a> emplace_back
 
 将一个适当构造的元素添加到 deque 末尾。
 
@@ -1183,7 +1183,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="emplace_front"></a><a name="emplace_front"></a>emplace_front
+## <a name="emplace_front"></a><a name="emplace_front"></a> emplace_front
 
 将一个适当构造的元素添加到 deque 末尾。
 
@@ -1194,7 +1194,7 @@ void emplace_front(Type&& val);
 ### <a name="parameters"></a>参数
 
 *初始值*\
-添加到[deque](../standard-library/deque-class.md)开头的元素。
+添加到 [deque](../standard-library/deque-class.md)开头的元素。
 
 ### <a name="example"></a>示例
 
@@ -1232,7 +1232,7 @@ New last element: 2
 Moved last element: 2
 ```
 
-## <a name="empty"></a><a name="empty"></a>空白处
+## <a name="empty"></a><a name="empty"></a> 空白处
 
 测试 deque 是否为空。
 
@@ -1242,7 +1242,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果 deque 为空，则为;**`false`** 如果 deque 不为空，则为。
+**`true`** 如果 deque 为空，则为; **`false`** 如果 deque 不为空，则为。
 
 ### <a name="example"></a>示例
 
@@ -1269,7 +1269,7 @@ int main( )
 The deque is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a>端面
+## <a name="end"></a><a name="end"></a> 端面
 
 返回一个迭代器，此迭代器用于发现 deque 中最后一个元素之后的位置。
 
@@ -1283,9 +1283,9 @@ iterator end();
 
 用于发现 deque 中最后一个元素之后的位置的随机访问迭代器。 如果 deque 为空，则 deque:: end = = deque:: begin。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`end`用于测试迭代器是否已到达其 deque 的末尾。
+`end` 用于测试迭代器是否已到达其 deque 的末尾。
 
 ### <a name="example"></a>示例
 
@@ -1329,7 +1329,7 @@ The new next-to-last integer of c1 is 400
 The deque is now: 10 400 30
 ```
 
-## <a name="erase"></a><a name="erase"></a>擦除
+## <a name="erase"></a><a name="erase"></a> 擦除
 
 在 deque 的指定位置移除一个元素或一系列元素。
 
@@ -1354,7 +1354,7 @@ iterator erase(iterator first, iterator last);
 
 指定已移除的任何元素之外保留的第一个元素的随机访问迭代器；如果不存在此类元素，则为指向 deque 末尾的指针。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `erase` 绝不会引发异常。
 
@@ -1402,7 +1402,7 @@ After erasing the first element, the deque becomes:  20 30 40 50
 After erasing all elements but the first, deque becomes: 20
 ```
 
-## <a name="front"></a><a name="front"></a>主
+## <a name="front"></a><a name="front"></a> 主
 
 返回对 deque 中第一个元素的引用。
 
@@ -1416,7 +1416,7 @@ const_reference front() const;
 
 如果 deque 为空，则返回的结果不确定。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `front` 的返回值赋给了`const_reference`，则无法修改 deque 对象。 如果 `front` 的返回值赋给了 `reference`，则可以修改 deque 对象。
 
@@ -1452,7 +1452,7 @@ The first integer of c1 is 10
 The second integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 返回用于构造 deque 的分配器对象的一个副本。
 
@@ -1464,7 +1464,7 @@ Allocator get_allocator() const;
 
 deque 使用的分配器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 deque 类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。
 
@@ -1491,7 +1491,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a><a name="insert"></a>&
+## <a name="insert"></a><a name="insert"></a> &
 
 将一个、多个或一系列元素插入 deque 中的指定位置。
 
@@ -1544,11 +1544,11 @@ IList);
 
 前两个插入函数返回一个迭代器，该迭代器指向新元素插入到 deque 中的位置。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 任何插入操作都可能产生巨额开销。
 
-## <a name="iterator"></a><a name="iterator"></a>器
+## <a name="iterator"></a><a name="iterator"></a> 器
 
 一个类型，它提供可读取或修改 deque 中任何元素的随机访问迭代器。
 
@@ -1556,7 +1556,7 @@ IList);
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 类型 `iterator` 可用于修改元素的值。
 
@@ -1564,7 +1564,7 @@ typedef implementation-defined iterator;
 
 请参阅 [begin](#begin) 的示例。
 
-## <a name="max_size"></a><a name="max_size"></a>max_size
+## <a name="max_size"></a><a name="max_size"></a> max_size
 
 返回 deque 的最大长度。
 
@@ -1595,7 +1595,7 @@ int main( )
 }
 ```
 
-## <a name="operator"></a><a name="op_at"></a>运算符 []
+## <a name="operator"></a><a name="op_at"></a> 运算符 []
 
 返回对指定位置的 deque 元素的引用。
 
@@ -1614,7 +1614,7 @@ const_reference operator[](size_type pos) const;
 
 对参数中指定其位置的元素的引用。 如果指定的位置大于 deque 的大小，则结果为不确定。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `operator[]` 的返回值赋给了`const_reference`，则无法修改 deque 对象。 如果 `operator[]` 的返回值赋给了 `reference`，则可以修改 deque 对象。
 
@@ -1646,7 +1646,7 @@ The first integer of c1 is 10
 The second integer of c1 is 20
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 使用另一个 deque 中的元素替换此 deque 的元素。
 
@@ -1661,7 +1661,7 @@ deque& operator=(deque&& right);
 *然后*\
 提供新内容的 deque。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一次重写将元素复制到*right*此 deque。 第二次重写将元素移动到此*deque。*
 
@@ -1728,11 +1728,11 @@ int main( )
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 类型 `pointer` 可用于修改元素的值。 [iterator](#iterator) 更常用于访问 deque 元素。
 
-## <a name="pop_back"></a><a name="pop_back"></a>pop_back
+## <a name="pop_back"></a><a name="pop_back"></a> pop_back
 
 删除 deque 末尾处的元素。
 
@@ -1740,7 +1740,7 @@ typedef typename Allocator::pointer pointer;
 void pop_back();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 最后一个元素不得为空。 `pop_back` 绝不会引发异常。
 
@@ -1774,7 +1774,7 @@ The last element is: 2
 After deleting the element at the end of the deque, the last element is: 1
 ```
 
-## <a name="pop_front"></a><a name="pop_front"></a>pop_front
+## <a name="pop_front"></a><a name="pop_front"></a> pop_front
 
 删除 deque 开头的元素。
 
@@ -1782,7 +1782,7 @@ After deleting the element at the end of the deque, the last element is: 1
 void pop_front();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一个元素不得为空。 `pop_front` 绝不会引发异常。
 
@@ -1816,7 +1816,7 @@ The second element is: 2
 After deleting the element at the beginning of the deque, the first element is: 2
 ```
 
-## <a name="push_back"></a><a name="push_back"></a>push_back
+## <a name="push_back"></a><a name="push_back"></a> push_back
 
 在 deuqe 末尾处添加一个元素。
 
@@ -1831,11 +1831,11 @@ void push_back(Type&& val);
 *初始值*\
 添加到 deque 末尾的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果引发了异常，deque 保持不变，该异常将被重新引发。
 
-## <a name="push_front"></a><a name="push_front"></a>push_front
+## <a name="push_front"></a><a name="push_front"></a> push_front
 
 在 deque 的开头添加元素。
 
@@ -1849,7 +1849,7 @@ void push_front(Type&& val);
 *初始值*\
 要添加到 deque 开头的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果引发了异常，deque 保持不变，该异常将被重新引发。
 
@@ -1890,7 +1890,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a><a name="rbegin"></a>rbegin
+## <a name="rbegin"></a><a name="rbegin"></a> rbegin
 
 返回指向反向 deque 中第一个元素的迭代器。
 
@@ -1904,7 +1904,7 @@ reverse_iterator rbegin();
 
 发现反向 deque 中的第一个元素或发现曾是非反向 deque 中的最后一个元素的反向随机访问迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `rbegin` 用于反向 deque，正如将 [begin](#begin) 用于 deque 一样。
 
@@ -1966,7 +1966,7 @@ The reversed deque is: 30 20 10
 Last element in deque is now 40.
 ```
 
-## <a name="reference"></a><a name="reference"></a>对
+## <a name="reference"></a><a name="reference"></a> 对
 
 一种类型，此类型提供对存储在 deque 中的元素的引用。
 
@@ -2002,7 +2002,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="rend"></a><a name="rend"></a>rend
+## <a name="rend"></a><a name="rend"></a> rend
 
 返回一个迭代器，此迭代器用于发现反向 deque 中最后一个元素之后的位置。
 
@@ -2016,7 +2016,7 @@ reverse_iterator rend();
 
 用于寻址反向 deque 中最后一个元素之后的位置（非反向 deque 中第一个元素之前的位置）的反向随机访问迭代器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `rend` 与反向 deque 配合使用，正如 [end](#end) 与 deque 配合使用一样。
 
@@ -2087,7 +2087,7 @@ The reversed deque is: 30 20 10
 The modified reversed deque is: 30 20 40
 ```
 
-## <a name="resize"></a><a name="resize"></a>调节
+## <a name="resize"></a><a name="resize"></a> 调节
 
 为 deque 指定新的大小。
 
@@ -2105,7 +2105,7 @@ void resize(size_type _Newsize, Type val);
 *初始值*\
 新的大小大于原始大小时要添加至 deque 的新元素的值。 如果省略此值，则会赋给新元素该类的默认值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 deque 的大小小于请求的大小， *_Newsize*会将元素添加到 deque 中，直到它达到请求的大小。
 
@@ -2155,7 +2155,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator
+## <a name="reverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator
 
 提供可读取或修改反向 deque 中元素的随机访问迭代器的类型。
 
@@ -2163,7 +2163,7 @@ The value of the last element is now 20
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `reverse_iterator` 类型用于循环访问 deque。
 
@@ -2171,7 +2171,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 请参阅 rbegin 的示例。
 
-## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a>shrink_to_fit
+## <a name="shrink_to_fit"></a><a name="shrink_to_fit"></a> shrink_to_fit
 
 放弃额外容量。
 
@@ -2179,7 +2179,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 没有可移植方法来确定 `shrink_to_fit` 是否可以减少 [deque](../standard-library/deque-class.md) 使用的存储。
 
@@ -2212,7 +2212,7 @@ Current size of v1 = 1
 Current size of v1 = 1
 ```
 
-## <a name="size"></a><a name="size"></a>规格
+## <a name="size"></a><a name="size"></a> 规格
 
 返回 deque 中的元素数。
 
@@ -2253,7 +2253,7 @@ The deque length is 1.
 The deque length is now 2.
 ```
 
-## <a name="size_type"></a><a name="size_type"></a>size_type
+## <a name="size_type"></a><a name="size_type"></a> size_type
 
 计算 deque 中元素数量的类型。
 
@@ -2265,7 +2265,7 @@ typedef typename Allocator::size_type size_type;
 
 请参阅 [size](#size) 的示例。
 
-## <a name="swap"></a><a name="swap"></a>购
+## <a name="swap"></a><a name="swap"></a> 购
 
 交换两个 deque 的元素。
 
@@ -2282,7 +2282,7 @@ void swap(deque<Type, Allocator>& left, deque<Type, Allocator>& right);
 提供要交换的元素的 deque，或其元素将要与deque `left` 的元素交换的 deque。
 
 *左中*\
-其元素要与 deque*权限*的元素进行交换的 deque。
+其元素要与 deque *权限*的元素进行交换的 deque。
 
 ### <a name="example"></a>示例
 
@@ -2339,7 +2339,7 @@ After swapping with c3, deque c1 is: 100
 After swapping with c2, deque c1 is: 1 2 3
 ```
 
-## <a name="value_type"></a><a name="value_type"></a>value_type
+## <a name="value_type"></a><a name="value_type"></a> value_type
 
 表示 deque 中存储的数据类型的类型。
 
@@ -2347,7 +2347,7 @@ After swapping with c2, deque c1 is: 1 2 3
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `value_type` 是模板参数 `Type` 的同义词。
 
