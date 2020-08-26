@@ -1,17 +1,17 @@
 ---
-title: 线程处理（c + + COM 特性）
+title: '线程 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.threading
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: e08d25df07ad881c8843953d01d9074c815ddb85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f83dca442b6508207a4123fa918fc5078bdf664
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193063"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88840812"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -26,17 +26,17 @@ ms.locfileid: "87193063"
 ### <a name="parameters"></a>参数
 
 *model*<br/>
-可有可无以下线程模型之一：
+ (可选) 以下线程模型之一：
 
-- `apartment`（单元线程）
+- `apartment` (单元线程) 
 
-- `neutral`（不带用户界面的 .NET Framework 组件）
+- `neutral` ( 没有用户界面 .NET Framework 组件) 
 
-- `single`（简单线程处理）
+- `single` (简单线程) 
 
-- `free`（自由线程处理）
+- `free` (自由线程) 
 
-- `both`（单元和自由线程处理）
+- `both` (单元和自由线程处理) 
 
 默认值为 `apartment`。
 
@@ -44,7 +44,7 @@ ms.locfileid: "87193063"
 
 **线程**c + + 特性不会出现在生成的 .idl 文件中，而是将用于 COM 对象的实现。
 
-在 ATL 项目中，如果也存在[coclass](coclass.md)特性，则由*模型*指定的线程模型将作为模板参数传递给[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)类，并由 `coclass` 属性插入。
+在 ATL 项目中，如果也存在 [coclass](coclass.md) 特性，则由 *模型* 指定的线程模型将作为模板参数传递给 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) 类，并由 `coclass` 属性插入。
 
 **线程**属性还保护对[event_source](event-source.md)的访问。
 
@@ -54,9 +54,7 @@ ms.locfileid: "87193063"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|否|

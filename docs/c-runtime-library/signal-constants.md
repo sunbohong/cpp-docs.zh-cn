@@ -17,12 +17,12 @@ helpviewer_keywords:
 - signal constants
 - SIGILL constant
 ms.assetid: a3b39281-dae7-4e44-8d68-e6a610c669dd
-ms.openlocfilehash: e9953e967d1c94ae56dfc1063fb0deafa342631c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d26671b8c3d983e7f1c3fd559d8aa2029e3162fe
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738727"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841137"
 ---
 # <a name="signal-constants"></a>signal 常量
 
@@ -36,7 +36,7 @@ ms.locfileid: "57738727"
 
 `sig` 参数必须是 SIGNAL.H 定义的下列清单常量之一。
 
-|||
+|返回的常量|说明|
 |-|-|
 |SIGABRT|异常终止。 默认操作将使用退出代码 3 终止调用程序。  |
 |SIGABRT_COMPAT|与 SIGABRT 相同。 针对与其他平台的兼容性。  |
@@ -47,8 +47,8 @@ ms.locfileid: "57738727"
 |SIGTERM|发送到程序的终止请求。 默认操作将使用退出代码 3 终止调用程序。  |
 |SIG_ERR|指示已发生错误的信号的返回类型。  |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
-[raise](../c-runtime-library/reference/raise.md)<br/>
+[提出](../c-runtime-library/reference/raise.md)<br/>
 [全局常量](../c-runtime-library/global-constants.md)

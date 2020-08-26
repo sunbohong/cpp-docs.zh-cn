@@ -1,17 +1,17 @@
 ---
-title: size_is （c + + COM 特性）
+title: 'size_is (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.size_is
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: 36b960982d1f88cd30bab707dfe7aec73381dfab
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd0ec8622dfffdf9a0578c86d75d313042cc3c01
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213835"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841761"
 ---
 # <a name="size_is"></a>size_is
 
@@ -28,19 +28,17 @@ ms.locfileid: "87213835"
 *expression*<br/>
 为大小指针分配的内存的大小。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Size_is** c + + 特性具有与[size_is](/windows/win32/Midl/size-is) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-有关如何指定数组部分的示例，请参阅[first_is](first-is.md)的示例。
+有关如何指定数组部分的示例，请参阅 [first_is](first-is.md) 的示例。
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|或中的字段 **`struct`** **`union`** ，接口参数，接口方法|
 |**且**|否|

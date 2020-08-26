@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: a24f324576c872e7fe509b742aa58d6c230ec24a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212483"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841553"
 ---
 # <a name="cexception-class"></a>CException 类
 
@@ -33,24 +33,24 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[CException：： CException](#cexception)|构造 `CException` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
-|[CException：:D e)](#delete)|删除 `CException` 对象。|
+|[CException：:D e) ](#delete)|删除 `CException` 对象。|
 |[CException：： ReportError](#reporterror)|在消息框中向用户报告一条错误消息。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 由于 `CException` 是抽象基类，因此您不能 `CException` 直接创建对象; 您必须创建派生类的对象。 如果需要创建您自己 `CException` 的类，请使用上面列出的派生类之一作为模型。 请确保派生类也使用 `IMPLEMENT_DYNAMIC` 。
 
 下面列出了派生类及其说明：
 
-|||
+|名称|说明|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|用于资源关键性的 MFC 异常的基类|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|参数异常条件无效|
@@ -60,19 +60,19 @@ class AFX_NOVTABLE CException : public CObject
 |[CFileException](../../mfc/reference/cfileexception-class.md)|文件特定的异常|
 |[CResourceException](../../mfc/reference/cresourceexception-class.md)|Windows 资源找不到或不可创建|
 |[COleException](../../mfc/reference/coleexception-class.md)|OLE 异常|
-|[CDBException](../../mfc/reference/cdbexception-class.md)|数据库异常（即，基于开放式数据库连接性而产生的针对 MFC 数据库类的异常情况）|
-|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|OLE 调度（automation）异常|
+|[CDBException](../../mfc/reference/cdbexception-class.md)|数据库异常 (即，基于开放式数据库连接性而产生的针对 MFC 数据库类的异常情况) |
+|[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)|OLE 调度 (automation) 异常|
 |[CUserException](../../mfc/reference/cuserexception-class.md)|指示找不到资源的异常|
-|[CDaoException](../../mfc/reference/cdaoexception-class.md)|数据访问对象异常（即 DAO 类产生的异常条件）|
-|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Internet 例外（即 Internet 类产生的异常情况）。|
+|[CDaoException](../../mfc/reference/cdaoexception-class.md)|数据访问对象异常 (即 DAO 类产生的异常条件) |
+|[CInternetException](../../mfc/reference/cinternetexception-class.md)|Internet 异常 (即，Internet 类) 产生的异常条件。|
 
-这些异常旨在与[THROW](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、 [try](exception-processing.md#try)、 [catch](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)和[end_catch](exception-processing.md#end_catch)宏一起使用。 有关异常的详细信息，请参阅[异常处理](exception-processing.md)，或参阅文章[异常处理（MFC）](../exception-handling-in-mfc.md)。
+这些异常旨在与 [THROW](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、 [try](exception-processing.md#try)、 [catch](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)和 [end_catch](exception-processing.md#end_catch) 宏一起使用。 有关异常的详细信息，请参阅 [异常处理](exception-processing.md)，或参阅文章 [ (MFC) 的异常处理 ](../exception-handling-in-mfc.md)。
 
-若要捕获特定的异常，请使用相应的派生类。 若要捕获所有类型的异常，请使用 `CException` ，然后使用[CObject：： IsKindOf](cobject-class.md#iskindof)来区分 `CException` 派生的类。 请注意， `CObject::IsKindOf` 仅适用于使用[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)宏声明的类，以便充分利用动态类型检查。 `CException`你创建的任何派生类也应该使用 `IMPLEMENT_DYNAMIC` 宏。
+若要捕获特定的异常，请使用相应的派生类。 若要捕获所有类型的异常，请使用 `CException` ，然后使用 [CObject：： IsKindOf](cobject-class.md#iskindof) 来区分 `CException` 派生的类。 请注意， `CObject::IsKindOf` 仅适用于使用 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) 宏声明的类，以便充分利用动态类型检查。 `CException`你创建的任何派生类也应该使用 `IMPLEMENT_DYNAMIC` 宏。
 
-可以通过调用[GetErrorMessage](cfileexception-class.md#geterrormessage)或[ReportError](#reporterror)（两个适用于任何派生类的成员函数）向用户报告有关异常的详细信息 `CException` 。
+可以通过调用 [GetErrorMessage](cfileexception-class.md#geterrormessage) 或 [ReportError](#reporterror)（两个适用于任何派生类的成员函数）向用户报告有关异常的详细信息 `CException` 。
 
-如果某个宏捕获到异常，则 `CException` 会自动删除该对象; 不要自行删除。 如果使用关键字捕获到异常，则 **`catch`** 不会自动删除它。 有关何时删除异常对象的详细信息，请参阅文章[异常处理（MFC）](../exception-handling-in-mfc.md) 。
+如果某个宏捕获到异常，则 `CException` 会自动删除该对象; 不要自行删除。 如果使用关键字捕获到异常，则 **`catch`** 不会自动删除它。 有关何时删除异常对象的详细信息，请参阅文章 [异常处理 (MFC) ](../exception-handling-in-mfc.md) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -84,7 +84,7 @@ class AFX_NOVTABLE CException : public CObject
 
 **标头：** afx
 
-## <a name="cexceptioncexception"></a><a name="cexception"></a>CException：： CException
+## <a name="cexceptioncexception"></a><a name="cexception"></a> CException：： CException
 
 此成员函数构造 `CException` 对象。
 
@@ -97,11 +97,11 @@ explicit CException(BOOL bAutoDelete);
 *b_AutoDelete*<br/>
 如果 `CException` 已在堆上分配了对象的内存，则指定 TRUE。 这将导致在 `CException` `Delete` 调用成员函数删除异常时删除该对象。 如果 `CException` 对象位于堆栈上或是全局对象，则指定 FALSE。 在这种情况下， `CException` `Delete` 调用成员函数时不会删除对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-通常不需要直接调用此构造函数。 引发异常的函数应创建 `CException` 派生类的实例并调用其构造函数，或者应使用其中一种 MFC 引发函数（如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)）来引发预定义类型。 提供此文档只是为了提供完整的完整性。
+通常不需要直接调用此构造函数。 引发异常的函数应创建 `CException` 派生类的实例并调用其构造函数，或者应使用其中一种 MFC 引发函数（如 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)）来引发预定义类型。 提供此文档只是为了提供完整的完整性。
 
-## <a name="cexceptiondelete"></a><a name="delete"></a>CException：:D e)
+## <a name="cexceptiondelete"></a><a name="delete"></a> CException：:D e) 
 
 此函数检查是否 `CException` 在堆上创建了对象，如果是，则它对 **`delete`** 对象调用运算符。
 
@@ -109,13 +109,13 @@ explicit CException(BOOL bAutoDelete);
 void Delete();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 删除对象时 `CException` ，请使用 `Delete` 成员函数删除该异常。 不要 **`delete`** 直接使用运算符，因为该 `CException` 对象可能是全局对象或已在堆栈上创建的。
 
-可以指定在构造对象时是否应删除对象。 有关详细信息，请参阅[CException：： CException](#cexception)。
+可以指定在构造对象时是否应删除对象。 有关详细信息，请参阅 [CException：： CException](#cexception)。
 
-仅 `Delete` 当使用 c + + 机制时，才需要调用 **`try`** -  **`catch`** 。 如果使用的是 MFC 宏**TRY**和**CATCH**，则这些宏会自动调用此函数。
+仅 `Delete` 当使用 c + + 机制时，才需要调用 **`try`** -  **`catch`** 。 如果使用的是 MFC 宏 **TRY** 和 **CATCH**，则这些宏会自动调用此函数。
 
 ### <a name="example"></a>示例
 
@@ -168,7 +168,7 @@ if (pFile != NULL)
 }
 ```
 
-## <a name="cexceptionreporterror"></a><a name="reporterror"></a>CException：： ReportError
+## <a name="cexceptionreporterror"></a><a name="reporterror"></a> CException：： ReportError
 
 调用此成员函数可向用户报告消息框中的错误文本。
 
@@ -181,18 +181,18 @@ virtual int ReportError(
 ### <a name="parameters"></a>参数
 
 nType**<br/>
-指定消息框的样式。 将[消息框样式](styles-used-by-mfc.md#message-box-styles)的任意组合应用到框。 如果未指定此参数，则默认值为 MB_OK。
+指定消息框的样式。 将 [消息框样式](styles-used-by-mfc.md#message-box-styles) 的任意组合应用到框。 如果未指定此参数，则默认值为 MB_OK。
 
 *nMessageID*<br/>
-指定异常对象没有错误消息时要显示的消息的资源 ID （字符串表条目）。 如果为0，则显示消息 "没有可用的错误消息"。
+指定当异常对象没有错误消息时要显示的消息 (字符串表条目) 的资源 ID。 如果为0，则显示消息 "没有可用的错误消息"。
 
 ### <a name="return-value"></a>返回值
 
-一个 `AfxMessageBox` 值; 否则，如果没有足够的内存来显示消息框，则返回0。 有关可能的返回值，请参阅[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 。
+一个 `AfxMessageBox` 值; 否则，如果没有足够的内存来显示消息框，则返回0。 有关可能的返回值，请参阅 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 。
 
 ### <a name="example"></a>示例
 
-下面是使用的示例 `CException::ReportError` 。 有关其他示例，请参阅[CATCH](exception-processing.md#catch)的示例。
+下面是使用的示例 `CException::ReportError` 。 有关其他示例，请参阅 [CATCH](exception-processing.md#catch)的示例。
 
 ```cpp
 CFile fileInput;

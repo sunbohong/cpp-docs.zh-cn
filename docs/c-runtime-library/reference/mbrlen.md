@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-ms.openlocfilehash: dd903aaf8b1c5772f2caaf58bda5d6c23bb59687
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2e0e0ec9d92744fc904bae5ac7f91db8049de4cd
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920304"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842112"
 ---
 # <a name="mbrlen"></a>mbrlen
 
@@ -49,35 +49,35 @@ size_t mbrlen(
 
 ### <a name="parameters"></a>参数
 
-*字符串*<br/>
+*str*<br/>
 指向多字节字符字符串中要检查的下一字节的指针。
 
 *计数*<br/>
 要检查的最大字节数。
 
 *mbstate*<br/>
-指向*str*的第一个字节的当前移位状态的指针。
+指向 *str*的第一个字节的当前移位状态的指针。
 
 ## <a name="return-value"></a>返回值
 
 以下值之一：
 
-|||
-|-|-|
-0|接下来的*计数*或更少的字节将填充代表宽 null 字符的多字节字符。
-1到*计数*（含）|接下来的*计数*或更少的字节将完成有效的多字节字符。 返回的值是填充多字节字符的字节数。
-(size_t)(-2)|下一个*计数*字节导致了不完整但可能有效的多字节字符，并且已处理所有*计数*字节。
-(size_t)(-1)|发生编码错误。 下一个*计数*或更少的字节不涉及完整且有效的多字节字符。 在这种情况下， **errno**设置为 eilseq 且，而*mbstate*中的转换状态为未指定。
+| 值 | 说明 |
+|--|--|
+| 0 | 接下来的 *计数* 或更少的字节将填充代表宽 null 字符的多字节字符。 |
+| 1到 *计数*（含） | 接下来的 *计数* 或更少的字节将完成有效的多字节字符。 返回的值是填充多字节字符的字节数。 |
+| (size_t)(-2) | 下一个 *计数* 字节导致了不完整但可能有效的多字节字符，并且已处理所有 *计数* 字节。 |
+| (size_t)(-1) | 发生编码错误。 下一个 *计数* 或更少的字节不涉及完整且有效的多字节字符。 在这种情况下， **errno** 设置为 eilseq 且，而 *mbstate* 中的转换状态为未指定。 |
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Mbrlen**函数最多检查以*str*指向的字节开头的最多*计数*字节，以确定完成下一个多字节字符（包括任何移位序列）所需的字节数。 它等效于调用`mbrtowc(NULL, str, count, &mbstate)` ，其中*mbstate*是用户提供的**mbstate_t**对象或由库提供的静态内部对象。
+**Mbrlen**函数最多检查以*str*指向的字节开头的最多*计数*字节，以确定完成下一个多字节字符（包括任何移位序列）所需的字节数。 它等效于调用， `mbrtowc(NULL, str, count, &mbstate)` 其中 *mbstate* 是用户提供的 **mbstate_t** 对象或由库提供的静态内部对象。
 
-**Mbrlen**函数在*mbstate*参数中保存并使用不完整多字节字符的移位状态。 这样， **mbrlen**将在多字节字符中间重启的功能（如果需要），并检查最多的*计数*字节。 如果*mbstate*为 null 指针，则**mbrlen**将使用内部静态**mbstate_t**对象存储移位状态。 由于内部**mbstate_t**对象不是线程安全的，因此建议始终分配和传递自己的*mbstate*参数。
+**Mbrlen**函数在*mbstate*参数中保存并使用不完整多字节字符的移位状态。 这样， **mbrlen** 将在多字节字符中间重启的功能（如果需要），并检查最多的 *计数* 字节。 如果 *mbstate* 为 null 指针，则 **mbrlen** 将使用内部静态 **mbstate_t** 对象存储移位状态。 由于内部 **mbstate_t** 对象不是线程安全的，因此建议始终分配和传递自己的 *mbstate* 参数。
 
-**Mbrlen**函数的可重启性不同于[_mbclen、mblen _mblen_l](mbclen-mblen-mblen-l.md) 。 移位状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序应使用**wcsrlen**而不是**wcslen** 。
+**Mbrlen**函数的可重启性不同于[_mbclen、mblen _mblen_l](mbclen-mblen-mblen-l.md) 。 移位状态存储在 *mbstate* 中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序应使用**wcsrlen**而不是**wcslen** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -87,7 +87,7 @@ size_t mbrlen(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**mbrlen**|\<wchar.h>|
 
@@ -95,7 +95,7 @@ size_t mbrlen(
 
 ## <a name="example"></a>示例
 
-此示例演示多字节字符的解释如何取决于当前代码页，并演示了**mbrlen**的恢复功能。
+此示例演示多字节字符的解释如何取决于当前代码页，并演示了 **mbrlen**的恢复功能。
 
 ```C
 // crt_mbrlen.c
@@ -158,4 +158,4 @@ Character count: 25
 ## <a name="see-also"></a>另请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>

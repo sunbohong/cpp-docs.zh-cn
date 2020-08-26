@@ -1,17 +1,17 @@
 ---
-title: implements （c + + COM 特性）
+title: '实现 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217228"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842346"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -27,20 +27,18 @@ ms.locfileid: "87217228"
 ### <a name="parameters"></a>参数
 
 *interfaces*<br/>
-将成为 IDL 组件类成员的接口的逗号分隔列表。 指定单个接口的简写方法为**实现（** *interface_name* **）**。
+将成为 IDL 组件类成员的接口的逗号分隔列表。 指定单个接口的简写方法是 ** (** *interface_name* **) **实现的。
 
 *调度*<br/>
-将成为 IDL 组件类成员的调度接口的逗号分隔列表。 用于指定单个调度接口的简写方法为**实现（调度接口 =** *dispinterface_name* **）**。
+将成为 IDL 组件类成员的调度接口的逗号分隔列表。 指定单个调度接口的简写方法是 ** (调度接口 =** *dispinterface_name* **) **实现的。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-默认情况下，仅 `coclass` 在 IDL 组件类中添加作为基类的 COM 接口。 **实现**允许强制其他接口成为 IDL `coclass` 成员。
+默认情况下，仅 `coclass` 在 IDL 组件类中添加作为基类的 COM 接口。 **实现** 允许强制其他接口成为 IDL `coclass` 成员。
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|是|

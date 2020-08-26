@@ -1,17 +1,17 @@
 ---
-title: source （c + + COM 特性）
+title: '源 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.source
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 274e446aecc4d0d7096211bbae88e0f170ae44a2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9a1f576e26805c5dd84c2d83cdf3615d0661af3
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213822"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842762"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -28,11 +28,11 @@ ms.locfileid: "87213822"
 *interfaces*<br/>
 将源属性应用于类时指定的一个或多个接口。 将源应用于属性或方法时，不使用此参数。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **源**c + + 特性与[源](/windows/win32/Midl/source)MIDL 特性具有相同的功能。
 
-您可以使用[默认](default-cpp.md)属性来指定对象的默认源接口。
+您可以使用 [默认](default-cpp.md) 属性来指定对象的默认源接口。
 
 ## <a name="example"></a>示例
 
@@ -70,13 +70,11 @@ class NN : public b
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用于**|**`class`**， **`struct`** ，**接口**|
+|**适用于**|**`class`**， **`struct`** ， **接口**|
 |**且**|否|
-|**必需属性**|`coclass`（应用于类或结构时）|
+|**必需属性**|`coclass` 当应用于类或结构时， () |
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

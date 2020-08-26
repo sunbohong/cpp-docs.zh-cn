@@ -1,21 +1,21 @@
 ---
-title: helpstringdll （c + + COM 特性）
+title: 'helpstringdll (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 46323a7ff4164111b48aed24b12bef5d400afacc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c90a6a203189eff927819a3319fac6a8e9f6a55
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217241"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842840"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
-指定要用于执行文档字符串查找（本地化）的 DLL 的名称。
+指定要用于执行文档字符串查找 (本地化) 的 DLL 的名称。
 
 ## <a name="syntax"></a>语法
 
@@ -28,7 +28,7 @@ ms.locfileid: "87217241"
 *string*<br/>
 要用于执行文档字符串查找的 DLL。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Helpstringdll** c + + 特性具有与[helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 特性相同的功能。
 
@@ -49,11 +49,9 @@ __interface IMyI
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用于**|**`class`**、**接口**、接口方法|
+|**适用于**|**`class`**、 **接口**、接口方法|
 |**且**|否|
 |**必需属性**|无|
 |**无效的特性**|无|

@@ -1,5 +1,5 @@
 ---
-title: default （c + + COM 特性）
+title: '默认 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.default
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: dc0244897f73a5185451159aa0f4ec66dd9dae56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b53420d721b43f9a51b19c4cc8e4a83fc8b94ed4
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215265"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842437"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -33,13 +33,13 @@ ms.locfileid: "87215265"
 如果未指定默认接口，则第一个出现的非源接口用作默认接口。
 
 *interface2*<br/>
-可有可无默认源接口。 你还必须使用 [source](source-cpp.md) 属性指定此接口。
+ (可选) 默认源接口。 你还必须使用 [source](source-cpp.md) 属性指定此接口。
 
 如果未指定默认源接口，则第一个源接口用作默认接口。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**`default`** C + + 特性具有与[默认](/windows/win32/Midl/default)MIDL 特性相同的功能。 该 **`default`** 属性还与[case](case-cpp.md)属性结合使用。
+**`default`** C + + 特性具有与[默认](/windows/win32/Midl/default)MIDL 特性相同的功能。 该 **`default`** 属性还与 [case](case-cpp.md) 属性结合使用。
 
 ## <a name="example"></a>示例
 
@@ -95,13 +95,11 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**、 **`struct`** 、数据成员|
 |**且**|否|
-|**必需属性**|**coclass** （应用于 **`class`** 或时 **`struct`** ）|
+|**必需属性**|**coclass**当应用于 **`class`** 或) 时，组件类 (**`struct`**|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

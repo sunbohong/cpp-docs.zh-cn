@@ -2,12 +2,12 @@
 title: 2. 指令
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: c3aadcf34e013c66dec81ca4b09dce4144294ac3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5b2649a65efd3368cf8a4d2649a424b1a539f1ef
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228396"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841969"
 ---
 # <a name="2-directives"></a>2. 指令
 
@@ -15,15 +15,15 @@ ms.locfileid: "87228396"
 
 ## <a name="21-directive-format"></a>2.1 指令格式
 
-OpenMP 指令的语法由[附录 C](c-openmp-c-and-cpp-grammar.md)中的语法正式指定，非正式方式如下：
+OpenMP 指令的语法由 [附录 C](c-openmp-c-and-cpp-grammar.md)中的语法正式指定，非正式方式如下：
 
 ```cpp
 #pragma omp directive-name  [clause[ [,] clause]...] new-line
 ```
 
-每个指令都以开头 `#pragma omp` ，用相同的名称减少与其他（非 openmp 或供应商扩展到 OpenMP）杂注指令冲突的可能性。 指令的其余部分遵循编译器指令的 C 和 c + + 标准的约定。 具体而言，可以在之前和之后使用空白 `#` ，有时必须使用空格分隔指令中的单词。 后面的预处理令牌 `#pragma omp` 受宏替换的限制。
+每个指令都以开头  `#pragma omp` ，以减少与其他 (非 OpenMP 或供应商扩展之间发生冲突的可能性，以获取具有相同名称的 openmp) 杂注指令。 指令的其余部分遵循编译器指令的 C 和 c + + 标准的约定。 具体而言，可以在之前和之后使用空白 `#` ，有时必须使用空格分隔指令中的单词。 后面的预处理令牌 `#pragma omp` 受宏替换的限制。
 
-指令区分大小写。 子句出现在指令中的顺序并不重要。 根据需要，根据每个子句的说明中列出的限制，可以重复使用指令上的子句。 如果子句中出现*变量列表*，则它必须仅指定变量。 只能为每个指令指定一个*指令名称*。  例如，不允许使用以下指令：
+指令区分大小写。 子句出现在指令中的顺序并不重要。 根据需要，根据每个子句的说明中列出的限制，可以重复使用指令上的子句。 如果子句中出现 *变量列表* ，则它必须仅指定变量。 只能为每个指令指定一个 *指令名称* 。  例如，不允许使用以下指令：
 
 ```cpp
 /* ERROR - multiple directive names not allowed */
@@ -110,13 +110,13 @@ iam = omp_get_thread_num() + index;
 
 ### <a name="cross-references"></a>交叉引用
 
-- `private`、 `firstprivate` 、 `default` 、 `shared` 、 `copyin` 和 `reduction` 子句（[section 2.7.2](#272-data-sharing-attribute-clauses)）
-- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)环境变量
-- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)库函数
-- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)环境变量
-- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)函数
-- [OMP_NESTED](4-environment-variables.md#44-omp_nested)环境变量
-- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)库函数
+- `private`、、、、 `firstprivate` `default` `shared` `copyin` 和 `reduction` 子句 ([节 2.7.2](#272-data-sharing-attribute-clauses)) 
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) 环境变量
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) 库函数
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) 环境变量
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) 函数
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested) 环境变量
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) 库函数
 
 ## <a name="24-work-sharing-constructs"></a>2.4 工作共享构造
 
@@ -126,9 +126,9 @@ iam = omp_get_thread_num() + index;
 
 OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造：
 
-- [for](#241-for-construct)指令
-- [sections](#242-sections-construct)指令
-- [单个](#243-single-construct)指令
+- [for](#241-for-construct) 指令
+- [sections](#242-sections-construct) 指令
+- [单个](#243-single-construct) 指令
 
 ### <a name="241-for-construct"></a>构造的2.4。1
 
@@ -182,25 +182,25 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 - `>`
 - `>=`
 
-*lb*、 *b*和*增量*<br>
+*lb*、 *b*和 *增量*<br>
 循环固定整数表达式。 在计算这些表达式时没有同步，因此任何计算的副作用都会产生不确定的结果。
 
-规范形式允许在进入循环时计算循环迭代的次数。 此计算是在整型提升后，用*var*类型的值进行的。 特别是，如果*b* `-` *lb* `+` *增量*的值不能以该类型表示，则结果是不确定的。 此外，如果*逻辑 op*为 `<` 或 `<=` ，则*增量-expr*必须导致循环*var*的每次迭代增加。   如果*逻辑 op*为 `>` 或 `>=` ，则*增量-expr*必须导致*var*在循环的每次迭代中变得更小。
+规范形式允许在进入循环时计算循环迭代的次数。 此计算是在整型提升后，用 *var*类型的值进行的。 特别是，如果 *b* `-` *lb* `+` *增量* 的值不能以该类型表示，则结果是不确定的。 此外，如果*逻辑 op*为 `<` 或 `<=` ，则*增量-expr*必须导致循环*var*的每次迭代增加。   如果 *逻辑 op* 为 `>` 或 `>=` ，则 *增量-expr* 必须导致 *var* 在循环的每次迭代中变得更小。
 
-`schedule`子句指定如何在 `for` 组的线程之间划分循环的迭代。 程序的正确性不得依赖于哪个线程执行特定迭代。 *Chunk_size*的值（如果指定）必须是具有正值的循环固定整数表达式。 在计算此表达式时没有同步，因此任何计算的副作用都会产生不确定的结果。 计划*类型*可以是以下值之一：
+`schedule`子句指定如何在 `for` 组的线程之间划分循环的迭代。 程序的正确性不得依赖于哪个线程执行特定迭代。 *Chunk_size*的值（如果指定）必须是具有正值的循环固定整数表达式。 在计算此表达式时没有同步，因此任何计算的副作用都会产生不确定的结果。 计划 *类型* 可以是以下值之一：
 
-表2-1： `schedule` 子句*种类*值
+表2-1： `schedule` 子句 *种类* 值
 
-|||
+|值|说明|
 |-|-|
-|static|指定 `schedule(static,` *chunk_size*时 `)` ，迭代被划分为*chunk_size*指定的大小的块区。 块以循环方式按线程编号的顺序静态分配给团队中的线程。 当未指定*chunk_size*时，迭代空间划分为大小大致相等的块区，并为每个线程分配一个块区。|
-|动态|指定 `schedule(dynamic,` *chunk_size*时 `)` ，迭代分为一系列块区，每个块包含*chunk_size*迭代。 每个区块都分配到等待分配的线程。 线程执行迭代的区块，然后等待其下一次分配，直到没有剩余的区块被分配。 要分配的最后一个块区的迭代次数可能较小。 如果未指定*chunk_size* ，则默认为1。|
-|按|指定 `schedule(guided,` *chunk_size*时 `)` ，迭代将以减小大小的区块分配给线程。 线程完成其已分配的迭代块后，会动态分配另一个区块，直到没有剩余的块。 对于1的*chunk_size* ，每个块区的大小大约是未分配迭代数除以线程数。 这些大小几乎以指数方式减为1。 对于值*k*大于1的*chunk_size* ，大小几乎以指数方式减小到*k*，只不过最后一个块区的迭代数可能小于*k* 。 如果未指定*chunk_size* ，则默认为1。|
-|Runtime — 运行时|`schedule(runtime)`指定时，有关计划的决策会推迟到运行时。 通过设置环境变量，可以在运行时选择区块的计划*类型*和大小 `OMP_SCHEDULE` 。 如果未设置此环境变量，则生成的计划是实现定义的。 如果 `schedule(runtime)` 指定了，则不能指定*chunk_size* 。|
+|static|指定 `schedule(static,` *chunk_size*时 `)` ，迭代被划分为 *chunk_size*指定的大小的块区。 块以循环方式按线程编号的顺序静态分配给团队中的线程。 当未指定 *chunk_size* 时，迭代空间划分为大小大致相等的块区，并为每个线程分配一个块区。|
+|动态|指定 `schedule(dynamic,` *chunk_size*时 `)` ，迭代分为一系列块区，每个块包含 *chunk_size* 迭代。 每个区块都分配到等待分配的线程。 线程执行迭代的区块，然后等待其下一次分配，直到没有剩余的区块被分配。 要分配的最后一个块区的迭代次数可能较小。 如果未指定 *chunk_size* ，则默认为1。|
+|按|指定 `schedule(guided,` *chunk_size*时 `)` ，迭代将以减小大小的区块分配给线程。 线程完成其已分配的迭代块后，会动态分配另一个区块，直到没有剩余的块。 对于1的 *chunk_size* ，每个块区的大小大约是未分配迭代数除以线程数。 这些大小几乎以指数方式减为1。 对于值*k*大于1的*chunk_size* ，大小几乎以指数方式减小到*k*，只不过最后一个块区的迭代数可能小于*k* 。 如果未指定 *chunk_size* ，则默认为1。|
+|Runtime — 运行时|`schedule(runtime)`指定时，有关计划的决策会推迟到运行时。 通过设置环境变量，可以在运行时选择区块的计划 *类型* 和大小 `OMP_SCHEDULE` 。 如果未设置此环境变量，则生成的计划是实现定义的。 如果  `schedule(runtime)` 指定了，则不能指定 *chunk_size* 。|
 
 如果没有显式定义的 `schedule` 子句，则默认值 `schedule` 是实现定义的。
 
-与 OpenMP 兼容的程序不应依赖特定的计划来执行正确的执行。 程序不应依赖于上面给出的说明完全一致的计划*类型*，因为在不同的编译器中，同一计划*类型*的实现可以有不同之处。 这些说明可用于选择适用于特定情况的计划。
+与 OpenMP 兼容的程序不应依赖特定的计划来执行正确的执行。 程序不应依赖于上面给出的说明完全一致的计划 *类型* ，因为在不同的编译器中，同一计划 *类型* 的实现可以有不同之处。 这些说明可用于选择适用于特定情况的计划。
 
 `ordered`如果 `ordered` 指令绑定到构造，则必须存在该子句 `for` 。
 
@@ -220,16 +220,16 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 
 - `nowait`指令上只能出现一个子句 `for` 。
 
-- 如果出现*chunk_size*、 *lb*、 *b*或*增量*表达式中的任何副作用，则该方法为未指定的。
+- 如果出现 *chunk_size*、 *lb*、 *b*或 *增量* 表达式中的任何副作用，则该方法为未指定的。
 
-- 对于团队中的所有线程， *chunk_size*表达式的值必须相同。
+- 对于团队中的所有线程， *chunk_size* 表达式的值必须相同。
 
 #### <a name="cross-references"></a>交叉引用
 
-- `private`、 `firstprivate` 、 `lastprivate` 和 `reduction` 子句（[section 2.7.2](#272-data-sharing-attribute-clauses)）
-- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule)环境变量
-- [顺序](#266-ordered-construct)构造
-- [schedule](d-using-the-schedule-clause.md)子句
+- `private`、 `firstprivate` 、 `lastprivate` 和 `reduction` 子句 ([节 2.7.2](#272-data-sharing-attribute-clauses)) 
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) 环境变量
+- [顺序](#266-ordered-construct) 构造
+- [schedule](d-using-the-schedule-clause.md) 子句
 
 ### <a name="242-sections-construct"></a>2.4.2 sections 节构造
 
@@ -263,11 +263,11 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 
 #### <a name="cross-references"></a>交叉引用
 
-- `private`、 `firstprivate` 、 `lastprivate` 和 `reduction` 子句（[section 2.7.2](#272-data-sharing-attribute-clauses)）
+- `private`、 `firstprivate` 、 `lastprivate` 和 `reduction` 子句 ([节 2.7.2](#272-data-sharing-attribute-clauses)) 
 
 ### <a name="243-single-construct"></a>2.4.3 单构造
 
-`single`指令标识一个构造，该构造指定关联的结构化块仅由团队中的一个线程执行（不一定是主线程）。 指令的语法如下所示 `single` ：
+`single`指令标识一个构造，该构造指定关联的结构化块仅由团队中的一个线程执行， (不必) 主线程。 指令的语法如下所示 `single` ：
 
 ```cpp
 #pragma omp single [clause[[,] clause] ...] new-linestructured-block
@@ -289,7 +289,7 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 
 #### <a name="cross-references"></a>交叉引用
 
-- `private`、 `firstprivate` 和 `copyprivate` 子句（[section 2.7.2](#272-data-sharing-attribute-clauses)）
+- `private`、 `firstprivate` 和 `copyprivate` 子句 ([节 2.7.2](#272-data-sharing-attribute-clauses)) 
 
 ## <a name="25-combined-parallel-work-sharing-constructs"></a>2.5 组合的并行工作共享构造
 
@@ -298,7 +298,7 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 以下部分介绍了组合的并行工作共享构造：
 
 - [对指令并行](#251-parallel-for-construct)
-- [并行节](#252-parallel-sections-construct)指令
+- [并行节](#252-parallel-sections-construct) 指令
 
 ### <a name="251-parallel-for-construct"></a>2.5.1 并行构造
 
@@ -312,8 +312,8 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 
 #### <a name="cross-references"></a>交叉引用
 
-- [并行](#23-parallel-construct)指令
-- [for](#241-for-construct)指令
+- [并行](#23-parallel-construct) 指令
+- [for](#241-for-construct) 指令
 - [数据 attribute 子句](#272-data-sharing-attribute-clauses)
 
 ### <a name="252-parallel-sections-construct"></a>2.5.2 并行节构造
@@ -334,19 +334,19 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 
 #### <a name="cross-references"></a>交叉引用
 
-- [并行](#23-parallel-construct)指令
-- [sections](#242-sections-construct)指令
+- [并行](#23-parallel-construct) 指令
+- [sections](#242-sections-construct) 指令
 
 ## <a name="26-master-and-synchronization-directives"></a>2.6 Master 和同步指令
 
 以下部分介绍：
 
-- [主](#261-master-construct)构造
-- [关键](#262-critical-construct)构造
-- [关卡](#263-barrier-directive)指令
-- [原子](#264-atomic-construct)构造
-- [flush](#265-flush-directive)指令
-- [顺序](#266-ordered-construct)构造
+- [主](#261-master-construct) 构造
+- [关键](#262-critical-construct) 构造
+- [关卡](#263-barrier-directive) 指令
+- [原子](#264-atomic-construct) 构造
+- [flush](#265-flush-directive) 指令
+- [顺序](#266-ordered-construct) 构造
 
 ### <a name="261-master-construct"></a>2.6.1 主构造
 
@@ -366,9 +366,9 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 #pragma omp critical [(name)]  new-linestructured-block
 ```
 
-可选*名称*可用于标识关键区域。 用于标识关键区域的标识符具有外部链接，并且位于与标签、标记、成员和普通标识符所使用的命名空间不同的命名空间中。
+可选 *名称* 可用于标识关键区域。 用于标识关键区域的标识符具有外部链接，并且位于与标签、标记、成员和普通标识符所使用的命名空间不同的命名空间中。
 
-线程在关键区域开始时等待，直到没有其他线程执行具有相同名称的关键区域（在程序中的任何位置）。 所有未命名 `critical` 指令映射到相同的未指定名称。
+线程在关键区域开始时等待，直到没有其他线程执行某个关键区域 (程序) 中的任何位置都具有相同的名称。 所有未命名 `critical` 指令映射到相同的未指定名称。
 
 ### <a name="263-barrier-directive"></a>2.6.3 关卡指令
 
@@ -378,7 +378,7 @@ OpenMP 定义以下工作共享构造，并在以下各节中描述这些构造�
 #pragma omp barrier new-line
 ```
 
-在团队中的所有线程都遇到关卡后，团队中的每个线程都将开始并行执行关卡指令后的语句。 由于 `barrier` 指令中没有 C 语言语句作为其语法的一部分，因此在程序内对其位置存在一些限制。 有关正式语法的详细信息，请参阅[附录 C](c-openmp-c-and-cpp-grammar.md)。下面的示例说明了这些限制。
+在团队中的所有线程都遇到关卡后，团队中的每个线程都将开始并行执行关卡指令后的语句。 由于 `barrier` 指令中没有 C 语言语句作为其语法的一部分，因此在程序内对其位置存在一些限制。 有关正式语法的详细信息，请参阅 [附录 C](c-openmp-c-and-cpp-grammar.md)。下面的示例说明了这些限制。
 
 ```cpp
 /* ERROR - The barrier directive cannot be the immediate
@@ -414,15 +414,15 @@ Expression 语句必须具有以下形式之一：
 
 在前面的表达式中：
 
-- *x*是带有标量类型的左值表达式。
+- *x* 是带有标量类型的左值表达式。
 
-- *expr*是具有标量类型的表达式，它不引用*x*指定的对象。
+- *expr* 是具有标量类型的表达式，它不引用 *x*指定的对象。
 
-- *binop*不是一个重载运算符，并且是 `+` 、 `*` 、 `-` 、 `/` 、 `&` 、 `^` `|` `<<` `>>` 、、或中的一个。
+- *binop* 不是一个重载运算符，并且是 `+` 、 `*` 、 `-` 、 `/` 、 `&` 、 `^` `|` `<<` `>>` 、、或中的一个。
 
-尽管它是实现定义的，但实现是否将所有 `atomic` 指令替换为 `critical` 具有相同的唯一*名称*的指令，但 `atomic` 指令允许更好地进行优化。 通常，可以使用最小开销执行原子更新的硬件说明。
+尽管它是实现定义的，但实现是否将所有 `atomic` 指令替换为 `critical` 具有相同的唯一 *名称*的指令，但 `atomic` 指令允许更好地进行优化。 通常，可以使用最小开销执行原子更新的硬件说明。
 
-只有*x*指定的对象的负载和存储是原子的;*expr*的计算不是原子的。 若要避免争用条件，应以并行方式保护位置的所有更新 `atomic` ，但已知不带争用条件的那些更新除外。
+只有 *x* 指定的对象的负载和存储是原子的; *expr* 的计算不是原子的。 若要避免争用条件，应以并行方式保护位置的所有更新 `atomic` ，但已知不带争用条件的那些更新除外。
 
 对指令的限制如下所示 `atomic` ：
 
@@ -449,7 +449,7 @@ u.x -= 1.0f;
 
 ### <a name="265-flush-directive"></a>2.6.5 flush 指令
 
-`flush`指令（无论是显式的还是隐式的）指定一个 "跨线程" 序列点，要求实现该序列点，以确保团队中的所有线程在内存中具有特定对象（在下面指定）的一致视图。 这意味着，引用这些对象的表达式的以前计算已完成，后续评估尚未开始。 例如，编译器必须将对象的值还原为内存，硬件可能需要将写入缓冲区刷新到内存中，并从内存中重载对象的值。
+`flush`指令（无论是显式的还是隐式的）指定一个 "跨线程" 序列点，要求实现该序列点，以确保团队中的所有线程都具有特定对象的一致视图 (在内存) 下面指定。 这意味着，引用这些对象的表达式的以前计算已完成，后续评估尚未开始。 例如，编译器必须将对象的值还原为内存，硬件可能需要将写入缓冲区刷新到内存中，并从内存中重载对象的值。
 
 指令的语法如下所示 `flush` ：
 
@@ -457,30 +457,30 @@ u.x -= 1.0f;
 #pragma omp flush [(variable-list)]  new-line
 ```
 
-如果需要同步的对象都可以由变量指定，则可以在可选的*变量列表*中指定这些变量。 如果指针在*变量列表*中存在，则将刷新指针本身，而不是指针引用的对象。
+如果需要同步的对象都可以由变量指定，则可以在可选的 *变量列表*中指定这些变量。 如果指针在 *变量列表*中存在，则将刷新指针本身，而不是指针引用的对象。
 
-`flush`没有*变量列表*的指令将同步所有共享对象，但不能使用自动存储持续时间的对象。 （这可能比 `flush` 带有*变量列表*的开销更大。）`flush`不带*变量列表*的指令隐含用于以下指令：
+`flush`没有*变量列表*的指令将同步所有共享对象，但不能使用自动存储持续时间的对象。  (这可能比 `flush` 带有 *变量列表*的开销更大。 ) `flush` 没有 *变量列表* 的指令可用于以下指令：
 
 - `barrier`
-- 进入和退出`critical`
-- 进入和退出`ordered`
-- 进入和退出`parallel`
-- 退出时间`for`
-- 退出时间`sections`
-- 退出时间`single`
-- 进入和退出`parallel for`
-- 进入和退出`parallel sections`
+- 进入和退出 `critical`
+- 进入和退出 `ordered`
+- 进入和退出 `parallel`
+- 退出时间 `for`
+- 退出时间 `sections`
+- 退出时间 `single`
+- 进入和退出 `parallel for`
+- 进入和退出 `parallel sections`
 
 如果存在子句，则不隐含指令 `nowait` 。 应注意的是， `flush` 对于以下任何情况，该指令不是隐含的：
 
-- 进入到`for`
-- 进入或退出`master`
-- 进入到`sections`
-- 进入到`single`
+- 进入到 `for`
+- 进入或退出 `master`
+- 进入到 `sections`
+- 进入到 `single`
 
 访问具有可变限定类型的对象的值的引用的行为就像在 `flush` 上一个序列点指定该对象的指令一样。 修改具有可变限定类型的对象的值的引用的行为就像在 `flush` 后续序列点指定该对象的指令一样。
 
-由于 `flush` 指令中没有 C 语言语句作为其语法的一部分，因此在程序内对其位置存在一些限制。 有关正式语法的详细信息，请参阅[附录 C](c-openmp-c-and-cpp-grammar.md)。下面的示例说明了这些限制。
+由于 `flush` 指令中没有 C 语言语句作为其语法的一部分，因此在程序内对其位置存在一些限制。 有关正式语法的详细信息，请参阅 [附录 C](c-openmp-c-and-cpp-grammar.md)。下面的示例说明了这些限制。
 
 ```cpp
 /* ERROR - The flush directive cannot be the immediate
@@ -520,19 +520,19 @@ if (x!=0) {
 
 本部分介绍了用于在并行区域执行期间控制数据环境的指令和多个子句，如下所示：
 
-- 提供[threadprivate](#271-threadprivate-directive)指令是为了使文件范围、命名空间范围或静态块范围变量成为线程的局部变量。
+- 提供 [threadprivate](#271-threadprivate-directive) 指令是为了使文件范围、命名空间范围或静态块范围变量成为线程的局部变量。
 
-- 在并行或工作共享构造期间，可以在指令上指定的子句来控制变量的共享属性，如[2.7.2 部分](#272-data-sharing-attribute-clauses)中所述。
+- 在并行或工作共享构造期间，可以在指令上指定的子句来控制变量的共享属性，如 [2.7.2 部分](#272-data-sharing-attribute-clauses)中所述。
 
 ### <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 指令
 
-`threadprivate`指令使*变量列表*中指定的已命名的文件范围、命名空间范围或静态块范围变量成为线程的专用。 *变量列表*是一个以逗号分隔的变量列表，其中不包含不完整的类型。 指令的语法如下所示 `threadprivate` ：
+`threadprivate`指令使*变量列表*中指定的已命名的文件范围、命名空间范围或静态块范围变量成为线程的专用。 *变量列表* 是一个以逗号分隔的变量列表，其中不包含不完整的类型。 指令的语法如下所示 `threadprivate` ：
 
 ```cpp
 #pragma omp threadprivate(variable-list) new-line
 ```
 
-变量的每个副本在 `threadprivate` 第一次引用该副本之前（即，因为主副本将在程序的串行执行过程中初始化），在程序的一个未指定点初始化一次。 请注意，如果在变量的显式初始值设定项中引用对象 `threadprivate` ，并且在第一次引用该变量之前修改了该对象的值，则该行为是未指定的。
+变量的每个副本在 `threadprivate` 第一次引用该副本之前，在程序的未指定点初始化一次，并以通常的方式 (例如，因为主副本将在程序的串行执行过程中初始化) 。 请注意，如果在变量的显式初始值设定项中引用对象 `threadprivate` ，并且在第一次引用该变量之前修改了该对象的值，则该行为是未指定的。
 
 与任何专用变量一样，线程不得引用另一个线程的 `threadprivate` 对象副本。 在程序的序列区域和主区域期间，引用将指向对象的主线程副本。
 
@@ -542,11 +542,11 @@ if (x!=0) {
 
 - `threadprivate`文件范围或命名空间范围变量的指令必须出现在任何定义或声明的外部，并且必须在词法上出现在其列表中任何变量的引用之前。
 
-- 文件或命名空间范围内指令的*变量列表*中的每个变量 `threadprivate` 都必须引用在词法上位于指令前面的文件或命名空间范围内的变量声明。
+- 文件或命名空间范围内指令的 *变量列表* 中的每个变量 `threadprivate` 都必须引用在词法上位于指令前面的文件或命名空间范围内的变量声明。
 
 - `threadprivate`静态块范围变量的指令必须出现在变量的作用域中，而不是嵌套作用域中。 指令必须在词法上置于对其列表中任何变量的所有引用之前。
 
-- 块范围内指令的*变量列表*中的每个变量 `threadprivate` 都必须引用在词法上位于指令前面的同一范围内的变量声明。 变量声明必须使用静态存储类说明符。
+- 块范围内指令的 *变量列表* 中的每个变量 `threadprivate` 都必须引用在词法上位于指令前面的同一范围内的变量声明。 变量声明必须使用静态存储类说明符。
 
 - 如果在一个翻译单元中的指令中指定了变量 `threadprivate` ，则必须在 `threadprivate` 声明它的每个翻译单元中的指令中指定该变量。
 
@@ -583,15 +583,15 @@ void f(int n) {
 #### <a name="cross-references"></a>交叉引用
 
 - [动态线程](3-run-time-library-functions.md#317-omp_set_dynamic-function)
-- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)环境变量
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) 环境变量
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 数据共享特性子句
 
 若干指令接受允许用户在区域期间控制变量共享属性的子句。 共享特性子句仅适用于出现子句的指令的词法范围中的变量。 并非所有指令都允许使用以下子句。 对特定指令有效的子句的列表与指令一起介绍。
 
-如果当遇到并行或工作共享构造时，变量是可见的，并且在共享 attribute 子句或指令中未指定变量 `threadprivate` ，则会共享该变量。 共享并行区域动态范围内声明的静态变量。 共享堆分配的内存（例如， `malloc()` 在 c 或 c + + 中使用或 **`new`** c + + 中的运算符）。 （但是，指向此内存的指针可以是私有的或共享的。）在并行区域的动态范围内声明的具有自动存储持续时间的变量是专用的。
+如果当遇到并行或工作共享构造时，变量是可见的，并且在共享 attribute 子句或指令中未指定变量 `threadprivate` ，则会共享该变量。 共享并行区域动态范围内声明的静态变量。 堆分配内存 (例如，使用 `malloc()` c 或 c + + 中的或 **`new`** c + +) 中的运算符共享。 但 (指向此内存的指针可以是私有的或共享的。在并行区域动态范围内声明的自动存储持续时间 ) 变量是专用的。
 
-大多数子句都接受*变量列表*参数，该参数是可见变量的逗号分隔列表。 如果数据共享特性子句中引用的变量具有从模板派生的类型，并且在程序中没有对该变量的其他引用，则该行为是不确定的。
+大多数子句都接受 *变量列表* 参数，该参数是可见变量的逗号分隔列表。 如果数据共享特性子句中引用的变量具有从模板派生的类型，并且在程序中没有对该变量的其他引用，则该行为是不确定的。
 
 指令子句中显示的所有变量都必须可见。 子句可以根据需要重复执行，但不能在多个子句中指定变量，只不过可以同时在和子句中指定变量 `firstprivate` `lastprivate` 。
 
@@ -666,7 +666,7 @@ lastprivate(variable-list)
 
 #### <a name="2724-shared"></a>2.7.2.4 shared
 
-此子句共享团队中所有线程的*变量列表*中显示的变量。 团队中的所有线程都将访问相同的变量存储区域 `shared` 。
+此子句共享团队中所有线程的 *变量列表* 中显示的变量。 团队中的所有线程都将访问相同的变量存储区域 `shared` 。
 
 子句的语法如下所示 `shared` ：
 
@@ -717,7 +717,7 @@ default(shared | none)
 
 - *x* `=` *x* *op* *expr*
 - *x* *binop* `=` *expr*
-- *x* `=` *expr* *op* *x* （减法除外）
+- *x* `=` *expr* *op* *x*  (除减法) 
 - *x*`++`
 - `++` x
 - *x*`--`
@@ -732,7 +732,7 @@ default(shared | none)
 以逗号分隔的标量缩减变量的列表。
 
 *expr*<br/>
-标量类型不引用*x*的表达式。
+标量类型不引用 *x*的表达式。
 
 *基金*<br/>
 不是、、、、、、或中的重载运算符 `+` `*` `-` `&` `^` `|` `&&` `||` 。
@@ -757,9 +757,9 @@ for (i=0; i<n; i++) {
 
 运算符用于确定编译器用于减少的所有私有变量的初始值，并确定终结运算符。 显式指定运算符可以使减语句在构造的词法范围之外。 `reduction`可以在指令中指定任意数量的子句，但对于该指令，变量最多只能出现在一个 `reduction` 子句中。
 
-为每个线程创建一个变量*列表*中每个变量的私有副本，就像 `private` 使用了子句一样。 根据运算符初始化专用副本（请参阅下表）。
+为每个线程创建一个变量 *列表* 中每个变量的私有副本，就像 `private` 使用了子句一样。 根据运算符初始化专用副本 (参阅下表) 。
 
-在为其指定了子句的区域末尾 `reduction` ，将对原始对象进行更新，以反映使用指定的运算符将其原始值与每个专用副本的最终值组合在一起的结果。 缩减运算符都是关联（减法除外），编译器可以自由地重新关联最终值的计算。 （添加了减减的部分结果以构成最终值。）
+在为其指定了子句的区域末尾 `reduction` ，将对原始对象进行更新，以反映使用指定的运算符将其原始值与每个专用副本的最终值组合在一起的结果。 除了) 之外，缩减运算符都是 (关联的，并且编译器可以自由地重新关联最终值的计算。  (增加了减法缩减的部分结果以构成最终值。 ) 
 
 当第一个线程到达包含子句时，原始对象的值将变为不确定，并一直保持到缩减计算完成。  通常，计算将在构造的末尾完成;但是，如果在 `reduction` 还应用了的构造上使用子句 `nowait` ，则原始对象的值将保持不变，直到执行了关卡同步，以确保所有线程都完成了 `reduction` 子句。
 
@@ -817,7 +817,7 @@ variable-list
 
 #### <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 
-`copyprivate`子句提供一种机制，用于使用私有变量将值从一个团队的一个成员广播到其他成员。 当提供此类共享变量很难（例如，在每个级别需要不同变量的递归中）时，可以使用共享变量作为值。 `copyprivate`子句只能出现在 `single` 指令上。
+`copyprivate`子句提供一种机制，用于使用私有变量将值从一个团队的一个成员广播到其他成员。 在提供此类共享变量时，使用共享变量作为值的一种替代方法 (例如，在递归中，需要在每个级别) 使用不同的变量。 `copyprivate`子句只能出现在 `single` 指令上。
 
 子句的语法如下所示 `copyprivate` ：
 
@@ -828,7 +828,7 @@ variable-list
 )
 ```
 
-`copyprivate`子句在其变量列表中的变量上执行的影响在执行与构造关联的结构化块之后，在 `single` 团队中的任何线程之前，都将在构造的末尾离开关卡。 然后，在团队中的所有其他线程中，对于*变量列表*中的每个变量，该变量将在执行构造的结构化块的线程中使用相应变量的值进行定义（就像赋值）。
+`copyprivate`子句在其变量列表中的变量上执行的影响在执行与构造关联的结构化块之后，在 `single` 团队中的任何线程之前，都将在构造的末尾离开关卡。 然后，在团队中的所有其他线程中，对于 *变量列表*中的每个变量，该变量将成为定义的 (如同赋值) ，后者在执行构造的结构化块的线程中具有相应变量的值。
 
 子句的限制 `copyprivate` 如下所示：
 
@@ -860,7 +860,7 @@ variable-list
 
 - `for``sections` `single` 绑定到相同 `parallel` 不允许相互嵌套的、和指令。
 
-- `critical`不允许使用具有相同名称的指令相互嵌套。 请注意，此限制不足以防止死锁。
+- `critical` 不允许使用具有相同名称的指令相互嵌套。 请注意，此限制不足以防止死锁。
 
 - `for``sections` `single` `critical` `ordered` `master` 如果指令绑定到与区域相同的，则不允许在、和区域的动态范围内使用、和指令 `parallel` 。
 

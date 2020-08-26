@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: 048d2933b8c024e74511e6cb49ae5c3240f3e710
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8eb8658b178061938f7f04f5eb35a85ca1e34d07
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167116"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842359"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -25,11 +25,11 @@ ms.locfileid: "80167116"
 
 ## <a name="remarks"></a>备注
 
-**Defaultcollelem** C++特性具有与[defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL 特性相同的功能。
+**Defaultcollelem** c + + 特性具有与[defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示了使用**defaultcollelem**特性的接口方法：
+下面的代码演示了使用 **defaultcollelem** 特性的接口方法：
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -46,13 +46,11 @@ __interface IMyForm
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|接口方法|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|接口方法|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

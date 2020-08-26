@@ -1,17 +1,17 @@
 ---
-title: oleautomation （C++ COM 特性）
+title: 'oleautomation (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.oleautomation
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 201916eeb235d48473d21188da42d19cafb93bce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 47842454ce52c65cf71a317f39a7649b0f9dd27d
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214644"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842177"
 ---
 # <a name="oleautomation"></a>oleautomation
 
@@ -25,7 +25,7 @@ ms.locfileid: "80214644"
 
 ## <a name="remarks"></a>备注
 
-**Oleautomation** C++特性具有与[oleautomation](/windows/win32/Midl/oleautomation) MIDL 特性相同的功能。
+**Oleautomation** c + + 特性具有与[oleautomation](/windows/win32/Midl/oleautomation) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -33,13 +33,11 @@ ms.locfileid: "80214644"
 
 ## <a name="requirements"></a>要求
 
-### <a name="attribute-context"></a>特性上下文
-
-|||
+| 特性上下文 | 值 |
 |-|-|
-|**适用对象**|**接口**|
-|**可重复**|否|
-|**必需的特性**|无|
+|**适用于**|**interface**|
+|**且**|否|
+|**必需属性**|无|
 |**无效的特性**|**dispinterface**|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。

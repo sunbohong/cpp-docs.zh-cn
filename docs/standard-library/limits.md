@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 2d0f4f96d25c91ac20fe5a1883fc61fc47d15d5e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1527672bd51682bf32c82601ff54a94ea4154a0b
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217683"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88841904"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "87217683"
 
 **命名空间:** std
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 类的显式专用化 `numeric_limits` 描述基本类型（包括字符、整数和浮点类型）的许多属性， **`bool`** 这些属性是实现定义的，而不是由 c + + 语言的规则修复的。 中描述的属性 \<limits> 包括准确性、最小值和最大大小表示形式、舍入和信号类型错误。
 
@@ -32,14 +32,14 @@ ms.locfileid: "87217683"
 
 ### <a name="enumerations"></a>枚举
 
-|||
+|名称|说明|
 |-|-|
 |[float_denorm_style](../standard-library/limits-enums.md#float_denorm_style)|此枚举描述实现可以选择用于表示非标准化浮点值的各种方法，这种浮点值由于太小而无法表示为规范化值：|
 |[float_round_style](../standard-library/limits-enums.md#float_round_style)|此枚举描述实现可以选择用于将浮点值舍入为整数值的各种方法。|
 
 ### <a name="classes"></a>类
 
-|||
+|“属性”|说明|
 |-|-|
 |[numeric_limits 类](../standard-library/numeric-limits-class.md)|类模板描述内置数值类型的算术属性。|
 

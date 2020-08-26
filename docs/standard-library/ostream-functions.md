@@ -12,21 +12,21 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 4db966797202b16911aa67b6fda7c81785d98166
+ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425297"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88842632"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 函数
 
-这些是 &lt;ostream&gt;中定义的全局模板函数。 有关成员函数的详细说明，请参阅[Basic_ostream 类](basic-ostream-class.md)文档。
+这些是在 ostream 中定义的全局模板函数 &lt; &gt; 。 有关成员函数的详细说明，请参阅 [Basic_ostream 类](basic-ostream-class.md) 文档。
 
-||||
-|-|-|-|
-|[endl](#endl)|[ends](#ends)|[flush](#flush)|
-|[swap](#swap)|
+[endl](#endl)\
+[结尾](#ends)\
+[平](#flush)\
+[swap](#swap)
 
 ## <a name="endl"></a>endl
 
@@ -38,7 +38,7 @@ basic_ostream<Elem, Tr>& endl(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Elem*\
 元素类型。
@@ -53,9 +53,9 @@ basic_ostream<Elem, Tr>& endl(
 
 **Basic_ostream**类型的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)（*Ostr*。[加宽](../standard-library/basic-ios-class.md#widen)（' \n '）），然后调用*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
+操控器调用 *Ostr*。[ (](../standard-library/basic-ostream-class.md#put) *Ostr*。[扩大](../standard-library/basic-ios-class.md#widen) ( "\n" ) # A3，然后调用 *Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回 *Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -85,7 +85,7 @@ basic_ostream<Elem, Tr>& ends(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Elem*\
 元素类型。
@@ -100,9 +100,9 @@ basic_ostream<Elem, Tr>& ends(
 
 一个 `basic_ostream` 类型的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-操控器调用*Ostr*。[put](../standard-library/basic-ostream-class.md#put)（*Elem*（' \ 0 '））。 它将返回*Ostr*。
+操控器调用 *Ostr*。[将](../standard-library/basic-ostream-class.md#put) (*Elem* ( "\ 0" ) # A3。 它将返回 *Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -134,7 +134,7 @@ basic_ostream<Elem, Tr>& flush(
    basic_ostream<Elem, Tr>& Ostr);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Elem*\
 元素类型。
@@ -149,9 +149,9 @@ basic_ostream<Elem, Tr>& flush(
 
 一个 `basic_ostream` 类型的对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-操控器调用*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回*Ostr*。
+操控器调用 *Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它将返回 *Ostr*。
 
 ### <a name="example"></a>示例
 
@@ -171,7 +171,7 @@ int main( )
 testing
 ```
 
-## <a name="swap"></a>交换
+## <a name="swap"></a>swap
 
 交换两个 `basic_ostream` 对象的值。
 
@@ -182,7 +182,7 @@ void swap(
    basic_ostream<Elem, Tr>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Elem*\
 元素类型。
@@ -190,13 +190,13 @@ void swap(
 *Tr*\
 字符特征。
 
-*左*\
+*左中*\
 对 `basic_ostream` 对象的左值引用。
 
-*right*\
+*然后*\
 对 `basic_ostream` 对象的左值引用。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 模板函数 `swap` 执行 `left.swap(right)`。
 
