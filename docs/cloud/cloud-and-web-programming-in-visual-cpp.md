@@ -3,12 +3,12 @@ title: Visual C++ 中的云和 Web 编程
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
 ms.topic: overview
-ms.openlocfilehash: 4e50557733d474d68b8e503d00b28b2ae8cb7f09
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 675502e9ae50c9e69ad4555502000d128d5d4cbe
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274646"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898666"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ 中的云和 Web 编程
 
@@ -30,7 +30,7 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
 - [Microsoft Graph 中的 OneDrive 和 SharePoint](https://dev.onedrive.com/README.htm)
 
-  OneDrive API 提供了一组 HTTP 服务，用于将应用程序连接到 Office 365 和 SharePoint Server 2016 中的文件和文件夹。
+  OneDrive API 提供一组 HTTP 服务，用于将应用程序连接到 Microsoft 365 和 SharePoint Server 2016 中的文件和文件夹。
 
 ## <a name="windows-and-cross-platform-networking-apis"></a>Windows 和跨平台网络 API
 
@@ -51,7 +51,7 @@ C++ 中有多种选项可使你连接到 Web 和云。
 
 - [IXMLHTTPRequest2 接口](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  提供可在 Windows 运行时应用或 Windows 桌面应用中使用的本机 COM 接口，用于通过 HTTP 连接到 Internet，并发布 GET、PUT 和其他 HTTP 命令。 有关详细信息，请参见[演练：使用任务和 XML HTTP 请求进行连接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
+  提供可在 Windows 运行时应用或 Windows 桌面应用中使用的本机 COM 接口，用于通过 HTTP 连接到 Internet，并发布 GET、PUT 和其他 HTTP 命令。 有关详细信息，请参阅 [演练：使用任务和 XML HTTP 请求进行连接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
 - [Windows Internet (WinInet)](/windows/win32/WinInet/portal)
 

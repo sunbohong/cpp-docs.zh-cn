@@ -1,27 +1,28 @@
 ---
 title: 编译器错误 C2712
-ms.date: 11/04/2016
+description: 描述 Microsoft C/c + + 编译器错误 C2712。
+ms.date: 08/25/2020
 f1_keywords:
 - C2712
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-ms.openlocfilehash: a25c59fa5c9ba0102666f6c8922a61b063e7627a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2f0b883607241473a429919e06de9e975fa2e3c1
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202301"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898690"
 ---
 # <a name="compiler-error-c2712"></a>编译器错误 C2712
 
-> 无法在要求对象展开的函数中使用 __try
+> 不能 `__try` 在需要对象展开的函数中使用
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-如果你使用[/ehsc](../../build/reference/eh-exception-handling-model.md)，并且具有结构化异常处理的函数也具有需要展开（析构）的对象，则会发生错误 C2712。
+如果使用 [`/EHsc`](../../build/reference/eh-exception-handling-model.md) ，并且具有结构化异常处理的函数也具有需要 (析构) 展开的对象，则会发生错误 C2712。
 
-可能的解决方法：
+可能的解决方案：
 
 - 将要求 SEH 的代码移动到另一个函数中
 
@@ -29,11 +30,11 @@ ms.locfileid: "80202301"
 
 - 不使用 /EHsc 进行编译
 
-如果调用使用[__event](../../cpp/event.md)关键字声明的方法，也会发生错误 C2712。 由于可以在多线程环境中使用该事件，因此编译器将生成代码来阻止对基础事件对象的操作，然后将生成的代码封装在 SEH [try finally 语句](../../cpp/try-finally-statement.md)中。 因此，如果调用事件方法并按值传递其类型具有析构函数的自变量，则将发生错误 C2712。 这种情况的一种解决方法是将参数作为常数引用进行传递。
+如果调用使用关键字声明的方法，也会发生错误 C2712 [`__event`](../../cpp/event.md) 。 由于可以在多线程环境中使用该事件，因此编译器将生成代码来阻止对基础事件对象的操作，然后将生成的代码封装在 SEH [ `try-finally` 语句](../../cpp/try-finally-statement.md)中。 因此，如果调用事件方法并按值传递其类型具有析构函数的自变量，则将发生错误 C2712。 这种情况的一种解决方法是将参数作为常数引用进行传递。
 
-如果使用 **/clr： pure**进行编译，并在 `__try` 块中声明指向函数的指针的静态数组，则也会发生 C2712。 静态成员要求编译器使用 **/clr： pure**下的动态初始化，这会C++引发异常处理。 但是，不允许在 `__try` 块中进行 C++ 异常处理。
+如果使用进行编译 **`/clr:pure`** ，并在块中声明指向函数的指针的静态数组，则也会发生 C2712 **`__try`** 。 静态成员要求编译器使用下的动态初始化 **`/clr:pure`** ，这意味着 c + + 异常处理。 但是，在块中不允许 c + + 异常处理 **`__try`** 。
 
-**/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
+**`/clr:pure`** 和 **`/clr:safe`** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
 ## <a name="example"></a>示例
 
