@@ -1,6 +1,7 @@
 ---
 title: CComboBox 类
-ms.date: 11/04/2016
+description: MFC Windows 组合框类 CComboBox 的 API 参考
+ms.date: 08/27/2020
 f1_keywords:
 - CComboBox
 - AFXWIN/CComboBox
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 79bcb973046c418f0bea148084da239075414790
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 515a079ca4f6c3896733bbebec424f63455fb979
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561669"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062180"
 ---
 # <a name="ccombobox-class"></a>CComboBox 类
 
@@ -270,7 +271,7 @@ class CComboBox : public CWnd
 int AddString(LPCTSTR lpszString);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszString*<br/>
 指向要添加的以 null 值结束的字符串。
@@ -328,7 +329,7 @@ void Clear();
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpCompareItemStruct*<br/>
 指向 [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct) 结构的长指针。
@@ -377,7 +378,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定组合框的样式。 将 [组合框样式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 的任意组合应用于该框。
@@ -447,7 +448,7 @@ void Cut();
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDeleteItemStruct*<br/>
 指向 Windows [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) 结构的长指针，其中包含有关已删除项的信息。 有关此结构的说明，请参阅 [CWnd：： OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) 。
@@ -468,7 +469,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 int DeleteString(UINT nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定要删除的字符串的索引。
@@ -495,7 +496,7 @@ int Dir(
     LPCTSTR lpszWildCard);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *attr*<br/>
 可以是 **`enum`** [CFile：： GetStatus](../../mfc/reference/cfile-class.md#getstatus) 中所述的任何值组合或以下值的任意组合：
@@ -539,7 +540,7 @@ Windows 控件不支持此函数 `ComboBoxEx` 。 有关此控件的详细信息
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
 指向 [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 结构的指针，该结构包含所需绘图类型的相关信息。
@@ -564,7 +565,7 @@ int FindString(
     LPCTSTR lpszString) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStartAfter*<br/>
 包含要搜索的第一项之前项的从零开始的索引。 当搜索到达列表框的底部时，它会从列表框的顶部继续到由 *nStartAfter*指定的项。 如果为-1，则从一开始就搜索整个列表框。
@@ -594,7 +595,7 @@ int FindStringExact(
     LPCTSTR lpszFind) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndexStart*<br/>
 指定要搜索的第一项之前项的从零开始的索引。 当搜索到达列表框的底部时，它会从列表框的顶部继续到由 *nIndexStart*指定的项。 如果 *nIndexStart* 为-1，则从一开始就搜索整个列表框。
@@ -622,7 +623,7 @@ int FindStringExact(
 BOOL GetComboBoxInfo(PCOMBOBOXINFO pcbi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pcbi*<br/>
 指向 [COMBOBOXINFO](/windows/win32/api/winuser/ns-winuser-comboboxinfo) 结构的指针。
@@ -663,7 +664,7 @@ BOOL GetCueBanner(
     int cchText) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*\
 弄指向接收提示横幅文本的缓冲区的指针。
@@ -675,7 +676,7 @@ BOOL GetCueBanner(
 
 在第一个重载中，包含提示横幅文本的 [CString](../../atl-mfc-shared/using-cstring.md) 对象（如果存在）;否则为 `CString` 长度为零的对象。
 
--或-
+- 或 -
 
 在第二个重载中，如果此方法成功，则为 TRUE;否则为 FALSE。
 
@@ -713,7 +714,7 @@ int GetCurSel() const;
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprect*<br/>
 指向用于接收坐标的 [RECT 结构](/windows/win32/api/windef/ns-windef-rect) 。
@@ -830,7 +831,7 @@ UINT GetHorizontalExtent() const;
 DWORD_PTR GetItemData(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含组合框的列表框中的项的从零开始的索引。
@@ -855,7 +856,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 void* GetItemDataPtr(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含组合框的列表框中的项的从零开始的索引。
@@ -876,7 +877,7 @@ void* GetItemDataPtr(int nIndex) const;
 int GetItemHeight(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定组合框的组件，要检索其高度。 如果 *nIndex* 参数为-1，则将检索组合框的编辑控件 (或静态文本) 部分的高度。 如果组合框具有 [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 样式，则 *nIndex* 指定要检索其高度的列表项的从零开始的索引。 否则， *nIndex* 应设置为0。
@@ -903,7 +904,7 @@ void GetLBText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含要复制的列表框字符串的从零开始的索引。
@@ -920,7 +921,8 @@ void GetLBText(
 
 ### <a name="remarks"></a>备注
 
-此成员函数的第二种形式将 `CString` 对象替换为该项的文本。
+此成员函数的第二种形式 `CString` 用该项的文本填充对象。
+如果 *nIndex* 无效，则此函数将引发 `E_INVALIDARG` 异常 (错误代码： `-2147024809` `0x80070057`) 。
 
 ### <a name="example"></a>示例
 
@@ -934,7 +936,7 @@ void GetLBText(
 int GetLBTextLen(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含列表框字符串的从零开始的索引。
@@ -1013,7 +1015,7 @@ int InitStorage(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nItems*<br/>
 指定要添加的项的数目。
@@ -1047,7 +1049,7 @@ int InsertString(
     LPCTSTR lpszString);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含一个索引（该索引从零开始），该索引指向列表框中将接收字符串的位置。 如果此参数为-1，则字符串将被添加到列表的末尾。
@@ -1078,7 +1080,7 @@ int InsertString(
 BOOL LimitText(int nMaxChars);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMaxChars*<br/>
 指定用户可输入的文本的长度 (以字节为单位) 。 如果此参数为0，则文本长度设置为65535字节。
@@ -1105,7 +1107,7 @@ BOOL LimitText(int nMaxChars);
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMeasureItemStruct*<br/>
 指向 [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct) 结构的长指针。
@@ -1160,7 +1162,7 @@ int SelectString(
     LPCTSTR lpszString);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStartAfter*<br/>
 包含要搜索的第一项之前项的从零开始的索引。 当搜索到达列表框的底部时，它会从列表框的顶部继续到由 *nStartAfter*指定的项。 如果为-1，则从一开始就搜索整个列表框。
@@ -1190,7 +1192,7 @@ int SelectString(
 BOOL SetCueBanner(LPCTSTR lpszText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*\
 中指向以 null 结尾的包含提示文本的缓冲区的指针。
@@ -1225,7 +1227,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 int SetCurSel(int nSelect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *选择*<br/>
 指定要选择的字符串的从零开始的索引。 如果为-1，则删除列表框中的任何当前选择，并清除编辑控件。
@@ -1250,7 +1252,7 @@ int SetCurSel(int nSelect);
 int SetDroppedWidth(UINT nWidth);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 组合框的列表框部分的最小允许宽度（以像素为单位）。
@@ -1279,7 +1281,7 @@ BOOL SetEditSel(
     int nEndChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStartChar*<br/>
 指定起始位置。 如果起始位置设置为-1，则将删除任何现有选择。
@@ -1310,7 +1312,7 @@ BOOL SetEditSel(
 int SetExtendedUI(BOOL bExtended = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bExtended*<br/>
 指定组合框是否应使用扩展的用户界面或默认用户界面。 如果值为 TRUE，则选择扩展的用户界面;如果值为 FALSE，则选择标准用户界面。
@@ -1341,7 +1343,7 @@ CB_OKAY 如果操作成功，则为; 如果发生错误，则为 CB_ERR。
 void SetHorizontalExtent(UINT nExtent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nExtent*<br/>
 指定组合框的列表框部分可水平滚动的像素数。
@@ -1364,7 +1366,7 @@ int SetItemData(
     DWORD_PTR dwItemData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含要设置的项的从零开始的索引。
@@ -1394,7 +1396,7 @@ int SetItemDataPtr(
     void* pData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 包含项的从零开始的索引。
@@ -1424,7 +1426,7 @@ int SetItemHeight(
     UINT cyItemHeight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定是否设置组合框的列表项高度或编辑控件 (或静态文本) 部分的高度。
@@ -1456,7 +1458,7 @@ int SetItemHeight(
 LCID SetLocale(LCID nNewLocale);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nNewLocale*<br/>
 新的区域设置标识符 (LCID) 为组合框设置的值。
@@ -1481,7 +1483,7 @@ LCID SetLocale(LCID nNewLocale);
 BOOL SetMinVisibleItems(int iMinVisible);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iMinVisible*\
 中指定可见项的最小数目。
@@ -1514,7 +1516,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 int SetTopIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 指定列表框项的从零开始的索引。
@@ -1539,7 +1541,7 @@ int SetTopIndex(int nIndex);
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShowIt*<br/>
 指定是显示还是隐藏下拉列表框。 如果值为 TRUE，则显示列表框。 如果值为 FALSE，则隐藏列表框。

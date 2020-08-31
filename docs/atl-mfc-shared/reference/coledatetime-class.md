@@ -1,6 +1,7 @@
 ---
 title: COleDateTime 类
-ms.date: 03/27/2019
+description: MFC COleDateTime 类的 API 参考，用于封装 `DATE` OLE 自动化中使用的数据类型。
+ms.date: 08/27/2020
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 5cbc131a81afef1ee94069f39e79f22ce7addfcb
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9ebbab02860daaeb57c24d3e0901666861adfc2b
+ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562462"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062153"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -153,7 +154,7 @@ bool operator<=(const COleDateTime& date) const throw();
 bool operator>=(const COleDateTime& date) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *date*<br/>
 要比较的 `COleDateTime` 对象。
@@ -198,7 +199,7 @@ COleDateTime(WORD wDosDate,
 COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dateSrc*<br/>
 `COleDateTime`要复制到新对象的现有对象 `COleDateTime` 。
@@ -285,7 +286,7 @@ CString Format(LPCTSTR lpszFormat) const;
 CString Format(UINT nFormatID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 dwFlags <br/>
 指示以下区域设置标志之一：
@@ -344,7 +345,7 @@ dwFlags <br/>
 bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *标志*<br/>
 对 [DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype) 结构的引用。
@@ -369,7 +370,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sysTime*<br/>
 对用于接收对象中转换的日期/时间值的 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 结构的引用 `COleDateTime` 。
@@ -392,7 +393,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 bool GetAsUDATE(UDATE& uDate) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uDate*<br/>
 对结构的引用 `UDATE` ，该结构从对象接收转换的日期/时间值 `COleDateTime` 。
@@ -455,7 +456,7 @@ int GetDay() const throw();
 
 ## <a name="coledatetimegetdayofweek"></a><a name="getdayofweek"></a> COleDateTime：： GetDayOfWeek
 
-获取此日期/时间值所表示的月份中的某一天。
+获取此日期/时间值所表示的周中的某一天。
 
 ```
 int GetDayOfWeek() const throw();
@@ -926,7 +927,7 @@ bool ParseDateTime(
     LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszDate*<br/>
 指向要分析的以 null 结尾的字符串的指针。 有关详细信息，请参阅“备注”。
@@ -987,7 +988,7 @@ int SetDate(
     int nDay) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nYear*\
 指示要复制到此对象中的年份 `COleDateTime` 。
@@ -1067,7 +1068,7 @@ int SetDateTime(
     int nSec) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nYear*、 *nMonth*、 *nDay*、 *nHour*、 *nMin*、 *nSec*<br/>
 指示要复制到此对象中的日期和时间部分 `COleDateTime` 。
@@ -1145,7 +1146,7 @@ int SetDateTime(
 void SetStatus(DateTimeStatus status) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *status*<br/>
 此对象的新状态值 `COleDateTime` 。
@@ -1172,7 +1173,7 @@ int SetTime(
     int nSec) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHour*、 *nMin*、 *nSec*<br/>
 指示要复制到此对象中的时间部分 `COleDateTime` 。
