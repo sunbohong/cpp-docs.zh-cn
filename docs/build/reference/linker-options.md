@@ -1,7 +1,7 @@
 ---
 title: MSVC 链接器选项
 description: Microsoft LINK 链接器支持的选项的列表。
-ms.date: 02/09/2020
+ms.date: 09/01/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 0d85361b8d4b5896d9ed7beae0d310fe28dc98e9
+ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257541"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89281791"
 ---
 # <a name="linker-options"></a>链接器选项
 
@@ -23,21 +23,21 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 
 下表列出了 LINK.exe 的选项。 有关 LINK 的详细信息，请参阅：
 
-- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
+- [编译器控制的链接选项](compiler-controlled-link-options.md)
 
-- [LINK 输入文件](link-input-files.md)
+- [链接输入文件](link-input-files.md)
 
-- [LINK 输出](link-output.md)
+- [链接输出](link-output.md)
 
 - [保留字](reserved-words.md)
 
-在命令行上，链接器选项不区分大小写;例如，`/base` 和 `/BASE` 表示相同的内容。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
+在命令行上，链接器选项不区分大小写;例如， `/base` 和 `/BASE` 的含义相同。 有关如何在命令行或 Visual Studio 中指定每个选项的详细信息，请参阅适用于该选项的文档。
 
 可以使用 [注释](../../preprocessor/comment-c-cpp.md) 杂注指定一些链接器选项。
 
 ## <a name="linker-options-listed-alphabetically"></a>按字母顺序列出的链接器选项
 
-|选项|目的|
+|选项|目标|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|指定响应文件。|
 |[/ALIGN](align-section-alignment.md)|指定每一节的对齐方式。|
@@ -49,6 +49,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)|指定应将 Microsoft 中间语言 (MSIL) 模块导入到程序集中。|
 |[/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md)|将托管资源文件嵌入程序集。|
 |[/BASE](base-base-address.md)|为程序设置基址。|
+|[/CETCOMPAT](cetcompat.md)|将二进制文件标记为 CET 影子堆栈兼容。|
 |[/CGTHREADS](cgthreads-compiler-threads.md)|设置 cl.exe 线程数以在指定链接时代码生成后用于优化和代码生成。|
 |[/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md)|设置 CLR 映像的类型（IJW、纯或安全）。|
 |[/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|保留通过 P/Invoke 机制调用的函数的上一个错误代码。|
@@ -64,21 +65,21 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/DEPENDENTLOADFLAG](dependentloadflag.md)|设置依赖 DLL 加载的默认标志。|
 |[/DLL](dll-build-a-dll.md)|生成 DLL。|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|创建内核模式驱动程序。|
-|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|指定是否在加载时使用地址空间布局随机化（ASLR）功能生成变基的可执行映像。|
+|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|指定是否在加载时使用地址空间布局随机化 (ASLR) 功能生成变基的可执行映像。|
 |[/ENTRY](entry-entry-point-symbol.md)|设置起始地址。|
-|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| 已否决。 错误报告由 [Windows 错误报告 (WER) ](/windows/win32/wer/windows-error-reporting) 设置控制。 |
 |[/EXPORT](export-exports-a-function.md)|导出函数。|
 |[/FILEALIGN](filealign.md)|将输出文件中的部分与指定值的倍数对齐。|
 |[/FIXED](fixed-fixed-base-address.md)|创建只能在其首选基址加载的程序。|
 |[/FORCE](force-force-file-output.md)|强制完成链接，即使符号无法解析或已定义多次。|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|创建可进行热修补的映像。|
-|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|这两个选项都指定通过链接器生成 *`.pgd`* 文件，以支持按配置文件优化（PGO）。 /GENPROFILE 和 /FASTGENPROFILE 使用不同的默认参数。|
+|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|这两个选项均 *`.pgd`* 通过链接器指定文件的生成，以支持按配置文件优化 (PGO) 。 /GENPROFILE 和 /FASTGENPROFILE 使用不同的默认参数。|
 |[/GUARD](guard-enable-guard-checks.md)|启用控制流防护保护。|
 |[/HEAP](heap-set-heap-size.md)|设置堆的大小（以字节为单位）。|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|指定对高熵 64 位地址空间布局随机化 (ASLR) 的支持。|
 |[/IDLOUT](idlout-name-midl-output-files.md)|指定 *`.idl`* 文件和其他 MIDL 输出文件的名称。|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|禁止显示指定链接器警告的输出。|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|阻止将属性信息处理到 *`.idl`* 文件中。|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|防止将特性信息处理到文件中 *`.idl`* 。|
 |[/IMPLIB](implib-name-import-library.md)|重写默认的导入库名。|
 |[/INCLUDE](include-force-symbol-references.md)|强制符号引用。|
 |[/INCREMENTAL](incremental-link-incrementally.md)|控制增量链接。|
@@ -92,7 +93,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/LTCG](ltcg-link-time-code-generation.md)|指定链接时间代码生成。|
 |[/MACHINE](machine-specify-target-platform.md)|指定目标平台。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|创建并行清单文件，也可以选择将其嵌入二进制文件。|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定清单文件中 \<dependentAssembly > 部分。|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定 \<dependentAssembly> 清单文件中的部分。|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|更改清单文件的默认名称。|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|指定链接器要进行处理并嵌入二进制文件的清单输入文件。 可以多次使用此选项以指定多个清单输入文件。|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|指定是否将用户帐户控制 (UAC) 信息嵌入到程序清单中。|
@@ -100,7 +101,7 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|包括映射文件中的指定信息。|
 |[/MERGE](merge-combine-sections.md)|合并节。|
 |[/MIDL](midl-specify-midl-command-line-options.md)|指定 MIDL 命令行选项。|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|将 Natvis 文件中的调试器可视化工具添加到程序数据库（PDB）。|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|将调试器可视化工具从 Natvis 文件添加到 (PDB) 的程序数据库。|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|取消创建 .NET Framework 程序集。|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|在解析外部引用时忽略所有（或指定的）默认库。|
 |[/NOENTRY](noentry-no-entry-point.md)|创建纯资源 DLL。|
@@ -112,10 +113,10 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/PDB](pdb-use-program-database.md)|创建 PDB 文件。|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|使用备用位置来保存 PDB 文件。|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|创建没有私有符号的 PDB 文件。|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|为按配置文件优化指定 *`.pgd`* 文件。|
-|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**过时**创建线程安全的 PGO 检测生成。|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|*`.pgd`* 为按配置文件优化指定一个文件。|
+|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**过时** 创建线程安全的 PGO 检测生成。|
 |[/PROFILE](profile-performance-tools-profiler.md)|生成一个可与“性能工具”探查器结合使用的输出文件。|
-|[/RELEASE](release-set-the-checksum.md)|在 *`.exe`* 标头中设置校验和。|
+|[/RELEASE](release-set-the-checksum.md)|在标头中设置校验和 *`.exe`* 。|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|指定映像将包含安全异常处理程序表。|
 |[/SECTION](section-specify-section-attributes.md)|重写节的特性。|
 |[/SOURCELINK](sourcelink.md)|指定要添加到 PDB 的 SourceLink 文件。|
@@ -137,9 +138,9 @@ LINK.exe 将通用对象文件格式 (COFF) 对象文件和库链接起来，以
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|通过将公钥放置在 winmd 文件中，对 Windows 运行时元数据 (winmd) 文件进行部分签名。|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|将链接器警告视为错误。|
 
-<sup>16.1</sup>从 Visual Studio 2019 版本16.1 开始，此选项可用。
+<sup>16.1</sup> 从 Visual Studio 2019 版本16.1 开始，此选项可用。
 
 ## <a name="see-also"></a>另请参阅
 
-[C/C++ 生成参考](c-cpp-building-reference.md)\
+[C/c + + 生成参考](c-cpp-building-reference.md)\
 [MSVC 链接器参考](linking.md)
