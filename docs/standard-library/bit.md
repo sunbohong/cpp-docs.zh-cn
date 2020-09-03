@@ -31,13 +31,13 @@ ms.locfileid: "89194754"
 
 ### <a name="types"></a>类型
 
-| 类型 | 描述 |
+| 类型 | 说明 |
 |--------|----------|
 | [端](bit-enum.md) | 指定标量类型的字节排序。 |
 
 ### <a name="functions"></a>函数
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |-----|-----|
 |[bit_cast](bit-functions.md#bit_cast) | 重新解释从一种类型到另一种类型的对象表示形式。 |
 |[bit_ceil](bit-functions.md#bit_ceil) | 查找两个大于或等于某个值的最小幂。 |
@@ -52,6 +52,6 @@ ms.locfileid: "89194754"
 |[rotl](bit-functions.md#rotl) | 计算按位左旋转的结果。 |
 |[rotr](bit-functions.md#rotr) | 计算按位右移位的结果。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](cpp-standard-library-header-files.md)
