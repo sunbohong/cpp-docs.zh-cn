@@ -8,16 +8,16 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 249170e1e29d3ca8c488d15be8fa4ccd2b9070c1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2629f243f3db3b8fabbd87ee0a211380ac3d45a2
+ms.sourcegitcommit: 093f49b8b69daf86661adc125b1d2d7b1f0e0650
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222753"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427720"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
-C++ Accelerated Massive Parallelism （C++ AMP）通过利用数据并行硬件（如图形处理单元（GPU））来加速 c + + 代码的执行。 通过使用 C++ AMP，你可以为多维数据算法编写代码，以便可以通过在异类硬件上使用并行来加速执行。 C++ AMP 编程模型包括多维数组、索引、内存传输、平铺和数学函数库。 你可以使用 C++ AMP 语言扩展来控制数据在 CPU 和 GPU 之间的移动方式，从而提高性能。
+C++ Accelerated Massive Parallelism (C++ AMP) 通过利用数据并行硬件（如图形处理 (单元）来加速 c + + 代码的执行。 通过使用 C++ AMP，你可以为多维数据算法编写代码，以便可以通过在异类硬件上使用并行来加速执行。 C++ AMP 编程模型包括多维数组、索引、内存传输、平铺和数学函数库。 你可以使用 C++ AMP 语言扩展来控制数据在 CPU 和 GPU 之间的移动方式，从而提高性能。
 
 ## <a name="system-requirements"></a>系统要求
 
@@ -58,7 +58,7 @@ void StandardMethod() {
 
 代码的重要部分如下所示：
 
-- 数据：数据由三个数组组成。 全部具有相同的秩（一）和长度（5）。
+- 数据：数据由三个数组组成。 都具有相同的秩 (一个) ，长度 (5 个) 。
 
 - 迭代：第一 **`for`** 循环提供一种机制来循环访问数组中的元素。 要执行以计算总和的代码包含在第一个 **`for`** 块中。
 
@@ -102,19 +102,19 @@ void CppAmpMethod() {
 
 存在相同的基本元素，但使用 C++ AMP 构造：
 
-- 数据：使用 c + + 数组构造三个 C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md)对象。 提供四个值来构造 `array_view` 对象：数据值、级别、元素类型以及 `array_view` 每个维度中的对象的长度。 秩和类型作为类型参数进行传递。 数据和长度作为构造函数参数传递。 在此示例中，传递给构造函数的 c + + 数组是一维的。 秩和长度用于构造对象中数据的矩形形状 `array_view` ，数据值用于填充数组，而这些数据值用于填充数组。 运行时库还包括[数组类，该类](../../parallel/amp/reference/array-class.md)具有一个类似于类的接口， `array_view` 本文稍后将对此进行讨论。
+- 数据：使用 c + + 数组构造三个 C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) 对象。 提供四个值来构造 `array_view` 对象：数据值、级别、元素类型以及 `array_view` 每个维度中的对象的长度。 秩和类型作为类型参数进行传递。 数据和长度作为构造函数参数传递。 在此示例中，传递给构造函数的 c + + 数组是一维的。 秩和长度用于构造对象中数据的矩形形状 `array_view` ，数据值用于填充数组，而这些数据值用于填充数组。 运行时库还包括 [数组类，该类](../../parallel/amp/reference/array-class.md)具有一个类似于类的接口， `array_view` 本文稍后将对此进行讨论。
 
-- 迭代： [Parallel_for_each 函数（C++ AMP）](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供了一种机制来循环访问数据元素或*计算域*。 在此示例中，计算域由指定 `sum.extent` 。 要执行的代码包含在 lambda 表达式或*核心函数*中。 `restrict(amp)`指示只使用 C++ AMP 的 c + + 语言的子集。
+- 迭代： [Parallel_for_each 函数 (C++ AMP) ](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 提供一种机制来循环访问数据元素或 *计算域*。 在此示例中，计算域由指定 `sum.extent` 。 要执行的代码包含在 lambda 表达式或 *核心函数*中。 `restrict(amp)`指示只使用 C++ AMP 的 c + + 语言的子集。
 
-- Index：[索引类](../../parallel/amp/reference/index-class.md)变量（ `idx` ）被声明为与对象的排名相匹配的一个级别 `array_view` 。 使用索引可以访问对象的各个元素 `array_view` 。
+- Index： [索引类](../../parallel/amp/reference/index-class.md) 变量（ `idx` ）被声明为与对象的排名相匹配的一个级别 `array_view` 。 使用索引可以访问对象的各个元素 `array_view` 。
 
 ## <a name="shaping-and-indexing-data-index-and-extent"></a>形成和索引数据: index 和 extent
 
-在运行内核代码之前，必须定义数据值并声明数据的形状。 所有数据都被定义为数组（矩形），您可以定义该数组的秩（维数）。 数据可以是任何维度中的任何大小。
+在运行内核代码之前，必须定义数据值并声明数据的形状。 所有数据都被定义为 (矩形) 的数组，并且您可以定义该数组，使其具有任何排名 (的) 维数。 数据可以是任何维度中的任何大小。
 
 ### <a name="index-class"></a>index 类
 
-[Index 类](../../parallel/amp/reference/index-class.md) `array` `array_view` 通过将每个维度中原点的偏移量封装到一个对象中，在或对象中指定一个位置。 访问数组中的位置时，会将 `index` 对象传递给索引运算符， `[]` 而不是整数索引的列表。 您可以通过使用[array：： operator （）运算符](reference/array-class.md#operator_call)或[array_view：： Operator （）运算符](reference/array-view-class.md#operator_call)来访问每个维度中的元素。
+[Index 类](../../parallel/amp/reference/index-class.md) `array` `array_view` 通过将每个维度中原点的偏移量封装到一个对象中，在或对象中指定一个位置。 访问数组中的位置时，会将 `index` 对象传递给索引运算符， `[]` 而不是整数索引的列表。 您可以通过使用 [array：： operator ( # A1 运算符](reference/array-class.md#operator_call) 或 [array_view：： Operator ( # A3 运算符](reference/array-view-class.md#operator_call)来访问每个维度中的元素。
 
 下面的示例创建一个指定一维对象中第三个元素的一维索引 `array_view` 。 索引用于打印对象中的第三个元素 `array_view` 。 输出为3。
 
@@ -188,7 +188,7 @@ std::cout << "The depth is " << a.extent[0] << "\n";
 
 ## <a name="moving-data-to-the-accelerator-array-and-array_view"></a>将数据移动到快捷键: array 和 array_view
 
-用于将数据移动到快捷键的两个数据容器在运行库中定义。 它们是[数组类](../../parallel/amp/reference/array-class.md)和[array_view 类](../../parallel/amp/reference/array-view-class.md)。 `array`类是一个容器类，它在构造对象时创建数据的深层副本。 `array_view`类是一个包装类，它在内核函数访问数据时复制数据。 在源设备上需要数据时，会将数据复制回。
+用于将数据移动到快捷键的两个数据容器在运行库中定义。 它们是 [数组类](../../parallel/amp/reference/array-class.md) 和 [array_view 类](../../parallel/amp/reference/array-view-class.md)。 `array`类是一个容器类，它在构造对象时创建数据的深层副本。 `array_view`类是一个包装类，它在内核函数访问数据时复制数据。 在源设备上需要数据时，会将数据复制回。
 
 ### <a name="array-class"></a>array 类
 
@@ -225,22 +225,22 @@ for (int i = 0; i < 5; i++)
 
 下表总结了和类之间的相似性和 `array` 差异 `array_view` 。
 
-|描述|array 类|array_view 类|
+|说明|array 类|array_view 类|
 |-----------------|-----------------|-----------------------|
 |确定名次的时间|在编译时。|在编译时。|
 |确定范围时|在运行时。|在运行时。|
 |形状|进.|进.|
 |数据存储|是一个数据容器。|为数据包装。|
 |复制|定义中的显式副本和深层副本。|当核心函数访问时，隐式复制。|
-|数据检索|将数组数据复制回 CPU 线程上的对象。|通过直接访问 `array_view` 对象或通过调用[array_view：： synchronize 方法](reference/array-view-class.md#synchronize)来继续访问原始容器上的数据。|
+|数据检索|将数组数据复制回 CPU 线程上的对象。|通过直接访问 `array_view` 对象或通过调用 [array_view：： synchronize 方法](reference/array-view-class.md#synchronize) 来继续访问原始容器上的数据。|
 
 ### <a name="shared-memory-with-array-and-array_view"></a>数组和 array_view 的共享内存
 
 共享内存是可以由 CPU 和加速器访问的内存。 使用共享内存可消除或大大降低在 CPU 和加速器之间复制数据的开销。 尽管内存是共享的，但它不能同时由 CPU 和加速器进行访问，这样做会导致未定义的行为。
 
-`array`如果关联的快捷键支持共享内存，则可以使用对象来指定对其使用的精细控制。 加速器是否支持共享内存由加速器的[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)属性确定，该属性 **`true`** 在支持共享内存时返回。 如果支持共享内存，则加速器上内存分配的默认[Access_type 枚举](reference/concurrency-namespace-enums-amp.md#access_type)由 `default_cpu_access_type` 属性确定。 默认情况下， `array` 和 `array_view` 对象采用与 `access_type` 主关联的相同的 `accelerator` 。
+`array` 如果关联的快捷键支持共享内存，则可以使用对象来指定对其使用的精细控制。 加速器是否支持共享内存由加速器的 [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory) 属性确定，该属性 **`true`** 在支持共享内存时返回。 如果支持共享内存，则加速器上内存分配的默认 [Access_type 枚举](reference/concurrency-namespace-enums-amp.md#access_type) 由 `default_cpu_access_type` 属性确定。 默认情况下， `array` 和 `array_view` 对象采用与 `access_type` 主关联的相同的 `accelerator` 。
 
-通过显式设置[array：： Cpu_access_type 数据成员](reference/array-class.md#cpu_access_type)属性 `array` ，可以对使用共享内存的方式进行精细的控制，以便可以根据其计算内核的内存访问模式优化应用程序的性能特征。 的 `array_view` 反射与其 `cpu_access_type` 关联的相同 `array` ; 或者，如果 array_view 是在没有数据源的情况下构造的，则其 `access_type` 反映的是第一个导致其分配存储的环境。 也就是说，如果第一次被主机（CPU）访问，则其行为方式就像是通过 CPU 数据源创建的，并共享的是 `access_type` `accelerator_view` 通过捕获关联的; 但是，如果首次访问，则它的 `accelerator_view` 行为就像是在创建的上创建的， `array` `accelerator_view` 并且共享的 `array` `access_type` 。
+通过显式设置 [array：： Cpu_access_type 数据成员](reference/array-class.md#cpu_access_type) 属性 `array` ，可以对使用共享内存的方式进行精细的控制，以便可以根据其计算内核的内存访问模式优化应用程序的性能特征。 的 `array_view` 反射与其 `cpu_access_type` 关联的相同 `array` ; 或者，如果 array_view 是在没有数据源的情况下构造的，则其 `access_type` 反映的是第一个导致其分配存储的环境。 也就是说，如果第一次通过主机 (CPU) 访问它，则它的行为方式就像是通过 CPU 数据源创建的，并共享 `access_type` `accelerator_view` 通过捕获关联的的; 但是，如果首次访问 `accelerator_view` ，则它的行为就像是在创建的上创建的， `array` `accelerator_view` 并共享的 `array` `access_type` 。
 
 下面的代码示例演示如何确定默认快捷键是否支持共享内存，然后创建多个具有不同 cpu_access_type 配置的数组。
 
@@ -318,7 +318,7 @@ void AddArrays() {
 
 *计算域*是一个 `extent` 对象或 `tiled_extent` 对象，用于定义要为并行执行创建的一组线程。 为计算域中的每个元素生成一个线程。 在这种情况下，该 `extent` 对象为一维，并具有五个元素。 因此，启动了五个线程。
 
-*Lambda 表达式*定义要在每个线程上运行的代码。 捕获子句 `[=]` 指定 lambda 表达式的主体通过值访问所有捕获的变量，在本例中为 `a` 、 `b` 和 `sum` 。 在此示例中，参数列表创建一个名为的一维 `index` 变量 `idx` 。 的值在 `idx[0]` 第一个线程中为0，并在每个后续线程中增加1。 `restrict(amp)`指示只使用 C++ AMP 的 c + + 语言的子集。  限制[（C++ AMP）](../../cpp/restrict-cpp-amp.md)中描述了具有限制修饰符的函数的限制。 有关详细信息，请参阅[Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
+*Lambda 表达式*定义要在每个线程上运行的代码。 捕获子句 `[=]` 指定 lambda 表达式的主体通过值访问所有捕获的变量，在本例中为 `a` 、 `b` 和 `sum` 。 在此示例中，参数列表创建一个名为的一维 `index` 变量 `idx` 。 的值在 `idx[0]` 第一个线程中为0，并在每个后续线程中增加1。 `restrict(amp)`指示只使用 C++ AMP 的 c + + 语言的子集。  限制 [ (C++ AMP) ](../../cpp/restrict-cpp-amp.md)中描述了具有限制修饰符的函数的限制。 有关详细信息，请参阅 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
 
 Lambda 表达式可以包含要执行的代码，也可以调用单独的内核函数。 内核函数必须包含 `restrict(amp)` 修饰符。 下面的示例与前面的示例等效，但它调用单独的内核函数。
 
@@ -360,9 +360,9 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>加速代码: 平铺和屏障
 
-您可以使用平铺获取更多加速。 平铺将线程划分为相等的矩形子集或*图块*。 根据数据集和要编码的算法，确定相应的磁贴大小。 对于每个线程，你可以访问相对于整个或的数据元素*全局*位置，并可访问与 `array` `array_view` 磁贴相关的*本地*位置。 使用本地索引值可以简化代码，因为无需编写代码来将索引值从 global 转换为本地。 若要使用平铺，请在方法中调用计算域上的[区：：磁贴方法](reference/extent-class.md#tile) `parallel_for_each` ，并使用 lambda 表达式中的[tiled_index](../../parallel/amp/reference/tiled-index-class.md)对象。
+您可以使用平铺获取更多加速。 平铺将线程划分为相等的矩形子集或 *图块*。 根据数据集和要编码的算法，确定相应的磁贴大小。 对于每个线程，你可以访问相对于整个或的数据元素 *全局* 位置，并可访问与 `array` `array_view` 磁贴相关的 *本地* 位置。 使用本地索引值可以简化代码，因为无需编写代码来将索引值从 global 转换为本地。 若要使用平铺，请在方法中调用计算域上的 [区：：磁贴方法](reference/extent-class.md#tile) `parallel_for_each` ，并使用 lambda 表达式中的 [tiled_index](../../parallel/amp/reference/tiled-index-class.md) 对象。
 
-在典型的应用程序中，磁贴中的元素在某种程度上是相关的，代码必须访问和跟踪磁贴中的值。 使用[Tile_static 关键字](../../cpp/tile-static-keyword.md)关键字和[tile_barrier：： wait 方法](reference/tile-barrier-class.md#wait)完成此操作。 具有**tile_static**关键字的变量在整个磁贴中具有范围，并为每个图块创建变量实例。 必须处理对变量的平铺线程访问的同步。 [Tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)将停止当前线程的执行，直到磁贴中的所有线程都已达到对的调用 `tile_barrier::wait` 。 因此，您可以使用**tile_static**变量在磁贴范围内累计值。 然后，可以完成任何需要访问所有值的计算。
+在典型的应用程序中，磁贴中的元素在某种程度上是相关的，代码必须访问和跟踪磁贴中的值。 使用 [Tile_static 关键字](../../cpp/tile-static-keyword.md) 关键字和 [tile_barrier：： wait 方法](reference/tile-barrier-class.md#wait) 完成此操作。 具有 **tile_static** 关键字的变量在整个磁贴中具有范围，并为每个图块创建变量实例。 必须处理对变量的平铺线程访问的同步。 [Tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)将停止当前线程的执行，直到磁贴中的所有线程都已达到对的调用 `tile_barrier::wait` 。 因此，您可以使用 **tile_static** 变量在磁贴范围内累计值。 然后，可以完成任何需要访问所有值的计算。
 
 下图表示一个二维数组，它在图块中进行排列。
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>数学库
 
-C++ AMP 包括两个数学库。 [Concurrency：:p Recise_math 命名空间](../../parallel/amp/reference/concurrency-precise-math-namespace.md)中的双精度库为双精度函数提供支持。 它还提供对单精度函数的支持，但仍需要对硬件进行双精度支持。 它符合[C99 规范（ISO/IEC 9899）](https://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必须支持完全双精度。 您可以通过检查 "[快捷键：： supports_double_precision" 数据成员](reference/accelerator-class.md#supports_double_precision)的值来确定它是否执行此操作。 [Concurrency：： Fast_math 命名空间](../../parallel/amp/reference/concurrency-fast-math-namespace.md)中的快速数学库包含另一组数学函数。 这些函数仅支持 **`float`** 操作数，执行速度更快，但不会精确到双精度数学库中的函数。 函数包含在 \<amp_math.h> 标头文件中，所有都是用进行声明的 `restrict(amp)` 。 \<cmath>标头文件中的函数将导入 `fast_math` 和 `precise_math` 命名空间。 **`restrict`** 关键字用于区分 \<cmath> 版本和 C++ AMP 版本。 下面的代码使用 fast 方法计算计算域中每个值的以10为底的对数。
+C++ AMP 包括两个数学库。 [Concurrency：:p Recise_math 命名空间](../../parallel/amp/reference/concurrency-precise-math-namespace.md)中的双精度库为双精度函数提供支持。 它还提供对单精度函数的支持，但仍需要对硬件进行双精度支持。 它符合 [C99 规范 (ISO/IEC 9899) ](https://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必须支持完全双精度。 您可以通过检查 " [快捷键：： supports_double_precision" 数据成员](reference/accelerator-class.md#supports_double_precision)的值来确定它是否执行此操作。 [Concurrency：： Fast_math 命名空间](../../parallel/amp/reference/concurrency-fast-math-namespace.md)中的快速数学库包含另一组数学函数。 这些函数仅支持 **`float`** 操作数，执行速度更快，但不会精确到双精度数学库中的函数。 函数包含在 \<amp_math.h> 标头文件中，所有都是用进行声明的 `restrict(amp)` 。 \<cmath>标头文件中的函数将导入 `fast_math` 和 `precise_math` 命名空间。 **`restrict`** 关键字用于区分 \<cmath> 版本和 C++ AMP 版本。 下面的代码使用 fast 方法计算计算域中每个值的以10为底的对数。
 
 ```cpp
 #include <amp.h>
@@ -459,13 +459,13 @@ void MathExample() {
 
 ## <a name="graphics-library"></a>图形库
 
-C++ AMP 包含为加速图形编程而设计的图形库。 此库仅在支持本机图形功能的设备上使用。 方法位于[Concurrency：： Graphics 命名空间](../../parallel/amp/reference/concurrency-graphics-namespace.md)中，并包含在 \<amp_graphics.h> 标头文件中。 图形库的关键组件如下：
+C++ AMP 包含为加速图形编程而设计的图形库。 此库仅在支持本机图形功能的设备上使用。 方法位于 [Concurrency：： Graphics 命名空间](../../parallel/amp/reference/concurrency-graphics-namespace.md) 中，并包含在 \<amp_graphics.h> 标头文件中。 图形库的关键组件如下：
 
 - [纹理类](../../parallel/amp/reference/texture-class.md)：可以使用纹理类从内存或文件创建纹理。 纹理类似于数组，因为它们包含数据，它们类似于 c + + 标准库中与赋值和复制构造有关的容器。 有关详细信息，请参阅 [C++ 标准库容器](../../standard-library/stl-containers.md)。 类的模板参数 `texture` 是元素类型和排名。 秩可以是1、2或3。 元素类型可以是在本文后面部分中描述的一种简短矢量类型。
 
 - [Writeonly_texture_view 类](../../parallel/amp/reference/writeonly-texture-view-class.md)：提供对任何纹理的只写访问权限。
 
-- Short 矢量库：定义一组基于 **`int`** 、 `uint` 、 **`float`** 、 **`double`** 、[标准](../../parallel/amp/reference/norm-class.md)或[unorm](../../parallel/amp/reference/unorm-class.md)的长度为2、3和4的短矢量类型。
+- Short 矢量库：定义一组基于 **`int`** 、 `uint` 、 **`float`** 、 **`double`** 、 [标准](../../parallel/amp/reference/norm-class.md)或 [unorm](../../parallel/amp/reference/unorm-class.md)的长度为2、3和4的短矢量类型。
 
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 应用
 
@@ -503,9 +503,9 @@ C++ AMP 包含为加速图形编程而设计的图形库。 此库仅在支持�
 
 无符号整数的模数和除法具有比带符号整数的模数和除法更好的性能。 建议尽可能使用无符号整数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)<br/>
 [参考 (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[本机代码中的并行编程博客](https://go.microsoft.com/fwlink/p/?linkid=238472)
+[本机代码中的并行编程博客](/archive/blogs/nativeconcurrency/)
