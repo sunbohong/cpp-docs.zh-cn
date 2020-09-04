@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 约定概述
 ms.date: 03/27/2019
-ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: bfe55513ffd24175dbe62efc6d5afcfd82f71e4c
+ms.sourcegitcommit: 7f378314c5692d897ead10b7f6c96d4cb2abd266
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303266"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88972668"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 约定概述
 
@@ -205,13 +205,13 @@ AArch64 体系结构还支持 32 个浮点/SIMD 寄存器，下面进行了总�
 
 HFA 和 HVA 值以适当方式在 s0-s3、d0-d3 或 v0-v3 中返回。
 
-通过值返回的类型的处理方式因它们是否具有某些属性而异。 具有所有这些属性的类型，
+通过值返回的类型的处理方式因它们是否具有某些属性而异，且因函数是否为非静态成员函数而异。 具有所有这些属性的类型，
 
 - 按照 C++14 标准定义，它们是聚合  ，即它们不包含用户提供的构造函数、专用或受保护的非静态数据成员、基类，也不包含虚拟函数，并且
 - 它们具有普通复制赋值运算符，并且
 - 它们具有普通析构函数，
 
-使用以下返回样式：
+由非成员函数或静态成员函数返回，使用以下返回样式：
 
 - 小于或等于 8 字节的类型在 x0 中返回。
 - 小于或等于 16 字节的类型在 x0 和 x1 中返回，其中 x0 包含低序 8 字节。

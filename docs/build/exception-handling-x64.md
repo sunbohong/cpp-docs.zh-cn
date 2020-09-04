@@ -1,16 +1,17 @@
 ---
 title: x64 异常处理
+description: x64 上的 Microsoft C++ 异常处理约定的概述。
 ms.date: 10/14/2019
 helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 3d973354f94ca8c9f2e0901e60f2a8009ac08cd6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1c55ecf8755e208b2f47acdfda185123ee0255e2
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835046"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898560"
 ---
 # <a name="x64-exception-handling"></a>x64 异常处理
 

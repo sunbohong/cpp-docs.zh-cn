@@ -1,6 +1,7 @@
 ---
 title: try-except 语句 (C)
-ms.date: 11/04/2016
+description: Microsoft C/C++ 使用 try-except 语句语言扩展实现结构化异常处理 (SEH)。
+ms.date: 08/24/2020
 helpviewer_keywords:
 - try-except keyword [C]
 - structured exception handling, try-except
@@ -10,73 +11,69 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-ms.openlocfilehash: 77b6bea8c7793522f5e1fa47e09a9b4a7e5c0f10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e327150431fef3384f2b98940939444b2e6d96ea
+ms.sourcegitcommit: efc8c32205c9d610f40597556273a64306dec15d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218775"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88898727"
 ---
 # <a name="try-except-statement-c"></a>try-except 语句 (C)
 
 **Microsoft 专用**
 
-**try-except** 语句是一项 Microsoft C++ 语言扩展，它使应用程序能够在正常终止执行的事件发生时获取对程序的控制权。 此类事件称为异常，处理异常的机制称为结构化异常处理。
+`try-except` 语句是一项 Microsoft C++ 语言扩展，它使应用程序能够在正常终止执行的事件发生时获取对程序的控制权。 此类事件称为异常，处理异常的机制称为结构化异常处理。
 
-异常可能基于硬件或软件。 即使应用程序无法从硬件或软件异常中完全恢复，结构化异常处理也可以显示错误信息并捕获应用程序的内部状态，从而帮助诊断问题。 这对于无法轻松重现的间歇性问题特别有用。
+异常可能基于硬件或软件。 即使应用程序无法从硬件或软件异常中完全恢复，结构化异常处理也可以记录和显示错误信息。 这有助于捕获应用程序的内部状态，从而帮助诊断问题。 特别是，这对于不容易重现的间歇性问题很有用。
 
 ## <a name="syntax"></a>语法
 
-*try-except-statement*: **__try**  *compound-statement*
+> *`try-except-statement`*:\
+> &emsp;**`__try`** *`compound-statement`* **`__except (`**  *`expression`*  **`)`** *`compound-statement`*
 
-**__except (**  *expression*  **)**  *compound-statement*
-
-`__try` 子句后的复合语句是受保护节。 `__except` 子句后的复合语句是异常处理程序。 如果在控制节执行过程中引发了异常，处理程序将指定要采取的一系列措施。 执行过程如下所示：
+`__try` 子句后的复合语句是受保护节。 `__except` 子句后的复合语句是异常处理程序。 如果在受保护节的执行过程中引发了异常，处理程序将指定要采取的一系列措施。 执行过程如下所示：
 
 1. 执行受保护节。
 
 1. 如果在执行受保护的部分期间没有发生异常，则在 `__except` 子句之后的语句处继续执行。
 
-1. 如果在执行受保护的部分期间或在受保护的部分调用的任何例程中发生异常，则会计算 `__except` 表达式，返回的值决定如何处理异常。 有三个值：
+1. 如果在受保护节的执行过程中或受保护节调用的任何例程中发生异常，则会计算 `__except` 表达式。 返回的值将确定该异常的处理方式。 有三种可能的值：
 
-   `EXCEPTION_CONTINUE_SEARCH` 异常无法识别。 继续向上搜索堆栈查找处理程序，首先是所在的 **try-except** 语句，然后是具有下一个最高优先级的处理程序。
+   - `EXCEPTION_CONTINUE_SEARCH`：无法识别异常。 继续向上搜索堆栈查找处理程序，首先是所在的 `try-except` 语句，然后是具有下一个最高优先级的处理程序。
 
-   `EXCEPTION_CONTINUE_EXECUTION` 异常可识别，但被关闭。 从出现异常的点继续执行。
+   - `EXCEPTION_CONTINUE_EXECUTION`：异常可识别，但被关闭。 从出现异常的点继续执行。
 
-   `EXCEPTION_EXECUTE_HANDLER` 异常可识别。 通过执行 `__except` 复合语句来将控制权转移给异常处理程序，然后在发生异常的语句处继续执行。
+   - `EXCEPTION_EXECUTE_HANDLER` 异常可识别。 通过执行 `__except` 复合语句来将控制权转移给异常处理程序，然后在发生异常的语句处继续执行。
 
 由于 `__except` 表达式是作为 C 表达式计算的，因此它被限制为单个值、条件表达式运算符或逗号运算符。 如果需要更大量的处理，表达式可调用返回上面列出的三个值之一的例程。
 
 > [!NOTE]
-> 结构化异常处理适用于 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 您可通过使用 C++ 异常处理来确保提高代码的可移植性。 此外，C++ 异常处理机制灵活得多，因为它可以处理任何类型的异常。
+> 结构化异常处理适用于 C 和 C++ 源文件。 但是，这不是专门为 C++ 设计的。 对于可移植 C++ 程序，应使用 C++ 异常处理，而不是结构化异常处理。 此外，C++ 异常处理机制灵活得多，因为它可以处理任何类型的异常。 有关详细信息，请参阅《C++ 语言参考》中的[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
 
-> [!NOTE]
-> 对于 C++ 程序，应使用 C++ 异常处理，而不是结构化异常处理。 有关详细信息，请参阅《C++ 语言参考》  中的[异常处理](../cpp/exception-handling-in-visual-cpp.md)。
+应用程序中的每个例程可以有自己的异常处理程序。 `__except` 表达式在 `__try` 主体的范围内执行。 它可以访问在该处声明的任何局部变量。
 
-应用程序中的每个例程可以有自己的异常处理程序。 `__except` 表达式在 `__try` 主体的范围内执行。 这意味着它可以访问在该处声明的任何局部变量。
+`__leave` 关键字在 `try-except` 语句块中有效。 `__leave` 的效果是跳转到 `try-except` 块的末尾。 执行将在异常处理程序结束后恢复。 尽管可以使用 `goto` 语句来完成相同的结果，但 `goto` 语句会导致堆栈展开。 由于 `__leave` 语句不涉及堆栈展开，因此更有效。
 
-`__leave** keyword is valid within a **try-except** statement block. The effect of **`__leave 的效果是跳转到 try-except 块的末尾。 执行将在异常处理程序结束后恢复。 尽管可以使用 `goto` 语句来完成相同的结果，但 `goto` 语句会导致堆栈展开。 `__leave 语句的效率更高，因为它不涉及堆栈展开。
-
-使用 `longjmp` 运行时函数退出 **try-except** 语句被视为异常终止。 跳转到 `__try` 语句是非法的，但跳出该语句是合法的。 如果有进程在执行 **try-except** 语句的过程中终止，则不会调用异常处理程序。
+使用 `longjmp` 运行时函数退出 `try-except` 语句被视为异常终止。 跳转到 `__try` 语句是非法的，但跳出该语句是合法的。 如果有进程在执行 `try-except` 语句的过程中终止，则不会调用异常处理程序。
 
 ## <a name="example"></a>示例
 
-下面是异常处理程序和终止处理程序的示例。 有关终止处理程序的详细信息，请参阅 [try-finally 语句](../c-language/try-finally-statement-c.md)。
+下面是异常处理程序和终止处理程序的示例。 有关终止处理程序的详细信息，请参阅 [`try-finally` 语句 (C)](../c-language/try-finally-statement-c.md)。
 
-```
+```C
 .
 .
 .
 puts("hello");
-__try{
+__try {
    puts("in try");
-   __try{
+   __try {
       puts("in try");
       RAISE_AN_EXCEPTION();
-   }__finally{
+   } __finally {
       puts("in finally");
    }
-}__except( puts("in filter"), EXCEPTION_EXECUTE_HANDLER ){
+} __except( puts("in filter"), EXCEPTION_EXECUTE_HANDLER ) {
    puts("in except");
 }
 puts("world");
@@ -84,10 +81,10 @@ puts("world");
 
 这是上面的示例的输出，右侧还添加了注释：
 
-```
+```Output
 hello
-in try              /* fall into try                     */
-in try              /* fall into nested try                */
+in try              /* fall into try                        */
+in try              /* fall into nested try                 */
 in filter           /* execute filter; returns 1 so accept  */
 in finally          /* unwind nested finally                */
 in except           /* transfer control to selected handler */
@@ -96,6 +93,6 @@ world               /* flow out of handler                  */
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[try-except 语句](../cpp/try-except-statement.md)
+[`try-except` 语句 (C++)](../cpp/try-except-statement.md)
