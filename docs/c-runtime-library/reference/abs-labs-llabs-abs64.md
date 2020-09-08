@@ -1,5 +1,6 @@
 ---
 title: abs、labs、llabs、_abs64
+description: Abs、labs、llabs 和 _abs64 的 API 参考;它计算值的绝对值。
 ms.date: 04/05/2018
 api_name:
 - abs
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 96363f8d2139a5c75ee25a2c43b4c7ef55094f13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4527950e4f5577b9285d12309742accb64b9a24a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221986"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556744"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
@@ -69,7 +70,7 @@ float abs( float n );   // C++ only
 
 ### <a name="parameters"></a>参数
 
-*n*<br/>
+*北*\
 数值。
 
 ## <a name="return-value"></a>返回值
@@ -78,9 +79,9 @@ float abs( float n );   // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以**abs**调用采用并返回、、、 **`long`** **`long long`** **`float`** **`double`** 和 **`long double`** 值的 abs 的重载。 这些重载在 \<cmath> 标头中定义。 在 C 程序中， **abs**始终采用并返回 **`int`** 。
+由于 c + + 允许重载，因此你可以**abs**调用采用并返回、、、 **`long`** **`long long`** **`float`** **`double`** 和 **`long double`** 值的 abs 的重载。 这些重载在 \<cmath> 标头中定义。 在 C 程序中， **abs** 始终采用并返回 **`int`** 。
 
-**Microsoft 专用**：由于可使用任何整型类型表示的负整数的范围大于可使用该类型表示的正整数的范围，因此，可以为这些不能转换的函数提供参数。 如果参数的绝对值不能由返回类型表示，则**abs**函数返回的参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着不能使用**abs**函数来保证正值。
+**Microsoft 专用**：由于可使用任何整型类型表示的负整数的范围大于可使用该类型表示的正整数的范围，因此，可以为这些不能转换的函数提供参数。 如果参数的绝对值不能由返回类型表示，则 **abs** 函数返回的参数值保持不变。 具体而言，`abs(INT_MIN)` 返回 `INT_MIN`、`labs(LONG_MIN)` 返回 `LONG_MIN`、`llabs(LLONG_MIN)` 返回 `LLONG_MIN`，`_abs64(_I64_MIN)` 返回 `_I64_MIN`。 这意味着不能使用 **abs** 函数来保证正值。
 
 ## <a name="requirements"></a>要求
 
@@ -89,7 +90,7 @@ float abs( float n );   // C++ only
 |**abs**、 **labs**、 **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要在 c + + 中使用**abs**的重载版本，必须包含 \<cmath> 标头。
+若要在 c + + 中使用 **abs** 的重载版本，必须包含 \<cmath> 标头。
 
 ## <a name="example"></a>示例
 
