@@ -1,6 +1,7 @@
 ---
 title: fmin、fminf、fminl
-ms.date: 04/05/2018
+description: 适用于 fmin、fminf 和 fminl 的 API 参考;它确定了两个值中较小的一个。
+ms.date: 9/1/2020
 api_name:
 - fmin
 - fminf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: d6cd16c298c3f4bedb8064d66efd2d4bbe20c22b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a070835d809c6adcb5b7bfd57b5373886b348ca
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216981"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556705"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -71,37 +72,42 @@ long double fminl(
    long double x,
    long double y
 );
+
+#define fmin(x) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 要比较的第一个值。
 
-*误差*<br/>
+*误差*\
 要比较的第二个值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回*x*或*y*中的较小者。
+如果成功，则返回 *x* 或 *y*中的较小者。
 
 |输入|结果|
 |-----------|------------|
-|*x*为 NaN|*误差*|
-|*y*为 NaN|*x*|
-|*x*和*y*为 NaN|NaN|
+|*x* 为 NaN|*y*|
+|*y* 为 NaN|*x*|
+|*x* 和 *y* 为 NaN|NaN|
 
-函数不会导致调用[_matherr](matherr.md) ，导致任何浮点异常或更改**errno**的值。
+函数不会导致调用 [_matherr](matherr.md) ，导致任何浮点异常或更改 **errno**的值。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回和类型的**fmin**的重载 **`float`** **`long double`** 。 在 C 程序中， **fmin**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的 **fmin** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **fmin** 始终采用并返回 **`double`** 。
+
+如果使用 \<tgmath.h> `fmin()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**fmin**、 **fminf**、 **fminl**|Ansi-c\<math.h><br />C + +： \<math.h> 或\<cmath>|
+|**fmin**、 **fminf**、 **fminl**|Ansi-c \<math.h><br />C + +： \<math.h> 或 \<cmath>|
+|**fmin** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

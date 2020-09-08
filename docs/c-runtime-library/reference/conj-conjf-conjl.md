@@ -1,6 +1,7 @@
 ---
 title: conj、conjf、conjl
-ms.date: 11/04/2016
+description: 适用于 conj、conjf 和 conjl 的 API 参考;它检索复数的复数共轭。
+ms.date: 9/2/2020
 api_name:
 - conj
 - conjf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b779eb2d92893b204a73b2fa4f5c89928933ffeb
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939027"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556348"
 ---
 # <a name="conj-conjf-conjl"></a>conj、conjf、conjl
 
@@ -62,33 +63,37 @@ _Fcomplex conjf(
 _Lcomplex conjl(
    _Lcomplex z
 );
+#define conj(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*z*<br/>
+*z*\
 一个复数。
 
 ## <a name="return-value"></a>返回值
 
-*Z*的复杂共轭。  结果与*z*具有相同的实部和虚部，但符号相反。
+*Z*的复杂共轭。  结果与 *z*具有相同的实部和虚部，但符号相反。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**conj**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **conj**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，因此可以调用 **conj** 的重载，该重载采用并返回 **_Fcomplex** 和 **_Lcomplex** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **conj** 始终采用并返回 **_Dcomplex** 值。
+
+如果使用 \<tgmath.h> `conj()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**conj**、 **conjf**、 **conjl**|\<complex.h>|\<ccomplex>|
+|**conj** 宏 | \<tgmath.h> ||
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
-[norm、normf、norml](norm-normf-norml1.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
+[norm、normf、norml1](norm-normf-norml1.md)<br/>
 [creal、crealf、creall](creal-crealf-creall.md)<br/>
 [cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
 [cimag、cimagf、cimagl](cimag-cimagf-cimagl.md)<br/>

@@ -1,14 +1,15 @@
 ---
 title: CRT 中的全局状态
+description: 介绍如何在通用 C 运行时中处理共享全局状态。
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CRT global state
-ms.openlocfilehash: a794f201184c10c11611138d30d14b36b00405a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1c787147ea3df36ce120837ef5b2c68b1bf58b1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845180"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554664"
 ---
 # <a name="global-state-in-the-crt"></a>CRT 中的全局状态
 

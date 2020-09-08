@@ -1,5 +1,6 @@
 ---
 title: _itoa，_itow 函数
+description: _Itoa 和 _itow 的 API 参考;这会将整数转换为字符串。
 ms.date: 4/2/2020
 api_name:
 - itoa
@@ -113,16 +114,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 7fd776c860e8f3ba071d7fad10c99dfb7b3bf2d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c8d64dcc1efdb9371feb98d8674a7a2c41c7ab3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843490"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555458"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
-将整数转换为字符串。 提供这些函数的更多安全版本;请参阅 [_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
+将整数转换为字符串。 提供这些函数的更多安全版本，请参阅 [_itoa_s、_itow_s 函数](itoa-s-itow-s.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -195,7 +196,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 其中每个函数均返回一个指向 *缓冲区*的指针。 无错误返回。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **_Itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**函数将给定*值*参数的数字转换为以 null 结尾的字符串，并将 (、 **_Itoa**和 **_ltoa 的结果**_ultoa 最多33个字符**65，在***缓冲区***中存储 _i64toa 和** **_ui64toa**) 的结果。 如果 *基数* 等于10并且 *值* 为负，则存储字符串的第一个字符为减号 (**-**) 。 **_Itow**、 **_ltow**、 **_ultow**、 **_i64tow**和 **_ui64tow**函数分别是 **_itoa**、 **_ltoa**、 **_ultoa**、 **_i64toa**和 **_ui64toa**的宽字符版本。
 

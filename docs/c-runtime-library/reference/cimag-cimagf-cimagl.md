@@ -1,6 +1,7 @@
 ---
 title: cimag、cimagf、cimagl
-ms.date: 11/04/2016
+description: 适用于 cimag、cimagf 和 cimagl 的 API 参考;检索复数的虚部。
+ms.date: 9/2/2020
 api_name:
 - cimag
 - cimagf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-ms.openlocfilehash: af7d15ee1b5dfd863025565bf8827199f7492841
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 41631a161a47e247b12a39e312a3f40084c8f22f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232542"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555835"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag、cimagf、cimagl
 
@@ -50,16 +51,15 @@ ms.locfileid: "87232542"
 double cimag( _Dcomplex z );
 float cimagf( _Fcomplex z );
 long double cimagl( _Lcomplex z );
-```
+#define cimag(X) // Requires C11 or higher
 
-```cpp
-float cimag( _Fcomplex z );  // C++
-long double cimag( _Lcomplex z );  // C++
+float cimag( _Fcomplex z );  // C++ only
+long double cimag( _Lcomplex z );  // C++ only
 ```
 
 ### <a name="parameters"></a>参数
 
-*z*<br/>
+*z*\
 一个复数。
 
 ## <a name="return-value"></a>返回值
@@ -68,13 +68,16 @@ long double cimag( _Lcomplex z );  // C++
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**cimag**重载，以及返回值 **`float`** 或 **`long double`** 值。 在 C 程序中， **cimag**始终采用 **_Dcomplex**值并返回 **`double`** 值。
+由于 c + + 允许重载，因此你可以调用采用 **_Fcomplex**或 **_Lcomplex**值的**cimag**重载，以及返回值 **`float`** 或 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **cimag** 始终采用 **_Dcomplex** 值并返回 **`double`** 值。
+
+如果使用 \<tgmath.h> `cimag()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**cimag**、 **cimagf**、 **cimagl**|\<complex.h>|\<ccomplex>|
+|**cimag** 宏 | \<tgmath.h> ||
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

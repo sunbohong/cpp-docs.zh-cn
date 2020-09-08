@@ -1,6 +1,7 @@
 ---
 title: sinh、sinhf、sinhl
-ms.date: 4/2/2020
+description: 用于计算浮点值的双曲正弦值的 API 参考。
+ms.date: 08/31/2020
 api_name:
 - sinh
 - sinhl
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a8c9c4195eab66a46230e7a3baf6194e17c4519
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229410"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556172"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
@@ -54,21 +55,20 @@ ms.locfileid: "87229410"
 double sinh(double x);
 float sinhf(float x);
 long double sinhl(long double x);
-```
+#define sinh(x) // Requires C11 or higher
 
-```cpp
 float sinh(float x);  // C++ only
 long double sinh(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 角度（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**Sinh**函数返回*x*的双曲正弦值。 默认情况下，如果结果太大， **sinh**会将**Errno**设置为**ERANGE**并返回±**HUGE_VAL**。
+**Sinh**函数返回*x*的双曲正弦值。 默认情况下，如果结果太大， **sinh** 会将 **Errno** 设置为 **ERANGE** 并返回±**HUGE_VAL**。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -79,15 +79,18 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用**sinh**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **sinh**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此可以调用 **sinh** 的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **sinh** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `sinh()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
 |**sinh**、 **sinhf**、 **sinhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sinh ( # B1 ** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,5 +1,6 @@
 ---
 title: _chgsign、_chgsignf、_chgsignl
+description: _Chgsign、_chgsignf 和 _chgsignl 的 API 参考;这会反转浮点自变量的符号。
 ms.date: 04/05/2018
 api_name:
 - _chgsignl
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-ms.openlocfilehash: 17c8cc05efbcf2ab338d6032eded4ba13ec6197a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7dc934f3c2d22cc36abe5f31f7d64e0674ccdd3a
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943126"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555196"
 ---
 # <a name="_chgsign-_chgsignf-_chgsignl"></a>_chgsign、_chgsignf、_chgsignl
 
@@ -71,11 +72,11 @@ long double _chgsignl(
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_chgsign**|\<float.h>|
-|**_chgsignf**、 **_chgsignl**|\<math.h>|
+|**_chgsignf**， **_chgsignl**|\<math.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>

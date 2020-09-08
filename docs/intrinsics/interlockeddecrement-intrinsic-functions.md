@@ -1,6 +1,7 @@
 ---
 title: _InterlockedDecrement 内部函数
-ms.date: 09/02/2019
+description: 用于联锁减量的 Microsoft C/c + + 编译器内部函数。
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,78 +45,76 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b3ca624ba54f70750ecc303fb44f4fa242b4edc2
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857913"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556329"
 ---
-# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 内部函数
+# <a name="_interlockeddecrement-intrinsic-functions"></a>`_InterlockedDecrement` 内部函数
 
-**Microsoft 专用**
-
-为 Win32 Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)函数提供编译器内部函数支持。
+为 Win32 Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement) 函数提供编译器内部函数支持。 `_InterlockedDecrement`内部函数是**Microsoft 特定**的。
 
 ## <a name="syntax"></a>语法
 
 ```C
 long _InterlockedDecrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedDecrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedDecrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedDecrement16_nf(
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedDecrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedDecrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
 ### <a name="parameters"></a>参数
 
 *lpAddend*\
-[in，out]指向要递减的变量的指针。
+[in，out]指向要递减的变量的可变指针。
 
 ## <a name="return-value"></a>返回值
 
 返回值是生成的递减值。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
-|`_InterlockedDecrement`，`_InterlockedDecrement16`|x86、ARM、x64、ARM64|
+|`_InterlockedDecrement`, `_InterlockedDecrement16`|x86、ARM、x64、ARM64|
 |`_InterlockedDecrement64`|ARM、x64、ARM64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM，ARM64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
@@ -123,9 +122,9 @@ __int64 _InterlockedDecrement64_nf(
 
 当 `_InterlockedDecrement` 函数对 32 位整数值操作时，`_InterlockedDecrement16` 对 16 位整数值操作且 `_InterlockedDecrement64` 可以对 64 位整数值操作。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 具有 `_nf` （"无围墙"）后缀的内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 `_nf` ( "无防护" ) 后缀的内部函数不能充当内存屏障。
 
-由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息，请参阅[align](../cpp/align-cpp.md)。
+由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息，请参阅 [align](../cpp/align-cpp.md)。
 
 这些例程只能用作内部函数。
 
@@ -197,10 +196,8 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
-**结束 Microsoft 专用**
-
 ## <a name="see-also"></a>另请参阅
 
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)\
-[关键字](../cpp/keywords-cpp.md)\
+[字](../cpp/keywords-cpp.md)\
 [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

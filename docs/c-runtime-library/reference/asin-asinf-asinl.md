@@ -1,6 +1,7 @@
 ---
 title: asin、asinf、asinl
-ms.date: 4/2/2020
+description: 适用于 asin、asinf 和 asinl 的 API 参考;计算浮点值的反正弦值。
+ms.date: 08/31/2020
 api_name:
 - asinf
 - asinl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 98f7babfbfcbfcdbf36b79b70aac33f002e3bc90
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7167debcfb605ab05720d9441943439ea9982324
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87189436"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556653"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -51,23 +52,22 @@ ms.locfileid: "87189436"
 double asin( double x );
 float asinf ( float x );
 long double asinl( long double x );
-```
+#define asin(X) // Requires C11 or higher
 
-```cpp
 float asin( float x );  // C++ only
 long double asin( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 要计算反正弦值的值。
 
 ## <a name="return-value"></a>返回值
 
-**Asin**函数返回范围-π/2 到π/2 弧度的*x*的反正弦值（反正弦函数）。
+**Asin**函数返回反正弦函数的反正弦函数) -π/2 到π/2 弧度之间的*x*的 (。
 
-默认情况下，如果*x*小于-1 或大于1，则**asin**将返回无限值。
+默认情况下，如果 *x* 小于-1 或大于1，则 **asin** 将返回无限值。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -77,15 +77,18 @@ long double asin( long double x );  // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用**asin**的重载 **`float`** 和 **`long double`** 值。 在 C 程序中， **asin**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此可以调用 **asin** 的重载 **`float`** 和 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **asin** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `asin()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
 |**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**asin ( # B1 ** 宏 | \<tgmath.h> ||
 
 ## <a name="example"></a>示例
 

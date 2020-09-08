@@ -1,6 +1,7 @@
 ---
 title: fma、fmaf、fmal
-ms.date: 4/2/2020
+description: Fma、fmaf 和 fmal 的 API 参考;这会将两个值相乘，添加第三个值，然后对结果进行舍入，而不会因中间舍入而丢失任何精度。
+ms.date: 9/1/2020
 api_name:
 - fma
 - fmaf
@@ -37,16 +38,16 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9ae92c28f24b6281d73450c7cabaad775a84d42
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216994"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556692"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
-两个值相乘，添加第三个值，然后将结果舍入，由于中间舍入不会丢失任何精度。
+将两个值相乘，添加第三个值，然后对结果进行舍入，而不会因中间舍入而丢失任何精度。
 
 ## <a name="syntax"></a>语法
 
@@ -80,17 +81,19 @@ long double fmal(
    long double  y,
    long double z
 );
+
+#define fma(X, Y, Z) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 要相乘的第一个值。
 
-*误差*<br/>
+*误差*\
 要相乘的第二个值。
 
-*z*<br/>
+*z*\
 要相加的值。
 
 ## <a name="return-value"></a>返回值
@@ -102,9 +105,9 @@ long double fmal(
 |问题|返回|
 |-----------|------------|
 |*x* = 无限大、 *y* = 0 或<br /><br /> *x* = 0、 *y* = 无限大|NaN|
-|*x*或*y* = 精确的±无限大， *z* = 无穷大，正负号|NaN|
-|*x*或*y* = NaN|NaN|
-|not （*x* = 0， *y*= 不定）， *z* = NaN<br /><br /> not （*x*= 不定、 *y*= 0）和*z* = NaN|NaN|
+|*x* 或 *y* = 精确的±无限大， *z* = 无穷大，正负号|NaN|
+|*x* 或 *y* = NaN|NaN|
+|not (*x* = 0， *y*= 不定) ， *z* = NaN<br /><br /> not (*x*= 不定， *y*= 0) ， *z* = NaN|NaN|
 |溢出范围错误|± HUGE_VAL、± HUGE_VALF 或± HUGE_VALL|
 |下溢范围错误|舍入后的正确值。|
 
@@ -112,17 +115,20 @@ long double fmal(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回和类型的**fma**的重载 **`float`** **`long double`** 。 在 C 程序中， **fma**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的 **fma** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则 **fma** 始终采用并返回 **`double`** 。
+
+如果使用 \<tgmath.h> `fma()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 此函数计算值就好像它采取了无限精度，然后将最终结果舍入。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**fma**、 **fmaf**、 **fmal**|\<math.h>|\<cmath>|
+|**fma** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

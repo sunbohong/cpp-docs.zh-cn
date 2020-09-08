@@ -1,6 +1,7 @@
 ---
 title: copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
-ms.date: 04/05/2018
+description: 'API ref，用于返回一个值，其大小为一个参数，另一个使用 copysign 的符号（使用） ( # A1'
+ms.date: 9/1/2020
 api_name:
 - copysignf
 - copysignl
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-ms.openlocfilehash: 4dea95240dcbd3dbbf221ff7af80a9e3ee554e23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f9ffe56e82f6a82da15fde3f8efea60fc1c0f9f
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221934"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554859"
 ---
 # <a name="copysign-copysignf-copysignl-_copysign-_copysignf-_copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 
@@ -81,14 +82,15 @@ long double _copysignl(
    long double x,
    long double y
 );
+#define copysign(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 作为结果的数值返回的浮点值。
 
-*误差*<br/>
+*误差*\
 作为结果的符号返回的浮点值。
 
 [浮点支持例程](../../c-runtime-library/floating-point-support.md)
@@ -99,7 +101,9 @@ long double _copysignl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用**copysign**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **copysign**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此可以调用 **copysign** 的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **copysign** 始终采用并返回 **`double`** 。
+
+如果使用 \<tgmath.h> `copysign()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 ## <a name="requirements"></a>要求
 
@@ -107,6 +111,7 @@ long double _copysignl(
 |-------------|---------------------|
 |**_copysign**|\<float.h>|
 |**copysign**、 **copysignf**、 **copysignl**、 **_copysignf**、 **_copysignl**|\<math.h>|
+|**copysign** 宏 | \<tgmath.h> |
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

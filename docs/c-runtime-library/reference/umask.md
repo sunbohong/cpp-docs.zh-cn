@@ -1,5 +1,6 @@
 ---
 title: _umask
+description: _Umask 的 API 参考;这会设置默认的文件权限掩码。
 ms.date: 4/2/2020
 api_name:
 - _umask
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 84735374a936e47691df82247f0202ecfcd86d9d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3735ecd7ba194009945d3717982d7828ecee3c1e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913847"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554924"
 ---
 # <a name="_umask"></a>_umask
 
-设置默认的文件权限掩码。 此函数有一个更安全的版本；请参阅 [_umask_s](umask-s.md)。
+设置默认的文件权限掩码。 有关此函数的更安全版本，请参阅 [_umask_s](umask-s.md) 。
 
 ## <a name="syntax"></a>语法
 
@@ -55,13 +56,13 @@ int _umask( int pmode );
 
 ## <a name="return-value"></a>返回值
 
-**_umask**返回*pmode*以前的值。 无错误返回。
+**_umask** 返回 *pmode*以前的值。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
 **_Umask**函数将当前进程的文件权限掩码设置为*pmode*指定的模式。 文件权限掩码修改 **_creat**、 **_open**或 **_sopen**创建的新文件的权限设置。 如果掩码中的一位是 1，则将文件的请求权限值中相应的一位设置为 0 (不允许)。 如果掩码中的一位是 0，则相应的一位保留不变。 直至首次关闭新文件时才会设置新文件的权限设置。
 
-整数表达式*pmode*包含在 SYS\STAT. 中定义的以下一个或两个清单常量。高
+整数表达式 *pmode* 包含在 SYS\STAT. 中定义的以下一个或两个清单常量。高
 
 |*pmode*| |
 |-|-|
@@ -69,17 +70,17 @@ int _umask( int pmode );
 | **_S_IREAD** | 允许读取。 |
 | **_S_IREAD** &#124; **_S_IWRITE** | 允许读取和写入。 |
 
-当提供两个常量时，它们将与按位 "或" 运算符联接（ **&#124;** ）。 如果 _S_IREAD *pmode*参数， **_S_IREAD**则不允许读取（文件是只写的）。 如果 _S_IWRITE *pmode*参数， **_S_IWRITE**则不允许写入（文件是只读的）。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置 **_umask**不会影响文件的模式。
+当同时提供两个常量时，它们将与按位 "或" 运算符联接 ( **&#124;** ) 。 如果 _S_IREAD *pmode*参数， **_S_IREAD**则不允许读取 (文件是只写) 。 如果 _S_IWRITE *pmode*参数， **_S_IWRITE**则不允许写入 (文件为只读) 。 例如，如果掩码中设置了写入位，则任何新文件都将为只读。 请注意在 MS-DOS 和 Windows 操作系统下，所有文件均可读；不可能提供只写权限。 因此，将读取位设置 **_umask** 不会影响文件的模式。
 
-如果*pmode*不是清单常量之一的组合或包含一组备用常量，则该函数将直接忽略这些常量。
+如果 *pmode* 不是清单常量之一的组合或包含一组备用常量，则该函数将直接忽略这些常量。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_umask**|\<io.h>、\<sys/stat.h>、\<sys/types.h>|
+|**_umask**|\<io.h>, \<sys/stat.h>, \<sys/types.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

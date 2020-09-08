@@ -1,6 +1,7 @@
 ---
 title: sin、sinf、sinl
-ms.date: 6/5/2020
+description: Sin、sinf 和 sinl 的 API 参考;计算浮点值的正弦值。
+ms.date: 08/31/2020
 api_name:
 - sinl
 - sinf
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7d1921dd4537c9dcc955c264a36992d86defada8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216721"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556186"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -54,6 +55,7 @@ ms.locfileid: "87216721"
 double sin(double x);
 float sinf(float x);
 long double sinl(long double x);
+#define sin(x) // Requires C11 or higher
 ```
 
 ```cpp
@@ -63,31 +65,34 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 角度（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**Sin**函数返回*x*的正弦值。 如果*x*大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
+**Sin**函数返回*x*的正弦值。 如果 *x* 大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± QNAN，IND|无|_DOMAIN|
-|±∞（sin、sinf、sinl）|INVALID|_DOMAIN|
+|±∞ (sin、sinf、sinl) |INVALID|_DOMAIN|
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用采用和返回或值的**sin**重载 **`float`** **`long double`** 。 在 C 程序中， **sin**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此可以调用采用和返回或值的 **sin** 重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则 **sin** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `sin()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-|-|-|
 |**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**sin ( # B1 ** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

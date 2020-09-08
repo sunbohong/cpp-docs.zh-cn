@@ -1,5 +1,6 @@
 ---
 title: _getch_nolock、_getwch_nolock
+description: _Getch_nolock 和 _getwch_nolock 的 API 参考;这种情况下，无需回显即可从控制台获取字符，也不会锁定线程。
 ms.date: 4/2/2020
 api_name:
 - _getwch_nolock
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-ms.openlocfilehash: 81a3b49287902ac0aaa4d635553cbbaac81ac356
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 36a50f215a9250b23d4dc25db2e1f1c764a085ce
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920349"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555028"
 ---
 # <a name="_getch_nolock-_getwch_nolock"></a>_getch_nolock、_getwch_nolock
 
@@ -67,9 +68,9 @@ wint_t _getwch_nolock( void );
 
 ## <a name="remarks"></a>备注
 
-**_getch_nolock**和 **_getwch_nolock**与 **_getch**和 **_getchw**相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_getch_nolock** 和 **_getwch_nolock** 与 **_getch** 和 **_getchw** 相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -79,7 +80,7 @@ wint_t _getwch_nolock( void );
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getch_nolock**|\<conio.h>|
 |**_getwch_nolock**|\<conio.h> 或 \<wchar.h>|

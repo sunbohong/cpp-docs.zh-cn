@@ -1,6 +1,7 @@
 ---
 title: floor、floorf、floorl
-ms.date: 6/5/2020
+description: Floor、floorf 和 floorl 的 API 参考;它计算值的下限。
+ms.date: 9/1/2020
 api_name:
 - floorf
 - floorl
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: dd1b88f51dfd414fc1668199350db1e2c34b9f33
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6af047d3da891270ab6a596dfc3ebef0941a91cf
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218672"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556731"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -64,11 +65,12 @@ float floorf(
 long double floorl(
    long double x
 );
+#define floor(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 浮点值。
 
 ## <a name="return-value"></a>返回值
@@ -79,19 +81,22 @@ long double floorl(
 |-----------|-------------------|-----------------------|
 |± QNAN，IND|无|_DOMAIN|
 
-**楼层**具有使用流式处理 simd 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**楼层** 具有使用流式处理 simd 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此你可以调用采用并返回和值的**楼层**的重载 **`float`** **`long double`** 。 在 C 程序中，**地面**始终采用并返回 **`double`** 。
+C + + 允许重载，因此你可以调用采用并返回和值的 **楼层** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **楼层** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `floor()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
 |**floor**、 **floorf**、 **floorl**|\<math.h>|
+|**楼层** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

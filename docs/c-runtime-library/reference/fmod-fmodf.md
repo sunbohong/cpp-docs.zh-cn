@@ -1,6 +1,7 @@
 ---
 title: fmod、fmodf、fmodl
-ms.date: 4/2/2020
+description: 适用于 fmod、fmodf 和 fmodl 的 API 参考;计算浮点余数的。
+ms.date: 9/1/2020
 api_name:
 - fmod
 - fmodf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 4fa3df46358932b8a62a6b8529baed4a5c9e5c49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216968"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556081"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -68,30 +69,35 @@ long double fmodl(
    long double x,
    long double y
 );
+
+#define fmod(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*、 *y*<br/>
+*x*、 *y*\
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**fmod**返回*x*  /  *y*的浮点余数。 如果*y*的值为0.0，则**fmod**将返回静默的 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf](printf-printf-l-wprintf-wprintf-l.md)。
+**fmod**返回*x*  /  *y*的浮点余数。 如果 *y* 的值为0.0，则 **fmod** 将返回静默的 NaN。 有关 **printf** 系列的 quiet NaN 表示形式的信息，请参阅 [printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
 **Fmod**函数计算*x*y 的浮点余数*f*  /  *y* ，这是*x*  =  *i* \* *y*  +  *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
 
-C + + 允许重载，因此你可以调用**fmod**的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中， **fmod**始终采用两个 **`double`** 参数，并返回 **`double`** 。
+C + + 允许重载，因此你可以调用 **fmod** 的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **fmod** 始终采用两个 **`double`** 参数并返回一个 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `fmod()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头|
 |--------------|---------------------|
 |**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
+|**fmod** 宏 | \<tgmath.h> |
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

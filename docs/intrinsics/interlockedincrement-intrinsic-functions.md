@@ -1,6 +1,7 @@
 ---
 title: _InterlockedIncrement 内部函数
-ms.date: 09/02/2019
+description: 用于联锁增量的 Microsoft C/c + + 编译器内部函数。
+ms.date: 09/03/2020
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,64 +45,62 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2148ae31f3eb03e398372db3bf15fc64e4857dd1
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221982"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556316"
 ---
-# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 内部函数
+# <a name="_interlockedincrement-intrinsic-functions"></a>`_InterlockedIncrement` 内部函数
 
-**Microsoft 专用**
-
-为 Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)函数提供编译器内部支持。
+为 Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement) 函数提供编译器内部支持。 `_InterlockedIncrement`内部函数是**Microsoft 特定**的。
 
 ## <a name="syntax"></a>语法
 
 ```C
 long _InterlockedIncrement(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_acq(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_rel(
-   long * lpAddend
+   long volatile * lpAddend
 );
 long _InterlockedIncrement_nf(
-   long * lpAddend
+   long volatile * lpAddend
 );
 short _InterlockedIncrement16(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_acq(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_rel(
-   short * lpAddend
+   short volatile * lpAddend
 );
 short _InterlockedIncrement16_nf (
-   short * lpAddend
+   short volatile * lpAddend
 );
 __int64 _InterlockedIncrement64(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_acq(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_rel(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 __int64 _InterlockedIncrement64_nf(
-   __int64 * lpAddend
+   __int64 volatile * lpAddend
 );
 ```
 
 ### <a name="parameters"></a>参数
 
 *lpAddend*\
-[in, out]指向要递增的变量的指针。
+[in，out]指向要递增的变量的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -109,11 +108,11 @@ __int64 _InterlockedIncrement64_nf(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`， `_InterlockedIncrement16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedIncrement64`|ARM、x64、ARM64|\<intrin.h>|
-|`_InterlockedIncrement_acq`、`_InterlockedIncrement_rel`、`_InterlockedIncrement_nf`、`_InterlockedIncrement16_acq`、`_InterlockedIncrement16_rel`、`_InterlockedIncrement16_nf`、`_InterlockedIncrement64_acq`、`_InterlockedIncrement64_rel`、`_InterlockedIncrement64_nf`|ARM, ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM，ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>备注
 
@@ -121,9 +120,9 @@ __int64 _InterlockedIncrement64_nf(
 
 当 `_InterlockedIncrement` 函数对 32 位整数值操作时，`_InterlockedIncrement16` 对 16 位整数值操作且 `_InterlockedIncrement64` 可以对 64 位整数值操作。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带`_nf` ("无围墙") 后缀的内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 `_nf` ( "无防护" ) 后缀的内部函数不能充当内存屏障。
 
-由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息, 请参阅[align](../cpp/align-cpp.md)。
+由 `lpAddend` 参数指向的变量必须与 32 位边界对齐；否则，此函数在多处理器 x86 系统和任何非 x86 系统上将失效。 有关详细信息，请参阅 [align](../cpp/align-cpp.md)。
 
 Win32 函数在 `Wdm.h` 或 `Ntddk.h` 中声明。
 
@@ -131,12 +130,10 @@ Win32 函数在 `Wdm.h` 或 `Ntddk.h` 中声明。
 
 ## <a name="example"></a>示例
 
-有关如何使用`_InterlockedIncrement`的示例, 请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+有关如何使用的示例 `_InterlockedIncrement` ，请参阅 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
-**结束 Microsoft 专用**
-
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)\
-[关键字](../cpp/keywords-cpp.md)\
+[字](../cpp/keywords-cpp.md)\
 [与 x86 编译器冲突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,6 +1,7 @@
 ---
 title: ilogb、ilogbf、ilogbl2
-ms.date: 04/05/2018
+description: 适用于 ilogb、ilogbf 和 ilogbl2 的 API 参考;这会检索一个整数，该整数表示指定值的无偏差底数2指数。
+ms.date: 9/1/2020
 api_name:
 - ilogb
 - ilogbf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 6feea7a242a066f669429944226f4ca6022505b6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b27c329cca1edb9d30bb6b9b641f94d174c9c406
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232516"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556367"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -66,16 +67,18 @@ int ilogbf(
 int ilogbl(
    long double x
 );
+
+#define ilogbl(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 指定的值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回*x*的以2为底的指数作为 **`signed int`** 值。
+如果成功，则返回 *x* 的以2为底的指数作为 **`signed int`** 值。
 
 否则，将返回中定义的以下值之一 \<math.h> ：
 
@@ -88,15 +91,18 @@ int ilogbl(
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回和类型的**ilogb**的重载 **`float`** **`long double`** 。 在 C 程序中， **ilogb**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的 **ilogb** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **ilogb** 始终采用并返回 **`double`** 。
 
-调用此函数类似于调用等效的**logb**函数，然后将返回值强制转换为 **`int`** 。
+如果使用 \<tgmath.h> `ilogb()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+调用此函数类似于调用等效的 **logb** 函数，然后将返回值强制转换为 **`int`** 。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
 |**ilogb**、 **ilogbf**、 **ilogbl**|\<math.h>|\<cmath>|
+|**ilogb** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

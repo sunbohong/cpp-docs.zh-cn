@@ -1,6 +1,7 @@
 ---
 title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
-ms.date: 4/2/2020
+description: 用于 hypot、hypotf、hypotl、_hypot、_hypotf 和 _hypotl 的 API 参考;计算斜边的。
+ms.date: 9/1/2020
 api_name:
 - _hypotf
 - hypot
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 199e330dcd78c372a0279cac9f0e96cb47c561e8
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919834"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556445"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -82,32 +83,36 @@ long double _hypotl(
    long double x,
    long double y
 );
+#define hypotf(X, Y) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*、 *y*<br/>
+*x*、 *y*\
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **hypot**将返回斜边的长度;在溢出时， **hypot**返回 INF （无限大）， **errno**变量设置为**ERANGE**。 您可以使用 **_matherr**修改错误处理。
+如果成功， **hypot** 将返回斜边的长度;溢出时， **hypot** 将返回 INF (无限大) 并且 **errno** 变量设置为 **ERANGE**。 您可以使用 **_matherr** 修改错误处理。
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Hypot**函数计算直角三角形的斜边的长度（给定两个边*x*和*y*的长度（即， *x*<sup>2</sup> + *y*<sup>2</sup>的平方根）。
+**Hypot**函数计算直角三角形的斜边的长度（给定两侧*x*和*y*的长度） (换言之， *x*<sup>2</sup>  +  *y*<sup>2</sup>) 的平方根。
 
 提供的带有前导下划线的函数版本便于与早期的标准兼容。 它们的行为与没有前导下划线的版本相同。 我们建议将不带前导下划线的版本用于新代码。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `hypot()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf** **_hypotl**|\<math.h>|
+|**hypot** 宏 | \<tgmath.h> |
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

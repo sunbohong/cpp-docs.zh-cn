@@ -1,6 +1,7 @@
 ---
 title: log、logf、logl、log10、log10f、log10l
-ms.date: 6/5/2020
+description: Log、logf、logl、log10、log10f 和 log10l 的 API 参考;计算对数的。
+ms.date: 9/1/2020
 api_name:
 - log10f
 - logf
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: ddfe0198ab83f72868f383d6c35f040415893ad4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f308281705170308ec83e4a5efd9c7825ba47591
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218593"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556277"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
@@ -62,29 +63,29 @@ ms.locfileid: "87218593"
 ## <a name="syntax"></a>语法
 
 ```C
-double log( double x );
-float logf( float x );
-long double logl( double x );
-double log10( double x );
-float log10f ( float x );
-long double log10l( double x );
-```
+double log(double x);
+float logf(float x);
+long double logl(double x);
+double log10(double x);
+float log10f (float x);
+long double log10l(double x);
+#define log(X) // Requires C11 or higher
+#define log10(X) // Requires C11 or higher
 
-```cpp
-float log( float x );  // C++ only
-long double log( long double x );  // C++ only
-float log10( float x );  // C++ only
-long double log10( long double x );  // C++ only
+float log(float x);  // C++ only
+long double log(long double x);  // C++ only
+float log10(float x);  // C++ only
+long double log10(long double x);  // C++ only
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 要查找的值的对数。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则**日志**函数返回*x*的自然对数（以*e*为底）。 **Log10**函数返回以10为底的对数。 如果*x*为负数，则默认情况下，这些函数返回无限（IND）。 如果*x*为0，则返回无穷（INF）。
+如果成功，**日志**函数将返回*x* (*e*) 的自然对数。 **Log10**函数返回以10为底的对数。 如果 *x* 为负数，则默认情况下，这些函数将返回无限 (IND) 。 如果 *x* 为0，则它们将返回 (INF) 无限大。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -92,19 +93,22 @@ long double log10( long double x );  // C++ only
 |±0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**日志**和**Log10**具有使用流式处理 SIMD 扩展2（SSE2）的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**日志** 和 **Log10** 具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此你可以调用采用并返回或值的**log**和**log10**的重载 **`float`** **`long double`** 。 在 C 程序中， **log**和**log10**始终采用并返回 **`double`** 。
+C + + 允许重载，因此你可以调用采用并返回或值的 **log** 和 **log10** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **log** 和 **log10** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `log()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**log**、 **logf**、 **logl**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
+|**记录** 宏 | \<tgmath.h> |
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

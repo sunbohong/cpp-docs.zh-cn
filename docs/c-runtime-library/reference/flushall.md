@@ -1,5 +1,6 @@
 ---
 title: _flushall
+description: _Flushall 的 API 参考;这将刷新所有流并清除所有缓冲区。
 ms.date: 4/2/2020
 api_name:
 - _flushall
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: 1a53eeedd5dfa0f9c01fa5883a9db33e26e3ea17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c93dddea50c182b86bd4d09ae9f214e87491e830
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911627"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556718"
 ---
 # <a name="_flushall"></a>_flushall
 
@@ -48,19 +49,19 @@ int _flushall( void );
 
 ## <a name="return-value"></a>返回值
 
-**_flushall**返回打开的流（输入和输出）的数量。 无错误返回。
+**_flushall** 返回) 输入和输出 (打开的流的数量。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-默认情况下， **_flushall**函数将与打开的输出流关联的所有缓冲区的内容写入相应的文件中。 与打开的输入流关联的所有缓冲区的当前内容将被清除。 （这些缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。）
+默认情况下， **_flushall** 函数将与打开的输出流关联的所有缓冲区的内容写入相应的文件中。 与打开的输入流关联的所有缓冲区的当前内容将被清除。 （这些缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。）
 
 如果读取后跟对 **_flushall**的调用，则会将输入文件中的新数据读取到缓冲区中。 调用 **_flushall**后，所有流将保持打开状态。
 
-利用运行库的提交到磁盘功能，您可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 如果不重写现有程序，可以通过将程序的对象文件与 Commode.obj 链接来启用此功能。在生成的可执行文件中，调用 **_flushall**将所有缓冲区的内容写入磁盘。 只有 **_flushall**和[fflush](fflush.md)受 commode.obj 的影响。
+利用运行库的提交到磁盘功能，您可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 如果不重写现有程序，可以通过将程序的对象文件与 Commode.obj 链接来启用此功能。在生成的可执行文件中，调用 **_flushall** 将所有缓冲区的内容写入磁盘。 只有 **_flushall** 和 [fflush](fflush.md) 受 commode.obj 的影响。
 
 有关控制提交到磁盘功能的信息，请参阅[流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](fopen-wfopen.md) 和 [_fdopen](fdopen-wfdopen.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

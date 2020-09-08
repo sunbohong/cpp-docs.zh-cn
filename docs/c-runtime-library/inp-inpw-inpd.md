@@ -1,6 +1,6 @@
 ---
 title: sct.inp、_inp、inpw、_inpw、_inpd
-description: 描述 Microsoft C 运行时库（CRT）的已过时和已删除的 sct.inp、_inp、inpw、_inpw 和 _inpd 函数。
+description: 描述 Microsoft C 运行时库 (CRT) 中已过时和已删除的 sct.inp、_inp、inpw、_inpw 和 _inpd 函数。
 ms.date: 12/09/2019
 api_name:
 - inp
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: f7b822c4b694969407e32ba26026465fb39bd8d6
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: aafcd633b2ee04c9ced1520d4ecd1520475d0fea
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825824"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89556471"
 ---
 # <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw、_inpd
 
-输入、端口、`inp`字节（、 `_inp`）、字（`inpw`、 `_inpw`）或双字（`_inpd`）。
+输入、端口、字节 (`inp` 、 `_inp`) 、单词 (`inpw` 、 `_inpw`) 或双字 (`_inpd`) 。
 
 > [!IMPORTANT]
 > 这些函数已过时。 从 Visual Studio 2015 开始，它们在 CRT 中不可用。
@@ -80,11 +80,11 @@ I/O 端口号。
 
 由于这些函数可直接从 I/O 端口读取数据，因此无法用于用户代码。
 
-`inp`和`inpw`名称是`_inp`和`_inpw`函数的旧的、不推荐使用的名称。 有关详细信息，请参阅[POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+`inp`和 `inpw` 名称是和函数的旧的、不推荐使用的名称 `_inp` `_inpw` 。 有关详细信息，请参阅 [POSIX 函数名称](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`_inp`|\<conio.h>|
 |`_inpw`|\<conio.h>|

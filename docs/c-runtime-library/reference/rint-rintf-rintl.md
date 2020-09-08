@@ -1,6 +1,7 @@
 ---
 title: rint, rintf, rintl
-ms.date: 4/2/2020
+description: 适用于 rint、rintf 和 rintl 的 API 参考;这会将浮点值舍入到最接近的整数（采用浮点格式）。
+ms.date: 9/1/2020
 api_name:
 - rintf
 - rintl
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ed1fa279694d3df75db5963e5a571d58299e415
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216760"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555340"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -51,38 +52,40 @@ ms.locfileid: "87216760"
 double rint( double x );
 float rintf( float x );
 long double rintl( long double x );
-```
+#define rint(X) // Requires C11 or higher
 
-```cpp
 float rint( float x );  // C++ only
 long double rint( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 要舍入的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Rint**函数将返回表示最接近*x*的整数的浮点值。 根据浮点舍入模式的当前设置对中间值进行舍入，这与**nearbyint**函数相同。 与**nearbyint**函数不同，如果结果不同于参数中的值， **rint**函数可能会引发**FE_INEXACT**浮点异常。 无错误返回。
+**Rint**函数将返回表示最接近*x*的整数的浮点值。 根据浮点舍入模式的当前设置对中间值进行舍入，这与 **nearbyint** 函数相同。 与 **nearbyint** 函数不同，如果结果不同于参数中的值， **rint** 函数可能会引发 **FE_INEXACT** 浮点异常。 无错误返回。
 
-|输入|SEH 异常|**_matherr**异常|
+|输入|SEH 异常|**_matherr** 异常|
 |-----------|-------------------|--------------------------|
 |±∞、QNAN、IND|无|无|
 |非规格化数|EXCEPTION_FLT_UNDERFLOW|无|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用**rint**的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中， **rint**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用 **rint** 的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **rint** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `rint()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
+|**rint** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

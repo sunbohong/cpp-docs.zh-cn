@@ -1,5 +1,6 @@
 ---
 title: ctanh、ctanhf、ctanhl
+description: 适用于 ctanh、ctanhf、ctanhl 的 API 参考它计算复数的复数双曲正切值。
 ms.date: 11/04/2016
 api_name:
 - ctanh
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 959d48853e3edac707a7daea615270b20dad37e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941952"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555861"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -66,33 +67,33 @@ _Lcomplex ctanhl(
 
 ### <a name="parameters"></a>参数
 
-*z*<br/>
+*z*\
 表示角度的复数（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
 *Z*的复杂双曲正切值。
 
-|输入|SEH 异常|**_matherr**异常|
+|输入|SEH 异常|**_matherr** 异常|
 |-----------|-------------------|--------------------------|
 |±∞、QNAN、IND|无|_DOMAIN|
-|±∞（tan，tanf）|INVALID|_DOMAIN|
+|±∞ (tan，tanf) |INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**ctanh**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **ctanh**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，因此可以调用 **ctanh** 的重载，该重载采用并返回 **_Fcomplex** 和 **_Lcomplex** 值。 在 C 程序中， **ctanh** 始终采用并返回 **_Dcomplex** 值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**ctanh**、 **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
+|**ctanh**、               **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
 
-有关兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>
 [csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>

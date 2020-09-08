@@ -1,5 +1,6 @@
 ---
 title: CRT 库功能
+description: 此各种 .lib 文件包含 Microsoft C 运行时库及其关联的编译器选项和预处理器指令。
 ms.date: 08/20/2018
 helpviewer_keywords:
 - MSVCR71.dll
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: a350e2c45d9ccf83fb09a76f43b63a6b17273cff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 20261b542f64f565421cc34dfa0bfbe01e8fa53d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438551"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555561"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -50,8 +51,8 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 |-------------|--------------------|---------------------|------------|-----------------------------|
 |libvcruntime.lib|无|静态链接到你的代码。|**/MT**|_MT|
 |libvcruntimed.lib|无|用于静态链接的调试版本。 不可再发行。|**/MTd**|_MT, _DEBUG|
-|vcruntime.lib|vcruntime\<version>.dll|vcruntime 的 DLL 导入库。|**/MD**|_MT, _DLL|
-|vcruntimed.lib|vcruntime\<version>d.dll|调试 vcruntime 的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
+|vcruntime.lib|vcruntime \<version>|vcruntime 的 DLL 导入库。|**/MD**|_MT, _DLL|
+|vcruntimed.lib|vcruntime \<version>d.dll|调试 vcruntime 的 DLL 导入库。 不可再发行。|**/MDd**|_DEBUG, _MT, _DLL|
 
 > [!NOTE]
 > 发生 UCRT 重构时，并发运行时函数会移到已添加到 C++ 可再发行包中的 concrt140.dll。 此 DLL 是 C++ 并行容器和算法（如 `concurrency::parallel_for`）所必需的。 此外，C++ 标准库需要 Windows XP 版的此 DLL 来支持同步基元，因为 Windows XP 不具有条件变量。
@@ -77,22 +78,22 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 由于通过链接到静态 CRT 构建的 DLL 将具有其自己的 CRT 状态，因此不建议以静态方式链接到 DLL 中的 CRT，除非特别需要和需了解这一后果。 例如，如果在加载 DLL（链接到其自己的静态 CRT）的可执行文件中调用 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) ，则转换器将不会捕获由 DLL 中的代码生成的任何硬件异常，但会捕获由主可执行文件中的代码生成的硬件异常。
 
-如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（ **/MD** 或 **/MDd**）。 纯托管的 CRT 库在 Visual Studio 2015 中已弃用并在 Visual Studio 2017 中不受支持。
+如果使用 **/clr** 编译器开关，则将通过静态库 msvcmrt.lib 链接代码。 静态库将提供托管的代码和本机 CRT 之间的代理。 你无法使用静态链接的 CRT（ **/MT** 或 **/MTd** 选项）和 **/clr**。 请改用动态链接的库（**/MD** 或 **/MDd**）。 纯托管的 CRT 库在 Visual Studio 2015 中已弃用并在 Visual Studio 2017 中不受支持。
 
 有关将 CRT 与 **/clr** 配合使用的详细信息，请参阅[混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)。
 
 若要生成你的应用程序的调试版本，则必须定义 [_DEBUG](../c-runtime-library/debug.md) 标志，并且该应用程序必须与其中一个调试版本的库链接。 有关使用调试版本的库文件的详细信息，请参阅 [CRT 调试技术](/visualstudio/debugger/crt-debugging-techniques)。
 
-此版本的 CRT 不完全符合 C99 标准。 具体而言，不支持 \<tgmath.h> 标头和 CX_LIMITED_RANGE/FP_CONTRACT pragma 宏。 某些元素（如标准 IO 函数中参数说明符的含义）默认采用旧的解释。 可以使用 /Zc 编译器一致性选项并指定链接器选项来控制库一致性的某些方面。
+此版本的 CRT 不完全符合 C99 标准。 具体而言， \<tgmath.h> 不支持标头和 CX_LIMITED_RANGE/FP_CONTRACT 杂注宏。 某些元素（如标准 IO 函数中参数说明符的含义）默认采用旧的解释。 您可以使用/Zc 编译器一致性选项并指定链接器选项来控制库一致性的某些方面。
 
 ## <a name="c-standard-library"></a>C++ 标准库
 
 |C++ 标准库|特征|选项|预处理器指令|
 |----------------------------|---------------------|------------|-----------------------------|
 |libcpmt.lib|多线程, 静态链接|**/MT**|_MT|
-|msvcprt.lib|多线程动态链接（MSVCPversion.dll 的导入库）|**/MD**|_MT, _DLL|
+|msvcprt.lib|多线程动态链接（MSVCPversion.dll 的导入库）**|**/MD**|_MT, _DLL|
 |libcpmtd.lib|多线程, 静态链接|**/MTd**|_DEBUG, _MT|
-|msvcprtd.lib|多线程动态链接（MSVCPversionD.DLL 的导入库）|**/MDd**|_DEBUG, _MT, _DLL|
+|msvcprtd.lib|多线程动态链接（MSVCPversionD.DLL 的导入库）**|**/MDd**|_DEBUG, _MT, _DLL|
 
 当构建项目的发行版时，默认情况下，将链接其中一个基本 C 运行时库（libcmt.lib、msvcmrt.lib、msvcrt.lib），具体取决于你选择的编译器选项（多线程、DLL、/clr)。 如果在代码中包含其中一个 [C++ 标准库标头文件](../standard-library/cpp-standard-library-header-files.md)，则将在编译时通过 Visual C++ 自动链接 C++ 标准库。 例如：
 
@@ -100,7 +101,7 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 #include <ios>
 ```
 
-对于二进制兼容性，可通过单个导入库指定多个 DLL 文件。 版本更新可能会引入点库，点库是引入新的库功能的 单独的 Dll。 例如，Visual Studio 2017 版 15.6 引入了 msvcp140_1.dll 以支持其他标准库功能，而不会破坏由 msvcp140.dll 支持的 ABI。 适用于 Visual Studio 2017 版本 15.6 的工具集中包含的 msvcprt.lib 导入库支持两个 DLL，且此版本的 vcredist 安装两个 DLL。 传送后，点库具有固定 ABI，且不会在以后的点库中包含依赖项。
+对于二进制兼容性，可通过单个导入库指定多个 DLL 文件。 版本更新可能会引入点库，点库是引入新的库功能的 单独的 Dll**。 例如，Visual Studio 2017 版 15.6 引入了 msvcp140_1.dll 以支持其他标准库功能，而不会破坏由 msvcp140.dll 支持的 ABI。 适用于 Visual Studio 2017 版本 15.6 的工具集中包含的 msvcprt.lib 导入库支持两个 DLL，且此版本的 vcredist 安装两个 DLL。 传送后，点库具有固定 ABI，且不会在以后的点库中包含依赖项。
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>如果应用程序使用多个 CRT 版本，将存在什么问题？
 
@@ -108,7 +109,7 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 你可以使用应用程序二进制接口 (ABI) 技术避免这些问题，因为此技术被设计成稳定且版本可控。 设计 DLL 导出接口以按值传递信息，或致力于调用方传入而非本地分配并返回给调用方的内存。 使用封送技术复制可执行映像之间的结构化数据。 本地封装资源并仅允许通过向客户端公开的句柄或函数操作。
 
-如果进程中的所有映像全都使用相同的 CRT 动态加载版本，则也有可能避免这些问题。 若要确保所有组件都使用相同的 CRT 的 DLL 版本，请使用“/MD”选项，并使用相同的编译器工具集和属性设置进行构建。
+如果进程中的所有映像全都使用相同的 CRT 动态加载版本，则也有可能避免这些问题。 若要确保所有组件都使用相同的 CRT 的 DLL 版本，请使用“/MD”**** 选项，并使用相同的编译器工具集和属性设置进行构建。
 
 如果程序跨 DLL 边界传递某些 CRT 资源（如文件句柄、区域设置和环境变量），即便使用的是相同版本的 CRT，那也需要注意。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 

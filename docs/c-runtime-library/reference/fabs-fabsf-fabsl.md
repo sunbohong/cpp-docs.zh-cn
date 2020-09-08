@@ -1,6 +1,7 @@
 ---
 title: fabs、fabsf、fabsl
-ms.date: 4/2/2020
+description: 适用于 fabs、fabsf 和 fabsl 的 API 参考;它计算浮点值的绝对值。
+ms.date: 08/31/2020
 api_name:
 - fabsf
 - fabs
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 52ec65e744cd0ee04068ddc6cfd537ea1ae2b9f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a819172fc94224ff4c51c8fc342b142ffbe05ae7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234115"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554833"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -66,11 +67,13 @@ float fabsf(
 long double fabsl(
    long double x
 );
+
+#define fabs(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 浮点值。
 
 ## <a name="return-value"></a>返回值
@@ -83,15 +86,18 @@ long double fabsl(
 
 ## <a name="remarks"></a>备注
 
-C + + 允许重载，因此，如果包含标头，则可以调用**fabs**的重载 \<cmath> 。 在 C 程序中， **fabs**始终采用并返回 **`double`** 。
+C + + 允许重载，因此，如果包含标头，则可以调用 **fabs** 的重载 \<cmath> 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **fabs** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `fabs()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的 C 标头|必需的 C++ 标头|
 |--------------|-----------------------|---------------------------|
 |**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**fabs** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

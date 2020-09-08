@@ -1,6 +1,7 @@
 ---
 title: log2、log2f、log2l
-ms.date: 4/2/2020
+description: 适用于 log2、log2f 和 log2l 的 API 参考;这会确定指定值的二进制 (以2为底) 对数。
+ms.date: 9/1/2020
 api_name:
 - log2
 - log2l
@@ -26,12 +27,12 @@ api_type:
 topic_type:
 - apiref
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-ms.openlocfilehash: 58da7790e6fbce915c16a02a1b0d972a6fe1049e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 37319560891dbd64030495750aaf347d9dedd7e7
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911419"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555353"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -59,11 +60,13 @@ float log2f(
 long double log2l(
    long double x
 );
+
+#define log2(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 要确定其以 2 为底的对数的值。
 
 ## <a name="return-value"></a>返回值
@@ -86,20 +89,21 @@ long double log2l(
 
 ## <a name="remarks"></a>备注
 
-如果 x 是整数，则此函数实质上将返回*x*的最大1位的从零开始的索引。
+如果 *x* 是整数，则此函数实质上将返回 *x*的最大1位的从零开始的索引。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**log2**、 **log2f**、 **log2l**|\<math.h>|\<cmath>|
+|**log2** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [exp2、exp2f、exp2l](exp2-exp2f-exp2l.md)<br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>

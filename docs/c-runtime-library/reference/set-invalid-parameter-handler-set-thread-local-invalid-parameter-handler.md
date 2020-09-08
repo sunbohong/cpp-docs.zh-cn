@@ -1,5 +1,6 @@
 ---
 title: _set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
+description: _Set_invalid_parameter_handler 和 _set_thread_local_invalid_parameter_handler 的 API 参考;这会设置在 CRT 检测到无效参数时要调用的函数。
 ms.date: 4/2/2020
 api_name:
 - _set_invalid_parameter_handler
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 404a865cceb5e4014969b15e9877761187af777b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a965bd71af18a57c31d3cfef927be02005c407c0
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913997"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555613"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
 
@@ -66,9 +67,9 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 
 ## <a name="remarks"></a>备注
 
-许多 C 运行时函数检查已传递给它们的参数的有效性。 如果传递了无效参数，则函数可以设置**errno**错误号或返回错误代码。 在此类情况下，还将调用无效参数处理程序。 C 运行时提供默认的全局无效参数处理程序，该处理程序将终止程序，并显示运行时错误消息。 您可以使用 **_set_invalid_parameter_handler**将您自己的函数设置为全局无效参数处理程序。 C 运行时还支持一个线程本地无效参数处理程序。 如果通过使用 **_set_thread_local_invalid_parameter_handler**在线程中设置线程本地参数处理程序，则线程中调用的 C 运行时函数将使用该处理程序而不是全局处理程序。 一次只能将一个函数指定为全局无效实参处理程序。 只能将每个线程的一个函数指定为线程本地无效实参处理程序，但不同的线程可以具有不同的线程本地处理程序。 这样，用户可以更改在代码的一个部分中所使用的处理程序，而不影响其他线程的行为。
+许多 C 运行时函数检查已传递给它们的参数的有效性。 如果传递了无效参数，则函数可以设置 **errno** 错误号或返回错误代码。 在此类情况下，还将调用无效参数处理程序。 C 运行时提供默认的全局无效参数处理程序，该处理程序将终止程序，并显示运行时错误消息。 您可以使用 **_set_invalid_parameter_handler** 将您自己的函数设置为全局无效参数处理程序。 C 运行时还支持一个线程本地无效参数处理程序。 如果通过使用 **_set_thread_local_invalid_parameter_handler**在线程中设置线程本地参数处理程序，则线程中调用的 C 运行时函数将使用该处理程序而不是全局处理程序。 一次只能将一个函数指定为全局无效实参处理程序。 只能将每个线程的一个函数指定为线程本地无效实参处理程序，但不同的线程可以具有不同的线程本地处理程序。 这样，用户可以更改在代码的一个部分中所使用的处理程序，而不影响其他线程的行为。
 
-当运行时调用无效参数函数时，通常表示发生了不可恢复的错误。 你提供的无效参数处理程序函数应保存自身能够保存的所有数据，然后中止。 它不会将控件返回到主函数，除非您确信此错误是可恢复的。
+当运行时调用无效参数函数时，通常表示发生了不可恢复的错误。 你提供的无效参数处理程序函数应保存自身能够保存的所有数据，然后中止。 它不应将控制返回到 main 函数，除非您确信该错误是可恢复的。
 
 无效参数处理程序函数必须具有以下原型：
 
@@ -82,15 +83,15 @@ void _invalid_parameter(
 );
 ```
 
-*Expression*参数是引发错误的参数表达式的宽字符串表示形式。 *函数*参数是接收无效自变量的 CRT 函数的名称。 *File*参数是包含该函数的 CRT 源文件的名称。 *Line*参数是该文件中的行号。 最后一个自变量是保留的。 除非使用 CRT 库的调试版本，否则所有参数的值都为**NULL** 。
+*Expression*参数是引发错误的参数表达式的宽字符串表示形式。 *函数*参数是接收无效自变量的 CRT 函数的名称。 *File*参数是包含该函数的 CRT 源文件的名称。 *Line*参数是该文件中的行号。 最后一个自变量是保留的。 除非使用 CRT 库的调试版本，否则所有参数的值都为 **NULL** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_set_invalid_parameter_handler**， **_set_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
+|**_set_invalid_parameter_handler**， **_set_thread_local_invalid_parameter_handler**|Ansi-c \<stdlib.h><br /><br /> C + +： \<cstdlib> 或 \<stdlib.h>|
 
 **_Set_invalid_parameter_handler**和 **_Set_thread_local_invalid_parameter_handler**函数是 Microsoft 特定的。 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

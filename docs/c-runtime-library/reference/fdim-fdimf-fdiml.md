@@ -1,6 +1,7 @@
 ---
 title: fdim、fdimf、fdiml
-ms.date: 04/05/2018
+description: 适用于 fdim、fdimf 和 fdiml 的 API 参考;这确定了两个值之间的正差。
+ms.date: 9/1/2020
 api_name:
 - fdim
 - fdimf
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 1a7bbeaf77c94f620a82f77fb1aad3c71c34f2ef
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 406fc5cfe543aa0865760df9ff780c62e78510fc
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221908"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554781"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -71,19 +72,21 @@ long double fdiml(
    long double x,
    long double y
 );
+
+#define fdim(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 第一个值。
 
-*误差*<br/>
+*误差*\
 第二个值。
 
 ## <a name="return-value"></a>返回值
 
-返回*x*和*y*之间的正差：
+返回 *x* 和 *y*之间的正差：
 
 |返回值|方案|
 |------------------|--------------|
@@ -96,13 +99,15 @@ long double fdiml(
 |-----------|------------|
 |溢出范围错误|+ HUGE_VAL、+ HUGE_VALF，或 + HUGE_VALL|
 |下溢范围错误|正确值（舍入后）|
-|*x*或*y*为 NaN|NaN|
+|*x* 或 *y* 为 NaN|NaN|
 
 按 [_matherr](matherr.md) 中所指定的报告错误。
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回和类型的**fdim**的重载 **`float`** **`long double`** 。 在 C 程序中， **fdim**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的 **fdim** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **fdim** 始终采用并返回 **`double`** 。
+
+如果使用 \<tgmath.h> `fdim()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 除 NaN 处理外，此函数与等效 `fmax(x - y, 0)` 。
 
@@ -111,6 +116,7 @@ long double fdiml(
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**fdim**、 **fdimf**、 **fdiml**|\<math.h>|\<cmath>|
+|**fdim** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,6 +1,7 @@
 ---
 title: atanh、atanhf、atanhl
-ms.date: 4/2/2020
+description: 适用于 atanh、atanhf 和 atanhl 的 API 参考;计算浮点值的反双曲正切值。
+ms.date: 08/31/2020
 api_name:
 - atanhl
 - atanhf
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 9fee03d16ab1ad7783ebf389e290856955f2dc57
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0a8e06963519553144c7e49d26e61dbbde51c21
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232594"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555587"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -51,38 +52,40 @@ ms.locfileid: "87232594"
 double atanh( double x );
 float atanhf( float x );
 long double atanhl( long double x );
-```
+#define atanh(X) // Requires C11 or higher
 
-```cpp
 float atanh( float x );  // C++ only
 long double atanh( long double x );  // C++ only
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**Atanh**函数返回*x*的反双曲正切值（反双曲正切值）。 如果*x*大于1或小于-1，则将**Errno**设置为**EDOM** ，并将结果设置为 quiet NaN。 如果*x*等于1或-1，则分别返回正无穷或负无穷，并将**Errno**设置为**ERANGE**。
+**Atanh**函数返回*x*的反) 正切 (圆弧双曲正切值。 如果 *x* 大于1或小于-1，则将 **Errno** 设置为 **EDOM** ，并将结果设置为 quiet NaN。 如果 *x* 等于1或-1，则分别返回正无穷或负无穷，并将 **Errno** 设置为 **ERANGE**。
 
-|输入|SEH 异常|**Matherr**异常|
+|输入|SEH 异常|**Matherr** 异常|
 |-----------|-------------------|-------------------------|
 |± QNAN，IND|无|无|
-|*X* ≥ 1;*x* ≤-1|无|无|
+|*X* ≥ 1; *x* ≤-1|无|无|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用**atanh**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **atanh**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此可以调用 **atanh** 的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **atanh** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `atanh()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atanh ( # B1 ** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

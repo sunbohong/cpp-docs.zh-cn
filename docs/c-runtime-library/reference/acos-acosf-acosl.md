@@ -1,6 +1,7 @@
 ---
 title: acos、acosf、acosl
-ms.date: 4/2/2020
+description: 、和的 API 参考 `acos` `acosf` ; 用于 `acosl` 计算浮点值的反余弦值。
+ms.date: 08/31/2020
 api_name:
 - acosf
 - acos
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220764"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555093"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -53,23 +54,22 @@ ms.locfileid: "87220764"
 double acos( double x );
 float acosf( float x );
 long double acosl( long double x );
-```
+#define acos(X) // Requires C11 or higher
 
-```cpp
 float acos( float x );   // C++ only
 long double acos( long double x );   // C++ only
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
-介于-1 和1之间的值，用于计算反余弦值（反余弦值）。
+*x-blade*\
+介于-1 和1之间的值，计算反余弦的反余弦 () 。
 
 ## <a name="return-value"></a>返回值
 
 **Acos**函数返回0到π弧度范围内*x*的反余弦。
 
-默认情况下，如果*x*小于-1 或大于1，则**acos**将返回无限值。
+默认情况下，如果 *x* 小于-1 或大于1，则 **acos** 将返回无限值。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -79,15 +79,18 @@ long double acos( long double x );   // C++ only
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回和类型的**acos**的重载 **`float`** **`long double`** 。 在 C 程序中， **acos**始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用采用并返回和类型的 **acos** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **acos** 始终采用并返回 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `acos()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
+|**acos ( # B1 ** 宏 | \<tgmath.h> ||
 
 ## <a name="example"></a>示例
 

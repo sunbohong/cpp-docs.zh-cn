@@ -1,6 +1,7 @@
 ---
 title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
-ms.date: 4/2/2020
+description: 'Lrint 的 API 参考 ( # A1，lrintf ( # A3，lrintl ( # A5，llrint ( # A7，llrintf ( # A9，llrintl ( # A11;使用当前的舍入模式和方向将指定的浮点值舍入到最接近的整数值。'
+ms.date: 9/1/2020
 api_name:
 - lrint
 - lrintl
@@ -52,12 +53,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f208c183400aac7a110bb6fd87398d4377fe8f06
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216903"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555015"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -105,39 +106,44 @@ long long int llrintf(
 long long int llrintl(
    long double x
 );
+
+#define lrint(X) // Requires C11 or higher
 ```
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*x-blade*\
 要舍入的值。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回*x*的舍入整数值。
+如果成功，则返回 *x*的舍入整数值。
 
 |问题|返回|
 |-----------|------------|
-|*x*超出了返回类型的范围<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|引发**FE_INVALID**并返回零（0）。|
+|*x* 超出了返回类型的范围<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|引发 **FE_INVALID** 并返回零 (0) 。|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用和类型的**lrint**和**llrint**的重载 **`float`** **`long double`** 。 在 C 程序中， **lrint**和**llrint**始终采用 **`double`** 。
+由于 c + + 允许重载，因此你可以调用采用和类型的 **lrint** 和 **llrint** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **lrint** 和 **llrint** 始终采用 **`double`** 。
 
-如果*x*不表示整数值的浮点等效项，则这些函数将引发**FE_INEXACT**。
+如果使用 \<tgmath.h> `llrint()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+如果 *x* 不表示整数值的浮点等效项，则这些函数将引发 **FE_INEXACT**。
 
 **Microsoft 专用**：当结果在返回类型范围之外时，或者参数为 NaN 或无穷大时，返回值为 "已定义实现"。 Microsoft 编译器返回零 (0) 值。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
+|**lrint** 宏 | \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另请参阅
 
-[字母函数引用](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)

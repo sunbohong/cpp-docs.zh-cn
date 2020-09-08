@@ -1,6 +1,7 @@
 ---
 title: remquo、remquof、remquol
-ms.date: 4/2/2020
+description: 适用于 remquo、remquof 和 remquol 的 API 参考;它计算两个整数值的余数，并在参数中指定的位置存储商的符号和近似值的整数值。
+ms.date: 9/1/2020
 api_name:
 - remquof
 - remquo
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216786"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89554963"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -51,41 +52,43 @@ ms.locfileid: "87216786"
 double remquo( double numer, double denom, int* quo );
 float remquof( float numer, float denom, int* quo );
 long double remquol( long double numer, long double denom, int* quo );
-```
+#define remquo(X, Y, INT_PTR) // Requires C11 or higher
 
-```cpp
 float remquo( float numer, float denom, int* quo ); /* C++ only */
 long double remquo( long double numer, long double denom, int* quo ); /* C++ only */
 ```
 
 ### <a name="parameters"></a>参数
 
-*收藏*<br/>
+*收藏*\
 分子。
 
-*denom*<br/>
+*denom*\
 分母。
 
-*现状*<br/>
+*现状*\
 指向整数值的指针，以存储带有商的符号和近似值的值。
 
 ## <a name="return-value"></a>返回值
 
-**remquo**返回*x*  /  *y*的浮点余数。 如果*y*的值为0.0，则**remquo**将返回静默的 NaN。 有关**printf**系列的 quiet NaN 表示形式的信息，请参阅[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+**remquo**返回*x*  /  *y*的浮点余数。 如果 *y* 的值为0.0，则 **remquo** 将返回静默的 NaN。 有关 **printf** 系列的 quiet NaN 表示形式的信息，请参阅 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
 **Remquo**函数计算*x*y 的浮点余数*f*  /  *y* ，这是*x*  =  *i* \* *y*  +  *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
 
-C + + 允许重载，因此你可以调用**remquo**的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中， **remquo**始终采用两个 **`double`** 参数，并返回 **`double`** 。
+C + + 允许重载，因此你可以调用 **remquo** 的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **remquo** 始终采用两个 **`double`** 参数并返回一个 **`double`** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+如果使用 \<tgmath.h> `remquo()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |函数|必需的标头 (C)|必需的标头 (C++)|
 |--------------|---------------------|-|
 |**remquo**、 **remquof**、 **remquol**|\<math.h>|\<cmath> 或 \<math.h>|
+|**remquo** 宏 | \<tgmath.h> ||
 
 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 

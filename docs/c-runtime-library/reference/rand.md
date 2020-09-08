@@ -1,5 +1,6 @@
 ---
 title: rand
+description: 用于 rand 的 API 参考，它通过使用众所周知且完全可重现的算法生成一个伪随机数。
 ms.date: 4/2/2020
 api_name:
 - rand
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 8f2a4d00310671e8ba80055e38e479e348562ac2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 50c4f921c81ecad00abb19e6ce50158d450b170e
+ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919531"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89555327"
 ---
 # <a name="rand"></a>rand
 
-使用众所周知且完全可重复的算法生成一个伪随机数。 提供此函数的更具编程的安全版本;请参阅[rand_s](rand-s.md)。 **Rand**生成的数字不是加密安全的。 对于更安全的安全随机数生成，请在[ \<随机>](../../standard-library/random.md)中使用[rand_s](rand-s.md)或 c + + 标准库中声明的函数。
+使用众所周知且完全可重复的算法生成一个伪随机数。 提供此函数的更具编程的安全版本;请参阅 [rand_s](rand-s.md)。 **Rand**生成的数字不是加密安全的。 对于更安全的安全随机数生成，请使用 [rand_s](rand-s.md) 或在中的 c + + 标准库中声明的函数 [\<random>](../../standard-library/random.md) 。
 
 ## <a name="syntax"></a>语法
 
@@ -50,19 +51,19 @@ int rand( void );
 
 ## <a name="return-value"></a>返回值
 
-**rand**返回伪随机数，如上所述。 无错误返回。
+**rand** 返回伪随机数，如上所述。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**Rand**函数返回0到**RAND_MAX** （32767）范围内的一个随机整数。 在调用**rand**之前，使用[srand](srand.md)函数对伪随机数生成器进行种子设定。
+**Rand**函数返回0到**RAND_MAX** (32767) 范围内的一个随机整数。 在调用**rand**之前，使用[srand](srand.md)函数对伪随机数生成器进行种子设定。
 
-**Rand**函数生成一个众所周知的序列，它不适合用作加密函数。 对于更安全的安全随机数生成，请在[ \<随机>](../../standard-library/random.md)中使用[rand_s](rand-s.md)或 c + + 标准库中声明的函数。 有关**rand**错误以及随机> 如何\<处理这些缺点的信息，请参阅此带标题的[rand 视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的视频。
+**Rand**函数生成一个众所周知的序列，它不适合用作加密函数。 对于更安全的安全随机数生成，请使用 [rand_s](rand-s.md) 或在中的 c + + 标准库中声明的函数 [\<random>](../../standard-library/random.md) 。 有关 **rand** 出错的信息以及如何处理 \<random> 这些缺点，请参阅此视频，该视频 [被视为有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**rand**|\<stdlib.h>|
 
