@@ -1,6 +1,7 @@
 ---
 title: /U、/u（未定义符号）
-ms.date: 06/08/2020
+description: 使用 Microsoft C/c + + 编译器/U 和/u 选项取消定义预处理器符号。
+ms.date: 09/03/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 4d7a2b3d5df2b22dc53eb7b58bfb78cdb1824b26
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 78effabba2fa72e5ab7f2dfc6ef91f22383b063f
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616664"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609198"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u（未定义符号）
 
@@ -26,10 +27,10 @@ ms.locfileid: "84616664"
 
 ## <a name="syntax"></a>语法
 
-> **`/U`**\[]*符号*\
+> **`/U`**\[ ]*符号*\
 > **`/u`**
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 *代号*<br/>
 要取消定义的预处理器符号。
@@ -44,16 +45,16 @@ ms.locfileid: "84616664"
 
 | 符号 | 函数 |
 |--|--|
-| `_CHAR_UNSIGNED` | 默认 char 类型为无符号。 在 [**`/J`**](j-default-char-type-is-unsigned.md) 指定选项时定义。 |
-| `_CPPRTTI` | 为用选项编译的代码定义 [**`/GR`**](gr-enable-run-time-type-information.md) 。 |
-| `_CPPUNWIND` | 为用选项编译的代码定义 [**`/EHsc`**](eh-exception-handling-model.md) 。 |
-| `_DLL` | 在 [**`/MD`**](md-mt-ld-use-run-time-library.md) 指定选项时定义。 |
+| `_CHAR_UNSIGNED` | 默认 char 类型为无符号。 在 [`/J`](j-default-char-type-is-unsigned.md) 指定选项时定义。 |
+| `_CPPRTTI` | 为用选项编译的代码定义 [`/GR`](gr-enable-run-time-type-information.md) 。 |
+| `_CPPUNWIND` | 为用选项编译的代码定义 [`/EHsc`](eh-exception-handling-model.md) 。 |
+| `_DLL` | 在 [`/MD`](md-mt-ld-use-run-time-library.md) 指定选项时定义。 |
 | `_M_IX86` | 默认情况下，对于 x86 目标，定义为600。 |
-| `_MSC_VER` | 定义为每个编译器版本的唯一整数值。 有关详细信息，请参阅[预定义的宏](../../preprocessor/predefined-macros.md)。 |
+| `_MSC_VER` | 定义为每个编译器版本的唯一整数值。 有关详细信息，请参阅 [预定义的宏](../../preprocessor/predefined-macros.md)。 |
 | `_WIN32` | 为 WIN32 应用程序定义。 始终定义。 |
-| `_MT` | 指定[ **`/MD`** 或 **`/MT`** ](md-mt-ld-use-run-time-library.md)选项时定义。 |
+| `_MT` | [`/MD`](md-mt-ld-use-run-time-library.md)指定或选项时定义 [`/MT`](md-mt-ld-use-run-time-library.md) 。 |
 
-有关特定于 Microsoft 的预定义宏的完整列表，请参阅[预定义的宏](../../preprocessor/predefined-macros.md)。
+有关特定于 Microsoft 的预定义宏的完整列表，请参阅 [预定义的宏](../../preprocessor/predefined-macros.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -61,17 +62,17 @@ ms.locfileid: "84616664"
 
 1. 选择 "**配置属性**" "  >  **c/c + +**  >  **高级**" 属性页。
 
-1. 修改取消**定义预处理器定义**或取消**定义所有预处理器定义**属性。
+1. 修改取消 **定义预处理器定义** 或取消 **定义所有预处理器定义** 属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
 - 请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefineAllPreprocessorDefinitions%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UndefinePreprocessorDefinitions%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
-[**`/J`**（默认 char 类型是无符号的）](j-default-char-type-is-unsigned.md)<br/>
-[**`/GR`**（启用运行时类型信息）](gr-enable-run-time-type-information.md)<br/>
-[**`/EH`**（异常处理模型）](eh-exception-handling-model.md)<br/>
-[**`/MD`**、 **`/MT`** 、 **`/LD`** （使用运行时库）](md-mt-ld-use-run-time-library.md)
+[**`/J`** (默认 char 类型是无符号的) ](j-default-char-type-is-unsigned.md)<br/>
+[**`/GR`** (启用运行时类型信息) ](gr-enable-run-time-type-information.md)<br/>
+[**`/EH`** (异常处理模型) ](eh-exception-handling-model.md)<br/>
+[**`/MD`**、 **`/MT`** 、 **`/LD`** (使用运行时库) ](md-mt-ld-use-run-time-library.md)

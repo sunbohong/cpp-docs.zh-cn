@@ -6,12 +6,12 @@ ms.date: 07/25/2020
 helpviewer_keywords:
 - keywords [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-ms.openlocfilehash: 13b174a40621b8aeeae58d4ccae8e4e51c8fdd44
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 96fb4e6a51630f3b5297c6428297980b5c51ca36
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843321"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609147"
 ---
 # <a name="keywords-c"></a>关键字 (C++)
 
@@ -288,9 +288,9 @@ Microsoft<sup>特定的</sup> **`__asm`** 关键字替代 c + + **`asm`** 语法
 
 <sup>f</sup> 仅适用于 Managed Extensions for C++。 此语法现已弃用。 有关更多信息，请参见 [Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)。
 
-适用于 c + +/CLI 的<sup>f</sup>
+<sup>g</sup> 适用于 c + +/cli
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [词法约定](lexical-conventions.md)<br/>
 [C + + 内置运算符、优先级和结合性](cpp-built-in-operators-precedence-and-associativity.md)

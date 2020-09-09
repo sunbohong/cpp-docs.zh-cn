@@ -1,21 +1,22 @@
 ---
 title: 分部类 (C++/CX)
+description: 如何声明和使用 c + +/CX 中的分部类
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 1f5583354481248e8df201be200fe99da61791dd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70225069c948a50b38ac3642113cf940c86cf8da
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185458"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609063"
 ---
 # <a name="partial-classes-ccx"></a>分部类 (C++/CX)
 
-分部类是支持你修改一部分类定义的方案的构造，而自动代码生成软件（例如 XAML 设计器）也在修改同一个类中的代码。 通过使用分部类，可以防止设计器重写代码。 在 Visual Studio 项目中， `partial` 修饰符自动应用于生成的文件。
+分部类是支持你修改一部分类定义的方案的构造，而自动代码生成软件（例如 XAML 设计器）也在修改同一个类中的代码。 通过使用分部类，可以防止设计器重写代码。 在 Visual Studio 项目中， **`partial`** 修饰符自动应用于生成的文件。
 
 ## <a name="syntax"></a>语法
 
-若要定义分部类，请紧接在类键（不然就是一个普通类定义的类键）之前使用 `partial` 关键字。 关键字（如 `partial ref class` ）是包含空白字符的上下文关键字。 下列构造支持分部定义。
+若要定义分部类，请 **`partial`** 紧接在类键（否则为普通类定义的类键）之前使用关键字。 关键字（如） **`partial ref class`** 是包含空白字符的上下文关键字。 下列构造支持分部定义。
 
 - **`class`** 或 **`struct`**
 
@@ -25,7 +26,7 @@ ms.locfileid: "87185458"
 
 - **`enum`** 或 **`enum class`**
 
-- `ref interface`、 **`interface class`** 、 **`interface struct`** 或 **"__interface**
+- **`ref interface`**、 **`interface class`** 、 **`interface struct`** 或 **`__interface`**
 
 - **`union`**
 
@@ -35,7 +36,7 @@ ms.locfileid: "87185458"
 
 ## <a name="contents"></a>目录
 
-如果省略了 `partial` 关键字，则分部类定义可以包含完整类定义可包含的一切。 有一个例外，其中包括所有有效构造，如基类、数据成员、成员函数、枚举、友元声明和特性。 并且允许静态数据成员的内联定义。
+如果省略了关键字，则分部类定义可以包含完整类定义可包含的任何内容 **`partial`** 。 有一个例外，其中包括所有有效构造，如基类、数据成员、成员函数、枚举、友元声明和特性。 并且允许静态数据成员的内联定义。
 
 一个例外是类可访问性。 例如，语句 `public partial class MyInvalidClass {/* ... */};` 是一个错误。 MyInvalidClass 的分部类定义中使用的任何访问说明符不会影响 MyInvalidClass 后续的分部或完整类定义中的默认可访问性。
 
@@ -45,13 +46,13 @@ ms.locfileid: "87185458"
 
 ## <a name="declaration"></a>声明
 
-类的分部定义（例如 *MyClass* ）只是 MyClass 的声明。 即，它只引入名称 *MyClass*。 *MyClass* 不能以需要类定义的方式使用，例如，知道 *MyClass* 的大小或使用 *MyClass*的基或成员。 仅当编译器遇到*MyClass* 的非分部定义时， *MyClass*才被视为已定义。
+类的分部定义（例如） `MyClass` 只是 MyClass 的声明。 也就是说，它只引入名称 `MyClass` 。 `MyClass` 不能以需要类定义的方式使用，例如，知道的大小 `MyClass` 或使用的基或成员 `MyClass` 。 `MyClass` 仅当编译器遇到的非分部定义时，才被视为已定义 `MyClass` 。
 
-下面的示例演示分部类的声明行为。 在声明 #1 后， *MyClass* 可按照其被编写为前向声明 `ref class MyClass;`时的方式使用。 声明 #2 等效于声明 #1。声明 #3 是有效的，因为它是类的前向声明。 但是声明 #4 无效，因为
+下面的示例演示分部类的声明行为。 在 #1 声明后， `MyClass` 可以像编写为前向声明一样使用 `ref class MyClass;` 。 声明 #2 等效于声明 #1。声明 #3 是有效的，因为它是类的前向声明。 但是声明 #4 无效，因为
 
-*MyClass* 未完全定义。
+`MyClass` 未完全定义。
 
-声明 #5 不使用 `partial` 关键字，并且完全定义了 *MyClass*。 因此，声明 #6 是有效的。
+声明 #5 不使用 **`partial`** 关键字，并且声明完全定义 `MyClass` 。 因此，声明 #6 是有效的。
 
 [!code-cpp[Cx_partial#03](../cppcx/codesnippet/CPP/partialclassexample/class1.h#03)]
 
@@ -59,7 +60,7 @@ ms.locfileid: "87185458"
 
 类的每个完整定义可以有零个或多个分部类定义。
 
-类的每个分部类定义在词法上都必须排在该类的一个完整定义前，但是不必排在类的前向声明前。 如果类没有完整定义，则分部类声明只能是前向声明。
+类的每个分部类定义在词法上都必须排在该类的一个完整定义之前，但并不一定要在类的前向声明之前。 如果类没有完整定义，则分部类声明只能是前向声明。
 
 所有类键（如 **`class`** 和） **`struct`** 都必须匹配。 例如，编码 `partial class X {}; struct X {};`。
 
@@ -85,17 +86,17 @@ ms.locfileid: "87185458"
 
 分部类不能超越一个翻译单元范围。
 
-`partial`关键字只能与 **`ref class`** 关键字或关键字组合在一起 **`value class`** 。
+**`partial`** 关键字只能与 **`ref class`** 关键字或关键字组合在一起 **`value class`** 。
 
 ### <a name="examples"></a>示例
 
-下面的示例跨两个代码文件定义 `Address` 类。 设计器修改 `Address.details.h` ，你修改 `Address.h`。 只有第一个文件中的类定义使用 `partial` 关键字。
+下面的示例跨两个代码文件定义 `Address` 类。 设计器修改 `Address.details.h` ，你修改 `Address.h`。 只有第一个文件中的类定义使用 **`partial`** 关键字。
 
 [!code-cpp[cx_partial#07](../cppcx/codesnippet/CPP/partialclassexample/address.details.h#07)]
 
 [!code-cpp[cx_partial#09](../cppcx/codesnippet/CPP/partialclassexample/address.h#09)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>

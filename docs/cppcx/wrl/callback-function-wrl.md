@@ -1,18 +1,18 @@
 ---
-title: Callback 函数（WRL）
+title: '回调函数 (WRL) '
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: 138ad9d5d3bd4cf9e5263845f950dbbe7971fde6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8615b92f9b46dcfc6e36867c51eeefdb7a5f5e81
+ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214131"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89609089"
 ---
-# <a name="callback-function-wrl"></a>Callback 函数（WRL）
+# <a name="callback-function-wrl"></a>回调函数 (WRL) 
 
 创建一个对象，该对象的成员函数是一个回调方法。
 
@@ -24,7 +24,7 @@ template<
    typename TCallback
 >
 ComPtr<TDelegateInterface> Callback(
-   TCallbackcallback
+   TCallback callback
 );
 template<
    typename TDelegateInterface,
@@ -189,7 +189,7 @@ ComPtr<TDelegateInterface> Callback(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *TDelegateInterface*<br/>
 一个模板参数，指定在事件发生时要调用的委托接口。
@@ -230,7 +230,7 @@ ComPtr<TDelegateInterface> Callback(
 *拨*<br/>
 一个对象，表示回调对象及其成员函数。
 
-对象<br/>
+*object*<br/>
 一个对象，在事件发生时调用该对象的成员函数。
 
 *method*<br/>
@@ -242,7 +242,7 @@ ComPtr<TDelegateInterface> Callback(
 
 ## <a name="remarks"></a>备注
 
-委托对象的基必须 `IUnknown`，而不是 `IInspectable`。
+委托对象的基必须为 `IUnknown` ，而不是 `IInspectable` 。
 
 ## <a name="requirements"></a>要求
 
@@ -250,6 +250,6 @@ ComPtr<TDelegateInterface> Callback(
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)
