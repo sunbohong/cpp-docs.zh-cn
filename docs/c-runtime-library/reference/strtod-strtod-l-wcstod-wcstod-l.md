@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: aa6f40c91f9be906e3f51df5788483410f6077a3
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
+ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554950"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89933822"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -120,7 +120,7 @@ double wcstod_l(
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-当前区域设置的 **LC_NUMERIC** 类别设置确定 *strSource*中的基数点字符的识别。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 没有 **_l** 后缀的函数使用当前区域设置; **_strtod_l** 与 **_strtod_l** 相同，只不过它们只使用传入的 *区域设置* 。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+当前区域设置的 **LC_NUMERIC** 类别设置确定 *strSource*中的基数点字符的识别。 有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 没有 **_l** 后缀的函数使用当前区域设置; **_strtod_l** 与 **_strtod** 相同，只不过前者使用传入的 *区域设置* 。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 如果 *endptr* 不 **为 NULL**，则指向停止扫描的字符的指针将存储在 *endptr*指向的位置。 如果无法执行任何转换 () 找不到任何有效的数字或指定了无效的基，则 *strSource* 的值将存储在 *endptr*指向的位置。
 
@@ -221,7 +221,7 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
