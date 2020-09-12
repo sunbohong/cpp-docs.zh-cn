@@ -2,29 +2,29 @@
 title: 安装并配置使用 iOS 进行构建的工具
 ms.date: 10/17/2019
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
-ms.openlocfilehash: 87c02f5399465c6131fad2bb9839698699d1e488
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 26dea080f3d3f05885f348dcaf1c66a0db2a36b5
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470003"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041986"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>安装并配置使用 iOS 进行构建的工具
 
-可以将 Visual Studio 与使用 C++ 进行跨平台移动开发的工具一起使用，以编辑、调试 iOS 代码，并将其部署到 iOS 模拟器或 iOS 设备。 但由于许可限制，必须在 Mac 上远程生成和运行代码。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://www.npmjs.com/package/vcremote)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
+可以将 Visual Studio 与使用 C++ 进行跨平台移动开发的工具一起使用，以编辑、调试 iOS 代码，并将其部署到 iOS 模拟器或 iOS 设备****。 但由于许可限制，必须在 Mac 上远程生成和运行代码。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://www.npmjs.com/package/vcremote)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
 
 > [!NOTE]
-> 有关使用云托管的 Mac 服务而不是 Mac 的信息，请参阅[配置 Visual Studio 以连接到云托管的 Mac](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)。 此说明适用于使用 Visual Studio Tools for Apache Cordova 进行生成。 要通过 C++ 使用指令进行生成，请将 `vcremote` 替换为 `remotebuild`。
+> 有关使用云托管的 Mac 服务而不是 Mac 的信息，请参阅[配置 Visual Studio 以连接到云托管的 Mac](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017&preserve-view=true#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)。 此说明适用于使用 Visual Studio Tools for Apache Cordova 进行生成。 要通过 C++ 使用指令进行生成，请将 `vcremote` 替换为 `remotebuild`。
 
 使用 iOS 进行生成的工具安装完成后，请参阅本文，了解如何快速配置和更新远程代理以便在 Visual Studio 中和 Mac 上进行 iOS 开发。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
 若要安装和使用远程代理以开发 iOS 代码，必须首先具备以下先决条件：
 
 - 运行 macOS Mojave 10.14 版或更高版本的 Mac 计算机
 
-- [Apple ID](https://appleid.apple.com/)
+- [APPLE ID](https://appleid.apple.com/)
 
 - 有效的 [Apple 开发人员计划](https://developer.apple.com/programs/)帐户
 
@@ -42,7 +42,7 @@ ms.locfileid: "79470003"
 
 - 在 Xcode 中配置的 Apple ID 帐户作为用于对应用进行签名的签名标识
 
-   若要查看或设置 Xcode 中的签名标识，打开 **Xcode** 菜单并选择“首选项”。 选择“帐户” 并选择你的 Apple ID，然后选择“查看详细信息” 按钮。 有关详细说明，请参阅 [Add your Apple ID account](https://help.apple.com/xcode/mac/current/#/devaf282080a)（添加 Apple ID 帐户）。
+   若要查看或设置 Xcode 中的签名标识，打开 **Xcode** 菜单并选择 ****“首选项”。 选择“帐户” **** 并选择你的 Apple ID，然后选择“查看详细信息” **** 按钮。 有关详细说明，请参阅 [Add your Apple ID account](https://help.apple.com/xcode/mac/current/#/devaf282080a)（添加 Apple ID 帐户）。
 
    有关签名要求的详细信息，请参阅 [What is app signing](https://help.apple.com/xcode/mac/current/#/dev3a05256b8)（什么是应用签名）。
 
@@ -52,9 +52,9 @@ ms.locfileid: "79470003"
 
    如果要进行手动签名，则需要为应用创建预配配置文件。 有关创建预配配置文件的详细信息，请参阅[创建开发预置描述文件](https://help.apple.com/developer-account/#/devf2eb157f8)。
 
-- [Node.js](https://nodejs.org/) 版本 12.14.1 和 npm 版本 6.13.4
+- [Node.js](https://nodejs.org/) 版本12.14.1 和 npm 版本6.13。4
 
-   在 Mac 上安装 Node.js 12.14.1 版。 如果安装 Node.js 包，该包应随附 npm 6.13.4 版。 其他版本的 Node.js 和 npm 可能不支持远程代理 `vcremote` 中使用的一些模块，这可能导致 `vcremote` 安装失败。 建议使用包管理器（如 [Node 版本管理器](https://nodejs.org/en/download/package-manager/#nvm)）安装 Node.js。 请避免使用命令 `sudo` 来安装 Node.js，因为使用 `sudo` 时，某些模块可能安装失败。
+   在 Mac 上安装 Node.js 版本12.14.1。 如果安装 Node.js 包，它应该随附 npm 版本6.13.4。 其他版本的 Node.js 和 npm 可能不支持远程代理 `vcremote` 中使用的一些模块，这可能导致 `vcremote` 安装失败。 建议使用程序包管理器（如 [Node 版本管理](https://nodejs.org/en/download/package-manager/#nvm)器）安装 Node.js。 避免使用命令 `sudo` 安装 Node.js，因为某些模块在使用时可能安装失败 `sudo` 。
 
 ## <a name="install-the-remote-agent-for-ios"></a><a name="Install"></a> 安装适用于 iOS 的远程代理
 
@@ -64,17 +64,17 @@ ms.locfileid: "79470003"
 
 ### <a name="to-download-and-install-the-remote-agent"></a><a name="DownloadInstall"></a> 下载和安装远程代理
 
-- 在你的 Mac 上的终端应用中，验证当前使用的 Node.js 版本是否为要求的版本 12.14.1。 若要查找版本，请运行以下命令：
+- 在你的 Mac 上的终端应用中，验证当前使用的 Node.js 版本是否为12.14.1 所需的版本。 若要验证版本，请运行命令：
 
   `node -v`
   
-  如果版本不正确，则可能需要按照先决条件中的 Node.js 安装说明进行操作。 然后重启 Node.js。
+  如果版本不正确，则可能需要按照先决条件中的 Node.js 安装说明进行操作。 然后，重新启动 Node.js。
 
-- 验证正在使用要求的 Node.js 后，运行以下命令以在该 Node.js 版本下安装 vcremote：
+- 验证所需 Node.js 正在使用后，运行以下命令以在该 Node.js 版本下安装 vcremote：
 
    `npm install -g --unsafe-perm vcremote`
 
-   全局安装 (-g) 开关是推荐使用而不是必须使用的。 如果不使用全局安装开关，则会在终端应用中的当前活动路径下安装 vcremote。
+   建议全局安装 (**-g**) 开关，但不是必需的。 如果不使用全局安装交换机，则会在终端应用中的当前活动路径下安装 vcremote。
 
    在安装期间，`vcremote` 将被安装在你的 Mac 上，同时将激活开发人员模式。 还会安装 [Homebrew](https://brew.sh/) 和两个 npm 包，`vcremote-lib` 和 `vcremote-utils`。 安装完成后，可以忽略有关跳过可选依赖项的警告。
 
@@ -121,7 +121,7 @@ ms.locfileid: "79470003"
 
 #### <a name="to-stop-the-remote-agent"></a>停用远程代理
 
-- 在正在运行 `vcremote` 的终端窗口中，输入 Control**C**+。
+- 在终端窗口中 `vcremote` 运行的中，输入**Control** + **C**。
 
 ## <a name="configure-the-remote-agent-in-visual-studio"></a><a name="ConfigureVS"></a> 在 Visual Studio 中配置远程代理
 
@@ -135,28 +135,28 @@ ms.locfileid: "79470003"
 
    可以通过在终端窗口中使用 **ifconfig** 命令来获取 IP 地址。 请使用活动网络接口下列出的 inet 地址。
 
-1. 在 Visual Studio 菜单栏上，依次选择“工具”和“选项”。
+1. 在 Visual Studio 菜单栏上，依次选择“工具”**** 和“选项”****。
 
-1. 在“选项” 对话框中，展开“跨平台”、 **C++** 、 **iOS**。
+1. 在“选项”**** 对话框中，展开“跨平台”****、“C++”**** 和“iOS”****。
 
-1. 在“主机名” 和“端口” 字段，输入远程代理在启动时指定的值。 主机名可以是 DNS 名或 Mac 的 IP 地址。 默认端口为 3030。
+1. 在“主机名” **** 和“端口” **** 字段，输入远程代理在启动时指定的值。 主机名可以是 DNS 名或 Mac 的 IP 地址。 默认端口为 3030。
 
    > [!NOTE]
    > 如果无法使用主机名 ping Mac，则可能需要使用 IP 地址。
 
-1. 如果以默认安全连接模式使用远程代理，请勾选“安全” 复选框，然后在 **Pin** 字段输入由远程代理指定的 PIN 值。 如果以非安全连接模式使用远程代理，请清除“安全” 复选框并将 **Pin** 字段留空。
+1. 如果以默认安全连接模式使用远程代理，请勾选“安全” **** 复选框，然后在 **Pin** 字段输入由远程代理指定的 PIN 值。 如果以非安全连接模式使用远程代理，请清除“安全” **** 复选框并将 **Pin** 字段留空。
 
-1. 选择“配对”以启用配对。
+1. 选择“配对”**** 以启用配对。
 
    ![为 iOS 版本配置 vcremote 连接](../cross-platform/media/cppmdd-options-ios.png "为 iOS 版本配置 vcremote 连接")
 
-   除非更改主机名或端口，否则配对会一直存在。 如果在“选项” 对话框中更改了主机名或端口，要撤销此更改，请选择“还原” 按钮以还原到上一配对。
+   除非更改主机名或端口，否则配对会一直存在。 如果在“选项” **** 对话框中更改了主机名或端口，要撤销此更改，请选择“还原” **** 按钮以还原到上一配对。
 
-   如果配对失败，请按照 [Start the remote agent](#Start)中的步骤验证远程代理是否正在运行。 如果生成远程代理 PIN 后已经过了很久，请在 Mac 上执行 [Generate a new security PIN](#GeneratePIN) 中的步骤，然后重试。 如果你使用的是 Mac 的主机名，请转而尝试在“主机名” 字段中使用 IP 地址。
+   如果配对失败，请按照 [Start the remote agent](#Start)中的步骤验证远程代理是否正在运行。 如果生成远程代理 PIN 后已经过了很久，请在 Mac 上执行 [Generate a new security PIN](#GeneratePIN) 中的步骤，然后重试。 如果你使用的是 Mac 的主机名，请转而尝试在“主机名” **** 字段中使用 IP 地址。
 
-1. 更新“远程根目录”字段中的文件夹名称，以在 Mac 上的主 ( **) 目录中指定远程代理所用的文件夹** *~* 。 默认情况下，远程代理会使用 `/Users/<username>/vcremote` 作为远程根目录。
+1. 更新 " **远程根目录** " 字段中的文件夹名称，以指定你的 Home (*~* Mac 上的 ") " 目录中的远程代理所用的文件夹。 默认情况下，远程代理会使用 `/Users/<username>/vcremote` 作为远程根目录。
 
-1. 选择“确定” 以保存远程配对连接设置。
+1. 选择“确定” **** 以保存远程配对连接设置。
 
 你每次在 Visual Studio 时，它会使用相同信息连接到 Mac 上的远程代理。 除非你在 Mac 上生成了新的安全证书，或其主机名或 IP 地址发生了更改，否则，你无需再次将 Visual Studio 与远程代理进行配对。
 
@@ -178,7 +178,7 @@ ms.locfileid: "79470003"
 
 出于安全目的，将 Visual Studio 与远程代理配对的服务器证书关联到你的 Mac 的 IP 地址或主机名。 如果这些值已更改，则必须生成一个新的服务器证书，然后使用新值重新配置 Visual Studio。
 
-### <a name="to-generate-a-new-server-certificate"></a>生成新服务器证书
+### <a name="to-generate-a-new-server-certificate"></a>生成新的服务器证书
 
 1. 停止 `vcremote` 代理。
 
@@ -210,7 +210,7 @@ ms.locfileid: "79470003"
 
    `vcremote --secure false`
 
-   如果使用此选项，请在 Visual Studio 中配置代理时清除“安全”复选框，并将“Pin”字段留空。
+   如果使用此选项，请在 Visual Studio 中配置代理时清除“安全”**** 复选框，并将“Pin”**** 字段留空。
 
 - 要为远程代理文件指定位置，请输入：
 

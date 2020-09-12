@@ -1,16 +1,17 @@
 ---
 title: '&lt;格&gt;'
+description: 标准模板库的 API 参考 (STL) span 命名空间，该命名空间提供了一系列连续的对象。
 ms.date: 05/28/2020
 f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: 7d21023c90472e5c2e1b28d9fa85e517da4a21ae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f4c6b141dfea6464e58d06e221a39a693469d31c
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846181"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039867"
 ---
 # <a name="ltspangt"></a>&lt;格&gt;
 
@@ -50,7 +51,7 @@ int main()
 
 **命名空间:** std
 
-**编译器选项：** /std： c + + 最新
+**编译器选项：** [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="members"></a>成员
 

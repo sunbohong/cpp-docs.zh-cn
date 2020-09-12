@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: f06e181a4fe6683adb0cc63c016cbd879f2fc574
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281804"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039803"
 ---
 # <a name="ltbitgt-functions"></a>&lt;位 &gt; 函数
 
@@ -111,7 +111,7 @@ std::bit_cat<int>(f) = 7f800000
 
 此重载仅在以下情况下参与重载决策：
 -  `sizeof(To) == sizeof(From)`
-- `To` 和 `From` 是 [is_trivially_copyable](https://docs.microsoft.com/cpp/standard-library/is-trivially-copyable-class?view=vs-2019`)。
+- `To` 和 `From` 是 [is_trivially_copyable](is-trivially-copyable-class.md)。
 
 `constexpr`当且仅当 `To` 、和子其子 `From` 类型的类型为时，此函数模板为：
 - 不是联合或指针类型
@@ -730,7 +730,7 @@ rotr(0b10000000,-1) = 0b00000001
 
 **命名空间:** std
 
-`/std:c++latest` 是必需的
+[/std：需要 c + + 最新版本](../build/reference/std-specify-language-standard-version.md) 。
 
 ## <a name="see-also"></a>另请参阅
 

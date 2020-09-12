@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 5639344ede4007bd66a3d51043f4acb423426b94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c935c20d6c1c009cff64d48e0c0122c8b91bbba3
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842970"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041154"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER（Windows NT 内核模式驱动程序）
 
 >/DRIVER [： UPONLY |： WDM]
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 使用 **/DRIVER** 链接器选项可生成 Windows NT 内核模式驱动程序。
 
@@ -49,7 +49,7 @@ ms.locfileid: "88842970"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
-- 请参阅 [VCLinkerTool 属性](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver)。
+- 请参阅 [VCLinkerTool 属性](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver)。
 
 ## <a name="see-also"></a>另请参阅
 

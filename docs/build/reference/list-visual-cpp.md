@@ -1,5 +1,5 @@
 ---
-title: '&lt;列表 > （C++文档注释）'
+title: '&lt; (c + + 文档注释> 列表) '
 ms.date: 11/04/2016
 f1_keywords:
 - list
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: 102cf9f7b1b867a012f662ce786d97012826abd1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 24f9b17c67b8f951743fd51c04266b05dad235c7
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439300"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041960"
 ---
-# <a name="ltlistgt"></a>&lt;list&gt;
+# <a name="ltlistgt-and-ltlistheadergt"></a>&lt;list &gt; 和 &lt; listheader&gt;
 
 \<listheader> 块用于定义表或定义列表的标题行。 定义表时，只需提供标题中的术语的项。
 
 ## <a name="syntax"></a>语法
 
-```
+```xml
 <list type="bullet" | "number" | "table">
    <listheader>
       <term>term</term>
@@ -35,7 +35,7 @@ ms.locfileid: "79439300"
 
 #### <a name="parameters"></a>参数
 
-*term*<br/>
+*二项式*<br/>
 要定义的术语，将在 `description` 中进行定义。
 
 description<br/>
@@ -47,7 +47,7 @@ description<br/>
 
 列表或表可根据需要具有多个 \<item> 块。
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

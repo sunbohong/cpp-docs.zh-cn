@@ -1,6 +1,7 @@
 ---
 title: unordered_multimap 类
-ms.date: 11/04/2016
+description: C + + 标准库容器类的 API 概述 `unordered_multimap` 。
+ms.date: 9/9/2020
 f1_keywords:
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
@@ -26,6 +27,7 @@ f1_keywords:
 - unordered_map/std::unordered_multimap::cbegin
 - unordered_map/std::unordered_multimap::cend
 - unordered_map/std::unordered_multimap::clear
+- unordered_map/std::unordered_multimap::contains
 - unordered_map/std::unordered_multimap::count
 - unordered_map/std::unordered_multimap::emplace
 - unordered_map/std::unordered_multimap::emplace_hint
@@ -73,6 +75,7 @@ helpviewer_keywords:
 - std::unordered_multimap::cbegin
 - std::unordered_multimap::cend
 - std::unordered_multimap::clear
+- std::unordered_multimap::contains
 - std::unordered_multimap::count
 - std::unordered_multimap::emplace
 - std::unordered_multimap::emplace_hint
@@ -137,12 +140,12 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-ms.openlocfilehash: 3f30d7c8f322e053e91d9e14db0e7166a6031bd8
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 5ca739e4c10fbca6cfd85b182e0052bcad19bf21
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562501"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042064"
 ---
 # <a name="unordered_multimap-class"></a>unordered_multimap 类
 
@@ -206,6 +209,7 @@ allocator 类。
 |[cbegin](#cbegin)|指定受控序列的开头。|
 |[cend](#cend)|指定受控序列的末尾。|
 |[清除](#clear)|删除所有元素。|
+|[包含](#contains)<sup>c + + 20</sup>|检查中是否存在具有指定键的元素 `unordered_multimap` 。|
 |[计数](#count)|查找与指定键匹配的元素数。|
 |[emplace](#emplace)|添加就地构造的元素。|
 |[emplace_hint](#emplace_hint)|添加就地构造的元素，附带提示。|
@@ -852,6 +856,57 @@ int main()
 
 ```Output
 [c, 3] [b, 2] [a, 1]
+```
+
+## <a name="unordered_multimapcontains"></a><a name="contains"></a> unordered_multimap：： contains
+
+检查中是否存在具有指定键的元素 `unordered_multimap` 。
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>参数
+
+*温度*\
+键的类型。
+
+*按键*\
+要查找的元素的键值。
+
+### <a name="return-value"></a>返回值
+
+`true` 如果在容器中找到元素，则为; 否则为。 `false` 否则为。
+
+### <a name="remarks"></a>备注
+
+`contains()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
+
+`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。
+
+### <a name="example"></a>示例
+
+```cpp
+// Requires /std:c++latest
+#include <unordered_map>
+#include <iostream>
+
+int main()
+{
+    std::unordered_multimap<int, bool> theUnorderedMultimap = {{0, false}, {1,true}};
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theUnorderedMultimap.contains(1) << '\n';
+    std::cout << theUnorderedMultimap.contains(2) << '\n';
+
+    return 0;
+}
+```
+
+```Output
+true
+false
 ```
 
 ## <a name="unordered_multimapcount"></a><a name="count"></a> unordered_multimap：： count

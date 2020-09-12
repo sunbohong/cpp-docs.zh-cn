@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 94063b2c66d201da3b0e822a7118b3e48020ed3c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833252"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040596"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -155,7 +155,7 @@ cout.imbue(loc);
 |成员函数|说明|
 |-|-|
 |[or](#combine)|将指定区域设置中的 facet 插入到目标区域设置。|
-|name |返回存储的区域设置名称。|
+|[name](#name)|返回存储的区域设置名称。|
 
 ### <a name="static-functions"></a>静态函数
 
@@ -166,7 +166,7 @@ cout.imbue(loc);
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|说明|
 |-|-|
 |[operator =](#op_eq)|指定区域设置。|
 |[operator！ =](#op_neq)|测试两个区域设置是否不相等。|
@@ -202,7 +202,7 @@ static const int all = LC_ALL;
 static const int none = 0;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是一种类型的同义词 **`int`** ，该类型可以表示类区域设置的本地位掩码类型的一组非重复元素，也可以用来表示任何相应的 C 区域设置类别。 这些元素为：
 
@@ -238,7 +238,7 @@ static const locale& classic();
 
 C 区域设置的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 经典 C 区域设置是标准 C 库中的美国英语 ASCII 区域设置。 这是隐式的程序中所使用的区域设置。
 
@@ -344,7 +344,7 @@ private:
 };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 不能复制或分配类的对象 `facet` 。 可以构造和销毁派生自类 `locale::facet` 的对象，但不能构造和销毁适当的基类对象。 通常，在 `_Myfac` 构造时构造从派生的对象 `facet` `locale` ，如下所示 `locale loc(locale::classic(), new _Myfac);`
 
@@ -367,7 +367,7 @@ static locale global(const locale& new_default_locale);
 
 重置默认区域设置之前的上一个区域设置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在程序启动时，全局区域设置与经典区域设置相同。 `global()` 函数调用 `setlocale( LC_ALL, loc.name. c_str())` 以在标准 C 库中建立匹配的区域设置。
 
@@ -412,7 +412,7 @@ class id
 };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员类描述每个唯一区域设置 facet 所需的静态成员对象。 不能复制或分配类的对象 `id` 。
 
@@ -452,7 +452,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 *new_facet*\
 要替换为构造的区域设置的 facet。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个构造函数将初始化该对象，以便匹配全局构造函数。 第二个和第三个构造函数初始化所有区域设置类别，使其行为与区域设置名称 *locale_name*一致。 剩余的构造函数复制 *from_locale*，并注明例外：
 
@@ -576,7 +576,7 @@ bool operator!=(const locale& right) const;
 
 一个布尔值， **`true`** 如果区域设置不是相同区域设置的副本，则为。 **`false`** 如果区域设置是相同区域设置的副本，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果两个区域设置是相同的区域设置（如果是另一个区域的副本）或它们的名称相同，则这两个区域设置是相等的。
 
@@ -622,7 +622,7 @@ loc3 (English_United States.1252) are not equal.
 
 ## <a name="localeoperator"></a><a name="op_call"></a> locale：： operator ( # A1
 
-`basic_string`根据此区域设置的 std：： collate 方面定义的字典比较规则比较两个对象 <charT> 。
+`basic_string`根据此区域设置的方面定义的字典比较规则比较两个对象 `std::collate<charT>` 。
 
 ```cpp
 template <class CharType, class Traits, class Allocator>
@@ -643,7 +643,7 @@ bool operator()(
 
 - **`true`** 如果按字典顺序小于*右侧* *，则为*; 否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员函数有效执行以下操作：
 
@@ -703,7 +703,7 @@ bool operator==(const locale& right) const;
 
 一个布尔值， **`true`** 如果区域设置是相同区域设置的副本，则该值为。 **`false`** 如果区域设置不是相同区域设置的副本，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果两个区域设置是相同的区域设置（如果是另一个区域的副本）或它们的名称相同，则这两个区域设置是相等的。
 

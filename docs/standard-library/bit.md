@@ -6,12 +6,12 @@ f1_keywords:
 - <bit>
 helpviewer_keywords:
 - bit header
-ms.openlocfilehash: 7a87071d30756714e19c971281f642ce16f09d61
-ms.sourcegitcommit: 3628707bc17c99aac7aac27eb126cc2eaa4d07b4
+ms.openlocfilehash: 5652d0af767520710ee08b1827e0df27c477ee6d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89194754"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040049"
 ---
 # <a name="ltbitgt"></a>&lt;bit&gt;
 
@@ -25,7 +25,7 @@ ms.locfileid: "89194754"
 
 **命名空间:** std
 
-`/std:c++latest` 是必需的
+[/std：需要 c + + 最新版本](../build/reference/std-specify-language-standard-version.md) 。
 
 ## <a name="members"></a>成员
 
@@ -52,6 +52,6 @@ ms.locfileid: "89194754"
 |[rotl](bit-functions.md#rotl) | 计算按位左旋转的结果。 |
 |[rotr](bit-functions.md#rotr) | 计算按位右移位的结果。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [头文件引用](cpp-standard-library-header-files.md)

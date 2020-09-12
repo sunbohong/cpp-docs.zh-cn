@@ -1,5 +1,6 @@
 ---
 title: 范围类 (c + + 标准库) |Microsoft Docs
+description: 标准模板库的 API 参考 (STL) 跨类，它为一系列连续的对象提供轻量视图。
 ms.date: 05/28/2020
 f1_keywords:
 - span/std::span
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: 4d5cf7f38d10814b3112a25a8da0e412f0d65093
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 297104820f5498e59397db9025aed1675984a060
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560447"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039959"
 ---
 # <a name="span-class-c-standard-library"></a>范围类 (c + + 标准库) 
 
@@ -133,7 +134,7 @@ class span;
 
 **命名空间:** std
 
-**编译器选项：** /std： c + + 最新
+**编译器选项：** [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="spanback"></a><a name="back"></a> `span::back`
 

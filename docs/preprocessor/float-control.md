@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 02a8e8d80616623693fff04aca02355c505b4c3b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78166779"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041921"
 ---
 # <a name="float_control-pragma"></a>float_control 杂注
 
@@ -23,45 +23,45 @@ ms.locfileid: "78166779"
 ## <a name="syntax"></a>语法
 
 > **#pragma float_control**\
-> **#pragma float_control （精确、** { **on** | **off** } [ **，push** ] **）** \
-> **#pragma float_control （除** ** | ** **off** } [ **，push** ] **）** \
-> **#pragma float_control （** { **push** | **pop** } **）**
+> **#pragma float_control ( 精确，** { **on**  |  **off** } [ **，push** ] **) **\
+> **#pragma float_control ( 除外，** { **on**  |  **off** } [ **，push** ] **) **\
+> **#pragma float_control (** { **push**  |  **pop** } **) **
 
-## <a name="options"></a>Options
+## <a name="options"></a>选项
 
-**精确** |  **关闭**，**推送**\
-指定是启用（**on**）还是禁用（**关闭**）精确浮点语义。 有关与 **/fp：精确**编译器选项的差异的信息，请参阅 "备注" 部分。 可选**推送**令牌为内部编译器堆栈上的**float_control**推送当前设置。
+**精确**、 **on**  |  **关闭**、**推送**\
+指定是 **对) 启用** (还是 **禁用 () ** 精确的浮点语义。 有关与 **/fp：精确** 编译器选项的差异的信息，请参阅 "备注" 部分。 可选 **推送** 令牌为内部编译器堆栈上的 **float_control** 推送当前设置。
 
-**除** | **off** **时**，**推送**\
-指定启用（**on**）还是禁用（**关闭**）浮点异常语义。 可选**推送**令牌为内部编译器堆栈上的**float_control**推送当前设置。
+**except**，**在**  |  **off**上，**推送**\
+指定是否 **对) 启用** (或禁用 (**关闭**) 浮点异常语义。 可选 **推送** 令牌为内部编译器堆栈上的 **float_control** 推送当前设置。
 
 当 "**精确**" 也设置为 **"开**" 时，**仅可将**设置为 **"开"** 。
 
-**推送**\
-将当前**float_control**设置推送到内部编译器堆栈上。
+**请求**\
+将当前 **float_control** 设置推送到内部编译器堆栈上。
 
-**pop**\
-从内部编译器堆栈的顶部移除**float_control**设置，并使其成为新的**float_control**设置。
+**弹出**\
+从内部编译器堆栈的顶部移除 **float_control** 设置，并使其成为新的 **float_control** 设置。
 
 ## <a name="remarks"></a>备注
 
-**Float_control**杂注与[/fp](../build/reference/fp-specify-floating-point-behavior.md)编译器选项的行为不同。 **Float_control**杂注仅管辖部分浮点行为。 它必须与[fp_contract](../preprocessor/fp-contract.md)和[fenv_access](../preprocessor/fenv-access.md)杂注结合，才能重新创建 **/fp**编译器选项。 下表显示了每个编译器选项的等效杂注设置：
+**Float_control**杂注与[/fp](../build/reference/fp-specify-floating-point-behavior.md)编译器选项的行为不同。 **Float_control**杂注仅管辖部分浮点行为。 它必须与 [fp_contract](../preprocessor/fp-contract.md) 和 [fenv_access](../preprocessor/fenv-access.md) 杂注结合，才能重新创建 **/fp** 编译器选项。 下表显示了每个编译器选项的等效杂注设置：
 
-| | float_control （精确、\*） | float_control （\*除外） | fp_contract （\*） | fenv_access （\*） |
+| 选项 |  (精确 float_control \*)  | float_control (除外， \*)  | fp_contract (\*)  | fenv_access (\*)  |
 |-|-|-|-|-|
-| /fp:strict             | 启用  | 启用  | 关闭 | 启用  |
-| /fp:precise            | 启用  | 关闭 | 启用  | 关闭 |
-| /fp:fast               | 关闭 | 关闭 | 启用  | 关闭 |
+| /fp:strict             | on  | on  | 关闭 | on  |
+| /fp:precise            | on  | 关闭 | on  | 关闭 |
+| /fp:fast               | 关闭 | 关闭 | on  | 关闭 |
 
-换句话说，你可能需要结合使用多个杂注来模拟 **/fp： fast**、 **/fp：精确**和 **/fp：严格**的命令行选项。
+换句话说，你可能需要结合使用多个杂注来模拟 **/fp： fast**、 **/fp：精确**和 **/fp：严格** 的命令行选项。
 
-结合使用**float_control**和**fenv_access**浮点杂注的方式有一些限制：
+结合使用 **float_control** 和 **fenv_access** 浮点杂注的方式有一些限制：
 
-- 仅当启用了精确**语义时，** 才能使用**float_control**来设置**除外**。 可以通过**float_control**杂注或使用 **/fp：精确**或 **/fp： strict**编译器选项来启用精确语义。
+- 仅当启用了精确**语义时，** 才能使用**float_control**来设置**除外**。 可以通过 **float_control** 杂注或使用 **/fp：精确** 或 **/fp： strict** 编译器选项来启用精确语义。
 
-- 如果启用了异常语义，则不能使用**float_control**关闭**精确**的功能，无论是通过**float_control** pragma 还是 **/fp： except**编译器选项。
+- 如果启用了异常语义，则不能使用 **float_control** 关闭 **精确** 的功能，无论是通过 **float_control** pragma 还是 **/fp： except** 编译器选项。
 
-- 除非启用了精确语义，否则不能启用**fenv_access** ，无论是通过**float_control**杂注还是编译器选项启用。
+- 除非启用了精确语义，否则不能启用 **fenv_access** ，无论是通过 **float_control** 杂注还是编译器选项启用。
 
 - 启用**fenv_access**时，不能使用**float_control**来**精确**关闭。
 
@@ -74,7 +74,7 @@ ms.locfileid: "78166779"
 #pragma fp_contract(off)            // disable contractions
 ```
 
-若要使用**float_control**杂注从严格模型转为快速模型，请使用以下代码：
+若要使用 **float_control** 杂注从严格模型转为快速模型，请使用以下代码：
 
 ```cpp
 #pragma float_control(except, off)  // disable exception semantics
@@ -83,11 +83,11 @@ ms.locfileid: "78166779"
 #pragma fp_contract(on)             // enable contractions
 ```
 
-如果未指定任何选项， **float_control**将不起作用。
+如果未指定任何选项， **float_control** 将不起作用。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用杂注**float_control**捕获溢出浮点异常。
+下面的示例演示如何使用杂注 **float_control**捕获溢出浮点异常。
 
 ```cpp
 // pragma_directive_float_control.cpp

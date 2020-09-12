@@ -1,20 +1,21 @@
 ---
 title: /Zc（一致性）
-ms.date: 03/06/2018
+description: /Zc 一致性编译器选项启用或禁用对符合或向后兼容的行为的支持。
+ms.date: 09/10/2020
 helpviewer_keywords:
 - /Zc compiler options [C++]
 - -Zc compiler options [C++]
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 6d6d3b7736fd1775372a3b2093c53e177db5099e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234349"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041518"
 ---
-# <a name="zc-conformance"></a>`/Zc`度
+# <a name="zc-conformance"></a>`/Zc` (一致性) 
 
 您可以使用 **`/Zc`** 编译器选项来指定标准或特定于 Microsoft 的编译器行为。
 
@@ -30,24 +31,25 @@ ms.locfileid: "87234349"
 
 | 选项 | 行为 |
 |--|--|
-| [`/Zc:alignedNew`](zc-alignednew.md) | 启用 c + + 17 过度对齐动态分配（默认情况下在 c + + 17 中启用）。 |
-| [`/Zc:auto`](zc-auto-deduce-variable-type.md) | 为（默认情况下为）强制实施新的标准 c + + 含义 **`auto`** 。 |
-| [`/Zc__cplusplus`](zc-cplusplus.md) | 使 `__cplusplus` 宏能够报告支持的标准（默认为关闭）。 |
-| [`/Zc:externConstexpr`](zc-externconstexpr.md) | 启用变量的外部链接 **`constexpr`** （默认为关闭）。 |
-| [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) | 强制实施标准 c + + **`for`** 范围规则（默认为启用）。 |
-| [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | 启用 **`noexcept`** 对所需函数的隐式（默认为启用）。 |
-| [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | 删除未引用的函数或数据（如果它是 COMDAT 或仅具有内部链接）（默认为关闭）。 |
-| [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | 强制执行 c + + 17 **`noexcept`** 规则（在 c + + 17 或更高版本中默认启用）。 |
-| [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) | UDT 临时项不会绑定到非常量左值引用（默认为关闭）。 |
-| [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) | 强制实施标准 c + + 显式类型转换规则（默认关闭）。 |
-| [`/Zc:sizedDealloc`](zc-sizeddealloc-enable-global-sized-dealloc-functions.md) | 启用 c + + 14 全局大小释放函数（默认为启用）。 |
-| [`/Zc:strictStrings`](zc-strictstrings-disable-string-literal-type-conversion.md) | 禁用字符串到 `char*` 或 `wchar_t*` 转换（默认为关闭）。 |
-| [`/Zc:ternary`](zc-ternary.md) | 强制执行有关操作数类型的条件运算符规则（默认关闭）。 |
-| [`/Zc:threadSafeInit`](zc-threadsafeinit-thread-safe-local-static-initialization.md) | 启用线程安全的本地静态初始化（默认为启用）。 |
-| [`/Zc:throwingNew`](zc-throwingnew-assume-operator-new-throws.md) | 假设 **`operator new`** 失败时引发（默认关闭）。 |
-| [`/Zc:trigraphs`](zc-trigraphs-trigraphs-substitution.md) | 启用 trigraphs （已过时，默认情况下为关闭）。 |
-| [`/Zc:twoPhase`](zc-twophase.md) | 使用不一致的模板分析行为（默认情况下符合）。 |
-| [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md) | **`wchar_t`** 是本机类型，不是 typedef （默认情况下启用）。 |
+| [`/Zc:alignedNew`](zc-alignednew.md) | 默认情况下，在 c + + 17) 中启用 c + + 17 双向动态分配 (。 |
+| [`/Zc:auto`](zc-auto-deduce-variable-type.md) | 默认情况下，强制实施新的标准 c + + 表示 **`auto`** () 。 |
+| [`/Zc__cplusplus`](zc-cplusplus.md) | 启用 `__cplusplus` 宏，以便在默认情况下报告支持的标准 () 。 |
+| [`/Zc:externConstexpr`](zc-externconstexpr.md) | 默认情况下，启用变量的外部链接 **`constexpr`** (关闭) 。 |
+| [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) | 默认情况下，强制实施标准 c + + **`for`** 范围规则 () 。 |
+| [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | 默认情况下，启用隐式 **`noexcept`** on 必需函数 () 。 |
+| [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | 删除未引用的函数或数据（如果它是 COMDAT）或仅 (默认关闭) 的内部链接。 |
+| [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | **`noexcept`** 默认情况下，在 c + + 17 或更高版本中 (启用 c + + 17 规则) 。 |
+| [`/Zc:preprocessor`](zc-preprocessor.md) | 默认情况下，使用新的相容预处理器 (关闭，C11/C17) 除外。 |
+| [`/Zc:referenceBinding`](zc-referencebinding-enforce-reference-binding-rules.md) | 默认情况下，UDT 临时项不会绑定到非常量的左值引用 (关闭) 。 |
+| [`/Zc:rvalueCast`](zc-rvaluecast-enforce-type-conversion-rules.md) | 强制标准 c + + 显式类型转换规则 (默认关闭) 。 |
+| [`/Zc:sizedDealloc`](zc-sizeddealloc-enable-global-sized-dealloc-functions.md) | 默认情况下，启用默认 () 的 c + + 14 全局大小释放函数。 |
+| [`/Zc:strictStrings`](zc-strictstrings-disable-string-literal-type-conversion.md) | `char*` `wchar_t*` 默认情况下，禁用 (关闭字符串或转换) 。 |
+| [`/Zc:ternary`](zc-ternary.md) | 在默认情况下，对操作数类型强制执行条件运算符规则 (关闭) 。 |
+| [`/Zc:threadSafeInit`](zc-threadsafeinit-thread-safe-local-static-initialization.md) | 默认情况下启用线程安全的本地静态初始化 () 。 |
+| [`/Zc:throwingNew`](zc-throwingnew-assume-operator-new-throws.md) | **`operator new`** 默认情况下，假定在失败时引发 () 。 |
+| [`/Zc:trigraphs`](zc-trigraphs-trigraphs-substitution.md) | 默认情况下启用 trigraphs (已过时，) 。 |
+| [`/Zc:twoPhase`](zc-twophase.md) | 默认情况下，使用不一致的模板分析行为 (符合) 。 |
+| [`/Zc:wchar_t`](zc-wchar-t-wchar-t-is-native-type.md) | **`wchar_t`** 是本机类型，而不是默认)  (的 typedef。 |
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 

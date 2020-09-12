@@ -5,12 +5,12 @@ f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 3b5b05dfa2613f9eeaaa18fa8066bcd44f57d1be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 307fc6da3b383690e0b65bff2a72f386a37d6711
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87203723"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039685"
 ---
 # <a name="default_searcher-class"></a>default_searcher 类
 
@@ -36,14 +36,14 @@ class default_searcher
 
 ## <a name="members"></a>成员
 
-| | |
+| 成员 | 说明 |
 | - | - |
 | **构造函数** | |
-| [default_searcher](#default-searcher-constructor) | |
+| [default_searcher](#default-searcher-constructor) | 构造一个搜索者实例。 |
 | **运算符** | |
-| [operator （）](#operator-call) | |
+| [运算符 ( # B1 ](#operator-call) | 对序列调用操作。 |
 
-## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a>default_searcher 构造函数
+## <a name="default_searcher-constructor"></a><a name="default-searcher-constructor"></a> default_searcher 构造函数
 
 `default_searcher`使用序列搜索和相等谓词来构造函数对象。
 
@@ -72,11 +72,11 @@ constexpr default_searcher(         // C++20
 
 ### <a name="remarks"></a>备注
 
-引发*BinaryPredicate*或*ForwardIterator*类型的复制构造函数引发的任何异常。
+引发 *BinaryPredicate* 或 *ForwardIterator* 类型的复制构造函数引发的任何异常。
 
 此类是 c + + 17 中新增的。 C + + 20 生成构造函数 **`constexpr`** 。
 
-## <a name="operator"></a><a name="operator-call"></a>operator （）
+## <a name="operator"></a><a name="operator-call"></a> 运算符 ( # A1
 
 函数运算符的调用运算符。 在参数序列内搜索 `[first, last)` 指定给构造函数的序列。
 
@@ -102,7 +102,7 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 ### <a name="remarks"></a>备注
 
-返回一对迭代器。 初始迭代器*i*是的有效结果：
+返回一对迭代器。 初始迭代器 *i* 是的有效结果：
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 

@@ -2,12 +2,12 @@
 title: 使用 C++ 安装跨平台移动开发
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: 935e427710d55120055be476a5cfb5fbcf73641b
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 6a573b0f7ba261b97af9de24e67f733acac0532f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609177"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041947"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>使用 C++ 安装跨平台移动开发
 
@@ -60,7 +60,7 @@ Visual Studio 安装程序包括使用 C++ 的移动开发工作负载****。 �
 - 生成面向 iOS 平台的 C++ 代码需要 C++ iOS 开发工具。
 
 > [!NOTE]
-> 如果使用的是 Visual Studio 2015，请参阅[安装适用于跨平台移动开发的 Visual C++ (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015)
+> 如果使用的是 Visual Studio 2015，请参阅[安装适用于跨平台移动开发的 Visual C++ (Visual Studio 2015)](install-visual-cpp-for-cross-platform-mobile-development.md?view=vs-2015&preserve-view=true)
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>安装使用 C++ 的移动开发工作负载
 
@@ -109,7 +109,7 @@ Visual Studio 安装程序包括使用 C++ 的移动开发工作负载****。 �
 
 1. 选择“确定” **** 以保存自定义工具文件夹位置。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [安装和配置工具以使用 iOS 进行生成](install-and-configure-tools-to-build-using-ios.md)\
 [Visual C++ 跨平台移动](https://visualstudio.microsoft.com/vs/features/cplusplus-mdd/)

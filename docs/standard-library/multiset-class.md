@@ -1,6 +1,7 @@
 ---
 title: multiset 类
-ms.date: 11/04/2016
+description: C + + 标准模板库的 API 参考 (STL) `multiset` 类，用于存储和检索集合中的数据，其中所含元素的值不需要是唯一的，它们作为数据自动排序所依据的键值。
+ms.date: 9/9/2020
 f1_keywords:
 - set/std::multiset
 - set/std::multiset::allocator_type
@@ -22,6 +23,7 @@ f1_keywords:
 - set/std::multiset::cbegin
 - set/std::multiset::cend
 - set/std::multiset::clear
+- set/std::multiset::contains
 - set/std::multiset::count
 - set/std::multiset::crbegin
 - set/std::multiset::crend
@@ -64,6 +66,7 @@ helpviewer_keywords:
 - std::multiset [C++], cbegin
 - std::multiset [C++], cend
 - std::multiset [C++], clear
+- std::multiset [C++], contains
 - std::multiset [C++], count
 - std::multiset [C++], crbegin
 - std::multiset [C++], crend
@@ -86,16 +89,16 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 69a884a2b60e7838154586dd0dcc8c1d54681b53
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e857a4f6369b9aa939b5dcba17e02efaf81600b0
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561162"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040946"
 ---
 # <a name="multiset-class"></a>multiset 类
 
-C++ 标准库多重集合类用于存储和检索集合中的数据，此集合中包含的元素值无需唯一，并且用作数据自动排序所依据的键值。 不能直接更改多重集合中元素的键值。 必须先删除旧值，才能插入具有新值的元素。
+C++ 标准库多重集合类用于存储和检索集合中的数据，此集合中包含的元素值无需唯一，并且用作数据自动排序所依据的键值。 不能直接更改中的元素的键值 `multiset` 。 必须先删除旧值，才能插入具有新值的元素。
 
 ## <a name="syntax"></a>语法
 
@@ -107,19 +110,19 @@ class multiset
 ### <a name="parameters"></a>参数
 
 *按键*\
-要存储在多重集合中的元素数据类型。
+要在 `multiset` 中存储的元素数据类型。
 
 *并排*\
-一种提供函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定其在多重集合中的相对顺序。 小于二进制谓词**less** \<Key> 是默认值。
+提供一个函数对象的类型，该函数对象可将两个元素值作为排序键进行比较，以确定它们在中的相对顺序 `multiset` 。 小于二进制谓词**less** \<Key> 是默认值。
 
-在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
+在 c + + 14 中，可以通过指定 `std::less<>` 没有类型参数的或谓词来启用异类查找 `std::greater<>` 。 有关详细信息，请参阅 [关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers) 。
 
 *器*\
-一种表示存储的分配器对象的类型，该分配器对象封装有关多重集合的内存分配和解除分配的详细信息。 默认值为 `allocator<Key>`。
+表示存储分配器对象的类型，该对象封装有关 `multiset` 的内存分配和解除分配的详细信息。 默认值为 `allocator<Key>`。
 
 ## <a name="remarks"></a>备注
 
-C++ 标准库多重集合类为：
+C + + 标准库 `multiset` 类是：
 
 - 大小可变的关联容器，支持基于关联键值高效检索元素值。
 
@@ -127,21 +130,21 @@ C++ 标准库多重集合类为：
 
 - 有序，因为它的元素在容器中根据指定的比较函数按键值排序。
 
-- 多个，它的元素不需要具有唯一键，因此一个键值可具有多个相关联的元素值。
+- 多个，它的元素不需要具有唯一键，因此一个键值可具有多个关联的元素值。
 
 - 简单的关联容器，因为它的元素值即为它的键值。
 
 - 类模板，因为它提供的功能是通用的，因此与作为元素包含的特定数据类型无关。 可使用的数据类型作为类模板以及比较函数和分配器中的参数指定。
 
-多重集合类提供的迭代器是双向迭代器，但类成员函数 [insert](#insert) 和 [multiset](#multiset) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能需求比双向迭代器类保证的功能需求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 [`First`, `Last`)。
+类提供的迭代器 `multiset` 是双向迭代器，但类成员函数 [insert](#insert) 和 [多重集](#multiset) 具有将较弱输入迭代器作为模板参数的版本，较弱输入迭代器的功能要求比双向迭代器类保证的功能要求更少。 不同的迭代器概念形成一个系列，通过它们的功能优化相关联。 每个迭代器概念有它自己的一套要求，使用这些概念的算法必须根据迭代器类型提供的要求限制它们的假设。 可以假定输入迭代器可取消引用以引用某个对象，并可递增到序列中的下一迭代器。 这是最小的功能集，但足以按有意义的方式提供类成员函数的上下文中的迭代器范围 [`First`, `Last`)。
 
-容器类型选择通常应根据应用程序所需的搜索和插入的类型。 关联容器针对查找、插入和移除操作进行了优化。 显式支持这些操作的成员函数较为高效，执行这些操作的时间与容器中元素数量的对数平均成比例。 插入元素不会使迭代器失效，移除元素仅会使专门指向已移除元素的迭代器失效。
+容器类型选择通常应根据应用程序所需的搜索和插入的类型。 关联容器针对查找、插入和移除操作进行了优化。 显式支持这些操作的成员函数是有效的，执行这些操作的时间与容器中元素数的对数成正比。 插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
-当应用程序满足将值与其键关联的条件时，应选择多重集合作为关联容器。 多重集合的元素可以为多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用集作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则映射应为包含此数据的适当结构。 如果定义不唯一，则应选择多重映射作为容器。
+`multiset`当应用程序满足将值与其键关联的条件时，应为选择的关联容器。 的元素 `multiset` 可以是多个，并用作其自己的排序键，因此键不是唯一的。 此类结构的模型是排序列表，如关键字排序列表，其中关键字可以出现多次。 如果不允许关键字多次出现，则应使用集作为适当的容器结构。 如果将唯一定义作为值附加到唯一关键字的列表，则映射应为包含此数据的适当结构。 如果定义不唯一，则是 `multimap` 所选容器。
 
-多重集合通过调用类型为 *Compare*的存储函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#key_comp) 进行访问。 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f* ( *x*， *y*) 是具有两个参数对象（ *x* 和 *y* ）和一个返回值（或）的函数对象 **`true`** **`false`** 。 如果二元谓词具有自反性、反对称性和传递性且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 *f*( *x,y*) 和 *f*( *y,x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
+`multiset`通过调用类型为*Compare*的存储函数对象，对它控制的序列进行排序。 此存储对象是比较函数，可通过调用成员函数 [key_comp](#key_comp) 进行访问。 通常，元素只需小于比较才能建立此顺序：因此，给定任意两个元素，可以确定它们是等效的 (，这二者都不小于另一个) 或一个小于另一个。 这将导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f* (*x*， *y*) 是具有两个参数对象（ *x* 和 *y* ）和一个返回值（或）的函数对象 **`true`** **`false`** 。 如果二元谓词是具有自反、对称性和可传递的，且等效可传递，对集进行的排序将为严格弱排序，其中两个对象 x 和 y 定义为在 *f* (*x、y*) 和 *f* (*y，x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
-在 C++ 14 中可以通过指定没有类型参数的 `std::less<>` 或 `std::greater<>` 谓词来启用异类查找。 有关详细信息，请参阅[关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers)
+在 c + + 14 中，可以通过指定 `std::less<>` 没有类型参数的或谓词来启用异类查找 `std::greater<>` 。 有关详细信息，请参阅 [关联容器中的异类查找](../standard-library/stl-containers.md#sequence_containers) 。
 
 ### <a name="constructors"></a>构造函数
 
@@ -177,9 +180,10 @@ C++ 标准库多重集合类为：
 |[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `multiset` 中的第一个元素。|
 |[cend](#cend)|返回一个常量迭代器，此迭代器用于发现 `multiset` 中最后一个元素之后的位置。|
 |[清除](#clear)|清除 `multiset` 的所有元素。|
+|[包含](#contains)<sup>c + + 20</sup>|检查中是否存在具有指定键的元素 `multiset` 。|
 |[计数](#count)|返回 `multiset` 中其键与指定为参数的键匹配的元素数量。|
-|[crbegin](#crbegin)|返回一个常量迭代器，此迭代器用于发现反向集中的第一个元素。|
-|[crend](#crend)|返回一个常量迭代器，此迭代器用于发现反向集中最后一个元素之后的位置。|
+|[crbegin](#crbegin)|返回一个常量迭代器，此迭代器用于发现反向 `multiset` 中的第一个元素。|
+|[crend](#crend)|返回一个常量迭代器，此迭代器用于发现反向 `multiset` 中最后一个元素之后的位置。|
 |[emplace](#emplace)|将就地构造的元素插入到 `multiset`。|
 |[emplace_hint](#emplace_hint)|将就地构造的元素插入到 `multiset`，附带位置提示。|
 |[empty](#empty)|测试 `multiset` 是否为空。|
@@ -296,7 +300,7 @@ const_iterator cbegin() const;
 
 ### <a name="remarks"></a>备注
 
-由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
+如果返回值为 `cbegin` ，则不能修改范围中的元素。
 
 可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 **`const`**) 容器 `begin()` `cbegin()` 。
 
@@ -334,7 +338,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-不应对 `cend` 返回的值取消引用。
+返回的值 `cend` 不应被取消引用。
 
 ## <a name="multisetclear"></a><a name="clear"></a> 多重集：： clear
 
@@ -384,7 +388,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="remarks"></a>备注
 
-`const_iterator` 类型不能用于修改元素的值。
+类型 `const_iterator` 不能用于修改元素的值。
 
 ### <a name="example"></a>示例
 
@@ -400,7 +404,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>备注
 
-`const_pointer` 类型不能用于修改元素的值。
+类型 `const_pointer` 不能用于修改元素的值。
 
 在大多数情况下，应使用 [iterator](#iterator) 访问多重集对象中的元素。
 
@@ -436,7 +440,7 @@ int main( )
         << Ref1 << "." << endl;
 
    // The following line would cause an error because the
-   // const_reference cannot be used to modify the multiset
+   // const_reference can't be used to modify the multiset
    // Ref1 = Ref1 + 5;
 }
 ```
@@ -455,11 +459,62 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="remarks"></a>备注
 
-`const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问多重集。
+类型 `const_reverse_iterator` 无法修改元素的值，它用于反向循环访问多重集。
 
 ### <a name="example"></a>示例
 
 有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rend](#rend) 的示例。
+
+## <a name="multisetcontains"></a><a name="contains"></a> 多重集：： contains
+
+检查中是否存在具有指定键的元素 `multiset` 。
+
+```cpp
+bool contains(const Key& key) const;
+template<class K> bool contains(const K& key) const;
+```
+
+### <a name="parameters"></a>参数
+
+*温度*\
+键的类型。
+
+*按键*\
+要查找的元素的键值。
+
+### <a name="return-value"></a>返回值
+
+`true` 如果在容器中找到元素，则为; 否则为。 `false` 否则为。
+
+### <a name="remarks"></a>备注
+
+`contains()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
+
+`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。 有关详细信息，请参阅 [关联容器中的异类查找](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+
+### <a name="example"></a>示例
+
+```cpp
+// Requires /std:c++latest
+#include <set>
+#include <iostream>
+
+int main()
+{
+    std::multiset<int> theMultiSet = {1, 2};
+
+    std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
+    std::cout << theMultiSet.contains(2) << '\n';
+    std::cout << theMultiSet.contains(3) << '\n';
+    
+    return 0;
+}
+```
+
+```Output
+true
+false
+```
 
 ## <a name="multisetcount"></a><a name="count"></a> 多重集：： count
 
@@ -504,7 +559,7 @@ int main()
     ms1.insert(1);
     ms1.insert(2);
 
-    // Elements do not need to be unique in multiset,
+    // Elements don't need to be unique in multiset,
     // so duplicates are allowed and counted.
     i = ms1.count(1);
     cout << "The number of elements in ms1 with a sort key of 1 is: "
@@ -542,7 +597,7 @@ const_reverse_iterator crbegin() const;
 
 `crbegin` 用于反向多重集，正如 begin 用于多重集一样。
 
-返回值为 `crbegin`时，无法修改多重集对象。
+如果返回值为 `crbegin` ，则无法修改多重集对象。
 
 `crbegin` 可用于向后循环访问多重集。
 
@@ -590,11 +645,11 @@ const_reverse_iterator crend() const;
 
 `crend` 用于反向多重集，正如 [end](#end) 用于多重集一样。
 
-返回值为 `crend`时，无法修改多重集对象。
+如果返回值为 `crend` ，则无法修改多重集对象。
 
 `crend` 可用于测试反向迭代器是否已到达其多重集末尾。
 
-不应对 `crend` 返回的值取消引用。
+返回的值 `crend` 不应被取消引用。
 
 ### <a name="example"></a>示例
 
@@ -632,7 +687,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 [ `first`, `last`) 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
 
-注意，尽管 `difference_type` 适用于满足输入迭代器（包括可逆容器支持的双向迭代器的类，如集）需求的所有迭代器，迭代器之间的减法仅受随机访问容器（如 vector）提供的随机访问迭代器支持。
+尽管适用 `difference_type` 于满足输入迭代器要求的所有迭代器（包括可逆容器支持的双向迭代器的类，如集），但迭代器之间的减法仅受随机访问容器（如 vector）提供的随机访问迭代器支持。
 
 ### <a name="example"></a>示例
 
@@ -663,7 +718,7 @@ int main( )
    df_typ10 = count( ms1_bIter, ms1_eIter, 10 );
    df_typ20 = count( ms1_bIter, ms1_eIter, 20 );
 
-   // The keys, and hence the elements, of a multiset are not unique
+   // The keys, and hence the elements, of a multiset aren't unique
    cout << "The number '5' occurs " << df_typ5
         << " times in multiset ms1.\n";
    cout << "The number '10' occurs " << df_typ10
@@ -714,7 +769,7 @@ iterator emplace(Args&&... args);
 
 对容器元素的引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。
 
-在定位过程中，如果引发异常，则不会修改该容器的状态。
+在定位期间，如果引发异常，则不会修改容器的状态。
 
 ### <a name="example"></a>示例
 
@@ -784,7 +839,7 @@ iterator emplace_hint(
 
 对容器元素的引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。
 
-在定位过程中，如果引发异常，则不会修改该容器的状态。
+在定位期间，如果引发异常，则不会修改容器的状态。
 
 有关代码示例，请参阅 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。
 
@@ -808,7 +863,7 @@ bool empty() const;
 #include <set>
 #include <iostream>
 
-int main( )
+int main()
 {
    using namespace std;
    multiset <int> ms1, ms2;
@@ -849,7 +904,7 @@ iterator end();
 
 **end** 用于测试迭代器是否超过多重集的末尾。
 
-不应对 **end** 返回的值取消引用。
+**End**返回的值不应被取消引用。
 
 有关代码示例，请参阅 [multiset::find](#find)。
 
@@ -1197,7 +1252,7 @@ IList);
 
 指针或引用不会因为此函数而失效，但是它可能会使所有指向容器的迭代器都失效。
 
-在插入单个元素的过程中，如果引发异常，则不会修改该容器的状态。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。
+在只插入一个元素的过程中，如果引发异常，则不会修改容器的状态。 在插入多个元素的过程中，如果引发异常，则会使容器处于未指定但有效的状态。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是属于该容器的 typedef；对于集，`multiset<V>::value_type` 是 `const V` 类型。
 
@@ -1331,7 +1386,7 @@ key_compare key_comp() const;
 
 如果在排序顺序中 *x* 严格位于 *y* 之前，则返回 true。
 
-请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+[Key_compare](#key_compare)和[value_compare](#value_compare)都是模板参数的同义词 `Compare` 。 这两种类型都是为类集和多重集提供的，它们是相同的，与类 map 和多重映射的兼容性不同。
 
 ### <a name="example"></a>示例
 
@@ -1798,7 +1853,7 @@ reverse_iterator rbegin();
 
 `rbegin` 用于反向多重集，正如 rbegin 用于多重集。
 
-如果将 `rbegin` 的返回值赋予 `const_reverse_iterator`，则无法修改多重集对象。 如果将 `rbegin` 的返回值赋予 `reverse_iterator`，则可修改多重集对象。
+如果将的返回值 `rbegin` 分配给 `const_reverse_iterator` ，则无法修改多重集对象。 如果将 `rbegin` 的返回值赋予 `reverse_iterator`，则可修改多重集对象。
 
 `rbegin` 可用于向后循环访问多重集。
 
@@ -1911,11 +1966,11 @@ reverse_iterator rend();
 
 `rend` 用于反向多重集，正如 [end](#end) 用于多重集一样。
 
-如果将 `rend` 的返回值赋予 `const_reverse_iterator`，则无法修改多重集对象。 如果将 `rend` 的返回值赋予 `reverse_iterator`，则可修改多重集对象。
+如果将的返回值 `rend` 分配给 `const_reverse_iterator` ，则无法修改多重集对象。 如果将 `rend` 的返回值赋予 `reverse_iterator`，则可修改多重集对象。
 
 `rend` 可用于测试反向迭代器是否已到达其多重集末尾。
 
-不应对 `rend` 返回的值取消引用。
+返回的值 `rend` 不应被取消引用。
 
 ### <a name="example"></a>示例
 
@@ -1976,7 +2031,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="remarks"></a>备注
 
-`reverse_iterator` 类型用于反向循环访问多重集。
+类型 `reverse_iterator` 用于反向循环访问多重集。
 
 ### <a name="example"></a>示例
 
@@ -2191,9 +2246,9 @@ value_compare value_comp() const;
 
 **bool 运算符** ( **const key&** `_xVal` ， **const key&** `_yVal`) ;
 
-如果 `_xVal` 在排序顺序中先于且不等于 `_yVal`，则该函数会返回 true。
+如果 `_xVal` `_yVal` 在排序顺序中先于且不等于，则返回 true。
 
-请注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 皆是模板参数 `Compare` 的同义词。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+[Key_compare](#key_compare)和[value_compare](#value_compare)都是模板参数的同义词 `Compare` 。 这两种类型都是为类集和多重集提供的，它们是相同的，与类 map 和多重映射的兼容性不同。
 
 ### <a name="example"></a>示例
 
@@ -2258,7 +2313,7 @@ typedef key_compare value_compare;
 
 `value_compare` 是模板参数 `Compare` 的同义词。
 
-请注意， [key_compare](#key_compare) 和 `value_compare` 都是模板参数的同义词 `Compare` 。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+[Key_compare](#key_compare)和 `value_compare` 都是模板参数的同义词 `Compare` 。 这两种类型都是为类集和多重集提供的，它们是相同的，与类 map 和多重映射的兼容性不同。
 
 有关 `Compare` 的详细信息，请参阅 [multiset 类](../standard-library/multiset-class.md)主题的备注部分。
 
@@ -2278,7 +2333,7 @@ typedef Key value_type;
 
 `value_type` 是模板参数 `Key` 的同义词。
 
-请注意， [key_type](#key_type) 和 `value_type` 都是模板参数的同义词 `Key` 。 对于 set 和 multiset 类，会同时提供这两种类型，且二者相同，但为实现与 map 和 multimap 类的兼容性时，二者则不同。
+[Key_type](#key_type)和 `value_type` 都是模板参数的同义词 `Key` 。 这两种类型都是为类集和多重集提供的，它们是相同的，与类 map 和多重映射的兼容性不同。
 
 有关 `Key` 的详细信息，请参阅该主题的备注部分。
 

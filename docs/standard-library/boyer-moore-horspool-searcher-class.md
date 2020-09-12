@@ -1,20 +1,20 @@
 ---
-title: boyer_moore_horspool_searcher类
+title: boyer_moore_horspool_searcher 类
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_horspool_searcher
 helpviewer_keywords:
 - std::boyer_moore_horspool_searcher [C++]
-ms.openlocfilehash: 4d404b414ad632e02be5f4e9fad0e22cefb86ce2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1eb1f099ca2976dd4b0ea80ebdfb93a8b5c61f70
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366780"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039828"
 ---
-# <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcher类
+# <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcher 类
 
-类`boyer_moore_horspool_searcher`是一种函数对象类型，它使用 Boyer-Moore-Horspool 算法来搜索对象构造函数中指定的序列。 搜索在提供给对象的函数调用运算符的另一个序列中完成。 类作为参数传递给[std：：search](algorithm-functions.md#search)的重载之一。
+`boyer_moore_horspool_searcher`类是一种函数对象类型，该类型使用 Boyer-Horspool 算法搜索在对象的构造函数中指定的序列。 搜索是在提供给对象的函数调用运算符的另一序列中完成的。 此类作为参数传递给 [std：： search](algorithm-functions.md#search)的重载之一。
 
 ## <a name="syntax"></a>语法
 
@@ -40,16 +40,16 @@ class boyer_moore_horspool_searcher
 
 ## <a name="members"></a>成员
 
-| | |
+| 成员 | 说明 |
 | - | - |
-| **构造 函数** | |
-| [boyer_moore_horspool_searcher](#boyer-moore-horspool-searcher-constructor) | |
+| **构造函数** | |
+| [boyer_moore_horspool_searcher](#boyer-moore-horspool-searcher-constructor) | 构造一个搜索者实例。 |
 | **运算符** | |
-| [运算符（）](#operator-call) | |
+| [运算符 ( # B1 ](#operator-call) | 对序列调用操作。 |
 
-## <a name="boyer_moore_horspool_searcher-constructor"></a><a name="boyer-moore-horspool-searcher-constructor"></a>boyer_moore_horspool_searcher构造函数
+## <a name="boyer_moore_horspool_searcher-constructor"></a><a name="boyer-moore-horspool-searcher-constructor"></a> boyer_moore_horspool_searcher 构造函数
 
-通过使用序列搜索`boyer_moore_horspool_searcher`、哈希函数对象和相等谓词来构造函数对象。
+`boyer_moore_horspool_searcher`使用序列搜索、哈希函数对象和相等谓词来构造函数对象。
 
 ```cpp
 boyer_moore_horspool_searcher(
@@ -67,21 +67,21 @@ boyer_moore_horspool_searcher(
 *pat_last*\
 要搜索的序列的末尾。
 
-*高频*\
-用于哈希序列元素的可调用对象。
+*hf*\
+用于对序列元素进行哈希处理的可调用对象。
 
-*Pred*\
-序列元素的可选相等比较谓词。 如果未指定相等比较类型，则默认值为`std::equal_to`。
+*pred*\
+序列元素的可选相等比较谓词。 如果未指定相等比较类型，则默认值为 `std::equal_to` 。
 
 ### <a name="remarks"></a>备注
 
-引发*BinaryPredicate、**哈希*或*随机访问迭代器*类型的复制构造函数或*BinaryPredicate*或*哈希*的调用运算符引发的任何异常。
+引发由 *BinaryPredicate*、 *Hash*或 *RandomAccessIterator* 类型的复制构造函数或 *BinaryPredicate* 或 *Hash*的调用运算符引发的任何异常。
 
-此类在 C++17 中是新的。
+此类是 c + + 17 中新增的。
 
-## <a name="operator"></a><a name="operator-call"></a>运算符（）
+## <a name="operator"></a><a name="operator-call"></a> 运算符 ( # A1
 
-函数对象的调用运算符。 在参数序列`[first, last)`中搜索指定给构造函数的序列。
+函数对象的调用运算符。 在参数序列内搜索 `[first, last)` 指定给构造函数的序列。
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -92,21 +92,21 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 
 ### <a name="parameters"></a>参数
 
-*第一*\
-要在其中搜索的序列的初始元素。
+*1*\
+要在其中进行搜索的序列的初始元素。
 
-*最后*\
-要在其中搜索的序列的末尾。
+*时间*\
+要在其中进行搜索的序列的末尾。
 
 ### <a name="remarks"></a>备注
 
-如果搜索模式`[pat_first, pat_last)`为空，则返回`make_pair(first, first)`。 如果未找到搜索模式，则返回`make_pair(last, last)`。 否则，将一对迭代器返回到序列的开始和结束`[first, last)`，该序列等于`[pat_first, pat_last)`谓词 *。*
+如果搜索模式 `[pat_first, pat_last)` 为空，则返回 `make_pair(first, first)` 。 如果找不到搜索模式，则返回 `make_pair(last, last)` 。 否则，将返回一对迭代器，该迭代器指向中序列的开头和结尾，并 `[first, last)` `[pat_first, pat_last)` 根据谓词 *pred*。
 
-此类在 C++17 中是新的。
+此类是 c + + 17 中新增的。
 
 ## <a name="see-also"></a>另请参阅
 
-[\<功能>](functional.md)\
+[\<functional>](functional.md)\
 [算法函数](algorithm-functions.md)\
-[boyer_moore_searcher类](boyer-moore-searcher-class.md)\
-[分：：搜索](algorithm-functions.md#search)
+[boyer_moore_searcher 类](boyer-moore-searcher-class.md)\
+[std：： search](algorithm-functions.md#search)

@@ -1,6 +1,7 @@
 ---
 title: '&lt;string_view &gt; 运算符'
-ms.date: 04/19/2019
+description: '`string_view`用于比较两个对象的运算符的 API 参考， `string_view` 或一个 `string_view` 其他字符串对象'
+ms.date: 9/4/2020
 f1_keywords:
 - xstring/basic_string_view::operator!=
 - xstring/basic_string_view::operator&gt;
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: b0761c1af7b2ed9f34917d2e4165561b357f0a30
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 832e49aaf01a4ea124b7a6881b93bd93b7337215
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833213"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039880"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 运算符
 
@@ -70,7 +71,7 @@ bool operator!=(
 
 **`true`** 如果运算符左侧的对象不按字典顺序等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从 *convertible_string_type* 到另一侧的 string_view 必须存在隐式转换。
 
@@ -109,7 +110,7 @@ bool operator==(
 
 **`true`** 如果运算符左侧的对象按字典顺序等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从 *convertible_string_type* 到另一侧的 string_view 必须存在隐式转换。
 
@@ -148,7 +149,7 @@ bool operator<(
 
 **`true`** 如果运算符左侧的对象按字典顺序小于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从 *convertible_string_type* 到另一侧的 string_view 必须存在隐式转换。
 
@@ -209,7 +210,7 @@ bool operator<=(
 
 **`true`** 如果运算符左侧的对象按字典顺序小于或等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请[参阅 &lt; 运算符](#op_lt)。
 
@@ -235,7 +236,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 要写入的输出流。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此运算符将 string_view 的内容插入到输出流中，例如使用 [std：： cout](iostream.md#cout)。
 
@@ -272,7 +273,7 @@ bool operator>(
 
 **`true`** 如果运算符左侧的对象按字典顺序大于右侧的 string_view 对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请[参阅 &lt; 运算符](#op_lt)。
 
@@ -309,7 +310,7 @@ bool operator>=(
 
 **`true`** 如果运算符左侧的对象按字典顺序大于或等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请[参阅 &lt; 运算符](#op_lt)。
 
@@ -329,6 +330,10 @@ using namespace literals::string_view_literals;
     u16string_view sv16{ u"Hello"sv };
     u32string_view sv32{ U"Hello"sv };
 ```
+
+## <a name="requirements"></a>要求
+
+[/std:c++17](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="see-also"></a>另请参阅
 

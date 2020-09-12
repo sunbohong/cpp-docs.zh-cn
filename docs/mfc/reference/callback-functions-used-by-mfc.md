@@ -7,28 +7,26 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 19c0bd3a0685abe36c020a5dda930f5683a4baa9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87183430"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040881"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
 
-Microsoft 基础类库中显示了三个回调函数。 这些回调函数将传递给[cdc：： EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)、 [Cdc：： GrayString](../../mfc/reference/cdc-class.md#graystring)和[cdc：： SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意，所有回调函数都必须在返回到 Windows 之前捕获 MFC 异常，因为异常不能跨回调边界引发。 有关异常的详细信息，请参阅文章[异常](../../mfc/exception-handling-in-mfc.md)。
+Microsoft 基础类库中显示了三个回调函数。 这些回调函数将传递给 [cdc：： EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)、 [Cdc：： GrayString](../../mfc/reference/cdc-class.md#graystring)和 [cdc：： SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)。 请注意，所有回调函数都必须在返回到 Windows 之前捕获 MFC 异常，因为异常不能跨回调边界引发。 有关异常的详细信息，请参阅文章 [异常](../../mfc/exception-handling-in-mfc.md)。
 
-|名称||
-|----------|-----------------|
-|[CDC::EnumObjects 的回调函数](#enum_objects)||
-|[CDC::GrayString 的回调函数](#graystring)||
-|[Callback Function for CDC::SetAbortProc](#setabortproc)||
+[CDC：： EnumObjects 的回调函数](#enum_objects)\
+[CDC：： GrayString 的回调函数](#graystring)\
+[Callback Function for CDC::SetAbortProc](#setabortproc)
 
 ## <a name="requirements"></a>要求
 
 **标头:** afxwin.h
 
-## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a>CDC：： EnumObjects 的回调函数
+## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a> CDC：： EnumObjects 的回调函数
 
 *ObjectFunc*名称是应用程序提供的函数名称的占位符。
 
@@ -43,7 +41,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="parameters"></a>参数
 
 *lpszLogObject*<br/>
-指向[LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen)或[LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush)数据结构，该结构包含有关对象的逻辑特性的信息。
+指向 [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) 或 [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) 数据结构，该结构包含有关对象的逻辑特性的信息。
 
 *lpData*<br/>
 指向传递给 `EnumObjects` 函数的应用程序提供的数据。
@@ -56,9 +54,9 @@ int CALLBACK EXPORT ObjectFunc(
 
 必须导出实际名称。
 
-## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a>CDC：： GrayString 的回调函数
+## <a name="callback-function-for-cdcgraystring"></a><a name="graystring"></a> CDC：： GrayString 的回调函数
 
-*OutputFunc*是应用程序提供的回调函数名称的占位符。
+*OutputFunc* 是应用程序提供的回调函数名称的占位符。
 
 ### <a name="syntax"></a>语法
 
@@ -86,11 +84,11 @@ BOOL CALLBACK EXPORT OutputFunc(
 
 ### <a name="remarks"></a>备注
 
-回调函数（*OutputFunc*）必须相对于坐标（0，0）而不是（*x*， *y*）绘制图像。
+回调函数 (*OutputFunc*) 必须相对于坐标 (0，0) 而不是 (*x*， *y*) 绘制图像。
 
-## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a>CDC：： SetAbortProc 的回调函数
+## <a name="callback-function-for-cdcsetabortproc"></a><a name="setabortproc"></a> CDC：： SetAbortProc 的回调函数
 
-名称*AbortFunc*是应用程序提供的函数名称的占位符。
+名称 *AbortFunc* 是应用程序提供的函数名称的占位符。
 
 ### <a name="syntax"></a>语法
 
@@ -106,7 +104,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 标识设备上下文。
 
 *code*<br/>
-指定是否发生了错误。 如果未发生错误，则为0。 如果打印管理器当前磁盘空间不足，并且如果应用程序等待，将会有更多的可用磁盘空间，则 SP_OUTOFDISK。 如果 SP_OUTOFDISK*代码*，应用程序不必中止打印作业。 如果不是，则必须通过调用 `PeekMessage` 或 Windows 函数向打印管理器发出 `GetMessage` 。
+指定是否发生了错误。 如果未发生错误，则为0。 如果打印管理器当前磁盘空间不足，并且如果应用程序等待，将会有更多的可用磁盘空间，则 SP_OUTOFDISK。 如果 SP_OUTOFDISK *代码* ，应用程序不必中止打印作业。 如果不是，则必须通过调用 `PeekMessage` 或 Windows 函数向打印管理器发出 `GetMessage` 。
 
 ### <a name="return-value"></a>返回值
 
@@ -114,7 +112,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 
 ### <a name="remarks"></a>备注
 
-必须按照[CDC：： SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)的 "备注" 部分所述导出实际名称。
+必须按照 [CDC：： SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)的 "备注" 部分所述导出实际名称。
 
 ## <a name="see-also"></a>另请参阅
 

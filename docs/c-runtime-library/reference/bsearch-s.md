@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 20b4c482210f480730f7da4c89549d207ea6ca7d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 348638b2a6b5a97491d9929b22a983b43794da9a
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845167"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041622"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
@@ -80,14 +80,14 @@ void *bsearch_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*键*|*base*|*并排*|*数字*|width |**`errno`**|
+|key |*base*|*并排*|*数字*|*width*|**`errno`** 负值|
 |-|-|-|-|-|-|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|= 0|**EINVAL**|
 |any|any|**NULL**|一个|any|**EINVAL**|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Bsearch_s**函数对*数字*元素的已排序数组执行二进制搜索，其中每个*宽度*字节大小均为大小。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较，并返回以下指定其关系的值之一：
 

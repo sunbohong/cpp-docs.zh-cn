@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: a5a0534ba74cc9b125e94d4ece133c2449700a67
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: e8e312eacb46d82270d7ca1782b04d06012b207d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446540"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041531"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文档标记的分隔符
 
@@ -17,9 +17,9 @@ ms.locfileid: "65446540"
 
 可以使用以下采用 XML 文档标记的分隔符：
 
-| | |
+| 分隔符 | 说明 |
 |-|-|
-| `///` | 它是文档示例所示，使用 Visual Studio 窗体C++项目模板。  |
+| `///` | 这是文档示例中所示的窗体，由 Visual Studio c + + 项目模板使用。  |
 | `/** */`  | 这些是多行分隔符。  |
 
 使用 `/** */` 分隔符时，需遵守一些格式设置规则：
@@ -30,7 +30,7 @@ ms.locfileid: "65446540"
 
 - 对于那些位于以 `/**` 分隔符开头的行之后的行，编译器会在每行的开头部分（由可选空格和星号 (`*`) 组成，后面是更多可选空格）寻找一个它们共同的模式。 如果编译器在每行的开头部分找到一组共同的字符，则将忽略 `/**` 分隔符之后所有行的这种模式，直到或者包括包含 `*/` 分隔符的那一行。
 
-示例如下：
+下面是一些示例：
 
 - 以下注释中将被处理的唯一部分是以 `<summary>` 开头的行。 下列两种标记格式将产生相同的注释：
 
@@ -68,6 +68,6 @@ ms.locfileid: "65446540"
     */
     ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

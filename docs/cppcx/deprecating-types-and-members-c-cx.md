@@ -2,19 +2,19 @@
 title: 要弃用的类型和成员 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740504"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040322"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>要弃用的类型和成员 (C++/CX)
 
-在C++/cx 中，支持使用不[推荐](/uwp/api/windows.foundation.metadata.deprecatedattribute)使用的属性来弃用制造商和使用者的 Windows 运行时类型和成员。 如果你使用的 API 已应用此特性，将显示一条编译时警告消息，指示该 API 已弃用并建议使用其他 API。 在你自己的公共类型和方法中，可应用此特性并提供自己的自定义消息。
+在 c + +/CX 中，支持使用不 [推荐](/uwp/api/windows.foundation.metadata.deprecatedattribute) 使用的属性来弃用制造商和使用者的 Windows 运行时类型和成员。 如果你使用的 API 已应用此特性，将显示一条编译时警告消息，指示该 API 已弃用并建议使用其他 API。 在你自己的公共类型和方法中，可应用此特性并提供自己的自定义消息。
 
 > [!CAUTION]
-> 不[推荐](/uwp/api/windows.foundation.metadata.deprecatedattribute)使用的属性仅用于 Windows 运行时类型。 对于标准 C++ 类和成员，请使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
+> 不 [推荐](/uwp/api/windows.foundation.metadata.deprecatedattribute) 使用的属性仅用于 Windows 运行时类型。 对于标准 C++ 类和成员，请使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
 
 ### <a name="example"></a>示例
 
@@ -39,23 +39,27 @@ public:
 
 下表列出了可应用 Deprecated 特性的构造：
 
-| |
-|-|
-|XAML 控件|
-|委托|
-|Event — 事件|
-|枚举字段|
-|enum|
-|struct|
-|方法|
-|class|
-|interface|
-|属性|
-|结构字段|
-|参数化构造函数|
+:::row:::
+   :::column span="":::
+      班级
+      委托
+      枚举
+      枚举字段 \
+      引发
+      interface
+   :::column-end:::
+   :::column span="":::
+      付款方式
+      参数化构造函数 \
+      属性\
+      结构
+      struct 字段 \
+      XAML 控件
+   :::column-end:::
+:::row-end:::
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[命名空间参考](../cppcx/namespaces-reference-c-cx.md)
+[C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[命名空间引用](../cppcx/namespaces-reference-c-cx.md)

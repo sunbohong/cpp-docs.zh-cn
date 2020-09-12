@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368417"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041934"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 
@@ -24,11 +24,11 @@ ms.locfileid: "81368417"
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<experimental/filesystem>
+**标头：**\<experimental/filesystem>
 
 **命名空间：** std::experimental::filesystem
 
-## <a name="copy_options"></a><a name="copy_options"></a>copy_options
+## <a name="copy_options"></a><a name="copy_options"></a> copy_options
 
 和 [copy](filesystem-functions.md#copy) 和 [copy_file](filesystem-functions.md#copy_file) 函数一起用于指定行为的位掩码值的枚举。
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>值
 
-|`Name`|说明|
+| 名称 | 说明 |
 |------------|-----------------|
 |`none`|执行操作的默认行为。|
 |`skip_existing`|在文件已存在时不复制，不报告错误。|
@@ -84,9 +84,9 @@ enum class directory_options {
 |`none`|默认行为：忽略指向目录的符号链接。 拒绝权限是错误。|
 |`follow_directory_symlink`|将指向目录的符号链接视为实际目录。|
 
-## <a name="file_type"></a><a name="file_type"></a>file_type
+## <a name="file_type"></a><a name="file_type"></a> file_type
 
-文件类型的枚举。 支持的值是常规的、目录的、not_found和未知的。
+文件类型的枚举。 支持的值为 regular、directory、not_found 和 unknown。
 
 ### <a name="syntax"></a>语法
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|“属性”|“值”|描述|
+|名称|值|说明|
 |----------|-----------|-----------------|
 |`not_found`|-1|表示一个不存在的文件。|
 |`none`|0|表示一个不具有类型特性的文件。 （不支持。）|
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|表示基于 UNIX 的系统上的套接字。 （不支持。）|
 |`unknown`|8|表示状态无法确定的文件。|
 
-## <a name="perm_options"></a><a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a> perm_options
 
-包括值`replace` `add`、`remove`和`nofollow`。
+包括值 `replace` 、 `add` 、 `remove` 和 `nofollow` 。
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a><a name="perms"></a>佩尔姆斯
+## <a name="perms"></a><a name="perms"></a> perms
 
-文件权限的标志。 支持的值本质上是"只读"和所有值。 对于只读文件，未设置任何 *_write 位。 其他文件设置了 `all` 位 (0x0777)。
+文件权限的标志。 支持的值实质上是 "readonly" 和 all。 对于只读文件，未设置任何 *_write 位。 其他文件设置了 `all` 位 (0x0777)。
 
 ### <a name="syntax"></a>语法
 
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>另请参阅
 
-[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[\<文件系统>](../standard-library/filesystem.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

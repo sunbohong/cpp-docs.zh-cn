@@ -4,20 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: 3851003500d37a11a88736cf611b69a2d6b1813c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228149"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039763"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 运算符
 
-||
-|-|
-|[操作员&lt;&lt;](#op_lt_lt)|
+[操作员&lt;&lt;](#op_lt_lt)
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 操作员&lt;&lt;
 
 将各种类型写入流。
 
@@ -115,7 +113,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-确定从 str 开始的序列的长度 N = `traits_type::` [length](../standard-library/char-traits-struct.md#length)（ `str` ） *str*，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 如果为（，则在序列之前重复 `_Ostr` 。 [flags](../standard-library/ios-base-class.md#flags)  &  标志 `adjustfield`！ = [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 函数返回 *_Ostr*。
+确定从 str 开始的序列的长度 N = `traits_type::` [length](../standard-library/char-traits-struct.md#length) (`str`) 长度*str*，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 如果 (，则会在序列之前重复 `_Ostr` 。 [flags](../standard-library/ios-base-class.md#flags)  &  标志 `adjustfield`！ = [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 函数返回 *_Ostr*。
 
 模板函数
 
@@ -146,7 +144,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-除了从*str*开始的序列的每个元素 *_Ch*都 `Elem` 通过调用 `_Ostr.` [put](../standard-library/basic-ostream-class.md#put)（ `_Ostr.` [拓宽](../standard-library/basic-ios-class.md#widen)（ `_Ch` ））转换为类型的对象。
+除了从*str*开始的序列的每个元素 *_Ch*都转换为类型的对象， `Elem` 方法是调用 `_Ostr.` [put](../standard-library/basic-ostream-class.md#put) (`_Ostr.` [放宽](../standard-library/basic-ios-class.md#widen) (`_Ch`) # A3。
 
 模板函数
 
@@ -166,7 +164,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-除了 *_Ch*通过调用转换为类型的对象 `Elem` `_Ostr.put( _Ostr.widen( _Ch ))` 。
+除了 *_Ch* 通过调用转换为类型的对象 `Elem` `_Ostr.put( _Ostr.widen( _Ch ))` 。
 
 模板函数
 
@@ -206,7 +204,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-（无需在插入之前扩大 *_Ch* 。）
+ (在插入之前，不必将 *_Ch* 扩大。 ) 
 
 模板函数
 

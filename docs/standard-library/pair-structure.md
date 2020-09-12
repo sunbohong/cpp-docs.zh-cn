@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: e66ee5dd39628065e52eb95a89e1cd81272a6b86
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6ccbea23835326d1e1840d8454f86c0eb72a5a7d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520922"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042051"
 ---
 # <a name="pair-structure"></a>pair 结构
 
@@ -57,7 +57,7 @@ template<class T1, class T2>
     pair(T1, T2) -> pair<T1, T2>;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Val1*\
 初始化 `pair` 的第一个元素的值。
@@ -70,13 +70,14 @@ template<class T1, class T2>
 
 ## <a name="return-value"></a>返回值
 
-第一个（默认）构造函数将该对的第一个元素初始化为类型的默认值 `T1` 和第二个元素的默认值 `T2` 。
+第一个 (默认) 构造函数将该对的第一个元素初始化为类型的默认值 `T1` ，将第二个元素初始化为类型的默认值 `T2` 。  如果这两种类型均为默认值，则定义可构造。
 
-第二个构造函数将该对的第一个元素初始化为*Val1* ，并将秒初始化为*Val2。*
+第二个构造函数将该对的第一个元素初始化为 *Val1* ，将第二个元素初始化为 *Val2。*  如果这两种类型都是可构造，则定义它。
 
-第三个（模板）构造函数将该对的第一个元素初始化为 `Right`. **first** 并将第二个元素初始化为 `Right`. **second**。
+第三 (模板) 构造函数将该对的第一个元素初始化为 `Right` 。 **第一** 和第二个 `Right` 。 **second**。  如果这两种类型都是从提供的值类型可构造，则定义它。
 
-第四个构造函数使用[右值引用声明符](../cpp/rvalue-reference-declarator-amp-amp.md)将*Val1*的第一个元素和第二个元素初始化为*Val2* ：  &&。
+
+第四个构造函数将该对的第一个元素初始化为 *Val1* ，将第二个元素初始化为 *Val2* 使用 [右值引用声明符：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。  如果这两种类型都是从提供的值类型可构造，则定义它。
 
 ## <a name="remarks"></a>备注
 

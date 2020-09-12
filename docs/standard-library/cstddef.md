@@ -1,24 +1,25 @@
 ---
 title: '&lt;cstddef&gt;'
-ms.date: 11/04/2016
+description: 介绍 <stddef.h>，它可确保在命名空间中声明使用 C 标准库标头中的外部链接声明的名称 `std` 。
+ms.date: 9/4/2020
 f1_keywords:
 - <cstddef>
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: f1582a4af1c26e1ef85cf0dce8406a4046a8fe8b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 186de0e893c413a25d31d4f1431c280d749e9541
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222519"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040023"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
 包括 C 标准库标头 \<stddef.h> 并将关联名称添加到 `std` 命名空间。 包括此标头可确保在命名空间中声明使用 C 标准库标头中的外部链接声明的名称 `std` 。
 
 > [!NOTE]
-> \<cstddef>包括类型**byte** ，不包括类型 **`wchar_t`** 。
+> \<cstddef> 包括类型 **byte** ，不包括类型 **`wchar_t`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -52,7 +53,7 @@ namespace std {
 一个 POD 类型，其对齐要求至少与每个标量类型的类型相同，并且每个上下文都支持其对齐要求。
 
 *nullptr_t*\
-表达式的类型的同义词 **`nullptr`** 。 尽管 **`nullptr`** 无法采用地址，但也可以采用作为左值的另一个*nullptr_t*对象的地址。
+表达式的类型的同义词 **`nullptr`** 。 尽管 **`nullptr`** 无法采用地址，但也可以采用作为左值的另一个 *nullptr_t* 对象的地址。
 
 ## <a name="byte-class"></a>byte 类
 
