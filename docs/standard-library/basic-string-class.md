@@ -1,6 +1,7 @@
 ---
 title: basic_string 类
-ms.date: 11/12/2019
+description: 类的 API 参考 `basic_string` ，该类是标准 c + + 字符串类。
+ms.date: 9/10/2020
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -57,6 +58,8 @@ f1_keywords:
 - xstring/std::basic_string::shrink_to_fit
 - xstring/std::basic_string::size
 - xstring/std::basic_string::substr
+- xstring/std::basic_string::ends_with
+- xstring/std::basic_string::starts_with
 - xstring/std::basic_string::swap
 helpviewer_keywords:
 - std::basic_string [C++]
@@ -113,15 +116,17 @@ helpviewer_keywords:
 - std::basic_string [C++], rfind
 - std::basic_string [C++], shrink_to_fit
 - std::basic_string [C++], size
+- std::basic_string [C++], starts_with
+- std::basic_string [C++], ends_with
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 519d95d82e239084871489cfe8a825752cf6d9f6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9012fc8203bf8b54e87e2c21f47f2ef6ef764c2d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219191"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040302"
 ---
 # <a name="basic_string-class"></a>basic_string 类
 
@@ -137,17 +142,17 @@ class basic_string;
 ### <a name="parameters"></a>参数
 
 *CharType*\
-要存储在字符串中的单个字符的数据类型。 C + + 标准库提供了此类模板的专用化，其中包含类型为的元素的类型定义[字符串](../standard-library/string-typedefs.md#string) **`char`** 、 [wstring](../standard-library/string-typedefs.md#wstring)、for **`wchar_t`** 、 [u16string](../standard-library/string-typedefs.md#u16string) for **`char16_t`** 和[u32string](../standard-library/string-typedefs.md#u32string) **`char32_t`** 。
+要存储在字符串中的单个字符的数据类型。 C + + 标准库提供了此类模板的专用化，其中包含类型为的元素的类型定义 [字符串](../standard-library/string-typedefs.md#string) **`char`** 、 [wstring](../standard-library/string-typedefs.md#wstring)、for **`wchar_t`** 、 [u16string](../standard-library/string-typedefs.md#u16string) for **`char16_t`** 和 [u32string](../standard-library/string-typedefs.md#u32string) **`char32_t`** 。
 
 *特征*\
 `CharType`类描述了 basic_string 特殊化中元素的各种重要属性 `Traits` 。 默认值为 `char_traits`< `CharType`>。
 
 *器*\
-一种表示存储的分配器对象的类型，该分配器对象封装有关字符串的内存分配和解除分配的详细信息。 默认值为 `allocator<CharType>`。
+一种表示存储的分配器对象的类型，该分配器对象封装有关字符串的内存分配和解除分配的详细信息。 默认值是 `allocator<CharType>`。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[basic_string](#basic_string)|构建一个字符串，它为空或被特定字符初始化，或者是某个其他字符串对象或 C 字符串的全部或部分的副本。|
 
@@ -185,13 +190,14 @@ class basic_string;
 |[cend](#cend)|返回发现字符串中最后一个元素之后的位置的常量迭代器。|
 |[清除](#clear)|清除字符串中的全部元素。|
 |[并排](#compare)|将字符串与指定字符串比较，确定两个字符串是否相等或按字典顺序一个字符串是否小于另一个。|
-|[copy](#copy)|将指定数目的字符从源字符串中的索引位置复制到目标字符组。 已否决。 改用 [basic_string::_Copy_s](#copy_s)。|
+|[copy](#copy)|将指定数目的字符从源字符串中的索引位置复制到目标字符组。 已弃用。 改用 [basic_string::_Copy_s](#copy_s)。|
 |[crbegin](#crbegin)|返回发现反向字符串中第一个元素的位置的常量迭代器。|
 |[crend](#crend)|返回发现反向字符串中最后一个元素之后的位置的常量迭代器。|
 |[_Copy_s](#copy_s)|将指定数目的字符从源字符串中的索引位置复制到目标字符组。|
 |[data](#data)|将字符串的内容转换为字符数组。|
 |[empty](#empty)|测试字符串是否包含字符。|
 |[end](#end)|返回发现字符串中最后一个元素之后的位置的迭代器。|
+|[ends_with](#ends_with)<sup>c + + 20</sup>|检查字符串是否以指定的后缀结尾。|
 |[erase](#erase)|从字符串中的指定位置删除一个或一系列元素。|
 |[find](#find)|向前搜索字符串，搜索与指定字符序列匹配的第一个子字符串。|
 |[find_first_not_of](#find_first_not_of)|在字符串中搜索不属于指定字符串中任何元素的第一个字符。|
@@ -213,12 +219,13 @@ class basic_string;
 |[rfind](#rfind)|向后搜索字符串，搜索与指定字符序列匹配的第一个子字符串。|
 |[shrink_to_fit](#shrink_to_fit)|放弃字符串的超出容量。|
 |[大小](#size)|返回字符串中元素的当前数目。|
+|[starts_with](#starts_with)<sup>c + + 20</sup>|检查字符串是否以指定的前缀开头。|
 |[substr](#substr)|从字符串起始处的指定位置复制最多某个数目的字符的子字符串。|
 |[swap](#swap)|交换两个字符串的内容。|
 
 ### <a name="operators"></a>运算符
 
-|操作员|描述|
+|运算符|说明|
 |-|-|
 |[运算符 + =](#op_add_eq)|向字符串追加字符。|
 |[operator =](#op_eq)|对字符串的内容赋新的字符值。|
@@ -236,7 +243,7 @@ class basic_string;
 
 **命名空间:** std
 
-## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a>basic_string：： allocator_type
+## <a name="basic_stringallocator_type"></a><a name="allocator_type"></a> basic_string：： allocator_type
 
 表示字符串对象的分配器类的类型。
 
@@ -267,7 +274,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringappend"></a><a name="append"></a>basic_string：： append
+## <a name="basic_stringappend"></a><a name="append"></a> basic_string：： append
 
 向字符串的末尾添加字符。
 
@@ -334,7 +341,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="remarks"></a>备注
 
-可以使用[运算符 + =](#op_add_eq)或成员函数或 push_back 将字符追加到字符串 `append` [push_back](#push_back)。 `operator+=`追加单参数值，而多参数 `append` 成员函数允许指定字符串的特定部分用于添加。
+可以使用[运算符 + =](#op_add_eq)或成员函数或 push_back 将字符追加到字符串 `append` [push_back](#push_back)。 `operator+=` 追加单参数值，而多参数 `append` 成员函数允许指定字符串的特定部分用于添加。
 
 ### <a name="example"></a>示例
 
@@ -428,7 +435,7 @@ The string str2f is: Wide World
 The appended string str1 is: Hello World.
 ```
 
-## <a name="basic_stringassign"></a><a name="assign"></a>basic_string：： assign
+## <a name="basic_stringassign"></a><a name="assign"></a> basic_string：： assign
 
 对字符串的内容赋新的字符值。
 
@@ -495,7 +502,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="remarks"></a>备注
 
-可为这些字符串分配新字符值。 新值可以是字符串和 C 字符串或单个字符。 如果可以通过单个参数描述新值，则可以使用[operator =](#op_eq) ;否则 `assign` ，可以使用具有多个参数的成员函数指定要将字符串的哪一部分分配给目标字符串。
+可为这些字符串分配新字符值。 新值可以是字符串和 C 字符串或单个字符。 如果可以通过单个参数描述新值，则可以使用 [operator =](#op_eq) ;否则 `assign` ，可以使用具有多个参数的成员函数指定要将字符串的哪一部分分配给目标字符串。
 
 ### <a name="example"></a>示例
 
@@ -589,7 +596,7 @@ The string str2f is: Wide World
 The string str1 assigned a range of string str2f is: World.
 ```
 
-## <a name="basic_stringat"></a><a name="at"></a>basic_string：： at
+## <a name="basic_stringat"></a><a name="at"></a> basic_string：： at
 
 使用字符串中的指定索引提供对字符的引用。
 
@@ -612,9 +619,9 @@ reference at(size_type offset);
 
 字符串的第一个元素的索引为零，以下元素按正整数连续索引，以便长度为*n*的字符串具有由数字*n-* 1 索引的第*n*个元素。
 
-与成员函数相比，成员[运算符&#91;&#93;](#op_at)比 `at` 提供对字符串元素的读取和写入访问权限更快。
+与成员函数相比，成员 [运算符&#91;&#93;](#op_at) 比 `at` 提供对字符串元素的读取和写入访问权限更快。
 
-成员不 `operator[]` 检查作为参数传递的索引是否有效，但成员函数是否有效 `at` ，如果有效性不确定，则应使用。 传递给成员函数的索引无效索引（小于零或大于或等于字符串大小的索引） `at` 引发[out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
+成员不 `operator[]` 检查作为参数传递的索引是否有效，但成员函数是否有效 `at` ，如果有效性不确定，则应使用。 传递给成员函数的索引无效索引（小于零或大于或等于字符串大小的索引） `at` 引发 [out_of_range 类](../standard-library/out-of-range-class.md) 异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
 
 返回的引用可能会因字符串重新分配或非字符串修改而失效 **`const`** 。
 
@@ -657,7 +664,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringback"></a><a name="back"></a>basic_string：： back
+## <a name="basic_stringback"></a><a name="back"></a> basic_string：： back
 
 返回对字符串中最后一个元素的引用。
 
@@ -673,7 +680,7 @@ reference back();
 
 ### <a name="remarks"></a>备注
 
-## <a name="basic_stringbasic_string"></a><a name="basic_string"></a>basic_string：： basic_string
+## <a name="basic_stringbasic_string"></a><a name="basic_string"></a> basic_string：： basic_string
 
 构造一个字符串，它为空、由特定字符初始化，或者是另一个字符串对象或 C 样式（以 null 终止）字符串的全部或部分的副本。
 
@@ -830,7 +837,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringbegin"></a><a name="begin"></a>basic_string：： begin
+## <a name="basic_stringbegin"></a><a name="begin"></a> basic_string：： begin
 
 返回发现字符串中第一个元素的位置的迭代器。
 
@@ -880,7 +887,7 @@ int main( ) {
 }
 ```
 
-## <a name="basic_stringc_str"></a><a name="c_str"></a>basic_string：： c_str
+## <a name="basic_stringc_str"></a><a name="c_str"></a> basic_string：： c_str
 
 将字符串的内容转换为以 null 结尾的 C 样式字符串。
 
@@ -944,7 +951,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringcapacity"></a><a name="capacity"></a>basic_string：：容量
+## <a name="basic_stringcapacity"></a><a name="capacity"></a> basic_string：：容量
 
 返回在不增加字符串内存分配的情况下可存储在字符串中的元素的最大数目。
 
@@ -1014,7 +1021,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringcbegin"></a><a name="cbegin"></a>basic_string：： cbegin
+## <a name="basic_stringcbegin"></a><a name="cbegin"></a> basic_string：： cbegin
 
 返回一个 **`const`** 迭代器，该迭代器用于寻址范围内的第一个元素。
 
@@ -1024,13 +1031,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>返回值
 
-一个 **`const`** 随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾的位置（对于空范围， `cbegin() == cend()` ）。
+一个 **`const`** 随机访问迭代器，指向范围的第一个元素，或刚超出空范围末尾 (空范围) 的位置 `cbegin() == cend()` 。
 
 ### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `begin()` `cbegin()` 。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 **`const`**) 容器 `begin()` `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1040,7 +1047,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="basic_stringcend"></a><a name="cend"></a>basic_string：： cend
+## <a name="basic_stringcend"></a><a name="cend"></a> basic_string：： cend
 
 返回一个 **`const`** 迭代器，该迭代器用于寻址范围内最后一个元素之外的位置。
 
@@ -1056,7 +1063,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改（非 **`const`** ）容器 `end()` `cend()` 。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 **`const`**) 容器 `end()` `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -1068,7 +1075,7 @@ auto i2 = Container.cend();
 
 返回的值 `cend` 不应被取消引用。
 
-## <a name="basic_stringclear"></a><a name="clear"></a>basic_string：： clear
+## <a name="basic_stringclear"></a><a name="clear"></a> basic_string：： clear
 
 清除字符串中的全部元素。
 
@@ -1119,7 +1126,7 @@ The modified string str1 is:
 Nothing printed above because the string str1 is empty.
 ```
 
-## <a name="basic_stringcompare"></a><a name="compare"></a>basic_string：： compare
+## <a name="basic_stringcompare"></a><a name="compare"></a> basic_string：： compare
 
 与指定字符串进行区分大小写的比较，以确定两个字符串是否相等或按字典顺序一个字符串是否小于另一个。
 
@@ -1380,7 +1387,7 @@ The 3 characters from position 2 of the operand string are equal to
 the first 3 characters of the parameter C-string.
 ```
 
-## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a>basic_string：： const_iterator
+## <a name="basic_stringconst_iterator"></a><a name="const_iterator"></a> basic_string：： const_iterator
 
 一种类型，它提供可访问和读取字符串中元素的随机访问迭代器 **`const`** 。
 
@@ -1396,7 +1403,7 @@ typedef implementation-defined const_iterator;
 
 有关如何声明和使用 `const_iterator` 的示例，请参阅 [begin](#begin) 的示例。
 
-## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a>basic_string：： const_pointer
+## <a name="basic_stringconst_pointer"></a><a name="const_pointer"></a> basic_string：： const_pointer
 
 提供指向字符串中元素的指针的类型 **`const`** 。
 
@@ -1436,7 +1443,7 @@ The string pstr1a is: In Here.
 The C-string cstr1c is: Out There.
 ```
 
-## <a name="basic_stringconst_reference"></a><a name="const_reference"></a>basic_string：： const_reference
+## <a name="basic_stringconst_reference"></a><a name="const_reference"></a> basic_string：： const_reference
 
 一种类型，该类型提供对 **`const`** 存储在字符串中用于读取和执行操作的元素的引用 **`const`** 。
 
@@ -1454,7 +1461,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 有关如何声明和使用 `const_reference` 的示例，请参阅 [at](#at) 的示例。
 
-## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>basic_string：： const_reverse_iterator
+## <a name="basic_stringconst_reverse_iterator"></a><a name="const_reverse_iterator"></a> basic_string：： const_reverse_iterator
 
 提供可读取字符串中任何元素的随机访问迭代器的类型 **`const`** 。
 
@@ -1470,7 +1477,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 有关如何声明和使用 `const_reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。
 
-## <a name="basic_stringcopy"></a><a name="copy"></a>basic_string：： copy
+## <a name="basic_stringcopy"></a><a name="copy"></a> basic_string：： copy
 
 将指定数目的字符从源字符串中的索引位置复制到目标字符组。
 
@@ -1488,7 +1495,7 @@ size_type copy(
 *ptr*\
 要复制的元素的目标字符数组。
 
-*计数*最多从源字符串复制的字符数。
+*计数* 最多从源字符串复制的字符数。
 
 *抵销*\
 要进行复制的源字符串中的开始位置。
@@ -1550,7 +1557,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringcrbegin"></a><a name="crbegin"></a>basic_string：： crbegin
+## <a name="basic_stringcrbegin"></a><a name="crbegin"></a> basic_string：： crbegin
 
 返回发现反向字符串中第一个元素的位置的常量迭代器。
 
@@ -1562,7 +1569,7 @@ const_reverse_iterator crbegin() const;
 
 指向刚超出字符串末尾的位置的反向迭代器。 该位置指定反向序列的开头。
 
-## <a name="basic_stringcrend"></a><a name="crend"></a>basic_string：： crend
+## <a name="basic_stringcrend"></a><a name="crend"></a> basic_string：： crend
 
 返回发现反向字符串中最后一个元素之后的位置的常量迭代器。
 
@@ -1576,7 +1583,7 @@ const_reverse_iterator crend() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="basic_string_copy_s"></a><a name="copy_s"></a>basic_string：： _Copy_s
+## <a name="basic_string_copy_s"></a><a name="copy_s"></a> basic_string：： _Copy_s
 
 将指定数目的字符从源字符串中的索引位置复制到目标字符组。
 
@@ -1596,7 +1603,7 @@ size_type _Copy_s(
 *dest_size*\
 *Dest*的大小。
 
-*计数*最多从源字符串复制的字符数。
+*计数* 最多从源字符串复制的字符数。
 
 *抵销*\
 要进行复制的源字符串中的开始位置。
@@ -1656,7 +1663,7 @@ The number of copied characters in array2 is: 5
 The copied characters array2 is: World
 ```
 
-## <a name="basic_stringdata"></a><a name="data"></a>basic_string：:d ata
+## <a name="basic_stringdata"></a><a name="data"></a> basic_string：:d ata
 
 将字符串的内容转换为以 null 结尾的字符数组。
 
@@ -1671,13 +1678,13 @@ value_type *data() noexcept;
 
 ### <a name="remarks"></a>备注
 
-指向 `data` 有效范围内的点的指针 `[data(), data() + size()]` 。 范围内的每个元素对应于字符串中的当前数据。 也就是说，对于范围中的每个有效偏移*n* ，均为 `data() + n == addressof(operator[](n))` 。
+指向 `data` 有效范围内的点的指针 `[data(), data() + size()]` 。 范围内的每个元素对应于字符串中的当前数据。 也就是说，对于范围中的每个有效偏移 *n* ，均为 `data() + n == addressof(operator[](n))` 。
 
 如果修改的重载返回的字符串的内容，则 **`const`** `data` 该行为是不确定的。 如果终端 null 字符更改为其他任何值，也会获得未定义的行为。 如果向标准库函数传递对字符串的非 const 引用，则返回的指针可能无效。 还可以通过调用非常量成员函数使其失效。 对成员 `at` 、、、、、、 `back` `begin` `end` `front` `rbegin` `rend` 和的调用 `operator[]` 不会使指针失效。
 
 在 c + + 11 之前， `data` 不保证返回的字符串以 null 结尾。 由于 c + + 11， `data` 并且 `c_str` 两者都返回一个以 null 结尾的字符串，且实际上是相同的。
 
-在 c + + 17 中，非常量重载是新增的。 若要使用它，请指定 **/std： c + + 17**或 **/std： c + + 最新**编译器选项。
+在 c + + 17 中，非常量重载是新增的。 若要使用它，请指定 **/std： c + + 17** 或 **/std： c + + 最新** 编译器选项。
 
 ### <a name="example"></a>示例
 
@@ -1725,7 +1732,7 @@ The C-style string c_str1 is: Hello world
 The length of C-style string str1 = 11
 ```
 
-## <a name="basic_stringdifference_type"></a><a name="difference_type"></a>basic_string：:d ifference_type
+## <a name="basic_stringdifference_type"></a><a name="difference_type"></a> basic_string：:d ifference_type
 
 提供引用同一字符串中的元素的两个迭代器之间的差异的类型。
 
@@ -1773,7 +1780,7 @@ The last character i is at position: 8.
 The difference is: 6.
 ```
 
-## <a name="basic_stringempty"></a><a name="empty"></a>basic_string：： empty
+## <a name="basic_stringempty"></a><a name="empty"></a> basic_string：： empty
 
 测试字符串是否包含字符。
 
@@ -1783,7 +1790,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果字符串对象不包含任何字符，则为; 否则为。**`false`** 如果至少有一个字符。
+**`true`** 如果字符串对象不包含任何字符，则为; 否则为。 **`false`** 如果至少有一个字符。
 
 ### <a name="remarks"></a>备注
 
@@ -1821,7 +1828,7 @@ int main() {
 }
 ```
 
-## <a name="basic_stringend"></a><a name="end"></a>basic_string：： end
+## <a name="basic_stringend"></a><a name="end"></a> basic_string：： end
 
 返回发现字符串中最后一个元素之后的位置的迭代器。
 
@@ -1837,7 +1844,7 @@ iterator end();
 
 ### <a name="remarks"></a>备注
 
-`end`通常用于测试迭代器是否已到达其字符串的末尾。 返回的值 `end` 不应被取消引用。
+`end` 通常用于测试迭代器是否已到达其字符串的末尾。 返回的值 `end` 不应被取消引用。
 
 如果将 `end` 的返回值分配给 `const_iterator`，则不能修改字符串对象。 如果将的返回值 `end` 分配给 `iterator` ，则可以修改字符串对象。
 
@@ -1869,7 +1876,7 @@ int main( )
    cout << endl;
 
    // The dereferenced iterator can be used to modify a character
-*str1_Iter = 'T';
+   *str1_Iter = 'T';
    cout << "The last character-letter of the modified str1 is now: "
         << *str1_Iter << endl;
    cout << "The modified string str1 is now: " << str1 << endl;
@@ -1894,7 +1901,67 @@ The modified string str1 is now: No way ouT.
 The string str2 is empty.
 ```
 
-## <a name="basic_stringerase"></a><a name="erase"></a>basic_string：： erase
+## <a name="basic_stringends_with"></a><a name="ends_with"></a> basic_string：： ends_with
+
+检查字符串是否以指定的后缀结尾。
+
+```cpp
+bool ends_with(const CharType c) const noexcept;
+bool ends_with(const CharType* const x) const noexcept;
+bool ends_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>参数
+
+*ansi-c*\
+要查找的单字符后缀。
+
+*sv*\
+包含要查找的后缀的字符串视图。
+可以传递 `std::basic_string` 转换为字符串视图的。
+
+*x-blade*\
+以 Null 结尾的字符串，其中包含要查找的后缀。
+
+### <a name="return-value"></a>返回值
+
+`true` 如果字符串以指定的后缀结尾，则为; 否则为。 `false` 否则为。
+
+### <a name="remarks"></a>备注
+
+`ends_with()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
+
+请参阅 [starts_with](#starts_with) 以检查字符串是否以指定的前缀开头。
+
+### <a name="example"></a>示例
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'
+    std::cout << str.ends_with('g') << '\n';
+    std::cout << str.ends_with("eFg") << '\n';
+
+    std::basic_string<char> str2 = "efg";
+    std::cout << str.ends_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+true
+false
+true
+```
+
+## <a name="basic_stringerase"></a><a name="erase"></a> basic_string：： erase
 
 从字符串中的指定位置删除一个或一系列元素。
 
@@ -1926,7 +1993,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 要删除的字符串中的第一个字符的索引。
 
 *计*\
-如果在以*offset*开头的字符串范围内有多个，则将删除的元素的数目。
+如果在以 *offset*开头的字符串范围内有多个，则将删除的元素的数目。
 
 ### <a name="return-value"></a>返回值
 
@@ -1997,7 +2064,7 @@ The original string object str3 is: Hello computer.
 The modified string object str3m is: Hello .
 ```
 
-## <a name="basic_stringfind"></a><a name="find"></a>basic_string：： find
+## <a name="basic_stringfind"></a><a name="find"></a> basic_string：： find
 
 向前搜索字符串，搜索与指定字符序列匹配的第一个子字符串。
 
@@ -2172,7 +2239,7 @@ the 5th position in str4 is: 25
 The index of the 1st element of 'clear' in str4 is: 0
 ```
 
-## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a>basic_string：： find_first_not_of
+## <a name="basic_stringfind_first_not_of"></a><a name="find_first_not_of"></a> basic_string：： find_first_not_of
 
 在字符串中搜索不属于指定字符串元素的第一个字符。
 
@@ -2360,7 +2427,7 @@ The index of the 1st non occurrence of an element of '12' in str4 after
 the 0th position is: 2
 ```
 
-## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a>basic_string：： find_first_of
+## <a name="basic_stringfind_first_of"></a><a name="find_first_of"></a> basic_string：： find_first_of
 
 在字符串中搜索与指定字符串中任何元素匹配的第一个字符。
 
@@ -2547,7 +2614,7 @@ The index of the 1st occurrence of an element of 'a2' in str4 after
 the 0th position is: 1
 ```
 
-## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a>basic_string：： find_last_not_of
+## <a name="basic_stringfind_last_not_of"></a><a name="find_last_not_of"></a> basic_string：： find_last_not_of
 
 在字符串中搜索不属于指定字符串元素的最后一个字符。
 
@@ -2736,7 +2803,7 @@ The index of the last occurrence of an element not in '12'
 in str4 before the end position is: 10
 ```
 
-## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a>basic_string：： find_last_of
+## <a name="basic_stringfind_last_of"></a><a name="find_last_of"></a> basic_string：： find_last_of
 
 在字符串中搜索与指定字符串中任何元素匹配的最后一个字符。
 
@@ -2910,7 +2977,7 @@ The index of the last occurrence of an element of 'a2' in str4 before
 the 0th position is: 9
 ```
 
-## <a name="basic_stringfront"></a><a name="front"></a>basic_string：：前门
+## <a name="basic_stringfront"></a><a name="front"></a> basic_string：：前门
 
 返回对字符串中第一个元素的引用。
 
@@ -2926,7 +2993,7 @@ reference front();
 
 ### <a name="remarks"></a>备注
 
-## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a>basic_string：： get_allocator
+## <a name="basic_stringget_allocator"></a><a name="get_allocator"></a> basic_string：： get_allocator
 
 返回用于构造字符串的分配器对象的一个副本。
 
@@ -2969,7 +3036,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringinsert"></a><a name="insert"></a>basic_string：： insert
+## <a name="basic_stringinsert"></a><a name="insert"></a> basic_string：： insert
 
 将一个、多个或一些列元素插入字符串中的指定位置。
 
@@ -3148,7 +3215,7 @@ The string with a character inserted from a range is: ABCDefgHIJ
 The string with a character inserted from a range is: ABCDeeeHIJ
 ```
 
-## <a name="basic_stringiterator"></a><a name="iterator"></a>basic_string：： iterator
+## <a name="basic_stringiterator"></a><a name="iterator"></a> basic_string：： iterator
 
 一种类型，它提供可访问和读取字符串中元素的随机访问迭代器 **`const`** 。
 
@@ -3164,7 +3231,7 @@ typedef implementation-defined iterator;
 
 有关如何声明和使用 `iterator` 的示例，请参阅 [begin](#begin) 的示例。
 
-## <a name="basic_stringlength"></a><a name="length"></a>basic_string：： length
+## <a name="basic_stringlength"></a><a name="length"></a> basic_string：： length
 
 返回字符串中元素的当前数目。
 
@@ -3230,7 +3297,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringmax_size"></a><a name="max_size"></a>basic_string：： max_size
+## <a name="basic_stringmax_size"></a><a name="max_size"></a> basic_string：： max_size
 
 返回字符串可包含的字符的最大数目。
 
@@ -3300,7 +3367,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringnpos"></a><a name="npos"></a>basic_string：： npos
+## <a name="basic_stringnpos"></a><a name="npos"></a> basic_string：： npos
 
 一个无符号整数值，在搜索功能失败时指示 "找不到" 或 "所有剩余字符"。
 
@@ -3310,13 +3377,13 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>备注
 
-如果要检查值的返回值 `npos` ，则它可能无法工作，除非返回值为[size_type](#size_type)类型，而不是 **`int`** 或 **`unsigned`** 。
+如果要检查值的返回值 `npos` ，则它可能无法工作，除非返回值为 [size_type](#size_type) 类型，而不是 **`int`** 或 **`unsigned`** 。
 
 ### <a name="example"></a>示例
 
 有关如何声明和使用 `npos` 的示例，请参阅 [find](#find) 的示例。
 
-## <a name="basic_stringoperator"></a><a name="op_add_eq"></a>basic_string：： operator + =
+## <a name="basic_stringoperator"></a><a name="op_add_eq"></a> basic_string：： operator + =
 
 向字符串追加字符。
 
@@ -3405,7 +3472,7 @@ The appended string str1d is: Hello Wide .
 The doubly appended strig str1 is: Hello Wide World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_eq"></a>basic_string：： operator =
+## <a name="basic_stringoperator"></a><a name="op_eq"></a> basic_string：： operator =
 
 对字符串的内容赋新的字符值。
 
@@ -3499,7 +3566,7 @@ The string str3c is: World.
 The string str1 reassigned with string str3c is: World.
 ```
 
-## <a name="basic_stringoperator"></a><a name="op_at"></a>basic_string：： operator []
+## <a name="basic_stringoperator"></a><a name="op_at"></a> basic_string：： operator []
 
 使用字符串中的指定索引提供对字符的引用。
 
@@ -3523,7 +3590,7 @@ reference operator[](size_type offset);
 
 `operator[]` 比成员函数 [at](#at) 更快，以提供对字符串元素的读取和写入访问权限。
 
-`operator[]`不检查作为参数传递的索引是否有效，但成员函数的 `at` 作用并不一定。 传递给成员函数的无效索引（小于零或大于或等于字符串大小的索引） `at` 引发[out_of_range 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
+`operator[]` 不检查作为参数传递的索引是否有效，但成员函数的 `at` 作用并不一定。 索引 (小于零或大于等于) 传递给成员函数的字符串大小的索引无效，将 `at` 引发 [out_of_range 类](../standard-library/out-of-range-class.md) 异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
 
 返回的引用可能会因字符串重新分配或非字符串修改而失效 **`const`** 。
 
@@ -3568,7 +3635,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringpointer"></a><a name="pointer"></a>basic_string：:p ointer
+## <a name="basic_stringpointer"></a><a name="pointer"></a> basic_string：:p ointer
 
 提供指向字符串中或字符数组中字符元素的指针的类型。
 
@@ -3605,7 +3672,7 @@ The string pstr1a is: In Here.
 The C-string cstr1b is: Out There.
 ```
 
-## <a name="basic_stringpop_back"></a><a name="pop_back"></a>basic_string：:p op_back
+## <a name="basic_stringpop_back"></a><a name="pop_back"></a> basic_string：:p op_back
 
 删除字符串的最后一个元素。
 
@@ -3617,7 +3684,7 @@ void pop_back();
 
 此成员函数可有效地调用 `erase(size() - 1)`，以清除序列（必须为非空）的最后一个元素。
 
-## <a name="basic_stringpush_back"></a><a name="push_back"></a>basic_string：:p ush_back
+## <a name="basic_stringpush_back"></a><a name="push_back"></a> basic_string：:p ush_back
 
 在字符串的末尾处添加一个元素。
 
@@ -3632,7 +3699,7 @@ void push_back(value_type char_value);
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[insert](#insert)（ [end](#end)， *char_value* ）。
+成员函数*char_value* ) 有效地调用[insert](#insert) ([端](#end)。
 
 ### <a name="example"></a>示例
 
@@ -3672,7 +3739,7 @@ The last character-letter of the modified str1 is now: c
 The modified string str1 is: abc
 ```
 
-## <a name="basic_stringrbegin"></a><a name="rbegin"></a>basic_string：： rbegin
+## <a name="basic_stringrbegin"></a><a name="rbegin"></a> basic_string：： rbegin
 
 返回指向反向字符串中第一个元素的迭代器。
 
@@ -3748,7 +3815,7 @@ AblE was I ere I saw elbA
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreference"></a><a name="reference"></a>basic_string：： reference
+## <a name="basic_stringreference"></a><a name="reference"></a> basic_string：： reference
 
 提供对存储在字符串中的元素的引用的类型。
 
@@ -3768,7 +3835,7 @@ typedef typename allocator_type::reference reference;
 
 有关如何声明和使用 `reference` 的示例，请参阅 [at](#at) 的示例。
 
-## <a name="basic_stringrend"></a><a name="rend"></a>basic_string：： rend
+## <a name="basic_stringrend"></a><a name="rend"></a> basic_string：： rend
 
 返回一种迭代器，用于寻址反向字符串中最后一个元素之后的位置。
 
@@ -3846,7 +3913,7 @@ ablE was I ere I saw elbo
 The string str2 is empty.
 ```
 
-## <a name="basic_stringreplace"></a><a name="replace"></a>basic_string：： replace
+## <a name="basic_stringreplace"></a><a name="replace"></a> basic_string：： replace
 
 用指定字符或者从其他范围、字符串或 C 字符串复制的字符来替代字符串中指定位置的元素。
 
@@ -3958,7 +4025,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 一种迭代器（const_pointer 或 const_iterator），用于寻址参数字符串中进行复制的最后一个字符。
 
 *计*\
-将*char_value*复制到操作数字符串的次数。
+将 *char_value* 复制到操作数字符串的次数。
 
 ### <a name="return-value"></a>返回值
 
@@ -4143,7 +4210,7 @@ The result of s7o.replace (IterF3 ,IterL3 ,IterF4 ,IterL4)
 is the string: OPPOOOO.
 ```
 
-## <a name="basic_stringreserve"></a><a name="reserve"></a>basic_string：： reserve
+## <a name="basic_stringreserve"></a><a name="reserve"></a> basic_string：： reserve
 
 将字符串的容量设置为一个数目，这个数目至少应与指定数目一样大。
 
@@ -4233,7 +4300,7 @@ The current size of string str1 is: 11.
 The reduced capacity of string str1 is: 47.
 ```
 
-## <a name="basic_stringresize"></a><a name="resize"></a>basic_string：： resize
+## <a name="basic_stringresize"></a><a name="resize"></a> basic_string：： resize
 
 根据要求追加或删除元素，为字符串指定新的大小。
 
@@ -4343,7 +4410,7 @@ The current size of downsized string str1 is: 5.
 The capacity of downsized string str1 is: 47.
 ```
 
-## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a>basic_string：： reverse_iterator
+## <a name="basic_stringreverse_iterator"></a><a name="reverse_iterator"></a> basic_string：： reverse_iterator
 
 提供对存储在字符串中的元素的引用的类型。
 
@@ -4359,7 +4426,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 有关如何声明和使用 `reverse_iterator` 的示例，请参阅 [rbegin](#rbegin) 的示例。
 
-## <a name="basic_stringrfind"></a><a name="rfind"></a>basic_string：： rfind
+## <a name="basic_stringrfind"></a><a name="rfind"></a> basic_string：： rfind
 
 向后搜索字符串，搜索与指定字符序列匹配的第一个子字符串。
 
@@ -4534,7 +4601,7 @@ The substring 'clear' was not found in str4 before the 15th position.
 The index of the 1st element of 'clear' in str4 is: 17
 ```
 
-## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a>basic_string：： shrink_to_fit
+## <a name="basic_stringshrink_to_fit"></a><a name="shrink_to_fit"></a> basic_string：： shrink_to_fit
 
 放弃字符串的超出容量。
 
@@ -4546,7 +4613,7 @@ void shrink_to_fit();
 
 此成员函数可以消除容器中任何不必要的存储。
 
-## <a name="basic_stringsize"></a><a name="size"></a>basic_string：： size
+## <a name="basic_stringsize"></a><a name="size"></a> basic_string：： size
 
 返回字符串中元素的当前数目。
 
@@ -4612,7 +4679,7 @@ int main( )
 }
 ```
 
-## <a name="basic_stringsize_type"></a><a name="size_type"></a>basic_string：： size_type
+## <a name="basic_stringsize_type"></a><a name="size_type"></a> basic_string：： size_type
 
 一种无符号整数类型，可以表示字符串中的元素和索引数。
 
@@ -4655,7 +4722,67 @@ The current size of string str1 is: 11.
 The capacity of string str1 is: 15.
 ```
 
-## <a name="basic_stringsubstr"></a><a name="substr"></a>basic_string：： substr
+## <a name="basic_stringstarts_with"></a><a name="starts_with"></a> basic_string：： starts_with
+
+检查字符串是否以指定的前缀开头。
+
+```cpp
+bool starts_with(const CharType c) const noexcept;
+bool starts_with(const CharType* const x) const noexcept;
+bool starts_with(const basic_string_view sv) const noexcept;
+```
+
+### <a name="parameters"></a>参数
+
+*ansi-c*\
+要查找的单字符前缀。
+
+*sv*\
+一个包含要查找的前缀的字符串视图。
+可以传递 `std::basic_string` 转换为字符串视图的。
+
+*x-blade*\
+以 Null 结尾的字符串，其中包含要查找的前缀。
+
+### <a name="return-value"></a>返回值
+
+`true` 如果字符串以指定的前缀开头，则为; 否则为。 `false` 否则为。
+
+### <a name="remarks"></a>备注
+
+`starts_with()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
+
+请参阅 [ends_with](#ends_with) ，查看字符串是否以指定的后缀结尾。
+
+### <a name="example"></a>示例
+
+```cpp
+// Requires /std:c++latest
+#include <string>
+#include <iostream>
+
+int main()
+{
+    std::basic_string<char> str = "abcdefg";
+
+    std::cout << std::boolalpha; // so booleans show as 'true'/'false'     
+    std::cout << str.starts_with('b') << '\n';
+    std::cout << str.starts_with("aBc") << '\n';
+
+    std::basic_string<char> str2 = "abc";
+    std::cout << str.starts_with(str2);
+
+    return 0;
+}
+```
+
+```Output
+false
+false
+true
+```
+
+## <a name="basic_stringsubstr"></a><a name="substr"></a> basic_string：： substr
 
 从字符串起始处的指定位置复制最多某个数目的字符的子字符串。
 
@@ -4714,7 +4841,7 @@ Heterological paradoxes are persistent.
 which is the entire original string.
 ```
 
-## <a name="basic_stringswap"></a><a name="swap"></a>basic_string：： swap
+## <a name="basic_stringswap"></a><a name="swap"></a> basic_string：： swap
 
 交换两个字符串的内容。
 
@@ -4775,7 +4902,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="basic_stringtraits_type"></a><a name="traits_type"></a>basic_string：： traits_type
+## <a name="basic_stringtraits_type"></a><a name="traits_type"></a> basic_string：： traits_type
 
 存储在字符串中的元素的字符特征的一个类型。
 
@@ -4793,7 +4920,7 @@ typedef Traits traits_type;
 
 有关如何声明和使用 `traits_type` 的示例，请参阅 [copy](../standard-library/char-traits-struct.md#copy) 的示例。
 
-## <a name="basic_stringvalue_type"></a><a name="value_type"></a>basic_string：： value_type
+## <a name="basic_stringvalue_type"></a><a name="value_type"></a> basic_string：： value_type
 
 表示存储在字符串中的字符的类型的类型。
 
