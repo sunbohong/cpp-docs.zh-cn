@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: f5340f2e56a367734293d661d9d89eb0db522fd2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3694dc72860892d778533de2e40898faf9cc287d
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842047"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042155"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
@@ -643,7 +643,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 及更高版本**： **`using`** **/std： c + + 17** 模式中的语句使基类中的所有构造函数的作用域除外，但对派生类中的构造函数具有完全相同的签名。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。 另请参阅 [Visual Studio 2017 版本15.7 中的改进](../overview/cpp-conformance-improvements.md?view=vs-2017#improvements_157)。
+**Visual Studio 2017 及更高版本**： **`using`** **/std： c + + 17** 模式中的语句使基类中的所有构造函数的作用域除外，但对派生类中的构造函数具有完全相同的签名。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。
 
 ::: moniker-end
 
