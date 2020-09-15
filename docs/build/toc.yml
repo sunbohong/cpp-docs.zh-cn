@@ -114,7 +114,7 @@
           href: ../build/using-function-name-without-parens-produces-no-code.md
         - name: 优化最佳做法
           href: ../build/optimization-best-practices.md
-        - name: 按配置优化
+        - name: 按配置文件优化
           expanded: false
           items:
             - name: 按配置文件优化
@@ -744,6 +744,8 @@
                       href: ../build/reference/zc-inline-remove-unreferenced-comdat.md
                     - name: '/Zc:noexceptTypes（C++17 noexcept 规则）'
                       href: ../build/reference/zc-noexcepttypes.md
+                    - name: '/Zc:preprocessor（启用预处理器一致性模式）'
+                      href: ../build/reference/zc-preprocessor.md
                     - name: '/Zc:referenceBinding（强制引用绑定规则）'
                       href: ../build/reference/zc-referencebinding-enforce-reference-binding-rules.md
                     - name: '/Zc:rvalueCast（强制实施类型转换规则）'
