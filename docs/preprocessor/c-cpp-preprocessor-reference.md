@@ -6,18 +6,18 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: e53f7270a71e5e7c3f456be7d55d49eaf352aecb
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e72146d8b88f5a4bffcaaa121f6851d740ec948b
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040738"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075629"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 预处理器参考
 
 *C/c + + 预处理器参考*说明了在 Microsoft c/c + + 中实现的预处理器。 在将 C 和 C++ 文件传递到编译器之前，预处理器将对这些文件执行预先操作。 可以使用预处理器有条件地编译代码、插入文件、指定编译时错误消息以及将计算机特定规则应用于代码节。
 
-在 Visual Studio 2019 中， [/experimental：预处理器](../build/reference/experimental-preprocessor.md) 编译器选项启用新的预处理器实现。 新的实现仍在进行中，因此被视为实验性。 它最终与 C99、C11 和 c + + 20 一致。 有关详细信息，请参阅 [MSVC new 预处理器概述](preprocessor-experimental-overview.md)。
+在 Visual Studio 2019 中， [/zc：预处理器](../build/reference/zc-preprocessor.md) 编译器选项提供完全一致的 C11 和 C17 预处理器。 这是使用编译器标志或时的默认值 `/std:c11` `/std:c17` 。
 
 ## <a name="in-this-section"></a>在本节中
 

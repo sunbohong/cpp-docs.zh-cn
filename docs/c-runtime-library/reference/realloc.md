@@ -1,6 +1,7 @@
 ---
 title: realloc
-ms.date: 4/2/2020
+description: 'Realloc 的 API 参考 ( # A1;这将重新分配内存块。'
+ms.date: 9/11/2020
 api_name:
 - realloc
 - _o_realloc
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 72c38021452940553bad770160ecc5db7ea546d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c68909b2f5d73959465d63af522ceeb00c8ce23e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216812"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075811"
 ---
 # <a name="realloc"></a>realloc
 
@@ -59,31 +60,34 @@ void *realloc(
 
 ### <a name="parameters"></a>参数
 
-*memblock*<br/>
+*`memblock`*\
 指向之前已分配内存块的指针。
 
-*大小*<br/>
+*`size`*\
 新大小（字节）。
 
 ## <a name="return-value"></a>返回值
 
-**realloc**返回指向重新 **`void`** 分配的（并且可能已移动的）内存块的指针。
+**`realloc`** 返回指向重新 **`void`** 分配的 (的指针，并且可能已移动) 内存块。
 
-如果没有足够的可用内存将块扩展到给定大小，则原始块将保持不变，并返回**NULL** 。
+如果没有足够的可用内存将块扩展到给定大小，则原始块将保持不变，并 **`NULL`** 返回。
 
-如果*size*为零，则释放由*memblock*指向的块;返回值为**NULL**， *memblock*将指向已释放的块。
+如果 *`size`* 为零，则释放由指向的块 *`memblock`* ; 返回值为 **`NULL`** ，并 *`memblock`* 将其指向已释放的块。
 
-返回值将指向保证适当对齐任何类型的对象的存储的存储空间。 若要获取指向类型而非的指针 **`void`** ，请在返回值上使用类型转换。
+返回值指向为任何类型的对象的存储适当对齐的存储空间。 若要获取指向类型而非的指针 **`void`** ，请在返回值上使用类型转换。
 
 ## <a name="remarks"></a>备注
 
-**Realloc**函数更改已分配内存块的大小。 *Memblock*参数指向内存块的开头。 如果*memblock*为**NULL**，则**realloc**的行为方式与**malloc**相同，并分配一个*大小*为字节的新块。 如果*memblock*不为**NULL**，则它应为先前对**calloc**、 **malloc**或**realloc**的调用返回的指针。
+> [!NOTE]
+> **`realloc`** 尚未更新为实现 C17 行为，因为新行为与 Windows 操作系统不兼容。
 
-*Size*参数提供块的新大小（以字节为单位）。 块的内容不随其新旧大小而更改，尽管新块可以在不同的位置。 因为新块可以在新的内存位置，所以**realloc**返回的指针不一定是通过*memblock*参数传递的指针。 在缓冲区增长时， **realloc**不会为新分配的内存分配零。
+**`realloc`** 函数更改已分配内存块的大小。 *`memblock`* 参数指向内存块的开头。 如果 *`memblock`* 为 **`NULL`** ， **`realloc`** 则的行为方式与 **`malloc`** 和分配新的字节块相同 *`size`* 。 如果不 *`memblock`* 为 **`NULL`** ，则它应为之前对、或的调用返回的指针 **`calloc`** **`malloc`** **`realloc`** 。
 
-如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**，则**realloc**将**errno**设置为**ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+*`size`* 自变量提供块的新大小（以字节为单位）。 块的内容不随其新旧大小而更改，尽管新块可以在不同的位置。 由于新块可以在新的内存位置，因此，返回的指针 **`realloc`** 不一定是通过参数传递的指针 *`memblock`* 。 **`realloc`** 如果缓冲区增长，则不会为新分配的内存分配零。
 
-**realloc**调用**Malloc**以便使用 c + + [_set_new_mode](set-new-mode.md)函数设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由[_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**realloc**无法分配内存时， **malloc**会调用新的处理程序例程，方法与 **`new`** 运算符在同一原因发生故障时相同。 若要重写默认值，请在程序的早期调用：
+**`realloc`****`errno`** **`ENOMEM`** 如果内存分配失败或请求的内存量超过，则将设置为 **`_HEAP_MAXREQ`** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+**`realloc`** 调用以便 **`malloc`** 使用 c + + [_set_new_mode](set-new-mode.md) 函数设置新的处理程序模式。 新处理程序模式将指示是否在失败 **`malloc`** 时调用由 [_set_new_handler](set-new-handler.md)设置的新处理程序例程。 默认情况下， **`malloc`** 在无法分配内存时，不会调用新的处理程序例程。 您可以重写此默认行为，以便在 **`realloc`** 无法分配内存时， **`malloc`** 调用新的处理程序例程，其方式与 **`new`** 运算符在相同原因发生故障时相同。 若要重写默认值，请在程序的早期调用：
 
 ```C
 _set_new_mode(1);
@@ -91,17 +95,17 @@ _set_new_mode(1);
 
 或链接到 NEWMODE.OBJ（请参阅[链接选项](../../c-runtime-library/link-options.md)）。
 
-当应用程序与调试版的 C 运行时库链接时， **realloc**解析为[_realloc_dbg](realloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
+当应用程序与调试版的 C 运行时库链接时，将 **`realloc`** 解析为 [_realloc_dbg](realloc-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-**realloc**被标记为， `__declspec(noalias)` `__declspec(restrict)` 这意味着该函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
+**`realloc`** 被标记为 `__declspec(noalias)` 和 `__declspec(restrict)` ，这意味着函数保证不修改全局变量，并且返回的指针没有化名。 有关详细信息，请参阅 [noalias](../../cpp/noalias.md) 和[限制](../../cpp/restrict.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**realloc**|\<stdlib.h> 和 \<malloc.h>|
+|**`realloc`**|\<stdlib.h> 和 \<malloc.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -154,7 +158,7 @@ Size of block after realloc of 1000 more longs: 8000
 
 ## <a name="see-also"></a>另请参阅
 
-[内存分配](../../c-runtime-library/memory-allocation.md)<br/>
-[calloc](calloc.md)<br/>
-[忙](free.md)<br/>
-[malloc](malloc.md)<br/>
+[内存分配](../../c-runtime-library/memory-allocation.md)\
+[calloc](calloc.md)\
+[忙](free.md)\
+[malloc](malloc.md)

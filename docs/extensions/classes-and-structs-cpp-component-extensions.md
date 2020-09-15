@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: d01768eeb179ffdd0c39ce0717b84204d988528d
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 1ec29dcc09cd338136102c0f3b769055d5143973
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807766"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075798"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class 和 ref struct（C++/CLI 和 C++/CX）
 
@@ -29,7 +29,7 @@ ref class**** 或 ref struct**** 扩展声明了对象生存期** 受自动管�
 ### <a name="syntax"></a>语法
 
 ```cpp
-class_access ref class name modifier : inherit_accessbase_type {};
+class_access ref class name modifier : inherit_access base_type {};
 class_access ref struct name modifier : inherit_access base_type {};
 class_access value class name modifier : inherit_access base_type {};
 class_access value struct name modifier : inherit_access base_type {};
@@ -40,7 +40,7 @@ class_access value struct name modifier : inherit_access base_type {};
 class_access**<br/>
 （可选）程序集外部类或结构的可访问性。 可能的值为 **`public`** ，并且 **`private`** (**`private`** 为默认) 。 嵌套类或结构不得包含 class_access** 说明符。
 
-name<br/>
+*name*<br/>
 类或结构的名称。
 
 *组合键*<br/>
@@ -56,7 +56,7 @@ base_type<br/>
 
 ### <a name="remarks"></a>备注
 
-使用**ref 类**或**值类**声明的对象的默认成员可访问性为 **`private`** 。 使用**ref 结构**或**值结构**声明的对象的默认成员可访问性为 **`public`** 。
+使用 **ref 类** 或 **值类** 声明的对象的默认成员可访问性为 **`private`** 。 使用 **ref 结构** 或 **值结构** 声明的对象的默认成员可访问性为 **`public`** 。
 
 如果引用类型继承自其他引用类型，必须显式重写（使用 [override](override-cpp-component-extensions.md)）或隐藏（使用 [new（vtable 中的新槽）](new-new-slot-in-vtable-cpp-component-extensions.md)）基类中的虚函数。 派生类函数也必须显式标记为 **`virtual`** 。
 
@@ -78,7 +78,7 @@ base_type<br/>
 
 - [如何：包装本机类以供 C 使用#](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-- [C + +/CLI)  (泛型类](generic-classes-cpp-cli.md)
+- [C + +/CLI)  (泛型类 ](generic-classes-cpp-cli.md)
 
 ## <a name="windows-runtime"></a>Windows 运行时
 

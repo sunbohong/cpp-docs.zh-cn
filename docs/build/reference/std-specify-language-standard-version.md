@@ -1,31 +1,42 @@
 ---
 title: /std（指定语言标准版本）
-ms.date: 06/04/2020
+description: MSVC 编译器选项/std 指定编译器支持的 C 或 c + + 语言标准。
+ms.date: 09/11/2020
 f1_keywords:
 - /std
 - -std
+- /std:c++14
+- /std:c++17
+- /std:c11
+- /std:c17
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 9755194d70774f27af4c5174151588cc03d5f97a
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 82f37377dc223bfe3f5e578e1c7f390da91752a1
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610954"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075824"
 ---
 # <a name="std-specify-language-standard-version"></a>`/std` (指定语言标准版本) 
 
-从 C++ 语言标准的指定版本启用支持的 C++ 语言功能。
+启用 C 或 c + + 语言标准的指定版本中支持的 C 和 c + + 语言功能。
 
 ## <a name="syntax"></a>语法
 
 > **`/std:c++14`**\
 > **`/std:c++17`**\
-> **`/std:c++latest`**
+> **`/std:c++latest`**\
+> **`/std:c11`**\
+> **`/std:c17`**
 
 ## <a name="remarks"></a>备注
 
-此 **`/std`** 选项在 Visual Studio 2017 和更高版本中可用。 它用于控制在代码编译期间启用的特定于版本的 ISO c + + 编程语言标准功能。 此选项允许你禁用对某些新语言和库功能的支持：可能会破坏符合特定语言标准版本的现有代码的支持。 默认情况下， **`/std:c++14`** 指定，这将禁用在更高版本的 c + + 语言标准中找到的语言和标准库功能。 使用  **`/std:c++17`** 启用 c + + 17 标准特定功能和行为。 若要显式启用当前实现的编译器和标准库功能建议用于下一草案标准，请使用 **`/std:c++latest`** 。 所有 c + + 20 功能都需要 **`/std:c++latest`** ; 实现完成后， **`/std:c++20`** 将启用一个新选项。
+此 **`/std`** 选项在 Visual Studio 2017 和更高版本中可用。 它用于控制在代码编译期间启用的特定于版本的 ISO C 或 c + + 编程语言标准功能。 此选项允许你禁用对某些新语言和库功能的支持：可能会破坏符合特定语言标准版本的现有代码的支持。
+
+### <a name="c-standards-support"></a>C + + 标准支持
+
+默认情况下， **`/std:c++14`** 指定，这将禁用在更高版本的 c + + 语言标准中找到的语言和标准库功能。 使用  **`/std:c++17`** 启用 c + + 17 标准特定功能和行为。 若要显式启用当前实现的编译器和标准库功能建议用于下一草案标准，请使用 **`/std:c++latest`** 。 所有 c + + 20 功能都需要 **`/std:c++latest`** ; 实现完成后， **`/std:c++20`** 将启用一个新选项。
 
 默认 **`/std:c++14`** 选项启用由 MSVC 编译器实现的 c + + 14 功能集。 此选项将禁用编译器和标准库支持，以对在较新版本的语言标准中更改或新增的功能禁用该功能。 它不会禁用先前版本的 MSVC 编译器已经实现的 c + + 17 功能。 若要避免对已对 Visual Studio 2015 Update 2 之前或之前的功能具有依赖关系的用户进行重大更改，则在指定选项时，这些功能仍保持启用状态 **`/std:c++14`** ：
 
@@ -55,13 +66,50 @@ ms.locfileid: "88610954"
 > [!NOTE]
 > 根据 MSVC 编译器版本或更新级别，在指定选项时，c + + 17 功能可能未完全实现或完全一致 **`/std:c++17`** 。 有关 Visual C++ 中的 c + + 语言一致性概述，请参阅 [Microsoft c + + 语言一致性表](../../overview/visual-cpp-language-conformance.md)。
 
+### <a name="c-standards-support"></a>C 标准支持
+
+默认情况下，当代码编译为 C 时，MSVC 编译器不符合特定 C 标准。 它实现了具有多个 Microsoft 扩展的 ANSI C89，其中一些扩展是 ISO C99 的一部分。 某些 Microsoft 扩展可以通过使用 [`/Za`](za-ze-disable-language-extensions.md) 编译器选项来禁用，但其他扩展仍有效。 无法指定严格的 C89 一致性。
+
+从 Visual Studio 2019 版本16.8 开始，你可以 **`/std:c11`** **`/std:c17`** 为编译为 C 的代码指定或。这些选项指定与 ISO C11 和 ISO C17 相对应的一致性模式。 由于需要新的预处理器来支持这些标准，因此 **`/std:c11`** 和 **`/std:c17`** 编译器选项 [`/Zc:preprocessor`](zc-preprocessor.md) 会自动设置选项。 如果要使用传统 (旧) 预处理器用于 C11 或 C17，则必须 **`/Zc:preprocessor-`** 显式设置编译器选项。 设置 **`/Zc:preprocessor-`** 选项可能会导致意外的行为，因此不建议使用此选项。
+
+> [!NOTE]
+> 发布时，最新的 Windows SDK 和 UCRT 库尚不支持 C11 和 C17 代码。 Windows SDK 和 UCRT 的预发行版本是必需的。 有关详细信息和安装说明，请参阅 [在 Visual Studio 中安装 C11 和 C17 支持](../../overview/install-c17-support.md)。
+
+指定或时 **`/std:c11`** **`/std:c17`** ，MSVC 支持 C11 和 C17 的所有必需功能。 编译器选项支持以下功能：
+
+- **`_Pragma`**
+
+- **`restrict`**
+
+- **`_Noreturn`** 与 \<stdnoreturn.h>
+
+- **`_Alignas`****`_Alignof`** 和\<stdalign.h>
+
+- **`_Generic`** 与 \<tgmath.h>
+
+- **`_Static_assert`**
+
+当源文件具有 *`.c`* 文件扩展名时，或指定编译器选项时，IDE 使用 IntelliSense 和代码突出显示的 C 设置 [`/TC`](tc-tp-tc-tp-specify-source-file-type.md) 。 目前，IntelliSense 突出显示仅适用于关键字，而不能用于标准标头引入的宏。
+
+由于 C17 在很大程度上是 ISO C11 的 bug 修复版本，因此 MSVC 对 C11 的支持已包括所有相关缺陷报告。 目前，除宏外，C11 和 C17 版本之间没有差异 `__STDC_VERSION__` 。 对于 `201112L` C11 和 C17，它将扩展为 `201710L` 。
+
+编译器不支持 ISO C11 的任何可选功能。 C11 的这些可选功能中有几个是 C99 的必需功能，MSVC 尚未实现此功能是出于结构方面的原因。 可以使用功能测试宏（如） `__STDC_NO_VLA__` 来检测各个功能的编译器支持级别。 有关 C 特定的预定义宏的详细信息，请参阅 [预定义的宏](../../preprocessor/predefined-macros.md)。
+
+- Visual Studio 2019 版本16.8 版本中没有一致的多线程、原子或复数支持。
+
+- `aligned_alloc` 由于 Windows 堆实现，缺少支持。 替代方法是使用 [`_aligned_malloc`](../../c-runtime-library/reference/aligned-malloc.md) 。
+
+- 当前未实现 DR 400 支持 `realloc` ，因为此更改将破坏 ABI。
+
+- 不计划 (VLA) 支持的可变长度数组。 可变长度数组的效率通常低于可比较的固定大小的数组。 在安全安全地实现时，与等效的堆内存分配相比，它们也是低效的。 VLAs 提供了可与 `gets()` （不推荐使用）和计划删除的受攻击媒介。
+
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 依次选择“配置属性”、“C/C++”和“语言”************。
 
-1. 在“C++ 语言标准”中，从下拉控件中选择要支持的语言标准，然后选择“确定”或“应用”以保存更改************。
+1. 在 c **+ + 语言标准** (或 c， **c 语言标准**) 中，从下拉控件中选择要支持的语言标准，然后选择 **"确定" 或 "** **应用** " 保存更改。
 
 ## <a name="see-also"></a>另请参阅
 
