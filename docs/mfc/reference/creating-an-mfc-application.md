@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 115ca6b4ab32482707cffd08ef575c93b2f3bfa9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e7435a8538c04867a810e525e053109a7abc04d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040088"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683450"
 ---
 # <a name="creating-an-mfc-application"></a>创建 MFC 应用程序
 
@@ -42,7 +42,7 @@ MFC 应用程序是基于 Microsoft 基础类 (MFC) 库的 Windows 可执行应�
 
 有关详细信息，请参阅 [创建基于窗体的 MFC 应用程序](creating-a-forms-based-mfc-application.md)。
 
-![Visual Studio 2019 MFC 应用程序向导](media/mfc-app-wizard.png)
+![Visual studio 2019 中 MFC 应用程序向导的屏幕截图。](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>创建 MFC 控制台应用程序
 
@@ -53,7 +53,7 @@ MFC 控制台应用程序是一个使用 MFC 库但在控制台窗口中运行�
 1. 根据需要修改项目名称，然后按 " **下一步** " 以打开 **Windows 桌面向导**。
 1. 选中 " **MFC 标头** " 框并根据需要设置其他值，然后按 " **完成**"。
 
-![Visual Studio 2019 Windows 桌面项目对话框](media/windows-desktop-wizard.png)
+![Visual studio 2019 中 Windows 桌面向导的屏幕截图。](media/windows-desktop-wizard.png)
 
 ::: moniker-end
 
@@ -68,7 +68,7 @@ MFC 控制台应用程序是一个使用 MFC 库但在控制台窗口中运行�
 
 有关详细信息，请参阅 [创建基于窗体的 MFC 应用程序](creating-a-forms-based-mfc-application.md)。
 
-![Visual Studio 2017 MFC 应用程序向导](media/mfc-app-wizard.png)
+![Visual studio 2017 中 MFC 应用程序向导的屏幕截图。](media/mfc-app-wizard.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>创建 MFC 控制台应用程序
 
@@ -80,7 +80,7 @@ MFC 控制台应用程序是一个使用 MFC 库但在控制台窗口中运行�
 1. 根据需要修改项目名称，然后按 **"确定"** 打开 **Windows 桌面向导**。
 1. 选中 " **MFC 标头** " 框并根据需要设置其他值，然后按 " **完成**"。
 
-![Visual Studio 2017 Windows 桌面项目对话框](media/windows-desktop-wizard-2017.png)
+![Visual studio 2017 中 Windows 桌面向导的屏幕截图。](media/windows-desktop-wizard-2017.png)
 
 ::: moniker-end
 
@@ -95,7 +95,7 @@ MFC 控制台应用程序是一个使用 MFC 库但在控制台窗口中运行�
 
 有关详细信息，请参阅 [创建基于窗体的 MFC 应用程序](creating-a-forms-based-mfc-application.md)。
 
-![Visual Studio 2015 MFC 应用程序向导](media/mfc-app-wizard-2015.png)
+![Visual studio 2015 中 MFC 应用程序向导的屏幕截图。](media/mfc-app-wizard-2015.png)
 
 ## <a name="to-create-an-mfc-console-application"></a>创建 MFC 控制台应用程序
 
@@ -111,7 +111,7 @@ MFC 控制台应用程序是一个使用 MFC 库但在控制台窗口中运行�
 
 创建项目后，可以在“解决方案资源管理器”中查看创建的文件****。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[为 Visual Studio C++ 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [属性页](../../build/reference/property-pages-visual-cpp.md)

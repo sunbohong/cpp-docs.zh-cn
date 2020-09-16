@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4488
 ms.assetid: 55625e46-ddb5-4c7c-99c7-cd4aa9f879bd
-ms.openlocfilehash: b83845f0ed0efeee6485780c7e4f828e40473e9e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6db814e405c0b13cdf40fc81a1f23c6d59fd5f00
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186694"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684659"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>编译器警告（等级 1）C4488
 
@@ -19,7 +19,7 @@ ms.locfileid: "80186694"
 
 类必须实现它直接从中继承的接口的所有成员。 已实现的成员必须具有公共可访问性，并且必须标记为 virtual。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 如果实现的成员不是公共的，则可能会发生 C4488。 下面的示例生成 C4488。
 
@@ -39,8 +39,6 @@ public:
    virtual void f1() {}
 };
 ```
-
-## <a name="example"></a>示例
 
 如果实现的成员未标记为 "虚拟"，则可能会发生 C4488。 下面的示例生成 C4488。
 

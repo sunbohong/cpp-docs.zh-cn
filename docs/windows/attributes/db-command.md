@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: d9ee1ed1bede6a5deaeae0be3783d6abbd05a0d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831367"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684581"
 ---
 # <a name="db_command"></a>db_command
 
@@ -86,7 +86,7 @@ TCHAR m_state[3] = 'CA';
 ]
 ```
 
-name <br/>
+*name*<br/>
  (可选) 用于处理行集的句柄名称。 如果指定名称 **， **db_command** 会生成具有指定名称 ** 的类，可以用它来遍历行集或执行多个操作查询。 如果未指定名称 **，则无法向用户返回多个行的结果。
 
 *source_name*<br/>
@@ -113,7 +113,7 @@ name <br/>
 
 如果 *bulk_fetch* 小于 1， `SetRows` 将返回零。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **db_command** 创建 [CCommand](../../data/oledb/ccommand-class.md) 对象，OLE DB 使用者使用该对象来执行命令。
 
@@ -123,7 +123,7 @@ name <br/>
 
 当使用者特性提供程序将此特性应用于类时，编译器会将类重命名为 \_ *YourClassName*访问器，其中*YourClassName*是您赋予类的名称，并且编译器还将创建一个名为*YourClassName*的类，该类派生自 \_ *YourClassName*访问器。  将在类视图中看到这两个类。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command** 创建并读取行集，在行集上可以调用向导生成的函数（例如 [OpenAll 和 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)）和 `CRowset` 成员函数（例如 [MoveNext](../../data/oledb/crowset-movenext.md)）。
 
@@ -163,8 +163,6 @@ struct CAuthors {
 };
 ```
 
-## <a name="example"></a>示例
-
 ```cpp
 // db_command.cpp
 // compile with: /c
@@ -192,8 +190,6 @@ int main(int argc, _TCHAR* argv[]) {
    CoUninitialize();
 }
 ```
-
-## <a name="example"></a>示例
 
 此示例使用数据源类 `db_source` 上的 `CMySource`以及命令类 `db_command` 和 `CCommand1` 上的 `CCommand2`。
 
@@ -238,7 +234,7 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-| 特性上下文 | 值 |
+| 特性上下文 | “值” |
 |-|-|
 |**适用于**|**`class`**、 **`struct`** 、成员、方法、本地|
 |**且**|否|
@@ -247,7 +243,7 @@ int main() {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者属性](ole-db-consumer-attributes.md)<br/>
 [独立属性](stand-alone-attributes.md)

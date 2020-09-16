@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-ms.openlocfilehash: ea7341b9c587a764c7366fa7b7c89e4fc67bc7d8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 76729f49358e2a05b425730517e88ba14f2909c6
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230852"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685719"
 ---
 # <a name="compiler-error-c3490"></a>编译器错误 C3490
 
@@ -23,7 +23,7 @@ ms.locfileid: "87230852"
 
 - **`const`** 从方法声明删除修饰符。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C3490，因为它修改方法中的成员变量 `_i` **`const`** ：
 
@@ -42,8 +42,6 @@ class C
 };
 ```
 
-## <a name="example"></a>示例
-
 下面的示例通过 **`const`** 从方法声明中移除修饰符来解析 C3490：
 
 ```cpp
@@ -61,6 +59,6 @@ class C
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

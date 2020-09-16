@@ -26,18 +26,18 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: efe1444273f17c8f0544d2c51b98923169032e61
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217737"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683892"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>_InterlockedAdd 内部函数
 
 **Microsoft 专用**
 
-这些函数执行原子加法, 这可确保当多个线程有权访问共享变量时操作成功完成。
+这些函数执行原子加法，这可确保当多个线程有权访问共享变量时操作成功完成。
 
 ## <a name="syntax"></a>语法
 
@@ -79,9 +79,9 @@ __int64 _InterlockedAdd64_rel(
 ### <a name="parameters"></a>参数
 
 *加数*\
-[in, out]指向要添加到的整数的指针;替换为添加的结果。
+[in，out]指向要添加到的整数的指针;替换为添加的结果。
 
-*负值*\
+*“值”* \
 中要添加的值。
 
 ## <a name="return-value"></a>返回值
@@ -90,26 +90,26 @@ __int64 _InterlockedAdd64_rel(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
-|`_InterlockedAdd`|ARM, ARM64|
-|`_InterlockedAdd_acq`|ARM, ARM64|
-|`_InterlockedAdd_nf`|ARM, ARM64|
-|`_InterlockedAdd_rel`|ARM, ARM64|
-|`_InterlockedAdd64`|ARM, ARM64|
-|`_InterlockedAdd64_acq`|ARM, ARM64|
-|`_InterlockedAdd64_nf`|ARM, ARM64|
-|`_InterlockedAdd64_rel`|ARM, ARM64|
+|`_InterlockedAdd`|ARM，ARM64|
+|`_InterlockedAdd_acq`|ARM，ARM64|
+|`_InterlockedAdd_nf`|ARM，ARM64|
+|`_InterlockedAdd_rel`|ARM，ARM64|
+|`_InterlockedAdd64`|ARM，ARM64|
+|`_InterlockedAdd64_acq`|ARM，ARM64|
+|`_InterlockedAdd64_nf`|ARM，ARM64|
+|`_InterlockedAdd64_rel`|ARM，ARM64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-带 `_acq` 或 `_rel` 后缀的这些版本的函数可在获取或发布语义后执行互锁加法。 *获取语义*意味着在以后的内存读取和写入之前, 操作的结果将对所有线程和处理器可见。 进入临界区时，获取十分有用。 *版本语义*表示在操作的结果使其自身可见之前, 所有内存读取和写入均强制对所有线程和处理器可见。 离开临界区时，发布十分有用。 带`_nf` ("无围墙") 后缀的内部函数不能充当内存屏障。
+带 `_acq` 或 `_rel` 后缀的这些版本的函数可在获取或发布语义后执行互锁加法。 *获取语义* 意味着在以后的内存读取和写入之前，操作的结果将对所有线程和处理器可见。 进入临界区时，获取十分有用。 *版本语义* 表示在操作的结果使其自身可见之前，所有内存读取和写入均强制对所有线程和处理器可见。 离开临界区时，发布十分有用。 `_nf` ( "无防护" ) 后缀的内部函数不能充当内存屏障。
 
 这些例程只能用作内部函数。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 ```cpp
 // interlockedadd.cpp
@@ -130,13 +130,11 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 0xffffff00 0xff0000 0xffffff00
 ```
-
-## <a name="example"></a>示例
 
 ```cpp
 // interlockedadd64.cpp
@@ -160,7 +158,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 ff0000000000 + ff0000ffffffff = ffff00ffffffff

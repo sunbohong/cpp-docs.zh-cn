@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 270500d2353c2d14a23ddad378521488cdec136f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561383"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683476"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
@@ -56,7 +56,7 @@ const A* a = new A();
 
 接下来，检查下表中四个语句返回的类型 **`decltype`** 。
 
-|语句|类型|说明|
+|Statement|类型|说明|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|对的 [右](../cpp/rvalue-reference-declarator-amp-amp.md) 值引用 **`const int`** 。|
 |`decltype(var);`|**`int`**|变量 `var` 的类型。|
@@ -100,7 +100,7 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 在此方案中，无法在没有类型说明符的情况下编写适当的类型表达式 **`decltype`** 。 **`decltype`** 类型说明符启用通用转发函数，因为它不会丢失有关函数是否返回引用类型所需的信息。 有关转发函数的代码示例，请参阅上面的 `myFunc` 模板函数示例。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的代码示例声明模板函数 `Plus()` 的后指定返回类型。 `Plus`函数通过重载处理两个操作数 **`operator+`** 。 因此，该函数的 (**`+`**) 和函数的返回类型的解释 `Plus` 取决于函数参数的类型。
 
@@ -173,8 +173,6 @@ Plus(dx, dy) = 13.5
 Hello, world!
 x3.Dump() = 42
 ```
-
-## <a name="example"></a>示例
 
 **Visual Studio 2017 及更高版本：****`decltype`** 当声明模板而不是实例化模板时，编译器会分析参数。 因此，如果在参数中找到了非依赖专用化 **`decltype`** ，则不会将其推迟到实例化时间，并将立即进行处理，并将在此时诊断产生的任何错误。
 

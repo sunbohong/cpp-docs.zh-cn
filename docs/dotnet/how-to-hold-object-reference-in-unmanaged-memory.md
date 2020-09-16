@@ -8,18 +8,18 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 13d5bd37a0f5e0b065aecb8c5b264fb70685363f
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544951"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684503"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>如何：在非托管内存中保存对象引用
 
-可以使用 gcroot <xref:System.Runtime.InteropServices.GCHandle>来保存非托管内存中的 CLR 对象引用。 或者，您可以直接使用 `GCHandle`。
+可以使用 gcroot <xref:System.Runtime.InteropServices.GCHandle> 来包装，以便在非托管内存中保存 CLR 对象引用。 或者，您可以 `GCHandle` 直接使用。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 ```cpp
 // hold_object_reference.cpp
@@ -55,9 +55,7 @@ int main() {
 StringWrapper::x == ManagedString
 ```
 
-## <a name="example"></a>示例
-
-`GCHandle` 提供了一种在非托管内存中保存托管对象引用的方法。  使用 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 方法为托管对象创建不透明的句柄，并 <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 将其释放。 此外，<xref:System.Runtime.InteropServices.GCHandle.Target%2A> 方法还允许您从托管代码中的句柄获取对象引用。
+`GCHandle` 提供在非托管内存中保存托管对象引用的方法。  使用方法可为 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 托管对象创建不透明的句柄并 <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 将其释放。 此外，该 <xref:System.Runtime.InteropServices.GCHandle.Target%2A> 方法还允许您从托管代码中的句柄获取对象引用。
 
 ```cpp
 // hold_object_reference_2.cpp
@@ -94,6 +92,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

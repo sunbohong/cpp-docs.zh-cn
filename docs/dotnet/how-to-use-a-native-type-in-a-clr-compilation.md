@@ -6,22 +6,22 @@ helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 88a678a19043d3229218dd69afbf8548348817df
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545203"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683957"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>如何：在 /clr 编译中使用本机类型
 
-可以在 **/clr**编译中定义本机类型，并在程序集中使用该本机类型。 但是，本机类型将不可用于引用的元数据。
+可以在 **/clr** 编译中定义本机类型，并在程序集中使用该本机类型。 但是，本机类型将不可用于引用的元数据。
 
 每个程序集都必须包含它将使用的每个本机类型的定义。
 
-有关详细信息，请参阅 [/clr（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。
+有关详细信息，请参阅 [/clr (公共语言运行时编译) ](../build/reference/clr-common-language-runtime-compilation.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 此示例将创建一个定义和使用本机类型的组件。
 
@@ -39,8 +39,6 @@ public ref struct ManagedClass {
    }
 };
 ```
-
-## <a name="example"></a>示例
 
 此示例定义了一个使用组件的客户端。 请注意，访问本机类型是错误的，除非它是在编译单位中定义的。
 
@@ -61,6 +59,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

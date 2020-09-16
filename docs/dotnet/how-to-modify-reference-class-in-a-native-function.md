@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a9ff21390f8a5d7b20c8c36e596f80140ccb9a39
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544879"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683944"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改本机函数中的引用类
 
 可以将具有 CLR 数组的引用类传递到本机函数，并使用 PInvoke 服务修改类。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 编译下面的本机库。
 
@@ -46,8 +46,6 @@ extern "C"  {
     }
 };
 ```
-
-## <a name="example"></a>示例
 
 编译下面的程序集。
 
@@ -89,6 +87,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

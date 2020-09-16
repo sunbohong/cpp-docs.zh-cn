@@ -10,18 +10,18 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 4918cd9df34e5c728c4aa2d90d4eb7f55784e4c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2327638208f30908cd3429ae656ce569f5821195
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845687"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684898"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
 检查迭代器可确保容器的边界不会被覆盖。 检查迭代器应用于发布版本和调试版本。 有关如何在调试模式下进行编译时使用调试迭代器的详细信息，请参阅[调试迭代器支持](../standard-library/debug-iterator-support.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 有关如何禁止检查迭代器生成警告的信息，请参阅 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)。
 
@@ -73,7 +73,7 @@ ms.locfileid: "88845687"
 
 支持经检查的迭代器的迭代器适配器为 [checked_array_iterator 类](../standard-library/checked-array-iterator-class.md)和 [unchecked_array_iterator 类](../standard-library/unchecked-array-iterator-class.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 使用设置为1或2的 _ITERATOR_DEBUG_LEVEL 进行编译时，如果尝试通过使用某些类的索引运算符来访问位于容器边界之外的元素，将发生运行时错误。
 
@@ -102,8 +102,6 @@ int main()
 
 此程序将输出“67”然后弹出一个断言失败对话框，其中包含与失败有关的附加信息。
 
-## <a name="example"></a>示例
-
 同样，在使用设置为1或2的 _ITERATOR_DEBUG_LEVEL 进行编译时，如果在 `front` `back` 容器为空时，尝试使用或在 container 类中访问元素，则会发生运行时错误。
 
 ```cpp
@@ -125,8 +123,6 @@ int main()
 ```
 
 此程序将弹出一个断言失败对话框，其中包含与失败有关的附加信息。
-
-## <a name="example"></a>示例
 
 下面的代码演示各种迭代器使用情形，并提供各个情形的注释。 默认情况下，调试版本中的 _ITERATOR_DEBUG_LEVEL 设置为2，在零售版本中设置为0。
 
@@ -232,7 +228,7 @@ a7: 0 7 14 21 28 35 42 49 56 63 70 77 84 91 98 105
 a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
 [调试迭代器支持](../standard-library/debug-iterator-support.md)
