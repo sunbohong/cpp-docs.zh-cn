@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-ms.openlocfilehash: 37129c198096be91a8104aedcb508732d79e3630
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: bdaeb8797eb71b205f737d08e74430f161cb8caa
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738305"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686543"
 ---
 # <a name="compiler-error-c3492"></a>编译器错误 C3492
 
@@ -23,7 +23,7 @@ ms.locfileid: "74738305"
 
 - 为联合提供一个名称，并将整个此联合结构传递到 lambda 表达式的捕获列表。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 以下示例将生成 C3492，因为它捕获匿名联合的成员：
 
@@ -43,8 +43,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>示例
-
 通过给此联合提供名称以及将整个联合结构传递给 lambda 表达式的捕获列表，下面的示例解析了 C3492：
 
 ```cpp
@@ -63,6 +61,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

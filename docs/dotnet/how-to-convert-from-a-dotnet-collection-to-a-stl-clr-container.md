@@ -5,16 +5,16 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-ms.openlocfilehash: 156b4162f742915939ebdfaec6a84d77afaad8cd
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: a7b2ee94f02e663690287ecfa6bc8a7230830a95
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545047"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686452"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>如何：从 .NET 集合转换为 STL/CLR 容器
 
-本主题演示如何将 .NET 集合转换为其等效的 STL/CLR 容器。 作为示例，我们演示了如何将 .NET <xref:System.Collections.Generic.List%601> 转换为 STL/CLR[向量](../dotnet/vector-stl-clr.md)，以及如何将 .net <xref:System.Collections.Generic.Dictionary%602> 转换为 STL/clr[映射](../dotnet/map-stl-clr.md)，但该过程对于所有集合和容器都是类似的。
+本主题演示如何将 .NET 集合转换为其等效的 STL/CLR 容器。 作为示例，我们演示了如何将 .NET 转换 <xref:System.Collections.Generic.List%601> 为 stl/clr [向量](../dotnet/vector-stl-clr.md) ，以及如何将 .NET 转换为 <xref:System.Collections.Generic.Dictionary%602> stl/clr [映射](../dotnet/map-stl-clr.md)，但该过程对于所有集合和容器都是类似的。
 
 ### <a name="to-create-a-container-from-a-collection"></a>从集合创建容器
 
@@ -24,15 +24,15 @@ ms.locfileid: "79545047"
 
 \- 或 -
 
-1. 通过创建[collection_adapter](../dotnet/collection-adapter-stl-clr.md)对象来创建泛型 STL/CLR 容器。 此模板类以 .NET 集合接口为参数。 若要验证支持的接口，请参阅[collection_adapter （STL/CLR）](../dotnet/collection-adapter-stl-clr.md)。
+1. 通过创建 [collection_adapter](../dotnet/collection-adapter-stl-clr.md) 对象来创建泛型 STL/CLR 容器。 此模板类以 .NET 集合接口为参数。 若要验证支持的接口，请参阅 [STL/CLR) collection_adapter (](../dotnet/collection-adapter-stl-clr.md)。
 
-1. 将 .NET 集合的内容复制到容器中。 这可以通过使用 STL/CLR[算法](../dotnet/algorithm-stl-clr.md)，或循环访问 .net 集合并将每个元素的副本插入到 STL/clr 容器来完成。
+1. 将 .NET 集合的内容复制到容器中。 这可以通过使用 STL/CLR [算法](../dotnet/algorithm-stl-clr.md)，或循环访问 .net 集合并将每个元素的副本插入到 STL/clr 容器来完成。
 
    第二个示例演示了此过程。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
-在此示例中，我们将创建一个通用 <xref:System.Collections.Generic.List%601>，并向其中添加5个元素。 然后，使用采用 <xref:System.Collections.Generic.IEnumerable%601> 作为参数的构造函数创建 `vector`。
+在此示例中，我们将创建一个泛型 <xref:System.Collections.Generic.List%601> 并向其中添加5个元素。 然后， `vector` 使用采用作为参数的构造函数创建一个 <xref:System.Collections.Generic.IEnumerable%601> 。
 
 ```cpp
 // cliext_convert_list_to_vector.cpp
@@ -76,9 +76,7 @@ The contents of the cliext::vector are:
 11
 ```
 
-## <a name="example"></a>示例
-
-在此示例中，我们将创建一个通用 <xref:System.Collections.Generic.Dictionary%602>，并向其中添加5个元素。 接下来，我们创建一个 `collection_adapter` 将 <xref:System.Collections.Generic.Dictionary%602> 包装为一个简单的 STL/CLR 容器。 最后，我们创建一个 `map`，并通过循环访问 `collection_adapter`将 <xref:System.Collections.Generic.Dictionary%602> 的内容复制到 `map` 中。 在此过程中，我们将使用 `make_pair` 函数创建新对，并将新对直接插入 `map`。
+在此示例中，我们将创建一个泛型 <xref:System.Collections.Generic.Dictionary%602> 并向其中添加5个元素。 接下来，我们创建一个 `collection_adapter` 将 <xref:System.Collections.Generic.Dictionary%602> 作为一个简单的 STL/CLR 容器进行包装的。 最后，我们将创建一个 `map` 并 <xref:System.Collections.Generic.Dictionary%602> `map` 通过循环访问来将的内容复制到中 `collection_adapter` 。 在此过程中，我们将使用函数创建新对 `make_pair` ，并将新对直接插入到中 `map` 。
 
 ```cpp
 // cliext_convert_dictionary_to_map.cpp
@@ -128,7 +126,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)<br/>
 [adapter (STL/CLR)](../dotnet/adapter-stl-clr.md)<br/>

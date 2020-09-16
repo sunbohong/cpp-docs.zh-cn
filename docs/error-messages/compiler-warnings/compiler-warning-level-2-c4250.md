@@ -6,22 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-ms.openlocfilehash: e0feb1cb7131b4388c87213a85ff1c921f636e1b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10064784e1124ac365475f00b3577d22f5e7f3f1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162031"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686517"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>编译器警告（等级 2）C4250
 
 "class1"：通过控制继承 "class2：： member"
 
-两个或多个成员具有相同的名称。 `class2` 中的一个是继承的，因为它是包含此成员的其他类的基类。
+两个或多个成员具有相同的名称。 中的一个 `class2` 是继承的，因为它是包含此成员的其他类的基类。
 
-若要取消 C4250，请使用[警告](../../preprocessor/warning.md)杂注。
+若要取消 C4250，请使用 [警告](../../preprocessor/warning.md) 杂注。
 
-由于虚拟基类在多个派生类之间共享，因此派生类中的名称支配基类中的名称。 例如，假设有以下类层次结构，则在菱形中继承了两个 func 定义： vbc：： func （）实例通过弱类，并通过主导类实现了主导：： func （）。 通过菱形类对象的 func （）的非限定调用始终调用主导：： func （）实例。  如果弱类要引入 func （）的实例，则这两个定义都不会成为主导的，并且调用会被标记为不明确。
+由于虚拟基类在多个派生类之间共享，因此派生类中的名称支配基类中的名称。 例如，假设有以下类层次结构，则在菱形中继承了两个 func 定义： vbc：： func 通过弱类 ( # A1 实例，并通过主导类 ( # A3。 Func ( # A1 到钻石类对象的非限定调用始终调用 "为主导：： func ( # A3 实例"。  如果弱类要引入 func ( # A1 的实例，则这两个定义都不会成为主导的，并且调用会被标记为不明确。
+
+## <a name="examples"></a>示例
 
 ```cpp
 // C4250.cpp
@@ -44,8 +46,6 @@ int main() {
    d.func();   // C4250
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C4250。
 
@@ -77,8 +77,6 @@ int main() {
    cout << eObject.operator int() << endl;
 }
 ```
-
-## <a name="example"></a>示例
 
 此示例显示了更复杂的情况。 下面的示例生成 C4250。
 

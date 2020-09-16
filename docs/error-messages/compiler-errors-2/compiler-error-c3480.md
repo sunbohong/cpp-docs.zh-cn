@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3480
 ms.assetid: 7b2e055a-9604-4d13-861b-b38bda1a6940
-ms.openlocfilehash: 255fb12d587a94aac798814736f0b26770f608b0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a2fa1a8b02cf05d332210f359ae3ff33ed7d6e35
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760473"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686301"
 ---
 # <a name="compiler-error-c3480"></a>编译器错误 C3480
 
@@ -23,7 +23,7 @@ Lambda 捕获变量不是来自封闭函数范围。
 
 - 从 lambda 表达式的捕获列表中删除该变量。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例将生成 C3480，因为变量 `global` 不是来自封闭函数范围：
 
@@ -37,8 +37,6 @@ int main()
 }
 ```
 
-## <a name="example"></a>示例
-
 下面的示例通过从 lambda 表达式的捕获列表中删除变量 `global` 来解决 C3480：
 
 ```cpp
@@ -51,6 +49,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

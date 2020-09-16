@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 1861810f4598fa81d1b7662a57651b1648de1317
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2c5737a4442761cbaa84b532907e579eddb423d
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749043"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686060"
 ---
 # <a name="compiler-error-c3904"></a>编译器错误 C3904
 
-"property_accessor"：必须指定 number 个参数
+"property_accessor"：必须指定 number 参数 (s) 
 
-检查 `get` 中参数的数目，并对属性维度 `set` 方法。
+`get`对照属性维度检查和方法中的参数数量 `set` 。
 
-- 对于非索引属性，`get` 方法的参数数目必须等于属性的维数或为零。
+- 此方法的参数数目 `get` 必须等于属性的维度数，或为零（对于非索引属性）。
 
-- `set` 方法的参数数目必须比属性的维数多一个。
+- 此方法的参数数目 `set` 必须大于属性的维度数。
 
 有关详细信息，请参阅 [property](../../extensions/property-cpp-component-extensions.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C3904。
 
@@ -46,8 +46,6 @@ ref class X {
    };
 };
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C3904。
 

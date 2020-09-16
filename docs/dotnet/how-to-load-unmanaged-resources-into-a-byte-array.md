@@ -7,18 +7,18 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: b2b98ff3c4bbd857e3f5d861c1e0e8e2bd2f357b
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544957"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685800"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管资源加载到一个字节数组
 
-本主题讨论了将非托管资源加载到 <xref:System.Byte> 数组中的几种方法。
+本主题讨论了将非托管资源加载到数组中的几种方法 <xref:System.Byte> 。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 如果知道非托管资源的大小，则可以预分配 CLR 数组，然后使用指向 CLR 数组的数组块的指针将资源加载到数组中。
 
@@ -54,8 +54,6 @@ int main() {
 0123456789
 ```
 
-## <a name="example"></a>示例
-
 此示例演示如何将数据从非托管内存块复制到托管数组。
 
 ```cpp
@@ -75,6 +73,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

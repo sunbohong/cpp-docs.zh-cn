@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: e18e874473925c0198b8645162546c9abe13b3ef
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 946972a9a7c3041c75e82865acb35feb4a97254a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842346"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686738"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -32,13 +32,13 @@ ms.locfileid: "88842346"
 *调度*<br/>
 将成为 IDL 组件类成员的调度接口的逗号分隔列表。 指定单个调度接口的简写方法是 ** (调度接口 =** *dispinterface_name* **) **实现的。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 默认情况下，仅 `coclass` 在 IDL 组件类中添加作为基类的 COM 接口。 **实现** 允许强制其他接口成为 IDL `coclass` 成员。
 
 ## <a name="requirements"></a>要求
 
-| 特性上下文 | 值 |
+| 特性上下文 | “值” |
 |-|-|
 |**适用于**|**`class`**, **`struct`**|
 |**且**|是|
@@ -47,7 +47,7 @@ ms.locfileid: "88842346"
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例分为三个部分：一个 .idl 文件及其关联的 .h 文件和一个 c + + 文件。
 
@@ -96,8 +96,6 @@ library odod
    };
 }
 ```
-
-## <a name="example"></a>示例
 
 和下面的 .h 文件，编译器也需要使用该文件。
 
@@ -377,8 +375,6 @@ CBar;
 #endif
 ```
 
-## <a name="example"></a>示例
-
 在以下程序中，不实现、 `IBar1` 、 `IBar2` 和 `ISna` 将不会在生成的 IDL 中的中 `coclass` 。
 
 ```cpp
@@ -482,7 +478,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
 [类特性](class-attributes.md)

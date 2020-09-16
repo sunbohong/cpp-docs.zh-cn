@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 40825bf92a892917f815c955ee4ba1fb6fa906c3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756846"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686413"
 ---
 # <a name="compiler-error-c3867"></a>编译器错误 C3867
 
-"func"：函数调用缺少参数列表;使用 "& func" 创建指向成员的指针
+"func"：函数调用缺少参数列表;使用 "&func" 创建指向成员的指针
 
 你曾尝试在不使用成员函数的类名称和 address-of 运算符限定成员函数的情况下采用其地址。
 
 此错误还可能是由于对 Visual Studio 2005 执行的编译器一致性工作引起的：增强了指针到成员的一致性。 在 Visual Studio 2005 之前编译的代码现在将生成 C3867。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 C3867 可能会从带有误导性的建议解决方案的编译器发出。 如可能，请使用派生程度最高的类。
 
@@ -44,8 +44,6 @@ void Derived::Bar() {
    &Derived::Test;   // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C3867，并演示如何修复此错误：
 
@@ -77,8 +75,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 下面的示例生成 C3867，并演示如何修复此错误：
 
 ```cpp
@@ -95,8 +91,6 @@ int main() {
    void (X::*pmf2)() = &X::mf;
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C3867。
 
@@ -119,8 +113,6 @@ public:
    }
 };
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C3867。
 

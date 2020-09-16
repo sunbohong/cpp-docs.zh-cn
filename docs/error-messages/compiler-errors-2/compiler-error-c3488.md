@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a39c625e63936700661790023a983fa39eeda369
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738422"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685787"
 ---
 # <a name="compiler-error-c3488"></a>编译器错误 C3488
 
@@ -29,7 +29,7 @@ ms.locfileid: "74738422"
 
 - 按值将变量传递到捕获子句。 （这可能会更改 lambda 表达式的行为。）
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C3488，因为对变量 `n` 的引用出现在默认模式为按引用的 lambda 表达式的捕获子句中：
 
@@ -42,8 +42,6 @@ int main()
    [&, &n]() { return n; } (); // C3488
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例演示 C3488 的四种可能的解决方法：
 
@@ -72,6 +70,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

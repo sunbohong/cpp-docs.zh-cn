@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 527f2837f0c29299727a22df8d4f3d807be0e25b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228708"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686608"
 ---
 # <a name="generic-delegates-ccli"></a>泛型委托 (C++/CLI)
 
@@ -39,7 +39,7 @@ type-parameter-constraints-clauses**<br/>
 采用[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的形式
 
 accessibility-modifiers**<br/>
-可有可无可访问性修饰符（ **`public`** 如 **`private`** ）。
+ (可选) 可访问性修饰符 (**`public`** 例如 **`private`**) 。
 
 *result-类型*<br/>
 委托的返回类型。
@@ -50,7 +50,7 @@ accessibility-modifiers**<br/>
 formal-parameters**<br/>
 （可选）委托的参数列表。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 委托类型参数在创建委托对象时指定。 与其相关联的委托和方法必须有相同的签名。 下面是泛型委托声明的示例。
 
@@ -60,8 +60,6 @@ formal-parameters**<br/>
 generic <class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);
 ```
-
-## <a name="example"></a>示例
 
 下面的示例显示：
 
@@ -104,8 +102,6 @@ int main() {
       gcnew GenDelegate<int>(&MyClass::MyStaticMethod<int>);
 }
 ```
-
-## <a name="example"></a>示例
 
 以下示例声明泛型委托 `GenDelegate<ItemType>`，然后将其与使用类型参数 `MyMethod` 的方法 `ItemType` 相关联。 创建并调用委托的两个实例（整型和双精度型）。
 

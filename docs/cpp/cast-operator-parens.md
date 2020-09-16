@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6b1abfc4e2798f973951a24ea27f35b2dcf6cca7
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190152"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686314"
 ---
 # <a name="cast-operator-"></a>强制转换运算符：()
 
@@ -26,9 +26,9 @@ unary-expression ( type-name ) cast-expression
 
 任何一元表达式均会被视为强制转换表达式。
 
-在进行类型强制转换后，编译器将 cast-expression 视为类型 type-name。 强制转换可用于在任意标量类型的对象与任何其他标量类型之间进行来回转换。 显式类型强制转换由确定隐式转换效果的相同规则约束。 有关强制转换的其他约束可能来源于特定类型的实际大小或表示形式。
+在进行类型强制转换后，编译器将 cast-expression  视为类型 type-name  。 强制转换可用于在任意标量类型的对象与任何其他标量类型之间进行来回转换。 显式类型强制转换由确定隐式转换效果的相同规则约束。 有关强制转换的其他约束可能来源于特定类型的实际大小或表示形式。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 ```cpp
 // expre_CastOperator.cpp
@@ -47,8 +47,6 @@ int main()
     cout << "i = " << i << endl;
 }
 ```
-
-## <a name="example"></a>示例
 
 ```cpp
 // expre_CastOperator2.cpp
@@ -118,10 +116,10 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用一元运算符的表达式](../cpp/expressions-with-unary-operators.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[显式类型转换运算符：()](../cpp/explicit-type-conversion-operator-parens.md)<br/>
-[强制转换运算符](../cpp/casting-operators.md)<br/>
-[强制转换运算符](../c-language/cast-operators.md)
+[显式类型转换运算符： ( # B1 ](../cpp/explicit-type-conversion-operator-parens.md)<br/>
+[转换运算符](../cpp/casting-operators.md)<br/>
+[Cast 运算符](../c-language/cast-operators.md)

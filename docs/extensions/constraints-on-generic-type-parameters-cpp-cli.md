@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: d001cab897323d86d284958f322d155120a726a5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219749"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686751"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 
@@ -113,7 +113,7 @@ ref class Dictionary {};
     ref class G2{};
     ```
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 以下示例演示如何使用约束调用类型参数的实例方法。
 
@@ -174,8 +174,6 @@ int main() {
 "parent" is not a senior
 "grandfather" is a senior
 ```
-
-## <a name="example"></a>示例
 
 当泛型类型参数用作约束时，称其为裸类型约束。 当包含其自身类型参数的成员函数需要将该参数约束为所含类型的类型参数时，使用裸类型约束会很有用。
 

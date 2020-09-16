@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d83a837a24fe36b61d3f0fccae4dbe4e93cd3261
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756274"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686046"
 ---
 # <a name="compiler-error-c3915"></a>编译器错误 C3915
 
-"type" 没有默认索引的属性（类索引器）
+"type" 没有 (类索引器的默认索引属性) 
 
 类型没有默认的索引属性。
 
 有关详细信息，请参阅 [property](../../extensions/property-cpp-component-extensions.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C3915。
 
@@ -46,9 +46,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
-如果尝试在与 <xref:System.Reflection.DefaultMemberAttribute>一起定义的同一编译单位中使用默认索引器，也可能会发生 C3915。
+如果尝试在定义默认索引器的同一编译单位中使用默认索引器，也可能会发生 C3915 <xref:System.Reflection.DefaultMemberAttribute> 。
 
 下面的示例生成 C3915。
 

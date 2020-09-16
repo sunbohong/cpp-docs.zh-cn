@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 30fc510272afc90ae37b583e807d10c3374df052
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562124"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686582"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 
@@ -41,13 +41,13 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CNetAddressCtrl：： CNetAddressCtrl](#cnetaddressctrl)|构造 `CNetAddressCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CNetAddressCtrl：： Create](#create)|使用指定的样式创建一个网络地址控件，并将其附加到当前 `CNetAddressCtrl` 对象。|
 |[CNetAddressCtrl：： CreateEx](#createex)|使用指定的扩展样式创建一个网络地址控件，并将其附加到当前 `CNetAddressCtrl` 对象。|
@@ -66,13 +66,11 @@ class CNetAddressCtrl : public CEdit
 
 ![具有网络地址控件和信息提示的对话框。](../../mfc/reference/media/cnetaddctrl.png "具有网络地址控件和信息提示的对话框。")
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的代码示例是一个对话框的一部分，用于验证网络地址。 三个单选按钮的事件处理程序指定网络地址可以为三种类型之一。 用户在网络控件的文本框中输入一个地址，然后按某个按钮来验证该地址。 如果该地址有效，将显示一条成功消息;否则，将显示预定义的信息提示错误消息。
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
-
-## <a name="example"></a>示例
 
 以下来自对话框头文件的代码示例定义了[CNetAddressCtrl：： GetAddress](#getaddress)方法所需的[NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address)和[NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)变量。
 
@@ -256,7 +254,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 此消息将调用 [NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype) 宏，Windows SDK 中对此进行了介绍。 该宏将发送 NCM_SETALLOWTYPE 消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CNetAddressCtrl 类](../../mfc/reference/cnetaddressctrl-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

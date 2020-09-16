@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4273
 ms.assetid: cc18611d-9454-40a4-ad73-69823d5888fb
-ms.openlocfilehash: 2fcecc268d4d271bcb43b7094baa58a2d654d22e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 08508ce11943605e3a7432491f8c4dd1d1175e2f
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199741"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686530"
 ---
 # <a name="compiler-warning-level-1-c4273"></a>编译器警告（等级 1）C4273
 
 "function"： DLL 链接不一致
 
-文件中的两个定义在使用[dllimport](../../cpp/dllexport-dllimport.md)时有所不同。
+文件中的两个定义在使用 [dllimport](../../cpp/dllexport-dllimport.md)时有所不同。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C4273。
 
@@ -29,8 +29,6 @@ ms.locfileid: "80199741"
 char __declspec(dllimport) c;
 char c;   // C4273, delete this line or the line above to resolve
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C4273。
 

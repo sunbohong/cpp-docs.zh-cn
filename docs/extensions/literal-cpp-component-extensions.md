@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2687352c02bed609ffaa60ee8b1df40b51126d21
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214251"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686725"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal（C++/CLI 和 C++/CX）
 
@@ -49,9 +49,9 @@ ms.locfileid: "87214251"
 
 literal**** 是上下文相关关键字。 有关详细信息，请参阅[上下文相关关键字](context-sensitive-keywords-cpp-component-extensions.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
-此示例说明**文本**变量隐含 **`static`** 。
+此示例说明 **文本** 变量隐含 **`static`** 。
 
 ```cpp
 // mcppv2_literal.cpp
@@ -64,8 +64,6 @@ int main() {
    int value = X::i;
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例演示了对元数据的文本影响：
 
@@ -87,8 +85,6 @@ public ref struct A {
 ```
 .field public static literal int32 lit = int32(0x0000000A)
 ```
-
-## <a name="example"></a>示例
 
 下面的示例是用 C# 编写，它引用上一示例中创建的元数据，并展示了 literal**** 和 static const**** 变量的效果：
 
@@ -125,6 +121,6 @@ class B {
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

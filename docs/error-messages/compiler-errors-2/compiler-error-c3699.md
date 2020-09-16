@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: ec902266550e591623894823e6336bd2436bfbd5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d313168e8033395da1749e000e52421939f77af4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758029"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686647"
 ---
 # <a name="compiler-error-c3699"></a>编译器错误 C3699
 
 "operator"：不能在类型 "type" 上使用此间接寻址
 
-尝试使用 `type`上不允许的间接寻址。
+尝试使用上不允许的间接寻址 `type` 。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C3699。
 
@@ -34,8 +34,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 普通属性不能具有引用类型。 有关更多信息，请参见 [property](../../extensions/property-cpp-component-extensions.md) 。 下面的示例生成 C3699。
 
 ```cpp
@@ -46,8 +44,6 @@ ref struct C {
    property System::String ^ y;   // OK
 };
 ```
-
-## <a name="example"></a>示例
 
 "指向指针的指针" 语法的等效项是跟踪引用的句柄。 下面的示例生成 C3699。
 

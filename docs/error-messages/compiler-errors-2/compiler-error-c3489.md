@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3489
 ms.assetid: 47b58d69-459d-4499-abc7-5f0b9303d773
-ms.openlocfilehash: 67eaa9806dff96783f391c46c890b34e1ceef5a3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 3b192a14a39b7c0c9d264bda8073c54f0f395924
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74738409"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685761"
 ---
 # <a name="compiler-error-c3489"></a>编译器错误 C3489
 
@@ -29,7 +29,7 @@ ms.locfileid: "74738409"
 
 - 按引用将变量传递给捕获子句。 （这可能会更改 lambda 表达式的行为。）
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例将生成 C3489。变量 `n` 按值出现在默认模式为按值捕获的 lambda 表达式的捕获子句中：
 
@@ -42,8 +42,6 @@ int main()
    [=, n]() { return n; } (); // C3489
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例演示 C3489 的四种可能解决方法：
 
@@ -72,6 +70,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)

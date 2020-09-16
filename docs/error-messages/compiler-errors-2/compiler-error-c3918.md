@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-ms.openlocfilehash: ff2b59338c707767fa1d3c382feaa1bfcdf29ce2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: cd9c40ef90715e9beca43a114dba475ab29b5e78
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758484"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686033"
 ---
 # <a name="compiler-error-c3918"></a>编译器错误 C3918
 
@@ -19,7 +19,7 @@ ms.locfileid: "74758484"
 
 与事件相关的多种原因可能会导致 C3918。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 由于当前上下文需要类成员，因此可能会发生 C3918。 下面的示例生成 C3918。
 
@@ -41,9 +41,7 @@ public:
 };
 ```
 
-## <a name="example"></a>示例
-
-如果尝试检查简单事件的 null 值（事件名称将不再提供对事件的后备存储委托的直接访问权限），也会导致 C3918。
+如果尝试检查简单事件的 null (事件名称将不再提供对事件) 的后备存储委托的直接访问权限，则也会导致 C3918。
 
 下面的示例生成 C3918。
 
@@ -65,8 +63,6 @@ ref struct EventSource : public IEFace {
    }
 };
 ```
-
-## <a name="example"></a>示例
 
 如果未正确订阅事件，也会发生 C3918。 下面的示例生成 C3918。
 
