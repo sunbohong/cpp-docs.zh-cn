@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127837"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042194"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用自己的动态链接库 (C++)
 
@@ -54,7 +54,7 @@ ms.locfileid: "77127837"
 
 ::: moniker range="vs-2015"
 
-- Visual Studio 的副本。 有关如何下载和安装 Visual Studio 2015 的信息，请参阅[安装 Visual Studio 2015](/visualstudio/install/install-visual-studio-2015?view=vs-2015)。 由于默认不安装 C++ 编译器和工具，请使用“自定义”安装进行安装  。
+- Visual Studio 的副本。 有关如何下载和安装 Visual Studio 2015 的信息，请参阅[安装 Visual Studio 2015](/visualstudio/install/install-visual-studio-2015?view=vs-2015&preserve-view=true)。 由于默认不安装 C++ 编译器和工具，请使用“自定义”安装进行安装  。
 
 ::: moniker-end
 

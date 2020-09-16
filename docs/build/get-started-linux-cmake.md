@@ -3,12 +3,12 @@ title: 在 Visual Studio 中创建 C++ 跨平台项目
 description: 如何在同时面向 Linux 和 Windows 的 Visual Studio 中设置、编译和调试 C++ 开源 CMake 项目。
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: aac536f488cf22adf5aa835c9fe5b884fc5d7298
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328744"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040478"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教程：在 Visual Studio 中创建 C++ 跨平台项目
 
@@ -155,7 +155,7 @@ Visual Studio 为 Windows 创建默认 x64-Debug 配置  。 Visual Studio 可�
 
    如果已添加远程连接，则可以通过导航到“工具”>“选项”>“跨平台”>“连接管理器”来打开此窗口  。
 
-1. 提供 [Linux 计算机的连接信息](/cpp/linux/connect-to-your-remote-linux-computer)，然后选择“连接”  。 Visual Studio 会将该计算机添加为 CMakeSettings.json，作为“Linux-Debug”的默认连接  。 它还会从远程计算机中下拉标头，以便获得[特定于该远程连接的 IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)。 接下来，Visual Studio 会将文件发送到远程计算机，并在远程系统中生成 CMake 缓存。 这些步骤可能需要一些时间，具体取决于网络速度和远程计算机的功率。 操作完成后，CMake 输出窗口中会显示“目标信息提取已完成”消息。
+1. 提供 [Linux 计算机的连接信息](../linux/connect-to-your-remote-linux-computer.md)，然后选择“连接”  。 Visual Studio 会将该计算机添加为 CMakeSettings.json，作为“Linux-Debug”的默认连接  。 它还会从远程计算机中下拉标头，以便获得[特定于该远程连接的 IntelliSense](../linux/configure-a-linux-project.md#remote_intellisense)。 接下来，Visual Studio 会将文件发送到远程计算机，并在远程系统中生成 CMake 缓存。 这些步骤可能需要一些时间，具体取决于网络速度和远程计算机的功率。 操作完成后，CMake 输出窗口中会显示“目标信息提取已完成”消息。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>在 Linux 上设置断点、生成和运行
 

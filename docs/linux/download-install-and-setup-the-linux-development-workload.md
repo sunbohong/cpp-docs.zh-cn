@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安装 C++ Linux 工作负载
 description: 如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负载。
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: bc75610aaefe2a3bdd919cbc4dd81413202794c6
-ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
+ms.openlocfilehash: 3f8e6eb8285652078e5f26ca58601bc6ccfa80d1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765742"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040972"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
@@ -56,7 +56,7 @@ Visual Studio 2017 及更高版本支持 Linux 项目。 若要查看这些版�
 
 Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装以下依赖项：
 
-- 编译器  - Visual Studio 2019 为 GCC 和 [Clang](/cpp/build/clang-support-cmake?view=vs-2019) 提供完整支持。
+- 编译器  - Visual Studio 2019 为 GCC 和 [Clang](../build/clang-support-cmake.md) 提供完整支持。
 - gdb  - Visual Studio 会在 Linux 系统上自动启动 gdb，并使用 Visual Studio 调试器的前端在 Linux 上提供完全保真的调试体验。
 - **rsync** 和 zip  - 包含 rsync 和 zip 允许 Visual Studio 将头文件从 Linux 系统提取到 Windows 文件系统以供 IntelliSense 使用。
 - **make**

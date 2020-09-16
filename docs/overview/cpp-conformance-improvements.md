@@ -3,12 +3,12 @@ title: C++ 的符合性改进
 ms.date: 08/04/2020
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
-ms.openlocfilehash: a28281eb7b47dcfc633467c96e520c7e97e26777
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841384"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042116"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -744,7 +744,7 @@ int main() {
 
 ### <a name="preprocessor-output-preserves-newlines"></a>预处理器输出保留换行符
 
-在将 `/P` 或 `/E` 与 `/experimental:preprocessor` 结合使用时，试验预处理器现在会保留换行符和空格。 可以使用 `/d1experimental:preprocessor:oldWhitespace` 禁用此更改。
+在将 `/P` 或 `/E` 与 `/experimental:preprocessor` 结合使用时，试验预处理器现在会保留换行符和空格。
 
 给定以下示例源：
 

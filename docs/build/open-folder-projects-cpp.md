@@ -4,12 +4,12 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 73d6ff9fb9411b146082989d581ed35298b911ad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d9f59817a499f4d529363c88adc57154268c0bc
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229800"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90039581"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>对 Visual Studio 中 C++ 生成系统的“打开文件夹”支持
 
@@ -31,7 +31,7 @@ CMake 集成在 Visual Studio IDE 中，作为 C++ 桌面工作负载的一个�
 
 若要将 Visual Studio IDE 与主菜单中没有直接支持的生成系统或编译器工具集一起使用，请选择“文件 | 打开 | 文件夹”或按“Ctrl + Shift + Alt + O”   。导航到包含源代码文件的文件夹。 若要生成项目，请配置 IntelliSense 并设置调试参数，然后添加三个 JSON 文件：
 
-| | |
+| 文件 | 说明 |
 |-|-|
 |CppProperties.json|指定用于浏览的自定义配置信息。 如有需要，请在根项目文件夹中创建此文件。 （不用于 CMake 项目。）|
 |tasks.vs.json|指定自定义生成命令。 通过“解决方案资源管理器”  上下文菜单项“配置任务”  进行访问。|

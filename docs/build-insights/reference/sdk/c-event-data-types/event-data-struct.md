@@ -9,12 +9,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ccba320a8bb9279b874fae2484c71af913253148
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 468fc30d337e5cfc5ab90f7558904fc90588c3df
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229917"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041817"
 ---
 # <a name="event_data-structure"></a>EVENT_DATA 结构
 
@@ -58,7 +58,7 @@ typedef struct EVENT_DATA_TAG
 
 ## <a name="members"></a>成员
 
-|  |  |
+| 名称 | 说明 |
 |--|--|
 | `EventId` | 标识事件的数字。 有关事件标识符的列表，请参阅 [EVENT_ID](event-id-enum.md)。 |
 | `EventInstanceId` | 在跟踪中唯一标识当前事件的数字。 当多次分析或重新记录相同的跟踪时，此值不会改变。 使用此字段来在多个通过同一跟踪的分析或重新记录过程中标识同一个事件。 |
