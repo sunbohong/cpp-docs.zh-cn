@@ -583,6 +583,8 @@
                   href: ../build/reference/gz-enable-stack-frame-run-time-error-checking.md
                 - name: /H（限制外部名称长度）
                   href: ../build/reference/h-restrict-length-of-external-names.md
+                - name: /headerUnit（使用标头单位 IFC）
+                  href: ../build/reference/headerunit.md
                 - name: /HELP（编译器命令行帮助）
                   href: ../build/reference/help-compiler-command-line-help.md
                 - name: /homeparams（将寄存器参数复制到堆栈）
@@ -603,6 +605,10 @@
                   href: ../build/reference/ln-create-msil-module.md
                 - name: /MD、/MT、/LD（使用运行时库）
                   href: ../build/reference/md-mt-ld-use-run-time-library.md
+                - name: '/module:exportHeader（创建标头单位）'
+                  href: ../build/reference/module-exportheader.md
+                - name: '/module:reference（使用命名模块 IFC）'
+                  href: ../build/reference/module-reference.md
                 - name: /MP（使用多个进程生成）
                   href: ../build/reference/mp-build-with-multiple-processes.md
                 - name: /nologo（取消显示启动版权标志）(C/C++)
@@ -675,6 +681,8 @@
                   href: ../build/reference/std-specify-language-standard-version.md
                 - name: /Tc、/Tp、/TC、/TP（指定源文件类型）
                   href: ../build/reference/tc-tp-tc-tp-specify-source-file-type.md
+                - name: /translateInclude（将 include 指令转换为 import 指令）
+                  href: ../build/reference/translateinclude.md
                 - name: /U、/u（未定义符号）
                   href: ../build/reference/u-u-undefine-symbols.md
                 - name: /utf-8（将源和可执行字符集设置为 UTF-8）
