@@ -1,5 +1,6 @@
 ---
 title: C 复数数学支持
+description: '描述 Microsoft C 运行时库中的 C 语言复杂数学支持 (CRT) '
 ms.date: 05/14/2019
 f1_keywords:
 - c.complex
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: dac032940ed9d96764b64809c5f8901ac273898b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0616f846030e5d5260b5d781884387614e12051d
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215174"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569542"
 ---
 # <a name="c-complex-math-support"></a>C 复数数学支持
 
@@ -36,11 +37,11 @@ math.h 标头定义了单独类型 struct _complex****，用于 [_cabs](../c-run
 
 ## <a name="complex-constants-and-macros"></a>复数常数和宏
 
-**I**定义为 **_Fcomplex**初始化的复杂类型 `{ 0.0f, 1.0f }` 。
+**I** 定义为 **_Fcomplex** 初始化的复杂类型 `{ 0.0f, 1.0f }` 。
 
 ## <a name="trigonometric-functions"></a>三角函数
 
-|函数|描述|
+|函数|说明|
 |-|-|
 |[cacos、cacosf、cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|计算复数的复数反余弦值|
 |[casin、casinf、casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|计算复数的复数反正弦值|
@@ -51,7 +52,7 @@ math.h 标头定义了单独类型 struct _complex****，用于 [_cabs](../c-run
 
 ## <a name="hyperbolic-functions"></a>双曲函数
 
-|函数|描述|
+|函数|说明|
 |-|-|
 |[cacosh、cacoshf、cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|计算复数的复数反双曲余弦值|
 |[casinh、casinhf、casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|计算复数的复数反双曲正弦值|
@@ -62,7 +63,7 @@ math.h 标头定义了单独类型 struct _complex****，用于 [_cabs](../c-run
 
 ## <a name="exponential-and-logarithmic-functions"></a>指数和对数函数
 
-|函数|描述|
+|函数|说明|
 |-|-|
 |[cexp、cexpf、cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|计算复数的以 e 为底的复数指数**|
 |[clog、clogf、clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|计算复数的（以 e 为底的）复数自然对数**|
@@ -70,7 +71,7 @@ math.h 标头定义了单独类型 struct _complex****，用于 [_cabs](../c-run
 
 ## <a name="power-and-absolute-value-functions"></a>幂和绝对值函数
 
-|函数|描述|
+|函数|说明|
 |-|-|
 |[cabs、cabsf、cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|计算复数的复数绝对值（也称为范数、模数或量值）|
 |[cpow、cpowf、cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|计算复数幂函数 x<sup>y</sup>|
@@ -78,7 +79,7 @@ math.h 标头定义了单独类型 struct _complex****，用于 [_cabs](../c-run
 
 ## <a name="manipulation-functions"></a>操作函数
 
-|函数|描述|
+|函数|说明|
 |-|-|
 |[_Cbuild、_FCbuild、_LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|从实部和虚部构造复数|
 |[carg、cargf、cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|计算复数的自变量（也称为相角）|
@@ -92,11 +93,12 @@ math.h 标头定义了单独类型 struct _complex****，用于 [_cabs](../c-run
 
 由于复数不是 Microsoft 编译器中的本机类型，复数类型上未定义标准的算术运算符。 为方便起见，这些复数数学库函数用于实现用户代码中的复数的有限处理：
 
-|函数|描述|
+|函数|说明|
 |-|-|
 |[_Cmulcc、_FCmulcc、_LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|将两个复数相乘|
 |[_Cmulcr、_FCmulcr、_LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|将复数和浮点数相乘|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[类型-泛型数学](tgmath.md)\
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)

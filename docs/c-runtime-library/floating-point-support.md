@@ -1,6 +1,7 @@
 ---
 title: 数学和浮点支持
-ms.date: 01/31/2019
+description: '介绍 (UCRT 的 Microsoft 通用 C 运行时库中的浮点支持) '
+ms.date: 9/14/2020
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,16 +9,18 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: ca1648719a4a98efc56ea3f543336b803c81c40f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
+ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226224"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90569600"
 ---
 # <a name="math-and-floating-point-support"></a>数学和浮点支持
 
 通用 C 运行时库 (UCRT) 提供了许多整型和浮点数学库函数，包括 ISO C99 所需的所有函数。 这些浮点函数的实现是为了平衡性能与正确性。 因为产生正确舍入的结果可能成本过高，这些函数旨在有效地生成接近正确舍入结果的近似结果。 在大多数情况下，虽然可能存在误差较大的情况，但生成的结果在正确舍入结果的 + /-1 ulp 范围内。
+
+对于 ISO C 标准版 11 (C11) 和更高版本， \<tgmath.h> 除了包含和以外，标头 \<math.h> \<complex.h> 还提供了根据参数类型调用相应数学函数的宏。 有关详细信息，请参阅 [类型-泛型数学](tgmath.md) 。
 
 许多浮点数学库函数具有不同 CPU 体系结构的不同实现。 例如，相比 64 位 x64 CRT，32 位 x86 CRT 可能具有不同的实现。 此外，某些函数可能有适用于给定 CPU 体系结构的多个实现。 在运行时动态地选择最有效的实现，具体取决于受 CPU 支持的指令集。 例如，在 32 位 x86 CRT 中，一些函数同时具有 x87 实现和 SSE2 实现。 在支持 SSE2 的 CPU 上运行时，使用速度更快的 SSE2 实现。 在不支持 SSE2 的 CPU 上运行时，使用速度较慢的 x87 实现。 数学库函数的不同实现可能会使用不同的 CPU 指令和不同的算法来生成其结果，因此，这些函数可能会在各 CPU 中产生不同的结果。 在大多数情况下，结果在正确舍入结果的 +/-1 ulp 范围内，但实际结果在各 CPU 中可能会有所不同。
 
@@ -25,7 +28,7 @@ ms.locfileid: "87226224"
 
 ## <a name="supported-math-and-floating-point-routines"></a>受支持的数学和浮点例程
 
-|例程所返回的值|用途|
+|例程所返回的值|使用|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|计算整数类型的绝对值
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|计算反余弦值
@@ -34,9 +37,9 @@ ms.locfileid: "87226224"
 [asinh、asinhf、asinhl](../c-runtime-library/reference/asinh-asinhf-asinhl.md)|计算双曲反正弦值
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)|计算反正切值
 [atanh、atanhf、atanhl](../c-runtime-library/reference/atanh-atanhf-atanhl.md)|计算双曲反正切值
-[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为**`double`**
-[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将字符串转换为**`double`**
-[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为 **`float`** 或**`long double`**
+[_atodbl、_atodbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为 **`double`**
+[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将字符串转换为 **`double`**
+[_atoflt、_atoflt_l、_atoldbl、_atoldbl_l](../c-runtime-library/reference/atodbl-atodbl-l-atoldbl-atoldbl-l-atoflt-atoflt-l.md)|将特定于区域设置的字符串转换为 **`float`** 或 **`long double`**
 [cbrt、cbrtf、cbrtl](../c-runtime-library/reference/cbrt-cbrtf-cbrtl.md)|计算立方根
 [ceil、ceilf、ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|计算上限
 [_chgsign、_chgsignf、_chgsignl](../c-runtime-library/reference/chgsign-chgsignf-chgsignl.md)|计算相反数
@@ -126,16 +129,16 @@ ms.locfileid: "87226224"
 [sinh、sinhf、sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|计算双曲正弦值
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|计算平方根
 [_status87, _statusfp, _statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|获取浮点状态字
-[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|将字符串转换为**`float`**
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|将字符串转换为**`long double`**
+[strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|将字符串转换为 **`float`**
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|将字符串转换为 **`long double`**
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|计算正切值
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|计算双曲正切值
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|计算 gamma 函数
 [trunc、truncf、truncl](../c-runtime-library/reference/trunc-truncf-truncl.md)|截断小数部分
-[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将宽字符串转换为**`double`**
+[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将宽字符串转换为 **`double`**
 [_y0、_y1 _yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|计算贝塞尔函数
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[浮点基元](../c-runtime-library/reference/floating-point-primitives.md)<br/>
+[按类别列出的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)\
+[浮点基元](../c-runtime-library/reference/floating-point-primitives.md)
