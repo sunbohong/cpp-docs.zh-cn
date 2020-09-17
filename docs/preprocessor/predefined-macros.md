@@ -2,7 +2,7 @@
 title: 预定义宏
 description: 列出并说明 Microsoft C++ 编译器预定义预处理器宏。
 ms.custom: update_every_version
-ms.date: 06/08/2020
+ms.date: 09/11/2020
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -65,6 +65,11 @@ f1_keywords:
 - _RTC_CONVERSION_CHECKS_ENABLED
 - __STDC__
 - __STDC_HOSTED__
+- __STDC_NO_ATOMICS__
+- __STDC_NO_COMPLEX__
+- __STDC_NO_THREADS__
+- __STDC_NO_VLA__
+- __STDC_VERSION__
 - __STDCPP_THREADS__
 - __TIME__
 - __TIMESTAMP__
@@ -142,6 +147,11 @@ helpviewer_keywords:
 - _RTC_CONVERSION_CHECKS_ENABLED macro
 - __STDC__ macro
 - __STDC_HOSTED__ macro
+- __STDC_NO_ATOMICS__ macro
+- __STDC_NO_COMPLEX__ macro
+- __STDC_NO_THREADS__ macro
+- __STDC_NO_VLA__ macro
+- __STDC_VERSION__ macro
 - __STDCPP_THREADS__ macro
 - __TIME__ macro
 - __TIMESTAMP__ macro
@@ -215,6 +225,11 @@ no-loc:
 - _RTC_CONVERSION_CHECKS_ENABLED
 - __STDC__
 - __STDC_HOSTED__
+- __STDC_NO_ATOMICS__
+- __STDC_NO_COMPLEX__
+- __STDC_NO_THREADS__
+- __STDC_NO_VLA__
+- __STDC_VERSION__
 - __STDCPP_THREADS__
 - __TIME__
 - __TIMESTAMP__
@@ -225,18 +240,18 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 1c7b2f18aede84d8067c36537f33261554c16c17
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 85b467a0ac3db67b2715a849966618697437658b
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222636"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075694"
 ---
 # <a name="predefined-macros"></a>预定义宏
 
 Microsoft C/C++ 编译器 (MSVC) 根据语言（C 或 C++）、编译目标和所选编译器选项预定义某些预处理器宏。
 
-MSVC 支持 ANSI/ISO C99 标准以及 ISO C++14 和 C++17 标准要求的预定义预处理器宏。 该实现还支持多个 Microsoft 专用预处理器宏。 部分宏仅针对特定生成环境或编译器选项定义。 除非另行说明，否则这些宏的定义范围适用于整个翻译单元，就像将它们指定为 `/D` 编译器选项参数一样。 定义后，预处理器先将这些宏展开为指定的值。然后再编译。 预定义宏不带参数，不能重新定义。
+MSVC 支持 ANSI/ISO C99、C11 和 C17 标准以及 ISO C++14 和 C++17 标准要求的预定义预处理器宏。 该实现还支持多个 Microsoft 专用预处理器宏。 部分宏仅针对特定生成环境或编译器选项定义。 除非另行说明，否则这些宏的定义范围适用于整个翻译单元，就像将它们指定为 `/D` 编译器选项参数一样。 定义后，预处理器先将这些宏展开为指定的值。然后再编译。 预定义宏不带参数，不能重新定义。
 
 ## <a name="standard-predefined-identifier"></a>标准预定义标识符
 
@@ -252,7 +267,7 @@ MSVC 支持 ANSI/ISO C99 标准以及 ISO C++14 和 C++17 标准要求的预定�
 
 ## <a name="standard-predefined-macros"></a>标准预定义宏
 
-编译器支持 ISO C99 和 ISO C++17 标准指定的以下预定义宏。
+编译器支持 ISO C99、C11、C17 和 ISO C++17 标准指定的以下预定义宏：
 
 - `__cplusplus`：当翻译单元编译为 C++ 时，定义为整数文本值。 其他情况下则不定义。
 
@@ -265,6 +280,16 @@ MSVC 支持 ANSI/ISO C99 标准以及 ISO C++14 和 C++17 标准要求的预定�
 - `__STDC__`：仅在编译为 C，并且指定了 [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 编译器选项时，定义为 1。 其他情况下则不定义。
 
 - `__STDC_HOSTED__`：如果实现是托管实现并且支持整个必需的标准库，则定义为 1  。 其他情况下则定义为 0。
+
+- `__STDC_NO_ATOMICS__` 如果实现不支持可选的标准原子，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+
+- `__STDC_NO_COMPLEX__` 如果实现不支持可选的标准复数，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+
+- `__STDC_NO_THREADS__` 如果实现不支持可选的标准线程，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+
+- `__STDC_NO_VLA__` 如果实现不支持可选的可变长度数组，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+
+- `__STDC_VERSION__` 当编译为 C 且指定 `/std` C11 或 C17 选项之一时定义。 对于 [`/std:c11`](../build/reference/std-specify-language-standard-version.md)，它扩展到 `201112L`；对于 [`/std:c17`](../build/reference/std-specify-language-standard-version.md)，则扩展到 `201710L`。
 
 - `__STDCPP_THREADS__`：当且仅当程序可以有多个执行线程并编译为 C++ 时，定义为 1。 其他情况下则不定义。
 
@@ -480,6 +505,7 @@ MSVC 支持以下其他预定义宏。
    | Visual Studio 2019 版本 16.5 | 1925 |
    | Visual Studio 2019 版本 16.6 | 1926 |
    | Visual Studio 2019 版本 16.7 | 1927 |
+   | Visual Studio 2019 版本 16.8 | 1928 |
 
    要在指定的 Visual Studio 版本或更高版本中测试编译器版本或更新，请使用 `>=` 运算符。 可在条件指令中使用它来比较 `_MSC_VER` 与已知版本。 如果要比较多个互相排斥的版本，请按版本号的降序顺序进行比较。 例如，此代码将检查 Visual Studio 2017 和更高版本中发布的编译器。 接下来，它会检查 Visual Studio 2015 以及之后发布的编译器。 然后，它会检查 Visual Studio 2015 之前发布的所有编译器：
 
