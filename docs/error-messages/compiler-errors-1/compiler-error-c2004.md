@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-ms.openlocfilehash: b781e9f81342f35d66eca222bd338252b739096c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c4f099ba241b56291074202e6c03ad98ee97f756
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737486"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743498"
 ---
 # <a name="compiler-error-c2004"></a>编译器错误 C2004
 
@@ -21,7 +21,7 @@ ms.locfileid: "74737486"
 
 此错误还可能来自于为 Visual Studio .NET 2003 执行的编译器一致性工作：在预处理器指令中缺少括号。 如果预处理器指令中缺少右括号，编译器将生成错误。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 以下示例生成 C2004：
 
@@ -37,8 +37,6 @@ int main()
     #endif
 }
 ```
-
-## <a name="example"></a>示例
 
 可能的解决方法：
 

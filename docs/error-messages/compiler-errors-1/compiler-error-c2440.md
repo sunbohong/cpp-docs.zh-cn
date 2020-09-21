@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 75b2ba62182a33137b433c836b4acf7c9e1fc231
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87207974"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742107"
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
 
@@ -19,9 +19,11 @@ ms.locfileid: "87207974"
 
 编译器无法从强制转换 `type1` 为 `type2` 。
 
-## <a name="example"></a>示例
+如果在 **`char*`** `wchar_t*` 设置编译器一致性选项 [/zc： strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md) 时尝试使用 c + + 代码中的字符串文本初始化非常量 (或) ，则可能导致 C2440。 在 C 中，字符串文本的类型为的数组 **`char`** ，但在 c + + 中，它是的数组 `const char` 。
 
-如果在 **`char*`** `wchar_t*` 设置编译器一致性选项[/zc： strictStrings](../../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)时尝试使用 c + + 代码中的字符串来初始化非常量（或），则可能会导致 C2440。 在 C 中，字符串文本的类型为的数组 **`char`** ，但在 c + + 中，它是的数组 `const char` 。 此示例生成 C2440：
+## <a name="examples"></a>示例
+
+此示例生成 C2440：
 
 ```cpp
 // C2440s.cpp
@@ -37,8 +39,6 @@ int main() {
    const char* s2 = "tests"; // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 如果尝试将指向成员的指针转换为 void *，也会导致 C2440。 下一个示例生成 C2440：
 
@@ -61,8 +61,6 @@ public:
 };
 ```
 
-## <a name="example"></a>示例
-
 如果尝试强制转换类型，而该类型只是已声明但未定义的类型，则也会导致 C2440。 此示例生成 C2440：
 
 ```cpp
@@ -75,8 +73,6 @@ Base * func(Derived * d) {
     return static_cast<Base *>(d); // error C2440: 'static_cast' : cannot convert from 'Derived *' to 'Base *'
 }
 ```
-
-## <a name="example"></a>示例
 
 下一个示例中第15行和第16行的 C2440 错误都是通过消息进行限定的 `Incompatible calling conventions for UDT return value` 。 *UDT*是用户定义的类型，如类、结构或联合。 当前向声明的返回类型中指定的 UDT 的调用约定与 UDT 的实际调用约定冲突以及涉及函数指针时，将导致这种不兼容性错误。
 
@@ -126,8 +122,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 如果将零赋给内部指针，也会出现 C2440：
 
 ```cpp
@@ -141,9 +135,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
-如果不正确地使用用户定义的转换，也会出现 C2440。 例如，当转换运算符定义为时 **`explicit`** ，编译器不能在隐式转换中使用它。 有关用户定义的转换的详细信息，请参阅[用户定义的转换（c + +/cli）](../../dotnet/user-defined-conversions-cpp-cli.md)。 此示例生成 C2440：
+如果不正确地使用用户定义的转换，也会出现 C2440。 例如，当转换运算符定义为时 **`explicit`** ，编译器不能在隐式转换中使用它。 有关用户定义的转换的详细信息，请参阅) [ (的 c + +/cli) 用户定义的转换 ](../../dotnet/user-defined-conversions-cpp-cli.md) 。 此示例生成 C2440：
 
 ```cpp
 // C2440d.cpp
@@ -165,8 +157,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 如果尝试创建类型为的 Visual C++ 数组的实例，也可能出现 C2440 <xref:System.Array> 。  有关详细信息，请参阅 [array](../../extensions/arrays-cpp-component-extensions.md)。  下一个示例生成 C2440：
 
 ```cpp
@@ -180,8 +170,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 由于特性功能发生更改，也可能出现 C2440。  下面的示例生成 C2440。
 
 ```cpp
@@ -192,11 +180,9 @@ int main() {
 // [ module(name="PropDemoLib", version="1.0") ];
 ```
 
-## <a name="example"></a>示例
-
 当编译使用 **/clr**编程的源代码时，Microsoft c + + 编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下转换。
 
-若要解决此 C2440，请使用正确的强制转换运算符。 有关详细信息，请参阅[强制转换运算符](../../cpp/casting-operators.md)。
+若要解决此 C2440，请使用正确的强制转换运算符。 有关详细信息，请参阅 [强制转换运算符](../../cpp/casting-operators.md)。
 
 此示例生成 C2440：
 
@@ -212,8 +198,6 @@ int main() {
    d = dynamic_cast<Derived^>(b);   // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 由于 Visual Studio 2015 Update 3 中对编译器进行了一致性更改，导致出现 C2440。 以前，编译器在标识操作的模板匹配项时将某些非重复表达式错误地处理为同一类型 **`static_cast`** 。 现在，编译器会正确区分类型，而依赖于先前行为的代码 **`static_cast`** 会中断。 若要解决此问题，请将模板参数更改为与模板参数类型匹配，或使用 **`reinterpret_cast`** 或 C 样式强制转换。
 
@@ -239,8 +223,6 @@ int main()
 
 This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in <atlcom.h>.
 ```
-
-## <a name="example"></a>示例
 
 ### <a name="copy-list-initialization"></a>复制列表初始化
 
@@ -278,8 +260,6 @@ int main()
     const A& a2{ 1 };
 }
 ```
-
-## <a name="example"></a>示例
 
 ### <a name="cv-qualifiers-in-class-construction"></a>类构造中的 cv 限定符
 

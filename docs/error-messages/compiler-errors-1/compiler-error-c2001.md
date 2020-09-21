@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6b40a3bd186b5c45a0ea5163f433635ab1e7b07f
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756833"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743485"
 ---
 # <a name="compiler-error-c2001"></a>编译器错误 C2001
 
@@ -25,7 +25,7 @@ ms.locfileid: "74756833"
 
 用 \n 结束第一行是不够的。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2001：
 
@@ -42,8 +42,6 @@ int main()
              world");
 }
 ```
-
-## <a name="example"></a>示例
 
 行继续符后面的下一行开头的空格将包含在字符串常量中。 上面所示的示例都不会在字符串常量中嵌入一个换行符。 可以嵌入换行符，如下所示：
 

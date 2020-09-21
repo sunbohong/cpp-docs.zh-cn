@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2099
 ms.assetid: 30e151ee-d458-4901-b0c0-d45054a913f5
-ms.openlocfilehash: e9fb7739111d13a585579455ed97cecaca3266e4
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 84070b36506a657dde5d2e7bd5594c2b7434d81d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301933"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743407"
 ---
 # <a name="compiler-error-c2099"></a>编译器错误 C2099
 
@@ -19,7 +19,7 @@ ms.locfileid: "75301933"
 
 此错误仅由 C 编译器发出，并仅发生在非自动变量上。  编译器在启动程序时初始化非自动变量，并且初始化的值必须是常数。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2099。
 
@@ -29,8 +29,6 @@ int j;
 int *p;
 j = *p;   // C2099 *p is not a constant
 ```
-
-## <a name="example"></a>示例
 
 由于编译时与运行时的浮点精度环境设置（有关详细信息，请参阅 **_controlfp_s** ）可能不同，因此，编译器无法在 [/fp:strict](../../c-runtime-library/reference/controlfp-s.md) 下对表达式执行常数合并。在这种情况下，也可能发生 C2099。
 
