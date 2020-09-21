@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 00b73b9fb113066c6948c49ec7d2039748284800
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837755"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742939"
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 
@@ -34,7 +34,7 @@ Platform：： Array 从 [platform：： WriteOnlyArray 类](../cppcx/platform-w
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[Array 构造函数](#ctor)|初始化由类模板参数 *T*指定的一维可修改类型数组。|
 
@@ -44,11 +44,11 @@ Platform：： Array 从 [platform：： WriteOnlyArray 类](../cppcx/platform-w
 
 ### <a name="properties"></a>属性
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [Array：： Value](#value) | 检索当前数组的句柄。 |
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 Array 类是密封类，不能被继承。
 
@@ -66,7 +66,7 @@ Windows 运行时类型系统不支持交错数组的概念，因此不能将 `I
 
 初始化由类模板参数 *T*指定的一维可修改类型数组。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```cpp
 Array(unsigned int size);
@@ -84,7 +84,7 @@ Array(T* data, unsigned int size);
 *data*<br/>
 指向用于初始化该数组对象的类型 `T` 的数据数组的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关如何创建 Platform：： Array 的实例的详细信息，请参阅 [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
@@ -92,7 +92,7 @@ Array(T* data, unsigned int size);
 
 检索对指定索引位置上数组元素的引用。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```cpp
 T& get(unsigned int index)  const;
@@ -111,7 +111,7 @@ T& get(unsigned int index)  const;
 
 检索当前数组的句柄。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```cpp
 property Array^ Value;
@@ -121,7 +121,7 @@ property Array^ Value;
 
 当前数组的句柄。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

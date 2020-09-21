@@ -5,12 +5,12 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 0ecedcfa8444b5cbae8fbe64b528a593ed3498b4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2c09fa0070151f7cdd502e8f5583645110e91c5b
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844244"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741952"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 运算符
 
@@ -39,7 +39,7 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 **`true`** 如果 unordered_maps 不相等，则为; 否则为。 **`false`** 如果它们相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在其中存储元素的二元顺序不会影响 unordered_map 对象之间的比较。 如果两个 unordered_map 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_map 相等。 否则，它们不相等。
 
@@ -101,7 +101,7 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 **`true`** 如果 unordered_maps 相等，则为; 否则为。 **`false`** 如果它们不相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在其中存储元素的二元顺序不会影响 unordered_map 对象之间的比较。 如果两个 unordered_map 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_map 相等。 否则，它们不相等。
 
@@ -143,7 +143,7 @@ um2 == um3: false
 */
 ```
 
-## <a name="operator"></a><a name="op_neq_multimap"></a> operator！ =
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a> operator！ = (多重映射) 
 
 测试位于运算符左侧的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 对象是否与位于右侧的 unordered_multimap 对象不相等。
 
@@ -163,7 +163,7 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 **`true`** 如果 unordered_multimaps 不相等，则为; 否则为。 **`false`** 如果它们相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在其中存储元素的二元顺序不会影响 unordered_multimap 对象之间的比较。 如果两个 unordered_multimap 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_multimap 相等。 否则，它们不相等。
 
@@ -206,7 +206,7 @@ um2 != um3: true
 */
 ```
 
-## <a name="operator"></a><a name="op_eq_eq_multimap"></a> operator = =
+## <a name="operator-multimap"></a><a name="op_eq_eq_multimap"></a> operator = = (多重映射) 
 
 测试位于运算符左侧的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 对象是否与位于右侧的 unordered_multimap 对象相等。
 
@@ -226,7 +226,7 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 **`true`** 如果 unordered_multimaps 相等，则为; 否则为。 **`false`** 如果它们不相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在其中存储元素的二元顺序不会影响 unordered_multimap 对象之间的比较。 如果两个 unordered_multimap 具有相同的元素数，并且一个容器中的元素是另一个容器中的元素的排列，则这两个 unordered_multimap 相等。 否则，它们不相等。
 
@@ -269,6 +269,6 @@ um2 == um3: false
 */
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<unordered_map>](../standard-library/unordered-map.md)

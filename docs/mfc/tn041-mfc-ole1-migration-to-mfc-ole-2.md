@@ -1,5 +1,5 @@
 ---
-title: TN041:-OLE1 迁移到 MFC-OLE 2
+title: TN041： MFC-OLE1 迁移到 MFC-OLE 2
 ms.date: 10/18/2018
 helpviewer_keywords:
 - OLE1 [MFC]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-ms.openlocfilehash: 78ffefb198b92acbac5c3c18acd9496835845e6f
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 7d0381983481278b1410ae0ff11463519d4cbb34
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610996"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743147"
 ---
-# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041:MFC/OLE1 迁移到 MFC/OLE 2
+# <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 迁移到 MFC/OLE 2
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
@@ -27,7 +27,7 @@ ms.locfileid: "65610996"
 
 MFC 2.5（及更高版本）中的 OLE 2 类的设计目的之一是保留 MFC 2.0 中提供的针对 OLE 1.0 支持的很多相同体系结构。 因此，MFC 2.0 中的很多相同的 OLE 类仍存在于此版本的 MFC 中（`COleDocument`、`COleServerDoc`、`COleClientItem` 和 `COleServerItem`）。 此外，这些类中的很多 API 完全相同。 但是，OLE 2 与 OLE 1.0 差别很大，因此您可以预料某些细节已更改。 如果您熟悉 MFC 2.0 的 OLE1 支持，则会对 MFC 的 2.0 支持感到很亲切。
 
-如果您要采用现有 MFC/OLE1 应用程序并向其添加 OLE 2 功能，则应该先阅读本说明。 本说明介绍了一些常规问题，可能会遇到移植到 MFC/OLE 2 将 OLE1 功能时，然后讨论移植 MFC 2.0 中包含的两个应用程序时发现的问题： MFC OLE 示例[OCLIENT](../overview/visual-cpp-samples.md)和[HIERSVR](../overview/visual-cpp-samples.md)。
+如果您要采用现有 MFC/OLE1 应用程序并向其添加 OLE 2 功能，则应该先阅读本说明。 此注释包含在将 OLE1 功能移植到 MFC/OLE 2 时可能会遇到的一些常见问题，并讨论了在迁移 MFC 2.0 中包含的两个应用程序时发现的问题： MFC OLE samples [OCLIENT](../overview/visual-cpp-samples.md) 和 [HIERSVR](../overview/visual-cpp-samples.md)。
 
 ## <a name="mfc-documentview-architecture-is-important"></a>MFC 文档/视图体系结构很重要
 
@@ -43,28 +43,28 @@ MFC 的“罐装实现”类（如 `CToolBar`、`CStatusBar` 和 `CScrollView`�
 
 有很多包含 OLE 功能的 MFC 示例。 以下每个应用程序采用不同的角度来实现 OLE：
 
-- [HIERSVR](../overview/visual-cpp-samples.md)意味着主要用于充当服务器应用程序。 它作为 MFC/OLE1 应用程序包含在 MFC 2.0 中，并且已经移植到 MFC/OLE 2，然后进行了扩展以实现在 OLE 2 中可用的很多 OLE 功能。
+- [HIERSVR](../overview/visual-cpp-samples.md) 主要用于作为服务器应用程序。 它作为 MFC/OLE1 应用程序包含在 MFC 2.0 中，并且已经移植到 MFC/OLE 2，然后进行了扩展以实现在 OLE 2 中可用的很多 OLE 功能。
 
-- [OCLIENT](../overview/visual-cpp-samples.md)这是一个独立的容器应用程序，用于从容器的角度演示很多 OLE 功能。 它也已经从 MFC 2.0 移植，然后进行了扩展以支持很多更高级的 OLE 功能，如自定义剪贴板格式和指向嵌入项的链接。
+- [OCLIENT](../overview/visual-cpp-samples.md) 这是一个独立的容器应用程序，旨在演示容器中的很多 OLE 功能。 它也已经从 MFC 2.0 移植，然后进行了扩展以支持很多更高级的 OLE 功能，如自定义剪贴板格式和指向嵌入项的链接。
 
-- [DRAWCLI](../overview/visual-cpp-samples.md)此应用程序实现 OLE 容器支持得与 OCLIENT 的作用，不同之处在于它是现有的面向对象的绘图程序的框架内。 它向您展示如何实现 OLE 容器支持并将其集成到现有应用程序。
+- [DRAWCLI](../overview/visual-cpp-samples.md) 此应用程序的实现与 OCLIENT 的支持非常类似，不同之处在于，它在现有面向对象的绘图程序的框架中执行此操作。 它向您展示如何实现 OLE 容器支持并将其集成到现有应用程序。
 
-- [SUPERPAD](../overview/visual-cpp-samples.md)此应用程序，同时作为独立应用程序，也是 OLE 服务器。 它实现的服务器支持是高度简化的。 其中特别重要的是，它如何使用 OLE 剪贴板服务将数据复制到剪贴板，同时使用内置于 Windows“编辑”控件的功能实现剪贴板粘贴功能。 这展示了传统 Windows API 使用方法的有趣结合以及与新的 OLE API 的集成。
+- [SUPERPAD](../overview/visual-cpp-samples.md) 此应用程序以及作为一种很好的独立应用程序也是 OLE 服务器。 它实现的服务器支持是高度简化的。 其中特别重要的是，它如何使用 OLE 剪贴板服务将数据复制到剪贴板，同时使用内置于 Windows“编辑”控件的功能实现剪贴板粘贴功能。 这展示了传统 Windows API 使用方法的有趣结合以及与新的 OLE API 的集成。
 
 有关示例应用程序的详细信息，请参阅“MFC 示例帮助”。
 
 ## <a name="case-study-oclient-from-mfc-20"></a>案例研究：MFC 2.0 中的 OCLIENT
 
-与上述[OCLIENT](../overview/visual-cpp-samples.md)包含在 MFC 2.0 中，并实现了 OLE 使用 mfc/ole1。 最初将此应用程序转换为使用 MFC/OLE 2 类所采用的步骤如下所述。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
+如上所述， [OCLIENT](../overview/visual-cpp-samples.md) 已包含在 mfc 2.0 中，并通过 MFC/OLE1 实现了 OLE。 最初将此应用程序转换为使用 MFC/OLE 2 类所采用的步骤如下所述。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
 
 > [!NOTE]
 > 编译器错误和分步过程是使用 Visual C++ 2.0 创建的。 特定错误消息和位置在 Visual C++ 4.0 中可能已更改，但概念性信息仍然有效。
 
-## <a name="getting-it-up-and-running"></a>开始运行
+### <a name="getting-it-up-and-running"></a>开始运行
 
 将 OCLIENT 示例移植到 MFC/OLE 所用的方法首先是生成该示例并修复会产生的明显编译器错误。 如果采用了 MFC 2.0 中的 OCLIENT 示例并在此版本的 MFC 下编译它，您就会发现没有太多要解决的错误。 下面按错误发生的顺序对其进行说明。
 
-## <a name="compile-and-fix-errors"></a>编译和修复错误
+### <a name="compile-and-fix-errors"></a>编译和修复错误
 
 ```Output
 \oclient\mainview.cpp(104) : error C2660: 'Draw' : function does not take 4 parameters
@@ -80,9 +80,9 @@ MFC 的“罐装实现”类（如 `CToolBar`、`CStatusBar` 和 `CScrollView`�
 \oclient\mainview.cpp(288) : error C2664: 'CreateStaticFromClipboard' : cannot convert parameter 1 from 'char [1]' to 'enum ::tagOLERENDER '
 ```
 
-导致上述错误的所有`COleClientItem::CreateXXXX`mfc/ole1 中的函数所需的传递的唯一名称来表示项。 这对于基础 OLE API 是必需的， 但在 MFC/OLE 2 中不是必需的，因为 OLE 2 不使用 DDE 作为基础通信机制（该名称已在 DDE 对话中使用）。 若要解决此问题，可以删除`CreateNewName`函数以及对它的所有引用。 了解每个 MFC/OLE 函数在此版本中期望的功能很容易，只需将光标放在调用上并按 F1 即可。
+上述错误的结果 `COleClientItem::CreateXXXX` 是： MFC/OLE1 中的所有函数要求传递唯一名称来表示该项。 这对于基础 OLE API 是必需的， 但在 MFC/OLE 2 中不是必需的，因为 OLE 2 不使用 DDE 作为基础通信机制（该名称已在 DDE 对话中使用）。 若要解决此问题，可以删除该 `CreateNewName` 函数以及对它的所有引用。 了解每个 MFC/OLE 函数在此版本中期望的功能很容易，只需将光标放在调用上并按 F1 即可。
 
-另一个重要的方面是 OLE 2 剪贴板处理。 在 OLE1 中，您使用了与 Windows 剪贴板交互的剪贴板 API。 在 OLE 2 中，可使用不同的机制达到此目的。 MFC/OLE1 API 假定剪贴板在将 `COleClientItem` 对象复制到剪贴板之前处于打开状态。 现在不再需要这样做，并且此做法会导致所有 MFC/OLE 剪贴板操作失败。 在编辑代码以移除依赖项上的同时`CreateNewName`，还应移除打开和关闭 Windows 剪贴板的代码。
+另一个重要的方面是 OLE 2 剪贴板处理。 在 OLE1 中，您使用了与 Windows 剪贴板交互的剪贴板 API。 在 OLE 2 中，可使用不同的机制达到此目的。 MFC/OLE1 API 假定剪贴板在将 `COleClientItem` 对象复制到剪贴板之前处于打开状态。 现在不再需要这样做，并且此做法会导致所有 MFC/OLE 剪贴板操作失败。 在编辑代码以删除依赖项时 `CreateNewName` ，还应删除打开和关闭 Windows 剪贴板的代码。
 
 ```Output
 \oclient\mainview.cpp(332) : error C2065: 'AfxOleInsertDialog' : undeclared identifier
@@ -91,7 +91,7 @@ MFC 的“罐装实现”类（如 `CToolBar`、`CStatusBar` 和 `CScrollView`�
 \oclient\mainview.cpp(347) : error C2039: 'CreateNewObject' : is not a member of 'CRectItem'
 ```
 
-这些错误导致`CMainView::OnInsertObject`处理程序。 处理“插入新对象”命令是另一个变化较大的方面。 在这种情况下，为新的 OLE 容器应用程序将原始实现与 AppWizard 提供的实现合并是最简单的。 事实上，这是可用来移植其他应用程序的方法。 通过调用在 mfc/ole1 中，显示"插入对象"对话框`AfxOleInsertDialog`函数。 在此版本，您构造`COleInsertObject`对话框对象并调用`DoModal`。 此外，使用创建新的 OLE 项**CLSID**而不是类名字符串。 最终结果应该类似于以下形式
+这些错误是由 `CMainView::OnInsertObject` 处理程序导致的。 处理“插入新对象”命令是另一个变化较大的方面。 在这种情况下，为新的 OLE 容器应用程序将原始实现与 AppWizard 提供的实现合并是最简单的。 事实上，这是可用来移植其他应用程序的方法。 在 MFC/OLE1 中，通过调用函数显示 "插入对象" 对话框 `AfxOleInsertDialog` 。 在此版本中，你将构造一个 `COleInsertObject` 对话框对象并调用 `DoModal` 。 此外，使用 **CLSID** 而不是类字符串创建新的 OLE 项。 最终结果应该类似于以下形式
 
 ```cpp
 COleInsertDialog dlg;
@@ -141,14 +141,14 @@ EndWaitCursor();
 > [!NOTE]
 > “插入新对象”可能对您的应用程序不同：
 
-它也是包括所需\<afxodlgs.h >，其中包含的声明`COleInsertObject`对话框类，以及 MFC 提供的其他标准对话框。
+还需要包括 \<afxodlgs.h> ，其中包含对话框类的声明，以及 `COleInsertObject` MFC 提供的其他标准对话框。
 
 ```Output
 \oclient\mainview.cpp(367) : error C2065: 'OLEVERB_PRIMARY' : undeclared identifier
 \oclient\mainview.cpp(367) : error C2660: 'DoVerb' : function does not take 1 parameters
 ```
 
-这些错误是因为某些 OLE1 常量在 OLE 2 中已发生更改（尽管它们在概念上是相同的）导致的。 在这种情况下`OLEVERB_PRIMARY`已更改为`OLEIVERB_PRIMARY`。 在 OLE1 和 OLE 2 中，当用户双击某个项时，主谓词通常由容器执行。
+这些错误是因为某些 OLE1 常量在 OLE 2 中已发生更改（尽管它们在概念上是相同的）导致的。 在此示例中 `OLEVERB_PRIMARY` ，已更改为 `OLEIVERB_PRIMARY` 。 在 OLE1 和 OLE 2 中，当用户双击某个项时，主谓词通常由容器执行。
 
 此外，`DoVerb` 现在还采用了额外的参数 - 指向视图 (`CView`*) 的指针。 此参数仅用于实现“可视化编辑”（或就地激活）。 现在，您可以将该参数设置为 Null，因为您此时不想实现此功能。
 
@@ -168,7 +168,7 @@ BOOL CRectItem::CanActivate()
 \oclient\rectitem.cpp(84) : error C2064: term does not evaluate to a function
 ```
 
-在 mfc/ole1 中，`COleClientItem::GetBounds`并`SetBounds`用来查询和操作项的范围 (`left`和`top`成员都始终是零)。 在 MFC/OLE 2 中支持此功能更直接地`COleClientItem::GetExtent`和`SetExtent`，其处理**大小**或`CSize`相反。
+在 MFC/OLE1 中， `COleClientItem::GetBounds` 和 `SetBounds` 用于查询和操作项的范围 (`left` 和 `top` 成员始终为零) 。 在 MFC/OLE 2 中，这种方法更直接受和的支持 `COleClientItem::GetExtent` `SetExtent` ，后者处理的是 **大小** ， `CSize` 而不是。
 
 新的 SetItemRectToServer 的代码以及 UpdateItemRectFromServer 调用如下所示：
 
@@ -227,15 +227,15 @@ BOOL CRectItem::SetItemRectToServer()
 \oclient\frame.cpp(50) : error C2064: term does not evaluate to a function
 ```
 
-在 mfc/ole1 中同步 API 调用从容器到服务器是*模拟*，这是因为 ole1 在本质上是异步的在许多情况下。 在处理来自用户的命令前必须检查正在进行的未处理异步调用。 Mfc/ole1 提供`COleClientItem::InWaitForRelease`函数用于执行此操作。 在 MFC/OLE 2 中，这不是必需的，因此您可以完全避免在 CMainFrame 中重写 OnCommand。
+在 MFC/OLE1 中，对从容器到服务器的同步 API 调用进行 *模拟*，因为 OLE1 在许多情况下都是异步的。 在处理来自用户的命令前必须检查正在进行的未处理异步调用。 MFC/OLE1 提供了 `COleClientItem::InWaitForRelease` 用于执行此操作的函数。 在 MFC/OLE 2 中，这不是必需的，因此您可以完全避免在 CMainFrame 中重写 OnCommand。
 
 此时，OCLIENT 将执行编译和链接。
 
-## <a name="other-necessary-changes"></a>其他必要更改
+### <a name="other-necessary-changes"></a>其他必要更改
 
 但是，几乎没有什么未完成的工作将会阻止 OCLIENT 运行。 现在修复这些问题比之后修复更好。
 
-首先，初始化 OLE 库是必需的。 这是通过调用`AfxOleInit`从`InitInstance`:
+首先，初始化 OLE 库是必需的。 这是通过调用来完成的 `AfxOleInit` `InitInstance` ：
 
 ```cpp
 if (!AfxOleInit())
@@ -269,7 +269,7 @@ CRectItem::OnChange(OLE_NOTIFICATION wNotification, DWORD dwParam)
 }
 ```
 
-在 mfc/ole1 中，容器应用程序派生文档类从`COleClientDoc`。 在 MFC/OLE 2 中，此类已移除，由 `COleDocument` 取代（此新组织使得生成容器/服务器应用重写更简单）。 没有 **#define**映射`COleClientDoc`到`COleDocument`以简化 mfc/ole1 应用程序到 MFC/OLE 2，如 OCLIENT 的移植。 未提供的功能之一`COleDocument`提供`COleClientDoc`是标准命令消息映射条目。 这样做是为了使服务器应用程序（也使用间接地 `COleDocument`）不会负担这些命令处理程序的开销（除非它们是容器/服务器应用程序）。 您还需要将以下条目添加到 CMainDoc 消息映射：
+在 MFC/OLE1 中，容器应用程序从派生文档类 `COleClientDoc` 。 在 MFC/OLE 2 中，此类已移除，由 `COleDocument` 取代（此新组织使得生成容器/服务器应用重写更简单）。 有一个映射到的 **#define** ，以 `COleClientDoc` 简化将 `COleDocument` mfc/OLE1 应用程序移植到 mfc/OLE 2 （如 OCLIENT）的工作。 不是由提供的功能之一 `COleDocument` `COleClientDoc` 是标准的命令消息映射项。 这样做是为了使服务器应用程序（也使用间接地 `COleDocument`）不会负担这些命令处理程序的开销（除非它们是容器/服务器应用程序）。 您还需要将以下条目添加到 CMainDoc 消息映射：
 
 ```cpp
 ON_UPDATE_COMMAND_UI(ID_EDIT_PASTE, OnUpdatePasteMenu)
@@ -285,11 +285,11 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT, OnEditConvert)
 
 此时，OCLIENT 是一个功能性 OLE 容器应用程序。 可以插入任何类型的项（OLE1 或 OLE 2）。 由于支持就地激活的必要代码未实现，项将在单独的窗口中进行编辑，这与 OLE1 非常类似。 下一节将讨论支持就地编辑（有时称为“可视化编辑”）的必要更改。
 
-## <a name="adding-visual-editing"></a>添加“可视化编辑”
+### <a name="adding-visual-editing"></a>添加“可视化编辑”
 
 OLE 最有趣的功能之一是就地激活（也称为“可视化编辑”）。 此功能可让服务器接管容器的一部分用户界面，以便为用户提供更无缝的编辑界面。 若要向 OCLIENT 实现就地激活，则需要添加一些特殊资源和一些附加代码。 这些资源和代码通常由 AppWizard 提供 — 事实上，此处的很多代码是直接通过“容器”支持从新的 AppWizard 应用程序借用的。
 
-首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 文件和窗口弹出窗口，以指示组的分隔之间插入两个分隔条 (它应如下所示：文件&#124;&#124;窗口)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息请参阅[菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
+首先，当存在处于就地活动状态的项时，必须添加要使用的菜单资源。 您可以复制 IDR_OCLITYPE 资源并删除除“文件”和“窗口”弹出项之外的所有资源，以便在 Visual C++ 中创建此额外菜单资源。 在 "文件" 和 "窗口" 弹出项之间插入两个分隔条，以指示组 (应如下所示：文件 &#124;&#124; 窗口) 。 有关这些分隔符的含义以及如何合并服务器和容器菜单的详细信息，请参阅 [菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
 
 创建这些菜单后，您需要通知框架。 此操作在将文档模板添加 InitInstance 中的文档模板列表前通过调用文档模板的 `CDocTemplate::SetContainerInfo` 完成。 注册文档模板的新代码如下所示：
 
@@ -309,13 +309,13 @@ IDR_OLECLITYPE_INPLACE 资源是在 Visual C++ 中创建的特殊就地资源。
 
 若要实现就地激活，`CView` (CMainView) 派生类以及 `COleClientItem` 派生类 (CRectItem) 中有一些项需要更改。 所有这些重写都由 AppWizard 提供，并且大部分实现将直接来自默认 AppWizard 应用程序。
 
-在此移植的第一个步骤中，通过重写 `COleClientItem::CanActivate` 完全禁用了就地激活。 应移除此重写以允许就地激活。 此外，将 NULL 传递给了对 `DoVerb` 的所有调用（下面显示了其中两个），因为只有就地激活才需要提供视图。 若要完全实现就地激活，必须将正确的视图传入 `DoVerb` 调用。 这些调用之一就是`CMainView::OnInsertObject`:
+在此移植的第一个步骤中，通过重写 `COleClientItem::CanActivate` 完全禁用了就地激活。 应移除此重写以允许就地激活。 此外，将 NULL 传递给了对 `DoVerb` 的所有调用（下面显示了其中两个），因为只有就地激活才需要提供视图。 若要完全实现就地激活，必须将正确的视图传入 `DoVerb` 调用。 其中一项调用为 `CMainView::OnInsertObject` ：
 
 ```cpp
 pItem->DoVerb(OLEIVERB_SHOW, this);
 ```
 
-另一个示例是`CMainView::OnLButtonDblClk`:
+另一种是 `CMainView::OnLButtonDblClk` ：
 
 ```cpp
 m_pSelection->DoVerb(OLEIVERB_PRIMARY, this);
@@ -349,7 +349,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 }
 ```
 
-此时，这里有足够的代码来支持就地激活项和处理活动项的大小调整和移动，但没有代码支持用户退出编辑会话。 尽管某些服务器将自行提供此功能通过处理 esc 键，但建议容器提供两种方式停用某项：（1） 通过单击在项的外部和 （2） 通过按 ESC 键。
+此时，这里有足够的代码来支持就地激活项和处理活动项的大小调整和移动，但没有代码支持用户退出编辑会话。 尽管某些服务器通过处理 Esc 键自行提供此功能，但建议容器提供两种停用项的方法：(1) 在项的外部单击和 (2) 按 Esc 键。
 
 对于按 Esc 键的情况，请使用 Visual C++ 添加将 VK_ESCAPE 键映射到命令的快捷键，ID_CANCEL_EDIT 将被添加到资源。 此命令的处理程序如下：
 
@@ -367,7 +367,7 @@ BOOL CRectItem::OnChangeItemPosition(const CRect& rectPos)
 }
 ```
 
-若要处理这种情况，则当用户单击项之外，您的启动中添加以下代码`CMainView::SetSelection`:
+若要处理用户在项外部单击的情况，请将以下代码添加到的开头 `CMainView::SetSelection` ：
 
 ```cpp
 if (pNewSel != m_pSelection || pNewSel == NULL)
@@ -420,16 +420,16 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 
 ## <a name="case-study-hiersvr-from-mfc-20"></a>案例研究：MFC 2.0 中的 HIERSVR
 
-[HIERSVR](../overview/visual-cpp-samples.md)还包含在 MFC 2.0 并实现了使用 mfc/ole1 OLE。 本说明简要介绍此应用程序最初转换为使用 MFC/OLE 2 类所采用的步骤。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 2 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
+[HIERSVR](../overview/visual-cpp-samples.md) 还包含在 mfc 2.0 中，并通过 MFC/OLE1 实现了 OLE。 本说明简要介绍此应用程序最初转换为使用 MFC/OLE 2 类所采用的步骤。 初始移植完成后添加了很多功能，用来更好地演示 MFC/OLE 2 类。 此处将不会转换这些功能；有关这些高级功能的详细信息，请参阅示例本身。
 
 > [!NOTE]
 > 编译器错误和分步过程是使用 Visual C++ 2.0 创建的。 特定错误消息和位置在 Visual C++ 4.0 中可能已更改，但概念性信息仍然有效。
 
-## <a name="getting-it-up-and-running"></a>开始运行
+### <a name="getting-it-up-and-running"></a>开始运行
 
 将 HIERSVR 示例移植到 MFC/OLE 所用的方法首先是生成该示例并修复会产生的明显编译器错误。 如果采用了 MFC 2.0 中的 HIERSVR 示例并在此版本的 MFC 下编译它，您就会发现没有太多要解决的错误（尽管比使用 OCLIENT 示例时多）。 下面按错误通常发生的顺序对其进行说明。
 
-## <a name="compile-and-fix-errors"></a>编译和修复错误
+### <a name="compile-and-fix-errors"></a>编译和修复错误
 
 ```Output
 \hiersvr\hiersvr.cpp(83) : error C2039: 'RunEmbedded' : is not a member of 'COleTemplateServer'
@@ -443,7 +443,7 @@ void CMainView::OnSize(UINT nType, int cx, int cy)
 
 如果命令行上存在 /Embedding，则不显示应用程序的主窗口。
 
-你将需要**GUID**为您的文档。 这是文档类型（128 位）的唯一标识符。 AppWizard 将为你创建一个 GUID，因此，如果你使用此处所述的从 AppWizard 生成的服务器应用程序复制新代码的方法，则只需“窃用”该应用程序中的 GUID。 如果未使用此方法，则可以在 BIN 目录中使用 GUIDGEN.EXE 实用工具。
+你需要文档的 **GUID** 。 这是文档类型（128 位）的唯一标识符。 AppWizard 将为你创建一个 GUID，因此，如果你使用此处所述的从 AppWizard 生成的服务器应用程序复制新代码的方法，则只需“窃用”该应用程序中的 GUID。 如果未使用此方法，则可以在 BIN 目录中使用 GUIDGEN.EXE 实用工具。
 
 必须通过调用 `COleTemplateServer` 对象将您的 `COleTemplateServer::ConnectTemplate` 对象“连接”到文档模板。
 
@@ -525,7 +525,7 @@ BOOL COLEServerApp::InitInstance()
 
 您将注意到，上述代码引用了新的资源 ID IDR_HIERSVRTYPE_SRVR_EMB。 这是要在编辑了嵌入其他容器的文档时使用的菜单资源。 在 MFC/OLE1 中，专用于编辑嵌入项的菜单项是即时修改的。 通过在编辑嵌入项（而不是编辑基于文件的文档）时使用完全不同的菜单结构，为这两个不同的模式提供不同的用户界面就容易得多。 正如您稍后会看到的，就地编辑嵌入对象时将使用完全不同的菜单资源。
 
-若要创建此资源，请将资源脚本加载到 Visual C++ 中并复制现有 IDR_HIERSVRTYPE 菜单资源。 将新资源重命名为 IDR_HIERSVRTYPE_SRVR_EMB（这是 AppWizard 所用的同一命名约定）。 接下来将更改为"文件更新;"的"文件另存"为其指定命令 ID ID_FILE_UPDATE。 此外"文件另存为"更改为"文件副本另存为";为其指定命令 ID ID_FILE_SAVE_COPY_AS。 框架将提供这两个命令的实现。
+若要创建此资源，请将资源脚本加载到 Visual C++ 中并复制现有 IDR_HIERSVRTYPE 菜单资源。 将新资源重命名为 IDR_HIERSVRTYPE_SRVR_EMB（这是 AppWizard 所用的同一命名约定）。 接下来，将“文件保存”更改为“文件更新”；为其指定命令 ID ID_FILE_UPDATE。 此外，将“文件另存为”更改为“文件副本另存为”；为其指定命令 ID ID_FILE_SAVE_COPY_AS。 框架将提供这两个命令的实现。
 
 ```Output
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations
@@ -535,20 +535,20 @@ BOOL COLEServerApp::InitInstance()
 \hiersvr\svritem.h(60) : error C2501: 'OnSetData' : missing decl-specifiers
 ```
 
-有多个错误的重写`OnSetData`，因为它指**OLESTATUS**类型。 **OLESTATUS**是 OLE1 返回错误的方法。 这已更改为**HRESULT**在 OLE 2 中，尽管 MFC 通常将转换**HRESULT**到`COleException`包含错误。 在这种特定情况下，不必再重写 `OnSetData`，因此最简单的操作是移除它。
+重写导致了许多错误 `OnSetData` ，因为它引用了 **OLESTATUS** 类型。 **OLESTATUS** 是 OLE1 返回错误的方式。 这已在 OLE 2 中更改为 **hresult** ，尽管 MFC 通常将 **hresult** 转换为 `COleException` 包含错误的。 在这种特定情况下，不必再重写 `OnSetData`，因此最简单的操作是移除它。
 
 ```Output
 \hiersvr\svritem.cpp(30) : error C2660: 'COleServerItem::COleServerItem' : function does not take 1 parameters
 ```
 
-`COleServerItem` 构造函数采用了额外的“BOOL”参数。 此标志确定如何对 `COleServerItem` 对象执行内存管理。 通过将它设置为 TRUE，框架将处理这些对象的内存管理 - 在它们不再必需时进行删除。 使用 HIERSVR `CServerItem` (派生自`COleServerItem`) 对象作为其本机数据，因此将此标志设置为 FALSE 的一部分。 这样，HIERSVR 便能确定每个服务器项何时删除。
+`COleServerItem` 构造函数采用了额外的“BOOL”参数。 此标志确定如何对 `COleServerItem` 对象执行内存管理。 通过将它设置为 TRUE，框架将处理这些对象的内存管理 - 在它们不再必需时进行删除。 HIERSVR 使用 `CServerItem` 从 `COleServerItem`) 对象派生的 (作为其本机数据的一部分，因此将此标志设置为 FALSE。 这样，HIERSVR 便能确定每个服务器项何时删除。
 
 ```Output
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class
 ```
 
-正如这些错误暗示的，存在尚未在 CServerItem 中重写的“纯虚”函数。 导致此问题的原因最可能是 OnDraw 的参数列表已更改。 若要解决此错误，请更改`CServerItem::OnDraw`（以及 svritem.h 中的声明），如下所示：
+正如这些错误暗示的，存在尚未在 CServerItem 中重写的“纯虚”函数。 导致此问题的原因最可能是 OnDraw 的参数列表已更改。 若要修复此错误，请更改， `CServerItem::OnDraw` 如下所示 (和 svritem) 中的声明：
 
 ```cpp
 BOOL CServerItem::OnDraw(CDC* pDC, CSize& rSize)
@@ -559,7 +559,7 @@ BOOL CServerItem::OnDraw(CDC* pDC, CSize& rSize)
 }
 ```
 
-新参数为“rSize”。 这使您可以在方便时填写绘图的大小。 此大小必须在**HIMETRIC**。 在这种情况下，填写此值不方便，因此框架调用 `OnGetExtent` 来检索范围。 为了让此操作生效，您必须实现 `OnGetExtent`：
+新参数为“rSize”。 这使您可以在方便时填写绘图的大小。 此大小必须在 **HIMETRIC**中。 在这种情况下，填写此值不方便，因此框架调用 `OnGetExtent` 来检索范围。 为了让此操作生效，您必须实现 `OnGetExtent`：
 
 ```cpp
 BOOL CServerItem::OnGetExtent(DVASPECT dwDrawAspect, CSize& rSize)
@@ -579,7 +579,7 @@ BOOL CServerItem::OnGetExtent(DVASPECT dwDrawAspect, CSize& rSize)
     int)__far const ' : cannot convert parameter 1 from 'int __far *' to 'struct ::tagPOINT __far *'
 ```
 
-在 cserveritem:: Calcnodesize 函数中的项大小转换为**HIMETRIC**并存储在*掉*。 未记录*掉*的成员`COleServerItem`不存在 (已通过部分替换*m_sizeExtent*，但此成员在 OLE 2 中具有比略有不同的使用*掉*未在 OLE1 中)。 而不是设置**HIMETRIC**大小为此成员变量，将返回它。 此返回值在之前实现的 `OnGetExtent` 中使用。
+在 CServerItem：： CalcNodeSize 函数中，项大小转换为 **HIMETRIC** 并存储在 *m_rectBounds*中。 未记录的 "*m_rectBounds*" 成员 `COleServerItem` 不存在 (它已部分替换为 *M_SIZEEXTENT*，但在 OLE 2 中，此成员的使用方式与 OLE1) 中的 *m_rectBounds* 略有不同。 不是将 **HIMETRIC** 大小设置为此成员变量，而是将其返回。 此返回值在之前实现的 `OnGetExtent` 中使用。
 
 ```cpp
 CSize CServerItem::CalcNodeSize()
@@ -598,7 +598,7 @@ CSize CServerItem::CalcNodeSize()
 }
 ```
 
-CServerItem 还将重写`COleServerItem::OnGetTextData`。 此函数在 MFC/OLE 中已过时，已由其他机制取代。 MFC 3.0 版的 MFC OLE 示例[HIERSVR](../overview/visual-cpp-samples.md)实现此功能通过重写`COleServerItem::OnRenderFileData`。 此功能对此基本移植并不重要，因此您可以取消 OnGetTextData 重写。
+CServerItem 也会重写 `COleServerItem::OnGetTextData` 。 此函数在 MFC/OLE 中已过时，已由其他机制取代。 Mfc 3.0 版本的 MFC OLE 示例 [HIERSVR](../overview/visual-cpp-samples.md) 通过重写实现此功能 `COleServerItem::OnRenderFileData` 。 此功能对此基本移植并不重要，因此您可以取消 OnGetTextData 重写。
 
 尚未解决的 svritem.cpp 中有很多错误。 它们不是“真正”的错误，而只是由前面的错误导致的错误。
 
@@ -606,7 +606,7 @@ CServerItem 还将重写`COleServerItem::OnGetTextData`。 此函数在 MFC/OLE 
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters
 ```
 
-`COleServerItem::CopyToClipboard` 不再支持`bIncludeNative`标志。 将总是复制本机数据（服务器项的 Serialize 函数写出的数据），因此您应移除第一个参数。 此外，当发生错误而不是返回 FALSE 时，`CopyToClipboard` 将引发异常。 请按如下方式更改 CServerView::OnEditCopy 的代码：
+`COleServerItem::CopyToClipboard` 不再支持该 `bIncludeNative` 标志。 将总是复制本机数据（服务器项的 Serialize 函数写出的数据），因此您应移除第一个参数。 此外，当发生错误而不是返回 FALSE 时，`CopyToClipboard` 将引发异常。 请按如下方式更改 CServerView::OnEditCopy 的代码：
 
 ```cpp
 void CServerView::OnEditCopy()
@@ -630,7 +630,7 @@ void CServerView::OnEditCopy()
 
 此时，HIERSVR 将进行编译和链接并充当 OLE 服务器，但不使用就地编辑功能（将在下一步实现）。
 
-## <a name="adding-visual-editing"></a>添加“可视化编辑”
+### <a name="adding-visual-editing"></a>添加“可视化编辑”
 
 若要将“可视化编辑”（或称为就地激活）添加到此服务器应用程序，您只需注意几件事：
 
@@ -642,7 +642,7 @@ void CServerView::OnEditCopy()
 
 - 您需要向框架告知这些特殊资源和类。
 
-菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 在编辑和帮助菜单之间菜单中添加两个分隔符 (它应如下所示：编辑&#124;&#124;帮助)。 有关这些分隔条的含义以及服务器和容器菜单如何合并的详细信息，请参阅[菜单和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
+菜单资源很容易创建。 运行 Visual C++，将菜单资源 IDR_HIERSVRTYPE 复制到名为 IDR_HIERSVRTYPE_SRVR_IP 的菜单资源。 修改菜单，以便只保留“编辑”和“帮助”菜单弹出项。 向菜单中的 "编辑" 和 "帮助" 菜单之间添加两个分隔符 (应如下所示：编辑 &#124;&#124; "帮助) "。 有关这些分隔符的含义以及如何合并服务器和容器菜单的详细信息，请参阅菜单 [和资源：菜单合并](../mfc/menus-and-resources-menu-merging.md)。
 
 子集工具栏的位图创建起来很轻松：在选中“服务器”选项的情况下从新的 AppWizard 生成的应用程序中复制位图。 此位图随后会导入 Visual C++。 请确保为位图提供 ID IDR_HIERSVRTYPE_SRVR_IP。
 
@@ -665,7 +665,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```
 
-请注意，对引用`AfxGetApp()->m_pMainWnd`。 当服务器已就地激活时，它有一个主窗口，并且 m_pMainWnd 已设置，但它通常不可见。 此外，此窗口是指*主要*窗口中的应用程序，MDI 框架窗口出现时服务器完全打开或独立运行。 此窗口不引用活动框架窗口，后者在就地激活后是派生自 `COleIPFrameWnd` 的框架窗口。 为了在就地编辑时获得正确的活动窗口，此版本的 MFC 添加了一个新函数 `AfxGetMainWnd`。 通常情况下，应使用此函数，而不是`AfxGetApp()->m_pMainWnd`。 此代码需要进行以下更改：
+请注意对的引用 `AfxGetApp()->m_pMainWnd` 。 当服务器已就地激活时，它有一个主窗口，并且 m_pMainWnd 已设置，但它通常不可见。 此外，此窗口引用应用程序的 *主* 窗口，即当服务器完全打开或独立运行时显示的 MDI 框架窗口。 此窗口不引用活动框架窗口，后者在就地激活后是派生自 `COleIPFrameWnd` 的框架窗口。 为了在就地编辑时获得正确的活动窗口，此版本的 MFC 添加了一个新函数 `AfxGetMainWnd`。 通常，应使用此函数，而不是 `AfxGetApp()->m_pMainWnd` 。 此代码需要进行以下更改：
 
 ```cpp
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
@@ -676,15 +676,15 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
 
 现在您至少为 OLE 服务器启用了功能性就地激活。 但是，MFC/OLE 2 还有很多 MFC/OLE1 中没有的功能。 若要获得您可能想实现的功能的更多想法，请参阅 HIERSVR 示例。 下面列出了 HIERSVR 实现的一部分功能：
 
-- 缩放，用于与容器真正所见即所得的行为。
+- 缩放，适用于容器的实际 WYSIWYG 行为。
 
 - 拖动/放置和自定义剪贴板格式。
 
 - 在选项更改时滚动容器窗口。
 
-MFC 3.0 中的 HIERSVR 示例也为其服务器项使用了稍微不同的设计。 这有助于节约内存和提高链接的灵活性。 2.0 版的 HIERSVR 树中的每个节点*是一个* `COleServerItem`。 `COleServerItem` 承担的开销稍微高于这些节点严格需要的开销，但 `COleServerItem` 对每个活动链接是必需的。 但对于大多数部件，任何给定时间的活动链接都非常少。 为了提高此过程的效率，此版本的 MFC 中的 HIERSVR 将节点从 `COleServerItem` 中分离出来。 它同时具有 CServerNode 和`CServerItem`类。 `CServerItem` (派生自`COleServerItem`) 仅在必要时创建。 一旦容器停止将该特定链接用于该特定节点，与 CServerNode 关联的 CServerItem 对象将会删除。 此设计更有效且更灵活。 其灵活性在处理多项选择链接时能体现出来。 这两个版本的 HIERSVR 都不支持多重选择，但使用 MFC 3.0 版的 HIERSVR 添加（和支持指向此类选择的链接）会更容易，因为 `COleServerItem` 是从本机数据分离出来的。
+MFC 3.0 中的 HIERSVR 示例也为其服务器项使用了稍微不同的设计。 这有助于节约内存和提高链接的灵活性。 对于2.0 版 HIERSVR，树中的每个节点 *都是-a* `COleServerItem` 。 `COleServerItem` 承担的开销稍微高于这些节点严格需要的开销，但 `COleServerItem` 对每个活动链接是必需的。 但对于大多数部件，任何给定时间的活动链接都非常少。 为了提高此过程的效率，此版本的 MFC 中的 HIERSVR 将节点从 `COleServerItem` 中分离出来。 它同时具有 CServerNode 和 `CServerItem` 类。 `CServerItem`仅在必要时 `COleServerItem` 才创建从) 派生的 (。 一旦容器停止将该特定链接用于该特定节点，与 CServerNode 关联的 CServerItem 对象将会删除。 此设计更有效且更灵活。 其灵活性在处理多项选择链接时能体现出来。 这两个版本的 HIERSVR 都不支持多重选择，但使用 MFC 3.0 版的 HIERSVR 添加（和支持指向此类选择的链接）会更容易，因为 `COleServerItem` 是从本机数据分离出来的。
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)

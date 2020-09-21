@@ -63,12 +63,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 9349de8c42bbed72384ea2b61b39bdea82172f9d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5cfec19ad8a25d3b44647e490b2c328a5639e675
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221427"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743303"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -126,7 +126,7 @@ ms.locfileid: "87221427"
 
 ## <a name="members"></a>成员
 
-## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a>binary_delegate （STL/CLR）
+## <a name="binary_delegate-stlclr"></a><a name="binary_delegate"></a> STL/CLR (binary_delegate) 
 
 Genereic 类描述了一个双参数委托。 使用它可以指定委托的参数和返回类型。
 
@@ -202,7 +202,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a>binary_delegate_noreturn （STL/CLR）
+## <a name="binary_delegate_noreturn-stlclr"></a><a name="binary_delegate_noreturn"></a> STL/CLR (binary_delegate_noreturn) 
 
 Genereic 类描述返回的两参数委托 **`void`** 。 使用它以参数的形式指定委托。
 
@@ -272,7 +272,7 @@ compare(a, b) = True
 compare(b, a) = False
 ```
 
-## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a>binary_negate （STL/CLR）
+## <a name="binary_negate-stlclr"></a><a name="binary_negate"></a> STL/CLR (binary_negate) 
 
 此模板类描述了一个函子，该模板在调用时返回其存储的双参数函子的逻辑。 使用它以存储的函子指定函数对象。
 
@@ -305,9 +305,9 @@ public:
 *趣*<br/>
 存储的函子的类型。
 
-## <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -319,10 +319,10 @@ public:
 |------------|-----------------|
 |binary_negate|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|operator delegate_type ^ （）|将函子转换为委托。|
+|操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
 ### <a name="remarks"></a>备注
 
@@ -386,7 +386,7 @@ int main()
 1 0
 ```
 
-## <a name="bind1st-stlclr"></a><a name="bind1st"></a>bind1st （STL/CLR）
+## <a name="bind1st-stlclr"></a><a name="bind1st"></a> bind1st (STL/CLR) 
 
 `binder1st`为参数和函子生成。
 
@@ -412,12 +412,12 @@ template<typename Fun,
 *函子*<br/>
 要包装的函子。
 
-*左中*<br/>
+*左侧*<br/>
 要换行的第一个参数。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回[binder1st （STL/CLR）](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` 。 使用该方法可以方便地将两个参数的函子和其第一个参数包装在一个参数函子中，后者使用第二个参数调用它。
+模板函数返回[binder1st (STL/CLR) ](../dotnet/binder1st-stl-clr.md) `<Fun>(functor, left)` 。 使用该方法可以方便地将两个参数的函子和其第一个参数包装在一个参数函子中，后者使用第二个参数调用它。
 
 ### <a name="example"></a>示例
 
@@ -467,7 +467,7 @@ int main()
 -1 0
 ```
 
-## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a>bind2nd （STL/CLR）
+## <a name="bind2nd-stlclr"></a><a name="bind2nd"></a> bind2nd (STL/CLR) 
 
 `binder2nd`为参数和函子生成。
 
@@ -493,12 +493,12 @@ template<typename Fun,
 *函子*<br/>
 要包装的函子。
 
-*然后*<br/>
+*右*<br/>
 要换行的第二个参数。
 
 ### <a name="remarks"></a>备注
 
-模板函数返回[binder2nd （STL/CLR）](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` 。 使用该方法可以方便地将两个参数的函子和它的第二个参数封装在一个参数函子中，该参数使用第一个参数调用它。
+模板函数返回[binder2nd (STL/CLR) ](../dotnet/binder2nd-stl-clr.md) `<Fun>(functor, right)` 。 使用该方法可以方便地将两个参数的函子和它的第二个参数封装在一个参数函子中，该参数使用第一个参数调用它。
 
 ### <a name="example"></a>示例
 
@@ -548,7 +548,7 @@ int main()
 0 -1
 ```
 
-## <a name="binder1st-stlclr"></a><a name="binder1st"></a>binder1st （STL/CLR）
+## <a name="binder1st-stlclr"></a><a name="binder1st"></a> binder1st (STL/CLR) 
 
 此模板类描述了一个参数函子，在调用它时，它将返回其存储的双参数函子，并将其存储的第一个参数和提供的第二个参数一起调用。 使用它以存储的函子指定函数对象。
 
@@ -582,7 +582,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -594,10 +594,10 @@ public:
 |------------|-----------------|
 |binder1st|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|operator delegate_type ^ （）|将函子转换为委托。|
+|操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
 ### <a name="remarks"></a>备注
 
@@ -653,7 +653,7 @@ int main()
 -1 0
 ```
 
-## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a>binder2nd （STL/CLR）
+## <a name="binder2nd-stlclr"></a><a name="binder2nd"></a> binder2nd (STL/CLR) 
 
 此模板类描述了一个参数函子，在调用它时，将返回其存储的双参数函子，该参数使用提供的第一个参数及其存储的第二个参数来调用。 使用它以存储的函子指定函数对象。
 
@@ -685,9 +685,9 @@ public:
 *趣*<br/>
 存储的函子的类型。
 
-## <a name="member-functions"></a>成员函数
+### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -699,10 +699,10 @@ public:
 |------------|-----------------|
 |binder2nd|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|operator delegate_type ^ （）|将函子转换为委托。|
+|操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
 ### <a name="remarks"></a>备注
 
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides-stlclr"></a><a name="divides"></a>相除（STL/CLR）
+## <a name="divides-stlclr"></a><a name="divides"></a> (STL/CLR) 
 
 此模板类描述了一个函子，该模板在调用时返回第一个参数除以第二个参数。 使用它以其参数类型指定函数对象。
 
@@ -792,7 +792,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -803,10 +803,10 @@ public:
 |------------|-----------------|
 |divides|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|operator delegate_type ^ （）|将函子转换为委托。|
+|操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
 ### <a name="remarks"></a>备注
 
@@ -859,7 +859,7 @@ int main()
 2 3
 ```
 
-## <a name="equal_to-stlclr"></a><a name="equal_to"></a>equal_to （STL/CLR）
+## <a name="equal_to-stlclr"></a><a name="equal_to"></a> STL/CLR (equal_to) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数等于第二个参数时才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -893,7 +893,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -904,10 +904,10 @@ public:
 |------------|-----------------|
 |equal_to|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
-|operator delegate_type ^ （）|将函子转换为委托。|
+|操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
 ### <a name="remarks"></a>备注
 
@@ -960,7 +960,7 @@ int main()
 1 0
 ```
 
-## <a name="greater-stlclr"></a><a name="greater"></a>大于（STL/CLR）
+## <a name="greater-stlclr"></a><a name="greater"></a> 更 (STL/CLR) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数大于第二个参数时才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -994,7 +994,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1005,7 +1005,7 @@ public:
 |------------|-----------------|
 |greater|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1061,7 +1061,7 @@ int main()
 1 0
 ```
 
-## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a>greater_equal （STL/CLR）
+## <a name="greater_equal-stlclr"></a><a name="greater_equal"></a> STL/CLR (greater_equal) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数大于或等于第二个参数时，才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -1095,7 +1095,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1106,7 +1106,7 @@ public:
 |------------|-----------------|
 |greater_equal|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1162,7 +1162,7 @@ int main()
 1 0
 ```
 
-## <a name="less-stlclr"></a><a name="less"></a>小于（STL/CLR）
+## <a name="less-stlclr"></a><a name="less"></a> 不 (STL/CLR) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数小于第二个参数时才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -1196,7 +1196,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1207,7 +1207,7 @@ public:
 |------------|-----------------|
 |less|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1263,7 +1263,7 @@ int main()
 0 1
 ```
 
-## <a name="less_equal-stlclr"></a><a name="less_equal"></a>less_equal （STL/CLR）
+## <a name="less_equal-stlclr"></a><a name="less_equal"></a> STL/CLR (less_equal) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数小于或等于第二个参数时，才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -1297,7 +1297,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1308,7 +1308,7 @@ public:
 |------------|-----------------|
 |less_equal|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1364,7 +1364,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_and-stlclr"></a><a name="logical_and"></a>logical_and （STL/CLR）
+## <a name="logical_and-stlclr"></a><a name="logical_and"></a> STL/CLR (logical_and) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数和第二个测试都为 true 时，才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -1398,7 +1398,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1409,7 +1409,7 @@ public:
 |------------|-----------------|
 |logical_and|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1465,7 +1465,7 @@ int main()
 1 0
 ```
 
-## <a name="logical_not-stlclr"></a><a name="logical_not"></a>logical_not （STL/CLR）
+## <a name="logical_not-stlclr"></a><a name="logical_not"></a> STL/CLR (logical_not) 
 
 此模板类描述了一个函子，该方法在调用时仅在其参数测试为 false 时返回 true。 使用它以其参数类型指定函数对象。
 
@@ -1497,7 +1497,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |argument_type|函子参数的类型。|
 |delegate_type|泛型委托的类型。|
@@ -1507,7 +1507,7 @@ public:
 |------------|-----------------|
 |logical_not|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1555,7 +1555,7 @@ int main()
 0 1
 ```
 
-## <a name="logical_or-stlclr"></a><a name="logical_or"></a>logical_or （STL/CLR）
+## <a name="logical_or-stlclr"></a><a name="logical_or"></a> STL/CLR (logical_or) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数或第二个测试为 true 时才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -1589,7 +1589,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1600,7 +1600,7 @@ public:
 |------------|-----------------|
 |logical_or|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1656,7 +1656,7 @@ int main()
 1 0
 ```
 
-## <a name="minus-stlclr"></a><a name="minus"></a>减号（STL/CLR）
+## <a name="minus-stlclr"></a><a name="minus"></a> 减号 (STL/CLR) 
 
 此模板类描述了一个函子，该模板在调用时返回第一个参数减去第二个参数。 使用它以其参数类型指定函数对象。
 
@@ -1690,7 +1690,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1701,7 +1701,7 @@ public:
 |------------|-----------------|
 |minus|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus-stlclr"></a><a name="modulus"></a>取模（STL/CLR）
+## <a name="modulus-stlclr"></a><a name="modulus"></a> (STL/CLR) 
 
 此模板类描述了一个函子，该模板在调用时返回第一个第一个参数取模。 使用它以其参数类型指定函数对象。
 
@@ -1791,7 +1791,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1802,7 +1802,7 @@ public:
 |------------|-----------------|
 |modulus|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1858,7 +1858,7 @@ int main()
 1 0
 ```
 
-## <a name="multiplies-stlclr"></a><a name="multiplies"></a>乘法（STL/CLR）
+## <a name="multiplies-stlclr"></a><a name="multiplies"></a> 乘法 (STL/CLR) 
 
 此模板类描述了一个函子，该模板在调用时将返回第二个参数的第二个参数。 使用它以其参数类型指定函数对象。
 
@@ -1892,7 +1892,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -1903,7 +1903,7 @@ public:
 |------------|-----------------|
 |multiplies|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -1959,7 +1959,7 @@ int main()
 8 3
 ```
 
-## <a name="negate-stlclr"></a><a name="negate"></a>否定（STL/CLR）
+## <a name="negate-stlclr"></a><a name="negate"></a> 否定 (STL/CLR) 
 
 此模板类描述了一个函子，该模板在调用时返回其反参数。 使用它以其参数类型指定函数对象。
 
@@ -1991,7 +1991,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |argument_type|函子参数的类型。|
 |delegate_type|泛型委托的类型。|
@@ -2001,7 +2001,7 @@ public:
 |------------|-----------------|
 |negate|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -2049,7 +2049,7 @@ int main()
 -4 3
 ```
 
-## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a>not_equal_to （STL/CLR）
+## <a name="not_equal_to-stlclr"></a><a name="not_equal_to"></a> STL/CLR (not_equal_to) 
 
 此模板类描述了一个函子，在调用后，仅当第一个参数不等于第二个参数时才返回 true。 使用它以其参数类型指定函数对象。
 
@@ -2083,7 +2083,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -2094,7 +2094,7 @@ public:
 |------------|-----------------|
 |not_equal_to|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -2150,7 +2150,7 @@ int main()
 0 1
 ```
 
-## <a name="not1-stlclr"></a><a name="not1"></a>not1 （STL/CLR）
+## <a name="not1-stlclr"></a><a name="not1"></a> not1 (STL/CLR) 
 
 `unary_negate`为函子生成。
 
@@ -2173,7 +2173,7 @@ template<typename Fun>
 
 ### <a name="remarks"></a>备注
 
-模板函数返回[unary_negate （STL/CLR）](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` 。 使用该方法可以方便地在传递其逻辑 NOT 的函子中包装单参数函子。
+模板函数返回[unary_negate (STL/CLR) ](../dotnet/unary-negate-stl-clr.md) `<Fun>(functor)` 。 使用该方法可以方便地在传递其逻辑 NOT 的函子中包装单参数函子。
 
 ### <a name="example"></a>示例
 
@@ -2222,7 +2222,7 @@ int main()
 1 0
 ```
 
-## <a name="not2-stlclr"></a><a name="not2"></a>not2 （STL/CLR）
+## <a name="not2-stlclr"></a><a name="not2"></a> not2 (STL/CLR) 
 
 `binary_negate`为函子生成。
 
@@ -2245,7 +2245,7 @@ template<typename Fun>
 
 ### <a name="remarks"></a>备注
 
-模板函数返回[binary_negate （STL/CLR）](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` 。 使用该方法可以方便地将两个参数函子在函子中，用于传递其逻辑。
+模板函数返回[binary_negate (STL/CLR) ](../dotnet/binary-negate-stl-clr.md) `<Fun>(functor)` 。 使用该方法可以方便地将两个参数函子在函子中，用于传递其逻辑。
 
 ### <a name="example"></a>示例
 
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus-stlclr"></a><a name="plus"></a>plus （STL/CLR）
+## <a name="plus-stlclr"></a><a name="plus"></a> plus (STL/CLR) 
 
 此模板类描述了一个函子，该模板在调用时返回第一个参数加上第二个参数。 使用它以其参数类型指定函数对象。
 
@@ -2337,7 +2337,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |delegate_type|泛型委托的类型。|
 |first_argument_type|函子第一个参数的类型。|
@@ -2348,7 +2348,7 @@ public:
 |------------|-----------------|
 |plus|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
@@ -2404,7 +2404,7 @@ int main()
 6 4
 ```
 
-## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a>unary_delegate （STL/CLR）
+## <a name="unary_delegate-stlclr"></a><a name="unary_delegate"></a> STL/CLR (unary_delegate) 
 
 Genereic 类描述了单参数委托。 使用它可以指定委托的参数和返回类型。
 
@@ -2470,7 +2470,7 @@ hash(L'a') = 5
 hash(L'b') = 22
 ```
 
-## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a>unary_delegate_noreturn （STL/CLR）
+## <a name="unary_delegate_noreturn-stlclr"></a><a name="unary_delegate_noreturn"></a> STL/CLR (unary_delegate_noreturn) 
 
 Genereic 类描述返回的单参数委托 **`void`** 。 使用它以参数类型指定委托。
 
@@ -2533,7 +2533,7 @@ hash(a) = 5
 hash(b) = 22
 ```
 
-## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a>unary_negate （STL/CLR）
+## <a name="unary_negate-stlclr"></a><a name="unary_negate"></a> STL/CLR (unary_negate) 
 
 此模板类描述了一个函子，该模板在调用时返回其存储的单参数函子的逻辑。 使用它以存储的函子指定函数对象。
 
@@ -2566,7 +2566,7 @@ public:
 
 ### <a name="member-functions"></a>成员函数
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |argument_type|函子参数的类型。|
 |delegate_type|泛型委托的类型。|
@@ -2576,7 +2576,7 @@ public:
 |------------|-----------------|
 |unary_negate|构造函子。|
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |delegate_type ^|将函子转换为委托。|

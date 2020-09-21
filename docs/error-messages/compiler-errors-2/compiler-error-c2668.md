@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6b0539e7c794852f7e4b28d60f4b402a020bed1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177152"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743199"
 ---
 # <a name="compiler-error-c2668"></a>编译器错误 C2668
 
@@ -19,9 +19,9 @@ ms.locfileid: "80177152"
 
 未能解析指定的重载函数调用。 可能需要显式转换一个或多个实际参数。
 
-还可以通过使用模板来获取此错误。 如果在同一个类中，你有一个常规成员函数和一个具有相同签名的模板成员函数，则必须先进行模板化。 这是当前视觉对象C++实现的限制。
+还可以通过使用模板来获取此错误。 如果在同一个类中，你有一个常规成员函数和一个具有相同签名的模板成员函数，则必须先进行模板化。 这是当前 Visual C++ 实现的限制。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2668：
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
-解决此错误的另一种方法是[使用 using 声明](../../cpp/using-declaration.md)：
+解决此错误的另一种方法是 [使用 using 声明](../../cpp/using-declaration.md)：
 
 ```cpp
 // C2668b.cpp
@@ -84,11 +82,9 @@ class MyTestCase : public AppTestCase {
 };
 ```
 
-## <a name="example"></a>示例
-
 此错误还可能是由于对 Visual Studio .NET 2003 执行的编译器一致性工作引起的，因为对常量0的转换不明确。
 
-使用常量0对强制转换的转换是不明确的，因为 int 要求转换为 long 和 void *。 若要解决此错误，请将0强制转换为其正用于的函数参数的确切类型，以便无需进行转换（此代码将在 Visual Studio .NET 2003 和 visual Studio .NET 版本的 Visual C++studio 中有效）。
+使用常量0对强制转换的转换是不明确的，因为 int 要求转换为 long 和 void *。 若要解决此错误，请将0强制转换为其正用于的函数参数的确切类型，这样就不需要进行任何转换 (此代码在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++) 中是有效的。
 
 ```cpp
 // C2668c.cpp
@@ -108,8 +104,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 之所以会出现此错误，是因为 CRT 现在具有所有数学函数的浮点和双精度形式。
 
 ```cpp
@@ -123,9 +117,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
-出现此错误的原因可能是从 CRT 中的 pow （int，int）中删除了它。
+发生此错误的原因可能是从 CRT 的 pow 中删除了 (int，int) 。
 
 ```cpp
 // C2668e.cpp
@@ -135,8 +127,6 @@ int main() {
    pow((double)9,9);   // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 此代码在 Visual Studio 2015 中成功，但在 Visual Studio 2017 和更高版本中与 C2668 发生故障。 在 Visual Studio 2015 中，编译器以与常规复制初始化相同的方式错误地处理复制列表初始化；它只考虑将转换构造函数用于重载决策。
 

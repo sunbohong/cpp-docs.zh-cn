@@ -1,6 +1,6 @@
 ---
-title: TRACE_INFO_DATA结构
-description: C++生成见解 SDK TRACE_INFO_DATA结构参考。
+title: TRACE_INFO_DATA 结构
+description: C++ Build Insights SDK TRACE_INFO_DATA 结构参考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 70ae17a376f79cad7a669d81e482f551afd0ec62
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 38683ff2c5c5165b5fe2a1969ccf80fbfca3693f
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325282"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90040452"
 ---
-# <a name="trace_info_data-structure"></a>TRACE_INFO_DATA结构
+# <a name="trace_info_data-structure"></a>TRACE_INFO_DATA 结构
 
 ::: moniker range="<=vs-2015"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-结构`TRACE_INFO_DATA`描述要分析或重新记录的跟踪。
+`TRACE_INFO_DATA` 结构描述要分析或重新记录的跟踪。
 
 ## <a name="syntax"></a>语法
 
@@ -42,15 +42,15 @@ typedef struct TRACE_INFO_DATA_TAG
 
 ## <a name="members"></a>成员
 
-|  |  |
+| 名称 | 说明 |
 |--|--|
 | `LogicalProcessorCount` | 收集跟踪的计算机上的逻辑处理器数。 |
-| `TickFrequency` | 评估以刻度为单位测量的持续时间时每秒使用的刻度数。 |
-| `StartTimestamp` | 此字段设置为在开始跟踪时捕获的刻度值。 |
-| `StopTimestamp` | 此字段设置为停止跟踪时捕获的刻度值。 |
+| `TickFrequency` | 在计算持续时间（以“滴答”为计量单位）时使用的每秒滴答数。 |
+| `StartTimestamp` | 此字段设置为在启动跟踪时捕获的滴答值。 |
+| `StopTimestamp` | 此字段设置为在停止跟踪时捕获的滴答值。 |
 
 ## <a name="remarks"></a>备注
 
-从`StartTimestamp`中`StopTimestamp`减去以获取整个跟踪期间经过的刻度数。 用于`TickFrequency`将生成的值转换为时间单位。 有关将刻度转换为时间单位的示例，请参阅[EVENT_DATA](event-data-struct.md)。
+从 `StopTimestamp` 中减去 `StartTimestamp` 以获取整个跟踪期间使用的滴答数。 使用 `TickFrequency` 将生成的值转换为时间单位。 有关将滴答数转换为时间单位的示例，请参阅 [EVENT_DATA](event-data-struct.md)。
 
 ::: moniker-end

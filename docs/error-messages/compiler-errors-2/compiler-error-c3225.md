@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
-ms.openlocfilehash: 1caa1e7ce787ffc14e615c946b5d670c75e0332a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ed645535300e0a7c4d27f8bed43d3143bae7e97a
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757613"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742861"
 ---
 # <a name="compiler-error-c3225"></a>编译器错误 C3225
 
@@ -21,7 +21,7 @@ ms.locfileid: "74757613"
 
 有关详细信息，请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 不能使用本机类型来实例化泛型类型。 下面的示例生成 C3225。
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
-下面的示例使用C#创建组件。 请注意，约束指定只能使用值类型实例化泛型类型。
+下面的示例使用 c # 创建组件。 请注意，约束指定只能使用值类型实例化泛型类型。
 
 ```
 // C3225_b.cs
@@ -52,9 +50,7 @@ int main() {
 public class MyList<T> where T: struct {}
 ```
 
-## <a name="example"></a>示例
-
-此示例使用- C#创作的组件，并违反了 MyList 只能使用 <xref:System.Nullable>以外的值类型进行实例化的约束。 下面的示例生成 C3225。
+此示例使用 c # 编写的组件，并违反了 MyList 只能使用以外的值类型进行实例化的约束 <xref:System.Nullable> 。 下面的示例生成 C3225。
 
 ```cpp
 // C3225_c.cpp

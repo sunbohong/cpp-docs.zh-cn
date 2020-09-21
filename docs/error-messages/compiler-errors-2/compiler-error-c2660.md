@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 179cdc6379fd26f5acd436d5ca6cacc08df8dce3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756053"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743238"
 ---
 # <a name="compiler-error-c2660"></a>编译器错误 C2660
 
@@ -23,9 +23,9 @@ ms.locfileid: "74756053"
 
 - 调整函数调用以符合成员函数调用的格式。
 
-- 使用范围解析运算符（`::`）指示编译器在全局命名空间中查找函数名称。
+- 使用范围解析运算符 (`::`) 告诉编译器在全局命名空间中查找函数名称。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2660。
 
@@ -39,9 +39,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
-如果尝试直接调用托管类型的 Dispose 方法，也会发生 C2660。 有关详细信息，请参阅[析构函数和终结](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)器。 下面的示例生成 C2660。
+如果尝试直接调用托管类型的 Dispose 方法，也会发生 C2660。 有关详细信息，请参阅 [析构函数和终结](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)器。 下面的示例生成 C2660。
 
 ```cpp
 // C2660_a.cpp
@@ -60,8 +58,6 @@ int main() {
    stateTimer->~Timer();   // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 如果派生的类隐藏了一个函数，将会发生 C2660。
 
@@ -92,8 +88,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 如果不正确地调用索引属性，则会发生 C2660。
 
 ```cpp
@@ -117,8 +111,6 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 如果不正确地调用索引属性，则会发生 C2660。
 
 ```cpp
@@ -139,8 +131,6 @@ int main() {
    int x2 = a[3,5];   // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 如果在模板类中定义了新的运算符，但 new 运算符创建的对象的类型不是封闭类型，则可能会发生 C2660。
 

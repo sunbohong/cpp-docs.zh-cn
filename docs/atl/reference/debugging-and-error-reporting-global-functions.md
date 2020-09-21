@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: b4af5dd3839672152c53c902b73c1ea51b7feb6b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835463"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742783"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>调试和错误报告全局函数
 
 这些函数提供有用的调试和跟踪功能。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|`GetLastError`以 HRESULT 形式返回错误代码。|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|将 Win32 错误代码转换为 HRESULT。|
@@ -35,7 +35,7 @@ ms.locfileid: "88835463"
 HRESULT AtlHresultFromLastError();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AtlHresultFromLastError` 调用 `GetLastError` 以获取最后一个错误，并在使用 HRESULT_FROM_WIN32 宏将错误转换为 HRESULT 后返回该错误。
 
@@ -56,7 +56,7 @@ AtlHresultFromWin32(DWORD error);
 *error*<br/>
 要转换的错误值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用宏 HRESULT_FROM_WIN32 将 Win32 错误代码转换为 HRESULT。
 
@@ -147,7 +147,7 @@ HRESULT WINAPI AtlReportError(
 
 如果 *hRes* 参数为非零，则返回 *hRes*的值。 如果 *hRes* 为零，则返回的前四个版本 `AtlReportError` DISP_E_EXCEPTION。 最后两个版本返回宏的结果 **MAKE_HRESULT ( 1，FACILITY_ITF，** `nID` **) **。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 字符串 *lpszDesc* 用作错误的文本说明。 当客户端收到从返回的 *hRes* 时 `AtlReportError` ，客户端可以访问 `IErrorInfo` 结构以获取有关错误的详细信息。
 
@@ -175,7 +175,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 *小时*<br/>
 标准 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数由 ATL 和 MFC 代码在出现错误情况时使用。 还可以从自己的代码中调用它。 此函数的默认实现取决于符号 _ATL_NO_EXCEPTIONS 和项目类型（MFC 或 ATL）的定义。
 
@@ -195,7 +195,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>要求
+### <a name="requirements"></a>要求
 
 **标头：** atldef
 
@@ -207,7 +207,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 inline void AtlThrowLastWin32();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将跟踪的结果跟踪 `GetLastError` 到调试器。
 
@@ -217,7 +217,7 @@ inline void AtlThrowLastWin32();
 
 如果定义 _ATL_NO_EXCEPTIONS，该函数将导致断言失败，而不引发异常。
 
-## <a name="requirements"></a>要求
+### <a name="requirements"></a>要求
 
 **标头：** atldef
 

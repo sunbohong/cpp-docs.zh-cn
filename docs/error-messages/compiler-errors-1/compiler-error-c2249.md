@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2249
 ms.assetid: bdd6697c-e04b-49b9-8e40-d9eb6d74f2b6
-ms.openlocfilehash: f50cb27a239e794b87a15920a36e96529bd6a466
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ac396fe5fa3505311f5a45ebb49dae283e35248c
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212795"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741405"
 ---
 # <a name="compiler-error-c2249"></a>编译器错误 C2249
 
@@ -19,7 +19,7 @@ ms.locfileid: "87212795"
 
 `member`继承自非公共 **`virtual`** 基类或结构。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2249。
 
@@ -39,8 +39,6 @@ int main() {
    b.pubFunc();    // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 如果尝试将一个流从 c + + 标准库分配到另一个流，也会发生 C2249。  下面的示例生成 C2249。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 0bf8b918f254c05bfe57034e25611c8dc17a783a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 360fedc6cadf275704a790c257c42ac8bde7873d
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231957"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742055"
 ---
 # <a name="compiler-error-c3409"></a>编译器错误 C3409
 
@@ -19,9 +19,9 @@ ms.locfileid: "87231957"
 
 ## <a name="remarks"></a>备注
 
-方括号被编译器解释为[属性](../../windows/attributes-alphabetical-reference.md)块，但找不到任何属性。
+方括号被编译器解释为 [属性](../../windows/attributes-alphabetical-reference.md) 块，但找不到任何属性。
 
-当使用方括号作为 lambda 表达式定义的一部分时，编译器可能会生成此错误。 当编译器无法确定方括号是 lambda 表达式定义的一部分还是特性块的一部分时，会发生此错误。 有关 lambda 表达式的详细信息，请参阅[Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。
+当使用方括号作为 lambda 表达式定义的一部分时，编译器可能会生成此错误。 当编译器无法确定方括号是 lambda 表达式定义的一部分还是特性块的一部分时，会发生此错误。 有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)。
 
 ### <a name="to-correct-this-error"></a>更正此错误
 
@@ -33,9 +33,9 @@ ms.locfileid: "87231957"
 
 1. 如果方括号是 lambda 表达式的一部分，请确保 lambda 表达式遵循有效的语法规则。
 
-   有关 lambda 表达式语法的详细信息，请参阅[Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
+   有关 lambda 表达式语法的详细信息，请参阅 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C3409。
 
@@ -54,8 +54,6 @@ __interface x {};
 class b : public x {};
 ```
 
-## <a name="example"></a>示例
-
 下面的示例生成 C3409，因为 lambda 表达式使用 **`mutable`** 规范，但不提供参数列表。 编译器无法确定方括号是 lambda 表达式定义的一部分还是属于特性块。
 
 ```cpp
@@ -67,7 +65,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [attribute](../../windows/attributes-alphabetical-reference.md)<br/>
 [Lambda 表达式](../../cpp/lambda-expressions-in-cpp.md)<br/>

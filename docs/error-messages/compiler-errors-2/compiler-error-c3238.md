@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: 6f60a9abbc5702c1a0d14d0f894c9b1684378c3f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1f238a3be27023c755544438166aae1b2b2967d3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759355"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741978"
 ---
 # <a name="compiler-error-c3238"></a>编译器错误 C3238
 
@@ -19,9 +19,9 @@ ms.locfileid: "74759355"
 
 通过在引用的程序集中类型转发语法，已在客户端应用程序中定义的类型也被定义了。 两种类型均不能在应用程序的范围内定义。
 
-有关详细信息，请参阅[类型转发（C++/cli）](../../extensions/type-forwarding-cpp-cli.md) 。
+有关详细信息，请参阅 [类型转发 (c + +/cli) ](../../extensions/type-forwarding-cpp-cli.md) 。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例创建了一个包含从另一个程序集已转发的类型的程序集。
 
@@ -31,8 +31,6 @@ ms.locfileid: "74759355"
 public ref class R {};
 ```
 
-## <a name="example"></a>示例
-
 下面的示例创建用来包含该类型定义的程序集，但不仅仅包含类型转发语法。
 
 ```cpp
@@ -41,8 +39,6 @@ public ref class R {};
 #using "C3238.dll"
 [ assembly:TypeForwardedTo(R::typeid) ];
 ```
-
-## <a name="example"></a>示例
 
 以下示例生成 C3238。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 62cf208d9d0025afba06d32a15b9a1e50777c473
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 59d0e5d5a5f0957f2d73cdb863ccee9a2dd2a026
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750996"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743251"
 ---
 # <a name="compiler-error-c2027"></a>编译器错误 C2027
 
@@ -19,7 +19,7 @@ ms.locfileid: "74750996"
 
 在定义类型之前，无法使用该类型。 若要解决此错误，请确保在引用类型之前已完全定义了该类型。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2027。
 
@@ -41,9 +41,7 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
-可以声明指向已声明但未定义类型的指针。 但C++不允许引用未定义的类型。
+可以声明指向已声明但未定义类型的指针。 但 c + + 不允许引用未定义的类型。
 
 下面的示例生成 C2027。
 

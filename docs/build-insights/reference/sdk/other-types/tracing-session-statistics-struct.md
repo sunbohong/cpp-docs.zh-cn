@@ -1,6 +1,6 @@
 ---
-title: TRACING_SESSION_STATISTICS结构
-description: C++构建见解 SDK TRACING_SESSION_OPTIONS结构参考。
+title: TRACING_SESSION_STATISTICS 结构
+description: C++ Build Insights SDK TRACING_SESSION_OPTIONS 结构参考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 96cff3a231fd515ec1c52a048b8350a63ba46a39
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 5f6126fb469dc13b814b91942fe9f7bc480ba3f1
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323381"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041180"
 ---
-# <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS结构
+# <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS 结构
 
 ::: moniker range="<=vs-2015"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-该`TRACING_SESSION_STATISTICS`结构描述收集的跟踪的统计信息。 停止跟踪会话时设置其字段。
+`TRACING_SESSION_STATISTICS` 结构描述了所收集跟踪的统计信息。 在停止跟踪会话时设置字段。
 
 ## <a name="syntax"></a>语法
 
@@ -42,25 +42,25 @@ typedef struct TRACING_SESSION_STATISTICS_TAG
 
 ## <a name="members"></a>成员
 
-|  |  |
+| 名称 | 描述 |
 |--|--|
-| `MSVCEventsLost` | 丢弃的 MSVC 事件数。 |
-| `MSVCBuffersLost` | 丢弃的 MSVC 事件缓冲区数。 |
-| `SystemEventsLost` | 丢弃的系统事件数。 |
-| `SystemBuffersLost` | 丢弃的系统事件缓冲区数。 |
+| `MSVCEventsLost` | 已删除的 MSVC 事件数。 |
+| `MSVCBuffersLost` | 已删除的 MSVC 事件缓冲区数。 |
+| `SystemEventsLost` | 已删除的系统事件数。 |
+| `SystemBuffersLost` | 已删除的系统事件缓冲区数。 |
 
 ## <a name="remarks"></a>备注
 
-调用以下函数时，将填充此结构：
+在调用以下函数时，将填充此结构：
 
-- [停止跟踪会话](../functions/stop-tracing-session.md)
-- [停止跟踪会话A](../functions/stop-tracing-session-a.md)
-- [停止跟踪会话W](../functions/stop-tracing-session-w.md)
-- [停止和分析跟踪会话](../functions/stop-and-analyze-tracing-session.md)
-- [停止和分析跟踪会话A](../functions/stop-and-analyze-tracing-session-a.md)
-- [停止和分析跟踪会话W](../functions/stop-and-analyze-tracing-session-w.md)
-- [停止和重新记录跟踪会话](../functions/stop-and-relog-tracing-session.md)
-- [停止和重新登录跟踪会话A](../functions/stop-and-relog-tracing-session-a.md)
-- [停止和重新记录跟踪会话W](../functions/stop-and-relog-tracing-session-w.md)
+- [StopTracingSession](../functions/stop-tracing-session.md)
+- [StopTracingSessionA](../functions/stop-tracing-session-a.md)
+- [StopTracingSessionW](../functions/stop-tracing-session-w.md)
+- [StopAndAnalyzeTracingSession](../functions/stop-and-analyze-tracing-session.md)
+- [StopAndAnalyzeTracingSessionA](../functions/stop-and-analyze-tracing-session-a.md)
+- [StopAndAnalyzeTracingSessionW](../functions/stop-and-analyze-tracing-session-w.md)
+- [StopAndRelogTracingSession](../functions/stop-and-relog-tracing-session.md)
+- [StopAndRelogTracingSessionA](../functions/stop-and-relog-tracing-session-a.md)
+- [StopAndRelogTracingSessionW](../functions/stop-and-relog-tracing-session-w.md)
 
 ::: moniker-end

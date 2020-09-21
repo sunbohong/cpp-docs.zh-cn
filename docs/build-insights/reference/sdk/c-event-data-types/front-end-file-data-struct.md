@@ -1,6 +1,6 @@
 ---
-title: FRONT_END_FILE_DATA结构
-description: C++生成见解 SDK FRONT_END_FILE_DATA结构参考。
+title: FRONT_END_FILE_DATA 结构
+description: C++ Build Insights SDK FRONT_END_FILE_DATA 结构参考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7fb6b6fff4f309a3539a290f279d1e31cb1ed76b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c2519bfd478776f54cee59ba08b83ea00b96beff
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325553"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041752"
 ---
-# <a name="front_end_file_data-structure"></a>FRONT_END_FILE_DATA结构
+# <a name="front_end_file_data-structure"></a>FRONT_END_FILE_DATA 结构
 
 ::: moniker range="<=vs-2015"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-结构`FRONT_END_FILE_DATA`描述编译器前端对文件的处理。
+`FRONT_END_FILE_DATA` 结构描述由编译器前端处理文件。
 
 ## <a name="syntax"></a>语法
 
@@ -39,7 +39,7 @@ typedef struct FRONT_END_FILE_DATA_TAG
 
 ## <a name="members"></a>成员
 
-|  |  |
+| 名称 | 说明 |
 |--|--|
 | `Path` | 文件的绝对路径，以 UTF-8 编码。 |
 

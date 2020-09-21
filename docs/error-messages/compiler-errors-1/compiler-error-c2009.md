@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2009
 ms.assetid: fe9d94ed-20a5-4d83-b9c4-60ee69d2f30a
-ms.openlocfilehash: 434ae830e78c8fb5fe4e56438a557afb027d264f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 02780a88552231472c2e16299a6d5e5dfef1bdd2
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74752439"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743108"
 ---
 # <a name="compiler-error-c2009"></a>编译器错误 C2009
 
@@ -19,7 +19,7 @@ ms.locfileid: "74752439"
 
 宏定义的形参列表多次使用标识符。 宏参数列表中的标识符必须是唯一的。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2009：
 
@@ -34,8 +34,6 @@ int main()
     printf_s("%d\n", macro1(2));
 }
 ```
-
-## <a name="example"></a>示例
 
 可能的解决方法：
 

@@ -1,19 +1,20 @@
 ---
 title: 演练：在命令行上编译 C 程序
+description: 演示如何创建简单的 Hello World 样式 C 程序。
 ms.custom: conceptual
-ms.date: 04/25/2019
+ms.date: 9/10/2020
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d807fa75b32b515c2222fec9ea9d070266303e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335261"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075603"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>演练：在命令行上编译 C 程序
 
@@ -143,7 +144,7 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
     ```
 
    > [!NOTE]
-   > 如果遇到错误（例如“‘cl’无法识别为内部或外部命令、可操作的程序或批处理文件”、错误 C1034 或错误 LNK1104），则说明未正确设置开发人员命令提示。 有关如何解决此问题的信息，请返回“打开开发人员命令提示”部分  。
+   > 如果遇到错误（例如“‘cl’无法识别为内部或外部命令、可操作的程序或批处理文件”、错误 C1034 或错误 LNK1104），则说明未正确设置开发人员命令提示。 有关如何解决此问题的信息，请返回“打开开发人员命令提示”部分。
 
    > [!NOTE]
    > 如果收到其他编译器或链接器错误或警告，请检查源代码以更正任何错误，然后保存它并再次运行编译器。 有关特定错误的信息，请使用此页面顶部的搜索框查找错误号。
@@ -178,9 +179,9 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 可以使用 NMAKE 和生成文件或 MSBuild 和项目文件在命令行上配置和生成更复杂的项目。 有关如何使用这些工具的详细信息，请参阅 [NMAKE 参考](reference/nmake-reference.md)和 [MSBuild](msbuild-visual-cpp.md)。
 
-C 和 C++ 语言相似，但并不相同。 Microsoft C/C++ 编译器 (MSVC) 使用简单的规则确定在编译代码时要使用的语言。 默认情况下，MSVC 编译器将以 .c 结尾的所有文件视为 C 源代码，将以 .cpp 结尾的所有文件视为 C++ 源代码。 若要强制编译器将所有文件视为与文件扩展名无关的 C，请使用 [/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md) 编译器选项。
+C 和 C++ 语言相似，但并不相同。 Microsoft C/C++ 编译器 (MSVC) 使用简单的规则确定在编译代码时要使用的语言。 默认情况下，MSVC 编译器将以 .c 结尾的所有文件视为 C 源代码，将以 .cpp 结尾的所有文件视为 C++ 源代码。 若要强制编译器将所有文件视为与文件扩展名无关的 C，请使用 [/TC](reference/tc-tp-tc-tp-specify-source-file-type.md) 编译器选项。
 
-MSVC 与 ISO C99 标准兼容，但不严格相容。 在大多数情况下，可移植的 C 代码将按预期方式进行编译和运行。 Visual C++ 不支持 ISO C11 中的大部分更改。 MSVC 已弃用某些库函数和 POSIX 函数名。 这些函数仍然受支持，但首选名称已更改。 有关详细信息，请参阅 [CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)和[编译器警告（级别 3）C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
+MSVC 与 ISO C99 标准兼容，但不严格相容。 在大多数情况下，可移植的 C 代码将按预期方式进行编译和运行。 Visual C++ 支持 ISO C11/C17 中的更改。 若要使用 C11/C17 支持进行编译，请使用编译器标志 `/std:c11` 或 `/std:c17`。 MSVC 已弃用某些库函数和 POSIX 函数名。 这些函数仍然受支持，但首选名称已更改。 有关详细信息，请参阅 [CRT 中的安全功能](../c-runtime-library/security-features-in-the-crt.md)和[编译器警告（级别 3）C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。
 
 ## <a name="see-also"></a>请参阅
 

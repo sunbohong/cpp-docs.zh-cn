@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 60324ae914c9490144a715e06323ee6d184ce201
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8e92c30e8d62ade095167880917ad70da8e59b36
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079725"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742913"
 ---
-# <a name="ccustomsource-customdsh"></a>CCustomSource （CustomDS）
+# <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS) 
 
 提供程序类使用多重继承。 下面的代码显示了数据源对象的继承链：
 
@@ -35,34 +35,13 @@ class ATL_NO_VTABLE CCustomSource :
    public IInternalConnectionImpl<CCustomSource>
 ```
 
-所有 COM 组件都从 `CComObjectRootEx` 和 `CComCoClass`派生。 `CComObjectRootEx` 提供 `IUnknown` 接口的所有实现。 它可以处理任何线程模型。 `CComCoClass` 处理所需的任何错误支持。 如果要将更丰富的错误信息发送到客户端，可以使用 `CComCoClass`中的一些错误 Api。
+所有 COM 组件均派生自 `CComObjectRootEx` 和 `CComCoClass` 。 `CComObjectRootEx` 提供接口的所有实现 `IUnknown` 。 它可以处理任何线程模型。 `CComCoClass` 处理所需的任何错误支持。 如果要将更丰富的错误信息发送到客户端，可以使用中的一些错误 Api `CComCoClass` 。
 
-数据源对象还继承自多个 "Impl" 类。 每个类都提供接口的实现。 数据源对象实现 `IPersist`、`IDBProperties`、`IDBInitialize`和 `IDBCreateSession` 接口。 OLE DB 实现数据源对象需要每个接口。 您可以通过继承或不继承其中一个 "Impl" 类来选择支持或不支持特定功能。 如果要支持 `IDBDataSourceAdmin` 接口，请从 `IDBDataSourceAdminImpl` 类继承，以获取所需功能。
-
-## <a name="com-map"></a>COM 映射
-
-每当客户端为数据源上的接口调用 `QueryInterface` 时，它都会经历以下 COM 映射：
-
-```cpp
-/////////////////////////////////////////////////////////////////////////
-// CCustomSource
-class ATL_NO_VTABLE CCustomSource :
-   public CComObjectRootEx<CComSingleThreadModel>,
-   public CComCoClass<CCustomSource, &CLSID_Custom>,
-   public IDBCreateSessionImpl<CCustomSource, CCustomSession>,
-   public IDBInitializeImpl<CCustomSource>,
-   public IDBPropertiesImpl<CCustomSource>,
-   public IPersistImpl<CCustomSource>,
-   public IInternalConnectionImpl<CCustomSource>
-```
-
-所有 COM 组件都从 `CComObjectRootEx` 和 `CComCoClass`派生。 `CComObjectRootEx` 提供 `IUnknown` 接口的所有实现。 它可以处理任何线程模型。 `CComCoClass` 处理所需的任何错误支持。 如果要将更丰富的错误信息发送到客户端，可以使用 `CComCoClass`中的一些错误 Api。
-
-数据源对象还继承自多个 "Impl" 类。 每个类都提供接口的实现。 数据源对象实现 `IPersist`、`IDBProperties`、`IDBInitialize`和 `IDBCreateSession` 接口。 OLE DB 实现数据源对象需要每个接口。 您可以通过继承或不继承其中一个 "Impl" 类来选择支持或不支持特定功能。 如果要支持 `IDBDataSourceAdmin` 接口，请从 `IDBDataSourceAdminImpl` 类继承，以获取所需功能。
+数据源对象还继承自多个 "Impl" 类。 每个类都提供接口的实现。 数据源对象实现 `IPersist` 、 `IDBProperties` 、 `IDBInitialize` 和 `IDBCreateSession` 接口。 OLE DB 实现数据源对象需要每个接口。 您可以通过继承或不继承其中一个 "Impl" 类来选择支持或不支持特定功能。 如果希望支持 `IDBDataSourceAdmin` 接口，则从 `IDBDataSourceAdminImpl` 类继承以获取所需的功能。
 
 ## <a name="com-map"></a>COM 映射
 
-每当客户端为数据源上的接口调用 `QueryInterface` 时，它都会经历以下 COM 映射：
+每当客户端调用 `QueryInterface` 数据源的接口时，它都会经历以下 COM 映射：
 
 ```cpp
 BEGIN_COM_MAP(CCustomSource)
@@ -74,7 +53,7 @@ BEGIN_COM_MAP(CCustomSource)
 END_COM_MAP()
 ```
 
-COM_INTERFACE_ENTRY 的宏来自 ATL，并通知 `CComObjectRootEx` 中 `QueryInterface` 的实现返回相应的接口。
+COM_INTERFACE_ENTRY 的宏来自 ATL，并通知中的实现 `QueryInterface` `CComObjectRootEx` 返回相应的接口。
 
 ## <a name="property-map"></a>属性映射
 
@@ -148,9 +127,9 @@ BEGIN_PROPSET_MAP(CCustomSource)
 END_PROPSET_MAP()
 ```
 
-OLE DB 中的属性进行分组。 数据源对象具有两组属性：一个用于 DBPROPSET_DATASOURCEINFO 集，一个用于 DBPROPSET_DBINIT 集。 DBPROPSET_DATASOURCEINFO 集对应于提供程序及其数据源的属性。 DBPROPSET_DBINIT 集对应于初始化时使用的属性。 OLE DB 提供程序模板用 PROPERTY_SET 宏来处理这些集。 宏创建包含属性数组的块。 只要客户端调用 `IDBProperties` 接口，提供程序就会使用属性映射。
+OLE DB 中的属性进行分组。 数据源对象具有两组属性：一个用于 DBPROPSET_DATASOURCEINFO 集，一个用于 DBPROPSET_DBINIT 集。 DBPROPSET_DATASOURCEINFO 集对应于提供程序及其数据源的属性。 DBPROPSET_DBINIT 集对应于初始化时使用的属性。 OLE DB 提供程序模板用 PROPERTY_SET 宏来处理这些集。 宏创建包含属性数组的块。 当客户端调用 `IDBProperties` 接口时，提供程序将使用属性映射。
 
-不需要在规范中实现每个属性。 但是，必须支持所需的属性;有关详细信息，请参阅 level 0 一致性规范。 如果不想支持某个属性，则可以将其从映射中删除。 如果要支持某个属性，请使用 PROPERTY_INFO_ENTRY 宏将其添加到地图中。 宏对应于 `UPROPINFO` 结构，如以下代码所示：
+不需要在规范中实现每个属性。 但是，必须支持所需的属性;有关详细信息，请参阅 level 0 一致性规范。 如果不想支持某个属性，则可以将其从映射中删除。 如果要支持某个属性，请使用 PROPERTY_INFO_ENTRY 宏将其添加到地图中。 宏对应于结构， `UPROPINFO` 如以下代码所示：
 
 ```cpp
 struct UPROPINFO
@@ -168,17 +147,17 @@ struct UPROPINFO
 };
 ```
 
-结构中的每个元素都表示用于处理属性的信息。 它包含用于确定属性的 GUID 和 ID 的 `DBPROPID`。 它还包含用于确定属性的类型和值的条目。
+结构中的每个元素都表示用于处理属性的信息。 它包含 `DBPROPID` 以确定属性的 GUID 和 ID。 它还包含用于确定属性的类型和值的条目。
 
-如果要更改属性的默认值（请注意，使用者随时可以更改可写属性的值），则可以使用 PROPERTY_INFO_ENTRY_VALUE 或 PROPERTY_INFO_ENTRY_EX 宏。 这些宏允许您为相应的属性指定一个值。 PROPERTY_INFO_ENTRY_VALUE 宏是一种简略表示法，可用于更改值。 PROPERTY_INFO_ENTRY_VALUE 宏调用 PROPERTY_INFO_ENTRY_EX 的宏。 此宏可用于添加或更改 `UPROPINFO` 结构中的所有属性。
+如果要更改属性的默认值 (请注意，在任何时候，使用者都可以更改可写属性的值) ，则可以使用 PROPERTY_INFO_ENTRY_VALUE 或 PROPERTY_INFO_ENTRY_EX 宏。 这些宏允许您为相应的属性指定一个值。 PROPERTY_INFO_ENTRY_VALUE 宏是一种简略表示法，可用于更改值。 PROPERTY_INFO_ENTRY_VALUE 宏调用 PROPERTY_INFO_ENTRY_EX 的宏。 此宏可用于添加或更改结构中的所有属性 `UPROPINFO` 。
 
 如果要定义自己的属性集，可以通过额外的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 组合来添加一个属性集。 为属性集定义 GUID，然后定义自己的属性。 如果有特定于提供程序的属性，请将它们添加到新的属性集，而不是使用现有的属性集。 这可以避免在 OLE DB 的更高版本中出现问题。
 
 ## <a name="user-defined-property-sets"></a>用户定义的属性集
 
-视觉C++对象支持用户定义的属性集。 无需覆盖 `GetProperties` 或 `GetPropertyInfo`。 相反，模板会检测任何用户定义的属性集，并将其添加到适当的对象。
+Visual C++ 支持用户定义的属性集。 不需要重写 `GetProperties` 或 `GetPropertyInfo` 。 相反，模板会检测任何用户定义的属性集，并将其添加到适当的对象。
 
-如果用户定义属性集需要在初始化时可用（即，在使用者调用 `IDBInitialize::Initialize`之前），则可以通过使用 UPROPSET_USERINIT 标志和 BEGIN_PROPERTY_SET_EX 宏来指定此属性。 属性集必须在数据源对象中才能正常运行（如 OLE DB 规范所要求）。 例如：
+如果你有一个用户定义的属性集，该属性集需要在初始化时可用 (即，在使用者调用 `IDBInitialize::Initialize`) 之前，你可以通过将 UPROPSET_USERINIT 标志与 BEGIN_PROPERTY_SET_EX 宏一起使用来指定此属性。 属性集必须在数据源对象中，才能 (，因为 OLE DB 规范要求) 。 例如：
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
@@ -186,6 +165,6 @@ BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)
 END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)<br/>

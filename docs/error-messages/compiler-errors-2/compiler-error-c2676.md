@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
-ms.openlocfilehash: 1b999875aa1c7ef34065c0a36046c634308075f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 94e56581f6583fa69e46d4deb3d82663a65cd1d1
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218190"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743186"
 ---
 # <a name="compiler-error-c2676"></a>编译器错误 C2676
 
@@ -19,7 +19,7 @@ ms.locfileid: "87218190"
 
 要使用该运算符，必须针对指定类型将其重载，或者定义一个到某个类型（该运算符已针对此类型进行了定义）的转换。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2676。
 
@@ -51,11 +51,9 @@ int main() {
 }
 ```
 
-## <a name="example"></a>示例
-
 如果尝试对引用类型的指针执行指针算术运算，也可能会发生 C2676 **`this`** 。
 
-**`this`** 指针是引用类型中的句柄类型。 有关详细信息，请参阅[this 指针的语义](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。
+**`this`** 指针是引用类型中的句柄类型。 有关详细信息，请参阅 [this 指针的语义](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。
 
 下面的示例生成 C2676。
 

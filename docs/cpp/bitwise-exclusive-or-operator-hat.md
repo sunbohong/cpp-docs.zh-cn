@@ -1,9 +1,10 @@
 ---
 title: 按位异或运算符：^
 description: C + + 标准语言专用或运算符语法，并使用。
-ms.date: 07/23/2020
+ms.date: 09/21/2020
 f1_keywords:
 - xor_cpp
+- ^
 helpviewer_keywords:
 - operators [C++], bitwise
 - exclusive OR operator
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-ms.openlocfilehash: b76c3d84d9548a73084b254a4179d1f679c33626
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 4823c245ffca7032347e37c0c25c2963407733a7
+ms.sourcegitcommit: f656092eebbcb148ca4d3b7a6a8508eff8f7e85f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521156"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90836623"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>按位异或运算符：^
 
@@ -28,14 +29,15 @@ ms.locfileid: "87521156"
 
 ## <a name="remarks"></a>备注
 
-按位 "异或" 运算符（ **`^`** ）将第一个操作数的每个位与其第二操作数的相应位进行比较。 如果其中一个操作数的位是0，另一个操作数中的位为1，则相应的结果位将设置为1。 否则，将对应的结果位设置为 0。
+按位 "异或" 运算符 (**`^`**) 将其第一个操作数的每个位与其第二操作数的相应位进行比较。 如果其中一个操作数的位是0，另一个操作数中的位为1，则相应的结果位将设置为1。 否则，将对应的结果位设置为 0。
 
 运算符的两个操作数必须具有整数类型。 [标准转换](standard-conversions.md)中涵盖的常用算术转换将应用于操作数。
 
+有关 **`^`** c + +/cli 和 c + +/cx 中字符的备用用法的详细信息，请参阅 [ (c + +/Cli 和 c + +/cx)  (^) 的句柄运算符 ](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
+
 ## <a name="operator-keyword-for-"></a>^ 运算符关键字
 
-C + + **`xor`** 将指定为的替换拼写 **`^`** 。 在 C 中，可选拼写作为宏在标头中提供 \<iso646.h> 。 在 c + + 中，替换拼写是关键字;\<iso646.h>不推荐使用或 c + + 等效项 \<ciso646> 。 在 Microsoft c + + 中， [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 需要或编译器选项来启用备用拼写。
-
+C + + **`xor`** 将指定为的替换拼写 **`^`** 。 在 C 中，可选拼写作为宏在标头中提供 \<iso646.h> 。 在 c + + 中，替换拼写是关键字; \<iso646.h> 不推荐使用或 c + + 等效项 \<ciso646> 。 在 Microsoft c + + 中， [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 需要或编译器选项来启用备用拼写。
 
 ## <a name="example"></a>示例
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 56393fd522ecd0e2f161dfa5b9fe8230563c0f65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f5c82a776a537d469d42a16bd4f425e7bb2c13aa
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223481"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742926"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 类
 
@@ -39,13 +39,13 @@ BackInsertIterator 类实现 [back_insert_iterator Class](../standard-library/ba
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[BackInsertIterator：： BackInsertIterator](#ctor)|初始化 BackInsertIterator 类的新实例。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[BackInsertIterator：： operator * 运算符](#operator-dereference)|检索对当前 BackInsertIterator 的引用。|
 |[BackInsertIterator：： operator + + 运算符](#operator-increment)|返回对当前 BackInsertIterator 的引用。 迭代器未经修改。|
@@ -61,11 +61,11 @@ BackInsertIterator 类实现 [back_insert_iterator Class](../standard-library/ba
 
 **命名空间：** Platform::Collections
 
-## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a>BackInsertIterator：： BackInsertIterator 构造函数
+## <a name="backinsertiteratorbackinsertiterator-constructor"></a><a name="ctor"></a> BackInsertIterator：： BackInsertIterator 构造函数
 
 初始化 `BackInsertIterator` 类的新实例。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```
 explicit BackInsertIterator(
@@ -81,11 +81,11 @@ explicit BackInsertIterator(
 
 `BackInsertIterator` 在参数 `v` 指定的对象的最后一个元素之后插入元素。
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a>BackInsertIterator：： operator = 运算符
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-assign"></a> BackInsertIterator：： operator = 运算符
 
 将指定对象追加到当前有序集合的末尾。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```
 BackInsertIterator& operator=( const T& t);
@@ -93,18 +93,18 @@ BackInsertIterator& operator=( const T& t);
 
 #### <a name="parameters"></a>参数
 
-*关心*<br/>
+*t*<br/>
 要追加到当前集合的对象。
 
 ### <a name="return-value"></a>返回值
 
 对当前 BackInsertIterator 的引用。
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a>BackInsertIterator：： operator * 运算符
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-dereference"></a> BackInsertIterator：： operator * 运算符
 
 检索对当前 BackInsertIterator 的引用。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```
 BackInsertIterator& operator*();
@@ -118,11 +118,11 @@ BackInsertIterator& operator*();
 
 此运算符返回对当前 BackInsertIterator 的引用；而不是对当前集合中任何元素的引用。
 
-## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a>BackInsertIterator：： operator + + 运算符
+## <a name="backinsertiteratoroperator-operator"></a><a name="operator-increment"></a> BackInsertIterator：： operator + + 运算符
 
 返回对当前 BackInsertIterator 的引用。 迭代器未经修改。
 
-## <a name="syntax"></a>语法
+### <a name="syntax"></a>语法
 
 ```
 BackInsertIterator& operator++();
@@ -138,8 +138,8 @@ BackInsertIterator operator++(int);
 
 按照设计，第一个语法示例前递增当前 BackInsertIterator，第二个语法后递增当前 BackInsertIterator。 **`int`** 第二个语法中的类型指示递增后操作，而不是实际整数操作数。
 
-但是，此运算符不会实际修改 BackInsertIterator， 而是返回对未经修改的当前迭代器的引用。 这与[operator *](#operator-dereference)的行为相同。
+但是，此运算符不会实际修改 BackInsertIterator， 而是返回对未经修改的当前迭代器的引用。 这与 [operator *](#operator-dereference)的行为相同。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)

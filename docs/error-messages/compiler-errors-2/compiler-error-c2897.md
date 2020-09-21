@@ -6,22 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 22e63ce92a6d526f08e68bedb35de104be339dc3
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760769"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743368"
 ---
 # <a name="compiler-error-c2897"></a>编译器错误 C2897
 
 析构函数/终结器不能是函数模板
 
-析构函数或终结器不能重载，因此不允许将析构函数声明为模板（这将定义一组析构函数）。
+析构函数或终结器不能重载，因此将析构函数声明为模板 (将不允许定义一组析构函数) 。
 
-下面的示例生成 C2897：
-
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2897。
 
@@ -33,8 +31,6 @@ public:
    template<typename T> ~X() {}   // C2897
 };
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C2897。
 

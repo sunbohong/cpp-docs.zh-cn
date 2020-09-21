@@ -1,6 +1,6 @@
 ---
-title: FUNCTION_DATA结构
-description: C++构建见解 SDK FUNCTION_DATA结构参考。
+title: FUNCTION_DATA 结构
+description: C++ Build Insights SDK FUNCTION_DATA 结构参考。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ec715192e3480932d351cdb4be1443c329a4868b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 1034ce01bba6422d0c47fc34b308cafcc113e32b
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325530"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90041739"
 ---
-# <a name="function_data-structure"></a>FUNCTION_DATA结构
+# <a name="function_data-structure"></a>FUNCTION_DATA 结构
 
 ::: moniker range="<=vs-2015"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-结构`FUNCTION_DATA`描述一个函数。
+`FUNCTION_DATA` 结构描述函数。
 
 ## <a name="syntax"></a>语法
 
@@ -39,8 +39,8 @@ typedef struct FUNCTION_DATA_TAG
 
 ## <a name="members"></a>成员
 
-|  |  |
+| 名称 | 说明 |
 |--|--|
-| `Name` | 函数的名称，在 UTF-8 中编码。 |
+| `Name` | 函数的名称，以 UTF-8 编码。 |
 
 ::: moniker-end

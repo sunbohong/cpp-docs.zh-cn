@@ -6,18 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: ebe41a4c4aa090e609d3352635d4e1fc06e22454
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755988"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90743212"
 ---
 # <a name="compiler-error-c2666"></a>编译器错误 C2666
 
 "identifier"：数字重载具有相似的转换
 
 重载的函数或运算符不明确。   形参列表可能太类似，编译器无法解析多义性。  若要解决此错误，请显式转换一个或多个实际参数。
+
+## <a name="examples"></a>示例
 
 下面的示例生成 C2666：
 
@@ -41,11 +43,9 @@ int main() {
 
 - 限定转换不同于标识转换
 
-对于二元运算符 \<、>、\<= 和 > =，如果参数的类型定义了用户定义的转换运算符来转换为操作数的类型，则传递的参数现在会隐式转换为操作数的类型。 现在可能存在歧义。
+对于二元运算符 \<, > ， \<=, and > =，如果参数的类型定义了用户定义的转换运算符来转换为操作数的类型，则传递的参数现在会隐式转换为操作数的类型。 现在可能存在歧义。
 
-对于在 visual Studio .NET 2003 和 visual Studio .NET 版本的视觉C++对象中都有效的代码，请使用函数语法显式调用类运算符。
-
-## <a name="example"></a>示例
+对于在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++ 中都有效的代码，请使用函数语法显式调用类运算符。
 
 ```cpp
 // C2666b.cpp
@@ -101,8 +101,6 @@ int main()
         printf_s("str1.operator char*() < str2\n");
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C2666
 

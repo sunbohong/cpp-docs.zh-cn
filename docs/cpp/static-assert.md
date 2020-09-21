@@ -7,12 +7,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: 55181193e0364c1c6b758365c674f8e2c8a3f4c7
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30af5fcf5d4f58143e657d84e743ef09a34e268
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560629"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90742965"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -44,21 +44,21 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 
 可以 **`static_assert`** 在命名空间、类或块范围内使用关键字。  (**`static_assert`** 关键字在技术上是声明，尽管它不会将新名称引入到程序中，因为它可以在命名空间范围内使用。 ) 
 
-## <a name="description"></a>说明
+## <a name="description-of-static_assert-with-namespace-scope"></a>命名空间范围 static_assert 的说明
 
 在下面的示例中， **`static_assert`** 声明具有命名空间范围。 由于编译器知道类型 `void *` 的大小，因此可以立即计算表达式。
 
-## <a name="example"></a>示例
+## <a name="example-of-static_assert-with-namespace-scope"></a>命名空间范围 static_assert 的示例
 
 ```cpp
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ```
 
-## <a name="description"></a>说明
+## <a name="description-of-static_assert-with-class-scope"></a>具有类范围的 static_assert 的说明
 
 在下面的示例中， **`static_assert`** 声明具有类范围。 **`static_assert`** 验证模板参数是否为*纯旧数据* (POD) 类型。 在声明 **`static_assert`** 声明时，编译器将检查声明，但在中实例化类模板之前，不会计算 *常数表达式* 参数 `basic_string` `main()` 。
 
-## <a name="example"></a>示例
+## <a name="example-of-static_assert-with-class-scope"></a>具有类范围的 static_assert 的示例
 
 ```cpp
 #include <type_traits>
@@ -83,7 +83,7 @@ int main()
 }
 ```
 
-## <a name="description"></a>说明
+## <a name="description"></a>描述
 
 在下面的示例中， **`static_assert`** 声明具有块范围。 **`static_assert`** 验证 VMPage 结构的大小是否等于系统的虚拟内存 pagesize。
 
@@ -104,7 +104,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [断言和用户提供的消息 (C++)](../cpp/assertion-and-user-supplied-messages-cpp.md)<br/>
 [ (C/c + + 的 #error 指令) ](../preprocessor/hash-error-directive-c-cpp.md)<br/>

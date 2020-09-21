@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 6c05dd00324113819dd145e46bf10dfeb96a66a3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 17b54311670f78cda78403c273cfbf57d43e84da
+ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078239"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042181"
 ---
 # <a name="set-compiler-and-build-properties"></a>设置编译器和生成属性
 
@@ -90,13 +90,13 @@ MSBuild 支持对某些字符串值（包括目录和路径）使用称为“宏
 
 ## <a name=""></a><a name="property_editor">属性编辑器</a>
 
-你可以使用属性编辑器来修改特定字符串属性，选择宏作为值。 若要访问“属性编辑器”，在属性页中选择属性，然后选择右侧的向下箭头按钮。 如果下拉列表包含“\<编辑>”，那么你可以选择它来显示该属性的属性编辑器  。
+你可以使用属性编辑器来修改特定字符串属性，选择宏作为值。 若要访问“属性编辑器”，在属性页中选择属性，然后选择右侧的向下箭头按钮。 如果下拉列表包含 \<Edit>，那么你可以选择它来显示该属性的属性编辑器。
 
-![属性&#95;编辑器&#95;下拉列表](media/property_editor_dropdown.png "Property_Editor_Dropdown")
+![属性下拉控件用于访问属性编辑器](media/property_editor_dropdown.png "“属性编辑器”下拉列表")
 
 在属性编辑器中，可以选择“宏”按钮查看可用宏及这些宏的当前值  。 下图显示选中“宏”按钮后，“附加包含目录”属性的属性编辑器   。 如果选中“从父级或项目默认设置继承”复选框并添加了新值，则该值会附加到当前被继承的任意值  。 如果清除复选框，则新值会替换继承值。 在大多数情况下，选中复选框。
 
-![属性编辑器，Visual C&#43;&#43;](media/propertyeditorvc.png "PropertyEditorVC")
+![“包含目录”属性的“属性编辑器”对话框](media/propertyeditorvc.png "PropertyEditorVC")
 
 ## <a name="add-an-include-directory-to-the-set-of-default-directories"></a>将包含目录添加到默认目录集
 

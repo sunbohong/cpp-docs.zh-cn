@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2725
 ms.assetid: 13cd5b1b-e906-4cd8-9b2b-510d587c665a
-ms.openlocfilehash: 5df5a94e32e3cb365166fc38c5df10c248138277
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b2e8c6a2d3368e2f7fc1277e3bf727848da50881
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756400"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741392"
 ---
 # <a name="compiler-error-c2725"></a>编译器错误 C2725
 
@@ -19,7 +19,7 @@ ms.locfileid: "74756400"
 
 托管或 WinRT 异常的类型不正确。
 
-## <a name="example"></a>示例
+## <a name="examples"></a>示例
 
 下面的示例生成 C2725，并演示如何修复此错误。
 
@@ -39,8 +39,6 @@ int main() {
    throw r2;   // OK
 }
 ```
-
-## <a name="example"></a>示例
 
 下面的示例生成 C2725，并演示如何修复此错误。
 

@@ -1,6 +1,6 @@
 ---
 title: x86 内部函数列表
-description: Visual Studio 中的 Microsoft c + + 编译器支持的 x64 (AMD64) 的引用列表。
+description: Visual Studio 中 Microsoft c + + 编译器支持的 x86 内部函数的引用列表。
 ms.date: 02/28/2020
 f1_keywords:
 - intrin/_addcarry_u16
@@ -2309,12 +2309,12 @@ helpviewer_keywords:
 - _xsaveopt x86 intrinsic
 - _xsetbv x86 intrinsic
 - _xtest x86 intrinsic
-ms.openlocfilehash: f13be5ddaa79382e3d58e96b2f4aaa0d7f9d6566
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: a5892b809e74e04806f27f06437b9fbedae68754
+ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610915"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90741873"
 ---
 # <a name="x86-intrinsics-list"></a>x86 内部函数列表
 
@@ -3627,7 +3627,7 @@ ms.locfileid: "88610915"
 |[_xsetbv](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xsetbv)|XSAVE [2]|immintrin.h|void _xsetbv (无符号整数，无符号 \_ _int64) |
 |[_xtest](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_xtest)|XTEST [2]|immintrin.h|unsigned char _xtest(void)|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器内部函数](compiler-intrinsics.md)\
 [ARM 内部函数](arm-intrinsics.md)\

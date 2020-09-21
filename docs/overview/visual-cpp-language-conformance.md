@@ -6,12 +6,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 84572d44cd994da07d44e736983270a1e7acd1ec
-ms.sourcegitcommit: b51703a96ee35ee2376d5f0775b70f03ccbe6d9a
+ms.openlocfilehash: d9fbbc4f0eddba0ae6a7dbc3250a26d36155506e
+ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88086976"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90075785"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 语言一致性表
 
@@ -432,7 +432,7 @@ ms.locfileid: "88086976"
 
 <a name="note_B"></a> B 在 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 模式下的 Visual Studio 2017 版本 15.7 中受支持。 有关详细信息，请参阅 [MSVC 引入两阶段名称查找支持](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/)。
 
-<a name="note_C"></a> __C__ 编译器对 C99 预处理器规则的支持在 Visual Studio 2017 中不完整。 我们正在修改预处理器，已开始在 Visual Studio 2017 版本 15.8 中交付这些更改，并提供 [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 编译器开关。
+<a name="note_C"></a> __C__ 从 Visual Studio 2017 版本 15.8 开始，编译器通过 [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) 编译器开关提供对 C99 预处理器的支持。 从 Visual Studio 2019 版本 16.6 开始，编译器通过 [`/Zc:preprocessor`](../build/reference/zc-conformance.md) 开关来完全实现 C99 预处理器。 默认情况下，当指定了编译器开关 `/std:c11` 或 `/std:c17` 时，它处于启用状态。
 
 <a name="note_D"></a> D 在 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 下受支持，但出现可取消的警告 [`C4984`](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
@@ -450,7 +450,7 @@ ms.locfileid: "88086976"
 
 <a name="note_byte"></a> byte `std::byte` 由 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md)（或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)）启用，但由于它在某些情况下可能会与 Windows SDK 头冲突，因此它有细化的选择退出宏。 可以通过将 `_HAS_STD_BYTE` 定义为 `0` 将其禁用。
 
-<a name="note_C11"></a> __C11__ 通用 CRT 实现了 C++17 所需的部分 C11 标准库，不包括 C99 `strftime()` E/O 备用转换说明符、C11 `fopen()` 独占模式和 C11 `aligned_alloc()`。 后者不太可能实现，因为 C11 以与 `free()` 的 Microsoft 实现不兼容的方式指定了 `aligned_alloc()`，即 `free()` 必须能够处理高度一致的分配。
+<a name="note_C11"></a> __C11__ 编译器对 C11 的支持需要 Visual Studio 版本 16.8 或更高版本。 C11 库支持需要 Windows SDK 版本 20211 或更高版本。 通用 CRT 实现了 C++17 所需的部分 C11 标准库，不包括 C99 `strftime()` E/O 备用转换说明符和 C11 `aligned_alloc()`。 不太可能实现后者，因为 Windows 操作系统不支持对齐的分配。
 
 <a name="note_rem"></a> rem 指定 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md)（或 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md)）编译器选项会导致功能被删除。 可以重新启用这些功能，以使用下面这些宏轻松转换为较新的语言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 和 `_HAS_UNEXPECTED`。
 
