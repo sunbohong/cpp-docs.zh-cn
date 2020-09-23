@@ -11,12 +11,12 @@ helpviewer_keywords:
 - if keyword [C], if statement syntax
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
-ms.openlocfilehash: 67cdae033c3c8669c8bc7ae1d2e3584ef68498f0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe92d3f2927cd6c5b3df16850e2925fc42055d0
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227837"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684139"
 ---
 # <a name="if-statement-c"></a>if 语句 (C)
 
@@ -34,7 +34,7 @@ if (  expression  )  statement  `else`  statement
 
 下面的几个示例展示了 `if` 语句：
 
-```
+```C
 if ( i > 0 )
     y = x / i;
 else
@@ -48,7 +48,7 @@ else
 
 嵌套 `if` 语句和 `else` 子句时，请使用大括号将语句和子句组合成复合语句，以阐明你的意图。 如果没有大括号，编译器会将每个 `else` 与缺少 `else` 的最近 `if` 关联，从而解决二义性。
 
-```
+```C
 if ( i > 0 )           /* Without braces */
     if ( j > i )
         x = j;
@@ -58,7 +58,7 @@ if ( i > 0 )           /* Without braces */
 
 在此示例中，`else` 子句与内部 `if` 语句关联。 如果 `i` 小于或等于 0，则不会将任何值赋给 `x`。
 
-```
+```C
 if ( i > 0 )
 {                      /* With braces */
     if ( j > i )
