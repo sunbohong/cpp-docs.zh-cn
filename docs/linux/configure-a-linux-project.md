@@ -3,12 +3,12 @@ title: 在 Visual Studio 中配置 Linux MSBuild C++ 项目
 ms.date: 08/06/2020
 description: 在 Visual Studio 中配置基于 MSBuild 的 Linux 项目，以便可以生成它。
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 7f4664dfc364cbd9a3b499e02de4cf0e7f44fe78
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4e99645eea89682b4beac5452da01755ea555ec4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043858"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685951"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中配置 Linux MSBuild C++ 项目
 
@@ -110,13 +110,13 @@ sudo apt install zip
 
 ::: moniker range="vs-2017"
 
-![远程标头 IntelliSense](media/remote-header-intellisense.png)
+![显示已选中“跨平台”>“连接管理器”>“远程标头 IntelliSense 管理器”的“选项”对话框的屏幕截图。](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-![远程标头 IntelliSense](media/connection-manager-vs2019.png)
+![显示已选中“跨平台”>“连接管理器”的“选项”对话框的屏幕截图。](media/connection-manager-vs2019.png)
 
 可以启用日志记录以帮助解决问题：
 

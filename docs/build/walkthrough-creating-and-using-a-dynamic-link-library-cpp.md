@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: adca441a1b1b4e5e7b7efa44c4a292a8f1ddec35
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 6639165856f09db25a2b96c41db2bb94ab93aa99
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042194"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90683619"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用自己的动态链接库 (C++)
 
@@ -91,7 +91,7 @@ ms.locfileid: "90042194"
 
 创建解决方案后，就可以在 Visual Studio 中的“解决方案资源管理器”窗口中看到生成的项目和源文件了  。
 
-![Visual Studio 中生成的解决方案](media/mathlibrary-solution-explorer-162.png "Visual Studio 中生成的解决方案")
+![已突出显示数学库的 Visual Studio 2019“解决方案资源管理器”窗口的屏幕截图。](media/mathlibrary-solution-explorer-162.png "Visual Studio 中生成的解决方案")
 
 ::: moniker-end
 
@@ -103,13 +103,13 @@ ms.locfileid: "90042194"
 
 1. 在“新建项目”对话框的左窗格中，选择“已安装” > “Visual C++” > “Windows 桌面”     。 在中心窗格中，选择“动态链接库(DLL)”  。 在“名称”框中输入“MathLibrary”，以指定项目的名称   。 保留默认“位置”和“解决方案名称”值   。 将“解决方案”设置为“创建新解决方案”   。 选中“创建解决方案的目录”（如果未选中）  。
 
-   ![为 MathLibrary 项目命名](media/mathlibrary-new-project-name-159.png "为 MathLibrary 项目命名")
+   ![在“名称”文本框中显示数学库的 Visual Studio 2017“新建项目”对话框的屏幕截图。](media/mathlibrary-new-project-name-159.png "为 MathLibrary 项目命名")
 
 1. 选择 **“确定”** 按钮，创建单元测试项目。
 
 创建解决方案后，就可以在 Visual Studio 中的“解决方案资源管理器”窗口中看到生成的项目和源文件了  。
 
-![Visual Studio 中生成的解决方案](media/mathlibrary-solution-explorer-159.png "Visual Studio 中生成的解决方案")
+![已突出显示数学库的 Visual Studio 2017“解决方案资源管理器”窗口的屏幕截图。](media/mathlibrary-solution-explorer-159.png "Visual Studio 中生成的解决方案")
 
 ::: moniker-end
 
@@ -121,7 +121,7 @@ ms.locfileid: "90042194"
 
 1. 在“新建项目”  对话框的左窗格中，展开“已安装”   > “模板”  ，并选择“Visual C++”  ，然后在中心窗格中，选择“Win32 控制台应用程序”  。 在“名称”编辑框中输入“MathLibrary”，以指定项目的名称   。 保留默认“位置”和“解决方案名称”值   。 将“解决方案”设置为“创建新解决方案”   。 选中“创建解决方案的目录”（如果未选中）  。
 
-   ![为 MathLibrary 项目命名](media/mathlibrary-project-name.png "为 MathLibrary 项目命名")
+   ![在“名称”文本框中显示数学库的 Visual Studio 2015“新建项目”对话框的屏幕截图。](media/mathlibrary-project-name.png "为 MathLibrary 项目命名")
 
 1. 选择“确定”  按钮以关闭“新建项目”  对话框并启动“Win32 应用程序向导”  。
 
@@ -135,7 +135,7 @@ ms.locfileid: "90042194"
 
 向导完成解决方案后，就可以在 Visual Studio 中的“解决方案资源管理器”  窗口中看到生成的项目和源文件了。
 
-![Visual Studio 中生成的解决方案](media/mathlibrary-solution-explorer-153.png "Visual Studio 中生成的解决方案")
+![已突出显示数学库的 Visual Studio 2015“解决方案资源管理器”窗口的屏幕截图。](media/mathlibrary-solution-explorer-153.png "Visual Studio 中生成的解决方案")
 
 ::: moniker-end
 
@@ -405,7 +405,7 @@ ms.locfileid: "90042194"
 
 1. 在“配置新项目”页面，在“项目名称”框中输入“MathClient”，以指定项目的名称    。 保留默认“位置”和“解决方案名称”值   。 将“解决方案”设置为“创建新解决方案”   。 如果“将解决方案和项目放在同一目录中”已选中，则取消选中  。
 
-   ![为客户端项目命名](media/mathclient-project-name-2019.png "为客户端项目命名")
+   ![已突出显示“控制台应用”选项的“创建新项目”对话框的屏幕截图。](media/mathclient-project-name-2019.png "为客户端项目命名")
 
 1. 选择“创建”  按钮创建客户端项目。
 
@@ -421,7 +421,7 @@ ms.locfileid: "90042194"
 
 1. 在“新建项目”  对话框的左窗格中，选择“已安装”   > “Visual C++”  下的“Windows 桌面”  。 在中间窗格中，选择“Windows 控制台应用程序”  。 在“名称”编辑框中，为项目指定名称 MathClient   。  保留默认“位置”和“解决方案名称”值   。 将“解决方案”设置为“创建新解决方案”   。 选中“创建解决方案的目录”（如果未选中）  。
 
-   ![为客户端项目命名](media/mathclient-new-project-name-159.png "为客户端项目命名")
+   ![已选中“已安装”>“Visual C++”>“Windows 桌面”，已突出显示 Windows 控制台应用程序且已在“名称”文本框中键入数学客户端的“新建项目”对话框的屏幕截图。](media/mathclient-new-project-name-159.png "为客户端项目命名")
 
 1. 选择“确定”以创建客户端应用项目  。
 
@@ -437,7 +437,7 @@ ms.locfileid: "90042194"
 
 1. 在“新建项目”  对话框的左窗格中，选择“已安装”   > “模板”   > “Visual C++”  下的“Win32”  。 在中间窗格中，选择 **“Win32 控制台应用程序”** 。 在“名称”编辑框中，为项目指定名称 MathClient   。 保留默认“位置”和“解决方案名称”值   。 将“解决方案”设置为“创建新解决方案”   。 选中“创建解决方案的目录”（如果未选中）  。
 
-   ![为客户端项目命名](media/mathclient-project-name.png "为客户端项目命名")
+   ![已选中“已安装”>“模板”>“Visual C++”>“Win32”，已突出显示 Win32 控制台应用程序 Visual C++ 且已在“名称”文本框中键入数学客户端的“新建项目”对话框的屏幕截图。](media/mathclient-project-name.png "为客户端项目命名")
 
 1. 选择“确定”  按钮以关闭“新建项目”  对话框并启动“Win32 应用程序向导”  。 在 **“Win32 应用程序向导”** 对话框的 **“概述”** 页上，选择 **“下一步”** 按钮。
 

@@ -2,12 +2,12 @@
 title: 配置 Linux 项目以使用地址擦除器
 description: 介绍如何在 Visual Studio 中配置 C++ Linux 项目以使用地址擦除器。
 ms.date: 06/07/2019
-ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364314"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686660"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>配置 Linux 项目以使用地址擦除器
 
@@ -49,11 +49,11 @@ ASan 是 C/C++ 的运行时内存错误检测器，可捕获以下错误：
 
 确保在对话框的左侧窗格中选中了 Linux 配置（如“Linux 调试”  ）：
 
-![Linux 调试配置](media/linux-debug-configuration.png)
+![将 Linux 调试列为配置选项之一的左窗格的屏幕截图。](media/linux-debug-configuration.png)
 
 ASan 选项位于“常规”下  。 以“标志=值”格式输入 ASan 运行时标志，并以分号分隔。
 
-![Linux 调试配置](media/cmake-settings-asan-options.png)
+![显示某些地址擦除器运行时标志的“启用地址擦除器”选项的屏幕截图。](media/cmake-settings-asan-options.png)
 
 ## <a name="install-the-asan-debug-symbols"></a>安装 ASan 调试符号
 

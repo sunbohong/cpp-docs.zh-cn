@@ -3,12 +3,12 @@ title: 在 Visual Studio 中部署、运行和调试 Linux MSBuild C++ 项目
 description: 介绍如何从 Visual Studio 中基于 MSBuild 的 Linux C++ 项目内针对远程目标编译、执行和调试代码。
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 55e066201e99245db4c63902c51223047e40e687
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 4200e30b445f4a09fc60083db0067996c96ea953
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043884"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686699"
 ---
 # <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>部署、运行和调试 Linux MSBuild 项目
 
@@ -38,7 +38,7 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
 
    GDB 用于调试在 Linux 上运行的应用程序。 在远程系统（而非 WSL）上进行调试时，GDB 可以在两种不同的模式下运行，可从项目“调试”属性页中的“调试模式”选项中进行选择********：
 
-   ![GDB 选项](media/vs2019-debugger-settings.png)
+   ![已选中“配置属性”>“调试”且已突出显示“调试模式”（其中已选中“G B D”且已在下拉列表中突出显示）的 Visual Studio 2019 Linux 控制台应用“属性页”对话框的屏幕截图。](media/vs2019-debugger-settings.png)
 
    ::: moniker-end
 
@@ -46,7 +46,7 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
 
    GDB 用于调试在 Linux 上运行的应用程序。 GDB 能以两种不同的模式运行，可从项目“调试”属性页中的“调试模式”选项中进行选择********：
 
-   ![GDB 选项](media/vs2017-debugger-settings.png)
+   ![已选中“配置属性”>“调试”且已突出显示“调试模式”（其中已选中“G B D”且已在下拉列表中突出显示）的 Visual Studio 2017 Linux 控制台应用“属性页”对话框的屏幕截图。](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
 

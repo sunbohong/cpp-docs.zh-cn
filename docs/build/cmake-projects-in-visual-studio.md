@@ -5,12 +5,12 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 49ba53eaa8ac075ab6d3b2a66f33160c5c3ec410
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a4eea2b321bc07fc40c9a42b3ce515435e808ee4
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329160"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90685027"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio 中的 CMake 项目
 
@@ -27,7 +27,7 @@ CMake 是一种跨平台开源工具，用于定义在多个平台上运行的�
 
 “用于 Windows 的 C++ CMake 工具”作为“使用 C++ 的桌面开发”和“使用 C++ 的 Linux 开发”工作负载的一部分进行安装。 有关详细信息，请参阅[跨平台 CMake 项目](../linux/cmake-linux-project.md)。
 
-![C++ 桌面工作负载中的 CMake 组件](media/cmake-install-2019.png)
+![已选中“C++”下拉列表且已调用“用于 Windows 的 C++ C Make 工具”选项的桌面开发的屏幕截图。](media/cmake-install-2019.png)
 
 有关详细信息，请参阅[在 Visual Studio 中安装 C++ Linux 工作负载](../linux/download-install-and-setup-the-linux-development-workload.md)。
 
@@ -160,7 +160,7 @@ Visual Studio 2017 具有对 CMake 的丰富支持，包括[跨平台 CMake 项�
 
 “Visual C++ Tools for CMake”作为“使用 C++ 的桌面开发”和“使用 C++ 的 Linux 开发”工作负载的一部分进行安装。
 
-![C++ 桌面工作负载中的 CMake 组件](media/cmake-install.png)
+![已调用“适用于 C make 的 Visual C++ 工具”选项的“单个组件”选项卡的屏幕截图。](media/cmake-install.png)
 
 有关详细信息，请参阅[在 Visual Studio 中安装 C++ Linux 工作负载](../linux/download-install-and-setup-the-linux-development-workload.md)。
 

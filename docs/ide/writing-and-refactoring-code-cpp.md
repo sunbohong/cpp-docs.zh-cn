@@ -4,12 +4,12 @@ description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: 43c4529ae0c5ac5a8c4fae2ae402ed3c6e222c37
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206214"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686327"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中编辑和重构 C++ 代码
 
@@ -98,11 +98,11 @@ IntelliCode 是 AI 辅助的 IntelliSense。 它将最有可能的候选项置�
 
 以下示例中声明了 `vector` 但未找到定义，因此编辑器会包含必需的头文件：
 
-![C&#43;&#43; 快速修复](../ide/media/quick-fix-for-header-cpp.png "C++ 快速修复")
+![显示错误波浪线和编辑器提供的快速修复的屏幕截图。](../ide/media/quick-fix-for-header-cpp.png "C++ 快速修复")
 
 编辑器还提供了快速修复，以获得一些重构机会。 例如，如果在头文件中声明一个类，Visual Studio 将会在单独的 .cpp 文件中为其创建定义。
 
-![C&#43;&#43; 快速修复](../ide/media/quick-fix.png "C++ 快速修复")
+![已突出显示“通道点 C P P”选项中的“创建通道路由迭代器的定义”的快速修复的屏幕截图。](../ide/media/quick-fix.png "C++ 快速修复")
 
 ## <a name="change-tracking"></a>Change tracking
 

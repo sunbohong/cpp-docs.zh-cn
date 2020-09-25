@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 02364f778cdab3416cbac7cc1462ce79287b1ad9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "77415707"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90684360"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio 中的 C++ 开发概述
 
@@ -51,13 +51,13 @@ Visual Studio 可支持要使用的任何项目系统或自定义生成工具，
 
 ::: moniker range="vs-2019"
 
-![团队资源管理器](media/vs2019-team-explorer.png "Visual Studio 2017 团队资源管理器")
+![Visual Studio 2019 中的“团队资源管理器”窗口的屏幕截图。](media/vs2019-team-explorer.png "Visual Studio 2017 团队资源管理器")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![团队资源管理器](media/vs2017-team-explorer.png "Visual Studio 2017 团队资源管理器")
+![Visual Studio 2017 中的“团队资源管理器”窗口的屏幕截图。](media/vs2017-team-explorer.png "Visual Studio 2017 团队资源管理器")
 
 ::: moniker-end
 

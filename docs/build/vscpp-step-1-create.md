@@ -5,12 +5,12 @@ ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 07e88da9a8a3712e1d37e319c29fd25aebce8ea7
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 333bb6ce1f3ea0db6b07d70ddd60d4a4be337abd
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749308"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686504"
 ---
 # <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
 
@@ -32,7 +32,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 在“配置新项目”  对话框中，在“项目名称”  编辑框中输入“HelloWorld”  。 选择“创建”  创建项目。
 
-   ![命名并创建新项目](media/vs2019-configure-new-project-hello-world.png "命名并创建新项目")
+   ![已在“项目名称”文本字段中键入 Hello World 的“配置新项目”对话框的屏幕截图。](media/vs2019-configure-new-project-hello-world.png "命名并创建新项目")
 
    Visual Studio 随即创建新项目。 你已准备好添加和编辑源代码。 默认情况下，控制台应用模板会使用“Hello World”应用程序填充源代码：
 
@@ -52,7 +52,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 1. 如果尚未选中，则在“新建项目”对话框中，选择“已安装”>“Visual C++”   ，然后选择“空项目”  模板。 在“名称”  字段中，输入“HelloWorld”  。 选择“确定”，创建项目  。
 
-   ![命名并创建新项目](media/vscpp-concierge-project-name-callouts.png "命名并创建新项目")
+   ![已选中并调用“已安装”>“Visual C++”，已调用“空项目”选项且已在“名称”文本框中键入 Hello World 的“新建项目”对话框的屏幕截图。](media/vscpp-concierge-project-name-callouts.png "命名并创建新项目")
 
 Visual Studio 随即创建新的空项目。 你已准备好专门处理要创建的应用类型，并添加源代码文件。 我们会在下一步完成该操作。
 

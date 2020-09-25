@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: 46bfe788c13df3a37dd9cba654d16cfe4c3fe177
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a23526cf5216e4cc37c3131a0d1ba94a6e923f56
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323179"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686426"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Visual Studio CMake 项目中的 Clang/LLVM 支持
 
@@ -57,7 +57,7 @@ Linux  ：对于 Linux CMake 项目，不需要特殊的 Visual Studio 支持。
 
 1. 在“常规”下，选择“工具集”下拉列表并选择所需的 Clang 工具集   ：
 
-   ![CMake Clang 工具集](media/cmake-clang-toolset.png)
+   ![显示已选中“工具集”且已突出显示 clang cl x 86 的“常规”对话框的屏幕截图。](media/cmake-clang-toolset.png)
 
 ## <a name="custom-clang-locations"></a>自定义 Clang 位置
 
@@ -68,7 +68,7 @@ Linux  ：对于 Linux CMake 项目，不需要特殊的 Visual Studio 支持。
 
 可通过在“CMAKE 设置”中设置“CMAKE_C_COMPILER”和“CMAKE_CXX_COMPILER”CMAKE 变量，来指定其他位置    ：
 
-![CMake Clang 工具集](media/clang-location-cmake.png)
+![已突出显示 C Make C X X 编译器的“C Make 设置”对话框的屏幕截图。](media/clang-location-cmake.png)
 
 ## <a name="clang-compatibility-modes"></a>Clang 兼容性模式
 

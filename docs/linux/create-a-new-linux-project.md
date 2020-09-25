@@ -3,12 +3,12 @@ title: 在 Visual Studio 中创建 Linux MSBuild C++ 项目
 ms.date: 08/04/2020
 description: 在 Visual Studio 中新建一个基于 MSBuild 的 Linux 项目。
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 86d8b8fd2abe8970b5146d4ab08dc4251b5562d5
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 559a868ebdea7e3b835a82c31849d0e2fdeaa6c9
+ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043845"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90686686"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中创建 Linux MSBuild C++ 项目
 
@@ -31,7 +31,7 @@ Linux 项目在 Visual Studio 2017 及更高版本中提供。
 1. 在 Visual Studio 中选择“**文件 > 新建项目**”，或按 **Ctrl + Shift + N**。
 1. 依次选择“Visual C++”>“跨平台”>“Linux”节点，然后选择要创建的项目类型  。 输入“名称”和“位置”，然后选择“确定”    。
 
-   ![新建 Linux 项目](media/newproject.png)
+   ![显示已选中“Visual C++”>“跨平台”>“Linux”，已调用所有项目类型且已调用“名称”和“位置”文本框的“新建项目”对话框的屏幕截图。](media/newproject.png)
 
    | 项目类型 | 描述 |
    | ------------ | --- |
@@ -61,7 +61,7 @@ Linux 项目在 Visual Studio 2017 及更高版本中提供。
 1. 在 Visual Studio 中选择“**文件 > 新建项目**”，或按 **Ctrl + Shift + N**。
 1. 将“语言”设置为“C++”，然后搜索“Linux”   。 选择要创建的项目类型，然后选择“下一步”  。 输入“名称”和“位置”，然后选择“创建”    。
 
-   ![新建 Linux 项目](media/newproject-vs2019.png)
+   ![已在“搜索”文本框中键入 Linux 的“添加新项目”对话框的屏幕截图。](media/newproject-vs2019.png)
 
    | 项目类型 | 描述 |
    | ------------ | --- |
