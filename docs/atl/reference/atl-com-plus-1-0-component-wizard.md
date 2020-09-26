@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b1fea925c5f6d657e398933b5fb26cf09c28055
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321694"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353150"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 组件向导
 
@@ -25,7 +25,7 @@ ms.locfileid: "81321694"
 
 可以指定对象是否支持双重接口和自动化。 还可以指明支持错误信息接口、增强型对象控件、事务和异步消息队列。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 自 Visual Studio 2008 起，此向导生成的注册脚本在 HKEY_CURRENT_USER****（而不是 HKEY_LOCAL_MACHINE****）下注册它的 COM 组件。 若要修改此行为，请设置 ATL 向导的“为所有用户注册组件”**** 选项。
 
@@ -61,24 +61,24 @@ ms.locfileid: "81321694"
 
    默认情况下，在设置此选项后添加的任何对象都被指定为特性化对象（复选框处于选中状态）。 可以取消选中此框来添加不使用特性的对象。
 
-   有关详细信息，请参阅 [ATL 项目向导的“应用程序设置”](../../atl/reference/application-settings-atl-project-wizard.md)和[特性的基本机制](../../windows/basic-mechanics-of-attributes.md)。
+   有关详细信息，请参阅 [应用程序设置，ATL 项目向导](../../atl/reference/application-settings-atl-project-wizard.md) 和 [属性的基本机制](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) 。
 
 ### <a name="com"></a>COM
 
 提供对象的 COM 功能的相关信息。
 
-- **科班**
+- **Coclass**
 
    设置包含对象支持的接口列表的组件类的名称。
 
 > [!NOTE]
 > 如果使用特性创建项目，或在此向导页上指明 COM+ 1.0 组件使用特性，便无法更改这一选项，因为 ATL 不包括 `coclass` 特性。
 
-- **Type**
+- **类型**
 
    设置注册表中显示的对象说明
 
-- **接口**
+- **Interface**
 
    设置为对象创建的接口。 此接口包含自定义方法。
 

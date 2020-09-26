@@ -12,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-ms.openlocfilehash: 14080b624132979df533135bc1eef108dc793398
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e29c30e95116ad68d3498f3f8d3231a63c92c0a7
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318700"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353059"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 类
 
-此类提供了用于操作承载 ActiveX 控件的窗口的方法，并且还支持托管许可的 ActiveX 控件。
+此类提供用于操作承载 ActiveX 控件的窗口的方法，并且还支持承载许可的 ActiveX 控件。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -34,46 +34,46 @@ template <class TBase = CWindow>
     public CAxWindowT<TBase>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *TBase*<br/>
-派生的类`CAxWindowT`。
+派生的类 `CAxWindowT` 。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
-|[CAxWindow2T：：CAxWindow2T](#caxwindow2t)|构造 `CAxWindow2T` 对象。|
+|[CAxWindow2T::CAxWindow2T](#caxwindow2t)|构造 `CAxWindow2T` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
-|[CAxWindow2T：：创建](#create)|创建主机窗口。|
-|[CAxWindow2T：：创建控制](#createcontrollic)|创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。|
-|[CAxWindow2T：：创建控制](#createcontrollicex)|创建许可的 ActiveX 控件，初始化它，在指定的窗口中托管它，并从控件中检索接口指针（或指针）。|
-|[CAxWindow2T：：获取wndClass名称](#getwndclassname)|检索窗口类名称的静态方法。|
+|[CAxWindow2T：： Create](#create)|创建宿主窗口。|
+|[CAxWindow2T::CreateControlLic](#createcontrollic)|创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。|
+|[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|创建许可的 ActiveX 控件，对其进行初始化，将其承载于指定的窗口中，并从该控件中检索) 的接口指针 (或指针。|
+|[CAxWindow2T::GetWndClassName](#getwndclassname)|检索窗口类名称的静态方法。|
 
 ### <a name="public-operators"></a>公共运算符
 
 |名称|说明|
 |----------|-----------------|
-|[CAxWindow2T：：运算符 |](#operator_eq)|将 HWND 分配给现有`CAxWindow2T`对象。|
+|[CAxWindow2T：： operator =](#operator_eq)|将 HWND 分配给现有 `CAxWindow2T` 对象。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-`CAxWindow2T`提供了用于操作承载 ActiveX 控件的窗口的方法。 `CAxWindow2T`还支持托管许可的 ActiveX 控件。 托管由 **"AtlAxWinLic80"** 提供，由`CAxWindow2T`包装。
+`CAxWindow2T` 提供用于操作承载 ActiveX 控件的窗口的方法。 `CAxWindow2T` 还支持承载许可的 ActiveX 控件。 托管由 " **AtlAxWinLic80**" 提供，由包装 `CAxWindow2T` 。
 
-类`CAxWindow2`作为`CAxWindow2T`类的专业化实现。 此专业化化声明为：
+类 `CAxWindow2` 实现为类的专用化 `CAxWindow2T` 。 此特殊化声明为：
 
 `typedef CAxWindow2T <CWindow> CAxWindow2;`
 
 > [!NOTE]
-> `CAxWindowT`成员记录在[CAxWindow](../../atl/reference/caxwindow-class.md)下。
+> `CAxWindowT` 成员记录在 [CAxWindow](../../atl/reference/caxwindow-class.md)下。
 
-有关使用此类成员的示例，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。
+有关使用此类的成员的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -85,9 +85,9 @@ template <class TBase = CWindow>
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlwin.h
+**标头：** atlwin。h
 
-## <a name="caxwindow2tcaxwindow2t"></a><a name="caxwindow2t"></a>CAxWindow2T：：CAxWindow2T
+## <a name="caxwindow2tcaxwindow2t"></a><a name="caxwindow2t"></a> CAxWindow2T::CAxWindow2T
 
 构造 `CAxWindow2T` 对象。
 
@@ -95,14 +95,14 @@ template <class TBase = CWindow>
 CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*hwnd*<br/>
+*hWnd*<br/>
 现有窗口的句柄。
 
-## <a name="caxwindow2tcreate"></a><a name="create"></a>CAxWindow2T：：创建
+## <a name="caxwindow2tcreate"></a><a name="create"></a> CAxWindow2T：： Create
 
-创建主机窗口。
+创建宿主窗口。
 
 ```
 HWND Create(
@@ -115,19 +115,19 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`CAxWindow2T::Create`调用[CWindow：：](../../atl/reference/cwindow-class.md#create)使用 LPCTSTR *lpstrwndClass*参数创建到提供控件宿主 （`AtlAxWinLic80`） 的窗口类。
+`CAxWindow2T::Create` 调用 [CWindow：： Create](../../atl/reference/cwindow-class.md#create) ，并将 LPCTSTR *lpstrWndClass* 参数设置为)  (提供控件承载的窗口类 `AtlAxWinLic80` 。
 
-有关`CWindow::Create`参数和返回值的说明，请参阅。
+`CWindow::Create`有关参数和返回值的说明，请参阅。
 
-**注意**如果 0 用作*MenuOrID*参数的值，则必须将其指定为 0U（默认值），以避免编译器错误。
+**注意** 如果将0用作 *MenuOrID* 参数的值，则必须将其指定为 0u (默认值) ，以避免出现编译器错误。
 
 ### <a name="example"></a>示例
 
-有关 使用`CAxWindow2T::Create`的样本，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。
+有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CAxWindow2T::Create` 。
 
-## <a name="caxwindow2tcreatecontrollic"></a><a name="createcontrollic"></a>CAxWindow2T：：创建控制
+## <a name="caxwindow2tcreatecontrollic"></a><a name="createcontrollic"></a> CAxWindow2T::CreateControlLic
 
 创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。
 
@@ -145,22 +145,22 @@ HRESULT CreateControlLic(
     BSTR bstrLicKey = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrLicKey*<br/>
-控件的许可证密钥;如果创建非许可控件，则为 NULL。
+控件的许可证密钥;如果创建 nonlicensed 控件，则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关剩余参数和返回值的说明，请参阅[CAxWindow：CreateControl。](../../atl/reference/caxwindow-class.md#createcontrol)
+有关剩余参数和返回值的说明，请参阅 [CAxWindow：： CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) 。
 
 ### <a name="example"></a>示例
 
-有关 使用`CAxWindow2T::CreateControlLic`的样本，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。
+有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CAxWindow2T::CreateControlLic` 。
 
-## <a name="caxwindow2tcreatecontrollicex"></a><a name="createcontrollicex"></a>CAxWindow2T：：创建控制
+## <a name="caxwindow2tcreatecontrollicex"></a><a name="createcontrollicex"></a> CAxWindow2T::CreateControlLicEx
 
-创建许可的 ActiveX 控件，初始化它，在指定的窗口中托管它，并从控件中检索接口指针（或指针）。
+创建许可的 ActiveX 控件，对其进行初始化，将其承载于指定的窗口中，并从该控件中检索) 的接口指针 (或指针。
 
 ```
 HRESULT CreateControlLicEx(
@@ -182,20 +182,20 @@ HRESULT CreateControlLicEx(
     BSTR bstrLickey = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrLicKey*<br/>
-控件的许可证密钥;如果创建非许可控件，则为 NULL。
+控件的许可证密钥;如果创建 nonlicensed 控件，则为 NULL。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关剩余参数和返回值的说明，请参阅[CAxWindow：createControlEx。](../../atl/reference/caxwindow-class.md#createcontrolex)
+有关剩余参数和返回值的说明，请参阅 [CAxWindow：： CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) 。
 
 ### <a name="example"></a>示例
 
-有关 使用`CAxWindow2T::CreateControlLicEx`的样本，请参阅[使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)托管 ActiveX 控件。
+有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CAxWindow2T::CreateControlLicEx` 。
 
-## <a name="caxwindow2tgetwndclassname"></a><a name="getwndclassname"></a>CAxWindow2T：：获取wndClass名称
+## <a name="caxwindow2tgetwndclassname"></a><a name="getwndclassname"></a> CAxWindow2T::GetWndClassName
 
 检索窗口类的名称。
 
@@ -205,19 +205,19 @@ static LPCTSTR GetWndClassName();
 
 ### <a name="return-value"></a>返回值
 
-指向包含窗口类 （`AtlAxWinLic80`） 名称的字符串的指针，该字符串可以承载许可和非许可的 ActiveX 控件。
+一个指向字符串的指针，该字符串包含 () 的窗口类的名称 `AtlAxWinLic80` ，该窗口类可承载许可的 ActiveX 控件和 Nonlicensed ActiveX 控件。
 
-## <a name="caxwindow2toperator-"></a><a name="operator_eq"></a>CAxWindow2T：：运算符 |
+## <a name="caxwindow2toperator-"></a><a name="operator_eq"></a> CAxWindow2T：： operator =
 
-将 HWND 分配给现有`CAxWindow2T`对象。
+将 HWND 分配给现有 `CAxWindow2T` 对象。
 
 ```
 CAxWindow2T<TBase>& operator= (HWND hWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*hwnd*<br/>
+*hWnd*<br/>
 现有窗口的句柄。
 
 ## <a name="see-also"></a>另请参阅

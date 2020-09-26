@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: 1301baef874ac4e482a1b2a7f0a2ee6b1b63396f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833824"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353072"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 类
 
@@ -54,7 +54,7 @@ class CAxWindow : public CWindow
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|说明|
 |-|-|
 |[operator =](#operator_eq)|将 HWND 分配给现有 `CAxWindow` 对象。|
 
@@ -82,7 +82,7 @@ HRESULT AttachControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControl*<br/>
 中指向控件的的指针 `IUnknown` 。
@@ -106,7 +106,7 @@ HRESULT AttachControl(
 CAxWindow(HWND hWnd = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 现有窗口对象的句柄。
@@ -127,7 +127,7 @@ HRESULT CreateControl(
     IUnknown** ppUnkContainer = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向用于创建控件的字符串的指针。 必须采用下列方式之一进行格式化：
@@ -170,7 +170,7 @@ HTML 资源的资源 ID。 将用指定的资源创建并加载 WebBrowser 控�
 
 ### <a name="example"></a>示例
 
-有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControl` 。
+有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControl` 。
 
 ## <a name="caxwindowcreatecontrolex"></a><a name="createcontrolex"></a> CAxWindow::CreateControlEx
 
@@ -194,7 +194,7 @@ HRESULT CreateControlEx(
     IUnknown* punkSink = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向用于创建控件的字符串的指针。 必须采用下列方式之一进行格式化：
@@ -242,7 +242,7 @@ HRESULT CreateControlEx(
 
 ### <a name="example"></a>示例
 
-有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md) `CreateControlEx` 。
+有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `CreateControlEx` 。
 
 ## <a name="caxwindowgetwndclassname"></a><a name="getwndclassname"></a> CAxWindow::GetWndClassName
 
@@ -264,7 +264,7 @@ static LPCTSTR GetWndClassName();
 CAxWindow<TBase>& operator=(HWND hWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 现有窗口的句柄。
@@ -283,7 +283,7 @@ template <class  Q>
 HRESULT QueryControl(Q** ppUnk);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中指定控件的接口的 IID。
@@ -308,7 +308,7 @@ template <class  Q>
 HRESULT QueryHost(Q** ppUnk);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中指定控件的接口的 IID。
@@ -335,7 +335,7 @@ HRESULT QueryHost(Q** ppUnk);
 HRESULT SetExternalDispatch(IDispatch* pDisp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDisp*<br/>
 中指向接口的指针 `IDispatch` 。
@@ -352,7 +352,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUIHandler*<br/>
 中指向接口的指针 `IDocHostUIHandlerDispatch` 。

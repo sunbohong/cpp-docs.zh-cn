@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 675f6919b6804cfb1d2c5395d046cb5fa39e625d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229189"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353033"
 ---
 # <a name="auto-c"></a>`auto` (C++)
 
 从其初始化表达式中推导声明的变量的类型。
 
 > [!NOTE]
-> C + + 标准定义此关键字的原始和修订的含义。 在 Visual Studio 2010 之前， **`auto`** 关键字在*自动*存储类中声明变量，即具有本地生存期的变量。 从 Visual Studio 2010 开始， **`auto`** 关键字声明一个变量，该变量的类型是从其声明中的初始化表达式推导出来的。 [ `/Zc:auto`&#91; &#93;](../build/reference/zc-auto-deduce-variable-type.md)编译器选项控制关键字的含义 **`auto`** 。
+> C + + 标准定义此关键字的原始和修订的含义。 在 Visual Studio 2010 之前， **`auto`** 关键字在 *自动* 存储类中声明变量，即具有本地生存期的变量。 从 Visual Studio 2010 开始， **`auto`** 关键字声明一个变量，该变量的类型是从其声明中的初始化表达式推导出来的。 [ `/Zc:auto`&#91; &#93;](../build/reference/zc-auto-deduce-variable-type.md)编译器选项控制关键字的含义 **`auto`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -27,7 +27,7 @@ ms.locfileid: "87229189"
 
 > **`[](auto`***param1* **`, auto`***param2***`) {};`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **`auto`** 关键字指示编译器使用已声明变量的初始化表达式，或使用 lambda 表达式参数来推导其类型。
 
@@ -47,17 +47,17 @@ ms.locfileid: "87229189"
 
 - 表达式模板帮助程序类型，例如 `(valarray+valarray)` 。
 
-若要使用 **`auto`** 关键字，请使用它（而不是类型）来声明变量，并指定初始化表达式。 此外，还可以 **`auto`** 使用说明符和声明符（如 **`const`** 、 **`volatile`** 、指针（ **`*`** ）、reference （ **`&`** ）和右值引用（ **`&&`** ））修改关键字。 编译器计算初始化表达式，然后使用该信息来推断变量类型。
+若要使用 **`auto`** 关键字，请使用它（而不是类型）来声明变量，并指定初始化表达式。 此外，还可以 **`auto`** 使用说明符和声明符（如 **`const`** 、 **`volatile`** 、指针 (**`*`**) 、引用 (**`&`**) 和右值引用 (**`&&`**) 来修改关键字。 编译器计算初始化表达式，然后使用该信息来推断变量类型。
 
-初始化表达式可以是赋值（等号语法）、直接初始化（函数样式语法）、 [`operator new`](new-operator-cpp.md) 表达式或初始化表达式可以是[基于范围的 `for` 语句（c + +）](../cpp/range-based-for-statement-cpp.md)语句中的*范围声明*参数。 有关详细信息，请参阅本文档后面的[初始值设定项](../cpp/initializers.md)和代码示例。
+初始化表达式可以是赋值 (等号语法) 、直接初始化 (函数样式的语法) 、 [`operator new`](new-operator-cpp.md) 表达式或初始化表达式可以是[基于范围的 `for` 语句 (c + +) ](../cpp/range-based-for-statement-cpp.md)语句中的*范围声明*参数。 有关详细信息，请参阅本文档后面的 [初始值设定项](../cpp/initializers.md) 和代码示例。
 
-**`auto`** 关键字是类型的占位符，但它本身不是类型。 因此， **`auto`** 关键字不能用于强制转换或运算符（如 [`sizeof`](../cpp/sizeof-operator.md) 和）（适用于 c + +/cli） [`typeid`](../extensions/typeid-cpp-component-extensions.md) 。
+**`auto`** 关键字是类型的占位符，但它本身不是类型。 因此， **`auto`** 关键字不能用于 [`sizeof`](../cpp/sizeof-operator.md) c + +/cli) 的强制转换或运算符（例如和） ([`typeid`](../extensions/typeid-cpp-component-extensions.md) 。
 
 ## <a name="usefulness"></a>有用性
 
 **`auto`** 关键字是声明具有复杂类型的变量的一种简单方法。 例如，可以使用 **`auto`** 声明一个变量，其中的初始化表达式包含模板、指向函数的指针或指向成员的指针。
 
-还可以使用 **`auto`** 将变量声明并初始化为 lambda 表达式。 您不能自行声明变量的类型，因为仅编译器知道 lambda 表达式的类型。 有关详细信息，请参阅[Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
+还可以使用 **`auto`** 将变量声明并初始化为 lambda 表达式。 您不能自行声明变量的类型，因为仅编译器知道 lambda 表达式的类型。 有关详细信息，请参阅 [Lambda 表达式的示例](../cpp/examples-of-lambda-expressions.md)。
 
 ## <a name="trailing-return-types"></a>尾部的返回类型
 
@@ -89,7 +89,7 @@ int main( )
 
 在上面的示例中，myAuto 是一个 **`int`** ，而不是一个 **`int`** 引用，因此输出是 `11 11` ， `11 12` 如果引用限定符未被删除，则不会出现这种情况 **`auto`** 。
 
-## <a name="type-deduction-with-braced-initializers-c14"></a>类型推导与大括号内初始值设定项（c + + 14）
+## <a name="type-deduction-with-braced-initializers-c14"></a>用大括号内初始值设定项进行类型推导 (c + + 14) 
 
 下面的代码示例演示如何 **`auto`** 使用大括号初始化变量。 请注意 B 和 C 之间的差异以及 A 和 E 之间的差异。
 
@@ -131,14 +131,14 @@ int main()
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|不能使用关键字声明方法或模板参数 **`auto`** 。|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符号初始化之前无法使用。 在实践中，这意味着无法使用变量来初始化自身。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|不能强制转换为使用关键字声明的类型 **`auto`** 。|
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|使用关键字声明的声明符列表中的所有符号都 **`auto`** 必须解析为相同的类型。 有关详细信息，请参阅[声明和定义](declarations-and-definitions-cpp.md)。|
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|使用关键字声明的声明符列表中的所有符号都 **`auto`** 必须解析为相同的类型。 有关详细信息，请参阅 [声明和定义](declarations-and-definitions-cpp.md)。|
 |[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用关键字声明的符号 **`auto`** 。|
 
 ## <a name="examples"></a>示例
 
 这些代码片段演示了可使用关键字的一些方式 **`auto`** 。
 
-下面的声明等效。 在第一个语句中，变量 `j` 声明为类型 **`int`** 。 在第二个语句中，变量 `k` 被推断为类型， **`int`** 因为初始化表达式（0）是整数。
+下面的声明等效。 在第一个语句中，变量 `j` 声明为类型 **`int`** 。 在第二个语句中，变量 `k` 将被推断为类型， **`int`** 因为初始化表达式 (0) 是整数。
 
 ```cpp
 int j = 0;  // Variable j is explicitly type int.
@@ -220,10 +220,9 @@ int main()
 
 ## <a name="see-also"></a>另请参阅
 
-[`auto`关键字](../cpp/auto-keyword.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
-[`/Zc:auto`（推导变量类型）](../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[`sizeof`操作员](../cpp/sizeof-operator.md)<br/>
+[`/Zc:auto` (推导变量类型) ](../build/reference/zc-auto-deduce-variable-type.md)<br/>
+[`sizeof` 操作员](../cpp/sizeof-operator.md)<br/>
 [`typeid`](../extensions/typeid-cpp-component-extensions.md)<br/>
 [`operator new`](new-operator-cpp.md)<br/>
 [声明和定义](declarations-and-definitions-cpp.md)<br/>

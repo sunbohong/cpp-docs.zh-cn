@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: 90e4eb659de6d1d5ed1488365f6637de2d537e57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 79ea16e2d1737063040302a1ce111d275ae28e27
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831679"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352747"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：在 c + + (中添加、编辑或删除控件) 
 
@@ -201,13 +201,13 @@ ms.locfileid: "88831679"
 >
 > 你可以将当前 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) 类与较旧的 RichEdit 1.0 控件一起使用，但 `CRichEditCtrl` 它仅用于支持 RichEdit 2.0 控件。 由于 RichEdit 1.0 和 RichEdit 2.0 相似，因此大多数方法都适用。 但是，1.0 和2.0 控件之间有一些差异，因此某些方法可能不会正常运行或根本不工作。
 
-### <a name="activex-controls"></a>ActiveX 控件
+## <a name="insert-activex-controls"></a>插入 ActiveX 控件
 
 Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细信息，请参阅 [MFC ActiveX 控件](../mfc/mfc-activex-controls.md) 和 [ActiveX 控件容器](../mfc/activex-control-containers.md)。
 
 使用 " **插入 Activex 控件** " 对话框，可以在使用 [对话框编辑器](dialog-editor.md)时将 ActiveX 控件插入对话框中。 此对话框包含以下属性：
 
-|属性|说明|
+|properties|说明|
 |---|---|
 |**ActiveX 控件**|显示 ActiveX 控件的列表。<br/><br/>从此对话框插入控件不会生成包装类。 如果需要包装类，请使用 [类视图](/visualstudio/ide/viewing-the-structure-of-code) 来创建一个，请参阅 [添加类](../ide/adding-a-class-visual-cpp.md)。<br/><br/>如果 ActiveX 控件未出现在此对话框中，请尝试根据供应商的说明安装控件。|
 |**路径**|显示在其中找到 ActiveX 控件的文件。|
@@ -215,7 +215,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 > [!CAUTION]
 > 分发系统上的每个 ActiveX 控件可能并非都是合法的。 请参阅安装了控件的软件的许可协议，或与软件公司联系。
 
-#### <a name="to-add-an-activex-control"></a>添加 ActiveX 控件
+### <a name="to-add-an-activex-control"></a>添加 ActiveX 控件
 
 1. 在 **对话框编辑器**中打开一个对话框。
 
@@ -230,7 +230,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 > [!TIP]
 > 您可以使用 **对话框编辑器** 中的快捷菜单快速将已注册的 ActiveX 控件添加到对话框，或者尝试将 activex 控件添加到 " **工具箱** " 窗口以方便访问。
 
-#### <a name="to-edit-properties-for-an-activex-control"></a>编辑 ActiveX 控件的属性
+### <a name="to-edit-properties-for-an-activex-control"></a>编辑 ActiveX 控件的属性
 
 独立供应商提供的 ActiveX 控件可以具有其自己的属性和特性。 这些属性将显示在 " **属性** " 窗口中。 由 ActiveX 控件的编写器创建的所有属性页都显示在 " **属性页** " 对话框中。  (查看特定 ActiveX 控件的**属性页**，请在 "[属性窗口](/visualstudio/ide/reference/properties-window)") 中选择 "**属性页**" 按钮。
 

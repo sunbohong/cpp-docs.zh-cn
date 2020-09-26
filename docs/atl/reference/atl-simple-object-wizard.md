@@ -7,20 +7,20 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: bd4c9eede16ed086020dd8f12d90876e50a0a341
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8bc611442e98e467a174ebd52ea3c540cf72975f
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319206"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352682"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 简单对象向导
 
-此向导将最小 COM 对象插入到项目中。 使用向导的此页面指定标识对象C++类和文件的名称及其 COM 功能。
+此向导向项目中插入最小的 COM 对象。 使用向导的此页指定标识对象及其 COM 功能的 c + + 类和文件的名称。
 
-使用此向导的["选项"](../../atl/reference/options-atl-simple-object-wizard.md)页指定对象的线程模型、聚合支持以及它是否支持双接口和自动化。 您还可以指示对错误信息接口、连接点、Internet Explorer 支持和自由线程封送的支持。
+使用此向导的 " [选项](../../atl/reference/options-atl-simple-object-wizard.md) " 页可以指定对象的线程模型、聚合支持以及它是否支持双重接口和自动化。 还可以指示支持错误信息接口、连接点、Internet Explorer 支持和自由线程封送处理。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 自 Visual Studio 2008 起，此向导生成的注册脚本在 HKEY_CURRENT_USER****（而不是 HKEY_LOCAL_MACHINE****）下注册它的 COM 组件。 若要修改此行为，请设置 ATL 向导的“为所有用户注册组件”**** 选项。
 
@@ -63,24 +63,24 @@ ms.locfileid: "81319206"
 
    默认情况下，在设置此选项后添加的任何对象都被指定为特性化对象（复选框处于选中状态）。 可以取消选中此框来添加不使用特性的对象。
 
-   有关详细信息，请参阅 [ATL 项目向导的“应用程序设置”](../../atl/reference/application-settings-atl-project-wizard.md)和[特性的基本机制](../../windows/basic-mechanics-of-attributes.md)。
+   有关详细信息，请参阅 [应用程序设置，ATL 项目向导](../../atl/reference/application-settings-atl-project-wizard.md) 和 [属性的基本机制](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) 。
 
 ## <a name="com"></a>COM
 
 提供对象的 COM 功能的相关信息。
 
-- **科班**
+- **Coclass**
 
    设置包含对象支持的接口列表的组件类的名称。
 
    > [!NOTE]
-   > 如果使用属性创建项目，或者在此向导页上指示对象使用属性，则无法更改此选项，因为 ATL 不包括该`coclass`属性。
+   > 如果使用属性创建项目，或在此向导页中指示对象使用属性，则不能更改此选项，因为 ATL 不包含 `coclass` 特性。
 
-- **Type**
+- **类型**
 
    设置注册表中显示的对象说明
 
-- **接口**
+- **Interface**
 
    设置为对象创建的接口。 此接口包含自定义方法。
 

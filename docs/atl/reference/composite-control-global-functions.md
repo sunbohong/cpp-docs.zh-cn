@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 467925baf59598d743650d4f98d210f789f2b179
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833551"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353111"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -65,7 +65,7 @@ ATLAPI_(int) AtlAxDialogBox(
     LPARAM dwInitParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 中标识可执行文件包含对话框模板的模块的实例。
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-有关编辑资源脚本的详细信息，请参阅 [如何：以文本格式打开资源脚本文件](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 有关控制资源定义语句的详细信息，请参阅 Windows SDK： SDK Tools 下的 [公共控制参数](/windows/win32/menurc/common-control-parameters) 。
+有关编辑资源脚本的详细信息，请参阅 [如何：创建资源](../../windows/how-to-create-a-resource-script-file.md)。 有关控制资源定义语句的详细信息，请参阅 Windows SDK： SDK Tools 下的 [公共控制参数](/windows/win32/menurc/common-control-parameters) 。
 
 有关一般对话框的详细信息，请参阅 Windows SDK 中的 [对话框](/windows/win32/api/winuser/nf-winuser-dialogboxw) 和 [CreateDialogParam](/windows/win32/api/winuser/nf-winuser-createdialogparamw) 。
 
@@ -112,7 +112,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
     LPARAM dwInitParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 中标识可执行文件包含对话框模板的模块的实例。
@@ -151,7 +151,7 @@ ATLAPI AtlAxCreateControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
@@ -203,7 +203,7 @@ ATLAPI AtlAxCreateControlEx(
     IUnknown* punkSink = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
@@ -262,7 +262,7 @@ ATLAPI AtlAxCreateControlLic(
     BSTR bstrLic = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
@@ -298,7 +298,7 @@ ATLAPI AtlAxCreateControlLic(
 
 ### <a name="example"></a>示例
 
-有关如何使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLic` 。
+有关如何使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLic` 。
 
 ## <a name="atlaxcreatecontrollicex"></a><a name="atlaxcreatecontrollicex"></a> AtlAxCreateControlLicEx
 
@@ -316,7 +316,7 @@ ATLAPI AtlAxCreateControlLicEx(
     BSTR bstrLic = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向要传递到控件的字符串的指针。 必须采用下列方式之一进行格式化：
@@ -365,7 +365,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 ### <a name="example"></a>示例
 
-有关如何使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md) `AtlAxCreateControlLicEx` 。
+有关如何使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `AtlAxCreateControlLicEx` 。
 
 ## <a name="atlaxattachcontrol"></a><a name="atlaxattachcontrol"></a> AtlAxAttachControl
 
@@ -378,7 +378,7 @@ ATLAPI AtlAxAttachControl(
     IUnknown** ppUnkContainer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControl*<br/>
 中指向控件的的指针 `IUnknown` 。
@@ -408,7 +408,7 @@ ATLAPI AtlAxAttachControl(
 ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h*<br/>
 中承载控件的窗口的句柄。
@@ -428,7 +428,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h*<br/>
 中承载控件的窗口的句柄。
@@ -448,7 +448,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punkChild*<br/>
 中指向子级的接口的指针 `IUnknown` 。
@@ -507,7 +507,7 @@ ATLAPI AtlGetObjectSourceInterface(
     unsigned short* pdwMinor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punkObj*<br/>
 中指向要为其返回信息的对象的指针。

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 1c743b91e40c05a35bd5c4d3c0d2e70ecc645714
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c25e3b9194cf0c7dc7c152edb50be01def2d2d9b
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833928"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352722"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 属性页向导
 
@@ -47,7 +47,7 @@ ms.locfileid: "88833928"
 |**.h 文件**|为新项目的类的头文件设置名称。 默认情况下，此名称以你在“短名称”**** 中提供的名称为依据。 单击省略号按钮以将该文件名保存至所选择的位置，或追加到某个现有文件的类声明中。 如果你选择现有文件，除非你单击向导中的“完成”****，否则向导不会将文件保存到选定位置。<br /><br /> 向导不会覆盖文件。 如果选择现有文件的名称，当你单击“完成”时，向导会询问你是否要将该类声明追加至文件的内容中****。 单击“是”，则追加该文件；单击“否”，则返回至向导并指定另一个文件名********。|
 |**类**|设置用于实现对象的类的名称。 此名称以你在“短名称”**** 中提供的名称为依据，跟在典型的类名前缀“C”后面。|
 |**.cpp 文件**|为新项目的类的实现文件设置名称。 默认情况下，此名称以你在“短名称”**** 中提供的名称为依据。 单击省略号按钮以将文件名保存到所选位置。 向导在你单击“完成”之前不会将该文件保存到所选位置****。<br /><br /> 向导不会覆盖文件。 如果选择现有文件的名称，当你单击“完成”时，向导会询问你是否要将该类实现追加至文件的内容中****。 单击“是”，则追加该文件；单击“否”，则返回至向导并指定另一个文件名********。|
-|**特性化**|指明对象是否使用特性。 若要将对象添加到特性化 ATL 项目，在选中此选项后便无法更改；也就是说，只能将特性化对象添加到创建的支持特性的项目中。<br /><br /> 只能将特性化对象添加到使用特性的 ATL 项目中。 如果你对不支持特性的 ATL 项目选中此选项，向导会提示你指定是否要向项目添加特性支持。<br /><br /> 默认情况下，在设置此选项后添加的任何对象都被指定为特性化对象（复选框处于选中状态）。 可以取消选中此框来添加不使用特性的对象。<br /><br /> 有关详细信息，请参阅 [ATL 项目向导的“应用程序设置”](../../atl/reference/application-settings-atl-project-wizard.md)和[特性的基本机制](../../windows/basic-mechanics-of-attributes.md)。|
+|**特性化**|指明对象是否使用特性。 若要将对象添加到特性化 ATL 项目，在选中此选项后便无法更改；也就是说，只能将特性化对象添加到创建的支持特性的项目中。<br /><br /> 只能将特性化对象添加到使用特性的 ATL 项目中。 如果你对不支持特性的 ATL 项目选中此选项，向导会提示你指定是否要向项目添加特性支持。<br /><br /> 默认情况下，在设置此选项后添加的任何对象都被指定为特性化对象（复选框处于选中状态）。 可以取消选中此框来添加不使用特性的对象。<br /><br /> 有关详细信息，请参阅 [应用程序设置，ATL 项目向导](../../atl/reference/application-settings-atl-project-wizard.md) 和 [属性的基本机制](../../windows/attributes/cpp-attributes-com-net.md#basic-mechanics-of-attributes) 。|
 
 ### <a name="com"></a>COM
 

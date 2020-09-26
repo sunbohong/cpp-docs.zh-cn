@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: a53481a57676b5b4a253a3501d3536e5115907a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dbd682451ca5499aef4b16b3b51feba8411bdd12
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833408"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91352955"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 接口
 
@@ -98,7 +98,7 @@ interface IAxWinAmbientDispatch : IDispatch
 
 如果要链接到 ATL90.dll， **AXHost** 将从 DLL 中的 typelib 加载类型信息。
 
-有关更多详细信息，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/hosting-activex-controls-using-atl-axhost.md) 。
+有关更多详细信息，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) 。
 
 ## <a name="requirements"></a>要求
 
@@ -118,7 +118,7 @@ interface IAxWinAmbientDispatch : IDispatch
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbAllowContextMenu*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -139,7 +139,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbAllowShowUI*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -160,7 +160,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbAllowWindowless*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -181,7 +181,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pclrBackground*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -202,7 +202,7 @@ ATL 宿主对象实现使用 COLOR_BTNFACE 或 COLOR_WINDOW 作为此属性的�
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbDisplayAsDefault*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -223,7 +223,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdwDocHostDoubleClickFlags*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -244,7 +244,7 @@ ATL 宿主对象实现使用 DOCHOSTUIDBLCLK_DEFAULT 作为此属性的默认值
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdwDocHostFlags*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -265,7 +265,7 @@ ATL 宿主对象实现使用 DOCHOSTUIFLAG_NO3DBORDER 作为此属性的默认�
 STDMETHOD(get_Font)(IFontDisp** pFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFont*<br/>
 弄 `IFontDisp` 用于接收此属性的当前值的接口指针的地址。
@@ -286,7 +286,7 @@ ATL 宿主对象实现使用默认的 GUI 字体或系统字体作为此属性�
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pclrForeground*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -307,7 +307,7 @@ ATL 宿主对象实现使用系统窗口文本颜色作为此属性的默认值�
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *plcidLocaleID*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -330,7 +330,7 @@ ATL 宿主对象实现使用用户的默认区域设置作为此属性的默认�
 STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbMessageReflect*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -351,7 +351,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbstrOptionKeyPath*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -368,7 +368,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbShowGrabHandles*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -389,7 +389,7 @@ ATL 宿主对象实现始终返回 VARIANT_FALSE 作为此属性的值。
 STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbShowHatching*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -410,7 +410,7 @@ ATL 宿主对象实现始终返回 VARIANT_FALSE 作为此属性的值。
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbUserMode*<br/>
 弄用于接收此属性的当前值的变量的地址。
@@ -431,7 +431,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAllowContextMenu*<br/>
 中此属性的新值。
@@ -452,7 +452,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAllowShowUI*<br/>
 中此属性的新值。
@@ -473,7 +473,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAllowWindowless*<br/>
 中此属性的新值。
@@ -494,7 +494,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrBackground*<br/>
 中此属性的新值。
@@ -515,7 +515,7 @@ ATL 宿主对象实现使用 COLOR_BTNFACE 或 COLOR_WINDOW 作为此属性的�
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bDisplayAsDefault*<br/>
 中此属性的新值。
@@ -536,7 +536,7 @@ ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDocHostDoubleClickFlags*<br/>
 中此属性的新值。
@@ -557,7 +557,7 @@ ATL 宿主对象实现使用 DOCHOSTUIDBLCLK_DEFAULT 作为此属性的默认值
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDocHostFlags*<br/>
 中此属性的新值。
@@ -578,7 +578,7 @@ ATL 宿主对象实现使用 DOCHOSTUIFLAG_NO3DBORDER 作为此属性的默认�
 STDMETHOD(put_Font)(IFontDisp* pFont);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFont*<br/>
 中此属性的新值。
@@ -599,7 +599,7 @@ ATL 宿主对象实现使用默认的 GUI 字体或系统字体作为此属性�
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrForeground*<br/>
 中此属性的新值。
@@ -620,7 +620,7 @@ ATL 宿主对象实现使用系统窗口文本颜色作为此属性的默认值�
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lcidLocaleID*<br/>
 中此属性的新值。
@@ -641,7 +641,7 @@ ATL 宿主对象实现使用用户的默认区域设置作为此属性的默认�
 STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bMessageReflect*<br/>
 中此属性的新值。
@@ -662,7 +662,7 @@ ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bstrOptionKeyPath*<br/>
 中此属性的新值。
@@ -679,7 +679,7 @@ STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUserMode*<br/>
 中此属性的新值。

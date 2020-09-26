@@ -4,12 +4,12 @@ description: 介绍现代 C++ 中的编程惯例及其基本原理。
 ms.date: 05/17/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: f2b9159e74ba7ce37c7eab1513826da939a3be49
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: 05c1fe80086e5b98d3f8a9c66c6759fddab39fa0
+ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "87232191"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91353046"
 ---
 # <a name="welcome-back-to-c---modern-c"></a>欢迎回到 C++ - 现代 C++
 
@@ -75,7 +75,7 @@ apple_color["Granny Smith"] = "Green";
 
 - 使用无序的关联容器，例如 [`unordered_map`](../standard-library/unordered-map-class.md)。 它们的每个元素的开销较低，并且具有固定时间查找功能，但正确高效地使用它们的难度更高。
 
-- 使用排序的 `vector`。 有关详细信息，请参阅[算法](../cpp/algorithms-modern-cpp.md)。
+- 使用排序的 `vector`。 有关详细信息，请参阅[算法](../standard-library/algorithms.md)。
 
 请勿使用 C 样式数组。 对于需要直接访问数据的旧 API，请改用 `f(vec.data(), vec.size());` 等访问器方法。 有关容器的详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
