@@ -1,51 +1,51 @@
 ---
-title: 实现双接口 （ATL）
+title: '实现双重接口 (ATL) '
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: a85597adad045bee3edb5cc3ed63c72a22fa08fe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 97d8cd912c85a74f3550a9ca6c7b87a9717d4075
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319470"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499546"
 ---
-# <a name="implementing-a-dual-interface"></a>实现双接口
+# <a name="implementing-a-dual-interface"></a>实现双重接口
 
-您可以使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)类实现双接口，该类提供双接口中`IDispatch`方法的默认实现。 有关详细信息，请参阅 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+可以使用 [IDispatchImpl](../atl/reference/idispatchimpl-class.md) 类实现双重接口，该类提供 `IDispatch` 双重接口中的方法的默认实现。 有关详细信息，请参阅 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
-要使用此类：
+使用此类：
 
-- 在类型库中定义双接口。
+- 在类型库中定义双重接口。
 
-- 从 （`IDispatchImpl`传递有关接口的信息和类型库作为模板参数） 派生类。
+- 派生类 `IDispatchImpl` (将有关接口和类型库的信息传递) 的模板参数。
 
-- 向 COM 映射添加条目（或条目）以通过`QueryInterface`公开双接口。
+- 将一个条目 (或条目添加) 到 COM 映射，以便通过公开双重接口 `QueryInterface` 。
 
-- 在类中实现接口的可 v 可部分。
+- 在类中实现接口的 vtable 部分。
 
-- 确保包含接口定义的类型库在运行时对对象可用。
+- 确保包含接口定义的类型库在运行时可用于你的对象。
 
 ## <a name="atl-simple-object-wizard"></a>ATL 简单对象向导
 
-如果要创建新接口和新类来实现它，可以使用[ATL 添加类对话框](../ide/add-class-dialog-box.md)，然后使用[ATL 简单对象向导](../atl/reference/atl-simple-object-wizard.md)。
+如果要创建新的接口和新的类来实现它，则可以使用 " [Atl 添加类" 对话框](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)，然后使用 [Atl 简单对象向导](../atl/reference/atl-simple-object-wizard.md)。
 
 ## <a name="implement-interface-wizard"></a>实现接口向导
 
-如果您有现有接口，则可以使用[实现接口向导](../atl/reference/adding-a-new-interface-in-an-atl-project.md)将必要的基类、COM 映射条目和骨架方法实现添加到现有类。
+如果你有现有的接口，则可以使用 " [实现接口向导](../atl/reference/adding-a-new-interface-in-an-atl-project.md) " 将必要的基类、COM 映射项和主干方法实现添加到现有类。
 
 > [!NOTE]
-> 您可能需要调整生成的基类，以便类型库的主要版本号和次要版本号作为模板参数传递给`IDispatchImpl`基类。 实现接口向导不检查类型库版本号。
+> 您可能需要调整生成的基类，以便将类型库的主版本号和次版本号作为模板自变量传递给 `IDispatchImpl` 基类。 "实现接口" 向导不会为你检查类型库的版本号。
 
 ## <a name="implementing-idispatch"></a>实现 IDispatch
 
-只要具有描述相应`IDispatchImpl`双接口的类型库，就可以使用基类通过在 COM 映射中指定适当的条目（使用[COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2)或[COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid)宏）来提供不相关接口的实现。 例如，`IDispatch`以这种方式实现接口很常见。 ATL 简单对象向导和实现界面向导都假定您打算以这种方式实现`IDispatch`，因此它们将添加适当的条目到地图中。
+您可以使用 `IDispatchImpl` 基类来提供调度程序的实现，只需在 COM 映射中指定适当的条目 (使用 [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2) 或 [COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid) 宏) ，前提是您有一个描述对应双重接口的类型库。 `IDispatch`例如，以这种方式实现接口非常常见。 ATL 简单对象向导和实现接口向导都假设您打算以 `IDispatch` 这种方式实现，因此它们将向映射添加适当的条目。
 
 > [!NOTE]
-> ATL 提供[IDispEventImpl](../atl/reference/idispeventimpl-class.md)和[IDispEventSimple](../atl/reference/idispeventsimpleimpl-class.md)类，可帮助您实现解接口，而无需包含兼容双接口定义的类型库。
+> ATL 提供了 [IDispEventImpl](../atl/reference/idispeventimpl-class.md) 和 [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) 类，可帮助实现调度接口，而无需包含与兼容双重接口的定义的类型库。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[双接口和 ATL](../atl/dual-interfaces-and-atl.md)
+[双重接口和 ATL](../atl/dual-interfaces-and-atl.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2530
 ms.assetid: b790a312-48df-4a6a-9e27-be2c5f32f16c
-ms.openlocfilehash: 0816fcb4d9e2a3e6588dfcf937383fed7ab11395
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4eca5579f6bf132452a813d8dd99193df5f76b92
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737122"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500535"
 ---
 # <a name="compiler-error-c2530"></a>编译器错误 C2530
 
@@ -19,9 +19,9 @@ ms.locfileid: "74737122"
 
 必须在声明引用后对其进行初始化（除非已声明）：
 
-- 带有关键字[extern](../../cpp/using-extern-to-specify-linkage.md)。
+- 带有关键字 [extern](../../cpp/extern-cpp.md)。
 
-- 作为类、结构或联合的成员（并在构造函数中初始化）。
+- 作为类、结构或联合 (的成员，并在构造函数) 中对其进行初始化。
 
 - 作为函数声明或定义中的参数。
 

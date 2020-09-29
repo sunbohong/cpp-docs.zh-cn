@@ -5,12 +5,12 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-ms.openlocfilehash: f5e289c330c83ac0c630a5b1f8f97b8c65fc7efb
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a4a754bbee08e93e2db9af50f98d7603fabcd8d4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686439"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498504"
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：从 STL/CLR 容器转换为 .NET 集合
 
@@ -20,7 +20,7 @@ ms.locfileid: "90686439"
 
 1. 使用下列方法之一：
 
-   - 若要转换容器的一部分，请调用 [make_collection](../dotnet/make-collection-stl-clr.md) 函数，并传递要复制到 .net 集合中的 STL/CLR 容器的开始迭代器和结束迭代器。 此模板函数使用 STL/CLR 迭代器作为模板参数。 第一个示例演示了此方法。
+   - 若要转换容器的一部分，请调用 [make_collection](./adapter-stl-clr.md#make_collection) 函数，并传递要复制到 .net 集合中的 STL/CLR 容器的开始迭代器和结束迭代器。 此模板函数使用 STL/CLR 迭代器作为模板参数。 第一个示例演示了此方法。
 
    - 若要转换整个容器，请将容器强制转换为相应的 .NET 集合接口或接口集合。 第二个示例演示了此方法。
 
@@ -113,4 +113,4 @@ Key: 74.00 Value: 74
 
 [STL/CLR 库参考](../dotnet/stl-clr-library-reference.md)<br/>
 [如何：从 .NET 集合转换为 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)<br/>
-[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)
+[range_adapter (STL/CLR)](./adapter-stl-clr.md#range_adapter)

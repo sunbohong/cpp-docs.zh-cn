@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ecbc332fcdb7fee8f748a02b2f111d4d1abf3c0b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cc996b8beedadf9cba5a46b3b4da20e19268b0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838199"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498684"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 类
 
@@ -176,7 +176,7 @@ class CDynamicAccessor : public CAccessorBase
 
 使用 `CDynamicAccessor` 方法来获取列信息，如列名称、列计数、数据类型等。 然后，使用此列信息在运行时动态创建访问器。
 
-列信息存储在由此类创建和管理的缓冲区中。 使用 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)从缓冲区中获取数据。
+列信息存储在由此类创建和管理的缓冲区中。 使用 [GetValue](#getvalue)从缓冲区中获取数据。
 
 有关使用动态访问器类的讨论和示例，请参阅 [使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。
 
@@ -217,10 +217,10 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 #### <a name="parameters"></a>参数
 
 *eBlobHandling*<br/>
-指定二进制大型对象 (BLOB) 数据的处理方式。 默认值为 DBBLOBHANDLING_DEFAULT。 有关 DBBLOBHANDLINGENUM 值的说明，请参阅 [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 。
+指定二进制大型对象 (BLOB) 数据的处理方式。 默认值为 DBBLOBHANDLING_DEFAULT。 有关 DBBLOBHANDLINGENUM 值的说明，请参阅 [SetBlobHandling](#setblobhandling) 。
 
 *nBlobSize*<br/>
-最大 BLOB 大小（以字节为单位）；该值之上的列数据被视为 BLOB。 默认值为8000。 有关详细信息，请参阅 [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 。
+最大 BLOB 大小（以字节为单位）；该值之上的列数据被视为 BLOB。 默认值为8000。 有关详细信息，请参阅 [SetBlobSizeLimit](#setblobsizelimit) 。
 
 ### <a name="remarks"></a>注解
 
@@ -250,7 +250,7 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 
 ### <a name="remarks"></a>备注
 
-返回由[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)设置的 BLOB 处理值*eBlobHandling* 。
+返回由[SetBlobHandling](#setblobhandling)设置的 BLOB 处理值*eBlobHandling* 。
 
 ## <a name="cdynamicaccessorgetblobsizelimit"></a><a name="getblobsizelimit"></a> CDynamicAccessor：： GetBlobSizeLimit
 
@@ -264,7 +264,7 @@ const DBLENGTH GetBlobSizeLimit() const;
 
 ### <a name="remarks"></a>备注
 
-返回由[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)设置的 BLOB 处理值*nBlobSize* 。
+返回由[SetBlobSizeLimit](#setblobsizelimit)设置的 BLOB 处理值*nBlobSize* 。
 
 ## <a name="cdynamicaccessorgetbookmark"></a><a name="getbookmark"></a> CDynamicAccessor：： GetBookmark
 
@@ -705,7 +705,7 @@ bool SetValue(
 
 对于所有其他数据类型，使用的模板化版本更为简单 `GetValue` 。 模板化版本会 **`true`** 在成功或 **`false`** 失败时返回。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

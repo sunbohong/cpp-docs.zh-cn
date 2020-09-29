@@ -35,12 +35,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 381ae4464b23cb929e0511e6d2c228602f06a249
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 2e51eb375ab814119dcf34d85c7f5aff11559784
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413848"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499178"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -80,7 +80,7 @@ long double roundl(
 |-----------|-------------------|-----------------------|
 |± **QNAN**， **IND**|无|**_DOMAIN**|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 由于 c + + 允许重载，因此你可以调用采用并返回和值的 **轮** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **舍入** 始终采用并返回 **`double`** 。
 
@@ -147,7 +147,7 @@ roundl(2.499999900000000163657887242152355611324310302734375) is 2
 roundl(-2.499999900000000163657887242152355611324310302734375) is -2
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)\
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)\
@@ -156,4 +156,4 @@ roundl(-2.499999900000000163657887242152355611324310302734375) is -2
 [lrint、lrintf、lrintl、llrint、llrintf、llrintl](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)\
 [lround、lroundf、lroundl、llround、llroundf、llroundl](lround-lroundf-lroundl-llround-llroundf-llroundl.md)\
 [nearbyint、nearbyintf、nearbyintl](nearbyint-nearbyintf-nearbyintl1.md)\
-[rint、rintf、rintl](rint-rintf-rintl.md)\
+[rint, rintf, rintl](rint-rintf-rintl.md)

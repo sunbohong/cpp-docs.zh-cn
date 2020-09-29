@@ -35,12 +35,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 9ebbab02860daaeb57c24d3e0901666861adfc2b
-ms.sourcegitcommit: c8f1605354724a13566bc3b0fac3c5d98265f1d0
+ms.openlocfilehash: 38c98793e7e1b22d166de8a869c57f510de7b284
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062153"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500181"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 类
 
@@ -101,7 +101,7 @@ class COleDateTime
 |[COleDateTime：： m_dt](#m_dt)|包含 `DATE` 此对象的基础 `COleDateTime` 。|
 |[COleDateTime：： m_status](#m_status)|包含此对象的状态 `COleDateTime` 。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `COleDateTime` 没有基类。
 
@@ -120,7 +120,7 @@ class COleDateTime
 > [!CAUTION]
 > 在上表中，尽管日期值在12月 30 1899 日午夜之前变成负值，但当天时间值不是。 例如，6:00 AM 始终由一个小值0.25 表示，而不考虑表示 day 的整数是否为正数 (12 月30日之后 1899) 或负 (12 月 30) 1899 日之前。 这意味着，简单的浮点比较会错误 `COleDateTime` 7:00 地对表示 6:00 am on 12/29/1899 的**later**进行排序。
 
-`COleDateTime`类处理从100年1月1日到9999年12月31日的日期。 `COleDateTime`类使用公历，而不支持儒略历日期。 `COleDateTime` 忽略夏令时。  (查看 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。 ) 
+`COleDateTime`类处理从100年1月1日到9999年12月31日的日期。 `COleDateTime`类使用公历，而不支持儒略历日期。 `COleDateTime` 忽略夏令时。  (查看 [日期和时间：自动化支持](../date-and-time.md)。 ) 
 
 > [!NOTE]
 > 您可以使用 `%y` 格式仅检索从1900开始的日期的两位数年份。 如果在 `%y` 1900 之前的日期使用格式，则代码将生成断言失败。
@@ -135,7 +135,7 @@ class COleDateTime
 
 值的基本算术运算 `COleDateTime` 使用伴生类 [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)。 `COleDateTimeSpan` 值定义时间间隔。 这些类之间的关系类似于 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 和 [CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)之间的关系。
 
-有关和类的详细 `COleDateTime` 信息 `COleDateTimeSpan` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关和类的详细 `COleDateTime` 信息 `COleDateTimeSpan` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -154,12 +154,12 @@ bool operator<=(const COleDateTime& date) const throw();
 bool operator>=(const COleDateTime& date) const throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *date*<br/>
 要比较的 `COleDateTime` 对象。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 > [!NOTE]
 > 如果两个操作数都无效，则会发生 ATLASSERT。
@@ -199,7 +199,7 @@ COleDateTime(WORD wDosDate,
 COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *dateSrc*<br/>
 `COleDateTime`要复制到新对象的现有对象 `COleDateTime` 。
@@ -228,7 +228,7 @@ COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 *标志*<br/>
 对包含当前本地时间的 [DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype) 结构的引用。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 所有这些构造函数 `COleDateTime` 将创建初始化为指定值的新对象。 下表显示了每个日期和时间组件的有效范围：
 
@@ -267,7 +267,7 @@ COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 
 有关详细信息，请参阅 Windows SDK 中的 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 和 [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) 结构。
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 > [!NOTE]
 > `DBTIMESTAMP`仅当包含 OLEDB 时，使用参数的构造函数才可用。
@@ -286,7 +286,7 @@ CString Format(LPCTSTR lpszFormat) const;
 CString Format(UINT nFormatID) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 dwFlags <br/>
 指示以下区域设置标志之一：
@@ -318,7 +318,7 @@ dwFlags <br/>
 
 一个 `CString` ，它包含格式化日期/时间值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果此对象的状态 `COleDateTime` 为 null，则返回值为空字符串。 如果状态无效，则返回字符串由字符串资源 ATL_IDS_DATETIME_INVALID 指定。
 
@@ -345,7 +345,7 @@ dwFlags <br/>
 bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *标志*<br/>
 对 [DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype) 结构的引用。
@@ -354,7 +354,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 将生成时间存储在引用的 *时间戳* 结构中。 `DBTIMESTAMP`此函数初始化的数据结构将其 `fraction` 成员设置为零。
 
@@ -370,7 +370,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *sysTime*<br/>
 对用于接收对象中转换的日期/时间值的 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 结构的引用 `COleDateTime` 。
@@ -379,7 +379,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 如果成功，则返回 TRUE;如果转换失败，则为 FALSE; 如果 `COleDateTime` 对象为 NULL 或无效，则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `GetAsSystemTime` 将生成的时间存储在引用的 *sysTime* 对象中。 `SYSTEMTIME`此函数初始化的数据结构将其 `wMilliseconds` 成员设置为零。
 
@@ -393,7 +393,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 bool GetAsUDATE(UDATE& uDate) const throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *uDate*<br/>
 对结构的引用 `UDATE` ，该结构从对象接收转换的日期/时间值 `COleDateTime` 。
@@ -402,7 +402,7 @@ bool GetAsUDATE(UDATE& uDate) const throw();
 
 如果成功，则返回 TRUE;如果转换失败，则为 FALSE; 如果 `COleDateTime` 对象为 NULL 或无效，则为 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `UDATE`结构表示 "解包" 日期。
 
@@ -430,7 +430,7 @@ int GetDay() const throw();
 
 此对象的值表示的月中的第几天， `COleDateTime` `COleDateTime::error` 如果无法获取当天的日期，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值范围是1到31之间的值。
 
@@ -466,7 +466,7 @@ int GetDayOfWeek() const throw();
 
 此对象的值表示的一周中的某一天，如果无法获取该周中的日期，则为 `COleDateTime` `COleDateTime::error` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值介于1到7之间，其中 1 = 星期日，2 = 星期一，依此类推。
 
@@ -502,7 +502,7 @@ int GetDayOfYear() const throw();
 
 此对象的值表示的年中的某一天，如果无法获取该年的 `COleDateTime` `COleDateTime::error` 某一天，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值范围介于1到366之间，其中1月 1 = 1。
 
@@ -538,7 +538,7 @@ int GetHour() const throw();
 
 此对象的值表示的小时， `COleDateTime` `COleDateTime::error` 如果无法获取该小时，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值范围为0到23。
 
@@ -574,7 +574,7 @@ int GetMinute() const throw();
 
 此对象的值表示的分钟数， `COleDateTime` 或者 `COleDateTime::error` ，如果未能获得分钟。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值范围介于0到59之间。
 
@@ -610,7 +610,7 @@ int GetMonth() const throw();
 
 由此对象的值表示的月份， `COleDateTime` `COleDateTime::error` 如果无法获取月份，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值范围介于1到12之间。
 
@@ -646,14 +646,14 @@ int GetSecond() const throw();
 
 由此对象的值表示的第二个， `COleDateTime` `COleDateTime::error` 如果无法获取第二个值，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值范围介于0到59之间。
 
 > [!NOTE]
 > `COleDateTime`类不支持闰秒。
 
-有关实现的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关实现的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 有关查询此对象的值的其他成员函数的信息 `COleDateTime` ，请参阅以下成员函数：
 
@@ -687,7 +687,7 @@ DateTimeStatus GetStatus() const throw();
 
 返回此值的状态 `COleDateTime` 。 如果对 `GetStatus` `COleDateTime` 使用默认构造的对象调用，它将返回有效的。 如果对 `GetStatus` `COleDateTime` 通过将构造函数设置为 null 的对象调用， `GetStatus` 将返回 null。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 返回值由 `DateTimeStatus` 枚举类型定义，该类型是在类中定义的 `COleDateTime` 。
 
@@ -735,7 +735,7 @@ enum DateTimeStatus
 
 - [operator + =，-=](#operator_add_eq_-_eq)
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ### <a name="example"></a>示例
 
@@ -753,7 +753,7 @@ int GetYear() const throw();
 
 由此对象的值表示的年份， `COleDateTime` `COleDateTime::error` 如果无法获取年份，则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有效的返回值范围为100到9999，包括世纪。
 
@@ -773,7 +773,7 @@ int GetYear() const throw();
 
 - [GetDayOfYear](#getdayofyear)
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ### <a name="example"></a>示例
 
@@ -787,12 +787,12 @@ int GetYear() const throw();
 DATE m_dt;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 > [!CAUTION]
 > 更改由此函数返回的指针所访问的对象中的值 `DATE` 将更改此对象的值 `COleDateTime` 。 它不会更改此对象的状态 `COleDateTime` 。
 
-有关对象实现的详细信息 `DATE` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关对象实现的详细信息 `DATE` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ## <a name="coledatetimem_status"></a><a name="m_status"></a> COleDateTime：： m_status
 
@@ -802,7 +802,7 @@ DATE m_dt;
 DateTimeStatus m_status;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此数据成员的类型是在 `DateTimeStatus` 类中定义的枚举类型 `COleDateTime` 。 有关详细信息，请参阅 [COleDateTime：： GetStatus](#getstatus)。
 
@@ -823,7 +823,7 @@ COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
 COleDateTime& operator=(const UDATE& uDate) throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 这些重载赋值运算符将源日期/时间值复制到此 `COleDateTime` 对象中。 下面是每个重载赋值运算符的简要说明：
 
@@ -847,7 +847,7 @@ COleDateTime& operator=(const UDATE& uDate) throw();
 
 有关详细信息，请参阅 Windows SDK 中的 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 和 [FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime) 结构。
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ## <a name="coledatetimeoperator---"></a><a name="operator_add_-"></a> COleDateTime：： operator +，-
 
@@ -859,7 +859,7 @@ COleDateTime operator-(COleDateTimeSpan dateSpan) const throw();
 COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `COleDateTime` 对象表示绝对时间。 [COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md) 对象表示相对时间。 前两个运算符允许您在值中添加和减去 `COleDateTimeSpan` 值 `COleDateTime` 。 第三个运算符允许您从一个 `COleDateTime` 值中减去一个值以产生一个 `COleDateTimeSpan` 值。
 
@@ -873,7 +873,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 
 有关有效、无效和 null 状态值的详细信息，请参阅 [m_status](#m_status) 成员变量。
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ### <a name="example"></a>示例
 
@@ -888,7 +888,7 @@ COleDateTime& operator+=(COleDateTimeSpan dateSpan) throw();
 COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 通过这些运算符，可以在此中添加和减去 `COleDateTimeSpan` 值 `COleDateTime` 。 如果任一操作数为 null，则结果值的状态 `COleDateTime` 为 null。
 
@@ -900,7 +900,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 **+=** **-=** 如果 `COleDateTime` 对象设置为 null，则和运算符将断言。 有关示例，请参阅 [COleDateTime 关系运算符](#coledatetime_relational_operators) 。
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ## <a name="coledatetimeoperator-date"></a><a name="operator_date"></a> COleDateTime：： operator DATE
 
@@ -910,9 +910,9 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 operator DATE() const throw();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此运算符将返回一个 `DATE` 对象，该对象的值从此 `COleDateTime` 对象复制。 有关对象实现的详细信息 `DATE` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+此运算符将返回一个 `DATE` 对象，该对象的值从此 `COleDateTime` 对象复制。 有关对象实现的详细信息 `DATE` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 `DATE`如果 `COleDateTime` 对象设置为 null，运算符将断言。 有关示例，请参阅 [COleDateTime 关系运算符](#coledatetime_relational_operators) 。
 
@@ -927,7 +927,7 @@ bool ParseDateTime(
     LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *lpszDate*<br/>
 指向要分析的以 null 结尾的字符串的指针。 有关详细信息，请参阅“备注”。
@@ -948,7 +948,7 @@ dwFlags <br/>
 
 如果字符串已成功转换为日期/时间值，则返回 TRUE; 否则返回 FALSE。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果字符串已成功转换为日期/时间值，此对象的值将 `COleDateTime` 设置为该值，并将其状态设置为 "有效"。
 
@@ -975,7 +975,7 @@ dwFlags <br/>
 
 如果字符串无法转换为日期/时间值，或者如果存在数值溢出，则此对象的状态 `COleDateTime` 无效。
 
-有关值的界限和实现的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值的界限和实现的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ## <a name="coledatetimesetdate"></a><a name="setdate"></a> COleDateTime：： SetDate
 
@@ -988,7 +988,7 @@ int SetDate(
     int nDay) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nYear*\
 指示要复制到此对象中的年份 `COleDateTime` 。
@@ -1003,7 +1003,7 @@ int SetDate(
 
 如果已成功设置此对象的值，则为零 `COleDateTime` ; 否则为1。 此返回值基于 `DateTimeStatus` 枚举的类型。 有关详细信息，请参阅 [SetStatus](#setstatus) 成员函数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 日期设置为指定值。 时间设置为时间0（午夜）。
 
@@ -1048,7 +1048,7 @@ int SetDate(
 
 - [GetDayOfYear](#getdayofyear)
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ### <a name="example"></a>示例
 
@@ -1068,7 +1068,7 @@ int SetDateTime(
     int nSec) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nYear*、 *nMonth*、 *nDay*、 *nHour*、 *nMin*、 *nSec*<br/>
 指示要复制到此对象中的日期和时间部分 `COleDateTime` 。
@@ -1077,7 +1077,7 @@ int SetDateTime(
 
 如果已成功设置此对象的值，则为零 `COleDateTime` ; 否则为1。 此返回值基于 `DateTimeStatus` 枚举的类型。 有关详细信息，请参阅 [SetStatus](#setstatus) 成员函数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 有关参数值的界限，请参阅下表：
 
@@ -1132,7 +1132,7 @@ int SetDateTime(
 
 - [GetDayOfYear](#getdayofyear)
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ### <a name="example"></a>示例
 
@@ -1146,12 +1146,12 @@ int SetDateTime(
 void SetStatus(DateTimeStatus status) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *status*<br/>
 此对象的新状态值 `COleDateTime` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 *状态*参数值由 `DateTimeStatus` 枚举类型定义，该类型是在类中定义的 `COleDateTime` 。 有关详细信息，请参阅 [COleDateTime：： GetStatus](#getstatus) 。
 
@@ -1173,7 +1173,7 @@ int SetTime(
     int nSec) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nHour*、 *nMin*、 *nSec*<br/>
 指示要复制到此对象中的时间部分 `COleDateTime` 。
@@ -1182,7 +1182,7 @@ int SetTime(
 
 如果已成功设置此对象的值，则为零 `COleDateTime` ; 否则为1。 此返回值基于 `DateTimeStatus` 枚举的类型。 有关详细信息，请参阅 [SetStatus](#setstatus) 成员函数。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 时间设置为指定值。 日期设置为日期0，表示 30 1899 年12月30日。
 
@@ -1225,13 +1225,13 @@ int SetTime(
 
 - [GetDayOfYear](#getdayofyear)
 
-有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../../atl-mfc-shared/date-and-time-automation-support.md)。
+有关值界限的详细信息 `COleDateTime` ，请参阅文章 [日期和时间：自动化支持](../date-and-time.md)。
 
 ### <a name="example"></a>示例
 
 请参阅 [SetDate](#setdate)的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [COleVariant 类](../../mfc/reference/colevariant-class.md)<br/>
 [CTime 类](../../atl-mfc-shared/reference/ctime-class.md)<br/>

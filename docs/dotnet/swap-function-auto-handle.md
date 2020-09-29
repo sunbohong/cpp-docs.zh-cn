@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: 9e6cde103eefb6e14fdf2a3fc7e3299070afbc25
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545941"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498571"
 ---
 # <a name="swap-function-auto_handle"></a>swap 函数 (auto_handle)
 
-交换一个 `auto_handle` 与另一个之间的对象。
+交换对象之间的对象 `auto_handle` 。
 
 ## <a name="syntax"></a>语法
 
@@ -26,10 +26,10 @@ void swap(
 );
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *_left*<br/>
-一个`auto_handle`。
+一个 `auto_handle`。
 
 *_right*<br/>
 另一个 `auto_handle`。
@@ -63,11 +63,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>要求
 
-**标头文件**\<msclr \ auto_handle .h >
+**头文件** \<msclr\auto_handle.h>
 
-**命名空间**msclr
+**命名空间** msclr
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
-[auto_handle::swap](../dotnet/auto-handle-swap.md)
+[auto_handle::swap](./auto-handle-class.md#swap)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: f1a266eee4edc524fbbe49bdef31a8235f62bd3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292297"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500101"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx（合并插入的代码）
 
@@ -52,7 +52,7 @@ ms.locfileid: "62292297"
 //--- End Injected Code
 ```
 
-将 [no_injected_text](../../windows/no-injected-text.md) 特性嵌入在 .mrg 文件中，这允许对 .mrg 文件进行编译而无需重新插入文本。
+将 [no_injected_text](../../windows/attributes/no-injected-text.md) 特性嵌入在 .mrg 文件中，这允许对 .mrg 文件进行编译而无需重新插入文本。
 
 应注意的是，.mrg 源文件用于表示由编译器插入的源代码。 .Mrg 文件可能不能完全像原始源文件一样进行编译或运行。
 
@@ -62,13 +62,13 @@ ms.locfileid: "62292297"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
-1. 单击“输出文件”  属性页。
+1. 单击“输出文件” **** 属性页。
 
-1. 修改“展开特性化源”  属性。
+1. 修改“展开特性化源” **** 属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
@@ -76,6 +76,6 @@ ms.locfileid: "62292297"
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/F) 选项](output-file-f-options.md)<br/>
+[Output-File (/F) 选项](output-file-f-options.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

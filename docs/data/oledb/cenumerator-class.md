@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: f3e3a61028768144cbef17912952622f19ad0242
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838147"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498542"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
 
@@ -97,7 +97,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 #### <a name="parameters"></a>参数
 
 *ppMoniker*<br/>
-弄从当前行的 [CEnumeratorAccessor：： m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md))  (的显示名称分析的名字对象。
+弄从当前行的 [CEnumeratorAccessor：： m_szParseName](./cenumeratoraccessor-class.md#szparsename))  (的显示名称分析的名字对象。
 
 *lpszDisplayName*<br/>
 中要分析的显示名称。
@@ -135,7 +135,7 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 
 标准的 HRESULT。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 2b5543e9a9ff70e827778adf2aee89cbc96f0c1d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c786c7746cd40a970af3a5ae4436119def4c805b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225665"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499679"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用属性
 
@@ -88,7 +88,7 @@ int main() {
 
 如果使用默认的索引属性，只需引用类名即可访问数据结构，但如果使用用户定义的索引属性，则必须指定属性名称以访问数据结构。
 
-有关如何使用以 c # 编写的索引器的信息，请参阅[如何：使用 c # 索引器（c + +/cli）](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。
+有关如何使用以 c # 编写的索引器的信息，请参阅 [如何：使用 c # 索引器 (c + +/cli) ](./interoperability-with-other-dotnet-languages-cpp-cli.md#consume_indexer)。
 
 此代码示例演示如何使用默认的和用户定义的索引属性：
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>抽象属性和密封属性
 
-尽管在 ECMA c + +/CLI 规范中将[abstract](../extensions/abstract-cpp-component-extensions.md)和[sealed](../extensions/sealed-cpp-component-extensions.md)关键字指定为有效，但对于 Microsoft c + + 编译器，不能在普通属性上指定它们，也不能在非普通属性的属性声明上指定它们。
+尽管在 ECMA c + +/CLI 规范中将 [abstract](../extensions/abstract-cpp-component-extensions.md) 和 [sealed](../extensions/sealed-cpp-component-extensions.md) 关键字指定为有效，但对于 Microsoft c + + 编译器，不能在普通属性上指定它们，也不能在非普通属性的属性声明上指定它们。
 
 若要声明密封属性或抽象属性，必须定义一个非常重要的属性，然后 **`abstract`** **`sealed`** 在 get 和 set 访问器函数上指定或关键字。
 
@@ -407,6 +407,6 @@ int main() {
 6.8
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [property](../extensions/property-cpp-component-extensions.md)

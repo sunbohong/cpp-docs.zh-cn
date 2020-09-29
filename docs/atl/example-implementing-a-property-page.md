@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 688cd337d0754fc49ede0f39fd774c9990f7c79f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dd74dd4562a3c4a8bff2c58d5f1d801f5dd06fd8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224352"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499619"
 ---
 # <a name="example-implementing-a-property-page"></a>示例：实现属性页
 
@@ -49,7 +49,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
 首先，为名为“`ATLPages7`”的 DLL 服务器新建 ATL 项目。 现在使用 [ATL 属性页向导](../atl/reference/atl-property-page-wizard.md)来生成属性页。 为属性页命名“DocProperties”**** 作为“短名称”****，然后切换到“字符串”**** 页，以设置属性页专用项，如下表所示。
 
-|Item|值|
+|项|值|
 |----------|-----------|
 |标题|TextDocument|
 |文档字符串|VCUE TextDocument 属性|
@@ -133,11 +133,11 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
 若要显示此页，需要创建简单的帮助程序对象。 帮助程序对象提供可简化 `OleCreatePropertyFrame` API 的方法，用于显示连接到单一对象的一个属性页。 此帮助程序将被设计为可以在 Visual Basic 中使用。
 
-使用[“添加类”对话框](../ide/add-class-dialog-box.md)和 [ATL 简单对象向导](../atl/reference/atl-simple-object-wizard.md)来生成新类，并使用“`Helper`”作为它的短名称。 创建类后，立即添加如下表所示的方法。
+使用[“添加类”对话框](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)和 [ATL 简单对象向导](../atl/reference/atl-simple-object-wizard.md)来生成新类，并使用“`Helper`”作为它的短名称。 创建类后，立即添加如下表所示的方法。
 
-|Item|值|
+|项|值|
 |----------|-----------|
-|方法名称|`ShowPage`|
+|方法名|`ShowPage`|
 |参数|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
 
 bstrCaption** 参数是要显示为对话框标题的描述文字。 bstrID** 参数是表示要显示的属性页的 CLSID 或编程 ID 的字符串。 pUnk** 参数是属性由属性页配置的对象的 `IUnknown` 指针。
@@ -171,7 +171,7 @@ End Module
 
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [属性页](../atl/atl-com-property-pages.md)<br/>
 [ATLPages 示例](../overview/visual-cpp-samples.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 927ea5ceef9ac74ae3cc1e06a47969b537209002
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838160"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498664"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 类
 
@@ -51,7 +51,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 使用 `CDynamicStringAccessor` 方法来获取列信息。 使用此列信息可在运行时动态创建访问器。
 
-列信息存储在由此类创建和管理的缓冲区中。 使用 [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)从缓冲区获取数据，或使用 [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)将数据存储到缓冲区。
+列信息存储在由此类创建和管理的缓冲区中。 使用 [GetString](#getstring)从缓冲区获取数据，或使用 [SetString](#setstring)将数据存储到缓冲区。
 
 有关使用动态访问器类的讨论和示例，请参阅 [使用动态访问器](../../data/oledb/using-dynamic-accessors.md)。
 
@@ -123,7 +123,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 
 如果 _SECURE_ATL 定义为具有非零值，则当输入 *数据* 字符串的长度超过所引用数据列的最大允许长度时，将生成运行时断言失败。 否则，如果输入字符串的长度超过了允许的最大长度，则将被截断。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

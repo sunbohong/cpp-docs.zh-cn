@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 9ad4292b69d0219aa1732638ae250758e4456f4b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843282"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498726"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 
@@ -64,7 +64,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 | 名称 | 说明 |
 |--|--|
-| [绑定](#bind) | 当 `bBind` 指定为 **`false`** [CCommand：： Open](../../data/oledb/ccommand-open.md)) 时，将创建 (使用的绑定。 |
+| [绑定](#bind) | 当 `bBind` 指定为 **`false`** [CCommand：： Open](./ccommand-class.md#open)) 时，将创建 (使用的绑定。 |
 | [CAccessorRowset](#caccessorrowset) | 构造函数。 |
 | [关闭](#close) | 关闭行集和任何访问器。 |
 | [FreeRecordMemory](#freerecordmemory) | 释放当前记录中需要释放的所有列。 |
@@ -76,7 +76,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ## <a name="caccessorrowsetbind"></a><a name="bind"></a> CAccessorRowset：： Bind
 
-如果在 `bBind` **`false`** [CCommand：： Open](../../data/oledb/ccommand-open.md)中指定为，则创建绑定。
+如果在 `bBind` **`false`** [CCommand：： Open](./ccommand-class.md#open)中指定为，则创建绑定。
 
 ### <a name="syntax"></a>语法
 
@@ -151,7 +151,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 有关详细信息，请参阅*OLE DB 程序员参考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

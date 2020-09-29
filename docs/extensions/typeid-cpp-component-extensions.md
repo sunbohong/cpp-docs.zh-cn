@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: 56319fb773b8398f85f5fd82c812f0efdb7dde15
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225106"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500380"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid（C++/CLI 和 C++/CX）
 
@@ -45,7 +45,7 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 类型名称。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 在 C++/CX 中，typeid 返回根据运行时类型信息构造的 [Platform::Type](../cppcx/platform-type-class.md)。
 
@@ -63,18 +63,18 @@ type::typeid
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+type<br/>
 要为其获取 `System::Type` 对象的类型（抽象声明符）的名称。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 **`typeid`** 用于 <xref:System.Type> 在编译时获取类型的。
 
 **`typeid`** 类似于 `System::Type` 在运行时使用或获取类型的 <xref:System.Type.GetType%2A> <xref:System.Object.GetType%2A> 。 但是， **`typeid`** 只接受类型名称作为参数。  如果要使用类型的实例来获取其 `System::Type` 名称，请使用 `GetType` 。
 
-**`typeid`** 必须能够在编译时计算类型名称（类型），而 GetType 计算在运行时返回的类型。
+**`typeid`** 必须能够在编译时 (类型) 计算类型名称，而 GetType 计算在运行时返回的类型。
 
-**`typeid`** 可以采用本机类型名称或公共语言运行时别名作为本机类型名称;有关详细信息，请参阅[与 c + + 本机类型的等效 .NET Framework （c + +/cli）](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md) 。
+**`typeid`** 可以采用本机类型名称或公共语言运行时别名作为本机类型名称;有关详细信息，请参阅 c + [+/cli)  (.NET Framework 等效 ](../dotnet/managed-types-cpp-cli.md#dotnet) 项。
 
 **`typeid`** 还适用于本机类型，但它仍返回 `System::Type` 。  若要获取 type_info 结构，请使用[ `typeid` 运算符](../cpp/typeid-operator.md)。
 
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

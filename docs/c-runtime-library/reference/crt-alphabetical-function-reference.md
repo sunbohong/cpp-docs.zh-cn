@@ -1,23 +1,23 @@
 ---
-title: UCRT 按字母顺序排列的函数参考
+title: UCRT 字母函数引用
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340334"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499402"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>UCRT 按字母顺序排列的函数参考
+# <a name="ucrt-alphabetical-function-reference"></a>UCRT 字母函数引用
 
-通用 C 运行时 （UCRT，通常只需 CRT） 库的参考文档由例程按字母顺序排列。 若要查找 CRT 例程根据功能，请参阅[按类别分的通用 C 运行时例程](../../c-runtime-library/run-time-routines-by-category.md)。
+通用 C 运行时 (UCRT，通常只是 CRT) 库参考文档按例程的字母顺序排列。 若要基于功能查找 CRT 例程，请参阅 [按类别列出的通用 C 运行时例程](../../c-runtime-library/run-time-routines-by-category.md)。
 
-## <a name="a"></a>包含当前请求的 URL 的
+## <a name="a"></a>A
 
-[abort](abort.md)
+[中止](abort.md)
 
 [abs](abs-labs-llabs-abs64.md)
 
@@ -77,7 +77,7 @@ ms.locfileid: "62340334"
 
 [_amsg_exit](amsg-exit.md)
 
-[ 和 ](and.md)
+[and](and.md)
 
 [and_eq](and-eq.md)
 
@@ -97,7 +97,7 @@ ms.locfileid: "62340334"
 
 [asinl](asin-asinf-asinl.md)
 
-[assert](assert-macro-assert-wassert.md)
+[断言](assert-macro-assert-wassert.md)
 
 [_assert](assert-macro-assert-wassert.md)
 
@@ -369,7 +369,7 @@ ms.locfileid: "62340334"
 
 [_copysignl](copysign-copysignf-copysignl-copysign-copysignf-copysignl.md)
 
-[cos](cos-cosf-cosl.md)
+[缆](cos-cosf-cosl.md)
 
 [cosf](cos-cosf-cosl.md)
 
@@ -1477,7 +1477,7 @@ ms.locfileid: "62340334"
 
 [ldexp](ldexp.md)
 
-[ldiv](ldiv-lldiv.md)
+[ldiv](./div.md)
 
 [_lfind](lfind.md)
 
@@ -1493,7 +1493,7 @@ ms.locfileid: "62340334"
 
 [llabs](abs-labs-llabs-abs64.md)
 
-[lldiv](ldiv-lldiv.md)
+[lldiv](./div.md)
 
 [llrint](lrint-lrintf-lrintl-llrint-llrintf-llrintl.md)
 
@@ -1523,11 +1523,11 @@ ms.locfileid: "62340334"
 
 [_lock_file](lock-file.md)
 
-[locking](posix-locking.md)
+[还要](posix-locking.md)
 
 [_locking](locking.md)
 
-[log](log-logf-log10-log10f.md)
+[日志](log-logf-log10-log10f.md)
 
 [log10](log-logf-log10-log10f.md)
 
@@ -2019,7 +2019,7 @@ ms.locfileid: "62340334"
 
 [_open_osfhandle](open-osfhandle.md)
 
-[ 或 ](or.md)
+[or](or.md)
 
 [or_eq](or-eq.md)
 
@@ -2113,7 +2113,7 @@ ms.locfileid: "62340334"
 
 [rand_s](rand-s.md)
 
-[read](posix-read.md)
+[读取](posix-read.md)
 
 [_read](read.md)
 
@@ -2125,7 +2125,7 @@ ms.locfileid: "62340334"
 
 [_recalloc_dbg](recalloc-dbg.md)
 
-[remainder](remainder-remainderf-remainderl.md)
+[剩下](remainder-remainderf-remainderl.md)
 
 [remainderf](remainder-remainderf-remainderl.md)
 
@@ -2143,7 +2143,7 @@ ms.locfileid: "62340334"
 
 [_resetstkoflw](resetstkoflw.md)
 
-[rewind](rewind.md)
+[后退](rewind.md)
 
 [rint](rint-rintf-rintl.md)
 
@@ -2167,7 +2167,7 @@ ms.locfileid: "62340334"
 
 [_rotr64](rotl-rotl64-rotr-rotr64.md)
 
-[round](round-roundf-roundl.md)
+[圆满](round-roundf-roundl.md)
 
 [roundf](round-roundf-roundl.md)
 
@@ -2671,7 +2671,7 @@ ms.locfileid: "62340334"
 
 [_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)
 
-[system](system-wsystem.md)
+[系统](system-wsystem.md)
 
 ## <a name="t"></a>T
 
@@ -2699,7 +2699,7 @@ ms.locfileid: "62340334"
 
 [_tempnam_dbg](tempnam-dbg-wtempnam-dbg.md)
 
-[terminate](terminate-crt.md)
+[终止](terminate-crt.md)
 
 [tgamma](tgamma-tgammaf-tgammal.md)
 
@@ -2791,7 +2791,7 @@ ms.locfileid: "62340334"
 
 [__uncaught_exception](uncaught-exception.md)
 
-[unexpected](unexpected-crt.md)
+[之外](unexpected-crt.md)
 
 [ungetc](ungetc-ungetwc.md)
 
@@ -3385,7 +3385,7 @@ ms.locfileid: "62340334"
 
 [_write](write.md)
 
-[write](posix-write.md)
+[写入](posix-write.md)
 
 [_wrmdir](rmdir-wrmdir.md)
 

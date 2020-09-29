@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b1bf4f85ccf7a0bb2d77bfb96c512349f581f193
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832446"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499302"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
 
@@ -42,7 +42,7 @@ ms.locfileid: "88832446"
 
 1. 在“解决方案资源管理器”中，右键单击项目节点，然后单击快捷菜单中的“添加”********。 单击“添加类”****。
 
-   随即将显示[“添加类”](../../ide/add-class-dialog-box.md)对话框。
+   随即将显示[“添加类”](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)对话框。
 
 1. 在“类别”窗格中选择 ATL 文件夹后，从“模板”窗格中选择要插入的对象************。 单击“打开”。 随即将显示所选对象的代码向导。
 
@@ -51,7 +51,7 @@ ms.locfileid: "88832446"
 
    或者，如果尝试在未事先添加 ATL 支持的情况下将 ATL 对象添加到 MFC 项目，Visual Studio 会提示你指定是否要向项目添加 ATL 支持。 单击“是”向项目添加 ATL 支持并打开所选的 ATL 向导****。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
 [Visual Studio 中的 C++ 项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
