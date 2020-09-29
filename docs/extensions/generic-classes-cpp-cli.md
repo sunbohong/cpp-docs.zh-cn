@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216019"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414121"
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 
@@ -71,7 +71,7 @@ class-body**<br/>
 *声明符*<br/>
 采用此类型的任何变量的声明。 例如： `^` *identifier*[ `,` ...]
 
-可以声明这样的泛型类（请注意，可以使用关键字 **`class`** 而不是 **`typename`** ）。 在此示例中，`ItemType`、`KeyType` 和 `ValueType` 是在类型所在位置指定的未知类型。 `HashTable<int, int>` 是泛型类型 `HashTable<KeyType, ValueType>` 的构造类型。 可以通过一个泛型类型来构造许多不同的构造类型。 将通过泛型类构造的构造类型视为与其他任何 ref class 类型一样。
+可以声明泛型类，如这些 (请注意，可以使用关键字， **`class`** 而不是 **`typename`**) 。 在此示例中，`ItemType`、`KeyType` 和 `ValueType` 是在类型所在位置指定的未知类型。 `HashTable<int, int>` 是泛型类型 `HashTable<KeyType, ValueType>` 的构造类型。 可以通过一个泛型类型来构造许多不同的构造类型。 将通过泛型类构造的构造类型视为与其他任何 ref class 类型一样。
 
 ```cpp
 // generic_classes_1.cpp
@@ -95,7 +95,7 @@ int main() {
 }
 ```
 
-这两个值类型（内置类型（如 **`int`** 或） **`double`** 或用户定义的值类型）和引用类型都可用作泛型类型参数。 无论如何，泛型定义中的语法是相同的。 从语法上讲，将未知类型视为引用类型。 不过，运行时可以确定实际使用的类型是否是值类型，并替换生成的相应代码，以直接访问成员。 用作泛型类型参数的值类型未装箱，因此不会有装箱造成的性能损失。 泛型主体中使用的语法应为 `T^` 和 `->`，而不是 `.`。 运行时会将对类型参数使用 [ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md) 相应地解释为，如果类型参数为值类型，就直接创建值类型。
+这两个值类型 (内置类型（如 **`int`** 或 **`double`** ）或用户定义的值类型) 和引用类型都可用作泛型类型参数。 无论如何，泛型定义中的语法是相同的。 从语法上讲，将未知类型视为引用类型。 不过，运行时可以确定实际使用的类型是否是值类型，并替换生成的相应代码，以直接访问成员。 用作泛型类型参数的值类型未装箱，因此不会有装箱造成的性能损失。 泛型主体中使用的语法应为 `T^` 和 `->`，而不是 `.`。 运行时会将对类型参数使用 [ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md) 相应地解释为，如果类型参数为值类型，就直接创建值类型。
 
 还可以根据[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)，对可用于类型参数的类型声明泛型类。 在下面的示例中，任何用于 `ItemType` 的类型都必须实现 `IItem` 接口。 例如，如果尝试使用不实现的， **`int`** `IItem` 将产生编译时错误，因为类型参数不满足约束。
 
@@ -157,9 +157,9 @@ ref class MyClass : IInterface<ItemType> {};
 
 泛型类的实例变量可以有类型和变量初始值设定项，其中包括封闭类中的任何类型参数。
 
-## <a name="example"></a>示例
+## <a name="example-different-generic-classes"></a>示例：不同的泛型类
 
-在下面的示例中， \<ItemType> 通过使用相应的类型自变量（ **`int`** 、 **`double`** 和**字符串**）创建泛型类 MyClass 的三个不同实例。
+在下面的示例中， \<ItemType> 通过使用相应的类型自变量（ (**`int`** 、 **`double`** 和 **字符串**) 来创建泛型类 MyClass 的三个不同实例。
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -205,7 +205,7 @@ String field = ABC
 
 静态变量可以使用封闭类中的任何类型参数。
 
-## <a name="example"></a>示例
+## <a name="example-use-static-variables"></a>示例：使用静态变量
 
 下面的示例展示了如何在泛型类中使用静态字段和静态构造函数。
 
@@ -282,7 +282,7 @@ Test1
 
 此类方法的主体也可以使用这些类型参数。
 
-## <a name="example"></a>示例
+## <a name="example-declare-non-generic-method"></a>示例：声明非泛型方法
 
 下面的示例在泛型类 `MyClass<ItemType>` 中声明非泛型方法 `ProtectData`。 此方法在签名中使用类的类型参数 `ItemType`（包含在开放式构造类型中）。
 
@@ -343,7 +343,7 @@ Amount: $123.00**
 
 在泛型类和非泛型类中，都可以声明泛型方法。 例如：
 
-## <a name="example"></a>示例
+## <a name="example-declare-generic-and-non-generic-methods"></a>示例：声明泛型和非泛型方法
 
 ```cpp
 // generics_method2.cpp
@@ -369,7 +369,7 @@ public:
 
 泛型类中的所有类型方法都可以是泛型的，包括静态方法、实例方法和虚方法。
 
-## <a name="example"></a>示例
+## <a name="example-declare-and-use-generic-methods"></a>示例：声明和使用泛型方法
 
 下面的示例展示了如何在泛型类中声明和使用泛型方法：
 
@@ -453,9 +453,9 @@ ref class Outer {
 
 在构造嵌套泛型类型已命名后，内部类型的类型参数列表中不包括外部类型的类型参数，尽管内部类型是由外部类型的类型参数进行隐式参数化。 在上面的示例中，构造类型的名称应为 `Outer<int>::Inner<string>`。
 
-下面的示例展示了如何使用泛型类中的嵌套类型生成和读取链接列表。
+## <a name="example-build-and-read-linked-list"></a>示例：生成和读取链接列表
 
-## <a name="example"></a>示例
+下面的示例展示了如何使用泛型类中的嵌套类型生成和读取链接列表。
 
 ```cpp
 // generics_linked_list.cpp
@@ -556,7 +556,7 @@ Reading nodes:
 
 - 属性、事件、索引器和运算符本身无法参数化。
 
-## <a name="example"></a>示例
+## <a name="example-declare-instance-property"></a>示例：声明实例属性
 
 下面的示例展示了泛型类中实例属性的声明。
 
@@ -596,7 +596,7 @@ int main() {
 John, 234
 ```
 
-## <a name="example"></a>示例
+## <a name="example-generic-class-with-event"></a>示例：包含事件的泛型类
 
 下面的示例展示了含事件的泛型类。
 
@@ -663,9 +663,9 @@ int main() {
 
 泛型结构的声明和使用规则与泛型类相似，区别如 Visual C++ 语言参考中所述。
 
-## <a name="example"></a>示例
+## <a name="example-declare-generic-struct"></a>示例：声明泛型结构
 
-下面的示例声明一个泛型结构，其中 `MyGenStruct` 包含一个字段， `myField` 并将不同类型（ **`int`** 、、）的值分配 **`double`** `String^` 给此字段。
+下面的示例声明一个泛型结构，其中 `MyGenStruct` 包含一个字段， `myField` 并将不同类型的值 (**`int`** 、) **`double`** 分配 `String^` 到此字段。
 
 ```cpp
 // generics_generic_struct1.cpp

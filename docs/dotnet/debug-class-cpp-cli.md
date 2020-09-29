@@ -6,26 +6,26 @@ helpviewer_keywords:
 - .NET Framework [C++], Debug class
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47e1b949cb6e998508a3bd362b1c74961cf4cc23
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393774"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414147"
 ---
 # <a name="debug-class-ccli"></a>Debug 类 (C++/CLI)
 
-使用时<xref:System.Diagnostics.Debug>视觉对象中C++应用程序，该行为不会更改调试版本和发布版本之间。
+<xref:System.Diagnostics.Debug>在 Visual C++ 应用程序中使用时，调试版本和发布版本之间的行为不会更改。
 
 ## <a name="remarks"></a>备注
 
-行为<xref:System.Diagnostics.Trace>Debug 类的行为完全相同，但依赖于跟踪正在定义的符号。 这意味着您必须`#ifdef`任何与跟踪相关的代码以避免在发布版本中的调试行为。
+的行为与 <xref:System.Diagnostics.Trace> Debug 类的行为相同，但依赖于所定义的符号跟踪。 这意味着，你必须 `#ifdef` 具有跟踪相关的任何代码，以防止在发布版本中调试行为。
 
-## <a name="example"></a>示例
+## <a name="example-always-executes-output-statements"></a>示例：始终执行 output 语句
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
-下面的示例始终执行的输出语句，而不考虑是否使用编译 **/DDEBUG**或 **/DTRACE**。
+下面的示例始终执行 output 语句，无论你是用 **/DDEBUG** 还是 **/DTRACE**进行编译。
 
 ### <a name="code"></a>代码
 
@@ -49,7 +49,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
     Entering Main
@@ -58,11 +58,11 @@ Hello World.
 test
 ```
 
-## <a name="example"></a>示例
+## <a name="example-use-ifdef-and-endif-directives"></a>示例：使用 #ifdef 和 #endif 指令
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
-若要获取的预期的行为 （即，没有"test"打印输出的发布版本），则必须使用`#ifdef`和`#endif`指令。 下面修改上面的代码示例来演示此修补程序：
+若要获取预期的行为 (也就是说，不会为发布版本) 打印 "测试" 输出，必须使用 `#ifdef` 和 `#endif` 指令。 下面修改了上面的代码示例，以演示此修补程序：
 
 ### <a name="code"></a>代码
 
@@ -93,4 +93,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[用 c + +/CLI (Visual C++ 的 .NET 编程) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

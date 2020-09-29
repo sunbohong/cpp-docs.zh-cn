@@ -1,5 +1,5 @@
 ---
-title: 如何：通过泛型提高性能（C++/cli）
+title: 如何：通过泛型提高性能 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 039c5b069351249e51d961d9d1757ed6b09ef99c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181936"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414160"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>如何：通过泛型提高性能（C++/cli）
+# <a name="how-to-improve-performance-with-generics-ccli"></a>如何：通过泛型提高性能 (C++/CLI)
 
 采用泛型可以根据类型参数创建可重用的代码。 类型参数的实际类型将推迟，直到由客户端代码调用。 有关泛型的详细信息，请参阅 [Generics](generics-cpp-component-extensions.md)。
 
 本文讨论泛型如何有助于提高使用集合的应用程序的性能。
 
-## <a name="example"></a>示例
+## <a name="example-two-main-drawbacks-of-net-framework-collections"></a>示例： .NET Framework 集合的两大主要缺点
 
 .NET Framework 在 <xref:System.Collections?displayProperty=fullName> 命名空间中附带了许多集合类。 这些集合大多数作用于 <xref:System.Object?displayProperty=fullName> 类型的对象。 这允许集合存储任何类型，因为 .NET Framework 中的所有类型（甚至是值类型）都派生自 <xref:System.Object?displayProperty=fullName>。 但是，此方法有两个缺点。
 
@@ -78,7 +78,7 @@ Popped a String: Seven
 Popped an int: 7
 ```
 
-## <a name="example"></a>示例
+## <a name="example-benefit-of-using-generic-collection"></a>示例：使用泛型集合的好处
 
 新的 <xref:System.Collections.Generic?displayProperty=fullName> 命名空间包含在 <xref:System.Collections?displayProperty=fullName> 命名空间中找到的许多相同集合，但是它们已经修改以接受泛型类型参数。 这消除了非泛型集合的两个缺点：值类型装箱和取消装箱及无法指定集合中存储的类型。 对两个集合的操作相同；唯一区别在于实例化方式不同。
 
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [泛型](generics-cpp-component-extensions.md)

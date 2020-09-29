@@ -6,12 +6,12 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: 46f8c39affe5a3c0ad8648162f0fde5371eb30ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195572"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414485"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
 
@@ -20,9 +20,9 @@ interior_ptr**** 可以用于值类型。
 > [!IMPORTANT]
 > `/clr` 编译器选项支持此语言功能，但是 `/ZW` 编译器选项不支持此语言功能。
 
-## <a name="example"></a>示例
+## <a name="example-interior_ptr-with-value-type"></a>示例：值类型 interior_ptr
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
 下面的 C++/CLI 示例展示了如何将 interior_ptr**** 用于值类型。
 
@@ -65,9 +65,9 @@ int main() {
 3
 ```
 
-## <a name="example"></a>示例
+## <a name="example-this-pointer"></a>示例： this 指针
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
 在值类型中， **`this`** 指针的计算结果为 interior_ptr。
 
@@ -87,9 +87,9 @@ value struct V {
 };
 ```
 
-## <a name="example"></a>示例
+## <a name="example-address-of-operator"></a>示例： address 运算符
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
 下面的示例演示了如何将 address-of 运算符与静态成员一起使用。
 
@@ -127,6 +127,6 @@ int main() {
 hello
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[interior_ptr （c + +/CLI）](interior-ptr-cpp-cli.md)
+[interior_ptr (c + +/CLI) ](interior-ptr-cpp-cli.md)

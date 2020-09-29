@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 6b2d3b4415b81dc5a9b7d0e36c154d9ee74b98ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f0fc5567baaa0c4f3fea410770963adf51e8366
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221479"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414004"
 ---
 # <a name="double-thunking-c"></a>双重 Thunk (C++)
 
@@ -21,19 +21,19 @@ Double thunk 是指当托管上下文中的函数调用调用 Visual C++ 托管�
 
 ## <a name="remarks"></a>备注
 
-默认情况下，使用 **/clr**进行编译时，托管函数的定义将导致编译器生成托管入口点和本机入口点。 这允许从本机和托管调用站点调用托管函数。 但是，当存在本机入口点时，它可以是对函数的所有调用的入口点。 如果调用函数是托管的，则本机入口点将调用托管入口点。 实际上，调用函数需要两次调用（因此，需要双 thunk）。 例如，虚函数始终通过本机入口点调用。
+默认情况下，使用 **/clr**进行编译时，托管函数的定义将导致编译器生成托管入口点和本机入口点。 这允许从本机和托管调用站点调用托管函数。 但是，当存在本机入口点时，它可以是对函数的所有调用的入口点。 如果调用函数是托管的，则本机入口点将调用托管入口点。 实际上，调用函数需要两次调用 (因此，双 thunk) 。 例如，虚函数始终通过本机入口点调用。
 
-一种解决方法是让编译器不生成托管函数的本机入口点，而只会使用[__clrcall](../cpp/clrcall.md)调用约定从托管上下文调用该函数。
+一种解决方法是让编译器不生成托管函数的本机入口点，而只会使用 [__clrcall](../cpp/clrcall.md) 调用约定从托管上下文调用该函数。
 
-同样，如果导出（[dllexport，dllimport](../cpp/dllexport-dllimport.md)）托管函数，则会生成一个本机入口点，并且任何导入和调用该函数的函数都将通过本机入口点调用。 若要避免在此情况下出现双重 thunk，请不要使用本机导出/导入语义;只需通过引用元数据 `#using` （请参阅[#using 指令](../preprocessor/hash-using-directive-cpp.md)）。
+同样，如果导出 ([dllexport，dllimport](../cpp/dllexport-dllimport.md)) 托管函数，则会生成一个本机入口点，并且任何导入和调用该函数的函数都将通过本机入口点调用。 若要避免在此情况下出现双重 thunk，请不要使用本机导出/导入语义;只需通过 (引用元数据， `#using` 请参阅 [#using 指令](../preprocessor/hash-using-directive-cpp.md)) 。
 
-已更新编译器以减少不必要的双 thunk。 例如，签名中具有托管类型的任何函数（包括返回类型）都将隐式标记为 `__clrcall` 。
+已更新编译器以减少不必要的双 thunk。 例如，签名中具有托管类型的任何函数 (包括返回类型) 将隐式标记为 `__clrcall` 。
 
-## <a name="example"></a>示例
+## <a name="example-double-thunking"></a>示例： Double thunk
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
-下面的示例演示 double thunk。 在编译本机（不包含 **/clr**）时，对中的虚函数的调用会 `main` 生成一个对 `T` 的复制构造函数和一个对析构函数的调用。 当用 **/clr**和声明虚函数时，就会实现类似的行为 `__clrcall` 。 但是，在使用 **/clr**进行编译时，函数调用会生成对复制构造函数的调用，但由于本机到托管的 thunk，将再次调用复制构造函数。
+下面的示例演示 double thunk。 如果编译的本机 (没有 **/clr**) ，则在中对虚函数的调用将 `main` 生成一个对 `T` 的复制构造函数和一个对析构函数的调用。 当用 **/clr** 和声明虚函数时，就会实现类似的行为 `__clrcall` 。 但是，在使用 **/clr**进行编译时，函数调用会生成对复制构造函数的调用，但由于本机到托管的 thunk，将再次调用复制构造函数。
 
 ### <a name="code"></a>代码
 
@@ -87,11 +87,11 @@ after calling struct S
 __thiscall T::~T(void)
 ```
 
-## <a name="example"></a>示例
+## <a name="example-effect-of-double-thunking"></a>示例： double thunk 的效果
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
-前面的示例演示了双 thunk 的存在。 此示例显示了其效果。 **`for`** 循环调用虚函数，程序报告执行时间。 用 **/clr**编译程序时，会报告最慢的时间。 如果在没有 **/clr**的情况下进行编译，或在声明虚拟函数时报告最快的时间 `__clrcall` 。
+前面的示例演示了双 thunk 的存在。 此示例显示了其效果。 **`for`** 循环调用虚函数，程序报告执行时间。 用 **/clr**编译程序时，会报告最慢的时间。 如果在没有 **/clr** 的情况下进行编译，或在声明虚拟函数时报告最快的时间 `__clrcall` 。
 
 ### <a name="code"></a>代码
 
@@ -139,4 +139,4 @@ after calling struct S
 
 ## <a name="see-also"></a>另请参阅
 
-[混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)
+[混合 (本机和托管) 程序集](../dotnet/mixed-native-and-managed-assemblies.md)

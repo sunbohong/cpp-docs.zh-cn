@@ -1,33 +1,34 @@
 ---
 title: 派生消息映射
-ms.date: 11/19/2018
+description: 介绍 MFC 消息处理。
+ms.date: 09/23/2020
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 0868b12720cfa338ab7275a358e065506adc11d1
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44c2180e441c91d34350c65bc17a53d1b650607c
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615918"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414212"
 ---
 # <a name="derived-message-maps"></a>派生消息映射
 
-消息处理期间，检查类自己的消息映射是否是消息映射描述的结尾。 如果类 `CMyView` （派生自 `CView` ）没有消息的匹配项，会发生什么情况
+消息处理期间，检查类自己的消息映射是否是消息映射描述的结尾。 如果 `CMyView` 从) 派生的类 (`CView` 没有相应的消息匹配项，会发生什么情况？
 
-记住，`CView`（`CMyView` 的基类）是依次从 `CWnd` 派生的。 因此 `CMyView` *，* 是 `CView` 且*是* `CWnd` 。 这些类都有其自己的消息映射。 下图“视图层次结构”显示了类的层次关系，但记住，`CMyView` 对象是具有所有树类的特征的单个对象。
+记住，`CView`（`CMyView` 的基类）是依次从 `CWnd` 派生的。 因此 `CMyView` *，* 是 `CView` 且 *是* `CWnd` 。 这些类都有其自己的消息映射。 下图显示了类的层次结构关系，但请记住， `CMyView` 对象是具有所有三个类的特征的单个对象。
 
 ![视图层次结构](../mfc/media/vc38621.gif "视图层次结构") <br/>
 视图层次结构
 
-因此，如果消息无法在类 `CMyView` 的消息映射中匹配，则框架还将在其即时基类中搜索消息映射。 位于消息映射开头的 `BEGIN_MESSAGE_MAP` 宏将指定两个类名称作为其参数：
+如果消息无法在类 `CMyView` 的消息映射中匹配，则框架还会搜索其直接基类的消息映射。 位于消息映射开头的 `BEGIN_MESSAGE_MAP` 宏将指定两个类名称作为其参数：
 
 [!code-cpp[NVC_MFCMessageHandling#2](codesnippet/cpp/derived-message-maps_1.cpp)]
 
-第一个自变量命名消息映射所属的类。 第二个自变量提供与即时基类 `CView` 的关系，以便框架也可搜索其消息映射。
+第一个自变量命名消息映射所属的类。 第二个自变量提供与即时基类的连接（在本例中为 `CView` ），以便框架也可搜索其消息映射。
 
 基类中提供的消息处理程序将由派生类集成。 这非常类似于标准虚拟成员函数，无需使所有处理程序成员函数成为虚拟。
 

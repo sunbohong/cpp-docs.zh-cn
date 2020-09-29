@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 071ea72a2aa03dcf16eb0f09e121eba4514e5828
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216383"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414602"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>如何：扩展封送处理库
 
 本主题说明如何扩展封送处理库，以便在数据类型之间提供更多的转换。 用户可以为库当前不支持的任何数据转换扩展封送处理库。
 
-可以通过以下两种方式之一扩展封送处理库-使用或不使用[Marshal_context 类](../dotnet/marshal-context-class.md)。 查看[c + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)主题，确定新转换是否需要上下文。
+可以通过以下两种方式之一扩展封送处理库-使用或不使用 [Marshal_context 类](../dotnet/marshal-context-class.md)。 查看 [c + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md) 主题，确定新转换是否需要上下文。
 
 在这两种情况下，首先要创建新的封送处理转换文件。 这样做是为了保留标准封送库文件的完整性。 如果要将项目移植到另一台计算机或另一台程序员，则必须将新的封送处理文件与项目的其余部分一起复制。 通过这种方式，接收项目的用户可以接收新的转换，而不需要修改任何库文件。
 
@@ -67,7 +67,7 @@ namespace msclr {
 
 1. 将有关初始化的注释替换为代码，以将初始化 `toPtr` 为适当的空值。 例如，如果是指针，则将其设置为 `NULL` 。
 
-1. 将有关转换逻辑的注释替换为代码，以将 `from` 参数转换*为*类型的对象。 此转换的对象将存储在中 `toPtr` 。
+1. 将有关转换逻辑的注释替换为代码，以将 `from` 参数转换 *为* 类型的对象。 此转换的对象将存储在中 `toPtr` 。
 
 1. 将有关设置的注释替换为 `toObject` 要设置 `toObject` 为转换后的对象的代码。
 
@@ -102,7 +102,7 @@ namespace msclr {
 }
 ```
 
-## <a name="example"></a>示例
+## <a name="example-extend-marshaling-library"></a>示例：扩展封送处理库
 
 下面的示例使用不需要上下文的转换来扩展封送处理库。 在此示例中，代码将员工信息从本机数据类型转换为托管数据类型。
 
@@ -164,7 +164,7 @@ Managed address: 123 Main Street
 Managed zip code: 98111
 ```
 
-## <a name="example"></a>示例
+## <a name="example-convert-employee-information"></a>示例：转换员工信息
 
 下面的示例将托管数据类型的雇员信息转换为本机数据类型。 此转换需要封送处理上下文。
 

@@ -1,25 +1,28 @@
 ---
 title: 编译器错误 C3287
-ms.date: 11/04/2016
+description: 描述 Microsoft c + + 编译器错误 C3287。
+ms.date: 09/25/2020
 f1_keywords:
 - C3287
 helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
-ms.openlocfilehash: f0f3441b749e3ae074e18e1132dcc4003eba3ba3
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4067355ef1bc1992d0f8519656bcd1063179aef4
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749602"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414315"
 ---
 # <a name="compiler-error-c3287"></a>编译器错误 C3287
 
-类型“type”（GetEnumerator 的返回类型）必须具有适当的公共 MoveNext 成员函数和公共的 Current 属性
+> 类型 "*type*" (GetEnumerator 的返回类型) 必须具有合适的公共 MoveNext 成员函数和公共的 Current 属性
+
+## <a name="remarks"></a>备注
 
 用户定义的集合类必须包含对 `MoveNext` 和 `Current`的定义。
 
-有关更多信息，请参见 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。
+有关详细信息，请参阅 [中的](../../dotnet/for-each-in.md)。
 
 ## <a name="example"></a>示例
 
