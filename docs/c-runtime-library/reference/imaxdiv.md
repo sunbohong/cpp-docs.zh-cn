@@ -24,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 72bbb1198b79d79bb81acc35ce6c2a836fdd5f1d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954630"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505630"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -54,11 +54,11 @@ imaxdiv_t imaxdiv(
 
 ## <a name="return-value"></a>返回值
 
-使用[intmax_t](../../c-runtime-library/standard-types.md)类型的参数调用的**imaxdiv**返回[imaxdiv_t](../../c-runtime-library/standard-types.md)类型的结构，该结构包含商和余数。
+使用[intmax_t](../../c-runtime-library/standard-types.md)类型的参数调用的**imaxdiv**返回由商和余数组成[imaxdiv_t](../../c-runtime-library/standard-types.md)类型的结构。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Imaxdiv**函数将*收藏*除以*denom* ，从而计算商和余数。 **Imaxdiv_t**结构包含**商、** **intmax_t**和余数**intmax_t** **rem**。商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
+**Imaxdiv**函数将*收藏*除以*denom* ，从而计算商和余数。 **Imaxdiv_t**结构包含商、 **intmax_t** **，以及**余数**intmax_t** **rem**。商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
 ## <a name="requirements"></a>要求
 
@@ -66,7 +66,7 @@ imaxdiv_t imaxdiv(
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -107,4 +107,4 @@ results in a quotient of 1079252848505, and a remainder of 5170
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [div](div.md)<br/>
-[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[ldiv、lldiv](./div.md)<br/>

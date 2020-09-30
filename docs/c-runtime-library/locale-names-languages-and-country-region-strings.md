@@ -8,12 +8,12 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-ms.openlocfilehash: 704da410ee6386027a7528c0c73a89ef31557a77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c7695b3e51eac44853dc89a0f2a683192562cea2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842944"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505624"
 ---
 # <a name="ucrt-locale-names-languages-and-countryregion-strings"></a>UCRT 区域设置名称、语言和国家/地区字符串
 
@@ -48,13 +48,11 @@ _wsetlocale(LC_ALL, L"de-DE");
 _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 ```
 
-
 ## <a name="utf-8-support"></a>UTF-8 支持
 
 可以使用区域设置字符串中的 UTF-8 代码页启用 UTF-8 支持。 有关详细信息，请参阅[Utf-8 支持 `setlocale` 部分](../c-runtime-library/reference/setlocale-wsetlocale.md#utf-8-support)。
 
-
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>

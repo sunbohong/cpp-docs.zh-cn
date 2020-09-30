@@ -1,6 +1,6 @@
 ---
 title: initializer_list 类
-description: C++标准库中initializer_list类的引用，由 Microsoft 在 Visual Studio 中实现。
+description: 在 Visual Studio 中由 Microsoft 实现的 c + + 标准库中的 initializer_list 类的引用。
 ms.date: 01/28/2020
 f1_keywords:
 - initializer_list/std::initializer_list::initializer_list
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: b1d33ce484948e731f8d3062b7a99df06ef26073
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 232855fbcac1e4df9af7cf956fda80201326a401
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373364"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504640"
 ---
 # <a name="initializer_list-class"></a>initializer_list 类
 
@@ -33,10 +33,10 @@ class initializer_list
 
 ### <a name="parameters"></a>参数
 
-*类型*\
+*类别*\
 要在 `initializer_list` 中存储的元素数据类型。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 使用大括号内的初始值设定项列表可构造 `initializer_list`。
 
@@ -44,7 +44,7 @@ class initializer_list
 initializer_list<int> i1{ 1, 2, 3, 4 };
 ```
 
-每当函数签名需要 `initializer_list` 时，编译器将具有同类元素的大括号内的初始值设定项列表转换为 `initializer_list`。 有关使用`initializer_list`的详细信息，请参阅[统一初始化和委派构造函数](../cpp/uniform-initialization-and-delegating-constructors.md)
+每当函数签名需要 `initializer_list` 时，编译器将具有同类元素的大括号内的初始值设定项列表转换为 `initializer_list`。 有关使用的详细信息 `initializer_list` ，请参阅 [统一初始化和委托构造函数](../cpp/initializing-classes-and-structs-without-constructors-cpp.md)
 
 ### <a name="constructors"></a>构造函数
 
@@ -54,7 +54,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|说明|
+|类型名称|描述|
 |-|-|
 |`value_type`|`initializer_list` 中元素的类型。|
 |`reference`|一个类型，它提供对 `initializer_list` 中元素的引用。|
@@ -63,21 +63,21 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 |`iterator`|一个类型，它为 `initializer_list` 提供迭代器。|
 |`const_iterator`|一个类型，它为 `initializer_list` 提供常量迭代器。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
-|[开始](#begin)|返回指向 `initializer_list` 中第一个元素的指针。|
-|[结束](#end)|返回指向 `initializer_list` 中最后一个元素之后的元素的指针。|
+|[准备](#begin)|返回指向 `initializer_list` 中第一个元素的指针。|
+|[end](#end)|返回指向 `initializer_list` 中最后一个元素之后的元素的指针。|
 |[大小](#size)|返回 `initializer_list` 中的元素数量。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<initializer_list>
+**标头：**\<initializer_list>
 
 **命名空间:** std
 
-## <a name="initializer_listbegin"></a><a name="begin"></a>initializer_list：开始
+## <a name="initializer_listbegin"></a><a name="begin"></a> initializer_list：： begin
 
 返回指向 `initializer_list` 中第一个元素的指针。
 
@@ -89,7 +89,7 @@ constexpr const InputIterator* begin() const noexcept;
 
 指向 `initializer_list` 的第一个元素的指针。 如果列表为空，该指针对于列表的开头和末尾都相同。
 
-## <a name="initializer_listend"></a><a name="end"></a>initializer_list：结束
+## <a name="initializer_listend"></a><a name="end"></a> initializer_list：： end
 
 返回指向 `initializer list` 中最后一个元素之后的元素的指针。
 
@@ -99,9 +99,9 @@ constexpr const InputIterator* end() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-指向列表中最后一个元素之后的元素的指针。 如果列表为空，则与指向列表中第一个元素的指针相同。
+指向列表中最后一个元素之后的元素的指针。 如果列表为空，则它与指向列表中第一个元素的指针相同。
 
-## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a>initializer_list：：initializer_list
+## <a name="initializer_listinitializer_list"></a><a name="initializer_list"></a> initializer_list：： initializer_list
 
 构造 `initializer_list` 类型的对象。
 
@@ -112,15 +112,15 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>参数
 
-*第一*\
+*1*\
 要复制的范围元素中的第一个元素的位置。
 
-*最后*\
+*时间*\
 要复制的元素范围以外的第一个元素的位置。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-`initializer_list` 基于指定类型的对象数组。 复制 a`initializer_list`将创建指向相同对象的列表的第二个实例;不会复制基础对象。
+`initializer_list` 基于指定类型的对象数组。 复制会 `initializer_list` 创建指向相同对象的列表的第二个实例; 不会复制基础对象。
 
 ### <a name="example"></a>示例
 
@@ -183,7 +183,7 @@ c3 = 5 4 3 2 1
 c5 = 5 4
 ```
 
-## <a name="initializer_listsize"></a><a name="size"></a>initializer_list：：大小
+## <a name="initializer_listsize"></a><a name="size"></a> initializer_list：： size
 
 返回列表中元素的数目。
 
@@ -195,6 +195,6 @@ constexpr size_t size() const noexcept;
 
 列表中元素的数目。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<forward_list>](../standard-library/forward-list.md)

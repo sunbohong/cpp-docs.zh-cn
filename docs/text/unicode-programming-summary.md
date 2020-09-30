@@ -5,91 +5,91 @@ helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 130c9027a882de2aae7fb339e4761b0cc81b3a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5095e1c58db3e5c35eb9215367f2fbb064bc228a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410507"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504717"
 ---
 # <a name="unicode-programming-summary"></a>Unicode 编程摘要
 
-若要充分利用 Unicode 的 MFC 和 C 运行时支持，需要：
+若要利用对 Unicode 的 MFC 和 C 运行时支持，需执行以下操作：
 
-- 定义`_UNICODE`。
+- 定义 `_UNICODE` 。
 
-   定义符号`_UNICODE`构建您的程序之前。
+   在 `_UNICODE` 生成程序之前定义符号。
 
 - 指定入口点。
 
-   上**高级**页**链接器**中项目的文件夹[属性页](../ide/property-pages-visual-cpp.md)对话框中，将**入口点**符号`wWinMainCRTStartup`.
+   在项目的 "[属性页](../build/reference/property-pages-visual-cpp.md)" 对话框中的 "**链接器**" 文件夹的 "**高级**" 页上，将**入口点**符号设置为 `wWinMainCRTStartup` 。
 
-- 使用可移植运行时函数和类型。
+- 使用可移植的运行时函数和类型。
 
-   使用适当的 C 运行时函数的 Unicode 字符串处理。 可以使用`wcs`系列函数，但你可能倾向于 （国际上已启用） 完全可移植`_TCHAR`宏。 这些宏都带有前缀`_tcs`; 来替代，一个用于其中一个，为`str`函数系列。 这些函数有详细介绍[国际化](../c-runtime-library/internationalization.md)一部分*运行时库参考*。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+   使用正确的 C 运行时函数进行 Unicode 字符串处理。 你可以使用 `wcs` 函数系列，但你可能更倾向于) 宏的完全可移植 (国际启用 `_TCHAR` 。 这些宏的所有前缀均 `_tcs` 为，它们替换为一 `str` 系列函数。 《*运行时库参考*》中的[国际化](../c-runtime-library/internationalization.md)部分详细介绍了这些函数。 有关详细信息，请参阅 [tchar 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
-   使用`_TCHAR`和相关的可移植数据类型中所述[适用于 Unicode 支持](../text/support-for-unicode.md)。
+   使用 `_TCHAR` 和 [支持 Unicode](../text/support-for-unicode.md)中所述的相关可移植数据类型。
 
-- 正确地处理字符串。
+- 正确处理文本字符串。
 
-   视觉对象C++编译器将解释为文本字符串编码为：
+   Visual C++ 编译器将编码为的文字字符串解释为：
 
     ```cpp
     L"this is a literal string"
     ```
 
-   表示 Unicode 字符的字符串。 为原义字符，可以使用相同的前缀。 使用`_T`一般情况下，代码文本字符串，使它们编译为 Unicode 字符串下 Unicode 或 ANSI 字符串 （包括 MBCS） 而无需 Unicode 宏。 例如，而不是:
+   表示 Unicode 字符的字符串。 你可以对文本字符使用相同的前缀。 使用 `_T` 宏来一般地编码文本字符串，以便它们在 unicode 或 ANSI 字符串下作为 unicode 字符串编译 (包括 MBCS) （不带 Unicode）。 例如，不是：
 
     ```cpp
     pWnd->SetWindowText( "Hello" );
     ```
 
-   使用：
+   用法
 
     ```cpp
     pWnd->SetWindowText( _T("Hello") );
     ```
 
-   与`_UNICODE`定义，`_T`转换的文字字符串 L 前缀的格式。 否则为`_T`转换不带 L 前缀的字符串。
+   如果 `_UNICODE` 定义了，则 `_T` 会将文本字符串转换为 l 前缀的窗体; 否则，将 `_T` 转换不带 l 前缀的字符串。
 
     > [!TIP]
-    >  `_T`宏等同于`_TEXT`宏。
+    >  `_T`宏与宏完全相同 `_TEXT` 。
 
-- 请注意传递到函数的字符串长度。
+- 请小心地将字符串长度传递到函数。
 
-   某些函数需要一个字符串; 中的字符数其他人想要字节的数。 例如，如果`_UNICODE`定义，则以下调用`CArchive`不起作用对象 (`str`是`CString`):
+   某些函数需要字符串中的字符数;其他人需要字节数。 例如，如果 `_UNICODE` 定义了，则在) 中，对对象的以下调用 `CArchive` 将不起作用 (`str` `CString` ：
 
     ```cpp
     archive.Write( str, str.GetLength( ) );    // invalid
     ```
 
-   在 Unicode 应用程序中，长度可以字符数，但未正确字节数，因为每个字符宽的 2 个字节。 相反，您必须使用：
+   在 Unicode 应用程序中，长度可提供字符数但不是正确的字节数，因为每个字符宽为2个字节。 相反，你必须使用：
 
     ```cpp
     archive.Write( str, str.GetLength( ) * sizeof( _TCHAR ) );    // valid
     ```
 
-   它指定正确的要写入字节数。
+   指定要写入的正确字节数。
 
-   但是，MFC 成员是面向字符的而不是面向字节的工作函数无需此额外的编码：
+   但是，对于面向字符的 MFC 成员函数（而不是面向字节的），无需此额外编码即可工作：
 
     ```cpp
     pDC->TextOut( str, str.GetLength( ) );
     ```
 
-   `CDC::TextOut` 采用字符，不是数字的字节的数。
+   `CDC::TextOut` 采用多个字符，而不是字节数。
 
-- 使用[fopen_s、 _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)打开 Unicode 文件。
+- 使用 [fopen_s，_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) 打开 Unicode 文件。
 
-总之，MFC 和运行时库提供以下支持的 Unicode 编程：
+总而言之，MFC 和运行时库为 Unicode 编程提供了以下支持：
 
-- 除了数据库类成员函数，所有 MFC 函数都都支持 Unicode，包括`CString`。 `CString` 此外提供了 Unicode/ANSI 转换函数。
+- 除了数据库类成员函数，所有 MFC 函数都启用了 Unicode，其中包括 `CString` 。 `CString` 还提供了 Unicode/ANSI 转换函数。
 
-- 运行时库提供的所有字符串处理函数的 Unicode 版本。 （在运行时库还提供了合适的可移植版本为 Unicode 或 MBCS。 这些是`_tcs`宏。)
+- 运行时库提供所有字符串处理函数的 Unicode 版本。  (运行库还提供适用于 Unicode 或 MBCS 的可移植版本。 这些是 `_tcs` 宏。 ) 
 
-- Tchar.h 提供可移植的数据类型和`_T`宏用于转换文本字符串和字符。 有关详细信息，请参阅[tchar.h 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+- tchar 提供可移植的数据类型和 `_T` 用于转换文本字符串和字符的宏。 有关详细信息，请参阅 [tchar 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
-- 在运行时库提供的宽字符版本`main`。 使用`wmain`使能够识别 Unicode 应用程序。
+- 运行时库提供了的宽字符版本 `main` 。 用于 `wmain` 使应用程序能够识别 Unicode。
 
 ## <a name="see-also"></a>请参阅
 

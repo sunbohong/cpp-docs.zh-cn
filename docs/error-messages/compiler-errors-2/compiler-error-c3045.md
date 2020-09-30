@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3045
 ms.assetid: 9351ba3e-3d3f-455f-ac90-a810fa9fd947
-ms.openlocfilehash: 88c0c9747f98c6850f3e9b4341bdcdef915ac754
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fc5c2b526133ea0de70d11c3a01269436701de79
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761346"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506290"
 ---
 # <a name="compiler-error-c3045"></a>编译器错误 C3045
 
 OpenMP “sections”指令后应为一个复合语句。 缺少“{”
 
-用大括号分隔的代码块必须跟在 [sections](../../parallel/openmp/reference/sections-openmp.md) 指令之后。
+用大括号分隔的代码块必须跟在 [sections](../../parallel/openmp/reference/openmp-directives.md#sections-openmp) 指令之后。
 
 下面的示例生成 C3045：
 

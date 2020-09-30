@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3360
 ms.assetid: 6acf983a-dbb6-422b-b045-a34bb4ba6761
-ms.openlocfilehash: 785dbf3a96e97b68f2f8a5ede79ac8288eba4b21
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5ac496d8ad981a8e36c7b69e73a42a1e1d2e214d
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757366"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504694"
 ---
 # <a name="compiler-error-c3360"></a>编译器错误 C3360
 
 “字符串”：无法创建名称
 
-传递给 [uuid](../../windows/uuid-cpp-attributes.md) 特性的值无效。
+传递给 [uuid](../../windows/attributes/uuid-cpp-attributes.md) 特性的值无效。
 
 以下示例生成 C3360：
 

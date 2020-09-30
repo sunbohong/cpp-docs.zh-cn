@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3047
 ms.assetid: 91c14566-5958-433d-8549-0e8bc3196f76
-ms.openlocfilehash: c6b8530aa1a1d5b8a0bfa735a9cc759a698ae841
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 41312e09996e2fe007cdc13c0369b5154e720841
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761320"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506215"
 ---
 # <a name="compiler-error-c3047"></a>编译器错误 C3047
 
 OpenMP“sections”区域中的结构化块的前面必须是“#pragma omp section”
 
-[sections](../../parallel/openmp/reference/sections-openmp.md) 指令所引入代码块中的任何代码必须位于 `section` 指令引入的代码块中。
+[sections](../../parallel/openmp/reference/openmp-directives.md#sections-openmp) 指令所引入代码块中的任何代码必须位于 `section` 指令引入的代码块中。
 
 下面的示例生成 C3047：
 

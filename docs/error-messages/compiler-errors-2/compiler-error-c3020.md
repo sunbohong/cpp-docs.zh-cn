@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 89b28ae396322859596b99ba56a28375e9c9d6d5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cb32ceaf71d0a1c121b6e01e4b49f1db79a84d79
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232022"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506497"
 ---
 # <a name="compiler-error-c3020"></a>编译器错误 C3020
 
 "var"： OpenMP "for" 循环的索引变量不能在循环体中修改
 
-OpenMP **`for`** 循环不能修改循环体中的索引（loop 计数器） **`for`** 。
+OpenMP **`for`** 循环不能修改循环体中 (loop counter) 的索引 **`for`** 。
 
 下面的示例生成 C3020：
 
@@ -38,9 +38,9 @@ int main() {
 }
 ```
 
-使用[lastprivate](../../parallel/openmp/reference/lastprivate.md)声明的变量不能用作并行化循环内的索引。
+使用 [lastprivate](../../parallel/openmp/reference/openmp-clauses.md#lastprivate) 声明的变量不能用作并行化循环内的索引。
 
-下面的示例将为第二个 lastprivate 提供 C3020，因为 lastprivate 将在最外面的 for 循环内触发写入 idx_a。 第一个 lastprivate 不会给出错误，因为 lastprivate 触发了写入 idx_a 超出最外层 for 循环（从技术上讲到最后一次迭代的最末尾）。 下面的示例生成 C3020。
+下面的示例将为第二个 lastprivate 提供 C3020，因为 lastprivate 将在最外面的 for 循环内触发写入 idx_a。 第一个 lastprivate 不会给出错误，因为 lastprivate 在最近一次迭代) 的最末尾触发了写入 idx_a 超出最外层 for 循环 (。 下面的示例生成 C3020。
 
 ```cpp
 // C3020b.cpp

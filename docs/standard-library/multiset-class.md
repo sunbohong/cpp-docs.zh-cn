@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: cb28b0b31188fcf7fefef95ddb44c9aab813e6ac
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: cf7f071ab98cb872537af076b89e0a1b07a1a6a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353176"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505884"
 ---
 # <a name="multiset-class"></a>multiset 类
 
@@ -107,7 +107,7 @@ template <class Key, class Compare =less <Key>, class Allocator =allocator <Key>
 class multiset
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要在 `multiset` 中存储的元素数据类型。
@@ -474,7 +474,7 @@ bool contains(const Key& key) const;
 template<class K> bool contains(const K& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *温度*\
 键的类型。
@@ -490,7 +490,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
 
-`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。 有关详细信息，请参阅 [关联容器中的异类查找](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。 有关详细信息，请参阅 [关联容器中的异类查找](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 。
 
 ### <a name="example"></a>示例
 
@@ -506,7 +506,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theMultiSet.contains(2) << '\n';
     std::cout << theMultiSet.contains(3) << '\n';
-    
+
     return 0;
 }
 ```
@@ -524,7 +524,7 @@ false
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要从 multiset 中进行匹配的元素的键。
@@ -756,7 +756,7 @@ template <class... Args>
 iterator emplace(Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入到多重集中的元素的转发参数。
@@ -823,7 +823,7 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入到多重集中的元素的转发参数。
@@ -918,7 +918,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的多重集中元素的排序键进行比较的参数键。
@@ -1003,7 +1003,7 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *其中*\
 要移除的元素的位置。
@@ -1037,7 +1037,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 与所搜索多重集中元素的排序键匹配的键值。
@@ -1219,7 +1219,7 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *初始值*\
 要插入到多重集合中的元素的值。
@@ -1485,7 +1485,7 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的多重集中元素的排序键进行比较的参数键。
@@ -1626,7 +1626,7 @@ multiset (
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Fc-al*\
 要用于此多重集对象的存储分配器类，默认为 `Allocator`。
@@ -1775,7 +1775,7 @@ multiset& operator=(const multiset& right);
 multiset& operator=(multiset&& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 从中复制或移动元素的 `multiset`。
@@ -2099,7 +2099,7 @@ void swap(
     multiset<Key, Compare, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 参数多重集提供与目标多重集进行交换的元素。
@@ -2168,7 +2168,7 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的多重集中元素的排序键进行比较的参数键。
@@ -2372,7 +2372,7 @@ int main( )
 The multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [存放](./stl-containers.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

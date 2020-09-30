@@ -51,12 +51,12 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: 1e75fe39c8ab7020a088307421926327d4043ba8
-ms.sourcegitcommit: efed9ed109862c6c2a042f2663b680e8ca4e16a1
+ms.openlocfilehash: 5a791b5d0be218a49be28930c191de3eb4acf4be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89933822"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505546"
 ---
 # <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -107,7 +107,7 @@ double wcstod_l(
 
 有关此代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 每个函数将输入字符串 *strSource* 转换为 **`double`** 。 **Strtod**函数将*strSource*转换为双精度值。 **strtod** 停止读取其无法识别为数字一部分的第一个字符的字符串 *strSource* 。 此字符可能是终止 null 字符。 **wcstod** 是 **strtod**的宽字符版本;其 *strSource* 参数是宽字符字符串。 否则这些函数具有相同行为。
 
@@ -135,9 +135,9 @@ double wcstod_l(
 *基数* 是基数点字符，句点 (。 ) 在默认的 "C" 区域设置中，如果当前区域设置不同或指定了 *locale* ，则为特定于区域设置的值。
  *序列*是字母数字或下划线字符的序列。
 
-在十进制和十六进制数字形式中，如果没有数字出现在基数点字符之前，则必须至少有一个数字出现在基数点字符之后。 
+在十进制和十六进制数字形式中，如果没有数字出现在基数点字符之前，则必须至少有一个数字出现在基数点字符之后。
 
-在十进制格式中，十进制数字后面可以跟一个指数，其中包含一个引导字母 (**e** 或 **e**) ，以及一个可选的带符号整数。 
+在十进制格式中，十进制数字后面可以跟一个指数，其中包含一个引导字母 (**e** 或 **e**) ，以及一个可选的带符号整数。
 
 在十六进制形式中，十六进制数字后面可以跟一个指数，其中包含一个介绍性字母 (**p** 或 **p**) ，以及一个可选的带符号十进制整数，它表示指数作为2的幂。
 

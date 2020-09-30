@@ -35,12 +35,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: 332e6bfc95bd297d703d879cdd468b450cfdc763
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: face2eb5f7c6220e1a4369ae0aa11514a918d21c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556783"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505603"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -71,12 +71,11 @@ long double asinh( long double x );  // C++ only
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|无|无|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 使用 c + + 时，可以调用采用并返回或值的 **asinh** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **asinh** 始终采用并返回 **`double`** 。
 
 如果使用 \<tgmath.h> `asinh()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
-
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -117,7 +116,7 @@ sinh( 0.785398 ) = 0.868671
 asinh( 0.868671 ) = 0.785398
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>
