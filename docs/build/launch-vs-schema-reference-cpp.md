@@ -3,16 +3,16 @@ title: Launch.vs.json 架构参考 (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1161e8fa8ac3751ca8cc2b96ec063cd6063bb245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841982"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505676"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Launch.vs.json 架构参考 (C++)
 
-使用 launch.vs.json 文件配置调试参数  。 若要创建文件， 在“解决方案资源管理器”中右键单击可执行文件，然后选择“调试和启动设置”   。 选择与项目最匹配的选项，然后根据需要使用以下属性修改配置。 有关调试 CMake 项目的详细信息，请参阅[配置 CMake 调试会话](/cpp/build/configure-cmake-debugging-sessions)。
+使用 launch.vs.json 文件配置调试参数  。 若要创建文件， 在“解决方案资源管理器”中右键单击可执行文件，然后选择“调试和启动设置”   。 选择与项目最匹配的选项，然后根据需要使用以下属性修改配置。 有关调试 CMake 项目的详细信息，请参阅[配置 CMake 调试会话](./configure-cmake-debugging-sessions.md)。
 
 ## <a name="default-properties"></a>默认属性
 

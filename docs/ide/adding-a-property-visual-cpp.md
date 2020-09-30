@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 125d7272b5b9fb0f656ba0621667885026e152fb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228669"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504686"
 ---
 # <a name="add-a-property"></a>添加属性
 
@@ -107,8 +107,8 @@ ms.locfileid: "87228669"
 
   |选项|描述|
   |------------|-----------------|
-  |**PropPut**|[PropPut](../windows/propput.md) 函数返回对象的一个副本。 这是使属性可写入的默认方法，也是最常用的方法。|
-  |**PropPutRef**|[PropPutRef](../windows/propputref.md) 函数返回对对象的引用，而不是返回对象本身的副本。 考虑将这个选项用于可能具有初始化开销的对象，如大型结构或数组。|
+  |**PropPut**|[PropPut](../windows/attributes/propput.md) 函数返回对象的一个副本。 这是使属性可写入的默认方法，也是最常用的方法。|
+  |**PropPutRef**|[PropPutRef](../windows/attributes/propputref.md) 函数返回对对象的引用，而不是返回对象本身的副本。 考虑将这个选项用于可能具有初始化开销的对象，如大型结构或数组。|
 
 - **参数属性**
 
@@ -179,7 +179,7 @@ ms.locfileid: "87228669"
 
 ## <a name="stock-properties"></a>常用属性
 
-如果使用[添加属性向导](#idl-attributes-add-property-wizard)将属性添加到 MFC 调度接口，则可从向导[名称](../ide/names-add-property-wizard.md)页的“属性名”列表中选择常用属性。 这些属性如下所示：
+如果使用[添加属性向导](#idl-attributes-add-property-wizard)将属性添加到 MFC 调度接口，则可从向导[名称](#names-add-property-wizard)页的“属性名”列表中选择常用属性。 这些属性如下所示：
 
 |属性名称|说明|
 |-------------------|-----------------|

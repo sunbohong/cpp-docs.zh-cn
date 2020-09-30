@@ -3,12 +3,12 @@ title: C++ 的符合性改进
 ms.date: 08/04/2020
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
-ms.openlocfilehash: 3a0e21bf08fcf7861feedd3fd43666bd3768deee
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042116"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500254"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -1432,7 +1432,7 @@ int main()
 
 - 为接受 rvalue 容器的容器合并和提取成员函数添加了重载。 有关详细信息，请参阅 [P0083“拼接映射和集”](https://wg21.link/p0083r3)
 
-### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` 处理 `\r\n`` => `\n`
+### <a name="stdbasic_istreamread-processing-of-rn-n"></a>`std::basic_istream::read` 处理 `\r\n`` =>`\n`
 
 `std::basic_istream::read` 修复了为不作为 `\r\n` => `\n` 处理的一部分临时写入提供的缓冲区部分。 此更改导致在读取大小超过 4K 的文件时，放弃了一些在 Visual Studio 2017 15.8 中获得的性能优势。 但是，仍存在从避免每个字符三个虚拟调用的效率改进。
 
@@ -1621,7 +1621,7 @@ void f(E e) {
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a>Visual Studio 2017 RTW（版本 15.0）中的符合性改进
 
-有了对通用 `constexpr` 和用于聚合的非静态数据成员初始化 (NSDMI) 的支持，Visual Studio 2017 中的 Microsoft C++ 编译器现在已经完成了 C++14 标准中增加的功能要求。 但编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)，获取显示编译器当前状态的表。
+有了对通用 `constexpr` 和用于聚合的非静态数据成员初始化 (NSDMI) 的支持，Visual Studio 2017 中的 Microsoft C++ 编译器现在已经完成了 C++14 标准中增加的功能要求。 但编译器仍缺少 C++11 和 C++98 标准版中的一些功能。 请参阅 [Microsoft C++ 语言一致性表](./visual-cpp-language-conformance.md)，获取显示编译器当前状态的表。
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11：在更多库中支持表达式 SFINAE
 
@@ -3647,7 +3647,7 @@ note: see usage of 'g'.
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 中的 C++ 符合性改进
 
-我们有 Visual Studio 2015 Update 3 及更低版本中的符合性改进的完整列表。 有关详细信息，请参阅 [Visual C++ 新增功能（2003 - 2015）](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+我们有 Visual Studio 2015 Update 3 及更低版本中的符合性改进的完整列表。 有关详细信息，请参阅 [Visual C++ 新增功能（2003 - 2015）](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
 
 ::: moniker-end
 

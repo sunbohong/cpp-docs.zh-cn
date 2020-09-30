@@ -3,12 +3,12 @@ title: 在 Visual Studio 中创建 CMake Linux 项目
 description: 如何在 Visual Studio 中创建 Linux CMake 项目
 ms.date: 08/06/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 1b622bcd2af49ee51f7546be4c7a6d804c3102d0
-ms.sourcegitcommit: 2034f8e744a8b36cff8b15e9a5cfe684afebadfb
+ms.openlocfilehash: 5753dbb37c11686becb3e141261284b68468a3bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88043819"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507958"
 ---
 # <a name="create-a-cmake-linux-project-in-visual-studio"></a>在 Visual Studio 中创建 CMake Linux 项目
 
@@ -67,6 +67,7 @@ Visual Studio 创建一个最小的 CMakeLists.txt 文件，其中只包含可�
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
+
 ## <a name="open-a-cmake-project-folder"></a>打开 CMake 项目文件夹
 
 打开包含现有 CMake 项目的文件夹时，Visual Studio 会使用 CMake 缓存中的变量来自动配置 IntelliSense 和生成。 本地配置和调试设置将存储在 JSON 文件中。 可以选择与使用 Visual Studio 的其他人共享这些文件。

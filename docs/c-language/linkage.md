@@ -5,12 +5,12 @@ helpviewer_keywords:
 - linkage [C++]
 - linkage [C++], identifier names and scope
 ms.assetid: 986ee549-2d6c-487a-9e3b-a1f643bc5bdc
-ms.openlocfilehash: 4dc4e1d39ee95178a5ed6bc40834ae80262a3d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ca606dedab2739892a64aa4b6f4cbb80a016ac
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232834"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91505651"
 ---
 # <a name="linkage"></a>链接
 
@@ -18,4 +18,4 @@ ms.locfileid: "62232834"
 
 ## <a name="see-also"></a>请参阅
 
-[使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)
+[使用 extern 指定链接](../cpp/extern-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f3a0b4a9c57fd55c6788481adbf91c48e362444e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833395"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507770"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>教程：vcperf 和 Windows Performance Analyzer
 
@@ -123,10 +123,10 @@ Graph 浏览器面板中还有其他视图。 如果对它们包含的信息感�
 [教程：Windows Performance Analyzer 基础知识](wpa-basics.md)\
 了解有助于分析生成跟踪的常见 WPA 操作。
 
-[参考：vcperf 命令](/cpp/build-insights/reference/vcperf-commands)\
+[参考：vcperf 命令](../reference/vcperf-commands.md)\
 vcperf 命令参考列出了所有可用的命令选项。
 
-[参考：Windows Performance Analyzer 视图](/cpp/build-insights/reference/wpa-views)\
+[参考：Windows Performance Analyzer 视图](../reference/wpa-views.md)\
 若要详细了解 WPA 中的 C++ 生成见解视图，请参阅这篇文章。
 
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)\

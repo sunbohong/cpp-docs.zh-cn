@@ -7,12 +7,12 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 8bbcc43ef19adfd85a3679a2136d471333a74a10
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a5b13ee08becd472b3bc52319212b84a9c8ffc25
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224092"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508807"
 ---
 # <a name="reference-windows-performance-analyzer-views"></a>参考：Windows Performance Analyzer 视图
 
@@ -28,7 +28,7 @@ Visual Studio 2019 中提供 C++ 生成见解工具。 若要查看此版本对�
 - 数据列说明；以及
 - 每个视图的可用预设，包括其预期用途和首选视图模式。
 
-如果你是刚开始接触 WPA，建议先了解[适用于 C++ Build Insights 的 WPA 基础知识](/cpp/build-insights/tutorials/wpa-basics)。
+如果你是刚开始接触 WPA，建议先了解[适用于 C++ Build Insights 的 WPA 基础知识](../tutorials/wpa-basics.md)。
 
 ## <a name="build-explorer"></a>生成资源管理器
 
@@ -130,9 +130,9 @@ Visual Studio 2019 中提供 C++ 生成见解工具。 若要查看此版本对�
 
 ## <a name="see-also"></a>请参阅
 
-[C++ Build Insights 入门](/cpp/build-insights/get-started-with-cpp-build-insights)\
+[C++ Build Insights 入门](../get-started-with-cpp-build-insights.md)\
 [参考：vcperf 命令](vcperf-commands.md)\
-[教程：Windows Performance Analyzer 基础知识](/cpp/build-insights/tutorials/wpa-basics)\
+[教程：Windows Performance Analyzer 基础知识](../tutorials/wpa-basics.md)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

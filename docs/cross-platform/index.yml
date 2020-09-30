@@ -8,12 +8,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 05/26/2020
-  ms.openlocfilehash: 7a858d9f26c106988156813b3f1f6bbe995e620a
-  ms.sourcegitcommit: 0df64a1b518a238c943986a898f40d12347b712f
+  ms.openlocfilehash: 3d90635c4b1d458369d1d7c9b1cfa9273161b4d2
+  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 05/28/2020
-  ms.locfileid: "84153525"
+  ms.lasthandoff: 09/29/2020
+  ms.locfileid: "91509789"
 landingContent:
 - title: 了解如何生成跨平台移动应用
   linkLists:
@@ -42,7 +42,7 @@ landingContent:
     - text: C++ 跨平台属性页引用
       url: cross-platform-prop-pages.md
     - text: 通用 Windows 平台 (UWP) 文档
-      url: /cpp/cppcx/universal-windows-apps-cpp
+      url: ../cppcx/universal-windows-apps-cpp.md
     - text: iOS API 文档
       url: https://developer.apple.com/reference
     - text: Android API 文档

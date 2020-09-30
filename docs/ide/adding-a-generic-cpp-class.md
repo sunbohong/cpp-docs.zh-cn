@@ -10,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generic C++ class wizard [C++]
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-ms.openlocfilehash: e81ea442578e69bdd28301eba8f70561f6aa76c6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5c00a35e375d133fbd3a6ed7fe3591e4b0cd54b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230540"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503127"
 ---
 # <a name="add-a-generic-c-class"></a>添加一般 C++ 类
 
@@ -25,7 +25,7 @@ ms.locfileid: "87230540"
 
 1. 在“类视图”中，右键单击要向其添加新类的项目，依次选择“添加”和“类”  。
 
-1. 在[添加类](../ide/add-class-dialog-box.md)对话框的“模板”窗格中，选择“C++ 类”。 选择“添加”以显示[一般 C++ 类向导](#generic-c-class-wizard)。
+1. 在[添加类](./adding-a-class-visual-cpp.md#add-class-dialog-box)对话框的“模板”窗格中，选择“C++ 类”。 选择“添加”以显示[一般 C++ 类向导](#generic-c-class-wizard)。
 
 1. 在向导中，提供类名称，然后定义设置或接受默认值。
 
