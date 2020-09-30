@@ -11,43 +11,43 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: d22f8a25bc7bb58f72346a15edb51f062c44e1b4
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: faee3ea47a6d96b09729d9d4b5bfa21584096d31
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79546175"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509462"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>使用数据库特性简化数据访问
 
 本主题演示如何使用数据库属性简化数据库操作。
 
-从数据库访问信息的基本方法是为数据库中的特定表创建命令（或表）类和用户记录类。 数据库属性简化了之前必须执行的一些模板声明。
+从数据库访问信息的基本方法是为数据库中的特定表创建命令 (或表) 类和用户记录类。 数据库属性简化了之前必须执行的一些模板声明。
 
 为了演示数据库属性的使用，以下各节显示了两个等效的表和用户记录类声明：第一个使用特性，第二个使用 OLE DB 模板。 此类声明代码通常放置在一个名为的表或命令对象（例如，作者 .h）中。
 
 通过比较这两个文件，可以看出使用特性的方法要简单得多。 不同之处在于：
 
-- 使用特性，你只需声明一个类： `CAuthors`，使用模板时，必须声明两个： `CAuthorsNoAttrAccessor` 和 `CAuthorsNoAttr`。
+- 使用特性只需声明一个类： `CAuthors` ，使用模板时，必须声明两个： `CAuthorsNoAttrAccessor` 和 `CAuthorsNoAttr` 。
 
-- 特性化版本中的 `db_source` 调用等效于模板声明中的 `OpenDataSource()` 调用。
+- `db_source`特性化版本中的调用等效于 `OpenDataSource()` 模板声明中的调用。
 
-- 特性化版本中的 `db_table` 调用等效于以下模板声明：
+- `db_table`特性化版本中的调用等效于以下模板声明：
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- 特性化版本中的 `db_column` 调用等效于模板声明中的列映射（参见 `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`）。
+- `db_column`特性化版本中的调用等效于列映射 (请参阅 `BEGIN_COLUMN_MAP ... END_COLUMN_MAP` 模板声明中) 。
 
-属性为您注入用户记录类声明。 用户记录类等于模板声明中的 `CAuthorsNoAttrAccessor`。 如果表类是 `CAuthors`的，则插入的用户记录类的名称为 `CAuthorsAccessor`，并且只能在注入的代码中查看其声明。 有关详细信息，请参阅[用户记录](../../data/oledb/user-records.md)中的 "属性插入的用户记录类"。
+属性为您注入用户记录类声明。 用户记录类 `CAuthorsNoAttrAccessor` 在模板声明中等于。 如果表类为 `CAuthors` ，则插入的用户记录类命名为 `CAuthorsAccessor` ，只能在注入的代码中查看其声明。 有关详细信息，请参阅 [用户记录](../../data/oledb/user-records.md)中的 "属性插入的用户记录类"。
 
-在特性化和模板化的代码中，必须使用 `CDBPropSet::AddProperty`设置行集属性。
+在特性化和模板化的代码中，必须使用设置行集属性 `CDBPropSet::AddProperty` 。
 
-有关本主题中讨论的属性的信息，请参阅[OLE DB 使用者属性](../../windows/ole-db-consumer-attributes.md)。
+有关本主题中讨论的属性的信息，请参阅 [OLE DB 使用者属性](../../windows/attributes/ole-db-consumer-attributes.md)。
 
 > [!NOTE]
-> 下面的 `include` 语句需要编译下面的示例：
+> 编译以下 `include` 示例需要以下语句：
 
 > ```cpp
 > #include <atlbase.h>
@@ -57,7 +57,7 @@ ms.locfileid: "79546175"
 
 ## <a name="table-and-accessor-declaration-using-attributes"></a>使用特性的表和访问器声明
 
-下面的代码对 table 类调用 `db_source` 和 `db_table`。 `db_source` 指定要使用的数据源和连接。 `db_table` 插入适当的模板代码以声明表类。 `db_column` 指定列映射并注入访问器声明。 可以在任何支持 ATL 的项目中使用 OLE DB 使用者属性。
+下面的代码对 `db_source` `db_table` table 类调用和。 `db_source` 指定要使用的数据源和连接。 `db_table` 注入适当的模板代码以声明表类。 `db_column` 指定列映射并注入访问器声明。 可以在任何支持 ATL 的项目中使用 OLE DB 使用者属性。
 
 下面是使用属性的表和访问器声明：
 
@@ -200,6 +200,6 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)
+[OLE DB 使用者属性](../../windows/attributes/ole-db-consumer-attributes.md)

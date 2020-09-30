@@ -3,12 +3,12 @@ title: Windows 运行时 C++ 模板库 (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 10e2303fa5498079fc1f9bb6f82aa909c9a6c3ee
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840527"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509795"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -32,7 +32,7 @@ Windows 运行时 c + + 模板库和 c + +/CX 提供不同的优点。 下面是
 - C + +/CX 将 COM HRESULT 值表示为异常。 如果继承了使用 COM 或不使用异常的基本代码，你可能会发现 Windows 运行时 c + + 模板库是使用 Windows 运行时的更自然的方式，因为你不必使用异常。
 
    > [!NOTE]
-   > Windows 运行时 c + + 模板库使用 HRESULT 值，不会引发异常。 此外，Windows 运行时 c + + 模板库使用智能指针和 RAII 模式，以帮助确保在应用程序代码引发异常时正确销毁对象。 有关智能指针和 RAII 的详细信息，请参阅 [智能指针](../../cpp/smart-pointers-modern-cpp.md) 和 [对象拥有 (RAII) 的资源 ](../../cpp/objects-own-resources-raii.md)。
+   > Windows 运行时 c + + 模板库使用 HRESULT 值，不会引发异常。 此外，Windows 运行时 c + + 模板库使用智能指针和 RAII 模式，以帮助确保在应用程序代码引发异常时正确销毁对象。 有关智能指针和 RAII 的详细信息，请参阅 [智能指针](../../cpp/smart-pointers-modern-cpp.md) 和 [对象拥有 (RAII) 的资源 ](../../cpp/object-lifetime-and-resource-management-modern-cpp.md)。
 
 - Windows 运行时 c + + 模板库的用途和设计是由活动模板库 (ATL) ，这是一组基于模板的 c + + 类，可以简化 COM 对象的编程。 由于 Windows 运行时 c + + 模板库使用标准 c + + 来包装 Windows 运行时，因此你可以更轻松地将用 ATL 编写的多个现有 COM 组件与 Windows 运行时进行端口和交互。 如果你已经知道 ATL，你可能会发现 Windows 运行时 c + + 模板库编程更容易。
 
@@ -76,7 +76,7 @@ Windows 运行时 c + + 模板库和 c + +/CX 提供不同的优点。 下面是
 [DirectX 大理石迷宫游戏示例](/samples/microsoft/windows-appsample-marble-maze/directx-marble-maze-game-sample/)<br/>
 演示如何使用 Windows 运行时 c + + 模板库来管理 COM 组件的生存期，如在整个三维游戏上下文中的 DirectX 和媒体基础。
 
-[来自桌面应用的 Toast 通知](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
+[桌面应用中的 Toast 通知](/windows/uwp/design/shell/tiles-and-notifications/toast-desktop-apps)<br/>
 演示如何从桌面应用发送 toast 通知。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>与 ATL 比较的 Windows 运行时 c + + 模板库
@@ -141,7 +141,7 @@ Windows 运行时 c + + 模板库提供了表示几个基本概念的类型。 �
 
 `WeakRef` 对象通常表示由外部线程或应用程序控制其存在性的对象。 例如， `WeakRef` 对象可以引用文件对象。 当文件打开时， `WeakRef` 有效，并且引用的文件可以访问。 当文件关闭时， `WeakRef` 无效，并且文件不可访问。
 
-## <a name="related-topics"></a>“相关主题”
+## <a name="related-topics"></a>相关主题
 
 [按类别列出的密钥 Api](key-wrl-apis-by-category.md)\
 突出显示主 Windows 运行时 c + + 模板库类型、函数和宏。

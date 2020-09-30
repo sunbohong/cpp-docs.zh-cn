@@ -7,12 +7,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 22e362170d645574b40070c6db39c2576d3ae9c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212938"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509439"
 ---
 # <a name="updating-rowsets"></a>更新行集合
 
@@ -20,18 +20,18 @@ ms.locfileid: "87212938"
 
 使用者可以对行集数据完成以下几种更新：设置行内的列值、插入行以及删除行。 为了完成这些操作，OLE DB 模板类 [CRowset](../../data/oledb/crowset-class.md) 实现 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85)) 接口，并重写以下接口方法：
 
-- [SetData](../../data/oledb/crowset-setdata.md)：更改行集中某一行内的列值；它相当于 SQL UPDATE 命令。
+- [SetData](./crowset-class.md#setdata)：更改行集中某一行内的列值；它相当于 SQL UPDATE 命令。
 
-- [Insert](../../data/oledb/crowset-insert.md)：在行集内插入行；它相当于 SQL INSERT 命令。
+- [Insert](./crowset-class.md#insert)：在行集内插入行；它相当于 SQL INSERT 命令。
 
-- [Delete](../../data/oledb/crowset-delete.md)：删除行集中的行；它相当于 SQL DELETE 命令。
+- [Delete](./crowset-class.md#delete)：删除行集中的行；它相当于 SQL DELETE 命令。
 
 ## <a name="supporting-update-operations"></a>支持更新操作
 
 > [!NOTE]
 > ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
 
-使用**ATL OLE DB 使用者向导**创建使用者时，可以通过选择 "**更改**"、"**插入**" 和 "**删除**" 三个复选框中的一个或多个来支持更新操作。 如果你选中这些选项，向导会将代码相应修改为支持你选择的更改类型。 不过，如果不使用向导，必须将以下行集属性设置为 `VARIANT_TRUE`，才能支持更新：
+使用 **ATL OLE DB 使用者向导**创建使用者时，可以通过选择 " **更改**"、" **插入**" 和 " **删除**" 三个复选框中的一个或多个来支持更新操作。 如果你选中这些选项，向导会将代码相应修改为支持你选择的更改类型。 不过，如果不使用向导，必须将以下行集属性设置为 `VARIANT_TRUE`，才能支持更新：
 
 - `DBPROPVAL_UP_CHANGE`：允许更改行内的数据值。
 
@@ -52,7 +52,7 @@ ps.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | 
 
 ## <a name="setting-data-in-rows"></a>设置行中的数据
 
-[CRowset::SetData](../../data/oledb/crowset-setdata.md) 可设置当前行中一列或多列的数据值。 下面的代码设置绑定到表 `Products` 中列 `Name` 和 `Units in Stock` 的数据成员的值，然后调用 `SetData` 将这些值写入行集的第 100 行：
+[CRowset::SetData](./crowset-class.md#setdata) 可设置当前行中一列或多列的数据值。 下面的代码设置绑定到表 `Products` 中列 `Name` 和 `Units in Stock` 的数据成员的值，然后调用 `SetData` 将这些值写入行集的第 100 行：
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -74,13 +74,13 @@ HRESULT hr = product.SetData();
 
 ## <a name="inserting-rows-into-rowsets"></a>在行集中插入行
 
-[CRowset::Insert](../../data/oledb/crowset-insert.md) 可使用取值函数中的数据创建并初始化新行。 `Insert` 在当前行后面创建一个全新的行；你需要指定是将当前行递增到下一行，还是保持原来位置不变。 通过设置 *bGetRow* 参数可以实现此操作：
+[CRowset::Insert](./crowset-class.md#insert) 可使用取值函数中的数据创建并初始化新行。 `Insert` 在当前行后面创建一个全新的行；你需要指定是将当前行递增到下一行，还是保持原来位置不变。 通过设置 *bGetRow* 参数可以实现此操作：
 
 ```cpp
 HRESULT Insert(int nAccessor = 0, bool bGetRow = false)
 ```
 
-- **`false`**（默认值）指定当前行递增到下一行（在这种情况下，它指向插入的行）。
+- **`false`** (默认值) 指定当前行增量与下一行 (，在这种情况下，它指向插入的行) 。
 
 - **`true`** 指定当前行保留在何处。
 
@@ -131,13 +131,13 @@ m_dwQuantityPerUnitLength = 10;        // "Pack of 10" has 10 characters
 HRESULT hr = product.Insert();
 ```
 
-有关更详细的示例，请参阅 [CRowset::Insert](../../data/oledb/crowset-insert.md)。
+有关更详细的示例，请参阅 [CRowset::Insert](./crowset-class.md#insert)。
 
 有关设置状态和长度数据成员的详细信息，请参阅 [向导生成的取值函数中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。
 
 ## <a name="deleting-rows-from-rowsets"></a>删除行集中的行
 
-[CRowset::Delete](../../data/oledb/crowset-delete.md) 可删除行集中的当前行。 下面的代码调用 `Delete` 来删除行集的第 100 行：
+[CRowset::Delete](./crowset-class.md#delete) 可删除行集中的当前行。 下面的代码调用 `Delete` 来删除行集的第 100 行：
 
 ```cpp
 // Instantiate a rowset based on the user record class
@@ -156,9 +156,9 @@ HRESULT hr = product.Delete();
 
 除非另有说明，否则调用 `SetData`、`Insert` 和 `Delete` 方法会立即更新数据存储。 但是，也可以延迟更新，以便使用者将所有更改存储到本地缓存中，然后在调用以下其中一种更新方法时将这些更改传输到数据存储区：
 
-- [CRowset::Update](../../data/oledb/crowset-update.md)：传输自上次提取或对它调用 `Update` 后，对当前行进行的任何挂起的更改。
+- [CRowset::Update](./crowset-class.md#update)：传输自上次提取或对它调用 `Update` 后，对当前行进行的任何挂起的更改。
 
-- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md)：传输自上次提取或对它调用 `Update` 后，对所有行进行的任何挂起的更改。
+- [CRowset::UpdateAll](./crowset-class.md#updateall)：传输自上次提取或对它调用 `Update` 后，对所有行进行的任何挂起的更改。
 
 更新方法中使用的 Update 对于更改命令有特定的含义，不要与 SQL UPDATE**** 命令混淆（`SetData` 相当于 SQL UPDATE**** 命令）。
 
@@ -204,9 +204,9 @@ product.Update();                 // Update row 101 now
 
 例如，如果上面的代码中缺少 `Update` 调用，那么第 100 行保持不变，而第 101 行则更改。 稍后，应用程序必须调用 `UpdateAll` 或移回第 100 行并调用 `Update`，才能更新此行。
 
-最后，延迟更改的一个重要原因是能够撤消更改。 调用 [CRowset::Undo](../../data/oledb/crowset-undo.md) 会将本地更改缓存的状态回滚到进行任何挂起的更改之前数据存储区的状态。 请务必注意，`Undo` 不会将本地存储的状态回滚一步（即仅在最新更改之前的状态），而是清除相应行的本地缓存。 此外，`Undo` 只影响当前行。
+最后，延迟更改的一个重要原因是能够撤消更改。 调用 [CRowset::Undo](./crowset-class.md#undo) 会将本地更改缓存的状态回滚到进行任何挂起的更改之前数据存储区的状态。 请务必注意，`Undo` 不会将本地存储的状态回滚一步（即仅在最新更改之前的状态），而是清除相应行的本地缓存。 此外，`Undo` 只影响当前行。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset 类](../../data/oledb/crowset-class.md)<br/>

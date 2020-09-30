@@ -15,19 +15,19 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209438"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509429"
 ---
 # <a name="user-records"></a>用户记录
 
 > [!NOTE]
 > ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
 
-使用者必须有用户记录，才能使用静态取值函数（即派生自 `CAccessor` 的取值函数）。 用户记录是 C++ 类，其中包含用于处理输入或输出的数据元素。 ATL OLE DB 使用者向导为使用者生成用户记录。 可以将方法添加到用户记录中，以执行处理命令等可选任务。
+使用者必须有用户记录，才能使用静态取值函数（即派生自 `CAccessor` 的取值函数）。 用户记录是 C++ 类，其中包含用于处理输入或输出的数据元素。 ATL OLE DB 使用者向导**** 为使用者生成用户记录。 可以将方法添加到用户记录中，以执行处理命令等可选任务。
 
 下面的代码展示了处理命令的示例记录。 在用户记录中，BEGIN_COLUMN_MAP 表示从提供程序传递给使用者的数据行集。 BEGIN_PARAM_MAP 表示一组命令参数。 此示例使用 [CCommand](../../data/oledb/ccommand-class.md) 类来处理命令参数。 映射条目中的数据成员表示类的每个实例在一个连续内存块中的偏移量。 COLUMN_ENTRY 宏对应于提供程序端的 PROVIDER_COLUMN_ENTRY 宏。
 
@@ -58,13 +58,13 @@ END_PARAM_MAP()
 
 ## <a name="wizard-generated-user-records"></a>向导生成的用户记录
 
-如果使用 ATL OLE DB 使用者向导生成使用者，可以选择是使用 OLE DB 模板，还是使用 OLE DB 特性。 生成的代码因具体情况而异。 若要详细了解此代码，请参阅[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。
+如果使用 ATL OLE DB 使用者向导**** 生成使用者，可以选择是使用 OLE DB 模板，还是使用 OLE DB 特性。 生成的代码因具体情况而异。 若要详细了解此代码，请参阅[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。
 
 ## <a name="user-record-support-for-multiple-accessors"></a>用户记录支持多个取值函数
 
 有关需要使用多个取值函数的情况的详细讨论，请参阅[对行集使用多个取值函数](../../data/oledb/using-multiple-accessors-on-a-rowset.md)。
 
-下面的示例展示了修改为支持对行集使用多个取值函数的用户记录。 它对每个取值函数使用 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) 和 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)，而不是 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP。 BEGIN_ACCESSOR 宏指定取值函数编号（从零开始的偏移量），以及取值函数是否为自动取值函数。 自动取值函数调用 `GetData`，以在调用 [MoveNext](../../data/oledb/crowset-movenext.md) 时自动检索数据。 非自动取值函数要求必须显式检索数据。 若要绑定到不建议为每条记录都检索数据的大型数据字段（如位图），请使用非自动取值函数。
+下面的示例展示了修改为支持对行集使用多个取值函数的用户记录。 它对每个取值函数使用 [BEGIN_ACCESSOR_MAP](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor_map) 和 [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor)，而不是 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP。 BEGIN_ACCESSOR 宏指定取值函数编号（从零开始的偏移量），以及取值函数是否为自动取值函数。 自动取值函数调用 `GetData`，以在调用 [MoveNext](./crowset-class.md#movenext) 时自动检索数据。 非自动取值函数要求必须显式检索数据。 若要绑定到不建议为每条记录都检索数据的大型数据字段（如位图），请使用非自动取值函数。
 
 ```cpp
 class CMultiArtists
@@ -88,6 +88,6 @@ END_ACCESSOR_MAP()
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

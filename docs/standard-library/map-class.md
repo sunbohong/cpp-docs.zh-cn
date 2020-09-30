@@ -91,12 +91,12 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-ms.openlocfilehash: ee98c7e694912d27585755f0ff29eafd0cdbdbca
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 44e73b422f10c63756c247fc7bbacd2f2de3235a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353098"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509673"
 ---
 # <a name="map-class"></a>map 类
 
@@ -114,7 +114,7 @@ template <class Key,
 class map;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要存储在中的键数据类型 `map` 。
@@ -248,7 +248,7 @@ Type& at(const Key& key);
 const Type& at(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 键 * \
 要查找的键值。
@@ -560,7 +560,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要从 map 中进行匹配的元素的键值。
@@ -629,7 +629,7 @@ bool contains(const Key& key) const;
 template<class K> bool contains(const K& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *温度*\
 键的类型。
@@ -645,7 +645,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
 
-`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。 有关详细信息，请参阅 [关联容器中的异类查找](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。 有关详细信息，请参阅 [关联容器中的异类查找](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 。
 
 ### <a name="example"></a>示例
 
@@ -667,7 +667,7 @@ int main()
     // call template function
     std::map<std::string, int, std::less<>> m2 = {{"ten", 10}, {"twenty", 20}, {"thirty", 30}};
     std::cout << m2.contains("ten");
-    
+
     return 0;
 }
 ```
@@ -848,7 +848,7 @@ emplace(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入到映射中的元素的转发自变量，除非它已包含其值具有相同排序的元素。
@@ -934,7 +934,7 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入到映射中的元素的转发自变量，除非该映射已包含该元素，或更普遍的情况是除非它已包含其键是等效排序的元素。
@@ -1077,7 +1077,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的映射中元素的排序键进行比较的参数键值。
@@ -1162,7 +1162,7 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *其中*\
 要移除的元素的位置。
@@ -1272,7 +1272,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要搜索的映射中的元素的排序键与之匹配的键值。
@@ -1457,7 +1457,7 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *初始值*\
 要插入到映射中的元素的值，除非它已包含其键具有等效排序的元素。
@@ -1737,7 +1737,7 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的映射中元素的排序键进行比较的参数键值。
@@ -1849,7 +1849,7 @@ map(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Fc-al*\
 要用于此 map 对象的存储分配器类，默认为 `Allocator`。
@@ -2064,7 +2064,7 @@ Type& operator[](const Key& key);
 Type& operator[](Key&& key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要插入的元素的键值。
@@ -2161,7 +2161,7 @@ map& operator=(const map& right);
 map& operator=(map&& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 要复制到 `map` 中的 [map](../standard-library/map-class.md)。
@@ -2529,7 +2529,7 @@ void swap(
     map<Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 参数 map，提供与目标 map 进行交换的元素。
@@ -2600,7 +2600,7 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的 map 中元素的排序键值进行比较的参数键值。
@@ -2790,7 +2790,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [存放](./stl-containers.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

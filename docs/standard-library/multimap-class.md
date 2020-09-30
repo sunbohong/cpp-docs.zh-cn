@@ -89,12 +89,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 446c1af793b885646dbb5658242e75482ebb92de
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 7399132553205080cc784de78630e30feb0700ba
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353189"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509933"
 ---
 # <a name="multimap-class"></a>multimap 类
 
@@ -110,7 +110,7 @@ template <class Key,
 class multimap;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要存储在多重映射中的键数据类型。
@@ -505,7 +505,7 @@ bool contains(const Key& key) const;
 template<class K> bool contains(const K& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *温度*\
 键的类型。
@@ -521,7 +521,7 @@ template<class K> bool contains(const K& key) const;
 
 `contains()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
 
-`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。 有关详细信息，请参阅 [关联容器中的异类查找](https://docs.microsoft.com/cpp/standard-library/stl-containers#heterogeneous-lookup-in-associative-containers-c14) 。
+`template<class K> bool contains(const K& key) const` 如果是透明的，则仅参与重载决策 `key_compare` 。 有关详细信息，请参阅 [关联容器中的异类查找](./stl-containers.md#heterogeneous-lookup-in-associative-containers-c14) 。
 
 ### <a name="example"></a>示例
 
@@ -543,7 +543,7 @@ int main()
     // call template function
     std::multimap<std::string, int, std::less<>> m2 = {{"ten", 10}, {"twenty", 20}, {"thirty", 30}};
     std::cout << m2.contains("ten");
-    
+
     return 0;
 }
 ```
@@ -562,7 +562,7 @@ true
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要从 multimap 中进行匹配的元素的键。
@@ -793,7 +793,7 @@ template <class... Args>
 iterator emplace(Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入到多重映射中的元素的转发参数。
@@ -862,7 +862,7 @@ iterator emplace_hint(
     Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入到多重映射中的元素的转发参数。
@@ -961,7 +961,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的多重元素中元素的排序键进行比较的参数键。
@@ -1048,7 +1048,7 @@ size_type erase(
     const key_type& Key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *其中*\
 要移除的元素的位置。
@@ -1082,7 +1082,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要搜索的多重映射中的元素的排序键匹配的键值。
@@ -1269,7 +1269,7 @@ void insert(
 IList);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *初始值*\
 要插入到多重映射中的元素的值。
@@ -1541,7 +1541,7 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的多重元素中元素的排序键进行比较的参数键。
@@ -1720,7 +1720,7 @@ multimap(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Fc-al*\
 要用于此多重映射对象的存储分配器类，默认为分配器。
@@ -1876,7 +1876,7 @@ multimap& operator=(const multimap& right);
 multimap& operator=(multimap&& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 正在复制到 `multimap` 的 [multimap](../standard-library/multimap-class.md)。
@@ -2244,7 +2244,7 @@ void swap(
     multimap<Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 多重映射提供要交换的元素或其元素要与多重映射 `left` 的元素进行交换。
@@ -2314,7 +2314,7 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要与当前搜索的多重元素中元素的排序键进行比较的参数键。
@@ -2515,7 +2515,7 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [存放](./stl-containers.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

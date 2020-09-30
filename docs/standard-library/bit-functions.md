@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::bit [C++], countr_zero
 - std::bit [C++], countr_one
 - std::bit [C++], popcount
-ms.openlocfilehash: a2408df9aa13c6e714f615561871397be17fc4a3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 94e44493b9356b3a0717c42aa1bed510ebe460dd
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039803"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509978"
 ---
 # <a name="ltbitgt-functions"></a>&lt;位 &gt; 函数
 
@@ -101,19 +101,22 @@ float f = inf
 std::bit_cat<int>(f) = 7f800000
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 低级别代码通常需要将一种类型的对象解释为另一种类型。 重新解释对象与原始对象具有相同的位表示形式，但它是不同的类型。
 
 不使用 `reinterpret_cast` 或 `memcpy()` ， `bit_cast()` 是进行这些转换的更好方法。 更好的原因是：
-- `bit_cast()` 为 `constexpr`
+
+- `bit_cast()` 是 `constexpr`
 - `bit_cast()` 要求完全复制和大小相同的类型。 这会阻止你使用和可能遇到的潜在问题， `reinterpret_cast` `memcpy` 因为这些问题可能会被错误地用于转换非完全复制类型。 此外，还可 `memcpy()` 用于在不相同大小的类型之间进行意外复制。 例如，double (8 字节) 为无符号 int (4 个字节) ，或其他方法。
 
 此重载仅在以下情况下参与重载决策：
--  `sizeof(To) == sizeof(From)`
+
+- `sizeof(To) == sizeof(From)`
 - `To` 和 `From` 是 [is_trivially_copyable](is-trivially-copyable-class.md)。
 
 `constexpr`当且仅当 `To` 、和子其子 `From` 类型的类型为时，此函数模板为：
+
 - 不是联合或指针类型
 - 不是指向成员类型的指针
 - 非易失性
@@ -165,7 +168,7 @@ bit_ceil(0b0100) = 0b0100
 bit_ceil(0b0101) = 0b1000
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
@@ -216,7 +219,7 @@ bit_floor(0b0100) = 0b0100
 bit_floor(0b0101) = 0b0100
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
@@ -270,7 +273,7 @@ bit_width(7) = 3
 bit_width(8) = 4
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
@@ -323,7 +326,7 @@ countl_zero(0b01000000) = 1
 countl_zero(0b10000000) = 0
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
@@ -376,7 +379,7 @@ countl_one(0b11111110) = 7
 countl_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
@@ -430,7 +433,7 @@ countr_zero(0b01000000) = 6
 countr_zero(0b10000000) = 7
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
@@ -483,14 +486,14 @@ countr_one(0b01111111) = 7
 countr_one(0b11111111) = 8
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
 ## <a name="has_single_bit"></a>`has_single_bit`
 
 检查某个值是否仅设置了一个位。这与测试值是否为2的幂相同。
- 
+
 ```cpp
 template <class T>
 [[nodiscard]] constexpr bool has_single_bit(T value) noexcept;
@@ -537,14 +540,14 @@ has_single_bit(0b1000) = true
 has_single_bit(0b1001) = false
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
 ## <a name="popcount"></a>`popcount`
 
 计算在无符号整数值中设置为1的位的数目。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr int popcount(T value) noexcept;
@@ -596,14 +599,14 @@ popcount(0b1110) = 3
 popcount(0b1111) = 4
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
 ## <a name="rotl"></a>`rotl`
 
 将无符号整数值的位数向左旋转指定的次数。 最左侧的位的 "过时" 位会旋转到最右侧。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotl(T value, int s) noexcept;
@@ -658,14 +661,14 @@ rotl(0b10000000, 1) = 0b00000001
 rotl(0b00000001,-1) = 0b10000000
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
 ## <a name="rotr"></a>`rotr`
 
 将右侧的位数旋转 `value` 指定的次数。 最右边的位的 "过时" 位会旋转回最左端的位。
- 
+
 ```cpp
 template<class T>
 [[nodiscard]] constexpr T rotr(T value, int s) noexcept;
@@ -720,7 +723,7 @@ rotr(0b00000001, 1) = 0b10000000
 rotr(0b10000000,-1) = 0b00000001
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果 `T` 是无符号整数类型，则此模板函数仅参与重载决策。 例如： `unsigned int` 、、 `unsigned long` 、 `unsigned short` 等 `unsigned char` 。
 
@@ -732,6 +735,6 @@ rotr(0b10000000,-1) = 0b00000001
 
 [/std：需要 c + + 最新版本](../build/reference/std-specify-language-standard-version.md) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<bit>](bit.md)

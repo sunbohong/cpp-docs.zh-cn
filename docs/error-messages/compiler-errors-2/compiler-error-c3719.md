@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
-ms.openlocfilehash: 4fca5bfd944514bf2658a8af5cbbd58efe5b39fc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 9dce5fad3b38b0b0b396ff036f437af90e3e6d38
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753180"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510087"
 ---
 # <a name="compiler-error-c3719"></a>编译器错误 C3719
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-若要修复此错误，请适当地应用[对象](../../windows/object-cpp.md)、 [coclass](../../windows/coclass.md)、 [event_source](../../windows/event-source.md)和[EVENT_RECEIVER](../../windows/event-receiver.md)属性，以使使用接口 COM 类的类。 例如：
+若要修复此错误，请适当地应用 [对象](../../windows/attributes/object-cpp.md)、 [coclass](../../windows/attributes/coclass.md)、 [event_source](../../windows/attributes/event-source.md)和 [EVENT_RECEIVER](../../windows/attributes/event-receiver.md) 属性，以使使用接口 COM 类的类。 例如：
 
 ```cpp
 // C3719b.cpp

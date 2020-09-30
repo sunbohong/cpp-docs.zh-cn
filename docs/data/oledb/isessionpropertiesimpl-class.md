@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 57a94ccd8ee3871742e9c8360c56381f85053380
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d664f32226498326ffb092f1d3248fbdbf614d50
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844829"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509767"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl 类
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 
 ## <a name="remarks"></a>注解
 
-会话上的必需接口。 此类通过调用由 [属性集映射](../../data/oledb/begin-propset-map.md)定义的静态函数来实现会话属性。 应在会话类中指定属性集映射。
+会话上的必需接口。 此类通过调用由 [属性集映射](./macros-for-ole-db-provider-templates.md#begin_propset_map)定义的静态函数来实现会话属性。 应在会话类中指定属性集映射。
 
 ## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a> ISessionPropertiesImpl：： GetProperties
 
@@ -89,7 +89,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 请参阅*OLE DB 程序员参考*中的[ISessionProperties：： SetProperties](/previous-versions/windows/desktop/ms714405(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

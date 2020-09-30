@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209698"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509488"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>架构行集类和 Typedef 类
 
@@ -561,7 +561,7 @@ ms.locfileid: "80209698"
 
 架构行集是表示元数据的预定义行集。 架构行集通常用于动态编程，其中数据库结构在编译时是未知的。 您可以使用这些架构行集在运行时获取有关数据库的信息。
 
-使用 typedef 类实例化架构行集。 下面列出了相应的 typedef 和架构行集类。 创建架构行集的实例后，必须调用[CRestrictions：： Open](../../data/oledb/crestrictions-open.md) 。 此方法返回基于您指定的限制的结果集。 有关与每个架构行集相关联的限制列的信息，请参阅[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
+使用 typedef 类实例化架构行集。 下面列出了相应的 typedef 和架构行集类。 创建架构行集的实例后，必须调用 [CRestrictions：： Open](./crestrictions-class.md#open) 。 此方法返回基于您指定的限制的结果集。 有关与每个架构行集相关联的限制列的信息，请参阅 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
 下表显示了每个 OLE DB 架构行集及其对应的 OLE DB 模板 typedef 类和信息类。
 
@@ -588,7 +588,7 @@ ms.locfileid: "80209698"
 |[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
 |[SCHEMATA](/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
 |[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[STATISTICS](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
+|[标识](/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
 |[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
 |[TABLES](/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
 |[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
@@ -598,17 +598,17 @@ ms.locfileid: "80209698"
 |[VIEWS](/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
 |[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
-## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a>CAssertions、CAssertionInfo
+## <a name="cassertions-cassertioninfo"></a><a name="assertion"></a> CAssertions、CAssertionInfo
 
-调用 typedef 类 `CAssertions` 以实现其参数类 `CAssertionInfo`。
+调用 typedef 类 `CAssertions` 以实现其参数类 `CAssertionInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的断言。
 
-下表列出了 `CAssertionInfo` 的类数据成员及其相应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[断言行集](/previous-versions/windows/desktop/ms719776(v=vs.85))。
+下表列出了的类数据成员 `CAssertionInfo` 及其相应 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[断言行集](/previous-versions/windows/desktop/ms719776(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -619,13 +619,13 @@ ms.locfileid: "80209698"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>CCatalogs、CCatalogInfo
+## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a> CCatalogs、CCatalogInfo
 
-调用 typedef 类 `CCatalogs` 以实现其参数类 `CCatalogInfo`。
+调用 typedef 类 `CCatalogs` 以实现其参数类 `CCatalogInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识与可从 DBMS 访问的目录关联的物理特性。
 
@@ -636,13 +636,13 @@ ms.locfileid: "80209698"
 |m_szName|CATALOG_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>CCharacterSets、CCharacterSetInfo
+## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a> CCharacterSets、CCharacterSetInfo
 
-调用 typedef 类 `CCharacterSets` 以实现其参数类 `CCharacterSetInfo`。
+调用 typedef 类 `CCharacterSets` 以实现其参数类 `CCharacterSetInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类将标识在可供特定用户访问的目录中定义的字符集。
 
@@ -659,13 +659,13 @@ ms.locfileid: "80209698"
 |m_szCollateSchema|DEFAULT_COLLATE_SCHEMA|
 |m_szCollateName|DEFAULT_COLLATE_NAME|
 
-## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a>CCheckConstraints、CCheckConstraintInfo
+## <a name="ccheckconstraints-ccheckconstraintinfo"></a><a name="checkconstraint"></a> CCheckConstraints、CCheckConstraintInfo
 
-调用 typedef 类 `CCheckConstraints` 以实现其参数类 `CCheckConstraintInfo`。
+调用 typedef 类 `CCheckConstraints` 以实现其参数类 `CCheckConstraintInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的 check 约束。 Check 约束指定表中的一个或多个列中可接受的数据值或格式。
 
@@ -679,13 +679,13 @@ ms.locfileid: "80209698"
 |m_szCheckClause|CHECK_CLAUSE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>CCollations、CCollationInfo
+## <a name="ccollations-ccollationinfo"></a><a name="collation"></a> CCollations、CCollationInfo
 
-调用 typedef 类 `CCollations` 以实现其参数类 `CCollationInfo`。
+调用 typedef 类 `CCollations` 以实现其参数类 `CCollationInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的字符排序规则。
 
@@ -701,13 +701,13 @@ ms.locfileid: "80209698"
 |m_szCharSetName|CHARACTER_SET_NAME|
 |m_szPadAttribute|PAD_ATTRIBUTE|
 
-## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a>CColumnDomainUsage、CColumnDomainUsageInfo
+## <a name="ccolumndomainusage-ccolumndomainusageinfo"></a><a name="columndomainusage"></a> CColumnDomainUsage、CColumnDomainUsageInfo
 
-调用 typedef 类 `CColumnDomainUsage` 以实现其参数类 `CColumnDomainUsageInfo`。
+调用 typedef 类 `CColumnDomainUsage` 以实现其参数类 `CColumnDomainUsageInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、依赖于在目录中定义并由给定用户拥有的域的列。
 
@@ -725,13 +725,13 @@ ms.locfileid: "80209698"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a>CColumnPrivileges、CColumnPrivilegeInfo
+## <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a><a name="columnprivilege"></a> CColumnPrivileges、CColumnPrivilegeInfo
 
-调用 typedef 类 `CColumnPrivileges` 以实现其参数类 `CColumnPrivilegeInfo`。
+调用 typedef 类 `CColumnPrivileges` 以实现其参数类 `CColumnPrivilegeInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、可供给定用户或授予的对表的列的特权。
 
@@ -750,13 +750,13 @@ ms.locfileid: "80209698"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a>CColumns、CColumnsInfo
+## <a name="ccolumns-ccolumnsinfo"></a><a name="columns"></a> CColumns、CColumnsInfo
 
-调用 typedef 类 `CColumns` 以实现其参数类 `CColumnsInfo`。
+调用 typedef 类 `CColumns` 以实现其参数类 `CColumnsInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的表的列。
 
@@ -793,13 +793,13 @@ ms.locfileid: "80209698"
 |m_szDomainName|DOMAIN_NAME|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>CConstraintColumnUsage、CConstraintColumnUsageInfo
+## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a> CConstraintColumnUsage、CConstraintColumnUsageInfo
 
-调用 typedef 类 `CConstraintColumnUsage` 以实现其参数类 `CConstraintColumnUsageInfo`。
+调用 typedef 类 `CConstraintColumnUsage` 以实现其参数类 `CConstraintColumnUsageInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识引用约束、唯一约束、check 约束和断言使用的、在目录中定义并由给定用户拥有的列。
 
@@ -817,13 +817,13 @@ ms.locfileid: "80209698"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a>CConstraintTableUsage、CConstraintTableUsageInfo
+## <a name="cconstrainttableusage-cconstrainttableusageinfo"></a><a name="constrainttableusage"></a> CConstraintTableUsage、CConstraintTableUsageInfo
 
-调用 typedef 类 `CConstraintTableUsage` 以实现其参数类 `CConstraintTableUsageInfo`。
+调用 typedef 类 `CConstraintTableUsage` 以实现其参数类 `CConstraintTableUsageInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识引用约束、唯一约束、check 约束和断言使用的、在目录中定义并由给定用户拥有的表。
 
@@ -838,13 +838,13 @@ ms.locfileid: "80209698"
 |m_szConstraintSchema|CONSTRAINT_SCHEMA|
 |m_szConstraintName|CONSTRAINT_NAME|
 
-## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a>CForeignKeys、CForeignKeysInfo
+## <a name="cforeignkeys-cforeignkeysinfo"></a><a name="foreignkeys"></a> CForeignKeys、CForeignKeysInfo
 
-调用 typedef 类 `CForeignKeys` 以实现其参数类 `CForeignKeysInfo`。
+调用 typedef 类 `CForeignKeys` 以实现其参数类 `CForeignKeysInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识给定用户在目录中定义的外键列。
 
@@ -868,13 +868,13 @@ ms.locfileid: "80209698"
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
 
-## <a name="cindexes-cindexinfo"></a><a name="index"></a>CIndexes、CIndexInfo
+## <a name="cindexes-cindexinfo"></a><a name="index"></a> CIndexes、CIndexInfo
 
-调用 typedef 类 `CIndexes` 以实现其参数类 `CIndexInfo`。
+调用 typedef 类 `CIndexes` 以实现其参数类 `CIndexInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的索引。
 
@@ -891,7 +891,7 @@ ms.locfileid: "80209698"
 |m_bPrimaryKey|PRIMARY_KEY|
 |m_bUnique|UNIQUE|
 |m_bClustered|CLUSTERED|
-|m_nType|类型|
+|m_nType|TYPE|
 |m_nFillFactor|FILL_FACTOR|
 |m_nInitialSize|INITIAL_SIZE|
 |m_nNulls|NULLS|
@@ -907,13 +907,13 @@ ms.locfileid: "80209698"
 |m_nPages|PAGES|
 |m_szFilterCondition|FILTER_CONDITION|
 
-## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a>CKeyColumns、CKeyColumnInfo
+## <a name="ckeycolumns-ckeycolumninfo"></a><a name="keycolumn"></a> CKeyColumns、CKeyColumnInfo
 
-调用 typedef 类 `CKeyColumns` 以实现其参数类 `CKeyColumnInfo`。
+调用 typedef 类 `CKeyColumns` 以实现其参数类 `CKeyColumnInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、由给定用户约束为键的列。
 
@@ -932,13 +932,13 @@ ms.locfileid: "80209698"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinalPosition|ORDINAL_POSITION|
 
-## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a>CPrimaryKeys、CPrimaryKeyInfo
+## <a name="cprimarykeys-cprimarykeyinfo"></a><a name="primarykey"></a> CPrimaryKeys、CPrimaryKeyInfo
 
-调用 typedef 类 `CPrimaryKeys` 以实现其参数类 `CPrimaryKeyInfo`。
+调用 typedef 类 `CPrimaryKeys` 以实现其参数类 `CPrimaryKeyInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识给定用户在目录中定义的主键列。
 
@@ -954,13 +954,13 @@ ms.locfileid: "80209698"
 |m_nColumnPropID|COLUMN_PROPID|
 |m_nOrdinal|序号|
 
-## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a>CProcedureColumns、CProcedureColumnInfo
+## <a name="cprocedurecolumns-cprocedurecolumninfo"></a><a name="procedurecolumn"></a> CProcedureColumns、CProcedureColumnInfo
 
-调用 typedef 类 `CProcedureColumns` 以实现其参数类 `CProcedureColumnInfo`。
+调用 typedef 类 `CProcedureColumns` 以实现其参数类 `CProcedureColumnInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类返回有关由过程返回的行集的列的信息。
 
@@ -985,13 +985,13 @@ ms.locfileid: "80209698"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>CProcedureParameters CProcedureParamInfo
+## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
 
-调用 typedef 类 `CProcedureParameters` 以实现其参数类 `CProcedureParamInfo`。
+调用 typedef 类 `CProcedureParameters` 以实现其参数类 `CProcedureParamInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类返回有关过程的参数和返回代码的信息。
 
@@ -1015,13 +1015,13 @@ ms.locfileid: "80209698"
 |m_nScale|NUMERIC_SCALE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>CProcedures、CProcedureInfo
+## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a> CProcedures、CProcedureInfo
 
-调用 typedef 类 `CProcedures` 以实现其参数类 `CProcedureInfo`。
+调用 typedef 类 `CProcedures` 以实现其参数类 `CProcedureInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、由给定用户拥有的过程。
 
@@ -1036,15 +1036,15 @@ ms.locfileid: "80209698"
 |m_szDefinition|PROCEDURE_DEFINITION|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>CProviderTypes、CProviderInfo
+## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a> CProviderTypes、CProviderInfo
 
-调用 typedef 类 `CProviderTypes` 以实现其参数类 `CProviderInfo`。
+调用 typedef 类 `CProviderTypes` 以实现其参数类 `CProviderInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
-此类标识数据提供程序支持的数据类型（基）。
+此类标识数据提供程序支持的 (基) 数据类型。
 
 下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[PROVIDER_TYPES 行集](/previous-versions/windows/desktop/ms709785(v=vs.85))。
 
@@ -1071,13 +1071,13 @@ ms.locfileid: "80209698"
 |m_bIsLong|IS_LONG|
 |m_bBestMatch|BEST_MATCH|
 
-## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a>CReferentialConstraints、CReferentialConstraintInfo
+## <a name="creferentialconstraints-creferentialconstraintinfo"></a><a name="referentialconstraint"></a> CReferentialConstraints、CReferentialConstraintInfo
 
-调用 typedef 类 `CReferentialConstraints` 以实现其参数类 `CReferentialConstraintInfo`。
+调用 typedef 类 `CReferentialConstraints` 以实现其参数类 `CReferentialConstraintInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的引用约束。
 
@@ -1096,13 +1096,13 @@ ms.locfileid: "80209698"
 |m_szDeleteRule|DELETE_RULE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>CSchemata、CSchemataInfo
+## <a name="cschemata-cschematainfo"></a><a name="schemata"></a> CSchemata、CSchemataInfo
 
-调用 typedef 类 `CSchemata` 以实现其参数类 `CSchemataInfo`。
+调用 typedef 类 `CSchemata` 以实现其参数类 `CSchemataInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识给定用户拥有的架构。
 
@@ -1117,13 +1117,13 @@ ms.locfileid: "80209698"
 |m_szCharSchema|DEFAULT_CHARACTER_SET_SCHEMA|
 |m_szCharName|DEFAULT_CHARACTER_SET_NAME|
 
-## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a>CSQLLanguages、CSQLLanguageInfo
+## <a name="csqllanguages-csqllanguageinfo"></a><a name="sqllanguage"></a> CSQLLanguages、CSQLLanguageInfo
 
-调用 typedef 类 `CSQLLanguages` 以实现其参数类 `CSQLLanguageInfo`。
+调用 typedef 类 `CSQLLanguages` 以实现其参数类 `CSQLLanguageInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的 SQL 实现处理数据所支持的一致性级别、选项和方言。
 
@@ -1139,13 +1139,13 @@ ms.locfileid: "80209698"
 |m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|
 |m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|
 
-## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a>CStatistics、CStatisticInfo
+## <a name="cstatistics-cstatisticinfo"></a><a name="statistic"></a> CStatistics、CStatisticInfo
 
-调用 typedef 类 `CStatistics` 以实现其参数类 `CStatisticInfo`。
+调用 typedef 类 `CStatistics` 以实现其参数类 `CStatisticInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、由给定用户拥有的统计信息。
 
@@ -1158,13 +1158,13 @@ ms.locfileid: "80209698"
 |m_szTableName|TABLE_NAME|
 |m_nCardinality|CARDINALITY|
 
-## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a>CTableConstraints、CTableConstraintInfo
+## <a name="ctableconstraints-ctableconstraintinfo"></a><a name="tableconstraint"></a> CTableConstraints、CTableConstraintInfo
 
-调用 typedef 类 `CTableConstraints` 以实现其参数类 `CTableConstraintInfo`。
+调用 typedef 类 `CTableConstraints` 以实现其参数类 `CTableConstraintInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的表约束。
 
@@ -1183,13 +1183,13 @@ ms.locfileid: "80209698"
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>CTablePrivileges、CTablePrivilegeInfo
+## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a> CTablePrivileges、CTablePrivilegeInfo
 
-调用 typedef 类 `CTablePrivileges` 以实现其参数类 `CTablePrivilegeInfo`。
+调用 typedef 类 `CTablePrivileges` 以实现其参数类 `CTablePrivilegeInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的表。
 
@@ -1205,13 +1205,13 @@ ms.locfileid: "80209698"
 |m_szType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="ctables-ctableinfo"></a><a name="table"></a>CTables、CTableInfo
+## <a name="ctables-ctableinfo"></a><a name="table"></a> CTables、CTableInfo
 
-调用 typedef 类 `CTables` 以实现其参数类 `CTableInfo`。
+调用 typedef 类 `CTables` 以实现其参数类 `CTableInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、可供给定用户或授予的对表的特权。
 
@@ -1226,13 +1226,13 @@ ms.locfileid: "80209698"
 |m_guidTable|TABLE_GUID|
 |m_szDescription|DESCRIPTION|
 
-## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>CTranslations、CTranslationInfo
+## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a> CTranslations、CTranslationInfo
 
-调用 typedef 类 `CTranslations` 以实现其参数类 `CTranslationInfo`。
+调用 typedef 类 `CTranslations` 以实现其参数类 `CTranslationInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的字符转换。
 
@@ -1250,13 +1250,13 @@ ms.locfileid: "80209698"
 |m_szTargetSchema|TARGET_CHARACTER_SET_SCHEMA|
 |m_szTargetName|TARGET_CHARACTER_SET_NAME|
 
-## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a>CUsagePrivileges、CUsagePrivilegeInfo
+## <a name="cusageprivileges-cusageprivilegeinfo"></a><a name="usageprivilege"></a> CUsagePrivileges、CUsagePrivilegeInfo
 
-调用 typedef 类 `CUsagePrivileges` 以实现其参数类 `CUsagePrivilegeInfo`。
+调用 typedef 类 `CUsagePrivileges` 以实现其参数类 `CUsagePrivilegeInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可使用或授予的对象的使用权限。
 
@@ -1273,13 +1273,13 @@ ms.locfileid: "80209698"
 |m_szPrivilegeType|PRIVILEGE_TYPE|
 |m_bIsGrantable|IS_GRANTABLE|
 
-## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a>CViewColumnUsage、CViewColumnInfo
+## <a name="cviewcolumnusage-cviewcolumninfo"></a><a name="viewcolumn"></a> CViewColumnUsage、CViewColumnInfo
 
-调用 typedef 类 `CViewColumnUsage` 以实现其参数类 `CViewColumnInfo`。
+调用 typedef 类 `CViewColumnUsage` 以实现其参数类 `CViewColumnInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义并由给定用户拥有的已查看的表所依赖的列。
 
@@ -1297,13 +1297,13 @@ ms.locfileid: "80209698"
 |m_guidColumn|COLUMN_GUID|
 |m_nColumnPropID|COLUMN_PROPID|
 
-## <a name="cviews-cviewinfo"></a><a name="view"></a>CViews、CViewInfo
+## <a name="cviews-cviewinfo"></a><a name="view"></a> CViews、CViewInfo
 
-调用 typedef 类 `CViews` 以实现其参数类 `CViewInfo`。
+调用 typedef 类 `CViews` 以实现其参数类 `CViewInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识已查看的表、在目录中定义并由给定用户拥有的表。
 
@@ -1319,13 +1319,13 @@ ms.locfileid: "80209698"
 |m_bIsUpdatable|IS_UPDATABLE|
 |m_szDescription|DESCRIPTION|
 
-## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>CViewTableUsage、CViewTableInfo
+## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a> CViewTableUsage、CViewTableInfo
 
-调用 typedef 类 `CViewTableUsage` 以实现其参数类 `CViewTableInfo`。
+调用 typedef 类 `CViewTableUsage` 以实现其参数类 `CViewTableInfo` 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-有关使用 Typedef 类的详细信息，请参阅[架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)。
+有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的已查看表。
 
@@ -1344,6 +1344,6 @@ ms.locfileid: "80209698"
 
 **标头：** atldbsch。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CRestrictions 类](../../data/oledb/crestrictions-class.md)

@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 118b8d09b90899eca0f257e319aabbefd92f359f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838395"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509109"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 类
 
@@ -108,12 +108,12 @@ class CDataConnection
 
 `CDataConnection` 用于创建客户端的有用类，因为它封装了必需的对象 (数据源和会话) 以及连接到数据源时需要执行的一些工作
 
-`CDataConnection`如果没有，必须创建 `CDataSource` 对象，调用其[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)方法，然后创建[CSession](../../data/oledb/csession-class.md)对象的实例，调用其[Open](../../data/oledb/csession-open.md)方法，然后创建[CCommand](../../data/oledb/ccommand-class.md)对象并调用其 `Open` * 方法。
+`CDataConnection`如果没有，必须创建 `CDataSource` 对象，调用其[OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring)方法，然后创建[CSession](../../data/oledb/csession-class.md)对象的实例，调用其[Open](./csession-class.md#open)方法，然后创建[CCommand](../../data/oledb/ccommand-class.md)对象并调用其 `Open` * 方法。
 
 对于 `CDataConnection` ，你只需创建一个连接对象，向其传递一个初始化字符串，然后使用该连接打开命令。 如果你计划重复使用与数据库的连接，最好保持连接处于打开状态，并 `CDataConnection` 提供一种简便的方法来实现此目的。
 
 > [!NOTE]
-> 如果要创建的数据库应用程序需要处理多个会话，则需要使用 [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。
+> 如果要创建的数据库应用程序需要处理多个会话，则需要使用 [OpenNewSession](#opennewsession)。
 
 ## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a> CDataConnection：： CDataConnection
 
@@ -258,7 +258,7 @@ operator const CDataSource*() throw();
 
 此运算符将返回指向包含的 `CDataSource` 对象的指针，允许您传递 `CDataConnection` 对象（其中需要 `CDataSource` 指针）。
 
-有关使用示例，请参阅 [Operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) 。
+有关使用示例，请参阅 [Operator CDataSource&](#op_cdata_amp) 。
 
 ## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a> CDataConnection：： operator CSession&amp;
 
@@ -298,9 +298,9 @@ operator const CSession*() throw();
 
 ### <a name="example"></a>示例
 
-有关使用示例，请参阅 [Operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md) 。
+有关使用示例，请参阅 [Operator CSession&](#op_csession_amp) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

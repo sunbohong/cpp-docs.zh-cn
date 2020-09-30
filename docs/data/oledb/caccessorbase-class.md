@@ -25,12 +25,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: eff7eff855bcccefee7e051c67d583d28e488293
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843295"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509111"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
 
@@ -70,7 +70,7 @@ void Close();
 
 ### <a name="remarks"></a>备注
 
-必须先调用 [ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md) 。
+必须先调用 [ReleaseAccessors](#release) 。
 
 ## <a name="caccessorbasegethaccessor"></a><a name="geth"></a> CAccessorBase：： GetHAccessor
 
@@ -145,9 +145,9 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 ### <a name="remarks"></a>注解
 
-从 [CAccessorRowset：： Close](../../data/oledb/caccessorrowset-close.md)调用。
+从 [CAccessorRowset：： Close](./caccessorrowset-class.md#close)调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

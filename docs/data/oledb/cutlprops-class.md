@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 46fa266c5a8328bbcf7cfd1257ce1ff3e38ed2bb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845661"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509090"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 类
 
@@ -72,9 +72,9 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 此类的大部分是实现详细信息。
 
-`CUtlProps` 包含两个成员，用于内部设置属性： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) 和 [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。
+`CUtlProps` 包含两个成员，用于内部设置属性： [GetPropValue](#getpropvalue) 和 [SetPropValue](#setpropvalue)。
 
-有关在属性集映射中使用的宏的详细信息，请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 和 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。
+有关在属性集映射中使用的宏的详细信息，请参阅 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) 和 [END_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#end_propset_map)。
 
 ## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a> CUtlProps：： GetPropValue
 
@@ -163,7 +163,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 - `IRowsetScroll`
 
-如果要处理其他接口，请在数据源、会话、命令或行集类中重写此函数以处理函数。 重写应通过常规 set/get properties 接口，以确保设置属性还设置任何链接的属性 (参阅 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)) 。
+如果要处理其他接口，请在数据源、会话、命令或行集类中重写此函数以处理函数。 重写应通过常规 set/get properties 接口，以确保设置属性还设置任何链接的属性 (参阅 [OnPropertyChanged](#onpropertychanged)) 。
 
 ## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a> CUtlProps：： OnPropertyChanged
 
@@ -225,7 +225,7 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 
 `Failure` 如果失败，S_OK 成功。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

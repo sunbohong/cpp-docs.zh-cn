@@ -4,12 +4,12 @@ ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 9e93b40313a215dfe5872b33dc7d41641204a2f1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "79544704"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508977"
 ---
 # <a name="implementing-a-simple-consumer"></a>实现简单使用者
 
@@ -21,7 +21,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker range="<=vs-2017"
 
-下面各主题介绍了如何通过编辑 MFC 应用程序向导和 ATL OLE DB 使用者向导创建的文件来创建简单使用者。 此示例包含以下部分：
+下面各主题介绍了如何通过编辑 MFC 应用程序向导**** 和 ATL OLE DB 使用者向导**** 创建的文件来创建简单使用者。 此示例包含以下部分：
 
 - [通过使用者检索数据](#retrieve)展示了如何在使用者中实现从数据库表中逐行读取所有数据的代码。
 
@@ -72,7 +72,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 - 通过设置 `DBPROP_IRowsetLocate` 属性，从提供程序请求获取书签列。
 
-- 使用 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) 宏将书签条目添加到列映射中。
+- 使用 [BOOKMARK_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#bookmark_entry) 宏将书签条目添加到列映射中。
 
 执行上面的步骤可以获取书签支持，以及要处理的书签对象。 此代码示例展示了书签，如下所示：
 
@@ -80,7 +80,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 - 将行集数据逐行输出到文件行。
 
-- 通过调用 [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)，将行集光标移到书签。
+- 通过调用 [MoveToBookmark](./crowset-class.md#movetobookmark)，将行集光标移到书签。
 
 - 输出已添加书签的行，同时将它追加到文件末尾。
 
@@ -89,7 +89,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ### <a name="to-instantiate-the-bookmark"></a>实例化书签的具体步骤
 
-1. 取值函数需要保留 [CBookmark](../../data/oledb/cbookmark-class.md) 类型的对象。 nSize 参数以字节为单位指定书签缓冲区的大小（对于 32 位平台，通常为 4 字节；对于 64 位平台，通常为 8 字节）。 将以下声明添加到用户记录类中的列数据成员：
+1. 取值函数需要保留 [CBookmark](../../data/oledb/cbookmark-class.md) 类型的对象。 nSize** 参数以字节为单位指定书签缓冲区的大小（对于 32 位平台，通常为 4 字节；对于 64 位平台，通常为 8 字节）。 将以下声明添加到用户记录类中的列数据成员：
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -205,6 +205,6 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

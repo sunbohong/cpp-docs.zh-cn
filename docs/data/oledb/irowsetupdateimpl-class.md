@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 7a63062a02ebcc6c8a89fadceb36dc81bc9af88c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844920"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509775"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 类
 
@@ -116,7 +116,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetPendingRows](#getpendingrows)|返回具有挂起更改的行的列表。|
 |[GetRowStatus](#getrowstatus)|返回指定行的状态。|
 |[撤消](#undo)|撤消上次提取或更新后对行所做的任何更改。|
-|[更新](#update)|传输自上次提取或更新以来对行所做的任何更改。|
+|[Update](#update)|传输自上次提取或更新以来对行所做的任何更改。|
 
 ### <a name="implementation-methods-callback"></a>实现方法 (回调) 
 
@@ -163,7 +163,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 ### <a name="remarks"></a>注解
 
-此方法重写 [IRowsetChangeImpl：： SetData](../../data/oledb/irowsetchangeimpl-setdata.md) 方法，但包括对原始数据进行缓存，以允许立即或延迟处理操作。
+此方法重写 [IRowsetChangeImpl：： SetData](./irowsetchangeimpl-class.md#setdata) 方法，但包括对原始数据进行缓存，以允许立即或延迟处理操作。
 
 ## <a name="irowsetupdateimplgetoriginaldata"></a><a name="getoriginaldata"></a> IRowsetUpdateImpl：： GetOriginalData
 
@@ -278,7 +278,7 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 
 ### <a name="remarks"></a>注解
 
-通过调用 [IRowsetChangeImpl：： FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)传输更改。 使用者必须调用 [CRowset：： Update](../../data/oledb/crowset-update.md) 才能使所做的更改生效。 将*prgRowstatus*设置为相应的值，如*OLE DB 程序员参考*中的[行状态](/previous-versions/windows/desktop/ms722752(v=vs.85))中所述。
+通过调用 [IRowsetChangeImpl：： FlushData](./irowsetchangeimpl-class.md#flushdata)传输更改。 使用者必须调用 [CRowset：： Update](./crowset-class.md#update) 才能使所做的更改生效。 将*prgRowstatus*设置为相应的值，如*OLE DB 程序员参考*中的[行状态](/previous-versions/windows/desktop/ms722752(v=vs.85))中所述。
 
 ## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a> IRowsetUpdateImpl：： IsUpdateAllowed
 
@@ -305,7 +305,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 ### <a name="remarks"></a>注解
 
-如果确定应该允许更新，则返回 S_OK;否则，将返回 E_FAIL。 如果允许更新，还需要将 `DBROWSTATUS` [IRowsetUpdateImpl：： update](../../data/oledb/irowsetupdateimpl-update.md) 中的设置为相应的 [行状态](/previous-versions/windows/desktop/ms722752(v=vs.85))。
+如果确定应该允许更新，则返回 S_OK;否则，将返回 E_FAIL。 如果允许更新，还需要将 `DBROWSTATUS` [IRowsetUpdateImpl：： update](#update) 中的设置为相应的 [行状态](/previous-versions/windows/desktop/ms722752(v=vs.85))。
 
 ## <a name="irowsetupdateimplm_mapcacheddata"></a><a name="mapcacheddata"></a> IRowsetUpdateImpl：： m_mapCachedData
 
@@ -329,7 +329,7 @@ m_mapCachedData;
 *pData*<br/>
 指向要缓存的数据的指针。 数据的类型为 *存储* (用户记录类) 。 请参阅[IRowsetUpdateImpl 类](../../data/oledb/irowsetupdateimpl-class.md)中的*存储*模板参数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

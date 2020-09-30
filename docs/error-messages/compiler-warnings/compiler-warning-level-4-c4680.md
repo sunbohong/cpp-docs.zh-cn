@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ea9eb681d1696c77184a9999a94367a0bce8c454
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990454"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91510044"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>编译器警告（等级 4）C4680
 
 "class"：组件类不指定默认接口
 
-未为用[coclass](../../windows/coclass.md)特性标记的类指定[默认](../../windows/default-cpp.md)接口。 为了使对象有用，必须实现接口。
+未为用[coclass](../../windows/attributes/coclass.md)特性标记的类指定[默认](../../windows/attributes/default-cpp.md)接口。 为了使对象有用，必须实现接口。
 
 下面的示例生成 C4680：
 

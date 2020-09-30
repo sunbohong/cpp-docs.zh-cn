@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: eea0ebeaf83b9203cf57f7b35fe3dd1ec2d63d81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d78aa23469cc0fa94498f93e9a6975e0a7c827e9
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843997"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509036"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 类
 
@@ -78,13 +78,13 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 | 名称 | 说明 |
 |-|-|
 |[GetRowset](#getrowset)|返回架构行集。|
-|[GetSchemas](#getschemas)|返回可由 [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)访问的架构行集的列表。|
+|[GetSchemas](#getschemas)|返回可由 [IDBSchemaRowsetImpl::GetRowset](#getrowset)访问的架构行集的列表。|
 
 ## <a name="remarks"></a>注解
 
-此类实现 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 接口和模板化创建程序函数 [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)。
+此类实现 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 接口和模板化创建程序函数 [CreateSchemaRowset](#createschemarowset)。
 
-OLE DB 使用架构行集返回与提供程序中的数据有关的数据。 此类数据通常称为“元数据”。 默认情况下，提供程序必须始终支持 `DBSCHEMA_TABLES` 、 `DBSCHEMA_COLUMNS` 和 `DBSCHEMA_PROVIDER_TYPES` ，如*OLE DB 程序员参考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中所述。 架构行集在架构映射中指定。 有关架构映射项的信息，请参阅 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)。
+OLE DB 使用架构行集返回与提供程序中的数据有关的数据。 此类数据通常称为“元数据”。 默认情况下，提供程序必须始终支持 `DBSCHEMA_TABLES` 、 `DBSCHEMA_COLUMNS` 和 `DBSCHEMA_PROVIDER_TYPES` ，如*OLE DB 程序员参考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中所述。 架构行集在架构映射中指定。 有关架构映射项的信息，请参阅 [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)。
 
 ATL 对象向导中的 OLE DB 提供程序向导自动生成项目中的架构行集的代码。  (默认情况下，该向导支持前面提到的必需的架构行集。 ) 使用 ATL 对象向导创建使用者时，向导将使用架构行集将正确的数据绑定到提供程序。 如果未实现架构行集来提供正确的元数据，向导将不会绑定正确的数据。
 
@@ -112,13 +112,13 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 [in] 使用者为架构行集传入的限制数目。
 
 *rgRestrictions*<br/>
-[in] 要设置的限制值的长度 *cRestrictions* 数组。 有关详细信息，请参阅[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)中的*rgRestrictions*参数说明。
+[in] 要设置的限制值的长度 *cRestrictions* 数组。 有关详细信息，请参阅[SetRestrictions](#setrestrictions)中的*rgRestrictions*参数说明。
 
 ### <a name="remarks"></a>注解
 
 使用 `CheckRestrictions` 可对架构行集检查限制的有效性。 它检查 `DBSCHEMA_TABLES` 、 `DBSCHEMA_COLUMNS` 和 `DBSCHEMA_PROVIDER_TYPES` 架构行集的限制。 调用它可确定使用者对的调用 `IDBSchemaRowset::GetRowset` 是否正确。 如果要支持上面所列架构行集以外的架构行集，应当创建自己的函数来执行此任务。
 
-`CheckRestrictions` 确定使用者是否使用正确的限制和正确的限制 (类型调用 [GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) ，例如，提供程序支持的字符串) 的 VT_BSTR。 它还确定是否支持正确的限制数目。 默认情况下， `CheckRestrictions` 将通过 [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 调用询问提供程序其在给定行集上支持的限制。 然后，它会将使用者提供的限制与提供程序支持的限制进行比较，并且要么成功要么失败。
+`CheckRestrictions` 确定使用者是否使用正确的限制和正确的限制 (类型调用 [GetRowset](#getrowset) ，例如，提供程序支持的字符串) 的 VT_BSTR。 它还确定是否支持正确的限制数目。 默认情况下， `CheckRestrictions` 将通过 [SetRestrictions](#setrestrictions) 调用询问提供程序其在给定行集上支持的限制。 然后，它会将使用者提供的限制与提供程序支持的限制进行比较，并且要么成功要么失败。
 
 有关架构行集的详细信息，请参阅 Windows SDK 中*OLE DB 程序员参考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
@@ -154,10 +154,10 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 *riid*<br/>
 中输出上的 [QueryInterface](../../atl/queryinterface.md) 的接口 `IUnknown` 。
 
-cPropertySets**<br/>
+cPropertySets <br/>
 [in] 要设置的属性集数目。
 
-rgPropertySets**<br/>
+rgPropertySets <br/>
 [in] 指定要设置的属性的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组。
 
 *ppRowset*<br/>
@@ -199,7 +199,7 @@ void SetRestrictions(ULONG cRestrictions,
 
 ### <a name="remarks"></a>注解
 
-`IDBSchemaRowset`对象调用 `SetRestrictions` 来确定在特定架构行集上支持哪些限制 (通过向上转换指针) 来[GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)调用。 限制允许使用者只提取匹配行（例如，查找表“MyTable”中的所有列）。 限制是可选的，如果不支持任何限制（默认设置），则始终返回所有数据。
+`IDBSchemaRowset`对象调用 `SetRestrictions` 来确定在特定架构行集上支持哪些限制 (通过向上转换指针) 来[GetSchemas](#getschemas)调用。 限制允许使用者只提取匹配行（例如，查找表“MyTable”中的所有列）。 限制是可选的，如果不支持任何限制（默认设置），则始终返回所有数据。
 
 此方法的默认实现将 *rgRestrictions* 数组元素设置为0。 在会话类中重写默认设置，以设置默认限制以外的限制。
 
@@ -243,10 +243,10 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 *riid*<br/>
 [in] 新建架构行集请求的 IID。
 
-cPropertySets**<br/>
+cPropertySets <br/>
 [in] 要设置的属性集数目。
 
-rgPropertySets**<br/>
+rgPropertySets <br/>
 [in/out] 要在新建架构行集上设置的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构数组。
 
 *ppRowset*<br/>
@@ -254,13 +254,13 @@ rgPropertySets**<br/>
 
 ### <a name="remarks"></a>注解
 
-此方法要求用户在会话类中有架构映射。 `GetRowset`如果*rguidSchema*参数等于其中一个映射条目 guid，则使用架构映射信息创建给定行集对象。 有关映射条目的描述，请参阅 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) 。
+此方法要求用户在会话类中有架构映射。 `GetRowset`如果*rguidSchema*参数等于其中一个映射条目 guid，则使用架构映射信息创建给定行集对象。 有关映射条目的描述，请参阅 [SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry) 。
 
 请参阅 Windows SDK 中的 [IDBSchemaRowset：： GetRowset](/previous-versions/windows/desktop/ms722634(v=vs.85)) 。
 
 ## <a name="idbschemarowsetimplgetschemas"></a><a name="getschemas"></a> IDBSchemaRowsetImpl：： GetSchemas
 
-返回可由 [IDBSchemaRowsetImpl::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)访问的架构行集的列表。
+返回可由 [IDBSchemaRowsetImpl::GetRowset](#getrowset)访问的架构行集的列表。
 
 ### <a name="syntax"></a>语法
 
@@ -287,9 +287,9 @@ STDMETHOD (GetSchema s )(ULONG * pcSchemas,
 
 若要实现此函数，用户在会话类中必须有架构映射。 然后，该函数会利用架构映射信息，使用映射中架构的 GUID 数组进行响应。 这表示提供程序支持的架构。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)<br/>
 [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)<br/>
-[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)<br/>
+[SCHEMA_ENTRY](./macros-for-ole-db-provider-templates.md#schema_entry)<br/>
 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider)

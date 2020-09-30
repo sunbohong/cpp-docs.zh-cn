@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d70a1901c457d9fbdbe8712d84999e256a54d0c2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ecb11c54d4c5926fbead0196c441ec23e8b0891f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209755"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509520"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
 
@@ -19,13 +19,13 @@ ms.locfileid: "80209755"
 
 下面的示例假设你要尝试从行集中获取属性。 使用会话或命令的代码是类似的，但使用的是不同的接口。
 
-使用属性组作为构造函数的参数，创建[CDBPropSet](../../data/oledb/cdbpropset-class.md)对象。 例如：
+使用属性组作为构造函数的参数，创建 [CDBPropSet](../../data/oledb/cdbpropset-class.md) 对象。 例如：
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
 ```
 
-调用[AddProperty](../../data/oledb/cdbpropset-addproperty.md)，并向其传递要赋给属性的属性 ID 和值。 值的类型取决于所使用的属性。
+调用 [AddProperty](./cdbpropset-class.md#addproperty)，并向其传递要赋给属性的属性 ID 和值。 值的类型取决于所使用的属性。
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
@@ -35,7 +35,7 @@ propset.AddProperty(DBPROP_IRowsetChange, true);
 propset.AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);
 ```
 
-使用 `IRowset` 接口来调用 `GetProperties`。 将属性集作为参数传递。 下面是最终代码：
+使用 `IRowset` 接口调用 `GetProperties` 。 将属性集作为参数传递。 下面是最终代码：
 
 ```cpp
 CAgentRowset<CCustomCommand>* pRowset = (CAgentRowset<CCustomCommand>*) pThis;
@@ -66,6 +66,6 @@ if (pPropSet)
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

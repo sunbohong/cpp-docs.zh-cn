@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 16f1a3f8ae9b50e43bfd67d9ac8c65507bf4f147
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d94c5d121386989d223a55b8ce7626444c3f8950
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834331"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509063"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 类
 
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ## <a name="remarks"></a>注解
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) 是数据源对象的必需接口和枚举器的可选接口。 但是，如果枚举器公开 [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))，则它必须公开 `IDBProperties` 。 `IDBPropertiesImpl``IDBProperties`使用[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)定义的静态函数实现。
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) 是数据源对象的必需接口和枚举器的可选接口。 但是，如果枚举器公开 [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))，则它必须公开 `IDBProperties` 。 `IDBPropertiesImpl``IDBProperties`使用[BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map)定义的静态函数实现。
 
 ## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a> IDBPropertiesImpl：： GetProperties
 
@@ -83,8 +83,8 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 |OLE DB 模板参数|*OLE DB 程序员引用* 参数|
 |--------------------------------|------------------------------------------------|
-|cPropertySets**|*cPropertyIDSets*|
-|rgPropertySets**|*rgPropertyIDSets*|
+|cPropertySets |*cPropertyIDSets*|
+|rgPropertySets |*rgPropertyIDSets*|
 |*pcProperties*|*pcPropertySets*|
 |*prgProperties*|*prgPropertySets*|
 
@@ -114,12 +114,12 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 |OLE DB 模板参数|*OLE DB 程序员引用* 参数|
 |--------------------------------|------------------------------------------------|
-|cPropertySets**|*cPropertyIDSets*|
-|rgPropertySets**|*rgPropertyIDSets*|
+|cPropertySets |*cPropertyIDSets*|
+|rgPropertySets |*rgPropertyIDSets*|
 
 ### <a name="remarks"></a>注解
 
-使用 [IDBInitializeImpl：： m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) 实现此功能。
+使用 [IDBInitializeImpl：： m_pCUtlPropInfo](./idbinitializeimpl-class.md#pcutlpropinfo) 实现此功能。
 
 ## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a> IDBPropertiesImpl：： SetProperties
 
@@ -140,7 +140,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 如果提供程序已初始化，则此方法将设置数据源对象的 DBPROPSET_DATASOURCE、DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT 属性组中的属性值。 如果访问接口未初始化，则仅设置 DBPROPSET_DBINIT 组属性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
