@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-ms.openlocfilehash: af4e4472a33ef3d083f54da74e306562af1867a1
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 991cce4cfa6810f35c2ccb3ec1ed45adf2d849ac
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544831"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508688"
 ---
 # <a name="lock_when-enum"></a>lock_when 枚举
 
@@ -30,7 +30,7 @@ enum lock_when {
 
 ## <a name="remarks"></a>备注
 
-传递到[lock：： lock](../dotnet/lock-lock.md)时，`lock_later` 指定现在不会执行该锁。
+传递给 [lock：： lock](./lock-class.md#lock)时， `lock_later` 指定不会立即执行该锁。
 
 ## <a name="example"></a>示例
 
@@ -124,10 +124,10 @@ All threads completed.
 
 ## <a name="requirements"></a>要求
 
-**标头文件**\<msclr\lock.h >
+**头文件** \<msclr\lock.h>
 
-**命名空间**msclr
+**命名空间** msclr
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [lock](../dotnet/lock.md)

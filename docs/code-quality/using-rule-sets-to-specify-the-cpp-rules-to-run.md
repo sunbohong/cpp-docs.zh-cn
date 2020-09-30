@@ -4,18 +4,18 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 2f2b11d060b2f02c5fc5874ef135e1ee3550b840
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f9876a2ce164d0a129ba21405ec61fdcbbd8de91
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845154"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507474"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>使用规则集指定要运行的 C++ 规则
 
 在 Visual Studio 中，你可以创建和修改自定义 *规则集* ，以满足与代码分析相关的特定项目需求。 默认规则集存储在中 *`%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`* 。
 
-**Visual Studio 2017 版本15.7 及更高版本：** 你可以使用任何文本编辑器创建自定义规则集，并在命令行生成中应用它们，无论你使用的是何种生成系统。 有关详细信息，请参阅 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis)。
+**Visual Studio 2017 版本15.7 及更高版本：** 你可以使用任何文本编辑器创建自定义规则集，并在命令行生成中应用它们，无论你使用的是何种生成系统。 有关详细信息，请参阅 [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md)。
 
 若要在 Visual Studio 中创建自定义 c + + 规则集，必须在 Visual Studio IDE 中打开 C/c + + 项目。 然后在规则集编辑器中打开标准规则集，然后添加或删除特定规则，并根据需要更改在代码分析确定违反规则时发生的操作。
 
@@ -98,7 +98,7 @@ ms.locfileid: "88845154"
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>在文本编辑器中创建规则集
 
-您可以在文本编辑器中创建自定义规则集，将其存储在具有扩展名的任何位置， *`.ruleset`* 并使用 [`/analyze:ruleset`](/cpp/build/reference/analyze-code-analysis) 编译器选项应用。
+您可以在文本编辑器中创建自定义规则集，将其存储在具有扩展名的任何位置， *`.ruleset`* 并使用 [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) 编译器选项应用。
 
 下面的示例演示了一个基本规则集文件，你可以将其用作起始点：
 

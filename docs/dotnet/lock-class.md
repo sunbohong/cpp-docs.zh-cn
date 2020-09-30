@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b06c293200bc85945e95996db3109c1f5fba8d8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b2f187ec940af95523d0bbfb9265d7d9d6f69e8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225613"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508646"
 ---
 # <a name="lock-class"></a>lock 类
 
@@ -33,7 +33,7 @@ ref class lock;
 
 ## <a name="remarks"></a>备注
 
-`lock`仅适用于 CLR 对象，并且只能在 CLR 代码中使用。
+`lock` 仅适用于 CLR 对象，并且只能在 CLR 代码中使用。
 
 在内部，lock 类使用 <xref:System.Threading.Monitor> 来同步访问。 有关详细信息，请参阅参考文章。
 
@@ -67,9 +67,9 @@ ref class lock;
 
 **头文件** \<msclr\lock.h>
 
-**命名空间**msclr
+**命名空间** msclr
 
-## <a name="locklock"></a><a name="lock"></a>lock：： lock
+## <a name="locklock"></a><a name="lock"></a> lock：： lock
 
 构造一个 `lock` 对象，还可以选择等待在指定的时间内永远获取锁定，或根本不获取锁。
 
@@ -99,19 +99,19 @@ template<class T> lock(
 *_timeout*<br/>
 超时值（以毫秒为单位）或为 <xref:System.TimeSpan> 。
 
-### <a name="exceptions"></a>例外
+### <a name="exceptions"></a>异常
 
 在 <xref:System.ApplicationException> 超时之前不发生锁获取时引发。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-构造函数的前三种形式尝试在 `_object` 指定的超时期限内获取锁（ <xref:System.Threading.Timeout.Infinite> 如果未指定，则为）。
+构造函数的前三个窗体尝试在 `_object` 指定的超时期限内获取锁 (如果未 <xref:System.Threading.Timeout.Infinite> 指定) ，则为。
 
-构造函数的第四种形式不获取的锁定 `_object` 。 `lock_later`是[lock_when 枚举](../dotnet/lock-when-enum.md)的成员。 在这种情况下，使用[lock：：获取](../dotnet/lock-acquire.md)或[锁定：： try_acquire](../dotnet/lock-try-acquire.md)获取锁定。
+构造函数的第四种形式不获取的锁定 `_object` 。 `lock_later` 是 [lock_when 枚举](../dotnet/lock-when-enum.md)的成员。 在这种情况下，使用 [lock：：获取](#acquire) 或 [锁定：： try_acquire](#try-acquire) 获取锁定。
 
 调用析构函数时，将自动释放该锁。
 
-`_object`不能为 <xref:System.Threading.ReaderWriterLock> 。  如果是，则会产生编译器错误。
+`_object` 不能为 <xref:System.Threading.ReaderWriterLock> 。  如果是，则会产生编译器错误。
 
 ### <a name="example"></a>示例
 
@@ -203,7 +203,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locklock"></a><a name="tilde-lock"></a>lock：： ~ lock
+## <a name="locklock"></a><a name="tilde-lock"></a> lock：： ~ lock
 
 Destructs `lock` 对象。
 
@@ -211,9 +211,9 @@ Destructs `lock` 对象。
 ~lock();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-析构函数调用[lock：： release](../dotnet/lock-release.md)。
+析构函数调用 [lock：： release](#release)。
 
 ### <a name="example"></a>示例
 
@@ -305,7 +305,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockacquire"></a><a name="acquire"></a>lock：：获取
+## <a name="lockacquire"></a><a name="acquire"></a> lock：：获取
 
 获取对象上的锁，还可以选择在指定的时间段内等待锁定，而不是始终获取锁。
 
@@ -324,11 +324,11 @@ void acquire(
 *_timeout*<br/>
 超时值（以毫秒为单位）或为 <xref:System.TimeSpan> 。
 
-### <a name="exceptions"></a>例外
+### <a name="exceptions"></a>异常
 
 在 <xref:System.ApplicationException> 超时之前不发生锁获取时引发。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果未提供超时值，则默认超时值为 <xref:System.Threading.Timeout.Infinite> 。
 
@@ -424,7 +424,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockis_locked"></a><a name="is-locked"></a>lock：： is_locked
+## <a name="lockis_locked"></a><a name="is-locked"></a> lock：： is_locked
 
 指示是否持有锁。
 
@@ -527,7 +527,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator-bool"></a><a name="operator-bool"></a>lock：： operator bool
+## <a name="lockoperator-bool"></a><a name="operator-bool"></a> lock：： operator bool
 
 用于 `lock` 条件表达式中的运算符。
 
@@ -539,7 +539,7 @@ operator bool();
 
 **`true`** 如果持有锁，则 **`false`** 为; 否则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 此运算符实际上会转换为， `_detail_class::_safe_bool` **`bool`** 因为它不能转换为整型类型。
 
@@ -634,7 +634,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockrelease"></a><a name="release"></a>lock：： release
+## <a name="lockrelease"></a><a name="release"></a> lock：： release
 
 释放锁。
 
@@ -642,7 +642,7 @@ All threads completed.
 void release();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果未持有锁，则 `release` 不执行任何操作。
 
@@ -738,7 +738,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="locktry_acquire"></a><a name="try-acquire"></a>lock：： try_acquire
+## <a name="locktry_acquire"></a><a name="try-acquire"></a> lock：： try_acquire
 
 获取对象上的锁，等待指定的时间量并返回 **`bool`** 报告获取是否成功，而不是引发异常。
 
@@ -760,7 +760,7 @@ bool try_acquire(
 
 **`true`** 如果已获取锁，则 **`false`** 为; 否则为。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果已获取锁，则此函数不执行任何操作。
 
@@ -854,7 +854,7 @@ In thread 6, Counter = 10
 All threads completed.
 ```
 
-## <a name="lockoperator"></a><a name="operator-equality"></a>lock：： operator = =
+## <a name="lockoperator"></a><a name="operator-equality"></a> lock：： operator = =
 
 相等运算符。
 
@@ -866,7 +866,7 @@ template<class T> bool operator==(
 
 ### <a name="parameters"></a>参数
 
-*关心*<br/>
+*t*<br/>
 要比较是否相等的对象。
 
 ### <a name="return-value"></a>返回值
@@ -897,7 +897,7 @@ int main () {
 Equal!
 ```
 
-## <a name="lockoperator"></a><a name="operator-inequality"></a>lock：： operator！ =
+## <a name="lockoperator"></a><a name="operator-inequality"></a> lock：： operator！ =
 
 不等运算符。
 
@@ -909,7 +909,7 @@ template<class T> bool operator!=(
 
 ### <a name="parameters"></a>参数
 
-*关心*<br/>
+*t*<br/>
 要比较是否不相等的对象。
 
 ### <a name="return-value"></a>返回值

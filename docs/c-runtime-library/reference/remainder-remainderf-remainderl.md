@@ -35,12 +35,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: ef2b326bef2288b52dba8988749e030ff0b46077
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 288d6b0d373a5b318a139b030181c671e2c01048
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556004"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507584"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -70,7 +70,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 *X*  /  *y*的浮点余数。 如果 *y* 的值为0.0，则 **余数** 返回静默 NaN。 有关 **printf** 系列的 quiet NaN 表示形式的信息，请参阅 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **余数**函数计算*x*y 的浮点余数*r*  /  *y* ，如*x*  =  *n* \* *y*  +  *r*（其中*n*是最接近*x*  /  *y*的整数），n 只要 &#124; *n* *n*  -  *x*  /  *y* &#124; = 1/2，就会进行 n 运算。 当 *r* = 0 时， *r* 与 *x*具有相同的符号。
 
@@ -111,10 +111,10 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)\
-[ldiv、lldiv](ldiv-lldiv.md)\
+[ldiv、lldiv](./div.md)\
 [imaxdiv](imaxdiv.md)\
 [fmod、fmodf](fmod-fmodf.md)\
 [remquo、remquof、remquol](remquo-remquof-remquol.md)

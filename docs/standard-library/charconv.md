@@ -5,12 +5,12 @@ f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: 59807749105512e0eb61acfdf60ef463febbc3a8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230189"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507709"
 ---
 # <a name="ltcharconvgt"></a>&lt;charconv&gt;
 
@@ -39,7 +39,7 @@ ms.locfileid: "87230189"
 
 ### <a name="types"></a>类型
 
-| 类型 | 描述 |
+| 类型 | 说明 |
 |-|:-|
 | [chars_format](chars-format-class.md) | 指定格式设置类型，例如科学、十六进制等。 |
 | [from_chars_result](from-chars-result-structure.md) | 保存转换的结果 `from_chars` 。 |
@@ -47,12 +47,11 @@ ms.locfileid: "87230189"
 
 ### <a name="functions"></a>函数
 
-| 函数 | 描述 |
+| 函数 | 说明 |
 |-|:-|
 | [from_chars](charconv-functions.md#from_chars) | 将字符转换为整数、float 或 double。 |
 | [to_chars](charconv-functions.md#to_chars)| 将 integer、float 或 double 转换为字符。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](cpp-standard-library-header-files.md)
-

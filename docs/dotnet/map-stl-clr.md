@@ -99,16 +99,16 @@ helpviewer_keywords:
 - operator> (map) member [STL/CLR]
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-ms.openlocfilehash: cd06942d3795dda9e6c6aaa8794957018fa96ace
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 31d696c1bf85cdcb1d662474042c82524abdfcf1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216370"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508602"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
-此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 使用容器可以将 `map` 一系列元素作为（几乎）均衡的节点的排序树来管理，每个节点存储一个元素。 元素包含一个键，用于对序列进行排序，并包含一个映射值，此值将随之进行。
+此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 使用容器可以将 `map` 一系列元素作为 (几乎) 均衡的节点的排序树，每个节点存储一个元素。 元素包含一个键，用于对序列进行排序，并包含一个映射值，此值将随之进行。
 
 在下面的说明中，与 `GValue` 相同：
 
@@ -116,9 +116,9 @@ ms.locfileid: "87216370"
 
 其中：
 
-`GKey`与*Key*相同，除非后者为 ref 类型，在这种情况下，它是`Key^`
+`GKey` 与 *Key* 相同，除非后者为 ref 类型，在这种情况下，它是 `Key^`
 
-`GMapped`与*映射*相同，除非后者为 ref 类型，在这种情况下，它是`Mapped^`
+`GMapped` 与 *映射* 相同，除非后者为 ref 类型，在这种情况下，它是 `Mapped^`
 
 ## <a name="syntax"></a>语法
 
@@ -143,7 +143,7 @@ template<typename Key,
 *Key*<br/>
 受控序列中元素的键组件的类型。
 
-*Mapped*<br/>
+*贴*<br/>
 受控序列中元素的附加组件的类型。
 
 ## <a name="requirements"></a>要求
@@ -154,12 +154,12 @@ template<typename Key,
 
 ## <a name="declarations"></a>声明
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |[map::const_iterator (STL/CLR)](#const_iterator)|受控序列的常量迭代器的类型。|
 |[map::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
 |[map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
-|[map::difference_type (STL/CLR)](#difference_type)|两个元素之间的（可能有符号）距离的类型。|
+|[map::difference_type (STL/CLR)](#difference_type)|在两个元素之间可能有符号) 距离的 (的类型。|
 |[map::generic_container (STL/CLR)](#generic_container)|容器的泛型接口的类型。|
 |[map::generic_iterator (STL/CLR)](#generic_iterator)|容器的泛型接口的迭代器的类型。|
 |[map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型接口的反向迭代器的类型。|
@@ -170,11 +170,11 @@ template<typename Key,
 |[map::mapped_type (STL/CLR)](#mapped_type)|与每个键关联的映射值的类型。|
 |[map::reference (STL/CLR)](#reference)|元素的引用的类型。|
 |[map::reverse_iterator (STL/CLR)](#reverse_iterator)|受控序列的反向迭代器的类型。|
-|[map::size_type (STL/CLR)](#size_type)|两个元素之间的（非负）距离的类型。|
+|[map::size_type (STL/CLR)](#size_type)|两个元素之间 (非负) 距离的类型。|
 |[map::value_compare (STL/CLR)](#value_compare)|两个元素值的排序委托。|
 |[map::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |---------------------|-----------------|
 |[map::begin (STL/CLR)](#begin)|指定受控序列的开头。|
 |[map::clear (STL/CLR)](#clear)|删除所有元素。|
@@ -197,20 +197,20 @@ template<typename Key,
 |[map::upper_bound (STL/CLR)](#upper_bound)|查找与指定键匹配的范围的末尾。|
 |[map::value_comp (STL/CLR)](#value_comp)|复制两个元素值的排序委托。|
 
-|操作员|描述|
+|运算符|说明|
 |--------------|-----------------|
 |[map::operator= (STL/CLR)](#op_as)|替换受控序列。|
 |[map::operator(STL/CLR)](#op)|将键映射到其关联的映射值。|
-|[operator！ = （map）（STL/CLR）](#op_neq)|确定对象是否 `map` 不等于另一个 `map` 对象。|
-|[运算符< （map）（STL/CLR）](#op_lt)|确定 `map` 对象是否小于另一个 `map` 对象。|
+|[operator！ = (map)  (STL/CLR) ](#op_neq)|确定对象是否 `map` 不等于另一个 `map` 对象。|
+|[operator< (map)  (STL/CLR) ](#op_lt)|确定 `map` 对象是否小于另一个 `map` 对象。|
 |[operator<= (map) (STL/CLR)](#op_lteq)|确定 `map` 对象是否小于或等于另一个 `map` 对象。|
-|[operator = = （map）（STL/CLR）](#op_eq)|确定 `map` 对象是否等于另一个 `map` 对象。|
-|[运算符> （map）（STL/CLR）](#op_gt)|确定 `map` 对象是否大于另一个 `map` 对象。|
-|[运算符>= （map）（STL/CLR）](#op_gteq)|确定 `map` 对象是否大于或等于另一个 `map` 对象。|
+|[operator = = (map)  (STL/CLR) ](#op_eq)|确定 `map` 对象是否等于另一个 `map` 对象。|
+|[operator> (map)  (STL/CLR) ](#op_gt)|确定 `map` 对象是否大于另一个 `map` 对象。|
+|[operator>= (map)  (STL/CLR) ](#op_gteq)|确定 `map` 对象是否大于或等于另一个 `map` 对象。|
 
 ## <a name="interfaces"></a>接口
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
@@ -220,15 +220,15 @@ template<typename Key,
 |<xref:System.Collections.Generic.IDictionary%602>|维护 {key，value} 对组。|
 |ITree<项，值>|维护泛型容器。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-对象为其控制的序列分配并释放存储，以作为单个节点。 它通过更改节点之间的链接，将元素插入到（几乎）平衡树中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
+对象为其控制的序列分配并释放存储，以作为单个节点。 它通过更改节点之间的链接，将元素插入到 (几乎) 的平衡树中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
 
-对象通过调用类型为[map：： key_compare （STL/CLR）](../dotnet/map-key-compare-stl-clr.md)的存储委托对象，对它控制的序列进行排序。 构造映射时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为 "比较" `operator<(key_type, key_type)` 。 可以通过调用成员函数[map：： key_comp （STL/CLR）](../dotnet/map-key-comp-stl-clr.md)访问此存储的对象 `()` 。
+对象通过调用类型为 [map：：)  (key_compare ](#key_compare)的存储的委托对象，对其控制的序列进行排序。 构造映射时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为 "比较" `operator<(key_type, key_type)` 。 可以通过调用成员函数[map：： key_comp (STL/CLR) ](#key_comp)来访问此存储的对象 `()` 。
 
-此类委托对象必须对[映射：： key_type （STL/CLR）](../dotnet/map-key-type-stl-clr.md)类型的键施加严格弱排序。 这意味着，对于任意两个密钥 `X` 和 `Y` ：
+此类委托对象必须对类型为 [map：： key_type (STL/CLR) ](#key_type)的键施加严格弱排序。 这意味着，对于任意两个密钥 `X` 和 `Y` ：
 
-`key_comp()(X, Y)`针对每个调用返回相同的布尔值结果。
+`key_comp()(X, Y)` 针对每个调用返回相同的布尔值结果。
 
 如果 `key_comp()(X, Y)` 为 true，则 `key_comp()(Y, X)` 必须为 false。
 
@@ -236,21 +236,21 @@ template<typename Key,
 
 如果 `!key_comp()(X, Y) && !key_comp()(Y, X)` 为 true，则 `X` `Y` 认为和具有等效的排序。
 
-对于位于 `X` `Y` 受控序列中的任何元素， `key_comp()(Y, X)` 为 false。 （对于默认的委托对象，键从不减小值。）与模板类[映射](../dotnet/map-stl-clr.md)不同，模板类的对象 `map` 不需要所有元素的键都是唯一的。 （两个或两个以上的键可以具有等效的顺序。）
+对于位于 `X` `Y` 受控序列中的任何元素， `key_comp()(Y, X)` 为 false。  (默认委托对象时，键永远不会降低值。 ) 与模板类 [映射](../dotnet/map-stl-clr.md)不同，模板类的对象 `map` 不需要所有元素的键都是唯一的。  (两个或更多的密钥可以具有等效的排序。 ) 
 
-每个元素都包含一个单独的键和一个映射值。 序列以允许查找、插入和移除任意元素的方式表示，这些操作与序列中的元素数的对数成正比（对数时间）。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
+每个元素都包含一个单独的键和一个映射值。 序列以允许查找、插入和移除任意元素的方式表示，这些操作与序列中的元素数的对数成正比 (对数时间) 。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
-映射支持双向迭代器，这意味着，如果迭代器指定了受控序列中的元素，则可以单步执行相邻元素。 特殊头节点对应于[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增地图迭代器以到达头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
+映射支持双向迭代器，这意味着，如果迭代器指定了受控序列中的元素，则可以单步执行相邻元素。 特殊头节点对应于[map：： end (STL/CLR) ](#end)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增地图迭代器以到达头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
 
 请注意，不能直接引用映射元素，因为它的数字位置需要随机访问迭代器。
 
 地图迭代器将句柄存储到其关联的映射节点，后者又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要映射迭代器的关联映射节点与某个映射相关联，它就会保持有效。 而且，有效的迭代器是 dereferencable 的，您可以使用它来访问或更改它指定的元素值，但前提是它不等于 `end()` 。
 
-清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器*不*会销毁其元素。
+清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器 *不* 会销毁其元素。
 
 ## <a name="members"></a>成员
 
-## <a name="mapbegin-stlclr"></a><a name="begin"></a>map：： begin （STL/CLR）
+## <a name="mapbegin-stlclr"></a><a name="begin"></a> map：： begin (STL/CLR) 
 
 指定受控序列的开头。
 
@@ -301,7 +301,7 @@ int main()
 *++begin() = [b 2]
 ```
 
-## <a name="mapclear-stlclr"></a><a name="clear"></a>map：： clear （STL/CLR）
+## <a name="mapclear-stlclr"></a><a name="clear"></a> map：： clear (STL/CLR) 
 
 删除所有元素。
 
@@ -313,7 +313,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[map：： erase （stl/clr）](../dotnet/map-erase-stl-clr.md) `(` [map：： begin （stl/clr）](../dotnet/map-begin-stl-clr.md) `(),` [map：： end （stl/clr）](../dotnet/map-end-stl-clr.md) `())` 。 用于确保受控序列为空。
+成员函数有效地调用[map：： erase (stl/clr) ](#erase) `(` [map：： begin (stl/clr) ](#begin) `(),` [map：： end (stl/clr) ](#end) `())` 。 用于确保受控序列为空。
 
 ### <a name="example"></a>示例
 
@@ -359,7 +359,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="mapconst_iterator-stlclr"></a><a name="const_iterator"></a>map：： const_iterator （STL/CLR）
+## <a name="mapconst_iterator-stlclr"></a><a name="const_iterator"></a> map：： const_iterator (STL/CLR) 
 
 受控序列的常量迭代器的类型。
 
@@ -401,7 +401,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapconst_reference-stlclr"></a><a name="const_reference"></a>map：： const_reference （STL/CLR）
+## <a name="mapconst_reference-stlclr"></a><a name="const_reference"></a> map：： const_reference (STL/CLR) 
 
 元素的常量引用的类型。
 
@@ -446,7 +446,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>map：： const_reverse_iterator （STL/CLR）
+## <a name="mapconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> map：： const_reverse_iterator (STL/CLR) 
 
 受控序列的常量反向迭代器的类型。
 
@@ -488,7 +488,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="mapcount-stlclr"></a><a name="count"></a>map：： count （STL/CLR）
+## <a name="mapcount-stlclr"></a><a name="count"></a> map：： count (STL/CLR) 
 
 查找与指定键匹配的元素数。
 
@@ -503,9 +503,9 @@ size_type count(key_type key);
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-该成员函数将返回受控序列中与*键*具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
+该成员函数将返回受控序列中与 *键*具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
 
 ### <a name="example"></a>示例
 
@@ -541,7 +541,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="mapdifference_type-stlclr"></a><a name="difference_type"></a>map：:d ifference_type （STL/CLR）
+## <a name="mapdifference_type-stlclr"></a><a name="difference_type"></a> map：:d ifference_type (STL/CLR) 
 
 两个元素间的带符号距离的类型。
 
@@ -596,7 +596,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="mapempty-stlclr"></a><a name="empty"></a>map：： empty （STL/CLR）
+## <a name="mapempty-stlclr"></a><a name="empty"></a> map：： empty (STL/CLR) 
 
 测试元素是否存在。
 
@@ -608,7 +608,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[map：： size （STL/CLR）](../dotnet/map-size-stl-clr.md) `() == 0` 。 用于测试映射是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[STL/CLR)  (map：： size ](#size) `() == 0` 。 用于测试映射是否为空。
 
 ### <a name="example"></a>示例
 
@@ -648,7 +648,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="mapend-stlclr"></a><a name="end"></a>map：： end （STL/CLR）
+## <a name="mapend-stlclr"></a><a name="end"></a> map：： end (STL/CLR) 
 
 指定受控序列的末尾。
 
@@ -695,7 +695,7 @@ int main()
     }
 ```
 
-## <a name="mapequal_range-stlclr"></a><a name="equal_range"></a>map：： equal_range （STL/CLR）
+## <a name="mapequal_range-stlclr"></a><a name="equal_range"></a> map：： equal_range (STL/CLR) 
 
 查找与指定键匹配的范围。
 
@@ -710,9 +710,9 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [map：： lower_bound （stl/clr）](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map：： upper_bound （stl/clr）](../dotnet/map-upper-bound-stl-clr.md) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
+此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [map：： lower_bound (stl/clr) ](#lower_bound) `(key),` [map：： upper_bound (stl/clr) ](#upper_bound) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
 
 ### <a name="example"></a>示例
 
@@ -756,7 +756,7 @@ equal_range(L'x') empty = True
 [b 2]
 ```
 
-## <a name="maperase-stlclr"></a><a name="erase"></a>map：： erase （STL/CLR）
+## <a name="maperase-stlclr"></a><a name="erase"></a> map：： erase (STL/CLR) 
 
 移除指定位置处的元素。
 
@@ -782,13 +782,13 @@ bool erase(key_type key)
 *where*<br/>
 要清除的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则为[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md) `()` 。 使用它可以删除单个元素。
+第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则为[map：： end (STL/CLR) ](#end) `()` 。 使用它可以删除单个元素。
 
-第二个成员函数删除范围 [，）中的受控序列的元素， `first` `last` 并返回一个迭代器，该迭代器指定删除的任何元素之外保留的第一个元素; `end()` 如果此类元素不存在，则为。 使用它可以删除零个或多个连续元素。
+第二个成员函数删除范围 [，) 中的受控序列的元素， `first` `last` 并返回一个迭代器，该迭代器指定删除的任何元素之外保留的第一个元素; `end()` 如果此类元素不存在，则为。 使用它可以删除零个或多个连续元素。
 
-第三个成员函数删除受控序列中其键与*键*具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
+第三个成员函数删除受控序列中其键与 *键*具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
 
 每个元素擦除与受控序列中的元素数的对数成正比。
 
@@ -849,7 +849,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="mapfind-stlclr"></a><a name="find"></a>map：： find （STL/CLR）
+## <a name="mapfind-stlclr"></a><a name="find"></a> map：： find (STL/CLR) 
 
 查找与指定键匹配的元素。
 
@@ -864,9 +864,9 @@ iterator find(key_type key);
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
+如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[map：： end (STL/CLR) ](#end) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
 
 ### <a name="example"></a>示例
 
@@ -908,7 +908,7 @@ find b = [b 2]
 find C = False
 ```
 
-## <a name="mapgeneric_container-stlclr"></a><a name="generic_container"></a>map：： generic_container （STL/CLR）
+## <a name="mapgeneric_container-stlclr"></a><a name="generic_container"></a> map：： generic_container (STL/CLR) 
 
 容器的泛型接口的类型。
 
@@ -972,7 +972,7 @@ int main()
 [a 1] [b 2] [c 3] [d 4] [e 5]
 ```
 
-## <a name="mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>map：： generic_iterator （STL/CLR）
+## <a name="mapgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> map：： generic_iterator (STL/CLR) 
 
 与容器的泛型接口一起使用的迭代器的类型。
 
@@ -1029,7 +1029,7 @@ int main()
 [a 1]
 ```
 
-## <a name="mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>map：： generic_reverse_iterator （STL/CLR）
+## <a name="mapgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> map：： generic_reverse_iterator (STL/CLR) 
 
 用于容器的泛型接口的反向迭代器的类型。
 
@@ -1085,7 +1085,7 @@ int main()
 [c 3]
 ```
 
-## <a name="mapgeneric_value-stlclr"></a><a name="generic_value"></a>map：： generic_value （STL/CLR）
+## <a name="mapgeneric_value-stlclr"></a><a name="generic_value"></a> map：： generic_value (STL/CLR) 
 
 用于容器的泛型接口的元素类型。
 
@@ -1139,7 +1139,7 @@ int main()
 [a 1]
 ```
 
-## <a name="mapinsert-stlclr"></a><a name="insert"></a>map：： insert （STL/CLR）
+## <a name="mapinsert-stlclr"></a><a name="insert"></a> map：： insert (STL/CLR) 
 
 添加元素。
 
@@ -1168,19 +1168,19 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 要插入的项值。
 
 *where*<br/>
-容器中要插入的位置（仅提示）。
+容器中要插入的位置 (提示仅) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 每个成员函数都插入由剩余操作数指定的序列。
 
-第一个成员函数将使用值*val*来插入元素，并返回一对值 `X` 。 如果 `X.second` 为 true，则 `X.first` 指定新插入的元素; 否则 `X.first` 指定一个具有等效排序的元素，并且不插入新元素。 用于插入单个元素。
+第一个成员函数将使用值 *val*来插入元素，并返回一对值 `X` 。 如果 `X.second` 为 true，则 `X.first` 指定新插入的元素; 否则 `X.first` 指定一个具有等效排序的元素，并且不插入新元素。 用于插入单个元素。
 
-第二个成员函数插入具有值*val*的元素，并使用*where*作为提示（以提高性能），并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
+第二个成员函数插入具有值 *val*的元素，使用 *where* 作为提示 (提高性能) ，并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
 
-第三个成员函数插入序列 [ `first` ， `last` ）。 用于插入从另一个序列复制的零个或多个元素。
+第三个成员函数插入序列 [ `first` ， `last`) 。 用于插入从另一个序列复制的零个或多个元素。
 
-第四个成员函数插入由*权限*指定的序列。 使用它可以插入枚举器描述的序列。
+第四个成员函数插入由 *权限*指定的序列。 使用它可以插入枚举器描述的序列。
 
 每个元素插入时间与受控序列中的元素数的对数成正比。 但是，如果指定一个在插入点附近指定元素的提示，则可能会在分期常量时间内进行插入。
 
@@ -1259,7 +1259,7 @@ insert(begin(), [L'y' 25]) = [y 25]
 [a 1] [b 2] [c 3] [x 24] [y 25]
 ```
 
-## <a name="mapiterator-stlclr"></a><a name="iterator"></a>map：： iterator （STL/CLR）
+## <a name="mapiterator-stlclr"></a><a name="iterator"></a> map：： iterator (STL/CLR) 
 
 受控序列的迭代器的类型。
 
@@ -1301,7 +1301,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapkey_comp-stlclr"></a><a name="key_comp"></a>map：： key_comp （STL/CLR）
+## <a name="mapkey_comp-stlclr"></a><a name="key_comp"></a> map：： key_comp (STL/CLR) 
 
 复制两个键的排序委托。
 
@@ -1360,7 +1360,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="mapkey_compare-stlclr"></a><a name="key_compare"></a>map：： key_compare （STL/CLR）
+## <a name="mapkey_compare-stlclr"></a><a name="key_compare"></a> map：： key_compare (STL/CLR) 
 
 两个键的排序委托。
 
@@ -1420,7 +1420,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="mapkey_type-stlclr"></a><a name="key_type"></a>map：： key_type （STL/CLR）
+## <a name="mapkey_type-stlclr"></a><a name="key_type"></a> map：： key_type (STL/CLR) 
 
 排序键的类型。
 
@@ -1432,7 +1432,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数*键*的同义词。
+该类型是模板参数 *键*的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1465,7 +1465,7 @@ int main()
 a b c
 ```
 
-## <a name="maplower_bound-stlclr"></a><a name="lower_bound"></a>map：： lower_bound （STL/CLR）
+## <a name="maplower_bound-stlclr"></a><a name="lower_bound"></a> map：： lower_bound (STL/CLR) 
 
 查找与指定键匹配的范围的开头。
 
@@ -1480,9 +1480,9 @@ iterator lower_bound(key_type key);
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数确定 `X` 受控序列中对*key*具有等效顺序的第一个元素。 如果此类元素不存在，它将返回[map：： end （STL/CLR）](../dotnet/map-end-stl-clr.md) `()` ; 否则，它将返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
+成员函数确定 `X` 受控序列中对 *key*具有等效顺序的第一个元素。 如果此类元素不存在，它将返回[map：： end (STL/CLR) ](#end) `()` ; 否则，它将返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
 
 ### <a name="example"></a>示例
 
@@ -1524,7 +1524,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = [b 2]
 ```
 
-## <a name="mapmake_value-stlclr"></a><a name="make_value"></a>map：： make_value （STL/CLR）
+## <a name="mapmake_value-stlclr"></a><a name="make_value"></a> map：： make_value (STL/CLR) 
 
 构造一个值对象。
 
@@ -1539,12 +1539,12 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 要使用的密钥值。
 
-*贴*<br/>
+*已映射*<br/>
 要搜索的映射值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数返回一个 `value_type` 对象，其键为*key* ，并*映射*其映射值。 使用它来编写适用于多个其他成员函数的对象。
+成员函数返回一个 `value_type` 对象，其键为 *key* ，并 *映射*其映射值。 使用它来编写适用于多个其他成员函数的对象。
 
 ### <a name="example"></a>示例
 
@@ -1573,7 +1573,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapmap-stlclr"></a><a name="map"></a>map：： map （STL/CLR）
+## <a name="mapmap-stlclr"></a><a name="map"></a> map：： map (STL/CLR) 
 
 构造容器对象。
 
@@ -1608,7 +1608,7 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 *然后*<br/>
 要插入的对象或范围。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 构造函数：
 
@@ -1620,37 +1620,37 @@ map(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `explicit map(key_compare^ pred);`
 
-用排序谓词*pred*初始化不包含元素的受控序列。 使用此方法可以指定一个具有指定排序谓词的空的初始受控序列。
+用排序谓词 *pred*初始化不包含元素的受控序列。 使用此方法可以指定一个具有指定排序谓词的空的初始受控序列。
 
 构造函数：
 
 `map(map<Key, Mapped>% right);`
 
-用序列 [，）初始化受控序列 `right.begin()` `right.end()` ，并带有默认的排序谓词。 使用此方法可以指定初始受控序列，该序列是由 map 对象*权限*控制的序列的副本，具有默认的排序谓词。
+用序列 [ `right.begin()` ， `right.end()`) 用默认排序谓词初始化受控序列。 使用此方法可以指定初始受控序列，该序列是由 map 对象 *权限*控制的序列的副本，具有默认的排序谓词。
 
 构造函数：
 
 `map(map<Key, Mapped>^ right);`
 
-用序列 [，）初始化受控序列 `right->begin()` `right->end()` ，并带有默认的排序谓词。 使用此方法可以指定初始受控序列，该序列是由 map 对象*权限*控制的序列的副本，具有默认的排序谓词。
+用序列 [ `right->begin()` ， `right->end()`) 用默认排序谓词初始化受控序列。 使用此方法可以指定初始受控序列，该序列是由 map 对象 *权限*控制的序列的副本，具有默认的排序谓词。
 
 构造函数：
 
 `template<typename InIter> map(InIter first, InIter last);`
 
-用序列 [，）初始化受控序列 `first` `last` ，并带有默认的排序谓词。 使用它可以通过默认排序谓词使受控序列成为另一个序列的副本。
+用序列 [ `first` ， `last`) 用默认排序谓词初始化受控序列。 使用它可以通过默认排序谓词使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `template<typename InIter> map(InIter first, InIter last, key_compare^ pred);`
 
-用序列 [，）初始化受控序列 `first` `last` ，其排序谓词为*pred*。 使用此方法可以通过指定的排序谓词使受控序列成为另一个序列的副本。
+用序列 [ `first` ， `last`) ，并用排序谓词 *pred*来初始化受控序列。 使用此方法可以通过指定的排序谓词使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `map(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-使用默认排序谓词，*用枚举器*指定的序列初始化受控序列。 使用此方法可以通过默认的排序谓词，使受控序列成为枚举器描述的另一个序列的副本。
+使用默认排序谓词， *用枚举器*指定的序列初始化受控序列。 使用此方法可以通过默认的排序谓词，使受控序列成为枚举器描述的另一个序列的副本。
 
 构造函数：
 
@@ -1746,7 +1746,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapmapped_type-stlclr"></a><a name="mapped_type"></a>map：： mapped_type （STL/CLR）
+## <a name="mapmapped_type-stlclr"></a><a name="mapped_type"></a> map：： mapped_type (STL/CLR) 
 
 与每个键关联的映射值的类型。
 
@@ -1758,7 +1758,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>备注
 
-类型是*映射*的模板参数的同义词。
+类型是 *映射*的模板参数的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1791,7 +1791,7 @@ int main()
 1 2 3
 ```
 
-## <a name="mapoperator-stlclr"></a><a name="op_as"></a>map：： operator = （STL/CLR）
+## <a name="mapoperator-stlclr"></a><a name="op_as"></a> map：： operator = (STL/CLR) 
 
 替换受控序列。
 
@@ -1806,9 +1806,9 @@ map<Key, Mapped>% operator=(map<Key, Mapped>% right);
 *然后*<br/>
 用于复制的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1846,7 +1846,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapoperatorstlclr"></a><a name="op"></a>map：： operator （STL/CLR）
+## <a name="mapoperatorstlclr"></a><a name="op"></a> map：： operator (STL/CLR) 
 
 将键映射到其关联的映射值。
 
@@ -1861,9 +1861,9 @@ mapped_type operator[](key_type key);
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数致力于查找具有等效*排序的元素。* 如果找到一个，则返回关联的映射值;否则，它将插入 `value_type(key, mapped_type())` 并返回关联的（默认）映射值。 使用它可以查找给定了其关联键的映射值，或者，如果未找到键，则可确保该项存在。
+成员函数致力于查找具有等效*排序的元素。* 如果找到一个，则返回关联的映射值;否则，它 `value_type(key, mapped_type())` 将插入并返回关联的 (默认) 映射值。 使用它可以查找给定了其关联键的映射值，或者，如果未找到键，则可确保该项存在。
 
 ### <a name="example"></a>示例
 
@@ -1913,7 +1913,7 @@ c1[b] = 2
 [A 10] [a 1] [b 2] [c 13]
 ```
 
-## <a name="maprbegin-stlclr"></a><a name="rbegin"></a>map：： rbegin （STL/CLR）
+## <a name="maprbegin-stlclr"></a><a name="rbegin"></a> map：： rbegin (STL/CLR) 
 
 指定反向受控序列的开头。
 
@@ -1964,7 +1964,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="mapreference-stlclr"></a><a name="reference"></a>map：： reference （STL/CLR）
+## <a name="mapreference-stlclr"></a><a name="reference"></a> map：： reference (STL/CLR) 
 
 元素的引用的类型。
 
@@ -2009,7 +2009,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="maprend-stlclr"></a><a name="rend"></a>map：： rend （STL/CLR）
+## <a name="maprend-stlclr"></a><a name="rend"></a> map：： rend (STL/CLR) 
 
 指定反向受控序列的末尾。
 
@@ -2062,7 +2062,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>map：： reverse_iterator （STL/CLR）
+## <a name="mapreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> map：： reverse_iterator (STL/CLR) 
 
 受控序列的反向迭代器的类型。
 
@@ -2104,7 +2104,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="mapsize-stlclr"></a><a name="size"></a>map：： size （STL/CLR）
+## <a name="mapsize-stlclr"></a><a name="size"></a> map：： size (STL/CLR) 
 
 对元素数进行计数。
 
@@ -2116,7 +2116,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[map：： empty （STL/CLR）](../dotnet/map-empty-stl-clr.md) `()` 。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[map：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -2156,7 +2156,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="mapsize_type-stlclr"></a><a name="size_type"></a>map：： size_type （STL/CLR）
+## <a name="mapsize_type-stlclr"></a><a name="size_type"></a> map：： size_type (STL/CLR) 
 
 两个元素间的带符号距离的类型。
 
@@ -2204,7 +2204,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="mapswap-stlclr"></a><a name="swap"></a>map：： swap （STL/CLR）
+## <a name="mapswap-stlclr"></a><a name="swap"></a> map：： swap (STL/CLR) 
 
 交换两个容器的内容。
 
@@ -2219,7 +2219,7 @@ void swap(map<Key, Mapped>% right);
 *然后*<br/>
 要与其交换内容的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数交换和右之间的受控 **`this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
@@ -2272,7 +2272,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapto_array-stlclr"></a><a name="to_array"></a>map：： to_array （STL/CLR）
+## <a name="mapto_array-stlclr"></a><a name="to_array"></a> map：： to_array (STL/CLR) 
 
 将受控序列复制到新数组。
 
@@ -2322,7 +2322,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapupper_bound-stlclr"></a><a name="upper_bound"></a>map：： upper_bound （STL/CLR）
+## <a name="mapupper_bound-stlclr"></a><a name="upper_bound"></a> map：： upper_bound (STL/CLR) 
 
 查找与指定键匹配的范围的末尾。
 
@@ -2337,9 +2337,9 @@ iterator upper_bound(key_type key);
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数确定 `X` 受控序列中对*key*具有等效排序的最后一个元素。 如果此类元素不存在，或者如果 `X` 是受控序列中的最后一个元素，则它将返回[map：： END （STL/CLR）](../dotnet/map-end-stl-clr.md) `()` ; 否则，它将返回指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
+成员函数确定 `X` 受控序列中对 *key*具有等效排序的最后一个元素。 如果此类元素不存在，或 `X` 为受控序列中的最后一个元素，则它将返回[map：： END (STL/CLR) ](#end) `()` ; 否则，它将返回一个指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
 
 ### <a name="example"></a>示例
 
@@ -2381,7 +2381,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="mapvalue_comp-stlclr"></a><a name="value_comp"></a>map：： value_comp （STL/CLR）
+## <a name="mapvalue_comp-stlclr"></a><a name="value_comp"></a> map：： value_comp (STL/CLR) 
 
 复制两个元素值的排序委托。
 
@@ -2428,7 +2428,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="mapvalue_compare-stlclr"></a><a name="value_compare"></a>map：： value_compare （STL/CLR）
+## <a name="mapvalue_compare-stlclr"></a><a name="value_compare"></a> map：： value_compare (STL/CLR) 
 
 两个元素值的排序委托。
 
@@ -2476,7 +2476,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a>map：： value_type （STL/CLR）
+## <a name="mapvalue_type-stlclr"></a><a name="value_type"></a> map：： value_type (STL/CLR) 
 
 元素的类型。
 
@@ -2520,7 +2520,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="operator-map-stlclr"></a><a name="op_neq"></a>operator！ = （map）（STL/CLR）
+## <a name="operator-map-stlclr"></a><a name="op_neq"></a> operator！ = (map)  (STL/CLR) 
 
 列表不相等比较。
 
@@ -2541,7 +2541,7 @@ template<typename Key,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素对两个映射进行*比较时，是否按原样对**左侧*进行排序。
 
@@ -2591,7 +2591,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a>运算符 &lt; （map）（STL/CLR）
+## <a name="operatorlt-map-stlclr"></a><a name="op_lt"></a> 操作员 &lt; (map)  (STL/CLR) 
 
 列表小于比较。
 
@@ -2612,7 +2612,7 @@ template<typename Key,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回 `left->size() < right->size()` 用于测试在按元素对两个映射*right*进行比较的情况下，是否向*左*排序。
 
@@ -2662,7 +2662,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a>operator &lt; = （map）（STL/CLR）
+## <a name="operatorlt-map-stlclr"></a><a name="op_lteq"></a> operator &lt; = (map)  (STL/CLR) 
 
 列表小于或等于比较。
 
@@ -2683,7 +2683,7 @@ template<typename Key,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(right < left)` 。 使用此方法可以测试是否在按元素对两个映射进行*比较时向**左*排序。
 
@@ -2733,7 +2733,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-map-stlclr"></a><a name="op_eq"></a>operator = = （map）（STL/CLR）
+## <a name="operator-map-stlclr"></a><a name="op_eq"></a> operator = = (map)  (STL/CLR) 
 
 列出相等比较。
 
@@ -2754,9 +2754,9 @@ template<typename Key,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-仅当由*左*和*右*控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以*测试在按*元素对两个映射进行比较时，是否*向左*排序。
+仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以*测试在按*元素对两个映射进行比较时，是否*向左*排序。
 
 ### <a name="example"></a>示例
 
@@ -2804,7 +2804,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a>运算符 &gt; （map）（STL/CLR）
+## <a name="operatorgt-map-stlclr"></a><a name="op_gt"></a> 操作员 &gt; (map)  (STL/CLR) 
 
 列表大于比较。
 
@@ -2825,9 +2825,9 @@ template<typename Key,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-Operator 函数返回 `right` `<` `left` 。 使用此方法可以*测试是否在*按元素对两个映射进行比较时向*右*排序。
+Operator 函数返回 `right` `<` `left` 。 使用此方法可以 *测试是否在* 按元素对两个映射进行比较时向 *右* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2875,7 +2875,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a>operator &gt; = （map）（STL/CLR）
+## <a name="operatorgt-map-stlclr"></a><a name="op_gteq"></a> operator &gt; = (map)  (STL/CLR) 
 
 列出大于或等于比较。
 
@@ -2896,7 +2896,7 @@ template<typename Key,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(left` `<` `right)` 。 用于测试在按元素对两个映射进行比较*时，是否向**左*排序。
 

@@ -108,18 +108,18 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 1c05aff71b16c3edf1348466df325caacb027554
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ef9f68c6bef72bf251d270b3bc8142448016a11
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225626"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508732"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
 此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 可以使用容器将 `list` 一系列元素作为双向链接节点列表进行管理，每个节点存储一个元素。
 
-在下面的说明中，与 `GValue` *值*相同，除非后者为 ref 类型，在这种情况下，它是 `Value^` 。
+在下面的说明中，与 `GValue` *值* 相同，除非后者为 ref 类型，在这种情况下，它是 `Value^` 。
 
 ## <a name="syntax"></a>语法
 
@@ -200,14 +200,14 @@ template<typename Value>
 |[list::back_item (STL/CLR)](#back_item)|访问最后一个元素。|
 |[list::front_item (STL/CLR)](#front_item)|访问第一个元素。|
 
-|操作员|说明|
+|运算符|说明|
 |--------------|-----------------|
 |[list::operator= (STL/CLR)](#op_as)|替换受控序列。|
-|[operator！ = （list）（STL/CLR）](#op_neq)|确定对象是否 `list` 不等于另一个 `list` 对象。|
-|[operator< （list）（STL/CLR）](#op_lt)|确定 `list` 对象是否小于另一个 `list` 对象。|
-|[operator<= （list）（STL/CLR）](#op_lteq)|确定 `list` 对象是否小于或等于另一个 `list` 对象。|
-|[operator = = （list）（STL/CLR）](#op_eq)|确定 `list` 对象是否等于另一个 `list` 对象。|
-|[operator> （list）（STL/CLR）](#op_gt)|确定 `list` 对象是否大于另一个 `list` 对象。|
+|[operator！ = (list)  (STL/CLR) ](#op_neq)|确定对象是否 `list` 不等于另一个 `list` 对象。|
+|[operator< (list)  (STL/CLR) ](#op_lt)|确定 `list` 对象是否小于另一个 `list` 对象。|
+|[operator<= (list)  (STL/CLR) ](#op_lteq)|确定 `list` 对象是否小于或等于另一个 `list` 对象。|
+|[operator = = (list)  (STL/CLR) ](#op_eq)|确定 `list` 对象是否等于另一个 `list` 对象。|
+|[operator> (list)  (STL/CLR) ](#op_gt)|确定 `list` 对象是否大于另一个 `list` 对象。|
 |[operator>= (list) (STL/CLR)](#op_gteq)|确定 `list` 对象是否大于或等于另一个 `list` 对象。|
 
 ## <a name="interfaces"></a>接口
@@ -221,21 +221,21 @@ template<typename Value>
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
 |IList\<Value>|维护泛型容器。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-对象为其控制的序列分配并释放存储，并将其控制为双向链接列表中的单个节点。 它通过更改节点之间的链接来重新排列元素，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。 因此，列表非常适合用于模板类[队列（stl/clr）](../dotnet/queue-stl-clr.md)或模板类[堆栈（stl/clr）](../dotnet/stack-stl-clr.md)的基础容器。
+对象为其控制的序列分配并释放存储，并将其控制为双向链接列表中的单个节点。 它通过更改节点之间的链接来重新排列元素，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。 因此，列表非常适合用于模板类队列的基础容器 [ (stl/clr) ](../dotnet/queue-stl-clr.md) 或 template 类 [stack (stl/clr) ](../dotnet/stack-stl-clr.md)。
 
-`list`对象支持双向迭代器，这意味着，如果迭代器指定了受控序列中的元素，则可以单步执行相邻元素。 特殊头节点对应于[list：： end （STL/CLR）](../dotnet/list-end-stl-clr.md)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增列表迭代器以到达头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
+`list`对象支持双向迭代器，这意味着，如果迭代器指定了受控序列中的元素，则可以单步执行相邻元素。 特殊头节点对应于[list：： end (STL/CLR) ](#end)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增列表迭代器以到达头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
 
-请注意，不能直接引用列表元素，因为它的数字位置需要随机访问迭代器。 因此，列表*不能*用作模板类[priority_queue （STL/CLR）](../dotnet/priority-queue-stl-clr.md)的基础容器。
+请注意，不能直接引用列表元素，因为它的数字位置需要随机访问迭代器。 因此，列表 *不能* 用作模板类的基础容器， [ (STL/CLR) priority_queue ](../dotnet/priority-queue-stl-clr.md)。
 
 列表迭代器将句柄存储到其关联的列表节点，后者又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要列表迭代器的关联列表节点与某个列表相关联，它就会保持有效。 而且，有效的迭代器是 dereferencable 的，您可以使用它来访问或更改它指定的元素值，但前提是它不等于 `end()` 。
 
-清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器*不*会销毁其元素。
+清除或删除元素会调用析构函数以获取其存储的值。 销毁容器将清除所有元素。 因此，其元素类型为 ref 类的容器可确保没有元素长于容器。 但请注意，句柄的容器 *不* 会销毁其元素。
 
 ## <a name="members"></a>成员
 
-## <a name="listassign-stlclr"></a><a name="assign"></a>list：： assign （STL/CLR）
+## <a name="listassign-stlclr"></a><a name="assign"></a> list：： assign (STL/CLR) 
 
 替换所有元素。
 
@@ -265,13 +265,13 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *初始值*<br/>
 要插入的元素的值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一个成员函数会将受控序列替换为值*val*的*计数*元素的重复。 使用它可以将具有相同值的元素填充到容器中。
 
-如果 `InIt` 是整数类型，则第二个成员函数的行为与相同 `assign((size_type)first, (value_type)last)` 。 否则，它会将受控序列替换为序列 [ `first` ， `last` ）。 用于使受控序列成为副本的另一个序列。
+如果 `InIt` 是整数类型，则第二个成员函数的行为与相同 `assign((size_type)first, (value_type)last)` 。 否则，它会将受控序列替换为序列 [ `first` ， `last`) 。 用于使受控序列成为副本的另一个序列。
 
-第三个成员函数将受控序列替换*为枚举器*指定的序列。 用于使受控序列成为枚举器所描述的序列的副本。
+第三个成员函数将受控序列替换 *为枚举器*指定的序列。 用于使受控序列成为枚举器所描述的序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -317,7 +317,7 @@ a b
 a b c
 ```
 
-## <a name="listback-stlclr"></a><a name="back"></a>list：： back （STL/CLR）
+## <a name="listback-stlclr"></a><a name="back"></a> list：： back (STL/CLR) 
 
 访问最后一个元素。
 
@@ -368,7 +368,7 @@ back() = c
 a b x
 ```
 
-## <a name="listback_item-stlclr"></a><a name="back_item"></a>list：： back_item （STL/CLR）
+## <a name="listback_item-stlclr"></a><a name="back_item"></a> list：： back_item (STL/CLR) 
 
 访问最后一个元素。
 
@@ -419,7 +419,7 @@ back_item = c
 a b x
 ```
 
-## <a name="listbegin-stlclr"></a><a name="begin"></a>list：： begin （STL/CLR）
+## <a name="listbegin-stlclr"></a><a name="begin"></a> list：： begin (STL/CLR) 
 
 指定受控序列的开头。
 
@@ -474,7 +474,7 @@ a b c
 x y c
 ```
 
-## <a name="listclear-stlclr"></a><a name="clear"></a>list：： clear （STL/CLR）
+## <a name="listclear-stlclr"></a><a name="clear"></a> list：： clear (STL/CLR) 
 
 删除所有元素。
 
@@ -486,7 +486,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[list：： erase （stl/clr）](../dotnet/list-erase-stl-clr.md) `(` [list：： begin （stl/clr）](../dotnet/list-begin-stl-clr.md) `(),` [list：： end （stl/clr）](../dotnet/list-end-stl-clr.md) `())` 。 用于确保受控序列为空。
+成员函数有效地调用[list：： erase (stl/clr) ](#erase) `(` [列表：： begin (stl/clr) ](#begin) `(),` [列表：： end (stl/clr) ](#end) `())` 。 用于确保受控序列为空。
 
 ### <a name="example"></a>示例
 
@@ -531,7 +531,7 @@ a b
 size() = 0
 ```
 
-## <a name="listconst_iterator-stlclr"></a><a name="const_iterator"></a>list：： const_iterator （STL/CLR）
+## <a name="listconst_iterator-stlclr"></a><a name="const_iterator"></a> list：： const_iterator (STL/CLR) 
 
 受控序列的常量迭代器的类型。
 
@@ -572,7 +572,7 @@ int main()
 a b c
 ```
 
-## <a name="listconst_reference-stlclr"></a><a name="const_reference"></a>list：： const_reference （STL/CLR）
+## <a name="listconst_reference-stlclr"></a><a name="const_reference"></a> list：： const_reference (STL/CLR) 
 
 元素的常量引用的类型。
 
@@ -616,7 +616,7 @@ int main()
 a b c
 ```
 
-## <a name="listconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>list：： const_reverse_iterator （STL/CLR）
+## <a name="listconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a> list：： const_reverse_iterator (STL/CLR) 
 
 受控序列的常量反向迭代器的类型。
 
@@ -658,7 +658,7 @@ int main()
 c b a
 ```
 
-## <a name="listdifference_type-stlclr"></a><a name="difference_type"></a>list：:d ifference_type （STL/CLR）
+## <a name="listdifference_type-stlclr"></a><a name="difference_type"></a> list：:d ifference_type (STL/CLR) 
 
 两个元素间的带符号距离的类型。
 
@@ -712,7 +712,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="listempty-stlclr"></a><a name="empty"></a>list：： empty （STL/CLR）
+## <a name="listempty-stlclr"></a><a name="empty"></a> list：： empty (STL/CLR) 
 
 测试元素是否存在。
 
@@ -724,7 +724,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[list：： size （STL/CLR）](../dotnet/list-size-stl-clr.md) `() == 0` 。 用于测试列表是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[STL/CLR)  (list：： size ](#size) `() == 0` 。 用于测试列表是否为空。
 
 ### <a name="example"></a>示例
 
@@ -763,7 +763,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="listend-stlclr"></a><a name="end"></a>list：： end （STL/CLR）
+## <a name="listend-stlclr"></a><a name="end"></a> list：： end (STL/CLR) 
 
 指定受控序列的末尾。
 
@@ -819,7 +819,7 @@ a b c
 a x y
 ```
 
-## <a name="listerase-stlclr"></a><a name="erase"></a>list：： erase （STL/CLR）
+## <a name="listerase-stlclr"></a><a name="erase"></a> list：： erase (STL/CLR) 
 
 移除指定位置处的元素。
 
@@ -841,15 +841,15 @@ iterator erase(iterator first, iterator last);
 *where*<br/>
 要清除的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员函数删除由*where*指向的受控序列的元素。 使用它可以删除单个元素。
+第一个成员函数删除由 *where*指向的受控序列的元素。 使用它可以删除单个元素。
 
 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 使用它可以删除零个或多个连续元素。
 
-这两个成员函数都返回一个迭代器，该迭代器指定在删除的任何元素之外保留的第一个元素; 如果此类元素不存在，则为[list：： end （STL/CLR）](../dotnet/list-end-stl-clr.md) `()` 。
+这两个成员函数都返回一个迭代器，该迭代器指定在删除的任何元素之外保留的第一个元素; 如果此类元素不存在，则为[list：： end (STL/CLR) ](#end) `()` 。
 
-擦除元素时，元素副本的数目在擦除结束和序列的最近结束之间的元素数中是线性的。 （在序列的任一端删除一个或多个元素时，不会发生元素复制。）
+擦除元素时，元素副本的数目在擦除结束和序列的最近结束之间的元素数中是线性的。  (在序列的任一端擦除一个或多个元素时，不会发生元素复制。 ) 
 
 ### <a name="example"></a>示例
 
@@ -898,7 +898,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="listfront-stlclr"></a><a name="front"></a>list：： front （STL/CLR）
+## <a name="listfront-stlclr"></a><a name="front"></a> list：： front (STL/CLR) 
 
 访问第一个元素。
 
@@ -949,7 +949,7 @@ front() = a
 x b c
 ```
 
-## <a name="listfront_item-stlclr"></a><a name="front_item"></a>list：： front_item （STL/CLR）
+## <a name="listfront_item-stlclr"></a><a name="front_item"></a> list：： front_item (STL/CLR) 
 
 访问第一个元素。
 
@@ -1000,7 +1000,7 @@ front_item = a
 x b c
 ```
 
-## <a name="listgeneric_container-stlclr"></a><a name="generic_container"></a>list：： generic_container （STL/CLR）
+## <a name="listgeneric_container-stlclr"></a><a name="generic_container"></a> list：： generic_container (STL/CLR) 
 
 容器的泛型接口的类型。
 
@@ -1066,7 +1066,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="listgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>list：： generic_iterator （STL/CLR）
+## <a name="listgeneric_iterator-stlclr"></a><a name="generic_iterator"></a> list：： generic_iterator (STL/CLR) 
 
 与容器的泛型接口一起使用的迭代器的类型。
 
@@ -1124,7 +1124,7 @@ a b c
 a a c
 ```
 
-## <a name="listgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>list：： generic_reverse_iterator （STL/CLR）
+## <a name="listgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a> list：： generic_reverse_iterator (STL/CLR) 
 
 用于容器的泛型接口的反向迭代器的类型。
 
@@ -1181,7 +1181,7 @@ a b c
 a c c
 ```
 
-## <a name="listgeneric_value-stlclr"></a><a name="generic_value"></a>list：： generic_value （STL/CLR）
+## <a name="listgeneric_value-stlclr"></a><a name="generic_value"></a> list：： generic_value (STL/CLR) 
 
 用于容器的泛型接口的元素类型。
 
@@ -1237,7 +1237,7 @@ a b c
 a a c
 ```
 
-## <a name="listinsert-stlclr"></a><a name="insert"></a>list：： insert （STL/CLR）
+## <a name="listinsert-stlclr"></a><a name="insert"></a> list：： insert (STL/CLR) 
 
 在指定位置添加元素。
 
@@ -1272,19 +1272,19 @@ void insert(iterator where,
 *where*<br/>
 要插入到的容器中的位置。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-每个成员函数在由控制的序列中的*位置*指向的元素之前，插入由剩余操作数指定的序列。
+每个成员函数在由控制的序列中的 *位置* 指向的元素之前，插入由剩余操作数指定的序列。
 
-第一个成员函数插入具有值*val*的元素，并返回指定新插入的元素的迭代器。 用于在迭代器指定的位置之前插入单个元素。
+第一个成员函数插入具有值 *val* 的元素，并返回指定新插入的元素的迭代器。 用于在迭代器指定的位置之前插入单个元素。
 
 第二个成员函数插入值*val*的*计数*元素的重复。 使用它可以插入零个或多个连续元素，这些元素是同一值的所有副本。
 
-如果 `InIt` 是整数类型，则第三个成员函数的行为与 `insert(where, (size_type)first, (value_type)last)` 相同。 否则，将插入序列 [ `first` ， `last` ）。 使用它可以插入从另一个序列复制的零个或多个连续元素。
+如果 `InIt` 是整数类型，则第三个成员函数的行为与 `insert(where, (size_type)first, (value_type)last)` 相同。 否则，将插入序列 [ `first` ， `last`) 。 使用它可以插入从另一个序列复制的零个或多个连续元素。
 
-第四个成员函数插入由*权限*指定的序列。 使用它可以插入枚举器描述的序列。
+第四个成员函数插入由 *权限*指定的序列。 使用它可以插入枚举器描述的序列。
 
-在插入单个元素时，元素副本的数目在插入点与序列的最近结束之间的元素数中是线性的。 （在序列的任一端插入一个或多个元素时，不会发生元素复制。）如果 `InIt` 是输入迭代器，则第三个成员函数将为序列中的每个元素有效地执行单个插入。 否则，在插入 `N` 元素时，元素副本的数量为线性， `N` 并加上插入点与序列的最近结束之间的元素数。
+在插入单个元素时，元素副本的数目在插入点与序列的最近结束之间的元素数中是线性的。  (在序列的任一端插入一个或多个元素时，不会发生元素复制。 ) 如果 `InIt` 是输入迭代器，则第三个成员函数将为序列中的每个元素有效地执行单个插入。 否则，在插入 `N` 元素时，元素副本的数量为线性， `N` 并加上插入点与序列的最近结束之间的元素数。
 
 ### <a name="example"></a>示例
 
@@ -1355,7 +1355,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="listiterator-stlclr"></a><a name="iterator"></a>list：： iterator （STL/CLR）
+## <a name="listiterator-stlclr"></a><a name="iterator"></a> list：： iterator (STL/CLR) 
 
 受控序列的迭代器的类型。
 
@@ -1404,7 +1404,7 @@ a b c
 x b c
 ```
 
-## <a name="listlist-stlclr"></a><a name="list"></a>list：： list （STL/CLR）
+## <a name="listlist-stlclr"></a><a name="list"></a> list：： list (STL/CLR) 
 
 构造容器对象。
 
@@ -1438,7 +1438,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 *初始值*<br/>
 要插入的元素的值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 构造函数：
 
@@ -1450,19 +1450,19 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(list<Value>% right);`
 
-用序列 [，）初始化受控序列 `right.begin()` `right.end()` 。 用于指定初始受控序列，该序列是由 list 对象*权限*控制的序列的副本。
+用序列 [，) 初始化受控序列 `right.begin()` `right.end()` 。 用于指定初始受控序列，该序列是由 list 对象 *权限*控制的序列的副本。
 
 构造函数：
 
 `list(list<Value>^ right);`
 
-用序列 [，）初始化受控序列 `right->begin()` `right->end()` 。 用于指定初始受控序列，该序列是由其句柄为*right*的列表对象控制的序列副本。
+用序列 [，) 初始化受控序列 `right->begin()` `right->end()` 。 用于指定初始受控序列，该序列是由其句柄为 *right*的列表对象控制的序列副本。
 
 构造函数：
 
 `explicit list(size_type count);`
 
-用*count*元素每个值初始化受控序列 `value_type()` 。 使用它可以使用具有默认值的元素填充容器。
+用 *count* 元素每个值初始化受控序列 `value_type()` 。 使用它可以使用具有默认值的元素填充容器。
 
 构造函数：
 
@@ -1476,13 +1476,13 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(InIt first, InIt last);`
 
-用序列 [，）初始化受控序列 `first` `last` 。 用于使受控序列成为另一个序列的副本。
+用序列 [，) 初始化受控序列 `first` `last` 。 用于使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `list(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-使用枚举器*权限*指定的序列初始化受控序列。 用于使受控序列成为枚举器所描述的另一序列的副本。
+使用枚举器 *权限*指定的序列初始化受控序列。 用于使受控序列成为枚举器所描述的另一序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1549,7 +1549,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="listmerge-stlclr"></a><a name="merge"></a>list：： merge （STL/CLR）
+## <a name="listmerge-stlclr"></a><a name="merge"></a> list：： merge (STL/CLR) 
 
 合并两个有序受控序列。
 
@@ -1569,13 +1569,13 @@ template<typename Pred2>
 *然后*<br/>
 要合并的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员函数从*右*控制的序列中移除所有元素，并将其插入到受控序列中。 这两个序列必须以前按顺序排序 `operator<` --元素在您通过任一顺序进行的进度中都不能减少。 结果序列也按排序 `operator<` 。 您可以使用此成员函数将值增加的两个序列合并为一个也增加值的序列。
+第一个成员函数从 *右* 控制的序列中移除所有元素，并将其插入到受控序列中。 这两个序列必须以前按顺序排序 `operator<` --元素在您通过任一顺序进行的进度中都不能减少。 结果序列也按排序 `operator<` 。 您可以使用此成员函数将值增加的两个序列合并为一个也增加值的序列。
 
 第二个成员函数的行为与第一个相同，不同之处在于 `pred`  --  `pred(X, Y)` 对于 `X` 序列中跟随元素的任何元素，序列按排序方式必须为 false `Y` 。 用于合并由指定的谓词函数或委托排序的两个序列。
 
-这两个函数执行稳定合并-在生成的受控序列中，任何一个原始受控序列中的元素都不会反转。 此外，如果生成的受控序列中的一对元素 `X` 和 `Y` 具有等效的排序---- `!(X < Y) && !(X < Y)` 来自原始受控序列的元素出现在由*right*控制的序列中的元素之前。
+这两个函数执行稳定合并-在生成的受控序列中，任何一个原始受控序列中的元素都不会反转。 此外，如果生成的受控序列中的一对元素 `X` 和 `Y` 具有等效的排序---- `!(X < Y) && !(X < Y)` 来自原始受控序列的元素出现在由 *right*控制的序列中的元素之前。
 
 ### <a name="example"></a>示例
 
@@ -1646,7 +1646,7 @@ f e e d c c b a a
 c1.size() = 0
 ```
 
-## <a name="listoperator-stlclr"></a><a name="op_as"></a>list：： operator = （STL/CLR）
+## <a name="listoperator-stlclr"></a><a name="op_as"></a> list：： operator = (STL/CLR) 
 
 替换受控序列。
 
@@ -1661,9 +1661,9 @@ list<Value>% operator=(list<Value>% right);
 *然后*<br/>
 用于复制的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1699,7 +1699,7 @@ a b c
 a b c
 ```
 
-## <a name="listpop_back-stlclr"></a><a name="pop_back"></a>list：:p op_back （STL/CLR）
+## <a name="listpop_back-stlclr"></a><a name="pop_back"></a> list：:p op_back (STL/CLR) 
 
 删除最后一个元素。
 
@@ -1746,7 +1746,7 @@ a b c
 a b
 ```
 
-## <a name="listpop_front-stlclr"></a><a name="pop_front"></a>list：:p op_front （STL/CLR）
+## <a name="listpop_front-stlclr"></a><a name="pop_front"></a> list：:p op_front (STL/CLR) 
 
 删除第一个元素。
 
@@ -1793,7 +1793,7 @@ a b c
 b c
 ```
 
-## <a name="listpush_back-stlclr"></a><a name="push_back"></a>list：:p ush_back （STL/CLR）
+## <a name="listpush_back-stlclr"></a><a name="push_back"></a> list：:p ush_back (STL/CLR) 
 
 添加新的最后一个元素。
 
@@ -1833,7 +1833,7 @@ int main()
 a b c
 ```
 
-## <a name="listpush_front-stlclr"></a><a name="push_front"></a>list：:p ush_front （STL/CLR）
+## <a name="listpush_front-stlclr"></a><a name="push_front"></a> list：:p ush_front (STL/CLR) 
 
 添加新的第一个元素。
 
@@ -1873,7 +1873,7 @@ int main()
 c b a
 ```
 
-## <a name="listrbegin-stlclr"></a><a name="rbegin"></a>list：： rbegin （STL/CLR）
+## <a name="listrbegin-stlclr"></a><a name="rbegin"></a> list：： rbegin (STL/CLR) 
 
 指定反向受控序列的开头。
 
@@ -1928,7 +1928,7 @@ a b c
 a y x
 ```
 
-## <a name="listreference-stlclr"></a><a name="reference"></a>list：： reference （STL/CLR）
+## <a name="listreference-stlclr"></a><a name="reference"></a> list：： reference (STL/CLR) 
 
 元素的引用的类型。
 
@@ -1983,7 +1983,7 @@ a b c
 A B C
 ```
 
-## <a name="listremove-stlclr"></a><a name="remove"></a>list：： remove （STL/CLR）
+## <a name="listremove-stlclr"></a><a name="remove"></a> list：： remove (STL/CLR) 
 
 删除具有指定值的元素。
 
@@ -1998,9 +1998,9 @@ void remove(value_type val);
 *初始值*<br/>
 要移除的元素的值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数删除受控序列中的元素 `((System::Object^)val)->Equals((System::Object^)x)` （如果有）。 使用此方法可以清除具有指定值的任意元素。
+成员函数删除受控序列中的元素，该元素在 `((System::Object^)val)->Equals((System::Object^)x)` 任何)  (为 true。 使用此方法可以清除具有指定值的任意元素。
 
 ### <a name="example"></a>示例
 
@@ -2042,7 +2042,7 @@ a b c
 a c
 ```
 
-## <a name="listremove_if-stlclr"></a><a name="remove_if"></a>list：： remove_if （STL/CLR）
+## <a name="listremove_if-stlclr"></a><a name="remove_if"></a> list：： remove_if (STL/CLR) 
 
 移除通过指定测试的元素。
 
@@ -2058,9 +2058,9 @@ template<typename Pred1>
 *pred*<br/>
 测试要删除的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数从受控序列（清除）中删除为 true 的每个元素 `X` `pred(X)` 。 使用它可以删除满足您指定为函数或委托的条件的所有元素。
+成员函数从受控序列中移除 (将) 为 true 的每个元素 `X` 进行擦除 `pred(X)` 。 使用它可以删除满足您指定为函数或委托的条件的所有元素。
 
 ### <a name="example"></a>示例
 
@@ -2106,7 +2106,7 @@ a b b b c
 b b b
 ```
 
-## <a name="listrend-stlclr"></a><a name="rend"></a>list：： rend （STL/CLR）
+## <a name="listrend-stlclr"></a><a name="rend"></a> list：： rend (STL/CLR) 
 
 指定反向受控序列的末尾。
 
@@ -2162,7 +2162,7 @@ a b c
 y x c
 ```
 
-## <a name="listresize-stlclr"></a><a name="resize"></a>list：： resize （STL/CLR）
+## <a name="listresize-stlclr"></a><a name="resize"></a> list：： resize (STL/CLR) 
 
 更改元素的数量。
 
@@ -2181,9 +2181,9 @@ void resize(size_type new_size, value_type val);
 *初始值*<br/>
 填充元素的值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数确保[list：： size （STL/CLR）](../dotnet/list-size-stl-clr.md) `()` 之后返回*new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `value_type()` ，而第二个成员函数则追加值为*val*的元素。 为了使受控序列更短，两个成员函数实际上会清除最后一个元素[列表：： size （STL/CLR）](../dotnet/list-size-stl-clr.md) `() -` `new_size` 次。 使用它可以通过修整或填充当前受控序列来确保受控序列*new_size*大小。
+成员函数均可确保[STL/CLR) 之后 (的 list：： size](#size) `()` 返回*new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `value_type()` ，而第二个成员函数则追加值为 *val*的元素。 若要使受控序列更短，两个成员函数将有效地清除最后一个元素[列表：： size (STL/CLR) ](#size) `() -` `new_size` 时间。 使用它可以通过修整或填充当前受控序列来确保受控序列 *new_size*大小。
 
 ### <a name="example"></a>示例
 
@@ -2222,7 +2222,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="listreverse-stlclr"></a><a name="reverse"></a>list：： reverse （STL/CLR）
+## <a name="listreverse-stlclr"></a><a name="reverse"></a> list：： reverse (STL/CLR) 
 
 反转受控序列。
 
@@ -2269,7 +2269,7 @@ a b c
 c b a
 ```
 
-## <a name="listreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>list：： reverse_iterator （STL/CLR）
+## <a name="listreverse_iterator-stlclr"></a><a name="reverse_iterator"></a> list：： reverse_iterator (STL/CLR) 
 
 受控序列的反向迭代器的类型。
 
@@ -2318,7 +2318,7 @@ c b a
 x b a
 ```
 
-## <a name="listsize-stlclr"></a><a name="size"></a>list：： size （STL/CLR）
+## <a name="listsize-stlclr"></a><a name="size"></a> list：： size (STL/CLR) 
 
 对元素数进行计数。
 
@@ -2330,7 +2330,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[list：： empty （STL/CLR）](../dotnet/list-empty-stl-clr.md) `()` 。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[list：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -2371,7 +2371,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="listsize_type-stlclr"></a><a name="size_type"></a>list：： size_type （STL/CLR）
+## <a name="listsize_type-stlclr"></a><a name="size_type"></a> list：： size_type (STL/CLR) 
 
 两个元素间的带符号距离的类型。
 
@@ -2419,7 +2419,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="listsort-stlclr"></a><a name="sort"></a>list：： sort （STL/CLR）
+## <a name="listsort-stlclr"></a><a name="sort"></a> list：： sort (STL/CLR) 
 
 对受控序列进行排序。
 
@@ -2436,7 +2436,7 @@ template<typename Pred2>
 *pred*<br/>
 元素对的比较器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一个成员函数重新排列受控序列中的元素，以便在按顺序进行排序时，它们按 `operator<` --元素排序不会减少。 您可以使用此成员函数按递增顺序对序列进行排序。
 
@@ -2484,7 +2484,7 @@ c b a
 a b c
 ```
 
-## <a name="listsplice-stlclr"></a><a name="splice"></a>list：：接合（STL/CLR）
+## <a name="listsplice-stlclr"></a><a name="splice"></a> list：： splice (STL/CLR) 
 
 Restitch 节点之间的链接。
 
@@ -2512,13 +2512,13 @@ void splice(iterator where, list<Value>% right,
 *where*<br/>
 要在其中接合的容器中的位置。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员函数将由*右*控制的序列插入到所指向的受控序列中的元素*之前。* 它还会删除*右侧*的所有元素。 （ `%right` 不得等于 **`this`** 。）使用它可以将所有列表拼接到另一个列表。
+第一个成员函数将由*右*控制的序列插入到所指向的受控序列中的元素*之前。* 它还会删除 *右侧*的所有元素。  (`%right` 不得相等 **`this`** 。 ) 使用它将所有列表拼接到另一个列表。
 
-第二个成员函数删除由*right*控制的序列中的*第一个*元素，并将其插入到所指向的受控序列中的元素*之前。* （如果 `where` `==``first` `||` `where``== ++first`，则不会发生更改。）它用于将一个列表中的单个元素接合到另一个列表。
+第二个成员函数删除由*right*控制的序列中的*第一个*元素，并将其插入到所指向的受控序列中的元素*之前。*  (`where` `==` `first` `||` `where` `== ++first` ，则不会发生任何更改。 ) 使用它将一个列表中的单个元素接合到另一个列表。
 
-第三个成员函数将由 [，）指定的子范围 `first` `last` 从*右端*所控制的序列中的元素之前的*位置*插入到所指向的位置。 它还将从*权限*控制的序列中删除原始子范围。 （如果 `right == this` 范围 [ `first` ， `last` ）不能包含由*where*指向的元素。）使用它可以将零个或多个元素的子序列从一个列表接合到另一个列表。
+第三个成员函数将由 [、) 指定的子范围插入由 `first` `last` *右端* 控制的序列中的元素，在由 *where*指向的受控序列中的元素之前。 它还将从 *权限*控制的序列中删除原始子范围。  (如果 `right == this` ，范围 [ `first` ， `last`) 不能包含 *指向的*元素。 ) 使用它将零个或多个元素的子序列从一个列表接合到另一个列表。
 
 ### <a name="example"></a>示例
 
@@ -2577,7 +2577,7 @@ b c a
 c2.size() = 0
 ```
 
-## <a name="listswap-stlclr"></a><a name="swap"></a>list：： swap （STL/CLR）
+## <a name="listswap-stlclr"></a><a name="swap"></a> list：： swap (STL/CLR) 
 
 交换两个容器的内容。
 
@@ -2592,7 +2592,7 @@ void swap(list<Value>% right);
 *然后*<br/>
 要与其交换内容的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数交换和右之间的受控 **`*this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
@@ -2641,7 +2641,7 @@ x x x x x
 a b c
 ```
 
-## <a name="listto_array-stlclr"></a><a name="to_array"></a>list：： to_array （STL/CLR）
+## <a name="listto_array-stlclr"></a><a name="to_array"></a> list：： to_array (STL/CLR) 
 
 将受控序列复制到新数组。
 
@@ -2690,7 +2690,7 @@ a b c d
 a b c
 ```
 
-## <a name="listunique-stlclr"></a><a name="unique"></a>list：： unique （STL/CLR）
+## <a name="listunique-stlclr"></a><a name="unique"></a> list：： unique (STL/CLR) 
 
 删除通过了指定测试的相邻元素。
 
@@ -2707,9 +2707,9 @@ template<typename Pred2>
 *pred*<br/>
 元素对的比较器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员函数从受控序列（清除）中删除每个与前一个元素相等的元素，如果元素在 `X` 元素之前，则 `Y` `X == Y` 成员函数将删除 `Y` 。 使用它可以删除比较相等的相邻元素的每个子序列的所有副本。 请注意，如果对受控序列进行排序（例如通过调用[list：： sort （STL/CLR））](../dotnet/list-sort-stl-clr.md) `()` ，则成员函数仅保留具有唯一值的元素。 （由此而得名）。
+第一个成员函数从受控序列中移除 (将) 每个与前一个元素相等的元素（如果元素 `X` 位于元素和之前）删除 `Y` `X == Y` `Y` 。 使用它可以删除比较相等的相邻元素的每个子序列的所有副本。 请注意，如果对受控序列进行排序，例如通过调用[list：： sort (STL/CLR) ](#sort) `()` ，则该成员函数仅保留具有唯一值的元素。 （由此而得名）。
 
 第二个成员函数的行为与第一个相同，不同之处在于，它会删除元素后面的每个元素 `Y` `X` `pred(X, Y)` 。 使用它可以删除满足指定谓词函数或委托的相邻元素的所有子序列的所有副本。 请注意，如果按顺序对受控序列进行排序（例如通过调用 `sort(pred)` ），则成员函数将只保留对任何其他元素不具有等效排序的元素。
 
@@ -2756,7 +2756,7 @@ a b c
 a a
 ```
 
-## <a name="listvalue_type-stlclr"></a><a name="value_type"></a>list：： value_type （STL/CLR）
+## <a name="listvalue_type-stlclr"></a><a name="value_type"></a> list：： value_type (STL/CLR) 
 
 元素的类型。
 
@@ -2768,7 +2768,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数*值*的同义词。
+该类型是模板参数 *值*的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2801,7 +2801,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-list-stlclr"></a><a name="op_neq"></a>operator！ = （list）（STL/CLR）
+## <a name="operator-list-stlclr"></a><a name="op_neq"></a> operator！ = (list)  (STL/CLR) 
 
 列表不相等比较。
 
@@ -2821,7 +2821,7 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素比较两个*列表时，是否按原样对**左侧*进行排序。
 
@@ -2870,7 +2870,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a>operator &lt; （list）（STL/CLR）
+## <a name="operatorlt-list-stlclr"></a><a name="op_lt"></a> 操作员 &lt; (list)  (STL/CLR) 
 
 列表小于比较。
 
@@ -2890,7 +2890,7 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回， `left->size() < right->size()` 以便在按元素比较两个列表*right*时，使用它来测试是否对*左侧*排序。
 
@@ -2939,7 +2939,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a>operator &lt; = （list）（STL/CLR）
+## <a name="operatorlt-list-stlclr"></a><a name="op_lteq"></a> operator &lt; = (list)  (STL/CLR) 
 
 列表小于或等于比较。
 
@@ -2959,7 +2959,7 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个列表进行比较*时，是否向**左*排序。
 
@@ -3008,7 +3008,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-list-stlclr"></a><a name="op_eq"></a>operator = = （list）（STL/CLR）
+## <a name="operator-list-stlclr"></a><a name="op_eq"></a> operator = = (list)  (STL/CLR) 
 
 列出相等比较。
 
@@ -3028,9 +3028,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-仅当由*左*和*右*控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以测试在按元素比较两个列表*时，* 是否向*左*排序。
+仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以测试在按元素比较两个列表*时，* 是否向*左*排序。
 
 ### <a name="example"></a>示例
 
@@ -3077,7 +3077,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a>operator &gt; （list）（STL/CLR）
+## <a name="operatorgt-list-stlclr"></a><a name="op_gt"></a> 操作员 &gt; (list)  (STL/CLR) 
 
 列表大于比较。
 
@@ -3097,7 +3097,7 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `right` `<` `left` 。 用于测试在按元素比较两个*列表时，是否向**左*排序。
 
@@ -3146,7 +3146,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a>operator &gt; = （list）（STL/CLR）
+## <a name="operatorgt-list-stlclr"></a><a name="op_gteq"></a> operator &gt; = (list)  (STL/CLR) 
 
 列出大于或等于比较。
 
@@ -3166,7 +3166,7 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(left` `<` `right)` 。 用于测试在按元素比较两个*列表时，是否向**左*排序。
 

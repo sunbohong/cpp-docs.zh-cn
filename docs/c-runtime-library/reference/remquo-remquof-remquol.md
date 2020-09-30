@@ -35,12 +35,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: d99204ad9a80c6320869cbb72aee905981a5224d
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: b80815ef9a92e6551b7866ccc2b589268642c095
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89554963"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507550"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -73,7 +73,7 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 **remquo**返回*x*  /  *y*的浮点余数。 如果 *y* 的值为0.0，则 **remquo** 将返回静默的 NaN。 有关 **printf** 系列的 quiet NaN 表示形式的信息，请参阅 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Remquo**函数计算*x*y 的浮点余数*f*  /  *y* ，这是*x*  =  *i* \* *y*  +  *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
 
@@ -117,10 +117,10 @@ The remainder of -10.00 / 3.00 is -1.000000
 Approximate signed quotient is -3
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[ldiv、lldiv](./div.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [remainder、remainderf、remainderl](remainder-remainderf-remainderl.md)<br/>

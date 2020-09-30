@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
-ms.openlocfilehash: 810ec59a814b04349913648fb49a03eb63912cd9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 461850b2c1686343f23c77274b8fb2ca6fd9071e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757977"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508010"
 ---
 # <a name="compiler-error-c3706"></a>编译器错误 C3706
 
 "function"：必须是用于激发 COM 事件的 COM 接口
 
-用于激发 COM 事件的事件接口必须是 COM 接口。 在这种情况下，应使用视觉对象C++定义接口，或使用 #import 的 embedded_idl 属性的类型库中的[#import](../../preprocessor/hash-import-directive-cpp.md)导入接口。
+用于激发 COM 事件的事件接口必须是 COM 接口。 在这种情况下，应使用 Visual C++ 特性来定义接口，或使用具有 #import embedded_idl 特性的类型库中的 [#import](../../preprocessor/hash-import-directive-cpp.md) 导入接口。
 
-请注意，以下示例中显示的 ATL 标头文件的 `#include` 行是使用 COM 事件所必需的。 若要修复此错误，请通过将以下属性之一应用于接口定义来使 `IEvents` （事件接口）成为 COM 接口： [object](../../windows/object-cpp.md)、[双重](../../windows/dual.md)或[调度](../../windows/dispinterface.md)接口。
+请注意， `#include` 以下示例中显示的 ATL 标头文件的行是使用 COM 事件所必需的。 若要修复此错误，请 `IEvents` 通过将以下属性之一应用于接口定义来使 (事件接口) COM 接口： [object](../../windows/attributes/object-cpp.md)、 [双重](../../windows/attributes/dual.md)或 [调度](../../windows/attributes/dispinterface.md)接口。
 
 如果接口来自 MIDL 生成的标头文件，则编译器将不会将其识别为 COM 接口。
 

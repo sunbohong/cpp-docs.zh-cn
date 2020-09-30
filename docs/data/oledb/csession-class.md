@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 6858c26df5f5ee364717d089704117e650282278
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841098"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507238"
 ---
 # <a name="csession-class"></a>CSession 类
 
@@ -76,7 +76,7 @@ class CSession
 
 ## <a name="remarks"></a>注解
 
-一个或多个会话可以与 (数据源) 的每个提供程序连接相关联，这由 [CDataSource](../../data/oledb/cdatasource-class.md) 对象表示。 若要为创建新 `CSession` 的 `CDataSource` ，请调用 [CSession：： Open](../../data/oledb/csession-open.md)。 为了开始数据库事务，`CSession` 提供了 `StartTransaction` 方法。 事务启动后，可以使用方法提交到该事务 `Commit` ，或使用方法取消该事务 `Abort` 。
+一个或多个会话可以与 (数据源) 的每个提供程序连接相关联，这由 [CDataSource](../../data/oledb/cdatasource-class.md) 对象表示。 若要为创建新 `CSession` 的 `CDataSource` ，请调用 [CSession：： Open](#open)。 为了开始数据库事务，`CSession` 提供了 `StartTransaction` 方法。 事务启动后，可以使用方法提交到该事务 `Commit` ，或使用方法取消该事务 `Abort` 。
 
 ## <a name="csessionabort"></a><a name="abort"></a> CSession：： Abort
 
@@ -100,7 +100,7 @@ HRESULT Abort(BOID* pboidReason = NULL,
 
 ## <a name="csessionclose"></a><a name="close"></a> CSession：： Close
 
-关闭已通过 [CSession：： Open](../../data/oledb/csession-open.md)打开的会话。
+关闭已通过 [CSession：： Open](#open)打开的会话。
 
 ### <a name="syntax"></a>语法
 
@@ -187,7 +187,7 @@ HRESULT Open(const CDataSource& ds,
 
 ### <a name="remarks"></a>注解
 
-在将数据源对象传递到之前，必须使用 [CDataSource：： open](../../data/oledb/cdatasource-open.md) 打开该对象 `CSession::Open` 。
+在将数据源对象传递到之前，必须使用 [CDataSource：： open](./cdatasource-class.md#open) 打开该对象 `CSession::Open` 。
 
 ## <a name="csessionstarttransaction"></a><a name="starttransaction"></a> CSession：： StartTransaction
 
@@ -214,7 +214,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 有关详细信息，请参阅*OLE DB 程序员参考*中的[ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CatDB](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

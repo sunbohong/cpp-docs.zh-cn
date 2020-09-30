@@ -7,19 +7,20 @@ helpviewer_keywords:
 - compatibility, C runtime libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: d6562be0abde8e9d51260b2d230f225ed159c199
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 711d5b3c95269413a0d94f568d3e3cb7b7dff721
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075745"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91506877"
 ---
 # <a name="compatibility"></a>兼容性
 
 通用 C 运行库 (UCRT) 支持 c + + 一致性所需的大多数 C 标准库。 它实现 C99 (ISO/IEC 9899:1999) 库，但有一些例外情况：
-- 中的 strict 类型兼容性 \<complex.h> 。 
+
+- 中的 strict 类型兼容性 \<complex.h> 。
 - `aligned_alloc`，这可能不会实现，因为 Windows 操作系统不支持对齐分配。 改为使用非标准的 `_aligned_malloc` 。
--  `strerrorlen_s`
+- `strerrorlen_s`
 - 中的原子支持 \<stdatomic.h>
 - 线程支持 \<threads.h>
 

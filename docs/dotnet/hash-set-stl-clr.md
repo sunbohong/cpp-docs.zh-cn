@@ -95,12 +95,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-ms.openlocfilehash: a7db6367ae7d5096c47666a1ea930720f061c9dd
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: c6df41836433b952d7d2e0e7d744270174c5768a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743121"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508734"
 ---
 # <a name="hash_set-stlclr"></a>hash_set (STL/CLR)
 
@@ -157,7 +157,7 @@ template<typename Key>
 |[hash_set::value_compare (STL/CLR)](#value_compare)|两个元素值的排序委托。|
 |[hash_set::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |---------------------|-----------------|
 |[hash_set::begin (STL/CLR)](#begin)|指定受控序列的开头。|
 |[hash_set::bucket_count (STL/CLR)](#bucket_count)|计算 bucket 的数目。|
@@ -185,13 +185,13 @@ template<typename Key>
 |[hash_set::upper_bound (STL/CLR)](#upper_bound)|查找与指定键匹配的范围的末尾。|
 |[hash_set::value_comp (STL/CLR)](#value_comp)|复制两个元素值的排序委托。|
 
-|运算符|描述|
+|运算符|说明|
 |--------------|-----------------|
 |[hash_set::operator= (STL/CLR)](#op)|替换受控序列。|
 
 ## <a name="interfaces"></a>接口
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
@@ -200,13 +200,13 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
 |IHash\<Key, Value>|维护泛型容器。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 对象为其控制的序列分配并释放存储，并将其控制为双向链接列表中的单个节点。 为了加快访问速度，对象还会在哈希表)  (的列表中保留一个长度可变的指针数组，从而有效地将整个列表作为子列表或存储桶序列进行管理。 它通过更改节点之间的链接，将元素插入到存储桶中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
 
-对象通过调用 hash_set：： key_compare 类型的存储委托对象对其控制的每个存储桶进行排序 [ (STL/CLR) ](../dotnet/hash-set-key-compare-stl-clr.md)。 构造 hash_set 时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为 "比较" `operator<=(key_type, key_type)` 。
+对象通过调用 hash_set：： key_compare 类型的存储委托对象对其控制的每个存储桶进行排序 [ (STL/CLR) ](#key_compare)。 构造 hash_set 时，可以指定存储的委托对象;如果指定 "无委托对象"，则默认值为 "比较" `operator<=(key_type, key_type)` 。
 
-可以通过调用成员函数[hash_set：： key_comp (STL/CLR) ](../dotnet/hash-set-key-comp-stl-clr.md)来访问存储的委托对象 `()` 。 此类委托对象必须在类型 [hash_set：： key_type (STL/CLR) ](../dotnet/hash-set-key-type-stl-clr.md)的键之间定义等效顺序。 这意味着，对于任意两个密钥 `X` 和 `Y` ：
+可以通过调用成员函数[hash_set：： key_comp (STL/CLR) ](#key_comp)来访问存储的委托对象 `()` 。 此类委托对象必须在类型 [hash_set：： key_type (STL/CLR) ](#key_type)的键之间定义等效顺序。 这意味着，对于任意两个密钥 `X` 和 `Y` ：
 
 `key_comp()(X, Y)` 针对每个调用返回相同的布尔值结果。
 
@@ -216,7 +216,7 @@ template<typename Key>
 
 请注意，容器仅确保其键具有等效排序的元素 (以及与相同整数值) 的哈希值在存储桶中相邻。 与模板类 [ (STL/CLR) hash_multiset ](../dotnet/hash-multiset-stl-clr.md)，模板类的对象 `hash_set` 可确保所有元素的键都是唯一的。  (没有两个键具有等效的排序。 ) 
 
-对象通过调用存储的委托对象类型 [hash_set：： hasher (STL/CLR) ](../dotnet/hash-set-hasher-stl-clr.md)来确定哪个 bucket 应包含给定的排序关键字。 可以通过调用成员函数 hash_set：： hash_delegate 来访问此存储对象， [ (STL/CLR) ](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` 获取依赖于键值的整数值。 构造 hash_set 时，可以指定存储的委托对象;如果未指定任何委托对象，则默认为函数 `System::Object::hash_value(key_type)` 。 这意味着，对于任何密钥 `X` 和 `Y` ：
+对象通过调用存储的委托对象类型 [hash_set：： hasher (STL/CLR) ](#hasher)来确定哪个 bucket 应包含给定的排序关键字。 可以通过调用成员函数 hash_set：： hash_delegate 来访问此存储对象， [ (STL/CLR) ](#hash_delegate) `()` 获取依赖于键值的整数值。 构造 hash_set 时，可以指定存储的委托对象;如果未指定任何委托对象，则默认为函数 `System::Object::hash_value(key_type)` 。 这意味着，对于任何密钥 `X` 和 `Y` ：
 
 `hash_delegate()(X)` 针对每个调用返回相同的整数结果。
 
@@ -224,9 +224,9 @@ template<typename Key>
 
 每个元素同时用作键和值。 序列以允许查找、插入和移除任意元素的方式表示，这些操作与序列中的元素数量无关 (常量时间) -至少最适用于事例中的元素数量。 此外，插入元素不会使迭代器失效，移除元素仅会使指向已移除元素的迭代器失效。
 
-但是，如果哈希值不是均匀分布的，则哈希表可能会退化。 对于始终返回相同值的哈希函数，查找、插入和移除与序列中的元素数成正比， (线性时间) 。 容器可用于选择合理的哈希函数、平均存储桶大小和哈希表大小 (bucket) 的总数量，但你可以覆盖这些选项中的任何一个或全部。 例如，函数 [hash_set：： max_load_factor (stl/clr) ](../dotnet/hash-set-max-load-factor-stl-clr.md) ，hash_set [：： rehash (stl/clr) ](../dotnet/hash-set-rehash-stl-clr.md)。
+但是，如果哈希值不是均匀分布的，则哈希表可能会退化。 对于始终返回相同值的哈希函数，查找、插入和移除与序列中的元素数成正比， (线性时间) 。 容器可用于选择合理的哈希函数、平均存储桶大小和哈希表大小 (bucket) 的总数量，但你可以覆盖这些选项中的任何一个或全部。 例如，函数 [hash_set：： max_load_factor (stl/clr) ](#max_load_factor) ，hash_set [：： rehash (stl/clr) ](#rehash)。
 
-Hash_set 支持双向迭代器，这意味着，可以在给定指定了受控序列元素的迭代器的情况下单步执行相邻元素。 特殊头节点对应于[hash_set：： end (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 可以递增 hash_set 迭代器来访问头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
+Hash_set 支持双向迭代器，这意味着，可以在给定指定了受控序列元素的迭代器的情况下单步执行相邻元素。 特殊头节点对应于[hash_set：： end (STL/CLR) ](#end)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 可以递增 hash_set 迭代器来访问头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
 
 请注意，不能直接引用 hash_set 元素，因为它的数字位置需要随机访问迭代器。
 
@@ -364,7 +364,7 @@ void clear();
 
 ### <a name="remarks"></a>备注
 
-成员函数有效地调用[hash_set：： erase (stl/clr) ](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set：： begin (stl/clr) ](../dotnet/hash-set-begin-stl-clr.md) hash_set `(),` [：： end (stl/clr) ](../dotnet/hash-set-end-stl-clr.md) `())` 。 用于确保受控序列为空。
+成员函数有效地调用[hash_set：： erase (stl/clr) ](#erase) `(` [hash_set：： begin (stl/clr) ](#begin) hash_set `(),` [：： end (stl/clr) ](#end) `())` 。 用于确保受控序列为空。
 
 ### <a name="example"></a>示例
 
@@ -551,10 +551,10 @@ size_type count(key_type key);
 
 #### <a name="parameters"></a>参数
 
-key <br/>
+*key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 该成员函数将返回受控序列中与 *键*具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
 
@@ -659,7 +659,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[STL/CLR) hash_set：： size (](../dotnet/hash-set-size-stl-clr.md) `() == 0` 。 用于测试 hash_set 是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[STL/CLR) hash_set：： size (](#size) `() == 0` 。 用于测试 hash_set 是否为空。
 
 ### <a name="example"></a>示例
 
@@ -760,12 +760,12 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 #### <a name="parameters"></a>参数
 
-key <br/>
+*key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [hash_set：： lower_bound (stl/clr) ](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set：： upper_bound (STL/clr) ](../dotnet/hash-set-upper-bound-stl-clr.md) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
+此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [hash_set：： lower_bound (stl/clr) ](#lower_bound) `(key),` [hash_set：： upper_bound (STL/clr) ](#upper_bound) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
 
 ### <a name="example"></a>示例
 
@@ -825,7 +825,7 @@ bool erase(key_type key)
 *first*<br/>
 要清除的范围的开头。
 
-key <br/>
+*key*<br/>
 要清除的键值。
 
 *last*<br/>
@@ -834,9 +834,9 @@ key <br/>
 *where*<br/>
 要清除的元素。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则为[hash_set：)  (](../dotnet/hash-set-end-stl-clr.md) 。 `()` 使用它可以删除单个元素。
+第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则为[hash_set：)  (](#end) 。 `()` 使用它可以删除单个元素。
 
 第二个成员函数删除范围 [，) 中的受控序列的元素， `first` `last` 并返回一个迭代器，该迭代器指定删除的任何元素之外保留的第一个元素; `end()` 如果此类元素不存在，则为。 使用它可以删除零个或多个连续元素。
 
@@ -904,12 +904,12 @@ iterator find(key_type key);
 
 #### <a name="parameters"></a>参数
 
-key <br/>
+*key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[hash_set：： end (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
+如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[hash_set：： end (STL/CLR) ](#end) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
 
 ### <a name="example"></a>示例
 
@@ -1257,10 +1257,10 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 *pred*<br/>
 受控序列的排序谓词。
 
-*右*<br/>
+*然后*<br/>
 要插入的对象或范围。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 构造函数：
 
@@ -1517,7 +1517,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 要插入的范围的末尾。
 
-*右*<br/>
+*然后*<br/>
 要插入的枚举。
 
 *初始值*<br/>
@@ -1526,7 +1526,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *where*<br/>
 容器中要插入的位置 (提示仅) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 每个成员函数都插入由剩余操作数指定的序列。
 
@@ -1829,7 +1829,7 @@ float load_factor();
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回 `(float)` [hash_set：： size (stl/clr) ](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set：： bucket_count (stl/clr) ](../dotnet/hash-set-bucket-count-stl-clr.md) `()` 。 使用它来确定平均存储桶大小。
+此成员函数返回 `(float)` [hash_set：： size (stl/clr) ](#size) `() /` [hash_set：： bucket_count (stl/clr) ](#bucket_count) `()` 。 使用它来确定平均存储桶大小。
 
 ### <a name="example"></a>示例
 
@@ -1903,12 +1903,12 @@ iterator lower_bound(key_type key);
 
 #### <a name="parameters"></a>参数
 
-key <br/>
+*key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数确定受控序列中的第一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键*等效的排序。 如果此类元素不存在，它将返回[hash_set：： end (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md) `()` ; 否则，它将返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
+成员函数确定受控序列中的第一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键*等效的排序。 如果此类元素不存在，它将返回[hash_set：： end (STL/CLR) ](#end) `()` ; 否则，它将返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
 
 ### <a name="example"></a>示例
 
@@ -1960,10 +1960,10 @@ static value_type make_value(key_type key);
 
 #### <a name="parameters"></a>参数
 
-key <br/>
+*key*<br/>
 要使用的密钥值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数返回一个 `value_type` 对象，其键为 *key*。 使用它来编写适用于多个其他成员函数的对象。
 
@@ -2010,7 +2010,7 @@ void max_load_factor(float new_factor);
 *new_factor*<br/>
 要存储的新的最大加载因子。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 第一个成员函数将返回当前存储的最大加载因子。 使用它来确定最大平均存储桶大小。
 
@@ -2073,10 +2073,10 @@ hash_set<Key>% operator=(hash_set<Key>% right);
 
 #### <a name="parameters"></a>参数
 
-*右*<br/>
+*然后*<br/>
 用于复制的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
 
@@ -2221,7 +2221,7 @@ void rehash();
 
 ### <a name="remarks"></a>备注
 
-此成员函数重新生成哈希表，确保[hash_set：： load_factor (stl/clr) ](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set：： max_load_factor (STL/clr) ](../dotnet/hash-set-max-load-factor-stl-clr.md)。 否则，只有在插入后才需要哈希表的大小。  (不会自动降低大小。 ) 用于调整哈希表的大小。
+此成员函数重新生成哈希表，确保[hash_set：： load_factor (stl/clr) ](#load_factor) `() <=` [hash_set：： max_load_factor (STL/clr) ](#max_load_factor)。 否则，只有在插入后才需要哈希表的大小。  (不会自动降低大小。 ) 用于调整哈希表的大小。
 
 ### <a name="example"></a>示例
 
@@ -2386,7 +2386,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[hash_set：： empty (STL/CLR) ](../dotnet/hash-set-empty-stl-clr.md) `()` 。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[hash_set：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -2488,10 +2488,10 @@ void swap(hash_set<Key>% right);
 
 #### <a name="parameters"></a>参数
 
-*右*<br/>
+*然后*<br/>
 要与其交换内容的容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数交换和右之间的受控 **`this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
@@ -2606,12 +2606,12 @@ iterator upper_bound(key_type key);
 
 #### <a name="parameters"></a>参数
 
-key <br/>
+*key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员函数确定受控序列中的最后一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键*等效的排序。 如果此类元素不存在，或 `X` 为受控序列中的最后一个元素，则它将返回[hash_set：： END (STL/CLR) ](../dotnet/hash-set-end-stl-clr.md) `()` ; 否则，它将返回一个指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
+成员函数确定受控序列中的最后一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键*等效的排序。 如果此类元素不存在，或 `X` 为受控序列中的最后一个元素，则它将返回[hash_set：： END (STL/CLR) ](#end) `()` ; 否则，它将返回一个指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
 
 ### <a name="example"></a>示例
 

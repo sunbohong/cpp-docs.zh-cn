@@ -1,5 +1,5 @@
 ---
-title: 文件处理和 I/o (C++/CLI)
+title: 文件处理和 I-O (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1cfdc4239506f22368753d8c37765e550d9b835
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324995"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91508939"
 ---
 # <a name="file-handling-and-io-ccli"></a>文件处理和 I/O (C++/CLI)
 
-演示如何使用.NET Framework 的各种文件操作。
+演示使用 .NET Framework 的各种文件操作。
 
-以下主题演示中定义的类使用<xref:System.IO>命名空间执行各种文件操作。
+以下主题演示如何使用命名空间中定义的类 <xref:System.IO> 来执行各种文件操作。
 
-## <a name="enumerate"></a> 枚举目录中的文件
+## <a name="enumerate-files-in-a-directory"></a><a name="enumerate"></a> 枚举目录中的文件
 
-下面的代码示例演示如何检索目录中的文件的列表。 此外，将枚举子目录。 下面的代码示例使用<xref:System.IO.Directory.GetFiles%2A><xref:System.IO.Directory.GetFiles%2A>和<xref:System.IO.Directory.GetDirectories%2A>方法来显示 C:\Windows 目录的内容。
+下面的代码示例演示如何检索目录中文件的列表。 此外，还会枚举子目录。 下面的代码示例使用 <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> 和 <xref:System.IO.Directory.GetDirectories%2A> 方法来显示 C：\Windows 目录的内容。
 
 ### <a name="example"></a>示例
 
@@ -66,9 +66,9 @@ int main()
 }
 ```
 
-## <a name="monitor"></a> 监视文件系统更改
+## <a name="monitor-file-system-changes"></a><a name="monitor"></a> 监视文件系统更改
 
-下面的代码示例使用<xref:System.IO.FileSystemWatcher>以注册事件对应于正在创建、 更改、 已删除，或已重命名的文件。 而不是定期轮询更改的文件的目录，可以使用<xref:System.IO.FileSystemWatcher>类来引发事件时检测到更改。
+下面的代码示例使用 <xref:System.IO.FileSystemWatcher> 注册与正在创建、更改、删除或重命名的文件对应的事件。 您可以使用 <xref:System.IO.FileSystemWatcher> 类在检测到更改时触发事件，而不是定期轮询目录以对文件进行更改。
 
 ### <a name="example"></a>示例
 
@@ -132,11 +132,11 @@ int main()
 }
 ```
 
-## <a name="read_binary"></a> 读取二进制文件
+## <a name="read-a-binary-file"></a><a name="read_binary"></a> 读取二进制文件
 
-下面的代码示例演示如何通过使用从两个类从文件读取二进制数据<xref:System.IO?displayProperty=fullName>命名空间：<xref:System.IO.FileStream>和<xref:System.IO.BinaryReader>。 <xref:System.IO.FileStream> 表示实际文件。 <xref:System.IO.BinaryReader> 提供允许二进制访问流的接口。
+下面的代码示例演示如何使用命名空间中的两个类从文件读取二进制数据 <xref:System.IO?displayProperty=fullName> ： <xref:System.IO.FileStream> 和 <xref:System.IO.BinaryReader> 。 <xref:System.IO.FileStream> 表示实际文件。 <xref:System.IO.BinaryReader> 为允许二进制访问的流提供一个接口。
 
-代码示例读取的文件，名为 data.bin 包含以二进制格式的整数。 有关此类型的文件的信息，请参阅[如何：编写二进制文件 (C++/CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。
+此代码示例读取一个名为 "data bin" 的文件，并包含二进制格式的整数。 有关此类文件的信息，请参阅 [如何：编写二进制文件 (c + +/cli) ](#write_binary)。
 
 ### <a name="example"></a>示例
 
@@ -173,11 +173,11 @@ int main()
 }
 ```
 
-## <a name="read_text"></a> 读取文本文件
+## <a name="read-a-text-file"></a><a name="read_text"></a> 读取文本文件
 
-下面的代码示例演示如何打开和使用一次读取一行文本文件<xref:System.IO.StreamReader>类中定义的<xref:System.IO?displayProperty=fullName>命名空间。 此类的实例用于打开文本文件，然后<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>方法用于检索每个行。
+下面的代码示例演示如何使用 <xref:System.IO.StreamReader> 命名空间中定义的类，一次打开并读取一个文本文件 <xref:System.IO?displayProperty=fullName> 。 此类的实例用于打开文本文件，然后 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> 使用方法来检索每行。
 
-此代码示例读取名为 textfile.txt 并包含文本的文件。 有关此类型的文件的信息，请参阅[如何：写入一个文本文件 (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)。
+此代码示例读取名为 textfile.txt 的文件，其中包含文本。 有关此类文件的信息，请参阅 [如何：使用 c + +/cli) 编写文本文件 (](#write_text)。
 
 ### <a name="example"></a>示例
 
@@ -216,9 +216,9 @@ int main()
 }
 ```
 
-## <a name="retrieve"></a> 检索文件信息
+## <a name="retrieve-file-information"></a><a name="retrieve"></a> 检索文件信息
 
-下面的代码示例演示了<xref:System.IO.FileInfo>类。 文件的名称后，可以使用此类来检索有关文件如文件大小、 目录、 完整的名称，以及日期和时间信息的创建和上次修改。
+下面的代码示例演示 <xref:System.IO.FileInfo> 类。 如果有文件的名称，则可以使用此类来检索有关文件的信息，例如文件大小、目录、全名以及创建日期和上次修改的日期和时间。
 
 此代码检索 Notepad.exe 的文件信息。
 
@@ -257,11 +257,11 @@ int main()
 }
 ```
 
-## <a name="write_binary"></a> 编写二进制文件
+## <a name="write-a-binary-file"></a><a name="write_binary"></a> 写入二进制文件
 
-下面的代码示例演示如何向文件中写入二进制数据。 两个类从<xref:System.IO>使用命名空间：<xref:System.IO.FileStream>和<xref:System.IO.BinaryWriter>。 <xref:System.IO.FileStream> 表示实际文件，而<xref:System.IO.BinaryWriter>提供允许二进制访问流的接口。
+下面的代码示例演示如何将二进制数据写入文件。 使用命名空间中的两个类 <xref:System.IO> ： <xref:System.IO.FileStream> 和 <xref:System.IO.BinaryWriter> 。 <xref:System.IO.FileStream> 表示实际文件，而 <xref:System.IO.BinaryWriter> 为允许二进制访问的流提供一个接口。
 
-下面的代码示例将包含整数以二进制格式的文件。 可以使用中的代码读取此文件[如何：读取二进制文件 (C++/CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)。
+下面的代码示例以二进制格式写入包含整数的文件。 可使用 [如何：读取二进制文件 (c + +/cli) ](#read_binary)中的代码读取此文件。
 
 ### <a name="example"></a>示例
 
@@ -300,11 +300,11 @@ int main()
 }
 ```
 
-## <a name="write_text"></a> 写入一个文本文件
+## <a name="write-a-text-file"></a><a name="write_text"></a> 写入文本文件
 
-下面的代码示例演示如何创建一个文本文件并将文本写入使用其<xref:System.IO.StreamWriter>类，该类中定义<xref:System.IO>命名空间。 <xref:System.IO.StreamWriter>构造函数采用要创建的文件的名称。 如果该文件存在，则会覆盖 (除非第二个传递了 True<xref:System.IO.StringWriter>构造函数参数)。
+下面的代码示例演示如何使用 <xref:System.IO.StreamWriter> 在命名空间中定义的类创建文本文件并向其写入文本 <xref:System.IO> 。 <xref:System.IO.StreamWriter>构造函数采用要创建的文件的名称。 如果该文件存在，除非将 True 传递给第二个 <xref:System.IO.StringWriter> 构造函数参数) ，否则将覆盖 (。
 
-然后使用归档文件<xref:System.IO.StreamWriter.Write%2A>和<xref:System.IO.TextWriter.WriteLine%2A>函数。
+然后，使用和函数对文件进行归档 <xref:System.IO.StreamWriter.Write%2A> <xref:System.IO.TextWriter.WriteLine%2A> 。
 
 ### <a name="example"></a>示例
 
@@ -334,6 +334,6 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[用 c + +/CLI (Visual C++ 的 .NET 编程) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [文件和流 I/O](/dotnet/standard/io/index)<br/>
 [System.IO 命名空间](/dotnet/api/system.io)

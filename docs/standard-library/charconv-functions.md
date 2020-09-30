@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::charconv [C++], to_chars
 - std::charconv [C++], from_chars
-ms.openlocfilehash: b8117f2a272f33be2bb5fef6ba8fa53ec794b63b
-ms.sourcegitcommit: f1752bf90b4f869633a859ace85439ca19e208b2
+ms.openlocfilehash: cde2ae6b6275543ec74d859b9a953f8673da9c2b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88722149"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507753"
 ---
 # <a name="ltcharconvgt-functions"></a>&lt;charconv &gt; 函数
 
@@ -94,7 +94,7 @@ to_chars_result to_chars(char* first, char* last, long double value, chars_forma
 
 包含转换结果的 [to_chars_result](to-chars-result-structure.md) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 采用 [chars_format](chars-format-class.md) 参数的函数会确定转换说明符，就像它们是按如下方式使用一样：如果为，则转换说明符为; (如果为，则在结果) ，如果为，则为; `printf()` `'f'` `fmt` `chars_format::fixed` `'e'` `fmt` `chars_format::scientific` `'a'` `0x` `fmt` `chars_format::hex` `'g'` 如果 `fmt` 为， `chars_format::general` 则为。 指定最短的固定表示法仍可能会导致长时间的输出，因为当值非常大或很小时，可能是最短的表示形式。
 
@@ -121,7 +121,7 @@ template <typename T> void TestToChars(const T t)
     char buf[100]; // 100 is large enough for double and long double values because the longest possible outputs are "-1.23456735e-36" and "-1.2345678901234567e-100".
     constexpr size_t size = IsFloat ? 15 : 24;
     const std::to_chars_result res = std::to_chars(buf, buf + size, t);  // points to buffer area it can use. Must be char, not wchar_t, etc.
-    
+
     if (res.ec == std::errc{}) // no error
     {
         // %.*s provides the exact number of characters to output because the output range, [buf, res.ptr), isn't null-terminated
@@ -183,7 +183,7 @@ from_chars_result from_chars(const char* first, const char* last, long double& v
 *bcp.fmt*\
 对于浮点转换，则为要转换的字符序列的格式。 有关详细信息，请参阅 [chars_format](chars-format-class.md) 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `from_chars()`函数分析字符串 \[ `first` ， `last`) 用于数字模式，其中 \[ `first` ， `last`) 需要为有效范围。
 
@@ -242,7 +242,7 @@ int main()
 
 /std： c + + 17 或更高版本是必需的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<charconv>](charconv.md)  
 往返的最[短十进制字符串](https://www.exploringbinary.com/the-shortest-decimal-string-that-round-trips-examples/) 

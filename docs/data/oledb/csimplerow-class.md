@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c332fc0c653bbde3a69421b8166d4d099eaeeaf4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841072"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507225"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 
@@ -75,7 +75,7 @@ class CSimpleRow
 
 ## <a name="remarks"></a>注解
 
-行句柄以逻辑方式为结果行的唯一标记。 `IRowsetImpl``CSimpleRow`为[IRowsetImpl：： GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中请求的每一行创建一个新的。 `CSimpleRow` 还可以替换为您自己的行句柄实现，因为它是的默认模板参数 `IRowsetImpl` 。 替换此类的唯一要求是让替换类提供接受 **长**类型的单个参数的构造函数。
+行句柄以逻辑方式为结果行的唯一标记。 `IRowsetImpl``CSimpleRow`为[IRowsetImpl：： GetNextRows](./irowsetimpl-class.md#getnextrows)中请求的每一行创建一个新的。 `CSimpleRow` 还可以替换为您自己的行句柄实现，因为它是的默认模板参数 `IRowsetImpl` 。 替换此类的唯一要求是让替换类提供接受 **长**类型的单个参数的构造函数。
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow：： AddRefRow
 
@@ -123,7 +123,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 ### <a name="remarks"></a>注解
 
-将 [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) 设置为 *iRowsetCur*。
+将 [m_iRowset](#irowset) 设置为 *iRowsetCur*。
 
 ## <a name="csimplerowreleaserow"></a><a name="releaserow"></a> CSimpleRow：： ReleaseRow
 
@@ -155,7 +155,7 @@ DWORD m_dwRef;
 KeyType m_iRowset;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

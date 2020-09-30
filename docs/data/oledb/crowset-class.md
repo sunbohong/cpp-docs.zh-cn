@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 8cacbd6d188b3453c0111cca6565b7def9e3aa1e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b351530326e0dc4ed0b72db50d17717824eb6bb4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831562"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507286"
 ---
 # <a name="crowset-class"></a>CRowset 类
 
@@ -249,7 +249,7 @@ class CRowset
 ### <a name="parameters"></a>参数
 
 *TAccessor*<br/>
-一个访问器类。 默认为 `CAccessorBase`。
+一个访问器类。 默认值为 `CAccessorBase`。
 
 ## <a name="requirements"></a>要求
 
@@ -282,8 +282,8 @@ class CRowset
 |[MoveToRatio](#movetoratio)|从行集中的小数位置开始提取行。|
 |[ReleaseRows](#releaserows)|调用 [IRowset：： ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) 以释放当前的行句柄。|
 |[SetData](#setdata)|使用 [IRowsetChange： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))设置行的一列或多列中的数据值。|
-|[撤消](#undo)|撤消自上次提取或 [更新](../../data/oledb/crowset-update.md)以来对行所做的任何更改。|
-|[更新](#update)|传输自上次提取或更新以来对当前行所做的所有挂起的更改。|
+|[撤消](#undo)|撤消自上次提取或 [更新](#update)以来对行所做的任何更改。|
+|[Update](#update)|传输自上次提取或更新以来对当前行所做的所有挂起的更改。|
 |[UpdateAll](#updateall)|传输自上次提取或更新以来对所有行所做的所有挂起的更改。|
 
 ## <a name="remarks"></a>注解
@@ -308,7 +308,7 @@ HRESULT AddRefRows() throw();
 
 ### <a name="remarks"></a>注解
 
-此方法会递增当前行句柄的引用数。 调用 [ReleaseRows](../../data/oledb/crowset-releaserows.md) 以减少计数。 Move 方法返回的行的引用计数为1。
+此方法会递增当前行句柄的引用数。 调用 [ReleaseRows](#releaserows) 以减少计数。 Move 方法返回的行的引用计数为1。
 
 ## <a name="crowsetclose"></a><a name="close"></a> CRowset：： Close
 
@@ -497,7 +497,7 @@ HRESULT GetData(int nAccessor) throw();
 
 ### <a name="remarks"></a>注解
 
-如果指定的访问器不是 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)中的 autoaccessor，请使用此方法通过传递访问器编号来显式获取数据。
+如果指定的访问器不是 [BEGIN_ACCESSOR](./macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor)中的 autoaccessor，请使用此方法通过传递访问器编号来显式获取数据。
 
 ## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a> CRowset：： GetDataHere
 
@@ -820,7 +820,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 ### <a name="remarks"></a>注解
 
-对于 `SetData` 不接受参数的窗体，所有访问器都用于更新。 通常调用 `SetData` 来设置行中的列中的数据值，然后调用 [Update](../../data/oledb/crowset-update.md) 来传输这些更改。
+对于 `SetData` 不接受参数的窗体，所有访问器都用于更新。 通常调用 `SetData` 来设置行中的列中的数据值，然后调用 [Update](#update) 来传输这些更改。
 
 此方法需要可选接口，该接口 `IRowsetChange` 在所有提供程序上可能不受支持; 如果是这种情况，则该方法将返回 E_NOINTERFACE。 `DBPROP_IRowsetChange` `Open` 在对包含行集的表或命令调用之前，还必须将设置为 VARIANT_TRUE。
 
@@ -828,7 +828,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 ## <a name="crowsetundo"></a><a name="undo"></a> CRowset：： Undo
 
-撤消自上次提取或 [更新](../../data/oledb/crowset-update.md)以来对行所做的任何更改。
+撤消自上次提取或 [更新](#update)以来对行所做的任何更改。
 
 ### <a name="syntax"></a>语法
 
@@ -886,7 +886,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>注解
 
-传输自上次提取或更新行后对当前行所做的任何挂起更改， (使用 `Update` 或 [UpdateAll](../../data/oledb/crowset-updateall.md)) 。 通常调用 [SetData](../../data/oledb/crowset-setdata.md) 来设置行中的列中的数据值，然后调用 `Update` 以传输这些更改。
+传输自上次提取或更新行后对当前行所做的任何挂起更改， (使用 `Update` 或 [UpdateAll](#updateall)) 。 通常调用 [SetData](#setdata) 来设置行中的列中的数据值，然后调用 `Update` 以传输这些更改。
 
 此方法需要可选接口，该接口 `IRowsetUpdate` 在所有提供程序上可能不受支持; 如果是这种情况，则该方法将返回 E_NOINTERFACE。 `DBPROP_IRowsetUpdate` `Open` 在对包含行集的表或命令调用之前，还必须将设置为 VARIANT_TRUE。
 
@@ -915,7 +915,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 ### <a name="remarks"></a>注解
 
-传输自上次提取 [或更新这些](../../data/oledb/crowset-update.md) 行后，对所有行进行的任何挂起的更改 `UpdateAll` 。 `UpdateAll` 将更新所有已修改的行，不管是否仍有句柄 (参阅 *pphRow*) 。
+传输自上次提取 [或更新这些](#update) 行后，对所有行进行的任何挂起的更改 `UpdateAll` 。 `UpdateAll` 将更新所有已修改的行，不管是否仍有句柄 (参阅 *pphRow*) 。
 
 例如，如果您使用 `Insert` 在行集中插入五行，则可以调用 `Update` 5 次或调用 `UpdateAll` 一次以更新所有行。
 
@@ -925,7 +925,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 标准的 HRESULT。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [DBViewer 示例](../../overview/visual-cpp-samples.md)<br/>
 [MultiRead 示例](../../overview/visual-cpp-samples.md)<br/>

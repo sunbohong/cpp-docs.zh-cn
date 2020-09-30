@@ -2,28 +2,28 @@
 title: WRL 集成 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-ms.openlocfilehash: a3c8b824d2cd932a7d284804f3f28781654045e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ea0f6aece985a2ee74916e737b9aab1bf0d1d96
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62304145"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91507413"
 ---
 # <a name="wrl-integration-ccx"></a>WRL 集成 (C++/CX)
 
-可以自由混合 WRL 代码与 Windows 运行时C++模板库 (WRL) 代码。 在同一个翻译单元中，你可以使用与 WRL 句柄到对象声明的对象 (`^`) 表示法和 WRL 智能指针 (`ComPtr<T>`) 表示法。 但是，您必须手动处理返回值和 WRL HRESULT 错误代码和 WRL 异常。
+可以自由地混合使用 Windows 运行时 c + + 模板库 (WRL) 代码的 WRL 代码。 在同一个翻译单元中，可以使用使用 WRL 句柄到对象 (声明的对象 `^`) notation 和 WRL 智能指针 (`ComPtr<T>`) 表示法。 但是，必须手动处理返回值，并 WRL HRESULT 错误代码和 WRL 异常。
 
 ## <a name="wrl-development"></a>WRL 开发
 
-有关创作和使用 WRL 组件的详细信息，请参阅[Windows 运行时C++模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。
+有关创作和使用 WRL 组件的详细信息，请参阅 [ (WRL) Windows 运行时 c + + 模板库 ](./wrl/windows-runtime-cpp-template-library-wrl.md)。
 
 ### <a name="example"></a>示例
 
-下面的代码段演示如何使用 WRL 和 WRL 使用 Windows 运行时类和检查元数据文件。
+下面的代码段演示了如何使用 WRL 和 WRL 来使用 Windows 运行时类和检查元数据文件。
 
-该示例摘自构建 Microsoft Store 应用论坛中的代码片段。 此代码片段的作者提供以下免责声明和规定：
+该示例摘自构建 Microsoft Store 应用论坛中的一个代码片段。 此代码片段的作者提供以下免责声明和规定：
 
-1. C++不提供特定的 Api，以反映 Windows 运行时类型，但 Windows 上的一种类型的元数据文件 (.winmd) 是与 CLR 元数据文件完全兼容。 Windows 提供新的元数据发现 API (RoGetMetaDataFile) 来访问特定类型的 .winmd 文件。 但是，对于 C++ 开发人员而言，使用这些 API 存在一定限制，因为无法实例化类。
+1. C + + 不提供特定的 Api 来反映 Windows 运行时类型，但类型的 Windows 元数据文件 () 与 CLR 元数据文件完全兼容。 Windows 提供新的元数据发现 API (RoGetMetaDataFile) 来访问特定类型的 .winmd 文件。 但是，对于 C++ 开发人员而言，使用这些 API 存在一定限制，因为无法实例化类。
 
 1. 编译代码后，还需要将 Runtimeobject.lib 和 Rometadata.lib 传递到链接器。
 
@@ -112,4 +112,4 @@ IVector<String^>^ GetTypeMethods(Object^ instance)
 
 ## <a name="see-also"></a>请参阅
 
-[与其他语言进行互操作](interoperating-with-other-languages-c-cx.md)
+[与其他语言互操作](interoperating-with-other-languages-c-cx.md)
