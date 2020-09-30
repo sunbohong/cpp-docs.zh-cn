@@ -5,12 +5,12 @@ helpviewer_keywords:
 - internal linkage
 - linkage [C++], internal
 ms.assetid: 80be7b51-c930-43db-94d6-4f09a64077bf
-ms.openlocfilehash: 3709ca815877b98fe5dfe6e5b2eca6b5c627641b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2871ee68b7ae880d6ec5c33ea69eb1bfcc3e284c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229592"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91509907"
 ---
 # <a name="internal-linkage"></a>内部链接
 
@@ -20,4 +20,4 @@ ms.locfileid: "87229592"
 
 ## <a name="see-also"></a>请参阅
 
-[使用 extern 指定链接](../cpp/using-extern-to-specify-linkage.md)
+[使用 extern 指定链接](../cpp/extern-cpp.md)
