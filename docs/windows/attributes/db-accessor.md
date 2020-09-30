@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 559838201e3d1c425b6b1bf7f3650d9635c44c97
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2a4c5475007cbc516f1a06c6bf858089ba24311f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833135"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503552"
 ---
 # <a name="db_accessor"></a>db_accessor
 
@@ -33,7 +33,7 @@ ms.locfileid: "88833135"
 
 ## <a name="remarks"></a>注解
 
-**db_accessor** 为 `db_column` `db_param` 同一类或函数中的后续和属性定义基础 OLE DB 访问器。 **db_accessor** 可用于成员级别并用于对 `db_column` 参与基于 OLE DB 的绑定的属性进行分组 `IAccessor` 。 它与 `db_table` 或特性结合使用 `db_command` 。 调用此属性与调用 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) 和 [END_ACCESSOR](../../data/oledb/end-accessor.md) 宏类似。
+**db_accessor** 为 `db_column` `db_param` 同一类或函数中的后续和属性定义基础 OLE DB 访问器。 **db_accessor** 可用于成员级别并用于对 `db_column` 参与基于 OLE DB 的绑定的属性进行分组 `IAccessor` 。 它与 `db_table` 或特性结合使用 `db_command` 。 调用此属性与调用 [BEGIN_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_accessor) 和 [END_ACCESSOR](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_accessor) 宏类似。
 
 **db_accessor** 生成行集，并将其绑定到相应的访问器映射。 如果未调用 **db_accessor**，则将自动生成访问器0，并且所有列绑定将映射到此访问器块。
 
@@ -71,11 +71,11 @@ public:
 |-|-|
 |**适用于**|属性块|
 |**且**|否|
-|**必需属性**|无|
-|**无效的特性**|无|
+|**必需属性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者属性](ole-db-consumer-attributes.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: 2828a33a31d806c04cfce76a3156674778efbe6e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 05f734a9b083d93f2501172d9455b7889c65a5a6
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686478"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503546"
 ---
 # <a name="db_column"></a>db_column
 
@@ -48,9 +48,9 @@ ms.locfileid: "90686478"
 *length*<br/>
  (可选) 用于保存列大小的成员变量（以字节为单位）。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**db_column** 将指定表列绑定到行集中的某个变量。 它分隔可参与基于 OLE DB 的绑定的成员数据 `IAccessor` 。 此属性设置通常使用 OLE DB 使用者宏 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../../data/oledb/end-column-map.md)和 [COLUMN_ENTRY](../../data/oledb/column-entry.md)来定义的列映射。 这些操作将操作 OLE DB [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85)) 以绑定指定的列。 使用 **db_column** 特性标记的每个成员都将在列映射中以列项的形式占用一个条目。 因此，您可以调用此特性，以便在命令或表类中放置列映射。
+**db_column** 将指定表列绑定到行集中的某个变量。 它分隔可参与基于 OLE DB 的绑定的成员数据 `IAccessor` 。 此属性设置通常使用 OLE DB 使用者宏 [BEGIN_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#begin_column_map)、 [END_COLUMN_MAP](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#end_column_map)和 [COLUMN_ENTRY](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry)来定义的列映射。 这些操作将操作 OLE DB [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85)) 以绑定指定的列。 使用 **db_column** 特性标记的每个成员都将在列映射中以列项的形式占用一个条目。 因此，您可以调用此特性，以便在命令或表类中放置列映射。
 
 将 **db_column** 与 [db_table](db-table.md) 或 [db_command](db-command.md) 特性结合使用。
 
@@ -98,12 +98,12 @@ class CProducts {
 
 ## <a name="requirements"></a>要求
 
-| 特性上下文 | “值” |
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**、 **`struct`** 、成员、方法|
 |**且**|否|
-|**必需属性**|无|
-|**无效的特性**|无|
+|**必需属性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

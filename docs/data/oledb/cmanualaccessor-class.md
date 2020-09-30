@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 32ab31734b8c6e3f72053e1e4f2a8a9233b73995
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838095"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504102"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 类
 
@@ -104,7 +104,7 @@ wType <br/>
 
 ### <a name="remarks"></a>注解
 
-若要使用此函数，必须先调用 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 不能添加比中指定的列数更多的项 `CreateAccessor` 。
+若要使用此函数，必须先调用 [CreateAccessor](#createaccessor)。 不能添加比中指定的列数更多的项 `CreateAccessor` 。
 
 ## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a> CManualAccessor：： AddParameterEntry
 
@@ -148,7 +148,7 @@ wType <br/>
 
 ### <a name="remarks"></a>注解
 
-若要使用此函数，必须先调用 [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)。
+若要使用此函数，必须先调用 [CreateParameterAccessor](#createparameteraccessor)。
 
 ## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a> CManualAccessor：： CreateAccessor
 
@@ -165,7 +165,7 @@ HRESULT CreateAccessor(int nBindEntries,
 #### <a name="parameters"></a>参数
 
 *nBindEntries*<br/>
-中列数。 此数字应匹配对 [CManualAccessor：： AddBindEntry](../../data/oledb/cmanualaccessor-addbindentry.md) 函数的调用数。
+中列数。 此数字应匹配对 [CManualAccessor：： AddBindEntry](#addbindentry) 函数的调用数。
 
 *pBuffer*<br/>
 中指向存储输出列的缓冲区的指针。
@@ -210,9 +210,9 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 ### <a name="remarks"></a>注解
 
-在调用 [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前，必须调用此函数。
+在调用 [AddParameterEntry](#addparameterentry)之前，必须调用此函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

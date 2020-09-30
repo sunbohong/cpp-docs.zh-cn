@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 470755744783272245ca3aa8e4b57e2943db5fae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27a07d10256147d3c3ed383744ba1ee5fdfd06a1
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840396"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504078"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 类
 
@@ -137,12 +137,12 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 | 名称 | 说明 |
 |-|-|
 |[AddRefRows](#addrefrows)|向现有的行句柄添加引用数。|
-|[CreateRow](#createrow)|由 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 调用，用于分配新的 `HROW` 。 不是由用户直接调用。|
+|[CreateRow](#createrow)|由 [GetNextRows](#getnextrows) 调用，用于分配新的 `HROW` 。 不是由用户直接调用。|
 |[GetData](#getdata)|从行的行集合副本中检索数据。|
 |[GetDBStatus](#getdbstatus)|返回指定字段的状态。|
 |[GetNextRows](#getnextrows)|按顺序获取行，同时记住以前的位置。|
 |[IRowsetImpl](#irowsetimpl)|构造函数。 不是由用户直接调用。|
-|[RefRows](#refrows)|由 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 和 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)调用。 不是由用户直接调用。|
+|[RefRows](#refrows)|由 [AddRefRows](#addrefrows) 和 [ReleaseRows](#releaserows)调用。 不是由用户直接调用。|
 |[ReleaseRows](#releaserows)|释放行。|
 |[RestartPosition](#restartposition)|将下一个提取位置重新定位到其初始位置;也就是说，它是首次创建行集时的位置。|
 |[SetDBStatus](#setdbstatus)|设置指定字段的状态标志。|
@@ -153,7 +153,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |-|-|
 |[m_bCanFetchBack](#bcanfetchback)|指示提供程序是否支持向后提取。|
 |[m_bCanScrollBack](#bcanscrollback)|指示提供程序是否可以让其游标向后滚动。|
-|[m_bReset](#breset)|指示提供程序是否重置其游标位置。 这在 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)中向后滚动或向后翻时具有特殊意义。|
+|[m_bReset](#breset)|指示提供程序是否重置其游标位置。 这在 [GetNextRows](#getnextrows)中向后滚动或向后翻时具有特殊意义。|
 |[m_iRowset](#irowset)|行集的索引，表示游标。|
 |[m_rgRowHandles](#rgrowhandles)|行句柄的列表。|
 
@@ -180,7 +180,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 ## <a name="irowsetimplcreaterow"></a><a name="createrow"></a> IRowsetImpl：： CreateRow
 
-[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)调用的帮助器方法，用于分配新的 `HROW` 。
+[GetNextRows](#getnextrows)调用的帮助器方法，用于分配新的 `HROW` 。
 
 ### <a name="syntax"></a>语法
 
@@ -203,7 +203,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 
 ### <a name="remarks"></a>注解
 
-如果该行存在，此方法将调用 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 并返回。 否则，它将分配 RowClass 模板变量的新实例，并将其添加到 [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)。
+如果该行存在，此方法将调用 [AddRefRows](#addrefrows) 并返回。 否则，它将分配 RowClass 模板变量的新实例，并将其添加到 [m_rgRowHandles](#rgrowhandles)。
 
 ## <a name="irowsetimplgetdata"></a><a name="getdata"></a> IRowsetImpl：：
 
@@ -288,7 +288,7 @@ IRowsetImpl();
 
 ## <a name="irowsetimplrefrows"></a><a name="refrows"></a> IRowsetImpl：： RefRows
 
-由 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 和 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) 调用，以增加或释放对现有行句柄的引用计数。
+由 [AddRefRows](#addrefrows) 和 [ReleaseRows](#releaserows) 调用，以增加或释放对现有行句柄的引用计数。
 
 ### <a name="syntax"></a>语法
 
@@ -415,7 +415,7 @@ unsigned m_bReset:1;
 
 ### <a name="remarks"></a>备注
 
-如果使用者使用[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)负值 `lOffset` 或*cRows*调用 GetNextRows 且 `m_bReset` 为 true，则 `GetNextRows` 移动到行集的末尾。 如果 `m_bReset` 为 false，则使用者将接收错误代码，并符合 OLE DB 规范。 `m_bReset` **`true`** 首次创建行集时，以及当使用者调用[IRowsetImpl：： RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)时，该标志将设置为。 当你调用时，它会设置为 **`false`** `GetNextRows` 。
+如果使用者使用[GetNextRows](#getnextrows)负值 `lOffset` 或*cRows*调用 GetNextRows 且 `m_bReset` 为 true，则 `GetNextRows` 移动到行集的末尾。 如果 `m_bReset` 为 false，则使用者将接收错误代码，并符合 OLE DB 规范。 `m_bReset` **`true`** 首次创建行集时，以及当使用者调用[IRowsetImpl：： RestartPosition](#restartposition)时，该标志将设置为。 当你调用时，它会设置为 **`false`** `GetNextRows` 。
 
 ## <a name="irowsetimplm_irowset"></a><a name="irowset"></a> IRowsetImpl：： m_iRowset
 
@@ -441,7 +441,7 @@ MapClass m_rgRowHandles;
 
 通过调用删除行句柄 `ReleaseRows` 。 有关*MapClass*的定义，请参阅[IRowsetImpl 概述](../../data/oledb/irowsetimpl-class.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

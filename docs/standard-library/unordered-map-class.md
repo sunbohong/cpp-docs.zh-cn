@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 2f30b5683d8487830d596fc8185430c8a4c4c7b0
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: f8ffd7b3990f2d0ab40f8059e65f0aba4d4c8e0c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352402"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503580"
 ---
 # <a name="unordered_map-class"></a>unordered_map 类
 
@@ -163,7 +163,7 @@ template <class Key,
 class unordered_map;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 键类型。
@@ -301,7 +301,7 @@ Ty& at(const Key& key);
 const Ty& at(const Key& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *按键*\
 要查找的键值。
@@ -352,7 +352,7 @@ local_iterator begin(size_type nbucket);
 const_local_iterator begin(size_type nbucket) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nbucket*\
 存储桶编号。
@@ -413,7 +413,7 @@ int main()
 size_type bucket(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *keyval*\
 要映射的键值。
@@ -555,7 +555,7 @@ max_load_factor() == 0.1
 size_type bucket_size(size_type nbucket) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nbucket*\
 存储桶编号。
@@ -916,7 +916,7 @@ bool contains(const Key& key) const;
 <class K> bool contains(const K& key) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *温度*\
 键的类型。
@@ -926,7 +926,7 @@ bool contains(const Key& key) const;
 
 ### <a name="return-value"></a>返回值
 
-`true` 如果在容器中找到元素，则为; 否则为。 `false` 否则为。 
+`true` 如果在容器中找到元素，则为; 否则为。 `false` 否则为。
 
 ### <a name="remarks"></a>注解
 
@@ -948,7 +948,7 @@ int main()
     std::cout << std::boolalpha; // so booleans show as 'true' or 'false'
     std::cout << theUnorderedMap.contains(1) << '\n';
     std::cout << theUnorderedMap.contains(2) << '\n';
-    
+
     return 0;
 }
 ```
@@ -966,7 +966,7 @@ false
 size_type count(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *keyval*\
 要搜索的键值。
@@ -1081,7 +1081,7 @@ template <class... Args>
 pair<iterator, bool>  emplace( Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入到中的元素的转发自变量， `unordered_map` 除非它已包含其值具有相同排序的元素。
@@ -1109,7 +1109,7 @@ template <class... Args>
 iterator emplace_hint(const_iterator where, Args&&... args);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *args*\
 用于构造要插入 unordered_map 中的元素的转发参数，除非 unordered_map 已包含该元素，或更普遍的情况是，除非它已包含其键已经过相同排序的元素。
@@ -1211,7 +1211,7 @@ local_iterator end(size_type nbucket);
 const_local_iterator end(size_type nbucket) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nbucket*\
 存储桶编号。
@@ -1229,7 +1229,7 @@ std::pair<iterator, iterator>  equal_range(const Key& keyval);
 std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *keyval*\
 要搜索的键值。
@@ -1298,7 +1298,7 @@ iterator erase(const_iterator First, const_iterator Last);
 size_type erase(const key_type& Key);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *其中*\
 要移除的元素的位置。
@@ -1330,7 +1330,7 @@ size_type erase(const key_type& Key);
 const_iterator find(const Key& keyval) const;
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *keyval*\
 要搜索的键值。
@@ -1528,7 +1528,7 @@ void insert(initializer_list<value_type>
 IList);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *初始值*\
 要插入到 unordered_map 中的元素的值（除非它已经包含一个具有相对有序的键的元素）。
@@ -2038,7 +2038,7 @@ float max_load_factor() const;
 void max_load_factor(float factor);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *一元*\
 新的最大加载因子。
@@ -2166,7 +2166,7 @@ Ty& operator[](const Key& keyval);
 Ty& operator[](Key&& keyval);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Keyval*\
 要查找或插入的键值。
@@ -2252,7 +2252,7 @@ unordered_map& operator=(const unordered_map& right);
 unordered_map& operator=(unordered_map&& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 运算符函数从中分配内容的 unordered_map。
@@ -2402,7 +2402,7 @@ int main()
 void rehash(size_type nbuckets);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *nbuckets*\
 请求的存储桶数。
@@ -2583,7 +2583,7 @@ size == 0
 void swap(unordered_map& right);
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *然后*\
 要交换的容器。
@@ -2692,7 +2692,7 @@ unordered_map(
     const Allocator& Al = Alloc());
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *Fc-al*\
 要存储的分配器对象。
@@ -2921,9 +2921,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<unordered_map>](../standard-library/unordered-map.md)\
-[存放](./stl-containers.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

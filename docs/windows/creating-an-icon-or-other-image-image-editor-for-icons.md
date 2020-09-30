@@ -79,16 +79,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: a331e310f031462c903546a2896317aae0c0d719
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bbaa008d8dac74588fc15bfebbc7cb2611260349
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843360"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504555"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>如何：创建图标或其他图像
 
-可以创建新的图像、位图、图标、光标或工具栏，并使用 **图像编辑器** 来自定义其外观。 你还可以在 [资源模板](../windows/how-to-use-resource-templates.md)之后创建一个新的位图。
+可以创建新的图像、位图、图标、光标或工具栏，并使用 **图像编辑器** 来自定义其外观。 你还可以在 [资源模板](./how-to-create-a-resource-script-file.md)之后创建一个新的位图。
 
 ## <a name="icons-and-cursors-image-resources-for-display-devices"></a>图标和光标：显示设备的图像资源
 
@@ -162,8 +162,8 @@ ms.locfileid: "88843360"
 
 |属性|说明|
 |---|---|
-|Width|为您提供空间，用于输入自定义图像的宽度（以像素为单位） (1-512，2048) 的限制。|
-|Height|为您提供空间，用于输入自定义图像的高度（以像素为单位） (1-512，2048) 的限制。|
+|Width |为您提供空间，用于输入自定义图像的宽度（以像素为单位） (1-512，2048) 的限制。|
+|Height |为您提供空间，用于输入自定义图像的高度（以像素为单位） (1-512，2048) 的限制。|
 |**颜色**|提供空间以选择自定义图像的颜色数：2、16或256。|
 
 使用 " **打开 &lt; 设备 &gt; 图像** " 对话框打开 c + + 项目中的设备映像。 它列出当前资源中的现有设备映像 (当前资源) 中的映像。 包含以下属性：
@@ -176,7 +176,7 @@ ms.locfileid: "88843360"
 
 1. 在 [资源视图](how-to-create-a-resource-script-file.md#create-resources)中，右键单击 *.rc* 文件，然后选择 " **插入资源**"。 如果 *.rc* 文件中已存在现有的图像资源（如光标），则可以右键单击该 **光标** 文件夹，然后选择 " **插入光标**"。
 
-1. 在 " [插入资源" 对话框](../windows/add-resource-dialog-box.md)中，选择 " **图标** " 或 " **光标** " 并选择 " **新建**"。 对于图标，此操作将创建一个具有32×32、16色图标的图标资源。 对于游标，将创建一个32×32、单色 (2 彩色) 图像。
+1. 在 " [插入资源" 对话框](./how-to-create-a-resource-script-file.md)中，选择 " **图标** " 或 " **光标** " 并选择 " **新建**"。 对于图标，此操作将创建一个具有32×32、16色图标的图标资源。 对于游标，将创建一个32×32、单色 (2 彩色) 图像。
 
    如果 **+** " **插入资源** " 对话框中的图像资源类型旁边出现一个加号 () ，则表示工具栏模板可用。 选择加号以展开模板列表，选择模板，然后选择 " **新建**"。
 
@@ -205,12 +205,12 @@ ms.locfileid: "88843360"
 
 ### <a name="to-create-transparent-or-inverse-regions-in-device-images"></a>在设备图像中创建透明或反转区域
 
-在 [图像编辑器](../windows/image-editor-for-icons.md)中，初始图标或光标图像具有透明特性。 尽管图标和光标图像是矩形，但很多不会出现，因为图像的各个部分是透明的，而屏幕上的基础图像则通过图标或光标显示。 拖动图标时，图像的部件可能会以反转颜色显示。 您可以通过在 " [颜色" 窗口](../windows/colors-window-image-editor-for-icons.md)中设置屏幕颜色和反转颜色来创建此效果。
+在 [图像编辑器](../windows/image-editor-for-icons.md)中，初始图标或光标图像具有透明特性。 尽管图标和光标图像是矩形，但很多不会出现，因为图像的各个部分是透明的，而屏幕上的基础图像则通过图标或光标显示。 拖动图标时，图像的部件可能会以反转颜色显示。 您可以通过在 " [颜色" 窗口](./image-editor-for-icons.md)中设置屏幕颜色和反转颜色来创建此效果。
 
 应用于图标和光标的屏幕和反转颜色既可以为派生图像着色，也可以指定反转区域。 颜色指示具有这些属性的图像部分。 在编辑时，可以更改表示屏幕颜色和反色属性的颜色。 这些更改不会影响应用程序中图标或光标的外观。
 
 > [!NOTE]
-> 您看到的对话框和菜单命令可能与 " **帮助** " 中的描述不同，具体取决于您现用的设置或版本。 若要更改设置，请转到 "菜单" "**工具**" "  >  **导入和导出设置**"。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
+> 显示的对话框和菜单命令可能与“帮助”中的描述不同，具体取决于现用的设置或版本。 若要更改设置，请转到 "菜单" "**工具**" "  >  **导入和导出设置**"。 有关详细信息，请参阅[个性化设置 Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
 #### <a name="to-create-transparent-or-inverse-regions"></a>创建透明或反转区域
 
@@ -227,7 +227,7 @@ ms.locfileid: "88843360"
    为其他选择器自动分配互补色。
 
    > [!TIP]
-   > 如果双击 **屏幕颜色** 或 **反转颜色** 选择器，则会显示 " [自定义颜色选择器" 对话框](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) 。
+   > 如果双击 **屏幕颜色** 或 **反转颜色** 选择器，则会显示 " [自定义颜色选择器" 对话框](./image-editor-for-icons.md) 。
 
 ### <a name="use-the-256-color-palette"></a>使用256调色板
 
@@ -237,13 +237,13 @@ ms.locfileid: "88843360"
 
 1. 在 [资源视图](how-to-create-a-resource-script-file.md#create-resources)中，右键单击 *.rc* 文件，然后选择 " **插入资源**"。 如果 *.rc* 文件中已存在现有的图像资源（如光标），则可以右键单击该 **光标** 文件夹，然后选择 " **插入光标**"。
 
-1. 在 " [插入资源" 对话框](../windows/add-resource-dialog-box.md)中，选择 " **图标** " 或 " **光标** " 并选择 " **新建**"。
+1. 在 " [插入资源" 对话框](./how-to-create-a-resource-script-file.md)中，选择 " **图标** " 或 " **光标** " 并选择 " **新建**"。
 
 1. "中转到**Image**  >  " 菜单 "图像" "**新建设备图像**"，并选择所需的256颜色图像样式。
 
 #### <a name="to-choose-a-color-from-the-256-color-palette-for-large-icons"></a>为大图标从256调色板选择颜色
 
-若要使用256调色板的所选内容进行绘制，需要从 "[颜色" 窗口](../windows/colors-window-image-editor-for-icons.md)的 "**颜色**" 调色板中选择颜色。
+若要使用256调色板的所选内容进行绘制，需要从 "[颜色" 窗口](./image-editor-for-icons.md)的 "**颜色**" 调色板中选择颜色。
 
 1. 选择大图标或光标，或创建新的大图标或光标。
 
@@ -258,7 +258,7 @@ ms.locfileid: "88843360"
 
 光标的作用点是 Windows 在跟踪光标位置时所指向的点。 默认情况下，作用点设置为光标的左上角和坐标 `0,0` 。 [属性窗口](/visualstudio/ide/reference/properties-window)中的**热点**属性显示了作用点坐标。
 
-1. 在 " [图像编辑器" 工具栏](../windows/toolbar-image-editor-for-icons.md)上，选择 " **设置热点** " 工具。
+1. 在 " [图像编辑器" 工具栏](./image-editor-for-icons.md)上，选择 " **设置热点** " 工具。
 
 1. 选择要分配为光标作用点的像素。
 
@@ -284,13 +284,13 @@ ms.locfileid: "88843360"
 1. 在 " **将文件另存为** " 对话框中，在 **"文件名" 框中** 键入要为该文件指定的名称以及表示所需文件格式的扩展名。 例如， *myfile.gif*。
 
    > [!NOTE]
-   > 若要将位图另存为其他文件格式，必须在项目外创建或打开位图。 如果在项目中创建或打开此项目，" **另存为** " 命令将不可用。 有关详细信息，请参阅 [在项目外查看资源脚本文件中的资源 (独立) ](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。
+   > 若要将位图另存为其他文件格式，必须在项目外创建或打开位图。 如果在项目中创建或打开此项目，" **另存为** " 命令将不可用。 有关详细信息，请参阅 [在项目外查看资源脚本文件中的资源 (独立) ](./how-to-create-a-resource-script-file.md)。
 
 1. 选择“保存”。
 
 ### <a name="to-convert-an-image-from-one-format-to-another"></a>将图像从一种格式转换为另一种格式
 
-您可以在 **图像编辑器** 中打开 GIF 或 JPEG 图像，并将其保存为位图。 此外，还可以打开位图文件并将其保存为 GIF 或 JPEG。 所使用的图像不需要是项目的一部分，因此无法在开发环境中进行编辑 (参阅) 的 [独立图像编辑](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md) 。
+您可以在 **图像编辑器** 中打开 GIF 或 JPEG 图像，并将其保存为位图。 此外，还可以打开位图文件并将其保存为 GIF 或 JPEG。 所使用的图像不需要是项目的一部分，因此无法在开发环境中进行编辑 (参阅) 的 [独立图像编辑](./selecting-an-area-of-an-image-image-editor-for-icons.md) 。
 
 1. 在 **图像编辑器**中打开图像。
 
@@ -304,7 +304,7 @@ ms.locfileid: "88843360"
 
 1. 在 [资源视图](how-to-create-a-resource-script-file.md#create-resources)中，右键单击 *.rc* 文件，然后选择 " **插入资源**"。 如果 *.rc* 文件中已存在现有的图像资源（如光标），只需右键单击该 **光标** 文件夹，然后选择 " **插入光标**" 即可。
 
-1. 在 " [插入资源" 对话框](../windows/add-resource-dialog-box.md)中，选择要创建 (**位图**的图像资源的类型，例如) 并选择 " **新建**"。
+1. 在 " [插入资源" 对话框](./how-to-create-a-resource-script-file.md)中，选择要创建 (**位图**的图像资源的类型，例如) 并选择 " **新建**"。
 
    如果 **+** " **插入资源** " 对话框中的图像资源类型旁边出现一个加号 () ，则表示工具栏模板可用。 选择加号以展开模板列表，选择模板，然后选择 " **新建**"。
 
@@ -322,9 +322,9 @@ ms.locfileid: "88843360"
 
 ## <a name="requirements"></a>要求
 
-无
+None
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [图标的图像编辑器](../windows/image-editor-for-icons.md)<br/>
 [如何：编辑图像](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
@@ -332,7 +332,7 @@ ms.locfileid: "88843360"
 [如何：使用颜色](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [加速键](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
-[Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>
-[Creating New Toolbars](../windows/creating-new-toolbars.md)<br/>
+[Converting Bitmaps to Toolbars](./toolbar-editor.md)<br/>
+[Creating New Toolbars](./toolbar-editor.md)<br/>
 [Icons](/windows/win32/menurc/icons)<br/>
 [Cursors](/windows/win32/menurc/cursors)<br/>-->

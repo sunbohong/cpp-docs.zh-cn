@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: dfa3873917d5215d0069e504e0556c31744f4334
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ceaf30318c176b13cb6f81c8401501863b988a4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840383"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504056"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 类
 
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 
 ## <a name="remarks"></a>注解
 
-行集的必需接口。 此类通过使用在命令类中定义的 [属性集](../../data/oledb/begin-propset-map.md) 来实现行集属性。 尽管行集类看起来是使用 command 类的属性集，但在通过命令或会话对象创建行集时，将使用其自己的运行时属性副本来提供行集。
+行集的必需接口。 此类通过使用在命令类中定义的 [属性集](./macros-for-ole-db-provider-templates.md#begin_propset_map) 来实现行集属性。 尽管行集类看起来是使用 command 类的属性集，但在通过命令或会话对象创建行集时，将使用其自己的运行时属性副本来提供行集。
 
 ## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a> IRowsetInfoImpl：： GetProperties
 
@@ -123,7 +123,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 将此方法与 [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md) 一起使用可从数据源对象检索属性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

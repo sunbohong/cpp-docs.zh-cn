@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-ms.openlocfilehash: 868ff862cc41543c8ebc7880a5d1a9a7e6b103f3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5910e72b10d5b849d203d088564d79d0f80a7961
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684581"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504601"
 ---
 # <a name="db_command"></a>db_command
 
@@ -113,7 +113,7 @@ TCHAR m_state[3] = 'CA';
 
 如果 *bulk_fetch* 小于 1， `SetRows` 将返回零。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **db_command** 创建 [CCommand](../../data/oledb/ccommand-class.md) 对象，OLE DB 使用者使用该对象来执行命令。
 
@@ -125,7 +125,7 @@ TCHAR m_state[3] = 'CA';
 
 ## <a name="examples"></a>示例
 
-本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command** 创建并读取行集，在行集上可以调用向导生成的函数（例如 [OpenAll 和 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)）和 `CRowset` 成员函数（例如 [MoveNext](../../data/oledb/crowset-movenext.md)）。
+本示例定义一个命令，该命令从状态列与“CA”匹配的表格中选择第一个和最后一个名称。 **db_command** 创建并读取行集，在行集上可以调用向导生成的函数（例如 [OpenAll 和 CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)）和 `CRowset` 成员函数（例如 [MoveNext](../../data/oledb/crowset-class.md#movenext)）。
 
 请注意，此代码要求提供自己连接到 pubs 数据库的连接字符串。 有关如何在开发环境中执行此操作的信息，请参阅 [如何：连接到数据库和浏览现有对象](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) 和 [添加新连接](/visualstudio/data-tools/add-new-connections)。
 
@@ -234,12 +234,12 @@ int main() {
 
 ## <a name="requirements"></a>要求
 
-| 特性上下文 | “值” |
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|**`class`**、 **`struct`** 、成员、方法、本地|
 |**且**|否|
-|**必需属性**|无|
-|**无效的特性**|无|
+|**必需属性**|None|
+|**无效的特性**|None|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 

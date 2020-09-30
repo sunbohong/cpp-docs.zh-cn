@@ -1,5 +1,5 @@
 ---
-title: /sourceDependencies （报表源级别的依赖项）
+title: /sourceDependencies（报告源级别依赖项）
 description: Microsoft c + + 中的/sourceDependencies 编译器选项的参考指南。
 ms.date: 07/29/2020
 f1_keywords:
@@ -7,21 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - /sourceDependencies compiler option
 - /sourceDependencies
-ms.openlocfilehash: 3198353ea7569c426a556522d6b931fe23c7f12c
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 0c1866812435c777f6f1fd7ed7f9db788a8cf031
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520701"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502839"
 ---
-# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies`（报表源级别依赖项）
+# <a name="sourcedependencies-report-source-level-dependencies"></a>`/sourceDependencies` (报表源级依赖项) 
 
 指示编译器生成一个 JSON 文件，该文件详细说明在编译期间使用的源级依赖项。
 
 JSON 文件包含源依赖项的列表，其中包括：
-- 标头文件（可传递和直接包含的标头）。
-- 使用的 PCH （如果 **`/Yu`** 指定了）。
-- 导入的模块和导入的标头单元（可传递和直接导入的模块/标题单元）。
+
+- 标头文件 (传递和直接包含的标头) 。
+- 如果) 指定，则使用的 PCH (**`/Yu`** 。
+- 导入的模块和导入的标头单元 (传递和直接导入的模块/标头单位) 。
 
 ## <a name="syntax"></a>语法
 
@@ -36,11 +37,11 @@ JSON 文件包含源依赖项的列表，其中包括：
 *文件夹*\
 如果参数是一个目录，则编译器将在指定的目录中生成源依赖项文件。 输出文件的名称基于输入文件的全名，附加了 *`.json`* 扩展名。 例如，如果为编译器提供的文件是，则 *`main.cpp`* 生成的输出文件名为 *`main.cpp.json`* 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **`/sourceDependencies`** 编译器选项在 Visual Studio 2019 版本16.7 中开始提供。 默认情况下不启用它。
 
-指定 **`/MP`** 编译器选项时，我们建议你使用 **`/sourceDependencies`** with directory 参数。 如果提供单个 filename 参数，则两个编译器实例可能尝试同时打开输出文件并导致错误。 有关的详细信息 **`/MP`** ，请参阅[ `/MP` （包含多个进程）](mp-build-with-multiple-processes.md)。
+指定 **`/MP`** 编译器选项时，我们建议你使用 **`/sourceDependencies`** with directory 参数。 如果提供单个 filename 参数，则两个编译器实例可能尝试同时打开输出文件并导致错误。 有关的详细信息 **`/MP`** ，请参阅[ `/MP`)  (具有多个进程的生成](mp-build-with-multiple-processes.md)。
 
 发生非致命编译器错误时，依赖关系信息仍会写入到输出文件中。
 

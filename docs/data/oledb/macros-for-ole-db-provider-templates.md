@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 53ea92c2eece31829a7554c0f9accf2e56d727a9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840721"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504015"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供程序模板宏
 
@@ -118,7 +118,7 @@ BEGIN_PROPERTY_SET(guid)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a> BEGIN_PROPERTY_SET_EX
 
@@ -140,7 +140,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="begin_propset_map"></a><a name="begin_propset_map"></a> BEGIN_PROPSET_MAP
 
@@ -208,7 +208,7 @@ END_PROPERTY_SET(guid)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="end_propset_map"></a><a name="end_propset_map"></a> END_PROPSET_MAP
 
@@ -222,7 +222,7 @@ END_PROPSET_MAP()
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="property_info_entry"></a><a name="property_info_entry"></a> PROPERTY_INFO_ENTRY
 
@@ -241,11 +241,11 @@ PROPERTY_INFO_ENTRY(dwPropID)
 
 #### <a name="remarks"></a>注解
 
-此宏将 `DWORD` 类型的属性值设置为 ATLDB.H 中定义的默认值。 若要将属性设置为所选的值，请使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)。 若要 `VARTYPE` 同时为属性设置和 [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) ，请使用 [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。
+此宏将 `DWORD` 类型的属性值设置为 ATLDB.H 中定义的默认值。 若要将属性设置为所选的值，请使用 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)。 若要 `VARTYPE` 同时为属性设置和 [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) ，请使用 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)。
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a> PROPERTY_INFO_ENTRY_EX
 
@@ -276,11 +276,11 @@ DBPROPOPTIONS_REQUIRED 或 DBPROPOPTIONS_SETIFCHEAP。 通常，提供程序不�
 
 #### <a name="remarks"></a>注解
 
-使用此宏，你可以直接指定 `DWORD` 类型的属性值以及选项和标记。 若要仅将属性设置为 ATLDB.H 中指定的默认值，请使用 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)。 若要将属性设置为你选择的值且不要设置其上的选项或标记，请使用 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)。
+使用此宏，你可以直接指定 `DWORD` 类型的属性值以及选项和标记。 若要仅将属性设置为 ATLDB.H 中指定的默认值，请使用 [PROPERTY_INFO_ENTRY](#property_info_entry)。 若要将属性设置为你选择的值且不要设置其上的选项或标记，请使用 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)。
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a> PROPERTY_INFO_ENTRY_VALUE
 
@@ -302,11 +302,11 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 
 #### <a name="remarks"></a>注解
 
-利用此宏，你可以直接指定类型的属性值 `DWORD` 。 将属性设置为为 ATLDB.H 中定义的默认值。H，使用 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)。 若要设置属性的值、标志和选项，请使用 [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)。
+利用此宏，你可以直接指定类型的属性值 `DWORD` 。 将属性设置为为 ATLDB.H 中定义的默认值。H，使用 [PROPERTY_INFO_ENTRY](#property_info_entry)。 若要设置属性的值、标志和选项，请使用 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)。
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](#begin_propset_map)。
 
 ### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a> BEGIN_PROVIDER_COLUMN_MAP
 
@@ -341,7 +341,7 @@ END_PROVIDER_COLUMN_MAP()
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+请参阅 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry"></a><a name="provider_column_entry"></a> PROVIDER_COLUMN_ENTRY
 
@@ -394,7 +394,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+请参阅 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a> PROVIDER_COLUMN_ENTRY_GN
 
@@ -466,7 +466,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+请参阅 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a> PROVIDER_COLUMN_ENTRY_STR
 
@@ -495,7 +495,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。
+请参阅 [BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)。
 
 ### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a> PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
@@ -526,7 +526,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 
 #### <a name="remarks"></a>注解
 
-与 [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) 类似，但也可用于指定列的数据类型和大小。
+与 [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) 类似，但也可用于指定列的数据类型和大小。
 
 ### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a> PROVIDER_COLUMN_ENTRY_WSTR
 
@@ -625,7 +625,7 @@ HRESULT Execute (LONG* pcRowsAffected,
 
 向导还在架构映射中添加了三个对应的条目。 有关使用向导创建提供程序的详细信息，请参阅 [创建 OLE DB 模板提供程序](../../data/oledb/creating-an-ole-db-provider.md) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

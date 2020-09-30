@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7ccb3d846982bbf9a52a7267549f6481b5a1bd9b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757249"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503953"
 ---
 # <a name="compiler-error-c3763"></a>编译器错误 C3763
 
 "type"： "retval" 和 "out" 只能出现在数据指针类型上
 
-[Out](../../windows/out-cpp.md)或[retval](../../windows/retval.md)特性只能出现在类型指针的参数上。 删除特性或使类型指针的参数成为。
+[Out](../../windows/attributes/out-cpp.md)或[retval](../../windows/attributes/retval.md)特性只能出现在类型指针的参数上。 删除特性或使类型指针的参数成为。
 
 下面的示例生成 C3763：
 

@@ -99,12 +99,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 07fbdf7dfcd82937721955c5ba08e2241df162e5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846532"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504031"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 使用者模板的宏和全局函数
 
@@ -112,13 +112,13 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="global-functions"></a>全局函数
 
-| 名称 | 描述 |
+| 名称 | 说明 |
 |-|-|
 |[AtlTraceErrorRecords](#atltraceerrorrecords)|如果返回错误，则将 OLE DB 错误记录信息转储到转储设备。|
 
 ## <a name="accessor-map-macros"></a>访问器映射宏
 
-| 名称 | 描述 |
+| 名称 | 说明 |
 |-|-|
 |[BEGIN_ACCESSOR](#begin_accessor)|标记访问器项的开头。|
 |[BEGIN_ACCESSOR_MAP](#begin_accessor_map)|标记取值函数映射条目的开始。|
@@ -127,7 +127,7 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="column-map-macros"></a>列映射宏
 
-| 名称 | 描述 |
+| 名称 | 说明 |
 |-|-|
 |[BEGIN_COLUMN_MAP](#begin_column_map)|标记用户记录类中的列映射条目的开头。|
 |[BLOB_ENTRY](#blob_entry)|用于将二进制大型对象绑定 (BLOB) 。|
@@ -167,14 +167,14 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="command-macros"></a>命令宏
 
-| 名称 | 描述 |
+| 名称 | 说明 |
 |-|-|
-|[DEFINE_COMMAND](#define_command)|指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 仅接受与指定的应用程序类型匹配 (ANSI 或 Unicode) 的字符串类型。 建议使用 [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) 而不是 DEFINE_COMMAND。|
+|[DEFINE_COMMAND](#define_command)|指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 仅接受与指定的应用程序类型匹配 (ANSI 或 Unicode) 的字符串类型。 建议使用 [DEFINE_COMMAND_EX](#define_command_ex) 而不是 DEFINE_COMMAND。|
 |[DEFINE_COMMAND_EX](#define_command_ex)|指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 支持 ANSI 和 Unicode 应用程序。|
 
 ## <a name="parameter-map-macros"></a>参数映射宏
 
-| 名称 | 描述 |
+| 名称 | 说明 |
 |-|-|
 |[BEGIN_PARAM_MAP](#begin_param_map)|标记用户记录类中参数映射条目的开头。|
 |[END_PARAM_MAP](#end_param_map)|标记参数映射项的结尾。|
@@ -223,7 +223,7 @@ BEGIN_ACCESSOR(num, bAuto)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。
+请参阅 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)。
 
 ### <a name="begin_accessor_map"></a><a name="begin_accessor_map"></a> BEGIN_ACCESSOR_MAP
 
@@ -247,7 +247,7 @@ BEGIN_ACCESSOR_MAP(x, num)
 
 如果行集上有多个访问器，则需要在开头指定 BEGIN_ACCESSOR_MAP，并对每个访问器使用 BEGIN_ACCESSOR 的宏。 BEGIN_ACCESSOR 宏用 END_ACCESSOR 宏完成。 访问器映射通过 END_ACCESSOR_MAP 宏完成。
 
-如果在用户记录中只有一个取值函数，则使用宏 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)。
+如果在用户记录中只有一个取值函数，则使用宏 [BEGIN_COLUMN_MAP](#begin_column_map)。
 
 #### <a name="example"></a>示例
 
@@ -310,7 +310,7 @@ END_ACCESSOR()
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。
+请参阅 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)。
 
 ### <a name="end_accessor_map"></a><a name="end_accessor_map"></a> END_ACCESSOR_MAP
 
@@ -328,7 +328,7 @@ END_ACCESSOR_MAP()
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。
+请参阅 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)。
 
 ### <a name="begin_column_map"></a><a name="begin_column_map"></a> BEGIN_COLUMN_MAP
 
@@ -347,7 +347,7 @@ BEGIN_COLUMN_MAP(x)
 
 #### <a name="remarks"></a>注解
 
-在行集上存在单个访问器的情况下使用此宏。 如果行集上有多个访问器，则使用 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。
+在行集上存在单个访问器的情况下使用此宏。 如果行集上有多个访问器，则使用 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)。
 
 BEGIN_COLUMN_MAP 宏用 END_COLUMN_MAP 宏完成。 当用户记录中只需要一个访问器时才使用此宏。
 
@@ -389,7 +389,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 
 ### <a name="blob_entry_length"></a><a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](../../data/oledb/blob-entry.md)类似，只不过此宏还获取 BLOB 列的长度（以字节为单位）。
+与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](#blob_entry)类似，只不过此宏还获取 BLOB 列的长度（以字节为单位）。
 
 #### <a name="syntax"></a>语法
 
@@ -420,7 +420,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 
 ### <a name="blob_entry_length_status"></a><a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](../../data/oledb/blob-entry.md)类似，不同之处在于此宏还获取 BLOB 列的长度和状态。
+与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](#blob_entry)类似，不同之处在于此宏还获取 BLOB 列的长度和状态。
 
 #### <a name="syntax"></a>语法
 
@@ -460,7 +460,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 
 ### <a name="blob_entry_status"></a><a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-与 BEGIN_COLUMN_MAP 或 BEGIN_ACCESSOR_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](../../data/oledb/blob-entry.md)类似，只不过此宏还会获取 BLOB 列的状态。
+与 BEGIN_COLUMN_MAP 或 BEGIN_ACCESSOR_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](#blob_entry)类似，只不过此宏还会获取 BLOB 列的状态。
 
 #### <a name="syntax"></a>语法
 
@@ -491,7 +491,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 
 ### <a name="blob_name"></a><a name="blob_name"></a> BLOB_NAME
 
-与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](../../data/oledb/blob-entry.md)类似，只不过此宏采用列名而不是列号。
+与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_ENTRY](#blob_entry)类似，只不过此宏采用列名而不是列号。
 
 #### <a name="syntax"></a>语法
 
@@ -519,7 +519,7 @@ BLOB_NAME(pszName, IID, flags, data )
 
 ### <a name="blob_name_length"></a><a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_NAME](../../data/oledb/blob-name.md)类似，不同之处在于此宏还获取 BLOB 数据列的长度（以字节为单位）。
+与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_NAME](#blob_name)类似，不同之处在于此宏还获取 BLOB 数据列的长度（以字节为单位）。
 
 #### <a name="syntax"></a>语法
 
@@ -546,7 +546,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a><a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_NAME](../../data/oledb/blob-name.md)类似，不同之处在于此宏还获取 BLOB 数据列的长度和状态。
+与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_NAME](#blob_name)类似，不同之处在于此宏还获取 BLOB 数据列的长度和状态。
 
 #### <a name="syntax"></a>语法
 
@@ -576,7 +576,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 ### <a name="blob_name_status"></a><a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_NAME](../../data/oledb/blob-name.md)类似，只不过此宏还会获取 BLOB 数据列的状态。
+与 BEGIN_COLUMN_MAP 和 END_COLUMN_MAP 一起用于将二进制大型对象绑定 ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))) 。 与 [BLOB_NAME](#blob_name)类似，只不过此宏还会获取 BLOB 数据列的状态。
 
 #### <a name="syntax"></a>语法
 
@@ -690,15 +690,15 @@ COLUMN_ENTRY(nOrdinal, data)
 
 COLUMN_ENTRY 宏用于以下位置：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 #### <a name="example"></a>示例
 
-请参阅宏主题 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) 和 [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)中的示例。
+请参阅宏主题 [BEGIN_COLUMN_MAP](#begin_column_map) 和 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)中的示例。
 
 ### <a name="column_entry_ex"></a><a name="column_entry_ex"></a> COLUMN_ENTRY_EX
 
@@ -742,15 +742,15 @@ wType <br/>
 
 COLUMN_ENTRY_EX 宏用于以下位置：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 #### <a name="example"></a>示例
 
-请参阅 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。
+请参阅 [BOOKMARK_ENTRY](#bookmark_entry)。
 
 ### <a name="column_entry_length"></a><a name="column_entry_length"></a> COLUMN_ENTRY_LENGTH
 
@@ -779,11 +779,11 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 
 此宏支持 *length* 变量。 它在以下位置中使用：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_entry_length_status"></a><a name="column_entry_length_status"></a> COLUMN_ENTRY_LENGTH_STATUS
 
@@ -815,11 +815,11 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 
 当您要支持长度和状态变量时，请使用此宏。 它在以下位置中使用：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_entry_ps"></a><a name="column_entry_ps"></a> COLUMN_ENTRY_PS
 
@@ -851,11 +851,11 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 
 允许您指定要绑定的列的精度和小数位数。 它在以下位置中使用：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_entry_ps_length"></a><a name="column_entry_ps_length"></a> COLUMN_ENTRY_PS_LENGTH
 
@@ -890,11 +890,11 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 
 允许您指定要绑定的列的精度和小数位数。 此宏支持 *length* 变量。 它在以下位置中使用：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_entry_ps_length_status"></a><a name="column_entry_ps_length_status"></a> COLUMN_ENTRY_PS_LENGTH_STATUS
 
@@ -932,11 +932,11 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 
 允许您指定要绑定的列的精度和小数位数。 当您要支持长度和状态变量时，请使用此宏。 它在以下位置中使用：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_entry_ps_status"></a><a name="column_entry_ps_status"></a> COLUMN_ENTRY_PS_STATUS
 
@@ -971,11 +971,11 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 
 允许您指定要绑定的列的精度和小数位数。 此宏支持 *状态* 变量。 它在以下位置中使用：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_entry_status"></a><a name="column_entry_status"></a> COLUMN_ENTRY_STATUS
 
@@ -1004,11 +1004,11 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 此宏支持 *状态* 变量。 它在以下位置中使用：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_entry_type"></a><a name="column_entry_type"></a> COLUMN_ENTRY_TYPE
 
@@ -1033,7 +1033,7 @@ wType <br/>
 
 #### <a name="remarks"></a>注解
 
-此宏是 [COLUMN_ENTRY](../../data/oledb/column-entry.md) 宏的专用变体，它提供指定数据类型的方法。
+此宏是 [COLUMN_ENTRY](#column_entry) 宏的专用变体，它提供指定数据类型的方法。
 
 ### <a name="column_entry_type_size"></a><a name="column_entry_type_size"></a> COLUMN_ENTRY_TYPE_SIZE
 
@@ -1061,11 +1061,11 @@ wType <br/>
 
 #### <a name="remarks"></a>注解
 
-此宏是 [COLUMN_ENTRY](../../data/oledb/column-entry.md) 宏的专用变体，它提供指定数据大小和类型的方法。
+此宏是 [COLUMN_ENTRY](#column_entry) 宏的专用变体，它提供指定数据大小和类型的方法。
 
 ### <a name="column_name"></a><a name="column_name"></a> COLUMN_NAME
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_ENTRY](../../data/oledb/column-entry.md)类似，只不过此宏采用列名而不是列号。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_ENTRY](#column_entry)类似，只不过此宏采用列名而不是列号。
 
 #### <a name="syntax"></a>语法
 
@@ -1083,17 +1083,17 @@ COLUMN_NAME(pszName, data)
 
 #### <a name="remarks"></a>注解
 
-COLUMN_NAME_ * 宏用于与 [COLUMN_ENTRY](../../data/oledb/column-entry.md)相同的位置：
+COLUMN_NAME_ * 宏用于与 [COLUMN_ENTRY](#column_entry)相同的位置：
 
-- [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)宏之间。
+- [BEGIN_COLUMN_MAP](#begin_column_map)和[END_COLUMN_MAP](#end_column_map)宏之间。
 
-- [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)宏之间。
+- [BEGIN_ACCESSOR](#begin_accessor)和[END_ACCESSOR](#end_accessor)宏之间。
 
-- [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)宏之间。
+- [BEGIN_PARAM_MAP](#begin_param_map)和[END_PARAM_MAP](#end_param_map)宏之间。
 
 ### <a name="column_name_ex"></a><a name="column_name_ex"></a> COLUMN_NAME_EX
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，不同之处在于，此宏还采用数据类型、大小、精度、小数位数、列长度和列状态。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，不同之处在于，此宏还采用数据类型、大小、精度、小数位数、列长度和列状态。
 
 #### <a name="syntax"></a>语法
 
@@ -1129,11 +1129,11 @@ wType <br/>
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_length"></a><a name="column_name_length"></a> COLUMN_NAME_LENGTH
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，不同之处在于此宏也采用列长度。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，不同之处在于此宏也采用列长度。
 
 #### <a name="syntax"></a>语法
 
@@ -1154,11 +1154,11 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_length_status"></a><a name="column_name_length_status"></a> COLUMN_NAME_LENGTH_STATUS
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，只不过此宏还采用列长度和列状态。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，只不过此宏还采用列长度和列状态。
 
 #### <a name="syntax"></a>语法
 
@@ -1182,11 +1182,11 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_ps"></a><a name="column_name_ps"></a> COLUMN_NAME_PS
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，不同之处在于此宏也需要精度和小数位数。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，不同之处在于此宏也需要精度和小数位数。
 
 #### <a name="syntax"></a>语法
 
@@ -1210,11 +1210,11 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_ps_length"></a><a name="column_name_ps_length"></a> COLUMN_NAME_PS_LENGTH
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，不同之处在于此宏还采用精度、小数位数和列长度。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，不同之处在于此宏还采用精度、小数位数和列长度。
 
 #### <a name="syntax"></a>语法
 
@@ -1241,11 +1241,11 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_ps_length_status"></a><a name="column_name_ps_length_status"></a> COLUMN_NAME_PS_LENGTH_STATUS
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，不同之处在于此宏也需要精度、小数位数、列长度和列状态。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，不同之处在于此宏也需要精度、小数位数、列长度和列状态。
 
 #### <a name="syntax"></a>语法
 
@@ -1275,11 +1275,11 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_ps_status"></a><a name="column_name_ps_status"></a> COLUMN_NAME_PS_STATUS
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，不同之处在于此宏也需要精度、小数位数和列状态。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，不同之处在于此宏也需要精度、小数位数和列状态。
 
 #### <a name="syntax"></a>语法
 
@@ -1306,11 +1306,11 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_status"></a><a name="column_name_status"></a> COLUMN_NAME_STATUS
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，不同之处在于此宏也采用列状态。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，不同之处在于此宏也采用列状态。
 
 #### <a name="syntax"></a>语法
 
@@ -1331,11 +1331,11 @@ COLUMN_NAME_STATUS(pszName, data, status )
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_type"></a><a name="column_name_type"></a> COLUMN_NAME_TYPE
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，只不过此宏还采用数据类型。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，只不过此宏还采用数据类型。
 
 #### <a name="syntax"></a>语法
 
@@ -1356,11 +1356,11 @@ wType <br/>
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_type_ps"></a><a name="column_name_type_ps"></a> COLUMN_NAME_TYPE_PS
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，只不过此宏还采用数据类型、精度和小数位数。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，只不过此宏还采用数据类型、精度和小数位数。
 
 #### <a name="syntax"></a>语法
 
@@ -1387,11 +1387,11 @@ wType <br/>
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_type_size"></a><a name="column_name_type_size"></a> COLUMN_NAME_TYPE_SIZE
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，只不过此宏还采用数据类型和大小。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，只不过此宏还采用数据类型和大小。
 
 #### <a name="syntax"></a>语法
 
@@ -1415,11 +1415,11 @@ wType <br/>
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="column_name_type_status"></a><a name="column_name_type_status"></a> COLUMN_NAME_TYPE_STATUS
 
-表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](../../data/oledb/column-name.md)类似，只不过此宏还采用数据类型和列状态。
+表示行集中与行集中特定列之间的绑定。 与 [COLUMN_NAME](#column_name)类似，只不过此宏还采用数据类型和列状态。
 
 #### <a name="syntax"></a>语法
 
@@ -1443,7 +1443,7 @@ wType <br/>
 
 #### <a name="remarks"></a>注解
 
-有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](../../data/oledb/column-name.md) 。
+有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
 ### <a name="end_column_map"></a><a name="end_column_map"></a> END_COLUMN_MAP
 
@@ -1461,14 +1461,14 @@ END_COLUMN_MAP()
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)。
+请参阅 [BEGIN_COLUMN_MAP](#begin_column_map)。
 
 ### <a name="define_command"></a><a name="define_command"></a> DEFINE_COMMAND
 
 指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 仅接受与指定的应用程序类型匹配 (ANSI 或 Unicode) 的字符串类型。
 
 > [!NOTE]
-> 建议使用 [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) 而不是 DEFINE_COMMAND。
+> 建议使用 [DEFINE_COMMAND_EX](#define_command_ex) 而不是 DEFINE_COMMAND。
 
 #### <a name="syntax"></a>语法
 
@@ -1486,13 +1486,13 @@ DEFINE_COMMAND(x, szCommand)
 
 #### <a name="remarks"></a>注解
 
-如果未在 [CCommand：： Open](../../data/oledb/ccommand-open.md) 方法中指定命令文本，则指定的命令字符串将用作默认值。
+如果未在 [CCommand：： Open](./ccommand-class.md#open) 方法中指定命令文本，则指定的命令字符串将用作默认值。
 
-如果你将应用程序构建为 ANSI 或 Unicode 字符串（如果以 Unicode 形式生成应用程序），此宏将接受 ANSI 字符串。 建议使用 [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) 而不是 DEFINE_COMMAND，因为前者接受 Unicode 字符串，而不考虑 ANSI 或 Unicode 应用程序类型。
+如果你将应用程序构建为 ANSI 或 Unicode 字符串（如果以 Unicode 形式生成应用程序），此宏将接受 ANSI 字符串。 建议使用 [DEFINE_COMMAND_EX](#define_command_ex) 而不是 DEFINE_COMMAND，因为前者接受 Unicode 字符串，而不考虑 ANSI 或 Unicode 应用程序类型。
 
 #### <a name="example"></a>示例
 
-请参阅 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。
+请参阅 [BOOKMARK_ENTRY](#bookmark_entry)。
 
 ### <a name="define_command_ex"></a><a name="define_command_ex"></a> DEFINE_COMMAND_EX
 
@@ -1514,13 +1514,13 @@ DEFINE_COMMAND_EX(x, wszCommand)
 
 #### <a name="remarks"></a>注解
 
-如果未在 [CCommand：： Open](../../data/oledb/ccommand-open.md) 方法中指定命令文本，则指定的命令字符串将用作默认值。
+如果未在 [CCommand：： Open](./ccommand-class.md#open) 方法中指定命令文本，则指定的命令字符串将用作默认值。
 
-此宏接受 Unicode 字符串，而不考虑应用程序类型。 由于此宏支持 Unicode 和 ANSI 应用程序，因此它优于 [DEFINE_COMMAND](../../data/oledb/define-command.md) 。
+此宏接受 Unicode 字符串，而不考虑应用程序类型。 由于此宏支持 Unicode 和 ANSI 应用程序，因此它优于 [DEFINE_COMMAND](#define_command) 。
 
 #### <a name="example"></a>示例
 
-请参阅 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。
+请参阅 [BOOKMARK_ENTRY](#bookmark_entry)。
 
 ### <a name="begin_param_map"></a><a name="begin_param_map"></a> BEGIN_PARAM_MAP
 
@@ -1543,7 +1543,7 @@ BEGIN_PARAM_MAP(x)
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) 宏的示例。
+请参阅 [BEGIN_COLUMN_MAP](#begin_column_map) 宏的示例。
 
 ### <a name="end_param_map"></a><a name="end_param_map"></a> END_PARAM_MAP
 
@@ -1557,7 +1557,7 @@ END_PARAM_MAP()
 
 #### <a name="example"></a>示例
 
-请参阅 [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) 宏的示例。
+请参阅 [BEGIN_PARAM_MAP](#begin_param_map) 宏的示例。
 
 ### <a name="set_param_type"></a><a name="set_param_type"></a> SET_PARAM_TYPE
 
@@ -1571,7 +1571,7 @@ SET_PARAM_TYPE(type)
 
 #### <a name="parameters"></a>参数
 
-*type*<br/>
+type<br/>
 [in] 要为参数设置的类型。
 
 #### <a name="remarks"></a>注解
@@ -1632,7 +1632,7 @@ END_COLUMN_MAP()
 
 **标头:** atldbcli.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板的宏和全局函数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

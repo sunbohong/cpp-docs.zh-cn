@@ -3,28 +3,28 @@ title: 用于升级 c + + 代码的 Visual Studio IDE 工具
 description: C + + 代码编辑器和 Visual Studio 中的代码分析工具可帮助你实现 c + + 代码库的现代化。
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 0d43da784e1e2f7789ac17ec01163ce29944e93d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d6368445d16232ff968b7116b0f0313e97aa144c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205725"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503763"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>用于升级 c + + 代码的 Visual Studio IDE 工具
 
 Visual Studio 可帮助你通过编译器选项、代码分析警告和编辑器功能（如快速修补程序、快速信息和增强的滚动条）升级旧版 c + + 代码。 术语 "旧代码" 指以下任意类别：
 
-- Microsoft c + + 编译器（MSVC）以前允许但不符合 c + + 标准的代码。
+- Microsoft c + + 编译器以前允许的代码 (MSVC) ，但不符合 c + + 标准。
 
-   若要升级旧的不符合 MSVC 的代码，请打开[/permissive-](../build/reference/permissive-standards-conformance.md)编译器选项。 在代码编辑器中，不符合的用法的所有实例都带有红色波形曲线的下划线。 **错误列表**窗口中的错误消息包括如何修复错误的建议。 单击错误代码，以在文档中切换到其帮助页。 如果一次修复所有错误都不切实际，则可以通过打开 "**预许可**" 选项、修复一些错误，然后再次关闭该选项，来升级不符合的代码。 此代码将使用新的改进进行编译，你可以稍后返回并修复剩余问题。 请参阅[/permissive-](../build/reference/permissive-standards-conformance.md)页面，了解不相容 MSVC 代码的示例。
+   若要升级旧的不符合 MSVC 的代码，请打开 [/permissive-](../build/reference/permissive-standards-conformance.md) 编译器选项。 在代码编辑器中，不符合的用法的所有实例都带有红色波形曲线的下划线。 **错误列表**窗口中的错误消息包括如何修复错误的建议。 单击错误代码，以在文档中切换到其帮助页。 如果一次修复所有错误都不切实际，则可以通过打开 " **预许可** " 选项、修复一些错误，然后再次关闭该选项，来升级不符合的代码。 此代码将使用新的改进进行编译，你可以稍后返回并修复剩余问题。 请参阅 [/permissive-](../build/reference/permissive-standards-conformance.md) 页面，了解不相容 MSVC 代码的示例。
 
 - 早期版本的 c + + 标准中所允许的代码，但在更高版本中已弃用或删除。
 
-   若要升级到较新的语言标准，请将[c + + 语言标准](../build/reference/std-specify-language-standard-version.md)选项设置为所需的标准，并修复引发的任何编译错误。 通常，我们建议将 language standard 设置为[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)。 升级到较新的标准版本时引发的错误与使用 "**许可-** " 选项时引发的错误无关。
+   若要升级到较新的语言标准，请将 [c + + 语言标准](../build/reference/std-specify-language-standard-version.md) 选项设置为所需的标准，并修复引发的任何编译错误。 通常，我们建议将 language standard 设置为 [/std： c + + 17](../build/reference/std-specify-language-standard-version.md)。 升级到较新的标准版本时引发的错误与使用 " **许可-** " 选项时引发的错误无关。
 
 - 符合标准的所有版本的代码，但在现代 c + + 中不再被视为最佳做法。
 
-   若要确定建议更改的代码，请运行[代码分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
+   若要确定建议更改的代码，请运行 [代码分析](../code-quality/code-analysis-for-c-cpp-overview.md)。
 
 ## <a name="open-and-convert-a-legacy-project"></a>打开和转换旧项目
 
@@ -32,11 +32,11 @@ Visual Studio 可帮助你通过编译器选项、代码分析警告和编辑器
 
 ![升级项目](media/upgrade-dialog-v142.png "升级项目")
 
-有关详细信息，请参阅[从早期版本的 Visual Studio 升级 c + + 项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)。
+有关详细信息，请参阅 [从早期版本的 Visual Studio 升级 c + + 项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)。
 
 ## <a name="search-the-code-base"></a>搜索基本代码
 
-升级基本代码通常涉及搜索多个文件。 若要在基本代码中搜索任何内容，请按**Ctrl + T**打开 "**转到所有**搜索" 框。
+升级基本代码通常涉及搜索多个文件。 若要在基本代码中搜索任何内容，请按 **Ctrl + T** 打开 " **转到所有** 搜索" 框。
 
 ![全部中转](media/go-to-all.png "全部中转")
 
@@ -44,7 +44,7 @@ Visual Studio 可帮助你通过编译器选项、代码分析警告和编辑器
 
 ## <a name="error-list"></a>错误列表
 
-设置所需的 c + + 语言标准和任何其他编译器选项（**Project**  >  **Properties**  >  **General**）后，按**Ctrl + Shift + B**来编译项目。 您可以在代码中的不同位置以红色波形曲线的形式查看一些错误和警告。 错误还会出现在**错误列表**中。 有关特定错误的详细信息，请单击错误代码以切换到文档中的帮助页。 以 "C" 开头的错误代码是编译器错误。 以 "MSB" 开头的代码是 MSBuild 错误，用于指示项目配置的问题。
+设置所需的 c + + 语言标准以及任何其他编译器选项 (**项目**  >  **属性**  >  "**常规**") 中，按**Ctrl + Shift + B**来编译项目。 您可以在代码中的不同位置以红色波形曲线的形式查看一些错误和警告。 错误还会出现在 **错误列表**中。 有关特定错误的详细信息，请单击错误代码以切换到文档中的帮助页。 以 "C" 开头的错误代码是编译器错误。 以 "MSB" 开头的代码是 MSBuild 错误，用于指示项目配置的问题。
 
 ![错误列表中的编译器和 MSBuild 错误](media/compiler-error-list.png "错误列表中的编译器和 MSBuild 错误")
 
@@ -62,19 +62,19 @@ Visual Studio 可帮助你通过编译器选项、代码分析警告和编辑器
 
 ## <a name="use-code-analysis-to-modernize-your-code"></a>使用代码分析实现代码的现代化
 
-升级时，建议你在项目上运行代码分析，使代码至少符合 Microsoft 本机建议规则。 这些规则是由 Microsoft 定义的规则与[C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)子集的组合。 与此一致，你将大大减少或消除 bug 的常见来源，同时使你的代码更易于阅读，并使其更易于维护。 默认情况下，将启用使用 Microsoft 本机建议规则的代码分析。 您可以在 "**项目**  >  **属性**"  >  **代码分析**下启用其他规则。 违反其中一个规则的代码会被标记为警告，并在代码编辑器中以绿色波浪线为下划线。 将鼠标悬停在波形曲线上，可查看描述该问题的**QuickInfo**工具提示。
+升级时，建议你在项目上运行代码分析，使代码至少符合 Microsoft 本机建议规则。 这些规则是由 Microsoft 定义的规则与 [C++ Core Guidelines](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)子集的组合。 与此一致，你将大大减少或消除 bug 的常见来源，同时使你的代码更易于阅读，并使其更易于维护。 默认情况下，将启用使用 Microsoft 本机建议规则的代码分析。 您可以在 "**项目**  >  **属性**"  >  **代码分析**下启用其他规则。 违反其中一个规则的代码会被标记为警告，并在代码编辑器中以绿色波浪线为下划线。 将鼠标悬停在波形曲线上，可查看描述该问题的 **QuickInfo** 工具提示。
 
 ![代码分析工具提示](media/code-analysis-tooltip.png "代码分析警告")
 
-单击 "**代码**" 列中的筛选器图标，选择要显示的警告。
+单击 " **代码** " 列中的筛选器图标，选择要显示的警告。
 
 ![错误列表中的代码分析筛选器](media/code-analysis-filter.png "错误列表中的代码分析筛选器")
 
-类似于编译器错误，代码分析错误和警告也出现在**错误列表**中。
+类似于编译器错误，代码分析错误和警告也出现在 **错误列表** 中。
 
 ![错误列表中的代码分析警告](media/code-analysis-error-list.png "错误列表中的代码分析警告")
 
-可以更改处于活动状态的规则，并创建自定义规则集。 有关使用代码分析的详细信息，请参阅[c/c + + 代码分析概述](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
+可以更改处于活动状态的规则，并创建自定义规则集。 有关使用代码分析的详细信息，请参阅 [c/c + + 代码分析概述](../code-quality/code-analysis-for-c-cpp-overview.md)。
 
 ## <a name="use-quick-actions-to-modernize-code"></a>使用快速操作使代码实现现代化
 
@@ -88,7 +88,7 @@ Visual Studio 可帮助你通过编译器选项、代码分析警告和编辑器
 
 由于在新式 c + + 中不鼓励使用宏，因此 Visual Studio 可以轻松地将宏转换为 **`constexpr`** 函数：
 
-1. 右键单击 `AVERAGE` 并选择 "**转向定义**"。
+1. 右键单击 `AVERAGE` 并选择 " **转向定义**"。
 2. 单击螺丝刀图标，然后选择 "**将宏转换为 constexpr** "
 
    ![用于 constexpr 的快速操作宏](media/quick-action-macro-to-constexpr.png "用于 constexpr 的快速操作宏")
@@ -109,7 +109,7 @@ Visual Studio 可帮助你通过编译器选项、代码分析警告和编辑器
 
 ### <a name="convert-to-raw-string-literal"></a>转换为原始字符串文本
 
-与带有嵌入转义符的字符串相比，原始字符串文本比较容易出错且更方便类型。 右键单击字符串，然后选择 "**快速操作**"，将其转换为原始字符串文本。
+与带有嵌入转义符的字符串相比，原始字符串文本比较容易出错且更方便类型。 右键单击字符串，然后选择 " **快速操作** "，将其转换为原始字符串文本。
 
 ![原始字符串文本](media/raw-string-literal.png "原始字符串文本")
 

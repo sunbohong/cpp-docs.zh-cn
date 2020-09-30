@@ -10,26 +10,26 @@ f1_keywords:
 - _Nullterm_length_
 - _Inexpressible_
 ms.assetid: adf29f8c-89fd-4a5e-9804-35ac83e1c457
-ms.openlocfilehash: 0aed625cfa17c75bbfb36506436e9e2c52a7a13b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1a7bae43a6fcd875f2e713695969f0d88b0dfe5
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216669"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504166"
 ---
 # <a name="intrinsic-functions"></a>内部函数
 
-SAL 中的表达式可以是 C/c + + 表达式，前提是它是没有副作用的表达式（例如 + +、--, 和函数调用都在此上下文中有副作用）。  但是，SAL 提供一些类似函数的对象和一些可用于 SAL 表达式的保留符号。 这些*函数称为内部函数*。
+SAL 中的表达式可以是 C/c + + 表达式，前提是它是没有副作用的表达式（例如 + +、--, 和函数调用都在此上下文中有副作用）。  但是，SAL 提供一些类似函数的对象和一些可用于 SAL 表达式的保留符号。 这些 *函数称为内部函数*。
 
 ## <a name="general-purpose"></a>常规用途
 
 以下内部函数注释提供了用于 SAL 的常规实用工具。
 
-|Annotation|描述|
+|Annotation|说明|
 |----------------|-----------------|
 |`_Curr_`|当前正在进行批注的对象的同义词。  当 `_At_` 批注正在使用时，与的 `_Curr_` 第一个参数相同 `_At_` 。  否则，它是批注在词法上关联的参数或整个函数/返回值。|
 |`_Inexpressible_(expr)`|表示缓冲区的大小太复杂，无法通过使用批注表达式来表示，例如，通过扫描输入数据集并对选定成员进行计数来计算。|
-|`_Nullterm_length_(param)`|`param`缓冲区中的元素数，最多不包括 null 终止符。 它可以应用于非聚合非 void 类型的任何缓冲区。|
+|`_Nullterm_length_(param)`|`param` 缓冲区中的元素数，最多不包括 null 终止符。 它可以应用于非聚合非 void 类型的任何缓冲区。|
 |`_Old_(expr)`|当在前置条件中进行计算时，将 `_Old_` 返回输入值 `expr` 。  当在后置条件中进行计算时，它将返回值， `expr` 因为它会在前置条件中进行计算。|
 |`_Param_(n)`|`n`函数的第 n 个参数，从1到 `n` ，并 `n` 是一个文本整数常量。 如果参数名为，则此批注与按名称访问参数相同。 **注意：** `n`可以引用由省略号定义的位置参数，也可以在未使用名称的函数原型中使用。  |
 |`return`|可以在 SAL 表达式中使用 C/c + + 保留关键字 **`return`** 来指示函数的返回值。  该值仅在 post 状态中可用;在 pre 状态中使用它是一个语法错误。|
@@ -38,13 +38,13 @@ SAL 中的表达式可以是 C/c + + 表达式，前提是它是没有副作用�
 
 以下内部函数批注允许对字符串进行操作。 所有这四个函数都具有相同的用途：返回在 null 终止符之前找到的类型的元素数。 不同之处在于引用的元素中的数据类型。 请注意，若要指定不由字符组成的以 null 结尾的缓冲区的长度，请使用 `_Nullterm_length_(param)` 上一节中的批注。
 
-|Annotation|描述|
+|Annotation|说明|
 |----------------|-----------------|
-|`_String_length_(param)`|`param`字符串中的元素数，最大为，但不包括 null 终止符。 此批注是为字符字符串类型保留的。|
-|`strlen(param)`|`param`字符串中的元素数，最大为，但不包括 null 终止符。 此批注保留用于字符数组，类似于 C 运行时函数[strlen （）](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
-|`wcslen(param)`|`param`字符串中的元素数，最大为（但不包括）空终止符。 此批注保留用于宽字符数组，类似于 C 运行时函数[wcslen （）](/cpp/c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l)。|
+|`_String_length_(param)`|`param` 字符串中的元素数，最大为，但不包括 null 终止符。 此批注是为字符字符串类型保留的。|
+|`strlen(param)`|`param` 字符串中的元素数，最大为，但不包括 null 终止符。 此批注保留用于字符数组，类似于 C 运行时函数 [strlen ( # B1 ](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)。|
+|`wcslen(param)`|`param` 字符串中的元素数，最多 (，但不包括 null 终止符) 。 此批注保留用于宽字符数组，类似于 C 运行时函数 [wcslen ( # B1 ](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 SAL 注释减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [了解 SAL](../code-quality/understanding-sal.md)

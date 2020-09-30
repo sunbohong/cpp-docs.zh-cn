@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: f09fd5f112e3538fa2d7fb04c755031d413de9b8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8927ef0e34f2c2b12722d453e0dde6f7357eb33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225145"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91503137"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>指向对象的句柄运算符 (^)（C++/CLI 和 C++/CX）
 
-*句柄声明符*（ `^` "hat"）修改类型[说明符](../cpp/overview-of-declarators.md)，以表示在系统确定对象不再可访问时应自动删除已声明的对象。
+*句柄声明符* (`^` （发音为 "hat" ) ）修改类型[说明符](../cpp/declarations-and-definitions-cpp.md)，以表示在系统确定对象不再可访问时应自动删除已声明的对象。
 
 ## <a name="accessing-the-declared-object"></a>访问声明的对象
 
@@ -38,7 +38,7 @@ ms.locfileid: "87225145"
 
 因为本机 C++ 指针 (`*`) 和引用 (`&`) 都是托管引用，所以垃圾回收器不能更新它们指向的地址。 若要解决此问题，请使用句柄声明符指定一个变量，垃圾回收器能够知道这个变量的状态并会自动进行更新。
 
-有关详细信息，请参阅[如何：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
+有关详细信息，请参阅 [如何：在本机类型中声明句柄](../dotnet/how-to-declare-handles-in-native-types.md)。
 
 ### <a name="examples"></a>示例
 
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-此示例显示本机引用（ `&` ）不能绑定到 **`int`** 托管类型的成员，因为它 **`int`** 可能存储在垃圾回收堆中，而本机引用不跟踪托管堆中的对象移动。 解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。
+此示例演示了本机引用 (`&`) 不能绑定到 **`int`** 托管类型的成员，因为它 **`int`** 可能存储在垃圾回收堆中，而本机引用不跟踪托管堆中的对象移动。 解决方法是使用局部变量，或将 `&` 更改为 `%`，使它成为跟踪引用。
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -221,7 +221,7 @@ int main() {
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [跟踪引用运算符](tracking-reference-operator-cpp-component-extensions.md)

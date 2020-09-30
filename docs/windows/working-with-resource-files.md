@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165876"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502906"
 ---
 # <a name="working-with-resource-files"></a>使用资源文件
 
 > [!WARNING]
 > 本节适用于采用 C++ 编写的 Windows 桌面应用程序。
 >
-> C++有关在中编写的通用 Windows 平台应用中的资源的信息，请参阅[定义应用资源](/windows/uwp/app-resources/)或将C++资源添加到/cli （托管）项目，请参阅 .NET Framework 开发人员指南中的[桌面应用](/dotnet/framework/resources/index)中的资源。
+> 有关以 c + + 编写的通用 Windows 平台应用中的资源的信息，请参阅 [定义应用资源](/windows/uwp/app-resources/)，或在将资源添加到 c + +/cli (托管) 项目中，参阅《 .NET Framework 开发人员指南》中的 [桌面应用](/dotnet/framework/resources/index) 中的资源。
 
 资源可以由各种各样的元素组成，如下所示：
 
@@ -32,16 +32,16 @@ ms.locfileid: "80165876"
 > [!NOTE]
 > **资源编辑器**和**资源视图**在 Express 版本中不可用。
 
-若要手动将资源文件添加到托管项目，请参阅[创建桌面应用的资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 本文包括如何访问资源、显示静态资源和将资源字符串分配给属性。
+若要手动将资源文件添加到托管项目，请参阅 [创建桌面应用的资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 本文包括如何访问资源、显示静态资源和将资源字符串分配给属性。
 
-若要全球化和本地化托管应用中的资源，请参阅[.NET Framework 应用程序进行全球化和本地化](/dotnet/standard/globalization-localization/index)。
+若要全球化和本地化托管应用中的资源，请参阅 [.NET Framework 应用程序进行全球化和本地化](/dotnet/standard/globalization-localization/index)。
 
 ## <a name="in-this-section"></a>本节内容
 
 [资源文件](../windows/resource-files-visual-studio.md)<br/>
 描述资源文件以及在 Windows 桌面应用程序中使用它们的方式。 还提供指向描述如何使用资源文件的文章的链接。
 
-[资源标识符（符号）](../windows/symbols-resource-identifiers.md)<br/>
+[ (符号的资源标识符) ](../windows/symbols-resource-identifiers.md)<br/>
 描述符号并提供有关在项目中使用 **“资源符号”** 对话框管理符号的信息。
 
 [资源编辑器](../windows/resource-editors.md)<br/>
@@ -55,7 +55,7 @@ ms.locfileid: "80165876"
 [与我们交流](/visualstudio/ide/talk-to-us)<br/>
 提供指向特定信息的链接，这些信息说明如何使用文档集、如何与产品支持部门联系以及如何使用辅助功能。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Windows 桌面应用程序](../windows/windows-desktop-applications-cpp.md)<br/>
+[Windows 桌面应用程序](./desktop-applications-visual-cpp.md)<br/>
 [菜单和其他资源](/windows/win32/menurc/resources)

@@ -4,18 +4,18 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: cc96b5ed931713ca64a0582ca1cc18a8526ea8af
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616685"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91504274"
 ---
 # <a name="active-template-library-atl-concepts"></a>活动模板库 (ATL) 概念
 
 活动模板库 (ATL) 是一组基于模板的 C++ 类，可用于创建小型、便捷的组件对象模型 (COM) 对象。 它对关键 COM 功能提供特殊支持，包括常用实现、双重接口、标准 COM 枚举器接口、连接点、分离式接口和 ActiveX 控件。
 
-如果进行大量 ATL 编程，你将希望了解关于 COM 和 .NET 属性的详细信息，这些属性可以简化 COM 编程。 有关详细信息，请参阅[属性化编程](../windows/attributed-programming-concepts.md)。 （请勿将 COM 和 .NET 属性与 C++ 标准版中的 \[\[attribute]] 功能混淆。）
+如果进行大量 ATL 编程，你将希望了解关于 COM 和 .NET 属性的详细信息，这些属性可以简化 COM 编程。 有关详细信息，请参阅[属性化编程](../windows/attributes/cpp-attributes-com-net.md)。 （请勿将 COM 和 .NET 属性与 C++ 标准版中的 \[\[attribute]] 功能混淆。）
 
 ## <a name="in-this-section"></a>本节内容
 
@@ -28,7 +28,7 @@ ms.locfileid: "84616685"
 [双重接口和 ATL](dual-interfaces-and-atl.md)<br/>
 从 ATL 角度介绍双重接口。
 
-[ATL 集合和枚举数](atl-collections-and-enumerators.md)<br/>
+[ATL 集合和枚举器](atl-collections-and-enumerators.md)<br/>
 介绍 ATL 中集合和枚举器的实现与创建。
 
 [复合控件基础知识](atl-composite-control-fundamentals.md)<br/>
@@ -55,7 +55,7 @@ ms.locfileid: "84616685"
 [指定项目的线程模型](specifying-the-threading-model-for-a-project-atl.md)<br/>
 介绍可用于控制与项目中的线程相关的运行时性能的宏。
 
-[ATL Module 类](atl-module-classes.md)<br/>
+[ATL 模块类](atl-module-classes.md)<br/>
 讨论 ATL 7.0 的全新模块类。 模块类实现 ATL 要求的基本功能。
 
 [ATL 服务](atl-services.md)<br/>
@@ -70,7 +70,7 @@ ms.locfileid: "84616685"
 [ATL 注册表组件（注册器）](atl-registry-component-registrar.md)<br/>
 讨论 ATL 脚本语法和可替换参数。 它还介绍了如何设置指向注册机构的静态链接。
 
-[使用 ATL 和 C 运行时代码进行编程](programming-with-atl-and-c-run-time-code.md)<br/>
+[用 ATL 和 C 运行时代码进行编程](programming-with-atl-and-c-run-time-code.md)<br/>
 讨论静态或动态链接到 C 运行时库 (CRT) 的优势。
 
 [使用 CComBSTR 进行编程](programming-with-ccombstr-atl.md)<br/>
@@ -96,7 +96,7 @@ ms.locfileid: "84616685"
 [ATL 控件向导](reference/atl-control-wizard.md)<br/>
 讨论如何添加类。
 
-[属性化编程](../windows/attributed-programming-concepts.md)<br/>
+[属性化编程](../windows/attributes/cpp-attributes-com-net.md)<br/>
 提供关于使用属性简化 COM 编程的概述，以及指向更详细主题的链接列表。
 
 [ATL 类概述](atl-class-overview.md)<br/>

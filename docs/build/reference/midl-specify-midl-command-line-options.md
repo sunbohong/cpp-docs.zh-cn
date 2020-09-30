@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MIDL linker option
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-ms.openlocfilehash: ca172428943d2446490eeb10741966f5e8c9ea85
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3f1b6526f51e5aaa48008792361d3e63249d9f16
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492724"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502851"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL（指定 MIDL 命令行选项）
 
@@ -24,26 +24,26 @@ ms.locfileid: "69492724"
 
 ## <a name="syntax"></a>语法
 
-> **/MIDL:\@** <em>文件</em>
+> **/MIDL： \@ **<em>文件</em>
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
-文件<br/>
-包含[MIDL 命令行选项](/windows/win32/Midl/general-midl-command-line-syntax)的文件的名称。
+*file*<br/>
+包含 [MIDL 命令行选项](/windows/win32/Midl/general-midl-command-line-syntax)的文件的名称。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-要将 IDL 文件转换为 TLB 文件的所有选项都必须在*文件*中提供;不能在链接器的命令行上指定 MIDL 命令行选项。 如果未指定/MIDL, 则将仅通过 IDL 文件名和其他选项调用 MIDL 编译器。
+要将 IDL 文件转换为 TLB 文件的所有选项都必须在 *文件*中提供;不能在链接器的命令行上指定 MIDL 命令行选项。 如果未指定/MIDL，则将仅通过 IDL 文件名和其他选项调用 MIDL 编译器。
 
 文件应每行包含一个 MIDL 命令行选项。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **链接器** > **嵌入的 IDL**属性页。
+1. 选择**配置属性**  >  **链接器**  >  **嵌入的 IDL**属性页。
 
-1. 修改**MIDL 命令**属性。
+1. 修改 **MIDL 命令** 属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
@@ -53,7 +53,7 @@ ms.locfileid: "69492724"
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)<br/>
-[/IDLOUT（命名 MIDL 输出文件）](idlout-name-midl-output-files.md)<br/>
-[/IGNOREIDL（不将属性处理到 MIDL 中）](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
-[/TLBOUT（命名 .TLB 文件）](tlbout-name-dot-tlb-file.md)<br/>
-[生成特性化程序](../../windows/building-an-attributed-program.md)
+[/IDLOUT (命名 MIDL 输出文件) ](idlout-name-midl-output-files.md)<br/>
+[/IGNOREIDL (不将属性处理到 MIDL) ](ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/TLBOUT (名称。TLB 文件) ](tlbout-name-dot-tlb-file.md)<br/>
+[生成特性化程序](../../windows/attributes/cpp-attributes-com-net.md)
