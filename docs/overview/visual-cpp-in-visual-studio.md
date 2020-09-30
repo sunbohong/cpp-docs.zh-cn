@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
-ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+ms.openlocfilehash: cde4bf73548df2dd7f65e20aa39fa7275dd7e11b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84108427"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500163"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -82,7 +82,7 @@ MSVC C++ 编译器中按功能列出的符合性状态列表。
 [调试本机代码](/visualstudio/debugger/debugging-native-code)<br/>
 在 C++ 项目中使用 Visual Studio 调试器。
 
-[C/C++ 代码分析概述](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++ 代码分析概述](../code-quality/code-analysis-for-c-cpp-overview.md)<br/>
 使用 SAL 注释或 C++ Core Guidelines 检查器执行静态分析。
 
 [在 Visual Studio 中编写 C/C++ 单元测试](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -152,7 +152,7 @@ C++ 标准库。
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 在 GPU 上执行的大量并行算法。
 
-[Windows 运行时模板库 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)<br/>
+[Windows 运行时模板库 (WRL)](../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md)<br/>
 通用 Windows 平台 (UWP) 应用和组件。
 
 [使用 C++/CLI 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>

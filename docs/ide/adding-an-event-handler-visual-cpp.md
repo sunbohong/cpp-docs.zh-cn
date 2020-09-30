@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
-ms.translationtype: MT
+ms.openlocfilehash: b1928de1aacb9c66c9f784f4eee41ce2c444b820
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447506"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91499643"
 ---
 # <a name="add-an-event-handler"></a>添加事件处理程序
 
@@ -28,25 +28,25 @@ ms.locfileid: "79447506"
 
 1. 右键双击想要为其处理通知事件的控件。
 
-1. 在快捷菜单上，选择“添加事件处理程序”，显示事件处理程序向导。
+1. 在快捷菜单上，选择“添加事件处理程序”，显示事件处理程序向导****。
 
-1. 选择“消息类型”框中的事件，以添加到在“类列表”框中选中的类。
+1. 选择“消息类型”框中的事件，以添加到在“类列表”框中选中的类********。
 
-1. 接受“函数处理程序名称”框中的默认名称或提供你所选的名称。
+1. 接受“函数处理程序名称”框中的默认名称或提供你所选的名称****。
 
-1. 选择“添加并编辑”，将事件处理程序添加到项目，并在新函数处打开文本编辑器，添加适当的事件处理程序代码。
+1. 选择“添加并编辑”，将事件处理程序添加到项目，并在新函数处打开文本编辑器，添加适当的事件处理程序代码****。
 
-   如果所选的消息类型已有所选类的事件处理程序，则“添加并编辑”不可用，而“编辑代码”可用。 选择“编辑代码”，在现有函数处打开文本编辑器。
+   如果所选的消息类型已有所选类的事件处理程序，则“添加并编辑”不可用，而“编辑代码”可用********。 选择“编辑代码”，在现有函数处打开文本编辑器****。
 
-或者，可以从[属性窗口](/visualstudio/ide/reference/properties-window)添加事件处理程序。 有关详细信息，请参阅[为对话框控件添加事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)。
+或者，可以从[属性窗口](/visualstudio/ide/reference/properties-window)添加事件处理程序。 有关详细信息，请参阅[为对话框控件添加事件处理程序](../windows/adding-editing-or-deleting-controls.md)。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在此部分中
 
 - [事件处理程序向导](#event-handler-wizard)
 
 ## <a name="event-handler-wizard"></a>事件处理程序向导
 
-此向导将对话框控件的事件处理程序添加到所选的类。 如果从[属性窗口](/visualstudio/ide/reference/properties-window)添加事件处理程序，可以仅将其添加到实现对话框的类。 有关详细信息，请参阅[为对话框控件添加事件处理程序](../windows/adding-event-handlers-for-dialog-box-controls.md)。
+此向导将对话框控件的事件处理程序添加到所选的类。 如果从[属性窗口](/visualstudio/ide/reference/properties-window)添加事件处理程序，可以仅将其添加到实现对话框的类。 有关详细信息，请参阅[为对话框控件添加事件处理程序](../windows/adding-editing-or-deleting-controls.md)。
 
 - **命令名**
 
@@ -66,7 +66,7 @@ ms.locfileid: "79447506"
 
 - **处理程序说明**
 
-  为在“消息类型”对话框中选中的项提供说明。 此框不可用。
+  为在“消息类型”对话框中选中的项提供说明****。 此框不可用。
 
 - **添加和编辑**
 

@@ -4,18 +4,18 @@ description: Visual Studio 中的 Microsoft C/C++ 编译器和工具的新增功
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: a21bb8f8c629b3d9c8c765958d6a52891c90898a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5e82e39b9480b83e2d1c8143338654467a08b7d0
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684740"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500264"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的许多 bug 和问题。 其中许多问题是客户通过“发送反馈”下的[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true)和[提供建议](https://developercommunity.visualstudio.com/spaces/62/index.html)选项提交的。 感谢你报告 bug！ 有关所有 Visual Studio 中新增功能的详细信息，请访问 [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)。 有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的许多 bug 和问题。 其中许多问题是客户通过“发送反馈”下的[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true)和[提供建议](https://developercommunity.visualstudio.com/spaces/62/index.html)选项提交的。 感谢你报告 bug！ 有关所有 Visual Studio 中新增功能的详细信息，请访问 [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)。 有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](?preserve-view=true&view=vs-2017)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
 
 ## <a name="c-compiler"></a>C++ 编译器
 
@@ -240,7 +240,7 @@ IncrediBuild 现在添加为“使用 C++ 的桌面开发”工作负荷中的�
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的 250 多个缺陷和报告的问题。 许多问题是客户通过“发送反馈”下的[“报告问题和提供建议”](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true)选项提交的。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true)。 有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的 250 多个缺陷和报告的问题。 许多问题是客户通过“发送反馈”下的[“报告问题和提供建议”](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true)选项提交的。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true)。 有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 中 C++ 的新增功能](?preserve-view=true&view=vs-2019)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
 
 ## <a name="visual-studio-2017-c-compiler"></a>Visual Studio 2017 C++ 编译器
 
@@ -254,7 +254,7 @@ Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们�
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
-Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有关详细信息，请参阅[公告：MSVC 符合 C++ 标准](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/)和 [Microsoft C++ 语言合规性](../visual-cpp-language-conformance.md)。
+Visual Studio 15.7 版中的 MSVC 编译器工具集现符合 C++ 标准。 有关详细信息，请参阅[公告：MSVC 符合 C++ 标准](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/)和 [Microsoft C++ 语言合规性](./visual-cpp-language-conformance.md)。
 
 ##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 版本 15.8
 
@@ -363,7 +363,7 @@ Visual Studio 2017 RTM 中有更多的标准库改进。 有关完整列表，�
 - 添加了 \<optional\>、\<variant\>、`shared_ptr::weak_type` 和 \<cstdalign\>。
 - 在 `min(initializer_list)`、`max(initializer_list)`、`minmax(initializer_list)`、`min_element()`、`max_element()` 和 `minmax_element()` 中启用了 C++14 `constexpr`。
 
-有关详细信息，请参阅 [Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)。
+有关详细信息，请参阅 [Microsoft C++ 语言一致性表](./visual-cpp-language-conformance.md)。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 版本 15.3
 
@@ -425,7 +425,7 @@ Visual Studio 2017 RTM 中有更多的标准库改进。 有关完整列表，�
 - `constexpr char_traits`
 - 标准库的推导指南
 
-有关详细信息，请参阅 [Microsoft C++ 语言一致性表](../visual-cpp-language-conformance.md)。
+有关详细信息，请参阅 [Microsoft C++ 语言一致性表](./visual-cpp-language-conformance.md)。
 
 ### <a name="performance-and-throughput-fixes"></a>性能和吞吐量修复
 
@@ -647,7 +647,7 @@ Visual Studio 2017 随附的 Clang/C2 工具集现在支持 `/bigobj` 开关，�
 
 ## <a name="c-code-analysis"></a>C++ 代码分析
 
-用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 在项目属性页的“代码分析扩展”页中，启用检查器。 然后，在运行代码分析时，包括这些扩展。 有关详细信息，请参阅[使用 C++ 核心准则检查器](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
+用于强制执行 [C++ 核心准则](https://github.com/isocpp/CppCoreGuidelines) 的 C++ 核心检查器现已通过 Visual Studio 分发。 在项目属性页的“代码分析扩展”页中，启用检查器。 然后，在运行代码分析时，包括这些扩展。 有关详细信息，请参阅[使用 C++ 核心准则检查器](../code-quality/using-the-cpp-core-guidelines-checkers.md)。
 
 ![显示已选中“配置属性”>“代码分析”>“常规”以及“运行此规则集”部分中列出的核心检查数的“属性页”对话框的屏幕截图。](media/CppCoreCheck.png "CppCoreCheck 属性页")
 
@@ -668,7 +668,7 @@ Visual Studio 2017 随附的 Clang/C2 工具集现在支持 `/bigobj` 开关，�
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
 - 添加了对 [`/analyze:ruleset`](../build/reference/analyze-code-analysis.md) 的支持，它允许指定要运行的代码分析规则。
-- 添加了对其他 C++ Core Guidelines 规则的支持。  有关详细信息，请参阅[使用 C++ 核心准则检查器](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)。
+- 添加了对其他 C++ Core Guidelines 规则的支持。  有关详细信息，请参阅[使用 C++ 核心准则检查器](../code-quality/using-the-cpp-core-guidelines-checkers.md)。
 
 ## <a name="unit-testing-in-visual-studio-2017"></a>Visual Studio 2017 中的单元测试
 
@@ -737,12 +737,12 @@ Visual Studio 图形诊断工具：可以使用它们来记录和分析 Direct3D
 
 ::: moniker range="=vs-2015"
 
-有关 Visual Studio 2015 Update 3 及之前的版本中新增功能的完整列表，请参阅 [Visual C++ 2003 至 2015 中的新增功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+有关 Visual Studio 2015 Update 3 及之前的版本中新增功能的完整列表，请参阅 [Visual C++ 2003 至 2015 中的新增功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
 
 若要详细了解 Visual Studio 2015 中的所有新变化，请参阅“发行说明”。 它们链接自 [Visual Studio 2015 发行说明历史记录](/visualstudio/releasenotes/vs2015-version-history)。
 
-有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 2019 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019&preserve-view=true)。
+有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 2019 中 C++ 的新增功能](?preserve-view=true&view=vs-2019)。
 
-有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017&preserve-view=true)。
+有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](?preserve-view=true&view=vs-2017)。
 
 ::: moniker-end
