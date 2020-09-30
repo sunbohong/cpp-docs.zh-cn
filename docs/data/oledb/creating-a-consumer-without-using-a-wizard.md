@@ -4,20 +4,20 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: fff4146681e31f0f1fea9fbaa559de7c722740d2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211453"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500662"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
 
-下面的示例假定要向现有 ATL 项目添加 OLE DB 使用者支持。 若要向 MFC 应用程序添加 OLE DB 使用者支持，应运行 MFC 应用程序向导，这会创建所有必要的支持，并调用执行应用程序所需的 MFC 例程。
+下面的示例假定要向现有 ATL 项目添加 OLE DB 使用者支持。 若要向 MFC 应用程序添加 OLE DB 使用者支持，应运行 MFC 应用程序向导****，这会创建所有必要的支持，并调用执行应用程序所需的 MFC 例程。
 
-若要在不使用 ATL OLE DB 使用者向导的情况下添加 OLE DB 使用者支持，请执行以下操作：
+若要在不使用 ATL OLE DB 使用者向导**** 的情况下添加 OLE DB 使用者支持，请执行以下操作：
 
-- 在*pch*文件中追加以下 `#include` 语句：
+- 在 *pch* 文件中追加以下 `#include` 语句：
 
     ```cpp
     #include <atlbase.h>
@@ -46,7 +46,7 @@ ms.locfileid: "80211453"
     HRESULT hr = CoInitialize(NULL);
     ```
 
-- 调用 [CDataSource::Open](../../data/oledb/cdatasource-open.md) 或其变体之一。
+- 调用 [CDataSource::Open](./cdatasource-class.md#open) 或其变体之一。
 
 - 打开与数据源的连接，打开会话，然后打开并初始化行集（如果是命令的话，还要执行它）：
 
@@ -56,7 +56,7 @@ ms.locfileid: "80211453"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- （可选）使用 `CDBPropSet::AddProperty` 设置行集属性，并将它们作为参数传递给 `rs.Open`。 有关如何完成此操作的示例，请参阅`GetRowsetProperties`使用者向导生成的方法[中的“](../../data/oledb/consumer-wizard-generated-methods.md)”。
+- （可选）使用 `CDBPropSet::AddProperty` 设置行集属性，并将它们作为参数传递给 `rs.Open`。 有关如何完成此操作的示例，请参阅[使用者向导生成的方法](../../data/oledb/consumer-wizard-generated-methods.md)中的“`GetRowsetProperties`”。
 
 - 现在可以使用行集来检索/控制数据了。
 
@@ -68,7 +68,7 @@ ms.locfileid: "80211453"
     ds.Close();
     ```
 
-   如果使用的是命令，建议在 `ReleaseCommand` 后面调用 `Close`。 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的代码示例展示了如何调用 `Close` 和 `ReleaseCommand`。
+   如果使用的是命令，建议在 `Close` 后面调用 `ReleaseCommand`。 [CCommand::Close](./ccommand-class.md#close) 中的代码示例展示了如何调用 `Close` 和 `ReleaseCommand`。
 
 - 调用 `CoUnInitialize` 来取消初始化 COM。 调用是在主代码中进行。
 
@@ -76,6 +76,6 @@ ms.locfileid: "80211453"
     CoUninitialize();
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer.md)

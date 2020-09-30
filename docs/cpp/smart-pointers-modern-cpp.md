@@ -1,22 +1,22 @@
-﻿---
+---
 title: 智能指针（现代 C++）
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: 698843ced3235d9622af3610a5209669407e9e05
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e511cc513cdb35b06b976ce022c5e4edea35040b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186134"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500689"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 
-在现代 c + + 编程中，标准库包含*智能指针*，这些指针用于帮助确保程序不会出现内存和资源泄漏，并具有异常安全。
+在现代 c + + 编程中，标准库包含 *智能指针*，这些指针用于帮助确保程序不会出现内存和资源泄漏，并具有异常安全。
 
 ## <a name="uses-for-smart-pointers"></a>智能指针的使用
 
-智能指针在 `std` 标头文件的命名空间中定义 [\<memory>](../standard-library/memory.md) 。 它们对于[RAII](objects-own-resources-raii.md)或*资源获取是初始化*编程编程至关重要。 此习惯用法的主要目的是确保资源获取与对象初始化同时发生，从而能够创建该对象的所有资源并在某行代码中准备就绪。 实际上，RAII 的主要原则是为将任何堆分配资源（例如，动态分配内存或系统对象句柄）的所有权提供给其析构函数包含用于删除或释放资源的代码以及任何相关清理代码的堆栈分配对象。
+智能指针在 `std` 标头文件的命名空间中定义 [\<memory>](../standard-library/memory.md) 。 它们对于 [RAII](./object-lifetime-and-resource-management-modern-cpp.md) 或 *资源获取是初始化* 编程编程至关重要。 此习惯用法的主要目的是确保资源获取与对象初始化同时发生，从而能够创建该对象的所有资源并在某行代码中准备就绪。 实际上，RAII 的主要原则是为将任何堆分配资源（例如，动态分配内存或系统对象句柄）的所有权提供给其析构函数包含用于删除或释放资源的代码以及任何相关清理代码的堆栈分配对象。
 
 大多数情况下，当初始化原始指针或资源句柄以指向实际资源时，会立即将指针传递给智能指针。 在现代 C++ 中，原始指针仅用于范围有限的小代码块、循环或者性能至关重要且不会混淆所有权的 Helper 函数中。
 
@@ -39,7 +39,7 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 
 此示例演示如何使用智能指针执行以下关键步骤。
 
-1. 将智能指针声明为一个自动（局部）变量。 （不要对 **`new`** `malloc` 智能指针本身使用或表达式。）
+1. 将智能指针声明为一个自动（局部）变量。  (不在 **`new`** `malloc` 智能指针自身上使用或表达式。 ) 
 
 1. 在类型参数中，指定封装指针的指向类型。
 
@@ -68,23 +68,23 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 使用这些智能指针作为将指针封装为纯旧 C++ 对象 (POCO) 的首选项。
 
 - `unique_ptr`<br/>
-   只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。 替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr`很小且高效;大小是一个指针，它支持用于从 c + + 标准库集合快速插入和检索的右值引用。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用 Unique_ptr 实例](how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 类](../standard-library/unique-ptr-class.md)。
+   只允许基础指针的一个所有者。 除非你确信需要 `shared_ptr`，否则请将该指针用作 POCO 的默认选项。 可以移到新所有者，但不会复制或共享。 替换已弃用的 `auto_ptr`。 与 `boost::scoped_ptr` 比较。 `unique_ptr` 很小且高效;大小是一个指针，它支持用于从 c + + 标准库集合快速插入和检索的右值引用。 头文件：`<memory>`。 有关详细信息，请参阅 [如何：创建和使用 Unique_ptr 实例](how-to-create-and-use-unique-ptr-instances.md) 和 [unique_ptr 类](../standard-library/unique-ptr-class.md)。
 
 - `shared_ptr`<br/>
-   采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用 Shared_ptr 实例](how-to-create-and-use-shared-ptr-instances.md)和[shared_ptr 类](../standard-library/shared-ptr-class.md)。
+   采用引用计数的智能指针。 如果你想要将一个原始指针分配给多个所有者（例如，从容器返回了指针副本又想保留原始指针时），请使用该指针。 直至所有 `shared_ptr` 所有者超出了范围或放弃所有权，才会删除原始指针。 大小为两个指针；一个用于对象，另一个用于包含引用计数的共享控制块。 头文件：`<memory>`。 有关详细信息，请参阅 [如何：创建和使用 Shared_ptr 实例](how-to-create-and-use-shared-ptr-instances.md) 和 [shared_ptr 类](../standard-library/shared-ptr-class.md)。
 
 - `weak_ptr`<br/>
-    结合 `shared_ptr` 使用的特例智能指针。 `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。 如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。 在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。 头文件：`<memory>`。 有关详细信息，请参阅[如何：创建和使用 Weak_ptr 实例](how-to-create-and-use-weak-ptr-instances.md)和[weak_ptr 类](../standard-library/weak-ptr-class.md)。
+    结合 `shared_ptr` 使用的特例智能指针。 `weak_ptr` 提供对一个或多个 `shared_ptr` 实例拥有的对象的访问，但不参与引用计数。 如果你想要观察某个对象但不需要其保持活动状态，请使用该实例。 在某些情况下，需要断开 `shared_ptr` 实例间的循环引用。 头文件：`<memory>`。 有关详细信息，请参阅 [如何：创建和使用 Weak_ptr 实例](how-to-create-and-use-weak-ptr-instances.md) 和 [weak_ptr 类](../standard-library/weak-ptr-class.md)。
 
-### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM 对象的智能指针（经典 Windows 编程）
+### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a> (经典 Windows 编程的 COM 对象的智能指针) 
 
 当你使用 COM 对象时，请将接口指针包装到适当的智能指针类型中。 活动模板库 (ATL) 针对各种目的定义了多种智能指针。 你还可以使用 `_com_ptr_t` 智能指针类型，编译器在从 .tlb 文件创建包装器类时会使用该类型。 无需包含 ATL 标头文件时，它是最好的选择。
 
 [CComPtr 类](../atl/reference/ccomptr-class.md)<br/>
-除非你无法使用 ATL，否则使用此类型。 使用 `AddRef` 和 `Release` 方法执行引用计数。 有关详细信息，请参阅[如何：创建和使用 CComPtr 和 CComQIPtr 实例](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+除非你无法使用 ATL，否则使用此类型。 使用 `AddRef` 和 `Release` 方法执行引用计数。 有关详细信息，请参阅 [如何：创建和使用 CComPtr 和 CComQIPtr 实例](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
 [CComQIPtr 类](../atl/reference/ccomqiptr-class.md)<br/>
-类似于 `CComPtr`，但还提供了用于在 COM 对象上调用 `QueryInterface` 的简化语法。 有关详细信息，请参阅[如何：创建和使用 CComPtr 和 CComQIPtr 实例](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
+类似于 `CComPtr`，但还提供了用于在 COM 对象上调用 `QueryInterface` 的简化语法。 有关详细信息，请参阅 [如何：创建和使用 CComPtr 和 CComQIPtr 实例](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)。
 
 [CComHeapPtr 类](../atl/reference/ccomheapptr-class.md)<br/>
 指向使用 `CoTaskMemFree` 释放内存的对象的智能指针。
@@ -97,13 +97,13 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 
 ### <a name="atl-smart-pointers-for-poco-objects"></a>用于 POCO 对象的 ATL 智能指针
 
-除了 COM 对象的智能指针外，ATL 还为纯旧 c + + 对象（POCO）定义了智能指针和智能指针集合。 在经典 Windows 编程中，这些类型是 c + + 标准库集合的有用替代项，尤其是在不需要代码可移植性或不需要混合 c + + 标准库和 ATL 的编程模型时。
+除了 COM 对象的智能指针外，ATL 还为 (POCO) 的纯旧 c + + 对象定义智能指针和智能指针集合。 在经典 Windows 编程中，这些类型是 c + + 标准库集合的有用替代项，尤其是在不需要代码可移植性或不需要混合 c + + 标准库和 ATL 的编程模型时。
 
 [CAutoPtr 类](../atl/reference/cautoptr-class.md)<br/>
 通过转移副本所有权增强唯一所有权的智能指针。 等同于已弃用的 `std::auto_ptr` 类。
 
 [CHeapPtr 类](../atl/reference/cheapptr-class.md)<br/>
-使用 C [malloc](../c-runtime-library/reference/malloc.md)函数分配的对象的智能指针。
+使用 C [malloc](../c-runtime-library/reference/malloc.md) 函数分配的对象的智能指针。
 
 [CAutoVectorPtr 类](../atl/reference/cautovectorptr-class.md)<br/>
 使用 `new[]` 分配的数组的智能指针。
@@ -114,7 +114,7 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 [CAutoPtrList 类](../atl/reference/cautoptrlist-class.md)<br/>
 封装用于操作 `CAutoPtr` 节点列表的方法的类。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [指针](pointers-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>

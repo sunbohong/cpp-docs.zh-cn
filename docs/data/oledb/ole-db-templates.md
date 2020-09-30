@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d3b709bbebdf040ac818d2d2d44576cf49aafdd4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209867"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500907"
 ---
 # <a name="ole-db-templates"></a>OLE DB 模板
 
@@ -51,7 +51,7 @@ OLE DB 模板简化了 OLE DB 数据访问。 Visual C++ 提供了实现许多�
 [创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md)<br/>
 介绍了如何创建可以将数据写入数据存储的提供程序。
 
-[OLE DB 使用者特性](../../windows/ole-db-consumer-attributes.md)<br/>
+[OLE DB 使用者属性](../../windows/attributes/ole-db-consumer-attributes.md)<br/>
 探讨了根据 OLE DB 使用者模板插入代码来创建正常工作的 OLE DB 使用者的简化接口。
 
 [活动模板库 (ATL) 参考](../../atl/atl-com-desktop-components.md)<br/>

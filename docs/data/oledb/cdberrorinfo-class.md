@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 5c26a3f1e8b5589afebd72c7b722ab9ed9e4229d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d8fa41b3a06acb8f28334658f2494295593b99be
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838303"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502510"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 类
 
@@ -74,7 +74,7 @@ class CDBErrorInfo
 
 ## <a name="remarks"></a>注解
 
-此接口向用户返回一条或多条错误记录。 首先调用 [CDBErrorInfo：： GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) 以获取错误记录的计数。 然后调用某个访问函数（如 [CDBErrorInfo：： GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)）来检索每条记录的错误信息。
+此接口向用户返回一条或多条错误记录。 首先调用 [CDBErrorInfo：： GetErrorRecords](#geterrorrecords) 以获取错误记录的计数。 然后调用某个访问函数（如 [CDBErrorInfo：： GetAllErrorInfo](#getallerrorinfo)）来检索每条记录的错误信息。
 
 ## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a> CDBErrorInfo：： GetAllErrorInfo
 
@@ -235,7 +235,7 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 
 如果要检查从中获取错误信息的接口，请使用第一种形式的函数。 否则，请使用第二个窗体。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

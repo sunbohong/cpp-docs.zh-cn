@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3056
 ms.assetid: 9500173d-870b-49b3-8e88-0ee93586d19a
-ms.openlocfilehash: 97a403420e5923f23f804eeaff33af1698ff6a53
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dd000e56d5fc24929e4d06e1bf0100ad9647610a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761151"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501594"
 ---
 # <a name="compiler-error-c3056"></a>编译器错误 C3056
 
 “symbol”: 符号所在范围与“threadprivate”指令所在范围不同
 
-在 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 子句中使用的符号必须位于与 `threadprivate` 子句相同的范围中。
+在 [threadprivate](../../parallel/openmp/reference/openmp-directives.md#threadprivate) 子句中使用的符号必须位于与 `threadprivate` 子句相同的范围中。
 
 下面的示例生成 C3056：
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 99a5de3ce816e64d4b477c8c1d3226da5f8f292e
-ms.sourcegitcommit: a6b97f5d78299ad93675de2fe0f0561f528d26c7
+ms.openlocfilehash: d1caaf5c9c0cfc7a3b6650bcb72a66b4c0028e28
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "90569600"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502113"
 ---
 # <a name="math-and-floating-point-support"></a>数学和浮点支持
 
@@ -28,7 +28,7 @@ ms.locfileid: "90569600"
 
 ## <a name="supported-math-and-floating-point-routines"></a>受支持的数学和浮点例程
 
-|例程所返回的值|使用|
+|例程所返回的值|用途|
 |-|-|
 [abs、labs、llabs、_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|计算整数类型的绝对值
 [acos、acosf、acosl](../c-runtime-library/reference/acos-acosf-acosl.md)|计算反余弦值

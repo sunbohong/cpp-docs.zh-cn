@@ -57,18 +57,18 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: ce4b3ca37fc5e13ace3058cb9ec9e9daad073b47
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2d5c1d30704838cdb69516d68d328c90a094a08e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87210925"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502391"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
 此模板类描述一个对象，该对象控制具有先进先出访问权限的元素的不同长度的序列。 使用容器适配器 `queue` 将基础容器作为队列来管理。
 
-在下面的说明中，与 `GValue` *值*相同，除非后者为 ref 类型，在这种情况下，它是 `Value^` 。 同样，与 `GContainer` *容器*相同，除非后者为 ref 类型，在这种情况下，它是 `Container^` 。
+在下面的说明中，与 `GValue` *值* 相同，除非后者为 ref 类型，在这种情况下，它是 `Value^` 。 同样，与 `GContainer` *容器* 相同，除非后者为 ref 类型，在这种情况下，它是 `Container^` 。
 
 ## <a name="syntax"></a>语法
 
@@ -98,7 +98,7 @@ template<typename Value,
 
 ## <a name="declarations"></a>声明
 
-|类型定义|描述|
+|类型定义|说明|
 |---------------------|-----------------|
 |[queue::const_reference (STL/CLR)](#const_reference)|元素的常量引用的类型。|
 |[queue::container_type (STL/CLR)](#container_type)|基础容器的类型。|
@@ -109,7 +109,7 @@ template<typename Value,
 |[queue::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[queue::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|描述|
+|成员函数|说明|
 |---------------------|-----------------|
 |[queue::assign (STL/CLR)](#assign)|替换所有元素。|
 |[queue::back (STL/CLR)](#back)|访问最后一个元素。|
@@ -122,35 +122,35 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|对元素数进行计数。|
 |[queue::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 
-|属性|描述|
+|属性|说明|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|访问最后一个元素。|
 |[queue::front_item (STL/CLR)](#front_item)|访问第一个元素。|
 
-|操作员|描述|
+|运算符|说明|
 |--------------|-----------------|
 |[queue::operator= (STL/CLR)](#op_as)|替换受控序列。|
-|[operator！ = （queue）（STL/CLR）](#op_neq)|确定对象是否 `queue` 不等于另一个 `queue` 对象。|
-|[操作员< （queue）（STL/CLR）](#op_lt)|确定 `queue` 对象是否小于另一个 `queue` 对象。|
-|[运算符<= （queue）（STL/CLR）](#op_lteq)|确定 `queue` 对象是否小于或等于另一个 `queue` 对象。|
-|[operator = = （queue）（STL/CLR）](#op_eq)|确定 `queue` 对象是否等于另一个 `queue` 对象。|
-|[操作员> （queue）（STL/CLR）](#op_gt)|确定 `queue` 对象是否大于另一个 `queue` 对象。|
+|[operator！ = (队列)  (STL/CLR) ](#op_neq)|确定对象是否 `queue` 不等于另一个 `queue` 对象。|
+|[操作员< (queue)  (STL/CLR) ](#op_lt)|确定 `queue` 对象是否小于另一个 `queue` 对象。|
+|[运算符<= (queue)  (STL/CLR) ](#op_lteq)|确定 `queue` 对象是否小于或等于另一个 `queue` 对象。|
+|[operator = = (队列)  (STL/CLR) ](#op_eq)|确定 `queue` 对象是否等于另一个 `queue` 对象。|
+|[操作员> (queue)  (STL/CLR) ](#op_gt)|确定 `queue` 对象是否大于另一个 `queue` 对象。|
 |[operator>= (queue) (STL/CLR)](#op_gteq)|确定 `queue` 对象是否大于或等于另一个 `queue` 对象。|
 
 ## <a name="interfaces"></a>接口
 
-|接口|描述|
+|接口|说明|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |IQueue\<Value, Container>|维护泛型容器适配器。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-对象为其控制的序列分配并释放存储，以 `Container` 存储 `Value` 元素并按需增长。 对象限制访问，只需推送第一个元素并弹出最后一个元素，实现先进先出队列（也称为 FIFO 队列，或只是队列）。
+对象为其控制的序列分配并释放存储，以 `Container` 存储 `Value` 元素并按需增长。 对象限制访问，只需推送第一个元素并弹出最后一个元素，实现第一个第一个的队列 (也称为 FIFO 队列，或者只是队列) 。
 
 ## <a name="members"></a>成员
 
-## <a name="queueassign-stlclr"></a><a name="assign"></a>queue：： assign （STL/CLR）
+## <a name="queueassign-stlclr"></a><a name="assign"></a> queue：： assign (STL/CLR) 
 
 替换所有元素。
 
@@ -165,7 +165,7 @@ void assign(queue<Value, Container>% right);
 *然后*<br/>
 要插入的容器适配器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 成员函数将分配 `right.get_container()` 给基础容器。 您可以使用它更改队列的全部内容。
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="queueback-stlclr"></a><a name="back"></a>queue：： back （STL/CLR）
+## <a name="queueback-stlclr"></a><a name="back"></a> queue：： back (STL/CLR) 
 
 访问最后一个元素。
 
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="queueback_item-stlclr"></a><a name="back_item"></a>queue：： back_item （STL/CLR）
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a> queue：： back_item (STL/CLR) 
 
 访问最后一个元素。
 
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>queue：： const_reference （STL/CLR）
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a> queue：： const_reference (STL/CLR) 
 
 元素的常量引用的类型。
 
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>queue：： container_type （STL/CLR）
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a> queue：： container_type (STL/CLR) 
 
 基础容器的类型。
 
@@ -394,7 +394,7 @@ int main()
 a b c
 ```
 
-## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>queue：:d ifference_type （STL/CLR）
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a> queue：:d ifference_type (STL/CLR) 
 
 两个元素间的带符号距离的类型。
 
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="queueempty-stlclr"></a><a name="empty"></a>queue：： empty （STL/CLR）
+## <a name="queueempty-stlclr"></a><a name="empty"></a> queue：： empty (STL/CLR) 
 
 测试元素是否存在。
 
@@ -464,7 +464,7 @@ bool empty();
 
 ### <a name="remarks"></a>备注
 
-对于空受控序列，该成员函数返回 true。 它等效于[queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md) `() == 0` 。 用于测试队列是否为空。
+对于空受控序列，该成员函数返回 true。 它等效于[STL/CLR)  (queue：： size ](#size) `() == 0` 。 用于测试队列是否为空。
 
 ### <a name="example"></a>示例
 
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="queuefront-stlclr"></a><a name="front"></a>queue：： front （STL/CLR）
+## <a name="queuefront-stlclr"></a><a name="front"></a> queue：：前门 (STL/CLR) 
 
 访问第一个元素。
 
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>queue：： front_item （STL/CLR）
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a> queue：： front_item (STL/CLR) 
 
 访问第一个元素。
 
@@ -610,7 +610,7 @@ front_item = a
 x b c
 ```
 
-## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>queue：： generic_container （STL/CLR）
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a> queue：： generic_container (STL/CLR) 
 
 容器适配器的泛型接口的类型。
 
@@ -673,7 +673,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>queue：： generic_value （STL/CLR）
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a> queue：： generic_value (STL/CLR) 
 
 用于容器的泛型接口的元素类型。
 
@@ -685,7 +685,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>备注
 
-类型描述了一个类型为的对象 `GValue` ，该对象描述用于此模板容器类的泛型接口的存储元素值。 （ `GValue` `value_type` `value_type^` 如果是引用类型，则为或 `value_type` 。）
+类型描述了一个类型为的对象 `GValue` ，该对象描述用于此模板容器类的泛型接口的存储元素值。  (`GValue` 是， `value_type` 或者 `value_type^` 如果 `value_type` 是引用类型，则为或。 ) 
 
 ### <a name="example"></a>示例
 
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="queueget_container-stlclr"></a><a name="get_container"></a>queue：： get_container （STL/CLR）
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a> queue：： get_container (STL/CLR) 
 
 访问基础容器。
 
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="queueoperator-stlclr"></a><a name="op_as"></a>queue：： operator = （STL/CLR）
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a> queue：： operator = (STL/CLR) 
 
 替换受控序列。
 
@@ -787,9 +787,9 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 *然后*<br/>
 要复制的容器适配器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-成员运算符*直接*复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为*右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="queuepop-stlclr"></a><a name="pop"></a>queue：:p op （STL/CLR）
+## <a name="queuepop-stlclr"></a><a name="pop"></a> queue：:p op (STL/CLR) 
 
 删除最后一个元素。
 
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="queuepush-stlclr"></a><a name="push"></a>queue：:p 推送（STL/CLR）
+## <a name="queuepush-stlclr"></a><a name="push"></a> queue：:p 推送 (STL/CLR) 
 
 添加新的最后一个元素。
 
@@ -915,7 +915,7 @@ int main()
 a b c
 ```
 
-## <a name="queuequeue-stlclr"></a><a name="queue"></a>queue：： queue （STL/CLR）
+## <a name="queuequeue-stlclr"></a><a name="queue"></a> queue：： queue (STL/CLR) 
 
 构造容器适配器对象。
 
@@ -936,7 +936,7 @@ explicit queue(container_type% wrapped);
 *覆盖*<br/>
 要使用的已包装容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 构造函数：
 
@@ -948,7 +948,7 @@ explicit queue(container_type% wrapped);
 
 `queue(queue<Value, Container>% right);`
 
-创建作为的副本的已包装容器 `right.get_container()` 。 用于指定初始受控序列，该序列是由 queue 对象*权限*控制的序列的副本。
+创建作为的副本的已包装容器 `right.get_container()` 。 用于指定初始受控序列，该序列是由 queue 对象 *权限*控制的序列的副本。
 
 构造函数：
 
@@ -960,7 +960,7 @@ explicit queue(container_type% wrapped);
 
 `explicit queue(container_type wrapped);`
 
-使用*包装*为包装容器的现有容器。 用于从现有容器构造队列。
+使用 *包装* 为包装容器的现有容器。 用于从现有容器构造队列。
 
 ### <a name="example"></a>示例
 
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="queuereference-stlclr"></a><a name="reference"></a>queue：： reference （STL/CLR）
+## <a name="queuereference-stlclr"></a><a name="reference"></a> queue：： reference (STL/CLR) 
 
 元素的引用的类型。
 
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="queuesize-stlclr"></a><a name="size"></a>queue：： size （STL/CLR）
+## <a name="queuesize-stlclr"></a><a name="size"></a> queue：： size (STL/CLR) 
 
 对元素数进行计数。
 
@@ -1069,7 +1069,7 @@ size_type size();
 
 ### <a name="remarks"></a>备注
 
-成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[queue：： empty （STL/CLR）](../dotnet/queue-empty-stl-clr.md) `()` 。
+成员函数将返回受控序列的长度。 用于确定受控序列中当前的元素数。 如果你只关心序列的大小是否为非零，请参阅[queue：： empty (STL/CLR) ](#empty) `()` 。
 
 ### <a name="example"></a>示例
 
@@ -1111,7 +1111,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>queue：： size_type （STL/CLR）
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a> queue：： size_type (STL/CLR) 
 
 两个元素间的带符号距离的类型。
 
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="queueto_array-stlclr"></a><a name="to_array"></a>queue：： to_array （STL/CLR）
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a> queue：： to_array (STL/CLR) 
 
 将受控序列复制到新数组。
 
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>queue：： value_type （STL/CLR）
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a> queue：： value_type (STL/CLR) 
 
 元素的类型。
 
@@ -1222,7 +1222,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数*值*的同义词。
+该类型是模板参数 *值*的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>operator！ = （queue）（STL/CLR）
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a> operator！ = (队列)  (STL/CLR) 
 
 队列不相等比较。
 
@@ -1276,7 +1276,7 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(left == right)` 。 用于测试在按元素对两个队列进行*比较时，是否按原样对**左侧*进行排序。
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>运算符 &lt; （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a> 操作员 &lt; (queue)  (STL/CLR) 
 
 队列小于比较。
 
@@ -1347,9 +1347,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它将返回 `left->` [queue：： size （STL/CLR）](../dotnet/queue-size-stl-clr.md) ， `() <` `right->size()` 以便在按元素对两个队列*right*进行比较时，使用它来测试是否向*左*排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它将返回 `left->` [queue：： size (STL/CLR) ](#size) `() <` `right->size()` 你使用它来测试在按元素对*right*两个队列进行比较时，是否向*左*排序。
 
 ### <a name="example"></a>示例
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>operator &lt; = （queue）（STL/CLR）
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a> operator &lt; = (queue)  (STL/CLR) 
 
 队列小于或等于比较。
 
@@ -1418,7 +1418,7 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个队列进行比较*时，是否向**左*排序。
 
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>operator = = （queue）（STL/CLR）
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a> operator = = (队列)  (STL/CLR) 
 
 队列相等比较。
 
@@ -1489,9 +1489,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-仅当由*左*和*右*控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个队列进行*比较时，是否按原样对**左侧*进行排序。
+仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个队列进行*比较时，是否按原样对**左侧*进行排序。
 
 ### <a name="example"></a>示例
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>运算符 &gt; （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a> 操作员 &gt; (queue)  (STL/CLR) 
 
 队列大于比较。
 
@@ -1560,7 +1560,7 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `right` `<` `left` 。 用于测试是否在按元素对两个队列进行*比较时向**左*排序。
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>operator &gt; = （queue）（STL/CLR）
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a> operator &gt; = (queue)  (STL/CLR) 
 
 队列大于或等于比较。
 
@@ -1631,7 +1631,7 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 Operator 函数返回 `!(left < right)` 。 在按元素对两个队列进行*比较时，* 可以使用它来测试是否向*左*排序。
 

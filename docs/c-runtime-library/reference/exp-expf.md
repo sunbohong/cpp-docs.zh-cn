@@ -36,12 +36,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 44652e5d06d842bd2eb2e280409a1e55fc66f582
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: f6733f293f1c8f78e8143d9fdd395013147bbe83
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555886"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502103"
 ---
 # <a name="exp-expf-expl"></a>exp、expf、expl
 
@@ -79,14 +79,14 @@ long double expl(
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± Quiet NaN、不确定|无|_DOMAIN|
+|± Quiet NaN、不确定|None|_DOMAIN|
 |±无限大|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
 **Exp**函数具有使用流式处理 simd 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 C + + 允许重载，因此你可以调用采用或参数的 **exp** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则 **exp** 始终采用并返回 **`double`** 。
 
@@ -99,7 +99,7 @@ C + + 允许重载，因此你可以调用采用或参数的 **exp** 的重载 *
 |函数|必需的 C 标头|必需的 C++ 标头|
 |--------------|---------------------|---|
 |**exp**、 **expf**、 **expl**|\<math.h>|\<cmath> 或 \<math.h>|
-|**exp** 宏| \<tgmath.h> || 
+|**exp** 宏| \<tgmath.h> ||
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -124,7 +124,7 @@ int main( void )
 exp( 2.302585 ) = 10.000000
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [log、logf、log10、log10f](log-logf-log10-log10f.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f3bcc799f2a9591cfe7b2fc364b03161b5c0da33
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211505"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91500702"
 ---
 # <a name="consumer-wizard-generated-methods"></a>使用者向导生成的方法
 
@@ -21,7 +21,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker range="<=vs-2017"
 
-ATL OLE DB 使用者向导和 MFC 应用程序向导生成一些你应该知道的函数。 由于一些方法在特性化项目中以不同方式实现，因此有几点注意事项；下面分别介绍了每种情况。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
+ATL OLE DB 使用者向导**** 和 MFC 应用程序向导**** 生成一些你应该知道的函数。 由于一些方法在特性化项目中以不同方式实现，因此有几点注意事项；下面分别介绍了每种情况。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
 
 - `OpenAll` 打开数据源、行集，并在书签可用时启用书签。
 
@@ -31,7 +31,7 @@ ATL OLE DB 使用者向导和 MFC 应用程序向导生成一些你应该知道�
 
 - `GetRowsetProperties` 检索指向行集的属性集的指针，此指针可用于设置属性。
 
-- `OpenDataSource` 使用“数据链接属性”对话框中指定的初始化字符串打开数据源。
+- `OpenDataSource` 使用“数据链接属性”**** 对话框中指定的初始化字符串打开数据源。
 
 - `CloseDataSource` 以适当方式关闭数据源。
 
@@ -43,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-以下示例演示在重复执行同一命令时如何调用 `OpenAll` 和 `CloseAll`。 比较 [ccommand::Close](../../data/oledb/ccommand-close.md) 中的代码示例，它展示了调用 `Close` 和 `ReleaseCommand`（而不是 `CloseAll`）的变体。
+以下示例演示在重复执行同一命令时如何调用 `OpenAll` 和 `CloseAll`。 比较 [ccommand::Close](./ccommand-class.md#close) 中的代码示例，它展示了调用 `Close` 和 `ReleaseCommand`（而不是 `CloseAll`）的变体。
 
 ```cpp
 int main(int argc, char* argv[])
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 如果你定义 `HasBookmark` 方法，`OpenAll` 代码设置 `DBPROP_IRowsetLocate` 属性；请确保仅在提供程序支持此属性时才这样做。
 
@@ -141,7 +141,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 不得定义全局 `GetRowsetProperties` 方法，因为它可能会与向导定义的方法冲突。 这是模板化和特性化项目随附的向导生成方法；属性不插入此代码。
 
@@ -153,12 +153,12 @@ HRESULT OpenDataSource();
 void CloseDataSource();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-向导定义了 `OpenDataSource` 和 `CloseDataSource` 方法；`OpenDataSource` 调用 [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)。
+向导定义了 `OpenDataSource` 和 `CloseDataSource` 方法；`OpenDataSource` 调用 [CDataSource::OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring)。
 
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用向导创建 OLE DB 使用者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

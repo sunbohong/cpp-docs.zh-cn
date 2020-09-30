@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic column binding
 - providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-ms.openlocfilehash: 8a0b4c399bf25137be86d95102da9723c3116d51
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3eee52004e1418b3e756a78c8c2a04040d0bd7ff
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210972"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501858"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供程序中动态绑定列
 
@@ -23,17 +23,17 @@ ms.locfileid: "80210972"
 
 ## <a name="to-implement-dynamic-column-binding"></a>实现动态列绑定
 
-1. 从代码中删除任何 `PROVIDER_COLUMN_MAP`。
+1. `PROVIDER_COLUMN_MAP`从代码中删除任何。
 
-1. 在用户记录（结构）中添加以下声明：
+1. 在 (结构) 的用户记录中，添加以下声明：
 
     ```cpp
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
     ```
 
-1. 实现 `GetColumnInfo` 函数。 此函数对信息的存储方式进行布局。 可能需要获取此函数的属性或其他信息。 您可能想要创建一个与[COLUMN_ENTRY](../../data/oledb/column-entry.md)宏类似的宏，以添加您自己的信息。
+1. 实现 `GetColumnInfo` 函数。 此函数对信息的存储方式进行布局。 可能需要获取此函数的属性或其他信息。 您可能想要创建一个与 [COLUMN_ENTRY](./macros-and-global-functions-for-ole-db-consumer-templates.md#column_entry) 宏类似的宏，以添加您自己的信息。
 
-   下面的示例演示一个 `GetColumnInfo` 函数。
+   下面的示例演示了一个 `GetColumnInfo` 函数。
 
     ```cpp
     // Check the property flag for bookmarks, if it is set, set the zero
@@ -86,6 +86,6 @@ ms.locfileid: "80210972"
     }
     ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

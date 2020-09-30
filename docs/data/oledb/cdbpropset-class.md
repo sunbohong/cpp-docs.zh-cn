@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 48aa2e3e26bed7c9306ca3005231e464d7b7555b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 45772896cac520eba35ec475f8b6ae7bd2993045
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838252"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502468"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 类
 
@@ -163,7 +163,7 @@ void SetGUID(const GUID& guid) throw();
 
 ### <a name="remarks"></a>注解
 
-此字段也可以通过 [构造函数](../../data/oledb/cdbpropset-cdbpropset.md) 进行设置。
+此字段也可以通过 [构造函数](#cdbpropset) 进行设置。
 
 ## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a> CDBPropSet：： operator =
 
@@ -175,7 +175,7 @@ void SetGUID(const GUID& guid) throw();
 CDBPropSet& operator =(CDBPropSet& propset) throw();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

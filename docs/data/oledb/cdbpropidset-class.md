@@ -31,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 24cc621e522ed1939fe3127d97e8d54b75fa1618
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838290"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502500"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 类
 
-继承自 `DBPROPIDSET` 结构，并添加一个用于初始化键字段以及 [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) 访问方法的构造函数。
+继承自 `DBPROPIDSET` 结构，并添加一个用于初始化键字段以及 [AddPropertyID](#addpropertyid) 访问方法的构造函数。
 
 ## <a name="syntax"></a>语法
 
@@ -126,7 +126,7 @@ void SetGUID(const GUID& guid) throw();
 
 ### <a name="remarks"></a>注解
 
-此字段也可以通过 [构造函数](../../data/oledb/cdbpropidset-cdbpropidset.md) 进行设置。 如果您对此类使用默认构造函数，则调用此函数。
+此字段也可以通过 [构造函数](#cdbpropidset) 进行设置。 如果您对此类使用默认构造函数，则调用此函数。
 
 ## <a name="cdbpropidsetoperator-"></a><a name="op_equal"></a> CDBPropIDSet：： operator =
 
@@ -138,7 +138,7 @@ void SetGUID(const GUID& guid) throw();
 CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

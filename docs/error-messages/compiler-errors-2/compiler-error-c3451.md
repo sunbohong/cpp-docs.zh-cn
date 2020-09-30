@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 2e0122dd53ba5318077dd33f22a07492c52db26b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d6a0d1234d8f25c6a55fffa7170f37aae27f5817
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756209"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501316"
 ---
 # <a name="compiler-error-c3451"></a>编译器错误 C3451
 
 "attribute"：不能将非托管特性应用于 "type"
 
-C++特性不能应用于 CLR 类型。 有关详细信息，请参阅[ C++属性参考](../../windows/attributes/attributes-alphabetical-reference.md)。
+C + + 特性不能应用于 CLR 类型。 有关详细信息，请参阅 [c + + 特性参考](../../windows/attributes/attributes-alphabetical-reference.md) 。
 
-有关更多信息，请参见 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
+有关详细信息，请参阅 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
-此错误可能是由于对 Visual Studio 2005 执行的编译器一致性工作引起的：使用 CLR 编程在用户定义的属性上不再允许[uuid](../../windows/uuid-cpp-attributes.md)特性。 请改用 <xref:System.Runtime.InteropServices.GuidAttribute> 。
+此错误可能是由于对 Visual Studio 2005 执行的编译器一致性工作引起的：使用 CLR 编程在用户定义的属性上不再允许 [uuid](../../windows/attributes/uuid-cpp-attributes.md) 特性。 请改用 <xref:System.Runtime.InteropServices.GuidAttribute>。
 
 ## <a name="example"></a>示例
 

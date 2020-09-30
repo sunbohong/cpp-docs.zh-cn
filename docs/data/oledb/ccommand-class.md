@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: beabe73ff4ce0e6be8aaccfcdc636adc1ba04d5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838433"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501002"
 ---
 # <a name="ccommand-class"></a>CCommand 类
 
@@ -78,7 +78,7 @@ class CCommand :
 你希望命令使用的访问器类的类型（如 `CDynamicParameterAccessor`、`CDynamicStringAccessor` 或 `CEnumeratorAccessor`）。 默认值为 `CNoAccessor`，它指定该类不支持参数或输出列。
 
 *TRowset*<br/>
-您希望命令使用的行集类的类型（如 `CArrayRowset` 或 `CNoRowset`）。 默认为 `CRowset`。
+您希望命令使用的行集类的类型（如 `CArrayRowset` 或 `CNoRowset`）。 默认值为 `CRowset`。
 
 *TMultiple*<br/>
 若要使用可以返回多个结果的 OLE DB 命令，请指定 [CMultipleResults](../../data/oledb/cmultipleresults-class.md)。 否则，请使用 [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)。 有关详细信息，请参阅 [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))。
@@ -131,7 +131,7 @@ void Close();
 
 命令使用行集、结果集访问器和（可选的）参数访问器（与不支持参数并且不需要参数访问器的表不同）。
 
-执行命令时，应在命令后同时调用 `Close` 和 [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) 。
+执行命令时，应在命令后同时调用 `Close` 和 [ReleaseCommand](#releasecommand) 。
 
 当你要重复执行同一命令时，你应通过在调用 `Close` 之前调用 `Execute` 来发布每个结果集访问器。 在序列末尾，应通过调用 `ReleaseCommand` 发布参数访问器。 另一种常见情形是调用具有输出参数的存储过程。 在很多提供程序（如 SQL Server 的 OLE DB 提供程序）上，输出参数值在您关闭结果集访问器前不可访问。 调用 `Close` 以关闭返回的行集和结果集访问器而不返回参数访问器，从而让你检索输出参数值。
 
@@ -213,7 +213,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 中要在其中执行命令的会话。
 
 *wszCommand*<br/>
-中作为 Unicode 字符串传递的要执行的命令。 使用时可以为 NULL `CAccessor` ，在这种情况下，将从传递给 [DEFINE_COMMAND](../../data/oledb/define-command.md) 宏的值中检索命令。 有关详细信息，请参阅*OLE DB 程序员参考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
+中作为 Unicode 字符串传递的要执行的命令。 使用时可以为 NULL `CAccessor` ，在这种情况下，将从传递给 [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) 宏的值中检索命令。 有关详细信息，请参阅*OLE DB 程序员参考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
 *szCommand*<br/>
 中与 *wszCommand* 相同，只不过此参数使用 ANSI 命令字符串。 此方法的第四种形式可以采用 NULL 值。 有关详细信息，请参阅本主题后面的 "备注"。
@@ -253,14 +253,14 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 的第三种形式 `Open` 允许命令字符串为 null，因为类型的 **`int`** 默认值为 null。 提供此方法是为了调用 `Open(session, NULL);` 或， `Open(session);` 因为 NULL 的类型为 **`int`** 。 此版本需要并断言 **`int`** 参数为 NULL。
 
-`Open`如果已创建了一个命令并且想要执行单个[准备](../../data/oledb/ccommand-prepare.md)和多个执行，请使用第四种形式的。
+`Open`如果已创建了一个命令并且想要执行单个[准备](#prepare)和多个执行，请使用第四种形式的。
 
 > [!NOTE]
 > `Open` 调用 `Execute` ，后者又调用 `GetNextResult` 。
 
 ## <a name="ccommandcreate"></a><a name="create"></a> CCommand：： Create
 
-调用 [CCommand：： CreateCommand](../../data/oledb/ccommand-createcommand.md) 来为指定的会话创建命令，然后调用 [ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 来指定命令文本。
+调用 [CCommand：： CreateCommand](#createcommand) 来为指定的会话创建命令，然后调用 [ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 来指定命令文本。
 
 ### <a name="syntax"></a>语法
 
@@ -374,7 +374,7 @@ void CCommandBase::ReleaseCommand() throw();
 
 ### <a name="remarks"></a>备注
 
-`ReleaseCommand` 与结合使用 `Close` 。 有关使用情况详细信息，请参阅 [Close](../../data/oledb/ccommand-close.md) 。
+`ReleaseCommand` 与结合使用 `Close` 。 有关使用情况详细信息，请参阅 [Close](#close) 。
 
 ## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a> CCommand：： SetParameterInfo
 
@@ -414,7 +414,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 此方法包装 OLE DB 方法 [ICommandPrepare：： Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85))。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

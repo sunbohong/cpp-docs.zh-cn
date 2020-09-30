@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 2ce5090d7e1c74607a82ddbb79afebe185a1dca7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f94cd631f1c6febdc07d53f84803b1203f4116bc
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838342"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91502540"
 ---
 # <a name="cdatasource-class"></a>CDataSource 类
 
@@ -95,7 +95,7 @@ class CDataSource
 
 ## <a name="remarks"></a>注解
 
-可以为单个连接创建一个或多个数据库会话。 这些会话由 `CSession` 表示。 在使用创建会话之前，必须先调用 [CDataSource：： open](../../data/oledb/cdatasource-open.md) 以便打开连接 `CSession::Open` 。
+可以为单个连接创建一个或多个数据库会话。 这些会话由 `CSession` 表示。 在使用创建会话之前，必须先调用 [CDataSource：： open](#open) 以便打开连接 `CSession::Open` 。
 
 有关如何使用的示例 `CDataSource` ，请参阅 [CatDB](../../overview/visual-cpp-samples.md) 示例。
 
@@ -159,7 +159,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 ### <a name="remarks"></a>注解
 
-若要获取单个属性，请使用 [GetProperty](../../data/oledb/cdatasource-getproperty.md)。
+若要获取单个属性，请使用 [GetProperty](#getproperty)。
 
 ## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a> CDataSource：： GetProperty
 
@@ -190,7 +190,7 @@ HRESULT GetProperty(const GUID& guid,
 
 ### <a name="remarks"></a>注解
 
-若要获取多个属性，请使用 [GetProperties](../../data/oledb/cdatasource-getproperties.md)。
+若要获取多个属性，请使用 [GetProperties](#getproperties)。
 
 ## <a name="cdatasourceopen"></a><a name="open"></a> CDataSource：： Open
 
@@ -411,7 +411,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 此方法使用 oledb32.dll 中的服务组件打开数据源对象；此 DLL 包含资源池、自动事务登记等服务组件功能的实现。 有关详细信息，请参阅 [OLE DB 程序员指南](/previous-versions/windows/desktop/ms713643(v=vs.85))中的 OLE DB 参考。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

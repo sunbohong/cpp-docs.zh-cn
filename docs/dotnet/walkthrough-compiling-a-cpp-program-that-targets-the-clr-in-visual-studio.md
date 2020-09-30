@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: 63996af56f03890c9a78e95743367d47416d5d48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fceb57e062b9179245ba235fb497ff526a6660e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214823"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501689"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>演练：在 Visual Studio 中编译面向 CLR 的 c + +/CLI 程序
 
@@ -24,7 +24,7 @@ ms.locfileid: "87214823"
 ## <a name="prerequisites"></a>先决条件
 
 - 你需要了解 C++ 语言的基础知识。
-- 在 Visual Studio 2017 和更高版本中，c + +/CLI 支持是一个可选组件。 若要安装它，请从 Windows "开始" 菜单打开**Visual Studio 安装程序**。 确保选中 "**带 c + + 的桌面开发**" 磁贴，并在**可选**组件部分中检查**c + +/cli 支持**。
+- 在 Visual Studio 2017 和更高版本中，c + +/CLI 支持是一个可选组件。 若要安装它，请从 Windows "开始" 菜单打开 **Visual Studio 安装程序** 。 确保选中 " **带 c + + 的桌面开发** " 磁贴，并在 **可选** 组件部分中检查 **c + +/cli 支持**。
 
 ## <a name="create-a-new-project"></a>创建新项目
 
@@ -34,9 +34,9 @@ ms.locfileid: "87214823"
 
 ### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建 c + +/CLI 项目
 
-1. 在**解决方案资源管理器**中，右键单击顶部以打开 "新建**项目**" 对话框。
+1. 在 **解决方案资源管理器**中，右键单击顶部以打开 "新建 **项目** " 对话框。
 
-1. 在对话框的顶部，在 "搜索" 框中键入 " **clr** "，然后从 "结果" 列表中选择 " **clr 空项目**"。
+1. 在对话框的顶部，在 "搜索" 框中键入 " **clr** "，然后从 "结果" 列表中选择 " **clr 空项目** "。
 
 1. 选择“创建”  按钮创建项目。
 
@@ -46,7 +46,7 @@ ms.locfileid: "87214823"
 
 ### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>在 Visual Studio 2017 中创建 c + +/CLI 项目
 
-1. 创建新项目。 在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。
+1. 创建新项目。 在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。
 
 1. 在 Visual C++ 项目类型中，依次单击“CLR”、“CLR 空项目”********。
 
@@ -60,7 +60,7 @@ ms.locfileid: "87214823"
 
 ### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>在 Visual Studio 2015 中创建 c + +/CLI 项目
 
-1. 创建新项目。 在 **“文件”** 菜单上，指向 **“新建”**，再单击 **“项目”**。
+1. 创建新项目。 在 **“文件”** 菜单上，指向 **“新建”** ，再单击 **“项目”** 。
 
 1. 在 Visual C++ 项目类型中，依次单击“CLR”、“CLR 空项目”********。
 
@@ -84,21 +84,21 @@ ms.locfileid: "87214823"
 
 1. 单击 Visual Studio 中新创建的选项卡并键入有效的 Visual C++ 程序或从示例程序中复制粘贴一个。
 
-   例如，可以使用[如何：编写文本文件 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md) 示例程序（位于编程指南中的“文件处理和 I/O”节点）****。
+   例如，可以使用[如何：编写文本文件 (C++/CLI)](./file-handling-and-i-o-cpp-cli.md#write_text) 示例程序（位于编程指南中的“文件处理和 I/O”节点）****。
 
-   如果使用示例程序，请注意，在 **`gcnew`** 创建 .net 对象时使用关键字而不是 **`new`** ，并且 **`gcnew`** 返回一个句柄（）， `^` 而不是指针（ `*` ）：
+   如果使用示例程序，请注意，在 **`gcnew`** **`new`** 创建 .net 对象时使用关键字，而不是 **`gcnew`** 返回 () 的句柄， `^` 而不是)  (的指针 `*` ：
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   有关 c + +/CLI 语法的详细信息，请参阅[运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
+   有关 c + +/CLI 语法的详细信息，请参阅 [运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)。
 
-1. 在 **“生成”** 菜单上，单击 **“生成解决方案”** 。
+1. 在“生成”菜单中，单击“生成解决方案”。
 
    “输出”窗口显示编译进度的相关信息，例如生成日志的位置以及指示生成状态的消息****。
 
    如果在未进行生成操作的情况下做出更改且运行程序，则可能出现一个指示该程序已过期的对话框。 如果希望 Visual Studio 始终使用当前版本的文件而不是在每次生成应用程序时都出现提示，请选择该对话框中的复选框后再单击“确定”****。
 
-1. 在 "**调试**" 菜单上，单击 "**启动（不调试**）"。
+1. 在 " **调试** " 菜单上，单击 " **启动（不调试**）"。
 
 1. 如果使用了示例程序，在运行程序时会显示一个命令窗口，该窗口指示已创建文本文件。
 

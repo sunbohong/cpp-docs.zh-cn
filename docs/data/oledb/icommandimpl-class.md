@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c88554d717888719ad6d805a2871489ce4b0df32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845583"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501823"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 类
 
@@ -75,7 +75,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 派生自的类 `ICommandImpl` 。
 
 *CommandBase*<br/>
-命令接口。 默认为 `ICommand`。
+命令接口。 默认值为 `ICommand`。
 
 ## <a name="requirements"></a>要求
 
@@ -132,7 +132,7 @@ HRESULT CancelExecution();
 
 ## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a> ICommandImpl：： CreateRowset
 
-由 [Execute](../../data/oledb/icommandimpl-execute.md) 调用以创建单个行集。
+由 [Execute](#execute) 调用以创建单个行集。
 
 ### <a name="syntax"></a>语法
 
@@ -201,7 +201,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 请求的传出接口将是从该函数创建的行集对象获取的接口。
 
-`Execute` 调用 [CreateRowset](../../data/oledb/icommandimpl-createrowset.md)。 重写默认实现以创建多个行集，或提供自己的条件来创建不同的行集。
+`Execute` 调用 [CreateRowset](#createrowset)。 重写默认实现以创建多个行集，或提供自己的条件来创建不同的行集。
 
 ## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a> ICommandImpl：： GetDBSession
 
@@ -274,7 +274,7 @@ unsigned m_bIsExecuting:1;
 
 `Execute`Command 类的方法可以将此变量设置为 **`true`** 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

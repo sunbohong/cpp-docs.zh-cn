@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
-ms.openlocfilehash: 3980bebdae0301dfbbb3cea91d6631053a118995
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: aca5c78c07852317308427d935eef5942523512b
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761243"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501402"
 ---
 # <a name="compiler-error-c3138"></a>编译器错误 C3138
 
 "interface"： "attribute" 接口必须从 IDispatch 继承，或者从继承自 IDispatch 的接口继承
 
-具有[双重](../../windows/dual.md)或[调度](../../windows/dispinterface.md)接口属性的接口没有作为直接或间接基接口 `IDispatch`。
+具有 [双重](../../windows/attributes/dual.md) 或 [调度](../../windows/attributes/dispinterface.md) 接口属性的接口不具有 `IDispatch` 作为直接或间接基接口。
 
 下面的示例生成 C3138：
 

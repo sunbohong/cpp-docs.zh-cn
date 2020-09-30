@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: f71ca7f5fb675916c9db7e5720e6c148f2131351
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bd4dd73c79085a2c2d85a5dbacbfd20bc920108e
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845570"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501762"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 类
 
@@ -56,7 +56,7 @@ Properties 类。
 
 ## <a name="remarks"></a>注解
 
-这对于命令是必需的。 实现由 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 宏定义的静态函数提供。
+这对于命令是必需的。 实现由 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) 宏定义的静态函数提供。
 
 ## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a> ICommandPropertiesImpl：： GetProperties
 
@@ -77,7 +77,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 ### <a name="remarks"></a>注解
 
-请参阅 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)。
+请参阅 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map)。
 
 ## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a> ICommandPropertiesImpl：： SetProperties
 
@@ -94,7 +94,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 请参阅*OLE DB 程序员参考*中的[ICommandProperties：： SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

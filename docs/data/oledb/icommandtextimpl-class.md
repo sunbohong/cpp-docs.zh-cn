@@ -22,12 +22,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 8d435cd8c5c8723d008be98482631f081c967058
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
+ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845115"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91501726"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 类
 
@@ -56,7 +56,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 | 名称 | 说明 |
 |-|-|
-|[GetCommandText](#getcommandtext)|返回由对 [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)的最后一次调用设置的文本命令。|
+|[GetCommandText](#getcommandtext)|返回由对 [SetCommandText](#setcommandtext)的最后一次调用设置的文本命令。|
 |[SetCommandText](#setcommandtext)|设置命令文本，并替换现有的命令文本。|
 
 ### <a name="data-members"></a>数据成员
@@ -71,7 +71,7 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a> ICommandTextImpl：： GetCommandText
 
-返回由对 [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)的最后一次调用设置的文本命令。
+返回由对 [SetCommandText](#setcommandtext)的最后一次调用设置的文本命令。
 
 ### <a name="syntax"></a>语法
 
@@ -109,7 +109,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 CComBSTR m_strCommandText;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
