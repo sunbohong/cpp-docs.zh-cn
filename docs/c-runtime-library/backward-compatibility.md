@@ -1,20 +1,22 @@
 ---
-title: 向后兼容性
+title: Backward Compatibility
+description: 如何使用 Microsoft OLDNAMES.LIB。用于映射函数名称以实现向后兼容的 LIB 库。
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - CRT, compatibility
 - backward compatibility, C run-time libraries
 - compatibility, C run-time libraries
 - backward compatibility
 ms.assetid: cc3175cf-97fd-492f-b329-5791aea63090
-ms.openlocfilehash: 2c2b4570e5e3131911e7f424280f16e9977f047e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b09104a5cff4d8e4cc31f9cc4707e808988401d6
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438561"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590285"
 ---
-# <a name="backward-compatibility"></a>向后兼容性
+# <a name="backward-compatibility"></a>Backward Compatibility
 
 对于产品版本间的兼容性，库 OLDNAMES.LIB 将旧名称映射到新名称。 例如，`open` 将映射到 `_open`。 仅在使用以下命令行选项的组合进行编译时必须显式链接 OLDNAMES.LIB：
 

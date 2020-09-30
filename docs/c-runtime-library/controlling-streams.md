@@ -1,6 +1,8 @@
 ---
 title: 控制流
+description: 使用 Microsoft C 运行时库中的流的概述。
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Controlling Streams
 helpviewer_keywords:
@@ -8,12 +10,12 @@ helpviewer_keywords:
 - controlling streams
 - streams
 ms.assetid: 267e9013-9afc-45f6-91e3-ca093230d9d9
-ms.openlocfilehash: 85c7e1b22519287fbd03d89487d6639f197a8b63
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0caa9eca7c960acbb581358c1a92afcc6a8af066
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743310"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589713"
 ---
 # <a name="controlling-streams"></a>控制流
 
@@ -37,6 +39,6 @@ ms.locfileid: "57743310"
 
 不要修改存储在 `FILE` 对象中或与该对象一起使用的指定文件缓冲区中的任何值。 不能复制 `FILE` 对象，也不能将副本的地址用作库函数的 `stream` 参数。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文件和流](../c-runtime-library/files-and-streams.md)

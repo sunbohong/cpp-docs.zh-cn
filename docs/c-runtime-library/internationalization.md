@@ -1,25 +1,35 @@
 ---
 title: 国际化
-ms.date: 11/04/2016
+ms.date: 09/29/2020
+description: 对为国际化市场编写应用的 Microsoft 运行库支持的说明。
+ms.topic: conceptual
 helpviewer_keywords:
 - localization, routines for
 - locale-dependent routines
 - internationalization routines
 - international applications, run-time routines for
 ms.assetid: ee536a04-3558-4729-8e10-6dabcde055fd
-ms.openlocfilehash: 215caf2051458bda4597713cf7b22c03b416f5c7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 61b06f3820631f0d3bcec2633d736c606daee301
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443164"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590207"
 ---
 # <a name="internationalization"></a>国际化
 
-Microsoft 运行库提供许多例程，可用于为国际市场创建不同版本的程序。 其中包括[区域设置相关的例程](../c-runtime-library/locale.md)、宽字符例程、多字节字符例程和一般文本例程。 为方便起见，大多数区域设置相关的例程在该引用中也根据其执行的操作进行了分类。 在本节和按字母顺序的引用中，多字节字符例程和宽字符例程与单字节字符例程（如果存在）一同介绍。
+Microsoft 运行时库提供许多例程，可用于为国际市场自定义应用，例如：
+- [与区域设置相关的例程](../c-runtime-library/locale.md)
+- 宽字符例程
+- 多字节字符例程
+- 一般文本例程
 
-ISO646 运算符替代项也包含在其中。
+为方便起见，大多数区域设置相关的例程也按它们的用途进行分类。
+
+多字节例程和宽字符例程在其对应的单字节字符的对应项（当存在时）进行描述。
+
+还包括 ISO646 运算符替代项。
 
 ## <a name="see-also"></a>另请参阅
 
-[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)

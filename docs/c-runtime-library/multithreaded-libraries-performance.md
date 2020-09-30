@@ -1,18 +1,20 @@
 ---
 title: 多线程库性能
+description: 概述如何从 Microsoft C 运行时多线程库中获取最佳性能。
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - threading [C++], performance
 - libraries, multithreaded
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-ms.openlocfilehash: 48f491b6d82acb566669302e4d607e85faf9012a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: edfbbf3055e9023c74cf0e154577d4b1853f557b
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748355"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590194"
 ---
 # <a name="multithreaded-libraries-performance"></a>多线程库性能
 
@@ -34,6 +36,6 @@ ms.locfileid: "57748355"
 
 - 通过公开 CRT 堆句柄，您可以启用 CRT 堆的 Windows 低分片堆 (LFH)，这将大大改进高度缩放的方案的性能。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRT 库功能](../c-runtime-library/crt-library-features.md)

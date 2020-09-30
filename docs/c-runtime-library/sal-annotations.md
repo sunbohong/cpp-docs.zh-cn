@@ -1,6 +1,8 @@
 ---
 title: SAL 批注
+description: " (SAL) 的 Microsoft 源代码批注语言的简短说明。"
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - __z annotation
 - ref annotation
@@ -47,12 +49,12 @@ helpviewer_keywords:
 - ecount annotation
 - bcount annotation
 ms.assetid: 81893638-010c-41a0-9cb3-666fe360f3e0
-ms.openlocfilehash: 64f1ef513f34f11f2569f0afb854a0e2762082b6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 727c81ae1b141346bb47ff92b6af76d5c45aa106
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503476"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590259"
 ---
 # <a name="sal-annotations"></a>SAL 批注
 
@@ -60,6 +62,6 @@ ms.locfileid: "91503476"
 
 有关在 Visual Studio 中使用 SAL 注释的详细信息，请参阅[使用 SAL 注释减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRT 库功能](../c-runtime-library/crt-library-features.md)

@@ -1,15 +1,17 @@
 ---
 title: CRT 初始化
+description: 介绍 CRT 如何在本机代码中初始化全局状态。
+ms.topic: conceptual
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 25f1e2a7e5b7d91c729bb45bd79ba9a8720cead1
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446681"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589765"
 ---
 # <a name="crt-initialization"></a>CRT 初始化
 
@@ -37,11 +39,11 @@ int main()
 
 根据 C/C++ 标准，在执行 `main()` 前必须调用 `func()`。 但哪个项来调用它呢？
 
-确定这一点的一个方法是在 `func()` 中设置断点，调试应用程序并检查堆栈。 由于 CRT 源代码是 Visual Studio 附带的，因此可以这样做。
+确定调用方的一种方法是在中设置断点 `func()` ，调试应用程序并检查堆栈。 由于 CRT 源代码是 Visual Studio 附带的，因此可以这样做。
 
-在堆栈上浏览函数时，您将发现 CRT 正在循环访问函数指针的列表并在遇到每个指针时对其进行调用。 这些函数类似于 `func()` 或类实例的构造函数。
+浏览堆栈上的函数时，将看到 CRT 正在调用函数指针的列表。 这些函数类似于 `func()` 或类实例的构造函数。
 
-CRT 从 Microsoft C++ 编译器中获取函数指针的列表。 当编译器发现全局初始值时，它将在 `.CRT$XCU` 部分（其中，`CRT` 是部分名称，`XCU` 是组名称）中生成一个动态初始值设定项。 若要获取这些动态初始值设定项的列表，请运行命令 dumpbin /all main.obj  ，然后搜索 `.CRT$XCU` 部分（在将 main.cpp 作为 C++ 文件而不是 C 文件编译时）。 它将类似于以下内容：
+CRT 从 Microsoft c + + 编译器中获取函数指针的列表。 当编译器发现全局初始值设定项时，它将在 `.CRT$XCU` 部分（其中 `CRT` 是部分名称， `XCU` 是组名称）中生成一个动态初始值设定项。 若要获取动态初始值设定项的列表，请运行命令 **dumpbin/all main .obj**，然后搜索 `.CRT$XCU` 部分。 这适用于将 main .cpp 编译为 c + + 文件而不是 C 文件的情况。 它将类似于以下示例：
 
 ```
 SECTION HEADER #6
@@ -63,23 +65,23 @@ RAW DATA #6
   00000000: 00 00 00 00                                      ....
 
 RELOCATIONS #6
-                                                Symbol    Symbol
+                                               Symbol    Symbol
 Offset    Type              Applied To         Index     Name
---------  ----------------  -----------------  --------  ------
-00000000  DIR32                      00000000         C  ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
+--------  ----------------  -----------------  --------  -------
+00000000  DIR32             00000000           C         ??__Egi@@YAXXZ (void __cdecl `dynamic initializer for 'gi''(void))
 ```
 
 CRT 定义两个指针：
 
-- `__xc_a`中的`.CRT$XCA`
+- `.CRT$XCA` 中的 `__xc_a`
 
 - `.CRT$XCZ` 中的 `__xc_z`
 
-除了 `__xc_a` 和 `__xc_z` 之外，两个组未定义任何其他符号。
+除了和之外，两个组都没有定义任何其他符号 `__xc_a` `__xc_z` 。
 
 现在，当链接器读取各种 `.CRT` 组时，它会将这些组合并在一个部分中并按字母顺序对其进行排序。 这表示用户定义的全局初始值设定项（Microsoft C++ 编译器将其置于 `.CRT$XCU` 中）将始终出现在 `.CRT$XCA` 之后和 `.CRT$XCZ` 之前。
 
-此部分类似于以下内容：
+该部分将类似于以下示例：
 
 ```
 .CRT$XCA
@@ -91,8 +93,8 @@ CRT 定义两个指针：
             __xc_z
 ```
 
-CRT 库会使用 `__xc_a` 和 `__xc_z` 来确定全局初始值设定项列表的开头和结尾，原因在于这些设定项在图像加载后在内存中布局的方式。
+因此，CRT 库使用 `__xc_a` 和 `__xc_z` 来确定全局初始值设定项列表的开头和结尾，因为在加载映像后，它们在内存中的布局方式。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [CRT 库功能](../c-runtime-library/crt-library-features.md)

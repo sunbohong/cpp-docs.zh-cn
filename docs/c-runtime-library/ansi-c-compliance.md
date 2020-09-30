@@ -1,6 +1,8 @@
 ---
 title: ANSI C 遵从性
+description: 用于 ANSI C 符合性的 Microsoft C 运行时命名约定的概述。
 ms.date: 11/04/2016
+ms.topic: conceptual
 f1_keywords:
 - Ansi
 helpviewer_keywords:
@@ -13,12 +15,12 @@ helpviewer_keywords:
 - ANSI [C++], C standard
 - Microsoft extensions naming conventions
 ms.assetid: 6be271bf-eecf-491a-a928-0ee2dd60e3b9
-ms.openlocfilehash: 7a4462e84ec01bd236849c6aed024b636b315243
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39a3f9299be7dbef4783faa8e6d08fe6ad8461f5
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742826"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590298"
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 遵从性
 
@@ -26,8 +28,8 @@ ms.locfileid: "57742826"
 
 Microsoft 专用函数和全局变量的名称均以一个下划线开头。 这些名称只能在您的代码范围内进行本地重写。 例如，当您包括 Microsoft 运行时标头文件时，仍然可以通过声明同名的局部变量，在本地重写名为 `_open` 的 Microsoft 专用函数。 但是，不可将此名称用于您自己的全局函数或全局变量。
 
-Microsoft 专用的宏和清单常量的名称均以两个下划线（或一个后面紧跟一个大写字母的前导下划线）开头。 这些标识符的范围是绝对的。 例如，不可将 Microsoft 专用的标识符 _UPPER 用于此目的。
+Microsoft 专用的宏和清单常量的名称均以两个下划线（或一个后面紧跟一个大写字母的前导下划线）开头。 这些标识符的范围是绝对的。 例如，不可将 Microsoft 专用的标识符 _UPPER**** 用于此目的。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [兼容性](../c-runtime-library/compatibility.md)

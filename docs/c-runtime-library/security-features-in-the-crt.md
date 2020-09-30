@@ -1,6 +1,8 @@
 ---
 title: CRT 中的安全功能
-ms.date: 11/04/2016
+description: Microsoft C 运行时中的安全 CRT 函数的概述。
+ms.date: 09/29/2020
+ms.topic: conceptual
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
@@ -24,28 +26,28 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 963f5510350aa3be25586811889189d28a5f7b66
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361011"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589882"
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全功能
 
 许多旧 CRT 函数具有更新、更安全的版本。 如果存在安全函数，则较旧的、安全性更低的版本将标记为已弃用，并且新版本具有 `_s`（“安全”）后缀。
 
-在此上下文中，“已弃用”仅表示不建议使用某个函数；而不表示计划从 CRT 中删除此函数。
+在此上下文中，"已弃用" 表示不建议使用函数。 这并不意味着计划从 CRT 中删除该函数。
 
-安全函数不阻止或纠正安全性错误，而是在出现错误时捕获错误。 它们对错误条件进行附加检查，如果出现错误，它们将调用错误处理程序（请参阅[参数验证](../c-runtime-library/parameter-validation.md)）。
+安全函数不会阻止或更正安全错误。 相反，它们会在出现错误时捕获它们。 它们对错误条件进行额外检查。 如果出现错误，它们将调用错误处理程序， (参见 [参数验证](../c-runtime-library/parameter-validation.md)) 。
 
-例如，`strcpy` 函数无法指明它所复制的字符串对于目标缓冲区是否太大。 但是，它的安全匹配项 `strcpy_s` 可将缓冲区大小作为参数，以便确定是否将发生缓冲区溢出。 如果您使用 `strcpy_s` 将 11 个字符复制到 10 字符缓冲区中，那么就是您做错了；`strcpy_s` 无法纠正您的错误，但它可检测到您的错误，并通过调用无效参数处理程序来告知您此情况。
+例如， `strcpy` 函数无法判断它所复制的字符串对于目标缓冲区是否太大。 它的安全对应 `strcpy_s` 项将缓冲区的大小作为参数使用。 因此，它可以确定是否将发生缓冲区溢出。 如果你使用将 `strcpy_s` 11 个字符复制到10个字符的缓冲区中，这就是一个错误， `strcpy_s` 无法更正你的错误。 但是，它可以检测错误，并通过调用无效参数处理程序来通知您。
 
 ## <a name="eliminating-deprecation-warnings"></a>消除弃用警告
 
-可通过多种方式消除针对较旧的、安全性更低的函数的弃用警告。 最简单的方法是定义 `_CRT_SECURE_NO_WARNINGS` 或使用[警告](../preprocessor/warning.md)杂注。 这将禁用弃用警告，但导致出现警告的安全问题仍存在。 更佳的做法是，将弃用警告保持启用状态并利用新的 CRT 安全功能。
+可通过多种方式消除针对较旧的、安全性更低的函数的弃用警告。 最简单的方法是定义 `_CRT_SECURE_NO_WARNINGS` 或使用[警告](../preprocessor/warning.md)杂注。 将禁用弃用警告，但导致出现警告的安全问题仍存在。 最好将弃用警告保持启用状态并利用新的 CRT 安全功能。
 
-在 C++ 中，执行此操作的最简单方法是使用[安全模板重载](../c-runtime-library/secure-template-overloads.md)，在许多情况下，它会通过将对已弃用函数的调用替换为对这些函数的新安全版本的调用来消除弃用警告。 例如，考虑此对 `strcpy` 的已弃用调用：
+在 c + + 中，执行此操作的最简单方法是使用 [安全模板重载](../c-runtime-library/secure-template-overloads.md)。 在许多情况下，这会通过将对不推荐使用的函数的调用替换为对这些函数的安全版本的调用来消除弃用警告。 例如，考虑此对 `strcpy` 的已弃用调用：
 
 ```
 char szBuf[10];
@@ -62,23 +64,21 @@ strcpy(szBuf, "test"); // warning: deprecated
 
 一些安全功能包括：
 
-- `Parameter Validation`. 在安全函数和许多先前已有的函数版本中验证传递到 CRT 函数的参数。 这些验证包括：
+- `Parameter Validation`. 安全函数及其很多不安全的功能，验证参数。 验证可能包括：
 
-  - 检查已传递到函数的 null 值****。
-
+  - 检查是否为 **NULL** 值。
   - 检查枚举值的有效性。
-
   - 检查整数值是否在有效范围内。
 
 - 有关详细信息，请参阅[参数验证](../c-runtime-library/parameter-validation.md)。
 
-- 开发人员也可访问无效参数的处理程序。 当遇到无效参数时，CRT 提供使用 [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 函数检查这些问题的方法，而不是断言并退出应用程序。
+- 开发人员也可访问无效参数的处理程序。 当函数遇到无效参数时，CRT 使你可以通过 [_set_invalid_parameter_handler _set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)来查看这些问题，而不是断言并退出应用程序。
 
-- `Sized Buffers`. 安全函数要求将缓冲区大小传递到对缓冲区进行写入操作的任何函数。 安全版本会在对缓冲区进行写入之前先验证它是否足够大，以帮助避免导致恶意代码能够执行的危险缓冲区溢出错误。 这些函数通常返回一个 `errno` 类型的错误代码并调用无效参数处理程序（如果缓冲区太小）。 从输入缓冲区读取的函数（如 `gets`）具有需要您指定最大大小的安全版本。
+- `Sized Buffers`. 必须将缓冲区大小传递到任何写入缓冲区的安全函数。 安全版本会在写入缓冲区之前验证缓冲区是否足够大。 这有助于避免可能允许恶意代码执行的危险缓冲区溢出错误。 `errno`如果缓冲区的大小太小，这些函数通常会返回错误代码并调用无效参数处理程序。 从输入缓冲区读取的函数（如 `gets`）具有需要您指定最大大小的安全版本。
 
-- `Null termination`. 某些可能保留非终止字符串的函数具有安全版本，这将确保字符串以 null 结束。
+- `Null termination`. 某些可能包含非终止字符串的函数具有安全版本，这可确保字符串正确地以 null 结尾。
 
-- `Enhanced error reporting`. 安全函数将返回错误代码以及比先前存在的函数返回的错误信息更多的错误信息。 安全函数和许多先前存在的函数现在可设置 `errno`，并且通常会返回 `errno` 代码类型，以便提供更好的错误报告。
+- `Enhanced error reporting`. 安全函数返回的错误代码包含的错误信息超出了预先存在的函数。 现在，安全函数和许多预先存在的函数会设置 `errno` 并经常返回 `errno` 代码类型，以便提供更好的错误报告。
 
 - `Filesystem security`. 默认情况下，安全文件 I/O API 支持安全文件访问。
 

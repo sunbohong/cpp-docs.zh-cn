@@ -1,17 +1,18 @@
 ---
-title: 类型-泛型数学
+title: 泛型类型数学
 description: 介绍 <t h.> 中的宏，使您可以更轻松地根据参数类型编写调用正确数学函数的 C 代码。
+ms.topic: conceptual
 ms.date: 9/3/2020
 helpviewer_keywords:
 - CRT tgmath.h
-ms.openlocfilehash: 8994edcaa05247a16d90b47bca8ec26fca27cda7
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 98c786d91963973ad9384cea2fe6563d1e3174ac
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89557707"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91590220"
 ---
-# <a name="type-generic-math"></a>类型-泛型数学
+# <a name="type-generic-math"></a>泛型类型数学
 
 对于 ISO C 标准版 11 (C11) 和更高版本， \<tgmath.h> 除了包含和以外，标头 \<math.h> \<complex.h> 还提供了根据参数类型调用相应数学函数的宏。
 

@@ -1,16 +1,18 @@
 ---
 title: 文件和流
+description: Microsoft C 运行时库中的文件和流的概述。
 ms.date: 11/04/2016
+ms.topic: conceptual
 helpviewer_keywords:
 - files [C++]
 - streams
 ms.assetid: f61e712b-eac9-4c28-bb18-97c3786ef387
-ms.openlocfilehash: ea11ea76ade8a68c2d8a92e08d3652035c996d3d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 39133cfdb4784c42561a159d6d176bcbd23644af
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750788"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589960"
 ---
 # <a name="files-and-streams"></a>文件和流
 
@@ -26,7 +28,7 @@ ms.locfileid: "57750788"
 
 必须先打开文件，然后才能对该文件执行许多操作。 打开文件会将其与流、标准 C 库（屏蔽了各种文件之间的许多差异）中的数据结构关联。 库将维护类型 FILE 的对象中的每个流的状态。
 
-在程序启动前，目标环境将打开三个文件。 可通过将库函数 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) 与两个参数一起调用来打开文件。 （`fopen` 函数已弃用，请改用 [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)。）第一个自变量是文件名。 第二个参数是指定以下内容的 C 字符串：
+在程序启动前，目标环境将打开三个文件。 可通过将库函数 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) 与两个参数一起调用来打开文件。  (此 `fopen` 函数已弃用，请改用 [fopen_s，_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) 。 ) 第一个参数是文件名。 第二个参数是指定以下内容的 C 字符串：
 
 - 您是否想从该文件中读取数据和/或将数据写入该文件中。
 
@@ -40,7 +42,7 @@ ms.locfileid: "57750788"
 
 © 1989-2001（由 P.J. Plauger 和 Jim Brodie 撰写）。 保留所有权利。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [文本和二进制流](../c-runtime-library/text-and-binary-streams.md)<br/>
 [字节和宽流](../c-runtime-library/byte-and-wide-streams.md)<br/>

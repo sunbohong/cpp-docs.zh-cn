@@ -1,7 +1,8 @@
 ---
 title: CRT 库功能
-description: 包含 Microsoft C 运行时库及其关联编译器选项和预处理器指令的文件。
+description: 包含 Microsoft C 运行时库及其关联编译器选项和预处理器指令的文件列表。
 ms.date: 09/03/2020
+ms.topic: conceptual
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-ms.openlocfilehash: 2f46577ba81c57c2050f0cae4ae2af73152ba2a4
-ms.sourcegitcommit: 0df2b7ab4e81284c5248e4584767591dcc1950c3
+ms.openlocfilehash: 0e0d34c1121f0bf4e2fdfabc521e0365084761eb
+ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609108"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91589778"
 ---
 # <a name="crt-library-features"></a>CRT 库功能
 
@@ -113,6 +114,6 @@ vcruntime 库包含 Visual C++ CRT 实现特定的代码，例如异常处理和
 
 如果程序跨 DLL 边界传递某些 CRT 资源，请务必小心。 即使使用相同版本的 CRT，文件句柄、区域设置和环境变量等资源也可能导致问题。 有关所涉及问题以及如何解决这些问题的详细信息，请参阅[跨 DLL 边界传递 CRT 对象时可能的错误](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)
