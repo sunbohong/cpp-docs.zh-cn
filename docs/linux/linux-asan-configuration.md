@@ -1,13 +1,13 @@
 ---
 title: 配置 Linux 项目以使用地址擦除器
 description: 介绍如何在 Visual Studio 中配置 C++ Linux 项目以使用地址擦除器。
-ms.date: 06/07/2019
-ms.openlocfilehash: 0e862e09d8178ce35fe26f2be138d7f6843b5ef1
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.date: 09/25/2020
+ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
+ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686660"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91414188"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>配置 Linux 项目以使用地址擦除器
 
@@ -33,7 +33,7 @@ ASan 是 C/C++ 的运行时内存错误检测器，可捕获以下错误：
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>为基于 MSBuild 的 Linux 项目启用 ASan
 
 > [!NOTE]
-> 从 Visual Studio 2019 版本 16.4 开始，可通过“配置属性”   > “C/C++”   > “启用地址擦除”  来启用适用于 Linux 项目的 AddressSanitizer。
+> 从 Visual Studio 2019 版本 16.4 开始，可通过“项目属性” > “配置属性” > “C/C++” > “启用地址擦除”来启用适用于 Linux 项目的 AddressSanitizer。
 
 要为基于 MSBuild 的 Linux 项目启用 ASan，请右键单击“解决方案资源管理器”中的项目，然后选择“属性”   。 接下来，导航到“配置属性” > “C/C++” > “擦除器”    。 ASan 通过编译器和链接器标志启用，并且需要重新编译项目才能正常运行。
 
@@ -51,7 +51,7 @@ ASan 是 C/C++ 的运行时内存错误检测器，可捕获以下错误：
 
 ![将 Linux 调试列为配置选项之一的左窗格的屏幕截图。](media/linux-debug-configuration.png)
 
-ASan 选项位于“常规”下  。 以“标志=值”格式输入 ASan 运行时标志，并以分号分隔。
+ASan 选项位于“常规”下  。 以“标志=值”格式输入 ASan 运行时标志，并以空格分隔。 UI 错误地建议使用分号。 使用空格或冒号分隔标志。
 
 ![显示某些地址擦除器运行时标志的“启用地址擦除器”选项的屏幕截图。](media/cmake-settings-asan-options.png)
 
