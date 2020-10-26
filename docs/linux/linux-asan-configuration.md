@@ -1,13 +1,13 @@
 ---
 title: 配置 Linux 项目以使用地址擦除器
 description: 介绍如何在 Visual Studio 中配置 C++ Linux 项目以使用地址擦除器。
-ms.date: 09/25/2020
-ms.openlocfilehash: 7e68d0af4d2ab27820f894bafc58bed444f141d9
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.date: 10/7/2020
+ms.openlocfilehash: 3c2f78346e4a2049e3482ba4093d8a6212f54e9a
+ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414188"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847146"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>配置 Linux 项目以使用地址擦除器
 
@@ -84,5 +84,7 @@ Loaded '/usr/lib/x86_64-linux-gnu/libasan.so.4'. Symbols loaded.
 ```bash
 sudo apt-get install libasan4-dbg
 ```
+
+有关在 Ubuntu 上安装调试符号包的完整说明，请参阅[调试符号包](https://wiki.ubuntu.com/Debug%20Symbol%20Packages)。
 
 如果启用了 ASan，Visual Studio 会在“输出”窗口的“调试”窗格顶部提示安装 ASan 调试符号   。
