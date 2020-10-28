@@ -1,7 +1,7 @@
 ---
 title: /clr（公共语言运行时编译）
 description: 使用 Microsoft c + + 编译器选项/clr 将 c + +/CLI 和 c + + 代码编译为托管代码。
-ms.date: 10/25/2020
+ms.date: 10/27/2020
 f1_keywords:
 - /CLR
 - VC.Project.VCNMakeTool.CompileAsManaged
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: b4634b63e58344893d99e2217e57693a2c169f66
-ms.sourcegitcommit: faecabcdd12ff53eb79dc0df193fc3567f2f037c
+ms.openlocfilehash: 9d27d9fb6226f84c4ea67a8f9387a595ba65468b
+ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92639089"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907592"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>`/clr` (公共语言运行时编译) 
 
-允许应用程序和组件使用公共语言运行时 (CLR) 中的功能。
+允许应用程序和组件使用公共语言运行时中的功能 (CLR) 并启用 c + +/CLI 编译。
 
 ## <a name="syntax"></a>语法
 
@@ -36,7 +36,15 @@ ms.locfileid: "92639089"
 
 - 无
 
-   如果没有选项， **`/clr`** 将为应用程序创建元数据。 其他 CLR 应用程序可以使用该元数据，并且该应用程序也可以使用其他 CLR 组件的元数据中的类型和数据。 有关详细信息，请参阅[混合（本机和托管）程序集](../../dotnet/mixed-native-and-managed-assemblies.md)。
+   如果没有选项， **`/clr`** 则会为组件创建元数据。 元数据可由其他 CLR 应用程序使用，并使组件可以使用其他 CLR 组件的元数据中的类型和数据。 有关详细信息，请参阅[混合（本机和托管）程序集](../../dotnet/mixed-native-and-managed-assemblies.md)。
+
+- **`NetCore`**
+
+   **`/clr:NetCore`** 使用最新的跨平台 .NET framework （也称为 .NET Core）创建组件的元数据和代码。 元数据可由其他 .NET Core 应用程序使用。 而且，选项使组件能够使用其他 .NET Core 组件的元数据中的类型和数据。
+
+- **`nostdlib`**
+
+   指示编译器忽略默认 *`\clr`* 目录。 如果包含 DLL 的多个版本，则编译器会生成错误，如 System.dll。 使用此选项可以指定编译过程中要使用的特定框架。
 
 - **`pure`**
 
@@ -58,15 +66,11 @@ ms.locfileid: "92639089"
 
 - **`initialAppDomain`**
 
-   允许 c + +/CLI 应用程序在 CLR 版本1上运行。  使用 ASP.NET 编译的应用程序 **`initialAppDomain`** 不应由使用的应用程序使用，因为它在 CLR 版本1中不受支持。
-
-- **`nostdlib`**
-
-   指示编译器忽略默认 *`\clr`* 目录。 如果包含 DLL 的多个版本，则编译器会生成错误，如 System.dll。 使用此选项可以指定编译过程中要使用的特定框架。
+   **`initialAppDomain` 已过时** 。 允许 c + +/CLI 应用程序在 CLR 版本1上运行。  使用 ASP.NET 编译的应用程序 **`initialAppDomain`** 不应由使用的应用程序使用，因为它在 CLR 版本1中不受支持。
 
 ## <a name="remarks"></a>注解
 
-托管代码是可以由 CLR 检查和管理的代码。 托管代码可以访问托管对象。 有关详细信息，请参阅[ `/clr ` 限制](clr-restrictions.md)。
+*托管代码* 是可以由 CLR 检查和管理的代码。 托管代码可以访问托管对象。 有关详细信息，请参阅[ `/clr` 限制](clr-restrictions.md)。
 
 有关如何开发用于在 c + + 中定义和使用托管类型的应用程序的信息，请参阅 [运行时平台的组件扩展](../../extensions/component-extensions-for-runtime-platforms.md)。
 
@@ -110,9 +114,12 @@ class {} x;
 
 1. 将 **配置** 下拉列表设置为 " **所有配置** "，并将 " **平台** " 下拉列表设置为 " **所有平台** "。
 
-1. 选择 " **配置属性** " "  >  **高级** " 页。
+1. 选择 " **配置属性** " "  >  **c/c + +** " "  >  **常规** " 页。
 
 1. 修改 " **公共语言运行时支持** " 属性。 选择“确定”以保存更改  。
+
+> [!NOTE]
+> 在 Visual Studio IDE 中， **`/clr`** 可以在 "属性页" 对话框的 " **配置属性** " "  >  **c/c + +** " "  >  **常规** " 页上单独设置编译器选项。 但是，我们建议使用 CLR 模板来创建项目。 它设置成功创建 CLR 组件所需的所有属性。 设置这些属性的另一种方法是使用 "属性页" 对话框的 " **配置属性** " "高级" 页上的 " **公共语言运行时支持** " 属性  >  **Advanced** 。 此属性一次设置与 CLR 相关的其他所有工具选项。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
