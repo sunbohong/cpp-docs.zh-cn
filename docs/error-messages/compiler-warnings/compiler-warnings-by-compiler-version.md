@@ -5,12 +5,12 @@ ms.date: 10/18/2020
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: b470663e3cea8ec62a1737fb19e9ec5a277d27cc
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 5718642f6a7f714dd0a38ec34211ddc0be4e8fd2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176317"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924697"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>编译器警告（按编译器版本）
 
@@ -51,13 +51,13 @@ ms.locfileid: "92176317"
 
 以下部分列出了可以使用编译器选项取消的每个 Visual C++ 版本的所引入的警告 **`/Wv`** 。 **`/Wv`** 选项无法禁止显示未列出的警告，这 predate 了编译器的指定版本。
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-version-167-compiler-version-1927291120"></a>Visual Studio 2019 版本16.7 中引入的警告 (编译器版本 19.27.29112.0) 
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.26`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
 | C5209 | `the C++20 syntax for an init-capture has changed to '& ...opt identifier initializer'` |
@@ -77,7 +77,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.25`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C5207 | `the simple requirement asserts the validity of expression 'e->id'. Did you mean '{ e } -> id'? You can suppress the warning using '{ e->id }'` |
 | C5208 | `unnamed class used in typedef name cannot declare members other than non-static data members, member enumerations, or member classes` |
@@ -86,7 +86,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.24`** 。
 
-|警告|Message|
+|警告|消息|
 |-|-|
 | C5061 | `the use of a comma operator as a subscript expression has been deprecated` |
 | C5062 | `enum direct list initialization between 'type-1' and 'type-2' is no longer supported` |
@@ -100,7 +100,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.23`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C5200 | `feature 'feature-name' requires compiler flag 'option-name'` | 与语言功能的 C2429 等效的警告
 | C5201 | `a module declaration can appear only at the start of a translation unit unless a global module fragment is used` |
@@ -111,7 +111,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.22`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4856 | `'value' is not a valid argument for '/d1initAll:FillPattern' (value must be between 0 and 255). Command-line flag ignored` |
 | C4857 | `C++/CLI mode does not support C++ versions newer than C++17; setting language to /std:c++17` |
@@ -120,7 +120,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.21`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4855 | `implicit capture of 'this' via '[=]' is deprecated in 'version'` |
 | C5054 | `operator 'operator-name': deprecated between enumerations of different types` |
@@ -135,7 +135,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.20`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C5052 | `Keyword 'keyword-name' was introduced in C++<version> and requires use of the 'option-name' command-line option` |
 | C5053 | `support for 'explicit(<expr>)' in C++17 and earlier is a vendor extension` |
@@ -144,20 +144,20 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.15`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
 | C4854 | `binding dereferenced null pointer to reference has undefined behavior` |
 | C5051 | `attribute 'attribute-name' requires at least 'standard-level'; ignored` |
 
 ::: moniker-end
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 版本15.8 中引入的警告 (编译器版本 19.15.26726.0) 
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.14`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
 | C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
@@ -183,7 +183,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.13`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
@@ -192,7 +192,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.12`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
@@ -200,7 +200,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.11`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
 | C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
@@ -214,7 +214,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.10`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4597 | `undefined behavior: description` |
 | C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
@@ -236,7 +236,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.00`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
 | C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
@@ -249,7 +249,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.00.23918`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4467 | `usage of ATL attributes is deprecated` |
 | C4596 | `'name': illegal qualified name in member declaration` |
@@ -260,7 +260,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.00.23506`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4466 | `Could not perform coroutine heap elision` |
 | C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
@@ -271,7 +271,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:19.00.23026`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
 | C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
@@ -282,7 +282,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:18`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4427 | `'error': overflow in constant division, undefined behavior` |
 | C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
@@ -341,7 +341,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:17`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
 | C4316 | `'type': object allocated on the heap may not be aligned number` |
@@ -370,7 +370,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:16`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4330 | `attribute 'attribute' for section 'section' ignored` |
 | C4415 | `duplicate __declspec(code_seg('name'))` |
@@ -413,7 +413,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:15`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4352 | `'name': intrinsic function already defined` |
 | C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
@@ -429,7 +429,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:14`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
 | C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
@@ -444,7 +444,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:13`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
 | C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
@@ -587,7 +587,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:13.00.9466`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4343 | `#pragma optimize(description,off) overrides /Og option` |
 | C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
@@ -623,7 +623,7 @@ ms.locfileid: "92176317"
 
 以后的版本中的这些警告和所有警告都将使用编译器选项取消 **`/Wv:12`** 。
 
-| 警告 | Message |
+| 警告 | 消息 |
 |--|--|
 | C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
 | C4097 | `expected pragma parameter to be 'restore' or 'off'` |
@@ -768,7 +768,7 @@ ms.locfileid: "92176317"
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C/c + + 编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [编译器警告 C4000-C5999](compiler-warnings-c4000-c5999.md) \

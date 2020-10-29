@@ -4,16 +4,16 @@ description: MSBuild 用于 Visual Studio c + + 项目的支持文件、属性�
 ms.date: 10/14/2020
 helpviewer_keywords:
 - MSBuild overview
-ms.openlocfilehash: b08db751bfe04c7cd3ce2c2f4741c9ee8956cf74
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: e99b9a428d9c6149debc06e1dfab7a69c3590196
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099675"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924388"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>C++ 项目的 MSBuild 内部项
 
-如果在 IDE 中设置项目属性并保存项目，则 Visual Studio 会将项目设置写入项目文件。 项目文件包含项目特有的设置。 但是，它并不包含生成项目所需的所有设置。 项目文件包含 `Import` 元素，该元素包括由其他支持文件形成的网络**。 支持文件包含生成项目所需的剩余属性、目标和设置。
+如果在 IDE 中设置项目属性并保存项目，则 Visual Studio 会将项目设置写入项目文件。 项目文件包含项目特有的设置。 但是，它并不包含生成项目所需的所有设置。 项目文件包含 `Import` 元素，该元素包括由其他支持文件形成的网络  。 支持文件包含生成项目所需的剩余属性、目标和设置。
 
 支持文件中的大部分目标和属性只用于实现生成系统。 本文介绍可在 MSBuild 命令行中指定的有用目标和属性。 若要了解更多目标和属性，请浏览支持文件目录中的文件。
 
@@ -21,7 +21,7 @@ ms.locfileid: "92099675"
 
 默认情况下，主要的 Visual Studio 支持文件位于以下目录中。 此信息特定于版本。
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="visual-studio-2019"></a>Visual Studio 2019
 
@@ -39,7 +39,7 @@ ms.locfileid: "92099675"
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ### <a name="visual-studio-2017"></a>Visual Studio 2017
 
@@ -133,9 +133,9 @@ Visual Studio 支持文件中有数百个目标。 但是大多数目标都是�
 | Xsd | 执行 XML 架构定义工具 (Xsd.exe)。 *请参阅注释。* |
 
 > [!NOTE]
-> 在 Visual Studio 2017 和更高版本中，已弃用对 xsd 文件的 C++ 项目支持****。 仍可通过向 GAC 手动添加 CppCodeProvider.dll 来使用 Microsoft.VisualC.CppCodeProvider********。
+> 在 Visual Studio 2017 和更高版本中，已弃用对 xsd 文件的 C++ 项目支持  。 仍可通过向 GAC 手动添加 CppCodeProvider.dll 来使用 Microsoft.VisualC.CppCodeProvider  。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSBuild 任务参考](/visualstudio/msbuild/msbuild-task-reference)\
 [BscMake 任务](/visualstudio/msbuild/bscmake-task)\
