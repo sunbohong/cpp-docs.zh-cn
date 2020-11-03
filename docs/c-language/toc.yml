@@ -481,23 +481,7 @@
         - name: 定义和约定
           href: ../c-language/definitions-and-conventions.md
         - name: 词法语法
-          items:
-            - name: 词法语法
-              href: ../c-language/lexical-grammar.md
-            - name: 标记摘要
-              href: ../c-language/summary-of-tokens.md
-            - name: 关键字摘要
-              href: ../c-language/summary-of-keywords.md
-            - name: 标识符摘要
-              href: ../c-language/summary-of-identifiers.md
-            - name: 常量摘要
-              href: ../c-language/summary-of-constants.md
-            - name: 字符串文本的摘要
-              href: ../c-language/summary-of-string-literals.md
-            - name: 运算符 (C)
-              href: ../c-language/operators-c.md
-            - name: 标点符号
-              href: ../c-language/punctuators.md
+          href: ../c-language/lexical-grammar.md
         - name: 短语结构语法
           items:
             - name: 短语结构语法
