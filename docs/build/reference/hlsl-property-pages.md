@@ -23,26 +23,26 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 - VC.Project.FXCompilerTool.CompileD2DCustomEffect
 - VC.Project.FXCompilerTool.MultiProcFXC
-ms.openlocfilehash: a45ae433e5adaa8aeaf32215d4af7ad0a247af04
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 629a242d3698c9c3c2d3c697298b5c6625e4768f
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606410"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344678"
 ---
 # <a name="hlsl-compiler-property-pages"></a>HLSL 编译器属性页
 
-可以使用 HLSL 编译器 (fxc.exe) 属性页来配置单个 HLSL 着色器文件生成的方式。 还可以使用 "**命令行**" 属性页的 "**其他选项**" 属性指定 HLSL 编译器的命令行参数。这包括无法使用 HLSL 属性页的其他属性进行配置的参数。 有关 HLSL 编译器的其他信息，请参阅[效果编译器工具](https://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)
+可以使用 HLSL 编译器 (fxc.exe) 属性页来配置单个 HLSL 着色器文件生成的方式。 还可以使用 " **命令行** " 属性页的 " **其他选项** " 属性指定 HLSL 编译器的命令行参数。这包括无法使用 HLSL 属性页的其他属性进行配置的参数。 有关 HLSL 编译器的其他信息，请参阅[效果编译器工具](/windows/win32/direct3dtools/fxc)
 
 ## <a name="hlsl-general-property-page"></a>HLSL 常规属性页
 
 ### <a name="additional-include-directories"></a>附加包含目录
 
-指定一个或多个要添加到包含路径中的目录；存在多个目录时，请用分号分隔。 (/I [路径])
+指定一个或多个要添加到包含路径中的目录；存在多个目录时，请用分号分隔。  (/I [path] ) 
 
 ### <a name="entrypoint-name"></a>入口点名称
 
-指定着色器的入口点名称 (/E [name])
+指定着色器的入口点的名称 (/E [name] ) 
 
 ### <a name="disable-optimizations"></a>禁用优化
 
@@ -58,15 +58,15 @@ HLSL 编译器的“/Od”命令行参数隐式应用“/Gfp”命令行参数�
 
 指定着色器类型。 不同种类的着色器实现图形管道的不同部分。 某些类型的着色器仅可用于较新的着色器模型（由“着色器模型”属性指定），例如，计算着色器在着色器模型 5 中引入。
 
-此属性对应于 HLSL 编译器的 **/T \[type]_\[model]** 命令行参数的 **\[type]** 部分。 “着色器模型”属性指定参数的“[model]”部分。
+此属性对应于 HLSL 编译器的 **/t \[ 类型] _ \[ 模型]** 命令行参数的 **\[ 类型]** 部分。 “着色器模型”属性指定参数的“[model]”部分。
 
-**方案**
+**选项**
 
 - **效果**
 - **顶点着色器**
 - **像素着色器**
 - **几何着色器**
-- **凸着色器**
+- **外壳着色器**
 - **域着色器**
 - **计算着色器**
 - **Library**
@@ -76,11 +76,11 @@ HLSL 编译器的“/Od”命令行参数隐式应用“/Gfp”命令行参数�
 
 指定着色器模型。 不同的着色器模型具有不同的功能。 一般情况下，较新的着色器模型提供扩展功能，但需要更新式图形硬件来运行着色器代码。 某些类型的着色器（由“着色器类型”属性指定）仅可用于较新的着色器模型，例如，计算着色器在着色器模型 5 中引入。
 
-此属性对应于 HLSL 编译器的 **/T \[type]_\[model]** 命令行参数的 **\[model]** 部分。 “着色器类型”属性指定参数的“[type]”部分。
+此属性对应于 HLSL 编译器的 **/t \[ 类型] _ \[ 模型]** 命令行参数的 **\[ model** 部分。 “着色器类型”属性指定参数的“[type]”部分。
 
 ### <a name="all-resources-bound"></a>所有资源已绑定
 
-编译器将假定在着色器执行 (/all_resources_bound) 的持续时间内, 着色器可能引用的所有资源都已绑定并且处于良好状态。 适用于着色器模型 5.1 及更高版本。
+编译器将假设着色器可能引用的所有资源都已绑定，并且在着色器执行 (/all_resources_bound) 期间处于良好状态。 适用于着色器模型 5.1 及更高版本。
 
 ### <a name="enable-unbounded-descriptor-tables"></a>启用未绑定的描述符表
 
@@ -88,13 +88,13 @@ HLSL 编译器的“/Od”命令行参数隐式应用“/Gfp”命令行参数�
 
 ### <a name="set-root-signature"></a>设置根签名
 
-将根签名附加到着色器字节码 (/setrootsignature)。 适用于着色器模型 5.0 及更高版本。
+将根签名附加到着色器字节码 (/setrootsignature) 。 适用于着色器模型 5.0 及更高版本。
 
 ### <a name="preprocessor-definitions"></a>预处理器定义
 
 添加一个或多个预处理器符号定义以应用于 HLSL 源代码文件。 使用分号来隔开符号定义。
 
-此属性对应于 HLSL 编译器的 /D \[definitions] 命令行参数。
+此属性对应于 HLSL 编译器的 **/d \[ 定义]** 命令行参数。
 
 ### <a name="compile-a-direct2d-custom-pixel-shader-effect"></a>编译 Direct2D 自定义像素着色器效果
 
@@ -108,7 +108,7 @@ HLSL 编译器的“/Od”命令行参数隐式应用“/Gfp”命令行参数�
 
 ### <a name="suppress-startup-banner"></a>取消显示启动版权标志
 
-取消显示启动版权标志和信息消息。 /nologo
+取消显示启动版权标志和信息消息。  (/nologo) 
 
 ### <a name="treat-warnings-as-errors"></a>将警告视为错误
 
@@ -118,25 +118,25 @@ HLSL 编译器的“/Od”命令行参数隐式应用“/Gfp”命令行参数�
 
 ### <a name="header-variable-name"></a>标头变量名称
 
-为头文件中的变量名称指定名称 (/Vn [名称])
+为头文件中的变量名称指定名称 (/Vn [name] ) 
 
-### <a name="header-file-name"></a>标头文件名
+### <a name="header-file-name"></a>头文件名
 
-为包含对象代码的头文件指定名称。 (/Fh [名称])
+为包含对象代码的头文件指定名称。  (/Fh [name] ) 
 
 ### <a name="object-file-name"></a>对象文件名
 
-为对象文件指定名称。 (/Fo [名称])
+为对象文件指定名称。  (/Fo [名称] ) 
 
 ### <a name="assembler-output"></a>汇编程序输出
 
-指定汇编语言输出文件的内容。 (/Fc,/Fx)
+指定汇编语言输出文件的内容。  (/Fc，/Fx) 
 
-**方案**
+**选项**
 
-- **无列表**-无列表。
-- **仅程序集列表**-程序集代码文件
-- **程序集代码和 hex**程序集代码和十六进制列表文件
+- **无列表** -无列表。
+- **仅程序集列表** -程序集代码文件
+- **程序集代码和 hex** 程序集代码和十六进制列表文件
 
 ### <a name="assembler-output-file"></a>汇编程序输出文件
 
@@ -144,6 +144,6 @@ HLSL 编译器的“/Od”命令行参数隐式应用“/Gfp”命令行参数�
 
 ## <a name="see-also"></a>请参阅
 
-[C++项目属性页引用](property-pages-visual-cpp.md)<br>
-[“命令行”属性页](command-line-property-pages.md)<br>
-[编译着色器](https://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)
+[C++ 项目属性页参考](property-pages-visual-cpp.md)<br>
+["命令行" 属性页](command-line-property-pages.md)<br>
+[编译着色器](/windows/win32/direct3dhlsl/dx-graphics-hlsl-part1)
