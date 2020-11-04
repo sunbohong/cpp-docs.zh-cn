@@ -3,20 +3,20 @@ title: 在 Visual Studio 中创建 CMake Linux 项目
 description: 如何在 Visual Studio 中创建 Linux CMake 项目
 ms.date: 08/06/2020
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 5753dbb37c11686becb3e141261284b68468a3bc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8a960f89274fbbf235b88fdcd787ee6de8ab988b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507958"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921797"
 ---
 # <a name="create-a-cmake-linux-project-in-visual-studio"></a>在 Visual Studio 中创建 CMake Linux 项目
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 Linux 支持在 Visual Studio 2017 及更高版本中提供。 若要查看这些版本的文档，请将目录上方的“版本”下拉列表设置为“Visual Studio 2017”或“Visual Studio 2019”。
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 建议为跨平台或将设为开源的项目使用 CMake。 可以使用 CMake 项目在 Windows、适用于 Linux 的 Windows 子系统 (WSL) 和远程系统上生成和调试相同源代码。
 
@@ -33,7 +33,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。 若要查看这�
 - ninja-build（Visual Studio 2019 或更高版本）
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 使用 Visual Studio 中的 CMake 支持需要 CMake 3.8 中引入的服务器模式支持。 对于 Microsoft 提供的 CMake 变体，请在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 中下载最新的预生成二进制文件。
 
 二进制文件安装在 `~/.vs/cmake` 中。 部署二进制文件后，项目将自动重新生成。 如果由 CMakeSettings.json 中的 `cmakeExecutable` 字段指定的 CMake 无效（不存在或是不受支持的版本）且预生成二进制文件存在，则 Visual Studio 将忽略 `cmakeExecutable` 并使用预生成二进制文件。
@@ -41,7 +41,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。 若要查看这�
 Visual Studio 2017 无法从头开始创建 CMake 项目，但你可以打开包含现有 CMake 项目的文件夹，如下一节中所述。
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 可以使用 Visual Studio 2019 在远程 Linux 系统或 WSL 上生成和调试，CMake 将在该系统上调用。 应在目标计算机上安装 Cmake 版本 3.14 或更高版本。
 
 请确保目标计算机具有最新版本的 CMake。 发行版的默认包管理器提供的版本通常不够新，不足以支持 Visual Studio 所需的所有功能。 Visual Studio 2019 会检测 Linux 系统上是否安装了最新版本的 CMake。 如果未找到，Visual Studio 将在编辑器窗格顶部显示一个信息栏。 它用于从 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 为你安装 CMake。
@@ -52,7 +52,7 @@ Visual Studio 2017 无法从头开始创建 CMake 项目，但你可以打开包
 
 若要在 Visual Studio 2019 中创建新的 Linux CMake 项目，请执行以下操作：
 
-1. 在 Visual Studio 中选择“**文件 > 新建项目**”，或按 **Ctrl + Shift + N**。
+1. 在 Visual Studio 中选择“ **文件 > 新建项目** ”，或按 **Ctrl + Shift + N** 。
 1. 将“语言”设置为“C++”，然后搜索“CMake” 。 然后，选择“下一步”。 输入“名称”和“位置”，然后选择“创建”  。
 
 或者，可以在 Visual Studio 2019 中打开自己的 CMake 项目。 下面的部分说明如何执行此操作。
@@ -66,7 +66,7 @@ Visual Studio 创建一个最小的 CMakeLists.txt 文件，其中只包含可�
 - [在 CMake 项目中轻松添加、删除和重命名文件和目标](https://devblogs.microsoft.com/cppblog/easily-add-remove-and-rename-files-and-targets-in-cmake-projects/)
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="open-a-cmake-project-folder"></a>打开 CMake 项目文件夹
 

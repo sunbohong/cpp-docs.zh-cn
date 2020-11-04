@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 57276f61ca8ff848db0313935bc1841de50f9874
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 1090bf98332a51773e53bfcda51e944dc09c5221
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075603"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924735"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>演练：在命令行上编译 C 程序
 
@@ -37,7 +37,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行工�
 
 根据使用的 Visual Studio 版本，操作说明会有所不同。 若要查看 Visual Studio 首选项的文档，请使用“版本”选择器控件  。 它位于此页面上目录表的顶部。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>在 Visual Studio 2019 中打开开发人员命令提示
 
@@ -47,7 +47,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行工�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>在 Visual Studio 2017 中打开开发人员命令提示
 
@@ -57,7 +57,7 @@ Visual Studio 生成工具只安装生成 C 和 C++ 程序所需的命令行工�
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>在 Visual Studio 2015 中打开开发人员命令提示
 

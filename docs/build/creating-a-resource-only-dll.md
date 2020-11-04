@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
 no-loc:
 - noentry
-ms.openlocfilehash: ef79de77e35cbef6acd4af1cec82a4edc1b7d105
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 5b7b3b4767c32bce52ad2c36c9ecc5d34b2e29b4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821338"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922161"
 ---
 # <a name="creating-a-resource-only-dll"></a>创建纯资源 DLL
 
@@ -23,7 +23,7 @@ ms.locfileid: "76821338"
 
 若要创建纯资源 DLL，请创建一个新的 Windows DLL（非 MFC）项目，并将资源添加到该项目中：
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 1. 在“新建项目”  对话框中选择“Win32 项目”  。 输入项目和解决方案名称，然后选择“确定”  。
 
@@ -38,7 +38,7 @@ ms.locfileid: "76821338"
 1. 生成 DLL。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 1. 在“新建项目”  对话框中选择“Windows 桌面向导”  ，然后选择“下一步”  。 在“配置新项目”  页面上，输入项目和解决方案名称，然后选择“创建”  。
 

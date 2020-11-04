@@ -4,12 +4,12 @@ description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: bf34bf39bc41841be72c9400ec63c501d7aa56a3
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: df59509f37567a6fe1d1e0cc6d5b9f38b953009c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686327"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924407"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中编辑和重构 C++ 代码
 
@@ -37,13 +37,13 @@ IntelliCode 是 AI 辅助的 IntelliSense。 它将最有可能的候选项置�
 
 ![C&#43;&#43; IntelliCode](../ide/media/intellicode-cpp.png "C++ IntelliCode")
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 在 Visual Studio 2019 中，IntelliCode 可用作 C++ 桌面开发工作负载中的可选组件。 要确保 IntelliCode 对 C++ 可用，请转到“工具” > “选项” > “IntelliCode” > “常规”并将“C++ 基础模型”设置为“启用”     。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 在 Visual Studio 2017 中，IntelliCode 可用作 Visual Studio Marketplace 中的扩展。
 

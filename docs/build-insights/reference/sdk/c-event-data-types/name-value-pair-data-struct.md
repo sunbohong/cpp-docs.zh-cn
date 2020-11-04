@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 384ed0340cd8de09101e2fe3e62e1a75f25e2bc1
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: bab9f7ccedc4a94478d50863f2fae248722468e2
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041687"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923541"
 ---
 # <a name="name_value_pair_data-structure"></a>NAME_VALUE_PAIR_DATA 结构
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `NAME_VALUE_PAIR_DATA` 结构描述名称和值对。
 

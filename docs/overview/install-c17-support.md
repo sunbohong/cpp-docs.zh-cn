@@ -5,26 +5,26 @@ ms.date: 09/11/2020
 helpviewer_keywords:
 - Install preview Windows SDK
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 86de38feb66ab0a057005140d22cf0dd3b03d4cf
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: 9310b0dbb4e436245de820622ec9dd0f52292871
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90078991"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924415"
 ---
 # <a name="install-c11-and-c17-support-in-visual-studio"></a>在 Visual Studio 中安装 C11 和 C17 支持
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 支持 C11 和 C17 标准需要 Visual Studio 2019 16.8 或更高版本。 若要查看此版本对应的文档，请将本文的 Visual Studio“版本”选择器控件设置为“Visual Studio 2019”。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 从 Visual Studio 2019 版本 16.8 开始，提供对 C11 和 C17 的支持。 支持需要更新的通用 C 运行时 (UCRT) 和最新的 Windows SDK 更新，才能正确地使用一致的预处理器 ([`/Zc:preprocessor`](../build/reference/zc-preprocessor.md))。
 
-Windows SDK 版本与 Windows OS 版本相对应。 由于 Windows 版本未进行这些更改，因此需要 *Insider Preview Windows SDK*。 这是 Windows SDK 的预览版本，它与当前由 Windows Insider 外部测试的 Windows 版本相对应。 安装 Insider Preview Windows 10 SDK 后，配置为使用最新的 Windows SDK 的 Visual Studio 项目将使用 Insider Preview。
+Windows SDK 版本与 Windows OS 版本相对应。 由于 Windows 版本未进行这些更改，因此需要 *Insider Preview Windows SDK* 。 这是 Windows SDK 的预览版本，它与当前由 Windows Insider 外部测试的 Windows 版本相对应。 安装 Insider Preview Windows 10 SDK 后，配置为使用最新的 Windows SDK 的 Visual Studio 项目将使用 Insider Preview。
 
 ## <a name="prerequisites"></a>先决条件
 

@@ -2,48 +2,48 @@
 title: 在 Visual Studio 中连接到你的目标 Linux 系统
 description: 如何从 Visual Studio C++ 项目连接到远程 Linux 计算机或适用于 Linux 的 Windows 子系统。
 ms.date: 01/17/2020
-ms.openlocfilehash: 624dce6bb05e4f4a961628e0c6f455e11c14dff8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da74d1c735a29304fdf46e920eac45580f386259
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364366"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921784"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>在 Visual Studio 中连接到你的目标 Linux 系统
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 可以将 Linux 项目配置为以远程计算机或适用于 Linux 的 Windows 子系统 (WSL) 为目标。 对于远程计算机和 WSL，需要在 Visual Studio 2017 中设置远程连接。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 可以将 Linux 项目配置为以远程计算机或适用于 Linux 的 Windows 子系统 (WSL) 为目标。 对于远程计算机，需要在 Visual Studio 中设置远程连接。 若要连接到 WSL，请直接跳到[连接到 WSL](#connect-to-wsl) 部分。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 如果你使用的是远程连接，Visual Studio 会在远程计算机上生成 C++ Linux 项目。 至于是物理计算机、云中的 VM，还是 WSL，这并不重要。
 为了生成项目，Visual Studio 会将源代码复制到远程 Linux 计算机。 然后，代码会根据 Visual Studio 设置进行编译。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 > [!NOTE]
 > Visual Studio 2019 版本 16.5 及更高版本还支持与 Linux 系统进行符合美国联邦信息处理标准 (FIPS) 140-2 的安全加密连接，以用于远程开发。 若要使用符合 FIPS 的连接，请改为按照[设置符合 FIPS 的安全远程 Linux 开发](set-up-fips-compliant-secure-remote-linux-development.md)中的步骤操作。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="set-up-the-ssh-server-on-the-remote-system"></a>在远程系统上设置 SSH 服务器
 
@@ -102,7 +102,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
    ::: moniker-end
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
 ## <a name="logging-for-remote-connections"></a>远程连接的日志记录
 
@@ -116,11 +116,11 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>用于连接管理器的命令行实用工具  
 
-**Visual Studio 2019 版本 16.5 或更高版本**：ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 有关 ConnectionManager 命令的示例和完整参考，请参阅 [ConnectionManager 参考](connectionmanager-reference.md)。  
+**Visual Studio 2019 版本 16.5 或更高版本** ：ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 有关 ConnectionManager 命令的示例和完整参考，请参阅 [ConnectionManager 参考](connectionmanager-reference.md)。  
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="tcp-port-forwarding"></a>TCP 端口转发
 
@@ -140,13 +140,13 @@ gdbserver 可用于在嵌入式设备上进行调试。 如果无法启用 TCP �
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 在 Visual Studio 2017 中，使用用于远程 Linux 计算机的相同步骤连接到 WSL。 使用 localhost  作为主机名  。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 对结合使用 C++ 与[适用于 Linux 的 Windows 子系统 (WSL)](/windows/wsl/about)，Visual Studio 2019 版本 16.1 添加了本机支持。 这意味着可以直接在本地 WSL 安装上生成和调试。 不再需要添加远程连接或配置 SSH。 可在此处找到有关[如何安装 WSL](/windows/wsl/install-win10)的详细信息。
 

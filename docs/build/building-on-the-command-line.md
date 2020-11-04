@@ -10,12 +10,12 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 1fe8e59c85e0c6b00bff4de639267a44c6ae369e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 72fff7e788e4ffd938867dfa662c98fc0305ec0c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838797"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922187"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>通过命令行使用 Microsoft C++ 工具集
 
@@ -48,17 +48,17 @@ ms.locfileid: "88838797"
 - **x86_x64 兼容工具命令提示符** - 将环境设置为使用 64 位 x64 本机工具生成 32 位 x86 本机代码。
 - **x64_x86 兼容工具命令提示符** - 将环境设置为使用 64 位 x64 本机工具生成 32 位 x86 本机代码。
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 “开始”菜单文件夹和快捷方式名称因安装的 Visual Studio 版本而异。 如果设置了一个，它们还取决于该安装的“昵称”  。 例如，假设你安装了 Visual Studio 2019，并为其提供了一个昵称“最新”  。 则开发人员命令提示快捷方式将命名为“VS 2019 的开发人员命令提示(最新)”，位于名为“Visual Studio 2019”的文件夹中   。
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 “开始”菜单文件夹和快捷方式名称因安装的 Visual Studio 版本而异。 如果设置了一个，它们还取决于该安装的“昵称”  。 例如，假设你安装了 Visual Studio 2017，并为其提供了一个昵称“最新”  。 则开发人员命令提示快捷方式将命名为“VS 2017 开发人员命令提示(最新)”，位于名为“Visual Studio 2017”的文件夹中   。
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 “开始”菜单文件夹和快捷方式名称因安装的 Visual Studio 版本而异。 例如，假设你安装了 Visual Studio 2015。 则开发人员命令提示快捷方式将命名为“VS 2015 的开发人员命令提示(最新)”  。
 
@@ -76,17 +76,17 @@ ms.locfileid: "88838797"
 
 如果想要在现有命令提示窗口中设置生成环境，则可以使用安装程序创建的命令文件之一。 我们建议你在新的命令提示窗口中设置环境。 但不建议你稍后在同一命令窗口中切换环境。
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 命令文件的位置取决于所安装的 Visual Studio 的版本以及在安装过程中所做的选择。 对于 Visual Studio 2019，64 位系统上的典型安装位置位于 \\Program Files (x86)\\Microsoft Visual Studio\\2019\\版本  中。 “版本”可以是 Community、Professional、Enterprise、BuildTools 或提供的其他昵称。
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 命令文件的位置取决于所安装的 Visual Studio 的版本以及在安装过程中所做的选择。 对于 Visual Studio 2017，64 位系统上的典型安装位置位于 \\Program Files (x86)\\Microsoft Visual Studio\\2017\\ 版本中  。 “版本”可以是 Community、Professional、Enterprise、BuildTools 或提供的其他昵称  。
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 命令文件的位置取决于 Visual Studio 版本和安装目录。 对于 Visual Studio 2015，典型安装位置位于 \\Program Files (x86)\\Microsoft Visual Studio 14.0 中。
 
@@ -94,12 +94,12 @@ ms.locfileid: "88838797"
 
 主开发人员命令提示命令文件 (VsDevCmd.bat) 位于 Common7\\Tools 子目录中。 如果未指定任何参数，该命令文件会将环境设置为使用 x86 本机工具生成 32 位 x86 代码。
 
-::: moniker range=">= vs-2017"
+::: moniker range=">= msvc-150"
 
 还可使用更多命令文件设置特定的生成体系结构。 可用的命令文件取决于已安装的 Visual Studio 工作负载和选项。 在 Visual Studio 2017 和 Visual Studio 2019 中，可以在 VC\\Auxiliary\\Build 子目录中找到它们。
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 还可使用更多命令文件设置特定的生成体系结构。 可用的命令文件取决于已安装的 Visual Studio 工作负载和选项。 在 Visual Studio 2015 中，命令文件位于 VC、VC\\bin 或 VC\\bin\\“architecture”子目录中，其中“architectures”是本机或兼容编译器选项   。
 
@@ -130,7 +130,7 @@ ms.locfileid: "88838797"
 
 ### <a name="vcvarsall-syntax"></a>vcvarsall 语法
 
-> **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [ **-vcvars_ver=** _vcversion_]
+> **vcvarsall.bat** [ *architecture* ] [ *platform_type* ] [ *winsdk_version* ] [ **-vcvars_ver=** _vcversion_ ]
 
 architecture<br/>
 此可选参数指定要使用的主机和目标体系结构。 如果未指定体系结构，则使用默认生成环境  。 支持以下参数：
@@ -155,14 +155,14 @@ winsdk_version<br/>
 vcversion<br/>
 （可选）指定要使用的 Visual Studio 编译器工具集。 默认情况下，环境设置为使用当前的 Visual Studio 编译器工具集。
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 使用“-vcvars_ver=14.2x.yyyyy”指定 Visual Studio 2019 编译器工具集的特定版本  。
 
 使用“-vcvars_ver=14.16”指定 Visual Studio 2017 编译器工具集的最新版本。
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 使用“-vcvars_ver=14.16”指定 Visual Studio 2017 编译器工具集的最新版本  。
 
@@ -182,21 +182,21 @@ vcversion<br/>
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>创建自己的命令提示符快捷方式
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 打开开发人员命令提示快捷方式的“属性”对话框，查看使用的命令目标。 例如，“VS 2019 的 x64 本机工具命令提示符”快捷方式的目标如以下所示  ：
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 打开开发人员命令提示快捷方式的“属性”对话框，查看使用的命令目标。 例如，“VS 2017 的 x64 本机工具命令提示符”快捷方式的目标如以下所示  ：
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 打开开发人员命令提示快捷方式的“属性”对话框，查看使用的命令目标。 例如，“VS2015 x64 本机工具命令提示符”快捷方式的目标如以下所示  ：
 
@@ -206,17 +206,17 @@ vcversion<br/>
 
 特定于体系结构的批处理文件设置“architecture”参数并调用 vcvarsall.bat  。 可以将相同的选项传递给这些批处理文件，就像传递给 vcvarsall.bat 一样，或者可以直接调用 vcvarsall.bat。 若要为自己的命令快捷方式指定参数，请用双引号将其添加到命令末尾。 例如，可以通过下面的快捷方式，在 64 位平台上使用最新的 Windows SDK 为 UWP 生成 ARM 代码。 若要使用早期的编译器工具集，请指定版本号。 在快捷方式中使用类似此命令目标的内容：
 
-::: moniker range=">= vs-2019"
+::: moniker range=">= msvc-160"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.16`
 
 ::: moniker-end
-::: moniker range="= vs-2017"
+::: moniker range="= msvc-150"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64_arm uwp -vcvars_ver=14.0`
 
 ::: moniker-end
-::: moniker range="< vs-2017"
+::: moniker range="< msvc-150"
 
 `%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64 -vcvars_ver=12.0`
 

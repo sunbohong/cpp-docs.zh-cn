@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 3694478e22bfd2a3c58a72ba0c3ad2d15351bc9f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: a8e23a3c384ce9b5ac7e73d18958246b52eb95b5
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078692"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919379"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio projects - C++
 
@@ -21,7 +21,7 @@ Visual Studio 项目是基于 MSBuild 生成系统的项目  。 MSBuild 是 Vis
 
 ## <a name="create-a-project"></a>创建项目
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 可通过选择“文件” > “新建” > “项目”，然后将“语言”设为 C++，创建 C++ 项目     。 在结果列表中，可看到项目模板列表，可通过设置“平台”或“项目类型”以及通过在搜索框中键入关键字进行筛选   。
 
@@ -29,7 +29,7 @@ Visual Studio 项目是基于 MSBuild 生成系统的项目  。 MSBuild 是 Vis
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 可通过选择“文件” > “新建” > “项目”，然后选择左侧窗格中的 C++，创建 C++ 项目    。 可在中心窗格中看到项目模板列表：
 

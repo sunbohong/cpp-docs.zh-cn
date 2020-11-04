@@ -4,18 +4,18 @@ description: Visual Studio 中的 Microsoft C/C++ 编译器和工具的新增功
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 5e82e39b9480b83e2d1c8143338654467a08b7d0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c5e1f368060b650781c413a03e1bc2f9e368941a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500264"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924850"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中的 C++ 新变化
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
-Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的许多 bug 和问题。 其中许多问题是客户通过“发送反馈”下的[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true)和[提供建议](https://developercommunity.visualstudio.com/spaces/62/index.html)选项提交的。 感谢你报告 bug！ 有关所有 Visual Studio 中新增功能的详细信息，请访问 [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)。 有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](?preserve-view=true&view=vs-2017)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
+Visual Studio 2019 向 Microsoft C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的许多 bug 和问题。 其中许多问题是客户通过“发送反馈”下的[报告问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019&preserve-view=true)和[提供建议](https://developercommunity.visualstudio.com/spaces/62/index.html)选项提交的。 感谢你报告 bug！ 有关所有 Visual Studio 中新增功能的详细信息，请访问 [Visual Studio 2019 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2019)。 有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](?preserve-view=true&view=msvc-150)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
 
 ## <a name="c-compiler"></a>C++ 编译器
 
@@ -238,9 +238,9 @@ IncrediBuild 现在添加为“使用 C++ 的桌面开发”工作负荷中的�
 
 ::: moniker-end
 
-::: moniker range="=vs-2017"
+::: moniker range="=msvc-150"
 
-Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的 250 多个缺陷和报告的问题。 许多问题是客户通过“发送反馈”下的[“报告问题和提供建议”](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true)选项提交的。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true)。 有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 中 C++ 的新增功能](?preserve-view=true&view=vs-2019)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
+Visual Studio 2017 向 C++ 环境引入了许多更新和修补程序。 我们修复了编译器和工具中存在的 250 多个缺陷和报告的问题。 许多问题是客户通过“发送反馈”下的[“报告问题和提供建议”](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017&preserve-view=true)选项提交的。 感谢你报告 bug！ 有关整个 Visual Studio 中新增功能的详细信息，请参阅 [Visual Studio 2017 中的新增功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017&preserve-view=true)。 有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 中 C++ 的新增功能](?preserve-view=true&view=msvc-160)。 有关 Visual Studio 2015 及更低版本中 C++ 新增功能的信息，请参阅 [Visual C++ 新增功能 (2003 - 2015)](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
 
 ## <a name="visual-studio-2017-c-compiler"></a>Visual Studio 2017 C++ 编译器
 
@@ -343,7 +343,7 @@ Visual Studio 2017 RTM 中有更多的标准库改进。 有关完整列表，�
 - `basic_string::shrink_to_fit()` 不再受分配器的 `propagate_on_container_swap` 影响。
 - `std::decay` 现可处理令人烦恼的函数类型（即 cv 限定和/或 ref 限定的函数类型）。
 - 更改了 include 指令以正确使用区分大小写和正斜杠，从而提高可移植性。
-- 修复了警告 C4061“枚举‘*enumeration*’的 switch 中的枚举器‘*enumerator*’未按 case 标签进行显式处理”。 此警告默认关闭，并且已作为标准库警告常规策略的一个异常进行了修复。 （标准库是不含 `/W4`，但并不会试图不含 `/Wall`。 许多默认关闭的警告的干扰性都异常高，不打算经常使用。）
+- 修复了警告 C4061“枚举‘ *enumeration* ’的 switch 中的枚举器‘ *enumerator* ’未按 case 标签进行显式处理”。 此警告默认关闭，并且已作为标准库警告常规策略的一个异常进行了修复。 （标准库是不含 `/W4`，但并不会试图不含 `/Wall`。 许多默认关闭的警告的干扰性都异常高，不打算经常使用。）
 - 改进了 `std::list` 调用检查。 列表迭代器现检查 `operator->()`，且 `list::unique()` 现将迭代器标记为无效。
 - 修复了元组中的 `tuple` 元编程。
 
@@ -709,7 +709,7 @@ Visual Studio 图形诊断工具：可以使用它们来记录和分析 Direct3D
 
   可以在启用完整调用堆栈捕获的情况下捕获帧。 这样，可以快速推导每个更改事件的上下文，并在 Visual Studio 项目中检查它。 在 Visual Studio 中“工具”>“选项”对话框的“图形诊断”下，设置完整堆栈捕获选项。
 
-- **API 统计信息**：在帧中查看 API 使用情况的高级摘要。 这样可以轻松发现你可能根本没有意识到正在执行的调用或执行太频繁的调用。 可在 Visual Studio 图形分析器中通过“视图”>“API 统计信息”使用此窗口。
+- **API 统计信息** ：在帧中查看 API 使用情况的高级摘要。 这样可以轻松发现你可能根本没有意识到正在执行的调用或执行太频繁的调用。 可在 Visual Studio 图形分析器中通过“视图”>“API 统计信息”使用此窗口。
 
   ![API 统计信息](media/api-stats.png)
 
@@ -735,14 +735,14 @@ Visual Studio 图形诊断工具：可以使用它们来记录和分析 Direct3D
 
 ::: moniker-end
 
-::: moniker range="=vs-2015"
+::: moniker range="=msvc-140"
 
 有关 Visual Studio 2015 Update 3 及之前的版本中新增功能的完整列表，请参阅 [Visual C++ 2003 至 2015 中的新增功能](../porting/visual-cpp-what-s-new-2003-through-2015.md)。
 
 若要详细了解 Visual Studio 2015 中的所有新变化，请参阅“发行说明”。 它们链接自 [Visual Studio 2015 发行说明历史记录](/visualstudio/releasenotes/vs2015-version-history)。
 
-有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 2019 中 C++ 的新增功能](?preserve-view=true&view=vs-2019)。
+有关 Visual Studio 2019 中 C++ 新增功能的信息，请参阅 [Visual Studio 2019 中 C++ 的新增功能](?preserve-view=true&view=msvc-160)。
 
-有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](?preserve-view=true&view=vs-2017)。
+有关 Visual Studio 2017 中 C++ 新增功能的信息，请参阅 [Visual Studio 2017 中 C++ 的新增功能](?preserve-view=true&view=msvc-150)。
 
 ::: moniker-end

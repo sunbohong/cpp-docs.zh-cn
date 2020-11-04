@@ -2,22 +2,22 @@
 title: 设置符合 FIPS 标准的安全远程 Linux 开发
 description: 如何设置 Visual Studio 和 Linux 计算机之间符合 FIPS 的加密连接以用于远程开发。
 ms.date: 01/17/2020
-ms.openlocfilehash: 9a0e87f4ddf69bf489b52d4f83934d3279f2d085
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7eb6bfd32d362415eda057bfa78afe80fb9e2f4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "76520461"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924688"
 ---
 # <a name="set-up-fips-compliant-secure-remote-linux-development"></a>设置符合 FIPS 标准的安全远程 Linux 开发
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Linux 支持在 Visual Studio 2017 及更高版本中提供。 可以在 Visual Studio 2019 版本 16.5 及更高版本中设置符合 FIPS 的安全远程 Linux 开发。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 美国联邦信息处理标准 (FIPS) 出版物 140-2 是美国政府规定的加密模块标准。 此标准的实现由 NIST 进行验证。 Windows [已验证对符合 FIPS 的加密模块的支持](/windows/security/threat-protection/fips-140-validation)。 在 Visual Studio 2019 版本 16.5 及更高版本中，可以对 Linux 系统进行符合 FIPS 的安全加密连接，以用于远程开发。
 
@@ -136,7 +136,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。 可以在 Visual 
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>用于连接管理器的命令行实用工具  
 
-**Visual Studio 2019 版本 16.5 或更高版本**：ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 有关 ConnectionManager 命令的示例和完整参考，请参阅 [ConnectionManager 参考](connectionmanager-reference.md)。  
+**Visual Studio 2019 版本 16.5 或更高版本** ：ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 有关 ConnectionManager 命令的示例和完整参考，请参阅 [ConnectionManager 参考](connectionmanager-reference.md)。  
 
 ## <a name="optional-enable-or-disable-fips-mode"></a>可选：启用或禁用 FIPS 模式
 

@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b82c1f7105b3fd03d8c21dd79617dbc66f3e090c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d5c613a7cd8ee2d7dc158050dae9529bba2a8f71
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507770"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919561"
 ---
 # <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>教程：vcperf 和 Windows Performance Analyzer
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Visual Studio 2019 中提供 C++ 生成见解工具。 若要查看此版本对应的文档，请将本文的 Visual Studio“版本”选择器控件设置为“Visual Studio 2019”。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 在本教程中，你将学习如何使用 vcperf.exe 来收集 C++ 生成跟踪。 此外，你还将学习如何在 Windows Performance Analyzer 中查看此跟踪。
 

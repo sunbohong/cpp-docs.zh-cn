@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c1db302d9e816591624f0fc63633351d32684097
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 7135c49bdf95ef5ba39db090c95ad46d266d8f65
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742757"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919652"
 ---
 # <a name="tracing_session_statistics-structure"></a>TRACING_SESSION_STATISTICS 结构
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `TRACING_SESSION_STATISTICS` 结构描述了所收集跟踪的统计信息。 在停止跟踪会话时设置字段。
 

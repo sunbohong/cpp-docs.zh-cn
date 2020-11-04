@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: c4ebbb280a5cccaa35b5efc7f90e9b570600c47b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759220"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92923632"
 ---
 # <a name="get-started-with-c-build-insights"></a>C++ 生成见解入门
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Visual Studio 2019 中提供 C++ 生成见解工具。 若要查看此版本对应的文档，请将本文的 Visual Studio“版本”选择器控件设置为“Visual Studio 2019”。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 C++ 生成见解是一个工具集合，可便于更深入地了解 Microsoft Visual C++ (MSVC) 工具链。 这些工具收集与 C++ 生成相关的数据，并用一种有助于你回答常见问题的格式来呈现这些数据，比如：
 

@@ -4,22 +4,22 @@ ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 9d9f59817a499f4d529363c88adc57154268c0bc
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 03c6a07d19599958de81a604ca77e2772168d441
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039581"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924121"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>对 Visual Studio 中 C++ 生成系统的“打开文件夹”支持
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 “打开文件夹”功能在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 Visual Studio 2017 及更高版本中提供了“打开文件夹”功能，可通过它打开源文件的文件夹并借助 IntelliSense、浏览、重构、调试及更多方面的支持立即开始进行编码。 在编辑、创建、移动或删除文件时，Visual Studio 会自动跟踪更改，并不断更新其 IntelliSense 索引。 不加载 .sln 或 .vcxproj 文件；如有需要，可以通过简单的 .json 文件指定自定义任务和生成及启动参数。 借助此功能，你可以将任何第三方生成系统集成到 Visual Studio 中。 有关“打开文件夹”的常规信息，请参阅[在 Visual Studio 中开发代码而无需创建项目或解决方案](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions)。
 

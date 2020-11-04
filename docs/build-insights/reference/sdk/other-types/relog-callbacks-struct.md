@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 55f63b05691e3d729ee42ed21049669b94053559
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2b3beb656aa72ce4c8519c56c4c8bf6ca6577cf4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041427"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919794"
 ---
 # <a name="relog_callbacks-structure"></a>RELOG_CALLBACKS 结构
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 初始化 [RELOG_DESCRIPTOR](relog-descriptor-struct.md) 对象时使用 `RELOG_CALLBACKS` 结构。 它指定在重新记录 Windows 事件跟踪 (ETW) 跟踪期间要调用的函数。
 

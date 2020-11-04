@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
-ms.openlocfilehash: 7148cc1de7c06ae57d61560311b342a1fc9dda1f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6cb379baafc506570b1bdc1b286b35c40f8cd0d8
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335137"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924373"
 ---
 # <a name="walkthrough-create-and-use-a-static-library"></a>演练：创建并使用静态库
 
@@ -38,7 +38,7 @@ ms.locfileid: "81335137"
 
 关于如何创建项目的说明取决于 Visual Studio 版本。 若要查看 Visual Studio 首选项的文档，请使用“版本”选择器控件  。 它位于此页面上目录表的顶部。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-a-static-library-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建静态库项目
 
@@ -58,7 +58,7 @@ ms.locfileid: "81335137"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ### <a name="to-create-a-static-library-project-in-visual-studio-2017"></a>在 Visual Studio 2017 中创建静态库项目
 
@@ -76,7 +76,7 @@ ms.locfileid: "81335137"
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ### <a name="to-create-a-static-library-project-in-visual-studio-2015"></a>在 Visual Studio 2015 中创建静态库项目
 
@@ -170,7 +170,7 @@ ms.locfileid: "81335137"
 
 ## <a name="create-a-c-console-app-that-references-the-static-library"></a><a name="CreateAppToRefTheLib"></a> 创建引用静态库的 C++ 控制台应用
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建引用静态库的 C++ 控制台应用
 
@@ -186,7 +186,7 @@ ms.locfileid: "81335137"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2017"></a>在 Visual Studio 2017 中创建引用静态库的 C++ 控制台应用
 
@@ -206,7 +206,7 @@ ms.locfileid: "81335137"
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2015"></a>在 Visual Studio 2015 中创建引用静态库的 C++ 控制台应用
 

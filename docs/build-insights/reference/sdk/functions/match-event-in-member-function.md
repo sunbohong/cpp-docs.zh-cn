@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: d3fdc015b0744cb5d0f98a1c9025343b93489ed9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 62a7bf6bde62dee7fdf5b1d2ce9044491a123f94
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224144"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920185"
 ---
 # <a name="matcheventinmemberfunction"></a>MatchEventInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `MatchEventInMemberFunction` 函数用于将事件与成员函数的第一个参数所描述的类型进行匹配。 匹配的事件被转发给成员函数，以供进一步处理。
 

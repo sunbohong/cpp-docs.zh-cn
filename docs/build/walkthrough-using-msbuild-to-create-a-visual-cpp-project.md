@@ -4,12 +4,12 @@ description: 演示如何从头开始创建命令行 MSBuild C++ .vcxproj 项目
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), walkthrough: create a project'
-ms.openlocfilehash: 4f17cd8c4f5f48d8be5cd7cb25940db87029e111
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: b3d4e8881f926e80e95832a27f7a5106ce876265
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099727"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924336"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>演练：使用 MSBuild 创建 Visual C++ 项目
 
@@ -36,21 +36,21 @@ ms.locfileid: "92099727"
 
 - 对 MSBuild 系统有大致的了解。
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 > [!NOTE]
 > 大多数低级别的生成说明都包含在 `.targets` 和 `.props` 文件中，这些文件是在默认目标文件夹下定义的，存储在属性 `$(VCTargetsPath)` 中 。 可在其中找到诸如 `Microsoft.Cpp.Common.props` 之类的文件。 在 Visual Studio 2015 及更早版本中，这些文件的默认路径为 `%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\`。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > 大多数低级别的生成说明都包含在 `.targets` 和 `.props` 文件中，这些文件是在默认目标文件夹下定义的，存储在属性 `$(VCTargetsPath)` 中 。 可在其中找到诸如 `Microsoft.Cpp.Common.props` 之类的文件。 在 Visual Studio 2017 中，这些文件的默认路径为 `%VSINSTALLDIR%Common7\IDE\VC\VCTargets\`。 Visual Studio 2015 及更早版本将这些文件存储在 `%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\` 下。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 > [!NOTE]
 > 大多数低级别的生成说明都包含在 `.targets` 和 `.props` 文件中，这些文件是在默认目标文件夹下定义的，存储在属性 `$(VCTargetsPath)` 中 。 可在其中找到诸如 `Microsoft.Cpp.Common.props` 之类的文件。 这些文件的默认路径为 `%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\`。 `<version>` 路径元素特定于 Visual Studio 的版本。 对于 Visual Studio 2019，它是 `v160`。 Visual Studio 2017 将这些文件存储在 `%VSINSTALLDIR%Common7\IDE\VC\VCTargets\` 下。 Visual Studio 2015 及更早版本将这些文件存储在 `%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\` 下。

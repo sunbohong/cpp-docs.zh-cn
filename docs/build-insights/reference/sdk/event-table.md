@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6b1cf6871329fcce3166495e173360a88ac38ee0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2a6270e8e166bb38754314fcb308b86232dbb68b
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224209"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922910"
 ---
 # <a name="c-build-insights-sdk-event-table"></a>C++ Build Insights SDK：事件表
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="compiler-events"></a>编译器事件
 

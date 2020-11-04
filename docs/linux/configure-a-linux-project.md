@@ -3,16 +3,16 @@ title: 在 Visual Studio 中配置 Linux MSBuild C++ 项目
 ms.date: 10/16/2020
 description: 在 Visual Studio 中配置基于 MSBuild 的 Linux 项目，以便可以生成它。
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 51837dc86d041b9120f984cc01f8db06d696b292
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 451f34c257c210463ce11b11f27bc218d41b45c8
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176332"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921810"
 ---
 # <a name="configure-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中配置 Linux MSBuild C++ 项目
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
@@ -22,7 +22,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 可以将 Linux 项目配置为以物理 Linux 计算机、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about) (WSL) 为目标。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Visual Studio 2019 版本 16.1：
 
@@ -54,7 +54,7 @@ Visual Studio 2019 版本 16.1：
 
    ![生成计算机](media/remote-build-machine-vs2019.png)
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
    Visual Studio 2019 版本 16.7：若要面向适用于 Linux 的 Windows 子系统 (WSL)，请将“平台工具集”下拉列表设置为“适用于 Linux 的 Windows 子系统的 GCC” 。 其他远程选项将消失，默认 WSL shell 的路径将显示在其位置：
 
@@ -75,7 +75,7 @@ Visual Studio 2019 版本 16.1：
 
 ## <a name="copy-sources-remote-systems-only"></a>复制源（仅限远程系统）
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 面向 WSL 时不可使用此部分。
 
@@ -112,13 +112,13 @@ sudo apt install zip
 
 若要管理标头缓存，导航到“工具”>“选项”，依次选择“跨平台”>“连接管理器”>“远程标头 IntelliSense 管理器”。 若要在更改 Linux 计算机后更新标头缓存，请选择远程连接，然后选择“更新”。 选择“删除”，来删除标头但不删除连接本身。 选择“浏览”，打开“文件资源管理器”中的本地目录 。 将此文件夹视为只读文件夹。 要下载在 Visual Studio 2017 版本 15.3 之前创建的现有连接的标头，请选择该连接，然后选择“下载”。
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ![显示已选中“跨平台”>“连接管理器”>“远程标头 IntelliSense 管理器”的“选项”对话框的屏幕截图。](media/remote-header-intellisense.png)
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![显示已选中“跨平台”>“连接管理器”的“选项”对话框的屏幕截图。](media/connection-manager-vs2019.png)
 

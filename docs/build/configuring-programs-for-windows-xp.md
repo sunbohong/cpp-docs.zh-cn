@@ -3,18 +3,18 @@ title: 配置适用于 Windows XP 的程序
 description: 如何在 Visual Studio 中安装和使用 C++ Windows XP 工具集。
 ms.date: 03/16/2020
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 92364d7fd25ac617baacc125b279fb0ee9c92f62
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 09fe1a511c92f999e02646b9e606a3631a175215
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79440476"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919366"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>配置适用于 Windows XP 的程序
 
 Visual Studio 支持多个平台工具集。 这意味着可以面向不受默认工具集支持的操作系统和运行时库。 例如，通过切换平台工具集，可以使用 Visual Studio 2017 C++ 编译器创建面向 Windows XP 和 Windows Server 2003 的应用。 还可以使用较旧的平台工具集来维护二进制兼容旧代码，同时仍然可以利用 Visual Studio IDE 的最新功能。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Visual Studio 2019 中提供的 v142 工具集不支持为 Windows XP 创建代码。 支持使用 Visual Studio 2017 v141_xp 工具集进行 Windows XP 开发，该支持作为 Visual Studio 安装程序中的单独组件选项提供。
 
@@ -22,13 +22,13 @@ Visual Studio 2019 中提供的 v142 工具集不支持为 Windows XP 创建代�
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安装 Windows XP 平台工具集
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 若要使 Visual Studio 2017 平台工具集和组件可面向 Windows XP 和 Windows Server 2003，请运行 Visual Studio 安装程序。 在最初安装 Visual Studio 时或修改现有安装时，请确保选择“使用 C++ 的桌面开发”工作负载  。 在此工作负载的可选组件列表中，选择“针对 C++ 的 Windows XP 支持”，然后选择“安装”或“修改”    。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 若要使 v141_xp 平台工具集和组件可面向 Windows XP 和 Windows Server 2003，请运行 Visual Studio 安装程序。 在最初安装 Visual Studio 时或修改现有安装时，请确保选择“使用 C++ 的桌面开发”工作负载  。 在“单个组件”  选项卡上的“编译器、生成工具和运行时”  下，选择“对 VS 2017 (v141)工具的 C++ Windows XP 支持 \[已弃用]”  ，然后选择“安装”  或“修改”  。
 

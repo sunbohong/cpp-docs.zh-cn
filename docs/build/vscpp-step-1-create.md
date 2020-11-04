@@ -5,12 +5,12 @@ ms.custom: mvc
 ms.date: 04/20/2020
 ms.topic: tutorial
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 333bb6ce1f3ea0db6b07d70ddd60d4a4be337abd
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: ee9631ee858ca34f82b599eeabce628483d9a247
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686504"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922083"
 ---
 # <a name="create-a-c-console-app-project"></a>创建 C++ 控制台应用项目
 
@@ -24,7 +24,7 @@ C++ 程序员通常从在命令行上运行的“Hello, world!” 应用程序�
 
 Visual Studio 使用项目来组织应用的代码，使用解决方案来组织项目   。 项目包含用于生成应用的所有选项、配置和规则。 它负责管理所有项目文件和任何外部文件间的关系。 要创建应用，需首先创建一个新项目和解决方案。
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. 在 Visual Studio 中，打开“文件”  菜单，然后选择“新建”>“项目”  以打开“创建新项目”  对话框。 选择具有“C++”、“Windows”和“控制台”标记的“控制台应用”模板，然后选择“下一步”      。
 
@@ -44,7 +44,7 @@ Visual Studio 使用项目来组织应用的代码，使用解决方案来组织
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. 在 Visual Studio 中，打开“文件”  菜单，然后选择“新建”>“项目”  以打开“新建项目”  对话框。
 
@@ -119,7 +119,7 @@ Visual studio 会创建新的空源代码文件，并在编辑器窗口中打开
 
 ### <a name="create-your-app-project-issues"></a>创建应用项目：问题
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 “新建项目”  对话框应显示一个具有“C++”、“Windows”和“控制台”标记的“控制台应用”模板     。 如果未显示，则有两个可能的原因。 它可能已从列表中筛选掉，或可能未安装。 首先，检查模板列表顶部的筛选器下拉菜单。 将它们设置为“C++”  、“Windows”  和“控制台”  。 C++“控制台应用”  模板应出现；否则，不会安装“使用 C++ 的桌面开发”  工作负载。
 
@@ -131,13 +131,13 @@ Visual studio 会创建新的空源代码文件，并在编辑器窗口中打开
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 如果“新建项目”  对话框中未在“已安装”  下显示“Visual C++”  条目，则 Visual Studio 的副本可能未安装“使用 C++ 的桌面开发”  工作负载。 可以直接从“新建项目”  对话框运行安装程序。 选择“打开 Visual Studio 安装程序”链接  以再次启动安装程序。 如果“用户帐户控制”  对话框请求权限，则选择“是”  。 必要时更新安装程序。 在安装程序中，请务必选中“使用 C++ 的桌面开发”  工作负载，然后选择“确定”  以更新 Visual Studio 安装。
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 如果已存在具有相同名称的其他项目，请为你的项目选择其他名称。 或者，删除现有项目，然后重试。 若要删除现有项目，请在文件资源管理器中删除解决方案文件夹（包含 helloworld.sln  文件的文件夹）。
 

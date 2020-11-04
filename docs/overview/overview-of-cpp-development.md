@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 5a03590074d8de05153b2d9442da8b916e6eba82
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: db0a4ccbab142d01f0506b77237dbb09d43a1cf0
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500274"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924363"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio 中的 C++ 开发概述
 
@@ -21,19 +21,19 @@ ms.locfileid: "91500274"
 
 ## <a name="create-projects"></a>创建项目
 
-*项目*基本上就是一组内置于可执行程序或库中的源代码文件和资源（例如图像或数据文件）。
+*项目* 基本上就是一组内置于可执行程序或库中的源代码文件和资源（例如图像或数据文件）。
 
 Visual Studio 可支持要使用的任何项目系统或自定义生成工具，且完全支持 IntelliSense、浏览和调试：
 
 - **MSBuild** 是 Visual Studio 的本机项目系统。 从主菜单中选择“文件”   > “新建”   > “项目”  时，你可以看到多种 MSBuild 项目模板  ，可帮助你快速开始开发不同类型的 C++ 应用程序。
 
-   ::: moniker range="vs-2019"
+   ::: moniker range="msvc-160"
 
    ![新项目模板](../build/media/mathclient-project-name-2019.png "Visual Studio 2019“新建项目”对话框")
 
    ::: moniker-end
 
-   ::: moniker range="<=vs-2017"
+   ::: moniker range="<=msvc-150"
 
    ![项目模板](media/vs2017-new-project.png "Visual Studio 2017“新建项目”对话框")
 
@@ -49,13 +49,13 @@ Visual Studio 可支持要使用的任何项目系统或自定义生成工具，
 
 通过源控件，可让你协调多个开发人员的工作，将正在进行中的工作与生产代码隔离并备份源代码。 Visual Studio 通过其“团队资源管理器”  窗口支持 Git 和 [Team Foundation 版本控制 \(TFVC\)](/azure/devops/repos/tfvc/)。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![Visual Studio 2019 中的“团队资源管理器”窗口的屏幕截图。](media/vs2019-team-explorer.png "Visual Studio 2017 团队资源管理器")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![Visual Studio 2017 中的“团队资源管理器”窗口的屏幕截图。](media/vs2017-team-explorer.png "Visual Studio 2017 团队资源管理器")
 

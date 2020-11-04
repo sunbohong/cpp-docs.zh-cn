@@ -2,22 +2,22 @@
 title: 常规属性（Linux C++ 生成文件项目）| Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dd92d77069024456020a09b22de3596b8192c5af
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446148"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924657"
 ---
 # <a name="makefile-project-properties-linux-c"></a>生成文件项目属性 (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 以下时 Linux 生成文件项目中可用属性的部分列表。 许多生成文件项目属性与 Linux C++ 控制台应用程序项目属性相同。
 

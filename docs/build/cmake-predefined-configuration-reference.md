@@ -4,22 +4,22 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aa8c39d8322408e08eb35859c7b0d8ed798a6f84
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323018"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919431"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 预定义生成配置
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Visual Studio 2017 及更高版本支持 CMake 项目。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框  ：
 
@@ -354,7 +354,7 @@ You can use these optional settings for more control:
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 在 CMake 项目中，生成配置存储在 CMakeSettings.json 文件中。 在主要工具栏中的生成配置下拉列表中选择“管理配置”时，将出现一个显示 Visual Studio 中可用的默认 CMake 配置的对话框  ：
 

@@ -4,12 +4,12 @@ description: 如何将自定义工具集成到 Visual Studio C++ 项目中的项
 ms.date: 10/08/2020
 helpviewer_keywords:
 - 'MSBuild (C++), howto: integrate custom tools'
-ms.openlocfilehash: 4b88bf94a92efaf5046fd83e5c6358f3fdf80895
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: 58626101d54c5b1f9749174e5f3e8938c431d025
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099662"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922148"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>如何：将自定义工具集成到项目属性中
 
@@ -19,19 +19,19 @@ ms.locfileid: "92099662"
 
 你可以创建一个包含自定义工具的属性的规则文件，以便在 Visual Studio 启动时加载这些属性。 有关如何修改该文件的信息，请参阅 Visual Studio 项目团队博客上的[平台可扩展性第 2 部分](/archive/blogs/vsproject/platform-extensibility-part-2)。
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 用于放置规则文件的文件夹取决于所使用的 Visual Studio 的区域设置和版本。 在 Visual Studio 2015 或更早版本的开发人员命令提示符中，规则文件夹为 `%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>`。 在 Visual Studio 2015 中，`<version>` 值为 `v140`。 `<locale>` 为 LCID，例如，用于英语的 `1033`。 对于安装的每个 Visual Studio 版本和每种语言，将使用不同的路径。 例如，Visual Studio 2015 Community 英文版的默认规则文件夹路径可能是 `C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\v140\1033\`。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 用于放置规则文件的文件夹取决于所使用的 Visual Studio 的区域设置和版本。 在 Visual Studio 2017 的开发人员命令提示符中，规则文件夹为 `%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`。 `<locale>` 为 LCID，例如，用于英语的 `1033`。 在 Visual Studio 2015 或更早版本的开发人员命令提示符中，规则文件夹为 `%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`，其中 `<version>` 值是 Visual Studio 2015 中的 `v140` 。 对于安装的每个 Visual Studio 版本和每种语言，将使用不同的路径。 例如，Visual Studio 2017 Community 英文版的默认规则文件夹路径可能是 `C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\`。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 用于放置规则文件的文件夹取决于所使用的 Visual Studio 的区域设置和版本。 在 Visual Studio 2019 或更高版本的开发人员命令提示符中，规则文件夹为 `%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>\<locale>\`，其中 `<version>` 值是 Visual Studio 2019 中的 `v160` 。 `<locale>` 为 LCID，例如，用于英语的 `1033`。 在 Visual Studio 2017 中，规则文件夹为 `%VSINSTALLDIR%Common7\IDE\VC\VCTargets\<locale>\`。 在 Visual Studio 2015 或更早版本的开发人员命令提示符中，规则文件夹为 `%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\<version>\<locale>\`。 对于安装的每个 Visual Studio 版本和每种语言，将使用不同的路径。 例如，Visual Studio 2019 Community 英文版的默认规则文件夹路径可能是 `C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\1033\`。
 

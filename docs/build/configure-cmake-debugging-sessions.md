@@ -4,22 +4,22 @@ description: 介绍如何使用 Visual Studio 配置 CMake 调试器设置。
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: cc80827458ba7cb61339ec3a36f227747780a47c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a790e26e5bf3980ffb81a3ba778577afacff95b4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224079"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922226"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 本机 CMake 支持在 Visual Studio 2017 及更高版本中提供。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 所有可执行的 CMake 目标都显示在“常规”工具栏的“启动项”下拉列表中 。 选择一个以启动调试会话并启动调试器。
 
@@ -225,7 +225,7 @@ Visual Studio 支持执行自定义 `gdb` 命令，以便直接与底层调试�
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="see-also"></a>请参阅
 

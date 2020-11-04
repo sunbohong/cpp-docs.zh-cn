@@ -2,20 +2,20 @@
 title: 在 Visual Studio 中配置 Linux CMake 项目
 description: 如何在 Visual Studio 中配置 Linux CMake 设置
 ms.date: 08/08/2020
-ms.openlocfilehash: 32c851791402b59c941ae088fa637d3d9953dd1b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c4c2d4682b6d18f9175a92a810b3f86d8132fc0c
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504729"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921914"
 ---
 # <a name="configure-a-linux-cmake-project-in-visual-studio"></a>在 Visual Studio 中配置 Linux CMake 项目
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 Linux 支持在 Visual Studio 2017 及更高版本中提供。 若要查看这些版本的文档，请将目录上方的“版本”下拉列表设置为“Visual Studio 2017”或“Visual Studio 2019”。
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 本主题介绍如何将 Linux 配置添加到面向远程 Linux 系统或适用于 Linux 的 Windows 子系统 (WSL) 的 CMake 项目。 它将延续从[在 Visual Studio 中创建 Linux CMake 项目](cmake-linux-project.md)开始的系列文章。 如果使用的是 MSBuild，请参阅[在 Visual Studio 中配置 Linux MSBuild 项目](configure-a-linux-project.md)
 
 ## <a name="add-a-linux-configuration"></a>添加 Linux 配置
@@ -23,7 +23,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。 若要查看这�
 配置可用于针对具有相同源代码的不同平台（Windows、WSL、远程系统）。 配置还可用于设置编译器、传递环境变量以及自定义 CMake 的调用方式。 CMakeSettings.json 文件指定在[自定义 CMake 设置](../build/customize-cmake-settings.md)中列出的部分或所有属性，以及控制远程 Linux 计算机上的生成设置的其他属性。
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 若要在 Visual Studio 2017 中更改默认 CMake 设置，请从主菜单依次选择“CMake” > “更改 CMake 设置” > “CMakeLists.txt”。 或右键单击“解决方案资源管理器”中的“CMakeLists.txt”，然后选择“更改 CMake 设置”。 然后，Visual Studio 会在根项目文件夹中创建一个新的 CMakeSettings.json 文件。 若要进行更改，请打开文件并直接修改。 有关详细信息，请参阅[自定义 CMake 设置](../build/customize-cmake-settings.md)。
 
 Visual Studio 2017（以及 Visual Studio 2019 版本 16.0）中 Linux-Debug 的默认配置如下所示：
@@ -56,7 +56,7 @@ Visual Studio 2017（以及 Visual Studio 2019 版本 16.0）中 Linux-Debug 的
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 若要在 Visual Studio 2019 中更改默认 CMake 设置，请在主工具栏中打开“配置”下拉列表，然后选择“管理配置” 。
 
 ![CMake 管理配置](../build/media/vs2019-cmake-manage-configurations.png "CMake 配置下拉列表")
@@ -94,7 +94,7 @@ Visual Studio 2019 版本 16.1 中的默认 Linux 调试配置如下所示：
 在 Visual Studio 2019 版本 16.6 或更高版本中，Ninja 是针对远程系统或 WSL 的配置的默认生成器。 有关详细信息，请在 [C++ 团队博客](https://devblogs.microsoft.com/cppblog/linux-development-with-visual-studio-first-class-support-for-gdbserver-improved-build-times-with-ninja-and-updates-to-the-connection-manager/)中阅读本文。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 有关这些设置的详细信息，请参阅 [CMakeSettings.json 引用](../build/cmakesettings-reference.md)。
 
 执行生成时：
@@ -113,7 +113,7 @@ Visual Studio 2019 版本 16.1 中的默认 Linux 调试配置如下所示：
 ![在 Linux 上生成 CMake 缓存](media/cmake-linux-1.png "在 Linux 上生成 CMake 缓存")
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="target-windows-subsystem-for-linux"></a>面向适用于 Linux 的 Windows 子系统
 
@@ -131,7 +131,7 @@ Visual Studio 2019 版本 16.1 中的默认 Linux 调试配置如下所示：
 
 Visual Studio 2019 版本 16.1 以 WSL 为目标时，Visual Studio 不需要复制源文件和维护生成树的两个同步副本，因为 Linux 上的编译器可以直接访问已装入的 Windows 文件系统中的源文件。
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ### <a name="intellisense"></a>IntelliSense
 

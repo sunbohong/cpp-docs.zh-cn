@@ -7,12 +7,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 6639165856f09db25a2b96c41db2bb94ab93aa99
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 0018df31e19a3f1a68a1c4a0bde37d6fa2678406
+ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683619"
+ms.lasthandoff: 11/01/2020
+ms.locfileid: "92924483"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用自己的动态链接库 (C++)
 
@@ -44,7 +44,7 @@ ms.locfileid: "90683619"
 
 - 运行 Microsoft Windows 7 或更高版本的计算机。 建议使用 Windows 10 以实现最佳开发体验。
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 - Visual Studio 的副本。 有关如何下载和安装 Visual Studio 的信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 运行安装程序时，请务必选中“使用 C++ 的桌面开发”  工作负载。 如果在安装 Visual Studio 时未安装此工作负载，请不要担心。 可以再次运行安装程序并立即安装。
 
@@ -52,7 +52,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 - Visual Studio 的副本。 有关如何下载和安装 Visual Studio 2015 的信息，请参阅[安装 Visual Studio 2015](/visualstudio/install/install-visual-studio-2015?view=vs-2015&preserve-view=true)。 由于默认不安装 C++ 编译器和工具，请使用“自定义”安装进行安装  。
 
@@ -62,7 +62,7 @@ ms.locfileid: "90683619"
 
 - 了解足够的 C++ 语言基础知识以供继续操作。 别担心，我们不会执行过于复杂的操作。
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 > [!NOTE]
 > 本演练假定你使用的是 Visual Studio 2017 版本 15.9 或更高版本。 某些早期版本的 Visual Studio 2017 的代码模板存在缺陷，或使用了不同的用户界面对话框。 若要避免出现问题，请使用 Visual Studio 安装程序将 Visual Studio 2017 更新为版本 15.9 或更高版本。
@@ -73,7 +73,7 @@ ms.locfileid: "90683619"
 
 在本系列的任务中，将创建一个 DLL 项目，添加代码，并生成它。 首先，启动 Visual Studio IDE，并在需要时登录。 根据使用的 Visual Studio 版本，操作说明会略有不同。 请确保在本页左上角的控件中选择了正确的版本。
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建 DLL 项目
 
@@ -95,7 +95,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017"></a>在 Visual Studio 2017 中创建 DLL 项目
 
@@ -113,7 +113,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2015-and-older-versions"></a>在 Visual Studio 2015 及更早版本中创建 DLL 项目
 
@@ -200,7 +200,7 @@ ms.locfileid: "90683619"
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>向 DLL 添加实现
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 1. 在“解决方案资源管理器”中，右键单击“源文件”节点并选择“添加” > “新建项目”     。 使用上一步中添加新头文件的相同方式，创建名为 MathLibrary.cpp 的新 .cpp 文件  。
 
@@ -269,7 +269,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 1. 在编辑器窗口中，选择 MathLibrary.cpp  的选项卡（如果已打开）。 如果未打开，请在“解决方案资源管理器”中，双击 MathLibrary 项目的“Source Files”文件夹中的 MathLibrary.cpp，将其打开     。
 
@@ -338,7 +338,7 @@ ms.locfileid: "90683619"
 
 若要验证到目前为止是否一切正常，请编译动态链接库。 若要编译，请在菜单栏上选择“生成” > “生成解决方案”   。 DLL 和相关编译器输出放在解决方案文件夹正下方的“Debug”文件夹中  。 如果创建发布版本，该输出会放置在“Release”文件夹中  。 输出应类似于：
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
@@ -353,7 +353,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
@@ -368,7 +368,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
@@ -393,7 +393,7 @@ ms.locfileid: "90683619"
 
 为避免不同步的代码，建议在客户端项目中设置包含路径，使其直接包括 DLL 项目中的 DLL 头文件。 此外，在客户端项目中设置库路径以包括 DLL 项目中的 DLL 导入库。 最后，将生成的 DLL 从 DLL 项目复制到客户端生成输出目录中。 此步骤允许客户端应用使用生成的同一 DLL 代码。
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 ### <a name="to-create-a-client-app-in-visual-studio"></a>在 Visual Studio 中创建客户端应用
 
@@ -413,7 +413,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017"></a>在 Visual Studio 2017 中创建客户端应用
 
@@ -429,7 +429,7 @@ ms.locfileid: "90683619"
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ### <a name="to-create-a-client-app-in-visual-studio-2015"></a>在 Visual Studio 2015 中创建客户端应用
 

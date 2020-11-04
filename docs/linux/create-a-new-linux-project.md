@@ -3,22 +3,22 @@ title: 在 Visual Studio 中创建 Linux MSBuild C++ 项目
 ms.date: 10/15/2020
 description: 在 Visual Studio 中新建一个基于 MSBuild 的 Linux 项目。
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: dddb9dbdee4cefc58a2bd5ccefa493b25e1c9f24
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 458a26408bfd29b714150e5259fd23807c9b2908
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176305"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921628"
 ---
 # <a name="create-a-linux-msbuild-c-project-in-visual-studio"></a>在 Visual Studio 中创建 Linux MSBuild C++ 项目
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux 项目在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 首先，请确保已安装用于 Visual Studio 的 Linux 开发工作负荷  。 有关详细信息，请参阅[下载、安装和设置 Linux 工作负荷](download-install-and-setup-the-linux-development-workload.md)。
 
@@ -46,7 +46,7 @@ Linux 项目在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 首先，请确保已安装用于 Visual Studio 的 Linux 开发工作负荷  。 有关详细信息，请参阅[下载、安装和设置 Linux 工作负荷](download-install-and-setup-the-linux-development-workload.md)。
 

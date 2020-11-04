@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: db02ce5656bf8970ead7b49d5580f7d81bebb1b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d416a10d5e2803cd978243a1e44625a2e696d42
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224131"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920172"
 ---
 # <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `MatchEventStackInMemberFunction` 函数用于将事件堆栈与由成员函数的参数列表描述的特定事件层次结构进行匹配。 匹配的层次结构被转发给成员函数，以供进一步处理。 若要详细了解事件、事件堆栈和层次结构，请参阅[事件表](../event-table.md)。
 

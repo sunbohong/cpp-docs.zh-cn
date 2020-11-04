@@ -6,26 +6,26 @@ f1_keywords:
 - ConnectionManager
 helpviewer_keywords:
 - ConnectionManager program
-ms.openlocfilehash: 2f38fec21e7526fa214db811b00fc545504f0610
-ms.sourcegitcommit: 611e903f222ec794ef14195796b332851ab98904
+ms.openlocfilehash: 065a2cf6d6a2fe7d7e418299255c5bbf1f2bf753
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847133"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921615"
 ---
 # <a name="connectionmanager-reference"></a>ConnectionManager 引用
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 可以在 Visual Studio 2019 版本 16.5 及更高版本中使用 ConnectionManager.exe。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
-ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。可以在“开发人员命令提示”窗口中使用它。 若要详细了解开发人员命令提示，请参阅[通过命令行使用 Microsoft C++ 工具集](../build/building-on-the-command-line.md)。
+ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 可以在“开发人员命令提示”窗口中使用它。 若要详细了解开发人员命令提示，请参阅[通过命令行使用 Microsoft C++ 工具集](../build/building-on-the-command-line.md)。
 
-可以在 Visual Studio 2019 版本 16.5 及更高版本中使用 ConnectionManager.exe。 它属于 Visual Studio 安装程序中的“使用 C++ 的 Linux 开发”  工作负载。 它也会在你选择安装程序中的“连接管理器”  组件时自动安装。 它的安装路径为 %VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe  。
+可以在 Visual Studio 2019 版本 16.5 及更高版本中使用 ConnectionManager.exe。 它属于 Visual Studio 安装程序中的“使用 C++ 的 Linux 开发”工作负载。 它也会在你选择安装程序中的“连接管理器”组件时自动安装。 它的安装路径为 %VCIDEInstallDir%\\Linux\\bin\\ConnectionManagerExe\\ConnectionManager.exe。
 
 在 Visual Studio 中，也可以使用 ConnectionManager.exe 的功能。 若要在 IDE 中管理远程开发连接，请在菜单栏上依次选择“工具” > “选项”，以打开“选项”对话框。 在“选项”对话框中，依次选择“跨平台” > “连接管理器”。
 
@@ -86,7 +86,7 @@ ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接�
 
 - **`--file`** *filename*
 
-  从提供的 filename  中读取连接信息。
+  从提供的 filename 中读取连接信息。
 
 - **`--no-telemetry`**
 
@@ -106,7 +106,7 @@ ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接�
 
 ## <a name="examples"></a>示例
 
-下面的命令在 localhost 上为名为“user”的用户添加连接。 连接使用 %USERPROFILE%\.ssh\id_rsa  中的密钥文件进行身份验证。
+下面的命令在 localhost 上为名为“user”的用户添加连接。 连接使用 %USERPROFILE%\.ssh\id_rsa 中的密钥文件进行身份验证。
 
 ```cmd
 ConnectionManager.exe add user@127.0.0.1 --privatekey "%USERPROFILE%\.ssh\id_rsa"

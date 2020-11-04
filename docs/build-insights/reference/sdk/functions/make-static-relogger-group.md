@@ -9,21 +9,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b74ee778ffafbcb4c292b4b36b309d5ff4d66c27
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1d49f15a14675f265e1f63ef8795f442f49ad5d4
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224157"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920198"
 ---
 # <a name="makestaticreloggergroup"></a>MakeStaticReloggerGroup
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 `MakeStaticReloggerGroup` 函数用于创建可以传递到 [Relog](relog.md) 等函数的静态 relogger 组。 relogger 组的成员从左到右逐个接收事件，直到处理完跟踪中的所有事件为止。
 

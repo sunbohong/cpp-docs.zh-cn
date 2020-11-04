@@ -3,22 +3,22 @@ title: 在 Visual Studio 中安装 C++ Linux 工作负载
 description: 如何在 Visual Studio 中下载、安装和设置用于 C++ 的 Linux 工作负载。
 ms.date: 05/03/2020
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1a1b42927d440d1cde847fd1c1b6593e87a3824a
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 9d0c832ec383286b5f89b8ed1474e69d72b5cb98
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176275"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921602"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下载、安装和设置 Linux 工作负载
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Visual Studio 2017 及更高版本支持 Linux 项目。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”  选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 可以使用 Windows 中的 Visual Studio IDE 来创建、编辑和调试在远程 Linux 系统、虚拟机或[适用于 Linux 的 Windows 子系统](/windows/wsl/about)上执行的 C++ 项目。
 
@@ -28,7 +28,7 @@ Visual Studio 2017 及更高版本支持 Linux 项目。 若要查看这些版�
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安装程序
 
@@ -52,7 +52,7 @@ Visual Studio 2017 及更高版本支持 Linux 项目。 若要查看这些版�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装以下依赖项：
 
@@ -68,7 +68,7 @@ Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装以下依赖项：
 
@@ -81,7 +81,7 @@ Visual Studio 中的 Linux 项目要求在远程 Linux 系统或 WSL 上安装�
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 安装程序：WSL 上的 Ubuntu
 
@@ -93,7 +93,7 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="ubuntu-on-remote-linux-systems"></a>远程 Linux 系统上的 Ubuntu
 
@@ -117,7 +117,7 @@ sudo apt-get install g++ gdb make ninja-build rsync zip
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="fedora-on-wsl"></a>WSL 上的 Fedora
 
@@ -131,7 +131,7 @@ Fedora 使用 dnf 包安装程序  。 要下载 g++、gdb、make、rsync、ninj
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 ## <a name="fedora-on-remote-linux-systems"></a>远程 Linux 系统上的 Fedora
 

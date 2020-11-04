@@ -7,21 +7,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c251d93ce7e9e7325a7146f5697150344cb02d96
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 42ca422e11824bdbdad4e42e7b55950317095703
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508814"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922200"
 ---
 # <a name="reference-vcperf-commands"></a>参考：vcperf 命令
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Visual Studio 2019 中提供 C++ 生成见解工具。 若要查看此版本对应的文档，请将本文的 Visual Studio“版本”选择器控件设置为“Visual Studio 2019”。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 本文列出并介绍 vcperf.exe中可用的命令以及如何使用它们。
 

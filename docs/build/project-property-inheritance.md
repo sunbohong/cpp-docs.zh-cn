@@ -4,12 +4,12 @@ description: 属性在本机 (MSBuild) Visual Studio C++ 项目中的继承方�
 ms.date: 02/21/2020
 helpviewer_keywords:
 - C++ projects, property inheritance
-ms.openlocfilehash: 00afe982156597aa166c2c5de98f3027e3f84bdb
-ms.sourcegitcommit: 6e5429e076e552b32e8bdc49480c51498d7924c1
+ms.openlocfilehash: 17b23426f70bb2d306491e538d30cffc0f202362
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92099701"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919210"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>Visual Studio 项目中的属性继承
 
@@ -17,19 +17,19 @@ Visual Studio 本机项目系统基于 MSBuild。 MSBuild 定义用于生成任�
 
 ## <a name="the-vcxproj-file-props-files-and-targets-files"></a>.vcxproj 文件、.props 文件和 .targets 文件
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 项目属性存储在多个文件中。 某些属性直接存储在 `.vcxproj` 项目文件中。 其他属性来自项目文件导入的其他 `.targets` 或 `.props` 文件（提供默认值） 。 可在基本目录 `%ProgramFiles(x86)%\MSBuild\Microsoft.Cpp\v4.0\v140` 下特定于区域设置的文件夹中找到 Visual Studio 2015 项目文件。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 项目属性存储在多个文件中。 某些属性直接存储在 `.vcxproj` 项目文件中。 其他属性来自项目文件导入的其他 `.targets` 或 `.props` 文件（提供默认值） 。 可在基本目录 `%VSINSTALLDIR%Common7\IDE\VC\VCTargets\` 下特定于区域设置的文件夹中找到 Visual Studio 2017 项目文件。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2019"
+::: moniker range=">=msvc-160"
 
 项目属性存储在多个文件中。 某些属性直接存储在 `.vcxproj` 项目文件中。 其他属性来自项目文件导入的其他 `.targets` 或 `.props` 文件（提供默认值） 。 可在基本目录 `%VSINSTALLDIR%MSBuild\Microsoft\VC\<version>` 下特定于区域设置的文件夹中找到 Visual Studio 项目文件。 `<version>` 特定于 Visual Studio 的版本。 对于 Visual Studio 2019，它是 `v160`。
 
@@ -56,7 +56,7 @@ Visual Studio 本机项目系统基于 MSBuild。 MSBuild 定义用于生成任�
 
 有时，通过查看展开的文件来确定给定的属性值如何继承非常有用。 若要查看扩展版本，请在 Visual Studio 命令提示中输入以下命令。 （将占位符文件名称更改为要使用的名称。）
 
-> msbuild /pp: _temp_ .txt _myapp_ .vcxproj   
+> msbuild /pp: _temp_.txt _myapp_.vcxproj   
 
 除非你十分熟悉 MSBuild，否则展开的项目文件可能会很大并且难以理解。 这是项目文件的基本结构：
 

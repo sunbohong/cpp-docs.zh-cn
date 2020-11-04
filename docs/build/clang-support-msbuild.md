@@ -4,22 +4,22 @@ ms.date: 06/02/2020
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: a34b8931fa344071d319770ef1c55fc46d27e1e2
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 0b29322c46d7a92dbb265610f93b084a84f37d0d
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686340"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922239"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio 项目中的 Clang/LLVM 支持
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Visual Studio 2019 中提供对 CMake 和 MSBuild 项目的 Clang 支持。
 
 ::: moniker-end
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 可以将 Visual Studio 2019 版本 16.2 与 Clang 配合使用来编辑、生成和调试面向 Windows 或 Linux 的 C++ Visual Studio 项目 (MSBuild)。
 

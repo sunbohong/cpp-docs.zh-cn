@@ -2,12 +2,12 @@
 title: 阅读并理解 Visual Studio 中的 C++ 代码
 description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格式以及理解代码。
 ms.date: 05/28/2019
-ms.openlocfilehash: 3da4224592cabd11e449fa4be395eba046c0e554
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cd152ffbbd106c6a31a21da35d08b53555047209
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686124"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924647"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>阅读并理解 Visual Studio 中的 C++ 代码
 
@@ -23,11 +23,11 @@ Visual Studio 对语法元素进行着色，以区分语言关键字、类型名
 
 ![非活动代码](../ide/media/inactive-code-cpp.png "C++ 非活动代码")
 
-在“快速启动”中键入“字体”，然后选择“字体和颜色”，即可自定义颜色********。 在“字体和颜色”对话框中，向下滚动到 C/C++ 选项，然后选择自定义字体和/或颜色****。
+在“快速启动”中键入“字体”，然后选择“字体和颜色”，即可自定义颜色。 在“字体和颜色”对话框中，向下滚动到 C/C++ 选项，然后选择自定义字体和/或颜色。
 
 ## <a name="outlining"></a>大纲显示
 
-右键单击源代码文件中的任意位置，然后选择“大纲显示”以折叠或展开代码块和/或自定义区域，以便更轻松地仅浏览你感兴趣的代码****。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。
+右键单击源代码文件中的任意位置，然后选择“大纲显示”以折叠或展开代码块和/或自定义区域，以便更轻松地仅浏览你感兴趣的代码。 有关详细信息，请参阅[大纲显示](/visualstudio/ide/outlining)。
 
 ![C&#43;&#43; 大纲显示](../ide/media/vs2015_cpp_outlining.png "大纲显示")
 
@@ -41,67 +41,67 @@ Visual Studio 对语法元素进行着色，以区分语言关键字、类型名
 
 ## <a name="scroll-and-zoom"></a>滚动和缩放
 
-按 Ctrl 键并使用鼠标滚轮滚动，即可放大或缩小编辑器****。 还可以使用左下角中的缩放设置进行缩放。
+按 Ctrl 键并使用鼠标滚轮滚动，即可放大或缩小编辑器。 还可以使用左下角中的缩放设置进行缩放。
 
 ![C&#43;&#43; 缩放控件](../ide/media/zoom-control.png "缩放控件")
 
-滚动条“映射模式”使你能快速滚动和浏览整个代码文件，而无需离开当前位置****。 可以单击代码图上的任意位置，以直接转至该位置。
+滚动条“映射模式”使你能快速滚动和浏览整个代码文件，而无需离开当前位置。 可以单击代码图上的任意位置，以直接转至该位置。
 
 ![C&#43;&#43; 中的代码图](../ide/media/vs2015-cpp-code-map.png "代码图")
 
 要开启“映射模式”，请在主工具栏的“快速启动”搜索框中键入“映射”，然后选择“使用滚动映射模式”。 有关详细信息，请参阅[如何：通过自定义滚动条来跟踪代码](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar)。
 
-“映射模式”关闭后，滚动条仍会突出显示你在文件中所做的更改****。 绿色表示已保存的更改，黄色表示未保存的更改。
+“映射模式”关闭后，滚动条仍会突出显示你在文件中所做的更改。 绿色表示已保存的更改，黄色表示未保存的更改。
 
 ## <a name="quick-info-and-parameter-info"></a>快速信息和参数信息
 
 将鼠标悬停在任何变量、函数或其他符号上，即可以获取相关信息，包括声明以及位于其前面的任何注释。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ![显示 Visual Studio 2019 中的快速信息工具提示的屏幕截图。](../ide/media/quick-info-vs2019.png "快速信息")
 
-“快速信息”工具提示具有“联机搜索”链接********。 转到“工具” > “选项” > “文本编辑器” > “C++” > “视图”，以指定搜索提供程序    。
+“快速信息”工具提示具有“联机搜索”链接。 转到“工具” > “选项” > “文本编辑器” > “C++” > “视图”，以指定搜索提供程序    。
 
-如果代码中存在错误，可以将鼠标悬停在该代码上，“快速信息”将随即显示错误消息****。 还可以在“错误列表”窗口中找到该错误消息。
+如果代码中存在错误，可以将鼠标悬停在该代码上，“快速信息”将随即显示错误消息。 还可以在“错误列表”窗口中找到该错误消息。
 
 ![有关错误的快速信息](../ide/media/quickinfo-on-error.png "有关错误的快速信息")
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 ![显示 Visual Studio 2017 中的快速信息工具提示的屏幕截图。](../ide/media/quick-info.png "快速信息")
 
-如果代码中存在错误，可以将鼠标悬停在该代码上，“快速信息”将随即显示错误消息****。 还可以在“错误列表”窗口中找到该错误消息。
+如果代码中存在错误，可以将鼠标悬停在该代码上，“快速信息”将随即显示错误消息。 还可以在“错误列表”窗口中找到该错误消息。
 
 ![有关错误的快速信息](../ide/media/quickinfo-on-error.png "有关错误的快速信息")
 
 ::: moniker-end
 
-调用函数时，“参数信息”显示参数类型及其预期顺序****。
+调用函数时，“参数信息”显示参数类型及其预期顺序。
 
 ![C&#43;&#43; 中的参数信息](../ide/media/parameter-info.png "参数信息")
 
 ## <a name="peek-definition"></a>查看定义
 
-将鼠标悬停在变量或函数声明上，右键单击，然后选择“查看定义”，无需离开当前位置，即可查看其定义的内联视图****。 有关详细信息，请参阅[查看定义 (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)。
+将鼠标悬停在变量或函数声明上，右键单击，然后选择“查看定义”，无需离开当前位置，即可查看其定义的内联视图。 有关详细信息，请参阅[查看定义 (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)。
 
 ![C&#43;&#43; 速览定义](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
 ## <a name="f1-help"></a>F1 帮助
 
-将光标置于任意类型、关键字或函数的上方或后面，然后按 F1，以便直接转到 docs.microsoft.com 上相关的参考主题****。 F1 也适用于错误列表和许多对话框中的项。
+将光标置于任意类型、关键字或函数的上方或后面，然后按 F1，以便直接转到 docs.microsoft.com 上相关的参考主题。 F1 也适用于错误列表和许多对话框中的项。
 
 ## <a name="class-view"></a>类视图
 
-“类视图”显示所有代码符号及其范围和父级/子级层次结构的可搜索树集，并且按每个项目进行整理****。 可以在“类视图设置”中配置“类视图”的显示内容（单击窗口顶部的齿轮箱图标）********。
+“类视图”显示所有代码符号及其范围和父级/子级层次结构的可搜索树集，并且按每个项目进行整理。 可以在“类视图设置”中配置“类视图”的显示内容（单击窗口顶部的齿轮箱图标）。
 
 ![C&#43;&#43; 中的类视图](../ide/media/class-view.png "类视图")
 
 ## <a name="generate-graph-of-include-files"></a>生成包含文件的关系图
 
-右键单击项目中的代码文件，然后选择“生成包含文件的关系图”以查看其他文件包含哪些文件的关系图****。
+右键单击项目中的代码文件，然后选择“生成包含文件的关系图”以查看其他文件包含哪些文件的关系图。
 
 ![C&#43;&#43; 包含文件的关系图](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 

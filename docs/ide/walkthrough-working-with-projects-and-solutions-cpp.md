@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 9a27d5fb49fe3576ee1f8d906219127d8b630c4e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 46fd15e184b3a4fb1f84cde3e3207c03c692ad2e
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228656"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921875"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>演练：使用项目和解决方案 (C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "87228656"
 
 若要创建项目，请先选择项目类型模板。 对于每种项目类型，Visual Studio 会设置编译器设置，并根据类型生成起始代码，稍后可修改该代码。 根据使用的 Visual Studio 版本，以下步骤会有所不同。 若要查看 Visual Studio 首选项的文档，请使用“版本”选择器控件。 它位于此页面上目录表的顶部。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ### <a name="to-create-a-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中创建项目
 
@@ -50,7 +50,7 @@ ms.locfileid: "87228656"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ### <a name="to-create-a-project-in-visual-studio-2017"></a>在 Visual Studio 2017 中创建项目
 
@@ -72,7 +72,7 @@ ms.locfileid: "87228656"
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ### <a name="to-create-a-project-in-visual-studio-2015"></a>在 Visual Studio 2015 中创建项目
 

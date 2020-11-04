@@ -4,22 +4,22 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 55327d53f3f9e8439ba6e008f1b5a6b384722d54
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 61da0fd70ad68928872a2212b70377ab8a83a76a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229865"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919392"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Visual Studio 2017 及更高版本支持 CMake 项目。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 CMakeSettings.json 文件包含 Visual Studio 为 IntelliSense 使用的信息，并为指定的配置和编译器环境构造它传递给 cmake.exe 的命令行参数。 配置指定适用于特定平台和生成类型的属性，例如 `x86-Debug` 或 `Linux-Release`。 每个配置都指定一个环境，该环境封装有关编译器工具集的信息，例如 MSVC、GCC 或 Clang。 CMake 使用命令行参数为项目重新生成根文件 CMakeCache.txt 和其他项目文件。 可以在 CMakeLists.txt 文件中覆盖这些值。
 

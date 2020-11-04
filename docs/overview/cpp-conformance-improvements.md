@@ -3,18 +3,18 @@ title: C++ 的符合性改进
 ms.date: 08/04/2020
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.technology: cpp-language
-ms.openlocfilehash: 3cf06b092b79068b22e62dfdbbcfbd2c2cf5ad91
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500254"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92921420"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
 Microsoft C++ 在每个版本中进行了符合性改进和 bug 修复。 本文按主要版本然后次要版本列出了改进之处。 还按版本列出了主要 bug 修复。 若要直接跳转到特定版本的更改，请使用“本文中”列表。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="conformance-improvements-in-visual-studio-2019-rtw-version-160"></a><a name="improvements_160"></a>Visual Studio 2019 RTW（版本 16.0）中的符合性改进
 
@@ -1617,7 +1617,7 @@ void f(E e) {
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="conformance-improvements-in-visual-studio-2017-rtw-version-150"></a><a name="improvements_150"></a>Visual Studio 2017 RTW（版本 15.0）中的符合性改进
 
@@ -3643,7 +3643,7 @@ note: see usage of 'g'.
 
 ::: moniker-end
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 中的 C++ 符合性改进
 

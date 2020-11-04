@@ -10,21 +10,21 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6f53a9b6c682a0af7d8a01f6378ed0574d8fa4ca
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a6ecff81a9f3d2b22107a8fa7fc26fad85d4f579
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041167"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919509"
 ---
 # <a name="c-build-insights-sdk"></a>C++ 生成见解 SDK
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
 C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 C++ Build Insights SDK 是一个 API 集合，可便于在 C++ Build Insights 平台基础之上创建个性化工具。 本页提供了有助于你入门的简要概述。
 
