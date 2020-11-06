@@ -1,4 +1,4 @@
-﻿---
+---
 title: 在 Visual Studio 中安装 C 和 C++ 支持
 description: 安装对 Visual C++ 的 Visual Studio 支持
 ms.custom: mvc
@@ -6,18 +6,18 @@ ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
-ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
+ms.openlocfilehash: 6f547b7e50d39b073232e913e660bf3ab96789cb
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83550805"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922122"
 ---
 # <a name="install-c-and-c-support-in-visual-studio"></a>在 Visual Studio 中安装 C 和 C++ 支持
 
 如果尚未下载并安装 Visual Studio 和 Microsoft C/C++ 工具，请参阅下面的入门指南。
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 安装
 
@@ -125,7 +125,7 @@ ms.locfileid: "83550805"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="msvc-150"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安装
 
@@ -152,7 +152,6 @@ ms.locfileid: "83550805"
    > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或 [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
 1. 找到下载的安装程序文件并运行。 它可能会显示在浏览器中，也可能会在“Downloads”文件夹中找到它。 安装程序需要管理员权限才能运行。 你可能会看到“用户帐户控制”对话框，要求你授予权限以便让安装程序可对系统进行更改；选择“是”。 如果遇到问题，请在文件资源管理器中找到下载的文件，右键单击安装程序图标，然后从上下文菜单中选择“以管理员身份运行”。
-
 
    ![下载并安装 Visual Studio 安装程序](media/vscpp-concierge-run-installer.gif "下载并安装 Visual Studio 安装程序")
 
@@ -182,7 +181,7 @@ ms.locfileid: "83550805"
 
 ::: moniker-end
 
-::: moniker range="<vs-2017"
+::: moniker range="<msvc-150"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安装
 
