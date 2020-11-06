@@ -1,6 +1,6 @@
 ---
-title: 分析A
-description: C++生成见解 SDK 分析函数引用。
+title: AnalyzeA
+description: C++ Build Insights SDK AnalyzeA 函数引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 7c7602c49ab5f3ce67693424019e253727563293
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a2b014c35c2ebc6096b97dd3c0f86bd57e293451
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324126"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920302"
 ---
-# <a name="analyzea"></a>分析A
+# <a name="analyzea"></a>AnalyzeA
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-该`AnalyzeA`函数用于分析从 Windows （ETW） 跟踪的输入事件跟踪读取的 MSVC 事件。
+`AnalyzeA` 函数用于分析从输入 Windows 事件跟踪 (ETW) 跟踪读取的 MSVC 事件。
 
 ## <a name="syntax"></a>语法
 
@@ -37,14 +37,14 @@ enum RESULT_CODE AnalyzeA(
 
 ### <a name="parameters"></a>参数
 
-*输入日志文件*\
+inputLogFile\
 要从中读取事件的输入 ETW 跟踪。
 
-*分析描述符*\
-指向[ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md)对象的指针。 使用此对象配置分析。
+analysisDescriptor\
+指向 [ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) 对象的指针。 使用此对象配置分析。
 
 ### <a name="return-value"></a>返回值
 
-来自[RESULT_CODE](../other-types/result-code-enum.md)枚举的结果代码。
+[RESULT_CODE](../other-types/result-code-enum.md) 枚举中的结果代码。
 
 ::: moniker-end

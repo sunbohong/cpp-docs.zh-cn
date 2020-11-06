@@ -1,6 +1,6 @@
 ---
-title: 开始跟踪会话W
-description: C++生成见解 SDK 开始跟踪会话W 函数引用。
+title: StartTracingSessionW
+description: C++ Build Insights SDK StartTracingSessionW 函数引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: af67c3be50cb19ccbfb7fe286e5d61cd1d241bf8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: d89bd6d040f9786539c9be08b9da0813d3bb2c82
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323799"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92922735"
 ---
-# <a name="starttracingsessionw"></a>开始跟踪会话W
+# <a name="starttracingsessionw"></a>StartTracingSessionW
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-函数`StartTracingSessionW`启动跟踪会话。 调用此函数的可执行文件必须具有管理员权限。
+`StartTracingSessionW` 函数用于启动跟踪会话。 调用此函数的可执行文件必须具有管理员权限。
 
 ## <a name="syntax"></a>语法
 
@@ -37,14 +37,14 @@ enum RESULT_CODE StartTracingSessionW(
 
 ### <a name="parameters"></a>参数
 
-*会话名称*\
-要启动的跟踪会话的名称。 调用[停止跟踪会话W](stop-tracing-session-w.md)或任何其他停止跟踪函数时使用相同的名称。
+sessionName\
+要启动的跟踪会话的名称。 调用 [StopTracingSessionW](stop-tracing-session-w.md) 或任何其他停止跟踪函数时，请使用相同的名称。
 
-*选项*\
-指向[TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md)对象的指针。 使用此对象可选择要由跟踪会话收集的事件。
+options\
+指向 [TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md) 对象的指针。 使用此对象可选择跟踪会话应收集的事件。
 
 ### <a name="return-value"></a>返回值
 
-来自[RESULT_CODE](../other-types/result-code-enum.md)枚举的结果代码。
+[RESULT_CODE](../other-types/result-code-enum.md) 枚举中的结果代码。
 
 ::: moniker-end

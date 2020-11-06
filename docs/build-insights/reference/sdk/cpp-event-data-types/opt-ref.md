@@ -1,6 +1,6 @@
 ---
 title: OptRef 类
-description: C++生成见解 SDK OptRef 类引用。
+description: C++ Build Insights SDK OptRef 类引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: dca8cc62eed4b7136f88ed5ba6a1a168b2de56c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 72d3867456ecc2bb643239ddb0186668e43f69ef
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81324449"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92920510"
 ---
 # <a name="optref-class"></a>OptRef 类
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-该`OptRef`类与[匹配事件](../functions/match-event.md)、[匹配事件在成员函数](../functions/match-event-in-member-function.md)、[匹配事件堆栈](../functions/match-event-stack.md)和[匹配事件堆栈功能](../functions/match-event-stack-in-member-function.md)一起使用。 使用它匹配[OPT_REF](../event-table.md#opt-ref)事件。
+`OptRef` 类与 [MatchEvent](../functions/match-event.md)、[MatchEventInMemberFunction](../functions/match-event-in-member-function.md)、[MatchEventStack](../functions/match-event-stack.md) 和 [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) 函数一起结合使用。 使用它来匹配 [OPT_REF](../event-table.md#opt-ref) 事件。
 
 ## <a name="syntax"></a>语法
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>成员
 
-除了从[其活动](activity.md)基类继承的成员外，`OptRef`该类还包含以下成员：
+除了从自己的 [Activity](activity.md) 基类继承的成员外，`OptRef` 类还包含以下成员：
 
 ### <a name="constructors"></a>构造函数
 
 [OptRef](#opt-ref)
 
-## <a name="optref"></a><a name="opt-ref"></a>OptRef
+## <a name="optref"></a><a name="opt-ref"></a> OptRef
 
 ```cpp
 OptRef(const RawEvent& event);
@@ -53,7 +53,7 @@ OptRef(const RawEvent& event);
 
 ### <a name="parameters"></a>参数
 
-*事件*\
-[OPT_REF](../event-table.md#opt-ref)事件。
+*event*\
+[OPT_REF](../event-table.md#opt-ref) 事件。
 
 ::: moniker-end

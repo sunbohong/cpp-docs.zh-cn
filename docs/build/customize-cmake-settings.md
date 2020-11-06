@@ -3,16 +3,16 @@ title: 在 Visual Studio 中自定义 CMake 生成设置
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: c6bd1404799ccc9ad6b689646cd066849d48fca8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9fa1a21b26088482fb64441d0ccf0ad968bd480f
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328682"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919262"
 ---
 # <a name="customize-cmake-build-settings"></a>自定义 CMake 生成设置
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 在 Visual Studio 2019 及更高版本中，可以使用“CMake 设置编辑器”添加配置并自定义其设置  。 编辑器是手动编辑 CMakeSettings.json 文件的更简单的替代方法，但是如果你希望直接编辑文件，可以单击编辑器右上角的“编辑 JSON”链接   。
 
@@ -158,7 +158,7 @@ JSON IntelliSense 可帮助编辑 CMakeSettings.json 文件  ：
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
 Visual Studio 2017 提供多个 CMake 配置，这些配置定义如何调用 CMake.exe 来创建给定项目的 CMake 缓存。 若要添加新的配置，请单击工具栏的下拉列表中的配置，然后选择“管理配置”  ：
 

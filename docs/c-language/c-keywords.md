@@ -1,18 +1,18 @@
 ---
 title: C 关键字
 description: 标准 C 和 Microsoft C 编译器扩展中的关键字。
-ms.date: 10/15/2020
+ms.date: 10/30/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 24981c8d70cb56b4578fd905a30ccc57eaa83d45
-ms.sourcegitcommit: f19f02f217b80804ab321d463c76ce6f681abcc6
+ms.openlocfilehash: 9efa3fc353a2386a465227c39f4ae83565ae12c3
+ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92176227"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "93238481"
 ---
 # <a name="c-keywords"></a>C 关键字
 
@@ -96,31 +96,30 @@ ANSI 和 ISO C 标准允许为编译器实现保留带有两个前导下划线�
 :::row:::
     :::column:::
         **`__asm`** <sup>5</sup>\
-        **`dllimport`** <sup>4</sup>\
-        **`__int8`** <sup>5</sup>\
-        **`naked`** <sup>4</sup>\
-        **`__based`** <sup>3、5</sup>
-    :::column-end:::
-    :::column:::
-        **`__except`** <sup>5</sup>\
-        **`__int16`** <sup>5</sup>\
-        **`__stdcall`** <sup>5</sup>\
+        **`__based`** <sup>3, 5</sup>\
         **`__cdecl`** <sup>5</sup>\
-        **`__fastcall`**
-    :::column-end:::
-    :::column:::
-        **`__int32`** <sup>5</sup>\
-        **`thread`** <sup>4</sup>\
         **`__declspec`** <sup>5</sup>\
-        **`__finally`** <sup>5</sup>\
-        **`__int64`** <sup>5</sup>
+        **`__except`** <sup>5</sup>\
+        **`__fastcall`**\
+        **`__finally`** <sup>5</sup>
     :::column-end:::
     :::column:::
+        **`__inline`** <sup>5</sup>\
+        **`__int16`** <sup>5</sup>\
+        **`__int32`** <sup>5</sup>\
+        **`__int64`** <sup>5</sup>\
+        **`__int8`** <sup>5</sup>\
+        **`__leave`** <sup>5</sup>\
+        **`__restrict`**
+    :::column-end:::
+    :::column:::
+        **`__stdcall`** <sup>5</sup>\
         **`__try`** <sup>5</sup>\
         **`dllexport`** <sup>4</sup>\
-        **`__inline`** <sup>5</sup>\
-        **`__leave`** <sup>5</sup>\
-        **`static_assert`** <sup>6</sup>
+        **`dllimport`** <sup>4</sup>\
+        **`naked`** <sup>4</sup>\
+        **`static_assert`** <sup>6</sup>\
+        **`thread`** <sup>4</sup>
     :::column-end:::
 :::row-end:::
 

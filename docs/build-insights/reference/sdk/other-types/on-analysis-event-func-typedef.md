@@ -1,6 +1,6 @@
 ---
-title: 上分析事件丰型
-description: C++在分析事件丰体引用上构建见解 SDK。
+title: OnAnalysisEventFunc typedef
+description: C++ Build Insights SDK OnAnalysisEventFunc typedef 引用。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: eacd174279caff0db22586d5e40d3a866afc4459
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: 069c89a01fa466e86986a821e5dd9d0b09f5c81a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329125"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92919782"
 ---
-# <a name="onanalysiseventfunc-typedef"></a>上分析事件丰型
+# <a name="onanalysiseventfunc-typedef"></a>OnAnalysisEventFunc typedef
 
-::: moniker range="<=vs-2015"
+::: moniker range="<=msvc-140"
 
-C++构建见解 SDK 与 Visual Studio 2017 及以上版本兼容。 要查看这些版本的文档，请将本文的 Visual Studio**版本**选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面的目录顶部。
+C++ Build Insights SDK 与 Visual Studio 2017 及更高版本兼容。 若要查看这些版本的文档，请将本文的 Visual Studio“版本”选择器控件设置为 Visual Studio 2017 或 Visual Studio 2019。 它位于此页面上目录表的顶部。
 
 ::: moniker-end
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
-typedef`OnAnalysisEventFunc`是[ANALYSIS_CALLBACKS](analysis-callbacks-struct.md)结构中使用的函数签名之一。
+`OnAnalysisEventFunc` typedef 是在 [ANALYSIS_CALLBACKS](analysis-callbacks-struct.md) 结构中使用的函数签名之一。
 
 ## <a name="syntax"></a>语法
 
@@ -37,14 +37,14 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnAnalysisEventFunc)(
 
 ### <a name="parameters"></a>参数
 
-*事件堆栈*\
+eventStack\
 当前事件的事件堆栈。 有关事件堆栈的详细信息，请参阅[事件](../event-table.md)。
 
-*回调上下文*\
-ANALYSIS_DESCRIPTOR[或](analysis-descriptor-struct.md)[RELOG_DESCRIPTOR](relog-descriptor-struct.md)中为此回调设置的上下文值。
+callbackContext\
+在 [ANALYSIS_DESCRIPTOR](analysis-descriptor-struct.md) 或 [RELOG_DESCRIPTOR](relog-descriptor-struct.md) 中为此回调设置的上下文值。
 
 ### <a name="return-value"></a>返回值
 
-控制接下来会发生什么[CALLBACK_CODE](callback-code-enum.md)值。
+控制接下来应执行的操作的 [CALLBACK_CODE](callback-code-enum.md) 值。
 
 ::: moniker-end

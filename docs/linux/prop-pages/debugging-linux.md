@@ -2,22 +2,22 @@
 title: 调试程序属性 (Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: bebee7a2b3bcfd880a538acae35c9616b3b1bd46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b55a0db001c98be72ac88c17c62b21e98ec4888
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "79446174"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924513"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++ 调试属性 (Linux C++)
 
-::: moniker range="vs-2015"
+::: moniker range="msvc-140"
 
 Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range=">=msvc-150"
 
 | Property | 描述 | 选项 |
 |--|--|--|
@@ -34,6 +34,6 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 | 调试子进程 | 指定是否启用子进程调试。 |
 | 启用 Python 优质打印 | 启用优质打印公式值。 仅支持在 gdb 调试模式下受支持。 |
 | 可视化文件 | 包含 SLT 类型的可视化指令的默认本机可视化文件(.natvis)。 将自动加载属于当前解决方案的其他 .natvis 文件。 |
-| 其他源文件路径映射 | 调试程序用于将 Windows 源文件名映射到 Linux 源文件名的其他路径等效项。 格式为“\<windows-path> =\<linux-path>;...”。 将引用 Windows 路径下找到的源文件名，如同在 Linux 路径下的同一相对位置找到该文件名。 本地项目中找到的文件不需要其他映射。 |
+| 其他源文件路径映射 | 调试程序用于将 Windows 源文件名映射到 Linux 源文件名的其他路径等效项。 格式为“\<windows-path>=\<linux-path>;...”。 将引用 Windows 路径下找到的源文件名，如同在 Linux 路径下的同一相对位置找到该文件名。 本地项目中找到的文件不需要其他映射。 |
 
 ::: moniker-end
