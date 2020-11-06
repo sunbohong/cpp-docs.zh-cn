@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: aa7bcf34cddfa24956d807131b3c484e7d580e73
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2eea6885537037db496a2f42e0fff0ffa69127e3
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506039"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334203"
 ---
 # <a name="linker-tools-error-lnk1104"></a>链接器工具错误 LNK1104
 
-> 无法打开文件 "*filename*"
+> 无法打开文件 " *filename* "
 
 如果链接器未能打开文件（用于读取或写入），则会报告此错误。 此问题的两个最常见原因是：
 
@@ -40,23 +40,23 @@ ms.locfileid: "91506039"
 
 ### <a name="windows-libraries-such-as-kernel32lib"></a>Windows 库，如 kernel32.dll
 
-如果无法打开的文件是 Microsoft 提供的标准库文件之一（如 *kernel32.dll*），则可能会出现项目配置错误或安装错误。 验证是否已安装 Windows SDK。 如果你的项目需要其他 Microsoft 库（如 MFC），请确保 Visual Studio 安装程序也安装了 MFC 组件。 你可以随时运行安装程序来添加可选组件。 有关详细信息，请参阅 [修改 Visual Studio](/visualstudio/install/modify-visual-studio)。 使用安装程序中的 " **单个组件** " 选项卡选择特定的库和 sdk。
+如果无法打开的文件是 Microsoft 提供的标准库文件之一（如 *kernel32.dll* ），则可能会出现项目配置错误或安装错误。 验证是否已安装 Windows SDK。 如果你的项目需要其他 Microsoft 库（如 MFC），请确保 Visual Studio 安装程序也安装了 MFC 组件。 你可以随时运行安装程序来添加可选组件。 有关详细信息，请参阅 [修改 Visual Studio](/visualstudio/install/modify-visual-studio)。 使用安装程序中的 " **单个组件** " 选项卡选择特定的库和 sdk。
 
 ### <a name="versioned-vcruntime-libraries"></a>版本控制 vcruntime 库
 
-如果错误消息具有版本控制的 Microsoft 库（如 *msvcr120.dll*），则可能无法安装该编译器版本的平台工具集。 若要解决此问题，可以使用两个选项：升级项目以使用当前平台工具集，或者安装旧版工具集并不更改项目。 有关详细信息，请参阅 [从早期版本的 Visual C++ 升级项目](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) 和 [使用 Visual Studio 中的本机多目标来生成旧项目](../../porting/use-native-multi-targeting.md)。
+如果错误消息具有版本控制的 Microsoft 库（如 *msvcr120.dll* ），则可能无法安装该编译器版本的平台工具集。 若要解决此问题，可以使用两个选项：升级项目以使用当前平台工具集，或者安装旧版工具集并不更改项目。 有关详细信息，请参阅 [从早期版本的 Visual C++ 升级项目](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md) 和 [使用 Visual Studio 中的本机多目标来生成旧项目](../../porting/use-native-multi-targeting.md)。
 
 ### <a name="retail-debug-or-platform-specific-libraries"></a>零售、调试或特定于平台的库
 
-首次生成新的目标平台或配置（例如零售或 ARM64）时，可能会发生此错误。 在 IDE 中，验证是否安装了 "[常规" 属性页](../../build/reference/general-property-page-project.md)中指定的**平台工具集**和**Windows SDK 版本**。 另外，请验证在 " [VC + + 目录" 属性页](../../build/reference/vcpp-directories-property-page.md)中指定的**库目录**中是否提供了所需的库。 检查每个配置的属性，例如 "调试"、"零售"、"x86" 或 "ARM64"。 如果一个生成工作而另一个生成不工作，则比较这两个版本的设置。 安装任何缺少的必需工具和库。
+首次生成新的目标平台或配置（例如零售或 ARM64）时，可能会发生此错误。 在 IDE 中，验证是否安装了 " [常规" 属性页](../../build/reference/general-property-page-project.md)中指定的 **平台工具集** 和 **Windows SDK 版本** 。 另外，请验证在 " [VC + + 目录" 属性页](../../build/reference/vcpp-directories-property-page.md)中指定的 **库目录** 中是否提供了所需的库。 检查每个配置的属性，例如 "调试"、"零售"、"x86" 或 "ARM64"。 如果一个生成工作而另一个生成不工作，则比较这两个版本的设置。 安装任何缺少的必需工具和库。
 
 ### <a name="the-vccorliblib-library"></a>Vccorlib.h 库
 
-对于通用 Windows (UWP) 应用程序或组件，没有 Spectre 缓解的库。 如果错误消息中包含 *vccorlib.h*，则可能已在 UWP 项目中启用了 [/Qspectre](../../build/reference/qspectre.md) 。 禁用 **/Qspectre** 编译器选项以解决此问题。 在 Visual Studio 中，更改 **Spectre 缓解** 属性。 可在 "项目属性页" 对话框的**c/c + +**  >  **代码生成**页中找到。 **Property Pages**
+对于通用 Windows (UWP) 应用程序或组件，没有 Spectre 缓解的库。 如果错误消息中包含 *vccorlib.h* ，则可能已在 UWP 项目中启用了 [/Qspectre](../../build/reference/qspectre.md) 。 禁用 **/Qspectre** 编译器选项以解决此问题。 在 Visual Studio 中，更改 **Spectre 缓解** 属性。 可在 "项目属性页" 对话框的 **c/c + +**  >  **代码生成** 页中找到。 **Property Pages**
 
 ### <a name="libraries-in-projects-from-online-or-other-sources"></a>在线或其他源中的项目中的库
 
-如果生成的项目是从另一台计算机复制的，则库安装位置可能会不同。 对于命令行生成，请验证是否为生成正确设置了 LIB 环境变量和库路径。 在 Visual Studio 中，可以查看和编辑在项目的属性页中设置的当前库路径。 在 " **VC + + 目录** " 页上，选择 " **库目录** " 属性的下拉控件，然后选择 " **编辑**"。 "**库目录**" 对话框的 "**计算值**" 部分列出了为库文件搜索的当前路径。 更新这些路径以指向你的本地库。
+如果生成的项目是从另一台计算机复制的，则库安装位置可能会不同。 对于命令行生成，请验证是否为生成正确设置了 LIB 环境变量和库路径。 在 Visual Studio 中，可以查看和编辑在项目的属性页中设置的当前库路径。 在 " **VC + + 目录** " 页上，选择 " **库目录** " 属性的下拉控件，然后选择 " **编辑** "。 " **库目录** " 对话框的 " **计算值** " 部分列出了为库文件搜索的当前路径。 更新这些路径以指向你的本地库。
 
 ### <a name="updated-windows-sdk-libraries"></a>更新 Windows SDK 库
 
@@ -72,7 +72,7 @@ ms.locfileid: "91506039"
 
 - 库可能依赖于未安装的其他库。
 
-若要修复命令行生成的路径问题，请验证是否已设置 LIB 环境变量。 请确保它包括所有使用的库的路径，以及生成的每个配置的路径。 在 IDE 中，通过 " **VC + + 目录**  >  **库目录**" 属性设置库路径。 对于生成的每个配置，请确保此处列出了包含所需库的所有目录。
+若要修复命令行生成的路径问题，请验证是否已设置 LIB 环境变量。 请确保它包括所有使用的库的路径，以及生成的每个配置的路径。 在 IDE 中，通过 " **VC + + 目录**  >  **库目录** " 属性设置库路径。 对于生成的每个配置，请确保此处列出了包含所需库的所有目录。
 
 你可能需要提供替代标准库目录的库目录。 在命令行中，使用 [/LIBPATH](../../build/reference/libpath-additional-libpath.md) 选项。 在 IDE 中，使用 "配置属性" 中的 " **附加库目录** " 属性 **> 链接器 >** 项目的 "常规属性" 页。
 
@@ -82,7 +82,7 @@ ms.locfileid: "91506039"
 
 如果 *filename* 在链接器尝试访问时尚不存在，则可能会看到此错误。 如果一个项目依赖于解决方案中的另一个项目，但项目以错误的顺序进行生成，则会发生这种情况。 若要解决此问题，请确保在使用该文件的项目中设置项目引用。 然后，缺少的文件在需要之前生成。 有关详细信息，请参阅 [在 Visual Studio c + + 项目中添加引用](../../build/adding-references-in-visual-cpp-projects.md) 和 [管理项目中的引用](/visualstudio/ide/managing-references-in-a-project)。
 
-## <a name="cannot-open-file-cprogramobj"></a>无法打开文件 "C： \\ Program .obj"
+## <a name="cant-open-file-cprogramobj"></a>无法打开文件 "C： \\ Program .obj"
 
 如果在错误消息中看到文件名 *C： \\ Program* ，请将库路径包装在双引号中。 当以 *C： \\ Program 文件* 开头的未解包路径传递给链接器时，将发生此错误。 已解包的路径也可能导致类似的错误。 通常，它们在驱动器的根目录中显示意外的 .obj 文件。
 
@@ -90,7 +90,7 @@ ms.locfileid: "91506039"
 
 若要在 IDE 中解决此问题，请在项目的下列属性中添加双引号：
 
-- [配置属性 > "VC + + 目录](../../build/reference/vcpp-directories-property-page.md)" 属性页上的 "**库目录**" 属性
+- [配置属性 > "VC + + 目录](../../build/reference/vcpp-directories-property-page.md)" 属性页上的 " **库目录** " 属性
 
 - 配置属性中的 " **附加库目录** " 属性 **> 链接器 > 常规** 属性页，
 
@@ -120,7 +120,7 @@ ms.locfileid: "91506039"
 
 ### <a name="incorrect-file-permissions"></a>文件权限不正确
 
-如果您的文件权限不足，无法访问 *文件名*，则会出现此错误。 如果你使用普通用户帐户来访问受保护的系统目录中的库文件，则可能会发生这种情况。 或者，如果你使用的是从其他用户复制的文件，而这些文件仍具有原始权限集。 若要解决此问题，请将文件移动到可写入的项目目录。 如果移动的文件具有不可访问的权限，请在管理员命令窗口中运行 takeown.exe 命令，以获取文件的所有权。
+如果您的文件权限不足，无法访问 *文件名* ，则会出现此错误。 如果你使用普通用户帐户来访问受保护的系统目录中的库文件，则可能会发生这种情况。 或者，如果你使用的是从其他用户复制的文件，而这些文件仍具有原始权限集。 若要解决此问题，请将文件移动到可写入的项目目录。 如果移动的文件具有不可访问的权限，请在管理员命令窗口中运行 takeown.exe 命令，以获取文件的所有权。
 
 ### <a name="insufficient-disk-space"></a>磁盘空间不足
 
@@ -128,10 +128,10 @@ ms.locfileid: "91506039"
 
 ### <a name="problems-in-the-tmp-environment-variable"></a>TMP 环境变量中的问题
 
-如果 *文件名* 为 .lnk*nnn*，则它是一个用于临时文件的链接器生成的文件名。 TMP 环境变量中指定的目录可能不存在。 或者，可以为 TMP 环境变量指定多个目录。 只应为 TMP 环境变量指定一个目录路径。
+如果 *文件名* 为 .lnk *nnn* ，则它是一个用于临时文件的链接器生成的文件名。 TMP 环境变量中指定的目录可能不存在。 或者，可以为 TMP 环境变量指定多个目录。 只应为 TMP 环境变量指定一个目录路径。
 
 ## <a name="help-my-issue-isnt-listed-here"></a>我的问题未在此处列出！
 
-如果此处未列出任何问题，则可以使用 Visual Studio 中的反馈工具获取帮助。 在 IDE 中，请在菜单栏上，选择 " **帮助 > 发送反馈 > 报告问题**。 或者，通过使用帮助 **> 发送反馈 > 发送建议**来提交建议。 你还可以使用 Visual Studio c + + [开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html)) 网站。 使用它搜索问题的答案并寻求帮助。 有关详细信息，请参阅 [如何报告 Visual C++ 工具集或文档的问题](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
+如果此处未列出任何问题，则可以使用 Visual Studio 中的反馈工具获取帮助。 在 IDE 中，请在菜单栏上，选择 " **帮助 > 发送反馈 > 报告问题** 。 或者，通过使用帮助 **> 发送反馈 > 发送建议** 来提交建议。 你还可以使用 [Microsoft Docs Q&](/answers/topics/c%2B%2B.html) 网站上的问题，以及 Visual Studio c + + [开发人员社区](https://aka.ms/vsfeedback/browsecpp) 网站。 使用这些站点搜索问题的答案并寻求帮助。 有关详细信息，请参阅 [如何报告 Visual C++ 工具集或文档的问题](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
 
-如果你发现了解决此问题的一种新方法，我们应该将其添加到本文中，请告知我们。 你可以 **使用以下按钮**向我们发送反馈。 使用它在 [c + + 文档 github](https://github.com/MicrosoftDocs/cpp-docs/issues)存储库中创建新问题。 谢谢！
+如果你发现了解决此问题的一种新方法，我们应该将其添加到本文中，请告知我们。 你可以 **使用以下按钮** 向我们发送反馈。 使用它在 [c + + 文档 github](https://github.com/MicrosoftDocs/cpp-docs/issues)存储库中创建新问题。 谢谢！

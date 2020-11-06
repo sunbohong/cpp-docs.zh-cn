@@ -5,12 +5,12 @@ ms.date: 07/27/2020
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: a041ecd4053360ebfc0da198efe9a3decb73ffd2
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 4fb06b0f78c93e6b76e0b8d64d7dfbdc541cf299
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924791"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334138"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>使用 C++ Core Guidelines 检查器
 
@@ -130,7 +130,7 @@ C++ Core Guidelines 可帮助你编写更好、更安全的代码。 但是，�
 
 - **枚举规则** ：这些规则 [从 C++ Core Guidelines 强制执行与枚举相关的检查](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-enum)。 <sup>16.3</sup>
 
-- **实验性规则** 这些是一些有用的试验性 C++ Core Check 规则，但不能用于日常使用。 试用并 [提供反馈](https://developercommunity.visualstudio.com/content/idea/post.html?space=62)。<sup>16.0</sup>
+- **实验性规则** 这些是一些有用的试验性 C++ Core Check 规则，但不能用于日常使用。 试用并 [提供反馈](https://aka.ms/feedback/suggest?space=62)。<sup>16.0</sup>
 
 - **函数规则** ：有助于采用说明符的两个检查 **`noexcept`** 。 它们是用于 [清除函数设计和实现](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions)的指导原则。<sup>15.5</sup>
 

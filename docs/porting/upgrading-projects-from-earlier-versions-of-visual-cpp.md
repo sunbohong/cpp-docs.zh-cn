@@ -6,20 +6,20 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 7a4ab98c196d601bc458fe33bb1e2cb45ac30088
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 89c1df88aa8e533dd7d6e5312b1150468c905c18
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505886"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334229"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>从 Visual Studio 的早期版本升级 c + + 项目
 
 若要升级在 Visual Studio 早期版本中创建的项目，只需在最新版本的 Visual Studio 中打开该项目。 Visual Studio 提供将项目升级到当前架构。
 
-如果选择 " **否**"，则不会升级项目。 对于在 Visual Studio 2010 及更高版本中创建的项目，仍可在较新版本的 Visual Studio 中使用该项目。 只需将项目属性设置为继续以较旧的工具集为目标。 如果在您的计算机上保留旧版 Visual Studio，则其工具集在更高版本中可用。 例如，如果您的项目必须继续在 Windows XP 上运行，则可以升级到 Visual Studio 2019。 然后，在项目属性中将工具集指定为 v141_xp 或更早版本。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](use-native-multi-targeting.md)。
+如果选择 " **否** "，则不会升级项目。 对于在 Visual Studio 2010 及更高版本中创建的项目，仍可在较新版本的 Visual Studio 中使用该项目。 只需将项目属性设置为继续以较旧的工具集为目标。 如果在您的计算机上保留旧版 Visual Studio，则其工具集在更高版本中可用。 例如，如果您的项目必须继续在 Windows XP 上运行，则可以升级到 Visual Studio 2019。 然后，在项目属性中将工具集指定为 v141_xp 或更早版本。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](use-native-multi-targeting.md)。
 
-如果选择 **"是"**，则会就地升级项目。 不能将其转换回早期版本。 在升级方案中，这就是创建现有项目和解决方案文件的备份副本的最佳做法。
+如果选择 **"是"** ，则会就地升级项目。 不能将其转换回早期版本。 在升级方案中，这就是创建现有项目和解决方案文件的备份副本的最佳做法。
 
 ## <a name="upgrade-reports"></a>升级报表
 
@@ -41,27 +41,27 @@ ms.locfileid: "91505886"
 
 - 运行时错误或意外结果，因为行为发生了更改。
 
-- 工具中引入的错误。 如果发现问题，请通过正常支持渠道或通过使用 [Visual Studio c + + 开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html) 页面将其报告给 Visual C++ 团队。
+- 工具中引入的错误。 如果发现问题，请通过正常支持渠道或通过使用 [Visual Studio c + + 开发人员社区](https://aka.ms/feedback/report?space=62) 页面将其报告给 Visual C++ 团队。
 
 某些升级的项目和解决方案无需修改即可成功生成。 但是，大多数项目可能需要对项目设置和源代码进行更改。 不能通过一种正确的方法来解决这些问题，但建议使用分阶段方法。 在开始之前，请查看 [潜在升级问题概述](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) ，了解有关多种常见错误的详细信息。
 
-1. 设置平台工具集、c + + 语言标准，并 Windows SDK 版本 (（如果适用）) 到首选版本。  (**项目**  >  **属性**"  >  **配置属性**"  >  **常规**) 
+1. 设置平台工具集、c + + 语言标准，并 Windows SDK 版本 (（如果适用）) 到首选版本。  ( **项目**  >  **属性** "  >  **配置属性** "  >  **常规** ) 
 
-1. 如果有大量错误，可以在修复这些错误时暂时关闭某些选项。 若要关闭[/permissive-](../build/reference/permissive-standards-conformance.md)选项，请使用**项目**  >  **属性**"  >  **配置属性**" "  >  **C/c + +**  >  **语言**"。 若要关闭[代码分析](../code-quality/code-analysis-for-c-cpp-overview.md)选项，请使用**项目**  >  **属性**"  >  **配置属性**" "  >  **代码分析**"。
+1. 如果有大量错误，可以在修复这些错误时暂时关闭某些选项。 若要禁用该 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 选项，请使用 **项目**  >  **属性** "  >  **配置属性** " "  >  **C/c + +**  >  **语言** "。 若要关闭 [代码分析](../code-quality/code-analysis-for-c-cpp-overview.md)选项，请使用 **项目**  >  **属性** "  >  **配置属性** " "  >  **代码分析** "。
 
-1. 确保所有依赖项都存在并且包含路径或库位置正确。  (**项目**  >  **属性**  >  **配置属性**  >  **VC + + 目录**) 
+1. 确保所有依赖项都存在并且包含路径或库位置正确。  ( **项目**  >  **属性**  >  **配置属性**  >  **VC + + 目录** ) 
 
 1. 标识并修复对不再存在的 Api 的引用导致的错误。
 
 1. 修复任何阻止编译的剩余错误。 有关常见错误的修补程序，请参阅 [潜在的升级问题概述](../porting/overview-of-potential-upgrade-issues-visual-cpp.md) 。
 
-1. 重新打开 **/permissive-** ，并修复以前在 MSVC 中编译的不符合代码导致的任何新错误。
+1. **`/permissive-`** 重新打开并修复以前在 MSVC 中编译的不一致代码导致的任何新错误。
 
 1. 启用代码分析来识别潜在问题或过时的编码模式，这些模式将不再被视为可接受。 如果代码分析标记多个错误，则可以关闭某些警告，使其首先重点关注最重要的部分。 IDE 可以帮助快速修复某些类型的问题。
 
 1. 请考虑其他现代化代码的机会。 例如，将自定义数据结构和算法替换为 c + + 标准库中的自定义数据结构和算法，或将其替换为增强的开源库。 通过使用标准功能，你可以更轻松地维护代码。 您可以确信，此代码已由许多专家在标准委员会和更广泛的 c + + 社区中进行了充分的测试和评审。
 
-若要修复错误，请尝试在 Stack Overflow 或 [c + + 开发人员社区](https://developercommunity.visualstudio.com/spaces/62/index.html)上搜索或发布问题。
+若要修复错误，可以在 [Microsoft Docs Q&a](/answers/topics/c%2B%2B.html)中搜索解决方案或发布问题。 有关 c + + 编译器和工具的问题，请尝试 [c + + 开发人员社区](https://aka.ms/vsfeedback/browsecpp) 网站。
 
 ## <a name="in-this-section"></a>本节内容
 
