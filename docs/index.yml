@@ -10,12 +10,12 @@ metadata:
   author: corob-msft
   ms.author: corob
   ms.date: 06/04/2020
-  ms.openlocfilehash: 6bfbf763e738a5c53f0b6df0b4790b762ab901f2
-  ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+  ms.openlocfilehash: 487556549e382e6ce8b763229b1c037749263dc7
+  ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
   ms.translationtype: HT
   ms.contentlocale: zh-CN
-  ms.lasthandoff: 09/29/2020
-  ms.locfileid: "91509722"
+  ms.lasthandoff: 11/06/2020
+  ms.locfileid: "94334128"
 highlightedContent:
   items:
   - title: 安装 Visual Studio 并选择你的 C++ 工作负载
@@ -182,4 +182,4 @@ additionalContent:
         url: cloud/cloud-and-web-programming-in-visual-cpp.md
       - text: 通用 Windows 平台库
         url: cppcx/namespaces-reference-c-cx.md
-  footer: '[博客](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [报告问题](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [开发者社区](https://developercommunity.visualstudio.com/spaces/62/index.html) - 参与编写 C++ 文档：请参阅我们的[参与者指南](/contribute/)。'
+  footer: '[Microsoft Docs 问答](/answers/topics/c%2B%2B.html) - [C++ 团队博客](https://devblogs.microsoft.com/cppblog/) - [Twitter](https://twitter.com/visualc) - [开发人员社区](https://aka.ms/vsfeedback/browsecpp) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-c++) - [如何报告问题](overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md) - [建议功能](https://aka.ms/feedback/suggest?space=62) - 对 C++ 文档贡献内容：请参阅我们的[参与者指南](/contribute/)。'
