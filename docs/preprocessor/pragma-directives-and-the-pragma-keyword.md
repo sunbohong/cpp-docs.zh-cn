@@ -14,12 +14,12 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: bf4bbdcf74808edd8ef54149f8258f47bd94c600
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238403"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381540"
 ---
 # <a name="pragma-directives-and-the-__pragma-keyword"></a>Pragma 指令和 __pragma 关键字
 
@@ -30,7 +30,7 @@ ms.locfileid: "93238403"
 > **#`pragma`***标记-字符串*\
 > **`__pragma(`***标记-字符串* **`)`** 两个前导下划线-Microsoft 特定扩展 **`_Pragma(`** *字符串文本* **`)`** //C99
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 C 和 C++ 的每个实现均支持某些对其主机或操作系统唯一的功能。 例如，某些程序必须对内存中的数据位置进行精确控制，或控制某些函数接收参数的方式。 **#Pragma** 指令为每个编译器提供了一种提供计算机和操作系统特定功能的方法，同时保持与 c 和 c + + 语言的总体兼容性。
 
@@ -148,7 +148,7 @@ return _hr; \
 字符串应为后面放置语句的字符串 *`#pragma`* 。 例如：
 
 ```c
-#pragma message("--the #pragma way")
+#pragma message("the #pragma way")
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 
@@ -181,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C/c + + 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)\
 [C 杂注](../c-language/c-pragmas.md)\

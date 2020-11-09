@@ -1,6 +1,7 @@
 ---
-title: '&lt;ios&gt; typedef'
-ms.date: 11/04/2016
+title: '`<ios>` typedef'
+description: 描述 `<ios>` 支持 `ios` 旧库中的类的 c + + 标准模板库 (STL) typedef `iostream` 。
+ms.date: 11/06/2020
 f1_keywords:
 - iosfwd/std::ios
 - iosfwd/std::streamoff
@@ -8,29 +9,28 @@ f1_keywords:
 - iosfwd/std::streamsize
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
-ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4af9636ab3317e7b81eb73dc74aef065b1287e21
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212275"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381631"
 ---
-# <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedef
+# <a name="ios-typedefs"></a>`<ios>` typedef
 
-## <a name="ios"></a><a name="ios"></a>ios
+## `ios`
 
-支持旧 iostream 库中的 ios 类。
+支持 `ios` 旧库中的类 `iostream` 。
 
 ```cpp
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-类型是类模板[basic_ios](../standard-library/basic-ios-class.md)的同义词，专用于 **`char`** 具有默认字符特征的类型的元素。
+类型是类模板的同义词 [`basic_ios`](../standard-library/basic-ios-class.md) ，专用于 **`char`** 具有默认字符特征的类型的元素。
 
-## <a name="streamoff"></a><a name="streamoff"></a>streamoff
+## `streamoff`
 
 支持内部操作。
 
@@ -42,11 +42,11 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此类型为带符号整数，描述的对象可存储多个流定位操作涉及的字节偏移量。 它的表示形式具有至少 32 个值位。 它并不需要大得足以表示流中任意字节位置。 该值 `streamoff(-1)` 通常指示错误的偏移量。
+类型为带符号整数。 它描述可在流定位操作中存储字节偏移量的对象。 它的表示形式具有至少 32 个值位。 这并不一定足以表示流中的任意字节位置。 该值 `streamoff(-1)` 通常指示错误的偏移量。
 
-## <a name="streampos"></a><a name="streampos"></a>streampos
+## `streampos`
 
 保留缓冲区指针或文件指针的当前位置。
 
@@ -54,9 +54,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-该类型是[fpos](../standard-library/fpos-class.md)> 的同义词 <  `mbstate_t` 。
+该类型是> 的同义词 [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t` 。
 
 ### <a name="example"></a>示例
 
@@ -73,7 +73,7 @@ int main( )
    ofstream x( "iostream.txt" );
    x << "testing";
    streampos y = x.tellp( );
-   cout << y << endl;
+   cout << streamoff(y) << '\n';
 }
 ```
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>streamsize
+## `streamsize`
 
 表示流的大小。
 
@@ -93,13 +93,13 @@ int main( )
 #endif
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-此类型为带符号整数，该整数描述的对象可存储多个流操作涉及的元素数量计数。 它的表示形式具有至少 16 个值位。 它并不需要大得足以表示流中任意字节位置。
+此类型为带符号整数，该整数描述的对象可存储多个流操作涉及的元素数量计数。 它的表示形式具有至少 16 个值位。 这并不一定足以表示流中的任意字节位置。
 
 ### <a name="example"></a>示例
 
-编译并运行如下程序后，请浏览文件 file test 以查看 `streamsize` 设置的效果。
+编译并运行以下程序之后，查看文件 `test.txt` 以查看设置的效果 `streamsize` 。
 
 ```cpp
 // ios_streamsize.cpp
@@ -117,19 +117,19 @@ int main( )
 }
 ```
 
-## <a name="wios"></a><a name="wios"></a>wios
+## `wios`
 
-支持旧 iostream 库中的 wios 类。
+支持 `wios` 旧库中的类 `iostream` 。
 
 ```cpp
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-类型是类模板[basic_ios](../standard-library/basic-ios-class.md)的同义词，专用于 **`wchar_t`** 具有默认字符特征的类型的元素。
+类型是类模板的同义词 [`basic_ios`](../standard-library/basic-ios-class.md) ，专用于 **`wchar_t`** 具有默认字符特征的类型的元素。
 
-## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
+## `wstreampos`
 
 保留缓冲区指针或文件指针的当前位置。
 
@@ -137,9 +137,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-该类型是[fpos](../standard-library/fpos-class.md)> 的同义词 <  `mbstate_t` 。
+该类型是> 的同义词 [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t` 。
 
 ### <a name="example"></a>示例
 

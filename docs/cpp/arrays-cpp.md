@@ -1,17 +1,18 @@
 ---
 title: 数组 (C++)
-ms.date: 08/03/2020
+description: 了解如何在标准 c + + 编程语言中声明和使用本机数组类型。
+ms.date: 11/08/2020
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 6d002f2baa6657c13ffc603e74828ab60585d3a9
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2a84e5db04d0a37ebd65e0d979e9b075b7c23312
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352786"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381579"
 ---
 # <a name="arrays-c"></a>数组 (C++)
 
@@ -44,9 +45,9 @@ ms.locfileid: "91352786"
     }
 ```
 
-数组中的第一个元素是第零个元素。 最后一个元素是 (*n*-1) 元素，其中 *n* 是数组可以包含的元素数。 声明中的元素数量必须是整型，并且必须大于0。 你有责任确保你的程序永远不会将值传递到大于的下标运算符 `(size - 1)` 。
+数组中的第一个元素是第零个元素。 最后一个元素是 ( *n* -1) 元素，其中 *n* 是数组可以包含的元素数。 声明中的元素数量必须是整型，并且必须大于0。 你有责任确保你的程序永远不会将值传递到大于的下标运算符 `(size - 1)` 。
 
-仅当数组是或中的最后一个字段 **`struct`** **`union`** ，并且启用了 Microsoft 扩展 (**`/Za`** 或 **`/permissive-`** 未将其设置) 时，零大小的数组才合法。
+仅当数组是或中的最后一个字段 **`struct`** **`union`** ，并且启用了 Microsoft 扩展 ( **`/Za`** 或 **`/permissive-`** 未将其设置) 时，零大小的数组才合法。
 
 基于堆栈的数组的分配和访问速度比基于堆的数组更快。 但是，堆栈空间是有限的。 数组元素的数目不能太大，因为它使用了太多的堆栈内存。 太多多少依赖于你的程序。 可以使用分析工具来确定数组是否太大。
 
@@ -131,12 +132,12 @@ int main()
 
 ## <a name="passing-arrays-to-functions"></a>将数组传递给函数
 
-当数组传递到函数时，它将作为指向第一个元素的指针传递，无论它是基于堆栈还是基于堆的数组。 指针不包含其他大小或类型信息。 此行为称为 *指针衰减*。 将数组传递给函数时，必须始终在单独的参数中指定元素数。 此行为还意味着数组元素传递到函数时不会复制。 若要防止函数修改元素，请将参数指定为指向元素的指针 **`const`** 。
+当数组传递到函数时，它将作为指向第一个元素的指针传递，无论它是基于堆栈还是基于堆的数组。 指针不包含其他大小或类型信息。 此行为称为 *指针衰减* 。 将数组传递给函数时，必须始终在单独的参数中指定元素数。 此行为还意味着数组元素传递到函数时不会复制。 若要防止函数修改元素，请将参数指定为指向元素的指针 **`const`** 。
 
 下面的示例演示了一个函数，该函数接受一个数组和一个长度。 指针指向原始数组，而不是副本。 由于参数不为 **`const`** ，因此函数可以修改数组元素。
 
 ```cpp
-void process(double p*, const size_t len)
+void process(double *p, const size_t len)
 {
     std::cout << "process:\n";
     for (size_t i = 0; i < len; ++i)
@@ -146,10 +147,10 @@ void process(double p*, const size_t len)
 }
 ```
 
-将数组声明为 const，使其在函数块中为只读：
+声明数组参数，并将 `p` 其定义为 **`const`** ，使其在函数块中为只读：
 
 ```cpp
-void process(const double p*, const size_t len);
+void process(const double *p, const size_t len);
 ```
 
 也可以通过这些方式声明同一函数，不会更改行为。 数组仍作为指向第一个元素的指针传递：
@@ -254,7 +255,7 @@ The minimum cost to Market 3 is: 17.29
 
 ## <a name="initializing-arrays"></a>初始化数组
 
-具有类构造函数的对象数组由构造函数进行初始化。 当初始值设定项列表中的项少于数组中的元素时，默认构造函数将用于其余元素。 如果没有为类定义默认构造函数，则初始值设定项列表必须是 *完整*的，也就是说，数组中的每个元素必须有一个初始值设定项。
+具有类构造函数的对象数组由构造函数进行初始化。 当初始值设定项列表中的项少于数组中的元素时，默认构造函数将用于其余元素。 如果没有为类定义默认构造函数，则初始值设定项列表必须是 *完整* 的，也就是说，数组中的每个元素必须有一个初始值设定项。
 
 考虑定义了两个构造函数的`Point` 类：
 
@@ -283,7 +284,7 @@ int main()
 
 `aPoint` 的第一个元素是使用构造函数 `Point( int, int )` 构造的；剩余的两个元素是使用默认构造函数构造的。
 
-静态成员数组 (**`const`** 在类声明) 外 (的定义中是否可以初始化) 。 例如：
+静态成员数组 ( **`const`** 在类声明) 外 (的定义中是否可以初始化) 。 例如：
 
 ```cpp
 // initializing_arrays2.cpp
@@ -344,7 +345,7 @@ int main() {
 
 `*((array_name) + (subscript))`
 
-与涉及指针类型的所有加法一样，缩放会自动进行以调整类型大小。 结果值不是从的源中的 *n* 个字节 `array_name` ; 相反，它是数组的第 *n*个元素。 有关此转换的详细信息，请参阅 [加法运算符](additive-operators-plus-and.md)。
+与涉及指针类型的所有加法一样，缩放会自动进行以调整类型大小。 结果值不是从的源中的 *n* 个字节 `array_name` ; 相反，它是数组的第 *n* 个元素。 有关此转换的详细信息，请参阅 [加法运算符](additive-operators-plus-and.md)。
 
 同样，对于多维数组，将使用以下方法获取地址：
 
@@ -365,6 +366,6 @@ char *psz = szError1;
 szError1 = psz;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [std：： array](../standard-library/array-class-stl.md)

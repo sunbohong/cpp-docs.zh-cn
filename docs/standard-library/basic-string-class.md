@@ -121,12 +121,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: fa2e6813d6cfb55ea1924bc976ef03396b88ca92
-ms.sourcegitcommit: 9c801a43ee0d4d84956b03fd387716c818705e0d
+ms.openlocfilehash: 87eda4064ff63a22add49b2872a26c76ac15bc6a
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907566"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381644"
 ---
 # <a name="basic_string-class"></a>`basic_string` 类
 
@@ -2179,7 +2179,7 @@ int main( )
       cout << "The index of the 1st element of sample "
            << "in str3 is: " << indexCh3a << endl;
    else
-      cout << "The substring 'perfect' was not found in str3 ."
+      cout << "The substring 'sample' was not found in str3 ."
            << endl;
 
    const char *cstr3b = "for";
@@ -4956,7 +4956,7 @@ The character ch1 is: G.
 The character ch2 is: H.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [`<string>`](../standard-library/string.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

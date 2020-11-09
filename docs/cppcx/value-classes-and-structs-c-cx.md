@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3350af722993d6b23efa3dc9dbd5a7c33ee5165b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
+ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214940"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94381592"
 ---
 # <a name="value-classes-and-structs-ccx"></a>值类和结构 (C++/CX)
 
-*值结构*或*值类*是与 Windows 运行时兼容的 POD （"纯旧数据结构"）。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。
+*值结构* 或 *值类* 是 ( "纯旧数据结构" ) 的 Windows 运行时兼容的 POD。 它具有固定大小且只包含字段；与 ref 类不同，它没有属性。
 
 下面的示例演示如何声明和初始化值结构。
 
@@ -48,11 +48,11 @@ ms.locfileid: "87214940"
     ts3.str = "Another way to init a value struct.";
 ```
 
-将一个值类型的变量分配给另一个变量时，该值被复制，因此，两个变量均有自己的数据副本。 *值结构*是固定大小的结构，它只包含公共数据字段并使用关键字进行声明 **`value struct`** 。
+将一个值类型的变量分配给另一个变量时，该值被复制，因此，两个变量均有自己的数据副本。 *值结构* 是固定大小的结构，它只包含公共数据字段并使用关键字进行声明 **`value struct`** 。
 
-*值类*与类似，只是 **`value struct`** 必须将其字段显式赋予公共可访问性。 它使用关键字进行声明 **`value class`** 。
+*值类* 与类似，只是 **`value struct`** 必须将其字段显式赋予公共可访问性。 它使用关键字进行声明 **`value class`** 。
 
-值结构或值类只能作为字段包含基本数值类型、枚举类、 `Platform::String^` 或[Platform：： \<T> ^ IBox](../cppcx/platform-ibox-interface.md) ，其中 T 是数值类型或枚举类或值类或结构。 `IBox<T>^`字段的值可以是 **`nullptr`** ，这是 c + + 实现 "可以*为 null 的值类型*" 概念的方式。
+值结构或值类只能作为字段包含基本数值类型、枚举类、 `Platform::String^` 或[Platform：： \<T> ^ IBox](../cppcx/platform-ibox-interface.md) ，其中 T 是数值类型或枚举类或值类或结构。 `IBox<T>^`字段的值可以是 **`nullptr`** ，这是 c + + 实现 "可以 *为 null 的值类型* " 概念的方式。
 
 将 `Platform::String^` 或 `IBox<T>^` 类型作为成员包含在内的值类型或结构不支持 `memcpy`。
 
@@ -64,7 +64,7 @@ ms.locfileid: "87214940"
 
 ## <a name="parameter-passing-for-value-types"></a>值类型的参数传递
 
-如果某个值类型用作函数或方法参数，则它通常通过值传递。 对于较大的对象，这会导致性能问题。 在 Visual Studio2013 和早期版本中，C++/CX 中的值类型始终通过值传递。 在 Visual Studio 2015 及更高版本中，可以通过引用或值来传递值类型。
+如果某个值类型用作函数或方法参数，则它通常通过值传递。 对于较大的对象，这会导致性能问题。 在 Visual Studio 2013 及更早版本中，c + +/CX 中的值类型始终通过值传递。 在 Visual Studio 2015 及更高版本中，可以通过引用或值来传递值类型。
 
 若要声明通过值传递值类型的参数，请使用如下所示的代码：
 
@@ -147,7 +147,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
