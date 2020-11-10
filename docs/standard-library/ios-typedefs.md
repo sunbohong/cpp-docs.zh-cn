@@ -9,12 +9,12 @@ f1_keywords:
 - iosfwd/std::streamsize
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
-ms.openlocfilehash: 4af9636ab3317e7b81eb73dc74aef065b1287e21
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: b9dbed64c88a00f5ca065e23c4af2f3922634ece
+ms.sourcegitcommit: b38485bb3a9d479e0c5d64ffc3d841fa2c2b366f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381631"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94441263"
 ---
 # <a name="ios-typedefs"></a>`<ios>` typedef
 
@@ -26,7 +26,7 @@ ms.locfileid: "94381631"
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是类模板的同义词 [`basic_ios`](../standard-library/basic-ios-class.md) ，专用于 **`char`** 具有默认字符特征的类型的元素。
 
@@ -42,7 +42,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型为带符号整数。 它描述可在流定位操作中存储字节偏移量的对象。 它的表示形式具有至少 32 个值位。 这并不一定足以表示流中的任意字节位置。 该值 `streamoff(-1)` 通常指示错误的偏移量。
 
@@ -54,7 +54,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是> 的同义词 [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t` 。
 
@@ -73,7 +73,7 @@ int main( )
    ofstream x( "iostream.txt" );
    x << "testing";
    streampos y = x.tellp( );
-   cout << streamoff(y) << '\n';
+   cout << streamoff( y ) << '\n';
 }
 ```
 
@@ -93,7 +93,7 @@ int main( )
 #endif
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类型为带符号整数，该整数描述的对象可存储多个流操作涉及的元素数量计数。 它的表示形式具有至少 16 个值位。 这并不一定足以表示流中的任意字节位置。
 
@@ -125,7 +125,7 @@ int main( )
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是类模板的同义词 [`basic_ios`](../standard-library/basic-ios-class.md) ，专用于 **`wchar_t`** 具有默认字符特征的类型的元素。
 
@@ -137,7 +137,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是> 的同义词 [`fpos`](../standard-library/fpos-class.md) <  `mbstate_t` 。
 
@@ -155,7 +155,7 @@ int main( )
    wofstream xw( "wiostream.txt" );
    xw << L"testing";
    wstreampos y = xw.tellp( );
-   cout << y << endl;
+   cout << streamoff( y ) << '\n';
 }
 ```
 
