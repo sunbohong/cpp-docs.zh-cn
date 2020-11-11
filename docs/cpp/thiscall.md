@@ -1,5 +1,6 @@
 ---
 title: __thiscall
+description: 了解 microsoft c + + 中 x86 类成员函数的特定于 Microsoft 的 __thiscall 调用约定。
 ms.date: 05/22/2020
 f1_keywords:
 - __thiscall
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: b9edc2cd8caa5fd5458f6a53c5fdb1f8a5e69914
-ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
+ms.openlocfilehash: 9b11dcf8dee928b687f942639ed72ead3659614b
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83854809"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448446"
 ---
 # `__thiscall`
 
-**Microsoft 特定**的 **`__thiscall`** 调用约定用于 x86 体系结构上的 c + + 类成员函数。 这是不使用变量参数（函数）的成员函数所使用的默认调用约定 `vararg` 。
+**Microsoft 特定** 的 **`__thiscall`** 调用约定用于 x86 体系结构上的 c + + 类成员函数。 这是不使用变量参数 (函数) 的成员函数所使用的默认调用约定 `vararg` 。
 
 在下 **`__thiscall`** ，被调用方清理堆栈，这对于函数是不可能的 `vararg` 。 自变量从右到左推送到堆栈上。 **`this`** 指针通过 REGISTER ECX 传递，而不是在堆栈上传递。
 
@@ -24,9 +25,9 @@ ms.locfileid: "83854809"
 
 使用的一个原因 **`__thiscall`** 是在默认情况下，其成员函数使用 **`__clrcall`** 。 在这种情况下，可以使用 **`__thiscall`** 使单个成员函数可从本机代码中调用。
 
-在编译时 [**`/clr:pure`**](../build/reference/clr-common-language-runtime-compilation.md) ，除非另外指定，否则所有函数和函数指针均为 **`__clrcall`** 。 **`/clr:pure`** 和 **`/clr:safe`** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
+在编译时 [`/clr:pure`](../build/reference/clr-common-language-runtime-compilation.md) ，除非另外指定，否则所有函数和函数指针均为 **`__clrcall`** 。 **`/clr:pure`** 和 **`/clr:safe`** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-`vararg`成员函数使用 **`__cdecl`** 调用约定。 所有函数参数都将推送到堆栈上， **`this`** 最后将指针放在堆栈上。
+`vararg` 成员函数使用 **`__cdecl`** 调用约定。 所有函数参数都将推送到堆栈上， **`this`** 最后将指针放在堆栈上。
 
 由于此调用约定仅适用于 c + +，因此没有 C 名称修饰方案。
 
