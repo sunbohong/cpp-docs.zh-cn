@@ -240,12 +240,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 85b467a0ac3db67b2715a849966618697437658b
-ms.sourcegitcommit: b492516cc65120250b9ea23f96f7f63f37f99fae
+ms.openlocfilehash: b5e2b34357456c4937d8ed17dee5661d36b7b0c0
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90075694"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448457"
 ---
 # <a name="predefined-macros"></a>预定义宏
 
@@ -277,17 +277,17 @@ MSVC 支持 ANSI/ISO C99、C11 和 C17 标准以及 ISO C++14 和 C++17 标准�
 
 - `__LINE__`：定义为当前源文件中的整数行号。 可使用 `#line` 指令来更改 `__LINE__` 宏的值。 任何情况下都会定义此宏。
 
-- `__STDC__`：仅在编译为 C，并且指定了 [`/Za`](../build/reference/za-ze-disable-language-extensions.md) 编译器选项时，定义为 1。 其他情况下则不定义。
+- `__STDC__`：仅在编译为 C，并且指定了 `/Za` 编译器选项时，定义为 1。 其他情况下则不定义。
 
 - `__STDC_HOSTED__`：如果实现是托管实现并且支持整个必需的标准库，则定义为 1  。 其他情况下则定义为 0。
 
-- `__STDC_NO_ATOMICS__` 如果实现不支持可选的标准原子，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_ATOMICS__` 如果实现不支持可选的标准原子，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
-- `__STDC_NO_COMPLEX__` 如果实现不支持可选的标准复数，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_COMPLEX__` 如果实现不支持可选的标准复数，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
-- `__STDC_NO_THREADS__` 如果实现不支持可选的标准线程，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_THREADS__` 如果实现不支持可选的标准线程，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
-- `__STDC_NO_VLA__` 如果实现不支持可选的可变长度数组，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_VLA__` 如果实现不支持可选的可变长度数组，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
 - `__STDC_VERSION__` 当编译为 C 且指定 `/std` C11 或 C17 选项之一时定义。 对于 [`/std:c11`](../build/reference/std-specify-language-standard-version.md)，它扩展到 `201112L`；对于 [`/std:c17`](../build/reference/std-specify-language-standard-version.md)，则扩展到 `201710L`。
 
@@ -299,25 +299,25 @@ MSVC 支持 ANSI/ISO C99、C11 和 C17 标准以及 ISO C++14 和 C++17 标准�
 
 MSVC 支持以下其他预定义宏。
 
-- `__ATOM__`：当设置了 [`/favor:ATOM`](../build/reference/favor-optimize-for-architecture-specifics.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
+- `__ATOM__`：当设置了 `/favor:ATOM` 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
-- `__AVX__`：当设置了 [`/arch:AVX`](../build/reference/arch-x86.md)、[`/arch:AVX2`](../build/reference/arch-x86.md) 或 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1  。 其他情况下则不定义。
+- `__AVX__`：当设置了 [`/arch:AVX`](../build/reference/arch-x86.md)、[`/arch:AVX2`](../build/reference/arch-x86.md) 或 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
-- `__AVX2__`：当设置了 [`/arch:AVX2`](../build/reference/arch-x86.md) 或 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1 。 其他情况下则不定义。
+- `__AVX2__`：当设置了 [`/arch:AVX2`](../build/reference/arch-x86.md) 或 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
-- `__AVX512BW__`：当设置了 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
+- `__AVX512BW__`：当设置了 `/arch:AVX512` 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
-- `__AVX512CD__`：当设置了 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
+- `__AVX512CD__`：当设置了 `/arch:AVX512` 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
-- `__AVX512DQ__`：当设置了 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
+- `__AVX512DQ__`：当设置了 `/arch:AVX512` 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
-- `__AVX512F__`：当设置了 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
+- `__AVX512F__`：当设置了 `/arch:AVX512` 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
-- `__AVX512VL__`：当设置了 [`/arch:AVX512`](../build/reference/arch-x86.md) 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
+- `__AVX512VL__`：当设置了 `/arch:AVX512` 编译器选项，并且编译器目标为 x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
 - `_CHAR_UNSIGNED`：如果默认 `char` 类型为无符号，则定义为 1。 当设置了 [`/J`（默认 char 类型为无符号）](../build/reference/j-default-char-type-is-unsigned.md)编译器选项时，会定义此值。 其他情况下则不定义。
 
-- `__CLR_VER`：定义为整数文本，表示用于编译应用的公共语言运行时 (CLR) 的版本。 此值按 `Mmmbbbbb` 格式编码，其中 `M` 为运行时的主版本，`mm` 为运行时的次版本，`bbbbb` 为生成号。 如果设置了 [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项，则定义 `__CLR_VER`。 其他情况下则不定义。
+- `__CLR_VER`：定义为整数文本，表示用于编译应用的公共语言运行时 (CLR) 的版本。 此值按 `Mmmbbbbb` 格式编码，其中 `M` 为运行时的主版本，`mm` 为运行时的次版本，`bbbbb` 为生成号。 如果设置了 `/clr` 编译器选项，则定义 `__CLR_VER`。 其他情况下则不定义。
 
     ```cpp
     // clr_ver.cpp
@@ -374,7 +374,7 @@ MSVC 支持以下其他预定义宏。
     }
     ```
 
-- `__cplusplus_cli`：当编译为 C++ 并设置了 [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项时，定义为整数文本值 200406。 其他情况下则不定义。 定义后，`__cplusplus_cli` 的效力范围是整个翻译单元。
+- `__cplusplus_cli`：当编译为 C++ 并设置了 `/clr` 编译器选项时，定义为整数文本值 200406。 其他情况下则不定义。 定义后，`__cplusplus_cli` 的效力范围是整个翻译单元。
 
     ```cpp
     // cplusplus_cli.cpp
@@ -395,19 +395,19 @@ MSVC 支持以下其他预定义宏。
 
 - `_CPPUNWIND`：如果设置了一个或多个 [`/GX`（启用异常处理）](../build/reference/gx-enable-exception-handling.md)、[`/clr`（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)或 [`/EH`（异常处理模型）](../build/reference/eh-exception-handling-model.md)编译器选项，则定义为 1  。 其他情况下则不定义。
 
-- `_DEBUG`：当设置了 [`/LDd`](../build/reference/md-mt-ld-use-run-time-library.md)、[`/MDd`](../build/reference/md-mt-ld-use-run-time-library.md) 或 [`/MTd`](../build/reference/md-mt-ld-use-run-time-library.md) 编译器选项时，定义为 1  。 其他情况下则不定义。
+- `_DEBUG`：当设置了 [`/LDd`](../build/reference/md-mt-ld-use-run-time-library.md)、[`/MDd`](../build/reference/md-mt-ld-use-run-time-library.md) 或 [`/MTd`](../build/reference/md-mt-ld-use-run-time-library.md) 编译器选项时，定义为 1。 其他情况下则不定义。
 
-- `_DLL`：当设置了 [`/MD`](../build/reference/md-mt-ld-use-run-time-library.md) 或 [`/MDd`](../build/reference/md-mt-ld-use-run-time-library.md)（多线程 DLL）编译器选项时，定义为 1 。 其他情况下则不定义。
+- `_DLL`：当设置了 [`/MD`](../build/reference/md-mt-ld-use-run-time-library.md) 或 [`/MDd`](../build/reference/md-mt-ld-use-run-time-library.md)（多线程 DLL）编译器选项时，定义为 1。 其他情况下则不定义。
 
-- `__FUNCDNAME__`：定义为包含封闭函数[修饰名](../build/reference/decorated-names.md)的字符串文本。 此宏仅在函数中定义。 如果使用 [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 或 [`/P`](../build/reference/p-preprocess-to-a-file.md) 编译器选项，则不会展开 `__FUNCDNAME__` 宏 。
+- `__FUNCDNAME__`：定义为包含封闭函数[修饰名](../build/reference/decorated-names.md)的字符串文本。 此宏仅在函数中定义。 如果使用 [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 或 [`/P`](../build/reference/p-preprocess-to-a-file.md) 编译器选项，则不会展开 `__FUNCDNAME__` 宏。
 
    此示例使用 `__FUNCDNAME__`、`__FUNCSIG__` 和 `__FUNCTION__` 宏来显示函数信息。
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- `__FUNCSIG__`：定义为包含封闭函数签名的字符串文本。 此宏仅在函数中定义。 如果使用 [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 或 [`/P`](../build/reference/p-preprocess-to-a-file.md) 编译器选项，则不会展开 `__FUNCSIG__` 宏 。 当针对 64 位目标进行编译时，调用约定默认为 `__cdecl`。 有关用法的示例，请参阅 `__FUNCDNAME__` 宏。
+- `__FUNCSIG__`：定义为包含封闭函数签名的字符串文本。 此宏仅在函数中定义。 如果使用 [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 或 [`/P`](../build/reference/p-preprocess-to-a-file.md) 编译器选项，则不会展开 `__FUNCSIG__` 宏。 当针对 64 位目标进行编译时，调用约定默认为 `__cdecl`。 有关用法的示例，请参阅 `__FUNCDNAME__` 宏。
 
-- `__FUNCTION__`：定义为包含封闭函数未修饰名的字符串文本。 此宏仅在函数中定义。 如果使用 [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 或 [`/P`](../build/reference/p-preprocess-to-a-file.md) 编译器选项，则不会展开 `__FUNCTION__` 宏 。 有关用法的示例，请参阅 `__FUNCDNAME__` 宏。
+- `__FUNCTION__`：定义为包含封闭函数未修饰名的字符串文本。 此宏仅在函数中定义。 如果使用 [`/EP`](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md) 或 [`/P`](../build/reference/p-preprocess-to-a-file.md) 编译器选项，则不会展开 `__FUNCTION__` 宏。 有关用法的示例，请参阅 `__FUNCDNAME__` 宏。
 
 - `_INTEGRAL_MAX_BITS`：定义为整数文本值 64，表示非矢量整型类型的最大大小（位）。 任何情况下都会定义此宏。
 
@@ -421,7 +421,7 @@ MSVC 支持以下其他预定义宏。
 
 - `__INTELLISENSE__`：当在 Visual Studio IDE 中传递 IntelliSense 编译器时，定义为 1。 其他情况下则不定义。 可使用此宏来保护 IntelliSense 编译器不理解的代码，也可使用它在生成和 IntelliSense 编译器之间进行切换。 有关详细信息，请参阅 [IntelliSense 缓慢疑难解答提示](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)。
 
-- `_ISO_VOLATILE`：如果设置了 [`/volatile:iso`](../build/reference/volatile-volatile-keyword-interpretation.md) 编译器选项，则定义为 1。 其他情况下则不定义。
+- `_ISO_VOLATILE`：如果设置了 `/volatile:iso` 编译器选项，则定义为 1。 其他情况下则不定义。
 
 - `_KERNEL_MODE`：如果设置了 [`/kernel`（创建内核模式二进制）](../build/reference/kernel-create-kernel-mode-binary.md)编译器选项，则定义为 1。 其他情况下则不定义。
 
@@ -429,9 +429,9 @@ MSVC 支持以下其他预定义宏。
 
 - `_M_ARM`：为面向 ARM 处理器的编译定义为整数文本值 7。 其他情况下则不定义。
 
-- `_M_ARM_ARMV7VE`：如果为面向 ARM 处理器的编译设置了 [`/arch:ARMv7VE`](../build/reference/arch-arm.md) 编译器选项，则定义为 1。 其他情况下则不定义。
+- `_M_ARM_ARMV7VE`：如果为面向 ARM 处理器的编译设置了 `/arch:ARMv7VE` 编译器选项，则定义为 1。 其他情况下则不定义。
 
-- `_M_ARM_FP`：定义为整数文本值，表示为面向 ARM 处理器的编译设置的 [`/arch`](../build/reference/arch-arm.md) 编译器选项。 其他情况下则不定义。
+- `_M_ARM_FP`：定义为整数文本值，表示为面向 ARM 处理器的编译设置的 `/arch` 编译器选项。 其他情况下则不定义。
 
   - 如果未指定 `/arch` ARM 选项，则该值在 30-39 范围内，表示为 ARM 设置了默认体系结构 (`VFPv3`)。
 
@@ -443,21 +443,21 @@ MSVC 支持以下其他预定义宏。
 
 - `_M_CEE`：如果设置了任何 [`/clr`（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)编译器选项，则定义为 001。 其他情况下则不定义。
 
-- `_M_CEE_PURE`：从 Visual Studio 2015 开始弃用。 如果设置了 [`/clr:pure`](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项，则定义为 001。 其他情况下则不定义。
+- `_M_CEE_PURE`：从 Visual Studio 2015 开始弃用。 如果设置了 `/clr:pure` 编译器选项，则定义为 001。 其他情况下则不定义。
 
-- `_M_CEE_SAFE`：从 Visual Studio 2015 开始弃用。 如果设置了 [`/clr:safe`](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项，则定义为 001。 其他情况下则不定义。
+- `_M_CEE_SAFE`：从 Visual Studio 2015 开始弃用。 如果设置了 `/clr:safe` 编译器选项，则定义为 001。 其他情况下则不定义。
 
-- `_M_FP_EXCEPT`：如果设置了 [`/fp:except`](../build/reference/fp-specify-floating-point-behavior.md) 或 [`/fp:strict`](../build/reference/fp-specify-floating-point-behavior.md) 编译器选项，则定义为 1 。 其他情况下则不定义。
+- `_M_FP_EXCEPT`：如果设置了 [`/fp:except`](../build/reference/fp-specify-floating-point-behavior.md) 或 [`/fp:strict`](../build/reference/fp-specify-floating-point-behavior.md) 编译器选项，则定义为 1。 其他情况下则不定义。
 
-- `_M_FP_FAST`：如果设置了 [`/fp:fast`](../build/reference/fp-specify-floating-point-behavior.md) 编译器选项，则定义为 1。 其他情况下则不定义。
+- `_M_FP_FAST`：如果设置了 `/fp:fast` 编译器选项，则定义为 1。 其他情况下则不定义。
 
-- `_M_FP_PRECISE`：如果设置了 [`/fp:precise`](../build/reference/fp-specify-floating-point-behavior.md) 编译器选项，则定义为 1。 其他情况下则不定义。
+- `_M_FP_PRECISE`：如果设置了 `/fp:precise` 编译器选项，则定义为 1。 其他情况下则不定义。
 
-- `_M_FP_STRICT`：如果设置了 [`/fp:strict`](../build/reference/fp-specify-floating-point-behavior.md) 编译器选项，则定义为 1。 其他情况下则不定义。
+- `_M_FP_STRICT`：如果设置了 `/fp:strict` 编译器选项，则定义为 1。 其他情况下则不定义。
 
 - `_M_IX86`：为面向 x86 处理器的编译定义为整数文本值 600。 对于面向 x64 或 ARM 处理器的编译，则不定义此宏。
 
-- `_M_IX86_FP`：定义为表示设置了 [`/arch`](../build/reference/arch-arm.md) 编译器选项的整数文本值或默认值。 只要编译目标为 x86 处理器，就会定义此宏。 其他情况下则不定义。 定义后：
+- `_M_IX86_FP`：定义为表示设置了 `/arch` 编译器选项的整数文本值或默认值。 只要编译目标为 x86 处理器，就会定义此宏。 其他情况下则不定义。 定义后：
 
   - 如果设置了 `/arch:IA32` 编译器选项，则值为 0。
 
@@ -469,7 +469,7 @@ MSVC 支持以下其他预定义宏。
 
 - `_M_X64`：为面向 x64 处理器的编译定义为整数文本值 100。 其他情况下则不定义。
 
-- `_MANAGED`：当设置了 [`/clr`](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项时，定义为 1。 其他情况下则不定义。
+- `_MANAGED`：当设置了 `/clr` 编译器选项时，定义为 1。 其他情况下则不定义。
 
 - `_MSC_BUILD`：定义为包含编译器版本号修订号元素的整数文本。 修订号是用句点分隔的版本号的第四个元素。 例如，如果 Microsoft C/C++ 编译器的版本号为 15.00.20706.01，则 `_MSC_BUILD` 宏计算结果为 1。 任何情况下都会定义此宏。
 
@@ -521,11 +521,11 @@ MSVC 支持以下其他预定义宏。
 
    有关详细信息，请参阅 Microsoft C++ 团队博客中的 [Visual C++ 编译器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)。
 
-- `_MSVC_LANG`：定义为指定编译器面向的 C++ 语言标准的整数文本。 此宏仅在编译为 C++ 的代码中设置。 默认情况下，或者当指定了 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 编译器选项时，此宏为整数文本值 201402L。 如果指定了 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 编译器选项，则此宏设置为 201703L。 当指定了 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 选项时，它设置为更高的未指定值。 其他情况下则不会定义此宏。 从 Visual Studio 2015 Update 3 开始，提供 `_MSVC_LANG` 宏和 [`/std`（指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项。
+- `_MSVC_LANG`：定义为指定编译器面向的 C++ 语言标准的整数文本。 此宏仅在编译为 C++ 的代码中设置。 默认情况下，或者当指定了 `/std:c++14` 编译器选项时，此宏为整数文本值 201402L。 如果指定了 `/std:c++17` 编译器选项，则此宏设置为 201703L。 当指定了 `/std:c++latest` 选项时，它设置为更高的未指定值。 其他情况下则不会定义此宏。 从 Visual Studio 2015 Update 3 开始，提供 `_MSVC_LANG` 宏和 [`/std`（指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项。
 
-- `__MSVC_RUNTIME_CHECKS`：当设置了其中一个 [`/RTC`](../build/reference/rtc-run-time-error-checks.md) 编译器选项时，定义为 1。 其他情况下则不定义。
+- `__MSVC_RUNTIME_CHECKS`：当设置了其中一个 `/RTC` 编译器选项时，定义为 1。 其他情况下则不定义。
 
-- `_MSVC_TRADITIONAL`：当设置了预处理器一致性模式 [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) 编译器选项，定义为 0。 默认情况下，或者当设置了 [`/experimental:preprocessor-`](../build/reference/experimental-preprocessor.md) 编译器选项时，定义为 1，指示正在使用传统预处理器。 从 Visual Studio 2017 版本 15.8 开始，提供 `_MSVC_TRADITIONAL` 宏和 [`/experimental:preprocessor`（启用预处理器一致性模式）](../build/reference/experimental-preprocessor.md)编译器选项。
+- `_MSVC_TRADITIONAL`：当设置了预处理器一致性模式 `/experimental:preprocessor` 编译器选项，定义为 0。 默认情况下，或者当设置了 `/experimental:preprocessor-` 编译器选项时，定义为 1，指示正在使用传统预处理器。 从 Visual Studio 2017 版本 15.8 开始，提供 `_MSVC_TRADITIONAL` 宏和 [`/experimental:preprocessor`（启用预处理器一致性模式）](../build/reference/experimental-preprocessor.md)编译器选项。
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
@@ -537,7 +537,7 @@ MSVC 支持以下其他预定义宏。
 
 - `_MT`：当指定了 [`/MD` 或 `/MDd`（多线程 DLL）](../build/reference/md-mt-ld-use-run-time-library.md)，或者指定了 [`/MT` 或 `/MTd`（多线程）](../build/reference/md-mt-ld-use-run-time-library.md)时，定义为 1   。 其他情况下则不定义。
 
-- `_NATIVE_WCHAR_T_DEFINED`：当设置了 [`/Zc:wchar_t`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 编译器选项时，定义为 1。 其他情况下则不定义。
+- `_NATIVE_WCHAR_T_DEFINED`：当设置了 `/Zc:wchar_t` 编译器选项时，定义为 1。 其他情况下则不定义。
 
 - `_OPENMP`：如果设置了 [`/openmp`（启用 OpenMP 2.0 支持）](../build/reference/openmp-enable-openmp-2-0-support.md)编译器选项，则定义为整数文本 200203。 此值表示 MSVC 实现 OpenMP 规范的日期。 其他情况下则不定义。
 
@@ -550,13 +550,13 @@ MSVC 支持以下其他预定义宏。
    }
    ```
 
-- `_PREFAST_`：当设置了 [`/analyze`](../build/reference/analyze-code-analysis.md) 编译器选项时，定义为 1。 其他情况下则不定义。
+- `_PREFAST_`：当设置了 `/analyze` 编译器选项时，定义为 1。 其他情况下则不定义。
 
 - `__TIMESTAMP__`：定义为包含当前源文件上次修改日期和时间的字符串文本，并采用 CRT [`asctime`](../c-runtime-library/reference/asctime-wasctime.md) 函数返回的恒定长度缩写格式，例如 `Fri 19 Aug 13:32:58 2016`。 任何情况下都会定义此宏。
 
 - `_VC_NODEFAULTLIB`：当设置了 [`/Zl`（省略默认库名称）](../build/reference/zl-omit-default-library-name.md)编译器选项，定义为 1。 其他情况下则不定义。
 
-- `_WCHAR_T_DEFINED`：当设置了默认 [`/Zc:wchar_t`](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 编译器选项时，定义为 1。 但如果设置了 `/Zc:wchar_t-` 编译器选项并且在项目中包含的系统头文件中定义了 `wchar_t`，则会定义 `_WCHAR_T_DEFINED` 宏，但不会定义其值 。 其他情况下则不定义。
+- `_WCHAR_T_DEFINED`：当设置了默认 `/Zc:wchar_t` 编译器选项时，定义为 1。 但如果设置了 `/Zc:wchar_t-` 编译器选项并且在项目中包含的系统头文件中定义了 `wchar_t`，则会定义 `_WCHAR_T_DEFINED` 宏，但不会定义其值 。 其他情况下则不定义。
 
 - `_WIN32`：当编译目标为 32 位 ARM、64 位 ARM、x86 或 x64 时，定义为 1。 其他情况下则不定义。
 
