@@ -3,12 +3,12 @@ title: 在 Visual Studio 中部署、运行和调试 Linux MSBuild C++ 项目
 description: 介绍如何从 Visual Studio 中基于 MSBuild 的 Linux C++ 项目内针对远程目标编译、执行和调试代码。
 ms.date: 08/08/2020
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: a9feffbc86b50d510647776de6f1030f6986bef7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 7c038e1903fe029e04e8e9e9e41c11c7bff61ee2
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921706"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334190"
 ---
 # <a name="deploy-run-and-debug-your-linux-msbuild-project"></a>部署、运行和调试 Linux MSBuild 项目
 
@@ -99,6 +99,8 @@ Visual Studio 2019 版本 16.1：可以面向不同 Linux 系统进行调试和�
 - 可使用“ **其他调试程序命令** ”条目将特定调试程序选项传递到 GDB。  例如，你可能需要忽略 SIGILL（非法指令）信号。  可以使用 handle 命令实现此目的，方法是将以下命令添加到上图所示的“其他调试程序命令”条目：
 
    `handle SIGILL nostop noprint`
+   
+- 可以使用项目“调试”属性页中的“GDB 路径”项来指定 Visual Studio 使用的 GDB 的路径。 Visual Studio 2019 版本 16.9 及更高版本中提供了此属性。
 
 ## <a name="debug-with-attach-to-process"></a>使用“附加到进程”进行调试
 

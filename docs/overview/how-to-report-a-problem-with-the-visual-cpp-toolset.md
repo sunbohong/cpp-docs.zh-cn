@@ -5,12 +5,12 @@ ms.date: 09/24/2019
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 350e902501aca5cbe2b4022ec1f977719844644b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a89966b46efbef9800f3f3ddf836723bbb3b06f
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "71685698"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334242"
 ---
 # <a name="how-to-report-a-problem-with-the-microsoft-c-toolset-or-documentation"></a>如何使用 Microsoft C++ 工具集或文档报告问题
 
@@ -111,7 +111,7 @@ cl : Command line error D8003 : missing source filename
 
 - **针对最新版本的编译器。** 重现应尽可能使用最新版本的工具集的最近更新。 或者，使用下一个更新或下一个主要版本的最新预发布版本。 在旧版本工具集中可能会发现的问题很可能已在新版本中得到修复。 只有在特殊情况下，才会将修复向后移植到旧版本。
 
-- **针对其他编译器进行检查**（如果相关）。 在可能的情况下，涉及可移植 C++ 代码的重现，应在其他编译器中验证行为。 C++ 标准最终确定程序的正确性，没有编译器是完美的。 但是，如果 Clang 和 GCC 接受了代码但没有诊断，但 MSVC 未接受，你可能已经在我们的编译器中发现了一个 bug。 （其他可能性包括 Unix 和 Windows 行为的差异，或者 C++ 标准实现的级别不同等。）如果所有编译器都拒绝你的代码，则可能是代码不正确。 查看不同的错误消息可能有助于自行诊断问题。
+- **针对其他编译器进行检查** （如果相关）。 在可能的情况下，涉及可移植 C++ 代码的重现，应在其他编译器中验证行为。 C++ 标准最终确定程序的正确性，没有编译器是完美的。 但是，如果 Clang 和 GCC 接受了代码但没有诊断，但 MSVC 未接受，你可能已经在我们的编译器中发现了一个 bug。 （其他可能性包括 Unix 和 Windows 行为的差异，或者 C++ 标准实现的级别不同等。）如果所有编译器都拒绝你的代码，则可能是代码不正确。 查看不同的错误消息可能有助于自行诊断问题。
 
    你可以在 ISO C++ 网站上的[在线C++编译器](https://isocpp.org/blog/2013/01/online-c-compilers)中找到在线编译器列表，或查看 GitHub 上的[在线C ++ 编译器列表](https://arnemertz.github.io/online-compilers/)，针对这些编译器来测试代码。 一些具体示例包括 [Wandbox](https://wandbox.org/)、[Compiler Explorer](https://godbolt.org/) 和 [Coliru](https://coliru.stacked-crooked.com/)。
 
@@ -170,7 +170,7 @@ INTERNAL COMPILER ERROR in
     Help menu, or open the Technical Support help file for more information
 ```
 
-如果以**内部编译器错误**开头的行提及 link.exe，而不是 cl.exe，则已启用 LTCG。 对于此情况，请提供[链接重现](#link-repros)。 当不清楚是否从编译器错误消息启用了 LTCG 时，请检查命令行参数。 在 /GL  命令行参数的上一步中，从生成日志复制这些信息。
+如果以 **内部编译器错误** 开头的行提及 link.exe，而不是 cl.exe，则已启用 LTCG。 对于此情况，请提供[链接重现](#link-repros)。 当不清楚是否从编译器错误消息启用了 LTCG 时，请检查命令行参数。 在 /GL  命令行参数的上一步中，从生成日志复制这些信息。
 
 #### <a name="linker-crash"></a>链接器故障
 
@@ -362,7 +362,7 @@ CONTEXT:
 
 ## <a name="ways-to-send-your-report"></a>发送报告的方式
 
-可通过多种方式向我们提交报告。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)或 [Visual Studio 开发者社区](https://developercommunity.visualstudio.com/)页面。 还可以使用此页底部的“产品反馈”  按钮。 选择取决于你是否想要使用 IDE 中的内置工具捕获屏幕快照和组织报告。 如果你不想，可以直接使用开发人员社区网站。
+可通过多种方式向我们提交报告。 可使用 Visual Studio 的内置[“报告问题”工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)或 [Visual Studio 开发者社区]( https://aka.ms/feedback/report?space=62)页面。 还可以使用此页底部的“产品反馈”  按钮。 选择取决于你是否想要使用 IDE 中的内置工具捕获屏幕快照和组织报告。 如果你不想，可以直接使用开发人员社区网站。
 
 > [!NOTE]
 > 无论以何种方式提交报告，Microsoft 都尊重你的隐私。 Microsoft 致力于遵守所有数据隐私法律和法规。 有关我们如何处理你发送给我们的数据的信息，请参阅 [Microsoft 隐私声明](https://privacy.microsoft.com/privacystatement)。
@@ -377,18 +377,18 @@ Visual Studio 用户可使用 Visual Studio 中的“报告问题”工具报告
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>使用“Visual Studio 开发者社区”页面
 
-还可使用“Visual Studio 开发者社区”页面轻松报告问题并查找有关 Visual Studio 以及 C++ 编译器、工具和库的解决方案。 有针对 [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html)、[Visual Studio for Mac](https://developercommunity.visualstudio.com/spaces/41/index.html)、[.NET](https://developercommunity.visualstudio.com/spaces/61/index.html)、[C++](https://developercommunity.visualstudio.com/spaces/62/index.html)、[Azure DevOps Services](https://developercommunity.visualstudio.com/spaces/21/index.html) 和 [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html) 的特定开发者社区页。
+还可使用“Visual Studio 开发者社区”页面轻松报告问题并查找有关 Visual Studio 以及 C++ 编译器、工具和库的解决方案。 有针对 [Visual Studio](https://aka.ms/feedback/report?space=8)、[Visual Studio for Mac](https://aka.ms/feedback/report?space=41)、[.NET](https://aka.ms/feedback/report?space=61)、[C++](https://aka.ms/feedback/report?space=62)、[Azure DevOps](https://aka.ms/feedback/report?space=21) 和 [Azure DevOps Server](https://aka.ms/feedback/report?space=22) 的特定开发者社区页。
 
 社区标签下方每个页面顶部附近有一个搜索框。 可用它查找报告与你的问题类似的文章。 你可能发现你的问题已经有解决方案或相关的其他有用信息。 如果有人之前已报告过相同问题，请投票赞成该报告并进行评论，而不是创建新的问题报告。 若要评论、投票或报告新问题，可能要求你登录到你的 Visual Studio 帐户。 第一次登录时，你需要同意授予开发人员社区应用访问你的配置文件的权限。
 
-有关 C++ 编译器、链接器及其他工具和库的相关问题，请使用 [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) 页面。 如果搜索你的问题后发现之前无人报告该问题，请选择搜索框附近的“报告问题”  按钮。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
+有关 C++ 编译器、链接器及其他工具和库的相关问题，请首先搜索 [C++ 开发者社区](https://aka.ms/vsfeedback/browsecpp)页面。 如果搜索你的问题后发现之前无人报告该问题，请选择搜索框附近的“报告问题”  按钮。 可附上重现代码和命令行、屏幕截图、相关讨论的链接，以及你认为相关和有用的任何其他信息。
 
 > [!TIP]
-> 对于可能会在 Visual Studio 中发现的与 C++ 工具集无关的其他类型问题（例如，UI 问题、IDE 功能损坏或常规故障），请使用 IDE 中的“报告问题”  工具。 这是最佳选择，因为该工具具备屏幕截图功能，并且可以记录导致你所发现的问题的 UI 操作。 还可在[开发者社区](https://developercommunity.visualstudio.com/)站点查找这些错误。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)。
+> 对于可能会在 Visual Studio 中发现的与 C++ 工具集无关的其他类型问题（例如，UI 问题、IDE 功能损坏或常规故障），请使用 IDE 中的“报告问题”  工具。 这是最佳选择，因为该工具具备屏幕截图功能，并且可以记录导致你所发现的问题的 UI 操作。 还可在 Visual Studio [开发者社区](https://aka.ms/feedback/report?space=8)站点查找这些错误。 有关详细信息，请参阅[如何报告 Visual Studio 的问题](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)。
 
 ### <a name="reports-and-privacy"></a>报表和隐私
 
-**默认情况下，报告中的所有信息、评论和回复都是公开可见的**。 一般来说，这是有好处的，因为这样整个社区都能看到其他用户发现的问题、解决方案和解决方法。 但是，如果担心数据或身份公开后会出现隐私或知识产权问题，则可另作选择。
+**默认情况下，报告中的所有信息、评论和回复都是公开可见的** 。 一般来说，这是有好处的，因为这样整个社区都能看到其他用户发现的问题、解决方案和解决方法。 但是，如果担心数据或身份公开后会出现隐私或知识产权问题，则可另作选择。
 
 如果担心身份泄露，请[新建一个 Microsoft 帐户](https://signup.live.com/)，该帐户不透露有关你的任何详细信息。 使用此帐户来创建报表。
 

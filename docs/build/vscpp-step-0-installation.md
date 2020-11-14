@@ -1,17 +1,17 @@
 ---
 title: 在 Visual Studio 中安装 C 和 C++ 支持
-description: 安装对 Visual C++ 的 Visual Studio 支持
+description: 了解如何在 Visual Studio 中安装 Microsoft C/C++ 支持和相关工作负载。
 ms.custom: mvc
-ms.date: 04/02/2019
+ms.date: 11/05/2020
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 6f547b7e50d39b073232e913e660bf3ab96789cb
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 3f2d2ade54cb4db2cd692f044a5cd648600bc7f6
+ms.sourcegitcommit: 12eb6a824dd7187a065d44fceca4c410f58e121e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922122"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "94334177"
 ---
 # <a name="install-c-and-c-support-in-visual-studio"></a>在 Visual Studio 中安装 C 和 C++ 支持
 
@@ -46,14 +46,14 @@ ms.locfileid: "92922122"
 
 ### <a name="step-2---download-visual-studio"></a>第 2 步 - 下载 Visual Studio
 
-接下来，下载 Visual Studio 引导程序文件。 为此，请选择下面的按钮，选择所需的 Visual Studio 版本，选择“保存”，然后选择“打开文件夹” 。
+接下来，下载 Visual Studio 引导程序文件。 为此，请选择以下按钮以转到 Visual Studio 下载页。 选择所需的 Visual Studio 版本，然后选择“免费试用版”或“免费下载”按钮。
 
  > [!div class="button"]
  > [下载 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>第 3 步 - `打开` Visual Studio 安装程序
 
-运行引导程序文件以安装 Visual Studio 安装程序。 这个新的轻型安装程序包括安装和自定义 Visual Studio 所需的一切。
+运行你下载的引导程序文件以安装 Visual Studio 安装程序。 这个新的轻型安装程序包括安装和自定义 Visual Studio 所需的一切。
 
 1. 在“下载”文件夹中，双击与下列文件之一匹配或类似的引导程序文件：
 
@@ -61,7 +61,7 @@ ms.locfileid: "92922122"
    - 对于 Visual Studio Professional，请运行 **vs_professional.exe**
    - 对于 Visual Studio Enterprise，请运行 **vs_enterprise.exe**
 
-   如果收到用户帐户控制通知，请选择“是”。
+   如果收到用户帐户控制通知，请选择“是”以允许引导程序运行。
 
 1. 我们会要求确认 Microsoft [许可条款](https://visualstudio.microsoft.com/license-terms/)和 Microsoft [隐私声明](https://privacy.microsoft.com/privacystatement)。 选择“继续”。
 
@@ -143,15 +143,12 @@ ms.locfileid: "92922122"
 
 ### <a name="download-and-install"></a>下载并安装
 
-1. 下载适用于 Windows 的最新 Visual Studio 2017 安装程序。
-
-   > [!div class="nextstepaction"]
-   > [安装 Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+1. 若要下载适用于 Windows 的最新 Visual Studio 2017 安装程序，请转到 Microsoft Visual Studio [更早的下载](https://www.visualstudio.com/vs/older-downloads/)页。 展开“2017”部分，然后选择“下载”按钮。
 
    >[!Tip]
-   > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或 [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
+   > Community Edition 适用于个体开发者、课堂学习、学术研究和开放源代码开发。 对于其他用途，请安装 Visual Studio 2017 Professional 或 Visual Studio 2017 Enterprise。
 
-1. 找到下载的安装程序文件并运行。 它可能会显示在浏览器中，也可能会在“Downloads”文件夹中找到它。 安装程序需要管理员权限才能运行。 你可能会看到“用户帐户控制”对话框，要求你授予权限以便让安装程序可对系统进行更改；选择“是”。 如果遇到问题，请在文件资源管理器中找到下载的文件，右键单击安装程序图标，然后从上下文菜单中选择“以管理员身份运行”。
+1. 找到下载的安装程序文件并运行。 下载的文件可能会显示在浏览器中，也可能会在“下载”文件夹中找到它。 安装程序需要管理员权限才能运行。 你可能会看到“用户帐户控制”对话框，要求你授予权限以便让安装程序可对系统进行更改；选择“是”。 如果遇到问题，请在文件资源管理器中找到下载的文件，右键单击安装程序图标，然后从上下文菜单中选择“以管理员身份运行”。
 
    ![下载并安装 Visual Studio 安装程序](media/vscpp-concierge-run-installer.gif "下载并安装 Visual Studio 安装程序")
 
@@ -185,7 +182,7 @@ ms.locfileid: "92922122"
 
 ## <a name="visual-studio-2015-installation"></a>Visual Studio 2015 安装
 
-若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择“自定义安装”，然后选择 C++ 组件。 若要向现有 Visual Studio 2015 安装添加 C 和 C++ 支持，请单击 Windows“开始”按钮，然后键入“添加删除程序”。 从结果列表打开程序，然后在已安装程序列表中找到你的 Visual Studio 2015 安装。 双击它，然后选择“修改”，并选择要安装的 Visual C++ 组件。
+若要安装 Visual Studio 2015，请转到 Microsoft Visual Studio [更早的下载](https://www.visualstudio.com/vs/older-downloads/)页。 展开“2015”部分，然后选择“下载”按钮。 运行下载的安装程序并选择“自定义安装”，然后选择 C++ 组件。 若要向现有 Visual Studio 2015 安装添加 C 和 C++ 支持，请单击 Windows“开始”按钮，然后键入“添加删除程序”。 从结果列表打开程序，然后在已安装程序列表中找到你的 Visual Studio 2015 安装。 双击它，然后选择“修改”，并选择要安装的 Visual C++ 组件。
 
 通常，强烈建议使用最新版 Visual Studio，即使需要使用 Visual Studio 2015 编译器来编译代码，也不例外。 有关详细信息，请参阅 [使用 Visual Studio 中的本机多重目标生成旧项目](../porting/use-native-multi-targeting.md)。
 

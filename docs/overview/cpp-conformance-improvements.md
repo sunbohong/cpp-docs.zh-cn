@@ -1,14 +1,14 @@
 ---
 title: C++ 的符合性改进
-ms.date: 08/04/2020
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
+ms.date: 11/10/2020
 ms.technology: cpp-language
-ms.openlocfilehash: fc88406a3d2e291d06e01c3e92261b8dfc624ced
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ff4d75626b75c55e001601ef7005bc23be60869d
+ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921420"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94448485"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -1154,6 +1154,338 @@ void f() {
     B b2[1]; // OK: calls default ctor for each array element
 }
 ```
+
+## <a name="conformance-improvements-in-visual-studio-2019-version-168"></a><a name="improvements_168"></a> Visual Studio 2019 版本 16.8 中的符合性改进
+
+### <a name="class-rvalue-used-as-lvalue-extension"></a>“类 rvalue 用作 lvalue”扩展
+
+MSVC 具有允许将类 rvalue 用作 lvalue 的扩展。 此扩展未延长类 rvalue 的生存期，可能会导致未定义的运行时行为。 现在我们强制执行标准规则，并在 `/permissive-` 下禁止使用此扩展。
+如果尚无法使用 `/permissive-`，可以使用 `/we4238` 显式禁止使用此扩展。 下面是一个示例：
+
+```cpp
+// Compiling with /permissive- now gives:
+// error C2102: '&' requires l-value
+struct S {};
+
+S f();
+
+void g()
+{
+    auto p1 = &(f()); // The temporary returned by 'f' is destructed after this statement. So 'p1' points to an invalid object.
+
+    const auto &r = f(); // This extends the lifetime of the temporary returned by 'f'
+    auto p2 = &r; // 'p2' points to a valid object
+}
+```
+
+### <a name="explicit-specialization-in-non-namespace-scope-extension"></a>“非命名空间范围中的显式专用化”扩展
+
+MSVC 曾具有允许非命名空间范围包含显式专用化的扩展。 推出 CWG 727 解决办法后，它现在成为了一个标准部分。 但是有一些行为差异。 我们已调整了编译器的行为，以便与标准一致。
+
+```cpp
+// Compiling with 'cl a.cpp b.cpp /permissive-' now gives:
+//   error LNK2005: "public: void __thiscall S::f<int>(int)" (??$f@H@S@@QAEXH@Z) already defined in a.obj
+// To fix the linker error,
+// 1. Mark the explicit specialization with 'inline' explicitly. Or,
+// 2. Move its definition to a source file.
+
+// common.h
+struct S {
+    template<typename T> void f(T);
+    template<> void f(int);
+};
+
+// This explicit specialization is implicitly inline in the default mode.
+template<> void S::f(int) {}
+
+// a.cpp
+#include "common.h"
+
+int main() {}
+
+// b.cpp
+#include "common.h"
+```
+
+### <a name="checking-for-abstract-class-types"></a>检查是否有抽象类类型
+
+C++20 标准更改了编译器检测是否将抽象类类型用作函数参数的过程。 具体而言，这不再是 SFINAE 错误。 以前，如果编译器检测到某个函数模板的专用化包含类型为抽象类类型实例的函数参数，则将该专用化视为格式不正确。 它无法添加到可行函数集中。 在 C++20 中，对抽象类类型参数的检查在调用函数之前不会发生。 这意味着，用于进行编译的代码不会引发错误。 下面是一个示例：
+
+```cpp
+class Node {
+public:
+    int index() const;
+};
+
+class String : public Node {
+public:
+    virtual int size() const = 0;
+};
+
+class Identifier : public Node {
+public:
+    const String& string() const;
+};
+
+template<typename T>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+
+int compare(const Node& x, const Node& y)
+{
+    return compare(x.index(), y.index());
+}
+
+int f(const Identifier& x, const String& y)
+{
+    return compare(x.string(), y);
+}
+```
+
+以前，对 `compare` 的调用会尝试将 `T` 模板参数设置为 `String` 来将函数模板 `compare` 专用化。 这样无法生成有效的专用化，因为 `String` 是抽象类。 唯一可行的候选项就是 `compare(const Node&, const Node&)`。 但是，在 C++20 中，对抽象类类型的检查在调用函数之前不会发生。 因此，专用化 `compare(String, String)` 会添加到一组可行候选项中，并被选为最佳候选项，因为从 `const String&` 转换到 `String` 的转换顺序比从 `const String&` 转换到 `const Node&` 更好。
+
+在 C++20 中，修复此示例的一种可行方法是，使用概念；也就是说，将 `compare` 的定义更改为：
+
+```cpp
+template<typename T>
+int compare(T x, T y) requires !std::is_abstract_v<T>
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+如果无法使用 C++ 概念，也可以回退到 SFINAE：
+
+```cpp
+template<typename T, std::enable_if_t<!std::is_abstract_v<T>, int> = 0>
+int compare(T x, T y)
+{
+    return x < y ? -1 : (x > y ? 1 : 0);
+}
+```
+
+### <a name="support-for-p0960r3---allow-initializing-aggregates-from-a-parenthesized-list-of-values"></a>支持 P0960R3 - 允许从带圆括号的值列表初始化聚合
+
+C++20 添加了对使用带圆括号的值列表初始化聚合的支持。 例如，在 C++20 中以下代码是有效的：
+
+```cpp
+struct S {
+    int i;
+    int j;
+};
+
+S s(1, 2);
+```
+
+此功能的大部分都是累加的，也就是说，代码现在编译之前未编译的内容。 不过，它确实更改了 `std::is_constructible` 的行为。 在 C++17 模式下，此 `static_assert` 会失败，但在 C++20 模式下它将成功：
+
+`static_assert(std::is_constructible_v<S, int, int>, "Assertion failed!");`
+
+如果使用此类型特征来控制重载解析，它可能会导致 C++17 和 C++20 之间的行为发生变化。
+
+### <a name="overload-resolution-involving-function-templates"></a>重载解析涉及函数模板
+
+以前，编译器允许在 `/permissive-` 下编译一些不应编译的代码。 结果就是，编译器调用了错误的函数，导致运行时行为更改：
+
+```cpp
+int f(int);
+
+namespace N
+{
+    using ::f;
+    template<typename T>
+    T f(T);
+}
+
+template<typename T>
+void g(T&& t)
+{
+}
+
+void h()
+{
+    using namespace N;
+    g(f);
+}
+```
+
+对 `g` 的调用使用包含 `::f` 和 `N::f` 两个函数的重载集。 由于 `N::f` 是函数模板，因此编译器应将函数参数视为未推导的上下文。 在这种情况下，这意味着对 `g` 的调用应失败，因为编译器无法推导模板参数 `T` 的类型。 遗憾的是，编译器已判定 `::f` 是执行函数调用的适当匹配项，它无法弃用这个事实。 编译器会生成代码，将 `::f` 用作参数来调用 `g`，而不会发出错误。
+
+在许多情况下将 `::f` 用作函数参数就是用户所需的做法，鉴于此，只有使用 `/permissive-` 编译代码时我们才会发出错误。
+
+### <a name="migrating-from-await-to-c20-coroutines"></a>从 `/await` 迁移到 C++20 协同例程
+
+现在 `/std:c++latest` 下默认启用标准 C++20 协同例程。 它们与 `/await` 开关下的协同例程 TS 及支持不同。 从 `/await` 迁移到标准协同例程可能需要执行一些源更改。
+
+#### <a name="non-standard-keywords"></a>非标准关键字
+
+C++20 模式不支持旧的 `await` 和 `yield` 关键字。 代码必须改用 `co_await` 和 `co_yield`。 标准模式也不允许协同例程中使用 `return`。 协同例程中的每个 `return` 都必须使用 `co_return`。
+
+```cpp
+// /await
+task f_legacy() {
+    ...
+    await g();
+    return n;
+}
+// /std:c++latest
+task f() {
+    ...
+    co_await g();
+    co_return n;
+}
+```
+
+#### <a name="types-of-initial_suspendfinal_suspend"></a>initial_suspend/final_suspend 的类型
+
+在 `/await` 下，可将承诺初始函数和挂起函数声明为返回 `bool`。 此行为不是标准行为。 在 C++20 中，这些函数必须返回可等待类类型，通常情况下，如果函数之前返回了 `true`，则为一个普通的可等待 `std::suspend_always`，如果它返回了 `false`，则为 `std::suspend_never`。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    bool initial_suspend() noexcept { return false; }
+    bool final_suspend() noexcept { return true; }
+    ...
+};
+
+// /std:c++latest
+struct promise_type {
+    auto initial_susepend() noexcept { return std::suspend_never{}; }
+    auto final_suspend() noexcept { return std::suspend_always{}; }
+    ...
+};
+```
+
+#### <a name="type-of-yield_value"></a>`yield_value` 的类型
+
+在 C++20 中，承诺 `yield_value` 函数必须返回一个可等待类型。 在 `/await` 模式中，允许 `yield_value` 函数返回 `void`，并且该函数始终会挂起。 可将此类函数替换为返回 `std::suspend_always` 的函数。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    void yield_value(int x) { next = x; };
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    auto yield_value(int x) { next = x; return std::suspend_always{}; }
+};
+```
+
+#### <a name="exception-handling-function"></a>异常处理函数
+
+`/await` 支持不具有任何异常处理函数的承诺类型或具有采用 `std::exception_ptr` 的名为 `set_exception` 的异常处理函数的承诺类型。 在 C++20 中，承诺类型必须具有一个不带任何参数的名为 `unhandled_exception` 的函数。 如果需要，可以从 `std::current_exception` 中获取异常对象。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    void set_exception(std::exception_ptr e) { saved_exception = e; }
+    ...
+};
+// /std:c++latest
+struct promise_type {
+    void unhandled_exception() { saved_exception = std::current_exception(); }
+    ...
+};
+```
+
+#### <a name="deduced-return-types-of-coroutines-not-supported"></a>不支持协同例程的推导返回类型
+
+C++20 不支持返回类型包含占位符类型（如 `auto`）的协同例程。 必须显式声明协同例程的返回类型。 在 `/await` 下，这些推导出的类型总是涉及实验类型并需要包含定义所需类型的标头：`std::experimental::task<T>`、`std::experimental::generator<T>` 或 `std::experimental::async_stream<T>` 之一。
+
+```cpp
+// /await
+auto my_generator() {
+    ...
+    co_yield next;
+};
+
+// /std:c++latest
+#include <experimental/generator>
+std::experimental::generator<int> my_generator() {
+    ...
+    co_yield next;
+};
+```
+
+#### <a name="return-type-of-return_value"></a>返回 `return_value` 的类型
+
+承诺 `return_value` 函数的返回类型必须为 `void`。 在 `/await` 模式中，返回类型将被忽略，可为任意类型。 此诊断可帮助检测作者错误地假设 `return_value` 的返回值返回给调用方这样的细微错误。
+
+```cpp
+// /await
+struct promise_type_legacy {
+    ...
+    int return_value(int x) { return x; } // incorrect, the return value of this function is unused and the value is lost.
+};
+
+// /std:c++latest
+struct promise_type {
+    ...
+    void return_value(int x) { value = x; }; // save return value
+};
+```
+
+#### <a name="return-object-conversion-behavior"></a>返回对象转换行为
+
+如果协同例程声明的返回类型与承诺 `get_return_object` 函数的返回类型不匹配，则从 `get_return_object` 返回的对象将转换为协同例程的返回类型。 在 `/await` 下，将在协同例程主体执行前提前完成此转换。 在 `/std:c++latest` 中，只有真正向调用方返回值时才会执行此转换。 它允许不在初始挂起点挂起的协同例程利用该协同例程主体中的 `get_return_object` 返回的对象。
+
+#### <a name="coroutine-promise-parameters"></a>协同例程承诺参数
+
+在 C++20 中，编译器尝试将协同例程参数（如果有）传递给承诺类型的构造函数。 如果此操作失败，它将使用默认构造函数重试。 在 `/await` 模式中，仅使用默认构造函数。 如果承诺包含多个构造函数，或者从协同例程参数转换到了承诺类型，则此更改可能会导致行为差异。
+
+```cpp
+struct coro {
+    struct promise_type {
+        promise_type() { ... }
+        promise_type(int x) { ... }
+        ...
+    };
+};
+
+coro f1(int x);
+
+// Under /await the promise gets constructed using the default constructor.
+// Under /std:c++latest the promise gets constructed using the 1-argument constructor.
+f1(0);
+
+struct Object {
+template <typename T> operator T() { ... } // Converts to anything!
+};
+
+coro f2(Object o);
+
+// Under /await the promise gets constructed using the default constructor
+// Under /std:c++latest the promise gets copy- or move-constructed from the result of
+// Object::operator coro::promise_type().
+f2(Object{});
+```
+
+### <a name="permissive--and-c20-modules-are-on-by-default-under-stdclatest"></a>在 `/std:c++latest` 下，默认为启用 `/permissive-` 和 C++20 模块
+
+在 `/std:c++latest` 下，默认为启用 C++20 模块支持。 有关此更改的详细信息以及根据条件将 `module` 和 `import` 视为关键字的场景，请参阅 [Visual Studio 2019 版本 16.8 中 MSVC 的标准 C++20 模块支持](https://devblogs.microsoft.com/cppblog/standard-c20-modules-support-with-msvc-in-visual-studio-2019-version-16-8/)。
+
+`permissive-`  是模块支持的必备组件，现在指定 `/std:c++latest` 后即可启用它。 有关详细信息，请参阅 [`/permissive-`](../build/reference/permissive-standards-conformance.md)。
+
+如果代码是之前在 `/std:c++latest` 下编译的并且需要不一致的编译器行为，则可指定 `permissive`  来禁用编译器的严格一致模式。 编译器选项必须出现在命令行参数列表中的 `/std:c++latest` 之后。 但是，在使用模块时，`permissive` 会引发错误：
+
+> 错误 C1214：模块与通过“option”请求的非标准行为发生冲突
+
+option 最常见的值为：
+
+| 选项 | 说明 |
+|--|--|
+| **`/Zc:twoPhase-`** | 对于 C++20 模块，两阶段名称查找是必需的，并由 `permissive-` 包含。 |
+| **`/Zc:hiddenFriend-`** | 启用标准隐藏朋友名称查找规则。 对于 C++20 模块，是必需的，并由 `permissive-` 包含。 |
+| **`/Zc:preprocessor-`** | 仅 C++20 标头单元使用和创建需要符合性预处理器。 命名模块无需此选项。 |
+
+若要使用 Visual Studio 随附的 `std.*` 模块，仍需使用 [`/experimental:module`](../build/reference/experimental-module.md) 选项，因为这些模块尚未标准化。
+
+`/experimental:module` 选项也包含 `/Zc:twoPhase` 和 `/Zc:hiddenFriend`。 以前，如果只是占用了模块，使用模块编译的代码有时可以使用 `/Zc:twoPhase-` 编译。 现在不再支持此行为。
 
 ## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a><a name="update_160"></a>Visual Studio 2019 中的 bug 修复和行为变更
 

@@ -3,12 +3,12 @@ title: 在 Visual Studio 中创建 C++ 跨平台项目
 description: 如何在同时面向 Linux 和 Windows 的 Visual Studio 中设置、编译和调试 C++ 开源 CMake 项目。
 ms.topic: tutorial
 ms.date: 01/08/2020
-ms.openlocfilehash: 3fdd9b1dfb5075f3a71f62bc4f1e2f3c646f9e6b
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: c420e0ee04e85d49ad752da085d38b2c5ff9d4fa
+ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040478"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93344652"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教程：在 Visual Studio 中创建 C++ 跨平台项目
 
@@ -31,10 +31,10 @@ Visual Studio C 和 C++ 开发不再仅适用于 Windows。 本教程介绍如�
 
 * 设置适用于跨平台 C++ 开发的 Linux 计算机
   * Visual Studio 不需要任何特定的 Linux 发行版。 OS 可在物理计算机上、VM 或云中运行。 也可以使用适用于 Linux 的 Windows 子系统 (WSL)。 但是，在本教程中，需要一个图形环境。 不建议在此处使用 WSL，因为它主要用于命令行操作。
-  * Visual Studio 在 Linux 计算机上需要的工具如下：C++ 编译器、gdb、ssh、rsync、ninja 和 zip。 在基于 Debian 的系统上，可以使用此命令安装这些依赖项：
+  * Visual Studio 在 Linux 计算机上需要的工具如下：C++ 编译器、gdb、ssh、rsync、make 和 zip。 在基于 Debian 的系统上，可以使用此命令安装这些依赖项：
 
     ```cmd
-    sudo apt install -y openssh-server build-essential gdb rsync ninja-build zip
+    sudo apt install -y openssh-server build-essential gdb rsync make zip
     ```
 
   * Visual Studio 需要有已启用服务器模式（至少为 3.8）的 Linux 计算机上的最新 CMake 版本。 Microsoft 生成可以在任何 Linux 发行版上安装的通用 CMake 版本。 建议使用此版本以确保拥有最新功能。 可从 GitHub 上的 [CMake 存储库 Microsoft 分支](https://github.com/Microsoft/CMake/releases)获得 CMake 二进制文件。 转到该页面并下载与 Linux 计算机上的系统架构匹配的版本，然后将其标记为可执行文件：
@@ -144,6 +144,8 @@ Visual Studio 为 Windows 创建默认 x64-Debug 配置  。 Visual Studio 可�
 ## <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>添加 Linux 配置并连接到远程计算机
 
 1. 添加 Linux 配置。 右键单击“解决方案资源管理器”视图中的 CMakeSettings.json 文件，然后选择“添加配置”   。 此时将出现与之前相同的“将配置添加到 CMakeSettings”对话框。 这一次选择“Linux-Debug”，然后保存 CMakeSettings.json 文件 (Ctrl + S)  。
+
+1. Visual Studio 2019 版本 16.6 或更高版本：向下滚动到“CMake 设置编辑器”的底部，并选择“显示高级设置”。 选择“Unix 生成文件”作为“CMake 生成器”，并保存 CMakeSettings.json 文件 (ctrl + s)。
 
 1. 在配置下拉列表中选择“Linux-Debug”  。
 
