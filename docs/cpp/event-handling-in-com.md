@@ -1,6 +1,7 @@
 ---
 title: COM 中的事件处理
-ms.date: 11/04/2016
+description: 了解如何使用 Microsoft c + + 扩展来处理 COM 事件。
+ms.date: 11/20/2020
 helpviewer_keywords:
 - event handling [C++], COM
 - event handling [C++], about event handling
@@ -15,36 +16,38 @@ helpviewer_keywords:
 - event sources, in event handling
 - declaring events, in COM
 - declaring events, event handling in COM
-ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: be71bd9eac44c51a2e6a7cdeb925a1ca0b8b5dfb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c664f052fe211c88ad097c9d2617ec47f180eff
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231203"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483108"
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件处理
 
-在 COM 事件处理中，使用[event_source](../windows/attributes/event-source.md)和[event_receiver](../windows/attributes/event-receiver.md)属性分别设置事件源和事件接收器，指定 `type` = `com` 。 这些特性为自定义接口、调度接口和双重接口注入相应的代码，从而使这些接口能够应用到的类激发事件并通过 COM 连接点处理事件。
+在 COM 事件处理中，使用和属性分别设置事件源和事件接收器 [`event_source`](../windows/attributes/event-source.md) ， [`event_receiver`](../windows/attributes/event-receiver.md) 指定 `type` = `com` 。 这些属性为自定义、调度和双重接口注入适当的代码。 注入的代码允许特性化类通过 COM 连接点激发事件并处理事件。
+
+> [!NOTE]
+> 本机 c + + 中的事件特性与标准 c + + 不兼容。 在指定一致性模式时，它们不会进行编译 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 。
 
 ## <a name="declaring-events"></a>声明事件
 
-在事件源类中，将[__event](../cpp/event.md)关键字用于接口声明，以将该接口的方法声明为事件。 当您将该接口的事件作为接口方法调用时，将激发这些事件。 事件接口上的方法可以具有零个或多个参数（它们都应*位于参数中*）。 返回类型可以是 void 或任何整型。
+在事件源类中，对 [`__event`](../cpp/event.md) 接口声明使用关键字，将该接口的方法声明为事件。 当您将该接口的事件作为接口方法调用时，将激发这些事件。 事件接口上的方法可以 (零个或多个参数，这些参数应) 的参数 *中* 。 返回类型可以是 void 或任何整型。
 
 ## <a name="defining-event-handlers"></a>定义事件处理程序
 
-在事件接收器类中，可定义事件处理程序，这些处理程序是具有与它们将处理的事件匹配的签名（返回类型、调用约定和自变量）的方法。 对于 COM 事件，调用约定不必匹配;有关详细信息，请参阅下面的[布局相关 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents)。
+在事件接收器类中定义事件处理程序。 事件处理程序是具有签名的方法， (返回类型、调用约定和与它们将处理的事件匹配的参数) 。 对于 COM 事件，调用约定不必匹配。 有关详细信息，请参阅下面的 [依赖于布局的 COM 事件](#vcconeventhandlingincomanchorlayoutdependentcomevents) 。
 
 ## <a name="hooking-event-handlers-to-events"></a>将事件处理程序挂钩到事件
 
-此外，在事件接收器类中，您可以使用内部函数[__hook](../cpp/hook.md)将事件与事件处理程序关联，并将[__unhook](../cpp/unhook.md)事件处理程序中的解除关联事件。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。
+此外，在事件接收器类中，可使用内部函数 [`__hook`](../cpp/hook.md) 将事件与事件处理程序关联，并将事件与 [`__unhook`](../cpp/unhook.md) 事件处理程序解除关联。 您可将多个事件挂钩到一个事件处理程序，或将多个事件处理程序挂钩到一个事件。
 
 > [!NOTE]
-> 通常，有两种方法使 COM 事件接收器能够访问事件源接口定义。 第一种是共享公共头文件，如下所示。 第二种方式是将[#import](../preprocessor/hash-import-directive-cpp.md)与 `embedded_idl` 导入限定符一起使用，以便将事件源类型库写入包含特性生成代码的 .tlh 文件。
+> 通常，有两种方法使 COM 事件接收器能够访问事件源接口定义。 第一种是共享公共头文件，如下所示。 第二种方式是将 [#import](../preprocessor/hash-import-directive-cpp.md) 与 `embedded_idl` 导入限定符一起使用，以便将事件源类型库写入包含特性生成代码的 .tlh 文件。
 
-## <a name="firing-events"></a>激发事件
+## <a name="firing-events"></a>触发事件
 
-若要激发事件，只需调用使用 **`__event`** 事件源类中的关键字声明的接口中的方法。 如果处理程序已挂钩到事件，则将调用处理程序。
+若要激发事件，请调用使用 **`__event`** 事件源类中的关键字声明的接口中的方法。 如果处理程序已挂钩到事件，则将调用处理程序。
 
 ### <a name="com-event-code"></a>COM 事件代码
 
@@ -157,13 +160,13 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>依赖于布局的 COM 事件
+## <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> 依赖于布局的 COM 事件
 
-布局依赖性只是 COM 编程中的一个问题。 在本机和托管事件处理中，处理程序的签名（返回类型、调用约定和参数）必须与其事件匹配，但处理程序的名称不必与其事件匹配。
+布局依赖性只是 COM 编程中的一个问题。 在本机和托管事件处理中，处理程序的签名 (返回类型、调用约定和) 参数都必须与其事件匹配，但处理程序的名称不必与其事件匹配。
 
-但是，在 COM 事件处理中，将的*layout_dependent*参数设置为时， `event_receiver` **`true`** 会强制执行匹配的名称和签名。 这意味着事件接收器中处理程序的名称和签名必须与处理程序将挂钩到的事件的名称和签名完全匹配。
+但是，在 COM 事件处理中，将 *`layout_dependent`* 的参数设置为时， `event_receiver` **`true`** 会强制执行匹配的名称和签名。 事件接收器和挂钩事件中处理程序的名称和签名必须完全匹配。
 
-将*layout_dependent*设置为时 **`false`** ，调用约定和存储类（虚拟、静态等）可以在激发事件方法和挂钩方法（其委托）之间进行混合和匹配。 使用*layout_dependent*会稍微提高效率 = **`true`** 。
+当 *`layout_dependent`* 设置为时 **`false`** ，调用约定和存储类 (虚、static 等) 可在引发事件方法与挂钩方法 (其委托) 之间进行混合和匹配。 这样做会稍微提高效率 *`layout_dependent`* = **`true`** 。
 
 例如，假设 `IEventSource` 定义为具有下列方法：
 

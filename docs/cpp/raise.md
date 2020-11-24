@@ -1,32 +1,33 @@
 ---
 title: __raise
-ms.date: 11/04/2016
+description: 了解如何使用 Microsoft c + + extension 关键字 `__raise` 进行本机事件处理。
+ms.date: 11/20/2020
 f1_keywords:
 - __raise
 - __raise_cpp
 helpviewer_keywords:
 - __raise keyword [C++]
-ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: db6ba1693e4d3144b95530646b061e9cd7a58a5a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c9df602803062bc51b8c0cee13f17263cdc91786
+ms.sourcegitcommit: b02c61667ff7f38e7add266d0aabd8463f2dbfa1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227122"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95483135"
 ---
-# <a name="__raise"></a>__raise
+# <a name="__raise-keyword"></a>`__raise` 关键字
 
 强调一个事件的调用站点。
 
+> [!NOTE]
+> 本机 c + + 中的事件特性与标准 c + + 不兼容。 在指定一致性模式时，它们不会进行编译 [`/permissive-`](../build/reference/permissive-standards-conformance.md) 。
+
 ## <a name="syntax"></a>语法
 
-```
-__raise method-declarator;
-```
+> **`__raise`** *`method-declarator`* **`;`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-在托管代码中，事件只能从定义它的类中引发。 有关详细信息，请参阅[事件](../extensions/event-cpp-component-extensions.md)。
+在托管代码中，只能从定义事件的类中引发事件。 有关详细信息，请参阅 [`event`](../extensions/event-cpp-component-extensions.md)。
 
 **`__raise`** 如果调用非事件，关键字会导致发出错误。
 
@@ -61,6 +62,9 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[关键字](../cpp/keywords-cpp.md)<br/>
-[事件处理](../cpp/event-handling.md)<br/>
-[适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)
+[字](../cpp/keywords-cpp.md)\
+[事件处理](../cpp/event-handling.md)\
+[`__event`](../cpp/event.md)\
+[`__hook`](../cpp/hook.md)\
+[`__unhook`](../cpp/unhook.md)\
+[适用于 .NET 和 UWP 的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)
