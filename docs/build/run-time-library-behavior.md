@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: 2f2ffb13e6a80b144298bbf8cd76b5666a10b4dd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5af3efd733a5d682e33863b330b6a558e824c9b3
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335662"
+ms.lasthandoff: 11/24/2020
+ms.locfileid: "95782974"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>DLL 和 Visual C++ 运行时库行为
 
@@ -133,7 +133,7 @@ extern "C" BOOL WINAPI DllMain (
 #undef THIS_FILE
 static char THIS_FILE[] = __FILE__;
 #endif
-static AFX_EXTENSION_MODULE PROJNAMEDLL = { NULL, NULL };
+static AFX_EXTENSION_MODULE PROJNAMEDLL;
 
 extern "C" int APIENTRY
 DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
