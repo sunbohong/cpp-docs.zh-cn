@@ -3,11 +3,11 @@ title: 阅读并理解 Visual Studio 中的 C++ 代码
 description: 使用 Visual Studio 中的 C++ 代码编辑器来设置代码格式以及理解代码。
 ms.date: 05/28/2019
 ms.openlocfilehash: cd152ffbbd106c6a31a21da35d08b53555047209
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924647"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188895"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>阅读并理解 Visual Studio 中的 C++ 代码
 

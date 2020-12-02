@@ -3,11 +3,11 @@ title: 在 Visual Studio 中导航 C++ 代码
 description: 使用 Visual Studio 中的各种工具来导航 C ++ 代码库。
 ms.date: 05/28/2019
 ms.openlocfilehash: cc13326dee14e952c78e521344a6244249179cb8
-ms.sourcegitcommit: 868838273eda35eb72c78dccf4121940dcc04706
+ms.sourcegitcommit: 6284bca6549e7b4f199d4560c30df6c1278bd4a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2020
-ms.locfileid: "90683489"
+ms.lasthandoff: 11/26/2020
+ms.locfileid: "96188882"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>在 Visual Studio 中导航 C++ 代码
 

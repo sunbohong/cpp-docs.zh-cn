@@ -4,12 +4,12 @@ description: 介绍如何使用 Visual Studio 配置 CMake 调试器设置。
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: a790e26e5bf3980ffb81a3ba778577afacff95b4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922226"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440305"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
 
@@ -56,7 +56,6 @@ ms.locfileid: "92922226"
 ```json
 {
   "version": "0.2.1",
-  "defaults": {},
   "configurations": [
     {
       "type": "default",
