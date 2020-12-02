@@ -1,8 +1,11 @@
 ---
 title: div、ldiv、lldiv
-ms.date: 04/05/2018
+description: Microsoft C 运行时库 div、ldiv 和 lldiv 函数计算两个整数值的商和余数。
+ms.date: 11/21/2020
 api_name:
 - div
+- ldiv
+- lldiv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +24,22 @@ topic_type:
 - apiref
 f1_keywords:
 - div
+- ldiv
+- lldiv
 helpviewer_keywords:
 - div function
 - quotients, computing
 - quotients
 - dividing integers
 - remainder computing
-ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-ms.openlocfilehash: e0c87ad44986363e871d68bccde757214f5e2c45
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d87b2e3a84e389be8b14970a3aa611bb288cbec8
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509889"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440284"
 ---
-# <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
+# <a name="div-ldiv-lldiv"></a>`div`, `ldiv`, `lldiv`
 
 计算两个整数值的商和余数。
 
@@ -69,27 +73,27 @@ lldiv_t div(
 
 ### <a name="parameters"></a>参数
 
-*收藏*<br/>
+*`numer`*\
 分子。
 
-*denom*<br/>
+*`denom`*\
 分母。
 
 ## <a name="return-value"></a>返回值
 
-**div**使用类型的参数调用的 div **`int`** 返回**div_t**类型的结构，该结构包含商和余数。 具有类型参数的返回值 **`long`** 为 **ldiv_t**，且具有类型的参数的返回值 **`long long`** 为 **lldiv_t**。 **div_t**、 **ldiv_t**和 **lldiv_t** 是在中定义的 \<stdlib.h> 。
+**`div`** 使用类型的参数调用 **`int`** ，返回类型的结构 `div_t` ，该结构包含商和余数。 类型为的参数的返回值 **`long`** 为 `ldiv_t` ，且类型为的参数的返回值 **`long long`** 为 `lldiv_t` 。 `div_t`、 `ldiv_t` 和 `lldiv_t` 类型在中定义 \<stdlib.h> 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Div**函数通过*denom*将*收藏*除以，从而计算商和余数。 [Div_t](../../c-runtime-library/standard-types.md)结构包含**商、商**和**余数。** 商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
+**`div`** 函数除以 *`numer`* *`denom`* 并计算商和余数。 [`div_t`](../../c-runtime-library/standard-types.md)结构包含商、 `quot` 和余数 `rem` 。 商的符号与数学商的符号相同。 它的绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
-采用类型为或的参数的 **div** 重载 **`long`** **`long long`** 仅可用于 c + + 代码。 [Ldiv_t](../../c-runtime-library/standard-types.md) **和** [lldiv_t](../../c-runtime-library/standard-types.md)的返回类型**包含成员，它们与** **div_t**的成员具有相同的含义。
+**`div`** 采用或类型参数的重载 **`long`** **`long long`** 仅可用于 c + + 代码。 返回类型 [`ldiv_t`](../../c-runtime-library/standard-types.md) 和 [`lldiv_t`](../../c-runtime-library/standard-types.md) 包含成员 `quot` 和，它们与的 `rem` 成员具有相同的含义 `div_t` 。
 
 ## <a name="requirements"></a>要求
 
-|例程所返回的值|必需的标头|
-|-------------|---------------------|
-|**div**、 **ldiv**、 **lldiv**|\<stdlib.h>|
+| 例程所返回的值 | 必需的标头 |
+|--|--|
+| **`div`**, **`ldiv`**, **`lldiv`** | \<stdlib.h> |
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -133,6 +137,5 @@ The quotient is 67, and the remainder is 5
 
 ## <a name="see-also"></a>请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[ldiv、lldiv]()<br/>
-[imaxdiv](imaxdiv.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)\
+[`imaxdiv`](imaxdiv.md)

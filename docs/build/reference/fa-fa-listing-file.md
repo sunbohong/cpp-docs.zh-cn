@@ -1,6 +1,7 @@
 ---
 title: /FA、/Fa（列出文件）
-ms.date: 11/04/2016
+description: Microsoft c + +/FA and/Fa (列出文件) 编译器选项的参考指南。
+ms.date: 11/21/2020
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -15,81 +16,81 @@ helpviewer_keywords:
 - -FA compiler option [C++]
 - listing file type
 - assembly-only listing
-ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: b78704ea12365d9e10222d75c6807517f7cdb893
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e8e39fea55bb69eaa0ae914eeabcafef4ac7849
+ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292830"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96440230"
 ---
-# <a name="fa-fa-listing-file"></a>/FA、/Fa（列出文件）
+# <a name="fa-fa-listing-file"></a>`/FA`， `/Fa` (列出文件) 
 
 创建包含组装器代码的列表文件。
 
 ## <a name="syntax"></a>语法
 
-> **/FA**[**c**\][**s**\][**u**] **/Fa**_pathname_
+> **`/FA`**[**`c`**\][**`s`**\][**`u`**]\
+> **`/Fa`**_路径名_
 
 ## <a name="remarks"></a>备注
 
-**/FA**编译器选项生成组装器列表文件的每个翻译单元中编译，这通常对应于 C 或C++源文件。 默认情况下，仅组装器会包含在列表文件中，编码为 ANSI。 可选**c**， **s**，并**u**参数 **/FA**控件是否机器代码或源代码以及汇编程序输出列出，并且是否在列表编码为 utf-8。
+**`/FA`** 编译器选项为编译中的每个翻译单元生成汇编程序列表文件，这通常对应于 c 或 c + + 源文件。 默认情况下，仅在列表文件中包含汇编程序，其编码为 ANSI。 可选的 **`c`** 、 **`s`** 和 **`u`** 参数，用于 **`/FA`** 控制是否将计算机代码或源代码与组装器列表一起输出，以及列表是否被编码为 utf-8。
 
-默认情况下，每个列表文件获取与源文件相同的基名称和扩展名为.asm。 当机器代码包含使用**c**选项，列表文件的扩展名为.cod。 您可以更改的名称和扩展名的列表文件并创建使用的目录 **/Fa**选项。
+默认情况下，每个列表文件将获取与源文件相同的基名称，并且具有 *`.asm`* 扩展名。 当使用选项包含计算机代码时 **`c`** ，列表文件具有 *`.cod`* 扩展名。 你可以使用选项更改列表文件的名称和扩展名，以及在其中创建列表文件的目录 **`/Fa`** 。
 
-### <a name="fa-arguments"></a>/FA 参数
+### <a name="fa-arguments"></a>`/FA` 参数
 
-无<br/>
-只是组装器语言包含在列表中。
+内容
+列表中仅包含汇编程序语言。
 
-**c**<br/>
-可选。 在列表中包括计算机代码。
+**`c`**\
+可选。 将计算机代码包含在列表中。
 
-**s**<br/>
-可选。 在列表中包含源代码。
+**`s`**\
+可选。 包含列表中的源代码。
 
-**u**<br/>
-可选。 编码 utf-8 格式的列表文件，并包含字节顺序标记。 默认情况下，该文件编码为 ANSI。 使用`u`创建列表文件的任何系统上正确显示，或者如果使用 Unicode 作为编译器的输入源代码文件。
+**`u`**\
+可选。 使用 UTF-8 格式对列表文件进行编码，并包含字节顺序标记。 默认情况下，该文件编码为 ANSI。 使用 **`u`** 可以创建在任何系统上正确显示的列表文件，如果使用 Unicode 源代码文件作为编译器的输入，则使用。
 
-如果这两个**s**并**u**指定，且如果源代码文件使用 Unicode 编码，而不是 utf-8，则.asm 文件中的代码行可能无法正确显示。
+如果同时 **`s`** **`u`** 指定了和，并且如果源代码文件使用 utf-8 以外的 Unicode 编码，则文件中的代码行 *`.asm`* 可能无法正确显示。
 
-### <a name="fa-argument"></a>/Fa 参数
+### <a name="fa-argument"></a>`/Fa` 参数
 
-无<br/>
-一个*源*为每个源代码文件编译中创建.asm 文件。
+内容
+为编译中的每个源代码文件创建一个 " *源 .asm* " 文件。
 
-*filename*<br/>
-名为的列表文件*文件名*.asm 放在当前目录中。 编译单个源代码文件时，此值才有效。
+*名字*\
+编译器在当前目录中放置名为 *filename* 的列表文件。 此参数形式只有在编译单个源代码文件时才有效。
 
-*filename.extension*<br/>
-名为的列表文件*文件名.扩展名*位于当前目录中。 编译单个源代码文件时，此值才有效。
+*filename 扩展名*\
+编译器将在当前目录中放置一个名为 *filename. extension* 的列表文件。 此参数形式只有在编译单个源代码文件时才有效。
 
-*directory*__\\__<br/>
-一个*source_file*创建.asm 文件并将其放在指定*directory*为编译中每个源代码文件。 请注意所需的尾随反斜杠。 允许仅在当前磁盘上的路径。
+*文件夹*__\\__\
+编译器会为编译中的每个源代码文件创建一个 *source_file .asm* 文件。 将其放在指定的 *目录* 中。 尾随反斜杠是必需的。 仅允许当前磁盘上的路径。
 
-*directory*__\\__*filename*<br/>
-名为的列表文件*文件名*.asm 放在指定*directory*。 编译单个源代码文件时，此值才有效。
+*目录* __\\__*filename*\
+将名为 *filename* 的列表文件放在指定的 *目录* 中。 此参数形式只有在编译单个源代码文件时才有效。
 
-*directory*__\\__*filename.extension*<br/>
-名为的列表文件*文件名.扩展名*放置在指定*directory*。 编译单个源代码文件时，此值才有效。
+*目录* __\\__*filename 扩展名*\
+将名为 *filename* 的列表文件放在指定的 *目录* 中。 此参数形式只有在编译单个源代码文件时才有效。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **C /C++** > **输出文件**属性页。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **输出文件**" 属性页。
 
-1. 修改**汇编程序输出**属性来设置 **/FAc**并 **/FAs**组装器、 计算机和源代码的选项。 修改**使用 Unicode 对于组装器列出**属性来设置 **/fau 则**ANSI 或 utf-8 输出的选项。 修改**ASM 列表位置**若要设置 **/Fa**用于列出文件的名称和位置选项。
+1. 修改 **汇编程序 Output** 属性，为汇编程序、计算机和源代码设置 **/FAc** 和 **/FAs** 选项。 修改 " **使用用于汇编程序的 Unicode 列表** " 属性，设置 **`/FAu`** ANSI 或 utf-8 输出的选项。 修改 **ASM 列表位置** 以设置 **`/Fa`** 用于列出文件名和位置的选项。
 
-请注意，将设置两者**汇编程序输出**并**使用 Unicode 对于组装器列出**属性可能会导致[命令行警告 D9025](../../error-messages/tool-errors/command-line-warning-d9025.md)。 若要组合在 IDE 中的这些选项，使用**其他选项**字段中**命令行**属性页相反。
+**为汇编程序列表** 属性设置 **汇编程序输出** 和使用 Unicode 可能会导致 [命令行警告 D9025](../../error-messages/tool-errors/command-line-warning-d9025.md)。 若要在 IDE 中组合这些选项，请改用 "**命令行**" 属性页中的 "**其他选项**" 字段。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
-- 请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>。 若要指定 **/fau 则**，请参阅<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
+- 请参见<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A>或 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>。 若要指定 **/FAu**，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 。
 
 ## <a name="example"></a>示例
 
-下面的命令行生成合并的源和机器代码列表调用 HELLO.cod:
+下面的命令行生成一个名为的组合源和计算机代码列表 *`HELLO.cod`* ：
 
 ```cmd
 CL /FAcs HELLO.CPP
@@ -97,7 +98,7 @@ CL /FAcs HELLO.CPP
 
 ## <a name="see-also"></a>请参阅
 
-[输出文件 (/F) 选项](output-file-f-options.md)<br/>
-[MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[Output-File (/F) 选项](output-file-f-options.md)\
+[MSVC 编译器选项](compiler-options.md)\
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)\
 [指定路径名](specifying-the-pathname.md)
