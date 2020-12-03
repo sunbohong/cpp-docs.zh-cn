@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f87e6cc0a307eed4f00f1fb90ac16a840a1759af
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 156fe9c7a2b15f7254fb0c83f8b25982aa5ad09a
+ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509455"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92924306"
 ---
 # <a name="supporting-schema-rowsets"></a>支持架构行集
 
@@ -32,35 +32,35 @@ ms.locfileid: "91509455"
 
 ## <a name="atl-ole-db-provider-wizard-support"></a>ATL OLE DB 提供程序向导支持
 
-::: moniker range="vs-2019"
+::: moniker range="msvc-160"
 
 ATL OLE DB 提供程序向导不适用于 Visual Studio 2019 及更高版本。
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="<=msvc-150"
 
-ATL OLE DB 提供程序向导**** 在会话头文件中创建三个架构类：
+ATL OLE DB 提供程序向导在会话头文件中创建三个架构类：
 
-- C**** ShortName<em></em>SessionTRSchemaRowset****
+- CShortName<em></em>SessionTRSchemaRowset
 
-- C**** ShortName<em></em>SessionColSchemaRowset****
+- CShortName<em></em>SessionColSchemaRowset
 
-- C**** ShortName<em></em>SessionPTSchemaRowset****
+- CShortName<em></em>SessionPTSchemaRowset
 
 这些类响应使用者对架构信息的请求；请注意，OLE DB 规范要求，必须支持这三个架构行集：
 
-- C**** ShortName<em></em>SessionTRSchemaRowset**** 处理对表信息的请求（DBSCHEMA_TABLES 架构行集）。
+- CShortName<em></em>SessionTRSchemaRowset 处理对表信息的请求（DBSCHEMA_TABLES 架构行集）。
 
-- C**** ShortName<em></em>SessionColSchemaRowset**** 处理对列信息的请求（DBSCHEMA_COLUMNS 架构行集）。 向导提供了这些类的示例实现，它们返回 DOS 提供程序的架构信息。
+- CShortName<em></em>SessionColSchemaRowset 处理对列信息的请求（DBSCHEMA_COLUMNS 架构行集）。 向导提供了这些类的示例实现，它们返回 DOS 提供程序的架构信息。
 
-- C**** ShortName<em></em>SessionPTSchemaRowset**** 处理对提供程序类型的相关架构信息的请求（DBSCHEMA_PROVIDER_TYPES 架构行集）。 向导提供的默认实现返回 S_OK。
+- CShortName<em></em>SessionPTSchemaRowset 处理对提供程序类型的相关架构信息的请求（DBSCHEMA_PROVIDER_TYPES 架构行集）。 向导提供的默认实现返回 S_OK。
 
 可以将这些类自定义为处理适合提供程序的架构信息：
 
-- 在 C**** ShortName<em></em>SessionTRSchemaRowset**** 中，必须填写目录、表和说明字段（`trData.m_szType`、`trData.m_szTable` 和 `trData.m_szDesc`）。 向导生成的示例仅使用一行（一个表）。 其他提供程序可能会返回多个表。
+- 在 CShortName<em></em>SessionTRSchemaRowset 中，必须填写目录、表和说明字段（`trData.m_szType`、`trData.m_szTable` 和 `trData.m_szDesc`）。 向导生成的示例仅使用一行（一个表）。 其他提供程序可能会返回多个表。
 
-- 在 C**** ShortName<em></em>SessionColSchemaRowset**** 中，将表名称作为 `DBID` 进行传递。
+- 在 CShortName<em></em>SessionColSchemaRowset 中，将表名称作为 `DBID` 进行传递。
 
 ::: moniker-end
 
@@ -94,9 +94,9 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)
 ```
 
-由于 `CUpdateSession` 继承自 `IDBSchemaRowsetImpl`，因此它包含所有限制处理方法。 使用 `CSchemaRowsetImpl` 时，声明（上面架构映射中列出的）三个子类：`CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset` 和 `CUpdateSessionPTSchemaRowset`。 其中每个子类都有 `Execute` 方法，用于处理各自的一组限制（搜索条件）。 每个 `Execute` 方法都比较 cRestrictions** 和 rgRestrictions** 参数的值。 有关这些参数的说明，请参阅 [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions)。
+由于 `CUpdateSession` 继承自 `IDBSchemaRowsetImpl`，因此它包含所有限制处理方法。 使用 `CSchemaRowsetImpl` 时，声明（上面架构映射中列出的）三个子类：`CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset` 和 `CUpdateSessionPTSchemaRowset`。 其中每个子类都有 `Execute` 方法，用于处理各自的一组限制（搜索条件）。 每个 `Execute` 方法都比较 cRestrictions 和 rgRestrictions 参数的值。 有关这些参数的说明，请参阅 [SetRestrictions](./idbschemarowsetimpl-class.md#setrestrictions)。
 
-若要详细了解与特定架构行集对应的限制，请参阅 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 中的架构行集 GUID 表（这篇文章收录在 Windows SDK 的“OLE DB 程序员参考”**** 中）。
+若要详细了解与特定架构行集对应的限制，请参阅 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 中的架构行集 GUID 表（这篇文章收录在 Windows SDK 的“OLE DB 程序员参考”中）。
 
 例如，如果对 DBSCHEMA_TABLES 支持了 TABLE_NAME 限制，便会执行以下操作：
 
@@ -146,16 +146,16 @@ if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))
     rgRestrictions[l] = 0x0C;
 ```
 
-以下 `Execute` 函数类似于常规行集中的函数。 有三个参数：pcRowsAffected**、cRestrictions** 和 rgRestrictions**。 pcRowsAffected** 变量是提供程序可用来返回架构行集中行数的输出参数。 cRestrictions** 参数是包含使用者传递给提供程序的限制数的输入参数。 rgRestrictions** 参数是包含限制值的 VARIANT 值数组。
+以下 `Execute` 函数类似于常规行集中的函数。 有三个参数：pcRowsAffected、cRestrictions 和 rgRestrictions。 pcRowsAffected 变量是提供程序可用来返回架构行集中行数的输出参数。 cRestrictions 参数是包含使用者传递给提供程序的限制数的输入参数。 rgRestrictions 参数是包含限制值的 VARIANT 值数组。
 
 ```cpp
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,
                 const VARIANT* rgRestrictions)
 ```
 
-cRestrictions** 变量基于架构行集的限制总数，无论提供程序是否支持它们。 因为 UpdatePv 支持两个限制（第三个和第四个），所以此代码仅查找大于或等于 3 的 cRestrictions** 值。
+cRestrictions 变量基于架构行集的限制总数，无论提供程序是否支持它们。 因为 UpdatePv 支持两个限制（第三个和第四个），所以此代码仅查找大于或等于 3 的 cRestrictions 值。
 
-TABLE_NAME 限制值存储在 rgRestrictions [2]** 中（同样，从零开始的数组中的第三个限制为 2）。 检查限制是否不是 VT_EMPTY，以真正支持它。 请注意，VT_NULL 不等于 VT_EMPTY。 VT_NULL 指定有效限制值。
+TABLE_NAME 限制值存储在 rgRestrictions [2] 中（同样，从零开始的数组中的第三个限制为 2）。 检查限制是否不是 VT_EMPTY，以真正支持它。 请注意，VT_NULL 不等于 VT_EMPTY。 VT_NULL 指定有效限制值。
 
 表名称的 `UpdatePv` 定义是文本文件的完全限定路径名称。 提取限制值，然后尝试打开文件，以确保文件确实存在。 如果文件不存在，返回的是 S_OK。 这看起来可能有点倒退，但代码实际上是在指示使用者，根据指定的名称找不到任何受支持的表。 返回 S_OK 表示代码已正确执行。
 
@@ -194,7 +194,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-支持的第四个限制 (TABLE_TYPE) 类似于第三个限制。 检查值是否不是 VT_EMPTY。 此限制仅返回表类型 TABLE。 若要确定 DBSCHEMA_TABLES 的有效值，请查看“OLE DB 程序员参考”**** 的“附录 B”**** 中的 TABLES 行集部分。
+支持的第四个限制 (TABLE_TYPE) 类似于第三个限制。 检查值是否不是 VT_EMPTY。 此限制仅返回表类型 TABLE。 若要确定 DBSCHEMA_TABLES 的有效值，请查看“OLE DB 程序员参考”的“附录 B”中的 TABLES 行集部分。
 
 ```cpp
 // TABLE_TYPE restriction:
@@ -213,7 +213,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }
 ```
 
-这是为行集实际创建行条目的位置。 变量 `trData` 对应于 `CTABLESRow`，这是 OLE DB 提供程序模板中定义的结构。 `CTABLESRow` 对应于 OLE DB 规范的“附录 B”**** 中的 TABLES 行集定义。 只需要添加一行，因为一次只能支持一个表。
+这是为行集实际创建行条目的位置。 变量 `trData` 对应于 `CTABLESRow`，这是 OLE DB 提供程序模板中定义的结构。 `CTABLESRow` 对应于 OLE DB 规范的“附录 B”中的 TABLES 行集定义。 只需要添加一行，因为一次只能支持一个表。
 
 ```cpp
 // Bring over the data:
@@ -263,14 +263,14 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }
 ```
 
-因为 `Execute` 函数从 TABLES 行集中返回 TABLE_NAME、TABLE_TYPE 和 DESCRIPTION 字段的数据，所以你可以查看 OLE DB 规范的“附录 B”****，并确定（通过自上而下计数）它们是序号 3、4 和 6。 对于其中每一列，返回的是 DBSTATUS_S_OK。 对于其他所有列，返回的是 DBSTATUS_S_ISNULL。 请务必返回此状态，因为使用者可能不知道返回值是 NULL 或其他值。 同样，请注意，NULL 不相当于空。
+因为 `Execute` 函数从 TABLES 行集中返回 TABLE_NAME、TABLE_TYPE 和 DESCRIPTION 字段的数据，所以你可以查看 OLE DB 规范的“附录 B”，并确定（通过自上而下计数）它们是序号 3、4 和 6。 对于其中每一列，返回的是 DBSTATUS_S_OK。 对于其他所有列，返回的是 DBSTATUS_S_ISNULL。 请务必返回此状态，因为使用者可能不知道返回值是 NULL 或其他值。 同样，请注意，NULL 不相当于空。
 
-若要详细了解 OLE DB 架构行集接口，请参阅“OLE DB 程序员参考”**** 中的 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) 接口。
+若要详细了解 OLE DB 架构行集接口，请参阅“OLE DB 程序员参考”中的 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) 接口。
 
 若要了解使用者如何使用 `IDBSchemaRowset` 方法，请参阅[使用架构行集获取元数据](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。
 
 有关支持架构行集的提供程序示例，请参阅 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)
