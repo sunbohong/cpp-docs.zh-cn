@@ -281,13 +281,13 @@ MSVC 支持 ANSI/ISO C99、C11 和 C17 标准以及 ISO C++14 和 C++17 标准�
 
 - `__STDC_HOSTED__`：如果实现是托管实现并且支持整个必需的标准库，则定义为 1  。 其他情况下则定义为 0。
 
-- `__STDC_NO_ATOMICS__` 如果实现不支持可选的标准原子，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_ATOMICS__` 如果实现不支持可选的标准原子，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
-- `__STDC_NO_COMPLEX__` 如果实现不支持可选的标准复数，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_COMPLEX__` 如果实现不支持可选的标准复数，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
-- `__STDC_NO_THREADS__` 如果实现不支持可选的标准线程，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_THREADS__` 如果实现不支持可选的标准线程，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
-- `__STDC_NO_VLA__` 如果实现不支持可选的可变长度数组，则定义为 1。 当编译为 C 且指定 `/std` C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
+- `__STDC_NO_VLA__` 如果实现不支持可选的可变长度数组，则定义为 1。 当编译为 C 且指定 [`/std`](../build/reference/std-specify-language-standard-version.md) C11 或 C17 选项之一时，MSVC 实现会将其定义为 1。
 
 - `__STDC_VERSION__` 当编译为 C 且指定 `/std` C11 或 C17 选项之一时定义。 对于 [`/std:c11`](../build/reference/std-specify-language-standard-version.md)，它扩展到 `201112L`；对于 [`/std:c17`](../build/reference/std-specify-language-standard-version.md)，则扩展到 `201710L`。
 
@@ -521,7 +521,7 @@ MSVC 支持以下其他预定义宏。
 
    有关详细信息，请参阅 Microsoft C++ 团队博客中的 [Visual C++ 编译器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)。
 
-- `_MSVC_LANG`：定义为指定编译器面向的 C++ 语言标准的整数文本。 此宏仅在编译为 C++ 的代码中设置。 默认情况下，或者当指定了 `/std:c++14` 编译器选项时，此宏为整数文本值 201402L。 如果指定了 `/std:c++17` 编译器选项，则此宏设置为 201703L。 当指定了 `/std:c++latest` 选项时，它设置为更高的未指定值。 其他情况下则不会定义此宏。 从 Visual Studio 2015 Update 3 开始，提供 `_MSVC_LANG` 宏和 [`/std`（指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项。
+- `_MSVC_LANG`：定义为指定编译器面向的 C++ 语言标准的整数文本。 此宏仅在编译为 C++ 的代码中设置。 默认情况下，或者当指定了 [`/std:c++14`](../build/reference/std-specify-language-standard-version.md) 编译器选项时，此宏为整数文本值 201402L。 如果指定了 [`/std:c++17`](../build/reference/std-specify-language-standard-version.md) 编译器选项，则此宏设置为 201703L。 当指定了 [`/std:c++latest`](../build/reference/std-specify-language-standard-version.md) 选项时，它设置为更高的未指定值。 其他情况下则不会定义此宏。 从 Visual Studio 2015 Update 3 开始，提供 `_MSVC_LANG` 宏和 [`/std`（指定语言标准版本）](../build/reference/std-specify-language-standard-version.md)编译器选项。
 
 - `__MSVC_RUNTIME_CHECKS`：当设置了其中一个 `/RTC` 编译器选项时，定义为 1。 其他情况下则不定义。
 
