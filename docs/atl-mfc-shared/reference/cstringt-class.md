@@ -1,93 +1,57 @@
 ---
 title: '**`CStringT`** 班级'
 description: Microsoft ATL 类的 API 参考 **`CStringT`**
-ms.date: 11/13/2020
+ms.date: 12/06/2020
 f1_keywords:
 - CStringT
-- ATLSTR/ATL::CStringT
-- ATLSTR/ATL::CStringT::CStringT
-- ATLSTR/ATL::CStringT::AllocSysString
-- ATLSTR/ATL::CStringT::AnsiToOem
-- ATLSTR/ATL::CStringT::AppendFormat
-- ATLSTR/ATL::CStringT::Collate
-- ATLSTR/ATL::CStringT::CollateNoCase
-- ATLSTR/ATL::CStringT::Compare
-- ATLSTR/ATL::CStringT::CompareNoCase
-- ATLSTR/ATL::CStringT::Delete
-- ATLSTR/ATL::CStringT::Find
-- ATLSTR/ATL::CStringT::FindOneOf
-- ATLSTR/ATL::CStringT::Format
-- ATLSTR/ATL::CStringT::FormatMessage
-- ATLSTR/ATL::CStringT::FormatMessageV
-- ATLSTR/ATL::CStringT::FormatV
-- ATLSTR/ATL::CStringT::GetEnvironmentVariable
-- ATLSTR/ATL::CStringT::Insert
-- ATLSTR/ATL::CStringT::Left
-- ATLSTR/ATL::CStringT::LoadString
-- ATLSTR/ATL::CStringT::MakeLower
-- ATLSTR/ATL::CStringT::MakeReverse
-- ATLSTR/ATL::CStringT::MakeUpper
-- ATLSTR/ATL::CStringT::Mid
-- ATLSTR/ATL::CStringT::OemToAnsi
-- ATLSTR/ATL::CStringT::Remove
-- ATLSTR/ATL::CStringT::Replace
-- ATLSTR/ATL::CStringT::ReverseFind
-- ATLSTR/ATL::CStringT::Right
-- ATLSTR/ATL::CStringT::SetSysString
-- ATLSTR/ATL::CStringT::SpanExcluding
-- ATLSTR/ATL::CStringT::SpanIncluding
-- ATLSTR/ATL::CStringT::Tokenize
-- ATLSTR/ATL::CStringT::Trim
-- ATLSTR/ATL::CStringT::TrimLeft
-- ATLSTR/ATL::CStringT::TrimRight
-- CSTRINGT/CStringT
-- CSTRINGT/CStringT::CStringT
-- CSTRINGT/CStringT::AllocSysString
-- CSTRINGT/CStringT::AnsiToOem
-- CSTRINGT/CStringT::AppendFormat
-- CSTRINGT/CStringT::Collate
-- CSTRINGT/CStringT::CollateNoCase
-- CSTRINGT/CStringT::Compare
-- CSTRINGT/CStringT::CompareNoCase
-- CSTRINGT/CStringT::Delete
-- CSTRINGT/CStringT::Find
-- CSTRINGT/CStringT::FindOneOf
-- CSTRINGT/CStringT::Format
-- CSTRINGT/CStringT::FormatMessage
-- CSTRINGT/CStringT::FormatMessageV
-- CSTRINGT/CStringT::FormatV
-- CSTRINGT/CStringT::GetEnvironmentVariable
-- CSTRINGT/CStringT::Insert
-- CSTRINGT/CStringT::Left
-- CSTRINGT/CStringT::LoadString
-- CSTRINGT/CStringT::MakeLower
-- CSTRINGT/CStringT::MakeReverse
-- CSTRINGT/CStringT::MakeUpper
-- CSTRINGT/CStringT::Mid
-- CSTRINGT/CStringT::OemToAnsi
-- CSTRINGT/CStringT::Remove
-- CSTRINGT/CStringT::Replace
-- CSTRINGT/CStringT::ReverseFind
-- CSTRINGT/CStringT::Right
-- CSTRINGT/CStringT::SetSysString
-- CSTRINGT/CStringT::SpanExcluding
-- CSTRINGT/CStringT::SpanIncluding
-- CSTRINGT/CStringT::Tokenize
-- CSTRINGT/CStringT::Trim
-- CSTRINGT/CStringT::TrimLeft
-- CSTRINGT/CStringT::TrimRight
+- CSTRINGT/ATL::CStringT
+- CSTRINGT/ATL::CStringT::CStringT
+- CSTRINGT/ATL::CStringT::AllocSysString
+- CSTRINGT/ATL::CStringT::AnsiToOem
+- CSTRINGT/ATL::CStringT::AppendFormat
+- CSTRINGT/ATL::CStringT::Collate
+- CSTRINGT/ATL::CStringT::CollateNoCase
+- CSTRINGT/ATL::CStringT::Compare
+- CSTRINGT/ATL::CStringT::CompareNoCase
+- CSTRINGT/ATL::CStringT::Delete
+- CSTRINGT/ATL::CStringT::Find
+- CSTRINGT/ATL::CStringT::FindOneOf
+- CSTRINGT/ATL::CStringT::Format
+- CSTRINGT/ATL::CStringT::FormatMessage
+- CSTRINGT/ATL::CStringT::FormatMessageV
+- CSTRINGT/ATL::CStringT::FormatV
+- CSTRINGT/ATL::CStringT::GetEnvironmentVariable
+- CSTRINGT/ATL::CStringT::Insert
+- CSTRINGT/ATL::CStringT::Left
+- CSTRINGT/ATL::CStringT::LoadString
+- CSTRINGT/ATL::CStringT::MakeLower
+- CSTRINGT/ATL::CStringT::MakeReverse
+- CSTRINGT/ATL::CStringT::MakeUpper
+- CSTRINGT/ATL::CStringT::Mid
+- CSTRINGT/ATL::CStringT::OemToAnsi
+- CSTRINGT/ATL::CStringT::Remove
+- CSTRINGT/ATL::CStringT::Replace
+- CSTRINGT/ATL::CStringT::ReverseFind
+- CSTRINGT/ATL::CStringT::Right
+- CSTRINGT/ATL::CStringT::SetSysString
+- CSTRINGT/ATL::CStringT::SpanExcluding
+- CSTRINGT/ATL::CStringT::SpanIncluding
+- CSTRINGT/ATL::CStringT::Tokenize
+- CSTRINGT/ATL::CStringT::Trim
+- CSTRINGT/ATL::CStringT::TrimLeft
+- CSTRINGT/ATL::CStringT::TrimRight
 helpviewer_keywords:
 - strings [C++], in ATL
 - shared classes, CStringT
 - CStringT class
-ms.openlocfilehash: 80ea59b5f50fc9f430aa588a37e73d4526e3fd94
-ms.sourcegitcommit: 07408df5f4b2cbf070d9bb4bb40d821bfd5d8a62
+ms.openlocfilehash: f9ec5c02aa1ed9377a38d30d9a4152af5e164d58
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703506"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776539"
 ---
-# <a name="cstringt-class"></a>CStringT 类
+# <a name="cstringt-class"></a>`CStringT` 类
 
 此类表示一个 **`CStringT`** 对象。
 
@@ -134,14 +98,14 @@ class CStringT :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[`CStringT::CStringT`](#cstringt)|**`CStringT`** 以多种方式构造对象。|
 |[`CStringT::~CStringT`](#_dtorcstringt)|销毁 **`CStringT`** 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[`CStringT::AllocSysString`](#allocsysstring)|`BSTR`从数据分配 **`CStringT`** 。|
 |[`CStringT::AnsiToOem`](#ansitooem)|进行从 ANSI 字符集到 OEM 字符集的就地转换。|
@@ -180,7 +144,7 @@ class CStringT :
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[`CStringT::operator =`](#operator_eq)|将新值分配给 **`CStringT`** 对象。|
 |[`CStringT::operator +`](#operator_add)|连接两个字符串，或一个字符和一个字符串。|
@@ -192,7 +156,7 @@ class CStringT :
 |[`CStringT::operator <=`](#operator_lt_eq)|确定位于运算符左侧的字符串是否小于或等于右侧的字符串的。|
 |[`CStringT::operator >=`](#operator_gt_eq)|确定位于运算符左侧的字符串是否大于或等于右侧的字符串的。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **`CStringT`** 继承自 [CSimpleStringT 类](../../atl-mfc-shared/reference/csimplestringt-class.md)。 高级功能（如字符操作、排序和搜索）是通过实现的 **`CStringT`** 。
 
@@ -251,7 +215,7 @@ class CStringT :
 
 由于 **`CStringT`** 使用模板自变量定义字符类型 ([wchar_t](../../c-runtime-library/standard-types.md) 或 [char](../../c-runtime-library/standard-types.md)) 受支持，因此方法参数类型可能会很复杂。 若要简化此问题，请在整个类中定义和使用一组预定义类型 **`CStringT`** 。 下表列出了各种类型：
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`XCHAR`|单个字符 (**`wchar_t`** **`char`** 与对象具有相同字符类型的或) **`CStringT`** 。|
 |`YCHAR`|单个字符 (**`wchar_t`** 或 **`char`**) 与对象相反的字符类型 **`CStringT`** 。|
@@ -271,7 +235,7 @@ class CStringT :
 
 ## <a name="requirements"></a>要求
 
-|Header|用于|
+|标头|用于|
 |------------|-------------|
 |cstringt|仅限 MFC 的字符串对象|
 |atlstr。h|非 MFC 字符串对象|
@@ -288,7 +252,7 @@ BSTR AllocSysString() const;
 
 新分配的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在 MFC 程序中，如果存在内存不足的情况，则会引发 [CMemoryException 类](../../mfc/reference/cmemoryexception-class.md) 。 在 ATL 程序中，将引发 [CAtlException](../../atl/reference/catlexception-class.md) 。 此函数通常用于返回自动化的字符串。
 
@@ -310,7 +274,7 @@ BSTR AllocSysString() const;
 void AnsiToOem();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果定义了，则函数不可用 `_UNICODE` 。
 
@@ -338,7 +302,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 *`argument`*\
 可选参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数在中设置并追加一系列字符和值 **`CStringT`** 。 如果根据中的相应格式规范 *`pszFormat`* 或从标识的字符串资源中转换并追加任何) ，则每个可选参数 (*`nFormatID`* 。
 
@@ -363,7 +327,7 @@ int Collate(PCXSTR psz) const throw();
 
 如果字符串相同，则为零; 如果此对象 **`CStringT`** 小于，则 < 0; *`psz`* 如果此对象大于，则为 > 0 **`CStringT`** *`psz`* 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `_tcscoll`在 TCHAR 中定义的一般文本函数。H，映射到 `strcoll` 、 `wcscoll` 或，具体取决于在 `_mbscoll` 编译时定义的字符集。 每个函数根据当前使用的代码页对字符串执行区分大小写的比较。 有关详细信息，请参阅 [strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。
 
@@ -384,7 +348,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 如果字符串相同 (忽略大小写) ，则为零; 如果此 **`CStringT`** 对象小于 *`psz`* (忽略大小写) ，则 < 0; 如果此 **`CStringT`** 对象大于 *`psz`* > 忽略大小写 (，则为) 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `_tcscoll`在 TCHAR 中定义的一般文本函数。H，映射到 `stricoll` 、 `wcsicoll` 或，具体取决于在 `_mbsicoll` 编译时定义的字符集。 每个函数根据当前使用的代码页，对字符串执行不区分大小写的比较。 有关详细信息，请参阅 [strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。
 
@@ -409,7 +373,7 @@ int Compare(PCXSTR psz) const;
 
 如果字符串相同，则为零; 如果此对象 **`CStringT`** 小于，则 < 0; *`psz`* 如果此对象大于，则为 > 0 **`CStringT`** *`psz`* 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `_tcscmp`在 TCHAR 中定义的一般文本函数。H，映射到 `strcmp` 、 `wcscmp` 或，具体取决于在 `_mbscmp` 编译时定义的字符集。 每个函数对字符串执行区分大小写的比较，不受区域设置的影响。 有关详细信息，请参阅 [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)。
 
@@ -438,7 +402,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 如果字符串相同 (忽略大小写) ，则为零; 如果此 **`CStringT`** 对象小于 *`psz`* (忽略大小写) ，则 <0; 如果此 **`CStringT`** 对象大于 *`psz`* >忽略大小写 (，则为) 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `_tcsicmp`在 TCHAR 中定义的一般文本函数。H，映射到 `_stricmp` `_wcsicmp` 或 `_mbsicmp` ，具体取决于在编译时定义的字符集。 每个函数对字符串执行不区分大小写的比较。 比较取决于区域设置的 LC_CTYPE 方面，但不 LC_COLLATE。 有关详细信息，请参阅 [_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)。
 
@@ -564,7 +528,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 *`pString`*\
 对象的句柄 **`CStringT`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由于构造函数将输入数据复制到新分配的存储中，因此可能会导致内存异常。 其中一些构造函数充当转换函数。 例如，您可以用来替换 **`LPTSTR`** **`CStringT`** 对象的预期位置。
 
@@ -575,7 +539,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 - **`CStringT`** ( `const unsigned char*` `psz` ) ：允许构造从指向的 **`CStringT`** 指针 **`unsigned char`** 。
 
 > [!NOTE]
-> 定义 ` _CSTRING_DISABLE_NARROW_WIDE_CONVERSION` 宏以关闭 ANSI 和 Unicode 字符串之间的隐式字符串转换。 宏从支持转换的编译构造函数中排除。
+> 定义 `_CSTRING_DISABLE_NARROW_WIDE_CONVERSION` 宏以关闭 ANSI 和 Unicode 字符串之间的隐式字符串转换。 宏从支持转换的编译构造函数中排除。
 
 *`strSrc`* 参数可以是 **`CStringT`** 或 `CThisSimpleString` 对象。 对于 **`CStringT`** ，请使用其默认实例之一 (`CString` 、 `CStringA` 或 `CStringW`) ; 对于 `CThisSimpleString` ，请使用 **`this`** 指针。 `CThisSimpleString` 声明 [CSimpleStringT 类](../../atl-mfc-shared/reference/csimplestringt-class.md)的实例，该类是具有比类更少的内置功能的较小字符串类 **`CStringT`** 。
 
@@ -596,7 +560,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ~CStringT() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 销毁 **`CStringT`** 对象。
 
@@ -620,7 +584,7 @@ int Delete(int iIndex, int nCount = 1);
 
 已更改的字符串的长度。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *`nCount`* 比字符串长，则将删除字符串的其余部分。
 
@@ -659,7 +623,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 此对象中与请求的子字符串匹配的第一个字符的从零开始的索引 **`CStringT`** ; 如果未找到子字符串或字符，则为-1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重载函数以接受 (类似于运行时函数 `strchr`) 和字符串 (类似于) 的单个字符 `strstr` 。
 
@@ -684,7 +648,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 此字符串中的第一个字符的从零开始的索引 *`pszCharSet`* ; 如果没有匹配项，则为-1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 查找中任何字符的第一个匹配项 *`pszCharSet`* 。
 
@@ -712,7 +676,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 *`argument`*\
 可选参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数在中设置和存储一系列字符和值 **`CStringT`** 。 如果根据中的相应格式规范 *`pszFormat`* 或从标识的字符串资源转换和输出任何) ，则每个可选参数 (*`nFormatID`* 。
 
@@ -746,7 +710,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 *`argument`*\
 可选参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数要求将消息定义作为输入。 消息定义由 *`pszFormat`* 和标识的字符串资源确定 *`nFormatID`* 。 函数将带格式的消息文本复制到 **`CStringT`** 对象，并在请求时处理任何嵌入的插入序列。
 
@@ -775,7 +739,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 *`pArgList`*\
 指向参数列表的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数需要消息定义作为输入，由确定 *`pszFormat`* 。 函数将带格式的消息文本和参数的变量列表复制到 **`CStringT`** 对象，并在请求时处理任何嵌入的插入序列。
 
@@ -800,7 +764,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
 *`args`*\
 指向参数列表的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **`CStringT`** 使用将 `vsprintf_s` 数据格式化为 C 样式字符数组的相同方式将格式化字符串和变量的变量列表写入字符串。
 
@@ -827,7 +791,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从调用进程的环境块中检索指定变量的值。 值的格式为以 null 结尾的字符。
 
@@ -859,7 +823,7 @@ int Insert(int iIndex, XCHAR ch);
 
 已更改的字符串的长度。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 *`iIndex`* 参数标识将移动的第一个字符，以便为字符或子字符串腾出空间。 如果 *nIndex* 为零，则将在整个字符串之前进行插入。 如果 *nIndex* 大于字符串的长度，则该函数将连接当前字符串和或提供的新材料 *`ch`* *`psz`* 。
 
@@ -884,7 +848,7 @@ CStringT Left(int nCount) const;
 
 一个 **`CStringT`** 对象，该对象包含指定范围内的字符的副本。 返回的 **`CStringT`** 对象可能为空。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *`nCount`* 超过字符串长度，则提取整个字符串。 `Left` 类似于 Basic `Left` 函数。
 
@@ -919,7 +883,7 @@ Windows 字符串资源 ID。
 
 如果资源加载成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用指定的语言 (*wLanguage*) 从指定的模块 (*hInstance*) 中加载字符串资源 (*nID*) 。
 
@@ -998,7 +962,7 @@ CStringT Mid(int iFirst) const;
 
 一个 **`CStringT`** 对象，该对象包含指定范围内的字符的副本。 返回的 **`CStringT`** 对象可能为空。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数返回提取的子字符串的副本。 `Mid` 类似于基本的 Mid 函数 (，只不过基本函数中的索引是从1开始的) 。
 
@@ -1016,7 +980,7 @@ CStringT Mid(int iFirst) const;
 void OemToAnsi();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果定义了，则此函数不可用 `_UNICODE` 。
 
@@ -1064,7 +1028,7 @@ CStringT& operator=(const VARIANT& var);
 *`pszSrc`*\
 指向要分配的原始字符串的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 赋值运算符接受另一个 **`CStringT`** 对象、字符指针或单个字符。 使用此运算符时，可能会出现内存异常，因为可以分配新的存储。
 
@@ -1107,7 +1071,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 *`psz2`*\
 一个指针，指向要与字符串或字符连接的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数有七种重载形式 `CStringT::operator+` 。 第一版连接两个现有 **`CStringT`** 对象。 接下来的两个连接 **`CStringT`** 对象和一个以 null 结尾的字符串。 接下来的两个将 **`CStringT`** 对象和一个 ANSI 字符连接起来。 最后两个将 **`CStringT`** 对象和 Unicode 字符连接起来。
 
@@ -1161,7 +1125,7 @@ CStringT& operator+=(const VARIANT& var);
 *`strSrc`*\
 **`CStringT`** 要连接到此字符串的。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 运算符接受另一个 **`CStringT`** 对象、字符指针或单个字符。 当你使用此串联运算符时，可能会出现内存异常，因为可以为添加到此对象的字符分配新存储 **`CStringT`** 。
 
@@ -1208,7 +1172,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 *`psz2`*\
 指向以 null 结尾的字符串的指针，用于比较。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 测试左侧的一个字符串或字符是否等于右侧的字符串或字符，并返回 `TRUE` 或 `FALSE` 相应地。
 
@@ -1250,7 +1214,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 *`psz2`*\
 指向以 null 结尾的字符串的指针，用于比较。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 测试左侧的一个字符串或字符是否不等于右侧的字符串或字符。
 
@@ -1282,7 +1246,7 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 *`psz2`*\
 指向以 null 结尾的字符串的指针，用于比较。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 字符串之间按字典比较的字符，按字符结束：
 
@@ -1320,7 +1284,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 *`psz2`*\
 指向以 null 结尾的字符串的指针，用于比较。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 字符串之间按字典比较的字符，按字符结束：
 
@@ -1358,7 +1322,7 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 *`psz2`*\
 指向以 null 结尾的字符串的指针，用于比较。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 字符串之间按字典比较的字符，按字符结束：
 
@@ -1396,7 +1360,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 *`psz2`*\
 指向用于比较的字符串的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 字符串之间按字典比较的字符，按字符结束：
 
@@ -1427,7 +1391,7 @@ int Remove(XCHAR chRemove);
 
 从字符串中删除的字符数。 如果字符串未更改，则为零。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 字符的比较区分大小写。
 
@@ -1462,7 +1426,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 返回字符或子字符串的被替换实例的数量; 如果字符串未更改，则返回零。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `Replace` 可以更改字符串长度，因为 *`pszNew`* 和的 *`pszOld`* 长度不必相同，并且可以将旧子字符串的多个副本更改为新副本。 函数执行区分大小写的匹配。
 
@@ -1477,7 +1441,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 |`_UNICODE`|宽字符|
 |`_MBCS`|多字节字符|
 |两者均未选中|单字节字符|
-|两者|Undefined|
+|推送、请求和匿名|Undefined|
 
 ### <a name="example"></a>示例
 
@@ -1500,7 +1464,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 此对象中与请求的字符匹配的最后一个字符的从零开始的索引 **`CStringT`** ; 如果未找到该字符，则为-1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数类似于运行时函数 `strrchr` 。
 
@@ -1525,7 +1489,7 @@ CStringT Right(int nCount) const;
 
 一个 **`CStringT`** 对象，该对象包含指定范围内的字符的副本。 返回的 **`CStringT`** 对象可以为空。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *`nCount`* 超过字符串长度，则提取整个字符串。 `Right` 与基本 `Right` 函数 (相似，只不过基本函数中的索引从零开始) 。
 
@@ -1552,7 +1516,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 新字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 根据对象的内容，所 **`CStringT`** 引用的的值 **`BSTR`** *`pbstr`* 可以更改。 如果内存不足，则函数将引发 `CMemoryException` 。
 
@@ -1579,7 +1543,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 包含字符串中的字符的子字符串，从字符串中的第一个字符开始，到 (字符串中找到的第一个字符，以字符串中的第一个字符开始，并以字符串中的第一个字符 *`pszCharSet`* 结束 *`pszCharSet`* ，但不包括) 中找到的字符串中的第一个字符 *`pszCharSet`* 。 如果在字符串中找不到字符，则返回整个字符串 *`pszCharSet`* 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `SpanExcluding` 提取并返回 (字符的第一个匹配项中的第一个匹配项之后的所有字符 *`pszCharSet`* ，在字符串中后的字符 *`pszCharSet`* 和其后面的所有字符都不会以) 的形式返回。 如果 *`pszCharSet`* 在字符串中找不到任何字符，则 `SpanExcluding` 返回整个字符串。
 
@@ -1604,7 +1568,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 包含字符串中的字符的子字符串 *`pszCharSet`* ，从字符串中的第一个字符开始，到在不在中的字符串中找到字符时结束 *`pszCharSet`* 。 `SpanIncluding` 如果字符串中的第一个字符不在指定的集中，则返回一个空的子字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果字符串的第一个字符不在字符集中，则 `SpanIncluding` 返回一个空字符串。 否则，它将返回集中的连续字符序列。
 
@@ -1632,7 +1596,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 **`CStringT`** 包含当前标记值的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `Tokenize`函数查找目标字符串中的下一个标记。 *PszTokens* 中的字符集指定要查找的令牌的可能分隔符。 在对函数的每个调用 `Tokenize` 开始时 *`iStart`* ，将跳过前导分隔符并返回 **`CStringT`** 包含当前标记的对象，该对象是到下一个分隔符字符之前的字符字符串。 的值 *`iStart`* 更新为位于结束分隔符字符后的位置; 如果已到达字符串的末尾，则为-1。 通过一系列对的调用，可以将更多标记从目标字符串的其余部分中分离出来 `Tokenize` ，使用 *`iStart`* 跟踪在字符串中要读取下一个标记的位置。 当没有更多的标记时，该函数将返回一个空字符串，并 *`iStart`* 将设置为-1。
 
@@ -1641,8 +1605,6 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]
-
-### <a name="remarks"></a>注解
 
 此示例的输出如下所示：
 
@@ -1674,7 +1636,7 @@ CStringT& Trim();
 
 返回修整后的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 删除下列一项的所有前导匹配项和尾随匹配项：
 
@@ -1687,8 +1649,6 @@ CStringT& Trim();
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]
-
-### <a name="remarks"></a>注解
 
 此示例的输出如下所示：
 
@@ -1719,7 +1679,7 @@ CStringT& TrimLeft();
 
 生成的剪裁字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 删除下列一项的所有前导匹配项和尾随匹配项：
 
@@ -1755,7 +1715,7 @@ CStringT& TrimRight();
 
 返回 **`CStringT`** 包含剪裁后的字符串的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 删除以下其中一项的尾随次出现：
 
@@ -1775,7 +1735,7 @@ CStringT& TrimRight();
 
 [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)\
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)\

@@ -1,6 +1,7 @@
 ---
-title: '范围解析运算符：::'
-ms.date: 11/04/2016
+title: 作用域解析运算符： `::`
+description: 了解范围解析运算符 `::` 在标准 c + + 中的工作方式。
+ms.date: 12/06/2020
 f1_keywords:
 - '::'
 helpviewer_keywords:
@@ -8,33 +9,44 @@ helpviewer_keywords:
 - operators [C++], scope resolution
 - scope resolution operator
 - ':: operator'
-ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ff774d9fcca9f68cb2925af82c55ef438ab4d71a
+ms.sourcegitcommit: 7b131db4ed39bddb4a456ebea402f47c5cbd69d3
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178881"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96776526"
 ---
-# <a name="scope-resolution-operator-"></a>范围解析运算符：::
+# <a name="scope-resolution-operator-"></a>作用域解析运算符： `::`
 
-范围解析运算符 **：：** 用于标识和消除在不同范围内使用的标识符。 有关作用域的详细信息，请参阅[作用域](../cpp/scope-visual-cpp.md)。
+范围解析运算符 **`::`** 用于标识和消除在不同范围内使用的标识符。 有关作用域的详细信息，请参阅 [作用域](../cpp/scope-visual-cpp.md)。
 
 ## <a name="syntax"></a>语法
 
-```
-:: identifier
-class-name :: identifier
-namespace :: identifier
-enum class :: identifier
-enum struct :: identifier
-```
+> *`qualified-id`*:\
+> &emsp; *`nested-name-specifier`* **`template`** <sub>opt</sub> *`unqualified-id`*
+
+> *`nested-name-specifier`*:\
+> &emsp;**`::`**\
+> &emsp;*`type-name`* **`::`**\
+> &emsp;*`namespace-name`* **`::`**\
+> &emsp;*`decltype-specifier`* **`::`**\
+> &emsp;*`nested-name-specifier`* *`identifier`* **`::`**\
+> &emsp;*`nested-name-specifier`***`template`** <sub>opt</sub> opt *`simple-template-id`***`::`**
+
+> *`unqualified-id`*:\
+> &emsp;*`identifier`*\
+> &emsp;*`operator-function-id`*\
+> &emsp;*`conversion-function-id`*\
+> &emsp;*`literal-operator-id`*\
+> &emsp;**`~`** *`type-name`*\
+> &emsp;**`~`** *`decltype-specifier`*\
+> &emsp;*`template-id`*
 
 ## <a name="remarks"></a>备注
 
 `identifier` 可以是变量、函数或枚举值。
 
-## <a name="with-classes-and-namespaces"></a>具有命名空间和类
+## <a name="use--for-classes-and-namespaces"></a>用于 `::` 类和命名空间
 
 以下示例显示范围解析运算符如何与命名空间和类一起使用：
 
@@ -80,7 +92,7 @@ int main() {
 }
 ```
 
-你可以使用范围解析运算符来标识命名空间的成员，还可标识通过 using 指定成员的命名空间的命名空间。 在下面的示例中，你可以使用 `NamespaceC``ClassB``ClassB` 限定 `NamespaceB``NamespaceB``NamespaceC`（尽管 {7}{8}{9} 已在 {10}{11}{12} 中声明），因为已通过 using 指令在 {13}{14}{15} 中指定 {16}{17}{18}。
+可以使用范围解析运算符标识的成员 **`namespace`** ，或标识在指令中 nominates 成员的命名空间的命名空间 **`using`** 。 在下面的示例中，你可以使用 `NamespaceC` 来限定 `ClassB` ，即使 `ClassB` 是在命名空间中声明的， `NamespaceB` 因为 `NamespaceB` 是 `NamespaceC` 由指令在中命名的 **`using`** 。
 
 ```cpp
 namespace NamespaceB {
@@ -91,14 +103,15 @@ namespace NamespaceB {
 }
 
 namespace NamespaceC{
-    using namespace B;
+    using namespace NamespaceB;
 }
-int main() {
-    NamespaceB::ClassB c_b;
-    NamespaceC::ClassB c_c;
 
-    c_b.x = 3;
-    c_c.x = 4;
+int main() {
+    NamespaceB::ClassB b_b;
+    NamespaceC::ClassB c_b;
+
+    b_b.x = 3;
+    c_b.x = 4;
 }
 ```
 
@@ -128,7 +141,7 @@ int main() {
 }
 ```
 
-## <a name="with-static-members"></a>具有静态成员
+## <a name="use--for-static-members"></a>用于 `::` 静态成员
 
 必须使用范围解析运算符来调用类的静态成员。
 
@@ -148,9 +161,9 @@ int main() {
 }
 ```
 
-## <a name="with-scoped-enumerations"></a>具有区分范围的枚举
+## <a name="use--for-scoped-enumerations"></a>用于 `::` 作用域枚举
 
-作用域内的解析运算符也与范围枚举[枚举声明](../cpp/enumerations-cpp.md)的值一起使用，如以下示例中所示：
+作用域内的解析运算符也与范围枚举 [枚举声明](../cpp/enumerations-cpp.md)的值一起使用，如以下示例中所示：
 
 ```cpp
 enum class EnumA{
@@ -164,7 +177,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C + + 内置运算符、优先级和结合性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [命名空间](../cpp/namespaces-cpp.md)
