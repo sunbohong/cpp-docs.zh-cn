@@ -1,15 +1,15 @@
 ---
 title: 在 Visual Studio 中配置 CMake 调试会话
 description: 介绍如何使用 Visual Studio 配置 CMake 调试器设置。
-ms.date: 04/02/2020
+ms.date: 12/07/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 74be1f07b838cd77f4ee87f5e9d245410fe716de
-ms.sourcegitcommit: 432c24dde31c400437c4320e8432b1ddb232f844
+ms.openlocfilehash: b289acf8d0aa89cef1d2a72c988b41d99914f828
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96440305"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862563"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>配置 CMake 调试会话
 
@@ -112,6 +112,8 @@ CMakeSettings.json 中定义的环境变量也可以通过语法 `${env.VARIABLE
 #### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>允许与 `gdbserver` 配置一起使用的其他选项（16.7 或更高版本）
 
 - `program`：默认为 `"${debugInfo.fullTargetPath}"`。 要调试的应用程序的 Unix 路径。 仅当与生成或部署位置中的目标可执行文件不同时才需要。
+> [!TIP]
+> 对于本地交叉编译方案，尚不支持部署。 如果要在 Windows 上进行交叉编译（例如在 Windows 上使用交叉编译器来生成 Linux ARM 可执行文件），那么在调试之前，你将需要将二进制文件手动复制到远程 ARM 计算机上由 `program` 指定的位置。
 - `remoteMachineName`：默认为 `"${debugInfo.remoteMachineName}"`。 承载要调试的程序的远程系统的名称。 仅当与生成系统不同时才需要。 必须在[连接管理器](../linux/connect-to-your-remote-linux-computer.md)中具有现有条目。 按 Ctrl+空格键可查看所有现有远程连接的列表。
 - `cwd`：默认为 `"${debugInfo.defaultWorkingDirectory}"`。 远程系统上运行 `program` 的目录的完整 Unix 路径。 该目录必须存在。
 - `gdbPath`：默认为 `${debugInfo.vsInstalledGdb}`。 用于调试的 `gdb` 的完整 Windows 路径。 默认为与“使用 C/C++ 的 Linux 开发”工作负载一起安装的 `gdb`。
@@ -233,7 +235,7 @@ Visual Studio 支持执行自定义 `gdb` 命令，以便直接与底层调试�
 [连接到远程 Linux 计算机](../linux/connect-to-your-remote-linux-computer.md)\
 [自定义 CMake 生成设置](customize-cmake-settings.md)\
 [配置 CMake 调试会话](configure-cmake-debugging-sessions.md)\
-\[部署、运行和调试 Linux 项目](../linux/deploy-run-and-debug-your-linux-project.md)
+[部署、运行和调试 Linux 项目](../linux/deploy-run-and-debug-your-linux-project.md)\
 [CMake 预定义配置引用](cmake-predefined-configuration-reference.md)
 
 ::: moniker-end

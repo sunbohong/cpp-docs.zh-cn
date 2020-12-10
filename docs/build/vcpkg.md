@@ -4,12 +4,12 @@ description: vcpkg 是一种命令行包管理器，可极大简化 Windows、ma
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ec908824c19099ad6eaa46a4d85c0187ef12b3fd
+ms.sourcegitcommit: 102bd6f7a878d85c8ceab8f28d0359f562850ea0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373627"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "96862550"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：用于 Windows、Linux 和 macOS 的 C++ 包管理器
 
@@ -226,6 +226,8 @@ vcpkg 包管理器在 GitHub 上定期更新。 若要将 vcpkg 的克隆更新�
 ## <a name="uninstall-vcpkg"></a>卸载 vcpkg
 
 若要卸载 vcpkg，只需删除 vcpkg 目录。 删除此目录会卸载 vcpkg 分发以及 vcpkg 已安装的所有库。
+
+但是，如果已执行 `vcpkg integrate install`，则应执行 `vcpkg integrate remove` 来确保在删除文件夹之前已清理集成 。
 
 ## <a name="send-feedback-about-vcpkg"></a>发送关于 vcpkg 的反馈
 
