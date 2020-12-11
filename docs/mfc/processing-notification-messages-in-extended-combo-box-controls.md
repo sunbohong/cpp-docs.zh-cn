@@ -1,22 +1,23 @@
 ---
+description: 了解详细信息：在扩展组合框控件中处理通知消息
 title: 处理扩展组合框控件中的通知消息
 ms.date: 11/04/2016
 helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 58a7c5ec36807489d24014055c39775b4552be03
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ef004c3649ce78b24aa1c77aa90488ae6391dcca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154807"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>处理扩展组合框控件中的通知消息
 
 当用户与扩展组合框进行交互时，控件 (`CComboBoxEx`) 会将通知消息发送到其父窗口（通常是一个视图或对话框对象）。 如果您要在响应中做些什么，请处理这些消息。 例如，当用户激活下拉列表或单击该控件的编辑框时，将发送 CBEN_BEGINEDIT 通知。
 
-使用[类向导](reference/mfc-class-wizard.md)将通知处理程序添加到要实现的那些消息的父类。
+使用 [类向导](reference/mfc-class-wizard.md) 将通知处理程序添加到要实现的那些消息的父类。
 
 下表介绍了由扩展组合框控件发送的各种通知。
 
@@ -32,7 +33,7 @@ ms.locfileid: "84620990"
 
 - CBEN_INSERTITEM 在控件中插入新项后发送。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 CComboBoxEx](using-ccomboboxex.md)<br/>
 [控件](controls-mfc.md)

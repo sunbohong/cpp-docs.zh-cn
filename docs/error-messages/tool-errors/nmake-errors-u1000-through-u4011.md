@@ -1,19 +1,20 @@
 ---
+description: '了解详细信息： NMAKE 错误和警告 (Uxxxx) '
 title: NMAKE 错误和警告
 ms.date: 04/16/2019
 f1_keywords:
 - nmake
 ms.assetid: 9dbe2e12-88ca-4df4-b935-17756112bb79
-ms.openlocfilehash: 230389215525871578cad1a1a676995588bdd5ca
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: b3e79f13832b2861be31c6229f48aa1282500a96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856973"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155145"
 ---
 # <a name="nmake-errors-and-warnings-uxxxx"></a>NMAKE 错误和警告 (Uxxxx)
 
-本部分是对错误的引用，nmake 生成警告的生成工具。 NMAKE 错误和警告具有窗体 U*xxxx*，其中*xxxx*是一个四位数字。
+本部分是对 NMAKE 生成工具生成的错误和警告的参考。 NMAKE 错误和警告的形式为 U *xxxx*，其中 *xxxx* 为四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -49,7 +50,7 @@ ms.locfileid: "64856973"
 [NMAKE 错误 U1095](nmake-fatal-error-u1095.md) \
 [NMAKE 错误 U1097](nmake-fatal-error-u1097.md) \
 [NMAKE 错误 U1099](nmake-fatal-error-u1099.md) \
-[NMAKE 错误 U1100](nmake-fatal-error-u1100.md)
+[NMAKE 致命错误 U1100](nmake-fatal-error-u1100.md)
 
 ## <a name="nmake-warnings"></a>NMAKE 警告
 
@@ -62,5 +63,5 @@ ms.locfileid: "64856973"
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[C/c + + 编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [NMAKE 参考](../../build/reference/nmake-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：管理 MDI 子窗口
 title: 管理 MDI 子窗口
 ms.date: 11/19/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 6e8e3d0aa51eeea112597485a9221dcba4feda87
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1207e6a8fa174c36b09352796521bcb860ee665f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112084"
 ---
 # <a name="managing-mdi-child-windows"></a>管理 MDI 子窗口
 
@@ -36,6 +37,6 @@ MDI 框架窗口还将与当前 MDI 子窗口（如果有一个）结合使用�
 
 - [框架窗口样式](frame-window-styles-cpp.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用框架窗口](using-frame-windows.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAtlArray 类
 title: CAtlArray 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c4a4cd509a5d3078c6587ba7b29179a68912a258
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ae3f5aef84cac64adba20ef438f5063abda098e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158421"
 ---
 # <a name="catlarray-class"></a>CAtlArray 类
 
@@ -43,9 +44,9 @@ template<typename E, class ETraits = CElementTraits<E>>
 class CAtlArray
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*电邮*<br/>
+*E*<br/>
 要存储在数组中的数据类型。
 
 *ETraits*<br/>
@@ -55,7 +56,7 @@ class CAtlArray
 
 ### <a name="methods"></a>方法
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[添加](#add)|调用此方法可将元素添加到数组对象。|
 |[追加](#append)|调用此方法可将一个数组的内容添加到另一个数组的末尾。|
@@ -78,7 +79,7 @@ class CAtlArray
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[运算符 &#91;&#93;](#operator_at)|调用此运算符可返回对数组中的元素的引用。|
 
@@ -89,7 +90,7 @@ class CAtlArray
 |[INARGTYPE](#inargtype)|用于向数组添加元素的数据类型。|
 |[OUTARGTYPE](#outargtype)|用于检索数组中的元素的数据类型。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CAtlArray` 提供用于创建和管理用户定义类型的元素数组的方法。 尽管类似于标准 C 数组， `CAtlArray` 对象可以根据需要动态收缩和增长。 数组索引始终从位置0开始，上限可以固定，或允许在添加新元素时进行扩展。
 
@@ -112,7 +113,7 @@ size_t Add(INARGTYPE element);
 size_t Add();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *element*<br/>
 要添加到数组中的元素。
@@ -121,7 +122,7 @@ size_t Add();
 
 返回所添加的元素的索引。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 新元素添加到数组的末尾。 如果未提供任何元素，则添加一个空元素;也就是说，数组的大小增加，就好像添加了实元素一样。 如果操作失败，则会调用 [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) 参数 E_OUTOFMEMORY。
 
@@ -137,7 +138,7 @@ size_t Add();
 size_t Append(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *aSrc*<br/>
 要追加的数组。
@@ -146,7 +147,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 
 返回第一个追加的元素的索引。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 提供的数组中的元素将添加到现有数组的末尾。 如有必要，将分配内存以容纳新元素。
 
@@ -166,7 +167,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
 void AssertValid() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 array 对象无效，ATLASSERT 将引发断言。 仅当定义 _DEBUG 时，此方法才可用。
 
@@ -182,7 +183,7 @@ void AssertValid() const;
 CAtlArray() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 初始化数组对象。
 
@@ -198,7 +199,7 @@ CAtlArray() throw();
 ~CAtlArray() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 释放数组对象使用的所有资源。
 
@@ -210,12 +211,12 @@ CAtlArray() throw();
 void Copy(const CAtlArray<E, ETraits>& aSrc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *aSrc*<br/>
 要复制到数组的元素的源。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法可覆盖一个数组中具有另一个数组元素的元素。 如有必要，将分配内存以容纳新元素。 不能将数组的元素复制到其自身。
 
@@ -238,7 +239,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 void FreeExtra() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 任何空元素都将被删除，但数组的大小和上限仍保持不变。
 
@@ -253,7 +254,7 @@ const E& GetAt(size_t iElement) const throw();
 E& GetAt(size_t iElement) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要返回的数组元素的索引值。
@@ -262,7 +263,7 @@ E& GetAt(size_t iElement) throw();
 
 返回对所需数组元素的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调试版本中，如果 *iElement* 超过数组中的元素数，则会引发 ATLASSERT。 在发布版本中，无效参数可能导致不可预知的行为。
 
@@ -282,7 +283,7 @@ size_t GetCount() const throw();
 
 返回数组中存储的元素数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由于数组中第一个元素的位置为0，因此返回的值 `GetCount` 始终大于最大的索引。
 
@@ -323,7 +324,7 @@ typedef ETraits::INARGTYPE INARGTYPE;
 void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iStart*<br/>
 要插入数组的位置的索引。
@@ -331,9 +332,9 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 *paNew*<br/>
 要插入的数组。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-数组 *paNew* 中的元素将复制到数组对象中，从元素 *iStart*开始。 将移动现有数组元素，以避免被覆盖。
+数组 *paNew* 中的元素将复制到数组对象中，从元素 *iStart* 开始。 将移动现有数组元素，以避免被覆盖。
 
 在调试版本中，如果 `CAtlArray` 对象无效，或者 *paNew* 指针为 NULL 或无效，则会引发 ATLASSERT。
 
@@ -352,7 +353,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要在其中插入元素的索引。
@@ -363,9 +364,9 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
 *nCount*<br/>
 要添加的元素的数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-将一个或多个元素插入到数组中，从索引 *iElement*开始。 将移动现有元素，以避免被覆盖。
+将一个或多个元素插入到数组中，从索引 *iElement* 开始。 将移动现有元素，以避免被覆盖。
 
 在调试版本中，如果 `CAtlArray` 对象无效、要添加的元素数为零或元素的组合数量太大而无法包含，则将引发 ATLASSERT。 在零售版本中，传递无效的参数可能会导致不可预知的结果。
 
@@ -385,7 +386,7 @@ bool IsEmpty() const throw();
 
 如果数组为空，则返回 true，否则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果数组不包含任何元素，则称其为空。 因此，即使数组包含空元素，也不是空的。
 
@@ -402,7 +403,7 @@ E& operator[](size_t ielement) throw();
 const E& operator[](size_t ielement) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要返回的数组元素的索引值。
@@ -411,7 +412,7 @@ const E& operator[](size_t ielement) const throw();
 
 返回对所需数组元素的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对 [CAtlArray：： GetAt](#getat)执行类似的函数。 与 MFC 类 [CArray](../../mfc/reference/carray-class.md)不同，此运算符不能用作 [CAtlArray：： SetAt](#setat)的替换。
 
@@ -433,7 +434,7 @@ typedef ETraits::OUTARGTYPE OUTARGTYPE;
 void RemoveAll() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从数组对象中移除所有元素。
 
@@ -451,7 +452,7 @@ void RemoveAll() throw();
 void RemoveAt(size_t iElement, size_t nCount = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 要移除的第一个元素的索引。
@@ -459,7 +460,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 *nCount*<br/>
 要移除的元素数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从数组中移除一个或多个元素。 剩余的任何元素将向下移动。 上限减少，但在调用 [CAtlArray：： FreeExtra](#freeextra) 之前不会释放内存。
 
@@ -477,7 +478,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
 void SetAt(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 指向要设置的数组元素的索引。
@@ -485,7 +486,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 *element*<br/>
 已指定元素的新值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调试版本中，如果 *iElement* 超过数组中的元素数，则会引发 ATLASSERT。 在零售版本中，无效的参数可能会导致不可预知的结果。
 
@@ -501,7 +502,7 @@ void SetAt(size_t iElement, INARGTYPE element);
 bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nNewSize*<br/>
 数组的所需大小。
@@ -513,7 +514,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 
 如果成功调整数组的大小，则返回 true; 否则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以增加或减少数组大小。 如果增加，则将额外的空元素添加到数组中。 如果减少，将删除具有最大索引的元素，并释放内存。
 
@@ -531,7 +532,7 @@ bool SetCount(size_t nNewSize, int nGrowBy = - 1);
 void SetAtGrow(size_t iElement, INARGTYPE element);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iElement*<br/>
 指向要设置的数组元素的索引。
@@ -539,7 +540,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 *element*<br/>
 已指定元素的新值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 替换索引所指向的元素的值。 如果 *iElement* 大于数组的当前大小，则使用对 [CAtlArray：： SetCount](#setcount)的调用来自动增加数组。 在调试版本中，如果对象无效，则会引发 ATLASSERT `CAtlArray` 。 在零售版本中，无效的参数可能会导致不可预知的结果。
 
@@ -547,7 +548,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 
 [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MMXSwarm 示例](../../overview/visual-cpp-samples.md)<br/>
 [DynamicConsumer 示例](../../overview/visual-cpp-samples.md)<br/>

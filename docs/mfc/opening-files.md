@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：打开文件
 title: 打开文件
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: 73407eba802b7640e880b821144954fa6442f177
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: cad847dc74cd32f93cc8a4a13e4bbe1bd815d815
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112877"
 ---
 # <a name="opening-files"></a>打开文件
 
@@ -31,9 +32,9 @@ ms.locfileid: "84622153"
 
 1. 创建文件对象，无需指定路径或权限标志。
 
-   通常通过在堆栈帧上声明[CFile](reference/cfile-class.md)变量来创建文件对象。
+   通常通过在堆栈帧上声明 [CFile](reference/cfile-class.md) 变量来创建文件对象。
 
-1. 为文件对象调用[Open](reference/cfile-class.md#open)成员函数，同时提供路径和权限标志。
+1. 为文件对象调用 [Open](reference/cfile-class.md#open) 成员函数，同时提供路径和权限标志。
 
    如果成功打开文件，则 `Open` 的返回值不为零；否则如果指定文件未能打开，则为 0。 `Open` 成员函数的原型如下所示：
 
@@ -48,7 +49,7 @@ ms.locfileid: "84622153"
 > [!NOTE]
 > 此示例将创建并打开文件。 如果出现问题，则 `Open` 调用将在其最后一个参数中返回 `CFileException` 对象，如下所示。 跟踪宏将同时打印文件名和指示失败原因的代码。 如果您需要更详细的错误报告，则可以调用 `AfxThrowFileException` 函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CFile 类](reference/cfile-class.md)<br/>
 [CFile：： Open](reference/cfile-class.md#open)<br/>

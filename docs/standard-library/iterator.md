@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; iterator&gt;
 title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 08e2051db70ee1891c7b60860c7ea0b423855be5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9c40d46c5cde45baa66c8173d2b6d8f0186d1bc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841917"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112058"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -24,7 +25,7 @@ ms.locfileid: "88841917"
 
 **命名空间:** std
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 迭代器是指针的泛化，它从这些指针的需求中抽象出来，允许 C++ 程序使用统一的方式来处理不同的数据结构。 迭代器充当容器和泛型算法之间的媒介。 算法被定义为对某一迭代器类型所指定的范围起作用，而不是作用于特定的数据类型。 随后，算法可能会作用于任何满足迭代器要求的数据结构。 迭代器有五个类型或类别，各自具有自己的要求和最终功能：
 
@@ -46,7 +47,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[进](../standard-library/iterator-functions.md#advance)|使迭代器递增指定数量的位置。|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|创建一个可以在指定容器的后面插入元素的迭代器。|
@@ -72,7 +73,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator！ =](../standard-library/iterator-operators.md#op_neq)|测试运算符左侧的迭代器对象是否不等于右侧的迭代器对象。|
 |[operator = =](../standard-library/iterator-operators.md#op_eq_eq)|测试运算符左侧的迭代器对象是否等于右侧的迭代器对象。|
@@ -85,7 +86,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|类模板描述输出迭代器对象。 它将元素插入类型为的容器 `Container` ，该容器通过它存储的受保护对象（称为容器）进行访问 `pointer` 。|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|一个类，提供 `iterator_category` 表示双向迭代器的函数的返回类型。|
@@ -96,7 +97,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |[insert_iterator](../standard-library/insert-iterator-class.md)|类模板描述输出迭代器对象。 它将元素插入类型为的容器 `Container` ，该容器通过它存储的受保护对象（称为容器）进行访问 `pointer` 。 它还存储 `iterator` 名为的类的受保护对象 `Container::iterator` `iter` 。|
 |[istream_iterator](../standard-library/istream-iterator-class.md)|类模板描述一个输入迭代器对象。 它 `Ty` 从输入流中提取类的对象（通过它存储的对象访问），将类型指针从指向 `basic_istream` \<**Elem**, **Tr**> 。|
 |[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|类模板描述一个输入迭代器对象。 它将类的元素插入到 `Elem` 输出流缓冲区中，并将其通过它存储的对象访问，将类型转换 `pointer` 为 `basic_streambuf` \<**Elem**, **Tr**> 。|
-|[器](../standard-library/iterator-struct.md)|类模板用作所有迭代器的基类型。|
+|[iterator](../standard-library/iterator-struct.md)|类模板用作所有迭代器的基类型。|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|一种模板 helper 类，可以提供与不同迭代器类型相关联的关键类型，以便用相同的方式引用这些迭代器。|
 |[move_iterator](../standard-library/move-iterator-class.md)|`move_iterator` 对象可以存储 `RandomIterator` 类型的随机访问迭代器。 它的行为类似于随机访问迭代器，但在解引用时除外。 `operator*` 的结果将隐式强制转换为 `value_type&&:`，以便形成 `rvalue reference`。|
 |[ostream_iterator](../standard-library/ostream-iterator-class.md)|类模板描述输出迭代器对象。 它将类的对象插入到 `Type` 输出流，并通过它所存储的对象（类型为） `pointer` 来访问它 `basic_ostream` \<**Elem**, **Tr**> 。|
@@ -106,7 +107,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|类模板描述的行为类似于随机访问迭代器的对象，仅反向进行。|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|一种使用随机访问未检查迭代器来访问数组的类。 **注意：** 此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

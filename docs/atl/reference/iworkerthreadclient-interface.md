@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IWorkerThreadClient 接口
 title: IWorkerThreadClient 接口
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-ms.openlocfilehash: aa72f090a006d6936339582a919b0faf5cab6b03
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fb9113c9380453dad9f647fa2f5a2095ff12cea7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157979"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 接口
 
@@ -33,12 +34,12 @@ __interface IWorkerThreadClient
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CloseHandle](#closehandle)|实现此方法可关闭与此对象关联的句柄。|
 |[执行](#execute)|实现此方法以在与此对象关联的句柄变为已终止时执行代码。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 当你的代码需要在工作线程上执行，以响应句柄变为信号时，实现此接口。
 
@@ -54,7 +55,7 @@ __interface IWorkerThreadClient
 HRESULT CloseHandle(HANDLE  hHandle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hHandle*<br/>
 要关闭的句柄。
@@ -63,7 +64,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 传递给此方法的句柄以前通过调用 [CWorkerThread：： AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
 
@@ -81,7 +82,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
 HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwParam*<br/>
 User 参数。
@@ -93,7 +94,7 @@ User 参数。
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 传递给此方法的句柄和 DWORD/指针以前通过调用 [CWorkerThread：： AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)与此对象相关联。
 
@@ -103,7 +104,7 @@ User 参数。
 
 [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../atl/reference/atl-classes.md)<br/>
 [CWorkerThread 类](../../atl/reference/cworkerthread-class.md)

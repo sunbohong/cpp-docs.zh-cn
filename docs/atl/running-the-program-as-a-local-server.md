@@ -1,20 +1,21 @@
 ---
-title: 为本地服务器中运行程序
+description: 了解详细信息：作为本地服务器运行程序
+title: 以本地服务器的形式运行程序
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [ATL], running services as local server
 - ATL services, running as local servers
 ms.assetid: eb9701e6-e2a8-4666-897f-0c893aec8ac7
-ms.openlocfilehash: a412814fc5f3900a248f779501e2720b72287e57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdf3cef0773769318d68964b28bb60ca66666d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196517"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157486"
 ---
-# <a name="running-the-program-as-a-local-server"></a>为本地服务器中运行程序
+# <a name="running-the-program-as-a-local-server"></a>以本地服务器的形式运行程序
 
-如果作为服务运行该程序是不方便，可以暂时更改注册表，以便以普通的本地服务器运行该程序。 只需重命名`LocalService`下为你 AppID 值`_LocalService`，并确保`LocalServer32`正确设置您的 CLSID 下的键。 (请注意，使用 DCOMCNFG 指定，应另一台计算机上运行你的应用程序将重命名你`LocalServer32`关键`_LocalServer32`。)运行程序，如本地服务器上启动占用几秒钟时间，因为在调用`StartServiceCtrlDispatcher`中`CAtlServiceModuleT::Start`需要几秒钟就失败。
+如果以服务的形式运行该程序是不方便的，则可以暂时更改注册表，以使程序作为普通的本地服务器运行。 只需将 `LocalService` AppID 下的值重命名为 `_LocalService` ，并确保 `LocalServer32` CLSID 下的密钥设置正确。  (请注意，使用 DCOMCNFG.EXE 指定应用程序应在不同的计算机上运行，则会将你的密钥重命名 `LocalServer32` 为。 ) 将你的 `_LocalServer32` 程序作为本地服务器运行将需要几秒钟的时间才能启动，因为对中的的调用在 `StartServiceCtrlDispatcher` `CAtlServiceModuleT::Start` 失败之前需要几秒钟。
 
 ## <a name="see-also"></a>请参阅
 

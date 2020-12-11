@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IOleObjectImpl 类
 title: IOleObjectImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,19 +50,19 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: 86d82aea2e92eb99903284abe4ac03478369616c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a8e9fd7dc370ee3f0861ab152061e4a0b96465ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158174"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 类
 
-此类实现`IUnknown`并且是容器与控件通信的主体接口。
+此类实现 `IUnknown` ，是容器与控件进行通信时所使用的主要接口。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -70,63 +71,63 @@ template<class T>
 class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自`IOleObjectImpl`。
+派生自的类 `IOleObjectImpl` 。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[IOleObjectimpl：：建议](#advise)|与控件建立咨询连接。|
-|[IOleObjectimpl：关闭](#close)|将控制状态从运行更改为加载。|
-|[IOleObjectimpl：:DoVerb](#doverb)|告诉控件执行其枚举操作之一。|
-|[IOleObjectimpl：:DoVerb丢弃Undo](#doverbdiscardundo)|告诉控件放弃它维护的任何撤消状态。|
-|[IOleObjectimpl：:DoVerbHide](#doverbhide)|告诉控件从视图中删除其用户界面。|
-|[IOleobjectimpl：:Doverbinplace激活](#doverbinplaceactivate)|运行控件并安装其窗口，但不会安装控件的用户界面。|
-|[IOleObjectimpl：:DoVerbOpen](#doverbopen)|导致在单独的窗口中打开编辑控件。|
-|[IOleObjectimpl：:DoVerb主要](#doverbprimary)|当用户双击控件时执行指定的操作。 控件定义操作，通常是为了就地激活控件。|
-|[IOleObjectimpl：:DoVerbshow](#doverbshow)|向用户显示新插入的控件。|
-|[IOleObjectimpl：:DoVerbUI激活](#doverbuiactivate)|就地激活控件并显示控件的用户界面，如菜单和工具栏。|
-|[IOleObjectimpl：：枚举建议](#enumadvise)|枚举控件的咨询连接。|
-|[IOleObjectimpl：：枚举](#enumverbs)|枚举控件的操作。|
-|[IOleObjectimpl：：获取客户端网站](#getclientsite)|检索控件的客户端站点。|
-|[IOleObjectimpl：：获取夹板数据](#getclipboarddata)|从剪贴板检索数据。 ATL 实现返回E_NOTIMPL。|
-|[IOleObjectimpl：：获取范围](#getextent)|检索控件显示区域的范围。|
-|[IOleObjectimpl：：获取Misc状态](#getmiscstatus)|检索控件的状态。|
-|[IOleObjectimpl：：GetMoniker](#getmoniker)|检索控件的绰号。 ATL 实现返回E_NOTIMPL。|
-|[IOleObjectimpl：：获取用户类ID](#getuserclassid)|检索控件的类标识符。|
-|[IOleObjectimpl：：获取用户类型](#getusertype)|检索控件的用户类型名称。|
-|[IOleObjectimpl：：从数据中](#initfromdata)|从所选数据初始化控件。 ATL 实现返回E_NOTIMPL。|
-|[IOleobjectimpl：：至前](#isuptodate)|检查控件是否为最新控件。 ATL 实现返回S_OK。|
-|[IOleObjectimpl：：在后空音丢弃undo](#onpostverbdiscardundo)|在丢弃撤消状态后由[DoVerbDiscardUndo](#doverbdiscardundo)调用。|
-|[IOleobjectimpl：：在后音隐藏](#onpostverbhide)|在控件隐藏后由[DoVerbHide](#doverbhide)调用。|
-|[IOleobjectimpl：：在后空音位置激活](#onpostverbinplaceactivate)|在控件激活到位后，[由 DoVerbInPlace 调用](#doverbinplaceactivate)。|
-|[IOleObjectimpl：：在PostVerbopen上](#onpostverbopen)|在打开控件以在单独的窗口中编辑控件后[，DoVerbOpen](#doverbopen)调用。|
-|[IOleObjectimpl：：在后场Verbshow](#onpostverbshow)|在控件变得可见后由[DoVerbShow](#doverbshow)调用。|
-|[IOleObjectimpl：：在后空音激活](#onpostverbuiactivate)|在激活控件的用户界面后，[由 DoVerbUIActivate](#doverbuiactivate)调用。|
-|[IOleObjectimpl：：在Preverbimplundo](#onpreverbdiscardundo)|在丢弃撤消状态之前由[DoVerbDiscardUndo](#doverbdiscardundo)调用。|
-|[IOleobjectimpl：：在上Verbverbhide](#onpreverbhide)|在隐藏控件之前由[DoVerbHide](#doverbhide)调用。|
-|[IOleobjectimpl：：在预置位置激活](#onpreverbinplaceactivate)|在控件激活到位之前，[由 DoVerbInPlace 调用](#doverbinplaceactivate)。|
-|[IOleObjectimpl：：在Preverbopen上](#onpreverbopen)|在打开控件以在单独的窗口中编辑之前由[DoVerbOpen](#doverbopen)调用。|
-|[IOleObjectimpl：：在Preverbshow上](#onpreverbshow)|在控件变得可见之前由[DoVerbShow](#doverbshow)调用。|
-|[IOleObjectimpl：：在Verbui激活上](#onpreverbuiactivate)|在激活控件的用户界面之前，[由 DoVerbUIActivate](#doverbuiactivate)调用。|
-|[IOleObjectimpl：：设置客户端网站](#setclientsite)|告诉控件有关其在容器中的客户端站点。|
-|[IOleObjectimpl：：设置颜色方案](#setcolorscheme)|向控件的应用程序（如果有）建议配色方案。 ATL 实现返回E_NOTIMPL。|
-|[IOleObjectimpl：：设置范围](#setextent)|设置控件的显示区域的范围。|
-|[IOleObjectimpl：：设置主机名](#sethostnames)|告诉控件容器应用程序和容器文档的名称。|
-|[IOleObjectimpl：：SetMoniker](#setmoniker)|告诉控件其名字是什么。 ATL 实现返回E_NOTIMPL。|
-|[IOleObjectimpl：：不建议](#unadvise)|删除与控件的咨询连接。|
-|[IOleObjectimpl：：更新](#update)|更新控件。 ATL 实现返回S_OK。|
+|[IOleObjectImpl：： Advise](#advise)|建立与控件的通知连接。|
+|[IOleObjectImpl：： Close](#close)|将控件状态从 "正在运行" 更改为 "已加载"。|
+|[IOleObjectImpl：:D oVerb](#doverb)|通知控件执行它的一个枚举操作。|
+|[IOleObjectImpl：:D oVerbDiscardUndo](#doverbdiscardundo)|通知控件丢弃其维护的任何撤消状态。|
+|[IOleObjectImpl：:D oVerbHide](#doverbhide)|通知控件从视图中删除其用户界面。|
+|[IOleObjectImpl：:D oVerbInPlaceActivate](#doverbinplaceactivate)|运行控件并安装其窗口，但不安装控件的用户界面。|
+|[IOleObjectImpl：:D oVerbOpen](#doverbopen)|使控件在单独的窗口中打开编辑。|
+|[IOleObjectImpl：:D oVerbPrimary](#doverbprimary)|当用户双击控件时，执行指定的操作。 控件定义操作，通常用于就地激活控件。|
+|[IOleObjectImpl：:D oVerbShow](#doverbshow)|向用户显示新插入的控件。|
+|[IOleObjectImpl：:D oVerbUIActivate](#doverbuiactivate)|就地激活控件并显示控件的用户界面，如菜单和工具栏。|
+|[IOleObjectImpl::EnumAdvise](#enumadvise)|枚举控件的通知连接。|
+|[IOleObjectImpl：： EnumVerbs](#enumverbs)|枚举控件的操作。|
+|[IOleObjectImpl::GetClientSite](#getclientsite)|检索控件的客户端站点。|
+|[IOleObjectImpl::GetClipboardData](#getclipboarddata)|从剪贴板检索数据。 ATL 实现返回 E_NOTIMPL。|
+|[IOleObjectImpl::GetExtent](#getextent)|检索控件的显示区域的范围。|
+|[IOleObjectImpl::GetMiscStatus](#getmiscstatus)|检索控件的状态。|
+|[IOleObjectImpl：： GetMoniker](#getmoniker)|检索控件的名字对象。 ATL 实现返回 E_NOTIMPL。|
+|[IOleObjectImpl::GetUserClassID](#getuserclassid)|检索控件的类标识符。|
+|[IOleObjectImpl::GetUserType](#getusertype)|检索控件的用户类型名称。|
+|[IOleObjectImpl::InitFromData](#initfromdata)|从所选数据中初始化控件。 ATL 实现返回 E_NOTIMPL。|
+|[IOleObjectImpl::IsUpToDate](#isuptodate)|检查控件是否为最新。 ATL 实现返回 S_OK。|
+|[IOleObjectImpl::OnPostVerbDiscardUndo](#onpostverbdiscardundo)|在放弃撤消状态之后由 [DoVerbDiscardUndo](#doverbdiscardundo) 调用。|
+|[IOleObjectImpl::OnPostVerbHide](#onpostverbhide)|在隐藏控件后由 [DoVerbHide](#doverbhide) 调用。|
+|[IOleObjectImpl::OnPostVerbInPlaceActivate](#onpostverbinplaceactivate)|就地激活控件后，由 [DoVerbInPlaceActivate](#doverbinplaceactivate) 调用。|
+|[IOleObjectImpl::OnPostVerbOpen](#onpostverbopen)|在控件已打开以便在单独的窗口中进行编辑后，由 [DoVerbOpen](#doverbopen) 调用。|
+|[IOleObjectImpl::OnPostVerbShow](#onpostverbshow)|使控件可见后，由 [DoVerbShow](#doverbshow) 调用。|
+|[IOleObjectImpl::OnPostVerbUIActivate](#onpostverbuiactivate)|在控件的用户界面激活后，由 [DoVerbUIActivate](#doverbuiactivate) 调用。|
+|[IOleObjectImpl::OnPreVerbDiscardUndo](#onpreverbdiscardundo)|在撤消状态被丢弃之前由 [DoVerbDiscardUndo](#doverbdiscardundo) 调用。|
+|[IOleObjectImpl::OnPreVerbHide](#onpreverbhide)|在隐藏控件之前由 [DoVerbHide](#doverbhide) 调用。|
+|[IOleObjectImpl::OnPreVerbInPlaceActivate](#onpreverbinplaceactivate)|就地激活控件之前，由 [DoVerbInPlaceActivate](#doverbinplaceactivate) 调用。|
+|[IOleObjectImpl::OnPreVerbOpen](#onpreverbopen)|在控件已打开以便在单独的窗口中进行编辑之前，由 [DoVerbOpen](#doverbopen) 调用。|
+|[IOleObjectImpl::OnPreVerbShow](#onpreverbshow)|在控件变为可见之前由 [DoVerbShow](#doverbshow) 调用。|
+|[IOleObjectImpl::OnPreVerbUIActivate](#onpreverbuiactivate)|在控件的用户界面激活之前由 [DoVerbUIActivate](#doverbuiactivate) 调用。|
+|[IOleObjectImpl::SetClientSite](#setclientsite)|向控件通知容器中的客户端站点。|
+|[IOleObjectImpl::SetColorScheme](#setcolorscheme)|为控件的应用程序推荐配色方案（如果有）。 ATL 实现返回 E_NOTIMPL。|
+|[IOleObjectImpl：： SetExtent](#setextent)|设置控件显示区的范围。|
+|[IOleObjectImpl::SetHostNames](#sethostnames)|向控件通知容器应用程序和容器文档的名称。|
+|[IOleObjectImpl::SetMoniker](#setmoniker)|通知控件其名字对象是什么。 ATL 实现返回 E_NOTIMPL。|
+|[IOleObjectImpl::Unadvise](#unadvise)|删除与控件的通知连接。|
+|[IOleObjectImpl：： Update](#update)|更新控件。 ATL 实现返回 S_OK。|
 
 ## <a name="remarks"></a>备注
 
-[IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject)接口是容器与控件通信的主要接口。 类`IOleObjectImpl`通过在调试生成中向转储设备发送`IUnknown`信息来提供此接口的默认实现和实现。
+[IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject)接口是容器与控件进行通信时所使用的主体接口。 类 `IOleObjectImpl` 提供此接口的默认实现，并 `IUnknown` 通过在调试版本中将信息发送到转储设备来实现。
 
-**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)， 创建[ATL 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)， [创建 atl 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -136,11 +137,11 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlctl.h
+**标头：** atlctl
 
-## <a name="ioleobjectimpladvise"></a><a name="advise"></a>IOleObjectimpl：：建议
+## <a name="ioleobjectimpladvise"></a><a name="advise"></a> IOleObjectImpl：： Advise
 
-与控件建立咨询连接。
+建立与控件的通知连接。
 
 ```
 STDMETHOD(Advise)(
@@ -150,11 +151,11 @@ STDMETHOD(Advise)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：：](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise)在 Windows SDK 中提供建议。
+请参阅 Windows SDK 中的 [IOleObject：： Advise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-advise) 。
 
-## <a name="ioleobjectimplclose"></a><a name="close"></a>IOleObjectimpl：关闭
+## <a name="ioleobjectimplclose"></a><a name="close"></a> IOleObjectImpl：： Close
 
-将控制状态从运行更改为加载。
+将控件状态从 "正在运行" 更改为 "已加载"。
 
 ```
 STDMETHOD(Close)(DWORD dwSaveOption);
@@ -162,15 +163,15 @@ STDMETHOD(Close)(DWORD dwSaveOption);
 
 ### <a name="remarks"></a>备注
 
-停用控件并销毁控制窗口（如果存在）。 如果控制类数据成员[CComControlBase：：m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave)为 TRUE，*并且 dwSaveOption*参数是OLECLOSE_SAVEIFDIRTY或OLECLOSE_PROMPTSAVE，则控件属性在关闭前保存。
+停用控件并销毁控件窗口（如果它存在）。 如果控件类数据成员 [CComControlBase：： m_bRequiresSave](../../atl/reference/ccomcontrolbase-class.md#m_brequiressave) 为 TRUE，并且 *dwSaveOption* 参数 OLECLOSE_SAVEIFDIRTY 或 OLECLOSE_PROMPTSAVE，则在关闭之前保存控件属性。
 
-控制类数据成员[CComControlBase：：m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite)和[CComControlBase：m_spAdviseSink）](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink)中持有的指针被释放，数据成员[CComControlBase：：：m_bNegotiatedWnd、CComControlBase：m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd)和[CComControlBase：m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex)设置为 FALSE。 [CComControlBase::m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)
+控制类数据成员 [CComControlBase：： m_spInPlaceSite](../../atl/reference/ccomcontrolbase-class.md#m_spinplacesite) 和 [CComControlBase：： m_spAdviseSink](../../atl/reference/ccomcontrolbase-class.md#m_spadvisesink) 中包含的指针已释放，并且数据成员 [CComControlBase：： m_bNegotiatedWnd](../../atl/reference/ccomcontrolbase-class.md#m_bnegotiatedwnd)、 [CComControlBase：： m_bWndless](../../atl/reference/ccomcontrolbase-class.md#m_bwndless)和 [CComControlBase：： m_bInPlaceSiteEx](../../atl/reference/ccomcontrolbase-class.md#m_binplacesiteex) 设置为 FALSE。
 
-请参阅[IOleObject：关闭](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close)Windows SDK。
+请参阅 Windows SDK 中的 [IOleObject：： Close](/windows/win32/api/oleidl/nf-oleidl-ioleobject-close) 。
 
-## <a name="ioleobjectimpldoverb"></a><a name="doverb"></a>IOleObjectimpl：:DoVerb
+## <a name="ioleobjectimpldoverb"></a><a name="doverb"></a> IOleObjectImpl：:D oVerb
 
-告诉控件执行其枚举操作之一。
+通知控件执行它的一个枚举操作。
 
 ```
 STDMETHOD(DoVerb)(
@@ -184,42 +185,42 @@ STDMETHOD(DoVerb)(
 
 ### <a name="remarks"></a>备注
 
-根据 的值`iVerb`，其中一个 ATL`DoVerb`帮助器函数的调用如下所示：
+根据的值，将 `iVerb` 调用其中一个 ATL `DoVerb` helper 函数，如下所示：
 
-|*iVerb*价值|多维尔布帮助器函数称为|
+|*iVerb* 负值|已调用 DoVerb helper 函数|
 |-------------------|-----------------------------------|
-|OLEIVERB_DISCARDUNDOSTATE|[多维尔布·丢弃Undo](#doverbdiscardundo)|
-|OLEIVERB_HIDE|[多维尔布](#doverbhide)|
-|OLEIVERB_INPLACEACTIVATE|[多维尔布林广场激活](#doverbinplaceactivate)|
-|OLEIVERB_OPEN|[多维尔布打开](#doverbopen)|
-|OLEIVERB_PRIMARY|[多维尔布小学](#doverbprimary)|
-|OLEIVERB_PROPERTIES|[CComControlBase：:DoVerb属性](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
-|OLEIVERB_SHOW|[多维尔布秀](#doverbshow)|
-|OLEIVERB_UIACTIVATE|[多维尔布UI激活](#doverbuiactivate)|
+|OLEIVERB_DISCARDUNDOSTATE|[DoVerbDiscardUndo](#doverbdiscardundo)|
+|OLEIVERB_HIDE|[DoVerbHide](#doverbhide)|
+|OLEIVERB_INPLACEACTIVATE|[DoVerbInPlaceActivate](#doverbinplaceactivate)|
+|OLEIVERB_OPEN|[DoVerbOpen](#doverbopen)|
+|OLEIVERB_PRIMARY|[DoVerbPrimary](#doverbprimary)|
+|OLEIVERB_PROPERTIES|[CComControlBase：:D oVerbProperties](../../atl/reference/ccomcontrolbase-class.md#doverbproperties)|
+|OLEIVERB_SHOW|[DoVerbShow](#doverbshow)|
+|OLEIVERB_UIACTIVATE|[DoVerbUIActivate](#doverbuiactivate)|
 
-请参阅[IOleObject：:DoVerb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb)在 Windows SDK 中。
+请参阅 IOleObject： Windows SDK 中的 [：:D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 。
 
-## <a name="ioleobjectimpldoverbdiscardundo"></a><a name="doverbdiscardundo"></a>IOleObjectimpl：:DoVerb丢弃Undo
+## <a name="ioleobjectimpldoverbdiscardundo"></a><a name="doverbdiscardundo"></a> IOleObjectImpl：:D oVerbDiscardUndo
 
-告诉控件放弃它维护的任何撤消状态。
+通知控件丢弃其维护的任何撤消状态。
 
 ```
 HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcPosRec*<br/>
-[在]指向容器希望控件绘制到的矩形的指针。
+中一个指针，指向容器希望控件绘制到的矩形。
 
-*hwnd 家长*<br/>
-[在]包含控件的窗口的句柄。
+*hwndParent*<br/>
+中包含控件的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
-## <a name="ioleobjectimpldoverbhide"></a><a name="doverbhide"></a>IOleObjectimpl：:DoVerbHide
+## <a name="ioleobjectimpldoverbhide"></a><a name="doverbhide"></a> IOleObjectImpl：:D oVerbHide
 
 停用并删除控件的用户界面，并隐藏控件。
 
@@ -227,63 +228,63 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcPosRec*<br/>
-[在]指向容器希望控件绘制到的矩形的指针。
+中一个指针，指向容器希望控件绘制到的矩形。
 
-*hwnd 家长*<br/>
-[在]包含控件的窗口的句柄。 ATL 实现中未使用。
+*hwndParent*<br/>
+中包含控件的窗口的句柄。 不在 ATL 实现中使用。
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
-## <a name="ioleobjectimpldoverbinplaceactivate"></a><a name="doverbinplaceactivate"></a>IOleobjectimpl：:Doverbinplace激活
+## <a name="ioleobjectimpldoverbinplaceactivate"></a><a name="doverbinplaceactivate"></a> IOleObjectImpl：:D oVerbInPlaceActivate
 
-运行控件并安装其窗口，但不会安装控件的用户界面。
+运行控件并安装其窗口，但不安装控件的用户界面。
 
 ```
 HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcPosRec*<br/>
-[在]指向容器希望控件绘制到的矩形的指针。
+中一个指针，指向容器希望控件绘制到的矩形。
 
-*hwnd 家长*<br/>
-[在]包含控件的窗口的句柄。 ATL 实现中未使用。
+*hwndParent*<br/>
+中包含控件的窗口的句柄。 不在 ATL 实现中使用。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值之一。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-通过调用[CComControlBase：：在原位置激活激活](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)控件。 除非控件类的数据成员`m_bWindowOnly`为 TRUE，`DoVerbInPlaceActivate`否则首先尝试将控件激活为无窗口控件（仅当容器支持[IOleInPlaceSite 无窗口](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)时才可能）。 如果失败，该函数将尝试使用扩展功能激活控件（仅当容器支持[IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)时才可能）。 如果失败，该函数将尝试激活没有扩展功能的控件（仅当容器支持[IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)时才可能）。 如果激活成功，该函数将通知容器控件已激活。
+通过调用 [CComControlBase：： InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)就地激活控件。 除非控件类的数据成员 `m_bWindowOnly` 为 TRUE，否则 `DoVerbInPlaceActivate` ，只有在容器支持 [IOleInPlaceSiteWindowless](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesitewindowless)) 的情况下，才会尝试将控件作为无窗口控件激活 (。 如果此操作失败，则此函数将尝试通过扩展功能来激活控件， (仅当容器支持 [IOleInPlaceSiteEx](/windows/win32/api/ocidl/nn-ocidl-ioleinplacesiteex)) 时才能实现。 如果此操作失败，则此函数将尝试仅在容器支持 [IOleInPlaceSite](/windows/win32/api/oleidl/nn-oleidl-ioleinplacesite)) 的情况下，不 (扩展功能即可激活控件。 如果激活成功，则该函数将通知容器控件已激活。
 
-## <a name="ioleobjectimpldoverbopen"></a><a name="doverbopen"></a>IOleObjectimpl：:DoVerbOpen
+## <a name="ioleobjectimpldoverbopen"></a><a name="doverbopen"></a> IOleObjectImpl：:D oVerbOpen
 
-导致在单独的窗口中打开编辑控件。
+使控件在单独的窗口中打开编辑。
 
 ```
 HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcPosRec*<br/>
-[在]指向容器希望控件绘制到的矩形的指针。
+中一个指针，指向容器希望控件绘制到的矩形。
 
-*hwnd 家长*<br/>
-[在]包含控件的窗口的句柄。
+*hwndParent*<br/>
+中包含控件的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
-## <a name="ioleobjectimpldoverbprimary"></a><a name="doverbprimary"></a>IOleObjectimpl：:DoVerb主要
+## <a name="ioleobjectimpldoverbprimary"></a><a name="doverbprimary"></a> IOleObjectImpl：:D oVerbPrimary
 
 定义用户双击控件时执行的操作。
 
@@ -291,65 +292,65 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
 HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcPosRec*<br/>
-[在]指向容器希望控件绘制到的矩形的指针。
+中一个指针，指向容器希望控件绘制到的矩形。
 
-*hwnd 家长*<br/>
-[在]包含控件的窗口的句柄。
+*hwndParent*<br/>
+中包含控件的窗口的句柄。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值之一。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-默认情况下，设置为显示属性页。 您可以在控件类中重写此行为，以在双击时调用其他行为;但是，在双击时，可以重写此行为。例如，播放视频或就地活动。
+默认情况下，设置以显示属性页。 可以在控件类中重写此项，以便在双击时调用不同的行为;例如，播放视频或就地激活。
 
-## <a name="ioleobjectimpldoverbshow"></a><a name="doverbshow"></a>IOleObjectimpl：:DoVerbshow
+## <a name="ioleobjectimpldoverbshow"></a><a name="doverbshow"></a> IOleObjectImpl：:D oVerbShow
 
-告诉容器使控件可见。
+通知容器使控件可见。
 
 ```
 HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcPosRec*<br/>
-[在]指向容器希望控件绘制到的矩形的指针。
+中一个指针，指向容器希望控件绘制到的矩形。
 
-*hwnd 家长*<br/>
-[在]包含控件的窗口的句柄。 ATL 实现中未使用。
+*hwndParent*<br/>
+中包含控件的窗口的句柄。 不在 ATL 实现中使用。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值之一。
+标准的 HRESULT 值之一。
 
-## <a name="ioleobjectimpldoverbuiactivate"></a><a name="doverbuiactivate"></a>IOleObjectimpl：:DoVerbUI激活
+## <a name="ioleobjectimpldoverbuiactivate"></a><a name="doverbuiactivate"></a> IOleObjectImpl：:D oVerbUIActivate
 
-激活控件的用户界面，并通知容器其菜单正在被复合菜单替换。
+激活控件的用户界面，并通知容器其菜单被复合菜单替换。
 
 ```
 HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcPosRec*<br/>
-[在]指向容器希望控件绘制到的矩形的指针。
+中一个指针，指向容器希望控件绘制到的矩形。
 
-*hwnd 家长*<br/>
-[在]包含控件的窗口的句柄。 ATL 实现中未使用。
+*hwndParent*<br/>
+中包含控件的窗口的句柄。 不在 ATL 实现中使用。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值之一。
+标准的 HRESULT 值之一。
 
-## <a name="ioleobjectimplenumadvise"></a><a name="enumadvise"></a>IOleObjectimpl：：枚举建议
+## <a name="ioleobjectimplenumadvise"></a><a name="enumadvise"></a> IOleObjectImpl::EnumAdvise
 
-提供此控件的已注册咨询连接的枚举。
+提供此控件的已注册通知连接的枚举。
 
 ```
 STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
@@ -357,11 +358,11 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：：Windows](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) SDK 中的 Enum 建议。
+请参阅 Windows SDK 中的 [IOleObject：： EnumAdvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumadvise) 。
 
-## <a name="ioleobjectimplenumverbs"></a><a name="enumverbs"></a>IOleObjectimpl：：枚举
+## <a name="ioleobjectimplenumverbs"></a><a name="enumverbs"></a> IOleObjectImpl：： EnumVerbs
 
-通过调用`OleRegEnumVerbs`提供此控件的已注册操作（动词）的枚举。
+通过调用为此控件 (谓词提供注册操作的枚举) `OleRegEnumVerbs` 。
 
 ```
 STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
@@ -369,13 +370,13 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ### <a name="remarks"></a>备注
 
-您可以将谓词添加到项目的 .rgs 文件中。 例如，请参阅 CIRCCTL。[保监会](../../overview/visual-cpp-samples.md)样本中的RGS。
+可以向项目的 .rgs 文件添加谓词。 例如，请参阅 CIRCCTL。 [CIRC](../../overview/visual-cpp-samples.md) 示例中的 RGS。
 
-请参阅[IOleObject：：Windows](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) SDK 中的枚举Verbs。
+请参阅 Windows SDK 中的 [IOleObject：： EnumVerbs](/windows/win32/api/oleidl/nf-oleidl-ioleobject-enumverbs) 。
 
-## <a name="ioleobjectimplgetclientsite"></a><a name="getclientsite"></a>IOleObjectimpl：：获取客户端网站
+## <a name="ioleobjectimplgetclientsite"></a><a name="getclientsite"></a> IOleObjectImpl::GetClientSite
 
-将指针放入控制类数据成员[CComControlBase：：：m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite)到*ppClientSite*中，并在指针上增加引用计数。
+将控件类数据成员 [CComControlBase：： m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) 中的指针放入 *ppClientSite* ，并递增指针上的引用计数。
 
 ```
 STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
@@ -383,9 +384,9 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：获取](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite)Windows SDK 中的客户端站点。
+请参阅 Windows SDK 中的 [IOleObject：： GetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclientsite) 。
 
-## <a name="ioleobjectimplgetclipboarddata"></a><a name="getclipboarddata"></a>IOleObjectimpl：：获取夹板数据
+## <a name="ioleobjectimplgetclipboarddata"></a><a name="getclipboarddata"></a> IOleObjectImpl::GetClipboardData
 
 从剪贴板检索数据。
 
@@ -401,11 +402,11 @@ STDMETHOD(GetClipboardData)(
 
 ### <a name="remarks"></a>备注
 
-请参阅 IOleObject：获取 Windows SDK 中的["剪贴板数据](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata)"。
+请参阅 Windows SDK 中的 [IOleObject：： GetClipboardData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getclipboarddata) 。
 
-## <a name="ioleobjectimplgetextent"></a><a name="getextent"></a>IOleObjectimpl：：获取范围
+## <a name="ioleobjectimplgetextent"></a><a name="getextent"></a> IOleObjectImpl::GetExtent
 
-以 HIMETRIC 单位（每单位 0.01 毫米）检索正在运行的控件的显示大小。
+检索以 HIMETRIC 单位显示的运行控件的显示大小 (0.01 毫米/单位) 。
 
 ```
 STDMETHOD(GetExtent)(
@@ -415,13 +416,13 @@ STDMETHOD(GetExtent)(
 
 ### <a name="remarks"></a>备注
 
-大小存储在控制类数据成员[CComControlBase：m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)。
+大小存储在 control 类数据成员 [CComControlBase：： m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)中。
 
-请参阅[IOleObject：获取](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent)Windows SDK 中的范围。
+请参阅 Windows SDK 中的 [IOleObject：： GetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getextent) 。
 
-## <a name="ioleobjectimplgetmiscstatus"></a><a name="getmiscstatus"></a>IOleObjectimpl：：获取Misc状态
+## <a name="ioleobjectimplgetmiscstatus"></a><a name="getmiscstatus"></a> IOleObjectImpl::GetMiscStatus
 
-通过调用`OleRegGetMiscStatus`返回指向控件的已注册状态信息的指针。
+通过调用，返回指向控件的已注册状态信息的指针 `OleRegGetMiscStatus` 。
 
 ```
 STDMETHOD(GetMiscStatus)(
@@ -431,13 +432,13 @@ STDMETHOD(GetMiscStatus)(
 
 ### <a name="remarks"></a>备注
 
-状态信息包括控件和表示数据支持的行为。 您可以将状态信息添加到项目的 .rgs 文件中。
+状态信息包括控件和显示数据所支持的行为。 您可以将状态信息添加到您的项目的 .rgs 文件中。
 
-请参阅[IOleObject：获取](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus)Windows SDK 中的 Misc 身份。
+请参阅 Windows SDK 中的 [IOleObject：： GetMiscStatus](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmiscstatus) 。
 
-## <a name="ioleobjectimplgetmoniker"></a><a name="getmoniker"></a>IOleObjectimpl：：GetMoniker
+## <a name="ioleobjectimplgetmoniker"></a><a name="getmoniker"></a> IOleObjectImpl：： GetMoniker
 
-检索控件的绰号。
+检索控件的名字对象。
 
 ```
 STDMETHOD(GetMoniker)(
@@ -452,9 +453,9 @@ STDMETHOD(GetMoniker)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：在](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker)Windows SDK 中获取 Moniker。
+请参阅 Windows SDK 中的 [IOleObject：： GetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getmoniker) 。
 
-## <a name="ioleobjectimplgetuserclassid"></a><a name="getuserclassid"></a>IOleObjectimpl：：获取用户类ID
+## <a name="ioleobjectimplgetuserclassid"></a><a name="getuserclassid"></a> IOleObjectImpl::GetUserClassID
 
 返回控件的类标识符。
 
@@ -464,11 +465,11 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：获取](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid)Windows SDK 中的UserClassID。
+请参阅 Windows SDK 中的 [IOleObject：： GetUserClassID](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getuserclassid) 。
 
-## <a name="ioleobjectimplgetusertype"></a><a name="getusertype"></a>IOleObjectimpl：：获取用户类型
+## <a name="ioleobjectimplgetusertype"></a><a name="getusertype"></a> IOleObjectImpl::GetUserType
 
-通过调用`OleRegGetUserType`返回控件的用户类型名称。
+通过调用返回控件的用户类型名称 `OleRegGetUserType` 。
 
 ```
 STDMETHOD(GetUserType)(
@@ -478,13 +479,13 @@ STDMETHOD(GetUserType)(
 
 ### <a name="remarks"></a>备注
 
-用户名用于在用户界面元素（如菜单和对话框）中显示。 您可以在项目的 .rgs 文件中更改用户名类型名称。
+用户类型名称用于在用户界面元素（如菜单和对话框）中显示。 可以在项目的 .rgs 文件中更改用户类型名称。
 
-请参阅[IOleObject：获取](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype)Windows SDK 中的用户类型。
+请参阅 Windows SDK 中的 [IOleObject：： GetUserType](/windows/win32/api/oleidl/nf-oleidl-ioleobject-getusertype) 。
 
-## <a name="ioleobjectimplinitfromdata"></a><a name="initfromdata"></a>IOleObjectimpl：：从数据中
+## <a name="ioleobjectimplinitfromdata"></a><a name="initfromdata"></a> IOleObjectImpl::InitFromData
 
-从所选数据初始化控件。
+从所选数据中初始化控件。
 
 ```
 STDMETHOD(InitFromData)(
@@ -499,11 +500,11 @@ STDMETHOD(InitFromData)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：Windows SDK 中来自数据的 Initit。](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata)
+请参阅 Windows SDK 中的 [IOleObject：： InitFromData](/windows/win32/api/oleidl/nf-oleidl-ioleobject-initfromdata) 。
 
-## <a name="ioleobjectimplisuptodate"></a><a name="isuptodate"></a>IOleobjectimpl：：至前
+## <a name="ioleobjectimplisuptodate"></a><a name="isuptodate"></a> IOleObjectImpl::IsUpToDate
 
-检查控件是否为最新控件。
+检查控件是否为最新。
 
 ```
 STDMETHOD(IsUpToDate)(void);
@@ -511,15 +512,15 @@ STDMETHOD(IsUpToDate)(void);
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：Windows SDK 中的"IsUpDate"。](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate)
+请参阅 Windows SDK 中的 [IOleObject：： IsUpToDate](/windows/win32/api/oleidl/nf-oleidl-ioleobject-isuptodate) 。
 
-## <a name="ioleobjectimplonpostverbdiscardundo"></a><a name="onpostverbdiscardundo"></a>IOleObjectimpl：：在后空音丢弃undo
+## <a name="ioleobjectimplonpostverbdiscardundo"></a><a name="onpostverbdiscardundo"></a> IOleObjectImpl::OnPostVerbDiscardUndo
 
-在丢弃撤消状态后由[DoVerbDiscardUndo](#doverbdiscardundo)调用。
+在放弃撤消状态之后由 [DoVerbDiscardUndo](#doverbdiscardundo) 调用。
 
 ```
 HRESULT OnPostVerbDiscardUndo();
@@ -527,15 +528,15 @@ HRESULT OnPostVerbDiscardUndo();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-使用要在丢弃撤消状态后执行的代码重写此方法。
+在放弃撤消状态之后要执行的代码重写此方法。
 
-## <a name="ioleobjectimplonpostverbhide"></a><a name="onpostverbhide"></a>IOleobjectimpl：：在后音隐藏
+## <a name="ioleobjectimplonpostverbhide"></a><a name="onpostverbhide"></a> IOleObjectImpl::OnPostVerbHide
 
-在控件隐藏后由[DoVerbHide](#doverbhide)调用。
+在隐藏控件后由 [DoVerbHide](#doverbhide) 调用。
 
 ```
 HRESULT OnPostVerbHide();
@@ -543,15 +544,15 @@ HRESULT OnPostVerbHide();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-使用隐藏控件后要执行的代码覆盖此方法。
+在隐藏控件后执行要执行的代码，重写此方法。
 
-## <a name="ioleobjectimplonpostverbinplaceactivate"></a><a name="onpostverbinplaceactivate"></a>IOleobjectimpl：：在后空音位置激活
+## <a name="ioleobjectimplonpostverbinplaceactivate"></a><a name="onpostverbinplaceactivate"></a> IOleObjectImpl::OnPostVerbInPlaceActivate
 
-在控件激活到位后，[由 DoVerbInPlace 调用](#doverbinplaceactivate)。
+就地激活控件后，由 [DoVerbInPlaceActivate](#doverbinplaceactivate) 调用。
 
 ```
 HRESULT OnPostVerbInPlaceActivate();
@@ -559,15 +560,15 @@ HRESULT OnPostVerbInPlaceActivate();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-使用要在控件就地激活后执行的代码覆盖此方法。
+在就地激活控件后要执行的代码重写此方法。
 
-## <a name="ioleobjectimplonpostverbopen"></a><a name="onpostverbopen"></a>IOleObjectimpl：：在PostVerbopen上
+## <a name="ioleobjectimplonpostverbopen"></a><a name="onpostverbopen"></a> IOleObjectImpl::OnPostVerbOpen
 
-在打开控件以在单独的窗口中编辑控件后[，DoVerbOpen](#doverbopen)调用。
+在控件已打开以便在单独的窗口中进行编辑后，由 [DoVerbOpen](#doverbopen) 调用。
 
 ```
 HRESULT OnPostVerbOpen();
@@ -575,15 +576,15 @@ HRESULT OnPostVerbOpen();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-在打开控件以在单独的窗口中编辑后，使用要执行的代码覆盖此方法。
+在单独的窗口中打开要编辑的控件后要执行的代码重写此方法。
 
-## <a name="ioleobjectimplonpostverbshow"></a><a name="onpostverbshow"></a>IOleObjectimpl：：在后场Verbshow
+## <a name="ioleobjectimplonpostverbshow"></a><a name="onpostverbshow"></a> IOleObjectImpl::OnPostVerbShow
 
-在控件变得可见后由[DoVerbShow](#doverbshow)调用。
+使控件可见后，由 [DoVerbShow](#doverbshow) 调用。
 
 ```
 HRESULT OnPostVerbShow();
@@ -591,15 +592,15 @@ HRESULT OnPostVerbShow();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-使用要在控件变得可见后执行的代码重写此方法。
+用要在控件可见后执行的代码重写此方法。
 
-## <a name="ioleobjectimplonpostverbuiactivate"></a><a name="onpostverbuiactivate"></a>IOleObjectimpl：：在后空音激活
+## <a name="ioleobjectimplonpostverbuiactivate"></a><a name="onpostverbuiactivate"></a> IOleObjectImpl::OnPostVerbUIActivate
 
-在激活控件的用户界面后，[由 DoVerbUIActivate](#doverbuiactivate)调用。
+在控件的用户界面激活后，由 [DoVerbUIActivate](#doverbuiactivate) 调用。
 
 ```
 HRESULT OnPostVerbUIActivate();
@@ -607,15 +608,15 @@ HRESULT OnPostVerbUIActivate();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-使用要在激活控件的用户界面后执行的代码覆盖此方法。
+用要在控件的用户界面激活后执行的代码重写此方法。
 
-## <a name="ioleobjectimplonpreverbdiscardundo"></a><a name="onpreverbdiscardundo"></a>IOleObjectimpl：：在Preverbimplundo
+## <a name="ioleobjectimplonpreverbdiscardundo"></a><a name="onpreverbdiscardundo"></a> IOleObjectImpl::OnPreVerbDiscardUndo
 
-在丢弃撤消状态之前由[DoVerbDiscardUndo](#doverbdiscardundo)调用。
+在撤消状态被丢弃之前由 [DoVerbDiscardUndo](#doverbdiscardundo) 调用。
 
 ```
 HRESULT OnPreVerbDiscardUndo();
@@ -623,15 +624,15 @@ HRESULT OnPreVerbDiscardUndo();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-为了防止丢弃撤消状态，请重写此方法以返回错误 HRESULT。
+若要防止撤消状态被丢弃，请重写此方法以返回错误 HRESULT。
 
-## <a name="ioleobjectimplonpreverbhide"></a><a name="onpreverbhide"></a>IOleobjectimpl：：在上Verbverbhide
+## <a name="ioleobjectimplonpreverbhide"></a><a name="onpreverbhide"></a> IOleObjectImpl::OnPreVerbHide
 
-在隐藏控件之前由[DoVerbHide](#doverbhide)调用。
+在隐藏控件之前由 [DoVerbHide](#doverbhide) 调用。
 
 ```
 HRESULT OnPreVerbHide();
@@ -639,15 +640,15 @@ HRESULT OnPreVerbHide();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-为了防止隐藏控件，重写此方法以返回错误 HRESULT。
+若要防止控件被隐藏，请重写此方法以返回错误 HRESULT。
 
-## <a name="ioleobjectimplonpreverbinplaceactivate"></a><a name="onpreverbinplaceactivate"></a>IOleobjectimpl：：在预置位置激活
+## <a name="ioleobjectimplonpreverbinplaceactivate"></a><a name="onpreverbinplaceactivate"></a> IOleObjectImpl::OnPreVerbInPlaceActivate
 
-在控件激活到位之前，[由 DoVerbInPlace 调用](#doverbinplaceactivate)。
+就地激活控件之前，由 [DoVerbInPlaceActivate](#doverbinplaceactivate) 调用。
 
 ```
 HRESULT OnPreVerbInPlaceActivate();
@@ -655,15 +656,15 @@ HRESULT OnPreVerbInPlaceActivate();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-为了防止在就位激活控件，重写此方法以返回错误 HRESULT。
+若要禁止就地激活控件，请重写此方法以返回错误 HRESULT。
 
-## <a name="ioleobjectimplonpreverbopen"></a><a name="onpreverbopen"></a>IOleObjectimpl：：在Preverbopen上
+## <a name="ioleobjectimplonpreverbopen"></a><a name="onpreverbopen"></a> IOleObjectImpl::OnPreVerbOpen
 
-在打开控件以在单独的窗口中编辑之前由[DoVerbOpen](#doverbopen)调用。
+在控件已打开以便在单独的窗口中进行编辑之前，由 [DoVerbOpen](#doverbopen) 调用。
 
 ```
 HRESULT OnPreVerbOpen();
@@ -671,15 +672,15 @@ HRESULT OnPreVerbOpen();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-为了防止在单独的窗口中打开控件进行编辑，重写此方法以返回错误 HRESULT。
+若要防止在单独的窗口中打开控件进行编辑，请重写此方法以返回错误 HRESULT。
 
-## <a name="ioleobjectimplonpreverbshow"></a><a name="onpreverbshow"></a>IOleObjectimpl：：在Preverbshow上
+## <a name="ioleobjectimplonpreverbshow"></a><a name="onpreverbshow"></a> IOleObjectImpl::OnPreVerbShow
 
-在控件变得可见之前由[DoVerbShow](#doverbshow)调用。
+在控件变为可见之前由 [DoVerbShow](#doverbshow) 调用。
 
 ```
 HRESULT OnPreVerbShow();
@@ -687,15 +688,15 @@ HRESULT OnPreVerbShow();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-为了防止控件变得可见，重写此方法以返回错误 HRESULT。
+若要禁止使控件可见，请重写此方法以返回错误 HRESULT。
 
-## <a name="ioleobjectimplonpreverbuiactivate"></a><a name="onpreverbuiactivate"></a>IOleObjectimpl：：在Verbui激活上
+## <a name="ioleobjectimplonpreverbuiactivate"></a><a name="onpreverbuiactivate"></a> IOleObjectImpl::OnPreVerbUIActivate
 
-在激活控件的用户界面之前，[由 DoVerbUIActivate](#doverbuiactivate)调用。
+在控件的用户界面激活之前由 [DoVerbUIActivate](#doverbuiactivate) 调用。
 
 ```
 HRESULT OnPreVerbUIActivate();
@@ -703,15 +704,15 @@ HRESULT OnPreVerbUIActivate();
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-为了防止激活控件的用户界面，重写此方法以返回错误 HRESULT。
+若要防止激活控件的用户界面，请重写此方法以返回错误 HRESULT。
 
-## <a name="ioleobjectimplsetclientsite"></a><a name="setclientsite"></a>IOleObjectimpl：：设置客户端网站
+## <a name="ioleobjectimplsetclientsite"></a><a name="setclientsite"></a> IOleObjectImpl::SetClientSite
 
-告诉控件有关其在容器中的客户端站点。
+向控件通知容器中的客户端站点。
 
 ```
 STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
@@ -719,13 +720,13 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
 
 ### <a name="remarks"></a>备注
 
-然后，该方法返回S_OK。
+然后，该方法返回 S_OK。
 
-请参阅[IOleObject：在](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite)Windows SDK 中设置客户端站点。
+请参阅 Windows SDK 中的 [IOleObject：： SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite) 。
 
-## <a name="ioleobjectimplsetcolorscheme"></a><a name="setcolorscheme"></a>IOleObjectimpl：：设置颜色方案
+## <a name="ioleobjectimplsetcolorscheme"></a><a name="setcolorscheme"></a> IOleObjectImpl::SetColorScheme
 
-向控件的应用程序（如果有）建议配色方案。
+为控件的应用程序推荐配色方案（如果有）。
 
 ```
 STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
@@ -737,11 +738,11 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：在](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme)Windows SDK 中设置颜色方案。
+请参阅 Windows SDK 中的 [IOleObject：： SetColorScheme](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setcolorscheme) 。
 
-## <a name="ioleobjectimplsetextent"></a><a name="setextent"></a>IOleObjectimpl：：设置范围
+## <a name="ioleobjectimplsetextent"></a><a name="setextent"></a> IOleObjectImpl：： SetExtent
 
-设置控件的显示区域的范围。
+设置控件显示区的范围。
 
 ```
 STDMETHOD(SetExtent)(
@@ -751,17 +752,17 @@ STDMETHOD(SetExtent)(
 
 ### <a name="remarks"></a>备注
 
-否则，`SetExtent`将控制类数据成员`psizel`[CComControlBase：：m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)中指向的值存储。 此值以 HIMETRIC 单位（单位 0.01 毫米）为单位。
+否则， `SetExtent` `psizel` 将在 control 类数据成员 [CComControlBase：： m_sizeExtent](../../atl/reference/ccomcontrolbase-class.md#m_sizeextent)中存储指向的值。 此值以 HIMETRIC 单位 (0.01 毫米/单位) 。
 
-如果控制类数据成员[CComControlBase：：m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural)为`SetExtent`TRUE，则还会将控制类`psizel`数据成员[CComControlBase：：m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural)中指向的值存储。
+如果控件类数据成员 [CComControlBase：： m_bResizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_bresizenatural) 为 TRUE，则 `SetExtent` 还会 `psizel` 在 Control 类数据成员 [CComControlBase：： m_sizeNatural](../../atl/reference/ccomcontrolbase-class.md#m_sizenatural)中存储指向的值。
 
-如果控制类数据成员[CComControlBase：：m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize)为`SetExtent`TRUE，请呼叫`SendOnDataChange`并`SendOnViewChange`通知向通知持有人注册的所有通知接收器控制大小已更改。
+如果控件类数据成员 [CComControlBase：： m_bRecomposeOnResize](../../atl/reference/ccomcontrolbase-class.md#m_brecomposeonresize) 为 TRUE，则 `SetExtent` 调用 `SendOnDataChange` 并 `SendOnViewChange` 通知所有注册了通知持有人的通知接收器控件大小已更改。
 
-请参阅[IOleObject：在](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent)Windows SDK 中设置范围。
+请参阅 Windows SDK 中的 [IOleObject：： SetExtent](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setextent) 。
 
-## <a name="ioleobjectimplsethostnames"></a><a name="sethostnames"></a>IOleObjectimpl：：设置主机名
+## <a name="ioleobjectimplsethostnames"></a><a name="sethostnames"></a> IOleObjectImpl::SetHostNames
 
-告诉控件容器应用程序和容器文档的名称。
+向控件通知容器应用程序和容器文档的名称。
 
 ```
 STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainerObj */);
@@ -769,15 +770,15 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：在](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames)Windows SDK 中设置主机名。
+请参阅 Windows SDK 中的 [IOleObject：： SetHostNames](/windows/win32/api/oleidl/nf-oleidl-ioleobject-sethostnames) 。
 
-## <a name="ioleobjectimplsetmoniker"></a><a name="setmoniker"></a>IOleObjectimpl：：SetMoniker
+## <a name="ioleobjectimplsetmoniker"></a><a name="setmoniker"></a> IOleObjectImpl::SetMoniker
 
-告诉控件其名字是什么。
+通知控件其名字对象是什么。
 
 ```
 STDMETHOD(SetMoniker)(
@@ -791,11 +792,11 @@ STDMETHOD(SetMoniker)(
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：在](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker)Windows SDK 中设置 Moniker。
+请参阅 Windows SDK 中的 [IOleObject：： SetMoniker](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setmoniker) 。
 
-## <a name="ioleobjectimplunadvise"></a><a name="unadvise"></a>IOleObjectimpl：：不建议
+## <a name="ioleobjectimplunadvise"></a><a name="unadvise"></a> IOleObjectImpl::Unadvise
 
-删除存储在控制类`m_spOleAdviseHolder`的数据成员中的咨询连接。
+删除控件类的数据成员中存储的通知连接 `m_spOleAdviseHolder` 。
 
 ```
 STDMETHOD(Unadvise)(DWORD dwConnection);
@@ -803,9 +804,9 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：：](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise)在 Windows SDK 中取消建议。
+请参阅 Windows SDK 中的 [IOleObject：： Unadvise](/windows/win32/api/oleidl/nf-oleidl-ioleobject-unadvise) 。
 
-## <a name="ioleobjectimplupdate"></a><a name="update"></a>IOleObjectimpl：：更新
+## <a name="ioleobjectimplupdate"></a><a name="update"></a> IOleObjectImpl：： Update
 
 更新控件。
 
@@ -815,14 +816,14 @@ STDMETHOD(Update)(void);
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleObject：：](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update)在 Windows SDK 中更新。
+请参阅 Windows SDK 中的 [IOleObject：： Update](/windows/win32/api/oleidl/nf-oleidl-ioleobject-update) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
-[ActiveX 控制接口](/windows/win32/com/activex-controls-interfaces)<br/>
+[ActiveX 控件接口](/windows/win32/com/activex-controls-interfaces)<br/>
 [类概述](../../atl/atl-class-overview.md)

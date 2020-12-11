@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：安全全局函数
 title: 安全全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 0b42fe10ef1de517677b35a9fe54d0c6a04ff748
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 10a3a3f358eba3aa1715bd375221f6ec35a56fcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834487"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157784"
 ---
 # <a name="security-global-functions"></a>安全全局函数
 
@@ -30,7 +31,7 @@ ms.locfileid: "88834487"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlGetDacl](#atlgetdacl)|调用此函数可检索指定对象的自由访问控制列表 (DACL) 信息。|
 |[AtlSetDacl](#atlsetdacl)|调用此函数可设置指定对象的自由访问控制列表 (DACL) 信息。|
@@ -60,7 +61,7 @@ inline bool AtlGetDacl(
     CDacl* pDacl) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要检索其安全信息的对象的句柄。
@@ -75,7 +76,7 @@ inline bool AtlGetDacl(
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调试版本中，如果 *hObject* 或 *pDacl* 无效，则会发生断言错误。
 
@@ -94,7 +95,7 @@ inline bool AtlSetDacl(
     DWORD dwInheritanceFlowControl = 0) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
@@ -112,7 +113,7 @@ inline bool AtlSetDacl(
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调试版本中，如果 *hObject* 无效或 *dwInheritanceFlowControl* 不是三个允许的值之一，则将发生断言错误。
 
@@ -134,7 +135,7 @@ inline bool AtlGetGroupSid(
     CSid* pSid) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要从中检索安全信息的对象的句柄。
@@ -167,7 +168,7 @@ inline bool AtlSetGroupSid(
     const CSid& rSid) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
@@ -200,7 +201,7 @@ inline bool AtlGetOwnerSid(
     CSid* pSid) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要从中检索安全信息的对象的句柄。
@@ -233,7 +234,7 @@ inline bool AtlSetOwnerSid(
     const CSid& rSid) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
@@ -267,7 +268,7 @@ inline bool AtlGetSacl(
     bool bRequestNeededPrivileges = true) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要从中检索安全信息的对象的句柄。
@@ -285,7 +286,7 @@ inline bool AtlGetSacl(
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果在 `AtlGetSacl` 多个不同的对象上调用多次，则在调用函数之前启用一次 SE_SECURITY_NAME 特权将更有效，并将 *bRequestNeededPrivileges* 设置为 false。
 
@@ -309,7 +310,7 @@ inline bool AtlSetSacl(
     bool bRequestNeededPrivileges = true) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hObject*<br/>
 要为其设置安全信息的对象的句柄。
@@ -330,7 +331,7 @@ inline bool AtlSetSacl(
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调试版本中，如果 *hObject* 无效或 *dwInheritanceFlowControl* 不是三个允许的值之一，则将发生断言错误。
 
@@ -358,7 +359,7 @@ inline bool AtlGetSecurityDescriptor(
 bool bRequestNeededPrivileges = true) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszObjectName*<br/>
 指向以 null 结尾的字符串的指针，该字符串指定要从中检索安全信息的对象的名称。
@@ -379,7 +380,7 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果在 `AtlGetSecurityDescriptor` 多个不同的对象上调用多次，则在调用函数之前启用一次 SE_SECURITY_NAME 特权将更有效，并将 *bRequestNeededPrivileges* 设置为 false。
 

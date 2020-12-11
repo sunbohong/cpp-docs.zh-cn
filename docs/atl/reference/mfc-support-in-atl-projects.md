@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： ATL 项目中的 MFC 支持
 title: ATL 项目中的 MFC 支持
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - ATL projects, MFC support
 ms.assetid: f90b4276-cb98-4c11-902c-9ebcfe6f954b
-ms.openlocfilehash: 0aece6805f1de987b0164f405e50b99fd706fef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8614bfdd5320e0ecdf34cc96251fa8a20f2dede9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157914"
 ---
 # <a name="mfc-support-in-atl-projects"></a>ATL 项目中的 MFC 支持
 
-如果选择**支持 MFC**在 ATL 项目向导中，则项目将声明为 MFC 应用程序对象 （类） 的应用程序。 初始化 MFC 库项目，并实例化一个类 (类*ProjName*) 派生自[CWinApp](../../mfc/reference/cwinapp-class.md)。
+如果在 ATL 项目向导中选择 " **支持 mfc** "，则项目会将应用程序声明为 mfc 应用程序对象 (类) 。 项目初始化 MFC 库，并实例化派生自 [CWinApp](../../mfc/reference/cwinapp-class.md)的类 (类 *ProjName*) 。
 
-此选项是适用于非属性化 ATL DLL 项目。
+此选项仅适用于非特性化 ATL DLL 项目。
 
 ```
 class CProjNameApp : public CWinApp
@@ -48,7 +49,7 @@ int CProjNameApp::ExitInstance()
 }
 ```
 
-您可以查看应用程序对象类及其`InitInstance`和`ExitInstance`类视图中的函数。
+可以在类视图中查看应用程序对象类及其 `InitInstance` 和 `ExitInstance` 函数。
 
 ## <a name="see-also"></a>请参阅
 

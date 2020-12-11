@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： `/Zc:externConstexpr` (启用 extern constexpr 变量) '
 title: /Zc:externConstexpr（启用 extern constexpr 变量）
 ms.date: 02/28/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: db5a8892bcc11538c3ff883a0e9a3a27db0ee14f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5f3120ba467c70cde2d0deb6932e408a2cd688c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502809"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156120"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>`/Zc:externConstexpr` (启用 extern constexpr 变量) 
 
@@ -22,7 +23,7 @@ ms.locfileid: "91502809"
 
 > **`/Zc:externConstexpr`**[**`-`**]
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **`/Zc:externConstexpr`** 编译器选项导致编译器将外部链接应用到使用声明的变量 `extern constexpr` 。 在 Visual Studio 的早期版本中，如果 **`/Zc:externConstexpr-`** 指定了，则 Visual studio 将应用内部链接到 **`constexpr`** 变量，即使使用了 **`extern`** 关键字。 **`/Zc:externConstexpr`** 从 Visual Studio 2017 Update 15.6 开始提供选项。 和在默认情况下处于关闭状态。 [`/permissive-`](permissive-standards-conformance.md)选项不启用 **`/Zc:externConstexpr`** 。
 

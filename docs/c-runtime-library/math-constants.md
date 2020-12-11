@@ -1,4 +1,5 @@
 ---
+description: 了解更多：数学常量
 title: Math 常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - M_SQRT2 constant
 - M_LN2 constant
 ms.assetid: db533c3f-6ae8-4520-9d35-c8fabbef3529
-ms.openlocfilehash: 156e4df4bcd4be457f2d14e7e5f5531d93d642be
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4591376b6320d9768acb1ed8ecc0d5098a046bf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156107"
 ---
 # <a name="math-constants"></a>Math 常量
 
@@ -45,9 +46,9 @@ ms.locfileid: "79438261"
 
 下列符号定义了其所指示的表达式的值：
 
-|符号|Expression|值|
+|符号|表达式|值|
 |------------|----------------|-----------|
-|M_E|e|2.71828182845904523536|
+|M_E|E|2.71828182845904523536|
 |M_LOG2E|log2(e)|1.44269504088896340736|
 |M_LOG10E|log10(e)|0.434294481903251827651|
 |M_LN2|ln(2)|0.693147180559945309417|
@@ -65,6 +66,6 @@ ms.locfileid: "79438261"
 
 在“发布模式”下生成项目时，文件 ATLComTime.h 包含 math.h。 如果在同时包含 ATLComTime.h 的项目中使用了一个或多个数学常量，则在包含 ATLComTime.h 前必须先定义 `_USE_MATH_DEFINES`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [全局常量](../c-runtime-library/global-constants.md)

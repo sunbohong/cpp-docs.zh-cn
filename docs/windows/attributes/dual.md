@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：双重
 title: '双重 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 4cc974bef46a403cbdc5b290f623acb06f40722f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d1e72bd787bc73042b4f4a180ea119712021edaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845401"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112019"
 ---
 # <a name="dual"></a>dual
 
@@ -64,11 +65,11 @@ __interface IStatic : IDispatch
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [按使用情况的属性](attributes-by-usage.md)<br/>
 [客户](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
-对象<br/>
+[object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

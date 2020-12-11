@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IDocHostUIHandlerDispatch 接口
 title: IDocHostUIHandlerDispatch 接口
 ms.date: 07/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 4d80934a5768eda917c90345ddeeff017edf0eae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 59f9975f48a7ae63d5820a9c05f9baa49b8a5f25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158369"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 接口
 
@@ -34,7 +35,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 > [!NOTE]
 > 下表中的链接指向 [IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\)) 接口成员的 INet SDK 参考主题。 `IDocHostUIHandlerDispatch` 具有与相同的功能 `IDocUIHostHandler` ，不同之处在于，它是 `IDocHostUIHandlerDispatch` 一个调度 `IDocUIHostHandler` 接口，而是一个自定义接口。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|从 [IOleInPlaceActiveObject：： EnableModeless](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)的 MSHTML 实现中调用。 当 MSHTML 显示模式用户界面时也调用。|
 |[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|由 MSHTML 在主机上调用，以允许主机替换 MSHTML 的数据对象。|
@@ -52,7 +53,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 |[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|由 MSHTML 调用，以允许主机有机会修改要加载的 URL。|
 |[UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|通知主机命令状态已更改。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 宿主可以通过实现此接口来替换 Microsoft HTML 分析和呈现引擎所使用的菜单、工具栏和上下文菜单 (MSHTML) 。
 
@@ -65,6 +66,6 @@ interface IDocHostUIHandlerDispatch : IDispatch
 |.IDL|ATLIFace .idl|
 |C++|ATLIFace 也包含在 Atlbase.h 中 () |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDocUIHostHandler](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753260\(v=vs.85\))

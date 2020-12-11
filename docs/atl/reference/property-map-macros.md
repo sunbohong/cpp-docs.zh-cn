@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：属性映射宏
 title: 属性映射宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-ms.openlocfilehash: 5e14c3cb82b9b7527ed8af42e181581097218360
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2fc7f96c42d7f9d3f116f13c9864ce857e32743
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834656"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157797"
 ---
 # <a name="property-map-macros"></a>属性映射宏
 
 这些宏定义属性映射和条目。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_PROP_MAP](#begin_prop_map)|标记 ATL 属性映射的开头。|
 |[PROP_DATA_ENTRY](#prop_data_entry)|指示 ActiveX 控件的范围或维度。|
@@ -43,12 +44,12 @@ ms.locfileid: "88834656"
 BEGIN_PROP_MAP(theClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 中指定包含属性映射的类。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 属性映射存储属性说明、属性 Dispid、属性页 Clsid 和 `IDispatch` iid。 类 [IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)、 [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)、 [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)和 [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md) 使用属性映射来检索和设置此信息。
 
@@ -68,7 +69,7 @@ BEGIN_PROP_MAP 不会节省 (的范围，即属性映射的维度) ，因为使�
 PROP_DATA_ENTRY( szDesc, member, vt)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szDesc*<br/>
 中属性说明。
@@ -79,7 +80,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *vt*<br/>
 中指定属性的变量类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏会使指定的数据成员得以保留。
 
@@ -101,7 +102,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szDesc*<br/>
 中属性说明。
@@ -115,7 +116,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 *vt*<br/>
 中属性的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 PROP_ENTRY 宏不安全且已弃用。 它已替换为 PROP_ENTRY_TYPE。
 
@@ -133,7 +134,7 @@ PROP_ENTRY 宏不安全且已弃用。 它已替换为 PROP_ENTRY_TYPE。
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szDesc*<br/>
 中属性说明。
@@ -150,7 +151,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 *vt*<br/>
 中属性的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 PROP_ENTRY_EX 宏不安全且已弃用。 它已替换为 PROP_ENTRY_TYPE_EX。
 
@@ -170,12 +171,12 @@ PROP_ENTRY_EX 宏不安全且已弃用。 它已替换为 PROP_ENTRY_TYPE_EX。
 PROP_PAGE(clsid)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 中属性页的 CLSID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 PROP_PAGE 类似于 [PROP_ENTRY_TYPE](#prop_entry_type)，但不需要属性说明或 DISPID。
 
@@ -196,7 +197,7 @@ PROP_PAGE 类似于 [PROP_ENTRY_TYPE](#prop_entry_type)，但不需要属性说�
 END_PROP_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 ATL 项目向导创建对象时，向导将通过指定 [BEGIN_PROP_MAP](#begin_prop_map) 后跟 END_PROP_MAP 来创建一个空属性映射。
 
@@ -204,6 +205,6 @@ END_PROP_MAP()
 
 请参阅 [BEGIN_PROP_MAP](#begin_prop_map)的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)

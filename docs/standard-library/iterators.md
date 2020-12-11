@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：迭代器
 title: 迭代器
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: c3bb2825ec6ad98f523fa4c3a616d0807eac50a8
-ms.sourcegitcommit: 5ef9697b4cb1947bec9669be57bc920d2c4d82a6
+ms.openlocfilehash: 98263f69c49e0d645106e1ce29e6bb1a4330acea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87870147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112240"
 ---
 # <a name="iterators"></a>迭代器
 
@@ -45,7 +46,7 @@ for (auto num : vec)
 
 - 输入。 *输入迭代器* `X` 可以通过使用运算符向前循环访问序列 `++` ，并且可以使用运算符读取元素任意次数 `*` 。 您可以使用和运算符比较输入迭代 `==` 器 `!=` 。 递增输入迭代器的任何副本后，其他任何副本都可以安全地进行比较、取消引用或递增。
 
-- **转发**。 *向前迭代器* `X` 可以使用 + + 运算符向前循环访问序列，并且可以使用运算符读取任何元素或写入非常量元素任意次数 `*` 。 可以通过使用 `->` 运算符并使用和运算符比较向前迭代器，来访问元素 `==` 成员 `!=` 。 可以创建向前迭代器的多个副本，其中每个副本都可以独立地取消引用和递增。 不引用任何容器就会初始化的向前迭代器称为*null 向前迭代器*。 Null 向前迭代器的比较结果始终是相等的。
+- **转发**。 *向前迭代器* `X` 可以使用 + + 运算符向前循环访问序列，并且可以使用运算符读取任何元素或写入非常量元素任意次数 `*` 。 可以通过使用 `->` 运算符并使用和运算符比较向前迭代器，来访问元素 `==` 成员 `!=` 。 可以创建向前迭代器的多个副本，其中每个副本都可以独立地取消引用和递增。 不引用任何容器就会初始化的向前迭代器称为 *null 向前迭代器*。 Null 向前迭代器的比较结果始终是相等的。
 
 - **双向**。 *双向迭代器* `X` 可以替代向前迭代器。 不过，您也可以递减双向迭代器，如 `--X` 、 `X--` 或 `(V = *X--)` 。 可以采用与向前迭代器相同的方式访问元素成员和比较双向迭代器。
 
@@ -60,7 +61,7 @@ for (auto num : vec)
 > -> 双向迭代器 \
 > -> 随机访问迭代器
 
-向右箭头标识“可以替代”。 例如，为输出迭代器调用的任何算法都应十分适用于向前迭代器，而不是相反**。
+向右箭头标识“可以替代”。 例如，为输出迭代器调用的任何算法都应十分适用于向前迭代器，而不是相反。
 
 若要对序列进行只读访问，可以使用以下任何项：
 
@@ -79,16 +80,16 @@ for (auto num : vec)
 
 对象指针可以始终充当随机访问迭代器，因此如果它支持对它指定的序列进行正确的读/写访问，则它可以充当任何类别的迭代器。
 
-对象指针以外的迭代器 `Iterator` 还必须定义专用化 `iterator_traits<Iterator>` 所需的成员类型。 可以通过 `Iterator` 从公共基类[迭代器](../standard-library/iterator-struct.md)派生来满足这些要求。
+对象指针以外的迭代器 `Iterator` 还必须定义专用化 `iterator_traits<Iterator>` 所需的成员类型。 可以通过 `Iterator` 从公共基类 [迭代器](../standard-library/iterator-struct.md)派生来满足这些要求。
 
 务必了解每个迭代器类别的承诺和限制，以了解 c + + 标准库中的容器和算法如何使用迭代器。
 
 > [!NOTE]
-> 可以使用范围 for 循环来避免显式使用迭代器。 有关详细信息，请参阅[基于范围的 for 语句](../cpp/range-based-for-statement-cpp.md)。
+> 可以使用范围 for 循环来避免显式使用迭代器。 有关详细信息，请参阅 [基于范围的 for 语句](../cpp/range-based-for-statement-cpp.md)。
 
 Microsoft c + + 现在提供经过检查的迭代器和调试迭代器，以确保不会覆盖容器的边界。 有关详细信息，请参阅[经过检查的迭代器](../standard-library/checked-iterators.md)和[调试迭代器支持](../standard-library/debug-iterator-support.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

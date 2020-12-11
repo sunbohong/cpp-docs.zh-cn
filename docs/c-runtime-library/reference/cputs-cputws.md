@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _cputs、_cputws
 title: _cputs、_cputws
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 469b39e4e08f13af8d8ac3e679ed55c7afb240d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7a519064b2a4318b5064074fbe9a0f09a3708d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97155912"
 ---
 # <a name="_cputs-_cputws"></a>_cputs、_cputws
 
@@ -61,22 +62,22 @@ int _cputws(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 输出字符串。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_cputs**将返回0。 如果函数失败，则返回非零值。
+如果成功， **_cputs** 将返回0。 如果函数失败，则返回非零值。
 
 ## <a name="remarks"></a>备注
 
-**_Cputs**函数将*str*直接指向的以 null 结尾的字符串写入控制台。 回车换行符 (CR-LF) 组合不会自动追加到字符串。
+**_Cputs** 函数将 *str* 直接指向的以 null 结尾的字符串写入控制台。 回车换行符 (CR-LF) 组合不会自动追加到字符串。
 
-此函数验证其参数。 如果*str*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并返回-1。
+此函数验证其参数。 如果 *str* 为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **EINVAL** ，并返回-1。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -86,7 +87,7 @@ int _cputws(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|
@@ -154,7 +155,7 @@ Hello world (courtesy of _cputs)!
 Hello world (courtesy of _cputws)!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch、_putwch](putch-putwch.md)<br/>

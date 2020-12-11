@@ -1,37 +1,38 @@
 ---
-title: 指定属性页 (ATL)
+description: 了解详细信息：指定属性页
+title: " (ATL) 指定属性页"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-ms.openlocfilehash: 47ee0c7d6d2ed464318ab80385ac71cff426a002
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 171440dde11178c85d1f636874b0b161691cb9cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157420"
 ---
 # <a name="specifying-property-pages"></a>指定属性页
 
-创建 ActiveX 控件时，通常想要将它与可用于设置控件的属性的属性页相关联。 控制容器使用`ISpecifyPropertyPages`接口以找出哪些属性页可以用于设置控件的属性。 你将需要您的控件上实现此接口。
+创建 ActiveX 控件时，通常需要将其与可用于设置控件的属性的属性页相关联。 控件容器使用 `ISpecifyPropertyPages` 接口来确定哪些属性页可用于设置控件的属性。 你将需要在控件上实现此接口。
 
-若要实现`ISpecifyPropertyPages`使用 ATL，执行以下步骤：
+若要 `ISpecifyPropertyPages` 使用 ATL 实现，请执行以下步骤：
 
-1. 从类派生[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。
+1. 从 [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)派生类。
 
-1. 为添加一个条目`ISpecifyPropertyPages`到您的类的 COM 映射。
+1. 向 `ISpecifyPropertyPages` 类的 COM 映射添加一个项。
 
-1. 添加[PROP_PAGE](reference/property-map-macros.md#prop_page)属性映射为每个页面与控件关联的条目。
+1. 将 [PROP_PAGE](reference/property-map-macros.md#prop_page) 条目添加到与控件相关联的每个页面的属性映射。
 
 > [!NOTE]
-> 生成标准控件使用时[ATL 控件向导](../atl/reference/atl-control-wizard.md)，只需将 PROP_PAGE 项添加到属性映射。 该向导生成所需的代码执行其他步骤。
+> 使用 [ATL 控件向导](../atl/reference/atl-control-wizard.md)生成标准控件时，只需将 PROP_PAGE 项添加到属性映射。 向导将生成其他步骤所需的代码。
 
-功能良好的容器将显示指定的属性页，在属性映射中 PROP_PAGE 项的顺序相同。 通常情况下，则应将标准属性页项后项自定义属性映射中页，以便用户先看到特定于控件的页。
+正常情况容器会按照属性映射中 PROP_PAGE 条目的顺序来显示指定的属性页。 通常情况下，应在属性映射中的自定义页面的条目后面放置标准属性页条目，以便用户可以首先查看特定于控件的页面。
 
 ## <a name="example"></a>示例
 
-下面的类的一个日历控件使用`ISpecifyPropertyPages`告知容器可以使用自定义日期页和常用颜色页设置其属性的接口。
+日历控件的以下类使用 `ISpecifyPropertyPages` 接口来告知容器使用自定义日期页和 "常用颜色" 页可以设置其属性。
 
 [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]
 

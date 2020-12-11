@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：封送全局函数
 title: 封送全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: 79b19b613fbae49c0f8338dcadd2225e092fb371
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5652ccf89090ba1d0f00c03472e29da9158b781e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157940"
 ---
 # <a name="marshaling-global-functions"></a>封送全局函数
 
@@ -20,7 +21,7 @@ ms.locfileid: "88835319"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|释放封送数据和 `IStream` 指针。|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|创建新的流对象并封送指定的接口指针。|
@@ -38,7 +39,7 @@ ms.locfileid: "88835319"
 HRESULT AtlFreeMarshalStream(IStream* pStream);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStream*<br/>
 中指向 `IStream` 流上用于封送处理的接口的指针。
@@ -58,7 +59,7 @@ HRESULT AtlMarshalPtrInProc(
     IStream** ppStream);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向要封送的接口的指针。
@@ -73,7 +74,7 @@ HRESULT AtlMarshalPtrInProc(
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 设置了 MSHLFLAGS_TABLESTRONG 标志，以便可以将指针封送到多个流。 指针还可以多次取消封送。
 
@@ -96,7 +97,7 @@ HRESULT AtlUnmarshalPtr(
     IUnknown** ppUnk);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStream*<br/>
 中指向正在取消封送的流的指针。

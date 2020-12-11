@@ -1,4 +1,5 @@
 ---
+description: 了解更多： OLE 背景：链接和嵌入
 title: OLE 后台：链接和嵌入
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-ms.openlocfilehash: 6b6032d2e772728495d4ddb1dbfaa5daf7348b60
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 05bd51c11cadfc3220f23db9098db9f07703a814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619884"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97112214"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 后台：链接和嵌入
 
@@ -25,9 +26,9 @@ OLE 提供了另一种方式来合并其他应用程序中的数据：创建链�
 
 例如，如果在字处理器文档中工作并创建一个到一些电子表格单元格的链接项目，则链接项目的数据将存储在原始电子表格文档中。 字处理器文档仅包含指定可找到项目的位置的信息，也就是说，它包含指向原始电子表格文档的链接。 当您双击单元格时，电子表格应用程序将启动，并且原始电子表格文档将从存储它的位置加载。
 
-每个 OLE 项目，不论嵌入或链接，均基于创建其的应用程序具有与之关联的类型。 例如，Microsoft Paintbrush 项目是项目的一种类型，而 Microsoft Excel 项目是另一种类型。 但是，一些应用程序可以创建多种项目类型。 例如，Microsoft Excel 可以创建工作表项目、图表项目和宏工作表项目。 这些项中的每个项都可以使用类标识符或**CLSID**由系统唯一标识。
+每个 OLE 项目，不论嵌入或链接，均基于创建其的应用程序具有与之关联的类型。 例如，Microsoft Paintbrush 项目是项目的一种类型，而 Microsoft Excel 项目是另一种类型。 但是，一些应用程序可以创建多种项目类型。 例如，Microsoft Excel 可以创建工作表项目、图表项目和宏工作表项目。 这些项中的每个项都可以使用类标识符或 **CLSID** 由系统唯一标识。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE 背景](ole-background.md)<br/>
 [OLE 后台：容器和服务器](ole-background-containers-and-servers.md)<br/>

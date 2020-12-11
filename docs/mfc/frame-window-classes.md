@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Frame-Window 类
 title: 框架窗口类
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
-ms.openlocfilehash: ffa5b966ee042120213896dc7ad9d81c048ef928
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 888fae71bef2dd2e30e10c645e78ab981a30c6af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625815"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154950"
 ---
 # <a name="frame-window-classes"></a>框架窗口类
 
@@ -25,9 +26,9 @@ ms.locfileid: "84625815"
 
 ## <a name="frame-windows-in-sdi-and-mdi-applications"></a>SDI 和 MDI 应用程序中的框架窗口
 
-对于 SDI 应用程序，有一个从类[CFrameWnd](reference/cframewnd-class.md)派生的框架窗口。 此窗口同时为主框架窗口和文档框架窗口。 对于 MDI 应用程序，主框架窗口派生自类[CMDIFrameWnd](reference/cmdiframewnd-class.md)，文档框架窗口（MDI 子窗口）派生自类[CMDIChildWnd](reference/cmdichildwnd-class.md)。
+对于 SDI 应用程序，有一个从类 [CFrameWnd](reference/cframewnd-class.md)派生的框架窗口。 此窗口同时为主框架窗口和文档框架窗口。 对于 MDI 应用程序，主框架窗口派生自类 [CMDIFrameWnd](reference/cmdiframewnd-class.md)，文档框架窗口（MDI 子窗口）派生自类 [CMDIChildWnd](reference/cmdichildwnd-class.md)。
 
-## <a name="use-the-frame-window-class-or-derive-from-it"></a>使用框架窗口类或从其派生
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>使用 Frame-Window 类，或从其派生
 
 这些类提供应用程序所需的大部分框架窗口功能。 正常情况下，它们提供的默认行为和外观将适合你的需求。 如果需要其他功能，请从这些类派生。
 
@@ -39,6 +40,6 @@ ms.locfileid: "84625815"
 
 - [更改 MFC 创建的窗口的样式](changing-the-styles-of-a-window-created-by-mfc.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [框架窗口](frame-windows.md)

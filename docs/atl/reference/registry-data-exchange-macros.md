@@ -1,4 +1,5 @@
 ---
+description: 了解更多：注册表数据交换宏
 title: 注册表数据交换宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
-ms.openlocfilehash: 507db77b525c526fe1cd47c7d75c34e15a6a0628
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ecfc5617922fe0a1ec7b134f61093a4ed3962a54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157771"
 ---
 # <a name="registry-data-exchange-macros"></a>注册表数据交换宏
 
 这些宏执行注册表数据交换操作。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_RDX_MAP](#begin_rdx_map)|标记注册表数据交换映射的开头。|
 |[END_RDX_MAP](#end_rdx_map)|标记注册表数据交换映射的结尾。|
@@ -43,7 +44,7 @@ ms.locfileid: "88834539"
 BEGIN_RDX_MAP
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 以下宏在注册表数据交换映射中用于读取和写入系统注册表中的条目：
 
@@ -77,7 +78,7 @@ RDX_BINARY(
     member_size )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rootkey*<br/>
 注册表项的根。
@@ -94,7 +95,7 @@ RDX_BINARY(
 *member_size*<br/>
 成员变量的大小（以字节为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏一起使用，以便将成员变量与给定的注册表项关联。 全局函数 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)或与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏创建的相同名称的成员函数应用于在系统注册表和 RDX 映射中的成员变量之间进行数据交换。
 
@@ -111,7 +112,7 @@ RDX_CSTRING_TEXT(
     member_size )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rootkey*<br/>
 注册表项的根。
@@ -128,7 +129,7 @@ RDX_CSTRING_TEXT(
 *member_size*<br/>
 成员变量的大小（以字节为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏一起使用，以便将成员变量与给定的注册表项关联。 全局函数 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)或与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏创建的相同名称的成员函数应用于在系统注册表和 RDX 映射中的成员变量之间进行数据交换。
 
@@ -145,7 +146,7 @@ RDX_DWORD(
     member_size )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rootkey*<br/>
 注册表项的根。
@@ -162,7 +163,7 @@ RDX_DWORD(
 *member_size*<br/>
 成员变量的大小（以字节为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏一起使用，以便将成员变量与给定的注册表项关联。 全局函数 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)或与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏创建的相同名称的成员函数应用于在系统注册表和 RDX 映射中的成员变量之间进行数据交换。
 
@@ -179,7 +180,7 @@ RDX_TEXT(
     member_size )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rootkey*<br/>
 注册表项的根。
@@ -196,11 +197,11 @@ RDX_TEXT(
 *member_size*<br/>
 成员变量的大小（以字节为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏一起使用，以便将成员变量与给定的注册表项关联。 全局函数 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)或与 BEGIN_RDX_MAP 和 END_RDX_MAP 宏创建的相同名称的成员函数应用于在系统注册表和 RDX 映射中的成员变量之间进行数据交换。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)<br/>
 [RegistryDataExchange](../../atl/reference/registry-and-typelib-global-functions.md#registrydataexchange)

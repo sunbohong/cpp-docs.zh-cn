@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： ATL Typedef
 title: ATL Typedef
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - typedefs
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
-ms.openlocfilehash: 10d11b2b6e78220c1c562d100ee7886026a94b22
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb243ef3d16689a1a0ddeb81d3de0bb4ec234a9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158642"
 ---
 # <a name="atl-typedefs"></a>ATL Typedef
 
@@ -61,7 +62,7 @@ ms.locfileid: "88833863"
 typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 用于每个 ATL 项目。 基于 [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)。
 
@@ -79,7 +80,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由使用 COM 功能的 ATL 项目使用。 基于 [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)。
 
@@ -99,7 +100,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 
 **标头**
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 基于 [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)。
 
@@ -111,7 +112,7 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 用于使用窗口化功能的任何 ATL 项目。 基于 [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)。
 
@@ -159,7 +160,7 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 #endif
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 根据应用程序使用的线程模型，该 **`typedef`** 名称引用的 `CComGlobalsThreadModel` 是 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 或 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 这些类提供 **`typedef`** 了其他名称来引用临界区类。
 
@@ -199,7 +200,7 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 #endif
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 根据应用程序使用的线程模型，该 **`typedef`** 名称引用的 `CComObjectThreadModel` 是 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) 或 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 这些类提供 **`typedef`** 了其他名称来引用临界区类。
 
@@ -235,7 +236,7 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 **标头：** atlwin。h
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CContainedWindow` 是 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)的专用化。 如果要更改基类或特征，请 `CContainedWindowT` 直接使用。
 
@@ -283,7 +284,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 #define CSimpleValArray CSimpleArray
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CSimpleValArray` 提供用于创建和管理包含简单数据类型的数组。 这是 [CSimpleArray](../../atl/reference/csimplearray-class.md)的简单 #define。
 
@@ -337,7 +338,7 @@ typedef CUrl* LPURL;
 
 **标头：** atlutil
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)<br/>
 [函数](../../atl/reference/atl-functions.md)<br/>

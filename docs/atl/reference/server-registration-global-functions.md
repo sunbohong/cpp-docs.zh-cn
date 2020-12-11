@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：服务器注册全局函数
 title: 服务器注册全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleRevokeClassObjects
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-ms.openlocfilehash: 4a84c311e34f1bc37b2f51e2152b6fcf2e46e2a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7841c162c2c7c0c93cd8edcd8fd6d78ae4bb2b1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835215"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157732"
 ---
 # <a name="server-registration-global-functions"></a>服务器注册全局函数
 
@@ -22,7 +23,7 @@ ms.locfileid: "88835215"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlComModuleRegisterServer](#atlcommoduleregisterserver)|调用此函数可在对象映射中注册所有对象。|
 |[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)|调用此函数可在对象映射中注销所有对象。|
@@ -45,7 +46,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
     const CLSID* pCLSID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pComModule*<br/>
 指向 COM 模块的指针。
@@ -60,7 +61,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AtlComModuleRegisterServer` 遍历 ATL 自动生成的对象映射，并在映射中注册每个对象。 如果 *pCLSID* 不为 NULL，则仅注册由 *pCLSID* 引用的对象;否则，将注册所有的对象。
 
@@ -77,7 +78,7 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
     const CLSID* pCLSID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pComModule*<br/>
 指向 COM 模块的指针。
@@ -92,7 +93,7 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AtlComModuleUnregisterServer` 遍历 ATL 对象映射并取消注册映射中的每个对象。 如果 *pCLSID* 不为 NULL，则仅注销 *pCLSID* 引用的对象;否则，将注销所有对象。
 
@@ -109,7 +110,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
     DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pComModule*<br/>
 指向 COM 模块的指针。
@@ -124,7 +125,7 @@ dwFlags <br/>
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CComModule：： RegisterClassObjects](ccommodule-class.md#registerclassobjects) (在 ATL 7.0) 和[Catlexemodulet 用作：： RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)中过时使用此 helper 函数。
 
@@ -136,7 +137,7 @@ dwFlags <br/>
 ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pComModule*<br/>
 指向 COM 模块的指针。
@@ -145,7 +146,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CComModule：： RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (在 ATL 7.0) 和[Catlexemodulet 用作：： RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)中过时使用此 helper 函数。
 
@@ -161,7 +162,7 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
     LPVOID* ppv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pComModule*<br/>
 指向 COM 模块的指针。
@@ -173,13 +174,13 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 所请求的接口的 IID。
 
 *ppv*<br/>
-指向由 *riid*标识的接口指针的指针。 如果对象不支持此接口，则将 *ppv* 设置为 NULL。
+指向由 *riid* 标识的接口指针的指针。 如果对象不支持此接口，则将 *ppv* 设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CComModule：： GetClassObject](ccommodule-class.md#getclassobject) (在 ATL 7.0) 和[Catldllmodulet 用作基类：： GetClassObject](catldllmodulet-class.md#getclassobject)中过时使用此 helper 函数。
 
