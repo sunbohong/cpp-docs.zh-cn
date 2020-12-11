@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：类型检查 (CRT) '
 title: 类型检查 (CRT)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - variable argument functions
 - type checking
 ms.assetid: 1ba7590b-d1c0-4636-b6a0-e231395abdad
-ms.openlocfilehash: bb5aecc2b47aa8e88666f42d8022395bf99fd85e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cf27847bf2aeef278fb4699cea5a0cf74a961086
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162347"
 ---
 # <a name="type-checking-crt"></a>类型检查 (CRT)
 
 编译器对可采用可变数目的自变量的函数执行有限类型检查，如下所示：
 
-|函数调用 |类型检查的参数|
+|函数调用|类型检查的参数|
 |-------------------|-----------------------------|
 |`_cprintf_s`, `_cscanf_s`, `printf_s`, `scanf_s`|第一个参数（格式字符串）|
 |`fprintf_s`, `fscanf_s`, `sprintf_s`, `sscanf_s`|前两个自变量（文件或缓冲区和格式字符串）|

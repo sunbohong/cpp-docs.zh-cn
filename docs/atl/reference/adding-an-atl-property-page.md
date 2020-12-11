@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：添加 ATL 属性页
 title: 添加 ATL 属性页
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: 4cd7444d18d26124f8c3c642bba55fb7592f5c8b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7b2798cca257f0ab80c27a6e18a23b173f1d93a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159032"
 ---
 # <a name="adding-an-atl-property-page"></a>添加 ATL 属性页
 
@@ -27,11 +28,11 @@ ms.locfileid: "91499322"
 
 ## <a name="to-add-an-atl-property-page-to-your-project"></a>向项目添加 ATL 属性页的具体步骤
 
-1. 在“解决方案资源管理器”**** 或[“类视图”](/visualstudio/ide/viewing-the-structure-of-code)中，右键单击要向其添加 ATL 属性页的项目的名称。
+1. 在“解决方案资源管理器”或[“类视图”](/visualstudio/ide/viewing-the-structure-of-code)中，右键单击要向其添加 ATL 属性页的项目的名称。
 
-1. 在快捷菜单中，依次单击“添加”**** 和“添加类”****。
+1. 在快捷菜单中，依次单击“添加”和“添加类”。
 
-1. 在[“添加类”](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)对话框的“模板”**** 窗格中，依次单击“ATL 属性页”**** 和“打开”**** 来显示 [ATL 属性页向导](../../atl/reference/atl-property-page-wizard.md)。
+1. 在[“添加类”](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)对话框的“模板”窗格中，依次单击“ATL 属性页”和“打开”来显示 [ATL 属性页向导](../../atl/reference/atl-property-page-wizard.md)。
 
 为控件创建属性页后，必须在属性映射中为控件提供 [PROP_PAGE](property-map-macros.md#prop_page) 条目。
 

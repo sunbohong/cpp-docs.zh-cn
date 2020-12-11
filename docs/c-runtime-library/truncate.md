@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _TRUNCATE
 title: _TRUNCATE
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: b472fceffa6284baaaf4dc1780ab54399fdd42c7
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: ea8a1517db8b270e03c5767838f3965cdea8b36f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162357"
 ---
 # <a name="_truncate"></a>_TRUNCATE
 
@@ -33,7 +34,7 @@ ms.locfileid: "75301673"
 
 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)
 
-[mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)
+[mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)
 
 [mbsrtowcs_s](../c-runtime-library/reference/mbsrtowcs-s.md)
 
@@ -55,7 +56,7 @@ ms.locfileid: "75301673"
 
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)
 
-[mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)
+[mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)
 
 如果未出现截断，则下列函数将返回复制的字符数量；如果出现截断，则将返回 -1（与原始 snprintf 函数的行为匹配）：
 
@@ -86,6 +87,6 @@ truncation occurred!
 '1234'
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [全局常量](../c-runtime-library/global-constants.md)

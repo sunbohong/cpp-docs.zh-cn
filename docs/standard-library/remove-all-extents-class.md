@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： remove_all_extents 类
 title: remove_all_extents 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - remove_all_extents class
 - remove_all_extents
 ms.assetid: 548dc536-82e7-423a-b8c1-443d66d9632e
-ms.openlocfilehash: 0909da3f08cec62bcb915a65c353abdd33c96c9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6c798e1f128b10ef94061573c93c3bb9e3aa4f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451408"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159721"
 ---
-# <a name="removeallextents-class"></a>remove_all_extents 类
+# <a name="remove_all_extents-class"></a>remove_all_extents 类
 
 从数组类型设置非数组类型。
 
@@ -28,14 +29,14 @@ template <class T>
 using remove_all_extents_t = typename remove_all_extents<T>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-的`remove_all_extents<T>`实例保留修改后的类型, 即移除了所有数组维度的数组类型*T*的元素类型, 如果*t*不是数组类型, 则为*t* 。
+的实例 `remove_all_extents<T>` 保留修改后的类型，即移除了所有数组维度的数组类型 *T* 的元素类型，如果 *t* 不是数组类型，则为 *t* 。
 
 ## <a name="example"></a>示例
 
@@ -61,9 +62,9 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

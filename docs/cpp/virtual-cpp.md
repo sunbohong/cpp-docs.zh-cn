@@ -1,4 +1,5 @@
 ---
+description: '详细了解： virtual (c + +) '
 title: virtual (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - virtual functions [C++], declaring
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
-ms.openlocfilehash: 3477f77b811d8bec09b63664a05a4e251214aefa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bf90baa1d9be9992e2e516743857bf8889087188
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161342"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
@@ -28,7 +29,7 @@ virtual [type-specifiers] member-function-declarator
 virtual [access-specifier] base-class-name
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *类型说明符*<br/>
 指定此虚拟成员函数的返回类型。
@@ -44,10 +45,10 @@ virtual [access-specifier] base-class-name
 
 ## <a name="remarks"></a>备注
 
-有关详细信息，请参阅[虚拟函数](../cpp/virtual-functions.md)。
+有关详细信息，请参阅 [虚拟函数](../cpp/virtual-functions.md) 。
 
-另请参阅以下关键字： [class](../cpp/class-cpp.md)、 [private](../cpp/private-cpp.md)、 [public](../cpp/public-cpp.md)和[protected](../cpp/protected-cpp.md)。
+另请参阅以下关键字： [class](../cpp/class-cpp.md)、 [private](../cpp/private-cpp.md)、 [public](../cpp/public-cpp.md)和 [protected](../cpp/protected-cpp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [关键字](../cpp/keywords-cpp.md)

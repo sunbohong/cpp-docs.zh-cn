@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：命令传送图
 title: 命令传送示例
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-ms.openlocfilehash: d362cfe54a9b5a562237c7bb9632edae6e58228b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 51c5182eb1fa2a8b9666e265526e9220a9f3d4a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159955"
 ---
 # <a name="command-routing-illustration"></a>命令传送示例
 
@@ -29,6 +30,6 @@ ms.locfileid: "84622912"
 
 如果文档没有处理程序，它会将命令传送到其文档模板。 接下来，命令将返回到视图，然后返回到框架窗口。 最后，框架窗口将检查其消息映射。 如果该检查也失败，命令将传送回主 MDI 框架窗口，然后传送到应用程序对象（未处理的命令的最终目标）。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [框架如何调用处理程序](how-the-framework-calls-a-handler.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： TZNAME_MAX
 title: TZNAME_MAX
 ms.date: 10/22/2018
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - TZNAME_MAX constant
 ms.assetid: e2286cb8-751d-4557-9650-5c4b98a8f7be
-ms.openlocfilehash: 71e5becd39f49d86573483c5451a9a2415d84181
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1c426c82bd198998169c385366ae5188cabd02d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162087"
 ---
-# <a name="tznamemax"></a>TZNAME_MAX
+# <a name="tzname_max"></a>TZNAME_MAX
 
-**已过时**。 时区名称变量允许的最大字符串长度。 Visual Studio 2012 和早期版本中的 \<limits.h> 定义了此宏。 Visual Studio 2013 及更高版本中未定义它。 要获取保存当前时区名称所需的长度，请使用 [_get_tzname](../c-runtime-library/reference/get-tzname.md)。
+**过时**。 时区名称变量允许的最大字符串长度。 此宏是在 \<limits.h> Visual Studio 2012 及更早版本中定义的。 Visual Studio 2013 及更高版本中未定义它。 要获取保存当前时区名称所需的长度，请使用 [_get_tzname](../c-runtime-library/reference/get-tzname.md)。
 
 ## <a name="syntax"></a>语法
 

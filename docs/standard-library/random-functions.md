@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 随机 &gt; 函数
 title: '&lt;random&gt; 函数'
 ms.date: 09/04/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 39670fcd9b200a6bd56656bbfa07391fdd0d96be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163335"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt; 函数
 
@@ -24,7 +25,7 @@ template <class RealType, size_t Bits, class Generator>
 RealType generate_canonical(Generator& Gen);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *RealType*\
 浮点整型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
@@ -36,8 +37,8 @@ RealType generate_canonical(Generator& Gen);
 随机数生成器类。
 
 *常规*\
-对类型 *生成器*的随机数生成器的实例的引用。
+对类型 *生成器* 的随机数生成器的实例的引用。
 
 ### <a name="remarks"></a>备注
 
-模板函数重复调用 `operator()` 了*Gen* ，并将返回的值打包为 RealType 类型的浮点值， `x` 直到它在中收集了指定数目的尾数位*RealType* `x` 。 指定的数字是 *位数* 较小的 (，其中必须为非零) ，以及 *RealType*中的尾数位的完整数目。 第一个调用提供最低序位。 该函数返回 `x`。
+模板函数重复调用 `operator()` 了 *Gen* ，并将返回的值打包为 RealType 类型的浮点值， `x` 直到它在中收集了指定数目的尾数位 `x` 。 指定的数字是 *位数* 较小的 (，其中必须为非零) ，以及 *RealType* 中的尾数位的完整数目。 第一个调用提供最低序位。 该函数返回 `x`。

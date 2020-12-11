@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： ATL OLE DB 使用者向导
 title: ATL OLE DB 使用者向导
 ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 490335f1f61987fc6e5b0b3806ee8e39c82f336f
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 5d5fb0e6d5ec08ba75aa84a501169544598d8843
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158694"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 使用者向导
 
@@ -187,7 +188,7 @@ ms.locfileid: "92923746"
 
 ::: moniker-end
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATL OLE DB 使用者](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [用代码向导添加功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>

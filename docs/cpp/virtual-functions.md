@@ -1,4 +1,5 @@
 ---
+description: 了解更多：虚函数
 title: 虚函数
 ms.date: 09/10/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 4296d66af8f8bb9aed4946d6dc57871f447108d2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8e253f8debd594b1918fdcb2aed75b559b07ca8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161333"
 ---
 # <a name="virtual-functions"></a>虚函数
 
@@ -19,7 +20,7 @@ ms.locfileid: "87231034"
 
 虚函数确保为该对象调用正确的函数，这与用于进行函数调用的表达式无关。
 
-假设基类包含声明为[virtual](../cpp/virtual-cpp.md)的函数，并且派生类定义了相同的函数。 为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。 以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现
+假设基类包含声明为 [virtual](../cpp/virtual-cpp.md) 的函数，并且派生类定义了相同的函数。 为派生类的对象调用派生类中的函数，即使它是使用指针或对基类的引用来调用的。 以下示例显示了一个基类，它提供了 `PrintBalance` 函数和两个派生类的实现
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -144,7 +145,7 @@ Invoked by Derived
 
 **`virtual`** 当在派生类中声明重写函数时，可以使用关键字，但这是不必要的; 虚函数的重写始终为虚函数。
 
-必须定义基类中的虚函数，除非它们是使用*纯说明符*声明的。 （有关纯虚函数的详细信息，请参阅[抽象类](../cpp/abstract-classes-cpp.md)。）
+必须定义基类中的虚函数，除非它们是使用 *纯说明符* 声明的。  (有关纯虚函数的详细信息，请参阅 [抽象类](../cpp/abstract-classes-cpp.md)。 ) 
 
 可通过使用范围解析运算符 (`::`) 显式限定函数名称来禁用虚函数调用机制。 考虑先前涉及 `Account` 类的示例。 若要调用基类中的 `PrintBalance`，请使用如下所示的代码：
 

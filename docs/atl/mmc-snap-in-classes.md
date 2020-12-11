@@ -1,26 +1,27 @@
 ---
-title: MMC 管理单元类 (ATL)
+description: 了解详细信息： MMC Snap-In 类
+title: 'MMC Snap-In 类 (ATL) '
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - MMC Snap-In classes
 ms.assetid: 4af1d5af-687f-48b1-b2c5-fa252241b4d6
-ms.openlocfilehash: 8bf79dedb125b9250aca1380ae4d922fa83391b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54abf739d36e8afb520effb7de9096a531d4851a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159461"
 ---
-# <a name="mmc-snap-in-classes"></a>MMC 管理单元类
+# <a name="mmc-snap-in-classes"></a>MMC Snap-In 类
 
-以下类为开发 Microsoft 管理控制台 (MMC) 管理单元组件提供支持：
+以下类支持 (MMC) 管理单元组件中开发 Microsoft 管理控制台：
 
-- [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md)实现管理单元中节点对象，如添加菜单项和工具栏，以及在转发到相应的处理程序函数的管理单元节点的命令。
+- [CSnapInItemImpl](../atl/reference/csnapinitemimpl-class.md) 实现管理单元节点对象，例如将菜单项和工具栏以及管理单元节点的转发命令添加到相应的处理程序函数。
 
-- [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md)实现一个管理单元中属性的 page 对象。
+- [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md) 实现管理单元属性页对象。
 
 ## <a name="see-also"></a>请参阅
 
 [类概述](../atl/atl-class-overview.md)<br/>
-[单元对象宏](../atl/reference/snap-in-object-macros.md)
+[管理单元对象宏](../atl/reference/snap-in-object-macros.md)

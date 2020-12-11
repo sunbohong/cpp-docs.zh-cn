@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：控制传输
 title: 控制的转移
 ms.date: 11/04/2016
 helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: ef437d0a691ceff72485be1ff9584052f540031a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 263c30877100ec37768313fa64e7562a06096396
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161606"
 ---
 # <a name="transfers-of-control"></a>控制的转移
 
@@ -50,4 +51,4 @@ int main()
 
 在前面的示例中， **`goto`** 语句尝试将控制转移到的初始化之后 `i` 。 但是，如果已声明但未初始化 `i`，则该传递是合法的。
 
-`total` `ch` *statement* **`while`** 当使用语句退出该块时，将销毁在块中声明的对象和（用作语句的语句） **`break`** 。
+`total` `ch`  **`while`** 当使用语句退出该块时，将销毁在块中声明的对象和（用作语句的语句） **`break`** 。

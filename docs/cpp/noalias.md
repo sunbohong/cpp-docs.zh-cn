@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： `noalias`
 title: noalias
 ms.date: 07/07/2020
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
-ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
+ms.openlocfilehash: 56306404fc79ea851835ae5913bbdb0b297ba880
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86127870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161646"
 ---
 # `noalias`
 
 **Microsoft 专用**
 
-**`noalias`** 表示函数调用不会修改或引用可见全局状态，而只会修改指针参数（第一级间接寻址）*直接*指向的内存。
+**`noalias`** 表示函数调用不会修改或引用可见全局状态，而只会修改 *直接* 由指针参数指向的内存 (第一级间接寻址) 。
 
 如果将函数注释为 **`noalias`** ，则优化器可以假定仅参数本身，并且仅在函数内引用或修改指针参数的第一级间接寻址。
 
@@ -98,7 +99,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [`__declspec`](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>

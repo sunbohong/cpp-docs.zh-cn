@@ -1,4 +1,5 @@
 ---
+description: 了解更多：聚合和类工厂宏
 title: 聚合和类工厂宏
 ms.date: 08/12/2020
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - ATL::DECLARE_PROTECT_FINAL_CONSTRUCT
 - ATL::DECLARE_VIEW_STATUS
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: 5fdf330cfc69ea68720666eae5952be356cad314
-ms.sourcegitcommit: 50db6d0a0d640155c9347c1914bc8859efaadd90
+ms.openlocfilehash: 7aa62bfe8e87b9e7923dfe1de1f28b6acdba595e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88197331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97158954"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>聚合和类工厂宏
 
@@ -110,7 +111,7 @@ ms.locfileid: "88197331"
 DECLARE_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为可聚合的类的名称。
@@ -152,7 +153,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 `CComClassFactory` 实现 [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) 接口，该接口包含用于创建特定 CLSID 对象的方法，以及在内存中锁定类工厂以允许更快地创建新对象。 `IClassFactory` 必须为在系统注册表中注册的每个类实现，并为其分配 CLSID。
 
-ATL 对象通过从 [CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏 [DECLARE_CLASSFACTORY](#declare_classfactory)，该宏声明 `CComClassFactory` 为默认类工厂。 若要重写此默认值，请在类定义中指定 DECLARE_CLASSFACTORY*XXX* 宏之一。 例如， [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) 宏为类工厂使用指定的类：
+ATL 对象通过从 [CComCoClass](../../atl/reference/ccomcoclass-class.md)派生来通常获取类工厂。 此类包含宏 [DECLARE_CLASSFACTORY](#declare_classfactory)，该宏声明 `CComClassFactory` 为默认类工厂。 若要重写此默认值，请在类定义中指定 DECLARE_CLASSFACTORY *XXX* 宏之一。 例如， [DECLARE_CLASSFACTORY_EX](#declare_classfactory_ex) 宏为类工厂使用指定的类：
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_3.h)]
 
@@ -174,14 +175,14 @@ ATL 提供三个声明类工厂的宏：
 DECLARE_CLASSFACTORY_EX( cf )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cf*<br/>
 中实现类工厂对象的类的名称。
 
 ### <a name="remarks"></a>备注
 
-*Cf*参数必须从[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)派生并重写 `CreateInstance` 方法。
+*Cf* 参数必须从 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md)派生并重写 `CreateInstance` 方法。
 
 [CComCoClass](../../atl/reference/ccomcoclass-class.md) 包含 [DECLARE_CLASSFACTORY](#declare_classfactory) 宏，该宏指定 `CComClassFactory` 为默认类工厂。 但是，通过在对象的类定义中包含 DECLARE_CLASSFACTORY_EX 宏，可以覆盖此默认值。
 
@@ -197,7 +198,7 @@ DECLARE_CLASSFACTORY_EX( cf )
 DECLARE_CLASSFACTORY2( lic )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *许可证*<br/>
 中实现 `VerifyLicenseKey` 、和的类 `GetLicenseKey` `IsLicenseValid` 。
@@ -221,7 +222,7 @@ class  CComClassFactory2 : public IClassFactory2,
     public license
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *照*<br/>
 实现以下静态函数的类：
@@ -244,7 +245,7 @@ ATL 对象通过从 [CComCoClass](../../atl/reference/ccomcoclass-class.md)派�
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_5.h)]
 
-`CComClassFactory2` 派生自 `CComClassFactory2Base` 和 *许可证*。 `CComClassFactory2Base`反过来，派生自 `IClassFactory2` 和** \< CComGlobalsThreadModel > CComObjectRootEx**。
+`CComClassFactory2` 派生自 `CComClassFactory2Base` 和 *许可证*。 `CComClassFactory2Base`反过来，派生自 `IClassFactory2` 和 **\< CComGlobalsThreadModel > CComObjectRootEx**。
 
 ## <a name="declare_classfactory_auto_thread"></a><a name="declare_classfactory_auto_thread"></a> DECLARE_CLASSFACTORY_AUTO_THREAD
 
@@ -317,7 +318,7 @@ template<class T>
 class CComClassFactorySingleton : public CComClassFactory
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 你的类。
@@ -350,7 +351,7 @@ DECLARE_GET_CONTROLLING_UNKNOWN()
 DECLARE_NOT_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为不可聚合的类对象的名称。
@@ -373,7 +374,7 @@ DECLARE_NOT_AGGREGATABLE( x )
 DECLARE_ONLY_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为仅可聚合的类对象的名称。
@@ -390,13 +391,13 @@ DECLARE_ONLY_AGGREGATABLE( x )
 
 ## <a name="declare_poly_aggregatable"></a><a name="declare_poly_aggregatable"></a> DECLARE_POLY_AGGREGATABLE
 
-指定在创建对象时**创建 \<** *x* **> CComPolyObject**的实例。
+指定在创建对象时 **创建 \<** *x* **> CComPolyObject** 的实例。
 
 ```cpp
 DECLARE_POLY_AGGREGATABLE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要定义为可聚合或不可聚合的类对象的名称。
@@ -425,7 +426,7 @@ DECLARE_PROTECT_FINAL_CONSTRUCT()
 DECLARE_VIEW_STATUS( statusFlags )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *statusFlags*<br/>
 中VIEWSTATUS 标志。 有关标志列表，请参阅 [VIEWSTATUS](/windows/win32/api/ocidl/ne-ocidl-viewstatus) 。

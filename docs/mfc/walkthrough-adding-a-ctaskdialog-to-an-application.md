@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：演练：向应用程序添加 CTaskDialog
 title: 演练：向应用程序添加 CTaskDialog
 ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: 3a970df4911fed643045a1c6b59fcda1a853dbcf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f7462551af785b85156f3f0b0f83b2ff3ddbf4c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222766"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97159890"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>演练：向应用程序添加 CTaskDialog
 
@@ -37,9 +38,9 @@ ms.locfileid: "87222766"
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>将 Windows 消息框替换为 CTaskDialog 的步骤
 
-1. 使用**Mfc 应用程序向导**创建具有所有默认设置的 mfc 应用程序。 有关如何为你的 Visual Studio 版本打开向导的说明，请参阅[演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md)。
+1. 使用 **Mfc 应用程序向导** 创建具有所有默认设置的 mfc 应用程序。 有关如何为你的 Visual Studio 版本打开向导的说明，请参阅 [演练：使用新的 MFC Shell 控件](walkthrough-using-the-new-mfc-shell-controls.md) 。
 
-1. *MyProject*调用它。
+1. *MyProject* 调用它。
 
 1. 使用 **解决方案资源管理器** 打开文件 MyProject.cpp。
 
@@ -94,9 +95,9 @@ ms.locfileid: "87222766"
 
 ### <a name="to-add-functionality-to-the-ctaskdialog"></a>向 CTaskDialog 添加功能的步骤
 
-1. 导航到**资源视图**。 如果看不到 "**资源视图**"，可以从 "**视图**" 菜单打开它。
+1. 导航到 **资源视图**。 如果看不到 " **资源视图**"，可以从 " **视图** " 菜单打开它。
 
-1. 展开**资源视图**，直到可以选择 "**字符串表**" 文件夹。 展开它，然后双击**字符串表**项。
+1. 展开 **资源视图** ，直到可以选择 " **字符串表** " 文件夹。 展开它，然后双击 **字符串表** 项。
 
 1. 滚动到字符串表的底部并添加一个新条目。 将 ID 更改为 `TEMP_LINE1`。 将标题设置为 **Command Line 1**。
 
@@ -177,7 +178,7 @@ ms.locfileid: "87222766"
 
 1. 导航到 `if (CTaskDialog::IsSupported())` 语句的右括号处。
 
-1. 将以下代码插入到语句的右括号前面 **`if`** （ **`else`** 块之前）：
+1. 在块) 之前，将以下代码插入到语句的右括号之前 **`if`** (**`else`** ：
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -187,11 +188,11 @@ ms.locfileid: "87222766"
         TEMP_LINE2);
     ```
 
-编译并运行该应用程序。 应用程序将显示两个任务对话框。 第一个对话框来自，将**功能添加到 CTaskDialog**过程;第二个对话框来自上一个过程。
+编译并运行该应用程序。 应用程序将显示两个任务对话框。 第一个对话框来自，将 **功能添加到 CTaskDialog** 过程;第二个对话框来自上一个过程。
 
 这些示例并未演示的所有可用选项 `CTaskDialog` ，但会帮助你入门。 有关该类的完整描述，请参阅 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [对话框](../mfc/dialog-boxes.md)<br/>
 [CTaskDialog 类](../mfc/reference/ctaskdialog-class.md)<br/>

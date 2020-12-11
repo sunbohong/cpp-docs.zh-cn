@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a935f43c00fab31a582012e938db16e3aa1a5f6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942663"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162373"
 ---
 # <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 
@@ -81,7 +82,7 @@ int _cwprintf_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *format*<br/>
 窗体控件字符串。
@@ -98,16 +99,16 @@ int _cwprintf_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数将一系列字符和值直接格式化并输出到控制台，并使用 **_putch**函数（ **_putwch** for **_cwprintf**）来输出字符。 *Argument_list*中的每个参数（如果有）将根据*格式*中对应的格式规范进行转换和输出。 *Format*参数将[格式规范语法用于 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 与**fprintf**、 **printf**和**sprintf**函数不同， **_cprintf**和 **_cwprintf**都不会在输出时将换行符转换为回车换行符（CR-LF）组合。
+这些函数将一系列字符和值直接设置为控制台，并使用 **_putch** 函数 (**_putwch** 用于 **_cwprintf**) 输出字符。 *Argument_list* 中的每个参数 (根据 *格式* 规范中的相应格式规范转换和输出任何) 。 *Format* 参数将 [格式规范语法用于 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 与 **fprintf**、 **printf** 和 **sprintf** 函数不同，在输出时， **_cprintf** 和 **_cwprintf** 都不会将换行符转换为回车换行符 (CR) 组合。
 
-一个重要的区别在于，在 Windows 中使用时， **_cwprintf**会显示 Unicode 字符。 与 **_cprintf**不同， **_cwprintf**使用当前的控制台区域设置。
+一个重要的区别在于，在 Windows 中使用时 **_cwprintf** 显示 Unicode 字符。 与 **_cprintf** 不同， **_cwprintf** 使用当前的控制台区域设置。
 
-使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
 
-**_cprintf**验证*格式*参数。 如果*format*为 null 指针，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并将**errno**设置为**EINVAL**。
+**_cprintf** 验证 *格式* 参数。 如果 *format* 为 null 指针，则函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
 > [!IMPORTANT]
-> 确保 format不是用户定义的字符串。
+> 确保 format 不是用户定义的字符串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -120,10 +121,10 @@ int _cwprintf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_cprintf**、 **_cprintf_l**|\<conio.h>|
-|**_cwprintf**、 **_cwprintf_l**|\<conio.h>|
+|**_cprintf**， **_cprintf_l**|\<conio.h>|
+|**_cwprintf**， **_cwprintf_l**|\<conio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -155,12 +156,12 @@ int main( void )
 
 ## <a name="see-also"></a>请参阅
 
-[控制台和端口 I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)<br/>
 [_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)<br/>
 [_cprintf_p、_cprintf_p_l、_cwprintf_p、_cwprintf_p_l](cprintf-p-cprintf-p-l-cwprintf-p-cwprintf-p-l.md)<br/>
-[格式规范语法：printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
+[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>

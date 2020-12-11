@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： FailureException 类
 title: Platform::FailureException 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::FailureException
 ms.assetid: 1729cd07-bfc2-448e-9db5-185d5cbf5b81
-ms.openlocfilehash: f527271b50382a9aec1585e139a0083135315473
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b3f03888a92cc0c52e347ce5ee663a3e57b0b20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97161255"
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException 类
 
@@ -37,8 +38,8 @@ public ref class FailureException : COMException,    IException,    IPrintable, 
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 
-[Platform::COMException 类](../cppcx/platform-comexception-class.md)
+[Platform：： COMException 类](../cppcx/platform-comexception-class.md)

@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：分配器
 title: Allocators
 ms.date: 11/04/2016
 helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: fdad5cc8417740f7736bcf34cbc941a4e66de87d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4001ba007037e50ca3c5d2bea079f313b1c52bc3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163426"
 ---
 # <a name="allocators"></a>Allocators
 
@@ -24,11 +25,11 @@ template <
 class vector
 ```
 
-C++ 标准库提供分配器的默认实现。 在 C++11 及更高版本中，默认分配器更新以公开较小接口；新的分配器称为*最小的分配器*。 具体而言，最小分配器的 `construct()` 成员支持移动语义，从而可以极大地提高性能。 在大多数情况下，此默认分配器应该是够用的。 在 C++11 中，所有采用分配器类型参数的标准库类型和函数均支持最小分配器接口，包括 `std::function`、`shared_ptr, allocate_shared()` 和 `basic_string`。  有关默认分配器的详细信息，请参阅 [allocator](allocator-class.md) 类。
+C++ 标准库提供分配器的默认实现。 在 C++11 及更高版本中，默认分配器更新以公开较小接口；新的分配器称为 *最小的分配器*。 具体而言，最小分配器的 `construct()` 成员支持移动语义，从而可以极大地提高性能。 在大多数情况下，此默认分配器应该是够用的。 在 C++11 中，所有采用分配器类型参数的标准库类型和函数均支持最小分配器接口，包括 `std::function`、`shared_ptr, allocate_shared()` 和 `basic_string`。  有关默认分配器的详细信息，请参阅 [allocator](allocator-class.md) 类。
 
 ## <a name="writing-your-own-allocator-c11"></a>编写你自己的分配器 (C++11)
 
-默认分配器使用 **`new`** 和 **`delete`** 分配和释放内存。 如果想使用内存分配的不同方法（例如，使用共享内存），则必须创建自己的分配器。 如果面向的 C++11，并且需要编写新的自定义分配器，如有可能，使其成为最小分配器。 即使已实现旧式分配器，也请考虑将其修改成*最小分配器*以利用更有效的 `construct()` 方法，后者将自动提供给你。
+默认分配器使用 **`new`** 和 **`delete`** 分配和释放内存。 如果想使用内存分配的不同方法（例如，使用共享内存），则必须创建自己的分配器。 如果面向的 C++11，并且需要编写新的自定义分配器，如有可能，使其成为最小分配器。 即使已实现旧式分配器，也请考虑将其修改成 *最小分配器* 以利用更有效的 `construct()` 方法，后者将自动提供给你。
 
 最小分配器所需的样本要少得多，并使你能够将重点放在 `allocate` 和 `deallocate` 成员函数，它们可以执行所有工作。 创建最小分配器时，除以下示例中所示成员外，请勿实现其他任何成员：
 
@@ -146,6 +147,6 @@ void Mallocator<T>::deallocate(T * const p, size_t) const noexcept
 
 有关这些类型定义和方法的详细信息，请参阅 [allocator 类](allocator-class.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库参考](cpp-standard-library-reference.md)
