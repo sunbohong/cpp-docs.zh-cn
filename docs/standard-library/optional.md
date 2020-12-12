@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： &lt; 可选&gt;
 title: （可选）&lt;&gt;
 ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: 31a3d9aad539e45bb835331a4ef63690d0e16f49
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c1f1e6f99278abf296c361515953a931109f47ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201828"
 ---
 # <a name="ltoptionalgt"></a>（可选）&lt;&gt;
 
@@ -26,7 +27,7 @@ ms.locfileid: "88842671"
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator = =](../standard-library/optional-operators.md#op_eq_eq)|测试一个对象是否等于另一个对象。|
 |[operator！ =](../standard-library/optional-operators.md#op_neq)|测试一个对象是否不等于另一个对象。|
@@ -40,14 +41,14 @@ ms.locfileid: "88842671"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|使对象成为可选的。|
 |[swap](../standard-library/optional-functions.md#swap)|交换两个对象的包含值 `optional` 。|
 
 ### <a name="classes-and-structs"></a>类和结构
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |hash|返回所包含的对象的哈希值。|
 |[可选类](../standard-library/optional-class.md)|描述一个对象，该对象不能包含值。|
@@ -56,10 +57,10 @@ ms.locfileid: "88842671"
 
 ### <a name="objects"></a>对象
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[nullopt](../standard-library/optional-functions.md#nullopt)|`nullopt_t`用于比较的实例。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

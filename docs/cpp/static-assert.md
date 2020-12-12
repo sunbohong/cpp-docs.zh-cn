@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： static_assert
 title: static_assert
 ms.date: 07/29/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-ms.openlocfilehash: bf796b853d21d33d97e25c05101b7486e1eb112f
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 76383aacf67f0e8bcc12880674afa17f9fce3603
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317982"
 ---
 # <a name="static_assert"></a>static_assert
 
@@ -28,17 +29,17 @@ static_assert( constant-expression ); // C++17 (Visual Studio 2017 and later)
 
 ### <a name="parameters"></a>parameters
 
-*常量表达式*\
+constant-expression\
 可以转换为布尔值的整型常量表达式。 如果计算出的表达式为零 (false) ，则显示 *字符串* 参数，且编译失败并出现错误。 如果表达式为非零 () ，则 **`static_assert`** 声明不起作用。
 
-*字符串-文本*\
+string-literal\
 如果 *常量表达式* 参数为零，则显示一条消息。 消息是编译器的 [基本字符集](../c-language/ascii-character-set.md) 中的字符串;也就是说，不能是 [多字节或宽字符](../c-language/multibyte-and-wide-characters.md)。
 
 ## <a name="remarks"></a>备注
 
 声明的 *常量表达式* 参数 **`static_assert`** 表示 *软件断言*。 软件断言指定在程序的某个特定点应满足的条件。 如果条件为 true，则 **`static_assert`** 声明不起作用。 如果条件为 false，则断言失败，编译器会在 *字符串* 参数中显示消息，并且编译将失败并出现错误。 在 Visual Studio 2017 和更高版本中，字符串参数是可选的。
 
-**`static_assert`** 声明在编译时测试软件断言。 与此相反， [Assert 宏和 _assert 和 _wassert 函数](../c-runtime-library/reference/assert-macro-assert-wassert.md) 在运行时测试软件断言，并在空间或时间内产生运行时成本。 **`static_assert`** 声明对调试模板尤其有用，因为模板参数可以包含在*常数表达式*参数中。
+**`static_assert`** 声明在编译时测试软件断言。 与此相反， [Assert 宏和 _assert 和 _wassert 函数](../c-runtime-library/reference/assert-macro-assert-wassert.md) 在运行时测试软件断言，并在空间或时间内产生运行时成本。 **`static_assert`** 声明对调试模板尤其有用，因为模板参数可以包含在 *常数表达式* 参数中。
 
 **`static_assert`** 当遇到声明时，编译器将检查声明中的语法错误。 如果 *表达式* 参数不依赖于模板参数，则编译器会立即计算此参数。 否则，在对模板进行实例化时，编译器将计算 *常数表达式* 参数。 因此，当遇到声明时，编译器可能一次发布一个诊断消息，而在对模板进行实例化时也是如此。
 
@@ -56,7 +57,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 
 ## <a name="description-of-static_assert-with-class-scope"></a>`static_assert`具有类范围的说明
 
-在下面的示例中， **`static_assert`** 声明具有类范围。 **`static_assert`** 验证模板参数是否为*纯旧数据* (POD) 类型。 在声明 **`static_assert`** 声明时，编译器将检查声明，但在中实例化类模板之前，不会计算 *常数表达式* 参数 `basic_string` `main()` 。
+在下面的示例中， **`static_assert`** 声明具有类范围。 **`static_assert`** 验证模板参数是否为 *纯旧数据* (POD) 类型。 在声明 **`static_assert`** 声明时，编译器将检查声明，但在中实例化类模板之前，不会计算 *常数表达式* 参数 `basic_string` `main()` 。
 
 ## <a name="example-static_assert-with-class-scope"></a>示例： `static_assert` 类作用域
 

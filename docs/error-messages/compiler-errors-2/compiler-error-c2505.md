@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2505
 title: 编译器错误 C2505
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-ms.openlocfilehash: eabed85c61eaaa43b0106e0011f0357ece2e1ae1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 46054594731b8e39f4cb4b13e71559fcdbd2a55d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213008"
 ---
 # <a name="compiler-error-c2505"></a>编译器错误 C2505
 
-"symbol"： "__declspec （修饰符）" 只能应用于全局对象或静态数据成员的声明或定义
+"symbol"： "__declspec (修饰符) " 只能应用于全局对象或静态数据成员的声明或定义
 
 **`__declspec`** 在函数中使用了仅用于全局范围的修饰符。
 
