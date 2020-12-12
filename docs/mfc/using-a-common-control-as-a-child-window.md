@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用公用控件作为子窗口
 title: 将公共控件用作子窗口
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-ms.openlocfilehash: 827690f273852dee8f9461aa9af51f1cf7f4ce6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a5fda2cbf8d0bf16ccb17f2766b31d24e5c0c67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180565"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263551"
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>将公共控件用作子窗口
 
@@ -23,11 +24,11 @@ ms.locfileid: "62180565"
 
 1. 在相关类或处理程序中定义控件。
 
-1. 使用的控件的重写[cwnd:: Create](../mfc/reference/cwnd-class.md#create)方法来创建 Windows 控件。
+1. 使用控件的 [CWnd：： create](../mfc/reference/cwnd-class.md#create) 方法的重写创建 Windows 控件。
 
-1. 创建控件后（如果创建控件的子类，则是在执行 `OnCreate` 处理程序的时候），可使用其成员函数操作控件。 请参阅在各个控件的说明[控件](../mfc/controls-mfc.md)有关方法的详细信息。
+1. 创建控件后（如果创建控件的子类，则是在执行 `OnCreate` 处理程序的时候），可使用其成员函数操作控件。 有关方法的详细信息，请参阅 [控件](../mfc/controls-mfc.md) 上各个控件的说明。
 
-1. 当完成与该控件，请使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)销毁控件。
+1. 完成控件后，使用 [CWnd：:D estroywindow](../mfc/reference/cwnd-class.md#destroywindow) 销毁控件。
 
 ## <a name="see-also"></a>请参阅
 

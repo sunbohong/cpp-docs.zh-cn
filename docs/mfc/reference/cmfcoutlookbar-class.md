@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCOutlookBar 类
 title: CMFCOutlookBar 类
 ms.date: 06/25/2018
 f1_keywords:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fe328cb0d857ff9154624d218b1b56362890ce81
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e54e44e702aaf8d6883ada6be9c127f63ecee97d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265033"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 类
 
-在 Microsoft Outlook 2000 或 Outlook 2003 中具有 **“导航窗格”** 可视外观的选项卡式窗格。 该`CMFCOutlookBar`对象包含一个[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)对象和一系列选项卡。 选项卡可以是[CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)对象或`CWnd`派生对象。 对于用户，Outlook 栏显示为一系列按钮和一个显示区域。 用户单击按钮时，将显示相应控件或按钮窗格。
+在 Microsoft Outlook 2000 或 Outlook 2003 中具有 **“导航窗格”** 可视外观的选项卡式窗格。 `CMFCOutlookBar`对象包含[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)对象和一系列选项卡。 选项卡可以是 [CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md) 对象或 `CWnd` 派生的对象。 对于用户，Outlook 栏显示为一系列按钮和一个显示区域。 用户单击按钮时，将显示相应控件或按钮窗格。
 
 ## <a name="syntax"></a>语法
 
@@ -59,37 +60,37 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`CMFCOutlookBar::CMFCOutlookBar`|默认构造函数。|
 |`CMFCOutlookBar::~CMFCOutlookBar`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定是否可以销毁空选项卡式窗格。 （覆盖[CBaseTabbed 窗格：：允许销毁空表板](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane)窗格 。|
-|[CMFCOutlookBar：：接受窗格](#canacceptpane)|确定是否可以将另一个窗格停靠到 Outlook 栏窗格。 （覆盖可停靠窗格：：可接受窗格。|
-|[CMFCOutlookbar：：canset标题文本标签名称](#cansetcaptiontexttotabname)|确定选项卡式窗格的标题是否显示与活动选项卡相同的文本。（覆盖[CBaseTabbed 窗格：：CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname).）|
-|[CMFCOutlookBar：创建](#create)|创建 Outlook 栏控件。|
-|[CMFCOutlookBar：创建自定义页面](#createcustompage)|创建自定义 Outlook 栏选项卡。|
+|[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定是否可以销毁空的选项卡式窗格。  (重写 [CBaseTabbedPane：： AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane)。 ) |
+|[CMFCOutlookBar：： CanAcceptPane](#canacceptpane)|确定是否可将另一个窗格停靠到 Outlook 栏窗格。  (重写 CDockablePane：： CanAcceptPane。 ) |
+|[CMFCOutlookBar：： CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|确定选项卡式窗格的标题是否显示与活动选项卡相同的文本。 (重写 [CBaseTabbedPane：： CanSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#cansetcaptiontexttotabname)。 ) |
+|[CMFCOutlookBar：： Create](#create)|创建 Outlook 条形控件。|
+|[CMFCOutlookBar：： CreateCustomPage](#createcustompage)|创建自定义 Outlook 栏选项卡。|
 |`CMFCOutlookBar::CreateObject`|由框架用于创建此类类型的动态实例。|
-|[CMFC观景栏：:DoesAllowDynInsert之前](#doesallowdyninsertbefore)|确定用户是否可以停靠 Outlook 栏外边缘的控制栏。|
-|[CMFCOutlookBar：浮动选项卡](#floattab)|浮动窗格，但前提是窗格当前驻留在可拆卸选项卡中。（覆盖[CBaseTabbedPane：：FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).|
-|[CMFCOutlookBar：获取按钮字体](#getbuttonsfont)|返回 Outlook 栏按钮上文本的字体。|
-|[CMFCOutlookBar：GetTabArea](#gettabarea)|返回 Outlook 栏上选项卡区域的大小和位置。 （覆盖[CBaseTabbed 窗格：获取 Tab 区域](../../mfc/reference/cbasetabbedpane-class.md#gettabarea)。）|
-|`CMFCOutlookBar::GetThisClass`|框架用于获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
-|[CMFCOutlookBar：isMode2003](#ismode2003)|确定 Outlook 栏的行为是否与 Microsoft Office Outlook 2003 的行为仿一致（请参阅备注）。|
-|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|由[CMFCOutlookBarTabCtrl 调用：：](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)使用动画设置活动选项卡后设置活动选项卡。|
-|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|由[CMFCOutlookBarTabCtrl 调用：：](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)在使用动画将选项卡页设置为活动选项卡之前设置活动选项卡。|
-|[CMFCOutlookBar::OnScroll](#onscroll)|如果 Outlook 栏向上或向下滚动，则由框架调用。|
-|[CMFCOutlookBar：删除自定义页面](#removecustompage)|删除自定义 Outlook 栏选项卡。|
-|[CMFCOutlookBar：：设置按钮字体](#setbuttonsfont)|设置 Outlook 栏按钮上的文本字体。|
-|[CMFCOutlookBar：SetMode2003](#setmode2003)|指定 Outlook 栏的行为是否与 Outlook 2003 的行为仿一致（请参阅备注）。|
+|[CMFCOutlookBar：:D oesAllowDynInsertBefore](#doesallowdyninsertbefore)|确定用户是否可以在 Outlook 栏的外边缘停靠控件条。|
+|[CMFCOutlookBar：： FloatTab](#floattab)|浮动一个窗格，但仅当该窗格当前驻留在可分离选项卡中时。 (重写 [CBaseTabbedPane：： FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。 ) |
+|[CMFCOutlookBar：： GetButtonsFont](#getbuttonsfont)|返回 Outlook 栏按钮上文本的字体。|
+|[CMFCOutlookBar：： GetTabArea](#gettabarea)|返回 Outlook 条形图上的选项卡区域的大小和位置。  (重写 [CBaseTabbedPane：： GetTabArea](../../mfc/reference/cbasetabbedpane-class.md#gettabarea)。 ) |
+|`CMFCOutlookBar::GetThisClass`|由框架用于获取指向与此类类型相关联的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象的指针。|
+|[CMFCOutlookBar：： IsMode2003](#ismode2003)|确定 Outlook 栏的行为是否模拟 Microsoft Office Outlook 2003 (参见 "备注) "。|
+|[CMFCOutlookBar::OnAfterAnimation](#onafteranimation)|使用动画设置活动选项卡后，由 [CMFCOutlookBarTabCtrl：： SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 调用。|
+|[CMFCOutlookBar::OnBeforeAnimation](#onbeforeanimation)|在选项卡页通过使用动画设置为活动选项卡之前，由 [CMFCOutlookBarTabCtrl：： SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 调用。|
+|[CMFCOutlookBar::OnScroll](#onscroll)|如果 Outlook 面板向上或向下滚动，则由框架调用。|
+|[CMFCOutlookBar：： RemoveCustomPage](#removecustompage)|删除自定义 Outlook 栏选项卡。|
+|[CMFCOutlookBar：： SetButtonsFont](#setbuttonsfont)|设置 Outlook 栏按钮上文本的字体。|
+|[CMFCOutlookBar：： SetMode2003](#setmode2003)|指定 Outlook 栏的行为是否模仿 Outlook 2003 (参阅备注) 。|
 
 ## <a name="remarks"></a>备注
 
-有关 Outlook 栏的示例，请参阅[OutlookDemo 示例：MFC OutlookDemo 应用程序](../../overview/visual-cpp-samples.md)。
+有关 Outlook 栏的示例，请参阅 [OutlookDemo 示例： MFC OutlookDemo 应用程序](../../overview/visual-cpp-samples.md)。
 
 ## <a name="implementing-the-outlook-bar"></a>实现 Outlook 栏
 
@@ -107,7 +108,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
     };
     ```
 
-1. 在主帧中处理WM_CREATE消息时，调用[CMFCOutlookBar：：创建](#create)方法来创建 Outlook 栏选项卡控件。
+1. 在主框架中处理 WM_CREATE 消息时，请调用 [CMFCOutlookBar：： create](#create) 方法创建 Outlook 栏选项卡控件。
 
     ```cpp
     m_wndOutlookBar.Create (_T("Shortcuts"),
@@ -117,13 +118,13 @@ class CMFCOutlookBar : public CBaseTabbedPane
         WS_CHILD | WS_VISIBLE | CBRS_LEFT);
     ```
 
-1. 使用`CMFCOutlookBarTabCtrl`[CBaseTabbedPane 获取指向基础的指针：：获取基础窗口](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow)。
+1. `CMFCOutlookBarTabCtrl`使用[CBaseTabbedPane：： GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow)获取指向基础的指针。
 
     ```cpp
     CMFCOutlookBarTabCtrl* pOutlookBar = (CMFCOutlookBarTabCtrl*) m_wndOutlookBar.GetUnderlyingWindow ();
     ```
 
-1. 为包含按钮的每个选项卡创建一个[CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)对象。
+1. 为包含按钮的每个选项卡创建 [CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md) 对象。
 
     ```cpp
     m_wndOutlookPane.Create(&m_wndOutlookBar,
@@ -144,24 +145,24 @@ class CMFCOutlookBar : public CBaseTabbedPane
         ID_FILE_OPEN);
     ```
 
-1. 调用[CMFCOutlookBarTabCtrl：：AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)以添加每个新选项卡。将*可分离*参数设置为 FALSE 以使页面不可拆卸。 或者，使用[CMFCOutlookBarTabCtrl：：添加控制](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol)以添加可拆卸页面。
+1. 调用 [CMFCOutlookBarTabCtrl：： AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) 以添加每个新选项卡。将 *bDetachable* 参数设置为 FALSE 可使页面不可分离。 或者，使用 [CMFCOutlookBarTabCtrl：： AddControl](../../mfc/reference/cmfcoutlookbartabctrl-class.md#addcontrol) 添加可分离的页面。
 
     ```cpp
     pOutlookBar->AddTab (&m_wndOutlookPane, "General", (UINT) -1, TRUE);
     ```
 
-1. 要将`CWnd`派生控件（例如[CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)）添加为选项卡，请创建控件并调用[CMFCOutlookBarTabctrl：：addTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)将其添加到 Outlook 栏。
+1. 若要添加 `CWnd` 派生的控件 (例如， [CMFCShellTreeCtrl 类](../../mfc/reference/cmfcshelltreectrl-class.md)) 作为选项卡，请创建控件并调用 [CMFCOutlookBarTabCtrl：： AddTab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) 将其添加到 Outlook 栏。
 
 > [!NOTE]
-> 您应该对每个[CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)对象和每个`CWnd`派生对象使用唯一控件 ID。
+> 应为每个 [CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md) 对象和每个派生对象使用唯一控件 id `CWnd` 。
 
-要在运行时动态添加或删除新页面，请使用[CMFCOutlookBar：：创建自定义页](#createcustompage)和[CMFCOutlookBar：：删除自定义页](#removecustompage)。
+若要在运行时动态添加或删除新页，请使用 [CMFCOutlookBar：： CreateCustomPage](#createcustompage) 和 [CMFCOutlookBar：： RemoveCustomPage](#removecustompage)。
 
-## <a name="outlook-2003-mode"></a>展望 2003 模式
+## <a name="outlook-2003-mode"></a>Outlook 2003 模式
 
-在 Outlook 2003 模式下，选项卡按钮位于 Outlook 栏窗格的底部。 当没有足够的空间来显示按钮时，它们将作为图标显示在窗格底部的工具栏类似区域中。
+在 Outlook 2003 模式下，选项卡按钮位于 Outlook 栏窗格的底部。 如果没有足够的空间来显示这些按钮，则它们将显示为工具栏底部工具栏上的图标。
 
-使用[CMFCOutlookBar：setMode2003](#setmode2003)启用 Outlook 2003 模式。 使用[CMFCOutlookBarTabCtrl：：设置工具栏图像列表](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist)来设置包含 Outlook 栏底部显示的图标的位图。 位图中的图标必须由选项卡索引排序。
+使用 [CMFCOutlookBar：： SetMode2003](#setmode2003) 启用 Outlook 2003 模式。 使用 [CMFCOutlookBarTabCtrl：： SetToolbarImageList](../../mfc/reference/cmfcoutlookbartabctrl-class.md#settoolbarimagelist) 设置包含显示在 Outlook 栏底部的图标的位图。 位图中的图标必须按 tab 键索引排序。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -175,7 +176,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[可装窗格](../../mfc/reference/cdockablepane-class.md)
+[CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
 [CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)
 
@@ -183,11 +184,11 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxOutlookbar.h
+**标头：** afxoutlookbar
 
-## <a name="cmfcoutlookbarallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a>CMFCOutlookBar：：允许销毁空单板
+## <a name="cmfcoutlookbarallowdestroyemptytabbedpane"></a><a name="allowdestroyemptytabbedpane"></a> CMFCOutlookBar：： AllowDestroyEmptyTabbedPane
 
-指定是否可以销毁空选项卡式窗格。
+指定是否可以销毁空的选项卡式窗格。
 
 ```cpp
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
@@ -195,38 +196,38 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 ### <a name="return-value"></a>返回值
 
-如果可以销毁空选项卡式窗格，则为 TRUE;否则，FALSE。 默认实现始终返回 TRUE。
+如果可以销毁空的选项卡式窗格，则为 TRUE;否则为 FALSE。 默认实现始终返回 TRUE。
 
 ### <a name="remarks"></a>备注
 
-如果无法销毁空选项卡式窗格，则框架将隐藏它。
+如果无法销毁空的选项卡式窗格，框架将改为隐藏。
 
-## <a name="cmfcoutlookbarcanacceptpane"></a><a name="canacceptpane"></a>CMFCOutlookBar：：接受窗格
+## <a name="cmfcoutlookbarcanacceptpane"></a><a name="canacceptpane"></a> CMFCOutlookBar：： CanAcceptPane
 
-确定是否可以将另一个窗格停靠到 Outlook 栏窗格。
+确定是否可将另一个窗格停靠到 Outlook 栏窗格。
 
 ```cpp
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
-[在]指向另一个要停靠到此窗格的窗格的指针。
+中指向停靠在此窗格上的另一个窗格的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果另一个窗格可以停靠到 Outlook 栏窗格，则为 TRUE;否则 FALSE。
+如果可以将另一个窗格停靠到 Outlook 栏窗格，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 如果 Outlook 栏处于 Outlook 2003 模式，则不支持停靠，因此返回值为 FALSE。
 
-如果*pBar*参数为 NULL，则此方法返回 FALSE。
+如果 *pBar* 参数为 NULL，此方法将返回 FALSE。
 
-否则，此方法将充当基本方法[CBasePane：：canAcceptPane，](../../mfc/reference/cbasepane-class.md#canacceptpane)只不过即使未启用停靠，Outlook 栏仍可以启用另一个 Outlook 栏停靠在它上。
+否则，此方法的行为类似于基方法 [CBasePane：： CanAcceptPane](../../mfc/reference/cbasepane-class.md#canacceptpane)，只不过即使未启用接驳，outlook 栏仍可以启用另一个 outlook 面板。
 
-## <a name="cmfcoutlookbarcansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a>CMFCOutlookbar：：canset标题文本标签名称
+## <a name="cmfcoutlookbarcansetcaptiontexttotabname"></a><a name="cansetcaptiontexttotabname"></a> CMFCOutlookBar：： CanSetCaptionTextToTabName
 
 确定选项卡式窗格的标题是否显示与活动选项卡相同的文本。
 
@@ -236,17 +237,17 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 
 ### <a name="return-value"></a>返回值
 
-如果 Outlook 栏标题自动设置为活动选项卡的文本，则为 TRUE;如果 Outlook 窗口标题自动设置为活动选项卡的文本，则为 TRUE。否则 FALSE。
+如果 Outlook 栏窗口标题自动设置为活动选项卡的文本，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-使用[CBaseTabbed 窗格：：启用设置标题文本标签名称](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname)以启用或禁用此功能。
+使用 [CBaseTabbedPane：： EnableSetCaptionTextToTabName](../../mfc/reference/cbasetabbedpane-class.md#enablesetcaptiontexttotabname) 可以启用或禁用此功能。
 
 在 Outlook 2003 模式下，此设置始终处于启用状态。
 
-## <a name="cmfcoutlookbarcreate"></a><a name="create"></a>CMFCOutlookBar：创建
+## <a name="cmfcoutlookbarcreate"></a><a name="create"></a> CMFCOutlookBar：： Create
 
-创建 Outlook 栏控件。
+创建 Outlook 条形控件。
 
 ```cpp
 virtual BOOL Create(
@@ -259,47 +260,47 @@ virtual BOOL Create(
     CCreateContext* pContext=NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCaption*<br/>
-[在]指定窗口标题。
+中指定窗口标题。
 
-*pparentwnd*<br/>
-[在]指定指向父窗口的指针。 值不得为 NULL。
+*pParentWnd*<br/>
+中指定指向父窗口的指针。 值不得为 NULL。
 
-*矩形*<br/>
-[在]指定以像素为单位的 Outlook 栏大小和位置。
+*rect*<br/>
+中指定 outlook 条形图的大小和位置（以像素为单位）。
 
 *nID*<br/>
-[在]指定控件 ID。 必须与应用程序中使用的其他控件指示的不同。
+中指定控件 ID。 必须与应用程序中使用的其他控件 Id 不同。
 
 *dwStyle*<br/>
-[在]指定所需的控制栏样式。 有关可能的值，请参阅[窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
+中指定所需的控件条样式。 有关可能的值，请参阅 [窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
-*dwControlBar样式*<br/>
-[在]指定特殊库定义的样式。
+*dwControlBarStyle*<br/>
+中指定特定的库定义样式。
 
 *pContext*<br/>
-[在]创建上下文。
+中创建上下文。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则非零;否则 0。
+如果方法成功，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-分两步`CMFCOutlookBar`构造对象。 首先调用构造函数，然后调用`Create`，这将创建 Outlook 栏控件并将其附加到`CMFCOutlookBar`对象。
+可以通过 `CMFCOutlookBar` 两个步骤构造对象。 首先调用构造函数，然后调用，它将 `Create` 创建 outlook bar 控件并将其附加到 `CMFCOutlookBar` 对象。
 
-请参阅[CBasePane：为](../../mfc/reference/cbasepane-class.md#createex) *dwControlBarStyle*指定的可用库定义样式的列表创建Ex。
+请参阅 [CBasePane：： CreateEx](../../mfc/reference/cbasepane-class.md#createex) ，以获取由 *dwControlBarStyle* 指定的可用库定义样式的列表。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何使用`Create``CMFCOutlookBar`类的方法。 此代码段是 Outlook[多视图示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何使用类的 `Create` 方法 `CMFCOutlookBar` 。 此代码片段是 [Outlook 多视图示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]
 
-## <a name="cmfcoutlookbarcreatecustompage"></a><a name="createcustompage"></a>CMFCOutlookBar：创建自定义页面
+## <a name="cmfcoutlookbarcreatecustompage"></a><a name="createcustompage"></a> CMFCOutlookBar：： CreateCustomPage
 
 创建自定义 Outlook 栏选项卡。
 
@@ -311,33 +312,33 @@ CMFCOutlookBarPane* CreateCustomPage(
     BOOL bEnableTextLabels=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lpszPage名称*<br/>
-[在]页面标签。
+*lpszPageName*<br/>
+中页面标签。
 
-*b 激活页面*<br/>
-[在]如果为 TRUE，则页面在创建时变为活动状态。
+*bActivatePage*<br/>
+中如果为 TRUE，则在创建时页将变为活动状态。
 
-*启用的停靠*<br/>
-[在]CBRS_ALIGN_标志的组合，用于指定分离页面时启用的停靠侧。
+*dwEnabledDocking*<br/>
+中CBRS_ALIGN_ 标志的组合，用于在分离页面时指定启用的停靠面。
 
-*b 启用文本标签*<br/>
-[在]如果为 TRUE，则为驻留在页面上的按钮启用文本标签。
+*bEnableTextLabels*<br/>
+中如果为 TRUE，则为位于页面上的按钮启用文本标签。
 
 ### <a name="return-value"></a>返回值
 
-指向新创建的页面的指针，如果创建失败，则指向 NULL。
+指向新创建的页的指针; 如果创建失败，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-使用此方法使用户能够创建自定义 Outlook 栏页。 每个应用程序最多可以创建 100 页。 页面控件指示码从 0xF000 开始。 如果自定义 Outlook 栏页总数超过 100，则创建将失败。
+使用此方法可使用户创建自定义 Outlook 条形页面。 每个应用程序最多可以创建100页。 页面控件 Id 从0xF000 开始。 如果自定义 Outlook 条形页面的总数超过100，则创建失败。
 
-使用[CMFCOutlookBar：删除自定义页面](#removecustompage)以删除自定义页面。
+使用 [CMFCOutlookBar：： RemoveCustomPage](#removecustompage) 删除自定义页。
 
-## <a name="cmfcoutlookbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CMFC观景栏：:DoesAllowDynInsert之前
+## <a name="cmfcoutlookbardoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a> CMFCOutlookBar：:D oesAllowDynInsertBefore
 
-指定用户是否可以停靠 Outlook 栏外边缘的窗格。
+指定用户是否可以在 Outlook 栏的外边缘停靠窗格。
 
 ```
 DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;
@@ -349,14 +350,14 @@ DECLARE_MESSAGE_MAP virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="remarks"></a>备注
 
-当框架查找停靠`DoesAllowDynInsertBefore`动态窗格的位置时，将调用该方法。 如果函数返回 FALSE，则框架不允许在窗格的外边缘停靠任何动态窗格。
+`DoesAllowDynInsertBefore`当框架查找要停靠动态窗格的位置时，框架将调用方法。 如果该函数返回 FALSE，则该框架不允许停靠在窗格外边缘的任何动态窗格。
 
-通常，您将创建 Outlook 栏作为静态非浮动控件。 您可以在派生类中重写此函数，并返回 TRUE 以更改此行为。
+通常，会将 Outlook 栏创建为静态非浮动控件。 可以在派生类中重写此函数并返回 TRUE 以更改此行为。
 
 > [!NOTE]
-> 由于动态窗格在停靠时检查停靠静态窗格的状态，因此应尽可能将动态窗格停靠在静态窗格之后。
+> 由于动态窗格会在停靠时检查停靠静态窗格的状态，因此应尽可能将动态窗格停靠在静态窗格之后。
 
-## <a name="cmfcoutlookbarfloattab"></a><a name="floattab"></a>CMFCOutlookBar：浮动选项卡
+## <a name="cmfcoutlookbarfloattab"></a><a name="floattab"></a> CMFCOutlookBar：： FloatTab
 
 浮动窗格。
 
@@ -368,31 +369,31 @@ virtual BOOL FloatTab(
     BOOL bHide);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
-[在]指向窗格的指针以浮动。
+中指向要浮动的窗格的指针。
 
 *nTabID*<br/>
-[在]要浮动的选项卡的零基索引。
+中要浮动的选项卡的从零开始的索引。
 
-*基方法*<br/>
-[在]指定用于使窗格浮动的方法。  有关详细信息，请参阅[CBaseTabbedPane：：FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。
+*dockMethod*<br/>
+中指定要用于使窗格浮动的方法。  有关详细信息，请参阅 [CBaseTabbedPane：： FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。
 
 *bHide*<br/>
-[在]TRUE 以在浮动前隐藏窗格;否则，FALSE。 与此方法的基类版本不同，此参数没有默认值。
+中若要在浮动前隐藏窗格，则为 TRUE;否则为 FALSE。 与此方法的基类版本不同，此参数没有默认值。
 
 ### <a name="return-value"></a>返回值
 
-如果窗格浮动，则为 TRUE;否则，FALSE。
+如果窗格浮动，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-此方法类似于[CBaseTabbedPane：：FloatTab，](../../mfc/reference/cbasetabbedpane-class.md#floattab)只不过它不允许 Outlook 栏控件上的最后一个剩余选项卡浮动。
+此方法类似于 [CBaseTabbedPane：： FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab) ，只不过它不允许 Outlook bar 控件上的最后剩余选项卡浮动。
 
-## <a name="cmfcoutlookbargetbuttonsfont"></a><a name="getbuttonsfont"></a>CMFCOutlookBar：获取按钮字体
+## <a name="cmfcoutlookbargetbuttonsfont"></a><a name="getbuttonsfont"></a> CMFCOutlookBar：： GetButtonsFont
 
-返回 Outlook 栏的页面按钮选项卡上的文本字体。
+返回 Outlook 栏的页面按钮选项卡上的文本的字体。
 
 ```cpp
 CFont* GetButtonsFont() const;
@@ -400,15 +401,15 @@ CFont* GetButtonsFont() const;
 
 ### <a name="return-value"></a>返回值
 
-指向用于在 Outlook 栏页按钮选项卡上显示文本的字体对象的指针。
+一个指针，指向用于显示 Outlook 栏页面按钮选项卡上的文本的字体对象。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可以检索用于在 Outlook 页按钮选项卡上显示文本的字体。 您可以通过调用[CMFCOutlookBar 来设置字体：设置ButtonsFont](#setbuttonsfont)。
+使用此函数可检索用于显示 Outlook 页面按钮选项卡上的文本的字体。 可以通过在 [CMFCOutlookBar：： SetButtonsFont](#setbuttonsfont)上调用来设置字体。
 
-## <a name="cmfcoutlookbargettabarea"></a><a name="gettabarea"></a>CMFCOutlookBar：GetTabArea
+## <a name="cmfcoutlookbargettabarea"></a><a name="gettabarea"></a> CMFCOutlookBar：： GetTabArea
 
-确定 Outlook 栏上选项卡区域的大小和位置。
+确定选项卡区域在 Outlook 栏上的大小和位置。
 
 ```cpp
 virtual void GetTabArea(
@@ -416,25 +417,25 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectTabAreaTop*<br/>
-[出]当函数返回时，包含顶部选项卡区域的大小和位置（在客户端坐标中）。
+弄当函数返回时，包含 (在顶部选项卡区域的工作区坐标) 中的大小和位置。
 
-*rectTab区域底部*<br/>
-[出]当函数返回时，包含底部选项卡区域的大小和位置（在客户端坐标中）。
+*rectTabAreaBottom*<br/>
+弄当函数返回时，包含 (在底部选项卡区域的工作区坐标) 中的大小和位置。
 
 ### <a name="remarks"></a>备注
 
-框架调用此方法以确定与目标窗格的停靠类型。 当框架确定用户拖动窗格以停靠在目标窗格的选项卡区域时，它会尝试将第一个窗格添加为目标窗格的新选项卡。 否则，它将尝试将第一个窗格停靠在目标窗格的相应一侧。 框架创建一个带有滑块的新容器，以适应其他停靠窗格。
+框架调用此方法来确定停靠到目标窗格的类型。 当框架确定用户将面板拖动到 "目标" 窗格的选项卡区域上时，它会尝试将第一个窗格添加为 "目标" 窗格的新选项卡。 否则，它会尝试将第一个窗格停靠在目标窗格的相应侧。 框架将使用滑块创建一个新容器，以容纳附加的停靠窗格。
 
-如果 Outlook`GetTabArea`栏是静态的，则 默认实现返回 Outlook 栏的整个工作区;如果 Outlook 栏是静态的，则默认实现返回 Outlook 栏的整个工作区。也就是说，如果 Outlook 栏无法浮动。 否则，它将返回页面按钮在 Outlook 栏控件的顶部和底部获取的区域。
+如果 outlook 栏是静态的，则的默认实现将 `GetTabArea` 返回 outlook 栏的整个客户端区域，即，如果 outlook 栏无法浮动。 否则，它将返回页面按钮在 Outlook bar 控件的顶部和底部所采用的区域。
 
-在派生的`CMFCOutlookBar`类中重写此方法以更改此行为。
+在从派生的类中重写此方法 `CMFCOutlookBar` 以更改此行为。
 
-## <a name="cmfcoutlookbarismode2003"></a><a name="ismode2003"></a>CMFCOutlookBar：isMode2003
+## <a name="cmfcoutlookbarismode2003"></a><a name="ismode2003"></a> CMFCOutlookBar：： IsMode2003
 
-指定 Outlook 栏的行为是否与 Microsoft Office Outlook 2003 的行为仿一。
+指定 Outlook 栏的行为是否模拟 Microsoft Office Outlook 2003 的行为。
 
 ```cpp
 BOOL IsMode2003() const;
@@ -442,64 +443,64 @@ BOOL IsMode2003() const;
 
 ### <a name="return-value"></a>返回值
 
-如果 Outlook 栏在 Microsoft Office 2003 模式下运行，则非零;否则 0。
+如果 Outlook 栏在 Microsoft Office 2003 模式下运行，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-您可以使用[CMFCOutlookBar：：setMode2003](#setmode2003)启用此模式。
+可以通过使用 [CMFCOutlookBar：： SetMode2003](#setmode2003)启用此模式。
 
-## <a name="cmfcoutlookbaronafteranimation"></a><a name="onafteranimation"></a>CMFCOutlookBar：在动画之后
+## <a name="cmfcoutlookbaronafteranimation"></a><a name="onafteranimation"></a> CMFCOutlookBar：： OnAfterAnimation
 
-由[CMFCOutlookBarTabCtrl 调用：：](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)使用动画设置活动选项卡后设置活动选项卡。
+使用动画设置活动选项卡后，由 [CMFCOutlookBarTabCtrl：： SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 调用。
 
 ```cpp
 virtual void OnAfterAnimation(int nPage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPage*<br/>
-[在]已变为活动的选项卡页的零基索引。
+中已激活的选项卡页的从零开始的索引。
 
 ### <a name="remarks"></a>备注
 
-设置活动选项卡的视觉效果取决于是否已启用动画。 有关详细信息，请参阅[CMFCOutlookBarTabCtrl：：启用动画](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)。
+设置活动选项卡的视觉效果取决于是否已启用动画。 有关详细信息，请参阅 [CMFCOutlookBarTabCtrl：： EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)。
 
-## <a name="cmfcoutlookbaronbeforeanimation"></a><a name="onbeforeanimation"></a>CMFCOutlookBar：：在动画前打开
+## <a name="cmfcoutlookbaronbeforeanimation"></a><a name="onbeforeanimation"></a> CMFCOutlookBar：： OnBeforeAnimation
 
-由[CMFCOutlookBarTabCtrl 调用：：](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab)在使用动画将选项卡页设置为活动选项卡之前设置活动选项卡。
+在选项卡页通过使用动画设置为活动选项卡之前，由 [CMFCOutlookBarTabCtrl：： SetActiveTab](../../mfc/reference/cmfcoutlookbartabctrl-class.md#setactivetab) 调用。
 
 ```cpp
 virtual BOOL OnBeforeAnimation(int nPage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPage*<br/>
-[在]即将设置为活动的选项卡页的零基索引。
+中要设置为活动状态的选项卡页的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果应在设置新的活动选项卡时使用动画，则返回 TRUE;如果应禁用动画，则返回 FALSE。
+如果在设置新的活动选项卡时应使用动画，则返回 TRUE; 如果应禁用动画，则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcoutlookbaronscroll"></a><a name="onscroll"></a>CMFCOutlookbar：：OnScroll
+## <a name="cmfcoutlookbaronscroll"></a><a name="onscroll"></a> CMFCOutlookBar：： OnScroll
 
-如果 Outlook 栏向上或向下滚动，则由框架调用。
+如果 Outlook 面板向上或向下滚动，则由框架调用。
 
 ```cpp
 virtual void OnScroll(BOOL bDown);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*b向下*<br/>
-[在]如果 Outlook 栏向下滚动，则为 TRUE;如果"Outlook"栏向上滚动，则为 TRUE。
+*bDown*<br/>
+中如果为 TRUE，则为 TRUE; 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcoutlookbarremovecustompage"></a><a name="removecustompage"></a>CMFCOutlookBar：删除自定义页面
+## <a name="cmfcoutlookbarremovecustompage"></a><a name="removecustompage"></a> CMFCOutlookBar：： RemoveCustomPage
 
 删除自定义 Outlook 栏选项卡页。
 
@@ -509,29 +510,29 @@ BOOL RemoveCustomPage(
     CMFCOutlookBarTabCtrl* pTargetWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiPage*<br/>
-[在]父 Outlook 窗口中页面的基于零的索引。
+中父 Outlook 窗口中的页的从零开始的索引。
 
-*p目标Wnd*<br/>
-[在]指针到父 Outlook 窗口。
+*pTargetWnd*<br/>
+中Pointerto 父 Outlook 窗口。
 
 ### <a name="return-value"></a>返回值
 
-如果自定义页已成功删除，则非零;否则 0。
+如果已成功删除自定义页，则为非零;否则为0。
 
 ### <a name="remarks"></a>备注
 
-调用此函数以删除自定义页面。 删除页面时，其控制 ID 将返回到可用 ID 池。
+调用此函数可删除自定义页。 删除页面后，其控制 ID 将返回到可用 Id 的池。
 
-您必须提供指向[CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)对象的指针，其中要删除的页面当前驻留。 请注意，用户可以在不同的 Outlook 栏之间移动可拆卸页面，但有关自定义页面的信息位于已为其调用 CMFCOutlookBar 的 Outlook 栏对象中[：：：创建自定义页](#createcustompage)。
+您必须提供指向 [CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 对象的指针，其中要删除的当前所在的页。 请注意，用户可以在不同的 Outlook 条形之间移动可分离的页，但是有关自定义页的信息驻留在你为其调用了 [CMFCOutlookBar：： CreateCustomPage](#createcustompage)的 Outlook bar 对象中。
 
-使用[CBaseTabbed 窗格：获取基础窗口](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow)以获取指向 Outlook 窗口的指针。
+使用 [CBaseTabbedPane：： GetUnderlyingWindow](../../mfc/reference/cbasetabbedpane-class.md#getunderlyingwindow) 获取指向 Outlook 窗口的指针。
 
-## <a name="cmfcoutlookbarsetbuttonsfont"></a><a name="setbuttonsfont"></a>CMFCOutlookBar：：设置按钮字体
+## <a name="cmfcoutlookbarsetbuttonsfont"></a><a name="setbuttonsfont"></a> CMFCOutlookBar：： SetButtonsFont
 
-设置 Outlook 栏按钮上的文本字体。
+设置 Outlook 栏按钮上文本的字体。
 
 ```cpp
 void SetButtonsFont(
@@ -539,44 +540,44 @@ void SetButtonsFont(
     BOOL bRedraw=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFont*<br/>
-[在]指定新字体。
+中指定新字体。
 
-*bredraw*<br/>
-[在]如果为 TRUE，则将重绘 Outlook 栏。
+*bRedraw*<br/>
+中如果为 TRUE，则将重绘 Outlook bar。
 
 ### <a name="remarks"></a>备注
 
-使用此方法可为 Outlook 选项卡页按钮上显示的文本设置字体。
+使用此方法为 outlook 选项卡页面按钮上显示的文本设置字体。
 
-## <a name="cmfcoutlookbarsetmode2003"></a><a name="setmode2003"></a>CMFCOutlookBar：SetMode2003
+## <a name="cmfcoutlookbarsetmode2003"></a><a name="setmode2003"></a> CMFCOutlookBar：： SetMode2003
 
-指定 Outlook 栏的行为是否与 Outlook 2003 的行为仿一。
+指定 Outlook 栏的行为是否模仿 Outlook 2003 的行为。
 
 ```cpp
 void SetMode2003(BOOL bMode2003=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bMode2003*<br/>
-[在]如果为 TRUE，则启用 Office 2003 模式。
+中如果为 TRUE，则启用 Office 2003 模式。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可启用或禁用 Office 2003 模式。 在此模式下，Outlook 栏具有附加工具栏，带有自定义按钮。 Outlook 栏的行为符合 Microsoft Office 2003 中 Outlook 栏的行为。
+使用此函数可以启用或禁用 Office 2003 模式。 在此模式下，Outlook 栏具有一个带有自定义按钮的附加工具栏。 Outlook 栏的行为与 Microsoft Office 2003 中 Outlook 栏的行为一致。
 
-默认情况下，此模式已禁用。
+默认情况下，此模式处于禁用状态。
 
 > [!NOTE]
-> 必须在[CMFCOutlookBar：：：创建](#create)之前调用此功能。
+> 必须先调用此函数，然后才能 [CMFCOutlookBar：： Create](#create)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)<br/>
 [CMFCOutlookBarTabCtrl 类](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [CMFCOutlookBarPane 类](../../mfc/reference/cmfcoutlookbarpane-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSliderCtrl 类
 title: CSliderCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 8dfdcf34474027180708045131a19bf6f7e14512
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 556366f429b39344f4ae2f20acd3c20fd9760552
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562527"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264539"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 类
 
@@ -95,13 +96,13 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSliderCtrl：： CSliderCtrl](#csliderctrl)|构造 `CSliderCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSliderCtrl：： ClearSel](#clearsel)|清除滑块控件中的当前选定内容。|
 |[CSliderCtrl：： ClearTics](#cleartics)|删除滑块控件中的当前刻度线。|
@@ -173,7 +174,7 @@ class CSliderCtrl : public CWnd
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRedraw*<br/>
 重绘标志。 如果此参数为 TRUE，则在清除选中内容后重绘滑块;否则，不会重新绘制滑块。
@@ -186,7 +187,7 @@ void ClearSel(BOOL bRedraw = FALSE);
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRedraw*<br/>
 重绘标志。 如果此参数为 TRUE，则在清除刻度线后重绘滑块;否则，不会重新绘制滑块。
@@ -203,7 +204,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定滑块控件的样式。 将 Windows SDK 中所述的 [滑块控件样式](/windows/win32/Controls/trackbar-control-styles)的任意组合应用于控件。
@@ -225,7 +226,7 @@ virtual BOOL Create(
 
 可以通过 `CSliderCtrl` 两个步骤构造。 首先，调用构造函数，然后调用 `Create` ，它会创建滑块控件，并将其附加到 `CSliderCtrl` 对象。
 
-根据为 *dwStyle*设置的值，滑块控件可以具有垂直或水平方向。 它可以在两侧和两侧都有刻度线，或者两者都不存在。 它还可用于指定连续值的范围。
+根据为 *dwStyle* 设置的值，滑块控件可以具有垂直或水平方向。 它可以在两侧和两侧都有刻度线，或者两者都不存在。 它还可用于指定连续值的范围。
 
 若要将扩展窗口样式应用于滑块控件，请调用 [CreateEx](#createex) 而不是 `Create` 。
 
@@ -242,16 +243,16 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
+指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的 *dwExStyle* 参数。
 
 *dwStyle*<br/>
 指定滑块控件的样式。 将 Windows SDK 中所述的 [滑块控件样式](/windows/win32/Controls/trackbar-control-styles)的任意组合应用于控件。
 
 *rect*<br/>
-对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd*的工作区坐标表示）。
+对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd* 的工作区坐标表示）。
 
 *pParentWnd*<br/>
 指向作为控件的父级的窗口的指针。
@@ -283,7 +284,7 @@ CSliderCtrl();
 CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fLocation*<br/>
 一个布尔值，指示要检索的两个合作者窗口句柄中的哪一个。 可以是以下其中一个值：
@@ -294,7 +295,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 
 ### <a name="return-value"></a>返回值
 
-指向 [CWnd](../../mfc/reference/cwnd-class.md) 对象的指针，该对象是 *fLocation*指定的位置处的合作者窗口; 如果该位置不存在合作者窗口，则为 NULL。
+指向 [CWnd](../../mfc/reference/cwnd-class.md) 对象的指针，该对象是 *fLocation* 指定的位置处的合作者窗口; 如果该位置不存在合作者窗口，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
@@ -308,7 +309,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 void GetChannelRect(LPRECT lprc) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprc*<br/>
 指向 [CRect](../../atl-mfc-shared/reference/crect-class.md) 对象的指针，该对象包含当函数返回时通道边框的大小和位置。
@@ -383,7 +384,7 @@ void GetRange(
     int& nMax) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMin*<br/>
 对接收最小位置的整数的引用。
@@ -393,7 +394,7 @@ void GetRange(
 
 ### <a name="remarks"></a>备注
 
-此函数将值复制到 *nMin* 和 *n 每天*所引用的整数。
+此函数将值复制到 *nMin* 和 *n 每天* 所引用的整数。
 
 ## <a name="csliderctrlgetrangemax"></a><a name="getrangemax"></a> CSliderCtrl：： GetRangeMax
 
@@ -429,7 +430,7 @@ void GetSelection(
     int& nMax) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMin*<br/>
 引用一个整数，该整数接收当前所选内容的起始位置。
@@ -461,7 +462,7 @@ int GetThumbLength() const;
 void GetThumbRect(LPRECT lprc) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprc*<br/>
 指向 `CRect` 对象的指针，该对象包含滑块在函数返回时的边框。
@@ -474,7 +475,7 @@ void GetThumbRect(LPRECT lprc) const;
 int GetTic(int nTic) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nTic*<br/>
 标识刻度线的从零开始的索引。
@@ -503,7 +504,7 @@ DWORD* GetTicArray() const;
 int GetTicPos(int nTic) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nTic*<br/>
 标识刻度线的从零开始的索引。
@@ -540,7 +541,7 @@ CWnd* SetBuddy(
     BOOL fLocation = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndBuddy*<br/>
 指向 `CWnd` 对象的指针，该对象将被设置为滑块控件的合作者。
@@ -570,7 +571,7 @@ CWnd* SetBuddy(
 int SetLineSize(int nSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSize*<br/>
 滑块控件的新行大小。
@@ -591,7 +592,7 @@ int SetLineSize(int nSize);
 int SetPageSize(int nSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSize*<br/>
 滑块控件的新页面大小。
@@ -612,7 +613,7 @@ int SetPageSize(int nSize);
 void SetPos(int nPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 指定新的滑块位置。
@@ -628,7 +629,7 @@ void SetRange(
     BOOL bRedraw = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMin*<br/>
 滑块的最小位置。
@@ -649,7 +650,7 @@ void SetRangeMax(
     BOOL bRedraw = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 每天*<br/>
 滑块的最大位置。
@@ -667,7 +668,7 @@ void SetRangeMin(
     BOOL bRedraw = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMin*<br/>
 滑块的最小位置。
@@ -685,7 +686,7 @@ void SetSelection(
     int nMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMin*<br/>
 滑块的起始位置。
@@ -701,7 +702,7 @@ void SetSelection(
 void SetThumbLength(int nLength);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLength*\
 中滑块的长度（以像素为单位）。
@@ -732,7 +733,7 @@ void SetThumbLength(int nLength);
 BOOL SetTic(int nTic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nTic*<br/>
 刻度线的位置。 此参数必须指定一个正值。
@@ -749,7 +750,7 @@ BOOL SetTic(int nTic);
 void SetTicFreq(int nFreq);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFreq*<br/>
 刻度线的频率。
@@ -768,14 +769,14 @@ void SetTicFreq(int nFreq);
 int SetTipSide(int nLocation);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 位置*<br/>
 表示显示 tooltip 控件的位置的值。 有关可能值的列表，请参阅 Win32 消息 [TBM_SETTIPSIDE](/windows/win32/Controls/tbm-settipside)，如 Windows SDK 中所述。
 
 ### <a name="return-value"></a>返回值
 
-一个值，该值表示 tooltip 控件的上一个位置。 返回值等于 *n 位置*的可能值之一。
+一个值，该值表示 tooltip 控件的上一个位置。 返回值等于 *n 位置* 的可能值之一。
 
 ### <a name="remarks"></a>备注
 
@@ -789,7 +790,7 @@ int SetTipSide(int nLocation);
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndTip*<br/>
 指向 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 对象的指针，该对象包含用于滑块控件的工具提示。
@@ -798,7 +799,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 
 此成员函数实现 Win32 消息 [TBM_SETTOOLTIPS](/windows/win32/Controls/tbm-settooltips)的行为，如 Windows SDK 中所述。 当使用 TBS_TOOLTIPS 样式创建滑块控件时，它会创建一个默认工具提示控件，该控件显示在滑块旁边，并显示滑块的当前位置。 有关 slider 控件样式的说明，请参阅 Windows SDK 中的 [跟踪条控件样式](/windows/win32/Controls/trackbar-control-styles) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

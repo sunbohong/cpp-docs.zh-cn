@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCImageEditorPaletteBar 类
 title: CMFCImageEditorPaletteBar 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-ms.openlocfilehash: 007fa94269a6a42bf076d2d75a18860896503aa1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 19d023776c66559e8d639eb71ebc266f992af4c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265358"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 类
 
@@ -31,12 +32,12 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|返回工具栏按钮的高度。  (重写 [CMFCToolBar：： GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight)。 ) |
 |[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|确定工具栏是否可以显示具有扩展边框的按钮。  (重写 [CMFCToolBar：： IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)。 ) |
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类不适于在您的代码中直接使用。
 
@@ -88,8 +89,8 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 此方法返回 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCImageEditorDialog 类](../../mfc/reference/cmfcimageeditordialog-class.md)

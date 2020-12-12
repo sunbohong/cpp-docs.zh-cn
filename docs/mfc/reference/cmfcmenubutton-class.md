@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCMenuButton 类
 title: CMFCMenuButton 类
 ms.date: 07/15/2019
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_nMenuResult
 - CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: 2f8ef341d7f460ed6b0ec23cb8a490842eb67cbc
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 954a9239f7a4912e29dd031ecacfeb2e06c6d8be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743264"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265124"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 类
 
@@ -188,7 +189,7 @@ BOOL  m_bDefaultClick;
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMsg*<br/>
 中指向包含要处理的[消息的消息结构。](/windows/win32/api/winuser/ns-winuser-msg)
@@ -207,7 +208,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCalcOnly*<br/>
 中布尔型参数，指示此方法是否调整按钮大小。
@@ -225,5 +226,5 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)

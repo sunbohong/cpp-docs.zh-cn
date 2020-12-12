@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CPageSetupDialog 类
 title: CPageSetupDialog 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 280d75c3bcacd673107fd32ecaa39953b06a77c8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 862e8c1edff04ba58efe13f471ffeee71c11ede5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264903"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 类
 
@@ -51,7 +52,7 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|构造 `CPageSetupDialog` 对象。|
 
@@ -82,7 +83,7 @@ class CPageSetupDialog : public CCommonDialog
 
 若要使用 `CPageSetupDialog` 对象，请先使用 `CPageSetupDialog` 构造函数创建对象。 构造对话框后，您可以设置或修改数据成员中的任何值 `m_psd` 以初始化对话框控件的值。 [M_psd](#m_psd)结构的类型为 PAGESETUPDLG。
 
-初始化对话框控件后，调用 `DoModal` 成员函数以显示对话框，并允许用户选择打印选项。 `DoModal`返回用户是否选择了 "确定" （IDOK）或 "取消" （IDCANCEL）按钮。
+初始化对话框控件后，调用 `DoModal` 成员函数以显示对话框，并允许用户选择打印选项。 `DoModal` 返回用户是否选择了 "确定" (IDOK ") " 或 "取消" (IDCANCEL) "按钮。
 
 如果 `DoModal` 返回 IDOK，则可以使用多个 `CPageSetupDialog` 成员函数，或访问 `m_psd` 数据成员来检索用户输入的信息。
 
@@ -107,7 +108,7 @@ class CPageSetupDialog : public CCommonDialog
 
 **标头：** afxdlgs
 
-## <a name="cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog
+## <a name="cpagesetupdialogcpagesetupdialog"></a><a name="cpagesetupdialog"></a> CPageSetupDialog::CPageSetupDialog
 
 调用此函数可构造 `CPageSetupDialog` 对象。
 
@@ -117,9 +118,9 @@ CPageSetupDialog(
     CWnd* pParentWnd = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-dwFlags**<br/>
+dwFlags <br/>
 可用于自定义对话框的设置的一个或多个标志。 可以使用按位 "或" 运算符组合这些值。 这些值将具有以下含义：
 
 - PSD_DEFAULTMINMARGINS 将页边距的最小允许宽度设置为与打印机的最小值相同。 如果同时指定了 PSD_MARGINS 和 PSD_MINMARGINS 标志，则会忽略此标志。
@@ -142,7 +143,7 @@ dwFlags**<br/>
 
 - PSD_DISABLEORIENTATION 禁用 "页面方向" 对话框控件。
 
-- PSD_RETURNDEFAULT 导致 `CPageSetupDialog` 返回在不显示对话框的情况下为系统默认打印机初始化的[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构。 假定 `hDevNames` 和 `hDevMode` 均为 NULL; 否则，函数将返回错误。 如果旧打印机驱动程序支持系统默认打印机（早于 Windows 版本3.0），则仅 `hDevNames` 返回; `hDevMode` 为 NULL。
+- PSD_RETURNDEFAULT 导致 `CPageSetupDialog` 返回在不显示对话框的情况下为系统默认打印机初始化的 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) 和 [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) 结构。 假定 `hDevNames` 和 `hDevMode` 均为 NULL; 否则，函数将返回错误。 如果旧的打印机驱动程序支持系统默认打印机 (早于 Windows 版本 3.0) ，则仅 `hDevNames` 返回; `hDevMode` 为 NULL。
 
 - PSD_DISABLEPAPER 禁用纸张选择控件。
 
@@ -163,15 +164,15 @@ dwFlags**<br/>
 
 ### <a name="remarks"></a>备注
 
-使用[DoModal](../../mfc/reference/cdialog-class.md#domodal)函数可显示该对话框。
+使用 [DoModal](../../mfc/reference/cdialog-class.md#domodal) 函数可显示该对话框。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]
 
-## <a name="cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC
+## <a name="cpagesetupdialogcreateprinterdc"></a><a name="createprinterdc"></a> CPageSetupDialog::CreatePrinterDC
 
-从[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)结构创建打印机设备上下文。
+从 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) 和 [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) 结构创建打印机设备上下文。
 
 ```
 HDC CreatePrinterDC();
@@ -179,9 +180,9 @@ HDC CreatePrinterDC();
 
 ### <a name="return-value"></a>返回值
 
-新创建的打印机设备上下文（DC）的句柄。
+ (DC) 的新创建的打印机设备上下文的句柄。
 
-## <a name="cpagesetupdialogdomodal"></a><a name="domodal"></a>CPageSetupDialog：:D oModal
+## <a name="cpagesetupdialogdomodal"></a><a name="domodal"></a> CPageSetupDialog：:D oModal
 
 调用此函数以显示 "Windows common OLE 页面设置" 对话框，并允许用户选择各种打印设置选项，如打印边距、纸张大小和方向以及目标打印机。
 
@@ -191,7 +192,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>返回值
 
-IDOK 或 IDCANCEL。 如果返回 IDCANCEL，则调用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函数来确定是否发生了错误。
+IDOK 或 IDCANCEL。 如果返回 IDCANCEL，则调用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) 函数来确定是否发生了错误。
 
 IDOK 和 IDCANCEL 是常量，用于指示用户是否选择了 "确定" 或 "取消" 按钮。
 
@@ -201,15 +202,15 @@ IDOK 和 IDCANCEL 是常量，用于指示用户是否选择了 "确定" 或 "�
 
 如果希望通过设置结构的成员来初始化各种页面设置对话框选项 `m_psd` ，应在调用之前 `DoModal` 以及在构造对话框对象后执行此操作。 调用后 `DoModal` ，调用其他成员函数以检索用户在对话框中输入的设置或信息。
 
-如果要传播用户输入的当前设置，请调用[CWinApp：： SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter)。 此函数从对象中获取信息 `CPageSetupDialog` ，并使用适当的属性初始化并选择一个新的打印机 DC。
+如果要传播用户输入的当前设置，请调用 [CWinApp：： SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter)。 此函数从对象中获取信息 `CPageSetupDialog` ，并使用适当的属性初始化并选择一个新的打印机 DC。
 
 [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]
 
 ### <a name="example"></a>示例
 
-  请参阅[CPageSetupDialog：： CPageSetupDialog](#cpagesetupdialog)的示例。
+  请参阅 [CPageSetupDialog：： CPageSetupDialog](#cpagesetupdialog)的示例。
 
-## <a name="cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a>CPageSetupDialog::GetDeviceName
+## <a name="cpagesetupdialoggetdevicename"></a><a name="getdevicename"></a> CPageSetupDialog::GetDeviceName
 
 请在之后调用此函数 `DoModal` 以检索当前选定的打印机的名称。
 
@@ -221,7 +222,7 @@ CString GetDeviceName() const;
 
 对象使用的设备名称 `CPageSetupDialog` 。
 
-## <a name="cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a>CPageSetupDialog::GetDevMode
+## <a name="cpagesetupdialoggetdevmode"></a><a name="getdevmode"></a> CPageSetupDialog::GetDevMode
 
 调用后调用此函数 `DoModal` 可检索有关对象的打印机设备上下文的信息 `CPageSetupDialog` 。
 
@@ -231,11 +232,11 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>返回值
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构，其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函数来解锁此结构使用的内存。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)数据结构，其中包含有关打印机驱动程序的设备初始化和环境的信息。 必须使用 Windows SDK 中描述的 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) 函数来解锁此结构使用的内存。
 
-## <a name="cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a>CPageSetupDialog：： GetDriverName
+## <a name="cpagesetupdialoggetdrivername"></a><a name="getdrivername"></a> CPageSetupDialog：： GetDriverName
 
-在调用[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)之后调用此函数可检索系统定义的打印机设备驱动程序的名称。
+在调用 [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) 之后调用此函数可检索系统定义的打印机设备驱动程序的名称。
 
 ```
 CString GetDriverName() const;
@@ -249,7 +250,7 @@ CString GetDriverName() const;
 
 `CString` `GetDriverName` `lpszDriverName` 在对[CDC：： CreateDC](../../mfc/reference/cdc-class.md#createdc)的调用中，使用指向返回的对象的指针作为的值。
 
-## <a name="cpagesetupdialoggetmargins"></a><a name="getmargins"></a>CPageSetupDialog::GetMargins
+## <a name="cpagesetupdialoggetmargins"></a><a name="getmargins"></a> CPageSetupDialog::GetMargins
 
 调用后调用此函数 `DoModal` 可检索打印机设备驱动程序的边距。
 
@@ -259,15 +260,15 @@ void GetMargins(
     LPRECT lpRectMinMargins) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRectMargins*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)结构或[CRect](../../atl-mfc-shared/reference/crect-class.md)对象的指针，该对象描述当前所选打印机的打印边距（1/1000 英寸或 1/100 mm）。 如果不对此矩形感兴趣，请为此参数传递 NULL。
+指向 [RECT](/windows/win32/api/windef/ns-windef-rect) 结构或 [CRect](../../atl-mfc-shared/reference/crect-class.md) 对象的指针，该对象描述1/1000 英寸或 1/100 mm () 当前所选打印机的打印边距。 如果不对此矩形感兴趣，请为此参数传递 NULL。
 
 *lpRectMinMargins*<br/>
-指向 `RECT` 结构或对象的指针，该结构或 `CRect` 对象描述当前所选打印机的最小打印边距（1/1000 英寸或 1/100 mm）。 如果不对此矩形感兴趣，请为此参数传递 NULL。
+指向 `RECT` 结构或 `CRect` 对象的指针，该结构或对象描述当前所选打印机的最小打印边距为1/1000 英寸或 1/100) mm (。 如果不对此矩形感兴趣，请为此参数传递 NULL。
 
-## <a name="cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a>CPageSetupDialog::GetPaperSize
+## <a name="cpagesetupdialoggetpapersize"></a><a name="getpapersize"></a> CPageSetupDialog::GetPaperSize
 
 调用此函数可检索选定要打印的纸张的大小。
 
@@ -277,9 +278,9 @@ CSize GetPaperSize() const;
 
 ### <a name="return-value"></a>返回值
 
-一个[CSize](../../atl-mfc-shared/reference/csize-class.md)对象，该对象包含选择打印的纸张大小（1/1000 英寸或 1/100 mm）。
+[CSize](../../atl-mfc-shared/reference/csize-class.md)对象包含纸张大小 (在1/1000 英寸或 1/100 mm) 选择用于打印的纸张大小。
 
-## <a name="cpagesetupdialoggetportname"></a><a name="getportname"></a>CPageSetupDialog::GetPortName
+## <a name="cpagesetupdialoggetportname"></a><a name="getportname"></a> CPageSetupDialog::GetPortName
 
 调用后调用此函数 `DoModal` 可检索当前选定的打印机端口的名称。
 
@@ -291,7 +292,7 @@ CString GetPortName() const;
 
 当前选定的打印机端口的名称。
 
-## <a name="cpagesetupdialogm_psd"></a><a name="m_psd"></a>CPageSetupDialog：： m_psd
+## <a name="cpagesetupdialogm_psd"></a><a name="m_psd"></a> CPageSetupDialog：： m_psd
 
 PAGESETUPDLG 类型的结构，其成员存储对话框对象的特征。
 
@@ -305,11 +306,11 @@ PAGESETUPDLG m_psd;
 
 如果 `m_psd` 直接修改数据成员，将重写任何默认行为。
 
-有关[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw)结构的详细信息，请参阅 Windows SDK。
+有关 [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw) 结构的详细信息，请参阅 Windows SDK。
 
-请参阅[CPageSetupDialog：： CPageSetupDialog](#cpagesetupdialog)的示例。
+请参阅 [CPageSetupDialog：： CPageSetupDialog](#cpagesetupdialog)的示例。
 
-## <a name="cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage
+## <a name="cpagesetupdialogondrawpage"></a><a name="ondrawpage"></a> CPageSetupDialog::OnDrawPage
 
 由框架调用，用于绘制打印页的屏幕图像。
 
@@ -320,7 +321,7 @@ virtual UINT OnDrawPage(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向打印机设备上下文的指针。
@@ -341,7 +342,7 @@ virtual UINT OnDrawPage(
 - 寄信人地址表示形式的 WM_PSD_YAFULLPAGERECT 区域。 此区域延伸到示例页区域的边缘。
 
 *lpRect*<br/>
-指向包含绘图区域坐标的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT](/windows/win32/api/windef/ns-windef-rect)对象的指针。
+指向包含绘图区域坐标的 [CRect](../../atl-mfc-shared/reference/crect-class.md) 或 [RECT](/windows/win32/api/windef/ns-windef-rect) 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -351,13 +352,13 @@ virtual UINT OnDrawPage(
 
 此图像随后会显示为 "通用 OLE 页面设置" 对话框的一部分。 默认实现绘制文本页的图像。
 
-重写此函数以自定义图像的特定区域或整个图像的绘制。 可以通过使用语句来 **`switch`** **`case`** 检查*n 消息*的值，来实现此目的。 例如，若要自定义页面图像内容的呈现，可以使用以下示例代码：
+重写此函数以自定义图像的特定区域或整个图像的绘制。 可以通过使用语句来 **`switch`** **`case`** 检查 *n 消息* 的值，来实现此目的。 例如，若要自定义页面图像内容的呈现，可以使用以下示例代码：
 
 [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]
 
-请注意，不需要处理*n 消息*的每种情况。 你可以选择处理图像的一个组件、图像的多个组件或整个区域。
+请注意，不需要处理 *n 消息* 的每种情况。 你可以选择处理图像的一个组件、图像的多个组件或整个区域。
 
-## <a name="cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a>CPageSetupDialog：:P reDrawPage
+## <a name="cpagesetupdialogpredrawpage"></a><a name="predrawpage"></a> CPageSetupDialog：:P reDrawPage
 
 在绘制打印页的屏幕图像之前由框架调用。
 
@@ -368,32 +369,32 @@ virtual UINT PreDrawPage(
     LPPAGESETUPDLG pPSD);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wPaper*<br/>
-指定一个值，该值指示纸张大小。 此值可以是[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)结构的说明中列出的**DMPAPER_** 值之一。
+指定一个值，该值指示纸张大小。 此值可以是 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)结构的说明中列出的 **DMPAPER_** 值之一。
 
 *wFlags*<br/>
-指示纸张或信封的方向，以及打印机是点阵还是 HPPCL （Hewlett Packard Printer Control Language）设备。 此参数可以具有下列值之一：
+指示纸张或信封的方向，以及打印机是点阵还是 HPPCL (Hewlett Packard Printer Control Language) 设备。 此参数可以具有下列值之一：
 
-- 横向模式下的0x001 纸（点阵）
+- 横向模式下的0x001 纸张 (点阵) 
 
-- 横向模式下的0x003 纸（HPPCL）
+- 横向模式下的0x003 纸张 (HPPCL) 
 
-- 纵向模式下的0x005 纸（点阵）
+-  (点阵) 纵向模式下的0x005 纸
 
-- 纵向模式下的0x007 纸（HPPCL）
+- 纵向模式下的0x007 纸张 (HPPCL) 
 
-- 横向模式下的0x00b 信封（HPPCL）
+- 横向模式下的0x00b 信封 (HPPCL) 
 
-- 纵向模式下的0x00d 信封（点阵）
+-  (点阵) 纵向模式下的0x00d 信封
 
-- 横向模式下的0x019 信封（点阵）
+- 横向模式下的0x019 信封 (点阵) 
 
-- 纵向模式下的0x01f 信封（点阵）
+-  (点阵) 纵向模式下的0x01f 信封
 
 *pPSD*<br/>
-指向 `PAGESETUPDLG` 结构的指针。 有关[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw)的详细信息，请参阅 Windows SDK。
+指向 `PAGESETUPDLG` 结构的指针。 有关 [PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-pagesetupdlgw)的详细信息，请参阅 Windows SDK。
 
 ### <a name="return-value"></a>返回值
 
@@ -403,7 +404,7 @@ virtual UINT PreDrawPage(
 
 重写此函数以自定义图像的绘图。 如果重写此函数并返回 TRUE，则必须绘制整个图像。 如果重写此函数并返回 FALSE，则框架将绘制整个默认图像。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例写字板](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog 类](../../mfc/reference/ccommondialog-class.md)<br/>

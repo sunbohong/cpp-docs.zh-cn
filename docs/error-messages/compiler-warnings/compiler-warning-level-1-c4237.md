@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4237
 title: 编译器警告（等级 1）C4237
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4237
 ms.assetid: f2e86c4b-80d8-460e-9429-83c5f3f5d7ca
-ms.openlocfilehash: 31ceb972edf975055f930d4ff70a6663a5760922
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a83c40d54a5bd711fbc399ac4880a211f3cf9bd7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80163253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266242"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>编译器警告（等级 1）C4237
 
 "关键字" 关键字目前尚不受支持，但保留以供将来使用
 
-该C++规范中的关键字未在 Microsoft C++编译器中实现，但关键字不可用作用户定义的符号。
+C + + 规范中的关键字未在 Microsoft c + + 编译器中实现，但关键字不可用作用户定义的符号。
 
 下面的示例生成 C4237：
 

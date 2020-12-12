@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4251
 title: 编译器警告（等级 1）C4251
 ms.date: 04/21/2020
 f1_keywords:
@@ -6,36 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-ms.openlocfilehash: 9f261d3deb7f1cac8cd5c60b920e0be49bc8b7a6
-ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.openlocfilehash: 4d08462442fd64ebef85573f5d538d6a884c8131
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82032325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97266229"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>编译器警告（等级 1）C4251
 
-> '*类型*' ： 类 '*类型 1*' 需要有 dll 接口，以便类 '类型*2'* 的客户端使用 dll 接口
+> "*type*"：类 "*type1*" 需要由类 "*type2*" 的客户端使用的 dll 接口
 
 ## <a name="remarks"></a>备注
 
-为了在导出声明为[__declspec（dllexport）](../../cpp/dllexport-dllimport.md)的类时，将数据损坏的可能性降至最低，请确保：
+为了最大程度地减少将 [ (dllexport) ](../../cpp/dllexport-dllimport.md)声明为 __declspec 的类时数据损坏的可能性，请确保：
 
-- 所有静态数据都通过从 DLL 导出的函数进行访问。
+- 所有静态数据都可以通过从 DLL 导出的函数进行访问。
 
-- 类的内联方法无法修改静态数据。
+- 类的任何内联方法都不能修改静态数据。
 
-- 类中联方法不使用 CRT 函数或使用静态数据的其他库函数。 有关详细信息，请参阅通过[DLL 边界传递 CRT 对象的潜在错误](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
+- 类的任何内联方法都不使用 CRT 函数或其他使用静态数据的库函数。 有关详细信息，请参阅 [跨 DLL 边界传递 CRT 对象时出现的潜在错误](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
-- 类（无论是否内联）的函数中任何方法都无法使用 EXE 和 DLL 中的实例化具有静态数据差异的类型。
+- 类的任何方法都不 (内联或不) 是否可以使用 EXE 和 DLL 中的实例化具有静态数据差异的类型。
 
-在从 DLL 导出类时，可以避免问题：将类定义为具有虚拟函数，以及实例化和删除类型对象的函数。 然后，您可以调用类型的虚拟函数。
+从 DLL 导出类时可以避免出现问题：定义类以具有虚函数，并使用函数来实例化和删除类型的对象。 然后，就可以对类型调用虚函数。
 
-如果类派生自标准库中C++类型，编译调试版本 **（/MTd），** 以及编译器错误消息引用`_Container_base`的位置，则可以忽略 C4251。
+如果类是从 c + + 标准库中的类型派生的，则可以忽略 C4251，而是编译调试版本 (**/MTd**) ，以及编译器错误消息所引用的位置 `_Container_base` 。
 
 ## <a name="example"></a>示例
 
-此示例导出派生自`VecWrapper``std::vector`的专用类。
+此示例导出 `VecWrapper` 派生自的专用类 `std::vector` 。
 
 ```cpp
 // C4251.cpp

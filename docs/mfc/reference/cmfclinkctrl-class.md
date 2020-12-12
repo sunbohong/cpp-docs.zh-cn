@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCLinkCtrl 类
 title: CMFCLinkCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 79edff8be6e2c37baa938fc5b624253932609e17
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 6951f086ac99c4b8a8260a79ee08d54476694350
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754244"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97265215"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 类
 
-类`CMFCLinkCtrl`将显示一个按钮作为超链接，并在单击按钮时调用链接的目标。
+`CMFCLinkCtrl`类在单击按钮时，将按钮显示为超链接并调用链接的目标。
 
 ## <a name="syntax"></a>语法
 
@@ -35,25 +36,25 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFCLinkCtrl：：SetURL](#seturl)|将指定的 URL 显示为按钮文本。|
-|[CMFCLinkCtrl：：设置URL前缀](#seturlprefix)|设置 URL 的隐式协议（例如"http："）。|
-|[CMFClinkctrl：：大小到内容](#sizetocontent)|调整按钮的大小以包含按钮文本或位图。|
+|[CMFCLinkCtrl：： SetURL](#seturl)|显示指定的 URL 作为按钮文本。|
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|设置隐式协议 (例如，URL 的 "http：" ) 。|
+|[CMFCLinkCtrl：： System.windows.window.sizetocontent](#sizetocontent)|调整按钮的大小以包含按钮文本或位图。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CMFClinkCtrl：在Draw焦点上](#ondrawfocusrect)|在绘制按钮的焦点矩形之前由框架调用。|
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|在绘制按钮的聚焦框之前由框架调用。|
 
 ## <a name="remarks"></a>备注
 
-单击派生自类的`CMFCLinkCtrl`按钮时，框架将按钮的 URL 作为参数传递给`ShellExecute`方法。 然后，`ShellExecute`该方法将打开 URL 的目标。
+单击从类派生的按钮时 `CMFCLinkCtrl` ，框架会将该按钮的 URL 作为参数传递给 `ShellExecute` 方法。 然后， `ShellExecute` 方法会打开 URL 的目标。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何设置`CMFCLinkCtrl`对象的大小，以及如何在`CMFCLinkCtrl`对象中设置 URL 和工具提示。 此示例是["新控件"示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何设置对象的大小 `CMFCLinkCtrl` ，以及如何在对象中设置 url 和工具提示 `CMFCLinkCtrl` 。 此示例是 [新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
@@ -74,11 +75,11 @@ class CMFCLinkCtrl : public CMFCButton
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxlinkctrl.h
+**标头：** afxlinkctrl
 
-## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFClinkCtrl：在Draw焦点上
+## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a> CMFCLinkCtrl::OnDrawFocusRect
 
-在绘制按钮的焦点矩形之前由框架调用。
+在绘制按钮的聚焦框之前由框架调用。
 
 ```
 virtual void OnDrawFocusRect(
@@ -86,51 +87,51 @@ virtual void OnDrawFocusRect(
     const CRect& rectClient);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]指向设备上下文的指针。
+中指向设备上下文的指针。
 
 *rectClient*<br/>
-[在]绑定链接控件的矩形。
+中限定链接控件的矩形。
 
 ### <a name="remarks"></a>备注
 
-如果要使用自己的代码绘制按钮的焦点矩形，请重写此方法。
+如果要使用自己的代码绘制按钮的聚焦框，请重写此方法。
 
-## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl：：SetURL
+## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a> CMFCLinkCtrl：： SetURL
 
-将指定的 URL 显示为按钮文本。
+显示指定的 URL 作为按钮文本。
 
 ```cpp
 void SetURL(LPCTSTR lpszURL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszURL*<br/>
-[在]要显示的按钮文本。
+中要显示的按钮文本。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl：：设置URL前缀
+## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a> CMFCLinkCtrl::SetURLPrefix
 
-设置 URL 的隐式协议（例如"http："）。
+设置隐式协议 (例如，URL 的 "http：" ) 。
 
 ```cpp
 void SetURLPrefix(LPCTSTR lpszPrefix);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPrefix*<br/>
-[在]URL 协议的前缀。
+中URL 协议的前缀。
 
 ### <a name="remarks"></a>备注
 
-使用此方法设置 URL 前缀。 前缀不显示在按钮的表面上，但您可以使用它帮助浏览到 URL 的目标。
+使用此方法可设置 URL 前缀。 该前缀不显示在按钮的图符上，但你可以使用它来帮助浏览到 URL 的目标。
 
-## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFClinkctrl：：大小到内容
+## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a> CMFCLinkCtrl：： System.windows.window.sizetocontent
 
 调整按钮的大小以包含按钮文本或位图。
 
@@ -140,23 +141,23 @@ virtual CSize SizeToContent(
     BOOL bHCenter=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*bV中心*<br/>
-[在]TRUE 将按钮文本和位图垂直居中，在链接控件的顶部和底部之间;否则，FALSE。 默认值是 FALSE。
+*bVCenter*<br/>
+中如果为 TRUE，则在链接控件的顶部和底部之间垂直居中放置按钮文本和位图;否则为 FALSE。 默认值是 FALSE。
 
-*bH中心*<br/>
-[在]TRUE 将按钮文本和位图水平居中，水平位于链接控件的左右两侧;否则，FALSE。 默认值是 FALSE。
+*bHCenter*<br/>
+中如果为 TRUE，则在链接控件的左侧和右侧之间水平居中放置按钮文本和位图;否则为 FALSE。 默认值是 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-包含链接控件的新大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)对象。
+一个 [CSize](../../atl-mfc-shared/reference/csize-class.md) 对象，它包含链接控件的新大小。
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
-[链接课程](../../mfc/reference/clinkctrl-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CLinkCtrl 类](../../mfc/reference/clinkctrl-class.md)<br/>
 [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)

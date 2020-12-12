@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3556
 title: 编译器错误 C3556
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3556
 ms.assetid: 9b002dcc-494e-414f-9587-20c2a0a39333
-ms.openlocfilehash: 50f97c4360080f1271d9decc3b3460c06f3fec0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b608e67958757c3e31a64fcf41954b056d6af404
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230813"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262394"
 ---
 # <a name="compiler-error-c3556"></a>编译器错误 C3556
 
 > "*expression*"： "decltype" 的参数不正确
 
-编译器无法推导作为 `decltype(` *表达式*类型说明符的参数的表达式的类型 `)` 。
+编译器无法推导作为 `decltype(` *表达式* 类型说明符的参数的表达式的类型 `)` 。
 
 ## <a name="example"></a>示例
 

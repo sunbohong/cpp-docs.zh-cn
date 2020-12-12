@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3615
 title: 编译器错误 C3615
 ms.date: 10/24/2017
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-ms.openlocfilehash: 17a210e2a514af1ffd62bf38651c4d17bd1fe32b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f3b95b96ff10a99f3ebeac1bc3b19f759dd0ab7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262277"
 ---
 # <a name="compiler-error-c3615"></a>编译器错误 C3615
 
 > constexpr 函数 "*function*" 不能导致常量表达式
 
-函数*函数*在编译时无法计算为 **`constexpr`** 。 为 **`constexpr`** ，函数只能调用其他 **`constexpr`** 函数。
+函数 *函数* 在编译时无法计算为 **`constexpr`** 。 为 **`constexpr`** ，函数只能调用其他 **`constexpr`** 函数。
 
 ## <a name="example"></a>示例
 
