@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息：查找按钮
 title: “查找”按钮
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Look Up button
 ms.assetid: 61da61ec-5bb5-462a-85ef-501df5e93551
-ms.openlocfilehash: 22d6fc2f63fa7d6e37e44c660247ac7399cb218b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8a19b6e6a7854e31616ccae65dc757d2fbd3fea1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342340"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190843"
 ---
 # <a name="look-up-button"></a>“查找”按钮
 
-单击**查找**以检索与输入的系统或模块值相对应的错误消息。 以十六进制还是以十进制形式 （包括负十进制值），可以输入值。 中列出的模块**用于错误搜索的其他模块**还可搜索对话框。
+单击 " **查找** " 以检索与输入的系统或模块值相对应的错误消息。 可采用十六进制或小数形式输入值 (包括) 的负小数值。 还搜索 " **用于错误搜索的附加模块** " 对话框中列出的模块。
 
 ## <a name="see-also"></a>请参阅
 
-[“值”编辑控件](value-edit-control.md)
+[值编辑控件](value-edit-control.md)

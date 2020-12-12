@@ -1,38 +1,39 @@
 ---
+description: 了解详细信息：字节索引
 title: 字节索引
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MBCS [C++], byte indices
 - byte indices [C++]
 ms.assetid: f6e7774a-86c6-41c2-89e3-74fd46432e47
-ms.openlocfilehash: 5305a977c23d7a978a89c84809cc6fab8c5731eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ee4b2cb8611893c71f5c6597e619cc73e2848ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410715"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187554"
 ---
 # <a name="byte-indices"></a>字节索引
 
 使用以下提示：
 
-- 使用转换为字符串的字节索引带来了问题类似于所引起的指针操作。 请考虑此扫描字符串以反斜杠字符的示例：
+- 在字符串中使用 bytewise 索引会引发类似于指针操作所引起的问题。 请考虑以下示例，该示例将扫描字符串以查找反斜杠字符：
 
     ```cpp
     while ( rgch[ i ] != '\\' )
         i++;
     ```
 
-   这可能会编制索引结尾字节，前导字节，并因此它可能不指向`character`。
+   这可能会索引尾字节，而不是前导字节，因此它可能不指向 `character` 。
 
-- 使用[_mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)函数来解决上述问题：
+- 使用 [_mbclen](../c-runtime-library/reference/mbclen-mblen-mblen-l.md) 函数解决上述问题：
 
     ```cpp
     while ( rgch[ i ] != '\\' )
         i += _mbclen ( rgch + i );
     ```
 
-   它正确地索引前导字节，因此到`character`。 `_mbclen`函数确定字符 （1 或 2 个字节） 的大小。
+   此索引会正确地索引到前导字节，因此是 `character` 。 `_mbclen`函数确定字符的大小 (1 或2字节) 。
 
 ## <a name="see-also"></a>请参阅
 

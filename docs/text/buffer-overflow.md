@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：缓冲区溢出
 title: 缓冲区溢出
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-ms.openlocfilehash: 71877ed770384190cb7f856567d9e7e845e3da19
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17da102b9a48a34d9879c08f0470ced3852ed0ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187593"
 ---
 # <a name="buffer-overflow"></a>缓冲区溢出
 
@@ -53,6 +54,6 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MBCS 编程提示](../text/mbcs-programming-tips.md)

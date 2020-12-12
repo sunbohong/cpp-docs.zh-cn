@@ -1,24 +1,25 @@
 ---
+description: 了解更多相关信息：字符集可移植性的优点
 title: 字符集可迁移性的好处
 ms.date: 11/04/2016
 helpviewer_keywords:
 - character sets [C++], benefits
 - portability [C++], character sets
 ms.assetid: bd60b925-1498-4e4f-897b-4c8ce66edcf7
-ms.openlocfilehash: 0ca7e46cabb2d98a64a244863f8574a3e9e2a456
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32d78e6a230d664970e819f766d70beb1df52a88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187619"
 ---
 # <a name="benefits-of-character-set-portability"></a>字符集可迁移性的好处
 
-您可以使用 MFC 和 C 运行时可移植性功能，即使您不目前打算国际化应用程序中受益：
+即使您当前不打算国际化您的应用程序，您也可以从使用 MFC 和 C 运行时可移植性功能中获益：
 
-- 移植编码使基本代码的灵活性。 你可以稍后它轻松转移到 Unicode 或 MBCS。
+- 编码移植使基本代码变得灵活。 稍后可以轻松地将其移动到 Unicode 或 MBCS。
 
-- 使用 Unicode 使 Windows 应用程序更高效。 由于 Windows 使用 Unicode，因此必须转换传递到和从操作系统的非 Unicode 字符串，这可能会产生开销。
+- 使用 Unicode 使应用程序更有效。 由于 Windows 使用 Unicode，因此必须转换向操作系统传递的非 Unicode 字符串，这会产生开销。
 
 ## <a name="see-also"></a>请参阅
 

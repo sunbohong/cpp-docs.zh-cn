@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Microsoft C 和 c + + 扩展
 title: Microsoft C 和 C++ 扩展
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fac6edbdfd559f3cebd18dcdc3b8cfca2a9336dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190687"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft C 和 C++ 扩展
 
@@ -42,11 +43,11 @@ Visual C++ 按如下方式扩展 ANSI C 和 ANSI C++ 标准。
 
 ## <a name="keywords"></a>关键字
 
-添加了几个关键字。 在[关键字](../../cpp/keywords-cpp.md)列表中，具有两个前导下划线的关键字是 Visual C++ 扩展。
+添加了几个关键字。 在 [关键字](../../cpp/keywords-cpp.md)列表中，具有两个前导下划线的关键字是 Visual C++ 扩展。
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>静态常量整型（或枚举）成员的类定义
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>静态 const 整型的类定义 (或枚举) 成员
 
-在标准（**/za**）下，必须为数据成员生成类外定义，如下所示：
+在标准 (**/za**) 下，必须为数据成员生成类外定义，如下所示：
 
 ```cpp
 class CMyClass  {
@@ -57,9 +58,9 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-在 **/ze**下，类外定义对于 static、const 整型和 const 枚举数据成员是可选的。 在类中，只有静态和常量类型的整数和枚举可以有初始值；初始化表达式必须是常量表达式。
+在 **/ze** 下，类外定义对于 static、const 整型和 const 枚举数据成员是可选的。 在类中，只有静态和常量类型的整数和枚举可以有初始值；初始化表达式必须是常量表达式。
 
-若要避免在标头文件中提供类外定义且标头文件包含在多个源文件中时出现错误，请使用[selectany](../../cpp/selectany.md)。 例如：
+若要避免在标头文件中提供类外定义且标头文件包含在多个源文件中时出现错误，请使用 [selectany](../../cpp/selectany.md)。 例如：
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -117,7 +118,7 @@ C 编译器支持单行注释，它是使用两个正斜杠 (//) 字符引入的
 // This is a single-line comment.
 ```
 
-## <a name="scope"></a>作用域
+## <a name="scope"></a>范围
 
 C 编译器支持以下范围相关功能。
 
@@ -200,7 +201,7 @@ C 编译器支持以下数据声明和定义功能。
    };
    ```
 
-- 未命名（匿名）结构：
+- 匿名) 结构的未命名 (：
 
    ```C
    struct
@@ -210,7 +211,7 @@ C 编译器支持以下数据声明和定义功能。
    };
    ```
 
-- 未命名（匿名）联合：
+- 未命名 (匿名) 联合：
 
    ```C
    union
@@ -232,11 +233,11 @@ C 编译器支持以下数据声明和定义功能。
 
 ## <a name="intrinsic-floating-point-functions"></a>内部浮点函数
 
-`atan` `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` `tan` 当指定 **/Oi**时，x86 c + + 编译器和 C 编译器都支持、、、、、、、和函数的内联生成。 对于 C 编译器，使用这些内部函数时将违反 ANSI，因为它们没有设置 `errno` 变量。
+`atan` `atan2` `cos` `exp` `log` `log10` `sin` `sqrt` `tan` 当指定 **/Oi** 时，x86 c + + 编译器和 C 编译器都支持、、、、、、、和函数的内联生成。 对于 C 编译器，使用这些内部函数时将违反 ANSI，因为它们没有设置 `errno` 变量。
 
 ## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>向需要引用常量指针参数的函数传递一个非常量指针参数
 
-这是 c + + 的扩展。 此代码将用 **/ze**编译：
+这是 c + + 的扩展。 此代码将用 **/ze** 编译：
 
 ```cpp
 typedef   int   T;
@@ -260,33 +261,33 @@ void func ()
 
 ## <a name="iso646h-not-enabled"></a>ISO646.H 未启用
 
-在 **/ze**下，如果要使用以下运算符的文本格式，则必须包含 iso646：
+在 **/ze** 下，如果要使用以下运算符的文本格式，则必须包含 iso646：
 
 - &&（与）
 
-- &= （and_eq）
+- &= (and_eq) 
 
-- & （bitand）
+- & (bitand) 
 
-- &#124; （bitor）
+- &#124; (bitor) 
 
-- ~ （compl）
+- ~ (compl) 
 
-- ! 不仅
+- !  (未) 
 
-- ！ = （not_eq）
+- ！ = (not_eq) 
 
 - &#124;&#124;（或）
 
-- &#124;= （or_eq）
+- &#124;= (or_eq) 
 
-- ^ （xor）
+- ^ (xor) 
 
-- ^ = （xor_eq）
+- ^ = (xor_eq) 
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>字符串的地址具有类型 const char []，而不是常量 char （*） []
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>字符串的地址具有类型 const char []，而不是 const char ( * ) []
 
-下面的示例将 `char const (*)[4]` 在 **/za**下输出，但 `char const [4]` 在 **/ze**下输出。
+下面的示例将 `char const (*)[4]` 在 **/za** 下输出，但 `char const [4]` 在 **/ze** 下输出。
 
 ```cpp
 #include <stdio.h>
@@ -298,8 +299,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-- [/Za、/Ze （禁用语言扩展）](za-ze-disable-language-extensions.md)
+- [/Za、/Ze (禁用语言扩展) ](za-ze-disable-language-extensions.md)
 - [MSVC 编译器选项](compiler-options.md)
-- [MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+- [MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

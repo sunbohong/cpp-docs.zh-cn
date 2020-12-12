@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：多个内联文件
 title: 多内联文件
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - multiple inline files
 - NMAKE program, inline files
 ms.assetid: 6d381dcf-0ed8-45d1-8df3-b4598d860b99
-ms.openlocfilehash: 71f17ff6717e717693facb21b4a4341a040b14c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d739591910007f69eca5d4834f6943ae0a0082ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190596"
 ---
 # <a name="multiple-inline-files"></a>多内联文件
 
-命令可以创建多个内联文件。
+命令可创建多个内联文件。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +30,7 @@ inlinetext
 
 ## <a name="remarks"></a>备注
 
-对于每个文件，请指定一个或多个行包含分隔符的结束行后跟的内联文本。 开始后的第一个文件的分隔行的行上的第二个文件的文本。
+对于每个文件，指定一个或多个内联文本行，后跟包含分隔符的结束行。 在第一个文件的分隔行后的行上，开始第二个文件的文本。
 
 ## <a name="see-also"></a>请参阅
 

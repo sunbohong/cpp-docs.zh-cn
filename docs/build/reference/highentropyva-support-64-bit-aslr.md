@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：/HIGHENTROPYVA (支持64位 ASLR) '
 title: /HIGHENTROPYVA（支持 64 位 ASLR）
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-ms.openlocfilehash: ead296b1bd31171fb1a187685f407f6a0cf8a74c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aed5d5eea2d3351d4eff88a58818a953563ba0e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191545"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA（支持 64 位 ASLR）
 
@@ -17,7 +18,7 @@ ms.locfileid: "88835020"
 
 > **`/HIGHENTROPYVA`**[**`:NO`**]
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **`/HIGHENTROPYVA`** 修改 *可执行图像* 文件的标头 (例如， *`.dll`* 或 *`.exe`* 文件) ，以指示 ASLR 是否可以使用整个64位地址空间。  若要获得效果，请在可执行文件和它所依赖的所有模块上都设置选项。 然后，支持64位 ASLR 的操作系统可在加载时使用64位随机虚拟地址来变基可执行映像的段。 更大的地址空间使攻击者更难猜到特定内存区域的位置。
 
@@ -27,13 +28,13 @@ ms.locfileid: "88835020"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中设置此链接器选项
 
-1. 打开项目“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择 "**配置属性**  >  **链接器**  >  **命令行**" 属性页。
+1. 选择“配置属性” > “链接器” > “命令行”属性页    。
 
 1. 在 " **其他选项**" 中，输入 `/HIGHENTROPYVA` 或 `/HIGHENTROPYVA:NO` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSVC 链接器参考](linking.md)
 - [MSVC 链接器选项](linker-options.md)

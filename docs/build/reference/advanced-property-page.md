@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： "高级" 属性页
 title: "\"高级\" 属性页 (项目) "
 ms.date: 08/10/2020
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: 3b1e45f984cd40d6ea42ead25b045fc8688ad0a7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 916c1f341d148a0f6b426ddf3c31e0d20c59a29c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187307"
 ---
 # <a name="advanced-property-page"></a>"高级" 属性页
 
@@ -31,7 +32,7 @@ Visual Studio 2019 和更高版本中提供了 "高级" 属性页。
 
 - **清除时要删除的扩展名**
 
-   “清理”选项（“生成”菜单）从生成项目的配置的中间目录中删除文件  。 此属性中指定的扩展名的文件将在运行 " **清理** " 或重新生成时被删除。 生成系统删除中间目录中具有这些扩展名的任何文件。 它还会删除任何已知的生成输出，无论其位于何处。  (包含中间输出，如 *`.obj`* 文件。 ) 可以在此属性中指定通配符。
+   “清理”选项（“生成”菜单）从生成项目的配置的中间目录中删除文件。 此属性中指定的扩展名的文件将在运行 " **清理** " 或重新生成时被删除。 生成系统删除中间目录中具有这些扩展名的任何文件。 它还会删除任何已知的生成输出，无论其位于何处。  (包含中间输出，如 *`.obj`* 文件。 ) 可以在此属性中指定通配符。
 
    若要以编程方式访问此属性，请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.DeleteExtensionsOnClean%2A>。
 

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/IGNORE (忽略特定警告) '
 title: /IGNORE（忽略特定警告）
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
-ms.openlocfilehash: 4ed87a1a12bea189f56545cf5256351a29977643
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7098515a65981ffcdf60b5b517d2434d20e7c015
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040257"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191324"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE（忽略特定警告）
 
@@ -19,7 +20,7 @@ ms.locfileid: "90040257"
 /IGNORE:warning[,warning]
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 *warning*<br/>
 要禁止显示的链接器警告编号，在 4000 到 4999 的范围内。
@@ -28,7 +29,7 @@ ms.locfileid: "90040257"
 
 默认情况下，链接会报告所有警告。 指定 **/IGNORE：** `warning` 通知链接器禁止显示特定警告编号。 若要忽略多个警告，请用逗号分隔警告编号。
 
-链接器不允许忽略某些警告。 此表列出了 **/IGNORE**未禁止显示的警告：
+链接器不允许忽略某些警告。 此表列出了 **/IGNORE** 未禁止显示的警告：
 
 | 链接器警告 | Message |
 |--------------------|-|

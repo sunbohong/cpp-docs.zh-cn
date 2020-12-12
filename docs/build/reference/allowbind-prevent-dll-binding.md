@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/ALLOWBIND (阻止 DLL 绑定) '
 title: /ALLOWBIND（禁止 DLL 绑定）
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: d963a7145ab2e8c8872dc21c485bdc8f877b0b76
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 727f1cae7d1b0a94a8f7faba90ee6994df8657e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187229"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND（禁止 DLL 绑定）
 
@@ -29,15 +30,15 @@ ms.locfileid: "69493147"
 
 /ALLOWBIND:NO 在 DLL 的标头中设置一个位，向 Bind.exe 指示不允许绑定图像。 如果 DLL 已经进行数字签名（绑定使签名无效），可能不需要绑定 DLL。
 
-可以使用 EDITBIN 实用工具的[/ALLOWBIND](allowbind.md)选项编辑/ALLOWBIND 功能的现有 DLL。
+可以使用 EDITBIN 实用工具的 [/ALLOWBIND](allowbind.md) 选项编辑/ALLOWBIND 功能的现有 DLL。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 展开 "**配置属性**"、"**链接器**", 然后选择 "**命令行**"。
+1. 展开 " **配置属性**"、" **链接器**"，然后选择 " **命令行**"。
 
-1. 输入`/ALLOWBIND:NO` **其他选项**。
+1. 输入 `/ALLOWBIND:NO` **其他选项**。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

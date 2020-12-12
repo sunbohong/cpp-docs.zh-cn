@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：严重错误 C1083
 title: 错误 C1083
 ms.date: 09/01/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-ms.openlocfilehash: 57ae8f2d0b7f02732032151f86617498e5201c61
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5a2a0cb842b385963f4f4695a2289abc1c07a702
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189621"
 ---
 # <a name="fatal-error-c1083"></a>错误 C1083
 
@@ -21,7 +22,7 @@ ms.locfileid: "91509755"
 
 ## <a name="the-specified-file-name-is-wrong"></a>指定的文件名错误
 
-文件名可能键入有误。 例如，
+文件名可能键入有误。 例如，应用于对象的
 
 `#include <algorithm.h>`
 
@@ -67,11 +68,11 @@ ms.locfileid: "91509755"
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>文件在你的项目中，但不包含搜索路径
 
-即使头文件作为项目的一部分列在 **解决方案资源管理器** 中，这些文件仅在源文件中由或指令引用时才由编译器找到 `#include` `#import` ，并且位于包含搜索路径中。 不同种类的生成可能会使用不同搜索路径。 **`/X`** 编译器选项可用于排除包含搜索路径中的目录。 这样不同的生成就可以使用具有相同名称、但保存在不同目录中的不同包含文件。 这是使用预处理器命令进行的条件编译的替代方法。 有关编译器选项的详细信息 **`/X`** ，请参阅[ `/X` (忽略标准包含路径) ](../../build/reference/x-ignore-standard-include-paths.md)。
+即使头文件作为项目的一部分列在 **解决方案资源管理器** 中，这些文件仅在源文件中由或指令引用时才由编译器找到 `#include` `#import` ，并且位于包含搜索路径中。 不同种类的生成可能会使用不同搜索路径。 **`/X`** 编译器选项可用于排除包含搜索路径中的目录。 这样不同的生成就可以使用具有相同名称、但保存在不同目录中的不同包含文件。 这是使用预处理器命令进行的条件编译的替代方法。 有关编译器选项的详细信息 **`/X`** ，请参阅 [ `/X` (忽略标准包含路径)](../../build/reference/x-ignore-standard-include-paths.md)。
 
 若要修复此问题，请更改编译器用于搜索包含或导入的文件的路径。 新项目使用默认的包含搜索路径。 可能需要修改包含搜索路径才能为项目添加目录。 如果要在命令行上进行编译，请将路径添加到 **INCLUDE** 环境变量或 **`/I`** 编译器选项，以指定文件的路径。
 
-若要在 Visual Studio 中设置包含目录路径，请打开项目的 " **属性页** " 对话框。 选择左窗格中 "**配置属性**" 下的 " **VC + + 目录**"，然后编辑 "**包含目录**" 属性。 若要详细了解由编译器在 Visual Studio 中搜索的每个用户和每个项目的目录，请参阅 " [VC + + 目录" 属性页](../../build/reference/vcpp-directories-property-page.md)。 有关编译器选项的详细信息 **`/I`** ，请参阅[ `/I` (其他包含目录) ](../../build/reference/i-additional-include-directories.md)。
+若要在 Visual Studio 中设置包含目录路径，请打开项目的 " **属性页** " 对话框。 选择左窗格中 "**配置属性**" 下的 " **VC + + 目录**"，然后编辑 "**包含目录**" 属性。 若要详细了解由编译器在 Visual Studio 中搜索的每个用户和每个项目的目录，请参阅 " [VC + + 目录" 属性页](../../build/reference/vcpp-directories-property-page.md)。 有关编译器选项的详细信息 **`/I`** ，请参阅 [ `/I` (其他包含目录)](../../build/reference/i-additional-include-directories.md)。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>未设置命令行包含或 LIB 环境
 
