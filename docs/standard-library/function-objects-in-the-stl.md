@@ -1,4 +1,5 @@
 ---
+description: 详细了解： c + + 标准库中的函数对象
 title: C++ 标准库中的函数对象
 ms.date: 03/15/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: ed413b2bcdcda8f65794b10c792b10358564420a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b87db43fbaabf1e9be18c56185ee190e3b2cbcac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324247"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 标准库中的函数对象
 
@@ -43,7 +44,7 @@ int main()
 }
 ```
 
-`main` 函数的最后一行显示了函数对象的调用方式。 此调用看起来像是对函数的调用，但实际上它调用的是函子类型的 operator （）。 调用函数对象和函数之间的相似性在于生成术语函数对象的方式。
+`main` 函数的最后一行显示了函数对象的调用方式。 此调用看起来像是对函数的调用，但实际上它调用的是函子类型 ( # A1 中的运算符。 调用函数对象和函数之间的相似性在于生成术语函数对象的方式。
 
 ## <a name="function-objects-and-containers"></a>函数对象和容器
 
@@ -72,6 +73,6 @@ ForwardIterator remove_if(
 
 `remove_if` 的最后一个参数是返回布尔值（一个 *谓词*）的函数对象。 如果函数对象的结果是 **`true`** ，则将从迭代器和正在访问的容器中删除元素 `first` `last` 。 您可以使用在该参数的标头中声明的任何函数对象， [\<functional>](../standard-library/functional.md) 也可以创建自己的函数对象 `pred` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

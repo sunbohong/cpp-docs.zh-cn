@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： gslice 类
 title: gslice 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::gslice [C++], start
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
-ms.openlocfilehash: 07c987fb08a213bb66da628bec3021a3bf9ba24a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 92bb8d56df40a7d59c5414aca3e0d5846401e805
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370623"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324143"
 ---
 # <a name="gslice-class"></a>gslice 类
 
@@ -25,13 +26,13 @@ ms.locfileid: "81370623"
 
 ## <a name="remarks"></a>备注
 
-类用于存储确定类型 [gslice_array](../standard-library/gslice-array-class.md) 对象的参数。 当类 gslice 的对象显示为类数组**\<类型的对象>** 的参数时，将间接构造[valarray](../standard-library/valarray-class.md#op_at)的子集。 存储的值（用于指定从父级 valarray 选择的子集）包括：
+类用于存储确定类型 [gslice_array](../standard-library/gslice-array-class.md) 对象的参数。 当类 gslice 的对象显示为类 [valarray](../standard-library/valarray-class.md#op_at)的对象的参数时，将间接构造 valarray 的子集 **\<Type>** 。 存储的值（用于指定从父级 valarray 选择的子集）包括：
 
 - 一个起始索引。
 
-- 类`valarray<size_t>`的长度矢量。
+- 类的长度向量 `valarray<size_t>` 。
 
-- 类`valarray<size_t>`的步幅矢量。
+- 类的跨距向量 `valarray<size_t>` 。
 
 两个矢量必须具有相同长度。
 
@@ -45,21 +46,21 @@ ms.locfileid: "81370623"
 |-|-|
 |[gslice](#gslice)|定义包含 `valarray` 的多个切片所有开始的指定元素 `valarray` 的子集。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
-|[大小](#size)|查找数组值指定元素个数 `valarray` 中的泛切片。|
-|[开始](#start)|查找 `valarray` 的泛切片的起始索引。|
-|[stride](#stride)|查找在 `valarray` 中的泛切片元素之间的距离。|
+|size |查找数组值指定元素个数 `valarray` 中的泛切片。|
+|[start](#start)|查找 `valarray` 的泛切片的起始索引。|
+|[长足](#stride)|查找在 `valarray` 中的泛切片元素之间的距离。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<valarray>
+**标头：**\<valarray>
 
 **命名空间:** std
 
-## <a name="gslicegslice"></a><a name="gslice"></a>gslice：：gslice
+## <a name="gslicegslice"></a><a name="gslice"></a> gslice：： gslice
 
 用于定义 valarray 多维切分的 valarray 实用程序类。
 
@@ -72,7 +73,7 @@ gslice(
     const valarray<size_t>& _IncArray);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_StartIndex*\
 子集中第一个元素的 valarray 索引。
@@ -85,11 +86,11 @@ gslice(
 
 ### <a name="return-value"></a>返回值
 
-默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数存储*起始索引_StartIndex、* 长度数组 *_LenArray*以及步长数组 *_IncArray。*
+默认构造函数对起始索引存储零，对于长度和跨距向量存储长度为零的向量。 第二个构造函数存储 *_StartIndex* 用于开始索引、长度数组 *_LenArray* ，以及 stride 数组的 *_IncArray* 。
 
 ### <a name="remarks"></a>备注
 
-**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切片具有第一个元素，索引为 *_StartIndex，* 由 *_LenArray*的第一个元素指定多个元素，以及*由_IncArray*的第一个元素给出的步长。 下一个正交切分集具有由第一个切分指定的第一个元素。 *_LenArray*的第二个元素指定元素数。 步幅由 *_IncArray*的第二个要素给出。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
+**gslice** 定义一个由多个 valarray 的切分组成的 valarray 子集，其中每个都以同一指定元素开始。 `gslice` 和 [slice::slice](../standard-library/slice-class.md#slice) 之间的唯一差别在于使用数组定义多个切分的能力。 第一个切片具有一个索引为 *_StartIndex* 的第一个元素、 *_LenArray* 的第一个元素指定的元素数，以及 *_IncArray* 的第一个元素所指定的步幅。 下一个正交切分集具有由第一个切分指定的第一个元素。 *_LenArray* 的第二个元素指定元素的数量。 跨距由 *_IncArray* 的第二个元素提供。 第三个维度的切分会将二维数组的元素视为起始元素，以此类推
 
 ### <a name="example"></a>示例
 
@@ -138,7 +139,7 @@ The valarray for vaGSlice is vaResult:
 va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```
 
-## <a name="gslicesize"></a><a name="size"></a>格切片：：大小
+## <a name="gslicesize"></a><a name="size"></a> gslice：： size
 
 查找指定 valarray 的泛切分中元素数的数组值。
 
@@ -216,7 +217,7 @@ The size of vaResult is:
 vaGSlice.size ( ) = ( 4 4 ).
 ```
 
-## <a name="gslicestart"></a><a name="start"></a>格切片：：开始
+## <a name="gslicestart"></a><a name="start"></a> gslice：： start
 
 查找 valarray 的泛切分的起始索引。
 
@@ -279,7 +280,7 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19 ).
 The index of the first element of vaResult is: 0.
 ```
 
-## <a name="gslicestride"></a><a name="stride"></a>格斯特：：步幅
+## <a name="gslicestride"></a><a name="stride"></a> gslice：： stride
 
 查找 valarray 的泛切分中元素间的距离。
 
@@ -347,6 +348,6 @@ The strides of vaResult are:
 vaGSlice.stride ( ) = ( 7 4 ).
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

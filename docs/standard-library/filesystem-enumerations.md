@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 文件系统 &gt; 枚举
 title: '&lt;filesystem&gt; 枚举'
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 3c94ec899f0ea7abf71530f6aca44638fdb216c9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 8d8320dd18f017f97442e2b88dff2775d96d3d44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324329"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 枚举
 
@@ -51,7 +52,7 @@ enum class copy_options {
 
 ### <a name="values"></a>值
 
-| 名称 | 说明 |
+| “属性” | 描述 |
 |------------|-----------------|
 |`none`|执行操作的默认行为。|
 |`skip_existing`|在文件已存在时不复制，不报告错误。|
@@ -79,7 +80,7 @@ enum class directory_options {
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`none`|默认行为：忽略指向目录的符号链接。 拒绝权限是错误。|
 |`follow_directory_symlink`|将指向目录的符号链接视为实际目录。|
@@ -107,7 +108,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|名称|值|说明|
+|“属性”|值|描述|
 |----------|-----------|-----------------|
 |`not_found`|-1|表示一个不存在的文件。|
 |`none`|0|表示一个不具有类型特性的文件。 （不支持。）|
@@ -161,7 +162,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

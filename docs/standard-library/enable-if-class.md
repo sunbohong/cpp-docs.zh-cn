@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： enable_if 类
 title: enable_if 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 1017fc315a4440350a0190cf4b40e644cda16876
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 89bd78113a9f6ea9d94a69decccd58c7953e4a8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324457"
 ---
 # <a name="enable_if-class"></a>enable_if 类
 
@@ -25,19 +26,19 @@ template <bool B, class T = void>
 struct enable_if;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *B*\
 确定存在产生的类型的值。
 
 *关心*\
-*B*为 true 时要实例化的类型。
+*B* 为 true 时要实例化的类型。
 
 ## <a name="remarks"></a>备注
 
-如果*B*为 true，则 `enable_if<B, T>` 具有名为 "type" 的嵌套 typedef，它是*T*的同义词。
+如果 *B* 为 true，则 `enable_if<B, T>` 具有名为 "type" 的嵌套 typedef，它是 *T* 的同义词。
 
-如果*B*为 false，则 `enable_if<B, T>` 不具有名为 "type" 的嵌套 typedef。
+如果 *B* 为 false，则 `enable_if<B, T>` 不具有名为 "type" 的嵌套 typedef。
 
 提供此别名模板：
 
@@ -109,7 +110,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 
 `enable_if` 功能强大，但是如果误用也会很危险。  因为其用途是使候选项在重载决策之前消失，如果误用它，产生的结果可能很容易让人产生混淆。  以下是一些建议：
 
-- 编译时，请不要使用 `enable_if` 在实现之间作出选择。 请永远都不要为 `enable_if` 编写一个 `CONDITION` 并为 `!CONDITION` 编写另一个 enable_if。  请改为使用*标记调度*模式，例如，一种根据所提供的迭代器的优点选择实现的算法。
+- 编译时，请不要使用 `enable_if` 在实现之间作出选择。 请永远都不要为 `enable_if` 编写一个 `CONDITION` 并为 `!CONDITION` 编写另一个 enable_if。  请改为使用 *标记调度* 模式，例如，一种根据所提供的迭代器的优点选择实现的算法。
 
 - 请不要使用 `enable_if` 强制执行要求。  如果要验证模板参数，并且如果验证失败，引发错误，而未选择其他实现，请使用 [static_assert](../cpp/static-assert.md)。
 
@@ -129,7 +130,7 @@ func(make_pair("foo", "bar"));
 
 在本示例中，`make_pair("foo", "bar")` 将返回 `pair<const char *, const char *>`。 重载决策必须确定你想要的 `func()`。 `pair<A, B>` 具有 `pair<X, Y>` 中的隐式转换构造函数。  这不是新内容，它在 C++98 中出现过。 但是，在 C++98/03 中，隐式转换构造函数的签名始终存在，即使它是 `pair<int, int>(const pair<const char *, const char *>&)` 也是如此。  重载决策不会注意到，尝试实例化该构造函数会发生可怕，因为 `const char *` 它不能隐式转换为 **`int`** ; 它仅在对函数定义进行实例化之前查看签名。  因此，示例代码是不明确的，因为存在可将 `pair<const char *, const char *>` 转换为 `pair<int, int>` 和 `pair<string, string>` 的签名。
 
-C++11 通过使用 `enable_if` 确保**仅**当 `const X&` 可隐式转换为 `A` 且 `const Y&` 可隐式转换为 `B` 时 `pair<A, B>(const pair<X, Y>&)` 才存在，来解决此多义性问题。  这允许重载决策确定 `pair<const char *, const char *>` 不可转换为 `pair<int, int>`，以及采用 `pair<string, string>` 的重载可行。
+C++11 通过使用 `enable_if` 确保 **仅** 当 `const X&` 可隐式转换为 `A` 且 `const Y&` 可隐式转换为 `B` 时 `pair<A, B>(const pair<X, Y>&)` 才存在，来解决此多义性问题。  这允许重载决策确定 `pair<const char *, const char *>` 不可转换为 `pair<int, int>`，以及采用 `pair<string, string>` 的重载可行。
 
 ## <a name="requirements"></a>要求
 
@@ -137,6 +138,6 @@ C++11 通过使用 `enable_if` 确保**仅**当 `const X&` 可隐式转换为 `A
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 执行&gt;
 title: '&lt;操作&gt;'
 ms.date: 04/18/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: f37458fdc0b58968e095a7c59de797eac295bde7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ea444ab2f4fcf3211e85837701a8ea6a0c3ec81f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324404"
 ---
 # <a name="ltexecutiongt"></a>&lt;操作&gt;
 
@@ -32,7 +33,7 @@ namespace std::execution {
 
 ### <a name="classes-and-structs"></a>类和结构
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[is_execution_policy 结构](is-execution-policy-struct.md)|检测执行策略，以排除其他不明确的重载决策参与的函数签名。|
 |[parallel_policy 类](parallel-policy-class.md)|用作消除并行算法重载的唯一类型，并指示并行算法的执行可能会并行化。|
@@ -45,7 +46,7 @@ namespace std::execution {
 
 **命名空间：** stdext
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)\

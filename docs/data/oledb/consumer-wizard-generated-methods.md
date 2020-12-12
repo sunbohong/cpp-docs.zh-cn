@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：使用者 Wizard-Generated 方法
 title: 使用者向导生成的方法
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 15d41aabee174a409ad11e4422292bcea5f10bbf
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 29d586a46f91e9244a09fce5628d0f3b274c554c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323282"
 ---
 # <a name="consumer-wizard-generated-methods"></a>使用者向导生成的方法
 
@@ -21,7 +22,7 @@ ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但
 
 ::: moniker range="<=msvc-150"
 
-ATL OLE DB 使用者向导  和 MFC 应用程序向导  生成一些你应该知道的函数。 由于一些方法在特性化项目中以不同方式实现，因此有几点注意事项；下面分别介绍了每种情况。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
+ATL OLE DB 使用者向导和 MFC 应用程序向导生成一些你应该知道的函数。 由于一些方法在特性化项目中以不同方式实现，因此有几点注意事项；下面分别介绍了每种情况。 有关查看插入代码的信息，请参阅 [调试插入代码](/visualstudio/debugger/how-to-debug-injected-code)。
 
 - `OpenAll` 打开数据源、行集，并在书签可用时启用书签。
 
@@ -31,7 +32,7 @@ ATL OLE DB 使用者向导  和 MFC 应用程序向导  生成一些你应该知
 
 - `GetRowsetProperties` 检索指向行集的属性集的指针，此指针可用于设置属性。
 
-- `OpenDataSource` 使用“数据链接属性”  对话框中指定的初始化字符串打开数据源。
+- `OpenDataSource` 使用“数据链接属性”对话框中指定的初始化字符串打开数据源。
 
 - `CloseDataSource` 以适当方式关闭数据源。
 
@@ -76,7 +77,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果你定义 `HasBookmark` 方法，`OpenAll` 代码设置 `DBPROP_IRowsetLocate` 属性；请确保仅在提供程序支持此属性时才这样做。
 
@@ -141,7 +142,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 不得定义全局 `GetRowsetProperties` 方法，因为它可能会与向导定义的方法冲突。 这是模板化和特性化项目随附的向导生成方法；属性不插入此代码。
 
@@ -153,7 +154,7 @@ HRESULT OpenDataSource();
 void CloseDataSource();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 向导定义了 `OpenDataSource` 和 `CloseDataSource` 方法；`OpenDataSource` 调用 [CDataSource::OpenFromInitializationString](./cdatasource-class.md#openfrominitializationstring)。
 

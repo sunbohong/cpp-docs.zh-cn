@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： MFC 使用的回调函数
 title: MFC 使用的回调函数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: 553e87320828590c9e1e9204b54622f2f1ca6d80
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 40c9fc15d6f7bc09aa991270d2f95ea5a7b2700d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040881"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322767"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回调函数
 
@@ -28,7 +29,7 @@ Microsoft 基础类库中显示了三个回调函数。 这些回调函数将传
 
 ## <a name="callback-function-for-cdcenumobjects"></a><a name="enum_objects"></a> CDC：： EnumObjects 的回调函数
 
-*ObjectFunc*名称是应用程序提供的函数名称的占位符。
+*ObjectFunc* 名称是应用程序提供的函数名称的占位符。
 
 ### <a name="syntax"></a>语法
 
@@ -38,7 +39,7 @@ int CALLBACK EXPORT ObjectFunc(
     LPSTR* lpData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszLogObject*<br/>
 指向 [LOGPEN](/windows/win32/api/Wingdi/ns-wingdi-logpen) 或 [LOGBRUSH](/windows/win32/api/wingdi/ns-wingdi-logbrush) 数据结构，该结构包含有关对象的逻辑特性的信息。
@@ -67,7 +68,7 @@ BOOL CALLBACK EXPORT OutputFunc(
     int nCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDC*<br/>
 向 `nWidth` 标识一个内存设备上下文，该上下文具有宽度和高度至少为 `nHeight` 和 `GrayString` 指定的值的位图。
@@ -98,7 +99,7 @@ BOOL CALLBACK EXPORT AbortFunc(
     int code);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hPr*<br/>
 标识设备上下文。
@@ -114,7 +115,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 
 必须按照 [CDC：： SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)的 "备注" 部分所述导出实际名称。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [结构、样式、回调和消息映射](structures-styles-callbacks-and-message-maps.md)<br/>
 [CDC：： EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>

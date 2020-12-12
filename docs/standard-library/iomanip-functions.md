@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; iomanip &gt; 函数
 title: '&lt;iomanip&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: f540b311cafd59935a9cf1e521d3dbd558f59673
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9ddcea6b524c0413bc1c68c2b75ec910b529d22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323923"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函数
 
@@ -56,7 +57,7 @@ template <class Money>
 T7 get_money(Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *间距*\
 提取的货币值。
@@ -64,7 +65,7 @@ T7 get_money(Money& amount, bool use_intl);
 *use_intl*\
 如果为 **`true`** ，则使用国际格式。 默认值为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 操控器会返回一个对象，该对象在从流中提取时 `str` ，其行为与一个 `formatted input function` ，它为 `get` 与关联的区域设置 facet 调用成员函数 `money_get` `str` ，并使用 *use_intl* 来指示国际格式。 如果成功，则调用将按提取的货币值存储 *量* 。 此操控器随后返回 `str`。
 
@@ -79,7 +80,7 @@ template <class Elem>
 T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *time_ptr*\
 时间结构形式的时间。
@@ -87,7 +88,7 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 *time_format*\
 要用于获取时间值的所需格式。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此操控器会返回一个对象，该对象在从流 `str` 中提取时会表现为 `formatted input function`，它为与 `str` 关联的区域设置 Facet `time_get` 调用成员函数 `get`，其使用 `tptr` 来指示时间结构，使用 `fmt` 来指示 null 终止格式字符串的开头。 如果成功，则调用会将与任何提取时间字段关联的值存储在时间结构中。 此操控器随后返回 `str`。
 
@@ -100,7 +101,7 @@ template <class Money>
 T8 put_money(const Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *间距*\
 要插入到流中的货币金额。
@@ -112,7 +113,7 @@ T8 put_money(const Money& amount, bool use_intl);
 
 返回 `str`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此操控器会返回一个对象，该对象在插入到流 `str` 中时会表现为一个格式化输出函数，该函数会对与 `str` 关联的区域设置 Facet `money_put` 调用成员函数 `put`。 如果成功，则调用将 `amount` 以适当的格式插入，并使用 *use_intl* 来指示国际格式，并将 `str.fill()` 用作填充元素。 此操控器随后返回 `str`。
 
@@ -127,7 +128,7 @@ template <class Elem>
 T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *time_ptr*\
 时间结构中提供的要写入到流中的时间值。
@@ -135,7 +136,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 *time_format*\
 用来写入时间值的所需格式。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 操控器返回一个对象，该对象在插入到流 `str` 中时会表现为 `formatted output function`。 此输出函数会对与 `str` 关联的区域设置 Facet `time_put` 调用成员函数 `put`。 Output 函数使用 *time_ptr* 来指示时间结构，并 *time_format* 以指示以 null 结尾的格式字符串的开头。 如果成功，则调用会从格式字符串插入文字文本，从时间结构插入转换的值。 此操控器随后返回 `str`。
 
@@ -150,7 +151,7 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *字符串*\
 Std：： string、char \* 、字符串文本或原始字符串文本或其任意 (（例如 std：： wstring、wchar_t) ）的广泛版本。 \*
@@ -161,7 +162,7 @@ Std：： string、char \* 、字符串文本或原始字符串文本或其任�
 *esc*\
 一个用户指定的字符或宽字符，用作字符串内转义序列的转义字符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请参阅[使用插入运算符并控制格式](../standard-library/using-insertion-operators-and-controlling-format.md)。
 
@@ -314,7 +315,7 @@ Press Enter to exit
 T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *掩盖*\
 要清除的标志。
@@ -335,7 +336,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 T3 setbase(int base);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *基座*\
 数基。
@@ -344,13 +345,13 @@ T3 setbase(int base);
 
 操控器返回一个对象，该对象在从流中提取或插入到流 `str` 中时调用 `str.setf(mask,` [ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags) `)` ，然后返回 `str` 。 此处 `mask` 确定了以下内容：
 
-- 如果*基数*为8，则 `mask` 为 `ios_base::` [oct](../standard-library/ios-functions.md#oct)。
+- 如果 *基数* 为8，则 `mask` 为 `ios_base::` [oct](../standard-library/ios-functions.md#oct)。
 
-- 如果*base*是10，则 mask 是 `ios_base::` [dec](../standard-library/ios-functions.md#dec)。
+- 如果 *base* 是10，则 mask 是 `ios_base::` [dec](../standard-library/ios-functions.md#dec)。
 
-- 如果*base*为16，则 `mask` 是 `ios_base::` [十六进制](../standard-library/ios-functions.md#hex)。
+- 如果 *base* 为16，则 `mask` 是 `ios_base::` [十六进制](../standard-library/ios-functions.md#hex)。
 
-- 如果*base*为其他任何值，则 mask 为 `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags) `(0)` 。
+- 如果 *base* 为其他任何值，则 mask 为 `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags) `(0)` 。
 
 ### <a name="example"></a>示例
 
@@ -365,7 +366,7 @@ template <class Elem>
 T4 setfill(Elem Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 用于在右对齐显示中填充空格的字符。
@@ -386,7 +387,7 @@ T4 setfill(Elem Ch);
 T2 setiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *掩盖*\
 要设置的标志。
@@ -407,7 +408,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 T5 setprecision(streamsize Prec);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Prec*\
 浮点值的精度。
@@ -428,7 +429,7 @@ T5 setprecision(streamsize Prec);
 T6 setw(streamsize Wide);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *种类*\
 显示字段的宽度。
@@ -437,7 +438,7 @@ T6 setw(streamsize Wide);
 
 操控器返回一个对象，该对象在从流中提取或插入到流 `str` 中时调用 `str.` [width](../standard-library/ios-base-class.md#width) `(Wide)` ，然后返回 `str` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 setw 仅设置流中下一元素的宽度，并且必须插入在要对其指定宽度的每个元素之前。
 
@@ -656,6 +657,6 @@ l4 = 4096
 l5 = 65536
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<iomanip>](../standard-library/iomanip.md)

@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： &lt; hash_map &gt; 运算符
 title: '&lt;hash_map&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: b0884cacb11299f96d539c8c83a1fc9fa2840d16
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3374ee86a989a90add86e85d6a9bf15959e26b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324117"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 运算符
 
@@ -30,7 +31,7 @@ ms.locfileid: "88844387"
 bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_map` 类型的对象。
@@ -42,7 +43,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 **`true`** 如果 hash_maps 不相等，则为; 否则为。 **`false`** 如果 hash_maps 相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_map 对象之间的比较基于其元素的成对比较。 如果两个 hash_map 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_map 相等。 否则，它们不相等。
 
@@ -99,7 +100,7 @@ The hash_maps hm1 and hm3 are equal.
 bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_map` 类型的对象。
@@ -111,7 +112,7 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 **`true`** 如果运算符左侧的 hash_map 等于运算符右侧的 hash_map，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_map 对象之间的比较基于其元素的成对比较。 如果两个 hash_map 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_map 相等。 否则，它们不相等。
 
@@ -166,7 +167,7 @@ The hash_maps hm1 and hm3 are equal.
 bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_multimap` 类型的对象。
@@ -178,7 +179,7 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 **`true`** 如果 hash_multimaps 不相等，则为; 否则为。 **`false`** 如果 hash_multimaps 相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_multimap 对象之间的比较基于其元素的成对比较。 如果两个 hash_multimap 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_multimap 相等。 否则，它们不相等。
 
@@ -233,7 +234,7 @@ The hash_multimaps hm1 and hm3 are equal.
 bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_multimap` 类型的对象。
@@ -245,7 +246,7 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 **`true`** 如果运算符左侧的 hash_multimap 等于运算符右侧的 hash_multimap，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_multimap 对象之间的比较基于其元素的成对比较。 如果两个 hash_multimap 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_multimap 相等。 否则，它们不相等。
 
@@ -289,6 +290,6 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<hash_map>](hash-map.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： integer_sequence 类
 title: integer_sequence 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: 4d927be4fdd41ab75ca78a0e0e7ab0282e4fbf6a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 321e41c2c3bfaa1f89c05f799dedc4f4250f0a2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843867"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323970"
 ---
 # <a name="integer_sequence-class"></a>integer_sequence 类
 
@@ -32,7 +33,7 @@ template <class T, T... Vals>
 struct integer_sequence
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 值的类型；必须是整数类型：bool、char、char16_t、char32_t、wchar_t或是带符号或无符号整数类型。
@@ -42,12 +43,12 @@ struct integer_sequence
 
 ## <a name="members"></a>成员
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`static size_t size() noexcept`|序列中的元素数。|
 |`typedef T value_type`|序列中每个元素的类型。 必须是整数类型。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 直接传递给函数的参数包可以在没有任何特殊库帮助程序的进行解压缩。 当参数包属于传递给函数的类型，并且需要索引来访问元素时，对它进行解压缩的最简单方法是使用 `integer_sequence` 及其相关类型别名 `make_integer_sequence`、`index_sequence`、`make_index_sequence` 和 `index_sequence_for`。
 
@@ -123,6 +124,6 @@ int main()
 
 命名空间：std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)

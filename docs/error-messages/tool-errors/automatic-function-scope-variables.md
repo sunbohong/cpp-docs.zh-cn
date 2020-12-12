@@ -1,5 +1,6 @@
 ---
-title: 自动（函数范围）变量
+description: 了解详细信息：自动 (函数范围) 变量
+title: 自动 (函数范围) 变量
 ms.date: 04/22/2019
 helpviewer_keywords:
 - automatic variables
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-ms.openlocfilehash: ec01f280c9de314ce670cae590c9a6917e9c0f07
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 666a59ce6ebb9e8d011216f87ca45b49eabbc766
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197874"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323007"
 ---
-# <a name="automatic-function-scope-variables"></a>自动（函数范围）变量
+# <a name="automatic-function-scope-variables"></a>自动 (函数范围) 变量
 
 在函数内声明的变量只能在该函数的范围内使用。
 
@@ -53,6 +54,6 @@ void test(void) {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [链接器工具错误 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

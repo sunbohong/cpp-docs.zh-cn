@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： freelist 类
 title: freelist 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: bf88e33f5d00b9b6b90d2712a0bbabaa3e571340
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: de0803aac13138dc25116084f52e7a5bea694b41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324343"
 ---
 # <a name="freelist-class"></a>freelist 类
 
@@ -28,7 +29,7 @@ template <std::size_t Sz, class Max>
 class freelist : public Max
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Sz*\
 数组中要分配的元素数目。
@@ -38,7 +39,7 @@ max 类表示可存储在空闲列表中的元素的最大数量。 max 类可�
 
 ## <a name="remarks"></a>备注
 
-此类模板管理一个大小为*Sz*的内存块列表，该列表的最大长度由最大传入的 max 类*确定。*
+此类模板管理一个大小为 *Sz* 的内存块列表，该列表的最大长度由最大传入的 max 类 *确定。*
 
 ### <a name="constructors"></a>构造函数
 
@@ -50,7 +51,7 @@ max 类表示可存储在空闲列表中的元素的最大数量。 max 类可�
 
 |成员函数|说明|
 |-|-|
-|[弹出](#pop)|从空闲列表中删除第一个内存块。|
+|[pop](#pop)|从空闲列表中删除第一个内存块。|
 |[push](#push)|向列表中添加内存块。|
 
 ## <a name="requirements"></a>要求
@@ -93,7 +94,7 @@ void *pop();
 bool push(void* ptr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要添加到空闲列表的内存块的指针。
@@ -106,6 +107,6 @@ bool push(void* ptr);
 
 如果 `full` max 类的函数返回，则 **`false`** 此成员函数会将由 *ptr* 指向的内存块添加到列表的开头。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)

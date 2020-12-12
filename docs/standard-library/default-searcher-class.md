@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： default_searcher 类
 title: default_searcher 类
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::default_searcher
 helpviewer_keywords:
 - std::default_searcher [C++]
-ms.openlocfilehash: 307fc6da3b383690e0b65bff2a72f386a37d6711
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 0eb47d3f4c49c9bb6c9c4e68ab2164b87ea9834d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324583"
 ---
 # <a name="default_searcher-class"></a>default_searcher 类
 
@@ -36,7 +37,7 @@ class default_searcher
 
 ## <a name="members"></a>成员
 
-| 成员 | 说明 |
+| 成员 | 描述 |
 | - | - |
 | **构造函数** | |
 | [default_searcher](#default-searcher-constructor) | 构造一个搜索者实例。 |
@@ -59,7 +60,7 @@ constexpr default_searcher(         // C++20
     BinaryPredicate pred = BinaryPredicate());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pat_first*\
 要搜索的序列的初始元素。
@@ -92,7 +93,7 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
     ForwardIterator2 last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 要在其中进行搜索的序列的初始元素。
@@ -106,13 +107,13 @@ constexpr pair<ForwardIterator2, ForwardIterator2> operator()(
 
 `std::search( first, last, pat_first, pat_last, pred )`.
 
-如果*i** 是*最后*一个，则对的第二个迭代器是*最后一个*。 否则，结果为：
+如果 *i** 是 *最后* 一个，则对的第二个迭代器是 *最后一个*。 否则，结果为：
 
 `std::next( i, std::distance( pat_first, pat_last ))`.
 
 此类是 c + + 17 中新增的。 C + + 20 已成为调用运算符 **`constexpr`** 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<functional>](functional.md)\
 [算法函数](algorithm-functions.md)\

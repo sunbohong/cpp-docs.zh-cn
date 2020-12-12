@@ -1,19 +1,20 @@
 ---
-title: 输入/输出替代项
+description: 了解详细信息：输入/输出替代项
+title: Input-Output 替代项
 ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: b46ff242fc263be5069eb691dd0ea9e8fb00b0f9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a6df022dd38bc23eaaaad49620067aca408b2df2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323997"
 ---
 # <a name="inputoutput-alternatives"></a>输入/输出替换选项
 
-Microsoft C++编译器为 i/o 编程提供了几种替代方法:
+Microsoft c + + 编译器为 i/o 编程提供了几种替代方法：
 
 - C 运行时库直接无缓冲 I/O。
 

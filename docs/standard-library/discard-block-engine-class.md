@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： discard_block_engine 类
 title: discard_block_engine 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: 6f7b11c360f58e6a838b22fbf2c68366dce973a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0879dacac70afc78a9c77314ce5042580c6cbb39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324511"
 ---
 # <a name="discard_block_engine-class"></a>discard_block_engine 类
 
@@ -24,7 +25,7 @@ template <class Engine, size_t P, size_t R>
 class discard_block_engine;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *搜索引擎优化*\
 基引擎类型。
@@ -46,7 +47,7 @@ class discard_block_engine;
 
 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类模板通过丢弃由其基引擎返回的某些值，来描述生成值的引擎适配器。
 
@@ -56,6 +57,6 @@ class discard_block_engine;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：应用程序设置、MFC DLL 向导
 title: MFC DLL 向导的应用程序设置
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,46 +7,46 @@ f1_keywords:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-ms.openlocfilehash: f021f2023af839413306c1e3d56dc741749cf216
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da9579ef9a834fa0c2362b1569c2efa808132faa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152041"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322793"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>MFC DLL 向导的应用程序设置
 
-MFC DLL 向导的此页用于设计和添加到新的 MFC DLL 项目的基本功能。
+使用 MFC DLL 向导的此页可以设计基本功能并将其添加到新的 MFC DLL 项目。
 
 ## <a name="dll-type"></a>DLL 类型
 
-选择你想要创建的 DLL 的类型。
+选择要创建的 DLL 类型。
 
-- **使用的规则 MFC DLL 共享 MFC DLL**
+- **使用共享 MFC DLL 的规则 MFC DLL**
 
-   选择此选项可以链接到你的程序作为共享 DLL 的 MFC 库。 使用此选项，不能在 DLL 和调用应用程序之间共享 MFC 对象。 应用程序在运行时调用的 MFC 库。 如果它组成使用 MFC 库的多个执行文件，此选项可减少您的程序的磁盘和内存要求。 Win32 和 MFC 程序可以在您的 DLL 中调用函数。 必须重新分发 MFC DLL 与此类型的项目。
+   选择此选项可以将 MFC 库作为共享 DLL 链接到程序。 使用此选项时，无法在 DLL 和调用应用程序之间共享 MFC 对象。 程序在运行时调用 MFC 库。 如果程序包含多个使用 MFC 库的执行文件，则此选项会降低程序的磁盘和内存要求。 Win32 和 MFC 程序都可以调用 DLL 中的函数。 必须重新分发具有此类型项目的 MFC DLL。
 
-- **静态链接 mfc 的规则 MFC DLL**
+- **带有 MFC 静态链接的规则 MFC DLL**
 
-   选择此选项可在程序静态链接到 MFC 库在生成时。 Win32 和 MFC 程序可以在您的 DLL 中调用函数。 虽然此选项会增加您的程序的大小，则不需要重新分发 MFC DLL 与此类型的项目。 您不能在 DLL 和调用应用程序之间共享 MFC 对象。
+   选择此选项可在生成时将程序静态链接到 MFC 库。 Win32 和 MFC 程序都可以调用 DLL 中的函数。 虽然此选项会增加程序的大小，但不需要重新分发具有此类型项目的 MFC DLL。 不能在 DLL 和调用应用程序之间共享 MFC 对象。
 
 - **MFC 扩展 DLL**
 
-   如果您希望程序在运行时进行调用的 MFC 库并且你想要共享您的 DLL 和调用应用程序之间的 MFC 对象，请选择此选项。 如果它组成，所有使用 MFC 库的多个可执行文件，此选项可减少应用程序的磁盘和内存要求。 仅 MFC 程序可以在您的 DLL 中调用函数。 必须重新分发 MFC DLL 与此类型的项目。
+   如果希望程序在运行时调用 MFC 库，并且想要在 DLL 和调用应用程序之间共享 MFC 对象，请选择此选项。 如果程序包含多个可执行文件（这些文件都使用 MFC 库），则此选项会降低程序的磁盘和内存要求。 只有 MFC 程序才能调用 DLL 中的函数。 必须重新分发具有此类型项目的 MFC DLL。
 
 ## <a name="additional-features"></a>其他功能
 
-选择是 MFC DLL 应支持自动化，以及是否它应该支持 Windows 套接字。
+选择 MFC DLL 是否应支持自动化以及它是否应支持 Windows 套接字。
 
 - **自动化**
 
-   选择**自动化**允许应用程序操作在另一个程序中实现的对象。 选择**自动化**还会公开给其他自动化客户端应用程序。 请参阅[自动化](../../mfc/automation.md)有关详细信息。
+   选择 " **自动化** "，以允许您的程序操作在另一个程序中实现的对象。 选择 " **自动化** " 还会将程序公开给其他自动化客户端。 有关详细信息，请参阅 [自动化](../../mfc/automation.md) 。
 
 - **Windows 套接字**
 
-   选择此选项以指示您的程序支持 Windows 套接字。 Windows 套接字可以编写通过 TCP/IP 网络进行通信的程序。
+   选择此选项以指示您的程序支持 Windows 套接字。 Windows 套接字允许编写通过 TCP/IP 网络进行通信的程序。
 
-   MFC DLL 与 Windows 套接字时创建的支持， [cwinapp:: Initinstance](../../mfc/reference/cwinapp-class.md#initinstance)初始化套接字支持，MFC 标头文件 StdAfx.h 包括 AfxSock.h。
+   创建具有 Windows 套接字支持的 MFC DLL 时， [CWinApp：： InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 初始化对套接字的支持，MFC 头文件 Stdafx.h 包括 AfxSock。
 
 ## <a name="see-also"></a>请参阅
 

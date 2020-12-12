@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_bind_expression 类
 title: is_bind_expression 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-ms.openlocfilehash: 9d83ff978ccbaec5e66509ac94f22cf29bc20866
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 1430beefd1c046b2910c562385f26d2788c88865
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323841"
 ---
 # <a name="is_bind_expression-class"></a>is_bind_expression 类
 
@@ -28,7 +29,7 @@ struct is_bind_expression {
 
 ## <a name="remarks"></a>备注
 
-如果类型 `value` 是调用 `Ty` 返回的类型，则常量成员 `bind` 为 true，否则为 false。
+如果类型 `Ty` 是调用 `bind` 返回的类型，则常量成员 `value` 为 true，否则为 false。
 
 ## <a name="example"></a>示例
 

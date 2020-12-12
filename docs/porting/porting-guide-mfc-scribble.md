@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息：移植指南： MFC 自由曲线
 title: 迁移指南：MFC Scribble
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 46fac5ceaeadd803ff30f2fa3f8e7723d7d6f6f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322693"
 ---
 # <a name="porting-guide-mfc-scribble"></a>迁移指南：MFC Scribble
 
@@ -19,7 +20,7 @@ ms.locfileid: "80076969"
 
 MFC Scribble 是一个众所周知的示例，已包括在许多不同版本的 Visual C++ 中。 它是一个简单的绘图应用程序，展示了 MFC 的一些基本功能。 它有各种可用的版本，包括托管版本和本机代码版本。 针对此示例，我们发现本机代码中的旧版 Scribble 来自 Visual Studio 2005 并在 Visual Studio 2017 中打开。
 
-在尝试升级之前，请确保已安装 Windows Desktop 工作负载。 打开 Visual Studio 安装程序 (vs_installer.exe)。 要打开安装程序，一种方法是选择“文件” **“新建项目”，向下滚动已安装模板的列表，直到看到“打开 Visual Studio 安装程序”**  > 。 打开安装程序后，将看到所有可用的工作负载。 如果未选择“Windows Desktop 工作负载”框，请将其选中，然后单击窗口底部的“修改”按钮。
+在尝试升级之前，请确保已安装 Windows Desktop 工作负载。 打开 Visual Studio 安装程序 (vs_installer.exe)。 打开安装程序的一种方法是选择 "**文件**" "  >  **新建项目**" 并滚动到已安装模板列表的底部，直到看到 "**打开 Visual Studio 安装程序**"。 打开安装程序后，将看到所有可用的工作负载。 如果未选择 " **Windows 桌面** 工作负荷" 框，请选择它，然后单击窗口底部的 " **修改** " 按钮。
 
 接下来，备份整个解决方案及其所有内容。
 
@@ -31,7 +32,7 @@ MFC Scribble 是一个众所周知的示例，已包括在许多不同版本的 
 
 在 Visual Studio 中打开旧的项目文件时，Visual Studio 会将项目文件转换为我们接受的最新版本。 出现了下面的对话框：
 
-![查看项目和解决方案更改](../porting/media/scribbleprojectupgrade.PNG "复查项目和解决方案更改")
+![复查项目和解决方案更改](../porting/media/scribbleprojectupgrade.PNG "复查项目和解决方案更改")
 
 出现了错误，通知我们 Itanium 目标不可用且不被转换。
 
@@ -43,7 +44,7 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 
 Visual Studio 随后将显示一个迁移报告，该报告列出旧项目文件中的所有问题。
 
-![升级报表](../porting/media/scribblemigrationreport.PNG "升级报告")
+![升级报告](../porting/media/scribblemigrationreport.PNG "升级报告")
 
 在本例中，问题都是警告，并且 Visual Studio 在项目文件中进行了相应的更改。 项目关注的最大差别就在于生成工具从 vcbuild 更改为 msbuild。 在 Visual Studio 2010 中首先引入了此更改。 其他更改包括项目文件本身中元素序列的重新排列。 针对此简单项目，无需对这些问题进行深入关注。
 
@@ -85,7 +86,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 Scribble 是一款小巧而简单 Windows 桌面应用程序，且不难转换。 许多小型简单的应用程序都可轻松转换为新版本。  对于具有很多行代码以及可能不符合现代设计标准的较早的旧版代码、多个项目和库、自定义生成步骤的更复杂的应用程序，或对于复杂脚本的自动生成，则需要较长时间进行升级。 继续[下一个示例](../porting/porting-guide-com-spy.md)，即称为 COM Spy 的 ATL/COM 应用程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [移植和升级：示例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一个示例：COM Spy](../porting/porting-guide-com-spy.md)

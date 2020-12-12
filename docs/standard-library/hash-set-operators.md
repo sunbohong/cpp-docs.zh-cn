@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： &lt; hash_set &gt; 运算符
 title: '&lt;hash_set&gt; 运算符'
 ms.date: 03/27/2019
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 04b662ea260ca650fc51b17c804594fe25434f61
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a52c749df2bdd690fcd936c9a361251728696ccd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324078"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;hash_set&gt; 运算符
 
@@ -30,7 +31,7 @@ ms.locfileid: "88845784"
 bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_set` 类型的对象。
@@ -42,7 +43,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 **`true`** 如果 hash_sets 不相等，则为; 否则为。 **`false`** 如果 hash_sets 相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_set 对象之间的比较基于其元素的成对比较。 如果两个 hash_set 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_set 相等。 否则，它们不相等。
 
@@ -98,7 +99,7 @@ The hash_sets hs1 and hs3 are equal.
 bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_set` 类型的对象。
@@ -110,7 +111,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 **`true`** 如果运算符左侧的 hash_set 等于运算符右侧的 hash_set，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_set 对象之间的比较基于其元素的成对比较。 如果两个 hash_set 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_set 相等。 否则，它们不相等。
 
@@ -164,7 +165,7 @@ The hash_sets s1 and s3 are equal.
 bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_multiset` 类型的对象。
@@ -176,7 +177,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 **`true`** 如果 hash_multisets 不相等，则为; 否则为。 **`false`** 如果 hash_multisets 相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_multiset 对象之间的比较基于其元素的成对比较。 如果两个 hash_multiset 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_multiset 相等。 否则，它们不相等。
 
@@ -230,7 +231,7 @@ The hash_multisets hs1 and hs3 are equal.
 bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `hash_multiset` 类型的对象。
@@ -242,7 +243,7 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 **`true`** 如果运算符左侧的 hash_multiset 等于运算符右侧的 hash_multiset，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 hash_multiset 对象之间的比较基于其元素的成对比较。 如果两个 hash_multiset 具有的元素数目相等且对应元素具有相同的值，则这两个 hash_multiset 相等。 否则，它们不相等。
 
@@ -285,6 +286,6 @@ The hash_multisets s1 and s2 are not equal.
 The hash_multisets s1 and s2 are equal.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<hash_set>](../standard-library/hash-set.md)

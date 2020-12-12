@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 函数 &gt; 运算符
 title: '&lt;功能&gt;运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a22e9203e89c041d5ed1925d55d1cd3aa6d61ba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324234"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;功能&gt;运算符
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 测试可调用对象是否为空。
 
@@ -33,7 +34,7 @@ template <class Fty>
 *Fty*\
 要包装的函数类型。
 
-*f*\
+*果*\
 function 对象
 
 *npc*\
@@ -75,7 +76,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 测试可调用对象是否不为空。
 
@@ -92,7 +93,7 @@ template <class Fty>
 *Fty*\
 要包装的函数类型。
 
-*f*\
+*果*\
 function 对象
 
 *npc*\

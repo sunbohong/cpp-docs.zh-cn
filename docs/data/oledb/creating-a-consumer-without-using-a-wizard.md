@@ -1,21 +1,22 @@
 ---
+description: 了解更多相关信息：不使用向导创建使用者
 title: 不使用向导创建使用者
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 65add1fe0d47253cd8d7ae7a273286d712ce9db2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4c642e0b346bd9825d590f54c3de3f6536722d01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323256"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>不使用向导创建使用者
 
-下面的示例假定要向现有 ATL 项目添加 OLE DB 使用者支持。 若要向 MFC 应用程序添加 OLE DB 使用者支持，应运行 MFC 应用程序向导****，这会创建所有必要的支持，并调用执行应用程序所需的 MFC 例程。
+下面的示例假定要向现有 ATL 项目添加 OLE DB 使用者支持。 若要向 MFC 应用程序添加 OLE DB 使用者支持，应运行 MFC 应用程序向导，这会创建所有必要的支持，并调用执行应用程序所需的 MFC 例程。
 
-若要在不使用 ATL OLE DB 使用者向导**** 的情况下添加 OLE DB 使用者支持，请执行以下操作：
+若要在不使用 ATL OLE DB 使用者向导的情况下添加 OLE DB 使用者支持，请执行以下操作：
 
 - 在 *pch* 文件中追加以下 `#include` 语句：
 

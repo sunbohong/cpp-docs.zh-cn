@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： hash_set 类
 title: hash_set 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 01076d29a18a2b051695955e9409d8b77d22c313
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 36bcb0e1f35fd8012ad1398a481bdae17b6d1424
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324091"
 ---
 # <a name="hash_set-class"></a>hash_set 类
 
@@ -109,7 +110,7 @@ template <class Key,
 class hash_set
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要存储在 hash_set 中的元素数据类型。
@@ -140,7 +141,7 @@ Hash_set 是：
 
 当应用程序满足将值与其键关联的条件时，应选择 hash_set 作为关联容器。 Hash_set 的元素是唯一的，并用作其自己的排序键。 此类结构的模型是排序列表，如关键字排序列表，其中关键字只能出现一次。 如果允许关键字多次出现，那么相应的容器结构应该是 hash_multiset。 如果需要将值附加到唯一关键字的列表，则包含此数据的适当结构应为 hash_map。 如果键不唯一，则应选择 hash_multimap 作为容器。
 
-Hash_set 通过调用 value_compare 类型的存储哈希对象，对其控制的序列进行排序 `Traits` 。 [value_compare](#value_compare) 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 *hash_compare<键的对象相同，> 更少 \<Key> 。* 具体而言，对于类型为 Key 的所有值 `key` ，调用特征 (`key`) 会生成 size_t 类型的值的分布。
+Hash_set 通过调用 value_compare 类型的存储哈希对象，对其控制的序列进行排序 `Traits` 。 [](#value_compare) 此存储对象可通过调用成员函数 [key_comp](#key_comp) 进行访问。 此类函数对象的行为必须与类 *hash_compare<键的对象相同，> 更少 \<Key> 。* 具体而言，对于类型为 Key 的所有值 `key` ，调用特征 (`key`) 会生成 size_t 类型的值的分布。
 
 通常，元素仅需小于比较元素即可建立此顺序；因此，给定任意两个元素，可以确定这两个元素等效（即两者均不小于对方）或其中一个小于另一个。 这会导致在非等效元素之间进行排序。 在技术性更强的说明中，比较函数是一个二元谓词，在标准数学的意义上引发严格弱排序。 二元谓词 *f* ( *x*， *y*) 是具有两个参数对象（x 和 y）和一个返回值（true 或 false）的函数对象。 如果二元谓词具有非自反性、反对称性和传递性且等效可传递，对 hash_set 进行的排序将为严格弱排序，其中两个对象 *x* 和 *y* 定义为在 *f*( *x*, *y*) 和 *f*( *y*, *x*) 均为 false 时等效。 如果键之间的更强相等条件取代了等效性，则排序将为总排序（即所有元素彼此排序），并且匹配的键将难以彼此辨别。
 
@@ -164,7 +165,7 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 |[const_reference](#const_reference)|一种类型，它提供对 **`const`** 存储在中的元素 `hash_set` 的引用，以便读取和执行 **`const`** 操作。|
 |[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取中的任何元素的双向迭代器 **`const`** `hash_set` 。|
 |[difference_type](#difference_type)|一种有符号整数类型，此类型可用于表示 `hash_set` 中迭代器指向的元素间范围内的元素数量。|
-|[器](#iterator)|一种类型，它提供可读取或修改 `hash_set` 中任何元素的双向迭代器。|
+|[iterator](#iterator)|一种类型，它提供可读取或修改 `hash_set` 中任何元素的双向迭代器。|
 |[key_compare](#key_compare)|一种提供函数对象的类型，该函数对象可比较两个排序键以确定 `hash_set` 中两个元素的相对顺序。|
 |[key_type](#key_type)|一种类型，它描述当作为排序键存储为其容量中 `hash_set` 的元素的对象。|
 |[变为](#pointer)|一种类型，它提供指向 `hash_set` 中的某个元素的指针。|
@@ -181,7 +182,7 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 |[准备](#begin)|返回一个迭代器，此迭代器用于发现 `hash_set` 中的第一个元素。|
 |[cbegin](#cbegin)|返回一个常量迭代器，此迭代器用于发现 `hash_set` 中的第一个元素。|
 |[cend](#cend)|返回一个常量迭代器，此迭代器用于发现 `hash_set` 中最后一个元素之后的位置。|
-|[清除](#clear)|清除 `hash_set` 的所有元素。|
+|[clear](#clear)|清除 `hash_set` 的所有元素。|
 |[计数](#count)|返回 `hash_set` 中其键与指定为参数的键匹配的元素数量。|
 |[crbegin](#crbegin)|返回一个常量迭代器，此迭代器用于发现反向 `hash_set` 中的第一个元素。|
 |[crend](#crend)|返回一个常量迭代器，此迭代器用于发现反向 `hash_set` 中最后一个元素之后的位置。|
@@ -206,7 +207,7 @@ hash_set 类提供的迭代器是双向迭代器，但类成员函数[insert](#i
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|运算符|描述|
 |-|-|
 |[hash_set：： operator =](#op_eq)|将一个 `hash_set` 中的元素替换为另一 `hash_set` 副本。|
 
@@ -229,9 +230,9 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>备注
 
-`allocator_type` 是模板参数 *分配*器的同义词。
+`allocator_type` 是模板参数 *分配* 器的同义词。
 
-有关 *分配*器的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
+有关 *分配* 器的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 ### <a name="example"></a>示例
 
@@ -550,7 +551,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 size_type count(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要从 hash_set 中进行匹配的元素的键。
@@ -799,7 +800,7 @@ emplace(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。
@@ -850,7 +851,7 @@ iterator emplace(
     ValTy&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 要插入 [hash_set](../standard-library/hash-set-class.md) 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。
@@ -1017,7 +1018,7 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
@@ -1104,7 +1105,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(const key_type& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Where*\
 要从 hash_set 中删除的元素的位置。
@@ -1222,7 +1223,7 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_set 中元素的排序键匹配的参数键。
@@ -1300,9 +1301,9 @@ Allocator get_allocator() const;
 
 ### <a name="return-value"></a>返回值
 
-Hash_set 用于管理内存的分配器，即模板参数 *分配*器。
+Hash_set 用于管理内存的分配器，即模板参数 *分配* 器。
 
-有关 *分配*器的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
+有关 *分配* 器的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 ### <a name="remarks"></a>备注
 
@@ -1417,7 +1418,7 @@ hash_set(
     const Allocator& Al);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fc-al*\
 要用于此 `hash_set` 对象的存储分配器类，默认为 `Allocator`。
@@ -1477,7 +1478,7 @@ void insert(
     InputIterator Last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 要插入 `hash_set` 的元素的值，除非 `hash_set` 已包含该元素（更宽泛地说，是其键经等效排序的元素）。
@@ -1616,7 +1617,7 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>备注
 
-`key_compare` 是模板参数 *特征*的同义词。
+`key_compare` 是模板参数 *特征* 的同义词。
 
 有关 *特征* 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题。
 
@@ -1639,9 +1640,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-`key_type` 是模板参数 *键*的同义词。
+`key_type` 是模板参数 *键* 的同义词。
 
-有关 *密钥*的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
+有关 *密钥* 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 请注意，`key_type` 和 [value_type](#value_type) 皆是模板参数 *Key* 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
 
@@ -1662,7 +1663,7 @@ const_iterator lower_bound(const Key& key) const;
 iterator lower_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
@@ -1774,14 +1775,14 @@ hash_set& operator=(const hash_set& right);
 hash_set& operator=(hash_set&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要复制到 `hash_set` 中的 [hash_set](../standard-library/hash-set-class.md)。
 
 ### <a name="remarks"></a>备注
 
-清除中的任何现有元素后 `hash_set` ，会 `operator=` 将的内容复制或移动*right*到 `hash_set` 。
+清除中的任何现有元素后 `hash_set` ，会 `operator=` 将的内容复制或移动到 `hash_set` 。
 
 ### <a name="example"></a>示例
 
@@ -2151,7 +2152,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 void swap(hash_set& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 参数 hash_set 提供与目标 hash_set 进行交换的元素。
@@ -2227,7 +2228,7 @@ const_iterator upper_bound(const Key& key) const;
 iterator upper_bound(const Key& key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 要与当前搜索的 hash_set 中元素的排序键进行比较的参数键。
@@ -2303,7 +2304,7 @@ value_compare value_comp() const;
 
 返回 hash_set 用来对其元素进行排序的函数对象，即模板参数 *比较*。
 
-有关 *比较*的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
+有关 *比较* 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题的 "备注" 部分。
 
 ### <a name="remarks"></a>备注
 
@@ -2313,7 +2314,7 @@ value_compare value_comp() const;
 
 **`true`** 如果 `_xVal` `_yVal` 在排序顺序中先于且不等于，则返回。
 
-请注意， [value_compare](../standard-library/set-class.md#value_compare) 和 [key_compare](../standard-library/set-class.md#key_compare) 都是模板参数 *比较*的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
+请注意， [value_compare](../standard-library/set-class.md#value_compare) 和 [key_compare](../standard-library/set-class.md#key_compare) 都是模板参数 *比较* 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
@@ -2377,11 +2378,11 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>备注
 
-`value_compare` 是模板参数 *特征*的同义词。
+`value_compare` 是模板参数 *特征* 的同义词。
 
 有关 *特征* 的详细信息，请参阅 [hash_set 类](../standard-library/hash-set-class.md) 主题。
 
-请注意， [key_compare](#key_compare) 和 `value_compare` 都是模板参数 *特征*的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
+请注意， [key_compare](#key_compare) 和 `value_compare` 都是模板参数 *特征* 的同义词。 对于 hash_set 和 hash_multiset 类，会同时提供这两种类型，且二者相同，但为实现与 hash_map 和 hash_multimap 类的兼容性时，二者则不同。
 
 ### <a name="example"></a>示例
 
@@ -2434,7 +2435,7 @@ int main( )
 The hash_set has elements: 10 20.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

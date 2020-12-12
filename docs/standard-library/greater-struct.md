@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：更多结构
 title: greater 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - greater struct
 - greater function
 ms.assetid: ebc348e1-edcd-466b-b21a-db95bd8f9079
-ms.openlocfilehash: aca47223810bdae31e7711492d107fbfa2814391
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fabee76d20d201f63b9f5397c20409ad62125657
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324169"
 ---
 # <a name="greater-struct"></a>greater 结构
 
-执行较大的二进制谓词的运算 (`operator>`) 对其自变量。
+一个二元谓词，该谓词对其参数执行大于运算 (`operator>`) 。
 
 ## <a name="syntax"></a>语法
 
@@ -40,16 +41,16 @@ struct greater<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持 `operator>` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-大于运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+*左中*\
+大于运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*右侧*\
-大于运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+*然后*\
+大于运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -57,7 +58,7 @@ struct greater<void>
 
 ## <a name="remarks"></a>备注
 
-二元谓词`greater` < `Type`> 提供严格弱排序的一组类型的元素值*类型*向等价类，当且仅当满足此类型的标准数学正在如此进行排序的要求。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
+`greater` < `Type` 当且仅当此类型满足标准数学要求以便进行排序时，二进制谓词> 提供一组类型为 *type* 类型的元素值到等效类的严格弱排序。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
 
 ## <a name="example"></a>示例
 

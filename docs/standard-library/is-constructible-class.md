@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_constructible 类
 title: is_constructible 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: a968efa5a867a3fd0e60594784cdb11122a974b2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 66d17141693933850ce78dc15abe108664d56c8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222402"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323810"
 ---
 # <a name="is_constructible-class"></a>is_constructible 类
 
@@ -24,17 +25,17 @@ template <class T, class... Args>
 struct is_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要查询的类型。
 
 *Args*\
-*T*的构造函数中要匹配的参数类型。
+*T* 的构造函数中要匹配的参数类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型*T*通过*使用参数类型可构造，则*类型谓词的实例为 true; 否则为 false。 如果变量定义格式正确，则类型*T*为可构造 `T t(std::declval<Args>()...);` 。 *参数*中的*T*和所有类型都必须是完整类型、 **`void`** 或未知绑定的数组。
+如果类型 *T* 通过 *使用参数类型可构造，则* 类型谓词的实例为 true; 否则为 false。 如果变量定义格式正确，则类型 *T* 为可构造 `T t(std::declval<Args>()...);` 。 *参数* 中的 *T* 和所有类型都必须是完整类型、 **`void`** 或未知绑定的数组。
 
 ## <a name="requirements"></a>要求
 
@@ -42,6 +43,6 @@ struct is_constructible;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

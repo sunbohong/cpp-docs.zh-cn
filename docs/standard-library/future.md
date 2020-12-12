@@ -1,15 +1,16 @@
 ---
+description: 了解更多： &lt; 未来&gt;
 title: '&lt;future&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: b5f18de772ea2221ecbd4098b94e0b4f14c0484c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67c204f636ee9249e9c714df87a02ff6c6ff3149
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324195"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -26,15 +27,15 @@ ms.locfileid: "87220920"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 在使用 **/clr**编译的代码中，此标头被阻止。
+> 在使用 **/clr** 编译的代码中，此标头被阻止。
 
-异步提供程序** 存储函数调用的结果。 异步返回对象** 用于检索函数调用的结果。 关联异步状态** 提供一个异步提供程序和一个或多个异步返回对象之间的通信。
+异步提供程序存储函数调用的结果。 异步返回对象用于检索函数调用的结果。 关联异步状态提供一个异步提供程序和一个或多个异步返回对象之间的通信。
 
 程序不会直接创建任何关联异步状态对象。 程序在需要异步提供程序时会创建一个异步提供程序，且随之会创建一个与提供程序共享其关联异步状态的异步返回对象。 异步提供程序和异步返回对象管理保留其共享关联异步状态的对象。 最后一个引用关联异步状态的对象释放状态时，则保留关联异步状态的对象会被销毁。
 
-不具有关联异步状态的异步提供程序或异步返回对象即为空**。
+不具有关联异步状态的异步提供程序或异步返回对象即为空。
 
-只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪**。
+只有当其异步提供程序存储了返回值或存储了异常时，关联的异步状态才会为准备就绪。
 
 模板函数 `async` 和类模板 `promise` 以及 `packaged_task` 是异步提供程序。 类模板 `future` 并 `shared_future` 描述异步返回对象。
 
@@ -77,8 +78,8 @@ ms.locfileid: "87220920"
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|为 `future_error` 类报告的错误提供符号名称。|
 |[future_status](../standard-library/future-enums.md#future_status)|为计时等待函数可返回的原因提供符号名称。|
-|[开始](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|
+|[启动](../standard-library/future-enums.md#launch)|表示描述模板函数 `async` 的可能模式的位掩码类型。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

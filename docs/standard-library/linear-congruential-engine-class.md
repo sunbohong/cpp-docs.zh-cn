@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： linear_congruential_engine 类
 title: linear_congruential_engine 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 8701570787275e853543e723f6461b8ad460f96f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2171623190180cabc46dd760debabdefb9afd77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323533"
 ---
 # <a name="linear_congruential_engine-class"></a>linear_congruential_engine 类
 
@@ -43,7 +44,7 @@ class linear_congruential_engine{
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *UIntType*\
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
@@ -70,7 +71,7 @@ class linear_congruential_engine{
 
 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `linear_congruential_engine`类模板是最简单的生成器引擎，但不是最快或最高的质量。 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md) 是对此引擎的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
 
@@ -102,6 +103,6 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：应用程序控制
 title: 应用程序控件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 40ac3b6871d13420797279629a2661b22545d1d8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 20a777f5b7bb20870e9156ee090ff24ec4690f14
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322819"
 ---
 # <a name="application-control"></a>应用程序控件
 
@@ -17,7 +18,7 @@ OLE 需要对应用程序及其对象进行大量控制。 OLE 系统 Dll 必须
 
 ### <a name="application-control"></a>应用程序控件
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AfxOleCanExitApp](#afxolecanexitapp)|指示应用程序是否可以终止。|
 |[AfxOleGetMessageFilter](#afxolegetmessagefilter)|检索应用程序的当前消息筛选器。|
@@ -42,7 +43,7 @@ BOOL AFXAPI AfxOleCanExitApp();
 
 如果应用程序退出，则为非零；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果存在对应用程序的对象的未处理引用，则应用程序不应终止。 全局函数 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分别对应用程序对象引用计数器进行递增和递减。 当此计数器为非零时，应用程序不应终止。 如果计数器为非零，当用户从系统菜单选择“关闭”或从“文件”菜单选择“退出”时，应用程序的主窗口将会隐藏（不销毁）。 框架在中调用此函数 `CFrameWnd::OnClose` 。
 
@@ -66,7 +67,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 
 指向当前消息筛选器的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可访问当前 `COleMessageFilter` 派生的对象，这与调用 `AfxGetApp` 来访问当前应用程序对象一样。
 
@@ -92,7 +93,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 
 如果用户位于应用程序控件内，则不为零；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果用户已显式打开或创建新文档，则用户将位于应用程序控件内。 如果应用程序不是由 OLE 系统 DLL 启动的 - 换句话说，如果用户使用系统 Shell 启动了应用程序，则用户也将位于控件内。
 
@@ -108,12 +109,12 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUserCtrl*<br/>
 指定是否要设置或清除用户控制标志。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当用户创建或加载文档时，框架会调用此函数，但在通过间接操作（如从容器应用程序加载嵌入的对象）加载或创建文档时，框架将调用此函数。
 
@@ -131,7 +132,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 void AFXAPI AfxOleLockApp();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 框架将保留应用程序中处于活动状态的对象数。 `AfxOleLockApp`和 `AfxOleUnlockApp` 函数分别递增和递减此计数。
 
@@ -155,7 +156,7 @@ void AFXAPI AfxOleLockApp();
 void AFXAPI AfxOleUnlockApp();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AfxOleLockApp`有关详细信息，请参阅。
 
@@ -180,7 +181,7 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 控件的唯一类 ID。
@@ -192,7 +193,7 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 
 如果控件的类工厂成功锁定，则不为零；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这可以明显加速控件的显示。 例如，一旦在对话框中创建控件并使用 `AfxOleLockControl` 锁定控件，则无需在每次显示或销毁对话框时创建和删除它。 如果用户反复打开并关闭对话框，则锁定控件可以显著提高性能。 准备销毁控件时，请调用 `AfxOleUnlockControl`。
 
@@ -225,7 +226,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
     LPCTSTR* rglpszOverwrite = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 对服务器的 OLE 类 ID 的引用。
@@ -260,11 +261,11 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 
 如果成功注册服务器类，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 大多数应用程序都可以使用 `COleTemplateServer::Register` 来注册应用程序的文档类型。 如果应用程序的系统注册表格式不符合典型模式，则可以使用 `AfxOleRegisterServerClass` 进行更多的控制。
 
-注册表由一组键和值组成。 *RglpszRegister*和*rglpszOverwrite*参数是指向字符串的指针的数组，其中每个都包含一个键，而一个值由**NULL**字符分隔 ( `'\0'`) 。 其中每个字符串都可以具有可替换参数，其位置由字符序列 *%1* 到 *%5*标记。
+注册表由一组键和值组成。 *RglpszRegister* 和 *rglpszOverwrite* 参数是指向字符串的指针的数组，其中每个都包含一个键，而一个值由 **NULL** 字符分隔 ( `'\0'`) 。 其中每个字符串都可以具有可替换参数，其位置由字符序列 *%1* 到 *%5* 标记。
 
 符号填写如下：
 
@@ -294,7 +295,7 @@ void AFXAPI AfxOleSetEditMenu(
     UINT nIDConvert = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClient*<br/>
 指向客户端 OLE 项的指针。
@@ -314,7 +315,7 @@ void AFXAPI AfxOleSetEditMenu(
 *nIDConvert*<br/>
 转换菜单项的 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果服务器仅识别主谓词，则菜单项将变为 "verb *typename* Object"，并在用户选择命令时发送 *nIDVerbMin* 命令。 如果服务器识别多个谓词，则该菜单项将变为 " *typename* Object"，并在用户选择命令时，将显示一个子菜单，其中列出了所有谓词。 当用户从子菜单中选择谓词时，如果选择第一个谓词，则将发送 *nIDVerbMin* ，如果选择第二个谓词，则发送 *nIDVerbMin* + 1，依此类推。 默认 `COleDocument` 实现会自动处理此功能。
 
@@ -337,7 +338,7 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 控件的唯一类 ID。
@@ -349,7 +350,7 @@ BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 
 如果成功解锁控件的类工厂，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 控件已使用锁定 `AfxOleLockControl` ，因此与该控件关联的动态创建的数据仍保留在内存中。 这可以显著提高控件的显示速度，因为无需在每次显示控件时都创建和销毁控件。 准备销毁控件时，请调用 `AfxOleUnlockControl`。
 
@@ -365,6 +366,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **标头:** afxwin.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： equal_to 结构
 title: equal_to 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cae0531c31396d16d447e3b0123dc679bbfd5aa6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324431"
 ---
-# <a name="equalto-struct"></a>equal_to 结构
+# <a name="equal_to-struct"></a>equal_to 结构
 
-执行相等运算的二元谓词 (`operator==`) 对其自变量。
+一个二元谓词，该谓词对其参数 () 执行相等运算 `operator==` 。
 
 ## <a name="syntax"></a>语法
 
@@ -37,16 +38,16 @@ struct equal_to<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持 `operator==` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-相等运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+*左中*\
+相等运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*右侧*\
-相等运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+*然后*\
+相等运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -54,7 +55,7 @@ struct equal_to<void>
 
 ## <a name="remarks"></a>备注
 
-类型的对象*类型*必须是可比较相等性的。 这要求在对象集上定义的 `operator==` 满足等价关系的数学性质。 所有内置的数字和指针类型都满足此要求。
+类型 *类型的对象必须可* 比较相等性。 这要求在对象集上定义的 `operator==` 满足等价关系的数学性质。 所有内置的数字和指针类型都满足此要求。
 
 ## <a name="example"></a>示例
 

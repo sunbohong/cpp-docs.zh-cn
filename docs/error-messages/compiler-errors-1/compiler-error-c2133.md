@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2133
 title: 编译器错误 C2133
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2133
 ms.assetid: 8942f9e8-9818-468f-97db-09dbd124fcae
-ms.openlocfilehash: b51b556ea576e02b85a5c2ee5032909af39c7b2f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d98cb3bd8df5543ecf0426a146157300f67dd91b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323124"
 ---
 # <a name="compiler-error-c2133"></a>编译器错误 C2133
 
 "identifier"：未知的大小
 
-成员列表数组数组被声明为类、结构、联合或枚举的成员。 /Za （ANSI C）选项不允许成员列表数组成员数组。
+成员列表数组数组被声明为类、结构、联合或枚举的成员。 /Za (ANSI C) 选项不允许成员列表数组成员数组。
 
 下面的示例生成 C2133：
 

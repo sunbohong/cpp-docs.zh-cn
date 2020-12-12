@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; iostream&gt;
 title: '&lt;iostream&gt;'
 ms.date: 09/20/2017
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 5805d441b4fc2fc2927b57f4d94ba8b8ccecb22a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 882b7de8add9339a0580efeac18740205cc175aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323896"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -34,7 +35,7 @@ ms.locfileid: "88845466"
 > [!NOTE]
 > \<iostream>库使用 `#include <ios>` 、 `#include <streambuf>` 、 `#include <istream>` 和 `#include <ostream>` 语句。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 这些对象分为两组：
 
@@ -50,7 +51,7 @@ ms.locfileid: "88845466"
 
 ### <a name="global-stream-objects"></a>全局流对象
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[cerr](#cerr)|指定 `cerr` 全局流。|
 |[cin](#cin)|指定 `cin` 全局流。|
@@ -73,7 +74,7 @@ extern ostream cerr;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象控制以字节流的形式无缓冲插入到标准错误输出的过程。 构造对象后，表达式 `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) 非零，且 `cerr.tie() == &cout`。
 
@@ -119,7 +120,7 @@ extern istream cin;
 
 [istream](../standard-library/istream-typedefs.md#istream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象控制以字节流的形式从标准输入中进行提取的过程。 构造对象后，`cin.`[tie](../standard-library/basic-ios-class.md#tie) 调用会返回 `&`[cout](#cout)。
 
@@ -170,7 +171,7 @@ extern ostream clog;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象控制以字节流的形式缓冲插入到标准错误输出的过程。
 
@@ -190,7 +191,7 @@ extern ostream cout;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象控制以字节流的形式插入到标准输出的过程。
 
@@ -210,7 +211,7 @@ extern wostream wcerr;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象控制以宽流的形式无缓冲插入到标准错误输出的过程。 构造对象后，表达式 `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) 非零。
 
@@ -230,7 +231,7 @@ extern wistream wcin;
 
 [wistream](../standard-library/istream-typedefs.md#wistream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象控制以宽流的形式从标准输入中进行提取的过程。 构造对象后，`wcin.`[tie](../standard-library/basic-ios-class.md#tie) 调用会返回 `&`[wcout](#wcout)。
 
@@ -250,7 +251,7 @@ extern wostream wclog;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象控制以宽流的形式缓冲插入到标准错误输出的过程。
 
@@ -270,7 +271,7 @@ extern wostream wcout;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) 对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该对象对将标准输出作为宽流插入的操作进行控制。
 
@@ -288,7 +289,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 有关详细信息，请参阅[基本 CString 操作](../atl-mfc-shared/basic-cstring-operations.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_object 类
 title: is_object 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f361d58676527e25887ad71097943a8b2b6c93a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323559"
 ---
-# <a name="isobject-class"></a>is_object 类
+# <a name="is_object-class"></a>is_object 类
 
 测试类型是否为对象类型。
 
@@ -25,14 +26,14 @@ template <class Ty>
 struct is_object;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型*Ty*是引用类型、函数类型或 void 类型或`cv-qualified`其中之一的形式, 则类型谓词的实例将保留为 false, 否则为 true。
+如果类型 *Ty* 是引用类型、函数类型或 void 类型或其中之一的形式，则类型谓词的实例将保留为 false， `cv-qualified` 否则为 true。
 
 ## <a name="example"></a>示例
 
@@ -79,9 +80,9 @@ is_object<void> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
