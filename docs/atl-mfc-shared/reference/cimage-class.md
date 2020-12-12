@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CImage 类
 title: CImage 类
 ms.date: 08/19/2019
 f1_keywords:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6e7197648fd91b2280d406c19c1019ca23f6a470
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a094aecfae57a678f306d00e0998247000361822
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166819"
 ---
 # <a name="cimage-class"></a>CImage 类
 
@@ -103,7 +104,7 @@ class CImage
 |[CImage：： GetImporterFilterString](#getimporterfilterstring)|查找可用的图像格式及其说明。|
 |[CImage：： GetMaxColorTableEntries](#getmaxcolortableentries)|检索颜色表中的最大项数。|
 |[CImage：： GetPitch](#getpitch)|检索当前图像的间距（以字节为单位）。|
-|[CImage：： Picture.getpixel](#getpixel)|检索 *x* 和 *y*指定的像素的颜色。|
+|[CImage：： Picture.getpixel](#getpixel)|检索 *x* 和 *y* 指定的像素的颜色。|
 |[CImage：： GetPixelAddress](#getpixeladdress)|检索给定像素的地址。|
 |[CImage：： GetTransparentColor](#gettransparentcolor)|检索颜色表中透明色的位置。|
 |[CImage：： GetWidth](#getwidth)|检索当前图像的宽度（以像素为单位）。|
@@ -128,13 +129,13 @@ class CImage
 
 ### <a name="public-operators"></a>公共运算符
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CImage：： operator HBITMAP](#operator_hbitmap)|返回附加到对象的 Windows 句柄 `CImage` 。|
 
 ## <a name="remarks"></a>备注
 
-`CImage` 采用与设备无关的位图 (DIB) 部分的位图;但是，可以使用 [Create](#create) 或 [CImage：： Load](#load) ，只使用 DIB 部分。 您可以使用 Attach 将非 DIB 部分位图附加到 `CImage` 对象， [Attach](#attach)但随后不能使用以下 `CImage` 方法，这种方法仅支持 DIB 部分位图：
+`CImage` 采用与设备无关的位图 (DIB) 部分的位图;但是，可以使用 [Create](#create) 或 [CImage：： Load](#load) ，只使用 DIB 部分。 您可以使用 Attach 将非 DIB 部分位图附加到 `CImage` 对象， [](#attach)但随后不能使用以下 `CImage` 方法，这种方法仅支持 DIB 部分位图：
 
 - [GetBits](#getbits)
 
@@ -191,9 +192,9 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 可以 `CImage` 从 MFC 或 ATL 使用。
 
 > [!NOTE]
-> 使用创建项目时 `CImage` ，必须先定义， `CString` 然后才能包括 *atlimage*。 如果你的项目使用不带 MFC 的 ATL，请在包含*atlimage*之前包含*atlstr.h* 。 如果你的项目使用 MFC (或它是包含 MFC 支持) 的 ATL 项目，请在包括*atlimage*之前包含*afxstr* 。
+> 使用创建项目时 `CImage` ，必须先定义， `CString` 然后才能包括 *atlimage*。 如果你的项目使用不带 MFC 的 ATL，请在包含 *atlimage* 之前包含 *atlstr.h* 。 如果你的项目使用 MFC (或它是包含 MFC 支持) 的 ATL 项目，请在包括 *atlimage* 之前包含 *afxstr* 。
 >
-> 同样，必须包含 *atlimage* ，然后才能包括 *atlimpl*。 若要轻松实现此目的，请在 atlimage 中*的* *stdafx.h*中包含 (*atlimage.h* ，并在 Visual Studio 2017 和更早的) 中。
+> 同样，必须包含 *atlimage* ，然后才能包括 *atlimpl*。 若要轻松实现此目的，请在 atlimage 中 *的* *stdafx.h* 中包含 ( ，并在 Visual Studio 2017 和更早的) 中。
 
 ## <a name="requirements"></a>要求
 
@@ -238,7 +239,7 @@ BOOL AlphaBlend(
     BYTE bBlendOp = AC_SRC_OVER);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDestDC*<br/>
 目标设备上下文的句柄。
@@ -300,7 +301,7 @@ Alpha blend 位图支持每个像素的颜色混合。
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hBitmap*<br/>
 HBITMAP 的句柄。
@@ -351,7 +352,7 @@ BOOL BitBlt(
     DWORD dwROP = SRCCOPY) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDestDC*<br/>
 目标 HDC。
@@ -422,7 +423,7 @@ BOOL Create(
     DWORD dwFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 位图的宽度 `CImage` （以像素为单位）。
@@ -459,7 +460,7 @@ BOOL CreateEx(
     DWORD dwFlags = 0) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 位图的宽度 `CImage` （以像素为单位）。
@@ -471,7 +472,7 @@ BOOL CreateEx(
 位图中每个像素的位数。 通常为4、8、16、24或32。 对于单色位图或掩码，可以为1。
 
 *eCompression*<br/>
-指定不能) 压缩 (自上而下的压缩后的位图的压缩类型。 可以是以下值之一：
+指定不能) 压缩 (自上而下的压缩后的位图的压缩类型。 可以是以下其中一个值：
 
 - 未压缩格式 BI_RGB。 如果调用 `CImage::CreateEx` 等效于调用，则指定此值 `CImage::Create` 。
 
@@ -563,7 +564,7 @@ BOOL Draw(
     const RECT& rectDest) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDestDC*<br/>
 目标设备上下文的句柄。
@@ -659,7 +660,7 @@ void GetColorTable(
     RGBQUAD* prgbColors) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iFirstColor*<br/>
 要检索的第一个项的颜色表索引。
@@ -699,13 +700,13 @@ static HRESULT GetExporterFilterString(
     TCHAR chSeparator = _T('|'));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strExporters*<br/>
 对 `CSimpleString` 对象的引用。 有关详细信息，请参阅 " **备注** "。
 
 *aguidFileTypes*<br/>
-Guid 的数组，其中每个元素对应于字符串中的一种文件类型。 *在下面的*示例中，GUID_NULL 了*aguidFileTypes*[0]，其余数组值为当前操作系统支持的图像文件格式。
+Guid 的数组，其中每个元素对应于字符串中的一种文件类型。 *在下面的* 示例中，GUID_NULL 了 *aguidFileTypes*[0]，其余数组值为当前操作系统支持的图像文件格式。
 
 > [!NOTE]
 > 有关常量的完整列表，请参阅 Windows SDK 中的 **图像文件格式常数** 。
@@ -794,13 +795,13 @@ static HRESULT GetImporterFilterString(
     TCHAR chSeparator = _T('|'));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strImporters*<br/>
 对 `CSimpleString` 对象的引用。 有关详细信息，请参阅 " **备注** "。
 
 *aguidFileTypes*<br/>
-Guid 的数组，其中每个元素对应于字符串中的一种文件类型。 *在下面的*示例中，GUID_NULL 了*aguidFileTypes*[0]，其余数组值为当前操作系统支持的图像文件格式。
+Guid 的数组，其中每个元素对应于字符串中的一种文件类型。 *在下面的* 示例中，GUID_NULL 了 *aguidFileTypes*[0]，其余数组值为当前操作系统支持的图像文件格式。
 
 > [!NOTE]
 > 有关常量的完整列表，请参阅 Windows SDK 中的 **图像文件格式常数** 。
@@ -854,7 +855,7 @@ _T("All Image Files"));
 
 file description0&#124;\* . ext0&#124;filedescription1&#124;\* ext1&#124; .。。文件说明 *n*&#124;\* . ext *n*&#124;&#124;
 
-其中，"&#124;" 是 *chSeparator*指定的分隔符。 例如：
+其中，"&#124;" 是 *chSeparator* 指定的分隔符。 例如：
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
@@ -899,13 +900,13 @@ int GetPitch() const throw();
 
 ## <a name="cimagegetpixel"></a><a name="getpixel"></a> CImage：： Picture.getpixel
 
-检索 *x* 和 *y*指定的位置处的像素颜色。
+检索 *x* 和 *y* 指定的位置处的像素颜色。
 
 ```
 COLORREF GetPixel(int x, int y) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 像素的 x 坐标。
@@ -925,7 +926,7 @@ COLORREF GetPixel(int x, int y) const throw();
 void* GetPixelAddress(int x, int y) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 像素的 x 坐标。
@@ -1052,7 +1053,7 @@ HRESULT Load(LPCTSTR pszFileName) throw();
 HRESULT Load(IStream* pStream) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszFileName*<br/>
 指向字符串的指针，该字符串包含要加载的图像文件的名称。
@@ -1066,7 +1067,7 @@ HRESULT Load(IStream* pStream) throw();
 
 ### <a name="remarks"></a>备注
 
-加载 *pszFileName* 或 *pStream*指定的图像。
+加载 *pszFileName* 或 *pStream* 指定的图像。
 
 有效的图像类型为 BMP、GIF、JPEG、PNG 和 TIFF。
 
@@ -1084,7 +1085,7 @@ void LoadFromResource(
     UINT nIDResource) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 包含要加载的图像的模块实例的句柄。
@@ -1139,7 +1140,7 @@ BOOL MaskBlt(
     DWORD dwROP = SRCCOPY) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDestDC*<br/>
 可执行文件包含资源的模块的句柄。
@@ -1169,7 +1170,7 @@ BOOL MaskBlt(
 由 *hbmMask* 参数指定的掩码位图的水平像素偏移量。
 
 *yMask*<br/>
-*HbmMask*参数指定的掩码位图的垂直像素偏移量。
+*HbmMask* 参数指定的掩码位图的垂直像素偏移量。
 
 *dwROP*<br/>
 指定方法用来控制源数据和目标数据的组合的前台和后台三元光栅操作代码。 后台光栅操作代码存储在此值的高序位字的高序位字节内;前台光栅操作代码存储在此值的高序位字的低序位字节内;此值的低序位字将被忽略，并且应为零。 有关此方法上下文中前景和背景的讨论，请参阅 `MaskBlt` 中的 Windows SDK。 有关常见的光栅操作代码的列表，请参阅 `BitBlt` Windows SDK 中的。
@@ -1227,7 +1228,7 @@ BOOL PlgBlt(
     const POINT& pointMask = CPoint(0, 0)) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDestDC*<br/>
 目标设备上下文的句柄。
@@ -1310,7 +1311,7 @@ HRESULT Save(
     REFGUID guidFileType = GUID_NULL) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStream*<br/>
 指向包含文件图像数据的 COM IStream 对象的指针。
@@ -1351,7 +1352,7 @@ void SetColorTable(
     const RGBQUAD* prgbColors) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iFirstColor*<br/>
 要设置的第一个项的颜色表索引。
@@ -1374,7 +1375,7 @@ void SetColorTable(
 void SetPixel(int x, int y, COLORREF color) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 要设置的像素的水平位置。
@@ -1397,7 +1398,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 void SetPixelIndexed(int x, int y, int iIndex) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 要设置的像素的水平位置。
@@ -1410,7 +1411,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 ## <a name="cimagesetpixelrgb"></a><a name="setpixelrgb"></a> CImage：： SetPixelRGB
 
-将 *x* 和 *y* 指定的位置处的像素设置为以红色、绿色、蓝色 (RGB) 图像显示的 *r*、 *g*和 *b*所指示的颜色。
+将 *x* 和 *y* 指定的位置处的像素设置为以红色、绿色、蓝色 (RGB) 图像显示的 *r*、 *g* 和 *b* 所指示的颜色。
 
 ```cpp
 void SetPixelRGB(
@@ -1421,7 +1422,7 @@ void SetPixelRGB(
     BYTE b) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 要设置的像素的水平位置。
@@ -1450,7 +1451,7 @@ void SetPixelRGB(
 LONG SetTransparentColor(LONG iTransparentColor) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iTransparentColor*<br/>
 要设置为透明的颜色在调色板中的索引。 如果为-1，则不将颜色设置为透明。
@@ -1496,7 +1497,7 @@ BOOL StretchBlt(
     DWORD dwROP = SRCCOPY) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDestDC*<br/>
 目标设备上下文的句柄。
@@ -1579,7 +1580,7 @@ BOOL TransparentBlt(
     UINT crTransparent = CLR_INVALID) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hDestDC*<br/>
 目标设备上下文的句柄。

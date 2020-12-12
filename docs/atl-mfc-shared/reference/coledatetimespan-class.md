@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： COleDateTimeSpan 类
 title: COleDateTimeSpan 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 5934a456b519d14def14018f966c7bff8206c3c4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 51632f8c179ea0e256c39052e924d296b89aefd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166767"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 类
 
@@ -47,13 +48,13 @@ class COleDateTimeSpan
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|构造 `COleDateTimeSpan` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[COleDateTimeSpan：： Format](#format)|生成对象的格式化字符串表示形式 `COleDateTimeSpan` 。|
 |[COleDateTimeSpan::GetDays](#getdays)|返回此对象所表示的范围的日部分 `COleDateTimeSpan` 。|
@@ -70,7 +71,7 @@ class COleDateTimeSpan
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator +、-](#operator_add_-)|添加、减和更改值的符号 `COleDateTimeSpan` 。|
 |[operator + =，-=](#operator_add_eq_-_eq)|`COleDateTimeSpan`在此值中添加和减去值 `COleDateTimeSpan` 。|
@@ -80,12 +81,12 @@ class COleDateTimeSpan
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[COleDateTimeSpan：： m_span](#m_span)|包含 **`double`** 此对象的基础 `COleDateTimeSpan` 。|
 |[COleDateTimeSpan：： m_status](#m_status)|包含此对象的状态 `COleDateTimeSpan` 。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `COleDateTimeSpan` 没有基类。
 
@@ -112,7 +113,7 @@ bool operator<=(const COleDateTimeSpan& dateSpan) const throw();
 bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dateSpan*<br/>
 要比较的 `COleDateTimeSpan`。
@@ -121,7 +122,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 这些运算符比较两个日期/时间范围值，如果条件为 true，则返回 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 > [!NOTE]
 > 如果任一操作数无效，就会发生 ATLASSERT。
@@ -142,7 +143,7 @@ COleDateTimeSpan(double dblSpanSrc) throw();
 COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dblSpanSrc*<br/>
 要复制到新对象中的天数 `COleDateTimeSpan` 。
@@ -150,15 +151,15 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 指示要复制到新对象中的日期和时间值 `COleDateTimeSpan` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所有这些构造函数将创建 `COleDateTimeSpan` 初始化为指定值的新对象。 以下是每个构造函数的简要说明：
 
-- **COleDateTimeSpan ( ) ** 构造 `COleDateTimeSpan` 初始化为0的对象。
+- **COleDateTimeSpan ( )** 构造 `COleDateTimeSpan` 初始化为0的对象。
 
-- **COleDateTimeSpan (** `dblSpanSrc`**) **`COleDateTimeSpan`从浮点值构造对象。
+- **COleDateTimeSpan (** `dblSpanSrc`**)**`COleDateTimeSpan`从浮点值构造对象。
 
-- **COleDateTimeSpan (** `lDays`**,** `nHours`**,** `nMins`**,** `nSecs`**) **构造 `COleDateTimeSpan` 初始化为指定数值的对象。
+- **COleDateTimeSpan (** `lDays`**,** `nHours`**,** `nMins`**,** `nSecs`**)** 构造 `COleDateTimeSpan` 初始化为指定数值的对象。
 
 新对象的状态 `COleDateTimeSpan` 设置为 "有效"。
 
@@ -177,7 +178,7 @@ CString Format(LPCTSTR pFormat) const;
 CString Format(UINT nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFormat*<br/>
 格式字符串类似于格式设置 `printf` 字符串。 格式设置代码（前面以百分号 (`%`) 符号）将替换为相应的 `COleDateTimeSpan` 组件。 格式字符串中的其他字符将按原样复制到返回的字符串中。 下面列出了的格式设置代码的值和含义 `Format` ：
@@ -201,16 +202,16 @@ CString Format(UINT nID) const;
 
 一个 `CString` ，它包含格式化日期/时间范围值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用这些函数可创建时间跨度值的格式化表示形式。 如果此对象的状态 `COleDateTimeSpan` 为 null，则返回值为空字符串。 如果状态无效，则返回字符串由字符串资源 IDS_INVALID_DATETIMESPAN 指定。
 
 此函数的窗体的简要说明如下所示：
 
-**格式 (** *pFormat* **) **<br/>
+**格式 (** *pFormat* **)**<br/>
 此窗体使用格式字符串设置值的格式字符串，该字符串的格式字符串前面有一个百分号 (% ) ，如下所示 `printf` 。 格式化字符串作为参数传递给函数。
 
-**格式 (** *nID* **) **<br/>
+**格式 (** *nID* **)**<br/>
 此窗体使用格式字符串设置值的格式字符串，该字符串的格式字符串前面有一个百分号 (% ) ，如下所示 `printf` 。 格式化字符串是资源。 此字符串资源的 ID 作为参数传递。
 
 ### <a name="example"></a>示例
@@ -229,7 +230,7 @@ LONG GetDays() const throw();
 
 此日期/时间跨度值的日部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值介于大约-3615000 和3615000之间。
 
@@ -265,7 +266,7 @@ LONG GetHours() const throw();
 
 此日期/时间跨度值的小时部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值介于-23 到23之间。
 
@@ -301,7 +302,7 @@ LONG GetMinutes() const throw();
 
 此日期/时间跨度值的分钟部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值范围为-59 到59。
 
@@ -337,7 +338,7 @@ LONG GetSeconds() const throw();
 
 此日期/时间跨度值的秒部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值范围为-59 到59。
 
@@ -373,7 +374,7 @@ DateTimeSpanStatus GetStatus() const throw();
 
 此值的状态 `COleDateTimeSpan` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回值由 `DateTimeSpanStatus` 枚举类型定义，该类型是在类中定义的 `COleDateTimeSpan` 。
 
@@ -417,7 +418,7 @@ double GetTotalDays() const throw();
 
 此日期/时间跨度值（以天为单位）。 尽管此函数是原型以返回 double，但它将始终返回整数值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值范围是 3.65 e6 和 3.65 e6 之间的值。
 
@@ -453,7 +454,7 @@ double GetTotalHours() const throw();
 
 此日期/时间跨度值（以小时为单位）。 尽管此函数是原型以返回 double，但它将始终返回整数值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值范围是 8.77 e7 和 8.77 e7 之间的值。
 
@@ -489,7 +490,7 @@ double GetTotalMinutes() const throw();
 
 此日期/时间跨度值，以分钟为单位。 尽管此函数是原型以返回 double，但它将始终返回整数值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值范围是 5.26 e9 和 5.26 e9 之间的值。
 
@@ -525,7 +526,7 @@ double GetTotalSeconds() const throw();
 
 此日期/时间跨度值（以秒为单位）。 尽管此函数是原型以返回 double，但它将始终返回整数值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的返回值范围是从大约 3.16 e11 到 3.16 e11 之间的值。
 
@@ -557,7 +558,7 @@ double GetTotalSeconds() const throw();
 double m_span;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此值以天为单位表示日期/时间跨度。
 
@@ -572,7 +573,7 @@ double m_span;
 DateTimeSpanStatus m_status;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ```
 enum DateTimeSpanStatus{
@@ -613,7 +614,7 @@ enum DateTimeSpanStatus{
 COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此重载赋值运算符将源日期/时间范围值复制到此 `COleDateTimeSpan` 对象中。
 
@@ -627,7 +628,7 @@ COleDateTimeSpan operator-(const COleDateTimeSpan& dateSpan) const throw();
 COleDateTimeSpan operator-() const throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 前两个运算符允许添加和减少日期/时间跨度值。 第三种是允许您更改日期/时间范围值的符号。
 
@@ -650,7 +651,7 @@ COleDateTimeSpan& operator+=(const COleDateTimeSpan dateSpan) throw();
 COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通过这些运算符，可以在此对象中添加和减少日期/时间范围值 `COleDateTimeSpan` 。 如果任一操作数为 null，则结果值的状态 `COleDateTimeSpan` 为 null。
 
@@ -670,7 +671,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 operator double() const throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此运算符将该值值 `COleDateTimeSpan` 作为浮点数返回。
 
@@ -682,12 +683,12 @@ operator double() const throw();
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 指示要复制到此对象中的日期跨度和时间跨度值 `COleDateTimeSpan` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于查询对象的值的函数 `COleDateTimeSpan` ，请参阅以下成员函数：
 
@@ -719,14 +720,14 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 void SetStatus(DateTimeSpanStatus status) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *status*<br/>
 此对象的新状态值 `COleDateTimeSpan` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*状态*参数值由 `DateTimeSpanStatus` 枚举类型定义，该类型是在类中定义的 `COleDateTimeSpan` 。
+*状态* 参数值由 `DateTimeSpanStatus` 枚举类型定义，该类型是在类中定义的 `COleDateTimeSpan` 。
 
 ```
 enum DateTimeSpanStatus{

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSize 类
 title: CSize 类
 ms.date: 10/18/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: dc876781cca568a332072938bec2cda0afb2ac8b
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0a63a7e0c48948406bf5650a1b095713f701a325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166637"
 ---
 # <a name="csize-class"></a>CSize 类
 
@@ -32,29 +33,29 @@ class CSize : public tagSIZE
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[大小：大小](#csize)|构造 `CSize` 对象。|
+|[CSize：： CSize](#csize)|构造 `CSize` 对象。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CSize：运算符 -](#operator_-)|减去两种大小。|
-|[CSize：：操作员！*](#operator_neq)|检查大小之间的`CSize`不等式。|
-|[CSize：运算符 |](#operator_add)|添加两种大小。|
-|[大小：：操作员 |](#operator_add_eq)|向 添加大小`CSize`到 。|
-|[大小：：运算符 -*](#operator_-_eq)|从`CSize`中减去大小。|
-|[大小：：运算符 |](#operator_eq_eq)|检查和大小之间的`CSize`相等性。|
+|[CSize：： operator-](#operator_-)|减去两个大小。|
+|[CSize：： operator！ =](#operator_neq)|检查和大小之间的不相等 `CSize` 。|
+|[CSize：： operator +](#operator_add)|添加两种大小。|
+|[CSize：： operator + =](#operator_add_eq)|向添加大小 `CSize` 。|
+|[CSize：： operator-=](#operator_-_eq)|从中减去一个大小 `CSize` 。|
+|[CSize：： operator = =](#operator_eq_eq)|检查 `CSize` 和大小是否相等。|
 
 ## <a name="remarks"></a>备注
 
-此类派生自结构`SIZE`。 这意味着您可以传递 调用`CSize`的`SIZE`参数，并且`SIZE`结构的数据成员是 可`CSize`访问的数据成员。
+此类派生自 `SIZE` 结构。 这意味着，可以 `CSize` 在调用的参数中传递 `SIZE` ，该结构的数据成员可以 `SIZE` 访问数据成员 `CSize` 。
 
-和`CSize`（ 的成员 ） 是公开的。 `cx` `cy` `SIZE` 此外，`CSize`实现成员函数来操作结构`SIZE`。
+`cx` `cy` `SIZE` (和) 的和成员 `CSize` 是公共的。 此外，还 `CSize` 实现了成员函数以操作 `SIZE` 结构。
 
 > [!NOTE]
-> 有关共享实用程序类的详细信息（如`CSize`），请参阅[共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
+> 有关 (如) 的共享实用工具类的详细信息 `CSize` ，请参阅 [共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -64,9 +65,9 @@ class CSize : public tagSIZE
 
 ## <a name="requirements"></a>要求
 
-**标题：** atltype.h
+**标头：** atltypes
 
-## <a name="csizecsize"></a><a name="csize"></a>大小：大小
+## <a name="csizecsize"></a><a name="csize"></a> CSize：： CSize
 
 构造 `CSize` 对象。
 
@@ -78,34 +79,34 @@ CSize( POINT initPt) throw();
 CSize( DWORD dwSize) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *initCX*<br/>
-`cx`设置 的成员`CSize`。
+设置的 `cx` 成员 `CSize` 。
 
-*因特西*<br/>
-`cy`设置 的成员`CSize`。
+*initCY*<br/>
+设置的 `cy` 成员 `CSize` 。
 
 *initSize*<br/>
-[用于](/windows/win32/api/windef/ns-windef-size)初始化`CSize``CSize`的 SIZE 结构或对象。
+[](/windows/win32/api/windef/ns-windef-size) `CSize` 用于初始化的大小结构或对象 `CSize` 。
 
 *initPt*<br/>
-[POINT](/windows/win32/api/windef/ns-windef-point)用于初始化`CPoint``CSize`的 POINT 结构或对象。
+[点](/windows/win32/api/windef/ns-windef-point) 结构或 `CPoint` 用于初始化的对象 `CSize` 。
 
 *dwSize*<br/>
-DWORD 用于初始化`CSize`。 低阶单词是`cx`成员，高阶单词是`cy`成员。
+用于初始化的 DWORD `CSize` 。 低序位字是 `cx` 成员，高位字是 `cy` 成员。
 
 ### <a name="remarks"></a>备注
 
-如果未给出参数，`cx`并且`cy`初始化为零。
+如果未提供任何参数， `cx` `cy` 则将其初始化为零。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]
 
-## <a name="csizeoperator-"></a><a name="operator_eq_eq"></a>大小：：运算符 |
+## <a name="csizeoperator-"></a><a name="operator_eq_eq"></a> CSize：： operator = =
 
-检查两种大小之间的相等性。
+检查两个大小是否相等。
 
 ```
 BOOL operator==(SIZE size) const throw();
@@ -113,15 +114,15 @@ BOOL operator==(SIZE size) const throw();
 
 ### <a name="remarks"></a>备注
 
-如果大小相等，则返回非零，其他为 0。
+如果大小相等，则返回非零值 otherwize 0。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#98](../../atl-mfc-shared/codesnippet/cpp/csize-class_2.cpp)]
 
-## <a name="csizeoperator-"></a><a name="operator_neq"></a>CSize：：操作员！*
+## <a name="csizeoperator-"></a><a name="operator_neq"></a> CSize：： operator！ =
 
-检查两种大小之间的不等式。
+检查两个大小是否不相等。
 
 ```
 BOOL operator!=(SIZE size) const throw();
@@ -129,15 +130,15 @@ BOOL operator!=(SIZE size) const throw();
 
 ### <a name="remarks"></a>备注
 
-如果大小不相等，则返回非零，否则为 0。
+如果大小不相等，则返回非零值，否则返回0。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#99](../../atl-mfc-shared/codesnippet/cpp/csize-class_3.cpp)]
 
-## <a name="csizeoperator-"></a><a name="operator_add_eq"></a>大小：：操作员 |
+## <a name="csizeoperator-"></a><a name="operator_add_eq"></a> CSize：： operator + =
 
-为此添加大小`CSize`。
+将大小添加到此 `CSize` 。
 
 ```cpp
 void operator+=(SIZE size) throw();
@@ -147,9 +148,9 @@ void operator+=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#100](../../atl-mfc-shared/codesnippet/cpp/csize-class_4.cpp)]
 
-## <a name="csizeoperator--"></a><a name="operator_-_eq"></a>大小：：运算符 -*
+## <a name="csizeoperator--"></a><a name="operator_-_eq"></a> CSize：： operator-=
 
-从中`CSize`减去大小。
+从此中减去大小 `CSize` 。
 
 ```cpp
 void operator-=(SIZE size) throw();
@@ -159,9 +160,9 @@ void operator-=(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#101](../../atl-mfc-shared/codesnippet/cpp/csize-class_5.cpp)]
 
-## <a name="csizeoperator-"></a><a name="operator_add"></a>CSize：运算符 |
+## <a name="csizeoperator-"></a><a name="operator_add"></a> CSize：： operator +
 
-这些运算符将此值`CSize`添加到参数的值中。
+这些运算符将此 `CSize` 值添加到参数的值。
 
 ```
 CSize operator+(SIZE size) const throw();
@@ -173,25 +174,25 @@ CRect operator+(const RECT* lpRect) const throw();
 
 请参阅以下各个运算符的说明：
 
-- **运算符 +（** *大小* **）**
+- **operator + (** *大小* **)**
 
-  此操作将添加两`CSize`个值。
+  此操作会将两个 `CSize` 值相加。
 
-- **运算符 +（***点***）**
+- **operator + (** *点* **)**
 
-  此操作按此值`CSize`偏移（移动[）POINT（](/windows/win32/api/windef/ns-windef-point)或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)） 值。 此值`cx``CSize`的`cy`和 成员将添加到 值`x``y`和 数据成员`POINT`中。 它类似于[CPoint：：运算符 *](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)的版本，它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+  此操作偏移量 (按此值移动) [点](/windows/win32/api/windef/ns-windef-point) (或 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) 值 `CSize` 。 `cx` `cy` 此值的和成员 `CSize` 将添加到值的 `x` 和 `y` 数据成员中 `POINT` 。 它类似于采用[大小](/windows/win32/api/windef/ns-windef-size)参数的[CPoint：： operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)的版本。
 
-- **运算符 +（** *lpRect* **）**
+- **operator + (** *lpRect* **)**
 
-   此操作按此值`CSize`偏移（移动[）RECT（](/windows/win32/api/windef/ns-windef-rect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)） 值。 此值`cx``CSize`的`cy`和 成员将添加到`RECT`值`left``top`的`right`、`bottom`和 数据成员中。 它类似于[CRect：：运算符 *](../../atl-mfc-shared/reference/crect-class.md#operator_add)的版本，它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+   此操作偏移量 (按此值移动) [RECT](/windows/win32/api/windef/ns-windef-rect) (或 [CRect](../../atl-mfc-shared/reference/crect-class.md)) 值 `CSize` 。 `cx` `cy` 此值的和成员 `CSize` 将添加到值的 `left` 、 `top` 、 `right` 和 `bottom` 数据成员中 `RECT` 。 它类似于采用[大小](/windows/win32/api/windef/ns-windef-size)参数的[CRect：： operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)的版本。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]
 
-## <a name="csizeoperator--"></a><a name="operator_-"></a>CSize：运算符 -
+## <a name="csizeoperator--"></a><a name="operator_-"></a> CSize：： operator-
 
-这些运算符的前三个将此值`CSize`减去参数的值。
+其中的前三个运算符将此 `CSize` 值减去到参数的值。
 
 ```
 CSize operator-(SIZE size) const throw();
@@ -202,31 +203,31 @@ CSize operator-() const throw();
 
 ### <a name="remarks"></a>备注
 
-第四个运算符，一元减号，更改`CSize`值的符号。 请参阅以下各个运算符的说明：
+第四个运算符（一元减号）更改值的符号 `CSize` 。 请参阅以下各个运算符的说明：
 
-- **运算符 -（** *尺寸* **）**
+- **操作员 (** *大小* **)**
 
-  此操作减去两`CSize`个值。
+  此操作会将两个值相减 `CSize` 。
 
-- **运算符 -（***点***）**
+- **操作员 (** *点* **)**
 
-  此操作按此值`CSize`的累加反反偏移（移动[）POINT](/windows/win32/api/windef/ns-windef-point)或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)值。 此值`cx`的`cy``CSize`和 将从`x``y``POINT`值 和 数据成员中减去。 它类似于[CPoint：：运算符](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)的版本 - 它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+  此操作偏移量 (通过此值的加法反转) [点](/windows/win32/api/windef/ns-windef-point) 或 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 值移动 `CSize` 。 `cx`此值的和将 `cy` `CSize` 从 `x` 值的和 `y` 数据成员中减去 `POINT` 。 它类似于采用[大小](/windows/win32/api/windef/ns-windef-size)参数的[CPoint：： operator](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)的版本。
 
-- 运算符 *-（lpRect）* **)** **operator -(**
+- **操作员 (** *lpRect* **)**
 
-  此操作通过此值`CSize`的累加反反偏移（移动[）RECT](/windows/win32/api/windef/ns-windef-rect)或[CRect](../../atl-mfc-shared/reference/crect-class.md)值。 此值`cx``CSize`的`cy`和 成员将从`bottom``RECT`值的`left`、`top`和`right`数据成员中减去。 它类似于[CRect：：：运算符](../../atl-mfc-shared/reference/crect-class.md#operator_-)的版本 - 它采用[SIZE](/windows/win32/api/windef/ns-windef-size)参数。
+  此操作偏移量 (通过此值的加法反转) [RECT](/windows/win32/api/windef/ns-windef-rect) 或 [CRect](../../atl-mfc-shared/reference/crect-class.md) 值移动 `CSize` 。 `cx` `cy` 此值的和成员 `CSize` 从 `left` 值的、 `top` 、 `right` 和 `bottom` 数据成员 `RECT` 中减去。 它类似于采用[大小](/windows/win32/api/windef/ns-windef-size)参数的[CRect：： operator](../../atl-mfc-shared/reference/crect-class.md#operator_-)的版本。
 
-- **运算符 -（）**
+- **操作员 ( # B1**
 
-  此操作返回此值`CSize`的累加反数。
+  此操作返回此值的加法逆元 `CSize` 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATLMFC_Utilities#103](../../atl-mfc-shared/codesnippet/cpp/csize-class_7.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[MFC 样品 MDI](../../overview/visual-cpp-samples.md)<br/>
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CRect 类](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CPoint 类](../../atl-mfc-shared/reference/cpoint-class.md)
