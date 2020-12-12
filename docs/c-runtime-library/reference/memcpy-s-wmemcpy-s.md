@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： memcpy_s、wmemcpy_s
 title: memcpy_s、wmemcpy_s
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77c71e594d9a3853438987e85e43700d1f467718
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304735"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
@@ -59,9 +60,9 @@ errno_t wmemcpy_s(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-dest**<br/>
+*目的*<br/>
 新缓冲区。
 
 *destSize*<br/>
@@ -79,24 +80,24 @@ dest**<br/>
 
 ### <a name="error-conditions"></a>错误条件
 
-|dest**|*destSize*|*src*|*计数*|返回值|*Dest*的内容|
+|*目的*|*destSize*|*src*|*计数*|返回值|*Dest* 的内容|
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|未修改|
-|**Null**|any|any|非零|**EINVAL**|未修改|
-|any|any|**Null**|非零|**EINVAL**|*dest*已归零|
-|any|< *计*|any|非零|**ERANGE**|*dest*已归零|
+|**NULL**|any|any|非零|**EINVAL**|未修改|
+|any|any|**NULL**|非零|**EINVAL**|*dest* 已归零|
+|any|< *计*|any|非零|**ERANGE**|*dest* 已归零|
 
 ## <a name="remarks"></a>备注
 
-**memcpy_s**从*src*到*目标*复制*计数*字节;**wmemcpy_s**复制*计数*宽字符（两个字节）。 如果源和目标重叠，则**memcpy_s**的行为是不确定的。 使用**memmove_s**处理重叠区域。
+**memcpy_s** 从 *src* 到 *目标* 复制 *计数* 字节;**wmemcpy_s** 将 *计数* 宽字符复制 (两个) 字节。 如果源和目标重叠，则 **memcpy_s** 的行为是不确定的。 使用 **memmove_s** 处理重叠区域。
 
-这些函数验证其参数。 如果*count*为非零，且*dest*或*src*为空指针，或*destSize*小于*count*，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL**或**ERANGE** ，并将**errno**设置为返回值。
+这些函数验证其参数。 如果 *count* 为非零，且 *dest* 或 *src* 为空指针，或 *destSize* 小于 *count*，则这些函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **EINVAL** 或 **ERANGE** ，并将 **errno** 设置为返回值。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**memcpy_s**|\<memory.h> 或 \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|
@@ -143,7 +144,7 @@ int main()
 0 1 4 9 16 25 36 49 64 81
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>
