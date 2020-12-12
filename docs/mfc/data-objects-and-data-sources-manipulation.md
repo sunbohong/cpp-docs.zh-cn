@@ -1,4 +1,5 @@
 ---
+description: 了解更多：数据对象和数据源：操作
 title: 数据对象和数据源：操作
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: f1a83511edbf240d9a05d6d489f6cda9453ccea9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a9611fefc94e8437f9e0e5361e0d95972f867984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291228"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>数据对象和数据源：操作
 
@@ -29,33 +30,33 @@ ms.locfileid: "84620403"
 
 - [从数据对象检索数据](#_core_retrieving_data_from_a_data_object)
 
-## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>将数据插入数据源
+## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a> 将数据插入数据源
 
 如何将数据插入数据源取决于数据是立即提供，还是按需提供，以及在哪个介质上提供。 可能的情况如下所示。
 
-### <a name="supplying-data-immediately-immediate-rendering"></a>立即提供数据（即时呈现）
+### <a name="supplying-data-immediately-immediate-rendering"></a>立即提供数据 (立即呈现) 
 
-- `COleDataSource::CacheGlobalData`为提供数据的每个剪贴板格式重复调用。 传递要使用的剪贴板格式，它是包含数据的内存的句柄，还可以是描述数据的**FORMATETC**结构（可选）。
+- `COleDataSource::CacheGlobalData`为提供数据的每个剪贴板格式重复调用。 传递要使用的剪贴板格式，它是包含数据的内存的句柄，还可以是描述数据的 **FORMATETC** 结构（可选）。
 
-     \- 或 -
+     -或-
 
-- 如果要直接使用**STGMEDIUM**结构，请在 `COleDataSource::CacheData` `COleDataSource::CacheGlobalData` 上面的选项中调用而不是。
+- 如果要直接使用 **STGMEDIUM** 结构，请在 `COleDataSource::CacheData` `COleDataSource::CacheGlobalData` 上面的选项中调用而不是。
 
-### <a name="supplying-data-on-demand-delayed-rendering"></a>按需提供数据（延迟渲染）
+### <a name="supplying-data-on-demand-delayed-rendering"></a>按需提供数据 (延迟渲染) 
 
 这是一个高级主题。
 
-- `COleDataSource::DelayRenderData`为提供数据的每个剪贴板格式重复调用。 传递要使用的剪贴板格式，以及描述数据的**FORMATETC**结构（可选）。 请求数据时，框架将调用 `COleDataSource::OnRenderData` ，必须重写。
+- `COleDataSource::DelayRenderData`为提供数据的每个剪贴板格式重复调用。 传递要使用的剪贴板格式，以及描述数据的 **FORMATETC** 结构（可选）。 请求数据时，框架将调用 `COleDataSource::OnRenderData` ，必须重写。
 
-     \- 或 -
+     -或-
 
 - 如果使用 `CFile` 对象来提供数据，请调用 `COleDataSource::DelayRenderFileData` 而不是 `COleDataSource::DelayRenderData` 在上一选项中调用。 请求数据时，框架将调用 `COleDataSource::OnRenderFileData` ，必须重写。
 
-## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>确定数据对象中可用的格式
+## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a> 确定数据对象中可用的格式
 
 在应用程序允许用户将数据粘贴到其中之前，需要知道剪贴板上是否有可处理的格式。 为此，应用程序应执行以下操作：
 
-1. 创建 `COleDataObject` 对象和**FORMATETC**结构。
+1. 创建 `COleDataObject` 对象和 **FORMATETC** 结构。
 
 1. 调用数据对象的 `AttachClipboard` 成员函数，将数据对象与剪贴板上的数据相关联。
 
@@ -67,19 +68,19 @@ ms.locfileid: "84620403"
 
    - 调用数据对象的 `BeginEnumFormats` 成员函数，开始枚举剪贴板上可用的格式。 然后调用 `GetNextFormat` ，直到剪贴板返回应用程序支持的格式，或者没有其他格式。
 
-如果使用**ON_UPDATE_COMMAND_UI**，现在可以在 "编辑" 菜单中启用 "粘贴" 和 "粘贴"。 为此，请调用 `CMenu::EnableMenuItem` 或 `CCmdUI::Enable` 。 有关容器应用程序应如何处理菜单项和时间的详细信息，请参阅[菜单和资源：容器添加](menus-and-resources-container-additions.md)内容。
+如果使用 **ON_UPDATE_COMMAND_UI**，现在可以在 "编辑" 菜单中启用 "粘贴" 和 "粘贴"。 为此，请调用 `CMenu::EnableMenuItem` 或 `CCmdUI::Enable` 。 有关容器应用程序应如何处理菜单项和时间的详细信息，请参阅 [菜单和资源：容器添加](menus-and-resources-container-additions.md)内容。
 
-## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>从数据对象检索数据
+## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a> 从数据对象检索数据
 
 一旦您决定了数据格式后，就会继续从数据对象中检索数据。 若要执行此操作，用户需要决定数据的放置位置，应用程序将调用相应的函数。 数据将在以下其中一个介质中提供：
 
 |中型|要调用的函数|
 |------------|----------------------|
-|全局内存（ `HGLOBAL` ）|`COleDataObject::GetGlobalData`|
-|文件（ `CFile` ）|`COleDataObject::GetFileData`|
-|**STGMEDIUM**结构（ `IStorage` ）|`COleDataObject::GetData`|
+|全局内存 (`HGLOBAL`) |`COleDataObject::GetGlobalData`|
+|文件 (`CFile`) |`COleDataObject::GetFileData`|
+|**STGMEDIUM** 结构 (`IStorage`) |`COleDataObject::GetData`|
 
-通常，介质将连同其剪贴板格式一起指定。 例如， **CF_EMBEDDEDSTRUCT**对象始终位于 `IStorage` 需要**STGMEDIUM**结构的介质中。 因此，您可以使用， `GetData` 因为它是可以接受**STGMEDIUM**结构的两个函数中的一个。
+通常，介质将连同其剪贴板格式一起指定。 例如， **CF_EMBEDDEDSTRUCT** 对象始终位于 `IStorage` 需要 **STGMEDIUM** 结构的介质中。 因此，您可以使用， `GetData` 因为它是可以接受 **STGMEDIUM** 结构的两个函数中的一个。
 
 对于剪贴板格式为 `IStream` 或 medium 的情况 `HGLOBAL` ，框架可以提供 `CFile` 引用数据的指针。 然后，应用程序可以使用文件读取来获取数据，其方式与从文件导入数据的方式几乎相同。 实质上，这是 `OnRenderData` 数据源中的和例程的客户端接口 `OnRenderFileData` 。
 
@@ -91,8 +92,8 @@ ms.locfileid: "84620403"
 
 - [剪贴板](clipboard.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[数据对象和数据源（OLE）](data-objects-and-data-sources-ole.md)<br/>
+[OLE) 的数据对象和数据源 (](data-objects-and-data-sources-ole.md)<br/>
 [COleDataObject 类](reference/coledataobject-class.md)<br/>
 [COleDataSource 类](reference/coledatasource-class.md)

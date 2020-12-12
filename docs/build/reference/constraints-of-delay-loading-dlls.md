@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：延迟加载 Dll 的约束
 title: 延迟加载 DLL 的约束
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: be5e5eb360f80e0b2ea9682f38f6787044cd3c63
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 45f54ca57b57bc689752a8aa80f4c03bbe096817
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493074"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197005"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延迟加载 DLL 的约束
 
@@ -23,7 +24,7 @@ ms.locfileid: "69493074"
 
 - 不支持转发的入口点的[绑定](binding-imports.md)。
 
-- 如果在延迟加载的 DLL 的入口点发生每个进程初始化，则 DLL 的延迟加载可能不会造成进程行为相同。 其他情况包括静态 TLS (线程本地存储), 使用[__declspec (thread)](../../cpp/thread.md)声明, 在通过`LoadLibrary`加载 DLL 时不会对其进行处理。 使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue` 的动态 TLS 仍可在静态或者延迟加载的 DLL 中使用。
+- 如果在延迟加载的 DLL 的入口点发生每个进程初始化，则 DLL 的延迟加载可能不会造成进程行为相同。 其他情况包括静态 TLS (线程本地存储) ，使用 [__declspec (线程) ](../../cpp/thread.md)声明，这在通过加载 DLL 时不处理 `LoadLibrary` 。 使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue` 的动态 TLS 仍可在静态或者延迟加载的 DLL 中使用。
 
 - 初次调用静态（全局）函数后，应将其指针重新初始化为导入函数。 这是因为该函数指针在初次使用时将指向 thunk。
 
@@ -33,7 +34,7 @@ ms.locfileid: "69493074"
 
 ## <a name="see-also"></a>请参阅
 
-[延迟加载 DLL 的链接器支持](linker-support-for-delay-loaded-dlls.md)<br/>
+[Delay-Loaded Dll 的链接器支持](linker-support-for-delay-loaded-dlls.md)<br/>
 [LoadLibrary 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
 [GetModuleHandle 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
 [GetProcAddress 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>

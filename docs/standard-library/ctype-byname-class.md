@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ctype_byname 类
 title: ctype_byname 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: cc5f44e1c544d2088030621b684c9e070175d695
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233131"
 ---
 # <a name="ctype_byname-class"></a>ctype_byname 类
 
@@ -40,14 +41,14 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-其行为由已命名的区域设置 `_Locname` 决定。 每个构造函数对具有 [ctype](../standard-library/ctype-class.md)\<CharType 1> ( `_Refs`) 的基对象或基类 `ctype<char>` 的同等对象进行初始化。
+其行为由已命名的区域设置 `_Locname` 决定。 每个构造函数都将其基本对象[初始化为](../standard-library/ctype-class.md) \<CharType> ( `_Refs`) 或等效的基类 `ctype<char>` 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CRecordView 和 CDaoRecordView 的对话框数据交换函数
 title: CRecordView 和 CDaoRecordView 的对话框数据交换函数
 ms.date: 09/17/2019
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 06d0511317c21f6b132349d7d6cd6c2d6f20bc1b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9b149c3cdc05bf63f69b94bbcaf084a84ec42a84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220027"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的对话框数据交换函数
 
@@ -36,7 +37,7 @@ ms.locfileid: "88837367"
 
 ### <a name="ddx_field-functions"></a>DDX_Field 函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DDX_FieldCBIndex](#ddx_fieldcbindex)|在 [CRecordView](../../mfc/reference/crecordview-class.md) 或 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)中的组合框中，在记录集字段数据成员和当前选择的索引之间传输整数数据。|
 |[DDX_FieldCBString](#ddx_fieldcbstring)|`CString`在或中的组合框的记录集字段数据成员和编辑控件之间传输数据 `CRecordView` `CDaoRecordView` 。 将数据从记录集移到控件时，此函数将选择组合框中以指定字符串中的字符开头的项。|
@@ -48,7 +49,7 @@ ms.locfileid: "88837367"
 |[DDX_FieldRadio](#ddx_fieldradio)|在或中的记录集字段数据成员和一组单选按钮之间传输整数 `CRecordView` 数据 `CDaoRecordView` 。|
 |[DDX_FieldScroll](#ddx_fieldscroll)|设置或获取或中滚动条控件的滚动位置 `CRecordView` `CDaoRecordView` 。 调用 [DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) 函数。|
 |[DDX_FieldSlider](#ddx_fieldslider)|同步记录视图中滑块控件和 **`int`** 记录集的字段数据成员的拇指位置。 |
-|[DDX_FieldText](#ddx_fieldtext)|重载版本可用于 **`int`** **UINT** **`long`** `DWORD` [CString](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** **`short`** 在或中的记录集字段数据成员和编辑框[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)之间[COleCurrency](../../mfc/reference/colecurrency-class.md)传输 `CRecordView` 、UINT、、、CString、、、、COleDateTime 和 COleCurrency 数据 `CDaoRecordView` 。|
+|[DDX_FieldText](#ddx_fieldtext)|重载版本可用于 **`int`**  **`long`** `DWORD` [](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** **`short`** 在或中的记录集字段数据成员和编辑框 [](../../atl-mfc-shared/reference/coledatetime-class.md)之间 [](../../mfc/reference/colecurrency-class.md)传输 `CRecordView` 、UINT、、、CString、、、、COleDateTime 和 COleCurrency 数据 `CDaoRecordView` 。|
 
 ## <a name="ddx_fieldcbindex"></a><a name="ddx_fieldcbindex"></a> DDX_FieldCBIndex
 
@@ -68,7 +69,7 @@ void AFXAPI DDX_FieldCBIndex(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -76,15 +77,15 @@ void AFXAPI DDX_FieldCBIndex(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象中的控件的 ID。
 
-*index*<br/>
+*索引*<br/>
 对关联或对象中的字段数据成员的 `CRecordset` 引用 `CDaoRecordset` 。
 
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-将数据从记录集移到控件时，此函数将基于在 *index*中指定的值来设置控件中的选定内容。 当从记录集到控件的传输时，如果记录集字段为空，则 MFC 会将索引的值设置为0。 在从 control 到 recordset 的传输时，如果控件为空或未选择任何项，则将记录集字段设置为0。
+将数据从记录集移到控件时，此函数将基于在 *index* 中指定的值来设置控件中的选定内容。 当从记录集到控件的传输时，如果记录集字段为空，则 MFC 会将索引的值设置为0。 在从 control 到 recordset 的传输时，如果控件为空或未选择任何项，则将记录集字段设置为0。
 
 如果使用的是基于 ODBC 的类，请使用第一个版本。 如果使用的是基于 DAO 的类，请使用第二个版本。
 
@@ -116,7 +117,7 @@ void AFXAPI DDX_FieldCBString(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -130,7 +131,7 @@ void AFXAPI DDX_FieldCBString(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将数据从记录集移到控件时，此函数将组合框中的当前选定内容设置为以 " *值*" 中指定的字符串中的字符开头的第一行。 在从记录集到控件的传输上，如果记录集字段为空，则将从组合框中删除任何选择，组合框的编辑控件将设置为空。 在从 control 到 recordset 的传输时，如果控件为空，则在字段允许时，"记录集" 字段将设置为 Null。
 
@@ -164,7 +165,7 @@ void AFXAPI DDX_FieldCBStringExact(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -178,7 +179,7 @@ void AFXAPI DDX_FieldCBStringExact(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将数据从记录集移到控件时，此函数将组合框中的当前选择设置为与 " *值*" 中指定的字符串完全匹配的第一行。 在从记录集到控件的传输上，如果记录集字段为空，则将从组合框中删除任何选择，组合框的编辑框将设置为空。 在从 control 到 recordset 的传输时，如果控件为空，则记录集字段将设置为 NULL。
 
@@ -212,7 +213,7 @@ void AFXAPI DDX_FieldCheck(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -226,7 +227,7 @@ void AFXAPI DDX_FieldCheck(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当 `DDX_FieldCheck` 调用时， *value* 设置为复选框控件的当前状态，或者控件的状态设置为 " *值*"，具体取决于传输方向。
 
@@ -254,7 +255,7 @@ void AFXAPI DDX_FieldLBIndex(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -262,15 +263,15 @@ void AFXAPI DDX_FieldLBIndex(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)对象中的控件的 ID。
 
-*index*<br/>
+*索引*<br/>
 对关联或对象中的字段数据成员的 `CRecordset` 引用 `CDaoRecordset` 。
 
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-将数据从记录集移到控件时，此函数将基于在 *index*中指定的值来设置控件中的选定内容。 当从记录集到控件的传输时，如果记录集字段为空，则 MFC 会将索引的值设置为0。 在从 control 到 recordset 的传输时，如果控件为空，则 "记录集" 字段设置为0。
+将数据从记录集移到控件时，此函数将基于在 *index* 中指定的值来设置控件中的选定内容。 当从记录集到控件的传输时，如果记录集字段为空，则 MFC 会将索引的值设置为0。 在从 control 到 recordset 的传输时，如果控件为空，则 "记录集" 字段设置为0。
 
 如果使用的是基于 ODBC 的类，请使用第一个版本。 如果使用的是基于 DAO 的类，请使用第二个版本。
 
@@ -302,7 +303,7 @@ void AFXAPI DDX_FieldLBString(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -316,9 +317,9 @@ void AFXAPI DDX_FieldLBString(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-相反，此函数将列表框中的当前选定内容设置为以 *值*指定的字符串中的字符开头的第一行。 当从记录集到控件的传输时，如果记录集字段为空，则会从列表框中删除任何选择。 在从 control 到 recordset 的传输时，如果控件为空，则记录集字段将设置为 Null。
+相反，此函数将列表框中的当前选定内容设置为以 *值* 指定的字符串中的字符开头的第一行。 当从记录集到控件的传输时，如果记录集字段为空，则会从列表框中删除任何选择。 在从 control 到 recordset 的传输时，如果控件为空，则记录集字段将设置为 Null。
 
 如果使用的是基于 ODBC 的类，请使用第一个版本。 如果使用的是基于 DAO 的类，请使用第二个版本。
 
@@ -350,7 +351,7 @@ void AFXAPI DDX_FieldLBStringExact(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -364,7 +365,7 @@ void AFXAPI DDX_FieldLBStringExact(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 相反，此函数将列表框中的当前选定内容设置为与 " *值*" 中指定的字符串完全匹配的第一行。 当从记录集到控件的传输时，如果记录集字段为空，则会从列表框中删除任何选择。 在从 control 到 recordset 的传输时，如果控件为空，则记录集字段将设置为 Null。
 
@@ -398,7 +399,7 @@ void AFXAPI DDX_FieldRadio(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -412,7 +413,7 @@ void AFXAPI DDX_FieldRadio(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从记录集字段传输到视图时，此函数将打开第 *n* 个单选按钮 (从零开始的) 并关闭其他按钮。 相反，此函数将记录集字段设置为当前)  (选中的单选按钮的序号。 当从记录集到控件的传输时，如果记录集字段为空，则不选择任何按钮。 在从控件传输到记录集时，如果未选择任何控件，则在字段允许时，"记录集" 字段将设置为 Null。
 
@@ -446,7 +447,7 @@ void AFXAPI DDX_FieldScroll(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -460,7 +461,7 @@ void AFXAPI DDX_FieldScroll(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将数据从记录集移到控件时，此函数将滚动条控件的滚动位置设置为在 " *值*" 中指定的值。 当从记录集到控件的传输时，如果记录集字段为空，则将滚动条控件设置为0。 在从 control 到 recordset 的传输时，如果控件为空，则记录集字段的值为0。
 
@@ -496,7 +497,7 @@ void AFXAPI DDX_FieldSlider(
    CDaoRecordset* pRecordset );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -510,7 +511,7 @@ void AFXAPI DDX_FieldSlider(
 *pRecordset*<br/>
 一个指针，指向要 `CRecordset` 与之交换数据的关联的或 `CDaoRecordset` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将数据从记录集移到滑块时，此函数将滑块的位置设置为 " *值*" 中指定的值。 在从记录集到控件的传输上，如果记录集字段为 Null，滑块控件的位置设置为0。 在从控件到记录集的传输时，如果控件为空，则记录集字段的值为0。
 
@@ -530,7 +531,7 @@ void AFXAPI DDX_FieldSlider(
 
 ## <a name="ddx_fieldtext"></a><a name="ddx_fieldtext"></a> DDX_FieldText
 
-`DDX_FieldText`函数管理在 **`int`** **`short`** **`long`** [CString](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** 编辑框控件和记录集的字段数据成员之间的**BOOL**、、、DWORD、CString、、、布尔或**字节**数据的传输。
+`DDX_FieldText`函数管理在 **`int`** **`short`** **`long`** [](../../atl-mfc-shared/reference/cstringt-class.md) **`float`** **`double`** 编辑框控件和记录集的字段数据成员之间的、、、DWORD、CString、、、布尔或 **字节** 数据的传输。
 
 ```cpp
 void AFXAPI DDX_FieldText(
@@ -642,7 +643,7 @@ void AFXAPI DDX_FieldText(
     CDaoRecordset* pRecordset);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -656,7 +657,7 @@ void AFXAPI DDX_FieldText(
 *pRecordset*<br/>
 指向 [CRecordset](../../mfc/reference/crecordset-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象的指针，数据将与该对象交换。 此指针可 `DDX_FieldText` 检测并设置 Null 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 对象， `DDX_FieldText` 还管理传输 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)和 [COleCurrency](../../mfc/reference/colecurrency-class.md) 值。 空的编辑框控件指示 Null 值。 当从记录集到控件的传输时，如果记录集字段为空，则编辑框将设置为空。 在从 control 到 recordset 的传输时，如果控件为空，则记录集字段将设置为 Null。
 
@@ -674,6 +675,6 @@ void AFXAPI DDX_FieldText(
 
   **标头** afxdao
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4706
 title: 编译器警告（等级 4）C4706
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: ca614d0ca55dcfa22ec31df78ebe2be904ffd9e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74989905"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208523"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>编译器警告（等级 4）C4706
 
@@ -19,7 +20,7 @@ ms.locfileid: "74989905"
 
 条件表达式中的测试值是赋值的结果。
 
-赋值包含一个值（赋值左侧的值），可以在其他表达式（包括测试表达式）中合法使用该值。
+赋值的值 (赋值) 左侧的值，可在其他表达式（包括测试表达式）中合法使用。
 
 下面的示例生成 C4706：
 

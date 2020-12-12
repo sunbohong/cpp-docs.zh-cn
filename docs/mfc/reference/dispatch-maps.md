@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：调度映射
 title: 调度映射
 ms.date: 06/20/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: 24921f2da404a2e5103d9a3cd2abba03109f0681
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3b160040af52e8346cbcbb09cc05c301f607052b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219962"
 ---
 # <a name="dispatch-maps"></a>调度映射
 
@@ -19,7 +20,7 @@ OLE 自动化提供了调用方法和跨应用程序访问属性的方法。 用
 
 |调度映射宏|描述|
 |-|-|
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|声明调度映射将用于公开类的方法和属性（必须在类声明中使用）。|
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|声明调度映射将用于公开类的方法和属性 (必须在类声明) 中使用。|
 |[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|启动调度映射的定义。|
 |[END_DISPATCH_MAP](#end_dispatch_map)|结束调度映射的定义。|
 |[DISP_FUNCTION](#disp_function)|用于调度映射中，用于定义 OLE 自动化函数。|
@@ -29,7 +30,7 @@ OLE 自动化提供了调用方法和跨应用程序访问属性的方法。 用
 |[DISP_PROPERTY_PARAM](#disp_property_param)|定义一个 OLE 自动化属性，该属性采用参数并命名 Get 和 Set 函数。|
 |[DISP_DEFVALUE](#disp_defvalue)|将现有属性设为对象的默认值。|
 
-## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a> DECLARE_DISPATCH_MAP
 
 如果 `CCmdTarget` 程序中派生的类支持 OLE 自动化，则该类必须提供一个调度映射来公开其方法和属性。
 
@@ -39,12 +40,12 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>备注
 
-在类声明的末尾使用 DECLARE_DISPATCH_MAP 宏。 然后，在中。CPP 文件，用于定义类的成员函数，请使用 BEGIN_DISPATCH_MAP 宏。 然后，为类的每个公开的方法和属性（DISP_FUNCTION、DISP_PROPERTY 等）添加宏项。 最后，使用 END_DISPATCH_MAP 宏。
+在类声明的末尾使用 DECLARE_DISPATCH_MAP 宏。 然后，在中。CPP 文件，用于定义类的成员函数，请使用 BEGIN_DISPATCH_MAP 宏。 然后，为类的每个公开的方法和属性包含宏条目 (DISP_FUNCTION、DISP_PROPERTY 等) 。 最后，使用 END_DISPATCH_MAP 宏。
 
 > [!NOTE]
-> 如果在 DECLARE_DISPATCH_MAP 后声明任何成员，则必须为它们指定新的访问类型（ **`public`** 、 **`private`** 或 **`protected`** ）。
+> 如果在 DECLARE_DISPATCH_MAP 后声明任何成员，则必须为它们指定新的访问类型 ( **`public`** 、 **`private`** 或 **`protected`**) 。
 
-应用程序向导和代码向导有助于创建自动化类和维护调度映射。 有关调度映射的详细信息，请参阅[自动化服务器](../../mfc/automation-servers.md)。
+应用程序向导和代码向导有助于创建自动化类和维护调度映射。 有关调度映射的详细信息，请参阅 [自动化服务器](../../mfc/automation-servers.md)。
 
 ### <a name="example"></a>示例
 
@@ -54,7 +55,7 @@ DECLARE_DISPATCH_MAP()
 
 **标头:** afxwin.h
 
-## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a> BEGIN_DISPATCH_MAP
 
 声明调度映射的定义。
 
@@ -62,23 +63,23 @@ DECLARE_DISPATCH_MAP()
 BEGIN_DISPATCH_MAP(theClass, baseClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 指定拥有此调度映射的类的名称。
 
 *baseClass*<br/>
-指定*类*的基类名称。
+指定 *类* 的基类名称。
 
 ### <a name="remarks"></a>备注
 
-在定义类的成员函数的实现（.cpp）文件中，启动带有 BEGIN_DISPATCH_MAP 宏的调度映射，为每个调度函数和属性添加宏项，然后用 END_DISPATCH_MAP 宏完成调度映射。
+在实现 ( .cpp) 文件中，该文件定义了类的成员函数，启动带有 BEGIN_DISPATCH_MAP 宏的调度映射，为每个调度函数和属性添加宏项，并通过 END_DISPATCH_MAP 宏完成调度映射。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxdisp.h
 
-## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a> END_DISPATCH_MAP
 
 结束调度映射的定义。
 
@@ -94,7 +95,7 @@ END_DISPATCH_MAP()
 
 **标头：** afxdisp.h
 
-## <a name="disp_function"></a><a name="disp_function"></a>DISP_FUNCTION
+## <a name="disp_function"></a><a name="disp_function"></a> DISP_FUNCTION
 
 定义调度映射中的 OLE 自动化函数。
 
@@ -107,7 +108,7 @@ DISP_FUNCTION(
     vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 类的名称。
@@ -126,7 +127,7 @@ DISP_FUNCTION(
 
 ### <a name="remarks"></a>备注
 
-*VtRetVal*参数的类型为 VARTYPE。 此参数的以下可能值来自 `VARENUM` 枚举：
+*VtRetVal* 参数的类型为 VARTYPE。 此参数的以下可能值来自 `VARENUM` 枚举：
 
 |符号|返回类型|
 |------------|-----------------|
@@ -144,7 +145,7 @@ DISP_FUNCTION(
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*VtsParams*参数是常量的以空格分隔的值列表 `VTS_*` 。 这些值中的一个或多个由空格（而不是逗号）分隔）指定函数的参数列表。 例如，
+*VtsParams* 参数是常量的以空格分隔的值列表 `VTS_*` 。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如，应用于对象的
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
@@ -166,7 +167,7 @@ DISP_FUNCTION(
 |VTS_BOOL|BOOL|
 |VTS_VARIANT|`const VARIANT*` 或 `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__short\*__|
+|VTS_PI2|__短暂\*__|
 |VTS_PI4|__long\*__|
 |VTS_PR4|__float\*__|
 |VTS_PR8|__仔细\*__|
@@ -184,7 +185,7 @@ DISP_FUNCTION(
 
 **标头：** afxdisp.h
 
-## <a name="disp_property"></a><a name="disp_property"></a>DISP_PROPERTY
+## <a name="disp_property"></a><a name="disp_property"></a> DISP_PROPERTY
 
 定义调度映射中的 OLE 自动化属性。
 
@@ -196,7 +197,7 @@ DISP_PROPERTY(
     vtPropType)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 类的名称。
@@ -212,7 +213,7 @@ DISP_PROPERTY(
 
 ### <a name="remarks"></a>备注
 
-*VtPropType*参数的类型为**VARTYPE**。 此参数的可能值取自 VARENUM 枚举：
+*VtPropType* 参数的类型为 **VARTYPE**。 此参数的可能值取自 VARENUM 枚举：
 
 |符号|属性类型|
 |------------|-----------------------|
@@ -229,13 +230,13 @@ DISP_PROPERTY(
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-当外部客户端更改属性时 *，由成员指定的成员*变量的值将更改;没有更改通知。
+当外部客户端更改属性时 *，由成员指定的成员* 变量的值将更改;没有更改通知。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxdisp.h
 
-## <a name="disp_property_ex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a><a name="disp_property_ex"></a> DISP_PROPERTY_EX
 
 定义 OLE 自动化属性，并将用于获取和设置属性值的函数命名为调度映射。
 
@@ -248,7 +249,7 @@ DISP_PROPERTY_EX(
     vtPropType)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 类的名称。
@@ -267,15 +268,15 @@ DISP_PROPERTY_EX(
 
 ### <a name="remarks"></a>备注
 
-*MemberGet*和*成员集*函数的签名由*vtPropType*参数决定。 *MemberGet*函数不采用任何参数，并返回由*vtPropType*指定的类型的值。 *成员集*函数使用由*vtPropType*指定的类型的自变量，并且不返回任何内容。
+*MemberGet* 和 *成员集* 函数的签名由 *vtPropType* 参数决定。 *MemberGet* 函数不采用任何参数，并返回由 *vtPropType* 指定的类型的值。 *成员集* 函数使用由 *vtPropType* 指定的类型的自变量，并且不返回任何内容。
 
-*VtPropType*参数的类型为 VARTYPE。 此参数的可能值取自 VARENUM 枚举。 有关这些值的列表，请参阅[DISP_FUNCTION](#disp_function)中*VtRetVal*参数的备注。 请注意，在 DISP_FUNCTION 注释中列出的 VT_EMPTY 不允许用作属性数据类型。
+*VtPropType* 参数的类型为 VARTYPE。 此参数的可能值取自 VARENUM 枚举。 有关这些值的列表，请参阅 [DISP_FUNCTION](#disp_function)中 *VtRetVal* 参数的备注。 请注意，在 DISP_FUNCTION 注释中列出的 VT_EMPTY 不允许用作属性数据类型。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxdisp.h
 
-## <a name="disp_property_notify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a><a name="disp_property_notify"></a> DISP_PROPERTY_NOTIFY
 
 在调度映射中定义带有通知的 OLE 自动化属性。
 
@@ -288,7 +289,7 @@ DISP_PROPERTY_NOTIFY(
     vtPropType)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 类的名称。
@@ -300,16 +301,16 @@ DISP_PROPERTY_NOTIFY(
 存储属性的成员变量的名称。
 
 *pfnAfterSet*<br/>
-*SzExternalName*的通知函数的名称。
+*SzExternalName* 的通知函数的名称。
 
 *vtPropType*<br/>
 一个指定属性类型的值。
 
 ### <a name="remarks"></a>备注
 
-与 DISP_PROPERTY 中定义的属性不同，当属性发生更改时，使用 DISP_PROPERTY_NOTIFY 定义的属性将自动调用*pfnAfterSet*指定的函数。
+与 DISP_PROPERTY 中定义的属性不同，当属性发生更改时，使用 DISP_PROPERTY_NOTIFY 定义的属性将自动调用 *pfnAfterSet* 指定的函数。
 
-*VtPropType*参数的类型为 VARTYPE。 此参数的可能值取自 VARENUM 枚举：
+*VtPropType* 参数的类型为 VARTYPE。 此参数的可能值取自 VARENUM 枚举：
 
 |符号|属性类型|
 |------------|-----------------------|
@@ -330,7 +331,7 @@ DISP_PROPERTY_NOTIFY(
 
 **标头：** afxdisp.h
 
-## <a name="disp_property_param"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM
+## <a name="disp_property_param"></a><a name="disp_property_param"></a> DISP_PROPERTY_PARAM
 
 定义使用单独的 `Get` 和成员函数访问的属性 `Set` 。
 
@@ -344,7 +345,7 @@ DISP_PROPERTY_PARAM(
     vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 类的名称。
@@ -390,7 +391,7 @@ DISP_PROPERTY_PARAM(
 
 **标头：** afxdisp.h
 
-## <a name="disp_defvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE
+## <a name="disp_defvalue"></a><a name="disp_defvalue"></a> DISP_DEFVALUE
 
 将现有属性设为对象的默认值。
 
@@ -398,7 +399,7 @@ DISP_PROPERTY_PARAM(
 DISP_DEFVALUE(theClass, pszName)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 类的名称。
@@ -416,6 +417,6 @@ DISP_DEFVALUE(theClass, pszName)
 
 **标头：** afxdisp.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

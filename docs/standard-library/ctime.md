@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; ctime&gt;
 title: '&lt;ctime&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctime header
 ms.assetid: c1f7d4a4-4bfe-4e35-92cb-f63dbd3c39a8
-ms.openlocfilehash: 2b3f31ba48ca831b2d2d8cd460b60549c4debe83
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 68b165c2abeee91b9880e91f8cf67750e7a2a5e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233144"
 ---
 # <a name="ltctimegt"></a>&lt;ctime&gt;
 
@@ -42,7 +43,7 @@ namespace std {
 }
 ```
 
-## <a name="structures"></a>结构
+## <a name="structures"></a>結構
 
 ```cpp
 struct timespec;
@@ -64,8 +65,8 @@ struct tm* localtime(const time_t* timer);
 size_t strftime(char* s, size_t maxsize, const char* format, const struct tm* timeptr);
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

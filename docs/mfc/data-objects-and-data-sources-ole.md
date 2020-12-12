@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： (OLE) 的数据对象和数据源
 title: 数据对象和数据源 (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 719053e2a75b18fbf54440403351198acc66b9d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291202"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>数据对象和数据源 (OLE)
 
@@ -37,7 +38,7 @@ ms.locfileid: "84616221"
 
 [剪贴板](clipboard.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE](ole-in-mfc.md)<br/>
 [COleDataObject 类](reference/coledataobject-class.md)<br/>
