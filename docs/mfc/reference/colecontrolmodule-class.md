@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： COleControlModule 类
 title: COleControlModule 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - COleControlModule class [MFC]
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
-ms.openlocfilehash: f6d486c7bacb897d70d85414ac3d0bd0d13e447b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f88296b7c0e897f82227343b31ca2f639902256e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310391"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227476"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule 类
 
@@ -28,9 +29,9 @@ class COleControlModule : public CWinApp
 
 ## <a name="remarks"></a>备注
 
-此类提供用于初始化控制模块的成员函数。 使用 Microsoft 基础类的每个 OLE 控件模块只能包含一个对象派生自`COleControlModule`。 将构造此对象时其他C++全局对象构造。 声明你派生`COleControlModule`在全局级别的对象。
+此类提供用于初始化控制模块的成员函数。 使用 Microsoft 基础类的每个 OLE 控件模块只能包含一个派生自的对象 `COleControlModule` 。 构造其他 c + + 全局对象时，将构造此对象。 `COleControlModule`在全局级别声明派生的对象。
 
-有关使用的详细信息`COleControlModule`类，请参阅[CWinApp](../../mfc/reference/cwinapp-class.md)类和文章[ActiveX 控件](../../mfc/mfc-activex-controls.md)。
+有关使用类的详细信息 `COleControlModule` ，请参阅 [CWinApp](../../mfc/reference/cwinapp-class.md) 类和 [ActiveX 控件](../../mfc/mfc-activex-controls.md)文章。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -46,7 +47,7 @@ class COleControlModule : public CWinApp
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxctl.h
+**标头：** afxctl。h
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r 类
 title: is_invocable、is_invocable_r、is_nothrow_invocable is_nothrow_invocable_r 类
 ms.date: 02/21/2019
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: 47801eff0ea0c41c7b69dfb7a1aa5190a43f1b75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 117e2ff85634898e170223e726a2cfea0ac6a470
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230923"
 ---
 # <a name="is_invocable-is_invocable_r-is_nothrow_invocable-is_nothrow_invocable_r-classes"></a>is_invocable、is_invocable_r、is_nothrow_invocable is_nothrow_invocable_r 类
 
@@ -59,7 +60,7 @@ inline constexpr bool is_nothrow_invocable_r_v =
     std::is_nothrow_invocable_r<Convertible, Callable, Args...>::value;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *多次*\
 要查询的可调用类型。
@@ -68,19 +69,19 @@ inline constexpr bool is_nothrow_invocable_r_v =
 要查询的参数类型。
 
 *自由*\
-可*调用*结果的类型必须可转换为。
+可 *调用* 结果的类型必须可转换为。
 
 ## <a name="remarks"></a>备注
 
-`is_invocable`如果可以使用未计算上下文中的 arguments *Callable*参数调用可调用的类型， *Args*则类型谓词保留为 true。
+`is_invocable`如果可以使用未计算上下文中的 arguments 参数调用可调用的类型， 则类型谓词保留为 true。
 
-`is_invocable_r`如果可以使用未计算上下文中的 arguments *Callable*参数调用可调用的类型， *Args*则类型谓词为 true，以生成可转换为*可转换*的结果类型。
+`is_invocable_r`如果可以使用未计算上下文中的 arguments 参数调用可调用的类型， 则类型谓词为 true，以生成可转换为 *可转换* 的结果类型。
 
-`is_nothrow_invocable`如果可以使用未计算上下文中的 arguments 参数调用可调用的类型， *Args*则类型谓词为 true，这种调用被认为不会引发异常。 *Callable*
+`is_nothrow_invocable`如果可以使用未计算上下文中的 arguments 参数调用可调用的类型， 则类型谓词为 true，这种调用被认为不会引发异常。 
 
-`is_nothrow_invocable_r`如果可以使用未计算上下文中的 arguments *Callable*参数调用可调用的可调用*Args*类型以使结果类型可转换为*可转换*的，则类型谓词为 true，这种调用被认为不会引发异常。
+`is_nothrow_invocable_r`如果可以使用未计算上下文中的 arguments 参数调用可调用的可调用类型以使结果类型可转换为 *可转换* 的，则类型谓词为 true，这种调用被认为不会引发异常。
 
-可*转换*、可*调用*和参数包参数中的类型的每个*类型都必须*是完整类型、未知绑定的数组或可能的 cv 限定类型 **`void`** 。 否则，谓词的行为是不确定的。
+可 *转换*、可 *调用* 和参数包参数中的类型的每个 *类型都必须* 是完整类型、未知绑定的数组或可能的 cv 限定类型 **`void`** 。 否则，谓词的行为是不确定的。
 
 ## <a name="example"></a>示例
 
@@ -120,7 +121,7 @@ int main()
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
 [invoke](functional-functions.md#invoke)

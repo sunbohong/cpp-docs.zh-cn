@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_move_assignable 类
 title: is_move_assignable 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_assignable
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
-ms.openlocfilehash: 8563db51eeb1988697b3e07a1a8673a777783e38
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ccca3eb1da646bad9e55222a23b5ae8d511d3bb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230856"
 ---
-# <a name="ismoveassignable-class"></a>is_move_assignable 类
+# <a name="is_move_assignable-class"></a>is_move_assignable 类
 
 测试类型是否可移动赋值。
 
@@ -24,7 +25,7 @@ template <class T>
 struct is_move_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要查询的类型。
@@ -35,9 +36,9 @@ struct is_move_assignable;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

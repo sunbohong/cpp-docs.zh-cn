@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _bstr_t 类
 title: _bstr_t 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-ms.openlocfilehash: f521681da10eeda3b8024b0865d5164021296353
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 562b8eb871ddcd63e7df70c84e61e80a5bf934b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838706"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229400"
 ---
 # <a name="_bstr_t-class"></a>_bstr_t 类
 
 **Microsoft 专用**
 
-`_bstr_t`对象封装[BSTR 数据类型](/previous-versions/windows/desktop/automat/bstr)。 类 `SysAllocString` `SysFreeString` 在适当时通过对和和其他 api 的函数调用来管理资源分配和释放 `BSTR` 。 **_Bstr_t**类使用引用计数来避免开销过大。
+`_bstr_t`对象封装[BSTR 数据类型](/previous-versions/windows/desktop/automat/bstr)。 类 `SysAllocString` `SysFreeString` 在适当时通过对和和其他 api 的函数调用来管理资源分配和释放 `BSTR` 。 **_Bstr_t** 类使用引用计数来避免开销过大。
 
 ### <a name="construction"></a>建筑
 
@@ -27,9 +28,9 @@ ms.locfileid: "88838706"
 |--|--|
 | [_bstr_t](../cpp/bstr-t-bstr-t.md) | 构造 `_bstr_t` 对象。 |
 
-### <a name="operations"></a>Operations
+### <a name="operations"></a>操作
 
-| 函数 | 说明 |
+| 函数 | 描述 |
 |--|--|
 | [Assign](../cpp/bstr-t-assign.md) | 将 `BSTR` 复制到 `BSTR` 包装的 `_bstr_t` 中。 |
 | [附加](../cpp/bstr-t-attach.md) | 将 `_bstr_t` 包装器链接到 `BSTR`。 |
@@ -41,7 +42,7 @@ ms.locfileid: "88838706"
 
 ### <a name="operators"></a>运算符
 
-| 操作员 | 说明 |
+| 运算符 | 描述 |
 |--|--|
 | [operator =](../cpp/bstr-t-operator-equal.md) | 将新值赋给现有 `_bstr_t` 对象。 |
 | [运算符 + =](../cpp/bstr-t-operator-add-equal-plus.md) | 将字符附加到 `_bstr_t` 对象的结尾。 |
@@ -56,8 +57,8 @@ ms.locfileid: "88838706"
 
 **标头：**\<comutil.h>
 
-**Lib：** comsuppw.lib 或 comsuppwd.lib (参阅 [/zc： Wchar_t (Wchar_t 是本机类型) ](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 有关详细信息) 
+**Lib：** comsuppw.lib 或 comsuppwd.lib (参阅 [/zc： Wchar_t (Wchar_t 是本机类型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 有关详细信息) 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)

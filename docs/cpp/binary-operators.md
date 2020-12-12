@@ -1,4 +1,5 @@
 ---
+description: 了解更多：二元运算符
 title: 二元运算符
 ms.date: 06/14/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cfb897a3df7cdb3d76f7af82f694e1cf09284cc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229124"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229595"
 ---
 # <a name="binary-operators"></a>二元运算符
 
@@ -19,11 +20,11 @@ ms.locfileid: "87229124"
 
 ## <a name="redefinable-binary-operators"></a>可重新定义的二进制运算符
 
-|操作员|名称|
+|运算符|名称|
 |--------------|----------|
 |**,**|逗号|
 |**!=**|不相等|
-|**%**|Modulus|
+|**%**|取模|
 |**%=**|取模/赋值|
 |**&**|位与|
 |**&&**|逻辑与|
@@ -43,7 +44,7 @@ ms.locfileid: "87229124"
 |**<<=**|左移/赋值|
 |**<=**|小于或等于|
 |**=**|分配|
-|**==**|等式|
+|**==**|相等|
 |**>**|大于|
 |**>=**|大于或等于|
 |**>>**|右移|
@@ -56,19 +57,19 @@ ms.locfileid: "87229124"
 
 若要将二元运算符函数声明为非静态成员，您必须用以下形式声明它：
 
-> *ret 类型* **`operator`***op* **（** *arg* **）**
+> *ret 类型* **`operator`***op* **(** *arg* **)**
 
-其中*ret 类型*是返回类型， *op*是上表中列出的运算符之一，而*arg*是任意类型的参数。
+其中 *ret 类型* 是返回类型， *op* 是上表中列出的运算符之一，而 *arg* 是任意类型的参数。
 
 若要将二元运算符函数声明为全局函数，您必须用以下形式声明它：
 
-> *ret 类型* **`operator`***op* **（** _arg1_**，** _arg2_ **）**
+> *ret 类型* **`operator`***op* **(** _arg1_**，** _arg2_ **)**
 
-其中*ret 类型*和*op*为成员运算符函数所述，而*arg1*和*arg2*是参数。 至少有一个参数必须是类类型。
+其中 *ret 类型* 和 *op* 为成员运算符函数所述，而 *arg1* 和 *arg2* 是参数。 至少有一个参数必须是类类型。
 
 > [!NOTE]
 > 对二元运算符的返回类型没有限制；但是，大多数用户定义的二元运算符将返回类类型或对类类型的引用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [运算符重载](../cpp/operator-overloading.md)

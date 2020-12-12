@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： wctrans
 title: wctrans
 ms.date: 11/04/2016
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 59efe03f5851525d38c5ebd93520367338a97a79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229647"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -46,14 +47,14 @@ wctrans_t wctrans(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*属性*<br/>
+*property*<br/>
 指定一个有效转换的字符串。
 
 ## <a name="return-value"></a>返回值
 
-如果当前区域设置的**LC_CTYPE**类别未定义其名称与属性字符串*属性*匹配的映射，则该函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
+如果当前区域设置的 **LC_CTYPE** 类别未定义其名称与属性字符串 *属性* 匹配的映射，则该函数将返回零。 否则，它将返回一个适合用作对 [towctrans](towctrans.md) 的后续调用的第二个参数的非零值。
 
 ## <a name="remarks"></a>备注
 
@@ -63,16 +64,16 @@ wctrans_t wctrans(
 
 |函数|与以下项相同|
 |--------------|-------------|
-|tolower （c）|towctrans （c，wctrans （"towlower"））|
-|towupper （c）|towctrans （c，wctrans （"toupper"））|
+|tolower (c) |towctrans (c，wctrans ( "towlower" ) # A3|
+|towupper (c) |towctrans (c，wctrans ( "toupper" ) # A3|
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wctrans**|\<wctype.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

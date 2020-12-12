@@ -1,4 +1,5 @@
 ---
+description: 了解更多：文件 i/o 类
 title: 文件 i/o 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-ms.openlocfilehash: 2fcf4dfc1388df0df2bc25928ec8541486c6bb2d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b2a0404864cd63ea3992ebada643b15531bcfc3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615671"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228009"
 ---
 # <a name="file-io-classes"></a>文件 I/O 类
 
 这些类为传统磁盘文件、内存中文件、活动流和 Windows 套接字提供接口。 从派生的所有类均 `CFile` 可与对象结合使用 `CArchive` ，以执行序列化。
 
-`CArchive` `CFile` 如果你编写自己的输入/输出处理，则应使用以下类，特别是。 通常不需要从这些类派生。 如果使用应用程序框架， **Open**只要你覆盖**Save** **File** `CArchive` 文档的 `Serialize` 函数以提供有关文档如何序列化其内容的详细信息，"文件" 菜单上的 "打开" 和 "保存" 命令的默认实现将处理文件 i/o （使用类）。 有关文件类和序列化的详细信息，请参阅[MFC 中的文件](files-in-mfc.md)和项目[序列化](serialization-in-mfc.md)。
+`CArchive` `CFile` 如果你编写自己的输入/输出处理，则应使用以下类，特别是。 通常不需要从这些类派生。 如果使用应用程序框架，则在 "**文件**" 菜单上的 "**打开**" 和 "**保存**" 命令的默认实现将处理使用类) 的文件 i/o (`CArchive` ，前提是你覆盖文档的 `Serialize` 函数以提供有关文档如何序列化其内容的详细信息。 有关文件类和序列化的详细信息，请参阅 [MFC 中的文件](files-in-mfc.md) 和项目 [序列化](serialization-in-mfc.md)。
 
 [CFile](reference/cfile-class.md)<br/>
 提供二进制磁盘文件的文件接口。
@@ -49,7 +50,7 @@ ms.locfileid: "84615671"
 ## <a name="related-classes"></a>相关类
 
 [CArchive](reference/carchive-class.md)<br/>
-使用对象会 `CFile` 通过序列化实现对象的持久存储（请参阅[CObject：：串行化](reference/cobject-class.md#serialize)）。
+使用对象会 `CFile` 通过序列化实现对象的持久存储 (参阅 [CObject：：串行化](reference/cobject-class.md#serialize)) 。
 
 [CArchiveException](reference/carchiveexception-class.md)<br/>
 存档异常。
@@ -61,8 +62,8 @@ ms.locfileid: "84615671"
 提供用于打开或保存文件的标准对话框。
 
 [CRecentFileList](reference/crecentfilelist-class.md)<br/>
-维护最近使用的（MRU）文件列表。
+维护最近使用的 (MRU) 文件列表。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

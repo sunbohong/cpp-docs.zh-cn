@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： COleDataObject 类
 title: COleDataObject 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 4a24fcab0eb34bbba597ba0b5c1fac22a929c0c0
-ms.sourcegitcommit: 13f42c339fb7af935e3a93ac80e350d5e784c9f1
+ms.openlocfilehash: ae94ed51f3f644efa73847c8e80300ebc5543190
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87470909"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227359"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 类
 
@@ -70,15 +71,15 @@ class COleDataObject
 
 ## <a name="remarks"></a>备注
 
-`COleDataObject`没有基类。
+`COleDataObject` 没有基类。
 
-这类数据传输包括源和目标。 数据源实现为[COleDataSource](../../mfc/reference/coledatasource-class.md)类的对象。 无论何时在目标应用程序中放置了数据或要求从剪贴板执行粘贴操作，都 `COleDataObject` 必须创建类的对象。
+这类数据传输包括源和目标。 数据源实现为 [COleDataSource](../../mfc/reference/coledatasource-class.md) 类的对象。 无论何时在目标应用程序中放置了数据或要求从剪贴板执行粘贴操作，都 `COleDataObject` 必须创建类的对象。
 
-此类使你能够确定数据是否以指定格式存在。 您还可以枚举可用的数据格式，或检查给定的格式是否可用，然后以首选格式检索数据。 可以通过几种不同的方式完成对象检索，包括使用[CFile](../../mfc/reference/cfile-class.md)、HGLOBAL 或 `STGMEDIUM` 结构。
+此类使你能够确定数据是否以指定格式存在。 您还可以枚举可用的数据格式，或检查给定的格式是否可用，然后以首选格式检索数据。 可以通过几种不同的方式完成对象检索，包括使用 [CFile](../../mfc/reference/cfile-class.md)、HGLOBAL 或 `STGMEDIUM` 结构。
 
-有关详细信息，请参阅 Windows SDK 中的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)结构。
+有关详细信息，请参阅 Windows SDK 中的 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 结构。
 
-有关在应用程序中使用数据对象的详细信息，请参阅文章[数据对象和数据源（OLE）](../../mfc/data-objects-and-data-sources-ole.md)。
+有关在应用程序中使用数据对象的详细信息，请参阅文章 [数据对象和数据源 (OLE) ](../../mfc/data-objects-and-data-sources-ole.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -88,7 +89,7 @@ class COleDataObject
 
 **标头：** afxole
 
-## <a name="coledataobjectattach"></a><a name="attach"></a>COleDataObject：： Attach
+## <a name="coledataobjectattach"></a><a name="attach"></a> COleDataObject：： Attach
 
 调用此函数可将 `COleDataObject` 对象与 OLE 数据对象相关联。
 
@@ -98,7 +99,7 @@ void Attach(
     BOOL bAutoRelease = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDataObject*<br/>
 指向 OLE 数据对象。
@@ -108,9 +109,9 @@ void Attach(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅 Windows SDK 中的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 。
+有关详细信息，请参阅 Windows SDK 中的 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 。
 
-## <a name="coledataobjectattachclipboard"></a><a name="attachclipboard"></a>COleDataObject：： AttachClipboard
+## <a name="coledataobjectattachclipboard"></a><a name="attachclipboard"></a> COleDataObject：： AttachClipboard
 
 调用此函数可将剪贴板中当前的数据对象附加到 `COleDataObject` 对象。
 
@@ -125,9 +126,9 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>备注
 
 > [!NOTE]
-> 调用此函数将锁定剪贴板，直到此数据对象被释放。 数据对象在的析构函数中发布 `COleDataObject` 。 有关详细信息，请参阅 Win32 文档中的[OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) and [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) 。
+> 调用此函数将锁定剪贴板，直到此数据对象被释放。 数据对象在的析构函数中发布 `COleDataObject` 。 有关详细信息，请参阅 Win32 文档中的 [OpenClipboard](/windows/win32/api/winuser/nf-winuser-openclipboard) and [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) 。
 
-## <a name="coledataobjectbeginenumformats"></a><a name="beginenumformats"></a>COleDataObject：： BeginEnumFormats
+## <a name="coledataobjectbeginenumformats"></a><a name="beginenumformats"></a> COleDataObject：： BeginEnumFormats
 
 调用此函数可准备对的后续调用，以便 `GetNextFormat` 检索项中的数据格式列表。
 
@@ -139,11 +140,11 @@ void BeginEnumFormats();
 
 调用后，将 `BeginEnumFormats` 存储此数据对象支持的第一个格式的位置。 对的后续调用 `GetNextFormat` 将枚举数据对象中可用格式的列表。
 
-若要以给定格式检查数据的可用性，请使用[COleDataObject：： IsDataAvailable](#isdataavailable)。
+若要以给定格式检查数据的可用性，请使用 [COleDataObject：： IsDataAvailable](#isdataavailable)。
 
-有关详细信息，请参阅 Windows SDK 中的[IDataObject：： EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) 。
+有关详细信息，请参阅 Windows SDK 中的 [IDataObject：： EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) 。
 
-## <a name="coledataobjectcoledataobject"></a><a name="coledataobject"></a>COleDataObject：： COleDataObject
+## <a name="coledataobjectcoledataobject"></a><a name="coledataobject"></a> COleDataObject：： COleDataObject
 
 构造 `COleDataObject` 对象。
 
@@ -153,12 +154,12 @@ COleDataObject();
 
 ### <a name="remarks"></a>备注
 
-调用[COleDataObject：： Attach](#attach)或[COleDataObject：： AttachClipboard](#attachclipboard)必须在调用其他函数之前进行 `COleDataObject` 。
+调用 [COleDataObject：： Attach](#attach) 或 [COleDataObject：： AttachClipboard](#attachclipboard) 必须在调用其他函数之前进行 `COleDataObject` 。
 
 > [!NOTE]
 > 由于拖放处理程序的一个参数是指向的指针，因此不 `COleDataObject` 需要调用此构造函数来支持拖放。
 
-## <a name="coledataobjectdetach"></a><a name="detach"></a>COleDataObject：:D etach
+## <a name="coledataobjectdetach"></a><a name="detach"></a> COleDataObject：:D etach
 
 调用此函数可 `COleDataObject` 从对象的关联 OLE 数据对象中分离对象，而无需释放数据对象。
 
@@ -172,7 +173,7 @@ LPDATAOBJECT Detach();
 
 ### <a name="remarks"></a>备注
 
-## <a name="coledataobjectgetdata"></a><a name="getdata"></a>COleDataObject：：
+## <a name="coledataobjectgetdata"></a><a name="getdata"></a> COleDataObject：：
 
 调用此函数可从项中检索指定格式的数据。
 
@@ -183,16 +184,16 @@ BOOL GetData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
-要返回的数据的格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
+要返回的数据的格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 函数返回的值。
 
 *lpStgMedium*<br/>
-指向将接收数据的[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1)结构。
+指向将接收数据的 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) 结构。
 
 *lpFormatEtc*<br/>
-指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，该结构描述要返回的数据的格式。 如果要指定超出*cfFormat*指定的剪贴板格式的其他格式信息，请提供此参数的值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
+指向 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构，该结构描述要返回的数据的格式。 如果要指定超出 *cfFormat* 指定的剪贴板格式的其他格式信息，请提供此参数的值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
 
 ### <a name="return-value"></a>返回值
 
@@ -200,11 +201,11 @@ BOOL GetData(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅 Windows SDK 中的[IDataObject：：](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) [STGMEDIUM 和](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
+有关详细信息，请参阅 Windows SDK 中的 [IDataObject：：](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) [STGMEDIUM 和](/windows/win32/api/objidl/ns-objidl-ustgmedium-r1) [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
 
-有关详细信息，请参阅 Windows SDK 中的[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
+有关详细信息，请参阅 Windows SDK 中的 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
 
-## <a name="coledataobjectgetfiledata"></a><a name="getfiledata"></a>COleDataObject：： GetFileData
+## <a name="coledataobjectgetfiledata"></a><a name="getfiledata"></a> COleDataObject：： GetFileData
 
 调用此函数可创建 `CFile` 或 `CFile` 派生对象，并将指定格式的数据检索到 `CFile` 指针中。
 
@@ -214,13 +215,13 @@ CFile* GetFileData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
-要返回的数据的格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
+要返回的数据的格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 函数返回的值。
 
 *lpFormatEtc*<br/>
-指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，该结构描述要返回的数据的格式。 如果要指定超出*cfFormat*指定的剪贴板格式的其他格式信息，请提供此参数的值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
+指向 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构，该结构描述要返回的数据的格式。 如果要指定超出 *cfFormat* 指定的剪贴板格式的其他格式信息，请提供此参数的值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
 
 ### <a name="return-value"></a>返回值
 
@@ -233,11 +234,11 @@ CFile* GetFileData(
 > [!NOTE]
 > `CFile`此函数的返回值所访问的对象由调用方拥有。 调用方负责 **`delete`** `CFile` 对象，从而关闭文件。
 
-有关详细信息，请参阅 Windows SDK 中的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
+有关详细信息，请参阅 Windows SDK 中的 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
 
-有关详细信息，请参阅 Windows SDK 中的[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
+有关详细信息，请参阅 Windows SDK 中的 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
 
-## <a name="coledataobjectgetglobaldata"></a><a name="getglobaldata"></a>COleDataObject：： GetGlobalData
+## <a name="coledataobjectgetglobaldata"></a><a name="getglobaldata"></a> COleDataObject：： GetGlobalData
 
 调用此函数以分配全局内存块，并将指定格式的数据检索到 HGLOBAL。
 
@@ -247,13 +248,13 @@ HGLOBAL GetGlobalData(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
-要返回的数据的格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
+要返回的数据的格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 函数返回的值。
 
 *lpFormatEtc*<br/>
-指向[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构，该结构描述要返回的数据的格式。 如果要指定超出*cfFormat*指定的剪贴板格式的其他格式信息，请提供此参数的值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
+指向 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构，该结构描述要返回的数据的格式。 如果要指定超出 *cfFormat* 指定的剪贴板格式的其他格式信息，请提供此参数的值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
 
 ### <a name="return-value"></a>返回值
 
@@ -261,11 +262,11 @@ HGLOBAL GetGlobalData(
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅 Windows SDK 中的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
+有关详细信息，请参阅 Windows SDK 中的 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
 
-有关详细信息，请参阅 Windows SDK 中的[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
+有关详细信息，请参阅 Windows SDK 中的 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
 
-## <a name="coledataobjectgetnextformat"></a><a name="getnextformat"></a>COleDataObject：： GetNextFormat
+## <a name="coledataobjectgetnextformat"></a><a name="getnextformat"></a> COleDataObject：： GetNextFormat
 
 重复调用此函数以获取可用于从项中检索数据的所有格式。
 
@@ -273,10 +274,10 @@ HGLOBAL GetGlobalData(
 BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
-指向当函数调用返回时接收格式信息的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构。
+指向当函数调用返回时接收格式信息的 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构。
 
 ### <a name="return-value"></a>返回值
 
@@ -284,13 +285,13 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 ### <a name="remarks"></a>备注
 
-调用[COleDataObject：： BeginEnumFormats](#beginenumformats)后，将存储此数据对象支持的第一个格式的位置。 对的后续调用 `GetNextFormat` 将枚举数据对象中可用格式的列表。 使用这些函数可以列出可用的格式。
+调用 [COleDataObject：： BeginEnumFormats](#beginenumformats)后，将存储此数据对象支持的第一个格式的位置。 对的后续调用 `GetNextFormat` 将枚举数据对象中可用格式的列表。 使用这些函数可以列出可用的格式。
 
-若要检查给定格式的可用性，请调用[COleDataObject：： IsDataAvailable](#isdataavailable)。
+若要检查给定格式的可用性，请调用 [COleDataObject：： IsDataAvailable](#isdataavailable)。
 
-有关详细信息，请参阅 Windows SDK 中的[IEnumXXXX：： Next](/previous-versions/ms695273\(v=vs.85\)) 。
+有关详细信息，请参阅 Windows SDK 中的 [IEnumXXXX：： Next](/previous-versions/ms695273\(v=vs.85\)) 。
 
-## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject：： IsDataAvailable
+## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a> COleDataObject：： IsDataAvailable
 
 调用此函数可确定特定格式是否可用于从 OLE 项检索数据。
 
@@ -300,13 +301,13 @@ BOOL IsDataAvailable(
     LPFORMATETC lpFormatEtc = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cfFormat*<br/>
-要在*lpFormatEtc*指向的结构中使用的剪贴板数据格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)函数返回的值。
+要在 *lpFormatEtc* 指向的结构中使用的剪贴板数据格式。 此参数可以是预定义的剪贴板格式之一或本机 Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 函数返回的值。
 
 *lpFormatEtc*<br/>
-指向描述所需格式的[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)结构。 仅当要指定超出*cfFormat*指定的剪贴板格式的其他格式信息时，才为此参数提供值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
+指向描述所需格式的 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构。 仅当要指定超出 *cfFormat* 指定的剪贴板格式的其他格式信息时，才为此参数提供值。 如果为 NULL，则将为结构中的其他字段使用默认值 `FORMATETC` 。
 
 ### <a name="return-value"></a>返回值
 
@@ -316,17 +317,17 @@ BOOL IsDataAvailable(
 
 此函数在调用、或之前很有用 `GetData` `GetFileData` `GetGlobalData` 。
 
-有关详细信息，请参阅 Windows SDK 中的[IDataObject：： QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata)和[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
+有关详细信息，请参阅 Windows SDK 中的 [IDataObject：： QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) 和 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 。
 
-有关详细信息，请参阅 Windows SDK 中的[RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
+有关详细信息，请参阅 Windows SDK 中的 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 。
 
 ### <a name="example"></a>示例
 
-  请参阅[CRichEditView：： QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)的示例。
+  请参阅 [CRichEditView：： QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)的示例。
 
-## <a name="coledataobjectrelease"></a><a name="release"></a>COleDataObject：： Release
+## <a name="coledataobjectrelease"></a><a name="release"></a> COleDataObject：： Release
 
-调用此函数可释放以前与对象关联的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)对象的所有权 `COleDataObject` 。
+调用此函数可释放以前与对象关联的 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 对象的所有权 `COleDataObject` 。
 
 ```cpp
 void Release();
@@ -334,7 +335,7 @@ void Release();
 
 ### <a name="remarks"></a>备注
 
-`IDataObject`与 `COleDataObject` 通过调用 `Attach` 或 `AttachClipboard` 显式或通过框架来关联。 如果的*bAutoRelease*参数 `Attach` 为 FALSE，则 `IDataObject` 不会释放对象。 在这种情况下，调用方负责 `IDataObject` 通过调用[IUnknown：： Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)来释放。
+`IDataObject`与 `COleDataObject` 通过调用 `Attach` 或 `AttachClipboard` 显式或通过框架来关联。 如果的 *bAutoRelease* 参数 `Attach` 为 FALSE，则 `IDataObject` 不会释放对象。 在这种情况下，调用方负责 `IDataObject` 通过调用 [IUnknown：： Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)来释放。
 
 ## <a name="see-also"></a>请参阅
 

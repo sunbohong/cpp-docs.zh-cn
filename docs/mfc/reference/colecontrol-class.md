@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： COleControl 类
 title: COleControl 类
 ms.date: 08/27/2018
 f1_keywords:
@@ -334,12 +335,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 074b0e1df5a8d70c8b32ee03dcb073c26c13be9b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6cc5e1896d186f1fa87eee34565819d518f9d4d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840994"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227541"
 ---
 # <a name="colecontrol-class"></a>COleControl 类
 
@@ -355,13 +356,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[COleControl：： COleControl](#colecontrol)|创建一个 `COleControl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[COleControl：： AmbientAppearance](#ambientappearance)|检索控件当前的外观。|
 |[COleControl：： AmbientBackColor](#ambientbackcolor)|返回环境背景值属性的值。|
@@ -525,14 +526,14 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[COleControl：:D rawContent](#drawcontent)|当需要更新控件的外观时由框架调用。|
 |[COleControl：:D rawMetafile](#drawmetafile)|当使用图元文件设备上下文时由框架调用。|
 |[COleControl：： IsInvokeAllowed](#isinvokeallowed)|启用自动化方法调用。|
 |[COleControl：： SetInitialDataFormats](#setinitialdataformats)|由框架调用以初始化控件支持的数据格式列表。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 派生自 `CWnd` ，此类继承 Windows 窗口对象的所有功能以及特定于 OLE 的附加功能，如事件激发和支持方法和属性的功能。
 
@@ -584,7 +585,7 @@ OLE_COLOR AmbientBackColor();
 
 容器的环境背景色属性的当前值（如果有）。 如果该属性不受支持，则此函数将返回系统定义的 Windows 背景色。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 环境背景色属性可供所有控件使用，由容器定义。 请注意，支持此属性不需要容器。
 
@@ -600,7 +601,7 @@ CString AmbientDisplayName();
 
 OLE 控件的名称。 默认值为零长度字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，支持此属性不需要容器。
 
@@ -616,7 +617,7 @@ LPFONTDISP AmbientFont();
 
 指向容器环境字体调度接口的指针。 默认值为 NULL。 如果返回的不等于 NULL，则需要通过调用其 [IUnknown：： Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 成员函数来释放字体。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 环境字体属性由容器定义，可用于所有控件。请注意，支持此属性不需要容器。
 
@@ -632,7 +633,7 @@ OLE_COLOR AmbientForeColor();
 
 容器的环境前景色属性的当前值（如果有）。 如果不支持，则此函数将返回系统定义的 Windows 文本颜色。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 环境前景色属性可供所有控件使用，由容器定义。 请注意，支持此属性不需要容器。
 
@@ -648,7 +649,7 @@ LCID AmbientLocaleID();
 
 容器的 LocaleID 属性的值（如果有）。 如果此属性不受支持，则此函数返回0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 控件可以使用 LocaleID 来调整其用户界面的特定区域设置。 请注意，支持此属性不需要容器。
 
@@ -668,7 +669,7 @@ short AmbientAppearance();
 
 - **1** 三维外观
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可检索控件的 DISPID_AMBIENT_APPEARANCE 属性的当前值。
 
@@ -684,7 +685,7 @@ CString AmbientScaleUnits();
 
 一个字符串，其中包含容器的环境 ScaleUnits。 如果此属性不受支持，则此函数返回一个长度为零的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 容器的环境 ScaleUnits 属性可用于显示位置或维度，其中标有所选单位，例如缇或厘米。 请注意，支持此属性不需要容器。
 
@@ -700,7 +701,7 @@ BOOL AmbientShowGrabHandles();
 
 如果应显示抓取柄，则为非零值;否则为0。 如果此属性不受支持，则此函数将返回非零值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，支持此属性不需要容器。
 
@@ -716,7 +717,7 @@ BOOL AmbientShowHatching();
 
 如果应显示阴影模式，则为非零值;否则为0。 如果此属性不受支持，则此函数将返回非零值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，支持此属性不需要容器。
 
@@ -741,7 +742,7 @@ short AmbientTextAlign();
 |2|Center|
 |3|右对齐|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此属性可用于所有嵌入的控件，并且由容器定义。 请注意，支持此属性不需要容器。
 
@@ -757,7 +758,7 @@ BOOL AmbientUIDead();
 
 如果控件应响应用户界面操作，则为非零值;否则为0。 如果此属性不受支持，则此函数返回0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 例如，在设计模式下，容器可能将此项设置为 TRUE。
 
@@ -773,7 +774,7 @@ BOOL AmbientUserMode();
 
 如果容器处于用户模式，则为非零值;否则为 0 (设计模式) 。 如果此属性不受支持，则此函数返回 TRUE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 例如，容器可能在设计模式下将此项设置为 FALSE。
 
@@ -785,12 +786,12 @@ BOOL AmbientUserMode();
 void BoundPropertyChanged(DISPID dispid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 控件的绑定属性的调度 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每次属性的值发生更改时都必须调用此方法，即使在未通过属性集方法进行更改的情况下也是如此。 请特别注意映射到成员变量的绑定属性。 任何时候都必须调用此类成员变量的更改 `BoundPropertyChanged` 。
 
@@ -802,7 +803,7 @@ void BoundPropertyChanged(DISPID dispid);
 BOOL BoundPropertyRequestEdit(DISPID dispid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 控件的绑定属性的调度 ID。
@@ -811,7 +812,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 
 如果允许更改，则为非零值;否则为0。 默认值为非零值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果权限被拒绝，则控件不能让属性的值发生更改。 这可以通过忽略或失败尝试更改属性值的操作来完成。
 
@@ -825,7 +826,7 @@ virtual void ClientToParent(
     LPPOINT pPoint) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 一个指针，指向容器中 OLE 控件的边界。 不是工作区，而是整个控件的区域（包括边框和滚动条）。
@@ -833,7 +834,7 @@ virtual void ClientToParent(
 *pPoint*<br/>
 指向 OLE 工作区点的指针，该指针将转换为父 (容器) 的坐标。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 输入 *pPoint* 是相对于 OLE 控件的工作区的起点 (控件) 的工作区的左上角。 在 output *pPoint* 上，相对于) 容器的父级 (左上角的原点。
 
@@ -845,7 +846,7 @@ virtual void ClientToParent(
 BOOL ClipCaretRect(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 输入时，指向包含要调整的插入符号区域的 [RECT](/windows/win32/api/windef/ns-windef-rect) 结构的指针。 输出时，调整后的插入符号区域; 如果完全覆盖了插入符号矩形，则为 NULL。
@@ -854,7 +855,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 脱字号是闪烁线条、块或位图，通常指示文本或图形的插入位置。
 
@@ -870,7 +871,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 COleControl();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常不直接调用此函数。 相反，OLE 控件通常由其类工厂创建。
 
@@ -882,7 +883,7 @@ COleControl();
 void ControlInfoChanged();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 收到此通知后，控件的容器通过调用 [IOleControl：： GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo)获取新的助记键集。 请注意，该容器不需要响应此通知。
 
@@ -899,7 +900,7 @@ virtual void DisplayError(
     UINT nHelpID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *scode*<br/>
 要报告的状态代码值。 有关可能代码的完整列表，请参阅文章 [ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
@@ -916,9 +917,9 @@ virtual void DisplayError(
 *nHelpID*<br/>
 所报告错误的帮助上下文 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-默认行为将显示一个消息框，其中包含包含在 *lpszDescription*中的错误说明。
+默认行为将显示一个消息框，其中包含包含在 *lpszDescription* 中的错误说明。
 
 重写此函数以自定义显示错误的方式。
 
@@ -930,7 +931,7 @@ virtual void DisplayError(
 void DoClick();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件支持，则将调用可重写的 `COleControl::OnClick` 成员函数，并激发 Stock Click 事件。
 
@@ -944,12 +945,12 @@ void DoClick();
 virtual void DoPropExchange(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 一个指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数通常会调用 **PX_** 系列函数来加载或存储 OLE 控件的特定用户定义属性。
 
@@ -965,7 +966,7 @@ void DoSuperclassPaint(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向控件容器的设备上下文的指针。
@@ -973,7 +974,7 @@ void DoSuperclassPaint(
 *rcBounds*<br/>
 要在其中绘制控件的区域。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可正确处理非活动 OLE 控件的绘制。 仅当 OLE 控件子类控制 Windows 控件并应在控件的函数中调用此函数时，才应使用此函数 `OnDraw` 。
 
@@ -989,7 +990,7 @@ void DrawContent(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向设备上下文的指针。
@@ -997,7 +998,7 @@ void DrawContent(
 *.rc*<br/>
 要在其中绘制的矩形区域。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数直接调用可重写 `OnDraw` 函数。
 
@@ -1011,7 +1012,7 @@ void DrawMetafile(
     CRect& rc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向图元文件设备上下文的指针。
@@ -1027,7 +1028,7 @@ void DrawMetafile(
 void EnableSimpleFrame();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此特性允许控件支持其他控件的可视包含，但不支持真正的 OLE 包容。 例如，包含多个控件的分组框。 这些控件不包含 OLE，但它们位于同一个组框中。
 
@@ -1039,7 +1040,7 @@ void EnableSimpleFrame();
 BOOL ExchangeExtent(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
@@ -1048,7 +1049,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 
 如果函数成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数通常由的默认实现调用 `COleControl::DoPropExchange` 。
 
@@ -1060,12 +1061,12 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 指向 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数通常由的默认实现调用 `COleControl::DoPropExchange` 。
 
@@ -1080,7 +1081,7 @@ BOOL ExchangeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPX*<br/>
 一个指向 `CPropExchange` 对象的指针。 框架提供了此对象以建立属性交换的上下文，包括其方向。
@@ -1095,7 +1096,7 @@ BOOL ExchangeVersion(
 
 函数的非零成功;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常，这将是由控件的重写调用的第一个函数 `COleControl::DoPropExchange` 。 加载时，此函数将读取永久性数据的版本号，并相应地设置 [CPropExchange](../../mfc/reference/cpropexchange-class.md) 对象的 version 特性。 保存时，此函数将写入永久性数据的版本号。
 
@@ -1109,7 +1110,7 @@ BOOL ExchangeVersion(
 void FireClick();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1123,7 +1124,7 @@ void FireClick();
 void FireDblClick();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1140,7 +1141,7 @@ void FireError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *scode*<br/>
 要报告的状态代码值。 有关可能代码的完整列表，请参阅文章 [ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
@@ -1151,7 +1152,7 @@ void FireError(
 *nHelpID*<br/>
 所报告错误的帮助 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此事件提供一种在代码中的适当位置，在控件内发生错误的方式。 与其他常用事件（如 Click 或 MouseMove）不同，框架永远不会引发错误。
 
@@ -1172,7 +1173,7 @@ void AFX_CDECL FireEvent(
 ...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 要激发的事件的调度 ID。
@@ -1180,11 +1181,11 @@ void AFX_CDECL FireEvent(
 *pbParams*<br/>
 事件的参数类型的描述符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常不应直接调用此函数。 相反，你将在控件的类声明的事件映射节中调用事件触发函数。
 
-*PbParams*参数是以空格分隔的**VTS_** 列表。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能的值如下：
+*PbParams* 参数是以空格分隔的 **VTS_** 列表。 其中一个或多个值（由空格（而不是逗号）分隔）指定函数的参数列表。 可能的值如下：
 
 |符号|参数类型|
 |------------|--------------------|
@@ -1216,7 +1217,7 @@ void FireKeyDown(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnChar*<br/>
 指向按下键的虚拟键代码值的指针。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -1230,7 +1231,7 @@ void FireKeyDown(
 
 - ALT_MASK 在操作过程中按下了 ALT 键。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1244,12 +1245,12 @@ void FireKeyDown(
 void FireKeyPress(USHORT* pnChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnChar*<br/>
 一个指针，指向按下的键的字符值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1267,7 +1268,7 @@ void FireKeyUp(
     short nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnChar*<br/>
 指向已释放密钥的虚拟键代码值的指针。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -1281,7 +1282,7 @@ void FireKeyUp(
 
 - ALT_MASK 在操作过程中按下了 ALT 键。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1299,7 +1300,7 @@ void FireMouseDown(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButton*<br/>
 按下鼠标按钮的数值。 它可以包含以下值之一：
@@ -1325,7 +1326,7 @@ void FireMouseDown(
 *y*<br/>
 按下鼠标按钮时光标的 y 坐标。 该坐标相对于控件窗口的左上角。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1343,7 +1344,7 @@ void FireMouseMove(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButton*<br/>
 按下鼠标按钮的数值。 包含以下值的组合：
@@ -1369,7 +1370,7 @@ void FireMouseMove(
 *y*<br/>
 光标的 y 坐标。 该坐标相对于控件窗口的左上角。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1387,7 +1388,7 @@ void FireMouseUp(
     OLE_YPOS_PIXELS y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButton*<br/>
 已释放的鼠标按钮的数值。 可以具有以下一个值：
@@ -1413,7 +1414,7 @@ void FireMouseUp(
 *y*<br/>
 释放鼠标按钮时光标的 y 坐标。 该坐标相对于控件窗口的左上角。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将此事件定义为自定义事件，则需要确定事件的激发时间。
 
@@ -1427,11 +1428,11 @@ void FireMouseUp(
 void FireReadyStateChange();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 就绪状态可以为下列值之一：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |READYSTATE_UNINITIALIZED|默认初始化状态|
 |READYSTATE_LOADING|控件当前正在加载其属性|
@@ -1455,13 +1456,13 @@ virtual DWORD GetActivationPolicy();
 
 POINTERINACTIVE 枚举中的标志的组合。 可能的标志包括：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |POINTERINACTIVE_ACTIVATEONENTRY|当鼠标在鼠标移动操作过程中输入对象时，该对象应就地激活。|
 |POINTERINACTIVE_DEACTIVATEONLEAVE|当鼠标移动操作过程中鼠标离开对象时，应停用对象。|
 |POINTERINACTIVE_ACTIVATEONDRAG|当在拖放操作过程中将鼠标拖动到对象上时，应就地激活对象。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `IPointerInactive`启用接口时，容器会将 WM_SETCURSOR 和 WM_MOUSEMOVE 消息委托给它。 `COleControl`当调整鼠标坐标后，此接口的实现将通过控件的消息映射调度这些消息。
 
@@ -1496,16 +1497,16 @@ BOOL GetAmbientProperty(
     void* pvProp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDispid*<br/>
 所需环境属性的调度 ID。
 
 *vtProp*<br/>
-一个变量类型标记，它指定要在 *pvProp*中返回的值的类型。
+一个变量类型标记，它指定要在 *pvProp* 中返回的值的类型。
 
 *pvProp*<br/>
-一个指针，指向将接收属性值或返回值的变量的地址。 此指针的实际类型必须与 *vtProp*指定的类型匹配。
+一个指针，指向将接收属性值或返回值的变量的地址。 此指针的实际类型必须与 *vtProp* 指定的类型匹配。
 
 |vtProp|PvProp 的类型|
 |------------|--------------------|
@@ -1524,7 +1525,7 @@ BOOL GetAmbientProperty(
 
 如果支持环境属性，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果使用 `GetAmbientProperty` 检索环境 DisplayName 和 ScaleUnits 属性，请将 *vtProp* 设置为 VT_BSTR，并将 *pvProp* 设置为 `CString*` 。 如果要检索环境字体属性，请将 *vtProp* 设置为 VT_FONT，并将 *PVPROP* 设置为 LPFONTDISP *。
 
@@ -1580,7 +1581,7 @@ CWnd* GetCapture();
 
 否则，将返回 `CWnd` 具有鼠标捕获的对象 (与) 相同 `CWnd::GetCapture` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用 [SetCapture](#setcapture) 时，激活的无窗口控件接收鼠标捕获。
 
@@ -1592,7 +1593,7 @@ CWnd* GetCapture();
 virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pclsid*<br/>
 指向类 ID 位置的指针。
@@ -1601,7 +1602,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 
 如果调用不成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常由 [IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex)实现。
 
@@ -1613,7 +1614,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdxOffset*<br/>
 指向 OLE 控件的工作区的水平偏移量的指针。
@@ -1621,7 +1622,7 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 *pdyOffset*<br/>
 指向 OLE 控件的工作区的垂直偏移量的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 OLE 控件的容器内有一个矩形区域。 控件的工作区是不包括边框和滚动条的控件区域。 检索的偏移量 `GetClientOffset` 是控件的矩形区域的左上角和其工作区左上角之间的差异。 如果控件具有标准边框和滚动条以外的非客户端元素，请重写此成员函数以指定偏移量。
 
@@ -1633,10 +1634,10 @@ OLE 控件的容器内有一个矩形区域。 控件的工作区是不包括边
 virtual void GetClientRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
-指向一个结构的指针，该 `RECT` 结构包含无窗口控件的工作区的尺寸，即控件的大小减去窗口边框、框架、滚动条等等。 *LpRect*参数指示控件的客户端矩形的大小，而不是其位置。
+指向一个结构的指针，该 `RECT` 结构包含无窗口控件的工作区的尺寸，即控件的大小减去窗口边框、框架、滚动条等等。 *LpRect* 参数指示控件的客户端矩形的大小，而不是其位置。
 
 ## <a name="colecontrolgetclientsite"></a><a name="getclientsite"></a> COleControl：： GetClientSite
 
@@ -1650,7 +1651,7 @@ LPOLECLIENTSITE GetClientSite();
 
 指向控件的容器中的当前客户端站点的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的指针指向的实例 `IOleClientSite` 。 `IOleClientSite`由容器实现的接口是对象上下文的视图：它在文档中的定位位置，其中获取其存储、用户界面以及其他资源。
 
@@ -1677,11 +1678,11 @@ enum ControlFlags {
     };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下，`GetControlFlags` 返回 `fastBeginPaint | clipPaintDC`。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`fastBeginPaint`|如果设置，则使用为 OLE 控件而不是 [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) API 定制的 begin 画图函数 (默认情况下) 设置。|
 |`clipPaintDC`|如果未设置，则禁用对 `IntersectClipRect` 进行的调用 `COleControl` ，并获得较小的速度优势。 如果使用无窗口激活，标志将不起作用。|
@@ -1702,7 +1703,7 @@ void GetControlSize(
     int* pcy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pcx*<br/>
 指定控件的宽度（以像素为单位）。
@@ -1710,7 +1711,7 @@ void GetControlSize(
 *pcy*<br/>
 指定控件的高度（以像素为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，控件窗口的所有坐标都是相对于控件的左上角的。
 
@@ -1724,7 +1725,7 @@ CDC* GetDC(
     DWORD dwFlags = OLEDC_PAINTBKGND);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcRect*<br/>
 一个指针，指向无窗口控件要在控件的工作区坐标中重绘的矩形。 NULL 表示完全对象的范围。
@@ -1742,7 +1743,7 @@ dwFlags <br/>
 
 如果成功，则为容器客户端区域的显示设备上下文的指针 `CWnd` ; 否则返回值为 NULL。 显示设备上下文可以在后续的 GDI 函数中用于在容器的窗口的工作区中进行绘制。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 必须调用 [ReleaseDC](#releasedc) 成员函数，以便在绘制后释放上下文。 调用时 `GetDC` ，对象会将其要绘制的矩形传递到自己的客户端坐标中。 `GetDC` 将其转换为容器工作区的坐标。 对象不应请求大于其自己的工作区矩形的所需绘制矩形，其大小可以使用 [GetClientRect](#getclientrect)检索。 这可防止对象无意中绘制不应出现的位置。
 
@@ -1772,7 +1773,7 @@ LPDISPATCH GetExtendedControl();
 
 此对象可通过其接口进行操作 `IDispatch` 。 你还可以使用 `QueryInterface` 获取对象提供的其他可用接口。 但是，该对象不是支持一组特定接口所必需的。 请注意，依赖容器扩展控件对象的特定功能可将控件的可移植性限制为其他任意容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数的函数负责在对象结束时释放指针。 请注意，容器不需要支持此对象。
 
@@ -1790,7 +1791,7 @@ CWnd* GetFocus();
 
 否则，将返回 `CWnd` 焦点与)  (相同的对象 `CWnd::GetFocus` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用 [SetFocus](#setfocus) 时，激活的无窗口控件接收焦点。
 
@@ -1806,7 +1807,7 @@ LPFONTDISP GetFont();
 
 指向控件的常用字体属性的字体调度接口的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，在完成后，调用方必须释放对象。 在控件的实现中，使用 `InternalGetFont` 来访问控件的常用字体对象。 有关在控件中使用字体的详细信息，请参阅 [Activex 控件：在 Activex 控件中使用字体一](../../mfc/mfc-activex-controls-using-fonts.md)文。
 
@@ -1820,7 +1821,7 @@ void GetFontTextMetrics(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lptm*<br/>
 指向 [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) 结构的指针。
@@ -1828,9 +1829,9 @@ void GetFontTextMetrics(
 *fontHolder*<br/>
 对 [CFontHolder](../../mfc/reference/cfontholder-class.md) 对象的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-可以使用 [COleControl：： SelectFontObject](#selectfontobject) 函数选择此类字体。 `GetFontTextMetrics``TEXTMETRIC`如果成功，将通过*lptm*的有效指标信息初始化所指向的结构 `fontHolder` ; 如果不成功，则用零填充结构。 绘制控件时，应使用此函数，而不是 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) ，因为控件（如任何嵌入的 OLE 对象）可能需要将其呈现到图元文件中。
+可以使用 [COleControl：： SelectFontObject](#selectfontobject) 函数选择此类字体。 `GetFontTextMetrics``TEXTMETRIC`如果成功，将通过 *lptm* 的有效指标信息初始化所指向的结构 `fontHolder` ; 如果不成功，则用零填充结构。 绘制控件时，应使用此函数，而不是 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) ，因为控件（如任何嵌入的 OLE 对象）可能需要将其呈现到图元文件中。
 
 `TEXTMETRIC`调用[SelectFontObject](#selectfontobject)函数时，将刷新默认字体的结构。 `GetFontTextMetrics`只应在选择 "常用字体" 属性后调用，以确保它提供的信息有效。
 
@@ -1860,7 +1861,7 @@ OLE 控件的窗口句柄（如果有）;否则为 NULL。
 
 ## <a name="colecontrolgetmessagestring"></a><a name="getmessagestring"></a> COleControl：： GetMessageString
 
-由框架调用，以获取描述 *nID*标识的菜单项的用途的简短字符串。
+由框架调用，以获取描述 *nID* 标识的菜单项的用途的简短字符串。
 
 ```
 virtual void GetMessageString(
@@ -1868,7 +1869,7 @@ virtual void GetMessageString(
     CString& rMessage) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 菜单项 ID。
@@ -1876,9 +1877,9 @@ virtual void GetMessageString(
 *rMessage*<br/>
 对 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 对象的引用，通过该对象，将返回一个字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-这可用于在突出显示菜单项时，获取显示在状态栏中的消息。 默认实现尝试加载 *nID*标识的字符串资源。
+这可用于在突出显示菜单项时，获取显示在状态栏中的消息。 默认实现尝试加载 *nID* 标识的字符串资源。
 
 ## <a name="colecontrolgetnotsupported"></a><a name="getnotsupported"></a> COleControl：： GetNotSupported
 
@@ -1888,7 +1889,7 @@ virtual void GetMessageString(
 void GetNotSupported();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数代替任何属性的 Get 函数，而控件的用户不支持对其进行属性检索。 一个示例是只写的属性。
 
@@ -1904,7 +1905,7 @@ long GetReadyState();
 
 控件的就绪状态，为以下值之一：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |READYSTATE_UNINITIALIZED|默认初始化状态|
 |READYSTATE_LOADING|控件当前正在加载其属性|
@@ -1912,7 +1913,7 @@ long GetReadyState();
 |READYSTATE_INTERACTIVE|控件具有足够的数据以进行交互，但并不是所有的异步数据都已加载|
 |READYSTATE_COMPLETE|控件的所有数据|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 大多数简单控件都不需要区分已加载和交互式。 但是，在至少异步接收某些数据之前，支持数据路径属性的控件可能尚未准备好进行交互。 控件会尝试尽快成为交互控件。
 
@@ -1924,7 +1925,7 @@ long GetReadyState();
 BOOL GetRectInContainer(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 一个指针，指向将向其中复制控件坐标的矩形结构。
@@ -1933,7 +1934,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 
 如果控件处于就地活动状态，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅当控件处于就地活动状态时，矩形才有效。
 
@@ -1945,14 +1946,14 @@ BOOL GetRectInContainer(LPRECT lpRect);
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lptm*<br/>
 指向 [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) 结构的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`GetStockTextMetrics`如果成功，函数会将 lptm 所指向的结构初始化为 `TEXTMETRIC` 有效的指标信息，如果不成功，则用零填充结构。 *lptm* 在绘制控件时使用此函数，而不是 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) ，因为控件（如任何嵌入的 OLE 对象）可能需要将其呈现到图元文件中。
+`GetStockTextMetrics`如果成功，函数会将 lptm 所指向的结构初始化为 `TEXTMETRIC` 有效的指标信息，如果不成功，则用零填充结构。  在绘制控件时使用此函数，而不是 [GetTextMetrics](/windows/win32/api/wingdi/nf-wingdi-gettextmetrics) ，因为控件（如任何嵌入的 OLE 对象）可能需要将其呈现到图元文件中。
 
 `TEXTMETRIC`调用函数时，将刷新默认字体的结构 `SelectStockFont` 。 仅在选择了常用字体后，才应调用此函数，以确保它提供的信息有效。
 
@@ -1971,7 +1972,7 @@ BSTR GetText();
 > [!NOTE]
 > 有关 BSTR 数据类型的详细信息，请参阅宏和全局部分中的 [数据类型](../../mfc/reference/data-types-mfc.md) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，此函数的调用方必须对 `SysFreeString` 返回的字符串调用，以便释放资源。 在控件的实现中，使用 `InternalGetText` 来访问控件的 "常用文本" 或 "标题" 属性。
 
@@ -1987,7 +1988,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 指向对象接口的指针 `IDropTarget` 。 由于它没有窗口，因此无窗口对象无法注册 `IDropTarget` 接口。 但是，若要参与拖放，无窗口对象仍可以实现接口并将其返回 `GetWindowlessDropTarget` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常，这需要将该控件的窗口注册为放置目标。 但由于控件没有自己的窗口，容器将使用其自己的窗口作为放置目标。 控件只需提供接口的实现 `IDropTarget` ，容器可以在适当的时间委托调用。 例如：
 
@@ -2003,7 +2004,7 @@ void InitializeIIDs(
     const IID* piidEvents);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *piidPrimary*<br/>
 指向控件的主调度接口的接口 ID 的指针。
@@ -2011,7 +2012,7 @@ void InitializeIIDs(
 *piidEvents*<br/>
 指向控件的事件接口的接口 ID 的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在控件的构造函数中调用此函数，以通知控件将使用的接口 Id 的基类。
 
@@ -2047,12 +2048,12 @@ const CString& InternalGetText();
 void InternalSetReadyState(long lNewReadyState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lNewReadyState*<br/>
 为控件设置的就绪状态为以下值之一：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |READYSTATE_UNINITIALIZED|默认初始化状态|
 |READYSTATE_LOADING|控件当前正在加载其属性|
@@ -2060,7 +2061,7 @@ void InternalSetReadyState(long lNewReadyState);
 |READYSTATE_INTERACTIVE|控件具有足够的数据以进行交互，但并不是所有的异步数据都已加载|
 |READYSTATE_COMPLETE|控件的所有数据|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 大多数简单控件都不需要区分已加载和交互式。 但是，在至少异步接收某些数据之前，支持数据路径属性的控件可能尚未准备好进行交互。 控件会尝试尽快成为交互控件。
 
@@ -2074,7 +2075,7 @@ void InvalidateControl(
     BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向要使其无效的控件的区域的指针。
@@ -2082,7 +2083,7 @@ void InvalidateControl(
 *bErase*<br/>
 指定在处理更新区域时是否清除更新区域中的背景。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *lpRect* 具有 NULL 值，则将重新绘制整个控件。 如果 *lpRect* 不为 NULL，则表示要使其无效的控件矩形部分。 如果控件没有窗口，或者当前不处于活动状态，则忽略该矩形，并对客户端站点的 [IAdviseSink：： OnViewChange](/windows/win32/api/objidl/nf-objidl-iadvisesink-onviewchange) 成员函数进行调用。 使用此函数，而不是 `CWnd::InvalidateRect` 或 `InvalidateRect` 。
 
@@ -2094,7 +2095,7 @@ void InvalidateControl(
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRgn*<br/>
 指向 [CRgn](../../mfc/reference/crgn-class.md) 对象的指针，该对象标识要使其在包含窗口的工作区坐标中无效的 OLE 对象的显示区域。 如果此参数为 NULL，则范围为整个对象。
@@ -2102,7 +2103,7 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 *bErase*<br/>
 指定是否要清除无效区域中的背景。 如果为 TRUE，则清除背景。 如果为 FALSE，则后台保持不变。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这可用于在容器中重绘无窗口控件。 在发送下一 [WM_PAINT](/windows/win32/gdi/wm-paint) 消息时，无效区域与更新区域中的所有其他区域一起标记为要进行绘制。
 
@@ -2120,7 +2121,7 @@ BOOL IsConvertingVBX();
 
 如果正在转换控件，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将使用 VBX 控件的窗体转换为使用 OLE 控件的窗体时，可能需要 OLE 控件的特殊加载代码。 例如，如果要加载 OLE 控件的实例，则可能会在中调用 [PX_Font](persistence-of-ole-controls.md#px_font) `DoPropExchange` ：
 
@@ -2146,7 +2147,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 如果已初始化控件，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 框架对的调用的 `IDispatch::Invoke` 实现 `IsInvokeAllowed` ，以确定是否可以调用给定函数 (由 `dispid`) 标识。 OLE 控件的默认行为是仅当控件已初始化时才允许调用自动化方法;不过， `IsInvokeAllowed` 是一个虚函数，如有必要，可能会被重写 (例如，将控件用作自动化服务器) 时。
 
@@ -2162,7 +2163,7 @@ BOOL IsModified();
 
 如果控件自上次保存后已修改，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当属性更改值时，将修改控件的状态。
 
@@ -2178,7 +2179,7 @@ BOOL IsOptimizedDraw();
 
 如果容器支持当前绘制操作的优化绘图，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果支持优化的绘图，则在绘制完成时，控件不需要选择 (笔、画笔、字体等 ) 到设备上下文中的旧对象。
 
@@ -2194,7 +2195,7 @@ virtual BOOL IsSubclassedControl();
 
 如果控件为子类，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 必须重写此函数，如果 OLE 控件将 Windows 控件子类，则返回 TRUE。
 
@@ -2206,12 +2207,12 @@ virtual BOOL IsSubclassedControl();
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strNewPath*<br/>
 指向字符串的指针，该字符串包含引用异步控件属性绝对位置的路径。
 
-*片*<br/>
+*prop*<br/>
 实现异步控件属性的 [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md) 对象。
 
 ## <a name="colecontrollockinplaceactive"></a><a name="lockinplaceactive"></a> COleControl：： LockInPlaceActive
@@ -2222,7 +2223,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 BOOL LockInPlaceActive(BOOL bLock);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *模块*<br/>
 如果要锁定控件的就地活动状态，则为 TRUE;如果要解除锁定，则为 FALSE。
@@ -2231,7 +2232,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 如果锁定成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，在完成后，控件的每个锁定必须与控件解除锁定。 只应将控件锁定一小段时间，如触发事件时。
 
@@ -2243,7 +2244,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 virtual void OnAmbientPropertyChange(DISPID dispid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispID*<br/>
 已更改的环境属性的调度 ID，或在多个属性已更改的情况下 DISPID_UNKNOWN。
@@ -2256,7 +2257,7 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
 virtual void OnAppearanceChanged ();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果希望在此属性更改后发出通知，请重写此函数。 默认实现调用 `InvalidateControl` 。
 
@@ -2268,7 +2269,7 @@ virtual void OnAppearanceChanged ();
 virtual void OnBackColorChanged();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果希望在此属性更改后发出通知，请重写此函数。 默认实现调用 `InvalidateControl` 。
 
@@ -2280,7 +2281,7 @@ virtual void OnBackColorChanged();
 virtual void OnBorderStyleChanged();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现调用 `InvalidateControl` 。
 
@@ -2294,7 +2295,7 @@ virtual void OnBorderStyleChanged();
 virtual void OnClick(USHORT iButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*<br/>
 鼠标按钮的索引。 可以是下列值之一：
@@ -2305,7 +2306,7 @@ virtual void OnClick(USHORT iButton);
 
 - 单击鼠标右键 RIGHT_BUTTON。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现调用 `COleControl::FireClick` 。
 
@@ -2319,7 +2320,7 @@ virtual void OnClick(USHORT iButton);
 virtual void OnClose(DWORD dwSaveOption);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSaveOption*<br/>
 指示是否应在加载前保存对象的标志。 有效值是：
@@ -2330,7 +2331,7 @@ virtual void OnClose(DWORD dwSaveOption);
 
 - OLECLOSE_PROMPTSAVE
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下， `OnClose` 如果控件对象已修改并且 *dwSaveOption* 为 OLECLOSE_SAVEIFDIRTY 或 OLECLOSE_PROMPTSAVE，则保存该对象。
 
@@ -2346,7 +2347,7 @@ virtual BOOL OnDoVerb(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iVerb*<br/>
 要调用的控制谓词的索引。
@@ -2364,7 +2365,7 @@ virtual BOOL OnDoVerb(
 
 如果调用成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现使用 ON_OLEVERB 和 ON_STDOLEVERB 消息映射项来确定要调用的正确函数。
 
@@ -2381,7 +2382,7 @@ virtual void OnDraw(
     const CRect& rcInvalid);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 在其中进行绘制的设备上下文。
@@ -2392,9 +2393,9 @@ virtual void OnDraw(
 *rcInvalid*<br/>
 无效的控件的矩形区域。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`OnDraw` 通常称为屏幕显示，将屏幕设备上下文作为 *pDC*传递。 *RcBounds*参数标识目标设备上下文中的矩形， (相对于其当前映射模式) 。 *RcInvalid*参数是无效的实际矩形。 在某些情况下，这将是比 *rcBounds*更小的区域。
+`OnDraw` 通常称为屏幕显示，将屏幕设备上下文作为 *pDC* 传递。 *RcBounds* 参数标识目标设备上下文中的矩形， (相对于其当前映射模式) 。 *RcInvalid* 参数是无效的实际矩形。 在某些情况下，这将是比 *rcBounds* 更小的区域。
 
 ## <a name="colecontrolondrawmetafile"></a><a name="ondrawmetafile"></a> COleControl：： OnDrawMetafile
 
@@ -2406,7 +2407,7 @@ virtual void OnDrawMetafile(
     const CRect& rcBounds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 在其中进行绘制的设备上下文。
@@ -2414,7 +2415,7 @@ virtual void OnDrawMetafile(
 *rcBounds*<br/>
 控件的矩形区域，包括边框。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现调用 [OnDraw](#ondraw) 函数。
 
@@ -2429,7 +2430,7 @@ virtual BOOL OnEdit(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMsg*<br/>
 指向调用谓词的 Windows 消息的指针。
@@ -2444,7 +2445,7 @@ virtual BOOL OnEdit(
 
 如果调用成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这等效于调用控件的 OLEIVERB_UIACTIVATE 谓词。
 
@@ -2460,7 +2461,7 @@ virtual BOOL OnEdit(
 virtual void OnEnabledChanged();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果希望在此属性更改后发出通知，请重写此函数。 默认实现将调用 [microsoft.office.core.iribbonui.invalidatecontrol](#invalidatecontrol)。
 
@@ -2472,7 +2473,7 @@ virtual void OnEnabledChanged();
 virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppenumOleVerb*<br/>
 指向 `IEnumOLEVERB` 对象的指针，该对象枚举控件的谓词。
@@ -2481,7 +2482,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 
 如果谓词可用，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现枚举消息映射中的 ON_OLEVERB 项。
 
@@ -2495,7 +2496,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
 virtual void OnEventAdvise(BOOL bAdvise);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAdvise*<br/>
 如果为 TRUE，则表示事件处理程序已连接到控件。 FALSE 指示事件处理程序已与控件断开连接。
@@ -2508,7 +2509,7 @@ virtual void OnEventAdvise(BOOL bAdvise);
 virtual void OnFontChanged();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现调用 `COleControl::InvalidateControl` 。 如果控件是对 Windows 控件进行子类化，则默认实现还会向控件的窗口发送 WM_SETFONT 消息。
 
@@ -2526,7 +2527,7 @@ virtual void OnFontChanged();
 virtual void OnForeColorChanged();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现调用 `InvalidateControl` 。
 
@@ -2540,12 +2541,12 @@ virtual void OnForeColorChanged();
 virtual void OnFreezeEvents(BOOL bFreeze);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bFreeze*<br/>
 如果控件的事件处理被冻结，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现不执行任何操作。
 
@@ -2562,13 +2563,13 @@ virtual BOOL OnGetColorSet(
     LPLOGPALETTE* ppColorSet);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptd*<br/>
 指向应呈现图片的目标设备。 如果此值为 NULL，则应该为默认目标设备（通常为显示设备）呈现图片。
 
 *hicTargetDev*<br/>
-指定 *ptd*所指示的目标设备上的信息上下文。 此参数可以是设备上下文，但这不是必需的。 如果 *ptd* 为 null，则 *hicTargetDev* 还应为 null。
+指定 *ptd* 所指示的目标设备上的信息上下文。 此参数可以是设备上下文，但这不是必需的。 如果 *ptd* 为 null，则 *hicTargetDev* 还应为 null。
 
 *ppColorSet*<br/>
 一个指针，指向应将使用的颜色集复制到其中的位置。 如果该函数未返回颜色集，则返回 NULL。
@@ -2577,7 +2578,7 @@ virtual BOOL OnGetColorSet(
 
 如果返回有效的颜色集，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 容器调用此函数以获取绘制 OLE 控件所需的所有颜色。 容器可以使用与设置总体调色板所需的颜色一起获得的颜色集。 默认实现返回 FALSE。
 
@@ -2591,12 +2592,12 @@ virtual BOOL OnGetColorSet(
 virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pControlInfo*<br/>
 指向要填充的 [CONTROLINFO](/windows/win32/api/ocidl/ns-ocidl-controlinfo) 结构的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此信息主要包含控件的助记键的说明。 默认实现用默认信息填充 *pControlInfo* 。
 
@@ -2604,7 +2605,7 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
 
 ## <a name="colecontrolongetdisplaystring"></a><a name="ongetdisplaystring"></a> COleControl：： OnGetDisplayString
 
-由框架调用以获取一个字符串，该字符串表示 *dispid*标识的属性的当前值。
+由框架调用以获取一个字符串，该字符串表示 *dispid* 标识的属性的当前值。
 
 ```
 virtual BOOL OnGetDisplayString(
@@ -2612,7 +2613,7 @@ virtual BOOL OnGetDisplayString(
     CString& strValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -2624,7 +2625,7 @@ virtual BOOL OnGetDisplayString(
 
 如果已在 StrValue 中返回一个字符串 *，则为* 非零; 否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件的属性的值无法直接转换为字符串，并且您希望在容器提供的属性浏览器中显示该属性的值，则重写此函数。
 
@@ -2640,7 +2641,7 @@ virtual HMENU OnGetInPlaceMenu();
 
 控件的菜单的句柄; 如果控件没有，则为 NULL。 默认实现返回 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关合并 OLE 资源的详细信息，请参阅文章 [ (OLE) 的菜单和资源 ](../../mfc/menus-and-resources-ole.md)。
 
@@ -2658,7 +2659,7 @@ virtual BOOL OnGetNaturalExtent(
     LPSIZEL psizel);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 指定要如何表示该对象。 表示形式包括内容、图标、缩略图或打印文档。 有效值取自枚举 [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) 或 DVASPECT2。
@@ -2697,7 +2698,7 @@ typedef struct tagExtentInfo
 
 如果成功返回或调整大小，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重写此函数可返回对象的显示大小，该大小与结构中的建议大小和区模式最接近 `DVEXTENTINFO` 。 默认实现返回 FALSE，并且不对大小进行调整。
 
@@ -2712,7 +2713,7 @@ virtual BOOL OnGetPredefinedStrings(
     CDWordArray* pCookieArray);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -2727,9 +2728,9 @@ virtual BOOL OnGetPredefinedStrings(
 
 如果已将元素添加到 *pStringArray* 和 *pCookieArray*，则为非零值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果控件有一个属性，其中包含一组可由字符串表示的可能值，请重写此函数。 对于添加到 *pStringArray*的每个元素，应将相应的 "cookie" 元素添加到 *pCookieArray 中。* 此框架稍后可能会将这些 "cookie" 值传递到 `COleControl::OnGetPredefinedValue` 函数。
+如果控件有一个属性，其中包含一组可由字符串表示的可能值，请重写此函数。 对于添加到 *pStringArray* 的每个元素，应将相应的 "cookie" 元素添加到 *pCookieArray 中。* 此框架稍后可能会将这些 "cookie" 值传递到 `COleControl::OnGetPredefinedValue` 函数。
 
 ## <a name="colecontrolongetpredefinedvalue"></a><a name="ongetpredefinedvalue"></a> COleControl：： OnGetPredefinedValue
 
@@ -2742,7 +2743,7 @@ virtual BOOL OnGetPredefinedValue(
     VARIANT* lpvarOut);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -2755,7 +2756,7 @@ virtual BOOL OnGetPredefinedValue(
 
 ### <a name="return-value"></a>返回值
 
-如果已在 *lpvarOut*中返回值，则为非零值;否则为0。
+如果已在 *lpvarOut* 中返回值，则为非零值;否则为0。
 
 ## <a name="colecontrolongetviewextent"></a><a name="ongetviewextent"></a> COleControl：： OnGetViewExtent
 
@@ -2769,7 +2770,7 @@ virtual BOOL OnGetViewExtent(
     LPSIZEL lpsizel);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDrawAspect*<br/>
 用于描述要显示对象的哪一窗体或方面的 DWORD。 有效值取自枚举 [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) 或 DVASPECT2。
@@ -2787,7 +2788,7 @@ virtual BOOL OnGetViewExtent(
 
 如果成功返回了区信息，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件使用两遍绘图，并且它的透明和透明部分具有不同的尺寸，则重写此函数。
 
@@ -2799,7 +2800,7 @@ virtual BOOL OnGetViewExtent(
 virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 用于描述要显示对象的哪一窗体或方面的 DWORD。 有效值取自枚举 [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) 或 DVASPECT2：
@@ -2817,7 +2818,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 
 如果成功返回大小为对象的矩形，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对象的大小由转换为一个 `OnGetViewRect` 矩形，从特定位置开始 (默认为显示) 的左上角。 如果控件使用两遍绘图，并且它的透明和透明部分具有不同的尺寸，则重写此函数。
 
@@ -2833,14 +2834,14 @@ virtual DWORD OnGetViewStatus();
 
 如果成功，则为 VIEWSTATUS 枚举的值之一;否则为0。 可能的值包括以下各项的任意组合：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |VIEWSTATUS_OPAQUE|对象完全不透明。 如果未设置此位，则对象将包含透明部分。 此位仅适用于内容相关的方面，而不是 DVASPECT_ICON 或 DVASPECT_DOCPRINT。|
 |VIEWSTATUS_SOLIDBKGND|对象的纯色背景 (包含纯色，而非画笔图案) 。 只有在设置 VIEWSTATUS_OPAQUE 并仅适用于与内容相关的方面，而不是 DVASPECT_ICON 或 DVASPECT_DOCPRINT 时，此位才有意义。|
 |VIEWSTATUS_DVASPECTOPAQUE|对象支持 DVASPECT_OPAQUE。 将绘图方位作为参数的所有 IViewObjectEx 方法均可通过此方面调用。|
 |VIEWSTATUS_DVASPECTTRANSPARENT|对象支持 DVASPECT_TRANSPARENT。 `IViewObjectEx`将绘图方位作为参数的所有方法都可以在此方面调用。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件使用两遍绘图，则重写此函数。 默认实现返回 VIEWSTATUS_OPAQUE。
 
@@ -2852,7 +2853,7 @@ virtual DWORD OnGetViewStatus();
 virtual void OnHideToolBars();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 实现应隐藏显示的所有工具栏 `OnShowToolbars` 。
 
@@ -2868,7 +2869,7 @@ virtual void OnInactiveMouseMove(
     DWORD dwKeyState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 包含窗口的工作区坐标中的对象边框。 接收到 WM_MOUSEMOVE 消息时，通知对象在屏幕上的准确位置和大小。
@@ -2882,7 +2883,7 @@ virtual void OnInactiveMouseMove(
 *dwKeyState*<br/>
 标识键盘上的键盘修改键的当前状态。 有效值可以是任何标志的组合 MK_CONTROL、MK_SHIFT、MK_ALT、MK_BUTTON、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，窗口客户端坐标 (像素) 用于传递鼠标光标位置。 这是通过同时传递同一坐标系统中的对象的边框来实现的。
 
@@ -2899,7 +2900,7 @@ virtual BOOL OnInactiveSetCursor(
     BOOL bSetAlways);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 包含窗口的工作区坐标中的对象边框。 接收到 WM_SETCURSOR 消息时，通知对象在屏幕上的准确位置和大小。
@@ -2920,7 +2921,7 @@ virtual BOOL OnInactiveSetCursor(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，窗口客户端坐标 (像素) 用于传递鼠标光标位置。 这是通过同时传递同一坐标系统中的对象的边框来实现的。
 
@@ -2934,7 +2935,7 @@ virtual void OnKeyDownEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -2948,7 +2949,7 @@ virtual void OnKeyDownEvent(
 
 - ALT_MASK 在操作过程中按下了 ALT 键。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果在触发事件后，控件需要访问密钥信息，请重写此函数。
 
@@ -2960,12 +2961,12 @@ virtual void OnKeyDownEvent(
 virtual void OnKeyPressEvent(USHORT nChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 包含按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，此 *nChar* 值可能已由容器进行了修改。
 
@@ -2981,7 +2982,7 @@ virtual void OnKeyUpEvent(
     USHORT nShiftState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 按下的键的虚拟键代码值。 有关标准虚拟键代码的列表，请参阅 Winuser。h
@@ -2995,7 +2996,7 @@ virtual void OnKeyUpEvent(
 
 - ALT_MASK 在操作过程中按下了 ALT 键。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果在触发事件后，控件需要访问密钥信息，请重写此函数。
 
@@ -3010,7 +3011,7 @@ virtual BOOL OnMapPropertyToPage(
     BOOL* pbPageOptional);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 该控件的属性的调度 ID。
@@ -3023,9 +3024,9 @@ virtual BOOL OnMapPropertyToPage(
 
 ### <a name="return-value"></a>返回值
 
-如果已在 *lpclsid*中返回类 ID，则为非零值;否则为0。
+如果已在 *lpclsid* 中返回类 ID，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重写此函数以提供一种方法，用于从容器的属性浏览器调用控件的属性页。
 
@@ -3037,7 +3038,7 @@ virtual BOOL OnMapPropertyToPage(
 virtual void OnMnemonic(LPMSG pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMsg*<br/>
 一个指针，指向由助记键按键操作生成的 Windows 消息。
@@ -3053,7 +3054,7 @@ virtual BOOL OnProperties(
     LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMsg*<br/>
 指向调用谓词的 Windows 消息的指针。
@@ -3068,7 +3069,7 @@ virtual BOOL OnProperties(
 
 如果调用成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现显示 "模式属性" 对话框。
 
@@ -3087,7 +3088,7 @@ virtual BOOL OnQueryHitPoint(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 指定表示对象的方式。 有效值取自枚举 [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) 或 DVASPECT2。
@@ -3116,7 +3117,7 @@ virtual BOOL OnQueryHitPoint(
 
 如果成功返回命中结果，则为非零值;否则为0。 命中与 OLE 控件显示区域重叠。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 查询对象的显示矩形是否与给定点重叠 (点击点) 。 `QueryHitPoint` 可以重写以测试非矩形对象的命中。
 
@@ -3133,7 +3134,7 @@ virtual BOOL OnQueryHitRect(
     DWORD* pHitResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAspect*<br/>
 指定要如何表示该对象。 有效值取自枚举 [DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect) 或 DVASPECT2。
@@ -3158,7 +3159,7 @@ virtual BOOL OnQueryHitRect(
 
 如果成功返回命中结果，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 查询对象的显示矩形是否与给定矩形中的任何点重叠， (命中) 的矩形。 `QueryHitRect` 可以重写以测试非矩形对象的命中。
 
@@ -3172,7 +3173,7 @@ virtual BOOL OnRenderData(
     LPSTGMEDIUM lpStgMedium);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构，指定请求信息时所用的格式。
@@ -3184,11 +3185,11 @@ virtual BOOL OnRenderData(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指定的格式是以前使用 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 或 [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) 成员函数放置在控件对象中用于延迟呈现的格式。 此函数的默认实现将 `OnRenderFileData` 分别调用或 `OnRenderGlobalData` ，前提是所提供的存储介质是文件或内存。 如果请求的格式为 CF_METAFILEPICT 或持久属性集格式，则默认实现将呈现相应的数据并返回非零值。 否则，它将返回0并不执行任何操作。
 
-如果 TYMED_NULL *lpStgMedium >tymed* ，则应按 *lpFormatEtc->tymed*指定的方式分配和填充 STGMEDIUM。 如果未 TYMED_NULL，则应将 STGMEDIUM 与数据一起填充。
+如果 TYMED_NULL *lpStgMedium >tymed* ，则应按 *lpFormatEtc->tymed* 指定的方式分配和填充 STGMEDIUM。 如果未 TYMED_NULL，则应将 STGMEDIUM 与数据一起填充。
 
 重写此函数以按请求的格式和媒体提供数据。 根据您的数据，您可能需要替代此函数的其他版本之一。 如果数据大小较小且固定，请重写 `OnRenderGlobalData` 。 如果你的数据在文件中或者大小可变，请重写 `OnRenderFileData` 。
 
@@ -3204,7 +3205,7 @@ virtual BOOL OnRenderFileData(
     CFile* pFile);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构，指定请求信息时所用的格式。
@@ -3216,7 +3217,7 @@ virtual BOOL OnRenderFileData(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指定的格式是以前在控件对象中放置的格式，它使用 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 成员函数进行延迟渲染。 此函数的默认实现只返回 FALSE。
 
@@ -3234,7 +3235,7 @@ virtual BOOL OnRenderGlobalData(
     HGLOBAL* phGlobal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构，指定请求信息时所用的格式。
@@ -3246,11 +3247,11 @@ virtual BOOL OnRenderGlobalData(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指定的格式是以前在控件对象中放置的格式，它使用 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 成员函数进行延迟渲染。 此函数的默认实现只返回 FALSE。
 
-如果 *phGlobal* 为 NULL，则应在 *phGlobal*中分配并返回新的 HGLOBAL。 否则，由 *phGlobal* 指定的 HGLOBAL 应使用数据进行填充。 放置在 HGLOBAL 中的数据量不能超过内存块的当前大小。 此外，不能将块重新分配到更大的大小。
+如果 *phGlobal* 为 NULL，则应在 *phGlobal* 中分配并返回新的 HGLOBAL。 否则，由 *phGlobal* 指定的 HGLOBAL 应使用数据进行填充。 放置在 HGLOBAL 中的数据量不能超过内存块的当前大小。 此外，不能将块重新分配到更大的大小。
 
 重写此函数以按请求的格式和媒体提供数据。 根据您的数据，您可能需要替代此函数的其他版本之一。 如果要处理多个存储媒体，请重写 `OnRenderData` 。 如果你的数据在文件中或者大小可变，请重写 `OnRenderFileData` 。
 
@@ -3264,7 +3265,7 @@ virtual BOOL OnRenderGlobalData(
 virtual void OnResetState();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现将调用 [DoPropExchange](#dopropexchange)，并传递一个 `CPropExchange` 对象，该对象会使属性设置为其默认值。
 
@@ -3278,7 +3279,7 @@ virtual void OnResetState();
 virtual void OnSetClientSite();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下，会 `OnSetClientSite` 检查是否加载数据路径属性，如果是，则调用 `DoDataPathPropExchange` 。
 
@@ -3295,7 +3296,7 @@ virtual BOOL OnSetData(
     BOOL bRelease);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFormatEtc*<br/>
 指向 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 结构的指针，该结构指定数据的格式。
@@ -3310,7 +3311,7 @@ virtual BOOL OnSetData(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果数据采用持久性属性集格式，则默认实现会相应地修改控件的状态。 否则，默认实现不执行任何操作。 如果 *bRelease* 为 TRUE，则对进行调用 `ReleaseStgMedium` ; 否则为。
 
@@ -3326,7 +3327,7 @@ virtual BOOL OnSetData(
 virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSizeL*<br/>
 指向 `SIZEL` 结构的指针，该结构使用长整数表示控件的宽度和高度，以 HIMETRIC 单位表示。
@@ -3335,7 +3336,7 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
 
 如果接受大小更改，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现处理控件范围的大小调整。 如果该控件处于就地活动状态，则将对该容器进行调用 `OnPosRectChanged` 。
 
@@ -3351,7 +3352,7 @@ virtual BOOL OnSetObjectRects(
     LPCRECT lpRectClip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRectPos*<br/>
 指向结构的指针 `RECT` ，该结构指示控件相对于容器的新位置和大小。
@@ -3363,7 +3364,7 @@ virtual BOOL OnSetObjectRects(
 
 如果已接受重定位，则为非零;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现会自动处理控件窗口的重定位和调整大小，并返回 TRUE。
 
@@ -3377,7 +3378,7 @@ virtual BOOL OnSetObjectRects(
 virtual void OnShowToolBars();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现不执行任何操作。
 
@@ -3389,7 +3390,7 @@ virtual void OnShowToolBars();
 virtual void OnTextChanged();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现调用 `InvalidateControl` 。
 
@@ -3407,7 +3408,7 @@ virtual BOOL OnWindowlessMessage(
     LRESULT* plResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *msg*<br/>
 Windows 传递的消息标识符。
@@ -3425,7 +3426,7 @@ Windows 结果代码。 指定消息处理的结果，并取决于所发送的�
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 处理无窗口控件的窗口消息。 `COleControl``OnWindowlessMessage`应该用于除鼠标消息和键盘消息以外的窗口消息。 `COleControl` 提供 [SetCapture](#setcapture) 和 [SetFocus](#setfocus) ，专用于为无窗口 OLE 对象获取鼠标捕获和键盘焦点。
 
@@ -3442,7 +3443,7 @@ virtual UINT ParentToClient(
     BOOL bHitTest = FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprcBounds*<br/>
 一个指针，指向容器中 OLE 控件的边界。 不是工作区，而是整个控件的区域（包括边框和滚动条）。
@@ -3505,7 +3506,7 @@ virtual UINT ParentToClient(
 
 - "最大化" 按钮中的 HTZOOM。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 输入 *pPoint* 相对于) 容器的父级 (左上角的原点。 Output *pPoint* 相对于 OLE 控件的工作区 (左上角) 控件工作区的左上角。
 
@@ -3517,12 +3518,12 @@ virtual UINT ParentToClient(
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 模式对话框的父窗口的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在显示任何模式对话框后调用此函数。 您必须调用此函数，以便容器可以启用所有顶级窗口 `PreModalDialog` 。 应将此函数与对的调用配对 `PreModalDialog` 。
 
@@ -3534,12 +3535,12 @@ void PostModalDialog(HWND hWndParent = NULL);
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 模式对话框的父窗口的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在显示任何模式对话框之前调用此函数。 必须调用此函数，使容器能够禁用其所有顶级窗口。 在模式对话框显示后，您必须调用 `PostModalDialog` 。
 
@@ -3551,7 +3552,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 void RecreateControlWindow();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果需要更改窗口的样式位，则这可能是必需的。
 
@@ -3563,7 +3564,7 @@ void RecreateControlWindow();
 void Refresh();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 基类支持将此函数 `COleControl` 作为常用方法，称为 Refresh。 这允许 OLE 控件的用户在特定时间重绘控件。 有关此方法的详细信息，请参阅文章 [ActiveX 控件：方法](../../mfc/mfc-activex-controls-methods.md)。
 
@@ -3579,7 +3580,7 @@ BOOL ReleaseCapture();
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件当前具有鼠标捕获，则释放捕获。 否则，此函数将不起作用。
 
@@ -3591,7 +3592,7 @@ BOOL ReleaseCapture();
 int ReleaseDC(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 标识要释放的容器设备上下文。
@@ -3600,7 +3601,7 @@ int ReleaseDC(CDC* pDC);
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应用程序必须调用 `ReleaseDC` [GetDC](#getdc)的每个调用。
 
@@ -3614,7 +3615,7 @@ virtual void ReparentControlWindow(
     HWND hWndParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndOuter*<br/>
 控件窗口的句柄。
@@ -3622,7 +3623,7 @@ virtual void ReparentControlWindow(
 *hWndParent*<br/>
 新的父窗口的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可重置控件窗口的父级。
 
@@ -3634,7 +3635,7 @@ virtual void ReparentControlWindow(
 void ResetStockProps();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 属性包括：外观、背景色、样式栏、标题、已启用、字体、前景色、hWnd 和文本。 有关常用属性的说明，请参阅 [ActiveX 控件：添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
 
@@ -3652,12 +3653,12 @@ void ResetStockProps();
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwVersionDefault*<br/>
 要分配给控件的版本号。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 您可以使用 `ResetVersion` 和 `ResetStockProps` 重写来改善控件的二进制初始化性能 `COleControl::OnResetState` 。 请参阅 [ResetStockProps](#resetstockprops)上的示例。 有关优化初始化的详细信息，请参阅 [ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
@@ -3673,7 +3674,7 @@ void ScrollWindow(
     LPCRECT lpClipRect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *xAmount*<br/>
 指定水平滚动的量（以设备单位为单位）。 此参数必须是负值才能滚动到左侧。
@@ -3697,7 +3698,7 @@ CFont* SelectFontObject(
     CFontHolder& fontHolder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向设备上下文对象的指针。
@@ -3717,7 +3718,7 @@ CFont* SelectFontObject(
 CFont* SelectStockFont(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 将选择字体的设备上下文。
@@ -3734,12 +3735,12 @@ CFont* SelectStockFont(CDC* pDC);
 void SerializeExtent(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 要 `CArchive` 序列化到或的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以通过使用 `SerializeExtent` 、 `SerializeStockProps` 和 `SerializeVersion` 重写来改善控件的二进制持久性性能 `COleControl::Serialize` 。 请参阅以下示例。 有关优化初始化的详细信息，请参阅 [ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
@@ -3755,12 +3756,12 @@ void SerializeExtent(CArchive& ar);
 void SerializeStockProps(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 要 `CArchive` 序列化到或的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关常用属性的说明，请参阅 [ActiveX 控件：添加常用属性](../../mfc/mfc-activex-controls-adding-stock-properties.md)。
 
@@ -3777,7 +3778,7 @@ DWORD SerializeVersion(
     BOOL bConvert = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 要 `CArchive` 序列化到或的对象。
@@ -3792,7 +3793,7 @@ DWORD SerializeVersion(
 
 控件的版本号。 如果正在加载指定的存档，则 `SerializeVersion` 返回从该存档加载的版本。 否则，它将返回当前加载的版本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以通过使用 `SerializeVersion` 、 `SerializeExtent` 和 `SerializeStockProps` 重写来改善控件的二进制持久性性能 `COleControl::Serialize` 。 有关示例，请参阅 [SerializeExtent](#serializeextent)中的代码。 有关优化初始化的详细信息，请参阅 [ActiveX 控件：优化](../../mfc/mfc-activex-controls-optimization.md)。
 
@@ -3804,12 +3805,12 @@ DWORD SerializeVersion(
 void SetAppearance (short sAppearance);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sAppearance*<br/>
 一个 **`short`** (VT_I2 用于控件外观的) 值。 如果值为零，则将控件的外观设置为平面，值为1时，将控件的外观设置为三维。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关常用属性的详细信息，请参阅 [ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)。
 
@@ -3821,12 +3822,12 @@ void SetAppearance (short sAppearance);
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwBackColor*<br/>
 用于控件的背景绘制的 OLE_COLOR 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用此属性和其他相关属性的详细信息，请参阅 [ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)一文。
 
@@ -3838,12 +3839,12 @@ void SetBackColor(OLE_COLOR dwBackColor);
 void SetBorderStyle(short sBorderStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sBorderStyle*<br/>
 控件的新边框样式;0指示没有边框，1表示普通边框。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 然后，将重新创建并调用控件窗口 `OnBorderStyleChanged` 。
 
@@ -3859,7 +3860,7 @@ CWnd* SetCapture();
 
 指向 `CWnd` 先前接收鼠标输入的窗口对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件已激活且无窗口，此函数会导致控件的容器窗口代表鼠标捕获。 否则，此函数会使控件本身占有鼠标捕获 (与 `CWnd::SetCapture`) 相同。
 
@@ -3871,7 +3872,7 @@ CWnd* SetCapture();
 BOOL SetControlSize(int cx, int cy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cx*<br/>
 指定控件的新宽度（以像素为单位）。
@@ -3883,7 +3884,7 @@ BOOL SetControlSize(int cx, int cy);
 
 如果调用成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 不应在控件的构造函数中使用此函数。
 
@@ -3897,12 +3898,12 @@ BOOL SetControlSize(int cx, int cy);
 void SetEnabled(BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnabled*<br/>
 如果要启用该控件，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 设置此属性后， `OnEnabledChange` 将调用。
 
@@ -3918,7 +3919,7 @@ CWnd* SetFocus();
 
 指向 `CWnd` 之前具有输入焦点的窗口对象的指针; 如果没有此类窗口，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件已激活且无窗口，此函数会使控件的容器窗口代表控件上的输入焦点。 输入焦点会将键盘输入定向到容器的窗口，容器会将所有后续键盘消息调度到调用的 OLE 对象 `SetFocus` 。 之前有输入焦点的任何窗口都将丢失它。
 
@@ -3932,7 +3933,7 @@ CWnd* SetFocus();
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFontDisp*<br/>
 指向字体调度接口的指针。
@@ -3945,12 +3946,12 @@ void SetFont(LPFONTDISP pFontDisp);
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwForeColor*<br/>
 用于控件的前景绘图的 OLE_COLOR 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用此属性和其他相关属性的详细信息，请参阅 [ActiveX 控件：属性](../../mfc/mfc-activex-controls-properties.md)一文。
 
@@ -3962,7 +3963,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 virtual void SetInitialDataFormats();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现指定两种格式： CF_METAFILEPICT 和持久性属性集。
 
@@ -3976,7 +3977,7 @@ void SetInitialSize(
     int cy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cx*<br/>
 OLE 控件的初始宽度（以像素为单位）。
@@ -3984,7 +3985,7 @@ OLE 控件的初始宽度（以像素为单位）。
 *cy*<br/>
 OLE 控件的初始高度（以像素为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在构造函数中调用此函数可设置控件的初始大小。 初始大小以设备单位或像素为单位。 建议在控件的构造函数中进行此调用。
 
@@ -3996,14 +3997,14 @@ OLE 控件的初始高度（以像素为单位）。
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bModified*<br/>
 控件的已修改标志的新值。 如果为 TRUE，则表示已修改控件的状态;FALSE 指示控件的状态刚刚保存。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-每当发生会影响控件持久状态的更改时调用此函数。 例如，如果永久性属性的值发生更改，则使用 *bModified* **TRUE**调用此函数。
+每当发生会影响控件持久状态的更改时调用此函数。 例如，如果永久性属性的值发生更改，则使用 *bModified* **TRUE** 调用此函数。
 
 ## <a name="colecontrolsetnotpermitted"></a><a name="setnotpermitted"></a> COleControl：： SetNotPermitted
 
@@ -4013,7 +4014,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 void SetNotPermitted();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在失败时调用此函数 `BoundPropertyRequestEdit` 。 此函数引发类型的异常， `COleDispScodeException` 以指示不允许设置操作。
 
@@ -4025,7 +4026,7 @@ void SetNotPermitted();
 void SetNotSupported();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数以代替任何属性的 Set 函数，但不支持对控件的用户修改属性值。 一个示例是只读属性。
 
@@ -4037,7 +4038,7 @@ void SetNotSupported();
 BOOL SetRectInContainer(LPCRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向一个矩形的指针，该矩形包含控件的新坐标（相对于容器）。
@@ -4046,7 +4047,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 
 如果调用成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件处于打开状态，则调整其大小;否则，将调用容器的 `OnPosRectChanged` 函数。
 
@@ -4058,12 +4059,12 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 void SetText(LPCTSTR pszText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszText*<br/>
 指向字符串的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，stock 标题和文本属性都映射到相同的值。 这意味着对任一属性所做的任何更改都将自动更改这两种属性。 通常，控件应支持 stock 标题或文本属性，但不能同时支持两者。
 
@@ -4083,7 +4084,7 @@ void ThrowError(
     UINT nHelpID = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sc*<br/>
 要报告的状态代码值。 有关可能代码的完整列表，请参阅文章 [ActiveX 控件：高级主题](../../mfc/mfc-activex-controls-advanced-topics.md)。
@@ -4097,7 +4098,7 @@ void ThrowError(
 *pszDescription*<br/>
 一个字符串，其中包含要报告的异常的说明。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 只应从 OLE 属性的 Get 或 Set 函数中调用此函数，或者从 OLE 自动化方法的实现中调用此函数。 如果需要发出其他时间发生的信号错误，应激发 stock 错误事件。
 
@@ -4112,7 +4113,7 @@ void TransformCoords(
     DWORD flags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpptlHimetric*<br/>
 指向结构的指针，该 `POINTL` 结构包含 HIMETRIC 单位中的坐标。
@@ -4131,7 +4132,7 @@ void TransformCoords(
 
 - XFORMCOORDS_CONTAINERTOHIMETRIC 将容器的单位转换为 HIMETRIC 单元。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 前两个标志 "XFORMCOORDS_POSITION" 和 "XFORMCOORDS_SIZE" 指示是否应将坐标视为位置或大小。 其余两个标志指示转换的方向。
 
@@ -4145,7 +4146,7 @@ COLORREF TranslateColor(
     HPALETTE hpal = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrColor*<br/>
 一个 OLE_COLOR 数据类型。 有关详细信息，请参阅 Windows [OleTranslateColor](/windows/win32/api/olectl/nf-olectl-oletranslatecolor) 函数。
@@ -4157,7 +4158,7 @@ COLORREF TranslateColor(
 
 RGB (红、绿、蓝) 32 位颜色值，用于定义与设备可表示的 *clrColor* 值最接近的纯色。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数可用于将库存前景色和背景色属性转换为 [CDC](../../mfc/reference/cdc-class.md) 成员函数使用的 COLORREF 类型。
 
@@ -4173,7 +4174,7 @@ BOOL WillAmbientsBeValidDuringLoad();
 
 非零表示环境属性将有效;否则，环境属性将无效。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在某些容器中，在首次调用的重写过程中，控件可能无法访问其环境属性 `COleControl::DoPropExchange` 。 如果容器在调用[IOleObject：： SetClientSite](/windows/win32/api/oleidl/nf-oleidl-ioleobject-setclientsite)之前调用[IPersistStreamInit：： load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load)或[IPersistStorage：： load](/windows/win32/api/objidl/nf-objidl-ipersiststorage-load)之前调用：：) OLEMISC_SETCLIENTSITEFIRST (就是这种情况。
 
@@ -4188,7 +4189,7 @@ virtual LRESULT WindowProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *message*<br/>
 指定要处理的 Windows 消息。
@@ -4203,11 +4204,11 @@ virtual LRESULT WindowProc(
 
 已调度消息的返回值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可通过控件的消息映射调度特定消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 CIRC3](../../overview/visual-cpp-samples.md)<br/>
 [MFC 示例 TESTHELP](../../overview/visual-cpp-samples.md)<br/>
