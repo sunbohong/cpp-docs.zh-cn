@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __p__fmode
 title: __p__fmode
 ms.date: 4/2/2020
 api_name:
@@ -23,16 +24,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: dfd9962c49b03dbb30223d1d7403b791ed6dbec9
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: da7cae9c881ebe042aa5d6003b50c09c65ea02d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213515"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
-指向 `_fmode` 全局变量，该变量为文件 I/O 操作指定默认的*文件转换模式*。
+指向 `_fmode` 全局变量，该变量为文件 I/O 操作指定默认的 *文件转换模式*。
 
 ## <a name="syntax"></a>语法
 
@@ -51,10 +52,10 @@ int* __p__fmode(
 
 文件转换模式为 [_open](../c-runtime-library/reference/open-wopen.md) 和 [_pipe](../c-runtime-library/reference/pipe.md) I/O 操作指定 `binary` 或 `text` 转换。 有关详细信息，请参阅 [_fmode](../c-runtime-library/fmode.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |__p\__fmode|stdlib.h|

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 title: _get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 27e42c9f3f570b24df8fa2a26798b3dc3fa326b3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ecb39588ea2776d661f391596d3f482628eddd7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909893"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213372"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 
@@ -56,7 +57,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="remarks"></a>备注
 
-**_Get_invalid_parameter_handler**函数获取当前设置的全局无效参数处理程序。 如果未设置全局无效参数处理程序，则返回空指针。 同样， **_get_thread_local_invalid_parameter_handler**获取调用它的线程的当前线程本地无效参数处理程序，如果未设置任何处理程序，则返回空指针。 有关如何设置全局和线程本地无效参数处理程序的信息，请参阅 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)。
+**_Get_invalid_parameter_handler** 函数获取当前设置的全局无效参数处理程序。 如果未设置全局无效参数处理程序，则返回空指针。 同样， **_get_thread_local_invalid_parameter_handler** 获取调用它的线程的当前线程本地无效参数处理程序，如果未设置任何处理程序，则返回空指针。 有关如何设置全局和线程本地无效参数处理程序的信息，请参阅 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)。
 
 返回的无效参数处理程序函数指针具有以下类型：
 
@@ -72,17 +73,17 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 有关无效参数处理程序的详细信息，请参阅 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 中的原型。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**， **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
+|**_get_invalid_parameter_handler**， **_get_thread_local_invalid_parameter_handler**|Ansi-c \<stdlib.h><br /><br /> C + +： \<cstdlib> 或 \<stdlib.h>|
 
-**_Get_invalid_parameter_handler**和 **_Get_thread_local_invalid_parameter_handler**函数是 Microsoft 特定的。 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+**_Get_invalid_parameter_handler** 和 **_Get_thread_local_invalid_parameter_handler** 函数是 Microsoft 特定的。 有关兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)<br/>
 [CRT 函数的安全增强版本](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4518
 title: 编译器警告（等级 1）C4518
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4518
 ms.assetid: 4ad21004-f076-43fd-99f4-4bf1f9be4c0b
-ms.openlocfilehash: 76761d9e0a260a05acef01bc451ad411aac517c7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1a04dbcdc62e6758e2b65c6b0ef5aa99a1823ef0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212293"
 ---
 # <a name="compiler-warning-level-1-c4518"></a>编译器警告（等级 1）C4518
 
-"说明符"：此处意外的存储类或类型说明符;掉
+"说明符"：存储类或类型说明符 (s 在此处意外) ：掉
 
 下面的示例生成 C4518：
 
