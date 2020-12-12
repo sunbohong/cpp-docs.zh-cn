@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 title: sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-ms.openlocfilehash: 006b0f84494466b5c23a8c86f586774b66839b03
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 4d5114367daf8061315d296816799c5707c0323c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292255"
 ---
 # <a name="sprintf_s-_sprintf_s_l-swprintf_s-_swprintf_s_l"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 
@@ -121,21 +122,21 @@ int swprintf_s(
 
 写入的字符数; 如果出现错误，则为-1。 如果 *缓冲区* 或 *格式* 为 null 指针，则 **sprintf_s** 和 **swprintf_s** 返回-1，并将 **errno** 设置为 **EINVAL**。
 
-**sprintf_s** 返回 *缓冲区*中存储的字节数，不包括终止 null 字符。 **swprintf_s** 返回 *缓冲区*中存储的宽字符数，不包括终止 null 宽字符。
+**sprintf_s** 返回 *缓冲区* 中存储的字节数，不包括终止 null 字符。 **swprintf_s** 返回 *缓冲区* 中存储的宽字符数，不包括终止 null 宽字符。
 
 ## <a name="remarks"></a>备注
 
-**Sprintf_s**函数将一系列字符和值存储到*缓冲区*中。 如果任何) 根据*格式*规范的相应格式规范进行转换和输出，则每个*参数* (。 该格式包括普通字符，其形式和函数与[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*参数相同。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Sprintf_s** 函数将一系列字符和值存储到 *缓冲区* 中。 如果任何) 根据 *格式* 规范的相应格式规范进行转换和输出，则每个 *参数* (。 该格式包括普通字符，其形式和函数与 [printf](printf-printf-l-wprintf-wprintf-l.md)的 *format* 参数相同。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-**Sprintf_s**与[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)之间的一个主要区别在于**sprintf_s**检查格式字符串中的有效格式设置字符，而[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)仅检查格式字符串或缓冲区是否为**NULL**指针。 如果任一检查失败，将调用无效参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并将 **errno** 设置为 **EINVAL**。
+**Sprintf_s** 与 [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)之间的一个主要区别在于 **sprintf_s** 检查格式字符串中的有效格式设置字符，而 [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)仅检查格式字符串或缓冲区是否为 **NULL** 指针。 如果任一检查失败，将调用无效参数处理程序，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
-**Sprintf_s**和[sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)的另一个主要区别在于**sprintf_s**使用长度参数来指定输出缓冲区的大小（以字符为间隔）。 如果缓冲区对于格式化文本（包括终止 null）来说太小，则将缓冲区设置为空字符串，方法是在 *缓冲区*[0] 处放置 null 字符，并调用无效的参数处理程序。 与 **_snprintf**不同， **sprintf_s** 确保缓冲区将以 null 结尾，除非缓冲区大小为零。
+**Sprintf_s** 和 [sprintf](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)的另一个主要区别在于 **sprintf_s** 使用长度参数来指定输出缓冲区的大小（以字符为间隔）。 如果缓冲区对于格式化文本（包括终止 null）来说太小，则将缓冲区设置为空字符串，方法是在 *缓冲区*[0] 处放置 null 字符，并调用无效的参数处理程序。 与 **_snprintf** 不同， **sprintf_s** 确保缓冲区将以 null 结尾，除非缓冲区大小为零。
 
-**swprintf_s** 是 **sprintf_s**的宽字符版本; **swprintf_s** 的指针参数是宽字符字符串。 **Swprintf_s**中的编码错误检测可能与**sprintf_s**中的不同。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+**swprintf_s** 是 **sprintf_s** 的宽字符版本; **swprintf_s** 的指针参数是宽字符字符串。 **Swprintf_s** 中的编码错误检测可能与 **sprintf_s** 中的不同。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度（不再需要指定大小参数），并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-**Sprintf_s**的版本提供对缓冲区太小后发生的情况的更多控制。 有关更多信息，请参见 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
+**Sprintf_s** 的版本提供对缓冲区太小后发生的情况的更多控制。 有关更多信息，请参见 [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

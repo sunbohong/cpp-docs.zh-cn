@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 title: _sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c694567aa7554319d5821678a18c3b5392f89965
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 84702c0ab04027f350978c511ee8f871af753bb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292294"
 ---
 # <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -112,11 +113,11 @@ int _swprintf_p_l(
 
 ## <a name="remarks"></a>备注
 
-**_Sprintf_p**函数将一系列字符和值存储到*缓冲区*中。 *Argument_list*中的每个自变量都 () 如果根据*格式*规范中的相应格式规范进行转换和输出。 *Format*参数将[格式规范语法用于 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。 **_Sprintf_p**和**sprintf_s**之间的区别在于 **_sprintf_p**支持位置参数，这允许指定在格式字符串中使用参数的顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_Sprintf_p** 函数将一系列字符和值存储到 *缓冲区* 中。 *Argument_list* 中的每个自变量都 () 如果根据 *格式* 规范中的相应格式规范进行转换和输出。 *Format* 参数将 [格式规范语法用于 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。 **_Sprintf_p** 和 **sprintf_s** 之间的区别在于 **_sprintf_p** 支持位置参数，这允许指定在格式字符串中使用参数的顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_swprintf_p** 是 **_sprintf_p**的宽字符版本; **_swprintf_p** 的指针参数是宽字符字符串。 **_Swprintf_p**中的编码错误检测可能与 **_sprintf_p**中的不同。 **_swprintf_p** 和 **fwprintf_p** 的行为完全相同，只是 **_swprintf_p** 将输出写入字符串，而不是将输出写入字符串，而不是将输出写入到类型 **文件**的目标，而 **_swprintf_p** 要求 *count* 参数指定要写入的最大字符数。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+**_swprintf_p** 是 **_sprintf_p** 的宽字符版本; **_swprintf_p** 的指针参数是宽字符字符串。 **_Swprintf_p** 中的编码错误检测可能与 **_sprintf_p** 中的不同。 **_swprintf_p** 和 **fwprintf_p** 的行为完全相同，只是 **_swprintf_p** 将输出写入字符串，而不是将输出写入字符串，而不是将输出写入到类型 **文件** 的目标，而 **_swprintf_p** 要求 *count* 参数指定要写入的最大字符数。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-**_sprintf_p** 返回 *缓冲区*中存储的字节数，不包括终止 null 字符。 **_swprintf_p** 返回 *缓冲区*中存储的宽字符数，不包括终止 null 宽字符。 如果 *缓冲区* 或 *格式* 为 null 指针，或者格式字符串包含无效的格式字符，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将 **errno** 设置为 **EINVAL**。
+**_sprintf_p** 返回 *缓冲区* 中存储的字节数，不包括终止 null 字符。 **_swprintf_p** 返回 *缓冲区* 中存储的宽字符数，不包括终止 null 宽字符。 如果 *缓冲区* 或 *格式* 为 null 指针，或者格式字符串包含无效的格式字符，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

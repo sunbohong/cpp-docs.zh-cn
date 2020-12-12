@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCRibbonCategory 类
 title: CMFCRibbonCategory 类
 ms.date: 11/19/2018
 f1_keywords:
@@ -130,16 +131,16 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e2bdadcc9d4361d650d481bd83faddc09bdd2add
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749537"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293802"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 类
 
-类`CMFCRibbonCategory`实现包含一组[功能区面板的功能区](../../mfc/reference/cmfcribbonpanel-class.md)选项卡。
+`CMFCRibbonCategory`类实现包含一组[功能区面板](../../mfc/reference/cmfcribbonpanel-class.md)的功能区选项卡。
 
 ## <a name="syntax"></a>语法
 
@@ -151,83 +152,83 @@ class CMFCRibbonCategory : public CObject
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CMFC 功能分类：CMFC 功能分类](#cmfcribboncategory)|构造函数。|
+|[CMFCRibbonCategory：： CMFCRibbonCategory](#cmfcribboncategory)|构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFC 功能分类：：添加隐藏](#addhidden)|向功能区类别添加隐藏元素。|
-|[CMFC 功能分类：：添加面板](#addpanel)|向功能区类别添加新面板。|
-|[CMFC 功能分类：：从](#copyfrom)||
-|[CMFC 功能分类：：查找数据](#findbydata)||
-|[CMFC 功能分类：：查找ByID](#findbyid)||
-|[CMFC 功能分类：：查找面板与Elem](#findpanelwithelem)||
-|[CMFC 功能分类：获取上下文 ID](#getcontextid)|返回功能区类别的上下文 ID。|
-|[CMFC 功能分类：获取数据](#getdata)|返回与功能区类别关联的用户定义的数据。|
-|[CMFC 功能分类：获取向下](#getdroppeddown)||
-|[CMFC 功能分类：获取元素](#getelements)||
-|[CMFC 功能分类类别：获取元素 ByID](#getelementsbyid)||
-|[CMFC 功能分类：获取第一个可见元素](#getfirstvisibleelement)|获取属于功能区类别的第一个可见元素。|
-|[CMFC 功能分类：获得重点](#getfocused)|返回焦点元素。|
-|[CMFC 功能分类：获取突出显示](#gethighlighted)|返回突出显示的元素。|
-|[CMFC 功能分类：获取图像计数](#getimagecount)||
-|[CMFC 功能分类：获取图像大小](#getimagesize)||
-|[CMFC 功能分类：获取项目 Id 列表](#getitemidslist)||
-|[CMFC 功能分类类别：获取最后可见元素](#getlastvisibleelement)|获取属于功能区类别的最后一个可见元素|
-|[CMFC 功能分类：获取大型图像](#getlargeimages)|返回对功能区类别使用的大型图像列表的引用。|
-|[CMFC 功能分类：：获取最大高度](#getmaxheight)||
-|[CMFC 功能分类：获取名称](#getname)||
-|[CMFC 功能分类：获取面板](#getpanel)|返回指向位于指定索引的功能区面板的指针。|
-|[CMFC 功能分类：：获取面板计数](#getpanelcount)|返回功能区类别中的功能区面板数。|
-|[CMFC 功能类别：从点获取面板](#getpanelfrompoint)||
-|[CMFC功能分类：获取面板索引](#getpanelindex)|返回指定功能区面板的索引。|
+|[CMFCRibbonCategory：： AddHidden](#addhidden)|将隐藏元素添加到功能区类别。|
+|[CMFCRibbonCategory：： AddPanel](#addpanel)|将新面板添加到功能区类别。|
+|[CMFCRibbonCategory：： CopyFrom](#copyfrom)||
+|[CMFCRibbonCategory：： FindByData](#findbydata)||
+|[CMFCRibbonCategory：： FindByID](#findbyid)||
+|[CMFCRibbonCategory：： FindPanelWithElem](#findpanelwithelem)||
+|[CMFCRibbonCategory：： GetContextID](#getcontextid)|返回功能区类别的上下文 ID。|
+|[CMFCRibbonCategory：：](#getdata)|返回与功能区类别关联的用户定义数据。|
+|[CMFCRibbonCategory：： GetDroppedDown](#getdroppeddown)||
+|[CMFCRibbonCategory：： GetElements](#getelements)||
+|[CMFCRibbonCategory：： GetElementsByID](#getelementsbyid)||
+|[CMFCRibbonCategory：： GetFirstVisibleElement](#getfirstvisibleelement)|获取属于功能区类别的第一个可见元素。|
+|[CMFCRibbonCategory：： GetFocused](#getfocused)|返回焦点元素。|
+|[CMFCRibbonCategory：： GetHighlighted](#gethighlighted)|返回突出显示的元素。|
+|[CMFCRibbonCategory：： GetImageCount](#getimagecount)||
+|[CMFCRibbonCategory：： GetImageSize](#getimagesize)||
+|[CMFCRibbonCategory：： GetItemIDsList](#getitemidslist)||
+|[CMFCRibbonCategory：： GetLastVisibleElement](#getlastvisibleelement)|获取属于功能区类别的最后一个可见元素|
+|[CMFCRibbonCategory：： GetLargeImages](#getlargeimages)|返回对功能区类别使用的大型图像列表的引用。|
+|[CMFCRibbonCategory：： GetMaxHeight](#getmaxheight)||
+|[CMFCRibbonCategory：： GetName](#getname)||
+|[CMFCRibbonCategory：： GetPanel](#getpanel)|返回指向位于指定索引处的功能区面板的指针。|
+|[CMFCRibbonCategory：： GetPanelCount](#getpanelcount)|返回功能区类别中的功能区面板的数目。|
+|[CMFCRibbonCategory：： GetPanelFromPoint](#getpanelfrompoint)||
+|[CMFCRibbonCategory：： GetPanelIndex](#getpanelindex)|返回指定功能区面板的索引。|
 |[CMFCRibbonCategory::GetParentButton](#getparentbutton)||
 |[CMFCRibbonCategory::GetParentMenuBar](#getparentmenubar)||
-|[CMFC 功能分类类别：获取父系功能栏](#getparentribbonbar)||
-|[CMFC 功能类别：获取 Rect](#getrect)||
-|[CMFC 功能分类：获取小图像](#getsmallimages)|返回对类别使用的小图像列表的引用。|
-|[CMFC 功能分类：：获取 TabColor](#gettabcolor)|返回功能区类别选项卡的当前颜色。|
-|[CMFC 功能类别：获取 Tabrect](#gettabrect)||
-|[CMFC 功能分类：：获取文本顶线](#gettexttopline)||
-|[CMFC 功能分类：获取可见元素](#getvisibleelements)|获取属于功能区类别的所有可见元素。|
-|[CMFC 功能分类：：高光面板](#highlightpanel)||
-|[CMFC 功能分类：hitTest](#hittest)||
-|[CMFC功能分类：hitTestEx](#hittestex)||
+|[CMFCRibbonCategory：： GetParentRibbonBar](#getparentribbonbar)||
+|[CMFCRibbonCategory：： GetRect](#getrect)||
+|[CMFCRibbonCategory：： GetSmallImages](#getsmallimages)|返回对该类别所使用的小型图像列表的引用。|
+|[CMFCRibbonCategory：： GetTabColor](#gettabcolor)|返回功能区类别选项卡的当前颜色。|
+|[CMFCRibbonCategory：： GetTabRect](#gettabrect)||
+|[CMFCRibbonCategory：： GetTextTopLine](#gettexttopline)||
+|[CMFCRibbonCategory：： GetVisibleElements](#getvisibleelements)|获取属于功能区类别的所有可见元素。|
+|[CMFCRibbonCategory：： HighlightPanel](#highlightpanel)||
+|[CMFCRibbonCategory：： System.windows.media.visualtreehelper.hittest](#hittest)||
+|[CMFCRibbonCategory：： HitTestEx](#hittestex)||
 |[CMFCRibbonCategory::HitTestScrollButtons](#hittestscrollbuttons)||
-|[CMFC 功能类别：有效](#isactive)||
-|[CMFC 功能分类：可见](#isvisible)|确定功能区类别是否可见。|
-|[CMFC 功能分类类别：：是 Windows7 查看](#iswindows7look)|指示父功能区是否有 Windows 7 样式的外观（小型矩形应用程序按钮）|
+|[CMFCRibbonCategory：： IsActive](#isactive)||
+|[CMFCRibbonCategory：： IsVisible](#isvisible)|确定功能区类别是否可见。|
+|[CMFCRibbonCategory：： IsWindows7Look](#iswindows7look)|指示父功能区是否具有 Windows 7 样式的外观 (小型矩形应用程序按钮) |
 |[CMFCRibbonCategory::NotifyControlCommand](#notifycontrolcommand)||
 |[CMFCRibbonCategory::OnCancelMode](#oncancelmode)||
-|[CMFC 功能分类：：开拉](#ondraw)||
-|[CMFC 功能分类：：画像](#ondrawimage)||
-|[CMFC 功能分类：：在绘制菜单边框](#ondrawmenuborder)||
-|[CMFC 功能类别：：打开键](#onkey)|当用户按下键盘按钮时，框架调用。|
-|[CMFC 功能分类：：打开按钮](#onlbuttondown)||
-|[CMFC 功能分类：：OnLButtonUp](#onlbuttonup)||
-|[CMFC 功能分类：：鼠标移动](#onmousemove)||
-|[CMFC 功能分类：：在RTL改变](#onrtlchanged)||
-|[CMFC 功能分类：：ScrollHorz](#onscrollhorz)||
+|[CMFCRibbonCategory：： OnDraw](#ondraw)||
+|[CMFCRibbonCategory：： OnDrawImage](#ondrawimage)||
+|[CMFCRibbonCategory：： OnDrawMenuBorder](#ondrawmenuborder)||
+|[CMFCRibbonCategory：： OnKey](#onkey)|当用户按下键盘按钮时由框架调用。|
+|[CMFCRibbonCategory：： OnLButtonDown](#onlbuttondown)||
+|[CMFCRibbonCategory：： OnLButtonUp](#onlbuttonup)||
+|[CMFCRibbonCategory：： OnMouseMove](#onmousemove)||
+|[CMFCRibbonCategory：： OnRTLChanged](#onrtlchanged)||
+|[CMFCRibbonCategory：： OnScrollHorz](#onscrollhorz)||
 |[CMFCRibbonCategory::OnUpdateCmdUI](#onupdatecmdui)||
-|[CMFC 功能分类：recalclayout](#recalclayout)||
-|[CMFC 功能分类：：删除面板](#removepanel)||
-|[CMFC 功能分类：：存储库面板](#repospanels)||
-|[CMFC 功能分类类别：设置折叠顺序](#setcollapseorder)|定义功能区类别中存在的功能区面板的折叠顺序。|
-|[CMFC 功能分类：：集数据](#setdata)|将用户定义的数据存储在功能区类别中。|
-|[CMFC 功能分类：：设置密钥](#setkeys)|为功能区类别分配一个键尖。|
-|[CMFC 功能分类：：设置名称](#setname)||
-|[CMFC 功能分类：：设置 TabColor](#settabcolor)|设置功能区类别的颜色。|
+|[CMFCRibbonCategory：： RecalcLayout](#recalclayout)||
+|[CMFCRibbonCategory：： RemovePanel](#removepanel)||
+|[CMFCRibbonCategory：： ReposPanels](#repospanels)||
+|[CMFCRibbonCategory：： SetCollapseOrder](#setcollapseorder)|定义功能区类中存在的功能区面板的折叠顺序。|
+|[CMFCRibbonCategory：： SetData](#setdata)|将用户定义的数据存储在功能区类别中。|
+|[CMFCRibbonCategory：： SetKeys](#setkeys)|将 keytip 分配给功能区类别。|
+|[CMFCRibbonCategory：： SetName](#setname)||
+|[CMFCRibbonCategory：： SetTabColor](#settabcolor)|设置功能区类别的颜色。|
 
 ## <a name="remarks"></a>备注
 
-通常，通过调用[CMFCRibbonBar：：：addCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory)，间接创建功能区类别，该类别返回指向新创建的功能区类别的指针。 通过调用[CMFC 功能分类：：添加面板](#addpanel)，将面板添加到类别。
+通常，可以通过调用 [CMFCRibbonBar：： AddCategory](../../mfc/reference/cmfcribbonbar-class.md#addcategory)间接创建一个功能区类别，该功能会返回指向新创建的功能区类别的指针。 可以通过调用 [CMFCRibbonCategory：： AddPanel](#addpanel)将面板添加到类别中。
 
-该`CMFCRibbonTab`类绘制功能区类别。 它派生自[CMFCRibbonBase元素类](../../mfc/reference/cmfcribbonbaseelement-class.md)。
+`CMFCRibbonTab`类绘制功能区类别。 它派生自 [CMFCRibbonBaseElement 类](../../mfc/reference/cmfcribbonbaseelement-class.md)。
 
-以下示例演示如何创建功能区类别并将其添加面板。
+下面的示例演示如何创建功能区类别，并向其添加面板。
 
 ```cpp
 // Create a new ribbon category and get a pointer to it`
@@ -242,9 +243,9 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
     m_PanelIcons.ExtractIcon (0));  // Panel icon
 ```
 
-下图显示了功能区应用示例应用程序中的"主页"类别的图形。
+下图显示了 RibbonApp 示例应用程序的 "主页" 类别的插图。
 
-![功能区应用示例应用程序中的家庭类别](../../mfc/reference/media/cmfcribboncategory.png "功能区应用示例应用程序中的家庭类别")
+![RibbonApp 示例应用程序中的 Home 类别](../../mfc/reference/media/cmfcribboncategory.png "RibbonApp 示例应用程序中的 Home 类别")
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -254,28 +255,28 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxribbon 类别.h
+**标头：** afxribboncategory
 
-## <a name="cmfcribboncategoryaddhidden"></a><a name="addhidden"></a>CMFC 功能分类：：添加隐藏
+## <a name="cmfcribboncategoryaddhidden"></a><a name="addhidden"></a> CMFCRibbonCategory：： AddHidden
 
-将指定的功能区元素添加到自定义对话框中显示的功能区元素数组中。
+将指定的功能区元素添加到自定义对话框上显示的功能区元素的数组中。
 
 ```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*佩莱姆*<br/>
-[在]指向功能区元素的指针。
+*pElem*<br/>
+中指向功能区元素的指针。
 
 ### <a name="remarks"></a>备注
 
-自定义对话框上的功能区元素是可以添加到快速访问工具栏的命令。
+"自定义" 对话框上的功能区元素是可以添加到快速访问工具栏的命令。
 
-## <a name="cmfcribboncategoryaddpanel"></a><a name="addpanel"></a>CMFC 功能分类：：添加面板
+## <a name="cmfcribboncategoryaddpanel"></a><a name="addpanel"></a> CMFCRibbonCategory：： AddPanel
 
-为功能区类别创建功能区面板。
+创建功能区类别的功能区面板。
 
 ```
 CMFCRibbonPanel* AddPanel(
@@ -284,36 +285,36 @@ CMFCRibbonPanel* AddPanel(
     CRuntimeClass* pRTI = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lpszPanel名称*<br/>
-[在]指向新功能区面板的名称。
+*lpszPanelName*<br/>
+中指向新功能区面板的名称的指针。
 
 *hIcon*<br/>
-[在]处理新功能区面板的默认图标。
+中新功能区面板的默认图标的句柄。
 
 *pRTI*<br/>
-[在]指向自定义功能区面板的运行时类信息的指针。
+中指向自定义功能区面板的运行时类信息的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向新功能区面板的指针;否则 NULL，如果面板未创建。
+如果方法成功，则为指向新功能区面板的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-如果要创建自定义功能区面板，则必须在*pRTI*中指定其运行时类信息。 自定义功能区面板类必须派生自类`CMFCRibbonPanel`。
+若要创建自定义功能区面板，必须在 *pRTI* 中指定其运行时类信息。 自定义功能区面板类必须派生自 `CMFCRibbonPanel` 类。
 
-当功能区元素空间不足时，将显示功能区面板的默认图标。
+当空间不足，无法显示功能区元素时，将显示功能区面板的默认图标。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何在`AddPanel``CMFCRibbonCategory`类中使用 方法。
+下面的示例演示如何使用 `AddPanel` 类中的方法 `CMFCRibbonCategory` 。
 
 [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]
 
-## <a name="cmfcribboncategorycmfcribboncategory"></a><a name="cmfcribboncategory"></a>CMFC 功能分类：CMFC 功能分类
+## <a name="cmfcribboncategorycmfcribboncategory"></a><a name="cmfcribboncategory"></a> CMFCRibbonCategory：： CMFCRibbonCategory
 
-构造并初始化[CMFC 功能分类对象](../../mfc/reference/cmfcribboncategory-class.md)。
+构造并初始化 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) 对象。
 
 ```
 CMFCRibbonCategory(
@@ -327,44 +328,44 @@ CMFCRibbonCategory(
     32));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*pParenr 带条*<br/>
-[在]指向功能区类别的父功能区栏。
+*pParenrRibbonBar*<br/>
+中指向功能区类别的父功能区栏的指针。
 
-*lpsz名称*<br/>
-[在]功能区类别的名称。
+*lpszName*<br/>
+中功能区类别的名称。
 
-*ui 小图像雷斯ID*<br/>
-[在]功能区类别中功能区元素使用的小图像图像列表的资源 ID。
+*uiSmallImagesResID*<br/>
+中功能区类别中功能区元素使用的小图像的图像列表的资源 ID。
 
 *uiLargeImagesResID*<br/>
-[在]功能区类别中功能区元素使用的大型图像的图像列表的资源 ID。
+中功能区类别中功能区元素使用的大型图像的图像列表的资源 ID。
 
-*大小 小图像*<br/>
-[在]功能区类别中功能区元素的小图像的默认大小。
+*sizeSmallImage*<br/>
+中功能区类别中功能区元素的小图像的默认大小。
 
-*大小大图像*<br/>
-[在]功能区类别中功能区元素的大图像的默认大小。
+*sizeLargeImage*<br/>
+中功能区类别中功能区元素的大图像的默认大小。
 
-## <a name="cmfcribboncategorycopyfrom"></a><a name="copyfrom"></a>CMFC 功能分类：：从
+## <a name="cmfcribboncategorycopyfrom"></a><a name="copyfrom"></a> CMFCRibbonCategory：： CopyFrom
 
-将指定的[CMFC 功能分类](../../mfc/reference/cmfcribboncategory-class.md)的状态复制到当前[CMFC 功能分类对象](../../mfc/reference/cmfcribboncategory-class.md)。
+将指定 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) 的状态复制到当前 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) 对象。
 
 ```
 virtual void CopyFrom(CMFCRibbonCategory& src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *src*<br/>
-[在]源`CMFCRibbonCategory`对象。
+中源 `CMFCRibbonCategory` 对象。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryfindbydata"></a><a name="findbydata"></a>CMFC 功能分类：：查找数据
+## <a name="cmfcribboncategoryfindbydata"></a><a name="findbydata"></a> CMFCRibbonCategory：： FindByData
 
-检索与指定数据关联的功能区元素。
+检索与指定的数据关联的功能区元素。
 
 ```
 CMFCRibbonBaseElement* FindByData(
@@ -372,23 +373,23 @@ CMFCRibbonBaseElement* FindByData(
     BOOL bVisibleOnly = TRUE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwData*<br/>
-[在]与功能区元素关联的数据。
+中与功能区元素关联的数据。
 
-*仅可见*<br/>
-[在]TRUE 在搜索中包括快速访问功能区元素;FALSE 以排除搜索中快速访问功能区元素。
+*bVisibleOnly*<br/>
+中若要在搜索中包含快速访问功能区元素，则为 TRUE;若要在搜索中排除快速访问功能区元素，则为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向功能区元素的指针;否则 NULL。
+如果方法成功，则为指向功能区元素的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryfindbyid"></a><a name="findbyid"></a>CMFC 功能分类：：查找ByID
+## <a name="cmfcribboncategoryfindbyid"></a><a name="findbyid"></a> CMFCRibbonCategory：： FindByID
 
-检索与指定命令 ID 关联的功能区元素。
+检索与指定的命令 ID 相关联的功能区元素。
 
 ```
 CMFCRibbonBaseElement* FindByID(
@@ -396,21 +397,21 @@ CMFCRibbonBaseElement* FindByID(
     BOOL bVisibleOnly = TRUE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*乌伊CmdID*<br/>
-[在]与功能区元素关联的命令 ID。
+*uiCmdID*<br/>
+中与功能区元素关联的命令 ID。
 
-*仅可见*<br/>
-[在]TRUE 在搜索中包括快速访问功能区元素;FALSE 以排除搜索中快速访问功能区元素。
+*bVisibleOnly*<br/>
+中若要在搜索中包含快速访问功能区元素，则为 TRUE;若要在搜索中排除快速访问功能区元素，则为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向功能区元素的指针;否则 NULL。
+如果方法成功，则为指向功能区元素的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryfindpanelwithelem"></a><a name="findpanelwithelem"></a>CMFC 功能分类：：查找面板与Elem
+## <a name="cmfcribboncategoryfindpanelwithelem"></a><a name="findpanelwithelem"></a> CMFCRibbonCategory：： FindPanelWithElem
 
 检索包含指定功能区元素的功能区面板。
 
@@ -418,18 +419,18 @@ CMFCRibbonBaseElement* FindByID(
 CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p元素*<br/>
-[在]指向功能区元素的指针。
+*pElement*<br/>
+中指向功能区元素的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向功能区面板的指针;否则 NULL。
+如果方法成功，则为指向功能区面板的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetcontextid"></a><a name="getcontextid"></a>CMFC 功能分类：获取上下文 ID
+## <a name="cmfcribboncategorygetcontextid"></a><a name="getcontextid"></a> CMFCRibbonCategory：： GetContextID
 
 检索功能区类别的上下文 ID。
 
@@ -443,11 +444,11 @@ UINT GetContextID() const;
 
 ### <a name="remarks"></a>备注
 
-如果功能区类别不是上下文功能区类别，则上下文 ID 为 0。
+如果功能区类别不是上下文功能区类别，上下文 ID 为0。
 
-## <a name="cmfcribboncategorygetdata"></a><a name="getdata"></a>CMFC 功能分类：获取数据
+## <a name="cmfcribboncategorygetdata"></a><a name="getdata"></a> CMFCRibbonCategory：：
 
-检索与功能区类别关联的用户定义的数据。
+检索与功能区类别关联的用户定义数据。
 
 ```
 DWORD_PTR GetData() const;
@@ -455,11 +456,11 @@ DWORD_PTR GetData() const;
 
 ### <a name="return-value"></a>返回值
 
-与功能区类别关联的用户定义的数据。
+与功能区类别关联的用户定义数据。
 
-## <a name="cmfcribboncategorygetdroppeddown"></a><a name="getdroppeddown"></a>CMFC 功能分类：获取向下
+## <a name="cmfcribboncategorygetdroppeddown"></a><a name="getdroppeddown"></a> CMFCRibbonCategory：： GetDroppedDown
 
-检索指向功能区元素的指针，该功能区元素当前显示其弹出式菜单。
+检索指向当前显示其弹出菜单的功能区元素的指针。
 
 ```
 CMFCRibbonBaseElement* GetDroppedDown();
@@ -467,11 +468,11 @@ CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向功能区元素的指针;否则 NULL。
+如果方法成功，则为指向功能区元素的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetelements"></a><a name="getelements"></a>CMFC 功能分类：获取元素
+## <a name="cmfcribboncategorygetelements"></a><a name="getelements"></a> CMFCRibbonCategory：： GetElements
 
 检索功能区类别中的所有功能区元素。
 
@@ -480,18 +481,18 @@ void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ar元素*<br/>
-[进出]对功能区元素的[CArray](../../mfc/reference/carray-class.md)的引用。
+*arElements*<br/>
+[in，out]对功能区元素的 [CArray](../../mfc/reference/carray-class.md) 的引用。
 
 ### <a name="remarks"></a>备注
 
-阵列中包含用于快速访问工具栏的功能区元素。
+为在快速访问工具栏上使用而设计的功能区元素包含在数组中。
 
-## <a name="cmfcribboncategorygetelementsbyid"></a><a name="getelementsbyid"></a>CMFC 功能分类类别：获取元素 ByID
+## <a name="cmfcribboncategorygetelementsbyid"></a><a name="getelementsbyid"></a> CMFCRibbonCategory：： GetElementsByID
 
-检索与指定命令 ID 关联的所有功能区元素。
+检索与指定的命令 ID 相关联的所有功能区元素。
 
 ```cpp
 void GetElementsByID(
@@ -499,19 +500,19 @@ void GetElementsByID(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*乌伊CmdID*<br/>
-[在]与功能区元素关联的命令 ID。
+*uiCmdID*<br/>
+中与功能区元素关联的命令 ID。
 
-*ar元素*<br/>
-[进出]对功能区元素的[CArray](../../mfc/reference/carray-class.md)的引用。
+*arElements*<br/>
+[in，out]对功能区元素的 [CArray](../../mfc/reference/carray-class.md) 的引用。
 
 ### <a name="remarks"></a>备注
 
-阵列中包含用于快速访问工具栏的功能区元素。
+为在快速访问工具栏上使用而设计的功能区元素包含在数组中。
 
-## <a name="cmfcribboncategorygetfirstvisibleelement"></a><a name="getfirstvisibleelement"></a>CMFC 功能分类：获取第一个可见元素
+## <a name="cmfcribboncategorygetfirstvisibleelement"></a><a name="getfirstvisibleelement"></a> CMFCRibbonCategory：： GetFirstVisibleElement
 
 检索属于功能区类别的第一个可见元素。
 
@@ -521,11 +522,11 @@ CMFCRibbonBaseElement* GetFirstVisibleElement() const;
 
 ### <a name="return-value"></a>返回值
 
-指向第一个可见元素的指针;如果类别没有任何可见元素，则可能是 NULL。
+指向第一个可见元素的指针;如果类别不包含任何可见元素，则可以为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetfocused"></a><a name="getfocused"></a>CMFC 功能分类：获得重点
+## <a name="cmfcribboncategorygetfocused"></a><a name="getfocused"></a> CMFCRibbonCategory：： GetFocused
 
 返回焦点元素。
 
@@ -539,7 +540,7 @@ CMFCRibbonBaseElement* GetFocused();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygethighlighted"></a><a name="gethighlighted"></a>CMFC 功能分类：获取突出显示
+## <a name="cmfcribboncategorygethighlighted"></a><a name="gethighlighted"></a> CMFCRibbonCategory：： GetHighlighted
 
 返回突出显示的元素。
 
@@ -549,53 +550,53 @@ CMFCRibbonBaseElement* GetHighlighted();
 
 ### <a name="return-value"></a>返回值
 
-如果没有突出显示的元素，则指向突出显示的元素或 NULL 的指针。
+指向突出显示的元素的指针; 如果没有突出显示任何元素，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetimagecount"></a><a name="getimagecount"></a>CMFC 功能分类：获取图像计数
+## <a name="cmfcribboncategorygetimagecount"></a><a name="getimagecount"></a> CMFCRibbonCategory：： GetImageCount
 
-检索功能区类别中包含的指定图像列表中的图像数。
+检索包含在功能区类别中的指定图像列表中的图像数量。
 
 ```
 int GetImageCount(BOOL bIsLargeImage) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIsLargeImage*<br/>
-[在]大图像列表中的图像数为 TRUE;FALSE 表示小图像列表中的图像数。
+中对于大图像列表中的图像数量为 TRUE;对于小图像列表中的图像数量为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-指定图像列表中的图像数。
+指定图像列表中的图像数量。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetimagesize"></a><a name="getimagesize"></a>CMFC 功能分类：获取图像大小
+## <a name="cmfcribboncategorygetimagesize"></a><a name="getimagesize"></a> CMFCRibbonCategory：： GetImageSize
 
-检索功能区类别中包含的指定图像列表中的图像大小。
+检索包含在功能区类别中的指定图像列表中的图像的大小。
 
 ```
 CSize GetImageSize(BOOL bIsLargeImage) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIsLargeImage*<br/>
-[在]大图像大小的真真;用于小图像大小的 FALSE。
+中对于大图像大小，为 TRUE;对于小图像大小为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-指定图像列表中图像的大小。
+指定图像列表中的图像的大小。
 
 ### <a name="remarks"></a>备注
 
-检索的大小包括全局图像比例因子。
+检索到的大小包含全局映像缩放系数。
 
-## <a name="cmfcribboncategorygetitemidslist"></a><a name="getitemidslist"></a>CMFC 功能分类：获取项目 Id 列表
+## <a name="cmfcribboncategorygetitemidslist"></a><a name="getitemidslist"></a> CMFCRibbonCategory：： GetItemIDsList
 
-检索功能区类别中包含的功能区元素的命令 ID。
+检索功能区类别中包含的功能区元素的命令 Id。
 
 ```cpp
 void GetItemIDsList(
@@ -603,19 +604,19 @@ void GetItemIDsList(
     BOOL bHiddenOnly = FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lstItem*<br/>
-[出]功能区类别中功能区元素的命令 ID 列表。
+*lstItems*<br/>
+弄功能区类别中的功能区元素的命令 Id 列表。
 
-*仅隐藏*<br/>
-[在]TRUE 以排除功能区类别中功能区面板上显示的功能区元素;FALSE 以包括功能区类别中的所有功能区元素。
+*bHiddenOnly*<br/>
+中若要排除功能区面板上的功能区面板上显示的功能区元素，则为 TRUE;若要将所有功能区元素包含在功能区类别中，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetlargeimages"></a><a name="getlargeimages"></a>CMFC 功能分类：获取大型图像
+## <a name="cmfcribboncategorygetlargeimages"></a><a name="getlargeimages"></a> CMFCRibbonCategory：： GetLargeImages
 
-检索功能区类别中包含的大型图像的列表。
+检索功能区类别中包含的大图像的列表。
 
 ```
 CMFCToolBarImages& GetLargeImages();
@@ -625,7 +626,7 @@ CMFCToolBarImages& GetLargeImages();
 
 功能区类别中包含的大图像的列表。
 
-## <a name="cmfcribboncategorygetlastvisibleelement"></a><a name="getlastvisibleelement"></a>CMFC 功能分类类别：获取最后可见元素
+## <a name="cmfcribboncategorygetlastvisibleelement"></a><a name="getlastvisibleelement"></a> CMFCRibbonCategory：： GetLastVisibleElement
 
 检索属于功能区类别的最后一个可见元素。
 
@@ -635,11 +636,11 @@ CMFCRibbonBaseElement* GetLastVisibleElement() const;
 
 ### <a name="return-value"></a>返回值
 
-指向最后一个可见元素的指针;如果类别没有任何可见元素，则可能是 NULL。
+指向最后一个可见元素的指针;如果类别不包含任何可见元素，则可以为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetmaxheight"></a><a name="getmaxheight"></a>CMFC 功能分类：：获取最大高度
+## <a name="cmfcribboncategorygetmaxheight"></a><a name="getmaxheight"></a> CMFCRibbonCategory：： GetMaxHeight
 
 检索功能区类别中包含的功能区面板的最大高度。
 
@@ -647,10 +648,10 @@ CMFCRibbonBaseElement* GetLastVisibleElement() const;
 int GetMaxHeight(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]指向功能区面板的设备上下文。
+中指向功能区面板的设备上下文的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -658,9 +659,9 @@ int GetMaxHeight(CDC* pDC);
 
 ### <a name="remarks"></a>备注
 
-检索的值包括功能区面板的顶部和底部边距的高度。
+检索到的值包括功能区面板的上边距和下边距的高度。
 
-## <a name="cmfcribboncategorygetname"></a><a name="getname"></a>CMFC 功能分类：获取名称
+## <a name="cmfcribboncategorygetname"></a><a name="getname"></a> CMFCRibbonCategory：： GetName
 
 检索功能区类别的名称。
 
@@ -674,30 +675,30 @@ LPCTSTR GetName() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetpanel"></a><a name="getpanel"></a>CMFC 功能分类：获取面板
+## <a name="cmfcribboncategorygetpanel"></a><a name="getpanel"></a> CMFCRibbonCategory：： GetPanel
 
-返回指向位于指定索引的功能区面板的指针。
+返回指向位于指定索引处的功能区面板的指针。
 
 ```
 CMFCRibbonPanel* GetPanel(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
-[在]功能区面板的零基索引。
+中功能区面板的从零开始的索引。
 
 ### <a name="return-value"></a>返回值
 
-指向位于指定索引的功能区面板的指针。
+指向位于指定索引处的功能区面板的指针。
 
 ### <a name="remarks"></a>备注
 
-如果*nIndex*的范围不广，则引发异常。
+如果 *nIndex* 超出范围，则会引发异常。
 
-## <a name="cmfcribboncategorygetpanelcount"></a><a name="getpanelcount"></a>CMFC 功能分类：：获取面板计数
+## <a name="cmfcribboncategorygetpanelcount"></a><a name="getpanelcount"></a> CMFCRibbonCategory：： GetPanelCount
 
-返回功能区类别中的功能区面板数。
+返回功能区类别中的功能区面板的数目。
 
 ```
 int GetPanelCount() const;
@@ -705,51 +706,51 @@ int GetPanelCount() const;
 
 ### <a name="return-value"></a>返回值
 
-功能区类别中的功能区面板数。
+功能区类别中的功能区面板的数目。
 
-## <a name="cmfcribboncategorygetpanelfrompoint"></a><a name="getpanelfrompoint"></a>CMFC 功能类别：从点获取面板
+## <a name="cmfcribboncategorygetpanelfrompoint"></a><a name="getpanelfrompoint"></a> CMFCRibbonCategory：： GetPanelFromPoint
 
-如果指定的点位于其中，则检索指向功能区面板的指针。
+检索指向功能区面板的指针（如果指定点位于该面板中）。
 
 ```
 CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
-[在]指针的 x 和 y 坐标，相对于窗口的左上角。
+*情况*<br/>
+中指针的 x 和 y 坐标，相对于窗口的左上角。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向功能区面板的指针;否则 NULL。
+如果方法成功，则为指向功能区面板的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-仅测试功能区类别中的功能区面板。
+仅测试功能区类别中包含的功能区面板。
 
-## <a name="cmfcribboncategorygetpanelindex"></a><a name="getpanelindex"></a>CMFC功能分类：获取面板索引
+## <a name="cmfcribboncategorygetpanelindex"></a><a name="getpanelindex"></a> CMFCRibbonCategory：： GetPanelIndex
 
-检索指定功能区面板的零基索引。
+检索指定功能区面板的从零开始的索引。
 
 ```
 int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p面板*<br/>
-[在]指向功能区面板的指针。
+*pPanel*<br/>
+中指向功能区面板的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指定功能区面板的零索引;否则 -1。
+如果方法成功，则为指定功能区面板的从零开始的索引;否则为-1。
 
 ### <a name="remarks"></a>备注
 
-仅搜索功能区类别中的功能区面板。
+仅搜索功能区类别中包含的功能区面板。
 
-## <a name="cmfcribboncategorygetparentbutton"></a><a name="getparentbutton"></a>CMFC 功能分类类别：获取父按钮
+## <a name="cmfcribboncategorygetparentbutton"></a><a name="getparentbutton"></a> CMFCRibbonCategory：： GetParentButton
 
 检索功能区类别的父功能区元素。
 
@@ -759,13 +760,13 @@ CMFCRibbonBaseElement* GetParentButton() const;
 
 ### <a name="return-value"></a>返回值
 
-返回指向父功能区元素的指针，如果没有父元素则返回 NULL。
+返回指向父功能区元素的指针; 如果没有父元素，则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetparentmenubar"></a><a name="getparentmenubar"></a>CMFC 功能分类类别：获取父菜单栏
+## <a name="cmfcribboncategorygetparentmenubar"></a><a name="getparentmenubar"></a> CMFCRibbonCategory：： GetParentMenuBar
 
-返回指向对象父菜单栏的`CMFCRibbonCategory`指针。
+返回指向对象的父菜单栏的指针 `CMFCRibbonCategory` 。
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -773,11 +774,11 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 
 ### <a name="return-value"></a>返回值
 
-返回`m_pParentMenuBar`受保护成员的内容。
+返回 `m_pParentMenuBar` 受保护成员的内容。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetparentribbonbar"></a><a name="getparentribbonbar"></a>CMFC 功能分类类别：获取父系功能栏
+## <a name="cmfcribboncategorygetparentribbonbar"></a><a name="getparentribbonbar"></a> CMFCRibbonCategory：： GetParentRibbonBar
 
 检索功能区类别的父功能区栏。
 
@@ -787,11 +788,11 @@ CMFCRibbonBar* GetParentRibbonBar() const;
 
 ### <a name="return-value"></a>返回值
 
-指向功能区类别的父功能区栏。
+指向功能区类别的父功能区栏的指针。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetrect"></a><a name="getrect"></a>CMFC 功能类别：获取 Rect
+## <a name="cmfcribboncategorygetrect"></a><a name="getrect"></a> CMFCRibbonCategory：： GetRect
 
 检索功能区类别的显示矩形。
 
@@ -805,9 +806,9 @@ CRect GetRect() const;
 
 ### <a name="remarks"></a>备注
 
-功能区类别的显示矩形不包括类别选项卡。
+功能区类别的显示矩形不包括 "类别" 选项卡。
 
-## <a name="cmfcribboncategorygetsmallimages"></a><a name="getsmallimages"></a>CMFC 功能分类：获取小图像
+## <a name="cmfcribboncategorygetsmallimages"></a><a name="getsmallimages"></a> CMFCRibbonCategory：： GetSmallImages
 
 检索功能区类别中包含的小图像的列表。
 
@@ -819,7 +820,7 @@ CMFCToolBarImages& GetSmallImages();
 
 功能区类别中包含的小图像的列表。
 
-## <a name="cmfcribboncategorygettabcolor"></a><a name="gettabcolor"></a>CMFC 功能分类：：获取 TabColor
+## <a name="cmfcribboncategorygettabcolor"></a><a name="gettabcolor"></a> CMFCRibbonCategory：： GetTabColor
 
 返回功能区类别选项卡的当前颜色。
 
@@ -833,7 +834,7 @@ AFX_RibbonCategoryColor GetTabColor() const;
 
 ### <a name="remarks"></a>备注
 
-返回的值可以是以下枚举值之一：
+返回的值可以是下列枚举值之一：
 
 - AFX_CategoryColor_Red
 
@@ -849,7 +850,7 @@ AFX_RibbonCategoryColor GetTabColor() const;
 
 - AFX_CategoryColor_Violet
 
-## <a name="cmfcribboncategorygettabrect"></a><a name="gettabrect"></a>CMFC 功能类别：获取 Tabrect
+## <a name="cmfcribboncategorygettabrect"></a><a name="gettabrect"></a> CMFCRibbonCategory：： GetTabRect
 
 检索功能区类别选项卡的显示矩形。
 
@@ -863,9 +864,9 @@ CRect GetTabRect() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygettexttopline"></a><a name="gettexttopline"></a>CMFC 功能分类：：获取文本顶线
+## <a name="cmfcribboncategorygettexttopline"></a><a name="gettexttopline"></a> CMFCRibbonCategory：： GetTextTopLine
 
-检索显示大图像的功能区类别中功能区按钮上文本的垂直位置。
+检索显示大图像的功能区类别中的功能区按钮上文本的垂直位置。
 
 ```
 int GetTextTopLine() const;
@@ -873,11 +874,11 @@ int GetTextTopLine() const;
 
 ### <a name="return-value"></a>返回值
 
-显示大图像的功能区按钮上的文本（以像素为单位）的垂直位置。
+显示大图像的功能区按钮上文本的垂直位置（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorygetvisibleelements"></a><a name="getvisibleelements"></a>CMFC 功能分类：获取可见元素
+## <a name="cmfcribboncategorygetvisibleelements"></a><a name="getvisibleelements"></a> CMFCRibbonCategory：： GetVisibleElements
 
 检索属于功能区类别的所有可见元素。
 
@@ -887,14 +888,14 @@ void GetVisibleElements(
     CMFCRibbonBaseElement*>& arElements);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ar元素*<br/>
+*arElements*<br/>
 所有可见元素的数组。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryhighlightpanel"></a><a name="highlightpanel"></a>CMFC 功能分类：：高光面板
+## <a name="cmfcribboncategoryhighlightpanel"></a><a name="highlightpanel"></a> CMFCRibbonCategory：： HighlightPanel
 
 突出显示指定的功能区面板。
 
@@ -904,25 +905,25 @@ CMFCRibbonPanel* HighlightPanel(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*pHL面板*<br/>
-[在]指向功能区面板以突出显示。
+*pHLPanel*<br/>
+中指向要突出显示的功能区面板的指针。
 
-*点*<br/>
-[在]指针的 x 和 y 坐标，相对于窗口的左上角。
+*情况*<br/>
+中指针的 x 和 y 坐标，相对于窗口的左上角。
 
 ### <a name="return-value"></a>返回值
 
-指向以前突出显示的功能区面板;否则 NULL，如果在调用此方法时没有突出显示功能区面板。
+指向前面突出显示的功能区面板的指针;否则，如果在调用此方法时没有突出显示功能区面板，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-有关突出显示功能区面板的详细信息，请参阅[CMFC 功能面板：：：高亮显示](../../mfc/reference/cmfcribbonpanel-class.md#highlight)。
+有关突出显示功能区面板的详细信息，请参阅 [CMFCRibbonPanel：：突出显示](../../mfc/reference/cmfcribbonpanel-class.md#highlight)。
 
-## <a name="cmfcribboncategoryhittest"></a><a name="hittest"></a>CMFC 功能分类：hitTest
+## <a name="cmfcribboncategoryhittest"></a><a name="hittest"></a> CMFCRibbonCategory：： System.windows.media.visualtreehelper.hittest
 
-如果指定点位于其中，则检索指向功能区元素的指针。
+检索指向功能区元素的指针（如果指定点位于该元素中）。
 
 ```
 CMFCRibbonBaseElement* HitTest(
@@ -930,63 +931,63 @@ CMFCRibbonBaseElement* HitTest(
     BOOL bCheckPanelCaption = FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
-[在]鼠标指针相对于窗口左上角的 x 和 y 坐标。
+*情况*<br/>
+中鼠标指针相对于窗口左上角的 x 和 y 坐标。
 
-*b检查面板标题*<br/>
-[在]TRUE 以测试功能区面板标题;FALSE 以排除功能区面板标题。
+*bCheckPanelCaption*<br/>
+中若要测试功能区面板标题，则为 TRUE;若要排除功能区面板标题，则为 FALSE。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向功能区元素的指针;否则 NULL。
+如果方法成功，则为指向功能区元素的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-仅测试功能区类别中的功能区元素。
+仅测试功能区类别中包含的功能区元素。
 
-## <a name="cmfcribboncategoryhittestex"></a><a name="hittestex"></a>CMFC功能分类：hitTestEx
+## <a name="cmfcribboncategoryhittestex"></a><a name="hittestex"></a> CMFCRibbonCategory：： HitTestEx
 
-如果指定点位于功能区元素中，则检索功能区元素的零基索引。
+检索指定点所在的功能区元素的从零开始的索引。
 
 ```
 int HitTestEx(CPoint point) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
-[在]鼠标指针相对于窗口左上角的 x 和 y 坐标。
+*情况*<br/>
+中鼠标指针相对于窗口左上角的 x 和 y 坐标。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则功能区元素的零基索引;否则 -1。
+如果方法成功，则为功能区元素的从零开始的索引;否则为-1。
 
 ### <a name="remarks"></a>备注
 
-仅测试功能区类别中的功能区元素。
+仅测试功能区类别中包含的功能区元素。
 
-## <a name="cmfcribboncategoryhittestscrollbuttons"></a><a name="hittestscrollbuttons"></a>CMFC 功能分类类别：：HitTestScrollButton
+## <a name="cmfcribboncategoryhittestscrollbuttons"></a><a name="hittestscrollbuttons"></a> CMFCRibbonCategory：： HitTestScrollButtons
 
-如果某个点位于功能区类别的左或右滚动按钮内，则返回指向该按钮的指针。
+如果某个点落在功能区类别的左或右滚动按钮内，将返回指向该按钮的指针。
 
 ```
 CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
-[在]要测试的点。
+*情况*<br/>
+中要测试的点。
 
 ### <a name="return-value"></a>返回值
 
-如果*点*位于功能区类别的左侧或右侧滚动按钮的边界矩形内，则返回指向该按钮的指针，否则返回 NULL。
+如果 *point* 位于功能区类别的左侧滚动按钮或右滚动按钮的边框内，则返回指向该按钮的指针，否则返回 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryisactive"></a><a name="isactive"></a>CMFC 功能类别：有效
+## <a name="cmfcribboncategoryisactive"></a><a name="isactive"></a> CMFCRibbonCategory：： IsActive
 
 指示功能区类别是否是功能区栏上的活动类别。
 
@@ -996,13 +997,13 @@ BOOL IsActive() const;
 
 ### <a name="return-value"></a>返回值
 
-如果功能区类别为活动类别，则为 TRUE;如果功能区类别为活动类别，则为 TRUE。否则 FALSE。
+如果功能区类别是活动类别，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 活动功能区类别显示其功能区面板。
 
-## <a name="cmfcribboncategoryisvisible"></a><a name="isvisible"></a>CMFC 功能分类：可见
+## <a name="cmfcribboncategoryisvisible"></a><a name="isvisible"></a> CMFCRibbonCategory：： IsVisible
 
 指示功能区类别是否可见。
 
@@ -1012,15 +1013,15 @@ BOOL IsVisible() const;
 
 ### <a name="return-value"></a>返回值
 
-如果功能区类别可见，则为 TRUE;如果功能区类别可见，则为 TRUE。否则 FALSE。
+如果功能区类别可见，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-可见的功能区类别将显示类别选项卡。
+可见的功能区类别显示 "类别" 选项卡。
 
-## <a name="cmfcribboncategoryiswindows7look"></a><a name="iswindows7look"></a>CMFC 功能分类类别：：是 Windows7 查看
+## <a name="cmfcribboncategoryiswindows7look"></a><a name="iswindows7look"></a> CMFCRibbonCategory：： IsWindows7Look
 
-指示父功能区是否具有 Windows 7 外观（小型矩形应用程序按钮）。
+指示父功能区是否具有 Windows 7 外观 (小型矩形应用程序按钮) 。
 
 ```
 BOOL IsWindows7Look() const;
@@ -1028,13 +1029,13 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>返回值
 
-如果父功能区具有 Windows 7 外观，则为 TRUE;如果父功能区具有 Windows 7 外观，则为 TRUE。否则 FALSE。
+如果父功能区具有 Windows 7 外观，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorynotifycontrolcommand"></a><a name="notifycontrolcommand"></a>CMFC 功能分类：：通知控制命令
+## <a name="cmfcribboncategorynotifycontrolcommand"></a><a name="notifycontrolcommand"></a> CMFCRibbonCategory：： NotifyControlCommand
 
-将WM_NOTIFY命令消息传递到 中的所有`CMFCRibbonPanel``CMFCRibbonCategory`元素，直到消息得到处理。
+将 WM_NOTIFY 命令消息传递给 `CMFCRibbonPanel` 中的所有元素， `CMFCRibbonCategory` 直到处理该消息。
 
 ```
 virtual BOOL NotifyControlCommand(
@@ -1044,29 +1045,29 @@ virtual BOOL NotifyControlCommand(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*b加速器*<br/>
-[在]如果此命令源自加速器，则为 TRUE，否则为 FALSE。
+*bAccelerator*<br/>
+中如果此命令源自加速器，则为 TRUE; 否则为 FALSE。
 
-*nNotify代码*<br/>
-[在]通知代码。
+*nNotifyCode*<br/>
+中通知代码。
 
 *wParam*<br/>
-[在]消息的 WPARAM 字段。
+中消息的 WPARAM 字段。
 
 *lParam*<br/>
-[在]消息的 LPARAM 字段。
+中消息的 LPARAM 字段。
 
 ### <a name="return-value"></a>返回值
 
-如果消息已处理，则返回 TRUE;如果未处理，则返回 FALSE。
+如果消息已处理，则返回 TRUE; 否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryoncancelmode"></a><a name="oncancelmode"></a>CMFC 功能分类：：打开取消模式
+## <a name="cmfcribboncategoryoncancelmode"></a><a name="oncancelmode"></a> CMFCRibbonCategory：： OnCancelMode
 
-调用 的取消模式在`CMFCRibbonPanel`的所有元素。 `CMFCRibbonCategory`
+在的所有元素中调用 cancel 模式 `CMFCRibbonPanel` `CMFCRibbonCategory` 。
 
 ```
 virtual void OnCancelMode();
@@ -1074,24 +1075,24 @@ virtual void OnCancelMode();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryondraw"></a><a name="ondraw"></a>CMFC 功能分类：：开拉
+## <a name="cmfcribboncategoryondraw"></a><a name="ondraw"></a> CMFCRibbonCategory：： OnDraw
 
-由框架调用以绘制功能区类别。
+由框架调用，用于绘制功能区类别。
 
 ```
 virtual void OnDraw(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]指向功能区类别的设备上下文。
+中指向功能区类别的设备上下文的指针。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryondrawimage"></a><a name="ondrawimage"></a>CMFC 功能分类：：画像
+## <a name="cmfcribboncategoryondrawimage"></a><a name="ondrawimage"></a> CMFCRibbonCategory：： OnDrawImage
 
-由框架调用以在功能区类别上绘制指定的图像。
+由框架调用，用于在功能区类别上绘制指定的图像。
 
 ```
 virtual BOOL OnDrawImage(
@@ -1103,35 +1104,35 @@ virtual BOOL OnDrawImage(
     BOOL bCenter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]指向图像的设备上下文。
+中指向图像的设备上下文的指针。
 
-*矩形*<br/>
-[在]显示图像的矩形。
+*rect*<br/>
+中图像的显示矩形。
 
-*p元素*<br/>
-[在]指向包含图像的功能区元素的指针。
+*pElement*<br/>
+中指向包含图像的功能区元素的指针。
 
 *bIsLargeImage*<br/>
-[在]如果图像是大尺寸，则为 TRUE;如果图像大小较小，则 FALSE。
+中如果图像大小较大，则为 TRUE;如果图像大小较小，则为 FALSE。
 
-*n图像索引*<br/>
-[在]功能区类别中包含的图像数组中图像的零基索引。
+*nImageIndex*<br/>
+中在功能区类别中包含的图像数组中图像的从零开始的索引。
 
-*b中心*<br/>
-[在]TRUE 以将图像居中以显示矩形为中心;FALSE 以在显示矩形的左上角绘制图像。
+*bCenter*<br/>
+中若要使图像在显示矩形中居中，则为 TRUE;若为 FALSE，则在显示矩形的左上角绘制图像。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 TRUE;否则 FALSE。
+如果方法成功，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFC 功能分类：：在绘制菜单边框
+## <a name="cmfcribboncategoryondrawmenuborder"></a><a name="ondrawmenuborder"></a> CMFCRibbonCategory：： OnDrawMenuBorder
 
-由框架调用以绘制弹出菜单的边框。
+由框架调用，用于绘制弹出菜单的边框。
 
 ```
 virtual void OnDrawMenuBorder(
@@ -1139,83 +1140,83 @@ virtual void OnDrawMenuBorder(
     CMFCRibbonPanelMenuBar* pMenuBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]不使用此参数。
+中未使用此参数。
 
 *pMenuBar*<br/>
-[在]不使用此参数。
+中未使用此参数。
 
 ### <a name="remarks"></a>备注
 
 默认情况下，此方法不执行任何操作。 重写此方法以绘制弹出菜单的边框。
 
-## <a name="cmfcribboncategoryonkey"></a><a name="onkey"></a>CMFC 功能类别：：打开键
+## <a name="cmfcribboncategoryonkey"></a><a name="onkey"></a> CMFCRibbonCategory：： OnKey
 
-当用户按下键盘按钮时，框架调用。
+当用户按下键盘按钮时由框架调用。
 
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*n查尔*<br/>
-用户按下的密钥的虚拟密钥代码。
+*nChar*<br/>
+用户按下的键的虚拟键代码。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryonlbuttondown"></a><a name="onlbuttondown"></a>CMFC 功能分类：：打开按钮
+## <a name="cmfcribboncategoryonlbuttondown"></a><a name="onlbuttondown"></a> CMFCRibbonCategory：： OnLButtonDown
 
-当用户按下鼠标左键时，框架调用以在指定点下检索功能区元素。
+在用户按下鼠标左键时，由框架调用以检索指定点下的功能区元素。
 
 ```
 virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
-[在]鼠标指针相对于窗口左上角的 x 和 y 坐标。
+*情况*<br/>
+中鼠标指针相对于窗口左上角的 x 和 y 坐标。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则指向功能区元素的指针;否则 NULL。
+如果方法成功，则为指向功能区元素的指针;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryonlbuttonup"></a><a name="onlbuttonup"></a>CMFC 功能分类：：OnLButtonUp
+## <a name="cmfcribboncategoryonlbuttonup"></a><a name="onlbuttonup"></a> CMFCRibbonCategory：： OnLButtonUp
 
-当用户释放鼠标左键且指针位于功能区类别上时，由框架调用。
+当用户释放鼠标左键且指针位于功能区类别上方时由框架调用。
 
 ```
 virtual void OnLButtonUp(CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
-[在]指针的 x 和 y 坐标，相对于窗口的左上角。
+*情况*<br/>
+中指针的 x 和 y 坐标，相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryonmousemove"></a><a name="onmousemove"></a>CMFC 功能分类：：鼠标移动
+## <a name="cmfcribboncategoryonmousemove"></a><a name="onmousemove"></a> CMFCRibbonCategory：： OnMouseMove
 
-当指针在功能区栏上移动以更新功能区类别显示时，由框架调用。
+当指针在功能区栏上移动时由框架调用，以便更新功能区类别显示。
 
 ```
 virtual void OnMouseMove(CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
-[在]指针的 x 和 y 坐标，相对于窗口的左上角。
+*情况*<br/>
+中指针的 x 和 y 坐标，相对于窗口的左上角。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryonrtlchanged"></a><a name="onrtlchanged"></a>CMFC 功能分类：：在RTL改变
+## <a name="cmfcribboncategoryonrtlchanged"></a><a name="onrtlchanged"></a> CMFCRibbonCategory：： OnRTLChanged
 
 当布局更改方向时由框架调用。
 
@@ -1223,16 +1224,16 @@ virtual void OnMouseMove(CPoint point);
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*比塞尔*<br/>
-[在]如果布局从右到左，则为 TRUE;如果布局从右到左，则为 TRUE。如果布局从左到右，则 FALSE。
+*bIsRTL*<br/>
+中如果布局为从右向左，则为 TRUE; 否则为。如果从左到右布局布局，则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
 此方法调整功能区类别中包含的所有功能区面板和功能区元素的布局。
 
-## <a name="cmfcribboncategoryonscrollhorz"></a><a name="onscrollhorz"></a>CMFC 功能分类：：ScrollHorz
+## <a name="cmfcribboncategoryonscrollhorz"></a><a name="onscrollhorz"></a> CMFCRibbonCategory：： OnScrollHorz
 
 沿水平方向滚动功能区类别。
 
@@ -1242,23 +1243,23 @@ virtual BOOL OnScrollHorz(
     int nScrollOffset = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*bScroll左*<br/>
-[在]TRUE 向左滚动;FALSE 向右滚动。
+*bScrollLeft*<br/>
+中如果向左滚动，则为 TRUE;如果向右滚动，则为 FALSE。
 
-*nScroll 偏移*<br/>
-[在]滚动距离（以像素为单位）。
+*nScrollOffset*<br/>
+中以像素为单位的滚动距离。
 
 ### <a name="return-value"></a>返回值
 
-如果功能区类别以水平方向移动，则为 TRUE;如果功能区类别以水平方向移动，则为 TRUE。否则 FALSE。
+如果功能区类别在水平方向上移动，则为 TRUE;否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryonupdatecmdui"></a><a name="onupdatecmdui"></a>CMFC 功能分类：：更新 CmdUI
+## <a name="cmfcribboncategoryonupdatecmdui"></a><a name="onupdatecmdui"></a> CMFCRibbonCategory：： OnUpdateCmdUI
 
-调用`OnUpdateCmdUI`中`CMFCRibbonPanel``CMFCRibbonCategory`每个元素中的成员函数，以启用或禁用其中的用户界面元素。
+调用 `OnUpdateCmdUI` 的每个元素中的成员函数 `CMFCRibbonPanel` `CMFCRibbonCategory` ，以启用或禁用它们中的用户界面元素。
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1267,20 +1268,20 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pCmdUI*<br/>
-[在]指向`CMFCRibbonCmdUI`指定要启用哪些用户界面元素和要禁用的对象的指针。
+中指向 `CMFCRibbonCmdUI` 对象的指针，该对象指定要启用的用户界面元素以及要禁用哪些元素。
 
-*p目标*<br/>
-[在]指向控制用户界面元素启用或禁用的窗口的指针。
+*pTarget*<br/>
+中指向控制用户界面元素的启用或禁用的窗口的指针。
 
-*b 禁用IfNoHndler*<br/>
-[在]如果消息映射中未定义处理程序，则为禁用用户界面项;如果消息映射中未定义任何处理程序，则为 TRUE。否则，FALSE。
+*bDisableIfNoHndler*<br/>
+中如果消息映射中未定义任何处理程序，则为 TRUE; 否则为 false。否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryrecalclayout"></a><a name="recalclayout"></a>CMFC 功能分类：recalclayout
+## <a name="cmfcribboncategoryrecalclayout"></a><a name="recalclayout"></a> CMFCRibbonCategory：： RecalcLayout
 
 调整功能区类别上所有控件的布局。
 
@@ -1288,16 +1289,16 @@ virtual void OnUpdateCmdUI(
 virtual void RecalcLayout(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]指向功能区类别的设备上下文。
+中指向功能区类别的设备上下文的指针。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategoryremovepanel"></a><a name="removepanel"></a>CMFC 功能分类：：删除面板
+## <a name="cmfcribboncategoryremovepanel"></a><a name="removepanel"></a> CMFCRibbonCategory：： RemovePanel
 
-从功能区类别中删除功能区面板。
+从功能区类别中移除功能区面板。
 
 ```cpp
 BOOL RemovePanel(
@@ -1305,34 +1306,34 @@ BOOL RemovePanel(
     BOOL bDelete = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
-[在]要删除的面板的索引号。 通过调用[CMFC 功能分类：：获取面板索引](#getpanelindex)方法获得。
+中要移除的面板的索引号。 通过调用 [CMFCRibbonCategory：： GetPanelIndex](#getpanelindex) 方法获取。
 
-*b 删除*<br/>
-[在]TRUE 从内存中删除面板对象;FALSE 以删除面板对象而不将其删除。
+*bDelete*<br/>
+中若要从内存中删除面板对象，则为 TRUE;若为 FALSE，则删除面板对象而不删除它。
 
 ### <a name="return-value"></a>返回值
 
-如果方法成功，则为 TRUE;否则，FALSE。
+如果方法成功，则为 TRUE;否则为 FALSE。
 
-## <a name="cmfcribboncategoryrepospanels"></a><a name="repospanels"></a>CMFC 功能分类：：存储库面板
+## <a name="cmfcribboncategoryrepospanels"></a><a name="repospanels"></a> CMFCRibbonCategory：： ReposPanels
 
-调整功能区类别中包含的功能区面板上所有控件的布局。
+调整功能区面板中包含的功能区面板上所有控件的布局。
 
 ```
 virtual void ReposPanels(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]指向功能区类别中包含的功能区面板的设备上下文。
+中一个指针，指向功能区面板中包含的功能区面板的设备上下文。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcribboncategorysetcollapseorder"></a><a name="setcollapseorder"></a>CMFC 功能分类类别：设置折叠顺序
+## <a name="cmfcribboncategorysetcollapseorder"></a><a name="setcollapseorder"></a> CMFCRibbonCategory：： SetCollapseOrder
 
 定义功能区类别的功能区面板折叠的顺序。
 
@@ -1340,73 +1341,73 @@ virtual void ReposPanels(CDC* pDC);
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ar折叠顺序*<br/>
-[在]指定折叠顺序。 该数组包含功能区面板的零基索引。
+*arCollapseOrder*<br/>
+中指定折叠顺序。 该数组包含功能区面板的从零开始的索引。
 
 ### <a name="remarks"></a>备注
 
-库定义折叠顺序。 但是，您可以通过向类别提供指定折叠顺序的索引列表来自定义此行为。
+库定义了折叠顺序。 但是，您可以通过使用指定折叠顺序的索引列表提供类别来自定义此行为。
 
-当类别检测到必须折叠功能区面板时，它将查找指定列表中的下一个元素。 如果列表为空，或者您没有指定足够的元素，则类别将使用内部算法。
+当类别检测到它必须折叠功能区面板时，它将查找指定列表中的下一个元素。 如果列表为空，或未指定足够的元素，则类别将使用内部算法。
 
-例如，该类别具有三个功能区面板，可以折叠多次，直到所有面板处于完全折叠状态。 您可以设置以下折叠顺序：0、0、2、2。 在这种情况下，类别将折叠面板 0 两次，面板 2 次。 索引为 1 的面板将保持未折叠状态。
+例如，该类别具有三个功能区面板，可以进行多次折叠，直到所有面板都处于完全折叠状态。 可以设置以下折叠顺序：0，0，2，2。 在这种情况下，该类别将折叠面板0次（面板 2 2 次）。 索引为1的面板保持 uncollapsed。
 
 ### <a name="example"></a>示例
 
-下面的示例演示如何在`SetCollapseOrder``CMFCRibbonCategory`类中使用 方法。 该示例演示如何为折叠顺序构造数组，以及如何将折叠顺序设置为功能区类别。
+下面的示例演示如何使用 `SetCollapseOrder` 类中的方法 `CMFCRibbonCategory` 。 该示例演示如何为折叠顺序构造数组，以及如何将折叠顺序设置为功能区类别。
 
 [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]
 
-## <a name="cmfcribboncategorysetdata"></a><a name="setdata"></a>CMFC 功能分类：：集数据
+## <a name="cmfcribboncategorysetdata"></a><a name="setdata"></a> CMFCRibbonCategory：： SetData
 
-将用户定义的数据设置为与功能区类别关联的数据。
+设置要与功能区类别关联的用户定义数据。
 
 ```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwData*<br/>
-[在]用户定义的数据。
+中用户定义数据。
 
-## <a name="cmfcribboncategorysetkeys"></a><a name="setkeys"></a>CMFC 功能分类：：设置密钥
+## <a name="cmfcribboncategorysetkeys"></a><a name="setkeys"></a> CMFCRibbonCategory：： SetKeys
 
-为功能区类别分配一个键尖。
+将 keytip 分配给功能区类别。
 
 ```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszKeys*<br/>
-[在]键提示文本。
+中Keytip 文本。
 
 ### <a name="remarks"></a>备注
 
-当用户按下 Alt 键或 F10 键时，将显示钥匙提示。
+当用户按下 Alt 键或 F10 键时，将显示键提示。
 
-## <a name="cmfcribboncategorysetname"></a><a name="setname"></a>CMFC 功能分类：：设置名称
+## <a name="cmfcribboncategorysetname"></a><a name="setname"></a> CMFCRibbonCategory：： SetName
 
-为功能区类别分配名称和键尖。
+将名称和 keytip 分配给功能区类别。
 
 ```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lpsz名称*<br/>
-[在]功能区类别的名称和键尖。
+*lpszName*<br/>
+中功能区类别的名称和 keytip。
 
 ### <a name="remarks"></a>备注
 
-要设置功能区类别的键尖，附加一个换行符序列，然后将键尖字符追加到*lpszName*。
+若要设置功能区类别的 keytip，请将后跟 keytip 字符的行转义序列附加到 *lpszName*。
 
-## <a name="cmfcribboncategorysettabcolor"></a><a name="settabcolor"></a>CMFC 功能分类：：设置 TabColor
+## <a name="cmfcribboncategorysettabcolor"></a><a name="settabcolor"></a> CMFCRibbonCategory：： SetTabColor
 
 设置功能区类别的颜色。
 
@@ -1414,14 +1415,14 @@ void SetName(LPCTSTR lpszName);
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*颜色*<br/>
-[在]指定功能区类别的新颜色。
+*color*<br/>
+中指定功能区类别的新颜色。
 
 ### <a name="remarks"></a>备注
 
-颜色可以是以下值之一：
+Color 可以为下列值之一：
 
 - AFX_CategoryColor_None
 
@@ -1441,6 +1442,6 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)

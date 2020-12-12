@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _spawnvpe、_wspawnvpe
 title: _spawnvpe、_wspawnvpe
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: c35e693624676cf588c6b85334fadc7c7915b2a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4c96d3356bd0212b6acf44fbe2e7d382b06545ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292385"
 ---
 # <a name="_spawnvpe-_wspawnvpe"></a>_spawnvpe、_wspawnvpe
 
@@ -83,9 +84,9 @@ intptr_t _wspawnvpe(
 
 ## <a name="return-value"></a>返回值
 
-同步 **_spawnvpe**或 **_wspawnvpe**为*模式*) 指定 (**_P_WAIT**的返回值是新进程的退出状态。 **_Spawnvpe**为*mode* **_P_NOWAITO 指定的**异步或 **_wspawnvpe** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用 **exit** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一：
+同步 **_spawnvpe** 或 **_wspawnvpe** 为 *模式*) 指定 (**_P_WAIT** 的返回值是新进程的退出状态。 **_Spawnvpe** 为 *mode* **_P_NOWAITO 指定的** 异步或 **_wspawnvpe** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用 **exit** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一：
 
-| 值 | 说明 |
+| 值 | 描述 |
 |-|-|
 | **E2BIG** | 参数列表超过 1024 个字节。 |
 | **EINVAL** | *mode* 参数无效。 |
@@ -95,7 +96,7 @@ intptr_t _wspawnvpe(
 
 有关这些和其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 所有这些函数将创建并执行一个新进程，同时将一个指针数组传递给命令行自变量，并将一个指针数组传递给环境设置。 这些函数使用 **PATH** 环境变量查找要执行的文件。
 
@@ -116,7 +117,7 @@ intptr_t _wspawnvpe(
 
 在参见 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [中止](abort.md)<br/>
 [atexit](atexit.md)<br/>

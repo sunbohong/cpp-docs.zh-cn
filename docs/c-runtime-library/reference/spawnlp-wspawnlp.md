@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _spawnlp、_wspawnlp
 title: _spawnlp、_wspawnlp
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-ms.openlocfilehash: 68ad011af1a53452c0f3cfda02bdf80582a8431b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bdeccf2fd1880158a2db7ab0f6ab03194ed42d97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845947"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292476"
 ---
 # <a name="_spawnlp-_wspawnlp"></a>_spawnlp、_wspawnlp
 
@@ -77,13 +78,13 @@ intptr_t _wspawnlp(
 要执行的文件的路径。
 
 *arg0*， *arg1*，.。。 *argn*<br/>
-指向参数的指针的列表。 *Arg0*参数通常是指向*cmdname*的指针。 参数 *arg1* 到 *argn* 是指向构成新参数列表的字符串的指针。 在 *argn*之后，必须有一个 **NULL** 指针，用于标记参数列表的末尾。
+指向参数的指针的列表。 *Arg0* 参数通常是指向 *cmdname* 的指针。 参数 *arg1* 到 *argn* 是指向构成新参数列表的字符串的指针。 在 *argn* 之后，必须有一个 **NULL** 指针，用于标记参数列表的末尾。
 
 ## <a name="return-value"></a>返回值
 
-同步 **_spawnlp**或 **_wspawnlp**为*模式*) 指定 (**_P_WAIT**的返回值是新进程的退出状态。 **_Spawnlp**为*mode* **_P_NOWAITO 指定的**异步或 **_wspawnlp** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用 **exit** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一。
+同步 **_spawnlp** 或 **_wspawnlp** 为 *模式*) 指定 (**_P_WAIT** 的返回值是新进程的退出状态。 **_Spawnlp** 为 *mode* **_P_NOWAITO 指定的** 异步或 **_wspawnlp** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用 **exit** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一。
 
-| 值 | 说明 |
+| 值 | 描述 |
 |-|-|
 | **E2BIG** | 参数列表超过 1024 个字节。 |
 | **EINVAL** | *mode* 参数无效。 |
@@ -93,7 +94,7 @@ intptr_t _wspawnlp(
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 其中每个函数将创建并执行一个新进程，并将每个命令行自变量作为单独的参数传递，并使用 **PATH** 环境变量查找要执行的文件。
 
@@ -112,7 +113,7 @@ intptr_t _wspawnlp(
 
 在参见 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn，_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _spawnl、_wspawnl
 title: _spawnl、_wspawnl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4b51faae4ba6f371f712e4c39374ae9717c90bed
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1e4550578334c994647bd8a244063c572cfd5616
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292541"
 ---
 # <a name="_spawnl-_wspawnl"></a>_spawnl、_wspawnl
 
@@ -77,13 +78,13 @@ intptr_t _wspawnl(
 要执行的文件的路径。
 
 *arg0*， *arg1*，.。。 *argn*<br/>
-指向参数的指针的列表。 *Arg0*参数通常是指向*cmdname*的指针。 参数 *arg1* 到 *argn* 是指向构成新参数列表的字符串的指针。 在 *argn*之后，必须有一个 **NULL** 指针，用于标记参数列表的末尾。
+指向参数的指针的列表。 *Arg0* 参数通常是指向 *cmdname* 的指针。 参数 *arg1* 到 *argn* 是指向构成新参数列表的字符串的指针。 在 *argn* 之后，必须有一个 **NULL** 指针，用于标记参数列表的末尾。
 
 ## <a name="return-value"></a>返回值
 
-同步 **_spawnl**或 **_wspawnl**为*模式*) 指定 (**_P_WAIT**的返回值是新进程的退出状态。 **_Spawnl**为*mode* **_P_NOWAITO 指定的**异步或 **_wspawnl** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用 **exit** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一。
+同步 **_spawnl** 或 **_wspawnl** 为 *模式*) 指定 (**_P_WAIT** 的返回值是新进程的退出状态。 **_Spawnl** 为 *mode* **_P_NOWAITO 指定的** 异步或 **_wspawnl** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成的进程专门使用非零参数调用 **exit** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一。
 
-| 值 | 说明 |
+| 值 | 描述 |
 |--|--|
 | **E2BIG** | 参数列表超过 1024 个字节。 |
 | **EINVAL** | *mode* 参数无效。 |
@@ -95,7 +96,7 @@ intptr_t _wspawnl(
 
 这些函数验证其参数。 如果 *cmdname* 或 *arg0* 为空字符串或 null 指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将 **errno** 设置为 **EINVAL**，并返回-1。 不生成任何新进程。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 这些函数将创建并执行一个新进程，并将每个命令行实参作为独立的形参传递。
 
@@ -112,7 +113,7 @@ intptr_t _wspawnl(
 
 在参见 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn，_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

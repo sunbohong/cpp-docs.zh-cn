@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCDynamicLayout 类
 title: CMFCDynamicLayout 类
 ms.date: 08/29/2019
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: 1c5d73897f7028768476c82824f8c0b6d530aea2
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 56979cce8ff20224cae444dab038bae29deeb39b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293906"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 类
 
@@ -97,7 +98,7 @@ BOOL AddItem(
     MoveSettings moveSettings SizeSettings sizeSettings);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hwnd*<br/>
 要添加的窗口句柄。
@@ -139,7 +140,7 @@ void Adjust();
 BOOL Create(CWnd* pHostWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pHostWnd*<br/>
 指向主机窗口的指针。
@@ -190,7 +191,7 @@ CSize GetMinSize();
 void GetHostWndRect(CRect& rect,);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 函数返回后，此参数将包含布局区域的边框。 这是一个 out 参数；输入的值将被覆盖。
@@ -205,7 +206,7 @@ void GetHostWndRect(CRect& rect,);
 BOOL HasItem(HWND hwnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hwnd*<br/>
 控件的窗口句柄。
@@ -240,7 +241,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
     DWORD dwSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pHostWnd*<br/>
 指向主机窗口的指针。
@@ -265,7 +266,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
 static MoveSettings MoveHorizontal(int nRatio);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRatio*<br/>
 以百分比形式定义在用户调整承载窗口大小时水平移动子控件的距离。
@@ -284,7 +285,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nXRatio*<br/>
 以百分比形式定义在用户调整承载窗口大小时水平移动子控件的距离。
@@ -368,7 +369,7 @@ BOOL IsVertical() const
 static MoveSettings MoveVertical(int nRatio);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRatio*<br/>
 以百分比形式定义在用户调整承载窗口大小时垂直移动子控件的距离。
@@ -387,7 +388,7 @@ static MoveSettings MoveVertical(int nRatio);
 void SetMinSize(const CSize& size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 所需大小，低于此大小则不调整布局。
@@ -404,7 +405,7 @@ void SetMinSize(const CSize& size);
 static SizeSettings SizeHorizontal(int nRatio);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRatio*<br/>
 以百分比形式定义在用户调整承载窗口大小时水平调整子控件的距离。
@@ -423,7 +424,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nXRatio*<br/>
 以百分比形式定义在用户调整承载窗口大小时水平调整子控件的距离。
@@ -507,7 +508,7 @@ BOOL IsVertical() const
 static SizeSettings SizeVertical(int nRatio);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRatio*<br/>
 以百分比形式定义在用户调整承载窗口大小时垂直调整子控件的距离。
