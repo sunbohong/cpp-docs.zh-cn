@@ -1,25 +1,26 @@
 ---
+description: 了解详细信息：引用指针
 title: 对指针的引用
 ms.date: 06/13/2019
 helpviewer_keywords:
 - references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
-ms.openlocfilehash: 4719bc5ca0980da3a4f8ad3c2348fc870e916e90
-ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
+ms.openlocfilehash: 5a554b6df4630a9772a5fceb9c51a9feaa9237d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252527"
 ---
 # <a name="references-to-pointers"></a>对指针的引用
 
-声明对指针的引用的方式与声明对对象的引用差不多。 对指针的引用是像常规指针一样使用的可修改值。
+声明对指针的引用的方式与声明对对象的引用差不多。 对指针的引用是一个可修改的值，它像普通指针一样使用。
 
 ## <a name="example"></a>示例
 
-此代码示例显示使用指向指针的指针和指针的引用之间的差异。
+此代码示例演示使用指向指针的指针和对指针的引用之间的差异。
 
-函数`Add1`和`Add2`是功能上等效，尽管它们不调用相同的方式。 不同之处在于`Add1`使用双间接寻址，但`Add2`使用为指针的引用的便利性。
+函数 `Add1` 和 `Add2` 在功能上是等效的，尽管它们不是以相同方式调用的。 不同之处是 `Add1` 使用双间接寻址，但 `Add2` 使用对指针的引用的便利性。
 
 ```cpp
 // references_to_pointers.cpp
@@ -161,4 +162,4 @@ Input is from stdin. Use ^Z to terminate input.
 
 ## <a name="see-also"></a>请参阅
 
-[参考资料](../cpp/references-cpp.md)
+[参考](../cpp/references-cpp.md)
