@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下方面的详细信息： `__uuidof` 运算符
 title: __uuidof 运算符
 ms.date: 10/10/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: f7564270408d14f58d1528c1f41c0afd2dbe219c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6c14ac6f00b5e6314e1e4d844aea479fa714984
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116712"
 ---
 # <a name="__uuidof-operator"></a>`__uuidof` 运算符
 
@@ -29,9 +30,9 @@ ms.locfileid: "87226966"
 
 ## <a name="remarks"></a>备注
 
-*表达式*可以是类型名称、指针、引用或该类型的数组、专用于这些类型的模板或这些类型的变量。 只要编译器可使用参数查找附加的 GUID，此参数就有效。
+*表达式* 可以是类型名称、指针、引用或该类型的数组、专用于这些类型的模板或这些类型的变量。 只要编译器可使用参数查找附加的 GUID，此参数就有效。
 
-当将**0**或 NULL 作为参数提供时，此内部函数的特例就是这种情况。 在这种情况下， **`__uuidof`** 将返回由零组成的 GUID。
+当将 **0** 或 NULL 作为参数提供时，此内部函数的特例就是这种情况。 在这种情况下， **`__uuidof`** 将返回由零组成的 GUID。
 
 使用此关键字可将附加的 GUID 提取到：
 
@@ -40,9 +41,9 @@ ms.locfileid: "87226966"
 - 使用特性创建的库块 [`module`](../windows/attributes/module-cpp.md) 。
 
 > [!NOTE]
-> 在调试版本中， **`__uuidof`** 始终动态（在运行时）初始化对象。 在发布版本中， **`__uuidof`** 可静态（在编译时）初始化对象。
+> 在调试版本中， **`__uuidof`** 始终在运行时) 动态初始化对象 (。 在发布版本中， **`__uuidof`** 可以在编译时静态地 () 初始化对象。
 
-对于与以前版本的兼容性，为， **`_uuidof`** **`__uuidof`** 除非指定编译器选项 " [ `/Za` \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"，否则将是同义词。
+为了与早期版本兼容， **`_uuidof`** 将作为同义词， **`__uuidof`** 除非指定了编译器选项 " [ `/Za` \( 禁用语言扩展")](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4611
 title: 编译器警告（等级 4）C4611
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4611
 ms.assetid: bd90d0a6-75f9-4e97-968d-dda6773e9fd8
-ms.openlocfilehash: 2ce261b36344126d541a9b453c88f7f8289ecba0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: df53392b2d56b9afb1ab0cbcb2fc7b6267d5f00f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214329"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168262"
 ---
 # <a name="compiler-warning-level-4-c4611"></a>编译器警告（等级 4）C4611
 
@@ -21,4 +22,4 @@ ms.locfileid: "87214329"
 
 若要避免意外的行为，请避免 **`catch`** 在具有构造函数和析构函数的函数中使用。
 
-此警告只发出一次;请参阅[杂注警告](../../preprocessor/warning.md)。
+此警告只发出一次;请参阅 [杂注警告](../../preprocessor/warning.md)。

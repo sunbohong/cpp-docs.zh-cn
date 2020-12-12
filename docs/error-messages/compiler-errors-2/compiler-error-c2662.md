@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2662
 title: 编译器错误 C2662
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: 5e2dd6b01db5f7d3026f14c5032ab4623eb6fb58
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 98a82773c5befe8a125031ab3aac355f582aa15a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170004"
 ---
 # <a name="compiler-error-c2662"></a>编译器错误 C2662
 
@@ -41,7 +42,7 @@ int main() {
 }
 ```
 
-使用 **/clr**进行编译时，不能对 **`const`** 或 **`volatile`** 限定的托管类型调用函数。 不能声明托管类的 const 成员函数，因此不能对 const 托管对象调用方法。
+使用 **/clr** 进行编译时，不能对 **`const`** 或 **`volatile`** 限定的托管类型调用函数。 不能声明托管类的 const 成员函数，因此不能对 const 托管对象调用方法。
 
 ```cpp
 // C2662_b.cpp

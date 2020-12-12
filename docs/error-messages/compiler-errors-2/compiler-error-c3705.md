@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3705
 title: 编译器错误 C3705
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 50030c47ae629607110c6820d863f5aa1358e8f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757925"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168366"
 ---
 # <a name="compiler-error-c3705"></a>编译器错误 C3705
 
 "function"：找不到事件接口
 
-您必须定义一个使用 COM 事件的事件接口。 请注意，以下示例中显示的 ATL 标头文件的 `#include` 行是使用 COM 事件所必需的。 若要修复此错误，请取消注释示例代码中 `IEvents` 接口的定义。
+您必须定义一个使用 COM 事件的事件接口。 请注意， `#include` 以下示例中显示的 ATL 标头文件的行是使用 COM 事件所必需的。 若要修复此错误，请取消注释 `IEvents` 示例代码中接口的定义。
 
 下面的示例生成 C3705：
 

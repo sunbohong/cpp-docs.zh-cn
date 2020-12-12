@@ -1,4 +1,5 @@
 ---
+description: 了解有关： &lt; 元组函数的详细信息 &gt;
 title: '&lt;tuple&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::get [C++]
 - std::make_tuple [C++]
 - std::tie [C++]
-ms.openlocfilehash: 46c386ecffb8fbbf7c07d40b334afd91d261ebcf
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: cf58cab5f222594a935156cf7e7f2e886639da2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168951"
 ---
 # <a name="lttuplegt-functions"></a>&lt;tuple&gt; 函数
 
@@ -30,7 +31,7 @@ template <class F, class Tuple> constexpr decltype(auto) apply(F&& f, Tuple&& t)
 
 ### <a name="remarks"></a>备注
 
-使用元组*t*调用函数*F* 。
+使用元组 *t* 调用函数 *F* 。
 
 ## <a name="forward_as_tuple"></a><a name="forward"></a> forward_as_tuple
 
@@ -79,7 +80,7 @@ template <class T, class... Types>
    constexpr T&& get(tuple<Types...>&& Tuple) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *编入*\
 要获取的元素的索引。
@@ -95,7 +96,7 @@ template <class T, class... Types>
 
 ### <a name="remarks"></a>备注
 
-模板函数返回对索引 *索引*处的值或对象中的类型 *T* 的引用 `tuple` 。
+模板函数返回对索引 *索引* 处的值或对象中的类型 *T* 的引用 `tuple` 。
 
 如果元组中包含的 T 类型元素的个数不为一个，则调用 `get<T>(Tuple)` 将生成编译器错误。
 
@@ -147,7 +148,7 @@ template <class T1, class T2, ..., class TN>
    tuple<V1, V2, ..., VN> make_tuple(const T1& t1, const T2& t2, ..., const TN& tN);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个函数参数的类型。
@@ -212,7 +213,7 @@ template <class T1, class T2, ..., class TN>
 tuple<T1&, T2&, ..., TN&> tie(T1& t1, T2& t2, ..., TN& tN);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的基类型。

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： ref (c + +) '
 title: 'ref (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: 92b3c7b2cddf17a70a949914ef82540457696f20
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2ddfafee97f0b8b6a8c35fdff8664335ba6aa10d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114918"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -25,7 +26,7 @@ ms.locfileid: "88846103"
 
 ## <a name="remarks"></a>备注
 
-**Ref** c + + 特性具有与[ref](/windows/win32/Midl/ref) MIDL 特性相同的功能。
+**Ref** c + + 特性具有与 [ref](/windows/win32/Midl/ref) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -54,7 +55,7 @@ __interface IFireTabCtrl
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

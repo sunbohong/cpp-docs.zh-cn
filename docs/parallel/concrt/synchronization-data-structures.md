@@ -1,21 +1,22 @@
 ---
+description: 了解详细信息：同步数据结构
 title: 同步数据结构
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 244aaac9bd40c83d0bbec3c360bdf7351da54baf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d5e2e9e6d79f1e71a8f18f98d69fb794597d0ccb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231658"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169341"
 ---
 # <a name="synchronization-data-structures"></a>同步数据结构
 
-并发运行时提供了几个数据结构，使您可以同步对多个线程中的共享数据的访问。 当你有不经常修改的共享数据时，这些数据结构非常有用。 例如，一个同步对象会导致其他线程等待，直到共享资源可用。 因此，如果你使用此类对象来同步对频繁使用的数据的访问，则你的应用程序中的可伸缩性会丢失。 [并行模式库（PPL）](../../parallel/concrt/parallel-patterns-library-ppl.md)提供[concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md)类，使你能够在多个线程或任务之间共享资源，而无需进行同步。 有关类的详细信息 `combinable` ，请参阅[并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
+并发运行时提供了几个数据结构，使您可以同步对多个线程中的共享数据的访问。 当你有不经常修改的共享数据时，这些数据结构非常有用。 例如，一个同步对象会导致其他线程等待，直到共享资源可用。 因此，如果你使用此类对象来同步对频繁使用的数据的访问，则你的应用程序中的可伸缩性会丢失。 [并行模式库 (PPL) ](../../parallel/concrt/parallel-patterns-library-ppl.md)提供[concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md)类，使你能够在多个线程或任务之间共享资源，而无需进行同步。 有关类的详细信息 `combinable` ，请参阅 [并行容器和对象](../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="sections"></a><a name="top"></a>个
+## <a name="sections"></a><a name="top"></a> 个
 
 本主题详细描述了以下异步消息块类型：
 
@@ -27,11 +28,11 @@ ms.locfileid: "87231658"
 
 - [event](#event)
 
-## <a name="critical_section"></a><a name="critical_section"></a>critical_section
+## <a name="critical_section"></a><a name="critical_section"></a> critical_section
 
 [Concurrency：： critical_section](../../parallel/concrt/reference/critical-section-class.md)类表示生成到其他任务而不是对其进行抢占的协作式互斥对象。 当多个线程需要对共享数据进行排他读写访问时，关键部分会很有用。
 
-`critical_section`类是非重入的。 如果已拥有锁的线程调用[concurrency：： critical_section：： lock](reference/critical-section-class.md#lock)方法，则该方法将引发类型为[concurrency：： improper_lock](../../parallel/concrt/reference/improper-lock-class.md)的异常。
+`critical_section`类是非重入的。 如果已拥有锁的线程调用 [concurrency：： critical_section：： lock](reference/critical-section-class.md#lock) 方法，则该方法将引发类型为 [concurrency：： improper_lock](../../parallel/concrt/reference/improper-lock-class.md) 的异常。
 
 ### <a name="methods-and-features"></a>方法和功能
 
@@ -45,7 +46,7 @@ ms.locfileid: "87231658"
 
 [[顶部](#top)]
 
-## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="reader_writer_lock"></a> reader_writer_lock
 
 [Concurrency：： reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)类向共享数据提供线程安全的读/写操作。 当多个线程需要对共享资源进行并发读取访问，但很少写入该共享资源时，请使用读取器/编写器锁。 此类在任何时候都只为一个对象提供一个线程写入访问权限。
 
@@ -53,9 +54,9 @@ ms.locfileid: "87231658"
 
 与 `critical_section` 类一样， `reader_writer_lock` 类表示对其他任务产生的合作互斥对象，而不是对其进行抢占。
 
-当必须写入共享资源的线程获取读取器/写入器锁时，还必须访问该资源的其他线程将被阻止，直到编写器释放该锁。 此 `reader_writer_lock` 类是*写首选项*锁的一个示例，它是在取消阻止等待读取器之前取消阻止等待写入器的锁。
+当必须写入共享资源的线程获取读取器/写入器锁时，还必须访问该资源的其他线程将被阻止，直到编写器释放该锁。 此 `reader_writer_lock` 类是 *写首选项* 锁的一个示例，它是在取消阻止等待读取器之前取消阻止等待写入器的锁。
 
-与 `critical_section` 类一样， `reader_writer_lock` 类是不可重入的。 如果已拥有锁的线程调用[concurrency：： reader_writer_lock：： lock](reference/reader-writer-lock-class.md#lock)和[concurrency：： reader_writer_lock：： lock_read](reference/reader-writer-lock-class.md#lock_read)方法，则会引发该异常 `improper_lock` 。
+与 `critical_section` 类一样， `reader_writer_lock` 类是不可重入的。 如果已拥有锁的线程调用 [concurrency：： reader_writer_lock：： lock](reference/reader-writer-lock-class.md#lock) 和 [concurrency：： reader_writer_lock：： lock_read](reference/reader-writer-lock-class.md#lock_read) 方法，则会引发该异常 `improper_lock` 。
 
 > [!NOTE]
 > 由于 `reader_writer_lock` 类是不可重入的，因此不能将只读锁升级为读取器/写入器锁或将读取器/写入器锁降级为只读锁。 执行其中任一操作都会产生未指定的行为。
@@ -74,9 +75,9 @@ ms.locfileid: "87231658"
 
 [[顶部](#top)]
 
-## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a>scoped_lock 和 scoped_lock_read
+## <a name="scoped_lock-and-scoped_lock_read"></a><a name="scoped_lock"></a> scoped_lock 和 scoped_lock_read
 
-`critical_section`和 `reader_writer_lock` 类提供了嵌套的帮助器类，这些类可简化对互斥对象的处理方式。 这些帮助器类称为*范围锁*。
+`critical_section`和 `reader_writer_lock` 类提供了嵌套的帮助器类，这些类可简化对互斥对象的处理方式。 这些帮助器类称为 *范围锁*。
 
 `critical_section`类包含[concurrency：： critical_section：： scoped_lock](reference/critical-section-class.md#critical_section__scoped_lock_class)类。 构造函数获取对所提供对象的访问权限 `critical_section` ; 析构函数释放对该对象的访问权限。 `reader_writer_lock`类包含[concurrency：： reader_writer_lock：： scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class)类，这类似于 `critical_section::scoped_lock` ，但它管理对提供的对象的写访问权限 `reader_writer_lock` 。 `reader_writer_lock`类还包含[concurrency：： reader_writer_lock：： scoped_lock_read](reference/reader-writer-lock-class.md#scoped_lock_read_class)类。 此类管理提供的对象的读取访问权限 `reader_writer_lock` 。
 
@@ -97,14 +98,14 @@ ms.locfileid: "87231658"
 
 |方法|描述|
 |------------|-----------------|
-|[再](reference/event-class.md#wait)|等待事件进入终止状态。|
+|[wait](reference/event-class.md#wait)|等待事件进入终止状态。|
 |[set](reference/event-class.md#set)|将事件设置为终止状态。|
 |[reset](reference/event-class.md#reset)|将事件设置为非终止状态。|
 |[wait_for_multiple](reference/event-class.md#wait_for_multiple)|等待多个事件发出信号。|
 
 ### <a name="example"></a>示例
 
-有关演示如何使用类的示例 `event` ，请参阅将[同步数据结构与 Windows API 进行比较](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)。
+有关演示如何使用类的示例 `event` ，请参阅将 [同步数据结构与 Windows API 进行比较](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)。
 
 [[顶部](#top)]
 

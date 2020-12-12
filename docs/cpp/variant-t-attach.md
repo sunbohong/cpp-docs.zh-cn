@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _variant_t：： Attach
 title: _variant_t::Attach
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - VARIANT object [C++], attach
 - VARIANT object
 ms.assetid: 2f02bd08-2306-4477-aa88-d2a5dee2b859
-ms.openlocfilehash: d0822dfc730cbbb64f8364e6fa8fe8bc7207f9f9
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: de13b1e8138eb24971e52165ee84fc92d97ca3d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750738"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116647"
 ---
 # <a name="_variant_tattach"></a>_variant_t::Attach
 
-**微软特定**
+**Microsoft 专用**
 
-将`VARIANT`对象附加到 **_variant_t**对象。
+`VARIANT`将对象附加到 **_variant_t** 对象。
 
 ## <a name="syntax"></a>语法
 
@@ -28,17 +29,17 @@ ms.locfileid: "81750738"
 void Attach(VARIANT& varSrc);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *varSrc*<br/>
-要`VARIANT`附加到此 **_variant_t**对象的对象。
+`VARIANT`要附加到此 **_variant_t** 对象的对象。
 
 ## <a name="remarks"></a>备注
 
-通过封装获取`VARIANT`的所有权。 此成员函数释放任何现有的`VARIANT`封装，然后复制提供的`VARIANT`，并将其`VARTYPE`设置到VT_EMPTY以确保其资源只能由 **_variant_t**析构函数释放。
+`VARIANT`通过封装来获取的所有权。 此成员函数将释放任何现有 `VARIANT` 的封装，然后复制所提供的 `VARIANT` ，并将其设置 `VARTYPE` 为 VT_EMPTY，以确保其资源只能由 **_variant_t** 析构函数释放。
 
-**结束微软特定**
+**结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[_variant_t类](../cpp/variant-t-class.md)
+[_variant_t 类](../cpp/variant-t-class.md)

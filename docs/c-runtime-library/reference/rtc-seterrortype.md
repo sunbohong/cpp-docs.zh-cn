@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _RTC_SetErrorType
 title: _RTC_SetErrorType
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-ms.openlocfilehash: 6c1eff5920931aa3b72bf3dbc6232c371828b16a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8b0b28eaf97a27dbfcf4dcb414c9a17f03df7f9e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948924"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168691"
 ---
 # <a name="_rtc_seterrortype"></a>_RTC_SetErrorType
 
@@ -46,23 +47,23 @@ int _RTC_SetErrorType(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *errnum*<br/>
-一个数字，介于 0 和 [_RTC_NumErrors](rtc-numerrors.md) 返回的值减 1 所得的值之间。
+一个数字，介于 0 和 [_RTC_NumErrors](rtc-numerrors.md)返回的值减 1 所得的值之间。
 
 *ErrType*<br/>
-要分配给此 *errnum*的值。 例如，可以使用 **_CRT_ERROR**。 如果使用 **_CrtDbgReport**作为错误处理程序，则*ErrType*只能是[_CrtSetReportMode](crtsetreportmode.md)中定义的其中一个符号。 如果你有自己的错误处理程序 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，那么你可以拥有与 *errnum*的数量一样多的 *ErrType*。
+要分配给此 *errnum* 的值。 例如，可以使用 **_CRT_ERROR**。 如果使用 **_CrtDbgReport** 作为错误处理程序，则 *ErrType* 只能是 [_CrtSetReportMode](crtsetreportmode.md)中定义的符号之一。 如果你有自己的错误处理程序 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，那么你可以拥有与 *errnum* 的数量一样多的 *ErrType*。
 
-对的*ErrType*具有特殊意义的 **_CrtSetReportMode**;忽略此错误。
+_RTC_ERRTYPE_IGNORE 的 *ErrType* 对 **_CrtSetReportMode** 具有特殊意义;忽略此错误。
 
 ## <a name="return-value"></a>返回值
 
-错误类型*类型*的上一个值。
+错误类型 *类型* 的上一个值。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，所有错误都设置为 *ErrType* = 1，这与 **_CRT_ERROR**对应。 有关默认的错误类型（例如 **_CRT_ERROR**）的详细信息，请参阅 [_CrtDbgReport](crtdbgreport-crtdbgreportw.md)。
+默认情况下，所有错误都设置为 *ErrType* = 1，这与 **_CRT_ERROR** 对应。 有关默认的错误类型（例如 **_CRT_ERROR**）的详细信息，请参阅 [_CrtDbgReport](crtdbgreport-crtdbgreportw.md)。
 
 在可以调用此函数之前，首先必须调用其中一个运行时错误检查初始化函数；请参阅[使用无 C 运行时库的运行时检查](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)
 

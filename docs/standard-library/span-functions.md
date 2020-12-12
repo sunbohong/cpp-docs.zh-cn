@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; span &gt; 函数
 title: '&lt;跨度 &gt; 函数'
 ms.date: 05/28/2020
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - std::span [C++], as_writable_bytes
 - std::as_bytes [C++]
-ms.openlocfilehash: f51c99d2f2a051a07cefcb985fdb46340fefb3ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 09d712d6dfffee2aa24e0e8cecca4031a27923f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169185"
 ---
 # <a name="ltspangt-functions"></a>&lt;跨度 &gt; 函数
 
-\<span>标头包含对**span**对象执行的下列非成员函数。
+\<span>标头包含对 **span** 对象执行的下列非成员函数。
 
 | **非成员函数** | **说明** |
 |-|-|
@@ -32,20 +33,20 @@ template <class T, size_t Extent>
 auto as_bytes(span<T, Extent> s) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 范围中元素的类型。
 
 *范围*\
-跨度中的元素数（如果在编译时是已知的），否则， `dynamic_extent` 它指示在运行时之前不会知道元素的数目。
+如果编译时) ，则跨度中的元素数 (; 否则， `dynamic_extent` 表示在运行时之前不会知道元素的数目。
 
 *些*\
 要获取其原始表示形式的范围。
 
 ### <a name="return-value"></a>返回值
 
-一个 `span<const byte, S>` 指向存储在中的第一个项的 `S` ，其中`{reinterpret_cast<const std::byte*>(s.data()), s.size_bytes()}`
+一个 `span<const byte, S>` 指向存储在中的第一个项的 `S` ，其中 `{reinterpret_cast<const std::byte*>(s.data()), s.size_bytes()}`
 
 ### <a name="example"></a>示例
 
@@ -72,20 +73,20 @@ template <class T, size_t Extent>
 auto as_writable_bytes(span<T, Extent> s) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 范围中元素的类型。
 
 *范围*\
-跨度中的元素数（如果在编译时是已知的），否则， `dynamic_extent` 它指示在运行时之前不会知道元素的数目。
+如果编译时) ，则跨度中的元素数 (; 否则， `dynamic_extent` 表示在运行时之前不会知道元素的数目。
 
 *些*\
 要获取其原始表示形式的范围。
 
 ### <a name="return-value"></a>返回值
 
-一个 `span<byte, S>` 指向存储在中的第一个项的 `S` ，其中`{reinterpret_cast<std::byte*>(s.data()), s.size_bytes()}`
+一个 `span<byte, S>` 指向存储在中的第一个项的 `S` ，其中 `{reinterpret_cast<std::byte*>(s.data()), s.size_bytes()}`
 
 ### <a name="example"></a>示例
 
@@ -103,6 +104,6 @@ void main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<span>](span.md)

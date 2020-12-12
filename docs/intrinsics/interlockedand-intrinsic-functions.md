@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _InterlockedAnd 内部函数
 title: _InterlockedAnd 内部函数
 ms.date: 09/02/2019
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: f5e00b997eced482a8adc8881e9a1b6a3231bb72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168249"
 ---
 # <a name="_interlockedand-intrinsic-functions"></a>_InterlockedAnd 内部函数
 
@@ -170,10 +171,10 @@ __int64 _InterlockedAnd64_rel(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*value*\
-[in, out]指向第一个操作数的指针, 将由结果替换。
+*负值*\
+[in，out]指向第一个操作数的指针，将由结果替换。
 
 *掩盖*\
 中第二个操作数。
@@ -184,11 +185,11 @@ __int64 _InterlockedAnd64_rel(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedAnd64`|ARM、x64、ARM64|\<intrin.h>|
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM, ARM64|\<intrin.h>|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM，ARM64|\<intrin.h>|
 |`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|
 |`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|
 
@@ -196,7 +197,7 @@ __int64 _InterlockedAnd64_rel(
 
 每个函数名称中的数字指定了参数的位大小。
 
-在 ARM 和 ARM64 平台上, 将内部函数`_acq`和`_rel`后缀用于获取和释放语义, 如关键部分的开头和结尾。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
+在 ARM 和 ARM64 平台上，将内部函数 `_acq` 和 `_rel` 后缀用于获取和释放语义，如关键部分的开头和结尾。 带 `_nf`（“无围墙”）后缀的内部函数不能充当内存屏障。
 
 带 `_np`（“无预取”）后缀的函数可以阻止编译器插入可能的预取操作。
 

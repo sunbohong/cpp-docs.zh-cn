@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ALIAS
 title: ALIAS (MASM)
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-ms.openlocfilehash: 5aef169c5632e74722438c63718ce5b783a8da09
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 7d5072cec8ef56f3dd2202617b3274c958a25d66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316598"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121753"
 ---
 # <a name="alias"></a>ALIAS
 
-**ALIAS**指令创建函数的替代名称。  这允许您为函数创建多个名称，或创建允许链接器（LINK）将旧函数映射到新函数的库。
+**ALIAS** 指令创建函数的替代名称。  这使你可以为函数创建多个名称，或创建允许链接器 ( # A0) 将旧函数映射到新函数的库。
 
 ## <a name="syntax"></a>语法
 
-> **别名 \<** _别名_ **> = \<** _实际名称_ **>**
+> **A \<**_alias_**> = \<**_actual-name_**>**
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *实际名称*\
 函数或过程的实际名称。  尖括号是必需的。
 
-*别名*\
+*a*\
 备用或别名。  尖括号是必需的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[指令引用](directives-reference.md)\
+[指令参考](directives-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

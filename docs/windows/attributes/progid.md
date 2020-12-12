@@ -1,4 +1,5 @@
 ---
+description: 详细了解： progid
 title: 'progid (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-ms.openlocfilehash: 136c651ec92c78339c2f701804a6a409523dd30f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed829d1ec20ae06fae8604e35ccc260013f59e3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114931"
 ---
 # <a name="progid"></a>progid
 
@@ -30,9 +31,9 @@ ms.locfileid: "88839993"
 
 Progid 提供了一个可读版本的类标识符 (CLSID) 用于标识 COM/ActiveX 对象。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-使用 `progid` c + + 特性可以指定 COM 对象的 ProgID。 ProgID 的格式为 *name1*。 如果未指定 ProgID 的 *版本* ，则默认版本为1。 如果未指定*name1*，则默认名称为*classname。* 如果未指定 `progid` 并且指定 `vi_progid` 了，则将从中获取 *name1* ， `vi_progid` 并追加 (下一个序列号) 版本。
+使用 `progid` c + + 特性可以指定 COM 对象的 ProgID。 ProgID 的格式为 *name1*。 如果未指定 ProgID 的 *版本* ，则默认版本为1。 如果未指定 *name1*，则默认名称为 *classname。* 如果未指定 `progid` 并且指定 `vi_progid` 了，则将从中获取 *name1* ， `vi_progid` 并追加 (下一个序列号) 版本。
 
 如果使用的特性块 `progid` 还不使用 `uuid` ，编译器将检查注册表以查看是否 `uuid` 存在指定的 `progid` 。 如果 `progid` 未指定，则版本 (和 coclass 名称，如果创建组件类) 将用于生成 `progid` 。
 
@@ -57,7 +58,7 @@ Progid 提供了一个可读版本的类标识符 (CLSID) 用于标识 COM/Activ
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息： steady_clock 结构
 title: steady_clock 结构
 ms.date: 05/22/2018
 f1_keywords:
 - chrono/std::chrono::steady_clock
 ms.assetid: 970d12ec-fc80-4391-a2f7-b57b2aec668d
-ms.openlocfilehash: d21d5c2ed7ed667333007f3bd12d13f47b868380
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 066a98f4eba6670e640e9fcc9b79eb017859a3d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217397"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169068"
 ---
 # <a name="steady_clock-struct"></a>steady_clock 结构
 
-表示*稳定*时钟。
+表示 *稳定* 时钟。
 
 ## <a name="syntax"></a>语法
 
@@ -25,9 +26,9 @@ struct steady_clock;
 
 在 Windows 上， `steady_clock` 包装 `QueryPerformanceCounter` 函数。
 
-如果首次调用 `now` 返回的值始终小于或等于后续调用 `now` 返回的值，则为单调** 时钟。 如果它是单调** 时钟并且时钟计时周期之间的时间是常量，则为稳定** 时钟。
+如果首次调用 `now` 返回的值始终小于或等于后续调用 `now` 返回的值，则为单调时钟。 如果它是单调时钟并且时钟计时周期之间的时间是常量，则为稳定时钟。
 
-`high_resolution_clock`是的 typedef `steady_clock` 。
+`high_resolution_clock` 是的 typedef `steady_clock` 。
 
 ### <a name="public-typedefs"></a>公共 typedef
 
@@ -48,7 +49,7 @@ struct steady_clock;
 
 |名称|描述|
 |----------|-----------------|
-|`steady_clock::is_steady`|保存 **`true`** 。 `steady_clock` 是*稳定的*。|
+|`steady_clock::is_steady`|保存 **`true`** 。 `steady_clock` 是 *稳定的*。|
 
 ## <a name="requirements"></a>要求
 
@@ -56,7 +57,7 @@ struct steady_clock;
 
 **命名空间：** std::chrono
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [头文件引用](../standard-library/cpp-standard-library-header-files.md)
 - [\<chrono>](../standard-library/chrono.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：将 Struct 相乘
 title: multiplies 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-ms.openlocfilehash: 3bccaf2a5e6594652a1179b357cdbbee2d2436b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 552f36d2060ca9ad6141438a45a128e84b705630
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114983"
 ---
 # <a name="multiplies-struct"></a>multiplies 结构
 
@@ -37,16 +38,16 @@ struct multiplies<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持二元 `operator*` 接受指定或推断类型的操作数的类型。
 
-*左侧*\
-乘法运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+*左中*\
+乘法运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*右侧*\
-乘法运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+*然后*\
+乘法运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; m&gt;
 title: '&lt;sstream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: 31a445fcc7deb5e5bade5437058cb36e28dacd40
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5f0c5307073c2296f20df0adb663bce9b4b97d59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169094"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -68,7 +69,7 @@ void swap (
 }  // namespace std
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 引用 `sstream` 对象。
@@ -76,7 +77,7 @@ void swap (
 *然后*\
 引用 `sstream` 对象。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类型的对象 `char *` 可使用中的功能 [\<strstream>](../standard-library/strstream.md) 进行流式处理。 但是，已弃用 \<strstream>，建议使用 \<sstream>。
 
@@ -95,18 +96,18 @@ void swap (
 
 ### <a name="manipulators"></a>操控器
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[swap](../standard-library/sstream-functions.md#sstream_swap)|交换两个 `sstream` 对象间的值。|
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|描述对 `Elem` 类型的元素（其字符特征由类 `Tr` 确定）与数组对象中存储的元素序列之间的来回传输进行控制的流缓冲区。|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述一个对象，该对象控制从类[basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem、Tr、> 的流缓冲区提取元素和编码对象， < **Elem** **Tr** `Alloc` `Elem` 其字符特征由类确定 `Tr` ，并且其元素由类的分配器进行分配 `Alloc` 。|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|描述一个对象，该对象控制将元素和编码对象插入到类[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**，> 的流缓冲区中， `Alloc` `Elem` 其字符特征由类确定 `Tr` ，并且其元素由类的分配器进行分配 `Alloc` 。|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|描述一个对象，该对象使用类[basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem，Tr，> 的流缓冲区控制元素和编码对象的插入和提取， < **Elem** **Tr** `Alloc` `Elem` 其字符特征由类确定 `Tr` ，并且其元素由类的分配器进行分配 `Alloc` 。|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述一个对象，该对象控制从类[basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem、Tr、> 的流缓冲区提取元素和编码对象， <   `Alloc` `Elem` 其字符特征由类确定 `Tr` ，并且其元素由类的分配器进行分配 `Alloc` 。|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|描述一个对象，该对象控制将元素和编码对象插入到类 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**，> 的流缓冲区中， `Alloc` `Elem` 其字符特征由类确定 `Tr` ，并且其元素由类的分配器进行分配 `Alloc` 。|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|描述一个对象，该对象使用类[basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem，Tr，> 的流缓冲区控制元素和编码对象的插入和提取， <   `Alloc` `Elem` 其字符特征由类确定 `Tr` ，并且其元素由类的分配器进行分配 `Alloc` 。|
 
 ## <a name="requirements"></a>要求
 
@@ -114,7 +115,7 @@ void swap (
 
 - **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

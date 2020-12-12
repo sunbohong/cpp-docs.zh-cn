@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： @B
 title: '@B'
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - '@B symbol'
 ms.assetid: ca17c71a-4a5d-4470-a098-484c781dbfa7
-ms.openlocfilehash: e49cfe94a712b92bb645e46eb1ee229a32206c21
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: a1e19420858efba6c827a68f23855567293f4d5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75316481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121727"
 ---
 # <a name="b"></a>\@B
 
-上一个[\@\@：](at-at.md)标签的位置。
+上一个[ \@ \@ ：](at-at.md)标签的位置。
 
 ## <a name="syntax"></a>语法
 
 > **\@B**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [符号引用](symbols-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

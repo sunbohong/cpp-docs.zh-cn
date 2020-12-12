@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： message_not_found 类
 title: message_not_found 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_not_found class
 ms.assetid: a96b9995-5ad7-4600-83c8-c15e329ff10e
-ms.openlocfilehash: 63b921e47b01e3be7dfc060cbb41e5fd9016d04f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: c0b098a530768617b2fa2cf52dfe374dc44a2c12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77139575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169380"
 ---
 # <a name="message_not_found-class"></a>message_not_found 类
 
@@ -25,11 +26,11 @@ ms.locfileid: "77139575"
 class message_not_found : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[message_not_found](#ctor)|已重载。 构造 `message_not_found` 对象。|
 
@@ -45,7 +46,7 @@ class message_not_found : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>message_not_found
+## <a name="message_not_found"></a><a name="ctor"></a> message_not_found
 
 构造 `message_not_found` 对象。
 
@@ -55,12 +56,12 @@ explicit _CRTIMP message_not_found(_In_z_ const char* _Message) throw();
 message_not_found() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)

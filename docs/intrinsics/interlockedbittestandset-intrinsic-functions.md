@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _interlockedbittestandset 内部函数
 title: _interlockedbittestandset 内部函数
 ms.date: 09/02/2019
 f1_keywords:
@@ -21,18 +22,18 @@ helpviewer_keywords:
 - _interlockedbittestandset64 intrinsic
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
-ms.openlocfilehash: 9679abf674b5ef366818e73504c3c8c80c5d8ed7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bc1ee5e70c5b892b7c98bb9cb03f75b3baeda268
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168197"
 ---
 # <a name="_interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset 内部函数
 
 **Microsoft 专用**
 
-生成指令以检查地址`b` `a`的位并返回其当前值, 然后将其设置为1。
+生成指令以检查 `b` 地址的位 `a` 并返回其当前值，然后将其设置为1。
 
 ## <a name="syntax"></a>语法
 
@@ -87,7 +88,7 @@ unsigned char _interlockedbittestandset64_HLERelease(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *的*\
 中指向要检查的内存的指针。
@@ -97,26 +98,26 @@ unsigned char _interlockedbittestandset64_HLERelease(
 
 ## <a name="return-value"></a>返回值
 
-位在设置之前的位置`b`的值。
+位在设置之前的位置的值 `b` 。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`_interlockedbittestandset`|x86、ARM、x64、ARM64|\<intrin.h>|
-|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM, ARM64|\<intrin.h>|
+|`_interlockedbittestandset_acq`, `_interlockedbittestandset_nf`, `_interlockedbittestandset_rel`|ARM，ARM64|\<intrin.h>|
 |`_interlockedbittestandset64_acq`, `_interlockedbittestandset64_nf`, `_interlockedbittestandset64_rel`|ARM64|\<intrin.h>|
-|`_interlockedbittestandset_HLEAcquire`， `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|
+|`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|
 |`_interlockedbittestandset64`|x64、ARM64|\<intrin.h>|
-|`_interlockedbittestandset64_HLEAcquire`， `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
+|`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
-在 x86 和 x64 处理器上, 这些内部函数`lock bts`使用指令读取指定的位并将其设置为1。 此操作为原子性操作。
+在 x86 和 x64 处理器上，这些内部函数使用 `lock bts` 指令读取指定的位并将其设置为1。 此操作为原子性操作。
 
-在 ARM 和 ARM64 处理器上, 将内部函数`_acq`和`_rel`后缀用于获取和释放语义, 如关键部分的开头和结尾。 带`_nf` ("无围墙") 后缀的 ARM 内部函数不能充当内存屏障。
+在 ARM 和 ARM64 处理器上，将内部函数 `_acq` 和 `_rel` 后缀用于获取和释放语义，如关键部分的开头和结尾。 ARM 内部 `_nf` ( "无防护" ) 后缀不能充当内存屏障。
 
-在支持硬件锁省略 (HLE) 指令的 Intel 处理器上，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一条发送到处理器的提示，可通过消除硬件中的锁写步骤加快速度。 如果在不支持 HLE 的处理器上调用这些内部函数, 则忽略该提示。
+在支持硬件锁省略 (HLE) 指令的 Intel 处理器上，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一条发送到处理器的提示，可通过消除硬件中的锁写步骤加快速度。 如果在不支持 HLE 的处理器上调用这些内部函数，则忽略该提示。
 
 这些例程只能用作内部函数。
 

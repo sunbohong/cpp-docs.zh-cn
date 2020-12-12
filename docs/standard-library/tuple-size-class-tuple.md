@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： tuple_size 类;
 title: tuple_size 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e825acc02e27a8d0c1ae29e5bfcf4ac1e0a708b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688853"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168873"
 ---
 # <a name="tuple_size-class"></a>tuple_size 类
 
@@ -58,31 +59,31 @@ template <class Tuple>
 template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*元组*\
+*聚合*\
 元组的类型。
 
-*Elem* \
+*Elem*\
 数组元素的类型。
 
-*大小*\
+*规格*\
 数组大小。
 
-*T1* \
+*T1*\
 对的第一个成员的类型。
 
-*T2* \
+\
 对的第二个成员的类型。
 
-*类型*\
+*各种*\
 元组元素的类型。
 
 ## <a name="remarks"></a>备注
 
-类模板的成员 `value` 是整数常量表达式，其值是元组类型*元组*的范围。
+类模板具有一个成员 `value` ，该成员是一个整型常数表达式，其值是元组类型 *元组* 的范围。
 
-数组的模板特殊化的成员 `value` 是整数常量表达式，其值为*size*，这是数组的大小。
+数组的模板特殊化具有成员 `value` ，该成员是值为 *size*（数组大小）的整数常量表达式。
 
 对的模板专用化拥有成员 `value`，它是整型常数表达式，值为 2。
 
@@ -117,10 +118,10 @@ int main()
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<tuple>
+**标头：**\<tuple>
 
-**标头：** \<array>（适用于数组专用化）
+**标头：** \<array> 数组专用化的 () 
 
-**标头：** \<utility>（适用于对专用化）
+**标头：** \<utility> 对专用化的 () 
 
 **命名空间:** std

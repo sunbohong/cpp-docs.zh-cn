@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：访问集合的所有成员
 title: 访问集合的所有成员
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: cc058e6e4bf0058adb13f83e7ea071ebb4570ec4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0207c082f17cf1a02da1829d5e04ea3eccae3b40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169575"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>访问集合的所有成员
 
@@ -34,7 +35,7 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
 
 - [循环访问映射](#_core_to_iterate_a_map)
 
-### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a>循环访问数组
+### <a name="to-iterate-an-array"></a><a name="_core_to_iterate_an_array"></a> 循环访问数组
 
 1. 使用按次序的索引号与 `GetAt` 成员函数：
 
@@ -48,7 +49,7 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
 
    和非版本中均存在此运算符 **`const`** **`const`** 。 为 **`const`** 数组调用的版本只能 **`const`** 出现在赋值语句的右侧。
 
-### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a>循环访问列表
+### <a name="to-iterate-a-list"></a><a name="_core_to_iterate_a_list"></a> 循环访问列表
 
 1. 使用成员函数 `GetHeadPosition` 和 `GetNext` 来访问列表：
 
@@ -56,7 +57,7 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
 
    此示例使用一个类型化的指针列表，包含指向 `CPerson` 对象的指针。 列表声明类似于 [循环访问数组](#_core_to_iterate_an_array) 步骤中数组的列表声明，但它派生自 `CObList`类。 `GetNext` 返回一个指向 `CPerson` 对象的指针。
 
-### <a name="to-iterate-a-map"></a><a name="_core_to_iterate_a_map"></a>循环访问映射
+### <a name="to-iterate-a-map"></a><a name="_core_to_iterate_a_map"></a> 循环访问映射
 
 1. 使用 `GetStartPosition` 来到映射的开头，使用 `GetNextAssoc` 反复获取映射中的下一个键和值，如下所示：
 
@@ -73,6 +74,6 @@ MFC 数组集合类（无论是否基于模板）使用索引来访问其元素�
 
 有关详细信息，请参阅 [删除 CObject 集合中的所有对象](deleting-all-objects-in-a-cobject-collection.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [集合](collections.md)

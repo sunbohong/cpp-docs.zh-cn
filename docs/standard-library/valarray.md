@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; valarray&gt;
 title: '&lt;valarray&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9d2f3097637b3708c16f3048a34dd32b7f6fd80b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7cc902a60a68f9cb667530dac76812d4a8e082be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840136"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168769"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -26,7 +27,7 @@ ms.locfileid: "88840136"
 > [!NOTE]
 > \<valarray>库使用 "#include <initializer_list>" 语句。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 这些类模板和函数允许使用异常纬度来提高性能。 具体而言，返回类型的任何函数 `valarray<T1>` 都可能返回某个其他类型 T2 的对象。 在这种情况下，任何接受类型的一个或多个参数的函数 `valarray<T2>` 必须具有接受这些参数的任意组合的重载，每个重载都替换为类型 T2 的参数。
 
@@ -97,7 +98,7 @@ ms.locfileid: "88840136"
 |-|-|
 |[valarray \<bool> 类](../standard-library/valarray-bool-class.md)|类模板的专用版本 valarray \<**Type**> 类型的元素 **`bool`** 。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

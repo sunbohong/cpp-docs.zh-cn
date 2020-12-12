@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：元组类
 title: tuple 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 04fd3ec6ce3363d118174025823279a80dd00f0b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9beb3f263fa516d7d4096c404c135deffde6fc31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169017"
 ---
 # <a name="tuple-class"></a>tuple 类
 
@@ -39,7 +40,7 @@ class tuple {
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个元组元素的类型。
@@ -116,7 +117,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 分配一个 `tuple` 对象。
 
@@ -135,7 +136,7 @@ template <class U1, class U2>
    tuple& operator=(pair<U1, U2>&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *&*\
 第 N 个复制的元组元素的类型。
@@ -145,7 +146,7 @@ template <class U1, class U2>
 
 ### <a name="remarks"></a>备注
 
-前两个成员运算符将*右*的元素分配给的相应元素 **`*this`** 。 第三个成员运算符将分配 `right.first` 给索引0处的元素 **`*this`** ，并分配给 `right.second` 索引1处的元素。 所有三个成员运算符都返回 **`*this`** 。
+前两个成员运算符将 *右* 的元素分配给的相应元素 **`*this`** 。 第三个成员运算符将分配 `right.first` 给索引0处的元素 **`*this`** ，并分配给 `right.second` 索引1处的元素。 所有三个成员运算符都返回 **`*this`** 。
 
 剩余的成员运算符类似于之前的构造函数，但具有[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -198,7 +199,7 @@ int main()
 x 4
 ```
 
-## <a name="swap"></a><a name="tuple_swap"></a>购
+## <a name="swap"></a><a name="tuple_swap"></a> 购
 
 交换两个元组的元素。
 
@@ -207,19 +208,19 @@ template <class... Types>
    void swap(tuple<Types...&> left, tuple<Types...&> right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
-一个元组，其元素将与元组*权限*的元素进行交换。
+一个元组，其元素将与元组 *权限* 的元素进行交换。
 
 *然后*\
-一个元组，其元素将与要*留下*的元组的元素进行交换。
+一个元组，其元素将与要 *留下* 的元组的元素进行交换。
 
 ### <a name="remarks"></a>备注
 
 函数执行 `left.swap(right)`。
 
-## <a name="tuple"></a><a name="tuple"></a>聚合
+## <a name="tuple"></a><a name="tuple"></a> 聚合
 
 构造 `tuple` 对象。
 
@@ -244,7 +245,7 @@ template <class U1, class U2>
    constexpr tuple(pair<U1, U2>&&);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *&*\
 第 N 个复制的元组元素的类型。
@@ -258,7 +259,7 @@ template <class U1, class U2>
 
 第二个构造函数将构造一个对象，该对象的元素是从参数 `P1`、`P2`、...、`PN` 复制构造的，其中每个 `Pi`都将初始化 `i - 1` 索引处的元素。
 
-第三个和第四个构造函数构造一个对象，该对象的元素是从*右*的相应元素构造而来的。
+第三个和第四个构造函数构造一个对象，该对象的元素是从 *右* 的相应元素构造而来的。
 
 第五个构造函数将构造一个对象，该对象在索引 0 处的元素是从`right.first` 复制构造的，在索引 1 处的元素是从 `right.second` 复制构造的。
 
