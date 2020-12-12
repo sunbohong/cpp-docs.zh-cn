@@ -1,23 +1,24 @@
 ---
-title: 如何：使用中的数组C++/CLI
+description: 了解详细信息：如何：在 c + +/CLI 中使用数组
+title: 如何：在 C++/CLI 中使用数组
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: 65d384cbac7691d000ae6e895c9cf63e71726689
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d88f1b0b936c6a2f8589e78ac7ae585e4550fec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209212"
 ---
-# <a name="how-to-use-arrays-in-ccli"></a>如何：使用中的数组C++/CLI
+# <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用数组
 
-本文介绍如何使用中的数组C++/CLI。
+本文介绍如何在 c + +/CLI 中使用数组
 
-## <a name="single-dimension-arrays"></a>一维数组
+## <a name="single-dimension-arrays"></a>单维度数组
 
-下面的示例演示如何创建一维数组的引用、 值和本机指针类型。 它还显示如何从函数返回的单维数组以及如何将单维数组作为参数传递给函数。
+下面的示例演示如何创建引用、值和本机指针类型的单维度数组。 它还演示了如何从函数返回单维度数组，以及如何将单维度数组作为参数传递给函数。
 
 ```cpp
 // mcppv2_sdarrays.cpp
@@ -151,7 +152,7 @@ MyStruct1[0] = 40
 MyStruct1[1] = 41
 ```
 
-下一个示例演示如何在一维托管数组上执行聚合初始化。
+下一个示例演示如何对单维度托管阵列执行聚合初始化。
 
 ```cpp
 // mcppv2_sdarrays_aggregate_init.cpp
@@ -204,7 +205,7 @@ IntArray[1, 0] = 11
 IntArray[1, 1] = 11
 ```
 
-此示例演示如何对多维度托管数组执行聚合初始化：
+此示例演示如何对多维度托管阵列执行聚合初始化：
 
 ```cpp
 // mcppv2_mdarrays_aggregate_initialization.cpp
@@ -250,7 +251,7 @@ int main() {
 
 ## <a name="jagged-arrays"></a>交错数组
 
-本部分演示如何创建托管数组的引用、 值和本机指针类型的一维数组。 它还显示如何从函数返回托管数组的单维数组以及如何将单维数组作为参数传递给函数。
+本节说明如何创建引用、值和本机指针类型的托管数组的一维数组。 它还演示了如何从函数返回托管数组的一维数组，以及如何将单维度数组作为参数传递给函数。
 
 ```cpp
 // mcppv2_array_of_arrays.cpp
@@ -347,7 +348,7 @@ IntArray[1] = 11
 41
 ```
 
-下面的示例演示如何执行聚合初始化交错数组使用。
+下面的示例演示如何执行具有交错数组的聚合初始化。
 
 ```cpp
 // mcppv2_array_of_arrays_aggregate_init.cpp
@@ -452,9 +453,9 @@ MyClass0[1] = 1
 [ g h ]
 ```
 
-## <a name="managed-arrays-as-template-type-parameters"></a>托管数组用作模板类型参数
+## <a name="managed-arrays-as-template-type-parameters"></a>作为模板类型参数的托管数组
 
-此示例演示如何将托管的数组用作模板的参数：
+此示例演示如何使用托管数组作为模板的参数：
 
 ```cpp
 // mcppv2_template_type_params.cpp
@@ -482,9 +483,9 @@ int main() {
 Return Code: 0
 ```
 
-## <a name="typedefs-for-managed-arrays"></a>托管数组的的类型定义
+## <a name="typedefs-for-managed-arrays"></a>托管数组的 typedef
 
-此示例演示如何使托管数组的 typedef:
+此示例演示如何为托管数组生成 typedef：
 
 ```cpp
 // mcppv2_typedef_arrays.cpp
@@ -501,9 +502,9 @@ int main() {
 
 ## <a name="sorting-arrays"></a>对数组进行排序
 
-与标准C++数组，托管数组隐式派生自数组基类它们均从中继承常见行为。 例如，`Sort`方法，可用于任何数组中的项进行排序。
+与标准 c + + 数组不同，托管数组从其继承常见行为的数组基类隐式派生。 例如 `Sort` ，方法可用于对任何数组中的项进行排序。
 
-对于包含基本的内部类型的数组，可以调用`Sort`方法。 您可以重写的排序条件，而这又是必需时想要为复杂类型的数组进行排序。 在这种情况下，数组元素类型必须实现<xref:System.IComparable.CompareTo%2A>方法。
+对于包含基本内部类型的数组，可以调用 `Sort` 方法。 您可以重写排序条件，如果需要对复杂类型的数组进行排序，则需要执行此操作。 在这种情况下，数组元素类型必须实现 <xref:System.IComparable.CompareTo%2A> 方法。
 
 ```cpp
 // array_sort.cpp
@@ -518,11 +519,11 @@ int main() {
 }
 ```
 
-## <a name="sorting-arrays-by-using-custom-criteria"></a>通过使用自定义条件对数组进行排序
+## <a name="sorting-arrays-by-using-custom-criteria"></a>使用自定义条件对数组进行排序
 
-要对包含基本的内部类型的数组进行排序，只需调用`Array::Sort`方法。 但是，对包含复杂类型，或若要重写默认排序条件，请重写的排序数组<xref:System.IComparable.CompareTo%2A>方法。
+若要对包含基本内部类型的数组进行排序，只需调用 `Array::Sort` 方法。 但是，若要对包含复杂类型的数组进行排序或重写默认排序条件，请重写 <xref:System.IComparable.CompareTo%2A> 方法。
 
-在以下示例中，一种结构名为`Element`派生自<xref:System.IComparable>，并已写入到提供<xref:System.IComparable.CompareTo%2A>用作排序条件的两个整数平均值的方法。
+在下面的示例中，名为的结构 `Element` 是从派生的 <xref:System.IComparable> ，并被编写为提供一个 <xref:System.IComparable.CompareTo%2A> 方法，该方法使用两个整数的平均值作为排序条件。
 
 ```cpp
 using namespace System;
@@ -568,7 +569,7 @@ int main() {
 
 ## <a name="array-covariance"></a>数组协方差
 
-给定引用类 D 直接或间接基类的类 B，D 类型的数组可以分配给数组变量的类型 b。
+如果具有直接或间接基类 B 的给定引用类 D，则可以将类型为 D 的数组分配给类型为 B 的数组变量。
 
 ```cpp
 // clr_array_covariance.cpp
@@ -581,9 +582,9 @@ int main() {
 }
 ```
 
-对数组元素赋值应是赋值兼容与动态类型的数组。 向具有不兼容的类型的数组元素赋值会导致`System::ArrayTypeMismatchException`引发。
+对数组元素的赋值应与数组的动态类型赋值兼容。 向具有不兼容类型的数组元素赋值将导致 `System::ArrayTypeMismatchException` 引发。
 
-数组协方差不适用于值类类型的数组。 例如，Int32 数组不能转换为对象 ^ 数组，甚至不通过使用装箱。
+数组协方差不适用于值类类型的数组。 例如，不能将 Int32 数组转换为 Object ^ 数组，甚至不能使用装箱。
 
 ```cpp
 // clr_array_covariance2.cpp

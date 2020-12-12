@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： unary_negate 类
 title: unary_negate 类
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 33907bce7e03005488d23b3ac39666b6310b0e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684432"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207405"
 ---
 # <a name="unary_negate-class"></a>unary_negate 类
 
-提供成员函数的类模板，用于对指定一元函数的返回值求反。 在 c + + 17 中弃用，以支持[not_fn](functional-functions.md#not_fn)。
+提供成员函数的类模板，用于对指定一元函数的返回值求反。 在 c + + 17 中弃用，以支持 [not_fn](functional-functions.md#not_fn)。
 
 ## <a name="syntax"></a>语法
 
@@ -29,12 +30,12 @@ class unary_negate
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Func* \
+*求*\
 要求反的一元函数。
 
-*左*\
+*左中*\
 要求反的一元函数的操作数。
 
 ## <a name="return-value"></a>返回值
@@ -43,7 +44,7 @@ class unary_negate
 
 ## <a name="remarks"></a>备注
 
-类模板 *\_Func*中存储一元函数对象的副本。 它将其成员函数定义为返回 `!_Func(left)` `operator()`。
+类模板存储一元函数对象 *\_ Func* 的副本。 它将其成员函数定义 `operator()` 为返回 `!_Func(left)` 。
 
 很少直接使用 `unary_negate` 的构造函数。 Helper 函数 [not1](../standard-library/functional-functions.md#not1) 可提供更简单的方法，用于声明和使用 **unary_negator** 适配器谓词。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CIexp
 title: _CIexp
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: 90a8fdac4b3b671853d2274de26040e3bf67def4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bc1e4ccb081fe31f786fcd19d3d8c761a7472212
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918048"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209667"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -48,13 +49,13 @@ void __cdecl _CIexp();
 
 生成的值被将被推送到堆栈顶部。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [exp、expf、expl](../c-runtime-library/reference/exp-expf.md)

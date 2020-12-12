@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： thread 类
 title: thread 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.openlocfilehash: 19f7ae1fc95f531f509273f0eb9998c73fe7d47b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b9afa8e649fd2b3fb0fdaf339e4a6fbead5b4ef6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207457"
 ---
 # <a name="thread-class"></a>thread 类
 
@@ -56,7 +57,7 @@ class thread;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[thread](#thread)|构造 `thread` 对象。|
 
@@ -84,7 +85,7 @@ class thread;
 
 **命名空间:** std
 
-## <a name="threaddetach"></a><a name="detach"></a>thread：:d etach
+## <a name="threaddetach"></a><a name="detach"></a> thread：:d etach
 
 拆离相关联的线程。 操作系统负责释放终止的线程资源。
 
@@ -100,7 +101,7 @@ void detach();
 
 如果与调用对象相关联的线程无效，该函数将引发将引发一个错误代码为 `no_such_process` 的 `system_error`。
 
-## <a name="threadget_id"></a><a name="get_id"></a>thread：： get_id
+## <a name="threadget_id"></a><a name="get_id"></a> thread：： get_id
 
 返回关联线程的唯一标识符。
 
@@ -112,7 +113,7 @@ id get_id() const noexcept;
 
 一个 [thread:: id](#id_class) 对象，唯一标识相关联的线程，如果该对象没有任何关联的线程，则为 `thread::id()`。
 
-## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a>thread：： hardware_concurrency
+## <a name="threadhardware_concurrency"></a><a name="hardware_concurrency"></a> thread：： hardware_concurrency
 
 静态方法，返回硬件线程上下文数量的估计值。
 
@@ -124,7 +125,7 @@ static unsigned int hardware_concurrency() noexcept;
 
 硬件线程上下文数量的估计值。 如果无法计算该值或该值未正确定义，此方法将返回 0。
 
-## <a name="threadid-class"></a><a name="id_class"></a>thread：： id 类
+## <a name="threadid-class"></a><a name="id_class"></a> thread：： id 类
 
 为过程中的每个执行线程提供唯一标识符。
 
@@ -140,7 +141,7 @@ class thread::id {
 
 所有默认构造的 `thread::id` 对象都相等。
 
-## <a name="threadjoin"></a><a name="join"></a>thread：： join
+## <a name="threadjoin"></a><a name="join"></a> thread：： join
 
 阻止，直到完成与调用对象相关联的执行线程。
 
@@ -152,9 +153,9 @@ void join();
 
 调用成功后，再继续调用 [get_id](#get_id)，以便调用对象返回默认值 [thread:: id](#id_class)，该默认值与任何现有线程的 `thread::id` 都不相等；如果调用不成功，`get_id` 返回的值保持不变。
 
-## <a name="threadjoinable"></a><a name="joinable"></a>thread：：可加入
+## <a name="threadjoinable"></a><a name="joinable"></a> thread：：可加入
 
-指定关联的线程是否*可加入*。
+指定关联的线程是否 *可加入*。
 
 ```cpp
 bool joinable() const noexcept;
@@ -162,13 +163,13 @@ bool joinable() const noexcept;
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果关联的线程为*可加入*，则为;否则为 **`false`** 。
+**`true`** 如果关联的线程为 *可加入*，则为;否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
-如果 `get_id() != id()`，则线程对象可联接**。
+如果 `get_id() != id()`，则线程对象可联接。
 
-## <a name="threadnative_handle"></a><a name="native_handle"></a>thread：： native_handle
+## <a name="threadnative_handle"></a><a name="native_handle"></a> thread：： native_handle
 
 返回表示线程句柄的特定于实现的类型。 可以以特定于实现的方式使用线程句柄。
 
@@ -180,7 +181,7 @@ native_handle_type native_handle();
 
 `native_handle_type` 被定义为可强制转化为 `void *` 的 Win32 `HANDLE`。
 
-## <a name="threadoperator"></a><a name="op_eq"></a>thread：： operator =
+## <a name="threadoperator"></a><a name="op_eq"></a> thread：： operator =
 
 将指定对象的线程与当前对象相关联。
 
@@ -188,7 +189,7 @@ native_handle_type native_handle();
 thread& operator=(thread&& Other) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*\
 `thread` 对象。
@@ -203,7 +204,7 @@ thread& operator=(thread&& Other) noexcept;
 
 建立关联后，将 `Other` 设置为默认构造状态。
 
-## <a name="threadswap"></a><a name="swap"></a>thread：： swap
+## <a name="threadswap"></a><a name="swap"></a> thread：： swap
 
 与指定的 `thread` 对象交换对象状态。
 
@@ -211,12 +212,12 @@ thread& operator=(thread&& Other) noexcept;
 void swap(thread& Other) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*\
 `thread` 对象。
 
-## <a name="threadthread-constructor"></a><a name="thread"></a>thread：： thread 构造函数
+## <a name="threadthread-constructor"></a><a name="thread"></a> thread：： thread 构造函数
 
 构造 `thread` 对象。
 
@@ -228,13 +229,13 @@ explicit thread(Fn&& F, Args&&... A);
 thread(thread&& Other) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *果*\
 要由线程执行的应用程序所定义的函数。
 
 *的*\
-要传递给*F*的参数的列表。
+要传递给 *F* 的参数的列表。
 
 *以外*\
 一个现有的 `thread` 对象。
@@ -243,11 +244,11 @@ thread(thread&& Other) noexcept;
 
 第一个构造函数构造与执行线程不相关联的对象。 通过调用 `get_id` 返回的构造对象的值为 `thread::id()`。
 
-第二个构造函数构造一个对象，该对象与新执行线程关联，并执行中定义的伪函数 `INVOKE` [\<functional>](../standard-library/functional.md) 。 如果用于启动新线程的资源不足，该函数将引发一个错误代码为 `resource_unavailable_try_again` 的 [system_error](../standard-library/system-error-class.md) 对象。 如果对*F*的调用由于未捕获的异常而终止，则调用[terminate](../standard-library/exception-functions.md#terminate) 。
+第二个构造函数构造一个对象，该对象与新执行线程关联，并执行中定义的伪函数 `INVOKE` [\<functional>](../standard-library/functional.md) 。 如果用于启动新线程的资源不足，该函数将引发一个错误代码为 `resource_unavailable_try_again` 的 [system_error](../standard-library/system-error-class.md) 对象。 如果对 *F* 的调用由于未捕获的异常而终止，则调用 [terminate](../standard-library/exception-functions.md#terminate) 。
 
 第三个构造函数将构造一个对象，该对象与关联 `Other` 的线程相关。 随后， `Other` 会被设置为默认构造状态。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [\<thread>](../standard-library/thread.md)

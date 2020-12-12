@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： random_device 类
 title: random_device 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-ms.openlocfilehash: b2176ce7dcdefdcf4fc0846cd18b1b01d4de2916
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 29f7f9d1359e488bbe15811193c034a0be12219b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207470"
 ---
 # <a name="random_device-class"></a>random_device 类
 
@@ -55,7 +56,7 @@ public:
 [信息量](#entropy)\
 [random_device：： operator ( # B1 ](#op_call)
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 该类描述了随机数的源，按 ISO C++ 标准，允许但不要求它为非确定性的或进行安全加密。 在 Visual Studio 实现中，产生的值是非确定性的且进行了安全加密，但是比从引擎和引擎适配器中创建的生成器运行得更慢（例如，对于大多数应用程序而言，会选择高质量且快速的引擎 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)）。
 
@@ -67,7 +68,7 @@ public:
 
 ## <a name="example"></a>示例
 
-以下代码演示了此类的基本功能和示例结果。 由于 `random_device` 的非确定性本质，**输出**部分中所示的随机值将不会与你的结果相匹配。 这是正常情况，也是预期的情况。
+以下代码演示了此类的基本功能和示例结果。 由于 `random_device` 的非确定性本质，**输出** 部分中所示的随机值将不会与你的结果相匹配。 这是正常情况，也是预期的情况。
 
 ```cpp
 // random_device_engine.cpp
@@ -115,7 +116,7 @@ a random value == 213725214
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数将按需初始化生成器，从而忽略字符串参数。 如果无法初始化 `random_device`，将引发派生自 [exception](../standard-library/exception-class.md) 的实现定义的类型的值。
 
@@ -127,7 +128,7 @@ random_device(const std::string& = "");
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将返回源的随机性的估计（以位为单位）。
 
@@ -139,10 +140,10 @@ double entropy() const noexcept;
 result_type operator()();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回由成员函数 `min()` 和 `max()` 确定的在闭区间 [`min, max`] 中均匀分布的值。 如果无法获取随机数，将引发派生自 [exception](../standard-library/exception-class.md) 的实现定义的类型的值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

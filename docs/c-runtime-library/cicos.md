@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CIcos
 title: _CIcos
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CIcos intrinsic
 - CIcos intrinsic
 ms.assetid: 6fc203fb-66f3-4ead-9784-f85833c26f1b
-ms.openlocfilehash: a9b18c2eb0a76885f3c3aad7bb1f03d7dea52c5c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1fcae85f03878a60d57c52d55cad683433f69d21
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209706"
 ---
 # <a name="_cicos"></a>_CIcos
 
@@ -48,13 +49,13 @@ void __cdecl _CIcos();
 
 生成的值被将被推送到浮点堆栈顶部。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [cos、cosf、cosl](../c-runtime-library/reference/cos-cosf-cosl.md)<br/>

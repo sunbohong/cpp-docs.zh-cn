@@ -1,61 +1,62 @@
 ---
+description: 详细了解：通知挂钩
 title: 通知挂钩
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 716d2b31faa71c77ec436662ce00368d15afc4b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320469"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209745"
 ---
 # <a name="notification-hooks"></a>通知挂钩
 
-通知挂钩将调用之前帮助器例程中执行以下操作：
+在帮助程序例程中执行以下操作之前，将调用通知挂钩：
 
-- 若要查看已加载，检查库存储句柄。
+- 系统将检查库的存储句柄，以查看其是否已加载。
 
-- **LoadLibrary**调用以尝试加载的 dll。
+- 调用 **LoadLibrary** 来尝试加载 DLL。
 
-- **GetProcAddress**调用以尝试获取过程的地址。
+- 调用了 **GetProcAddress** 来尝试获取过程的地址。
 
-- 返回到延迟导入负载转换 （thunk）。
+- 返回延迟导入加载 thunk。
 
-启用通知挂钩：
+通知挂钩已启用：
 
-- 通过提供新的定义的指针 **__pfnDliNotifyHook2**初始化为指向您自己的函数接收通知。
+- 通过提供新的指针定义 **__pfnDliNotifyHook2** 初始化为指向你自己的接收通知的函数。
 
    \- 或 -
 
-- 通过设置指针 **__pfnDliNotifyHook2**到您的挂钩函数之前对该程序的 DLL 的任何调用延迟加载。
+- 通过将指针设置 **__pfnDliNotifyHook2** 到挂钩函数，然后再调用对该程序延迟加载的 DLL。
 
-如果通知是**dliStartProcessing**，挂钩函数可以返回：
+如果通知是 **dliStartProcessing** 的，则挂钩函数可以返回：
 
-- NULL
+- Null
 
-   默认帮助器处理加载的 DLL。 这可用于调用只是供您参考。
+   默认 helper 处理 DLL 的加载。 这对于只是为了提供信息而被调用非常有用。
 
 - 函数指针
 
-   绕过默认延迟加载处理。 这样可以提供自己负载的处理程序。
+   绕过默认的延迟负载处理。 这允许你提供自己的负载处理程序。
 
-如果通知是**dliNotePreLoadLibrary**，挂钩函数可以返回：
+如果通知是 **dliNotePreLoadLibrary** 的，则挂钩函数可以返回：
 
-- 如果为 0，它只是需要信息性通知。
+- 如果只需要信息性通知，则为0。
 
-- 有关加载的 DLL，如果它加载 DLL 本身 HMODULE。
+- 加载的 DLL 的 HMODULE （如果它加载了 DLL 本身）。
 
-如果通知是**dliNotePreGetProcAddress**，挂钩函数可以返回：
+如果通知是 **dliNotePreGetProcAddress** 的，则挂钩函数可以返回：
 
-- 如果为 0，它只是需要信息性通知。
+- 如果只需要信息性通知，则为0。
 
-- 导入的函数的地址，如果挂钩函数获取本身的地址。
+- 导入函数的地址（如果挂钩函数获取地址本身）。
 
-如果通知是**dliNoteEndProcessing**，挂钩函数的返回值将被忽略。
+如果通知为 **dliNoteEndProcessing**，则忽略挂钩函数的返回值。
 
-如果此指针进行初始化 （非零），延迟加载 helper 将调用该函数在执行过程的某些通知点处。 函数指针具有以下定义：
+如果此指针初始化 (非零) ，延迟加载帮助器将在执行过程中的某些通知点调用函数。 函数指针具有以下定义：
 
 ```C
 // The "notify hook" gets called for every call to the
@@ -77,7 +78,7 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-通知传入**DelayLoadInfo**挂钩函数以及通知值的结构。 此数据与使用延迟加载 helper 例程的完全相同。 通知值将是中定义的值之一[结构和常量定义](structure-and-constant-definitions.md)。
+通知将在 **DelayLoadInfo** 结构中传递到挂钩函数以及通知值。 此数据与 "延迟加载帮助程序" 例程使用的数据相同。 通知值将是在 [结构和常量定义](structure-and-constant-definitions.md)中定义的值之一。
 
 ## <a name="see-also"></a>请参阅
 

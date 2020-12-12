@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：如何：在 c + +/CLI 中使用事件
 title: 如何：在 C++/CLI 中使用事件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 2ef9c879c160d4b27fc51afbdef0e709058bda79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fb31c79f7f3e337c93deda87e03d1b45cd1aed1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209186"
 ---
 # <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
 
@@ -647,6 +648,6 @@ hello
 hello
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [event](../extensions/event-cpp-component-extensions.md)

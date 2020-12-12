@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2975
 title: 编译器错误 C2975
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-ms.openlocfilehash: 70fc648de8bcf4f1e85edf3a12cc0b7d3d70625f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9f9108d1dc4e0fe61b6dd2135fb69bbaedfaedf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80201560"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210343"
 ---
 # <a name="compiler-error-c2975"></a>编译器错误 C2975
 
@@ -35,7 +36,7 @@ int main() {
 }
 ```
 
-当&#95; &#95;你使用 LINE&#95; &#95;作为编译时常量并使用[/zi](../../build/reference/z7-zi-zi-debug-information-format.md)时，也会发生 C2975。 一种解决方案是用[/zi](../../build/reference/z7-zi-zi-debug-information-format.md) （而不是 **/zi**）进行编译。
+当使用 &#95;&#95;行&#95;&#95; 作为使用 [/zi](../../build/reference/z7-zi-zi-debug-information-format.md)的编译时常量时也会发生 C2975。 一种解决方案是用 [/zi](../../build/reference/z7-zi-zi-debug-information-format.md) （而不是 **/zi**）进行编译。
 
 ```cpp
 // C2975b.cpp

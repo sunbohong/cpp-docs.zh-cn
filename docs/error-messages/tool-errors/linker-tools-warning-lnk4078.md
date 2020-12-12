@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：链接器工具警告 LNK4078
 title: 链接器工具警告 LNK4078
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-ms.openlocfilehash: 9ce72f476aa85434acd5277d0307ffc61e0a0214
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3fd22316d0775561c18fc2662c2f2ca843e64977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74990998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210122"
 ---
 # <a name="linker-tools-warning-lnk4078"></a>链接器工具警告 LNK4078
 
@@ -25,7 +26,7 @@ LINK 找到了两个或多个同名但属性不同的节。
 
 ## <a name="example"></a>示例
 
-LNK4078 也可能由重大更改引起： x86 上[init_seg](../../preprocessor/init-seg.md)命名的部分是读/写的，它现在为只读。
+LNK4078 也可能由重大更改引起： x86 上 [init_seg](../../preprocessor/init-seg.md) 命名的部分是读/写的，它现在为只读。
 
 下面的示例生成 LNK4078。
 

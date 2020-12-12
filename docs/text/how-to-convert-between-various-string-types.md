@@ -1,4 +1,5 @@
 ---
+description: 了解有关详细信息，请参阅如何：在各种字符串类型之间转换
 title: 如何：在各种字符串类型之间进行转换
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 068665c594f2fbeb531be21ded7ef16f3f5c1ef3
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 47a7107e8e776c0d9be584fd0cc166f48c90326c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207340"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>如何：在各种字符串类型之间进行转换
 
@@ -20,7 +21,7 @@ ms.locfileid: "91414511"
 
 ## <a name="example-convert-from-char-"></a>示例：从 char * 转换
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何将从转换 `char *` 为上面列出的其他字符串类型。 `char *`字符串 (也称为 C 样式字符串) 使用 null 字符指示字符串的末尾。 C 样式字符串通常需要每个字符一个字节，但也可以使用两个字节。 在下面的示例中， `char *` 字符串有时被称为多字节字符字符串，因为从 Unicode 字符串转换得出的字符串数据。 单字节和多字节字符 (`MBCS`) 函数可以对 `char *` 字符串执行运算。
 
@@ -119,7 +120,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-wchar_t-"></a>示例：从 wchar_t 转换
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何将从转换 `wchar_t *` 为上面列出的其他字符串类型。 一些字符串类型，包括 `wchar_t *` ，实现宽字符格式。 若要转换多字节和宽字符格式的字符串，可以使用单个函数调用（如）， `mbstowcs_s` 也可以使用类的构造函数调用 `CStringA` 。
 
@@ -241,7 +242,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-_bstr_t"></a>示例：从 _bstr_t 转换
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何将从转换 `_bstr_t` 为上面列出的其他字符串类型。 `_bstr_t`对象是一种封装宽字符字符串的方法 `BSTR` 。 BSTR 字符串具有长度值，不使用空字符来终止字符串，但转换为的字符串类型可能需要终止 null。
 
@@ -339,7 +340,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-ccombstr"></a>示例：从 CComBSTR 转换
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何将从转换 `CComBSTR` 为上面列出的其他字符串类型。 与 _bstr_t 一样， `CComBSTR` 对象是一种封装宽字符 bstr 字符串的方法。 BSTR 字符串具有长度值，不使用空字符来终止字符串，但转换为的字符串类型可能需要终止 null。
 
@@ -447,7 +448,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-cstring"></a>示例：从 CString 转换
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何将从转换 `CString` 为上面列出的其他字符串类型。 `CString` 基于 TCHAR 数据类型，该数据类型又取决于是否定义了符号 `_UNICODE` 。 如果 `_UNICODE` 未定义， `TCHAR` 则将定义为 char 并且 `CString` 包含多字节字符串; 如果 `_UNICODE` 定义，则将定义为， `TCHAR` **`wchar_t`** 并 `CString` 包含宽字符字符串。
 
@@ -589,7 +590,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-basic_string"></a>示例：从 basic_string 转换
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何将从转换 `basic_string` 为上面列出的其他字符串类型。
 
@@ -683,7 +684,7 @@ Hello, World! (System::String)
 
 ## <a name="example-convert-from-systemstring"></a>示例：从 System：： String 转换
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何从宽字符 (Unicode) [System：： String](/dotnet/api/system.string) 转换为上面列出的其他字符串类型。
 

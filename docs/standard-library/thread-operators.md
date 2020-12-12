@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; thread &gt; 运算符
 title: '&lt;thread&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 26ed8157685502618fe6fb82fbf9c9ad4c47cba3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3992dccf051622bcf854c1843f1bdeb15d227731
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845024"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207418"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 运算符
 
@@ -45,7 +46,7 @@ bool operator>= (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `thread::id` 对象。
@@ -57,7 +58,7 @@ bool operator>= (
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不引发任何异常。
 
@@ -71,7 +72,7 @@ bool operator> (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `thread::id` 对象。
@@ -83,7 +84,7 @@ bool operator> (
 
 `Right < Left`
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不引发任何异常。
 
@@ -97,7 +98,7 @@ bool operator<= (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `thread::id` 对象。
@@ -109,7 +110,7 @@ bool operator<= (
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不引发任何异常。
 
@@ -123,7 +124,7 @@ bool operator<(
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `thread::id` 对象。
@@ -133,9 +134,9 @@ bool operator<(
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果在合计*顺序中**靠左*，则为;否则为 **`false`** 。
+**`true`** 如果在合计 *顺序中**靠左*，则为;否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该运算符定义所有 `thread::id` 对象的总排序。 这些对象可以用作关联容器中的键。
 
@@ -151,7 +152,7 @@ bool operator!= (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `thread::id` 对象。
@@ -163,7 +164,7 @@ bool operator!= (
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不引发任何异常。
 
@@ -177,7 +178,7 @@ bool operator== (
     thread::id Right) noexcept
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `thread::id` 对象。
@@ -189,7 +190,7 @@ bool operator== (
 
 **`true`** 如果两个对象表示相同的执行线程，或者如果这两个对象都不表示执行线程，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不引发任何异常。
 
@@ -203,7 +204,7 @@ basic_ostream<Elem, Tr>& operator<<(
     basic_ostream<Elem, Tr>& Ostr, thread::id Id);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ostr*\
 一个 [basic_ostream](../standard-library/basic-ostream-class.md) 对象。
@@ -215,12 +216,12 @@ basic_ostream<Elem, Tr>& operator<<(
 
 *Ostr*。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将 *Id* 插入 *Ostr*。
 
 如果两个`thread::id` 对象相等，这些对象的文本表示形式相同。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<thread>](../standard-library/thread.md)

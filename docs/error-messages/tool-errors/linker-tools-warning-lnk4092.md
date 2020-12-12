@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：链接器工具警告 LNK4092
 title: 链接器工具警告 LNK4092
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4092
 ms.assetid: d569ec47-a338-40e1-940b-8a8061459acb
-ms.openlocfilehash: 706ab843f4b079b507033af76a7f407816fce820
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6ef835981a8ed7921147697d6ed9fc79ceeb7033
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183353"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210005"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>链接器工具警告 LNK4092
 
@@ -26,4 +27,4 @@ int var = 1;
 int *pvar = &var;
 ```
 
-链接器无法解析 `pvar`，因为它的值取决于在内存中加载 DLL 的位置，因此它将重定位记录置于 DLL 中。 将 DLL 加载到内存中时，可以解析 `var` 的地址并 `pvar` 分配。 如果其他进程加载同一 DLL 但无法在同一地址加载它，则将为第二个进程更新 `var` 地址的重定位，第一个进程的地址空间将指向错误的地址。
+链接器无法解析 `pvar` ，因为它的值取决于 dll 加载到内存中的哪个位置，因此它将重定位记录置于 dll 中。 当 DLL 加载到内存中时， `var` 可以解析和分配的地址 `pvar` 。 如果其他进程加载同一 DLL 但无法在同一地址加载它，则 `var` 将为第二个进程更新地址的重定位，第一个进程的地址空间将指向错误的地址。

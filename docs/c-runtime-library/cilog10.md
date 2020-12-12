@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CIlog10
 title: _CIlog10
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _CIlog10 intrinsic
 - CIlog10 intrinsic
 ms.assetid: 05d7fcaa-3cff-4cc5-8d44-015e7cacba24
-ms.openlocfilehash: ba5868892a352f071774a817e375c1f43505ed02
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e10dbe43eb9799b62a0ede515efaf75658fee932
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918013"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97209641"
 ---
 # <a name="_cilog10"></a>_CIlog10
 
@@ -48,13 +49,13 @@ void __cdecl _CIlog10();
 
 生成的值被将被推送到堆栈顶部。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [log、logf、log10、log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

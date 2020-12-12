@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2955
 title: 编译器错误 C2955
 ms.date: 03/28/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-ms.openlocfilehash: 8afdeaf43c0c9789753b9165f1e8a8287aaac76d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 0d81410aaf9b111b8c601a28ef50d5c4d377d5f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210612"
 ---
 # <a name="compiler-error-c2955"></a>编译器错误 C2955
 
@@ -19,7 +20,7 @@ ms.locfileid: "74742868"
 
 在没有模板和泛型自变量列表的情况下，你不能将类模板或类泛型用作标识符。
 
-有关详细信息，请参阅[类模板](../../cpp/class-templates.md)。
+有关详细信息，请参阅 [类模板](../../cpp/class-templates.md)。
 
 下面的示例生成 C2955，并演示如何修复此错误：
 
@@ -70,7 +71,7 @@ int main() {
 
 ## <a name="example"></a>示例
 
-**Visual Studio 2017 及更高版本：** 当模板出现在模板参数列表中时（例如，作为默认模板参数或非类型模板参数的一部分），编译器会正确地诊断缺少的模板参数列表。 下列代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中引发错误。
+**Visual Studio 2017 及更高版本：** 当模板出现在模板参数列表中时，编译器会正确诊断缺少的模板参数列表 (例如，作为默认模板参数或非类型模板参数) 的一部分。 下列代码在 Visual Studio 2015 中进行编译，但在 Visual Studio 2017 中引发错误。
 
 ```
 template <class T> class ListNode;

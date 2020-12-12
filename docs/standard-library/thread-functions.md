@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下方面的详细信息： &lt; 线程 &gt; 函数
 title: '&lt;thread&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 64a62180243d77f361c243b2a89de56b0a14920e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 37e1f745b66c45f5e3ad6bd4be2a2837042b8433
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207431"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 函数
 
@@ -51,14 +52,14 @@ class Period>
 inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Rel_time*\
 用于指定时间间隔的 [duration](../standard-library/duration-class.md) 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-函数会阻止调用线程，至少 *Rel_time*指定的时间。 此函数不引发任何异常。
+函数会阻止调用线程，至少 *Rel_time* 指定的时间。 此函数不引发任何异常。
 
 ## <a name="sleep_until"></a><a name="sleep_until"></a> sleep_until
 
@@ -71,12 +72,12 @@ void sleep_until(const chrono::time_point<Clock, Duration>& Abs_time);
 void sleep_until(const xtime *Abs_time);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Abs_time*\
 表示时间点。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不引发任何异常。
 
@@ -88,7 +89,7 @@ void sleep_until(const xtime *Abs_time);
 void swap(thread& Left, thread& Right) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `thread` 对象。
@@ -96,7 +97,7 @@ void swap(thread& Left, thread& Right) noexcept;
 *然后*\
 正确的 `thread` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数调用 `Left.swap(Right)`。
 
@@ -108,6 +109,6 @@ void swap(thread& Left, thread& Right) noexcept;
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<thread>](../standard-library/thread.md)

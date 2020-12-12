@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：递增和递减指针
 title: 递增和递减指针
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,54 +8,54 @@ helpviewer_keywords:
 - pointers [C++], multibyte characters
 - decrementing pointers
 ms.assetid: 0872b4a0-e2bd-4004-8319-070efb76f2fd
-ms.openlocfilehash: cdaee3d13a8ceab47f62100953a0eb6e51bfc255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c333c11c5a0b68bf013dbd374eb1cc4e5f00abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410650"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207314"
 ---
 # <a name="incrementing-and-decrementing-pointers"></a>递增和递减指针
 
 使用以下提示：
 
-- 指向前导字节而非尾字节。 它是有一个指针指向结尾字节通常不安全的。 它是转发而不是按相反的顺序扫描一个字符串，通常更安全。
+- 指向前导字节，而不是尾字节。 具有指向尾字节的指针通常是不安全的。 通常，向前扫描字符串而不是相反。
 
-- 有指针递增/递减函数和宏可在整个字符上移动：
+- 有指针增量/减量函数和宏可用于整个字符：
 
     ```cpp
     sz1++;
     ```
 
-   将成为：
+    变为：
 
     ```cpp
     sz1 = _mbsinc( sz1 );
     ```
 
-   `_mbsinc`并`_mbsdec`函数正确递增和递减中`character`单位，与字符大小无关。
+   `_mbsinc`和 `_mbsdec` 函数以单元的方式正确递增和递减 `character` ，而不考虑字符大小。
 
-- 对于递减，你需要指向的字符串，如以下所示：
+- 对于减量，需要一个指向字符串开头的指针，如下所示：
 
     ```cpp
     sz2--;
     ```
 
-   将成为：
+    变为：
 
     ```cpp
     sz2 = _mbsdec( sz2Head, sz2 );
     ```
 
-   或者，头指针可以指向有效的字符在字符串中，以便：
+   或者，头指针可能是字符串中的有效字符，例如：
 
     ```cpp
     sz2Head < sz2
     ```
 
-   必须具有指向已知的有效前导字节的指针。
+   您必须具有指向已知的有效前导字节的指针。
 
-- 你可能想要维护一个指向上一个字符的更快地调用`_mbsdec`。
+- 为了更快地调用，你可能需要维护一个指向前一个字符的指针 `_mbsdec` 。
 
 ## <a name="see-also"></a>请参阅
 
