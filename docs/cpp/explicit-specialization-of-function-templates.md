@@ -1,4 +1,5 @@
 ---
+description: 了解更多：函数模板的显式专用化
 title: 函数模板的显式专用化
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: 638b5dbca1b3c0c9b9c9c946418ea70354ff6266
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c77ebce3383ba2051ac010c39a7dd0eb37b8111a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181496"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>函数模板的显式专用化
 
@@ -23,7 +24,7 @@ ms.locfileid: "87220556"
 template<> void MySwap(double a, double b);
 ```
 
-利用此声明，您可以为变量定义不同的函数 **`double`** 。 与非模板函数一样，应用标准类型转换（如将类型的变量升级 **`float`** 为 **`double`** ）。
+利用此声明，您可以为变量定义不同的函数 **`double`** 。 与非模板函数一样，标准类型转换 (例如，将类型为的变量升级 **`float`** 为 **`double`**) 。
 
 ## <a name="example"></a>示例
 
@@ -51,6 +52,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [函数模板](../cpp/function-templates.md)

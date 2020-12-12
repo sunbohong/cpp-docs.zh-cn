@@ -1,4 +1,5 @@
 ---
+description: 了解有关详细信息，请参阅如何：将 System：： String 转换为标准字符串
 title: 如何：将 System::String 转换为标准字符串
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - C++ Standard Library, converting System::String to standard string
 - string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-ms.openlocfilehash: 7dd73b8fed98918135b66af1b6351977426cd26e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2bcdaef743f2856f2db20dae8b804bb33546ea0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181326"
 ---
 # <a name="how-to-convert-systemstring-to-standard-string"></a>如何：将 System::String 转换为标准字符串
 
-可以将 <xref:System.String> 转换为 `std::string` 或 `std::wstring`，而无需在 Vcclr 中使用 `PtrToStringChars`。
+可以将转换 <xref:System.String> 为 `std::string` 或 `std::wstring` ，而无需 `PtrToStringChars` 在 Vcclr 中使用。
 
 ## <a name="example"></a>示例
 
@@ -63,6 +64,6 @@ abcd
 efgh
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

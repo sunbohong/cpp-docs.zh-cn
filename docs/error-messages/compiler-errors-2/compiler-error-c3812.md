@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3812
 title: 编译器错误 C3812
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3812
 ms.assetid: 326ac706-9a5f-4851-b9d2-b90c64c75532
-ms.openlocfilehash: 4f372b5fd8533ffacbe0dcd33b3449e44b1cc362
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 710968efbfbf0e2e008ab18e50d6a7e8d0cd2e1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180976"
 ---
 # <a name="compiler-error-c3812"></a>编译器错误 C3812
 
-property 必须是属性声明中的第一个标记
+"property" 必须是属性声明中的第一个标记
 
-声明一个属性时`__property`关键字必须是在行上的第一个标记。
+声明属性时， `__property` 关键字必须是行中的第一个标记。
 
-C3812 才可访问使用已过时的编译器选项 **/clr: oldsyntax**。
+只能使用过时的编译器选项 **/clr： oldSyntax** 来访问 C3812。

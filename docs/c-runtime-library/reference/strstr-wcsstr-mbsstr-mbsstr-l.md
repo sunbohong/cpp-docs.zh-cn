@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strstr、wcsstr、_mbsstr、_mbsstr_l
 title: strstr、wcsstr、_mbsstr、_mbsstr_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 3ac4df470e40b35257495d51c5d2d0efdb9310af
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05f7cd3b03a56cb5e0e9343bd8cdee98af124988
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181678"
 ---
 # <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -120,9 +121,9 @@ const unsigned char *_mbsstr_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 要搜索的 null 终止的字符串。
 
 *strSearch*<br/>
@@ -133,20 +134,20 @@ const unsigned char *_mbsstr_l(
 
 ## <a name="return-value"></a>返回值
 
-返回指向*str*中第一次出现的*strSearch*的指针; 如果*strSearch*未出现在*str*中，则返回 NULL。 如果*strSearch*指向长度为零的字符串，则函数将返回*str*。
+返回指向 *str* 中第一次出现的 *strSearch* 的指针; 如果 *strSearch* 未出现在 *str* 中，则返回 NULL。 如果 *strSearch* 指向长度为零的字符串，则函数将返回 *str*。
 
 ## <a name="remarks"></a>备注
 
-`strstr`函数返回一个指针，该指针指向*Str*中*strSearch*的第一个匹配项。 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果*str*或*strSearch*为 NULL，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `_mbsstr` 将设置 `errno` 为 EINVAL，并返回0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。
+`strstr`函数返回一个指针，该指针指向 *Str* 中 *strSearch* 的第一个匹配项。 搜索不包括结尾的 null 字符。 `wcsstr` 是宽字符版本的 `strstr`；`_mbsstr` 是多字节字符版本。 `wcsstr` 的参数和返回值是宽字符字符串；而 `_mbsstr` 的则是多字节字符字符串。 `_mbsstr` 会验证其参数。 如果 *str* 或 *strSearch* 为 NULL，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。 如果允许执行继续，则 `_mbsstr` 将设置 `errno` 为 EINVAL，并返回0。 `strstr` 和 `wcsstr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
 > [!IMPORTANT]
 > 这些函数可能从缓冲区溢出问题引发威胁。 缓冲区溢出问题可用来攻击系统，因为它们可能允许执行任意代码，这可能导致没有保证的权限提升。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向非的 **`const`** 指针 **`const`** 。 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS **`const`** 。 如果 **`const`** 这两个 c + + 重载都需要非行为，请定义符号 _CONST_RETURN。
 
-输出值受 LC_CTYPE 的区域设置类别设置的影响;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 没有 **_l**后缀的这些函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l**后缀的版本相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受 LC_CTYPE 的区域设置类别设置的影响;有关详细信息，请参阅 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 没有 **_l** 后缀的这些函数的版本对与区域设置相关的行为使用当前区域设置;具有 **_l** 后缀的版本相同，只不过它们改用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -202,11 +203,11 @@ String to be searched:
 lazy found at position 36
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>
