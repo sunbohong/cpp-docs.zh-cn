@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： (OLE) 的菜单和资源
 title: 菜单和资源 (OLE)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,18 +19,18 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: e705f28476df7b594f9648aee8317759211c66c9
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a6ec4f2750a99935cb0113a3ad607be8a80d4bfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626214"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133141"
 ---
 # <a name="menus-and-resources-ole"></a>菜单和资源 (OLE)
 
 这一组文章介绍了 MFC OLE 文档应用程序中的菜单和资源的使用。
 
-OLE 视觉对象编辑对 OLE 文档应用程序提供的菜单和其他资源施加了其他要求，因为有多种模式可以启动和使用容器和服务器（组件）应用程序。 例如，完全服务器应用程序可以使用以下三种模式之一运行：
+OLE 视觉对象编辑对 OLE 文档应用程序提供的菜单和其他资源施加了其他要求，因为有多种模式可以启动和使用容器和服务器 (组件) 应用程序。 例如，完全服务器应用程序可以使用以下三种模式之一运行：
 
 - 独立。
 
@@ -39,11 +40,11 @@ OLE 视觉对象编辑对 OLE 文档应用程序提供的菜单和其他资源�
 
 这需要三个单独的菜单布局，每个适用于每种可能的应用程序模式。 每个新模式还需要快捷键对应表。 容器应用程序不一定支持就地激活;如果是这样，则需要新的菜单结构和关联的快捷键对应表。
 
-就地激活要求容器和服务器应用程序必须协商菜单、工具栏和状态栏空间。 所有资源都必须在设计时考虑到这一点。 项目[菜单和资源：菜单合并](menus-and-resources-menu-merging.md)详细介绍了此主题。
+就地激活要求容器和服务器应用程序必须协商菜单、工具栏和状态栏空间。 所有资源都必须在设计时考虑到这一点。 项目 [菜单和资源：菜单合并](menus-and-resources-menu-merging.md) 详细介绍了此主题。
 
 由于这些问题，使用应用程序向导创建的 OLE 文档应用程序最多可以有四个单独的菜单和快捷键对应表资源。 这些原因如下：
 
-|资源名称|用途|
+|资源名称|使用|
 |-------------------|---------|
 |IDR_MAINFRAME|在未打开任何文件的情况下在 MDI 应用程序中使用，或在 SDI 应用程序中使用，而不考虑打开的文件。 这是在非 OLE 应用程序中使用的标准菜单。|
 |IDR_ \<project> 类型|如果文件已打开，则在 MDI 应用程序中使用。 当应用程序独立运行时使用。 这是在非 OLE 应用程序中使用的标准菜单。|
@@ -60,6 +61,6 @@ OLE 视觉对象编辑对 OLE 文档应用程序提供的菜单和其他资源�
 
 - [菜单和资源：菜单合并](menus-and-resources-menu-merging.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE](ole-in-mfc.md)

@@ -1,15 +1,16 @@
 ---
+description: 了解更多相关信息： MFC 程序或控件的源文件和头文件
 title: MFC 程序或控件的源文件和头文件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: 6a6561e993016e70764186114e1f7cabd93cdc2d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: dfe20b2e458db72a14c9ccc78df6f481442b72b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137847"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程序或控件的源文件和头文件
 
@@ -19,8 +20,8 @@ ms.locfileid: "65707447"
 
 |文件名|说明|
 |---------------|-----------------|
-|projname.h|程序或 DLL 的主包含文件。 它包含其他头文件的所有全局符号和 `#include` 指令。 它从 `CWinApp` 派生 `CPrjnameApp` 类并声明 `InitInstance` 成员函数。 对于控件，`CPrjnameApp` 类派生自 `COleControlModule`。|
-|Projname.cpp|主程序源文件。 它创建一个派生自 `CWinApp` 的 `CPrjnameApp` 类的对象，并替代 `InitInstance` 成员函数。<br /><br /> 对于可执行文件，可使用 `CPrjnameApp::InitInstance` 执行多项操作。 可注册作为文档和视图之间的连接的文档模板；创建主框架窗口；创建一个空文档（如果已将一个文档指定为应用程序的命令行参数，则打开一个文档）。<br /><br /> 对于 DLL 和 ActiveX（以前称为 OLE）控件，`CProjNameApp::InitInstance` 通过调用 `COleObjectFactory::RegisterAll` 向 OLE 注册控件的对象工厂，并调用 `AfxOLEInit`。 此外，成员函数 `CProjNameApp::ExitInstance` 还可用于通过调用 AfxOleTerm 从内存卸载控件。<br /><br /> 该文件还通过实现 `DllRegisterServer` 和 `DllUnregisterServer` 函数在 Windows 注册数据库中注册和取消注册该控件。|
+|*Projname*|程序或 DLL 的主包含文件。 它包含其他头文件的所有全局符号和 `#include` 指令。 它从 `CWinApp` 派生 `CPrjnameApp` 类并声明 `InitInstance` 成员函数。 对于控件，`CPrjnameApp` 类派生自 `COleControlModule`。|
+|*Projname*.cpp|主程序源文件。 它创建一个派生自 `CWinApp` 的 `CPrjnameApp` 类的对象，并替代 `InitInstance` 成员函数。<br /><br /> 对于可执行文件，可使用 `CPrjnameApp::InitInstance` 执行多项操作。 可注册作为文档和视图之间的连接的文档模板；创建主框架窗口；创建一个空文档（如果已将一个文档指定为应用程序的命令行参数，则打开一个文档）。<br /><br /> 对于 DLL 和 ActiveX（以前称为 OLE）控件，`CProjNameApp::InitInstance` 通过调用 `COleObjectFactory::RegisterAll` 向 OLE 注册控件的对象工厂，并调用 `AfxOLEInit`。 此外，成员函数 `CProjNameApp::ExitInstance` 还可用于通过调用 AfxOleTerm 从内存卸载控件。<br /><br /> 该文件还通过实现 `DllRegisterServer` 和 `DllUnregisterServer` 函数在 Windows 注册数据库中注册和取消注册该控件。|
 |Projnamectrl.h, Projnamectrl.cpp|声明并实现 `CProjnameCtrl` 类。 `CProjnameCtrl` 派生自 `COleControl`，并定义某些成员函数的框架实现，这些函数用于初始化、绘制和序列化（加载和保存）控件。 还定义消息、事件和调度映射。|
 |Projnamedlg.cpp, Projnamedlg.h|选择基于对话框的应用程序时创建。 文件派生并实现名为 `CProjnameDlg` 的对话框类，并包括用于初始化对话框和执行对话框数据交换 (DDX) 的框架成员函数。 “关于”对话框类也位于这些文件中，而不是位于 Projname.cpp 中。|
 |Dlgproxy.cpp, Dlgproxy.h|在基于对话框的程序中，主对话框的项目自动化代理类的实现和头文件。 仅当选择了“自动化支持”时才使用此选项。|

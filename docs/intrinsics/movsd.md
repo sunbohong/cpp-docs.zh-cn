@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __movsd
 title: __movsd
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 4a735327253e0a3c605a17119e0821b915fd9394
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133180"
 ---
 # <a name="__movsd"></a>__movsd
 
 **Microsoft 专用**
 
-生成 Move String (`rep movsd`) 指令。
+) 指令生成移动字符串 (`rep movsd` 。
 
 ## <a name="syntax"></a>语法
 
@@ -31,12 +32,12 @@ void __movsd(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
 弄操作的目标。
 
-*Source*\
+*源程序*\
 中操作的源。
 
 *计*\
@@ -44,15 +45,15 @@ void __movsd(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__movsd`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-结果是将*源*指向的第一个计数的第一个*计数*复制到*目标*字符串。
+结果是将 *源* 指向的第一个计数的第一个 *计数* 复制到 *目标* 字符串。
 
 此例程仅可用作内部函数。
 

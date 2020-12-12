@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：连接点全局函数
 title: 连接点全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 1a648f49b0f3715fd322b1099dcebbf194f57a10
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 33a9f81b086b572bb31f730e4a6ce1bac0fb45d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141136"
 ---
 # <a name="connection-point-global-functions"></a>连接点全局函数
 
@@ -22,7 +23,7 @@ ms.locfileid: "88833525"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[AtlAdvise](#atladvise)|在对象的连接点和客户端的接收器间创建连接。|
 |[AtlUnadvise](#atlunadvise)|终止通过建立的连接 `AtlAdvise` 。|
@@ -47,7 +48,7 @@ HRESULT    AtlAdvise(
     LPDWORD pdw);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnkCP*<br/>
 中指向客户端要连接到的对象的的指针 `IUnknown` 。
@@ -65,7 +66,7 @@ HRESULT    AtlAdvise(
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 接收器实现连接点支持的输出接口。 客户端使用 *pdw* cookie 来删除连接，方法是将连接传递给 [AtlUnadvise](#atlunadvise)。
 
@@ -87,7 +88,7 @@ HRESULT    AtlUnadvise(
     DWORD dw);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnkCP*<br/>
 中指向 `IUnknown` 客户端连接到的对象的的指针。
@@ -117,7 +118,7 @@ HRESULT    AtlUnadvise(
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *五*<br/>
 中指向包含接收器映射的对象的指针。

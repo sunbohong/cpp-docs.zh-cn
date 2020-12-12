@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComCompositeControl 类
 title: CComCompositeControl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-ms.openlocfilehash: a37386c40f119c855dcb8584a72ce85c48a66381
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5c4d5b3e04855d570cab3a85bfe3a4c59482d990
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834734"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146817"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 类
 
@@ -37,7 +38,7 @@ template <class T>
 class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 从 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 或 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)派生的类，以及要支持用于复合控件的任何其他接口。
@@ -46,14 +47,14 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|构造函数。|
 |[CComCompositeControl：： ~ CComCompositeControl](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|调用此方法可通知或 unadvise 复合控件承载的所有控件。|
 |[CComCompositeControl::CalcExtent](#calcextent)|调用此方法可计算用于承载复合控件的对话框资源的 HIMETRIC 单位的大小。|
@@ -63,12 +64,12 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CComCompositeControl：： m_hbrBackground](#m_hbrbackground)|背景画笔。|
 |[CComCompositeControl：： m_hWndFocus](#m_hwndfocus)|当前具有焦点的窗口的句柄。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 派生自类的类 `CComCompositeControl` 继承 ActiveX 复合控件的功能。 派生自的 ActiveX 控件 `CComCompositeControl` 由标准对话框承载。 这些类型的控件称为复合控件，因为它们能够承载 (本机 Windows 控件和 ActiveX 控件) 的其他控件。
 
@@ -110,14 +111,14 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 HRESULT AdviseSinkMap(bool bAdvise);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAdvise*<br/>
 如果建议所有控件，则为 True;否则为 false。
 
 ### <a name="return-value"></a>返回值
 
-| 值 | 说明 |
+| 值 | 描述 |
 |--|--|
 | `S_OK` | 事件接收器映射中的所有控件都已成功连接或断开与其事件源的连接。 |
 | `E_FAIL` | 并非事件接收器映射中的所有控件都可以成功连接或断开与其事件源的连接。 |
@@ -126,7 +127,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 | `CONNECT_E_CANNOTCONNECT` | 接收器不支持此连接点所需的接口。 |
 | `CONNECT_E_NOCONNECTION` | Cookie 值不表示有效的连接。 此错误通常表示控件的事件接收器映射中的条目出现问题，或在或基类中使用的模板自变量出现 `IDispEventImpl` 问题 `IDispEventSimpleImpl` 。 |
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法的基实现在事件接收器映射中搜索各个条目。 然后，它将建议或 unadvises 连接到事件接收器映射的接收器条目所描述的 COM 对象。 此成员方法还依赖于这样一个事实：派生类从的一个实例继承，以 `IDispEventImpl` 对接收器映射中要通知或 unadvised 的每个控件继承。
 
@@ -138,7 +139,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 BOOL CalcExtent(SIZE& size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 对要 `SIZE` 通过此方法填充的结构的引用。
@@ -147,7 +148,7 @@ BOOL CalcExtent(SIZE& size);
 
 如果控件由对话框承载，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 大小在 *size* 参数中返回。
 
@@ -162,7 +163,7 @@ HWND Create(
     LPARAM dwInitParam = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 控件的父窗口的句柄。
@@ -177,7 +178,7 @@ HWND Create(
 
 新创建的复合控件对话框的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常在就地激活控件过程中调用此方法。
 
@@ -189,7 +190,7 @@ HWND Create(
 CComCompositeControl();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 [CComCompositeControl：： m_hbrBackground](#m_hbrbackground) 和 [CComCompositeControl：： m_hWndFocus](#m_hwndfocus) 数据成员初始化为 NULL。
 
@@ -201,7 +202,7 @@ CComCompositeControl();
 ~CComCompositeControl();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 删除后台对象（如果存在）。
 
@@ -215,19 +216,19 @@ virtual HWND CreateControlWindow(
     RECT& rcPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 控件的父窗口的句柄。
 
 *rcPos*<br/>
-复合控件在相对于 *hWndParent*的工作区坐标中的位置矩形。
+复合控件在相对于 *hWndParent* 的工作区坐标中的位置矩形。
 
 ### <a name="return-value"></a>返回值
 
 返回新创建的复合控件对话框的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法调用 [CComCompositeControl：： Create](#create) 和 [CComCompositeControl：： AdviseSinkMap](#advisesinkmap)。
 
@@ -259,7 +260,7 @@ HRESULT SetBackgroundColorFromAmbient();
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
 [复合控件基础知识](../../atl/atl-composite-control-fundamentals.md)<br/>

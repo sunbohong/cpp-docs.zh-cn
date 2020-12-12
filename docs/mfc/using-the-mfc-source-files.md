@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：使用 MFC 源文件
 title: 使用 MFC 源文件
 ms.date: 08/19/2019
 helpviewer_keywords:
@@ -11,22 +12,22 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-ms.openlocfilehash: acd702f5a032f9dca3480d287142583070701e84
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 42dc285bf4877c4bef70e430b6d2982f43e08d51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143255"
 ---
 # <a name="using-the-mfc-source-files"></a>使用 MFC 源文件
 
-Microsoft 基础类 (MFC) 库提供完整源代码。 头文件（.h）位于*\atlmfc\include*目录中。 实现文件（.cpp）位于*\atlmfc\src\mfc*目录中。
+Microsoft 基础类 (MFC) 库提供完整源代码。 标头文件 () 在 *\atlmfc\include* 目录中。  () 的实现文件位于 *\atlmfc\src\mfc* 目录中。
 
 本文介绍 MFC 用于注释每个类的各个部分的约定、这些注释的含义，以及在每个部分应该会发现的内容。 Visual Studio 向导对为您创建的类使用类似的约定，您可能会发现这些约定对您自己的代码很有用。
 
 你可能熟悉 **`public`** 、 **`protected`** 和 **`private`** c + + 关键字。 在 MFC 头文件中，可以找到每个类，每个类都有多个。 例如，公共成员变量和函数可能在多个 **`public`** 关键字下。 这是因为 MFC 根据成员变量和函数的使用来分隔它们，而不是允许的访问类型。 MFC 使用更 **`private`** 少。 通常，视为实现详细信息的项通常是 **`protected`** ，并且很多时候都是 **`public`** 。 虽然不建议访问实现的详细信息，但 MFC 会将决定权留给您。
 
-在 mfc 应用程序向导创建的 MFC 源文件和标头文件中，您将在类声明（通常按此顺序）中找到类似于下面的注释：
+在 mfc 应用程序向导创建的 MFC 源文件和标头文件中，您将在类声明中找到如下所示的注释 (此顺序) ：
 
 `// Constructors`
 
@@ -38,7 +39,7 @@ Microsoft 基础类 (MFC) 库提供完整源代码。 头文件（.h）位于*\a
 
 `// Implementation`
 
-## <a name="an-example-of-the-comments"></a><a name="an-example-of-the-comments"></a>注释示例
+## <a name="an-example-of-the-comments"></a><a name="an-example-of-the-comments"></a> 注释示例
 
 下面的类分部列表 `CStdioFile` 使用 MFC 在其类中使用的大多数标准注释，以将类成员分为其使用方式：
 
@@ -88,24 +89,24 @@ protected:
 
 ## <a name="-constructors-comment"></a>构造函数注释
 
-`// Constructors`MFC 类声明的部分声明构造函数（在 c + + 意义上）和真正使用对象所需的任何初始化函数。 例如， `CWnd::Create` 在构造函数部分，因为在使用 `CWnd` 对象之前，必须先调用 c + + 构造函数，然后调用函数，才能 "完全构造" `Create` 。 通常，这些成员是公共的。
+`// Constructors`MFC 类声明的部分声明 c + + (中的构造函数) 以及真正使用对象所需的任何初始化函数。 例如， `CWnd::Create` 在构造函数部分，因为在使用 `CWnd` 对象之前，必须先调用 c + + 构造函数，然后调用函数，才能 "完全构造" `Create` 。 通常，这些成员是公共的。
 
-例如，类 `CStdioFile` 具有五个构造函数，其中一个构造函数在[注释示例](#an-example-of-the-comments)中显示。
+例如，类 `CStdioFile` 具有五个构造函数，其中一个构造函数在 [注释示例](#an-example-of-the-comments)中显示。
 
 ## <a name="-attributes-comment"></a>特性注释
 
 MFC 类声明的 `// Attributes` 部分包含对象的公共特性（或属性）。 通常，特性是成员变量或获取/设置函数。 “Get”和“Set”函数可能是或可能不是虚拟的。 "Get" 函数通常是 **`const`** 这样的，因为在大多数情况下它们不会有副作用。 这些成员通常是公共的。 受保护的特性和私有特性通常在实现部分中找到。
 
-在来自类的示例列表中 `CStdioFile` ，在[注释的示例](#an-example-of-the-comments)下，列表包含一个成员变量， *m_pStream*。 类 `CDC` 在此注释下列出了近 20 个成员。
+在来自类的示例列表中 `CStdioFile` ，在 [注释的示例](#an-example-of-the-comments)下，列表包含一个成员变量， *m_pStream*。 类 `CDC` 在此注释下列出了近 20 个成员。
 
 > [!NOTE]
 > 大型类（如 `CDC` 和 `CWnd`）可能具有非常多的成员，因此只是在一个组中列出所有特性并不会大幅提高清晰性。 在这种情况下，类库使用其他注释作为标题来进一步描述这些成员。 例如，`CDC` 使用 `// Device-Context Functions`、`// Drawing Tool Functions`、`// Drawing Attribute Functions` 等。 表示特性的组将采用上述常用语法。 许多 OLE 类都具有一个称为 `// Interface Maps` 的实现部分。
 
 ## <a name="-operations-comment"></a>操作注释
 
-`// Operations`MFC 类声明的部分包含成员函数，你可以在对象上调用这些成员函数来执行操作或采取操作（执行操作）。 这些函数通常是不能的， **`const`** 因为它们通常有副作用。 它们可能是虚拟的，也可能是非虚拟的，具体取决于类的需求。 通常，这些成员是公共的。
+`// Operations`MFC 类声明的部分包含成员函数，这些函数可在对象上调用，使其执行操作，或采取操作 () 执行操作。 这些函数通常是不能的， **`const`** 因为它们通常有副作用。 它们可能是虚拟的，也可能是非虚拟的，具体取决于类的需求。 通常，这些成员是公共的。
 
-在类的示例列表中 `CStdioFile` ，在[注释示例](#an-example-of-the-comments)中，此列表包含以下注释中的三个成员函数： `WriteString` 和的两个重载 `ReadString` 。
+在类的示例列表中 `CStdioFile` ，在 [注释示例](#an-example-of-the-comments)中，此列表包含以下注释中的三个成员函数： `WriteString` 和的两个重载 `ReadString` 。
 
 与属性一样，可以进一步细分操作。
 
@@ -117,7 +118,7 @@ MFC 类声明的 `// Overridables` 部分包含您在需要修改基类行为时
 
 `virtual void OnDraw( ) = 0;`
 
-在类的示例列表中 `CStdioFile` ，在[注释示例](#an-example-of-the-comments)中，列表不包含可重写部分。 `CDocument`另一方面，类会列出大约10个可重写的成员函数。
+在类的示例列表中 `CStdioFile` ，在 [注释示例](#an-example-of-the-comments)中，列表不包含可重写部分。 `CDocument`另一方面，类会列出大约10个可重写的成员函数。
 
 在部分类中，您还可以查看注释 `// Advanced Overridables`。 这些函数是只有高级程序员应尝试重写的函数。 您可能永远不需要重写它们。
 
@@ -135,6 +136,6 @@ MFC 类声明的 `// Overridables` 部分包含您在需要修改基类行为时
 > [!NOTE]
 > 您可以在 `// Implementation` 注释的上面或下面找到剩余类型的注释。 在任一情况下，这些注释都描述在其下面声明的类型的成员。 如果这些注释出现在 `// Implementation` 注释下面，则应假设成员在将来版本的 MFC 中可能会更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [常规 MFC 主题](../mfc/general-mfc-topics.md)

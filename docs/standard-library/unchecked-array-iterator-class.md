@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息： unchecked_array_iterator 类
 title: unchecked_array_iterator 类
 ms.date: 11/04/2016
 f1_keywords:
 - stdext::unchecked_array_iterator
 ms.assetid: 693b3b30-4e3a-465b-be06-409700bc50b1
-ms.openlocfilehash: 5344a108f32b694b9dafac78dbb8eb7064cdf4cc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6f2bbe4c31a76101a04e8c5be6a4e0dcf67cf87e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455012"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132738"
 ---
-# <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator 类
+# <a name="unchecked_array_iterator-class"></a>unchecked_array_iterator 类
 
 通过 `unchecked_array_iterator` 类，可以将数组或指针包装到未经检查的迭代器。 使用此类作为原始指针或数组的包装器（使用 [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) 函数），可以有针对性地管理未经检查的指针警告，无需从全局静默处理这些警告。 如果可能，请优先使用此类的经检查版本 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。
 
@@ -33,11 +34,11 @@ class unchecked_array_iterator;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<iterator>
+**标头：**\<iterator>
 
 **命名空间：** stdext
 
 ## <a name="see-also"></a>请参阅
 
 [\<iterator>](../standard-library/iterator.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

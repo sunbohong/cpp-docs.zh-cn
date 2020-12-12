@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _mm_stream_si64x
 title: _mm_stream_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - movnti instruction
 - _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-ms.openlocfilehash: f6ed0f2482ecbcdaa4d50034e0d08381768847a2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2a68437905c0d5dd56a522d15985db7179921852
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133219"
 ---
 # <a name="_mm_stream_si64x"></a>_mm_stream_si64x
 
 **Microsoft 专用**
 
-生成 MOVNTI 指令。 将*源*中的数据写入*目标*指定的内存位置, 而不会污染缓存。
+生成 MOVNTI 指令。 将 *源* 中的数据写入 *目标* 指定的内存位置，而不会污染缓存。
 
 ## <a name="syntax"></a>语法
 
@@ -29,21 +30,21 @@ void _mm_stream_si64x(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
 弄指向要将源数据写入到的位置的指针。
 
-*Source*\
+*源程序*\
 中要写入的数据。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`_mm_stream_si64x`|X64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 

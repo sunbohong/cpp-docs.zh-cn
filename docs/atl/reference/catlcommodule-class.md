@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAtlComModule 类
 title: CAtlComModule 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 4b8c98630b27c35ed6a7e32318c6ebad8a82a5c5
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: dbea2de34d684b1fa52af8576ed37de228c4ec08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147545"
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 类
 
@@ -33,14 +34,14 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|构造函数。|
 |[CAtlComModule：： ~ CAtlComModule](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAtlComModule::RegisterServer](#registerserver)|调用此方法以更新对象映射中每个对象的系统注册表。|
 |[CAtlComModule::RegisterTypeLib](#registertypelib)|调用此方法可注册类型库。|
@@ -49,9 +50,9 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ## <a name="remarks"></a>备注
 
-`CAtlComModule`实现一个 COM 服务器模块，使客户端能够访问该模块的组件。
+`CAtlComModule` 实现一个 COM 服务器模块，使客户端能够访问该模块的组件。
 
-此类替换在早期版本的 ATL 中使用的过时[CComModule](../../atl/reference/ccommodule-class.md)类。 有关更多详细信息，请参阅[ATL Module 类](../../atl/atl-module-classes.md)。
+此类替换在早期版本的 ATL 中使用的过时 [CComModule](../../atl/reference/ccommodule-class.md) 类。 有关更多详细信息，请参阅 [ATL Module 类](../../atl/atl-module-classes.md) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -63,7 +64,7 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 **标头：** atlbase。h
 
-## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a> CAtlComModule::CAtlComModule
 
 构造函数。
 
@@ -75,7 +76,7 @@ CAtlComModule() throw();
 
 初始化模块。
 
-## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule：： ~ CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a> CAtlComModule：： ~ CAtlComModule
 
 析构函数。
 
@@ -87,7 +88,7 @@ CAtlComModule() throw();
 
 释放所有类工厂。
 
-## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer
+## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a> CAtlComModule::RegisterServer
 
 调用此方法以更新对象映射中每个对象的系统注册表。
 
@@ -95,13 +96,13 @@ CAtlComModule() throw();
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRegTypeLib*<br/>
 如果要注册类型库，则为 TRUE。 默认值是 FALSE。
 
 *pCLSID*<br/>
-指向要注册的对象的 CLSID。 如果为 NULL （默认值），则将注册对象映射中的所有对象。
+指向要注册的对象的 CLSID。 如果为 NULL (默认值) ，则将注册对象映射中的所有对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -109,9 +110,9 @@ HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 
 ### <a name="remarks"></a>备注
 
-调用全局函数[AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)。
+调用全局函数 [AtlComModuleRegisterServer](server-registration-global-functions.md#atlcommoduleregisterserver)。
 
-## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
+## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a> CAtlComModule::RegisterTypeLib
 
 调用此方法可注册类型库。
 
@@ -120,10 +121,10 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszIndex*<br/>
-格式为 "\\\n" 的字符串，其中 N 是 TYPELIB 资源的整数索引。
+格式为 " \\ \n" 的字符串，其中 N 是 TYPELIB 资源的整数索引。
 
 ### <a name="return-value"></a>返回值
 
@@ -133,7 +134,7 @@ HRESULT RegisterTypeLib();
 
 将有关类型库的信息添加到系统注册表中。 如果模块实例包含多个类型库，请使用此方法的第一个版本来指定应使用的类型库。
 
-## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer
+## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a> CAtlComModule::UnregisterServer
 
 调用此方法可取消注册对象映射中的每个对象。
 
@@ -143,13 +144,13 @@ HRESULT UnregisterServer(
     const CLSID* pCLSID = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRegTypeLib*<br/>
 如果要注销类型库，则为 TRUE。 默认值是 FALSE。
 
 *pCLSID*<br/>
-指向要注销的对象的 CLSID。 如果为 NULL （默认值），则将取消注册对象映射中的所有对象。
+指向要注销的对象的 CLSID。 如果为 NULL (默认值) ，则将取消注册对象映射中的所有对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -157,9 +158,9 @@ HRESULT UnregisterServer(
 
 ### <a name="remarks"></a>备注
 
-调用全局函数[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)。
+调用全局函数 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)。
 
-## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
+## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a> CAtlComModule::UnRegisterTypeLib
 
 调用此方法以注销类型库。
 
@@ -168,10 +169,10 @@ HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszIndex*<br/>
-格式为 "\\\n" 的字符串，其中 N 是 TYPELIB 资源的整数索引。
+格式为 " \\ \n" 的字符串，其中 N 是 TYPELIB 资源的整数索引。
 
 ### <a name="remarks"></a>备注
 
@@ -181,7 +182,7 @@ HRESULT UnRegisterTypeLib();
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)<br/>
 [类概述](../../atl/atl-class-overview.md)

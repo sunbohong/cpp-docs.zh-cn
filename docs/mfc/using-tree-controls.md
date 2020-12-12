@@ -1,34 +1,35 @@
 ---
+description: 了解详细信息：使用树控件
 title: 使用树控件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-ms.openlocfilehash: 9cff48018d728ef9578be38c0d94300011265fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8a10acc3ee256f4b26c9988c4de7df900e1535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143190"
 ---
 # <a name="using-tree-controls"></a>使用树控件
 
-树控件的典型用法 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 遵循以下模式：
+树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 的典型用法遵循下面的模式：
 
-- 创建滑块控件。 如果在对话框模板中指定的控件，或如果您使用的`CTreeView`，创建对话框或视图时，会自动创建。 如果你想要创建的目录树控件用作子窗口的某些其他窗口，使用[创建](../mfc/reference/ctreectrl-class.md#create)成员函数。
+- 创建滑块控件。 如果控件是在对话框模板中指定的，或者如果使用的是 `CTreeView` ，则在创建对话框或视图时，创建是自动的。 如果要将树控件创建为某个其他窗口的子窗口，请使用 [create](../mfc/reference/ctreectrl-class.md#create) 成员函数。
 
-- 如果你想要使用映像树控件，通过调用设置图像列表[SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)。 此外可以通过调用更改缩进[SetIndent](../mfc/reference/ctreectrl-class.md#setindent)。 执行此操作的好时机是在[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) （适用于对话框中的控件） 或[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) （用于视图）。
+- 如果希望树形控件使用图像，请通过调用 [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)来设置图像列表。 还可以通过调用 [SetIndent](../mfc/reference/ctreectrl-class.md#setindent)来更改缩进。 要执行此操作，有一个很好的时机，就 [是 (对话框中的](../mfc/reference/cdialog-class.md#oninitdialog) 控件) 或视图) 的 [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (。
 
-- 将数据放入该控件，通过调用`CTreeCtrl`的[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)函数一次为每个数据项。 `InsertItem` 返回一个句柄可用于引用它更高版本，例如当项添加子项。 初始化的数据的好时机是在`OnInitDialog`（适用于对话框中的控件） 或`OnInitialUpdate`（用于视图）。
+- 通过 `CTreeCtrl` 对每个数据项调用的 [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) 函数，将数据置于控件中。 `InsertItem` 返回可用于稍后引用的项的句柄，例如添加子项时。 初始化数据的一个好时机就是 `OnInitDialog` (对话框中的控件) 或 `OnInitialUpdate` 视图) 的 (。
 
-- 当用户与该控件交互时，将发送各种通知消息。 可以指定一个函数来处理每个你想要通过在控件窗口的消息映射中添加 ON_NOTIFY_REFLECT 宏或 ON_NOTIFY 宏添加到父窗口的消息映射来处理的消息。 请参阅[树控件通知消息](../mfc/tree-control-notification-messages.md)本主题中有关的可能通知列表更高版本。
+- 当用户与该控件交互时，将发送各种通知消息。 您可以指定一个函数来处理您要处理的每个消息，方法是在控件窗口的消息映射中添加 ON_NOTIFY_REFLECT 宏，或将 ON_NOTIFY 的宏添加到您的父窗口的消息映射。 有关可能的通知的列表，请参阅本主题后面的 [树控件通知消息](../mfc/tree-control-notification-messages.md) 。
 
-- 调用各种 Set 成员函数来设置滑块控件的值。 您可以做的更改包括设置缩进和更改文本、 图像或与项相关联的数据。
+- 调用各种 Set 成员函数来设置滑块控件的值。 可以进行的更改包括设置缩进和更改与项关联的文本、图像或数据。
 
-- 使用各种的 Get 函数来检查该控件的内容。 您可以遍历的函数，允许您检索的句柄父级、 子级和同级的指定项的树控件的内容。 甚至可以对特定节点的子级进行排序。
+- 使用各种 Get 函数检查控件的内容。 您还可以使用允许您检索指定项的父项、子项和同级的句柄的函数遍历树控件的内容。 甚至可以对特定节点的子节点进行排序。
 
-- 完成该控件后，请确保正确地销毁。 如果树控件在对话框中，或如果它是一个视图，它和`CTreeCtrl`对象将自动被销毁。 否则，您需要确保正确地销毁控件和 `CTreeCtrl` 对象。
+- 完成控件后，请确保它已正确销毁。 如果树控件位于对话框中或者为视图，则它和 `CTreeCtrl` 对象将自动销毁。 否则，您需要确保正确地销毁控件和 `CTreeCtrl` 对象。
 
 ## <a name="see-also"></a>请参阅
 

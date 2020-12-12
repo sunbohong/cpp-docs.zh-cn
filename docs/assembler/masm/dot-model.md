@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：。 (32 位 MASM) 模型
 title: .MODEL
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: f4f69b88a2041a13a0b92445c61c4a84d43e442f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131425"
 ---
-# <a name="model-32-bit-masm"></a>.模型（32位 MASM）
+# <a name="model-32-bit-masm"></a>. (32 位 MASM) 模型
 
-初始化程序内存模型。 （仅限32位 MASM。）
+初始化程序内存模型。 仅 (32 位 MASM。 ) 
 
 ## <a name="syntax"></a>语法
 
-> **.模型***内存-模型*⟦ __，__ *语言类型*⟧⟦ __，__ *堆栈选项*⟧
+> **.模型***内存-模型*⟦__，__ *语言类型*⟧⟦__，__ *堆栈选项*⟧
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *内存模型*\
 必需参数，确定代码和数据指针的大小。
@@ -29,22 +30,22 @@ ms.locfileid: "75317625"
 *语言类型*\
 可选参数，设置过程和公共符号的调用和命名约定。
 
-*堆栈选项*\
+*stack 选项*\
 可选参数。
 
-如果*内存模式*为**平面**，则不使用*堆栈选项*。
+如果 *内存模式* 为 **平面**，则不使用 *堆栈选项*。
 
-指定**NEARSTACK**将堆栈段与数据一起分组到单个物理段（**DGROUP**）。 假定堆栈段寄存器（**SS**）包含与数据段寄存器（**DS**）相同的地址。 **FARSTACK**不会将堆栈分组到**DGROUP**;因此， **SS**不等于**DS**。
+指定 **NEARSTACK** 将堆栈段组合成单个物理段 (**DGROUP**) 以及数据。 堆栈段寄存器 (**SS**) 假定为与数据段注册 (**DS**) 相同的地址。 **FARSTACK** 不会将堆栈分组到 **DGROUP**;因此， **SS** 不等于 **DS**。
 
 ## <a name="remarks"></a>备注
 
-**.** 在[MASM for x64 （ml64.exe）](masm-for-x64-ml64-exe.md)中不使用模型。
+**.**[对于 x64 ( # A0)](masm-for-x64-ml64-exe.md)，不使用模型。
 
 下表列出了在面向 16 位和 32 位平台时每个参数的可能的值：
 
 |参数|32 位值|16 位值（支持早期的 16 位开发）|
 |---------------|--------------------|----------------------------------------------------------------|
-|*内存模型*|**降**|小型、**小型、小型**、**中型**、**大型、大规模**、**平面**|
+|*内存模型*|**降**|小型、**小型、小型**、**中型**、**大型、大规模**、**平面**  |
 |*语言类型*|**C**， **STDCALL**|**C**， **BASIC**， **FORTRAN**， **PASCAL**， **SYSCALL**， **STDCALL**|
 |*stack 选项*|未使用|**NEARSTACK**、 **FARSTACK**|
 
@@ -86,7 +87,7 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[指令引用](directives-reference.md)\
+[指令参考](directives-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

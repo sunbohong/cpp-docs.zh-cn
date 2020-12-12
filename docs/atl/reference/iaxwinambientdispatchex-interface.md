@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IAxWinAmbientDispatchEx 接口
 title: IAxWinAmbientDispatchEx 接口
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 3359c17996eb78c3249abc83ff2d439381f209fe
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: c26ce7fb4f41273a498e3b28e9d6e15d4c89f9ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352981"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139719"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 接口
 
@@ -32,11 +33,11 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[SetAmbientDispatch](#setambientdispatch)|调用此方法以使用用户定义的接口来补充默认环境属性接口。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 将此接口包含在静态链接到 ATL 和宿主 ActiveX 控件的 ATL 应用程序中，尤其是具有环境属性的 ActiveX 控件。 不包含此接口将生成此断言： "您是否忘记将 LIBID 传递到 CComModule：： Init"
 
@@ -75,10 +76,10 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当 `SetAmbientDispatch` 使用指向新接口的指针调用时，如果 [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)未提供这些属性，则此新接口将用于调用寄宿控件要求的任何属性或方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IAxWinAmbientDispatch 接口](../../atl/reference/iaxwinambientdispatch-interface.md)

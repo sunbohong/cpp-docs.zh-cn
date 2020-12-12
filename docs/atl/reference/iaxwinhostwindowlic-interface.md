@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IAxWinHostWindowLic 接口
 title: IAxWinHostWindowLic 接口
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-ms.openlocfilehash: d7a63fc63b8abcf8574ea9a2fed2556635dba045
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: bf13d6f0209b982955fdf015ef47643c83b27eee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139641"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 接口
 
@@ -30,12 +31,12 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CreateControlLic](#createcontrollic)|创建授权控件，并将其附加到主机对象。|
 |[CreateControlLicEx](#createcontrollicex)|创建授权控件，将其附加到主机对象，并选择性地设置事件处理程序。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `IAxWinHostWindowLic` 继承自 [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) 并添加支持创建授权控件的方法。
 
@@ -67,7 +68,7 @@ STDMETHOD(CreateControlLic)(
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关剩余参数和返回值的说明，请参阅 [IAxWinHostWindow：： CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) 。
 
@@ -97,7 +98,7 @@ STDMETHOD(CreateControlLicEx)(
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关剩余参数和返回值的说明，请参阅 [IAxWinHostWindow：： CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) 。
 

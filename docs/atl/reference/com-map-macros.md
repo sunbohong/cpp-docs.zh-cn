@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： COM 映射宏
 title: COM 映射宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-ms.openlocfilehash: 100402e17ca1bee5f338c37f2315fbc4898a713e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 076a13418a48147654862c2b5a26688b195d5252
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141318"
 ---
 # <a name="com-map-macros"></a>COM 映射宏
 
@@ -35,12 +36,12 @@ COM 映射是通过将对象上的接口公开给客户端的机制 `QueryInterf
 BEGIN_COM_MAP(x)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中正在公开其接口的类对象的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CComObjectRootEx：： InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) 仅返回 COM 映射中接口的指针。 通过 BEGIN_COM_MAP 宏启动您的接口映射，为每个接口添加包含 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 宏或它的一个变量的条目，然后用 [END_COM_MAP](#end_com_map) 宏完成映射。
 
@@ -58,7 +59,7 @@ BEGIN_COM_MAP(x)
 END_COM_MAP()
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)<br/>
 [COM 映射全局函数](../../atl/reference/com-map-global-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器选项宏
 title: 编译器选项宏
 ms.date: 08/19/2019
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 90b80aaa34456677f2d7c2dd5717ae6837f4523f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 247ede37721d868c9c941ce85e024a55a2487947
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833564"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141266"
 ---
 # <a name="compiler-options-macros"></a>编译器选项宏
 
@@ -49,9 +50,9 @@ ms.locfileid: "88833564"
 #define _ATL_ALL_WARNINGS
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-在 Visual C++ .NET 2002 之前，ATL 禁用了许多警告，并将其禁用，以使它们永远不会显示在用户代码中。 具体来说：
+在 Visual C++ .NET 2002 之前，ATL 禁用了许多警告，并将其禁用，以使它们永远不会显示在用户代码中。 具体而言：
 
 - C4127 条件表达式是常量
 
@@ -75,7 +76,7 @@ ms.locfileid: "88833564"
 
 如果 `#define` 添加了此操作，ATL 标头将小心保留这些警告的状态，以便它们不会被全局禁用 (或者用户显式禁用各个警告，而不是) 启用它们。
 
-`#define`默认情况下，新项目*pch.h*在默认情况下，Stdafx.h 在 Visual Studio 2017 和早期) 中 (*。*
+`#define`默认情况下，新项目在默认情况下，Stdafx.h 在 Visual Studio 2017 和早期) 中 (*。*
 
 ## <a name="_atl_apartment_threaded"></a><a name="_atl_apartment_threaded"></a> _ATL_APARTMENT_THREADED
 
@@ -85,7 +86,7 @@ ms.locfileid: "88833564"
 _ATL_APARTMENT_THREADED
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指定单元线程。 有关适用于 ATL 对象的线程模型的说明，请参阅为其他线程处理选项 [指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md) 和 [选项，Atl 简单对象向导](../../atl/reference/options-atl-simple-object-wizard.md) 。
 
@@ -97,7 +98,7 @@ _ATL_APARTMENT_THREADED
 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果定义了此构造函数，则采用单个参数的所有 CString 构造函数都将使用 explicit 关键字进行编译，这会阻止输入参数的隐式转换。 这意味着，例如，在定义 _UNICODE 时，如果尝试使用 char * 字符串作为 CString 构造函数参数，则会产生编译器错误。 如果需要防止在窄到宽字符串类型之间进行隐式转换，请使用此宏。
 
@@ -111,7 +112,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 #define _ATL_ENABLE_PTM_WARNING
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 和 MFC 库已更改，与 Microsoft c + + 编译器改进的标准 c + + 相容性相匹配。 根据 ANSI c + + 标准，指向类成员函数的指针的语法应该是 `&CMyClass::MyFunc` 。
 
@@ -135,7 +136,7 @@ ATL 和 MFC 库已更改，与 Microsoft c + + 编译器改进的标准 c + + �
 _ATL_FREE_THREADED
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指定自由线程处理。 自由线程处理等效于多线程单元模型。 有关适用于 ATL 对象的线程模型的说明，请参阅为其他线程处理选项 [指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md) 和 [选项，Atl 简单对象向导](../../atl/reference/options-atl-simple-object-wizard.md) 。
 
@@ -147,7 +148,7 @@ _ATL_FREE_THREADED
 _ATL_MULTI_THREADED
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果定义了此符号，则 ATL 将提取可正确同步对全局数据的访问的代码。 新代码应改为使用等效的宏 [_ATL_FREE_THREADED](#_atl_free_threaded) 。
 
@@ -159,7 +160,7 @@ _ATL_MULTI_THREADED
 _ATL_NO_AUTOMATIC_NAMESPACE
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果未定义此符号，则默认情况下，包括 atlbase.h 将 **使用命名空间 ATL** 执行，这可能会导致命名冲突。 若要防止出现这种情况，请定义此符号。
 
@@ -179,7 +180,7 @@ _ATL_NO_COM_SUPPORT
 ATL_NO_VTABLE
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果无法在类的构造函数和析构函数中初始化 vtable 指针，则链接器可以消除 vtable 以及它指向的所有函数。 将扩展到 **`__declspec(novtable)`** 。
 
@@ -199,12 +200,12 @@ ATL_NO_VTABLE
     }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *myfunction*<br/>
 不应内联的函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果要确保编译器不会内联函数，请使用此符号，即使它必须声明为内联，以便可以将其放置在标头文件中。 将扩展到 **`__declspec(noinline)`** 。
 
@@ -216,10 +217,10 @@ ATL_NO_VTABLE
 _ATL_SINGLE_THREADED
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指定对象始终在主 COM 线程中运行。 有关适用于 ATL 对象的线程模型的说明，请参阅为其他线程处理选项 [指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md) 和 [选项，Atl 简单对象向导](../../atl/reference/options-atl-simple-object-wizard.md) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多： Platform：:D etails：： IPrintable 接口
 title: Platform::Details::IPrintable 接口
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IPrintable Interface
 ms.assetid: b863a872-2563-4d90-88e0-c5a0bdde83f4
-ms.openlocfilehash: d6de13e05ffe6144fd6db0ba5e79f92c0a708dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52a5645ab8108f28e5ef8e2d632a729d9d9e259d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145687"
 ---
 # <a name="platformdetailsiprintable-interface"></a>Platform::Details::IPrintable 接口
 
@@ -34,10 +35,10 @@ interface class IPrintable;
 
 ### <a name="requirements"></a>要求
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 **命名空间：** Platform::Details
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台命名空间](platform-namespace-c-cx.md)

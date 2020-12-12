@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅 C/c + + (名称) '
 title: NAME (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-ms.openlocfilehash: d0813befc622db72e095c449794405fc5d58465b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7444aa20539b47b1f04d17a266a0b65a552af3f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137769"
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 
@@ -23,10 +24,10 @@ NAME [application][BASE=address]
 
 ## <a name="remarks"></a>备注
 
-指定输出文件名称的等效方法是使用[/out](out-output-file-name.md)链接器选项和设置的基址等效方法由[/base](base-base-address.md)链接器选项。 如果同时指定两者，/扩展将重写**名称**。
+指定输出文件名的等效方法是使用 [/out](out-output-file-name.md) 链接器选项，使用 [/base](base-base-address.md) 链接器选项设置基址的等效方法。 如果同时指定两者，则/OUT 会重写 **名称**。
 
-如果您生成 DLL 时，名称只会影响 DLL 名称。
+如果生成一个 DLL，则 NAME 仅会影响 DLL 名称。
 
 ## <a name="see-also"></a>请参阅
 
-[模块定义语句的规则](rules-for-module-definition-statements.md)
+[Module-Definition 语句的规则](rules-for-module-definition-statements.md)

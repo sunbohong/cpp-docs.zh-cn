@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __movsq
 title: __movsq
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep movsq instruction
 - movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-ms.openlocfilehash: 66de1971c48f6697fd06579fac635cce31545e92
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5bd212e5ebd1b98a853fb782d7e45c1e7e001f44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217258"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133154"
 ---
 # <a name="__movsq"></a>__movsq
 
 **Microsoft 专用**
 
-生成重复的 Move String (`rep movsq`) 指令。
+ () 指令生成重复的移动字符串 `rep movsq` 。
 
 ## <a name="syntax"></a>语法
 
@@ -31,12 +32,12 @@ void __movsq(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
 弄操作的目标。
 
-*Source*\
+*源程序*\
 中操作的源。
 
 *计*\
@@ -44,15 +45,15 @@ void __movsq(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__movsq`|X64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-结果是将*源*指向的第一个*计数*quadwords 复制到*目标*字符串。
+结果是将 *源* 指向的第一个 *计数* quadwords 复制到 *目标* 字符串。
 
 此例程仅可用作内部函数。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：指令引用
 title: 指令参考
 ms.date: 07/15/2020
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-ms.openlocfilehash: e3e4fa7fbf18fbb18096593042873106897c70ca
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5f4e4a75ce37b0d393bbc6a2a8fd45d16247dcff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132583"
 ---
 # <a name="directives-reference"></a>指令参考
 
-## <a name="x64"></a>x64
+## <a name="x64"></a>X64
 
 :::row:::
    :::column span="":::
@@ -372,7 +373,7 @@ ms.locfileid: "88830743"
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

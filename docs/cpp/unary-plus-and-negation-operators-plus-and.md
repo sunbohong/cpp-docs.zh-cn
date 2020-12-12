@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：一元加运算符和求反运算符： + 和-
 title: 一元加号和非运算符：+ 和 -
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-ms.openlocfilehash: de90cd2068f9b701167a340fe0b335e2a6c93102
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 64478ccfa9191e5704c1e3c896b17bc0986dc0e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145764"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元加号和非运算符：+ 和 -
 
@@ -29,15 +30,15 @@ ms.locfileid: "87225795"
 
 ## <a name="-operator"></a>+ 运算符
 
-一元加号运算符（）的结果 **+** 是操作数的值。 一元加运算符的操作数必须是一个算术类型。
+一元加运算符 () 的结果 **+** 是操作数的值。 一元加运算符的操作数必须是一个算术类型。
 
-整型提升是对整型操作数执行的。 结果类型是操作数将提升到的类型。 因此，expression `+ch` ，其中 `ch` 的类型为 **`char`** ，结果为类型 **`int`** ; 值不被修改。 请参阅[标准转换](standard-conversions.md)，了解有关如何完成升级的详细信息。
+整型提升是对整型操作数执行的。 结果类型是操作数将提升到的类型。 因此，expression `+ch` ，其中 `ch` 的类型为 **`char`** ，结果为类型 **`int`** ; 值不被修改。 请参阅 [标准转换](standard-conversions.md) ，了解有关如何完成升级的详细信息。
 
 ## <a name="--operator"></a>- 运算符
 
-一元求反运算符（ **-** ）将生成其操作数的负值。 一元求反运算符的操作数必须是算术类型。
+一元求反运算符 (**-**) 生成其操作数的负值。 一元求反运算符的操作数必须是算术类型。
 
-将对整型操作数执行整型提升，并且结果类型将是操作数将提升到的类型。 有关如何执行升级的详细信息，请参阅[标准转换](standard-conversions.md)。
+将对整型操作数执行整型提升，并且结果类型将是操作数将提升到的类型。 有关如何执行升级的详细信息，请参阅 [标准转换](standard-conversions.md) 。
 
 **Microsoft 专用**
 

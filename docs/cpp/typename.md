@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： typename
 title: typename
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 62e8a2026babbfea3cd1583def05a03b4bc4a229
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3bc1385412d23d947c75967c2dc79bee78bbcd28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97145790"
 ---
 # <a name="typename"></a>typename
 
@@ -25,7 +26,7 @@ typename identifier;
 
 ## <a name="remarks"></a>备注
 
-如果模板定义中的名称是依赖于模板参数的限定名，则必须使用此关键字;如果限定名不是依赖项，则此项是可选的。 有关详细信息，请参阅[模板和名称解析](../cpp/templates-and-name-resolution.md)。
+如果模板定义中的名称是依赖于模板参数的限定名，则必须使用此关键字;如果限定名不是依赖项，则此项是可选的。 有关详细信息，请参阅 [模板和名称解析](../cpp/templates-and-name-resolution.md)。
 
 **`typename`** 可由模板声明或定义中任意位置的任何类型使用。 不允许在基类列表中使用该关键字，除非将它用作模板基类的模板自变量。
 
@@ -59,7 +60,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [模板](../cpp/templates-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)
