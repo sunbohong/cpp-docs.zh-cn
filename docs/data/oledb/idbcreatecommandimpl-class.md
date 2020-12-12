@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IDBCreateCommandImpl 类
 title: IDBCreateCommandImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: b7b658b2b365eb84a39ae94cef7c77e18d7bd4a0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aaa9e84b66bd8bcb93fa418eed56a3cdadd31d6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287341"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 类
 
@@ -30,7 +31,7 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
    : public IDBCreateCommand
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的会话对象 `IDBCreateCommandImpl` 。
@@ -46,11 +47,11 @@ Command 类。
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[CreateCommand](#createcommand)|创建新的命令。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 用于获取新命令的 session 对象上的可选接口。
 
@@ -66,9 +67,9 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
    IUnknown ** ppvCommand);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IDBCreateCommand：： CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IDBCreateCommand：： CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) 。
 
 一些参数对应于不同名称 *OLE DB 程序员引用* 参数，如中所述 `IDBCreateCommand::CreateCommand` ：
 
@@ -76,7 +77,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 |--------------------------------|------------------------------------------------|
 |*ppvCommand*|*ppCommand*|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

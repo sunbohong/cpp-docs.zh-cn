@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IDBInitializeImpl 类
 title: IDBInitializeImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: aff02e812d2806201a08164aeb4a8ef290550725
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6b37998c78c3e88921318654653995ff356ba18a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287315"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 类
 
@@ -56,7 +57,7 @@ template <class T>
 class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IDBInitializeImpl` 。
@@ -69,25 +70,25 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[IDBInitializeImpl](#idbinitializeimpl)|构造函数。|
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[初始化](#initialize)|启动提供程序。|
 |[撤消](#uninitialize)|停止提供程序。|
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_dwStatus](#dwstatus)|数据源标志。|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|指向 DB 属性信息的实现的指针。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 数据源对象上的必需接口和枚举器上的可选接口。
 
@@ -117,7 +118,7 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>备注
 
-请参阅*OLE DB 程序员参考*中的[IDBInitialize：： Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IDBInitialize：： Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 。
 
 ## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a> IDBInitializeImpl：：取消初始化
 
@@ -131,7 +132,7 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>备注
 
-请参阅*OLE DB 程序员参考*中的[IDBInitialize：：](/previous-versions/windows/desktop/ms719648(v=vs.85))取消。
+请参阅 *OLE DB 程序员参考* 中的 [IDBInitialize：：](/previous-versions/windows/desktop/ms719648(v=vs.85))取消。
 
 ## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a> IDBInitializeImpl：： m_dwStatus
 
@@ -155,7 +156,7 @@ enum DATASOURCE_FLAGS {
 };
 ```
 
-| 值 | 说明 |
+| 值 | 描述 |
 |-|-|
 |`DSF_MASK_INIT`|用于启用未初始化状态还原的掩码。|
 |`DSF_PERSIST_DIRTY`|设置数据源对象是否需要持久性 (也就是说，如果已更改) 。|
@@ -171,7 +172,7 @@ enum DATASOURCE_FLAGS {
 CUtlPropInfo< T >* m_pCUtlPropInfo;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

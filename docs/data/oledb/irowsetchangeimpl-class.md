@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IRowsetChangeImpl 类
 title: IRowsetChangeImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 66e7b758752a46fffff177323fe83eecc0b2fa55
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6536b589cdf936b653d87941fb717e96ff88422c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287224"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 类
 
@@ -54,7 +55,7 @@ template <
 class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IRowsetChangeImpl` 。
@@ -79,7 +80,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 ### <a name="interface-methods-used-with-irowsetchange"></a>与 IRowsetChange 一起使用的接口方法 () 
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[DeleteRows](#deleterows)|删除行集中的行。|
 |[InsertRow](#insertrow)|向行集中插入行。|
@@ -87,11 +88,11 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 ### <a name="implementation-method-callback"></a>实现方法 (回调) 
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[FlushData](#flushdata)|由提供程序重写，以将数据提交到其存储区。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此接口负责向数据存储区进行立即写入操作。 "即时" 表示当最终用户 (使用使用者的人员) 进行任何更改时，这些更改将立即传输到数据存储 (，并且不能) 撤消。
 
@@ -104,7 +105,7 @@ OLE DB 模板实现支持 (`SetData` 、和) 的所有基方法 `InsertRow` `Del
 
 - [创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md)
 
-- *OLE DB 程序员参考*的第6章
+- *OLE DB 程序员参考* 的第6章
 
 - 另请参阅 `RUpdateRowset` [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 示例中的类的使用方式。
 
@@ -121,9 +122,9 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
    DBROWSTATUS rgRowStatus[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetChange：:D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetChange：:D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) 。
 
 ## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a> IRowsetChangeImpl：： InsertRow
 
@@ -138,9 +139,9 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
    HROW* phRow);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetChange：： InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetChange：： InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) 。
 
 ## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a> IRowsetChangeImpl：： SetData
 
@@ -154,9 +155,9 @@ STDMETHOD (SetData )(HROW hRow,
    void* pSrcData);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetChange：： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetChange：： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 。
 
 ## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a> IRowsetChangeImpl：： FlushData
 
@@ -169,10 +170,10 @@ HRESULT FlushData(HROW hRowToFlush,
    HACCESSOR hAccessorToFlush);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hRowToFlush*<br/>
-中数据行的句柄。 此行的类型由*RowClass* `IRowsetImpl` `CSimpleRow` 默认)  (类的 RowClass 模板自变量确定。
+中数据行的句柄。 此行的类型由 `IRowsetImpl` `CSimpleRow` 默认)  (类的 RowClass 模板自变量确定。
 
 *hAccessorToFlush*<br/>
 中访问器的句柄，其中包含绑定信息和其 (中的类型信息， `PROVIDER_MAP` 请参阅 [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)) 。
@@ -181,7 +182,7 @@ HRESULT FlushData(HROW hRowToFlush,
 
 标准的 HRESULT。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

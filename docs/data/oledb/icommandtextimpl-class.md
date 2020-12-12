@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ICommandTextImpl 类
 title: ICommandTextImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: 7d31933b162a74db31bdd3c65dc68e396a3896c4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4b48b9f8f2ee535a648681064cc6b1083c76e489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287367"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 类
 
@@ -41,7 +42,7 @@ class ATL_NO_VTABLE ICommandTextImpl
    : public ICommandImpl<T, ICommandText>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的 command 类 `ICommandTextImpl` 。
@@ -54,18 +55,18 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetCommandText](#getcommandtext)|返回由对 [SetCommandText](#setcommandtext)的最后一次调用设置的文本命令。|
 |[SetCommandText](#setcommandtext)|设置命令文本，并替换现有的命令文本。|
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_strCommandText](#strcommandtext)|存储命令文本。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 命令的必需接口。
 
@@ -80,9 +81,9 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
    LPOLESTR * ppwszCommand);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommandText：： GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 。 默认情况下，将忽略 *pguidDialect* 参数。
+请参阅 *OLE DB 程序员参考* 中的 [ICommandText：： GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 。 默认情况下，将忽略 *pguidDialect* 参数。
 
 ## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a> ICommandTextImpl：： SetCommandText
 
@@ -95,9 +96,9 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
    LPCOLESTR pwszCommand);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) 。
 
 ## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a> ICommandTextImpl：： m_strCommandText
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IRowsetIdentityImpl 类
 title: IRowsetIdentityImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 48ed687ff67208109b5a2acf400d98491b4c769a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4cba00d16671c3efd26bc3a9b20e93e1f80a1cc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836138"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287198"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl 类
 
@@ -32,7 +33,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
    : public IRowsetIdentity
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IRowsetIdentityImpl` 。
@@ -48,7 +49,7 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[IsSameRow](#issamerow)|比较两个行句柄，以确定它们是否引用相同的行。|
 
@@ -63,15 +64,15 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
    HROW hThatRow);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 为了比较行句柄，此方法会将 `HROW` 句柄转换为 `RowClass` 成员，并调用 `memcmp` 指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)
