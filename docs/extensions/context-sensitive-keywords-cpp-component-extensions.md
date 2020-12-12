@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： Context-Sensitive 关键字 (c + +/CLI 和 c + +/CX) '
 title: 上下文相关关键字（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: 82bf4c3f0deed788b7b1e50f1d8d82e63dc27f6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7c005b1a6149f010b9729db5459fa3951bc50521
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176855"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>上下文相关关键字（C++/CLI 和 C++/CX）
 
-上下文相关关键字** 是仅在特定上下文中才能识别出来的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。
+上下文相关关键字是仅在特定上下文中才能识别出来的语言元素。 在特定的上下文以外，区分上下文关键字可以是用户定义的符号。
 
 ## <a name="all-runtimes"></a>所有运行时
 
@@ -38,7 +39,7 @@ ms.locfileid: "87219737"
 
 - `internal`
 
-- [文本](literal-cpp-component-extensions.md)
+- literal
 
 - [override](override-cpp-component-extensions.md)
 
@@ -99,6 +100,6 @@ int main() {
 100
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

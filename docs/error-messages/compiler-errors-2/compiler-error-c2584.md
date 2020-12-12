@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2584
 title: 编译器错误 C2584
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2584
 ms.assetid: 836e2c0a-86c0-4742-b432-beb0191ad20e
-ms.openlocfilehash: 2c3b10ecd6808ccd864ecf877fe9f1d0e9f30a3a
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7820019c3ec49928f59980adbd9ec814d67c3499
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177674"
 ---
 # <a name="compiler-error-c2584"></a>编译器错误 C2584
 
 "Class"：无法访问直接基 "Base2";已是 "Base1" 的基
 
-`Class` 已直接从 `Base1`派生。 `Base2` 也派生自 `Base1`。 `Class` 无法从 `Base2` 派生，因为这将意味着再次从 `Base1` 继承（间接），这是不合法的，因为 `Base1` 已经是直接基类。
+`Class` 已直接从派生 `Base1` 。 `Base2` 也派生自 `Base1` 。 `Class` 无法从派生 `Base2` ，因为这将意味着继承 (间接 `Base1` 再次) ，这是不合法的，因为已 `Base1` 是直接基类。
 
 ## <a name="example"></a>示例
 

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/MAP (生成映射) '
 title: /MAP（生成映射文件）
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - mapfiles, specifying file name
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e3823099b4893dcf344a0b1aae99577d850821
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321600"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176426"
 ---
 # <a name="map-generate-mapfile"></a>/MAP（生成映射文件）
 
@@ -28,40 +29,40 @@ ms.locfileid: "62321600"
 /MAP[:filename]
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 *filename*<br/>
-用户指定映射文件的名称。 它将替换默认名称。
+用户指定的映射文件名。 它将替换默认名称。
 
 ## <a name="remarks"></a>备注
 
-/MAP 选项告知链接器创建映射文件。
+/MAP 选项告知链接器创建映射器。
 
-默认情况下，链接器的基名称的程序和扩展.map 命名映射文件。 可选*文件名*允许你重写映射文件的默认名称。
+默认情况下，链接器使用程序的基名称和扩展名 .map 命名映射器。 可选文件名允许您替代映射 *文件* 的默认名称。
 
-映射文件是文本文件，其中包含要链接的程序有关的以下信息：
+映射文件是一个文本文件，其中包含有关要链接的程序的以下信息：
 
-- 模块名称，即该文件的基名称
+- 模块名称，它是文件的基名称
 
-- 从程序文件标头 （不是从文件系统） 时间戳
+- 程序文件头中的时间戳不是从文件系统 () 
 
-- 在程序中，包括每个组的起始地址的组的列表 (作为*一节*:*偏移量*)，长度、 组名称和类
+- 程序中的组列表，每个组的起始地址 (为 *节*：*Offset*) 、length、group name 和 class
 
-- 公共符号，与每个地址的列表 (作为*一节*:*偏移量*)，符号名称、 平面地址和.obj 文件中定义了符号
+- 公共符号列表，其中的每个地址 (为 *节*：*Offset*) 、符号名称、平面地址和 .obj 文件，其中定义了符号。
 
-- 入口点 (作为*一节*:*偏移量*)
+- 入口点 (为 *节*：*offset*) 
 
-[/MAPINFO](mapinfo-include-information-in-mapfile.md)选项指定要包含在映射文件中的其他信息。
+[/MAPINFO](mapinfo-include-information-in-mapfile.md)选项指定要包含在映射中的其他信息。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击**链接器**文件夹。
+1. 单击“链接器”文件夹。
 
-1. 单击**调试**属性页。
+1. 单击 " **调试** " 属性页。
 
-1. 修改**生成映射文件**属性。
+1. 修改 " **生成映射文件** " 属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

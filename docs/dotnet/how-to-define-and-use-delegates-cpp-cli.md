@@ -1,15 +1,16 @@
 ---
+description: '了解有关详细信息，请参阅如何：定义和使用委托 (c + +/CLI) '
 title: 如何：定义和使用委托 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4229af2015db3a9a77722e9e4cc24b80aa05a49b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175750"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>如何：定义和使用委托 (C++/CLI)
 
@@ -263,7 +264,7 @@ hello
 
 在调用委托时，可以使用未绑定的委托传递要调用其函数的类型的实例。
 
-如果您想要循环访问集合中的对象（通过[在关键字中](../dotnet/for-each-in.md)使用）并在每个实例上调用成员函数，则未绑定的委托特别有用。
+如果您想要循环访问集合中的对象（通过 [在关键字中](../dotnet/for-each-in.md) 使用）并在每个实例上调用成员函数，则未绑定的委托特别有用。
 
 下面介绍了如何声明、实例化和调用绑定委托和未绑定委托：
 
@@ -351,7 +352,7 @@ int main() {
 7
 ```
 
-下一个示例演示如何使用未绑定的委托，并[在关键字中](../dotnet/for-each-in.md)循环访问集合中的对象并在每个实例上调用成员函数。
+下一个示例演示如何使用未绑定的委托，并 [在关键字中](../dotnet/for-each-in.md) 循环访问集合中的对象并在每个实例上调用成员函数。
 
 ```cpp
 // unbound_delegates_2.cpp
@@ -502,6 +503,6 @@ int main() {
 14
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [委托（C++ 组件扩展）](../extensions/delegate-cpp-component-extensions.md)

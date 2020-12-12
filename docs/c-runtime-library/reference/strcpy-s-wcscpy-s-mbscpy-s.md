@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 title: strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 ms.date: 5/28/2020
 api_name:
@@ -45,19 +46,19 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a20f16971ccc7d1f85fe92c5d2d14386e7e55022
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176192"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s、wcscpy_s、_mbscpy_s、_mbscpy_s_l
 
 复制字符串。 如 [CRT 中的安全性增强功能](../../c-runtime-library/security-features-in-the-crt.md)所述，这些版本的 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md) 具有安全性增强功能。
 
 > [!IMPORTANT]
-> 不能在 Windows 运行时中执行的应用程序中使用 **_mbscpy_s**和 **_mbscpy_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbscpy_s** 和 **_mbscpy_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -110,13 +111,13 @@ errno_t _mbscpy_s_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *目的*<br/>
 目标字符串缓冲区的位置。
 
 *dest_size*<br/>
-**`char`** 用于窄和多字节函数的目标字符串缓冲区的大小，以及 **`wchar_t`** 宽函数的单位。 此值必须大于零且不大于**RSIZE_MAX**。 确保该大小的终止 `NULL` 字符串后终止。
+**`char`** 用于窄和多字节函数的目标字符串缓冲区的大小，以及 **`wchar_t`** 宽函数的单位。 此值必须大于零且不大于 **RSIZE_MAX**。 确保该大小的终止 `NULL` 字符串后终止。
 
 *src*<br/>
 以 null 结尾的源字符串缓冲区。
@@ -130,7 +131,7 @@ errno_t _mbscpy_s_l(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*目的*|*dest_size*|*src*|返回值|*Dest*的内容|
+|*目的*|*dest_size*|*src*|返回值|*Dest* 的内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|any|any|**EINVAL**|未修改|
 |any|any|**NULL**|**EINVAL**|*dest*[0] 设置为0|
@@ -138,11 +139,11 @@ errno_t _mbscpy_s_l(
 
 ## <a name="remarks"></a>备注
 
-**Strcpy_s**函数将*src*地址中的内容（包括终止 null 字符）复制到*dest*指定的位置。 目标字符串必须足够大以保存源字符串及其结尾的 null 字符。 如果源和目标字符串重叠，则**strcpy_s**的行为不确定。
+**Strcpy_s** 函数将 *src* 地址中的内容（包括终止 null 字符）复制到 *dest* 指定的位置。 目标字符串必须足够大以保存源字符串及其结尾的 null 字符。 如果源和目标字符串重叠，则 **strcpy_s** 的行为不确定。
 
-**wcscpy_s**是**strcpy_s**的宽字符版本， **_mbscpy_s**为多字节字符版本。 **Wcscpy_s**的参数是宽字符字符串;**_mbscpy_s**和 **_mbscpy_s_l**的是多字节字符字符串。 否则这些函数具有相同行为。 **_mbscpy_s_l**与 **_mbscpy_s**相同，只不过它使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wcscpy_s** 是 **strcpy_s** 的宽字符版本， **_mbscpy_s** 为多字节字符版本。 **Wcscpy_s** 的参数是宽字符字符串;**_mbscpy_s** 和 **_mbscpy_s_l** 的是多字节字符字符串。 否则这些函数具有相同行为。 **_mbscpy_s_l** 与 **_mbscpy_s** 相同，只不过它使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*dest*或*src*为空指针，或者如果目标字符串的大小*dest_size*太小，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则当*dest*或*src*为 null 指针时，这些函数将返回**EINVAL** ，并将**errno**设置为**EINVAL** ; 当目标字符串过小时，它们将返回**ERANGE**并将**errno**设置为**ERANGE** 。
+如果 *dest* 或 *src* 为空指针，或者如果目标字符串的大小 *dest_size* 太小，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则当 *dest* 或 *src* 为 null 指针时，这些函数将返回 **EINVAL** ，并将 **errno** 设置为 **EINVAL** ; 当目标字符串过小时，它们将返回 **ERANGE** 并将 **errno** 设置为 **ERANGE** 。
 
 成功执行时，目标字符串始终以 null 结尾。
 
@@ -150,7 +151,7 @@ errno_t _mbscpy_s_l(
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -231,7 +232,7 @@ int main(void)
 String = Hello world from wcscpy_s and wcscat_s!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat、wcscat、_mbscat、_mbscat_l](strcat-wcscat-mbscat.md) <br/>

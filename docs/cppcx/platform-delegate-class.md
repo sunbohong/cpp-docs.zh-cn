@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：:D 委托类
 title: Platform::Delegate 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Delegate Class
 ms.assetid: 82b21271-768f-4193-9ca2-be68ddfd546e
-ms.openlocfilehash: 4116de3240c3ef334db51095997f946731372708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58baedf595d3ee8d9cc4975e787193abf522233c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176101"
 ---
 # <a name="platformdelegate-class"></a>Platform::Delegate 类
 
@@ -40,7 +41,7 @@ Delegate 类具有从 [Platform::Object Class](../cppcx/platform-object-class.md
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 

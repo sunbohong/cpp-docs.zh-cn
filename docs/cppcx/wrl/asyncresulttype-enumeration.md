@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： AsyncResultType 枚举
 title: AsyncResultType 枚举
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - AsyncResultType enumeration
 ms.assetid: 4195d234-3f3f-4363-9118-6ad2a7551cf2
-ms.openlocfilehash: b8a2a9ec803fba1be0012fcb58bf3b42e78f9071
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 431c0cabf98b3636bbae02b2f05a14d11d122740
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214157"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97175815"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 枚举
 
-指定 `GetResults()` 方法返回的结果的类型。
+指定由方法返回的结果的类型 `GetResults()` 。
 
 ## <a name="syntax"></a>语法
 
@@ -28,10 +29,10 @@ enum AsyncResultType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|`MultipleResults`|一组多个结果，这些结果在 `Start` 状态之间和在调用 `Close()` 之前逐渐显示。|
-|`SingleResult`|在 `Complete` 事件发生后显示的单个结果。|
+|`MultipleResults`|一组多个结果，这些结果在 `Start` 状态和之前的状态之间逐渐显示 `Close()` 。|
+|`SingleResult`|事件发生后显示的单个结果 `Complete` 。|
 
 ## <a name="requirements"></a>要求
 
@@ -39,6 +40,6 @@ enum AsyncResultType;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

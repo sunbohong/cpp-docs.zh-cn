@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：应用程序和线程支持类
 title: 应用程序和线程支持类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,20 +12,20 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-ms.openlocfilehash: 7e64cc50a121f457b7e32e0ed549db2fa9950843
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 89ab6e324a777c272dcbcfabc746c03cb6731589
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176738"
 ---
 # <a name="application-and-thread-support-classes"></a>应用程序和线程支持类
 
 每个应用程序都有一个且只有一个应用程序对象;此对象协调正在运行的程序中的其他对象，派生自 `CWinApp` 。
 
-Microsoft 基础类（MFC）库支持在一个应用程序中执行多个线程。 所有应用程序都必须至少有一个线程;对象使用的线程 `CWinApp` 是此主线程。
+Microsoft 基础类 (MFC) 库在一个应用程序中支持多个执行线程。 所有应用程序都必须至少有一个线程;对象使用的线程 `CWinApp` 是此主线程。
 
-`CWinThread`封装操作系统的部分线程功能。 为了使使用多个线程更加简单，MFC 还提供了同步对象类，以提供到 Win32 同步对象的 c + + 接口。
+`CWinThread` 封装操作系统的部分线程功能。 为了使使用多个线程更加简单，MFC 还提供了同步对象类，以提供到 Win32 同步对象的 c + + 接口。
 
 ## <a name="application-and-thread-classes"></a>应用程序和线程类
 
@@ -69,8 +70,8 @@ Microsoft 基础类（MFC）库支持在一个应用程序中执行多个线程�
 处理控件条的停靠状态数据的持久存储。
 
 [CRecentFileList](reference/crecentfilelist-class.md)<br/>
-维护最近使用的（MRU）文件列表。
+维护最近使用的 (MRU) 文件列表。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

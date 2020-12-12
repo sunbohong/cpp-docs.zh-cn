@@ -1,4 +1,5 @@
 ---
+description: '详细了解：操作员 &lt; (&lt; 示例容器 &gt;) '
 title: operator&lt; (&lt;sample container&gt;)
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,19 +15,19 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7bba9be33a2dc4dea6257b159966c867bb33929
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176478"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
 > [!NOTE]
-> 本主题在 Microsoft C++文档中作为在C++标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
+> 本主题在 Microsoft c + + 文档中作为 c + + 标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
-重载**运算符 <** 比较类模板[容器](../standard-library/sample-container-class.md)的两个对象。
+重载 **运算符<** 比较类模板 [容器](../standard-library/sample-container-class.md)的两个对象。
 
 ## <a name="syntax"></a>语法
 
@@ -41,8 +42,8 @@ bool operator<(
 
 返回 `lexicographical_compare(left.begin, left.end, right.begin, right.end)`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<sample container>](../standard-library/sample-container.md)\
-[开始](../standard-library/container-class-begin.md)\
+[准备](../standard-library/container-class-begin.md)\
 [end](../standard-library/container-class-end.md)

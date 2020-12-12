@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3181
 title: 编译器错误 C3181
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: e30ed7016ca3a4d4948a08c5c09268e52c9a407d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: b9b9c6e8c6271abbea2d97adf92f33c35eb2028b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97174125"
 ---
 # <a name="compiler-error-c3181"></a>编译器错误 C3181
 
 "type"：运算符的操作数无效
 
-向[typeid](../../extensions/typeid-cpp-component-extensions.md)运算符传递了一个无效参数。 参数必须是托管类型。
+向 [typeid](../../extensions/typeid-cpp-component-extensions.md) 运算符传递了一个无效参数。 参数必须是托管类型。
 
 请注意，编译器对映射到公共语言运行时中的类型的本机类型使用别名。
 

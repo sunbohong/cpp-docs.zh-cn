@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：平台：:D etails：： __GUID 结构
 title: Platform::Details::__GUID 结构
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::__GUID Struct
 ms.assetid: 507cc577-b34d-4952-b1a9-ff4ae98bb6dd
-ms.openlocfilehash: 39b661dcc658ffb01b636f659a5e77fbaa2bd2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ddaa04f0aa2e4fa4fc9d856e07cdb795ccb1d0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176023"
 ---
-# <a name="platformdetailsguid-struct"></a>Platform::Details::__GUID 结构
+# <a name="platformdetails__guid-struct"></a>Platform::Details::__GUID 结构
 
 此结构仅供内部使用，不用于开发。
 
@@ -34,10 +35,10 @@ ref struct __GUID;
 
 ### <a name="requirements"></a>要求
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 **命名空间：** Platform::Details
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台命名空间](platform-namespace-c-cx.md)
