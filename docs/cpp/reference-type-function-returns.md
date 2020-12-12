@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Reference-Type 函数返回
 title: 引用类型函数返回
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: b2997348a3234302655187af25c9c4644c95e48e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7624f8b3c481c86db367c2ff68e696c56370e586
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135404"
 ---
 # <a name="reference-type-function-returns"></a>引用类型函数返回
 
@@ -23,9 +24,9 @@ ms.locfileid: "87233621"
 
 - 引用的对象在函数返回时不会超出范围。
 
-就像通过引用向函数传递大型对象更有效的方式一样，通过引用*从*函数返回*大型对象也*可能更有效。 引用返回协议使得不必在返回前将对象复制到临时位置。
+就像通过引用向函数传递大型对象更有效的方式一样，通过引用 *从* 函数返回 *大型对象也* 可能更有效。 引用返回协议使得不必在返回前将对象复制到临时位置。
 
-当函数的计算结果必须为左值时，引用返回类型也可能很有用。 大多数重载运算符属于此类别，尤其是赋值运算符。 重载运算符在[重载运算符](../cpp/operator-overloading.md)中介绍。
+当函数的计算结果必须为左值时，引用返回类型也可能很有用。 大多数重载运算符属于此类别，尤其是赋值运算符。 重载运算符在 [重载运算符](../cpp/operator-overloading.md)中介绍。
 
 ## <a name="example"></a>示例
 
@@ -110,6 +111,6 @@ Foo& GetFoo()
 
 在这种情况下，编译器会发出警告： `warning C4172: returning address of local variable or temporary` 。 在简单程序中，如果调用方在覆盖内存位置之前访问引用，则有时可能不会发生访问冲突。 这纯属运气。 请注意该警告。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [参考](../cpp/references-cpp.md)

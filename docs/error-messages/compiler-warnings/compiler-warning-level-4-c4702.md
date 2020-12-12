@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4702
 title: 编译器警告（等级 4）C4702
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: a2d1f6f4bdc20a35638274e2099c00428f4f6ddf
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9a171641a2c923083471d510e27fbdb3ebd08832
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133791"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>编译器警告（等级 4）C4702
 
@@ -36,7 +37,7 @@ int main() {
 }
 ```
 
-使用 **/gx**、 **/EHc**、 **/ehsc**或 **/EHac** 并使用 extern c 函数进行编译时，代码可能会无法访问，因为假定 extern c 函数不会引发，因此无法到达 catch 块。  如果你认为此警告无效，因为函数可以引发、使用 **/eha** 或 **/ehs**进行编译，具体取决于引发的异常。
+使用 **/gx**、 **/EHc**、 **/ehsc** 或 **/EHac** 并使用 extern c 函数进行编译时，代码可能会无法访问，因为假定 extern c 函数不会引发，因此无法到达 catch 块。  如果你认为此警告无效，因为函数可以引发、使用 **/eha** 或 **/ehs** 进行编译，具体取决于引发的异常。
 
 有关详细信息，请参阅 [/EH (异常处理模型) ](../../build/reference/eh-exception-handling-model.md) 。
 

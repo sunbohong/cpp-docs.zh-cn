@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： allocator_newdel 类
 title: allocator_newdel 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - stdext::allocators [C++], allocator_newdel
 - stdext::allocator_newdel
 ms.assetid: 62666cd2-3afe-49f7-9dd1-9bbbb154da98
-ms.openlocfilehash: 30e0f7902a8af435b46aaedf0b38661b7a6604a8
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 0f514e64258ef0c1e7a4226a55a661216df9b3d5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163569"
 ---
 # <a name="allocator_newdel-class"></a>allocator_newdel 类
 
@@ -27,14 +28,14 @@ template <class Type>
 class allocator_newdel;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 由分配器分配元素类型。
 
 ## <a name="remarks"></a>备注
 
-[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏将此类作为以下语句中的*name*参数传递：`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
+[ALLOCATOR_DECL](allocators-functions.md#allocator_decl)宏将此类作为以下语句中的 *name* 参数传递：`ALLOCATOR_DECL(CACHE_FREELIST stdext::allocators::max_none), SYNC_DEFAULT, allocator_newdel);`
 
 ## <a name="requirements"></a>要求
 
@@ -42,6 +43,6 @@ class allocator_newdel;
 
 **命名空间：** stdext
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](allocators-header.md)

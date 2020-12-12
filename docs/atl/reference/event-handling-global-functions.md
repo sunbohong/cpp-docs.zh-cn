@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：事件处理全局函数
 title: 事件处理全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-ms.openlocfilehash: fde93415640ef7fa460bb363af4c3cb14b356061
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 89e5ec38ff8884f5b99592541df6e397e2dd7116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139849"
 ---
 # <a name="event-handling-global-functions"></a>事件处理全局函数
 
@@ -21,7 +22,7 @@ ms.locfileid: "88833447"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlWaitWithMessageLoop](#atlwaitwithmessageloop)|等待对象收到信号，同时根据需要调度窗口消息。|
 
@@ -40,7 +41,7 @@ ms.locfileid: "88833447"
 BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hEvent*<br/>
 中要等待的对象的句柄。
@@ -49,7 +50,7 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 
 如果对象已发出信号，则返回 TRUE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果要等待对象的事件发生并通知其发生，但允许在等待时调度窗口消息，则此方法非常有用。
 

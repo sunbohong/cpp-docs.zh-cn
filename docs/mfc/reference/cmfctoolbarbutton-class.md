@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCToolBarButton 类
 title: CMFCToolBarButton 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 8e96740ba6755f489be07fbf8996cfa8b049314a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 513178edc1c4ac6ef920fbd14f6a0c6681328860
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754025"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163920"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 类
 
@@ -181,21 +182,21 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCToolBarButton：： CMFCToolBarButton](#cmfctoolbarbutton)|构造并初始化一个 `CMFCToolBarButton` 对象。|
 |`CMFCToolBarButton::~CMFCToolBarButton`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCToolBarButton：： CanBeDropped](#canbedropped)|指定用户是否可以在自定义过程中在工具栏或菜单上定位按钮。|
 |[CMFCToolBarButton：： CanBeStored](#canbestored)|指定是否可以存储按钮。|
 |[CMFCToolBarButton：： CanBeStretched](#canbestretched)|指定用户是否可以在自定义过程中拉伸该按钮。|
-|[CMFCToolBarButton：： Seq.comparewith](#comparewith)|将此实例与所提供`CMFCToolBarButton`的对象进行比较。|
+|[CMFCToolBarButton：： Seq.comparewith](#comparewith)|将此实例与所提供的对象进行比较 `CMFCToolBarButton` 。|
 |[CMFCToolBarButton：： CopyFrom](#copyfrom)|将另一个工具栏按钮的属性复制到当前按钮。|
-|[CMFCToolBarButton：： CreateFromOleData](#createfromoledata)|从提供`CMFCToolBarButton` `COleDataObject`的对象创建对象。|
+|[CMFCToolBarButton：： CreateFromOleData](#createfromoledata)|`CMFCToolBarButton`从提供的对象创建对象 `COleDataObject` 。|
 |`CMFCToolBarButton::CreateObject`|由框架用于创建此类类型的动态实例。|
 |[CMFCToolBarButton：： EnableWindow](#enablewindow)|启用或禁用鼠标和键盘输入。|
 |[CMFCToolBarButton：： ExportToMenuButton](#exporttomenubutton)|将文本从工具栏按钮复制到菜单。|
@@ -217,23 +218,23 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton：： IsHidden](#ishidden)|确定按钮是否处于隐藏状态。|
 |[CMFCToolBarButton：： IsHorizontal](#ishorizontal)|确定按钮是否位于水平工具栏上。|
 |[CMFCToolBarButton：： IsLastInGroup](#islastingroup)|指定按钮是否位于其按钮组中的最后一个位置。|
-|[CMFCToolBarButton：： IsLocked](#islocked)|确定按钮是否位于 "锁定（不可自定义）" 工具栏上。|
+|[CMFCToolBarButton：： IsLocked](#islocked)|确定按钮是否位于锁定的 (不可自定义) 工具栏上。|
 |[CMFCToolBarButton：： IsOwnerOf](#isownerof)|确定按钮是否为所提供的窗口句柄的所有者。|
 |[CMFCToolBarButton：： IsVisible](#isvisible)|确定工具栏按钮是否可见。|
 |[CMFCToolBarButton：： IsWindowVisible](#iswindowvisible)|确定按钮的基础窗口句柄是否可见。|
-|[CMFCToolBarButton：： NotifyCommand](#notifycommand)|指定按钮是否处理[WM_COMMAND](/windows/win32/menurc/wm-command)消息。|
-|[CMFCToolBarButton：： OnAddToCustomizePage](#onaddtocustomizepage)|在将按钮添加到 "**自定义**" 对话框时由框架调用。|
+|[CMFCToolBarButton：： NotifyCommand](#notifycommand)|指定按钮是否处理 [WM_COMMAND](/windows/win32/menurc/wm-command) 消息。|
+|[CMFCToolBarButton：： OnAddToCustomizePage](#onaddtocustomizepage)|在将按钮添加到 " **自定义** " 对话框时由框架调用。|
 |[CMFCToolBarButton：： OnBeforeDrag](#onbeforedrag)|指定是否可以拖动该按钮。|
 |[CMFCToolBarButton：： OnBeforeDrop](#onbeforedrop)|指定用户是否可以将按钮拖放到目标工具栏中。|
 |[CMFCToolBarButton：： OnCalculateSize](#oncalculatesize)|由框架调用，用于计算指定设备上下文和停靠状态的按钮大小。|
-|[CMFCToolBarButton：： OnCancelMode](#oncancelmode)|由框架调用，用于处理[WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode)消息。|
+|[CMFCToolBarButton：： OnCancelMode](#oncancelmode)|由框架调用，用于处理 [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) 消息。|
 |[CMFCToolBarButton：： OnChangeParentWnd](#onchangeparentwnd)|在将按钮插入新工具栏时由框架调用。|
 |[CMFCToolBarButton：： OnClick](#onclick)|当用户单击鼠标按钮时由框架调用。|
 |[CMFCToolBarButton：： OnClickUp](#onclickup)|当用户释放鼠标按钮时由框架调用。|
 |[CMFCToolBarButton：： OnContextHelp](#oncontexthelp)|当父工具栏处理 WM_HELPHITTEST 消息时由框架调用。|
 |[CMFCToolBarButton：： OnCtlColor](#onctlcolor)|当父工具栏处理 WM_CTLCOLOR 消息时由框架调用。|
 |[CMFCToolBarButton：： OnCustomizeMenu](#oncustomizemenu)|当应用程序在父工具栏上显示快捷菜单时，允许该按钮修改提供的菜单。|
-|[CMFCToolBarButton：： OnDblClk](#ondblclk)|当父工具栏处理[WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk)消息时由框架调用。|
+|[CMFCToolBarButton：： OnDblClk](#ondblclk)|当父工具栏处理 [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) 消息时由框架调用。|
 |[CMFCToolBarButton：： OnDraw](#ondraw)|由框架调用，用于通过使用指定的样式和选项绘制按钮。|
 |[CMFCToolBarButton：： OnDrawOnCustomizeList](#ondrawoncustomizelist)|由框架调用，用于绘制 "**自定义**" 对话框的 "**命令**" 窗格中的按钮。|
 |[CMFCToolBarButton：： OnGetCustomToolTipText](#ongetcustomtooltiptext)|由框架调用以检索按钮的自定义工具提示文本。|
@@ -248,7 +249,7 @@ class CMFCToolBarButton : public CObject
 |[CMFCToolBarButton：： ResetImageToDefault](#resetimagetodefault)|将设置为与按钮关联的图像的默认值。|
 |[CMFCToolBarButton：： SaveBarState](#savebarstate)|保存工具栏按钮的状态。|
 |[CMFCToolBarButton：：串行化](#serialize)|从存档中读取此对象或将其写入存档。 （重写 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。）|
-|[CMFCToolBarButton：： SetACCData](#setaccdata)|用工具栏按钮`CAccessibilityData`中的可访问性数据填充提供的对象。|
+|[CMFCToolBarButton：： SetACCData](#setaccdata)|`CAccessibilityData`用工具栏按钮中的可访问性数据填充提供的对象。|
 |[CMFCToolBarButton：： SetClipboardFormatName](#setclipboardformatname)|重命名全局剪贴板格式。|
 |[CMFCToolBarButton：： SetImage](#setimage)|设置按钮的图像索引。|
 |[CMFCToolBarButton：： SetProtectedCommands](#setprotectedcommands)|设置用户无法自定义的命令的列表。|
@@ -260,7 +261,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CMFCToolBarButton：： m_bImage](#m_bimage)|指定是否在按钮上显示图像。|
 |[CMFCToolBarButton：： m_bText](#m_btext)|指定是否在按钮上显示文本标签。|
@@ -277,9 +278,9 @@ class CMFCToolBarButton : public CObject
 
 `CMFCToolbarButton`对象是位于工具栏上的控件。 它的行为与普通按钮的行为类似。 您可以为此对象指定图像和文本标签。 工具栏按钮还可以具有命令 ID。 当用户单击工具栏按钮时，框架会执行该 ID 指定的命令。
 
-通常，工具栏按钮可以自定义：用户可以将按钮从一个工具栏拖动到另一个工具栏，并复制、粘贴、删除和编辑文本标签和图像。 若要阻止用户自定义工具栏，可以通过以下两种方式之一锁定工具栏。 调用`bLocked` [CMFCToolBar：： LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)时，请将标志设置为 TRUE，或使用[CMFCToolBarButton：： SetProtectedCommands](#setprotectedcommands)方法将单个按钮的命令 ID 添加到受保护命令的全局列表。
+通常，工具栏按钮可以自定义：用户可以将按钮从一个工具栏拖动到另一个工具栏，并复制、粘贴、删除和编辑文本标签和图像。 若要阻止用户自定义工具栏，可以通过以下两种方式之一锁定工具栏。 `bLocked`调用[CMFCToolBar：： LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)时，请将标志设置为 TRUE，或使用[CMFCToolBarButton：： SetProtectedCommands](#setprotectedcommands)方法将单个按钮的命令 ID 添加到受保护命令的全局列表。
 
-`CMFCToolBarButton`对象显示应用程序中工具栏图像的全局集合中的图像。 这些集合由父工具栏[CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)维护。 有关详细信息，请参阅[CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)。
+`CMFCToolBarButton` 对象显示应用程序中工具栏图像的全局集合中的图像。 这些集合由父工具栏 [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)维护。 有关详细信息，请参阅 [CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)。
 
 当用户单击工具栏按钮时，其父工具栏会处理鼠标消息，并将相应的操作传达给该按钮。 如果该按钮具有有效的命令 ID，则父工具栏会将 WM_COMMAND 消息发送到父框架。
 
@@ -287,7 +288,7 @@ class CMFCToolBarButton : public CObject
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用类中`CMFCToolBarButton`的`CMFCToolBarButton`各种方法配置对象。 该示例演示如何启用鼠标和键盘输入、设置按钮的图像索引、设置按钮的边框，并使按钮可见。 此代码片段是[选项卡控件示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何 `CMFCToolBarButton` 使用类中的各种方法配置对象 `CMFCToolBarButton` 。 该示例演示如何启用鼠标和键盘输入、设置按钮的图像索引、设置按钮的边框，并使按钮可见。 此代码片段是 [选项卡控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]
@@ -302,7 +303,7 @@ class CMFCToolBarButton : public CObject
 
 **标头：** afxtoolbarbutton
 
-## <a name="cmfctoolbarbuttoncanbedropped"></a><a name="canbedropped"></a>CMFCToolBarButton：： CanBeDropped
+## <a name="cmfctoolbarbuttoncanbedropped"></a><a name="canbedropped"></a> CMFCToolBarButton：： CanBeDropped
 
 指定用户是否可以在自定义过程中在工具栏或菜单上定位按钮。
 
@@ -310,7 +311,7 @@ class CMFCToolBarButton : public CObject
 virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pToolbar*<br/>
 中用.
@@ -321,11 +322,11 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 
 ### <a name="remarks"></a>备注
 
-默认情况下，可以将工具栏按钮拖放到每个可自定义的（即未锁定）的工具栏。
+默认情况下，可在每个可自定义的 (（即未锁定) 工具栏）上删除工具栏按钮。
 
 此方法的默认实现返回 TRUE。 如果要阻止用户重新定位按钮，请重写此方法并返回 FALSE。
 
-## <a name="cmfctoolbarbuttoncanbestored"></a><a name="canbestored"></a>CMFCToolBarButton：： CanBeStored
+## <a name="cmfctoolbarbuttoncanbestored"></a><a name="canbestored"></a> CMFCToolBarButton：： CanBeStored
 
 确定是否可以存储按钮。
 
@@ -341,9 +342,9 @@ virtual BOOL CanBeStored() const;
 
 框架使用此方法来确定按钮是否可以参与拖放操作。
 
-默认实现返回 TRUE。 如果无法将按钮作为拖放操作的一部分进行存储，则重写此方法。 有关拖放操作的详细信息，请参阅[OLE 拖放](../../mfc/drag-and-drop-ole.md)。
+默认实现返回 TRUE。 如果无法将按钮作为拖放操作的一部分进行存储，则重写此方法。 有关拖放操作的详细信息，请参阅 [OLE 拖放](../../mfc/drag-and-drop-ole.md)。
 
-## <a name="cmfctoolbarbuttoncanbestretched"></a><a name="canbestretched"></a>CMFCToolBarButton：： CanBeStretched
+## <a name="cmfctoolbarbuttoncanbestretched"></a><a name="canbestretched"></a> CMFCToolBarButton：： CanBeStretched
 
 指定用户是否可以在自定义过程中拉伸该按钮。
 
@@ -361,9 +362,9 @@ virtual BOOL CanBeStretched() const;
 
 此方法的默认实现返回 FALSE。 重写此方法可为可变宽度控件（如组合框或滑块）返回 TRUE。
 
-有关自定义模式的详细信息，请参阅[CMFCToolBar：： SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)。
+有关自定义模式的详细信息，请参阅 [CMFCToolBar：： SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)。
 
-## <a name="cmfctoolbarbuttoncmfctoolbarbutton"></a><a name="cmfctoolbarbutton"></a>CMFCToolBarButton：： CMFCToolBarButton
+## <a name="cmfctoolbarbuttoncmfctoolbarbutton"></a><a name="cmfctoolbarbutton"></a> CMFCToolBarButton：： CMFCToolBarButton
 
 构造并初始化一个 `CMFCToolBarButton` 对象。
 
@@ -376,7 +377,7 @@ CMFCToolBarButton(
     BOOL bLocked=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiID*<br/>
 中按钮的命令 ID。
@@ -393,15 +394,15 @@ CMFCToolBarButton(
 *对方*<br/>
 中确定按钮是否可以自定义的布尔值。 如果此参数为 TRUE，则无法自定义该按钮。 否则，可以自定义该按钮。
 
-## <a name="cmfctoolbarbuttoncomparewith"></a><a name="comparewith"></a>CMFCToolBarButton：： Seq.comparewith
+## <a name="cmfctoolbarbuttoncomparewith"></a><a name="comparewith"></a> CMFCToolBarButton：： Seq.comparewith
 
-将此实例与所提供`CMFCToolBarButton`的对象进行比较。
+将此实例与所提供的对象进行比较 `CMFCToolBarButton` 。
 
 ```
 virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 中对要与此实例进行比较的对象的引用。
@@ -412,9 +413,9 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="remarks"></a>备注
 
-默认实现确定所提供对象的命令 ID 是否等于此实例的命令 ID。 若要确定两个`CMFCToolBarButton`对象是否相等，请重写此方法。
+默认实现确定所提供对象的命令 ID 是否等于此实例的命令 ID。 若要确定两个对象是否相等，请重写此方法 `CMFCToolBarButton` 。
 
-## <a name="cmfctoolbarbuttoncopyfrom"></a><a name="copyfrom"></a>CMFCToolBarButton：： CopyFrom
+## <a name="cmfctoolbarbuttoncopyfrom"></a><a name="copyfrom"></a> CMFCToolBarButton：： CopyFrom
 
 将另一个工具栏按钮的属性复制到当前按钮。
 
@@ -422,7 +423,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *src*<br/>
 中对要从中进行复制的源按钮的引用。
@@ -431,15 +432,15 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 调用此方法可将另一个工具栏按钮复制到此工具栏按钮。
 
-## <a name="cmfctoolbarbuttoncreatefromoledata"></a><a name="createfromoledata"></a>CMFCToolBarButton：： CreateFromOleData
+## <a name="cmfctoolbarbuttoncreatefromoledata"></a><a name="createfromoledata"></a> CMFCToolBarButton：： CreateFromOleData
 
-从提供`CMFCToolBarButton` `COleDataObject`的对象创建对象。
+`CMFCToolBarButton`从提供的对象创建对象 `COleDataObject` 。
 
 ```
 static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDataObject*<br/>
 中源 OLE 数据对象。
@@ -450,9 +451,9 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 
 ### <a name="remarks"></a>备注
 
-此方法由框架用于执行各种格式的数据传输。 例如， `CMFCOutlookBarPane::OnDragOver`方法使用此方法来执行拖放操作。
+此方法由框架用于执行各种格式的数据传输。 例如， `CMFCOutlookBarPane::OnDragOver` 方法使用此方法来执行拖放操作。
 
-## <a name="cmfctoolbarbuttonenablewindow"></a><a name="enablewindow"></a>CMFCToolBarButton：： EnableWindow
+## <a name="cmfctoolbarbuttonenablewindow"></a><a name="enablewindow"></a> CMFCToolBarButton：： EnableWindow
 
 启用或禁用鼠标和键盘输入。
 
@@ -460,16 +461,16 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 virtual void EnableWindow(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中将此参数设置为 TRUE 可启用输入，或设置为 FALSE 可禁用输入。
 
 ### <a name="remarks"></a>备注
 
-此方法调用`EnableWindow`函数以启用或禁用输入。 有关详细信息，请参阅 Windows SDK 中的[EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) 。
+此方法调用 `EnableWindow` 函数以启用或禁用输入。 有关详细信息，请参阅 Windows SDK 中的 [EnableWindow](/windows/win32/api/winuser/nf-winuser-enablewindow) 。
 
-## <a name="cmfctoolbarbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a>CMFCToolBarButton：： ExportToMenuButton
+## <a name="cmfctoolbarbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a> CMFCToolBarButton：： ExportToMenuButton
 
 将文本从工具栏按钮复制到菜单。
 
@@ -477,7 +478,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *menuButton*<br/>
 中对 "目标" 菜单按钮的引用。
@@ -490,9 +491,9 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 框架调用此方法将文本从工具栏按钮复制到菜单按钮。 默认实现复制按钮的文本标签。 如果文本标签为空，则此方法将复制按钮的工具提示文本。
 
-此方法的默认实现返回 TRUE。 如果要在框架将派生自[CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)的对象转换为菜单按钮时执行其他操作，请重写此方法。
+此方法的默认实现返回 TRUE。 如果要在框架将派生自 [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md) 的对象转换为菜单按钮时执行其他操作，请重写此方法。
 
-## <a name="cmfctoolbarbuttongetclipboardformat"></a><a name="getclipboardformat"></a>CMFCToolBarButton：： GetClipboardFormat
+## <a name="cmfctoolbarbuttongetclipboardformat"></a><a name="getclipboardformat"></a> CMFCToolBarButton：： GetClipboardFormat
 
 检索应用程序的全局剪贴板格式。
 
@@ -506,15 +507,15 @@ static CLIPFORMAT __stdcall GetClipboardFormat();
 
 ### <a name="remarks"></a>备注
 
-框架调用此方法来检索 OLE 数据传输操作的剪贴板格式。 例如， [CMFCToolBarButton：： CreateFromOleData](#createfromoledata)方法使用此方法从源 OLE 数据对象复制数据。
+框架调用此方法来检索 OLE 数据传输操作的剪贴板格式。 例如， [CMFCToolBarButton：： CreateFromOleData](#createfromoledata) 方法使用此方法从源 OLE 数据对象复制数据。
 
 此方法在第一次调用此方法时设置全局 CLIPFORMAT 值。 对此方法的所有后续调用都将返回此值。
 
-若要允许在应用程序之间执行拖放操作，请调用[CMFCToolBarButton：： SetClipboardFormatName](#setclipboardformatname)方法。
+若要允许在应用程序之间执行拖放操作，请调用 [CMFCToolBarButton：： SetClipboardFormatName](#setclipboardformatname) 方法。
 
-有关 MFC 中的剪贴板的详细信息，请参阅[剪贴板](../../mfc/clipboard.md)。
+有关 MFC 中的剪贴板的详细信息，请参阅 [剪贴板](../../mfc/clipboard.md)。
 
-## <a name="cmfctoolbarbuttongethwnd"></a><a name="gethwnd"></a>CMFCToolBarButton：： GetHwnd
+## <a name="cmfctoolbarbuttongethwnd"></a><a name="gethwnd"></a> CMFCToolBarButton：： GetHwnd
 
 检索与工具栏按钮关联的窗口句柄。
 
@@ -530,7 +531,7 @@ virtual HWND GetHwnd();
 
 此方法的默认实现返回 NULL。 重写此方法以返回特定控件的窗口句柄。
 
-## <a name="cmfctoolbarbuttongetimage"></a><a name="getimage"></a>CMFCToolBarButton：： GetImage
+## <a name="cmfctoolbarbuttongetimage"></a><a name="getimage"></a> CMFCToolBarButton：： GetImage
 
 检索按钮的图像索引。
 
@@ -544,9 +545,9 @@ int GetImage() const;
 
 ### <a name="remarks"></a>备注
 
-如果该按钮具有用户定义的图像（即，如果在构造函数中为 TRUE，则在构造函数中为*bUserButton* ），则返回的索引将指定用户定义的图像集合中的图像（请参阅[CMFCToolBar：： GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)）。 否则，索引将在从资源文件加载的图像集合中指定图像（请参阅[CMFCToolBar：： GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages)）。 有关资源文件的详细信息，请参阅使用[资源文件](../../windows/working-with-resource-files.md)。
+如果该按钮具有用户定义的图像 (也就是说，如果构造函数) 中 *bUserButton* 为 TRUE，则返回的索引将指定用户定义的图像集合中的图像 (请参阅 [CMFCToolBar：： GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)) 。 否则，索引将在从资源文件加载的图像集合中指定图像 (参阅 [CMFCToolBar：： GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages)) 。 有关资源文件的详细信息，请参阅使用 [资源文件](../../windows/working-with-resource-files.md)。
 
-## <a name="cmfctoolbarbuttongetinvalidaterect"></a><a name="getinvalidaterect"></a>CMFCToolBarButton：： GetInvalidateRect
+## <a name="cmfctoolbarbuttongetinvalidaterect"></a><a name="getinvalidaterect"></a> CMFCToolBarButton：： GetInvalidateRect
 
 检索必须重绘的按钮工作区的区域。
 
@@ -556,13 +557,13 @@ virtual const CRect GetInvalidateRect() const;
 
 ### <a name="return-value"></a>返回值
 
-一个`CRect`对象，该对象指定必须重新绘制的区域。
+一个 `CRect` 对象，该对象指定必须重新绘制的区域。
 
 ### <a name="remarks"></a>备注
 
 此方法的默认实现将返回整个工作区。 如果希望重绘不同的区域，请重写此方法。
 
-## <a name="cmfctoolbarbuttongetparentwnd"></a><a name="getparentwnd"></a>CMFCToolBarButton：： GetParentWnd
+## <a name="cmfctoolbarbuttongetparentwnd"></a><a name="getparentwnd"></a> CMFCToolBarButton：： GetParentWnd
 
 检索按钮的父窗口。
 
@@ -574,7 +575,7 @@ CWnd* GetParentWnd() const;
 
 按钮的父窗口。
 
-## <a name="cmfctoolbarbuttongetprotectedcommands"></a><a name="getprotectedcommands"></a>CMFCToolBarButton：： GetProtectedCommands
+## <a name="cmfctoolbarbuttongetprotectedcommands"></a><a name="getprotectedcommands"></a> CMFCToolBarButton：： GetProtectedCommands
 
 检索用户无法自定义的命令的列表。
 
@@ -590,9 +591,9 @@ static const CList<UINT,UINT>& GetProtectedCommands();
 
 在自定义模式下，框架禁用受保护的工具栏按钮命令。 用户不能对禁用的工具栏按钮执行拖放和编辑操作。
 
-使用[CMFCToolBarButton：： SetProtectedCommands](#setprotectedcommands)方法定义受保护命令的列表。
+使用 [CMFCToolBarButton：： SetProtectedCommands](#setprotectedcommands) 方法定义受保护命令的列表。
 
-## <a name="cmfctoolbarbuttongettextsize"></a><a name="gettextsize"></a>CMFCToolBarButton：： GetTextSize
+## <a name="cmfctoolbarbuttongettextsize"></a><a name="gettextsize"></a> CMFCToolBarButton：： GetTextSize
 
 检索按钮文本的大小。
 
@@ -604,7 +605,7 @@ SIZE GetTextSize() const;
 
 一个大小对象，其中包含按钮文本的大小（以像素为单位）。
 
-## <a name="cmfctoolbarbuttonhasfocus"></a><a name="hasfocus"></a>CMFCToolBarButton：： HasFocus
+## <a name="cmfctoolbarbuttonhasfocus"></a><a name="hasfocus"></a> CMFCToolBarButton：： HasFocus
 
 确定按钮是否具有当前输入焦点。
 
@@ -620,7 +621,7 @@ virtual BOOL HasFocus() const;
 
 此方法的默认实现将返回非零值，如果该按钮具有输入焦点或者是具有输入焦点的窗口的子窗口或子窗口。 您可以重写此函数以自定义此行为。
 
-## <a name="cmfctoolbarbuttonhavehotborder"></a><a name="havehotborder"></a>CMFCToolBarButton：： HaveHotBorder
+## <a name="cmfctoolbarbuttonhavehotborder"></a><a name="havehotborder"></a> CMFCToolBarButton：： HaveHotBorder
 
 确定当用户选择按钮时是否显示按钮的边框。
 
@@ -638,7 +639,7 @@ virtual BOOL HaveHotBorder() const;
 
 默认实现返回 TRUE。 您可以重写此方法以自定义此行为。
 
-## <a name="cmfctoolbarbuttonisdrawimage"></a><a name="isdrawimage"></a>CMFCToolBarButton：： IsDrawImage
+## <a name="cmfctoolbarbuttonisdrawimage"></a><a name="isdrawimage"></a> CMFCToolBarButton：： IsDrawImage
 
 确定按钮上是否显示图像。
 
@@ -652,9 +653,9 @@ BOOL IsDrawImage() const;
 
 ### <a name="remarks"></a>备注
 
-如果工具栏按钮没有关联的图像（ [CMFCToolBarButton：： GetImage](#getimage)返回-1）或[CMFCToolBarButton：： M_BIMAGE](#m_bimage)设置为 false，则此方法返回 false。
+如果工具栏按钮没有关联的图像，则此方法返回 FALSE ( [CMFCToolBarButton：： GetImage](#getimage) 返回-1) 或 [CMFCToolBarButton：： M_BIMAGE](#m_bimage) 设置为 FALSE。
 
-## <a name="cmfctoolbarbuttonisdrawtext"></a><a name="isdrawtext"></a>CMFCToolBarButton：： IsDrawText
+## <a name="cmfctoolbarbuttonisdrawtext"></a><a name="isdrawtext"></a> CMFCToolBarButton：： IsDrawText
 
 确定按钮上是否显示文本标签。
 
@@ -668,9 +669,9 @@ BOOL IsDrawText() const;
 
 ### <a name="remarks"></a>备注
 
-如果工具栏按钮没有关联的文本标签（ [CMFCToolBarButton：： m_strText](#m_strtext)为空）或[CMFCToolBarButton：： M_BTEXT](#m_btext)设置为 false，则此方法返回 false。
+如果工具栏按钮没有关联的文本标签，则此方法返回 FALSE ( [CMFCToolBarButton：： m_strText](#m_strtext) 为空) 或 [CMFCToolBarButton：： M_BTEXT](#m_btext) 设置为 FALSE。
 
-## <a name="cmfctoolbarbuttonisdroppeddown"></a><a name="isdroppeddown"></a>CMFCToolBarButton：： IsDroppedDown
+## <a name="cmfctoolbarbuttonisdroppeddown"></a><a name="isdroppeddown"></a> CMFCToolBarButton：： IsDroppedDown
 
 确定按钮是否显示子菜单。
 
@@ -686,7 +687,7 @@ virtual BOOL IsDroppedDown() const;
 
 此方法的默认实现返回 FALSE。 如果控件显示子菜单，则重写此方法以返回 TRUE。
 
-## <a name="cmfctoolbarbuttoniseditable"></a><a name="iseditable"></a>CMFCToolBarButton：： IsEditable
+## <a name="cmfctoolbarbuttoniseditable"></a><a name="iseditable"></a> CMFCToolBarButton：： IsEditable
 
 确定是否可以自定义按钮。
 
@@ -702,11 +703,11 @@ virtual BOOL IsEditable() const;
 
 框架调用此方法以确定用户是否可以通过使用拖放操作或编辑操作来自定义工具栏按钮。
 
-如果按钮的命令 ID 是标准命令（可以通过调用`IsStandardCommand`函数来确定这一点），或者如果命令 id 位于受保护的命令列表中，则默认实现将返回 FALSE。 有关受保护的命令的详细信息，请参阅[CMFCToolBarButton：： GetProtectedCommands](#getprotectedcommands)和[CMFCToolBarButton：： SetProtectedCommands](#setprotectedcommands)。
+如果按钮的命令 ID 是标准命令，则默认实现将返回 FALSE (可以通过调用函数) 来确定此 `IsStandardCommand` 项，或者，如果命令 id 位于受保护的命令列表中，则返回 FALSE。 有关受保护的命令的详细信息，请参阅 [CMFCToolBarButton：： GetProtectedCommands](#getprotectedcommands) 和 [CMFCToolBarButton：： SetProtectedCommands](#setprotectedcommands)。
 
 重写此方法以自定义其行为。
 
-## <a name="cmfctoolbarbuttonisextrasize"></a><a name="isextrasize"></a>CMFCToolBarButton：： IsExtraSize
+## <a name="cmfctoolbarbuttonisextrasize"></a><a name="isextrasize"></a> CMFCToolBarButton：： IsExtraSize
 
 确定是否可以使用扩展边框显示该按钮。
 
@@ -720,11 +721,11 @@ virtual BOOL IsExtraSize() const;
 
 ### <a name="remarks"></a>备注
 
-多个外观使用工具栏按钮边框的额外尺寸（例如，圆形按钮）。
+多个外观使用工具栏按钮边框的额外大小 (例如，圆形按钮) 。
 
-如果用户将此按钮从一个工具栏移到另一个工具栏，则框架将调用[CMFCToolBarButton：： OnChangeParentWnd](#onchangeparentwnd)方法。 [CMFCToolBarButton：： OnChangeParentWnd](#onchangeparentwnd)方法将额外的大小标志设置为新父工具栏的大小标志（有关详细信息，请参阅[CMFCToolBar：： IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)）。
+如果用户将此按钮从一个工具栏移到另一个工具栏，则框架将调用 [CMFCToolBarButton：： OnChangeParentWnd](#onchangeparentwnd) 方法。 [CMFCToolBarButton：： OnChangeParentWnd](#onchangeparentwnd)方法会将额外的大小标志设置为新父工具栏 (的额外大小标志，有关详细信息，请参阅[CMFCToolBar：： IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)) 。
 
-## <a name="cmfctoolbarbuttonisfirstingroup"></a><a name="isfirstingroup"></a>CMFCToolBarButton：： IsFirstInGroup
+## <a name="cmfctoolbarbuttonisfirstingroup"></a><a name="isfirstingroup"></a> CMFCToolBarButton：： IsFirstInGroup
 
 确定按钮是否位于其按钮组中的第一个位置。
 
@@ -738,11 +739,11 @@ virtual BOOL IsFirstInGroup() const;
 
 ### <a name="remarks"></a>备注
 
-此方法将一个*按钮组*定义为相邻的一组按钮，这些按钮位于同一行上，并通过分隔符或工具栏的边框进行绑定。 如果工具栏按钮引用 "**自定义**" 按钮，则此方法返回 FALSE。 有关 "**自定义**" 按钮的详细信息，请参阅[CMFCToolBar：： GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)。
+此方法将一个 *按钮组* 定义为相邻的一组按钮，这些按钮位于同一行上，并通过分隔符或工具栏的边框进行绑定。 如果工具栏按钮引用 " **自定义** " 按钮，则此方法返回 FALSE。 有关 " **自定义** " 按钮的详细信息，请参阅 [CMFCToolBar：： GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)。
 
-调用[CMFCToolBarButton：： IsLastInGroup](#islastingroup)方法来确定按钮是否位于其按钮组中的最后一个位置。
+调用 [CMFCToolBarButton：： IsLastInGroup](#islastingroup) 方法来确定按钮是否位于其按钮组中的最后一个位置。
 
-## <a name="cmfctoolbarbuttonishidden"></a><a name="ishidden"></a>CMFCToolBarButton：： IsHidden
+## <a name="cmfctoolbarbuttonishidden"></a><a name="ishidden"></a> CMFCToolBarButton：： IsHidden
 
 确定按钮是否处于隐藏状态。
 
@@ -752,17 +753,17 @@ BOOL IsHidden() const;
 
 ### <a name="return-value"></a>返回值
 
-如果按钮处于隐藏状态，则为非零值;否则为0。
+如果隐藏按钮 (不可见) ，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
 当拉伸父工具栏以确定工具栏按钮是否可见时，框架会调用此方法。
 
-如果使用[CMFCToolBarButton：： SetVisible](#setvisible)方法将按钮设置为不可见，请使用[CMFCToolBarButton：： IsVisible](#isvisible)来确定工具栏按钮是否可见。
+如果使用 [CMFCToolBarButton：： SetVisible](#setvisible) 方法将按钮设置为不可见，请使用 [CMFCToolBarButton：： IsVisible](#isvisible) 来确定工具栏按钮是否可见。
 
-默认情况下，所有工具栏按钮都可见。 使用[CMFCToolBarButton：： Show](#show)方法隐藏或显示工具栏按钮。
+默认情况下，所有工具栏按钮都可见。 使用 [CMFCToolBarButton：： Show](#show) 方法隐藏或显示工具栏按钮。
 
-## <a name="cmfctoolbarbuttonishorizontal"></a><a name="ishorizontal"></a>CMFCToolBarButton：： IsHorizontal
+## <a name="cmfctoolbarbuttonishorizontal"></a><a name="ishorizontal"></a> CMFCToolBarButton：： IsHorizontal
 
 确定按钮是否位于水平工具栏上。
 
@@ -778,9 +779,9 @@ BOOL IsHorizontal() const;
 
 框架调用此方法来确定工具栏按钮的布局。
 
-此方法返回`m_bHorz`数据成员。 `m_bHorz`数据成员的默认值为 TRUE;它将在每次调用[CMFCToolBarButton：： OnDraw](#ondraw)方法时重置。
+此方法返回 `m_bHorz` 数据成员。 数据成员的默认值为 `m_bHorz` TRUE; 它在每次调用 [CMFCToolBarButton：： OnDraw](#ondraw) 方法时重置。
 
-## <a name="cmfctoolbarbuttonislastingroup"></a><a name="islastingroup"></a>CMFCToolBarButton：： IsLastInGroup
+## <a name="cmfctoolbarbuttonislastingroup"></a><a name="islastingroup"></a> CMFCToolBarButton：： IsLastInGroup
 
 指定按钮是否位于其按钮组中的最后一个位置。
 
@@ -794,13 +795,13 @@ virtual BOOL IsLastInGroup() const;
 
 ### <a name="remarks"></a>备注
 
-此方法将一个*按钮组*定义为相邻的一组按钮，这些按钮位于同一行上，并通过分隔符或工具栏的边框进行绑定。如果工具栏按钮没有父工具栏或工具栏按钮引用 "**自定义**" 按钮，则此方法返回 FALSE。 有关 "**自定义**" 按钮的详细信息，请参阅[CMFCToolBar：： GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)。
+此方法将一个 *按钮组* 定义为相邻的一组按钮，这些按钮位于同一行上，并通过分隔符或工具栏的边框进行绑定。如果工具栏按钮没有父工具栏或工具栏按钮引用 " **自定义** " 按钮，则此方法返回 FALSE。 有关 " **自定义** " 按钮的详细信息，请参阅 [CMFCToolBar：： GetCustomizeButton](../../mfc/reference/cmfctoolbar-class.md#getcustomizebutton)。
 
-调用[CMFCToolBarButton：： IsFirstInGroup](#isfirstingroup)方法来确定按钮是否位于其按钮组中的第一个位置。
+调用 [CMFCToolBarButton：： IsFirstInGroup](#isfirstingroup) 方法来确定按钮是否位于其按钮组中的第一个位置。
 
-## <a name="cmfctoolbarbuttonislocked"></a><a name="islocked"></a>CMFCToolBarButton：： IsLocked
+## <a name="cmfctoolbarbuttonislocked"></a><a name="islocked"></a> CMFCToolBarButton：： IsLocked
 
-确定按钮是否位于 "锁定（不可自定义）" 工具栏上。
+确定按钮是否位于锁定的 (不可自定义) 工具栏上。
 
 ```
 BOOL IsLocked() const;
@@ -812,9 +813,9 @@ BOOL IsLocked() const;
 
 ### <a name="remarks"></a>备注
 
-框架调用此方法以确定用户是否可以通过使用拖放操作或编辑操作来自定义工具栏按钮。 使用[CMFCToolBar：： LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)方法设置父工具栏上的锁定特性。 框架将此属性的值传递给它在父工具栏中插入的每个工具栏按钮（ [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)）的构造函数。
+框架调用此方法以确定用户是否可以通过使用拖放操作或编辑操作来自定义工具栏按钮。 使用 [CMFCToolBar：： LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar) 方法设置父工具栏上的锁定特性。 框架将此属性的值传递给每个工具栏按钮的构造函数 ( [CMFCToolbarButton](../../mfc/reference/cmfctoolbarbutton-class.md)) 将其插入父工具栏中。
 
-## <a name="cmfctoolbarbuttonisownerof"></a><a name="isownerof"></a>CMFCToolBarButton：： IsOwnerOf
+## <a name="cmfctoolbarbuttonisownerof"></a><a name="isownerof"></a> CMFCToolBarButton：： IsOwnerOf
 
 确定按钮是否为所提供的窗口句柄的所有者。
 
@@ -822,7 +823,7 @@ BOOL IsLocked() const;
 virtual BOOL IsOwnerOf(HWND hwnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hwnd*<br/>
 中窗口句柄。
@@ -833,9 +834,9 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="remarks"></a>备注
 
-如果*hwnd*引用直接窗口句柄，或者是与该按钮关联的窗口句柄的子句柄，则此方法返回非零值。 如果*hwnd*为 NULL，则此方法返回0。
+如果 *hwnd* 引用直接窗口句柄，或者是与该按钮关联的窗口句柄的子句柄，则此方法返回非零值。 如果 *hwnd* 为 NULL，则此方法返回0。
 
-## <a name="cmfctoolbarbuttonisvisible"></a><a name="isvisible"></a>CMFCToolBarButton：： IsVisible
+## <a name="cmfctoolbarbuttonisvisible"></a><a name="isvisible"></a> CMFCToolBarButton：： IsVisible
 
 确定工具栏按钮是否可见。
 
@@ -849,9 +850,9 @@ BOOL IsVisible() const;
 
 ### <a name="remarks"></a>备注
 
-您可以使用[CMFCToolBarButton：： SetVisible](#setvisible)方法显示或隐藏工具栏按钮。 调用[CMFCToolBarButton：： SetVisible](#setvisible)后，调用父工具栏上的[CPane：： AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)方法来重新计算父工具栏的布局。
+您可以使用 [CMFCToolBarButton：： SetVisible](#setvisible) 方法显示或隐藏工具栏按钮。 调用[CMFCToolBarButton：： SetVisible](#setvisible)后，调用父工具栏上的[CPane：： AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)方法来重新计算父工具栏的布局。
 
-## <a name="cmfctoolbarbuttoniswindowvisible"></a><a name="iswindowvisible"></a>CMFCToolBarButton：： IsWindowVisible
+## <a name="cmfctoolbarbuttoniswindowvisible"></a><a name="iswindowvisible"></a> CMFCToolBarButton：： IsWindowVisible
 
 确定按钮的基础窗口句柄是否可见。
 
@@ -867,7 +868,7 @@ virtual BOOL IsWindowVisible();
 
 如果基础窗口句柄的 style 特性包含 WS_VISIBLE 样式，此方法将返回非零值。 如果按钮的基础窗口句柄为 NULL，则此方法返回 FALSE。
 
-## <a name="cmfctoolbarbuttonm_bimage"></a><a name="m_bimage"></a>CMFCToolBarButton：： m_bImage
+## <a name="cmfctoolbarbuttonm_bimage"></a><a name="m_bimage"></a> CMFCToolBarButton：： m_bImage
 
 指定是否在按钮上显示图像。
 
@@ -877,9 +878,9 @@ BOOL m_bImage;
 
 ### <a name="remarks"></a>备注
 
-如果此数据成员设置为 TRUE，则框架将显示与工具栏按钮关联的图像;否则，框架不会显示图像。 此成员影响[CMFCToolBarButton：： m_bImage](#m_bimage)方法的返回值。
+如果此数据成员设置为 TRUE，则框架将显示与工具栏按钮关联的图像;否则，框架不会显示图像。 此成员影响 [CMFCToolBarButton：： m_bImage](#m_bimage) 方法的返回值。
 
-## <a name="cmfctoolbarbuttonm_btext"></a><a name="m_btext"></a>CMFCToolBarButton：： m_bText
+## <a name="cmfctoolbarbuttonm_btext"></a><a name="m_btext"></a> CMFCToolBarButton：： m_bText
 
 指定是否在按钮上显示文本标签。
 
@@ -889,9 +890,9 @@ BOOL m_bText;
 
 ### <a name="remarks"></a>备注
 
-如果此数据成员设置为 TRUE，则框架将显示工具栏按钮的文本标签;否则，框架不会显示文本标签。 此成员影响[CMFCToolBarButton：： m_bText](#m_btext)方法的返回值。
+如果此数据成员设置为 TRUE，则框架将显示工具栏按钮的文本标签;否则，框架不会显示文本标签。 此成员影响 [CMFCToolBarButton：： m_bText](#m_btext) 方法的返回值。
 
-## <a name="cmfctoolbarbuttonm_btextbelow"></a><a name="m_btextbelow"></a>CMFCToolBarButton：： m_bTextBelow
+## <a name="cmfctoolbarbuttonm_btextbelow"></a><a name="m_btextbelow"></a> CMFCToolBarButton：： m_bTextBelow
 
 指定是否在按钮的图像下方显示文本标签。
 
@@ -903,7 +904,7 @@ BOOL m_bTextBelow;
 
 如果此成员变量设置为 TRUE，则框架将在图像下显示该按钮的文本。 此成员的默认值为 FALSE。
 
-## <a name="cmfctoolbarbuttonm_buserbutton"></a><a name="m_buserbutton"></a>CMFCToolBarButton：： m_bUserButton
+## <a name="cmfctoolbarbuttonm_buserbutton"></a><a name="m_buserbutton"></a> CMFCToolBarButton：： m_bUserButton
 
 指定按钮是否包含用户定义的图像
 
@@ -915,7 +916,7 @@ BOOL m_bUserButton;
 
 当该按钮具有与之关联的用户定义图像时，此数据成员设置为 TRUE。
 
-## <a name="cmfctoolbarbuttonm_bwholetext"></a><a name="m_bwholetext"></a>CMFCToolBarButton：： m_bWholeText
+## <a name="cmfctoolbarbuttonm_bwholetext"></a><a name="m_bwholetext"></a> CMFCToolBarButton：： m_bWholeText
 
 指定按钮是否显示其完整文本标签，即使它不适合边框。
 
@@ -925,9 +926,9 @@ BOOL m_bWholeText;
 
 ### <a name="remarks"></a>备注
 
-如果此数据成员设置为 TRUE，则框架通过放大按钮来显示全文标签。 否则，框架将截断并将省略号（ **...**）追加到文本标签。
+如果此数据成员设置为 TRUE，则框架通过放大按钮来显示全文标签。 否则，框架将截断省略号 ( **...**) 并追加到文本标签。
 
-## <a name="cmfctoolbarbuttonm_bwrap"></a><a name="m_bwrap"></a>CMFCToolBarButton：： m_bWrap
+## <a name="cmfctoolbarbuttonm_bwrap"></a><a name="m_bwrap"></a> CMFCToolBarButton：： m_bWrap
 
 指定是否将分隔符旁边的按钮放置在下一行。
 
@@ -937,13 +938,13 @@ BOOL m_bWrap;
 
 ### <a name="remarks"></a>备注
 
-当工具栏按钮无法适应当前行或指定布局时（例如，每行特定数量的工具栏按钮），框架将此数据成员设置为 TRUE。
+当工具栏按钮无法适应当前行或指定布局时，框架会将此数据成员设置为 TRUE （例如，每行)  (特定的工具栏按钮数。
 
 如果此数据成员设置为 TRUE 并且工具栏是水平或浮动的，则框架将此按钮置于下一行。
 
 此数据成员的默认值为 FALSE。
 
-## <a name="cmfctoolbarbuttonm_bwraptext"></a><a name="m_bwraptext"></a>CMFCToolBarButton：： m_bWrapText
+## <a name="cmfctoolbarbuttonm_bwraptext"></a><a name="m_bwraptext"></a> CMFCToolBarButton：： m_bWrapText
 
 指定是否启用多行文本标签。
 
@@ -957,7 +958,7 @@ AFX_IMPORT_DATA static BOOL m_bWrapText;
 
 此数据成员的默认值为 FALSE。
 
-## <a name="cmfctoolbarbuttonm_nid"></a><a name="m_nid"></a>CMFCToolBarButton：： m_nID
+## <a name="cmfctoolbarbuttonm_nid"></a><a name="m_nid"></a> CMFCToolBarButton：： m_nID
 
 按钮的命令 ID。
 
@@ -967,9 +968,9 @@ UINT m_nID;
 
 ### <a name="remarks"></a>备注
 
-命令 ID-1 指示该按钮为分隔符。 所有按钮分隔符都具有 TBBS_SEPARATOR 样式。 有关按钮样式的详细信息，请参阅[CMFCToolBarButton：： m_nStyle](#m_nstyle) 。
+命令 ID-1 指示该按钮为分隔符。 所有按钮分隔符都具有 TBBS_SEPARATOR 样式。 有关按钮样式的详细信息，请参阅 [CMFCToolBarButton：： m_nStyle](#m_nstyle) 。
 
-## <a name="cmfctoolbarbuttonm_nstyle"></a><a name="m_nstyle"></a>CMFCToolBarButton：： m_nStyle
+## <a name="cmfctoolbarbuttonm_nstyle"></a><a name="m_nstyle"></a> CMFCToolBarButton：： m_nStyle
 
 按钮的样式。
 
@@ -979,9 +980,9 @@ UINT m_nStyle;
 
 ### <a name="remarks"></a>备注
 
-有关可用工具栏按钮样式的列表，请参阅[Toolbar 控件样式](../../mfc/reference/toolbar-control-styles.md)。
+有关可用工具栏按钮样式的列表，请参阅 [Toolbar 控件样式](../../mfc/reference/toolbar-control-styles.md) 。
 
-## <a name="cmfctoolbarbuttonm_strtext"></a><a name="m_strtext"></a>CMFCToolBarButton：： m_strText
+## <a name="cmfctoolbarbuttonm_strtext"></a><a name="m_strtext"></a> CMFCToolBarButton：： m_strText
 
 按钮的文本标签。
 
@@ -993,15 +994,15 @@ CString m_strText;
 
 此数据成员包含按钮的文本标签。 文本标签可以为空。
 
-## <a name="cmfctoolbarbuttonnotifycommand"></a><a name="notifycommand"></a>CMFCToolBarButton：： NotifyCommand
+## <a name="cmfctoolbarbuttonnotifycommand"></a><a name="notifycommand"></a> CMFCToolBarButton：： NotifyCommand
 
-指定按钮是否处理[WM_COMMAND](/windows/win32/menurc/wm-command)消息。
+指定按钮是否处理 [WM_COMMAND](/windows/win32/menurc/wm-command) 消息。
 
 ```
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iNotifyCode*<br/>
 中与命令关联的通知消息。
@@ -1012,13 +1013,13 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 
 ### <a name="remarks"></a>备注
 
-当框架即将向父窗口发送[WM_COMMAND](/windows/win32/menurc/wm-command)消息时，框架会调用此方法。
+当框架即将向父窗口发送 [WM_COMMAND](/windows/win32/menurc/wm-command) 消息时，框架会调用此方法。
 
 默认情况下，此方法返回 FALSE。 如果要处理 WM_COMMAND 消息，则重写此方法以返回 TRUE，否则将返回 FALSE，以指示父工具栏应处理该消息。
 
-## <a name="cmfctoolbarbuttononaddtocustomizepage"></a><a name="onaddtocustomizepage"></a>CMFCToolBarButton：： OnAddToCustomizePage
+## <a name="cmfctoolbarbuttononaddtocustomizepage"></a><a name="onaddtocustomizepage"></a> CMFCToolBarButton：： OnAddToCustomizePage
 
-在将按钮添加到 "**自定义**" 对话框时由框架调用。
+在将按钮添加到 " **自定义** " 对话框时由框架调用。
 
 ```
 virtual void OnAddToCustomizePage();
@@ -1026,9 +1027,9 @@ virtual void OnAddToCustomizePage();
 
 ### <a name="remarks"></a>备注
 
-此方法的默认实现不执行任何操作。 如果要在将按钮添加到 "**自定义**" 对话框中时执行某个操作，请重写此方法。
+此方法的默认实现不执行任何操作。 如果要在将按钮添加到 " **自定义** " 对话框中时执行某个操作，请重写此方法。
 
-## <a name="cmfctoolbarbuttononbeforedrag"></a><a name="onbeforedrag"></a>CMFCToolBarButton：： OnBeforeDrag
+## <a name="cmfctoolbarbuttononbeforedrag"></a><a name="onbeforedrag"></a> CMFCToolBarButton：： OnBeforeDrag
 
 指定是否可以拖动该按钮。
 
@@ -1046,7 +1047,7 @@ virtual BOOL OnBeforeDrag() const;
 
 此方法的默认实现返回 TRUE。 重写此方法以返回 FALSE 以禁止拖动按钮。
 
-## <a name="cmfctoolbarbuttononbeforedrop"></a><a name="onbeforedrop"></a>CMFCToolBarButton：： OnBeforeDrop
+## <a name="cmfctoolbarbuttononbeforedrop"></a><a name="onbeforedrop"></a> CMFCToolBarButton：： OnBeforeDrop
 
 指定用户是否可以将按钮拖放到目标工具栏中。
 
@@ -1054,7 +1055,7 @@ virtual BOOL OnBeforeDrag() const;
 virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTarget*<br/>
 中拖放操作的目标。
@@ -1069,7 +1070,7 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 
 此方法的默认实现返回 TRUE。 重写此方法以返回 FALSE，以禁用对指定目标的删除操作。
 
-## <a name="cmfctoolbarbuttononcalculatesize"></a><a name="oncalculatesize"></a>CMFCToolBarButton：： OnCalculateSize
+## <a name="cmfctoolbarbuttononcalculatesize"></a><a name="oncalculatesize"></a> CMFCToolBarButton：： OnCalculateSize
 
 由框架调用，用于计算指定设备上下文和停靠状态的按钮大小。
 
@@ -1080,7 +1081,7 @@ virtual SIZE OnCalculateSize(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中显示按钮的设备上下文。
@@ -1093,19 +1094,19 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="return-value"></a>返回值
 
-一个`SIZE`结构，它包含按钮的尺寸（以像素为单位）。
+一个 `SIZE` 结构，它包含按钮的尺寸（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
 框架调用此方法来确定工具栏按钮在指定设备上下文和停靠状态下的大小。
 
-默认实现会考虑文本大小和图像大小（如果显示）、文本和图像位置（图像下方或右侧的文本）和工具栏停靠状态。
+默认实现将 (的文本和图像大小都视为) 、文本和图像位置 () 图像的下方或右侧的文本，以及工具栏停靠状态。
 
-如果希望提供非标准按钮（例如，编辑框按钮）的大小，请重写此方法。
+如果要提供非标准按钮 (的大小，例如) 编辑框按钮，请重写此方法。
 
-## <a name="cmfctoolbarbuttononcancelmode"></a><a name="oncancelmode"></a>CMFCToolBarButton：： OnCancelMode
+## <a name="cmfctoolbarbuttononcancelmode"></a><a name="oncancelmode"></a> CMFCToolBarButton：： OnCancelMode
 
-由框架调用，用于处理[WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode)消息。
+由框架调用，用于处理 [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) 消息。
 
 ```
 virtual void OnCancelMode();
@@ -1113,9 +1114,9 @@ virtual void OnCancelMode();
 
 ### <a name="remarks"></a>备注
 
-此方法的默认实现不执行任何操作。 如果要处理[WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode)消息，请重写此方法。
+此方法的默认实现不执行任何操作。 如果要处理 [WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode) 消息，请重写此方法。
 
-## <a name="cmfctoolbarbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>CMFCToolBarButton：： OnChangeParentWnd
+## <a name="cmfctoolbarbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a> CMFCToolBarButton：： OnChangeParentWnd
 
 在将按钮插入新工具栏时由框架调用。
 
@@ -1123,7 +1124,7 @@ virtual void OnCancelMode();
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndParent*<br/>
 中新的父窗口。
@@ -1134,7 +1135,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 此方法的默认实现不执行任何操作。
 
-## <a name="cmfctoolbarbuttononclick"></a><a name="onclick"></a>CMFCToolBarButton：： OnClick
+## <a name="cmfctoolbarbuttononclick"></a><a name="onclick"></a> CMFCToolBarButton：： OnClick
 
 当用户单击鼠标按钮时由框架调用。
 
@@ -1144,7 +1145,7 @@ virtual BOOL OnClick(
     BOOL bDelay=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 中工具栏按钮的父窗口。
@@ -1162,7 +1163,7 @@ virtual BOOL OnClick(
 
 默认实现不执行任何操作并返回 FALSE。 重写此方法以在按钮处理单击消息时返回一个非零值。
 
-## <a name="cmfctoolbarbuttononclickup"></a><a name="onclickup"></a>CMFCToolBarButton：： OnClickUp
+## <a name="cmfctoolbarbuttononclickup"></a><a name="onclickup"></a> CMFCToolBarButton：： OnClickUp
 
 当用户释放鼠标按钮时由框架调用。
 
@@ -1180,7 +1181,7 @@ virtual BOOL OnClickUp();
 
 默认实现不执行任何操作并返回 FALSE。 重写此方法以在按钮处理单击消息时返回一个非零值。
 
-## <a name="cmfctoolbarbuttononcontexthelp"></a><a name="oncontexthelp"></a>CMFCToolBarButton：： OnContextHelp
+## <a name="cmfctoolbarbuttononcontexthelp"></a><a name="oncontexthelp"></a> CMFCToolBarButton：： OnContextHelp
 
 当父工具栏处理 WM_HELPHITTEST 消息时由框架调用。
 
@@ -1188,7 +1189,7 @@ virtual BOOL OnClickUp();
 virtual BOOL OnContextHelp(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 中工具栏按钮的父窗口。
@@ -1201,9 +1202,9 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 此方法的默认实现不执行任何操作并返回 FALSE。 重写此方法以在按钮处理帮助消息时返回一个非零值。
 
-有关 WM_HELPHITTEST 消息的详细信息，请参阅[TN028：区分上下文的帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。
+有关 WM_HELPHITTEST 消息的详细信息，请参阅 [TN028： Context-Sensitive 帮助支持](../../mfc/tn028-context-sensitive-help-support.md)。
 
-## <a name="cmfctoolbarbuttononctlcolor"></a><a name="onctlcolor"></a>CMFCToolBarButton：： OnCtlColor
+## <a name="cmfctoolbarbuttononctlcolor"></a><a name="onctlcolor"></a> CMFCToolBarButton：： OnCtlColor
 
 当父工具栏处理 WM_CTLCOLOR 消息时由框架调用。
 
@@ -1213,7 +1214,7 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中显示按钮的设备上下文。
@@ -1229,11 +1230,11 @@ virtual HBRUSH OnCtlColor(
 
 当父工具栏处理包含 Windows 控件的工具栏按钮的 WM_CTLCOLOR 消息时，框架会调用此方法。 如果工具栏按钮为无窗口，框架不会调用此方法。
 
-当工具栏框架处于自定义模式并且工具栏按钮处于解锁状态时，框架会调用此方法。 有关自定义模式的详细信息，请参阅[CMFCToolBar：： SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)。 有关锁定工具栏按钮的详细信息，请参阅[CMFCToolBarButton：： IsLocked](#islocked)。
+当工具栏框架处于自定义模式并且工具栏按钮处于解锁状态时，框架会调用此方法。 有关自定义模式的详细信息，请参阅 [CMFCToolBar：： SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)。 有关锁定工具栏按钮的详细信息，请参阅 [CMFCToolBarButton：： IsLocked](#islocked)。
 
 默认实现不执行任何操作，并返回 NULL。
 
-## <a name="cmfctoolbarbuttononcustomizemenu"></a><a name="oncustomizemenu"></a>CMFCToolBarButton：： OnCustomizeMenu
+## <a name="cmfctoolbarbuttononcustomizemenu"></a><a name="oncustomizemenu"></a> CMFCToolBarButton：： OnCustomizeMenu
 
 当应用程序在父工具栏上显示快捷菜单时，允许该按钮修改提供的菜单。
 
@@ -1241,7 +1242,7 @@ virtual HBRUSH OnCtlColor(
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMenu*<br/>
 中要自定义的菜单。
@@ -1254,26 +1255,26 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 
 默认实现不执行任何操作并返回 FALSE。 如果要修改所提供菜单的内容，请重写此方法并返回一个非零值。
 
-## <a name="cmfctoolbarbuttonondblclk"></a><a name="ondblclk"></a>CMFCToolBarButton：： OnDblClk
+## <a name="cmfctoolbarbuttonondblclk"></a><a name="ondblclk"></a> CMFCToolBarButton：： OnDblClk
 
-当父工具栏处理[WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk)消息时由框架调用。
+当父工具栏处理 [WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk) 消息时由框架调用。
 
 ```
 virtual void OnDblClk(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 [in]-按钮的父窗口。
 
 ### <a name="remarks"></a>备注
 
-当父工具栏处理[WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk)消息`CMFCToolBar::OnLButtonDblClk`时，方法将调用此方法。
+`CMFCToolBar::OnLButtonDblClk`当父工具栏处理[WM_LBUTTONDBLCLK](/windows/win32/inputdev/wm-lbuttondblclk)消息时，方法将调用此方法。
 
 此方法的默认实现不执行任何操作。
 
-## <a name="cmfctoolbarbuttonondraw"></a><a name="ondraw"></a>CMFCToolBarButton：： OnDraw
+## <a name="cmfctoolbarbuttonondraw"></a><a name="ondraw"></a> CMFCToolBarButton：： OnDraw
 
 由框架调用，用于通过使用指定的样式和选项绘制按钮。
 
@@ -1289,7 +1290,7 @@ virtual void OnDraw(
     BOOL bGrayDisabledButtons=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中显示按钮的设备上下文。
@@ -1319,7 +1320,7 @@ virtual void OnDraw(
 
 重写此方法以自定义工具栏按钮绘图。
 
-## <a name="cmfctoolbarbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>CMFCToolBarButton：： OnDrawOnCustomizeList
+## <a name="cmfctoolbarbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a> CMFCToolBarButton：： OnDrawOnCustomizeList
 
 由框架调用，用于绘制 "**自定义**" 对话框的 "**命令**" 窗格中的按钮。
 
@@ -1330,7 +1331,7 @@ virtual int OnDrawOnCustomizeList(
     BOOL bSelected);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中显示按钮的设备上下文。
@@ -1347,13 +1348,13 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="remarks"></a>备注
 
-当 "自定义" 对话框（"**命令**" 选项卡）在 "所有者描述" 列表框中显示自己时，将调用此方法。
+此方法由 "自定义" 对话框 ( " **命令** " 选项卡，在按钮即将显示在所有者描述列表框中时) 。
 
 此方法的默认实现显示按钮的图像和文本标签（如果可用）。 如果按钮的文本标签不可用，则方法会显示工具提示文本。
 
 重写此方法以执行自定义绘制。
 
-## <a name="cmfctoolbarbuttonongetcustomtooltiptext"></a><a name="ongetcustomtooltiptext"></a>CMFCToolBarButton：： OnGetCustomToolTipText
+## <a name="cmfctoolbarbuttonongetcustomtooltiptext"></a><a name="ongetcustomtooltiptext"></a> CMFCToolBarButton：： OnGetCustomToolTipText
 
 由框架调用以检索按钮的自定义工具提示文本。
 
@@ -1361,10 +1362,10 @@ virtual int OnDrawOnCustomizeList(
 virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strToolTip*<br/>
-弄接收`CString`自定义工具提示文本的对象。
+弄 `CString` 接收自定义工具提示文本的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -1376,7 +1377,7 @@ virtual BOOL OnGetCustomToolTipText(CString& strToolTip);
 
 默认实现不执行任何操作并返回 FALSE。 重写此方法并返回一个非零值，为工具栏按钮提供自定义工具提示文本。
 
-## <a name="cmfctoolbarbuttononglobalfontschanged"></a><a name="onglobalfontschanged"></a>CMFCToolBarButton：： OnGlobalFontsChanged
+## <a name="cmfctoolbarbuttononglobalfontschanged"></a><a name="onglobalfontschanged"></a> CMFCToolBarButton：： OnGlobalFontsChanged
 
 当全局字体已更改时由框架调用。
 
@@ -1388,7 +1389,7 @@ virtual void OnGlobalFontsChanged();
 
 此方法的默认实现不执行任何操作。 重写此方法以更新用于显示按钮文本的字体。
 
-## <a name="cmfctoolbarbuttononmove"></a><a name="onmove"></a>CMFCToolBarButton：： OnMove
+## <a name="cmfctoolbarbuttononmove"></a><a name="onmove"></a> CMFCToolBarButton：： OnMove
 
 当父工具栏移动时由框架调用。
 
@@ -1400,7 +1401,7 @@ virtual void OnMove();
 
 此方法的默认实现不执行任何操作。 重写此方法，以便在父工具栏移动时重定位按钮。
 
-## <a name="cmfctoolbarbuttononshow"></a><a name="onshow"></a>CMFCToolBarButton：： OnShow
+## <a name="cmfctoolbarbuttononshow"></a><a name="onshow"></a> CMFCToolBarButton：： OnShow
 
 当按钮变为可见或不可见时由框架调用。
 
@@ -1408,7 +1409,7 @@ virtual void OnMove();
 virtual void OnShow(BOOL bShow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 中指定按钮是否可见。 如果此参数为 TRUE，则该按钮可见。 否则，该按钮将不可见。
@@ -1417,7 +1418,7 @@ virtual void OnShow(BOOL bShow);
 
 此方法的默认实现不执行任何操作。 重写此方法以更新按钮的可见性。
 
-## <a name="cmfctoolbarbuttononsize"></a><a name="onsize"></a>CMFCToolBarButton：： OnSize
+## <a name="cmfctoolbarbuttononsize"></a><a name="onsize"></a> CMFCToolBarButton：： OnSize
 
 当父工具栏更改其大小或位置并且此更改导致按钮更改大小时，由框架调用。
 
@@ -1425,7 +1426,7 @@ virtual void OnShow(BOOL bShow);
 virtual void OnSize(int iSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iSize*<br/>
 中按钮的新宽度。
@@ -1434,7 +1435,7 @@ virtual void OnSize(int iSize);
 
 此方法的默认实现不执行任何操作。 重写此方法，以在父工具栏的大小或位置更改时调整按钮大小。
 
-## <a name="cmfctoolbarbuttonontoolhittest"></a><a name="ontoolhittest"></a>CMFCToolBarButton：： OnToolHitTest
+## <a name="cmfctoolbarbuttonontoolhittest"></a><a name="ontoolhittest"></a> CMFCToolBarButton：： OnToolHitTest
 
 当父工具栏必须确定某个点是否在按钮的边框中时由框架调用。
 
@@ -1444,17 +1445,17 @@ virtual BOOL OnToolHitTest(
     TOOLINFO* pTI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 中按钮的父窗口。 可以为 NULL。
 
 *pTI*<br/>
-中一个`TOOLINFO`结构，它包含 tooltip 控件中的工具的相关信息。
+中一个 `TOOLINFO` 结构，它包含 tooltip 控件中的工具的相关信息。
 
 ### <a name="return-value"></a>返回值
 
-`OnMenuButtonToolHitTest`如果按钮可以检索指向父框架窗口的指针，则为的结果;否则为 FALSE。
+`OnMenuButtonToolHitTest`如果按钮可以检索指向父框架窗口的指针，则为的结果; 否则为 FALSE。
 
 ### <a name="remarks"></a>备注
 
@@ -1466,7 +1467,7 @@ virtual BOOL OnToolHitTest(
 
 - [COleIPFrameWndEx::OnMenuButtonToolHitTest](../../mfc/reference/coleipframewndex-class.md#onmenubuttontoolhittest)
 
-## <a name="cmfctoolbarbuttononupdatetooltip"></a><a name="onupdatetooltip"></a>CMFCToolBarButton：： OnUpdateToolTip
+## <a name="cmfctoolbarbuttononupdatetooltip"></a><a name="onupdatetooltip"></a> CMFCToolBarButton：： OnUpdateToolTip
 
 当父工具栏更新其工具提示文本时由框架调用。
 
@@ -1478,7 +1479,7 @@ virtual BOOL OnUpdateToolTip(
     CString& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndParent*<br/>
 中父窗口。
@@ -1489,8 +1490,8 @@ virtual BOOL OnUpdateToolTip(
 *wndToolTip*<br/>
 中用于显示工具提示文本的控件。
 
-*字符串*<br/>
-弄一个`CString`对象，它接收更新的工具提示文本。
+*str*<br/>
+弄一个 `CString` 对象，它接收更新的工具提示文本。
 
 ### <a name="return-value"></a>返回值
 
@@ -1500,7 +1501,7 @@ virtual BOOL OnUpdateToolTip(
 
 此方法的默认实现不执行任何操作并返回 FALSE。 如果您提供了工具提示文本字符串，则重写此方法以返回一个非零值。
 
-## <a name="cmfctoolbarbuttonpreparedrag"></a><a name="preparedrag"></a>CMFCToolBarButton：:P repareDrag
+## <a name="cmfctoolbarbuttonpreparedrag"></a><a name="preparedrag"></a> CMFCToolBarButton：:P repareDrag
 
 当按钮即将执行拖放操作时，由框架调用。
 
@@ -1508,10 +1509,10 @@ virtual BOOL OnUpdateToolTip(
 virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *srcItem*<br/>
-中一个`COleDataSource`对象，该对象存储有关拖放操作的状态信息。
+中一个 `COleDataSource` 对象，该对象存储有关拖放操作的状态信息。
 
 ### <a name="return-value"></a>返回值
 
@@ -1519,13 +1520,13 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 
 ### <a name="remarks"></a>备注
 
-框架调用此方法来准备工具栏按钮，以将其状态存储在所提供`COleDataSource`的对象中。 此方法通过将自身序列化为共享文件，然后将该文件传递给[COleDataSource：： CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata)方法来存储其状态。 有关工具栏按钮序列化的详细信息，请参阅[CMFCToolBarButton：：串行化](#serialize)。
+框架调用此方法来准备工具栏按钮，以将其状态存储在所提供的 `COleDataSource` 对象中。 此方法通过将自身序列化为共享文件，然后将该文件传递给 [COleDataSource：： CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata) 方法来存储其状态。 有关工具栏按钮序列化的详细信息，请参阅 [CMFCToolBarButton：：串行化](#serialize)。
 
-此方法不执行任何操作，如果无法存储该按钮，则返回 TRUE （ [CMFCToolBarButton：： CanBeStored](#canbestored)方法返回 FALSE）。 如果对象序列化期间发生异常，则返回 FALSE。
+此方法不执行任何操作，如果无法存储该按钮，则返回 TRUE ([CMFCToolBarButton：： CanBeStored](#canbestored) 方法返回 FALSE) 。 如果对象序列化期间发生异常，则返回 FALSE。
 
-有关 OLE 拖放操作的详细信息，请参阅[ole 拖放](../../mfc/drag-and-drop-ole.md)。
+有关 OLE 拖放操作的详细信息，请参阅 [ole 拖放](../../mfc/drag-and-drop-ole.md)。
 
-## <a name="cmfctoolbarbuttonrect"></a><a name="rect"></a>CMFCToolBarButton：： Rect
+## <a name="cmfctoolbarbuttonrect"></a><a name="rect"></a> CMFCToolBarButton：： Rect
 
 检索按钮的边框。
 
@@ -1535,9 +1536,9 @@ const CRect& Rect() const;
 
 ### <a name="return-value"></a>返回值
 
-一个`CRect`包含按钮的边框的对象。
+一个 `CRect` 包含按钮的边框的对象。
 
-## <a name="cmfctoolbarbuttonresetimagetodefault"></a><a name="resetimagetodefault"></a>CMFCToolBarButton：： ResetImageToDefault
+## <a name="cmfctoolbarbuttonresetimagetodefault"></a><a name="resetimagetodefault"></a> CMFCToolBarButton：： ResetImageToDefault
 
 将设置为与按钮关联的图像的默认值。
 
@@ -1547,11 +1548,11 @@ virtual void ResetImageToDefault();
 
 ### <a name="remarks"></a>备注
 
-此方法通过使用[CMFCToolBar：： GetDefaultImage](../../mfc/reference/cmfctoolbar-class.md#getdefaultimage)方法从其父工具栏检索默认图像。 如果该按钮没有关联的默认图像，则此方法将使用[CStringT：： LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)方法根据其字符串资源设置该按钮的文本标签。 有关字符串资源的详细信息，请参阅使用[资源文件](../../windows/working-with-resource-files.md)。
+此方法通过使用 [CMFCToolBar：： GetDefaultImage](../../mfc/reference/cmfctoolbar-class.md#getdefaultimage) 方法从其父工具栏检索默认图像。 如果该按钮没有关联的默认图像，则此方法将使用 [CStringT：： LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring) 方法根据其字符串资源设置该按钮的文本标签。 有关字符串资源的详细信息，请参阅使用 [资源文件](../../windows/working-with-resource-files.md)。
 
 如果该按钮具有用户定义的图像，则此方法不执行任何操作。
 
-## <a name="cmfctoolbarbuttonsavebarstate"></a><a name="savebarstate"></a>CMFCToolBarButton：： SaveBarState
+## <a name="cmfctoolbarbuttonsavebarstate"></a><a name="savebarstate"></a> CMFCToolBarButton：： SaveBarState
 
 保存工具栏按钮的状态。
 
@@ -1561,11 +1562,11 @@ virtual void SaveBarState();
 
 ### <a name="remarks"></a>备注
 
-当框架创建`CMFCToolBarButton`对象作为拖放操作的结果时，框架会调用此方法。
+当框架创建 `CMFCToolBarButton` 对象作为拖放操作的结果时，框架会调用此方法。
 
 此方法的默认实现不执行任何操作。 重写此方法以将工具栏按钮的状态保存到外部数据源。
 
-## <a name="cmfctoolbarbuttonserialize"></a><a name="serialize"></a>CMFCToolBarButton：：串行化
+## <a name="cmfctoolbarbuttonserialize"></a><a name="serialize"></a> CMFCToolBarButton：：串行化
 
 从存档中读取此对象或将其写入存档。
 
@@ -1573,20 +1574,20 @@ virtual void SaveBarState();
 virtual void Serialize(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
-中要`CArchive`从其进行序列化的对象。
+中 `CArchive` 要从其进行序列化的对象。
 
 ### <a name="remarks"></a>备注
 
-此方法支持数据传输过程，例如剪贴板或拖放操作。 它从或向所提供`CArchive`的对象读取或写入按钮的属性，例如 id、文本标签和图像 id。
+此方法支持数据传输过程，例如剪贴板或拖放操作。 它从或向所提供的对象读取或写入按钮的属性，例如 ID、文本标签和图像 ID `CArchive` 。
 
-有关序列化示例，请参阅[序列化：序列化对象](../../mfc/serialization-serializing-an-object.md)。
+有关序列化示例，请参阅 [序列化：序列化对象](../../mfc/serialization-serializing-an-object.md)。
 
-## <a name="cmfctoolbarbuttonsetaccdata"></a><a name="setaccdata"></a>CMFCToolBarButton：： SetACCData
+## <a name="cmfctoolbarbuttonsetaccdata"></a><a name="setaccdata"></a> CMFCToolBarButton：： SetACCData
 
-用工具栏按钮`CAccessibilityData`中的可访问性数据填充提供的对象。
+`CAccessibilityData`用工具栏按钮中的可访问性数据填充提供的对象。
 
 ```
 virtual BOOL SetACCData(
@@ -1594,13 +1595,13 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParent*<br/>
 中工具栏按钮的父窗口。
 
-*数据*<br/>
-中用`CAccessibilityData`工具栏按钮的可访问性数据填充的对象。
+*data*<br/>
+中 `CAccessibilityData` 用工具栏按钮的可访问性数据填充的对象。
 
 ### <a name="return-value"></a>返回值
 
@@ -1610,7 +1611,7 @@ virtual BOOL SetACCData(
 
 如果你的工具栏按钮未提供辅助功能数据，则重写此方法以返回 FALSE。
 
-## <a name="cmfctoolbarbuttonsetclipboardformatname"></a><a name="setclipboardformatname"></a>CMFCToolBarButton：： SetClipboardFormatName
+## <a name="cmfctoolbarbuttonsetclipboardformatname"></a><a name="setclipboardformatname"></a> CMFCToolBarButton：： SetClipboardFormatName
 
 重命名全局剪贴板格式。
 
@@ -1618,7 +1619,7 @@ virtual BOOL SetACCData(
 static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 中全局剪贴板格式的新名称。 不能为 NULL。
@@ -1627,9 +1628,9 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 
 利用此方法，可以在多个应用程序之间执行拖放操作。 每个应用程序必须提供相同的剪贴板格式名称。
 
-必须先调用此方法，然后框架才能调用[CMFCToolBarButton：： GetClipboardFormat](#getclipboardformat)。
+必须先调用此方法，然后框架才能调用 [CMFCToolBarButton：： GetClipboardFormat](#getclipboardformat)。
 
-## <a name="cmfctoolbarbuttonsetimage"></a><a name="setimage"></a>CMFCToolBarButton：： SetImage
+## <a name="cmfctoolbarbuttonsetimage"></a><a name="setimage"></a> CMFCToolBarButton：： SetImage
 
 设置按钮的图像索引。
 
@@ -1637,18 +1638,18 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 virtual void SetImage(int iImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iImage*<br/>
 中工具栏图像集合中的图像的索引。
 
 ### <a name="remarks"></a>备注
 
-如果工具栏按钮是分隔符，则*iImage*是指分隔符按钮的新宽度。
+如果工具栏按钮是分隔符，则 *iImage* 是指分隔符按钮的新宽度。
 
-如果*iImage*小于零，则此方法将禁用图像的绘图并启用该按钮的文本标签的绘制。
+如果 *iImage* 小于零，则此方法将禁用图像的绘图并启用该按钮的文本标签的绘制。
 
-## <a name="cmfctoolbarbuttonsetprotectedcommands"></a><a name="setprotectedcommands"></a>CMFCToolBarButton：： SetProtectedCommands
+## <a name="cmfctoolbarbuttonsetprotectedcommands"></a><a name="setprotectedcommands"></a> CMFCToolBarButton：： SetProtectedCommands
 
 设置用户无法自定义的命令的列表。
 
@@ -1656,7 +1657,7 @@ virtual void SetImage(int iImage);
 static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lstCmds*<br/>
 中受保护命令的列表。
@@ -1665,9 +1666,9 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 
 在自定义模式下，框架禁用受保护的工具栏按钮命令。 用户不能对禁用的工具栏按钮执行拖放和编辑操作。
 
-使用[CMFCToolBarButton：： GetProtectedCommands](#getprotectedcommands)方法检索受保护命令的列表。
+使用 [CMFCToolBarButton：： GetProtectedCommands](#getprotectedcommands) 方法检索受保护命令的列表。
 
-## <a name="cmfctoolbarbuttonsetradio"></a><a name="setradio"></a>CMFCToolBarButton：： SetRadio
+## <a name="cmfctoolbarbuttonsetradio"></a><a name="setradio"></a> CMFCToolBarButton：： SetRadio
 
 当按钮更改其选中状态时由框架调用。
 
@@ -1679,7 +1680,7 @@ virtual void SetRadio();
 
 此方法的默认实现不执行任何操作。 重写此方法，以便在按钮更改其选中状态时执行自定义操作。
 
-## <a name="cmfctoolbarbuttonsetrect"></a><a name="setrect"></a>CMFCToolBarButton：： SetRect
+## <a name="cmfctoolbarbuttonsetrect"></a><a name="setrect"></a> CMFCToolBarButton：： SetRect
 
 设置按钮的边框。
 
@@ -1687,16 +1688,16 @@ virtual void SetRadio();
 void SetRect(const CRect rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中按钮的新边框。
 
 ### <a name="remarks"></a>备注
 
-此方法在设置新的边框后调用[CMFCToolBarButton：： OnMove](#onmove)方法。
+此方法在设置新的边框后调用 [CMFCToolBarButton：： OnMove](#onmove) 方法。
 
-## <a name="cmfctoolbarbuttonsetstyle"></a><a name="setstyle"></a>CMFCToolBarButton：： System.windows.forms.control.setstyle
+## <a name="cmfctoolbarbuttonsetstyle"></a><a name="setstyle"></a> CMFCToolBarButton：： System.windows.forms.control.setstyle
 
 设置按钮的样式。
 
@@ -1704,16 +1705,16 @@ void SetRect(const CRect rect);
 virtual void SetStyle(UINT nStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStyle*<br/>
 中按钮的新样式。
 
 ### <a name="remarks"></a>备注
 
-默认实现将[CMFCToolBarButton：： m_nStyle](#m_nstyle)数据成员设置为*nStyle*。 如果要执行其他处理以处理样式更改，请重写此方法。 有关有效样式标志的列表，请参阅[ToolBar 控件样式](toolbar-control-styles.md)。
+默认实现将 [CMFCToolBarButton：： m_nStyle](#m_nstyle) 数据成员设置为 *nStyle*。 如果要执行其他处理以处理样式更改，请重写此方法。 有关有效样式标志的列表，请参阅 [ToolBar 控件样式](toolbar-control-styles.md) 。
 
-## <a name="cmfctoolbarbuttonsetvisible"></a><a name="setvisible"></a>CMFCToolBarButton：： SetVisible
+## <a name="cmfctoolbarbuttonsetvisible"></a><a name="setvisible"></a> CMFCToolBarButton：： SetVisible
 
 指定按钮是否可见。
 
@@ -1721,16 +1722,16 @@ virtual void SetStyle(UINT nStyle);
 void SetVisible(BOOL bShow=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 中一个布尔值，指定是显示还是隐藏按钮。 如果此参数为 TRUE，则显示 "" 按钮。 如果参数为 FALSE，则隐藏按钮。
 
 ### <a name="remarks"></a>备注
 
-使用此函数可隐藏或显示特定的工具栏按钮。 调用此方法后，调用[CPane：： AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)方法。
+使用此函数可隐藏或显示特定的工具栏按钮。 调用此方法后，调用 [CPane：： AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate) 方法。
 
-## <a name="cmfctoolbarbuttonshow"></a><a name="show"></a>CMFCToolBarButton：： Show
+## <a name="cmfctoolbarbuttonshow"></a><a name="show"></a> CMFCToolBarButton：： Show
 
 显示或隐藏按钮。
 
@@ -1738,22 +1739,22 @@ void SetVisible(BOOL bShow=TRUE);
 void Show(BOOL bShow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 中一个布尔值，指定是显示还是隐藏按钮。 如果此参数为 TRUE，则显示 "" 按钮。 如果参数为 FALSE，则隐藏按钮。
 
 ### <a name="remarks"></a>备注
 
-当调整工具栏按钮的父工具栏大小时，框架将调用此方法来更新其可见性。 当按钮在工具栏的边界内不再适合时，框架会调用此方法，并将*bShow*设置为 FALSE。 当调整按钮大小后，框架将调用此方法，并将按钮调整到工具栏的边界内后，将*bShow*设置为 TRUE。
+当调整工具栏按钮的父工具栏大小时，框架将调用此方法来更新其可见性。 当按钮在工具栏的边界内不再适合时，框架会调用此方法，并将 *bShow* 设置为 FALSE。 当调整按钮大小后，框架将调用此方法，并将按钮调整到工具栏的边界内后，将 *bShow* 设置为 TRUE。
 
-使用[CMFCToolBarButton：： SetVisible](#setvisible)方法设置按钮的一般可见性。
+使用 [CMFCToolBarButton：： SetVisible](#setvisible) 方法设置按钮的一般可见性。
 
-此方法在更新按钮的可见性状态后调用[CMFCToolBarButton：： OnShow](#onshow)方法。
+此方法在更新按钮的可见性状态后调用 [CMFCToolBarButton：： OnShow](#onshow) 方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarImages 类](../../mfc/reference/cmfctoolbarimages-class.md)

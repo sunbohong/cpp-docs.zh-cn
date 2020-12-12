@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSimpleArray 类
 title: CSimpleArray 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: d3386687757412d09e4df29e84f691f1615c472a
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 95750662587c7ab47500a338c3ecd7e74a92eb34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140784"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 类
 
-此类提供了用于管理简单数组的方法。
+此类提供用于管理简单数组的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -34,81 +35,81 @@ template <class T, class TEqual = CSimpleArrayEqualHelper<T>>
 class CSimpleArray
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
-要存储在数组中的数据类型。
+要存储在数组中的数据的类型。
 
 *TEqual*<br/>
-特征对象，定义*T*类型元素的相等性测试。
+特征对象，定义类型为 *T* 的元素的相等性测试。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[简单数组：：C简单数组](#csimplearray)|简单数组的构造函数。|
-|[简单数组：：*C简单数组](#dtor)|简单数组的析构函数。|
+|[CSimpleArray::CSimpleArray](#csimplearray)|简单数组的构造函数。|
+|[CSimpleArray：： ~ CSimpleArray](#dtor)|简单数组的析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[简单数组：：添加](#add)|向数组添加新元素。|
-|[简单数组：查找](#find)|在数组中查找元素。|
-|[CSimplearray：获取数据](#getdata)|返回指向数组中存储数据的指针。|
-|[简单数组：获取 Size](#getsize)|返回存储在数组中的元素数。|
-|[简单数组：：删除](#remove)|从数组中删除给定元素。|
-|[简单数组：：删除所有](#removeall)|从数组中删除所有元素。|
-|[简单数组：：删除At](#removeat)|从数组中删除指定的元素。|
-|[简单数组：：设置Atindex](#setatindex)|设置数组中的指定元素。|
+|[CSimpleArray：： Add](#add)|将新元素添加到数组中。|
+|[CSimpleArray：： Find](#find)|查找数组中的元素。|
+|[CSimpleArray：：](#getdata)|返回一个指向存储在数组中的数据的指针。|
+|[CSimpleArray：： GetSize](#getsize)|返回数组中存储的元素数。|
+|[CSimpleArray：： Remove](#remove)|从数组中移除给定元素。|
+|[CSimpleArray：： RemoveAll](#removeall)|从数组中移除所有元素。|
+|[CSimpleArray：： RemoveAt](#removeat)|从数组中移除指定的元素。|
+|[CSimpleArray::SetAtIndex](#setatindex)|设置数组中的指定元素。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CSimpleArray::operator\[\]](#operator_at)|从数组中检索元素。|
-|[CSimpleArray：：运算符 |](#operator_eq)|赋值运算符。|
+|[CSimpleArray：： operator =](#operator_eq)|赋值运算符。|
 
 ## <a name="remarks"></a>备注
 
-`CSimpleArray`提供了用于创建和管理任何给定类型的`T`简单数组的方法。
+`CSimpleArray` 提供用于创建和管理任意给定类型的简单数组的方法 `T` 。
 
-该参数`TEqual`提供了一种为类型中的`T`两个元素定义相等函数的方法。 通过创建类似于[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)的类，可以更改任何给定数组的相等测试的行为。 例如，在处理指针数组时，将相等性定义为根据指针引用的值可能很有用。 默认实现使用运算符 **_（）**。
+参数 `TEqual` 提供了一种为类型为的两个元素定义相等函数的方法 `T` 。 通过创建类似于 [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)的类，可以更改任何给定数组的相等性测试的行为。 例如，处理指针数组时，根据指针所引用的值定义相等性可能会很有用。 默认实现利用 **operator = ( # B1**。
 
-和`CSimpleArray` [CSimpleMap](../../atl/reference/csimplemap-class.md)都专为少量元素而设计。 当数组包含大量元素时，应使用[CAtlArray](../../atl/reference/catlarray-class.md)和[CAtlMap。](../../atl/reference/catlmap-class.md)
+`CSimpleArray`和[CSimpleMap](../../atl/reference/csimplemap-class.md)都是为少量元素而设计的。 当数组包含大量元素时，应使用[CAtlArray](../../atl/reference/catlarray-class.md)和[CAtlMap](../../atl/reference/catlmap-class.md) 。
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlsimpcoll.h
+**标头：** atlsimpcoll
 
 ## <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]
 
-## <a name="csimplearrayadd"></a><a name="add"></a>简单数组：：添加
+## <a name="csimplearrayadd"></a><a name="add"></a> CSimpleArray：： Add
 
-向数组添加新元素。
+将新元素添加到数组中。
 
 ```
 BOOL Add(const T& t);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *t*<br/>
-要添加到数组的元素。
+要添加到数组中的元素。
 
 ### <a name="return-value"></a>返回值
 
-如果元素已成功添加到数组中，则返回 TRUE，否则为 FALSE。
+如果元素已成功添加到数组，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]
 
-## <a name="csimplearraycsimplearray"></a><a name="csimplearray"></a>简单数组：：C简单数组
+## <a name="csimplearraycsimplearray"></a><a name="csimplearray"></a> CSimpleArray::CSimpleArray
 
 数组对象的构造函数。
 
@@ -117,16 +118,16 @@ CSimpleArray(const CSimpleArray<T, TEqual>& src);
 CSimpleArray();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *src*<br/>
 一个现有的 `CSimpleArray` 对象。
 
 ### <a name="remarks"></a>备注
 
-初始化数据成员，创建新的空`CSimpleArray`对象或现有`CSimpleArray`对象的副本。
+初始化数据成员、创建新的空 `CSimpleArray` 对象或现有对象的副本 `CSimpleArray` 。
 
-## <a name="csimplearraycsimplearray"></a><a name="dtor"></a>简单数组：：*C简单数组
+## <a name="csimplearraycsimplearray"></a><a name="dtor"></a> CSimpleArray：： ~ CSimpleArray
 
 析构函数。
 
@@ -136,32 +137,32 @@ CSimpleArray();
 
 ### <a name="remarks"></a>备注
 
-释放所有分配的资源。
+释放所有已分配的资源。
 
-## <a name="csimplearrayfind"></a><a name="find"></a>简单数组：查找
+## <a name="csimplearrayfind"></a><a name="find"></a> CSimpleArray：： Find
 
-在数组中查找元素。
+查找数组中的元素。
 
 ```
 int Find(const T& t) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *t*<br/>
-要为其搜索的元素。
+要搜索的元素。
 
 ### <a name="return-value"></a>返回值
 
-返回找到的元素的索引，如果找不到该元素，则返回 -1。
+返回找到的元素的索引; 如果未找到该元素，则返回-1。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]
 
-## <a name="csimplearraygetdata"></a><a name="getdata"></a>CSimplearray：获取数据
+## <a name="csimplearraygetdata"></a><a name="getdata"></a> CSimpleArray：：
 
-返回指向数组中存储数据的指针。
+返回一个指向存储在数组中的数据的指针。
 
 ```
 T* GetData() const;
@@ -169,11 +170,11 @@ T* GetData() const;
 
 ### <a name="return-value"></a>返回值
 
-返回指向数组中数据的指针。
+返回一个指向数组中的数据的指针。
 
-## <a name="csimplearraygetsize"></a><a name="getsize"></a>简单数组：获取 Size
+## <a name="csimplearraygetsize"></a><a name="getsize"></a> CSimpleArray：： GetSize
 
-返回存储在数组中的元素数。
+返回数组中存储的元素数。
 
 ```
 int GetSize() const;
@@ -181,9 +182,9 @@ int GetSize() const;
 
 ### <a name="return-value"></a>返回值
 
-返回存储在数组中的元素数。
+返回数组中存储的元素数。
 
-## <a name="csimplearrayoperator-"></a><a name="operator_at"></a>CSimpleArray：：运算符\[\]
+## <a name="csimplearrayoperator-"></a><a name="operator_at"></a> CSimpleArray：： operator \[\]
 
 从数组中检索元素。
 
@@ -191,20 +192,20 @@ int GetSize() const;
 T& operator[](int nindex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 元素索引。
 
 ### <a name="return-value"></a>返回值
 
-返回*nIndex*引用的数组的元素。
+返回由 *nIndex* 引用的数组的元素。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]
 
-## <a name="csimplearrayoperator-"></a><a name="operator_eq"></a>CSimpleArray：：运算符 |
+## <a name="csimplearrayoperator-"></a><a name="operator_eq"></a> CSimpleArray：： operator =
 
 赋值运算符。
 
@@ -214,47 +215,47 @@ CSimpleArray<T, TEqual>
     const CSimpleArray<T, TEqual>& src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *src*<br/>
 要复制的数组。
 
 ### <a name="return-value"></a>返回值
 
-返回指向更新`CSimpleArray`对象的指针。
+返回一个指向已更新的 `CSimpleArray` 对象的指针。
 
 ### <a name="remarks"></a>备注
 
-将*src* `CSimpleArray`引用的对象中的所有元素复制到当前数组对象中，替换所有现有数据。
+将所有元素从 `CSimpleArray` *src* 引用的对象复制到当前数组对象中，并替换所有现有数据。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]
 
-## <a name="csimplearrayremove"></a><a name="remove"></a>简单数组：：删除
+## <a name="csimplearrayremove"></a><a name="remove"></a> CSimpleArray：： Remove
 
-从数组中删除给定元素。
+从数组中移除给定元素。
 
 ```
 BOOL Remove(const T& t);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *t*<br/>
-要从数组中删除的元素。
+要从数组中移除的元素。
 
 ### <a name="return-value"></a>返回值
 
-如果找到并删除了该元素，则返回 TRUE，否则返回 FALSE。
+如果找到并移除该元素，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-删除元素时，将重新编号数组中的剩余元素以填充空白空间。
+删除元素后，数组中的剩余元素将重新编号，以填充空白区域。
 
-## <a name="csimplearrayremoveall"></a><a name="removeall"></a>简单数组：：删除所有
+## <a name="csimplearrayremoveall"></a><a name="removeall"></a> CSimpleArray：： RemoveAll
 
-从数组中删除所有元素。
+从数组中移除所有元素。
 
 ```cpp
 void RemoveAll();
@@ -264,30 +265,30 @@ void RemoveAll();
 
 删除当前存储在数组中的所有元素。
 
-## <a name="csimplearrayremoveat"></a><a name="removeat"></a>简单数组：：删除At
+## <a name="csimplearrayremoveat"></a><a name="removeat"></a> CSimpleArray：： RemoveAt
 
-从数组中删除指定的元素。
+从数组中移除指定的元素。
 
 ```
 BOOL RemoveAtint nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
-指向要删除的元素的索引。
+指向要移除的元素的索引。
 
 ### <a name="return-value"></a>返回值
 
-如果删除元素，则返回 TRUE;如果索引无效，则返回 FALSE。
+如果该元素已移除，则返回 TRUE; 如果索引无效，则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-删除元素时，将重新编号数组中的剩余元素以填充空白空间。
+删除元素后，数组中的剩余元素将重新编号，以填充空白区域。
 
-## <a name="csimplearraysetatindex"></a><a name="setatindex"></a>简单数组：：设置Atindex
+## <a name="csimplearraysetatindex"></a><a name="setatindex"></a> CSimpleArray::SetAtIndex
 
-在数组中设置指定元素。
+设置数组中的指定元素。
 
 ```
 BOOL SetAtIndex(
@@ -295,7 +296,7 @@ BOOL SetAtIndex(
     const T& t);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要更改的元素的索引。
@@ -305,7 +306,7 @@ BOOL SetAtIndex(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则返回 TRUE;如果索引无效，则返回 FALSE。
+如果成功，则返回 TRUE; 如果索引无效，则返回 FALSE。
 
 ## <a name="see-also"></a>请参阅
 

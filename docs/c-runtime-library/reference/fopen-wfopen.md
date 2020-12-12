@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fopen、_wfopen
 title: fopen、_wfopen
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: b7889009fe2de3c5256d6caf6cb5afa8792919c4
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: a11bf5ab387ac3436a488f77bea4c5c130836790
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743056"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164921"
 ---
 # <a name="fopen-_wfopen"></a>fopen、_wfopen
 
@@ -62,7 +63,7 @@ FILE *_wfopen(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *filename*<br/>
 文件名。
@@ -78,9 +79,9 @@ FILE *_wfopen(
 
 ## <a name="remarks"></a>备注
 
-**Fopen**函数打开*文件名*指定的文件。 默认情况下，使用 ANSI 代码页 (CP_ACP) 解释窄 *文件名* 字符串。 在 Windows 桌面应用程序中，可以通过使用 [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) 函数将此更改为 OEM 代码页 (CP_OEMCP)。 您可以使用 [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) 函数来确定是使用 ANSI 还是系统默认的 OEM 代码页来解释 *文件名* 。 **_wfopen** 是 **fopen**的宽字符版本; **_wfopen** 的参数是宽字符字符串。 否则， **_wfopen** 和 **fopen** 的行为相同。 只使用 **_wfopen** 不会影响在文件流中使用的编码字符集。
+**Fopen** 函数打开 *文件名* 指定的文件。 默认情况下，使用 ANSI 代码页 (CP_ACP) 解释窄 *文件名* 字符串。 在 Windows 桌面应用程序中，可以通过使用 [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) 函数将此更改为 OEM 代码页 (CP_OEMCP)。 您可以使用 [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) 函数来确定是使用 ANSI 还是系统默认的 OEM 代码页来解释 *文件名* 。 **_wfopen** 是 **fopen** 的宽字符版本; **_wfopen** 的参数是宽字符字符串。 否则， **_wfopen** 和 **fopen** 的行为相同。 只使用 **_wfopen** 不会影响在文件流中使用的编码字符集。
 
-**fopen** 接受在执行时文件系统上有效的路径; **fopen** 接受 UNC 路径和包含映射的网络驱动器的路径，前提是执行代码的系统在执行时能够访问共享或映射的驱动器。 构造 **fopen**的路径时，请确保驱动器、路径或网络共享在执行环境中可用。 可使用斜杠 (/) 或反斜杠 (\\) 作为路径中的目录分隔符。
+**fopen** 接受在执行时文件系统上有效的路径; **fopen** 接受 UNC 路径和包含映射的网络驱动器的路径，前提是执行代码的系统在执行时能够访问共享或映射的驱动器。 构造 **fopen** 的路径时，请确保驱动器、路径或网络共享在执行环境中可用。 可使用斜杠 (/) 或反斜杠 (\\) 作为路径中的目录分隔符。
 
 对文件执行任何其他操作前，请始终检查返回值以确定指针是否为 NULL。 如果发生错误，则会设置全局变量 **errno** ，并可将其用于获取特定错误信息。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -92,7 +93,7 @@ FILE *_wfopen(
 
 > **文件 \* fp = fopen ( "newfile.txt"、"rt +，ccs =**_encoding_**" ) ;**
 
-允许的 *编码* 值为 **UNICODE**、 **utf-8**和 **utf-16le**。
+允许的 *编码* 值为 **UNICODE**、 **utf-8** 和 **utf-16le**。
 
 在 Unicode 模式下打开文件时，输入函数会将从文件读取的数据转换为存储为类型的 UTF-16 数据 **`wchar_t`** 。 写入在 Unicode 模式下打开的文件的函数需要包含存储为类型的 UTF-16 数据的缓冲区 **`wchar_t`** 。 如果将文件编码为 UTF-8，则在写入它时，UTF-16 数据会转换为 UTF-8；在读取它时，该文件的 UTF-8 编码的内容会转换为 UTF-16。 尝试在 Unicode 模式下读取或写入奇数个字节会导致 [参数验证](../../c-runtime-library/parameter-validation.md) 错误。 若要读取或写入在你的程序中存储为 UTF-8 的数据，请使用文本或二进制文件模式，而不是 Unicode 模式。 你应负责所有必需的编码转换。
 
@@ -101,7 +102,7 @@ FILE *_wfopen(
 > [!NOTE]
 > BOM 检测仅适用于在 Unicode 模式下打开的文件 (即通过将 **ccs** 标志传递) 。
 
-下表总结了在文件中提供给**fopen**和字节顺序标记的各种**ccs**标志所使用的模式。
+下表总结了在文件中提供给 **fopen** 和字节顺序标记的各种 **ccs** 标志所使用的模式。
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>基于 ccs 标志和 BOM 使用的编码
 
@@ -147,9 +148,9 @@ FILE *_wfopen(
 
 在文本模式下，CTRL + Z 将在输入时解释为 EOF 字符。 在使用 **"a +"** 打开以进行读取/写入的文件中， **fopen** 将检查文件末尾的 CTRL + Z 并将其删除（如果可能）。 这样做的原因是，使用 [fseek](fseek-fseeki64.md) 和 **FTELL** 在以 CTRL + Z 结尾的文件中移动时，可能会导致 [fseek](fseek-fseeki64.md) 在文件结尾附近出现错误的行为。
 
-在文本模式下，回车换行符组合在输入时转换为单行馈送，换行字符将转换为输出上的回车换行符组合。 当 Unicode 流 I/O 函数在文本模式（默认设置）下运行时，源或目标流将假定为一系列多字节字符。 因此，Unicode 流输入函数将多字节字符转换为宽字符（就像调用 mbtowc**** 函数一样）。 出于同一原因，Unicode 流输出函数将宽字符转换为多字节字符（就像调用 wctomb**** 函数一样）。
+在文本模式下，回车换行符组合在输入时转换为单行馈送，换行字符将转换为输出上的回车换行符组合。 当 Unicode 流 I/O 函数在文本模式（默认设置）下运行时，源或目标流将假定为一系列多字节字符。 因此，Unicode 流输入函数将多字节字符转换为宽字符（就像调用 mbtowc 函数一样）。 出于同一原因，Unicode 流输出函数将宽字符转换为多字节字符（就像调用 wctomb 函数一样）。
 
-如果在*mode*中未给出**t**或**b** ，则默认转换模式由全局变量[_fmode](../../c-runtime-library/fmode.md)定义。 如果 **t** 或 **b** 作为参数的前缀，则函数将失败并返回 **NULL**。
+如果在 *mode* 中未给出 **t** 或 **b** ，则默认转换模式由全局变量 [_fmode](../../c-runtime-library/fmode.md)定义。 如果 **t** 或 **b** 作为参数的前缀，则函数将失败并返回 **NULL**。
 
 有关如何在 Unicode 和多字节流 I/O 中使用文本和二进制模式的详细信息，请参阅 [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [Unicode Stream I/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
 
@@ -159,24 +160,24 @@ FILE *_wfopen(
 |-|-|
 | **x** | 如果 *文件名* 已存在，则强制该函数失败。 只能与 "w" 或 "w +" 说明符一起使用。 |
 | **c** | 启用关联 *文件名* 的提交标志，以便在调用 **fflush** 或 **_flushall** 时，将文件缓冲区的内容直接写入磁盘。 |
-| **n** | 将关联的 *文件名* 的提交标志重置为 "无提交"。 这是默认设置。 如果将程序显式链接到 COMMODE.OBJ，它还将重写全局提交标志。 除非将程序显式链接到 COMMODE.OBJ，否则全局提交标志默认为“no-commit”（请参阅 [Link Options](../../c-runtime-library/link-options.md)）。 |
-| N**** | 指定文件不由子进程继承。 |
+| **n** | 将关联的 *文件名* 的提交标志重置为 "无提交"。 这是默认值。 如果将程序显式链接到 COMMODE.OBJ，它还将重写全局提交标志。 除非将程序显式链接到 COMMODE.OBJ，否则全局提交标志默认为“no-commit”（请参阅 [Link Options](../../c-runtime-library/link-options.md)）。 |
+| N | 指定文件不由子进程继承。 |
 | **S** | 指定缓存针对（但不限于）从磁盘的顺序访问进行优化。 |
 | **R** | 指定缓存针对（但不限于）从磁盘的随机访问进行优化。 |
 | **T** | 将文件指定为临时。 如果可能，它不会刷新到磁盘。 |
 | **D** | 将文件指定为临时。 最后一个文件指针关闭时，它将被删除。 |
-| **ccs =**_编码_ | 指定要使用的编码字符集，此文件 (**utf-8**、 **utf-16le**或 **UNICODE**) 之一。 如果需要 ANSI 编码，请不要指定此字符集。 |
+| **ccs =**_编码_ | 指定要使用的编码字符集，此文件 (**utf-8**、 **utf-16le** 或 **UNICODE**) 之一。 如果需要 ANSI 编码，请不要指定此字符集。 |
 
-**Fopen**和 **_fdopen**中使用的*模式*字符串的有效字符对应于[_open](open-wopen.md)和[_sopen](sopen-wsopen.md)中使用的*oflag*参数，如下所示。
+**Fopen** 和 **_fdopen** 中使用的 *模式* 字符串的有效字符对应于 [_open](open-wopen.md)和 [_sopen](sopen-wsopen.md)中使用的 *oflag* 参数，如下所示。
 
-|*模式*字符串中的字符|*oflag* \_ Open/sopen 的等效 oflag \_ 值|
+|*模式* 字符串中的字符| \_ Open/sopen 的等效 oflag \_ 值|
 |-------------------------------|----------------------------------------------------|
-|**的**|** \_ O \_ WRONLY** &#124; ** \_ o \_ 追加** (通常是** \_ o \_ WRONLY** &#124; ** \_ o \_ **将 &#124; ** \_ o \_ 追加**) |
-|**a +**|** \_ O \_ RDWR** &#124; ** \_ o \_ 追加** (&#124; ** \_ \_ ** ** \_ o \_ 追加**&#124; ** \_ o \_ ** ) |
+|**的**|**\_ O \_ WRONLY** &#124; **\_ o \_ 追加** (通常是 **\_ o \_ WRONLY** &#124; **\_ o \_** 将 &#124; **\_ o \_ 追加**) |
+|**a +**|**\_ O \_ RDWR** &#124; **\_ o \_ 追加** (&#124; **\_ \_** **\_ o \_ 追加**&#124; **\_ o \_** ) |
 |**r**|**\_O \_ RDONLY**|
 |**r +**|**\_O \_ RDWR**|
-|**w**|** \_ O \_ WRONLY** (通常是** \_ o \_ WRONLY** &#124; ** \_ o \_ ** &#124; ** \_ o \_ TRUNC**) |
-|**w +**|** \_ O \_ RDWR** (通常是** \_ o \_ RDWR** &#124; ** \_ o \_ ** &#124; ** \_ o \_ TRUNC**) |
+|**w**|**\_ O \_ WRONLY** (通常是 **\_ o \_ WRONLY** &#124; **\_ o \_** &#124; **\_ o \_ TRUNC**) |
+|**w +**|**\_ O \_ RDWR** (通常是 **\_ o \_ RDWR** &#124; **\_ o \_** &#124; **\_ o \_ TRUNC**) |
 |**b**|**\_O \_ 二进制**|
 |**t**|**\_O \_ 文本**|
 |**x**|**\_O \_ 排除**|
@@ -317,7 +318,7 @@ int main(int argc, char** argv)
 ## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [fclose、_fcloseall](fclose-fcloseall.md)<br/>
 [_fdopen、_wfdopen](fdopen-wfdopen.md)<br/>
 [ferror](ferror.md)<br/>

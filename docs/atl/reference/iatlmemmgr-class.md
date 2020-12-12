@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IAtlMemMgr 类
 title: IAtlMemMgr 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: b23d8f582c53114ea1434e250e8e5e64b642f733
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 31f25c5fdb6a4e443bf011aac29620be8a4f13f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353007"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139745"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr 类
 
@@ -34,14 +35,14 @@ __interface __declspec(uuid("654F7EF5-CFDF-4df9-A450-6C6A13C622C0")) IAtlMemMgr
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[分配](#allocate)|调用此方法来分配内存块。|
 |[免费](#free)|调用此方法可释放内存块。|
 |[GetSize](#getsize)|调用此方法可检索已分配内存块的大小。|
 |[给](#reallocate)|调用此方法可重新分配内存块。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此接口由 [CComHeap](../../atl/reference/ccomheap-class.md)、 [CCRTHeap](../../atl/reference/ccrtheap-class.md)、 [CLocalHeap](../../atl/reference/clocalheap-class.md)、 [CGlobalHeap](../../atl/reference/cglobalheap-class.md)或 [CWin32Heap](../../atl/reference/cwin32heap-class.md)实现。
 
@@ -73,7 +74,7 @@ void* Allocate(size_t nBytes) throw();
 
 将指针返回到新分配内存块的起始位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用 [IAtlMemMgr：： Free](#free) 或 [IAtlMemMgr：：重新分配](#reallocate) 以释放此方法分配的内存。
 
@@ -94,7 +95,7 @@ void Free(void* p) throw();
 *h-p*<br/>
 指向此内存管理器以前分配的内存的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此方法可释放通过 [IAtlMemMgr：： Allocate](#allocate) 或 [IAtlMemMgr：：](#reallocate)Allocate 获取的内存。
 
@@ -143,7 +144,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 将指针返回到新分配内存块的起始位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用 [IAtlMemMgr：： Free](#free) 或 [IAtlMemMgr：：重新分配](#reallocate) 以释放此方法分配的内存。
 
@@ -170,7 +171,7 @@ STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -191,7 +192,7 @@ STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 
@@ -212,7 +213,7 @@ STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -233,7 +234,7 @@ STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 COLOR_BTNFACE 或 COLOR_WINDOW 作为此属性的默认值 (具体取决于宿主窗口的父窗口是对话框还是不) 。
 
@@ -254,7 +255,7 @@ STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 
@@ -275,7 +276,7 @@ STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 DOCHOSTUIDBLCLK_DEFAULT 作为此属性的默认值。
 
@@ -296,7 +297,7 @@ STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 DOCHOSTUIFLAG_NO3DBORDER 作为此属性的默认值。
 
@@ -317,7 +318,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用默认的 GUI 字体或系统字体作为此属性的默认值。
 
@@ -338,7 +339,7 @@ STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用系统窗口文本颜色作为此属性的默认值。
 
@@ -359,7 +360,7 @@ STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用用户的默认区域设置作为此属性的默认值。
 
@@ -382,7 +383,7 @@ STDMETHOD(get_MessageReflect)(VARIANT_BOOL* pbMessageReflect);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -420,7 +421,7 @@ STDMETHOD(get_ShowGrabHandles)(VARIANT_BOOL* pbShowGrabHandles);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现始终返回 VARIANT_FALSE 作为此属性的值。
 
@@ -441,7 +442,7 @@ STDMETHOD(get_ShowHatching)(VARIANT_BOOL* pbShowHatching);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现始终返回 VARIANT_FALSE 作为此属性的值。
 
@@ -462,7 +463,7 @@ STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -483,7 +484,7 @@ STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -504,7 +505,7 @@ STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 
@@ -525,7 +526,7 @@ STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -546,7 +547,7 @@ STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 COLOR_BTNFACE 或 COLOR_WINDOW 作为此属性的默认值 (具体取决于宿主窗口的父窗口是对话框还是不) 。
 
@@ -567,7 +568,7 @@ STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_FALSE 作为此属性的默认值。
 
@@ -588,7 +589,7 @@ STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 DOCHOSTUIDBLCLK_DEFAULT 作为此属性的默认值。
 
@@ -609,7 +610,7 @@ STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 DOCHOSTUIFLAG_NO3DBORDER 作为此属性的默认值。
 
@@ -630,7 +631,7 @@ STDMETHOD(put_Font)(IFontDisp* pFont);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用默认的 GUI 字体或系统字体作为此属性的默认值。
 
@@ -651,7 +652,7 @@ STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用系统窗口文本颜色作为此属性的默认值。
 
@@ -672,7 +673,7 @@ STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用用户的默认区域设置作为此属性的默认值。
 
@@ -693,7 +694,7 @@ STDMETHOD(put_MessageReflect)(VARIANT_BOOL bMessageReflect);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -731,7 +732,7 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 宿主对象实现使用 VARIANT_TRUE 作为此属性的默认值。
 
@@ -752,13 +753,13 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当 `SetAmbientDispatch` 使用指向新接口的指针调用时，如果 [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)未提供这些属性，则此新接口将用于调用由承载的控件要求的任何属性或方法。
 
 ## <a name="iaxwinhostwindowattachcontrol"></a><a name="attachcontrol"></a> IAxWinHostWindow::AttachControl
 
-使用 *hWnd*标识的窗口将现有 (和之前初始化的) 控件附加到宿主对象。
+使用 *hWnd* 标识的窗口将现有 (和之前初始化的) 控件附加到宿主对象。
 
 ```
 STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
@@ -778,7 +779,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 ## <a name="iaxwinhostwindowcreatecontrol"></a><a name="createcontrol"></a> IAxWinHostWindow：： CreateControl
 
-创建一个控件，对其进行初始化，并将其托管在由 *hWnd*标识的窗口中。
+创建一个控件，对其进行初始化，并将其托管在由 *hWnd* 标识的窗口中。
 
 ```
 STDMETHOD(CreateControl)(
@@ -802,7 +803,7 @@ STDMETHOD(CreateControl)(
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此窗口将由公开此接口的主机对象进行细分，以便可以将消息反射到该控件，其他容器功能将起作用。
 
@@ -848,7 +849,7 @@ STDMETHOD(CreateControlEx)(
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 与 `CreateControl` 方法不同， `CreateControlEx` 还允许您接收指向新创建的控件的接口指针，并设置一个事件接收器来接收由控件触发的事件。
 
@@ -908,7 +909,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数由控件 (（如 Web 浏览器控件) ，用于查询接口的宿主站点 `IDocHostUIHandlerDispatch` 。
 
@@ -929,7 +930,7 @@ STDMETHOD(CreateControlLic)(
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关剩余参数和返回值的说明，请参阅 [IAxWinHostWindow：： CreateControl](#createcontrol) 。
 
@@ -959,7 +960,7 @@ STDMETHOD(CreateControlLicEx)(
 *bstrLic*<br/>
 中包含控件的许可证密钥的 BSTR。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关剩余参数和返回值的说明，请参阅 [IAxWinHostWindow：： CreateControlEx](#createcontrolex) 。
 
@@ -967,6 +968,6 @@ STDMETHOD(CreateControlLicEx)(
 
 有关使用的示例，请参阅 [使用 ATL AXHost 托管 ActiveX 控件](../../atl/atl-control-containment-faq.md#hosting-activex-controls-using-atl-axhost) `IAxWinHostWindowLic::CreateControlLicEx` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

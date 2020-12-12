@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSimpleArrayEqualHelper 类
 title: CSimpleArrayEqualHelper 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArrayEqualHelper class
 ms.assetid: a2b55d89-78c9-42ef-842c-5304c6d20ad6
-ms.openlocfilehash: 386b005777b3e31dd74916a41bc5af2ab82df210
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1a5fd3eea5fd6ef7563febc662c5a7a1bc639c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330874"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140759"
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 类
 
-此类是[CSimpleArray](../../atl/reference/csimplearray-class.md)类的帮助程序。
+此类是 [CSimpleArray](../../atl/reference/csimplearray-class.md) 类的帮助器。
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +27,7 @@ template <class T>
 class CSimpleArrayEqualHelper
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生类。
@@ -35,21 +36,21 @@ class CSimpleArrayEqualHelper
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CSimplearray 平等帮助者：：是相等的](#isequal)|（静态）测试两`CSimpleArray`个对象元素的相等性。|
+|[CSimpleArrayEqualHelper：： IsEqual](#isequal)| (静态) 测试两个 `CSimpleArray` 对象元素是否相等。|
 
 ## <a name="remarks"></a>备注
 
-此特征类是对`CSimpleArray`类的补充。 它提供了一种比较存储在对象中的两个`CSimpleArray`元素的方法。 默认情况下，使用**运算符 _（）** 比较元素，但如果数组包含缺少其自身相等运算符的复杂数据类型，则需要重写此类。
+此特征类是对类的补充 `CSimpleArray` 。 它提供了一种方法，用于比较存储在对象中的两个元素 `CSimpleArray` 。 默认情况下，使用 **operator = ( # B1** 比较元素，但如果数组包含缺少其自己的相等运算符的复杂数据类型，将需要重写此类。
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlsimpcoll.h
+**标头：** atlsimpcoll
 
-## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a>CSimplearray 平等帮助者：：是相等的
+## <a name="csimplearrayequalhelperisequal"></a><a name="isequal"></a> CSimpleArrayEqualHelper：： IsEqual
 
-测试两`CSimpleArray`个对象元素的相等性。
+测试两个 `CSimpleArray` 对象元素是否相等。
 
 ```
 static bool IsEqual(
@@ -57,19 +58,19 @@ static bool IsEqual(
     const T& t2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *t1*<br/>
 一个 T 类型的对象。
 
-*t2*<br/>
+<bpt id="p1">*</bpt>t2<ept id="p1">*</ept><br/>
 一个 T 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-如果元素相等，则返回 true，否则为 false。
+如果元素相等，则返回 true，否则返回 false。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CSimpleArray 类](../../atl/reference/csimplearray-class.md)<br/>
 [CSimpleArrayEqualHelperFalse 类](../../atl/reference/csimplearrayequalhelperfalse-class.md)<br/>

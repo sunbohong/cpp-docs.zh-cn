@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： allocator_traits 类
 title: allocator_traits 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,16 +41,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 8ab46ebf85531af052bc19bc5f0088f0f564793b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d60658c5f8cf6217dff7a846f0e5cbae42e6a565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163556"
 ---
 # <a name="allocator_traits-class"></a>allocator_traits 类
 
-类模板描述补充 *分配器类型*的对象。 分配器类型是描述分配器对象的任何类型，它用于管理已分配的存储。 具体而言，对于任何分配器类型 `Alloc`，可以使用 `allocator_traits<Alloc>` 来确定支持分配器的容器所需的所有信息。 有关详细信息，请参阅默认的 [allocator 类](allocator-class.md)。
+类模板描述补充 *分配器类型* 的对象。 分配器类型是描述分配器对象的任何类型，它用于管理已分配的存储。 具体而言，对于任何分配器类型 `Alloc`，可以使用 `allocator_traits<Alloc>` 来确定支持分配器的容器所需的所有信息。 有关详细信息，请参阅默认的 [allocator 类](allocator-class.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -62,7 +63,7 @@ template <class Alloc>
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`allocator_type`|该类型是模板参数 `Alloc`的同义词。|
 |`const_pointer`|如果该类型的形式正确，则此类型为 `Alloc::const_pointer`，否则，此类型为 `pointer_traits<pointer>::rebind<const value_type>`。|
@@ -80,7 +81,7 @@ template <class Alloc>
 
 以下静态方法调用给定分配器参数上的相应的方法。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[分配](#allocate)|使用给定的分配器参数分配内存的静态方法。|
 |[构造](#construct)|使用指定的分配器构造对象的静态方法。|
@@ -100,12 +101,12 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *fc-al*\
 分配器对象。
 
-*count*\
+*计*\
 要分配的元素数量。
 
 *提示*\
@@ -128,7 +129,7 @@ template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *fc-al*\
 分配器对象。
@@ -139,7 +140,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 *args*\
 传递给对象构造函数的参数列表。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果该表达式形式正确，则静态成员函数调用 `al.construct(ptr, args...)`；否则计算 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)` 的结果。
 
@@ -153,7 +154,7 @@ static void deallocate(Alloc al,
     size_type count);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *fc-al*\
 分配器对象。
@@ -161,10 +162,10 @@ static void deallocate(Alloc al,
 *ptr*\
 指向要释放对象的起始位置的指针。
 
-*count*\
+*计*\
 要释放对象的数量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此方法调用 `al.deallocate(ptr, count)`。
 
@@ -179,7 +180,7 @@ template <class Uty>
     static void destroy(Alloc& al, Uty* ptr);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *fc-al*\
 分配器对象。
@@ -187,7 +188,7 @@ template <class Uty>
 *ptr*\
 指向对象位置的指针。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果该表达式形式正确，则此方法调用 `al.destroy(ptr)`；否则计算 `ptr->~Uty()` 的结果。
 
@@ -199,12 +200,12 @@ template <class Uty>
 static size_type max_size(const Alloc& al);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *fc-al*\
 分配器对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果该表达式形式正确，则此方法返回 `al.max_size()`；否则返回 `numeric_limits<size_type>::max()`。
 
@@ -216,15 +217,15 @@ static size_type max_size(const Alloc& al);
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *fc-al*\
 分配器对象。
 
 #### <a name="return-value"></a>返回值
 
-`al.select_on_container_copy_construction()`如果此类型格式正确，此方法将返回; 否则返回*al*。
+`al.select_on_container_copy_construction()`如果此类型格式正确，此方法将返回; 否则返回 *al*。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此方法用于在所关联的容器为构造副本时指定分配器。

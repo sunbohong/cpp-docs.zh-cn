@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息： &lt; unordered_set &gt; 函数
 title: '&lt;unordered_set&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 852536a5c5bdfe5d944f3b70581a313a56dc8742
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153754"
 ---
 # <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt; 函数
 
-## <a name="swap"></a>交换（unordered_set）
+## <a name="swap-unordered_set"></a><a name="swap"></a> 交换 (unordered_set) 
 
 交换两个容器的内容。
 
@@ -27,10 +28,10 @@ void swap(
 
 ### <a name="parameters"></a>parameters
 
-*密钥*\
-密钥类型。
+*按键*\
+键类型。
 
-*哈希*\
+*代码*\
 哈希函数对象类型。
 
 *Pred*\
@@ -39,15 +40,15 @@ void swap(
 *分配*\
 allocator 类。
 
-*左*\
+*左中*\
 第一个要交换的容器。
 
-*right*\
+*然后*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 
-该模板函数执行 `left.`[unordered_set::swap](../standard-library/unordered-set-class.md#swap)`(right)`。
+模板函数执行 `left.` [unordered_set：： swap](../standard-library/unordered-set-class.md#swap) `(right)` 。
 
 ### <a name="example"></a>示例
 
@@ -102,7 +103,7 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a>交换（unordered_multiset）
+## <a name="swap-unordered_multiset"></a><a name="swap_unordered_multiset"></a> 交换 (unordered_multiset) 
 
 交换两个容器的内容。
 
@@ -115,10 +116,10 @@ void swap(
 
 ### <a name="parameters"></a>parameters
 
-*密钥*\
-密钥类型。
+*按键*\
+键类型。
 
-*哈希*\
+*代码*\
 哈希函数对象类型。
 
 *Pred*\
@@ -127,15 +128,15 @@ void swap(
 *分配*\
 allocator 类。
 
-*左*\
+*左中*\
 第一个要交换的容器。
 
-*right*\
+*然后*\
 第二个要交换的容器。
 
 ### <a name="remarks"></a>备注
 
-该模板函数执行 `left.`[unordered_multiset::swap](../standard-library/unordered-multiset-class.md#swap)`(right)`。
+模板函数执行 `left.` [unordered_multiset：： swap](../standard-library/unordered-multiset-class.md#swap) `(right)` 。
 
 ### <a name="example"></a>示例
 

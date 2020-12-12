@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： allocator_base 类
 title: allocator_base 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: f642c21f2b1060dd5adc5c3d98144592c3413777
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 95da41fd480101c26a2ab71b445790da47144189
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562631"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163634"
 ---
 # <a name="allocator_base-class"></a>allocator_base 类
 
@@ -56,7 +57,7 @@ template <class Type, class Sync>
 class allocator_base
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 由分配器分配元素类型。
@@ -109,7 +110,7 @@ class allocator_base
 char *_Charalloc(size_type count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *计*\
 数组中要分配的元素数目。
@@ -130,7 +131,7 @@ char *_Charalloc(size_type count);
 void _Chardealloc(void* ptr, size_type count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要从存储中释放的第一个对象的指针。
@@ -152,7 +153,7 @@ pointer address(reference val);
 const_pointer address(const_reference val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 要搜索其地址的对象的常量或非常量值。
@@ -176,7 +177,7 @@ pointer allocate(size_type _Nx, const Other* _Hint = 0);
 pointer allocate(size_type _Nx);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 数组中要分配的元素数目。
@@ -203,7 +204,7 @@ template <class Other>
 allocator_base(const allocator_base<Other, Sync>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要复制的分配器对象。
@@ -236,7 +237,7 @@ typedef const Type& const_reference;
 void construct(pointer ptr, const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要构造对象的位置的指针。
@@ -256,7 +257,7 @@ void construct(pointer ptr, const Type& val);
 void deallocate(pointer ptr, size_type _Nx);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要从存储中释放的第一个对象的指针。
@@ -276,7 +277,7 @@ void deallocate(pointer ptr, size_type _Nx);
 void destroy(pointer ptr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指定要销毁的对象的地址的指针。
@@ -341,6 +342,6 @@ typedef std::size_t size_type;
 typedef Type value_type;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](allocators-header.md)

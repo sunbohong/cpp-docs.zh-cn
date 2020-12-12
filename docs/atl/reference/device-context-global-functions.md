@@ -1,21 +1,22 @@
 ---
+description: 了解详细信息：设备上下文全局函数
 title: 设备上下文全局函数
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlCreateTargetDC
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-ms.openlocfilehash: d2d25660083f074683a3f42f878497ce14a008b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f5e87271170e29a2f0cc4d42b4e7739a5fd869ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139901"
 ---
 # <a name="device-context-global-functions"></a>设备上下文全局函数
 
 此函数为给定设备创建设备上下文。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlCreateTargetDC](#atlcreatetargetdc)|创建设备上下文。|
 
@@ -27,7 +28,7 @@ ms.locfileid: "88833460"
 HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hdc*<br/>
 中设备上下文的现有句柄，或为 NULL。
@@ -39,7 +40,7 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 返回中指定的设备的设备上下文的句柄 `DVTARGETDEVICE` 。 如果未指定设备，则会将句柄返回到默认显示设备。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果结构为 NULL，并且 *hdc* 为 null，则为默认显示设备创建设备上下文。
 

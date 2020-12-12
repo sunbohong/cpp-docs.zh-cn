@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息： ATL 实用工具参考
 title: ATL 实用程序参考
 ms.date: 11/04/2016
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-ms.openlocfilehash: f9e59a2c67d391995d94d77f526613534acb48de
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8545881c5cd48aaff1bb25448ba443829128dc41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831870"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148572"
 ---
 # <a name="atl-utilities-reference"></a>ATL 实用程序参考
 
@@ -90,7 +91,7 @@ ATL 提供以 [CPathT](../atl/reference/cpatht-class.md) 和 [卷曲](../atl/ref
 | [ATLPath::StripToRoot](../atl/reference/atl-path-functions.md#striptoroot) | 此函数是 [PathStripToRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)的重载包装。 |
 | [ATLPath::UnquoteSpaces](../atl/reference/atl-path-functions.md#unquotespaces) | 此函数是 [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)的重载包装。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)

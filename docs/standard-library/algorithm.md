@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 算法&gt;
 title: '&lt;算法&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 003933499eee04c50f15ae4b63dd6b31b81e1069
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42f03372d01ac2d3218ce5844b86e92526055bbf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845817"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163764"
 ---
 # <a name="ltalgorithmgt"></a>&lt;算法&gt;
 
@@ -28,7 +29,7 @@ ms.locfileid: "88845817"
 > [!NOTE]
 > \<algorithm>该库还使用该 `#include <initializer_list>` 语句。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 C++ 标准库算法可在多种数据结构上运算，因此属于通用算法。 可用 C++ 标准库运算的数据结构不仅包括 C++ 标准库容器类（例如 `vector` 和 `list`），还包括程序定义的数据结构和满足特定算法要求的元素数组。 C++ 标准库算法通过迭代器间接访问并遍历容器元素来实现这种通用性。
 
@@ -96,17 +97,17 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[move_backward](algorithm-functions.md#move_backward)|将一个迭代器的元素移动到另一迭代器。 移动从指定范围的最后一个元素开始，并在此范围的第一个元素结束。|
 |[next_permutation](algorithm-functions.md#next_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
 |[none_of](algorithm-functions.md#none_of)|**`true`** 当给定范围内的元素内从不出现条件时，返回。|
-|[nth_element](algorithm-functions.md#nth_element)|对一系列元素进行分区，正确找到范围中序列的第 *n*个元素，以使其前面的所有元素都小于或等于该元素，并且序列后面的所有元素都大于或等于此元素。|
+|[nth_element](algorithm-functions.md#nth_element)|对一系列元素进行分区，正确找到范围中序列的第 *n* 个元素，以使其前面的所有元素都小于或等于该元素，并且序列后面的所有元素都大于或等于此元素。|
 |[partial_sort](algorithm-functions.md#partial_sort)|将范围中指定数量的较小元素按非降序顺序排列，或根据二元谓词指定的排序条件排列。|
 |[partial_sort_copy](algorithm-functions.md#partial_sort_copy)|将源范围中的元素复制到目标范围，其中源元素按降序或二元谓词指定的其他顺序排序。|
-|[依据](algorithm-functions.md#partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。|
+|[partition](algorithm-functions.md#partition)|将范围中的元素分为两个不相交的集，满足一元谓词的元素在不满足一元谓词的元素之前。|
 |[partition_copy](algorithm-functions.md#partition_copy)|将条件为的元素复制 **`true`** 到一个目标，将条件复制到另一个目标 **`false`** 。 元素必须来自于指定范围。|
 |[partition_point](algorithm-functions.md#partition_point)|返回给定范围中不满足条件的第一个元素。 元素经过排序，满足条件的元素在不满足条件的元素之前。|
 |[pop_heap](algorithm-functions.md#pop_heap)|移除从堆顶到范围中倒数第二个位置之间的最大元素，然后将剩余元素形成新堆。|
 |[prev_permutation](algorithm-functions.md#prev_permutation)|重新排序范围中的元素，以便使用按字典顺序的下一个更大排列（如果有）替换原有排序，其中“下一个”的意义可通过二元谓词指定。|
 |[push_heap](algorithm-functions.md#push_heap)|将范围末尾的元素添加到包括范围中前面元素的现有堆中。|
 |[random_shuffle](algorithm-functions.md#random_shuffle)|将范围中 *N* 个元素的序列重新排序为随机 *N*! 种序列中的 可能排列之一。|
-|[删除](algorithm-functions.md#remove)|从给定范围中消除指定值，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。|
+|[remove](algorithm-functions.md#remove)|从给定范围中消除指定值，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。|
 |[remove_copy](algorithm-functions.md#remove_copy)|将源范围中的元素复制到目标范围（不复制具有指定值的元素），而不影响剩余元素的顺序，并返回新目标范围的末尾。|
 |[remove_copy_if](algorithm-functions.md#remove_copy_if)|将源范围中的元素复制到目标范围（不复制满足谓词的元素），而不影响剩余元素的顺序，并返回新目标范围的末尾。|
 |[remove_if](algorithm-functions.md#remove_if)|从给定范围中消除满足谓词的元素，而不影响剩余元素的顺序，并返回不包含指定值的新范围的末尾。|
@@ -137,7 +138,7 @@ C++ 标准库算法通常会按照其目的或需求相关指示信息进行分�
 |[unique_copy](algorithm-functions.md#unique_copy)|将源范围中的元素复制到目标范围，彼此相邻的重复元素除外。|
 |[upper_bound](algorithm-functions.md#upper_bound)|在排序的范围中查找其值大于指定值的第一个元素的位置，其中排序条件可通过二元谓词指定。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)\

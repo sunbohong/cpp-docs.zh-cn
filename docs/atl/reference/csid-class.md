@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSid 类
 title: CSid 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: b6787c0e3f075935f19d51aa73bbd66da9cc0fcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b0f5553f14d31a43c0cc581ef43b518fa612616d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140798"
 ---
 # <a name="csid-class"></a>CSid 类
 
@@ -45,20 +46,20 @@ class CSid
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CSid：： CSidArray](#csidarray)|一个 `CSid` 对象数组。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSid：： CSid](#csid)|构造函数。|
 |[CSid：： ~ CSid](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSid：： AccountName](#accountname)|返回与对象关联的帐户的名称 `CSid` 。|
 |[CSid：:D omain](#domain)|返回与对象关联的域的名称 `CSid` 。|
@@ -75,14 +76,14 @@ class CSid
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator =](#operator_eq)|赋值运算符。|
 |[operator const SID *](#operator_const_sid__star)|将对象强制转换为指向 `CSid` 结构的指针 `SID` 。|
 
 ### <a name="global-operators"></a>全局运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator = =](#operator_eq_eq)|测试两个安全描述符对象是否相等|
 |[operator！ =](#operator_neq)|测试两个安全描述符对象是否不相等|
@@ -91,7 +92,7 @@ class CSid
 |[操作员 \<=](#operator_lt__eq)|比较两个安全描述符对象的相对值。|
 |[运算符 >=](#operator_gt__eq)|比较两个安全描述符对象的相对值。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `SID`结构是用于唯一标识用户或组的可变长度结构。
 
@@ -115,7 +116,7 @@ LPCTSTR AccountName() const throw(...);
 
 返回指向帐户名称的 LPCTSTR。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法尝试查找指定 `SID` (安全标识符) 的名称。 有关完整详细信息，请参阅 [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)。
 
@@ -144,7 +145,7 @@ explicit CSid(
     LPCTSTR pszSystem = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rhs*<br/>
 `CSid`) 结构的现有对象或 `SID` (安全标识符。
@@ -164,7 +165,7 @@ Subauthority 计数。
 *pSid*<br/>
 指向结构的指针 `SID` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数初始化 `CSid` 对象，将内部数据成员设置为 *SidTypeInvalid*，或者从现有 `CSid` 的、 `SID` 或现有帐户复制设置。
 
@@ -178,7 +179,7 @@ Subauthority 计数。
 virtual ~CSid() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 析构函数释放由该对象获取的任何资源。
 
@@ -190,7 +191,7 @@ virtual ~CSid() throw();
 typedef CAtlArray<CSid> CSidArray;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此 typedef 指定可用于从 ACL (访问控制列表) 检索安全标识符的数组类型。 请参阅 [CAcl：： GetAclEntries](../../atl/reference/cacl-class.md#getaclentries)。
 
@@ -206,7 +207,7 @@ LPCTSTR Domain() const throw(...);
 
 返回 `LPCTSTR` 指向域的。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法尝试查找指定 `SID` (安全标识符) 的名称。 有关完整详细信息，请参阅 [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)。
 
@@ -221,7 +222,7 @@ bool EqualPrefix(const SID& rhs) const throw();
 bool EqualPrefix(const CSid& rhs) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rhs*<br/>
 `SID`要比较的 (安全标识符) 结构或 `CSid` 对象。
@@ -230,7 +231,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 如果成功，则返回 TRUE，否则返回 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关更多详细信息，请参阅 Windows SDK 中的 [EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 。
 
@@ -246,7 +247,7 @@ UINT GetLength() const throw();
 
 返回对象的长度（以字节为单位） `CSid` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 `CSid` 结构无效，则返回值不确定。 在调用之前 `GetLength` ，请使用 [CSid：： IsValid](#isvalid) 成员函数验证 `CSid` 是否有效。
 
@@ -288,7 +289,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSubAuthority*<br/>
 Subauthority。
@@ -297,9 +298,9 @@ Subauthority。
 
 返回由 NSubAuthority 引用的 subauthority *。* Subauthority 值是 RID)  (的相对标识符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*NSubAuthority*参数指定一个索引值，用于标识该方法将返回的 subauthority 数组元素。 方法不对此值执行验证测试。 应用程序可以调用 [CSid：： GetSubAuthorityCount](#getsubauthoritycount) 来发现可接受值的范围。
+*NSubAuthority* 参数指定一个索引值，用于标识该方法将返回的 subauthority 数组元素。 方法不对此值执行验证测试。 应用程序可以调用 [CSid：： GetSubAuthorityCount](#getsubauthoritycount) 来发现可接受值的范围。
 
 > [!NOTE]
 > 在调试版本中，如果对象无效，则该函数将导致断言 `CSid` 。
@@ -333,7 +334,7 @@ bool IsValid() const throw();
 
 如果 `CSid` 对象有效，则返回 TRUE，否则返回 FALSE。 此方法没有扩展的错误信息;不要调用 `GetLastError` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `IsValid`方法 `CSid` 通过验证修订号是否在已知范围内并且 subauthorities 数小于最大值来验证对象。
 
@@ -351,7 +352,7 @@ bool LoadAccount(
     LPCTSTR pszSystem = NULL) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszAccountName*<br/>
 帐户名称。
@@ -366,7 +367,7 @@ bool LoadAccount(
 
 如果成功，则返回 TRUE，否则返回 FALSE。 若要获得扩展的错误信息，请调用 `GetLastError`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `LoadAccount` 尝试查找指定名称的安全标识符。 有关更多详细信息，请参阅 [LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw) 。
 
@@ -379,7 +380,7 @@ CSid& operator= (const CSid& rhs) throw(...);
 CSid& operator= (const SID& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rhs*<br/>
 `SID` (安全标识符) 或 `CSid` 分配给 `CSid` 对象。
@@ -398,7 +399,7 @@ bool operator==(
     const CSid& rhs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
 `SID` (安全标识符) 或 `CSid` 显示在 = = 运算符的左侧。
@@ -420,7 +421,7 @@ bool operator!=(
     const CSid& rhs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
 `SID` (安全标识符) 或 `CSid` 显示在！ = 运算符的左侧。
@@ -442,7 +443,7 @@ bool operator<(
     const CSid& rhs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
 `SID` (安全标识符) 或 `CSid` 显示在！ = 运算符的左侧。
@@ -464,7 +465,7 @@ bool operator<=(
     const CSid& rhs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
 `SID` (安全标识符) 或 `CSid` 显示在！ = 运算符的左侧。
@@ -486,7 +487,7 @@ bool operator>(
     const CSid& rhs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
 `SID` (安全标识符) 或 `CSid` 显示在！ = 运算符的左侧。
@@ -508,7 +509,7 @@ bool operator>=(
     const CSid& rhs) throw());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
 `SID` (安全标识符) 或 `CSid` 显示在！ = 运算符的左侧。
@@ -528,7 +529,7 @@ bool operator>=(
 operator const SID *() const throw(...);
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回结构的地址 `SID` 。
 
@@ -556,7 +557,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 返回数据成员的值，该值存储描述对象状态的值 `CSid` 。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |SidTypeUser|指示 `SID` (安全标识符) 的用户。|
 |SidTypeGroup|表示组 `SID` 。|
@@ -568,11 +569,11 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeUnknown|指示未知 `SID` 类型。|
 |SidTypeComputer|指示 `SID` 计算机的。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-[CSid::LoadAccount](#loadaccount) `CSid` 在调用 `SidNameUse` 以返回其状态之前，调用 CSid：： LoadAccount 以更新对象。 `SidNameUse` 不 (通过调用或) 来更改对象的状态 `LookupAccountName` `LookupAccountSid` ，但只返回当前状态。
+[](#loadaccount) `CSid` 在调用 `SidNameUse` 以返回其状态之前，调用 CSid：： LoadAccount 以更新对象。 `SidNameUse` 不 (通过调用或) 来更改对象的状态 `LookupAccountName` `LookupAccountSid` ，但只返回当前状态。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：分配器类
 title: allocator 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 4857de0b77d69a0d256da2200e5f4d0eb9d51c51
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1f54aae3191d261d549e69e942974fc46a670f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163621"
 ---
 # <a name="allocator-class"></a>allocator 类
 
@@ -52,12 +53,12 @@ template <class Type>
 class allocator
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 为其分配或释放存储的对象的类型。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 所有 c + + 标准库容器都具有一个默认为的模板参数 `allocator` 。 通过使用自定义分配器构造容器可控制该容器的元素的分配和释放。
 
@@ -85,7 +86,7 @@ class allocator
 
 |名称|描述|
 |-|-|
-|[分配器](#allocator)|用于创建 `allocator` 对象的构造函数。|
+|[器](#allocator)|用于创建 `allocator` 对象的构造函数。|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -126,7 +127,7 @@ pointer address(reference val) const;
 const_pointer address(const_reference val) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *初始值*\
 要搜索其地址的对象的常量或非常量值。
@@ -135,9 +136,9 @@ const_pointer address(const_reference val) const;
 
 指向所找到的各自常量或非常量值的对象的常量或非常量指针。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-成员函数以指针必须对分配的元素采用的形式返回 *val*的地址。
+成员函数以指针必须对分配的元素采用的形式返回 *val* 的地址。
 
 #### <a name="example"></a>示例
 
@@ -191,9 +192,9 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 pointer allocate(size_type count, const void* _Hint);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*count*\
+*计*\
 要分配足够的存储空间的元素数量。
 
 *_Hint*\
@@ -203,7 +204,7 @@ pointer allocate(size_type count, const void* _Hint);
 
 如果未分配内存，则指向分配的对象的指针或为 null。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 成员函数 `Type` 通过调用 operator new (*计数*) ，为类型的计数元素数组分配存储。 它返回指向已分配对象的指针。 提示参数帮助某些分配器改进引用区域；有效的选择是由同一分配器对象较早分配且尚未被释放的对象的地址。 若不提供提示，请改用 null 指针参数。
 
@@ -254,12 +255,12 @@ template <class Other>
     allocator(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*\
 要复制的分配器对象。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 构造函数不执行任何操作。 但是，一般情况下，从另一个分配器对象构造的分配器对象与之比较应相等，并允许在两个分配器对象间混合对象分配和释放。
 
@@ -334,7 +335,7 @@ The allocator objects cAlloc & Alloc are equal.
 typedef const value_type *const_pointer;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 指针类型描述一个对象， `ptr` 该对象可通过 expression 指定 `*ptr` 类型的对象可以分配的任何常量对象 `allocator` 。
 
@@ -389,7 +390,7 @@ The integer's address found has a value of: 10.
 typedef const value_type& const_reference;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 引用类型描述一个对象，该对象可以指定类型的对象可以分配的任何常量对象 `allocator` 。
 
@@ -458,7 +459,7 @@ template <class _Other>
     void construct(pointer ptr, _Other&&... val);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要构造对象的位置的指针。
@@ -466,7 +467,7 @@ template <class _Other>
 *初始值*\
 要进行初始化的要构造的对象的值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 第一个成员函数等效于 `new ((void *) ptr) Type(val)` 。
 
@@ -527,17 +528,17 @@ The modified vector v1 is:
 void deallocate(pointer ptr, size_type count);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要从存储中释放的第一个对象的指针。
 
-*count*\
+*计*\
 要从存储中释放的对象数量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-成员函数 `Type` 通过调用从 *ptr*开始，为类型为的计数对象的数组释放存储 `operator delete(ptr)` 。 之前，必须通过对与** \* 此**相等的分配器对象调用[allocate](#allocate)来返回指针*ptr* ，并分配大小和类型相同的数组对象。 `deallocate` 绝不会引发异常。
+成员函数 `Type` 通过调用从 *ptr* 开始，为类型为的计数对象的数组释放存储 `operator delete(ptr)` 。 之前，必须通过对与 **\* 此** 相等的分配器对象调用 [allocate](#allocate)来返回指针 *ptr* ，并分配大小和类型相同的数组对象。 `deallocate` 绝不会引发异常。
 
 #### <a name="example"></a>示例
 
@@ -551,14 +552,14 @@ void deallocate(pointer ptr, size_type count);
 void destroy(pointer ptr);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ptr*\
 指定要销毁的对象的地址的指针。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-成员函数通过调用析构函数来销毁由 *ptr*指定的对象 `ptr->Type::~Type` 。
+成员函数通过调用析构函数来销毁由 *ptr* 指定的对象 `ptr->Type::~Type` 。
 
 #### <a name="example"></a>示例
 
@@ -617,7 +618,7 @@ The modified vector v1 is:
 typedef ptrdiff_t difference_type;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 带符号的整数类型描述一个对象，该对象可以表示类型的对象可以分配的序列中任意两个元素的地址之间的差异 `allocator` 。
 
@@ -748,7 +749,7 @@ template <class Other>
     allocator<Type>& operator=(const allocator<Other>& right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*\
 要分配到另一个对象的分配器对象。
@@ -757,7 +758,7 @@ template <class Other>
 
 分配器对象的引用
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 模板赋值运算符没有任何影响。 但是，一般情况下，分配到另一个分配器对象的分配器对象与之比较应相等，并允许在两个分配器对象间混合对象分配和释放。
 
@@ -810,9 +811,9 @@ int main( )
 typedef value_type *pointer;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-指针类型描述一个对象， `ptr` 该对象可通过 expression ** \* ptr**指定类型的对象可以分配的任何对象 `allocator` 。
+指针类型描述一个对象， `ptr` 该对象可通过 expression **\* ptr** 指定类型的对象可以分配的任何对象 `allocator` 。
 
 #### <a name="example"></a>示例
 
@@ -865,12 +866,12 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 struct rebind { typedef allocator<_Other> other; };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *以外*\
 所分配内存的元素的类型。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此结构可用于为与所实现的容器的元素类型不同的类型分配内存。
 
@@ -921,7 +922,7 @@ int main( )
 typedef value_type& reference;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 引用类型描述一个对象，该对象可以指定类型的对象可以分配的任何对象 `allocator` 。
 
@@ -1026,7 +1027,7 @@ int main( )
 typedef Type value_type;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 类型是模板参数 `Type` 的同义词。
 

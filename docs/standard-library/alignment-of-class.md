@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： alignment_of 类
 title: alignment_of 类
 ms.date: 12/11/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: 5a90f481c33431d92f0f28405e6226863d2b3913
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7e1eeafb259b71f24cb272c079cdb485bb8e1b4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87205010"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163647"
 ---
 # <a name="alignment_of-class"></a>alignment_of 类
 
@@ -25,14 +26,14 @@ template <class Ty>
 struct alignment_of;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-类型查询保存类型*Ty*的对齐方式的值。
+类型查询保存类型 *Ty* 的对齐方式的值。
 
 ## <a name="requirements"></a>要求
 
@@ -40,7 +41,7 @@ struct alignment_of;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [`<type_traits>`](type-traits.md)\
-[`aligned_storage`班级](aligned-storage-class.md)
+[`aligned_storage` 班级](aligned-storage-class.md)

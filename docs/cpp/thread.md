@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下方面的详细信息： thread
 title: 线程 (thread)
 ms.date: 05/07/2019
 f1_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 13e6d45642c08a97c06d7099b83e632501267310
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b83686b6641585e7e7af334a6127c71a9171610
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225808"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164700"
 ---
 # <a name="thread"></a>线程 (thread)
 
 **Microsoft 专用**
 
-**`thread`** 扩展的存储类修饰符用于声明线程局部变量。 对于 c + + 11 和更高版本中的可移植性，请使用适用于可移植代码的[thread_local](../cpp/storage-classes-cpp.md#thread_local)存储类说明符。 在上， **`thread_local`** 通过实现 **`__declspec(thread)`** 。
+**`thread`** 扩展的存储类修饰符用于声明线程局部变量。 对于 c + + 11 和更高版本中的可移植性，请使用适用于可移植代码的 [thread_local](../cpp/storage-classes-cpp.md#thread_local) 存储类说明符。 在上， **`thread_local`** 通过实现 **`__declspec(thread)`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -28,9 +29,9 @@ ms.locfileid: "87225808"
 
 ## <a name="remarks"></a>备注
 
-线程本地存储 (TLS) 是多线程进程中的每个线程为线程特定的数据分配存储时所采用的机制。 在标准多线程程序中，数据在给定进程的所有线程间共享，而线程本地存储是用于分配每个线程数据的机制。 有关线程的完整讨论，请参阅[多线程](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
+线程本地存储 (TLS) 是多线程进程中的每个线程为线程特定的数据分配存储时所采用的机制。 在标准多线程程序中，数据在给定进程的所有线程间共享，而线程本地存储是用于分配每个线程数据的机制。 有关线程的完整讨论，请参阅 [多线程](../parallel/multithreading-support-for-older-code-visual-cpp.md)。
 
-线程局部变量的声明必须将[扩展的特性语法](../cpp/declspec.md)与 **`__declspec`** 关键字结合使用 **`thread`** 。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
+线程局部变量的声明必须将 [扩展的特性语法](../cpp/declspec.md) 与 **`__declspec`** 关键字结合使用 **`thread`** 。 例如，以下代码声明了一个整数线程局部变量，并用一个值对其进行初始化：
 
 ```cpp
 __declspec( thread ) int tls_i = 1;
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
 
 在动态加载的库中使用线程本地变量时，需要注意可能导致无法正确初始化线程本地变量的因素：
 
-1. 如果使用函数调用（包括构造函数）对变量进行初始化，则仅对导致二进制/DLL 加载到进程中的线程以及在加载二进制/DLL 之后启动的线程调用此函数。 加载 DLL 时，不会为已在运行的任何其他线程调用初始化函数。 动态初始化发生在 DLL_THREAD_ATTACH 的 DllMain 调用上，但如果该 DLL 在线程启动时不在进程中，则 DLL 永远不会获取该消息。
+1. 如果使用函数调用对变量进行初始化 (包括构造函数) ，则仅对导致二进制/DLL 加载到进程中的线程以及加载二进制/DLL 后启动的线程调用此函数。 加载 DLL 时，不会为已在运行的任何其他线程调用初始化函数。 动态初始化发生在 DLL_THREAD_ATTACH 的 DllMain 调用上，但如果该 DLL 在线程启动时不在进程中，则 DLL 永远不会获取该消息。
 
 1. 以静态方式初始化的线程本地变量通常在所有线程上都已正确初始化。 不过，从2017年12月起，Microsoft c + + 编译器会出现已知的符合性问题，因此， **`constexpr`** 变量接收动态和静态初始化。
 
@@ -48,7 +49,7 @@ __declspec( thread ) int tls_i = 1;
 
 - 仅可将 **`thread`** 属性应用于类和数据声明和定义; **`thread`** 不能用于函数声明或定义。
 
-- 只能 **`thread`** 在具有静态存储持续时间的数据项上指定属性。 这包括全局数据对象（ **`static`** 和 **`extern`** ）、本地静态对象和类的静态数据成员。 不能用特性声明自动数据对象 **`thread`** 。
+- 只能 **`thread`** 在具有静态存储持续时间的数据项上指定属性。 这包括全局数据对象 (**`static`** 和 **`extern`**) 、本地静态对象和类的静态数据成员。 不能用特性声明自动数据对象 **`thread`** 。
 
 - **`thread`** 无论声明和定义是出现在同一文件中还是单独的文件中，都必须使用声明和线程本地对象定义的属性。
 
@@ -89,4 +90,4 @@ __declspec( thread ) int tls_i = 1;
 
 [__declspec](../cpp/declspec.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>
-[线程本地存储（TLS）](../parallel/thread-local-storage-tls.md)
+[线程本地存储 (TLS) ](../parallel/thread-local-storage-tls.md)

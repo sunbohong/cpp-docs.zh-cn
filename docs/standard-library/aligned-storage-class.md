@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： aligned_storage 类
 title: aligned_storage 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 741106888cdab63a75e090e860269f125c35efa6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c64be243ff724994cc27a57ce51d7ff0f81b6f9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623835"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163673"
 ---
 # <a name="aligned_storage-class"></a>aligned_storage 类
 
@@ -28,7 +29,7 @@ template <std::size_t Len, std::size_t Align = alignment_of<max_align_t>::value>
 using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *长度*\
 对象大小。
@@ -38,7 +39,7 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ## <a name="remarks"></a>备注
 
-模板成员 typedef `type` 是具有对齐方式和大小*长度*的 POD 类型*Align*的同义词。 *Align* `alignment_of<T>::value` 对于某一类型，Align 必须等于 `T` 或为默认对齐方式。
+模板成员 typedef `type` 是具有对齐方式和大小 *长度* 的 POD 类型的同义词。  `alignment_of<T>::value` 对于某一类型，Align 必须等于 `T` 或为默认对齐方式。
 
 ## <a name="example"></a>示例
 
@@ -70,7 +71,7 @@ aligned to double == 8
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](type-traits.md)\
 [alignment_of 类](alignment-of-class.md)

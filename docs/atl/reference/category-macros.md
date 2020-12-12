@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：类别宏
 title: 类别宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0db32c9550cd76fbc8e1f6776b8ecf4cceffebd7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 31cbef36ca02fb990ba8935915837074d7dd4116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165077"
 ---
 # <a name="category-macros"></a>类别宏
 
@@ -37,12 +38,12 @@ ms.locfileid: "88833889"
 BEGIN_CATEGORY_MAP(theClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 中包含类别映射的类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类别映射用于指定 COM 类将实现的组件类别以及它需要从其容器中执行的类别。
 
@@ -79,12 +80,12 @@ END_CATEGORY_MAP()
 IMPLEMENTED_CATEGORY(catID)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *catID*<br/>
 中为实现的类别保留 (GUID) 全局唯一标识符的 CATID 常量或变量。 将采用 *catID* 的地址并将其添加到映射。 请参阅下表，了解所选的股票类别。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类具有关联的 [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) 或 [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) 宏，则在注册模块时将自动注册映射中列出的组件类别。
 
@@ -102,7 +103,7 @@ IMPLEMENTED_CATEGORY(catID)
 |简单数据绑定|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |高级数据绑定|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |无窗口控件|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|识别 Internet 的对象|有关示例列表，请参阅 Windows SDK 中的 " [Internet 感知对象](/windows/win32/com/internet-aware-objects) "。||
+|Internet-Aware 对象|有关示例列表，请参阅 Windows SDK 中的 " [Internet 感知对象](/windows/win32/com/internet-aware-objects) "。||
 
 ### <a name="example"></a>示例
 
@@ -116,12 +117,12 @@ IMPLEMENTED_CATEGORY(catID)
 REQUIRED_CATEGORY( catID )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *catID*<br/>
 中包含全局唯一标识符的 CATID 常量或变量， (GUID) 的所需类别。 将采用 *catID* 的地址并将其添加到映射。 请参阅下表，了解所选的股票类别。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类具有关联的 [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) 或 [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) 宏，则在注册模块时将自动注册映射中列出的组件类别。
 
@@ -139,12 +140,12 @@ REQUIRED_CATEGORY( catID )
 |简单数据绑定|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
 |高级数据绑定|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |无窗口控件|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|识别 Internet 的对象|有关示例列表，请参阅 Windows SDK 中的 " [Internet 感知对象](/windows/win32/com/internet-aware-objects) "。||
+|Internet-Aware 对象|有关示例列表，请参阅 Windows SDK 中的 " [Internet 感知对象](/windows/win32/com/internet-aware-objects) "。||
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)

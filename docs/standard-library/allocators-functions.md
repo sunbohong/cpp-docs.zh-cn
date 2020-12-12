@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 分配器 &gt; 宏
 title: '&lt;allocators&gt; 宏'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: dbf7577969ec43de47339bf80327007ac857a5a7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c4866495787cbf502997ca08a06e57ed667f4e9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163517"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; 宏
 
@@ -47,7 +48,7 @@ ms.locfileid: "88834968"
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该宏将生成一个模板定义 `template <class Type> class name {.....}` 和一个特殊化， `template <> class name<void> {.....}` 它们共同定义使用同步筛选器的分配器类模板 `sync` 和类型为的缓存 `cache` 。
 
@@ -87,7 +88,7 @@ public:
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_freelist"></a><a name="cache_freelist"></a> CACHE_FREELIST
 
@@ -97,7 +98,7 @@ public:
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cache_suballoc"></a><a name="cache_suballoc"></a> CACHE_SUBALLOC
 
@@ -107,7 +108,7 @@ public:
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="sync_default"></a><a name="sync_default"></a> SYNC_DEFAULT
 
@@ -117,10 +118,10 @@ public:
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果编译器支持编译单线程和多线程应用程序，则对于单线程应用程序，宏生成 `stdext::allocators::sync_none`；在所有其他情况下生成 `stdext::allocators::sync_shared`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](allocators-header.md)

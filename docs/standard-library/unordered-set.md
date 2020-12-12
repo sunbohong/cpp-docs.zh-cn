@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; unordered_set&gt;
 title: '&lt;unordered_set&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 978c717cf0d893d19947a98268ff0c49b2b24f9d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: af27e4757cbb62e27f9f8e5708268576bbd09109
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846376"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153689"
 ---
 # <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
@@ -30,14 +31,14 @@ ms.locfileid: "88846376"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[unordered_multiset 类](../standard-library/unordered-multiset-class.md)|存储键的哈希表。|
 |[unordered_set 类](../standard-library/unordered-set-class.md)|存储键的哈希表。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator！ =](../standard-library/unordered-set-operators.md#op_neq)|测试位于运算符左侧的 unordered_multiset 对象是否与位于右侧的 unordered_multiset 对象不相等。|
 |[operator = =](../standard-library/unordered-set-operators.md#op_eq_eq)|测试位于运算符左侧的 unordered_multiset 对象是否与位于右侧的 unordered_multiset 对象相等。|
@@ -46,7 +47,7 @@ ms.locfileid: "88846376"
 |[operator = =](../standard-library/unordered-set-operators.md#op_eq_eq)|测试位于运算符左侧的 unordered_set 对象是否与位于右侧的 unordered_set 对象相等。|
 |[swap](../standard-library/unordered-set-functions.md#swap)|交换两个集。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [unordered_map 类](../standard-library/unordered-map-class.md)\
 [unordered_multimap 类](../standard-library/unordered-multimap-class.md)

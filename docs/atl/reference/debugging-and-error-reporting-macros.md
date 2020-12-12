@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：调试和错误报告宏
 title: 调试和错误报告宏
 ms.date: 05/06/2019
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 6b969cfb841a9a95d695eacc0a25f9dd378379ac
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 573c3f341ff9f9df58337b75e1080dde960d232c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139940"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>调试和错误报告宏
 
@@ -40,7 +41,7 @@ ms.locfileid: "92135536"
 #define _ATL_DEBUG_INTERFACES
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 跟踪输出将如下所示：
 
@@ -71,7 +72,7 @@ ms.locfileid: "92135536"
 #define _ATL_DEBUG_QI
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果对的调用 `QueryInterface` 失败，则将显示输出窗口：
 
@@ -85,12 +86,12 @@ ATLASSERT 宏执行的功能与 C 运行时库中的 [_ASSERTE](../../c-runtime-
 ATLASSERT(booleanExpression);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *booleanExpression*<br/>
 计算结果为零或不为零的表达式（包括指针）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调试版本中，ATLASSERT 计算 *booleanExpression* 并在结果为 false 时生成调试报告。
 
@@ -107,7 +108,7 @@ ATLENSURE(booleanExpression);
 ATLENSURE_THROW(booleanExpression, hr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *booleanExpression*<br/>
 指定要测试的布尔表达式。
@@ -115,7 +116,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 *小时*<br/>
 指定要返回的错误代码。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这些宏提供一种机制，用于检测和通知用户不正确的参数用法。
 
@@ -143,12 +144,12 @@ ATLENSURE 和 ATLASSERT 之间的区别在于 ATLENSURE 在发布版本以及调
 ATLTRACENOTIMPL(funcname);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *funcname*<br/>
 中一个字符串，包含未实现的函数的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在发布版本中，只返回 E_NOTIMPL。
 
@@ -173,7 +174,7 @@ ATLTRACE(
     LPCSTR lpszFormat, ...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exp*<br/>
 中要发送到 "输出" 窗口或任何捕获这些消息的应用程序的字符串和变量。
@@ -187,7 +188,7 @@ ATLTRACE(
 *lpszFormat*<br/>
 中要发送到转储设备的格式化字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关 ATLTRACE 的说明，请参阅 [ATLTRACE2](#atltrace2) 。 ATLTRACE 和 ATLTRACE2 具有相同的行为，包括 ATLTRACE，以实现向后兼容性。
 
@@ -204,7 +205,7 @@ ATLTRACE2(
     LPCSTR lpszFormat,  ...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *exp*<br/>
 中要发送到 "输出" 窗口或任何捕获这些消息的应用程序的字符串。
@@ -218,11 +219,11 @@ ATLTRACE2(
 *lpszFormat*<br/>
 中 `printf`要用于创建要发送到转储设备的字符串的样式格式字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATLTRACE2 的缩写形式将字符串写入调试器的输出窗口。 第二种形式的 ATLTRACE2 还会将输出写入调试器的输出窗口，但受 ATL/MFC 跟踪工具的设置的限制 (参见 [ATLTraceTool 示例](../../overview/visual-cpp-samples.md)) 。 例如，如果将 *级别* 设置为4，将 ATL/MFC 跟踪工具设置为级别0，则不会看到消息。 *级别* 可以是0、1、2、3或4。 默认值为0，只报告最严重的问题。
 
-*Category*参数列出要设置的跟踪标志。 这些标志对应于要报告的方法的类型。 下表列出了可用于 *category* 参数的有效跟踪标志。
+*Category* 参数列出要设置的跟踪标志。 这些标志对应于要报告的方法的类型。 下表列出了可用于 *category* 参数的有效跟踪标志。
 
 ### <a name="atl-trace-flags"></a>ATL 跟踪标志
 
@@ -283,7 +284,7 @@ ATLTRACE 和 ATLTRACE2 具有相同的行为，包括 ATLTRACE，以实现向后
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)<br/>
 [调试和错误报告全局函数](../../atl/reference/debugging-and-error-reporting-global-functions.md)

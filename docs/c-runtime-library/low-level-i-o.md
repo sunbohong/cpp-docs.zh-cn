@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Low-Level i/o
 title: 低级别 I/O
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - file handles [C++]
 - file handles [C++], I/O functions
 ms.assetid: 53e11bdd-6720-481c-8b2b-3a3a569ed534
-ms.openlocfilehash: acf07682e9045800bb04aa4c9d6abc5ae4376280
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 88e159e9f85cd4f893616d3aef935417f5abde52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443100"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97164973"
 ---
 # <a name="low-level-io"></a>低级别 I/O
 
@@ -21,17 +22,17 @@ ms.locfileid: "79443100"
 
 低级别例程可以使用以下预定义的文件描述符访问程序启动时打开的标准流。
 
-|流|文件描述符|
+|Stream|文件描述符|
 |------------|---------------------|
 |**stdin**|0|
 |**stdout**|1|
 |**stderr**|2|
 
-发生错误时，低级别 I/O 例程将设置 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全局变量。 只有在程序需要 STDIO.H 中定义的常量（例如文件尾指示符 (EOF)）时，在使用低级别函数时必须将 STDIO.H 包含在内。
+发生错误时，低级别 I/O 例程将设置 errno[](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全局变量。 只有在程序需要 STDIO.H 中定义的常量（例如文件尾指示符 (EOF)）时，在使用低级别函数时必须将 STDIO.H 包含在内。
 
 ## <a name="low-level-io-functions"></a>低级别 I/O 函数
 
-|Functions|使用|
+|函数|使用|
 |--------------|---------|
 |[_close](../c-runtime-library/reference/close.md)|关闭文件|
 |[_commit](../c-runtime-library/reference/commit.md)|将文件刷新到磁盘|
@@ -42,9 +43,9 @@ ms.locfileid: "79443100"
 |[_lseek、_lseeki64](../c-runtime-library/reference/lseek-lseeki64.md)|将文件指针重新定位到给定位置|
 |[_open、_wopen](../c-runtime-library/reference/open-wopen.md)|打开文件|
 |[_read](../c-runtime-library/reference/read.md)|读取文件中的数据|
-|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md), [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|打开用于文件共享的文件|
+|[_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)、[_sopen_s、_wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|打开用于文件共享的文件|
 |[_tell、_telli64](../c-runtime-library/reference/tell-telli64.md)|获取当前文件指针位置|
-|[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|设置文件权限掩码|
+|[_umask](../c-runtime-library/reference/umask.md)、[_umask_s](../c-runtime-library/reference/umask-s.md)|设置文件权限掩码|
 |[_write](../c-runtime-library/reference/write.md)|将数据写入文件|
 
 _dup 和 _dup2 通常用于将预定义文件描述符与其他文件关联。

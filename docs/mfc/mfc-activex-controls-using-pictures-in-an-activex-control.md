@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： MFC ActiveX 控件：在 ActiveX 控件中使用图片
 title: MFC ActiveX 控件：在 ActiveX 控件中使用图片
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-ms.openlocfilehash: 9eb204dd240ae17421a20b7cddeff56c9a22c19b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9c9989be7503eb449b969fbbf37d92f26c165131
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97133076"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控件：在 ActiveX 控件中使用图片
 
@@ -39,7 +40,7 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
    通过该类，可轻松访问自定义图片属性所显示项的图片对象和功能。
 
-- 支持 **LPPICTUREDISP**类型的属性，并通过 Get/Set 函数实现。
+- 支持 **LPPICTUREDISP** 类型的属性，并通过 Get/Set 函数实现。
 
    通过“类视图”，可以快速添加一个或多个支持图片类型的自定义属性。 有关如何通过“类视图”添加 ActiveX 控件属性的详细信息，请参阅 [MFC ActiveX 控件：属性](mfc-activex-controls-properties.md)一文。
 
@@ -47,7 +48,7 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
    此属性页是 ActiveX 控件可以使用的一组常用属性页的一部分。 有关 ActiveX 控件属性页的详细信息，请参阅 [MFC ActiveX 控件：使用常用属性页](mfc-activex-controls-using-stock-property-pages.md)一文
 
-## <a name="implementing-a-custom-picture-property-in-your-activex-control"></a><a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a>在 ActiveX 控件中实现自定义图片属性
+## <a name="implementing-a-custom-picture-property-in-your-activex-control"></a><a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控件中实现自定义图片属性
 
 完成本部分中概述的步骤后，该控件将可以显示用户选定的图片。 用户可以通过属性页更改显示的图片，该属性页显示当前图片并具有“浏览”按钮，可让用户选择其他图片。
 
@@ -65,7 +66,7 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 ## <a name="additions-to-your-control-project"></a><a name="_core_additions_to_your_control_project"></a> 向控件项目添加内容
 
-若要添加标准图片属性页的属性页 ID，请将以下 BEGIN_PROPPAGEIDS 行插入到控件实现文件（。CPP）：
+若要添加标准图片属性页的属性页 ID，请将以下行插入到控件实现文件 ( 中的 BEGIN_PROPPAGEIDS 宏之后。CPP) ：
 
 [!code-cpp[NVC_MFC_AxPic#1](codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]
 
@@ -77,7 +78,7 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 [!code-cpp[NVC_MFC_AxPic#3](codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]
 
-不需要将数据成员命名*m_pic*;任何名称都足够了。
+不需要将数据成员命名 *m_pic*;任何名称都足够了。
 
 接下来，添加支持图片类型的自定义属性：
 
@@ -89,13 +90,13 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 1. 右键单击控件的接口节点（库节点的第二个节点）以打开快捷菜单。
 
-1. 从快捷菜单中选择“添加” **** ，然后选择“添加属性” ****。
+1. 从快捷菜单中选择“添加”  ，然后选择“添加属性” 。
 
-1. 在“属性名称” **** 框中，键入属性名称。 本过程中使用 `ControlPicture` 作为示例。
+1. 在“属性名称”  框中，键入属性名称。 本过程中使用 `ControlPicture` 作为示例。
 
 1. 在 "**属性类型**" 框中，选择 " **IPictureDisp** <strong>\*</strong> " 作为属性类型。
 
-1. 对于“实现类型” ****，请单击“Get/Set 方法” ****。
+1. 对于“实现类型” ，请单击“Get/Set 方法” 。
 
 1. 为 Get 和 Set 函数键入唯一名称或接受默认名称。 （在本例中，使用默认名称 `GetControlPicture` 和 `SetControlPicture` 。）
 
@@ -118,7 +119,7 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 ### <a name="modifications-to-your-control-project"></a><a name="_core_modifications_to_your_control_project"></a> 修改控件项目的内容
 
-对控件项目进行必要的添加后，需要修改几个影响 ActiveX 控件的呈现的函数。 这些函数、 `OnResetState`、 `OnDraw`以及自定义属性的 Get/Set 函数位于控件实现文件中。 （请注意，在此示例中，调用了 control 类 `CSampleCtrl` ， `CPictureHolder` 数据成员*m_pic*调用，而自定义图片属性名称为 `ControlPicture` 。）
+对控件项目进行必要的添加后，需要修改几个影响 ActiveX 控件的呈现的函数。 这些函数、 `OnResetState`、 `OnDraw`以及自定义属性的 Get/Set 函数位于控件实现文件中。  (请注意，在此示例中，调用了 control 类 `CSampleCtrl` ， `CPictureHolder` 数据成员 *m_pic*，而自定义图片属性名称为 `ControlPicture` 。 ) 
 
 在控件的 `OnResetState` 函数中，在 `COleControl::OnResetState`的调用后添加以下可选行：
 
@@ -147,7 +148,7 @@ ActiveX 控件类提供了若干组件，可用于在控件内实现图片属性
 
 完成修改后，重新生成项目以整合自定义图片属性的新功能并使用测试容器对新属性进行测试。 请参阅 [使用测试容器测试属性和事件](testing-properties-and-events-with-test-container.md) 了解有关如何访问测试容器的信息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](mfc-activex-controls.md)<br/>
 [MFC ActiveX 控件：使用字体](mfc-activex-controls-using-fonts.md)<br/>

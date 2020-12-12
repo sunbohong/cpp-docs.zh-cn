@@ -1,4 +1,5 @@
 ---
+description: 详细了解： &lt; stack&gt;
 title: '&lt;stack&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b2130994ca69dd23f7df3e521deb67263b13d0cc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ebb14f25d8a86d11ae0d1837b1b975c97c0ac396
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153819"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -31,7 +32,7 @@ ms.locfileid: "88844283"
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator！ =](../standard-library/stack-operators.md#op_neq)|测试运算符左侧的堆栈对象是否不等于右侧的堆栈对象。|
 |[运算符<](../standard-library/stack-operators.md#op_lt)|测试运算符左侧的堆栈对象是否小于右侧的堆栈对象。|
@@ -42,11 +43,11 @@ ms.locfileid: "88844283"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[stack 类](../standard-library/stack-class.md)|一种模板容器适配器类，它提供了功能的限制，限制对最近添加到某些基础容器类型的元素的访问。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
