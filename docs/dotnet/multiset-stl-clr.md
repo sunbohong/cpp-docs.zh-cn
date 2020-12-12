@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：多重集 (STL/CLR) '
 title: multiset (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -97,18 +98,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-ms.openlocfilehash: a6bb7a262df21a835f1e870f2bce29480467c543
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1b2300fe7b856e989dd470f47da559496374961b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508546"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255647"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
 此模板类描述了一个对象，该对象控制具有双向访问权限的不同长度的元素序列。 使用容器可以将 `multiset` 一系列元素作为 (几乎) 均衡的节点的排序树，每个节点存储一个元素。
 
-在下面的说明中，与 `GValue` 键相同 `GKey` ，除非后者为 ref 类型，在*Key*这种情况下，它是 `Key^` 。
+在下面的说明中，与 `GValue` 键相同 `GKey` ，除非后者为 ref 类型，在这种情况下，它是 `Key^` 。
 
 ## <a name="syntax"></a>语法
 
@@ -126,9 +127,9 @@ template<typename Key>
     { ..... };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Key*<br/>
+*键*<br/>
 受控序列中元素的键组件的类型。
 
 ## <a name="requirements"></a>要求
@@ -158,7 +159,7 @@ template<typename Key>
 |[multiset::value_compare (STL/CLR)](#value_compare)|两个元素值的排序委托。|
 |[multiset::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[multiset::begin (STL/CLR)](#begin)|指定受控序列的开头。|
 |[multiset::clear (STL/CLR)](#clear)|删除所有元素。|
@@ -181,7 +182,7 @@ template<typename Key>
 |[multiset::upper_bound (STL/CLR)](#upper_bound)|查找与指定键匹配的范围的末尾。|
 |[multiset::value_comp (STL/CLR)](#value_comp)|复制两个元素值的排序委托。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[multiset::operator= (STL/CLR)](#op_as)|替换受控序列。|
 |[operator！ = (多集)  (STL/CLR) ](#op_neq)|确定对象是否 `multiset` 不等于另一个 `multiset` 对象。|
@@ -191,9 +192,9 @@ template<typename Key>
 |[运算符> (多集)  (STL/CLR) ](#op_gt)|确定 `multiset` 对象是否大于另一个 `multiset` 对象。|
 |[operator>= (multiset) (STL/CLR)](#op_gteq)|确定 `multiset` 对象是否大于或等于另一个 `multiset` 对象。|
 
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>界面
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
@@ -202,7 +203,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
 |ITree\<Key, Value>|维护泛型容器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 对象为其控制的序列分配并释放存储，以作为单个节点。 它通过更改节点之间的链接，将元素插入到 (几乎) 的平衡树中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
 
@@ -477,14 +478,14 @@ c b a
 size_type count(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-该成员函数将返回受控序列中与 *键*具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
+该成员函数将返回受控序列中与 *键* 具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
 
 ### <a name="example"></a>示例
 
@@ -686,12 +687,12 @@ a b c
 cliext::pair<iterator, iterator> equal_range(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [多重集：： lower_bound (stl/clr) ](#lower_bound)多 `(key),` [集：： upper_bound (stl/clr) ](#upper_bound) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
 
@@ -748,7 +749,7 @@ iterator erase(iterator first, iterator last);
 size_type erase(key_type key)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要清除的范围的开头。
@@ -762,13 +763,13 @@ size_type erase(key_type key)
 *where*<br/>
 要清除的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则返回[多重集：： end (STL/CLR) ](#end) `()` 。 使用它可以删除单个元素。
+第一个成员函数删除由 *where* 指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则返回 [多重集：： end (STL/CLR)](#end) `()` 。 使用它可以删除单个元素。
 
 第二个成员函数删除范围 [，) 中的受控序列的元素， `first` `last` 并返回一个迭代器，该迭代器指定删除的任何元素之外保留的第一个元素; `end()` 如果此类元素不存在，则为。 使用它可以删除零个或多个连续元素。
 
-第三个成员函数删除受控序列中其键与 *键*具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
+第三个成员函数删除受控序列中其键与 *键* 具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
 
 每个元素擦除与受控序列中的元素数的对数成正比。
 
@@ -830,14 +831,14 @@ size() = 1
 iterator find(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[多重集：： end (STL/CLR) ](#end) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
+如果受控序列中的至少一个元素具有与 *键* 等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回 [多重集：： end (STL/CLR)](#end) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
 
 ### <a name="example"></a>示例
 
@@ -1120,7 +1121,7 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要插入的范围的开头。
@@ -1137,17 +1138,17 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *where*<br/>
 容器中要插入的位置 (提示仅) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个成员函数都插入由剩余操作数指定的序列。
 
-第一个成员函数插入一个具有值 *val*的元素，并返回指定新插入的元素的迭代器。 用于插入单个元素。
+第一个成员函数插入一个具有值 *val* 的元素，并返回指定新插入的元素的迭代器。 用于插入单个元素。
 
-第二个成员函数插入具有值 *val*的元素，使用 *where* 作为提示 (提高性能) ，并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
+第二个成员函数插入具有值 *val* 的元素，使用 *where* 作为提示 (提高性能) ，并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
 
 第三个成员函数插入序列 [ `first` ， `last`) 。 用于插入从另一个序列复制的零个或多个元素。
 
-第四个成员函数插入由 *权限*指定的序列。 使用它可以插入枚举器描述的序列。
+第四个成员函数插入由 *权限* 指定的序列。 使用它可以插入枚举器描述的序列。
 
 每个元素插入时间与受控序列中的元素数的对数成正比。 但是，如果指定一个在插入点附近指定元素的提示，则可能会在分期常量时间内进行插入。
 
@@ -1392,7 +1393,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *键*的同义词。
+该类型是模板参数 *键* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1435,14 +1436,14 @@ a b c
 iterator lower_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数确定 `X` 受控序列中对 *key*具有等效顺序的第一个元素。 如果此类元素不存在，它将返回[多重集：： end (STL/CLR) ](#end) `()` ; 否则返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
+成员函数确定 `X` 受控序列中对 *key* 具有等效顺序的第一个元素。 如果此类元素不存在，它将返回[多重集：： end (STL/CLR) ](#end) `()` ; 否则返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
 
 ### <a name="example"></a>示例
 
@@ -1492,12 +1493,12 @@ lower_bound(L'x')==end() = True
 static value_type make_value(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要使用的密钥值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回一个 `value_type` 对象，其键为 *key*。 使用它来编写适用于多个其他成员函数的对象。
 
@@ -1549,7 +1550,7 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要插入的范围的开头。
@@ -1563,7 +1564,7 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 *然后*<br/>
 要插入的对象或范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数：
 
@@ -1575,19 +1576,19 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `explicit multiset(key_compare^ pred);`
 
-用排序谓词 *pred*初始化不包含元素的受控序列。 使用此方法可以指定一个具有指定排序谓词的空的初始受控序列。
+用排序谓词 *pred* 初始化不包含元素的受控序列。 使用此方法可以指定一个具有指定排序谓词的空的初始受控序列。
 
 构造函数：
 
 `multiset(multiset<Key>% right);`
 
-用序列 [ `right.begin()` ， `right.end()`) 用默认排序谓词初始化受控序列。 使用此方法可以指定初始受控序列，该序列是由多重集对象 *权限*控制的序列的副本，具有默认排序谓词。
+用序列 [ `right.begin()` ， `right.end()`) 用默认排序谓词初始化受控序列。 使用此方法可以指定初始受控序列，该序列是由多重集对象 *权限* 控制的序列的副本，具有默认排序谓词。
 
 构造函数：
 
 `multiset(multiset<Key>^ right);`
 
-用序列 [ `right->begin()` ， `right->end()`) 用默认排序谓词初始化受控序列。 使用此方法可以指定初始受控序列，该序列是由多重集对象 *权限*控制的序列的副本，具有默认排序谓词。
+用序列 [ `right->begin()` ， `right->end()`) 用默认排序谓词初始化受控序列。 使用此方法可以指定初始受控序列，该序列是由多重集对象 *权限* 控制的序列的副本，具有默认排序谓词。
 
 构造函数：
 
@@ -1599,19 +1600,19 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `template<typename InIter> multiset(InIter first, InIter last, key_compare^ pred);`
 
-用序列 [ `first` ， `last`) ，并用排序谓词 *pred*来初始化受控序列。 使用此方法可以通过指定的排序谓词使受控序列成为另一个序列的副本。
+用序列 [ `first` ， `last`) ，并用排序谓词 *pred* 来初始化受控序列。 使用此方法可以通过指定的排序谓词使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-使用默认排序谓词， *用枚举器*指定的序列初始化受控序列。 使用此方法可以通过默认的排序谓词，使受控序列成为枚举器描述的另一个序列的副本。
+使用默认排序谓词， *用枚举器* 指定的序列初始化受控序列。 使用此方法可以通过默认的排序谓词，使受控序列成为枚举器描述的另一个序列的副本。
 
 构造函数：
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-使用排序谓词*pred*，*通过枚举器*指定的序列初始化受控序列。 它用于使受控序列成为使用指定排序谓词的枚举器所描述的另一序列的副本。
+使用排序谓词 *pred*，*通过枚举器* 指定的序列初始化受控序列。 它用于使受控序列成为使用指定排序谓词的枚举器所描述的另一序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1709,14 +1710,14 @@ a b c
 multiset<Key>% operator=(multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 用于复制的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧* 受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2050,14 +2051,14 @@ end()-begin() = 3
 void swap(multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要与其交换内容的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数交换和右之间的受控 **`this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
+成员函数交换和右之间的受控 **`this`** 序列。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2168,14 +2169,14 @@ a b c
 iterator upper_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数确定 `X` 受控序列中对 *key*具有等效排序的最后一个元素。 如果此类元素不存在，或者如果 `X` 是受控序列中的最后一个元素，则它将返回[多重集：： END (STL/CLR) ](#end) `()` ; 否则，它将返回一个指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
+成员函数确定 `X` 受控序列中对 *key* 具有等效排序的最后一个元素。 如果此类元素不存在，或者如果 `X` 是受控序列中的最后一个元素，则它将返回[多重集：： END (STL/CLR) ](#end) `()` ; 否则，它将返回一个指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
 
 ### <a name="example"></a>示例
 
@@ -2361,7 +2362,7 @@ template<typename Key>
         multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2369,9 +2370,9 @@ template<typename Key>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)` 。 使用它可以测试在按元素对两个多重集进行*比较时，是否按原样对**左侧*进行排序。
+Operator 函数返回 `!(left == right)` 。 使用它可以测试在按元素对两个多重集进行 *比较时，是否按原样对**左侧* 进行排序。
 
 ### <a name="example"></a>示例
 
@@ -2431,7 +2432,7 @@ template<typename Key>
         multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2439,9 +2440,9 @@ template<typename Key>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回，用于 `left->size() < right->size()` 测试在按元素对两个*right*多重集进行比较时，是否向*左*排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回，用于 `left->size() < right->size()` 测试在按元素对两个多重集进行比较时，是否向 *左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2501,7 +2502,7 @@ template<typename Key>
         multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2509,9 +2510,9 @@ template<typename Key>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个多重集进行*比较时，是否向**左*排序。
+Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个多重集进行 *比较时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2571,7 +2572,7 @@ template<typename Key>
         multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2579,9 +2580,9 @@ template<typename Key>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以*测试在按*元素对两个多重集进行比较时，是否*向左*排序。
+仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以 *测试在按* 元素对两个多重集进行比较时，是否 *向左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2641,7 +2642,7 @@ template<typename Key>
         multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2649,9 +2650,9 @@ template<typename Key>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left` 。 用于测试在按元素对两个多重集进行*比较时，是否向**左*排序。
+Operator 函数返回 `right` `<` `left` 。 用于测试在按元素对两个多重集进行 *比较时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2711,7 +2712,7 @@ template<typename Key>
         multiset<Key>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2719,9 +2720,9 @@ template<typename Key>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个多重集进行*比较时，是否向**左*排序。
+Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个多重集进行 *比较时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 

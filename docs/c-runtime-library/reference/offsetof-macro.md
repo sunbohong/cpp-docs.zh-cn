@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： offsetof 宏
 title: offsetof 宏
 ms.date: 11/04/2016
 api_location:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-ms.openlocfilehash: ee6d5e56bb9f41a842e53984f754c7c07d58a125
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 055bda67bae178143561acd91b517c431f77cac0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256259"
 ---
 # <a name="offsetof-macro"></a>offsetof 宏
 
@@ -42,7 +43,7 @@ size_t offsetof(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *structName*<br/>
 父数据结构的名称。
@@ -52,14 +53,14 @@ size_t offsetof(
 
 ## <a name="return-value"></a>返回值
 
-**offsetof**从其父数据结构的开头返回指定成员的偏移量（以字节为单位）。 它对于位域是未定义的。
+**offsetof** 从其父数据结构的开头返回指定成员的偏移量（以字节为单位）。 它对于位域是未定义的。
 
 ## <a name="remarks"></a>备注
 
-**Offsetof**宏从由*structName*指定的结构的开头作为**size_t**类型的值返回*值的偏移*量（以字节为单位）。 可以用关键字指定类型 **`struct`** 。
+**Offsetof** 宏从由 *structName* 指定的结构的开头作为 **size_t** 类型的值返回 *值的偏移* 量（以字节为单位）。 可以用关键字指定类型 **`struct`** 。
 
 > [!NOTE]
-> **offsetof**不是函数，无法使用 C 原型描述。
+> **offsetof** 不是函数，无法使用 C 原型描述。
 
 ## <a name="requirements"></a>要求
 
@@ -73,6 +74,6 @@ size_t offsetof(
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>

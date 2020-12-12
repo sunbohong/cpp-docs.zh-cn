@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：重写说明符 (c + +/CLI 和 c + +/CX) '
 title: 重写说明符（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - override specifiers, C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-ms.openlocfilehash: 410fe9ecc48b92c68132f7b1b8057c2549c8afcf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce0b9ad4464eef66bc71826825e8129ef0a24cab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181897"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257584"
 ---
 # <a name="override-specifiers--ccli-and-ccx"></a>重写说明符（C++/CLI 和 C++/CX）
 
@@ -53,6 +54,6 @@ abstract 和 sealed 也对类型声明有效，但不用作重写说明符。
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

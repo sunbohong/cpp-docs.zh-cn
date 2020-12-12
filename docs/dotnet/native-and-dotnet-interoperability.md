@@ -1,4 +1,5 @@
 ---
+description: 了解更多：本机和 .NET 互操作性
 title: 本机和 .NET 的互操作性
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,24 +15,24 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0276c4401b56f453549cf31433cc6f558daf1c02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255634"
 ---
 # <a name="native-and-net-interoperability"></a>本机和 .NET 的互操作性
 
-VisualC++支持互操作性功能，允许托管和非托管构造共存和交互操作在同一程序集中，即使在同一文件中。 此功能，如 P/Invoke，一小部分支持的其他.NET 语言，但视觉对象提供的互操作性支持大多数C++在其他语言中不可用。
+Visual C++ 支持互操作性功能，这些功能允许托管和非托管构造共存，甚至在同一文件中进行互操作。 其他 .NET 语言也支持此功能的一小部分（如 P/Invoke），但 Visual C++ 提供的大多数互操作性支持在其他语言中都不可用。
 
 ## <a name="in-this-section"></a>本节内容
 
-[混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
-介绍与生成的程序集[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)编译器选项的同时包含托管和非托管功能。
+[混合 (本机和托管) 程序集](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
+描述用 [/clr (公共语言运行时编译 ](../build/reference/clr-common-language-runtime-compilation.md) 生成的程序集) 编译器选项，该选项包含托管和非托管功能。
 
 [在 MFC 中使用 Windows 窗体用户控件](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
-讨论如何使用 MFC 应用程序内承载 Windows 窗体控件的 MFC Windows 窗体支持类。
+讨论如何使用 MFC Windows 窗体支持类在 MFC 应用程序中承载 Windows 窗体控件。
 
 [从托管代码调用本机函数](../dotnet/calling-native-functions-from-managed-code.md)<br/>
-介绍如何通过.NET 应用程序使用非 CLR Dll。
+介绍如何从 .NET 应用程序使用非 CLR Dll。

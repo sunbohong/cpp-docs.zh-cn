@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _commit
 title: _commit
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9ec0a6dad2e1dc7531d99e386adf41e4c444b8d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918521"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260678"
 ---
 # <a name="_commit"></a>_commit
 
@@ -50,32 +51,32 @@ int _commit(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*<br/>
 引用打开的文件的文件说明符。
 
 ## <a name="return-value"></a>返回值
 
-如果已成功将文件刷新到磁盘， **_commit**将返回0。 返回值-1 表示错误。
+如果已成功将文件刷新到磁盘， **_commit** 将返回0。 返回值-1 表示错误。
 
 ## <a name="remarks"></a>备注
 
-**_Commit**函数强制操作系统将与*fd*关联的文件写入磁盘。 此调用可确保立即刷新特定文件，而无需等待操作系统的决定。
+**_Commit** 函数强制操作系统将与 *fd* 关联的文件写入磁盘。 此调用可确保立即刷新特定文件，而无需等待操作系统的决定。
 
-如果*fd*是无效的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并且**errno**设置为**ebadf (**。
+如果 *fd* 是无效的文件描述符，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并且 **errno** 设置为 **ebadf (**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**_commit**|\<io.h>|\<errno.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>

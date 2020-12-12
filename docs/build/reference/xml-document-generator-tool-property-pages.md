@@ -1,4 +1,5 @@
 ---
+description: 了解更多： XML 文档生成器工具属性页
 title: “XML 文档生成器工具”属性页
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e344d8ef796a5c3455c88851a1fc410801b991bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335772"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260964"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>“XML 文档生成器工具”属性页
 
@@ -34,12 +35,12 @@ ms.locfileid: "81335772"
 
 - **输出文档文件**
 
-   .xml 输出文件的名称和目录位置。 有关使用宏指定目录位置的信息，请参阅[生成命令和属性的通用宏](common-macros-for-build-commands-and-properties.md)。
+   .xml 输出文件的名称和目录位置。 有关使用宏指定目录位置的信息，请参阅 [用于生成命令和属性的常见宏](common-macros-for-build-commands-and-properties.md) 。
 
 - **文档库依赖项**
 
    如果项目与解决方案中的 .lib 项目有依赖关系，则可以将 .lib 项目中的 .xdc 文件处理至当前项目的 .xml 文件中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C++项目属性页引用](property-pages-visual-cpp.md)
+[C++ 项目属性页参考](property-pages-visual-cpp.md)

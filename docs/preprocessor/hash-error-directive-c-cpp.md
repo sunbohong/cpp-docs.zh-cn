@@ -1,4 +1,5 @@
 ---
+description: '详细了解： (C/c + + #error 指令) '
 title: '#error 指令 (C/C++)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - preprocessor, directives
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-ms.openlocfilehash: bfb5c18f20319e6e6d345f28d3e1850714334b71
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fd6503de9590893ee0ec53cbbfa59429a0cfdcfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261146"
 ---
-# <a name="error-directive-cc"></a>#error 指令 (C/C++)
+# <a name="error-directive-cc"></a> (C/c + + 的 #error 指令) 
 
-**#Error**指令会在编译时发出用户指定的错误消息, 然后终止编译。
+**#Error** 指令会在编译时发出用户指定的错误消息，然后终止编译。
 
 ## <a name="syntax"></a>语法
 
@@ -25,7 +26,7 @@ ms.locfileid: "70216119"
 
 ## <a name="remarks"></a>备注
 
-此指令发出的错误消息包括*标记字符串*参数。 *标记字符串*参数不受宏展开的限制。 此指令在预处理期间最有用, 通知开发人员程序不一致或约束违规。 下面的示例演示了在预处理期间进行的错误处理:
+此指令发出的错误消息包括 *标记字符串* 参数。 *标记字符串* 参数不受宏展开的限制。 此指令在预处理期间最有用，通知开发人员程序不一致或约束违规。 下面的示例演示了在预处理期间进行的错误处理：
 
 ```cpp
 #if !defined(__cplusplus)

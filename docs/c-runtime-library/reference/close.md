@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _close
 title: _close
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: c642820bf1bc2e2afbd14e17832fb3fdb6f865b8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d65d65cea5d379cad11e45e63efc725ee056ea91
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919853"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260730"
 ---
 # <a name="_close"></a>_close
 
@@ -47,28 +48,28 @@ int _close(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*<br/>
 引用打开的文件的文件说明符。
 
 ## <a name="return-value"></a>返回值
 
-如果文件已成功关闭， **_close**将返回0。 返回值-1 表示错误。
+如果文件已成功关闭， **_close** 将返回0。 返回值-1 表示错误。
 
 ## <a name="remarks"></a>备注
 
-**_Close**函数将关闭与*fd*关联的文件。
+**_Close** 函数将关闭与 *fd* 关联的文件。
 
-文件描述符和基础 OS 文件句柄已关闭。 因此，如果最初使用 Win32 函数**CreateFile**打开该文件并使用 **_open_osfhandle**将其转换为文件描述符，则无需调用**CloseHandle** 。
+文件描述符和基础 OS 文件句柄已关闭。 因此，如果最初使用 Win32 函数 **CreateFile** 打开该文件并使用 **_open_osfhandle** 将其转换为文件描述符，则无需调用 **CloseHandle** 。
 
-此函数验证其参数。 如果*fd*是错误的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并且**errno**设置为**ebadf (**。
+此函数验证其参数。 如果 *fd* 是错误的文件描述符，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并且 **errno** 设置为 **ebadf (**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
@@ -78,11 +79,11 @@ int _close(
 
 请参阅 [_open](open-wopen.md) 示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chsize](chsize.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>
-[_dup、_dup2](dup-dup2.md)<br/>
+[_dup，_dup2](dup-dup2.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>
 [_unlink、_wunlink](unlink-wunlink.md)<br/>

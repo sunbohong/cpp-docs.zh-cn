@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： bad_cast 异常
 title: bad_cast 异常
 ms.date: 10/04/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 2efe5be5e44751831a56b29cfc629df2d21843f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40408128bd1c90feff34e8ea1ce8bf7a3c0d56cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229176"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97255686"
 ---
 # <a name="bad_cast-exception"></a>bad_cast 异常
 
-由于**bad_cast** **`dynamic_cast`** 转换到引用类型失败，运算符将引发 bad_cast 异常。
+由于 **`dynamic_cast`** 转换到引用类型失败，运算符将引发 bad_cast 异常。
 
 ## <a name="syntax"></a>语法
 
@@ -28,13 +29,13 @@ catch (bad_cast)
 
 ## <a name="remarks"></a>备注
 
-**Bad_cast**的接口是：
+**Bad_cast** 的接口是：
 
 ```cpp
 class bad_cast : public exception
 ```
 
-下面的代码包含一个未能 **`dynamic_cast`** 引发**bad_cast**异常的示例。
+下面的代码包含一个未能 **`dynamic_cast`** 引发 **bad_cast** 异常的示例。
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -65,7 +66,7 @@ int main() {
 }
 ```
 
-引发此异常的原因是，被强制转换（形状）的对象不是派生自指定的强制转换类型（圆圈）。 若要避免此异常，请将下列声明添加到 `main`：
+引发此异常的原因是，被强制转换 (形状的对象) 不是从指定的强制转换类型 (Circle) 派生的。 若要避免此异常，请将下列声明添加到 `main`：
 
 ```cpp
 Circle circle_instance;
@@ -94,11 +95,11 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[operator =](#op_eq)|将一个对象分配给另一个对象的赋值运算符 `bad_cast` 。|
 
-## <a name="bad_cast"></a><a name="bad_cast"></a>bad_cast
+## <a name="bad_cast"></a><a name="bad_cast"></a> bad_cast
 
 `bad_cast` 类型的对象的构造函数。
 
@@ -107,7 +108,7 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="operator"></a><a name="op_eq"></a>operator =
+## <a name="operator"></a><a name="op_eq"></a> operator =
 
 将一个对象分配给另一个对象的赋值运算符 `bad_cast` 。
 
@@ -115,13 +116,13 @@ bad_cast(const bad_cast &);
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a><a name="what"></a>究竟
+## <a name="what"></a><a name="what"></a> 究竟
 
 ```cpp
 const char* what() const noexcept override;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [dynamic_cast 运算符](../cpp/dynamic-cast-operator.md)\
 [字](../cpp/keywords-cpp.md)\

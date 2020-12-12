@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _getdcwd_nolock、_wgetdcwd_nolock
 title: _getdcwd_nolock、_wgetdcwd_nolock
 ms.date: 11/04/2016
 api_name:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d40bd7a3cf8d666ad7ba108fc71e443ea262c13f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256557"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
@@ -66,7 +67,7 @@ wchar_t *_wgetdcwd_nolock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *光驱*<br/>
 硬盘驱动器。
@@ -75,7 +76,7 @@ wchar_t *_wgetdcwd_nolock(
 路径的存储位置。
 
 *maxlen*<br/>
-路径的最大长度（字符）： **`char`** 适用于 **_getdcwd**和 **`wchar_t`** **_wgetdcwd**。
+路径的最大长度（字符）： **`char`** 适用于 **_getdcwd** 和 **`wchar_t`** **_wgetdcwd**。
 
 ## <a name="return-value"></a>返回值
 
@@ -83,7 +84,7 @@ wchar_t *_wgetdcwd_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_getdcwd_nolock**和 **_wgetdcwd_nolock**与 **_getdcwd**和 **_wgetdcwd**分别相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_getdcwd_nolock** 和 **_wgetdcwd_nolock** 与 **_getdcwd** 和 **_wgetdcwd** 分别相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -100,7 +101,7 @@ wchar_t *_wgetdcwd_nolock(
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [目录控件](../../c-runtime-library/directory-control.md)<br/>
 [_chdir、_wchdir](chdir-wchdir.md)<br/>

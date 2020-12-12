@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：数组类 (c + + 标准库) '
 title: array 类（C++ 标准库）| Microsoft 文档
 ms.date: 11/13/2019
 f1_keywords:
@@ -96,12 +97,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: f826bb679d3391855d0a0dbc7c4355a735b9c529
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 058d1a6f3ad49392271f553fe381cc31624be360
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261120"
 ---
 # <a name="array-class-c-standard-library"></a>array 类（C++ 标准库）
 
@@ -114,7 +115,7 @@ template <class Ty, std::size_t N>
 class array;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 `Ty`\
 元素的类型。
@@ -131,14 +132,14 @@ class array;
 |[const_reference](#const_reference)|元素的常量引用的类型。|
 |[const_reverse_iterator](#const_reverse_iterator)|受控序列的常量反向迭代器的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
-|[器](#iterator)|受控序列的迭代器的类型。|
+|[iterator](#iterator)|受控序列的迭代器的类型。|
 |[变为](#pointer)|指向元素的指针的类型。|
 |[reference](#reference)|元素的引用的类型。|
 |[reverse_iterator](#reverse_iterator)|受控序列的反向迭代器的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |-|-|
 |[array](#array)|构造一个数组对象。|
 |[assign](#assign)| (已过时。 使用 `fill` 。 ) 替换所有元素。|
@@ -160,14 +161,14 @@ class array;
 |[大小](#size)|对元素数进行计数。|
 |[swap](#swap)|交换两个容器的内容。|
 
-|运算符|说明|
+|运算符|描述|
 |-|-|
 |[array：： operator =](#op_eq)|替换受控序列。|
 |[array：： operator\[\]](#op_at)|访问指定位置处的元素。|
 
 ## <a name="remarks"></a>备注
 
-此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，
+此类型具有默认的构造函数 `array()` 和默认的赋值运算符 `operator=`，并且满足 `aggregate` 的要求。 因此，可使用聚合初始化表达式来初始化类型 `array<Ty, N>` 的对象。 例如，应用于对象的
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -191,7 +192,7 @@ array();
 array(const array& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要插入的对象或范围。
@@ -254,14 +255,14 @@ reference at(size_type off);
 constexpr const_reference at(size_type off) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *非*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
 
-成员 *函数将返回*对受控序列中的元素的引用。 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
+成员 *函数将返回* 对受控序列中的元素的引用。 如果该位置无效，则该函数将引发 `out_of_range` 类的对象。
 
 ### <a name="example"></a>示例
 
@@ -896,7 +897,7 @@ int main()
 void fill(const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 要插入到数组中的元素的值。
@@ -1080,16 +1081,16 @@ reference operator[](size_type off);
 constexpr const_reference operator[](size_type off) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *非*\
 要访问的元素的位置。
 
 ### <a name="remarks"></a>备注
 
-成员 *函数将返回*对受控序列中的元素的引用。 如果该位置无效，则该行为未定义。
+成员 *函数将返回* 对受控序列中的元素的引用。 如果该位置无效，则该行为未定义。
 
-还有一个非成员 [get](array-functions.md#get) 函数可用来获取对 **数组**元素的引用。
+还有一个非成员 [get](array-functions.md#get) 函数可用来获取对 **数组** 元素的引用。
 
 ### <a name="example"></a>示例
 
@@ -1131,14 +1132,14 @@ int main()
 array<Value> operator=(array<Value> right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 用于复制的容器。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将 *右* 的每个元素分配给受控序列的相应元素，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
+成员运算符将 *右* 的每个元素分配给受控序列的相应元素，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧* 受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1495,14 +1496,14 @@ int main()
 void swap(array& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要与其交换内容的数组。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换和右之间的受控 **`*this`** 序列*right*。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
+成员函数交换和右之间的受控 **`*this`** 序列。 它执行与 `N` 成正比的多个元素分配和构造函数调用。
 
 还有一个非成员 [交换](array-functions.md#swap) 函数可用于交换两个 **数组** 实例。
 
@@ -1600,6 +1601,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<array>](../standard-library/array.md)

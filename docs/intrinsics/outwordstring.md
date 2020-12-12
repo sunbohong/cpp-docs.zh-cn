@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __outwordstring
 title: __outwordstring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: 3cc5b0ae2101c86e3dc899b7924ec2524f0ea6e7
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: c0dba174776c7606a0f9ed11ac172331a6a8f350
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257532"
 ---
 # <a name="__outwordstring"></a>__outwordstring
 
 **Microsoft 专用**
 
-生成指令, 该指令将从*Buffer*开始的*计数*字词发送到端口指定的 i/o 端口。 `rep outsw`
+生成 `rep outsw` 指令，该指令将从 *Buffer* 开始的 *计数* 字词发送到 *端口* 指定的 i/o 端口。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +32,7 @@ void __outwordstring(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *口*\
 中要将数据发送到的端口。
@@ -44,11 +45,11 @@ void __outwordstring(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__outwordstring`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 

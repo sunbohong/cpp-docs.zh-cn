@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __popcnt16、__popcnt __popcnt64
 title: __popcnt16, __popcnt, __popcnt64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cb95ff09d589cfd9a9cfc438d0334cf68f073825
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257519"
 ---
 # <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 
 **Microsoft 专用**
 
-计算16、32 `1`或64位无符号整数中的位数 (人口数)。
+计算 `1` 16、32或64位无符号整数中 (人口计数) 的位数。
 
 ## <a name="syntax"></a>语法
 
@@ -38,30 +39,30 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*value*\
+*负值*\
 中要填充计数的16、32或64位无符号整数。
 
 ## <a name="return-value"></a>返回值
 
-值参数中`1`的位数。
+`1`*值* 参数中的位数。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__popcnt16`|高级位操作|
 |`__popcnt`|高级位操作|
 |`__popcnt64`|64位模式下的高级位操作。|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-每个内部函数都会生成`popcnt`指令。 在32位模式下, 没有任何64位通用寄存器, 因此不支持64位`popcnt` 。
+每个内部函数都会生成 `popcnt` 指令。 在32位模式下，没有任何64位通用寄存器，因此 `popcnt` 不支持64位。
 
-若要确定`popcnt`指令的硬件支持, 请`__cpuid`调用内部`InfoType=0x00000001` , 并检查的`CPUInfo[2] (ECX)`位23。 如果支持指令, 则此位为 1; 否则为0。 如果在不支持`popcnt`指令的硬件上运行使用这些内部函数的代码, 则结果是不可预知的。
+若要确定指令的硬件支持 `popcnt` ，请调用 `__cpuid` 内部， `InfoType=0x00000001` 并检查的位 23 `CPUInfo[2] (ECX)` 。 如果支持指令，则此位为 1; 否则为0。 如果在不支持指令的硬件上运行使用这些内部函数的代码 `popcnt` ，则结果是不可预知的。
 
 ## <a name="example"></a>示例
 
@@ -101,7 +102,7 @@ __popcnt(0xffffffff) = 32
 
 **结束 Microsoft 专用**
 
-部分版权 2007, 由高级微设备, Inc。保留所有权利。 从高级微设备, Inc. 的权限重现。
+部分版权2007，由高级微设备，Inc。保留所有权利。 从高级微设备，Inc. 的权限重现。
 
 ## <a name="see-also"></a>请参阅
 
