@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _putchar_nolock、_putwchar_nolock
 title: _putchar_nolock、_putwchar_nolock
 ms.date: 11/04/2016
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-ms.openlocfilehash: 4dba6537c5fb7ec66a812f2c34831b1b908fc3e4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ee4981ce05ab233c387bdbd56fa90edbd5b0af1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949957"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271026"
 ---
 # <a name="_putchar_nolock-_putwchar_nolock"></a>_putchar_nolock、_putwchar_nolock
 
@@ -57,7 +58,7 @@ wint_t _putwchar_nolock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *c*<br/>
 要写入的字符。
@@ -68,7 +69,7 @@ wint_t _putwchar_nolock(
 
 ## <a name="remarks"></a>备注
 
-**putchar_nolock**和 **_putwchar_nolock**与没有 **_nolock**后缀的版本相同，只不过它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**putchar_nolock** 和 **_putwchar_nolock** 与没有 **_nolock** 后缀的版本相同，不同之处在于它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -83,7 +84,7 @@ wint_t _putwchar_nolock(
 |**_putchar_nolock**|\<stdio.h>|
 |**_putwchar_nolock**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout** 和 **stderr** 关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -113,7 +114,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 This is the line of output

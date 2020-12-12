@@ -1,15 +1,16 @@
 ---
+description: 了解有关详细信息，请参阅如何：创建和使用 CComPtr 和 CComQIPtr 实例
 title: 如何：创建和使用 CComPtr 和 CComQIPtr 实例
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 4d3a9f98f4f4111e88a41f9d4a96cb3caefe64d8
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: c16d908e3df9e10641f1264aed7623463424de69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268647"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：创建和使用 CComPtr 和 CComQIPtr 实例
 
@@ -37,6 +38,6 @@ ATL 还提供了 `CComQIPtr`，它具有用于查询 COM 对象以检索额外�
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [智能指针（现代 C++）](../cpp/smart-pointers-modern-cpp.md)

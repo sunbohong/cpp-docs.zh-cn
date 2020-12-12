@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： `/Zc:strictStrings` (禁用字符串文本类型转换) '
 title: /Zc:strictStrings（禁用字符串文本类型转换）
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
-ms.openlocfilehash: df880ed64fa472ff55eb5ee0d17caacf56228ab6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 38c0ac2fe69acd81762fbf26797eece659ee63a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269050"
 ---
-# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings`（禁用字符串文本类型转换）
+# <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>`/Zc:strictStrings` (禁用字符串文本类型转换) 
 
 当指定时，编译器需要严格 **`const`** 限定的一致性来实现使用字符串文本初始化的指针。
 
@@ -58,7 +59,7 @@ int main() {
 如果使用 **`auto`** 声明字符串指针，编译器将为您创建正确的 **`const`** 指针类型声明。 编译器将修改指针内容的尝试 **`const`** 报告为错误。
 
 > [!NOTE]
-> Visual Studio 2013 中的 c + + 标准库不支持 **`/Zc:strictStrings`** 调试版本中的编译器选项。 如果在生成输出中看到几个[C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md)错误，则这可能是原因。
+> Visual Studio 2013 中的 c + + 标准库不支持 **`/Zc:strictStrings`** 调试版本中的编译器选项。 如果在生成输出中看到几个 [C2665](../../error-messages/compiler-errors-2/compiler-error-c2665.md) 错误，则这可能是原因。
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
@@ -68,8 +69,8 @@ int main() {
 
 1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 修改 "**附加选项**" 属性以包含 **`/Zc:strictStrings`** ，然后选择 **"确定"**。
+1. 修改 " **附加选项** " 属性以包含 **`/Zc:strictStrings`** ，然后选择 **"确定"**。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[`/Zc`度](zc-conformance.md)<br/>
+[`/Zc` (一致性) ](zc-conformance.md)<br/>

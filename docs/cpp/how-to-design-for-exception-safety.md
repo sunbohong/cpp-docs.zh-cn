@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：如何：设计异常安全性
 title: 如何：设计异常安全性
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 732a46166c99396c5d55a7d2acd834b58f3d2b2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4b957803d822b495ae6d44bb6640dcbb4535397
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268634"
 ---
 # <a name="how-to-design-for-exception-safety"></a>如何：设计异常安全性
 
@@ -23,7 +24,7 @@ ms.locfileid: "87187798"
 
 ### <a name="keep-resource-classes-simple"></a>使资源类保持简单
 
-在类中封装手动资源管理时，请使用不执行任何操作（管理单个资源除外）的类。 通过使类简单，可以降低引入资源泄漏的风险。 尽可能使用[智能指针](smart-pointers-modern-cpp.md)，如以下示例中所示。 对于突出显示使用 `shared_ptr` 时的差异，此示例是特意模拟的，非常简单。
+在类中封装手动资源管理时，请使用不执行任何操作（管理单个资源除外）的类。 通过使类简单，可以降低引入资源泄漏的风险。 尽可能使用 [智能指针](smart-pointers-modern-cpp.md) ，如以下示例中所示。 对于突出显示使用 `shared_ptr` 时的差异，此示例是特意模拟的，非常简单。
 
 ```cpp
 // old-style new/delete version
@@ -85,11 +86,11 @@ public:
 
 ### <a name="use-the-raii-idiom-to-manage-resources"></a>使用 RAII 用法来管理资源
 
-若要为异常安全，函数必须确保通过使用或来分配的对象已被 `malloc` **`new`** 销毁，并关闭或释放所有资源（如文件句柄），即使引发异常也是如此。 *资源获取是初始化*（RAII），这种做法将此类资源的管理与自动变量的生存期进行了结合。 当函数超出范围时，要么正常返回；要么因为异常，调用所有完全构造的自动变量的析构函数。 RAII 包装器对象（如智能指针）将在其析构函数中调用合适的 delete 或 close 函数。 在异常安全的代码中，将每个资源的所有权立即传递给某种 RAII 对象至关重要。 请注意 `vector` ，、、、 `string` `make_shared` `fstream` 和类似的类将为您处理资源的获取。  不过， `unique_ptr` 和传统 `shared_ptr` 构造是特殊构造的，因为资源采集是由用户而非对象执行的; 因此，它们计为*资源释放被销毁*，但并不值得怀疑为 RAII。
+若要为异常安全，函数必须确保通过使用或来分配的对象已被 `malloc` **`new`** 销毁，并关闭或释放所有资源（如文件句柄），即使引发异常也是如此。 *资源采集是* (RAII 的初始化) 将此类资源的管理与自动变量的生存期进行了相同的管理。 当函数超出范围时，要么正常返回；要么因为异常，调用所有完全构造的自动变量的析构函数。 RAII 包装器对象（如智能指针）将在其析构函数中调用合适的 delete 或 close 函数。 在异常安全的代码中，将每个资源的所有权立即传递给某种 RAII 对象至关重要。 请注意 `vector` ，、、、 `string` `make_shared` `fstream` 和类似的类将为您处理资源的获取。  不过， `unique_ptr` 和传统 `shared_ptr` 构造是特殊构造的，因为资源采集是由用户而非对象执行的; 因此，它们计为 *资源释放被销毁* ，但并不值得怀疑为 RAII。
 
 ## <a name="the-three-exception-guarantees"></a>这三个异常保证
 
-通常，异常安全在以下三个异常中进行了介绍：函数可以提供：*无故障保证*、*强保证*和*基本保证*。
+通常，异常安全在以下三个异常中进行了介绍：函数可以提供： *无故障保证*、 *强保证* 和 *基本保证*。
 
 ### <a name="no-fail-guarantee"></a>不能保证
 
@@ -119,7 +120,7 @@ public:
 
 - 不允许任何异常从析构函数转义。 C++ 的基本原理是，析构函数绝不会允许异常传播到调用堆栈。 如果析构函数必须执行潜在引发异常的操作，则它必须使用 try catch 块如此做并吞并异常。 标准库将为其定义的所有析构函数提供此保证。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [异常和错误处理的新式 c + + 最佳做法](errors-and-exception-handling-modern-cpp.md)<br/>
 [如何：异常和非异常代码之间的接口](how-to-interface-between-exceptional-and-non-exceptional-code.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _scalb、_scalbf
 title: _scalb、_scalbf
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-ms.openlocfilehash: debb617afea26437df16150592e631461d82c6b8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d118fc19c4635f0f0b6d93b1528308e9b31ee45a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268907"
 ---
 # <a name="_scalb-_scalbf"></a>_scalb、_scalbf
 
@@ -56,35 +57,35 @@ float _scalbf(
 ); /* x64 only */
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 双精度浮点值。
 
-*.exp*<br/>
+*exp*<br/>
 长整数指数。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回指数值。 溢出时（取决于*x*的符号）， **_scalb**返回 +/- **HUGE_VAL**;**errno**变量设置为**ERANGE**。
+如果成功，则返回指数值。 在溢出时 (根据 *x*) 的符号， **_scalb** 返回 +/- **HUGE_VAL**; **errno** 变量设置为 **ERANGE**。
 
 有关此代码及其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Scalb**函数计算*x* \* 2<sup>*exp*</sup>的值。
+**_Scalb** 函数计算 *x* \* 2 <sup>*exp*</sup>的值。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_scalb**， **_scalbf**|\<float.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>

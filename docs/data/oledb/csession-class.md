@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSession 类
 title: CSession 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: f507ed432e107f586d34bb6b08fa9d3f7dc509d8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 41ebf1c9d93e1443504f92b052e770c251324633
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268426"
 ---
 # <a name="csession-class"></a>CSession 类
 
@@ -65,7 +66,7 @@ class CSession
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[中断](#abort)|取消（终止）事务。|
 |[关闭](#close)|关闭会话。|
@@ -74,7 +75,7 @@ class CSession
 |[打开](#open)|为数据源对象打开新会话。|
 |[StartTransaction](#starttransaction)|开始此会话的新事务。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 一个或多个会话可以与 (数据源) 的每个提供程序连接相关联，这由 [CDataSource](../../data/oledb/cdatasource-class.md) 对象表示。 若要为创建新 `CSession` 的 `CDataSource` ，请调用 [CSession：： Open](#open)。 为了开始数据库事务，`CSession` 提供了 `StartTransaction` 方法。 事务启动后，可以使用方法提交到该事务 `Commit` ，或使用方法取消该事务 `Abort` 。
 
@@ -90,9 +91,9 @@ HRESULT Abort(BOID* pboidReason = NULL,
    BOOL bAsync = FALSE) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ITransaction：： Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ITransaction：： Abort](/previous-versions/windows/desktop/ms709833(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -124,15 +125,15 @@ HRESULT Commit(BOOL bRetaining = FALSE,
    DWORD grfRM = 0) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关详细信息，请参阅 [ITransaction：： Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))。
 
@@ -146,17 +147,17 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ITransaction：： GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85)) 。
 
 ## <a name="csessionopen"></a><a name="open"></a> CSession：： Open
 
@@ -170,22 +171,22 @@ HRESULT Open(const CDataSource& ds,
    ULONG ulPropSets = 0) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ds*<br/>
 中要为其打开会话的数据源。
 
 *pPropSet*<br/>
-中指向包含要设置的属性和值的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。
+中指向包含要设置的属性和值的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组的指针。 请参阅 Windows SDK 中 *OLE DB 程序员参考* 中的 [属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。
 
 *ulPropSets*<br/>
-中在*传入 ppropset*参数中传递的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。
+中在 *传入 ppropset* 参数中传递的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在将数据源对象传递到之前，必须使用 [CDataSource：： open](./cdatasource-class.md#open) 打开该对象 `CSession::Open` 。
 
@@ -202,17 +203,17 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
    ULONG* pulTransactionLevel = NULL) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ITransactionLocal：： StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85)) 。
 
 ## <a name="see-also"></a>请参阅
 

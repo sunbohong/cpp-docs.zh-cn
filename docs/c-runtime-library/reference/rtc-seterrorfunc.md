@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _RTC_SetErrorFunc
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 454fd54e0960e8ce52c94b4e4a1e0a93ea99d3eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949018"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268933"
 ---
 # <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
@@ -44,18 +45,18 @@ _RTC_error_fn _RTC_SetErrorFunc(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 处理运行时错误检查的函数的地址。
 
 ## <a name="return-value"></a>返回值
 
-以前定义的错误函数。 如果没有以前定义的函数，则返回**NULL**。
+以前定义的错误函数。 如果没有以前定义的函数，则返回 **NULL**。
 
 ## <a name="remarks"></a>备注
 
-请勿使用此函数;相反，请使用 **_RTC_SetErrorFuncW**。 仅为后向兼容性保留使用此函数。
+请勿使用此函数;请改用 **_RTC_SetErrorFuncW**。 仅为后向兼容性保留使用此函数。
 
 ## <a name="requirements"></a>要求
 

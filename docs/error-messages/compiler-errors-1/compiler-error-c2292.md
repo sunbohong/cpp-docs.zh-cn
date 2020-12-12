@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2292
 title: 编译器错误 C2292
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2292
 ms.assetid: 256b392f-2b8f-4162-b578-e7633984e162
-ms.openlocfilehash: 82d381fddc4cafd364bc0e45e70e5fb5c1cb3d84
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fb3630edc1aa3fc3aeb1b90d3ab79b17c775fa61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268244"
 ---
 # <a name="compiler-error-c2292"></a>编译器错误 C2292
 
 "identifier"：最佳 case 继承表示形式： "representation1" 已声明，但需要 "representation2"
 
-用[/vmb](../../build/reference/vmb-vmg-representation-method.md) （"最佳情况总是" 表示形式）编译以下代码会导致 C2292。
+用 [/vmb](../../build/reference/vmb-vmg-representation-method.md) ( "最佳情况下，" 始终 "表示形式编译以下代码) 导致 C2292。
 
 ```cpp
 // C2292.cpp

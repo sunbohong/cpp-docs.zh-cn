@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CRowsetImpl 类
 title: CRowsetImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: cca74504c80b964b14742e7405953ad68764aa62
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e517806cc7083700d4fad7fc053777b11a7de665
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268439"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 类
 
@@ -61,7 +62,7 @@ class CRowsetImpl :
    public IRowsetInfoImpl<T, CreatorClass::_PropClass>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 从派生的用户的类 `CRowsetImpl` 。
@@ -83,14 +84,14 @@ class CRowsetImpl :
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[NameFromDBID](#namefromdbid)|从中提取字符串 `DBID` ，并将其复制到传入的 *bstr* 。|
 |[SetCommandText](#setcommandtext)|验证和存储 `DBID` 两个字符串中的 ([m_strCommandText](#strcommandtext) 并 [m_strIndexText](#strindextext)) 。|
 
 ### <a name="overridable-methods"></a>可重写方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetColumnInfo](#getcolumninfo)|检索特定客户端请求的列信息。|
 |[GetCommandFromID](#getcommandfromid)|检查是否有一个或两个参数包含字符串值，如果是，则将字符串值复制到 [m_strCommandText](#strcommandtext) 和 [m_strIndexText](#strindextext)的数据成员。|
@@ -98,13 +99,13 @@ class CRowsetImpl :
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_rgRowData](#rgrowdata)|默认情况下， `CAtlArray` templatizes 的用户记录模板参数 `CRowsetImpl` 。 可以通过将模板参数更改为来使用另一个数组类型类 `ArrayType` `CRowsetImpl` 。|
 |[m_strCommandText](#strcommandtext)|包含行集的初始命令。|
 |[m_strIndexText](#strindextext)|包含行集的初始索引。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CRowsetImpl` 提供静态向上转换形式的重写。 方法控制给定行集验证命令文本的方式。 你可以 `CRowsetImpl` 通过使实现接口成为多个继承类来创建自己的类。 必须为其提供实现的唯一方法是 `Execute` 。 根据要创建的行集的类型，creator 方法将需要不同的签名 `Execute` 。 例如，如果使用 `CRowsetImpl` 派生类实现架构行集，则该 `Execute` 方法将具有以下签名：
 
@@ -128,7 +129,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
    bool bIndex);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pDBID*<br/>
 中一个指针，指向要从中 `DBID` 提取字符串的。
@@ -143,7 +144,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 
 标准的 HRESULT。 根据 `DBID` *bIndex*) 表示的是表还是索引 (，该方法将返回 DB_E_NOINDEX 或 DB_E_NOTABLE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法由 `CRowsetImpl` [ValidateCommandID](#validatecommandid) 和 [GetCommandFromID](#getcommandfromid)的实现调用。
 
@@ -158,7 +159,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
    DBID* pIndexID);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pTableID*<br/>
 中指向 `DBID` 表示表 ID 的的指针。
@@ -170,7 +171,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `SetCommentText`方法是由 `CreateRowset` 的静态模板化方法调用的 `IOpenRowsetImpl` 。
 
@@ -187,7 +188,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
    ULONG* pcCols);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *函数*<br/>
 中指向用户的 `CRowsetImpl` 派生类的指针。
@@ -199,7 +200,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 指向静态结构的指针 `ATLCOLUMNINFO` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法是一种高级重写。
 
@@ -220,7 +221,7 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
    DBID* pIndexID);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pTableID*<br/>
 中指向 `DBID` 表示表 ID 的的指针。
@@ -232,7 +233,7 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法通过静态向上传递来调用， `CRowsetImpl` 以填充 [m_strCommandText](#strcommandtext) 和 [m_strIndexText](#strindextext)的数据成员。 默认情况下，此方法会检查是否有一个或两个参数包含字符串值。 如果这些值包含字符串值，则此方法会将字符串值复制到数据成员。 通过在派生类中放置具有此签名的方法 `CRowsetImpl` ，将调用方法，而不是基实现。
 
@@ -247,7 +248,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
    DBID* pIndexID);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pTableID*<br/>
 中指向 `DBID` 表示表 ID 的的指针。
@@ -259,7 +260,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法通过静态向上传递来调用， `CRowsetImpl` 以填充其数据成员 [m_strCommandText](#strcommandtext) 和 [m_strIndexText](#strindextext)。 默认情况下，此方法会检查是否有一个或两个 `DBID` 包含字符串值，如果是，则将它们复制到其数据成员。 通过在派生类中放置具有此签名的方法 `CRowsetImpl` ，将调用方法，而不是基实现。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSimpleRow 类
 title: CSimpleRow 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: c0d7ea0966b9a582e4a6969573458bca2e8a0fea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7390a8d82e8996c81761065541eebbbccae510ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268413"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 类
 
@@ -59,7 +60,7 @@ class CSimpleRow
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddRefRow](#addrefrow)|向现有的行句柄添加引用数。|
 |[比较](#compare)|比较两行，看它们是否引用相同的行实例。|
@@ -68,14 +69,14 @@ class CSimpleRow
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_dwRef](#dwref)|对现有行句柄的引用计数。|
 |[m_iRowset](#irowset)|表示游标的行集的索引。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-行句柄以逻辑方式为结果行的唯一标记。 `IRowsetImpl``CSimpleRow`为[IRowsetImpl：： GetNextRows](./irowsetimpl-class.md#getnextrows)中请求的每一行创建一个新的。 `CSimpleRow` 还可以替换为您自己的行句柄实现，因为它是的默认模板参数 `IRowsetImpl` 。 替换此类的唯一要求是让替换类提供接受 **长**类型的单个参数的构造函数。
+行句柄以逻辑方式为结果行的唯一标记。 `IRowsetImpl``CSimpleRow`为[IRowsetImpl：： GetNextRows](./irowsetimpl-class.md#getnextrows)中请求的每一行创建一个新的。 `CSimpleRow` 还可以替换为您自己的行句柄实现，因为它是的默认模板参数 `IRowsetImpl` 。 替换此类的唯一要求是让替换类提供接受 **长** 类型的单个参数的构造函数。
 
 ## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a> CSimpleRow：： AddRefRow
 
@@ -97,14 +98,14 @@ DWORD AddRefRow();
 HRESULT Compare(CSimpleRow* pRow);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pRow*<br/>
 一个指向 `CSimpleRow` 对象的指针。
 
 ### <a name="return-value"></a>返回值
 
-HRESULT 值通常为 S_OK，指示两行是同一行实例，或 S_FALSE，指示两行不同。 有关其他可能的返回值，请参阅*OLE DB 程序员参考*中的[IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
+HRESULT 值通常为 S_OK，指示两行是同一行实例，或 S_FALSE，指示两行不同。 有关其他可能的返回值，请参阅 *OLE DB 程序员参考* 中的 [IRowsetIdentity：： IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 。
 
 ## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a> CSimpleRow：： CSimpleRow
 
@@ -116,12 +117,12 @@ HRESULT 值通常为 S_OK，指示两行是同一行实例，或 S_FALSE，指�
 CSimpleRow(DBCOUNTITEM iRowsetCur);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *iRowsetCur*<br/>
 中当前行集的索引。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 [m_iRowset](#irowset) 设置为 *iRowsetCur*。
 

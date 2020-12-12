@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： put、_putws
 title: puts、_putws
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 2e581237c7b839af87df7bc88369f21751b855d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9b48be23b02301f79b942371fbd273a14bab3800
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268946"
 ---
 # <a name="puts-_putws"></a>puts、_putws
 
@@ -58,26 +59,26 @@ int _putws(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 输出字符串。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回一个非负值。 如果**put 失败，则**返回**EOF**;如果 **_putws**失败，则返回**WEOF**。 如果*str*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将**errno**设置为**EINVAL** ，并返回**EOF**或**WEOF**。
+如果成功，则返回一个非负值。 如果 **put 失败，则** 返回 **EOF**;如果 **_putws** 失败，则返回 **WEOF**。 如果 *str* 为空指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将 **errno** 设置为 **EINVAL** ，并返回 **EOF** 或 **WEOF**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-Put**函数将** *str*写入标准输出流**stdout**，将字符串的终止 null 字符（"\ 0"）替换为输出流中的换行符（"\n"）。
+Put **函数将** *str* 写入标准输出流 **stdout**，并使用输出流中的换行符 ( "\n ) " 来替换字符串的终止 null 字符 ( "\ 0" ) 。
 
-**_putws**是的宽字符**版本;** 如果在 ANSI 模式下打开流，则这两个函数的行为相同。 put**当前不支持**到 UNICODE 流中的输出。
+**_putws** 是的宽字符 **版本;** 如果在 ANSI 模式下打开流，则这两个函数的行为相同。 put **当前不支持** 到 UNICODE 流中的输出。
 
-**_putwch**使用当前控制台区域设置写入 Unicode 字符。
+**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -87,12 +88,12 @@ Put**函数将** *str*写入标准输出流**stdout**，将字符串的终止 nu
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout** 和 **stderr** 关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -112,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Hello world from puts!

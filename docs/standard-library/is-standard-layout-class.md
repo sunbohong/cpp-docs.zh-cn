@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_standard_layout 类
 title: is_standard_layout 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_standard_layout class
 - is_standard_layout
 ms.assetid: 15ccf111-f537-45ef-b552-59152a7ba312
-ms.openlocfilehash: fba77be22796f3cb5495543d262dd270ac13d598
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8f1f24fcb29e862dff10c2a51d1c9d0b2b28541f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271247"
 ---
 # <a name="is_standard_layout-class"></a>is_standard_layout 类
 
@@ -25,7 +26,7 @@ template <class Ty>
 struct is_standard_layout;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型
@@ -40,6 +41,6 @@ struct is_standard_layout;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

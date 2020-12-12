@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：示例容器成员
 title: 示例容器成员
 ms.date: 11/04/2016
 helpviewer_keywords:
 - container classes
 ms.assetid: dc5a1998-a31b-4adf-b888-8abe5b87a4e0
-ms.openlocfilehash: ea30810177d936248f836e7e4462739d8b5f393a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fabf049f3fd33483cd226fd541717c7ac6d6df29
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269193"
 ---
 # <a name="sample-container-members"></a>示例容器成员
 
@@ -20,13 +21,13 @@ ms.locfileid: "88846259"
 
 ## <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[const_iterator](../standard-library/container-class-const-iterator.md)|描述可用作受控序列常量迭代器的对象。|
 |[const_reference](../standard-library/container-class-const-reference.md)|描述可用作受控序列元素的常量引用的对象。|
 |[const_reverse_iterator](../standard-library/container-class-const-reverse-iterator.md)|描述可用作受控序列常量反向迭代器的对象。|
 |[difference_type](../standard-library/container-class-difference-type.md)|描述可表示受控序列中任意两个元素的地址差异的对象。|
-|[器](../standard-library/container-class-iterator.md)|描述可用作受控序列迭代器的对象。|
+|[iterator](../standard-library/container-class-iterator.md)|描述可用作受控序列迭代器的对象。|
 |[reference](../standard-library/container-class-reference.md)|描述可用作对受控序列元素的引用的对象。|
 |[reverse_iterator](../standard-library/container-class-reverse-iterator.md)|描述可用作受控序列的反向迭代器的对象。|
 |[size_type](../standard-library/container-class-size-type.md)|描述可表示任何受控序列长度的对象。|
@@ -34,10 +35,10 @@ ms.locfileid: "88846259"
 
 ## <a name="member-functions"></a>成员函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[准备](../standard-library/container-class-begin.md)|该成员函数返回一个迭代器，指向序列的第一个元素（或刚超出空序列末尾的位置）。|
-|[清除](../standard-library/container-class-clear.md)|调用 [erase](../standard-library/container-class-erase.md)（[begin](../standard-library/container-class-begin.md) 和 [end](../standard-library/container-class-end.md)）。|
+|[clear](../standard-library/container-class-clear.md)|调用 [erase](../standard-library/container-class-erase.md)（[begin](../standard-library/container-class-begin.md) 和 [end](../standard-library/container-class-end.md)）。|
 |[empty](../standard-library/container-class-empty.md)|返回 **`true`** 空的受控序列。|
 |[end](../standard-library/container-class-end.md)|返回指向刚超出序列末尾位置的迭代器。|
 |[erase](../standard-library/container-class-erase.md)|删除元素。|

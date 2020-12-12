@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：浮点基元
 title: 浮点基元
 ms.date: 4/2/2020
 api_name:
@@ -157,18 +158,18 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: e28c873206d8f050dbde2afc9ebfe3540b6642ff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05422620a4da907820ed86a61d4e8dc16b37d3f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218673"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268959"
 ---
 # <a name="floating-point-primitives"></a>浮点基元
 
-用于实现某些标准 C 运行时库（CRT）浮点函数的特定于 Microsoft 的基元函数。 为了完整起见，我们记录了这些内容，但不建议使用。 其中一些函数被记录为 "未使用"，因为已知这些函数的精度、异常处理和一致性均为 IEEE-754 行为。 它们仅用于向后兼容性。 若要获得正确的行为、可移植性和符合标准，更喜欢这些函数的标准浮点函数。
+用于实现某些标准 C 运行时库 (CRT) 浮点函数的特定于 Microsoft 的基元函数。 为了完整起见，我们记录了这些内容，但不建议使用。 其中一些函数被记录为 "未使用"，因为已知这些函数的精度、异常处理和一致性均为 IEEE-754 行为。 它们仅用于向后兼容性。 若要获得正确的行为、可移植性和符合标准，更喜欢这些函数的标准浮点函数。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="_dclass-_ldclass-_fdclass"></a>_dclass、_ldclass _fdclass
 
@@ -180,24 +181,24 @@ short __cdecl _ldclass(long double x);
 short __cdecl _fdclass(float x);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 浮点函数参数。
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元实现适用于浮点类型的 CRT 宏[fpclassify](fpclassify.md)的 C 版本。 自变量*x*的分类作为以下常量之一返回：在 math 中定义：
+这些浮点基元实现适用于浮点类型的 CRT 宏 [fpclassify](fpclassify.md) 的 C 版本。 自变量 *x* 的分类作为以下常量之一返回：在 math 中定义：
 
 |值|描述|
 |-----------|-----------------|
 | **FP_NAN** | 静态、信令或不确定的 NaN |
 | **FP_INFINITE** | 正或负无穷大 |
 | **FP_NORMAL** | 标准化非零正值或负值 |
-| **FP_SUBNORMAL** | 正或负次正常（非规范化）值 |
+| **FP_SUBNORMAL** | 正或负次正常 (非规范化) 值 |
 | **FP_ZERO** | 零正值或负值 |
 
-有关更多详细信息，可以使用特定于 Microsoft 的[_fpclass，_fpclassf](fpclass-fpclassf.md)函数。 使用[fpclassify](fpclassify.md)宏或函数实现可移植性。
+有关更多详细信息，可以使用特定于 Microsoft 的 [_fpclass，_fpclassf](fpclass-fpclassf.md) 函数。 使用 [fpclassify](fpclassify.md) 宏或函数实现可移植性。
 
 ## <a name="_dsign-_ldsign-_fdsign"></a>_dsign、_ldsign _fdsign
 
@@ -209,14 +210,14 @@ int __cdecl _ldsign(long double x);
 int __cdecl _fdsign(float x);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 浮点函数参数。
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元实现了 CRT 中的[signbit](signbit.md)宏或函数。 如果在参数*x*的有效位数（尾数）中设置了符号位，则它们将返回非零值; 如果未设置符号位，则返回0。
+这些浮点基元实现了 CRT 中的 [signbit](signbit.md) 宏或函数。 如果在参数 *x* 的有效位数 (尾数) 中设置了符号位，则它们将返回非零值; 如果未设置符号位，则返回0。
 
 ## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp、_ldpcomp _fdpcomp
 
@@ -228,22 +229,22 @@ int __cdecl _ldpcomp(long double x, long double y);
 int __cdecl _fdpcomp(float x, float y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*、 *y*<br/>
 浮点函数自变量。
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元采用两个参数*x*和*y*，并返回一个值，该值显示其顺序关系，表示为在 math 中定义的常量的按位 or。
+这些浮点基元采用两个参数 *x* 和 *y*，并返回一个值，该值显示其顺序关系，表示为在 math 中定义的常量的按位 or。
 
 | 值 | 描述 |
 |------------|-----------------|
-| **_FP_LT** | *x*可以视为小于*y* |
-| **_FP_EQ** | *x*可以视为等于*y* |
-| **_FP_GT** | *x*可以视为大于*y* |
+| **_FP_LT** | *x* 可以视为小于 *y* |
+| **_FP_EQ** | *x* 可以视为等于 *y* |
+| **_FP_GT** | *x* 可以视为大于 *y* |
 
-这些基元实现了 CRT 中的[isgreater、isgreaterequal、isless、islessequal、islessgreater 和 isunordered](floating-point-ordering.md)宏和函数。
+这些基元实现了 CRT 中的 [isgreater、isgreaterequal、isless、islessequal、islessgreater 和 isunordered](floating-point-ordering.md) 宏和函数。
 
 ## <a name="_dtest-_ldtest-_fdtest"></a>_dtest、_ldtest _fdtest
 
@@ -255,24 +256,24 @@ short __cdecl _ldtest(long double* px);
 short __cdecl _fdtest(float* px);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *像素*<br/>
 指向浮点自变量的指针。
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元实现适用于浮点类型的 CRT 函数[fpclassify](fpclassify.md)的 c + + 版本。 计算参数*x* ，并以 math 定义的常量之一返回分类：
+这些浮点基元实现适用于浮点类型的 CRT 函数 [fpclassify](fpclassify.md) 的 c + + 版本。 计算参数 *x* ，并以 math 定义的常量之一返回分类：
 
 |值|描述|
 |-----------|-----------------|
 | **FP_NAN** | 静态、信令或不确定的 NaN |
 | **FP_INFINITE** | 正或负无穷大 |
 | **FP_NORMAL** | 标准化非零正值或负值 |
-| **FP_SUBNORMAL** | 正或负次正常（非规范化）值 |
+| **FP_SUBNORMAL** | 正或负次正常 (非规范化) 值 |
 | **FP_ZERO** | 零正值或负值 |
 
-有关更多详细信息，可以使用特定于 Microsoft 的[_fpclass，_fpclassf](fpclass-fpclassf.md)函数。 使用[fpclassify](fpclassify.md)函数实现可移植性。
+有关更多详细信息，可以使用特定于 Microsoft 的 [_fpclass，_fpclassf](fpclass-fpclassf.md) 函数。 使用 [fpclassify](fpclassify.md) 函数实现可移植性。
 
 ## <a name="_d_int-_ld_int-_fd_int"></a>_d_int、_ld_int _fd_int
 
@@ -284,7 +285,7 @@ short __cdecl _ld_int(long double* px, short exp);
 short __cdecl _fd_int(float* px, short exp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *像素*<br/>
 指向浮点自变量的指针。
@@ -294,7 +295,7 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元采用指向浮点值*px*和指数值*exp*的指针，并在可能的情况下删除浮点值下的浮点值的小数部分。 返回的值为**fpclassify**中输入值的结果 *，如果该值*为 NaN 或无穷大，则为 px 的输出值，否则为*px*的输出值。
+这些浮点基元采用指向浮点值 *px* 和指数值 *exp* 的指针，并在可能的情况下删除浮点值下的浮点值的小数部分。 返回的值为 **fpclassify** 中输入值的结果 *，如果该值* 为 NaN 或无穷大，则为 px 的输出值，否则为 *px* 的输出值。
 
 ## <a name="_dscale-_ldscale-_fdscale"></a>_dscale、_ldscale _fdscale
 
@@ -306,7 +307,7 @@ short __cdecl _ldscale(long double* px, long exp);
 short __cdecl _fdscale(float* px, long exp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *像素*<br/>
 指向浮点自变量的指针。
@@ -316,7 +317,7 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元采用指向浮点值*px*和指数值*exp*的指针，并在可能的情况下将*px*中的值缩放2个<sup>*exp*</sup>。 返回的值为**fpclassify**中输入值的结果 *，如果该值*为 NaN 或无穷大，则为 px 的输出值，否则为*px*的输出值。 对于可移植性，更倾向于[ldexp、ldexpf 和 ldexpl](ldexp.md)函数。
+这些浮点基元采用指向浮点值 *px* 和指数值 *exp* 的指针，并在可能的情况下将 *px* 中的值缩放2个 <sup>*exp*</sup>。 返回的值为 **fpclassify** 中输入值的结果 *，如果该值* 为 NaN 或无穷大，则为 px 的输出值，否则为 *px* 的输出值。 对于可移植性，更倾向于 [ldexp、ldexpf 和 ldexpl](ldexp.md) 函数。
 
 ## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale、_ldunscale _fdunscale
 
@@ -328,7 +329,7 @@ short __cdecl _ldunscale(short* pexp, long double* px);
 short __cdecl _fdunscale(short* pexp, float* px);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pexp*<br/>
 作为整型的指针。
@@ -338,7 +339,7 @@ short __cdecl _fdunscale(short* pexp, float* px);
 
 ### <a name="remarks"></a>备注
 
-如果可能，这些浮点基元会将*px*指向的浮点值分解为有效位数（尾数）和指数。 缩放有效位数，使绝对值大于或等于0.5 且小于1.0。 指数是值*n*，其中原始浮点值等于按比例缩放的有效位数时间 2<sup>*n*</sup>。 此整数指数*n*存储在*pexp*所指向的位置。 *如果输入*值为 NaN 或无穷大，则返回的值为**fpclassify**的结果，否则返回。 对于可移植性，更倾向于[frexp、frexpf、frexpl](frexp.md)函数。
+如果可能，这些浮点基元会将由 *px* 指向的浮点值分解为有效位数 (尾数) 和指数。 缩放有效位数，使绝对值大于或等于0.5 且小于1.0。 指数是值 *n*，其中原始浮点值等于按比例缩放的有效位数时间 2 <sup>*n*</sup>。 此整数指数 *n* 存储在 *pexp* 所指向的位置。 *如果输入* 值为 NaN 或无穷大，则返回的值为 **fpclassify** 的结果，否则返回。 对于可移植性，更倾向于 [frexp、frexpf、frexpl](frexp.md) 函数。
 
 ## <a name="_dexp-_ldexp-_fdexp"></a>_dexp、_ldexp _fdexp
 
@@ -350,9 +351,9 @@ short __cdecl _ldexp(long double* px, long double y, long exp);
 short __cdecl _fdexp(float* px, float y, long exp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*误差*<br/>
+*y*<br/>
 浮点函数参数。
 
 *像素*<br/>
@@ -363,7 +364,7 @@ short __cdecl _fdexp(float* px, float y, long exp);
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元在 x 等于*y* * 2<sup>*exp*</sup>*的位置*上构造浮点值。 返回的值为**fpclassify**中输入值的结果 *，如果该值*为 NaN 或无穷大，则返回值; 否则为*px*的输出值。 对于可移植性，更倾向于[ldexp、ldexpf 和 ldexpl](ldexp.md)函数。
+这些浮点基元在 x 等于 *y* * 2 <sup>*exp*</sup>*的位置* 上构造浮点值。 返回的值为 **fpclassify** 中输入值的结果 *，如果该值* 为 NaN 或无穷大，则返回值; 否则为 *px* 的输出值。 对于可移植性，更倾向于 [ldexp、ldexpf 和 ldexpl](ldexp.md) 函数。
 
 ## <a name="_dnorm-_fdnorm"></a>_dnorm，_fdnorm
 
@@ -374,14 +375,14 @@ short __cdecl _dnorm(unsigned short* ps);
 short __cdecl _fdnorm(unsigned short* ps);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ps*<br/>
 一个指针，它指向表示为数组的浮点值的按位表示形式 **`unsigned short`** 。
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元标准化下溢浮点值的小数部分，并调整*特征*或偏差指数以进行匹配。 该值作为 **`unsigned short`** 通过 `_double_val` `_ldouble_val` `_float_val` 在 math 中声明的、或类型 punning 联合转换为数组的浮点类型的按位表示形式传递。 如果输入浮点值为 NaN 或无穷大，则返回值为**fpclassify**的结果，否则返回值为。
+这些浮点基元标准化下溢浮点值的小数部分，并调整 *特征* 或偏差指数以进行匹配。 该值作为 **`unsigned short`** 通过 `_double_val` `_ldouble_val` `_float_val` 在 math 中声明的、或类型 punning 联合转换为数组的浮点类型的按位表示形式传递。 如果输入浮点值为 NaN 或无穷大，则返回值为 **fpclassify** 的结果，否则返回值为。
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly、_ldpoly _fdpoly
 
@@ -393,7 +394,7 @@ long double __cdecl _ldpoly(long double x, long double const* table, int n);
 float __cdecl _fdpoly(float x, _float const* table, int n);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 浮点函数参数。
@@ -406,7 +407,7 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元返回按顺序*n*的多项式计算*x*的计算，其系数由*表*中的相应常量值表示。 例如，如果*表* \[ 0] = 3.0，*表* \[ 1] = 4.0，*表* \[ 2] = 5.0， *n* = 2，则表示多项式 5.0 x<sup>2</sup> + 4.0 x + 3.0。 如果对*x*的2.0 计算此多项式，则结果为31.0。 这些函数不在内部使用。
+这些浮点基元返回按顺序 *n* 的多项式计算 *x* 的计算，其系数由 *表* 中的相应常量值表示。 例如，如果 *表* \[ 0] = 3.0，*表* \[ 1] = 4.0，*表* \[ 2] = 5.0， *n* = 2，则表示多项式 5.0 x <sup>2</sup> + 4.0 x + 3.0。 如果对 *x* 的2.0 计算此多项式，则结果为31.0。 这些函数不在内部使用。
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog、_dlog _dlog
 
@@ -418,7 +419,7 @@ long double __cdecl _ldlog(long double x, int base_flag);
 float __cdecl _fdlog(float x, int base_flag);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 浮点函数参数。
@@ -428,7 +429,7 @@ float __cdecl _fdlog(float x, int base_flag);
 
 ### <a name="remarks"></a>备注
 
-当*base_flag*为0时，这些浮点基元将返回*x*、ln （*x*）或 log<sub>*e*</sub>（*x*）的自然对数。 如果*base_flag*为非零，则它们将返回*x*的对数基数10或日志<sub>10</sub>（*x*）。 这些函数不在内部使用。 对于可移植性，建议使用函数[log、logf、logl、log10、log10f 和 log10l](log-logf-log10-log10f.md)。
+当 *base_flag* 为0时，这些浮点基元将返回 *x*、Ln (*x*) 或 log <sub>*e*</sub> (*x*) 的自然对数。 当 *base_flag* 为非零时，它们将返回 *x* 的对数基数10，或日志 <sub>10</sub> (*x*) 。 这些函数不在内部使用。 对于可移植性，建议使用函数 [log、logf、logl、log10、log10f 和 log10l](log-logf-log10-log10f.md)。
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin、_ldsin _fdsin
 
@@ -440,7 +441,7 @@ long double __cdecl _ldsin(long double x, unsigned int quadrant);
 float __cdecl _fdsin(float x, unsigned int quadrant);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 浮点函数参数。
@@ -450,7 +451,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ### <a name="remarks"></a>备注
 
-这些浮点基元返回*象限*取模4的*x*偏移量的正弦值。 实际上，当*象限*取模4分别为0、1、2或3时，它们会返回*x*的正弦、余弦、正弦和-余弦值。 这些函数不在内部使用。 对于可移植性，更喜欢使用[sin、sinf、sinl](sin-sinf-sinl.md)、 [cos、cosf 和 cosl](cos-cosf-cosl.md)函数。
+这些浮点基元返回 *象限* 取模4的 *x* 偏移量的正弦值。 实际上，当 *象限* 取模4分别为0、1、2或3时，它们会返回 *x* 的正弦、余弦、正弦和-余弦值。 这些函数不在内部使用。 对于可移植性，更喜欢使用 [sin、sinf、sinl](sin-sinf-sinl.md)、 [cos、cosf 和 cosl](cos-cosf-cosl.md) 函数。
 
 ## <a name="requirements"></a>要求
 
@@ -458,7 +459,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>

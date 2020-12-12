@@ -1,16 +1,17 @@
 ---
+description: 详细了解：默认情况下处于关闭状态的编译器警告
 title: 默认关闭的编译器警告
 ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 3727777c6abd3ae5ba19f147e2b6fbe559251813
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5bc482d12026bb8358d773be6a0c8b32cc2317fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836604"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97269375"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>默认关闭的编译器警告
 
@@ -20,11 +21,11 @@ ms.locfileid: "88836604"
 
 您可以通过使用以下选项之一，启用通常默认情况下处于关闭状态的警告：
 
-- **#pragma 警告 (默认值：** *warning_number* **) **
+- **#pragma 警告 (默认值：** *warning_number* **)**
 
    指定的警告 (*warning_number*) 在其默认级别启用。 该警告的文档包含该警告的默认级别。
 
-- **#pragma 警告 (** *warning_level* **：** *warning_number* **) **
+- **#pragma 警告 (** *warning_level* **：** *warning_number* **)**
 
     (*warning_level*) 的指定级别启用了指定的警告 (*warning_number*) 。
 
@@ -32,9 +33,9 @@ ms.locfileid: "88836604"
 
    `/Wall` 将启用默认情况下禁用的所有警告。 如果使用此选项，则可以使用 [/wd](../build/reference/compiler-option-warning-level.md) 选项关闭单个警告。
 
-- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
+- [/w *Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   此选项在级别*L*下启用警告*nnnn* 。
+   此选项在级别 *L* 下启用警告 *nnnn* 。
 
 ## <a name="warnings-that-are-off-by-default"></a>默认情况下处于关闭状态的警告
 
@@ -90,8 +91,8 @@ ms.locfileid: "88836604"
 |C4588 (等级 1) |"*anonymous_structure*"：行为更改：不再隐式调用析构函数|
 |[C4596](../error-messages/compiler-warnings/c4596.md) (级别 4) |"*identifier*"：成员声明中的非法限定名 <sup>14.3</sup> <sup>永久状态</sup>|
 |C4598 (等级1和等级 3) |"#include"*标头*""：预编译标头中的标头数字 *标* 头不匹配该位置的当前编译 <sup>14.3</sup>|
-|C4599 (等级 3) |"*选项**路径*"：命令行*参数编号与*预编译标头<sup>14.3</sup>不匹配|
-|C4605 (等级 1) |在当前命令行上指定了 "/d*宏*"，但未在生成预编译标头时指定|
+|C4599 (等级 3) |"*选项**路径*"：命令行 *参数编号与* 预编译标头 <sup>14.3</sup>不匹配|
+|C4605 (等级 1) |在当前命令行上指定了 "/d *宏*"，但未在生成预编译标头时指定|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (等级 3) |"*union_member*" 已被初始值设定项列表 "*union_member*" 中的另一个联合成员初始化 <sup>永久状态</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (等级 3) |#pragma 警告：无警告编号 "*number*"|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (级别 4) |“derived class”: 未能生成默认构造函数，因为基类默认构造函数不可访问|
@@ -176,6 +177,6 @@ Visual Studio 2012 之前的编译器版本中默认关闭此警告：
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (级别 4) |缺少类型说明符 - 假定为 int。 注意: C 不再支持默认的 int|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [warning](../preprocessor/warning.md)

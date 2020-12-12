@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： mbrtowc
 title: mbrtowc
 ms.date: 4/2/2020
 api_name:
@@ -26,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: 55d866e6f0e372c148de36bf259954bed11a953c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f00c9fd01826a80cb729bfe10af242db8dec2414
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271156"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -48,10 +49,10 @@ size_t mbrtowc(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wchar*<br/>
-用于接收已转换的宽字符字符串（类型）的宽字符的地址 **`wchar_t`** 。 如果不需要返回任何宽字符，则此值可为 null 指针。
+用于接收已转换的宽字符字符串 (类型) 的宽字符的地址 **`wchar_t`** 。 如果不需要返回任何宽字符，则此值可为 null 指针。
 
 *mbchar*<br/>
 字节（多字节字符）序列的地址。
@@ -60,33 +61,33 @@ size_t mbrtowc(
 要检查的字节数。
 
 *mbstate*<br/>
-指向转换状态对象的指针。 如果此值为 null 指针，则函数使用静态的内部转换状态对象。 由于内部**mbstate_t**对象不是线程安全的，因此建议您始终传递自己的*mbstate*参数。
+指向转换状态对象的指针。 如果此值为 null 指针，则函数使用静态的内部转换状态对象。 由于内部 **mbstate_t** 对象不是线程安全的，因此建议您始终传递自己的 *mbstate* 参数。
 
 ## <a name="return-value"></a>返回值
 
 以下值之一：
 
-0如果*wchar*不是 null 指针，则下一个*计数*或更少的字节将填充表示 null 宽字符的多字节字符，该字符存储在*wchar*中。
+0如果 *wchar* 不是 null 指针，则下一个 *计数* 或更少的字节将填充表示 null 宽字符的多字节字符，该字符存储在 *wchar* 中。
 
-1表示*计数*，不包括下一个*计数*或更少的字节完成有效的多字节字符。 返回的值是填充多字节字符的字节数。 如果*wchar*不是 null 指针，则等效的宽字符存储在*wchar*中。
+1表示 *计数*，不包括下一个 *计数* 或更少的字节完成有效的多字节字符。 返回的值是填充多字节字符的字节数。 如果 *wchar* 不是 null 指针，则等效的宽字符存储在 *wchar* 中。
 
-（size_t）（-1）发生编码错误。 下一个*计数*或更少的字节不涉及完整且有效的多字节字符。 在这种情况下， **errno**设置为 eilseq 且，而*mbstate*中的转换移位状态为未指定。
+ (size_t) # A2-1) 出现编码错误。 下一个 *计数* 或更少的字节不涉及完整且有效的多字节字符。 在这种情况下， **errno** 设置为 eilseq 且，而 *mbstate* 中的转换移位状态为未指定。
 
-（size_t）（-2）下一个*计数*字节导致了不完整但可能有效的多字节字符，并且已处理所有*计数*字节。 不会在*wchar*中存储任何值，但会更新*mbstate*以重新启动该函数。
+ (size_t) # A2-2) 下一个 *计数* 字节导致了不完整但可能有效的多字节字符，并且已处理所有 *计数* 字节。 不会在 *wchar* 中存储任何值，但会更新 *mbstate* 以重新启动该函数。
 
 ## <a name="remarks"></a>备注
 
-如果*mbchar*为 null 指针，则函数等效于调用：
+如果 *mbchar* 为 null 指针，则函数等效于调用：
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-在这种情况下，将忽略*wchar*和*count*参数的值。
+在这种情况下，将忽略 *wchar* 和 *count* 参数的值。
 
-如果*mbchar*不是空指针，则该函数将检查来自*mbchar*的*计数*字节，以确定完成下一个多字节字符所需的字节数。 如果下一个字符是有效的，则相应的多字节字符将存储在*wchar*中（如果它不是空指针）。 如果字符为相应的宽 null 字符，则*mbstate*的生成状态是初始转换状态。
+如果 *mbchar* 不是空指针，则该函数将检查来自 *mbchar* 的 *计数* 字节，以确定完成下一个多字节字符所需的字节数。 如果下一个字符是有效的，则相应的多字节字符将存储在 *wchar* 中（如果它不是空指针）。 如果字符为相应的宽 null 字符，则 *mbstate* 的生成状态是初始转换状态。
 
-**Mbrtowc**函数不同于[mbtowc，](mbtowc-mbtowc-l.md)其可重启性 _mbtowc_l。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对**wcsrtombs**的后续调用而不是**wcstombs**，应用程序应使用**wcsrlen**而不是**wcslen** 。
+**Mbrtowc** 函数不同于 [mbtowc，](mbtowc-mbtowc-l.md)其可重启性 _mbtowc_l。 转换状态存储在 *mbstate* 中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。  例如，如果使用对 **wcsrtombs** 的后续调用而不是 **wcstombs**，应用程序应使用 **wcsrlen** 而不是 **wcslen** 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 
@@ -213,8 +214,8 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

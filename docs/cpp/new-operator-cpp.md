@@ -1,15 +1,16 @@
 ---
+description: '了解详细信息： new Operator (c + +) '
 title: new 运算符 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 0c3ed59262ec5ad061572d23c1166b2153cb16ca
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5bfc6fdc59348defc87d26dae1056ae80dab3ec5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008578"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268621"
 ---
 # <a name="new-operator-c"></a>new 运算符 (C++)
 
@@ -42,7 +43,7 @@ char (*pchar)[10] = new char[dim][10];
 delete [] pchar;
 ```
 
-*类型名*不能包含 **`const`** 、 **`volatile`** 、类声明或枚举声明。 因此，以下表达式是非法的：
+*类型名* 不能包含 **`const`** 、 **`volatile`** 、类声明或枚举声明。 因此，以下表达式是非法的：
 
 ```cpp
 volatile char *vch = new volatile char[20];
@@ -228,18 +229,18 @@ int main()
 
 - 初始化对象。 初始化完成后，将为成为对象的已分配存储显示足够的信息。
 
-- 返回一个指针，该指针指向从 *新类型名称* 或 *类型名称*派生的指针类型的对象 () 。 程序使用此指针来访问最近分配的对象。
+- 返回一个指针，该指针指向从 *新类型名称* 或 *类型名称* 派生的指针类型的对象 () 。 程序使用此指针来访问最近分配的对象。
 
-**`new`** 运算符调用函数**new**。 对于任何类型的数组和不属于 **`class`** 、或类型的对象， **`struct`** **`union`** 将调用全局函数 **：： operator new**来分配存储。 类类型的对象可以基于每个类定义自己的 **运算符 new** 静态成员函数。
+**`new`** 运算符调用函数 **new**。 对于任何类型的数组和不属于 **`class`** 、或类型的对象， **`struct`** **`union`** 将调用全局函数 **：： operator new** 来分配存储。 类类型的对象可以基于每个类定义自己的 **运算符 new** 静态成员函数。
 
-当编译器遇到 **`new`** 用于分配类型**类型的**对象的运算符时，将发出对 `type` **：： operator new ( sizeof (** 的调用 `type` **) ) ** ，或者，如果未定义用户定义的**运算符 new** ，则 **：： operator new ( sizeof (** `type` ** **) ) 。 因此， **`new`** 操作员可以为对象分配正确的内存量。
+当编译器遇到 **`new`** 用于分配类型 **类型的** 对象的运算符时，将发出对 `type` **：： operator new ( sizeof (** 的调用 `type` **) )** ，或者，如果未定义用户定义的 **运算符 new** ，则 **：： operator new ( sizeof (** `type` ****) ) 。 因此， **`new`** 操作员可以为对象分配正确的内存量。
 
 > [!NOTE]
-> **Operator new**的参数的类型为 `size_t` 。 此类型在、、、、、、、和中定义 \<direct.h> \<malloc.h> \<memory.h> \<search.h> \<stddef.h> \<stdio.h> \<stdlib.h> \<string.h> \<time.h> 。
+> **Operator new** 的参数的类型为 `size_t` 。 此类型在、、、、、、、和中定义 \<direct.h> \<malloc.h> \<memory.h> \<search.h> \<stddef.h> \<stdio.h> \<stdlib.h> \<string.h> \<time.h> 。
 
-语法中的选项允许 *放置* 规范 (参阅 [new Operator](../cpp/new-operator-cpp.md)) 的语法。 *位置*参数仅可用于**运算符 new**的用户定义实现;它允许将额外信息传递给**new 运算符**。 *placement* `T *TObject = new ( 0x0040 ) T;` `T *TObject = T::operator new( sizeof( T ), 0x0040 );` 如果类 T 具有成员运算符 new，则具有位置字段（如）的表达式转换为，否则转换为 `T *TObject = ::operator new( sizeof( T ), 0x0040 );` 。
+语法中的选项允许 *放置* 规范 (参阅 [new Operator](../cpp/new-operator-cpp.md)) 的语法。 *位置* 参数仅可用于 **运算符 new** 的用户定义实现;它允许将额外信息传递给 **new 运算符**。  `T *TObject = new ( 0x0040 ) T;` `T *TObject = T::operator new( sizeof( T ), 0x0040 );` 如果类 T 具有成员运算符 new，则具有位置字段（如）的表达式转换为，否则转换为 `T *TObject = ::operator new( sizeof( T ), 0x0040 );` 。
 
-*放置*字段的原始目的是允许在用户指定的地址分配硬件相关的对象。
+*放置* 字段的原始目的是允许在用户指定的地址分配硬件相关的对象。
 
 > [!NOTE]
 > 虽然上面的示例仅在 " *位置* " 字段中显示一个参数，但并不限制可通过这种方式将多少个额外参数传递给 **运算符** 。

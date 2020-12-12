@@ -1,4 +1,5 @@
 ---
+description: '了解更多相关信息：带有变量参数列表 (c + + 的函数) '
 title: 包含变量自变量列表的函数 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-ms.openlocfilehash: 99f1f5cec2350f99bf2993947870f25e357ffc23
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 035f389a6aa1686464cd30982ccdbf07a3305d1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97268842"
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>包含变量自变量列表的函数 (C++)
 
@@ -32,11 +33,11 @@ Microsoft C++ 允许将省略号指定为参数（如果省略号是最后一个
 
 采用数量可变的自变量的函数声明至少需要一个占位符自变量（即使不使用它）。 如果未提供此占位符自变量，则无法访问其余自变量。
 
-当类型的参数 **`char`** 作为变量参数进行传递时，它们将转换为类型 **`int`** 。 同样，当类型的参数 **`float`** 作为变量参数进行传递时，它们将转换为类型 **`double`** 。 其他类型的自变量受常见整型和浮点型提升的限制。 有关详细信息，请参阅[标准转换](standard-conversions.md)。
+当类型的参数 **`char`** 作为变量参数进行传递时，它们将转换为类型 **`int`** 。 同样，当类型的参数 **`float`** 作为变量参数进行传递时，它们将转换为类型 **`double`** 。 其他类型的自变量受常见整型和浮点型提升的限制。 有关详细信息，请参阅 [标准转换](standard-conversions.md) 。
 
-使用参数列表中的省略号 (...) 来声明需要变量列表的函数。 使用包含文件中描述的类型和宏 \<stdarg.h> 来访问变量列表所传递的参数。 有关这些宏的详细信息，请参阅[va_arg、va_copy、va_end va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 （处于 C 运行时库文档中）。
+使用参数列表中的省略号 (...) 来声明需要变量列表的函数。 使用包含文件中描述的类型和宏 \<stdarg.h> 来访问变量列表所传递的参数。 有关这些宏的详细信息，请参阅 [va_arg、va_copy、va_end va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 （处于 C 运行时库文档中）。
 
-下面的示例演示如何将宏与类型一起使用（在中声明 \<stdarg.h> ）：
+下面的示例演示如何将宏与) 中声明 (类型一起使用 \<stdarg.h> ：
 
 ```cpp
 // variable_argument_lists.cpp
