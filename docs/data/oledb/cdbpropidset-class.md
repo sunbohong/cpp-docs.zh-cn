@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDBPropIDSet 类
 title: CDBPropIDSet 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 4de218188326dad434c5b0d355a3a15d39bb576c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6f0c3ea19daeef2b262f6ac1ad76599160baf266
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502500"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170823"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet 类
 
@@ -56,7 +57,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddPropertyID](#addpropertyid)|将属性添加到属性 ID 集。|
 |[CDBPropIDSet](#cdbpropidset)|构造函数。|
@@ -64,11 +65,11 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ### <a name="operators"></a>运算符
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[operator =](#op_equal)|将属性 ID 集的内容分配到另一个属性 ID 集。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 OLE DB 使用者使用 `DBPROPIDSET` 结构传递属性 id 的数组，使用者想要获取属性信息。 单个 [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) 结构中标识的属性属于一个属性集。
 
@@ -82,14 +83,14 @@ OLE DB 使用者使用 `DBPROPIDSET` 结构传递属性 id 的数组，使用者
 bool AddPropertyID(DBPROPID propid) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *propid*<br/>
 [in] 要添加到属性 ID 集中的属性 ID。
 
 ## <a name="cdbpropidsetcdbpropidset"></a><a name="cdbpropidset"></a> CDBPropIDSet：： CDBPropIDSet
 
-构造函数。 初始化 `rgProperties` `cProperties` DBPROPIDSET 结构的、和 (可选择) `guidPropertySet` 字段[DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) 。
+构造函数。 初始化 `rgProperties` `cProperties` DBPROPIDSET 结构的、和 (可选择) `guidPropertySet` 字段[](/previous-versions/windows/desktop/ms717981(v=vs.85)) 。
 
 ### <a name="syntax"></a>语法
 
@@ -101,7 +102,7 @@ CDBPropIDSet(const CDBPropIDSet& propidset);
 CDBPropIDSet();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
 中用于初始化字段的 GUID `guidPropertySet` 。
@@ -119,12 +120,12 @@ CDBPropIDSet();
 void SetGUID(const GUID& guid) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
 中用于设置 `guidPropertySet` [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) 结构的字段的 GUID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此字段也可以通过 [构造函数](#cdbpropidset) 进行设置。 如果您对此类使用默认构造函数，则调用此函数。
 

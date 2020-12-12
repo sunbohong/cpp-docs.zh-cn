@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CEnumerator 类
 title: CEnumerator 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: dfc358c06179d50cbf6442863fd2ed2c533cd00a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d66afad29bd9fd785f5bc4e75a72605232af41c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170641"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 类
 
@@ -48,13 +49,13 @@ class CEnumerator :
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[查找](#find)|搜索可用的提供程序（数据源），查找一个具有指定名称的提供程序。|
 |[GetMoniker](#getmoniker)|检索当前记录的 `IMoniker` 接口。|
 |[打开](#open)|打开枚举器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 您可以 `ISourcesRowset` 从此类间接检索数据。
 
@@ -68,7 +69,7 @@ class CEnumerator :
 bool Find(TCHAR* szSearchName) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *szSearchName*<br/>
 [in] 要搜索的名称。
@@ -77,7 +78,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 **`true`** 如果找到该名称，则为。 否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此名称映射到 `SOURCES_NAME` [ISourcesRowset](/previous-versions/windows/desktop/ms715969(v=vs.85)) 接口的成员。
 
@@ -94,7 +95,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ppMoniker*<br/>
 弄从当前行的 [CEnumeratorAccessor：： m_szParseName](./cenumeratoraccessor-class.md#szparsename))  (的显示名称分析的名字对象。
@@ -120,7 +121,7 @@ HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();
 HRESULT Open(const CEnumerator& enumerator) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pMoniker*<br/>
 中指向枚举器的名字对象的指针。

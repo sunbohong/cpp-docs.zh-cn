@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CManualAccessor 类
 title: CManualAccessor 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 24938812ea254fe0150cbabf58dd72bf45ebd0a1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3d625a9a02431445cc1505c6a3f7e9673a04201d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170550"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor 类
 
@@ -55,14 +56,14 @@ class CManualAccessor : public CAccessorBase
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddBindEntry](#addbindentry)|向输出列添加绑定项。|
 |[AddParameterEntry](#addparameterentry)|向参数访问器添加参数项。|
 |[CreateAccessor](#createaccessor)|为列绑定结构分配内存并初始化列数据成员。|
 |[CreateParameterAccessor](#createparameteraccessor)|为参数绑定结构分配内存并初始化参数数据成员。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 使用 `CManualAccessor` ，可以通过运行时函数调用指定参数和输出列绑定。
 
@@ -80,9 +81,9 @@ void AddBindEntry(DBORDINAL nOrdinal,
    void* pStatus = NULL) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 中列号。
@@ -102,7 +103,7 @@ wType <br/>
 *pStatus*<br/>
 中指向要绑定到列状态的变量的指针（如果需要）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 若要使用此函数，必须先调用 [CreateAccessor](#createaccessor)。 不能添加比中指定的列数更多的项 `CreateAccessor` 。
 
@@ -121,9 +122,9 @@ void AddParameterEntry(DBORDINAL nOrdinal,
    DBPARAMIO eParamIO = DBPARAMIO_INPUT) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 中参数编号。
@@ -146,7 +147,7 @@ wType <br/>
 *eParamIO*<br/>
 中指定与绑定关联的参数是否为输入、输入/输出或输出参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 若要使用此函数，必须先调用 [CreateParameterAccessor](#createparameteraccessor)。
 
@@ -162,7 +163,7 @@ HRESULT CreateAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nBindEntries*<br/>
 中列数。 此数字应匹配对 [CManualAccessor：： AddBindEntry](#addbindentry) 函数的调用数。
@@ -177,7 +178,7 @@ HRESULT CreateAccessor(int nBindEntries,
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调用函数之前调用此函数 `CManualAccessor::AddBindEntry` 。
 
@@ -193,7 +194,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
    DBLENGTH nBufferSize) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nBindEntries*<br/>
 中列数。
@@ -208,7 +209,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调用 [AddParameterEntry](#addparameterentry)之前，必须调用此函数。
 

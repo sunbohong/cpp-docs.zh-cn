@@ -1,4 +1,5 @@
 ---
+description: 了解更多： Platform：： CallbackContext 枚举
 title: Platform::CallbackContext 枚举
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36c30b674065f42f7d50a403d1506344ffcfecac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170966"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 枚举
 
@@ -26,9 +27,9 @@ enum class CallbackContext {};
 
 ### <a name="members"></a>成员
 
-|类型代码|说明|
+|类型代码|描述|
 |---------------|-----------------|
-|Any|回调函数可以在任何线程上下文上执行。|
+|任意|回调函数可以在任何线程上下文上执行。|
 |相同|回调函数只能在启动了异步操作的线程上下文上执行。|
 
 ### <a name="requirements"></a>要求
@@ -39,4 +40,4 @@ enum class CallbackContext {};
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string

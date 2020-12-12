@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDynamicParameterAccessor 类
 title: CDynamicParameterAccessor 类
 ms.date: 02/14/2018
 f1_keywords:
@@ -90,12 +91,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: 4596f5181dd197b16786ee4d4d16cf06721b13b6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5470ced8b4479124f0db3878fe2562a658547f9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170771"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>CDynamicParameterAccessor 类
 
@@ -115,7 +116,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[CDynamicParameterAccessor](#cdynamicparameteraccessor)|构造函数。|
 |[GetParam](#getparam)|从缓冲区中检索参数数据。|
@@ -131,7 +132,7 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 |[SetParamStatus](#setparamstatus)|设置存储在缓冲区中的指定参数的状态。|
 |[SetParamString](#setparamstring)|设置存储在缓冲区中的指定参数的字符串数据。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 访问接口必须支持 `ICommandWithParameters` 以便使用者使用此类。
 
@@ -153,7 +154,7 @@ CDynamicParameterAccessor(
    : CDynamicAccessor(eBlobHandling, nBlobSize )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *eBlobHandling*<br/>
 指定处理 BLOB 数据的方式。 默认值为 DBBLOBHANDLING_DEFAULT。 有关 DBBLOBHANDLINGENUM 值的说明，请参阅 [CDynamicAccessor：： SetBlobHandling](./cdynamicaccessor-class.md#setblobhandling) 。
@@ -161,7 +162,7 @@ CDynamicParameterAccessor(
 *nBlobSize*<br/>
 最大 BLOB 大小（以字节为单位）；该值之上的列数据被视为 BLOB。 默认值为8000。 有关详细信息，请参阅 [CDynamicAccessor：： SetBlobSizeLimit](./cdynamicaccessor-class.md#setblobsizelimit) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关 BLOB 处理的详细信息，请参阅 [CDynamicAccessor：： CDynamicAccessor](./cdynamicaccessor-class.md#cdynamicaccessor) 构造函数。
 
@@ -183,7 +184,7 @@ void* GetParam(DBORDINAL nParam) const throw();
 void* GetParam(TCHAR* pParamName) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ctype*<br/>
 作为数据类型的模板化参数。
@@ -228,7 +229,7 @@ bool GetParamIO(DBORDINAL nParam,
    DBPARAMIO* pParamIO) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
@@ -263,7 +264,7 @@ bool GetParamLength(DBORDINAL nParam,
 DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
@@ -271,7 +272,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 *pLength*<br/>
 [out] 指向包含指定参数的长度（以字节为单位）的变量的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一次重写会 **`true`** 在成功或 **`false`** 失败时返回。 第二个重写指向包含参数的长度的内存。
 
@@ -285,7 +286,7 @@ DBLENGTH* GetParamLength(DBORDINAL nParam) const throw();
 LPOLESTR GetParamName(DBORDINAL nParam) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
@@ -307,15 +308,15 @@ bool GetParamStatus(DBORDINAL nParam,
 DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
 
 *pStatus*<br/>
-弄指向包含指定参数的 DBSTATUS 状态的变量的指针。 有关 DBSTATUS 值的信息，请参阅*OLE DB 程序员参考*中的[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
+弄指向包含指定参数的 DBSTATUS 状态的变量的指针。 有关 DBSTATUS 值的信息，请参阅 *OLE DB 程序员参考* 中的 [状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一次重写会 **`true`** 在成功或 **`false`** 失败时返回。 第二次重写指向包含指定参数状态的内存。
 
@@ -341,7 +342,7 @@ bool GetParamString(DBORDINAL nParam,
    size_t* pMaxLen) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
@@ -357,7 +358,7 @@ bool GetParamString(DBORDINAL nParam,
 *pMaxLen*<br/>
 弄一个指针，指向由 *pBuffer* 所指向的缓冲区的大小，包括终止 NULL)  (。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **`true`** 成功或失败时返回 **`false`** 。
 
@@ -378,7 +379,7 @@ bool GetParamType(DBORDINAL nParam,
    DBTYPE* pType) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
@@ -408,7 +409,7 @@ bool SetParam(TCHAR* pParamName,
    DBSTATUS status = DBSTATUS_S_OK) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ctype*<br/>
 作为数据类型的模板化参数。
@@ -425,7 +426,7 @@ bool SetParam(TCHAR* pParamName,
 中指向内存的指针，该内存包含要写入到缓冲区的数据。
 
 *status*<br/>
-中DBSTATUS 列状态。 有关 DBSTATUS 值的信息，请参阅*OLE DB 程序员参考*中的[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
+中DBSTATUS 列状态。 有关 DBSTATUS 值的信息，请参阅 *OLE DB 程序员参考* 中的 [状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
 
 ### <a name="return-value"></a>返回值
 
@@ -444,7 +445,7 @@ bool SetParamLength(DBORDINAL nParam,
    DBLENGTH length);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
@@ -452,7 +453,7 @@ bool SetParamLength(DBORDINAL nParam,
 *length*<br/>
 中指定参数的长度（以字节为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **`true`** 成功或失败时返回 **`false`** 。
 
@@ -467,15 +468,15 @@ bool SetParamStatus(DBORDINAL nParam,
    DBSTATUS status);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
 
 *status*<br/>
-中指定参数的 DBSTATUS 状态。 有关 DBSTATUS 值的信息，请参阅*OLE DB 程序员参考*中的[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
+中指定参数的 DBSTATUS 状态。 有关 DBSTATUS 值的信息，请参阅 *OLE DB 程序员参考* 中的 [状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **`true`** 成功或失败时返回 **`false`** 。
 
@@ -493,7 +494,7 @@ bool SetParamString(DBORDINAL nParam,
    DBSTATUS status = DBSTATUS_S_OK) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nParam*<br/>
 [in] 参数号（相对于 1 的偏移量）。 将为返回值保留参数 0。 参数号是基于参数在 SQL 或存储的过程调用中的顺序的参数索引。 有关示例，请参阅 [SetParam](#setparam) 。
@@ -502,13 +503,13 @@ bool SetParamString(DBORDINAL nParam,
 中指向 ANSI (**CHAR**) 或 Unicode (**WCHAR**) 指定参数的字符串数据的指针。 请参阅 oledb 中的 DBSTATUS。
 
 *status*<br/>
-中指定参数的 DBSTATUS 状态。 有关 DBSTATUS 值的信息，请参阅*OLE DB 程序员参考*中的[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
+中指定参数的 DBSTATUS 状态。 有关 DBSTATUS 值的信息，请参阅 *OLE DB 程序员参考* 中的 [状态](/previous-versions/windows/desktop/ms722617(v=vs.85))或在 DBSTATUS 中搜索。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **`true`** 成功或失败时返回 **`false`** 。
 
-`SetParamString` 如果尝试设置的字符串大于为 *pString*指定的最大大小，则将失败。
+`SetParamString` 如果尝试设置的字符串大于为 *pString* 指定的最大大小，则将失败。
 
 用于 `SetParamString` 设置缓冲区中的字符串参数数据。 使用 [SetParam](#setparam) 设置缓冲区中的非字符串参数数据。
 

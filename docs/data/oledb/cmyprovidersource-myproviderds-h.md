@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： CCustomSource (CustomDS) '
 title: CCustomSource (CustomDS.H)
 ms.date: 10/22/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CMyProviderSource class in MyProviderDS.H
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-ms.openlocfilehash: 8e92c30e8d62ade095167880917ad70da8e59b36
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6fbb9fe0676521b01caa3bba5f5bb2be03d0fe6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742913"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170433"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS) 
 
@@ -153,7 +154,7 @@ struct UPROPINFO
 
 如果要定义自己的属性集，可以通过额外的 BEGIN_PROPSET_MAP/END_PROPSET_MAP 组合来添加一个属性集。 为属性集定义 GUID，然后定义自己的属性。 如果有特定于提供程序的属性，请将它们添加到新的属性集，而不是使用现有的属性集。 这可以避免在 OLE DB 的更高版本中出现问题。
 
-## <a name="user-defined-property-sets"></a>用户定义的属性集
+## <a name="user-defined-property-sets"></a>User-Defined 属性集
 
 Visual C++ 支持用户定义的属性集。 不需要重写 `GetProperties` 或 `GetPropertyInfo` 。 相反，模板会检测任何用户定义的属性集，并将其添加到适当的对象。
 
@@ -167,4 +168,4 @@ END_PROPERTY_SET_EX(DBPROPSET_MYPROPSET)
 
 ## <a name="see-also"></a>请参阅
 
-[提供程序向导生成的文件](../../data/oledb/provider-wizard-generated-files.md)<br/>
+[提供程序 Wizard-Generated 文件](../../data/oledb/provider-wizard-generated-files.md)<br/>

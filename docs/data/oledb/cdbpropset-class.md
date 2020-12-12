@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDBPropSet 类
 title: CDBPropSet 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 45772896cac520eba35ec475f8b6ae7bd2993045
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3c1695e16f050866c2df5725cec4a716c04b3093
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170810"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 类
 
@@ -57,7 +58,7 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddProperty](#addproperty)|向属性集添加属性。|
 |[CDBPropSet](#cdbpropset)|构造函数。|
@@ -65,11 +66,11 @@ class CDBPropSet : public tagDBPROPSET
 
 ### <a name="operators"></a>运算符
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[operator =](#op_equal)|将一个属性集的内容分配给另一个。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 OLE DB 提供程序和使用者使用 `DBPROPSET` 结构来传递 `DBPROP` 结构的数组。 每个 `DBPROP` 结构都表示一个可以设置的属性。
 
@@ -94,7 +95,7 @@ bool AddProperty(DWORD dwPropertyID,
    CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dwPropertyID*<br/>
 中要添加的属性的 ID。 用于初始化 `dwPropertyID` `DBPROP` 添加到属性集的结构的。
@@ -126,7 +127,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a> CDBPropSet：： CDBPropSet
 
-构造函数。 初始化 `rgProperties` `cProperties` DBPROPSET 结构的、和 `guidPropertySet` 字段。 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+构造函数。 初始化 `rgProperties` `cProperties` DBPROPSET 结构的、和 `guidPropertySet` 字段。 [](/previous-versions/windows/desktop/ms714367(v=vs.85))
 
 ### <a name="syntax"></a>语法
 
@@ -138,7 +139,7 @@ CDBPropSet(const CDBPropSet& propset);
 CDBPropSet();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
 中用于初始化字段的 GUID `guidPropertySet` 。
@@ -156,12 +157,12 @@ CDBPropSet();
 void SetGUID(const GUID& guid) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
 中用于设置 `guidPropertySet` [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的字段的 GUID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此字段也可以通过 [构造函数](#cdbpropset) 进行设置。
 

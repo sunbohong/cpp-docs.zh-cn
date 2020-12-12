@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CRestrictions 类
 title: CRestrictions 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: a380f1ba00dcc444099f186071b7d55c9db71291
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 28eee2ea8d7e3b28edaab745c48426c878cc2f2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170277"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 类
 
@@ -32,7 +33,7 @@ class CRestrictions :
    public CSchemaRowset <T, nRestrictions>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 用于访问器的类。
@@ -51,7 +52,7 @@ class CRestrictions :
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[打开](#open)|根据用户提供的限制返回结果集。|
 
@@ -73,7 +74,7 @@ HRESULT Open(const CSession& session,
    bool bBind = true);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *会议*<br/>
 中指定用于连接到数据源的现有会话对象。
@@ -88,13 +89,13 @@ HRESULT Open(const CSession& session,
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 最多可在架构行集中指定7个限制。
 
 有关每个架构行集的定义限制的信息，请参阅 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

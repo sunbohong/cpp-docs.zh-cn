@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDynamicStringAccessor 类
 title: CDynamicStringAccessor 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 891c80a7c21fd046fba393b494ed6d84f731db6f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 89ad306242c5fa0a01b0f14673382fade8df128c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498664"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170706"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 类
 
@@ -38,12 +39,12 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetString](#getstring)|将指定列数据作为字符串检索。|
 |[SetString](#setstring)|将指定列数据设置为字符串。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 当 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 请求提供程序报告的本机格式的数据时， `CDynamicStringAccessor` 将请求提供程序将从数据存储访问的所有数据作为字符串数据获取。 对于不需要在数据存储中计算值的简单任务（如显示或打印数据存储的内容），这尤其有用。
 
@@ -69,7 +70,7 @@ BaseType* GetString(const CHAR* pColumnName) const throw();
 BaseType* GetString(const WCHAR* pColumnName) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
 [in] 列号。 列号从1开始。 值0表示书签列（如果有）。
@@ -81,7 +82,7 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 指向从指定列检索到的字符串值的指针。 值的类型为 `BaseType` ，它将为 **CHAR** 或 **WCHAR** ，具体取决于是否定义了 _UNICODE。 如果找不到指定的列，则返回 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第二个替代形式采用列名作为 ANSI 字符串。 第三个替代形式采用列名作为 Unicode 字符串。
 
@@ -102,7 +103,7 @@ HRESULT SetString(const WCHAR* pColumnName,
    BaseType* data) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
 [in] 列号。 列号从1开始。 特殊值0表示书签列（如果有）。
@@ -117,7 +118,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 
 一个指针，指向要将指定列设置为的字符串值。 值的类型为 `BaseType` ，它将为 **CHAR** 或 **WCHAR** ，具体取决于是否定义了 _UNICODE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第二个替代形式采用列名作为 ANSI 字符串，第三个替代形式采用列名作为 Unicode 字符串。
 

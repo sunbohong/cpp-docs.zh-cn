@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Visual C++ 中的数据访问
 title: Visual C++ 中的数据访问
 ms.date: 03/28/2017
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a5421ff05fdbad7d78066bb95410aafe69bfaa51
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d314deef66e5f523cffa3434f91b3e0297432b94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170979"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的数据访问
 
@@ -32,7 +33,7 @@ Microsoft 基础类 (MFC) 库提供使用开放式数据库连接 (ODBC) 进行�
 [OLE DB 编程](oledb/ole-db-programming.md)<br/>
 在某些情况下，尤其是在针对链接服务器进行编程时，仍然需要旧版接口。
 
-## <a name="related-topics"></a>“相关主题”
+## <a name="related-topics"></a>相关主题
 
 [使用 C 和 C++ 连接到 SQL 数据库](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 从 C 或 C++ 应用程序连接到 Azure SQL 数据库。
@@ -55,6 +56,6 @@ Azure Blob 存储是一种将非结构化数据作为对象/Blob 存储在云中
 [ODBC 程序员参考](/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 ODBC 接口用于与 C 编程语言一起使用。 ODBC 接口的使用涉及三大块：SQL 语句、ODBC 函数调用，以及 C 编程。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)

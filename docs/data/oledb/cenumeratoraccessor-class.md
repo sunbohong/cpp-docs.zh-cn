@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CEnumeratorAccessor 类
 title: CEnumeratorAccessor 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: 0b4baa4671a013699e51a9ab28c002a680dfcd61
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f37de34c508487f3ee54f47db1b0a64df8a97b25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170563"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 类
 
@@ -60,7 +61,7 @@ class CEnumeratorAccessor
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_bIsParent](#bisparent)|一个变量，该变量指示枚举器是否为父枚举器（如果行是枚举器）。|
 |[m_nType](#ntype)|一个变量，该变量指示行是否描述数据源或枚举器。|
@@ -68,7 +69,7 @@ class CEnumeratorAccessor
 |[m_szName](#szname)|数据源或枚举器的名称。|
 |[m_szParseName](#szparsename)|要传递给 [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) 以获取数据源或枚举器的名字对象的字符串。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此行集包含当前枚举器中可见的数据源和枚举器。
 
@@ -84,7 +85,7 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
 ## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a> CEnumeratorAccessor：： m_nType
 
@@ -98,7 +99,7 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
 ## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a> CEnumeratorAccessor：： m_szDescription
 
@@ -112,7 +113,7 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
 ## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a> CEnumeratorAccessor：： m_szName
 
@@ -126,7 +127,7 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
 ## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a> CEnumeratorAccessor：： m_szParseName
 
@@ -140,9 +141,9 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

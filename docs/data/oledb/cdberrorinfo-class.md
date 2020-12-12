@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDBErrorInfo 类
 title: CDBErrorInfo 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: d8fa41b3a06acb8f28334658f2494295593b99be
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fe57963e5964403c6b17b6b41dc7ae5f77063f50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170849"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 类
 
@@ -63,7 +64,7 @@ class CDBErrorInfo
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|返回错误记录中包含的所有错误信息。|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|调用 [IErrorRecords：： GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 以返回有关指定错误的基本信息。|
@@ -72,7 +73,7 @@ class CDBErrorInfo
 |[GetErrorParameters](#geterrorparameters)|调用 [IErrorRecords：： GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 以返回错误参数。|
 |[GetErrorRecords](#geterrorrecords)|获取指定对象的错误记录。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此接口向用户返回一条或多条错误记录。 首先调用 [CDBErrorInfo：： GetErrorRecords](#geterrorrecords) 以获取错误记录的计数。 然后调用某个访问函数（如 [CDBErrorInfo：： GetAllErrorInfo](#getallerrorinfo)）来检索每条记录的错误信息。
 
@@ -91,7 +92,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
    BSTR* pbstrHelpFile = NULL) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ulRecordNum*<br/>
 [in] 为其返回错误信息的记录的从零开始的数字。
@@ -116,15 +117,15 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则 S_OK。 有关其他返回值，请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 。
+如果成功，则 S_OK。 有关其他返回值，请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*PbstrDescription*的输出值是通过调用在内部获取的 `IErrorInfo::GetDescription` ，如果不支持该区域设置，则将该值设置为 NULL，或者如果满足以下两个条件：
+*PbstrDescription* 的输出值是通过调用在内部获取的 `IErrorInfo::GetDescription` ，如果不支持该区域设置，则将该值设置为 NULL，或者如果满足以下两个条件：
 
-1. *lcid*的值不是美国英语，
+1. *lcid* 的值不是美国英语，
 
-1. *lcid*的值不等于 GetUserDefaultLCID 返回的值。
+1. *lcid* 的值不等于 GetUserDefaultLCID 返回的值。
 
 ## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> CDBErrorInfo：： GetBasicErrorInfo
 
@@ -137,9 +138,9 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
    ERRORINFO* pErrorInfo) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -156,9 +157,9 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
    REFIID riid,IUnknown** ppObject) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -175,9 +176,9 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
    LCID lcid,IErrorInfo** ppErrorInfo) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -194,9 +195,9 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
    DISPPARAMS* pdispparams) const throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -216,7 +217,7 @@ HRESULT GetErrorRecords(IUnknown* pUnk,
 HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中要为其获取错误记录的对象的接口。
@@ -231,7 +232,7 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果要检查从中获取错误信息的接口，请使用第一种形式的函数。 否则，请使用第二个窗体。
 

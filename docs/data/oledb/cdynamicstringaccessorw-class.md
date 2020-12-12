@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDynamicStringAccessorW 类
 title: CDynamicStringAccessorW 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDynamicStringAccessorW class
 ms.assetid: 9b7fd5cc-3a9b-4b57-b907-f1e35de2c98f
-ms.openlocfilehash: 20ea4a2d795108e00c4b11c3abea6cf7b9953ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 360a9592cdce3a1046eecb360a8691b1d8480caf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97170667"
 ---
 # <a name="cdynamicstringaccessorw-class"></a>CDynamicStringAccessorW 类
 
-可以在不知道数据库架构 （基础结构） 时访问数据源。
+当您不知道数据库架构 (基础结构) 时，允许访问数据源。
 
 ## <a name="syntax"></a>语法
 
@@ -25,13 +26,13 @@ typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;
 
 ## <a name="remarks"></a>备注
 
-在这两个请求提供程序提取从字符串数据作为数据存储区访问的所有数据，但`CDynamicStringAccessor`请求 Unicode 字符串数据。
+它们都请求提供程序将从数据存储区访问的所有数据作为字符串数据获取，但会 `CDynamicStringAccessor` 请求 Unicode 字符串数据。
 
-`CDynamicStringAccessorW` 继承`GetString`并`SetString`从`CDynamicStringAccessor`。 使用这些方法时`CDynamicStringAccessorW`对象，`BaseType`是**WCHAR**。
+`CDynamicStringAccessorW` 继承 `GetString` 和 `SetString` from `CDynamicStringAccessor` 。 在对象中使用这些方法时 `CDynamicStringAccessorW` ， `BaseType` 为 **WCHAR**。
 
 ## <a name="requirements"></a>要求
 
-**标头**：atldbcli.h
+**标头**： atldbcli。h
 
 ## <a name="see-also"></a>请参阅
 
