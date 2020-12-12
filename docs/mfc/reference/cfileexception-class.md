@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CFileException 类
 title: CFileException 类
 ms.date: 06/09/2020
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: 6d3102cfd41d68458332025cbf3410e3f169523b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7540ffb22005ef0fe93954396f6fca1a5ae93af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212444"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184512"
 ---
 # <a name="cfileexception-class"></a>CFileException 类
 
@@ -45,7 +46,7 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[CFileException：： CFileException](#cfileexception)|构造 `CFileException` 对象。|
 
@@ -71,7 +72,7 @@ class CFileException : public CException
 
 `CFileException`类包括的公共数据成员保存可移植原因代码和特定于操作系统的错误号。 类还提供静态成员函数，用于引发文件异常，并为操作系统错误和 C 运行时错误返回原因代码。
 
-`CFileException`对象在 `CFile` 成员函数和派生类的成员函数中构造和引发。 您可以在**CATCH**表达式的作用域内访问这些对象。 对于可移植性，只使用原因代码来获取异常的原因。 有关异常的详细信息，请参阅[异常处理（MFC）](../../mfc/exception-handling-in-mfc.md)一文。
+`CFileException` 对象在 `CFile` 成员函数和派生类的成员函数中构造和引发。 您可以在 **CATCH** 表达式的作用域内访问这些对象。 对于可移植性，只使用原因代码来获取异常的原因。 有关异常的详细信息，请参阅文章 [ (MFC) 的异常处理 ](../../mfc/exception-handling-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -85,7 +86,7 @@ class CFileException : public CException
 
 **标头：** afx
 
-## <a name="cfileexceptioncfileexception"></a><a name="cfileexception"></a>CFileException：： CFileException
+## <a name="cfileexceptioncfileexception"></a><a name="cfileexception"></a> CFileException：： CFileException
 
 构造一个 `CFileException` 对象，该对象存储对象中的原因代码和操作系统代码。
 
@@ -96,25 +97,25 @@ CFileException(
     LPCTSTR lpszArchiveName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*导致*<br/>
-指示异常原因的枚举类型变量。 有关可能值的列表，请参阅[CFileException：： m_cause](#m_cause) 。
+*cause*<br/>
+指示异常原因的枚举类型变量。 有关可能值的列表，请参阅 [CFileException：： m_cause](#m_cause) 。
 
 *lOsError*<br/>
-异常的特定于操作系统的原因（如果可用）。 *LOsError*参数提供的信息超出了*原因*。
+异常的特定于操作系统的原因（如果可用）。 *LOsError* 参数提供的信息超出了 *原因*。
 
 *lpszArchiveName*<br/>
 指向一个字符串，该字符串包含 `CFile` 导致异常的对象的名称。
 
 ### <a name="remarks"></a>备注
 
-不要直接使用此构造函数，而应调用 global 函数[AfxThrowFileException](exception-processing.md#afxthrowfileexception)。
+不要直接使用此构造函数，而应调用 global 函数 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)。
 
 > [!NOTE]
-> 变量*lOsError*仅适用于 `CFile` 和 `CStdioFile` 对象。 `CMemFile`类不处理此错误代码。
+> 变量 *lOsError* 仅适用于 `CFile` 和 `CStdioFile` 对象。 `CMemFile`类不处理此错误代码。
 
-## <a name="cfileexceptionerrnotoexception"></a><a name="errnotoexception"></a>CFileException：： ErrnoToException
+## <a name="cfileexceptionerrnotoexception"></a><a name="errnotoexception"></a> CFileException：： ErrnoToException
 
 将给定的运行时库错误值转换为 `CFileException` 枚举的错误值。
 
@@ -122,10 +123,10 @@ CFileException(
 static int PASCAL ErrnoToException(int nErrno);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nErrno*<br/>
-运行时包含文件 ERRNO 中定义的整数错误代码。高.
+运行时包含文件 ERRNO 中定义的整数错误代码。
 
 ### <a name="return-value"></a>返回值
 
@@ -133,13 +134,13 @@ static int PASCAL ErrnoToException(int nErrno);
 
 ### <a name="remarks"></a>备注
 
-有关可能的枚举值的列表，请参阅[CFileException：： m_cause](#m_cause) 。
+有关可能的枚举值的列表，请参阅 [CFileException：： m_cause](#m_cause) 。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCFiles#26](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]
 
-## <a name="cfileexceptiongeterrormessage"></a><a name="geterrormessage"></a>CFileException：： GetErrorMessage
+## <a name="cfileexceptiongeterrormessage"></a><a name="geterrormessage"></a> CFileException：： GetErrorMessage
 
 检索描述异常的文本。
 
@@ -150,7 +151,7 @@ virtual BOOL GetErrorMessage(
     PUINT pnHelpContext = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszError*<br/>
 [in，out]指向接收错误消息的缓冲区的指针。
@@ -175,7 +176,7 @@ virtual BOOL GetErrorMessage(
 
 [!code-cpp[NVC_MFCExceptions#22](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]
 
-## <a name="cfileexceptionm_cause"></a><a name="m_cause"></a>CFileException：： m_cause
+## <a name="cfileexceptionm_cause"></a><a name="m_cause"></a> CFileException：： m_cause
 
 包含由 `CFileException` 枚举类型定义的值。
 
@@ -209,13 +210,13 @@ int m_cause;
 > 引发这些 `CFileException` 的枚举器不同于引发 `CArchiveException` 的枚举器。
 
 > [!NOTE]
-> `CArchiveException::generic` 已弃用。 请改用 `genericException`。 如果在应用程序中使用**泛型**，并使用/clr 生成，则生成的语法错误并不容易解密。
+> `CArchiveException::generic` 已弃用。 请改用 `genericException`。 如果在应用程序中使用 **泛型** ，并使用/clr 生成，则生成的语法错误并不容易解密。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCFiles#30](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]
 
-## <a name="cfileexceptionm_loserror"></a><a name="m_loserror"></a>CFileException：： m_lOsError
+## <a name="cfileexceptionm_loserror"></a><a name="m_loserror"></a> CFileException：： m_lOsError
 
 包含此异常的操作系统错误代码。
 
@@ -227,7 +228,7 @@ LONG m_lOsError;
 
 有关错误代码的列表，请参阅操作系统技术手册。 此数据成员是 LONG 类型的公共变量。
 
-## <a name="cfileexceptionm_strfilename"></a><a name="m_strfilename"></a>CFileException：： m_strFileName
+## <a name="cfileexceptionm_strfilename"></a><a name="m_strfilename"></a> CFileException：： m_strFileName
 
 包含此异常条件的文件的名称。
 
@@ -235,15 +236,15 @@ LONG m_lOsError;
 CString m_strFileName;
 ```
 
-## <a name="cfileexceptionoserrortoexception"></a><a name="oserrortoexception"></a>CFileException：： OsErrorToException
+## <a name="cfileexceptionoserrortoexception"></a><a name="oserrortoexception"></a> CFileException：： OsErrorToException
 
-返回与给定的*lOsError*值相对应的枚举器。 如果错误代码未知，则函数返回 `CFileException::generic` 。
+返回与给定的 *lOsError* 值相对应的枚举器。 如果错误代码未知，则函数返回 `CFileException::generic` 。
 
 ```
 static int PASCAL OsErrorToException(LONG lOsError);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lOsError*<br/>
 操作系统特定的错误代码。
@@ -256,18 +257,18 @@ static int PASCAL OsErrorToException(LONG lOsError);
 
 [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]
 
-## <a name="cfileexceptionthrowerrno"></a><a name="throwerrno"></a>CFileException：： ThrowErrno
+## <a name="cfileexceptionthrowerrno"></a><a name="throwerrno"></a> CFileException：： ThrowErrno
 
-构造 `CFileException` 对应于给定*nErrno*值的对象，然后引发异常。
+构造 `CFileException` 对应于给定 *nErrno* 值的对象，然后引发异常。
 
 ```
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nErrno*<br/>
-运行时包含文件 ERRNO 中定义的整数错误代码。高.
+运行时包含文件 ERRNO 中定义的整数错误代码。
 
 *lpszFileName*<br/>
 指向字符串的指针，该字符串包含引发异常的文件的名称（如果可用）。
@@ -276,15 +277,15 @@ static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 
 [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]
 
-## <a name="cfileexceptionthrowoserror"></a><a name="throwoserror"></a>CFileException：： ThrowOsError
+## <a name="cfileexceptionthrowoserror"></a><a name="throwoserror"></a> CFileException：： ThrowOsError
 
-引发 `CFileException` 对应于给定*lOsError*值的。 如果错误代码未知，则该函数将引发编码为的异常 `CFileException::generic` 。
+引发 `CFileException` 对应于给定 *lOsError* 值的。 如果错误代码未知，则该函数将引发编码为的异常 `CFileException::generic` 。
 
 ```
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lOsError*<br/>
 操作系统特定的错误代码。
@@ -296,7 +297,7 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 
 [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CException 类](../../mfc/reference/cexception-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

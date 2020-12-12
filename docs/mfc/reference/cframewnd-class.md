@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CFrameWnd 类
 title: CFrameWnd 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -106,12 +107,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 5e40f08447d24eed51588b5c2dfa87e289d99eed
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 85bad5ad63a07b58f245df06a44d82f58d6a561c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184278"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 类
 
@@ -127,13 +128,13 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CFrameWnd：： CFrameWnd](#cframewnd)|构造 `CFrameWnd` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CFrameWnd：： ActivateFrame](#activateframe)|使框架对用户可见并可用。|
 |[CFrameWnd：： BeginModalState](#beginmodalstate)|将框架窗口设置为模式。|
@@ -182,7 +183,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CFrameWnd：： OnCreateClient](#oncreateclient)|创建框架的客户端窗口。|
 |[CFrameWnd：： OnHideMenuBar](#onhidemenubar)|在隐藏当前 MFC 应用程序中的菜单前调用。|
@@ -190,7 +191,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CFrameWnd：： m_bAutoMenuEnable](#m_bautomenuenable)|控制菜单项的自动启用和禁用功能。|
 |[CFrameWnd：： rectDefault](#rectdefault)|`CRect`当创建对象时将此静态作为参数传递 `CFrameWnd` ，以允许 Windows 选择窗口的初始大小和位置。|
@@ -265,7 +266,7 @@ class CFrameWnd : public CWnd
 virtual void ActivateFrame(int nCmdShow = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCmdShow*<br/>
 指定要传递给 [CWnd：： ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)的参数。 默认情况下，将显示并正确还原帧。
@@ -276,7 +277,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
 
 默认实现激活框架，并将其放到 Z 顺序的顶部，并在必要时对应用程序的主框架窗口执行相同的步骤。
 
-重写此成员函数以更改框架的激活方式。 例如，可以强制最大化 MDI 子窗口。 添加适当的功能，然后使用显式 *nCmdShow*调用基类版本。
+重写此成员函数以更改框架的激活方式。 例如，可以强制最大化 MDI 子窗口。 添加适当的功能，然后使用显式 *nCmdShow* 调用基类版本。
 
 ### <a name="example"></a>示例
 
@@ -318,7 +319,7 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszClassName*<br/>
 指向以 null 结尾的字符串，该字符串对 Windows 类进行命名。 类名称可以是任何已注册到 `AfxRegisterWndClass` global 函数或 `RegisterClass` Windows 函数的名称。 如果为 NULL，则使用预定义的默认 `CFrameWnd` 属性。
@@ -330,7 +331,7 @@ virtual BOOL Create(
 指定窗口 [样式](../../mfc/reference/styles-used-by-mfc.md#window-styles) 特性。 如果希望标题栏自动显示窗口中表示的文档的名称，请包含 FWS_ADDTOTITLE 样式。
 
 *rect*<br/>
-指定窗口的大小和位置。 *RectDefault*值允许 Windows 指定新窗口的大小和位置。
+指定窗口的大小和位置。 *RectDefault* 值允许 Windows 指定新窗口的大小和位置。
 
 *pParentWnd*<br/>
 指定此框架窗口的父窗口。 对于顶级框架窗口，此参数应为 NULL。
@@ -364,7 +365,7 @@ CWnd* CreateView(
     UINT nID = AFX_IDW_PANE_FIRST);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pContext*<br/>
 指定视图和文档的类型。
@@ -391,7 +392,7 @@ void DockControlBar(
     LPCRECT lpRect = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 指向要停靠的控件条。
@@ -414,7 +415,7 @@ void DockControlBar(
 
 ### <a name="remarks"></a>备注
 
-控件条将停靠在对 [CControlBar：： EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) 和 [CFrameWnd：： EnableDocking](#enabledocking)的调用中指定的框架窗口的一侧。 选择的端由 *nDockBarID*确定。
+控件条将停靠在对 [CControlBar：： EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) 和 [CFrameWnd：： EnableDocking](#enabledocking)的调用中指定的框架窗口的一侧。 选择的端由 *nDockBarID* 确定。
 
 ## <a name="cframewndenabledocking"></a><a name="enabledocking"></a> CFrameWnd：： EnableDocking
 
@@ -424,7 +425,7 @@ void DockControlBar(
 void EnableDocking(DWORD dwDockStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwDockStyle*<br/>
 指定框架窗口的哪一侧可用作控制条的停靠站点。 它可以是下列一项或多项：
@@ -470,7 +471,7 @@ void FloatControlBar(
     DWORD dwStyle = CBRS_ALIGN_TOP);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 指向要浮动的控件条。
@@ -551,7 +552,7 @@ CView* GetActiveView() const;
 CControlBar* GetControlBar(UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 控件条的 ID 号。
@@ -562,7 +563,7 @@ CControlBar* GetControlBar(UINT nID);
 
 ### <a name="remarks"></a>备注
 
-*NID*参数引用传递给控件栏的方法的唯一标识符 `Create` 。 有关控制栏的详细信息，请参阅标题为 " [控制条](../../mfc/control-bars.md)" 的主题。
+*NID* 参数引用传递给控件栏的方法的唯一标识符 `Create` 。 有关控制栏的详细信息，请参阅标题为 " [控制条](../../mfc/control-bars.md)" 的主题。
 
 `GetControlBar` 即使控件栏是浮动的，也将返回控件条，因此它当前不是框架的子窗口。
 
@@ -574,9 +575,9 @@ CControlBar* GetControlBar(UINT nID);
 void GetDockState(CDockState& state) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-State<br/>
+*state*<br/>
 在返回时包含框架窗口的控件条的当前状态。
 
 ### <a name="remarks"></a>备注
@@ -647,7 +648,7 @@ virtual void GetMessageString(
     CString& rMessage) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 所需消息的资源 ID。
@@ -681,7 +682,7 @@ void InitialUpdateFrame(
     BOOL bMakeVisible);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDoc*<br/>
 指向框架窗口关联到的文档。 可以为 NULL。
@@ -727,7 +728,7 @@ BOOL IsTracking() const;
 BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszResourceName*<br/>
 标识快捷键资源的名称。 如果使用整数 ID 标识资源，请使用 MAKEINTRESOURCE。
@@ -752,7 +753,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 void LoadBarState(LPCTSTR lpszProfileName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 初始化中的节的名称 (INI) 文件，或者 Windows 注册表中存储状态信息的键。
@@ -775,7 +776,7 @@ virtual BOOL LoadFrame(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDResource*<br/>
 与框架窗口关联的共享资源的 ID。
@@ -791,7 +792,7 @@ virtual BOOL LoadFrame(
 
 ### <a name="remarks"></a>备注
 
-`CFrameWnd`按两个步骤构造对象。 首先，调用构造函数的构造函数，该构造函数将构造 `CFrameWnd` 对象，然后调用 `LoadFrame` ，它将加载 Windows 框架窗口和关联的资源，并将框架窗口附加到 `CFrameWnd` 对象。 *NIDResource*参数指定框架窗口标题的菜单、快捷键对应表、图标和字符串资源。
+`CFrameWnd`按两个步骤构造对象。 首先，调用构造函数的构造函数，该构造函数将构造 `CFrameWnd` 对象，然后调用 `LoadFrame` ，它将加载 Windows 框架窗口和关联的资源，并将框架窗口附加到 `CFrameWnd` 对象。 *NIDResource* 参数指定框架窗口标题的菜单、快捷键对应表、图标和字符串资源。
 
 `Create` `LoadFrame` 如果要指定框架窗口的所有创建参数，请使用成员函数而不是。
 
@@ -832,7 +833,7 @@ virtual BOOL NegotiateBorderSpace(
     LPRECT lpRectBorder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBorderCmd*<br/>
 包含以下值之一 `enum BorderCmd` ：
@@ -862,7 +863,7 @@ virtual BOOL NegotiateBorderSpace(
 afx_msg BOOL OnBarCheck(UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 所显示的控件条的 ID。
@@ -899,7 +900,7 @@ virtual BOOL OnCreateClient(
     CCreateContext* pContext);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpcs*<br/>
 指向 Windows [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) 结构的指针。
@@ -915,7 +916,7 @@ virtual BOOL OnCreateClient(
 
 从不调用此函数。
 
-此函数的默认实现 `CView` 从 *pContext*中提供的信息创建对象（如果可能）。
+此函数的默认实现 `CView` 从 *pContext* 中提供的信息创建对象（如果可能）。
 
 重写此函数以重写对象中传递的值， `CCreateContext` 或更改创建框架窗口的主工作区中的控件的方式。 `CCreateContext` [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)类中描述了可以重写的成员。
 
@@ -944,7 +945,7 @@ virtual void OnSetPreviewMode(
     CPrintPreviewState* pState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bPreview*<br/>
 指定是否将应用程序置于打印预览模式。 如果设置为 TRUE，则在打印预览中设置为 FALSE，则取消预览模式。
@@ -978,10 +979,10 @@ virtual void OnShowMenuBar();
 afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pCmdUI*<br/>
-指向 [CCmdUI](../../mfc/reference/ccmdui-class.md) 对象的指针，该对象表示生成更新命令的菜单。 更新处理程序通过 PCmdUI 调用对象的[Enable](../../mfc/reference/ccmdui-class.md#enable)成员函数 `CCmdUI` 以*pCmdUI*更新用户界面。
+指向 [CCmdUI](../../mfc/reference/ccmdui-class.md) 对象的指针，该对象表示生成更新命令的菜单。 更新处理程序通过 PCmdUI 调用对象的[Enable](../../mfc/reference/ccmdui-class.md#enable)成员函数 `CCmdUI` 以更新用户界面。
 
 ## <a name="cframewndrecalclayout"></a><a name="recalclayout"></a> CFrameWnd：： RecalcLayout
 
@@ -991,7 +992,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNotify*<br/>
 确定框架窗口的活动就地项是否收到布局更改的通知。 如果为 TRUE，则通知该项;否则为 FALSE。
@@ -1018,7 +1019,7 @@ static AFX_DATA const CRect rectDefault;
 void SaveBarState(LPCTSTR lpszProfileName) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 初始化文件中的节的名称，或存储状态信息的 Windows 注册表中的项的名称。
@@ -1035,7 +1036,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 void SetActivePreviewView(CView* pViewNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pViewNew*<br/>
 指向要激活的视图的指针。
@@ -1052,7 +1053,7 @@ void SetActiveView(
     BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pViewNew*<br/>
 指定指向 [CView](../../mfc/reference/cview-class.md) 对象的指针; 如果没有活动视图，则为 NULL。
@@ -1072,9 +1073,9 @@ void SetActiveView(
 void SetDockState(const CDockState& state);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-State<br/>
+*state*<br/>
 将存储的状态应用于框架窗口的控件条。
 
 ### <a name="remarks"></a>备注
@@ -1089,10 +1090,10 @@ State<br/>
 virtual BOOL SetMenuBarState(DWORD nState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nState*\
-中指定是显示还是隐藏菜单。 *NState*参数可具有以下值：
+中指定是显示还是隐藏菜单。 *NState* 参数可具有以下值：
 
 - `AFX_MBS_VISIBLE` (0x01) -如果菜单处于隐藏状态，则显示菜单，但是如果可见，则不起作用。
 - `AFX_MBS_HIDDEN` (0x02) -如果菜单可见，则隐藏菜单; 如果隐藏，则不起作用。
@@ -1113,10 +1114,10 @@ virtual BOOL SetMenuBarState(DWORD nState);
 virtual void SetMenuBarVisibility(DWORD nStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStyle*\
-中指定菜单默认处于隐藏状态还是可见并且具有焦点。 *NStyle*参数可具有以下值：
+中指定菜单默认处于隐藏状态还是可见并且具有焦点。 *NStyle* 参数可具有以下值：
 
 - `AFX_MBV_KEEPVISIBLE` (0x01) -菜单始终显示，并且默认情况下不具有焦点。
 
@@ -1139,7 +1140,7 @@ void SetMessageText(LPCTSTR lpszText);
 void SetMessageText(UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
 指向要放置在状态栏上的字符串。
@@ -1159,7 +1160,7 @@ void SetMessageText(UINT nID);
 void SetProgressBarPosition(int nProgressPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nProgressPos*<br/>
 指定要设置的位置。 它必须在设置的范围内 `SetProgressBarRange` 。
@@ -1176,7 +1177,7 @@ void SetProgressBarRange(
     int nRangeMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRangeMin*<br/>
 最小值。
@@ -1194,7 +1195,7 @@ void SetProgressBarRange(
 void SetProgressBarState(TBPFLAG tbpFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *tbpFlags*<br/>
 控制进度按钮当前状态的标志。 仅指定下列标志之一，因为所有状态都是互斥的： TBPF_NOPROGRESS、TBPF_INDETERMINATE、TBPF_NORMAL、TBPF_ERROR、TBPF_PAUSED。
@@ -1215,7 +1216,7 @@ BOOL SetTaskbarOverlayIcon(
     LPCTSTR lpcszDescr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDResource*<br/>
 指定要用作覆盖的图标的资源 ID。 有关详细信息，请参阅 *hIcon* 的说明。
@@ -1240,7 +1241,7 @@ BOOL SetTaskbarOverlayIcon(
 void SetTitle(LPCTSTR lpszTitle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszTitle*<br/>
 指向字符串的指针，该字符串包含 window 对象的标题。
@@ -1256,7 +1257,7 @@ void ShowControlBar(
     BOOL bDelay);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 指向要显示或隐藏的控件条的指针。
@@ -1275,12 +1276,12 @@ void ShowControlBar(
 void ShowOwnedWindows(BOOL bShow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 指定是要显示还是隐藏拥有的窗口。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

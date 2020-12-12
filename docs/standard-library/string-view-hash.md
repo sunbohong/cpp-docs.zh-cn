@@ -1,18 +1,19 @@
 ---
-title: '&gt; 特殊化 string_view 哈希&lt;'
+description: 了解详细信息：哈希 &lt; string_view &gt; 特殊化
+title: 哈希 &lt; string_view &gt; 特殊化
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: c7bddd5fcf9008b958854fd4d7b72ea2e94cba47
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cf4012752bbd8b3531920e78d612e78479de4b3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214950"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183680"
 ---
-# <a name="hashltstring_viewgt-specialization"></a>&gt; 特殊化 string_view 哈希&lt;
+# <a name="hashltstring_viewgt-specialization"></a>哈希 &lt; string_view &gt; 特殊化
 
 一个模板特殊化，在给定 string_view 的情况生成哈希值。
 

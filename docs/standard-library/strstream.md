@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; strstream&gt;
 title: '&lt;strstream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: 13eea1101abca0f79f0d7c15405ceb3118707b67
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e99a07df2a63b991232440f8dad0eb299d0e00b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183550"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
@@ -23,7 +24,7 @@ ms.locfileid: "88845648"
 
 **命名空间:** std
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类型的对象使用 `strstream` **`char`** *，即 C 字符串。 用于 [\<sstream>](../standard-library/sstream.md) 处理 [basic_string](../standard-library/basic-string-class.md)类型的对象。
 
@@ -34,7 +35,7 @@ ms.locfileid: "88845648"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[strstreambuf 类](../standard-library/strstreambuf-class.md)|此类描述一个流缓冲区，该缓冲区控制元素与数组对象中存储的元素序列之间的来回传输 **`char`** 。|
 |[istrstream 类](../standard-library/istrstream-class.md)|此类描述了一种对象，该对象可控制从 [strstreambuf](../standard-library/strstreambuf-class.md) 类的流缓冲区提取元素和编码对象。|
@@ -49,7 +50,7 @@ char* str();
 int pcount();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<strstream>](../standard-library/strstream.md)\
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\

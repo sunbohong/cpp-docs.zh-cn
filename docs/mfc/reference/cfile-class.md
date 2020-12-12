@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CFile 类
 title: CFile 类
 ms.date: 06/12/2018
 f1_keywords:
@@ -60,12 +61,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 5be6a578fdd1d4e329c5b55d307d924a6c539e3d
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: edccd571edf3594d36679a6c4ed6e52df878a705
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042077"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184538"
 ---
 # <a name="cfile-class"></a>CFile 类
 
@@ -81,13 +82,13 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CFile：： CFile](#cfile)|`CFile`从路径或文件句柄构造对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CFile：： Abort](#abort)|关闭忽略所有警告和错误的文件。|
 |[CFile：： Close](#close)|关闭文件并删除对象。|
@@ -115,20 +116,20 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CFile：： operator 句柄](#operator_handle)|对象的句柄 `CFile` 。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CFile：： hFileNull](#hfilenull)|确定对象是否 `CFile` 具有有效的句柄。|
 |[CFile：： m_hFile](#m_hfile)|通常包含操作系统文件句柄。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CFile：： m_pTM](#m_ptm)|指向 `CAtlTransactionManager` 对象的指针。|
 
@@ -142,7 +143,7 @@ class CFile : public CObject
 
 通常，磁盘文件在构造时自动打开 `CFile` 并在销毁时关闭。 静态成员函数允许您在不打开文件的情况下询问文件状态。
 
-有关使用的详细信息 `CFile` ，请参阅《*运行时库参考*中的文章： [MFC 中的文件](../../mfc/files-in-mfc.md)和[文件处理](../../c-runtime-library/file-handling.md)。
+有关使用的详细信息 `CFile` ，请参阅《*运行时库参考* 中的文章： [MFC 中的文件](../../mfc/files-in-mfc.md)和 [文件处理](../../c-runtime-library/file-handling.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -193,7 +194,7 @@ UINT nOpenFlags,
 CAtlTransactionManager* pTM);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hFile*<br/>
 要附加到 `CFile` 对象的文件的句柄。
@@ -213,7 +214,7 @@ CAtlTransactionManager* pTM);
 
 仅选择下列文件访问模式选项之一。 默认文件访问模式为 `CFile::modeRead`，该模式为只读模式。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`CFile::modeRead`|只请求读取访问权限。|
 |`CFile::modeWrite`|只请求写入访问权限。|
@@ -221,7 +222,7 @@ CAtlTransactionManager* pTM);
 
 选择以下字符模式选项之一。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`CFile::typeBinary`|设置二元模式（仅在派生类中使用）。|
 |`CFile::typeText`|使用仅) 派生类中使用的回车换行符对的特殊处理设置文本模式 (。|
@@ -229,7 +230,7 @@ CAtlTransactionManager* pTM);
 
 仅选择下列文件共享模式选项之一。 默认文件共享模式为 `CFile::shareExclusive`，该模式是独占模式。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|没有任何共享限制。|
 |`CFile::shareDenyRead`|拒绝向所有其他用户提供读取访问权限。|
@@ -238,14 +239,14 @@ CAtlTransactionManager* pTM);
 
 选择下面的第一个（或全选）文件创建模式选项。 默认创建模式为 `CFile::modeNoTruncate`，该模式当前处于打开状态。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`CFile::modeCreate`|如果文件不存在，则创建一个新文件。 如果文件已存在，则会被覆盖，并且最初设置为零长度。|
 |`CFile::modeNoTruncate`|如果文件不存在，则创建一个新文件;否则，如果文件已存在，则会附加到 `CFile` 对象。|
 
 按照描述选择以下文件缓存选项。 默认情况下，系统使用无法作为选项使用的常规用途缓存方案。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|系统不会对文件使用中间缓存。 此选项取消以下 2 个选项。|
 |`CFile::osRandomAccess`|文件缓存针对随机访问进行了优化。 不要使用此选项和顺序扫描选项。|
@@ -254,7 +255,7 @@ CAtlTransactionManager* pTM);
 
 选择下列安全选项以防止继承文件句柄。 默认情况下，所有新的子进程都可以使用文件句柄。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|阻止任何子进程使用文件句柄。|
 
@@ -435,7 +436,7 @@ static BOOL PASCAL GetStatus(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rStatus*<br/>
 对将接收状态信息的用户提供的结构的引用 `CFileStatus` 。 `CFileStatus`结构具有以下字段：
@@ -466,7 +467,7 @@ Windows 字符集中的字符串，它是所需文件的路径。 路径可以�
 
 的非静态版本 `GetStatus` 检索与给定对象关联的打开文件的状态信息 `CFile` 。  的静态版本 `GetStatus` 获取给定文件路径的文件状态，而不会实际打开该文件。 此版本适用于测试文件的存在和访问权限。
 
-`m_attribute`结构的成员 `CFileStatus` 引用文件属性集。 `CFile`类提供**属性**枚举类型，因此可以符号指定文件属性：
+`m_attribute`结构的成员 `CFileStatus` 引用文件属性集。 `CFile`类提供 **属性** 枚举类型，因此可以符号指定文件属性：
 
 ```
 enum Attribute {
@@ -510,7 +511,7 @@ virtual void LockRange(
     ULONGLONG dwCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwPos*<br/>
 要锁定的字节范围起始处的字节偏移量。
@@ -572,7 +573,7 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFileName*<br/>
 包含所需文件的路径的字符串。 路径可以是相对路径、绝对路径或 (UNC) 的网络名称。
@@ -594,16 +595,16 @@ virtual BOOL Open(
 
 这两个 `Open` 函数是用于打开文件的 "安全" 方法，其中失败是正常的预期条件。
 
-尽管 `CFile` 构造函数在出现错误时引发异常，但 `Open` 错误条件返回 FALSE。 `Open` 不过，仍可初始化 [CFileException](../../mfc/reference/cfileexception-class.md) 对象来描述错误。 如果未提供 *pError* 参数，或者如果为 *PERROR*传递了 NULL，则将 `Open` 返回 FALSE，并且不会引发 `CFileException` 。 如果将指针传递到现有 `CFileException` ，并 `Open` 遇到错误，该函数将使用描述该错误的信息对其进行填充。 `Open` 在这两种情况下，不会引发异常。
+尽管 `CFile` 构造函数在出现错误时引发异常，但 `Open` 错误条件返回 FALSE。 `Open` 不过，仍可初始化 [CFileException](../../mfc/reference/cfileexception-class.md) 对象来描述错误。 如果未提供 *pError* 参数，或者如果为 *PERROR* 传递了 NULL，则将 `Open` 返回 FALSE，并且不会引发 `CFileException` 。 如果将指针传递到现有 `CFileException` ，并 `Open` 遇到错误，该函数将使用描述该错误的信息对其进行填充。 `Open` 在这两种情况下，不会引发异常。
 
 下表描述了可能的结果 `Open` 。
 
 | `pError` | 遇到错误 | 返回值 | CFileException 内容 |
 |--|--|--|--|
-| Null | 否 | true | 不适用 |
+| Null | 否 | true | n/a |
 | ptr 到 `CFileException` | 否 | true | 未更改 |
-| Null | 是 | false | 不适用 |
-| ptr 到 `CFileException` | 是 | false | 初始化以描述错误 |
+| Null | 是 | FALSE | n/a |
+| ptr 到 `CFileException` | 是 | FALSE | 初始化以描述错误 |
 
 ### <a name="example"></a>示例
 
@@ -629,7 +630,7 @@ virtual UINT Read(
     UINT nCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpBuf*<br/>
 指向用户提供的用于接收从文件中读取的数据的缓冲区的指针。
@@ -657,7 +658,7 @@ static void PASCAL Remove(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFileName*<br/>
 作为所需文件的路径的字符串。 路径可以是相对路径或绝对路径，并且可以包含网络名称。
@@ -686,7 +687,7 @@ static void PASCAL Rename(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszOldName*<br/>
 旧路径。
@@ -715,7 +716,7 @@ LONGLONG lOff,
 UINT nFrom);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lOff*<br/>
 要将文件指针移动到的字节数。 正值将文件指针移动到文件末尾;负值将文件指针移动到文件的开头。
@@ -731,7 +732,7 @@ UINT nFrom);
 
 下表列出了 *n* 参数的可能值。
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`CFile::begin`|从文件的开头进行查找。|
 |`CFile::current`|从文件指针的当前位置进行查找。|
@@ -791,7 +792,7 @@ ULONGLONG SeekToEnd();
 virtual void SetFilePath(LPCTSTR lpszNewName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszNewName*<br/>
 指向指定新路径的字符串的指针。
@@ -813,7 +814,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 virtual void SetLength(ULONGLONG dwNewLen);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwNewLen*<br/>
 所需的文件长度（以字节为单位）。 此值可以大于或小于文件的当前长度。 文件将根据需要进行扩展或截断。
@@ -838,7 +839,7 @@ static void PASCAL SetStatus(
     CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFileName*<br/>
 作为所需文件的路径的字符串。 路径可以是相对路径或绝对路径，并且可以包含网络名称。
@@ -851,7 +852,7 @@ static void PASCAL SetStatus(
 
 ### <a name="remarks"></a>备注
 
-若要设置时间，请修改 `m_mtime` *状态*字段。
+若要设置时间，请修改 `m_mtime` *状态* 字段。
 
 当你 `SetStatus` 在尝试仅更改文件的属性的情况下调用时，并且 `m_mtime` 文件状态结构的成员为非零值时，属性也可能会受到影响 (更改时间戳可能对属性) 有副作用。 如果只想更改文件的属性，请先将 `m_mtime` 文件状态结构的成员设置为零，然后对调用 `SetStatus` 。
 
@@ -869,7 +870,7 @@ virtual void UnlockRange(
     ULONGLONG dwCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwPos*<br/>
 要解锁的字节范围起始处的字节偏移量。
@@ -898,7 +899,7 @@ virtual void Write(
     UINT nCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpBuf*<br/>
 指向用户提供的缓冲区的指针，该缓冲区包含要写入到文件中的数据。
@@ -916,7 +917,7 @@ virtual void Write(
 
 另请参阅 [CFile：： CFile](#cfile) 和 [CFile：： Open](#open)的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>

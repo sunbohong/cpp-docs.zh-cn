@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CGopherFile 类
 title: CGopherFile 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-ms.openlocfilehash: e157a4509fe30b814a1834690a675906ac82afe7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8f511bdaf3ae6417972ea19465c0392832a2b408
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184070"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile 类
 
 提供查找和读取 Gopher 服务器上文件的功能。
 
 > [!NOTE]
-> 类`CGopherConnection` `CGopherFile`、 `CGopherFileFind`、`CGopherLocator`及其成员已被弃用，因为它们在 Windows XP 平台上不工作，但它们将继续在较早的平台上工作。
+> 类 `CGopherConnection` 、 `CGopherFile` 、 `CGopherFileFind` `CGopherLocator` 和其成员已被弃用，因为它们不能在 Windows XP 平台上运行，但它们将继续在早期的平台上工作。
 
 ## <a name="syntax"></a>语法
 
@@ -32,15 +33,15 @@ class CGopherFile : public CInternetFile
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CGopher文件：CGopher文件](#cgopherfile)|构造 `CGopherFile` 对象。|
+|[CGopherFile：： CGopherFile](#cgopherfile)|构造 `CGopherFile` 对象。|
 
 ## <a name="remarks"></a>备注
 
-gopher 服务不允许用户将数据写入 gopher 文件，因为此服务主要用作菜单驱动的用于查找信息的界面。 成员`CGopherFile`函数`Write`、`WriteString`和`Flush`未为`CGopherFile`实现 。 在`CGopherFile`对象上调用这些函数，返回[CNot 支持异常](../../mfc/reference/cnotsupportedexception-class.md)。
+Gopher 服务不允许用户将数据写入 gopher 文件，因为此服务主要用作用于查找信息的菜单驱动接口。 `CGopherFile`成员函数 `Write` 、 `WriteString` 和 `Flush` 不是针对实现的 `CGopherFile` 。 在对象上调用这些函数 `CGopherFile` 将返回 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。
 
-要了解有关如何`CGopherFile`与其他 MFC Internet 类合作，请参阅[WinInet](../../mfc/win32-internet-extensions-wininet.md)的 Internet 编程文章。
+若要了解有关如何 `CGopherFile` 使用其他 MFC Internet 类的详细信息，请参阅文章 [使用 WinInet 进行 Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -50,17 +51,17 @@ gopher 服务不允许用户将数据写入 gopher 文件，因为此服务主�
 
 [CStdioFile](../../mfc/reference/cstdiofile-class.md)
 
-[C互联网文件](../../mfc/reference/cinternetfile-class.md)
+[CInternetFile](../../mfc/reference/cinternetfile-class.md)
 
 `CGopherFile`
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxinet.h
+**标头：** afxinet。h
 
-## <a name="cgopherfilecgopherfile"></a><a name="cgopherfile"></a>CGopher文件：CGopher文件
+## <a name="cgopherfilecgopherfile"></a><a name="cgopherfile"></a> CGopherFile：： CGopherFile
 
-调用此成员函数以构造对象`CGopherFile`。
+调用此成员函数来构造 `CGopherFile` 对象。
 
 ```
 CGopherFile(
@@ -76,40 +77,40 @@ CGopherFile(
     DWORD_PTR dwContext);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hFile*<br/>
 HINTERNET 文件的句柄。
 
-*参考定位器*<br/>
-对[CGopher 定位器对象的引用](../../mfc/reference/cgopherlocator-class.md)。
+*refLocator*<br/>
+对 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 对象的引用。
 
-*p连接*<br/>
-指向[Gopher 连接](../../mfc/reference/cgopherconnection-class.md)对象的指针。
+*pConnection*<br/>
+指向 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 对象的指针。
 
-*h 会话*<br/>
+*hSession*<br/>
 当前 Internet 会话的句柄。
 
 *pstrLocator*<br/>
-指向用于定位 gopher 服务器的字符串的指针。 有关 gopher 定位器的详细信息，请参阅[Gopher 会话](cgopherlocator-class.md)。
+指向用于定位 gopher 服务器的字符串的指针。 有关 gopher 定位符的详细信息，请参阅 [Gopher 会话](cgopherlocator-class.md) 。
 
-*德洛克伦*<br/>
-包含*pstrLocator*中的字节数的 DWORD。
+*dwLocLen*<br/>
+包含 *pstrLocator* 中的字节数的 DWORD。
 
 *dwContext*<br/>
-指向要打开的文件的上下文标识符的指针。
+指向正在打开的文件的上下文标识符的指针。
 
 ### <a name="remarks"></a>备注
 
-您需要一个`CGopherFile`对象在 gopher Internet 会话期间从文件中读取。
+在 `CGopherFile` Gopher Internet 会话过程中，需要对象从文件中读取。
 
-您从不直接创建`CGopherFile`对象。 相反，调用[CGopher 连接：：打开文件](../../mfc/reference/cgopherconnection-class.md#openfile)以在 gopher 服务器上打开文件。
+永远不会 `CGopherFile` 直接创建对象。 请改为调用 [CGopherConnection：： OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) 以打开 gopher 服务器上的文件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)<br/>
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CInternetFile 类](../../mfc/reference/cinternetfile-class.md)<br/>
 [CGopherLocator 类](../../mfc/reference/cgopherlocator-class.md)<br/>
-[CGopher文件查找类](../../mfc/reference/cgopherfilefind-class.md)<br/>
-[CGopher 连接类](../../mfc/reference/cgopherconnection-class.md)
+[CGopherFileFind 类](../../mfc/reference/cgopherfilefind-class.md)<br/>
+[CGopherConnection 类](../../mfc/reference/cgopherconnection-class.md)

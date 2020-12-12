@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： subtract_with_carry_engine 类
 title: subtract_with_carry_engine 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: cf82c4ca3ce995fa9a53dbea21293dc8515ff491
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d2c082f2c7b8405cf8cd25bce6a77d263fd8f64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183381"
 ---
 # <a name="subtract_with_carry_engine-class"></a>subtract_with_carry_engine 类
 
@@ -34,7 +35,7 @@ template <class UIntType, size_t W, size_t S, size_t R>
 class subtract_with_carry_engine;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *UIntType*\
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
@@ -61,11 +62,11 @@ class subtract_with_carry_engine;
 
 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `substract_with_carry_engine`类模板是对[linear_congruential_engine](../standard-library/linear-congruential-engine-class.md)的改进。 这两个引擎的速度和结果的质量都不如 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md)。
 
-此引擎使用重复关系 ( *period*) 生成用户指定的无符号整型值，其中如果为，则该值为，否则为，其 `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` `cy(i)` 值为 `1` `x(i - S) - x(i - R) - cy(i - 1) < 0` `0` `M` `2` <sup>W</sup>。引擎的状态为 "执行" 指示器和*R*值。 如果至少调用 r 次，则这些值包含返回的最后一个*r*值 `operator()` ，否则包含已返回的*R* `N` 值和种子的最后一个 `R - N` 值。
+此引擎使用重复关系 ( *period*) 生成用户指定的无符号整型值，其中如果为，则该值为，否则为，其 `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` `cy(i)` 值为 `1` `x(i - S) - x(i - R) - cy(i - 1) < 0` `0` `M` `2` <sup>W</sup>。引擎的状态为 "执行" 指示器和 *R* 值。 如果至少调用 r 次，则这些值包含返回的最后一个 *r* 值 `operator()` ，否则包含已返回的 `N` 值和种子的最后一个 `R - N` 值。
 
 模板参数 `UIntType` 必须大到足以保留最多 `M - 1` 个值。
 
@@ -85,6 +86,6 @@ class subtract_with_carry_engine;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

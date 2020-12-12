@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CFieldExchange 类
 title: CFieldExchange 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-ms.openlocfilehash: d10bfc436297a5f861f17843007347dcef9e58ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 128b2a7baf6fff923393f3105e27f1e85657bdde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184551"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 类
 
@@ -38,24 +39,24 @@ class CFieldExchange
 
 ## <a name="remarks"></a>备注
 
-`CFieldExchange`没有基类。
+`CFieldExchange` 没有基类。
 
 如果要为自定义数据类型编写数据交换例程，或在实现批量取行时使用此类，则为;否则，你将不会直接使用此类。 RFX 和批量 RFX 在记录集对象的字段数据成员与数据源中的当前记录的对应字段之间交换数据。
 
 > [!NOTE]
-> 如果使用的是数据访问对象（DAO）类而不是开放式数据库连接（ODBC）类，请改用类[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) 。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
+> 如果使用的是 (DAO) 类的数据访问对象，而不是 ODBC) 类 (开放式数据库连接，请改用类 [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) 。 有关详细信息，请参阅文章 [概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
-`CFieldExchange`对象提供记录字段交换或大容量记录字段交换所需的上下文信息。 `CFieldExchange`对象支持许多操作，包括绑定参数和字段数据成员以及在当前记录的字段上设置各种标志。 RFX 和批量 RFX 操作对中由 FieldType 定义的类型的记录集类数据成员执行 **`enum`** **FieldType** `CFieldExchange` 。 可能的**FieldType**值包括：
+`CFieldExchange`对象提供记录字段交换或大容量记录字段交换所需的上下文信息。 `CFieldExchange` 对象支持许多操作，包括绑定参数和字段数据成员以及在当前记录的字段上设置各种标志。 RFX 和批量 RFX 操作对中由 FieldType 定义的类型的记录集类数据成员执行 **`enum`**  `CFieldExchange` 。 可能的 **FieldType** 值包括：
 
-- `CFieldExchange::outputColumn`对于字段数据成员。
+- `CFieldExchange::outputColumn` 对于字段数据成员。
 
-- `CFieldExchange::inputParam`或 `CFieldExchange::param` 输入参数数据成员的。
+- `CFieldExchange::inputParam` 或 `CFieldExchange::param` 输入参数数据成员的。
 
-- `CFieldExchange::outputParam`用于输出参数数据成员。
+- `CFieldExchange::outputParam` 用于输出参数数据成员。
 
-- `CFieldExchange::inoutParam`对于输入/输出参数数据成员。
+- `CFieldExchange::inoutParam` 对于输入/输出参数数据成员。
 
-该类的大多数成员函数和数据成员都是为编写您自己的自定义 RFX 例程而提供的。 你将 `SetFieldType` 频繁使用。 有关详细信息，请参阅[记录字段交换（RFX）](../../data/odbc/record-field-exchange-rfx.md)和[记录集（ODBC）](../../data/odbc/recordset-odbc.md)一文。 有关批量行提取的信息，请参阅[记录集：批量提取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。 有关 RFX 和批量 RFX 全局函数的详细信息，请参阅此引用的 MFC 宏和全局函数部分中的[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。
+该类的大多数成员函数和数据成员都是为编写您自己的自定义 RFX 例程而提供的。 你将 `SetFieldType` 频繁使用。 有关详细信息，请参阅文章 [记录字段交换 (RFX) ](../../data/odbc/record-field-exchange-rfx.md) 和 [记录集 (ODBC) ](../../data/odbc/recordset-odbc.md)。 有关批量行提取的信息，请参阅文章 [记录集：批量提取记录 (ODBC) ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。 有关 RFX 和批量 RFX 全局函数的详细信息，请参阅此引用的 MFC 宏和全局函数部分中的 [记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,18 +66,18 @@ class CFieldExchange
 
 **标头：** afxdb
 
-## <a name="cfieldexchangeisfieldtype"></a><a name="isfieldtype"></a>CFieldExchange::IsFieldType
+## <a name="cfieldexchangeisfieldtype"></a><a name="isfieldtype"></a> CFieldExchange::IsFieldType
 
-如果你编写自己的 RFX 函数，请 `IsFieldType` 在函数的开始处调用，以确定是否可以对特定字段或参数数据成员类型（ `CFieldExchange::outputColumn` 、 `CFieldExchange::inputParam` 、、 `CFieldExchange::param` `CFieldExchange::outputParam` 或 `CFieldExchange::inoutParam` ）执行当前操作。
+如果你编写自己的 RFX 函数，请 `IsFieldType` 在函数的开始处调用，以确定是否可以在 `CFieldExchange::outputColumn` 、 `CFieldExchange::inputParam` 、 `CFieldExchange::param` 、 `CFieldExchange::outputParam` 或 `CFieldExchange::inoutParam`)  (特定字段或参数数据成员类型上执行当前操作。
 
 ```
 BOOL IsFieldType(UINT* pnField);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnField*<br/>
-此参数中返回字段或参数数据成员的顺序号。 此数字对应于[CRecordset：:D ofieldexchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[CRecordset：:D obulkfieldexchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)函数中数据成员的顺序。
+此参数中返回字段或参数数据成员的顺序号。 此数字对应于 [CRecordset：:D ofieldexchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 或 [CRecordset：:D obulkfieldexchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) 函数中数据成员的顺序。
 
 ### <a name="return-value"></a>返回值
 
@@ -86,15 +87,15 @@ BOOL IsFieldType(UINT* pnField);
 
 遵循现有 RFX 函数的模型。
 
-## <a name="cfieldexchangesetfieldtype"></a><a name="setfieldtype"></a>CFieldExchange::SetFieldType
+## <a name="cfieldexchangesetfieldtype"></a><a name="setfieldtype"></a> CFieldExchange::SetFieldType
 
-你需要 `SetFieldType` 在记录集类的[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)重写中调用。
+你需要 `SetFieldType` 在记录集类的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 或 [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) 重写中调用。
 
 ```cpp
 void SetFieldType(UINT nFieldType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFieldType*<br/>
 `enum FieldType`在中声明的的值 `CFieldExchange` ，可以是下列值之一：
@@ -122,9 +123,9 @@ void SetFieldType(UINT nFieldType);
 |`CFieldExchange::outputParam`|输出参数。 记录集的存储过程的返回值。|
 |`CFieldExchange::inoutParam`|输入/输出参数。 传入并从记录集的存储过程返回的值。|
 
-一般情况下，与字段数据成员或参数数据成员关联的 RFX 函数调用的每一组前面都必须调用 `SetFieldType` 。 每个调用的*nFieldType*参数将 `SetFieldType` 标识按调用的 RFX 函数调用所表示的数据成员的类型 `SetFieldType` 。
+一般情况下，与字段数据成员或参数数据成员关联的 RFX 函数调用的每一组前面都必须调用 `SetFieldType` 。 每个调用的 *nFieldType* 参数将 `SetFieldType` 标识按调用的 RFX 函数调用所表示的数据成员的类型 `SetFieldType` 。
 
-有关处理输出和输入/输出参数的详细信息，请参阅 `CRecordset` 成员函数[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)。 有关 RFX 和批量 RFX 函数的详细信息，请参阅主题[记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。 有关批量行提取的相关信息，请参阅[记录记录：批量获取记录（ODBC）](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)一文。
+有关处理输出和输入/输出参数的详细信息，请参阅 `CRecordset` 成员函数 [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)。 有关 RFX 和批量 RFX 函数的详细信息，请参阅主题 [记录字段交换函数](../../mfc/reference/record-field-exchange-functions.md)。 有关批量行提取的相关信息，请参阅文章 [记录集：批量提取记录 (ODBC) ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 ### <a name="example"></a>示例
 
@@ -132,7 +133,7 @@ void SetFieldType(UINT nFieldType);
 
 [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CRecordset 类](../../mfc/reference/crecordset-class.md)

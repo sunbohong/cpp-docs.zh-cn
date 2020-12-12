@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 字符串&gt;
 title: '&lt;字符串&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: cb7d869d36bea6854e3eacbacb6dfad0c32a816f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4a5598189be96cb15ff423f57e45fd91e2d93216
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183537"
 ---
 # <a name="ltstringgt"></a>&lt;字符串&gt;
 
@@ -45,7 +46,7 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[operator +](../standard-library/string-operators.md#op_add)|连接两个字符串对象。|
 |[operator！ =](../standard-library/string-operators.md#op_neq)|测试运算符左侧的字符串对象是否不等于右侧的字符串对象。|
@@ -59,7 +60,7 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 ### <a name="specialized-template-functions"></a>专用化模板函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`hash`|生成字符串的哈希。|
 |[swap](../standard-library/string-functions.md#swap)|交换两个字符串的字符数组。|
@@ -75,20 +76,20 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 ### <a name="functions"></a>函数
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[getline 模板](../standard-library/string-functions.md#getline)|将字符串从输入流中一行一行地提取出来。|
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[basic_string 类](../standard-library/basic-string-class.md)|一个类模板，用于描述可存储任意类似于字符的对象序列的对象。|
 |[char_traits 结构](../standard-library/char-traits-struct.md)|一个类模板，用于描述与类型 CharType 的字符关联的特性。|
 
 ### <a name="specializations"></a>专用化
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[char_traits \<char> 结构](../standard-library/char-traits-char-struct.md)|一个结构，它是模板结构 `char_traits` \<CharType> 对类型的元素的专用化 **`char`** 。|
 |[char_traits<wchar_t> 结构](../standard-library/char-traits-wchar-t-struct.md)|一个结构，它是模板结构 `char_traits` \<CharType> 对类型的元素的专用化 **`wchar_t`** 。|
@@ -101,7 +102,7 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 - **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
