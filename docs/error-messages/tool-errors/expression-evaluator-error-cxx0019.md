@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：表达式计算器错误 CXX0019
 title: 表达式计算器错误 CXX0019
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CXX0019
 - CAN0019
 ms.assetid: 4c6431fd-3310-4a61-934d-58b070b330fe
-ms.openlocfilehash: 61646462eeba4918a4993b23f7f4b394083296ce
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1caf4714c1fc719883ee889c14225e4f69e961a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80195885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97228230"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>表达式计算器错误 CXX0019
 
