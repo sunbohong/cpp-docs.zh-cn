@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：字节分类
 title: 字节分类
 ms.date: 04/04/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - byte classification routines
 - bytes, testing
 ms.assetid: 1cb52d71-fb0c-46ca-aad7-6472c1103370
-ms.openlocfilehash: 7272170bd3a1e765e728451afc245947111ee947
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 00691ca85366c5cbbe28b023f2a269838128fe9e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221691"
 ---
 # <a name="byte-classification"></a>字节分类
 
@@ -22,7 +23,7 @@ ms.locfileid: "80171562"
 > [!NOTE]
 > 根据定义，0 和 127 之间的 ASCII 字符是所有多字节字符集的子集。 例如，日语的片假名字符集包括 ASCII 以及非 ASCII 字符。
 
-下表中的预定义常量在 \<ctype.h> 中定义。
+下表中的预定义常量在中定义 \<ctype.h> 。
 
 ## <a name="multibyte-character-byte-classification-routines"></a>多字节字符的字节分类例程
 
@@ -34,7 +35,7 @@ ms.locfileid: "80171562"
 |[_ismbbgraph、_ismbbgraph_l](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|与 _ismbbprint 相同，但是 _ismbbgraph 不包含空格字符 (0x20)。|
 |[_ismbbkalnum、_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|标点以外的非 ASCII 文本符号。 例如，仅在代码页 932 中，_ismbbkalnum 测试片假名字母数字。|
 |[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|片假名 (0xA1 - 0xDF)，仅代码页 932|
-|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文本或非 ASCII 标点符号。 例如，仅在代码页932中， **_ismbbkprint**为片假名字母数字或片假名标点（范围：0xA1 - 0xDF）。|
+|[_ismbbkprint、_ismbbkprint_l](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|非 ASCII 文本或非 ASCII 标点符号。 例如，仅在代码页 932 中，_ismbbkprint 测试片假名字母数字或片假名标点（范围：0xA1 - 0xDF）。|
 |[_ismbbkpunct、_ismbbkpunct_l](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|非 ASCII 标点。 例如，仅在代码页 932 中，_ismbbkpunct 测试片假名标点。|
 |[_ismbblead、_ismbblead_l](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|多字节字符的第一个字节。 例如，仅在代码页 932 中，有效范围为 0x81 - 0x9F 以及 0xE0 - 0xFC。|
 |[_ismbbprint、_ismbbprint_l](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|isprint &#124; &#124; _ismbbkprint。 ismbbprint 包含空白字符 (0x20)|
@@ -46,7 +47,7 @@ ms.locfileid: "80171562"
 |[_mbsbtype、_mbsbtype_l](../c-runtime-library/reference/mbsbtype-mbsbtype-l.md)|返回字符串内的字节类型|
 |[mbsinit](../c-runtime-library/reference/mbsinit.md)|跟踪多字节字符转换的状态。|
 
-在 \<limits.h> 中定义的 MB_LEN_MAX 宏扩展到任一多字节字符可具有的最大字节长度。 在 \<stdlib.h> 中定义的 MB_CUR_MAX 扩展到当前区域设置中任一多字节字符的最大字节长度。
+在中定义的 **MB_LEN_MAX** 宏将 \<limits.h> 扩展为任意多字节字符可具有的最大长度（以字节为单位）。 **MB_CUR_MAX**（在中定义 \<stdlib.h> ）将扩展到当前区域设置中任何多字节字符的最大长度（以字节为单位）。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：规则中的搜索路径
 title: 规则中的搜索路径
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - inference rules in NMAKE
 - rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-ms.openlocfilehash: eab6e9d32940aaf5729ce82c4e8258a3a3132208
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf070fc57907b68eb458b8a5276698282ef30f9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318857"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224876"
 ---
 # <a name="search-paths-in-rules"></a>规则中的搜索路径
 
@@ -22,7 +23,7 @@ ms.locfileid: "62318857"
 
 ## <a name="remarks"></a>备注
 
-推理规则适用于依赖项，仅当完全依赖项中指定的路径与匹配的推理规则路径。 指定在依赖项的目录*frompath*和中的目标目录*topath*; 不允许有空格。 指定只有一条路径的每个扩展。 上一个扩展的路径需要在另一个路径。 若要指定当前目录，请使用句点 （.） 或空大括号 （{}）。 可以表示宏*frompath*并*topath*; 在预处理过程中调用它们。
+只有在依赖项中指定的路径与推理规则路径完全匹配时，推理规则才适用于依赖项。 在 *topath* 中指定依赖项的 *frompath* 和目标的目录;不允许使用空格。 为每个扩展名仅指定一个路径。 一个扩展上的路径需要另一个上的路径。 若要指定当前目录，请使用句点 (. ) 或空大括号 ( {} ) 。 宏可以表示 *frompath* 和 *topath*;它们是在预处理过程中调用的。
 
 ## <a name="example"></a>示例
 

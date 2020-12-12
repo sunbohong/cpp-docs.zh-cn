@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __outbyte
 title: __outbyte
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e062d561719cbcdb32ab980efde9eb568defeadb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222471"
 ---
 # <a name="__outbyte"></a>__outbyte
 
 **Microsoft 专用**
 
-生成指令, 该指令发送由`Data`指定`Port`的 i/o 端口指定的1个字节。 `out`
+生成 `out` 指令，该指令发送由指定的 i/o 端口指定的1个字节 `Data` `Port` 。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +30,7 @@ void __outbyte(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *口*\
 中要将数据发送到的端口。
@@ -39,11 +40,11 @@ void __outbyte(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__outbyte`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 

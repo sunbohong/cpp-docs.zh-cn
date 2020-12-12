@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：参数访问
 title: 参数访问
 ms.date: 04/04/2018
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - argument access macros [C++]
 - variable-length argument lists
 ms.assetid: 7046ae34-a0ec-44f0-815d-3209492a3e19
-ms.openlocfilehash: 8107cffa6a2da41c38b116b2e3fe36adf6ac945f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: f62ac2bc4ae895afe763d0a0a4caa32601e82713
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221860"
 ---
 # <a name="argument-access"></a>参数访问
 
-当参数数量可变时，va_arg、va_end 和 va_start 宏提供对函数参数的访问。 为了兼容 ANSI/ISO C，\<stdarg.h> 中定义了这些宏。为了兼容 UNIX System V，\<varargs.h> 中定义了这些宏。
+当参数数量可变时，va_arg、va_end 和 va_start 宏提供对函数参数的访问。 这些宏在中定义 \<stdarg.h> 为 ANSI/ISO C 兼容性和中的，以 \<varargs.h> 实现与 UNIX 系统 V 的兼容。
 
 ## <a name="argument-access-macros"></a>参数-访问宏
 

@@ -1,4 +1,5 @@
 ---
+description: 了解更多： OLE 容器类
 title: OLE 容器类
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 596b94e7fdbb5d9dc1862867001f6c01c1aea7b2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 1525fb41f15952d62b6b3c9a7603480d1e399229
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222224"
 ---
 # <a name="ole-container-classes"></a>OLE 容器类
 
@@ -32,7 +33,7 @@ ms.locfileid: "84617799"
 一个派生自 `COleDocument` 的类，它提供用于链接的基础结构。 应从此类派生容器应用程序的文档类，而不是从中派生 `COleDocument` 。
 
 [CRichEditDoc](reference/cricheditdoc-class.md)<br/>
-维护在 rich edit 控件中的 OLE 客户端项的列表。 与[CRichEditView](reference/cricheditview-class.md)和[CRichEditCntrItem](reference/cricheditcntritem-class.md)一起使用。
+维护在 rich edit 控件中的 OLE 客户端项的列表。 与 [CRichEditView](reference/cricheditview-class.md) 和 [CRichEditCntrItem](reference/cricheditcntritem-class.md)一起使用。
 
 [CDocItem](reference/cdocitem-class.md)<br/>
 和的抽象基类 `COleClientItem` `COleServerItem` 。 派生自的类的对象 `CDocItem` 表示文档的各个部分。
@@ -46,6 +47,6 @@ ms.locfileid: "84617799"
 [COleException](reference/coleexception-class.md)<br/>
 OLE 处理失败导致的异常。 此类将由容器和服务器使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

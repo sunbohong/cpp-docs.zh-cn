@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/SAFESEH (图像具有安全异常处理程序) '
 title: /SAFESEH（图像具有安全异常处理程序）
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 723b5503bca1d98d7df0c638df1dfc8101fc116f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224980"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH（图像具有安全异常处理程序）
 
@@ -21,21 +22,21 @@ ms.locfileid: "62318636"
 /SAFESEH[:NO]
 ```
 
-当 **/SAFESEH**指定，则链接器才将生成一个映像，是否它还可以生成映像的安全异常处理程序的表。 此表指定哪些异常处理程序是有效的映像的操作系统。
+当指定了 **/SAFESEH** 时，链接器将仅生成一个图像，如果它还可以生成一个映像的安全异常处理程序表。 此表指定操作系统的哪些异常处理程序对图像有效。
 
-**/SAFESEH**链接为 x86 时才有效目标。 **/SAFESEH**已记下的异常处理程序的平台不支持。 例如，在 x64 和 ARM 上，所有异常处理程序是 PDATA 中都注明。 ML64.exe 对提供支持将发出 SEH 信息 （XDATA 和 PDATA） 的批注添加到映像中，您可以通过 ml64 函数展开。 请参阅[MASM 的 x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)有关详细信息。
+仅当链接到 x86 目标时， **/SAFESEH** 才有效。 已记录异常处理程序的平台不支持 **/SAFESEH** 。 例如，在 x64 和 ARM 上，PDATA 中记录了所有异常处理程序。 ML64.exe 支持添加批注，以便将 SEH 信息 (XDATA 和 PDATA) 发送到映像，使你能够通过 ml64.exe 函数展开。 有关详细信息，请参阅 [MASM ( # A0) ](../../assembler/masm/masm-for-x64-ml64-exe.md) 。
 
-如果 **/SAFESEH**未指定，则链接器将生成具有安全异常处理程序表的映像，如果所有模块都都与安全异常处理功能兼容。 如果任何模块不兼容与安全异常处理功能，生成的映像将不包含安全异常处理程序的表。 如果[/SUBSYSTEM](subsystem-specify-subsystem.md) WINDOWSCE 或 EFI_ * 选项之一，指定链接器不会尝试生成具有安全异常处理程序表映像既不的那些子系统才可以进行信息的使用。
+如果未指定 **/SAFESEH** ，则链接器将生成一个包含安全异常处理程序表的图像，前提是所有模块都与安全异常处理功能兼容。 如果任何模块都不与安全异常处理功能兼容，则生成的映像将不包含安全异常处理程序表。 如果 [/SUBSYSTEM](subsystem-specify-subsystem.md) 指定 WINDOWSCE 或 EFI_ * 选项之一，则链接器将不会尝试生成包含安全异常处理程序表的映像，因为这些子系统都不能使用该信息。
 
-如果 **/SAFESEH:NO**指定，则链接器将不会产生安全异常处理程序表的映像，即使所有模块都都兼容与安全异常处理功能。
+如果指定了 **/SAFESEH： NO** ，则链接器将不会生成包含安全异常处理程序表的图像，即使所有模块都与安全异常处理功能兼容。
 
-链接器不能以产生一个图像的最常见原因是因为一个或多个输入文件 （模块） 链接器不与安全异常处理程序功能兼容。 要与安全异常处理程序不兼容的模块的常见原因是因为它从视觉对象的以前版本的编译器创建C++。
+链接器无法生成图像的最常见原因是：) 链接器 (模块中的一个或多个输入文件与安全异常处理程序功能不兼容。 模块与安全异常处理程序不兼容的一个常见原因是，它是使用来自 Visual C++ 早期版本的编译器创建的。
 
-您还可以注册一个函数作为结构化的异常处理程序通过使用[。SAFESEH](../../assembler/masm/dot-safeseh.md)。
+还可以通过使用将函数注册为结构化异常处理程序 [。SAFESEH](../../assembler/masm/dot-safeseh.md)。
 
-不能将标记的现有二进制数作为具有安全异常处理程序 （或没有异常处理程序）;必须在生成时添加安全异常处理的信息。
+不能将现有的二进制文件标记为具有安全异常处理程序， (或不) 异常处理程序;有关安全异常处理的信息必须在生成时添加。
 
-生成的安全异常处理程序表的链接器的能力取决于使用 C 运行时库的应用程序。 如果与链接[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)和所需的安全异常处理程序表，您需要提供加载配置结构 （如可 loadcfg.c CRT 源文件中找到），它包含定义视觉对象的所有项C++。 例如：
+链接器生成安全异常处理程序表的能力取决于使用 C 运行时库的应用程序。 如果与 [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) 链接，并且你想要一个安全异常处理程序表，则需要提供一个加载配置结构， (如可以在 loadcfg CRT 源文件) 中找到，其中包含为 Visual C++ 定义的所有条目。 例如：
 
 ```
 #include <windows.h>
@@ -98,13 +99,13 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**链接器**文件夹。
+1. 选择 " **链接器** " 文件夹。
 
-1. 选择**命令行**属性页。
+1. 选择 " **命令行** " 属性页。
 
-1. 该选项输入**其他选项**框。
+1. 在 " **附加选项** " 框中输入选项。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：声明基于新控件类的变量
 title: 声明基于新控件类的变量
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: a828351a9e789228143d43d4c0a756abda879989
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: aa38a38b3113e4c4826756b020860d79e03ef16b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220222"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>声明基于新控件类的变量
 
@@ -37,7 +38,7 @@ ms.locfileid: "91506680"
 
 1. 在 " **类别**" 下，单击 " **控件**"。
 
-1. 在 " **控件 ID** " 列表中，选择所添加的控件。 **变量类型**列表应显示正确的变量类型，并且 "**控件类型**" 框应显示正确的控件类型。
+1. 在 " **控件 ID** " 列表中，选择所添加的控件。 **变量类型** 列表应显示正确的变量类型，并且 "**控件类型**" 框应显示正确的控件类型。
 
 1. 在 " **注释** " 框中，添加你想要在代码中显示的任何注释。
 

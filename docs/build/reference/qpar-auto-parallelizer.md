@@ -1,15 +1,16 @@
 ---
+description: '了解详细信息：/Qpar (自动并行) '
 title: /Qpar（自动并行化程序）
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableParallelCodeGeneration
 ms.assetid: 33ecf49d-c0d5-4f34-bce3-84ff03f38918
-ms.openlocfilehash: effe1ad7799022ea85184513de1dc48c72d6bfcb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f0d4264acc4224aaad518f936dcb885d592d3007
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225578"
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar（自动并行化程序）
 
@@ -41,11 +42,11 @@ ms.locfileid: "88839434"
 
 - 使用 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 中的代码示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [/Q 选项 (低级别操作) ](q-options-low-level-operations.md)<br/>
 [/Qpar-report (自动并行报告级别) ](qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)<br/>
 [#pragma 循环 ( # B1 ](../../preprocessor/loop.md)<br/>
 [Visual Studio 中的本机代码矢量化](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

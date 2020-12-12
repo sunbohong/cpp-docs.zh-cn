@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：缓冲区操作
 title: 缓冲区操作
 ms.date: 04/04/2018
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8389faf1e2e3de44507784755c7b4831952b9ffe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221730"
 ---
 # <a name="buffer-manipulation"></a>缓冲区操作
 
@@ -18,7 +19,7 @@ ms.locfileid: "79443597"
 
 ## <a name="buffer-manipulation-routines"></a>缓冲区操作例程
 
-|例程|使用|
+|例程所返回的值|使用|
 |-------------|---------|
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|将字符从一个缓冲区复制到另一个缓冲区，直到已复制给定字符或给定字符数|
 |[memchr、wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|在指定的字符数范围内，将指针返回到缓冲区中给定字符的第一个匹配项|
@@ -31,6 +32,6 @@ ms.locfileid: "79443597"
 
 当源和目标区域重叠时，仅 memmove 可保证正确复制完整源。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)

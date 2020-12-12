@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：/Qvec-report (自动向量化报告级别) '
 title: /Qvec-report（自动矢量化程序报告等级）
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-ms.openlocfilehash: 2007e80db0ee0aec362869315767505ec06ab109
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 734dabffa3bf19ecaba42d35d208eb27ec7b2968
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836863"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225461"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report（自动矢量化程序报告等级）
 
@@ -41,9 +42,9 @@ ms.locfileid: "88836863"
 
 - 使用 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 中的代码示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [/Q 选项 (低级别操作) ](q-options-low-level-operations.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)<br/>
 [Visual Studio 中的本机代码矢量化](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

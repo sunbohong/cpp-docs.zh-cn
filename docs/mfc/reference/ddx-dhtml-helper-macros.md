@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： DDX_DHtml 帮助程序宏
 title: DDX_DHtml Helper 宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-ms.openlocfilehash: eeea85872422edcf421ba2fe254c8f03c093fe3c
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: ac7df82d628c943a5ba28697cf614853e7e7dddd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220235"
 ---
 # <a name="ddx_dhtml-helper-macros"></a>DDX_DHtml Helper 宏
 
@@ -56,12 +57,12 @@ DDX_DHtml_Anchor_Href(
     CString& var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>
@@ -82,12 +83,12 @@ DDX_DHtml_Anchor_Target(
     CString& var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>
@@ -108,12 +109,12 @@ DDX_DHtml_ElementInnerHtml(
     CString& var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>
@@ -134,12 +135,12 @@ DDX_DHtml_ElementInnerText(
     CString& var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>
@@ -160,16 +161,16 @@ DDX_DHtml_ElementValue(
     var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>
-要交换的值。 请参阅[CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)中的*值*。
+要交换的值。 请参阅 [CDHtmlDialog：:D DX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)中的 *值*。
 
 ### <a name="remarks"></a>备注
 
@@ -188,12 +189,12 @@ DDX_DHtml_Frame_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>
@@ -214,12 +215,12 @@ DDX_DHtml_IFrame_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>
@@ -240,12 +241,12 @@ DDX_DHtml_Img_Src(
     CString& var)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dx*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
 
-*name*<br/>
+name<br/>
 为 HTML 控件的 ID 参数指定的值。
 
 *var*<br/>

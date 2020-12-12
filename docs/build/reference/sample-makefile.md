@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息：示例生成文件
 title: 示例生成文件
 ms.date: 11/04/2016
 ms.assetid: 8343ce71-5556-4ae0-8d1e-7efd82673070
-ms.openlocfilehash: 79ca4e466d37880787260be5b8b4ec76a5bb092f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95b7eef18ca2b517d1b3de9ca450b1bbd03116d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318818"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224902"
 ---
 # <a name="sample-makefile"></a>示例生成文件
 
-本主题包含的示例生成文件。
+本主题包含一个示例生成文件。
 
 ## <a name="sample"></a>示例
 

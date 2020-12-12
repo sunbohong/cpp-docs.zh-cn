@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：/Qpar-report (自动并行报告级别) '
 title: /Qpar-report（自动并行化程序报告等级）
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 3a154bdf50e951ee932173cdb65f9e1514011245
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 573ab7535b63ba8d3f19f2917c17709ac7726b38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839408"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225526"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report（自动并行化程序报告等级）
 
@@ -41,9 +42,9 @@ ms.locfileid: "88839408"
 
 - 使用 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 中的代码示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [/Q 选项 (低级别操作) ](q-options-low-level-operations.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)<br/>
 [Visual Studio 中的本机代码矢量化](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview)

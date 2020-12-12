@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：数据库宏和全局
 title: 数据库宏和全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-ms.openlocfilehash: 0dc53bce8b43677e7fe0aa1787d1adcc16a560c4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1dd6501c8ea37478a7b75341467e1c77819aa3f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220313"
 ---
 # <a name="database-macros-and-globals"></a>数据库宏和全局函数
 
@@ -28,7 +29,7 @@ ms.locfileid: "88837522"
 
 ### <a name="database-macros"></a>数据库宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AFX_ODBC_CALL](#afx_odbc_call)|调用返回 `SQL_STILL_EXECUTING` 的 ODBC API 函数。 `AFX_ODBC_CALL` 将反复调用该函数，直到不再返回 `SQL_STILL_EXECUTING`。|
 |[AFX_SQL_ASYNC](#afx_sql_async)|调用 `AFX_ODBC_CALL`。|
@@ -36,7 +37,7 @@ ms.locfileid: "88837522"
 
 ### <a name="database-globals"></a>数据库全局
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxDbInitModule](#afxdbinitmodule)|为动态链接到 MFC 的常规 MFC DLL 添加数据库支持。|
 |[AfxGetHENV](#afxgethenv)|检索 MFC 当前正在使用的 ODBC 环境的句柄。 您可以在直接 ODBC 调用中使用此句柄。|
@@ -67,12 +68,12 @@ void AFXAPI AfxDbInitModule( );
 AFX_ODBC_CALL(SQLFunc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *SQLFunc*<br/>
 ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AFX_ODBC_CALL` 重复调用函数，直到它不再返回 `SQL_STILL_EXECUTING` 。
 
@@ -98,15 +99,15 @@ ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK
 AFX_SQL_ASYNC(prs, SQLFunc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*pr*<br/>
+*prs*<br/>
 指向 `CRecordset` 对象或 `CDatabase` 对象的指针。 从 MFC 4.2 开始，将忽略此参数值。
 
 *SQLFunc*<br/>
 ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AFX_SQL_ASYNC` 只需调用宏 [AFX_ODBC_CALL](#afx_odbc_call) 并忽略 *pr* 参数。 在 4.2 之前的 MFC 版本中，`AFX_SQL_ASYNC` 用于调用可能返回 `SQL_STILL_EXECUTING` 的 ODBC API 函数。 如果 ODBC API 函数返回 `SQL_STILL_EXECUTING`，则 `AFX_SQL_ASYNC` 将调用 `prs->OnWaitForDataSource`。
 
@@ -125,12 +126,12 @@ ODBC API 函数。 有关 ODBC API 函数的详细信息，请参阅 Windows SDK
 AFX_SQL_SYNC(SQLFunc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *SQLFunc*<br/>
 ODBC API 函数。 有关这些函数的详细信息，请参阅 Windows SDK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏调用将不返回的 ODBC API 函数 `SQL_STILL_EXECUTING` 。
 
@@ -164,6 +165,6 @@ MFC 当前正在使用的 ODBC 环境的句柄。 如果没有 `SQL_HENV_NULL` [
 
   **标头** afxdb
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

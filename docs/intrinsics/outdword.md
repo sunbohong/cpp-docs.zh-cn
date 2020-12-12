@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __outdword
 title: __outdword
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - outdword instruction
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
-ms.openlocfilehash: ce1358e7cef0136ccf7d314038d06d271916e0bc
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e1d5f79231675ca64a340138ebda24a56e485ab1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222341"
 ---
 # <a name="__outdword"></a>__outdword
 
 **Microsoft 专用**
 
-生成指令, 以将双字*数据*输出到端口*端口。* `out`
+生成 `out` 指令，以将双字 *数据* 输出到端口 *端口*。
 
 ## <a name="syntax"></a>语法
 
@@ -30,7 +31,7 @@ void __outdword(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *口*\
 中要将数据发送到的端口。
@@ -40,11 +41,11 @@ void __outdword(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__outdword`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： OLE 通用对话框类
 title: OLE 通用对话框类
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: 1854d19c540f5e3e64b47786f465a05213eced86
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c30871c8f49be608f5ceeea3d84c86d483e20a81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97222276"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE 通用对话框类
 
@@ -48,6 +49,6 @@ ms.locfileid: "84617794"
 [COleBusyDialog](reference/colebusydialog-class.md)<br/>
 显示“服务器忙”和“服务器不响应”对话框，即用于处理对繁忙的应用程序的调用的标准用户界面。 通常由 `COleMessageFilter` 实现自动显示。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

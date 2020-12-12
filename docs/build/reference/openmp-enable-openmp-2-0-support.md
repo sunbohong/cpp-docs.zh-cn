@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/openmp (Enable OpenMP 支持) '
 title: '/openmp (启用 OpenMP 支持) '
 ms.date: 04/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: 6bd1ffcd9b21bfe22ed9424ee77edf43100abf6c
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 818cd6167bf56b9948a3d9f455b0153b4302e8df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921225"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221977"
 ---
 # <a name="openmp-enable-openmp-support"></a>/openmp (启用 OpenMP 支持) 
 
@@ -33,7 +34,7 @@ ms.locfileid: "92921225"
 
 ::: moniker-end
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `#pragma omp` 用于指定 [指令](../../parallel/openmp/reference/openmp-directives.md) 和 [子句](../../parallel/openmp/reference/openmp-clauses.md)。 如果编译中未指定 **/openmp** ，则编译器将忽略 openmp 子句和指令。 即使未指定 **/openmp** ，编译器也会处理 [OpenMP 函数](../../parallel/openmp/reference/openmp-functions.md)调用。
 
@@ -61,7 +62,7 @@ Microsoft 不建议你编写允许部分受信任的调用方的 **/openmp** 应
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 展开 " **配置属性** " "  >  **c/c + +**  >  **语言** " 属性页。
+1. 展开 "**配置属性**" "  >  **c/c + +**  >  **语言**" 属性页。
 
 1. 修改 **OpenMP 支持** 属性。
 
@@ -75,7 +76,7 @@ Microsoft 不建议你编写允许部分受信任的调用方的 **/openmp** 应
 
 使用 **/openmp** 进行编译时，对 test2 的第二次调用的运行时间不会超过使用 **/openmp-** 进行编译的时间，因为没有线程池启动。 在一百万次迭代中， **/openmp** 版本比 **/openmp-** 版本更快，后者的第二次调用 test2。 25次迭代时， **/openmp-** 和 **/openmp** 版本都注册小于时钟粒度。
 
-如果你的应用程序中仅有一个循环，并且该循环在不到15毫秒的时间内运行 (则) 计算机上的大约系统开销进行调整， **/openmp** 可能不适合。 如果更高，你可能需要考虑使用 **/openmp** 。
+如果你的应用程序中仅有一个循环，并且该循环在不到15毫秒的时间内运行 (则) 计算机上的大约系统开销进行调整， **/openmp** 可能不适合。 如果更高，你可能需要考虑使用 **/openmp**。
 
 ```cpp
 // cpp_compiler_options_openmp.cpp
