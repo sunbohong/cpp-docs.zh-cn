@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CBookmark 类
 title: CBookmark 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -66,12 +67,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 4013e40c364593676ebb099804304ffb2adb42c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7c138776e282c287eb7e7e09b93196ac0792f7ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838472"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295063"
 ---
 # <a name="cbookmark-class"></a>CBookmark 类
 
@@ -87,7 +88,7 @@ template <>
 class CBookmark< 0 > : public CBookmarkBase
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSize*<br/>
 书签缓冲区的大小（以字节为单位）。 当 *nSize* 为零时，将在运行时动态创建书签缓冲区。
@@ -100,7 +101,7 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[CBookmark](#cbookmark)|构造函数|
 |[GetBuffer](#getbuffer)|检索指向缓冲区的指针。|
@@ -109,11 +110,11 @@ class CBookmark< 0 > : public CBookmarkBase
 
 ### <a name="operators"></a>运算符
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[operator =](#operator)|`CBookmark`向另一个类分配一个类。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CBookmark<0>` 是的模板专用化 `CBookmark` ; 其缓冲区在运行时动态创建。
 
@@ -128,12 +129,12 @@ CBookmark();
 CBookmark(DBLENGTH nSize);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nSize*<br/>
 [in] 书签缓冲区的大小（以字节为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个函数将缓冲区设置为 NULL 并将缓冲区大小设置为 0。 第二个函数将缓冲区大小设置为 *nSize*，将缓冲区设置为 *nSize* 字节的字节数组。
 
@@ -178,7 +179,7 @@ virtual DBLENGTH GetSize() const throw();
 HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nSize*<br/>
 中书签缓冲区的大小。
@@ -190,7 +191,7 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数仅在中可用 `CBookmark<0>` 。
 
@@ -208,7 +209,7 @@ CBookmark& operator =(const CBookmark& bookmark) throw();
 
 仅在中需要此运算符 `CBookmark<0>` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

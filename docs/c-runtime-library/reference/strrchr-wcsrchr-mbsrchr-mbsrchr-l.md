@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: d1350cf14df0c87d57a87ad3aced35e3887b6676
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6931358132372a03ca56e1ce99b62a7a84807b59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296220"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
@@ -118,12 +119,12 @@ const unsigned char *_mbsrchr_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 要搜索的 null 终止的字符串。
 
-*ansi-c*<br/>
+*c*<br/>
 要查找的字符。
 
 *locale*<br/>
@@ -131,21 +132,21 @@ const unsigned char *_mbsrchr_l(
 
 ## <a name="return-value"></a>返回值
 
-返回指向*str*中最后一个匹配项*的指针*; 如果找不到*c* ，则返回 NULL。
+返回指向 *str* 中最后一个匹配项 *的指针*; 如果找不到 *c* ，则返回 NULL。
 
 ## <a name="remarks"></a>备注
 
-`strrchr`函数查找 str 中*c* （转换为）的最后一个匹配项 **`char`** 。 *str* 搜索包括终止 null 字符。
+`strrchr`函数查找转换为 **`char`** *str*) 的最后一个 c (。 搜索包括终止 null 字符。
 
 `wcsrchr` 和 `_mbsrchr` 分别是 `strrchr`的宽字符及多字节字符版本。 `wcsrchr` 的参数和返回值是宽字符字符串；而 `_mbsrchr` 的则是多字节字符字符串。
 
 在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向 **`const`** 非的指针 **`const`** 。 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS **`const`** 。 如果 **`const`** 这两个 c + + 重载都需要非行为，请定义符号 _CONST_RETURN。
 
-`_mbsrchr` 会验证其参数。 如果*str*为 NULL，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `errno` 则将设置为 EINVAL，并 `_mbsrchr` 返回0。 `strrchr` 和 `wcsrchr` 不会验证其参数。 否则这三个函数否则具有相同行为。
+`_mbsrchr` 会验证其参数。 如果 *str* 为 NULL，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， `errno` 则将设置为 EINVAL，并 `_mbsrchr` 返回0。 `strrchr` 和 `wcsrchr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
-输出值受区域设置的 LC_CTYPE 类别设置的设置的影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置的设置的影响;有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -168,11 +169,11 @@ const unsigned char *_mbsrchr_l(
 
 有关使用 `strrchr` 的示例，请参阅 [strchr](strchr-wcschr-mbschr-mbschr-l.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

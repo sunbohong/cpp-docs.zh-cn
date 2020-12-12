@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： double_2 类
 title: double_2 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 73656415d1b8774fe8304d674872524e76ee301d
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 104fef0c035487570a23360c312684ef176f69ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297123"
 ---
 # <a name="double_2-class"></a>double_2 类
 
@@ -45,68 +46,68 @@ ms.locfileid: "77126703"
 class double_2;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[double_2 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|double_2::get_x||
-|double_2::get_xy||
-|double_2::get_y||
-|double_2::get_yx||
-|double_2::ref_g||
-|double_2::ref_r||
-|double_2::ref_x||
-|double_2::ref_y||
-|double_2::set_x||
-|double_2::set_xy||
-|double_2::set_y||
-|double_2::set_yx||
+|double_2：： get_x||
+|double_2：： get_xy||
+|double_2：： get_y||
+|double_2：： get_yx||
+|double_2：： ref_g||
+|double_2：： ref_r||
+|double_2：： ref_x||
+|double_2：： ref_y||
+|double_2：： set_x||
+|double_2：： set_xy||
+|double_2：： set_y||
+|double_2：： set_yx||
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|double_2::operator-||
-|double_2::operator--||
-|double_2::operator*=||
-|double_2::operator/=||
-|double_2::operator++||
-|double_2::operator+=||
-|double_2::operator=||
-|double_2::operator-=||
+|double_2：： operator-||
+|double_2：： operator--||
+|double_2：： operator * =||
+|double_2：： operator/=||
+|double_2：： operator + +||
+|double_2：： operator + =||
+|double_2：： operator =||
+|double_2：： operator-=||
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |double_2::size 常量||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|double_2::g||
-|double_2::gr||
-|double_2::r||
-|double_2::rg||
-|double_2::x||
-|double_2::xy||
+|double_2：： g||
+|double_2：： gr||
+|double_2：： r||
+|double_2：： rg||
+|double_2：： x||
+|double_2：： xy||
 |double_2：： y||
-|double_2::yx||
+|double_2：： yx||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -118,7 +119,7 @@ class double_2;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a>double_2
+## <a name="double_2"></a><a name="ctor"></a> double_2
 
 默认构造函数，用0初始化所有元素。
 
@@ -160,7 +161,7 @@ explicit inline double_2(
     cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_V0*<br/>
 要初始化元素0的值。
@@ -174,12 +175,12 @@ explicit inline double_2(
 *_Other*<br/>
 用于初始化的对象。
 
-## <a name="double_2__size"></a>规格
+## <a name="size"></a><a name="double_2__size"></a> 规格
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

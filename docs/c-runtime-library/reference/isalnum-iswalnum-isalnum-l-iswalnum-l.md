@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： isalnum、iswalnum、_isalnum_l、_iswalnum_l
 title: isalnum、iswalnum、_isalnum_l、_iswalnum_l
 ms.date: 4/2/2020
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fbd1b686a02938317f36d7a9ec0e61c3fc2ae73f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919816"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296376"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 
@@ -63,9 +64,9 @@ int _isalnum_l( int c,  _locale_t locale );
 int _iswalnum_l( wint_t c, _locale_t locale );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要测试的整数。
 
 *locale*<br/>
@@ -73,11 +74,11 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="return-value"></a>返回值
 
-如果*c*是字母数字字符的特定表示形式，则每个例程将返回非零值。 如果*c*的**isalpha**或**isdigit**为非零，则**isalnum**将返回一个非零值，即，如果*c*在范围 a-z、a-z 或 0-9 内。 如果**iswalpha**或**iswdigit**为非零值，则**iswalnum**将返回非零*值。* 如果*c*不满足测试条件，则这些例程都将返回0。
+如果 *c* 是字母数字字符的特定表示形式，则每个例程将返回非零值。 如果 *c* 的 **isalpha** 或 **isdigit** 为非零，则 **isalnum** 将返回一个非零值，即，如果 *c* 在范围 a-z、a-z 或 0-9 内。 如果 **iswalpha** 或 **iswdigit** 为非零值，则 **iswalnum** 将返回非零 *值。* 如果 *c* 不满足测试条件，则这些例程都将返回0。
 
-这些具有 **_l**后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l** 后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**isalnum**和 **_isalnum_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
+如果 *c* 不是 EOF 或介于0到0xff （含0和0xff），则 **isalnum** 和 **_isalnum_l** 的行为是不确定的。 当使用调试 CRT 库并且 *c* 不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -88,21 +89,21 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**isalnum**|\<ctype.h>|
-|**iswalnum**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**iswalnum**|\<ctype.h> 或 \<wchar.h>|
 |**_isalnum_l**|\<ctype.h>|
-|**_iswalnum_l**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**_iswalnum_l**|\<ctype.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
-[is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[为，isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

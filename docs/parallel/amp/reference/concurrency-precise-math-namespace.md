@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：并发：:p recise_math 命名空间
 title: Concurrency::precise_math 命名空间
 ms.date: 11/04/2016
 f1_keywords:
@@ -133,16 +134,16 @@ f1_keywords:
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-ms.openlocfilehash: 448219eff5f30e87509e04289608c7c933e944f0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 3b9b74c24075f3c8c2feaea7892ad8278ba991f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126846"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297143"
 ---
 # <a name="concurrencyprecise_math-namespace"></a>Concurrency::precise_math 命名空间
 
-`precise_math` 命名空间中的函数符合 C99。 包括每个函数的单精度和双精度版本。 例如，`acos` 是双精度版本，`acosf` 是单精度版本。 这些函数（包括单精度函数）需要对加速器进行扩展的双精度支持。 可以使用[快捷键：： supports_double_precision](accelerator-class.md#supports_double_precision)来确定是否可以在特定加速器上运行这些函数。
+命名空间中的函数 `precise_math` 符合 C99。 包括每个函数的单精度和双精度版本。 例如， `acos` 是双精度版本， `acosf` 是单精度版本。 这些函数（包括单精度函数）需要对加速器进行扩展的双精度支持。 可以使用 [快捷键：： supports_double_precision](accelerator-class.md#supports_double_precision) 来确定是否可以在特定加速器上运行这些函数。
 
 ## <a name="syntax"></a>语法
 
@@ -150,13 +151,13 @@ ms.locfileid: "77126846"
 namespace precise_math;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[acos](concurrency-precise-math-namespace-functions.md#acos)|已重载。 计算参数的反余弦|
 |[acosf](concurrency-precise-math-namespace-functions.md#acosf)|计算参数的反余弦|
@@ -178,12 +179,12 @@ namespace precise_math;
 |[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|计算参数的上限|
 |[copysign](concurrency-precise-math-namespace-functions.md#copysign)|已重载。 用 _X 的大小和 _Y 的符号生成一个值|
 |[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|用 _X 的大小和 _Y 的符号生成一个值|
-|[cos](concurrency-precise-math-namespace-functions.md#cos)|已重载。 计算参数的余弦值|
+|[缆](concurrency-precise-math-namespace-functions.md#cos)|已重载。 计算参数的余弦值|
 |[cosf](concurrency-precise-math-namespace-functions.md#cosf)|计算参数的余弦值|
 |[cosh](concurrency-precise-math-namespace-functions.md#cosh)|已重载。 计算参数的双曲余弦值|
 |[coshf](concurrency-precise-math-namespace-functions.md#coshf)|计算参数的双曲余弦值|
-|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|已重载。 计算 pi \* 的余弦值 _X|
-|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|计算 pi \* 的余弦值 _X|
+|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|已重载。 计算 pi 的余弦值 \* _X|
+|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|计算 pi 的余弦值 \* _X|
 |[erf](concurrency-precise-math-namespace-functions.md#erf)|已重载。 计算 _X 的错误函数|
 |[erfc](concurrency-precise-math-namespace-functions.md#erfc)|已重载。 计算 _X 的互补错误函数|
 |[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|计算 _X 的互补错误函数|
@@ -206,13 +207,13 @@ namespace precise_math;
 |[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|确定参数之间的正差|
 |[floor](concurrency-precise-math-namespace-functions.md#floor)|已重载。 计算参数的下限|
 |[floorf](concurrency-precise-math-namespace-functions.md#floorf)|计算参数的下限|
-|[fma](concurrency-precise-math-namespace-functions.md#fma)|已重载。 计算（_X \* _Y） + _Z，舍入为一个三元运算|
-|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|计算（_X \* _Y） + _Z，舍入为一个三元运算|
+|[fma](concurrency-precise-math-namespace-functions.md#fma)|已重载。 计算 (_X \* _Y) + _Z，舍入为一个三元运算|
+|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|计算 (_X \* _Y) + _Z，舍入为一个三元运算|
 |[fmax](concurrency-precise-math-namespace-functions.md#fmax)|已重载。 确定参数的最大数值|
 |[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|确定参数的最大数值|
 |[fmin](concurrency-precise-math-namespace-functions.md#fmin)|已重载。 确定参数的最小数值|
 |[fminf](concurrency-precise-math-namespace-functions.md#fminf)|确定参数的最小数值|
-|[fmod 函数（C++ AMP）](concurrency-precise-math-namespace-functions.md#fmod)|已重载。 计算 _X/_Y 的浮点余数|
+|[fmod 函数 (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|已重载。 计算 _X/_Y 的浮点余数|
 |[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|计算 _X/_Y 的浮点余数|
 |[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|已重载。 将参数值分类为 NaN、无穷大、正常、次正常、零|
 |[frexp](concurrency-precise-math-namespace-functions.md#frexp)|已重载。 获取 _X 的尾数和指数|
@@ -229,7 +230,7 @@ namespace precise_math;
 |[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|从尾数和指数计算实数|
 |[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|已重载。 计算自变量伽玛绝对值的自然对数|
 |[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|计算自变量伽玛绝对值的自然对数|
-|[log](concurrency-precise-math-namespace-functions.md#log)|已重载。 计算自变量的以 e 为底的对数|
+|[日志](concurrency-precise-math-namespace-functions.md#log)|已重载。 计算自变量的以 e 为底的对数|
 |[log10](concurrency-precise-math-namespace-functions.md#log10)|已重载。 计算自变量的以10为底的对数|
 |[log10f](concurrency-precise-math-namespace-functions.md#log10f)|计算自变量的以10为底的对数|
 |[log1p](concurrency-precise-math-namespace-functions.md#log1p)|已重载。 计算 1 加参数的以 e 为底的对数|
@@ -255,11 +256,11 @@ namespace precise_math;
 |[probitf](concurrency-precise-math-namespace-functions.md#probitf)|返回参数的反累积分布函数|
 |[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|已重载。 返回参数的 cube 根的倒数|
 |[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|返回参数的 cube 根的倒数|
-|[remainder](concurrency-precise-math-namespace-functions.md#remainder)|已重载。 计算余数：_X REM _Y|
+|[剩下](concurrency-precise-math-namespace-functions.md#remainder)|已重载。 计算余数：_X REM _Y|
 |[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|计算余数：_X REM _Y|
 |[remquo](concurrency-precise-math-namespace-functions.md#remquo)|已重载。 计算与 _X REM _Y 相同的余数。 还计算 _X/_Y 的整数商的下23位，并为该值赋予与 _X/_Y 相同的符号。 它将此有符号值存储在由 _Quo 指向的整数中。|
 |[remquof](concurrency-precise-math-namespace-functions.md#remquof)|计算与 _X REM _Y 相同的余数。 还计算 _X/_Y 的整数商的下23位，并为该值赋予与 _X/_Y 相同的符号。 它将此有符号值存储在由 _Quo 指向的整数中。|
-|[round](concurrency-precise-math-namespace-functions.md#round)|已重载。 将 _X 舍入到最接近的整数|
+|[圆满](concurrency-precise-math-namespace-functions.md#round)|已重载。 将 _X 舍入到最接近的整数|
 |[roundf](concurrency-precise-math-namespace-functions.md#roundf)|将 _X 舍入到最接近的整数|
 |[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|已重载。 返回参数平方根的倒数|
 |[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|返回参数平方根的倒数|
@@ -275,16 +276,16 @@ namespace precise_math;
 |[sinf](concurrency-precise-math-namespace-functions.md#sinf)|计算参数的正弦值|
 |[sinh](concurrency-precise-math-namespace-functions.md#sinh)|已重载。 计算参数的双曲正弦值|
 |[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|计算参数的双曲正弦值|
-|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|已重载。 计算 pi \* 的正弦值 _X|
-|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|计算 pi \* 的正弦值 _X|
+|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|已重载。 计算 pi 的正弦值 \* _X|
+|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|计算 pi 的正弦值 \* _X|
 |[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|已重载。 计算参数的平方根|
 |[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|计算参数的平方根|
 |[tan](concurrency-precise-math-namespace-functions.md#tan)|已重载。 计算参数的正切值|
 |[tanf](concurrency-precise-math-namespace-functions.md#tanf)|计算参数的正切值|
 |[tanh](concurrency-precise-math-namespace-functions.md#tanh)|已重载。 计算参数的双曲正切值|
 |[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|计算参数的双曲正切值|
-|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|已重载。 计算 pi \* 的正切值 _X|
-|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|计算 pi \* 的正切值 _X|
+|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|已重载。 计算 pi _X 的正切值 \*|
+|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|计算 pi _X 的正切值 \*|
 |[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|已重载。 计算 _X 的伽玛函数|
 |[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|计算 _X 的伽玛函数|
 |[trunc](concurrency-precise-math-namespace-functions.md#trunc)|已重载。 将参数截断为整数组件|
@@ -296,6 +297,6 @@ namespace precise_math;
 
 **命名空间：** 并发
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

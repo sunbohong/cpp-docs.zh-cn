@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： InvalidArgumentException 类
 title: Platform::InvalidArgumentException 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidArgumentException
 ms.assetid: 1a8d860b-3bcb-41a9-9346-6610616a0b46
-ms.openlocfilehash: 1cc4b87ded26807066c81e5da6935548d1a5ad26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04d20a1e119aa4ffab0da498a9532c9acd4433b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384954"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295245"
 ---
 # <a name="platforminvalidargumentexception-class"></a>Platform::InvalidArgumentException 类
 
@@ -37,8 +38,8 @@ public ref class InvalidArgumentException : COMException,    IException,    IPri
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 
-[Platform::COMException 类](../cppcx/platform-comexception-class.md)
+[Platform：： COMException 类](../cppcx/platform-comexception-class.md)

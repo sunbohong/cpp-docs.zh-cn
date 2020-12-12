@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：字符比较
 title: 字符比较
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,30 +7,30 @@ helpviewer_keywords:
 - MBCS [C++], character comparison
 - characters [C++], comparing
 ms.assetid: 18846e44-3e6e-40c4-9b42-3153fb15db20
-ms.openlocfilehash: 075a22634f254c2ea634a1171ee157971fe5918e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e00e087074a70145f1a73694293edc3c522d69f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297000"
 ---
 # <a name="character-comparison"></a>字符比较
 
 使用以下提示：
 
-- 比较已知的前导字节的 ASCII 字符正常工作：
+- 将已知前导字节与 ASCII 字符进行比较可以正常工作：
 
     ```cpp
     if( *sz1 == 'A' )
     ```
 
-- 比较两个未知的字符需要使用一个 Mbstring.h 中定义的宏：
+- 比较两个未知字符需要使用 Mbstring.h 中定义的其中一个宏：
 
     ```cpp
     if( !_mbccmp( sz1, sz2) )
     ```
 
-   这可确保这两个字节的双字节字符会比较相等性。
+   这可确保比较双字节字符的两个字节是否相等。
 
 ## <a name="see-also"></a>请参阅
 
