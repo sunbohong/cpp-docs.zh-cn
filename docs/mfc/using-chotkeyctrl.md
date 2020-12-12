@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用 CHotKeyCtrl
 title: 使用 CHotKeyCtrl
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-ms.openlocfilehash: e2002d96a1eba913e260fa92281f730355a83ca5
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7f17063a4fb3732a9b121e2b93f5d55e51d5654a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447240"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271676"
 ---
 # <a name="using-chotkeyctrl"></a>使用 CHotKeyCtrl
 
-由[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)类表示的热键控件是一个窗口，它显示用户在其中键入的键组合的文本表示形式，如 CTRL + SHIFT + Q。 它还保留以虚拟键代码的形式呈现的此键的内部表示形式和一组表示切换状态的标志。 热键控件实际上并不设置热键 - 是否执行此操作取决于您的程序。 （有关标准虚拟键代码的列表，请参见 Winuser.h。）
+由 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)类表示的热键控件是一个窗口，它显示用户在其中键入的键组合的文本表示形式，如 CTRL + SHIFT + Q。 它还保留以虚拟键代码的形式呈现的此键的内部表示形式和一组表示切换状态的标志。 热键控件实际上并不设置热键 - 是否执行此操作取决于您的程序。 （有关标准虚拟键代码的列表，请参见 Winuser.h。）
 
 使用热键控件获取用户对要与窗口或线程关联的热键的输入。 热键控件通常用于对话框中，例如，您可能显示何时要求用户分配热键。 您的程序负责从热键控件中检索描述热键的值并调用适当的函数以将热键与窗口或线程相关联。
 
@@ -29,6 +30,6 @@ ms.locfileid: "79447240"
 
 - [线程特定的热键](../mfc/thread-specific-hot-keys.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控件](../mfc/controls-mfc.md)

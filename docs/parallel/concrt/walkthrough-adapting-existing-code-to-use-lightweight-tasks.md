@@ -1,30 +1,31 @@
 ---
+description: 了解详细信息：演练：改编现有代码以使用轻量级任务
 title: 演练：调整现有代码以使用轻量级任务
 ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: 7ce18b54835b2380d3baee77b00a670351e3279f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1c3de0f49dc1edc3392a436bb911e005ef84bcf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224911"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271403"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>演练：调整现有代码以使用轻量级任务
 
 本主题演示如何调整使用 Windows API 的现有代码，以创建和执行线程以使用轻量级任务。
 
-*轻量级任务*是从[concurrency：：](../../parallel/concrt/reference/scheduler-class.md) schedule 或[concurrency：： ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md)对象直接计划的任务。 当改编现有代码以使用并发运行时的计划功能时，轻量级任务非常有用。
+*轻量级任务* 是从 [concurrency：：](../../parallel/concrt/reference/scheduler-class.md) schedule 或 [concurrency：： ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md)对象直接计划的任务。 当改编现有代码以使用并发运行时的计划功能时，轻量级任务非常有用。
 
-## <a name="prerequisites"></a>必备条件
+## <a name="prerequisites"></a>先决条件
 
-在开始本演练之前，请阅读[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)主题。
+在开始本演练之前，请阅读 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)主题。
 
 ## <a name="example"></a>示例
 
-下面的示例演示了 Windows API 用于创建和执行线程的典型用法。 此示例使用[CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)函数 `MyThreadFunction` 在单独的线程上调用。
+下面的示例演示了 Windows API 用于创建和执行线程的典型用法。 此示例使用 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 函数 `MyThreadFunction` 在单独的线程上调用。
 
 ### <a name="initial-code"></a>初始代码
 
@@ -52,7 +53,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. 修改 `MyData` 结构，使之包含[concurrency：： event](../../parallel/concrt/reference/event-class.md)对象，该对象指示任务已完成的主应用程序。
+1. 修改 `MyData` 结构，使之包含 [concurrency：： event](../../parallel/concrt/reference/event-class.md) 对象，该对象指示任务已完成的主应用程序。
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
@@ -70,7 +71,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-1. 在函数的末尾 `MyThreadFunction` ，调用[concurrency：： event：： set](reference/event-class.md#set)方法以向主应用程序发出任务已完成的信号。
+1. 在函数的末尾 `MyThreadFunction` ，调用 [concurrency：： event：： set](reference/event-class.md#set) 方法以向主应用程序发出任务已完成的信号。
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
@@ -82,7 +83,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#1](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_10.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [计划程序类](../../parallel/concrt/reference/scheduler-class.md)

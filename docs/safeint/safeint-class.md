@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： SafeInt 类
 title: SafeInt 类
 ms.date: 10/22/2018
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: d61ce20a8644ca64d37c0eca605d52fb308c0863
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b5ee9147347f2c01ff05fd93b8b22ea3ce30ee37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560955"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271325"
 ---
 # <a name="safeint-class"></a>SafeInt 类
 
@@ -31,7 +32,7 @@ template<typename T, typename E = _SAFEINT_DEFAULT_ERROR_POLICY>
 class SafeInt;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *`T`*\
 `SafeInt` 替换的整数或布尔参数的类型。
@@ -55,7 +56,7 @@ class SafeInt;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-| “属性”                          |  说明 |
+| “属性”                          |  描述 |
 |---------------------------|--------------------|
 | [SafeInt：： SafeInt](#safeint)  |  默认构造函数。 |
 
@@ -272,7 +273,7 @@ I template <typename U>
 SafeInt (const U& i)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 `i`<br/>
 [输入] 新 `SafeInt` 对象的值。 这必须是 T 或 U 类型的参数，具体视构造函数而定。
@@ -281,13 +282,13 @@ SafeInt (const U& i)
 [输入] 新 `SafeInt` 对象的布尔值。
 
 `u`<br/>
-[输入] U 类型的 `SafeInt`。新 `SafeInt` 对象的值与 u** 相同，但类型为 T。
+[输入] U 类型的 `SafeInt`。新 `SafeInt` 对象的值与 u 相同，但类型为 T。
 
 `U` 存储在中的数据的类型 `SafeInt` 。 这可以是布尔类型、字符类型或整数类型。 如果它是整数类型，它可以是有符号或无符号的，并且可以介于8到64位之间。
 
 ### <a name="remarks"></a>备注
 
-构造函数的输入参数 i** 或 u** 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数， `SafeInt` 类将调用 [static_assert](../cpp/static-assert.md) 以指示无效的输入参数。
+构造函数的输入参数 i 或 u 必须是布尔类型、字符类型或整数类型。 如果它是另一种类型的参数， `SafeInt` 类将调用 [static_assert](../cpp/static-assert.md) 以指示无效的输入参数。
 
 使用模板类型 `U` 的构造函数自动将输入参数转换为 `T` 指定的类型。 `SafeInt` 类转换数据，而不会有任何数据丢失。 `E`如果无法在 `T` 不丢失数据的情况下将数据转换为类型，它将报告错误处理程序。
 

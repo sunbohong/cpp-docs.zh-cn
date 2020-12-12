@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： `/Zc:ternary` (强制实施条件运算符规则) '
 title: /Zc:ternary（强制实施条件运算符规则）
 ms.date: 09/12/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 04bd0c49528d86ddd4d1e6c77804cf64278db188
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ea1cf57aa1633e08095dfd01964a2255cb0b3c70
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211874"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97271312"
 ---
-# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary`（强制条件运算符规则）
+# <a name="zcternary-enforce-conditional-operator-rules"></a>`/Zc:ternary` (强制条件运算符规则) 
 
-为条件运算符表达式中的第二个和第三个操作数启用 c + + 标准规则的强制实施。
+启用条件运算符表达式中的第二个和第三个操作数的类型和 const 或 volatile)  (的 c + + 标准规则。
 
 ## <a name="syntax"></a>语法
 
@@ -24,7 +25,7 @@ ms.locfileid: "87211874"
 
 ## <a name="remarks"></a>备注
 
-从 Visual Studio 2017 开始，编译器支持 c + + 标准*条件运算符*（ **`?:`** ）行为。 它也称为*三元运算符*。 C + + 标准要求三元操作数满足以下三个条件之一：操作数必须具有相同的类型和 **`const`** 或 **`volatile`** 限定（cv 限定），或者只有一个操作数必须可明确转换为同一类型和 cv 限定。 或者，一个或两个操作数必须是 throw 表达式。 在 Visual Studio 2017 版本15.5 之前的版本中，编译器允许由标准视为不明确的转换。
+从 Visual Studio 2017 开始，编译器支持 c + + 标准 *条件运算符* (**`?:`**) 行为。 它也称为 *三元运算符*。 C + + 标准要求三元操作数满足以下三个条件之一：操作数必须具有相同的类型， **`const`** 或 **`volatile`** (cv 限定) 的限定，或者只有一个操作数才能与另一个操作数明确转换为同一类型和 cv。 或者，一个或两个操作数必须是 throw 表达式。 在 Visual Studio 2017 版本15.5 之前的版本中，编译器允许由标准视为不明确的转换。
 
 当 **`/Zc:ternary`** 指定选项时，编译器将符合标准。 它拒绝不满足匹配类型和第二个和第三个操作数的 cv 限定规则的代码。
 
@@ -157,8 +158,8 @@ int main(int argc, char**) {
 
 1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 修改 "**附加选项**" 属性以包含 **`/Zc:ternary`** 或 **`/Zc:ternary-`** ，然后选择 **"确定"**。
+1. 修改 " **附加选项** " 属性以包含 **`/Zc:ternary`** 或 **`/Zc:ternary-`** ，然后选择 **"确定"**。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[`/Zc`度](zc-conformance.md)
+[`/Zc` (一致性) ](zc-conformance.md)
