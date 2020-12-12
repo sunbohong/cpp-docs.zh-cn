@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： uint_2 类
 title: uint_2 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: 5f01e4d50dc3fab8d7cb909d1ea2f3d1801f0db0
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 6cf10e10baad6cedb06cef4358feebb11e6ce076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325805"
 ---
 # <a name="uint_2-class"></a>uint_2 类
 
@@ -45,74 +46,74 @@ ms.locfileid: "77126205"
 class uint_2;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[uint_2 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|uint_2::get_x||
-|uint_2::get_xy||
-|uint_2::get_y||
-|uint_2::get_yx||
-|uint_2::ref_g_Method||
-|uint_2::ref_r_Method||
-|uint_2::ref_x_Method||
-|uint_2::ref_y_Method||
-|uint_2::set_x||
-|uint_2::set_xy||
-|uint_2::set_y||
-|uint_2::set_yx||
+|uint_2：： get_x||
+|uint_2：： get_xy||
+|uint_2：： get_y||
+|uint_2：： get_yx||
+|uint_2：： ref_g_Method||
+|uint_2：： ref_r_Method||
+|uint_2：： ref_x_Method||
+|uint_2：： ref_y_Method||
+|uint_2：： set_x||
+|uint_2：： set_xy||
+|uint_2：： set_y||
+|uint_2：： set_yx||
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|uint_2::operator--||
-|uint_2::operator%=||
-|uint_2::operator&=||
-|uint_2::operator*=||
-|uint_2::operator/=||
-|uint_2::operator^=||
-|uint_2::operator&#124;=||
-|uint_2::operator~||
-|uint_2::operator++||
-|uint_2::operator+=||
-|uint_2：： operator <\<=||
-|uint_2::operator=||
-|uint_2::operator-=||
-|uint_2::operator>>=||
+|uint_2：： operator--||
+|uint_2：： operator% =||
+|uint_2：： operator&=||
+|uint_2：： operator * =||
+|uint_2：： operator/=||
+|uint_2：： operator ^ =||
+|uint_2：： operator&#124;=||
+|uint_2：： operator ~||
+|uint_2：： operator + +||
+|uint_2：： operator + =||
+|uint_2：： operator<\<=||
+|uint_2：： operator =||
+|uint_2：： operator-=||
+|uint_2：： operator>>=||
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[大小常量](#uint_2__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|uint_2::g||
-|uint_2::gr||
-|uint_2::r||
-|uint_2::rg||
-|uint_2::x||
-|uint_2::xy||
+|uint_2：： g||
+|uint_2：： gr||
+|uint_2：： r||
+|uint_2：： rg||
+|uint_2：： x||
+|uint_2：： xy||
 |uint_2：： y||
-|uint_2::yx||
+|uint_2：： yx||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -124,7 +125,7 @@ class uint_2;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a>uint_2
+## <a name="uint_2"></a><a name="ctor"></a> uint_2
 
 默认构造函数，用0初始化所有元素。
 
@@ -166,7 +167,7 @@ explicit inline uint_2(
     cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_V0*<br/>
 要初始化元素0的值。
@@ -180,12 +181,12 @@ explicit inline uint_2(
 *_Other*<br/>
 用于初始化的对象。
 
-## <a name="uint_2__size"></a>规格
+## <a name="size"></a><a name="uint_2__size"></a> 规格
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

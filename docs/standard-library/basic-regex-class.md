@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： basic_regex 类
 title: basic_regex 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 4348941e065680a54f9bd0c9f5b7ab2ff1af5e56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 450f3945faeb088c975bb1657d69496bcf078ccd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325621"
 ---
 # <a name="basic_regex-class"></a>basic_regex 类
 
@@ -24,7 +25,7 @@ template <class Elem, class RXtraits>
 class basic_regex
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 *Elem*\
 要匹配的元素的类型。
@@ -34,13 +35,13 @@ class basic_regex
 
 ## <a name="remarks"></a>备注
 
-类模板描述包含正则表达式的对象。 此类模板的对象可以传递给模板函数[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)和[regex_replace](../standard-library/regex-functions.md#regex_replace)，以及适当的文本字符串参数，以搜索与正则表达式匹配的文本。 此类模板有两种专用化，类型定义[regex](../standard-library/regex-typedefs.md#regex)用于类型为的元素 **`char`** ， [wregex](../standard-library/regex-typedefs.md#wregex)用于类型为的元素 **`wchar_t`** 。
+类模板描述包含正则表达式的对象。 此类模板的对象可以传递给模板函数 [regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)和 [regex_replace](../standard-library/regex-functions.md#regex_replace)，以及适当的文本字符串参数，以搜索与正则表达式匹配的文本。 此类模板有两种专用化，类型定义 [regex](../standard-library/regex-typedefs.md#regex) 用于类型为的元素 **`char`** ， [wregex](../standard-library/regex-typedefs.md#wregex) 用于类型为的元素 **`wchar_t`** 。
 
-模板参数*RXtraits*描述类模板支持的正则表达式语法的各种重要属性。 指定这些正则表达式特征的类必须与[Regex_traits 类](../standard-library/regex-traits-class.md)类型的对象具有相同的外部接口。
+模板参数 *RXtraits* 描述类模板支持的正则表达式语法的各种重要属性。 指定这些正则表达式特征的类必须与 [Regex_traits 类](../standard-library/regex-traits-class.md)类型的对象具有相同的外部接口。
 
 某些函数使用操作数序列来定义正则表达式。 可以通过多种方式指定此操作数序列：
 
-`ptr`-从（不能为 null 指针）开始、*以 null*结尾的序列（如 C 字符串） **`char`** `ptr` ，其中终止元素是值 `value_type()` 并且不是操作数序列的一部分
+`ptr` - *-以 null* 结尾的序列 (如 C 字符串）， **`char`**) 从 `ptr` (不能是 null 指针) ，其中，终止元素是值 `value_type()` 并且不是操作数序列的一部分
 
 `ptr`, `count` - 从 `count`（不能为 null 指针）开始的 `ptr` 元素序列
 
@@ -50,7 +51,7 @@ class basic_regex
 
 `right` - `basic_regex` 对象 `right`
 
-这些成员函数还使用参数 `flags` 指定用于解释正则表达式的各个选项，以及*RXtraits*类型描述的选项。
+这些成员函数还使用参数 `flags` 指定用于解释正则表达式的各个选项，以及 *RXtraits* 类型描述的选项。
 
 ### <a name="members"></a>成员
 
@@ -70,7 +71,7 @@ class basic_regex
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[basic_regex](#basic_regex)|构造正则表达式对象。|
 
@@ -95,7 +96,7 @@ class basic_regex
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[operator =](#op_eq)|将一个值分配到正则表达式对象。|
 
@@ -196,7 +197,7 @@ getloc == imbued == true
 match("abc") == true
 ```
 
-## <a name="basic_regexassign"></a><a name="assign"></a>basic_regex：： assign
+## <a name="basic_regexassign"></a><a name="assign"></a> basic_regex：： assign
 
 将一个值分配到正则表达式对象。
 
@@ -228,7 +229,7 @@ basic_regex& assign(
     flag_type flags = ECMAScript);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *STtraits*\
 字符串源的特征类。
@@ -267,7 +268,7 @@ basic_regex& assign(
 
 每个成员函数将保留的正则表达式替换 **`*this`** 为操作数序列所描述的正则表达式，然后返回 **`*this`** 。
 
-## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a>basic_regex：： basic_regex
+## <a name="basic_regexbasic_regex"></a><a name="basic_regex"></a> basic_regex：： basic_regex
 
 构造正则表达式对象。
 
@@ -302,7 +303,7 @@ explicit basic_regex(
     flag_type flags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *STtraits*\
 字符串源的特征类。
@@ -343,9 +344,9 @@ explicit basic_regex(
 
 第一个构造函数构造一个空 `basic_regex` 对象。 其他构造函数构造 `basic_regex` 对象，其中包含由操作数序列描述的正则表达式。
 
-空 `basic_regex` 对象在传递到[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)或[regex_replace](../standard-library/regex-functions.md#regex_replace)时不匹配任何字符序列。
+空 `basic_regex` 对象在传递到 [regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)或 [regex_replace](../standard-library/regex-functions.md#regex_replace)时不匹配任何字符序列。
 
-## <a name="basic_regexflag_type"></a><a name="flag_type"></a>basic_regex：： flag_type
+## <a name="basic_regexflag_type"></a><a name="flag_type"></a> basic_regex：： flag_type
 
 语法选项标志的类型。
 
@@ -357,7 +358,7 @@ typedef regex_constants::syntax_option_type flag_type;
 
 该类型是 [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type) 的同义词。
 
-## <a name="basic_regexflags"></a><a name="flags"></a>basic_regex：： flags
+## <a name="basic_regexflags"></a><a name="flags"></a> basic_regex：： flags
 
 返回语法选项标志。
 
@@ -369,7 +370,7 @@ flag_type flags() const;
 
 成员函数返回 `flag_type` 自变量的值，该值传递到对一个 [basic_regex::assign](#assign) 成员函数的最近调用，或者如果没有实施这类调用，则返回传递到构造函数的值。
 
-## <a name="basic_regexgetloc"></a><a name="getloc"></a>basic_regex：： getloc
+## <a name="basic_regexgetloc"></a><a name="getloc"></a> basic_regex：： getloc
 
 返回存储的区域设置对象。
 
@@ -381,7 +382,7 @@ locale_type getloc() const;
 
 此成员函数返回 `traits.` [regex_traits：： getloc](../standard-library/regex-traits-class.md#getloc) `()` 。
 
-## <a name="basic_regeximbue"></a><a name="imbue"></a>basic_regex：： imbue
+## <a name="basic_regeximbue"></a><a name="imbue"></a> basic_regex：： imbue
 
 更改存储的区域设置对象。
 
@@ -389,7 +390,7 @@ locale_type getloc() const;
 locale_type imbue(locale_type loc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *loc*\
 要存储的区域设置对象。
@@ -398,7 +399,7 @@ locale_type imbue(locale_type loc);
 
 该成员函数将清空 **`*this`** 并返回 `traits.` [regex_traits：： imbue](../standard-library/regex-traits-class.md#imbue) `(loc)` 。
 
-## <a name="basic_regexlocale_type"></a><a name="locale_type"></a>basic_regex：： locale_type
+## <a name="basic_regexlocale_type"></a><a name="locale_type"></a> basic_regex：： locale_type
 
 存储的区域设置对象的类型。
 
@@ -410,7 +411,7 @@ typedef typename RXtraits::locale_type locale_type;
 
 该类型是 [regex_traits::locale_type](../standard-library/regex-traits-class.md#locale_type) 的同义词。
 
-## <a name="basic_regexmark_count"></a><a name="mark_count"></a>basic_regex：： mark_count
+## <a name="basic_regexmark_count"></a><a name="mark_count"></a> basic_regex：： mark_count
 
 返回匹配的子表达式的数目。
 
@@ -422,7 +423,7 @@ unsigned mark_count() const;
 
 成员函数将返回正则表达式中的捕获组数量。
 
-## <a name="basic_regexoperator"></a><a name="op_eq"></a>basic_regex：： operator =
+## <a name="basic_regexoperator"></a><a name="op_eq"></a> basic_regex：： operator =
 
 将一个值分配到正则表达式对象。
 
@@ -435,7 +436,7 @@ template <class STtraits, class STalloc>
 basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *STtraits*\
 字符串源的特征类。
@@ -453,7 +454,7 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 每个运算符将保留的正则表达式替换 **`*this`** 为操作数序列所描述的正则表达式，然后返回 **`*this`** 。
 
-## <a name="basic_regexswap"></a><a name="swap"></a>basic_regex：： swap
+## <a name="basic_regexswap"></a><a name="swap"></a> basic_regex：： swap
 
 交换两个正则表达式对象。
 
@@ -461,16 +462,16 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 void swap(basic_regex& right) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要交换的正则表达式对象。
 
 ### <a name="remarks"></a>备注
 
-成员函数交换和右之间的正则表达式 **`*this`** 。 *right* 它定时执行此操作且不引发异常。
+成员函数交换和右之间的正则表达式 **`*this`** 。  它定时执行此操作且不引发异常。
 
-## <a name="basic_regexvalue_type"></a><a name="value_type"></a>basic_regex：： value_type
+## <a name="basic_regexvalue_type"></a><a name="value_type"></a> basic_regex：： value_type
 
 元素类型。
 
@@ -480,9 +481,9 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数*Elem*的同义词。
+该类型是模板参数 *Elem* 的同义词。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<regex>](../standard-library/regex.md)\
 [regex_match](../standard-library/regex-functions.md#regex_match)\

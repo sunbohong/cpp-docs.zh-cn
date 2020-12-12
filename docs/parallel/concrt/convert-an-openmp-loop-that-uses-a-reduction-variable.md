@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：如何：转换使用缩减变量的 OpenMP 循环以使用并发运行时
 title: 如何：将使用缩减变量的 OpenMP 循环转换为使用并发运行时
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: 06418bc1a331a5c77653087434a5cc621f92e7d7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 131585caf3e06a11ed45bda4b58efa541272006f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325753"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>如何：将使用缩减变量的 OpenMP 循环转换为使用并发运行时
 
@@ -18,7 +19,7 @@ ms.locfileid: "91498545"
 
 OpenMP `reduction` 子句使你可以指定一个或多个线程专用变量，这些变量在并行区域结束时受到缩减运算。 OpenMP 预定义一组缩减运算符。 每个缩减变量都必须是标量 (例如， **`int`** 、 **`long`** 和 **`float`**) 。 OpenMP 还定义了一些限制如何在并行区域中使用缩减变量的限制。
 
-并行模式库 (PPL) 提供 [concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md) 类，它提供可重用的线程本地存储，使你可以执行细化计算，然后将这些计算合并为最终结果。 `combinable`类是对标量和复杂类型都起作用的模板。 若要使用 `combinable` 类，请在并行构造的主体中执行子计算，然后调用 [concurrency：：可组合：：组合](reference/combinable-class.md#combine) 或 [concurrency：：可组合：： combine_each](reference/combinable-class.md#combine_each) 方法以生成最终结果。 `combine`和 `combine_each` 方法都采用*组合函数*，该函数指定如何组合每对元素。 因此， `combinable` 类并不限于一组固定的缩减运算符。
+并行模式库 (PPL) 提供 [concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md) 类，它提供可重用的线程本地存储，使你可以执行细化计算，然后将这些计算合并为最终结果。 `combinable`类是对标量和复杂类型都起作用的模板。 若要使用 `combinable` 类，请在并行构造的主体中执行子计算，然后调用 [concurrency：：可组合：：组合](reference/combinable-class.md#combine) 或 [concurrency：：可组合：： combine_each](reference/combinable-class.md#combine_each) 方法以生成最终结果。 `combine`和 `combine_each` 方法都采用 *组合函数*，该函数指定如何组合每对元素。 因此， `combinable` 类并不限于一组固定的缩减运算符。
 
 ## <a name="example"></a>示例
 

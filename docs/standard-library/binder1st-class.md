@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： binder1st 类
 title: binder1st 类
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 1311d598c8300f3bba4d27acdaab879cbd054696
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688387"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325500"
 ---
 # <a name="binder1st-class"></a>binder1st 类
 
-一个类模板，它提供了一个构造函数，该构造函数通过将二元函数的第一个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。 在 c + + 11 中已弃用，以支持[bind](functional-functions.md#bind)，并在 c + + 17 中被删除。
+一个类模板，它提供了一个构造函数，该构造函数通过将二元函数的第一个自变量绑定到指定的值，将二元函数对象转换为一元函数对象。 在 c + + 11 中已弃用，以支持 [bind](functional-functions.md#bind)，并在 c + + 17 中被删除。
 
 ## <a name="syntax"></a>语法
 
@@ -41,26 +42,26 @@ protected:
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*binary_fn* \
+*binary_fn*\
 要转换为一元函数对象的二元函数对象。
 
-*左*\
+*左中*\
 要将二元函数对象的第一个参数绑定到的值。
 
-*right* \
+*然后*\
 改编的二元对象将其与第二个参数进行比较的参数值。
 
 ## <a name="return-value"></a>返回值
 
-将二元函数对象的第一个参数绑定到*左侧*值后生成的一元函数对象。
+将二元函数对象的第一个参数绑定到 *左侧* 值后生成的一元函数对象。
 
 ## <a name="remarks"></a>备注
 
-类模板在 `op` 中存储二元函数对象的副本，*并在 `value`* 中存储*binary_fn*的副本。 它将其成员函数定义为返回 `op(value, right)` `operator()`。
+类模板将 *binary_fn* 中的二元函数对象的副本存储在中，并在中存储 `op` *左侧* 的副本 `value` 。 它将其成员函数定义 `operator()` 为返回 `op(value, right)` 。
 
-如果*binary_fn*是类型 `Operation` 的对象，并且 `c` 为常量，则 `bind1st(binary_fn, c)` 比 `binder1st<Operation>(binary_fn, c)` 更方便的等效项。 有关详细信息，请参阅[bind1st](../standard-library/functional-functions.md#bind1st)。
+如果 *binary_fn* 是类型为的对象 `Operation` 且 `c` 是常量，则与 `bind1st(binary_fn, c)` 等效 `binder1st<Operation>(binary_fn, c)` 。 有关详细信息，请参阅 [bind1st](../standard-library/functional-functions.md#bind1st)。
 
 ## <a name="example"></a>示例
 

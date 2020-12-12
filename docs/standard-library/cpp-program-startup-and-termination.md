@@ -1,4 +1,5 @@
 ---
+description: 了解更多： c + + 程序启动和终止
 title: C++ 程序启动和终止
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-ms.openlocfilehash: e59e8852172a998e4bf4f42f9f919dc29c2ded85
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 644be6d4392f8e41b1d1cf7d45b484ed9903d463
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324782"
 ---
 # <a name="c-program-startup-and-termination"></a>C++ 程序启动和终止
 
@@ -36,5 +37,5 @@ C++ 程序执行的操作与 C 程序在程序启动及终止时所执行的操�
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

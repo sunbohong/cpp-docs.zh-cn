@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; ctgmath&gt;
 title: '&lt;ctgmath&gt;'
 ms.date: 07/11/2019
 f1_keywords:
@@ -7,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: f1033a944699f4c124114c49e0e30f8b30804a1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324690"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-实际上, C++包括标准库标\<头 > 和\<h >, 后者提供与\<t h. > 等效的类型泛型数学宏。
+实际上，包括 c + + 标准库标头 \<complex> 和 \<cmath> ，它们提供等效于的类型泛型数学宏 \<tgmath.h> 。
 
 > [!NOTE]
-> C 标准库\<> t h. \<不\<包括 ctgmath >, 因为它实际上被复杂 > 和 h > 中C++ \<的重载替换。 这会使\<ctgmath > 标头冗余。 中\< C++弃用了 t h. > 标头。 \<Ctgmath > 标头在 c + + 17 中已弃用, 并已在草案 c + + 20 标准中删除。
+> C 标准库 \<tgmath.h> 标头未包含 \<ctgmath> 在中，因为它实际上被和中的 c + + 重载替换 \<complex> \<cmath> 。 这会使 \<ctgmath> 标头冗余。 \<tgmath.h>C + + 中弃用了标头。 \<ctgmath>标头已在 c + + 17 中弃用，并已在草案 c + + 20 标准中删除。
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<ctgmath >
+**标头：**\<ctgmath>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="remarks"></a>备注
 
-C 标准库标头\<t h. > 的功能由复杂 > 和\<h > 中\<的重载提供。
+C 标准库标头的功能 \<tgmath.h> 由和中的重载提供 \<complex> \<cmath> 。
 
 ## <a name="see-also"></a>请参阅
 
-[\<复杂 >](complex.md)\
-[\<cmath 1>](cmath.md)\
+[\<complex>](complex.md)\
+[\<cmath>](cmath.md)\
 [标头文件引用](cpp-standard-library-header-files.md)\
-[C++标准库概述](cpp-standard-library-overview.md)\
-[标准库中的C++线程安全](thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库概述](cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)

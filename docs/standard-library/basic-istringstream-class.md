@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： basic_istringstream 类
 title: basic_istringstream 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: fd2ab79466c01343cbdadbcb649e3b05eee3c2a0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 34073c660b5ede3d7df54e9e067ef5c3963671f4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325675"
 ---
 # <a name="basic_istringstream-class"></a>basic_istringstream 类
 
-描述一个对象，该对象控制从类[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**> 的流缓冲区中提取元素和编码对象 `Alloc` 。
+描述一个对象，该对象控制从类 [basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**、 **Tr**> 的流缓冲区中提取元素和编码对象 `Alloc` 。
 
 ## <a name="syntax"></a>语法
 
@@ -32,7 +33,7 @@ template <class Elem, class Tr = char_traits<Elem>, class Alloc = allocator<Elem
 class basic_istringstream : public basic_istream<Elem, Tr>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *分配*\
 allocator 类。
@@ -45,7 +46,7 @@ allocator 类。
 
 ## <a name="remarks"></a>备注
 
-类模板描述了一个对象，该对象控制从类[basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem，Tr，> 的流缓冲区提取元素和编码对象， <  **Elem** **Tr** `Alloc` 其字符特征由*Elem*类*Tr*确定，其元素由类*分配*的分配器进行分配。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
+类模板描述了一个对象，该对象控制从类 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem，Tr，> 的流缓冲区提取元素和编码对象， <    `Alloc` 其字符特征由类 *Tr* 确定，其元素由类 *分配* 的分配器进行分配。 该对象存储 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 类的对象。
 
 ### <a name="constructors"></a>构造函数
 
@@ -69,7 +70,7 @@ allocator 类。
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|运算符|描述|
 |-|-|
 |[operator =](#op_eq)|将值从对象参数赋给此 `basic_istringstream` 对象。|
 
@@ -103,7 +104,7 @@ basic_istringstream(
     basic_istringstream&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的枚举之一。
@@ -120,7 +121,7 @@ basic_istringstream(
 
 第二个构造函数通过调用 `basic_istream(sb)` 初始化基类。 通过调用 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`)，它还可以初始化 `sb`。
 
-第三个构造函数使用 *右侧*的内容来初始化对象，该对象被视为右值引用。
+第三个构造函数使用 *右侧* 的内容来初始化对象，该对象被视为右值引用。
 
 ## <a name="basic_istringstreamoperator"></a><a name="op_eq"></a> basic_istringstream：： operator =
 
@@ -130,14 +131,14 @@ basic_istringstream(
 basic_istringstream& operator=(basic_istringstream&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 对 `basic_istringstream` 对象的右值引用。
 
 ### <a name="remarks"></a>备注
 
-成员运算符将对象的内容替换为 *右侧*的内容，被视为右值引用移动赋值。
+成员运算符将对象的内容替换为 *右侧* 的内容，被视为右值引用移动赋值。
 
 ## <a name="basic_istringstreamrdbuf"></a><a name="rdbuf"></a> basic_istringstream：： rdbuf
 
@@ -166,18 +167,18 @@ void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Newstr*\
 新字符串。
 
 ### <a name="return-value"></a>返回值
 
-返回类[basic_string](../standard-library/basic-string-class.md) <  **Elem**， **Tr**，> 的对象 `Alloc` ，其受控序列是** \* 此**控制的序列的副本。
+返回类 [basic_string](../standard-library/basic-string-class.md) <  **Elem**， **Tr**，> 的对象 `Alloc` ，其受控序列是 **\* 此** 控制的序列的副本。
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回[rdbuf](#rdbuf)  ->  [str](../standard-library/basic-stringbuf-class.md#str)。 第二个成员函数 `rdbuf`  -> ) 调用**str** ( `_Newstr` 。
+第一个成员函数返回[rdbuf](#rdbuf)  ->  [str](../standard-library/basic-stringbuf-class.md#str)。 第二个成员函数 `rdbuf`  -> ) 调用 **str** ( `_Newstr` 。
 
 ### <a name="example"></a>示例
 
@@ -191,16 +192,16 @@ void str(
 void swap(basic_istringstream& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 对 `basic_istringstream` 对象的左值引用。
 
 ### <a name="remarks"></a>备注
 
-该成员函数将交换此对象的值和 *权限*的值。
+该成员函数将交换此对象的值和 *权限* 的值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\

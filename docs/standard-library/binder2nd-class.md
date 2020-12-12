@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： binder2nd 类
 title: binder2nd 类
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: a3c76fcea22045ee7e723ad3ad51390c39f602ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325487"
 ---
 # <a name="binder2nd-class"></a>binder2nd 类
 
@@ -36,26 +37,26 @@ class binder2nd
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*func*\
+*求*\
 要转换为一元函数对象的二元函数对象。
 
-*right* \
+*然后*\
 要将二元函数对象的第二个参数绑定到的值。
 
-*左*\
+*左中*\
 改编的二元对象将其与第二个参数进行比较的参数值。
 
 ## <a name="return-value"></a>返回值
 
-将二元函数对象的第二个参数绑定到值*right*后得出的一元函数对象。
+将二元函数对象的第二个参数绑定到值 *right* 后得出的一元函数对象。
 
 ## <a name="remarks"></a>备注
 
-类模板在 `op`中存储二元函数对象*func*的副本，并在 `value`中存储*权限*的副本。 它将其成员函数定义为返回 `op(left, value)``operator()`。
+类模板在中存储二元函数对象 *func* 的副本 `op` ，并在中存储 *权限* 的副本 `value` 。 它将其成员函数定义 `operator()` 为返回 `op(left, value)` 。
 
-如果*func*是类型 `Operation` 的对象，并且 c 是常量，则[bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` 等效于 `binder2nd` 类构造函数 `binder2nd<Operation>(func, c)`，更方便。
+如果 *func* 是类型为的对象， `Operation` 并且 c 是常量，则 [bind2nd](../standard-library/functional-functions.md#bind2nd) `(func, c)` 等效于 `binder2nd` 类构造函数 `binder2nd<Operation>(func, c)` ，更方便。
 
 ## <a name="example"></a>示例
 

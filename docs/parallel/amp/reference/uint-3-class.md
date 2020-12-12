@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： uint_3 类
 title: uint_3 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: 40c8486b96ac4359e84d52697b8a34d3718e00e2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2bbfb289d8c5417b751aadb6ee335d20e15d5b28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325792"
 ---
 # <a name="uint_3-class"></a>uint_3 类
 
@@ -89,120 +90,120 @@ ms.locfileid: "77127720"
 class uint_3;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[uint_3 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|uint_3::get_x||
-|uint_3::get_xy||
-|uint_3::get_xyz||
-|uint_3::get_xz||
-|uint_3::get_xzy||
-|uint_3::get_y||
-|uint_3::get_yx||
-|uint_3::get_yxz||
-|uint_3::get_yz||
-|uint_3::get_yzx||
-|uint_3::get_z||
-|uint_3::get_zx||
-|uint_3::get_zxy||
-|uint_3::get_zy||
-|uint_3::get_zyx||
-|uint_t::ref_b||
-|uint_t::ref_g||
-|uint_t::ref_r||
-|uint_t::ref_x||
-|uint_t::ref_y||
-|uint_t::ref_z||
-|uint_3::set_x||
-|uint_3::set_xy||
-|uint_3::set_xyz||
-|uint_3::set_xz||
-|uint_3::set_xzy||
-|uint_3::set_y||
-|uint_3::set_yx||
-|uint_3::set_yxz||
-|uint_3::set_yz||
-|uint_3::set_yzx||
-|uint_3::set_z||
-|uint_3::set_zx||
-|uint_3::set_zxy||
-|uint_3::set_zy||
-|uint_3::set_zyx||
+|uint_3：： get_x||
+|uint_3：： get_xy||
+|uint_3：： get_xyz||
+|uint_3：： get_xz||
+|uint_3：： get_xzy||
+|uint_3：： get_y||
+|uint_3：： get_yx||
+|uint_3：： get_yxz||
+|uint_3：： get_yz||
+|uint_3：： get_yzx||
+|uint_3：： get_z||
+|uint_3：： get_zx||
+|uint_3：： get_zxy||
+|uint_3：： get_zy||
+|uint_3：： get_zyx||
+|uint_t：： ref_b||
+|uint_t：： ref_g||
+|uint_t：： ref_r||
+|uint_t：： ref_x||
+|uint_t：： ref_y||
+|uint_t：： ref_z||
+|uint_3：： set_x||
+|uint_3：： set_xy||
+|uint_3：： set_xyz||
+|uint_3：： set_xz||
+|uint_3：： set_xzy||
+|uint_3：： set_y||
+|uint_3：： set_yx||
+|uint_3：： set_yxz||
+|uint_3：： set_yz||
+|uint_3：： set_yzx||
+|uint_3：： set_z||
+|uint_3：： set_zx||
+|uint_3：： set_zxy||
+|uint_3：： set_zy||
+|uint_3：： set_zyx||
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|uint_3::operator--||
-|uint_3::operator%=||
-|uint_3::operator&=||
-|uint_3::operator*=||
-|uint_3::operator/=||
-|uint_3::operator^=||
-|uint_3::operator&#124;=||
-|uint_3::operator~||
-|uint_3::operator++||
-|uint_3::operator+=||
-|uint_3：： operator <\<=||
-|uint_3::operator=||
-|uint_3::operator-=||
-|uint_3::operator>>=||
+|uint_3：： operator--||
+|uint_3：： operator% =||
+|uint_3：： operator&=||
+|uint_3：： operator * =||
+|uint_3：： operator/=||
+|uint_3：： operator ^ =||
+|uint_3：： operator&#124;=||
+|uint_3：： operator ~||
+|uint_3：： operator + +||
+|uint_3：： operator + =||
+|uint_3：： operator<\<=||
+|uint_3：： operator =||
+|uint_3：： operator-=||
+|uint_3：： operator>>=||
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[大小常量](#uint_3__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|uint_3::b||
-|uint_3::bg||
-|uint_3::bgr||
-|uint_3::br||
-|uint_3::brg||
+|uint_3：： b||
+|uint_3：： bg||
+|uint_3：： bgr||
+|uint_3：： br||
+|uint_3：： brg||
 |uint_3：： g||
-|uint_3::gb||
-|uint_3::gbr||
-|uint_3::gr||
-|uint_3::grb||
-|uint_3::r||
-|uint_3::rb||
-|uint_3::rbg||
-|uint_3::rg||
-|uint_3::rgb||
+|uint_3：： gb||
+|uint_3：： gbr||
+|uint_3：： gr||
+|uint_3：： grb||
+|uint_3：： r||
+|uint_3：： rb||
+|uint_3：： rbg||
+|uint_3：： rg||
+|uint_3：： rgb||
 |uint_3：： x||
-|uint_3::xy||
-|uint_3::xyz||
-|uint_3::xz||
-|uint_3::xzy||
+|uint_3：： xy||
+|uint_3：： xyz||
+|uint_3：： xz||
+|uint_3：： xzy||
 |uint_3：： y||
-|uint_3::yx||
-|uint_3::yxz||
+|uint_3：： yx||
+|uint_3：： yxz||
 |uint_3：： yz||
 |uint_3：： yzx||
-|uint_3::z||
-|uint_3::zx||
-|uint_3::zxy||
+|uint_3：： z||
+|uint_3：： zx||
+|uint_3：： zxy||
 |uint_3：： zy||
-|uint_3::zyx||
+|uint_3：： zyx||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -214,7 +215,7 @@ class uint_3;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a>uint_3
+## <a name="uint_3"></a><a name="ctor"></a> uint_3
 
 默认构造函数，用0初始化所有元素。
 
@@ -257,7 +258,7 @@ explicit inline uint_3(
     cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_V0*<br/>
 要初始化元素0的值。
@@ -274,12 +275,12 @@ explicit inline uint_3(
 *_Other*<br/>
 用于初始化的对象。
 
-## <a name="uint_3__size"></a>规格
+## <a name="size"></a><a name="uint_3__size"></a> 规格
 
 ```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

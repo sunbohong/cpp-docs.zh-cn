@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ctype_base 类
 title: ctype_base 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 430e6fbf77842e61e662fd3024a54b418f487748
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324677"
 ---
 # <a name="ctype_base-class"></a>ctype_base 类
 
-类用作类模板[ctype](../standard-library/ctype-class.md)的各个方面的基类。 一种 ctype 类的基类，用于定义枚举类型来分类或测试单个字符或整个范围内的字符。
+类用作类模板 [ctype](../standard-library/ctype-class.md)的各个方面的基类。 一种 ctype 类的基类，用于定义枚举类型来分类或测试单个字符或整个范围内的字符。
 
 ## <a name="syntax"></a>语法
 
@@ -45,7 +46,7 @@ struct ctype_base : public locale::facet
 
 ## <a name="remarks"></a>备注
 
-它定义了枚举掩码。 每个枚举常量都表现为一种不同方式来对字符进行分类，正如在标头 \<ctype.h 1> 中声明的具有类似名称的函数所定义。 这些常量包括：
+它定义了枚举掩码。 每个枚举常量的特征是对字符进行分类的另一种方式，如标头中声明的名称类似的函数所定义 \<ctype.h> 。 这些常量包括：
 
 - **space**（函数 [isspace](../standard-library/locale-functions.md#isspace)）
 
@@ -69,14 +70,14 @@ struct ctype_base : public locale::facet
 
 - **graph**（函数 [isgraph](../standard-library/locale-functions.md#isgraph)）
 
-通过实现或运算这些常量，可以确定分类组合的特征。 具体而言， **alnum** = **= （** &#124; \) 和**graph** \= \= \( **alnum** &#124; **punct**）始终为 true。
+通过实现或运算这些常量，可以确定分类组合的特征。 特别是， **alnum** = = ( **alpha** &#124;**数字** \) 和 **图形** \= \= \( **alnum** &#124; **punct**) 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

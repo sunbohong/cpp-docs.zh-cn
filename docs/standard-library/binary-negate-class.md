@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： binary_negate 类
 title: binary_negate 类
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f97b1ec31623ece91c76b1195c87f75e8cdfd2eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688405"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325527"
 ---
 # <a name="binary_negate-class"></a>binary_negate 类
 
-提供成员函数的类模板，用于对指定二元函数的返回值求反。 在 c + + 17 中弃用，以支持[not_fn](functional-functions.md#not_fn)。
+提供成员函数的类模板，用于对指定二元函数的返回值求反。 在 c + + 17 中弃用，以支持 [not_fn](functional-functions.md#not_fn)。
 
 ## <a name="syntax"></a>语法
 
@@ -31,15 +32,15 @@ class binary_negate
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Func* \
+*求*\
 要求反的二元函数。
 
-*左*\
+*左中*\
 要求反的二元函数的左操作数。
 
-*right* \
+*然后*\
 要求反的二元函数的右操作数。
 
 ## <a name="return-value"></a>返回值
@@ -48,7 +49,7 @@ class binary_negate
 
 ## <a name="remarks"></a>备注
 
-类模板存储二元函数对象*Func*的副本。 它将其成员函数定义为返回 `!Func(left, right)` `operator()`。
+类模板存储二元函数对象 *Func* 的副本。 它将其成员函数定义 `operator()` 为返回 `!Func(left, right)` 。
 
 很少直接使用 `binary_negate` 的构造函数。 通常首选 Helper 函数 [not2](../standard-library/functional-functions.md#not2) 来声明和使用 **binary_negator** 适配器谓词。
 

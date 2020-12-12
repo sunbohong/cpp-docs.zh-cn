@@ -1,4 +1,5 @@
 ---
+description: 详细了解： ctype &lt; char &gt; 类
 title: ctype&lt;char&gt; 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: d2c74ef46babe388cfa6d649e8b4501b7c235bb9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f423b66f75cc0e1ee823251977e7d048b3c19e02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97324663"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 类
 
@@ -108,7 +109,7 @@ protected:
 
 显式专用化的不同之处在于类模板：
 
-- 类的对象 `ctype<char>` 存储一个指向 ctype 掩码表中第一个元素的指针，该指针是一个类型为 UCHAR_MAX + 1 个元素的数组 `ctype_base::mask` 。 它还存储一个布尔对象，该对象指示 `operator delete[]` 在销毁 ctype 对象时是否应删除（使用）数组 \< **Elem**> 。
+- 类的对象 `ctype<char>` 存储一个指向 ctype 掩码表中第一个元素的指针，该指针是一个类型为 UCHAR_MAX + 1 个元素的数组 `ctype_base::mask` 。 它还存储了一个布尔对象，该对象指示是否应 (使用 `operator delete[]`) 在 ctype \< **Elem**> 对象被销毁时删除数组。
 
 - 它的唯一公共构造函数允许你指定 `tab` 、ctype 掩码表和 `del` 布尔对象。如果在销毁对象时应删除数组，则为 true `ctype<char>` ; 对于引用计数参数的引用，则为 true。
 
@@ -116,7 +117,7 @@ protected:
 
 - 静态成员对象 `table_size` 指定 ctype 掩码表中元素的最小数目。
 
-- 受保护的静态成员函数 `classic_table` （返回对应于 "C" 区域设置的 ctype 掩码表。
+- 受保护的静态成员函数 `classic_table` ( 返回适用于 "C" 区域设置的 ctype 掩码表。
 
 - 没有受保护的虚拟成员函数 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is)，或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not)。 相应的公共成员函数自身执行等效操作。
 
@@ -128,7 +129,7 @@ protected:
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [facet 类](locale-class.md#facet_class)\
 [ctype_base 类](../standard-library/ctype-base-class.md)\

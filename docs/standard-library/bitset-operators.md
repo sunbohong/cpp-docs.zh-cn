@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 位组 &gt; 运算符
 title: '&lt;bitset&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5157b3e8a8fa94152a4a2446b1d9a4c124677ddd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325446"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 运算符
 
-## <a name="op_amp"></a> 运算符&amp;
+## <a name="operatoramp"></a><a name="op_amp"></a> 操作员&amp;
 
 执行两个位组间的按位 `AND`。
 
@@ -35,15 +36,15 @@ operator&(
 
 ### <a name="parameters"></a>parameters
 
-*左*\
+*左中*\
 要将其各自的元素使用按位 `AND` 组合的两个位组中的第一个。
 
-*right*\
+*然后*\
 要将其各自的元素使用按位 `AND` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
 
-一个位组，其元素是对*左*和*右*的相应元素执行 `AND` 操作的结果。
+一个位组，其元素是对 `AND` *左* 和 *右* 的相应元素执行操作的结果。
 
 ### <a name="example"></a>示例
 
@@ -73,7 +74,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 操作员&lt;&lt;
 
 将位序列的文本表示形式插入到输出流中。
 
@@ -86,16 +87,16 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>parameters
 
-*right*\
-要作为字符串插入到输出流的 **bitset\<N>** 类型的对象。
+*然后*\
+要作为字符串插入到输出流中的 **位组 \<N>** 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-`ostr`中位序列的文本表示形式。
+中位序列的文本表示形式 `ostr` 。
 
 ### <a name="remarks"></a>备注
 
-模板函数重载 `operator<<`，允许写出位组，而无需先将其转换为字符串。 该模板函数有效执行以下操作：
+模板函数重载 `operator<<` ，允许写出位组，而无需先将其转换为字符串。 该模板函数有效执行以下操作：
 
 `ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
@@ -130,7 +131,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>操作员&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a> 操作员&gt;&gt;
 
 将位字符的字符串读入位组。
 
@@ -146,18 +147,18 @@ basic_istream<CharType, Traits>& operator>> (
 *i_str*\
 输入到输入流以插入位组的字符串。
 
-*right*\
+*然后*\
 正在从输入流接收位的位组。
 
 ### <a name="return-value"></a>返回值
 
-模板函数返回*i_str*的字符串。
+模板函数返回 *i_str* 的字符串。
 
 ### <a name="remarks"></a>备注
 
-模板函数重载 `operator>>` 在位组中存储 `bitset(str)`的值，其中 `str` 是从 *`< CharType, Traits, allocator< CharType > >&`* 提取的[basic_string](basic-string-class.md) i_str*类型的对象*。
+`operator>>`要在位组中存储 *的模板* 函数重载值 `bitset(str)` ，其中 `str` 是 [](basic-string-class.md) `< CharType, Traits, allocator< CharType > >&` 从 *i_str* 中提取 basic_string 类型的对象。
 
-模板函数从*i_str*提取元素，并将它们插入到位组中：
+模板函数从 *i_str* 提取元素，并将它们插入到位组中：
 
 - 已从输入流提取所有的位元素并将其存储在位组中。
 
@@ -214,7 +215,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>运算符 ^
+## <a name="operator"></a><a name="op_xor"></a> 运算符 ^
 
 执行两个位组间的按位 `EXCLUSIVE-OR`。
 
@@ -228,15 +229,15 @@ operator^(
 
 ### <a name="parameters"></a>parameters
 
-*左*\
+*左中*\
 要将其各自的元素使用按位 `EXCLUSIVE-OR` 组合的两个位组中的第一个。
 
-*right*\
+*然后*\
 要将其各自的元素使用按位 `EXCLUSIVE-OR` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
 
-一个位组，其元素是对*左*和*右*的相应元素执行 `EXCLUSIVE-OR` 操作的结果。
+一个位组，其元素是对 `EXCLUSIVE-OR` *左* 和 *右* 的相应元素执行操作的结果。
 
 ### <a name="example"></a>示例
 
@@ -266,7 +267,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>操作员&#124;
+## <a name="operator124"></a><a name="op_or"></a> 运算符&#124;
 
 执行两个位组间的按位 `OR`。
 
@@ -280,15 +281,15 @@ operator|(
 
 ### <a name="parameters"></a>parameters
 
-*左*\
+*左中*\
 要将其各自的元素使用按位 `OR` 组合的两个位组中的第一个。
 
-*right*\
+*然后*\
 要将其各自的元素使用按位 `OR` 组合的两个 valarray 中的第二个。
 
 ### <a name="return-value"></a>返回值
 
-一个位组，其元素是对*左*和*右*的相应元素执行 `OR` 操作的结果。
+一个位组，其元素是对 `OR` *左* 和 *右* 的相应元素执行操作的结果。
 
 ### <a name="example"></a>示例
 
