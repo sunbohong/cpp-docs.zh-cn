@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _aligned_msize
 title: _aligned_msize
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 1037c63af17a844959bc72e42da2c33267b43004
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 6b3b7df960cdbf687a1ea51fa98da216ddfed068
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414030"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303695"
 ---
 # <a name="_aligned_msize"></a>_aligned_msize
 
@@ -49,7 +50,7 @@ size_t _aligned_msize(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *memblock*<br/>
 指向内存块的指针。
@@ -66,7 +67,7 @@ size_t _aligned_msize(
 
 ## <a name="remarks"></a>备注
 
-**_Aligned_msize**函数返回通过调用[_aligned_malloc](aligned-malloc.md)或[_aligned_realloc](aligned-realloc.md)分配的内存块的大小（以字节为单位）。 *对齐*和*偏移*值必须与传递给分配了块的函数的值相同。
+**_Aligned_msize** 函数返回通过调用 [_aligned_malloc](aligned-malloc.md)或 [_aligned_realloc](aligned-realloc.md)分配的内存块的大小（以字节为单位）。 *对齐* 和 *偏移* 值必须与传递给分配了块的函数的值相同。
 
 当应用程序与调试版的 C 运行时库链接时， **_aligned_msize** 解析为 [_aligned_msize_dbg](aligned-msize-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
@@ -86,6 +87,6 @@ size_t _aligned_msize(
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>

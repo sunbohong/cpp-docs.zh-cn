@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _mbccpy_s、_mbccpy_s_l
 title: _mbccpy_s、_mbccpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6764c100fb52b025db2d8f79a72c7c6420a64bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303526"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
@@ -83,16 +84,16 @@ errno_t _mbccpy_s_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-dest**<br/>
+*目的*<br/>
 复制目标。
 
 *buffSizeInBytes*<br/>
 目标缓冲区的大小。
 
 *pCopied*<br/>
-填充复制的字节数（如果成功则为 1 或 2）。 如果对数字不感兴趣，则传递**NULL** 。
+填充复制的字节数（如果成功则为 1 或 2）。 如果对数字不感兴趣，则传递 **NULL** 。
 
 *src*<br/>
 要复制的多字节字符。
@@ -102,30 +103,30 @@ dest**<br/>
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零；如果失败，则为错误代码。 如果*src*或*dest*为**NULL**，或者如果要将超过**buffSizeinBytes**字节复制到*dest*，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL** ， **Errno**设置为**EINVAL**。
+如果成功，则为零；如果失败，则为错误代码。 如果 *src* 或 *dest* 为 **NULL**，或者如果要将超过 **buffSizeinBytes** 字节复制到 *dest*，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回 **EINVAL** ， **Errno** 设置为 **EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_Mbccpy_s**函数将一个多字节字符从*src*复制到*目标*。 如果*src*不指向由对[_ismbblead](ismbblead-ismbblead-l.md)的隐式调用确定的多字节字符的前导字节，则会复制*src*指向的单个字节。 如果*src*指向前导字节，但以下字节是0，因而无效，则将0复制到*dest*， **errno**设置为**eilseq 且**，并且函数返回**eilseq 且**。
+**_Mbccpy_s** 函数将一个多字节字符从 *src* 复制到 *目标*。 如果 *src* 不指向由对 [_ismbblead](ismbblead-ismbblead-l.md)的隐式调用确定的多字节字符的前导字节，则会复制 *src* 指向的单个字节。 如果 *src* 指向前导字节，但以下字节是0，因而无效，则将0复制到 *dest*， **errno** 设置为 **eilseq 且**，并且函数返回 **eilseq 且**。
 
-**_mbccpy_s**不追加空终止符;但是，如果*src*指向 null 字符，则会将该 null 复制到*dest* （这只是一个常规的单字节副本）。
+**_mbccpy_s** 不追加空终止符;但是，如果 *src* 指向 null 字符，则会将该 null 复制到 *dest* (这只是一个常规的单字节副本) 。
 
-*PCopied*中的值由复制的字节数填充。 如果操作成功，则可能的值为 1 和 2。 如果传入**NULL** ，则忽略此参数。
+*PCopied* 中的值由复制的字节数填充。 如果操作成功，则可能的值为 1 和 2。 如果传入 **NULL** ，则忽略此参数。
 
-|*src*|已复制到*目标*|*pCopied*|返回值|
+|*src*|已复制到 *目标*|*pCopied*|返回值|
 |-----------|----------------------|---------------|------------------|
 |非前导字节|非前导字节|1|0|
 |0|0|1|0|
 |前导字节，后跟非零值|前导字节，后跟非零值|2|0|
 |前导字节，后跟 0|0|1|**EILSEQ**|
 
-请注意，第二行只是第一行的特殊情况。 另请注意，表假设*buffSizeInBytes* >= *pCopied*。
+请注意，第二行只是第一行的特殊情况。 另请注意，表假设 *buffSizeInBytes*  >=  *pCopied*。
 
-**_mbccpy_s**为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_s_l**与 **_mbccpy_s**相同，不同之处在于 **_mbccpy_s_l**使用传入的区域设置来实现与区域设置相关的行为。
+**_mbccpy_s** 为任何与区域设置相关的行为使用当前区域设置。 **_mbccpy_s_l** 与 **_mbccpy_s** 相同，不同之处在于 **_mbccpy_s_l** 使用传入的区域设置来实现与区域设置相关的行为。
 
 在 C++ 中，通过模板重载简化这些函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -135,15 +136,15 @@ dest**<br/>
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[本地](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _get_fmode
 title: _get_fmode
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: 3e59e608f83874088b64d316c04053b94d8fbfdd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 56716b7e8c12c5a3de79098a8227be31148ae386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303643"
 ---
 # <a name="_get_fmode"></a>_get_fmode
 
@@ -48,24 +49,24 @@ errno_t _get_fmode(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pmode*<br/>
-指向要用当前默认模式填充的整数的指针： **_O_TEXT**或 **_O_BINARY**。
+指向要用当前默认模式填充的整数的指针： **_O_TEXT** 或 **_O_BINARY**。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*pmode*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且函数将返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果 *pmode* 为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **EINVAL** ，并且函数将返回 **EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-函数获取 [_fmode](../../c-runtime-library/fmode.md) 全局变量的值。 此变量为低级和流文件 i/o 操作指定默认的文件转换模式，如 **_open**、 **_pipe**、 **fopen**和[freopen](freopen-wfreopen.md)。
+函数获取 [_fmode](../../c-runtime-library/fmode.md) 全局变量的值。 此变量为低级和流文件 i/o 操作指定默认的文件转换模式，如 **_open**、 **_pipe**、 **fopen** 和 [freopen](freopen-wfreopen.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 
@@ -75,7 +76,7 @@ errno_t _get_fmode(
 
 请参阅 [_set_fmode](set-fmode.md) 中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_set_fmode](set-fmode.md)<br/>

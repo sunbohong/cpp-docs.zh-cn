@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：格式规范字段： scanf 和 wscanf 函数
 title: 格式规范字段：scanf 和 wscanf 函数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-ms.openlocfilehash: 4be7aa5e0790f0124890ee981ffd58e3027ea59b
-ms.sourcegitcommit: 111ee74772d7f308d3414b5d42cbc1e90287f081
+ms.openlocfilehash: 64d889af8200f5dcc745d628e02c388d74039bdd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88659326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303884"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式规范字段：scanf 和 wscanf 函数
 
@@ -49,7 +50,7 @@ ms.locfileid: "88659326"
 
 `_s` 函数系列的安全版本（具有 `scanf` 后缀的版本）需要在每个 `c`、`C`、`s`、`S` 或 `[` 类型的参数之后立即传入一个缓冲区大小参数。 有关 `scanf` 系列函数的安全版本的更多信息，请参阅 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [scanf 宽度规范](../c-runtime-library/scanf-width-specification.md)<br/>
 [scanf 类型字段字符](../c-runtime-library/scanf-type-field-characters.md)<br/>
