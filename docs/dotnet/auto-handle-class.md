@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： auto_handle 类
 title: auto_handle 类
 ms.date: 01/16/2019
 ms.topic: reference
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 975710fb47bdcf3195330402acd869aba17234e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9ac93d6b141f24a430aceb97f82fc90046622866
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282648"
 ---
 # <a name="auto_handle-class"></a>auto_handle 类
 
@@ -33,23 +34,23 @@ template<typename _element_type>
 ref class auto_handle;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_element_type*<br/>
 要嵌入的托管类型。
 
-## <a name="members"></a><a name="members"></a>组员
+## <a name="members"></a><a name="members"></a> 组员
 
 ### <a name="public-constructors"></a>公共构造函数  
 
-|名称|说明|  
+|名称|描述|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|`auto_handle`构造函数。|  
 |[auto_handle：： ~ auto_handle](#tilde-auto-handle)|`auto_handle`析构函数。|  
 
 ### <a name="public-methods"></a>公共方法  
 
-|名称|说明|  
+|名称|描述|  
 |---------|-----------|  
 |[auto_handle::get](#get)|获取包含的对象。|  
 |[auto_handle::release](#release)|从管理中释放对象 `auto_handle` 。|
@@ -58,7 +59,7 @@ ref class auto_handle;
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|  
+|名称|描述|  
 |---------|-----------|
 |[auto_handle：： operator-&gt;](#operator-arrow)|成员访问运算符。|
 |[auto_handle::operator=](#operator-assign)|赋值运算符。|
@@ -70,9 +71,9 @@ ref class auto_handle;
 
 **头文件** \<msclr\auto_handle.h>
 
-**命名空间**msclr
+**命名空间** msclr
 
-## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a>auto_handle：： auto_handle
+## <a name="auto_handleauto_handle"></a><a name="auto-handle"></a> auto_handle：： auto_handle
 
 `auto_handle`构造函数。
 
@@ -90,7 +91,7 @@ auto_handle(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_ptr*<br/>
 要拥有的对象。
@@ -163,7 +164,7 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a>auto_handle：： ~ auto_handle
+## <a name="auto_handleauto_handle"></a><a name="tilde-auto-handle"></a> auto_handle：： ~ auto_handle
 
 `auto_handle`析构函数。
 
@@ -210,7 +211,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_handleget"></a><a name="get"></a>auto_handle：： get
+## <a name="auto_handleget"></a><a name="get"></a> auto_handle：： get
 
 获取包含的对象。
 
@@ -270,7 +271,7 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_handlerelease"></a><a name="release"></a>auto_handle：： release
+## <a name="auto_handlerelease"></a><a name="release"></a> auto_handle：： release
 
 从管理中释放对象 `auto_handle` 。
 
@@ -333,7 +334,7 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_handlereset"></a><a name="reset"></a>auto_handle：： reset
+## <a name="auto_handlereset"></a><a name="reset"></a> auto_handle：： reset
 
 销毁当前拥有的对象，并选择性地拥有新的对象。
 
@@ -344,10 +345,10 @@ void reset(
 void reset();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_new_ptr*<br/>
-可有可无新的对象。
+ (可选) 新的对象。
 
 ### <a name="example"></a>示例
 
@@ -399,7 +400,7 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_handleswap"></a><a name="swap"></a>auto_handle：： swap
+## <a name="auto_handleswap"></a><a name="swap"></a> auto_handle：： swap
 
 将对象与另一个对象交换 `auto_handle` 。
 
@@ -409,7 +410,7 @@ void swap(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 `auto_handle`用于交换对象的。
@@ -441,7 +442,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a>auto_handle：： operator-&gt;
+## <a name="auto_handleoperator-gt"></a><a name="operator-arrow"></a> auto_handle：： operator-&gt;
 
 成员访问运算符。
 
@@ -490,7 +491,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-assign"></a>auto_handle：： operator =
+## <a name="auto_handleoperator"></a><a name="operator-assign"></a> auto_handle：： operator =
 
 赋值运算符。
 
@@ -504,7 +505,7 @@ auto_handle<_element_type> % operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 `auto_handle`要分配给当前的 `auto_handle` 。
@@ -574,7 +575,7 @@ done
 in ClassA destructor: second
 ```
 
-## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a>auto_handle：： operator auto_handle
+## <a name="auto_handleoperator-auto_handle"></a><a name="operator-auto-handle"></a> auto_handle：： operator auto_handle
 
 与兼容的类型之间的类型转换运算符 `auto_handle` 。
 
@@ -629,7 +630,7 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a>auto_handle：： operator bool
+## <a name="auto_handleoperator-bool"></a><a name="operator-bool"></a> auto_handle：： operator bool
 
 用于 `auto_handle` 条件表达式中的运算符。
 
@@ -639,7 +640,7 @@ operator bool();
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果包装的对象有效，则为; 否则为。**`false`** 否则为。
+**`true`** 如果包装的对象有效，则为; 否则为。 **`false`** 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -674,7 +675,7 @@ s2 is valid
 s2 is now invalid
 ```
 
-## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a>auto_handle：： operator！
+## <a name="auto_handleoperator"></a><a name="operator-logical-not"></a> auto_handle：： operator！
 
 用于 `auto_handle` 条件表达式中的运算符。
 
@@ -684,7 +685,7 @@ bool operator!();
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果包装的对象无效，则为; 否则为。**`false`** 否则为。
+**`true`** 如果包装的对象无效，则为; 否则为。 **`false`** 否则为。
 
 ### <a name="example"></a>示例
 

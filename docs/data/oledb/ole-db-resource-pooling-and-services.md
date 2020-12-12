@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： OLE DB 资源池和服务
 title: OLE DB 资源池和服务
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE DB services [OLE DB]
 - OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-ms.openlocfilehash: 67eeffff2bf165a5ccbdbaa546ad5b9ca9a57914
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1a66a6a616ed67e70fb10fa1bf43dac634051325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210023"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286782"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB 资源池和服务
 
@@ -28,6 +29,6 @@ ms.locfileid: "80210023"
 
 最后，除非在池发生的相同级别实现，否则自动事务登记通常不起作用。 支持自动事务登记的提供程序应支持通过公开 DBPROP_INIT_OLEDBSERVICES 属性并在取消选择 DBPROPVAL_OS_TXNENLISTMENT 的情况下禁用登记来禁用此登记。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多： Platform：： Array 类
 title: Platform::Array 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 4903c18f981c87c418a6ab08595816ce22a7413c
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 76e8329cdc324bc7a8de338725d48188b79ac9f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284195"
 ---
 # <a name="platformarray-class"></a>Platform::Array 类
 
@@ -36,7 +37,7 @@ Platform：： Array 从 [platform：： WriteOnlyArray 类](../cppcx/platform-w
 
 |“属性”|描述|
 |----------|-----------------|
-|[Array 构造函数](#ctor)|初始化由类模板参数 *T*指定的一维可修改类型数组。|
+|[Array 构造函数](#ctor)|初始化由类模板参数 *T* 指定的一维可修改类型数组。|
 
 ### <a name="methods"></a>方法
 
@@ -64,7 +65,7 @@ Windows 运行时类型系统不支持交错数组的概念，因此不能将 `I
 
 ## <a name="array-constructors"></a><a name="ctor"></a> 数组构造函数
 
-初始化由类模板参数 *T*指定的一维可修改类型数组。
+初始化由类模板参数 *T* 指定的一维可修改类型数组。
 
 ### <a name="syntax"></a>语法
 
@@ -73,7 +74,7 @@ Array(unsigned int size);
 Array(T* data, unsigned int size);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 类模板参数。

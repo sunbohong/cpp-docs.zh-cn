@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：集合
 title: 集合
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: f2cd03afbb09dff38298454658c3d3dc2dfa6a8a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 63bc61b73a9ba654fd22ecf3a238f8ef89734221
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619352"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283467"
 ---
 # <a name="collections"></a>集合
 
@@ -35,13 +36,13 @@ Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类
 > [!NOTE]
 > 如果代码已使用非模板集合类，你可以继续使用它们。 如果您为自己的数据类型编写了新的类型安全集合类，则建议使用较新的基于模板的类。
 
-## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a>集合形状
+## <a name="collection-shapes"></a><a name="_core_collection_shapes"></a> 集合形状
 
 集合类以其“形式”和元素类型为特征。 形式指的是集合组织和存储对象的方式。 MFC 提供了三个基本集合形式：列表、数组和映射（也称为字典）。 你可以选取最适合你的特定编程问题的集合形式。
 
-本主题的后面部分简要分别介绍了所提供的三种集合形式。 若要比较形状的功能以帮助您决定哪一种最适合您的程序，请参阅[有关选择集合类的建议](recommendations-for-choosing-a-collection-class.md)。
+本主题的后面部分简要分别介绍了所提供的三种集合形式。 若要比较形状的功能以帮助您决定哪一种最适合您的程序，请参阅 [有关选择集合类的建议](recommendations-for-choosing-a-collection-class.md)。
 
-- 列表
+- 列出
 
    列表类提供了元素的有序非索引列表，该列表作为双向链接列表实现。 列表具有“头”和“尾”，它在头和尾中添加/移除元素或在中间插入/删除元素非常快。
 
@@ -53,26 +54,26 @@ Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类
 
    映射是将键对象与值对象关联的集合。
 
-## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>基于模板的集合类
+## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a> Template-Based 集合类
 
-若要实现包含任何类型的对象的类型安全的集合，最简单的方法是使用其中一个基于 MFC 模板的类。 有关这些类的示例，请参阅 MFC 示例[收集](../overview/visual-cpp-samples.md)。
+若要实现包含任何类型的对象的类型安全的集合，最简单的方法是使用其中一个基于 MFC 模板的类。 有关这些类的示例，请参阅 MFC 示例 [收集](../overview/visual-cpp-samples.md)。
 
 下表列出了基于 MFC 模板的集合类。
 
 ### <a name="collection-template-classes"></a>集合模板类
 
-|集合内容|数组|列表|Maps|
+|集合内容|数组|列表|地图|
 |-------------------------|------------|-----------|----------|
 |任何类型的对象的集合|`CArray`|`CList`|`CMap`|
 |指向任何类型的对象的指针的集合|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
 
-## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>不基于模板的集合类
+## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a> 不基于模板的集合类
 
 如果应用程序已使用 MFC 非模板类，则可以继续使用它们。 但是，对于新集合，建议使用基于模板的类。 下表列出了不基于模板的 MFC 集合类。
 
 ### <a name="nontemplate-collection-classes"></a>非模板集合类
 
-|数组|列表|Maps|
+|数组|列表|地图|
 |------------|-----------|----------|
 |`CObArray`|`CObList`|`CMapPtrToWord`|
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|
@@ -82,7 +83,7 @@ Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类
 |`CWordArray`||`CMapWordToOb`|
 |`CUIntArray`||`CMapWordToPtr`|
 
-[有关选择集合类的建议](recommendations-for-choosing-a-collection-class.md)中的 Mfc 集合类表的特征介绍了 mfc 集合类的以下特征：
+[对于选择集合类的建议](recommendations-for-choosing-a-collection-class.md)，Mfc 集合类表的特征描述了 mfc 集合类，但这些特征不同于 (形状) ：
 
 - 类是否使用 C++ 模板
 
@@ -98,7 +99,7 @@ Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类
 
 - [选择集合类的建议](recommendations-for-choosing-a-collection-class.md)
 
-- [如何：创建类型安全集合](how-to-make-a-type-safe-collection.md)
+- [如何：进行 Type-Safe 收集](how-to-make-a-type-safe-collection.md)
 
 - [创建堆栈和队列集合](creating-stack-and-queue-collections.md)
 
@@ -114,7 +115,7 @@ Microsoft 基础类库提供了用来管理对象的组的集合类。 这些类
 
 - [正在删除 CObject 集合中的所有对象](deleting-all-objects-in-a-cobject-collection.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概念](mfc-concepts.md)<br/>
 [常规 MFC 主题](general-mfc-topics.md)

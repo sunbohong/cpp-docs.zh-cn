@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： OLE DB 体系结构设计问题
 title: OLE DB 结构设计问题
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2e6bd90b5d3c67fbdfb8cdfbb9c32af88ed106e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544548"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286977"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 结构设计问题
 
@@ -40,7 +41,7 @@ Microsoft 提供了多个可完成此任务的库：OLE DB 模板库、OLE DB �
 
 - [Microsoft 数据访问技术文章概述](/previous-versions/ms810811(v=msdn.10))
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 编程](../../data/oledb/ole-db-programming.md)<br/>
 [OLE DB 编程概述](../../data/oledb/ole-db-programming-overview.md)

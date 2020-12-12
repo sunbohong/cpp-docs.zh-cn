@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：架构行集类和 Typedef 类
 title: 架构行集类和 Typedef 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -548,12 +549,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 104f7a92cdb472fc889d44cff20982e51b955014
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5b51404642dbb6d9ad6c2236e7693137b4a949c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509488"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286561"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>架构行集类和 Typedef 类
 
@@ -602,13 +603,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CAssertions` 以实现其参数类 `CAssertionInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的断言。
 
-下表列出了的类数据成员 `CAssertionInfo` 及其相应 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[断言行集](/previous-versions/windows/desktop/ms719776(v=vs.85))。
+下表列出了的类数据成员 `CAssertionInfo` 及其相应 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [断言行集](/previous-versions/windows/desktop/ms719776(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -617,36 +618,36 @@ ms.locfileid: "91509488"
 |m_szName|CONSTRAINT_NAME|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a> CCatalogs、CCatalogInfo
 
 调用 typedef 类 `CCatalogs` 以实现其参数类 `CCatalogInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识与可从 DBMS 访问的目录关联的物理特性。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[目录行集](/previous-versions/windows/desktop/ms721241(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [目录行集](/previous-versions/windows/desktop/ms721241(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
 |m_szName|CATALOG_NAME|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a> CCharacterSets、CCharacterSetInfo
 
 调用 typedef 类 `CCharacterSets` 以实现其参数类 `CCharacterSetInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类将标识在可供特定用户访问的目录中定义的字符集。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[CHARACTER_SETS 行集](/previous-versions/windows/desktop/ms722638(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [CHARACTER_SETS 行集](/previous-versions/windows/desktop/ms722638(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -663,13 +664,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CCheckConstraints` 以实现其参数类 `CCheckConstraintInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的 check 约束。 Check 约束指定表中的一个或多个列中可接受的数据值或格式。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[CHECK_CONSTRAINTS 行集](/previous-versions/windows/desktop/ms712845(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [CHECK_CONSTRAINTS 行集](/previous-versions/windows/desktop/ms712845(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -677,19 +678,19 @@ ms.locfileid: "91509488"
 |m_szSchema|CONSTRAINT_SCHEMA|
 |m_szName|CONSTRAINT_NAME|
 |m_szCheckClause|CHECK_CLAUSE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="ccollations-ccollationinfo"></a><a name="collation"></a> CCollations、CCollationInfo
 
 调用 typedef 类 `CCollations` 以实现其参数类 `CCollationInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的字符排序规则。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[排序规则行集](/previous-versions/windows/desktop/ms715783(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [排序规则行集](/previous-versions/windows/desktop/ms715783(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -705,13 +706,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CColumnDomainUsage` 以实现其参数类 `CColumnDomainUsageInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、依赖于在目录中定义并由给定用户拥有的域的列。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[COLUMN_DOMAIN_USAGE 行集](/previous-versions/windows/desktop/ms711240(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [COLUMN_DOMAIN_USAGE 行集](/previous-versions/windows/desktop/ms711240(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -729,13 +730,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CColumnPrivileges` 以实现其参数类 `CColumnPrivilegeInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、可供给定用户或授予的对表的列的特权。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[COLUMN_PRIVILEGES 行集](/previous-versions/windows/desktop/ms715800(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [COLUMN_PRIVILEGES 行集](/previous-versions/windows/desktop/ms715800(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -754,13 +755,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CColumns` 以实现其参数类 `CColumnsInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的表的列。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[列行集](/previous-versions/windows/desktop/ms723052(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [列行集](/previous-versions/windows/desktop/ms723052(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -791,19 +792,19 @@ ms.locfileid: "91509488"
 |m_szDomainCatalog|DOMAIN_CATALOG|
 |m_szDomainSchema|DOMAIN_SCHEMA|
 |m_szDomainName|DOMAIN_NAME|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a> CConstraintColumnUsage、CConstraintColumnUsageInfo
 
 调用 typedef 类 `CConstraintColumnUsage` 以实现其参数类 `CConstraintColumnUsageInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识引用约束、唯一约束、check 约束和断言使用的、在目录中定义并由给定用户拥有的列。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[CONSTRAINT_COLUMN_USAGE 行集](/previous-versions/windows/desktop/ms724522(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [CONSTRAINT_COLUMN_USAGE 行集](/previous-versions/windows/desktop/ms724522(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -821,13 +822,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CConstraintTableUsage` 以实现其参数类 `CConstraintTableUsageInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识引用约束、唯一约束、check 约束和断言使用的、在目录中定义并由给定用户拥有的表。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[CONSTRAINT_TABLE_USAGE 行集](/previous-versions/windows/desktop/ms724522(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [CONSTRAINT_TABLE_USAGE 行集](/previous-versions/windows/desktop/ms724522(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -842,13 +843,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CForeignKeys` 以实现其参数类 `CForeignKeysInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识给定用户在目录中定义的外键列。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[FOREIGN_KEYS 行集](/previous-versions/windows/desktop/ms711276(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [FOREIGN_KEYS 行集](/previous-versions/windows/desktop/ms711276(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -872,13 +873,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CIndexes` 以实现其参数类 `CIndexInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的索引。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[索引行集](/previous-versions/windows/desktop/ms709712(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [索引行集](/previous-versions/windows/desktop/ms709712(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -891,7 +892,7 @@ ms.locfileid: "91509488"
 |m_bPrimaryKey|PRIMARY_KEY|
 |m_bUnique|UNIQUE|
 |m_bClustered|CLUSTERED|
-|m_nType|TYPE|
+|m_nType|类型|
 |m_nFillFactor|FILL_FACTOR|
 |m_nInitialSize|INITIAL_SIZE|
 |m_nNulls|NULLS|
@@ -911,13 +912,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CKeyColumns` 以实现其参数类 `CKeyColumnInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、由给定用户约束为键的列。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[KEY_COLUMN_USAGE 行集](/previous-versions/windows/desktop/ms712990(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [KEY_COLUMN_USAGE 行集](/previous-versions/windows/desktop/ms712990(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -936,13 +937,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CPrimaryKeys` 以实现其参数类 `CPrimaryKeyInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识给定用户在目录中定义的主键列。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[PRIMARY_KEYS 行集](/previous-versions/windows/desktop/ms714362(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [PRIMARY_KEYS 行集](/previous-versions/windows/desktop/ms714362(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -958,13 +959,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CProcedureColumns` 以实现其参数类 `CProcedureColumnInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类返回有关由过程返回的行集的列的信息。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[PROCEDURE_COLUMNS 行集](/previous-versions/windows/desktop/ms723092(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [PROCEDURE_COLUMNS 行集](/previous-versions/windows/desktop/ms723092(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -983,19 +984,19 @@ ms.locfileid: "91509488"
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a> CProcedureParameters CProcedureParamInfo
 
 调用 typedef 类 `CProcedureParameters` 以实现其参数类 `CProcedureParamInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类返回有关过程的参数和返回代码的信息。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[PROCEDURE_PARAMETERS 行集](/previous-versions/windows/desktop/ms713623(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [PROCEDURE_PARAMETERS 行集](/previous-versions/windows/desktop/ms713623(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1013,19 +1014,19 @@ ms.locfileid: "91509488"
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a> CProcedures、CProcedureInfo
 
 调用 typedef 类 `CProcedures` 以实现其参数类 `CProcedureInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、由给定用户拥有的过程。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[过程行集](/previous-versions/windows/desktop/ms724021(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [过程行集](/previous-versions/windows/desktop/ms724021(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1034,19 +1035,19 @@ ms.locfileid: "91509488"
 |m_szName|PROCEDURE_NAME|
 |m_nType|PROCEDURE_TYPE|
 |m_szDefinition|PROCEDURE_DEFINITION|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a> CProviderTypes、CProviderInfo
 
 调用 typedef 类 `CProviderTypes` 以实现其参数类 `CProviderInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识数据提供程序支持的 (基) 数据类型。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[PROVIDER_TYPES 行集](/previous-versions/windows/desktop/ms709785(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [PROVIDER_TYPES 行集](/previous-versions/windows/desktop/ms709785(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1058,7 +1059,7 @@ ms.locfileid: "91509488"
 |m_szCreateParams|CREATE_PARAMS|
 |m_bIsNullable|IS_NULLABLE|
 |m_bCaseSensitive|CASE_SENSITIVE|
-|m_nSearchable|SEARCHABLE|
+|m_nSearchable|可搜索|
 |m_bUnsignedAttribute|UNSIGNED_ATTRIBUTE|
 |m_bFixedPrecScale|FIXED_PREC_SCALE|
 |m_bAutoUniqueValue|AUTO_UNIQUE_VALUE|
@@ -1075,13 +1076,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CReferentialConstraints` 以实现其参数类 `CReferentialConstraintInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的引用约束。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[REFERENTIAL_CONSTRAINTS 行集](/previous-versions/windows/desktop/ms719737(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [REFERENTIAL_CONSTRAINTS 行集](/previous-versions/windows/desktop/ms719737(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1094,19 +1095,19 @@ ms.locfileid: "91509488"
 |m_szMatchOption|MATCH_OPTION|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="cschemata-cschematainfo"></a><a name="schemata"></a> CSchemata、CSchemataInfo
 
 调用 typedef 类 `CSchemata` 以实现其参数类 `CSchemataInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识给定用户拥有的架构。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的架构[行集](/previous-versions/windows/desktop/ms716887(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的架构 [行集](/previous-versions/windows/desktop/ms716887(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1121,13 +1122,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CSQLLanguages` 以实现其参数类 `CSQLLanguageInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的 SQL 实现处理数据所支持的一致性级别、选项和方言。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[SQL_LANGUAGES 行集](/previous-versions/windows/desktop/ms714374(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [SQL_LANGUAGES 行集](/previous-versions/windows/desktop/ms714374(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1143,13 +1144,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CStatistics` 以实现其参数类 `CStatisticInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、由给定用户拥有的统计信息。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[统计信息行集](/previous-versions/windows/desktop/ms715957(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [统计信息行集](/previous-versions/windows/desktop/ms715957(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1162,13 +1163,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CTableConstraints` 以实现其参数类 `CTableConstraintInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的由给定用户拥有的表约束。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[TABLE_CONSTRAINTS 行集](/previous-versions/windows/desktop/ms715921(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [TABLE_CONSTRAINTS 行集](/previous-versions/windows/desktop/ms715921(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1181,19 +1182,19 @@ ms.locfileid: "91509488"
 |m_szType|CONSTRAINT_TYPE|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a> CTablePrivileges、CTablePrivilegeInfo
 
 调用 typedef 类 `CTablePrivileges` 以实现其参数类 `CTablePrivilegeInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的表。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[TABLE_PRIVILEGES 行集](/previous-versions/windows/desktop/ms725428(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [TABLE_PRIVILEGES 行集](/previous-versions/windows/desktop/ms725428(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1209,13 +1210,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CTables` 以实现其参数类 `CTableInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、可供给定用户或授予的对表的特权。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[表行集](/previous-versions/windows/desktop/ms716980(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [表行集](/previous-versions/windows/desktop/ms716980(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1224,19 +1225,19 @@ ms.locfileid: "91509488"
 |m_szName|TABLE_NAME|
 |m_szType|TABLE_TYPE|
 |m_guidTable|TABLE_GUID|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a> CTranslations、CTranslationInfo
 
 调用 typedef 类 `CTranslations` 以实现其参数类 `CTranslationInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的字符转换。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[翻译行集](/previous-versions/windows/desktop/ms725365(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [翻译行集](/previous-versions/windows/desktop/ms725365(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1254,13 +1255,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CUsagePrivileges` 以实现其参数类 `CUsagePrivilegeInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可使用或授予的对象的使用权限。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[USAGE_PRIVILEGES 行集](/previous-versions/windows/desktop/ms722743(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [USAGE_PRIVILEGES 行集](/previous-versions/windows/desktop/ms722743(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1277,13 +1278,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CViewColumnUsage` 以实现其参数类 `CViewColumnInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义并由给定用户拥有的已查看的表所依赖的列。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[VIEW_COLUMN_USAGE 行集](/previous-versions/windows/desktop/ms714896(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [VIEW_COLUMN_USAGE 行集](/previous-versions/windows/desktop/ms714896(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1301,13 +1302,13 @@ ms.locfileid: "91509488"
 
 调用 typedef 类 `CViews` 以实现其参数类 `CViewInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识已查看的表、在目录中定义并由给定用户拥有的表。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中的[VIEWS 行集](/previous-versions/windows/desktop/ms723122(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中的 [VIEWS 行集](/previous-versions/windows/desktop/ms723122(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|
@@ -1317,19 +1318,19 @@ ms.locfileid: "91509488"
 |m_szDefinition|VIEW_DEFINITION|
 |m_bCheckOption|CHECK_OPTION|
 |m_bIsUpdatable|IS_UPDATABLE|
-|m_szDescription|DESCRIPTION|
+|m_szDescription|说明|
 
 ## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a> CViewTableUsage、CViewTableInfo
 
 调用 typedef 类 `CViewTableUsage` 以实现其参数类 `CViewTableInfo` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关使用 Typedef 类的详细信息，请参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。
 
 此类标识在目录中定义的、给定用户可以访问的已查看表。
 
-下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅*OLE DB 程序员参考*中[VIEW_TABLE_USAGE 行集](/previous-versions/windows/desktop/ms719727(v=vs.85))。
+下表列出了类数据成员及其对应的 OLE DB 列。 有关架构和列的详细信息，请参阅 *OLE DB 程序员参考* 中 [VIEW_TABLE_USAGE 行集](/previous-versions/windows/desktop/ms719727(v=vs.85))。
 
 |数据成员|OLE DB 列|
 |------------------|--------------------|

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： locale 类
 title: locale 类
 ms.date: 07/20/2020
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 55aeaf27b1c31ef0dba68d0ead3633590777cbdf
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e934a2e892f0b68926369c8e4a4128162345dd83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040596"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284624"
 ---
 # <a name="locale-class"></a>locale 类
 
@@ -155,18 +156,18 @@ cout.imbue(loc);
 |成员函数|说明|
 |-|-|
 |[or](#combine)|将指定区域设置中的 facet 插入到目标区域设置。|
-|[name](#name)|返回存储的区域设置名称。|
+|name|返回存储的区域设置名称。|
 
 ### <a name="static-functions"></a>静态函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[经典](#classic)|此静态成员函数返回表示经典 C 区域设置的区域设置对象。|
 |[global](#global)|重置程序的默认区域设置。|
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|运算符|描述|
 |-|-|
 |[operator =](#op_eq)|指定区域设置。|
 |[operator！ =](#op_neq)|测试两个区域设置是否不相等。|
@@ -175,9 +176,9 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
-|[多](#facet_class)|一种类，此类用作所有区域设置 facet 的基类。|
+|[facet](#facet_class)|一种类，此类用作所有区域设置 facet 的基类。|
 |[`id`](#id_class)|成员类提供用作索引以查找区域设置中的 facet 的唯一 facet 标识。|
 
 ## <a name="requirements"></a>要求
@@ -290,14 +291,14 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *source_locale*\
 包含要插入到目标区域设置的 facet 的区域设置。
 
 ### <a name="return-value"></a>返回值
 
-成员函数将返回区域设置对象，该对象将替换 source_locale 中列出的方面或将其** \* 添加到中** `Facet` *source_locale*。
+成员函数将返回区域设置对象，该对象将替换 source_locale 中列出的方面或将其 **\* 添加到中** `Facet` 。
 
 ### <a name="example"></a>示例
 
@@ -358,7 +359,7 @@ private:
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *new_default_locale*\
 要由该程序用作默认区域设置的区域设置。
@@ -435,7 +436,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *locale_name*\
 区域设置的名称。
@@ -454,11 +455,11 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将初始化该对象，以便匹配全局构造函数。 第二个和第三个构造函数初始化所有区域设置类别，使其行为与区域设置名称 *locale_name*一致。 剩余的构造函数复制 *from_locale*，并注明例外：
+第一个构造函数将初始化该对象，以便匹配全局构造函数。 第二个和第三个构造函数初始化所有区域设置类别，使其行为与区域设置名称 *locale_name* 一致。 剩余的构造函数复制 *from_locale*，并注明例外：
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-替换为 C & *new_category*为非零的类别 c 的*其他*方面。
+替换为 C & *new_category* 为非零的类别 c 的 *其他* 方面。
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
@@ -468,7 +469,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-如果*new_facet*不是 null 指针，则将替换 (或添加到*from_locale* facet *new_facet*的) 。
+如果 *new_facet* 不是 null 指针，则将替换 (或添加到 *from_locale* facet *new_facet* 的) 。
 
 如果区域设置名称 *locale_name* 为 null 指针或无效，则该函数将引发 [runtime_error](../standard-library/runtime-error-class.md)。
 
@@ -567,7 +568,7 @@ const locale& operator=(const locale& other) noexcept;
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要测试不相等的区域设置之一。
@@ -631,7 +632,7 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要比较的第一个字符串。
@@ -641,7 +642,7 @@ bool operator()(
 
 ### <a name="return-value"></a>返回值
 
-- **`true`** 如果按字典顺序小于*右侧* *，则为*; 否则为 **`false`** 。
+- **`true`** 如果按字典顺序小于 *右侧* *，则为*; 否则为 **`false`** 。
 
 ### <a name="remarks"></a>备注
 
@@ -694,7 +695,7 @@ int main( )
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要测试相等的区域设置之一。
@@ -751,7 +752,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [代码页](../c-runtime-library/code-pages.md)\

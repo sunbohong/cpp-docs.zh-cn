@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： OLE DB 使用者模板的宏和全局函数
 title: OLE DB 使用者模板的宏和全局函数
 ms.date: 02/11/2019
 f1_keywords:
@@ -99,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 60f642366589bb13b15665331a81d440322eb13f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fb6e126483690e43ceaf3814f6c288ecfdc69da1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504031"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287068"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 使用者模板的宏和全局函数
 
@@ -112,13 +113,13 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="global-functions"></a>全局函数
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AtlTraceErrorRecords](#atltraceerrorrecords)|如果返回错误，则将 OLE DB 错误记录信息转储到转储设备。|
 
 ## <a name="accessor-map-macros"></a>访问器映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_ACCESSOR](#begin_accessor)|标记访问器项的开头。|
 |[BEGIN_ACCESSOR_MAP](#begin_accessor_map)|标记取值函数映射条目的开始。|
@@ -127,7 +128,7 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="column-map-macros"></a>列映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_COLUMN_MAP](#begin_column_map)|标记用户记录类中的列映射条目的开头。|
 |[BLOB_ENTRY](#blob_entry)|用于将二进制大型对象绑定 (BLOB) 。|
@@ -140,7 +141,7 @@ OLE DB 使用者模板包括以下宏和全局函数：
 |[BLOB_NAME_STATUS](#blob_name_status)|报告 BLOB 数据列的状态。|
 |[BOOKMARK_ENTRY](#bookmark_entry)|表示行集上的书签条目。 书签项是一种特殊的列项。|
 |[COLUMN_ENTRY](#column_entry)|表示对数据库中特定列的绑定。|
-|[COLUMN_ENTRY_EX](#column_entry_ex)|表示对数据库中特定列的绑定。 支持 *类型*、 *长度*、 *精度*、 *小数位数*和 *状态* 参数。|
+|[COLUMN_ENTRY_EX](#column_entry_ex)|表示对数据库中特定列的绑定。 支持 *类型*、 *长度*、 *精度*、 *小数位数* 和 *状态* 参数。|
 |[COLUMN_ENTRY_LENGTH](#column_entry_length)|表示对数据库中特定列的绑定。 支持 *length* 变量。|
 |[COLUMN_ENTRY_LENGTH_STATUS](#column_entry_length_status)|表示对数据库中特定列的绑定。 支持 *状态* 和 *长度* 参数。|
 |[COLUMN_ENTRY_PS](#column_entry_ps)|表示对数据库中特定列的绑定。 支持 *精度* 和 *小数位数* 参数。|
@@ -167,14 +168,14 @@ OLE DB 使用者模板包括以下宏和全局函数：
 
 ## <a name="command-macros"></a>命令宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[DEFINE_COMMAND](#define_command)|指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 仅接受与指定的应用程序类型匹配 (ANSI 或 Unicode) 的字符串类型。 建议使用 [DEFINE_COMMAND_EX](#define_command_ex) 而不是 DEFINE_COMMAND。|
 |[DEFINE_COMMAND_EX](#define_command_ex)|指定使用 [CCommand](../../data/oledb/ccommand-class.md) 类时将用于创建行集的命令。 支持 ANSI 和 Unicode 应用程序。|
 
 ## <a name="parameter-map-macros"></a>参数映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_PARAM_MAP](#begin_param_map)|标记用户记录类中参数映射条目的开头。|
 |[END_PARAM_MAP](#end_param_map)|标记参数映射项的结尾。|
@@ -190,12 +191,12 @@ OLE DB 使用者模板包括以下宏和全局函数：
 inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hErr*<br/>
 中OLE DB 使用者模板成员函数返回的 HRESULT。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果未 S_OK *hErr* ，则会将 `AtlTraceErrorRecords` OLE DB 错误记录信息转储到 "输出" 窗口的 " **调试** " 选项卡中 (转储设备或文件) 。 从提供程序中获取的错误记录信息包含行号、源、说明、帮助文件、上下文和每个错误记录条目的 GUID。 `AtlTraceErrorRecords` 仅在调试版本中转储此信息。 在发布版本中，它是一个被优化的空存根。有关详细信息，请参阅 [CDBErrorInfo 类](../../data/oledb/cdberrorinfo-class.md)。
 
@@ -209,15 +210,15 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 BEGIN_ACCESSOR(num, bAuto)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*num*<br/>
+*编号*<br/>
 中此访问器映射中访问器的零偏移量。
 
 *bAuto*<br/>
 中指定此访问器是自动访问器还是手动访问器。 如果为 **`true`** ，则访问器是自动的; 如果为 **`false`** ，则访问器是手动的。 自动访问器表示对移动操作获取数据。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果行集上有多个访问器，则需要指定 BEGIN_ACCESSOR_MAP 并将 BEGIN_ACCESSOR 宏用于每个访问器。 BEGIN_ACCESSOR 宏用 END_ACCESSOR 宏完成。 BEGIN_ACCESSOR_MAP 宏用 END_ACCESSOR_MAP 宏完成。
 
@@ -235,15 +236,15 @@ BEGIN_ACCESSOR(num, bAuto)
 BEGIN_ACCESSOR_MAP(x, num)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *x*<br/>
 [in] 用户记录类的名称。
 
-*num*<br/>
+*编号*<br/>
 [in] 此取值函数映射中的取值函数数目。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果行集上有多个访问器，则需要在开头指定 BEGIN_ACCESSOR_MAP，并对每个访问器使用 BEGIN_ACCESSOR 的宏。 BEGIN_ACCESSOR 宏用 END_ACCESSOR 宏完成。 访问器映射通过 END_ACCESSOR_MAP 宏完成。
 
@@ -340,12 +341,12 @@ END_ACCESSOR_MAP()
 BEGIN_COLUMN_MAP(x)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *x*<br/>
 [in] 派生自 `CAccessor`的用户记录类的名称。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 在行集上存在单个访问器的情况下使用此宏。 如果行集上有多个访问器，则使用 [BEGIN_ACCESSOR_MAP](#begin_accessor_map)。
 
@@ -369,7 +370,7 @@ BEGIN_COLUMN_MAP 宏用 END_COLUMN_MAP 宏完成。 当用户记录中只需要�
 BLOB_ENTRY(nOrdinal, IID, flags, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -397,7 +398,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -434,7 +435,7 @@ BLOB_ENTRY_LENGTH_STATUS(
     status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -468,7 +469,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -499,7 +500,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 BLOB_NAME(pszName, IID, flags, data )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -527,7 +528,7 @@ BLOB_NAME(pszName, IID, flags, data )
 BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -554,7 +555,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -584,7 +585,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -611,7 +612,7 @@ BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 BOOKMARK_ENTRY(variable)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 variable<br/>
 中要绑定到书签列的变量。
@@ -676,9 +677,9 @@ END_COLUMN_MAP()
 COLUMN_ENTRY(nOrdinal, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -686,7 +687,7 @@ COLUMN_ENTRY(nOrdinal, data)
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 COLUMN_ENTRY 宏用于以下位置：
 
@@ -710,9 +711,9 @@ COLUMN_ENTRY 宏用于以下位置：
 COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, status)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -738,7 +739,7 @@ wType <br/>
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 COLUMN_ENTRY_EX 宏用于以下位置：
 
@@ -762,9 +763,9 @@ COLUMN_ENTRY_EX 宏用于以下位置：
 COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 中列号，从1开始。 书签对应于列零。
@@ -775,7 +776,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 *length*<br/>
 [in] 要绑定到列长度的变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此宏支持 *length* 变量。 它在以下位置中使用：
 
@@ -795,9 +796,9 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -811,7 +812,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 当您要支持长度和状态变量时，请使用此宏。 它在以下位置中使用：
 
@@ -831,9 +832,9 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -847,7 +848,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 允许您指定要绑定的列的精度和小数位数。 它在以下位置中使用：
 
@@ -867,9 +868,9 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 中列号，从1开始。 书签对应于列零。
@@ -886,7 +887,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 *length*<br/>
 [in] 要绑定到列长度的变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 允许您指定要绑定的列的精度和小数位数。 此宏支持 *length* 变量。 它在以下位置中使用：
 
@@ -906,9 +907,9 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -928,7 +929,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 允许您指定要绑定的列的精度和小数位数。 当您要支持长度和状态变量时，请使用此宏。 它在以下位置中使用：
 
@@ -948,9 +949,9 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -967,7 +968,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 允许您指定要绑定的列的精度和小数位数。 此宏支持 *状态* 变量。 它在以下位置中使用：
 
@@ -987,9 +988,9 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 。
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -1000,7 +1001,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此宏支持 *状态* 变量。 它在以下位置中使用：
 
@@ -1020,7 +1021,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 COLUMN_ENTRY_TYPE (nOrdinal, wType, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -1031,7 +1032,7 @@ wType <br/>
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此宏是 [COLUMN_ENTRY](#column_entry) 宏的专用变体，它提供指定数据类型的方法。
 
@@ -1045,7 +1046,7 @@ wType <br/>
 COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nOrdinal*<br/>
 [in] 列号。
@@ -1059,7 +1060,7 @@ wType <br/>
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此宏是 [COLUMN_ENTRY](#column_entry) 宏的专用变体，它提供指定数据大小和类型的方法。
 
@@ -1073,7 +1074,7 @@ wType <br/>
 COLUMN_NAME(pszName, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1081,7 +1082,7 @@ COLUMN_NAME(pszName, data)
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 COLUMN_NAME_ * 宏用于与 [COLUMN_ENTRY](#column_entry)相同的位置：
 
@@ -1101,7 +1102,7 @@ COLUMN_NAME_ * 宏用于与 [COLUMN_ENTRY](#column_entry)相同的位置：
 COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1127,7 +1128,7 @@ wType <br/>
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1141,7 +1142,7 @@ wType <br/>
 COLUMN_NAME_LENGTH(pszName, data, length)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1152,7 +1153,7 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 *length*<br/>
 [in] 要绑定到列长度的变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1166,7 +1167,7 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1180,7 +1181,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1194,7 +1195,7 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1208,7 +1209,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1222,7 +1223,7 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1239,7 +1240,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 *length*<br/>
 [in] 要绑定到列长度的变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1253,7 +1254,7 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1273,7 +1274,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1287,7 +1288,7 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1304,7 +1305,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1318,7 +1319,7 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 COLUMN_NAME_STATUS(pszName, data, status )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1329,7 +1330,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 *status*<br/>
 [in] 要绑定到列变量的状态。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1343,7 +1344,7 @@ COLUMN_NAME_STATUS(pszName, data, status )
 COLUMN_NAME_TYPE(pszName, wType, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1354,7 +1355,7 @@ wType <br/>
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1368,7 +1369,7 @@ wType <br/>
 COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1385,7 +1386,7 @@ wType <br/>
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1399,7 +1400,7 @@ wType <br/>
 COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1413,7 +1414,7 @@ wType <br/>
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1427,7 +1428,7 @@ wType <br/>
 COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 中指向列名的指针。 名称必须是 Unicode 字符串。 您可以通过在名称前面放置一个 "L" 来实现此目的，例如： `L"MyColumn"` 。
@@ -1441,7 +1442,7 @@ wType <br/>
 *data*<br/>
 [in] 用户记录中的对应数据成员。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关使用 COLUMN_NAME_ * 宏的信息，请参阅 [COLUMN_NAME](#column_name) 。
 
@@ -1476,7 +1477,7 @@ END_COLUMN_MAP()
 DEFINE_COMMAND(x, szCommand)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *x*<br/>
 中用户记录 (命令) 类的名称。
@@ -1484,7 +1485,7 @@ DEFINE_COMMAND(x, szCommand)
 *szCommand*<br/>
 中当使用 [CCommand](../../data/oledb/ccommand-class.md)时，将用于创建行集的命令字符串。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果未在 [CCommand：： Open](./ccommand-class.md#open) 方法中指定命令文本，则指定的命令字符串将用作默认值。
 
@@ -1504,7 +1505,7 @@ DEFINE_COMMAND(x, szCommand)
 DEFINE_COMMAND_EX(x, wszCommand)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *x*<br/>
 中用户记录 (命令) 类的名称。
@@ -1512,7 +1513,7 @@ DEFINE_COMMAND_EX(x, wszCommand)
 *wszCommand*<br/>
 中当使用 [CCommand](../../data/oledb/ccommand-class.md)时，将用于创建行集的命令字符串。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果未在 [CCommand：： Open](./ccommand-class.md#open) 方法中指定命令文本，则指定的命令字符串将用作默认值。
 
@@ -1532,12 +1533,12 @@ DEFINE_COMMAND_EX(x, wszCommand)
 BEGIN_PARAM_MAP(x)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *x*<br/>
 [in] 用户记录类的名称。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 [命令](/previous-versions/windows/desktop/ms724608(v=vs.85))使用参数。
 
@@ -1574,9 +1575,9 @@ SET_PARAM_TYPE(type)
 type<br/>
 [in] 要为参数设置的类型。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-提供程序仅支持基础数据源支持的参数输入/输出类型。 该类型是一个或多个值的组合 `DBPARAMIO` (请参阅*OLE DB 程序员参考*) 中的[DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))：
+提供程序仅支持基础数据源支持的参数输入/输出类型。 该类型是一个或多个值的组合 `DBPARAMIO` (请参阅 *OLE DB 程序员参考*) 中的 [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))：
 
 - `DBPARAMIO_NOTPARAM` 访问器没有参数。 通常情况下，将设置 `eParamIO` 为行访问器中的此值以提醒用户忽略参数。
 

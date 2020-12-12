@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：命令传送
 title: 命令传送
 ms.date: 09/06/2019
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: e47ffd38b342301da32abae9690738ef83c0426b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4004f74413f236599c5cdd14f6593bc5d2bd26b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283441"
 ---
 # <a name="command-routing"></a>命令传送
 
-使用命令的责任仅限于在命令及其处理程序函数之间建立消息映射连接，这是使用[MFC 类向导](reference/mfc-class-wizard.md)的任务。 还必须为命令处理程序编写代码。
+使用命令的责任仅限于在命令及其处理程序函数之间建立消息映射连接，这是使用 [MFC 类向导](reference/mfc-class-wizard.md)的任务。 还必须为命令处理程序编写代码。
 
 Windows 消息通常发送到主框架窗口中，但命令消息则传送到其他对象。 框架通过命令目标对象的标准顺序传送命令，这些对象中应包含命令的处理程序。 每个命令目标对象检查其消息映射，看看是否能处理传入的消息。
 
@@ -31,18 +32,18 @@ Windows 消息通常发送到主框架窗口中，但命令消息则传送到其
 
 此路由机制与处理程序响应命令所执行的操作相比，此路由机制的代价是很低。 请记住，仅当用户与用户界面对象交互时，框架才生成命令。
 
-### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a>标准命令路由
+### <a name="standard-command-route"></a><a name="_core_standard_command_route"></a> 标准命令路由
 
 |当此类型的对象收到命令时。 . .|它给自身和其他命令目标对象一个机会以此顺序处理命令：|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI 框架窗口 (`CMDIFrameWnd`)|1. 活动`CMDIChildWnd`<br />2. 此框架窗口<br />3. 应用程序（ `CWinApp` 对象）|
-|文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1. 活动视图<br />2. 此框架窗口<br />3. 应用程序（ `CWinApp` 对象）|
-|视图|1. 此视图<br />2. 附加到视图的文档|
+|MDI 框架窗口 (`CMDIFrameWnd`)|1. 活动 `CMDIChildWnd`<br />2. 此框架窗口<br />3. 应用程序 (`CWinApp` 对象) |
+|文档框架窗口（`CFrameWnd`、 `CMDIChildWnd`）|1. 活动视图<br />2. 此框架窗口<br />3. 应用程序 (`CWinApp` 对象) |
+|查看|1. 此视图<br />2. 附加到视图的文档|
 |文档|1. 此文档<br />2. 附加到文档的文档模板|
-|对话框|1. 此对话框<br />2. 拥有对话框的窗口<br />3. 应用程序（ `CWinApp` 对象）|
+|对话框|1. 此对话框<br />2. 拥有对话框的窗口<br />3. 应用程序 (`CWinApp` 对象) |
 
 如果前述表第二列中带编号的项提到其他对象（例如文档），请参见第一列中相应的项。 例如，当你在第二列中看到视图将命令转发到其文档，则参阅第一列中的“文档”项了解进一步的传送。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [框架如何调用处理程序](how-the-framework-calls-a-handler.md)

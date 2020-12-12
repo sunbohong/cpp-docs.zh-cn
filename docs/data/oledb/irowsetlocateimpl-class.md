@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IRowsetLocateImpl 类
 title: IRowsetLocateImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: a45b7ef1a31c3ecf34b15ee35bce48559465a905
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5d723fbc1ff85ce2c5b50bb5eff53ba3771751fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840305"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287055"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 类
 
@@ -61,7 +62,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
        MapClass>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IRowsetLocateImpl` 。
@@ -92,7 +93,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[比较](#compare)|比较两个书签。|
 |[GetRowsAt](#getrowsat)|从书签的偏移量指定的行开始提取行。|
@@ -101,11 +102,11 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_rgBookmarks](#rgbookmarks)|书签的数组。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `IRowsetLocateImpl` 是 [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85)) 接口 OLE DB 模板实现。 `IRowsetLocate` 用于从行集中提取任意行。 不实现此接口的行集是一个 `sequential` 行集。 当在 `IRowsetLocate` 行集上存在时，列0是行的书签; 读取此列将获取可用于重新定位到相同行的书签值。
 
@@ -113,7 +114,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 若要支持在行集中 OLE DB 书签，请将行集继承此类。
 
-有关实现书签支持的信息，请参阅*Visual C++ 程序员指南*中的[书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)和平台 SDK 中*OLE DB 程序员参考*中的[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))。
+有关实现书签支持的信息，请参阅 *Visual C++ 程序员指南* 中的 [书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)和平台 SDK 中 *OLE DB 程序员参考* 中的 [书签](/previous-versions/windows/desktop/ms709728(v=vs.85))。
 
 ## <a name="irowsetlocateimplcompare"></a><a name="compare"></a> IRowsetLocateImpl：： Compare
 
@@ -130,11 +131,11 @@ STDMETHOD (Compare )(HCHAPTER /* hReserved */,
    DBCOMPARE* pComparison);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetLocate：： Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetLocate：： Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 书签可以是标准 OLE DB 定义的 [标准书签](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` 、 `DBBMK_LAST` 或 `DBBMK_INVALID`) 。 中返回的值 `pComparison` 表示两个书签之间的关系：
 
@@ -165,11 +166,11 @@ STDMETHOD (GetRowsAt )(HWATCHREGION /* hReserved1 */,
    HROW** prghRows);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetLocate：： GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetLocate：： GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 若要改为从游标位置提取，请使用 [IRowset：： GetRowsAt](/previous-versions/windows/desktop/ms723031(v=vs.85))。
 
@@ -190,14 +191,14 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
    DBROWSTATUS* rgRowStatus[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hReserved*<br/>
-中对应于[IRowsetLocate：： GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))的*hChapter*参数。
+中对应于 [IRowsetLocate：： GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))的 *hChapter* 参数。
 
-有关其他参数，请参阅*OLE DB 程序员参考*中的[IRowsetLocate：： GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) 。
+有关其他参数，请参阅 *OLE DB 程序员参考* 中的 [IRowsetLocate：： GetRowsByBookmark](/previous-versions/windows/desktop/ms725420(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 书签可以是你定义的值，也可以是 OLE DB [标准书签](/previous-versions/windows/desktop/ms712954(v=vs.85)) (`DBBMK_FIRST` 或 `DBBMK_LAST`) 。 不会更改光标位置。
 
@@ -216,12 +217,12 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
    DBROWSTATUS rgBookmarkStatus[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hReserved*<br/>
-中对应于[IRowsetLocate：： Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))的*hChapter*参数。
+中对应于 [IRowsetLocate：： Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))的 *hChapter* 参数。
 
-有关其他参数，请参阅*OLE DB 程序员参考*中的[IRowsetLocate：： Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) 。
+有关其他参数，请参阅 *OLE DB 程序员参考* 中的 [IRowsetLocate：： Hash](/previous-versions/windows/desktop/ms709697(v=vs.85)) 。
 
 ## <a name="irowsetlocateimplm_rgbookmarks"></a><a name="rgbookmarks"></a> IRowsetLocateImpl：： m_rgBookmarks
 
@@ -233,10 +234,10 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 CAtlArray<DBROWCOUNT> m_rgBookmarks;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetLocate： IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85)) 
 [提供程序支持书签](../../data/oledb/provider-support-for-bookmarks.md)<br/>
-[书签](/previous-versions/windows/desktop/ms709728(v=vs.85))
+书签

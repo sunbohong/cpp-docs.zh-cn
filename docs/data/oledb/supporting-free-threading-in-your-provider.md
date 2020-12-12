@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：在提供程序中支持自由线程处理
 title: 在提供程序中支持自由线程处理
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4f6785dd85ae043ce0ee74c1dda4fa365c566729
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209531"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286470"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>在提供程序中支持自由线程处理
 
@@ -37,10 +38,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-有关如何使用 `Lock` 和 `Unlock`保护关键部分的详细信息，请参阅[多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+有关如何使用和保护关键部分的详细信息 `Lock` `Unlock` ，请参阅 [多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
-验证你重写的所有方法（如 `Execute`）是否都是线程安全的。
+验证你重写的任何方法 (例如 `Execute`) 是否是线程安全的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

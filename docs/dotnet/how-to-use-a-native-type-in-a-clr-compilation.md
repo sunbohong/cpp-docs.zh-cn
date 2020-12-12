@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：在/clr 编译中使用本机类型
 title: 如何：在 clr 编译中使用本机类型
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 88a678a19043d3229218dd69afbf8548348817df
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 8e8479bb64166faec841d9d69ce38b3e8e57e048
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683957"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286275"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>如何：在 /clr 编译中使用本机类型
 

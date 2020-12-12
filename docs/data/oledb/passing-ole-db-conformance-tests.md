@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：传递 OLE DB 的一致性测试
 title: 通过 OLE DB 一致性测试
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d2a5b788b3a118293800b02a9383fbde9845cfa5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286718"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通过 OLE DB 一致性测试
 
@@ -26,9 +27,9 @@ ms.locfileid: "80209756"
 > [!NOTE]
 > 你需要为提供程序添加几个验证函数以传递 OLE DB 的一致性测试。
 
-此提供程序需要两个验证例程。 `CRowsetImpl::ValidateCommandID`第一个例程是行集类的一部分。 它在按提供程序模板创建行集的过程中被调用。 该示例使用此例程告知使用者不支持索引。 第一次调用是 `CRowsetImpl::ValidateCommandID` （请注意，提供程序将在接口映射中添加的 `_RowsetBaseClass` typedef 用于 `CCustomRowset` 为[书签提供提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)，因此不必键入该长行模板参数）。 接下来，如果 index 参数不为 NULL，则返回 DB_E_NOINDEX （这表示使用者想要使用我们的索引）。 有关命令 Id 的详细信息，请参阅 OLE DB 规范并查找 `IOpenRowset::OpenRowset`。
+此提供程序需要两个验证例程。 第一个例程 `CRowsetImpl::ValidateCommandID` 是行集类的一部分。 它在按提供程序模板创建行集的过程中被调用。 该示例使用此例程告知使用者不支持索引。 第一次调用是 `CRowsetImpl::ValidateCommandID` (注意，提供程序使用在 `_RowsetBaseClass` 接口映射中添加的 Typedef 作为 `CCustomRowset` [提供程序支持的书签](../../data/oledb/provider-support-for-bookmarks.md)，因此您无需在) 中键入该长行模板参数。 接下来，如果 index 参数不为 NULL，则返回 DB_E_NOINDEX (这表示使用者想要使用我们) 的索引。 有关命令 Id 的详细信息，请参阅 OLE DB 规范，并查找 `IOpenRowset::OpenRowset` 。
 
-下面的代码是 `ValidateCommandID` 验证例程：
+以下代码是 `ValidateCommandID` 验证例程：
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,12 +49,12 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-每当有人更改 DBPROPSET_ROWSET 组的属性时，提供程序模板都会调用 `OnPropertyChanged` 方法。 如果要处理其他组的属性，请将其添加到相应的对象（即，DBPROPSET_SESSION 检查 `CCustomSession` 类中）。
+`OnPropertyChanged`每当用户更改 DBPROPSET_ROWSET 组上的属性时，提供程序模板都会调用方法。 如果要处理其他组的属性，请将它们添加到相应的对象， (也就是说，DBPROPSET_SESSION 类) 中的检查 `CCustomSession` 。
 
-代码首先检查属性是否已链接到另一个。 如果该属性是链接属性，则会将 DBPROP_BOOKMARKS 属性设置为 `True`。 OLE DB 规范的附录 C 包含有关属性的信息。 此信息还会告诉您该属性是否已链接到另一个属性。
+代码首先检查属性是否已链接到另一个。 如果该属性是链接属性，则会将 DBPROP_BOOKMARKS 属性设置为 `True` 。 OLE DB 规范的附录 C 包含有关属性的信息。 此信息还会告诉您该属性是否已链接到另一个属性。
 
-你可能还需要将 `IsValidValue` 例程添加到你的代码中。 尝试设置属性时，模板调用 `IsValidValue`。 如果在设置属性值时需要其他处理，则应重写此方法。 您可以对每个属性集使用这些方法之一。
+你可能还需要将例程添加 `IsValidValue` 到你的代码中。 `IsValidValue`尝试设置属性时，模板会调用。 如果在设置属性值时需要其他处理，则应重写此方法。 您可以对每个属性集使用这些方法之一。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：提供程序支持书签
 title: 用于书签的提供程序支持
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 240cb4da03d6c8c1958b7a86e78171aca2dc30e9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a2225f44d9d094f52e97b88eb58c6942906edf6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286652"
 ---
 # <a name="provider-support-for-bookmarks"></a>用于书签的提供程序支持
 
@@ -25,7 +26,7 @@ ms.locfileid: "87216448"
 
 - 添加书签支持。
 
-`IRowsetLocate` 接口继承自 `IRowset` 接口。 若要添加 `IRowsetLocate` 接口，请 `CCustomRowset` 从[IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)继承。
+`IRowsetLocate` 接口继承自 `IRowset` 接口。 若要添加 `IRowsetLocate` 接口，请 `CCustomRowset` 从 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)继承。
 
 添加 `IRowsetLocate` 接口与大多数接口有点不同。 为了使 VTABLEs 联机，OLE DB 提供程序模板具有一个用于处理派生接口的模板参数。 下面的代码演示了新的继承列表：
 
@@ -40,7 +41,7 @@ class CCustomRowset : public CRowsetImpl< CCustomRowset,
           IRowsetLocateImpl<CCustomRowset, IRowsetLocate>>
 ```
 
-第四个、第五个和第六个参数都是添加的。 此示例使用第四个和第五个参数的默认值，但指定 `IRowsetLocateImpl` 为第六个参数。 `IRowsetLocateImpl`是一个 OLE DB 模板类，它采用两个模板参数：它们挂钩 `IRowsetLocate` 到类的接口 `CCustomRowset` 。 若要添加大多数接口，可以跳过此步骤并移至下一个。 只 `IRowsetLocate` `IRowsetScroll` 需以这种方式处理和接口。
+第四个、第五个和第六个参数都是添加的。 此示例使用第四个和第五个参数的默认值，但指定 `IRowsetLocateImpl` 为第六个参数。 `IRowsetLocateImpl` 是一个 OLE DB 模板类，它采用两个模板参数：它们挂钩 `IRowsetLocate` 到类的接口 `CCustomRowset` 。 若要添加大多数接口，可以跳过此步骤并移至下一个。 只 `IRowsetLocate` `IRowsetScroll` 需以这种方式处理和接口。
 
 然后，需要告诉 `CCustomRowset` 调用 `QueryInterface` `IRowsetLocate` 接口。 将行添加 `COM_INTERFACE_ENTRY(IRowsetLocate)` 到地图中。 的接口映射 `CCustomRowset` 应出现，如以下代码所示：
 
@@ -78,7 +79,7 @@ class CTextData
 };
 ```
 
-然后， `GetColumnInfo` 在*自定义*RS .cpp 文件中实现该函数，如下所示：
+然后， `GetColumnInfo` 在 *自定义* RS .cpp 文件中实现该函数，如下所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -148,11 +149,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 }
 ```
 
-`GetColumnInfo`首先检查是否 `DBPROP_IRowsetLocate` 设置了名为的属性。 OLE DB 包含行集对象的每个可选接口的属性。 如果使用者想要使用这些可选接口中的一个，则将属性设置为 true。 然后，提供程序可以选中此属性，并基于它执行特殊操作。
+`GetColumnInfo` 首先检查是否 `DBPROP_IRowsetLocate` 设置了名为的属性。 OLE DB 包含行集对象的每个可选接口的属性。 如果使用者想要使用这些可选接口中的一个，则将属性设置为 true。 然后，提供程序可以选中此属性，并基于它执行特殊操作。
 
 在您的实现中，您可以使用指向命令对象的指针获取属性。 `pThis`指针表示行集或 command 类。 由于使用的是模板，因此必须在中以指针形式传递此项， **`void`** 否则代码将不会编译。
 
-指定一个静态数组来保存列信息。 如果使用者不需要书签列，则会浪费数组中的条目。 你可以动态分配此数组，但需要确保正确销毁它。 此示例定义并使用宏 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 将信息插入到数组中。 可以将宏添加到*自定义*RS。H 文件，如以下代码所示：
+指定一个静态数组来保存列信息。 如果使用者不需要书签列，则会浪费数组中的条目。 你可以动态分配此数组，但需要确保正确销毁它。 此示例定义并使用宏 ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX 将信息插入到数组中。 可以将宏添加到 *自定义* RS。H 文件，如以下代码所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -264,6 +265,6 @@ END_ACCESSOR_MAP()
 
 更新代码后，应该能够用接口生成并执行提供程序 `IRowsetLocate` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

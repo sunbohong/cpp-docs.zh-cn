@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4683
 title: 编译器警告（等级 1）C4683
 ms.date: 08/27/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-ms.openlocfilehash: f86cf8f6d894d6efaa1b49977634956dc1979a98
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e7f2c76e7f15bb7342e60b2aa390cf0bd1a8ce05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80175424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97285235"
 ---
 # <a name="compiler-warning-level-1-c4683"></a>编译器警告（等级 1）C4683
 
@@ -25,7 +26,7 @@ ms.locfileid: "80175424"
 
 1. 如果方法具有内部分配的 out 参数（例如 BSTR *），则为。
 
-2. 如果事件具有多个处理程序（是多路广播事件），则为。
+2. 如果事件有多个处理程序 (是多路广播事件) 。
 
 泄漏的原因是，out 参数将由多个处理程序设置，但仅由上一个处理程序返回到调用站点。
 

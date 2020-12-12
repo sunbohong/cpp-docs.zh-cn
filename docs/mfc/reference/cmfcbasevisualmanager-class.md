@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCBaseVisualManager 类
 title: CMFCBaseVisualManager 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: 79a3c0945fdd0df04e9ee52d7bad97dc0847fa91
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 14727eea4bcefdc7b7de53f19f188d7cb9c528c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284975"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 类
 
@@ -53,14 +54,14 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|构造并初始化一个 `CMFCBaseVisualManager` 对象。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCBaseVisualManager：:D rawCheckBox](#drawcheckbox)|使用当前 Windows 主题绘制复选框控件。|
 |[CMFCBaseVisualManager：:D rawComboBorder](#drawcomboborder)|使用当前 Windows 主题绘制组合框边框。|
@@ -73,12 +74,12 @@ class CMFCBaseVisualManager: public CObject
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|调用 `CloseThemeData` 中获得的所有句柄 `UpdateSystemColors` 。|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|调用 `OpenThemeData` 以获取用于绘制各种控件的句柄：窗口、工具栏、按钮等。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 不需要直接实例化此类的对象。
 
@@ -102,7 +103,7 @@ class CMFCBaseVisualManager: public CObject
 void CleanUpThemes();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅限内部使用。
 
@@ -130,7 +131,7 @@ virtual BOOL DrawCheckBox(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针
@@ -156,9 +157,9 @@ virtual BOOL DrawCheckBox(
 
 如果启用主题 API，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*NState*的值对应于下面的复选框样式。
+*NState* 的值对应于下面的复选框样式。
 
 |nState|复选框样式|
 |------------|---------------------|
@@ -179,7 +180,7 @@ virtual BOOL DrawComboBorder(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -213,7 +214,7 @@ virtual BOOL DrawComboDropButton(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*\
 中指向设备上下文的指针。
@@ -246,7 +247,7 @@ virtual BOOL DrawPushButton(
     UINT uiState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -258,7 +259,7 @@ virtual BOOL DrawPushButton(
 中指向要绘制的 [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md) 对象的指针。
 
 *uiState*<br/>
-中掉. 状态是从 *pButton*获取的。
+中掉. 状态是从 *pButton* 获取的。
 
 ### <a name="return-value"></a>返回值
 
@@ -278,7 +279,7 @@ virtual BOOL DrawRadioButton(
     BOOL bPressed);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -319,7 +320,7 @@ virtual BOOL DrawStatusBarProgress(
     BOOL bProgressText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -363,7 +364,7 @@ virtual void FillReBarPane(
     CRect rectClient);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -408,11 +409,11 @@ virtual WinXpTheme GetStandardWindowsTheme();
 void UpdateSystemColors();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅限内部使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

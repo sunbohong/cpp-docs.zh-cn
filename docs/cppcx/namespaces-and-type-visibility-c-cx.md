@@ -1,13 +1,14 @@
 ---
+description: '详细了解：命名空间和类型可见性 (c + +/CX ) '
 title: 命名空间和类型可见性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 78d5f5af761cef985ec43cf448251b4dc3c70bc2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 014791ef322538c824c68409681d7fb856e1c837
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282895"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空间和类型可见性 (C++/CX)
 
@@ -47,11 +48,11 @@ C + +/CX 将这些命名空间中的某些类型定义为 Windows 运行时类�
 
 | 命名空间 | 说明 |
 |--|--|
-| 默认值 | 包含内置数值和 char16 类型。 这些类型在每个命名空间的范围内，并且 **`using`** 永远不需要语句。 |
+| default | 包含内置数值和 char16 类型。 这些类型在每个命名空间的范围内，并且 **`using`** 永远不需要语句。 |
 | `Platform` | 主要包含与 Windows 运行时类型（如、、和）相对应的公共类型 `Array<T>` `String` `Guid` `Boolean` 。 另外还包括专用帮助程序类型（如 `Platform::Agile<T>` 和 `Platform::Box<T>`）。 |
 | `Platform::Collections` | 包含实现 Windows 运行时集合接口、等的具体集合类 `IVector` `IMap` 。 这些类型在标头文件 collection.h 而非 platform.winmd 中定义。 |
 | `Platform::Details` | 包含编译器使用而不适合公共使用的类型。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统 (C++/CX)](../cppcx/type-system-c-cx.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： auto_gcroot 类
 title: auto_gcroot 类
 ms.date: 01/16/2019
 ms.topic: reference
@@ -16,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
-ms.openlocfilehash: 3f6190b0d16648490552c0f415251a3df2b33188
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c763883a10906a8f63b7ba265576ab547750b66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230943"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282791"
 ---
 # <a name="auto_gcroot-class"></a>auto_gcroot 类
 
-自动资源管理（如[Auto_ptr 类](../standard-library/auto-ptr-class.md)）可用于将虚拟句柄嵌入到本机类型中。
+自动资源管理 (如 [Auto_ptr 类](../standard-library/auto-ptr-class.md)) ，可用于在本机类型中嵌入虚拟句柄。
 
 ## <a name="syntax"></a>语法
 
@@ -34,7 +35,7 @@ template<typename _element_type>
 class auto_gcroot;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_element_type*<br/>
 要嵌入的托管类型。
@@ -43,7 +44,7 @@ class auto_gcroot;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |---------|-----------|
 |[auto_gcroot：： auto_gcroot](#auto-gcroot)|`auto_gcroot`构造函数。|
 |[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot`析构函数。
@@ -51,7 +52,7 @@ class auto_gcroot;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|名称|描述|
 |---------|-----------|
 |[auto_gcroot::attach](#attach)|附加 `auto_gcroot` 到对象。|
 |[auto_gcroot::get](#get)|获取包含的对象。|
@@ -61,7 +62,7 @@ class auto_gcroot;
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |---------|-----------|
 |[auto_gcroot：： operator-&gt;](#operator-arrow)|成员访问运算符。|  
 |[auto_gcroot：： operator =](#operator-assign)|赋值运算符。|
@@ -73,9 +74,9 @@ class auto_gcroot;
 
 **头文件** \<msclr\auto_gcroot.h>
 
-**命名空间**msclr
+**命名空间** msclr
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a>auto_gcroot：： auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="auto-gcroot"></a> auto_gcroot：： auto_gcroot
 
 `auto_gcroot`构造函数。
 
@@ -92,7 +93,7 @@ auto_gcroot(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_ptr*<br/>
 要拥有的对象。
@@ -191,7 +192,7 @@ in RefClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a>auto_gcroot：： ~ auto_gcroot
+## <a name="auto_gcrootauto_gcroot"></a><a name="tilde-auto-gcroot"></a> auto_gcroot：： ~ auto_gcroot
 
 `auto_gcroot`析构函数。
 
@@ -238,7 +239,7 @@ ClassA destructor
 done
 ```
 
-## <a name="auto_gcrootattach"></a><a name="attach"></a>auto_gcroot：： attach
+## <a name="auto_gcrootattach"></a><a name="attach"></a> auto_gcroot：： attach
 
 附加 `auto_gcroot` 到对象。
 
@@ -255,14 +256,14 @@ auto_gcroot<_element_type> & attach(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 要附加的对象，或 `auto_gcroot` 包含要附加的对象的。
 
 ### <a name="return-value"></a>返回值
 
-当前 `auto_gcroot`。
+当前的 `auto_gcroot`。
 
 ### <a name="remarks"></a>备注
 
@@ -333,7 +334,7 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="auto_gcrootget"></a><a name="get"></a>auto_gcroot：： get
+## <a name="auto_gcrootget"></a><a name="get"></a> auto_gcroot：： get
 
 获取包含的对象。
 
@@ -393,7 +394,7 @@ Hello from first A!
 in ClassA destructor:first
 ```
 
-## <a name="auto_gcrootrelease"></a><a name="release"></a>auto_gcroot：： release
+## <a name="auto_gcrootrelease"></a><a name="release"></a> auto_gcroot：： release
 
 从管理中释放对象 `auto_gcroot` 。
 
@@ -456,7 +457,7 @@ Hello from first A!
 done
 ```
 
-## <a name="auto_gcrootreset"></a><a name="reset"></a>auto_gcroot：： reset
+## <a name="auto_gcrootreset"></a><a name="reset"></a> auto_gcroot：： reset
 
 销毁当前拥有的对象，并选择性地拥有新的对象。
 
@@ -466,10 +467,10 @@ void reset(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_new_ptr*<br/>
-可有可无新的对象。
+ (可选) 新的对象。
 
 ### <a name="example"></a>示例
 
@@ -521,7 +522,7 @@ ClassA destructor: second
 done
 ```
 
-## <a name="auto_gcrootswap"></a><a name="swap"></a>auto_gcroot：： swap
+## <a name="auto_gcrootswap"></a><a name="swap"></a> auto_gcroot：： swap
 
 将对象与另一个对象交换 `auto_gcroot` 。
 
@@ -531,7 +532,7 @@ void swap(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 `auto_gcroot`用于交换对象的。
@@ -563,7 +564,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a>auto_gcroot：： operator-&gt;
+## <a name="auto_gcrootoperator-gt"></a><a name="operator-arrow"></a> auto_gcroot：： operator-&gt;
 
 成员访问运算符。
 
@@ -612,7 +613,7 @@ Hello from first A!
 a->m_i = 5
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a>auto_gcroot：： operator =
+## <a name="auto_gcrootoperator"></a><a name="operator-assign"></a> auto_gcroot：： operator =
 
 赋值运算符。
 
@@ -629,7 +630,7 @@ auto_gcroot<_element_type> & operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 要分配给 `auto_gcroot` 当前的对象 `auto_gcroot` 。
@@ -704,7 +705,7 @@ done
 in ClassA destructor: third
 ```
 
-## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a>auto_gcroot：： operator auto_gcroot
+## <a name="auto_gcrootoperator-auto_gcroot"></a><a name="operator-auto-gcroot"></a> auto_gcroot：： operator auto_gcroot
 
 与兼容的类型之间的类型转换运算符 `auto_gcroot` 。
 
@@ -759,7 +760,7 @@ Hello from first B!
 Hello from first A!
 ```
 
-## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a>auto_gcroot：： operator bool
+## <a name="auto_gcrootoperator-bool"></a><a name="operator-bool"></a> auto_gcroot：： operator bool
 
 用于 `auto_gcroot` 条件表达式中的运算符。
 
@@ -769,7 +770,7 @@ operator bool() const;
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果包装的对象有效，则为; 否则为。**`false`** 否则为。
+**`true`** 如果包装的对象有效，则为; 否则为。 **`false`** 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -804,7 +805,7 @@ now s is valid
 now s is invalid
 ```
 
-## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a>auto_gcroot：： operator！
+## <a name="auto_gcrootoperator"></a><a name="operator-logical-not"></a> auto_gcroot：： operator！
 
 用于 `auto_gcroot` 条件表达式中的运算符。
 
@@ -814,7 +815,7 @@ bool operator!() const;
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果包装的对象无效，则为; 否则为。**`false`** 否则为。
+**`true`** 如果包装的对象无效，则为; 否则为。 **`false`** 否则为。
 
 ### <a name="example"></a>示例
 

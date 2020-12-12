@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： CompareStringOrdinal 方法
 title: CompareStringOrdinal 方法
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-ms.openlocfilehash: 1291084395b02602b7a3de9013df6720d2e237fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1994d0f3ec4104e27094de10255194a911ae2945
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282843"
 ---
 # <a name="comparestringordinal-method"></a>CompareStringOrdinal 方法
 
@@ -29,16 +30,16 @@ inline INT32 CompareStringOrdinal(
 *lhs*<br/>
 要比较的第一个 HSTRING。
 
-rhs<br/>
+*rhs*<br/>
 要比较的第二个 HSTRING。
 
 ## <a name="return-value"></a>返回值
 
 |值|条件|
 |-----------|---------------|
-|-1|*lhs*小于*rhs*。|
-|0|*lhs*等于*rhs*。|
-|1|*lhs*大于*rhs*。|
+|-1|*lhs* 小于 *rhs*。|
+|0|*lhs* 等于 *rhs*。|
+|1|*lhs* 大于 *rhs*。|
 
 ## <a name="remarks"></a>备注
 
@@ -50,6 +51,6 @@ rhs<br/>
 
 **命名空间：** Microsoft：： WRL：：包装：:D etails
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Wrappers::Details 命名空间](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft：： WRL：：包装：:D etails 命名空间](microsoft-wrl-wrappers-details-namespace.md)

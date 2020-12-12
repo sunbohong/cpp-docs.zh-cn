@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _spawnvp、_wspawnvp
 title: _spawnvp、_wspawnvp
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - process creation
 - _spawnvp function
 ms.assetid: 8d8774ec-6ad4-4680-a5aa-440cde1e0249
-ms.openlocfilehash: 2cd1c0e464fe7efb1cce5ba969b34d040b099efa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0cb9ea9808266772528751e6c10dfa22aee77c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282921"
 ---
 # <a name="_spawnvp-_wspawnvp"></a>_spawnvp、_wspawnvp
 
@@ -78,9 +79,9 @@ intptr_t _wspawnvp(
 
 ## <a name="return-value"></a>返回值
 
-同步 **_spawnvp**或 **_wspawnvp**为*模式*) 指定 (**_P_WAIT**的返回值是新进程的退出状态。 **_Spawnvp**为*mode* **_P_NOWAITO 指定的**异步或 **_wspawnvp** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成进程专门使用非零参数调用 **退出** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一：
+同步 **_spawnvp** 或 **_wspawnvp** 为 *模式*) 指定 (**_P_WAIT** 的返回值是新进程的退出状态。 **_Spawnvp** 为 *mode* **_P_NOWAITO 指定的** 异步或 **_wspawnvp** **_P_NOWAIT** (的返回值是进程句柄。 如果进程正常终止，则退出状态为 0。 如果生成进程专门使用非零参数调用 **退出** 例程，则可以将退出状态设置为一个非零值。 如果更新过程没有显式设置正退出状态，则正退出状态指示因中止或中断而异常退出。 返回值-1 表示一个错误， (未) 启动新进程。 在这种情况下， **errno** 设置为以下值之一：
 
-| 值 | 说明 |
+| 值 | 描述 |
 |-|-|
 | **E2BIG** | 参数列表超过 1024 个字节。 |
 | **EINVAL** | *mode* 参数无效。 |
@@ -90,7 +91,7 @@ intptr_t _wspawnvp(
 
 有关这些和其他返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 其中每个函数将创建并执行一个新的进程，并将一个指针数组传递给命令行自变量，并使用 **PATH** 环境变量查找要执行的文件。
 
@@ -111,7 +112,7 @@ intptr_t _wspawnvp(
 
 在参见 [_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_spawn，_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

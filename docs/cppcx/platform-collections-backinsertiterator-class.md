@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：：集合：： BackInsertIterator 类
 title: Platform::Collections::BackInsertIterator 类
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: f5c82a776a537d469d42a16bd4f425e7bb2c13aa
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: d4130db388470b5e29b545b66b06ee85b2cbb608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97283987"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 类
 
@@ -26,7 +27,7 @@ class BackInsertIterator :
 public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 当前集合中项目的类型。
@@ -72,9 +73,9 @@ explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*向量*<br/>
+*v*<br/>
 一个 IVector \<T> 对象。
 
 ### <a name="remarks"></a>备注
@@ -91,7 +92,7 @@ explicit BackInsertIterator(
 BackInsertIterator& operator=( const T& t);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *t*<br/>
 要追加到当前集合的对象。

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： list 类
 title: list 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: ec53e2a907cd38b262ec305d10ae63ad746f29b5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d73c1c61cb7e630ea936685aeaab20f778340ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284832"
 ---
 # <a name="list-class"></a>list 类
 
@@ -116,7 +117,7 @@ template <class Type, class Allocator= allocator<Type>>
 class list
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 要存储在列表中的元素数据类型。
@@ -124,7 +125,7 @@ class list
 *器*\
 表示所存储分配器对象的类型，该分配器对象封装有关列表的内存分配和解除分配的详细信息。 此参数是可选参数，默认值为 `allocator<Type>`。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 容器类型选择通常应根据应用程序所需的搜索和插入的类型。 当对任何元素的随机访问超出限制并且仅要求在序列的末尾插入或删除元素时，矢量应作为用于管理序列的首选容器。 当需要随机访问并且在序列起始处和末尾处插入和删除元素已到达极限时，应首选类 deque 容器进行操作。
 
@@ -144,7 +145,7 @@ class list
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[allocator_type](#allocator_type)|表示列表对象的 `allocator` 类的类型。|
 |[const_iterator](#const_iterator)|一种类型，它提供可读取列表中元素的双向迭代器 **`const`** 。|
@@ -152,7 +153,7 @@ class list
 |[const_reference](#const_reference)|一种类型，它提供对 **`const`** 存储在列表中用于读取和执行操作的元素的引用 **`const`** 。|
 |[const_reverse_iterator](#const_reverse_iterator)|一种类型，它提供可读取列表中任何元素的双向迭代器 **`const`** 。|
 |[difference_type](#difference_type)|提供引用同一列表中的元素的两个迭代器之间的差异的类型。|
-|[器](#iterator)|提供可读取或修改列表中任何元素的双向迭代器的类型。|
+|[iterator](#iterator)|提供可读取或修改列表中任何元素的双向迭代器的类型。|
 |[变为](#pointer)|提供指向列表中元素的指针的类型。|
 |[reference](#reference)|一种类型，它提供对 **`const`** 存储在列表中用于读取和执行操作的元素的引用 **`const`** 。|
 |[reverse_iterator](#reverse_iterator)|提供可读取或修改反向列表中的元素的双向迭代器的类型。|
@@ -161,14 +162,14 @@ class list
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[assign](#assign)|将元素从列表中擦除并将一组新的元素复制到目标列表。|
 |[返回](#back)|返回对列表中最后一个元素的引用。|
 |[准备](#begin)|返回发现列表中第一个元素的位置的迭代器。|
 |[cbegin](#cbegin)|返回发现列表中第一个元素的位置的常量迭代器。|
 |[cend](#cend)|返回发现一个列表中最后一个元素之后的位置的敞亮表达式。|
-|[清除](#clear)|消除列表中的全部元素。|
+|[clear](#clear)|消除列表中的全部元素。|
 |[crbegin](#crbegin)|返回发现反向列表中第一个元素的位置的常量迭代器。|
 |[crend](#crend)|返回用于发现反向列表中最后一个元素之后的位置的常量迭代器。|
 |[emplace](#emplace)|将构造的元素插入到列表中的指定位置。|
@@ -187,7 +188,7 @@ class list
 |[push_back](#push_back)|在列表的末尾添加元素。|
 |[push_front](#push_front)|在列表的开头添加元素。|
 |[rbegin](#rbegin)|返回发现反向列表中第一个元素的位置的迭代器。|
-|[删除](#remove)|清除列表中与指定值匹配的元素。|
+|[remove](#remove)|清除列表中与指定值匹配的元素。|
 |[remove_if](#remove_if)|将满足指定谓词的元素从列表中消除。|
 |[rend](#rend)|返回发现反向列表中最后一个元素之后的位置的迭代器。|
 |[调节](#resize)|为列表指定新的大小。|
@@ -200,7 +201,7 @@ class list
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator =](#op_eq)|用另一个列表的副本替换列表中的元素。|
 
@@ -216,9 +217,9 @@ class list
 typedef Allocator allocator_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`allocator_type` 是模板参数 *分配*器的同义词。
+`allocator_type` 是模板参数 *分配* 器的同义词。
 
 ### <a name="example"></a>示例
 
@@ -242,7 +243,7 @@ void assign(
     InputIterator Last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 要从自变量列表中复制的一系列元素中的第一个元素的位置。
@@ -259,7 +260,7 @@ void assign(
 *IList*\
 包含要插入的元素的 initializer_list。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 清除目标列表中的任何现有元素后，将原始列表或其他列表中的一系列指定的元素插入目标列表中，或将指定值的新元素的副本插入目标列表中
 
@@ -327,7 +328,7 @@ const_reference back() const;
 
 列表的最后一个元素。 如果列表为空，则返回值不确定。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将 `back` 的返回值分配给 `const_reference`，则无法修改列表对象。 如果将 `back` 的返回值分配给 `reference`，则可修改列表对象。
 
@@ -363,7 +364,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a><a name="begin"></a> 准备
+## <a name="begin"></a><a name="begin"></a> begin
 
 返回发现列表中第一个元素的位置的迭代器。
 
@@ -377,7 +378,7 @@ iterator begin();
 
 发现列表中第一个元素的位置或空列表之后的位置的双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将的返回值 `begin` 分配给，则 `const_iterator` 不能修改列表对象中的元素。 如果将的返回值 `begin` 分配给，则 `iterator` 可以修改列表对象中的元素。
 
@@ -428,7 +429,7 @@ const_iterator cbegin() const;
 
 **`const`** 双向访问迭代器，指向范围的第一个元素，或刚超出空范围末尾 (空范围) 的位置 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
@@ -454,7 +455,7 @@ const_iterator cend() const;
 
 **`const`** 双向访问迭代器，它指向刚超出范围末尾的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
@@ -513,7 +514,7 @@ The size of list after clearing is 0
 typedef implementation-defined const_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_iterator` 类型不能用于修改元素的值。
 
@@ -529,7 +530,7 @@ typedef implementation-defined const_iterator;
 typedef typename Allocator::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_pointer` 类型不能用于修改元素的值。
 
@@ -543,7 +544,7 @@ typedef typename Allocator::const_pointer const_pointer;
 typedef typename Allocator::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_reference` 类型不能用于修改元素的值。
 
@@ -587,7 +588,7 @@ The second element is 20
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `const_reverse_iterator` 类型无法修改元素的值，它用于反向循环访问列表。
 
@@ -607,7 +608,7 @@ const_reverse_iterator rbegin() const;
 
 一个常量反向双向迭代器，用于发现反向 `list` 中的第一个元素（或发现非反向列表中的最后一个元素的内容）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crbegin` 用于反向列表，正如 [list::begin](#begin) 用于 `list` 一样。
 
@@ -651,7 +652,7 @@ const_reverse_iterator rend() const;
 
 一个常量反向双向迭代器，用于发现反向 [list](../standard-library/list-class.md) 中最后一个元素之后的位置（非反向 `list` 中第一个元素之前的位置）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `crend` 用于反向列表，正如 [list::end](#end) 用于 `list` 一样。
 
@@ -698,7 +699,7 @@ The first element in the list is: 10
 typedef typename Allocator::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `difference_type` 是通过容器迭代器减少或递增时返回的类型。 `difference_type` 通常用于表示迭代器 `first` 和 `last` 之间的范围 [ `first`, `last`) 内元素的数目，包括 `first` 指向的元素以及那一系列元素，但不包括 `last` 指向的元素。
 
@@ -755,7 +756,7 @@ The number '30' is in c1 collection 3 times.
 void emplace(iterator Where, Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *其中*\
 目标 [列表](../standard-library/list-class.md) 中插入第一个元素的位置。
@@ -763,7 +764,7 @@ void emplace(iterator Where, Type&& val);
 *初始值*\
 添加到 `list` 末尾的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果引发了异常，`list` 将保持不变，该异常将被重新引发。
 
@@ -799,12 +800,12 @@ Moved first element: a
 void emplace_back(Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 添加到 [列表](../standard-library/list-class.md)末尾的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果引发了异常，`list` 将保持不变，该异常将被重新引发。
 
@@ -840,12 +841,12 @@ Moved first element: a
 void emplace_front(Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 要添加到 [list](../standard-library/list-class.md) 开头的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果引发了异常，`list` 将保持不变，该异常将被重新引发。
 
@@ -910,7 +911,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a><a name="end"></a> 端面
+## <a name="end"></a><a name="end"></a> end
 
 返回用于发现列表中最后一个元素之后的位置的迭代器。
 
@@ -923,7 +924,7 @@ iterator end();
 
 用于发现列表中最后一个元素之后的位置的双向迭代器。 如果列表为空，则 `list::end == list::begin`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `end` 用于测试迭代器是否已到达其列表的末尾。
 
@@ -979,7 +980,7 @@ iterator erase(iterator Where);
 iterator erase(iterator first, iterator last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *其中*\
 要从列表中移除的元素的位置。
@@ -994,7 +995,7 @@ iterator erase(iterator first, iterator last);
 
 指定已移除的任何元素之外保留的第一个元素的双向迭代器；如果不存在此类元素，则为指向列表末尾的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 不发生重新分配，因此迭代器和引用仅对已清除元素无效。
 
@@ -1058,7 +1059,7 @@ const_reference front() const;
 
 如果列表为空，返回的结果则不确定。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将 `front` 的返回值分配给 `const_reference`，则无法修改列表对象。 如果将 `front` 的返回值分配给 `reference`，则可修改列表对象。
 
@@ -1104,7 +1105,7 @@ Allocator get_allocator() const;
 
 列表使用的分配器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 列表类的分配器指定类管理存储的方式。 C++ 标准库容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。
 
@@ -1147,7 +1148,7 @@ template <class InputIterator>
 void insert(iterator Where, InputIterator First, InputIterator Last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *其中*\
 目标列表中插入第一个元素的位置。
@@ -1246,7 +1247,7 @@ int main()
 typedef implementation-defined iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 `iterator` 可用于修改元素的值。
 
@@ -1276,7 +1277,7 @@ template <class InputIterator>
 list(InputIterator First, InputIterator Last, const Allocator& Al);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fc-al*\
 要用于此对象的分配器类。
@@ -1299,7 +1300,7 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 *IList*\
 包含要复制的元素的 initializer_list。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所有构造函数都存储分配器对象 (*Al*) 并初始化列表。
 
@@ -1309,11 +1310,11 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 第三个构造函数 *指定 (类* 的默认值的元素) 元素的重复次数 `Type` 。
 
-第四个和第五个构造函数指定值*Val*) 元素 (*计数*的重复。
+第四个和第五个构造函数指定值 *Val*) 元素 (*计数* 的重复。
 
-第六个构造函数指定列表 *权限*的副本。
+第六个构造函数指定列表 *权限* 的副本。
 
-第七个构造函数 *向右*移动列表。
+第七个构造函数 *向右* 移动列表。
 
 第八个构造函数使用 initializer_list 指定元素。
 
@@ -1454,7 +1455,7 @@ template <class Traits>
 void merge(list<Type, Allocator>& right, Traits comp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要与目标列表合并的自变量列表。
@@ -1462,7 +1463,7 @@ void merge(list<Type, Allocator>& right, Traits comp);
 *压缩*\
 用于排列目标列表元素的比较运算符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 自变量列表 *权限* 与目标列表合并。
 
@@ -1536,14 +1537,14 @@ list& operator=(const list& right);
 list& operator=(list&& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要复制到 `list` 中的 [list](../standard-library/list-class.md)。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-清除中的任何现有元素后 `list` ，运算符会将的内容复制或移动到*right* `list` 。
+清除中的任何现有元素后 `list` ，运算符会将的内容复制或移动到 `list` 。
 
 ### <a name="example"></a>示例
 
@@ -1594,7 +1595,7 @@ int main( )
 typedef typename Allocator::pointer pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 `pointer` 可用于修改元素的值。
 
@@ -1608,7 +1609,7 @@ typedef typename Allocator::pointer pointer;
 void pop_back();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 最后一个元素不得为空。 `pop_back` 绝不会引发异常。
 
@@ -1650,7 +1651,7 @@ After deleting the element at the end of the list, the last element is: 1
 void pop_front();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个元素不得为空。 `pop_front` 绝不会引发异常。
 
@@ -1693,12 +1694,12 @@ void push_back(const Type& val);
 void push_back(Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 添加到列表末尾的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果引发异常，列表将保持不变，该异常将被重新引发。
 
@@ -1748,12 +1749,12 @@ void push_front(const Type& val);
 void push_front(Type&& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 要添加到列表开头的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果引发异常，列表将保持不变，该异常将被重新引发。
 
@@ -1807,7 +1808,7 @@ reverse_iterator rbegin();
 
 一个发现反向列表中的第一个元素（或发现非反向列表中的最后一个元素的内容）的反向双向迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rbegin` 用于反向列表，正如 [begin](#begin) 用于列表一样。
 
@@ -1909,12 +1910,12 @@ The second element is 20
 void remove(const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 一个值，如果某个元素包含该值，则会导致从列表中删除该元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 剩余元素的排序不受影响。
 
@@ -1967,7 +1968,7 @@ template <class Predicate>
 void remove_if(Predicate pred)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pred*\
 一元谓词，如果元素满足该谓词，则该谓词会导致此元素从列表删除。
@@ -2036,7 +2037,7 @@ reverse_iterator rend();
 
 一个反向双向迭代器，用于发现反向列表中最后一个元素之后的位置（非反向列表中第一个元素之前的位置）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `rend` 用于反向列表，正如 [end](#end) 用于列表一样。
 
@@ -2118,7 +2119,7 @@ void resize(size_type _Newsize);
 void resize(size_type _Newsize, Type val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Newsize*\
 列表的新大小。
@@ -2126,11 +2127,11 @@ void resize(size_type _Newsize, Type val);
 *初始值*\
 新的大小大于原始大小时要添加至列表的新元素的值。 如果省略此值，则会赋给新元素该类的默认值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果列表的大小小于请求的大小， *_Newsize*会将元素添加到列表中，直到它达到请求的大小。
+如果列表的大小小于请求的大小， *_Newsize* 会将元素添加到列表中，直到它达到请求的大小。
 
-如果列表的大小大于请求的大小，则删除与列表末尾最近的元素，直到列表达到 *_Newsize*的大小。
+如果列表的大小大于请求的大小，则删除与列表末尾最近的元素，直到列表达到 *_Newsize* 的大小。
 
 如果列表的当前大小与请求的大小相同，则不采取任何操作。
 
@@ -2228,7 +2229,7 @@ Reversed c1 = 30 20 10
 typedef std::reverse_iterator<iterator> reverse_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `reverse_iterator` 类型用于反向循环访问列表。
 
@@ -2300,12 +2301,12 @@ template <class Traits>
     void sort(Traits comp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *压缩*\
 用于排列连续元素的比较运算符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下，第一个成员函数将按升序排列元素。
 
@@ -2372,7 +2373,7 @@ void splice(const_iterator Where, list<Type, Allocator>& Source, const_iterator 
 void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator First, const_iterator Last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *其中*\
 目标列表中要在其前面进行插入的位置。
@@ -2389,13 +2390,13 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 *时间*\
 要从源列表中进行插入的范围中的最后一个元素之外的第一个位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一对成员函数将源列表中的所有元素插入到目标列表中的位置之前的位置， *并从源列表中移除* 所有元素。  (`&Source` 不得等于 **`this`** 。 ) 
 
-第二对成员函数在目标列表中的位置*之前，插入*由*Iter*引用的元素，并从源列表中删除*Iter* 。 （如果 `Where == Iter || Where == ++Iter`，则不会发生更改。）
+第二对成员函数在目标列表中的位置 *之前，插入* 由 *Iter* 引用的元素，并从源列表中删除 *Iter* 。 （如果 `Where == Iter || Where == ++Iter`，则不会发生更改。）
 
-第三对成员函数将 [、) 指定的范围 `First` 插入 `Last` 到引用的目标列表中的元素之前，并*Where*从源列表中删除该范围的元素。  (如果 `&Source == this` 为，则范围 `[First, Last)` 不能包含指向的元素。 *Where*) 
+第三对成员函数将 [、) 指定的范围 `First` 插入 `Last` 到引用的目标列表中的元素之前，并从源列表中删除该范围的元素。  (如果 `&Source == this` 为，则范围 `[First, Last)` 不能包含指向的元素。 ) 
 
 如果范围接合插入 `N` 个元素和 `&Source != this`，则类 [iterator](../standard-library/forward-list-class.md#iterator) 的对象会递增 `N` 次。
 
@@ -2486,13 +2487,13 @@ void swap(list<Type, Allocator>& right);
 friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
-提供要交换的元素的列表，或其元素要与 *左侧*列表中的元素进行交换的列表。
+提供要交换的元素的列表，或其元素要与 *左侧* 列表中的元素进行交换的列表。
 
 *左中*\
-一个列表，其元素将与列表 *右侧*的元素进行交换。
+一个列表，其元素将与列表 *右侧* 的元素进行交换。
 
 ### <a name="example"></a>示例
 
@@ -2553,18 +2554,18 @@ template <class BinaryPredicate>
 void unique(BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pred*\
 用于比较连续元素的二元谓词。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数假设列表是经过排序的，因此所有重复元素都是相邻的。 不相邻的重复元素将不被删除。
 
 第一个成员函数删除比较等于其前一个元素的每个元素。
 
-第二个成员函数在与前面的元素进行比较时删除满足谓词函数 *pred* 的每个元素。 您可以使用 pred 参数的标头中声明的任何二元函数对象， \<functional> 也可以创建自己的对象。 *pred*
+第二个成员函数在与前面的元素进行比较时删除满足谓词函数 *pred* 的每个元素。 您可以使用 pred 参数的标头中声明的任何二元函数对象， \<functional> 也可以创建自己的对象。 
 
 ### <a name="example"></a>示例
 
@@ -2623,7 +2624,7 @@ After removing successive unequal elements, c3 = -10 -10
 typedef typename Allocator::value_type value_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `value_type` 是模板参数 *Type* 的同义词。
 

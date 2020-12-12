@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：在提供程序中引用属性
 title: 在提供程序中引用属性
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: ecb11c54d4c5926fbead0196c441ec23e8b0891f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dfc3b06820b98477a033b450d42feca52c5c7a72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286613"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供程序中引用属性
 
-查找所需属性的属性组和属性 ID。 有关详细信息，请参阅**OLE DB 程序员参考**中的[OLE DB 属性](/previous-versions/windows/desktop/ms722734(v=vs.85))。
+查找所需属性的属性组和属性 ID。 有关详细信息，请参阅 **OLE DB 程序员参考** 中的 [OLE DB 属性](/previous-versions/windows/desktop/ms722734(v=vs.85))。
 
 下面的示例假设你要尝试从行集中获取属性。 使用会话或命令的代码是类似的，但使用的是不同的接口。
 

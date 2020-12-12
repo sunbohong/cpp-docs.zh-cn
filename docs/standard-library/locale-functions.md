@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 区域设置 &gt; 函数
 title: '&lt;locale&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 91d0b40de557eb2414d6ee685795796c3290177c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6bad3cab6886fcee34fba06e88ce54e216db4649
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284611"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函数
 
@@ -68,7 +69,7 @@ template <class Facet>
 bool has_facet(const locale& Loc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Loc*\
 测试其中是否存在 facet 的区域设置。
@@ -77,7 +78,7 @@ bool has_facet(const locale& Loc);
 
 **`true`** 如果区域设置测试了方面，则为; **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数可用于检查在调用 `use_facet` 之前是否在区域设置中列出了非强制性 facet，以避免在不存在 facet 时将引发的异常。
 
@@ -111,7 +112,7 @@ template <class CharType>
 bool isalnum(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要测试的字母数字元素。
@@ -178,7 +179,7 @@ template <class CharType>
 bool isalpha(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -190,7 +191,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是字母，则为; **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **alpha**， `Ch`) 。
 
@@ -243,7 +244,7 @@ template <class CharType>
 bool iscntrl(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -255,7 +256,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是控制字符，则为; 否则为。 **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **cntrl**、 `Ch`) 。
 
@@ -308,7 +309,7 @@ template <class CharType>
 bool isdigit(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -320,7 +321,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是数字字符，则为; 否则为。 **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：：**数字**， `Ch`) 。
 
@@ -373,7 +374,7 @@ template <class CharType>
 bool isgraph(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -385,7 +386,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是字母数字或标点字符，则为; **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [为](../standard-library/ctype-class.md#is) ( **ctype** \< **CharType**> ：： **graph**、 `Ch`) 。
 
@@ -438,7 +439,7 @@ template <class CharType>
 bool islower(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -450,7 +451,7 @@ bool islower(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是小写字符，则为; 否则为。 **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **lower**、 `Ch`) 。
 
@@ -503,7 +504,7 @@ template <class CharType>
 bool isprint(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -515,7 +516,7 @@ bool isprint(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是可打印元素，则为; **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **print**、 `Ch`) 。
 
@@ -567,7 +568,7 @@ template <class CharType>
 bool ispunct(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -579,7 +580,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是标点字符，则为; 否则为。 **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) `<` [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **punct**、 `Ch`) 。
 
@@ -632,7 +633,7 @@ template <class CharType>
 bool isspace(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -644,7 +645,7 @@ bool isspace(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是空白字符，则为; 否则为。 **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **space**， `Ch`) 。
 
@@ -697,7 +698,7 @@ template <class CharType>
 bool isupper(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -709,7 +710,7 @@ bool isupper(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是大写字符，则为; 否则为。 **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **upper**， `Ch`) 。
 
@@ -762,7 +763,7 @@ template <class CharType>
 bool isxdigit(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要进行测试的元素。
@@ -774,7 +775,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 **`true`** 如果测试的元素是用于表示十六进制数字的字符，则为; 否则为。 **`false`** 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [ (](../standard-library/ctype-class.md#is) **ctype** \< **CharType**> ：： **xdigit**、 `Ch`) 。
 
@@ -829,7 +830,7 @@ template <class CharType>
 CharType tolower(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要转换为小写的字符。
@@ -841,7 +842,7 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 被转换为小写的字符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [tolower](../standard-library/ctype-class.md#tolower) ( `Ch`) 。
 
@@ -878,7 +879,7 @@ template <class CharType>
 CharType toupper(CharType Ch, const locale& Loc)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *48*\
 要转换为大写的字符。
@@ -890,7 +891,7 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 转换为大写的字符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回 () [use_facet](../standard-library/locale-functions.md#use_facet) <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > `Loc` 。 [toupper](../standard-library/ctype-class.md#toupper) ( `Ch`) 。
 
@@ -927,7 +928,7 @@ template <class Facet>
 const Facet& use_facet(const locale& Loc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Loc*\
 包含所引用的 facet 类型的 const 区域设置。
@@ -936,7 +937,7 @@ const Facet& use_facet(const locale& Loc);
 
 对 `Facet` 类的 facet 的引用包含在自变量区域设置中。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 只要存在包含区域设置的任何副本，则模板函数返回的对 facet 的引用保持有效。 如果自变量区域设置中没有列出 `Facet` 类的此类 facet 对象，则该函数将引发 `bad_cast` 异常。
 
@@ -979,6 +980,6 @@ The character 'a' in locale loc1 is alphabetic.
 The character '!' in locale loc2 is not alphabetic.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)
