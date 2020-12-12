@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： logical_or 结构
 title: logical_or 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7b6578bb3405b2428724554d520ffe784b885a40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277669"
 ---
-# <a name="logicalor-struct"></a>logical_or 结构
+# <a name="logical_or-struct"></a>logical_or 结构
 
 对其自变量执行逻辑析取运算 (`operator||`) 的预定义函数对象。
 
@@ -37,16 +38,16 @@ struct logical_or<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持 `operator||` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-逻辑析取运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+*左中*\
+逻辑析取运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*右侧*\
-逻辑析取运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+*然后*\
+逻辑析取运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 

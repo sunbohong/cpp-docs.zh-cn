@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： vector &lt; bool &gt; ：： reference：： flip
 title: vector&lt;bool&gt;::reference::flip
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-ms.openlocfilehash: 1743df7773d577e53f054fa4e403cf0d00da8ce7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fc07fada718e440d6e2ae76c75e7e5b24c6644d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452173"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280412"
 ---
 # <a name="vectorltboolgtreferenceflip"></a>vector&lt;bool&gt;::reference::flip
 
-反转引用的 [vector\<bool>](../standard-library/vector-bool-class.md) 元素的布尔值。
+反转所引用[矢量 \<bool> ](../standard-library/vector-bool-class.md)元素的布尔值。
 
 ## <a name="syntax"></a>语法
 
@@ -55,7 +56,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 The vector is:
@@ -66,11 +67,11 @@ The vector with first element flipped is:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<vector>
+**标头：**\<vector>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
-[vector\<bool>::reference 类](../standard-library/vector-bool-reference-class.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[vector \<bool> ：： Reference 类](../standard-library/vector-bool-reference-class.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

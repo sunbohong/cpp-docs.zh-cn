@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： lognormal_distribution 类
 title: lognormal_distribution 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: 28ecadfce3e52d9541358d8aa9f68b2e0857661b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e0d927d300cad3c26e8ffeaf2c4223caaa6d80af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277591"
 ---
 # <a name="lognormal_distribution-class"></a>lognormal_distribution 类
 
@@ -66,12 +67,12 @@ public:
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *RealType*\
 浮点结果类型，默认为 **`double`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类模板描述产生用户指定的整型值的分布，如果未提供任何值，则 **`double`** 根据日志正态分布分配值。 下表链接到有关各个成员的文章。
 
@@ -191,7 +192,7 @@ explicit lognormal_distribution(RealType m = 0.0, RealType s = 1.0);
 explicit lognormal_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *年*\
 `m` 分布参数。
@@ -202,13 +203,13 @@ explicit lognormal_distribution(const param_type& parm);
 *parm*\
 用于构造分布的 `param_type` 结构。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **前提条件：**`0.0 < s`
 
 第一个构造函数将构造一个对象，此对象存储的 `m` 值保留值 *m*，并且其存储的 `s` 值保留值 *s*。
 
-第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="lognormal_distributionparam_type"></a><a name="param_type"></a> lognormal_distribution：:p aram_type
 
@@ -226,7 +227,7 @@ struct param_type {
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *年*\
 `m` 分布参数。
@@ -237,12 +238,12 @@ struct param_type {
 *然后*\
 用于比较的 `param_type` 结构。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **前提条件：**`0.0 < s`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

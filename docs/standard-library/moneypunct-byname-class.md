@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： moneypunct_byname 类
 title: moneypunct_byname 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: b20293ac6788156f25f95878a5ab0098c178edec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277461"
 ---
 # <a name="moneypunct_byname-class"></a>moneypunct_byname 类
 
-一个派生类模板，用于描述一个对象，该对象可充当给定区域设置的 `moneypunct` 方面，同时启用格式货币输入字段或货币输出字段。
+一个派生类模板，用于描述一个对象，该对象可充当 `moneypunct` 给定区域设置的 facet，同时启用格式货币输入字段或货币输出字段。
 
 ## <a name="syntax"></a>语法
 
@@ -40,14 +41,14 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-其行为由已命名的区域设置 `_Locname` 决定。 每个构造函数通过 [moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`) 初始化其基对象。
+其行为由已命名的区域设置 `_Locname` 决定。 每个构造函数都用[moneypunct](../standard-library/moneypunct-class.md#moneypunct) \<CharType, Intl> () 初始化其基对象 `_Refs` 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

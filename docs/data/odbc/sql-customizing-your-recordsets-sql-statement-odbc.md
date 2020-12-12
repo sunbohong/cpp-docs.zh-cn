@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： SQL：自定义记录集的 SQL 语句 (ODBC) '
 title: SQL：自定义记录集的 SQL 语句 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-ms.openlocfilehash: 083d268d2b2f2eef072809b1afde9d6ea34f6996
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73765ed66dacbc017cca6236ae5a90388390fa45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278683"
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL：自定义记录集的 SQL 语句 (ODBC)
 
@@ -23,14 +24,14 @@ ms.locfileid: "81374518"
 
 - 框架如何构造 SQL 语句
 
-- 如何重写 SQL 语句
+- 如何替代 SQL 语句
 
 > [!NOTE]
-> 此信息适用于 MFC ODBC 类。 如果您正在使用 MFC DAO 类，请参阅 DAO 帮助中的主题"微软喷气数据库引擎 SQL 和 ANSI SQL 的比较"。
+> 此信息适用于 MFC ODBC 类。 如果使用的是 MFC DAO 类，请参阅 DAO 帮助中的 "Microsoft Jet 数据库引擎 SQL 和 ANSI SQL 比较" 主题。
 
 ## <a name="sql-statement-construction"></a>SQL 语句构造
 
-记录集主要基于 SQL **SELECT**语句选择记录。 使用向导声明类时，它会编写一个类似于这样的`GetDefaultSQL`成员函数的重写版本（对于称为`CAuthors`的记录集类）。
+记录集基本记录对 SQL **SELECT** 语句的选择。 使用向导声明类时，它会 `GetDefaultSQL` 为名为) 的记录集类编写如下所 (示的成员函数的重写版本 `CAuthors` 。
 
 ```cpp
 CString CAuthors::GetDefaultSQL()
@@ -39,35 +40,35 @@ CString CAuthors::GetDefaultSQL()
 }
 ```
 
-默认情况下，此覆盖返回使用向导指定的表名称。 在此示例中，表名称为"问题"。 稍后调用记录集`Open`的成员函数时，`Open`构造窗体的最终**SELECT**语句：
+默认情况下，此重写将返回您在向导中指定的表名。 在此示例中，表名为 "AUTHORS"。 以后调用记录集的 `Open` 成员函数时，将 `Open` 构造如下格式的最终 **SELECT** 语句：
 
 ```
 SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
        [ORDER BY m_strSort]
 ```
 
-其中`table-name`通过调用`GetDefaultSQL`获得，并从`rfx-field-list`中的`DoFieldExchange`RFX 函数调用获得。 这是**选择**语句的启用，除非您在运行时将其替换为重写版本，尽管您也可以使用参数或筛选器修改默认语句。
+在 `table-name` 中，通过调用获取 `GetDefaultSQL` ， `rfx-field-list` 它是从中 RFX 函数调用获取的 `DoFieldExchange` 。 这就是您为 **SELECT** 语句所获得的内容，除非您还可以使用参数或筛选器来修改默认语句。
 
 > [!NOTE]
-> 如果指定包含（或可能包含）空格的列名称，则必须将名称括在方括号中。 例如，"名字"的名称应为"[名字]。
+> 如果指定的列名包含 (或可能包含) 空间，则必须用方括号将该名称括起来。 例如，名称 "First Name" 应为 "[First Name]"。
 
-要重写默认**SELECT**语句，请在调用`Open`时传递包含完整**SELECT**语句的字符串。 记录集使用您提供的字符串，而不是构造自己的默认字符串。 如果替换语句包含**WHERE**子句，请不要指定筛选器，`m_strFilter`因为您将有两个筛选器语句。 同样，如果替换语句包含 ORDER **BY**子句，则不要指定 排序`m_strSort`，这样您就不会有两个排序语句。
+若要重写默认的 **select** 语句，请在调用时传递包含完整 **SELECT** 语句的字符串 `Open` 。 记录集使用您提供的字符串，而不是构建其自己的默认字符串。 如果替换语句包含 **WHERE** 子句，请不要在中指定筛选器， `m_strFilter` 因为这样就会有两个筛选语句。 同样，如果替换语句包含 **ORDER BY** 子句，则不要在中指定排序方式， `m_strSort` 这样就不会有两个 sort 语句了。
 
 > [!NOTE]
-> 如果在筛选器（或 SQL 语句的其他部分）中使用文本字符串，则可能需要使用特定于 DBMS 的文本前缀和文本后缀字符（或字符）来"报价"（在指定的分隔符中）引用此类字符串。
+> 如果在筛选器中使用文字字符串 (或 SQL 语句的其他部分) ，则可能必须使用以 DBMS 特定的文本前缀和文本后缀字符 (或) 字符括起来， (用指定的) 分隔符将此类字符串括起来。
 
-根据 DBMS，您可能还会遇到外部联接等操作的特殊语法要求。 使用 ODBC 函数从 DBMS 的驱动程序获取此信息。 例如，调用`::SQLGetTypeInfo`特定数据类型（如`SQL_VARCHAR`）以请求LITERAL_PREFIX和LITERAL_SUFFIX字符。 如果要编写与数据库无关的代码，请参阅[ODBC 程序员参考](/sql/odbc/reference/odbc-programmer-s-reference)中的[附录 C：SQL 语法](/sql/odbc/reference/appendixes/appendix-c-sql-grammar)，了解详细的语法信息。
+对于外部联接等操作，你可能还会遇到特殊语法要求，具体取决于你的 DBMS。 使用 ODBC 函数从 DBMS 的驱动程序中获取此信息。 例如，调用 `::SQLGetTypeInfo` 特定数据类型（例如 `SQL_VARCHAR` ）来请求 LITERAL_PREFIX 和 LITERAL_SUFFIX 字符。 如果要编写与数据库无关的代码，请参阅[ODBC 程序员参考](/sql/odbc/reference/odbc-programmer-s-reference)中的[附录 C： SQL 语法](/sql/odbc/reference/appendixes/appendix-c-sql-grammar)，了解详细的语法信息。
 
-记录集对象构造它用来选择记录的 SQL 语句，除非您传递自定义 SQL 语句。 如何做到这一点主要取决于您在`Open`成员函数的*lpszSQL*参数中传递的值。
+Recordset 对象将构造用于选择记录的 SQL 语句，除非传递自定义 SQL 语句。 完成此操作的方式主要取决于在成员函数的 *lpszSQL* 参数中传递的值 `Open` 。
 
-SQL **SELECT**语句的一般形式是：
+SQL **SELECT** 语句的一般形式为：
 
 ```
 SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]
 ```
 
-将**DISTINCT**关键字添加到记录集的 SQL 语句的一种方法是在 中的第一个 RFX 函数调用`DoFieldExchange`中嵌入该关键字。 例如：
+将 **DISTINCT** 关键字添加到记录集的 SQL 语句的一种方法是将关键字嵌入到中的第一个 RFX 函数调用中 `DoFieldExchange` 。 例如：
 
 ```
 ...
@@ -76,33 +77,33 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
 ```
 
 > [!NOTE]
-> 仅此技术将打开为只读的记录集使用。
+> 仅将此方法用于以只读方式打开的记录集。
 
 ## <a name="overriding-the-sql-statement"></a>重写 SQL 语句
 
-下表显示了*lpszSQL*参数到`Open`的可能性。 下表中的案例在表之后进行说明。
+下表显示了 *lpszSQL* 参数的可能的 `Open` 。 表中的事例如下所述。
 
-**lpszSQL 参数和生成的 SQL 字符串**
+**LpszSQL 参数和生成的 SQL 字符串**
 
-|案例|您在 lpszSQL 中传递的内容|生成的 SELECT 语句|
+|案例|在 lpszSQL 中传递的内容|生成的 SELECT 语句|
 |----------|------------------------------|------------------------------------|
-|1|Null|**从***表名***中选择** *rfx 字段列表*<br /><br /> `CRecordset::Open`调用`GetDefaultSQL`以获取表名称。 生成的字符串是案例 2 到 5 之一，`GetDefaultSQL`具体取决于返回的内容。|
-|2|表名称|**从***表名***中选择** *rfx 字段列表*<br /><br /> 字段列表取自 中的`DoFieldExchange`RFX 语句。 如果`m_strFilter``m_strSort`和 不是空，则添加**WHERE**和/或**ORDER BY**子句。|
-|3\*|完整的**SELECT**语句，但没有**WHERE**或**ORDER BY**子句|通过。 如果`m_strFilter``m_strSort`和 不是空，则添加**WHERE**和/或**ORDER BY**子句。|
-|4\*|带有**WHERE**和/或 ORDER **BY**子句的完整**SELECT**语句|通过。 `m_strFilter`和/或`m_strSort`必须保持空，或生成两个筛选器和/或排序语句。|
-|5\*|对存储过程的调用|通过。|
+|1|Null|**从***表名称***选择** *rfx-列表*<br /><br /> `CRecordset::Open` 调用 `GetDefaultSQL` 以获取表名称。 生成的字符串是事例2到步骤5中的一种，具体取决于返回的内容 `GetDefaultSQL` 。|
+|2|表名|**从***表名称***选择** *rfx-列表*<br /><br /> 字段列表是从中 RFX 语句获取的 `DoFieldExchange` 。 如果 `m_strFilter` 和不 `m_strSort` 为空，则添加 **WHERE** 和/或 **ORDER BY** 子句。|
+|三维空间 \*|完整的 **SELECT** 语句，但不包含 **WHERE** 或 **ORDER by** 子句|作为传递。 如果 `m_strFilter` 和不 `m_strSort` 为空，则添加 **WHERE** 和/或 **ORDER BY** 子句。|
+|4 \*|包含 **WHERE** 和/或 **ORDER by** 子句的完整 **SELECT** 语句|作为传递。 `m_strFilter` 和/或 `m_strSort` 必须保持为空，或者生成了两个筛选器和/或排序语句。|
+|5 \*|调用存储过程|作为传递。|
 
-\*`m_nFields`必须小于或等于**SELECT**语句中指定的列数。 **SELECT**语句中指定的每列的数据类型必须与相应 RFX 输出列的数据类型相同。
+\*`m_nFields`必须小于或等于 **SELECT** 语句中指定的列数。 **SELECT** 语句中指定的每一列的数据类型必须与相应 RFX 输出列的数据类型相同。
 
-### <a name="case-1---lpszsql--null"></a>案例 1 lpszSQL = NULL
+### <a name="case-1---lpszsql--null"></a>Case 1 lpszSQL = NULL
 
-记录集选择取决于调用时`GetDefaultSQL``CRecordset::Open`返回的内容。 案例 2 到 5 描述可能的字符串。
+记录集选择取决于 `GetDefaultSQL` 调用它时返回的内容 `CRecordset::Open` 。 案例2到步骤5描述了可能的字符串。
 
-### <a name="case-2---lpszsql--a-table-name"></a>案例 2 lpszSQL = 表名称
+### <a name="case-2---lpszsql--a-table-name"></a>Case 2 lpszSQL = 表名
 
-记录集使用记录字段交换 （RFX） 从记录集类重写 中的 RFX 函数调用中提供的列名称生成列列表`DoFieldExchange`。 如果使用向导声明记录集类，则此案例的结果与案例 1 相同（前提是传递您在向导中指定的表名）。 如果不使用向导编写类，则案例 2 是构造 SQL 语句的最简单方法。
+记录集使用记录字段交换 (RFX) 从记录集类的重写中 RFX 函数调用中提供的列名生成列列表 `DoFieldExchange` 。 如果你使用向导来声明记录集类，则此示例的结果与 case 1 (相同，前提是你传递的是你在向导) 中指定的相同的表名。 如果不使用向导来编写类，请使用 case 2 作为构造 SQL 语句的最简单方法。
 
-下面的示例构造一个 SQL 语句，该语句从 MFC 数据库应用程序中选择记录。 当框架调用`GetDefaultSQL`成员函数时，该函数将返回表的名称`SECTION`。
+下面的示例构造了从 MFC 数据库应用程序选择记录的 SQL 语句。 当框架调用 `GetDefaultSQL` 成员函数时，函数将返回表的名称 `SECTION` 。
 
 ```cpp
 CString CEnrollSet::GetDefaultSQL()
@@ -111,7 +112,7 @@ CString CEnrollSet::GetDefaultSQL()
 }
 ```
 
-要获取 SQL **SELECT**语句的列名称，框架将调用`DoFieldExchange`成员函数。
+若要获取 SQL **SELECT** 语句的列的名称，框架将调用 `DoFieldExchange` 成员函数。
 
 ```cpp
 void CEnrollSet::DoFieldExchange(CFieldExchange* pFX)
@@ -132,35 +133,35 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
     FROM SECTION
 ```
 
-### <a name="case-3---lpszsql--a-selectfrom-statement"></a>案例 3 lpszSQL = SELECT/FROM 语句
+### <a name="case-3---lpszsql--a-selectfrom-statement"></a>Case 3 lpszSQL = SELECT/FROM 语句
 
-您可以手动指定列列表，而不是依靠 RFX 自动构造它。 您可能需要在：
+您可以手动指定列列表，而不是依赖 RFX 自动构造列列表。 在以下情况下，你可能希望执行此操作：
 
-- 您希望在**SELECT**之后指定 **"指定**"关键字。
+- 需要在 **SELECT** 后指定 **DISTINCT** 关键字。
 
-   列列表应按与 在 中`DoFieldExchange`列出的列名称和类型的顺序匹配。
+   列列表应与列名称和类型匹配的顺序与其在中列出的顺序相同 `DoFieldExchange` 。
 
-- 您有理由使用 ODBC 函数`::SQLGetData`手动检索列值，而不是依赖 RFX 为您绑定和检索列。
+- 您有理由使用 ODBC 函数手动检索列值， `::SQLGetData` 而不是依赖 RFX 来绑定和检索列。
 
-   例如，您可能希望容纳应用程序客户在应用程序分发后添加到数据库表的新列。 您需要添加这些额外的字段数据成员，这些成员在使用向导声明类时并不知道。
+   例如，你可能想要在分发应用程序后，容纳应用程序的客户添加到数据库表中的新列。 你需要添加这些额外的字段数据成员，这些字段在你使用向导声明类时未知。
 
-   列列表应按与 列`DoFieldExchange`名称和类型的顺序匹配，后跟手动绑定列的名称。 有关详细信息，请参阅[记录集：动态绑定数据列 （ODBC）。](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+   列列表应与列名称和类型匹配的顺序与其在中列出的顺序相同 `DoFieldExchange` ，后跟手动绑定的列的名称。 有关详细信息，请参阅 [记录集：动态绑定数据列 (ODBC) ](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
 
-- 您希望通过在**FROM**子句中指定多个表来联接表。
+- 您希望通过在 **from** 子句中指定多个表来联接表。
 
-   有关信息和示例，请参阅[记录集：执行联接 （ODBC）。](../../data/odbc/recordset-performing-a-join-odbc.md)
+   有关信息和示例，请参阅 [记录集：执行联接 (ODBC) ](../../data/odbc/recordset-performing-a-join-odbc.md)。
 
-### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>案例 4 lpszSQL = 选择/从+WHERE 和/或 ORDER BY
+### <a name="case-4---lpszsql--selectfrom-plus-where-andor-order-by"></a>情况 4 lpszSQL = SELECT/FROM + WHERE and/or ORDER BY
 
-指定所有内容：列列表（基于 中的`DoFieldExchange`RFX 调用），表列表以及**WHERE**和/或 ORDER **BY**子句的内容。 如果以这种方式指定**WHERE**和/或**ORDER BY**子句，请不要`m_strFilter`使用 和`m_strSort`/或 。
+您可以指定所有内容：基于) 中 RFX 调用 (列列表 `DoFieldExchange` 、表列表以及 **WHERE** 和/或 **ORDER by** 子句的内容。 如果以这种方式指定 **WHERE** 和/或 **ORDER BY** 子句，请不要使用 `m_strFilter` 和/或 `m_strSort` 。
 
-### <a name="case-5---lpszsql--a-stored-procedure-call"></a>案例 5 lpszSQL = 存储过程调用
+### <a name="case-5---lpszsql--a-stored-procedure-call"></a>Case 5 lpszSQL = 存储过程调用
 
-如果需要调用预定义的查询（如 Microsoft SQL Server 数据库中的存储过程），则必须在传递给*lpszSQL*的字符串中编写**CALL**语句。 向导不支持声明用于调用预定义查询的记录集类。 并非所有预定义的查询都返回记录。
+如果需要调用预定义查询 (例如 Microsoft SQL Server 数据库中的存储过程) ，则必须在传递给 *lpszSQL* 的字符串中写入 **call** 语句。 向导不支持声明记录集类来调用预定义查询。 并非所有预定义的查询都返回记录。
 
-如果预定义的查询不返回记录，则可以直接使用`CDatabase`成员函数。 `ExecuteSQL` 对于返回记录的预定义查询，还必须手动`DoFieldExchange`为过程返回的任何列写入 RFX 调用。 RFX 调用必须按与预定义的查询相同的顺序返回相同的类型。 有关详细信息，请参阅[记录集：为预定义查询 （ODBC） 声明类](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
+如果预定义查询不返回记录，则可以 `CDatabase` 直接使用成员函数 `ExecuteSQL` 。 对于返回记录的预定义查询，还必须 `DoFieldExchange` 为该过程返回的任何列手动写入 RFX 调用。 RFX 调用的顺序必须与预定义查询的顺序相同并返回相同的类型。 有关详细信息，请参阅 [记录集：为预定义查询声明类 (ODBC) ](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[SQL：SQL 和 C++ 数据类型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
-[SQL：进行直接 SQL 调用 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL： SQL 和 c + + 数据类型 (ODBC) ](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)<br/>
+[SQL：在 ODBC)  (进行直接 SQL 调用 ](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

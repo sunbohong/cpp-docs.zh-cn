@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; istream &gt; typedef
 title: '&lt;istream&gt; typedef'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: c66a4349a016eb8428a8aa8eb260a78b4bac9efb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 576d1be7733a01689b4cfc511049dfad89390f63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277851"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt; typedef
 
@@ -29,7 +30,7 @@ ms.locfileid: "88846467"
 typedef basic_iostream<char, char_traits<char>> iostream;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是类模板 [basic_iostream](../standard-library/basic-iostream-class.md)的同义词，专用于 **`char`** 具有默认字符特征的类型的元素。
 
@@ -41,7 +42,7 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 typedef basic_istream<char, char_traits<char>> istream;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是类模板 [basic_istream](../standard-library/basic-istream-class.md)的同义词，专用于 **`char`** 具有默认字符特征的类型的元素。
 
@@ -53,7 +54,7 @@ typedef basic_istream<char, char_traits<char>> istream;
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是类模板 [basic_iostream](../standard-library/basic-iostream-class.md)的同义词，专用于 **`wchar_t`** 具有默认字符特征的类型的元素。
 
@@ -65,10 +66,10 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是类模板 [basic_istream](../standard-library/basic-istream-class.md)的同义词，专用于 **`wchar_t`** 具有默认字符特征的类型的元素。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<istream>](../standard-library/istream.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： money_get 类
 title: money_get 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: ab49dad1a24e57eb33834cc651d9ccdb50abe68c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6dfab2347799c78b89e2da9e00ebdb71af0c22d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277500"
 ---
 # <a name="money_get-class"></a>money_get 类
 
@@ -34,7 +35,7 @@ template <class CharType, class InputIterator = istreambuf_iterator<CharType>>
 class money_get : public locale::facet;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
@@ -73,7 +74,7 @@ class money_get : public locale::facet;
 
 **命名空间:** std
 
-## <a name="money_getchar_type"></a><a name="char_type"></a>money_get：： char_type
+## <a name="money_getchar_type"></a><a name="char_type"></a> money_get：： char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -85,7 +86,7 @@ typedef CharType char_type;
 
 该类型是模板参数 *CharType* 的同义词。
 
-## <a name="money_getdo_get"></a><a name="do_get"></a>money_get：:d o_get
+## <a name="money_getdo_get"></a><a name="do_get"></a> money_get：:d o_get
 
 一种虚拟函数，通过调用此函数可从表示货币值的字符序列提取数值。
 
@@ -103,7 +104,7 @@ virtual iter_type do_get(iter_type first,
     string_type& val) const
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 确定待转换序列开头位置的输入迭代器。
@@ -129,11 +130,11 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它会将此字段转换为一个或多个十进制数字的序列，可选择前面加一个减号（ `-` ），以表示数量，并将结果存储在[string_type](#string_type)对象值中。 *val* 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，该函数将按*val*和 `ios_base::failbit` in*状态*存储空序列。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
+第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空货币输入字段。 如果成功，它会将此字段转换为一个或多个十进制数字的序列，可选择在前面加上一个减号 ( `-`) ，以表示数量，并将结果存储在[string_type](#string_type)对象值中。 它将返回一个迭代器，指定第一个超出货币输入字段的元素。 否则，该函数将按 *val* 和 `ios_base::failbit` in *状态* 存储空序列。 它将返回一个迭代器，指定第一个超出有效货币输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `State` 中设置 `ios_base::eofbit`。
 
-第二个受保护的虚拟成员函数的行为与第一个相同，不同之处在于，如果成功，它会将可选的带符号数字序列转换为类型的值 **`long double`** ，并将该值存储在*val*中。
+第二个受保护的虚拟成员函数的行为与第一个相同，不同之处在于，如果成功，它会将可选的带符号数字序列转换为类型的值 **`long double`** ，并将该值存储在 *val* 中。
 
-货币输入字段的格式由[use_facet](../standard-library/locale-functions.md#use_facet)**fac** [locale facet](../standard-library/locale-class.md#facet_class)  <  [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> （ **iosbase**的有效调用返回的区域设置 facet fac 确定。 [getloc](../standard-library/ios-base-class.md#getloc)）。
+货币输入字段的格式由有效调用 [use_facet](../standard-library/locale-functions.md#use_facet) [](../standard-library/locale-class.md#facet_class)  <  [moneypunct](../standard-library/moneypunct-class.md) \< **CharType**, **intl**>> ( **iosbase** 返回的区域设置 facet fac 确定。 [getloc](../standard-library/ios-base-class.md#getloc)) 。
 
 具体而言：
 
@@ -159,13 +160,13 @@ virtual iter_type do_get(iter_type first,
 
 如果 **fac**. `thousands_sep` 的任何实例都不出现在货币输入字段的值部分（等于 **money_base::value** 的元素在格式模式中出现的位置），则不会采用分组约束。 否则，会强制执行 **fac**. **grouping** 采用的任何分组约束。 请注意，所产生的数字序列表示一个整数，其低位 **fac**. `frac_digits` 十进制数字应位于小数点右侧。
 
-如果等于 **money_base::space** 的元素未在格式模式的末尾出现，而是在格式模式中出现，则匹配任意空格。 否则，不匹配任何内部空格。 如果*ch* [use_facet](../standard-library/locale-functions.md#use_facet)  <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > （ **iosbase**），则将元素 ch 视为空白。 [getloc](../standard-library/ios-base-class.md#getloc)）。 [为](../standard-library/ctype-class.md#is)（ **ctype_base：： space**， *ch*）为 **`true`** 。
+如果等于 **money_base::space** 的元素未在格式模式的末尾出现，而是在格式模式中出现，则匹配任意空格。 否则，不匹配任何内部空格。 如果 [use_facet](../standard-library/locale-functions.md#use_facet)  <  [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( **iosbase**，元素 ch 会被视为空白。 [getloc](../standard-library/ios-base-class.md#getloc)) 。 [是](../standard-library/ctype-class.md#is) ( **ctype_base：： space**， *ch*) 为 **`true`** 。
 
 ### <a name="example"></a>示例
 
 请参阅 [get](#get) 的示例，它调用 `do_get`。
 
-## <a name="money_getget"></a><a name="get"></a>money_get：： get
+## <a name="money_getget"></a><a name="get"></a> money_get：： get
 
 从表示货币值的字符序列提取数值。
 
@@ -185,7 +186,7 @@ iter_type get(iter_type first,
     string_type& val) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 确定待转换序列开头位置的输入迭代器。
@@ -262,7 +263,7 @@ int main( )
 };
 ```
 
-## <a name="money_getiter_type"></a><a name="iter_type"></a>money_get：： iter_type
+## <a name="money_getiter_type"></a><a name="iter_type"></a> money_get：： iter_type
 
 一种类型，此类型描述输入迭代器。
 
@@ -274,7 +275,7 @@ typedef InputIterator iter_type;
 
 该类型是模板参数 **InputIterator** 的同义词。
 
-## <a name="money_getmoney_get"></a><a name="money_get"></a>money_get：： money_get
+## <a name="money_getmoney_get"></a><a name="money_get"></a> money_get：： money_get
 
 用于从表示货币值的序列中提取数值的 `money_get` 类型对象的构造函数。
 
@@ -282,26 +283,26 @@ typedef InputIterator iter_type;
 explicit money_get(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为：
+*_Refs* 参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1：未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数通过**locale：：**[facet](../standard-library/locale-class.md#facet_class)（*_Refs*）初始化其基对象。
+构造函数通过 **locale：：**[facet](../standard-library/locale-class.md#facet_class) (*_Refs*) 初始化其基对象。
 
-## <a name="money_getstring_type"></a><a name="string_type"></a>money_get：： string_type
+## <a name="money_getstring_type"></a><a name="string_type"></a> money_get：： string_type
 
 一种类型，此类型描述包含 **CharType** 类型字符的字符串。
 
@@ -311,9 +312,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>备注
 
-该类型描述[basic_string](../standard-library/basic-string-class.md)类模板的专用化。
+该类型描述 [basic_string](../standard-library/basic-string-class.md)类模板的专用化。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [facet 类](../standard-library/locale-class.md#facet_class)\

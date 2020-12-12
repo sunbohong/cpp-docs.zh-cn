@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2097
 title: 编译器错误 C2097
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2097
 ms.assetid: 7e5b2fd4-f61c-4b8a-b265-93e987a04bd3
-ms.openlocfilehash: cdb14aeef61d136a6992a05a72f382e589e88770
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9aa67f85ce9ba60a693500a2d7e3f69014cbba3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97278605"
 ---
 # <a name="compiler-error-c2097"></a>编译器错误 C2097
 
@@ -23,7 +24,7 @@ ms.locfileid: "80207489"
 
 1. 使用长地址初始化短地址。
 
-1. 使用 **/za**进行编译时，使用非常量表达式初始化本地结构、联合或数组。
+1. 使用 **/za** 进行编译时，使用非常量表达式初始化本地结构、联合或数组。
 
 1. 使用包含逗号运算符的表达式进行初始化。
 

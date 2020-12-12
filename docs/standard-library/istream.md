@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; istream&gt;
 title: '&lt;istream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 15d955aca1406183cc348395068ba042b75d7417
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c897441eef935cd6ef5a8b4e9f4676d06a57e1af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277812"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -36,25 +37,25 @@ ms.locfileid: "88846454"
 
 ### <a name="manipulators"></a>操控器
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[ws](../standard-library/istream-functions.md#ws)|跳过流中的空白。|
 |[swap](../standard-library/istream-functions.md#istream_swap)|交换两个流对象。|
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[运算符>>](../standard-library/istream-operators.md#op_gt_gt)|从流中提取字符和字符串。|
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可以完成输入和输出的流类。|
 |[basic_istream](../standard-library/basic-istream-class.md)|类模板描述了一个对象，该对象控制从流缓冲区提取元素和编码对象，该缓冲区包含类型为的元素 `Elem` （也称为 [char_type](../standard-library/basic-ios-class.md#char_type)），其字符特征由类 `Tr` （也称为 [traits_type](../standard-library/basic-ios-class.md#traits_type)）确定。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\

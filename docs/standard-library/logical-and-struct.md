@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： logical_and 结构
 title: logical_and 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2d0cc8b8c40407356d8d3ba41046c0033941c2ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277695"
 ---
 # <a name="logical_and-struct"></a>logical_and 结构
 
-对其参数执行逻辑连合操作 （`operator&&`） 的预定义函数对象。
+一个预定义的函数对象，该对象对其参数执行逻辑与运算 (`operator&&`) 。
 
 ## <a name="syntax"></a>语法
 
@@ -37,16 +38,16 @@ struct logical_and<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持 `operator&&` 接受指定或推断类型的操作数的任何类型。
 
-*离开*\
-逻辑连接运算的左操作数。 非专用模板采用*类型 Type*的 lvalue 引用参数。 专用模板对推断型*T*的lvalue和rvalue引用参数进行了完美的转发。
+*左中*\
+逻辑连接运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*对*\
-逻辑连接运算的右操作数。 非专用模板采用*类型 Type*的 lvalue 引用参数。 专用模板对推断型*U*的lvalue和rvalue引用参数进行了完美的转发。
+*然后*\
+逻辑连接运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 

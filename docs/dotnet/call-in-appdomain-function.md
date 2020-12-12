@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： call_in_appdomain 函数
 title: call_in_appdomain 函数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-ms.openlocfilehash: 567b6d8fe9412e58f21de9a1031ec54c4bc01cdc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ece4929e2b99b09f3c9148b50c609ec1b5596b3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230891"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282570"
 ---
 # <a name="call_in_appdomain-function"></a>call_in_appdomain 函数
 
@@ -39,16 +40,16 @@ RetType call_in_appdomain(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *appdomainId*<br/>
 要在其中调用函数的 appdomain。
 
 *voidFunc*<br/>
-指向 **`void`** 采用 N 个参数的函数（0 <= N <= 15）的指针。
+指向一个 **`void`** 函数的指针，该函数采用 N 个参数 (0 <= N <= 15) 。
 
 *nonvoidFunc*<br/>
-指向 **`void`** 采用 N 个参数（0 <= N <= 15）的非函数的指针。
+指向非 **`void`** 函数的指针，该函数采用 N 参数 (0 <= N <= 15) 。
 
 *arg1 .。。argN*<br/>
 要传递到 `voidFunc` 或 `nonvoidFunc` 在另一个 appdomain 中的零到15个参数。
@@ -120,4 +121,4 @@ appDomain1 id = 2
 
 **头文件** \<msclr\appdomain.h>
 
-**命名空间**msclr
+**命名空间** msclr

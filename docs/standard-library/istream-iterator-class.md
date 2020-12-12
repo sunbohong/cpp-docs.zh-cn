@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： istream_iterator 类
 title: istream_iterator 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: 4ab1c6188a076b46f08b9ea171a8a945cbe1fc70
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7247e96c68f1adcc145519fc1cca6b3401302854
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277903"
 ---
 # <a name="istream_iterator-class"></a>istream_iterator 类
 
@@ -34,7 +35,7 @@ class istream_iterator
     const Type&>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 要从输入流中提取的对象的类型。
@@ -52,7 +53,7 @@ class istream_iterator
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[istream_iterator](#istream_iterator)|构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。|
 
@@ -66,7 +67,7 @@ class istream_iterator
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[操作员](#op_star)|此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。|
 |[operator->](#op_arrow)|返回成员的值（如果有）。|
@@ -78,7 +79,7 @@ class istream_iterator
 
 **命名空间:** std
 
-## <a name="istream_iteratorchar_type"></a><a name="char_type"></a>istream_iterator：： char_type
+## <a name="istream_iteratorchar_type"></a><a name="char_type"></a> istream_iterator：： char_type
 
 为 `istream_iterator` 的字符类型提供的类型。
 
@@ -126,7 +127,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a>istream_iterator：： istream_iterator
+## <a name="istream_iteratoristream_iterator"></a><a name="istream_iterator"></a> istream_iterator：： istream_iterator
 
 构造一个流结尾迭代器作为默认的 `istream_iterator`，或作为一个 `istream_iterator`，以便初始化为它开始读取的迭代器流类型。
 
@@ -136,14 +137,14 @@ istream_iterator();
 istream_iterator(istream_type& _Istr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Istr*\
 要读取以用于初始化 `istream_iterator` 的输入流。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过空指针初始化输入流指针，并创建流末尾迭代器。 第二个构造函数使用 *&_Istr*初始化输入流指针，然后尝试提取并存储类型的对象 `Type` 。
+第一个构造函数通过空指针初始化输入流指针，并创建流末尾迭代器。 第二个构造函数使用 *&_Istr* 初始化输入流指针，然后尝试提取并存储类型的对象 `Type` 。
 
 流末尾迭代器可用于测试 `istream_iterator` 是否已达到流末尾。
 
@@ -181,7 +182,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a>istream_iterator：： istream_type
+## <a name="istream_iteratoristream_type"></a><a name="istream_type"></a> istream_iterator：： istream_type
 
 为 `istream_iterator` 的流类型提供的类型。
 
@@ -197,7 +198,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 有关如何声明和使用 `istream_type` 的示例，请参阅 [istream_iterator](#istream_iterator)。
 
-## <a name="istream_iteratoroperator"></a><a name="op_star"></a>istream_iterator：： operator *
+## <a name="istream_iteratoroperator"></a><a name="op_star"></a> istream_iterator：： operator *
 
 此解引用运算符返回由 `Type` 定址的、`istream_iterator` 类型的存储对象。
 
@@ -241,7 +242,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a>istream_iterator：： operator-&gt;
+## <a name="istream_iteratoroperator-gt"></a><a name="op_arrow"></a> istream_iterator：： operator-&gt;
 
 返回成员的值（如果有）。
 
@@ -291,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a>istream_iterator：： operator + +
+## <a name="istream_iteratoroperator"></a><a name="op_add_add"></a> istream_iterator：： operator + +
 
 从输入流提取增量对象，或在递增对象之前复制对象并返回副本。
 
@@ -337,7 +338,7 @@ int main( )
 }
 ```
 
-## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a>istream_iterator：： traits_type
+## <a name="istream_iteratortraits_type"></a><a name="traits_type"></a> istream_iterator：： traits_type
 
 为 `istream_iterator` 的字符特征类型提供的类型。
 
@@ -384,7 +385,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [input_iterator_tag 结构](../standard-library/input-iterator-tag-struct.md)\
 [iterator 结构](../standard-library/iterator-struct.md)\

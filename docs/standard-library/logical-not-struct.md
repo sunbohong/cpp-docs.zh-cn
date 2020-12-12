@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： logical_not 结构
 title: logical_not 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - logical_not class
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
-ms.openlocfilehash: 731b99faed6515268b93ec3a1a43c96796e49dd3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dc89a5a764d9f3182609b47c5f05eb8b3e167cec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246471"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277682"
 ---
-# <a name="logicalnot-struct"></a>logical_not 结构
+# <a name="logical_not-struct"></a>logical_not 结构
 
-执行逻辑的预定义的函数对象而不是操作 (`operator!`) 对其自变量。
+一个预定义的函数对象，该对象对其参数 () 执行逻辑非运算 `operator!` 。
 
 ## <a name="syntax"></a>语法
 
@@ -37,13 +38,13 @@ struct logical_not<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*\
+*类别*\
 支持 `operator!` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-逻辑“非”运算的操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*类型*。
+*左中*\
+逻辑“非”运算的操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *类型* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 

@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下方面的详细信息： priority_queue (STL/CLR) '
 title: priority_queue (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-ms.openlocfilehash: fd87c39db279fb70d5c5b5f20e583251dc519755
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 666efbc634ae962836fce4fa12ca762ab7085d92
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282492"
 ---
 # <a name="priority_queue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -75,9 +76,9 @@ template<typename Value,
     { ..... };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*值*<br/>
+值<br/>
 受控序列中的元素的类型。
 
 *容器*<br/>
@@ -103,7 +104,7 @@ template<typename Value,
 |[priority_queue::value_compare (STL/CLR)](#value_compare)|两个元素的排序委托。|
 |[priority_queue::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[priority_queue::assign (STL/CLR)](#assign)|替换所有元素。|
 |[priority_queue::empty (STL/CLR)](#empty)|测试元素是否存在。|
@@ -116,22 +117,22 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|复制两个元素的排序委托。|
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |[priority_queue::top_item (STL/CLR)](#top_item)|访问最高优先级的元素。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[priority_queue::operator= (STL/CLR)](#op_as)|替换受控序列。|
 
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>界面
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |IPriorityQueue\<Value, Container>|维护泛型容器适配器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 对象为其控制的序列分配并释放存储，以 `Container` 存储 `Value` 元素并按需增长。 它将顺序保持为堆，并将最高优先级的元素 (top 元素) 易于访问和可移动。 对象限制访问以推送新元素并仅弹出优先级为队列的最高优先级元素。
 
@@ -171,12 +172,12 @@ template<typename Value,
 void assign(priority_queue<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要插入的容器适配器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将分配 `right.get_container()` 给基础容器。 您可以使用它更改队列的全部内容。
 
@@ -585,14 +586,14 @@ c a b
 priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要复制的容器适配器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧* 受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -699,7 +700,7 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *实现持续*<br/>
 用于复制的容器。
@@ -716,7 +717,7 @@ template<typename InIt>
 *然后*<br/>
 要插入的对象或范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数：
 
@@ -728,7 +729,7 @@ template<typename InIt>
 
 `priority_queue(priority_queue<Value, Container>% right);`
 
-使用排序谓词创建作为副本的已包装容器 `right.get_container()` `right.value_comp()` 。 使用此方法可以指定初始受控序列，该序列是由 queue 对象 *权限*控制的序列的副本，具有相同的排序谓词。
+使用排序谓词创建作为副本的已包装容器 `right.get_container()` `right.value_comp()` 。 使用此方法可以指定初始受控序列，该序列是由 queue 对象 *权限* 控制的序列的副本，具有相同的排序谓词。
 
 构造函数：
 
@@ -740,13 +741,13 @@ template<typename InIt>
 
 `explicit priority_queue(value_compare^ pred);`
 
-使用排序谓词 *pred*创建一个空的包装容器。 使用此方法可以指定一个具有指定排序谓词的空的初始受控序列。
+使用排序谓词 *pred* 创建一个空的包装容器。 使用此方法可以指定一个具有指定排序谓词的空的初始受控序列。
 
 构造函数：
 
 `priority_queue(value_compare^ pred, container_type cont);`
 
-使用排序谓词 *pred*创建一个空的已包装容器，然后将 "继续" 使用 *的所有* 元素推送到使用指定排序谓词从现有容器指定初始受控序列。
+使用排序谓词 *pred* 创建一个空的已包装容器，然后将 "继续" 使用 *的所有* 元素推送到使用指定排序谓词从现有容器指定初始受控序列。
 
 构造函数：
 
@@ -758,13 +759,13 @@ template<typename InIt>
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`
 
-使用排序谓词 *pred*创建一个空的包装容器，然后推送序列 [ `first` ， `last`) 。 使用此方法可以指定具有指定排序谓词的指定 seqeuence 中的初始受控序列。
+使用排序谓词 *pred* 创建一个空的包装容器，然后推送序列 [ `first` ， `last`) 。 使用此方法可以指定具有指定排序谓词的指定 seqeuence 中的初始受控序列。
 
 构造函数：
 
 `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`
 
-创建一个空的包装容器，并在排序谓词 *pred*的情况下，将 plus *的所有* 元素推送到序列 [ `first` ， `last`) 。 使用此方法可以指定使用指定排序谓词的现有容器和指定 seqeuence 中的初始受控序列。
+创建一个空的包装容器，并在排序谓词 *pred* 的情况下，将 plus *的所有* 元素推送到序列 [ `first` ， `last`) 。 使用此方法可以指定使用指定排序谓词的现有容器和指定 seqeuence 中的初始受控序列。
 
 ### <a name="example"></a>示例
 
@@ -1335,7 +1336,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *值*的同义词。
+该类型是模板参数 *值* 的同义词。
 
 ### <a name="example"></a>示例
 

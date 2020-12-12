@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： unorm_3 类
 title: unorm_3 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: b62b05487a90e273851b5c5eb7f045132353be37
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277994"
 ---
 # <a name="unorm_3-class"></a>unorm_3 类
 
@@ -89,113 +90,113 @@ ms.locfileid: "77126183"
 class unorm_3;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[unorm_3 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|unorm_3::get_x||
-|unorm_3::get_xy||
-|unorm_3::get_xyz||
-|unorm_3::get_xz||
-|unorm_3::get_xzy||
-|unorm_3::get_y||
-|unorm_3::get_yx||
-|unorm_3::get_yxz||
-|unorm_3::get_yz||
-|unorm_3::get_yzx||
-|unorm_3::get_z||
-|unorm_3::get_zx||
-|unorm_3::get_zxy||
-|unorm_3::get_zy||
-|unorm_3::get_zyx||
-|Unorm_3::ref_b||
-|Unorm_3::ref_g||
-|Unorm_3::ref_r||
-|Unorm_3::ref_x||
-|Unorm_3::ref_y||
-|Unorm_3::ref_z||
-|unorm_3::set_x||
-|unorm_3::set_xy||
-|unorm_3::set_xyz||
-|unorm_3::set_xz||
-|unorm_3::set_xzy||
-|unorm_3::set_y||
-|unorm_3::set_yx||
-|unorm_3::set_yxz||
-|unorm_3::set_yz||
-|unorm_3::set_yzx||
-|unorm_3::set_z||
-|unorm_3::set_zx||
-|unorm_3::set_zxy||
-|unorm_3::set_zy||
-|unorm_3::set_zyx||
+|unorm_3：： get_x||
+|unorm_3：： get_xy||
+|unorm_3：： get_xyz||
+|unorm_3：： get_xz||
+|unorm_3：： get_xzy||
+|unorm_3：： get_y||
+|unorm_3：： get_yx||
+|unorm_3：： get_yxz||
+|unorm_3：： get_yz||
+|unorm_3：： get_yzx||
+|unorm_3：： get_z||
+|unorm_3：： get_zx||
+|unorm_3：： get_zxy||
+|unorm_3：： get_zy||
+|unorm_3：： get_zyx||
+|Unorm_3：： ref_b||
+|Unorm_3：： ref_g||
+|Unorm_3：： ref_r||
+|Unorm_3：： ref_x||
+|Unorm_3：： ref_y||
+|Unorm_3：： ref_z||
+|unorm_3：： set_x||
+|unorm_3：： set_xy||
+|unorm_3：： set_xyz||
+|unorm_3：： set_xz||
+|unorm_3：： set_xzy||
+|unorm_3：： set_y||
+|unorm_3：： set_yx||
+|unorm_3：： set_yxz||
+|unorm_3：： set_yz||
+|unorm_3：： set_yzx||
+|unorm_3：： set_z||
+|unorm_3：： set_zx||
+|unorm_3：： set_zxy||
+|unorm_3：： set_zy||
+|unorm_3：： set_zyx||
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|unorm_3::operator--||
-|unorm_3::operator*=||
-|unorm_3::operator/=||
-|unorm_3::operator++||
-|unorm_3::operator+=||
-|unorm_3::operator=||
-|unorm_3::operator-=||
+|unorm_3：： operator--||
+|unorm_3：： operator * =||
+|unorm_3：： operator/=||
+|unorm_3：： operator + +||
+|unorm_3：： operator + =||
+|unorm_3：： operator =||
+|unorm_3：： operator-=||
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[大小常量](#unorm_3__size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|unorm_3::b||
-|unorm_3::bg||
-|unorm_3::bgr||
-|unorm_3::br||
-|unorm_3::brg||
+|unorm_3：： b||
+|unorm_3：： bg||
+|unorm_3：： bgr||
+|unorm_3：： br||
+|unorm_3：： brg||
 |unorm_3：： g||
-|unorm_3::gb||
-|unorm_3::gbr||
-|unorm_3::gr||
-|unorm_3::grb||
+|unorm_3：： gb||
+|unorm_3：： gbr||
+|unorm_3：： gr||
+|unorm_3：： grb||
 |unorm_3：： r||
-|unorm_3::rb||
-|unorm_3::rbg||
-|unorm_3::rg||
-|unorm_3::rgb||
-|unorm_3::x||
-|unorm_3::xy||
-|unorm_3::xyz||
-|unorm_3::xz||
-|unorm_3::xzy||
+|unorm_3：： rb||
+|unorm_3：： rbg||
+|unorm_3：： rg||
+|unorm_3：： rgb||
+|unorm_3：： x||
+|unorm_3：： xy||
+|unorm_3：： xyz||
+|unorm_3：： xz||
+|unorm_3：： xzy||
 |unorm_3：： y||
-|unorm_3::yx||
-|unorm_3::yxz||
-|unorm_3::yz||
-|unorm_3::yzx||
-|unorm_3::z||
-|unorm_3::zx||
-|unorm_3::zxy||
-|unorm_3::zy||
-|unorm_3::zyx||
+|unorm_3：： yx||
+|unorm_3：： yxz||
+|unorm_3：： yz||
+|unorm_3：： yzx||
+|unorm_3：： z||
+|unorm_3：： zx||
+|unorm_3：： zxy||
+|unorm_3：： zy||
+|unorm_3：： zyx||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -207,7 +208,7 @@ class unorm_3;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a>unorm_3
+## <a name="unorm_3"></a><a name="ctor"></a> unorm_3
 
 默认构造函数，用0初始化所有元素。
 
@@ -260,7 +261,7 @@ explicit inline unorm_3(
     cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_V0*<br/>
 要初始化元素0的值。
@@ -277,12 +278,12 @@ explicit inline unorm_3(
 *_Other*<br/>
 用于初始化的对象。
 
-## <a name="unorm_3__size"></a>规格
+## <a name="size"></a><a name="unorm_3__size"></a> 规格
 
 ```cpp
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

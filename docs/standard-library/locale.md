@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 区域设置&gt;
 title: '&lt;locale&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-ms.openlocfilehash: ae008ef45e8a6bb57505432f2c931a768d4c8ea4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: dce8cb130269450e1b7996b61504e59dc372e3b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277799"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -27,7 +28,7 @@ ms.locfileid: "87224794"
 
 ### <a name="functions"></a>函数
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[has_facet](../standard-library/locale-functions.md#has_facet)|测试某一特定 facet 是否存储在指定区域设置中。|
 |[isalnum](../standard-library/locale-functions.md#isalnum)|测试区域设置中的某一元素是否是字母字符或数字字符。|
@@ -47,7 +48,7 @@ ms.locfileid: "87224794"
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[codecvt](../standard-library/codecvt-class.md)|提供用于在内部和外部字符编码之间进行转换的 facet 的类模板。|
 |[codecvt_base](../standard-library/codecvt-base-class.md)|用于定义称为的枚举类型的 codecvt 类的基类 `result` ，用作 facet 成员函数的返回类型，以指示转换的结果。|
@@ -63,23 +64,23 @@ ms.locfileid: "87224794"
 |[messages_base](../standard-library/messages-base-class.md)|描述 **`int`** 消息目录的类型的基类。|
 |[messages_byname](../standard-library/messages-byname-class.md)|一种派生类模板，用于描述一个对象，该对象可充当给定区域设置的消息方面，并支持检索本地化消息。|
 |[money_base](../standard-library/money-base-class.md)|一种 ctype 类的基类，用于定义枚举类型来分类或测试单个字符或整个范围内的字符。|
-|[money_get](../standard-library/money-get-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制**CharType**类型的序列到货币值的转换。|
-|[money_put](../standard-library/money-put-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制货币值到**CharType**类型的转换。|
-|[moneypunct](../standard-library/moneypunct-class.md)|一个类模板，该模板描述可用作区域设置 facet 的对象，以描述用于表示货币输入字段或货币输出字段的**CharType**类型的序列。|
+|[money_get](../standard-library/money-get-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制 **CharType** 类型的序列到货币值的转换。|
+|[money_put](../standard-library/money-put-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制货币值到 **CharType** 类型的转换。|
+|[moneypunct](../standard-library/moneypunct-class.md)|一个类模板，该模板描述可用作区域设置 facet 的对象，以描述用于表示货币输入字段或货币输出字段的 **CharType** 类型的序列。|
 |[moneypunct_byname](../standard-library/moneypunct-byname-class.md)|一个派生类模板，用于描述一个对象，该对象可充当给定区域设置的 moneypunct facet，从而启用格式货币输入或输出字段。|
-|[num_get](../standard-library/num-get-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制**CharType**类型的序列到数值的转换。|
-|[num_put](../standard-library/num-put-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制数值到类型**CharType**的序列的转换。|
-|[numpunct](../standard-library/numpunct-class.md)|一个类模板，用于描述一个对象，该对象可用作本地方面，以描述用于表示有关数值和布尔表达式的格式和标点的信息的**CharType**类型的序列。|
+|[num_get](../standard-library/num-get-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制 **CharType** 类型的序列到数值的转换。|
+|[num_put](../standard-library/num-put-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以便控制数值到类型 **CharType** 的序列的转换。|
+|[numpunct](../standard-library/numpunct-class.md)|一个类模板，用于描述一个对象，该对象可用作本地方面，以描述用于表示有关数值和布尔表达式的格式和标点的信息的 **CharType** 类型的序列。|
 |[numpunct_byname](../standard-library/numpunct-byname-class.md)|一个派生类模板，用于描述一个对象，该对象可充当给定区域设置的 moneypunct facet，从而支持数值和布尔表达式的格式设置和标点。|
 |[time_base](../standard-library/time-base-class.md)|一个类，该类用作类模板 time_get 的各个方面的基类，只定义枚举的类型 dateorder 和此类型的几个常量。|
-|[time_get](../standard-library/time-get-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以控制**CharType**类型的序列到时间值的转换。|
+|[time_get](../standard-library/time-get-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以控制 **CharType** 类型的序列到时间值的转换。|
 |[time_get_byname](../standard-library/time-get-byname-class.md)|一个派生类模板，用于描述一个对象，该对象可充当类型 time_get 的区域设置 facet \<**CharType**, **InputIterator**> 。|
-|[time_put](../standard-library/time-put-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以控制将时间值转换为**CharType**类型的序列。|
+|[time_put](../standard-library/time-put-class.md)|一个类模板，用于描述一个对象，该对象可充当区域设置 facet，以控制将时间值转换为 **CharType** 类型的序列。|
 |[time_put_byname](../standard-library/time-put-byname-class.md)|一个派生类模板，用于描述一个可充当类型的区域设置 facet 的对象 `time_put` \<**CharType**, **OutputIterator**> 。|
 |[wbuffer_convert 类](../standard-library/wbuffer-convert-class.md)|描述用于控制元素与字节流缓冲区之间的来回传输的流缓冲区。|
 |[wstring_convert 类](../standard-library/wstring-convert-class.md)|一个类模板，它在宽字符串和字节字符串之间执行转换。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [代码页](../c-runtime-library/code-pages.md)\
 [区域设置名称、语言和国家/地区字符串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
