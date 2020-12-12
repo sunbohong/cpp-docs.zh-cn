@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息： ATL 向导和对话框
 title: ATL 向导和对话框
 ms.date: 06/26/2020
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-ms.openlocfilehash: f2ba981c771572f93e9a452db83c722c817b6428
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 531758560ef5d639112a1f15ef591b3b3ca7ed65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165116"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 向导和对话框
 
-活动模板库（ATL）向导为各种类型的 COM 对象生成样板代码。 您可以通过在**解决方案资源管理器**中打开项目的快捷菜单，然后选择 "**添加**"、"**类**" 来运行向导。
+活动模板库 (ATL) 向导为各种类型的 COM 对象生成样板代码。 您可以通过在 **解决方案资源管理器** 中打开项目的快捷菜单，然后选择 " **添加**"、" **类**" 来运行向导。
 
 ## <a name="related-articles"></a>相关文章
 

@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息：命令行错误和警告
 title: 命令行错误和警告
 ms.date: 04/17/2019
 ms.assetid: d02ec7df-26a5-4198-ac92-87b29ec9d5c8
-ms.openlocfilehash: d5cd53a23c4f043715fa7e2372fb5c256337da20
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6a0f467bfcb67e02352ccba9db8d892d6b929e43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115620"
 ---
 # <a name="command-line-errors-and-warnings"></a>命令行错误和警告
 
-在本部分中的文章提供了对命令行错误和生成工具所生成的警告的引用。 这些消息具有窗体`Dxxxx`，其中*xxxx*是一个四位数字。
+本节中的文章提供了对生成工具生成的命令行错误和警告的引用。 这些消息的格式 `Dxxxx` 为，其中 *xxxx* 为四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -40,4 +41,4 @@ ms.locfileid: "64857351"
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ 编译器和生成工具错误与警告](../compiler-errors-1/c-cpp-build-errors.md)

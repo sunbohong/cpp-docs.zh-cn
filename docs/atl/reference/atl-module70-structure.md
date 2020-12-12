@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ATL_MODULE70 结构
 title: _ATL_MODULE70 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ATL_MODULE70 structure
 - _ATL_MODULE70 structure
 ms.assetid: b059b2c8-dfd1-4ac9-b07d-39df638cc7b3
-ms.openlocfilehash: 8d39cdd281e09cdfe09546627aa630a11d12464e
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 8a3076cebe7cab2bce49f660e8198052af393024
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168561"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165350"
 ---
 # <a name="_atl_module70-structure"></a>_ATL_MODULE70 结构
 
@@ -47,12 +48,12 @@ struct _ATL_MODULE70 {
 
 ## <a name="remarks"></a>备注
 
-[_ATL_MODULE](atl-typedefs.md#_atl_module)定义为的`_ATL_MODULE70`typedef。
+[_ATL_MODULE](atl-typedefs.md#_atl_module) 定义为的 typedef `_ATL_MODULE70` 。
 
 ## <a name="requirements"></a>要求
 
 **标头：** atlbase。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](../../atl/reference/atl-classes.md)

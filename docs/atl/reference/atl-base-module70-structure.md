@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ATL_BASE_MODULE70 结构
 title: _ATL_BASE_MODULE70 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ATL_BASE_MODULE70 structure
 - _ATL_BASE_MODULE70 structure
 ms.assetid: 4539282f-15b8-4d7c-aafa-a85dc56f4980
-ms.openlocfilehash: 3893e4ce4fcd24f48d9e981ad24505f82dc98833
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 5bcf2083f9c8991871c05535fd3e20a39bfeb822
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165506"
 ---
 # <a name="_atl_base_module70-structure"></a>_ATL_BASE_MODULE70 结构
 
@@ -41,7 +42,7 @@ struct _ATL_BASE_MODULE70 {
 用于版本控制的结构的大小。
 
 `m_hInst`<br/>
-此`hInstance`模块（exe 或 dll）的。
+`hInstance`此模块 (exe 或 dll) 。
 
 `m_hInstResource`<br/>
 默认实例资源句柄。
@@ -56,19 +57,19 @@ struct _ATL_BASE_MODULE70 {
 ATL 的内部 GUID。
 
 `m_csResource`<br/>
-用于同步对数组的`m_rgResourceInstance`访问。 由 ATL 在内部使用。
+用于同步对数组的访问 `m_rgResourceInstance` 。 由 ATL 在内部使用。
 
 `m_rgResourceInstance`<br/>
 用于在 ATL 可识别的所有资源实例中搜索资源的数组。 由 ATL 在内部使用。
 
 ## <a name="remarks"></a>备注
 
-[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)定义为 _ATL_BASE_MODULE70 的 typedef。
+[_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) 定义为 _ATL_BASE_MODULE70 的 typedef。
 
 ## <a name="requirements"></a>要求
 
 **标头：** atlcore
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](../../atl/reference/atl-classes.md)

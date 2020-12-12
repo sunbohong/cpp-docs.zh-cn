@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：过程
 title: PROC
 ms.date: 12/06/2019
 f1_keywords:
@@ -6,33 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: fe811ed1723dc1a41014720d97b6f21ab596c2e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126030"
 ---
 # <a name="proc"></a>PROC
 
-标记名为*label*的过程块的开头和结尾。 可以通过**调用**指令或[调用](invoke.md)指令调用块中的语句。
+标记名为 *label* 的过程块的开头和结尾。 可以通过 **调用** 指令或 [调用](invoke.md) 指令调用块中的语句。
 
 ## <a name="syntax"></a>语法
 
-> *标签* **PROC** ⟦*距离*⟧⟦*language-type*⟧⟦ **PUBLIC** | **PRIVATE** | **EXPORT** ⟧⟦ __\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *参数*⟦ __：__ *tag*⟧ .。。⟧\
-> ⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧ \
-> *语句*\
+> *标签* **PROC** ⟦*远处*⟧⟦*language-type*⟧⟦ **PUBLIC**  |  **PRIVATE**  |  **EXPORT** ⟧⟦ __\<__*prologuearg*__>__ ⟧⟦**使用** *reglist*⟧⟦__，__ *参数*⟦__：__*tag*⟧ .。。⟧\
+> ⟦**FRAME** ⟦__：__*ehandler-address*⟧⟧ \
+> *前瞻性*\
 > *标签* **ENDP**
 
 ## <a name="remarks"></a>备注
 
 ⟦*距离*⟧和⟦*language 类型*⟧参数仅在32位 MASM 中有效。
 
-⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧仅对 ml64.exe 有效，并使 MASM 在 pdata 中生成函数表项，xdata 中的展开信息用于函数的结构化异常处理展开行为。
+⟦**FRAME** ⟦__：__*ehandler-address*⟧⟧仅对 ml64.exe 有效，并使 MASM 在 pdata 中生成函数表项，xdata 中的展开信息用于函数的结构化异常处理展开行为。
 
-当使用**FRAME**属性时，它必须后跟[。ENDPROLOG](dot-endprolog.md)指令。
+当使用 **FRAME** 属性时，它必须后跟 [。ENDPROLOG](dot-endprolog.md) 指令。
 
-有关使用 ml64.exe 的详细信息，请参阅[MASM （ml64.exe）](masm-for-x64-ml64-exe.md) 。
+有关使用 ml64.exe 的详细信息，请参阅 [MASM for x64 ( # A0) ](masm-for-x64-ml64-exe.md) 。
 
 ## <a name="example"></a>示例
 
@@ -79,7 +80,7 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[指令引用](directives-reference.md)\
+[指令参考](directives-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

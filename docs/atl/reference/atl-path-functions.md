@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： ATL 路径函数
 title: ATL 路径函数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -41,12 +42,12 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: e9e8af5a902a51d9a3ee4956a60ad162196f659c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7244494c6be2819b3cd4142f5d1404ea356fdc30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165298"
 ---
 # <a name="atl-path-functions"></a>ATL 路径函数
 
@@ -54,7 +55,7 @@ ATL 提供 Atlpath.h 类，用于以 [CPathT](cpatht-class.md)的形式操作路
 
 ## <a name="related-classes"></a>相关类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[CPathT 类](cpatht-class.md)|此类表示一个路径。|
 
@@ -68,7 +69,7 @@ ATL 提供 Atlpath.h 类，用于以 [CPathT](cpatht-class.md)的形式操作路
 
 ## <a name="functions"></a>函数
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[ATLPath::AddBackslash](#addbackslash)|此函数是 [PathAddBackslash](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)的重载包装。|
 |[ATLPath::AddExtension](#addextension)|此函数是 [PathAddExtension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)的重载包装。|
@@ -346,7 +347,7 @@ inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关详细信息，请参阅 PathIsDirectory。
 

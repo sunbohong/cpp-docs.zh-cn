@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： ATL OLE DB 提供程序向导
 title: ATL OLE DB 提供程序向导
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 43b8ed4507b004f1e78bc1b9dda64c44ff56e1d7
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 068670205c45c559e8b312d633d715f51a78190d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165337"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供程序向导
 
@@ -21,9 +22,9 @@ ms.locfileid: "92921134"
 
 ::: moniker range="<=msvc-150"
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-自 Visual Studio 2008 起，此向导生成的注册脚本在 HKEY_CURRENT_USER  （而不是 HKEY_LOCAL_MACHINE  ）下注册它的 COM 组件。 若要修改此行为，请设置 ATL 向导的“为所有用户注册组件”  选项。
+自 Visual Studio 2008 起，此向导生成的注册脚本在 HKEY_CURRENT_USER（而不是 HKEY_LOCAL_MACHINE）下注册它的 COM 组件。 若要修改此行为，请设置 ATL 向导的“为所有用户注册组件”选项。
 
 下面列出并介绍了 ATL OLE DB 提供程序向导的选项：
 
@@ -43,15 +44,15 @@ ms.locfileid: "92921134"
 
 - **ProgID**
 
-   编程 ID（或编程标识符）是应用程序可用来代替 GUID 的文本字符串。 “编程 ID”名称采用 Projectname.Coclassname  形式。
+   编程 ID（或编程标识符）是应用程序可用来代替 GUID 的文本字符串。 “编程 ID”名称采用 Projectname.Coclassname 形式。
 
-- **版本**
+- **Version**
 
    提供程序的版本号。 默认值为 1。
 
 - **DataSource 类**
 
-   数据源类的名称，采用 CShortname  Source形式。
+   数据源类的名称，采用 CShortnameSource形式。
 
 - **数据源 .h 文件**
 
@@ -59,7 +60,7 @@ ms.locfileid: "92921134"
 
 - **会话类**
 
-   会话类的名称，采用 CShortname  Session 形式。
+   会话类的名称，采用 CShortnameSession 形式。
 
 - **会话 .h 文件**
 
@@ -67,7 +68,7 @@ ms.locfileid: "92921134"
 
 - **命令类**
 
-   命令类的名称，采用 CShortname  Command 形式。
+   命令类的名称，采用 CShortnameCommand 形式。
 
 - **命令 .h 文件**
 
@@ -75,7 +76,7 @@ ms.locfileid: "92921134"
 
 - **行集类**
 
-   行集类的名称，采用 CShortname  Rowset 形式。
+   行集类的名称，采用 CShortnameRowset 形式。
 
 - **行集 .h 文件**
 

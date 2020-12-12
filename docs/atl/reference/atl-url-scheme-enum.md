@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息： ATL_URL_SCHEME
 title: ATL_URL_SCHEME 枚举
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATLUTIL/ATL::ATL_URL_SCHEME
 ms.assetid: f4131046-8ba0-4ec1-8209-84203f05d20e
-ms.openlocfilehash: 6d8307d6ea51c5ec7e63735360b8628a4c1ed782
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 72c149345a0e1edd41bfc9b32d1e94ab6477d488
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165129"
 ---
 # <a name="atl_url_scheme"></a>ATL_URL_SCHEME
 
-此枚举的成员为[曲线](curl-class.md)理解的方案提供常数。
+此枚举的成员为 [曲线](curl-class.md)理解的方案提供常数。
 
 ## <a name="syntax"></a>语法
 
@@ -35,7 +36,7 @@ enum ATL_URL_SCHEME{
 
 **标头：** atlutil
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概念](../active-template-library-atl-concepts.md)<br/>
 [卷曲：： SetScheme](curl-class.md#setscheme)<br/>
