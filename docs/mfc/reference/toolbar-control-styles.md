@@ -1,15 +1,16 @@
 ---
+description: 了解更多相关信息：工具栏控件样式
 title: 工具栏控件样式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
-ms.openlocfilehash: eab4dbde68fcebdb0afd0d058b4678c464874c81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b044f353ddbdc4ccc9d5050ea14307386b7c2a15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837120"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218714"
 ---
 # <a name="toolbar-control-styles"></a>工具栏控件样式
 
@@ -19,7 +20,7 @@ ms.locfileid: "88837120"
 
 下列值确定控件表示的按钮的类型：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |TBBS_BUTTON|标准按键（默认）。  |
 |TBBS_CHECKBOX|复选框  |
@@ -29,7 +30,7 @@ ms.locfileid: "88837120"
 
 下列值表示控件的当前状态：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |TBBS_CHECKED|复选框处于选中状态。  |
 |TBBS_DISABLED|控件已禁用。  |
@@ -38,11 +39,11 @@ ms.locfileid: "88837120"
 
 下列值将更改按钮在工具栏中的布局：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |TBBS_BREAK|将项放置在新行或新列上，无需分隔列。  |
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 当前样式存储在 [CMFCToolBarButton：： m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)中。 不要直接在中设置新值                 `m_nStyle` ，因为某些派生类在调用时执行附加处理 `SetStyles` 。
 
@@ -52,7 +53,7 @@ ms.locfileid: "88837120"
 
 **标头：** afxtoolbarbutton
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>

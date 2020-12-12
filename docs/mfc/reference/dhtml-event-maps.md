@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： DHTML 事件映射
 title: DHTML 事件映射
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 099a08298357d99a3d09ed6fc1209d463f6a4526
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b9df8f1aa59472de033943efd28f5c688c61e706
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220118"
 ---
 # <a name="dhtml-event-maps"></a>DHTML 事件映射
 
@@ -25,7 +26,7 @@ ms.locfileid: "88837419"
 
 以下宏可用于处理 [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)派生类中的 DHTML 事件。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)|标记 DHTML 事件映射的开头。|
 |[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)|标记 DHTML 事件映射的开头。|
@@ -68,7 +69,7 @@ ms.locfileid: "88837419"
 
 以下宏可用于处理 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生类中的 DHTML 事件。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)|标记多页 DHTML 和 URL 事件映射的开头。|
 |[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)|标记嵌入的 DHTML 事件映射的开头。|
@@ -91,12 +92,12 @@ ms.locfileid: "88837419"
 BEGIN_DHTML_EVENT_MAP(className)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 包含 DHTML 事件映射的类的名称。 此类应直接或间接从 [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) 派生，并在其类定义中包含 [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) 宏。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 DHTML 事件映射添加到你的类，以提供可用于将网页 `CDHtmlDialog` 中的 HTML 元素或 ActiveX 控件引发的事件路由到你的类中的处理程序函数的信息。
 
@@ -110,18 +111,18 @@ BEGIN_DHTML_EVENT_MAP(className)
 
 ## <a name="begin_dhtml_event_map_inline"></a><a name="begin_dhtml_event_map_inline"></a> BEGIN_DHTML_EVENT_MAP_INLINE
 
-在 *className*的类定义内标记 DHTML 事件映射的开头。
+在 *className* 的类定义内标记 DHTML 事件映射的开头。
 
 ```cpp
 BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 包含 DHTML 事件映射的类的名称。 此类应直接或间接从 [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md) 派生，并在其类定义中包含 [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map) 宏。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 DHTML 事件映射添加到你的类，以提供可用于将网页 `CDHtmlDialog` 中的 HTML 元素或 ActiveX 控件引发的事件路由到你的类中的处理程序函数的信息。
 
@@ -141,7 +142,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
 DECLARE_DHTML_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏将在 [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)派生类的定义中使用。
 
@@ -157,13 +158,13 @@ DECLARE_DHTML_EVENT_MAP()
 
 ## <a name="dhtml_event"></a><a name="dhtml_event"></a> DHTML_EVENT
 
-在文档级别处理 (，) 由 *dispid* 标识的事件源自 *ELEMNAME*标识的 HTML 元素。
+在文档级别处理 (，) 由 *dispid* 标识的事件源自 *ELEMNAME* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT(dispid, elemName,  memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 要处理的事件的 DISPID。
@@ -174,7 +175,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -184,13 +185,13 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 
 ## <a name="dhtml_event_axcontrol"></a><a name="dhtml_event_axcontrol"></a> DHTML_EVENT_AXCONTROL
 
-处理由*controlName*标识的 ActiveX 控件触发的*dispid*标识的事件。
+处理由 *controlName* 标识的 ActiveX 控件触发的 *dispid* 标识的事件。
 
 ```cpp
 DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 要处理的事件的调度 ID。
@@ -201,7 +202,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -211,13 +212,13 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 
 ## <a name="dhtml_event_class"></a><a name="dhtml_event_class"></a> DHTML_EVENT_CLASS
 
-在文档级别处理 () 由 *dispid* 标识的事件，该事件由 *ELEMNAME*标识的 CSS 类的任何 HTML 元素发起。
+在文档级别处理 () 由 *dispid* 标识的事件，该事件由 *ELEMNAME* 标识的 CSS 类的任何 HTML 元素发起。
 
 ```cpp
 DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 要处理的事件的调度 ID。
@@ -228,7 +229,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -238,13 +239,13 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 
 ## <a name="dhtml_event_element"></a><a name="dhtml_event_element"></a> DHTML_EVENT_ELEMENT
 
-处理由 *elemName* 标识的元素 () 由 *dispid*标识的事件。
+处理由 *elemName* 标识的元素 () 由 *dispid* 标识的事件。
 
 ```cpp
 DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 要处理的事件的调度 ID。
@@ -255,11 +256,11 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
-如果使用此宏处理 nonbubbling 事件，则事件源将是 *elemName*标识的元素。
+如果使用此宏处理 nonbubbling 事件，则事件源将是 *elemName* 标识的元素。
 
 如果使用此宏处理冒泡事件，则 *elemName* 标识的元素可能不是事件的源 (源可以是 *elemName*) 包含的任何元素。
 
@@ -269,13 +270,13 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 
 ## <a name="dhtml_event_onafterupdate"></a><a name="dhtml_event_onafterupdate"></a> DHTML_EVENT_ONAFTERUPDATE
 
-在文档级别处理 () `onafterupdate` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onafterupdate` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -283,7 +284,7 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -293,13 +294,13 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 
 ## <a name="dhtml_event_onbeforeupdate"></a><a name="dhtml_event_onbeforeupdate"></a> DHTML_EVENT_ONBEFOREUPDATE
 
-在文档级别处理 () `onbeforeupdate` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onbeforeupdate` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -307,7 +308,7 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -323,7 +324,7 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 DHTML_EVENT_ONBLUR(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -331,7 +332,7 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -347,7 +348,7 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -355,7 +356,7 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -365,13 +366,13 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 
 ## <a name="dhtml_event_onclick"></a><a name="dhtml_event_onclick"></a> DHTML_EVENT_ONCLICK
 
-在文档级别处理 () `onclick` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onclick` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONCLICK(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -379,7 +380,7 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -389,13 +390,13 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 
 ## <a name="dhtml_event_ondataavailable"></a><a name="dhtml_event_ondataavailable"></a> DHTML_EVENT_ONDATAAVAILABLE
 
-在文档级别处理 () `ondataavailable` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `ondataavailable` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -403,7 +404,7 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -413,13 +414,13 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 
 ## <a name="dhtml_event_ondatasetchanged"></a><a name="dhtml_event_ondatasetchanged"></a> DHTML_EVENT_ONDATASETCHANGED
 
-在文档级别处理 () `ondatasetchanged` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `ondatasetchanged` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -427,7 +428,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -443,7 +444,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -451,7 +452,7 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -461,13 +462,13 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 
 ## <a name="dhtml_event_ondblclick"></a><a name="dhtml_event_ondblclick"></a> DHTML_EVENT_ONDBLCLICK
 
-在文档级别处理 () `ondblclick` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `ondblclick` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -475,7 +476,7 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -485,13 +486,13 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 
 ## <a name="dhtml_event_ondragstart"></a><a name="dhtml_event_ondragstart"></a> DHTML_EVENT_ONDRAGSTART
 
-在文档级别处理 () `ondragstart` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `ondragstart` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -499,7 +500,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -509,13 +510,13 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 
 ## <a name="dhtml_event_onerrorupdate"></a><a name="dhtml_event_onerrorupdate"></a> DHTML_EVENT_ONERRORUPDATE
 
-在文档级别处理 () `onerrorupdate` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onerrorupdate` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -523,7 +524,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -533,13 +534,13 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 
 ## <a name="dhtml_event_onfilterchange"></a><a name="dhtml_event_onfilterchange"></a> DHTML_EVENT_ONFILTERCHANGE
 
-在文档级别处理 () `onfilterchange` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onfilterchange` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -547,7 +548,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -563,7 +564,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -571,7 +572,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -581,13 +582,13 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 
 ## <a name="dhtml_event_onhelp"></a><a name="dhtml_event_onhelp"></a> DHTML_EVENT_ONHELP
 
-在文档级别处理 () `onhelp` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onhelp` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONHELP(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -595,7 +596,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -605,13 +606,13 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 
 ## <a name="dhtml_event_onkeydown"></a><a name="dhtml_event_onkeydown"></a> DHTML_EVENT_ONKEYDOWN
 
-在文档级别处理 () `onkeydown` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onkeydown` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -619,7 +620,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -629,13 +630,13 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 
 ## <a name="dhtml_event_onkeypress"></a><a name="dhtml_event_onkeypress"></a> DHTML_EVENT_ONKEYPRESS
 
-在文档级别处理 () `onkeypress` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onkeypress` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -643,7 +644,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -653,13 +654,13 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 
 ## <a name="dhtml_event_onkeyup"></a><a name="dhtml_event_onkeyup"></a> DHTML_EVENT_ONKEYUP
 
-在文档级别处理 () `onkeyup` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onkeyup` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -667,7 +668,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -677,13 +678,13 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 
 ## <a name="dhtml_event_onmousedown"></a><a name="dhtml_event_onmousedown"></a> DHTML_EVENT_ONMOUSEDOWN
 
-在文档级别处理 () `onmousedown` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onmousedown` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -691,7 +692,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -701,13 +702,13 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 
 ## <a name="dhtml_event_onmousemove"></a><a name="dhtml_event_onmousemove"></a> DHTML_EVENT_ONMOUSEMOVE
 
-在文档级别处理 () `onmousemove` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onmousemove` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -715,7 +716,7 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -725,13 +726,13 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 
 ## <a name="dhtml_event_onmouseout"></a><a name="dhtml_event_onmouseout"></a> DHTML_EVENT_ONMOUSEOUT
 
-在文档级别处理 () `onmouseout` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onmouseout` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -739,7 +740,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -749,13 +750,13 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 
 ## <a name="dhtml_event_onmouseover"></a><a name="dhtml_event_onmouseover"></a> DHTML_EVENT_ONMOUSEOVER
 
-在文档级别处理 () `onmouseover` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onmouseover` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -763,7 +764,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -773,13 +774,13 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 
 ## <a name="dhtml_event_onmouseup"></a><a name="dhtml_event_onmouseup"></a> DHTML_EVENT_ONMOUSEUP
 
-在文档级别处理 () `onmouseup` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onmouseup` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -787,7 +788,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -803,7 +804,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -811,7 +812,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -821,13 +822,13 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 
 ## <a name="dhtml_event_onrowenter"></a><a name="dhtml_event_onrowenter"></a> DHTML_EVENT_ONROWENTER
 
-在文档级别处理 () `onrowenter` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onrowenter` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -835,7 +836,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -845,13 +846,13 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 
 ## <a name="dhtml_event_onrowexit"></a><a name="dhtml_event_onrowexit"></a> DHTML_EVENT_ONROWEXIT
 
-在文档级别处理 () `onrowexit` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onrowexit` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -859,7 +860,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -869,13 +870,13 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 
 ## <a name="dhtml_event_onselectstart"></a><a name="dhtml_event_onselectstart"></a> DHTML_EVENT_ONSELECTSTART
 
-在文档级别处理 () `onselectstart` 事件源自 *elemName*标识的 HTML 元素。
+在文档级别处理 () `onselectstart` 事件源自 *elemName* 标识的 HTML 元素。
 
 ```cpp
 DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *elemName*<br/>
 保存事件的 HTML 元素的 ID 的 LPCWSTR。
@@ -883,7 +884,7 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -893,13 +894,13 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 
 ## <a name="dhtml_event_tag"></a><a name="dhtml_event_tag"></a> DHTML_EVENT_TAG
 
-在文档级别处理 (，) 通过由 `dispid` *elemName*标识的 html 标记的任何 html 元素生成的事件。
+在文档级别处理 (，) 通过由 `dispid` *elemName* 标识的 html 标记的任何 html 元素生成的事件。
 
 ```cpp
 DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dispid*<br/>
 要处理的事件的调度 ID。
@@ -910,7 +911,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 *memberFxn*<br/>
 事件的处理程序函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏可将条目添加到类中的 [DHTML 事件映射](#begin_dhtml_event_map_inline) 。
 
@@ -926,7 +927,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 END_DHTML_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 必须与 [BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)结合使用。
 
@@ -942,7 +943,7 @@ END_DHTML_EVENT_MAP()
 BEGIN_DHTML_URL_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 BEGIN_DHTML_URL_EVENT_MAP 放置在 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生类的实现文件中。 跟随嵌入的 [DHTML 事件映射](#begin_embed_dhtml_event_map) 和 [URL 条目](#begin_url_entries)，然后将其与 [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)关闭。 将 [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) 宏包含在类定义中。
 
@@ -962,15 +963,15 @@ BEGIN_DHTML_URL_EVENT_MAP()
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 包含事件映射的类的名称。 此类应直接或间接从 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生。 嵌入的 DHTML 事件映射必须位于 [DHTML 和 URL 事件映射](#begin_dhtml_url_event_map)) 。
 
 *mapName*<br/>
-指定其事件映射的页面。 这与[URL_EVENT_ENTRY](#url_event_entry)宏中的*mapName*匹配，实际定义 URL 或 HTML 资源。
+指定其事件映射的页面。 这与 [URL_EVENT_ENTRY](#url_event_entry)宏中的 *mapName* 匹配，实际定义 URL 或 HTML 资源。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由于多页面 DHTML 对话框包含多个 HTML 页面，每个页面都可以引发 DHTML 事件，因此，嵌入的事件映射用于将事件映射到每页的处理程序。
 
@@ -994,12 +995,12 @@ DHTML 和 URL 事件映射中嵌入的事件映射包括一个 BEGIN_EMBED_DHTML
 BEGIN_URL_ENTRIES(className)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 包含 URL 事件映射的类的名称。 此类应直接或间接从 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生。 URL 事件项映射必须位于 [DHTML 和 url 事件映射](#begin_dhtml_url_event_map)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 因为多页面 DHTML 对话框包含多个 HTML 页面，所以，URL 事件条目用于将 Url 或 HTML 资源映射到相应的 [嵌入 DHTML 事件映射](#begin_embed_dhtml_event_map)。 将 URL_EVENT_ENTRY 宏置于 BEGIN_URL_ENTRIES 和 [END_URL_ENTRIES](#end_url_entries) 宏之间。
 
@@ -1019,7 +1020,7 @@ BEGIN_URL_ENTRIES(className)
 DECLARE_DHTML_URL_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏将在 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生类的定义中使用。
 
@@ -1037,10 +1038,10 @@ DHTML 和 URL 事件映射包含 [嵌入的 dhtml 事件映射](#begin_embed_dht
 END_DHTML_URL_EVENT_MAP(className)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
-包含事件映射的类的名称。 此类应直接或间接从 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生。 这应与对应[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)宏中的*类*匹配。
+包含事件映射的类的名称。 此类应直接或间接从 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生。 这应与对应 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)宏中的 *类* 匹配。
 
 ### <a name="example"></a>示例
 
@@ -1090,7 +1091,7 @@ END_URL_ENTRIES()
 URL_EVENT_ENTRY(className, url,  mapName)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 包含 URL 事件映射的类的名称。 此类应直接或间接从 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)派生。 URL 事件项映射必须位于 [DHTML 和 url 事件映射](#begin_dhtml_url_event_map)) 。
@@ -1099,13 +1100,13 @@ URL_EVENT_ENTRY(className, url,  mapName)
 页面的 URL 或 HTML 资源。
 
 *mapName*<br/>
-指定其 URL 为 *url*的页。 这与在此页中映射事件[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)宏中的*mapName*匹配。
+指定其 URL 为 *url* 的页。 这与在此页中映射事件 [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)宏中的 *mapName* 匹配。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果该页是 HTML 资源，则 *url* 必须是资源 ID 号的字符串表示形式， (为 "123"，而不是123或 ID_HTMLRES1) 。
 
-页标识符 *mapName*是一个任意符号，用于将嵌入的 DHTML 事件映射链接到 URL 事件项映射。 它在 DHTML 和 URL 事件映射范围内受到限制。
+页标识符 *mapName* 是一个任意符号，用于将嵌入的 DHTML 事件映射链接到 URL 事件项映射。 它在 DHTML 和 URL 事件映射范围内受到限制。
 
 ### <a name="example"></a>示例
 
@@ -1133,6 +1134,6 @@ END_DHTML_EVENT_MAP_INLINE( )
 
 **标头：** afxdhtml
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)

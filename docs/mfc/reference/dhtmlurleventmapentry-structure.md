@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： DHtmlUrlEventMapEntry 结构
 title: DHtmlUrlEventMapEntry 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - DHtmlUrlEventMapEntry structure [MFC]
 ms.assetid: 43117c1f-1a51-406c-aa2f-fea647080049
-ms.openlocfilehash: c9b58067a9c8b6a71cd22b654a2f82ba0f8bfe36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c35e3ac70d8530042ca73397b0f7c6df13501497
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220053"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry 结构
 
-`DHtmlUrlEventMapEntry`结构提供了多 URL 事件映射支持。
+该 `DHtmlUrlEventMapEntry` 结构提供多 URL 事件映射支持。
 
 ## <a name="syntax"></a>语法
 
@@ -27,17 +28,17 @@ const DHtmlEventMapEntry *pEventMap;
 };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *szUrl*<br/>
 URL。
 
 *pEventMap*<br/>
-使用 URL 相关联的事件映射。
+与 URL 关联的事件映射。
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdhtml.h
+**标头：** afxdhtml
 
 ## <a name="see-also"></a>请参阅
 

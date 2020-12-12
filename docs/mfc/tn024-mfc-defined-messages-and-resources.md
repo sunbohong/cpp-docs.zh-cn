@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： TN024： MFC-Defined 消息和资源
 title: TN024：MFC 定义的消息和资源
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 9ad6827e4a46bb9f2ff3b02986a01737772e0858
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7ead4d72588b9acae125cbe90be67d1e03230de8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839213"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215750"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定义的消息和资源
 
@@ -41,17 +42,17 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 此消息将发送到正在创建的窗口。 这是在创建过程中非常早发送的，它是一种用于确定 WndProc 是否 AfxWndProc 的方法 **。AfxWndProc** 返回1。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|未使用|
 |lParam|未使用|
-|返回|如果由**AfxWndProc**处理，则为1|
+|返回|如果由 **AfxWndProc** 处理，则为1|
 
 **WM_SIZEPARENT**
 
 当调整 (调用的大小时，此消息将由框架窗口发送给其直接子级， `CFrameWnd::OnSize` `CFrameWnd::RecalcLayout` 这将调用 `CWnd::RepositionBars`) 来重新定位框架两侧的控件条。 AFX_SIZEPARENTPARAMS 结构包含父对象的当前可用客户端矩形和一个 HDWP (，该值可能为 NULL) ，可以调用该矩形 `DeferWindowPos` 来最大程度地减少重画。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|未使用|
 |lParam|AFX_SIZEPARENTPARAMS 结构的地址|
@@ -63,7 +64,7 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 此消息将发送到框架窗口，要求它更新状态栏中的消息行。 可以 (中指定字符串 ID 或 LPCSTR，但不能同时指定这两个) 。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|字符串 ID (或零) |
 |lParam| (字符串的 LPCSTR 或 NULL) |
@@ -73,19 +74,19 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 此消息将在空闲时间发送，以实现更新-命令 UI 处理程序的空闲时间更新。 如果窗口 (通常是控制条) 处理消息，则它会创建一个 `CCmdUI` 对象 (或派生类的对象) 并调用 `CCmdUI::DoUpdate` 窗口中的每个 "项"。 这会依次检查命令处理程序链中对象的 ON_UPDATE_COMMAND_UI 处理程序。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|BOOL bDisableIfNoHandler|
 |lParam|未使用 (0) |
 |返回|未使用 (0) |
 
-如果 ON_UPDATE_COMMAND_UI 和 ON_COMMAND 处理程序均不存在，则*bDisableIfNoHandler*为非零值以禁用 UI 对象。
+如果 ON_UPDATE_COMMAND_UI 和 ON_COMMAND 处理程序均不存在，则 *bDisableIfNoHandler* 为非零值以禁用 UI 对象。
 
 **WM_EXITHELPMODE**
 
 此消息将发送到用于 `CFrameWnd` 退出上下文相关帮助模式的。 此消息的接收将终止启动的模式循环 `CFrameWnd::OnContextHelp` 。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|未使用 (0) |
 |lParam|未使用 (0) |
@@ -95,7 +96,7 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 此消息会由文档模板发送到框架窗口的所有子体，在这种情况下，它可以安全地执行其初始更新。 它映射到对的调用， `CView::OnInitialUpdate` 但可在其他 `CWnd` 派生类中用于其他的一次性更新。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|未使用 (0) |
 |lParam|未使用 (0) |
@@ -107,7 +108,7 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 如果父窗口处理此消息，则它应返回 TRUE，并用新的工作区大小填充 lParam 中传递的矩形。 在将 `CScrollView` 滚动条) 添加到服务器对象处于就地激活状态时，将使用此对象在窗口外 (位置正确地处理滚动条。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|未使用 (0) |
 |lParam|LPRECT rectClient，可能为 NULL|
@@ -119,7 +120,7 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 相对于包含大小调整栏的框架窗口的客户端坐标中给定的新矩形由 lParam 指向。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|未使用 (0) |
 |lParam|LPRECT rectNew|
@@ -131,7 +132,7 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 当框架进入模式状态或阻止某些弹出窗口处于禁用状态时，可以使用此功能在弹出窗口中执行特殊处理。 例如，当框架窗口进入模式状态时，工具提示将使用此消息销毁自身。
 
-| 参数和返回值 | 说明 |
+| 参数和返回值 | 描述 |
 |-|-|
 |wParam|未使用 (0) |
 |lParam|未使用 (0) |
@@ -141,7 +142,7 @@ MFC 私有资源类型在 0xF0->0xFF 的范围内。
 
 当其他顶级框架窗口激活或停用框架窗口时，此消息将发送到框架窗口拥有的所有弹出窗口。 此设置由中 MFS_SYNCACTIVE 的实现使用 `CMiniFrameWnd` ，以使这些弹出窗口与激活顶级框架窗口时保持同步。
 
-| 参数 | 说明 |
+| parameters | 说明 |
 |-|-|
 |wParam|是以下值之一：<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|
 |lParam|未使用 (0) |
@@ -197,7 +198,7 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 
 这是一种非常通用的格式，允许任何 Windows 消息和数据内容。 Visual C++ 资源编辑器和 MFC 仅支持有限的 Windows 消息子集： CB_ADDSTRING 用于组合框的初始列表选项， (数据是文本字符串) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)

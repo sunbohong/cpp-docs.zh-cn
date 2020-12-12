@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： TN070： MFC 窗口类名称
 title: TN070：MFC 窗口类名称
 ms.date: 11/04/2016
 helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: ad43f5af5d2e90cb5fc2bc90f0909c2b495b4a4c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 963f343f480a5805a3c1ec3cf5499583a17535ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214515"
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070：MFC 窗口类名称
 
@@ -19,14 +20,14 @@ ms.locfileid: "81373489"
 
 MFC 窗口使用可反映窗口功能的动态创建的类名。 MFC 动态生成框架窗口、视图以及由应用程序生成的弹出式窗口的类名。 MFC 应用程序生成的对话框和控件具有上述窗口类的 Windows 提供的类名。
 
-您可以通过注册自己的窗口类并在[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)中使用它来替换动态提供的类名称。 其 MFC 提供的类名适合下列两种形式之一：
+可以通过注册自己的窗口类并在 [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)的重写中使用它来替换动态提供的类名。 其 MFC 提供的类名适合下列两种形式之一：
 
 ```
 Afx:%x:%x
 Afx:%x:%x:%x:%x:%x
 ```
 
-替换字符的`%x`十六进制数字是从[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)结构的数据中填充的。 MFC 使用此技术，以便需要相同**WNDCLASS**结构的多个C++类可以共享相同的注册窗口类。 与最简单的 Win32 应用程序不同，MFC 应用程序只有一个**WNDPROC，** 因此您可以轻松地共享**WNDCLASS**结构以节省时间和内存。 上面显示的 `%x` 字符的可替换值如下所示：
+替换字符的十六进制数字 `%x` 将从 [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) 结构中的数据填充。 MFC 使用此方法，以便多个需要完全相同的 **WNDCLASS** 结构的 c + + 类可以共享同一个已注册的窗口类。 与大多数简单的 Win32 应用程序不同，MFC 应用程序只有一个 **WNDPROC**，因此你可以轻松共享 **WNDCLASS** 结构以节省时间和内存。 上面显示的 `%x` 字符的可替换值如下所示：
 
 - **WNDCLASS.hInstance**
 
@@ -38,10 +39,10 @@ Afx:%x:%x:%x:%x:%x
 
 - **WNDCLASS.hIcon**
 
-`Afx:%x:%x`当 hCursor、hbrBackground**hCursor**和**hbrBackground****hIcon**都是**NULL**时，将使用第一个窗体 （ ） 。
+`Afx:%x:%x`当 **hCursor**、 **HbrBackground** 和 **hIcon** 均 **为 NULL** 时，将使用第一个窗体 () 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[技术说明（按编号）](../mfc/technical-notes-by-number.md)<br/>
-[按类别分类的技术说明](../mfc/technical-notes-by-category.md)<br/>
-[TN020：ID 命名和编号约定](../mfc/tn020-id-naming-and-numbering-conventions.md)
+[按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)<br/>
+[TN020： ID 命名和编号约定](../mfc/tn020-id-naming-and-numbering-conventions.md)

@@ -1,18 +1,19 @@
 ---
+description: 了解详细信息： _nolock 函数
 title: _nolock 函数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - _nolock functions
 - nolock functions
 ms.assetid: 7d651d87-38d2-4303-9897-fdb5f7a3e899
-ms.openlocfilehash: 7bd0592fb8dc43307a902714723d1b1e43207d1c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f4326f873ab16a368624b28dd70a8d39cb9a9ac9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746404"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213645"
 ---
-# <a name="nolock-functions"></a>_nolock 函数
+# <a name="_nolock-functions"></a>_nolock 函数
 
 这些是不执行任何锁定的函数。 它们是为需要最佳性能的用户提供的。 有关详细信息，请参阅[多线程库性能](../c-runtime-library/multithreaded-libraries-performance.md)。
 

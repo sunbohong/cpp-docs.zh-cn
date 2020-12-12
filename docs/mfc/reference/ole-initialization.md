@@ -1,4 +1,5 @@
 ---
+description: 了解更多： OLE 初始化
 title: OLE 初始化
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-ms.openlocfilehash: 13c267df492ab86606e893df4c13e5510e6e546a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0efed4fefe62b720852905b6eed44501d4369efa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843685"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218987"
 ---
 # <a name="ole-initialization"></a>OLE 初始化
 
@@ -20,7 +21,7 @@ ms.locfileid: "88843685"
 
 ### <a name="ole-initialization"></a>OLE 初始化
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxOleInit](#afxoleinit)|初始化 OLE 库。|
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|在应用程序对象的 `InitInstance` 函数中调用此函数以启用对包含 OLE 控件的支持。|
@@ -55,7 +56,7 @@ BOOL AFXAPI AfxOleInit();
 
 如果成功，则为非零值;如果初始化失败（可能是因为安装了错误的 OLE 系统 Dll 版本），则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可初始化对 MFC 应用程序的 OLE 支持。 调用此函数时，将执行以下操作：
 
@@ -67,12 +68,12 @@ BOOL AFXAPI AfxOleInit();
 > 如果从 MFC DLL 调用 **AfxOleInit** ，则调用将失败。 发生该错误的原因是，该函数假设从 DLL 中调用 OLE 系统之前已由调用应用程序初始化。
 
 > [!NOTE]
-> MFC 应用程序必须初始化为单线程单元 (STA) 。 如果在替代[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)中调用 CoInitializeEx `InitInstance` ，请指定 COINIT_APARTMENTTHREADED (而不是 COINIT_MULTITHREADED) 。
+> MFC 应用程序必须初始化为单线程单元 (STA) 。 如果在替代[](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)中调用 CoInitializeEx `InitInstance` ，请指定 COINIT_APARTMENTTHREADED (而不是 COINIT_MULTITHREADED) 。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxdisp.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

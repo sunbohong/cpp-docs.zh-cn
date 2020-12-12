@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/Od (禁用 (调试) # A3'
 title: /Od（禁用（调试））
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - -Od compiler option [C++]
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-ms.openlocfilehash: 83ece0865eb74a4e9e292b78733df9d24602fe1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d425244a1790a9bb74e1c92db88f32bb0372ab2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320677"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214300"
 ---
 # <a name="od-disable-debug"></a>/Od（禁用（调试））
 
-关闭该程序中的所有优化并加快编译。
+关闭程序中的所有优化并加快编译速度。
 
 ## <a name="syntax"></a>语法
 
@@ -31,17 +32,17 @@ ms.locfileid: "62320677"
 
 ## <a name="remarks"></a>备注
 
-此选项默认值。 因为 **/Od**取消代码移动，所以简化调试过程。 有关编译器选项进行调试的详细信息，请参阅[/Z7、 /Zi、 /ZI （调试信息格式）](z7-zi-zi-debug-information-format.md)。
+此选项为默认设置。 由于 **/od** 禁止代码移动，因此简化了调试过程。 有关用于调试的编译器选项的详细信息，请参阅 [/Z7、/zi、/zi (调试信息格式) ](z7-zi-zi-debug-information-format.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
-1. 单击**优化**属性页。
+1. 单击 " **优化** " 属性页。
 
-1. 修改**优化**属性。
+1. 修改 " **优化** " 属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
@@ -49,7 +50,7 @@ ms.locfileid: "62320677"
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项（优化代码）](o-options-optimize-code.md)<br/>
+[/O 选项 (优化代码) ](o-options-optimize-code.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
-[/Z7、/Zi、/ZI（调试信息格式）](z7-zi-zi-debug-information-format.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)<br/>
+[/Z7、/Zi、/ZI (调试信息格式) ](z7-zi-zi-debug-information-format.md)

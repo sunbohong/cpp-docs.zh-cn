@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/Oi (生成内部函数) '
 title: /Oi（生成内部函数）
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc08ff495391092115197fe70e8c3673b77f32e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214274"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi（生成内部函数）
 
-替换某些函数调用与内部函数或其他特殊形式的函数，可帮助你的应用程序运行得更快。
+用可帮助您的应用程序更快运行的函数的内部或特殊形式替代某些函数调用。
 
 ## <a name="syntax"></a>语法
 
@@ -31,31 +32,31 @@ ms.locfileid: "62320339"
 
 ## <a name="remarks"></a>备注
 
-使用内部函数的程序的速度更快是因为它们没有函数调用的开销，但由于创建的其他代码可能更大。
+使用内部函数的程序速度更快，因为它们没有函数调用的开销，但由于创建了其他代码，因此可能会更大。
 
-请参阅[内部函数](../../preprocessor/intrinsic.md)的函数具有内部形式的详细信息。
+有关具有内部形式的函数的详细信息，请参阅 [内部](../../preprocessor/intrinsic.md) 函数。
 
-**/Oi**只是一个请求到编译器的一些函数调用替换内部函数; 编译器可能会调用该函数 （极不替换为函数调用内部函数） 如果将导致更好的性能。
+**/Oi** 只是一个对编译器的请求，用于将某些函数调用替换为内部函数调用;编译器可以 (调用函数，并且不会将函数调用替换为内部) （如果它将导致更好的性能）。
 
-**x86 Specific**
+**x86 专用**
 
-内部函数的浮点函数不执行任何特殊检查输入值并因此工作在有限范围内的输入，并且具有不同的异常处理和具有相同名称的库例程边界条件。 使用真正的内部形式表示的丢失和 IEEE 异常处理丢失`_matherr`和`errno`功能; 后者意味着丢失 ANSI 一致性。 但是，这些内部形式可以显著加快浮点密集型程序，并且许多程序的符合性问题的操作是几乎没有任何价值。
+内部浮点函数不会对输入值执行任何特殊检查，因此在受限制的输入范围内进行操作，并且具有不同于同名库例程的异常处理和边界条件。 使用真正的内部形式意味着会丢失 IEEE 异常处理以及丢失 `_matherr` 和 `errno` 功能; 后者会导致 ANSI 一致性丢失。 但是，内部形式可能会显著提高浮点密集型程序的速度，而对于许多程序，一致性问题的意义不大。
 
-可以使用[Za](za-ze-disable-language-extensions.md)编译器选项来重写的则返回 true 的内部浮点选项的生成。 在此情况下，函数将生成为库例程，后者将参数直接传递到浮点芯片，而不是将参数推送到程序堆栈。
+您可以使用 [Za](za-ze-disable-language-extensions.md) 编译器选项来重写真正的内部浮点选项的生成。 在此情况下，函数将生成为库例程，后者将参数直接传递到浮点芯片，而不是将参数推送到程序堆栈。
 
-**结束 x86 特定**
+**结束 x86 专用**
 
-此外使用[内部函数](../../preprocessor/intrinsic.md)若要创建内部函数，或[函数 (C /C++)](../../preprocessor/function-c-cpp.md)来显式强制函数调用。
+还可使用 [内部](../../preprocessor/intrinsic.md) 函数创建内部函数， (或使用 [c/c + +) ](../../preprocessor/function-c-cpp.md) 显式强制执行函数调用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
-1. 单击**优化**属性页。
+1. 单击 " **优化** " 属性页。
 
-1. 修改**启用内部函数**属性。
+1. 修改 " **启用内部函数** " 属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
@@ -63,7 +64,7 @@ ms.locfileid: "62320339"
 
 ## <a name="see-also"></a>请参阅
 
-[/O 选项（优化代码）](o-options-optimize-code.md)<br/>
+[/O 选项 (优化代码) ](o-options-optimize-code.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)<br/>
 [编译器内部函数](../../intrinsics/compiler-intrinsics.md)

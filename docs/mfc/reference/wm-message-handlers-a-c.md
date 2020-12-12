@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： WM_ 消息处理程序： A-C
 title: WM_ 消息处理程序：A - C
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,37 +36,37 @@ helpviewer_keywords:
 - ON_WM_ACTIVATEAPP [MFC]
 - ON_WM_CHANGECBCHAIN
 ms.assetid: 4e315896-d646-4b87-b0ab-41a4a753b045
-ms.openlocfilehash: 08221e7569a8b4c4f4e8decba410bd1fe40f04d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 898635961e3fc1ad3df571e813bcfef629318446
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218441"
 ---
-# <a name="wm-message-handlers-a---c"></a>WM_ 消息处理程序：A - C
+# <a name="wm_-message-handlers-a---c"></a>WM_ 消息处理程序：A - C
 
 下面左侧的映射条目对应于右侧的函数原型：
 
 |映射条目|函数原型|
 |---------------|------------------------|
-|ON_WM_ACTIVATE()|afx_msg void [OnActivate](../../mfc/reference/cwnd-class.md#onactivate)(UINT、 CWnd\*，BOOL);|
-|ON_WM_ACTIVATEAPP()|afx_msg void [OnActivateApp](../../mfc/reference/cwnd-class.md#onactivateapp)(BOOL, DWORD);|
-|ON_WM_APPCOMMAND()|afx_msg void [OnAppCommand](../../mfc/reference/cwnd-class.md#onappcommand)(CWnd\*, UINT, UINT, UINT);|
-|ON_WM_ASKCBFORMATNAME()|afx_msg void [OnAskCbFormatName](../../mfc/reference/cwnd-class.md#onaskcbformatname)(UINT, LPSTR);|
-|ON_WM_CANCELMODE()|afx_msg void [OnCancelMode](../../mfc/reference/cwnd-class.md#oncancelmode)();|
-|ON_WM_CAPTURECHANGED()|afx_msg void [OnCaptureChanged](../../mfc/reference/cwnd-class.md#oncapturechanged)(CWnd\*);|
-|ON_WM_CHANGECBCHAIN()|afx_msg void [OnChangeCbChain](../../mfc/reference/cwnd-class.md#onchangecbchain)(HWND, HWND);|
-|ON_WM_CHAR()|afx_msg void [OnChar](../../mfc/reference/cwnd-class.md#onchar)(UINT, UINT, UINT);|
-|ON_WM_CHARTOITEM()|afx_msg int [OnCharToItem](../../mfc/reference/cwnd-class.md#onchartoitem)(UINT、 CWnd\*，UINT);|
-|ON_WM_CHILDACTIVATE()|afx_msg void [OnChildActivate](../../mfc/reference/cwnd-class.md#onchildactivate)();|
-|ON_WM_CLIPBOARDUPDATE()|afx_msg void [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate)();|
-|ON_WM_CLOSE()|afx_msg void [OnClose](../../mfc/reference/cwnd-class.md#onclose)();|
-|ON_WM_COMPACTING()|afx_msg void [OnCompacting](../../mfc/reference/cwnd-class.md#oncompacting)(UINT);|
-|ON_WM_COMPAREITEM()|afx_msg int [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)(LPCOMPAREITEMSTRUCT);|
-|ON_WM_CONTEXTMENU()|afx_msg void [OnContextMenu](../../mfc/reference/cwnd-class.md#oncontextmenu)(CWnd\*，CPoint);|
-|ON_WM_COPYDATA()|afx_msg BOOL [OnCopyData](../../mfc/reference/cwnd-class.md#oncopydata)(CWnd\* pWnd, COPYDATASTRUCT\* pCopyDataStruct);|
-|ON_WM_CREATE()|afx_msg int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)(LPCREATESTRUCT);|
-|ON_WM_CTLCOLOR()|afx_msg HBRUSH [OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)(CDC\*, CWnd\*, UINT);|
+|ON_WM_ACTIVATE ( # A1|afx_msg void [OnActivate](../../mfc/reference/cwnd-class.md#onactivate) (UINT，CWnd \* ，BOOL) ;|
+|ON_WM_ACTIVATEAPP ( # A1|afx_msg void [OnActivateApp](../../mfc/reference/cwnd-class.md#onactivateapp) (BOOL、DWORD) ;|
+|ON_WM_APPCOMMAND ( # A1|afx_msg void [OnAppCommand](../../mfc/reference/cwnd-class.md#onappcommand) (CWnd \* ，uint，uint，uint) ;|
+|ON_WM_ASKCBFORMATNAME ( # A1|afx_msg void [OnAskCbFormatName](../../mfc/reference/cwnd-class.md#onaskcbformatname) (UINT，LPSTR) ;|
+|ON_WM_CANCELMODE ( # A1|afx_msg void [OnCancelMode](../../mfc/reference/cwnd-class.md#oncancelmode) ( # A1;|
+|ON_WM_CAPTURECHANGED ( # A1|afx_msg void [OnCaptureChanged](../../mfc/reference/cwnd-class.md#oncapturechanged) (CWnd \*) ;|
+|ON_WM_CHANGECBCHAIN ( # A1|afx_msg void [OnChangeCbChain](../../mfc/reference/cwnd-class.md#onchangecbchain) (HWND，hwnd) ;|
+|ON_WM_CHAR ( # A1|afx_msg void [OnChar](../../mfc/reference/cwnd-class.md#onchar) (UINT，UINT，uint) ;|
+|ON_WM_CHARTOITEM ( # A1|afx_msg int [OnCharToItem](../../mfc/reference/cwnd-class.md#onchartoitem) (UINT，CWnd \* ，UINT) ;|
+|ON_WM_CHILDACTIVATE ( # A1|afx_msg void [OnChildActivate](../../mfc/reference/cwnd-class.md#onchildactivate) ( # A1;|
+|ON_WM_CLIPBOARDUPDATE ( # A1|afx_msg void [OnClipboardUpdate](../../mfc/reference/cwnd-class.md#onclipboardupdate) ( # A1;|
+|ON_WM_CLOSE ( # A1|afx_msg void [OnClose](../../mfc/reference/cwnd-class.md#onclose) ( # A1;|
+|ON_WM_COMPACTING ( # A1|afx_msg void [OnCompacting](../../mfc/reference/cwnd-class.md#oncompacting) (UINT) ;|
+|ON_WM_COMPAREITEM ( # A1|afx_msg int [OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) (LPCOMPAREITEMSTRUCT) ;|
+|ON_WM_CONTEXTMENU ( # A1| (CWnd [](../../mfc/reference/cwnd-class.md#oncontextmenu) Afx_msg void OnContextMenu \* ，CPoint) ;|
+|ON_WM_COPYDATA ( # A1|afx_msg ([CWnd](../../mfc/reference/cwnd-class.md#oncopydata) \* pWnd，COPYDATASTRUCT \* pCopyDataStruct) ;|
+|ON_WM_CREATE ( # A1|afx_msg int [OnCreate](../../mfc/reference/cwnd-class.md#oncreate) (LPCREATESTRUCT) ;|
+|ON_WM_CTLCOLOR ( # A1|afx_msg HBRUSH [OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor) (CDC \* ，CWnd \* ，UINT) ;|
 
 ## <a name="see-also"></a>请参阅
 

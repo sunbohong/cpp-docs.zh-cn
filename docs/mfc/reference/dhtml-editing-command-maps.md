@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息： DHTML 编辑命令映射
 title: DHTML 编辑命令映射
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: f4bbfb500e8de9594bbaa334b4e227caeaa845da
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: da50d9b58e5294622da0685450e01ad0acabad3f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837406"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220105"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 编辑命令映射
 
@@ -15,7 +16,7 @@ ms.locfileid: "88837406"
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML 编辑命令映射宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|声明类中的 DHTML 编辑命令映射。|
 |[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|在类中启动 DHTML 编辑命令映射的定义。|
@@ -33,12 +34,12 @@ ms.locfileid: "88837406"
 DECLARE_DHTMLEDITING_CMDMAP(className)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏将在 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)派生类的定义中使用。
 
@@ -60,12 +61,12 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 BEGIN_DHTMLEDITING_CMDMAP(className)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *className*<br/>
 包含 DHTML 编辑命令映射的类的名称。 此类应直接或间接从 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) 派生，并在其类定义中包含 [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) 宏。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 向类添加 DHTML 编辑命令映射，以将用户界面命令映射到 HTML 编辑命令。
 
@@ -83,7 +84,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 END_DHTMLEDITING_CMDMAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 与 [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)结合使用。
 
@@ -103,13 +104,13 @@ END_DHTMLEDITING_CMDMAP()
 DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 命令 ID（如 ID_EDIT_COPY）。
 
 *dhtmlcmdID*<br/>
-*CmdID*映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
+*CmdID* 映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
 
 ### <a name="example"></a>示例
 
@@ -127,13 +128,13 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 命令 ID（如 ID_EDIT_COPY）。
 
 *dhtmlcmdID*<br/>
-*CmdID*映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
+*CmdID* 映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
 
 *member_func_name*<br/>
 命令映射到的消息处理程序函数的名称。
@@ -154,13 +155,13 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 命令 ID（如 ID_EDIT_COPY）。
 
 *dhtmlcmdID*<br/>
-*CmdID*映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
+*CmdID* 映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
 
 *elemType*<br/>
 用户界面元素类型；AFX_UI_ELEMTYPE_NORMAL、AFX_UI_ELEMTYPE_CHECKBOX 或 AFX_UI_ELEMTYPE_RADIO 之一。
@@ -181,13 +182,13 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 命令 ID（如 ID_EDIT_COPY）。
 
 *dhtmlcmdID*<br/>
-*CmdID*映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
+*CmdID* 映射到的 HTML 编辑命令 (例如 IDM_COPY) 。
 
 *member_func_name*<br/>
 命令映射到的消息处理程序函数的名称。
@@ -203,6 +204,6 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 
   **标头** afxhtml。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,21 +1,22 @@
 ---
+description: 了解更多相关信息： MFC 向导和对话框
 title: MFC 向导和对话框
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50163af7fefc4d79e8843f70973f85bf706423de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219052"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 向导和对话框
 
-Microsoft 基础类 (MFC) 向导为各种组件和对象生成样板代码。 可以打开中的项目的快捷菜单来运行该向导**解决方案资源管理器**，然后选择**添加**，**类**。
+Microsoft 基础类 (MFC) 向导为各种组件和对象生成样板代码。 您可以通过在 **解决方案资源管理器** 中打开项目的快捷菜单，然后选择 " **添加**"、" **类**" 来运行向导。
 
 ## <a name="related-articles"></a>相关文章
 
-|标题|描述|
+|Title|描述|
 |-----------|-----------------|
 |[创建 MFC DLL 项目](../../mfc/reference/creating-an-mfc-dll-project.md)|创建基于 MFC 的 DLL。|
 |[创建 MFC 应用程序](../../mfc/reference/creating-an-mfc-application.md)|生成 MFC 应用程序。|

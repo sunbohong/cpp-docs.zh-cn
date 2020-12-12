@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： TN059：使用 MFC MBCS/Unicode 转换宏
 title: TN059：使用 MFC MBCS-Unicode 转换宏
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: d689e87b8f2804fe99804c6ca37a48bac01df263
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1b767a8d90f2c788a15c9e880056206e7d1326a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182728"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214762"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 转换宏
 
@@ -76,7 +77,7 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
 
 有一些需要转换的额外调用，但可轻松而高效地使用宏。
 
-每个宏的实现都使用 _alloca() 函数从堆栈而非堆中分配内存。 从堆栈中分配内存要比在堆上分配内存快得多，并且在退出该函数时，将自动释放内存。 此外，宏避免多次调用 `MultiByteToWideChar` （或 `WideCharToMultiByte` ）。 这可通过分配比所需内存量多一点的内存来实现。 我们知道，MBC 将转换为最多一个**WCHAR** ，并且对于每个**WCHAR** ，最多可有两个 MBC 字节。 通过分配比所需内存多一点但始终足以处理转换的内存，避免对转换函数进行第二次调用。 对 helper 函数的调用将 `AfxA2Whelper` 减少为执行转换而必须执行的参数推送的次数（这会导致较小的代码，而不是直接调用的代码 `MultiByteToWideChar` ）。
+每个宏的实现都使用 _alloca() 函数从堆栈而非堆中分配内存。 从堆栈中分配内存要比在堆上分配内存快得多，并且在退出该函数时，将自动释放内存。 此外，宏避免 `MultiByteToWideChar` 多次调用 (或 `WideCharToMultiByte`) 。 这可通过分配比所需内存量多一点的内存来实现。 我们知道，MBC 将转换为最多一个 **WCHAR** ，并且对于每个 **WCHAR** ，最多可有两个 MBC 字节。 通过分配比所需内存多一点但始终足以处理转换的内存，避免对转换函数进行第二次调用。 对 helper 函数的调用 `AfxA2Whelper` 会减少为执行转换而必须执行的参数推送的数目 (这将导致较小的代码，而不是 `MultiByteToWideChar` 直接) 。
 
 若要使宏拥有存储临时长度的空间，需要声明称为 _convert 的局部变量，该变量在使用转换宏的每个函数中都执行此操作。 这将通过调用 USES_CONVERSION 宏实现，如示例的上述内容所示。
 
@@ -97,9 +98,9 @@ W2A      (LPCWSTR) -> (LPSTR)
 
 ## <a name="ole-conversion-macros"></a>OLE 转换宏
 
-OLE 转换宏专门用于处理需要**OLESTR**字符的函数。 如果检查 OLE 标头，将看到对**LPCOLESTR**和**OLECHAR**的多个引用。 这些类型用于以一种非特定于平台的方法引用 OLE 接口中使用的字符类型。 **OLECHAR**在 **`char`** Win16 和 Macintosh 平台中映射到，在 Win32 中映射到**WCHAR** 。
+OLE 转换宏专门用于处理需要 **OLESTR** 字符的函数。 如果检查 OLE 标头，将看到对 **LPCOLESTR** 和 **OLECHAR** 的多个引用。 这些类型用于以一种非特定于平台的方法引用 OLE 接口中使用的字符类型。 **OLECHAR** 在 **`char`** Win16 和 Macintosh 平台中映射到，在 Win32 中映射到 **WCHAR** 。
 
-为了使 MFC 代码中的 **#ifdef**指令数最少，对于涉及 OLE 字符串的每个转换，都有一个类似的宏。 下列宏是最常使用的：
+为了使 MFC 代码中的 **#ifdef** 指令数最少，对于涉及 OLE 字符串的每个转换，都有一个类似的宏。 下列宏是最常使用的：
 
 ```
 T2COLE   (LPCTSTR) -> (LPCOLESTR)
@@ -192,7 +193,7 @@ return lpszT; // CString makes copy
 
 虽然宏易于使用和插入到代码中，但从上面的警告可看出，你在使用宏时要特别谨慎。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)

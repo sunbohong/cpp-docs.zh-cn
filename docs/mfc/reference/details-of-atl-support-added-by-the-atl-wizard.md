@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ATL 向导添加的 ATL 支持的详细信息
 title: ATL 向导添加的 ATL 支持的详细信息
 ms.date: 08/20/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: aeac01ce58deb429f14058c06524dff53abde060
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 2ae574ac2c4d56e1522fa8c794c18b6f9b6635ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220131"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 向导添加的 ATL 支持的详细信息
 
 ::: moniker range=">=msvc-160"
 
-[将 ATL 支持添加到现有 MFC 可执行文件或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)时，Visual Studio 会在默认情况下添加一个名为 " *框架* " 的头文件，其中包含 `#include` 用于在 `#define` 项目中启用 ATL 的预处理器指令。 不会添加任何其他文件或类，正如在以前版本的 Visual Studio 中所做的那样。
+[将 ATL 支持添加到现有 MFC 可执行文件或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)时，Visual Studio 会在默认情况下添加一个名为 "*框架*" 的头文件，其中包含 `#include` 用于在 `#define` 项目中启用 ATL 的预处理器指令。 不会添加任何其他文件或类，正如在以前版本的 Visual Studio 中所做的那样。
 
 ::: moniker-end
 

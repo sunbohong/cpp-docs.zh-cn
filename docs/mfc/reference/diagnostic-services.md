@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：诊断服务
 title: 诊断服务
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 931545e6a79ecaa59d147e48265649ef20466fbd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d2b7bd303fc062aa520497e649430f53f7667c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837393"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220066"
 ---
 # <a name="diagnostic-services"></a>诊断服务
 
@@ -47,7 +48,7 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 
 ### <a name="mfc-general-diagnostic-macros"></a>MFC 常规诊断宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[断言](#assert)|如果库调试版本中的指定表达式的计算结果为 FALSE，则打印一条消息，然后中止程序。|
 |[ASSERT_KINDOF](#assert_kindof)|测试对象是指定类的对象还是指定类派生类的对象。|
@@ -56,12 +57,12 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 |[DEBUG_ONLY](#debug_only)|类似于 ASSERT 但不会测试表达式的值；对仅在调试模式下执行的代码非常有用。|
 |[确保和 ENSURE_VALID](#ensure)|使用验证数据正确性。|
 |[THIS_FILE](#this_file)|展开为要编译的文件的名称。|
-|[轨迹](#trace)|在库调试版本中提供类似 `printf`的功能。|
+|[TRACE](#trace)|在库调试版本中提供类似 `printf`的功能。|
 |[}](#verify)|类似于 ASSERT，但是可在库发布版本以及调试版本中计算表达式的值。|
 
 ### <a name="mfc-general-diagnostic-variables-and-functions"></a>MFC 常规诊断变量和函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[afxDump](#afxdump)|将 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 信息发送给调试器输出窗口或调试终端的全局变量。|
 |[afxMemDF](#afxmemdf)|控制调试内存分配器行为的全局变量。|
@@ -80,14 +81,14 @@ Microsoft 基础类库提供了很多简化调试程序的诊断服务。 这些
 
 ### <a name="mfc-object-diagnostic-functions"></a>MFC 对象诊断函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxDoForAllClasses](#afxdoforallclasses)|对支持运行时类型检查的所有 `CObject`派生类执行指定函数。|
 |[AfxDoForAllObjects](#afxdoforallobjects)|对使用分配的所有派生对象执行指定函数 `CObject` **`new`** 。|
 
 ### <a name="mfc-compilation-macros"></a>MFC 编译宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|取消显示有关对已弃用的 MFC 函数的使用的编译器警告。|
 
@@ -144,12 +145,12 @@ void AfxDebugBreak( );
 ASSERT(booleanExpression)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *booleanExpression*<br/>
 指定一个表达式 (包括计算结果为非零值或0的指针) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果结果为0，则宏打印诊断消息并中止程序。 如果条件为非零，则不执行任何操作。
 
@@ -180,7 +181,7 @@ ASSERT(booleanExpression)
 ASSERT_KINDOF(classname, pobject)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 classname<br/>
 派生类的名称 `CObject` 。
@@ -188,9 +189,9 @@ classname<br/>
 *pobject*<br/>
 指向类对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*Pobject*参数应为指向对象的指针，并且可以为 **`const`** 。 指向的对象和类必须支持 `CObject` 运行时类信息。 例如，若要确保 `pDocument` 是指向类的对象 `CMyDoc` 或它的任何派生对象的指针，可以编写代码：
+*Pobject* 参数应为指向对象的指针，并且可以为 **`const`** 。 指向的对象和类必须支持 `CObject` 运行时类信息。 例如，若要确保 `pDocument` 是指向类的对象 `CMyDoc` 或它的任何派生对象的指针，可以编写代码：
 
 [!code-cpp[NVC_MFCDocView#194](../../mfc/codesnippet/cpp/diagnostic-services_3.cpp)]
 
@@ -215,12 +216,12 @@ classname<br/>
 ASSERT_VALID(pObject)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pObject*<br/>
 指定派生自的类的对象 `CObject` ，该对象具有成员函数的重写版本 `AssertValid` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ASSERT_VALID 调用 `AssertValid` 作为参数传递的对象的成员函数。
 
@@ -247,7 +248,7 @@ ASSERT_VALID 调用 `AssertValid` 作为参数传递的对象的成员函数。
 #define  new DEBUG_NEW
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 你可以在程序中的任何位置使用 DEBUG_NEW，你通常会使用该 **`new`** 运算符来分配堆存储。
 
@@ -274,11 +275,11 @@ ASSERT_VALID 调用 `AssertValid` 作为参数传递的对象的成员函数。
 DEBUG_ONLY(expression)
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在发布版本中，DEBUG_ONLY 不会计算其参数。 当你的代码应仅在调试版本中执行时，这非常有用。
 
-DEBUG_ONLY 宏等效于带有和的*expression*周围表达式 `#ifdef _DEBUG` `#endif` 。
+DEBUG_ONLY 宏等效于带有和的周围表达式 `#ifdef _DEBUG` `#endif` 。
 
 ### <a name="example"></a>示例
 
@@ -299,12 +300,12 @@ ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *booleanExpression*<br/>
 指定要测试的布尔表达式。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这些宏的目的是改进参数的验证。 宏阻止进一步处理代码中错误的参数。 与 ASSERT 宏不同，确保宏除了生成断言之外还会引发异常。
 
@@ -359,7 +360,7 @@ TRACE(exp)
 TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关跟踪的说明，请参阅 [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) 。 TRACE 和 ATLTRACE2 具有相同的行为。
 
@@ -379,12 +380,12 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 VERIFY(booleanExpression)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *booleanExpression*<br/>
 指定一个表达式 (包括计算结果为非零值或0的指针) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果结果为0，则宏打印诊断消息并中止程序。 如果条件为非零，则不执行任何操作。
 
@@ -412,11 +413,11 @@ VERIFY(booleanExpression)
 CDumpContext  afxDump;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `afxDump` 是预定义的 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 对象，可用于将 `CDumpContext` 信息发送到调试器输出窗口或调试终端。 通常，将 `afxDump` 作为参数提供给 `CObject::Dump` 。
 
-在 Windows NT 和所有版本的 Windows 下， `afxDump` 调试应用程序时，会将输出发送到 Visual C++ 的 "输出"-"调试" 窗口。
+在 Windows NT 和所有版本的 Windows 下， `afxDump` 调试应用程序时，会将输出发送到 Visual C++ 的 "Output-Debug" 窗口。
 
 此变量仅在 MFC 的调试版本中定义。 有关的详细信息 `afxDump` ，请参阅 [调试 MFC 应用程序](/visualstudio/debugger/mfc-debugging-techniques)。
 
@@ -438,12 +439,12 @@ MFC 用于在调试时转储对象状态的内部函数。
 void AfxDump(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOb*<br/>
 指向派生自的类的对象的指针 `CObject` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AfxDump` 调用对象的 `Dump` 成员函数，并将信息发送到变量指定的位置 `afxDump` 。 `AfxDump` 仅在 MFC 的调试版本中可用。
 
@@ -461,7 +462,7 @@ void AfxDump(const CObject* pOb);
 int  afxMemDF;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `afxMemDF` 可以具有枚举指定的下列值 `afxMemDF` ：
 
@@ -489,7 +490,7 @@ throw CMemoryException*
 throw COleException*
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果为错误，则此函数将引发异常。 如果传递的 SCODE E_OUTOFMEMORY，则该函数将通过调用[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)引发[CMemoryException](../../mfc/reference/cmemoryexception-class.md) 。 否则，该函数将通过调用[AfxThrowOleException](exception-processing.md#afxthrowoleexception)引发[COleException](../../mfc/reference/coleexception-class.md) 。
 
@@ -518,7 +519,7 @@ BOOL  AfxCheckMemory();
 
 如果没有内存错误，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果该函数未检测到任何内存损坏，则不会进行任何打印。
 
@@ -551,12 +552,12 @@ BOOL  AfxCheckMemory();
 void AfxDump(const CObject* pOb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pOb*<br/>
 指向派生自的类的对象的指针 `CObject` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AfxDump` 调用对象的 `Dump` 成员函数，并将信息发送到变量指定的位置 `afxDump` 。 `AfxDump` 仅在 MFC 的调试版本中可用。
 
@@ -574,7 +575,7 @@ void AfxDump(const CObject* pOb);
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwTarget*<br/>
 指示转储输出的目标。 可能的值可以使用按位 "或" ( **&#124;**) 运算符组合在一起，如下所示：
@@ -589,7 +590,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 
 - AFX_STACK_DUMP_TARGET_ODS 通过 Win32 函数将输出直接发送到调试器 `OutputDebugString()` 。 当调试器附加到进程时，此选项将在调试和发布版本中生成调试器输出。 如果附加) ，则 AFX_STACK_DUMP_TARGET_ODS 始终到达调试器 (并且无法重定向。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 下面的示例反映了从 `AfxDumpStack` MFC 对话框应用程序中的按钮处理程序调用而生成的单行输出：
 
@@ -650,7 +651,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bDump*<br/>
 中如果为 TRUE，则表示已启用内存泄漏转储;FALSE 表示已禁用内存泄漏转储。
@@ -659,7 +660,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 
 此标志的上一个值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当应用程序卸载 MFC 库时，MFC 库将检查内存泄漏。 此时，任何内存泄露都将通过 Visual Studio 的 " **调试** " 窗口报告给用户。
 
@@ -680,7 +681,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 BOOL AfxEnableMemoryTracking(BOOL bTrack);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bTrack*<br/>
 如果将此值设置为 TRUE，则打开内存跟踪;FALSE 将关闭。
@@ -689,7 +690,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 
 跟踪启用标志的上一个设置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此函数可对你知道已正确分配块的代码部分禁用跟踪。
 
@@ -717,7 +718,7 @@ BOOL AfxIsMemoryBlock(
     LONG* plRequestNumber = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h-p*<br/>
 指向要测试的内存块。
@@ -732,9 +733,9 @@ BOOL AfxIsMemoryBlock(
 
 如果当前已分配内存块且长度正确，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-它还会根据原始分配的大小检查指定的大小。 如果该函数返回非零值，则将在 *plRequestNumber*中返回分配序列号。 此数字表示相对于所有其他分配分配块的顺序 **`new`** 。
+它还会根据原始分配的大小检查指定的大小。 如果该函数返回非零值，则将在 *plRequestNumber* 中返回分配序列号。 此数字表示相对于所有其他分配分配块的顺序 **`new`** 。
 
 ### <a name="example"></a>示例
 
@@ -755,7 +756,7 @@ BOOL AfxIsValidAddress(
     BOOL bReadWrite = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lp*<br/>
 指向要测试的内存地址。
@@ -772,7 +773,7 @@ BOOL AfxIsValidAddress(
 
 在非调试版本中，如果 *lp* 不为 NULL，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该地址不会限制为分配的块 **`new`** 。
 
@@ -794,7 +795,7 @@ BOOL  AfxIsValidString(
     int nLength = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpsz*<br/>
 要测试的指针。
@@ -824,7 +825,7 @@ BOOL  AfxIsValidString(
 AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pfnAllocHook*<br/>
 指定要调用的函数的名称。 请参阅有关分配函数的原型的备注。
@@ -833,7 +834,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 
 如果要允许分配，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 Microsoft 基础类库调试内存分配器可以调用用户定义的挂钩函数，以允许用户监视内存分配并控制是否允许分配。 分配挂钩函数的原型如下所示：
 
@@ -865,7 +866,7 @@ AFXAPI AfxDoForAllClasses(
     void* pContext);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pfn*<br/>
 指向要为每个类调用的迭代函数。 函数参数是指向对象的指针 `CRuntimeClass` 和指向调用方向函数提供的额外数据的 void 指针。
@@ -873,7 +874,7 @@ AFXAPI AfxDoForAllClasses(
 *pContext*<br/>
 指向调用方可以提供给迭代函数的可选数据。 此指针可以为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可序列化 `CObject` 的派生类是使用 DECLARE_SERIAL 宏派生的类。 每次调用时，传递 `AfxDoForAllClasses` 到 *pContext* 中的指针都会传递给指定的迭代函数。
 
@@ -900,7 +901,7 @@ void AfxDoForAllObjects(
     void* pContext);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pfn*<br/>
 指向要对每个对象执行的迭代函数。 函数参数是指向的指针，指向 `CObject` 调用方向函数提供的额外数据的 void 指针。
@@ -908,7 +909,7 @@ void AfxDoForAllObjects(
 *pContext*<br/>
 指向调用方可以提供给迭代函数的可选数据。 此指针可以为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 不枚举 Stack、global 或 embedded 对象。 每次调用时，传递到 `AfxDoForAllObjects` *pContext* 中的指针都会传递给指定的迭代函数。
 
@@ -921,7 +922,7 @@ void AfxDoForAllObjects(
 
 [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>
 [CObject：:D ump](cobject-class.md#dump)
