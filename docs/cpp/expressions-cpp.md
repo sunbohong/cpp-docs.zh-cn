@@ -1,16 +1,17 @@
 ---
+description: '了解更多有关 (c + + 的表达式) '
 title: 表达式 (C++)
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0576a2e76925bb6808a57dc9eee54231e5a06677
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204727"
 ---
 # <a name="expressions-c"></a>表达式 (C++)
 
@@ -32,7 +33,7 @@ ms.locfileid: "80179934"
 
 - [带有一元运算符的表达式](../cpp/expressions-with-unary-operators.md)
 
-- [带有二元运算符的表达式](../cpp/expressions-with-binary-operators.md)
+- [使用二元运算符的表达式](../cpp/expressions-with-binary-operators.md)
 
 - [条件运算符](../cpp/conditional-operator-q.md)
 
@@ -48,11 +49,11 @@ ms.locfileid: "80179934"
 
 - [重载运算符](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) （C++/cli）
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (c + +/cli) 
 
     > [!NOTE]
     >  无法重载内置类型的运算符；它们的行为是预定义的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ 语言参考](../cpp/cpp-language-reference.md)

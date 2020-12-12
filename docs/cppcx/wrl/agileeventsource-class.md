@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： AgileEventSource 类
 title: AgileEventSource 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -6,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d2e48d59d8706eb65828bc5b77ffaf9d4158bc1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204571"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 类
 
-表示由 agile 组件引发的事件，该组件是可从任何线程访问的组件。 继承自[EventSource](eventsource-class.md) ，并使用附加类型参数重写 `Add` 成员函数，以便为如何调用 agile 事件指定选项。
+表示由 agile 组件引发的事件，该组件是可从任何线程访问的组件。 继承自 [EventSource](eventsource-class.md) ，并 `Add` 使用附加类型参数重写成员函数，以便为如何调用 agile 事件指定选项。
 
 ## <a name="syntax"></a>语法
 
@@ -35,11 +36,11 @@ class AgileEventSource :
 表示事件处理程序的委托的接口。
 
 *TEventSourceOptions*<br/>
-[InvokeModeOptions](invokemodeoptions-structure.md)结构，其 invokeMode 字段设置为 `InvokeMode::StopOnFirstError` 或 `InvokeMode::FireAll`。
+[InvokeModeOptions](invokemodeoptions-structure.md)结构，其 invokeMode 字段设置为 `InvokeMode::StopOnFirstError` 或 `InvokeMode::FireAll` 。
 
 ## <a name="remarks"></a>备注
 
-Windows 运行时中的绝大部分组件都是 agile 组件。 有关详细信息，请参阅[线程处理和C++封送处理（/cx）](../../cppcx/threading-and-marshaling-c-cx.md)。
+Windows 运行时中的绝大部分组件都是 agile 组件。 有关详细信息，请参阅 [线程处理和封送处理 (c + +/cx) ](../../cppcx/threading-and-marshaling-c-cx.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -57,13 +58,13 @@ Windows 运行时中的绝大部分组件都是 agile 组件。 有关详细信�
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[AgileEventSource：： Add 方法](#add)|将指定委托接口表示的敏捷事件处理程序追加到当前**AgileEventSource**对象的事件处理程序集。|
+|[AgileEventSource：： Add 方法](#add)|将指定委托接口表示的敏捷事件处理程序追加到当前 **AgileEventSource** 对象的事件处理程序集。|
 
-## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource：： Add 方法
+## <a name="agileeventsourceadd-method"></a><a name="add"></a> AgileEventSource：： Add 方法
 
-将指定委托接口表示的事件处理程序追加到当前[EventSource](eventsource-class.md)对象的事件处理程序集。
+将指定委托接口表示的事件处理程序追加到当前 [EventSource](eventsource-class.md) 对象的事件处理程序集。
 
 ### <a name="syntax"></a>语法
 
@@ -80,12 +81,12 @@ HRESULT Add(
 委托对象的接口，它表示事件处理程序。
 
 *token*<br/>
-此操作完成后，表示事件的句柄。 使用此标记作为 `Remove()` 方法的参数以放弃事件处理程序。
+此操作完成后，表示事件的句柄。 使用此标记作为方法的参数来 `Remove()` 放弃事件处理程序。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

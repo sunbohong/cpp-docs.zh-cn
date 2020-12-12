@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 数组 &gt; 运算符
 title: '&lt;array&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d799bd584f45e93668c1ac2a753c82f41220773
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1cd51fa2a4a34dfa4fb8548ef3437662abce401b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205520"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 运算符
 
-\<array>标头包含这些**数组**非成员比较模板函数。
+\<array>标头包含这些 **数组** 非成员比较模板函数。
 
 [operator！ =](#op_neq)\
 [操作员&gt;](#op_gt)\
@@ -38,7 +39,7 @@ bool operator!=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
@@ -52,7 +53,7 @@ bool operator!=(
 *然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板函数返回 `!(left == right)`。
 
@@ -111,7 +112,7 @@ bool operator<(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
@@ -125,7 +126,7 @@ bool operator<(
 *然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `operator<`用于比较类模板[数组类](../standard-library/array-class-stl.md)的两个对象的模板函数重载。 该函数返回 `lexicographical_compare(left.begin(), left.end(), right.begin())`。
 
@@ -184,7 +185,7 @@ bool operator<=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
@@ -198,7 +199,7 @@ bool operator<=(
 *然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板函数返回 `!(right < left)`。
 
@@ -257,7 +258,7 @@ bool operator==(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
@@ -271,7 +272,7 @@ bool operator==(
 *然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `operator==`用于比较类模板[数组类](../standard-library/array-class-stl.md)的两个对象的模板函数重载。 该函数返回 `equal(left.begin(), left.end(), right.begin())`。
 
@@ -330,7 +331,7 @@ bool operator>(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
@@ -344,7 +345,7 @@ bool operator>(
 *然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板函数返回 `(right < left)`。
 
@@ -403,7 +404,7 @@ bool operator>=(
     const array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
@@ -417,7 +418,7 @@ bool operator>=(
 *然后*\
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板函数返回 `!(left < right)`。
 
@@ -465,6 +466,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<array>](../standard-library/array.md)

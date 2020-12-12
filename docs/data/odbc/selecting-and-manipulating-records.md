@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：选择和操作记录
 title: 选择和操作记录
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 596ee602b5358fbd854888f43f21748fd4d85b7a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8f4254f85eb8c2e30b5e912890fdc271340df9db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204298"
 ---
 # <a name="selecting-and-manipulating-records"></a>选择和操作记录
 

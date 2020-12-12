@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：成员访问控制 (c + +) '
 title: 成员访问控制 (C++)
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: de775c511701cd0b7cf923f47e33723b30a966e1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2cce7cb98e76098f3c20a6c2404f91ccf40db1cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206872"
 ---
 # <a name="member-access-control-c"></a>成员访问控制 (C++)
 
-使用访问控制，可以将类的[公共](../cpp/public-cpp.md)接口与[专用](../cpp/private-cpp.md)实现详细信息和仅供派生类使用的[受保护](../cpp/protected-cpp.md)成员分离。 访问说明符应用于在它之后声明的所有成员，直到遇到下一个访问说明符。
+使用访问控制，可以将类的 [公共](../cpp/public-cpp.md) 接口与 [专用](../cpp/private-cpp.md) 实现详细信息和仅供派生类使用的 [受保护](../cpp/protected-cpp.md) 成员分离。 访问说明符应用于在它之后声明的所有成员，直到遇到下一个访问说明符。
 
 ```cpp
 class Point
@@ -41,9 +42,9 @@ protected:      // Declare protected function for derived classes only.
 
 |访问类型|含义|
 |--------------------|-------------|
-|[private](../cpp/private-cpp.md)|声明为的类成员只能 **`private`** 由类的成员函数和友元（类或函数）使用。|
-|[受保护](../cpp/protected-cpp.md)|声明为的类成员 **`protected`** 可由类的成员函数和友元（类或函数）使用。 此外，它们还可由派生自该类的类使用。|
-|[public](../cpp/public-cpp.md)|声明为的类成员 **`public`** 可由任何函数使用。|
+|[private](../cpp/private-cpp.md)|声明为的类成员只能 **`private`** 由类的成员函数和友元 (类或函数) 使用。|
+|[protected](../cpp/protected-cpp.md)|声明为的类成员 **`protected`** 可由成员函数和友元 (类的类或函数) 使用。 此外，它们还可由派生自该类的类使用。|
+|公共|声明为的类成员 **`public`** 可由任何函数使用。|
 
 访问控制有助于阻止您通过不适当的方式使用对象。 在执行显式类型转换（强制转换）时，此保护将丢失。
 
@@ -153,7 +154,7 @@ struct Derived : public Base
 
 ## <a name="access-control-and-static-members"></a>访问控制和静态成员
 
-将基类指定为时 **`private`** ，它只会影响非静态成员。 在派生类中，公共静态成员仍是可访问的。 但是，使用指针、引用或对象访问基类的成员需要转换，此时将再次应用访问控制。 请考虑以下示例：
+将基类指定为时 **`private`** ，它只会影响非静态成员。 在派生类中，公共静态成员仍是可访问的。 但是，使用指针、引用或对象访问基类的成员需要转换，此时将再次应用访问控制。 请看下面的示例：
 
 ```cpp
 // access_control.cpp
@@ -195,7 +196,7 @@ int Derived2::ShowCount()
 
 ## <a name="access-to-virtual-functions"></a>对虚函数的访问
 
-应用于[虚](../cpp/virtual-cpp.md)函数的访问控制由用于进行函数调用的类型确定。 重写函数的声明不会影响给定类型的访问控制。 例如：
+应用于 [虚](../cpp/virtual-cpp.md) 函数的访问控制由用于进行函数调用的类型确定。 重写函数的声明不会影响给定类型的访问控制。 例如：
 
 ```cpp
 // access_to_virtual_functions.cpp

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：聚合
 title: " (c + + COM 特性聚合) "
 ms.date: 10/02/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: e745cae5710bbf8df1314ec20a4a0b72545c0591
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c108b18f957047a6a5dbb33538a23de6c3469783
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205468"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -26,7 +27,7 @@ ms.locfileid: "88836356"
 [ aggregates(clsid, variable_name) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 指定可聚合对象的 CLSID。
@@ -34,7 +35,7 @@ ms.locfileid: "88836356"
 *variable_name*<br/>
 要插入的变量的名称。 此变量包含所 `IUnknown` 聚合的对象的。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 应用于对象时， **aggregates** C++ 属性会为所聚合的对象（由 `clsid`指定）实现外部包装器。
 
@@ -88,7 +89,7 @@ struct CObject : IObject
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

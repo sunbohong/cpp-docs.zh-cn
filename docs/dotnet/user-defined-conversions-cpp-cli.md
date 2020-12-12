@@ -1,19 +1,20 @@
 ---
+description: '详细了解： c + +/CLI (User-Defined 转换) '
 title: 用户定义的转换 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0b07ab3201bfd379a17922f020486d0b17a59558
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204259"
 ---
 # <a name="user-defined-conversions-ccli"></a>用户定义的转换 (C++/CLI)
 
-本部分讨论在转换中的某个类型是值类型或引用类型的引用或实例时，用户定义的转换（UDC）。
+本部分讨论当转换中的某个类型为值类型或引用类型的引用或实例时， (UDC) 的用户定义的转换。
 
 ## <a name="implicit-and-explicit-conversions"></a>隐式和显式转换
 
@@ -21,7 +22,7 @@ ms.locfileid: "79545131"
 
 本机类的构造函数可用于将引用或值类型转换为本机类。
 
-有关转换的详细信息，请参阅[装箱](../extensions/boxing-cpp-component-extensions.md)和[标准转换](../cpp/standard-conversions.md)。
+有关转换的详细信息，请参阅 [装箱](../extensions/boxing-cpp-component-extensions.md) 和 [标准转换](../cpp/standard-conversions.md)。
 
 ```cpp
 // mcpp_User_Defined_Conversions.cpp
@@ -80,7 +81,7 @@ in N::N
 
 Convert from 运算符创建类的对象，在该对象中，运算符是从某个其他类的对象定义的。
 
-标准C++不支持转换 from 运算符;标准C++版使用构造函数来实现此目的。 但是，在使用 CLR 类型时， C++ Visual 提供对调用转换 from 运算符的语法支持。
+标准 c + + 不支持转换 from 运算符;标准 c + + 使用构造函数来实现此目的。 但是，在使用 CLR 类型时，Visual C++ 提供语法支持来调用转换 from 运算符。
 
 若要很好地与其他符合 CLS 的语言进行互操作，你可能希望使用相应的 "转换自" 运算符来包装给定类的每个用户定义的一元构造函数。
 
@@ -88,13 +89,13 @@ Convert from 运算符创建类的对象，在该对象中，运算符是从某�
 
 - 应定义为静态函数。
 
-- 当可能丢失精度时，可以是隐式的（适用于不会丢失精度的转换，如 short 到 int 的转换）或显式的。
+- 当可能存在精度损失时，可以为不会丢失精度的转换（如 short 到 int) 或显式）进行隐式 (。
 
 - 应返回包含类的对象。
 
 - 应将 "from" 类型作为唯一参数类型。
 
-下面的示例显示了隐式和显式的 "转换源" （用户定义的转换（UDC）运算符）。
+下面的示例显示了一个隐式和显式的 "转换源"，用户定义的转换 (UDC) 运算符。
 
 ```cpp
 // clr_udc_convert_from.cpp
@@ -319,6 +320,6 @@ int main() {
 2000
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)

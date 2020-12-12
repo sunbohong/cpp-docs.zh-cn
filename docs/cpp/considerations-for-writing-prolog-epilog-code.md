@@ -1,5 +1,6 @@
 ---
-title: 编写 Prolog-Epilog 代码的注意事项
+description: 了解详细信息：有关编写 Prolog/Epilog 代码的注意事项
+title: 编写 Prolog-Epilog 代码时的注意事项
 ms.date: 11/04/2016
 helpviewer_keywords:
 - stack frame layout
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
-ms.openlocfilehash: cda6a6c82efcf30a916aced121024095d7ce8138
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6deb6e9120c83992a7fe2529d0c9366b8e191056
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204766"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>有关编写 Prolog/Epilog 代码的注意事项
 
-**微软特定**
+**Microsoft 专用**
 
-在编写自己的 prolog 和 epilog 代码序列之前，了解堆栈帧的布局非常重要。了解如何使用`__LOCAL_SIZE`符号也很有用。
+在编写你自己的 prolog 和 epilog 代码序列之前，请务必了解堆栈帧的布局方式。了解如何使用该符号也很有用 `__LOCAL_SIZE` 。
 
-## <a name="stack-frame-layout"></a><a name="_pluslang_c.2b2b_.stack_frame_layout"></a>堆栈帧布局
+## <a name="stack-frame-layout"></a><a name="_pluslang_c.2b2b_.stack_frame_layout"></a> 堆栈帧布局
 
 此示例显示了可能出现在 32 位函数中的标准 prolog 代码：
 
@@ -43,18 +44,18 @@ ret                       ; Return from function
 
 堆栈始终向下增长（从高内存地址到低内存地址）。 基指针 (`ebp`) 指向 `ebp` 的推入值。 本地区域开始于 `ebp-4`。 若要访问局部变量，可通过从 `ebp` 中减去适当的值来计算 `ebp` 的偏移量。
 
-## <a name="__local_size"></a><a name="_pluslang___local_size"></a>__LOCAL_SIZE
+## <a name="__local_size"></a><a name="_pluslang___local_size"></a> __LOCAL_SIZE
 
-编译器提供一个符号，`__LOCAL_SIZE`用于函数 prolog 代码的内联汇编器块。 此符号用于在自定义 prolog 代码中的堆栈帧上为局部变量分配空间。
+编译器提供了一个符号， `__LOCAL_SIZE` 用于在函数 prolog 代码的内联汇编程序块中使用。 此符号用于在自定义 prolog 代码中的堆栈帧上为局部变量分配空间。
 
-编译器确定 的值`__LOCAL_SIZE`。 其值是所有用户定义的局部变量和编译器生成的临时变量的总字节数。 `__LOCAL_SIZE`只能用作即时操作;它不能在表达式中使用。 不得更改或重新定义此符号的值。 例如：
+编译器确定的值 `__LOCAL_SIZE` 。 其值是所有用户定义的局部变量和编译器生成的临时变量的总字节数。 `__LOCAL_SIZE` 只能用作即时操作数;不能在表达式中使用。 不得更改或重新定义此符号的值。 例如：
 
 ```
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay
 mov        eax, [ebp - __LOCAL_SIZE]   ;Error
 ```
 
-以下包含自定义 prolog 和 epilog 序列的裸函数示例使用`__LOCAL_SIZE`prolog 序列中的符号：
+以下包含自定义 prolog 和 epilog 序列的裸函数的示例使用 `__LOCAL_SIZE` 序言序列中的符号：
 
 ```cpp
 // the__local_size_symbol.cpp
@@ -78,8 +79,8 @@ __declspec ( naked ) int main() {
 }
 ```
 
-**结束微软特定**
+**结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Naked 函数调用](../cpp/naked-function-calls.md)

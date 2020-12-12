@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4471
 title: 编译器警告 (等级 4) C4471
 ms.date: 04/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-ms.openlocfilehash: 5b8c3ef419a4c6eaf9a674827cd5545a1f1b2bfe
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: cef492bf8aab33f46b3f590a13ffa5462a7ca41d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203492"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>编译器警告 (等级 4) C4471
 
@@ -19,7 +20,7 @@ ms.locfileid: "90685497"
 
 找到未区分范围的枚举的前向声明，但未提供基础类型的说明符。 默认情况下，Visual C++ 假设 **`int`** 是枚举的基础类型。 如果在枚举定义中使用了不同的类型（例如，如果指定了不同的显式类型），或者如果初始值设定项隐式设置其他类型，则这可能会导致问题。 您还可能具有可移植性问题;其他编译器不假定 **`int`** 为枚举的基础类型。
 
-默认情况下，此警告处于关闭状态。您可以使用/Wall 或/w*N*4471 在命令行上启用它，或在您的源文件中使用 #pragma [警告](../../preprocessor/warning.md) 。
+默认情况下，此警告处于关闭状态。您可以使用/Wall 或/w *N* 4471 在命令行上启用它，或在您的源文件中使用 #pragma [警告](../../preprocessor/warning.md) 。
 
 ## <a name="examples"></a>示例
 

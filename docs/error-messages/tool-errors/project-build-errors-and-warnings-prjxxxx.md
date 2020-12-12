@@ -1,17 +1,18 @@
 ---
+description: '了解详细信息：项目生成错误和警告 (PRJxxxx) '
 title: 项目生成错误和警告
 ms.date: 04/16/2019
 ms.assetid: 79d223ed-986a-4536-8299-aec8356b449c
-ms.openlocfilehash: e735214912b737a5fdb9ddf8a8ed9fe37e285d12
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: c5befd87c0b4b4eecec279d1f8f8ec9f5e342e78
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206560"
 ---
 # <a name="project-build-errors-and-warnings-prjxxxx"></a>项目生成错误和警告 (PRJxxxx)
 
-本部分是由项目生成错误的引用生成工具。 项目生成错误和警告具有窗体 PRJ*xxxx*，其中*xxxx*是一个四位数字。
+本部分是对项目生成工具生成的错误的引用。 项目生成错误和警告的形式为扩展名为 .PRJ *xxxx*，其中 *xxxx* 为四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -63,5 +64,5 @@ ms.locfileid: "64857285"
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
-[Visual Studio 项目 |C++](../../build/creating-and-managing-visual-cpp-projects.md)
+[C/c + + 编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[Visual Studio 项目 |C](../../build/creating-and-managing-visual-cpp-projects.md)

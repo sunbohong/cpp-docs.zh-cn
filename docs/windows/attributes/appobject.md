@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： appobject
 title: 'appobject (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 6562702a93273e4fc24ba138a1eb20b1ab6b076e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b371b9726e3a750ef5d40ebe5abae219b473bb02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836343"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205455"
 ---
 # <a name="appobject"></a>appobject
 
@@ -25,11 +26,11 @@ ms.locfileid: "88836343"
 
 ## <a name="remarks"></a>备注
 
-**Appobject** c + + 特性具有与[appobject](/windows/win32/Midl/appobject) MIDL 特性相同的功能。
+**Appobject** c + + 特性具有与 [appobject](/windows/win32/Midl/appobject) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示了一个简单的类定义，该定义前面有一个包含 **appobject**的特性块：
+下面的代码演示了一个简单的类定义，该定义前面有一个包含 **appobject** 的特性块：
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -57,7 +58,7 @@ class A : public ICustom {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

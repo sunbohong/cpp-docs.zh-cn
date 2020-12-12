@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ecvt_s
 title: _ecvt_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: e76ebd065d323a9ae501ce6a7a5790389c7d5dad
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: abda39ce5c33a5f6b6cca0757411e16c4171cd97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206937"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -62,7 +63,7 @@ errno_t _ecvt_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Buffer*<br/>
 使用转换的结果填充指向位字符串的指针。
@@ -86,36 +87,36 @@ errno_t _ecvt_s(
 
 如果成功，则返回 0。 如果失败，则返回值为错误代码。 错误代码是在 Errno.h 中定义。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
+对于无效参数（如下表中所列），此函数调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将 **errno** 设置为 **EINVAL** 并返回 **EINVAL**。
 
 ### <a name="error-conditions"></a>错误条件
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|返回值|*缓冲区*中的值|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|返回值|*缓冲区* 中的值|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|未修改。|
-|Not **NULL** （指向有效内存）|<=0|any|any|any|any|**EINVAL**|未修改。|
+|Not **NULL** (指向有效内存) |<=0|any|any|any|any|**EINVAL**|未修改。|
 |any|any|any|any|**NULL**|any|**EINVAL**|未修改。|
 |any|any|any|any|any|**NULL**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全问题
 
-如果*缓冲区*未指向有效内存且不为**NULL**，则 **_ecvt_s**可能会产生访问冲突。
+如果 *缓冲区* 未指向有效内存且不为 **NULL**，则 **_ecvt_s** 可能会产生访问冲突。
 
 ## <a name="remarks"></a>备注
 
-**_Ecvt_s**函数将浮点数转换为字符串。 *_Value*参数是要转换的浮点数。 此函数以字符串的形式存储 *_Value*的*计数*位数，并追加一个 null 字符（' \ 0 '）。 如果 *_Value*中的数字位数超过 *_Count*，则将舍入低序位。 如果数字少于*计数*，则用零填充字符串。
+**_Ecvt_s** 函数将浮点数转换为字符串。 *_Value* 参数是要转换的浮点数。 此函数以字符串的形式存储 *_Value* 的 *计数* 位数，并在 )  ( "\ 0" 追加 null 字符。 如果 *_Value* 中的数字位数超过 *_Count*，则将舍入低序位。 如果数字少于 *计数* ，则用零填充字符串。
 
-字符串中仅存储位数。 可以在调用后从 *_Dec*和 *_Sign*获取小数点的位置和 *_Value*的符号。 *_Dec*参数指向一个整数值，该整数值给定小数点相对于字符串开头的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *_Sign*参数指向一个整数，该整数指示转换后的数字的符号。 如果整数值为 0，则数值为正值。 否认，数值为负值。
+字符串中仅存储位数。 可以在调用后从 *_Dec* 和 *_Sign* 获取小数点的位置和 *_Value* 的符号。 *_Dec* 参数指向一个整数值，该整数值给定小数点相对于字符串开头的位置。 0 或负整数值表示小数点位于第一个数字的左侧。 *_Sign* 参数指向一个整数，该整数指示转换后的数字的符号。 如果整数值为 0，则数值为正值。 否认，数值为负值。
 
-长度 **_CVTBUFSIZE**的缓冲区足以满足任何浮点值。
+长度 **_CVTBUFSIZE** 的缓冲区足以满足任何浮点值。
 
-**_Ecvt_s**和 **_fcvt_s**之间的区别在于 *_Count*参数的解释。 **_ecvt_s**将 *_Count*解释为输出字符串中的总位数，而 **_fcvt_s**会将 *_Count*解释为小数点后的位数。
+**_Ecvt_s** 和 **_fcvt_s** 之间的区别在于 *_Count* 参数的解释。 **_ecvt_s** 将 *_Count* 解释为输出字符串中的总位数，而 **_fcvt_s** 会将 *_Count* 解释为小数点后的位数。
 
 在 C++ 中，通过模板重载简化此函数的使用；重载可以自动推导出缓冲区长度，不再需要指定大小参数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 此函数的调试版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -157,7 +158,7 @@ int main( )
 Converted value: 12000
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
