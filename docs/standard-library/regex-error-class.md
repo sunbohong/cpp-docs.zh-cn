@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： regex_error 类
 title: regex_error 类
 ms.date: 09/10/2018
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: f8f3c88c1b203ed7fcea148843fa99590e27b888
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6e2ace44c7463cbe43d000d3dabb9cf9f7d6676
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331868"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250499"
 ---
 # <a name="regex_error-class"></a>regex_error 类
 
@@ -35,15 +36,15 @@ class regex_error
 |-|-|
 |[regex_error](#regex_error)|构造对象。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
-|[代码](#code)|返回错误代码。|
+|[code](#code)|返回错误代码。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<regex 1>
+**标头：**\<regex>
 
 **命名空间:** std
 
@@ -82,7 +83,7 @@ int main()
 regex error: unbalanced parentheses
 ```
 
-## <a name="regex_errorcode"></a><a name="code"></a>regex_error：代码
+## <a name="regex_errorcode"></a><a name="code"></a> regex_error：： code
 
 返回错误代码。
 
@@ -94,7 +95,7 @@ regex_constants::error_code code() const;
 
 成员函数将返回传递给对象的构造函数的值。
 
-## <a name="regex_errorregex_error"></a><a name="regex_error"></a>regex_error：：regex_error
+## <a name="regex_errorregex_error"></a><a name="regex_error"></a> regex_error：： regex_error
 
 构造对象。
 
@@ -102,22 +103,22 @@ regex_constants::error_code code() const;
 regex_error(regex_constants::error_code error);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*错误*\
+*条*\
 错误代码。
 
 ### <a name="remarks"></a>备注
 
-构造函数构造保存值*误差*的对象。
+构造函数构造保存值 *错误* 的对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[\<正则>](../standard-library/regex.md)\
-[regex_constants类](../standard-library/regex-constants-class.md)\
-[\<正则表达式>函数](../standard-library/regex-functions.md)\
-[regex_iterator类](../standard-library/regex-iterator-class.md)\
-[\<正则>运算符](../standard-library/regex-operators.md)\
-[regex_token_iterator类](../standard-library/regex-token-iterator-class.md)\
-[regex_traits类](../standard-library/regex-traits-class.md)\
-[\<正则>类型](../standard-library/regex-typedefs.md)
+[\<regex>](../standard-library/regex.md)\
+[regex_constants 类](../standard-library/regex-constants-class.md)\
+[\<regex> 函数](../standard-library/regex-functions.md)\
+[regex_iterator 类](../standard-library/regex-iterator-class.md)\
+[\<regex> 运算符](../standard-library/regex-operators.md)\
+[regex_token_iterator 类](../standard-library/regex-token-iterator-class.md)\
+[regex_traits 类](../standard-library/regex-traits-class.md)\
+[\<regex> typedef](../standard-library/regex-typedefs.md)

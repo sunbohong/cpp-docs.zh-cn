@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDaoParameterInfo 结构
 title: CDaoParameterInfo 结构
 ms.date: 09/17/2019
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 6d594bbeec34e400eb074c136e3467e78b35c4ee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4cd1916bb30c3b646e9b0892e2bdcdf5ade30b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368983"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250709"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 结构
 
-该`CDaoParameterInfo`结构包含有关为数据访问对象 （DAO） 定义的参数对象的信息。 DAO 3.6 是最终版本，它被视为过时版本。
+该 `CDaoParameterInfo` 结构包含有关为 (DAO) 的数据访问对象定义的参数对象的信息。 DAO 3.6 是最终版本，被视为已过时。
 
 ## <a name="syntax"></a>语法
 
@@ -29,35 +30,35 @@ struct CDaoParameterInfo
 };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *m_strName*<br/>
-唯一地命名参数对象。 有关详细信息，请参阅 DAO 帮助中的主题"名称属性"。
+对参数对象进行唯一命名。 有关详细信息，请参阅 DAO 帮助中的主题 "名称属性"。
 
 *m_nType*<br/>
-指示参数对象的数据类型的值。 有关可能值的列表，请参阅[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构*的m_nType*成员。 有关详细信息，请参阅 DAO 帮助中的主题"类型属性"。
+指示参数对象的数据类型的值。 有关可能值的列表，请参阅 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)结构的 *m_nType* 成员。 有关详细信息，请参阅 DAO 帮助中的 "类型属性" 主题。
 
 *m_varValue*<br/>
-存储在[COleVariant](../../mfc/reference/colevariant-class.md)对象中的参数的值。
+参数的值，存储在 [COleVariant](../../mfc/reference/colevariant-class.md) 对象中。
 
 ## <a name="remarks"></a>备注
 
-对上述主要和次要的引用指示类`CDaoQueryDef`中的[GetparameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)成员函数如何返回信息。
+上面对主要和辅助副本的引用指示了类中 [GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo) 成员函数返回信息的方式 `CDaoQueryDef` 。
 
-MFC 不封装类中的 DAO 参数对象。 DAO 查询def 对象的基础`CDaoQueryDef`MFC 对象在其参数集合中存储参数。 要访问[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)对象中的参数对象，请将特定参数名称的`GetParameterInfo`querydef 对象的成员函数或索引调用到参数集合中。 您可以使用[CDaoQueryDef：：获取参数计数](../../mfc/reference/cdaoquerydef-class.md#getparametercount)成员函数，并`GetParameterInfo`结合循环通过参数集合。
+MFC 不会将 DAO 参数对象封装在类中。 DAO querydef 对象基础 MFC `CDaoQueryDef` 对象将参数存储在其参数集合中。 若要访问 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) 对象中的参数对象，请 `GetParameterInfo` 为参数集合中的特定参数名或索引调用 querydef 对象的成员函数。 可以结合使用 [CDaoQueryDef：： GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount) 成员函数和 `GetParameterInfo` 来循环遍历 Parameters 集合。
 
-[CDaoQueryDef检索的信息：获取参数信息](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)成员函数存储在结构`CDaoParameterInfo`中。 调用`GetParameterInfo`存储参数对象的查询def对象。
+[CDaoQueryDef：： GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)成员函数检索的信息存储在 `CDaoParameterInfo` 结构中。 调用 `GetParameterInfo` 其参数集合中存储了参数对象的 querydef 对象。
 
 > [!NOTE]
-> 如果只想获取或设置参数的值，请使用类`CDaoRecordset`的[GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue)和[SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue)成员函数。
+> 如果只想获取或设置参数的值，请使用类的 [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) 和 [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) 成员函数 `CDaoRecordset` 。
 
-`CDaoParameterInfo`还在调试生成中`Dump`定义成员函数。 可以使用`Dump`转储`CDaoParameterInfo`对象的内容。
+`CDaoParameterInfo` 还定义了 `Dump` 调试版本中的成员函数。 可以使用 `Dump` 转储对象的内容 `CDaoParameterInfo` 。
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxdao.h
+**标头：** afxdao
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoQueryDef 类](../../mfc/reference/cdaoquerydef-class.md)

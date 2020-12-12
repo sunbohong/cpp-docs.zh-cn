@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDaoIndexInfo 结构
 title: CDaoIndexInfo 结构
 ms.date: 06/25/2018
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e09846789dc91e4d0df67665f3e975b557c07c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250759"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 结构
 
-`CDaoIndexInfo`结构包含有关为数据访问对象 (DAO) 定义的索引对象的信息。
+该 `CDaoIndexInfo` 结构包含有关为 (DAO) 的数据访问对象定义的索引对象的信息。
 
 ## <a name="syntax"></a>语法
 
@@ -39,76 +40,76 @@ struct CDaoIndexInfo {
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *m_strName*<br/>
-唯一地命名字段对象。 有关详细信息，请参阅主题 DAO 帮助中的"名称属性"。
+对 field 对象进行唯一命名。 有关详细信息，请参阅 DAO 帮助中的主题 "名称属性"。
 
 *m_pFieldInfos*<br/>
-指向数组的指针[CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)对象指示哪些 tabledef 或记录集字段在索引中的键字段。 每个对象标识的索引中的一个字段。 默认索引顺序为升序。 索引对象可以表示为每个记录的索引键的一个或多个字段。 可以对这些升序、 降序或组合。
+指向 [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) 对象数组的指针，指示哪些 tabledef 或记录集字段是索引中的键字段。 每个对象都标识索引中的一个字段。 默认索引排序为 "升序"。 索引对象可以有一个或多个字段，这些字段表示每条记录的索引键。 这些可能是升序、降序或组合。
 
 *m_nFields*<br/>
-存储中的字段数`m_pFieldInfos`。
+存储在中的字段数 `m_pFieldInfos` 。
 
 *m_bPrimary*<br/>
-如果主属性为 TRUE，表示主索引的索引对象。 主索引包含唯一地标识预定义顺序中的表中的所有记录的一个或多个字段。 索引字段必须是唯一的因为索引对象的唯一属性也设置为 TRUE 在 DAO 中。 如果主索引由多个字段组成，每个字段可以包含重复值，但所有索引的字段值的每个组合必须唯一。 主索引包含表的键，并且通常包含的主键相同的字段。
+如果主属性为 TRUE，则索引对象表示主索引。 主索引由一个或多个字段组成，这些字段可按预定义的顺序唯一地标识表中的所有记录。 因为索引字段必须是唯一的，所以在 DAO 中索引对象的唯一属性也设置为 TRUE。 如果主索引包含多个字段，则每个字段可以包含重复的值，但所有索引字段中的值的每个组合都必须是唯一的。 主索引由表的键组成，通常包含与主键相同的字段。
 
-如果设置表的主键，主键自动定义作为主索引的表。 有关详细信息，请参阅"主属性"和"唯一属性"DAO 帮助中的主题。
+设置表的主键时，主键将自动定义为表的主索引。 有关详细信息，请参阅 DAO 帮助中的主题 "主要属性" 和 "唯一属性"。
 
 > [!NOTE]
-> 可以有，最多一个主索引的表。
+> 表中最多只能有一个主索引。
 
 *m_bUnique*<br/>
-指示索引对象是否表示一个表的唯一索引。 如果此属性为 TRUE，表示是唯一的索引的索引对象。 唯一索引包含一个或多个逻辑上排列中唯一的预定义顺序的表中的所有记录的字段。 如果该索引包含的一个字段，该字段中的值必须是唯一针对整个表。 如果该索引包含的多个字段，每个字段可以包含重复值，但每个组合中所有索引的字段的值必须是唯一。
+指示索引对象是否表示表的唯一索引。 如果此属性为 TRUE，则索引对象表示唯一的索引。 唯一索引由一个或多个字段组成，这些字段按唯一的预定义顺序对表中的所有记录进行逻辑排列。 如果索引包含一个字段，则该字段中的值对于整个表必须是唯一的。 如果索引包含多个字段，则每个字段可能包含重复值，但所有索引字段中的值的每个组合都必须是唯一的。
 
-如果 Unique 和主索引对象的属性设置为 TRUE，则索引是唯一和主要：它唯一标识预定义的逻辑顺序表中的所有记录。 如果主属性设置为 FALSE，则索引是辅助索引。 辅助索引 （密钥和非键） 以逻辑方式排列预定义顺序中的记录，但不作为表中的记录的标识符。
+如果索引对象的唯一属性和主属性均设置为 TRUE，则索引是唯一的，而是主要的：它以预定义的逻辑顺序唯一地标识表中的所有记录。 如果主属性设置为 "FALSE"，则索引为辅助索引。 辅助索引 (键和非键) 以逻辑方式按预定义顺序排列记录，而无需作为表中记录的标识符。
 
-有关详细信息，请参阅"主属性"和"唯一属性"DAO 帮助中的主题。
+有关详细信息，请参阅 DAO 帮助中的主题 "主要属性" 和 "唯一属性"。
 
 *m_bClustered*<br/>
-指示索引对象是否表示一个表的聚集的索引。 如果此属性为 TRUE，索引对象所表示的聚集的索引;否则，事实并非如此。 聚集的索引包含一个或多个非键字段、 合起来看，排列中预定义顺序的表中的所有记录。 具有聚集索引表中的数据按原义存储在指定的聚集索引的顺序。 聚集的索引提供了高效访问表中的记录。 有关详细信息，请参阅主题 DAO 帮助中的"群集属性"。
+指示索引对象是否表示表的聚集索引。 如果此属性为 TRUE，则索引对象表示聚集索引;否则，它不会。 聚集索引由一个或多个非键字段组成，这些字段将组合在一起，按预定义的顺序排列表中的所有记录。 使用聚集索引时，表中的数据按原义按聚集索引指定的顺序存储。 聚集索引提供对表中记录的有效访问。 有关详细信息，请参阅 DAO 帮助中的主题 "聚集属性"。
 
 > [!NOTE]
-> 使用 Microsoft Jet 数据库引擎，因为 Jet 数据库引擎不支持聚集的索引的数据库会忽略 Clustered 属性。
+> 对于使用 Microsoft Jet 数据库引擎的数据库，将忽略聚集属性，因为 Jet 数据库引擎不支持聚集索引。
 
 *m_bIgnoreNulls*<br/>
-指示是否有索引字段中具有 Null 值的记录的索引条目。 如果此属性为 TRUE，则与 Null 值的字段没有索引条目。 若要使搜索更快地使用字段的记录，可以定义字段的索引。 如果允许 Null 项索引的字段中，并期待许多要为 Null 的项，可以将索引对象 IgnoreNulls 属性设置为 TRUE 以减少索引使用的存储空间量。 IgnoreNulls 属性设置和所需的属性设置共同决定是否具有一个为 Null 的索引值的记录具有索引条目，如下表所示。
+指示在其索引字段中是否存在具有 Null 值的记录的索引条目。 如果此属性为 TRUE，则具有 Null 值的字段没有索引条目。 为了更快地使用字段搜索记录，可以为字段定义索引。 如果在索引字段中允许空项并且预计许多条目为 Null，则可以将索引对象的 IgnoreNulls 属性设置为 TRUE，以减少索引使用的存储空间量。 IgnoreNulls 属性设置和所需的属性设置共同确定具有 Null 索引值的记录是否具有索引项，如下表所示。
 
-|IgnoreNulls|必需|索引字段中，则为 null|
+|IgnoreNulls|必需|索引字段中为 Null|
 |-----------------|--------------|-------------------------|
-|True|False|允许 null 值未添加的索引条目。|
-|False|False|允许 null 值添加索引条目。|
-|True 或 False|True|不允许; 的 null 值未添加的索引条目。|
+|正确|错误|允许为 Null 值;未添加索引项。|
+|False|False|允许为 Null 值;添加的索引条目。|
+|是或否|正确|不允许为 Null 值;未添加索引项。|
 
-有关详细信息，请参阅主题 DAO 帮助中的"IgnoreNulls 属性"。
+有关详细信息，请参阅 DAO 帮助中的主题 "IgnoreNulls 属性"。
 
 *m_bRequired*<br/>
-指示 DAO 索引对象是否需要非 Null 值。 如果此属性为 TRUE，则索引对象不允许 Null 值。 有关详细信息，请参阅主题 DAO 帮助中的"所需属性"。
+指示 DAO 索引对象是否需要非 Null 值。 如果此属性为 TRUE，则索引对象不允许使用 Null 值。 有关详细信息，请参阅 DAO 帮助中的主题 "Required 属性"。
 
 > [!TIP]
-> 可以设置此属性对于 DAO 索引对象或字段对象 （包含 tabledef、 记录集或 querydef 对象），将其设置为字段对象。 在此之前，索引对象都会检查其属性设置为字段对象的有效性。
+> 如果可以将 DAO 索引对象或字段对象的此属性设置为 tabledef、recordset 或 querydef 对象) 包含的 (，请为 field 对象设置此属性。 在索引对象之前检查字段对象的属性设置的有效性。
 
 *m_bForeign*<br/>
-指示索引对象是否表示一个表中的外键。 如果此属性为 TRUE，则索引表示表中的外键。 外键包括一个或多个字段的外部表中唯一标识主表中的行。 Microsoft Jet 数据库引擎创建外部表的索引对象，并创建一种关系，强制实施引用完整性时设置外的属性。 有关详细信息，请参阅主题 DAO 帮助中的"外属性"。
+指示索引对象是否表示表中的外键。 如果此属性为 TRUE，则索引表示表中的外键。 外键由外表中唯一标识行的一个或多个字段组成。 Microsoft Jet 数据库引擎在创建强制引用完整性的关系时，为外部表创建索引对象并设置外部属性。 有关详细信息，请参阅 DAO 帮助中的主题 "外部属性"。
 
 *m_lDistinctCount*<br/>
-指示在 index 对象关联的表中包含的唯一值数。 检查非重复计数属性以确定的唯一值或中索引键数。 任意键是只计算一次，即使在索引允许重复的值可能会多次出现的值。 此信息可在尝试通过评估索引信息来优化数据访问的应用程序中。 唯一值的数量也称为是索引对象的基数。 非重复计数属性将始终反映键的实际的数目在特定的时间。 例如，导致事务回滚的更改将不会立即反映在非重复计数属性。 有关详细信息，请参阅主题 DAO 帮助中的"非重复计数属性"。
+指示关联表中包含的索引对象的唯一值数。 检查 DistinctCount 属性以确定索引中的唯一值或键的数目。 即使在索引允许重复值的情况下，也会对任何键进行一次计数。 此信息可用于尝试通过评估索引信息来优化数据访问的应用程序。 唯一值的数目也称为索引对象的基数。 DistinctCount 属性不会始终反映特定时间的实际键数。 例如，事务回滚导致的更改将不会立即反映在 DistinctCount 属性中。 有关详细信息，请参阅 DAO 帮助中的主题 "DistinctCount 属性"。
 
 ## <a name="remarks"></a>备注
 
-对主要、 次要和上面所有的引用指示如何通过返回的信息`GetIndexInfo`类中的成员函数[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo)并[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)。
+对主要、次要和以上的引用指示 `GetIndexInfo` 类 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo) 和 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)中的成员函数返回信息的方式。
 
-索引对象不表示由 MFC 类。 相反，DAO 对象类的基础 MFC 对象[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含称为索引集合的索引对象的集合。 这些类提供成员函数访问各个项的索引的信息，或可以访问它们使用一次性`CDaoIndexInfo`对象通过调用`GetIndexInfo`包含对象的成员函数。
+索引对象不由 MFC 类表示。 而是 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) 或 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 类的基本 MFC 对象的 DAO 对象包含索引对象（称为索引集合）的集合。 这些类提供成员函数以访问索引信息的各个项，或者可以 `CDaoIndexInfo` 通过调用 `GetIndexInfo` 包含对象的成员函数，同时通过对象访问所有这些项。
 
-`CDaoIndexInfo` 具有一个构造函数和析构函数以便正确地分配和解除分配中的索引字段信息`m_pFieldInfos`。
+`CDaoIndexInfo` 具有构造函数和析构函数，以便正确地分配和解除分配中的索引字段信息 `m_pFieldInfos` 。
 
-检索的信息`GetIndexInfo`tabledef 对象的成员函数存储在`CDaoIndexInfo`结构。 调用`GetIndexInfo`包含 tabledef 对象的索引集合中存储的索引对象的成员函数。 `CDaoIndexInfo` 此外定义了`Dump`成员函数在调试生成。 可以使用`Dump`转储的内容`CDaoIndexInfo`对象。
+Tabledef 对象的成员函数检索到的信息 `GetIndexInfo` 存储在 `CDaoIndexInfo` 结构中。 调用 `GetIndexInfo` 包含 tabledef 对象的成员函数，该对象的索引集合存储索引对象。 `CDaoIndexInfo` 还定义了 `Dump` 调试版本中的成员函数。 可以使用 `Dump` 转储对象的内容 `CDaoIndexInfo` 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** afxdao.h
+**标头：** afxdao
 
 ## <a name="see-also"></a>请参阅
 
 [结构、样式、回调和消息映射](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)
+[CDaoTableDef：： GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3821
 title: 编译器错误 C3821
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 97d6dc0544176d90b90702a7d1f1648e8e98d756
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 745efeb21933e06f65f9e700ad5780da8234da90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686621"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249368"
 ---
 # <a name="compiler-error-c3821"></a>编译器错误 C3821
 

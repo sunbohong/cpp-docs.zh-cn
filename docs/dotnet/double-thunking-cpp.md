@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： Double Thunk (c + +) '
 title: 双重 Thunk (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 3f0fc5567baaa0c4f3fea410770963adf51e8366
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 7c09e60ce534dd10567b93ece0eb6cb4bf8cc24a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252176"
 ---
 # <a name="double-thunking-c"></a>双重 Thunk (C++)
 
@@ -21,7 +22,7 @@ Double thunk 是指当托管上下文中的函数调用调用 Visual C++ 托管�
 
 ## <a name="remarks"></a>备注
 
-默认情况下，使用 **/clr**进行编译时，托管函数的定义将导致编译器生成托管入口点和本机入口点。 这允许从本机和托管调用站点调用托管函数。 但是，当存在本机入口点时，它可以是对函数的所有调用的入口点。 如果调用函数是托管的，则本机入口点将调用托管入口点。 实际上，调用函数需要两次调用 (因此，双 thunk) 。 例如，虚函数始终通过本机入口点调用。
+默认情况下，使用 **/clr** 进行编译时，托管函数的定义将导致编译器生成托管入口点和本机入口点。 这允许从本机和托管调用站点调用托管函数。 但是，当存在本机入口点时，它可以是对函数的所有调用的入口点。 如果调用函数是托管的，则本机入口点将调用托管入口点。 实际上，调用函数需要两次调用 (因此，双 thunk) 。 例如，虚函数始终通过本机入口点调用。
 
 一种解决方法是让编译器不生成托管函数的本机入口点，而只会使用 [__clrcall](../cpp/clrcall.md) 调用约定从托管上下文调用该函数。
 
@@ -31,9 +32,9 @@ Double thunk 是指当托管上下文中的函数调用调用 Visual C++ 托管�
 
 ## <a name="example-double-thunking"></a>示例： Double thunk
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
-下面的示例演示 double thunk。 如果编译的本机 (没有 **/clr**) ，则在中对虚函数的调用将 `main` 生成一个对 `T` 的复制构造函数和一个对析构函数的调用。 当用 **/clr** 和声明虚函数时，就会实现类似的行为 `__clrcall` 。 但是，在使用 **/clr**进行编译时，函数调用会生成对复制构造函数的调用，但由于本机到托管的 thunk，将再次调用复制构造函数。
+下面的示例演示 double thunk。 如果编译的本机 (没有 **/clr**) ，则在中对虚函数的调用将 `main` 生成一个对 `T` 的复制构造函数和一个对析构函数的调用。 当用 **/clr** 和声明虚函数时，就会实现类似的行为 `__clrcall` 。 但是，在使用 **/clr** 进行编译时，函数调用会生成对复制构造函数的调用，但由于本机到托管的 thunk，将再次调用复制构造函数。
 
 ### <a name="code"></a>代码
 
@@ -89,9 +90,9 @@ __thiscall T::~T(void)
 
 ## <a name="example-effect-of-double-thunking"></a>示例： double thunk 的效果
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
-前面的示例演示了双 thunk 的存在。 此示例显示了其效果。 **`for`** 循环调用虚函数，程序报告执行时间。 用 **/clr**编译程序时，会报告最慢的时间。 如果在没有 **/clr** 的情况下进行编译，或在声明虚拟函数时报告最快的时间 `__clrcall` 。
+前面的示例演示了双 thunk 的存在。 此示例显示了其效果。 **`for`** 循环调用虚函数，程序报告执行时间。 用 **/clr** 编译程序时，会报告最慢的时间。 如果在没有 **/clr** 的情况下进行编译，或在声明虚拟函数时报告最快的时间 `__clrcall` 。
 
 ### <a name="code"></a>代码
 
@@ -137,6 +138,6 @@ int main() {
 after calling struct S
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [混合 (本机和托管) 程序集](../dotnet/mixed-native-and-managed-assemblies.md)

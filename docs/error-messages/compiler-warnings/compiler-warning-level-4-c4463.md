@@ -1,23 +1,24 @@
 ---
-title: 编译器警告（等级4） C4463
+description: 详细了解：编译器警告 (级别 4) C4463
+title: 编译器警告 (等级 4) C4463
 ms.date: 11/04/2016
 f1_keywords:
 - C4463
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-ms.openlocfilehash: acc7957493942a9c0e19ce098b74ed0b5d75a12d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fe4ea13c50e16bf5b72f5753fa989970db3cadde
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251318"
 ---
-# <a name="compiler-warning-level-4-c4463"></a>编译器警告（等级4） C4463
+# <a name="compiler-warning-level-4-c4463"></a>编译器警告 (等级 4) C4463
 
-> 超出将*值*分配给只包含*low_value*的值的位域*high_value*
+> 超出将 *值* 分配给只包含 *low_value* 的值的位域 *high_value*
 
-分配的*值*不在位域可以包含的值范围内。 带符号位域类型对符号使用高位位，因此，如果*n*为位域大小，则已签名位域的范围为-2<sup>n-1</sup>到 2<sup>n-1</sup>-1，而无符号位域的范围介于0到 2<sup>n</sup>-1 之间。
+分配的 *值* 不在位域可以包含的值范围内。 带符号位域类型对符号使用高位位，因此，如果 *n* 为位域大小，则已签名位域的范围为-2 <sup>n-1</sup> 到 2 <sup>n-1</sup>-1，而无符号位域的范围介于0到 2 <sup>n</sup>-1 之间。
 
 ## <a name="example"></a>示例
 

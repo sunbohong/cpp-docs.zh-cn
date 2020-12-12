@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCDisableMenuAnimation 类
 title: CMFCDisableMenuAnimation 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: 97a93e000b3e12d8ec4824100059581216b1b8d9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fc869570865d8b99d29e0248afeeb133e657a908
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840760"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250694"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 类
 
@@ -29,24 +30,24 @@ class CMFCDisableMenuAnimation
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|构造 `CMFCDisableMenuAnimation` 对象。|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCDisableMenuAnimation：： Restore](#restore)|还原框架用于显示弹出菜单的以前的动画。|
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`CMFCDisableMenuAnimation::m_animType`|存储上一个弹出菜单动画类型。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此帮助器类可暂时禁用弹出菜单动画 (例如，在处理鼠标或键盘命令) 时。
 
@@ -76,12 +77,12 @@ class CMFCDisableMenuAnimation
 void Restore ();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 析构函数调用此方法 `CMFCDisableMenuAnimation` 来还原框架用于显示弹出菜单的以前的动画。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： regex_constants 命名空间
 title: regex_constants 类
 ms.date: 09/10/2018
 f1_keywords:
@@ -82,12 +83,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: 422d29f16220ae2c2db93c9f84410316bf08f5e7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d33f9d45023453281714e5585ab6ab33ee1f7857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845050"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250512"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 命名空间
 
@@ -107,7 +108,7 @@ namespace regex_constants {
 
 命名空间 `regex_constants` 封装若干标记类型及其关联的标记值。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[error_type](#error_type)|用于报告正则表达式语法错误的标志。|
 |[match_flag_type](#match_flag_type)|正则表达式匹配选项的标志。|
@@ -144,7 +145,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是一个枚举类型，它描述可保留错误标志的对象。 非重复的标志值为：
 
@@ -204,7 +205,7 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是位掩码类型，用于描述针对替换文本时使用的正则表达式和格式标志匹配文本序列时使用的选项。 可与 `|`组合使用的选项。
 
@@ -260,7 +261,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型为位掩码类型，用于描述编译正则表达式时要使用的语言说明符和语法修饰符。 可与 `|`组合使用的选项。 一次不能使用多于一个语言说明符。
 
@@ -288,7 +289,7 @@ enum syntax_option_type
 
 `collate` -- 进行区分区域设置的匹配
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<regex>](../standard-library/regex.md)\
 [regex_error 类](../standard-library/regex-error-class.md)\

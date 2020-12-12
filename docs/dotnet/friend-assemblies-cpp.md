@@ -1,29 +1,30 @@
 ---
+description: '了解有关以下内容的详细信息：友元程序集 (c + +) '
 title: 友元程序集 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: a42caaf07f6ec0c71f63d6a0df8a79fff6f737e6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3f5a7dcd8833d6d396acfff5f42f6c1709327b2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221440"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252124"
 ---
 # <a name="friend-assemblies-c"></a>友元程序集 (C++)
 
-对于适用的运行时，*友元程序集*语言功能使得在程序集组件中的命名空间范围或全局范围内的类型可由一个或多个客户端程序集或 netmodule 访问。
+对于适用的运行时， *友元程序集* 语言功能使得在程序集组件中的命名空间范围或全局范围内的类型可由一个或多个客户端程序集或 netmodule 访问。
 
 ## <a name="all-runtimes"></a>所有运行时
 
-**注释**
+**备注**
 
 （并不是所有运行时都支持此语言功能。）
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-**注释**
+**备注**
 
 （Windows 运行时不支持此语言功能。）
 
@@ -33,7 +34,7 @@ ms.locfileid: "87221440"
 
 ## <a name="common-language-runtime"></a>公共语言运行时
 
-**注释**
+**备注**
 
 #### <a name="to-make-types-at-namespace-scope-or-global-scope-in-an-assembly-component-accessible-to-a-client-assembly-or-netmodule"></a>使位于程序集组件命名空间范围或全局范围的类型可供客户端程序集或 .netmodule 访问
 
@@ -47,7 +48,7 @@ ms.locfileid: "87221440"
 
 必须显式授予对程序集中所有类型的访问权限。  例如，如果程序集 C 引用程序集 B，而程序集 B 具有对程序集 A 中所有类型的访问权限，则程序集 C 没有对程序集 A 中所有类型的访问权限。
 
-有关如何对进行签名（即如何向使用 Microsoft c + + 编译器生成的程序集）进行签名的信息，请参阅[强名称程序集（程序集签名）（c + +/cli）](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+有关如何对进行签名（即如何向使用 Microsoft c + + 编译器生成的程序集）进行签名的信息，请参阅 [强名称程序集 ( (c + +/cli) ) 的程序集签名 ](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
 作为对使用友元程序集功能的替代，您可使用 <xref:System.Security.Permissions.StrongNameIdentityPermission> 限制对单独类型的访问。
 
@@ -94,7 +95,7 @@ Class1::Test_Public
 
 下一代码示例定义了未指定将对组件中类型具有访问权限的客户端程序集的组件。
 
-请注意，该组件是使用 **/opt： noref**链接的。 这确保私有类型在组件的元数据中发出，`InternalsVisibleTo` 特性存在时不需要元数据。 有关详细信息，请参阅 [/OPT（优化）](../build/reference/opt-optimizations.md)。
+请注意，该组件是使用 **/opt： noref** 链接的。 这确保私有类型在组件的元数据中发出，`InternalsVisibleTo` 特性存在时不需要元数据。 有关详细信息，请参阅 [/OPT（优化）](../build/reference/opt-optimizations.md)。
 
 ```cpp
 // friend_assemblies_3.cpp
@@ -184,6 +185,6 @@ int main() {
 Class1::Test_Public
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于运行时平台的组件扩展](../extensions/component-extensions-for-runtime-platforms.md)

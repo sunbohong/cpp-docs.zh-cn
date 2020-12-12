@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： HStringReference 类
 title: HStringReference 类
 ms.date: 07/15/2019
 ms.topic: reference
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: 871696f4a970b1ef9d1f5d36d2e17184b93c9e8b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d1a45eadd258ba6e17c26cc86aa362011d08ab8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249836"
 ---
 # <a name="hstringreference-class"></a>HStringReference 类
 
@@ -41,7 +42,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>备注
 
-新 HSTRING 中的后备缓冲区的生存期不受 Windows 运行时管理。 调用方在堆栈帧上分配一个源字符串，以避免堆分配并消除内存泄漏的风险。 此外，调用方必须确保源字符串在附加的 HSTRING 的生存期内保持不变。 有关详细信息，请参阅[WindowsCreateStringReference 函数](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference)。
+新 HSTRING 中的后备缓冲区的生存期不受 Windows 运行时管理。 调用方在堆栈帧上分配一个源字符串，以避免堆分配并消除内存泄漏的风险。 此外，调用方必须确保源字符串在附加的 HSTRING 的生存期内保持不变。 有关详细信息，请参阅 [WindowsCreateStringReference 函数](/windows/win32/api/winstring/nf-winstring-windowscreatestringreference)。
 
 ## <a name="members"></a>成员
 
@@ -78,7 +79,7 @@ class HStringReference;
 
 **命名空间：** Microsoft：： WRL：：包装
 
-## <a name="hstringreferencecopyto"></a><a name="copyto"></a>HStringReference：： CopyTo
+## <a name="hstringreferencecopyto"></a><a name="copyto"></a> HStringReference：： CopyTo
 
 将当前 `HStringReference` 对象复制到 HSTRING 对象。
 
@@ -88,16 +89,16 @@ HRESULT CopyTo(
    ) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 接收副本的 HSTRING。
 
 ### <a name="remarks"></a>备注
 
-此方法调用[WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring)函数。
+此方法调用 [WindowsDuplicateString](/windows/win32/api/winstring/nf-winstring-windowsduplicatestring) 函数。
 
-## <a name="hstringreferenceget"></a><a name="get"></a>HStringReference：： Get
+## <a name="hstringreferenceget"></a><a name="get"></a> HStringReference：： Get
 
 检索基础 HSTRING 句柄的值。
 
@@ -109,7 +110,7 @@ HSTRING Get() const throw()
 
 基础 HSTRING 句柄的值。
 
-## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a>HStringReference：： GetRawBuffer
+## <a name="hstringreferencegetrawbuffer"></a><a name="getrawbuffer"></a> HStringReference：： GetRawBuffer
 
 检索指向基础字符串数据的指针。
 
@@ -117,15 +118,15 @@ HSTRING Get() const throw()
 const wchar_t* GetRawBuffer(unsigned int* length) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*长度*指向一个 **`int`** 变量的指针，该变量接收数据的长度。
+*长度* 指向一个 **`int`** 变量的指针，该变量接收数据的长度。
 
 ### <a name="return-value"></a>返回值
 
 **`const`** 指向基础字符串数据的指针。
 
-## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a>HStringReference：： HStringReference
+## <a name="hstringreferencehstringreference"></a><a name="hstringreference"></a> HStringReference：： HStringReference
 
 初始化 `HStringReference` 类的新实例。
 
@@ -140,29 +141,29 @@ HStringReference(wchar_t const (&str)[ sizeDest],
 HStringReference(HStringReference&& other) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sizeDest*<br/>
 一个模板参数，指定目标缓冲区的大小 `HStringReference` 。
 
-*字符串*<br/>
+*str*<br/>
 对宽字符串的引用。
 
-*长度*<br/>
-要在此操作中使用的*str*参数缓冲区的最大长度。 如果未指定*len*参数，则使用整个*str*参数。 如果*len*大于*sizeDest*，则*len*设置为*sizeDest*-1。
+len<br/>
+要在此操作中使用的 *str* 参数缓冲区的最大长度。 如果未指定 *len* 参数，则使用整个 *str* 参数。 如果 *len* 大于 *sizeDest*，则 *len* 设置为 *sizeDest*-1。
 
 *以外*<br/>
 另一个 `HStringReference` 对象。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化一个与 `HStringReference` 参数*str*大小相同的新对象。
+第一个构造函数初始化一个与 `HStringReference` 参数 *str* 大小相同的新对象。
 
-第二个构造函数 `HStringReference` 将初始化大小由参数*长度*的新对象。
+第二个构造函数 `HStringReference` 将初始化大小由参数 *长度* 的新对象。
 
-第三个构造函数将新的 `HStringReference` 对象初始化为*其他*参数的值，然后销毁*其他*参数。
+第三个构造函数将新的 `HStringReference` 对象初始化为 *其他* 参数的值，然后销毁 *其他* 参数。
 
-## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a>HStringReference：： operator =
+## <a name="hstringreferenceoperator"></a><a name="operator-assign"></a> HStringReference：： operator =
 
 将另一个对象的值移动 `HStringReference` 到当前 `HStringReference` 对象。
 
@@ -170,16 +171,16 @@ HStringReference(HStringReference&& other) throw();
 HStringReference& operator=(HStringReference&& other) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 一个现有的 `HStringReference` 对象。
 
 ### <a name="remarks"></a>备注
 
-现有的*其他*对象的值将复制到当前 `HStringReference` 对象，然后*其他*对象将被销毁。
+现有的 *其他* 对象的值将复制到当前 `HStringReference` 对象，然后 *其他* 对象将被销毁。
 
-## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a>HStringReference：： operator = =
+## <a name="hstringreferenceoperator"></a><a name="operator-equality"></a> HStringReference：： operator = =
 
 指示两个参数是否相等。
 
@@ -197,19 +198,19 @@ inline bool operator==(
                const HSTRING& rhs) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
-要比较的第一个参数。 *lhs*可以是 `HStringReference` 对象或 HSTRING 句柄。
+要比较的第一个参数。 *lhs* 可以是 `HStringReference` 对象或 HSTRING 句柄。
 
-rhs**<br/>
-要比较的第二个参数。  *rhs*可以是 `HStringReference` 对象或 HSTRING 句柄。
+*rhs*<br/>
+要比较的第二个参数。  *rhs* 可以是 `HStringReference` 对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果*lhs*和*rhs*参数相等，则为;否则为 **`false`** 。
+**`true`** 如果 *lhs* 和 *rhs* 参数相等，则为;否则为 **`false`** 。
 
-## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a>HStringReference：： operator！ =
+## <a name="hstringreferenceoperator"></a><a name="operator-inequality"></a> HStringReference：： operator！ =
 
 指示两个参数是否不相等。
 
@@ -227,19 +228,19 @@ inline bool operator!=(
                const HSTRING& rhs) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
-要比较的第一个参数。 *lhs*可以是 `HStringReference` 对象或 HSTRING 句柄。
+要比较的第一个参数。 *lhs* 可以是 `HStringReference` 对象或 HSTRING 句柄。
 
-rhs**<br/>
-要比较的第二个参数。  *rhs*可以是 `HStringReference` 对象或 HSTRING 句柄。
+*rhs*<br/>
+要比较的第二个参数。  *rhs* 可以是 `HStringReference` 对象或 HSTRING 句柄。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果*lhs*和*rhs*参数不相等，则为; 否则为。否则为 **`false`** 。
+**`true`** 如果 *lhs* 和 *rhs* 参数不相等，则为; 否则为。否则为 **`false`** 。
 
-## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a>HStringReference：： operator&lt;
+## <a name="hstringreferenceoperatorlt"></a><a name="operator-less-than"></a> HStringReference：： operator&lt;
 
 指示第一个参数是否小于第二个参数。
 
@@ -249,14 +250,14 @@ inline bool operator<(
     const HStringReference& rhs) throw()
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lhs*<br/>
-要比较的第一个参数。 *lhs*可以是对的引用 `HStringReference` 。
+要比较的第一个参数。 *lhs* 可以是对的引用 `HStringReference` 。
 
-rhs**<br/>
-要比较的第二个参数。  *rhs*可以是对的引用 `HStringReference` 。
+*rhs*<br/>
+要比较的第二个参数。  *rhs* 可以是对的引用 `HStringReference` 。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果*lhs*参数小于*rhs*参数，则为; 否则为。否则为 **`false`** 。
+**`true`** 如果 *lhs* 参数小于 *rhs* 参数，则为; 否则为。否则为 **`false`** 。

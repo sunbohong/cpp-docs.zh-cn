@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： HandleT 类
 title: HandleT 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: 661d3cb92b20fc929a9bae3cad7bb55740e5e096
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 608433193729e3d9be5b9490c469bf0b04d3531c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250005"
 ---
 # <a name="handlet-class"></a>HandleT 类
 
@@ -45,10 +46,10 @@ template <typename HandleTraits>
 class HandleT;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *HandleTraits*<br/>
-定义句柄的常见特征的[HandleTraits](handletraits-structure.md)结构的实例。
+定义句柄的常见特征的 [HandleTraits](handletraits-structure.md) 结构的实例。
 
 ## <a name="members"></a>成员
 
@@ -60,7 +61,7 @@ class HandleT;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                | 描述
+“属性”                                | 描述
 ----------------------------------- | --------------------------------------------------
 [HandleT：： HandleT](#handlet)        | 初始化 `HandleT` 类的新实例。
 [HandleT：： ~ HandleT](#tilde-handlet) | 取消初始化类的实例 `HandleT` 。
@@ -103,7 +104,7 @@ class HandleT;
 
 **命名空间：** Microsoft：： WRL：：包装
 
-## <a name="handlethandlet"></a><a name="tilde-handlet"></a>HandleT：： ~ HandleT
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a> HandleT：： ~ HandleT
 
 取消初始化类的实例 `HandleT` 。
 
@@ -111,7 +112,7 @@ class HandleT;
 ~HandleT();
 ```
 
-## <a name="handletattach"></a><a name="attach"></a>HandleT：： Attach
+## <a name="handletattach"></a><a name="attach"></a> HandleT：： Attach
 
 将指定的句柄与当前的对象相关联 `HandleT` 。
 
@@ -121,12 +122,12 @@ void Attach(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h*<br/>
 句柄。
 
-## <a name="handletclose"></a><a name="close"></a>HandleT：： Close
+## <a name="handletclose"></a><a name="close"></a> HandleT：： Close
 
 关闭当前的 `HandleT` 对象。
 
@@ -140,7 +141,7 @@ void Close();
 
 如果句柄关闭不正确，则调用线程中将引发异常。
 
-## <a name="handletdetach"></a><a name="detach"></a>HandleT：:D etach
+## <a name="handletdetach"></a><a name="detach"></a> HandleT：:D etach
 
 将当前 `HandleT` 对象与其基础句柄解除。
 
@@ -156,7 +157,7 @@ typename HandleTraits::Type Detach();
 
 此操作完成后，当前 `HandleT` 设置为无效状态。
 
-## <a name="handletget"></a><a name="get"></a>HandleT：： Get
+## <a name="handletget"></a><a name="get"></a> HandleT：： Get
 
 获取基础句柄的值。
 
@@ -168,7 +169,7 @@ typename HandleTraits::Type Get() const;
 
 句柄。
 
-## <a name="handlethandle_"></a><a name="handle"></a>HandleT：： handle_
+## <a name="handlethandle_"></a><a name="handle"></a> HandleT：： handle_
 
 包含由对象表示的句柄 `HandleT` 。
 
@@ -176,7 +177,7 @@ typename HandleTraits::Type Get() const;
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlethandlet"></a><a name="handlet"></a>HandleT：： HandleT
+## <a name="handlethandlet"></a><a name="handlet"></a> HandleT：： HandleT
 
 初始化 `HandleT` 类的新实例。
 
@@ -191,16 +192,16 @@ HandleT(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h*<br/>
 句柄。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数初始化 `HandleT` 对象，该对象不是对象的有效句柄。 第二个构造函数 `HandleT` 从参数*h*创建新的对象。
+第一个构造函数初始化 `HandleT` 对象，该对象不是对象的有效句柄。 第二个构造函数 `HandleT` 从参数 *h* 创建新的对象。
 
-## <a name="handletinternalclose"></a><a name="internalclose"></a>HandleT：： InternalClose
+## <a name="handletinternalclose"></a><a name="internalclose"></a> HandleT：： InternalClose
 
 关闭当前的 `HandleT` 对象。
 
@@ -214,9 +215,9 @@ virtual bool InternalClose();
 
 ### <a name="remarks"></a>备注
 
-`InternalClose()`为 **`protected`** 。
+`InternalClose()` 为 **`protected`** 。
 
-## <a name="handletisvalid"></a><a name="isvalid"></a>HandleT：： IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a> HandleT：： IsValid
 
 指示当前对象是否 `HandleT` 表示一个句柄。
 
@@ -228,7 +229,7 @@ bool IsValid() const;
 
 **`true`** 如果 `HandleT` 表示一个句柄，则为; 否则为 **`false`** 。
 
-## <a name="handletoperator"></a><a name="operator-assign"></a>HandleT：： operator =
+## <a name="handletoperator"></a><a name="operator-assign"></a> HandleT：： operator =
 
 将指定对象的值移动 `HandleT` 到当前 `HandleT` 对象。
 
@@ -238,7 +239,7 @@ HandleT& operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h*<br/>
 对句柄的右值引用。
@@ -249,4 +250,4 @@ HandleT& operator=(
 
 ### <a name="remarks"></a>备注
 
-此操作使 `HandleT` 参数*h*指定的对象失效。
+此操作使 `HandleT` 参数 *h* 指定的对象失效。

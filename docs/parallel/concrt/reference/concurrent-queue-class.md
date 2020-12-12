@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： concurrent_queue 类
 title: concurrent_queue 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: a117a040adbf7f3aa316c346489bd2731d6c2402
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c7ac9686b03073016b509ce8e2bddaa664c3141f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250603"
 ---
 # <a name="concurrent_queue-class"></a>concurrent_queue 类
 
@@ -34,7 +35,7 @@ template<typename T, class _Ax>
 class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 要存储在队列中的元素的数据类型。
@@ -46,7 +47,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`allocator_type`|一个类型，表示并发队列的分配器类。|
 |`const_iterator`|一种类型，它表示 **`const`** 对并发队列中的元素的非线程安全迭代器。|
@@ -59,16 +60,16 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|已重载。 构造并发队列。|
 |[~ concurrent_queue 析构函数](#dtor)|销毁并发队列。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[清除](#clear)|清除并发队列，销毁当前排队的任何元素。 此方法不是并发安全方法。|
+|[clear](#clear)|清除并发队列，销毁当前排队的任何元素。 此方法不是并发安全方法。|
 |[empty](#empty)|测试在调用此方法时并发队列是否为空。 此方法是并发安全方法。|
 |[get_allocator](#get_allocator)|返回用于构造并发队列的分配器副本。 此方法是并发安全方法。|
 |[push](#push)|已重载。 将项排队在并发队列的结尾处。 此方法是并发安全方法。|
@@ -79,7 +80,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ## <a name="remarks"></a>备注
 
-有关详细信息，请参阅[并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
+有关详细信息，请参阅 [并行容器和对象](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -91,7 +92,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 **命名空间：** 并发
 
-## <a name="clear"></a><a name="clear"></a>清除
+## <a name="clear"></a><a name="clear"></a> 清除
 
 清除并发队列，销毁当前排队的任何元素。 此方法不是并发安全方法。
 
@@ -99,7 +100,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 void clear();
 ```
 
-## <a name="concurrent_queue"></a><a name="ctor"></a>concurrent_queue
+## <a name="concurrent_queue"></a><a name="ctor"></a> concurrent_queue
 
 构造并发队列。
 
@@ -120,7 +121,7 @@ concurrent_queue(_InputIterator _Begin,
     _InputIterator _End);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_InputIterator*<br/>
 输入迭代器的类型，它指定值的范围。
@@ -147,9 +148,9 @@ concurrent_queue(_InputIterator _Begin,
 
 第三个构造函数指定并发队列 `_OtherQ` 的移动。
 
-第四个构造函数指定由迭代器范围 [ `_Begin` ，）提供的值 `_End` 。
+第四个构造函数指定由迭代器范围 [ `_Begin` ，) 提供的值 `_End` 。
 
-## <a name="concurrent_queue"></a><a name="dtor"></a>~ concurrent_queue
+## <a name="concurrent_queue"></a><a name="dtor"></a> ~ concurrent_queue
 
 销毁并发队列。
 
@@ -157,7 +158,7 @@ concurrent_queue(_InputIterator _Begin,
 ~concurrent_queue();
 ```
 
-## <a name="empty"></a><a name="empty"></a>空白处
+## <a name="empty"></a><a name="empty"></a> 空白处
 
 测试在调用此方法时并发队列是否为空。 此方法是并发安全方法。
 
@@ -173,7 +174,7 @@ bool empty() const;
 
 尽管此方法在调用方法、和时是并发安全的， `push` 而 `try_pop` `empty` 返回的值在被调用线程检查时可能不正确。
 
-## <a name="get_allocator"></a><a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a><a name="get_allocator"></a> get_allocator
 
 返回用于构造并发队列的分配器副本。 此方法是并发安全方法。
 
@@ -185,7 +186,7 @@ allocator_type get_allocator() const;
 
 用于构造并发队列的分配器副本。
 
-## <a name="push"></a><a name="push"></a>请求
+## <a name="push"></a><a name="push"></a> 请求
 
 将项排队在并发队列的结尾处。 此方法是并发安全方法。
 
@@ -195,16 +196,16 @@ void push(const T& _Src);
 void push(T&& _Src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Src*<br/>
 要添加到队列中的项。
 
 ### <a name="remarks"></a>备注
 
-`push`与对方法、和的调用有关的并发安全 `push` `try_pop` `empty` 。
+`push` 与对方法、和的调用有关的并发安全 `push` `try_pop` `empty` 。
 
-## <a name="try_pop"></a><a name="try_pop"></a>try_pop
+## <a name="try_pop"></a><a name="try_pop"></a> try_pop
 
 从队列中取消排队一个项（如果有）。 此方法是并发安全方法。
 
@@ -212,7 +213,7 @@ void push(T&& _Src);
 bool try_pop(T& _Dest);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 对要存储取消排队项的位置的引用。
@@ -225,9 +226,9 @@ bool try_pop(T& _Dest);
 
 如果某个项已成功取消排队，则该参数将 `_Dest` 接收取消排队值，该队列中保留的原始值将被销毁，此函数将返回 **`true`** 。 如果没有要取消排队的项，则此函数 **`false`** 将返回而不进行阻止，并且不 `_Dest` 定义参数的内容。
 
-`try_pop`与对方法、和的调用有关的并发安全 `push` `try_pop` `empty` 。
+`try_pop` 与对方法、和的调用有关的并发安全 `push` `try_pop` `empty` 。
 
-## <a name="unsafe_begin"></a><a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a><a name="unsafe_begin"></a> unsafe_begin
 
 返回类型 `iterator` 或 `const_iterator` 并发队列开头的迭代器。 此方法不是并发安全方法。
 
@@ -245,7 +246,7 @@ const_iterator unsafe_begin() const;
 
 类的迭代器 `concurrent_queue` 主要用于调试，因为它们速度较慢，并且迭代不与其他队列操作有关并发安全。
 
-## <a name="unsafe_end"></a><a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a><a name="unsafe_end"></a> unsafe_end
 
 返回类型 `iterator` 或 `const_iterator` 并发队列末尾的迭代器。 此方法不是并发安全方法。
 
@@ -263,7 +264,7 @@ const_iterator unsafe_end() const;
 
 类的迭代器 `concurrent_queue` 主要用于调试，因为它们速度较慢，并且迭代不与其他队列操作有关并发安全。
 
-## <a name="unsafe_size"></a><a name="unsafe_size"></a>unsafe_size
+## <a name="unsafe_size"></a><a name="unsafe_size"></a> unsafe_size
 
 返回队列中的项数。 此方法不是并发安全方法。
 
@@ -277,8 +278,8 @@ size_type unsafe_size() const;
 
 ### <a name="remarks"></a>备注
 
-`unsafe_size`不是并发安全的，如果同时调用方法 `push` 、和，则可能产生不正确的结果 `try_pop` `empty` 。
+`unsafe_size` 不是并发安全的，如果同时调用方法 `push` 、和，则可能产生不正确的结果 `try_pop` `empty` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

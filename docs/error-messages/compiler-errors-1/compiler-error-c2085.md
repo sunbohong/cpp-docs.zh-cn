@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2085
 title: 编译器错误 C2085
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2085
 ms.assetid: 0a86785c-8e6f-481b-8c7b-412220c1950d
-ms.openlocfilehash: 7dbf7266a6330a1fdb46d7f2df90e7684f026d9a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2cd828c9a18c06c5794bef01ba861f702af2e096
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252111"
 ---
 # <a name="compiler-error-c2085"></a>编译器错误 C2085
 
 "identifier"：不在形参表中
 
-已在函数定义中声明该标识符，但在形参表中未声明。 （仅限 ANSI C）
+已在函数定义中声明该标识符，但在形参表中未声明。 仅 (ANSI C) 
 
 下面的示例生成 C2085：
 
@@ -35,4 +36,4 @@ void func1( void );
 int main( void ) {}
 ```
 
-缺少分号后，`func1()` 看起来像函数定义，而不是原型，因此 `main` 在 `func1()`中定义，从而为标识符 `main`生成错误 C2085。
+缺少分号时， `func1()` 看起来像函数定义，而不是原型，因此 `main` 在内定义 `func1()` ，从而为标识符生成错误 C2085 `main` 。

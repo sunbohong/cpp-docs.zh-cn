@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： reinterpret_cast 运算符
 title: reinterpret_cast 运算符
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - reinterpret_cast keyword [C++]
 ms.assetid: eb3283c7-7f88-467e-affd-407d37b46d6c
-ms.openlocfilehash: 33da7427adeb0a0cade2a369664d7fbd34790681
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 71b7067321c5af1e81311f7ce036c735c96193d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252436"
 ---
 # <a name="reinterpret_cast-operator"></a>reinterpret_cast 运算符
 
@@ -31,7 +32,7 @@ reinterpret_cast < type-id > ( expression )
 
 **`reinterpret_cast`** 除强制转换回其原始类型外，不能安全地使用的结果。 在最好的情况下，其他用途也是不可移植的。
 
-**`reinterpret_cast`** 运算符不能转换为 **`const`** 、 **`volatile`** 或 **`__unaligned`** 特性。 有关删除这些属性的信息，请参阅[Const_cast 运算符](../cpp/const-cast-operator.md)。
+**`reinterpret_cast`** 运算符不能转换为 **`const`** 、 **`volatile`** 或 **`__unaligned`** 特性。 有关删除这些属性的信息，请参阅 [Const_cast 运算符](../cpp/const-cast-operator.md) 。
 
 **`reinterpret_cast`** 运算符将 null 指针值转换为目标类型的 null 指针值。
 
@@ -79,7 +80,7 @@ Output:
 
 **`reinterpret_cast`** 允许将指针视为整型。 结果随后将按位移位并与自身进行“异或”运算以生成唯一的索引（具有唯一性的概率非常高）。 该索引随后被标准 C 样式强制转换截断为函数的返回类型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [转换运算符](../cpp/casting-operators.md)<br/>
 [关键字](../cpp/keywords-cpp.md)
