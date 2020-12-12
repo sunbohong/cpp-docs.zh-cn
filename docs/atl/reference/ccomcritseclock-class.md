@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComCritSecLock 类
 title: CComCritSecLock 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: fd2904f67d84db42d6b35aa4e505b063d6ea9a9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cad44f062fe75418da1f948c5f180283142779b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224287"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152095"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 类
 
@@ -27,7 +28,7 @@ ms.locfileid: "87224287"
 template<class TLock> class CComCritSecLock
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *TLock*<br/>
 要锁定和解除锁定的对象。
@@ -36,27 +37,27 @@ template<class TLock> class CComCritSecLock
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComCritSecLock::CComCritSecLock](#ctor)|构造函数。|
 |[CComCritSecLock：： ~ CComCritSecLock](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComCritSecLock：： Lock](#lock)|调用此方法可锁定临界区对象。|
 |[CComCritSecLock：： Unlock](#unlock)|调用此方法可以解锁临界区对象。|
 
 ## <a name="remarks"></a>备注
 
-使用此类可通过比[CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md)或[CComAutoCriticalSection 类](../../atl/reference/ccomautocriticalsection-class.md)更安全的方式锁定和解除锁定对象。
+使用此类可通过比 [CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md) 或 [CComAutoCriticalSection 类](../../atl/reference/ccomautocriticalsection-class.md)更安全的方式锁定和解除锁定对象。
 
 ## <a name="requirements"></a>要求
 
 **标头：** atlbase。h
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>CComCritSecLock::CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a> CComCritSecLock::CComCritSecLock
 
 构造函数。
 
@@ -64,7 +65,7 @@ template<class TLock> class CComCritSecLock
 CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *站*<br/>
 临界区对象。
@@ -76,7 +77,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 初始化临界区对象。
 
-## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>CComCritSecLock：： ~ CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a> CComCritSecLock：： ~ CComCritSecLock
 
 析构函数。
 
@@ -88,7 +89,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 
 解锁临界区对象。
 
-## <a name="ccomcritseclocklock"></a><a name="lock"></a>CComCritSecLock：： Lock
+## <a name="ccomcritseclocklock"></a><a name="lock"></a> CComCritSecLock：： Lock
 
 调用此方法可锁定临界区对象。
 
@@ -104,7 +105,7 @@ HRESULT Lock() throw();
 
 如果对象已锁定，则会在调试版本中发生断言错误。
 
-## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>CComCritSecLock：： Unlock
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a> CComCritSecLock：： Unlock
 
 调用此方法可以解锁临界区对象。
 
@@ -116,7 +117,7 @@ void Unlock() throw();
 
 如果已解除锁定对象，则会在调试版本中发生断言错误。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [CComAutoCriticalSection 类](../../atl/reference/ccomautocriticalsection-class.md)

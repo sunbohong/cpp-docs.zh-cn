@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3505
 title: 编译器错误 C3505
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3505
 ms.assetid: ed73c99e-93a1-4f3a-bac7-ba7ed5d836e4
-ms.openlocfilehash: 0c67eb46208c35c1b11a74898107ad3c0e6e570d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10727b04ce587eb56872440ad7d46dd544eb0642
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200843"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113108"
 ---
 # <a name="compiler-error-c3505"></a>编译器错误 C3505
 
@@ -19,7 +20,7 @@ ms.locfileid: "80200843"
 
 如果对64位计算机上的64位、x64 目标运行32位的 x86 托管交叉编译器，则可能会导致 C3505，这是因为编译器在 WOW64 下运行，并且只能从32位注册表配置单元中读取。
 
-您可以通过构建您尝试导入的类型库的32位和64位版本来解决此错误，然后将它们都注册。  或者，你可以使用本机64位编译器，该编译器要求你将 IDE 中的 " **VC + + 目录**" 属性更改为指向64位编译器。
+您可以通过构建您尝试导入的类型库的32位和64位版本来解决此错误，然后将它们都注册。  或者，你可以使用本机64位编译器，该编译器要求你将 IDE 中的 " **VC + + 目录** " 属性更改为指向64位编译器。
 
 有关详细信息，请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IAtlStringMgr 类
 title: IAtlStringMgr 类
 ms.date: 10/18/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: a617ba829999e9e5778bd7f0091cfb0d624dce71
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7b3aa9d8984639d42e673e96b5fcf25308a757bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166520"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 类
 
@@ -35,7 +36,7 @@ __interface IAtlStringMgr
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[分配](#allocate)|调用此方法可分配新的字符串数据结构。|
 |[克隆](#clone)|调用此方法以返回指向新字符串管理器的指针，以便与另一个实例一起使用 `CSimpleStringT` 。|
@@ -43,7 +44,7 @@ __interface IAtlStringMgr
 |[GetNilString](#getnilstring)|返回一个指针，该指针指向 `CStringData` 空字符串对象使用的对象。|
 |[给](#reallocate)|调用此方法可重新分配字符串数据结构。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此接口管理与 MFC 无关的字符串类使用的内存;例如 [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)、 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)和 [CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)。
 
@@ -61,7 +62,7 @@ __interface IAtlStringMgr
 CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nAllocLength*<br/>
 新内存块中的字符数。
@@ -76,7 +77,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 > [!NOTE]
 > 不要通过引发异常来指示失败的分配。 相反，应通过返回 NULL 来发出失败的分配信号。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用 [IAtlStringMgr：： Free](#free) 或 [IAtlStringMgr：：重新分配](#reallocate) 以释放此方法分配的内存。
 
@@ -95,7 +96,7 @@ IAtlStringMgr* Clone() throw();
 
 返回 `IAtlStringMgr` 对象的副本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于新字符串需要字符串管理器时，框架通常会调用。 在大多数情况下，将 **`this`** 返回指针。
 
@@ -112,12 +113,12 @@ IAtlStringMgr* Clone() throw();
 void Free(CStringData* pData) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pData*<br/>
 指向要释放的内存块的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 释放之前[分配或重新分配的指定](#allocate)内存块[。](../../atl/reference/iatlmemmgr-class.md#reallocate)
 
@@ -136,7 +137,7 @@ CStringData* GetNilString() throw();
 
 一个指针，指向 `CStringData` 用于表示空字符串的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可返回空字符串的表示形式。
 
@@ -157,7 +158,7 @@ CStringData* Reallocate(
     int nCharSize) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pData*<br/>
 指向此内存管理器以前分配的内存的指针。
@@ -172,16 +173,16 @@ CStringData* Reallocate(
 
 将指针返回到新分配内存块的起始位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-调用此函数可调整 *pData*指定的现有内存块的大小。
+调用此函数可调整 *pData* 指定的现有内存块的大小。
 
 调用 [IAtlStringMgr：： free](#free) 可释放由此方法分配的内存。
 
 > [!NOTE]
 > 有关用法示例，请参阅 [内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

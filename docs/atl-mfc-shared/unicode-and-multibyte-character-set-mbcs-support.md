@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Unicode 和多字节字符集 (MBCS) 支持
 title: Unicode 和多字节字符集 (MBCS) 支持
 ms.date: 01/09/2017
 helpviewer_keywords:
@@ -10,20 +11,20 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: efa90acd169aeb8739b0bf97a5ab27026cc80cc6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9e9a09777e835872a5c8bc6613460478acf9be9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831978"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166403"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode 和多字节字符集 (MBCS) 支持
 
 某些语言（如日语和中文）有大型字符集。 为了支持这些市场的编程，Microsoft 基础类库 (MFC) 启用了两种不同的方法来处理大型字符集：
 
-- [Unicode](#mfc-support-for-unicode-strings)基于 Unicode **`wchar_t`** 的宽字符和编码为 utf-16 的字符串。
+- [](#mfc-support-for-unicode-strings)基于 Unicode **`wchar_t`** 的宽字符和编码为 utf-16 的字符串。
 
-- [多字节字符集 (MBCS) ](#mfc-support-for-mbcs-strings)， **`char`** 基于特定于区域设置的字符集中编码的单字节字符和字符串。
+- [多字节字符集 (MBCS)](#mfc-support-for-mbcs-strings)， **`char`** 基于特定于区域设置的字符集中编码的单字节字符和字符串。
 
 Microsoft 建议对所有新的开发使用 MFC Unicode 库，并且在 Visual Studio 2013 和 Visual Studio 2015 中弃用了 MBCS 库。 这种情况不会再出现。 Visual Studio 2017 中消除了 MBCS 弃用警告。
 
@@ -35,30 +36,30 @@ Microsoft 建议对所有新的开发使用 MFC Unicode 库，并且在 Visual S
 
 :::row:::
    :::column span="":::
-      MFC*版本*node.js \
-      MFC*版本*UD。LIB
-      MFCM*版本*
-      MFCM*版本*UD。LIB
-      MFCS*版本*
-      MFCS*版本*UD。LIB
+      MFC *版本* node.js \
+      MFC *版本* UD。LIB
+      MFCM *版本*
+      MFCM *版本* UD。LIB
+      MFCS *版本*
+      MFCS *版本* UD。LIB
       UAFXCW.LIB
       UAFXCWD.LIB
    :::column-end:::
    :::column span="":::
-      MFC*版本*U .pdb \
-      MFC*版本*UD。板
-      MFCM*版本*
-      MFCM*版本*UD。板
-      MFCS*版本*
-      MFCS*版本*UD。板
+      MFC *版本* U .pdb \
+      MFC *版本* UD。板
+      MFCM *版本*
+      MFCM *版本* UD。板
+      MFCS *版本*
+      MFCS *版本* UD。板
       UAFXCW.板
       UAFXCWD.板
    :::column-end:::
    :::column span="":::
-      MFC*版本*U.DLL \
-      MFC*版本*UD.DLL \
-      MFCM*版本*U.DLL \
-      MFCM*版本*UD.DLL
+      MFC *版本* U.DLL \
+      MFC *版本* UD.DLL \
+      MFCM *版本* U.DLL \
+      MFCM *版本* UD.DLL
    :::column-end:::
 :::row-end:::
 
@@ -110,11 +111,11 @@ Microsoft 建议对所有新的开发使用 MFC Unicode 库，并且在 Visual S
 > [!NOTE]
 > _MBCS 和 _UNICODE 符号互相排斥。
 
-[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)中讨论了所有运行时字符串处理例程的一般文本函数映射。 有关列表，请参阅 [国际化](../c-runtime-library/internationalization.md)。
+[C Run-Time 库参考](../c-runtime-library/c-run-time-library-reference.md)中讨论了所有运行时字符串处理例程的一般文本函数映射。 有关列表，请参阅 [国际化](../c-runtime-library/internationalization.md)。
 
-同样， `CString` 方法是使用泛型数据类型映射实现的。 为了同时启用 MBCS 和 Unicode，MFC 将 TCHAR 用于 **`char`** 或 **`wchar_t`** ，LPTSTR 用于 **`char`** <strong>\*</strong> 或 `wchar_t*` ，并 LPCTSTR 用于**const char** <strong>\*</strong> 或 `const wchar_t*` 。 这可以确保 MBCS 或 Unicode 的正确映射。
+同样， `CString` 方法是使用泛型数据类型映射实现的。 为了同时启用 MBCS 和 Unicode，MFC 将 TCHAR 用于 **`char`** 或 **`wchar_t`** ，LPTSTR 用于 **`char`** <strong>\*</strong> 或 `wchar_t*` ，并 LPCTSTR 用于 **const char** <strong>\*</strong> 或 `const wchar_t*` 。 这可以确保 MBCS 或 Unicode 的正确映射。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATL/MFC (字符串) ](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [字符串操作](../c-runtime-library/string-manipulation-crt.md)

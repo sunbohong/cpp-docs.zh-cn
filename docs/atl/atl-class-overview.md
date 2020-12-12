@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： ATL 类概述
 title: ATL 类概述
 ms.date: 11/04/2016
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: 7480bc19ad4a49c0fb816bca5f1fed13f470030b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a35fd7b178082e81e7cc43ff037f2fc083ef4b67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166052"
 ---
 # <a name="atl-class-overview"></a>ATL 类概述
 
@@ -49,11 +50,11 @@ ms.locfileid: "88831926"
 [线程模型和关键部分](../atl/threading-models-and-critical-sections-classes.md)\
 [UI 支持](../atl/ui-support-classes.md)\
 [Windows 支持](../atl/windows-support-classes.md)\
-[实用工具](../atl/utility-classes.md)
+[实用程序](../atl/utility-classes.md)
 
 有关可在 ATL 项目中使用的其他类，请参阅 [共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](../atl/reference/atl-classes.md)<br/>
 [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)<br/>

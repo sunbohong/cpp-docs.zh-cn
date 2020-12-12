@@ -1,21 +1,22 @@
 ---
+description: 了解更多： ATL 复合控件基础知识
 title: ATL 复合控件基础知识
 ms.date: 11/04/2016
 helpviewer_keywords:
 - composite controls, about composite controls
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
-ms.openlocfilehash: 96a7b84b40dd74f42944e61cfd219638907502c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bb1bd1f79805cedc83e1c247066f5515ae6964e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223368"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165961"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 复合控件基础知识
 
-复合控件是一种 ActiveX 控件可以包含 （类似于一个对话框） 的其他 ActiveX 控件或 Windows 控件。 一旦生成复合控件，它可以插入任何位置可以承载 ActiveX 控件。
+复合控件是一种 ActiveX 控件，它可以包含类似于对话框) 其他 ActiveX 控件或 Windows 控件的 (。 生成复合控件后，可以将其插入到可承载 ActiveX 控件的任何位置。
 
-ATL 项目向导和**添加类**对话框的自动执行创建和实现复合控件项目，类似于正在运行的应用程序向导创建 MFC 应用程序框架的结果的过程。 在开发过程由五个步骤组成：
+ATL 项目向导和 " **添加类** " 对话框自动执行创建和实现复合控件项目的过程，这类似于运行应用程序向导创建 MFC 应用程序框架的结果。 开发过程包括以下五个步骤：
 
 - [创建 ATL 项目](../atl/reference/creating-an-atl-project.md)
 
@@ -23,7 +24,7 @@ ATL 项目向导和**添加类**对话框的自动执行创建和实现复合控
 
 - [修改 ATL 项目](../atl/modifying-the-atl-project.md)
 
-- [将功能添加到复合控件](../atl/adding-functionality-to-the-composite-control.md)
+- [向复合控件添加功能](../atl/adding-functionality-to-the-composite-control.md)
 
 - [生成和测试 ATL 项目](../atl/building-and-testing-the-atl-project.md)
 

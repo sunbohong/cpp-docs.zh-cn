@@ -1,34 +1,35 @@
 ---
+description: '了解详细信息：向控件添加属性 (ATL 教程，第3部分) '
 title: 向控件中添加属性（ATL 教程，第 3 部分）
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-ms.openlocfilehash: c5f71880f780e793cd77eb5a7571d31de4a8d01a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22a44b6878afd6d51fb396d8f02a60e93436cf05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218996"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166325"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>向控件中添加属性（ATL 教程，第 3 部分）
 
-`IPolyCtl`是包含控件的自定义方法和属性的接口，您将向其添加属性。
+`IPolyCtl` 是包含控件的自定义方法和属性的接口，您将向其添加属性。
 
 ### <a name="to-add-the-property-definitions-to-your-project"></a>将属性定义添加到项目中
 
-1. 在**类视图**中，展开 `Polygon` 分支。
+1. 在 **类视图** 中，展开 `Polygon` 分支。
 
 1. 右键单击 `IPolyCtl` 。
 
-1. 在快捷菜单上，单击 "**添加**"，然后单击 "**添加属性**"。 "**添加属性**向导" 随即出现。
+1. 在快捷菜单上，单击 " **添加**"，然后单击 " **添加属性**"。 " **添加属性** 向导" 随即出现。
 
-1. 键入 `Sides` 作为**属性名称**。
+1. 键入 `Sides` 作为 **属性名称**。
 
-1. 在 "**属性类型**" 下拉列表中，选择 **`short`** 。
+1. 在 " **属性类型**" 下拉列表中，选择 **`short`** 。
 
 1. 单击 **"确定"** 完成添加属性。
 
-1. 在**解决方案资源管理器**中，打开多边形 .idl 并将以下行替换到接口的末尾 `IPolyCtl : IDispatch` ：
+1. 在 **解决方案资源管理器** 中，打开多边形 .idl 并将以下行替换到接口的末尾 `IPolyCtl : IDispatch` ：
 
     ```cpp
     short get_Sides();
@@ -42,7 +43,7 @@ ms.locfileid: "87218996"
     [propput, id(1), helpstring("property Sides")] HRESULT Sides([in] short newVal);
     ```
 
-1. 在**解决方案资源管理器**中，打开 polyctl.htm 并在定义后添加以下行 `m_clrFillColor` ：
+1. 在 **解决方案资源管理器** 中，打开 polyctl.htm 并在定义后添加以下行 `m_clrFillColor` ：
 
     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]
 
@@ -62,8 +63,8 @@ ms.locfileid: "87218996"
 
 现在有一个名为的属性 `Sides` 。 在下一步中，你将更改绘图代码以使用该代码。
 
-[返回](../atl/adding-a-control-atl-tutorial-part-2.md)到步骤 2 &#124;[到步骤 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+[返回](../atl/adding-a-control-atl-tutorial-part-2.md) 到步骤 2 &#124; [到步骤 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [教程](../atl/active-template-library-atl-tutorial.md)

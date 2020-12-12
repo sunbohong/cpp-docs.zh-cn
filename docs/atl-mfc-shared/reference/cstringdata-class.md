@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CStringData 类
 title: CStringData 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 140836f45ed2f4088bc0baed67676f93cb268d01
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 74bf3563cb5dca506498ceef05ddc84f13c44f41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832108"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166585"
 ---
 # <a name="cstringdata-class"></a>CStringData 类
 
@@ -40,7 +41,7 @@ struct CStringData
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AddRef](#addref)|递增字符串数据对象的引用计数。|
 |[data](#data)|检索字符串对象的字符数据。|
@@ -48,18 +49,18 @@ struct CStringData
 |[IsShared](#isshared)|确定关联的字符串对象的缓冲区当前是否共享。|
 |[Lock](#lock)|锁定关联的字符串对象的缓冲区。|
 |[版本](#release)|释放指定的字符串对象。|
-|[解锁](#unlock)|解锁关联的字符串对象的缓冲区。|
+|[Unlock](#unlock)|解锁关联的字符串对象的缓冲区。|
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[nAllocLength](#nalloclength)|中已分配数据的长度 `XCHAR` (不包括终止 null) |
 |[nDataLength](#ndatalength)|S 中当前使用的数据的长度 `XCHAR` (不包括终止 null) |
 |[nRefs](#nrefs)|对象的当前引用计数。|
 |[pStringMgr](#pstringmgr)|指向此字符串对象的字符串管理器的指针。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类应仅由实现自定义字符串管理器的开发人员使用。 有关自定义字符串管理器的详细信息，请参阅 [内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)
 
@@ -95,7 +96,7 @@ struct CStringData
 void AddRef() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 递增字符串对象的引用计数。
 
@@ -114,7 +115,7 @@ void* data() throw();
 
 指向字符串对象的字符缓冲区的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可返回关联字符串对象的当前字符缓冲区。
 
@@ -133,7 +134,7 @@ bool IsLocked() const throw();
 
 如果缓冲区被锁定，则返回 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可确定字符串对象的字符缓冲区当前是否处于锁定状态。
 
@@ -149,7 +150,7 @@ bool IsShared() const throw();
 
 如果缓冲区是共享的，则返回 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可确定字符串数据对象的字符缓冲区当前是否在多个字符串对象之间共享。
 
@@ -161,7 +162,7 @@ bool IsShared() const throw();
 void Lock() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可锁定字符串数据对象的字符缓冲区。 当开发人员需要直接访问字符缓冲区时，可以使用锁定和解锁。 [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示了锁定的一个很好示例 `CSimpleStringT` 。
 
@@ -176,7 +177,7 @@ void Lock() throw();
 int nAllocLength;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在中存储已分配数据缓冲区的长度， `XCHAR` 不包括终止 null)  (。
 
@@ -188,7 +189,7 @@ int nAllocLength;
 int nDataLength;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将当前使用的数据的长度存储 `XCHAR` (不包括终止 null) 。
 
@@ -200,7 +201,7 @@ int nDataLength;
 long nRefs;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 存储字符串数据对象的引用计数。 此计数指示与字符串数据对象相关联的字符串对象的数量。 负值表示字符串数据对象当前已锁定。
 
@@ -212,7 +213,7 @@ long nRefs;
 IAtlStringMgr* pStringMgr;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 存储关联的字符串对象的内存管理器。 有关内存管理器和字符串的详细信息，请参阅 [内存管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
@@ -224,7 +225,7 @@ IAtlStringMgr* pStringMgr;
 void Release() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果引用数达到零，则调用此函数以减少引用计数，释放 `CStringData` 结构。 这通常是在删除字符串对象时完成的，因此不再需要引用字符串数据对象。
 
@@ -240,7 +241,7 @@ void Release() throw();
 void Unlock() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此函数可解锁字符串数据对象的字符缓冲区。 锁定缓冲区后，它是可共享的，并且可以进行引用计数。
 
@@ -249,7 +250,7 @@ void Unlock() throw();
 
 当开发人员必须确保不共享字符串数据时，可以使用锁定和解锁。 [LockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer)和[UnlockBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer)方法演示了锁定的一个很好示例 `CSimpleStringT` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共享类](../../atl-mfc-shared/atl-mfc-shared-classes.md)

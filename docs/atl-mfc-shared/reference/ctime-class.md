@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CTime 类
 title: CTime 类
 ms.date: 10/18/2018
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: d551698a81921227dd0d7b7d80436bba960ed176
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3768423a4d3bf873e9161b846e21fda4beffdc9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832030"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166598"
 ---
 # <a name="ctime-class"></a>CTime 类
 
@@ -45,13 +46,13 @@ class CTime
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CTime：： CTime](#ctime)|`CTime`以多种方式构造对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CTime：： Format](#format)|`CTime`根据本地时区，将对象转换为带格式的字符串。|
 |[CTime：： FormatGmt](#formatgmt)|将 `CTime` 对象转换为基于 UTC 的格式化字符串。|
@@ -72,14 +73,14 @@ class CTime
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator +-](#operator_add_-)|这些运算符添加并减去 `CTimeSpan` 和 `CTime` 对象。|
 |[operator + =，-=](#operator_add_eq_-_eq)|这些运算符 `CTimeSpan` 可在此对象中添加和减去对象 `CTime` 。|
 |[operator =](#operator_eq)|赋值运算符。|
 |[operator = =、< 等。](#ctime_comparison_operators)|比较运算符。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CTime` 没有基类。
 
@@ -94,10 +95,10 @@ class CTime
 > [!NOTE]
 > 上限日期限制为12/31/3000。 下限为 1/1/1970 12:00:00 AM GMT。
 
-有关使用的详细信息 `CTime` ，请参阅文章 [日期和时间](../../atl-mfc-shared/date-and-time.md)和运行时库参考中的 [时间管理](../../c-runtime-library/time-management.md) 。
+有关使用的详细信息 `CTime` ，请参阅文章 [日期和时间](../../atl-mfc-shared/date-and-time.md)以及 "Run-Time 库参考中的 [时间管理](../../c-runtime-library/time-management.md) "。
 
 > [!NOTE]
-> `CTime`结构从 mfc 7.1 更改为 mfc 8.0。 如果 `CTime` 使用 ** <<运算符 ** 在 mfc 8.0 或更高版本下序列化结构，将无法在较旧版本的 mfc 上读取生成的文件。
+> `CTime`结构从 mfc 7.1 更改为 mfc 8.0。 如果 `CTime` 使用 **<<运算符** 在 mfc 8.0 或更高版本下序列化结构，将无法在较旧版本的 mfc 上读取生成的文件。
 
 ## <a name="requirements"></a>要求
 
@@ -116,7 +117,7 @@ bool operator<=(CTime time) const throw();
 bool operator>=(CTime time) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *time*<br/>
 要比较的 `CTime` 对象。
@@ -144,7 +145,7 @@ CTime(const FILETIME& ft, int nDST = - 1);
 CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *timeSrc*<br/>
 指示 `CTime` 已存在的对象。
@@ -167,7 +168,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 *wDosDate*、 *wDosTime*<br/>
 要转换为日期/时间值并将其复制到新对象中的 MS-DOS 日期和时间值 `CTime` 。
 
-*st*<br/>
+*停止*<br/>
 要转换为日期/时间值并将其复制到新的对象中的 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 结构 `CTime` 。
 
 *英尺*<br/>
@@ -176,7 +177,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 *dbts*<br/>
 对包含当前本地时间的 DBTIMESTAMP 结构的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个构造函数如下所述：
 
@@ -184,7 +185,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 
 - `CTime( const CTime& );``CTime`从另一个值构造对象 `CTime` 。
 
-- `CTime( __time64_t );``CTime`从 **__time64_t**类型构造对象。 此构造函数需要 UTC 时间，并在存储结果之前将结果转换为本地时间。
+- `CTime( __time64_t );``CTime`从 **__time64_t** 类型构造对象。 此构造函数需要 UTC 时间，并在存储结果之前将结果转换为本地时间。
 
 - `CTime( int, int, ...);``CTime`从本地时间组件构造对象，每个组件都受限于以下范围：
 
@@ -223,7 +224,7 @@ CString Format(LPCTSTR pszFormat) const;
 CString Format(UINT nFormatID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszFormat*<br/>
 格式字符串类似于格式设置 `printf` 字符串。 格式设置代码（前面以百分号 (`%`) 符号）将替换为相应的 `CTime` 组件。 格式字符串中的其他字符将按原样复制到返回的字符串中。 有关格式设置代码的列表，请参阅运行时函数 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 。
@@ -235,7 +236,7 @@ CString Format(UINT nFormatID) const;
 
 包含格式化时间的 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果此对象的状态 `CTime` 为 null，则返回值为空字符串。
 
@@ -254,7 +255,7 @@ CString FormatGmt(LPCTSTR pszFormat) const;
 CString FormatGmt(UINT nFormatID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszFormat*<br/>
 指定类似于格式设置字符串的格式设置字符串 `printf` 。 有关详细信息，请参阅运行时函数 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) 。
@@ -266,7 +267,7 @@ CString FormatGmt(UINT nFormatID) const;
 
 包含格式化时间的 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 不转换时间值，因此反映 UTC。
 
@@ -284,7 +285,7 @@ CString FormatGmt(UINT nFormatID) const;
 bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dbts*<br/>
 对包含当前本地时间的 DBTIMESTAMP 结构的引用。
@@ -293,7 +294,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在引用的 *dbts* 结构中存储生成的时间。 `DBTIMESTAMP`此函数初始化的数据结构将其 `fraction` 成员设置为零。
 
@@ -309,7 +310,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *timeDest*<br/>
 对 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime) 结构的引用，该结构将保存对象的转换日期/时间值 `CTime` 。
@@ -318,7 +319,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 若成功，则为 TRUE；否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `GetAsSystemTime` 在引用的 *timeDest* 结构中存储生成的时间。 `SYSTEMTIME`此函数初始化的数据结构将其 `wMilliseconds` 成员设置为零。
 
@@ -334,7 +335,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 static CTime WINAPI GetCurrentTime() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 以协调世界时 (UTC) 返回当前系统日期和时间。
 
@@ -354,7 +355,7 @@ int GetDay() const throw();
 
 返回一个月中的第几天，根据本地时间，范围为1到31。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将调用 `GetLocalTm` ，该函数使用内部静态分配的缓冲区。 由于对其他成员函数的调用，此缓冲区中的数据将被覆盖 `CTime` 。
 
@@ -374,7 +375,7 @@ int GetDayOfWeek() const throw();
 
 基于当地时间返回一周中的第几天;1 = 星期日，2 = 星期一，7 = 星期六。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将调用 `GetLocalTm` ，该函数使用内部静态分配的缓冲区。 由于对其他成员函数的调用，此缓冲区中的数据将被覆盖 `CTime` 。
 
@@ -390,16 +391,16 @@ int GetDayOfWeek() const throw();
 struct tm* GetGmtTm(struct tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptm*<br/>
 指向将接收时间数据的缓冲区。 如果此指针为 NULL，则会引发异常。
 
 ### <a name="return-value"></a>返回值
 
-指向在包含文件时间中定义的已填充的 **结构 tm** 的指针。高. 请参阅结构布局的 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 。
+一个指针，指向在包含文件时间 .H 中定义的已填充的 **结构 tm** 。 请参阅结构布局的 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `GetGmtTm` 返回 UTC。
 
@@ -421,7 +422,7 @@ int GetHour() const throw();
 
 根据本地时间，返回介于0到23之间的小时。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将调用 `GetLocalTm` ，该函数使用内部静态分配的缓冲区。 由于对其他成员函数的调用，此缓冲区中的数据将被覆盖 `CTime` 。
 
@@ -437,16 +438,16 @@ int GetHour() const throw();
 struct tm* GetLocalTm(struct tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptm*<br/>
 指向将接收时间数据的缓冲区。 如果此指针为 NULL，则会引发异常。
 
 ### <a name="return-value"></a>返回值
 
-指向在包含文件时间中定义的已填充的 **结构 tm** 的指针。高. 请参阅结构布局的 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 。
+一个指针，指向在包含文件时间 .H 中定义的已填充的 **结构 tm** 。 请参阅结构布局的 [gmtime、_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `GetLocalTm` 返回本地时间。
 
@@ -468,7 +469,7 @@ int GetMinute() const throw();
 
 返回从0到59范围内的本地时间的分钟数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将调用 `GetLocalTm` ，该函数使用内部静态分配的缓冲区。 由于对其他成员函数的调用，此缓冲区中的数据将被覆盖 `CTime` 。
 
@@ -488,7 +489,7 @@ int GetMonth() const throw();
 
 根据本地时间返回的月份，范围为1到 12 (1 = 一月) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将调用 `GetLocalTm` ，该函数使用内部静态分配的缓冲区。 由于对其他成员函数的调用，此缓冲区中的数据将被覆盖 `CTime` 。
 
@@ -508,7 +509,7 @@ int GetSecond() const throw();
 
 根据本地时间，返回介于0到59范围内的第二个。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将调用 `GetLocalTm` ，该函数使用内部静态分配的缓冲区。 由于对其他成员函数的调用，此缓冲区中的数据将被覆盖 `CTime` 。
 
@@ -544,7 +545,7 @@ int GetYear();
 
 返回基于当地时间的年份，范围为1970年1月1日到2038年1月18日， (包含) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将调用 `GetLocalTm` ，该函数使用内部静态分配的缓冲区。 由于对其他成员函数的调用，此缓冲区中的数据将被覆盖 `CTime` 。
 
@@ -560,7 +561,7 @@ int GetYear();
 CTime& operator=(__time64_t time) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *time*<br/>
 新的日期/时间值。
@@ -569,7 +570,7 @@ CTime& operator=(__time64_t time) throw();
 
 已更新的 `CTime` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此重载赋值运算符将源时间复制到此 `CTime` 对象中。 对象中的内部时间存储 `CTime` 独立于时区。 分配期间不需要时区转换。
 
@@ -583,7 +584,7 @@ CTime operator-(CTimeSpan timeSpan) const throw();
 CTimeSpan operator-(CTime time) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *时间*<br/>
 `CTimeSpan`要添加或减去的对象。
@@ -595,7 +596,7 @@ CTimeSpan operator-(CTime time) const throw();
 
 `CTime` `CTimeSpan` 表示操作结果的或对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CTime` 对象表示绝对时间， `CTimeSpan` 对象表示相对时间。 前两个运算符允许在对象之间添加和减少 `CTimeSpan` 对象 `CTime` 。 第三个运算符允许您从一个 `CTime` 对象中减去另一个对象以生成一个 `CTimeSpan` 对象。
 
@@ -612,7 +613,7 @@ CTime& operator+=(CTimeSpan span) throw();
 CTime& operator-=(CTimeSpan span) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *格*<br/>
 `CTimeSpan`要添加或减去的对象。
@@ -621,7 +622,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 已更新的 `CTime` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通过这些运算符，可以在 `CTimeSpan` 此对象中添加和减去对象 `CTime` 。
 
@@ -640,7 +641,7 @@ CTime& operator-=(CTimeSpan span) throw();
 CArchive& Serialize64(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 `CArchive`要更新的对象。
@@ -649,7 +650,7 @@ CArchive& Serialize64(CArchive& ar);
 
 已更新的 `CArchive` 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)<br/>
 [_ftime_s、_ftime32_s、_ftime64_s](../../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)<br/>

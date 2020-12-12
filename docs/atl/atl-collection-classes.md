@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ATL 集合类
 title: ATL 集合类概述
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: 039af388a3713540c6ba7d39e8b639cf83d291ff
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 32d9fe928024d82af7031fbbb8d88aba5e3eae31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040855"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166078"
 ---
 # <a name="atl-collection-classes"></a>ATL 集合类
 
@@ -50,8 +51,8 @@ ATL 提供以下用于处理少量对象的数组类。 但是，这些类受到
 |[CAtlArray](../atl/reference/catlarray-class.md)|实现数组。|
 |[CAtlList](../atl/reference/catllist-class.md)|实现列表。|
 |[CAtlMap](../atl/reference/catlmap-class.md)|实现一个映射结构，通过该键或值来引用数据。|
-|[CRBMap](../atl/reference/crbmap-class.md)|使用红黑色算法实现映射结构。|
-|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|实现 Red-黑色 multimapping 结构。|
+|[CRBMap](../atl/reference/crbmap-class.md)|使用 Red-Black 算法实现映射结构。|
+|[CRBMultiMap](../atl/reference/crbmultimap-class.md)|实现 Red-Black multimapping 结构。|
 
 在调试版本中使用时，这些类将捕获许多编程错误，但为了提高性能，将不会在零售版本中执行这些检查。
 
@@ -59,7 +60,7 @@ ATL 提供以下用于处理少量对象的数组类。 但是，这些类受到
 
 还提供了更多专用集合类用于管理内存指针和接口指针：
 
-|类|目的|
+|类|目标|
 |-----------|-------------|
 |[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|提供在构造智能指针数组时有用的方法。|
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|提供在构造智能指针列表时有用的方法。|
@@ -84,11 +85,11 @@ ATL 提供以下用于处理少量对象的数组类。 但是，这些类受到
 
 |形状|已订购|已编制索引|插入<br /><br /> element|搜索<br /><br /> 指定元素|复制<br /><br /> 元素|
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|
-|列表|是|否|快速 (常量时间) |慢 O (n) |是|
+|列出|是|否|快速 (常量时间) |慢 O (n) |是|
 |Array|是|按 int (常量时间) |慢 O (n) ，除非在结尾处插入，在这种情况下，常量时间|慢 O (n) |是|
 |映射|否|按键 (常量时间) |快速 (常量时间) |快速 (常量时间) |否（键）是（值）|
-|红色-黑色地图|是 (按键) |按键 O (日志 n) |Fast O (日志 n) |Fast O (日志 n) |否|
-|红色-黑色多重映射|是 (按键) |按键 O (日志 n) 每个密钥 (多个值) |Fast O (日志 n) |Fast O (日志 n) |是 (每个键) 多个值|
+|Red-Black 映射|是 (按键) |按键 O (日志 n) |Fast O (日志 n) |Fast O (日志 n) |否|
+|Red-Black 多重映射|是 (按键) |按键 O (日志 n) 每个密钥 (多个值) |Fast O (日志 n) |Fast O (日志 n) |是 (每个键) 多个值|
 
 ## <a name="using-ctraits-objects"></a>使用 CTraits 对象
 
@@ -124,7 +125,7 @@ CTraits 类类似于 MFC 集合类 helper 函数，但更灵活：有关详细�
 
 - [天棚示例](../overview/visual-cpp-samples.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [集合类](../atl/collection-classes.md)

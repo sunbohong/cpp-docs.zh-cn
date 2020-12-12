@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CTimeSpan 类
 title: CTimeSpan 类
 ms.date: 10/18/2018
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - shared classes, CTimeSpan
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
-ms.openlocfilehash: 0c13aa0d8f6c46db3b018283ab2a408a3f9531e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b15fa247baaa4de77c5caab12d584a80321b9420
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166572"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 类
 
@@ -44,13 +45,13 @@ class CTimeSpan
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CTimeSpan::CTimeSpan](#ctimespan)|`CTimeSpan`以多种方式构造对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CTimeSpan：： Format](#format)|将转换为 `CTimeSpan` 带格式的字符串。|
 |[CTimeSpan::GetDays](#getdays)|返回一个值，该值表示此中的完整天数 `CTimeSpan` 。|
@@ -65,25 +66,25 @@ class CTimeSpan
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator +-](#operator_add_-)|添加和减少 `CTimeSpan` 对象。|
 |[operator + =-=](#operator_add_eq_-_eq)|在 `CTimeSpan` 此向和向中添加对象 `CTimeSpan` 。|
 |[operator = = < 等。](#ctimespan_comparison_operators)|比较两个相对时间值。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CTimeSpan` 没有基类。
 
 `CTimeSpan` 函数将秒转换为不同的天数、小时数、分钟数和秒数的组合。
 
-`CTimeSpan`对象存储在 **__time64_t**结构中，该结构是8个字节。
+`CTimeSpan`对象存储在 **__time64_t** 结构中，该结构是8个字节。
 
 伴生类 [CTime](../../atl-mfc-shared/reference/ctime-class.md)表示绝对时间。
 
 `CTime`和 `CTimeSpan` 类不用于派生。 由于没有虚函数， `CTime` 因此和对象的大小 `CTimeSpan` 正好为8个字节。 大多数成员函数是内联的。
 
-有关使用的详细信息 `CTimeSpan` ，请参阅文章[日期和时间](../../atl-mfc-shared/date-and-time.md)和*运行时库参考*中的[时间管理](../../c-runtime-library/time-management.md)。
+有关使用的详细信息 `CTimeSpan` ，请参阅文章 [日期和时间](../../atl-mfc-shared/date-and-time.md)和 *运行时库参考* 中的 [时间管理](../../c-runtime-library/time-management.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -102,7 +103,7 @@ bool operator<=(CTimeSpan span) const throw();
 bool operator>=(CTimeSpan span) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *格*<br/>
 要比较的对象。
@@ -130,7 +131,7 @@ CTimeSpan(
     int nSecs) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *timeSpanSrc*<br/>
 `CTimeSpan`已存在的对象。
@@ -141,7 +142,7 @@ CTimeSpan(
 *lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 分别为天、小时、分钟和秒。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所有这些构造函数创建一个 `CTimeSpan` 使用指定的相对时间初始化的新对象。 每个构造函数如下所述：
 
@@ -149,7 +150,7 @@ CTimeSpan(
 
 - `CTimeSpan( const CTimeSpan& );``CTimeSpan`从另一个值构造对象 `CTimeSpan` 。
 
-- `CTimeSpan( __time64_t );``CTimeSpan`从 **__time64_t**类型构造对象。
+- `CTimeSpan( __time64_t );``CTimeSpan`从 **__time64_t** 类型构造对象。
 
 - `CTimeSpan( LONG, int, int, int );` 构造一个 `CTimeSpan` 对象，其中每个组件都受限于以下范围：
 
@@ -176,7 +177,7 @@ CString Format(LPCTSTR pszFormat) const;
 CString Format(UINT nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFormat*、 *pszFormat*<br/>
 格式字符串类似于格式设置 `printf` 字符串。 格式设置代码（前面以百分号 (`%`) 符号）将替换为相应的 `CTimeSpan` 组件。 格式字符串中的其他字符将按原样复制到返回的字符串中。 下面列出了的格式设置代码的值和含义 `Format` ：
@@ -198,7 +199,7 @@ CString Format(UINT nID) const;
 
 一个 `CString` 包含格式化时间的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果代码不在上面的列表中，则库的调试版本将检查格式设置代码和断言。
 
@@ -218,7 +219,7 @@ LONGLONG GetDays() const throw();
 
 返回时间范围内的完整24小时数。 如果时间跨度为负数，此值可能为负数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，夏令时可能会导致 `GetDays` 返回可能令人惊讶的结果。 例如，当 DST 生效时，将 `GetDays` 报告4月1日到5月1日之间的天数，而不是30，因为4月的一天缩短了一小时，因此不计为完整的一天。
 
@@ -343,7 +344,7 @@ CTimeSpan operator+(CTimeSpan span) const throw();
 CTimeSpan operator-(CTimeSpan span) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *格*<br/>
 要添加到对象的值 `CTimeSpan` 。
@@ -352,7 +353,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 `CTimeSpan`表示操作结果的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 利用这两个运算符，您可以在 `CTimeSpan` 对象之间添加和减少对象。
 
@@ -369,7 +370,7 @@ CTimeSpan& operator+=(CTimeSpan span) throw();
 CTimeSpan& operator-=(CTimeSpan span) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *格*<br/>
 要添加到对象的值 `CTimeSpan` 。
@@ -378,7 +379,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 已更新的 `CTimeSpan` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通过这些运算符，可以在此添加和减少 `CTimeSpan` 对象 `CTimeSpan` 。
 
@@ -397,7 +398,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 CArchive& Serialize64(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 `CArchive`要更新的对象。
@@ -406,7 +407,7 @@ CArchive& Serialize64(CArchive& ar);
 
 已更新的 `CArchive` 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)<br/>
 [_ftime, _ftime32, _ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： `/Zc:auto` (推导变量类型) '
 title: /Zc:auto（推导变量类型）
 ms.date: 02/28/2018
 f1_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 6bb1c8f2b14c483cbd46ecb6534a33db020e23e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d20f377fc653e9c3cceb5c3e81b5e5e8a815bcad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114710"
 ---
 # <a name="zcauto-deduce-variable-type"></a>`/Zc:auto` (推导变量类型) 
 
-**`/Zc:auto`** 编译器选项告知编译器如何使用[ `auto` 关键字](../../cpp/auto-cpp.md)来声明变量。 如果指定默认选项， **`/Zc:auto`** 则编译器会从其初始化表达式中推导声明的变量的类型。 如果指定 **`/Zc:auto-`** ，则编译器会将该变量分配给自动存储类。
+**`/Zc:auto`** 编译器选项告知编译器如何使用 [ `auto` 关键字](../../cpp/auto-cpp.md)来声明变量。 如果指定默认选项， **`/Zc:auto`** 则编译器会从其初始化表达式中推导声明的变量的类型。 如果指定 **`/Zc:auto-`** ，则编译器会将该变量分配给自动存储类。
 
 ## <a name="syntax"></a>语法
 
 > **`/Zc:auto`**[**`-`**]
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 C + + 标准定义关键字的原始和修订的含义 **`auto`** 。 在 Visual Studio 2010 之前，关键字在自动存储类中声明变量;即具有本地生存期的变量。 从 Visual Studio 2010 开始，关键字推导声明的初始化表达式中的变量的类型。 使用 **`/Zc:auto`** 编译器选项告知编译器使用关键字的修订含义 **`auto`** 。 **`/Zc:auto`** 默认情况下，此选项处于启用状态。 [`/permissive-`](permissive-standards-conformance.md)选项不会更改的默认设置 **`/Zc:auto`** 。
 

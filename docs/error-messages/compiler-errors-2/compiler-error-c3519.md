@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3519
 title: 编译器错误 C3519
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3519
 ms.assetid: ca24b2bc-7e90-4448-ae84-3fedddf9bca7
-ms.openlocfilehash: 7e56ff814b1a2dd6ec3cb41db2cbcc21d7dcf2d9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f8eb90620894627beab450275c6725d665d837e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74750164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113074"
 ---
 # <a name="compiler-error-c3519"></a>编译器错误 C3519
 
 "invalid_param"： embedded_idl 特性的参数无效
 
-参数被传递到[#import](../../preprocessor/hash-import-directive-cpp.md)的 `embedded_idl` 属性，但编译器不能识别参数。
+参数被传递到 #import 的 `embedded_idl` 属性， [](../../preprocessor/hash-import-directive-cpp.md)但编译器不能识别参数。
 
-`embedded_idl` 允许的唯一参数 `emitidl` 和 `no_emitidl`。
+允许的唯一参数 `embedded_idl` 是 `emitidl` 和 `no_emitidl` 。
 
 下面的示例生成 C3519：
 

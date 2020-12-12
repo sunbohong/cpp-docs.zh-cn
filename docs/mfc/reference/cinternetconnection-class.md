@@ -1,5 +1,6 @@
 ---
-title: C 互联网连接类
+description: 了解详细信息： CInternetConnection 类
+title: CInternetConnection 类
 ms.date: 11/04/2016
 f1_keywords:
 - CInternetConnection
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: 6649986f279e010a833b31157922cb4fd1ea8613
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ae869e8cbf3bbfb3ce19e78088a465ae1d6aa65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372426"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143541"
 ---
-# <a name="cinternetconnection-class"></a>C 互联网连接类
+# <a name="cinternetconnection-class"></a>CInternetConnection 类
 
 管理与 Internet 服务器的连接。
 
@@ -35,31 +36,31 @@ class CInternetConnection : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[C 网连接：C 网连接](#cinternetconnection)|构造 `CInternetConnection` 对象。|
+|[CInternetConnection：： CInternetConnection](#cinternetconnection)|构造 `CInternetConnection` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[C 互联网连接：获取上下文](#getcontext)|获取此连接对象的上下文 ID。|
-|[C 互联网连接：：获取服务器名称](#getservername)|获取与连接关联的服务器的名称。|
-|[C 互联网连接：获取会话](#getsession)|获取指向与连接关联的[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象的指针。|
+|[CInternetConnection：： GetContext](#getcontext)|获取此连接对象的上下文 ID。|
+|[CInternetConnection：： GetServerName](#getservername)|获取与连接关联的服务器的名称。|
+|[CInternetConnection：： GetSession](#getsession)|获取一个指针，该指针指向与连接相关联的 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 对象。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[C网连接：：运营商HINTERNET](#operator_hinternet)|互联网会话的句柄。|
+|[CInternetConnection：： operator HINTERNET](#operator_hinternet)|Internet 会话的句柄。|
 
 ## <a name="remarks"></a>备注
 
-它是 MFC 类[CFtpConnection、CHttpConnection](../../mfc/reference/cftpconnection-class.md)和[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)的基类。 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 每个类都提供了与相应的 FTP、HTTP 或 gopher 服务器通信的其他功能。
+它是 MFC 类 [CFtpConnection](../../mfc/reference/cftpconnection-class.md)、 [CHttpConnection](../../mfc/reference/chttpconnection-class.md)和 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md)的基类。 其中每个类都提供附加功能，用于与相应的 FTP、HTTP 或 gopher 服务器进行通信。
 
-要直接与 Internet 服务器通信，您必须具有[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象和`CInternetConnection`对象。
+若要与 Internet 服务器直接通信，必须有一个 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 对象和一个 `CInternetConnection` 对象。
 
-要了解有关 WinInet 类如何工作的更多信息，请参阅[使用 WinInet 进行 Internet 编程的文章](../../mfc/win32-internet-extensions-wininet.md)。
+若要详细了解 WinInet 类的工作方式，请参阅文章 [使用 WinInet 进行 Internet 编程](../../mfc/win32-internet-extensions-wininet.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -69,11 +70,11 @@ class CInternetConnection : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxinet.h
+**标头：** afxinet。h
 
-## <a name="cinternetconnectioncinternetconnection"></a><a name="cinternetconnection"></a>C 网连接：C 网连接
+## <a name="cinternetconnectioncinternetconnection"></a><a name="cinternetconnection"></a> CInternetConnection：： CInternetConnection
 
-创建`CInternetConnection`对象时将调用此成员函数。
+当创建对象时，将调用此成员函数 `CInternetConnection` 。
 
 ```
 CInternetConnection(
@@ -83,35 +84,35 @@ CInternetConnection(
     DWORD_PTR dwContext = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p 会话*<br/>
-指向[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象的指针。
+*pSession*<br/>
+指向 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 对象的指针。
 
 *pstrServer*<br/>
 指向包含服务器名称的字符串的指针。
 
-*n波特*<br/>
-标识此连接的 Internet 端口的数字。
+*nPort*<br/>
+标识此连接的 Internet 端口的编号。
 
 *dwContext*<br/>
-`CInternetConnection`对象的上下文标识符。 有关*dwContext*的详细信息，请参阅**备注**。
+对象的上下文标识符 `CInternetConnection` 。 有关 *dwContext* 的详细信息，请参阅 "**备注**"。
 
 ### <a name="remarks"></a>备注
 
-你从来不叫`CInternetConnection`自己;相反，请调用[CInternetSession](../../mfc/reference/cinternetsession-class.md)成员函数，表示要建立的连接类型：
+永远不会 `CInternetConnection` 自行调用，而应为要建立的连接类型调用 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 成员函数：
 
-- [C 互联网会话：：获取Ftp连接](../../mfc/reference/cinternetsession-class.md#getftpconnection)
+- [CInternetSession：： GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
 
-- [C 互联网会话：：获取Http连接](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
+- [CInternetSession：： GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)
 
-- [C 互联网会话：：获取 Gopher 连接](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
+- [CInternetSession：： GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-mFC 将*dwContext*的默认值发送到创建`CInternetConnection`**InternetConnection**派生对象的[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象的派生对象。 默认值设置为 1;将默认值设置为 1但是，您可以在连接的[CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession)构造函数中显式分配特定的上下文标识符。 对象及其执行的任何工作都将与该上下文 ID 相关联。 上下文标识符返回到[CInternetSession：：onStatusBackononononononback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)提供标识它的对象的状态。 有关上下文标识符的详细信息[，请参阅"Internet 第一步：WinInet"](../../mfc/wininet-basics.md)一文。
+*DwContext* 的默认值由 MFC 发送到 `CInternetConnection` 从创建 **InternetConnection** 派生对象的 [CInternetSession](../../mfc/reference/cinternetsession-class.md)对象派生的对象。 默认值设置为 1;但是，可以在连接的 [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) 构造函数中显式分配特定上下文标识符。 对象及其执行的所有工作都将与该上下文 ID 相关联。 上下文标识符返回到 [CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) ，以在标识它的对象上提供状态。 有关上下文标识符的详细信息，请参阅文章 [Internet 优先步骤： WinInet](../../mfc/wininet-basics.md) 。
 
-## <a name="cinternetconnectiongetcontext"></a><a name="getcontext"></a>C 互联网连接：获取上下文
+## <a name="cinternetconnectiongetcontext"></a><a name="getcontext"></a> CInternetConnection：： GetContext
 
-调用此成员函数获取此会话的上下文 ID。
+调用此成员函数以获取此会话的上下文 ID。
 
 ```
 DWORD_PTR GetContext() const;
@@ -123,13 +124,13 @@ DWORD_PTR GetContext() const;
 
 ### <a name="remarks"></a>备注
 
-上下文 ID 最初在[CInternetSession](../../mfc/reference/cinternetsession-class.md)中指定，`CInternetConnection`并传播到 - 和[CInternetFile](../../mfc/reference/cinternetfile-class.md)派生类，除非在调用打开连接的函数时以不同方式指定。 上下文 ID 与给定对象的任何操作相关联，并标识 CInternetSession 返回的操作的状态信息[：：onStatusCallback。](../../mfc/reference/cinternetsession-class.md#onstatuscallback)
+上下文 ID 最初在 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 中指定，传播到 `CInternetConnection` 和 [CInternetFile](../../mfc/reference/cinternetfile-class.md)派生的类，除非在对打开连接的函数的调用中指定了不同的。 上下文 ID 与给定对象的任何操作相关联，并标识由 [CInternetSession：： OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)返回的操作的状态信息。
 
-有关如何使用`GetContext`其他 WinInet 类提供用户状态信息的详细信息，请参阅文章["Internet 第一步：WinInet"](../../mfc/wininet-basics.md)了解有关上下文标识符的详细信息。
+有关如何 `GetContext` 与其他 WinInet 类结合使用来提供用户状态信息的详细信息，请参阅文章 [Internet 优先步骤： WinInet](../../mfc/wininet-basics.md) 了解有关上下文标识符的详细信息。
 
-## <a name="cinternetconnectiongetservername"></a><a name="getservername"></a>C 互联网连接：：获取服务器名称
+## <a name="cinternetconnectiongetservername"></a><a name="getservername"></a> CInternetConnection：： GetServerName
 
-调用此成员函数获取与此 Internet 连接关联的服务器的名称。
+调用此成员函数可获取与此 Internet 连接关联的服务器的名称。
 
 ```
 CString GetServerName() const;
@@ -139,9 +140,9 @@ CString GetServerName() const;
 
 此连接对象正在使用的服务器的名称。
 
-## <a name="cinternetconnectiongetsession"></a><a name="getsession"></a>C 互联网连接：获取会话
+## <a name="cinternetconnectiongetsession"></a><a name="getsession"></a> CInternetConnection：： GetSession
 
-调用此成员函数以获取指向与此连接关联的`CInternetSession`对象的指针。
+调用此成员函数以获取指向 `CInternetSession` 与此连接关联的对象的指针。
 
 ```
 CInternetSession* GetSession() const;
@@ -149,17 +150,17 @@ CInternetSession* GetSession() const;
 
 ### <a name="return-value"></a>返回值
 
-指向与此 Internet 连接对象关联的[CInternetSession](../../mfc/reference/cinternetsession-class.md)对象的指针。
+指向与此 Internet 连接对象关联的 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 对象的指针。
 
-## <a name="cinternetconnectionoperator-hinternet"></a><a name="operator_hinternet"></a>C网连接：：运营商HINTERNET
+## <a name="cinternetconnectionoperator-hinternet"></a><a name="operator_hinternet"></a> CInternetConnection：： operator HINTERNET
 
-使用此运算符获取当前 Internet 会话的 API 级句柄。
+使用此运算符可获取当前 Internet 会话的 API 级别句柄。
 
 ```
 operator HINTERNET() const;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
-[层次结构图表](../../mfc/hierarchy-chart.md)
+[层次结构图](../../mfc/hierarchy-chart.md)

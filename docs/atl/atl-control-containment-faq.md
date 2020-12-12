@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： ATL 控件包含常见问题
 title: ATL 控件包含常见问题
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - ActiveX controls [C++], hosting
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
-ms.openlocfilehash: 693617589f157d352972485396777cec587a5b8f
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 5c5d3d452a119908cb6c8dcdb08da3276db78f51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91352694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165766"
 ---
 # <a name="atl-control-containment-faq"></a>ATL 控件包含常见问题
 
 ## <a name="which-atl-classes-facilitate-activex-control-containment"></a>哪些 ATL 类促进 ActiveX 控件包含？
 
-ATL 的控件托管代码不要求使用任何 ATL 类;只需创建一个 **"AtlAxWin80"** 窗口，并根据需要使用控制宿主 API (有关详细信息，请参阅 **什么是 ATL 控件托管 api**。 但是，以下类使包含功能更易于使用。
+ATL 的控件托管代码不要求使用任何 ATL 类;只需创建一个 **"AtlAxWin80"** 窗口，并在必要时使用控制宿主 API (有关详细信息，请参阅 **ATL Control-Hosting API 的定义**。 但是，以下类使包含功能更易于使用。
 
-|类|说明|
+|类|描述|
 |-----------|-----------------|
 |[CAxWindow](../atl/reference/caxwindow-class.md)|包装 **"AtlAxWin80"** 窗口，提供用于创建窗口、创建控件和/或将控件附加到窗口的方法，以及检索主机对象上的接口指针。|
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|包装 **"AtlAxWinLic80"** 窗口，提供创建窗口、创建控件和/或将授权控件附加到窗口的方法，以及检索主机对象上的接口指针的方法。|
@@ -33,7 +34,7 @@ ATL 的控件托管代码不要求使用任何 ATL 类;只需创建一个 **"Atl
 
 ATL 的控制宿主 API 是一组允许任何窗口充当 ActiveX 控件容器的函数。 这些函数可以静态或动态链接到您的项目中，因为它们可用作源代码并由 ATL90.dll 公开。 下表列出了控件宿主函数。
 
-|函数|说明|
+|函数|描述|
 |--------------|-----------------|
 |[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|创建一个宿主对象，将它连接到提供的窗口，然后附加现有的控件。|
 |[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|创建一个宿主对象，将它连接到提供的窗口，然后加载一个控件。|
@@ -105,7 +106,7 @@ ATL 的控制宿主 API 是一组允许任何窗口充当 ActiveX 控件容器�
 
 [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控件包含常见问题](../atl/atl-control-containment-faq.md)<br/>
 [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)<br/>

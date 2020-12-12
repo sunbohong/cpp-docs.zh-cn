@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ATL 连接点
 title: ATL 连接点
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 60b9018185bea2af26407ee9d7a203148c8dc477
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165818"
 ---
 # <a name="atl-connection-points"></a>ATL 连接点
 
@@ -19,14 +20,14 @@ ms.locfileid: "69491803"
 
 ![连接点](../atl/media/vc2zw31.gif "连接点")
 
-每个连接点都支持[IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)接口。 可连接对象通过[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)接口向客户端公开其连接点。
+每个连接点都支持 [IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint) 接口。 可连接对象通过 [IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer) 接口向客户端公开其连接点。
 
 ## <a name="in-this-section"></a>本节内容
 
 [ATL 连接点类](../atl/atl-connection-point-classes.md)<br/>
 简要介绍支持连接点的 ATL 类。
 
-[将连接点添加到对象](../atl/adding-connection-points-to-an-object.md)<br/>
+[向对象添加连接点](../atl/adding-connection-points-to-an-object.md)<br/>
 概述了用于将连接点添加到对象的步骤。
 
 [ATL 连接点示例](../atl/atl-connection-point-example.md)<br/>

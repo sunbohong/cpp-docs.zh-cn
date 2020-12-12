@@ -1,14 +1,15 @@
 ---
+description: '了解详细信息：桌面应用程序 (Visual C++) '
 title: 桌面应用程序 (Visual C++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 26448ca65b3162e2adfe6988dfd8c9e85432429c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: eb7badb73af507d31c9dd982f0a6189362249a3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114749"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面应用程序 (Visual C++)
 
@@ -24,7 +25,7 @@ C + + 中的 *桌面应用程序* 是一个本机应用程序，它可以访问�
 
 ## <a name="terminology"></a>术语
 
-- *Win32*应用程序是一个 c + + 中的 Windows 桌面应用程序，可利用本机[Windows C api 和/或 COM Api](/windows/win32/apiindex/windows-api-list) CRT 和标准库 api 以及第三方库。 在窗口中运行的 Win32 应用程序要求开发人员在 Windows 过程函数内显式处理 Windows 消息。 不管名称如何，Win32 应用程序都可以编译为32位 (x86) 或 64 (x64) 二进制文件。 在 Visual Studio IDE 中，x86 和 Win32 术语是同义词。
+- *Win32* 应用程序是一个 c + + 中的 Windows 桌面应用程序，可利用本机 [Windows C api 和/或 COM Api](/windows/win32/apiindex/windows-api-list) CRT 和标准库 api 以及第三方库。 在窗口中运行的 Win32 应用程序要求开发人员在 Windows 过程函数内显式处理 Windows 消息。 不管名称如何，Win32 应用程序都可以编译为32位 (x86) 或 64 (x64) 二进制文件。 在 Visual Studio IDE 中，x86 和 Win32 术语是同义词。
 
 - [组件对象模型 (COM) ](/windows/win32/com/the-component-object-model)是一种规范，用不同语言编写的程序可以相互通信。 许多 Windows 组件是作为 COM 对象实现的，并遵循用于对象创建、接口发现和对象析构的标准 COM 规则。  使用 c + + 桌面应用程序中的 COM 对象相对简单，但编写自己的 COM 对象更高级。 [活动模板库 (ATL) ](../atl/atl-com-desktop-components.md)提供可简化 COM 开发的宏和帮助程序函数。
 
@@ -36,7 +37,7 @@ C + + 中的任何桌面应用程序都可以使用 C 运行时 (CRT) 和标准�
 
 ## <a name="in-this-section"></a>本节内容
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[C++ 中的 Windows 控制台应用程序](./overview-of-windows-programming-in-cpp.md)|包含有关控制台应用的信息。 Win32（或 Win64）控制台应用程序本身不具有窗口，且不使用消息循环。 它在控制台窗口中运行，并通过命令行处理输入和输出。|
 |[演练：创建 Windows 桌面应用程序 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|创建一个简单的 Windows 桌面应用程序。|
@@ -49,7 +50,7 @@ C + + 中的任何桌面应用程序都可以使用 C 运行时 (CRT) 和标准�
 
 ## <a name="related-articles"></a>相关文章
 
-|Title|说明|
+|Title|描述|
 |-----------|-----------------|
 |[Windows 开发](/windows/win32/index)|包含有关 Windows API 和 COM 的信息。 （某些 Windows API 和第三方 DLL 是作为 COM 对象实现的。）|
 |[Hilo：开发适用于 Windows 7 的 C++ 应用程序](/previous-versions/msdn10/ff708696(v=msdn.10))|描述如何创建使用 Windows Animation 和 Direct2D 创建基于传送的用户界面的、客户端丰富的 Windows 桌面应用程序。  此教程自 Windows 7 以来尚未更新，但它仍提供了 Win32 编程的全面介绍。|

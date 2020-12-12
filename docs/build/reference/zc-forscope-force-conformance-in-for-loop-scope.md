@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下内容的详细信息：/Zc： forScope (强制 for 循环范围中的一致性) '
 title: /Zc:forScope（强制 for 循环范围中的一致性）
 ms.date: 03/06/2018
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b1173ad609a1b2c95d6cf118f4e2d5defeec5b9c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7124bba6608facfea546974cfa40ef9556ff713a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114658"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope（强制 for 循环范围中的一致性）
 
@@ -28,9 +29,9 @@ ms.locfileid: "87234336"
 
 ## <a name="remarks"></a>备注
 
-标准行为是使 **`for`** 循环的初始值设定项在循环之后超出范围 **`for`** 。 在 **/zc： forScope**和[/ze](za-ze-disable-language-extensions.md)下， **`for`** 循环的初始值设定项保持在范围内，直到局部范围结束。
+标准行为是使 **`for`** 循环的初始值设定项在循环之后超出范围 **`for`** 。 在 **/zc： forScope** 和 [/ze](za-ze-disable-language-extensions.md)下， **`for`** 循环的初始值设定项保持在范围内，直到局部范围结束。
 
-默认情况下， **/zc： forScope**选项处于启用状态。 如果指定了[/permissive-](permissive-standards-conformance.md)选项，则 **/zc： forScope**不受影响。
+默认情况下， **/zc： forScope** 选项处于启用状态。 如果指定了 [/permissive-](permissive-standards-conformance.md)选项，则 **/zc： forScope** 不受影响。
 
 **/Zc:forScope-** 选项已弃用，并将从未来版本中删除。 使用 **/Zc:forScope-** 将生成弃用警告 D9035。
 
@@ -55,7 +56,7 @@ int main() {
 
 可通过使用 **conform** 杂注修改 [/Zc:forScope](../../preprocessor/conform.md) 的运行时行为。
 
-如果在包含现有 .pch 文件的项目中使用 **/Zc:forScope-** ，则将生成警告、忽略 **/Zc:forScope-** ，并使用现有 .pch 文件继续进行编译。 如果希望生成新的 .pch 文件，请使用[/yc （创建预编译标头文件）](yc-create-precompiled-header-file.md)。
+如果在包含现有 .pch 文件的项目中使用 **/Zc:forScope-** ，则将生成警告、忽略 **/Zc:forScope-** ，并使用现有 .pch 文件继续进行编译。 如果要生成新的 .pch 文件，请使用 [/yc (创建预编译头文件) ](yc-create-precompiled-header-file.md)。
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
@@ -71,7 +72,7 @@ int main() {
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [/Zc（一致性）](zc-conformance.md)<br/>
-[/Za、/Ze （禁用语言扩展）](za-ze-disable-language-extensions.md)<br/>
+[/Za、/Ze (禁用语言扩展) ](za-ze-disable-language-extensions.md)<br/>

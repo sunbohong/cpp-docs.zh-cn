@@ -1,16 +1,17 @@
 ---
+description: 了解有关以下内容的详细信息： MASM 运算符引用
 title: MASM 运算符引用
 ms.date: 07/15/2020
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: db79473f5d4264b869eeac334fa7957cfe553364
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 66169e591ed5839dfa0f45c4fe6bcf9febe6fe02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126251"
 ---
 # <a name="masm-operators-reference"></a>MASM 运算符引用
 
@@ -109,7 +110,7 @@ ms.locfileid: "88830938"
    :::column-end:::
 :::row-end:::
 
-## <a name="record"></a>Record
+## <a name="record"></a>记录
 
 :::row:::
    :::column span="":::
@@ -182,7 +183,7 @@ ms.locfileid: "88830938"
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

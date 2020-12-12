@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：活动模板库 (ATL) 概念
 title: 活动模板库 (ATL) 概念
 ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: c87eedff5b6ce7d906c05ac0678425af575f0af8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5437f381ea145d5474dcdba25673d4e41c60c54b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504274"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97166312"
 ---
 # <a name="active-template-library-atl-concepts"></a>活动模板库 (ATL) 概念
 
@@ -70,7 +71,7 @@ ms.locfileid: "91504274"
 [ATL 注册表组件（注册器）](atl-registry-component-registrar.md)<br/>
 讨论 ATL 脚本语法和可替换参数。 它还介绍了如何设置指向注册机构的静态链接。
 
-[用 ATL 和 C 运行时代码进行编程](programming-with-atl-and-c-run-time-code.md)<br/>
+[用 ATL 和 C Run-Time 代码编程](programming-with-atl-and-c-run-time-code.md)<br/>
 讨论静态或动态链接到 C 运行时库 (CRT) 的优势。
 
 [使用 CComBSTR 进行编程](programming-with-ccombstr-atl.md)<br/>
