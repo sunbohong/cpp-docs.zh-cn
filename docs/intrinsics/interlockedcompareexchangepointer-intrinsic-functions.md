@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _InterlockedCompareExchangePointer 内部函数
 title: _InterlockedCompareExchangePointer 内部函数
 ms.date: 09/02/2019
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cd8d42c6a7036a6c779af6fc32a7176b7e48a73c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97168054"
 ---
 # <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 内部函数
 
@@ -77,12 +78,12 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
-[in, out]指向目标值的指针的指针。 忽略此标记。
+[in，out]指向目标值的指针的指针。 忽略此标记。
 
-*外汇*\
+*Exchange*\
 中Exchange 指针。 忽略此标记。
 
 *比较字*\
@@ -94,25 +95,25 @@ long _InterlockedCompareExchangePointer_rel (
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86、ARM、x64、ARM64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM, ARM64|\<iiintrin.h>|
-|`_InterlockedCompareExchangePointer_HLEAcquire`， `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM，ARM64|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
 `_InterlockedCompareExchangePointer` 执行 `Destination` 地址与 `Comparand` 地址之间的原子比较。 如果 `Destination` 地址与 `Comparand` 地址相等，则 `Exchange` 地址将存储在由 `Destination` 指定的地址中。 否则，不会执行任何操作。
 
-`_InterlockedCompareExchangePointer`为 Win32 Windows SDK [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer)函数提供编译器内部函数支持。
+`_InterlockedCompareExchangePointer` 为 Win32 Windows SDK [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer) 函数提供编译器内部函数支持。
 
-有关如何使用`_InterlockedCompareExchangePointer`的示例, 请参阅[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+有关如何使用的示例 `_InterlockedCompareExchangePointer` ，请参阅 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带`_nf` ("无围墙") 后缀的 ARM 内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 具有 `_nf` ( "无防护" ) 后缀的 ARM 内部函数不能充当内存屏障。
 
 带 `_np`（“无预取”）后缀的函数可以阻止编译器插入可能的预取操作。
 
-在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些内部函数, 则忽略该提示。
+在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些内部函数，则忽略该提示。
 
 这些例程只能用作内部函数。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _InterlockedExchangePointer 内部函数
 title: _InterlockedExchangePointer 内部函数
 ms.date: 09/02/2019
 f1_keywords:
@@ -20,18 +21,18 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 1402dcf5279658c1364b59a324d988129bc841d8
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 0bb6080b9bca38c67b12b28976b49eb84f74e6c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167989"
 ---
 # <a name="_interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer 内部函数
 
 **Microsoft 专用**
 
-执行原子交换操作, 将作为第二个参数传入的地址复制到第一个自变量中, 并返回第一个自变量的原始地址。
+执行原子交换操作，将作为第二个参数传入的地址复制到第一个自变量中，并返回第一个自变量的原始地址。
 
 ## <a name="syntax"></a>语法
 
@@ -62,35 +63,35 @@ void * _InterlockedExchangePointer_HLERelease(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *靶*\
-[in, out]指向要交换的值的指针的指针。 函数将值设置为*value*并返回其以前的值。
+[in，out]指向要交换的值的指针的指针。 函数将值设置为 *value* 并返回其以前的值。
 
-*负值*\
-中要与*Target*所指向的值交换的值。
+*“值”* \
+中要与 *Target* 所指向的值交换的值。
 
 ## <a name="return-value"></a>返回值
 
-函数返回*Target*指向的初始值。
+函数返回 *Target* 指向的初始值。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`_InterlockedExchangePointer`|x86、ARM、x64、ARM64|\<intrin.h>|
-|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM, ARM64|\<intrin.h>|
-|`_InterlockedExchangePointer_HLEAcquire`， `_InterlockedExchangePointer_HLERelease`|X64|\<immintrin.h>|
+|`_InterlockedExchangePointer_acq`, `_InterlockedExchangePointer_rel`, `_InterlockedExchangePointer_nf`|ARM，ARM64|\<intrin.h>|
+|`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|X64|\<immintrin.h>|
 
 在 x86 体系结构上，`_InterlockedExchangePointer` 是调用 `_InterlockedExchange` 的宏。
 
 ## <a name="remarks"></a>备注
 
-在64位系统上, 参数为64位, 并且必须在64位边界上对齐。 否则, 函数将失败。 在 32 位系统上，这些参数都是 32 位并且必须在 32 位边界上对齐。 有关详细信息, 请参阅[align](../cpp/align-cpp.md)。
+在64位系统上，参数为64位，并且必须在64位边界上对齐。 否则，函数将失败。 在 32 位系统上，这些参数都是 32 位并且必须在 32 位边界上对齐。 有关详细信息，请参阅 [align](../cpp/align-cpp.md)。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带`_nf` ("无围墙") 后缀的内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 `_nf` ( "无防护" ) 后缀的内部函数不能充当内存屏障。
 
-在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些内部函数, 则忽略该提示。
+在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些内部函数，则忽略该提示。
 
 这些例程只能用作内部函数。
 

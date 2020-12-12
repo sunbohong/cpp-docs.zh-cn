@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：全局常量
 title: 全局常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - global constants
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
-ms.openlocfilehash: 406cdb46e3a6263559f3f3d0869f1b198b466630
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1727be8670208f4caa3be5ef4b47ce488c86553d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839707"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97120726"
 ---
 # <a name="global-constants"></a>全局常量
 
@@ -70,8 +71,8 @@ Microsoft 运行库包含库例程所使用的全局常量的定义。 若要使
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[C Run-Time 库参考](../c-runtime-library/c-run-time-library-reference.md)<br/>
 [全局变量](../c-runtime-library/global-variables.md)<br/>
 [编写 Prolog/Epilog 代码的注意事项](../cpp/considerations-for-writing-prolog-epilog-code.md)

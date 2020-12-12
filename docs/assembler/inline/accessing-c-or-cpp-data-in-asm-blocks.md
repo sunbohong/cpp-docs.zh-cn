@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：在 __asm 块中访问 C 或 c + + 数据
 title: 在 __asm 块中访问 C 或 C++ 数据
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: 8fbe855c2f5de96d81e6c8a27c4bfcee0864f12c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b24d25b5687dd309c400b17c1e0eb6b35ef986f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193037"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118077"
 ---
 # <a name="accessing-c-or-c-data-in-__asm-blocks"></a>在 __asm 块中访问 C 或 C++ 数据
 
@@ -26,7 +27,7 @@ __asm mov eax, var
 
 在 EAX 中存储 `var` 的值。
 
-如果类、结构或联合成员具有唯一的名称， **`__asm`** 块只能使用成员名称来引用它，而无需在 **`typedef`** 句点（**.**）运算符前面指定变量或名称。 但是，如果成员名称不唯一，则必须将变量或 **`typedef`** 名称紧靠在 period 运算符之前。 例如，以下示例中的结构共享 `same_name` 作为其成员名称：
+如果类、结构或联合成员具有唯一的名称， **`__asm`** 块只能使用成员名称来引用它，而无需在句点 (之前指定变量或 **`typedef`** 名称 **。**) 运算符。 但是，如果成员名称不唯一，则必须将变量或 **`typedef`** 名称紧靠在 period 运算符之前。 例如，以下示例中的结构共享 `same_name` 作为其成员名称：
 
 如果使用以下类型声明变量
 

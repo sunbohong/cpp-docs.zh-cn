@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __ll_rshift
 title: __ll_rshift
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: 6ae750f1a8825096ee30adb01768d5603ab23a01
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 567228431104bdde34cc0a5c5f41f0217515a337
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219659"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167742"
 ---
 # <a name="__ll_rshift"></a>__ll_rshift
 
@@ -30,7 +31,7 @@ __int64 __ll_rshift(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *掩盖*\
 中要右移的64位整数值。
@@ -52,7 +53,7 @@ __int64 __ll_rshift(
 
 ## <a name="remarks"></a>备注
 
-如果第二个参数大于 x64 上的64（x86 上为32），则将该数字取模64（x86 上的32）以确定要移位的位数。 `ll`前缀指示它是对的操作 **`long long`** ，另一个名称为 **`__int64`** 64 位有符号整数类型。
+如果 x86) 上 x64 (32 上的第二个参数大于64，则将在 x86) 上取模 64 (32 来确定要移位的位数。 `ll`前缀指示它是对的操作 **`long long`** ，另一个名称为 **`__int64`** 64 位有符号整数类型。
 
 ## <a name="example"></a>示例
 

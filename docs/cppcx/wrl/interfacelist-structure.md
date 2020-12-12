@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： InterfaceList 结构
 title: InterfaceList 结构
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-ms.openlocfilehash: 7fd06f71bc4d8097366dc0e87d7ff92c5a12a790
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 660ae5137b7ff41129ce3866f0d289045f7dee9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213858"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124574"
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 结构
 
@@ -41,10 +42,10 @@ struct InterfaceList;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|`FirstT`|模板参数*T*的同义词。|
-|`RestT`|模板参数*U*的同义词。|
+|`FirstT`|模板参数 *T* 的同义词。|
+|`RestT`|模板参数 *U* 的同义词。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -56,6 +57,6 @@ struct InterfaceList;
 
 **命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)
+[Microsoft：： WRL：:D etails 命名空间](microsoft-wrl-details-namespace.md)

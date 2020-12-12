@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __lidt
 title: __lidt
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - LIDT instruction
 - __lidt intrinsic
 ms.assetid: 8298d25d-a19e-4900-828d-6b3b09841882
-ms.openlocfilehash: 87a49643e7cd11ae57dc01130f250895cf012065
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9b9f4bc51bab07a578671932c16548a0a49d155b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562488"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167768"
 ---
 # <a name="__lidt"></a>__lidt
 
@@ -27,7 +28,7 @@ ms.locfileid: "88562488"
 void __lidt(void * Source);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *源程序*\
 中指向要复制到 IDTR 的值的指针。

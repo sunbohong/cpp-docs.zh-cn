@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅 c + +/CLI (#using 指令) '
 title: '#using 指令 (C++/CLI)'
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-ms.openlocfilehash: 0245eb15219585421be83def0258415ab4b573b6
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 5903e3b5af4cd6ee40e0b087d52d1bd0115b1c6f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167521"
 ---
 # <a name="using-directive-ccli"></a>c + +/CLI (#using 指令) 
 
@@ -27,10 +28,10 @@ ms.locfileid: "90684256"
 
 > **`#using`***file* [ **`as_friend`** ]
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *文件*\
-Microsoft 中间语言 (MSIL) *`.dll`* 、 *`.exe`* 、 *`.netmodule`* 或 *`.obj`* 文件。 例如，
+Microsoft 中间语言 (MSIL) *`.dll`* 、 *`.exe`* 、 *`.netmodule`* 或 *`.obj`* 文件。 例如，应用于对象的
 
 `#using <MyComponent.dll>`
 
@@ -41,7 +42,7 @@ Microsoft 中间语言 (MSIL) *`.dll`* 、 *`.exe`* 、 *`.netmodule`* 或 *`.ob
 
 *文件* 可以是你为其托管数据和托管构造导入的 Microsoft 中间语言 (MSIL) 文件。 如果 DLL 包含程序集清单，则将导入清单中引用的所有 Dll。 正在生成的程序集将在元数据中列出 *文件* 作为程序集引用。
 
-*文件*中不包含程序集 (*文件*是模块) ，并且你不希望在当前 (程序集) 应用程序中使用模块中的类型信息。 您可以使用 [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)指示该模块是程序集的一部分。 然后，模块中的类型将可用于引用此程序集的任何应用程序。
+*文件* 中不包含程序集 (*文件* 是模块) ，并且你不希望在当前 (程序集) 应用程序中使用模块中的类型信息。 您可以使用 [/ASSEMBLYMODULE](../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)指示该模块是程序集的一部分。 然后，模块中的类型将可用于引用此程序集的任何应用程序。
 
 使用的替代方法 **`#using`** 是 [/FU](../build/reference/fu-name-forced-hash-using-file.md) 编译器选项。
 
@@ -93,7 +94,7 @@ public:
 };
 ```
 
-在下面的示例中，编译器不会报告有关引用 *using_assembly_A.dll*的错误，因为程序不使用 *using_assembly_A*中定义的任何类型。
+在下面的示例中，编译器不会报告有关引用 *using_assembly_A.dll* 的错误，因为程序不使用 *using_assembly_A* 中定义的任何类型。
 
 ```cpp
 // using_assembly_C.cpp

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： time_put 类
 title: time_put 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 4f7b609493e16d3d1c0a9ab6274ed6f5bfd7b033
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 135bd8c619907b789f448e41e742fcc256d9b6eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167261"
 ---
 # <a name="time_put-class"></a>time_put 类
 
@@ -33,7 +34,7 @@ template <class CharType,
 class time_put : public locale::facet;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对字符进行编码的类型。
@@ -47,7 +48,7 @@ class time_put : public locale::facet;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[time_put](#time_put)|`time_put` 类型的对象的构造函数。|
 
@@ -71,7 +72,7 @@ class time_put : public locale::facet;
 
 **命名空间:** std
 
-## <a name="time_putchar_type"></a><a name="char_type"></a>time_put：： char_type
+## <a name="time_putchar_type"></a><a name="char_type"></a> time_put：： char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -83,7 +84,7 @@ typedef CharType char_type;
 
 类型是模板参数 `CharType` 的同义词。
 
-## <a name="time_putdo_put"></a><a name="do_put"></a>time_put：:d o_put
+## <a name="time_putdo_put"></a><a name="do_put"></a> time_put：:d o_put
 
 一种以 `CharType` 序列的形式输出时间和日期信息的虚拟函数。
 
@@ -96,7 +97,7 @@ virtual iter_type do_put(
     char _Mod = 0) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *一个*\
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
@@ -121,13 +122,13 @@ virtual iter_type do_put(
 
 受保护的虚拟成员函数将 `next` 从存储在对象 \* `_Pt` 的类型为的值开始生成连续元素 `tm` 。 该函数返回一个迭代器，指定在生成的输出外下一个要插入元素的位置。
 
-输出由使用的相同规则生成 `strftime` ，其中最后一个参数为 *_Pt*的，用于生成一系列 **`char`** 元素到数组中。 假定每个此类 **`char`** 元素都 `CharType` 按简单的一对一映射映射到类型的等效元素。 如果 *_Mod*等于零，则有效格式为 "% F"，其中 F 替换为 *_Fmt*。 否则，有效格式为 "% MF"，其中 M 替换为 *_Mod*。
+输出由使用的相同规则生成 `strftime` ，其中最后一个参数为 *_Pt* 的，用于生成一系列 **`char`** 元素到数组中。 假定每个此类 **`char`** 元素都 `CharType` 按简单的一对一映射映射到类型的等效元素。 如果 *_Mod* 等于零，则有效格式为 "% F"，其中 F 替换为 *_Fmt*。 否则，有效格式为 "% MF"，其中 M 替换为 *_Mod*。
 
 ### <a name="example"></a>示例
 
 请参阅 [put](#put) 的示例，它调用 `do_put`。
 
-## <a name="time_putiter_type"></a><a name="iter_type"></a>time_put：： iter_type
+## <a name="time_putiter_type"></a><a name="iter_type"></a> time_put：： iter_type
 
 一种类型，此类型描述输出迭代器。
 
@@ -139,7 +140,7 @@ typedef OutputIterator iter_type;
 
 类型是模板参数 `OutputIterator` 的同义词。
 
-## <a name="time_putput"></a><a name="put"></a>time_put：:p
+## <a name="time_putput"></a><a name="put"></a> time_put：:p
 
 以 `CharType` 的形式输出时间和日期信息。
 
@@ -159,7 +160,7 @@ iter_type put(iter_type next,
     const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *一个*\
 一个输出迭代器，其中字符序列表示要插入的时间和日期。
@@ -191,7 +192,7 @@ iter_type put(iter_type next,
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回[do_put](#do_put)（ `next` 、 `_Iosbase` 、 `_Fill` 、 `_Pt` 、 `_Fmt` 、 `_Mod` ）。 第二个成员函数复制到除 \* `next` `first` `last` 百分比（%）以外的间隔 [，）中的任何元素。 对于间隔 [，）中后跟字符*C*的百分比 `first` `last` ，该函数将计算结果 `next`  =  `do_put` （ `next` 、 `_Iosbase` 、 `_Fill` 、 `_Pt` 、 *C*、0），并跳过*C*。然而，如果*C*是 set EOQ # 中的限定符字符，后跟 `C2` 间隔 [，）中的字符 `first` `last` ，则该函数将改为计算 `next`  =  `do_put` （ `next` ， `_Iosbase` ， `_Fill` ， `_Pt` ， `C2` ， *C*），并跳过 `C2` 。
+第一个成员函数返回 [do_put](#do_put) (，，，，， `next` `_Iosbase` `_Fill` `_Pt` `_Fmt` `_Mod`) 。 第二个成员函数复制到 \* `next` 时间间隔 [ `first` ， `last`) % )  ( 百分比以外的任何元素。 对于间隔 [，) 中后跟字符 *C* 的百分号 `first` ， `last` 函数会改为计算 `next`  =  `do_put` (，，， `next` `_Iosbase` `_Fill` `_Pt` ， *C*，0) ，并跳过 *C*。然而，如果 *C* 是 set EOQ # 中的限定符字符，后跟 `C2` 间隔 [，) 中的字符 `first` `last` ，则该函数将计算 `next`  =  `do_put` (，，，，， `next` `_Iosbase` `_Fill` `_Pt` `C2` ， *C*) ，并跳过 `C2` 。
 
 ### <a name="example"></a>示例
 
@@ -237,7 +238,7 @@ num_put( ) = x: 05:30:40 07/04/00
 strftime( ) = x: 05:30:40 07/04/00
 ```
 
-## <a name="time_puttime_put"></a><a name="time_put"></a>time_put：： time_put
+## <a name="time_puttime_put"></a><a name="time_put"></a> time_put：： time_put
 
 类型为 `time_put` 的对象的构造函数。
 
@@ -245,24 +246,24 @@ strftime( ) = x: 05:30:40 07/04/00
 explicit time_put(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为：
+*_Refs* 参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1：未定义这些值。
+- \> 1：未定义这些值。
 
-构造函数通过[locale：： facet](../standard-library/locale-class.md#facet_class)（*_Refs*）初始化其基对象。
+构造函数通过 [locale：： facet](../standard-library/locale-class.md#facet_class) (*_Refs*) 初始化其基对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [time_base 类](../standard-library/time-base-class.md)\

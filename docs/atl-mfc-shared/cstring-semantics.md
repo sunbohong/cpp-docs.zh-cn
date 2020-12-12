@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CString 语义
 title: CString 语义
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,23 +7,23 @@ helpviewer_keywords:
 - CString objects, assignment semantics
 - assignment statements, assigning CString objects
 ms.assetid: d4023480-526f-499a-85f6-324b4de5b85f
-ms.openlocfilehash: b5398f8a0f17ffcc93c7f5f6158ecc56606e9279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c6dde91e7f87908c0c6bc2d49ff455eb79f6eb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167040"
 ---
 # <a name="cstring-semantics"></a>CString 语义
 
-即使[CString](../atl-mfc-shared/reference/cstringt-class.md)对象可以增长的动态对象，它们充当内置基元类型和简单的类。 每个`CString`对象表示一个唯一值。 `CString` 对象应认为是为实际字符串而不是指向字符串的指针。
+尽管 [CString](../atl-mfc-shared/reference/cstringt-class.md) 对象是可增长的动态对象，但它们的行为类似于内置的基元类型和简单的类。 每个 `CString` 对象都表示一个唯一值。 `CString` 对象应被视为实际的字符串，而不是指向字符串的指针。
 
-可以指定一个`CString`到另一个对象。 但是，如果修改两个`CString`对象，其他`CString`未修改对象，如以下示例所示：
+可以将一个 `CString` 对象分配给另一个对象。 但是，当修改这两个 `CString` 对象中的一个对象时， `CString` 不会修改其他对象，如下面的示例所示：
 
 [!code-cpp[NVC_ATLMFC_Utilities#188](../atl-mfc-shared/codesnippet/cpp/cstring-semantics_1.cpp)]
 
-请注意，在该示例的两个`CString`对象被视为"equal"，因为它们表示相同的字符字符串。 `CString`类会重载相等运算符 (`==`) 来比较两个`CString`对象基于其值 （内容） 而不是其标识 （地址）。
+请注意，在此示例中，两个 `CString` 对象都被视为 "等于"，因为它们表示相同的字符串。 `CString`类重载了相等运算符， (`==`) 根据两个 `CString` 对象的值 (内容来比较两个对象，而不是)  (地址) 的标识。
 
 ## <a name="see-also"></a>请参阅
 
-[字符串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+[ATL/MFC (字符串) ](../atl-mfc-shared/strings-atl-mfc.md)

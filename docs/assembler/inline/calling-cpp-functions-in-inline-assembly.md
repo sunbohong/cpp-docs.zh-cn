@@ -1,4 +1,5 @@
 ---
+description: 了解更多：在内联程序集中调用 c + + 函数
 title: 在内联汇编程序内调用 C++ 函数
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - inline assembly, calling functions
 - __asm keyword [C++], calling functions
 ms.assetid: 1f0d1eb3-54cf-45d5-838d-958188616b38
-ms.openlocfilehash: 781b60c8973593039c0fdfa2f457170e95048597
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3efd4f00eae5810b287a27546bba3160f479b8f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87192530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117960"
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>在内联汇编程序内调用 C++ 函数
 
@@ -22,7 +23,7 @@ ms.locfileid: "87192530"
 
 **`__asm`** 块只能调用不会重载的全局 c + + 函数。 如果调用重载的全局 C++ 函数或 C++ 成员函数，则编译器会发出错误。
 
-还可以调用用**extern "C"** 链接声明的任何函数。 这允许 **`__asm`** c + + 程序中的块调用 C 库函数，因为所有标准标头文件都将库函数声明为具有**Extern "C"** 链接。
+还可以调用用 **extern "C"** 链接声明的任何函数。 这允许 **`__asm`** c + + 程序中的块调用 C 库函数，因为所有标准标头文件都将库函数声明为具有 **Extern "C"** 链接。
 
 **结束 Microsoft 专用**
 

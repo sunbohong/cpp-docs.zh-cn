@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _mm_cvttss_si64x
 title: _mm_cvttss_si64x
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: 6d920a5c59cacb23c7fb155c7ac8e813a9b0e8d0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a4af7b726d0f15099586bc94348ab4ba7ebf5b8e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167625"
 ---
 # <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Microsoft 专用**
 
-将具有截断单精度浮点数的 x64 扩展版本发出到64位整数（ `cvttss2si` ）指令。
+发出带有截断的 x64 扩展版本的转换 Single-Precision Floating-Point 号到64位整数 (`cvttss2si`) 指令。
 
 ## <a name="syntax"></a>语法
 
@@ -28,7 +29,7 @@ __int64 _mm_cvttss_si64x(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *负值*\
 中一个 **`__m128`** 包含单精度浮点值的结构。

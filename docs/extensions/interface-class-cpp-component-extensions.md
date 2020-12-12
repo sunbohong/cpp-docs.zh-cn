@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： interface 类 (c + +/CLI 和 c + +/CX) '
 title: interface class（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 8a637332110fa18a7a5803d7512c643e29d66eab
-ms.sourcegitcommit: 68ae6f9ea17f32734b32bb06ffeec12d8d33f0fe
+ms.openlocfilehash: 8d6fd1eda0ddaaf6ab995e09ad1d84f78fcc91be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119013"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class（C++/CLI 和 C++/CX）
 
@@ -28,31 +29,31 @@ interface_access interface class name : inherit_access base_interface {};
 interface_access interface struct name : inherit_access base_interface {};
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-interface_access**<br/>
-程序集外部接口的可访问性。  可能的值为 **`public`** 和 **`private`** 。  **`private`** 默认值为。 嵌套接口不得包含 interface_access** 说明符。
+interface_access<br/>
+程序集外部接口的可访问性。  可能的值为 **`public`** 和 **`private`** 。  **`private`** 默认值为。 嵌套接口不得包含 interface_access 说明符。
 
 name<br/>
 接口的名称。
 
-inherit_access**<br/>
-base_interface** 的可访问性。  基本接口唯一允许的可访问性 **`public`** (默认) 。
+inherit_access<br/>
+base_interface 的可访问性。  基本接口唯一允许的可访问性 **`public`** (默认) 。
 
-base_interface**<br/>
-（可选）接口 name** 的基接口。
+base_interface<br/>
+（可选）接口 name 的基接口。
 
 ### <a name="remarks"></a>备注
 
-interface struct**** 相当于 interface class****。
+interface struct 相当于 interface class。
 
 接口可以包含函数、事件和属性的声明。  所有接口成员都有 public 可访问性。 接口还可以包含静态数据成员、函数、事件和属性，必须在接口中定义这些静态成员。
 
 接口定义类的实现方式。 接口不是类，类只能实现接口。 如果类定义接口中声明的函数，函数会实现，但不会被重写。 因此，名称查找不包括接口成员。
 
-派生自接口的类或结构必须实现接口的所有成员。 实现接口 name** 时，还必须实现 `base_interface` 列表中的接口。
+派生自接口的类或结构必须实现接口的所有成员。 实现接口 name 时，还必须实现 `base_interface` 列表中的接口。
 
-有关详情，请参阅：
+有关详细信息，请参阅：
 
 - [接口静态构造函数](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -217,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

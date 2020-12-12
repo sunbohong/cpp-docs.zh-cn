@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _InterlockedOr 内部函数
 title: _InterlockedOr 内部函数
 ms.date: 09/02/2019
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - _InterlockedOr16_rel intrinsic
 - _InterlockedOr_HLEAcquire intrinsic
 ms.assetid: 5f265240-7af8-44b7-b952-19f3a9c56186
-ms.openlocfilehash: baad724c85d2d8fb981ec7836d7a46152000fae3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: d0bd01bdc1b3a32398d65d11c49fe162fa7b4cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167976"
 ---
 # <a name="_interlockedor-intrinsic-functions"></a>_InterlockedOr 内部函数
 
@@ -170,10 +171,10 @@ __int64 _InterlockedOr64_rel(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*负值*\
-[in, out]指向第一个操作数的指针, 将由结果替换。
+*“值”* \
+[in，out]指向第一个操作数的指针，将由结果替换。
 
 *掩盖*\
 中第二个操作数。
@@ -184,24 +185,24 @@ __int64 _InterlockedOr64_rel(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`_InterlockedOr`, `_InterlockedOr8`, `_InterlockedOr16`|x86、ARM、x64、ARM64|\<intrin.h>|
 |`_InterlockedOr64`|ARM、x64、ARM64|\<intrin.h>|
-|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM, ARM64|\<intrin.h>|
+|`_InterlockedOr_acq`, `_InterlockedOr_nf`, `_InterlockedOr_rel`, `_InterlockedOr8_acq`, `_InterlockedOr8_nf`, `_InterlockedOr8_rel`, `_InterlockedOr16_acq`, `_InterlockedOr16_nf`, `_InterlockedOr16_rel`, `_InterlockedOr64_acq`, `_InterlockedOr64_nf`, `_InterlockedOr64_rel`|ARM，ARM64|\<intrin.h>|
 |`_InterlockedOr_np`, `_InterlockedOr8_np`, `_InterlockedOr16_np`, `_InterlockedOr64_np`|X64|\<intrin.h>|
-|`_InterlockedOr_HLEAcquire`， `_InterlockedOr_HLERelease`|x86、x64|\<immintrin.h>|
-|`_InterlockedOr64_HLEAcquire`， `_InterlockedOr64_HLERelease`|X64|\<immintrin.h>|
+|`_InterlockedOr_HLEAcquire`, `_InterlockedOr_HLERelease`|x86、x64|\<immintrin.h>|
+|`_InterlockedOr64_HLEAcquire`, `_InterlockedOr64_HLERelease`|X64|\<immintrin.h>|
 
 ## <a name="remarks"></a>备注
 
 每个函数名称中的数字指定了参数的位大小。
 
-ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 带`_nf` ("无围墙") 后缀的 ARM 内部函数不能充当内存屏障。
+ARM 平台上，如果需要（例如在临界区的起点和终点）获取和发布语义，可以使用带 `_acq` 和 `_rel` 后缀的函数。 ARM 内部 `_nf` ( "无防护" ) 后缀不能充当内存屏障。
 
 带 `_np`（“无预取”）后缀的函数可以阻止编译器插入可能的预取操作。
 
-在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些内部函数, 则忽略该提示。
+在支持硬件锁省略 (HLE) 指令的 Intel 平台，带 `_HLEAcquire` 和 `_HLERelease` 后缀的内部函数包括一个发送到处理器的提示，可以通过消除硬件中的锁写步骤来提升速度。 如果在不支持 HLE 的平台上调用这些内部函数，则忽略该提示。
 
 ## <a name="example"></a>示例
 

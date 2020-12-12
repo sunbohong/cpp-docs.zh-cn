@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _mm_cvtsi64x_ss
 title: _mm_cvtsi64x_ss
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - cvtsi2ss instruction
 - _mm_cvtsi64x_ss intrinsic
 ms.assetid: 01e5d321-c18a-46fd-a6f6-324364514e1f
-ms.openlocfilehash: a8227fcb482267946ea7ba08ee352c43e1ac6f6e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81a1af04d4c66cefd9815471baeb3a6095403ddf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217995"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167716"
 ---
 # <a name="_mm_cvtsi64x_ss"></a>_mm_cvtsi64x_ss
 
 **Microsoft 专用**
 
-生成 x64 扩展版本的将64位整数转换为标量单精度浮点值（ `cvtsi2ss` ）指令。
+生成将64位整数转换为标量 Single-Precision 的 x64 扩展版本 () 指令的 Floating-Point 值 `cvtsi2ss` 。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +30,7 @@ __m128 _mm_cvtsi64x_ss(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *的*\
 中一个 **`__m128`** 包含四个单精度浮点值的结构。
@@ -39,7 +40,7 @@ __m128 _mm_cvtsi64x_ss(
 
 ## <a name="return-value"></a>返回值
 
-一个 **`__m128`** 结构，其第一个浮点值为转换的结果。 其他三个*值从中*复制不变。
+一个 **`__m128`** 结构，其第一个浮点值为转换的结果。 其他三个 *值从中* 复制不变。
 
 ## <a name="requirements"></a>要求
 
@@ -51,7 +52,7 @@ __m128 _mm_cvtsi64x_ss(
 
 ## <a name="remarks"></a>备注
 
-**`__m128`** 结构表示一个 xmm 寄存器，因此内部函数允许将值*b*从系统内存移到一个 xmm 寄存器中。
+**`__m128`** 结构表示一个 xmm 寄存器，因此内部函数允许将值 *b* 从系统内存移到一个 xmm 寄存器中。
 
 此例程仅可用作内部函数。
 

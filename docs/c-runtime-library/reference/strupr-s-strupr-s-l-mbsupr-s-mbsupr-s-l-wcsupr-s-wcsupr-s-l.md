@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
 title: _strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
 ms.date: 4/2/2020
 api_name:
@@ -70,19 +71,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-ms.openlocfilehash: e2e32a42e945b350a0a9b28ccd4ef9cb16668605
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ce4c55aac91f9537febde1bfb2eb196cc0dba501
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117232"
 ---
 # <a name="_strupr_s-_strupr_s_l-_mbsupr_s-_mbsupr_s_l-_wcsupr_s-_wcsupr_s_l"></a>_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
 
 通过使用当前区域设置或传入的指定区域设置将字符串转换为大写。 这些版本的 [_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) 具有安全增强功能，如 [CRT 的安全增强功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsupr_s**和 **_mbsupr_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsupr_s** 和 **_mbsupr_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -143,9 +144,9 @@ errno_t _mbsupr_s_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 大写字符串。
 
 *numberOfElements*<br/>
@@ -158,19 +159,19 @@ errno_t _mbsupr_s_l(
 
 如果成功，则返回零；如果失败，则返回非零错误代码。
 
-这些函数验证其参数。 如果*str*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数返回**EINVAL** ，并将**Errno**设置为**EINVAL**。 如果*numberOfElements*小于字符串的长度，则函数返回**ERANGE**并将**errno**设置为**ERANGE**。
+这些函数验证其参数。 如果 *str* 为 **空** 指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。 如果允许执行继续，则函数返回 **EINVAL** ，并将 **Errno** 设置为 **EINVAL**。 如果 *numberOfElements* 小于字符串的长度，则函数返回 **ERANGE** 并将 **errno** 设置为 **ERANGE**。
 
 ## <a name="remarks"></a>备注
 
-**_Strupr_s**函数就地将*str*中的每个小写字母转换为大写。 **_wcsupr_s**是 **_strupr_s**的宽字符版本。 **_mbsupr_s**是 **_strupr_s**的多字节字符版本。
+**_Strupr_s** 函数就地将 *str* 中的每个小写字母转换为大写。 **_wcsupr_s** 是 **_strupr_s** 的宽字符版本。 **_mbsupr_s** 是 **_strupr_s** 的多字节字符版本。
 
-转换由区域设置的**LC_CTYPE**类别设置确定。 其他字符不受影响。 有关**LC_CTYPE**的详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l**后缀的函数的版本使用当前区域设置;带有 **_l**后缀的前景相同，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+转换由区域设置的 **LC_CTYPE** 类别设置确定。 其他字符不受影响。 有关 **LC_CTYPE** 的详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数的版本使用当前区域设置;带有 **_l** 后缀的前景相同，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -181,7 +182,7 @@ errno_t _mbsupr_s_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strupr_s**， **_strupr_s_l**|\<string.h>|
 |**_wcsupr_s**、 **_wcsupr_s_l**、 **_mbsupr_s** **_mbsupr_s_l**|\<string.h> 或 \<wchar.h>|
@@ -192,9 +193,9 @@ errno_t _mbsupr_s_l(
 
 请参阅 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md) 中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[本地](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： time_point 类
 title: time_point 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: e1de674d4a13ba465100923bffe6cba76e61ab4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f9818c6ec3817608864fac0108d73666a0ef3bf9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167274"
 ---
 # <a name="time_point-class"></a>time_point 类
 
@@ -33,7 +34,7 @@ class time_point;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`time_point::clock`|模板参数 `Clock` 的同义词。|
 |`time_point::duration`|模板参数 `Duration` 的同义词。|
@@ -42,32 +43,32 @@ class time_point;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[time_point](#time_point)|构造 `time_point` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[麦克斯](#max)|指定 `time_point::ref` 的上限值。|
-|[分钟](#min)|指定 `time_point::ref` 的下限值。|
+|[max](#max)|指定 `time_point::ref` 的上限值。|
+|[min](#min)|指定 `time_point::ref` 的下限值。|
 |[time_since_epoch](#time_since_epoch)|返回存储的 `duration` 值。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[time_point：：操作员*](#op_add_eq)|将指定的值添加到存储持续时间。|
+|[time_point：： operator + =](#op_add_eq)|将指定的值添加到存储持续时间。|
 |[time_point::operator-=](#operator-_eq)|从存储的持续时间减去指定的值。|
 
 ## <a name="requirements"></a>要求
 
-**标题：**\<计时>
+**标头：**\<chrono>
 
 **命名空间：** std::chrono
 
-## <a name="time_pointmax"></a><a name="max"></a>time_point：最大
+## <a name="time_pointmax"></a><a name="max"></a> time_point：： max
 
 返回类型 `time_point::ref` 的值上限的静态方法。
 
@@ -79,7 +80,7 @@ static constexpr time_point max();
 
 实际上，返回 `time_point(duration::max())`。
 
-## <a name="time_pointmin"></a><a name="min"></a>time_point：分钟
+## <a name="time_pointmin"></a><a name="min"></a> time_point：： min
 
 返回类型值下限的静态方法`time_point::ref`。
 
@@ -91,7 +92,7 @@ static constexpr time_point min();
 
 实际上，返回 `time_point(duration::min())`。
 
-## <a name="time_pointoperator"></a><a name="op_add_eq"></a>time_point：：操作员*
+## <a name="time_pointoperator"></a><a name="op_add_eq"></a> time_point：： operator + =
 
 将指定的值添加到存储[持续时间](../standard-library/duration-class.md)值。
 
@@ -99,16 +100,16 @@ static constexpr time_point min();
 time_point& operator+=(const duration& Dur);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*杜尔*\
+*工期*\
 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
 执行相加后的 `time_point` 对象。
 
-## <a name="time_pointoperator-"></a><a name="operator-_eq"></a>time_point：：操作员*
+## <a name="time_pointoperator-"></a><a name="operator-_eq"></a> time_point：： operator-=
 
 从存储[持续时间](../standard-library/duration-class.md)值减去指定的值。
 
@@ -116,16 +117,16 @@ time_point& operator+=(const duration& Dur);
 time_point& operator-=(const duration& Dur);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*杜尔*\
+*工期*\
 `duration` 对象。
 
 ### <a name="return-value"></a>返回值
 
 执行相减后的 `time_point` 对象。
 
-## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a>time_point：time_point构造函数
+## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a> time_point：： time_point 构造函数
 
 构造 `time_point` 对象。
 
@@ -138,9 +139,9 @@ template <class Duration2>
 constexpr time_point(const time_point<clock, Duration2>& Tp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*杜尔*\
+*工期*\
 [duration](../standard-library/duration-class.md) 对象。
 
 *Tp*\
@@ -150,11 +151,11 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 第一个构造函数构造一个对象，该对象的存储 `duration` 值等于 [duration::zero](../standard-library/duration-class.md#zero)。
 
-第二个构造函数构造存储持续时间值等于*Dur*的对象。 除非`is_convertible<Duration2, duration>`为 true，否则第二个构造函数不参与重载解析。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
+第二个构造函数将构造一个其存储的 duration 值等于 " *工期*" 的对象。 除非 `is_convertible<Duration2, duration>` 保留为 true，否则第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
 第三个构造函数使用 `Tp.time_since_epoch()` 来初始化其`duration` 值。
 
-## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a>time_point：time_since_epoch
+## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a> time_point：： time_since_epoch
 
 检索存储[持续时间](../standard-library/duration-class.md)值。
 
@@ -162,7 +163,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 constexpr duration time_since_epoch() const;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[标题文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)

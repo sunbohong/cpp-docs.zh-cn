@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： GetActivationFactory 函数
 title: GetActivationFactory 函数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ae2384e0620282723c6f10090a0028347408b271
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124626"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 函数
 
@@ -38,8 +39,8 @@ inline HRESULT GetActivationFactory(
 *activatableClassId*<br/>
 激活工厂可以生成的类的名称。
 
-*集*<br/>
-此操作完成后，将引用对类型*T*的激活工厂。
+*工厂*<br/>
+此操作完成后，将引用对类型 *T* 的激活工厂。
 
 ## <a name="return-value"></a>返回值
 
@@ -51,6 +52,6 @@ inline HRESULT GetActivationFactory(
 
 **命名空间：** Windows：： Foundation
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Windows::Foundation 命名空间](windows-foundation-namespace.md)
+[Windows：： Foundation 命名空间](windows-foundation-namespace.md)

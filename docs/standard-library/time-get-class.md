@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： time_get 类
 title: time_get 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - std::time_get [C++], get_weekday
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-ms.openlocfilehash: 9aebdaffc8bf3754bdbda08247f72ae08475711f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 079929d66ceb124fbceb1a908fbe9a868c446471
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167287"
 ---
 # <a name="time_get-class"></a>time_get 类
 
-类模板描述一个对象，该对象可用作区域设置，用于控制类型`CharType`到时间值序列的转换。
+类模板描述可用作区域设置 facet 的对象，用于控制类型序列 `CharType` 到时间值的转换。
 
 ## <a name="syntax"></a>语法
 
@@ -57,12 +58,12 @@ template <class CharType,
 class time_get : public time_base;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符类型*\
+*CharType*\
 在程序中用于对字符进行编码的类型。
 
-*输入迭代器*\
+*InputIterator*\
 从中读取时间值的迭代器。
 
 ## <a name="remarks"></a>备注
@@ -77,12 +78,12 @@ class time_get : public time_base;
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|说明|
+|类型名称|描述|
 |-|-|
 |[char_type](#char_type)|一种类型，此类型用于描述区域设置使用的字符。|
 |[iter_type](#iter_type)|一种类型，此类型描述输入迭代器。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
@@ -103,11 +104,11 @@ class time_get : public time_base;
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
-## <a name="time_getchar_type"></a><a name="char_type"></a>time_get：：char_type
+## <a name="time_getchar_type"></a><a name="char_type"></a> time_get：： char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -119,7 +120,7 @@ typedef CharType char_type;
 
 该类型是模板参数 **CharType** 的同义词。
 
-## <a name="time_getdate_order"></a><a name="date_order"></a>time_get：:d
+## <a name="time_getdate_order"></a><a name="date_order"></a> time_get：:d ate_order
 
 返回 facet 使用的日期顺序。
 
@@ -179,7 +180,7 @@ German_Germany.1252(day, month, year)
 English_United Kingdom.1252(day, month, year)
 ```
 
-## <a name="time_getdo_date_order"></a><a name="do_date_order"></a>time_get：:d日期\订单
+## <a name="time_getdo_date_order"></a><a name="do_date_order"></a> time_get：:d o_date_order
 
 为返回 facet 使用的日期顺序而调用的受保护虚拟成员函数。
 
@@ -199,7 +200,7 @@ facet 使用的日期顺序。
 
 请参阅 [date_order](#date_order) 示例，它调用 `do_date_order`。
 
-## <a name="time_getdo_get"></a><a name="do_get"></a>time_get：:do_get
+## <a name="time_getdo_get"></a><a name="do_get"></a> time_get：:d o_get
 
 读取字符数据并转换为时间值。 接受一个转换说明符和修饰符。
 
@@ -215,36 +216,36 @@ iter_type first,
     char mod) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 一个输入迭代器，它指示要转换的序列的开始位置。
 
-*最后*\
+*时间*\
 一个输入迭代器，它指示序列的结束位置。
 
-*约斯基地*\
+*iosbase*\
 一个流对象。
 
 *状态*\
-iosbase 中的字段，其中设置适当的位掩码元素以指示错误。
+Iosbase 中的一个字段，其中设置了相应的位掩码元素以指示错误。
 
 *ptm*\
 指向要存储时间的时间结构的指针。
 
-*Fmt*\
+*bcp.fmt*\
 一个转换说明符字符。
 
-*国防部*\
+*mod*\
 一个可选修饰符字符。
 
 ### <a name="return-value"></a>返回值
 
-返回一个迭代器，该迭代器指定第一个未经转换的元素。 转换失败设置`ios_base::failbit`并`state`*首先*返回 。
+返回一个迭代器，该迭代器指定第一个未经转换的元素。 转换失败会 `ios_base::failbit` 在中设置 `state` 并返回 *first*。
 
 ### <a name="remarks"></a>备注
 
-虚拟成员函数转换并跳过范围内的一个或多个输入元素 *`first`，`last`以确定存储在 的一个或多个成员中`*pt`的值。 转换失败设置`ios_base::failbit`并`state`*首先*返回 。 否则，该函数返回指定第一个未转换元素的迭代器。
+虚拟成员函数将转换并跳过范围 [，) 中的一个或多个输入元素， `first` `last` 以确定存储在的一个或多个成员中的值 `*pt` 。 转换失败会 `ios_base::failbit` 在中设置 `state` 并返回 *first*。 否则，该函数返回指定第一个未转换元素的迭代器。
 
 转换说明符是：
 
@@ -296,7 +297,7 @@ iosbase 中的字段，其中设置适当的位掩码元素以指示错误。
 
 任何其他转换说明符设置 `state` 中的 `ios_base::failbit` 并返回。 在此实现中，任何修饰符都无效。
 
-## <a name="time_getdo_get_date"></a><a name="do_get_date"></a>time_get：:d_获取日期
+## <a name="time_getdo_get_date"></a><a name="do_get_date"></a> time_get：:d o_get_date
 
 一种受保护的虚拟成员函数，通过调用此函数可分析作为 `strftime` 的 *x* 说明符所生成日期的字符串。
 
@@ -308,15 +309,15 @@ virtual iter_type do_get_date(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*\
@@ -331,7 +332,7 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配有序元素，直到识别到完整的非空日期输入字段。 如果成功，它将此字段转换为其等效值，如组件**\_tm：：tm**mon、tm：：tm **\_day**和**tm：：tm\_年**，并将结果分别存储在`ptm->tm_mon`中 。`ptm->tm_day`和`ptm->tm_year`。 它将返回一个迭代器，指定第一个超出日期输入字段的元素。 否则，函数将设置`iosbase::failbit`状态*state*。 它将返回一个迭代器，指定第一个超出有效日期输入字段的任何前缀的元素。 在这两种情况下，如果返回值等于最后一*个*，则函数`ios_base::eofbit`将*设置*状态 。
+受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配有序元素，直到识别到完整的非空日期输入字段。 如果成功，它会将此字段转换为其等效值，如组件 **tm：： tm \_ 周一至**， **tm：： tm \_ day**， **tm：： tm \_ year**，并分别在、和中存储结果 `ptm->tm_mon` `ptm->tm_day` `ptm->tm_year` 。 它将返回一个迭代器，指定第一个超出日期输入字段的元素。 否则，函数将设置 `iosbase::failbit` 为 *状态*。 它将返回一个迭代器，指定第一个超出有效日期输入字段的任何前缀的元素。 在任一情况下，如果返回值等于 " *last*"，则函数将设置 `ios_base::eofbit` 为 " *状态*"。
 
 日期输入字段的格式依赖于区域设置。 对于默认区域设置，日期输入字段的格式为 MMM DD，YYYY，其中：
 
@@ -347,7 +348,7 @@ virtual iter_type do_get_date(iter_type first,
 
 请参阅 [get_date](#get_date) 的示例，它调用 `do_get_date`。
 
-## <a name="time_getdo_get_monthname"></a><a name="do_get_monthname"></a>time_get：:do_get_月名
+## <a name="time_getdo_get_monthname"></a><a name="do_get_monthname"></a> time_get：:d o_get_monthname
 
 为分析作为月份名称的字符串而调用的受保护虚拟函数。
 
@@ -359,15 +360,15 @@ virtual iter_type do_get_monthname(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 未使用。
 
 *状态*\
@@ -382,7 +383,7 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数首先会在序列 [ `first`， `last`) 中尝试匹配有序元素，直到识别到完整的非空月份输入字段。 如果成功，它将此字段转换为其等效值为组件**tm：：tm\_mon，** 并将结果存储在 中。 `ptm->tm_mon` 它将返回一个迭代器，指定第一个超出月份输入字段的元素。 否则，函数将设置`ios_base::failbit`状态*state*。 它将返回一个迭代器，指定第一个超出月份输入字段的任何前缀的元素。 在这两种情况下，如果返回值等于最后一*个*，则函数`ios_base::eofbit`将*设置*状态 。
+受保护的虚拟成员函数首先会在序列 [ `first`， `last`) 中尝试匹配有序元素，直到识别到完整的非空月份输入字段。 如果成功，它会将此字段转换为其等效的值，如组件 **tm：： tm \_ 周一至**，并将结果存储在中 `ptm->tm_mon` 。 它将返回一个迭代器，指定第一个超出月份输入字段的元素。 否则，函数将设置 `ios_base::failbit` 为 *状态*。 它将返回一个迭代器，指定第一个超出月份输入字段的任何前缀的元素。 在任一情况下，如果返回值等于 " *last*"，则函数将设置 `ios_base::eofbit` 为 " *状态*"。
 
 月份输入字段是匹配最长的一组特定于区域序列的序列，如 1 月、2 月、3 月、4 月等。 转换后的值是自 1 月份以来的月数。
 
@@ -390,9 +391,9 @@ virtual iter_type do_get_monthname(iter_type first,
 
 请参阅 [get_monthname](#get_monthname) 的示例，它调用 `do_get_monthname`。
 
-## <a name="time_getdo_get_time"></a><a name="do_get_time"></a>time_get：:d
+## <a name="time_getdo_get_time"></a><a name="do_get_time"></a> time_get：:d o_get_time
 
-被调用以解析字符串作为*X*规范器生成的日期的`strftime`受保护虚拟成员函数。
+一种受保护的虚拟成员函数，通过调用此函数可将字符串分析为的 *X* 说明符生成的日期 `strftime` 。
 
 ```cpp
 virtual iter_type do_get_time(iter_type first,
@@ -402,15 +403,15 @@ virtual iter_type do_get_time(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 未使用。
 
 *状态*\
@@ -425,7 +426,7 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数首先会在序列 [ `first`， `last`) 中尝试匹配有序元素，直到识别到完整的非空时间输入字段。 如果成功，它将此字段转换为其等效值`tm::tm_hour`，`tm::tm_min`作为组件 、和`tm::tm_sec`，并将结果分别存储在`ptm->tm_hour`中`ptm->tm_min`， 和`ptm->tm_sec`中。 它将返回一个迭代器，指定第一个超出时间输入字段的元素。 否则，函数将设置`ios_base::failbit`状态*state*。 它将返回一个迭代器，指定第一个超出时间输入字段的元素。 在这两种情况下，如果返回值等于最后一*个*，则函数`ios_base::eofbit`将*设置*状态 。
+受保护的虚拟成员函数首先会在序列 [ `first`， `last`) 中尝试匹配有序元素，直到识别到完整的非空时间输入字段。 如果成功，它会将此字段转换为其等效的值作为组件 `tm::tm_hour` 、 `tm::tm_min` 和 `tm::tm_sec` ，并分别在、和中存储结果 `ptm->tm_hour` `ptm->tm_min` `ptm->tm_sec` 。 它将返回一个迭代器，指定第一个超出时间输入字段的元素。 否则，函数将设置 `ios_base::failbit` 为 *状态*。 它将返回一个迭代器，指定第一个超出时间输入字段的元素。 在任一情况下，如果返回值等于 " *last*"，则函数将设置 `ios_base::eofbit` 为 " *状态*"。
 
 在此实现中，时间输入字段采用以下格式：HH:MM:SS，其中：
 
@@ -441,7 +442,7 @@ virtual iter_type do_get_time(iter_type first,
 
 请参阅 [get_time](#get_time) 的示例，它调用 `do_get_time`。
 
-## <a name="time_getdo_get_weekday"></a><a name="do_get_weekday"></a>time_get：:do_get_工作日
+## <a name="time_getdo_get_weekday"></a><a name="do_get_weekday"></a> time_get：:d o_get_weekday
 
 为分析作为周日期名称的字符串而调用的受保护虚拟成员函数。
 
@@ -453,15 +454,15 @@ virtual iter_type do_get_weekday(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*\
@@ -476,7 +477,7 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-虚拟受保护成员函数尝试匹配序列 #*first*`first`开头的顺序元素，`last`直到它识别完整的非空工作日输入字段。 如果成功，它将此字段转换为其等效值为组件`ptm->tm_wday`**tm：：tm\_wday，** 并将结果存储在 中。 它将返回一个迭代器，指定第一个超出工作日输入字段的元素。 否则，函数将设置`ios_base::failbit`状态*state*。 它将返回一个迭代器，指定第一个超出有效工作日输入字段的任何前缀的元素。 在这两种情况下，如果返回值等于最后一*个*，则函数`ios_base::eofbit`将*设置*状态 。
+受保护的虚拟成员函数会尝试匹配序列中的 *第一个* 顺序元素（ `first` `last`) ，直到它识别完完整的非空工作日输入字段。 如果成功，它会将此字段转换为其等效的值，如组件 **tm：： tm \_ wday**，并将结果存储在中 `ptm->tm_wday` 。 它将返回一个迭代器，指定第一个超出工作日输入字段的元素。 否则，函数将设置 `ios_base::failbit` 为 *状态*。 它将返回一个迭代器，指定第一个超出有效工作日输入字段的任何前缀的元素。 在任一情况下，如果返回值等于 " *last*"，则函数将设置 `ios_base::eofbit` 为 " *状态*"。
 
 工作日输入字段是匹配最长的一组特定于区域序列的序列，如周日（星期日）、周一（星期一）等。 转换后的值是自星期日以来的天数。
 
@@ -484,7 +485,7 @@ virtual iter_type do_get_weekday(iter_type first,
 
 请参阅 [get_weekday](#get_weekday) 的示例，它调用 `do_get_weekday`。
 
-## <a name="time_getdo_get_year"></a><a name="do_get_year"></a>time_get：:d年
+## <a name="time_getdo_get_year"></a><a name="do_get_year"></a> time_get：:d o_get_year
 
 为分析作为年份名称的字符串而调用的受保护虚拟成员函数。
 
@@ -496,15 +497,15 @@ virtual iter_type do_get_year(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*\
@@ -519,7 +520,7 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-虚拟受保护成员函数尝试匹配序列开头的顺序元素 ，*first*`first``last`直到它识别了完整的非空年份输入字段。 如果成功，它将此字段转换为其等效值为组件**tm：：tm\_年**，并将结果存储在 中。 `ptm->tm_year` 它将返回一个迭代器，指定第一个超出年份输入字段的元素。 否则，函数将设置`ios_base::failbit`状态*state*。 它将返回一个迭代器，指定第一个超出有效年份输入字段的元素。 在这两种情况下，如果返回值等于最后一*个*，则函数`ios_base::eofbit`将*设置*状态 。
+受保护的虚拟成员函数尝试匹配序列中的 *第一个* 顺序元素（ `first`) ， `last` 直到它识别完一个完整的非空年份输入字段。 如果成功，它会将此字段转换为其等效值（与组件 **tm：： tm \_ 年份** 相同），并将结果存储在中 `ptm->tm_year` 。 它将返回一个迭代器，指定第一个超出年份输入字段的元素。 否则，函数将设置 `ios_base::failbit` 为 *状态*。 它将返回一个迭代器，指定第一个超出有效年份输入字段的元素。 在任一情况下，如果返回值等于 " *last*"，则函数将设置 `ios_base::eofbit` 为 " *状态*"。
 
 年份输入字段是十进制数字的序列，其对应的数值必须在 [1900, 2036) 范围内。 存储的值为此值减去 1900。 在此实现中，值范围 [69, 136) 表示年份范围 [1969、2036）。 也可使用值范围 [0, 69)，但可能表示年份范围 [1900, 1969) 或 [2000, 2069)，具体取决于转换环境。
 
@@ -527,7 +528,7 @@ virtual iter_type do_get_year(iter_type first,
 
 请参阅 [get_year](#get_year) 的示例，它调用 `do_get_year`。
 
-## <a name="time_getget"></a><a name="get"></a>time_get：获取
+## <a name="time_getget"></a><a name="get"></a> time_get：： get
 
 从字符数据源读取，并将此数据转换为存储在时间结构中的时间。 第一个函数接受一个转换说明符和修饰符，而第二个接受多个。
 
@@ -551,15 +552,15 @@ iter_type get(
     char_type* fmt_last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 一个输入迭代器，它指示从何处开始转换序列。
 
-*最后*\
+*时间*\
 一个输入迭代器，它指示在何处结束序列转换。
 
-*约斯基地*\
+*iosbase*\
 流。
 
 *状态*\
@@ -568,10 +569,10 @@ iter_type get(
 *ptm*\
 一个指针，它指向要存储时间的时间结构。
 
-*Fmt*\
+*bcp.fmt*\
 一个转换说明符字符。
 
-*国防部*\
+*mod*\
 一个可选修饰符字符。
 
 *fmt_first*\
@@ -582,7 +583,7 @@ iter_type get(
 
 ### <a name="return-value"></a>返回值
 
-在用于分配时间结构的数据之后，将迭代器返回到第一个字符`*ptm`。
+返回一个迭代器，该迭代器指向用于分配时间结构的数据后面的第一个字符 `*ptm` 。
 
 ### <a name="remarks"></a>备注
 
@@ -590,13 +591,13 @@ iter_type get(
 
 第二个成员函数调用以 `[fmt_first, fmt_last)` 分隔的格式的控件下的 `do_get`。 它将格式视为一个字段序列，其中每个字段确定了以 `[first, last)` 分隔的 0 个或多个输入元素的转换。 它返回一个迭代器，指定第一个未转换的元素。 有三种类型的字段：
 
-百分比（%）在格式中，后面是集 [EOQ] 中的可选修饰器*mod，* 后跟转换指定器*fmt，**首先*替换为 返回`do_get(first, last, iosbase, state, ptm, fmt, mod)`的值。 转换失败集`ios_base::failbit`*状态*并返回。
+每个美分 (% ) ，格式后跟集 [EOQ #] 中的可选修饰符 *mod* ，后跟一个转换说明符 *bcp.fmt*，将 *首先* 替换为返回的值 `do_get(first, last, iosbase, state, ptm, fmt, mod)` 。 转换失败会 `ios_base::failbit` 在 *状态* 中设置并返回。
 
 格式中的空白元素会跳过零个或多个输入空白元素。
 
-格式中的任何其他元素必须匹配下一个输入元素，它会被跳过。 匹配失败设置`ios_base::failbit`*状态*并返回。
+格式中的任何其他元素必须匹配下一个输入元素，它会被跳过。 匹配失败的 `ios_base::failbit` *状态* 设置并返回。
 
-## <a name="time_getget_date"></a><a name="get_date"></a>time_get：：get_date
+## <a name="time_getget_date"></a><a name="get_date"></a> time_get：： get_date
 
 分析作为 `strftime` 的 *x* 说明符所生成日期的字符串。
 
@@ -608,15 +609,15 @@ iter_type get_date(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*\
@@ -631,7 +632,7 @@ iter_type get_date(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-成员函数返回[do_get_date](#do_get_date)`first`（、 `last` `iosbase`、 `state` `ptm`、 、 、
+该成员函数将返回 [do_get_date](#do_get_date) (，，，， `first` `last` `iosbase` `state` `ptm`) 。
 
 请注意，月份从 0 到 11 进行计算。
 
@@ -690,7 +691,7 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="time_getget_monthname"></a><a name="get_monthname"></a>time_get：get_monthname
+## <a name="time_getget_monthname"></a><a name="get_monthname"></a> time_get：： get_monthname
 
 分析作为月份名称的字符串。
 
@@ -702,15 +703,15 @@ iter_type get_monthname(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 未使用。
 
 *状态*\
@@ -725,7 +726,7 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-成员函数返回[do_get_monthname](#do_get_monthname)`first`（、 `last` `iosbase`、 `state` `ptm`、 、 、
+该成员函数将返回 [do_get_monthname](#do_get_monthname) (，，，， `first` `last` `iosbase` `state` `ptm`) 。
 
 ### <a name="example"></a>示例
 
@@ -782,9 +783,9 @@ tm_yday: 0
 tm_isdst: 0
 ```
 
-## <a name="time_getget_time"></a><a name="get_time"></a>time_get：get_time
+## <a name="time_getget_time"></a><a name="get_time"></a> time_get：： get_time
 
-将字符串解析为 X*规范器*生成的`strftime`日期。
+将字符串分析为 *X* 说明符生成的日期 `strftime` 。
 
 ```cpp
 iter_type get_time(iter_type first,
@@ -794,15 +795,15 @@ iter_type get_time(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 未使用。
 
 *状态*\
@@ -817,7 +818,7 @@ iter_type get_time(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-成员函数返回[do_get_time](#do_get_time)`first`（、 `last` `iosbase`、 `state` `ptm`、 、 、
+该成员函数将返回 [do_get_time](#do_get_time) (，，，， `first` `last` `iosbase` `state` `ptm`) 。
 
 ### <a name="example"></a>示例
 
@@ -863,7 +864,7 @@ tm_min: 13
 tm_hour: 11
 ```
 
-## <a name="time_getget_weekday"></a><a name="get_weekday"></a>time_get：：get_weekday
+## <a name="time_getget_weekday"></a><a name="get_weekday"></a> time_get：： get_weekday
 
 分析作为周日期名称的字符串。
 
@@ -875,15 +876,15 @@ iter_type get_weekday(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*\
@@ -898,7 +899,7 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-成员函数返回[do_get_weekday](#do_get_weekday)`first`（、 `last` `iosbase`、 `state` `ptm`、 、 、
+该成员函数将返回 [do_get_weekday](#do_get_weekday) (，，，， `first` `last` `iosbase` `state` `ptm`) 。
 
 ### <a name="example"></a>示例
 
@@ -940,7 +941,7 @@ time_get::get_time(mercredi) =
 tm_wday: 3
 ```
 
-## <a name="time_getget_year"></a><a name="get_year"></a>time_get：get_year
+## <a name="time_getget_year"></a><a name="get_year"></a> time_get：： get_year
 
 分析作为年份名称的字符串。
 
@@ -952,15 +953,15 @@ iter_type get_year(iter_type first,
     tm* ptm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*第一*\
+*1*\
 确定待转换序列开头位置的输入迭代器。
 
-*最后*\
+*时间*\
 确定待转换序列末尾位置的输入迭代器。
 
-*约斯基地*\
+*iosbase*\
 一种格式标志，设定时表示货币符号是可选项；否则，它是必需项。
 
 *状态*\
@@ -975,7 +976,7 @@ iter_type get_year(iter_type first,
 
 ### <a name="remarks"></a>备注
 
-成员函数返回[do_get_year](#do_get_year)`first`（、 `last` `iosbase`、 `state` `ptm`、 、 、
+该成员函数将返回 [do_get_year](#do_get_year) (，，，， `first` `last` `iosbase` `state` `ptm`) 。
 
 ### <a name="example"></a>示例
 
@@ -1018,7 +1019,7 @@ time_get::get_year(1928) =
 tm_year: 28
 ```
 
-## <a name="time_getiter_type"></a><a name="iter_type"></a>time_get：：iter_type
+## <a name="time_getiter_type"></a><a name="iter_type"></a> time_get：： iter_type
 
 一种类型，此类型描述输入迭代器。
 
@@ -1030,7 +1031,7 @@ typedef InputIterator iter_type;
 
 该类型是模板参数 **InputIterator** 的同义词。
 
-## <a name="time_gettime_get"></a><a name="time_get"></a>time_get：time_get
+## <a name="time_gettime_get"></a><a name="time_get"></a> time_get：： time_get
 
 `time_get` 类型的对象的构造函数。
 
@@ -1038,27 +1039,27 @@ typedef InputIterator iter_type;
 explicit time_get(size_t refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*裁判*\
+*引用*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*refs*参数的可能值及其显著性为：
+*Refs* 参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1： 未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数用区域设置初始化其基本对象 **：：**[分面](../standard-library/locale-class.md#facet_class)（`refs`。
+构造函数通过 **locale：：**[facet](../standard-library/locale-class.md#facet_class) () 初始化其基对象 `refs` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[\<区域设置>](../standard-library/locale.md)\
-[time_base类](../standard-library/time-base-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[time_base 类](../standard-library/time-base-class.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

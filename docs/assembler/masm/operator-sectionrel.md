@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下方面的详细信息： operator SECTIONREL
 title: 运算符 SECTIONREL
 ms.date: 12/17/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - SECTIONREL operator
 - operator SECTIONREL
 ms.assetid: db033a9d-b029-48dd-a010-d19e3a9d1af2
-ms.openlocfilehash: 761452e44d1e860a67601122a886ecdc68dcfe58
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 49af0850e0fff79845be177fc048a5cf267b1d9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318990"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97126810"
 ---
 # <a name="operator-sectionrel"></a>运算符 SECTIONREL
 
@@ -25,9 +26,9 @@ ms.locfileid: "75318990"
 
 ## <a name="remarks"></a>备注
 
-**SECTIONREL**仅可用于显示 COFF 对象。
+**SECTIONREL** 仅可用于显示 COFF 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [运算符引用](operators-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

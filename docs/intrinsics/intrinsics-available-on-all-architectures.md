@@ -1,25 +1,26 @@
 ---
+description: 了解详细信息：在所有体系结构上可用的内部函数
 title: 在所有体系结构上都可用的内部函数
 ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: b2f3a1371b250230e09c60301478787fe17ea7cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97167937"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>在所有体系结构上都可用的内部函数
 
-Microsoft C/C++编译器和通用 C 运行时库（UCRT）使某些内部函数可用于所有体系结构。
+Microsoft C/c + + 编译器和通用 C 运行时库 (UCRT) 使某些内部函数可用于所有体系结构。
 
 ## <a name="compiler-intrinsics"></a>编译器内部函数
 
 以下内部函数可用于 x86、AMD64、ARM 和 ARM64 体系结构：
 
-|内部函数|Header|
+|Intrinsic|标头|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -73,7 +74,7 @@ Microsoft C/C++编译器和通用 C 运行时库（UCRT）使某些内部函数�
 
 以下 UCRT 函数在所有体系结构上都有内部形式：
 
-|内部函数|Header|
+|Intrinsic|标头|
 |---------------|------------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
@@ -96,7 +97,7 @@ Microsoft C/C++编译器和通用 C 运行时库（UCRT）使某些内部函数�
 |[ceil](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
 |[ceilf](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
 |[ceill](../c-runtime-library/reference/ceil-ceilf-ceill.md)|math.h|
-|[cos](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
+|[缆](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[cosf](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
 |[coshf](../c-runtime-library/reference/cosh-coshf-coshl.md)|math.h|
@@ -115,7 +116,7 @@ Microsoft C/C++编译器和通用 C 运行时库（UCRT）使某些内部函数�
 |[fmodl](../c-runtime-library/reference/fmod-fmodf.md)|math.h|
 |[labs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[llabs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
-|[log](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
+|[日志](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
@@ -142,10 +143,10 @@ Microsoft C/C++编译器和通用 C 运行时库（UCRT）使某些内部函数�
 |[sqrt](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|math.h|
 |[sqrtf](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|math.h|
 |[sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|math.h|
-|[strcat](../c-runtime-library/reference/strcat-wcscat-mbscat.md)|string.h|
+|strcat|string.h|
 |[strcmp](../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)|string.h|
 |[strcpy](../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)|string.h|
-|[strlen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|string.h|
+|strlen|string.h|
 |[_strset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|string.h|
 |[strset](../c-runtime-library/reference/strset-wcsset.md)|string.h|
 |[tan](../c-runtime-library/reference/tan-tanf-tanl.md)|math.h|
@@ -165,4 +166,4 @@ Microsoft C/C++编译器和通用 C 运行时库（UCRT）使某些内部函数�
 [ARM 内部函数](../intrinsics/arm-intrinsics.md)\
 [ARM64 内部函数](../intrinsics/arm64-intrinsics.md)\
 [x86 内部函数列表](../intrinsics/x86-intrinsics-list.md)\
-[x64 （amd64）内部函数列表](../intrinsics/x64-amd64-intrinsics-list.md)
+[x64 (amd64) 内部函数列表](../intrinsics/x64-amd64-intrinsics-list.md)
