@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： exponential_distribution 类
 title: exponential_distribution 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: dbb8425047d9076343922dfbcf5c6162b6054c3b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f89976cf4da829f5778070079691b20371b0cd67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232442"
 ---
 # <a name="exponential_distribution-class"></a>exponential_distribution 类
 
@@ -65,7 +66,7 @@ public:
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *RealType*\
 浮点结果类型，默认为 **`double`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
@@ -73,7 +74,7 @@ public:
 *URNG*\
 随机数生成器引擎。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **`double`** 如果未根据指数分布提供和分布任何类型，则类模板将描述产生用户指定的整型值的分布。 下表链接到有关各个成员的文章。
 
@@ -178,7 +179,7 @@ explicit exponential_distribution(result_type lambda = 1.0);
 explicit exponential_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lambda*\
 `lambda` 分布参数。
@@ -186,13 +187,13 @@ explicit exponential_distribution(const param_type& parm);
 *parm*\
 用于构造分布的参数包。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **前提条件：**`0.0 < lambda`
 
 第一个构造函数将构造一个其存储的 `lambda` 值保留值 *lambda* 的对象。
 
-第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="exponential_distributionparam_type"></a><a name="param_type"></a> exponential_distribution：:p aram_type
 
@@ -209,7 +210,7 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lambda*\
 `lambda` 分布参数。
@@ -217,12 +218,12 @@ struct param_type {
 *然后*\
 要与它进行比较的 `param_type` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **前提条件：**`0.0 < lambda`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

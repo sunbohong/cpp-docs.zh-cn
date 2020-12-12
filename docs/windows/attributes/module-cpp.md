@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下方面的详细信息：模块 (c + +) '
 title: '模块 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: b6cde0baaae9901258e90ededf05c60cb13a7dc1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1780ebcb89e7d19f3f3a4c2656d383725d85657a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327491"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -25,7 +26,7 @@ ms.locfileid: "88833967"
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+type<br/>
  (可选) 可以是以下项之一：
 
 - `dll` 添加一些函数和类，使生成的 DLL 能够充当进程内 COM 服务器。 这是默认值。
@@ -36,7 +37,7 @@ ms.locfileid: "88833967"
 
 - `unspecified` 禁用与模块特性相关的 ATL 代码注入： ATL Module 类、全局实例 _AtlModule 和入口点函数的注入。 不要禁用该项目中的其他特性的 ATL 代码注入。
 
-name <br/>
+name<br/>
  (可选) 库块的名称。
 
 *version*<br/>
@@ -73,7 +74,7 @@ name <br/>
 不能随意调用 (可选) 库成员。 更多详细信息，请参阅 [受限](/windows/win32/Midl/restricted) MIDL 特性。
 
 *客户*<br/>
- (可选) 一个或多个属性;这类似于 [自定义](custom-cpp.md) 特性。 *自定义*的第一个参数是该特性的 GUID。 例如：
+ (可选) 一个或多个属性;这类似于 [自定义](custom-cpp.md) 特性。 *自定义* 的第一个参数是该特性的 GUID。 例如：
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -85,7 +86,7 @@ name <br/>
 > [!NOTE]
 > rgs 文件和含服务名称的字符串应包含相同的数字值。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 除非指定 *受限* 参数为 [emitidl](emitidl.md)，在使用 c + + 特性的任何程序时， **模块** 是必须的。
 
@@ -157,7 +158,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

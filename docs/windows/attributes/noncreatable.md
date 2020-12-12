@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： noncreatable
 title: 'noncreatable (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-ms.openlocfilehash: b645d6d6cbcaeff346437d6457360ecdef8d3190
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1bbd871d19ab4e02aa4d8acf715da76c4287ce64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840552"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327462"
 ---
 # <a name="noncreatable"></a>noncreatable
 
@@ -25,7 +26,7 @@ ms.locfileid: "88840552"
 
 ## <a name="remarks"></a>备注
 
-**Noncreatable** c + + 特性具有与[noncreatable](/windows/win32/Midl/noncreatable) MIDL 特性相同的功能，并且会自动传递到生成的。IDL 文件。
+**Noncreatable** c + + 特性具有与 [noncreatable](/windows/win32/Midl/noncreatable) MIDL 特性相同的功能，并且会自动传递到生成的。IDL 文件。
 
 如果在使用 ATL 的项目中使用此属性，则该属性的行为将发生更改。 除了上述行为，该特性还将插入 [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) 宏。 此宏向 ATL 指示不能在外部创建对象。
 
@@ -60,7 +61,7 @@ class CMyClass : public A
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)

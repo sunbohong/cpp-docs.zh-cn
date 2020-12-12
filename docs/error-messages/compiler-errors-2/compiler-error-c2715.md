@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2715
 title: 编译器错误 C2715
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 24f972452f9c823d2082e1c29758b39f088021d0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6575e5b678189834a035f9e236b3d768dc7ab368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760525"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320803"
 ---
 # <a name="compiler-error-c2715"></a>编译器错误 C2715
 
 "type"：无法引发或捕捉此类型
 
-在托管代码中使用异常处理时，值类型是无效的参数（有关详细信息，请参阅[异常处理](../../extensions/exception-handling-cpp-component-extensions.md)）。
+在托管代码中使用异常处理时，值类型不是有效的参数 (有关详细信息，请参阅 [异常处理](../../extensions/exception-handling-cpp-component-extensions.md)) 。
 
 ```cpp
 // C2715a.cpp

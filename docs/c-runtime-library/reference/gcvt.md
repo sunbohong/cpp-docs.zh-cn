@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _gcvt
 title: _gcvt
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 942f233e3b0e4c1ac3bc96d1fa64fd46cdccbcc2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341498"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -67,21 +68,21 @@ char *_gcvt(
 
 ## <a name="return-value"></a>返回值
 
-**_gcvt**返回指向数字字符串的指针。
+**_gcvt** 返回指向数字字符串的指针。
 
 ## <a name="remarks"></a>备注
 
-**_Gcvt**函数将浮点*值*转换为字符串（包含一个小数点和一个可能的符号字节），并将该字符串存储在*buffer*中。 *缓冲区*应足够大以容纳转换后的值加上自动追加的终止 null 字符。 如果使用了*数字*+ 1 的缓冲区大小，则函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt**尝试以十进制格式生成*数字*位数。 如果不能，则它将以指数格式生成*位数*。 在转换过程中，可以取消零结尾。
+**_Gcvt** 函数将浮点 *值* 转换为字符串， (包括小数点和可能的符号字节) ，并将该字符串存储在 *buffer* 中。 *缓冲区* 应足够大以容纳转换后的值加上自动追加的终止 null 字符。 如果使用了 *数字* + 1 的缓冲区大小，则函数将覆盖缓冲区的末尾。 这是因为转换后的字符串包含小数点，并且可以包含符号和指数信息。 没有为溢出进行预配。 **_gcvt** 尝试以十进制格式生成 *数字* 位数。 如果不能，则它将以指数格式生成 *位数* 。 在转换过程中，可以取消零结尾。
 
-长度 **_CVTBUFSIZE**的*缓冲区*足以满足任何浮点值。
+长度 **_CVTBUFSIZE** 的 *缓冲区* 足以满足任何浮点值。
 
-此函数验证其参数。 如果*buffer*为**NULL**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回**NULL**。
+此函数验证其参数。 如果 *buffer* 为 **NULL**，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将 **errno** 设置为 **EINVAL** ，并返回 **NULL**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
@@ -143,7 +144,7 @@ buffer: '-0.123456789012' (15 chars)
 buffer: '-1.23456789012e-002' (19 chars)
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>

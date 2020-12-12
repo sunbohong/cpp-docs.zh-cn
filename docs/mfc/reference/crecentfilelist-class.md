@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CRecentFileList 类
 title: CRecentFileList 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-ms.openlocfilehash: a2102c6a39c14c548828e57ad1c49de6a5bc03dd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9433e65336cba1018c7bff8cf3a90e239ae5e3eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370899"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301121"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 类
 
@@ -43,31 +44,31 @@ class CRecentFileList
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[最新文件列表："最新文件列表"](#crecentfilelist)|构造 `CRecentFileList` 对象。|
+|[CRecentFileList::CRecentFileList](#crecentfilelist)|构造 `CRecentFileList` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[最新文件列表：：添加](#add)|将文件添加到 MRU 文件列表。|
-|[最新文件列表：获取显示名称](#getdisplayname)|为 MRU 文件名的菜单显示提供显示名称。|
-|[最新文件列表：获取 Size](#getsize)|检索 MRU 文件列表中的文件数。|
-|[最新文件列表：阅读列表](#readlist)|从注册表或 读取 MRU 文件列表。INI 文件。|
-|[最新文件列表：删除](#remove)|从 MRU 文件列表中删除文件。|
-|[最新文件列表：更新菜单](#updatemenu)|更新 MRU 文件列表的菜单显示。|
-|[最新文件列表：写入列表](#writelist)|从注册表或 写入 MRU 文件列表。INI 文件。|
+|[CRecentFileList：： Add](#add)|将文件添加到 MRU 文件列表。|
+|[CRecentFileList：： GetDisplayName](#getdisplayname)|为 MRU 文件名的菜单显示提供显示名称。|
+|[CRecentFileList：： GetSize](#getsize)|检索 MRU 文件列表中的文件数。|
+|[CRecentFileList：： ReadList](#readlist)|从注册表或读取 MRU 文件列表。INI 文件。|
+|[CRecentFileList：： Remove](#remove)|从 MRU 文件列表中删除文件。|
+|[CRecentFileList::UpdateMenu](#updatemenu)|更新 MRU 文件列表的菜单显示。|
+|[CRecentFileList::WriteList](#writelist)|从注册表或写入 MRU 文件列表。INI 文件。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[最新文件列表：运算符\[\]](#operator_at)|返回`CString`给定位置的对象。|
+|[CRecentFileList：： operator \[\]](#operator_at)|返回 `CString` 位于给定位置的对象。|
 
 ## <a name="remarks"></a>备注
 
-文件可以添加到 MRU 文件列表中或从中删除，文件列表可以从注册表或 写入 注册表或 。可以更新 INI 文件，并可以更新显示 MRU 文件列表的菜单。
+可以在 MRU 文件列表中添加或删除文件，可以从注册表或将文件列表读取或写入文件。INI 文件，可更新显示 MRU 文件列表的菜单。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -75,11 +76,11 @@ class CRecentFileList
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxadv.h
+**标头：** afxadv
 
-## <a name="crecentfilelistadd"></a><a name="add"></a>最新文件列表：：添加
+## <a name="crecentfilelistadd"></a><a name="add"></a> CRecentFileList：： Add
 
-将文件添加到最近使用的 （MRU） 文件列表中。
+将文件添加到最近使用的 (MRU) 文件列表中。
 
 ```
 virtual void Add(LPCTSTR lpszPathName);
@@ -101,28 +102,28 @@ void Add(
     LPCTSTR lpszAppID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lpszPath名称*<br/>
-指定要添加到列表中的路径名称。
+*lpszPathName*<br/>
+指定要添加到列表中的路径名。
 
 *lpszAppID*<br/>
-为应用程序指定应用程序用户型号 ID。
+指定应用程序的应用程序用户模型 ID。
 
 *pItem*<br/>
-指定要添加到列表中的指向壳项的指针。
+指定要添加到列表中的 Shell 项的指针。
 
-*p链接*<br/>
-指定要添加到列表中的指向 Shell 链接的指针。
+*pLink*<br/>
+指定指向要添加到列表中的 Shell 链接的指针。
 
-*皮德尔*<br/>
-指定应添加到最近文档文件夹的 shell 项的 IDLIST。
+*pidl*<br/>
+指定应添加到 "最近使用的文档" 文件夹中的 shell 项的 IDLIST.TXT。
 
 ### <a name="remarks"></a>备注
 
-文件名将添加到 MRU 列表的顶部。 如果 MRU 列表中已存在文件名，它将移动到顶部。
+文件名将添加到 MRU 列表的顶部。 如果该文件名已经存在于 MRU 列表中，则会将其移动到顶部。
 
-## <a name="crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a>最新文件列表："最新文件列表"
+## <a name="crecentfilelistcrecentfilelist"></a><a name="crecentfilelist"></a> CRecentFileList::CRecentFileList
 
 构造 `CRecentFileList` 对象。
 
@@ -135,30 +136,30 @@ CRecentFileList(
     int nMaxDispLen = AFX_ABBREV_FILENAME_LEN);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*n 开始*<br/>
-MRU（最近使用）文件列表的菜单显示中编号的偏移量。
+*nStart*<br/>
+用于显示 MRU (最近使用) 文件列表的菜单中的编号偏移量。
 
-*lpsz节*<br/>
-指向注册表或应用程序的 部分的名称。读取和/或写入 MRU 文件列表的 INI 文件。
+*lpszSection*<br/>
+指向注册表的部分名称或应用程序的。读取和/或写入 MRU 文件列表的 INI 文件。
 
-*lpszentry格式*<br/>
-指向用于存储在注册表或应用程序中的条目的名称的格式字符串。INI 文件。
+*lpszEntryFormat*<br/>
+指向要用于注册表中或应用程序的项名称的格式字符串。INI 文件。
 
 *nSize*<br/>
-MRU 文件列表中的文件的最大数量。
+MRU 文件列表中的最大文件数。
 
 *nMaxDispLen*<br/>
-MRU 文件列表中的文件名的菜单显示的最大长度（以字符表示）。
+MRU 文件列表中文件名的菜单显示的最大长度（以字符数表示）。
 
 ### <a name="remarks"></a>备注
 
-*lpszEntryFormat*指向的格式字符串应包含"%d"，用于替换每个 MRU 项的索引。 例如，如果格式字符串是`"file%d"`，则条目将命名为`file0`、`file1`等。
+*LpszEntryFormat* 所指向的格式字符串应包含 "% d"，它将用于替换每个 MRU 项的索引。 例如，如果格式字符串为，则 `"file%d"` 项将命名为、等 `file0` `file1` 。
 
-## <a name="crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a>最新文件列表：获取显示名称
+## <a name="crecentfilelistgetdisplayname"></a><a name="getdisplayname"></a> CRecentFileList：： GetDisplayName
 
-获取 MRU 文件列表中文件的显示名称，用于 MRU 列表的菜单显示。
+获取 MRU 文件列表中的文件的显示名称，以便在显示的 MRU 列表的菜单中使用。
 
 ```
 virtual BOOL GetDisplayName(
@@ -169,32 +170,32 @@ virtual BOOL GetDisplayName(
     BOOL bAtLeastName = TRUE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strName*<br/>
-其名称将显示在 MRU 文件的菜单列表中的文件的完整路径。
+文件的完整路径，其名称将显示在 MRU 文件的菜单列表中。
 
 *nIndex*<br/>
-MRU 文件列表中文件的基于零的索引。
+MRU 文件列表中该文件的从零开始的索引。
 
-*lpszCurdir*<br/>
-保存当前目录的字符串。
+*lpszCurDir*<br/>
+包含当前目录的字符串。
 
 *nCurDir*<br/>
 当前目录字符串的长度。
 
-*b 最小名称*<br/>
-如果非零，则指示应返回文件的基本名称，即使它超过最大显示长度（作为*nMaxDispLen*参数传递给`CRecentFileList`构造函数）。
+*bAtLeastName*<br/>
+如果为非零值，则指示应返回文件的基名称，即使它超过最大显示长度 (作为 *nMaxDispLen* 参数传递到 `CRecentFileList` 构造函数) 。
 
 ### <a name="return-value"></a>返回值
 
-如果最近使用的 （MRU） 文件列表中的指定索引中没有文件名，**则 FALSE。**
+如果最近使用的 (MRU) 文件列表中的指定索引处没有文件名，则 **为 FALSE** 。
 
 ### <a name="remarks"></a>备注
 
-如果文件位于当前目录中，则函数将目录从显示屏上保留。 如果文件名太长，目录和扩展名将被删除。 如果文件名仍然太长，则显示名称将设置为空字符串，除非*bAtLeastName*是非零。
+如果文件在当前目录中，则该函数将离开该目录。 如果文件名太长，则会去除目录和扩展名。 如果文件名仍过长，则显示名称将设置为空字符串，除非 *bAtLeastName* 为非零值。
 
-## <a name="crecentfilelistgetsize"></a><a name="getsize"></a>最新文件列表：获取 Size
+## <a name="crecentfilelistgetsize"></a><a name="getsize"></a> CRecentFileList：： GetSize
 
 检索 MRU 文件列表中的文件数。
 
@@ -204,30 +205,30 @@ int GetSize() const;
 
 ### <a name="return-value"></a>返回值
 
-当前最近使用 （MRU） 文件列表中的文件数。
+当前最常使用的文件数 (MRU) 文件列表。
 
-## <a name="crecentfilelistoperator--"></a><a name="operator_at"></a>C 最新文件列表：运算符 |
+## <a name="crecentfilelistoperator--"></a><a name="operator_at"></a> CRecentFileList：： operator []
 
-重载子标 （`[]`） 运算符返回`CString`*由 nIndex*中的零基索引指定的单个。
+重载的下标 (`[]`) 运算符返回 `CString` *nIndex* 中从零开始的索引指定的单个。
 
 ```
 CString& operator[ ](int nindex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
-s`CString`的`CString`零基索引。
+的中的从零开始的索引 `CString` `CString` 。
 
-## <a name="crecentfilelistreadlist"></a><a name="readlist"></a>最新文件列表：阅读列表
+## <a name="crecentfilelistreadlist"></a><a name="readlist"></a> CRecentFileList：： ReadList
 
-从注册表或应用程序的 读取最近使用 （MRU） 文件列表。INI 文件。
+读取注册表中最近使用的 (MRU) 文件列表或应用程序的。INI 文件。
 
 ```
 virtual void ReadList();
 ```
 
-## <a name="crecentfilelistremove"></a><a name="remove"></a>最新文件列表：删除
+## <a name="crecentfilelistremove"></a><a name="remove"></a> CRecentFileList：： Remove
 
 从 MRU 文件列表中删除文件。
 
@@ -235,12 +236,12 @@ virtual void ReadList();
 virtual void Remove(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
-要从最近使用的 （MRU） 文件列表中删除的文件的基于零的索引。
+要从最近使用 (MRU) 文件列表中删除的文件的从零开始的索引。
 
-## <a name="crecentfilelistupdatemenu"></a><a name="updatemenu"></a>最新文件列表：更新菜单
+## <a name="crecentfilelistupdatemenu"></a><a name="updatemenu"></a> CRecentFileList::UpdateMenu
 
 更新 MRU 文件列表的菜单显示。
 
@@ -248,19 +249,19 @@ virtual void Remove(int nIndex);
 virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pCmdUI*<br/>
-指向[CCmdUI](../../mfc/reference/ccmdui-class.md)对象的指针，用于最近使用 （MRU） 文件列表菜单。
+一个指针，指向最近使用 (MRU) file list 菜单的 [CCmdUI](../../mfc/reference/ccmdui-class.md) 对象。
 
-## <a name="crecentfilelistwritelist"></a><a name="writelist"></a>最新文件列表：写入列表
+## <a name="crecentfilelistwritelist"></a><a name="writelist"></a> CRecentFileList::WriteList
 
-将最近使用的 （MRU） 文件列表写入注册表或应用程序的 。INI 文件。
+将最近使用的 (MRU) 文件列表写入注册表或应用程序的。INI 文件。
 
 ```
 virtual void WriteList();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)
+[层次结构图](../../mfc/hierarchy-chart.md)

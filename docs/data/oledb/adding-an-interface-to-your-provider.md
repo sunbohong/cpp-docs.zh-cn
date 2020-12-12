@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：向提供程序添加接口
 title: 将接口添加到提供程序
 ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: b13d1224388dc7d3218dea1c70b5aa8a595fcbdb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0514f57489fd0a5d97f659fc5695cc7e0f8e03e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212326"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246066"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>将接口添加到提供程序
 
@@ -44,6 +45,6 @@ BEGIN_COM_MAP(CCustomRowset)
 END_COM_MAP()
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 OLE DB 提供程序模板](../../data/oledb/working-with-ole-db-provider-templates.md)

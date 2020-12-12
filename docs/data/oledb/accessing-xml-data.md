@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：访问 XML 数据
 title: 访问 XML 数据
 ms.date: 10/18/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-ms.openlocfilehash: 437f1d103420ec5727294894c02587c68cffbdda
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f229dc4567247ea95ebf00a5dbc9316be8aeac1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509134"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246079"
 ---
 # <a name="accessing-xml-data"></a>访问 XML 数据
 
@@ -36,7 +37,7 @@ ms.locfileid: "91509134"
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 ```
 
-\- 或 -
+-或-
 
 ```cpp
 CCommand<CNoAccessor, CStreamRowset> myCmd;
@@ -52,7 +53,7 @@ myCmd.m_spStream->Read()
 
 SQL Server 2000 执行 XML 格式设置，并返回行集的所有列和所有行作为一个 XML 字符串。
 
-有关使用方法的示例 `Read` ，请参阅[实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)中**的向使用者添加 XML 支持**。
+有关使用方法的示例 `Read` ，请参阅 [实现简单使用者](../../data/oledb/implementing-a-simple-consumer.md)中 **的向使用者添加 XML 支持**。
 
 > [!NOTE]
 > XML 支持 `CStreamRowset` 仅使用与 SQL Server 2000 一起使用，并要求使用 MDAC) 安装 SQL Server 2000 (的 OLE DB 提供程序。

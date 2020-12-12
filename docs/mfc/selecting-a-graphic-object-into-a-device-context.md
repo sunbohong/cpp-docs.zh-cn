@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：在设备上下文中选择图形对象
 title: 将图形对象选入设备上下文
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +10,28 @@ helpviewer_keywords:
 - device contexts, selecting graphic objects into
 - device contexts, graphic objects [MFC]
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
-ms.openlocfilehash: 7fb1507c1200da4cdf44627557ff6993e927d51e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc2aabbcb1614fc77e5eadf9e6fba13ba377a4c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308520"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217674"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>将图形对象选入设备上下文
 
-本主题适用于在窗口的设备上下文中使用图形对象。 检查完[创建的图形对象](../mfc/one-stage-and-two-stage-construction-of-objects.md)，必须将它选入设备上下文来替代默认对象存储在此处：
+本主题适用于在窗口的设备上下文中使用图形对象的情况。 [创建图形对象](../mfc/one-stage-and-two-stage-construction-of-objects.md)之后，必须将其选择到设备上下文中，而不是存储在该对象中的默认对象：
 
 [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]
 
 ## <a name="lifetime-of-graphic-objects"></a>图形对象的生存期
 
-返回的图形对象[SelectObject](../mfc/reference/cdc-class.md#selectobject)是"临时"。 也就是说，它将被删除[OnIdle](../mfc/reference/cwinapp-class.md#onidle)类的成员函数`CWinApp`的下次程序获取空闲时间。 只要您使用返回的对象`SelectObject`在单个函数而无需将控制权返还给主消息循环中，将有任何问题。
+[SelectObject](../mfc/reference/cdc-class.md#selectobject)返回的图形对象为 "临时"。 也就是说，它将[](../mfc/reference/cwinapp-class.md#onidle) `CWinApp` 在下一次程序获取空闲时间时由类的 OnIdle 成员函数删除。 只要在单个函数中使用返回的对象 `SelectObject` ，而不向主消息循环返回控制权，就不会有任何问题。
 
-### <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+### <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [图形对象](../mfc/graphic-objects.md)
 
-- [图形对象的一阶段和两阶段构建](../mfc/one-stage-and-two-stage-construction-of-objects.md)
+- [图形对象的一阶段和两阶段构造](../mfc/one-stage-and-two-stage-construction-of-objects.md)
 
 - [设备上下文](../mfc/device-contexts.md)
 

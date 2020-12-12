@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： no_injected_text
 title: 'no_injected_text (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: ab718376d5da7214813d5ab2e0caaa7bbccd077b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d6b4b77055b6706256b25b0b722034e0275ec19
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844075"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327467"
 ---
 # <a name="no_injected_text"></a>no_injected_text
 
@@ -23,14 +24,14 @@ ms.locfileid: "88844075"
 [ no_injected_text(boolean) ];
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *boolean*<br/>
  (可选) **`true`** 如果不插入代码，则 **`false`** 允许注入代码。 **`true`** 默认值为。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**No_injected_text** c + + 特性最常见的用法是[/fx](../../build/reference/fx-merge-injected-code.md)编译器选项，该选项将**no_injected_text**特性插入到 .mrg 文件中。
+**No_injected_text** c + + 特性最常见的用法是 [/fx](../../build/reference/fx-merge-injected-code.md)编译器选项，该选项将 **no_injected_text** 特性插入到 .mrg 文件中。
 
 ## <a name="requirements"></a>要求
 
@@ -43,6 +44,6 @@ ms.locfileid: "88844075"
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)

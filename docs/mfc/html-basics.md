@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息： HTML 基础知识
 title: HTML 基础
 ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 29ca2e3df4981db22a10281ba2a2938fc91d5b46
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f32926beb9152441169320bf3553b0066f78fa7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290240"
 ---
 # <a name="html-basics"></a>HTML 基础
 
-大多数浏览器具有查看您所浏览页面的 HTML 源的功能。 查看源时，将看到多个 HTML （超文本标记语言）标记，这些标记由尖括号（<>）括起来，并与文本交错。
+大多数浏览器具有查看您所浏览页面的 HTML 源的功能。 查看源时，将看到大量 HTML (超文本标记语言) 标记，括在尖括号 ( # A2) ，并与文本交错。
 
 下列步骤使用 HTML 标记生成简单网页。 在下列步骤中，您将使用“记事本”将文本键入文件中、进行一些更改、保存文件并在浏览器中重新加载页面来查看更改。
 
@@ -21,7 +22,7 @@ ms.locfileid: "84620004"
 
 1. 打开“记事本”或任何纯文本编辑器。
 
-1. 从 "**文件**" 菜单中选择 "**新建**"。
+1. 从 " **文件** " 菜单中选择 " **新建**"。
 
 1. 键入下列行：
 
@@ -33,13 +34,13 @@ ms.locfileid: "84620004"
     </HTML>
     ```
 
-1. 从 "**文件**" 菜单中选择 "**保存**"，并将文件另存为 c:\webpages\First.htm。 让文件在编辑器中处于打开状态。
+1. 从 " **文件** " 菜单中选择 " **保存**"，并将文件另存为 c:\webpages\First.htm。 让文件在编辑器中处于打开状态。
 
-1. 切换到浏览器，然后从 "**文件**" 菜单中选择 "**打开**"，或在浏览器的 URL 编辑框中键入*file://C:/webpages/first.htm* 。 你应看到一个窗口标题为“顶级 HTML 标记”的空白页。
+1. 切换到浏览器，然后从 " **文件** " 菜单中选择 " **打开**"，或在浏览器的 URL 编辑框中键入 *file://C:/webpages/first.htm* 。 你应看到一个窗口标题为“顶级 HTML 标记”的空白页。
 
    请注意，标记是成对的，并且包含在尖括号中。 标记不区分大小写，但通常使用大写突出标记。
 
-   标记将 \<HTML> 启动文档，标记将 \</HTML> 结束。 结束标记（不一定需要）与开始标记一样，但标记前具有一个正斜杠 (/)。 尖括号（<）和标记开头之间不应有空格。
+   标记将 \<HTML> 启动文档，标记将 \</HTML> 结束。 结束标记（不一定需要）与开始标记一样，但标记前具有一个正斜杠 (/)。 尖括号之间不应有空格 ( # A0) 和标记的开头。
 
 1. 切换回记事本，然后在行后面 \</HEAD> 键入：
 
@@ -50,7 +51,7 @@ ms.locfileid: "84620004"
     </BODY>
     ```
 
-1. 从 "**文件**" 菜单中选择 "**保存**"。
+1. 从 " **文件** " 菜单中选择 " **保存**"。
 
 1. 切换回浏览器，刷新页面。
 
@@ -109,6 +110,6 @@ Life is good.
 
 W3C.org 上[的最新发布的 HTML 版本](https://www.w3.org/TR/html/)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC Internet 编程基础知识](mfc-internet-programming-basics.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：用于创建 OLE 应用程序的操作顺序
 title: 用于创建 OLE 应用程序的操作顺序
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,28 +8,28 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-ms.openlocfilehash: b7fa989d1a3b799cf6b427e27142d4479be900bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bce49d569c6d3def536cbe9386cafbe08ccdbfb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217557"
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>用于创建 OLE 应用程序的操作顺序
 
-下表显示了创建 OLE 链接和嵌入应用程序角色和框架的角色。 这些表示可用的选项而不是序列的步骤执行。
+下表显示了在创建 OLE 链接和嵌入应用程序时的角色和框架的角色。 它们表示可用的选项，而不是要执行的一系列步骤。
 
 ### <a name="creating-ole-applications"></a>创建 OLE 应用程序
 
 |任务|您执行的操作|框架执行的操作|
 |----------|------------|------------------------|
-|创建 COM 组件。|运行 MFC 应用程序向导。 选择**完全服务器**或**袖珍服务器**中**复合文档支持**选项卡。|框架生成主干应用程序与 COM 组件功能已启用。 所有的 COM 功能可以传输到仅稍加修改与现有的应用程序。|
-|从头开始创建容器应用程序。|运行 MFC 应用程序向导。 选择**容器**中**复合文档支持**选项卡。使用类视图，转到源代码编辑器。 填写 COM 处理程序函数的代码。|框架生成主干应用程序，可以将其插入所创建的 COM 组件 （服务器） 应用程序的 COM 对象。|
-|创建一个从零开始支持自动化应用程序。|运行 MFC 应用程序向导。 选择**自动化**从**高级功能**选项卡。使用类视图公开方法和自动化应用程序中的属性。|框架生成主干应用程序，可以激活和其他应用程序可以自动完成。|
+|创建 COM 组件。|运行 MFC 应用程序向导。 在 "**复合文档支持**" 选项卡中选择 "**全服务器**" 或 "**小型服务器**"。|框架将生成启用了 COM 组件功能的主干应用程序。 所有 COM 功能都可传输到现有应用程序，只需要稍作修改。|
+|从头开始创建容器应用程序。|运行 MFC 应用程序向导。 在 "**复合文档支持**" 选项卡中选择 "**容器**"。使用类视图，请参阅源代码编辑器。 填写 COM 处理函数的代码。|框架生成可插入 com 组件 (server) 应用程序创建的 COM 对象的框架应用程序。|
+|从头开始创建支持自动化的应用程序。|运行 MFC 应用程序向导。 从 "**高级功能**" 选项卡中选择 "**自动化**"。使用类视图公开应用程序中的方法和属性以实现自动化。|框架生成可由其他应用程序激活和自动化的主干应用程序。|
 
 ## <a name="see-also"></a>请参阅
 
 [基于框架生成](../mfc/building-on-the-framework.md)<br/>
-[MFC 应用程序的构建操作顺序](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
-[ActiveX 控件的创建操作顺序](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
-[数据库应用程序的创建操作顺序](../mfc/sequence-of-operations-for-creating-database-applications.md)
+[用于生成 MFC 应用程序的操作序列](../mfc/sequence-of-operations-for-building-mfc-applications.md)<br/>
+[用于创建 ActiveX 控件的操作顺序](../mfc/sequence-of-operations-for-creating-activex-controls.md)<br/>
+[用于创建数据库应用程序的操作顺序](../mfc/sequence-of-operations-for-creating-database-applications.md)
