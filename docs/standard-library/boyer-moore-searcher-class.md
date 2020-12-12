@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息： boyer_moore_searcher 类
 title: boyer_moore_searcher 类
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_searcher
 helpviewer_keywords:
 - std::boyer_moore_searcher [C++]
-ms.openlocfilehash: d6fa4dd203336107614ca3431f38846f0c3c89af
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7d8efe145870847aae8e961dad1b4a92fec8bd57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039805"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325406"
 ---
 # <a name="boyer_moore_searcher-class"></a>boyer_moore_searcher 类
 
-`boyer_moore_searcher`类是一个函数对象类型，该类型使用 Boyer 算法搜索在对象的构造函数中指定的序列。 搜索是在提供给对象的函数调用运算符的另一序列中完成的。 此类作为参数传递给 [std：： search](algorithm-functions.md#search)的重载之一。
+`boyer_moore_searcher`类是一个函数对象类型，该类型使用 Boyer-Moore 算法搜索在对象的构造函数中指定的序列。 搜索是在提供给对象的函数调用运算符的另一序列中完成的。 此类作为参数传递给 [std：： search](algorithm-functions.md#search)的重载之一。
 
 ## <a name="syntax"></a>语法
 
@@ -40,7 +41,7 @@ class boyer_moore_searcher
 
 ## <a name="members"></a>成员
 
-| 成员 | 说明 |
+| 成员 | 描述 |
 | - | - |
 | **构造函数** | |
 | [boyer_moore_searcher](#boyer-moore-searcher-constructor) | 构造一个搜索者实例。 |
@@ -59,7 +60,7 @@ boyer_moore_searcher(
     BinaryPredicate pred = BinaryPredicate());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pat_first*\
 要搜索的序列的初始元素。
@@ -75,7 +76,7 @@ boyer_moore_searcher(
 
 ### <a name="remarks"></a>备注
 
-引发由 *BinaryPredicate*、 *Hash*或 *RandomAccessIterator* 类型的复制构造函数或 *BinaryPredicate* 或 *Hash*的调用运算符引发的任何异常。
+引发由 *BinaryPredicate*、 *Hash* 或 *RandomAccessIterator* 类型的复制构造函数或 *BinaryPredicate* 或 *Hash* 的调用运算符引发的任何异常。
 
 此类是 c + + 17 中新增的。
 
@@ -90,7 +91,7 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
     RandomAccessIterator2 last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 要在其中进行搜索的序列的初始元素。
@@ -104,7 +105,7 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 
 此类是 c + + 17 中新增的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<functional>](functional.md)\
 [算法函数](algorithm-functions.md)\

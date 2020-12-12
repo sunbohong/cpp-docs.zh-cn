@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： Unicode 编程摘要
 title: Unicode 编程摘要
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Unicode [C++], programming with
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
-ms.openlocfilehash: 5095e1c58db3e5c35eb9215367f2fbb064bc228a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: fe07aa4ff57e8dbf92377d54820adf8463d98211
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306620"
 ---
 # <a name="unicode-programming-summary"></a>Unicode 编程摘要
 
@@ -22,11 +23,11 @@ ms.locfileid: "91504717"
 
 - 指定入口点。
 
-   在项目的 "[属性页](../build/reference/property-pages-visual-cpp.md)" 对话框中的 "**链接器**" 文件夹的 "**高级**" 页上，将**入口点**符号设置为 `wWinMainCRTStartup` 。
+   在项目的 "[属性页](../build/reference/property-pages-visual-cpp.md)" 对话框中的 "**链接器**" 文件夹的 "**高级**" 页上，将 **入口点** 符号设置为 `wWinMainCRTStartup` 。
 
 - 使用可移植的运行时函数和类型。
 
-   使用正确的 C 运行时函数进行 Unicode 字符串处理。 你可以使用 `wcs` 函数系列，但你可能更倾向于) 宏的完全可移植 (国际启用 `_TCHAR` 。 这些宏的所有前缀均 `_tcs` 为，它们替换为一 `str` 系列函数。 《*运行时库参考*》中的[国际化](../c-runtime-library/internationalization.md)部分详细介绍了这些函数。 有关详细信息，请参阅 [tchar 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+   使用正确的 C 运行时函数进行 Unicode 字符串处理。 你可以使用 `wcs` 函数系列，但你可能更倾向于) 宏的完全可移植 (国际启用 `_TCHAR` 。 这些宏的所有前缀均 `_tcs` 为，它们替换为一 `str` 系列函数。 《*运行时库参考*》中的 [国际化](../c-runtime-library/internationalization.md)部分详细介绍了这些函数。 有关详细信息，请参阅 [tchar 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
    使用 `_TCHAR` 和 [支持 Unicode](../text/support-for-unicode.md)中所述的相关可移植数据类型。
 
@@ -44,7 +45,7 @@ ms.locfileid: "91504717"
     pWnd->SetWindowText( "Hello" );
     ```
 
-   用法
+   而是使用：
 
     ```cpp
     pWnd->SetWindowText( _T("Hello") );

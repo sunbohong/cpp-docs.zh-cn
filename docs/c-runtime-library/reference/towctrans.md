@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： towctrans
 title: towctrans
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-ms.openlocfilehash: d63fc343647cd0f949f282e2a64d4a0636e62bd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b8ecdd38ca45eb658d5e9f61bf05549878228bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318294"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -44,7 +45,7 @@ wint_t towctrans(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *c*<br/>
 要转换的字符。
@@ -54,11 +55,11 @@ wint_t towctrans(
 
 ## <a name="return-value"></a>返回值
 
-**Towctrans**在*类*中使用转换规则后的字符*c*。
+**Towctrans** 在 *类* 中使用转换规则后的字符 *c*。
 
 ## <a name="remarks"></a>备注
 
-此*类别*的值必须已由之前对[wctrans](wctrans.md)的成功调用返回。
+此 *类别* 的值必须已由之前对 [wctrans](wctrans.md)的成功调用返回。
 
 ## <a name="requirements"></a>要求
 
@@ -66,11 +67,11 @@ wint_t towctrans(
 |-------------|---------------------|
 |**towctrans**|\<wctype.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
-有关使用**towctrans**的示例，请参阅**wctrans** 。
+有关使用 **towctrans** 的示例，请参阅 **wctrans** 。
 
 ## <a name="see-also"></a>请参阅
 

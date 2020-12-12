@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： boyer_moore_horspool_searcher 类
 title: boyer_moore_horspool_searcher 类
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_horspool_searcher
 helpviewer_keywords:
 - std::boyer_moore_horspool_searcher [C++]
-ms.openlocfilehash: 1eb1f099ca2976dd4b0ea80ebdfb93a8b5c61f70
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 727af034dbb20bd1a0d09ae7de8f88da16a6ba36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039828"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325420"
 ---
 # <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcher 类
 
@@ -40,7 +41,7 @@ class boyer_moore_horspool_searcher
 
 ## <a name="members"></a>成员
 
-| 成员 | 说明 |
+| 成员 | 描述 |
 | - | - |
 | **构造函数** | |
 | [boyer_moore_horspool_searcher](#boyer-moore-horspool-searcher-constructor) | 构造一个搜索者实例。 |
@@ -59,7 +60,7 @@ boyer_moore_horspool_searcher(
     BinaryPredicate pred = BinaryPredicate());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pat_first*\
 要搜索的序列的初始元素。
@@ -75,7 +76,7 @@ boyer_moore_horspool_searcher(
 
 ### <a name="remarks"></a>备注
 
-引发由 *BinaryPredicate*、 *Hash*或 *RandomAccessIterator* 类型的复制构造函数或 *BinaryPredicate* 或 *Hash*的调用运算符引发的任何异常。
+引发由 *BinaryPredicate*、 *Hash* 或 *RandomAccessIterator* 类型的复制构造函数或 *BinaryPredicate* 或 *Hash* 的调用运算符引发的任何异常。
 
 此类是 c + + 17 中新增的。
 
@@ -90,7 +91,7 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
     RandomAccessIterator2 last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 要在其中进行搜索的序列的初始元素。
@@ -104,7 +105,7 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 
 此类是 c + + 17 中新增的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<functional>](functional.md)\
 [算法函数](algorithm-functions.md)\

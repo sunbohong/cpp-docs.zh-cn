@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2657
 title: 编译器错误 C2657
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: dfec399c4b65615310263aa58db145b87c42594d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286067"
 ---
 # <a name="compiler-error-c2657"></a>编译器错误 C2657
 
-在语句的开始找到 "class：:*" （是否忘记指定类型？）
+在语句的开始找到 "class：:*" (是否忘记指定类型？ ) 
 
 该行以指向成员的指针标识符开头。
 

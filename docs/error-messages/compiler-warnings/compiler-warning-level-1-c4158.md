@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4158
 title: 编译器警告（等级 1）C4158
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4158
 ms.assetid: 6513c6b9-6772-4849-b96c-5bb093d54de6
-ms.openlocfilehash: ca7dabd5a089f41353fb63378b07b5ffc81d5295
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: dad0ce48a6df24c46b1462718dcf8066135eb2a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97267217"
 ---
 # <a name="compiler-warning-level-1-c4158"></a>编译器警告（等级 1）C4158
 
 > 假定 #pragma pointers_to_members(full_generality, inheritance)
 
-发出了一个 **#pragma pointers_to_members （** *单个* &#124; *多个* &#124; *虚拟* **）** ，但未附带 **#pragma pointers_to_members （full_generality）** 。
+ (*单一*&#124;*多个*&#124;*虚拟* **)** 的 **#pragma pointers_to_members** 在 **未随附的 #pragma pointers_to_members** (full_generality) 发出。

@@ -1,19 +1,20 @@
 ---
-title: 编译器警告（等级1） C4154
+description: 了解详细信息：编译器警告 (等级 1) C4154
+title: 编译器警告 (等级 1) C4154
 ms.date: 11/04/2016
 f1_keywords:
 - C4154
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: f09a15fd4c115a764f9bf738a00e1b977786397a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5654cae0fb11216928d265870c91ef0d9c0dd61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223299"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97267334"
 ---
-# <a name="compiler-warning-level-1-c4154"></a>编译器警告（等级1） C4154
+# <a name="compiler-warning-level-1-c4154"></a>编译器警告 (等级 1) C4154
 
 删除数组表达式;转换到提供的指针
 

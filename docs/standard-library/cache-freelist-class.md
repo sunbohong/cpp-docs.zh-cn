@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： cache_freelist 类
 title: cache_freelist 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: bbe0ff0f2297afcec99bd162ebe6a6d3e10f9bce
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9d5b3da272cff39b0c9d7d69df2c744d6952cd03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325377"
 ---
 # <a name="cache_freelist-class"></a>cache_freelist 类
 
@@ -28,7 +29,7 @@ template <std::size_t Sz, class Max>
 class cache_freelist
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Sz*\
 数组中要分配的元素数目。
@@ -38,7 +39,7 @@ class cache_freelist
 
 ## <a name="remarks"></a>备注
 
-Cache_freelist 类模板维护一个大小为 *Sz*的内存块的免费列表。 当可用列表已满时，它将使用 **运算符 delete** 来释放内存块。 当可用列表为空时，它将使用 **operator new** 来分配新的内存块。 可用列表的最大大小由 *最* 大参数中传递的类 max 类确定。
+Cache_freelist 类模板维护一个大小为 *Sz* 的内存块的免费列表。 当可用列表已满时，它将使用 **运算符 delete** 来释放内存块。 当可用列表为空时，它将使用 **operator new** 来分配新的内存块。 可用列表的最大大小由 *最* 大参数中传递的类 max 类确定。
 
 每个内存块都包含 *Sz* 字节的可用内存和 **运算符 new** 和 **运算符 delete** 需要的数据。
 
@@ -69,7 +70,7 @@ Cache_freelist 类模板维护一个大小为 *Sz*的内存块的免费列表。
 void *allocate(std::size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *计*\
 数组中要分配的元素数目。
@@ -98,7 +99,7 @@ cache_freelist();
 void deallocate(void* ptr, std::size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要从存储中释放的第一个对象的指针。
@@ -108,6 +109,6 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)

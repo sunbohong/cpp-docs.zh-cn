@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; cctype&gt;
 title: '&lt;cctype&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - cctype header
 ms.assetid: 3fd18bfd-c414-4def-bac1-c362e1fe8b71
-ms.openlocfilehash: d1d69b5fe125372c489965949b2b59c4012fdec9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a66c0b0f253ce034becf1845bb42f0c204414c34
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449847"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325337"
 ---
 # <a name="ltcctypegt"></a>&lt;cctype&gt;
 
@@ -19,9 +20,9 @@ ms.locfileid: "68449847"
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<cctype >
+**标头：**\<cctype>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="remarks"></a>备注
 
@@ -48,6 +49,6 @@ int toupper(int c);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4566
 title: 编译器警告（等级 1）C4566
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: 87d610980ffe9d9e5087ddaec0ecb91d813a4d60
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2e0d1f5b80a42d58f2866109957e466d3ab36cc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332248"
 ---
 # <a name="compiler-warning-level-1-c4566"></a>编译器警告（等级 1）C4566
 
-由通用字符名称 "char" 表示的字符不能在当前代码页中表示（页）
+由通用字符名称 "char" 表示的字符不能在当前代码页中表示 (页面) 
 
 并非每个 Unicode 字符都可以在当前 ANSI 代码页中表示。
 
-将窄字符串（单字节字符）转换为多字节字符，而不是宽字符串（双字节字符）。
+窄字符串 (将单字节) 字符转换为多字节字符，而宽字符串 (双字节字符) 不为。
 
 下面的示例生成 C4566：
 

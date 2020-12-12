@@ -1,4 +1,5 @@
 ---
+description: 了解更多：使用 TCHAR。具有 _MBCS 代码的 H 数据类型
 title: 将 TCHAR.H 数据类型用于 _MBCS 代码
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-ms.openlocfilehash: dd43c29d77c3351e8f597b474c4756ad3d45ef2b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4672ba210e0df0af1a4f4ee106d31cc978bdf2fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306581"
 ---
 # <a name="using-tcharh-data-types-with-_mbcs-code"></a>将 TCHAR.H 数据类型用于 _MBCS 代码
 
@@ -32,7 +33,7 @@ ms.locfileid: "87215356"
     char * _tcsrev(char *);
     ```
 
-   默认情况下，原型 `_tcsrev` `_mbsrev` 通过 Libc 中的 thunk 映射到。 这 `_mbsrev` 会将传入参数和传出返回值的类型从 `_TCHAR*` （即 `char *` ）更改为 `unsigned char *` 。 使用时，此方法可确保类型匹配 `_TCHAR` ，但由于函数调用开销，此方法相对较慢。
+   默认情况下，原型 `_tcsrev` `_mbsrev` 通过 Libc 中的 thunk 映射到。 这 `_mbsrev` 会将传入参数和传出返回值的类型从 `_TCHAR*` (更改为， `char *`) `unsigned char *` 。 使用时，此方法可确保类型匹配 `_TCHAR` ，但由于函数调用开销，此方法相对较慢。
 
 - 通过在代码中包含以下预处理器语句来使用函数内联。
 
@@ -61,8 +62,8 @@ ms.locfileid: "87215356"
     #define _tcschr _mbschr
     ```
 
-   采用此方法时，必须注意确保对字符串参数和字符串返回值使用适当的数据类型。 可以使用类型强制转换来确保类型匹配正确，也可以使用 `_TXCHAR` 一般文本数据类型。 `_TXCHAR`映射到类型， **`char`** 但映射到 **`unsigned char`** MBCS 代码中的类型。 有关一般文本宏的详细信息，请参阅《*运行时库参考*中的[一般文本映射](../c-runtime-library/generic-text-mappings.md)。
+   采用此方法时，必须注意确保对字符串参数和字符串返回值使用适当的数据类型。 可以使用类型强制转换来确保类型匹配正确，也可以使用 `_TXCHAR` 一般文本数据类型。 `_TXCHAR` 映射到类型， **`char`** 但映射到 **`unsigned char`** MBCS 代码中的类型。 有关一般文本宏的详细信息，请参阅《*运行时库参考* 中的 [一般文本映射](../c-runtime-library/generic-text-mappings.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Tchar 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)

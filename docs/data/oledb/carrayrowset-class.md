@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CArrayRowset 类
 title: CArrayRowset 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: c5f12afa09bc1c62d3287bab93159e217721906f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 929f8744671cecc54e7c192d4f3ddc17e27287cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97213177"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 类
 
@@ -62,7 +63,7 @@ class CArrayRowset :
    protected CBulkRowset <TAccessor>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 您希望集合使用的访问器类的类型。
@@ -75,20 +76,20 @@ class CArrayRowset :
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [CArrayRowset](#carrayrowset) | 构造函数。 |
 | [快照](#snapshot) | 将整个行集读入内存。 |
 
 ### <a name="operators"></a>运算符
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [运算符&#91;&#93;](#operator) | 访问行集合的元素。 |
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [CArrayRowset::m_nRowsRead](#nrowsread) | 已读取的行数。 |
 
@@ -102,7 +103,7 @@ class CArrayRowset :
 CArrayRowset(int nMax = 100000);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *N 每天*<br/>
 [in] 行集中的最大行数。
@@ -127,7 +128,7 @@ HRESULT Snapshot() throw();
 TAccessor & operator[](int nrow);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 一个指定存储在行集中的访问器类型的模板化参数。
@@ -139,7 +140,7 @@ TAccessor & operator[](int nrow);
 
 请求行的内容。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *nRow* 超过行集中的行数，则会引发异常。
 
@@ -153,7 +154,7 @@ TAccessor & operator[](int nrow);
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

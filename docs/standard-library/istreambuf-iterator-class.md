@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： istreambuf_iterator 类
 title: istreambuf_iterator 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: b76e327c46a180c1e7ae7287ee9fe49573f3a7a6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 221141f5dd97be80b6f13b677f4ed253d75e1054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306724"
 ---
 # <a name="istreambuf_iterator-class"></a>istreambuf_iterator 类
 
@@ -37,7 +38,7 @@ class istreambuf_iterator
 : public iterator<input_iterator_tag, CharType, typename Traits ::off_type, CharType*, CharType&>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 一种类型，此类型表示 istreambuf_iterator 的字符类型。
@@ -53,7 +54,7 @@ istreambuf_iterator 类必须满足输入迭代器的需求。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[istreambuf_iterator](#istreambuf_iterator)|构造初始化为从输入流读取字符的 `istreambuf_iterator`。|
 
@@ -75,7 +76,7 @@ istreambuf_iterator 类必须满足输入迭代器的需求。
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[操作员](#op_star)|取消引用运算符将返回流中的下一字符。|
 |[operator + +](#op_add_add)|返回输入流中的下一字符或者在递增对象前复制对象并返回副本。|
@@ -87,7 +88,7 @@ istreambuf_iterator 类必须满足输入迭代器的需求。
 
 **命名空间:** std
 
-## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a>istreambuf_iterator：： char_type
+## <a name="istreambuf_iteratorchar_type"></a><a name="char_type"></a> istreambuf_iterator：： char_type
 
 为 `ostreambuf_iterator` 的字符类型提供的类型。
 
@@ -132,7 +133,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorequal"></a><a name="equal"></a>istreambuf_iterator：：等于
+## <a name="istreambuf_iteratorequal"></a><a name="equal"></a> istreambuf_iterator：：等于
 
 测试：两个输入流缓冲区迭代器是否相等。
 
@@ -140,7 +141,7 @@ int main( )
 bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要针对其检查相等性的迭代器。
@@ -181,7 +182,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a>istreambuf_iterator：： int_type
+## <a name="istreambuf_iteratorint_type"></a><a name="int_type"></a> istreambuf_iterator：： int_type
 
 为 `istreambuf_iterator` 提供整数类型的类型。
 
@@ -212,7 +213,7 @@ The inttype1 = 100.
 */
 ```
 
-## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a>istreambuf_iterator：： istream_type
+## <a name="istreambuf_iteratoristream_type"></a><a name="istream_type"></a> istreambuf_iterator：： istream_type
 
 为 `istreambuf_iterator` 的流类型提供的类型。
 
@@ -228,7 +229,7 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 有关如何声明和使用 `istream_type` 的示例，请参阅 [istreambuf_iterator](#istreambuf_iterator)。
 
-## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a>istreambuf_iterator：： istreambuf_iterator
+## <a name="istreambuf_iteratoristreambuf_iterator"></a><a name="istreambuf_iterator"></a> istreambuf_iterator：： istreambuf_iterator
 
 构造一个 istreambuf_iterator，会将其初始化以从输入流读取字符。
 
@@ -237,7 +238,7 @@ istreambuf_iterator(streambuf_type* strbuf = 0) throw();
 istreambuf_iterator(istream_type& _Istr) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strbuf*\
 `istreambuf_iterator` 要附加到的输入流缓冲区。
@@ -247,7 +248,7 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数通过*strbuf*初始化输入流缓冲区指针。 第二个构造函数用 *_Istr*初始化输入流缓冲区指针。 `rdbuf`，最终会尝试提取并存储类型的对象 `CharType` 。
+第一个构造函数通过 *strbuf* 初始化输入流缓冲区指针。 第二个构造函数用 *_Istr* 初始化输入流缓冲区指针。 `rdbuf`，最终会尝试提取并存储类型的对象 `CharType` 。
 
 ### <a name="example"></a>示例
 
@@ -281,7 +282,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a>istreambuf_iterator：： operator *
+## <a name="istreambuf_iteratoroperator"></a><a name="op_star"></a> istreambuf_iterator：： operator *
 
 取消引用运算符将返回流中的下一字符。
 
@@ -321,7 +322,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a>istreambuf_iterator：： operator + +
+## <a name="istreambuf_iteratoroperator"></a><a name="op_add_add"></a> istreambuf_iterator：： operator + +
 
 返回输入流中的下一字符或者在递增对象前复制对象并返回副本。
 
@@ -366,7 +367,7 @@ int main( )
 }
 ```
 
-## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a>istreambuf_iterator：： operator-&gt;
+## <a name="istreambuf_iteratoroperator-gt"></a><a name="op_arrow"></a> istreambuf_iterator：： operator-&gt;
 
 返回成员的值（如果有）。
 
@@ -376,9 +377,9 @@ const Elem* operator->() const;
 
 ### <a name="return-value"></a>返回值
 
-运算符返回** & \* \* this**。
+运算符返回 **& \* \* this**。
 
-## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a>istreambuf_iterator：： streambuf_type
+## <a name="istreambuf_iteratorstreambuf_type"></a><a name="streambuf_type"></a> istreambuf_iterator：： streambuf_type
 
 为 istreambuf_iterator 的流类型提供的类型。
 
@@ -394,7 +395,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 有关如何声明和使用 `istreambuf_type` 的示例，请参阅 [istreambuf_iterator](#istreambuf_iterator)。
 
-## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a>istreambuf_iterator：： traits_type
+## <a name="istreambuf_iteratortraits_type"></a><a name="traits_type"></a> istreambuf_iterator：： traits_type
 
 为 `istream_iterator` 的字符特征类型提供的类型。
 
@@ -439,7 +440,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [iterator 结构](../standard-library/iterator-struct.md)\
 [\<iterator>](../standard-library/iterator.md)\

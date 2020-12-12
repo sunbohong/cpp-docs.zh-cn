@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4581
 title: 编译器警告（等级 1）C4581
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 491121bc236c54ce5b74c76abfa6a650ff7a99ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6fffa3f7ea74cb17eae7fe4af2575e1d574084fc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332215"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>编译器警告（等级 1）C4581
 
 弃用的行为： "string1" "已替换为" string2 "以处理特性
 
-此错误可能是由于为 Visual Studio 2005 执行了编译器一致性工作而生成的：针对视觉对象C++属性的参数检查。
+此错误可能是由于为 Visual Studio 2005 执行了编译器一致性工作而生成的：针对 Visual C++ 特性的参数检查。
 
 在以前的版本中，无论属性值是否括在引号中，均可接受。 如果值为枚举，则不得用引号将其引起来。
 

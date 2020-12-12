@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3012
 title: 编译器错误 C3012
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3012
 ms.assetid: cc7040b1-b3fb-4da6-a474-877914d30332
-ms.openlocfilehash: 69f0544815804e9827631be81bf9735a95bd1a22
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fff986a984acb62f770d02ff2b7b08c40e8511e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176697"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97286002"
 ---
 # <a name="compiler-error-c3012"></a>编译器错误 C3012
 
 > "*固有*"：并行区域内不允许直接使用内部函数
 
-一个[编译器内部函数](../../intrinsics/compiler-intrinsics.md)中不允许函数`omp parallel`区域。 若要解决此问题，请将内部函数移出区域，或将其替换为非内部等效项。
+[](../../intrinsics/compiler-intrinsics.md) 区域内不允许使用 `omp parallel` 。 若要解决此问题，请将内部函数移出区域，或将其替换为非内部等效项。
 
 ## <a name="example"></a>示例
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： istrstream 类
 title: istrstream 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 37118772f7cefd6f380ceb01908da55500ee7ab5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 45e60878c63c30daca85924a9d0091e202387b55
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228227"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306646"
 ---
 # <a name="istrstream-class"></a>istrstream 类
 
@@ -42,7 +43,7 @@ class istrstream : public istream
 |成员函数|说明|
 |-|-|
 |[rdbuf](#rdbuf)|返回指向流的关联 `strstreambuf` 对象的指针。|
-|[字符串](#str)|调用 [freeze](../standard-library/strstreambuf-class.md#freeze)，然后将返回指向受控序列开头的指针。|
+|[str](#str)|调用 [freeze](../standard-library/strstreambuf-class.md#freeze)，然后将返回指向受控序列开头的指针。|
 
 ## <a name="requirements"></a>要求
 
@@ -50,7 +51,7 @@ class istrstream : public istream
 
 **命名空间:** std
 
-## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream：： istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a> istrstream：： istrstream
 
 构造 `istrstream` 类型的对象。
 
@@ -70,19 +71,19 @@ istrstream(
     int count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *计*\
-缓冲区的长度（*ptr*）。
+缓冲区 (*ptr*) 的长度。
 
 *ptr*\
 缓冲区初始化使用的内容。
 
 ### <a name="remarks"></a>备注
 
-所有构造函数通过调用[istream](../standard-library/istream-typedefs.md#istream)（**sb**）来初始化基类，其中 `sb` 是[strstreambuf](../standard-library/strstreambuf-class.md)类的存储对象。 前两个构造函数还 `sb` 通过调用来进行初始化 `strstreambuf( ( const char *) ptr, 0 )` 。 剩余的两个构造函数将调用 `strstreambuf( ( const char *) ptr, count )` 。
+所有构造函数通过调用 [istream](../standard-library/istream-typedefs.md#istream) (**sb**) 来初始化基类，其中 `sb` 是 [strstreambuf](../standard-library/strstreambuf-class.md)类的存储对象。 前两个构造函数还 `sb` 通过调用来进行初始化 `strstreambuf( ( const char *) ptr, 0 )` 。 剩余的两个构造函数将调用 `strstreambuf( ( const char *) ptr, count )` 。
 
-## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream：： rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a> istrstream：： rdbuf
 
 返回指向流关联的 strstreambuf 对象的指针。
 
@@ -96,13 +97,13 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>备注
 
-成员函数将类型指针的存储流缓冲区的地址返回到[strstreambuf](../standard-library/strstreambuf-class.md)。
+成员函数将类型指针的存储流缓冲区的地址返回到 [strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>示例
 
 有关使用 `rdbuf` 的示例，请参阅 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="istrstreamstr"></a><a name="str"></a>istrstream：： str
+## <a name="istrstreamstr"></a><a name="str"></a> istrstream：： str
 
 调用 [freeze](../standard-library/strstreambuf-class.md#freeze)，然后将返回指向受控序列开头的指针。
 
@@ -120,9 +121,9 @@ char *str();
 
 ### <a name="example"></a>示例
 
-有关使用的示例，请参阅[strstream：： str](../standard-library/strstreambuf-class.md#str) `str` 。
+有关使用的示例，请参阅 [strstream：： str](../standard-library/strstreambuf-class.md#str) `str` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [istream](../standard-library/istream-typedefs.md#istream)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
