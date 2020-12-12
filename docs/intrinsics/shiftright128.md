@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __shiftright128
 title: __shiftright128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: a18a9958a51f291e4997c23e87ee48f739562416
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 71f8a0d9b740ebfef5e930715e07d1ec31950269
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220014"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306971"
 ---
 # <a name="__shiftright128"></a>__shiftright128
 
@@ -29,7 +30,7 @@ unsigned __int64 __shiftright128(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *LowPart*\
 中要移位的128位数量的低64位。
@@ -46,11 +47,11 @@ unsigned __int64 __shiftright128(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__shiftright128`|X64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
@@ -58,7 +59,7 @@ unsigned __int64 __shiftright128(
 
 ## <a name="example"></a>示例
 
-有关示例, 请参阅[__shiftleft128](../intrinsics/shiftleft128.md)。
+有关示例，请参阅 [__shiftleft128](../intrinsics/shiftleft128.md)。
 
 **结束 Microsoft 专用**
 

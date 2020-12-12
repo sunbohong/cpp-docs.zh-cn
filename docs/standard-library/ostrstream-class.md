@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ostrstream 类
 title: ostrstream 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: f17d8006aea6c5467f8de270318386bb12df264a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9966f044d48aa762d681bafcfc22441f7124c9a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305138"
 ---
 # <a name="ostrstream-class"></a>ostrstream 类
 
@@ -38,7 +39,7 @@ class ostrstream : public ostream
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[ostrstream](#ostrstream)|构造 `ostrstream` 类型的对象。|
 
@@ -49,7 +50,7 @@ class ostrstream : public ostream
 |[&](#freeze)|导致无法通过流缓冲区操作使用流缓冲区。|
 |[pcount](#pcount)|返回写入到受控序列的元素计数。|
 |[rdbuf](#rdbuf)|返回指向流的关联 `strstreambuf` 对象的指针。|
-|[字符串](#str)|调用 [freeze](../standard-library/strstreambuf-class.md#freeze)，然后将返回指向受控序列开头的指针。|
+|[str](#str)|调用 [freeze](../standard-library/strstreambuf-class.md#freeze)，然后将返回指向受控序列开头的指针。|
 
 ## <a name="requirements"></a>要求
 
@@ -57,7 +58,7 @@ class ostrstream : public ostream
 
 **命名空间:** std
 
-## <a name="ostrstreamfreeze"></a><a name="freeze"></a>ostrstream：：冻结
+## <a name="ostrstreamfreeze"></a><a name="freeze"></a> ostrstream：：冻结
 
 导致无法通过流缓冲区操作使用流缓冲区。
 
@@ -65,20 +66,20 @@ class ostrstream : public ostream
 void freeze(bool _Freezeit = true);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Freezeit*\
 一个 **`bool`** ，该值指示是否要冻结流。
 
 ### <a name="remarks"></a>备注
 
-此成员函数调用[rdbuf](#rdbuf)  ->  [冻结](../standard-library/strstreambuf-class.md#freeze)（_ *Freezeit*）。
+此成员函数调用 [rdbuf](#rdbuf)  ->  [冻结](../standard-library/strstreambuf-class.md#freeze) (_ *Freezeit*) 。
 
 ### <a name="example"></a>示例
 
-有关使用的示例，请参阅[strstream：：冻结](../standard-library/strstreambuf-class.md#freeze) `freeze` 。
+有关使用的示例，请参阅 [strstream：：冻结](../standard-library/strstreambuf-class.md#freeze) `freeze` 。
 
-## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a>ostrstream：： ostrstream
+## <a name="ostrstreamostrstream"></a><a name="ostrstream"></a> ostrstream：： ostrstream
 
 构造 `ostrstream` 类型的对象。
 
@@ -90,7 +91,7 @@ ostrstream(char* ptr,
     ios_base::openmode _Mode = ios_base::out);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 缓冲区。
@@ -103,13 +104,13 @@ ostrstream(char* ptr,
 
 ### <a name="remarks"></a>备注
 
-这两个构造函数通过调用[ostream](../standard-library/ostream-typedefs.md#ostream)（**sb**）来初始化基类，其中 `sb` 是[strstreambuf](../standard-library/strstreambuf-class.md)类的存储对象。 第一个构造函数还 `sb` 通过调用初始化 `strstreambuf` 。 第二个构造函数以下列两种方式之一初始化基类：
+这两个构造函数通过调用 [ostream](../standard-library/ostream-typedefs.md#ostream) (**sb**) 来初始化基类，其中 `sb` 是 [strstreambuf](../standard-library/strstreambuf-class.md)类的存储对象。 第一个构造函数还 `sb` 通过调用初始化 `strstreambuf` 。 第二个构造函数以下列两种方式之一初始化基类：
 
-- 如果 `_Mode`  &  **ios_base：： app**= = 0，则 `ptr` 必须指定元素数组的第一个元素 `count` ，且构造函数调用 `strstreambuf` （ `ptr` ， `count` ， `ptr` ）。
+- 如果 `_Mode`  &  **ios_base：： app**= = 0，则 `ptr` 必须指定元素数组的第一个元素 `count` ，并且构造函数将调用 `strstreambuf` (`ptr` ， `count` `ptr`) 。
 
-- 否则， `ptr` 必须指定 count 元素数组的第一个元素，该元素包含一个 C 字符串，其中第一个元素由指定 `ptr` ，并且构造函数调用 `strstreambuf` （ `ptr` ， `count` ，， `ptr`  +  `strlen` `ptr` ））。
+- 否则， `ptr` 必须指定 count 元素数组的第一个元素，其中包含由指定第一个元素的 C 字符串 `ptr` ，构造函数调用 `strstreambuf` (`ptr` 、 `count` `ptr`  +  `strlen` ( `ptr`) ) 。
 
-## <a name="ostrstreampcount"></a><a name="pcount"></a>ostrstream：:p 计数
+## <a name="ostrstreampcount"></a><a name="pcount"></a> ostrstream：:p 计数
 
 返回写入到受控序列的元素计数。
 
@@ -129,7 +130,7 @@ streamsize pcount() const;
 
 有关使用 `pcount` 的示例，请参阅 [strstream::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a>ostrstream：： rdbuf
+## <a name="ostrstreamrdbuf"></a><a name="rdbuf"></a> ostrstream：： rdbuf
 
 返回指向流关联的 strstreambuf 对象的指针。
 
@@ -143,13 +144,13 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>备注
 
-成员函数将类型的已存储流缓冲区的地址返回 `pointer` 到[strstreambuf](../standard-library/strstreambuf-class.md)。
+成员函数将类型的已存储流缓冲区的地址返回 `pointer` 到 [strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>示例
 
 有关使用 `rdbuf` 的示例，请参阅 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)。
 
-## <a name="ostrstreamstr"></a><a name="str"></a>ostrstream：： str
+## <a name="ostrstreamstr"></a><a name="str"></a> ostrstream：： str
 
 调用 [freeze](../standard-library/strstreambuf-class.md#freeze)，然后将返回指向受控序列开头的指针。
 
@@ -167,9 +168,9 @@ char *str();
 
 ### <a name="example"></a>示例
 
-有关使用的示例，请参阅[strstream：： str](../standard-library/strstreambuf-class.md#str) `str` 。
+有关使用的示例，请参阅 [strstream：： str](../standard-library/strstreambuf-class.md#str) `str` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ostream](../standard-library/ostream-typedefs.md#ostream)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

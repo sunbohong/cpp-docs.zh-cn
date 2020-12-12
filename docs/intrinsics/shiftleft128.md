@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __shiftleft128
 title: __shiftleft128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e0e1402660c2ddb6f5993e5186302ff489ed864f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306984"
 ---
 # <a name="__shiftleft128"></a>__shiftleft128
 
@@ -29,7 +30,7 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *LowPart*\
 中要移位的128位数量的低64位。
@@ -46,15 +47,15 @@ unsigned __int64 __shiftleft128(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-*移位*值始终为模数 64, 因此, 例如`__shiftleft128(1, 0, 64)`, 如果调用, 该函数将`0`向左移动低部分`0`位并返回的上限, 而不`1`是预期的情况。
+*移位* 值始终为模数64，因此，例如，如果调用 `__shiftleft128(1, 0, 64)` ，该函数将向左移动低部分 `0` 位并返回的上限 `0` ，而不是预期的 `1` 情况。
 
 ## <a name="example"></a>示例
 

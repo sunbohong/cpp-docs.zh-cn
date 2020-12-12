@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCStatusBar 类
 title: CMFCStatusBar 类
 ms.date: 11/19/2018
 f1_keywords:
@@ -72,12 +73,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 004873ef2696eb9504cdd4df77e700c4a145e886
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 79ba7c749a73406893173d7486fd5df208a37b83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686569"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307075"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 类
 
@@ -132,7 +133,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CMFCStatusBar：： OnDrawPane](#ondrawpane)|在重绘状态栏的窗格时由框架调用。|
 
@@ -188,7 +189,7 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *bStretch*<br/>
 中 *bHorz*<br/>
@@ -203,7 +204,7 @@ virtual CSize CalcFixedLayout(
 int CommandToIndex(UINT nIDFind) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIDFind*<br/>
 
@@ -220,7 +221,7 @@ BOOL Create(
     UINT nID = AFX_IDW_STATUS_BAR);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pParentWnd*<br/>
 中 *dwStyle*<br/>
@@ -240,7 +241,7 @@ BOOL CreateEx(
     UINT nID = AFX_IDW_STATUS_BAR);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pParentWnd*<br/>
 中 *dwCtrlStyle*<br/>
@@ -269,7 +270,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中如果为 TRUE，则启用鼠标双击的处理。 否则，请双击，禁用鼠标处理。
@@ -292,7 +293,7 @@ void EnablePaneProgressBar(
     COLORREF clrProgressText=-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要启用其进度栏的窗格的索引。
@@ -348,7 +349,7 @@ BOOL GetDrawExtendedArea() const;
 virtual BOOL GetExtendedArea(CRect& rect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *rect*<br/>
 
@@ -362,7 +363,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 UINT GetItemID(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 
@@ -378,7 +379,7 @@ void GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 中 *lpRect*<br/>
@@ -395,7 +396,7 @@ void GetPaneInfo(
     int& cxWidth) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 中 *nID*<br/>
@@ -410,7 +411,7 @@ void GetPaneInfo(
 long GetPaneProgress(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 
@@ -424,7 +425,7 @@ long GetPaneProgress(int nIndex) const;
 UINT GetPaneStyle(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 
@@ -442,7 +443,7 @@ void GetPaneText(
 CString GetPaneText(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 中 *s*<br/>
@@ -459,14 +460,14 @@ CString GetPaneText(int nIndex) const;
 int GetPaneWidth(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定状态栏窗格的索引。
 
 ### <a name="return-value"></a>返回值
 
-*NIndex*指定的状态栏窗格的宽度;否则，如果不存在状态栏窗格，则为零。
+*NIndex* 指定的状态栏窗格的宽度;否则，如果不存在状态栏窗格，则为零。
 
 ## <a name="cmfcstatusbargettiptext"></a><a name="gettiptext"></a> CMFCStatusBar：： GetTipText
 
@@ -476,14 +477,14 @@ int GetPaneWidth(int nIndex) const;
 CString GetTipText(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要为其检索工具提示文本的窗格的索引。
 
 ### <a name="return-value"></a>返回值
 
-*NIndex*指定的状态栏窗格的工具提示文本。 否则，如果指定的 *nIndex* 不存在状态栏窗格，则为空字符串; 如果其工具提示文本为空，则为。
+*NIndex* 指定的状态栏窗格的工具提示文本。 否则，如果指定的 *nIndex* 不存在状态栏窗格，则为空字符串; 如果其工具提示文本为空，则为。
 
 ## <a name="cmfcstatusbarinvalidatepanecontent"></a><a name="invalidatepanecontent"></a> CMFCStatusBar：： InvalidatePaneContent
 
@@ -493,7 +494,7 @@ CString GetTipText(int nIndex) const;
 void InvalidatePaneContent(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要使其内容无效并重新绘制的窗格的索引。
@@ -512,7 +513,7 @@ virtual void OnDrawPane(
     CMFCStatusBarPaneInfo* pPane);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中一个指针，指向用于绘制的设备上下文。
@@ -532,7 +533,7 @@ virtual void OnDrawPane(
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *cs*<br/>
 
@@ -546,7 +547,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *bSet*<br/>
 
@@ -560,7 +561,7 @@ BOOL SetIndicators(
     int nIDCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *lpIDArray*<br/>
 中 *nIDCount*<br/>
@@ -581,7 +582,7 @@ void SetPaneAnimation(
     BOOL bUpdate=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要向其分配动画的窗格的索引。
@@ -610,7 +611,7 @@ void SetPaneBackgroundColor(
     BOOL bUpdate=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要为其设置新背景色的窗格的索引。
@@ -638,7 +639,7 @@ void SetPaneIcon(
     BOOL bUpdate=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要为其设置图像的窗格的索引。
@@ -671,7 +672,7 @@ void SetPaneInfo(
     int cxWidth);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 中 *nID*<br/>
@@ -691,7 +692,7 @@ void SetPaneProgress(
     BOOL bUpdate=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要为其更新进度指示器的窗格的索引。
@@ -716,7 +717,7 @@ void SetPaneStyle(
     UINT nStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 中 *nStyle*<br/>
@@ -732,7 +733,7 @@ virtual BOOL SetPaneText(
     BOOL bUpdate = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nIndex*<br/>
 中 *lpszNewText*<br/>
@@ -753,7 +754,7 @@ void SetPaneTextColor(
     BOOL bUpdate=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中指定要为其分配新文本颜色的窗格的索引。
@@ -774,7 +775,7 @@ void SetPaneWidth(
     int cx);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中要为其设置新宽度的状态栏窗格的索引。
@@ -792,7 +793,7 @@ void SetTipText(
     LPCTSTR pszTipText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中要将工具提示文本分配到的窗格的索引。
@@ -803,6 +804,6 @@ void SetTipText(
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CPane 类](../../mfc/reference/cpane-class.md)<br/>
 [CStatusBar 类](../../mfc/reference/cstatusbar-class.md)

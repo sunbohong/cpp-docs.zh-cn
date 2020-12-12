@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _environ、_wenviron
 title: _environ、_wenviron
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e1a69bec6fa93373c74e1f73de469bc3b93158e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349370"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305047"
 ---
 # <a name="_environ-_wenviron"></a>_environ、_wenviron
 
@@ -49,9 +50,9 @@ extern wchar_t **_wenviron;
 
 是 `_environ` 的宽字符版本。 在使用 `wmain` 函数的程序中，`_wenviron` 在程序启动过程中根据来自操作系统环境的设置进行初始化。
 
-在使用 `main` 的程序中，`_wenviron` 最初为 NULL，因为环境是由多字节字符字符串组成的****。 在首次调用 `_wgetenv` 或 `_wputenv` 时，会由 `_wenviron` 创建并指向对应的宽字符字符串环境。
+在使用 `main` 的程序中，`_wenviron` 最初为 NULL，因为环境是由多字节字符字符串组成的。 在首次调用 `_wgetenv` 或 `_wputenv` 时，会由 `_wenviron` 创建并指向对应的宽字符字符串环境。
 
-同样，在使用 `wmain` 的程序中，`_environ` 最初是 NULL，因为环境是由宽字符字符串组成的****。 在首次调用 `_getenv` 或 `_putenv` 时，会由 `_environ` 创建并指向对应的多字节字符字符串环境。
+同样，在使用 `wmain` 的程序中，`_environ` 最初是 NULL，因为环境是由宽字符字符串组成的。 在首次调用 `_getenv` 或 `_putenv` 时，会由 `_environ` 创建并指向对应的多字节字符字符串环境。
 
 当程序中同时存在环境的两个副本（MBCS 和 Unicode）时，运行时系统必须保留这两个副本，而这将减慢执行时间。 例如，当调用 `_putenv` 时，也会自动调用 `_wputenv`，以便两个环境字符串相对应。
 
@@ -74,7 +75,7 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
 
 因此，在多字节环境中，当“`env_var_z`”的值设置为“`string2`”时，第一次隐式调用 `putenv` 之后“`env_var_z`”的值将为“`string1`”，但此值将在第二次隐式调用 `putenv` 时改写。 因此，Unicode 环境（在 `_wenviron` 中）与多字节环境（在 `_environ` 中）将区分以下这一系列的调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [全局变量](../c-runtime-library/global-variables.md)<br/>
 [getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)<br/>

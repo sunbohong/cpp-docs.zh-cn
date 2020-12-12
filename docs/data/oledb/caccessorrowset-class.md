@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAccessorRowset 类
 title: CAccessorRowset 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: d9dd2eec3948896487b5b977d1107db1f4a1046b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c93580fa41967004947b075e82e00bdcb745ad4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498726"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307569"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 类
 
@@ -46,7 +47,7 @@ template <class TAccessor = CNoAccessor,
 class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 一个访问器类。
@@ -62,7 +63,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [绑定](#bind) | 当 `bBind` 指定为 **`false`** [CCommand：： Open](./ccommand-class.md#open)) 时，将创建 (使用的绑定。 |
 | [CAccessorRowset](#caccessorrowset) | 构造函数。 |
@@ -70,7 +71,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 | [FreeRecordMemory](#freerecordmemory) | 释放当前记录中需要释放的所有列。 |
 | [GetColumnInfo](#getcolumninfo) | 实现 [IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))。 |
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类 `TAccessor` 管理访问器。 类 *TRowset* 管理行集。
 
@@ -137,19 +138,19 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
    DBCOLUMNINFO** ppColumnInfo);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 用户必须释放返回的列信息和字符串缓冲区。 当你使用 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 时，请使用此方法的第二个版本，并需要重写绑定。
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [IColumnsInfo：： GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 。
 
 ## <a name="see-also"></a>请参阅
 

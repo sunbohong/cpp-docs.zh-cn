@@ -1,4 +1,5 @@
 ---
+description: 详细了解： EOF、WEOF
 title: EOF、WEOF
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - WEOF function
 - end of file
 ms.assetid: a7150563-cdae-4cdf-9798-ad509990e505
-ms.openlocfilehash: 5ccb97b55cb61bd42d0487b22bd3e01413444ad3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 309cf4a8b4c549ae747ef098b99cc050250e0224
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438438"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305021"
 ---
 # <a name="eof-weof"></a>EOF、WEOF
 
@@ -27,7 +28,7 @@ ms.locfileid: "79438438"
 
 WEOF 将生成用于在宽流的结尾发出信号或报告错误条件的 **wint_t** 类型的值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [putc、putwc](../c-runtime-library/reference/putc-putwc.md)<br/>
 [ungetc、ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)<br/>

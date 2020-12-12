@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： (Android c + + 生成文件的常规项目属性) '
 title: 常规项目属性（Android C++ 生成文件）
 ms.date: 10/23/2017
 ms.assetid: f76d717c-56ed-4373-8cf9-9bd1a053a4cd
@@ -7,16 +8,16 @@ f1_keywords:
 - VC.Project.VCConfiguration.Android.Makefile.IntermediateDirectory
 - VC.Project.VCConfiguration.Android.Makefile.BuildLogFile
 - VC.Project.VCConfiguration.Android.Makefile.ConfigurationType
-ms.openlocfilehash: 0d03cff6b202f554e9829c51b35f069ae61576de
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 668b14db080f4a5364fa857efb2dc1cd2dc0cc4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79470261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305645"
 ---
 # <a name="general-project-properties-android-c-makefile"></a>常规项目属性（Android C++ 生成文件）
 
-| properties | 说明 | 选项 |
+| Property | 描述 | 选项 |
 |--|--|--|
 | 输出目录 | 指定输出文件目录的相对路径；可以包含环境变量。 |
 | 中间目录 | 指定中间文件目录的相对路径；可以包含环境变量。 |

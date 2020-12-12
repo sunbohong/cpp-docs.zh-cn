@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __segmentlimit
 title: __segmentlimit
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 49f8688918e07e143615af7b184a784daa0eaaa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217991"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306997"
 ---
 # <a name="__segmentlimit"></a>__segmentlimit
 
 **Microsoft 专用**
 
-`lsl`生成 (加载段限制) 指令。
+`lsl`) 指令生成 (负载段限制。
 
 ## <a name="syntax"></a>语法
 
@@ -28,26 +29,26 @@ unsigned long __segmentlimit(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *的*\
 中一个指定段选择器的常数。
 
 ## <a name="return-value"></a>返回值
 
-如果选择器有效并且在当前权限级别可见, 则*为*指定的段选择器的段限制。
+如果选择器有效并且在当前权限级别可见，则 *为* 指定的段选择器的段限制。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__segmentlimit`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-如果无法检索段限制, 则此指令将失败。 失败时, 此指令将清除 ZF 标志, 并且返回值未定义。
+如果无法检索段限制，则此指令将失败。 失败时，此指令将清除 ZF 标志，并且返回值未定义。
 
 此例程仅可用作内部函数。
 

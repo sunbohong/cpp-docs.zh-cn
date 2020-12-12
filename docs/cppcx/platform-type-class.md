@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：： Type 类
 title: Platform::Type 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: f94e1b37cf198f92d49efc793753892c1b138d69
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c11e85180dfb3eeeeb6eea88c3bd47b40fa7289b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307894"
 ---
 # <a name="platformtype-class"></a>Platform::Type 类
 
@@ -33,20 +34,20 @@ public ref class Platform::Type :
 
 ## <a name="public-methods"></a>公共方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [Type::GetTypeCode 方法](#gettypecode) | 返回对象的 [Platform::TypeCode 枚举](../cppcx/platform-typecode-enumeration.md) 值。 |
 | [Type：： ToString 方法](#tostring) | 返回在其元数据中指定的类型的名称。 |
 
 ## <a name="public-properties"></a>公共属性
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [类型：： FullName](#fullname) | 返回表示类型的完全限定名称的 [Platform::String 类](../cppcx/platform-string-class.md)^，并使用 .  (点) 作为分隔符，而不是：： (双冒号) ，例如 `MyNamespace.MyClass` 。 |
 
 ## <a name="conversion-operators"></a>转换运算符
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [运算符类型 ^](../cppcx/operator-type-hat.md) | 实现从 `Windows::UI::Xaml::Interop::TypeName` 到 `Platform::Type`的转换。 |
 | [运算符 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md) | 实现从 `Platform::Type` 到 `Windows::UI::Xaml::Interop::TypeName`的转换。 |
@@ -102,7 +103,7 @@ Platform::TypeCode GetTypeCode();
 
 Platform::TypeCode 枚举值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 GetTypeCode ( # A1 成员方法的等效项是 **`typeid`** 属性。
 
@@ -120,6 +121,6 @@ Platform::String^ ToString();
 
 在其元数据中指定的类型的名称。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

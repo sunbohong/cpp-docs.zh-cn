@@ -1,4 +1,5 @@
 ---
+description: 详细了解： variant 类
 title: variant 类
 ms.date: 04/04/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - variant/std::variant::emplace
 - variant/std::variant::index
 - variant/std::variant::valueless_by_exception
-ms.openlocfilehash: aba121604636ebd253523acb9b630dd9ab762584
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0fc2887def147b458e63bc316f211e62a5eba879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305099"
 ---
 # <a name="variant-class"></a>variant 类
 
@@ -42,7 +43,7 @@ template <class... Types>
 |名称|描述|
 |-|-|
 |[emplace](#emplace)|创建新的包含值。|
-|[index](#index)|返回包含的值的索引。|
+|[索引](#index)|返回包含的值的索引。|
 |[swap](#swap)||
 |[valueless_by_exception](#emplace)|**`false`** 如果变量包含值，则返回。|
 
@@ -114,7 +115,7 @@ template <class Alloc, size_t I, class U, class... Args>
 ~variant();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fc-al*\
 要用于此对象的分配器类。

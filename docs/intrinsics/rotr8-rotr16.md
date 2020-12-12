@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _rotr8、_rotr16
 title: _rotr8、_rotr16
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 66598a4e6cdc26fa60a87cd32abaa34319ebe6cc
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 95908956fe34b654c3602f27b495eb58a0b8f8c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307036"
 ---
 # <a name="_rotr8-_rotr16"></a>_rotr8、_rotr16
 
@@ -34,9 +35,9 @@ unsigned short _rotr16(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*value*\
+*负值*\
 中要旋转的值。
 
 *格*\
@@ -48,16 +49,16 @@ unsigned short _rotr16(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`_rotr8`|x86、ARM、x64、ARM64|
 |`_rotr16`|x86、ARM、x64、ARM64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-与右移位操作不同, 执行右旋转时, 从低端开始的低序位将移到高位位置。
+与右移位操作不同，执行右旋转时，从低端开始的低序位将移到高位位置。
 
 ## <a name="example"></a>示例
 
@@ -103,5 +104,5 @@ Rotating unsigned short 0x12 right by 10 bits gives 0x480
 
 ## <a name="see-also"></a>请参阅
 
-[_rotl8, _rotl16](../intrinsics/rotl8-rotl16.md)\
+[_rotl8，_rotl16](../intrinsics/rotl8-rotl16.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

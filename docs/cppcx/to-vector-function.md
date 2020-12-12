@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： to_vector 函数
 title: to_vector 函数
 ms.date: 12/30/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - to_vector Function
 ms.assetid: 9cdd5123-7243-4def-a1d3-162e0bf6219e
-ms.openlocfilehash: 4fa4e9c620519cc6bb2f96d346ded88b6cc826ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77d6bee58a793946f91bc03ba4afed35aa7252cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307582"
 ---
-# <a name="tovector-function"></a>to_vector 函数
+# <a name="to_vector-function"></a>to_vector 函数
 
 返回 `std::vector` ，其值与指定 IVector 或 IVectorView 参数所代表的集合相同。
 
@@ -27,7 +28,7 @@ template <typename T>
 inline ::std::vector<T> to_vector(IVectorView<T>^ v);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型参数。
@@ -39,10 +40,10 @@ inline ::std::vector<T> to_vector(IVectorView<T>^ v);
 
 ### <a name="requirements"></a>要求
 
-**标头：** collection.h
+**标头：** 集合。h
 
 **命名空间：** Windows::Foundation::Collections
 
 ## <a name="see-also"></a>请参阅
 
-[Windows::Foundation::Collections 命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows：： Foundation：：集合命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)
