@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Mutex 类
 title: Mutex 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Mutex::Mutex, constructor
 - Microsoft::WRL::Wrappers::Mutex::operator= operator
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-ms.openlocfilehash: 36466bd00c5b100f20ee87173e68fdef4131ec23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f69c14014a2283fe56ef8e7f705bebe5a5f6dc9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330837"
 ---
 # <a name="mutex-class"></a>Mutex 类
 
@@ -34,27 +35,27 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称       | 说明
+名称       | 描述
 ---------- | ------------------------------------------------------
-`SyncLock` | 支持同步锁的类的同义词。
+`SyncLock` | 支持同步锁定的类的同义词。
 
 ### <a name="public-constructor"></a>公共构造函数
 
-名称                   | 说明
+名称                   | 描述
 ---------------------- | ------------------------------------------------
-[穆顶：：Mutex](#mutex) | 初始化 `Mutex` 类的新实例。
+[Mutex：： Mutex](#mutex) | 初始化 `Mutex` 类的新实例。
 
 ### <a name="public-members"></a>公共成员
 
-名称                 | 说明
+名称                 | 描述
 -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------
-[静音：：锁定](#lock) | 等待，直到当前对象或与指定句柄关联的`Mutex`对象释放互斥体或指定的超时间隔已过。
+[Mutex：： Lock](#lock) | 等待当前对象或 `Mutex` 与指定句柄关联的对象释放 mutex 或指定的超时间隔已过。
 
-### <a name="public-operator"></a>公共运营商
+### <a name="public-operator"></a>公共运算符
 
-名称                                 | 说明
+名称                                 | 描述
 ------------------------------------ | ---------------------------------------------------------------------------
-[互斥：：运算符*](#operator-assign) | 将指定`Mutex`对象分配给（移动）到当前`Mutex`对象。
+[Mutex：： operator =](#operator-assign) | 将指定对象)  (移动 `Mutex` 到当前 `Mutex` 对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,13 +63,13 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 核心包装.h
+**标头：** corewrappers。h
 
-**命名空间：** 微软：：WRL：包装
+**命名空间：** Microsoft：： WRL：：包装
 
-## <a name="mutexlock"></a><a name="lock"></a>静音：：锁定
+## <a name="mutexlock"></a><a name="lock"></a> Mutex：： Lock
 
-等待，直到当前对象或与指定句柄关联的`Mutex`对象释放互斥体或指定的超时间隔已过。
+等待当前对象或 `Mutex` 与指定句柄关联的对象释放 mutex 或指定的超时间隔已过。
 
 ```cpp
 SyncLock Lock(
@@ -81,17 +82,17 @@ static SyncLock Lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*毫秒*<br/>
+milliseconds<br/>
 超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。
 
-*H*<br/>
-`Mutex`对象的句柄。
+*h*<br/>
+对象的句柄 `Mutex` 。
 
 ### <a name="return-value"></a>返回值
 
-## <a name="mutexmutex"></a><a name="mutex"></a>穆顶：：Mutex
+## <a name="mutexmutex"></a><a name="mutex"></a> Mutex：： Mutex
 
 初始化 `Mutex` 类的新实例。
 
@@ -105,18 +106,18 @@ Mutex(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*H*<br/>
-对`Mutex`对象的句柄或句柄的 rvalue 引用。
+*h*<br/>
+指向对象的句柄（或对句柄的右值引用） `Mutex` 。
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数从指定的句柄`Mutex`初始化对象。 第二个构造函数从指定的句柄`Mutex`初始化对象，然后将互斥体的所有权移动到当前`Mutex`对象。
+第一个构造函数 `Mutex` 从指定的句柄初始化一个对象。 第二个构造函数 `Mutex` 从指定的句柄初始化对象，然后将该 mutex 的所有权转移到当前 `Mutex` 对象。
 
-## <a name="mutexoperator"></a><a name="operator-assign"></a>互斥：：运算符*
+## <a name="mutexoperator"></a><a name="operator-assign"></a> Mutex：： operator =
 
-将指定`Mutex`对象分配给（移动）到当前`Mutex`对象。
+将指定对象)  (移动 `Mutex` 到当前 `Mutex` 对象。
 
 ```cpp
 Mutex& operator=(
@@ -124,15 +125,15 @@ Mutex& operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*H*<br/>
-对`Mutex`对象的 rvalue 引用。
+*h*<br/>
+对对象的 rvalue 引用 `Mutex` 。
 
 ### <a name="return-value"></a>返回值
 
-对当前`Mutex`对象的引用。
+对当前对象的引用 `Mutex` 。
 
 ### <a name="remarks"></a>备注
 
-有关详细信息，请参阅[Rvalue 参考声明器： &&](../../cpp/rvalue-reference-declarator-amp-amp.md)的**移动语义**部分。
+有关详细信息，请参阅 [右值引用声明符](../../cpp/rvalue-reference-declarator-amp-amp.md)的 **移动语义** 部分：  &&。

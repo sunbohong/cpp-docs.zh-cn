@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (等级 2) C4412
 title: 编译器警告（等级 2）C4412
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 79b4ac95fbac344ff86922b84870e01c6681ed69
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 9b7ce857d5b0545ac620e94bda9655dde0f63489
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684988"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208627"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>编译器警告（等级 2）C4412
 
@@ -19,7 +20,7 @@ ms.locfileid: "90684988"
 
 ## <a name="remarks"></a>备注
 
-**/Clr： pure**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。 如果有需要纯代码的代码，建议将其移植到 c #。
+**/Clr： pure** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。 如果有需要纯代码的代码，建议将其移植到 c #。
 
 编译器检测到可能会导致运行时错误的可能不安全的情况：从 **/clr： pure** 编译单位到通过 dllimport 导入的函数进行调用，并且函数签名包含不安全的类型。 如果某个类型包含成员函数，或者该类型的数据成员是不安全类型或为不安全类型的间接寻址，则该类型是不安全的。
 
@@ -92,7 +93,7 @@ __declspec(dllexport) Unsafe * __cdecl func() { return new Unsafe; }
 __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```
 
-**/Clr： pure**编译中的默认调用约定不同于本机编译。  当包含 C4412 时， `Test` 默认为 `__clrcall` 。 如果编译并运行此程序 (请勿使用 **/c**) ，程序将引发异常。
+**/Clr： pure** 编译中的默认调用约定不同于本机编译。  当包含 C4412 时， `Test` 默认为 `__clrcall` 。 如果编译并运行此程序 (请勿使用 **/c**) ，程序将引发异常。
 
 下面的示例生成 C4412。
 

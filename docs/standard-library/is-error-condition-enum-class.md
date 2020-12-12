@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_error_condition_enum 类
 title: is_error_condition_enum 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_condition_enum class
 ms.assetid: 752bb87a-c61c-4304-9254-5aaf228b59c0
-ms.openlocfilehash: c40f8f6eb93a33098cfbcf8133f08c56285abb43
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3fd4f95e06ebee66a1f4d7d0e7de039d26b9f1fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323723"
 ---
-# <a name="iserrorconditionenum-class"></a>is_error_condition_enum 类
+# <a name="is_error_condition_enum-class"></a>is_error_condition_enum 类
 
 表示测试 [error_condition](../standard-library/error-condition-class.md) 枚举的类型谓词。
 

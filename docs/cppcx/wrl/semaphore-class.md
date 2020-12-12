@@ -1,4 +1,5 @@
 ---
+description: 详细了解：信号量类
 title: Semaphore 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Semaphore::operator= operator
 - Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-ms.openlocfilehash: e017b1b6316c4b6d49563d9a543950ab28961d90
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0cf99ff0a0e5263b3ed924ec5ac69b7edb0bd1f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186228"
 ---
 # <a name="semaphore-class"></a>Semaphore 类
 
@@ -34,27 +35,27 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称       | 说明
+名称       | 描述
 ---------- | ------------------------------------------------------
-`SyncLock` | 支持同步锁的类的同义词。
+`SyncLock` | 支持同步锁定的类的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                               | 说明
+“属性”                               | 描述
 ---------------------------------- | ----------------------------------------------------
-[信号量：信号量：信号量](#semaphore) | 初始化 `Semaphore` 类的新实例。
+[信号灯：：信号灯](#semaphore) | 初始化 `Semaphore` 类的新实例。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                     | 说明
+“属性”                     | 描述
 ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
-[信号量：锁](#lock) | 等待，直到当前对象或与指定句柄关联的对象处于信号状态或指定的超时间隔已过。
+[信号灯：： Lock](#lock) | 等待当前对象或与指定句柄关联的对象处于终止状态或指定的超时间隔已过。
 
 ### <a name="public-operators"></a>公共运算符
 
-名称                                     | 说明
+名称                                     | 描述
 ---------------------------------------- | ---------------------------------------------------------------------------------------
-[信号量：：运算符*](#operator-assign) | 将指定的句柄从`Semaphore`对象移动到当前`Semaphore`对象。
+[信号灯：： operator =](#operator-assign) | 将指定的句柄从 `Semaphore` 对象移到当前 `Semaphore` 对象。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,13 +63,13 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 核心包装.h
+**标头：** corewrappers。h
 
-**命名空间：** 微软：：WRL：包装
+**命名空间：** Microsoft：： WRL：：包装
 
-## <a name="semaphorelock"></a><a name="lock"></a>信号量：锁
+## <a name="semaphorelock"></a><a name="lock"></a> 信号灯：： Lock
 
-等待，直到当前对象或与指定句柄关联的`Semaphore`对象处于信号状态或指定的超时间隔已过。
+等待当前对象或 `Semaphore` 与指定句柄关联的对象处于终止状态或指定的超时间隔已过。
 
 ```cpp
 SyncLock Lock(
@@ -81,21 +82,21 @@ static SyncLock Lock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*毫秒*<br/>
+milliseconds<br/>
 超时间隔（以毫秒为单位）。 默认值为 INFINITE，其表示将无限期地等待。
 
-*H*<br/>
-`Semaphore`对象的句柄。
+*h*<br/>
+对象的句柄 `Semaphore` 。
 
 ### <a name="return-value"></a>返回值
 
-一个 `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>` 类型的值
+一个 `Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`
 
-## <a name="semaphoreoperator"></a><a name="operator-assign"></a>信号量：：运算符*
+## <a name="semaphoreoperator"></a><a name="operator-assign"></a> 信号灯：： operator =
 
-将指定的句柄从`Semaphore`对象移动到当前`Semaphore`对象。
+将指定的句柄从 `Semaphore` 对象移到当前 `Semaphore` 对象。
 
 ```cpp
 Semaphore& operator=(
@@ -103,16 +104,16 @@ Semaphore& operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*H*<br/>
-对`Semaphore`对象的 Rvalue 引用。
+*h*<br/>
+右值-对对象的引用 `Semaphore` 。
 
 ### <a name="return-value"></a>返回值
 
-对当前`Semaphore`对象的引用。
+对当前对象的引用 `Semaphore` 。
 
-## <a name="semaphoresemaphore"></a><a name="semaphore"></a>信号量：信号量：信号量
+## <a name="semaphoresemaphore"></a><a name="semaphore"></a> 信号灯：：信号灯
 
 初始化 `Semaphore` 类的新实例。
 
@@ -126,7 +127,7 @@ WRL_NOTHROW Semaphore(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*H*<br/>
-`Semaphore`对象的句柄或 rvalue 引用。
+*h*<br/>
+对象的句柄或 rvalue 引用 `Semaphore` 。

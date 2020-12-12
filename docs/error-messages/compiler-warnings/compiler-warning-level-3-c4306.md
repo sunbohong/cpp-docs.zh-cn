@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (等级 3) C4306
 title: 编译器警告（等级 3）C4306
 ms.date: 08/27/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4306
 ms.assetid: 5b2192d7-402d-4b6d-8619-08105e7dcac7
-ms.openlocfilehash: d200253d304500e10f5fceeade1c8228acde874d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1140371bdc9f330c058ee336f5f8723d1834a93b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80198882"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344050"
 ---
 # <a name="compiler-warning-level-3-c4306"></a>编译器警告（等级 3）C4306
 

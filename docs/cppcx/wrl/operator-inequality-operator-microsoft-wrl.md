@@ -1,16 +1,17 @@
 ---
+description: '详细了解： operator！ = 运算符 (Microsoft：： WRL) '
 title: operator!= 运算符 (Microsoft::WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator!=
 ms.assetid: 785435da-87a6-4454-9bce-9d288a96dc26
-ms.openlocfilehash: af7088348cd3f52b38f0277fb7d0a973a1ca0e4b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 69385c81ee401e7fdd47077b21fbc5342eaa091a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330792"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 运算符 (Microsoft::WRL)
 
@@ -53,7 +54,7 @@ WRL_NOTHROW bool operator!=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *的*<br/>
 左对象。
@@ -71,6 +72,6 @@ WRL_NOTHROW bool operator!=(
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

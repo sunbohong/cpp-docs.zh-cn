@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_final 类
 title: is_final 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 04660309205689e14200cb5d214ce5dc80efb88f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97323736"
 ---
-# <a name="isfinal-class"></a>is_final 类
+# <a name="is_final-class"></a>is_final 类
 
 测试类型是否是标记为 `final` 的类类型。
 
@@ -24,22 +25,22 @@ template <class T>
 struct is_final;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型*T*是标记`final`为的类类型, 则类型谓词的实例为 true; 否则为 false。 如果*T*是类类型, 则它必须是完整类型。
+如果类型 *T* 是标记为的类类型，则类型谓词的实例为 true `final` ; 否则为 false。 如果 *T* 是类类型，则它必须是完整类型。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
-[final 说明符](../cpp/final-specifier.md)
+[最终说明符](../cpp/final-specifier.md)

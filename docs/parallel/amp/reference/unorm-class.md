@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： unorm 类
 title: unorm 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 947660d046ea41025e70aa4e6521e3c8f34c0a94
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314517"
 ---
 # <a name="unorm-class"></a>unorm 类
 
@@ -23,26 +24,26 @@ ms.locfileid: "77126300"
 class unorm;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[unorm 构造函数](#ctor)|已重载。 默认构造函数。 初始化为 0.0f。|
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|unorm::operator--||
+|unorm：： operator--||
 |unorm：： operator float|转换运算符。 将 unorm 数字转换为浮点值。|
-|unorm::operator*=||
-|unorm::operator/=||
-|unorm::operator++||
-|unorm::operator+=||
-|unorm::operator=||
-|unorm::operator-=||
+|unorm：： operator * =||
+|unorm：： operator/=||
+|unorm：： operator + +||
+|unorm：： operator + =||
+|unorm：： operator =||
+|unorm：： operator-=||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -54,7 +55,7 @@ class unorm;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a>unorm
+## <a name="unorm"></a><a name="ctor"></a> unorm
 
 默认构造函数。 初始化为 0.0f。
 
@@ -88,7 +89,7 @@ inline explicit unorm(
     cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_V*<br/>
 用来初始化的值。
@@ -96,6 +97,6 @@ inline explicit unorm(
 *_Other*<br/>
 用于初始化的标准对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)
