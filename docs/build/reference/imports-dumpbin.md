@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/IMPORTS (DUMPBIN) '
 title: /IMPORTS (DUMPBIN)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-ms.openlocfilehash: c8b0f88b38eb657fe4d3916ef0df13972e985cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86c428280bbca3a4957f7d7a0a640482607547de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199787"
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 
@@ -21,9 +22,9 @@ ms.locfileid: "62291831"
 /IMPORTS[:file]
 ```
 
-此选项可显示的 Dll 列表 (静态链接并[延迟加载](linker-support-for-delay-loaded-dlls.md)) 的导入到一个可执行文件或 DLL 和的各个导入从每个这些 Dll。
+此选项显示从导入到可执行文件或 DLL 的静态链接和 [延迟加载](linker-support-for-delay-loaded-dlls.md))  (dll 的列表，以及每个 dll 的所有单独导入。
 
-可选`file`规范允许您指定将显示仅限于该 DLL 的导入。 例如：
+可选 `file` 规范允许指定仅显示该 DLL 的导入。 例如：
 
 ```
 dumpbin /IMPORTS:msvcrt.dll
@@ -31,9 +32,9 @@ dumpbin /IMPORTS:msvcrt.dll
 
 ## <a name="remarks"></a>备注
 
-通过此选项显示的输出是类似于[/exports](dash-exports.md)输出。
+此选项显示的输出类似于 [/EXPORTS](dash-exports.md) 输出。
 
-仅[/HEADERS](headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](gl-whole-program-optimization.md)编译器选项。
+只有 [/HEADERS](headers.md) DUMPBIN 选项可用于由 [/GL](gl-whole-program-optimization.md) 编译器选项产生的文件。
 
 ## <a name="see-also"></a>请参阅
 

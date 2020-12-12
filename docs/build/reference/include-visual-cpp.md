@@ -1,5 +1,6 @@
 ---
-title: '&lt;包括 > （C++文档注释）'
+description: 了解详细信息： &lt; 包括&gt;
+title: '&lt;包括> (c + + 文档注释) '
 ms.date: 11/04/2016
 f1_keywords:
 - <include>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 577281b293fcca9b9b0b9491dd239240d435f32c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199774"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
-通过 \<include> 标记，可在其他文件中引用描述源代码中类型和成员的注释。 这是对直接在源代码文件中放入文档注释的替代方法。  例如，可使用 \<include> 插入整个团队或公司使用的标准“样板”注释。
+通过 \<include> 标记，可在其他文件中引用描述源代码中类型和成员的注释。 这是对直接在源代码文件中放入文档注释的替代方法。  例如，可以使用插入在 \<include> 整个团队或公司中使用的标准 "样板" 注释。
 
 ## <a name="syntax"></a>语法
 
@@ -24,7 +25,7 @@ ms.locfileid: "79439518"
 <include file='filename' path='tagpath' />
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *filename*<br/>
 包含文档的文件的名称。 可使用路径来限定文件名。  将名称括在单引号或双引号中。  如果编译器没有找到 `filename`，它会发出警告。
@@ -32,7 +33,7 @@ ms.locfileid: "79439518"
 *tagpath*<br/>
 有效 XPath 表达式，它选择文件中包含的所需节点集。
 
-*name*<br/>
+name<br/>
 标记中的名称说明符（位于注释之前）；`name` 将有 `id`。
 
 *id*<br/>
@@ -40,13 +41,13 @@ ms.locfileid: "79439518"
 
 ## <a name="remarks"></a>备注
 
-\<include> 标记使用 XML XPath 语法。 有关使用 \<include> 进行自定义的方法，请参阅 XPath 文档。
+\<include> 标记使用 XML XPath 语法。 有关使用进行自定义的方法，请参阅 XPath 文档 \<include> 。
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 
-这是多文件示例。 第一个使用 \<include> 的文件包含以下文档注释：
+这是多文件示例。 第一个使用的文件 \<include> 包含以下文档注释：
 
 ```cpp
 // xml_include_tag.cpp
@@ -109,6 +110,6 @@ The summary for this other type.
 </doc>
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

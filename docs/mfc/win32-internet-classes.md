@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Win32 Internet 类
 title: Win32 Internet 类
 ms.date: 09/12/2018
 f1_keywords:
@@ -9,34 +10,34 @@ helpviewer_keywords:
 - Win32 [MFC], Internet classes
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
-ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b6acad5f867444c33ed86cb7e70f4f1eec42df0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326724"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197473"
 ---
 # <a name="win32-internet-classes"></a>Win32 Internet 类
 
-MFC 包装 Win32 Internet (WinInet) 和 ActiveX 技术，以使 Internet 编程更简单。
+MFC 将 Win32 Internet 封装 (WinInet) 和 ActiveX 技术，使 Internet 编程更容易。
 
 >[!IMPORTANT]
-> ActiveX 是一项传统技术，不应使用新的开发。 有关取代 ActiveX 的现代技术的详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一种不能用于新开发的旧技术。 有关取代 ActiveX 的新式技术的详细信息，请参阅 [Activex 控件](activex-controls.md)。
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
-创建和初始化一个 Internet 会话或多个同时 Internet 会话，并如有必要，描述向代理服务器连接。
+创建并初始化一个 Internet 会话或多个同时 Internet 会话，并在必要时描述与代理服务器的连接。
 
 [CInternetConnection](../mfc/reference/cinternetconnection-class.md)<br/>
 管理与 Internet 服务器的连接。
 
 [CInternetFile](../mfc/reference/cinternetfile-class.md)<br/>
-此类和其派生的类允许对使用 Internet 协议的远程系统上的文件的访问。
+此类及其派生类允许访问使用 Internet 协议的远程系统上的文件。
 
 [CHttpConnection](../mfc/reference/chttpconnection-class.md)<br/>
 管理与 HTTP 服务器的连接。
 
 [CHttpFile](../mfc/reference/chttpfile-class.md)<br/>
-提供的功能来查找和读取 HTTP 服务器上的文件。
+提供查找和读取 HTTP 服务器上文件的功能。
 
 [CGopherFile](../mfc/reference/cgopherfile-class.md)<br/>
 提供查找和读取 Gopher 服务器上文件的功能。

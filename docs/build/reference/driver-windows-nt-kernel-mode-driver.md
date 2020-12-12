@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/DRIVER (Windows NT 内核模式驱动程序) '
 title: /DRIVER（Windows NT 内核模式驱动程序）
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: c935c20d6c1c009cff64d48e0c0122c8b91bbba3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a9c066aa58b6cae64bd60ab451c6edd04f71f256
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041154"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201087"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER（Windows NT 内核模式驱动程序）
 
@@ -41,7 +42,7 @@ ms.locfileid: "90041154"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击“链接器”文件夹****。
+1. 单击“链接器”文件夹。
 
 1. 单击 " **系统** " 属性页。
 
@@ -51,7 +52,7 @@ ms.locfileid: "90041154"
 
 - 请参阅 [VCLinkerTool 属性](/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

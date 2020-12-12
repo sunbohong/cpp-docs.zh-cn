@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/LARGEADDRESSAWARE (处理大地址) '
 title: /LARGEADDRESSAWARE（处理大地址）
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -LARGEADDRESSAWARE linker option
 - /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-ms.openlocfilehash: 81a560ebf083e2f93d9bb514fc401186291d7f41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72b2ba20b2ea2b91ecd234497c433bcdd9e9ee42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269543"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199566"
 ---
 # <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE（处理大地址）
 
@@ -24,19 +25,19 @@ ms.locfileid: "62269543"
 
 ## <a name="remarks"></a>备注
 
-/LARGEADDRESSAWARE 选项通知链接器应用程序可以处理大于 2 千兆字节的地址。 在 64 位编译器中，默认情况下启用此选项。 在 32 位编译器中，如果 /LARGEADDRESSAWARE 否则未指定链接器行上启用 /largeaddressaware: no。
+/LARGEADDRESSAWARE 选项告知链接器应用程序可以处理大于 2 gb 的地址。 在64位编译器中，默认情况下启用此选项。 在32位编译器中，如果未在链接器行上指定/LARGEADDRESSAWARE，则不启用/LARGEADDRESSAWARE： NO。
 
-如果应用程序已链接使用 /LARGEADDRESSAWARE，DUMPBIN [/HEADERS](headers.md)将显示该结果的信息。
+如果应用程序是与/LARGEADDRESSAWARE 链接的，则 DUMPBIN [/HEADERS](headers.md) 将显示该效果的信息。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击**链接器**文件夹。
+1. 单击“链接器”文件夹。
 
-1. 单击**系统**属性页。
+1. 单击 " **系统** " 属性页。
 
-1. 修改**启用大地址**属性。
+1. 修改 " **启用大地址** " 属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

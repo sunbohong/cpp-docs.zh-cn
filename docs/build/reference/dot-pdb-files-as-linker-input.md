@@ -1,24 +1,25 @@
 ---
+description: 了解详细信息：。作为链接器输入的 Pdb 文件
 title: 用作链接器输入的 .Pdb 文件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .pdb files, as linker input
 - PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-ms.openlocfilehash: 365f2955f5bc9e8082221a070af454c820c665f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 713d42e7e95b5d1e7e3b1f9be21203b75569cdbe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273282"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201152"
 ---
 # <a name="pdb-files-as-linker-input"></a>用作链接器输入的 .Pdb 文件
 
-对象 (.obj) 文件使用了 /Zi 选项编译包含程序数据库 (PDB) 的名称。 未指定链接器; 的对象的 PDB 文件名称链接使用嵌入的名称，如果需要查找 PDB。 这同样适用于可调试库; 中包含的对象可调试库的 PDB 必须可供随同库一起链接器。
+使用/Zi 选项编译的对象 () 文件包含程序数据库 (PDB) 的名称。 不要将对象的 PDB 文件名指定给链接器;如果需要，LINK 使用嵌入名称查找 PDB。 这也适用于库中包含的可调试对象;可调试库的 PDB 必须与库一起提供给链接器。
 
-链接还使用 PDB 来保存.exe 文件或.dll 文件的调试信息。 该程序的 PDB 是输出文件和输入的文件，因为链接在重新生成该程序时更新 PDB。
+LINK 还使用 PDB 保存 .exe 文件或 .dll 文件的调试信息。 该程序的 PDB 既是一个输出文件又是一个输入文件，因为在重新生成程序时，LINK 更新了 PDB。
 
 ## <a name="see-also"></a>请参阅
 
-[LINK 输入文件](link-input-files.md)<br/>
+[链接输入文件](link-input-files.md)<br/>
 [MSVC 链接器选项](linker-options.md)

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/IGNOREIDL (Don&#39;t 将属性处理到 MIDL) '
 title: '/IGNOREIDL (Don&#39;t 将属性处理到 MIDL) '
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: eac6209e0c34562254117d6ab9db5f47545037ea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c68b3ec2f9bd5607ef523667bcddc68b22d3c34c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199813"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t 将属性处理到 MIDL) 
 
@@ -22,7 +23,7 @@ ms.locfileid: "91506887"
 /IGNOREIDL
 ```
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 /IGNOREIDL 选项指定不应将源代码中的任何 [IDL 特性](../../windows/attributes/idl-attributes.md) 处理到 .idl 文件中。
 
@@ -30,7 +31,7 @@ ms.locfileid: "91506887"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击“链接器”文件夹****。
+1. 单击“链接器”文件夹。
 
 1. 单击 **嵌入的 IDL** 属性页。
 

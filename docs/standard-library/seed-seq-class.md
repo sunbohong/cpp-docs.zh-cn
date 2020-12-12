@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： seed_seq 类
 title: seed_seq 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - std::seed_seq [C++], size
 - std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
-ms.openlocfilehash: d2dc561a9160188507a61ec3734cfbf9f3e74199
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c92bda66b37162bcaaf9c614185f2c31f29d22c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197031"
 ---
-# <a name="seedseq-class"></a>seed_seq 类
+# <a name="seed_seq-class"></a>seed_seq 类
 
 存储可以为随机数引擎提供随机化种子的无符号整数值的矢量。
 
@@ -118,7 +119,7 @@ void param(OutputIterator dest) const;
 
 ## <a name="example"></a>示例
 
-以下代码示例练习了三种构造函数，并且从分配到数组时生成的 `seed_seq` 实例中生成输出。 有关将 `seed_seq` 与随机数生成器一起使用的示例，请参阅 [\<random>](../standard-library/random.md)。
+以下代码示例练习了三种构造函数，并且从分配到数组时生成的 `seed_seq` 实例中生成输出。 有关将 `seed_seq` 与随机数生成器一起使用的示例，请参阅 [\<random>](../standard-library/random.md) 。
 
 ```cpp
 #include <iostream>
@@ -191,9 +192,9 @@ Generating a sequence of 5 elements into an array:
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<random>
+**标头：**\<random>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

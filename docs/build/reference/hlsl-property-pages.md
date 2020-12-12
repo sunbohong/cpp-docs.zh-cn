@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： HLSL 编译器属性页
 title: “HLSL”属性页
 ms.date: 07/24/2019
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
@@ -23,16 +24,16 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 - VC.Project.FXCompilerTool.CompileD2DCustomEffect
 - VC.Project.FXCompilerTool.MultiProcFXC
-ms.openlocfilehash: 629a242d3698c9c3c2d3c697298b5c6625e4768f
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 3a374c36d87429fac9d9aee8dda2d1035da247c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199957"
 ---
 # <a name="hlsl-compiler-property-pages"></a>HLSL 编译器属性页
 
-可以使用 HLSL 编译器 (fxc.exe) 属性页来配置单个 HLSL 着色器文件生成的方式。 还可以使用 " **命令行** " 属性页的 " **其他选项** " 属性指定 HLSL 编译器的命令行参数。这包括无法使用 HLSL 属性页的其他属性进行配置的参数。 有关 HLSL 编译器的其他信息，请参阅[效果编译器工具](/windows/win32/direct3dtools/fxc)
+可以使用 HLSL 编译器 (fxc.exe) 属性页来配置单个 HLSL 着色器文件生成的方式。 还可以使用 "**命令行**" 属性页的 "**其他选项**" 属性指定 HLSL 编译器的命令行参数。这包括无法使用 HLSL 属性页的其他属性进行配置的参数。 有关 HLSL 编译器的其他信息，请参阅[效果编译器工具](/windows/win32/direct3dtools/fxc)
 
 ## <a name="hlsl-general-property-page"></a>HLSL 常规属性页
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： localeconv
 title: localeconv
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: c4e1820ac412a0447c5059ecc92375275f7b2701
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 488a6e9dbc913f1102be3a53685dc68b38fb833b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218632"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195666"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -47,18 +48,18 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>返回值
 
-**localeconv**返回指向[结构 lconv](../../c-runtime-library/standard-types.md)类型的已填充对象的指针。 对象中包含的值将从线程本地存储中的区域设置中进行复制，并可由对**localeconv**的后续调用覆盖。 对此对象中的值所做的更改不会修改区域设置。 对[setlocale](setlocale-wsetlocale.md)的*类别*值**LC_ALL**、 **LC_MONETARY**或**LC_NUMERIC**的调用将覆盖该结构的内容。
+**localeconv** 返回指向 [结构 lconv](../../c-runtime-library/standard-types.md)类型的已填充对象的指针。 对象中包含的值将从线程本地存储中的区域设置中进行复制，并可由对 **localeconv** 的后续调用覆盖。 对此对象中的值所做的更改不会修改区域设置。 对 [setlocale](setlocale-wsetlocale.md) 的 *类别* 值 **LC_ALL**、 **LC_MONETARY** 或 **LC_NUMERIC** 的调用将覆盖该结构的内容。
 
 ## <a name="remarks"></a>备注
 
-**Localeconv**函数获取有关当前区域设置的数字格式的详细信息。 此信息存储在 **lconv** 类型的结构中。 LOCALE.H 中定义的 **lconv** 结构，包含以下成员：
+**Localeconv** 函数获取有关当前区域设置的数字格式的详细信息。 此信息存储在 **lconv** 类型的结构中。 LOCALE.H 中定义的 **lconv** 结构，包含以下成员：
 
 |字段|含义|
 |-|-|
 decimal_point，<br/>_W_decimal_point|指向非货币数量的小数点字符的指针。
 thousands_sep，<br/>_W_thousands_sep|指向在非货币数量之间分隔小数点左边的位数的指针。
 分组|指向大小的 **`char`** 整数的指针，该整数包含非货币数量中每个数字组的大小。
-int_curr_symbol，<br/>_W_int_curr_symbol|指向当前区域设置的国际货币符号的指针。 前三个字符指定字母国际货币符号，如*货币和资金表示形式的 ISO 4217 代码*标准中定义。 第四个字符（前面紧邻 null 字符）将国际货币符号与货币数量分隔开来。
+int_curr_symbol，<br/>_W_int_curr_symbol|指向当前区域设置的国际货币符号的指针。 前三个字符指定字母国际货币符号，如 *货币和资金表示形式的 ISO 4217 代码* 标准中定义。 第四个字符（前面紧邻 null 字符）将国际货币符号与货币数量分隔开来。
 currency_symbol，<br/>_W_currency_symbol|指向当前区域设置的本地货币符号的指针。
 mon_decimal_point，<br/>_W_mon_decimal_point|指向货币数量的小数点字符的指针。
 mon_thousands_sep，<br/>_W_mon_thousands_sep|一个指针，指向要在货币数量中的小数位数左边的位数。
@@ -74,11 +75,11 @@ n_sep_by_space|如果货币符号通过空格与带格式的负货币数量值�
 p_sign_posn|带格式的非负货币数量中的加号位置。
 n_sign_posn|带格式的负货币数量中的加号位置。
 
-除了指定外，具有和版本的**lconv**结构的 `char *` 成员 `wchar_t *` 是指向字符串的指针。 其中任何等于 **""** **（对于，** 则为 "" **`wchar_t`** <strong>\*</strong> ）的都是长度为零或在当前区域设置中不受支持的。 请注意， **decimal_point**和 **_W_decimal_point**始终受支持且长度为非零。
+除了指定外，具有和版本的 **lconv** 结构的 `char *` 成员 `wchar_t *` 是指向字符串的指针。 其中任何等于 **""** (或 **L ""** 的) 的 **`wchar_t`** <strong>\*</strong> 长度均为零或在当前区域设置中不受支持。 请注意， **decimal_point** 和 **_W_decimal_point** 始终受支持且长度为非零。
 
 **`char`** 结构的成员为少量非负数，而不是字符。 任何这些等于 **CHAR_MAX** 的成员在当前区域设置中不受支持。
 
-**分组**和**mon_grouping**的值将根据以下规则进行解释：
+**分组** 和 **mon_grouping** 的值将根据以下规则进行解释：
 
 - **CHAR_MAX** -不执行任何进一步的分组。
 
@@ -88,21 +89,21 @@ n_sign_posn|带格式的负货币数量中的加号位置。
 
 根据以下规则解释 **int_curr_symbol** 的值：
 
-- 前三个字符指定字母国际货币符号，如*货币和资金表示形式的 ISO 4217 代码*标准中定义。
+- 前三个字符指定字母国际货币符号，如 *货币和资金表示形式的 ISO 4217 代码* 标准中定义。
 
 - 第四个字符（前面紧邻 null 字符）将国际货币符号与货币数量分隔开来。
 
-根据以下规则（**n_cs_precedes**规则位于括号中）解释 **p_cs_precedes** 和 **n_cs_precedes** 的值：
+根据以下规则（**n_cs_precedes** 规则位于括号中）解释 **p_cs_precedes** 和 **n_cs_precedes** 的值：
 
-- 0-如果为非负（负）格式的货币值，则为货币符号。
+- 0-货币符号后跟非负数 (负) 格式货币值的值。
 
-- 1-在非负（负）格式化货币值的值之前的货币符号。
+- 1-在非负数 (负) 格式货币值的值之前的货币符号。
 
 根据以下规则（**n_sep_by_space** 规则位于括号中）解释 **p_sep_by_space** 和 **n_sep_by_space** 的值：
 
-- 0-对于非负（负）格式化货币值，货币符号是由空格分隔的。
+- 0-对于非负数 (负) 格式货币值，货币符号是从值与值分隔开。
 
-- 1-非负（负）格式化货币值的货币符号和值之间没有空格分隔。
+- 1-非负 (负) 格式货币值的货币符号和值之间没有空格分隔。
 
 根据以下规解释 **p_sign_posn** 和 **n_sign_posn** 的值：
 
@@ -116,7 +117,7 @@ n_sign_posn|带格式的负货币数量中的加号位置。
 
 - 4-符号字符串紧跟在货币符号之后。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -130,7 +131,7 @@ n_sign_posn|带格式的负货币数量中的加号位置。
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [区域设置](../../c-runtime-library/locale.md)<br/>
 [setlocale](../../preprocessor/setlocale.md)<br/>

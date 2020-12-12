@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/IDLOUT (命名 MIDL 输出文件) '
 title: /IDLOUT（命名 MIDL 输出文件）
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: 8dc26a0564a979c918d1eb1eb85e63e9c73caba0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9835721d3e9b376feca51d87d375efa79dc43df7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199839"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT（命名 MIDL 输出文件）
 
@@ -26,7 +27,7 @@ ms.locfileid: "91506926"
 /IDLOUT:[path\]filename
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 *路径*<br/>
 绝对或相对路径规范。 通过指定路径，只会影响 .idl 文件的位置;所有其他文件都放置在项目目录中。
@@ -34,7 +35,7 @@ ms.locfileid: "91506926"
 *filename*<br/>
 指定由 MIDL 编译器创建的 .idl 文件的名称。 不采用任何文件扩展名;如果希望使用 .idl 扩展名，请指定 *filename*。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 /IDLOUT 选项指定 .idl 文件的名称和扩展名。
 
@@ -44,13 +45,13 @@ ms.locfileid: "91506926"
 
 - *filename*.tlb
 
-- *文件名*_p
+- *文件名* _p
 
-- *文件名*_i
+- *文件名* _i
 
 - *filename*。h
 
-*filename* 是传递给/IDLOUT. 的参数 如果指定了 [/TLBOUT](tlbout-name-dot-tlb-file.md) ，则 .tlb 文件将从/TLBOUT *文件名*获取其名称。
+*filename* 是传递给/IDLOUT. 的参数 如果指定了 [/TLBOUT](tlbout-name-dot-tlb-file.md) ，则 .tlb 文件将从/TLBOUT *文件名* 获取其名称。
 
 如果既没有指定/IDLOUT 也没有指定/TLBOUT，则链接器将创建 vc70、vc70_p vc70、vc70_i 和 vc70。
 
@@ -58,7 +59,7 @@ ms.locfileid: "91506926"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击“链接器”文件夹****。
+1. 单击“链接器”文件夹。
 
 1. 单击 **嵌入的 IDL** 属性页。
 
