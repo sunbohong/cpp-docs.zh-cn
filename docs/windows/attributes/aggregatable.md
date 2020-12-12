@@ -1,4 +1,5 @@
 ---
+description: 了解更多：可聚合
 title: '可聚合 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 6782b1ca28eb07b3f726bd85cd7fffa9b1f1bad2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0ba6c96f1b12deb2db91c20f0558961ef1ed6f61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314251"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -34,7 +35,7 @@ ms.locfileid: "88836369"
 
 - `always` 不能直接创建 COM 对象，只能对其进行聚合。 调用 `CoCreateInstance` 此对象时，必须指定聚合对象的 `IUnknown` 接口 (控制 `IUnknown`) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 可 **聚合** c + + 属性具有与可 [聚合](/windows/win32/Midl/aggregatable) MIDL 属性相同的功能。 这意味着编译器会将可 **聚合** 特性传递到生成的 .idl 文件。
 
@@ -77,7 +78,7 @@ class CMyClass {};
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

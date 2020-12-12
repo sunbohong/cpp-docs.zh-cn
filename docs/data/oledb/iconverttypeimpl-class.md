@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IConvertTypeImpl 类
 title: IConvertTypeImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: b4309e794a83e6c13dcf0051791cd1762a6d5012
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5ac0e70432dbb81bd3f8aa30fd2adb9cb9e3fc30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845557"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317554"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 类
 
@@ -33,7 +34,7 @@ class ATL_NO_VTABLE IConvertTypeImpl
    : public IConvertType, public CConvertHelper
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IConvertTypeImpl` 。
@@ -46,11 +47,11 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[CanConvert](#canconvert)|提供有关命令或行集上类型转换的可用性的信息。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此接口对命令行集和索引行集是必需的。 `IConvertTypeImpl` 通过委托给 OLE DB 提供的转换对象来实现接口。
 
@@ -66,15 +67,15 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
    DBCONVERTFLAGS dwConvertFlags);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IConvertType：： CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IConvertType：： CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用中的 OLE DB 数据转换 `MSADC.DLL` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

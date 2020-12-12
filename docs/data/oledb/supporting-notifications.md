@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：支持通知
 title: 支持通知
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: d29f84a0a5b33d55c0a04a4c758050cf9746f72a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3f03ded9b900a8691c256e6cde8eaf1a2f4fb5cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316669"
 ---
 # <a name="supporting-notifications"></a>支持通知
 
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>在提供程序和使用者上实现连接点接口
 
-若要实现通知，提供程序类必须从[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)和[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)继承。
+若要实现通知，提供程序类必须从 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) 和 [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)继承。
 
-`IRowsetNotifyCP` 实现连接点接口[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))的提供程序站点。 `IRowsetNotifyCP` 实现广播函数，以便在连接点上通知侦听器 `IID_IRowsetNotify` 行集内容的更改。
+`IRowsetNotifyCP` 实现连接点接口 [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))的提供程序站点。 `IRowsetNotifyCP` 实现广播函数，以便在连接点上通知侦听器对 `IID_IRowsetNotify` 行集内容所做的更改。
 
-还必须使用[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)在使用者（也称为接收器）上实现并注册 `IRowsetNotify`，以便使用者可以处理通知。 有关在使用者上实现连接点接口的信息，请参阅[接收通知](../../data/oledb/receiving-notifications.md)。
+还必须 `IRowsetNotify` 在使用 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) 的使用者上实现和注册 (也称为接收器) 以便使用者能够处理通知。 有关在使用者上实现连接点接口的信息，请参阅 [接收通知](../../data/oledb/receiving-notifications.md)。
 
 此外，类必须有一个定义连接点项的映射，如下所示：
 
@@ -36,9 +37,9 @@ END_CONNECTION_POINT_MAP
 
 ## <a name="adding-irowsetnotify"></a>添加 IRowsetNotify
 
-若要添加 `IRowsetNotify`，需要向继承链添加 `IConnectionPointContainerImpl<rowset-name>` 和 `IRowsetNotifyCP<rowset-name>`。
+若要添加 `IRowsetNotify` ，需要将 `IConnectionPointContainerImpl<rowset-name>` 和添加 `IRowsetNotifyCP<rowset-name>` 到继承链。
 
-例如，下面是[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)中 `RUpdateRowset` 的继承链：
+例如，下面是 UpdatePV 中的继承链 `RUpdateRowset` ： [](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)
 
 > [!NOTE]
 > 示例代码可能与本文列出的代码不同；应将示例代码视为最新版本。
@@ -65,11 +66,11 @@ COM_INTERFACE_ENTRY(IConnectionPointContainer)
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)
 ```
 
-这些宏允许为连接点容器调用 `QueryInterface` 的任何人（`IRowsetNotify`的基础），以便在提供程序中查找请求的接口。 有关如何使用连接点的示例，请参阅 ATL 多边形示例和教程。
+这些宏允许任何调用 `QueryInterface` 连接点容器的人员 (`IRowsetNotify`) 查找提供程序上所请求的接口。 有关如何使用连接点的示例，请参阅 ATL 多边形示例和教程。
 
 ### <a name="setting-connection-point-map-entries"></a>设置连接点映射项
 
-还需要添加连接点映射。 其外观应如下所示：
+还需要添加连接点映射。 返回内容应类似于：
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP(rowset-name)
@@ -77,13 +78,13 @@ BEGIN_CONNECTION_POINT_MAP(rowset-name)
 END_CONNECTION_POINT_MAP()
 ```
 
-此连接点映射允许组件查找 `IRowsetNotify` 接口，以在提供程序中查找它。
+此连接点映射允许组件查找 `IRowsetNotify` 接口以在提供程序中查找它。
 
 ### <a name="setting-properties"></a>设置属性
 
 还需要将以下属性添加到提供程序。 只需根据所支持的接口添加属性。
 
-|properties|添加（如果支持）|
+|Property|添加（如果支持）|
 |--------------|------------------------|
 |DBPROP_IConnectionPointContainer|始终|
 |DBPROP_NOTIFICATIONGRANULARITY|始终|
@@ -99,8 +100,8 @@ END_CONNECTION_POINT_MAP()
 |DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUPDATE|`IRowsetUpdate`|
 
-大多数通知实现已嵌入 OLE DB 提供程序模板中。 如果不将 `IRowsetNotifyCP` 添加到继承链，编译器将从编译流中删除所有代码，从而使代码大小更小。
+大多数通知实现已嵌入 OLE DB 提供程序模板中。 如果不将添加 `IRowsetNotifyCP` 到继承链，编译器将从编译流中删除所有代码，从而使代码大小更小。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [高级提供程序技术](../../data/oledb/advanced-provider-techniques.md)

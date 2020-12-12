@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4868
 title: 编译器警告 C4868
 ms.date: 10/26/2017
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: fe113a948cdf2a6e4b4fcf6b0055fe92d583f004
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 66b6673dc1981351aa25a7ce6c0b9bc30bdf82c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315005"
 ---
-# <a name="compiler-warning-level-4-c4868"></a>编译器警告（等级4） C4868
+# <a name="compiler-warning-level-4-c4868"></a>编译器警告 (等级 4) C4868
 
-> "_file_（*line_number*）" 编译器不能在大括号内初始值设定项列表中强制执行从左到右的计算顺序
+> "_文件_ (*Line_number*) " 编译器在大括号内初始值设定项列表中不能强制执行从左到右的计算顺序
 
 将按从左到右的顺序计算大括号内初始值设定项列表的元素。 在以下两种情况下，编译器无法保证此顺序：第一种情况是，某些元素是按值传递的对象;第二种情况是，在编译时 `/clr` ，某些元素是对象的字段或是数组元素。 当编译器无法保证从左向右计算时，它会发出警告 C4868。
 

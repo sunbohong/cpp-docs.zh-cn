@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息：依赖类型的名称解析
 title: 依赖类型的名称解析
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-ms.openlocfilehash: de40bd056fe351e679ff32d9908c068ea4c6752a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f50b067062f01d04ce26374ad969d572e1a7fe08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313783"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依赖类型的名称解析
 
-**`typename`** 在模板定义中使用限定名，告诉编译器给定的限定名称标识类型。 有关详细信息，请参阅[类型名称](../cpp/typename.md)。
+**`typename`** 在模板定义中使用限定名，告诉编译器给定的限定名称标识类型。 有关详细信息，请参阅 [类型名称](../cpp/typename.md)。
 
 ```cpp
 // template_name_resolution1.cpp
@@ -121,6 +122,6 @@ int main() {
 
 需要符合消除歧义规则，因为默认情况下，C++ 假定 `AY::Rebind` 不是模板，因此编译器会将后面的“`<`”解释为小于。 它必须知道 `Rebind` 是模板，这样才能正确地将“`<`”分析为尖括号。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [名称解析](../cpp/templates-and-name-resolution.md)

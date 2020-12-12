@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： OLE DB 提供程序模板的宏
 title: OLE DB 提供程序模板宏
 ms.date: 02/11/2019
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: e72204102bfa47a9dd162499030a38c07bbfe46c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5e1e1137f49060273c60c73fc89c24c75fd2604d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317163"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供程序模板宏
 
@@ -63,7 +64,7 @@ OLE DB 模板提供程序宏提供以下类别的功能：
 
 ## <a name="property-set-map-macros"></a>属性集映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_PROPERTY_SET](#begin_property_set)|标记属性集的开头。|
 |[BEGIN_PROPERTY_SET_EX](#begin_property_set_ex)|标记属性集的开头。|
@@ -77,7 +78,7 @@ OLE DB 模板提供程序宏提供以下类别的功能：
 
 ## <a name="column-map-macros"></a>列映射宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_PROVIDER_COLUMN_MAP](#begin_provider_column_map)|标记提供程序列映射条目的开头。|
 |[END_PROVIDER_COLUMN_MAP](#end_provider_column_map)|标记提供程序列映射项的结尾。|
@@ -91,7 +92,7 @@ OLE DB 模板提供程序宏提供以下类别的功能：
 
 ## <a name="schema-rowset-macros"></a>架构行集宏
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[BEGIN_SCHEMA_MAP](#begin_schema_map)|标记架构映射的开头。|
 |[END_SCHEMA_MAP](#end_schema_map)|标记架构映射的结尾。|
@@ -111,7 +112,7 @@ OLE DB 模板提供程序宏提供以下类别的功能：
 BEGIN_PROPERTY_SET(guid)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
 中属性 GUID。
@@ -130,7 +131,7 @@ BEGIN_PROPERTY_SET(guid)
 BEGIN_PROPERTY_SET_EX(guid, flags)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
 中属性 GUID。
@@ -152,7 +153,7 @@ BEGIN_PROPERTY_SET_EX(guid, flags)
 BEGIN_PROPSET_MAP(Class)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *类*<br/>
 中在其中指定此属性集的类。 可以在以下 OLE DB 对象中指定属性集：
@@ -161,7 +162,7 @@ BEGIN_PROPSET_MAP(Class)
 
 - [会话对象](/previous-versions/windows/desktop/ms711572(v=vs.85))
 
-- [命令](/previous-versions/windows/desktop/ms724608(v=vs.85))
+- 命令
 
 #### <a name="example"></a>示例
 
@@ -179,12 +180,12 @@ BEGIN_PROPSET_MAP(Class)
 CHAIN_PROPERTY_SET(ChainClass)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ChainClass*<br/>
 中要链接其属性的类的名称。 这是 ATL 项目向导生成的一个类，它已包含一个映射 (如会话、命令或数据源对象类) 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 可以将另一个类的属性集链接到自己的类，然后直接从类访问属性。
 
@@ -201,7 +202,7 @@ CHAIN_PROPERTY_SET(ChainClass)
 END_PROPERTY_SET(guid)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
 中属性 GUID。
@@ -234,12 +235,12 @@ END_PROPSET_MAP()
 PROPERTY_INFO_ENTRY(dwPropID)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dwPropID*<br/>
 [in] 一个 [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，该值可与属性集 GUID 一起使用以标识属性。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此宏将 `DWORD` 类型的属性值设置为 ATLDB.H 中定义的默认值。 若要将属性设置为所选的值，请使用 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)。 若要 `VARTYPE` 同时为属性设置和 [DBPROPFLAGS](/previous-versions/windows/desktop/ms724342(v=vs.85)) ，请使用 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)。
 
@@ -257,7 +258,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
 PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dwPropID*<br/>
 [in] 一个 [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，该值可与属性集 GUID 一起使用以标识属性。
@@ -274,7 +275,7 @@ dwFlags <br/>
 *options*<br/>
 DBPROPOPTIONS_REQUIRED 或 DBPROPOPTIONS_SETIFCHEAP。 通常，提供程序不需要设置 *选项* ，因为它是由使用者设置的。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 使用此宏，你可以直接指定 `DWORD` 类型的属性值以及选项和标记。 若要仅将属性设置为 ATLDB.H 中指定的默认值，请使用 [PROPERTY_INFO_ENTRY](#property_info_entry)。 若要将属性设置为你选择的值且不要设置其上的选项或标记，请使用 [PROPERTY_INFO_ENTRY_VALUE](#property_info_entry_value)。
 
@@ -292,7 +293,7 @@ DBPROPOPTIONS_REQUIRED 或 DBPROPOPTIONS_SETIFCHEAP。 通常，提供程序不�
 PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *dwPropID*<br/>
 [in] 一个 [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 值，该值可与属性集 GUID 一起使用以标识属性。
@@ -300,7 +301,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *value*<br/>
 [in] `DWORD`类型的属性值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 利用此宏，你可以直接指定类型的属性值 `DWORD` 。 将属性设置为为 ATLDB.H 中定义的默认值。H，使用 [PROPERTY_INFO_ENTRY](#property_info_entry)。 若要设置属性的值、标志和选项，请使用 [PROPERTY_INFO_ENTRY_EX](#property_info_entry_ex)。
 
@@ -318,7 +319,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 BEGIN_PROVIDER_COLUMN_MAP(theClass)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *类*<br/>
 中此映射所属的类的名称。
@@ -388,7 +389,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *职员*<br/>
 中存储数据的中的成员变量 `dataClass` 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 允许您指定列数据类型。
 
@@ -430,9 +431,9 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 中指示在 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL dbType 时获取数据时要使用的小数位数。 请参阅 `bScale` [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))中的说明。
 
 *guid*<br/>
-架构行集 GUID。 有关架构行集及其 Guid 的列表，请参阅*OLE DB 程序员参考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
+架构行集 GUID。 有关架构行集及其 Guid 的列表，请参阅 *OLE DB 程序员参考* 中的 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 允许您指定列的大小、数据类型、精度、小数位数和架构行集 GUID。
 
@@ -460,7 +461,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *职员*<br/>
 中 `dataClass` 存储列数据的中的成员变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 允许您指定列大小。
 
@@ -489,7 +490,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *职员*<br/>
 中数据类中存储数据的成员变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 当假定列数据 [DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85))时，请使用此宏。
 
@@ -524,7 +525,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *职员*<br/>
 中数据类中存储数据的成员变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 与 [PROVIDER_COLUMN_ENTRY_LENGTH](#provider_column_entry_length) 类似，但也可用于指定列的数据类型和大小。
 
@@ -549,7 +550,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *职员*<br/>
 中数据类中存储数据的成员变量。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 当列数据为以 null 结尾的 Unicode 字符串（ [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85))）时，请使用此宏。
 
@@ -563,12 +564,12 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 BEGIN_SCHEMA_MAP(SchemaClass);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *SchemaClass*<br/>
 包含映射的类。 通常，这将是 session 类。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 有关架构行集的详细信息，请参阅 Windows SDK 中的 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
@@ -597,15 +598,15 @@ SCHEMA_ENTRY(guid,
    rowsetClass);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *guid*<br/>
-架构行集 GUID。 有关架构行集及其 Guid 的列表，请参阅*OLE DB 程序员参考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
+架构行集 GUID。 有关架构行集及其 Guid 的列表，请参阅 *OLE DB 程序员参考* 中的 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 。
 
 *rowsetClass*<br/>
 将创建用于表示架构行集的类。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 然后， [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)可以在映射中查询 guid 列表，也可以在给定 guid 时创建行集。 架构行集的 `IDBSchemaRowsetImpl` 创建类似于标准 `CRowsetImpl` 派生类，但它必须提供 `Execute` 具有以下签名的方法：
 
@@ -615,7 +616,7 @@ HRESULT Execute (LONG* pcRowsAffected,
     const VARIANT* rgRestrictions);
 ```
 
-此 `Execute` 函数填充行集的数据。 ATL 项目向导按照*OLE DB 程序员参考*中的[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中所述，在项目中为三个必需 OLE DB 架构中的每一个创建三个初始架构行集：
+此 `Execute` 函数填充行集的数据。 ATL 项目向导按照 *OLE DB 程序员参考* 中的 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))中所述，在项目中为三个必需 OLE DB 架构中的每一个创建三个初始架构行集：
 
 - DBSCHEMA_TABLES
 

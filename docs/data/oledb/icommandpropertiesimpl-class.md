@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ICommandPropertiesImpl 类
 title: ICommandPropertiesImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: bd4dd73c79085a2c2d85a5dbacbfd20bc920108e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bf6a6f9a3ddd43a61671a85a791d63958f63c3e3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317555"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl 类
 
@@ -33,7 +34,7 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 你的类，派生自
@@ -49,12 +50,12 @@ Properties 类。
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetProperties](#getproperties)|返回行集属性组中当前为行集请求的属性的列表。|
 |[SetProperties](#setproperties)|设置行集属性组中的属性。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 这对于命令是必需的。 实现由 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map) 宏定义的静态函数提供。
 
@@ -71,11 +72,11 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
    DBPROPSET ** prgPropertySets);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommandProperties：： GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommandProperties：： GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请参阅 [BEGIN_PROPSET_MAP](./macros-for-ole-db-provider-templates.md#begin_propset_map)。
 
@@ -90,9 +91,9 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommandProperties：： SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommandProperties：： SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) 。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IRowsetNotifyCP 类
 title: IRowsetNotifyCP 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: 2f8c80570e4771d1b0e713083f64bc982ddb9009
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 70e759ed19c366f7e85511170439c24f319c5cd3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317267"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 类
 
@@ -47,7 +48,7 @@ class IRowsetNotifyCP :
    public ReentrantEventSync
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IRowsetNotifyCP` 。
@@ -69,13 +70,13 @@ class IRowsetNotifyCP :
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[Fire_OnFieldChange](#onfieldchange)|通知使用者对列的值进行了更改。|
 |[Fire_OnRowChange](#onrowchange)|通知使用者影响行的更改。|
 |[Fire_OnRowsetChange](#onrowsetchange)|通知使用者影响整个行集的更改。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `IRowsetNotifyCP` 实现广播函数，以便在连接点上通知侦听器对 `IID_IRowsetNotify` 行集内容所做的更改。
 
@@ -99,9 +100,9 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
    BOOL fCantDeny);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetNotify：： OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetNotify：： OnFieldChange](/previous-versions/windows/desktop/ms715961(v=vs.85)) 。
 
 ## <a name="irowsetnotifycpfire_onrowchange"></a><a name="onrowchange"></a> IRowsetNotifyCP：： Fire_OnRowChange
 
@@ -118,9 +119,9 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
    BOOL fCantDeny);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetNotify：： OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetNotify：： OnRowChange](/previous-versions/windows/desktop/ms722694(v=vs.85)) 。
 
 ## <a name="irowsetnotifycpfire_onrowsetchange"></a><a name="onrowsetchange"></a> IRowsetNotifyCP：： Fire_OnRowsetChange
 
@@ -135,11 +136,11 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
    BOOL fCantDeny);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetNotify：： OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetNotify：： OnRowsetChange](/previous-versions/windows/desktop/ms722669(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

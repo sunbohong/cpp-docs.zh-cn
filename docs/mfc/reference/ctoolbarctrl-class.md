@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CToolBarCtrl 类
 title: CToolBarCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -182,12 +183,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: e62d1a6773e1b65eaa1d2f0a8050873c673b5039
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 769403be6e4015df1de04d41fcb0a1b2721ee434
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318554"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl 类
 
@@ -203,13 +204,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CToolBarCtrl：： CToolBarCtrl](#ctoolbarctrl)|构造 `CToolBarCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CToolBarCtrl：： AddBitmap](#addbitmap)|将一个或多个位图按钮图像添加到工具栏控件可用的按钮图像列表中。|
 |[CToolBarCtrl：： AddButtons](#addbuttons)|将一个或多个按钮添加到工具栏控件。|
@@ -367,7 +368,7 @@ int AddBitmap(
     CBitmap* pBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nNumButtons*<br/>
 位图中按钮图像的数目。
@@ -396,13 +397,13 @@ BOOL AddButtons(
     LPTBBUTTON lpButtons);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nNumButtons*<br/>
 要添加的按钮数。
 
 *lpButtons*<br/>
-结构数组的地址 `TBBUTTON` ，其中包含有关要添加的按钮的信息。 数组中必须有与 *nNumButtons*所指定的按钮相同数量的元素。
+结构数组的地址 `TBBUTTON` ，其中包含有关要添加的按钮的信息。 数组中必须有与 *nNumButtons* 所指定的按钮相同数量的元素。
 
 ### <a name="return-value"></a>返回值
 
@@ -410,7 +411,7 @@ BOOL AddButtons(
 
 ### <a name="remarks"></a>备注
 
-*LpButtons*指针指向结构的数组 `TBBUTTON` 。 每个 `TBBUTTON` 结构将添加的按钮与按钮的样式、图像和/或字符串、命令 ID、状态和用户定义的数据相关联：
+*LpButtons* 指针指向结构的数组 `TBBUTTON` 。 每个 `TBBUTTON` 结构将添加的按钮与按钮的样式、图像和/或字符串、命令 ID、状态和用户定义的数据相关联：
 
 ```cpp
 typedef struct _TBBUTTON {
@@ -481,7 +482,7 @@ typedef struct _TBBUTTON {
 int AddString(UINT nStringID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStringID*<br/>
 要添加到工具栏控件的字符串列表的字符串资源的资源标识符。
@@ -498,7 +499,7 @@ int AddString(UINT nStringID);
 int AddStrings(LPCTSTR lpszStrings);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszStrings*<br/>
 包含一个或多个要添加到工具栏的字符串列表的以 null 结尾的字符串的缓冲区的地址。 最后一个字符串必须以两个 null 字符结尾。
@@ -541,7 +542,7 @@ BOOL ChangeBitmap(
     int iBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idButton*\
 中要接收新位图的按钮的命令标识符。
@@ -575,7 +576,7 @@ BOOL CheckButton(
     BOOL bCheck = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要检查或清除的按钮的命令标识符。
@@ -599,7 +600,7 @@ BOOL CheckButton(
 UINT CommandToIndex(UINT nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要查找其按钮索引的命令 ID。
@@ -622,7 +623,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定 toolbar 控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，还可以指定工具栏样式和窗口样式的任意组合，如 " **备注**" 中所述。
@@ -673,16 +674,16 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
+指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的 *dwExStyle* 参数。
 
 *dwStyle*<br/>
-指定 toolbar 控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，还可以指定工具栏样式和窗口样式的任意组合，如[Create](#create)的 "**备注**" 部分中所述。
+指定 toolbar 控件的样式。 工具栏必须始终具有 WS_CHILD 样式。 此外，还可以指定工具栏样式和窗口样式的任意组合，如 [Create](#create)的 "**备注**" 部分中所述。
 
 *rect*<br/>
-对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd*的工作区坐标表示）。
+对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd* 的工作区坐标表示）。
 
 *pParentWnd*<br/>
 指向作为控件的父级的窗口的指针。
@@ -696,7 +697,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>备注
 
-使用 `CreateEx` 由 Windows 扩展样式指定的扩展 Windows 样式，而不是 [Create](#create) **WS_EX_**。 `CreateEx` 使用由 *dwExStyle*指定的扩展 Windows 样式创建控件。 使用 [SetExtendedStyle](#setextendedstyle)设置特定于控件的扩展样式。 例如，使用将 `CreateEx` 此类样式设置为 WS_EX_CONTEXTHELP，但使用将 `SetExtendedStyle` 此类样式设置为 TBSTYLE_EX_DRAWDDARROWS。 有关详细信息，请参阅 Windows SDK 中 [工具栏扩展样式](/windows/win32/Controls/toolbar-extended-styles) 中所述的样式。
+使用 `CreateEx` 由 Windows 扩展样式指定的扩展 Windows 样式，而不是 [Create](#create) **WS_EX_**。 `CreateEx` 使用由 *dwExStyle* 指定的扩展 Windows 样式创建控件。 使用 [SetExtendedStyle](#setextendedstyle)设置特定于控件的扩展样式。 例如，使用将 `CreateEx` 此类样式设置为 WS_EX_CONTEXTHELP，但使用将 `SetExtendedStyle` 此类样式设置为 TBSTYLE_EX_DRAWDDARROWS。 有关详细信息，请参阅 Windows SDK 中 [工具栏扩展样式](/windows/win32/Controls/toolbar-extended-styles) 中所述的样式。
 
 ## <a name="ctoolbarctrlctoolbarctrl"></a><a name="ctoolbarctrl"></a> CToolBarCtrl：： CToolBarCtrl
 
@@ -730,7 +731,7 @@ void Customize();
 BOOL DeleteButton(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要删除的按钮的从零开始的索引。
@@ -751,7 +752,7 @@ BOOL EnableButton(
     BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要启用或禁用的按钮的命令标识符。
@@ -791,7 +792,7 @@ BOOL GetAnchorHighlight() const;
 int GetBitmap(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要检索其位图索引的按钮的命令标识符。
@@ -830,7 +831,7 @@ BOOL GetButton(
     LPTBBUTTON lpButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要为其检索信息的按钮的从零开始的索引。
@@ -864,7 +865,7 @@ int GetButtonInfo(
     TBBUTTONINFO* ptbbi) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 按钮标识符。
@@ -900,7 +901,7 @@ DWORD GetButtonSize() const;
 CString GetButtonText(int idButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idButton*\
 中检索其显示文本的按钮的标识符。
@@ -921,7 +922,7 @@ CString GetButtonText(int idButton) const;
 BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpColorScheme*\
 弄指向接收配色方案信息的 [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) 结构的指针。 此方法返回时，结构描述了 toolbar 控件的突出显示颜色和阴影颜色。
@@ -958,7 +959,7 @@ CImageList* GetDisabledImageList() const;
 HRESULT GetDropTarget(IDropTarget** ppDropTarget) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppDropTarget*<br/>
 指向 [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget) 接口指针的指针。 如果发生错误，则会在此地址中放置一个空指针。
@@ -1043,7 +1044,7 @@ CImageList* GetImageList() const;
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptbim*<br/>
 指向接收插入标记的 [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) 结构的指针。
@@ -1078,7 +1079,7 @@ BOOL GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要为其检索信息的按钮的从零开始的索引。
@@ -1102,7 +1103,7 @@ BOOL GetItemRect(
 BOOL GetMaxSize(LPSIZE pSize) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSize*<br/>
 指向接收项大小的 [大小](/windows/win32/api/windef/ns-windef-size) 结构的指针。
@@ -1135,7 +1136,7 @@ int GetMaxTextRows() const;
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptbm*<br/>
 指向对象的 [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) 结构的指针 `CToolBarCtrl` 。
@@ -1154,7 +1155,7 @@ BOOL GetPadding(
     int* pnVertPadding) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pnHorzPadding*\
 弄一个整数，接收工具栏控件的水平填充（以像素为单位）。
@@ -1196,7 +1197,7 @@ BOOL GetRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 按钮标识符。
@@ -1236,7 +1237,7 @@ int GetRows() const;
 int GetState(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要为其检索信息的按钮的命令标识符。
@@ -1264,9 +1265,9 @@ int GetString(
     CString& str) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-nString**<br/>
+nString<br/>
 字符串的索引。
 
 *lpstrString*<br/>
@@ -1322,7 +1323,7 @@ CToolTipCtrl* GetToolTips() const;
 int HitTest(LPPOINT ppt) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppt*<br/>
 [指向结构的](/windows/win32/api/windef/ns-windef-point)指针，该结构包含成员中的命中测试的 x 坐标和该命中 `x` 测试的 y 坐标 `y` 。 坐标相对于工具栏的工作区。
@@ -1347,7 +1348,7 @@ BOOL HideButton(
     BOOL bHide = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要隐藏或显示的按钮的命令标识符。
@@ -1373,7 +1374,7 @@ BOOL Indeterminate(
     BOOL bIndeterminate = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 要设置或清除其状态不确定的按钮的命令标识符。
@@ -1399,7 +1400,7 @@ BOOL InsertButton(
     LPTBBUTTON lpButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 按钮的从零开始的索引。 此函数向此按钮的左侧插入新按钮。
@@ -1425,7 +1426,7 @@ BOOL InsertMarkHitTest(
     LPTBINSERTMARK ptbim) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppt*<br/>
 指向一个 [点](/windows/win32/api/windef/ns-windef-point) 结构的指针，该结构包含命中测试坐标（相对于工具栏的工作区）。
@@ -1449,7 +1450,7 @@ BOOL InsertMarkHitTest(
 BOOL IsButtonChecked(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 工具栏中的按钮的命令标识符。
@@ -1470,7 +1471,7 @@ BOOL IsButtonChecked(int nID) const;
 BOOL IsButtonEnabled(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 工具栏中的按钮的命令标识符。
@@ -1491,7 +1492,7 @@ BOOL IsButtonEnabled(int nID) const;
 BOOL IsButtonHidden(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 工具栏中的按钮的命令标识符。
@@ -1512,7 +1513,7 @@ BOOL IsButtonHidden(int nID) const;
 BOOL IsButtonHighlighted(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 中工具栏按钮的命令 ID。
@@ -1529,7 +1530,7 @@ BOOL IsButtonHighlighted(int nID) const;
 BOOL IsButtonIndeterminate(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 中工具栏中的按钮的命令标识符。
@@ -1550,7 +1551,7 @@ BOOL IsButtonIndeterminate(int nID) const;
 BOOL IsButtonPressed(int nID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 工具栏中的按钮的命令标识符。
@@ -1573,12 +1574,12 @@ void LoadImages(
     HINSTANCE hinst);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iBitmapID*<br/>
 包含要加载的图像的位图的 ID。 若要指定自己的位图资源，请将此参数设置为位图资源的 ID，并将 *hInst* 设置为 NULL。 位图资源将作为单个图像添加到图像列表。 可以通过将 *hinst* 设置为 HINST_COMMCTRL 并将此参数设置为以下 id 之一来添加标准的系统定义位图：
 
-|位图 ID|说明|
+|位图 ID|描述|
 |---------------|-----------------|
 |IDB_HIST_LARGE_COLOR|大大小的资源管理器位图|
 |IDB_HIST_SMALL_COLOR|资源管理器小尺寸|
@@ -1604,13 +1605,13 @@ BOOL MapAccelerator(
     UINT* pIDBtn);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *chAccel*<br/>
 要映射的快捷键。 此字符是按钮文本中带下划线的相同字符。
 
 *pIDBtn*<br/>
-指向 UINT 的指针，该指针接收与 *chAccel*中指定的快捷键相对应的按钮的命令标识符。
+指向 UINT 的指针，该指针接收与 *chAccel* 中指定的快捷键相对应的按钮的命令标识符。
 
 ### <a name="return-value"></a>返回值
 
@@ -1630,7 +1631,7 @@ BOOL MarkButton(
     BOOL fHighlight = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 按钮标识符。
@@ -1656,7 +1657,7 @@ BOOL MoveButton(
     UINT nNewPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOldPos*<br/>
 要移动的按钮的从零开始的索引。
@@ -1680,7 +1681,7 @@ BOOL MoveButton(
 BOOL PressButton(int nID, BOOL bPress = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 中要按下或放开的按钮的命令标识符。
@@ -1706,7 +1707,7 @@ BOOL PressButton(int nID, BOOL bPress = TRUE);
 BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pReplaceBitmap*\
 中指向 [TBREPLACEBITMAP](/windows/win32/api/commctrl/ns-commctrl-tbreplacebitmap) 结构的指针，该结构描述要替换的位图和新位图。
@@ -1736,7 +1737,7 @@ void RestoreState(
     LPCTSTR lpszValueName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKeyRoot*<br/>
 标识注册表中当前打开的密钥或任何以下预定义的保留句柄值：
@@ -1766,7 +1767,7 @@ void SaveState(
     LPCTSTR lpszValueName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKeyRoot*<br/>
 标识注册表中当前打开的密钥或任何以下预定义的保留句柄值：
@@ -1793,7 +1794,7 @@ void SaveState(
 BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fAnchor*<br/>
 中指定是否启用或禁用锚点突出显示。 如果此值为非零值，则将启用定位点突出显示。 如果此值为零，则将禁用定位点突出显示
@@ -1814,7 +1815,7 @@ BOOL SetAnchorHighlight(BOOL fAnchor = TRUE);
 BOOL SetBitmapSize(CSize size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 位图图像的宽度和高度（以像素为单位）。
@@ -1837,7 +1838,7 @@ BOOL SetButtonInfo(
     TBBUTTONINFO* ptbbi);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 按钮标识符。
@@ -1861,7 +1862,7 @@ BOOL SetButtonInfo(
 BOOL SetButtonSize(CSize size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 按钮的宽度和高度（以像素为单位）。
@@ -1886,7 +1887,7 @@ BOOL SetButtonSize(CSize size);
 void SetButtonStructSize(int nSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSize*<br/>
 结构的大小（以字节为单位） `TBBUTTON` 。
@@ -1907,7 +1908,7 @@ BOOL SetButtonWidth(
     int cxMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxMin*<br/>
 最小按钮宽度，以像素为单位。 工具栏按钮将永远不会比该值窄。
@@ -1933,7 +1934,7 @@ BOOL SetCmdID(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要设置其命令 ID 的按钮的从零开始的索引。
@@ -1953,7 +1954,7 @@ BOOL SetCmdID(
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpColorScheme*\
 中指向 [COLORSCHEME](/windows/win32/api/commctrl/ns-commctrl-colorscheme) 结构的指针，该结构描述 toolbar 控件的突出显示颜色和阴影颜色。
@@ -1978,7 +1979,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
 CImageList* SetDisabledImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImageList*<br/>
 指向对象的指针，该 `CImageList` 对象包含 toolbar 控件用于显示禁用的按钮图像的图像。
@@ -2001,7 +2002,7 @@ DWORD SetDrawTextFlags(
     DWORD dwDTFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwMask*<br/>
 Win32 函数 [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中指定的一个或多个 DT_ 标志的组合，用于指示在绘制文本时将使用 *dwDTFlags* 中的哪些位。
@@ -2025,7 +2026,7 @@ Win32 函数 [DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)中指定
 DWORD SetExtendedStyle(DWORD dwExStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
 一个值，该值指定新的扩展样式。 此参数可以是工具栏扩展样式的组合。
@@ -2046,7 +2047,7 @@ DWORD SetExtendedStyle(DWORD dwExStyle);
 CImageList* SetHotImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImageList*<br/>
 指向对象的指针，该 `CImageList` 对象包含工具栏控件用来显示热按钮图像的图像。
@@ -2069,7 +2070,7 @@ CImageList* SetHotImageList(CImageList* pImageList);
 int SetHotItem(int nHot);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHot*<br/>
 将成为热项的从零开始的索引号。 如果此值为-1，则不会有任何项处于热状态。
@@ -2090,7 +2091,7 @@ int SetHotItem(int nHot);
 CImageList* SetImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImageList*<br/>
 指向对象的指针，该 `CImageList` 对象包含 toolbar 控件用于显示处于默认状态的按钮图像的图像。
@@ -2113,7 +2114,7 @@ CImageList* SetImageList(CImageList* pImageList);
 BOOL SetIndent(int iIndent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iIndent*<br/>
 指定缩进的值（以像素为单位）。
@@ -2130,7 +2131,7 @@ BOOL SetIndent(int iIndent);
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptbim*<br/>
 指向 [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) 结构的指针，该结构包含插入标记。
@@ -2147,7 +2148,7 @@ void SetInsertMark(TBINSERTMARK* ptbim);
 COLORREF SetInsertMarkColor(COLORREF clrNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrNew*<br/>
 一个包含新插入标记颜色的 COLORREF 值。
@@ -2168,7 +2169,7 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 BOOL SetMaxTextRows(int iMaxRows);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iMaxRows*<br/>
 要设置的最大行数。
@@ -2185,7 +2186,7 @@ BOOL SetMaxTextRows(int iMaxRows);
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptbm*<br/>
 指向对象的 [TBMETRICS](/windows/win32/api/commctrl/ns-commctrl-tbmetrics) 结构的指针 `CToolBarCtrl` 。
@@ -2202,7 +2203,7 @@ void SetMetrics(LPTBMETRICS ptbm);
 void SetOwner(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向 `CWnd` 或 `CWnd` 派生对象的指针，该对象将成为 toolbar 控件的新所有者窗口。
@@ -2221,7 +2222,7 @@ DWORD SetPadding(
     int nVertPadding);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nHorzPadding*\
 中指定工具栏控件的水平填充（以像素为单位）。
@@ -2253,7 +2254,7 @@ CImagelist* SetPressedImageList(
     CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iImageID*\
 中图像列表的从零开始的索引。 如果只使用一个图像列表，请将此参数设置为零。
@@ -2286,9 +2287,9 @@ void SetRows(
     LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-nRows**<br/>
+nRows<br/>
 请求的行数。
 
 *bLarger*<br/>
@@ -2299,7 +2300,7 @@ nRows**<br/>
 
 ### <a name="remarks"></a>备注
 
-如果工具栏无法将自身调整为所请求的数量或行数，则会将其自身调整到下一个较大或较小的有效大小，具体取决于 *bLarger*的值。 如果 *bLarger* 为 TRUE，则新行数将大于请求的数目。 如果 *bLarger* 为 FALSE，则新行数将小于请求的数目。
+如果工具栏无法将自身调整为所请求的数量或行数，则会将其自身调整到下一个较大或较小的有效大小，具体取决于 *bLarger* 的值。 如果 *bLarger* 为 TRUE，则新行数将大于请求的数目。 如果 *bLarger* 为 FALSE，则新行数将小于请求的数目。
 
 如果按钮可以排列，则给定数量的行对工具栏有效，因此，除了最后一行) 以外，所有行都具有相同数目的按钮 (。 例如，包含四个按钮的工具栏无法调整为三行大小，因为最后两行必须更短。 如果尝试将其设置为三行大小，则如果 *bLarger* 为 TRUE，则会获得四行，如果 *bLarger* 为 FALSE，则返回两行。
 
@@ -2321,7 +2322,7 @@ BOOL SetState(
     UINT nState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nID*<br/>
 按钮的命令标识符。
@@ -2345,7 +2346,7 @@ BOOL SetState(
 void SetStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 包含 [toolbar 控件样式](/windows/win32/Controls/toolbar-control-and-button-styles)组合的 DWORD，如 Windows SDK 中所述。
@@ -2358,7 +2359,7 @@ void SetStyle(DWORD dwStyle);
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTip*<br/>
 指向 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 对象的指针。
@@ -2371,7 +2372,7 @@ void SetToolTips(CToolTipCtrl* pTip);
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszSubAppName*<br/>
 指向 Unicode 字符串的指针，该字符串包含要设置的工具栏视觉样式。
@@ -2384,7 +2385,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 此成员函数模拟 [TB_SETWINDOWTHEME](/windows/win32/Controls/tb-setwindowtheme) 消息的功能，如 Windows SDK 中所述。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC 示例 MFCIE](../../overview/visual-cpp-samples.md)<br/>

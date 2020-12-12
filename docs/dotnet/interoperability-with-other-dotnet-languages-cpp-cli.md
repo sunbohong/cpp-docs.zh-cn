@@ -1,4 +1,5 @@
 ---
+description: '了解更多详细信息：与其他 .NET 语言的互操作性 (c + +/CLI) '
 title: 与其他 .NET 语言的互操作性 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-ms.openlocfilehash: ffdf9a8b11912bde38e15408228670c8cff9a503
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51cead7fcc7dedc05f0225facf10fe70a3d606fd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188317"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316604"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>与其他 .NET 语言的互操作性 (C++/CLI)
 
-在本部分中的主题说明如何在视觉对象中创建程序集C++，从使用或提供的功能编写的程序集到C#或 Visual Basic。
+本节中的主题说明如何在 Visual C++ 中创建使用的程序集，或向用 c # 或 Visual Basic 编写的程序集提供功能。
 
-## <a name="consume_indexer"></a> 使用 C# 索引器
+## <a name="consume-a-c-indexer"></a><a name="consume_indexer"></a> 使用 c # 索引器
 
-VisualC++不包含索引器;它具有索引属性。 若要使用 C# 索引器，访问索引器，就好像索引的属性。
+Visual C++ 不包含索引器;它包含索引属性。 若要使用 c # 索引器，请访问索引器，就像它是索引属性一样。
 
 有关索引器的详细信息，请参阅：
 
@@ -30,7 +31,7 @@ VisualC++不包含索引器;它具有索引属性。 若要使用 C# 索引器�
 
 ### <a name="example"></a>示例
 
-下面的 C# 程序定义索引器。
+下面的 c # 程序定义索引器。
 
 ```csharp
 // consume_cs_indexers.cs
@@ -70,7 +71,7 @@ public class MainClass {
 
 ### <a name="example"></a>示例
 
-此视觉对象C++程序使用该索引器。
+此 Visual C++ 程序使用索引器。
 
 ```cpp
 // consume_cs_indexers_2.cpp
@@ -100,9 +101,9 @@ Element #9 = 0
 Element #10 = 0
 ```
 
-## <a name="implement_isas"></a> 实现是和为 C# 关键字
+## <a name="implement-is-and-as-c-keywords"></a><a name="implement_isas"></a> 实现 is 和 as c # 关键字
 
-本主题演示如何实现的功能`is`并`as`C#视觉对象中的关键字C++。
+本主题演示如何 `is` `as` 在 Visual C++ 中实现和 c # 关键字的功能。
 
 ### <a name="example"></a>示例
 
@@ -141,11 +142,11 @@ int main() {
 o is a string
 ```
 
-## <a name="implement_locak"></a> 实现 C# 的 lock 关键字
+## <a name="implement-the-lock-c-keyword"></a><a name="implement_locak"></a> 实现 lock c # 关键字
 
-本主题演示如何实现C#`lock`视觉对象中的关键字C++。
+本主题演示如何 `lock` 在 Visual C++ 中实现 c # 关键字。
 
-此外可以使用`lock`类中C++支持库。 请参阅[同步 (lock 类)](../dotnet/synchronization-lock-class.md)有关详细信息。
+你还可以使用 `lock` c + + 支持库中的类。 有关详细信息，请参阅 [同步 (锁定类) ](../dotnet/synchronization-lock-class.md) 。
 
 ### <a name="example"></a>示例
 
@@ -186,4 +187,4 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[用 c + +/CLI (Visual C++ 的 .NET 编程) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

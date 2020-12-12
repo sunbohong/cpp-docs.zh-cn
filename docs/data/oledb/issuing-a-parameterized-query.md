@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息：发出参数化查询
 title: 发出参数化查询
 ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: bb8b879d08595150b2db61f4840131e3ccc500a2
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2d3f03a359fe3ce079239fdcb9603b2d30299c33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80210166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317228"
 ---
 # <a name="issuing-a-parameterized-query"></a>发出参数化查询
 
-下面的示例发出一个简单的参数化查询，该查询从 Microsoft Access 数据库的表中检索具有 age 字段（大于30）的记录。 若要支持参数，用户记录必须具有其他映射。 下面的代码在 ATL 项目中使用 `CCommand` 类，而不是在上一示例中使用的 `CTable` 类，[遍历简单行集](../../data/oledb/traversing-a-simple-rowset.md)。
+下面的示例发出一个简单的参数化查询，该查询从 Microsoft Access 数据库的表中检索 age 字段 (大于 30) 的记录。 若要支持参数，用户记录必须具有其他映射。 下面的代码在 ATL 项目中使用 `CCommand` 类，而不是在 `CTable` 上一示例中使用的类， [遍历简单行集](../../data/oledb/traversing-a-simple-rowset.md)。
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +52,7 @@ int main()
 }
 ```
 
-用户记录 `CArtists`如下例所示：
+用户记录 `CArtists` 类似于以下示例：
 
 ```cpp
 class CArtists
@@ -77,6 +78,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

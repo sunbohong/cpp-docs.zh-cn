@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： Naked 函数调用
 title: Naked 函数调用
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - naked keyword [C++]
 - naked keyword [C++], storage-class attribute
 ms.assetid: 2a66847a-a43f-4541-a7be-c9f5f29b5fdb
-ms.openlocfilehash: 9b49d34d7276d3c9260488f23d1821b9708d2481
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ffc28b65a8c16881164805f0cfa55ffe1bc54e9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227317"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313796"
 ---
 # <a name="naked-function-calls"></a>Naked 函数调用
 
 **Microsoft 专用**
 
-使用特性声明的函数 **`naked`** 会在没有 prolog 或 epilog 代码的情况下发出，使你能够使用[内联汇编程序](../assembler/inline/inline-assembler.md)编写你自己的自定义 prolog/epilog 序列。 将裸函数作为高级功能提供。 利用这些函数，您可以声明从 C/C++ 之外的上下文中调用的函数，从而作出有关参数位置或保留哪些寄存器的各种假设。 示例包括例程（如中断处理程序）。 此功能对于虚拟设备驱动程序 (VxDs) 的编写器特别有用。
+使用特性声明的函数 **`naked`** 会在没有 prolog 或 epilog 代码的情况下发出，使你能够使用 [内联汇编程序](../assembler/inline/inline-assembler.md)编写你自己的自定义 prolog/epilog 序列。 将裸函数作为高级功能提供。 利用这些函数，您可以声明从 C/C++ 之外的上下文中调用的函数，从而作出有关参数位置或保留哪些寄存器的各种假设。 示例包括例程（如中断处理程序）。 此功能对于虚拟设备驱动程序 (VxDs) 的编写器特别有用。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 

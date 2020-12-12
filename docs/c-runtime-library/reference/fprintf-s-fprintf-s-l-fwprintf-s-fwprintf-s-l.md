@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 title: fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-ms.openlocfilehash: 48f15bee685b058c0c059d676bea48e2bc32d699
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 89b597d59b9b3b42dcbd884929504f473182cb3a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314148"
 ---
 # <a name="fprintf_s-_fprintf_s_l-fwprintf_s-_fwprintf_s_l"></a>fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l
 
@@ -76,10 +77,10 @@ int _fwprintf_s_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*stream*<br/>
-指向**文件**结构的指针。
+*流*<br/>
+指向 **文件** 结构的指针。
 
 *format*<br/>
 窗体控件字符串。
@@ -92,20 +93,20 @@ int _fwprintf_s_l(
 
 ## <a name="return-value"></a>返回值
 
-**fprintf_s**返回写入的字节数。 **fwprintf_s**返回写入的宽字符数。 其中每个函数在出现输出错误时返回一个负值。
+**fprintf_s** 返回写入的字节数。 **fwprintf_s** 返回已写入的宽字符数。 其中每个函数在出现输出错误时返回一个负值。
 
 ## <a name="remarks"></a>备注
 
-**fprintf_s**设置格式并将一系列字符和值输出到输出*流*中。 *Argument_list*中的每个参数（如果有）将根据*格式*中对应的格式规范进行转换和输出。 *Format*参数将[格式规范语法用于 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+**fprintf_s** 设置格式并将一系列字符和值输出到输出 *流* 中。 *Argument_list* 中的每个参数 (根据 *格式* 规范中的相应格式规范转换和输出任何) 。 *Format* 参数将 [格式规范语法用于 printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
 
-**fwprintf_s**是**fprintf_s**的宽字符版本;在**fwprintf_s**中， *format*是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fprintf_s**当前不支持输出到 UNICODE 流中。
+**fwprintf_s** 是 **fprintf_s** 的宽字符版本;在 **fwprintf_s** 中， *format* 是宽字符字符串。 如果在 ANSI 模式下打开流，则这些函数行为相同。 **fprintf_s** 当前不支持输出到 UNICODE 流中。
 
-使用 **_l**后缀的这些函数的版本是相同的，只不过它们使用传入的区域设置参数而不是当前区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
 
 > [!IMPORTANT]
-> 确保 format不是用户定义的字符串。
+> 确保 format 不是用户定义的字符串。
 
-与不安全版本一样（请参阅[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)），这些函数将验证其参数并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述，如果有一个*流*或*format*为 null 指针。 格式字符串本身也会进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将生成无效参数异常。 在所有情况下，如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+与不安全版本一样 (参阅 [fprintf、_fprintf_l、fwprintf _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)) ，这些函数将验证其参数并调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述（如果 *stream* 或 *format* 为空指针）。 格式字符串本身也会进行验证。 如果有任何未知或格式错误的格式化说明符，则这些函数将生成无效参数异常。 在所有情况下，如果允许执行继续，则函数将返回-1，并将 **errno** 设置为 **EINVAL**。 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -120,10 +121,10 @@ int _fwprintf_s_l(
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**fprintf_s**、 **_fprintf_s_l**|\<stdio.h>|
-|**fwprintf_s**、 **_fwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**fprintf_s**， **_fprintf_s_l**|\<stdio.h>|
+|**fwprintf_s**， **_fwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -166,4 +167,4 @@ this is a string
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>

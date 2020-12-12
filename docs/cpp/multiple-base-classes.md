@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：多个基类
 title: 多个基类
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: 0e663f33213a5fd57f2adbdcc53233c6af29954e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6e9e839e5906fba4a45e4e2edd4965817816a298
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314095"
 ---
 # <a name="multiple-base-classes"></a>多个基类
 
-一个类可以从多个基类派生。 在多重继承模型中（其中，类派生自多个基类），使用*基本列表*语法元素指定基类。 例如，可以指定派生自 `CollectionOfBook` 和 `Collection` 的 `Book` 的类声明：
+一个类可以从多个基类派生。 在多重继承模型中 (其中的类派生自多个基类) ，则使用 " *基本列表* " 语法元素指定基类。 例如，可以指定派生自 `CollectionOfBook` 和 `Collection` 的 `Book` 的类声明：
 
 ```cpp
 // deriv_MultipleBaseClasses.cpp
@@ -31,14 +32,14 @@ class CollectionOfBook : public Book, public Collection {
 
 指定基类的顺序并不重要，只不过在某些情况下，将调用构造函数和析构函数。 在这些情况下，指定基类的顺序将影响：
 
-- 构造函数进行初始化的顺序。 如果你的代码依赖要在 `Book` 部分之前初始化的 `CollectionOfBook` 的 `Collection` 部分，则规范的顺序很重要。 初始化按在*基础列表*中指定类的顺序进行。
+- 构造函数进行初始化的顺序。 如果你的代码依赖要在 `Book` 部分之前初始化的 `CollectionOfBook` 的 `Collection` 部分，则规范的顺序很重要。 初始化按在 *基础列表* 中指定类的顺序进行。
 
-- 调用析构函数以进行清理的顺序。 同样，如果在销毁另一部分时必须呈现类的特定“部分”，则顺序非常重要。 析构函数的调用顺序与在*基础列表*中指定的类的顺序相反。
+- 调用析构函数以进行清理的顺序。 同样，如果在销毁另一部分时必须呈现类的特定“部分”，则顺序非常重要。 析构函数的调用顺序与在 *基础列表* 中指定的类的顺序相反。
 
     > [!NOTE]
     >  基类的规范顺序会影响类的内存布局。 不要基于内存中基成员的顺序做出任何编程决策。
 
-指定*基础列表*时，不能多次指定相同的类名。 但是，可以将类多次作为派生类的间接基。
+指定 *基础列表* 时，不能多次指定相同的类名。 但是，可以将类多次作为派生类的间接基。
 
 ## <a name="virtual-base-classes"></a>虚拟基类
 
@@ -71,7 +72,7 @@ class LunchQueue : virtual public Queue {};
 class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 ```
 
-**`virtual`** 关键字可确保仅包含子对象的一个副本 `Queue` （见下图）。
+**`virtual`** 关键字可确保仅包含子对象的一个副本 `Queue` (参阅下图) 。
 
 ![模拟午餐&#45;line object，virtual 基类](../cpp/media/vc38xp3.gif "模拟午餐&#45;line object，virtual 基类") <br/>
 模拟午餐-包含虚拟基类的行对象
@@ -142,7 +143,7 @@ pc->b();
 
 1. 如果重载函数是明确的，则将解析它们。
 
-1. 如果对名称的访问违背了成员访问权限，则会生成错误消息。 （有关详细信息，请参阅[成员访问控制](../cpp/member-access-control-cpp.md)。）
+1. 如果对名称的访问违背了成员访问权限，则会生成错误消息。  (有关详细信息，请参阅 [成员访问控制](../cpp/member-access-control-cpp.md)。 ) 
 
 在表达式通过继承产生多义性时，您可以通过限定考虑中的名称及其类名来手动消除该多义性。 若要适当编译上面的示例而不产生多义性，请使用如下代码：
 
@@ -188,7 +189,7 @@ public:
 
 - `D` 类型的对象的声明。
 
-- 将 address 运算符（ **&** ）应用于该对象的效果。 请注意，address-of 运算符总是提供该对象的基址。
+- 将) 的 address 运算符 (的效果应用 **&** 于该对象。 请注意，address-of 运算符总是提供该对象的基址。
 
 - 将使用 address-of 运算符获取的指针显式转换为基类类型 `A` 的效果。 请注意，将该对象的地址强制转换为 `A*` 类型并不总是为编译器提供足够的信息，以供 `A` 类型的子对象进行选择；在这种情况下，将存在两个子对象。
 

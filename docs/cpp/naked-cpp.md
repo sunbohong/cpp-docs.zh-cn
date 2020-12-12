@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：裸 (c + +) '
 title: naked (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], naked
 - naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
-ms.openlocfilehash: cff2455608966886e9c5b07039dff439538caefe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1f416f116d7d2a3179dc43545f1302fcd9c7d101
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227330"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313822"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -28,9 +29,9 @@ __declspec(naked) declarator
 
 ## <a name="remarks"></a>备注
 
-由于 **`naked`** 特性仅与函数的定义相关且不是类型修饰符，因此，裸函数必须使用扩展的特性语法和[__declspec](../cpp/declspec.md)关键字。
+由于 **`naked`** 特性仅与函数的定义相关且不是类型修饰符，因此，裸函数必须使用扩展的特性语法和 [__declspec](../cpp/declspec.md) 关键字。
 
-编译器无法为使用裸特性标记的函数生成内联函数，即使该函数也标记有[__forceinline](inline-functions-cpp.md)关键字。
+编译器无法为使用裸特性标记的函数生成内联函数，即使该函数也标记有 [__forceinline](inline-functions-cpp.md) 关键字。
 
 如果将 **`naked`** 特性应用于非成员方法的定义之外的任何内容，则编译器会发出错误。
 

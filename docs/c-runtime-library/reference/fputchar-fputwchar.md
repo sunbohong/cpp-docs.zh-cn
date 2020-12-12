@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _fputchar、_fputwchar
 title: _fputchar、_fputwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 08997730e0ef80072e29de5bc5e7c106cb6cb9e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f682f134c3435392176155865f4808a6178ce35a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912019"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314185"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar、_fputwchar
 
@@ -60,22 +61,22 @@ wint_t _fputwchar(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要写入的字符。
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数都会返回写入的字符。 对于 **_fputchar**，返回值**EOF**表示错误。 对于 **_fputwchar**， **WEOF**的返回值指示一个错误。 如果 c 为**NULL**，则这些函数将生成无效的参数异常，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则它们将返回**EOF** （或**WEOF**），并将**errno**设置为**EINVAL**。
+其中每个函数都会返回写入的字符。 对于 **_fputchar**，返回值 **EOF** 表示错误。 对于 **_fputwchar**， **WEOF** 的返回值指示一个错误。 如果 c 为 **NULL**，则这些函数将生成无效的参数异常，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，它们将返回 **EOF** (或 **WEOF**) 并将 **errno** 设置为 **EINVAL**。
 
 有关这些及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-这两个函数将单个字符*c*写入**stdout** ，并根据需要提升指示器。 **_fputchar**与等效`fputc( stdout )`。 它还等效于**putchar**，但仅作为函数实现，而不是作为函数和宏实现。 与**fputc**和**putchar**不同，这些函数与 ANSI 标准不兼容。
+这两个函数将单个字符 *c* 写入 **stdout** ，并根据需要提升指示器。 **_fputchar** 与等效 `fputc( stdout )` 。 它还等效于 **putchar**，但仅作为函数实现，而不是作为函数和宏实现。 与 **fputc** 和 **putchar** 不同，这些函数与 ANSI 标准不兼容。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -90,7 +91,7 @@ wint_t _fputwchar(
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 与控制台（**stdin**、 **stdout**和**stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台（**stdin**、 **stdout** 和 **stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -117,7 +118,7 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc、fgetwc](fgetc-fgetwc.md)<br/>

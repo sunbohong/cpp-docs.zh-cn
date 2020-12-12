@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4657
 title: 编译器警告（等级 1）C4657
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4657
 ms.assetid: eb750050-cea6-4ead-b80c-d5dcd4971cfc
-ms.openlocfilehash: 6cc049d99339a6f19ca86cd5c7a10f062a1451a9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b0a1af53c145495e4daacfa09247ea8cc6fb5697
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318777"
 ---
 # <a name="compiler-warning-level-1-c4657"></a>编译器警告（等级 1）C4657
 
@@ -25,10 +26,10 @@ ms.locfileid: "80199494"
 
 1. 将数据类型改回其在发生错误前的状态。
 
-1. 在“调试” 菜单中选择“应用代码更改”。
+1. 在“调试”  菜单中选择“应用代码更改” 。
 
 ### <a name="to-remove-this-error-without-changing-your-source-code"></a>若要在不更改源代码的情况下删除此错误
 
-1. 在“调试” 菜单上，选择“停止调试”。
+1. 在“调试”  菜单上，选择“停止调试” 。
 
-1. 在“生成” 菜单上，选择“生成”。
+1. 在“生成”  菜单上，选择“生成” 。

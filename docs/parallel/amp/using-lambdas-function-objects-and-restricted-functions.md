@@ -1,17 +1,18 @@
 ---
+description: 了解更多相关信息：使用 Lambda、函数对象和受限函数
 title: 使用 Lambda 表达式、函数对象和受限函数
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bef02f30b5d5b5f11b8051c7a596ac0a141eef0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314446"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>使用 Lambda 表达式、函数对象和受限函数
 
-C++作为参数对的调用中指定你想要在快捷键上运行的 AMP 代码[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 作为该参数，可以提供 lambda 表达式或函数对象 （伪函数）。 此外，lambda 表达式或函数对象可以调用C++AMP 限制的函数。 本主题使用数组添加算法演示 lambda、 函数对象和受限的函数。 下面的示例演示无算法C++AMP 代码。 创建两个一维数组的长度相等。 对应整数元素添加并存储在第三个一维数组中。 C++不使用 a m P。
+要在快捷键上运行的 C++ AMP 代码在对 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 方法的调用中指定为参数。 可以提供 lambda 表达式或函数对象 (函子) 作为该参数。 此外，lambda 表达式或函数对象可以调用 C++ AMP 限制的函数。 本主题使用数组加法算法演示 lambda、函数对象和受限函数。 下面的示例演示没有 C++ AMP 代码的算法。 已创建长度相等的二维数组。 2 1 相应的整数元素添加并存储在第三个1维数组中。 不使用 C++ AMP。
 
 ```cpp
 void CpuMethod() {
@@ -34,7 +35,7 @@ void CpuMethod() {
 
 ## <a name="lambda-expression"></a>Lambda 表达式
 
-使用 lambda 表达式是使用的最直接方法C++AMP 重新编写代码。
+使用 lambda 表达式是使用 C++ AMP 重写代码的最直接的方式。
 
 ```cpp
 void AddArraysWithLambda() {
@@ -63,11 +64,11 @@ void AddArraysWithLambda() {
 }
 ```
 
-Lambda 表达式必须包含一个索引参数，并且必须包括`restrict(amp)`。 在示例中， [array_view](../../parallel/amp/reference/array-view-class.md) `sum`对象具有排名为 1。 因此，lambda 语句的参数是[索引](../../parallel/amp/reference/index-class.md)具有级别 1 的对象。 在运行时，lambda 表达式执行一次中每个元素[array_view](../../parallel/amp/reference/array-view-class.md)对象。 有关详细信息，请参阅[Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
+Lambda 表达式必须包含一个索引参数并且必须包括 `restrict(amp)` 。 在此示例中， [array_view](../../parallel/amp/reference/array-view-class.md) `sum` 对象的排名为1。 因此，lambda 语句的参数是一个具有级别1的 [索引](../../parallel/amp/reference/index-class.md) 对象。 在运行时，将对 [array_view](../../parallel/amp/reference/array-view-class.md) 对象中的每个元素执行一次 lambda 表达式。 有关详细信息，请参阅 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)。
 
 ## <a name="function-object"></a>Function 对象
 
-可以将快捷键代码分解为函数对象。
+可以将加速器代码分解为一个函数对象。
 
 ```cpp
 class AdditionFunctionObject
@@ -114,11 +115,11 @@ void AddArraysWithFunctionObject() {
 }
 ```
 
-函数对象必须包含一个构造函数，并且必须包含的函数调用运算符的重载。 函数调用运算符必须包含一个索引参数。 函数对象的实例作为第二个参数传递[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 在此示例中，三个[array_view](../../parallel/amp/reference/array-view-class.md)对象传递给函数对象构造函数。 [Array_view](../../parallel/amp/reference/array-view-class.md)对象`sum`一个秩为 1。 因此，函数调用运算符的参数是[索引](../../parallel/amp/reference/index-class.md)具有级别 1 的对象。 在运行时，该函数执行一次中每个元素[array_view](../../parallel/amp/reference/array-view-class.md)对象。 有关详细信息，请参阅[函数调用](../../cpp/function-call-cpp.md)并[中的函数对象C++标准库](../../standard-library/function-objects-in-the-stl.md)。
+函数对象必须包含构造函数，并且必须包含函数调用运算符的重载。 函数调用运算符必须包含一个索引参数。 函数对象的实例将作为第二个参数传递到 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 方法。 在此示例中，将三个 [array_view](../../parallel/amp/reference/array-view-class.md) 对象传递到函数对象构造函数。 [Array_view](../../parallel/amp/reference/array-view-class.md)对象的 `sum` 排名为1。 因此，函数调用运算符的参数是一个具有秩1的 [索引](../../parallel/amp/reference/index-class.md) 对象。 在运行时，将对 [array_view](../../parallel/amp/reference/array-view-class.md) 对象中的每个元素执行一次此函数。 有关详细信息，请参阅[c + + 标准库中的](../../standard-library/function-objects-in-the-stl.md)[函数调用](../../cpp/function-call-cpp.md)和函数对象。
 
-## <a name="c-amp-restricted-function"></a>C++AMP 限制的函数
+## <a name="c-amp-restricted-function"></a>C + + AMP-Restricted 函数
 
-您可以通过创建受限制的函数和从 lambda 表达式或函数对象调用来进一步分解快捷键代码。 下面的代码示例演示如何从 lambda 表达式调用受限制的函数。
+您可以通过创建受限函数并从 lambda 表达式或函数对象调用它来进一步因式分解加速器代码。 下面的代码示例演示如何从 lambda 表达式调用受限制的函数。
 
 ```cpp
 void AddElementsWithRestrictedFunction(index<1> idx, array_view<int, 1> sum, array_view<int, 1> a, array_view<int, 1> b) restrict(amp)
@@ -153,12 +154,12 @@ void AddArraysWithFunction() {
 }
 ```
 
-受限的函数必须包括`restrict(amp)`并且符合中所述的限制[限制 (C++ a m P)](../../cpp/restrict-cpp-amp.md)。
+受限制的函数必须包括 `restrict(amp)` 并符合 [限制 (C++ AMP) ](../../cpp/restrict-cpp-amp.md)中所述的限制。
 
 ## <a name="see-also"></a>请参阅
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)<br/>
 [函数调用](../../cpp/function-call-cpp.md)<br/>
-[C++ 标准库中的函数对象](../../standard-library/function-objects-in-the-stl.md)<br/>
+[C + + 标准库中的函数对象](../../standard-library/function-objects-in-the-stl.md)<br/>
 [restrict (C++ AMP)](../../cpp/restrict-cpp-amp.md)

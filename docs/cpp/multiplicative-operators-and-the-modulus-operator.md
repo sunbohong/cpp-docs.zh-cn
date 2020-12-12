@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：乘法运算符和取模运算符
 title: 乘法运算符和取模运算符
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: c277c93640201de69a4cb29060bc5191aa91629c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e3e3e3823abb255922bf31be90b4a116fb100efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313861"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法运算符和取模运算符
 
@@ -36,21 +37,21 @@ expression % expression
 
 乘法运算符为：
 
-- 乘法（ <strong>\*</strong> ）
+- 乘法 (<strong>\*</strong>) 
 
-- 除号（ **/** ）
+- 划分 (**/**) 
 
-- 取模（余数除以除法）（ **%** ）
+- 取模)  (余数 (**%**) 
 
 这些二进制运算符具有从左至右的关联性。
 
-乘法运算符采用算术类型的操作数。 取模运算符（ **%** ）具有更严格的要求，因为其操作数必须是整型。 （若要获取浮点除法的余数，请使用运行时函数[fmod](../c-runtime-library/reference/fmod-fmodf.md)。）[标准转换](standard-conversions.md)中涵盖的转换适用于操作数，并且结果为转换后的类型。
+乘法运算符采用算术类型的操作数。 取模运算符 (**%**) 具有更严格的要求，因为其操作数必须是整型。  (获取浮点除法的余数，请使用运行时函数 [fmod](../c-runtime-library/reference/fmod-fmodf.md)。 ) [标准转换](standard-conversions.md) 中涵盖的转换适用于操作数，并且结果为转换后的类型。
 
 除法运算符产生的结果为将第一个操作数乘以第二个操作数所获得的结果。
 
 除法运算符产生的结果为将第一个操作数除以第二个操作数所获得的结果。
 
-取模运算符会产生下面的表达式所指定的余数，其中， *e1*是第一个操作数， *e2*为第二个操作数： *e1* -（*e1*  /  *e2*） \* *e2*，其中两个操作数均为整型类型。
+取模运算符会产生下面的表达式所指定的余数，其中， *e1* 是第一个操作数， *e2* 为第二个操作数： *e1* - (*e1*  /  *e2*) \* *e2*，其中两个操作数均为整型类型。
 
 在除法或取模表达式中被 0 除的结果是不确定的，将会导致运行时错误。 因此，以下表达式生成未定义的错误结果：
 
@@ -72,7 +73,7 @@ f / 0.0
 
 如果两个整数的减法计算不准确，并且只有一个操作数为负，则结果是最大的整数（在数量级上，忽略符号），该整数小于减法运算所生成的准确值。 例如，-11/3 的计算值为-3.666666666。 整数相除的结果为-3。
 
-乘法运算符之间的关系由标识（*e1*  /  *e2*） \* *e2*  +  *e1*  %  *e2*  ==  *e1*提供。
+乘法运算符之间的关系由标识 (*e1*  /  *e2*) \* *e2*  +  *e1*  %  *e2*  ==  *e1* 提供。
 
 ## <a name="example"></a>示例
 
@@ -92,7 +93,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [带有二元运算符的表达式](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

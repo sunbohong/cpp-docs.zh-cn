@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CTaskDialog 类
 title: CTaskDialog Class
 ms.date: 11/19/2018
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 3fd67eed7e80a2e594710df8ae8bc6fd13f0e96c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91cd3caec703f8e81116fccd75c0457abb69a3e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318580"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -137,13 +138,13 @@ class CTaskDialog : public CObject
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CTaskDialog：： CTaskDialog](#ctaskdialog)|构造 `CTaskDialog` 对象。|
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CTaskDialog：： AddCommandControl](#addcommandcontrol)|向添加一个命令按钮控件 `CTaskDialog` 。|
 |[CTaskDialog：： AddRadioButton](#addradiobutton)|向添加一个单选按钮 `CTaskDialog` 。|
@@ -202,7 +203,7 @@ class CTaskDialog : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`m_aButtons`|的命令按钮控件数组 `CTaskDialog` 。|
 |`m_aRadioButtons`|的单选按钮控件数组 `CTaskDialog` 。|
@@ -232,7 +233,7 @@ class CTaskDialog : public CObject
 |`m_strTitle`|`CTaskDialog` 的标题。|
 |`m_strVerification`|在 `CTaskDialog` 验证复选框右侧显示的字符串。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CTaskDialog`类将替换标准 Windows 消息框，并具有其他功能，例如用于从用户收集信息的新控件。 此类位于 Visual Studio 2010 和更高版本的 MFC 库中。 `CTaskDialog`从 Windows Vista 开始提供。 较早版本的 Windows 无法显示该 `CTaskDialog` 对象。 用于 `CTaskDialog::IsSupported` 在运行时确定当前用户是否可以显示 "任务" 对话框。 仍支持标准 Windows 消息框。
 
@@ -263,7 +264,7 @@ void AddCommandControl(
     BOOL bRequiresElevation = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCommandControlID*<br/>
 中命令控件标识号。
@@ -277,7 +278,7 @@ void AddCommandControl(
 *bRequiresElevation*<br/>
 中布尔型参数，指示命令是否需要提升。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CTaskDialog Class`可以显示不限数量的命令按钮控件。 但是，如果 `CTaskDialog` 显示任何命令按钮控件，它最多可以显示六个按钮。 如果 `CTaskDialog` 没有命令按钮控件，它可以显示不受限制的按钮数。
 
@@ -298,7 +299,7 @@ void CTaskDialog::AddRadioButton(
     BOOL bEnabled = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRadioButtonID*<br/>
 中单选按钮的标识号。
@@ -309,7 +310,7 @@ void CTaskDialog::AddRadioButton(
 *bEnabled*<br/>
 中布尔型参数，指示是否启用单选按钮。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 [CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md) 的单选按钮，可以从用户收集信息。 使用函数 [CTaskDialog：： GetSelectedRadioButtonID](#getselectedradiobuttonid) 确定所选的单选按钮。
 
@@ -328,12 +329,12 @@ protected:
 void ClickCommandControl(int nCommandControlID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCommandControlID*<br/>
 中要单击的控件的命令 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法生成 windows 消息 TDM_CLICK_BUTTON。
 
@@ -346,12 +347,12 @@ protected:
 void ClickRadioButton(int nRadioButtonID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRadioButtonID*<br/>
 中要单击的单选按钮的 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法生成 windows 消息 TDM_CLICK_RADIO_BUTTON。
 
@@ -379,7 +380,7 @@ CTaskDialog(
     const CString& strFooter = _T(""));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strContent*<br/>
 中要用于的内容的字符串 `CTaskDialog` 。
@@ -405,11 +406,11 @@ CTaskDialog(
 *nIDCommandControlsLast*<br/>
 中最后一个命令的字符串 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以通过两种方式将添加 `CTaskDialog` 到应用程序。 第一种方法是使用其中一个构造函数创建 `CTaskDialog` 并使用 [CTaskDialog：:D omodal](#domodal)显示它。 第二种方法是使用静态函数 [CTaskDialog：： ShowDialog](#showdialog)，这样就可以在 `CTaskDialog` 不显式创建对象的情况下显示 `CTaskDialog` 。
 
-第二个构造函数通过使用应用程序的资源文件中的数据来创建命令按钮控件。 资源文件中的字符串表包含多个具有关联的字符串 Id 的字符串。 此方法为 *nIDCommandControlsFirst* 和 *nCommandControlsLast*之间的字符串表中的每个有效条目添加一个命令按钮控件。 对于这些命令按钮控件，字符串表中的字符串是控件的标题，而字符串 ID 是控件的 ID。
+第二个构造函数通过使用应用程序的资源文件中的数据来创建命令按钮控件。 资源文件中的字符串表包含多个具有关联的字符串 Id 的字符串。 此方法为 *nIDCommandControlsFirst* 和 *nCommandControlsLast* 之间的字符串表中的每个有效条目添加一个命令按钮控件。 对于这些命令按钮控件，字符串表中的字符串是控件的标题，而字符串 ID 是控件的 ID。
 
 有关有效选项的列表，请参阅 [CTaskDialog：： SetOptions](#setoptions) 。
 
@@ -425,7 +426,7 @@ CTaskDialog(
 INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hParent*<br/>
 中的父窗口 `CTaskDialog` 。
@@ -434,7 +435,7 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 
 与用户所做的选择相对应的整数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 显示 [CTaskDialog](../../mfc/reference/ctaskdialog-class.md)的此实例。 然后，应用程序会等待用户关闭对话框。
 
@@ -456,7 +457,7 @@ int GetCommonButtonCount() const;
 
 可用的常用按钮数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 常见按钮是提供给 [CTaskDialog：： CTaskDialog](#ctaskdialog)的默认按钮。 [CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md)显示对话框底部的按钮。
 
@@ -470,7 +471,7 @@ CommCtrl 中提供了按钮的枚举列表。
 int GetCommonButtonFlag(int nButtonId) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButtonId*<br/>
 中标准 Windows 按钮值。
@@ -487,7 +488,7 @@ int GetCommonButtonFlag(int nButtonId) const;
 int GetCommonButtonId(int nFlag);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nFlag*<br/>
 中与类关联的通用按钮类型 `CTaskDialog` 。
@@ -508,7 +509,7 @@ int GetOptions() const;
 
 的标志 `CTaskDialog` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关可用于 [CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md)的选项的详细信息，请参阅 [CTaskDialog：： SetOptions](#setoptions)。
 
@@ -528,7 +529,7 @@ int GetSelectedCommandControlID() const;
 
 当前所选命令按钮控件的 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 您不必使用此方法来检索用户选择的命令按钮的 ID。 该 ID 由 [CTaskDialog：:D omodal](#domodal) 或 [CTaskDialog：： ShowDialog](#showdialog)返回。
 
@@ -548,7 +549,7 @@ int GetSelectedRadioButtonID() const;
 
 所选单选按钮的 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 用户关闭对话框后，可以使用此方法来检索所选单选按钮。
 
@@ -580,7 +581,7 @@ BOOL GetVerificationCheckboxState() const;
 BOOL IsCommandControlEnabled(int nCommandControlID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCommandControlID*<br/>
 中要测试的命令按钮控件或按钮的 ID。
@@ -589,7 +590,7 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 
 如果启用控件，则为 TRUE; 否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 您可以使用此方法来确定两个命令按钮控件和类的常用按钮的可用性 `CTaskDialog` 。
 
@@ -607,7 +608,7 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRadioButtonID*<br/>
 中要测试的单选按钮的 ID。
@@ -616,7 +617,7 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 如果启用单选按钮，则为 TRUE; 否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *nRadioButtonID* 不是单选按钮的有效标识符，则此方法将引发异常。
 
@@ -636,7 +637,7 @@ static BOOL IsSupported();
 
 如果计算机支持，则为 TRUE `CTaskDialog` ;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果运行应用程序的计算机支持类，请使用此函数在运行时确定 `CTaskDialog` 。 如果计算机不支持 `CTaskDialog` ，则应提供另一种向用户传达信息的方法。 如果应用程序尝试 `CTaskDialog` 在不支持类的计算机上使用，则该应用程序会崩溃 `CTaskDialog` 。
 
@@ -654,7 +655,7 @@ void LoadCommandControls(
     int nIDCommandControlsLast);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDCommandControlsFirst*<br/>
 中第一个命令的字符串 ID。
@@ -662,7 +663,7 @@ void LoadCommandControls(
 *nIDCommandControlsLast*<br/>
 中最后一个命令的字符串 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法使用应用程序的资源文件中的数据创建命令按钮控件。 资源文件中的字符串表包含多个具有关联的字符串 Id 的字符串。 使用此方法添加的新命令按钮控件使用控件标题的字符串和控件 ID 的字符串 ID。 所选字符串的范围由 *nIDCommandControlsFirst* 和 *nCommandControlsLast*（含）提供。 如果范围中存在空项，则此方法不会为该项添加命令按钮控件。
 
@@ -682,7 +683,7 @@ void LoadRadioButtons(
     int nIDRadioButtonsLast);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDRadioButtonsFirst*<br/>
 中第一个单选按钮的字符串 ID。
@@ -690,7 +691,7 @@ void LoadRadioButtons(
 *nIDRadioButtonsLast*<br/>
 中最后一个单选按钮的字符串 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法通过使用应用程序的资源文件中的数据创建单选按钮。 资源文件中的字符串表包含多个具有关联的字符串 Id 的字符串。 使用此方法添加的新单选按钮使用该单选按钮的标题的字符串以及单选按钮 ID 的字符串 ID。 所选字符串的范围由 *nIDRadioButtonsFirst* 和 *nRadioButtonsLast*（含）提供。 如果范围中存在空项，则此方法不会为该项添加单选按钮。
 
@@ -709,14 +710,14 @@ protected:
 void NavigateTo(CTaskDialog& oTaskDialog) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *oTaskDialog*<br/>
 中 `CTaskDialog` 接收焦点的。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-此方法 `CTaskDialog` 在显示 *oTaskDialog*时隐藏当前的。 *OTaskDialog*显示在与当前相同的位置 `CTaskDialog` 。
+此方法 `CTaskDialog` 在显示 *oTaskDialog* 时隐藏当前的。 *OTaskDialog* 显示在与当前相同的位置 `CTaskDialog` 。
 
 ## <a name="ctaskdialogoncommandcontrolclick"></a><a name="oncommandcontrolclick"></a> CTaskDialog：： OnCommandControlClick
 
@@ -726,7 +727,7 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 virtual HRESULT OnCommandControlClick(int nCommandControlID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCommandControlID*<br/>
 中用户选择的命令按钮控件的 ID。
@@ -735,7 +736,7 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -751,7 +752,7 @@ virtual HRESULT OnCreate();
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -767,7 +768,7 @@ virtual HRESULT OnDestroy();
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -779,7 +780,7 @@ virtual HRESULT OnDestroy();
 virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bExpanded*<br/>
 中非零值表示显示额外的信息;0指示隐藏了额外的信息。
@@ -788,7 +789,7 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -804,7 +805,7 @@ virtual HRESULT OnHelp();
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -816,7 +817,7 @@ virtual HRESULT OnHelp();
 virtual HRESULT OnHyperlinkClick(const CString& strHref);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strHref*<br/>
 中表示超链接的字符串。
@@ -825,7 +826,7 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法在 [ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew) 返回 S_OK 之前调用。
 
@@ -843,7 +844,7 @@ virtual HRESULT OnInit();
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -859,7 +860,7 @@ virtual HRESULT OnNavigatePage();
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -871,7 +872,7 @@ virtual HRESULT OnNavigatePage();
 virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRadioButtonID*<br/>
 中用户单击的单选按钮控件的 ID。
@@ -880,7 +881,7 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -892,7 +893,7 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 virtual HRESULT OnTimer(long lTime);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lTime*<br/>
 中创建或计时器重置后的时间（以毫秒为单位） `CTaskDialog` 。
@@ -901,7 +902,7 @@ virtual HRESULT OnTimer(long lTime);
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -913,7 +914,7 @@ virtual HRESULT OnTimer(long lTime);
 virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bChecked*<br/>
 中如果为 TRUE，则表示已选中 "验证" 复选框;FALSE 指示它不是。
@@ -922,7 +923,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 
 默认实现返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在派生类中重写此方法以实现自定义行为。
 
@@ -961,7 +962,7 @@ void SetCommandControlOptions(
     BOOL bRequiresElevation = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCommandControlID*<br/>
 中要更新的命令控件的 ID。
@@ -972,7 +973,7 @@ void SetCommandControlOptions(
 *bRequiresElevation*<br/>
 中一个布尔参数，用于指示指定的命令按钮控件是否需要提升。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此方法可更改命令按钮控件是否已启用，或者是否在将其添加到类后需要提升 `CTaskDialog` 。
 
@@ -990,7 +991,7 @@ void SetCommonButtonOptions(
     int nElevationButtonMask = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nDisabledButtonMask*<br/>
 中要禁用的常用按钮的掩码。
@@ -998,13 +999,13 @@ void SetCommonButtonOptions(
 *nElevationButtonMask*<br/>
 中需要提升的常用按钮的掩码。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以使用构造函数[CTaskDialog：： CTaskDialog](#ctaskdialog)和方法[CTaskDialog：： SetCommonButtons](#setcommonbuttons)将可用的通用按钮设置为[CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md)的实例。 `CTaskDialog::SetCommonButtonOptions` 不支持添加新的常用按钮。
 
 如果使用此方法来禁用或提升此功能不可用的通用按钮 `CTaskDialog` ，此方法将通过使用 " [确保](diagnostic-services.md#ensure) 宏" 引发异常。
 
-此方法启用可用于 `CTaskDialog` 但不在 *nDisabledButtonMask*中的任何按钮，即使之前已禁用。 此方法以类似的方式对待提升：当通用按钮可用但未包含在 *nElevationButtonMask*中时，它会将常见按钮记录为不需要提升。
+此方法启用可用于 `CTaskDialog` 但不在 *nDisabledButtonMask* 中的任何按钮，即使之前已禁用。 此方法以类似的方式对待提升：当通用按钮可用但未包含在 *nElevationButtonMask* 中时，它会将常见按钮记录为不需要提升。
 
 ### <a name="example"></a>示例
 
@@ -1021,7 +1022,7 @@ void SetCommonButtons(
     int nElevationButtonMask = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nButtonMask*<br/>
 中要添加到中的按钮的掩码 `CTaskDialog` 。
@@ -1032,13 +1033,13 @@ void SetCommonButtons(
 *nElevationButtonMask*<br/>
 中需要提升的按钮的掩码。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 创建类的此实例的显示窗口后，无法调用此方法 `CTaskDialog` 。 如果执行此操作，则此方法将引发异常。
 
-*NButtonMask*指示的按钮会重写以前添加到中的所有常用按钮 `CTaskDialog` 。 只有 *nButtonMask* 中指示的按钮可用。
+*NButtonMask* 指示的按钮会重写以前添加到中的所有常用按钮 `CTaskDialog` 。 只有 *nButtonMask* 中指示的按钮可用。
 
-如果 *nDisabledButtonMask* 或 *nElevationButtonMask* 包含不在 *nButtonMask*中的按钮，则此方法将使用 [确保](diagnostic-services.md#ensure) 宏引发异常。
+如果 *nDisabledButtonMask* 或 *nElevationButtonMask* 包含不在 *nButtonMask* 中的按钮，则此方法将使用 [确保](diagnostic-services.md#ensure) 宏引发异常。
 
 默认情况下，所有常用按钮都处于启用状态，并且不需要提升权限。
 
@@ -1054,12 +1055,12 @@ void SetCommonButtons(
 void SetContent(const CString& strContent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strContent*<br/>
 中要向用户显示的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类的内容 `CTaskDialog` 是在对话框的主要部分中向用户显示的文本。
 
@@ -1075,16 +1076,16 @@ void SetContent(const CString& strContent);
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nCommandControlID*<br/>
 中要作为默认值的命令按钮控件的 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认命令按钮控件是 `CTaskDialog` 第一次向用户显示时选择的控件。
 
-如果它找不到由 *nCommandControlID*指定的命令按钮控件，则此方法将引发异常。
+如果它找不到由 *nCommandControlID* 指定的命令按钮控件，则此方法将引发异常。
 
 ### <a name="example"></a>示例
 
@@ -1098,16 +1099,16 @@ void SetDefaultCommandControl(int nCommandControlID);
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRadioButtonID*<br/>
 中要作为默认值的单选按钮的 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认的单选按钮是 `CTaskDialog` 第一次向用户显示时选择的按钮。
 
-如果它找不到由 *nRadioButtonID*指定的单选按钮，则此方法将引发异常。
+如果它找不到由 *nRadioButtonID* 指定的单选按钮，则此方法将引发异常。
 
 ### <a name="example"></a>示例
 
@@ -1121,12 +1122,12 @@ void SetDefaultRadioButton(int nRadioButtonID);
 void SetDialogWidth(int nWidth = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 中对话框的宽度（以像素为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 参数 *nWidth* 必须大于或等于0。 否则，此方法将引发异常。
 
@@ -1147,7 +1148,7 @@ void SetExpansionArea(
     const CString& strExpandedLabel = _T(""));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strExpandedInformation*<br/>
 中 `CTaskDialog` 当用户单击展开按钮时，在对话框的主体中显示的字符串。
@@ -1158,7 +1159,7 @@ void SetExpansionArea(
 *strExpandedLabel*<br/>
 中 `CTaskDialog` 显示展开区域时展开按钮旁显示的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类的扩展区域 `CTaskDialog` 使您能够向用户提供附加信息。 扩展区域位于的主要部分 `CTaskDialog` ，位于标题和内容字符串的紧下方。
 
@@ -1177,7 +1178,7 @@ void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hFooterIcon*<br/>
 中的新图标 `CTaskDialog` 。
@@ -1185,11 +1186,11 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 *lpszFooterIcon*<br/>
 中的新图标 `CTaskDialog` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 页脚图标显示在 [CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md)的底部。 它可以有关联的页脚文本。 可以用 [CTaskDialog：： SetFooterText](#setfootertext)更改页脚文本。
 
-如果显示了， [ENSURE](diagnostic-services.md#ensure) `CTaskDialog` 或输入参数为 NULL，则此方法将引发异常，并显示 "确保宏"。
+如果显示了， [](diagnostic-services.md#ensure) `CTaskDialog` 或输入参数为 NULL，则此方法将引发异常，并显示 "确保宏"。
 
 `CTaskDialog`只能接受 `HICON` 或 `LPCWSTR` 作为页脚图标。 这是通过在构造函数或 [CTaskDialog：： SetOptions](#setoptions)中设置选项 TDF_USE_HICON_FOOTER 来配置的。 默认情况下， `CTaskDialog` 配置为使用 `LPCWSTR` 作为页脚图标的输入类型。 如果尝试使用不合适的类型设置图标，则此方法将生成异常。
 
@@ -1205,12 +1206,12 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 void SetFooterText(const CString& strFooterText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strFooterText*<br/>
 中页脚的新文本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 页脚图标会显示在底部的页脚文本旁边 `CTaskDialog` 。 可以更改 [CTaskDialog：： SetFooterIcon](#setfootericon)的页脚图标。
 
@@ -1227,7 +1228,7 @@ void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hMainIcon*<br/>
 中新图标。
@@ -1235,9 +1236,9 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 *lpszMainIcon*<br/>
 中新图标。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果显示了， [ENSURE](diagnostic-services.md#ensure) `CTaskDialog` 或输入参数为 NULL，则此方法将引发异常，并显示 "确保宏"。
+如果显示了， [](diagnostic-services.md#ensure) `CTaskDialog` 或输入参数为 NULL，则此方法将引发异常，并显示 "确保宏"。
 
 `CTaskDialog`只能接受 `HICON` 或 `LPCWSTR` 作为主图标。 可以通过在构造函数中或在 [CTaskDialog：： SetOptions](#setoptions) 方法中设置 TDF_USE_HICON_MAIN 选项来对此进行配置。 默认情况下， `CTaskDialog` 配置为使用 `LPCWSTR` 作为主图标的输入类型。 如果尝试使用不合适的类型设置图标，则此方法将生成异常。
 
@@ -1253,12 +1254,12 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 void SetMainInstruction(const CString& strInstructions);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strInstructions*<br/>
 中新的主指令。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类的主要说明 `CTaskDialog` 是用大粗体字体向用户显示的文本。 它位于标题栏下的对话框中。
 
@@ -1274,18 +1275,18 @@ void SetMainInstruction(const CString& strInstructions);
 void SetOptions(int nOptionFlag);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOptionFlag*<br/>
 中要用于的标志集 `CTaskDialog` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法清除的所有当前选项 `CTaskDialog` 。 若要保留当前的选项，必须先用 [CTaskDialog：： GetOptions](#getoptions) 检索它们，并将它们与要设置的选项组合在一起。
 
 下表列出了所有有效选项。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |TDF_ENABLE_HYPERLINKS|启用中的超链接 `CTaskDialog` 。|
 |TDF_USE_HICON_MAIN|将配置 `CTaskDialog` 为对 `HICON` 主图标使用。 替代方法是使用 `LPCWSTR` 。|
@@ -1318,7 +1319,7 @@ void SetProgressBarMarquee(
     int nMarqueeSpeed = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnabled*<br/>
 中若要启用滚动条，则为 TRUE;若要禁用选框栏并将其从中移除，则为 FALSE `CTaskDialog` 。
@@ -1326,13 +1327,13 @@ void SetProgressBarMarquee(
 *nMarqueeSpeed*<br/>
 中一个整数，指示滚动条的速度。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 滚动条显示在类的主文本下方 `CTaskDialog` 。
 
 使用 *nMarqueeSpeed* 设置滚动条的速度;值越大，表示速度越慢。 如果将 *nMarqueeSpeed* 的值设置为0，则会使选框栏在 Windows 的默认速度下移动。
 
-如果*nMarqueeSpeed*小于0，此方法将引发异常，并将 "[确保](diagnostic-services.md#ensure)宏"。
+如果 *nMarqueeSpeed* 小于0，此方法将引发异常，并将 "[确保](diagnostic-services.md#ensure)宏"。
 
 ### <a name="example"></a>示例
 
@@ -1346,14 +1347,14 @@ void SetProgressBarMarquee(
 void SetProgressBarPosition(int nProgressPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nProgressPos*<br/>
 中进度栏的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果*nProgressPos*不在进度栏范围内，此方法将引发异常，并将 "[确保](diagnostic-services.md#ensure)宏"。 可以用 [CTaskDialog：： SetProgressBarRange](#setprogressbarrange)更改进度栏范围。
+如果 *nProgressPos* 不在进度栏范围内，此方法将引发异常，并将 "[确保](diagnostic-services.md#ensure)宏"。 可以用 [CTaskDialog：： SetProgressBarRange](#setprogressbarrange)更改进度栏范围。
 
 ### <a name="example"></a>示例
 
@@ -1369,7 +1370,7 @@ void SetProgressBarRange(
     int nRangeMax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRangeMin*<br/>
 中进度栏的下限。
@@ -1377,13 +1378,13 @@ void SetProgressBarRange(
 *nRangeMax*<br/>
 中进度栏的上限。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-进度栏相对于 *nRangeMin* 和 *nRangeMax*的位置。 例如，如果 *nRangeMin* 为50， *nRangeMax* 为100，则位置为75为进度栏的一半。 使用 [CTaskDialog：： SetProgressBarPosition](#setprogressbarposition) 设置进度栏的位置。
+进度栏相对于 *nRangeMin* 和 *nRangeMax* 的位置。 例如，如果 *nRangeMin* 为50， *nRangeMax* 为100，则位置为75为进度栏的一半。 使用 [CTaskDialog：： SetProgressBarPosition](#setprogressbarposition) 设置进度栏的位置。
 
 若要显示进度栏，必须启用选项 TDF_SHOW_PROGRESS_BAR 并且不得启用 TDF_SHOW_MARQUEE_PROGRESS_BAR。 此方法自动设置 TDF_SHOW_PROGRESS_BAR 并清除 TDF_SHOW_MARQUEE_PROGRESS_BAR。 使用 [CTaskDialog：： SetOptions](#setoptions) 手动更改 [CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md)的此实例的选项。
 
-此方法引发异常，并在*nRangeMin*不小于*nRangeMax*时[确保](diagnostic-services.md#ensure)宏。 如果已 `CTaskDialog` 显示并且具有天棚式进度栏，此方法也会引发异常。
+此方法引发异常，并在 *nRangeMin* 不小于 *nRangeMax* 时 [确保](diagnostic-services.md#ensure)宏。 如果已 `CTaskDialog` 显示并且具有天棚式进度栏，此方法也会引发异常。
 
 ### <a name="example"></a>示例
 
@@ -1397,18 +1398,18 @@ void SetProgressBarRange(
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nState*<br/>
 中进度栏的状态。 有关可能的值，请参阅备注部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-此方法引发异常，如果已[ENSURE](diagnostic-services.md#ensure) `CTaskDialog` 显示并且具有天棚式进度栏，则使用确保宏。
+此方法引发异常，如果已[](diagnostic-services.md#ensure) `CTaskDialog` 显示并且具有天棚式进度栏，则使用确保宏。
 
-下表列出了 *nState*的可能值。 在所有这些情况下，进度栏将用常规颜色填充，直到到达指定的停止位置。 此时，将根据状态更改颜色。
+下表列出了 *nState* 的可能值。 在所有这些情况下，进度栏将用常规颜色填充，直到到达指定的停止位置。 此时，将根据状态更改颜色。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |PBST_NORMAL|填充进度栏后，不 `CTaskDialog` 会更改栏的颜色。 默认情况下，常规颜色为绿色。|
 |PBST_ERROR|填充进度栏后，会将该 `CTaskDialog` 条形的颜色更改为错误颜色。 默认情况下，此值为红色。|
@@ -1430,7 +1431,7 @@ void SetRadioButtonOptions(
     BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRadioButtonID*<br/>
 中单选按钮控件的 ID。
@@ -1438,9 +1439,9 @@ void SetRadioButtonOptions(
 *bEnabled*<br/>
 中若要启用单选按钮，则为 TRUE;若要禁用单选按钮，则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果*nRadioButtonID*不是单选按钮的有效 ID，此方法将引发异常，并将 "[确保](diagnostic-services.md#ensure)宏"。
+如果 *nRadioButtonID* 不是单选按钮的有效 ID，此方法将引发异常，并将 "[确保](diagnostic-services.md#ensure)宏"。
 
 ### <a name="example"></a>示例
 
@@ -1454,7 +1455,7 @@ void SetRadioButtonOptions(
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bChecked*<br/>
 中如果在显示时选中验证复选框，则为 TRUE `CTaskDialog` ;如果为 FALSE，则在显示时，将取消选中验证复选框 `CTaskDialog` 。
@@ -1471,12 +1472,12 @@ void SetVerificationCheckbox(BOOL bChecked);
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strVerificationText*<br/>
 中此方法在 "验证" 复选框旁边显示的文本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果已显示类的此实例，则此方法将引发异常，并显示 " [确保](diagnostic-services.md#ensure) 宏" `CTaskDialog` 。
 
@@ -1492,12 +1493,12 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 void SetWindowTitle(CString& strWindowTitle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strWindowTitle*<br/>
 中的新标题 `CTaskDialog` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -1519,7 +1520,7 @@ static INT_PTR ShowDialog(
     const CString& strFooter = _T(""));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strContent*<br/>
 中要用于的内容的字符串 `CTaskDialog` 。
@@ -1549,11 +1550,11 @@ static INT_PTR ShowDialog(
 
 与用户所做的选择相对应的整数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此静态方法，可以创建类的实例， `CTaskDialog` 而无需 `CTaskDialog` 在代码中显式创建对象。 由于没有 `CTaskDialog` 对象，因此 `CTaskDialog` 如果使用此方法向用户显示，则不能调用的任何其他方法 `CTaskDialog` 。
 
-此方法使用应用程序的资源文件中的数据创建命令按钮控件。 资源文件中的字符串表包含多个具有关联的字符串 Id 的字符串。 此方法为 *nIDCommandControlsFirst* 和 *nCommandControlsLast*之间的字符串表中的每个有效条目添加一个命令按钮控件。 对于这些命令按钮控件，字符串表中的字符串是控件的标题，而字符串 ID 是控件的 ID。
+此方法使用应用程序的资源文件中的数据创建命令按钮控件。 资源文件中的字符串表包含多个具有关联的字符串 Id 的字符串。 此方法为 *nIDCommandControlsFirst* 和 *nCommandControlsLast* 之间的字符串表中的每个有效条目添加一个命令按钮控件。 对于这些命令按钮控件，字符串表中的字符串是控件的标题，而字符串 ID 是控件的 ID。
 
 有关有效选项的列表，请参阅 [CTaskDialog：： SetOptions](#setoptions) 。
 
@@ -1577,7 +1578,7 @@ HRESULT TaskDialogCallback(
     LONG_PTR dwRefData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hwnd*<br/>
 中的结构的句柄 `m_hWnd` `CTaskDialog` 。
@@ -1598,11 +1599,11 @@ HRESULT TaskDialogCallback(
 
 取决于特定的通知代码。 有关详细信息，请参阅备注部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 的默认实现将 `TaskDialogCallback` 处理特定消息，然后调用 [CTaskDialog 类](../../mfc/reference/ctaskdialog-class.md)的相应 On 方法。 例如，为了响应 TDN_BUTTON_CLICKED 消息，将 `TaskDialogCallback` 调用 [CTaskDialog：： OnCommandControlClick](#oncommandcontrolclick)。
 
-*WParam*和*lParam*的值取决于生成的特定消息。 这两个值中的一个或两个值都为空。 下表列出了支持的默认通知以及 *wParam* 和 *lParam* 的值的含义。 如果在派生类中重写此方法，则应为下表中的每条消息实现回调代码。
+*WParam* 和 *lParam* 的值取决于生成的特定消息。 这两个值中的一个或两个值都为空。 下表列出了支持的默认通知以及 *wParam* 和 *lParam* 的值的含义。 如果在派生类中重写此方法，则应为下表中的每条消息实现回调代码。
 
 |通知消息|*wParam* 负值|*lParam* 负值|
 |--------------------------|--------------------|--------------------|
@@ -1618,7 +1619,7 @@ HRESULT TaskDialogCallback(
 |TDN_HELP|未使用。|未使用。|
 |TDN_EXPANDO_BUTTON_CLICKED|如果扩展区域处于折叠状态，则为 0;如果显示展开文本，则为非零值。|未使用。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>

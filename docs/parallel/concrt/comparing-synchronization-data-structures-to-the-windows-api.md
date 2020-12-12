@@ -1,16 +1,17 @@
 ---
+description: 了解更多相关信息：将同步数据结构与 Windows API 进行比较
 title: 将同步数据结构与 Windows API 进行比较
 ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: b889570935b3a94e0cb8717c8af1783e2ce31c42
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: b5c633c61d070e2cd687b6281597694a7533fe0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318411"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>将同步数据结构与 Windows API 进行比较
 
@@ -42,7 +43,7 @@ ms.locfileid: "90040336"
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 为了更好地了解 `event` 类和 Windows 事件之间的差异，请考虑以下示例。 此示例允许计划程序创建最多两个同时运行的任务，然后调用两个使用 `event` 类和 Windows 手动重置事件的相似函数。 每个函数首先创建多个等待共享事件发出信号的任务。 然后，每个函数都会生成运行中的任务，然后发出事件信号。 然后，每个函数将等待已发出信号的事件。
 
@@ -85,6 +86,6 @@ Windows event:
 
 有关任务的详细信息，请参阅 [任务并行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)

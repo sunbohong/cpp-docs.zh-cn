@@ -1,5 +1,6 @@
 ---
-title: 套接字文件类
+description: 了解详细信息： CSocketFile 类
+title: CSocketFile 类
 ms.date: 11/04/2016
 f1_keywords:
 - CSocketFile
@@ -8,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: 83810a05925e5c8302240b61d95c131fdd78b426
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4ca484545e11502a11acf5f27b00ee2df49fc9d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318645"
 ---
-# <a name="csocketfile-class"></a>套接字文件类
+# <a name="csocketfile-class"></a>CSocketFile 类
 
 用于通过 Windows 套接字在网络中发送和接收数据的 `CFile` 对象。
 
@@ -29,28 +30,28 @@ class CSocketFile : public CFile
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[套接字文件：：套接字文件](#csocketfile)|构造 `CSocketFile` 对象。|
+|[CSocketFile：： CSocketFile](#csocketfile)|构造 `CSocketFile` 对象。|
 
 ## <a name="remarks"></a>备注
 
-为此，`CSocketFile`可以将对象附加到`CSocket`对象。 您还可以（通常也可以）将`CSocketFile`对象附加到对象，`CArchive`以简化使用 MFC 序列化发送和接收数据。
+`CSocketFile`出于此目的，可以将对象附加到 `CSocket` 对象。 您还可以将对象附加到对象，并通常执行此操作， `CSocketFile` `CArchive` 以简化使用 MFC 序列化发送和接收数据的操作。
 
-要序列化（发送）数据，请将其插入到存档中，存档调用`CSocketFile`成员函数将数据写入`CSocket`对象。 要从存档中提取（接收）数据。 这将导致存档调用`CSocketFile`成员函数从`CSocket`对象读取数据。
+若要序列化 (发送) 数据，请将其插入存档，这将调用 `CSocketFile` 成员函数将数据写入 `CSocket` 对象。 若要反序列化 (接收) 数据，请从存档中提取。 这将导致存档调用 `CSocketFile` 成员函数以从对象中读取数据 `CSocket` 。
 
 > [!TIP]
-> 除了按照`CSocketFile`此处所述使用外，还可以将其用作独立文件对象，就像可以使用`CFile`它的基类一样。 您还可以使用`CSocketFile`任何基于存档的 MFC 序列化功能。 由于`CSocketFile`不支持所有`CFile`功能，因此某些默认 MFC 序列化功能与`CSocketFile`不兼容。 `CEditView`类尤其如此。 不应尝试`CEditView`使用`CArchive``CSocketFile``CEditView::SerializeRaw`改`CEditView::Serialize`用。 函数`SerializeRaw`期望文件对象具有没有 的`Seek``CSocketFile`函数，例如 。
+> 除了使用 `CSocketFile` 此处所述的之外，你还可以将其用作独立的文件对象，就像使用时一样 `CFile` 。 你还可以将 `CSocketFile` 与任何基于存档的 MFC 序列化函数结合使用。 由于不 `CSocketFile` 支持 `CFile` 的所有功能，因此某些默认 MFC 序列化函数与不兼容 `CSocketFile` 。 这对于类尤其如此 `CEditView` 。 不应尝试 `CEditView` `CArchive` 使用附加到对象的对象对数据进行序列化; 请改用 `CSocketFile` `CEditView::SerializeRaw` `CEditView::Serialize` 。 `SerializeRaw`函数要求文件对象具有不具有的函数（如 `Seek` ） `CSocketFile` 。
 
-使用`CArchive``CSocketFile`和`CSocket`时，可能会遇到`CSocket::Receive`输入循环 （由`PumpMessages(FD_READ)`） 等待请求的字节数的情况。 这是因为 Windows 套接字仅允许每个FD_READ通知一个 recv `CSocketFile` `CSocket`调用，并且允许每个FD_READ多个 recv 调用。 如果在没有要读取的数据时获得FD_READ，应用程序将挂起。 如果您从未获得另一个FD_READ，应用程序将停止通过套接字进行通信。
+当你使用 `CArchive` `CSocketFile` 和时 `CSocket` ，你可能会遇到这样一种情况： `CSocket::Receive` `PumpMessages(FD_READ)`) 等待请求的字节量 (进入循环。 这是因为，每个 FD_READ 通知中的 Windows 套接字只允许一个接收调用，但是 `CSocketFile` `CSocket` 每 FD_READ 允许多个接收调用。 如果在没有要读取的数据的情况下收到 FD_READ，应用程序将挂起。 如果永远不会获得其他 FD_READ，应用程序将停止通过套接字进行通信。
 
-您可以按照如下方式解决此问题。 在`OnReceive`套接字类中，当从`CAsyncSocket::IOCtl(FIONREAD, ...)`套接字读取`Serialize`的预期数据超过一个 TCP 数据包（网络介质的最大传输单元，通常至少 1096 字节）时，在调用消息类的方法之前调用。 如果可用数据的大小小于所需大小，请等待接收所有数据，然后仅启动读取操作。
+可以解决此问题，如下所示。 在 `OnReceive` 套接字类的方法中，在 `CAsyncSocket::IOCtl(FIONREAD, ...)` 调用 `Serialize` 从套接字读取的预期数据时，调用 message 类的方法，而不是网络介质的 (最大传输单位的大小，通常至少为1096字节) 。 如果可用数据的大小小于所需的大小，请等待接收所有数据，然后开始读取操作。
 
-在下面的示例中，`m_dwExpected`是用户希望接收的大约字节数。 假定您在代码的其他位置声明它。
+在下面的示例中， `m_dwExpected` 是用户期望接收的大约字节数。 假设您在代码中的其他位置声明它。
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-有关详细信息，请参阅 MFC 中的[Windows 套接字](../../mfc/windows-sockets-in-mfc.md)[、Windows 套接字：使用带存档的套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)以及[Windows 套接字 2 API](/windows/win32/WinSock/windows-sockets-start-page-2)。
+有关详细信息，请参阅 [MFC 中的 Windows 套接字](../../mfc/windows-sockets-in-mfc.md)、 [windows 套接字：对存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md)和 [Windows 套接字 2 API](/windows/win32/WinSock/windows-sockets-start-page-2)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,9 +63,9 @@ class CSocketFile : public CFile
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxsock.h
+**标头：** afxsock
 
-## <a name="csocketfilecsocketfile"></a><a name="csocketfile"></a>套接字文件：：套接字文件
+## <a name="csocketfilecsocketfile"></a><a name="csocketfile"></a> CSocketFile：： CSocketFile
 
 构造 `CSocketFile` 对象。
 
@@ -74,30 +75,30 @@ explicit CSocketFile(
     BOOL bArchiveCompatible = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSocket*<br/>
-要附加到`CSocketFile`对象的套接字。
+要附加到对象的套接字 `CSocketFile` 。
 
-*b 存档兼容*<br/>
-指定文件对象是否用于`CArchive`对象。 仅当您希望以独立方式使用`CSocketFile`对象时，才像独立`CFile`对象一样，具有某些限制，才传递 FALSE。 此标志更改附加到`CArchive``CSocketFile`对象的对象管理其缓冲区以进行读取的方式。
+*bArchiveCompatible*<br/>
+指定文件对象是否用于 `CArchive` 对象。 仅当你希望以独立 `CSocketFile` 方式使用对象时，才传递 FALSE，因为你需要 `CFile` 具有某些限制。 此标志更改 `CArchive` 附加到对象的对象 `CSocketFile` 管理其缓冲区以便读取的方式。
 
 ### <a name="remarks"></a>备注
 
-当对象超出范围或删除时，对象的析构函数会与套接字对象分离。
+当对象超出范围或被删除时，对象的析构函数会将其自身与套接字对象断开。
 
 > [!NOTE]
-> 还可以`CSocketFile`用作没有`CArchive`对象的（受限）文件。 默认情况下，`CSocketFile`构造函数的*bArchive 兼容*参数为 TRUE。 这指定文件对象用于存档。 要使用没有存档的文件对象，请使用*bArchive 兼容*参数中的 FALSE。
+> `CSocketFile`还可用作不带对象的 (受限) 文件 `CArchive` 。 默认情况下， `CSocketFile` 构造函数的 *bArchiveCompatible* 参数为 TRUE。 这会指定文件对象用于存档。 若要在不使用存档的情况下使用 file 对象，请在 *bArchiveCompatible* 参数中传递 FALSE。
 
-在其"存档兼容"模式下，`CSocketFile`对象提供更好的性能并减少"死锁"的危险。 当发送和接收套接字相互等待或等待公共资源时，将发生死锁。 如果`CArchive`对象的工作方式与`CSocketFile``CFile`对象一起工作，则可能发生此情况。 使用`CFile`时，存档可以假定，如果接收的字节数少于其请求的字节数，则已达到文件结尾。
+对象在其 "存档兼容" 模式下 `CSocketFile` 提供更好的性能，并降低 "死锁" 的风险。 当发送和接收套接字彼此等待，或针对公共资源时，将发生死锁。 如果 `CArchive` 对象与对象的处理方式相同，则可能会发生这种情况 `CSocketFile` `CFile` 。 对于 `CFile` ，存档可以假定，如果它接收的字节数少于所请求的字节数，则已到达文件结尾。
 
-但是`CSocketFile`，对于 ，数据是基于消息的;缓冲区可以包含多条消息，因此接收少于请求的字节数并不意味着文件结束。 在这种情况下，应用程序不会像 在`CFile`中阻止，因为它可以使用 ，它可以继续从缓冲区读取消息，直到缓冲区为空。 [在这种情况下，CArchive：isBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty)函数可用于监视存档缓冲区的状态。
+`CSocketFile`但对于，数据是基于消息的; 缓冲区可包含多条消息，因此，接收的字节数少于所请求的字节数，而不表示文件尾。 在这种情况下，应用程序不会被阻止，这种情况下 `CFile` ，它可以继续从缓冲区读取消息，直到缓冲区为空。 在这种情况下， [CArchive：： IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty) 函数对于监视存档缓冲区的状态很有用。
 
-有关 使用`CSocketFile`的详细信息，请参阅[Windows 套接字：使用带存档](../../mfc/windows-sockets-using-sockets-with-archives.md)和 Windows[套接字的套接字：使用存档的套接字示例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。
+有关使用的详细信息 `CSocketFile` ，请参阅文章 [Windows 套接字：对存档使用套接字](../../mfc/windows-sockets-using-sockets-with-archives.md) 和 [Windows 套接字：使用存档的套接字的示例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CFile 类](../../mfc/reference/cfile-class.md)<br/>
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CAsyncSocket 类](../../mfc/reference/casyncsocket-class.md)<br/>
 [CSocket 类](../../mfc/reference/csocket-class.md)

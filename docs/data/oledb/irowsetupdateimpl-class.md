@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IRowsetUpdateImpl 类
 title: IRowsetUpdateImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: 88ee9257655c96195339ded79f2dd4d3b7c7caf5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: f040ed902b867059636a16bf635dc5c526b8ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317241"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 类
 
@@ -79,7 +80,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
    MapClass>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IRowsetUpdateImpl` 。
@@ -104,33 +105,33 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 
 ### <a name="interface-methods-used-with-irowsetchange"></a>与 IRowsetChange 一起使用的接口方法 () 
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[SetData](#setdata)|设置一个或多个列中的数据值。|
 
 ### <a name="interface-methods-used-with-irowsetupdate"></a>与 IRowsetUpdate 一起使用的接口方法 () 
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetOriginalData](#getoriginaldata)|获取最近传输到数据源或从数据源获取的数据，忽略挂起的更改。|
 |[GetPendingRows](#getpendingrows)|返回具有挂起更改的行的列表。|
 |[GetRowStatus](#getrowstatus)|返回指定行的状态。|
 |[撤消](#undo)|撤消上次提取或更新后对行所做的任何更改。|
-|[Update](#update)|传输自上次提取或更新以来对行所做的任何更改。|
+|[更新](#update)|传输自上次提取或更新以来对行所做的任何更改。|
 
 ### <a name="implementation-methods-callback"></a>实现方法 (回调) 
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[IsUpdateAllowed](#isupdateallowed)|用于在允许更新之前检查安全性、完整性等。|
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_mapCachedData](#mapcacheddata)|包含延迟操作的原始数据。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 你应该首先阅读并了解有关 [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))的文档，因为此处所述的所有内容也都适用。 还应阅读有关设置数据的 *OLE DB 程序员参考* 的第6章。
 
@@ -141,7 +142,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 
 - [创建可更新的提供程序](../../data/oledb/creating-an-updatable-provider.md)
 
-- *OLE DB 程序员参考*的第6章
+- *OLE DB 程序员参考* 的第6章
 
 - 另请参阅 `RUpdateRowset` [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) 示例中的类的使用方式
 
@@ -157,11 +158,11 @@ STDMETHOD (SetData )(HROW hRow,
    void* pSrcData);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetChange：： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetChange：： SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法重写 [IRowsetChangeImpl：： SetData](./irowsetchangeimpl-class.md#setdata) 方法，但包括对原始数据进行缓存，以允许立即或延迟处理操作。
 
@@ -177,9 +178,9 @@ STDMETHOD (GetOriginalData )(HROW hRow,
    void* pData);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IRowsetUpdate：： GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IRowsetUpdate：： GetOriginalData](/previous-versions/windows/desktop/ms709947(v=vs.85)) 。
 
 ## <a name="irowsetupdateimplgetpendingrows"></a><a name="getpendingrows"></a> IRowsetUpdateImpl：： GetPendingRows
 
@@ -195,16 +196,16 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
    DBPENDINGSTATUS** prgPendingStatus);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hReserved*<br/>
-中对应于[IRowsetUpdate：： GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85))中的*hChapter*参数。
+中对应于 [IRowsetUpdate：： GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85))中的 *hChapter* 参数。
 
-有关其他参数，请参阅*OLE DB 程序员参考*中的[IRowsetUpdate：： GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 。
+有关其他参数，请参阅 *OLE DB 程序员参考* 中的 [IRowsetUpdate：： GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-有关详细信息，请参阅*OLE DB 程序员参考*中的[IRowsetUpdate：： GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 。
+有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [IRowsetUpdate：： GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 。
 
 ## <a name="irowsetupdateimplgetrowstatus"></a><a name="getrowstatus"></a> IRowsetUpdateImpl：： GetRowStatus
 
@@ -219,12 +220,12 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
    DBPENDINGSTATUS rgPendingStatus[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hReserved*<br/>
-中对应于[IRowsetUpdate：： GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85))中的*hChapter*参数。
+中对应于 [IRowsetUpdate：： GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85))中的 *hChapter* 参数。
 
-有关其他参数，请参阅*OLE DB 程序员参考*中的[IRowsetUpdate：： GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)) 。
+有关其他参数，请参阅 *OLE DB 程序员参考* 中的 [IRowsetUpdate：： GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85)) 。
 
 ## <a name="irowsetupdateimplundo"></a><a name="undo"></a> IRowsetUpdateImpl：： Undo
 
@@ -241,18 +242,18 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
    DBROWSTATUS** prgRowStatus);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hReserved*<br/>
-中对应于[IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))中的*hChapter*参数。
+中对应于 [IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))中的 *hChapter* 参数。
 
 *pcRowsUndone*<br/>
-弄对应于[IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))中的*pcRows*参数。
+弄对应于 [IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))中的 *pcRows* 参数。
 
 *prgRowsUndone*<br/>
-中对应于[IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))中的*prgRows*参数。
+中对应于 [IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))中的 *prgRows* 参数。
 
-有关其他参数，请参阅*OLE DB 程序员参考*中的[IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) 。
+有关其他参数，请参阅 *OLE DB 程序员参考* 中的 [IRowsetUpdate：： Undo](/previous-versions/windows/desktop/ms719655(v=vs.85)) 。
 
 ## <a name="irowsetupdateimplupdate"></a><a name="update"></a> IRowsetUpdateImpl：： Update
 
@@ -269,16 +270,16 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
    DBROWSTATUS** prgRowStatus);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hReserved*<br/>
-中对应于[IRowsetUpdate：： Update](/previous-versions/windows/desktop/ms719709(v=vs.85))中的*hChapter*参数。
+中对应于 [IRowsetUpdate：： Update](/previous-versions/windows/desktop/ms719709(v=vs.85))中的 *hChapter* 参数。
 
-有关其他参数，请参阅*OLE DB 程序员参考*中的[IRowsetUpdate：： Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) 。
+有关其他参数，请参阅 *OLE DB 程序员参考* 中的 [IRowsetUpdate：： Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-通过调用 [IRowsetChangeImpl：： FlushData](./irowsetchangeimpl-class.md#flushdata)传输更改。 使用者必须调用 [CRowset：： Update](./crowset-class.md#update) 才能使所做的更改生效。 将*prgRowstatus*设置为相应的值，如*OLE DB 程序员参考*中的[行状态](/previous-versions/windows/desktop/ms722752(v=vs.85))中所述。
+通过调用 [IRowsetChangeImpl：： FlushData](./irowsetchangeimpl-class.md#flushdata)传输更改。 使用者必须调用 [CRowset：： Update](./crowset-class.md#update) 才能使所做的更改生效。 将 *prgRowstatus* 设置为相应的值，如 *OLE DB 程序员参考* 中的 [行状态](/previous-versions/windows/desktop/ms722752(v=vs.85))中所述。
 
 ## <a name="irowsetupdateimplisupdateallowed"></a><a name="isupdateallowed"></a> IRowsetUpdateImpl：： IsUpdateAllowed
 
@@ -292,7 +293,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
    DBROWSTATUS* /* [out] */ /* pRowStatus */);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *status*<br/>
 中对行的挂起操作的状态。
@@ -303,7 +304,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 *pRowStatus*<br/>
 弄返回给用户的状态。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果确定应该允许更新，则返回 S_OK;否则，将返回 E_FAIL。 如果允许更新，还需要将 `DBROWSTATUS` [IRowsetUpdateImpl：： update](#update) 中的设置为相应的 [行状态](/previous-versions/windows/desktop/ms722752(v=vs.85))。
 
@@ -321,13 +322,13 @@ CAtlMap<
 m_mapCachedData;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *hRow*<br/>
 数据行的句柄。
 
 *pData*<br/>
-指向要缓存的数据的指针。 数据的类型为 *存储* (用户记录类) 。 请参阅[IRowsetUpdateImpl 类](../../data/oledb/irowsetupdateimpl-class.md)中的*存储*模板参数。
+指向要缓存的数据的指针。 数据的类型为 *存储* (用户记录类) 。 请参阅 [IRowsetUpdateImpl 类](../../data/oledb/irowsetupdateimpl-class.md)中的 *存储* 模板参数。
 
 ## <a name="see-also"></a>请参阅
 

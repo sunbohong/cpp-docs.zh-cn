@@ -1,5 +1,6 @@
 ---
-title: CSync对象类
+description: 了解详细信息： CSyncObject 类
+title: CSyncObject 类
 ms.date: 11/04/2016
 f1_keywords:
 - CSyncObject
@@ -14,14 +15,14 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: ebfbc185cdca2effc96ce2e6d96d05f997c52bf7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5743f632f9a8c482ac15995e8d2429851ba015d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318593"
 ---
-# <a name="csyncobject-class"></a>CSync对象类
+# <a name="csyncobject-class"></a>CSyncObject 类
 
 一个纯虚拟类，提供 Win32 中的同步对象所共有的功能。
 
@@ -35,34 +36,34 @@ class CSyncObject : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CSync对象：CSync对象](#csyncobject)|构造 `CSyncObject` 对象。|
+|[CSyncObject::CSyncObject](#csyncobject)|构造 `CSyncObject` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CSync对象：锁定](#lock)|获得对同步对象的访问权限。|
-|[CSync对象：解锁](#unlock)|获得对同步对象的访问权限。|
+|[CSyncObject：： Lock](#lock)|获得对同步对象的访问权限。|
+|[CSyncObject：： Unlock](#unlock)|获得对同步对象的访问权限。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CSync对象：：操作员HANDLE](#operator_handle)|提供对同步对象的访问。|
+|[CSyncObject：： operator 句柄](#operator_handle)|提供对同步对象的访问。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CSync对象：m_hObject](#m_hobject)|基础同步对象的句柄。|
+|[CSyncObject：： m_hObject](#m_hobject)|基础同步对象的句柄。|
 
 ## <a name="remarks"></a>备注
 
-Microsoft 基础类库提供来自`CSyncObject`的多个类。 这些是[CEvent，CMutex，C](../../mfc/reference/cmutex-class.md)[临界截面](../../mfc/reference/ccriticalsection-class.md)，和[CSemaphore。](../../mfc/reference/csemaphore-class.md) [CEvent](../../mfc/reference/cevent-class.md)
+Microsoft 基础类库提供了多个派生自的类 `CSyncObject` 。 这些是 [CEvent](../../mfc/reference/cevent-class.md)、 [CMutex](../../mfc/reference/cmutex-class.md)、 [CCriticalSection](../../mfc/reference/ccriticalsection-class.md)和 [CSemaphore](../../mfc/reference/csemaphore-class.md)。
 
-有关如何使用同步对象的信息，请参阅"[多线程：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)"一文。
+有关如何使用同步对象的信息，请参阅文章 [多线程处理：如何使用同步类](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -72,44 +73,44 @@ Microsoft 基础类库提供来自`CSyncObject`的多个类。 这些是[CEvent�
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxmt.h
+**标头：** afxmt
 
-## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a>CSync对象：CSync对象
+## <a name="csyncobjectcsyncobject"></a><a name="csyncobject"></a> CSyncObject::CSyncObject
 
-构造具有提供名称的同步对象。
+用提供的名称构造同步对象。
 
 ```
 explicit CSyncObject(LPCTSTR pstrName);
 virtual ~CSyncObject();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrName*<br/>
-对象的名称。 如果为 NULL，*则 pstrName*将为空。
+对象的名称。 如果为 NULL，则 *pstrName* 将为 null。
 
-## <a name="csyncobjectlock"></a><a name="lock"></a>CSync对象：锁定
+## <a name="csyncobjectlock"></a><a name="lock"></a> CSyncObject：： Lock
 
-调用此函数以访问由同步对象控制的资源。
+调用此函数可获取对由同步对象控制的资源的访问权限。
 
 ```
 virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwTimeout*<br/>
-指定等待同步对象可用（信号）的时间量（以毫秒为单位）。 如果 INFINITE，`Lock`将等待对象发出信号后再返回。
+指定等待同步对象)  (可用的时间量（以毫秒为单位）。 如果是无限的， `Lock` 将等待直到对象收到信号后才返回。
 
 ### <a name="return-value"></a>返回值
 
-如果函数成功，则非零;否则 0。
+如果函数成功，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-如果同步对象发出信号，`Lock`将成功返回，并且线程现在拥有该对象。 如果同步对象是非信号（不可用），`Lock`则将等待同步对象发出信号，最多达到*dwTimeOut*参数中指定的毫秒数。 如果同步对象未在指定的时间内发出信号，则`Lock`返回失败。
+如果同步对象处于终止状态， `Lock` 则将成功返回，并且该线程现在拥有该对象。 如果同步对象为非终止 (不可用) ， `Lock` 将等待同步对象在 *dwTimeOut* 参数中指定的毫秒数后终止。 如果同步对象在指定的时间内未发出信号，则 `Lock` 返回失败。
 
-## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a>CSync对象：m_hObject
+## <a name="csyncobjectm_hobject"></a><a name="m_hobject"></a> CSyncObject：： m_hObject
 
 基础同步对象的句柄。
 
@@ -117,9 +118,9 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 HANDLE m_hObject;
 ```
 
-## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a>CSync对象：：操作员HANDLE
+## <a name="csyncobjectoperator-handle"></a><a name="operator_handle"></a> CSyncObject：： operator 句柄
 
-使用此运算符获取`CSyncObject`对象的句柄。
+使用此运算符可获取对象的句柄 `CSyncObject` 。
 
 ```
 operator HANDLE() const;
@@ -127,15 +128,15 @@ operator HANDLE() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则处理同步对象的句柄;否则，NULL。
+如果成功，则为同步对象的句柄;否则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-您可以使用该句柄直接调用 Windows API。
+您可以使用句柄直接调用 Windows Api。
 
-## <a name="csyncobjectunlock"></a><a name="unlock"></a>CSync对象：解锁
+## <a name="csyncobjectunlock"></a><a name="unlock"></a> CSyncObject：： Unlock
 
-`Unlock`无参数的声明是纯虚拟函数，必须由派生自`CSyncObject`的所有类重写。
+`Unlock`不带参数的声明是纯虚函数，并且必须由派生自的所有类重写 `CSyncObject` 。
 
 ```
 virtual BOOL Unlock() = 0; virtual BOOL Unlock(
@@ -143,13 +144,13 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
     LPLONG lpPrevCount = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lCount*<br/>
-默认情况下不使用实现。
+默认实现不使用。
 
 *lpPrevCount*<br/>
-默认情况下不使用实现。
+默认实现不使用。
 
 ### <a name="return-value"></a>返回值
 
@@ -157,9 +158,9 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 ### <a name="remarks"></a>备注
 
-具有两个参数的声明的默认实现始终返回 TRUE。 调用此函数是为了释放对调用线程拥有的同步对象的访问。 第二个声明用于同步对象，如允许对受控资源的多个访问权限的信号量。
+具有两个参数的声明的默认实现始终返回 TRUE。 调用此函数以释放对调用线程拥有的同步对象的访问权限。 第二个声明为同步对象（如允许多个受控制资源访问的信号量）提供。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
-[层次结构图表](../../mfc/hierarchy-chart.md)
+[层次结构图](../../mfc/hierarchy-chart.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：在线程之间传输异常
 title: 在线程之间传输异常
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: c3ba61062421462dea8f4280575be9f00ac3931a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 8b62937c95c755304ab5766185168fad618a53aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561357"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313666"
 ---
 # <a name="transporting-exceptions-between-threads"></a>在线程之间传输异常
 
@@ -38,7 +39,7 @@ namespace std
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *未指定*\
 用于实现 `exception_ptr` 类型的未指定的内部类。
@@ -56,11 +57,11 @@ namespace std
 
 `current_exception` 函数返回引用当前进行中的异常的 `exception_ptr` 对象。 如果没有进行中的异常，该函数将返回未与任何异常关联的 `exception_ptr` 对象。
 
-`make_exception_ptr`函数返回一个 `exception_ptr` 对象，该对象引用由*e*参数指定的异常。
+`make_exception_ptr`函数返回一个 `exception_ptr` 对象，该对象引用由 *e* 参数指定的异常。
 
 ## <a name="remarks"></a>备注
 
-### <a name="scenario"></a>方案
+### <a name="scenario"></a>场景
 
 假设你要创建能伸缩以处理可变工作负荷的应用程序。 为了实现此目标，你要设计一个多线程应用程序，其中初始的主线程会创建所需数量的辅助线程，以完成该工作。 辅助线程可帮助主线程管理资源、平衡负载和提高吞吐量。 通过分发工作，多线程应用程序的表现优于单线程应用程序。
 
@@ -68,7 +69,7 @@ namespace std
 
 ### <a name="solution"></a>解决方案
 
-为处理先前的方案，C++ 标准支持在线程之间传输异常。 如果辅助线程引发异常，则该异常将成为 *当前异常*。 与现实世界一样，当前异常被称为 " *正在*进行"。 当前异常从引发之时到捕获它的异常处理程序返回之时就处于飞行状态。
+为处理先前的方案，C++ 标准支持在线程之间传输异常。 如果辅助线程引发异常，则该异常将成为 *当前异常*。 与现实世界一样，当前异常被称为 " *正在* 进行"。 当前异常从引发之时到捕获它的异常处理程序返回之时就处于飞行状态。
 
 辅助线程可以捕获块中的当前异常 **`catch`** ，然后调用 `current_exception` 函数以将异常存储在 `exception_ptr` 对象中。 `exception_ptr` 对象必须可用于辅助线程和主线程。 例如，`exception_ptr` 对象可以是全局变量，由 mutex 控制对它的访问。 " *传输异常* " 一词表示一个线程中的异常可以转换为另一个线程可以访问的窗体。
 
@@ -86,11 +87,11 @@ namespace std
 
 只有编译器选项和编程语句的以下组合可以传输异常。 其他组合要么不能捕获异常，要么能捕获但不能传输异常。
 
-- **/Eha**编译器选项和 **`catch`** 语句可以传输 SEH 和 c + + 异常。
+- **/Eha** 编译器选项和 **`catch`** 语句可以传输 SEH 和 c + + 异常。
 
-- **/Eha**、 **/ehs**和 **/ehsc**编译器选项以及 **`catch`** 语句可以传输 c + + 异常。
+- **/Eha**、 **/ehs** 和 **/ehsc** 编译器选项以及 **`catch`** 语句可以传输 c + + 异常。
 
-- **/Clr**编译器选项和 **`catch`** 语句可以传输 c + + 异常。 **/Clr**编译器选项隐含了 **/eha**选项的规范。 请注意，编译器不支持传输托管异常。 这是因为派生自 system.exception [类](../standard-library/exception-class.md)的托管异常已经是可通过使用 common 语言运行时的功能在线程之间移动的对象。
+- **/Clr** 编译器选项和 **`catch`** 语句可以传输 c + + 异常。 **/Clr** 编译器选项隐含了 **/eha** 选项的规范。 请注意，编译器不支持传输托管异常。 这是因为派生自 system.exception [类](../standard-library/exception-class.md)的托管异常已经是可通过使用 common 语言运行时的功能在线程之间移动的对象。
 
    > [!IMPORTANT]
    > 建议指定 **/ehsc** 编译器选项和仅捕获 c + + 异常。 如果你使用 **/eha** 或 **/clr** 编译器选项，并将 **`catch`** 具有省略号 *异常声明* 的语句 () ，则会给你带来安全威胁 `catch(...)` 。 您可能打算使用 **`catch`** 语句来捕获几个特定的异常。 但是，`catch(...)` 语句将捕获所有的 C++ 和 SEH 异常，包括致命的意外异常。 如果忽略意外异常或处理不当，恶意代码就可以趁此机会破坏你程序的安全性。
@@ -119,7 +120,7 @@ namespace std
 
 ### <a name="details"></a>详细信息
 
-`current_exception`函数捕获处于飞行中的异常，而不考虑该 **`catch`** 语句是否指定[异常声明](../cpp/try-throw-and-catch-statements-cpp.md)语句。
+`current_exception`函数捕获处于飞行中的异常，而不考虑该 **`catch`** 语句是否指定 [异常声明](../cpp/try-throw-and-catch-statements-cpp.md)语句。
 
 如果未再次引发异常，则将在块的末尾调用当前异常的析构函数 **`catch`** 。 但是，即使调用析构函数中的 `current_exception` 函数，该函数仍返回引用当前异常的 `exception_ptr` 对象。
 
@@ -259,7 +260,7 @@ exception_ptr 1: Caught a  myException exception.
 
 **标头：**\<exception>
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [异常处理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [/EH (异常处理模型) ](../build/reference/eh-exception-handling-model.md)<br/>

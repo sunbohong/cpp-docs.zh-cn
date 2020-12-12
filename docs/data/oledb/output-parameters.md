@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：输出参数
 title: 输出参数
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c52877483d40d7de1a8313eb806769ce92af7337
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209854"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316929"
 ---
 # <a name="output-parameters"></a>输出参数
 
-调用存储过程类似于运行 SQL 命令。 主要区别在于，存储过程使用输出参数（或 "outparameters"）并返回值。
+调用存储过程类似于运行 SQL 命令。 主要区别在于，存储过程使用输出参数 (或 "outparameters" ) 并返回值。
 
-在下面的存储过程中，第一个 "？" 是返回值（phone），第二个 "？" 是输入参数（name）：
+在下面的存储过程中，第一个 "？" 是 (phone) 的返回值，第二个 "？" 是输入参数 (名称) ：
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
@@ -36,7 +37,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-应用程序必须处理从存储过程返回的输出。 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 例如，在使用者检索或取消了存储过程返回的结果集之前，适用于 SQL Server 的 Microsoft OLE DB 提供程序（SQLOLEDB）不会提供输出参数和返回代码。 输出将从服务器的最后一个 TDS 数据包中返回。
+应用程序必须处理从存储过程返回的输出。 在结果处理期间，不同的 OLE DB 访问接口返回输出参数和返回值的时间不同。 例如，在使用者检索或取消了存储过程返回的结果集之前，用于 SQL Server 的 Microsoft OLE DB 提供程序 (SQLOLEDB) 不会提供输出参数和返回代码。 输出将从服务器的最后一个 TDS 数据包中返回。
 
 ## <a name="row-count"></a>行计数
 
@@ -53,8 +54,8 @@ as
 return 0
 ```
 
-`@_rowcount` outparameter 报告从测试表中返回的行数。 但是，此存储过程将行数限制为50。 例如，如果测试中有100行，则行计数将为50（因为此代码仅检索最上面的50行）。 如果表中只有30行，则行计数将为30。 在提取 outparameter 值之前，请务必调用 `Close` 或 `CloseAll` 来填充。
+`@_rowcount`Outparameter 报告从测试表中返回的行数。 但是，此存储过程将行数限制为50。 例如，如果测试中有100行，则行计数将是 50 (因为此代码仅检索) 的最前面的50行。 如果表中只有30行，则行计数将为30。 在 `Close` 提取 outparameter 值之前，请务必调用或 `CloseAll` 来填充它。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用存储过程](../../data/oledb/using-stored-procedures.md)

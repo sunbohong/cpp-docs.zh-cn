@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：命名空间 (c + +) '
 title: 命名空间 (C++)
 ms.date: 08/30/2017
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-ms.openlocfilehash: 234df334a8c385859440175cb9a1aab5b2e26ead
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a655b5e772d16df34e64c5e4808ce68de64f49f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313757"
 ---
 # <a name="namespaces-c"></a>命名空间 (C++)
 
-命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。 命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。 命名空间范围内的所有标识符彼此可见，而没有任何限制。 命名空间之外的标识符可以通过使用每个标识符的完全限定名（例如 `std::vector<std::string> vec;` ，或使用单个标识符的[声明](../cpp/using-declaration.md)（））或对 `using std::string` 命名空间中的所有标识符[使用指令](../cpp/namespaces-cpp.md#using_directives)（）来访问成员 `using namespace std;` 。 头文件中的代码应始终使用完全限定的命名空间名称。
+命名空间是一个声明性区域，为其内部的标识符（类型、函数和变量等的名称）提供一个范围。 命名空间用于将代码组织到逻辑组中，还可用于避免名称冲突，尤其是在基本代码包括多个库时。 命名空间范围内的所有标识符彼此可见，而没有任何限制。 命名空间之外的标识符可以通过对每个标识符使用完全限定名称来访问成员，例如 `std::vector<std::string> vec;` ，或通过对单个标识符 () 使用 [声明](../cpp/using-declaration.md) ， `using std::string` 或对命名空间中的所有标识符使用 [using 指令](../cpp/namespaces-cpp.md#using_directives) (`using namespace std;`) 。 头文件中的代码应始终使用完全限定的命名空间名称。
 
 下面的示例演示了一个命名空间声明和命名空间之外的代码可访问其成员的三种方法。
 
@@ -58,9 +59,9 @@ mgr.DoSomething();
 Func(mgr);
 ```
 
-## <a name="using-directives"></a><a id="using_directives"></a>using 指令
+## <a name="using-directives"></a><a id="using_directives"></a> using 指令
 
-**`using`** 指令允许使用中的所有名称， **`namespace`** 而不使用*命名空间名称*作为显式限定符。 如果要在命名空间中使用多个不同的标识符，请在实现文件（即 * .cpp）中使用 using 指令;如果你只是使用一个或两个标识符，则请考虑使用声明，使这些标识符只引入作用域，而不是命名空间中的所有标识符。 如果本地变量的名称与命名空间变量的名称相同，则隐藏命名空间变量。 使命名空间变量具有与全局变量相同的名称是错误的。
+**`using`** 指令允许使用中的所有名称， **`namespace`** 而不使用 *命名空间名称* 作为显式限定符。 如果要在命名空间中使用多个不同的标识符，请在实现文件中使用 using 指令 (即 * .cpp) ;如果你只是使用一个或两个标识符，则请考虑使用声明，使这些标识符只引入作用域，而不是命名空间中的所有标识符。 如果本地变量的名称与命名空间变量的名称相同，则隐藏命名空间变量。 使命名空间变量具有与全局变量相同的名称是错误的。
 
 > [!NOTE]
 > using 指令可以放置在 .cpp 文件的顶部（在文件范围内），或放置在类或函数定义内。
@@ -119,7 +120,7 @@ namespace V {
 
 ## <a name="the-global-namespace"></a>全局命名空间
 
-如果未在显式命名空间中声明某个标识符，则该标识符属于隐式全局命名空间的一部分。 一般情况下，尝试避免在全局范围内进行声明（入口点[Main 函数](../c-language/main-function-and-program-execution.md)除外，它必须位于全局命名空间中）。 若要显式限定全局标识符，请使用没有名称的范围解析运算符，如 `::SomeFunction(x);` 中所示。 这将使标识符与任何其他命名空间中具有相同名称的任何内容区分开来，并且还有助于使其他人更轻松地了解你的代码。
+如果未在显式命名空间中声明某个标识符，则该标识符属于隐式全局命名空间的一部分。 一般情况下，尝试避免在全局范围内进行声明（入口点 [Main 函数](../c-language/main-function-and-program-execution.md)除外，它必须位于全局命名空间中）。 若要显式限定全局标识符，请使用没有名称的范围解析运算符，如 `::SomeFunction(x);` 中所示。 这将使标识符与任何其他命名空间中具有相同名称的任何内容区分开来，并且还有助于使其他人更轻松地了解你的代码。
 
 ## <a name="the-std-namespace"></a>Std 命名空间
 
@@ -127,7 +128,7 @@ namespace V {
 
 ## <a name="nested-namespaces"></a>嵌套命名空间
 
-可以嵌套命名空间。 普通嵌套命名空间具有对其父级成员的非限定访问权限，但父成员没有对嵌套命名空间的非限定访问权限（除非它被声明为内联），如下面的示例中所示：
+可以嵌套命名空间。 普通的嵌套命名空间具有对其父级成员的非限定访问权限，但父成员不具有对嵌套命名空间 (的非限定访问权限，除非它被声明为内联) ，如以下示例中所示：
 
 ```cpp
 namespace ContosoDataServer
@@ -241,7 +242,7 @@ namespace Contoso
 }
 ```
 
-## <a name="namespace-aliases"></a><a id="namespace_aliases"></a>命名空间别名
+## <a name="namespace-aliases"></a><a id="namespace_aliases"></a> 命名空间别名
 
 命名空间名称必须是唯一的，这意味着通常它们不应太短。 如果名称的长度使代码难以读取，或在不能使用 using 指令的标头文件中键入枯燥，则可以创建一个命名空间别名作为实际名称的缩写。 例如：
 
@@ -262,8 +263,8 @@ namespace
 }
 ```
 
-这称为未命名或匿名命名空间，当你想要使变量声明对其他文件中的代码不可见（即，提供内部链接），而无需创建命名命名空间时，这会很有用。 同一文件中的所有代码都可以看到未命名的命名空间中的标识符，但这些标识符以及命名空间本身在该文件外部（或更准确地说，在翻译单元外部）不可见。
+这称为未命名或匿名命名空间，当你想要使变量声明对其他文件中的代码不可见时，这会很有用， (也就是说，无需创建命名命名空间即可) 提供内部链接。 同一文件中的所有代码都可以看到未命名的命名空间中的标识符，但这些标识符以及命名空间本身在该文件外部（或更准确地说，在翻译单元外部）不可见。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [声明和定义](declarations-and-definitions-cpp.md)

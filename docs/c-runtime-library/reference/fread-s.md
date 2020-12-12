@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fread_s
 title: fread_s
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 340d8188deb34166b1bea58cfc4fe7985cdc5e05
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 311184fc871e138675e2447b3f3ccdf2f7529325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919466"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314069"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -48,7 +49,7 @@ size_t fread_s(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *宽限*<br/>
 数据的存储位置。
@@ -63,21 +64,21 @@ size_t fread_s(
 要读取的项的最大数量。
 
 *流*<br/>
-指向**文件**结构的指针。
+指向 **文件** 结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-**fread_s**返回已读取到缓冲区中的（整）项的数目，如果在达到*count*之前遇到读取错误或文件结尾，则可能小于*计数*。 使用**feof**或**ferror**函数将错误与文件结尾条件区分开来。 如果*大小*或*计数*为0， **fread_s**将返回0，并且缓冲区内容将保持不变。 如果*流*或*缓冲区*是 null 指针， **fread_s**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL** ，并返回0。
+**fread_s** 返回已读取到缓冲区中的 (全部) 项的数量，如果在达到 *count* 之前遇到读取错误或文件结尾，则可能小于 *计数*。 使用 **feof** 或 **ferror** 函数将错误与文件结尾条件区分开来。 如果 *大小* 或 *计数* 为0， **fread_s** 将返回0，并且缓冲区内容将保持不变。 如果 *流* 或 *缓冲区* 是 null 指针， **fread_s** 将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将 **errno** 设置为 **EINVAL** ，并返回0。
 
 有关错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fread_s**函数从输入*流*中读取最多*elementSize*字节*的项，并将其*存储在*缓冲区*中。  与*流*关联的文件指针（如果有）以实际读取的字节数为增量增加。 如果在文本模式下打开给定的流，则会将回车换行符对替换为单换行符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
+**Fread_s** 函数从输入 *流* 中读取最多 *elementSize* 字节 *的项，并将其* 存储在 *缓冲区* 中。  与 *stream* (关联的文件指针（如果有一个) 会按实际读取的字节数增加）。 如果在文本模式下打开给定的流，则会将回车换行符对替换为单换行符。 该替换不会影响文件指针或返回值。 如果发生错误，文件指针位置不确定。 无法确定部分读取项的值。
 
 此函数将锁定其他线程。 如果需要非锁定版本，请使用 **_fread_nolock**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -154,7 +155,7 @@ Contents of buffer after write/read:
         zyxwvutsrqponmlkjihgfe
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

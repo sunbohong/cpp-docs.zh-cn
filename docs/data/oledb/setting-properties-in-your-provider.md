@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息：设置提供程序中的属性
 title: 在提供程序中设置属性
 ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 3717282d284990b1b8038f6954ee971938cf7921
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e85fddfb741fe89869d18531bb172201eaa14753
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316682"
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供程序中设置属性
 
-查找所需属性的属性组和属性 ID。 有关详细信息，请参阅**OLE DB 程序员参考**中的[OLE DB 属性](/previous-versions/windows/desktop/ms722734(v=vs.85))。
+查找所需属性的属性组和属性 ID。 有关详细信息，请参阅 **OLE DB 程序员参考** 中的 [OLE DB 属性](/previous-versions/windows/desktop/ms722734(v=vs.85))。
 
 在向导生成的提供程序代码中，找到与属性组相对应的属性映射。 属性组的名称通常对应于对象的名称。 可以在命令或行集中找到命令和行集属性;数据源和初始化属性可以在数据源对象中找到。
 
@@ -22,7 +23,7 @@ ms.locfileid: "91509486"
 
 - 与属性相对应的属性 ID。 从属性名称的前面 ( "DBPROP_" ) 删除前七个字符。 例如，如果要添加 `DBPROP_MAXROWS` ，请将 `MAXROWS` 作为第一个元素传递。 如果这是自定义属性，请将完整的 GUID 名称传递 (例如 `DBMYPROP_MYPROPERTY`) 。
 
-- **OLE DB 程序员参考**) 的[OLE DB 属性](/previous-versions/windows/desktop/ms722734(v=vs.85))中 (属性的变量类型。 输入 VT_ 类型 (例如，VT_BOOL 或与数据类型相对应的 VT_I2) 。
+- **OLE DB 程序员参考**) 的 [OLE DB 属性](/previous-versions/windows/desktop/ms722734(v=vs.85))中 (属性的变量类型。 输入 VT_ 类型 (例如，VT_BOOL 或与数据类型相对应的 VT_I2) 。
 
 - 指示属性是否可读和可写以及它所属的组的标志。 例如，下面的代码指示属于行集组的读/写属性：
 

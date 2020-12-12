@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：通过架构行集获取元数据
 title: 用架构行集合获取元数据
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 37418cc91913ed840d1601aab9005b476bf29ee0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9692b27de6d949e23b3868b2c55b79b685d6b5fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508991"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317176"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>用架构行集合获取元数据
 
@@ -82,7 +83,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 有关架构行集的引用，OLE DB 模板中提供的 typedef 类 (参阅 [架构行集类和 Typedef 类](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)) 。
 
-有关 OLE DB 架构行集（包括限制列）的详细信息，请参阅**OLE DB 程序员参考**中的[附录 B：架构行集](/previous-versions/windows/desktop/ms712921(v=vs.85))。
+有关 OLE DB 架构行集（包括限制列）的详细信息，请参阅 **OLE DB 程序员参考** 中的 [附录 B：架构行集](/previous-versions/windows/desktop/ms712921(v=vs.85))。
 
 有关如何使用架构行集类的更复杂示例，请参阅 [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) 和 [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) 示例。
 
