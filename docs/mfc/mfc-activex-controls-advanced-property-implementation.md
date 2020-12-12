@@ -1,4 +1,5 @@
 ---
+description: 了解更多： MFC ActiveX 控件：高级属性实现
 title: MFC ActiveX 控件：高级属性实现
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 017959c5809d324af6ab13247fd093a6df280dab
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3cdd4353348d4c233b71dd25d2950adaac2ef06f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502207"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202829"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控件：高级属性实现
 
@@ -24,7 +25,7 @@ ms.locfileid: "91502207"
 
 - [从属性返回错误代码](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> 只读和只写属性
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a> Read-Only 和 Write-Only 属性
 
 "添加属性向导" 提供了一种快速简单的方法来实现控件的只读或只写属性。
 
@@ -42,13 +43,13 @@ ms.locfileid: "91502207"
 
 1. 在 " **属性名称** " 框中，键入属性的名称。
 
-1. 对于“实现类型” ****，请单击“Get/Set 方法” ****。
+1. 对于“实现类型” ，请单击“Get/Set 方法” 。
 
 1. 在 " **属性类型** " 框中，为属性选择适当的类型。
 
 1. 如果需要只读属性，请清除 "设置函数名称"。 如果需要只写属性，请清除 "获取函数名称"。
 
-1. 单击“完成”  。
+1. 单击“完成”。
 
 执行此操作时，添加属性向导将 `SetNotSupported` `GetNotSupported` 在调度映射项中插入函数或，而不是正常的 Set 或 Get 函数。
 
@@ -58,7 +59,7 @@ ms.locfileid: "91502207"
 
 [!code-cpp[NVC_MFC_AxUI#29](codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
-`SetNotSupported`如果 `m_bReadOnlyMode` 数据成员为**TRUE**，则此代码示例会调用。 如果 **为 FALSE**，则将属性设置为新值。
+`SetNotSupported`如果 `m_bReadOnlyMode` 数据成员为 **TRUE**，则此代码示例会调用。 如果 **为 FALSE**，则将属性设置为新值。
 
 ## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a> 从属性返回错误代码
 

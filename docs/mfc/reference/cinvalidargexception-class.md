@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CInvalidArgException 类
 title: CInvalidArgException 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CInvalidArgException [MFC], CInvalidArgException
 ms.assetid: e43d7c67-1157-47f8-817a-804083e8186e
-ms.openlocfilehash: b28b6e84043b85a8117694a67ff5fff13e7c786b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f68642747a81d1c45a8246f4f25abfb8b79c81d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372367"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202790"
 ---
 # <a name="cinvalidargexception-class"></a>CInvalidArgException 类
 
@@ -29,21 +30,21 @@ class CInvalidArgException : public CSimpleException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CInvalidArg例外：CInvalidArg例外](#cinvalidargexception)|构造函数。|
+|[CInvalidArgException::CInvalidArgException](#cinvalidargexception)|构造函数。|
 
 ## <a name="remarks"></a>备注
 
-对象`CInvalidArgException`表示无效的参数异常条件。
+`CInvalidArgException`对象表示无效自变量异常条件。
 
-有关异常处理的详细信息，请参阅["例外类](../../mfc/reference/cexception-class.md)"主题和[异常处理 （MFC）。](../../mfc/exception-handling-in-mfc.md)
+有关异常处理的详细信息，请参阅 [CException 类](../../mfc/reference/cexception-class.md) 主题和 [异常处理 (MFC) ](../../mfc/exception-handling-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[C 例外](../../mfc/reference/cexception-class.md)
+[CException](../../mfc/reference/cexception-class.md)
 
 [CSimpleException](../../mfc/reference/csimpleexception-class.md)
 
@@ -51,9 +52,9 @@ class CInvalidArgException : public CSimpleException
 
 ## <a name="requirements"></a>要求
 
-**标题：** afx.h
+**标头：** afx
 
-## <a name="cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a>CInvalidArg例外：CInvalidArg例外
+## <a name="cinvalidargexceptioncinvalidargexception"></a><a name="cinvalidargexception"></a> CInvalidArgException::CInvalidArgException
 
 构造函数。
 
@@ -63,9 +64,9 @@ CInvalidArgException();
 
 ### <a name="remarks"></a>备注
 
-不要直接使用此构造函数;调用全局函数**AfxThrow 无效点异常**。
+不要直接使用此构造函数;调用全局函数 **AfxThrowInvalidArgException**。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CSimpleException 类](../../mfc/reference/csimpleexception-class.md)

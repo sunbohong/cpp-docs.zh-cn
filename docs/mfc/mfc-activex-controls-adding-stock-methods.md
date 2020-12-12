@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： MFC ActiveX 控件：添加常用方法
 title: MFC ActiveX 控件：添加常用方法
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: b4b01e4fb202cfd7a923d22cb57ce5ec6988e11d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1bd176c81a3c97ad5530a9b1971656e5204fe407
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502294"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202868"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控件：添加常用方法
 
@@ -24,8 +25,8 @@ Stock 方法不同于自定义方法，因为它已由类 [COleControl](referenc
 
 |方法|调度映射项|评论|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK ( ) **|触发 Click 事件。|
-|`Refresh`|**DISP_STOCKPROP_REFRESH ( ) **|立即更新控件的外观。|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK ( )**|触发 Click 事件。|
+|`Refresh`|**DISP_STOCKPROP_REFRESH ( )**|立即更新控件的外观。|
 
 ## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a> 使用添加方法向导添加常用方法
 
@@ -45,7 +46,7 @@ Stock 方法不同于自定义方法，因为它已由类 [COleControl](referenc
 
 1. 在 " **方法名称** " 框中，单击 " **刷新**"。
 
-1. 单击“完成”  。
+1. 单击“完成”。
 
 ## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a> 常用方法的添加方法向导更改
 

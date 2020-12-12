@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：消息
 title: 消息
 ms.date: 11/04/2016
 helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: f36dab679a2e41910b2445a7dab36f5786081563
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dbfec2794cc0dae5a7358b3c2ba39553643fb7c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203089"
 ---
 # <a name="messages"></a>消息
 
@@ -18,6 +19,6 @@ ms.locfileid: "84624285"
 
 [消息类别](message-categories.md)中描述了重要的消息类别。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [框架中的消息和命令](messages-and-commands-in-the-framework.md)

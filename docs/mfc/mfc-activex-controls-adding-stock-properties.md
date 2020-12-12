@@ -1,4 +1,5 @@
 ---
+description: 了解更多： MFC ActiveX 控件：添加常用属性
 title: MFC ActiveX 控件：添加常用属性
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: 27fed55ac8a5fc8b95f81c1bfd2c6edb3da6227d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1bcfc69fe5fd7cdcadcd641fb831c07bde79bbfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202816"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控件：添加常用属性
 
@@ -53,7 +54,7 @@ ms.locfileid: "91502237"
 
 1. 在 " **属性名称** " 框中，单击 " **标题**"。
 
-1. 单击“完成”  。
+1. 单击“完成”。
 
 ## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a> 为常用属性添加属性向导更改
 
@@ -73,7 +74,7 @@ ms.locfileid: "91502237"
 
 `COleControl`类提供九个常用属性。 您可以使用 "添加属性向导" 添加所需的属性。
 
-|属性|调度映射项|如何访问值|
+|Property|调度映射项|如何访问值|
 |--------------|------------------------|-------------------------|
 |`Appearance`|DISP_STOCKPROP_APPEARANCE ( ) |可访问的值 `m_sAppearance` 。|
 |`BackColor`|DISP_STOCKPROP_BACKCOLOR ( ) |可通过调用访问的值 `GetBackColor` 。|

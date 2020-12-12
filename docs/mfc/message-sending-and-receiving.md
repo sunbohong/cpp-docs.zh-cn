@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：发送和接收消息
 title: 消息发送和接收
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - MFC, messages
 - messages [MFC], sending
 ms.assetid: 9ce189cb-b259-4c3b-b6f2-9cfbed18b98b
-ms.openlocfilehash: 4da2fce68c1b6fd3827bc8b5d2a40dea5e5f117c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 3a61346c51ce035f6fd5a53b8c329ef81154b089
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626165"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203206"
 ---
 # <a name="message-sending-and-receiving"></a>消息发送和接收
 
@@ -26,12 +27,12 @@ ms.locfileid: "84626165"
 
 现在考虑过程的接收部分。
 
-消息的初始接收器必须为窗口对象。 窗口消息通常由该窗口对象直接处理。 命令消息（通常源自应用程序的主框架窗口）将路由到[命令传送](command-routing.md)中所述的命令目标链。
+消息的初始接收器必须为窗口对象。 窗口消息通常由该窗口对象直接处理。 命令消息（通常源自应用程序的主框架窗口）将路由到 [命令传送](command-routing.md)中所述的命令目标链。
 
 能够接收消息或命令的每个对象都有其自己的消息映射，此映射会将消息或命令与其处理程序的名称配对。
 
-当命令目标对象接收消息或命令时，它会在其消息映射中搜索匹配项。 如果它找到此消息的处理程序，则会调用该处理程序。 有关如何搜索消息映射的详细信息，请参阅[框架如何搜索消息映射](how-the-framework-searches-message-maps.md)。 再次引用[框架中](user-interface-objects-and-command-ids.md)的图形命令。
+当命令目标对象接收消息或命令时，它会在其消息映射中搜索匹配项。 如果它找到此消息的处理程序，则会调用该处理程序。 有关如何搜索消息映射的详细信息，请参阅 [框架如何搜索消息映射](how-the-framework-searches-message-maps.md)。 再次引用 [框架中](user-interface-objects-and-command-ids.md)的图形命令。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [框架如何调用处理程序](how-the-framework-calls-a-handler.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： MFC ActiveX 控件：添加另一自定义属性页
 title: MFC ActiveX 控件：添加另一自定义属性页
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: a749c5d8d676ac85c3c2085eb041328aff599ab8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3802a32ed86536850e3a15ae9ce4bb53feb1ff1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203024"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控件：添加另一自定义属性页
 
@@ -41,7 +42,7 @@ ms.locfileid: "91508872"
 
 1. 单击 " **新建** " 将资源添加到项目。
 
-1. 选择 "新建" 属性页模板以刷新**资源视图**) 中 (的 "**属性**" 窗口。
+1. 选择 "新建" 属性页模板以刷新 **资源视图**) 中 (的 "**属性**" 窗口。
 
 1. 为 " **ID** " 属性输入新值。 此示例使用 **IDD_PROPPAGE_NEWPAGE**。
 
@@ -53,13 +54,13 @@ ms.locfileid: "91508872"
 
 1. 右键单击 "类视图" 以打开快捷菜单。
 
-1. 在快捷菜单中，依次单击“添加”**** 和“添加类”****。
+1. 在快捷菜单中，依次单击“添加”和“添加类”。
 
    这将打开 " [添加类](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box) " 对话框。
 
 1. 双击 " **MFC 类** " 模板。
 
-1. 在[MFC 类向导](reference/mfc-add-class-wizard.md)的 "**类名称**" 框中，键入新对话框类的名称。 在此示例中 (， `CAddtlPropPage` ) 。
+1. 在 [MFC 类向导](reference/mfc-add-class-wizard.md)的 "**类名称**" 框中，键入新对话框类的名称。 在此示例中 (， `CAddtlPropPage` ) 。
 
 1. 如果要更改文件名，请单击 " **更改**"。 键入实现和标头文件的名称，或接受默认名称。
 
@@ -89,7 +90,7 @@ ms.locfileid: "91508872"
 
 1. 选择字符串表末尾的空行，然后键入字符串的文本或标题，例如 "附加属性页"。
 
-   这会打开一个显示 "**标题**" 和 " **ID** " 框的**字符串 "属性**" 页。 " **标题** " 框包含您键入的字符串。
+   这会打开一个显示 "**标题**" 和 " **ID** " 框的 **字符串 "属性**" 页。 " **标题** " 框包含您键入的字符串。
 
 1. 在 " **id** " 框中，选择或键入字符串的 ID。 完成后，按 Enter。
 

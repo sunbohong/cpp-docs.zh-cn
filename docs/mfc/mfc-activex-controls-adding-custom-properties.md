@@ -1,16 +1,17 @@
 ---
+description: 了解更多： MFC ActiveX 控件：添加自定义属性
 title: MFC ActiveX 控件：添加自定义属性
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: af1ca2d63abcb112bfe1e7d7538dbf70fb817ae5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: efae1c7cedc2202a2a40974393be881466442b84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202933"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控件：添加自定义属性
 
@@ -60,13 +61,13 @@ ms.locfileid: "91503876"
 
 1. 在 " **属性名称** " 框中，键入 *CircleOffset*。
 
-1. 对于“实现类型” ****，请单击“Get/Set 方法” ****。
+1. 对于“实现类型” ，请单击“Get/Set 方法” 。
 
 1. 在 " **属性类型** " 框中，选择 **`short`** 。
 
 1. 为 Get 和 Set 函数键入唯一的名称，或接受默认名称。
 
-1. 单击“完成”  。
+1. 单击“完成”。
 
 ## <a name="add-property-wizard-changes-for-custom-properties"></a><a name="_core_classwizard_changes_for_custom_properties"></a> 为自定义属性添加属性向导更改
 
