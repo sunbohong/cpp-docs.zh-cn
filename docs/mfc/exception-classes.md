@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：异常类
 title: 异常类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-ms.openlocfilehash: 907b34b12ffdaa70c4377a1012a66662fbba12d0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c07bd93a0abf95dc7d5f46c710faaad2dcad08c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290760"
 ---
 # <a name="exception-classes"></a>异常类
 
-类库提供基于类 `CException` 的异常处理机制。 应用程序框架将在其代码中使用异常；你也可在你自己的代码中使用异常。 有关详细信息，请参阅文章[异常](exception-handling-in-mfc.md)。 您可从 `CException` 派生自己的异常类型。
+类库提供基于类 `CException` 的异常处理机制。 应用程序框架将在其代码中使用异常；你也可在你自己的代码中使用异常。 有关详细信息，请参阅文章 [异常](exception-handling-in-mfc.md)。 您可从 `CException` 派生自己的异常类型。
 
 MFC 提供了您可从其派生自己的异常的异常类以及其支持的所有异常的异常类。
 
@@ -54,6 +55,6 @@ Windows 资源加载失败导致的异常。
 [CUserException](reference/cuserexception-class.md)<br/>
 用于停止用户启动的操作的异常。 通常，用户在此异常引发前已收到有关问题的通知。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

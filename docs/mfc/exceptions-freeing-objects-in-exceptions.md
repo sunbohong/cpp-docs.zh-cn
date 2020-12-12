@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：异常：释放异常中的对象
 title: 异常：释放异常中的对象
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: a02b71609ec19d6106153bf67e9d56b860cfdfff
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 47b10f3ecb96875ceee986eadda4595d2afbb77e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290552"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>异常：释放异常中的对象
 
@@ -40,15 +41,15 @@ ms.locfileid: "87217930"
 
 如上所述， `myPerson` 如果引发异常，则不会将其删除 `SomeFunc` 。 执行会直接跳转到下一个外部异常处理程序，绕过常规函数退出和删除该对象的代码。 当异常离开函数时，指向对象的指针将超出范围，并且只要程序正在运行，就永远不会恢复对象占用的内存。 这是内存泄漏;它将通过使用内存诊断来检测。
 
-## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>在本地处理异常
+## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a> 在本地处理异常
 
-**Try/catch**模式提供了一种防御性编程方法，可避免内存泄漏，并确保对象在发生异常时被销毁。 例如，本文前面所示的示例可以重写，如下所示：
+**Try/catch** 模式提供了一种防御性编程方法，可避免内存泄漏，并确保对象在发生异常时被销毁。 例如，本文前面所示的示例可以重写，如下所示：
 
 [!code-cpp[NVC_MFCExceptions#15](codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]
 
-此新示例将设置一个异常处理程序来捕获异常并在本地处理它。 然后，它会正常退出函数并销毁对象。 此示例的一个重要方面是，使用**try/catch**块建立捕获异常的上下文。 如果没有本地异常框架，函数将永远不会知道已引发异常，并且不会有机会正常退出并销毁对象。
+此新示例将设置一个异常处理程序来捕获异常并在本地处理它。 然后，它会正常退出函数并销毁对象。 此示例的一个重要方面是，使用 **try/catch** 块建立捕获异常的上下文。 如果没有本地异常框架，函数将永远不会知道已引发异常，并且不会有机会正常退出并销毁对象。
 
-## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>销毁对象后引发异常
+## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a> 销毁对象后引发异常
 
 处理异常的另一种方法是将其传递到下一个外部异常处理上下文。 在 **`catch`** 块中，你可以对本地分配的对象执行一些清理，然后在上引发异常以便进一步处理。
 
@@ -60,10 +61,10 @@ ms.locfileid: "87217930"
 
 异常机制自动释放框架对象;还将调用 frame 对象的析构函数。
 
-如果调用可能引发异常的函数，则可以使用**try/catch**块来确保捕获异常，并有可能销毁已创建的任何对象。 特别要注意的是，许多 MFC 函数可能会引发异常。
+如果调用可能引发异常的函数，则可以使用 **try/catch** 块来确保捕获异常，并有可能销毁已创建的任何对象。 特别要注意的是，许多 MFC 函数可能会引发异常。
 
-有关详细信息，请参阅[异常：捕获和删除异常](exceptions-catching-and-deleting-exceptions.md)。
+有关详细信息，请参阅 [异常：捕获和删除异常](exceptions-catching-and-deleting-exceptions.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [异常处理](exception-handling-in-mfc.md)

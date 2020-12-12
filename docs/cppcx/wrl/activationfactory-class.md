@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ActivationFactory 类
 title: ActivationFactory 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ActivationFactory::QueryInterface method
 - Microsoft::WRL::ActivationFactory::Release method
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-ms.openlocfilehash: 0655caeb3f49a18e9c57c78f0008901aaaedda4a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7204a3c2f981947a03efba648dd91b69d582fee1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287835"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory 类
 
@@ -54,7 +55,7 @@ class ActivationFactory :
     >;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *I0*<br/>
 第零个接口。
@@ -67,13 +68,13 @@ class ActivationFactory :
 
 ## <a name="remarks"></a>备注
 
-`ActivationFactory`提供了接口的`IActivationFactory`注册方法和基本功能。 `ActivationFactory`还使您能够提供自定义工厂实现。
+`ActivationFactory` 为接口提供注册方法和基本功能 `IActivationFactory` 。 `ActivationFactory` 还使您能够提供自定义工厂实现。
 
-以下代码片段象征性地说明了如何使用激活工厂。
+下面的代码片段符号说明了如何使用 ActivationFactory。
 
 [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../codesnippet/CPP/activationfactory-class_1.cpp)]
 
-以下代码片段演示如何使用[实现](implements-structure.md)结构指定三个以上接口 ID。
+下面的代码段演示如何使用 [实现](implements-structure.md) 结构来指定三个以上的接口 id。
 
 `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`
 
@@ -81,20 +82,20 @@ class ActivationFactory :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                                       | 说明
+“属性”                                                       | 描述
 ---------------------------------------------------------- | ------------------------------------------
-[激活工厂：：激活工厂](#activationfactory) | 初始化 `ActivationFactory` 类。
+[ActivationFactory：： ActivationFactory](#activationfactory) | 初始化 `ActivationFactory` 类。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                                           | 说明
+“属性”                                                           | 描述
 -------------------------------------------------------------- | --------------------------------------------------------------------------------------------
-[激活工厂：：添加参考](#addref)                           | 增加当前`ActivationFactory`对象的引用计数。
-[激活工厂：：获取 Iid](#getiids)                         | 检索已实现接口 ID 的数组。
-[激活工厂：：获取运行时类名称](#getruntimeclassname) | 获取当前`ActivationFactory`实例化对象的运行时类名称。
-[激活工厂：获取信任级别](#gettrustlevel)             | 获取当前`ActivationFactory`实例化的对象的信任级别。
-[激活工厂：：查询接口](#queryinterface)           | 检索指向指定接口的指针。
-[激活工厂：：发布](#release)                         | 取消当前`ActivationFactory`对象的引用计数。
+[ActivationFactory：： AddRef](#addref)                           | 递增当前对象的引用计数 `ActivationFactory` 。
+[ActivationFactory：： GetIids](#getiids)                         | 检索已实现接口 ID 的数组。
+[ActivationFactory：： GetRuntimeClassName](#getruntimeclassname) | 获取当前实例化的对象的运行时类名称 `ActivationFactory` 。
+[ActivationFactory：： GetTrustLevel](#gettrustlevel)             | 获取当前实例化的对象的信任级别 `ActivationFactory` 。
+[ActivationFactory：： QueryInterface](#queryinterface)           | 检索指向指定接口的指针。
+[ActivationFactory：： Release](#release)                         | 递减当前对象的引用计数 `ActivationFactory` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -120,11 +121,11 @@ class ActivationFactory :
 
 ## <a name="requirements"></a>要求
 
-**标题：** 模块.h
+**标头：** 模块。h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="activationfactoryactivationfactory"></a><a name="activationfactory"></a>激活工厂：：激活工厂
+## <a name="activationfactoryactivationfactory"></a><a name="activationfactory"></a> ActivationFactory：： ActivationFactory
 
 初始化 `ActivationFactory` 类。
 
@@ -132,9 +133,9 @@ class ActivationFactory :
 ActivationFactory();
 ```
 
-## <a name="activationfactoryaddref"></a><a name="addref"></a>激活工厂：：添加参考
+## <a name="activationfactoryaddref"></a><a name="addref"></a> ActivationFactory：： AddRef
 
-增加当前`ActivationFactory`对象的引用计数。
+递增当前对象的引用计数 `ActivationFactory` 。
 
 ```cpp
 STDMETHOD_(
@@ -147,7 +148,7 @@ STDMETHOD_(
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="activationfactorygetiids"></a><a name="getiids"></a>激活工厂：：获取 Iid
+## <a name="activationfactorygetiids"></a><a name="getiids"></a> ActivationFactory：： GetIids
 
 检索已实现接口 ID 的数组。
 
@@ -157,21 +158,21 @@ STDMETHOD(
 )(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iidCount*<br/>
-此操作完成后 *，iids*数组中的 Interace ID 数。
+此操作完成后， *iid* 数组中的界面 id 的数量。
 
-*伊德*<br/>
+*iid*<br/>
 此操作完成后，已实现接口 ID 的数组。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。 E_OUTOFMEMORY 是可能的失败 HRESULT。
 
-## <a name="activationfactorygetruntimeclassname"></a><a name="getruntimeclassname"></a>激活工厂：：获取运行时类名称
+## <a name="activationfactorygetruntimeclassname"></a><a name="getruntimeclassname"></a> ActivationFactory：： GetRuntimeClassName
 
-获取当前`ActivationFactory`实例化对象的运行时类名称。
+获取当前实例化的对象的运行时类名称 `ActivationFactory` 。
 
 ```cpp
 STDMETHOD(
@@ -179,18 +180,18 @@ STDMETHOD(
 )(_Out_ HSTRING* runtimeName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*运行时名称*<br/>
-此操作完成后，包含当前`ActivationFactory`实例化对象的运行时类名称的字符串的句柄。
+*runtimeName*<br/>
+此操作完成后，为字符串的句柄，其中包含当前实例化的对象的运行时类名称 `ActivationFactory` 。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="activationfactorygettrustlevel"></a><a name="gettrustlevel"></a>激活工厂：获取信任级别
+## <a name="activationfactorygettrustlevel"></a><a name="gettrustlevel"></a> ActivationFactory：： GetTrustLevel
 
-获取当前`ActivationFactory`实例化的对象的信任级别。
+获取当前实例化的对象的信任级别 `ActivationFactory` 。
 
 ```cpp
 STDMETHOD(
@@ -198,16 +199,16 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*信任吕尔*<br/>
-此操作完成后，`ActivationFactory`实例化的运行时类的信任级别。
+*trustLvl*<br/>
+此操作完成时，实例化的运行时类的信任级别 `ActivationFactory` 。
 
 ### <a name="return-value"></a>返回值
 
-S_OK如果成功;否则，将发出断言错误，并将*信任 Lvl*设置为`FullTrust`。
+如果成功，则为 S_OK;否则，将发出断言错误，并将 *trustLvl* 设置为 `FullTrust` 。
 
-## <a name="activationfactoryqueryinterface"></a><a name="queryinterface"></a>激活工厂：：查询接口
+## <a name="activationfactoryqueryinterface"></a><a name="queryinterface"></a> ActivationFactory：： QueryInterface
 
 检索指向指定接口的指针。
 
@@ -217,21 +218,21 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *riid*<br/>
 接口 ID。
 
 *ppvObject*<br/>
-此操作完成后，指向参数*riid*指定的接口的指针。
+完成此操作后，指向参数 *riid* 指定的接口的指针。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="activationfactoryrelease"></a><a name="release"></a>激活工厂：：发布
+## <a name="activationfactoryrelease"></a><a name="release"></a> ActivationFactory：： Release
 
-取消当前`ActivationFactory`对象的引用计数。
+递减当前对象的引用计数 `ActivationFactory` 。
 
 ```cpp
 STDMETHOD_(

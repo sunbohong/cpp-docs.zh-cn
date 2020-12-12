@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CUtlProps 类
 title: CUtlProps 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 1e9e636824ff67ee93587637c0e098e625229c06
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 535da4b2dd7d3214633a1e76c04be1e4627b965a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509090"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287744"
 ---
 # <a name="cutlprops-class"></a>CUtlProps 类
 
@@ -47,7 +48,7 @@ template < class T >
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 包含的类 `BEGIN_PROPSET_MAP` 。
@@ -60,7 +61,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetPropValue](#getpropvalue)|从属性集中获取属性。|
 |[IsValidValue](#isvalidvalue)|用于在设置属性之前验证值。|
@@ -68,7 +69,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[OnPropertyChanged](#onpropertychanged)|设置属性以处理链接属性后调用。|
 |[SetPropValue](#setpropvalue)|设置属性集中的属性。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类的大部分是实现详细信息。
 
@@ -88,7 +89,7 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
    VARIANT* pvValue);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pguidPropSet*<br/>
 中PropSet 的 GUID。
@@ -114,7 +115,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
    DBPROP* pDBProp);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *iCurSet*<br/>
 属性集数组中的索引;如果仅有一个属性集，则为零。
@@ -126,7 +127,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 标准的 HRESULT。 默认的返回值为 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果要在要用于设置属性的值上运行任何验证例程，则应重写此函数。 例如，可以根据密码表验证 DBPROP_AUTH_PASSWORD 来确定有效值。
 
@@ -140,12 +141,12 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *riid*<br/>
-中请求的接口的 IID。 有关更多详细信息，请参阅*riid* `ICommand::Execute` *MDAC SDK*) 中*OLE DB 程序员参考* (中的 riid 参数说明。
+中请求的接口的 IID。 有关更多详细信息，请参阅 `ICommand::Execute` *MDAC SDK*) 中 *OLE DB 程序员参考* (中的 riid 参数说明。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `OnInterfaceRequested` 当使用者在某个对象创建 (接口（如 `IDBCreateSession` 、 `IDBCreateCommand` 、 `IOpenRowset` 或) ）上调用方法时，处理对可选接口的使用者请求 `ICommand` 。 它为请求的接口设置相应的 OLE DB 属性。 例如，如果使用者请求，则会 `IID_IRowsetLocate` `OnInterfaceRequested` 设置 `DBPROP_IRowsetLocate` 接口。 这样做会在创建行集期间保持正确的状态。
 
@@ -176,7 +177,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
    DBPROP* pDBProp);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *iCurSet*<br/>
 属性集数组中的索引;如果仅有一个属性集，则为零。
@@ -188,7 +189,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 标准的 HRESULT。 默认的返回值为 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果要处理链接的属性（如书签或更新的值依赖于其他属性的值），则应重写此函数。
 
@@ -210,7 +211,7 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
    VARIANT* pvValue);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pguidPropSet*<br/>
 中PropSet 的 GUID。

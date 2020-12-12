@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _getdrive
 title: _getdrive
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9a8e9928504ad0320d5e96d21fdcafd2ff5f6ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913771"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289161"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -52,15 +53,15 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>返回值
 
-返回当前（默认）驱动器（1=A，2=B，依此类推）。 如果返回值为零，则表示当前路径不是以字母驱动器名称开头，如 UNC 路径。 或，这意味着内部缓冲区分配失败。 如果内部分配失败， `errno`则将设置为 ENOMEM。
+返回当前（默认）驱动器（1=A，2=B，依此类推）。 如果返回值为零，则表示当前路径不是以字母驱动器名称开头，如 UNC 路径。 或，这意味着内部缓冲区分配失败。 如果内部分配失败， `errno` 则将设置为 ENOMEM。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
@@ -116,9 +117,9 @@ F: (Current directory is F:\)
 G: (Current directory is G:\)
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)<br/>
+[目录控件](../../c-runtime-library/directory-control.md)<br/>
 [_chdrive](chdrive.md)<br/>
 [_getcwd、_wgetcwd](getcwd-wgetcwd.md)<br/>
 [_getdcwd、_wgetdcwd](getdcwd-wgetdcwd.md)<br/>

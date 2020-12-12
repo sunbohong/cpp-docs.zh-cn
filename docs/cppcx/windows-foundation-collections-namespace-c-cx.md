@@ -1,4 +1,5 @@
 ---
+description: '详细了解： Windows：： Foundation：：集合命名空间 (c + +/CX) '
 title: Windows::Foundation::Collections 命名空间 (C++/CX)
 ms.date: 12/30/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
-ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74086268215c83f1cf4bd9bca8b60923bfcc6725
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288004"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 命名空间 (C++/CX)
 
-C++/CX 补充 Windows::Foundation::Collections 命名空间进行简化使用 Vector、 VectorView、 图和 MapView 集合类的函数。
+C + +/CX 对 Windows：： Foundation：： collection 命名空间进行了补充，其中包含可简化 Vector、VectorView、Map 和 MapView 集合类的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -39,6 +40,6 @@ namespace Windows {
 
 ### <a name="requirements"></a>要求
 
-**标头：** collection.h
+**标头：** 集合。h
 
 **命名空间：** Windows::Foundation::Collections

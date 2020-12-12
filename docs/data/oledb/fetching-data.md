@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：提取数据
 title: 提取数据
 ms.date: 10/19/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fetching
 - OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-ms.openlocfilehash: 919eb059f5d3f29d491bf7a6598b0c77163bd783
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4d98a3d804688447f8f7073d20371a098b2bfa11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287523"
 ---
 # <a name="fetching-data"></a>提取数据
 
@@ -20,9 +21,9 @@ ms.locfileid: "87184639"
 
 ## <a name="to-fetch-data"></a>提取数据
 
-1. 使用适当的 "**打开**" 命令打开行集。
+1. 使用适当的 " **打开** " 命令打开行集。
 
-1. 如果你使用 `CManualAccessor` 的是，请绑定输出列（如果尚未这样做）。 下面的示例摘自[DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)示例。 若要绑定列，请调用 `GetColumnInfo` ，然后使用绑定创建访问器，如以下示例中所示：
+1. 如果你使用 `CManualAccessor` 的是，请绑定输出列（如果尚未这样做）。 下面的示例摘自 [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer) 示例。 若要绑定列，请调用 `GetColumnInfo` ，然后使用绑定创建访问器，如以下示例中所示：
 
     ```cpp
     // From the DBViewer Sample CDBTreeView::OnQueryEdit
@@ -51,7 +52,7 @@ ms.locfileid: "87184639"
 
 1. 在 **`while`** 循环中，可以根据访问器类型提取数据。
 
-   - 如果使用[CAccessor](../../data/oledb/caccessor-class.md)类，则应具有包含数据成员的用户记录。 您可以使用这些数据成员访问数据，如以下示例中所示：
+   - 如果使用 [CAccessor](../../data/oledb/caccessor-class.md) 类，则应具有包含数据成员的用户记录。 您可以使用这些数据成员访问数据，如以下示例中所示：
 
         ```cpp
         while (rs.MoveNext() == S_OK)
@@ -90,6 +91,6 @@ ms.locfileid: "87184639"
         }
         ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 OLE DB 使用者模板](../../data/oledb/working-with-ole-db-consumer-templates.md)

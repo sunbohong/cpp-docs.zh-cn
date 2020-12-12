@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CStreamRowset 类
 title: CStreamRowset 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 304dfe0e026a9fbba899c1ef17c06cf1baf1529b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 278f85b36a2b4ec1c3d6b3c2bd5ecc5b47c5ef73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841046"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287809"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 类
 
@@ -44,7 +45,7 @@ template <class TAccessor = CAccessorBase>
 class CStreamRowset
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 一个访问器类。
@@ -57,12 +58,12 @@ class CStreamRowset
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[CStreamRowset](#cstreamrowset)|构造函数。 实例化并初始化 `CStreamRowset` 对象。|
 |[关闭](#close)|释放类中的 [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85)) 接口指针。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CStreamRowset`在 `CCommand` 或声明中使用 `CTable` ，例如：
 
@@ -101,7 +102,7 @@ CStreamRowset();
 void Close();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 详细了解： c + + 标准库中的线程安全
 title: C++ 标准库中的线程安全
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-ms.openlocfilehash: 4ac029a119a77fa87c6cd004fece9c4e6b382026
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ff5d8960b2fc8a79acbfb4fc1d0be508865714e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289629"
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 标准库中的线程安全
 
-以下线程安全规则应用到标准 C++ 库中的所有类，这也包括 `shared_ptr`，如下所述。  有时提供更强的保证（例如，如下所述的标准 iostream 对象和专门用于多线程的类型，如 [\<atomic>](../standard-library/atomic.md) 中的类型）。
+以下线程安全规则应用到标准 C++ 库中的所有类，这也包括 `shared_ptr`，如下所述。  有时提供更强的保证（例如，如下所述的标准 iostream 对象和专门用于多线程的类型，例如中的那些类型） [\<atomic>](../standard-library/atomic.md) 。
 
 从多个线程读取某个对象时，该对象是线程安全的。 例如，给定对象 A，可安全地同时从线程 1 和线程 2 读取 A。
 
@@ -23,7 +24,7 @@ ms.locfileid: "68460066"
 
 即使另一个线程正在读取或写入同一类型的其他实例，也可以安全地读取和写入该类型的某个实例。 例如，给定同一类型的对象 A 和 B，在线程 1 中写入 A 的同时可以安全地在线程 2 中读取 B。
 
-## <a name="sharedptr"></a>shared_ptr
+## <a name="shared_ptr"></a>shared_ptr
 
 即使对象是共享所有权的副本，多个线程也可以同时读取和写入不同的 [shared_ptr](../standard-library/shared-ptr-class.md) 对象。
 
@@ -36,4 +37,4 @@ ms.locfileid: "68460066"
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)

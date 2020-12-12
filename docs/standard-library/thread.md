@@ -1,15 +1,16 @@
 ---
+description: 了解有关以下方面的详细信息： &lt; thread&gt;
 title: '&lt;thread&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-ms.openlocfilehash: 251a423829a048e3d67b0bcf83107f52c3fdafca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3387d96772f1ed3322ce79b744e17b6bf494140d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289616"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -24,7 +25,7 @@ ms.locfileid: "87232841"
 ## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 在使用 **/clr**编译的代码中，此标头被阻止。
+> 在使用 **/clr** 编译的代码中，此标头被阻止。
 
 `__STDCPP_THREADS__`此宏定义为一个非零值，指示此标头支持线程。
 
@@ -32,19 +33,19 @@ ms.locfileid: "87232841"
 
 ### <a name="public-classes"></a>公共类
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[thread 类](../standard-library/thread-class.md)|定义一个对象，该对象用于观察和管理应用程序中的执行线程。|
 
 ### <a name="public-structures"></a>公共结构
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[hash 结构（C++ 标准库）](../standard-library/hash-structure-stl.md)|定义一个成员函数，该函数返回由唯一确定的值 `thread::id` 。 成员函数定义的[哈希](../standard-library/hash-class.md)函数适用于将类型的值映射 `thread::id` 到索引值的分布。|
+|[hash 结构（C++ 标准库）](../standard-library/hash-structure-stl.md)|定义一个成员函数，该函数返回由唯一确定的值 `thread::id` 。 成员函数定义的 [哈希](../standard-library/hash-class.md) 函数适用于将类型的值映射 `thread::id` 到索引值的分布。|
 
 ### <a name="public-functions"></a>公共函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|唯一标识当前的执行线程。|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|阻止调用线程。|
@@ -54,7 +55,7 @@ ms.locfileid: "87232841"
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[运算符>= 运算符](../standard-library/thread-operators.md#op_gt_eq)|确定一个 `thread::id` 对象是否大于或等于另一个。|
 |[运算符> 运算符](../standard-library/thread-operators.md#op_gt)|确定一个 `thread::id` 对象是否大于另一个。|
@@ -64,7 +65,7 @@ ms.locfileid: "87232841"
 |[operator = = 运算符](../standard-library/thread-operators.md#op_eq_eq)|比较两个 `thread::id` 对象是否相等。|
 |[运算符<< 运算符](../standard-library/thread-operators.md#op_lt_lt)|将 `thread::id` 对象的文本表示形式插入流。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

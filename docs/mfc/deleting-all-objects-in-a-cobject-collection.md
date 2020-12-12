@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：删除 CObject 集合中的所有对象
 title: 删除 CObject 集合中的所有对象
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,18 +11,18 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 5aac324b6af50db019c2a4b55b26a612cc081894
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 674253d06925bdf29e5606692a73911878f6c393
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291007"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>删除 CObject 集合中的所有对象
 
 本文介绍如何删除集合中的所有对象（而不删除集合对象本身）。
 
-若要删除 `CObject` （或派生自的对象）集合中的所有对象 `CObject` ，请使用[访问集合的所有成员](accessing-all-members-of-a-collection.md)一文中所述的一种迭代技术，依次删除每个对象。
+若要删除 `CObject` (或派生自) 的对象集合中的所有对象 `CObject` ，请使用 [访问集合的所有成员](accessing-all-members-of-a-collection.md) 一文中所述的一种迭代技术，依次删除每个对象。
 
 > [!CAUTION]
 > 集合中的对象可以共享。 也就是说，集合将保留指向对象的指针，但程序的其他部分也可能具有指向同一对象的指针。 在使用共享对象删除所有部分之前，您必须小心以免删除此对象。
@@ -34,7 +35,7 @@ ms.locfileid: "87225067"
 
 - [映射](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>删除指向 CObject 的指针列表中的所有对象
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a> 删除指向 CObject 的指针列表中的所有对象
 
 1. 使用 `GetHeadPosition` 和 `GetNext` 循环访问该列表。
 
@@ -50,7 +51,7 @@ ms.locfileid: "87225067"
 
 请注意删除元素的对象和删除元素本身之间的区别。 删除列表中的元素将仅删除列表对对象的引用。 对象仍存在于内存中。 删除对象后，它将停止存在，并且将回收其内存。 因此，在删除元素的对象后立即删除元素很重要，这样一来列表才不会尝试访问不再存在的对象。
 
-#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>删除数组中的所有元素
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a> 删除数组中的所有元素
 
 1. 使用 `GetSize` 和整数索引值循环访问数组。
 
@@ -64,7 +65,7 @@ ms.locfileid: "87225067"
 
 与上述列表示例一样，您可调用 `RemoveAll` 删除数组中的所有元素或调用 `RemoveAt` 删除独立元素。
 
-#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>删除映射中的所有元素
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a> 删除映射中的所有元素
 
 1. 使用 `GetStartPosition` 和 `GetNextAssoc` 循环访问数组。
 
@@ -78,6 +79,6 @@ ms.locfileid: "87225067"
 
 您可以调用 `RemoveAll` 删除映射中的所有元素或调用 `RemoveKey` 删除具有指定键的独立元素。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [访问集合的所有成员](accessing-all-members-of-a-collection.md)

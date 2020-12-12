@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _fgetc_nolock、_fgetwc_nolock
 title: _fgetc_nolock、_fgetwc_nolock
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-ms.openlocfilehash: 2744dc17c79fc1e3e568dd3b7a62602b75603be0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbab4186b3f6edfe95fde8319d3bace5c5d73ac6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912772"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289213"
 ---
 # <a name="_fgetc_nolock-_fgetwc_nolock"></a>_fgetc_nolock、_fgetwc_nolock
 
@@ -63,10 +64,10 @@ wint_t _fgetwc_nolock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *流*<br/>
-指向**文件**结构的指针。
+指向 **文件** 结构的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -74,9 +75,9 @@ wint_t _fgetwc_nolock(
 
 ## <a name="remarks"></a>备注
 
-**_fgetc_nolock**和 **_fgetwc_nolock**分别与**fgetc**和**fgetwc**相同，只不过它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
+**_fgetc_nolock** 和 **_fgetwc_nolock** 分别与 **fgetc** 和 **fgetwc** 相同，只不过它们不会受到其他线程的干扰。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 

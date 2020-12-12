@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fesetexceptflag
 title: fesetexceptflag
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: da37c4a032533ae35c8481413c27ca1cb2e8c3c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972149"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289408"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -45,12 +46,12 @@ int fesetexceptflag(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstatus*<br/>
-指向一个**fexcept_t**对象的指针，该对象包含要将异常状态标志设置为的值。 可由以前对 [fegetexceptflag](fegetexceptflag2.md) 的调用设置该对象。
+指向一个 **fexcept_t** 对象的指针，该对象包含要将异常状态标志设置为的值。 可由以前对 [fegetexceptflag](fegetexceptflag2.md) 的调用设置该对象。
 
-*excepts*<br/>
+*removed*<br/>
 要设置的浮点异常状态标志。
 
 ## <a name="return-value"></a>返回值
@@ -59,7 +60,7 @@ int fesetexceptflag(
 
 ## <a name="remarks"></a>备注
 
-**Fesetexceptflag**函数将*removed*指定的浮点异常状态标志的状态设置为*pstatus*所指向的**fexcept_t**对象中设置的相应值。  它不会引发异常。 *Pstatus*指针必须指向有效的**fexcept_t**对象，否则后续行为将不确定。 **Fesetexceptflag**函数支持*removed*中的这些异常宏值，这些值在 \<v. > 中定义：
+**Fesetexceptflag** 函数将 *removed* 指定的浮点异常状态标志的状态设置为 *pstatus* 所指向的 **fexcept_t** 对象中设置的相应值。  它不会引发异常。 *Pstatus* 指针必须指向有效的 **fexcept_t** 对象，否则后续行为将不确定。 **Fesetexceptflag** 函数支持 *removed* 中定义的这些异常宏值，这些值在中定义 \<fenv.h> ：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -70,19 +71,19 @@ int fesetexceptflag(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALL_EXCEPT|所有受支持的浮点异常的按位 OR。|
 
-*Removed*参数可以为零，其中一个受支持的浮点异常宏，或者两个或多个宏的按位 or。 未定义任何其他参数值的效果。
+*Removed* 参数可以为零，其中一个受支持的浮点异常宏，或者两个或多个宏的按位 or。 未定义任何其他参数值的效果。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 |函数|C 标头|C++ 标头|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [fegetexceptflag](fegetexceptflag2.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3767
 title: 编译器错误 C3767
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-ms.openlocfilehash: d4a69d7dffb4a01a91b14c3858cb0a5d553d1cf8
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6d8780dde6ba6d831b1e47c174ef3609086c46ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291839"
 ---
 # <a name="compiler-error-c3767"></a>编译器错误 C3767
 
-"function" 候选函数不可访问
+"function" 候选函数 (s) 无法访问
 
 在类中定义的友元函数应视为在全局命名空间范围内定义和声明。 不过，它可以通过依赖于参数的查找查找。
 
-C3767 也可能由重大更改引起：本机类型在默认情况下在 **/clr**编译中是私有的;有关详细信息，请参阅[类型可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)。
+C3767 也可能由重大更改引起：本机类型在默认情况下在 **/clr** 编译中是私有的;有关详细信息，请参阅 [类型可见性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 。
 
 ## <a name="example"></a>示例
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： alignof 运算符
 title: alignof 运算符
 ms.date: 12/17/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: 6a2046774674858211ae89abb9b4cfc7b09c0a6d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7e053b932ed631d8b03dc1b89f6857905740e5a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227629"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288294"
 ---
 # <a name="alignof-operator"></a>alignof 运算符
 
@@ -76,9 +77,9 @@ S* p = (S*)aligned_malloc(n * sizeof(S), alignof(S));
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [/Zp （结构成员对齐）](../build/reference/zp-struct-member-alignment.md)
+- [/Zp (结构成员对齐) ](../build/reference/zp-struct-member-alignment.md)
 
-- [结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)（特定于 x64）
+-  (x64 特定) [的结构对齐示例](../build/x64-software-conventions.md#examples-of-structure-alignment)
 
 有关 x86 和 x64 代码中的对齐方式的差异的详细信息，请参阅：
 
@@ -88,7 +89,7 @@ S* p = (S*)aligned_malloc(n * sizeof(S), alignof(S));
 
 **`alignof`** 和 **`__alignof`** 是 Microsoft 编译器中的同义词。 在 c + + 11 中成为标准的一部分之前，特定于 Microsoft 的 **`__alignof`** 操作员提供此功能。 为了获得最大的可移植性，应使用 **`alignof`** 运算符而不是特定于 Microsoft 的 **`__alignof`** 运算符。
 
-对于与以前版本的兼容性，为， **`_alignof`** **`__alignof`** 除非指定编译器选项 " [ `/Za` \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"，否则将是同义词。
+为了与早期版本兼容， **`_alignof`** 将作为同义词， **`__alignof`** 除非指定了编译器选项 " [ `/Za` \( 禁用语言扩展")](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,19 +1,20 @@
 ---
+description: 了解更多：弃用的 ANSI Api
 title: 弃用的 ANSI API
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: bbcae085b76e2dbce79265c0695c2b4e933553e2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b709e67a032a25335fe6d05b3662db264232193c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290981"
 ---
 # <a name="deprecated-ansi-apis"></a>弃用的 ANSI API
 
-Microsoft 基础类（MFC）库正在向基于 Unicode 字符集的类和方法迁移。 因此，不推荐使用几个 MFC 方法的 ANSI 版本。 在未来的应用程序中使用这些方法的 Unicode 版本。
+Microsoft 基础类 (MFC) 库正在向基于 Unicode 字符集的类和方法迁移。 因此，不推荐使用几个 MFC 方法的 ANSI 版本。 在未来的应用程序中使用这些方法的 Unicode 版本。
 
 从 windows Vista 中随附的 Windows 公共控件6.1 版开始，将弃用以下 ANSI 方法。
 
@@ -150,6 +151,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Windows Vista 公共控件的生成要求](build-requirements-for-windows-vista-common-controls.md)

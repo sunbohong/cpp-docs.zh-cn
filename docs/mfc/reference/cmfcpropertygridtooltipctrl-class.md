@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCPropertyGridToolTipCtrl 类
 title: CMFCPropertyGridToolTipCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: 82d5f021204628121be242845583797348d02120
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5e560d09756be99c00257c351b58223b37a6b5da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289876"
 ---
 # <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl 类
 
@@ -41,14 +42,14 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl](#cmfcpropertygridtooltipctrl)|构造 `CMFCPropertyGridToolTipCtrl` 对象。|
 |`CMFCPropertyGridToolTipCtrl::~CMFCPropertyGridToolTipCtrl`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCPropertyGridToolTipCtrl：： Create](#create)|为 tooltip 控件创建窗口。|
 |[CMFCPropertyGridToolTipCtrl：:D eactivate](#deactivate)|停用并隐藏 tooltip 控件。|
@@ -58,7 +59,7 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|设置工具提示文本和工具提示窗口边框之间的间距。|
 |[CMFCPropertyGridToolTipCtrl：： Track](#track)|显示 tooltip 控件。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 当指针停留在属性名称上时，将显示工具提示。 [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)类将显示一个工具提示，以便用户可以轻松阅读。 通常，工具提示的位置由指针的位置确定。 使用此类时，工具提示将显示在属性名称上并类似于自然的属性扩展，因此属性名称完全可见。
 
@@ -100,7 +101,7 @@ CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 BOOL Create(CWnd* pWndParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndParent*<br/>
 中指向父窗口的指针。
@@ -117,7 +118,7 @@ BOOL Create(CWnd* pWndParent);
 void Deactivate();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法将最后一个位置和文本设置为空值，以便以后对 [CMFCPropertyGridToolTipCtrl：： Track](#track) 的调用显示工具提示。
 
@@ -129,7 +130,7 @@ void Deactivate();
 void GetLastRect(CRect& rect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 弄包含 tooltip 控件的最后一个位置。
@@ -150,7 +151,7 @@ void Hide();
 void SetTextMargin(int nTextMargin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nTextMargin*<br/>
 中指定 tooltip 控件文本和工具提示窗口的边框之间的间距。 默认值为10像素。
@@ -165,7 +166,7 @@ void Track(
     const CString& strText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中指定 tooltip 控件的位置和大小。
@@ -173,11 +174,11 @@ void Track(
 *strText*<br/>
 中指定要在工具提示中显示的文本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-此方法在由 *rect*指定的位置和大小显示 tooltip 控件。 如果自上次调用此方法以来位置、大小和文本尚未更改，则此方法不起作用。
+此方法在由 *rect* 指定的位置和大小显示 tooltip 控件。 如果自上次调用此方法以来位置、大小和文本尚未更改，则此方法不起作用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

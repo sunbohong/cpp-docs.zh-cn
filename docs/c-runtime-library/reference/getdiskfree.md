@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _getdiskfree
 title: _getdiskfree
 ms.date: 4/2/2020
 api_name:
@@ -31,16 +32,16 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-ms.openlocfilehash: f94e8ecd314ed55d8519363d80dda57f661f18e5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: f17310b426ded63f3e1139e3d7212657d4c6efd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913819"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289200"
 ---
 # <a name="_getdiskfree"></a>_getdiskfree
 
-使用有关磁盘驱动器的信息来填充 **_diskfree_t**结构。
+使用有关磁盘驱动器的信息来填充 **_diskfree_t** 结构。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -54,21 +55,21 @@ unsigned _getdiskfree(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *光驱*<br/>
 您需要了解其信息的磁盘驱动器。
 
 *system.io.driveinfo*<br/>
-将使用有关驱动器的信息进行填充的 **_diskfree_t**结构。
+将使用有关驱动器的信息进行填充的 **_diskfree_t** 结构。
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，则返回值为 0。 如果函数失败，则返回值为错误代码。 为操作系统返回的任何错误设置值**errno** 。 有关**errno**指示的错误条件的详细信息，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
+如果函数成功，则返回值为 0。 如果函数失败，则返回值为错误代码。 为操作系统返回的任何错误设置值 **errno** 。 有关 **errno** 指示的错误条件的详细信息，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
 
 ## <a name="remarks"></a>备注
 
-在 Direct .h 中定义 **_diskfree_t**结构。
+在 Direct .h 中定义 **_diskfree_t** 结构。
 
 ```C
 struct _diskfree_t {
@@ -79,13 +80,13 @@ struct _diskfree_t {
 };
 ```
 
-此函数验证其参数。 如果*system.io.driveinfo*指针为**NULL**或*drive*指定了无效的驱动器，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。 有效驱动器值范围为 0 到 26。 *驱动器*值0指定当前驱动器;之后，数字映射到英语字母表中的字母，例如1表示驱动器 A，3表示驱动器 C，依此类推。
+此函数验证其参数。 如果 *system.io.driveinfo* 指针为 **NULL** 或 *drive* 指定了无效的驱动器，则此函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回 **EINVAL** ，并将 **Errno** 设置为 **EINVAL**。 有效驱动器值范围为 0 到 26。 *驱动器* 值0指定当前驱动器;之后，数字映射到英语字母表中的字母，例如1表示驱动器 A，3表示驱动器 C，依此类推。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 
@@ -193,6 +194,6 @@ void utoiRightJustified(TCHAR* szLeft, TCHAR* szRight, unsigned uVal) {
 ======================================================================
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)<br/>
+[目录控件](../../c-runtime-library/directory-control.md)<br/>

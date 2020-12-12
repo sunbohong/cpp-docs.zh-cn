@@ -1,18 +1,19 @@
 ---
+description: 了解详细信息：了解 SAL
 title: 了解 SAL
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-ms.openlocfilehash: 78a254bca6a90826d47f20ee9909a8cc66e23e28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: affbca9eb65467b65ee5ba4ed3ae550a6da25ac7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288498"
 ---
 # <a name="understanding-sal"></a>了解 SAL
 
-Microsoft 源代码注释语言（SAL）提供了一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注在标头文件中定义 `<sal.h>` 。 适用于 c + + 的 Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅[Windows 驱动程序的 sal 2.0 注释](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers)。
+Microsoft 源代码批注语言 (SAL) 提供一组可用于描述函数如何使用其参数的注释、对它们做出的假设，以及在完成时的保证。 批注在标头文件中定义 `<sal.h>` 。 适用于 c + + 的 Visual Studio 代码分析使用 SAL 批注来修改其函数分析。 有关适用于 Windows 驱动程序开发的 SAL 2.0 的详细信息，请参阅 [Windows 驱动程序的 sal 2.0 注释](/windows-hardware/drivers/devtest/sal-2-annotations-for-windows-drivers)。
 
 在本机，C 和 c + + 只为开发人员提供了一致的方式来表达意图和不变性。 通过使用 SAL 批注，可以更详细地描述函数，以便使用它们的开发人员可以更好地了解如何使用它们。
 
@@ -35,12 +36,12 @@ void * memcpy(
 
 您能否知道此函数的作用？ 当实现或调用函数时，必须保持某些属性以确保程序的正确性。 只需查看示例中的声明，就不知道这些内容。 如果没有 SAL 批注，则必须依赖文档或代码注释。 下面是有关文档的内容 `memcpy` ：
 
-> " `memcpy` 将*计数*字节从*src*复制到*目标*; `wmemcpy`复制*计数*宽字符（两个字节）。 如果源和目标重叠，则 `memcpy` 的行为是未定义的。 使用 `memmove` 处理重叠区域。
+> " `memcpy` 将 *计数* 字节从 *src* 复制到 *目标*; `wmemcpy` 将 *计数* 宽字符复制 (两个) 的字节。 如果源和目标重叠，则 `memcpy` 的行为是未定义的。 使用 `memmove` 处理重叠区域。
 > **重要提示：** 请确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅避免缓冲区溢出。
 
 文档包含一些信息，这些信息表明你的代码必须维护某些属性以确保程序的正确性：
 
-- `memcpy`将 `count` 源缓冲区中的字节复制到目标缓冲区。
+- `memcpy` 将 `count` 源缓冲区中的字节复制到目标缓冲区。
 
 - 目标缓冲区的大小必须至少与源缓冲区的大小相同。
 
@@ -78,12 +79,12 @@ wchar_t * wmemcpy(
 
 SAL 定义了四种基本类型的参数，这些参数按使用模式分类。
 
-|类别|参数批注|说明|
+|类别|参数批注|描述|
 |--------------|--------------------------|-----------------|
 |**被调用函数的输入**|`_In_`|数据将传递给被调用的函数，并被视为只读。|
 |**对被调用函数的输入和到调用方的输出**|`_Inout_`|可用数据将传递到函数中，并可能被修改。|
 |**向调用方输出**|`_Out_`|调用方只为所调用的函数提供空间来写入。 被调用的函数将数据写入该空间。|
-|**指向调用方的指针的输出**|`_Outptr_`|类似于**输出到调用方**。 被调用函数返回的值是一个指针。|
+|**指向调用方的指针的输出**|`_Outptr_`|类似于 **输出到调用方**。 被调用函数返回的值是一个指针。|
 
 这四个基本批注可以通过多种方式进行更明确的了解。 默认情况下，使用批注指针参数是必需的，它们必须为非 NULL，函数才能成功。 基本批注最常使用的变体指示指针参数是可选的，如果该参数为 NULL，则该函数仍可成功执行其工作。
 
@@ -110,11 +111,11 @@ SAL 定义了四种基本类型的参数，这些参数按使用模式分类。
 
 1. 在 Visual Studio 中，打开包含 SAL 批注的 c + + 项目。
 
-1. 在菜单栏上，选择 "**生成**"、 **"对解决方案运行代码分析**"。
+1. 在菜单栏上，选择 " **生成**"、 **"对解决方案运行代码分析**"。
 
      请考虑 \_ \_ 本部分中的示例。 如果对其运行代码分析，将显示以下警告：
 
-    > **C6387 参数值无效**"指向" 可能是 "0"：这不符合函数 "InCallee" 的规范。
+    > **C6387 参数值无效** "指向" 可能是 "0"：这不符合函数 "InCallee" 的规范。
 
 ### <a name="example-the-_in_-annotation"></a>示例： \_ In \_ 批注
 
@@ -126,9 +127,9 @@ SAL 定义了四种基本类型的参数，这些参数按使用模式分类。
 
 - 调用方必须提供缓冲区并对其进行初始化。
 
-- `_In_`指定 "只读"。 常见的错误是应用 `_In_` 于应 `_Inout_` 改用批注的参数。
+- `_In_` 指定 "只读"。 常见的错误是应用 `_In_` 于应 `_Inout_` 改用批注的参数。
 
-- `_In_`不允许在非指针标量上由分析器忽略。
+- `_In_` 不允许在非指针标量上由分析器忽略。
 
 ```cpp
 void InCallee(_In_ int *pInt)
@@ -156,7 +157,7 @@ void BadInCaller()
 
 ### <a name="example-the-_in_opt_-annotation"></a>示例： \_ In \_ opt \_ 批注
 
-`_In_opt_`与相同 `_In_` ，不同之处在于允许输入参数为 NULL，因此函数应检查此值。
+`_In_opt_` 与相同 `_In_` ，不同之处在于允许输入参数为 NULL，因此函数应检查此值。
 
 ```cpp
 
@@ -184,7 +185,7 @@ Visual Studio Code 分析验证函数在访问缓冲区之前是否检查是否�
 
 ### <a name="example-the-_out_-annotation"></a>示例： \_ Out \_ 批注
 
-`_Out_`支持一个常见情况，即在其中传递指向元素缓冲区的非 NULL 指针，并且该函数将初始化元素。 调用方无需在调用之前初始化缓冲区;被调用的函数承诺在返回之前对其进行初始化。
+`_Out_` 支持一个常见情况，即在其中传递指向元素缓冲区的非 NULL 指针，并且该函数将初始化元素。 调用方无需在调用之前初始化缓冲区;被调用的函数承诺在返回之前对其进行初始化。
 
 ```cpp
 void GoodOutCallee(_Out_ int *pInt)
@@ -210,7 +211,7 @@ Visual Studio Code 分析工具将验证调用方是否将非 NULL 指针传递�
 
 ### <a name="example-the-_out_opt_-annotation"></a>示例： \_ Out \_ opt \_ 批注
 
-`_Out_opt_`与相同 `_Out_` ，不同之处在于允许参数为 NULL，因此函数应检查此值。
+`_Out_opt_` 与相同 `_Out_` ，不同之处在于允许参数为 NULL，因此函数应检查此值。
 
 ```cpp
 void GoodOutOptCallee(_Out_opt_ int *pInt)
@@ -237,7 +238,7 @@ Visual Studio Code 分析验证此函数在取消引用之前检查是否为 NUL
 
 ### <a name="example-the-_inout_-annotation"></a>示例： \_ Inout \_ 批注
 
-`_Inout_`用于批注可能由函数更改的指针参数。 指针必须指向有效的已初始化数据，然后才能调用，即使它发生更改，返回的值也必须有效。 批注指定函数可以从单元素缓冲区自由读取和写入。 调用方必须提供缓冲区并对其进行初始化。
+`_Inout_` 用于批注可能由函数更改的指针参数。 指针必须指向有效的已初始化数据，然后才能调用，即使它发生更改，返回的值也必须有效。 批注指定函数可以从单元素缓冲区自由读取和写入。 调用方必须提供缓冲区并对其进行初始化。
 
 > [!NOTE]
 > 与一样 `_Out_` ， `_Inout_` 必须应用于可修改的值。
@@ -268,7 +269,7 @@ Visual Studio Code 分析验证调用方将非 NULL 指针传递到的已初始�
 
 ### <a name="example-the-_inout_opt_-annotation"></a>示例： \_ Inout \_ opt \_ 批注
 
-`_Inout_opt_`与相同 `_Inout_` ，不同之处在于允许输入参数为 NULL，因此函数应检查此值。
+`_Inout_opt_` 与相同 `_Inout_` ，不同之处在于允许输入参数为 NULL，因此函数应检查此值。
 
 ```cpp
 void GoodInOutOptCallee(_Inout_opt_ int *pInt)
@@ -297,7 +298,7 @@ Visual Studio Code 分析验证此函数在访问缓冲区之前是否检查是�
 
 ### <a name="example-the-_outptr_-annotation"></a>示例： \_ Outptr \_ 批注
 
-`_Outptr_`用于批注用于返回指针的参数。  参数本身不应为 NULL，并且被调用的函数在其中返回非 NULL 指针，该指针指向已初始化的数据。
+`_Outptr_` 用于批注用于返回指针的参数。  参数本身不应为 NULL，并且被调用的函数在其中返回非 NULL 指针，该指针指向已初始化的数据。
 
 ```cpp
 void GoodOutPtrCallee(_Outptr_ int **pInt)
@@ -327,7 +328,7 @@ Visual Studio Code 分析验证调用方传递的非 NULL 指针 `*pInt` ，并�
 
 ### <a name="example-the-_outptr_opt_-annotation"></a>示例： \_ Outptr \_ opt \_ 批注
 
-`_Outptr_opt_`与相同 `_Outptr_` ，不同之处在于参数是可选的，调用方可以传入参数的 NULL 指针。
+`_Outptr_opt_` 与相同 `_Outptr_` ，不同之处在于参数是可选的，调用方可以传入参数的 NULL 指针。
 
 ```cpp
 void GoodOutPtrOptCallee(_Outptr_opt_ int **pInt)
@@ -392,13 +393,13 @@ Microsoft 公共标头已进行批注。 因此，我们建议在项目中首先
 
 - 为值范围批注添加批注，以便代码分析可以确保缓冲区和指针安全性。
 
-- 批注锁定规则和锁定副作用。 有关详细信息，请参阅对[锁定行为进行批注](../code-quality/annotating-locking-behavior.md)。
+- 批注锁定规则和锁定副作用。 有关详细信息，请参阅对 [锁定行为进行批注](../code-quality/annotating-locking-behavior.md)。
 
 - 批注驱动程序属性和其他特定于域的属性。
 
 或者，您可以为所有参数添加注释以使您的意图清晰明了，并使您能够轻松地检查批注是否已完成。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 SAL 注释减少 C/C++ 代码缺陷](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
 - [对函数参数和返回值进行批注](../code-quality/annotating-function-parameters-and-return-values.md)

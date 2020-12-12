@@ -1,16 +1,17 @@
 ---
+description: '了解更多相关信息：值类和结构 (c + +/CX) '
 title: 值类和结构 (C++/CX)
 ms.date: 12/30/2016
 helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 15d54d139f086ce5bb025aaeab145c71d33903c0
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: 25551d6215eebbdc328946bf5ba2524c875338ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381592"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288043"
 ---
 # <a name="value-classes-and-structs-ccx"></a>值类和结构 (C++/CX)
 
@@ -52,7 +53,7 @@ ms.locfileid: "94381592"
 
 *值类* 与类似，只是 **`value struct`** 必须将其字段显式赋予公共可访问性。 它使用关键字进行声明 **`value class`** 。
 
-值结构或值类只能作为字段包含基本数值类型、枚举类、 `Platform::String^` 或[Platform：： \<T> ^ IBox](../cppcx/platform-ibox-interface.md) ，其中 T 是数值类型或枚举类或值类或结构。 `IBox<T>^`字段的值可以是 **`nullptr`** ，这是 c + + 实现 "可以 *为 null 的值类型* " 概念的方式。
+值结构或值类只能作为字段包含基本数值类型、枚举类、 `Platform::String^` 或[Platform：： \<T> ^ IBox](../cppcx/platform-ibox-interface.md) ，其中 T 是数值类型或枚举类或值类或结构。 `IBox<T>^`字段的值可以是 **`nullptr`** ，这是 c + + 实现 "可以 *为 null 的值类型*" 概念的方式。
 
 将 `Platform::String^` 或 `IBox<T>^` 类型作为成员包含在内的值类型或结构不支持 `memcpy`。
 

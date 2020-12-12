@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：类型系统 (c + +/CX) '
 title: 类型系统 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 242fbde1774ef4537eedce26cafff6b8625ac2a5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 43b1e9dd2df6e9e457525ebf337604f68f0c267f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845141"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288160"
 ---
 # <a name="type-system-ccx"></a>类型系统 (C++/CX)
 
@@ -126,7 +127,7 @@ Windows 运行时为每种语言以自己的方式实现的集合类型定义一
 
 有关更多信息，请参见 [模板 ref 类](../cppcx/template-ref-classes-c-cx.md)中定义的接口的私有 C++ 特定实现。
 
-### <a name="interfaces"></a>接口
+### <a name="interfaces"></a>界面
 
 如果 ref 类或 ref 结构继承自接口，则 Windows 运行时接口定义一组公共属性、方法和事件。
 
@@ -168,7 +169,7 @@ C++/CX 支持标准 C++ 强制转换运算符 [static_cast](../cpp/static-cast-o
 
 有关更多信息，请参见 [装箱](../cppcx/boxing-c-cx.md)中定义的接口的私有 C++ 特定实现。
 
-### <a name="attributes"></a>属性
+### <a name="attributes"></a>特性
 
 特性是可以应用于任何 Windows 运行时类型或类型成员并且可以在运行时进行检查的元数据值。 Windows 运行时定义命名空间中的一组公共特性 `Windows::Foundation::Metadata` 。 此版本中的 Windows 运行时不支持公共接口上的用户定义属性。
 
@@ -178,6 +179,6 @@ C++/CX 支持标准 C++ 强制转换运算符 [static_cast](../cpp/static-cast-o
 
 有关详细信息，请参阅 [弃用类型和成员](../cppcx/deprecating-types-and-members-c-cx.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)

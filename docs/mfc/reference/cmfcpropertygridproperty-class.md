@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCPropertyGridProperty 类
 title: CMFCPropertyGridProperty 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: cabff68a356bfa2d91d7c8db9c806e8a9f013705
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 7893d58933f9f13744a42b14fd6fa7c47bec56c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289902"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 类
 
@@ -189,14 +190,14 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCPropertyGridProperty：： CMFCPropertyGridProperty](#cmfcpropertygridproperty)|构造 `CMFCPropertyGridProperty` 对象。|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCPropertyGridProperty：： AddOption](#addoption)|将新的列表项添加到属性列表控件中。|
 |[CMFCPropertyGridProperty：： AddSubItem](#addsubitem)|将子项添加到属性。|
@@ -269,7 +270,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CMFCPropertyGridProperty：： CreateCombo](#createcombo)|由框架调用以将组合框添加到属性。|
 |[CMFCPropertyGridProperty：： HasButton](#hasbutton)|指示某一属性是否包含一个按钮。|
@@ -282,7 +283,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Double 类型的值的格式字符串。|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Float 类型的值的格式字符串。|
@@ -321,7 +322,7 @@ BOOL AddOption(
     BOOL bInsertUnique=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszOption*<br/>
 中要添加的列表项 (选项) 。
@@ -343,7 +344,7 @@ TRUE，表示添加列表项。 否则为 FALSE，这意味着不会添加列表
 BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pProp*<br/>
 中指向要添加的属性的指针。
@@ -384,7 +385,7 @@ virtual void AdjustInPlaceEditRect(
     CRect& rectSpin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectEdit*<br/>
 弄此方法返回时，指定属性值文本框的边界的矩形。
@@ -404,7 +405,7 @@ virtual void AdjustInPlaceEditRect(
 void AllowEdit(BOOL bAllow=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAllow*<br/>
 中若要使属性可编辑，则为 TRUE;若为 FALSE，则将属性设置为只读。 默认值为 TRUE。
@@ -431,10 +432,10 @@ CMFCPropertyGridProperty(
     LPCTSTR lpszValidChars=NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strGroupName*<br/>
-中组名称。 *组*是属性网格控件中的相关属性的集合。 如果控件分层显示，则 *组名称* 将显示为组上方行中的类别标题。
+中组名称。 *组* 是属性网格控件中的相关属性的集合。 如果控件分层显示，则 *组名称* 将显示为组上方行中的类别标题。
 
 *dwData*<br/>
 中应用程序特定的数据，例如一个整数或指向与属性关联的其他数据的指针。 默认值为 0。
@@ -472,7 +473,7 @@ virtual CComboBox* CreateCombo(
     CRect rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndParent*<br/>
 中指向组合框的父窗口的指针。
@@ -496,7 +497,7 @@ virtual CWnd* CreateInPlaceEdit(
     BOOL& bDefaultFormat);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectEdit*<br/>
 中可编辑控件的边框。
@@ -510,9 +511,9 @@ virtual CWnd* CreateInPlaceEdit(
 
 ### <a name="remarks"></a>备注
 
-此方法使用[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)类构造函数中指定的*varValue*、 *lpszEditMask*、 *lpszEditTemplate*和*lpszValidChars*参数的值。 默认情况下，此方法支持 *varValue* 变体类型。 这包括 VT_BSTR、VT_R4、VT_R8、VT_UI1、VT_I2、VT_INT、VT_UINT、VT_I4、VT_UI2、VT_UI4 和 VT_BOOL。
+此方法使用 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)类构造函数中指定的 *varValue*、 *lpszEditMask*、 *lpszEditTemplate* 和 *lpszValidChars* 参数的值。 默认情况下，此方法支持 *varValue* 变体类型。 这包括 VT_BSTR、VT_R4、VT_R8、VT_UI1、VT_I2、VT_INT、VT_UINT、VT_I4、VT_UI2、VT_UI4 和 VT_BOOL。
 
-如果指定了一个或多个*lpszEditMask*、 *lpszEditTemplate*或*lpszValidChars*参数，则此方法将创建[CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)控件;否则，它将创建一个[CEdit](../../mfc/reference/cedit-class.md)控件。
+如果指定了一个或多个 *lpszEditMask*、 *lpszEditTemplate* 或 *lpszValidChars* 参数，则此方法将创建 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md)控件;否则，它将创建一个 [CEdit](../../mfc/reference/cedit-class.md)控件。
 
 ## <a name="cmfcpropertygridpropertycreatespincontrol"></a><a name="createspincontrol"></a> CMFCPropertyGridProperty：： CreateSpinControl
 
@@ -522,7 +523,7 @@ virtual CWnd* CreateInPlaceEdit(
 virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectSpin*<br/>
 中定义可编辑数值调节钮控件创建位置的矩形。
@@ -543,7 +544,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 void Enable(BOOL bEnable=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中若要启用属性，则为 TRUE;若要禁用属性，则为 FALSE。 禁用的属性对鼠标或键盘输入没有响应。 默认值为 TRUE。
@@ -561,7 +562,7 @@ void EnableSpinControl(
     int nMax=0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中若要启用数值调节钮控件，则为 TRUE;若要禁用数值调节钮控件，则为 FALSE。 默认值为 TRUE。
@@ -576,7 +577,7 @@ void EnableSpinControl(
 
 当要编辑某个属性时，框架会自动创建一个数值调节钮控件。
 
-由[CMFCPropertyGridProperty：： CMFCPropertyGridProperty](#cmfcpropertygridproperty)构造函数的*varValue*参数指定的属性类型必须是受支持的变量类型。 否则，此方法将断言处于调试模式。 支持的类型包括 VT_INT、VT_UINT、VT_I2、VT_I4、VT_UI2 和 VT_UI4。
+由 [CMFCPropertyGridProperty：： CMFCPropertyGridProperty](#cmfcpropertygridproperty)构造函数的 *varValue* 参数指定的属性类型必须是受支持的变量类型。 否则，此方法将断言处于调试模式。 支持的类型包括 VT_INT、VT_UINT、VT_I2、VT_I4、VT_UI2 和 VT_UI4。
 
 ## <a name="cmfcpropertygridpropertyexpand"></a><a name="expand"></a> CMFCPropertyGridProperty：： Expand
 
@@ -586,7 +587,7 @@ void EnableSpinControl(
 void Expand(BOOL bExpand=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bExpand*<br/>
 中若要展开属性，则为 TRUE;若要折叠属性，则为 FALSE。 默认值为 TRUE。
@@ -649,7 +650,7 @@ const CString& GetDescription() const;
 int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIncludeHidden*\
 中若要在计数中包括隐藏的子项目，则为 TRUE;否则为 FALSE。 默认值为 TRUE。
@@ -710,7 +711,7 @@ virtual CString GetNameTooltip();
 LPCTSTR GetOption(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要检索的属性列表项 (选项) 从零开始的索引。
@@ -791,7 +792,7 @@ CRect GetRect() const;
 CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 中要检索的属性的从零开始的索引。 如果此参数小于零或大于或等于子属性的数目，则此参数无效。
@@ -877,7 +878,7 @@ CMFCPropertyGridProperty* HitTest(
     BOOL bPropsOnly=FALSE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 中要测试的点（以工作区坐标表示）。 此参数通常是当前鼠标指针的位置。
@@ -975,7 +976,7 @@ BOOL IsGroup() const;
 
 ### <a name="remarks"></a>备注
 
-*组*是属性网格控件中的相关属性的集合。 如果控件分层显示，则 *组名称* 将显示为组上方行中的类别标题。
+*组* 是属性网格控件中的相关属性的集合。 如果控件分层显示，则 *组名称* 将显示为组上方行中的类别标题。
 
 ## <a name="cmfcpropertygridpropertyisinplaceediting"></a><a name="isinplaceediting"></a> CMFCPropertyGridProperty：： IsInPlaceEditing
 
@@ -1041,7 +1042,7 @@ virtual BOOL IsSelected() const;
 BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pProp*<br/>
 中指向属性的指针。
@@ -1126,7 +1127,7 @@ static CString m_strFormatShort;
 virtual void OnClickButton(CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 中一个点，采用工作区坐标。
@@ -1143,7 +1144,7 @@ virtual void OnClickButton(CPoint point);
 virtual void OnClickName(CPoint C);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ansi-c*\
 中一个点，采用工作区坐标。
@@ -1162,7 +1163,7 @@ virtual BOOL OnClickValue(
     CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiMsg*<br/>
 中鼠标消息。
@@ -1198,7 +1199,7 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -1220,7 +1221,7 @@ virtual HBRUSH OnCtlColor(
 virtual BOOL OnDblClk(CPoint point);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *情况*<br/>
 中一个点，采用工作区坐标。
@@ -1253,7 +1254,7 @@ virtual void OnDrawButton(
     CRect rectButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -1273,7 +1274,7 @@ virtual void OnDrawDescription(
     CRect rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -1295,7 +1296,7 @@ virtual void OnDrawExpandBox(
     CRect rectExpand);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -1317,7 +1318,7 @@ virtual void OnDrawName(
     CRect rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -1337,7 +1338,7 @@ virtual void OnDrawValue(
     CRect rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -1355,7 +1356,7 @@ virtual void OnDrawValue(
 virtual BOOL OnEdit(LPPOINT lptClick);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lptClick*<br/>
 [in] (未使用此参数。 ) 指向工作区坐标中的点的指针。
@@ -1392,7 +1393,7 @@ virtual BOOL OnEndEdit();
 virtual BOOL OnKillFocus(CWnd*);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CWnd*\
 [in] (未使用。 ) 指向窗口的指针。
@@ -1411,7 +1412,7 @@ virtual BOOL OnKillFocus(CWnd*);
 virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *CMFCPropertyGridProperty&#42;*<br/>
 
@@ -1425,7 +1426,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 virtual void OnPosSizeChanged(CRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *CRect*<br/>
 
@@ -1441,7 +1442,7 @@ virtual void OnPosSizeChanged(CRect);
 virtual void OnRClickName(CPoint C);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ansi-c*\
 中一个点，采用工作区坐标。
@@ -1460,7 +1461,7 @@ virtual void OnRClickValue(
     BOOL B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ansi-c*\
 中一个点，采用工作区坐标。
@@ -1506,7 +1507,7 @@ virtual BOOL OnSetCursor() const;
 virtual void OnSetSelection CMFCPropertyGridProperty*);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *CMFCPropertyGridProperty&#42;*<br/>
 
@@ -1536,7 +1537,7 @@ virtual BOOL OnUpdateValue();
 virtual BOOL PushChar(UINT nChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 中一个字符。
@@ -1581,7 +1582,7 @@ BOOL RemoveSubItem(
     BOOL bDelete=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pProp*<br/>
 中指向属性子项目的指针。
@@ -1613,7 +1614,7 @@ virtual void ResetOriginalValue();
 void SetData(DWORD_PTR dwData);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwData*<br/>
 中应用程序特定的32位值，如整数或指向其他数据的指针。
@@ -1630,7 +1631,7 @@ void SetData(DWORD_PTR dwData);
 void SetDescription(const CString& strDescr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strDescr*<br/>
 中描述当前属性的文本。
@@ -1647,7 +1648,7 @@ void SetName(
     BOOL bRedraw=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 中属性名称。
@@ -1665,7 +1666,7 @@ void SetName(
 virtual void SetOriginalValue(const COleVariant& varValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varValue*<br/>
 中一个值。
@@ -1682,7 +1683,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 virtual void SetValue(const _variant_t& varValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varValue*<br/>
 中对值的引用。
@@ -1699,7 +1700,7 @@ void Show(
     BOOL bAdjustLayout=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 中若要显示当前属性及其子项目，则为 TRUE;若为 FALSE，则隐藏当前属性及其子项目。 默认值为 TRUE。
@@ -1707,8 +1708,8 @@ void Show(
 *bAdjustLayout*<br/>
 中若要重新计算如何绘制属性的标签和值，然后绘制属性，则为 TRUE;若为 FALSE，则使用现有计算绘制属性。 默认值为 TRUE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPropertyGridCtrl 类](../../mfc/reference/cmfcpropertygridctrl-class.md)

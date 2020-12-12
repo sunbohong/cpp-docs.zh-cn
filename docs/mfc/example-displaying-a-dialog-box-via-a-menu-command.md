@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：示例：通过菜单命令显示对话框
 title: 示例：通过菜单命令显示对话框
 ms.date: 09/07/2019
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 1cada8124cd7ea71a24367626508782b522cc746
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: dcfa34eb05733d2f27176795a447e15949d6e274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290851"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>示例：通过菜单命令显示对话框
 
@@ -44,7 +45,7 @@ ms.locfileid: "91506756"
 
 1. 为您的对话框添加一个类。 有关详细信息，请参阅 [添加类](../ide/adding-a-class-visual-cpp.md) 。
 
-1. 在 **类视图**中，选择 "文档" 类 (CDisplayDialogDoc) "。 在 **“属性”** 窗口中，单击 **“事件”** 按钮。 双击菜单命令的 ID (ID_VIEW_TEST) 。 接下来，单击向下箭头并选择 " ** \<Add> OnViewTest**"。
+1. 在 **类视图** 中，选择 "文档" 类 (CDisplayDialogDoc) "。 在 **“属性”** 窗口中，单击 **“事件”** 按钮。 双击菜单命令的 ID (ID_VIEW_TEST) 。 接下来，单击向下箭头并选择 " **\<Add> OnViewTest**"。
 
    如果已将菜单命令添加到 MDI 应用程序的大型机，请改为选择应用程序类 (CDisplayDialogApp) 。
 

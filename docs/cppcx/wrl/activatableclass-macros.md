@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ActivatableClass 宏
 title: ActivatableClass 宏
 ms.date: 11/04/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - ActivatableClass
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
-ms.openlocfilehash: 7bc3d789d6c0d304aa170d59dff23a97a67061d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2b59101373de72ca88338750bb7fe9169376ac65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214254"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287939"
 ---
 # <a name="activatableclass-macros"></a>ActivatableClass 宏
 
@@ -46,7 +47,7 @@ ActivatableClassWithFactoryEx(
 *className*<br/>
 要创建的类的名称。
 
-*集*<br/>
+*工厂*<br/>
 将创建指定类的实例的工厂。
 
 *serverName*<br/>
@@ -54,7 +55,7 @@ ActivatableClassWithFactoryEx(
 
 ## <a name="remarks"></a>备注
 
-不要将这些宏与经典 COM 一起使用，除非使用 `#undef` 指令来确保删除 `__WRL_WINRT_STRICT__` 宏定义。
+不要将这些宏与经典 COM 一起使用，除非使用 `#undef` 指令确保 `__WRL_WINRT_STRICT__` 删除了宏定义。
 
 ## <a name="requirements"></a>要求
 
@@ -62,6 +63,6 @@ ActivatableClassWithFactoryEx(
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Module 类](module-class.md)

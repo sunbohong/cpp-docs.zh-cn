@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strcat、wcscat、_mbscat
 title: strcat、wcscat、_mbscat
 ms.date: 11/04/2016
 api_name:
@@ -43,19 +44,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 12ec6f6e0e9f940ef72d0aec742137843238c534
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292151"
 ---
 # <a name="strcat-wcscat-_mbscat"></a>strcat、wcscat、_mbscat
 
 追加字符串。 这些函数的更安全版本已发布，请参阅 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)。
 
 > [!IMPORTANT]
-> **_mbscat_s**不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbscat_s** 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -89,7 +90,7 @@ unsigned char *_mbscat(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strDestination*<br/>
 null 终止的目标字符串。
@@ -99,34 +100,34 @@ null 终止的源字符串。
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数都会返回目标字符串（*strDestination*）。 没有保留任何返回值以指示错误。
+其中每个函数都会返回目标字符串 (*strDestination*) 。 没有保留任何返回值以指示错误。
 
 ## <a name="remarks"></a>备注
 
-**Strcat**函数将*StrSource*追加到*strDestination* ，并使用空字符终止结果字符串。 *StrSource*的初始字符将覆盖*strDestination*的终止 null 字符。 如果源和目标字符串重叠，则**strcat**的行为是不确定的。
+**Strcat** 函数将 *StrSource* 追加到 *strDestination* ，并使用空字符终止结果字符串。 *StrSource* 的初始字符将覆盖 *strDestination* 的终止 null 字符。 如果源和目标字符串重叠，则 **strcat** 的行为是不确定的。
 
 > [!IMPORTANT]
-> 由于**strcat**在追加*strSource*之前不会检查*strDestination*中是否有足够的空间，因此可能会导致缓冲区溢出。 请考虑改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
+> 由于 **strcat** 在追加 *strSource* 之前不会检查 *strDestination* 中是否有足够的空间，因此可能会导致缓冲区溢出。 请考虑改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
 
-**wcscat**和 **_mbscat**是**strcat**的宽字符和多字节字符版本。 **Wcscat**的参数和返回值是宽字符字符串; **_mbscat**的这些字符串是多字节字符字符串。 否则这三个函数否则具有相同行为。
+**wcscat** 和 **_mbscat** 是 **strcat** 的宽字符和多字节字符版本。 **Wcscat** 的参数和返回值是宽字符字符串;**_mbscat** 的是多字节字符字符串。 否则这三个函数否则具有相同行为。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |TCHAR.H 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
+|**_tcscat**|strcat|**_mbscat**|**wcscat**|
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**strcat**|\<string.h>|
+|strcat|\<string.h>|
 |**wcscat**|\<string.h> 或 \<wchar.h>|
 |**_mbscat**|\<mbstring.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

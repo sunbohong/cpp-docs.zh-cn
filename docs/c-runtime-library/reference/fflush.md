@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fflush
 title: fflush
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: c5208c86484e1d9478f3879d91b32d57ba7c4a3a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a23b4f580e0ed258bb111064b8564a6603562f64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289252"
 ---
 # <a name="fflush"></a>fflush
 
@@ -47,31 +48,31 @@ int fflush(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *流*<br/>
-指向**文件**结构的指针。
+指向 **文件** 结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果缓冲区已成功刷新， **fflush**将返回0。 在指定流无缓冲区或处于打开状态以仅供读取的情况下，也会返回值 0。 **EOF**的返回值指示一个错误。
+如果缓冲区已成功刷新， **fflush** 将返回0。 在指定流无缓冲区或处于打开状态以仅供读取的情况下，也会返回值 0。 **EOF** 的返回值指示一个错误。
 
 > [!NOTE]
-> 如果**fflush**返回**EOF**，则数据可能因写入失败而丢失。 设置关键错误处理程序时，最安全的方法是使用**setvbuf**函数关闭缓冲并使用低级别 i/o 例程，如 **_open**、 **_close**和 **_write** ，而不是使用流 i/o 函数。
+> 如果 **fflush** 返回 **EOF**，则数据可能因写入失败而丢失。 设置关键错误处理程序时，最安全的方法是使用 **setvbuf** 函数关闭缓冲并使用低级别 i/o 例程，如 **_open**、 **_close** 和 **_write** ，而不是使用流 i/o 函数。
 
 ## <a name="remarks"></a>备注
 
-**Fflush**函数刷新流*流*。 如果以写入模式打开流，或者以更新模式打开并且最后一个操作是写入，则流缓冲区的内容会被写入到基础文件，否则设备和缓冲区将被丢弃。 如果流是在读取模式下打开的，或者如果流没有缓冲区，则对**fflush**的调用不起作用，并且保留任何缓冲区。 对**fflush**的调用会对流的**ungetc**的任何先前调用的效果求反。 调用后，该流保持打开状态。
+**Fflush** 函数刷新流 *流*。 如果以写入模式打开流，或者以更新模式打开并且最后一个操作是写入，则流缓冲区的内容会被写入到基础文件，否则设备和缓冲区将被丢弃。 如果流是在读取模式下打开的，或者如果流没有缓冲区，则对 **fflush** 的调用不起作用，并且保留任何缓冲区。 对 **fflush** 的调用会对流的 **ungetc** 的任何先前调用的效果求反。 调用后，该流保持打开状态。
 
-如果*stream*为**NULL**，则行为与对每个打开的流的**fflush**的调用相同。 最后一次操作是写入的所有以写入模式打开的流以及所有以更新模式打开的流都将被刷新。 调用对其他流无效。
+如果 *stream* 为 **NULL**，则行为与对每个打开的流的 **fflush** 的调用相同。 最后一次操作是写入的所有以写入模式打开的流以及所有以更新模式打开的流都将被刷新。 调用对其他流无效。
 
-缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。 利用运行时库的提交到磁盘功能，可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 无需重写现有程序，可以通过将程序的对象文件与 COMMODE.OBJ 链接来启用此功能。 在生成的可执行文件中，调用 **_flushall**将所有缓冲区的内容写入磁盘。 只有 **_flushall**和**fflush**受 commode.obj 的影响。
+缓冲区通常由操作系统维护，操作系统确定将数据自动写入磁盘的最佳时间：当缓冲区已满时、当流已关闭时或当程序在未关闭流的情况下正常终止时。 利用运行时库的提交到磁盘功能，可以确保将关键数据直接写入磁盘而不是操作系统的缓冲区。 无需重写现有程序，可以通过将程序的对象文件与 COMMODE.OBJ 链接来启用此功能。 在生成的可执行文件中，调用 **_flushall** 将所有缓冲区的内容写入磁盘。 只有 **_flushall** 和 **fflush** 受 commode.obj 的影响。
 
 有关控制提交到磁盘功能的信息，请参阅[流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](fopen-wfopen.md) 和 [_fdopen](fdopen-wfdopen.md)。
 
 此函数会锁定调用线程，因此是线程安全的。 有关非锁定版本，请参阅 **_fflush_nolock**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -131,7 +132,7 @@ int main(void)
 User selected 5
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fclose、_fcloseall](fclose-fcloseall.md)<br/>

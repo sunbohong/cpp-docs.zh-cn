@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 迭代器 &gt; 运算符
 title: '&lt;iterator&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 36851eab86a32fab9294129cf1918e0add528eb3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6fe47669bcd2ab72cd91bc9eee36afea975fab3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289694"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 运算符
 
-## <a name="operator"></a><a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 测试运算符左侧的迭代器对象是否不等于右侧的迭代器对象。
 
@@ -41,7 +42,7 @@ template <class CharType, class Tr>
 bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istreambuf_iterator<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `iterator` 类型的对象。
@@ -51,7 +52,7 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果迭代器对象不相等，则为; 否则为。**`false`** 如果迭代器对象相等，则为。
+**`true`** 如果迭代器对象不相等，则为; 否则为。 **`false`** 如果迭代器对象相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -119,7 +120,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 测试运算符左侧的迭代器对象是否等于右侧的迭代器对象。
 
@@ -145,7 +146,7 @@ bool operator==(
     const istreambuf_iterator<CharType, Traits>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 iterator 类型的对象。
@@ -155,13 +156,13 @@ iterator 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果迭代器对象相等，则为; 否则为。**`false`** 如果迭代器对象不相等，则为。
+**`true`** 如果迭代器对象相等，则为; 否则为。 **`false`** 如果迭代器对象不相等，则为。
 
 ### <a name="remarks"></a>备注
 
 如果两个迭代器对象对一个容器中的相同元素进行定址，则其中一个迭代器对象等于另一个。 如果两个迭代器指向一个容器中的不同元素，则他们不相等。
 
-仅当*左*值和*右端*存储同一个迭代器时，前两个模板运算符才返回 true。 仅当*左右*两个模板都存储同一个流指针*时，第*三个模板运算符才返回 true。 第四个模板运算符返回 `left.equal (right)`。
+仅当 *左* 值和 *右端* 存储同一个迭代器时，前两个模板运算符才返回 true。 仅当 *左右* 两个模板都存储同一个流指针 *时，第* 三个模板运算符才返回 true。 第四个模板运算符返回 `left.equal (right)`。
 
 ### <a name="example"></a>示例
 
@@ -225,7 +226,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 操作员&lt;
 
 测试运算符左侧的迭代器对象是否小于右侧的迭代器对象。
 
@@ -234,7 +235,7 @@ template <class RandomIterator>
 bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `iterator` 类型的对象。
@@ -244,7 +245,7 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果表达式左边的迭代器小于表达式右侧的迭代器，则为; 否则为。**`false`** 如果大于或等于右侧的迭代器，则为。
+**`true`** 如果表达式左边的迭代器小于表达式右侧的迭代器，则为; 否则为。 **`false`** 如果大于或等于右侧的迭代器，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -316,7 +317,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 操作员&lt;=
 
 测试运算符左侧的迭代器对象是否小于或等于右侧的迭代器对象。
 
@@ -325,7 +326,7 @@ template <class RandomIterator>
 bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 iterator 类型的对象。
@@ -335,7 +336,7 @@ iterator 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果表达式左边的迭代器小于或等于表达式右边的迭代器，则为; 否则为。**`false`** 如果大于右侧的迭代器，则为。
+**`true`** 如果表达式左边的迭代器小于或等于表达式右边的迭代器，则为; 否则为。 **`false`** 如果大于右侧的迭代器，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -411,7 +412,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 操作员&gt;
 
 测试运算符左侧的迭代器对象是否大于右侧的迭代器对象。
 
@@ -420,7 +421,7 @@ template <class RandomIterator>
 bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 iterator 类型的对象。
@@ -430,7 +431,7 @@ iterator 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果表达式左边的迭代器大于表达式右侧的迭代器，则为; 否则为。**`false`** 如果小于或等于右侧的迭代器，则为。
+**`true`** 如果表达式左边的迭代器大于表达式右侧的迭代器，则为; 否则为。 **`false`** 如果小于或等于右侧的迭代器，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -500,7 +501,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 操作员&gt;=
 
 测试运算符左侧的迭代器对象是否大于或等于右侧的迭代器对象。
 
@@ -509,7 +510,7 @@ template <class RandomIterator>
 bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iterator<RandomIterator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 iterator 类型的对象。
@@ -519,7 +520,7 @@ iterator 类型的对象。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果表达式左边的迭代器大于或等于表达式右边的迭代器，则为; 否则为。**`false`** 如果小于右侧的迭代器，则为。
+**`true`** 如果表达式左边的迭代器大于或等于表达式右边的迭代器，则为; 否则为。 **`false`** 如果小于右侧的迭代器，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -595,7 +596,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="operator"></a><a name="op_add"></a>operator +
+## <a name="operator"></a><a name="op_add"></a> operator +
 
 将偏移量添加到迭代器，并返回一个 `move_iterator` 或一个在新偏移位置处对插入元素定址的 `reverse_iterator`。
 
@@ -613,7 +614,7 @@ operator+(
     const reverse_iterator<RandomIterator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Off*\
 const move_iterator 或 const reverse_iterator 要偏移的位置数。
@@ -623,7 +624,7 @@ const move_iterator 或 const reverse_iterator 要偏移的位置数。
 
 ### <a name="return-value"></a>返回值
 
-返回 _Off 的*总和*  +  *_Off*。
+返回 _Off 的 *总和*  +  。
 
 ### <a name="example"></a>示例
 
@@ -674,7 +675,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a><a name="operator-"></a>操作员
+## <a name="operator-"></a><a name="operator-"></a> 操作员
 
 从另一个迭代器中减去一个迭代器并返回差值。
 
@@ -690,7 +691,7 @@ Tdiff operator-(
     const reverse_iterator<RandomIterator2>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 迭代器。

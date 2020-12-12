@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：异常：从您自己的函数引发异常
 title: 异常：从您自己的函数引发异常
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: cdcdd63e84d4b375c44c2b89bf2d4f3285b0323c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5a9d789680eeba218370471b1259c8c664f3c3cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290461"
 ---
 # <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>异常：从您自己的函数引发异常
 
@@ -40,6 +41,6 @@ ms.locfileid: "87223182"
 > [!NOTE]
 > MFC 的默认异常处理仅适用于指向 `CException` 对象（和 `CException` 派生类的对象）的指针。 上面的例子将绕过 MFC 的异常机制。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [异常处理](exception-handling-in-mfc.md)

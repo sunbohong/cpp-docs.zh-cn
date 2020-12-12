@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _getdrives
 title: _getdrives
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - getdrives function
 - disk drives
 ms.assetid: 869bb51f-4209-4328-846e-3aadebaceb9c
-ms.openlocfilehash: 66940abc3f171b07f0816441709b1f4f9db88614
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77e73b1d63238b5f558fffdef0344fa5180c84ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913752"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289148"
 ---
 # <a name="_getdrives"></a>_getdrives
 
@@ -51,15 +52,15 @@ unsigned long _getdrives( void );
 
 ## <a name="return-value"></a>返回值
 
-如果函数成功，则返回值是一个表示当前可用的磁盘驱动器的位掩码。 位位置 0（最低有效位）是驱动器 A，位位置 1 是驱动器 B，位位置 2 是驱动器 C，依此类推。 如果函数失败，则返回值为零。 若要获取扩展的错误信息，请调用**GetLastError**。
+如果函数成功，则返回值是一个表示当前可用的磁盘驱动器的位掩码。 位位置 0（最低有效位）是驱动器 A，位位置 1 是驱动器 B，位位置 2 是驱动器 C，依此类推。 如果函数失败，则返回值为零。 要获得更多的错误信息，请调用 GetLastError。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_getdrives**|\<direct.h>|
 
@@ -111,6 +112,6 @@ D:
 E:
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)<br/>
+[目录控件](../../c-runtime-library/directory-control.md)<br/>

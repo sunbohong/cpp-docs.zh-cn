@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CXMLAccessor 类
 title: CXMLAccessor 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 36419e85554982d1c3784d0d73663b48cc820b6d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30725f47add9f9b965fe36226a366342988275e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845622"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287692"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 类
 
@@ -45,12 +46,12 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetXMLColumnData](#getxmlcolumndata)|检索列信息。|
 |[GetXMLRowData](#getxmlrowdata)|按行检索表的全部内容。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 但是， `CXMLAccessor` 与中的不同之处在于， `CDynamicStringAccessorW` 它会将从数据存储访问的所有数据转换为 XML 格式的数据 (标记) 的数据。 这对于输出到 XML 感知网页尤为有用。 XML 标记名称将与数据存储区的列名尽可能匹配。
 
@@ -72,7 +73,7 @@ class CXMLAccessor : public CDynamicStringAccessorW
 HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *strOutput*<br/>
 弄对包含要检索的列类型信息的字符串缓冲区的引用。 此字符串的格式为与数据存储区的列名称匹配的 XML 标记名称。
@@ -81,7 +82,7 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 下面说明如何在 XML 中设置列类型信息的格式。 `type` 指定列的数据类型。 请注意，数据类型基于 OLE DB 数据类型，而不是所访问的数据库的类型。
 
@@ -102,7 +103,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
    bool bAppend = false) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *strOutput*<br/>
 弄对包含要检索的表数据的缓冲区的引用。 数据的格式为字符串数据，XML 标记名称与数据存储区的列名称相匹配。
@@ -114,7 +115,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 下面说明如何在 XML 中设置行数据的格式。 `DATA` 以下表示行数据。 使用 move 方法可移到所需的行。
 
@@ -124,7 +125,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 `</row>`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

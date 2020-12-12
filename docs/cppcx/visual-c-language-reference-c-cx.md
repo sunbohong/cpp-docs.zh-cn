@@ -1,13 +1,14 @@
 ---
+description: 了解更多： c + +/CX 语言参考
 title: C + +/CX 语言参考
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: f28270ace3965a3cf89e250a873af14e48390708
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: ac72abeb84c656ce0ab9569ad5c944ea61b7d646
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507417"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288030"
 ---
 # <a name="ccx-language-reference"></a>C + +/CX 语言参考
 
@@ -28,7 +29,7 @@ C + +/CX 是 c + + 语言的一组扩展，使你能够在尽可能接近现代 
 
 ## <a name="related-articles"></a>相关文章
 
-| 链接 | 说明 |
+| 链接 | 描述 |
 |--|--|
 | [快速参考](../cppcx/quick-reference-c-cx.md) | C + +/CX 的关键字和运算符表 |
 | [类型系统](../cppcx/type-system-c-cx.md) | 介绍基本 c + +/CX 类型和编程构造，以及如何利用 c + +/CX 来使用和创建 Windows 运行时类型。 |

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：异常：捕获和删除异常
 title: 异常：捕捉和删除异常
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 5c1edd4c5d31d9a0e8e5270d074d25b5dd129a0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 01f018694d211b4b60acc92c4121614d14769d6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87184242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97290734"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>异常：捕捉和删除异常
 
-下列说明和示例演示如何捕获和删除异常。 有关 **`try`** 、和关键字的详细信息 **`catch`** **`throw`** ，请参阅[异常和错误处理的新式 c + + 最佳实践](../cpp/errors-and-exception-handling-modern-cpp.md)。
+下列说明和示例演示如何捕获和删除异常。 有关 **`try`** 、和关键字的详细信息 **`catch`** **`throw`** ，请参阅 [异常和错误处理的新式 c + + 最佳实践](../cpp/errors-and-exception-handling-modern-cpp.md)。
 
 你的异常处理程序必须删除其处理的异常对象，因为如果未删除异常将导致在代码捕获异常时出现内存泄漏。
 
@@ -49,8 +50,8 @@ ms.locfileid: "87184242"
 
    [!code-cpp[NVC_MFCExceptions#5](codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-有关详细信息，请参阅[异常：从 MFC 异常宏转换](exceptions-converting-from-mfc-exception-macros.md)。
+有关详细信息，请参阅 [异常：从 MFC 异常宏转换](exceptions-converting-from-mfc-exception-macros.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [异常处理](exception-handling-in-mfc.md)

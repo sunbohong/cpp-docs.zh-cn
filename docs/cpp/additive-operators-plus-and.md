@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：加法运算符： + 和-
 title: 加法运算符：+ 和 -
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-ms.openlocfilehash: 2601debb0a21c4ab9cdcedb25b26085a1aff0a1b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f87a8682b6f282668c168262cd28230745cb4402
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370197"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288368"
 ---
 # <a name="additive-operators--and--"></a>加法运算符：+ 和 -
 
@@ -32,39 +33,39 @@ expression - expression
 
 相加运算符为：
 
-- 加法**+**（ ）
+- 加法 (**+**) 
 
-- 减法**-**（ ）
+- 减法 (**-**) 
 
 这些二进制运算符具有从左至右的关联性。
 
-相加运算符采用算术或指针类型的操作数。 添加 （**+**） 运算符的结果是操作数的总和。 减法 （**-**） 运算符的结果是操作数之间的差异。 如果一个操作数是指针或两个操作数都是指针，则它们必须是指向对象的指针，而不是指向函数的指针。 如果两个操作数都是指针，则结果没有意义，除非它们是指向同一数组中的对象的指针。
+相加运算符采用算术或指针类型的操作数。 加法 () 运算符的结果 **+** 是操作数之和。 减法 () 运算符的结果 **-** 是操作数之差。 如果一个操作数是指针或两个操作数都是指针，则它们必须是指向对象的指针，而不是指向函数的指针。 如果两个操作数都是指针，则结果没有意义，除非它们是指向同一数组中的对象的指针。
 
-加法运算符采用*算术*、*积分*和*标量*类型的操作数。 下表定义了这些操作数。
+加法运算符采用 *算术*、 *整型* 和 *标量* 类型的操作数。 下表定义了这些操作数。
 
 ### <a name="types-used-with-additive-operators"></a>用于相加运算符的类型
 
 |类型|含义|
 |----------|-------------|
-|*算法*|整型和浮点类型统称为“算术”类型。|
-|*积分*|所有大小（long、short）和枚举数的 char 和 int 类型为“整数”类型。|
+|*算术*|整型和浮点类型统称为“算术”类型。|
+|*或缺*|所有大小（long、short）和枚举数的 char 和 int 类型为“整数”类型。|
 |*标量 (scalar)*|标量操作数是算术类型或指针类型的操作数。|
 
 这些运算符的合法组合为：
 
-*算术* + *arithmetic*
+*算术*  + *算术*
 
-*标量* + *积分*
+*标量*  + *整型*
 
-*整体* + *标量*
+*整型*  + *标量*
 
-*算术* - *arithmetic*
+*算术*  - *算术*
 
-*黄* - *牛标量*
+*标量*  - *标量*
 
 请注意，加法和减法不是等效运算。
 
-如果两个操作数都是算术类型，则[标准转换](standard-conversions.md)中介绍的转换将应用于操作数，并且结果是转换的类型。
+如果两个操作数都是算术类型，则 [标准转换](standard-conversions.md) 中涵盖的转换适用于操作数，并且结果为转换后的类型。
 
 ## <a name="example"></a>示例
 
@@ -109,12 +110,12 @@ for( int i = 0; i < 10; ++i )
 
 ## <a name="pointer-subtraction"></a>指针减法
 
-如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式生成类型`ptrdiff_t`的签名积分结果（在标准中定义，包括文件\<stddef.h>）。
+如果两个操作数都是指针，则减法运算的结果就是两个操作数之差（在数组元素中）。 减法表达式生成 `ptrdiff_t` 标准包含文件) 中定义 (类型的有符号整数结果 \<stddef.h> 。
 
-其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 减法的值是指向 *（n* - *i*） th 数组元素的指针，其中*n*是原始指针指向的元素 *，i*是第二个操作数的整数值。
+其中一个操作数可以是整型，条件是该操作数是第二操作数。 减法的结果的类型与原始指针的类型相同。 减法的值是指向 (*n*  -  *i*) 的数组元素的指针，其中 *n* 是原始指针指向的元素，而 *i* 是第二个操作数的整数值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[具有二进制运算符的表达式](../cpp/expressions-with-binary-operators.md)<br/>
+[带有二元运算符的表达式](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[C 添加剂运算符](../c-language/c-additive-operators.md)
+[C 加法运算符](../c-language/c-additive-operators.md)

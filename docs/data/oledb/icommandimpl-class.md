@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ICommandImpl 类
 title: ICommandImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 2f2d3938d63e5e67fc501d52d269c06f6b144ac8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 62066d689e51a8ca8a71bb8120199c05ed2811d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501823"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287380"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 类
 
@@ -69,7 +70,7 @@ template <class T, class CommandBase = ICommand>
 class ATL_NO_VTABLE ICommandImpl : public CommandBase
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `ICommandImpl` 。
@@ -85,7 +86,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[取消](#cancel)|取消当前命令执行。|
 |[CancelExecution](#cancelexecution)|取消当前命令执行。|
@@ -96,13 +97,13 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_bCancel](#bcancel)|指示是否要取消该命令。|
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|指示是否要在执行时取消该命令。|
 |[m_bIsExecuting](#bisexecuting)|指示命令当前是否正在执行。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 命令对象的必需接口。
 
@@ -118,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>备注
 
-请参阅*OLE DB 程序员参考*中的[ICommand：： Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommand：： Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 。
 
 ## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a> ICommandImpl：： CancelExecution
 
@@ -146,7 +147,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
    RowsetClass*& pRowsetObj);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *RowsetClass*<br/>
 表示用户的行集类的模板类成员。 通常由向导生成。
@@ -167,17 +168,17 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 [in/out]对应于中的 *ppRowset* `ICommand::Execute` 。
 
 *pRowsetObj*<br/>
-弄指向行集对象的指针。 通常不使用此参数，但如果必须在将其传递给 COM 对象之前对行集执行更多工作，则可以使用此参数。 *PRowsetObj*的生存期由*ppRowset*绑定。
+弄指向行集对象的指针。 通常不使用此参数，但如果必须在将其传递给 COM 对象之前对行集执行更多工作，则可以使用此参数。 *PRowsetObj* 的生存期由 *ppRowset* 绑定。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。 `ICommand::Execute`有关典型值的列表，请参阅。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 若要创建多个行集，或提供自己的条件来创建不同的行集，请在中对进行不同 `CreateRowset` 的调用 `Execute` 。
 
-请参阅*OLE DB 程序员参考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
 ## <a name="icommandimplexecute"></a><a name="execute"></a> ICommandImpl：： Execute
 
@@ -193,11 +194,11 @@ HRESULT Execute(IUnknown* pUnkOuter,
    IUnknown** ppRowset);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请求的传出接口将是从该函数创建的行集对象获取的接口。
 
@@ -214,11 +215,11 @@ STDMETHOD (GetDBSession) (REFIID riid,
    IUnknown** ppSession);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommand：： GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommand：： GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于从会话中检索属性很有用。
 

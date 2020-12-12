@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： srand
 title: srand
 ms.date: 4/2/2020
 api_name:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.openlocfilehash: 3f6f97ad9a3bd0d7e4e88ad1797d369f012bbe5e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bea91841b549fae09faa4345767fc22cf4d6208e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913599"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292165"
 ---
 # <a name="srand"></a>srand
 
-设置**rand**函数使用的伪随机数生成器的起始种子值。
+设置 **rand** 函数使用的伪随机数生成器的起始种子值。
 
 ## <a name="syntax"></a>语法
 
@@ -53,20 +54,20 @@ void srand(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-seed <br/>
+seed<br/>
 伪随机数生成的种子
 
 ## <a name="remarks"></a>备注
 
-**Srand**函数设置在当前线程中生成一系列伪随机整数的起点。 若要重新初始化生成器以创建相同的结果序列，请调用**srand**函数并再次使用同一*种子*参数。 *种子*的任何其他值将生成器设置为伪随机序列中的另一个起点。 **rand**检索生成的伪随机数。 在调用**srand**之前调用**rand**会生成与调用**srand**时的序列相同的序列，并将*seed*作为1传递。
+**Srand** 函数设置在当前线程中生成一系列伪随机整数的起点。 若要重新初始化生成器以创建相同的结果序列，请调用 **srand** 函数并再次使用同一 *种子* 参数。 *种子* 的任何其他值将生成器设置为伪随机序列中的另一个起点。 **rand** 检索生成的伪随机数。 在调用 **srand** 之前调用 **rand** 会生成与调用 **srand** 时的序列相同的序列，并将 *seed* 作为1传递。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**srand**|\<stdlib.h>|
 
@@ -76,7 +77,7 @@ seed <br/>
 
 请参阅 [rand](rand.md) 的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [rand](rand.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IAccessorImpl 类
 title: IAccessorImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: 356278b316912bdb81f1c43bbf2034f00ec3d785
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e7b2c2ea7192ec0fdb8c943ce4062ada0b1f0504
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845609"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97287406"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl 类
 
@@ -56,7 +57,7 @@ template <class T,
 class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 行集或命令对象类。
@@ -75,20 +76,20 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[IAccessorImpl](#iaccessorimpl)|构造函数。|
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddRefAccessor](#addrefaccessor)|向现有的访问器添加引用数。|
 |[CreateAccessor](#createaccessor)|从一组绑定创建访问器。|
 |[GetBindings](#getbindings)|返回访问器中的绑定。|
 |[ReleaseAccessor](#releaseaccessor)|释放访问器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 这对于行集和命令是必需的。 OLE DB 要求提供程序实现 HACCESSOR，它是 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) 结构数组的标记。 提供的 HACCESSORs `IAccessorImpl` 是结构的地址 `BindType` 。 默认情况下， `BindType` 定义为 `ATLBINDINGS` 中 `IAccessorImpl` 的模板定义。 `BindType` 提供了一种机制 `IAccessorImpl` ，用于跟踪其数组中的元素数，以及 `DBBINDING` 引用计数和访问器标志。
 
@@ -113,9 +114,9 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
    DBREFCOUNT* pcRefCount);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IAccessor：： AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IAccessor：： AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) 。
 
 ## <a name="iaccessorimplcreateaccessor"></a><a name="createaccessor"></a> IAccessorImpl：： CreateAccessor
 
@@ -132,9 +133,9 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
    DBBINDSTATUS rgStatus[]);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IAccessor：： CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IAccessor：： CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) 。
 
 ## <a name="iaccessorimplgetbindings"></a><a name="getbindings"></a> IAccessorImpl：： GetBindings
 
@@ -149,9 +150,9 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
    DBBINDING** prgBindings);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IAccessor：： GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IAccessor：： GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) 。
 
 ## <a name="iaccessorimplreleaseaccessor"></a><a name="releaseaccessor"></a> IAccessorImpl：： ReleaseAccessor
 
@@ -164,11 +165,11 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
    DBREFCOUNT* pcRefCount);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IAccessor：： ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IAccessor：： ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

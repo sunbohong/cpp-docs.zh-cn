@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：分配
 title: allocate
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: 0bf31423cd76c838cbeffa7458bbccb89592bf43
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0a30b113ca9271dc53777073ea0a80bac0f16bcb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288277"
 ---
 # <a name="allocate"></a>allocate
 
@@ -26,7 +27,7 @@ ms.locfileid: "87227616"
 
 ## <a name="remarks"></a>备注
 
-必须使用以下杂注之一声明名称*segname* ：
+必须使用以下杂注之一声明名称 *segname* ：
 
 - [code_seg](../preprocessor/code-seg.md)
 

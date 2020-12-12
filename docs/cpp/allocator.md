@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： `allocator`
 title: 分配器
 ms.date: 03/21/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: a26cf4d2b79d64ddc9f0b60982d778e33d0f200a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20ca879259c49f01f5283a867b4e562cfddcc058
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288264"
 ---
 # `allocator`
 
 **Microsoft 专用**
 
-**`allocator`** 声明说明符可应用于自定义内存分配函数，以使分配可通过 Windows 事件跟踪（ETW）来查看。
+**`allocator`** 可以将声明说明符应用于自定义内存分配函数，以便通过 Windows (ETW) 的事件跟踪使分配可见。
 
 ## <a name="syntax"></a>语法
 
@@ -31,6 +32,6 @@ Visual Studio 中的本机内存探查器的工作原理是在运行时收集发
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-有关详细信息，请参阅[在 Visual Studio 中度量内存使用情况](/visualstudio/profiling/memory-usage)和[自定义本机 ETW 堆事件](/visualstudio/profiling/custom-native-etw-heap-events)。
+有关详细信息，请参阅 [在 Visual Studio 中度量内存使用情况](/visualstudio/profiling/memory-usage) 和 [自定义本机 ETW 堆事件](/visualstudio/profiling/custom-native-etw-heap-events)。
 
 **结束 Microsoft 专用**

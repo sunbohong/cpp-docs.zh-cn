@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： iterator_traits 结构
 title: iterator_traits 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ac97b84ff7bcedc00f2b069ce05f734ac65618ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289674"
 ---
 # <a name="iterator_traits-struct"></a>iterator_traits 结构
 
@@ -35,19 +36,19 @@ struct iterator_traits {
 
 此模板结构定义成员类型
 
-- `iterator_category`： `Iterator::iterator_category` 的同义词。
+- `iterator_category`：的同义词 `Iterator::iterator_category` 。
 
-- `value_type`： `Iterator::value_type` 的同义词。
+- `value_type`：的同义词 `Iterator::value_type` 。
 
-- `difference_type`： `Iterator::difference_type` 的同义词。
+- `difference_type`：的同义词 `Iterator::difference_type` 。
 
-- `distance_type`： `Iterator::difference_type.` 的同义词
+- `distance_type`：一个同义词，用于 `Iterator::difference_type.`
 
-- `pointer`： `Iterator::pointer` 的同义词。
+- `pointer`：的同义词 `Iterator::pointer` 。
 
-- `reference`： `Iterator::reference` 的同义词。
+- `reference`：的同义词 `Iterator::reference` 。
 
-部分专用化确定**与类型** <strong>\*</strong>或**常量类型** <strong>\*</strong>的对象指针关联的关键类型。
+部分专用化确定 **与类型为** 类型 <strong>\*</strong> 或 **const 类型** 的对象指针关联的关键类型 <strong>\*</strong> 。
 
 在此实现中，还可使用几个不会使用部分专用化的模板函数：
 
@@ -118,12 +119,12 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<iterator>
+**标头：**\<iterator>
 
 **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
 [\<iterator>](../standard-library/iterator.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

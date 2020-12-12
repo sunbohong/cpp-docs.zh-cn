@@ -1,14 +1,15 @@
 ---
+description: '了解详细信息： (c + + 的通用 Windows 应用) '
 title: 通用 Windows 应用 (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: overview
-ms.openlocfilehash: 45d02a5ab923ee46da97d78a1e5ceb2f4313352a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ef107311ce2e8ec1b7c33bad42edfd3fbee358eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841669"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288138"
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 应用 (C++)
 
@@ -41,7 +42,7 @@ ms.locfileid: "88841669"
 
 Windows 运行时 c + + 模板库提供低级别的 COM 接口，ISO c + + 代码可通过该接口在无异常环境中访问 Windows 运行时。 在大多数情况下，我们建议你使用 c + +/WinRT 或 c + +/CX，而不是使用适用于 UWP 应用开发的 Windows 运行时 c + + 模板库。 有关 Windows 运行时 c + + 模板库的信息，请参阅 [Windows 运行时 c + + 模板库 (WRL) ](wrl/windows-runtime-cpp-template-library-wrl.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 [C + + 中的 Windows 编程概述](../windows/overview-of-windows-programming-in-cpp.md)<br/>

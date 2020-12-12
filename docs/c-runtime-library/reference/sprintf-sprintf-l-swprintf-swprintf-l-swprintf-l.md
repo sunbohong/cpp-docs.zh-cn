@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 ms.date: 06/23/2020
 api_name:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: da3c5b3660b481fd3a7140adbc236f44cd51f37e
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 12c7560a57c126e2e35cf78b0d11b1262c14a9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97292203"
 ---
 # <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
@@ -131,18 +132,18 @@ argument <br/>
 
 写入的字符数; 如果出现错误，则为-1。 如果 *缓冲区* 或 *格式* 为 null 指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
-**sprintf** 返回 *缓冲区*中存储的字节数，不包括终止 null 字符。 **swprintf** 返回存储在 *缓冲区*中的宽字符数，不包括终止 null 宽字符。
+**sprintf** 返回 *缓冲区* 中存储的字节数，不包括终止 null 字符。 **swprintf** 返回存储在 *缓冲区* 中的宽字符数，不包括终止 null 宽字符。
 
 ## <a name="remarks"></a>备注
 
-**Sprintf**函数将一系列字符和值存储到*缓冲区*中。 如果任何) 根据*格式*规范的相应格式规范进行转换和输出，则每个*参数* (。 该格式包括普通字符，其形式和函数与[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*参数相同。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Sprintf** 函数将一系列字符和值存储到 *缓冲区* 中。 如果任何) 根据 *格式* 规范的相应格式规范进行转换和输出，则每个 *参数* (。 该格式包括普通字符，其形式和函数与 [printf](printf-printf-l-wprintf-wprintf-l.md)的 *format* 参数相同。 null 字符追加在写入的最后一个字符后。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
 > [!IMPORTANT]
-> 使用 **sprintf**，无法限制写入的字符数，这意味着使用 **sprintf** 的代码容易受到缓冲区溢出的影响。 请考虑使用相关的函数 [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，该函数指定要写入 *缓冲区*的最大字符数，或使用 [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) 确定缓冲区大小。 此外，请确保该 *格式* 不是用户定义的字符串。
+> 使用 **sprintf**，无法限制写入的字符数，这意味着使用 **sprintf** 的代码容易受到缓冲区溢出的影响。 请考虑使用相关的函数 [_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，该函数指定要写入 *缓冲区* 的最大字符数，或使用 [_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md) 确定缓冲区大小。 此外，请确保该 *格式* 不是用户定义的字符串。
 
-**swprintf** 是 **sprintf**的宽字符版本; **swprintf** 的指针参数是宽字符字符串。 **Swprintf**中的编码错误检测可能与**sprintf**不同。 **swprintf** 和 **fwprintf** 的行为相同，只是 **swprintf** 将输出写入字符串而不是类型 **文件**的目标，而 **swprintf** 要求使用 *count* 参数来指定要写入的最大字符数。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+**swprintf** 是 **sprintf** 的宽字符版本; **swprintf** 的指针参数是宽字符字符串。 **Swprintf** 中的编码错误检测可能与 **sprintf** 不同。 **swprintf** 和 **fwprintf** 的行为相同，只是 **swprintf** 将输出写入字符串而不是类型 **文件** 的目标，而 **swprintf** 要求使用 *count* 参数来指定要写入的最大字符数。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-**swprintf**符合 ISO C 标准，该标准需要**size_t**类型的第二个参数*count*。 若要强制使用旧的非标准行为，请定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未来版本中，可能会删除旧行为，因此应将代码更改为使用新的符合标准行为。
+**swprintf** 符合 ISO C 标准，该标准需要 **size_t** 类型的第二个参数 *count*。 若要强制使用旧的非标准行为，请定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未来版本中，可能会删除旧行为，因此应将代码更改为使用新的符合标准行为。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 

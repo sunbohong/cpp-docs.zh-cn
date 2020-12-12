@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： time_base 类
 title: time_base 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: ddaf9905e859c062031940d35adfa2a3393dbb5a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: cad27546109cf8ed6d8314869a3306f238cc6528
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289564"
 ---
 # <a name="time_base-class"></a>time_base 类
 
-类用作类模板 time_get 的各个方面的基类，只定义枚举类型 `dateorder` 和此类型的几个常量。
+类作为类模板 time_get 的各个方面的基类，只定义枚举类型 `dateorder` 和此类型的几个常量。
 
 ## <a name="syntax"></a>语法
 
@@ -44,16 +45,16 @@ public:
 
 - `mdy` 指定订单 month，day，then year，如1979年12月2日。
 
-- `ymd` 指定订单 year、month 和 day，如1979/12/2 中所示。
+- `ymd` 指定订单 year、month 和 day，如1979/12/2。
 
-- `ydm` 指定订单 year、day、then 月份，如1979年12月。
+- `ydm` 指定订单 year，day，then month，如1979：12十二月。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

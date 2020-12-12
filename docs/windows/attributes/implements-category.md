@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： implements_category
 title: 'implements_category (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: cd9a4de8834bc22368393e9ea4639884785af0f2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0efc240394c67ab7d470523b8dfe5025b7a0f978
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97289538"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -23,12 +24,12 @@ ms.locfileid: "88846116"
 [ implements_category(implements_category="uuid") ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *implements_category*<br/>
 已实现类别的 ID。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Implements_category** c + + 特性指定由目标类实现的组件类别。 这是通过创建类别映射并添加由 **implements_category** 属性指定的单独条目来完成的。 有关详细信息，请参阅 [组件类别及其工作原理](/windows/win32/com/component-categories-and-how-they-work)。
 
@@ -62,7 +63,7 @@ class CMyClass {};
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>
