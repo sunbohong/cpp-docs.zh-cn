@@ -1,13 +1,14 @@
 ---
+description: 了解更多：跨平台移动开发示例
 title: 跨平台移动开发示例
 ms.date: 10/17/2019
 ms.assetid: bc384c12-fccc-45d7-9fb9-b90d536aa663
-ms.openlocfilehash: 0c2e40be96bd0efdad608daaab973c34e8c90495
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 4577791a21fc7340414df1e03eea320c094661f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319256"
 ---
 # <a name="cross-platform-mobile-development-examples"></a>跨平台移动开发示例
 
@@ -41,6 +42,6 @@ ms.locfileid: "79470015"
 
    此示例是 Android NDK test-libstdc++ 示例的端口，专用于 Visual Studio。 此示例是开发人员了解如何使用标准库的良好开端。
 
-  若要在 Visual Studio 中打开其中一个示例，请下载 zip 文件并在资源管理器中打开所下载文件的“属性” 页。 选择“解除阻止” 按钮，然后选择“确定”。 将 zip 文件的内容解压缩到一个方便的位置，然后在解压缩后的示例中打开 C++ 文件夹，并打开解决方案文件。
+  若要在 Visual Studio 中打开其中一个示例，请下载 zip 文件并在资源管理器中打开所下载文件的“属性”  页。 选择“解除阻止”  按钮，然后选择“确定” 。 将 zip 文件的内容解压缩到一个方便的位置，然后在解压缩后的示例中打开 C++ 文件夹，并打开解决方案文件。
 
-  若要生成示例，请按 F7，或在菜单栏上依次选择“生成”、“生成解决方案”。
+  若要生成示例，请按 **F7**，或在菜单栏上，依次选择 " **生成**"、" **生成解决方案**"。

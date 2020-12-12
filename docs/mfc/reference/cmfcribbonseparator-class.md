@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCRibbonSeparator 类
 title: CMFCRibbonSeparator 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: f435dc5ae8821a6d5626af2f93710a1672fd374c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: db8e7f92089d1e6332fdb2ad057398c465c72f97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321743"
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 类
 
@@ -43,13 +44,13 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|构造 `CMFCRibbonSeparator` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|将分隔符添加到 "**自定义**" 对话框的 "**命令**" 列表中。  (重写 [CMFCRibbonBaseElement：： AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox)。 ) |
 |`CMFCRibbonSeparator::CreateObject`|由框架用于创建此类类型的动态实例。|
@@ -57,7 +58,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CMFCRibbonSeparator：： CopyFrom](#copyfrom)|一种从另一个对象设置分隔符的成员变量的复制方法。|
 |[CMFCRibbonSeparator：： GetRegularSize](#getregularsize)|返回分隔符的大小。|
@@ -66,7 +67,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 |[CMFCRibbonSeparator：： OnDraw](#ondraw)|由系统调用，用于在功能区或快速访问工具栏上绘制分隔符。|
 |[CMFCRibbonSeparator::OnDrawOnList](#ondrawonlist)|由系统调用，用于在 **命令** 列表中绘制分隔符。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 功能区分隔符是以逻辑方式分隔功能区元素的垂直或水平线条。 可以在功能区控件、主应用程序菜单、功能区状态栏和快速访问工具栏上绘制分隔符。
 
@@ -105,7 +106,7 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndListBox*<br/>
 中指向添加了分隔符的 **命令** 列表的指针。
@@ -115,7 +116,7 @@ virtual int AddToListBox(
 
 ### <a name="return-value"></a>返回值
 
-*PWndListBox*指定的列表框中的字符串的从零开始的索引。
+*PWndListBox* 指定的列表框中的字符串的从零开始的索引。
 
 ## <a name="cmfcribbonseparatorcmfcribbonseparator"></a><a name="cmfcribbonseparator"></a> CMFCRibbonSeparator::CMFCRibbonSeparator
 
@@ -125,12 +126,12 @@ virtual int AddToListBox(
 CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIsHoriz*<br/>
 中如果为 TRUE，则分隔符为水平;如果为 FALSE，则分隔符是垂直的。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在应用程序菜单中使用水平分隔符。 在工具栏中使用垂直分隔符。
 
@@ -148,7 +149,7 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *源*<br/>
 中要从中进行复制的源功能区元素。
@@ -161,7 +162,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 virtual CSize GetRegularSize(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备内容的指针。
@@ -194,7 +195,7 @@ virtual BOOL IsTabStop() const;
 
 对于此类始终为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 功能区分隔符不是制表位。
 
@@ -206,7 +207,7 @@ virtual BOOL IsTabStop() const;
 virtual void OnDraw(CDC* pDC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向设备上下文的指针。
@@ -225,7 +226,7 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*\
 中指向设备上下文的指针。
@@ -245,7 +246,7 @@ virtual void OnDrawOnList(
 *bHighlighted*\
 中掉.
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

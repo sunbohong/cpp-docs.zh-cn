@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： Clang 链接器属性 (Android c + +) '
 title: Clang 链接器属性 (Android C++)
 ms.date: 10/23/2017
 ms.assetid: 66e88848-116c-4eb0-bc57-183394d35b57
@@ -25,16 +26,16 @@ f1_keywords:
 - VC.Project.VCLinkerTool.Clang.AdditionalOptionsPage
 - VC.Project.VCLinkerTool.Clang.AdditionalDependencies
 - VC.Project.VCLinkerTool.Clang.LibraryDependencies
-ms.openlocfilehash: 55b944040157d13741b992f4ec66c35d1b117d95
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 65cbfb3d77dad3d78d8b343274d0fa65cf3ed457
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79470249"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319269"
 ---
 # <a name="clang-linker-properties-android-c"></a>Clang 链接器属性 (Android C++)
 
-| properties | 说明 | 选项 |
+| Property | 描述 | 选项 |
 |--|--|--|
 | 输出文件 | 该选项可重写链接器创建的程序的默认名称和位置。 (-o) |
 | 显示进度 | 打印链接器进度消息。 |
@@ -46,8 +47,8 @@ ms.locfileid: "79470249"
 | 报告未解析的符号引用 | 启用后，此选项将报告未解析的符号引用。 |
 | 优化内存使用率 | 如有必要，通过重读符号表优化内存使用率。 |
 | 忽略特定默认库 | 指定一个或多个要忽略的默认库的名称。 |
-| 强制符号引用 | 强制将符号作为未定义符号输入到输入文件中。 |
-| 调试器符号信息 | 输出文件中的调试程序符号信息。 | 全部包含<br /><br />忽略不需要的符号以进行重定位处理<br /><br />仅忽略调试器符号信息<br /><br />忽略所有符号信息 |
+| 强制符号引用 | 强制将符号作为未定义符号输入到输出文件中。 |
+| 调试程序符号信息 | 输出文件中的调试程序符号信息。 | **全部包括**<br /><br />忽略不需要的符号以进行重定位处理<br /><br />仅忽略调试器符号信息<br /><br />忽略所有符号信息 |
 | 打包调试器符号信息 | 在打包之前剥离调试器符号信息。  使用原始二进制文件的副本进行调试。 |
 | 映射文件名 | “映射”选项通知链接器使用用户指定的名称创建映射文件。 |
 | 重定位之后将变量标记为只读 | 此选项在重定位之后将变量标记为只读。 |
@@ -56,4 +57,4 @@ ms.locfileid: "79470249"
 | 整个存档 | 整个存档使用来自源和其他依赖项的所有代码。 |
 | 其他选项 | 附加选项。 |
 | 附加依赖项 | 指定要添加到链接命令行的附加项。 |
-| 库依赖项 | 此选项可指定要添加到链接器命令行的附加库。 其他库添加到链接器命令行的末尾，后者以*lib*开头 *，以* *结尾。*  (-lFILE) |
+| 库依赖项 | 此选项可指定要添加到链接器命令行的附加库。 其他库添加到链接器命令行的末尾，后者以 *lib* 开头 *，以**结尾。*  (-lFILE) |

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAccessor 类
 title: CAccessor 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-ms.openlocfilehash: 032274d7dc85aa823cd28cf61e4606903f13ad9e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 26b03bc3f464ce606194d6835953c39969bde5de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319165"
 ---
 # <a name="caccessor-class"></a>CAccessor 类
 
@@ -28,12 +29,12 @@ template <class T>
 class CAccessor : public CAccessorBase, public T
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 用户记录类。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 它在记录静态绑定到数据源时使用。 记录包含缓冲区。 此类对行集支持多个访问器。
 

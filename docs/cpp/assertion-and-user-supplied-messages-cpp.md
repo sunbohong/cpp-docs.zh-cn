@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下方面的详细信息：断言和 User-Supplied 消息 (c + +) '
 title: 断言和用户提供的消息 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-ms.openlocfilehash: a4861b3e1d17835f11f5e148d6b62051a6747f80
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb0dd5d94ffe49017ecb89f53063993bedd12382
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319559"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>断言和用户提供的消息 (C++)
 
-C + + 语言支持三个错误处理机制，可帮助您调试应用程序： [#error 指令](../preprocessor/hash-error-directive-c-cpp.md)、 [static_assert](../cpp/static-assert.md)关键字和[断言宏、_assert _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)宏。 所有的三种机制都会发出错误消息，其中两个还会测试软件断言。 软件断言指定在程序的某个特定点应满足的条件。 如果编译时断言失败，编译器将发出诊断消息和编译错误。 如果运行时断言失败，操作系统将发出诊断消息并关闭应用程序。
+C + + 语言支持三个错误处理机制，可帮助您调试应用程序： [#error 指令](../preprocessor/hash-error-directive-c-cpp.md)、 [static_assert](../cpp/static-assert.md) 关键字和 [断言宏、_assert _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 宏。 所有的三种机制都会发出错误消息，其中两个还会测试软件断言。 软件断言指定在程序的某个特定点应满足的条件。 如果编译时断言失败，编译器将发出诊断消息和编译错误。 如果运行时断言失败，操作系统将发出诊断消息并关闭应用程序。
 
 ## <a name="remarks"></a>备注
 
@@ -28,11 +29,11 @@ C + + 语言支持三个错误处理机制，可帮助您调试应用程序： [
 
    **`static_assert`** 声明对于调试模板特别有用，因为模板参数可以包含在用户指定的表达式中。
 
-- [断言宏 _assert，_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)宏在运行时生效。 它会计算用户指定的表达式，如果结果为零，系统将发出诊断消息并关闭应用程序。 许多其他宏（如[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)和 _ASSERTE）都与此宏类似，但会发出不同的系统定义或用户定义的诊断消息。
+- [断言宏 _assert，_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)宏在运行时生效。 它会计算用户指定的表达式，如果结果为零，系统将发出诊断消息并关闭应用程序。 许多其他宏（如[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 和 _ASSERTE）都与此宏类似，但会发出不同的系统定义或用户定义的诊断消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[#error 指令（C/c + +）](../preprocessor/hash-error-directive-c-cpp.md)<br/>
+[ (C/c + + 的 #error 指令) ](../preprocessor/hash-error-directive-c-cpp.md)<br/>
 [assert 宏、_assert、_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)<br/>
 [_ASSERT、_ASSERTE _ASSERT_EXPR 宏](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)<br/>
 [static_assert](../cpp/static-assert.md)<br/>

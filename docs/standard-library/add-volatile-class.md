@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： add_volatile 类
 title: add_volatile 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: e8c213a116ff7a7d4218179f0e944ac4f84a75e5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6f138c9009d127efe2d640124d9af1e114eb0732
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230267"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319864"
 ---
 # <a name="add_volatile-class"></a>add_volatile 类
 
@@ -28,14 +29,14 @@ template <class T>
 using add_volatile_t = typename add_volatile<T>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`add_volatile<T>` **`typedef`** `type` 如果*t*是引用、函数或可变限定类型，则实例的成员为*t* ，否则为 **`volatile`** *t*。别名 `add_volatile_t` 是访问成员的快捷方式 **`typedef`** `type` 。
+`add_volatile<T>` **`typedef`** `type` 如果 *t* 是引用、函数或可变限定类型，则实例的成员为 *t* ，否则为 **`volatile`** *t*。别名 `add_volatile_t` 是访问成员的快捷方式 **`typedef`** `type` 。
 
 ## <a name="example"></a>示例
 
@@ -65,7 +66,7 @@ add_volatile<int> == int
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](type-traits.md)\
 [remove_volatile 类](remove-volatile-class.md)

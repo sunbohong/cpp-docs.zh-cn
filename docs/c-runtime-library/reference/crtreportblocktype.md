@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CrtReportBlockType
 title: _CrtReportBlockType
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _BLOCK_SUBTYPE macro
 - BLOCK_TYPE macro
 ms.assetid: 0f4b9da7-bebb-4956-9541-b2581640ec6b
-ms.openlocfilehash: 1fccb66632e832b491832cfac12fb1940bdf0f87
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b05b7fe73896068a05368df001ca5c80fedfb69a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319614"
 ---
 # <a name="_crtreportblocktype"></a>_CrtReportBlockType
 
@@ -48,20 +49,20 @@ int _CrtReportBlockType(
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBlock*<br/>
 指向有效调试堆块的指针。
 
 ## <a name="return-value"></a>返回值
 
-传递有效的调试堆指针时， **_CrtReportBlockType**函数将以形式返回块类型和子类型 **`int`** 。 当传递了无效的指针时，该函数返回 -1。
+传递有效的调试堆指针时， **_CrtReportBlockType** 函数将以形式返回块类型和子类型 **`int`** 。 当传递了无效的指针时，该函数返回 -1。
 
 ## <a name="remarks"></a>备注
 
-若要提取 **_CrtReportBlockType**返回的类型和子类型，请在返回值上使用宏 **_BLOCK_TYPE**和 **_BLOCK_SUBTYPE** （都在 crtdbg.h 中定义）。
+若要提取 **_CrtReportBlockType** 返回的类型和子类型，请使用宏 **_BLOCK_TYPE** 并在返回值上) 定义 **_BLOCK_SUBTYPE** (。
 
-有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。
+有关分配块类型及其使用方式的信息，请参阅 [调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 
@@ -134,7 +135,7 @@ Data: <          > CD CD CD CD CD CD CD CD CD CD
 Object dump complete.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_CrtDoForAllClientObjects](crtdoforallclientobjects.md)<br/>
 [_CrtSetDumpClient](crtsetdumpclient.md)<br/>

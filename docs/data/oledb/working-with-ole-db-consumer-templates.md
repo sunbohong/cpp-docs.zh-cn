@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：使用 OLE DB 使用者模板
 title: 使用 OLE DB 使用者模板
 ms.date: 10/24/2018
 helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 62d4920ab38cf960a3dec0bf8845016a42d798a9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319074"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 使用者模板
 
@@ -18,15 +19,15 @@ ms.locfileid: "80209256"
 
 - [使用数据库特性简化数据访问](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
-- [向导生成的访问器中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
+- [Wizard-Generated 访问器中的字段状态数据成员](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
 
-- [遍历简单行集合](../../data/oledb/traversing-a-simple-rowset.md)
+- [遍历简单行集](../../data/oledb/traversing-a-simple-rowset.md)
 
 - [发出参数化查询](../../data/oledb/issuing-a-parameterized-query.md)
 
 - [提取数据](../../data/oledb/fetching-data.md)
 
-- [更新行集合](../../data/oledb/updating-rowsets.md)
+- [更新行集](../../data/oledb/updating-rowsets.md)
 
 - [使用存储过程](../../data/oledb/using-stored-procedures.md)
 
@@ -34,13 +35,13 @@ ms.locfileid: "80209256"
 
 - [用架构行集合获取元数据](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)
 
-- [在 OLE DB 中支持事务](../../data/oledb/supporting-transactions-in-ole-db.md)
+- [OLE DB 中的支持事务](../../data/oledb/supporting-transactions-in-ole-db.md)
 
 - [使用 OLE DB 记录视图](../../data/oledb/using-ole-db-record-views.md)
 
 - [使用现有 ADO 记录集](../../data/oledb/using-an-existing-ado-recordset.md)
 
-- [当另一个表包含行引用时更新列](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)
+- [当另一个表包含对该行的引用时更新列](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)
 
 - [使用书签](../../data/oledb/using-bookmarks.md)
 
@@ -48,7 +49,7 @@ ms.locfileid: "80209256"
 
 - [接收通知](../../data/oledb/receiving-notifications.md)
 
-有关创建和实现 OLE DB 使用者的示例，请参阅[创建简单使用者](../../data/oledb/creating-an-ole-db-consumer.md)。
+有关创建和实现 OLE DB 使用者的示例，请参阅 [创建简单使用者](../../data/oledb/creating-an-ole-db-consumer.md)。
 
 你还可以在以下示例中找到如何使用 OLE DB 使用者模板的示例：
 
@@ -58,6 +59,6 @@ ms.locfileid: "80209256"
 
 - [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

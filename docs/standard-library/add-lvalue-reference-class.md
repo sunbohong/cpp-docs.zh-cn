@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： add_lvalue_reference 类
 title: add_lvalue_reference 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 5f822e3393853c780bfe4ee86d5a5c799ec7646d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 07bbfb96241b12c409b8754bdb4854e994c65cc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319904"
 ---
 # <a name="add_lvalue_reference-class"></a>add_lvalue_reference 类
 
@@ -27,14 +28,14 @@ template <class T>
 using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-如果*t*是左值引用，则类型修饰符的实例保留*修改后的*类型，否则为 `T&` 。
+如果 *t* 是左值引用，则类型修饰符的实例保留 *修改后的* 类型，否则为 `T&` 。
 
 ## <a name="example"></a>示例
 
@@ -65,7 +66,7 @@ add_lvalue_reference_t<int> == int
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](type-traits.md)\
 [remove_reference 类](remove-reference-class.md)

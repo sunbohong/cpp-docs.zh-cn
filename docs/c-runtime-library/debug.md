@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： _DEBUG
 title: _DEBUG
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DEBUG macro
 - _DEBUG macro
 ms.assetid: a9901568-4846-4731-a404-399d947e2e7a
-ms.openlocfilehash: 7b2599637d13641554b1410aacf0f0c43b89e979
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5882fa0e768ee3d3ea7e9f251ea05aa8ae174e1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321266"
 ---
 # <a name="_debug"></a>_DEBUG
 
@@ -18,6 +19,6 @@ ms.locfileid: "79443396"
 
 有关详细信息，请参阅 [CRT 调试方法](/visualstudio/debugger/crt-debugging-techniques)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[控制标志](../c-runtime-library/control-flags.md)
+[控件标志](../c-runtime-library/control-flags.md)

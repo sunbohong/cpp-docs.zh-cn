@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCRibbonLabel 类
 title: CMFCRibbonLabel 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0699e76dfe90b87cd813d18d076adf23f8512bee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375126"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321821"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 类
 
@@ -31,24 +32,24 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFC带标签：：CMFC带标签](#cmfcribbonlabel)|使用指定的文本字符串构造和初始`CMFCRibbonLabel`化对象。|
+|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|`CMFCRibbonLabel`使用指定的文本字符串构造并初始化一个对象。|
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`CMFCRibbonLabel::CreateObject`|由框架用于创建此类类型的动态实例。|
-|`CMFCRibbonLabel::GetThisClass`|框架用于获取指向与此类类型关联的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)对象的指针。|
-|[CMFC 功能标签：：设置ACC数据](#setaccdata)|确定当前功能区标签元素的辅助功能数据。 （覆盖[CMFC 功能按钮：设置ACC数据](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).）|
+|`CMFCRibbonLabel::GetThisClass`|由框架用于获取指向与此类类型相关联的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 对象的指针。|
+|[CMFCRibbonLabel：： SetACCData](#setaccdata)|确定当前功能区标签元素的辅助功能数据。  (重写 [CMFCRibbonButton：： SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)。 ) |
 
 ### <a name="remarks"></a>备注
 
-创建功能区标签后，请调用[CMFC 功能面板：：：添加](../../mfc/reference/cmfcribbonpanel-class.md#add)，将其添加到面板中。
+创建功能区标签之后，通过调用 [CMFCRibbonPanel：： add](../../mfc/reference/cmfcribbonpanel-class.md#add)将其添加到面板。
 
-不能向"快速访问"工具栏添加功能区标签。
+不能将功能区标签添加到快速访问工具栏。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,11 +63,11 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxRibbonLabel.h
+**标头：** afxRibbonLabel
 
-## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFC带标签：：CMFC带标签
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a> CMFCRibbonLabel::CMFCRibbonLabel
 
-构造并初始化显示指定文本字符串的[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)对象。
+构造并初始化一个 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) 对象，该对象显示指定的文本字符串。
 
 ```
 CMFCRibbonLabel(
@@ -74,15 +75,15 @@ CMFCRibbonLabel(
     BOOL bIsMultiLine = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszText*<br/>
-[在]要显示在标签中的文本。
+中要在标签中显示的文本。
 
-*bIs多行*<br/>
-[在]TRUE 指定标签是多行标签;否则，FALSE。
+*bIsMultiLine*<br/>
+中如果指定标签为多行标签，则为 TRUE; 否则为。否则为 FALSE。
 
-## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>CMFC 功能标签：：设置ACC数据
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a> CMFCRibbonLabel：： SetACCData
 
 确定当前功能区标签元素的辅助功能数据。
 
@@ -92,20 +93,20 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p 父级*<br/>
-[在]表示当前功能区标签的父窗口。
+*pParent*<br/>
+中表示当前功能区标签的父窗口。
 
-*数据*<br/>
-[出]使用当前功能区`CAccessibilityData`标签的辅助功能数据的填充的类型对象。
+*data*<br/>
+弄一个类型为的对象，该对象 `CAccessibilityData` 用当前功能区标签的可访问性数据填充。
 
 ### <a name="return-value"></a>返回值
 
-如果*数据*参数已成功填充当前功能区标签的辅助功能数据，则为 TRUE;否则，FALSE。
+如果已成功用当前功能区标签的可访问性数据填充 *数据* 参数，则为 TRUE;否则为 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFC 功能按钮类](../../mfc/reference/cmfcribbonbutton-class.md)
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCRibbonButton 类](../../mfc/reference/cmfcribbonbutton-class.md)

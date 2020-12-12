@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： &lt; unordered_map &gt; 运算符
 title: '&lt;unordered_map&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: 2c09fa0070151f7cdd502e8f5583645110e91c5b
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: b7bf3712a7068b3af2d8316249d169854401b93e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741952"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321473"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 运算符
 
@@ -27,7 +28,7 @@ ms.locfileid: "90741952"
 bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `unordered_map` 类型的对象。
@@ -89,7 +90,7 @@ um2 != um3: true
 bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, const unordered_map <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `unordered_map` 类型的对象。
@@ -151,7 +152,7 @@ um2 == um3: false
 bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `unordered_multimap` 类型的对象。
@@ -214,7 +215,7 @@ um2 != um3: true
 bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& left, const unordered_multimap <Key, Type, Hash, Pred, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `unordered_multimap` 类型的对象。

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：调试例程
 title: 调试例程
 ms.date: 04/10/2018
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - debug macros
 - debugging [CRT], runtime routines
 ms.assetid: cb4d2664-10f3-42f7-a516-595558075471
-ms.openlocfilehash: 59e705947856ba9fe9477e88328b1fb2344abb7c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 60857549cbbb0871da208708e9acd812444b3274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842489"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321279"
 ---
 # <a name="debug-routines"></a>调试例程
 
@@ -133,7 +134,7 @@ C 运行时库的调试版本提供了很多诊断服务，便于调试程序并
    :::column-end:::
 :::row-end:::
 
-尽管为大部分 printf 和 scanf 例程提供源代码，它们仍会对另一个不提供源代码的例程执行内部调用********。
+尽管为大部分 printf 和 scanf 例程提供源代码，它们仍会对另一个不提供源代码的例程执行内部调用。
 
 ## <a name="routines-that-behave-differently-in-a-debug-build-of-an-application"></a>应用程序调式版本中存在行为差异的例程
 
@@ -154,7 +155,7 @@ C 运行时库的调试版本提供了很多诊断服务，便于调试程序并
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [运行时错误检查](../c-runtime-library/run-time-error-checking.md)<br/>

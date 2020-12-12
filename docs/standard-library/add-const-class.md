@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： add_const 类
 title: add_const 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: c82a3fac8ef95da9e226ca3e2e9122b3c8774cbf
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ce1dd895a5968234feca7905d3b9f8d571336053
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319939"
 ---
 # <a name="add_const-class"></a>add_const 类
 
@@ -25,14 +26,14 @@ template <class Ty>
 struct add_const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-如果*Ty*是引用、函数或常量限定类型，则类型修饰符的实例会保留*修改后的*类型，否则为 `const Ty` 。
+如果 *Ty* 是引用、函数或常量限定类型，则类型修饰符的实例会保留 *修改后的* 类型，否则为 `const Ty` 。
 
 ## <a name="example"></a>示例
 
@@ -64,7 +65,7 @@ add_const<int> == int
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](type-traits.md)\
 [remove_const 类](remove-const-class.md)

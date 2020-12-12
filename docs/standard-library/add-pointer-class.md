@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： add_pointer 类
 title: add_pointer 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-ms.openlocfilehash: 74e8cf037f8adfb6fdd9338c3cd95e2363f8de75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 36f262c68c17dbcaca603c2a78e2450f0de64aa6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319890"
 ---
 # <a name="add_pointer-class"></a>add_pointer 类
 
@@ -28,7 +29,7 @@ template <class T>
 using add_pointer_t = typename add_pointer<T>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要修改的类型。
@@ -69,7 +70,7 @@ add_pointer_t<int> == int *
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](type-traits.md)\
 [remove_pointer 类](remove-pointer-class.md)

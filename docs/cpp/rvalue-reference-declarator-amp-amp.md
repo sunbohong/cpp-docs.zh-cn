@@ -1,4 +1,5 @@
 ---
+description: 了解有关详细信息，请参阅右值引用声明符： &amp;&amp;
 title: 右值引用声明符： &amp;&amp;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 953aafe79115ad32a172c878eb910dd06b81e3f4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6c88116c5834c027d72874d1377e79799faa80ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842034"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319373"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值引用声明符： &amp;&amp;
 
@@ -27,11 +28,11 @@ type-id && cast-expression
 
 利用右值引用，您可以将左值与右值区分开。 左值引用和右值引用在语法和语义上相似，但它们遵循的规则稍有不同。 有关左值和右的详细信息，请参阅 [左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)。 有关 lvalue 引用的详细信息，请参阅 [Lvalue 引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)。
 
-以下各节介绍 rvalue 引用如何支持 *移动语义* 和 *完美转发*的实现。
+以下各节介绍 rvalue 引用如何支持 *移动语义* 和 *完美转发* 的实现。
 
 ## <a name="move-semantics"></a>移动语义
 
-右值引用支持 *移动语义*的实现，这可以显著提高应用程序的性能。 利用移动语义，你可以编写将资源（如动态分配的内存）从一个对象转移到另一个对象的代码。 移动语义很有效，因为它使资源能够从无法在程序中的其他位置引用的临时对象转移。
+右值引用支持 *移动语义* 的实现，这可以显著提高应用程序的性能。 利用移动语义，你可以编写将资源（如动态分配的内存）从一个对象转移到另一个对象的代码。 移动语义很有效，因为它使资源能够从无法在程序中的其他位置引用的临时对象转移。
 
 若要实现移动语义，通常应向类提供 *移动构造函数* 和移动赋值运算符（ (**运算符 =**) ）。 其源是右值的复制和赋值操作随后会自动利用移动语义。 与默认复制构造函数不同，编译器不提供默认移动构造函数。 有关如何编写移动构造函数以及如何在应用程序中使用它的详细信息，请参阅 [移动构造函数和移动赋值运算符 (c + +) ](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。
 
@@ -63,7 +64,7 @@ int main()
 
 ## <a name="perfect-forwarding"></a>完美转发
 
-完美转发可减少对重载函数的需求，并有助于避免转发问题。 当你编写将引用作为其参数的泛型函数并将这些参数传递 (或) *转发*给另一个函数时，可能会出现*转发问题*。 例如，如果泛型函数采用 `const T&` 类型的参数，则调用的函数无法修改该参数的值。 如果泛型函数采用 `T&` 类型的参数，则无法使用右值（如临时对象或整数文本）来调用该函数。
+完美转发可减少对重载函数的需求，并有助于避免转发问题。 当你编写将引用作为其参数的泛型函数并将这些参数传递 (或) *转发* 给另一个函数时，可能会出现 *转发问题*。 例如，如果泛型函数采用 `const T&` 类型的参数，则调用的函数无法修改该参数的值。 如果泛型函数采用 `T&` 类型的参数，则无法使用右值（如临时对象或整数文本）来调用该函数。
 
 通常，若要解决此问题，则必须提供为其每个参数采用 `T&` 和 `const T&` 的重载版本的泛型函数。 因此，重载函数的数量将基于参数的数量呈指数方式增加。 利用右值引用，您可以编写一个版本的函数，该函数可接受任意参数并将其转发给另一个函数，就像已直接调用其他函数一样。
 
@@ -400,7 +401,7 @@ print_type_and_value<string&>(string& t)
 
 模板自变量推导是实现完美转发的重要因素。 本主题前面部分的“完美转发”一节更详细地介绍了完美转发。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>总结
 
 右值引用可将左值和右值区分开。 它们可以帮助您消除不必要的内存分配和复制操作需求，从而提高应用程序的性能。 它们还使你能够编写一个版本的函数，该函数可接受任意自变量并将其转发给另一个函数，就像已直接调用其他函数一样。
 
@@ -410,4 +411,4 @@ print_type_and_value<string&>(string& t)
 [Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md)<br/>
 [左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
 [移动构造函数和移动赋值运算符 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[C + + 标准库](../standard-library/cpp-standard-library-reference.md)
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _strdup_dbg、_wcsdup_dbg
 title: _strdup_dbg、_wcsdup_dbg
 ms.date: 11/04/2016
 api_name:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-ms.openlocfilehash: 9f7d4fd8781269ee37f7515fdcab72e5195fdf00
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7001d7948f733977213267fdabd9faee4ddffd4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958190"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322468"
 ---
 # <a name="_strdup_dbg-_wcsdup_dbg"></a>_strdup_dbg、_wcsdup_dbg
 
-使用**malloc**的调试版本的[_strdup 和 _wcsdup](strdup-wcsdup-mbsdup.md)版本。
+使用 **malloc** 的调试版本的 [_strdup 和 _wcsdup](strdup-wcsdup-mbsdup.md)的版本。
 
 ## <a name="syntax"></a>语法
 
@@ -62,29 +63,29 @@ wchar_t *_wcsdup_dbg(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strSource*<br/>
 null 终止的源字符串。
 
 *blockType*<br/>
-内存块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+内存块的请求类型： **_CLIENT_BLOCK** 或 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-指向已请求分配操作的源文件名的指针或**NULL**。
+指向已请求分配操作的源文件名的指针或 **NULL**。
 
 *linenumber*<br/>
-请求分配操作所在的源文件中的行号或**NULL**。
+请求分配操作所在的源文件中的行号或 **NULL**。
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数都将返回一个指向复制字符串的存储位置的指针，如果无法分配存储，则返回**NULL** 。
+其中每个函数都将返回一个指向复制字符串的存储位置的指针，如果无法分配存储，则返回 **NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**_Strdup_dbg**和 **_wcsdup_dbg**函数与 **_strdup**和 **_wcsdup**相同，不同之处在于，定义 **_debug**后，这些函数将使用**malloc**， **_malloc_dbg**的调试版本来分配重复字符串的内存。 有关 **_malloc_dbg**调试功能的信息，请参阅[_malloc_dbg](malloc-dbg.md)。
+**_Strdup_dbg** 和 **_wcsdup_dbg** 函数与 **_strdup** 和 **_wcsdup** 相同，不同之处在于，定义 **_DEBUG** 时，这些函数将使用 **malloc** **_malloc_dbg** 的调试版本为重复的字符串分配内存。 有关 **_malloc_dbg** 的调试功能的信息，请参阅 [_malloc_dbg](malloc-dbg.md)。
 
-在大多数情况下，无需显式调用这些函数。 您可以改为定义标志 **_CRTDBG_MAP_ALLOC**。 定义 **_CRTDBG_MAP_ALLOC**时，对 **_strdup**和 **_wcsdup**的调用将分别重新映射到 **_strdup_dbg**和 **_wcsdup_dbg**，并将*blockType*设置为 **_NORMAL_BLOCK**。 因此，无需显式调用这些函数，除非你希望将堆块标记为 **_CLIENT_BLOCK**。 有关块类型的详细信息，请参阅[调试堆中的块类型](/visualstudio/debugger/crt-debug-heap-details)。
+在大多数情况下，无需显式调用这些函数。 您可以改为定义标志 **_CRTDBG_MAP_ALLOC**。 定义 **_CRTDBG_MAP_ALLOC** 时，对 **_strdup** 和 **_wcsdup** 的调用将分别重新映射到 **_strdup_dbg** 和 **_wcsdup_dbg**，并将 *blockType* 设置为 **_NORMAL_BLOCK**。 因此，无需显式调用这些函数，除非你希望将堆块标记为 **_CLIENT_BLOCK**。 有关块类型的详细信息，请参阅[调试堆中的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -96,9 +97,9 @@ null 终止的源字符串。
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_strdup_dbg**、 **_wcsdup_dbg**|\<crtdbg.h>|
+|**_strdup_dbg**， **_wcsdup_dbg**|\<crtdbg.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

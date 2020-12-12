@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 title: _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-ms.openlocfilehash: b95145a468d382ea63ef4d409c095ec217e42f1c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 366614f69305080ee29ed8b903d17b5cc24765d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948021"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322469"
 ---
 # <a name="_snprintf_s-_snprintf_s_l-_snwprintf_s-_snwprintf_s_l"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 
@@ -110,21 +111,21 @@ int _snwprintf_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*buffer*<br/>
+*宽限*<br/>
 输出的存储位置。
 
 *sizeOfBuffer*<br/>
-输出的存储位置大小。 **_Snwprintf_s**的 **_snprintf_s**的大小（以字节为单位）或大小（以字节**为** **单位）** 。
+输出的存储位置大小。 **_Snwprintf_s** 的 **_snprintf_s** 或大小的大小（**以****字节为单位）** 。
 
-*count*<br/>
+*计数*<br/>
 可存储的最大字符数，或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *format*<br/>
 窗体控件字符串。
 
-*实际*<br/>
+argument <br/>
 可选参数。
 
 *locale*<br/>
@@ -132,28 +133,28 @@ int _snwprintf_s(
 
 ## <a name="return-value"></a>返回值
 
-**_snprintf_s**返回*缓冲区*中存储的字符数，不包括终止 null 字符。 **_snwprintf_s**返回存储在*缓冲区*中的宽字符数，不包括终止 null 宽字符。
+**_snprintf_s** 返回 *缓冲区* 中存储的字符数，不包括终止 null 字符。 **_snwprintf_s** 返回 *缓冲区* 中存储的宽字符数，不包括终止 null 宽字符。
 
-如果存储数据和终止 null 值所需的存储空间超过*sizeOfBuffer*，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果执行在无效的参数处理程序之后继续，则这些函数将*缓冲区*设置为空字符串，将**Errno**设置为**ERANGE**，并返回-1。
+如果存储数据和终止 null 值所需的存储空间超过 *sizeOfBuffer*，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果执行在无效的参数处理程序之后继续，则这些函数将 *缓冲区* 设置为空字符串，将 **Errno** 设置为 **ERANGE**，并返回-1。
 
-如果*buffer*或*format*为**空**指针，或者*count*小于或等于零，则调用无效的参数处理程序。 如果允许执行继续, 则这些函数会将**errno**设置为**EINVAL** , 并返回-1。
+如果 *buffer* 或 *format* 为 **空** 指针，或者 *count* 小于或等于零，则调用无效的参数处理程序。 如果允许执行继续，则这些函数会将 **errno** 设置为 **EINVAL** ，并返回-1。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Snprintf_s**函数格式化并存储*缓冲区*中的字符*数*或更少字符，并追加一个终止 null。 每个自变量（如果有）根据*格式*规范的相应格式规范进行转换和输出。 格式设置与**printf**系列函数一致;请参阅[格式规范语法： printf 和 Wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**_Snprintf_s** 函数在 *缓冲区* 中格式化 *和存储更少的字符*，并追加一个终止 null。 如果任何) 根据 *格式* 规范的相应格式规范进行转换和输出，则每个参数 (。 格式设置与 **printf** 系列函数一致;请参阅 [格式规范语法： printf 和 Wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-如果*count*为[_TRUNCATE](../../c-runtime-library/truncate.md)，则 **_snprintf_s**会将尽可能多的字符串写入*缓冲区*，同时为终止 null 留出空间。 如果整个字符串（包括终止 null）都适合*缓冲区*，则 **_snprintf_s**返回写入的字符数（不包括终止 null）;否则， **_snprintf_s**将返回-1 以指示发生了截断。
+如果 *count* 是 [_TRUNCATE](../../c-runtime-library/truncate.md)，则 **_snprintf_s** 会将尽可能多的字符串写入 *缓冲区* 中，同时为终止 null 留出空间。 如果包含终止 null) 的整个字符串 (适用于 *buffer*，则 **_snprintf_s** 返回 (不包括终止 null) 的写入字符数;否则， **_snprintf_s** 返回-1 以指示发生了截断。
 
 > [!IMPORTANT]
-> 确保 format不是用户定义的字符串。
+> 确保 format 不是用户定义的字符串。
 
-**_snwprintf_s**是 **_snprintf_s**的宽字符版本; **_snwprintf_s**的指针参数是宽字符字符串。 **_Snwprintf_s**中的编码错误检测可能与 **_snprintf_s**中的错误不同。 **_snwprintf_s**（如**swprintf_s**）将输出写入字符串，而不是写入到类型**文件**的目标。
+**_snwprintf_s** 是 **_snprintf_s** 的宽字符版本; **_snwprintf_s** 的指针参数是宽字符字符串。 **_Snwprintf_s** 中的编码错误检测可能与 **_snprintf_s** 中的不同。 **_snwprintf_s**（如 **swprintf_s**）将输出写入字符串，而不是写入到类型 **文件** 的目标。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -166,10 +167,10 @@ int _snwprintf_s(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_snprintf_s**、 **_snprintf_s_l**|\<stdio.h>|
-|**_snwprintf_s**、 **_snwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**_snprintf_s**， **_snprintf_s_l**|\<stdio.h>|
+|**_snwprintf_s**， **_snwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -302,7 +303,7 @@ Invalid parameter handler invoked: ("Buffer too small", 0)
 ## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>

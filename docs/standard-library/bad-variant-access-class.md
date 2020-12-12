@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息： bad_variant_access 类
 title: bad_variant_access 类
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::bad_variant_access
 helpviewer_keywords:
 - std::bad_variant_access
-ms.openlocfilehash: 6b325008c9e112a83210ad10f0311cfbb1a9a1d7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 18956eb8f649990acdbc88226b520056d7c8d50b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269129"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321581"
 ---
-# <a name="badvariantaccess-class"></a>bad_variant_access 类
+# <a name="bad_variant_access-class"></a>bad_variant_access 类
 
-为报表变量对象的值对的无效访问引发类型 bad_variant_access 的对象。
+引发 bad_variant_access 类型的对象来报告对变体对象的值的无效访问。
 
 ## <a name="syntax"></a>语法
 

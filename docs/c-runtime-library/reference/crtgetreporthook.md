@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CrtGetReportHook
 title: _CrtGetReportHook
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-ms.openlocfilehash: bc005dda435b5e11d6c3c886de180ed85b9c2a04
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c950341e3f1b0231620449d983fcfe5bc0f5f12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942399"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319734"
 ---
 # <a name="_crtgetreporthook"></a>_CrtGetReportHook
 
@@ -48,7 +49,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtGetReportHook**允许应用程序检索 C 运行时调试库报告进程的当前报告函数。
+**_CrtGetReportHook** 允许应用程序检索 C 运行时调试库报告进程的当前报表函数。
 
 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 
@@ -58,7 +59,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 |-------------|---------------------|
 |**_CrtGetReportHook**|\<crtdbg.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -66,7 +67,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 ## <a name="example"></a>示例
 
-有关如何使用 **_CrtSetReportHook**的示例，请参阅[报表](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)。
+有关如何使用 **_CrtSetReportHook** 的示例，请参阅 [报表](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)。
 
 ## <a name="see-also"></a>请参阅
 

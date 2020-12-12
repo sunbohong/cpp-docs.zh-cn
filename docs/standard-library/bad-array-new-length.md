@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： bad_array_new_length 类
 title: bad_array_new_length 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: c4f4f58f7b28960bbacf695a675fbe4f20a54192
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e9de10b6fee215651ac8ff6ce2fce4af55ce6c82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321635"
 ---
 # <a name="bad_array_new_length-class"></a>bad_array_new_length 类
 
@@ -28,13 +29,13 @@ class bad_array_new_length : public bad_alloc {
 
 ## <a name="remarks"></a>备注
 
-`what` 返回的值是实现定义的 C 字符串。 无成员函数引发任何异常。
+返回的值 `what` 是实现定义的 C 字符串。 无成员函数引发任何异常。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<新建 >
+**标头：**\<new>
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Exception 类](../standard-library/exception-class.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[exception 类](../standard-library/exception-class.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

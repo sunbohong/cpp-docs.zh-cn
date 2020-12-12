@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：接口 (c + +/CX) '
 title: 接口 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: df010468d5e90fe61ac2cf57c754ac5ed01b1c0f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 590b1b80ada186f90bfd38ed9dcdc8a35c34020f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320928"
 ---
 # <a name="interfaces-ccx"></a>接口 (C++/CX)
 
@@ -73,15 +74,15 @@ ms.locfileid: "87230982"
 
    [!code-cpp[cx_interfaces#07](../cppcx/codesnippet/CPP/interfacestest/class1.h#07)]
 
-- 泛型接口必须遵循控制可访问性、成员、 ** 需要关系、基类等内容的标准接口规则。
+- 泛型接口必须遵循控制可访问性、成员、  需要关系、基类等内容的标准接口规则。
 
 - 泛型接口可以采用前面带有或的一个或多个泛型类型参数 **`typename`** **`class`** 。 不支持非类型参数。
 
 - 类型参数可以是任何 Windows 运行时类型。 即，类型参数可以是引用类型、值类型、接口类、委托、基本类型或公共枚举类。
 
-- ** 封闭式泛型接口是从泛型接口继承的接口，并对所有类型形参指定具体的类型实参。 它可以在可使用非泛型私有接口的任意位置使用。
+-  封闭式泛型接口是从泛型接口继承的接口，并对所有类型形参指定具体的类型实参。 它可以在可使用非泛型私有接口的任意位置使用。
 
-- ** 开放式泛型接口是具有一个或多个尚未为其提供具体类型的类型参数的接口。 它可以在可使用类型的任意位置使用，包括用作另一个泛型接口的类型参数。
+-  开放式泛型接口是具有一个或多个尚未为其提供具体类型的类型参数的接口。 它可以在可使用类型的任意位置使用，包括用作另一个泛型接口的类型参数。
 
 - 可以只参数化整个接口，而不是单个方法。
 
@@ -89,13 +90,13 @@ ms.locfileid: "87230982"
 
 - 封闭式泛型接口具有隐式生成的 UUID。 用户不能指定 UUID。
 
-- 在接口中，对当前接口的任何引用（在方法参数、返回值或属性中）都假定引用当前实例化。 例如， *IMyIntf*表示*IMyIntf \<T> *。
+- 在接口中，对当前接口的任何引用（在方法参数、返回值或属性中）都假定引用当前实例化。 例如， *IMyIntf* 表示 *IMyIntf \<T>*。
 
 - 当方法参数的类型是类型参数时，该参数或变量的声明将使用类型参数的名称，而不带任何指针、本机引用或句柄声明符。 换言之，绝不会写入“T^”。
 
-- 模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并且可以将模板参数*t*传递给泛型参数*t*。模板化 ref 类的每个实例化本身就是一个 ref 类。
+- 模板化的 ref 类必须是私有的。 它们可以实现泛型接口，并且可以将模板参数 *t* 传递给泛型参数 *t*。模板化 ref 类的每个实例化本身就是一个 ref 类。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>

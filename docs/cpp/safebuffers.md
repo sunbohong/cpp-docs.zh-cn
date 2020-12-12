@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： safebuffers
 title: safebuffers
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-ms.openlocfilehash: 456e84cfba40a4219f44fe1549272621f79d09a2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8fefa12ffcbd81d58f4f5002e27751f03d7c1cb9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319347"
 ---
 # <a name="safebuffers"></a>safebuffers
 
@@ -28,7 +29,7 @@ __declspec( safebuffers )
 
 ## <a name="remarks"></a>备注
 
-**/Gs**编译器选项导致编译器通过在堆栈上插入安全检查来测试缓冲区溢出。 [/Gs （缓冲区安全检查）](../build/reference/gs-buffer-security-check.md)中介绍了符合安全检查条件的数据结构类型。 有关缓冲区溢出检测的详细信息，请参阅[MSVC 中的安全功能](https://devblogs.microsoft.com/cppblog/security-features-in-microsoft-visual-c/)。
+**/Gs** 编译器选项导致编译器通过在堆栈上插入安全检查来测试缓冲区溢出。 [/Gs (缓冲区安全检查) ](../build/reference/gs-buffer-security-check.md)中介绍了符合安全检查条件的数据结构类型。 有关缓冲区溢出检测的详细信息，请参阅 [MSVC 中的安全功能](https://devblogs.microsoft.com/cppblog/security-features-in-microsoft-visual-c/)。
 
 专家手动代码评审或外部分析可能确定函数不会出现缓冲区溢出。 在这种情况下，可以通过将 **`__declspec(safebuffers)`** 关键字应用于函数声明来禁止对函数进行安全检查。
 
@@ -37,11 +38,11 @@ __declspec( safebuffers )
 
 ## <a name="inline-functions"></a>内联函数
 
-*主函数*可以使用[内联](inline-functions-cpp.md)关键字插入*辅助函数*的副本。 如果将 **`__declspec(safebuffers)`** 关键字应用于函数，则会取消该函数的缓冲区溢出检测。 不过，内联会 **`__declspec(safebuffers)`** 以下列方式影响关键字。
+*主函数* 可以使用 [内联](inline-functions-cpp.md)关键字插入 *辅助函数* 的副本。 如果将 **`__declspec(safebuffers)`** 关键字应用于函数，则会取消该函数的缓冲区溢出检测。 不过，内联会 **`__declspec(safebuffers)`** 以下列方式影响关键字。
 
-假设为这两个函数指定了 **/gs**编译器选项，但主函数指定了 **`__declspec(safebuffers)`** 关键字。 辅助函数中的数据结构将使它符合安全检查的条件，因此该函数不会取消这些检查。 在这种情况下：
+假设为这两个函数指定了 **/gs** 编译器选项，但主函数指定了 **`__declspec(safebuffers)`** 关键字。 辅助函数中的数据结构将使它符合安全检查的条件，因此该函数不会取消这些检查。 在这种情况下：
 
-- 对辅助函数指定[__forceinline](inline-functions-cpp.md)关键字可强制编译器内联该函数，而不考虑编译器优化。
+- 对辅助函数指定 [__forceinline](inline-functions-cpp.md) 关键字可强制编译器内联该函数，而不考虑编译器优化。
 
 - 由于辅助函数有资格进行安全检查，因此即使指定关键字，安全检查也会应用于主函数 **`__declspec(safebuffers)`** 。
 

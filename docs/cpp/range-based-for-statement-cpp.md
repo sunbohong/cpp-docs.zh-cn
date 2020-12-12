@@ -1,13 +1,14 @@
 ---
+description: '详细了解：基于范围的 for 语句 (c + +) '
 title: 基于范围的 for 语句 (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-ms.openlocfilehash: 1197080e2e96e0e5c51bc06e93026567a33c7842
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0d32086009190fe69333a2f36ff03bb551396d98
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319386"
 ---
 # <a name="range-based-for-statement-c"></a>基于范围的 for 语句 (C++)
 
@@ -20,9 +21,9 @@ ms.locfileid: "87223611"
 
 ## <a name="remarks"></a>备注
 
-使用基于范围的 **`for`** 语句来构造必须通过*范围*执行的循环，该范围定义为可循环访问的任何内容，例如， `std::vector` 或其范围由和定义的任何其他 c + + 标准库序列 `begin()` `end()` 。 部分中声明的名称 `for-range-declaration` 是语句的本地名称 **`for`** ，不能在或中重新声明 `expression` `statement` 。 请注意，在 [`auto`](../cpp/auto-cpp.md) 语句的部分中，关键字是首选的 `for-range-declaration` 。
+使用基于范围的 **`for`** 语句来构造必须通过 *范围* 执行的循环，该范围定义为可循环访问的任何内容，例如， `std::vector` 或其范围由和定义的任何其他 c + + 标准库序列 `begin()` `end()` 。 部分中声明的名称 `for-range-declaration` 是语句的本地名称 **`for`** ，不能在或中重新声明 `expression` `statement` 。 请注意，在 [`auto`](../cpp/auto-cpp.md) 语句的部分中，关键字是首选的 `for-range-declaration` 。
 
-**Visual Studio 2017 中的新增内容：** 基于范围的 **`for`** 循环不再要求 `begin()` 和 `end()` 返回相同类型的对象。 这允许 `end()` 返回一个 sentinel 对象，如范围-V3 建议中定义的范围所使用的。 有关详细信息，请参阅 GitHub 上[的通用化基于范围的 `For` 循环](https://wg21.link/p0184r0)和[范围-v3 库](https://github.com/ericniebler/range-v3)。
+**Visual Studio 2017 中的新增内容：**  基于范围的 **`for`** 循环不再要求 `begin()` 和 `end()` 返回相同类型的对象。 这允许 `end()` 返回一个 sentinel 对象，如范围-V3 建议中定义的范围所使用的。 有关详细信息，请参阅 GitHub 上 [的通用化 Range-Based `For` 循环](https://wg21.link/p0184r0) 和 [范围-v3 库](https://github.com/ericniebler/range-v3)。
 
 此代码演示如何使用基于范围的 **`for`** 循环来循环访问数组和向量：
 
@@ -104,7 +105,7 @@ end of vector test
 
 - 对于任何其他内容，使用依赖于自变量的查找 `begin()` 和 `end()`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [`auto`](../cpp/auto-cpp.md)<br/>
 [迭代语句](../cpp/iteration-statements-cpp.md)<br/>

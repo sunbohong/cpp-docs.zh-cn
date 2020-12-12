@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： feof
 title: feof
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: 2b3a8d35491272409ecf911fe2f98ca60b2b2b38
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6bfa0382878cef2843f3a6a6e2ba6e6d8c5bed8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920157"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322532"
 ---
 # <a name="feof"></a>feof
 
@@ -46,24 +47,24 @@ int feof(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *流*<br/>
-指向**文件**结构的指针。
+指向 **文件** 结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果读取操作已尝试读取超过文件末尾的值， **feof**函数将返回非零值;否则返回0。 如果流指针为**NULL**，则函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ， **feof**将返回0。
+如果读取操作已尝试读取超过文件末尾的值， **feof** 函数将返回非零值;否则返回0。 如果流指针为 **NULL**，则函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **EINVAL** ， **feof** 将返回0。
 
 有关这些代码以及其他错误代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Feof**例程（作为函数和宏实现）确定是否已传递*流*的末尾。 当文件结束时，读取操作将返回文件尾指示符，直到流[关闭，或者](rewind.md)对其调用**fsetpos**、 [fseek](fseek-fseeki64.md)或**clearerr** 。
+**Feof** 例程 (同时作为函数和宏来实现) 确定是否已传递 *流* 的末尾。 当文件结束时，读取操作将返回文件尾指示符，直到流 [关闭，或者](rewind.md)对其调用 **fsetpos**、 [fseek](fseek-fseeki64.md)或 **clearerr** 。
 
-例如，如果某个文件包含10个字节，并且您从该文件中读取了10个字节，则**feof**将返回0，因为即使文件指针位于该文件的末尾，您也不会尝试读取超出末尾的位置。 只有在您尝试读取第11个字节后， **feof**将返回一个非零值。
+例如，如果某个文件包含10个字节，并且您从该文件中读取了10个字节，则 **feof** 将返回0，因为即使文件指针位于该文件的末尾，您也不会尝试读取超出末尾的位置。 只有在您尝试读取第11个字节后， **feof** 将返回一个非零值。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： RoInitializeWrapper 类
 title: RoInitializeWrapper 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-ms.openlocfilehash: eba9162f17b98d13a9caf956b4f110b89dd81c37
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b7f2c49bd461f08ad732680f1a02968ee7717116
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319295"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 类
 
@@ -32,22 +33,22 @@ class RoInitializeWrapper;
 
 ## <a name="remarks"></a>备注
 
-`RoInitializeWrapper`是初始化 Windows 运行时并返回指示操作是否成功的 HRESULT 的便利。 由于类析构函数调用`::Windows::Foundation::Uninitialize`，必须在全局`RoInitializeWrapper`或顶级作用域中声明 的 实例。
+`RoInitializeWrapper` 是初始化 Windows 运行时的便利，并返回一个 HRESULT，指示操作是否成功。 由于类析构函数调用 `::Windows::Foundation::Uninitialize` ，因此的实例 `RoInitializeWrapper` 必须在全局或顶级范围内声明。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                                                    | 说明
+“属性”                                                                    | 描述
 ----------------------------------------------------------------------- | -----------------------------------------------------------------
-[放大缩小字体功能 放大缩小字体功能](#roinitializewrapper)        | 初始化 `RoInitializeWrapper` 类的新实例。
-[Ro初始化包装器：：\Ro初始化包装器](#tilde-roinitializewrapper) | 销毁`RoInitializeWrapper`类的当前实例。
+[RoInitializeWrapper：： RoInitializeWrapper](#roinitializewrapper)        | 初始化 `RoInitializeWrapper` 类的新实例。
+[RoInitializeWrapper：： ~ RoInitializeWrapper](#tilde-roinitializewrapper) | 销毁类的当前实例 `RoInitializeWrapper` 。
 
 ### <a name="public-operators"></a>公共运算符
 
-名称                                       | 说明
+名称                                       | 描述
 ------------------------------------------ | ------------------------------------------------------------------------
-[放大缩小字体功能 放大缩小字体功能](#hresult) | 检索`RoInitializeWrapper`构造函数生成的 HRESULT。
+[RoInitializeWrapper：： HRESULT ( # B1 ](#hresult) | 检索构造函数生成的 HRESULT `RoInitializeWrapper` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -55,19 +56,19 @@ class RoInitializeWrapper;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 核心包装.h
+**标头：** corewrappers。h
 
-**命名空间：** 微软：：WRL：包装
+**命名空间：** Microsoft：： WRL：：包装
 
-## <a name="roinitializewrapperhresult"></a><a name="hresult"></a>放大缩小字体功能 放大缩小字体功能
+## <a name="roinitializewrapperhresult"></a><a name="hresult"></a> RoInitializeWrapper：： HRESULT ( # A1
 
-检索最后`RoInitializeWrapper`一个构造函数生成的 HRESULT 值。
+检索最后一个构造函数生成的 HRESULT 值 `RoInitializeWrapper` 。
 
 ```cpp
 operator HRESULT()
 ```
 
-## <a name="roinitializewrapperroinitializewrapper"></a><a name="roinitializewrapper"></a>放大缩小字体功能 放大缩小字体功能
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="roinitializewrapper"></a> RoInitializeWrapper：： RoInitializeWrapper
 
 初始化 `RoInitializeWrapper` 类的新实例。
 
@@ -77,16 +78,16 @@ RoInitializeWrapper(RO_INIT_TYPE flags)
 
 ### <a name="parameters"></a>参数
 
-*标志*<br/>
-RO_INIT_TYPE枚举之一，它指定 Windows 运行时提供的支持。
+*flag*<br/>
+RO_INIT_TYPE 枚举之一，指定 Windows 运行时提供的支持。
 
 ### <a name="remarks"></a>备注
 
-类`RoInitializeWrapper`调用`Windows::Foundation::Initialize(flags)`。
+`RoInitializeWrapper`类调用 `Windows::Foundation::Initialize(flags)` 。
 
-## <a name="roinitializewrapperroinitializewrapper"></a><a name="tilde-roinitializewrapper"></a>Ro初始化包装器：：\Ro初始化包装器
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="tilde-roinitializewrapper"></a> RoInitializeWrapper：： ~ RoInitializeWrapper
 
-取消初始化 Windows 运行时。
+取消 Windows 运行时。
 
 ```cpp
 ~RoInitializeWrapper()
@@ -94,4 +95,4 @@ RO_INIT_TYPE枚举之一，它指定 Windows 运行时提供的支持。
 
 ### <a name="remarks"></a>备注
 
-类`RoInitializeWrapper`调用`Windows::Foundation::Uninitialize()`。
+`RoInitializeWrapper`类调用 `Windows::Foundation::Uninitialize()` 。

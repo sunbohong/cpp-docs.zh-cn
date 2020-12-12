@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strtof、_strtof_l、wcstof、_wcstof_l
 title: strtof、_strtof_l、wcstof、_wcstof_l
 ms.date: 4/2/2020
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: d99b895076025aa50028bb4cd21df9e13c98197f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7a73df80fefb8d86431027650be2ecd236135dfd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233959"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322415"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof、_strtof_l、wcstof、_wcstof_l
 
@@ -80,7 +81,7 @@ float wcstof_l(
 );
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 *strSource*<br/>
 要转换的 null 终止的字符串。
@@ -93,17 +94,17 @@ float wcstof_l(
 
 ## <a name="return-value"></a>返回值
 
-**strtof**返回浮点数的值，除非表示形式导致溢出，在这种情况下，函数返回 +/-**HUGE_VALF**。 **HUGE_VALF**的符号与无法表示的值的符号匹配。 如果无法执行任何转换或发生下溢，则**strtof**将返回0。
+**strtof** 返回浮点数的值，除非表示形式导致溢出，在这种情况下，函数返回 +/-**HUGE_VALF**。 **HUGE_VALF** 的符号与无法表示的值的符号匹配。 如果无法执行任何转换或发生下溢，则 **strtof** 将返回0。
 
-**wcstof**将类似值返回到**strtof**。 对于这两个函数，如果出现溢出或下溢，则**errno**设置为**ERANGE** ，并调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+**wcstof** 将类似值返回到 **strtof**。 对于这两个函数，如果出现溢出或下溢，则 **errno** 设置为 **ERANGE** ，并调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 有关返回代码的详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-每个函数将输入字符串*strSource*转换为 **`float`** 。 **Strtof**函数将*strSource*转换为单精度值。 **strtof**停止读取其无法识别为数字一部分的第一个字符的字符串*strSource* 。 这可能是终止 null 字符。 **wcstof**是**strtof**的宽字符版本;其*strSource*参数是宽字符字符串。 否则，这些函数具有相同行为。
+每个函数将输入字符串 *strSource* 转换为 **`float`** 。 **Strtof** 函数将 *strSource* 转换为单精度值。 **strtof** 停止读取其无法识别为数字一部分的第一个字符的字符串 *strSource* 。 这可能是终止 null 字符。 **wcstof** 是 **strtof** 的宽字符版本;其 *strSource* 参数是宽字符字符串。 否则，这些函数具有相同行为。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -112,24 +113,24 @@ float wcstof_l(
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-当前区域设置的**LC_NUMERIC**类别设置确定*strSource*中的基数字符的识别;有关详细信息，请参阅[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 没有 **_l**后缀的函数使用当前区域设置;具有后缀的是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+当前区域设置的 **LC_NUMERIC** 类别设置确定 *strSource* 中的基数字符的识别;有关详细信息，请参阅 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 没有 **_l** 后缀的函数使用当前区域设置;具有后缀的是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不为**NULL**，则指向停止扫描的字符的指针将存储在*endptr*指向的位置。 如果无法执行任何转换（未找到任何有效的数字或指定了无效的基数），则*strSource*的值将存储在*endptr*指向的位置。
+如果 *endptr* 不为 **NULL**，则指向停止扫描的字符的指针将存储在 *endptr* 指向的位置。 如果无法执行任何转换 () 找不到任何有效的数字或指定了无效的基，则 *strSource* 的值将存储在 *endptr* 指向的位置。
 
-**strtof**要求*strSource*指向以下格式的字符串：
+**strtof** 要求 *strSource* 指向以下格式的字符串：
 
-[*空格*][*sign*][*数字*][__.__*数字*][{**e** &#124; **e**} [*sign*]*数字*]
+[*空格*][*sign*][*数字*][__.__*数字*][{**e** &#124; **e**} [*sign*] *数字*]
 
-*空格*可能包含被忽略的空格和制表符;*sign*可以是加号（ **+** ）或减号（ **-** ）; 并且*数字*是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个引导字母（**e**或**e**）和一个可选择的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
+*空格* 可能包含被忽略的空格和制表符;*sign* (**+**) 或减号 (**-**) ;*数字* 是一个或多个十进制数字。 如果基数字符前没有任何数字，则基数字符后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个介绍性字母 (**e** 或 **e**) ，以及一个可选的带符号整数。 如果指数部分和基数字符都没有出现，则假定基数字符跟随字符串中的最后一个数字。 不符合此形式的第一个字符停止扫描。
 
-这些函数的 UCRT 版本不支持 Fortran 样式（**d**或**d**）指数字母的转换。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
+这些函数的 UCRT 版本不支持) 指数号的 Fortran 样式 (**d** 或 **d** 。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**strtof**、 **_strtof_l**|C： \<stdlib.h> c + +： &lt; b> 或\<stdlib.h>|
-|**wcstof**、 **_wcstof_l**|C： \<stdlib.h> 或 \<wchar.h> c + +： &lt; b> \<stdlib.h> 或\<wchar.h>|
+|**strtof**、 **_strtof_l**|C： \<stdlib.h> c + +： &lt; b> 或 \<stdlib.h>|
+|**wcstof**、 **_wcstof_l**|C： \<stdlib.h> 或 \<wchar.h> c + +： &lt; b> \<stdlib.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -163,11 +164,11 @@ string = 3.14159This stopped it
    Stopped scan at: This stopped it
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
 [字符串到数值函数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>

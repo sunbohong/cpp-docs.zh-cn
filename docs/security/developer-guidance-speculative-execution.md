@@ -1,4 +1,5 @@
 ---
+description: 了解更多有关：用于推理执行端通道的 c + + 开发人员指南
 title: 用于推理执行端通道的 c + + 开发人员指南
 ms.date: 07/10/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 72dffd25eef847d1bdffe61c4a18a27d9cb33644
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 41376f02c04a9baf83fec19791d77c169c73fa31
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320074"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>用于推理执行端通道的 c + + 开发人员指南
 
@@ -51,11 +52,11 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 虽然 CPU 最终将检测到此 misprediction，但可以在 CPU 缓存中留下残留副作用，以揭示有关从中读取的字节值的相关信息 `buffer` 。 通过在系统上运行的特权较低的上下文来探测每个缓存行的访问速度，可以检测到这些副作用 `shared_buffer` 。 为实现此目的，可以采取的步骤如下：
 
-1. ** `ReadByte` 多次调用， `untrusted_index` `buffer_size` 小于**。 攻击上下文可能会导致受害者上下文调用 `ReadByte` (例如，通过 RPC) 以便将分支预测器培训为在小于时不采取措施。 `untrusted_index` `buffer_size`
+1. **`ReadByte` 多次调用， `untrusted_index` `buffer_size` 小于**。 攻击上下文可能会导致受害者上下文调用 `ReadByte` (例如，通过 RPC) 以便将分支预测器培训为在小于时不采取措施。 `untrusted_index` `buffer_size`
 
 2. **刷新中的 `shared_buffer` 所有缓存行**。 攻击上下文必须在引用的内存的共享区域中刷新所有缓存行 `shared_buffer` 。 由于内存区域是共享的，因此这种方式很简单，可以使用内部函数（例如）来实现 `_mm_clflush` 。
 
-3. 如果大于，则**调用。 `ReadByte` `untrusted_index` `buffer_size` ** 攻击上下文会导致受害者上下文调用，从而 `ReadByte` 不能预测不会执行该分支。 这会导致处理器推测性执行 if 块的正文，使其 `untrusted_index` 大于 `buffer_size` ，从而导致超出范围的读取 `buffer` 。 因此， `shared_buffer` 使用一个可能的机密值（在边界内读取）对其进行索引，从而导致 CPU 加载各自的缓存行。
+3. 如果大于，则 **调用。 `ReadByte` `untrusted_index` `buffer_size`** 攻击上下文会导致受害者上下文调用，从而 `ReadByte` 不能预测不会执行该分支。 这会导致处理器推测性执行 if 块的正文，使其 `untrusted_index` 大于 `buffer_size` ，从而导致超出范围的读取 `buffer` 。 因此， `shared_buffer` 使用一个可能的机密值（在边界内读取）对其进行索引，从而导致 CPU 加载各自的缓存行。
 
 4. **阅读中的每个缓存行 `shared_buffer` ，查看最快速访问的缓存行**。 攻击上下文可以读取中的每个缓存行 `shared_buffer` 并检测缓存行的加载速度明显快于其他缓存行。 这是可能已在步骤3中引入的缓存行。 由于在此示例中，字节值和缓存行之间存在1:1 关系，因此，攻击者可以推断出超出范围的字节的实际值。
 
@@ -67,11 +68,11 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 下表提供了软件安全模型的摘要，开发人员可能需要在这些模型中考虑这些漏洞：
 
-|信任边界|说明|
+|信任边界|描述|
 |----------------|----------------|
-|虚拟机边界|隔离不同虚拟机中的工作负荷的应用程序可能会有风险。|
+|虚拟机边界 |隔离不同虚拟机中的工作负荷的应用程序可能会有风险。|
 |内核边界|从非管理用户模式进程接收不受信任数据的内核模式设备驱动程序可能有风险。|
-|进程边界|从本地系统上运行的另一个进程接收不受信任数据的应用程序，例如通过远程过程调用 (RPC) 、共享内存或其他进程间通信 (IPC) 机制可能会面临风险。|
+|进程边界 |从本地系统上运行的另一个进程接收不受信任数据的应用程序，例如通过远程过程调用 (RPC) 、共享内存或其他 Inter-Process 通信 (IPC) 机制可能存在风险。|
 |Enclave 边界|在安全的 enclave 中执行的应用程序 (如 Intel SGX) ，用于接收来自 enclave 外部的不受信任的数据可能有风险。|
 |语言边界| (JIT) 解释和执行以较高级别的语言编写的不受信任代码的应用程序可能存在风险。|
 
@@ -356,7 +357,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 可用于缓解推理执行端通道漏洞的另一种方法是从内存中删除敏感信息。 软件开发人员可以寻找重构应用程序的机会，以便在推理执行期间不能访问敏感信息。 这可以通过重构应用程序的设计来实现，以将敏感信息隔离到单独的进程中。 例如，web 浏览器应用程序可以尝试将与每个 web 源关联的数据隔离到不同的进程中，从而防止一个进程通过推理执行来访问跨源数据。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [用于缓解推理执行方通道漏洞的指南](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV180002)<br/>
 [减少推理执行端通道硬件漏洞](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

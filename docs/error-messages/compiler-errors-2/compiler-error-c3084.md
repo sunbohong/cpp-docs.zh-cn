@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3084
 title: 编译器错误 C3084
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3084
 ms.assetid: 0362cb70-e24e-476f-a24d-8f5bb97c3afd
-ms.openlocfilehash: 337cd7f37bf94c7a3d5cffe6b167d4661e3b0a81
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8603930e9087f1e407d5e8df65078604836b9a16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97320114"
 ---
 # <a name="compiler-error-c3084"></a>编译器错误 C3084
 
@@ -19,7 +20,7 @@ ms.locfileid: "74751451"
 
 未正确声明终结器或析构函数。
 
-例如，析构函数不应标记为密封。  派生类型无法访问析构函数。  有关详细信息，请参阅[如何：定义和使用类和结构（C++/cli）中](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)的[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)和析构函数和终结器。
+例如，析构函数不应标记为密封。  派生类型无法访问析构函数。  有关详细信息，请参阅[如何：定义和使用类和结构 (c + +/cli) 中](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)的[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)和析构函数和终结器。
 
 ## <a name="example"></a>示例
 

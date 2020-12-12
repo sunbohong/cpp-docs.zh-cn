@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： add_rvalue_reference 类
 title: add_rvalue_reference 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: 6d7cc1d45ed3b963de0a0a004c1696ddbf0af440
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: f4f5b58ddd2aa1e02b3023a27ef2feba83624326
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623918"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319877"
 ---
 # <a name="add_rvalue_reference-class"></a>add_rvalue_reference 类
 
@@ -27,14 +28,14 @@ template <class T>
 using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要修改的类型。
 
 ## <a name="remarks"></a>备注
 
-`add_rvalue_reference`类具有一个名为的成员 `type` ，该成员是模板参数*T*的右值引用类型的别名。引用折叠的语义意味着对于非对象类型和非函数类型*t*， `T&&` 为*t*。例如，当*T*是左值引用类型时， `add_rvalue_reference<T>::type` 是左值引用类型，而不是右值引用。
+`add_rvalue_reference`类具有一个名为的成员 `type` ，该成员是模板参数 *T* 的右值引用类型的别名。引用折叠的语义意味着对于非对象类型和非函数类型 *t*， `T&&` 为 *t*。例如，当 *T* 是左值引用类型时， `add_rvalue_reference<T>::type` 是左值引用类型，而不是右值引用。
 
 为方便起见， \<type_traits> 定义了一个用于 `add_rvalue_reference_t` 对的成员进行别名的帮助器模板 `type` `add_rvalue_reference` 。
 
@@ -75,7 +76,7 @@ All static_assert tests of add_rvalue_reference passed.
 
 命名空间: std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](type-traits.md)\
 [add_lvalue_reference 类](add-lvalue-reference-class.md)\

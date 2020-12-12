@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CrtSetBreakAlloc
 title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-ms.openlocfilehash: e13c908c1efd1af9196885dee6e3b0f45845946b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07db47aa23fe95e86b3341813137643b81f57fbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319594"
 ---
 # <a name="_crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -44,7 +45,7 @@ long _CrtSetBreakAlloc(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lBreakAlloc*<br/>
 为其设置断点的分配序号。
@@ -55,11 +56,11 @@ long _CrtSetBreakAlloc(
 
 ## <a name="remarks"></a>备注
 
-**_CrtSetBreakAlloc**允许应用程序通过在内存分配的特定点中断，并跟踪回请求的源，来执行内存泄露检测。 该函数使用在堆中分配它时分配到内存块的有序对象分配序号。 未定义[_debug](../../c-runtime-library/debug.md)时，将在预处理过程中删除对 **_CrtSetBreakAlloc**的调用。
+**_CrtSetBreakAlloc** 允许应用程序通过在内存分配的特定点中断，并跟踪回请求的源，来执行内存泄露检测。 该函数使用在堆中分配它时分配到内存块的有序对象分配序号。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，将在预处理过程中删除对 **_CrtSetBreakAlloc** 的调用。
 
-对象分配序号存储在 Crtdbg.h 中定义的 **_CrtMemBlockHeader** 结构的 *lRequest* 字段中。 当某个调试转储函数报告有关某个内存块的信息时，此数字会括在大括号中，例如{36}。
+对象分配序号存储在 Crtdbg.h 中定义的 **_CrtMemBlockHeader** 结构的 *lRequest* 字段中。 当某个调试转储函数报告有关某个内存块的信息时，此数字会括在大括号中，例如 {36} 。
 
-有关 **_CrtSetBreakAlloc**如何与其他内存管理函数一起使用的详细信息，请参阅[跟踪堆分配请求](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+有关 **_CrtSetBreakAlloc** 如何与其他内存管理函数一起使用的详细信息，请参阅 [跟踪堆分配请求](/visualstudio/debugger/crt-debug-heap-details)。 有关如何在基堆的调试版本中分配、初始化和管理内存块的详细信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>要求
 
@@ -67,7 +68,7 @@ long _CrtSetBreakAlloc(
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

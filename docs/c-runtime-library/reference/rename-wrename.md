@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：重命名、_wrename
 title: rename、_wrename
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2a68bff031f321a2566c0da99aacc053ba475928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322493"
 ---
 # <a name="rename-_wrename"></a>rename、_wrename
 
@@ -64,7 +65,7 @@ int _wrename(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *oldname*<br/>
 指向旧名称的指针。
@@ -74,7 +75,7 @@ int _wrename(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则这些函数均返回 0。 出现错误时，函数将返回一个非零值，并将**errno**设置为以下值之一：
+如果成功，则这些函数均返回 0。 出现错误时，函数将返回一个非零值，并将 **errno** 设置为以下值之一：
 
 |errno 值|条件|
 |-|-|
@@ -88,9 +89,9 @@ int _wrename(
 
 **rename** 函数将 *oldname* 指定的文件或目录重命名为由 *newname* 给定的名称。 旧名称必须是现有文件或目录的路径。 新名称一定不能是现有文件或目录的名称。 通过在 *newname* 参数中给定不同的路径，可以使用 **rename** 将文件从一个目录或设备移至另一个目录或设备。 但是，不能使用 **rename** 来移动目录。 目录可以重命名，但不能移动。
 
-**_wrename**是 **_rename**的宽字符版本;**_wrename**的参数是宽字符字符串。 否则 **_wrename**和 **_rename**的行为相同。
+**_wrename** 是 **_rename** 的宽字符版本; **_wrename** 的参数是宽字符字符串。 否则 **_wrename** 和 **_rename** 的行为相同。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -100,7 +101,7 @@ int _wrename(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**rename**|\<io.h> 或 \<stdio.h>|
 |**_wrename**|\<stdio.h> 或 \<wchar.h>|
@@ -137,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 File 'CRT_RENAMER.OBJ' renamed to 'CRT_RENAMER.JBO'

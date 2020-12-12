@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：提交到磁盘常量
 title: Commit-To-Disk 常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-ms.openlocfilehash: c02b18e5a4a731957a7c74cc45e6e181fe23fad8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 416729f4b3b7bfdfdcb0ba11193f6c2a52691e6e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322638"
 ---
 # <a name="commit-to-disk-constants"></a>Commit-To-Disk 常量
 
@@ -52,5 +53,5 @@ ms.locfileid: "57750606"
 
 [流 I/O](../c-runtime-library/stream-i-o.md)<br/>
 [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
-[fopen、_wfopen_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
+[fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>
 [全局常量](../c-runtime-library/global-constants.md)

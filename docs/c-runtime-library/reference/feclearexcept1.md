@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： feclearexcept
 title: feclearexcept1
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09eb34ddb781a40418152ec8cc6893074c58a617
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322584"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -44,18 +45,18 @@ int feclearexcept(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*excepts*<br/>
+*removed*<br/>
 要清除的异常状态标记。
 
 ## <a name="return-value"></a>返回值
 
-如果*removed*为零，则返回零; 如果已成功清除所有指定的异常，则返回零。 否则，返回一个非零值。
+如果 *removed* 为零，则返回零; 如果已成功清除所有指定的异常，则返回零。 否则，返回一个非零值。
 
 ## <a name="remarks"></a>备注
 
-**Feclearexcept**函数尝试清除*removed*指定的浮点异常状态标志。 此函数支持在 fenv.h 中定义的这些异常宏：
+**Feclearexcept** 函数尝试清除 *removed* 指定的浮点异常状态标志。 此函数支持在 fenv.h 中定义的这些异常宏：
 
 |异常宏|描述|
 |---------------------|-----------------|
@@ -66,7 +67,7 @@ int feclearexcept(
 |FE_UNDERFLOW|早期的浮点运算结果因为过小而无法以完整的精度表示；创建了非常规值。|
 |FE_ALL_EXCEPT|所有受支持的浮点异常的按位 OR。|
 
-*Removed*参数可以是零，也可以是一个或多个受支持的异常宏的按位 or。 任何其他参数值的结果均未定义。
+*Removed* 参数可以是零，也可以是一个或多个受支持的异常宏的按位 or。 任何其他参数值的结果均未定义。
 
 ## <a name="requirements"></a>要求
 
@@ -74,9 +75,9 @@ int feclearexcept(
 |--------------|--------------|------------------|
 |**feclearexcept**|\<fenv.h>|\<cfenv>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [fetestexcept](fetestexcept1.md)<br/>

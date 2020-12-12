@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fegetenv
 title: fegetenv
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-ms.openlocfilehash: b2e3566eb96174d0f0ccd6beb401824cc052c995
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f4d6ab3de440d2d8d7e145111339577f04699f8b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322571"
 ---
 # <a name="fegetenv"></a>fegetenv
 
@@ -44,18 +45,18 @@ int fegetenv(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *penv*<br/>
-指向包含当前浮点环境值的**fenv_t**对象的指针。
+指向要包含当前浮点环境值的 **fenv_t** 对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果已成功将浮点环境存储在*penv*中，则返回0。 否则，返回一个非零值。
+如果已成功将浮点环境存储在 *penv* 中，则返回0。 否则，返回一个非零值。
 
 ## <a name="remarks"></a>备注
 
-**Fegetenv**函数在*penv*指向的对象中存储当前浮点环境。 浮点环境是一系列影响浮点计算的状态标志和控件模式。 包括舍入方向模式和浮点异常的状态标志。  如果*penv*未指向有效的**fenv_t**对象，则不定义后续行为。
+**Fegetenv** 函数在 *penv* 指向的对象中存储当前浮点环境。 浮点环境是一系列影响浮点计算的状态标志和控件模式。 包括舍入方向模式和浮点异常的状态标志。  如果 *penv* 未指向有效的 **fenv_t** 对象，则不定义后续行为。
 
 若要使用此函数，必须在调用前先使用 `#pragma fenv_access(on)` 指令关闭可能会阻止访问的浮点优化。 有关详细信息，请参阅 [fenv_access](../../preprocessor/fenv-access.md)。
 
@@ -65,9 +66,9 @@ int fegetenv(
 |--------------|--------------|------------------|
 |**fegetenv**|\<fenv.h>|\<cfenv>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [fesetenv](fesetenv1.md)<br/>

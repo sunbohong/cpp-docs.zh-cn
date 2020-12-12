@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用 OLE DB 提供程序模板
 title: 使用 OLE DB 提供程序模板
 ms.date: 10/29/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: acea10c085059290d543cb3ca9382cf26f944f33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209234"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319061"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>使用 OLE DB 提供程序模板
 
@@ -32,9 +33,9 @@ ms.locfileid: "80209234"
 
 - [调试提供程序](../../data/oledb/debugging-your-provider.md)
 
-- [转换不受提供程序支持的数据](../../data/oledb/converting-data-not-supported-by-the-provider.md)
+- [转换提供程序不支持的数据](../../data/oledb/converting-data-not-supported-by-the-provider.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板参考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

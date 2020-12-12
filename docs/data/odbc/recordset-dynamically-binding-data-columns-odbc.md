@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：记录集：动态绑定数据列 (ODBC) '
 title: 记录集：动态绑定数据列 (ODBC)
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 8bc9ba8a143234bec7927c9578a69a95a511bb9f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cb141874fa39b06e8e000c03e538021650facf91
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322374"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>记录集：动态绑定数据列 (ODBC)
 
@@ -33,7 +34,7 @@ ms.locfileid: "88837783"
 > [!NOTE]
 > MFC ODBC 使用者向导在 Visual Studio 2019 及更高版本中不可用。 你仍可以手动创建使用者。
 
-在设计时，MFC 应用程序向导或 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)（来自“添加类”）将根据数据源上的已知表和列创建记录集类****。 你可以在设计数据库时更改数据库，也可以稍后当你的应用程序在运行时使用这些表和列时进行更改。 你或其他用户可能会添加或删除表，或者从应用程序的记录集所依赖的表中添加或删除列。 尽管这可能不是所有数据访问应用程序的问题，但如果是你的问题，除了重新设计和重新编译之外，你会如何处理数据库架构的更改？ 本主题的目的是回答此问题。
+在设计时，MFC 应用程序向导或 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)（来自“添加类”）将根据数据源上的已知表和列创建记录集类。 你可以在设计数据库时更改数据库，也可以稍后当你的应用程序在运行时使用这些表和列时进行更改。 你或其他用户可能会添加或删除表，或者从应用程序的记录集所依赖的表中添加或删除列。 尽管这可能不是所有数据访问应用程序的问题，但如果是你的问题，除了重新设计和重新编译之外，你会如何处理数据库架构的更改？ 本主题的目的是回答此问题。
 
 本主题介绍了最常见的情况，在这种情况下，你可能会动态绑定所需的列（已经从基于已知数据库架构的记录集开始进行动态绑定了）以在运行时处理附加列。 本主题进一步假设附加列将映射到 `CString` 字段数据成员，这是最常见的情况，但我们也提供了建议来帮助你管理其他数据类型。
 
@@ -92,7 +93,7 @@ ms.locfileid: "88837783"
 
 需要使用的四个列表如下表所示。
 
-| 列出 | 说明 |
+| 列出 | 描述 |
 |--|--|
 | **Current-Table-Columns** | （图中的列表 1）数据源上的表中当前列的列表。 此列表可能与记录集中当前绑定的列的列表匹配。 |
 | **Bound-Recordset-Columns** | （图中的列表 2）记录集中绑定的列的列表。 这些列已在 `DoFieldExchange` 函数中包含了 RFX 语句。 |
@@ -146,7 +147,7 @@ ms.locfileid: "88837783"
 上述过程的结果是两个主要列表：列到绑定-动态包含列的名称和包含当前记录的列中的值的动态列值。
 
 > [!TIP]
-> 如果新列不全是相同的数据类型，则可能需要一个额外的并行列表，其中包含以某种方式定义列列表中每个对应元素的类型的项。 （为此，如有需要，可以使用值 AFX_RFX_BOOL、AFX_RFX_BYTE 等。 这些常量在 AFXDB 中定义。H. ) 根据您表示列数据类型的方式选择列表类型。
+> 如果新列不全是相同的数据类型，则可能需要一个额外的并行列表，其中包含以某种方式定义列列表中每个对应元素的类型的项。 （为此，如有需要，可以使用值 AFX_RFX_BOOL、AFX_RFX_BYTE 等。 这些常量在 AFXDB 中定义。 ) 根据您表示列数据类型的方式选择列表类型。
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 添加 RFX 调用以绑定列
 
@@ -164,14 +165,14 @@ RFX_Text( pFX,
             m_listValue.GetNext( posValue ));
 ```
 
-有关 RFX 函数的详细信息，请参阅类库参考中的[宏和全局](../../mfc/reference/mfc-macros-and-globals.md)**。
+有关 RFX 函数的详细信息，请参阅类库参考中的[宏和全局](../../mfc/reference/mfc-macros-and-globals.md)。
 
 > [!TIP]
 > 如果新列是不同的数据类型，请在循环中使用 switch 语句为每种类型调用相应的 RFX 函数。
 
 当框架在 `Open` 过程中调用 `DoFieldExchange` 将列绑定到记录集时，RFX 将调用静态列绑定这些列。 然后循环将反复调用动态列的 RFX 函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：处理 (ODBC) 的大型数据项 ](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

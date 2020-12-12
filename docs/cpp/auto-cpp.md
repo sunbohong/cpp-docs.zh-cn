@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： `auto` (c + +) '
 title: auto (C++)
 ms.date: 12/10/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: be268635e61005efbdb01ed8c4eec79c7cb9b800
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 2237c8aa3cb1b1078a8b90ba5a3ba6cba0a7134b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319464"
 ---
 # <a name="auto-c"></a>`auto` (C++)
 
@@ -27,7 +28,7 @@ ms.locfileid: "91353033"
 
 > **`[](auto`***param1* **`, auto`***param2***`) {};`**
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **`auto`** 关键字指示编译器使用已声明变量的初始化表达式，或使用 lambda 表达式参数来推导其类型。
 
@@ -49,7 +50,7 @@ ms.locfileid: "91353033"
 
 若要使用 **`auto`** 关键字，请使用它（而不是类型）来声明变量，并指定初始化表达式。 此外，还可以 **`auto`** 使用说明符和声明符（如 **`const`** 、 **`volatile`** 、指针 (**`*`**) 、引用 (**`&`**) 和右值引用 (**`&&`**) 来修改关键字。 编译器计算初始化表达式，然后使用该信息来推断变量类型。
 
-初始化表达式可以是赋值 (等号语法) 、直接初始化 (函数样式的语法) 、 [`operator new`](new-operator-cpp.md) 表达式或初始化表达式可以是[基于范围的 `for` 语句 (c + +) ](../cpp/range-based-for-statement-cpp.md)语句中的*范围声明*参数。 有关详细信息，请参阅本文档后面的 [初始值设定项](../cpp/initializers.md) 和代码示例。
+初始化表达式可以是赋值 (等号语法) 、直接初始化 (函数样式的语法) 、 [`operator new`](new-operator-cpp.md) 表达式或初始化表达式可以是 [基于范围的 `for` 语句 (c + +)](../cpp/range-based-for-statement-cpp.md)语句中的 *范围声明* 参数。 有关详细信息，请参阅本文档后面的 [初始值设定项](../cpp/initializers.md) 和代码示例。
 
 **`auto`** 关键字是类型的占位符，但它本身不是类型。 因此， **`auto`** 关键字不能用于 [`sizeof`](../cpp/sizeof-operator.md) c + +/cli) 的强制转换或运算符（例如和） ([`typeid`](../extensions/typeid-cpp-component-extensions.md) 。
 
@@ -65,7 +66,7 @@ ms.locfileid: "91353033"
 
 ## <a name="references-and-cv-qualifiers"></a>引用和 cv 限定符
 
-请注意，使用 **`auto`** "删除引用"、" **`const`** 限定符" 和 " **`volatile`** 限定符"。 请考虑以下示例：
+请注意，使用 **`auto`** "删除引用"、" **`const`** 限定符" 和 " **`volatile`** 限定符"。 请看下面的示例：
 
 ```cpp
 // cl.exe /analyze /EHsc /W4
@@ -132,7 +133,7 @@ int main()
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符号初始化之前无法使用。 在实践中，这意味着无法使用变量来初始化自身。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|不能强制转换为使用关键字声明的类型 **`auto`** 。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|使用关键字声明的声明符列表中的所有符号都 **`auto`** 必须解析为相同的类型。 有关详细信息，请参阅 [声明和定义](declarations-and-definitions-cpp.md)。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用关键字声明的符号 **`auto`** 。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和 [typeid](../extensions/typeid-cpp-component-extensions.md)运算符不能应用于使用关键字声明的符号 **`auto`** 。|
 
 ## <a name="examples"></a>示例
 
@@ -218,7 +219,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [`/Zc:auto` (推导变量类型) ](../build/reference/zc-auto-deduce-variable-type.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：引发软件异常
 title: 引发软件异常
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,30 +14,30 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 737bec4af99ad7743a8f7740d57919f169c2b509
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179128"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319399"
 ---
 # <a name="raising-software-exceptions"></a>引发软件异常
 
 系统不会将某些最常见的程序错误源标记为异常。 例如，如果你尝试分配内存块，但没有足够的内存，则运行时或 API 函数不会引发异常，但会返回一个错误代码。
 
-但是，您可以通过在代码中检测到该条件，然后通过调用[RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)函数报告该条件，将任何条件视为例外。 通过按此方式标记错误，您可以将结构化异常处理的优点引入任何类型的运行时错误中。
+但是，您可以通过在代码中检测到该条件，然后通过调用 [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) 函数报告该条件，将任何条件视为例外。 通过按此方式标记错误，您可以将结构化异常处理的优点引入任何类型的运行时错误中。
 
 对错误使用结构化异常处理：
 
 - 为事件定义你自己的异常代码。
 
-- 检测到问题时，请调用 `RaiseException`。
+- `RaiseException`检测到问题时调用。
 
 - 使用异常处理筛选器来测试您定义的异常代码。
 
-\<winerror.h > 文件显示异常代码的格式。 若要确保不定义与现有异常代码发生冲突的代码，请将第三个最高有效位设置为 1。 应设置四个最高有效位，如下表所示。
+该 \<winerror.h> 文件显示异常代码的格式。 若要确保不定义与现有异常代码发生冲突的代码，请将第三个最高有效位设置为 1。 应设置四个最高有效位，如下表所示。
 
-|Bits|建议的二进制设置|说明|
+|Bits|建议的二进制设置|描述|
 |----------|--------------------------------|-----------------|
 |31-30|11|这两个位描述代码的基本状态：11 = 错误，00 = 成功，01 = 信息性，10 = 警告。|
 |29|1|客户端位。 为用户定义的代码将其设置为 1。|
@@ -59,7 +60,7 @@ if (lpstr == NULL)
     RaiseException( STATUS_INSUFFICIENT_MEM, 0, 0, 0);
 ```
 
-如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 有关详细信息，请参阅 Windows SDK 中的[RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)函数。
+如果只需引发异常，则可以将最后三个参数设置为 0。 最后三个参数对于传递附加信息和设置阻止处理程序继续执行的标记很有用。 有关详细信息，请参阅 Windows SDK 中的 [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) 函数。
 
 在异常处理筛选器中，您随后可以测试已定义的代码。 例如：
 
@@ -71,7 +72,7 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编写异常处理程序](../cpp/writing-an-exception-handler.md)<br/>
-[结构化异常处理（CC++/）](../cpp/structured-exception-handling-c-cpp.md)
+[结构化异常处理 (C/c + +) ](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：用户记录
 title: 用户记录
 ms.date: 05/09/2019
 f1_keywords:
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: 2de4cc9227da9d4ad8a012dacd85500ab698c4ae
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 1d31ef93bb1b06925306c84d436d7a7837a08431
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97322320"
 ---
 # <a name="user-records"></a>用户记录
 
 > [!NOTE]
 > ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
 
-使用者必须有用户记录，才能使用静态取值函数（即派生自 `CAccessor` 的取值函数）。 用户记录是 C++ 类，其中包含用于处理输入或输出的数据元素。 ATL OLE DB 使用者向导**** 为使用者生成用户记录。 可以将方法添加到用户记录中，以执行处理命令等可选任务。
+使用者必须有用户记录，才能使用静态取值函数（即派生自 `CAccessor` 的取值函数）。 用户记录是 C++ 类，其中包含用于处理输入或输出的数据元素。 ATL OLE DB 使用者向导为使用者生成用户记录。 可以将方法添加到用户记录中，以执行处理命令等可选任务。
 
 下面的代码展示了处理命令的示例记录。 在用户记录中，BEGIN_COLUMN_MAP 表示从提供程序传递给使用者的数据行集。 BEGIN_PARAM_MAP 表示一组命令参数。 此示例使用 [CCommand](../../data/oledb/ccommand-class.md) 类来处理命令参数。 映射条目中的数据成员表示类的每个实例在一个连续内存块中的偏移量。 COLUMN_ENTRY 宏对应于提供程序端的 PROVIDER_COLUMN_ENTRY 宏。
 
@@ -58,7 +59,7 @@ END_PARAM_MAP()
 
 ## <a name="wizard-generated-user-records"></a>向导生成的用户记录
 
-如果使用 ATL OLE DB 使用者向导**** 生成使用者，可以选择是使用 OLE DB 模板，还是使用 OLE DB 特性。 生成的代码因具体情况而异。 若要详细了解此代码，请参阅[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。
+如果使用 ATL OLE DB 使用者向导生成使用者，可以选择是使用 OLE DB 模板，还是使用 OLE DB 特性。 生成的代码因具体情况而异。 若要详细了解此代码，请参阅[使用者向导生成的类](../../data/oledb/consumer-wizard-generated-classes.md)。
 
 ## <a name="user-record-support-for-multiple-accessors"></a>用户记录支持多个取值函数
 

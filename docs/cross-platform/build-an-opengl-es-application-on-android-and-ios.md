@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息：在 Android 和 iOS 上生成 OpenGL ES 应用程序
 title: 在 Android 和 iOS 上生成 OpenGL ES 应用程序
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 278fd66202332417f7663542f0d66a3ec545b715
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: c840e9bbfd450c412ff7c0646127c157a3af565a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924304"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319412"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>在 Android 和 iOS 上生成 OpenGL ES 应用程序
 
@@ -27,11 +28,11 @@ ms.locfileid: "92924304"
 
 ::: moniker range="msvc-150"
 
-1. 在 Visual Studio 中，选择 " **文件** " " > **新建** > **项目** "。
+1. 在 Visual Studio 中，选择 " **文件**" " > **新建** > **项目**"。
 
-1. 在  “新建项目”对话框中，在  “模板”下，选择“Visual C++”  >  “跨平台”，然后选择“OpenGLES 应用程序(Android、iOS)”  模板。
+1. 在 “新建项目”对话框中，在“模板”下，选择“Visual C++”  > “跨平台”，然后选择“OpenGLES 应用程序(Android、iOS)”模板。
 
-1. 为应用命名（例如 MyOpenGLESApp），然后选择“确定”  。
+1. 为应用命名（例如 MyOpenGLESApp），然后选择“确定”。
 
    ![新的 OpenGLES 应用程序项目](../cross-platform/media/cppmdd-opengles-newproj.png "新的 OpenGLES 应用程序项目")
 
@@ -43,11 +44,11 @@ ms.locfileid: "92924304"
 
 ::: moniker range=">=msvc-160"
 
-1. 在 Visual Studio 中，选择 " **文件** " " > **新建** > **项目** "。
+1. 在 Visual Studio 中，选择 " **文件**" " > **新建** > **项目**"。
 
-1. 在“创建新项目”对话框中，选择“OpenGLES 应用程序(Android、iOS)”模板，然后选择“下一步”  。
+1. 在“创建新项目”对话框中，选择“OpenGLES 应用程序(Android、iOS)”模板，然后选择“下一步”。
 
-1. 在“配置新项目”对话框的“项目名称”中，输入项目名称（例如 MyOpenGLESApp），然后选择“创建”  。
+1. 在“配置新项目”对话框的“项目名称”中，输入项目名称（例如 MyOpenGLESApp），然后选择“创建”。
 
    Visual Studio 创建新的解决方案并打开解决方案资源管理器。
 
@@ -57,15 +58,15 @@ ms.locfileid: "92924304"
 
 新的 OpenGL ES 应用程序解决方案包括三个库项目和两个应用程序项目。 库文件夹包含一个共享代码项目。 和，两个引用共享代码的特定于平台的项目：
 
-- `MyOpenGLESApp.Android.NativeActivity` 包含引用和粘附代码，可将应用作为本机活动在 Android 上实现。 粘附代码入口点在 main.cpp 中实现，它包括 `MyOpenGLESApp.Shared` 中的公共共享代码。  预编译头位于 pch.h。  此本机活动应用项目编译为一个由 `MyOpenGLESApp.Android.Packaging` 项目选取的共享库 (.so) 文件。 
+- `MyOpenGLESApp.Android.NativeActivity` 包含引用和粘附代码，可将应用作为本机活动在 Android 上实现。 粘附代码入口点在 main.cpp 中实现，它包括 `MyOpenGLESApp.Shared` 中的公共共享代码。 预编译头位于 pch.h。 此本机活动应用项目编译为一个由 `MyOpenGLESApp.Android.Packaging` 项目选取的共享库 (.so) 文件。
 
-- `MyOpenGLESApp.iOS.StaticLibrary` 创建一个 iOS 静态库 (.a) 文件，其中包含 `MyOpenGLESApp.Shared` 中的共享代码。  它链接到由 `MyOpenGLESApp.iOS.Application` 项目创建的应用。
+- `MyOpenGLESApp.iOS.StaticLibrary` 创建一个 iOS 静态库 (.a) 文件，其中包含 `MyOpenGLESApp.Shared` 中的共享代码。 它链接到由 `MyOpenGLESApp.iOS.Application` 项目创建的应用。
 
 - `MyOpenGLESApp.Shared` 包含跨平台运行的共享代码。 它使用预处理器宏进行特定于平台代码的条件编译。 共享代码由 `MyOpenGLESApp.Android.NativeActivity` 和 `MyOpenGLESApp.iOS.StaticLibrary` 的项目引用拾取。
 
 该解决方案包含两个项目来生成适用于 Android 和 iOS 平台的应用：
 
-- `MyOpenGLESApp.Android.Packaging` 创建 .apk 文件，用于 Android 设备或仿真程序上的开发。  此文件包括在此设置清单属性的资源和 AndroidManifest.xml 文件。 它还包括控制 Ant 生成过程的 build.xml 文件。  默认情况下，它被设置为启动项目，因此可从 Visual Studio 直接部署和运行它。
+- `MyOpenGLESApp.Android.Packaging` 创建 .apk 文件，用于 Android 设备或仿真程序上的开发。 此文件包括在此设置清单属性的资源和 AndroidManifest.xml 文件。 它还包括控制 Ant 生成过程的 build.xml 文件。 默认情况下，它被设置为启动项目，因此可从 Visual Studio 直接部署和运行它。
 
 - `MyOpenGLESApp.iOS.Application` 包含资源和 Objective-C 粘附代码，以用于创建链接到 `MyOpenGLESApp.iOS.StaticLibrary` 中 C++ 静态库代码的 iOS 应用。 此项目创建一个生成包，该包通过 Visual Studio 和远程代理传输到你的 Mac。 当创建此项目时，Visual Studio 将发送文件和命令以在 Mac 上生成并部署应用。
 
@@ -75,13 +76,13 @@ ms.locfileid: "92924304"
 
 ### <a name="to-build-and-run-the-android-native-activity-app"></a>若要生成并运行 Android 本机活动应用
 
-1. 如果尚未选中，则从“解决方案平台”  下拉列表中选择“x86”  。
+1. 如果尚未选中，则从“解决方案平台”下拉列表中选择“x86”。
 
    ![将解决方案平台设置为 x86](../cross-platform/media/cppmdd-opengles-solutionplat.png "将解决方案平台设置为 x86")
 
-   使用 x86 指定仿真器目标。 若要针对一种设备，则基于设备处理器选择解决方案平台。 如果未显示“解决方案平台”  列表，则从“添加/删除按钮”  列表中选择“解决方案平台”  ，然后选择你的平台。
+   使用 x86 指定仿真器目标。 若要针对一种设备，则基于设备处理器选择解决方案平台。 如果未显示“解决方案平台”列表，则从“添加/删除按钮”列表中选择“解决方案平台”，然后选择你的平台。
 
-1. 在“解决方案资源管理器”中，打开 `MyOpenGLESApp.Android.Packaging` 项目的快捷菜单，然后选择“生成”。 
+1. 在“解决方案资源管理器”中，打开 `MyOpenGLESApp.Android.Packaging` 项目的快捷菜单，然后选择“生成”。
 
    ![构建 Android 打包项目](../cross-platform/media/cppmdd-opengles-andbuild.png "构建 Android 打包项目")
 
@@ -95,7 +96,7 @@ ms.locfileid: "92924304"
 
    可能已安装了其他仿真程序或连接了 Android 设备。 您可以在 "部署目标" 下拉列表中选择它们。 若要运行该应用，生成的解决方案平台必须与目标设备的平台匹配。
 
-1. 按 **f5** 开始调试 **，或按 f5** + **F5** 以启动（不调试）。
+1. 按 **f5** 开始调试 **，或按 f5** + 以启动（不调试）。
 
    Visual Studio 启动仿真程序，需要几秒钟时间来加载和部署代码。 下面介绍了此应用如何显示在仿真器中：
 
@@ -123,11 +124,11 @@ ms.locfileid: "92924304"
 
 1. 在 Mac 上打开 Xcode 应用。
 
-1. 创建新的“单视图应用程序”  Xcode 项目。 在项目创建期间填写必填字段。 值可以是任意的，因为该项目仅用于创建预配配置文件，该配置文件稍后用于对应用生成进行签名。
+1. 创建新的“单视图应用程序”Xcode 项目。 在项目创建期间填写必填字段。 值可以是任意的，因为该项目仅用于创建预配配置文件，该配置文件稍后用于对应用生成进行签名。
 
-1. 将在 [Apple 开发人员计划](https://developer.apple.com/programs/)帐户中注册的 Apple ID 添加到 Xcode。 你的 Apple ID 用作签名标识以对应用进行签名。 若要添加 Xcode 中的签名标识，请打开 Xcode  菜单并选择  “首选项”。 选择“帐户”  并单击“添加按钮(+)”以添加你的 Apple ID。 有关详细说明，请参阅[添加 Apple ID 帐户](https://help.apple.com/xcode/mac/current/#/devaf282080a)。
+1. 将在 [Apple 开发人员计划](https://developer.apple.com/programs/)帐户中注册的 Apple ID 添加到 Xcode。 你的 Apple ID 用作签名标识以对应用进行签名。 若要添加 Xcode 中的签名标识，请打开 Xcode 菜单并选择“首选项”。 选择“帐户”并单击“添加按钮(+)”以添加你的 Apple ID。 有关详细说明，请参阅[添加 Apple ID 帐户](https://help.apple.com/xcode/mac/current/#/devaf282080a)。
 
-1. 从 Xcode 项目的“常规”设置中，将“捆绑标识符”  的值更改为 `com.<NameOfVSProject>`，其中 `<NameOfVSProject>` 与你创建的 Visual Studio 解决方案项目同名。 例如，如果已在 Visual Studio 上创建名为 `MyOpenGLESApp` 的项目，则将“捆绑标识符”  设置为 `com.MyOpenGLESApp`。
+1. 从 Xcode 项目的“常规”设置中，将“捆绑标识符”的值更改为 `com.<NameOfVSProject>`，其中 `<NameOfVSProject>` 与你创建的 Visual Studio 解决方案项目同名。 例如，如果已在 Visual Studio 上创建名为 `MyOpenGLESApp` 的项目，则将“捆绑标识符”设置为 `com.MyOpenGLESApp`。
 
    ![Xcode 捆绑标识符](../cross-platform/media/cppmdd-opengles-iosxcodeid.png "Xcode 捆绑标识符")
 
@@ -135,7 +136,7 @@ ms.locfileid: "92924304"
 
    ![Xcode 自动签名](../cross-platform/media/cppmdd-opengles-iosxcodesign.png "Xcode 自动签名")
 
-1. 选择添加为开发团队  的 Apple ID 的团队名称。
+1. 选择添加为开发团队的 Apple ID 的团队名称。
 
    ![Xcode 团队](../cross-platform/media/cppmdd-opengles-iosxcodeteam.png "Xcode 团队")
 
@@ -147,19 +148,19 @@ ms.locfileid: "92924304"
 
 1. 将 iOS 设备连接到 Mac。 首次将设备连接到计算机后，会出现询问你是否信任计算机访问设备的警报。 使设备能够信任 Mac 计算机。
 
-1. 在 Visual Studio 上，如果尚未选中，请基于你的设备处理器从“解决方案平台”  下拉列表中选择解决方案平台。 在此示例中为 ARM64  处理器。
+1. 在 Visual Studio 上，如果尚未选中，请基于你的设备处理器从“解决方案平台”下拉列表中选择解决方案平台。 在此示例中为 ARM64 处理器。
 
    ![将解决方案平台设置为 ARM64](../cross-platform/media/cppmdd-opengles-pickplatformarm64.png "将解决方案平台设置为 ARM64")
 
-1. 在“解决方案资源管理器”中，打开 MyOpenGLESApp.iOS.Application 项目的快捷菜单，然后选择“卸载项目”以卸载项目  。
+1. 在“解决方案资源管理器”中，打开 MyOpenGLESApp.iOS.Application 项目的快捷菜单，然后选择“卸载项目”以卸载项目。
 
-1. 再次，打开已卸载的 MyOpenGLESApp.iOS.Application 项目的快捷菜单，然后选择“编辑 project.pbxproj”  以编辑项目文件。 在 `project.pbxproj` 文件中，查找 `buildSettings` 属性并使用 Apple 团队 ID 添加 `DEVELOPMENT_TEAM`。 以下屏幕截图显示 Apple 团队 ID 的 `123456ABC` 的示例值。 可以从 Xcode 中找到 Apple 团队 ID 的值。 转到“生成设置”  并将鼠标悬停在开发团队名称上以显示工具提示。 工具提示显示团队 ID。
+1. 再次，打开已卸载的 MyOpenGLESApp.iOS.Application 项目的快捷菜单，然后选择“编辑 project.pbxproj”以编辑项目文件。 在 `project.pbxproj` 文件中，查找 `buildSettings` 属性并使用 Apple 团队 ID 添加 `DEVELOPMENT_TEAM`。 以下屏幕截图显示 Apple 团队 ID 的 `123456ABC` 的示例值。 可以从 Xcode 中找到 Apple 团队 ID 的值。 转到“生成设置”并将鼠标悬停在开发团队名称上以显示工具提示。 工具提示显示团队 ID。
 
    ![设置开发团队](../cross-platform/media/cppmdd-opengles-iosdevelopmentteam.png "设置开发团队")
 
-1. 关闭 `project.pbxproj` 文件，然后打开已卸载的 MyOpenGLESApp.iOS.Application 项目的快捷菜单，然后选择“重新加载项目”  以重新加载项目。
+1. 关闭 `project.pbxproj` 文件，然后打开已卸载的 MyOpenGLESApp.iOS.Application 项目的快捷菜单，然后选择“重新加载项目”以重新加载项目。
 
-1. 现在，通过打开 MyOpenGLESApp.iOS.Application 项目的快捷菜单并选择“生成”来生成该项目  。
+1. 现在，通过打开 MyOpenGLESApp.iOS.Application 项目的快捷菜单并选择“生成”来生成该项目。
 
    ![生成 iOS 应用程序项目](../cross-platform/media/cppmdd-opengles-iosbuild.png "构建 iOS 应用程序项目")
 
@@ -167,7 +168,7 @@ ms.locfileid: "92924304"
 
    在 Mac 计算机上，系统可能会提示你允许 codesign 访问密钥链。 选择 " **允许** " 以继续。
 
-1. 选择工具栏上的 iOS 设备以在连接到 Mac 的设备上运行该应用。 如果应用不启动，请验证设备是否为已部署的应用程序提供在设备上执行的权限。 可以通过转到 **Settings**  >  **General**  >  设备上的 "设置" "常规" " **设备管理** " 来设置此权限。 选择你的开发人员应用帐户，信任你的帐户并验证该应用。 尝试从 Visual Studio 再次运行该应用。
+1. 选择工具栏上的 iOS 设备以在连接到 Mac 的设备上运行该应用。 如果应用不启动，请验证设备是否为已部署的应用程序提供在设备上执行的权限。 可以通过转到  >    >  设备上的 "设置" "常规" "**设备管理**" 来设置此权限。 选择你的开发人员应用帐户，信任你的帐户并验证该应用。 尝试从 Visual Studio 再次运行该应用。
 
    ![iOS 设备上的 iOS 应用](../cross-platform/media/cppmdd-opengles-iosdevice.png "iOS 设备上的 iOS 应用")
 

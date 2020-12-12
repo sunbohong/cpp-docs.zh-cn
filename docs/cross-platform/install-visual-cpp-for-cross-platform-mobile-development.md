@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息：通过 c + + 安装跨平台移动开发
 title: 使用 C++ 安装跨平台移动开发
 ms.date: 10/17/2019
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-ms.openlocfilehash: b9a6b78450969f5228ccf16cc7b0cff02a4d3b1e
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 45059cbadcd8e8c304c65262ffcb89bf767095e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319217"
 ---
 # <a name="install-cross-platform-mobile-development-with-c"></a>使用 C++ 安装跨平台移动开发
 
@@ -48,7 +49,7 @@ ms.locfileid: "92924001"
 
 ## <a name="install-the-tools"></a>安装工具
 
-Visual Studio 安装程序包括使用 C++ 的移动开发工作负载  。 此工作负载安装 Visual Studio 中的 Android 和 iOS 开发所需的 C++ 语言工具、模板和组件。 它包括 Android 生成和调试所需的 GCC 和 Clang 工具集。 工作负载会安装 Android SDK，以及与用于 iOS 开发的 Mac 进行通信的组件。 它还安装支持 iOS 和 Android 应用开发所需的第三方工具和软件开发工具包。 这些大部分第三方工具都是 Android 平台支持所需的开放源代码软件。
+Visual Studio 安装程序包括使用 C++ 的移动开发工作负载。 此工作负载安装 Visual Studio 中的 Android 和 iOS 开发所需的 C++ 语言工具、模板和组件。 它包括 Android 生成和调试所需的 GCC 和 Clang 工具集。 工作负载会安装 Android SDK，以及与用于 iOS 开发的 Mac 进行通信的组件。 它还安装支持 iOS 和 Android 应用开发所需的第三方工具和软件开发工具包。 这些大部分第三方工具都是 Android 平台支持所需的开放源代码软件。
 
 - 生成面向 Android 平台的 C++ 代码需要 Android 本机开发工具包 (NDK)、Apache Ant 和 C++ Android 开发工具。
 
@@ -64,17 +65,17 @@ Visual Studio 安装程序包括使用 C++ 的移动开发工作负载  。 此�
 
 ### <a name="install-the-mobile-development-with-c-workload"></a>安装使用 C++ 的移动开发工作负载
 
-1. 从“开始”菜单运行“Visual Studio 安装程序”  。
+1. 从“开始”菜单运行“Visual Studio 安装程序”。
 
-1. 如果已经安装了 Visual Studio，则可以为想要修改的已安装 Visual Studio 版本选择“修改”按钮  。 否则，请选择“安装”  以安装 Visual Studio。
+1. 如果已经安装了 Visual Studio，则可以为想要修改的已安装 Visual Studio 版本选择“修改”按钮。 否则，请选择“安装”以安装 Visual Studio。
 
-1. 选中“工作负载”  选项卡后，向下滚动并在 Visual Studio 安装程序中选择“使用 C++ 的移动开发”  工作负载。 选中此工作负载后，也会选中 C++ 开发所需的其他组件。 还可以选择其他工作负载和单个组件同时进行安装。 要生成同时面向 UWP 的跨平台代码，请选择“通用 Windows 平台开发”  工作负载。
+1. 选中“工作负载”选项卡后，向下滚动并在 Visual Studio 安装程序中选择“使用 C++ 的移动开发”工作负载。 选中此工作负载后，也会选中 C++ 开发所需的其他组件。 还可以选择其他工作负载和单个组件同时进行安装。 要生成同时面向 UWP 的跨平台代码，请选择“通用 Windows 平台开发”工作负载。
 
-1. 在“安装详细信息”  窗格中，展开“使用 C++ 的移动开发”  。 在“可选”  部分，你可以选择其他版本的 NDK、Google Android 模拟器、Intel 硬件加速执行管理器以及 IncrediBuild 生成加速工具。
+1. 在“安装详细信息”窗格中，展开“使用 C++ 的移动开发”。 在“可选”部分，你可以选择其他版本的 NDK、Google Android 模拟器、Intel 硬件加速执行管理器以及 IncrediBuild 生成加速工具。
 
-1. 默认情况下，工作负载包含一个或多个 Android SDK 安装程序组件。 提供 Android SDK 的其他版本。 要安装其中一个版本，请选择“单个组件”  选项卡，然后向下滚动到“SDK、库和框架”  部分进行选择。
+1. 默认情况下，工作负载包含一个或多个 Android SDK 安装程序组件。 提供 Android SDK 的其他版本。 要安装其中一个版本，请选择“单个组件”选项卡，然后向下滚动到“SDK、库和框架”部分进行选择。
 
-1. 选择“修改”  或“安装”  按钮以安装“使用 C++ 的移动开发”  工作负载以及选择的其他工作负载和可选组件。
+1. 选择“修改”或“安装”按钮以安装“使用 C++ 的移动开发”工作负载以及选择的其他工作负载和可选组件。
 
    安装完成后，关闭该安装程序，然后重启计算机。 第三方组件的某些设置操作在计算机重启后才生效。
 
@@ -99,13 +100,13 @@ Visual Studio 安装程序包括使用 C++ 的移动开发工作负载  。 此�
 
 ### <a name="to-set-the-paths-for-third-party-tools"></a>若要设置第三方工具的路径
 
-1. 在 Visual Studio 菜单栏上，选择 " **工具** " "  >  **选项** "。
+1. 在 Visual Studio 菜单栏上，选择 "**工具**" "  >  **选项**"。
 
-1. 在“选项”  对话框中，选择“跨平台”  > “C++”  > “Android”  。
+1. 在“选项”对话框中，选择“跨平台” > “C++” > “Android”。
 
    ![Android 工具路径选项](../cross-platform/media/cppmdd-options-android.png "Android 工具路径选项")
 
-1. 若要更改工具使用的路径，请选中该路径旁的复选框，并在文本框中编辑文件夹路径。 还可以使用浏览按钮 (  对话框以选择文件夹。
+1. 若要更改工具使用的路径，请选中该路径旁的复选框，并在文本框中编辑文件夹路径。 还可以使用浏览按钮 (**...**) 打开“选择位置”  对话框以选择文件夹。
 
 1. 选择“确定”  以保存自定义工具文件夹位置。
 
