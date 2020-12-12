@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fwide
 title: fwide
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: 652aee03bfb5504a51d74efb326cc7a3d7c28649
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5cc49bb92421ac8899df9850c110a519d32b1d1a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273743"
 ---
 # <a name="fwide"></a>fwide
 
@@ -46,14 +47,14 @@ int fwide(
 ### <a name="parameters"></a>parameters
 
 *流*<br/>
-指向**文件**结构的指针（已忽略）。
+指向 **文件** 结构的指针 (忽略) 。
 
-模式<br/>
+*mode*<br/>
 流的新宽度：宽字符为正，字节为负，保持不变的为零。 （将忽略此值。）
 
 ## <a name="return-value"></a>返回值
 
-此函数当前仅返回*mode*。
+此函数当前仅返回 *mode*。
 
 ## <a name="remarks"></a>备注
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _set_output_format
 title: _set_output_format
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d0e45f4f7ce2a6837bce1e583ec3afd5a70f108a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277174"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
@@ -47,9 +48,9 @@ unsigned int _set_output_format(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*格式*<br/>
+*format*<br/>
 [in] 表示要使用的格式的值。
 
 ## <a name="return-value"></a>返回值
@@ -66,7 +67,7 @@ unsigned int _set_output_format(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
@@ -122,7 +123,7 @@ int main()
 1.211E-005  2.306E-112
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_get_output_format](../c-runtime-library/get-output-format.md)

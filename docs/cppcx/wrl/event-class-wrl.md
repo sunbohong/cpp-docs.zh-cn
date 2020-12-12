@@ -1,5 +1,6 @@
 ---
-title: Event 类（WRL）
+description: '了解详细信息：事件类 (WRL) '
+title: '事件类 (WRL) '
 ms.date: 09/24/2018
 ms.topic: reference
 f1_keywords:
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Event::Event, constructor
 - Microsoft::WRL::Wrappers::Event::operator= operator
 ms.assetid: 55dfc9fc-62d4-4bb2-9d85-5b6dd88569e8
-ms.openlocfilehash: 27a90bb801d1b6869b2391227464bb215dd42538
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e3a61a40d1160830df80a7e0650e60fbf803e3d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272820"
 ---
-# <a name="event-class-wrl"></a>Event 类（WRL）
+# <a name="event-class-wrl"></a>事件类 (WRL) 
 
 表示一个事件。
 
@@ -54,7 +55,7 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 **命名空间：** Microsoft：： WRL：：包装
 
-## <a name="eventevent"></a><a name="event"></a>Event：： Event
+## <a name="eventevent"></a><a name="event"></a> Event：： Event
 
 初始化 `Event` 类的新实例。
 
@@ -67,12 +68,12 @@ WRL_NOTHROW Event(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h*<br/>
-事件的句柄。 默认情况下， *h*初始化为 **`nullptr`** 。
+事件的句柄。 默认情况下， *h* 初始化为 **`nullptr`** 。
 
-## <a name="eventoperator"></a><a name="operator-assign"></a>Event：： operator =
+## <a name="eventoperator"></a><a name="operator-assign"></a> Event：： operator =
 
 将指定的 `Event` 引用分配给当前 `Event` 实例。
 
@@ -82,7 +83,7 @@ WRL_NOTHROW Event& operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h*<br/>
 对实例的右值引用 `Event` 。

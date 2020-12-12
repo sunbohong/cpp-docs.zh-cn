@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： Run-Time 错误检查
 title: 运行时错误检查
 ms.date: 11/04/2016
 helpviewer_keywords:
 - run-time error checking
 - run-time errors, checking
 ms.assetid: c965dd01-57ad-4a3c-b1d6-5aa04f920501
-ms.openlocfilehash: cf707cbd53e2285684d53d3f440db0f618343598
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: aff00bc66cd118b891e902328eb6ae85bd6fc14c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444841"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273600"
 ---
 # <a name="run-time-error-checking"></a>运行时错误检查
 
@@ -27,9 +28,9 @@ C 运行库包含支持运行时错误检查 (RTC) 的函数。 利用运行时�
 |[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|将函数指定为报告运行时错误检查的处理程序。|
 |[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|将一个由运行时错误检查检测到的错误与一个类型关联。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[/RTC（运行时错误检查）](../build/reference/rtc-run-time-error-checks.md)<br/>
+[/RTC (运行时错误检查) ](../build/reference/rtc-run-time-error-checks.md)<br/>
 [runtime_checks](../preprocessor/runtime-checks.md)<br/>
 [调试例程](../c-runtime-library/debug-routines.md)<br/>

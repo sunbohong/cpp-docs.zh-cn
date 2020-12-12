@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _spawn、_wspawn 函数
 title: _spawn, _wspawn 函数
 ms.date: 11/04/2016
 api_location:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 2f6aa420d7e6bb736721c4a68ff6451121da26ab
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4b5fe1b386358095880c69fbf956c7c0a4a08ba9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276902"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn 函数
 
@@ -76,14 +77,14 @@ ms.locfileid: "88840409"
 
 函数名称的结尾字母确定变体。
 
-|字母|Variant|
+|Letter|变量|
 |-|-|
 | `e`  | 指向环境设置的指针的数组 `envp` 将传递给新进程。  |
 | `l`  | 将命令行参数单独传递给 `_spawn` 函数。 一般将在预先知道新进程的一些参数时使用此后缀。  |
 | `p`  | `PATH` 环境变量用于查找要执行的文件。  |
 | `v`  | 指向命令行参数的指针的数组 `argv` 将传递给 `_spawn` 函数。 一般在新进程的一些参数可变时使用此后缀。  |
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 每个 `_spawn` 函数都将创建并执行一个新进程。 它们将根据情况自动处理多字节字符串参数，根据当前正在使用中的多字节代码页识别多字节字符序列。 `_wspawn` 函数是 `_spawn` 函数的宽字符版本；它们不处理多字节字符串。 否则，`_wspawn` 函数的行为将与其 `_spawn` 对等函数的一致。
 
@@ -102,7 +103,7 @@ ms.locfileid: "88840409"
 
 加载和执行新进程必须有足够的内存可用。 `mode` 参数确定调用进程在 `_spawn` 之前以及期间将执行的操作。 `mode` 的下列值是在 Process.h 中定义的：
 
-|值|说明|
+|值|描述|
 |-|-|
 | `_P_OVERLAY`  | 使用新进程覆盖调用进程，销毁调用进程（效果与 `_exec` 调用相同）。  |
 | `_P_WAIT`  | 在新进程执行完成之前挂起调用线程（同步 `_spawn`）。  |
@@ -132,13 +133,13 @@ ms.locfileid: "88840409"
 
 您可以将参数指针作为不同的参数传递（在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中）或作为指针数组传递（在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中）。 您必须至少将一个参数 `arg0` 或 `argv`[0] 传递到生成进程。 按照约定，此参数是程序的名称，因为您将在命令行上键入该名称。 不同的值不会生成错误。
 
-一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 NULL 指针，用以标记参数列表的末尾****。
+一般将在提前知道参数数量的情况下使用 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 调用。 `arg0` 参数通常是指向 `cmdname`的指针。 参数 `arg1` 到 `argn` 是指向构成新参数列表的字符字符串的指针。 在 `argn` 之后，必须是一个 NULL 指针，用以标记参数列表的末尾。
 
-`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv`* 传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 NULL 指针，用以标记参数列表的末尾****。
+`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 调用在新进程具有数量可变的参数时很有用。 指向参数的指针将作为数组 `argv`*传递。* 参数 `argv`[0] 通常是一个指向实际模式中的路径或保护模式中的程序的指针，从 `argv`[1] 到 `argv`[`n`] 都是指向构成新参数列表的字符串的指针。 参数 `argv`[`n` +1] 必须是一个 NULL 指针，用以标记参数列表的末尾。
 
 ## <a name="environment-of-the-spawned-process"></a>生成进程的环境
 
-调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。  (请注意， `value` 未用双引号引起来。 ) 数组的最后一个元素 `envp` 应为 **NULL**。 当 `envp` 本身为 NULL 时，生成进程将继承父进程的环境设置****。
+调用 `_spawn` 时打开的文件在新进程中仍处于打开状态。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 调用中，新进程将继承调用进程的环境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 调用更改新进程的环境，方式为通过 `envp` 参数传递环境设置的列表。 参数 `envp` 是字符指针的数组，其中每个元素（除了最后一个元素）均指向一个定义环境变量的不以 null 结尾的字符串。 此类字符串通常具有 `NAME`=`value` 格式，其中 `NAME` 是环境变量的名称，`value` 是为该变量设置的字符串值。  (请注意， `value` 未用双引号引起来。 ) 数组的最后一个元素 `envp` 应为 **NULL**。 当 `envp` 本身为 NULL 时，生成进程将继承父进程的环境设置。
 
 `_spawn` 函数可将所有有关打开的文件（包括转换模式）的信息传递到新进程。 此信息将在实模式下通过环境中的 `C_FILE_INFO` 条目传递。 启动代码通常会处理此条目，然后将其从环境中删除。 但是，如果 `_spawn` 函数生成一个非 C 进程，则此条目仍将保留在环境中。 打印环境将在此条目的定义字符串中显示图形字符，因为环境信息在实模式下是以二进制格式传递的。 它不应对正常操作具有任何其他影响。 在保护模式下，环境信息是以文本形式传递的，因此不包含图形字符。
 
@@ -237,7 +238,7 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [中止](../c-runtime-library/reference/abort.md)<br/>

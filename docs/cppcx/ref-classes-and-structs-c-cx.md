@@ -1,25 +1,26 @@
 ---
+description: '了解详细信息： Ref 类和结构 (c + +/CX) '
 title: Ref 类和结构 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-ms.openlocfilehash: d128734f8c78c9198f0731b415c1be35b0c58e65
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e87709febd03c185ec50845ff6fbb1a5ee27aba7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214953"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273223"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 类和结构 (C++/CX)
 
-C + +/CX 支持用户定义的*ref 类*和*ref 结构*，以及用户定义的*值类*和*值结构*。 这些数据结构是 c + +/CX 支持 Windows 运行时类型系统的主要容器。 根据某些特定规则，会将其内容发送到元数据，这使它们可以在 Windows 运行时组件和用 c + + 或其他语言编写的通用 Windows 平台应用程序之间传递。
+C + +/CX 支持用户定义的 *ref 类* 和 *ref 结构*，以及用户定义的 *值类* 和 *值结构*。 这些数据结构是 c + +/CX 支持 Windows 运行时类型系统的主要容器。 根据某些特定规则，会将其内容发送到元数据，这使它们可以在 Windows 运行时组件和用 c + + 或其他语言编写的通用 Windows 平台应用程序之间传递。
 
 ref 类或 ref 结构具有以下基本功能：
 
-- 它必须在一个命名空间内声明，处于命名空间范围之内，并且在该命名空间中可具有公共或私有可访问性。 仅将公共类型发送到元数据。 不允许使用嵌套公共类定义，包括嵌套公共 [枚举](../cppcx/enums-c-cx.md) 类。 有关详细信息，请参阅[命名空间和类型可见性](../cppcx/namespaces-and-type-visibility-c-cx.md)。
+- 它必须在一个命名空间内声明，处于命名空间范围之内，并且在该命名空间中可具有公共或私有可访问性。 仅将公共类型发送到元数据。 不允许使用嵌套公共类定义，包括嵌套公共 [枚举](../cppcx/enums-c-cx.md) 类。 有关详细信息，请参阅 [命名空间和类型可见性](../cppcx/namespaces-and-type-visibility-c-cx.md)。
 
 - 它可以包含作为成员的 c + +/CX，包括 ref 类、值类、引用结构、值结构或可为 null 的值结构。 它还可以包含标量类型（例如 `float64` 、 **`bool`** 等）。 它还可以包含非公共的标准 C++ 类型（例如 `std::vector` ）或自定义类。 C + +/cx 构造可以具有 **`public`** 、、 **`protected`** **`internal`** 、 **`private`** 或 **`protected private`** 可访问性。 所有 **`public`** 或 **`protected`** 成员将发送到元数据。 标准 c + + 类型必须具有 **`private`** 、 **`internal`** 或 **`protected private`** 可访问性，这会阻止将这些类型发送到元数据。
 
-- 它可实现一个或多个接口类 ** 或接口结构 **。
+- 它可实现一个或多个接口类  或接口结构 。
 
 - 它可从一个基类继承，并且基类自身具有附加限制。 公共 ref 类层次结构的继承比私有 ref 类中的继承具有更多限制。
 
@@ -33,7 +34,7 @@ ref 类或 ref 结构具有以下基本功能：
 
 [!code-cpp[cx_classes#03](../cppcx/codesnippet/CPP/classesstructs/class1.h#03)]
 
-## <a name="implementation"></a>实施
+## <a name="implementation"></a>实现
 
 此代码示例演示 `Person` ref 类的实现：
 
@@ -55,7 +56,7 @@ ref 类或 ref 结构具有以下基本功能：
 
 [!code-cpp[cx_classes#01](../cppcx/codesnippet/CPP/classesstructs/class1.h#01)]
 
-句柄到对象运算符 **`^`** 称为*hat* ，本质上是一个 c + + 智能指针。 当最后一个 hat 超出范围或显式设置为时，它指向的内存将自动销毁 **`nullptr`** 。
+句柄到对象运算符 **`^`** 称为 *hat* ，本质上是一个 c + + 智能指针。 当最后一个 hat 超出范围或显式设置为时，它指向的内存将自动销毁 **`nullptr`** 。
 
 按照定义，ref 类具有引用语义。 分配 ref 类变量时，句柄被复制，而非对象本身。 在下一个示例中，分配后， `myClass` 和 `myClass2` 都指向同一内存位置。
 
@@ -69,7 +70,7 @@ Ref 类可包含 **`public`** 、 **`protected`** 和 **`private`** 函数成员
 
 Ref 结构与 ref 类相同，只不过默认情况下，它的成员具有 **`public`** 可访问性。
 
-**`public`** Ref 类或 ref 结构是在元数据中发出的，但若要从其他通用 Windows 平台应用程序和 Windows 运行时组件中使用，则必须至少有一个公共或受保护的构造函数。 具有公共构造函数的公共 ref 类还必须声明为 **`sealed`** ，以阻止通过应用程序二进制接口（ABI）进行进一步的派生。
+**`public`** Ref 类或 ref 结构是在元数据中发出的，但若要从其他通用 Windows 平台应用程序和 Windows 运行时组件中使用，则必须至少有一个公共或受保护的构造函数。 具有公共构造函数的公共 ref 类还必须声明为 **`sealed`** ，以阻止通过应用程序二进制接口进一步派生 (ABI) 。
 
 公共成员不能声明为， **`const`** 因为 Windows 运行时类型系统不支持 const。 可以使用静态属性声明一个具有常数值的公共数据成员。
 
@@ -97,7 +98,7 @@ Ref 类析构函数只能进行以下声明：
 
 如果你尝试访问已运行其析构函数的类的成员，则此行为是未定义的；它最有可能导致程序崩溃。 对不包含公共析构函数的类型调用 `delete t` 不起作用。 `delete this`对 **`private`** 其类型层次结构中具有已知或析构函数的类型或基类调用 **`protected private`** 也不起作用。
 
-在声明公共析构函数时，编译器将生成代码以便 ref 类实现 `Platform::IDisposable` ，并且析构函数实现 `Dispose` 方法。 `Platform::IDisposable`是的 c + +/CX 投影 `Windows::Foundation::IClosable` 。 绝不显式实现这些接口。
+在声明公共析构函数时，编译器将生成代码以便 ref 类实现 `Platform::IDisposable` ，并且析构函数实现 `Dispose` 方法。 `Platform::IDisposable` 是的 c + +/CX 投影 `Windows::Foundation::IClosable` 。 绝不显式实现这些接口。
 
 ## <a name="inheritance"></a>继承
 
@@ -127,7 +128,7 @@ Platform::Object 是所有 ref 类的通用基类。 所有 ref 类都可以隐�
 
 [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [值类和结构](../cppcx/value-classes-and-structs-c-cx.md)<br/>

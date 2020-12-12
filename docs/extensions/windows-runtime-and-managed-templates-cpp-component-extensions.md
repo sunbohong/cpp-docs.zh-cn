@@ -1,16 +1,17 @@
 ---
+description: '了解有关详细信息，请参阅 c + +/CLI 和 c + +/CX (Windows 运行时和托管模板) '
 title: Windows 运行时和托管模板（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75b39c58bc42c23da313525f125dc98abdb0866b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376309"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274029"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows 运行时和托管模板（C++/CLI 和 C++/CX）
 
@@ -73,7 +74,7 @@ template<class T> public ref class R {
 };
 ```
 
-不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。 如果未实例化模板，则不会在元数据中发出模板。 如果模板已实例化，则元数据中仅显示引用的成员函数。
+不能访问在使用 C++/CLI 语言语法的引用程序集中定义的模板，但是可以使用反射。 如果模板不是实例化的，则不会在元数据中发出。 如果模板已实例化，则元数据中仅显示引用的成员函数。
 
 ```cpp
 // managed_templates_3.cpp
@@ -130,6 +131,6 @@ template <>
 class A <int> {};
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[.NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

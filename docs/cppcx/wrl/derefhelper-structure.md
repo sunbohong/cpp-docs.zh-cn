@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： DerefHelper 结构
 title: DerefHelper 结构
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 43453d3162de697fa1cfcf0581953c91bbe3934f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8605e3923d8d3099a080be22f9d8e70ee9187ef9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214040"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272911"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper 结构
 
@@ -35,17 +36,17 @@ struct DerefHelper<T*>;
 
 ## <a name="remarks"></a>备注
 
-表示指向 `T*` 模板参数的取消引用的指针。
+表示指向模板参数的取消引用的指针 `T*` 。
 
-**DerefHelper**用于如下所示的表达式： `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。
+**DerefHelper** 用在表达式中，例如： `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;` 。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|`DerefType`|取消引用的模板参数 `T*`的标识符。|
+|`DerefType`|取消引用的模板参数的标识符 `T*` 。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -57,6 +58,6 @@ struct DerefHelper<T*>;
 
 **命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)
+[Microsoft：： WRL：:D etails 命名空间](microsoft-wrl-details-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多： Platform：:D etails：： IEquatable 接口
 title: Platform::Details::IEquatable 接口
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-ms.openlocfilehash: a0da4d82bc0d2a06fa73519aedf2e22ae89f3900
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec808aae930ec0b1d382477cee5351cd97478271
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274757"
 ---
 # <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable 接口
 
@@ -34,10 +35,10 @@ interface class IEquatable;
 
 ### <a name="requirements"></a>要求
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 **命名空间：** Platform::Details
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台命名空间](platform-namespace-c-cx.md)

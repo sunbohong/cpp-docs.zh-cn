@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：引发
 title: raise
 ms.date: 4/2/2020
 api_name:
@@ -28,19 +29,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 81b92404603820948a384b6ad33421251a27c13c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb225e25ef0ff4e04f1ea8877a434c2af240cbfe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274861"
 ---
 # <a name="raise"></a>raise
 
 将信号发送到正在执行的程序。
 
 > [!NOTE]
-> 不要使用此方法关闭 Microsoft Store 的应用程序，除非在测试或调试方案中。 根据[Microsoft Store 策略](/legal/windows/agreements/store-policies)，不允许以编程方式或 UI 方式关闭应用商店应用。 有关详细信息，请参阅[UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
+> 不要使用此方法关闭 Microsoft Store 的应用程序，除非在测试或调试方案中。 根据 [Microsoft Store 策略](/legal/windows/agreements/store-policies)，不允许以编程方式或 UI 方式关闭应用商店应用。 有关详细信息，请参阅 [UWP 应用生命周期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>语法
 
@@ -50,7 +51,7 @@ int raise(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sig*<br/>
 要引发的信号。
@@ -72,19 +73,19 @@ int raise(
 |**SIGSEGV**|非法存储区访问|终止调用程序|
 |**SIGTERM**|发送到程序的终止请求|忽略信号|
 
-如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，函数会将**errno**设置为**EINVAL** ，并返回一个非零值。
+如果参数不是以上指定的有效信号，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果未处理，函数会将 **errno** 设置为 **EINVAL** ，并返回一个非零值。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**提出**|\<signal.h>|
+|**raise**|\<signal.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [中止](abort.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _setjmp3
 title: _setjmp3
 ms.date: 11/04/2016
 api_name:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: d7120ddd10322d0b7391608fd388d9f45c1600e8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 07a84601a6f57eca3e7dc71638a964428579b1c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277058"
 ---
 # <a name="_setjmp3"></a>_setjmp3
 
@@ -43,12 +44,12 @@ int _setjmp3(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *env*<br/>
 [out] 用于存储状态信息的缓冲区地址。
 
-*count*<br/>
+*计数*<br/>
 [in] 存储在 `optional parameters` 中的信息的附加 `DWORD` 数。
 
 *可选参数*<br/>
@@ -64,7 +65,7 @@ int _setjmp3(
 
 ## <a name="requirements"></a>要求
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [setjmp](../c-runtime-library/reference/setjmp.md)

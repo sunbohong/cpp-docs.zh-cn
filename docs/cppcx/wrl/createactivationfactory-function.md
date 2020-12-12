@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CreateActivationFactory 函数
 title: CreateActivationFactory 函数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-ms.openlocfilehash: ab03b15a968c6aba3fa6df8c975fb98e873f8e23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 25f2181a00bb018361b05ea6570ebbadc6f7a975
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273099"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函数
 
@@ -28,13 +29,13 @@ template<typename Factory>
    _Outptr_ IUnknown **ppFactory) throw();
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *flag*<br/>
-一个或多个[RuntimeClassType](runtimeclasstype-enumeration.md)枚举值的组合。
+一个或多个 [RuntimeClassType](runtimeclasstype-enumeration.md) 枚举值的组合。
 
-*entry*<br/>
-指向包含参数*riid*的初始化和注册信息的[CreatorMap](creatormap-structure.md)的指针。
+*条目*<br/>
+指向包含参数 *riid* 的初始化和注册信息的 [CreatorMap](creatormap-structure.md)的指针。
 
 *riid*<br/>
 对接口 ID 的引用。
@@ -48,7 +49,7 @@ template<typename Factory>
 
 ## <a name="remarks"></a>备注
 
-如果模板参数*工厂*不是从接口 `IActivationFactory`派生的，则会发出断言错误。
+如果模板参数 *工厂* 不是从接口派生的，将发出断言错误 `IActivationFactory` 。
 
 ## <a name="requirements"></a>要求
 
@@ -56,6 +57,6 @@ template<typename Factory>
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Wrappers::Details 命名空间](microsoft-wrl-wrappers-details-namespace.md)
+[Microsoft：： WRL：：包装：:D etails 命名空间](microsoft-wrl-wrappers-details-namespace.md)

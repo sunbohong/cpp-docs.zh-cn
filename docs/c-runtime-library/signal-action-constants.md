@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：信号操作常量
 title: signal 操作常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - SIG_IGN constant
 - SIG_DFL constant
 ms.assetid: c3cb4f15-d39e-4d9d-84f9-0d33e3eb5993
-ms.openlocfilehash: a7448730501d6f3b50008966134f708ae99ddb5b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 380fed21b097b674958c6e2aae2f6b8c53845943
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97276980"
 ---
 # <a name="signal-action-constants"></a>signal 操作常量
 
@@ -30,7 +31,7 @@ ms.locfileid: "88830756"
 
 `func` 参数必须是一个函数地址或 SIGNAL.H 中定义的下列清单常量之一。
 
-|返回的常量|说明|
+|返回的常量|描述|
 |-|-|
 | `SIG_DFL`  | 使用系统默认的响应。 如果调用程序使用流 I/O，将不会刷新运行时库创建的缓冲区。  |
 | `SIG_IGN`  | 忽略中断信号。 不得为 `SIGFPE` 指定该值，因为未定义此进程的浮点状态。  |
@@ -38,7 +39,7 @@ ms.locfileid: "88830756"
 | `SIG_ACK`  | 指示已收到确认。  |
 | `SIG_ERR`  | 指示已发生错误的信号的返回类型。  |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [signal](../c-runtime-library/reference/signal.md)<br/>
 [全局常量](../c-runtime-library/global-constants.md)

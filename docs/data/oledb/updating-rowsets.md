@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：更新行集
 title: 更新行集合
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - updating rowsets
 - rowsets
 ms.assetid: 39588758-5c72-4254-a10d-cc2b1f473357
-ms.openlocfilehash: 134ab73428b7535bb34094b7d5b1952fd61a3d69
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e5fcd374e446670df586c27e6b6e89d5da30da6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509439"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272521"
 ---
 # <a name="updating-rowsets"></a>更新行集合
 
@@ -31,7 +32,7 @@ ms.locfileid: "91509439"
 > [!NOTE]
 > ATL OLE DB 使用者向导不适用于 Visual Studio 2019 及更高版本。 但仍可以手动添加此功能。 有关详细信息，请参阅[不使用向导创建使用者](creating-a-consumer-without-using-a-wizard.md)。
 
-使用 **ATL OLE DB 使用者向导**创建使用者时，可以通过选择 " **更改**"、" **插入**" 和 " **删除**" 三个复选框中的一个或多个来支持更新操作。 如果你选中这些选项，向导会将代码相应修改为支持你选择的更改类型。 不过，如果不使用向导，必须将以下行集属性设置为 `VARIANT_TRUE`，才能支持更新：
+使用 **ATL OLE DB 使用者向导** 创建使用者时，可以通过选择 " **更改**"、" **插入**" 和 " **删除**" 三个复选框中的一个或多个来支持更新操作。 如果你选中这些选项，向导会将代码相应修改为支持你选择的更改类型。 不过，如果不使用向导，必须将以下行集属性设置为 `VARIANT_TRUE`，才能支持更新：
 
 - `DBPROPVAL_UP_CHANGE`：允许更改行内的数据值。
 
@@ -160,11 +161,11 @@ HRESULT hr = product.Delete();
 
 - [CRowset::UpdateAll](./crowset-class.md#updateall)：传输自上次提取或对它调用 `Update` 后，对所有行进行的任何挂起的更改。
 
-更新方法中使用的 Update 对于更改命令有特定的含义，不要与 SQL UPDATE**** 命令混淆（`SetData` 相当于 SQL UPDATE**** 命令）。
+更新方法中使用的 Update 对于更改命令有特定的含义，不要与 SQL UPDATE 命令混淆（`SetData` 相当于 SQL UPDATE 命令）。
 
 延迟更新非常有用，例如在进行一系列银行交易的情况下；如果一项交易已取消，你可以撤消更改，因为只有在提交了上一个更改后才会发送一系列更改。 此外，提供程序还可将更改绑定到一个网络调用，这更加有效。
 
-若要支持延迟更新，必须设置 `DBPROP_IRowsetChange` 属性，以及“支持更新操作”**** 中介绍的属性：
+若要支持延迟更新，必须设置 `DBPROP_IRowsetChange` 属性，以及“支持更新操作”中介绍的属性：
 
 ```cpp
 pPropSet->AddProperty(DBPROP_IRowsetUpdate, true);

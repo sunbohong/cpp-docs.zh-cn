@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _fwrite_nolock
 title: _fwrite_nolock
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-ms.openlocfilehash: 6856dd2af0536deacfbef6b02c7cdf38d41f9c04
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6b80933756c930403cbba464fb4921266b0d618f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273730"
 ---
 # <a name="_fwrite_nolock"></a>_fwrite_nolock
 
@@ -51,19 +52,19 @@ size_t _fwrite_nolock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *宽限*<br/>
 指向要写入的数据的指针。
 
-size <br/>
+*大小*<br/>
 项目大小（以字节为单位）。
 
 *计数*<br/>
 要写入的项的最大数量。
 
 *流*<br/>
-指向**文件**结构的指针。
+指向 **文件** 结构的指针。
 
 ## <a name="return-value"></a>返回值
 
@@ -71,9 +72,9 @@ size <br/>
 
 ## <a name="remarks"></a>备注
 
-此函数是**fwrite**的非锁定版本。 它与**fwrite**完全相同，只不过它不会受到其他线程的干扰。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
+此函数是 **fwrite** 的非锁定版本。 它与 **fwrite** 完全相同，只不过它不会受到其他线程的干扰。 它可能更快，因为它不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用此函数，如单线程应用程序或调用范围已处理线程隔离的区域。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -87,7 +88,7 @@ size <br/>
 
 请参阅 [fread](fread.md) 示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fread](fread.md)<br/>

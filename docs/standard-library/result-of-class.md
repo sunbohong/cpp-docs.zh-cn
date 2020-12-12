@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： result_of 类
 title: result_of 类
 ms.date: 02/21/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: 54806f965cc46058e3c82b4863bb45782abe079e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2aba6b073309be064b9ff0edc7bffa4d8d0098e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87202306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273899"
 ---
 # <a name="result_of-class"></a>result_of 类
 
@@ -35,7 +36,7 @@ template<class T>
    using result_of_t = typename result_of<T>::type;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fn*\
 要查询的可调用类型。
@@ -45,7 +46,7 @@ template<class T>
 
 ## <a name="remarks"></a>备注
 
-使用此模板可在编译时确定（）的结果 `Fn` 类型 `ArgTypes` ，其中*Fn*是可调用类型、对函数的引用或对可调用类型的引用，使用*ArgTypes*中的类型的自变量列表调用。 `type` `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 如果未计算的表达式的格式正确，则类模板的成员会将的结果类型命名为 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 。 否则，类模板不具有成员 `type` 。 类型*Fn*和参数包*ArgTypes*中的所有类型都必须是完整类型、 **`void`** 或未知绑定的数组。 弃用，以支持 c + + 17 中的[invoke_result](invoke-result-class.md) 。
+使用此模板在编译时确定 () 的结果类型 `Fn` `ArgTypes` ，其中 *Fn* 是可调用类型、对函数的引用或对可调用类型的引用，该类型是使用 *ArgTypes* 中的类型的参数列表调用的。 `type` `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` 如果未计算的表达式的格式正确，则类模板的成员会将的结果类型命名为 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` 。 否则，类模板不具有成员 `type` 。 类型 *Fn* 和参数包 *ArgTypes* 中的所有类型都必须是完整类型、 **`void`** 或未知绑定的数组。 弃用，以支持 c + + 17 中的 [invoke_result](invoke-result-class.md) 。
 
 ## <a name="requirements"></a>要求
 
@@ -53,7 +54,7 @@ template<class T>
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
 [invoke_result 类](invoke-result-class.md)

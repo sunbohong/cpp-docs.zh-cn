@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _alloca
 title: _alloca
 ms.date: 11/04/2016
 api_name:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 159f474927b4aaf364ad6972450edbe513a3c0b0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 959478afac06c22181a595c00969690babbe6ade
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218736"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275186"
 ---
 # <a name="_alloca"></a>_alloca
 
-在堆栈上分配内存。 此函数已弃用，因为更安全的版本可用;请参阅[_malloca](malloca.md)。
+在堆栈上分配内存。 此函数已弃用，因为更安全的版本可用;请参阅 [_malloca](malloca.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -45,35 +46,35 @@ void *_alloca(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 在堆栈中要分配的字节数。
 
 ## <a name="return-value"></a>返回值
 
-**_Alloca**例程返回一个指向 **`void`** 已分配空间的指针，该指针保证为任何类型的对象的存储进行适当的调整。 如果*size*为0，则 **_alloca**分配一个长度为零的项，并返回指向该项的有效指针。
+**_Alloca** 例程返回一个指向 **`void`** 已分配空间的指针，该指针保证为任何类型的对象的存储进行适当的调整。 如果 *size* 为0，则 **_alloca** 分配一个长度为零的项，并返回指向该项的有效指针。
 
 如果无法分配空间，将生成堆栈溢出异常。 堆栈溢出异常不是 C++ 异常，它是结构化异常。 必须使用[结构化异常处理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而使用 C++ 异常处理。
 
 ## <a name="remarks"></a>备注
 
-**_alloca**从程序堆栈分配*大小*字节。 释放调用函数时，将自动释放已分配的空间（而不是在分配超出范围时）。 因此，请不要将 **_alloca**返回的指针值作为参数传递给[free](free.md)。
+**_alloca** 从程序堆栈分配 *大小* 字节。 当调用函数退出时，将自动释放已分配的空间， (不会在分配只传递出范围) 时自动释放。 因此，请不要将 **_alloca** 返回的指针值作为参数传递给 [free](free.md)。
 
-在异常处理程序（EH）中显式调用 **_alloca**存在一些限制。 在 x86 类处理器上运行的 EH 例程在自己的内存框架中工作：它们在未基于封闭函数堆栈指针当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任何一种情况下，显式调用 **_alloca**会导致在返回到调用 EH 例程期间程序失败：
+在异常处理程序中显式调用 **_alloca** (EH) 存在一些限制。 在 x86 类处理器上运行的 EH 例程在自己的内存框架中工作：它们在未基于封闭函数堆栈指针当前位置的内存空间中执行其任务。 最常见的实现包括 Windows NT 结构化异常处理 (SEH) 和 C++ catch 子句表达式。 因此，在以下任何一种情况下，显式调用 **_alloca** 会导致在返回到调用 EH 例程期间程序失败：
 
-- Windows NT SEH 异常筛选器表达式：`__except ( _alloca() )`
+- Windows NT SEH 异常筛选器表达式： `__except ( _alloca() )`
 
-- Windows NT SEH 最终异常处理程序：`__finally { _alloca() }`
+- Windows NT SEH 最终异常处理程序： `__finally { _alloca() }`
 
 - C++ EH catch 子句表达式
 
 但是，可以从 EH 例程内或从应用程序提供的回调中直接调用 **_alloca** ，该回调由前面列出的某个 EH 方案调用。
 
 > [!IMPORTANT]
-> 在 Windows XP 中，如果在 try/catch 块内调用 **_alloca** ，则必须在 catch 块中调用[_resetstkoflw](resetstkoflw.md) 。
+> 在 Windows XP 中，如果在 try/catch 块内调用 **_alloca** ，则必须在 catch 块中调用 [_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制之外，在使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)选项时，不能在块中使用 **_alloca** **`__except`** 。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+除了上述限制之外，在使用 [/clr (公共语言运行时编译)](../../build/reference/clr-common-language-runtime-compilation.md) 选项时， **_alloca** 不能在块中使用 **`__except`** 。 有关详细信息，请参阅 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -139,7 +140,7 @@ int main()
 Allocated 1000 bytes of stack at 0x0012FB50
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

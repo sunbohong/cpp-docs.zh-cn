@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CriticalSectionTraits 结构
 title: CriticalSectionTraits 结构
 ms.date: 09/26/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: 3573cad21734a97629cbc12b76d73b99024cbc2f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 20e4b7dd47acf6f632c888c9bfdedeb3f4e60270
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272937"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 结构
 
@@ -53,7 +54,7 @@ struct CriticalSectionTraits;
 
 **命名空间：** Microsoft：： WRL：：包装：： HandleTraits
 
-## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits：： GetInvalidValue
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a> CriticalSectionTraits：： GetInvalidValue
 
 专用化 `CriticalSection` 模板，使模板始终无效。
 
@@ -69,7 +70,7 @@ inline static Type GetInvalidValue();
 
 `Type`修饰符定义为 `typedef CRITICAL_SECTION* Type;` 。
 
-## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits：： Unlock
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a> CriticalSectionTraits：： Unlock
 
 专用化 `CriticalSection` 模板，使其支持释放指定的关键部分对象的所有权。
 
@@ -79,7 +80,7 @@ inline static void Unlock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *站*<br/>
 指向关键节对象的指针。
@@ -88,4 +89,4 @@ inline static void Unlock(
 
 `Type`修饰符定义为 `typedef CRITICAL_SECTION* Type;` 。
 
-有关详细信息，请参阅 Windows API 文档的**同步函数**部分中的**LeaveCriticalSection 函数**。
+有关详细信息，请参阅 Windows API 文档的 **同步函数** 部分中的 **LeaveCriticalSection 函数**。

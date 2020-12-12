@@ -1,4 +1,5 @@
 ---
+description: 了解更多：资源编译器错误 RC1120
 title: 资源编译器错误 RC1120
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - RC1120
 ms.assetid: 4e462931-e42e-42e3-8bfc-847677194286
-ms.openlocfilehash: 855a76ff63145695a7063944701d7acc684e0084
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bc0c90bf5d8dd4290ab20369235c53fcd2c80182
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272027"
 ---
 # <a name="resource-compiler-fatal-error-rc1120"></a>资源编译器错误 RC1120
 
@@ -23,7 +24,7 @@ ms.locfileid: "80173005"
 
 1. 增加 Windows 交换文件空间。 有关增加交换文件空间的详细信息，请参阅 Windows 中的虚拟内存帮助。
 
-1. 消除不必要的包含文件，特别是不需要的 `#define`s 和函数原型。
+1. 消除不必要的包含文件，特别是不需要的 `#define` 和函数原型。
 
 1. 将当前文件拆分为两个或多个文件，并分别编译它们。
 

@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下内容的详细信息： (c + +) '
 title: 基指针 (C++)
 ms.date: 10/09/2018
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: a76fe56e0e6bd0501bbc3e23e138cb2e75055c73
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 40f6a081081eebdff87a9682818de3f89a44b982
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273496"
 ---
 # <a name="based-pointers-c"></a>基指针 (C++)
 
-**`__based`** 关键字允许你根据指针（作为来自现有指针的偏移量的指针）声明指针。 **`__based`** 关键字是 Microsoft 特定的。
+**`__based`** 关键字可用于基于指针 (指针，该指针是从现有指针) 偏移量的指针。 **`__based`** 关键字是 Microsoft 特定的。
 
 ## <a name="syntax"></a>语法
 
@@ -46,11 +47,11 @@ struct llist_t {
 将指针 `vpBuffer` 分配给程序中后面某个时间点分配的内存地址。 相对于 `vpBuffer` 的值重新定位链接的列表。
 
 > [!NOTE]
-> 还可以通过使用[内存映射文件](/windows/win32/Memory/file-mapping)来保存包含指针的标识符。
+> 还可以通过使用 [内存映射文件](/windows/win32/Memory/file-mapping)来保存包含指针的标识符。
 
 当取消对基指针的引用时，必须显式指定基或通过声明隐式公开基。
 
-为了与早期版本兼容， **_based** **`__based`** 除非指定了编译器选项[/za " \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"，否则 _based 是同义词。
+为了与早期版本兼容， **_based** 是同义词， **`__based`** 除非指定了编译器选项 [/za " \( 禁用语言扩展")](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 
@@ -89,7 +90,7 @@ int main() {
 11
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [alloc_text](../preprocessor/alloc-text.md)

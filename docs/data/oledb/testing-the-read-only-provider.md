@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：测试 Read-Only 提供程序
 title: 测试只读提供程序
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: dc3c4ea36aa9dac64f2aa7861fd5d51927c77ecd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2fbe0e7fb67b83cae65848939fa63bce42dab173
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272690"
 ---
 # <a name="testing-the-read-only-provider"></a>测试只读提供程序
 
@@ -24,22 +25,22 @@ ms.locfileid: "80209491"
 
 1. 在“文件”菜单上，单击“新建”，然后单击“项目”。
 
-1. 在 "**项目类型**" 窗格中，选择**安装**的 > **Visual C++**  > **MFC/ATL**文件夹。 在 "**模板**" 窗格中，选择 " **MFC 应用程序**"。
+1. 在 "**项目类型**" 窗格中，选择 "**已安装** 的  >  **Visual C++**  >  **MFC/ATL** " 文件夹。 在 " **模板** " 窗格中，选择 " **MFC 应用程序**"。
 
-1. 对于 "项目名称"，请输入 " *TestProv*"，然后单击 **"确定"** 。
+1. 对于 "项目名称"，请输入 " *TestProv*"，然后单击 **"确定"**。
 
-   **MFC 应用程序**向导随即出现。
+   **MFC 应用程序** 向导随即出现。
 
-1. 在 "**应用程序类型**" 页上，选择 "**基于对话框**"。
+1. 在 " **应用程序类型** " 页上，选择 " **基于对话框**"。
 
-1. 在 "**高级功能**" 页上，选择 "**自动化**"，然后单击 "**完成**"。
+1. 在 " **高级功能** " 页上，选择 " **自动化**"，然后单击 " **完成**"。
 
 > [!NOTE]
-> 如果在 `CTestProvApp::InitInstance`中添加 `CoInitialize`，应用程序不需要自动化支持。
+> 如果在中添加，应用程序不需要自动化 `CoInitialize` 支持 `CTestProvApp::InitInstance` 。
 
-您可以通过在**资源视图**中选择**TestProv**对话框（IDD_TESTPROV_DIALOG）来查看和编辑该对话框。 将两个列表框（行集中的每个字符串对应一个列表框）放置在对话框中。 通过按**Alt**+在列表框处于选中状态时**输入**，并将**排序**属性设置为**False**，可以关闭两个列表框的排序属性。 此外，请在对话框中放置一个 "**运行**" 按钮，以获取该文件。 "完成的**TestProv** " 对话框中应有两个分别标记为 "string 1" 和 "string 2" 的列表框;它还包含 **"确定"、"** **取消**" 和 "**运行**" 按钮。
+通过在 **资源视图** 中选择 " **TestProv** " 对话框 (IDD_TESTPROV_DIALOG) ，可以查看和编辑该对话框。 将两个列表框（行集中的每个字符串对应一个列表框）放置在对话框中。 通过 + 在列表框处于选中状态时按 Alt **enter** ，并将 **排序** 属性设置为 **False**，可以关闭两个列表框的排序属性。 此外，请在对话框中放置一个 " **运行** " 按钮，以获取该文件。 "完成的 **TestProv** " 对话框中应有两个分别标记为 "string 1" 和 "string 2" 的列表框;它还包含 **"确定"、"****取消**" 和 "**运行**" 按钮。
 
-打开对话框类的标头文件（在本例中为 TestProvDlg）。 将以下代码添加到头文件（在任何类声明之外）：
+打开对话框类的标头文件， (在本例中为 TestProvDlg) 。 将以下代码添加到标头文件中 () 的任何类声明之外：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -61,9 +62,9 @@ END_COLUMN_MAP()
 };
 ```
 
-此代码表示一个用户记录，用于定义行集中将包含的列。 当客户端调用 `IAccessor::CreateAccessor`时，它将使用这些项来指定要绑定的列。 OLE DB 使用者模板还允许您动态绑定列。 COLUMN_ENTRY 的宏是 PROVIDER_COLUMN_ENTRY 宏的客户端版本。 这两个 COLUMN_ENTRY 宏指定两个字符串的序号、类型、长度和数据成员。
+此代码表示一个用户记录，用于定义行集中将包含的列。 当客户端调用时 `IAccessor::CreateAccessor` ，它将使用这些项来指定要绑定的列。 OLE DB 使用者模板还允许您动态绑定列。 COLUMN_ENTRY 的宏是 PROVIDER_COLUMN_ENTRY 宏的客户端版本。 这两个 COLUMN_ENTRY 宏指定两个字符串的序号、类型、长度和数据成员。
 
-通过按**Ctrl**并双击 "**运行**" 按钮，为 "**运行**" 按钮添加处理程序函数。 将以下代码放入函数：
+通过按 **Ctrl** 并双击 "**运行**" 按钮，为 "**运行**" 按钮添加处理程序函数。 将以下代码放入函数：
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -92,20 +93,20 @@ void CTestProvDlg::OnRun()
 }
 ```
 
-`CCommand`、`CDataSource`和 `CSession` 类都属于 OLE DB 使用者模板。 每个类模仿提供程序中的 COM 对象。 `CCommand` 对象采用标头文件中声明的 `CProvider` 类作为模板参数。 `CProvider` 参数表示用于访问提供程序中的数据的绑定。
+`CCommand`、 `CDataSource` 和 `CSession` 类都属于 OLE DB 使用者模板。 每个类模仿提供程序中的 COM 对象。 `CCommand`对象采用 `CProvider` 标头文件中声明的类作为模板参数。 `CProvider`参数表示用于访问提供程序中的数据的绑定。
 
-用于打开每个类的行在提供程序中创建每个 COM 对象。 若要找到该提供程序，请使用该提供程序的 `ProgID`。 可以从系统注册表或通过查看自定义 .rgs 文件获取 `ProgID` （打开提供程序的目录并搜索 `ProgID` 键）。
+用于打开每个类的行在提供程序中创建每个 COM 对象。 若要找到该提供程序，请使用该 `ProgID` 提供程序的。 你可以 `ProgID` 从系统注册表中获取，也可以通过查看自定义 .rgs 文件来获取 (打开提供程序的目录并搜索 `ProgID` 密钥) 。
 
-`MyProv` 示例附带了 MyData 文件。 若要创建自己的文件，请使用编辑器并键入偶数个字符串，并在每个字符串之间按**enter** 。 如果移动该文件，请更改路径名称。
+示例中包含 MyData.txt 文件 `MyProv` 。 若要创建自己的文件，请使用编辑器并键入偶数个字符串，并在每个字符串之间按 **enter** 。 如果移动该文件，请更改路径名称。
 
-传入 `table.Open` 行中的字符串 "c：\\\samples\\\myprov\\\MyData.txt"。 如果单步执行 `Open` 调用，将看到此字符串传递到提供程序中的 `SetCommandText` 方法。 请注意，`ICommandText::Execute` 方法使用该字符串。
+传入行中的字符串 "c： \\ \samples \\ \myprov \\\MyData.txt" `table.Open` 。 如果单步执行 `Open` 调用，将看到此字符串传递到 `SetCommandText` 提供程序中的方法。 请注意，该 `ICommandText::Execute` 方法使用该字符串。
 
-若要获取数据，请对表调用 `MoveNext`。 `MoveNext` 调用 `IRowset::GetNextRows`、`GetRowCount`和 `GetData` 函数。 如果没有更多的行（即，行集中的当前位置大于 `GetRowCount`），循环将终止。
+若要提取数据，请 `MoveNext` 对表调用。 `MoveNext` 调用 `IRowset::GetNextRows` 、 `GetRowCount` 和 `GetData` 函数。 如果没有更多的行 (也就是说，行集中的当前位置大于 `GetRowCount`) ，则循环将终止。
 
 如果没有更多的行，则提供程序将返回 DB_S_ENDOFROWSET。 DB_S_ENDOFROWSET 值不是错误。 应始终对 S_OK 进行检查以取消数据提取循环，而不是使用 SUCCEEDED 宏。
 
 现在应能够生成并测试该程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[增强简单的只读提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[增强简单的 Read-Only 提供程序](../../data/oledb/enhancing-the-simple-read-only-provider.md)

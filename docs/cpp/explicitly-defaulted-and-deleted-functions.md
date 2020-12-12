@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息：显式默认和已删除的函数
 title: 显式默认设置的函数和已删除的函数
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: fd3fb53dec0cc08274b7ea54176c2a15dbab45d7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a3c4789996d39acd4ddd3bbc186ce39509a1d62f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211575"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273353"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>显式默认设置的函数和已删除的函数
 
@@ -15,7 +16,7 @@ ms.locfileid: "87211575"
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>显式默认设置的函数和已删除函数的好处
 
-在 C++ 中，如果某个类型未声明它本身，则编译器将自动为该类型生成默认构造函数、复制构造函数、复制赋值运算符和析构函数。 这些函数称为*特殊成员函数*，它们使 c + + 中简单的用户定义类型的行为类似于 c 中的结构。也就是说，您可以创建、复制和销毁它们，而无需任何其他的编码工作。 C++11 会将移动语义引入语言中，并将移动构造函数和移动赋值运算符添加到编译器可自动生成的特殊成员函数的列表中。
+在 C++ 中，如果某个类型未声明它本身，则编译器将自动为该类型生成默认构造函数、复制构造函数、复制赋值运算符和析构函数。 这些函数称为 *特殊成员函数*，它们使 c + + 中简单的用户定义类型的行为类似于 c 中的结构。也就是说，您可以创建、复制和销毁它们，而无需任何其他的编码工作。 C++11 会将移动语义引入语言中，并将移动构造函数和移动赋值运算符添加到编译器可自动生成的特殊成员函数的列表中。
 
 这对于简单类型非常方便，但是复杂类型通常自己定义一个或多个特殊成员函数，这可以阻止自动生成其他特殊成员函数。 实践操作：
 

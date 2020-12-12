@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 title: _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: 89c6aacbb6726165703d38e3ea519806b1f970d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a3df603c53a320898ab7eb94176d4e150a3073c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910693"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97273574"
 ---
 # <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 
@@ -81,9 +82,9 @@ int _ismbckata_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要测试的字符。
 
 *locale*<br/>
@@ -91,15 +92,15 @@ int _ismbckata_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果*c* <= 255，并且存在相应的 **_ismbb**例程（例如， **_ismbcalnum**对应于 **_ismbbalnum**），则结果为相应 **_ismbb**例程的返回值。
+其中每个例程在字符满足测试条件时返回一个非零值，在不满足测试条件时回 0。 如果 *c* <= 255，并且存在相应的 **_ismbb** 例程 (例如， **_ismbcalnum** 对应于 **_ismbbalnum**) ，则结果是相应 **_ismbb** 例程的返回值。
 
 ## <a name="remarks"></a>备注
 
 其中每个函数都针对给定的条件测试给定的多字节字符。
 
-这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-|例程|测试条件（仅代码页 932）|
+|例程所返回的值|测试条件（仅代码页 932）|
 |-------------|-------------------------------------------|
 |**_ismbchira**|双字节平假名： 0x829F<=*c*<= 0x82F1。|
 |**_ismbchira_l**|双字节平假名： 0x829F<=*c*<= 0x82F1。|
@@ -108,11 +109,11 @@ int _ismbckata_l(
 
 **特定于结束代码页932**
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbchira**|\<mbstring.h>|
 |**_ismbchira_l**|\<mbstring.h>|
@@ -121,10 +122,10 @@ int _ismbckata_l(
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)<br/>
-[is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[为，isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

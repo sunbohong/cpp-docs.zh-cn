@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： EnableIf 结构
 title: EnableIf 结构
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - EnableIf structure
 ms.assetid: 7825b283-e6b2-4f39-a4b9-c03bcd431b8e
-ms.openlocfilehash: f43166920f3582ab681b67d2c89563dcf78ff0f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 098dd5fdc7e37a7754d7124eba3e146575c127be
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272846"
 ---
 # <a name="enableif-structure"></a>EnableIf 结构
 
@@ -28,7 +29,7 @@ template <typename T>
 struct EnableIf<true, T>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 一种类型。
@@ -46,7 +47,7 @@ struct EnableIf<true, T>;
 
 |名称|描述|
 |----------|-----------------|
-|`type`|如果模板参数*b*的计算结果为 **`true`** ，则部分专用化将数据成员定义 `type` 为类型 `T` 。|
+|`type`|如果模板参数 *b* 的计算结果为 **`true`** ，则部分专用化将数据成员定义 `type` 为类型 `T` 。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,6 +59,6 @@ struct EnableIf<true, T>;
 
 **命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft：： WRL：:D etails 命名空间](microsoft-wrl-details-namespace.md)

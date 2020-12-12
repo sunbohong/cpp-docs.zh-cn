@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： c + +/CLI 中的泛型概述
 title: C++/CLI 中的泛型概述
 ms.date: 10/12/2018
 ms.topic: reference
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 875fc3334d326315890396ee02e55b5880e8692e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4b84d16f7d76824f732865e3bf8b7bbfe674a1bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274146"
 ---
 # <a name="overview-of-generics-in-ccli"></a>C++/CLI 中的泛型概述
 
@@ -43,15 +44,15 @@ C++ 支持模板，模板和泛型均支持参数化类型创建类型化的集�
 
 ### <a name="type-parameters"></a>类型参数
 
-泛型声明包含一个或多个未知类型（称为“类型参数”**）。 类型参数名称代表泛型声明主体中的类型。 类型参数用作泛型声明主体中的类型。 `List<T>` 的泛型声明中包含类型参数 T。
+泛型声明包含一个或多个未知类型（称为“类型参数”）。 类型参数名称代表泛型声明主体中的类型。 类型参数用作泛型声明主体中的类型。 `List<T>` 的泛型声明中包含类型参数 T。
 
 ### <a name="type-arguments"></a>类型变量
 
-如果泛型专用于特定一个或多个类型，类型实参** 是代替类型形参的实际类型。 例如， **`int`** 是中的类型参数 `List<int>` 。 值类型和句柄类型是泛型类型参数中允许使用的唯一类型。
+如果泛型专用于特定一个或多个类型，类型实参是代替类型形参的实际类型。 例如， **`int`** 是中的类型参数 `List<int>` 。 值类型和句柄类型是泛型类型参数中允许使用的唯一类型。
 
 ### <a name="constructed-type"></a>构造类型
 
-通过泛型类型构造而成的类型称为“构造类型”**。 未完全指定的类型（如 `List<T>`）是开放式构造类型**；完全指定的类型（如 `List<double>,`）是封闭式构造类型** 或专用化类型**。 开放式构造类型可以用于其他泛型类型或方法的定义，并且不能完全指定，直到指定封闭泛型本身。 例如，下面是将开放式构造类型用作泛型基类的示例：
+通过泛型类型构造而成的类型称为“构造类型”。 未完全指定的类型（如 `List<T>`）是开放式构造类型；完全指定的类型（如 `List<double>,`）是封闭式构造类型或专用化类型。 开放式构造类型可以用于其他泛型类型或方法的定义，并且不能完全指定，直到指定封闭泛型本身。 例如，下面是将开放式构造类型用作泛型基类的示例：
 
 ```cpp
 // generics_overview.cpp
@@ -128,7 +129,7 @@ int main() {
 
 `T t = T();`
 
-其中 `T` 是泛型类或方法定义中的类型参数，可将变量初始化为其默认值。 如果 `T` 是 ref 类，它将为 null 指针；如果 `T` 是值类，对象将初始化为零。 这称为“默认初始值设定项”**。
+其中 `T` 是泛型类或方法定义中的类型参数，可将变量初始化为其默认值。 如果 `T` 是 ref 类，它将为 null 指针；如果 `T` 是值类，对象将初始化为零。 这称为“默认初始值设定项”。
 
 ## <a name="see-also"></a>请参阅
 

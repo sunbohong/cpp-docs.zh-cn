@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： NMAKE 错误 U1033
 title: NMAKE 错误 U1033
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e616e98a21c92137fab4b167318a9305a2175bb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173382"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272131"
 ---
 # <a name="nmake-fatal-error-u1033"></a>NMAKE 错误 U1033
 
@@ -21,19 +22,19 @@ ms.locfileid: "80173382"
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 如果内联文件的右尖括号集（ **<<** ）不在行首，则会发生以下错误：
+1. 如果 **<<** 内联文件 () 的右尖括号集不在行首，则会发生以下错误：
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. 如果生成文件中的宏定义包含一个没有前面名称的等号（ **=** ），或者如果要定义的名称是一个扩展为 nothing 的宏，则会发生以下错误：
+1. 如果生成文件中的宏定义包含等号 (**=**) 没有前面的名称，或者如果要定义的名称是扩展到 nothing 的宏，则会发生以下错误：
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. 如果工具的注释行中的分号（ **;** ）。INI 不在行的开头，出现以下错误：
+1. 如果分号 (**;** 在 TOOLS.INI 中的注释行) 不在行首，则会发生以下错误：
 
     ```
     syntax error : ';' unexpected

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：用户记录
 title: 用户记录
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: 4a8fb6c9eeee3736501a04a095bdd763de16de7d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f858660800391eff45cb88115f8fb09afa26a77f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079007"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97272495"
 ---
 # <a name="user-record"></a>用户记录
 
@@ -69,6 +70,6 @@ PROVIDER_COLUMN_MAP 宏有助于创建 `GetColumnInfo` 函数：
 
 有关如何重写用户记录中 `GetColumnInfo` 的更详细示例，请参阅[动态确定返回给使用者的列](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

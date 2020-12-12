@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CRT 函数 Security-Enhanced 版本
 title: CRT 函数的安全增强版本
 ms.date: 03/21/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-ms.openlocfilehash: 9cc44caa047e087b2f3de9b5af142d1ea868e893
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 95e94eb7790ef589fee3287b6cee8997faac7ab6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232373"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277201"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT 函数的安全增强版本
 
@@ -19,7 +20,7 @@ ms.locfileid: "87232373"
 
 ## <a name="secure-functions"></a>安全函数
 
-|CRT 函数|安全性增强的函数|用途|
+|CRT 函数|安全性增强的函数|使用|
 |------------------|--------------------------------|---------|
 |[_access、_waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s、_waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|确定文件访问权限|
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|在堆栈上分配内存|
@@ -51,9 +52,9 @@ ms.locfileid: "87232373"
 |[_lsearch](../c-runtime-library/reference/lsearch.md)|[_lsearch_s](../c-runtime-library/reference/lsearch-s.md)|执行值的线性搜索；如果未找到，则添加到列表的末尾|
 |[_makepath、_wmakepath](../c-runtime-library/reference/makepath-wmakepath.md)|[_makepath_s、_wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|从组件创建路径名|
 |[_mbccpy、_mbccpy_l](../c-runtime-library/reference/mbccpy-mbccpy-l.md)|[_mbccpy_s、_mbccpy_s_l](../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md)|将多字节字符从一个字符串复制到另一个字符串|
-|[_mbsnbcat、_mbsnbcat_l](../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)|[_mbsnbcat_s、_mbsnbcat_s_l](../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)|最多将一个多字节字符字符串的第一个 n 字节追加到另一个字符串**|
-|[_mbsnbcpy、_mbsnbcpy_l](../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)|[_mbsnbcpy_s、_mbsnbcpy_s_l](../c-runtime-library/reference/mbsnbcpy-s-mbsnbcpy-s-l.md)|将字符串的 n 字节复制到目标字符串**|
-|[_mbsnbset、_mbsnbset_l](../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)|[_mbsnbset_s、_mbsnbset_s_l](../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md)|将字符串的第一个 n 字节设置为指定字符**|
+|[_mbsnbcat、_mbsnbcat_l](../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)|[_mbsnbcat_s、_mbsnbcat_s_l](../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)|最多将一个多字节字符字符串的第一个 n 字节追加到另一个字符串|
+|[_mbsnbcpy、_mbsnbcpy_l](../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)|[_mbsnbcpy_s、_mbsnbcpy_s_l](../c-runtime-library/reference/mbsnbcpy-s-mbsnbcpy-s-l.md)|将字符串的 n 字节复制到目标字符串|
+|[_mbsnbset、_mbsnbset_l](../c-runtime-library/reference/mbsnbset-mbsnbset-l.md)|[_mbsnbset_s、_mbsnbset_s_l](../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md)|将字符串的第一个 n 字节设置为指定字符|
 |[mbsrtowcs](../c-runtime-library/reference/mbsrtowcs.md)|[mbsrtowcs_s](../c-runtime-library/reference/mbsrtowcs-s.md)|将多字节字符字符串转换为对应的宽字符字符串|
 |[mbstowcs、_mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)|[mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|将多字节字符序列转换为对应的宽字符序列|
 |[memcpy、wmemcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)|[memcpy_s、wmemcpy_s](../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)|在缓冲区之间进行字符复制操作|
@@ -99,6 +100,6 @@ ms.locfileid: "87232373"
 |[wcstombs、_wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)|[wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|将宽字符序列转换为对应的多字节字符序列|
 |[wctomb、_wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s、_wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|将宽字符转换为对应的多字节字符|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CRT 库功能](../c-runtime-library/crt-library-features.md)
