@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：标识符 (c + +) '
 title: 标识符 (C++)
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 2d16dd318cd42b6294ef60edf44a16ccaf47b99b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 24798675940761eb7a2b8cbdeb6d63592bb4d05a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114008"
 ---
 # <a name="identifiers-c"></a>标识符 (C++)
 
@@ -62,7 +63,7 @@ N O P Q R S T U V W X Y Z
 
 **Microsoft 专用**
 
-只有 Microsoft C++ 标识符的前 2048 个字符是有意义的。 用户定义类型的名称由编译器“修饰”以保留类型信息。 结果名称（包括类型信息）不能超过 2048 个字符。 （有关详细信息，请参阅[修饰名](../build/reference/decorated-names.md)。）可能影响修饰标识符的长度的因素包括：
+只有 Microsoft C++ 标识符的前 2048 个字符是有意义的。 用户定义类型的名称由编译器“修饰”以保留类型信息。 结果名称（包括类型信息）不能超过 2048 个字符。 有关详细信息，请参阅 [修饰名](../build/reference/decorated-names.md) (。可能影响修饰标识符长度的 ) 因素包括：
 
 - 标识符是表示用户定义类型的对象还是表示派生自用户定义类型的类型。
 
@@ -70,7 +71,7 @@ N O P Q R S T U V W X Y Z
 
 - 函数的参数的数量。
 
-美元符号 `$` 是 Microsoft c + + 编译器（MSVC）中的有效标识符字符。 使用 MSVC 还可以在标识符中使用通用字符名称允许的范围所表示的实际字符。 若要使用这些字符，必须使用包含它们的文件编码代码页保存文件。  此示例演示如何在代码中互换使用扩展字符和通用字符名称。
+美元符号 `$` 是 Microsoft c + + 编译器中的有效标识符字符 (MSVC) 。 使用 MSVC 还可以在标识符中使用通用字符名称允许的范围所表示的实际字符。 若要使用这些字符，必须使用包含它们的文件编码代码页保存文件。  此示例演示如何在代码中互换使用扩展字符和通用字符名称。
 
 ```cpp
 // extended_identifier.cpp
@@ -95,8 +96,8 @@ int main() {
 
 标识符不能与关键字有完全相同的拼写和大小写。 包含关键字的标识符是合法的。 例如， `Pint` 是一个合法标识符，即使它包含 **`int`** 关键字。
 
-在标识符中使用两个顺序下划线字符（ **__** ）或在单个前导下划线后跟一个大写字母，为所有作用域中的 c + + 实现保留。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。
+使用两个顺序下划线字符 ( **__** ) 在标识符中，在单个前导下划线后跟一个大写字母，为所有范围中的 c + + 实现保留。 由于当前或将来的保留标识符可能发生冲突，因此应避免对文件范围的名称使用一个前导下划线后跟小写字母。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [词法约定](../cpp/lexical-conventions.md)

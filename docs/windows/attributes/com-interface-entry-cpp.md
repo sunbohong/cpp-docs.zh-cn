@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： com_interface_entry (c + +) '
 title: 'com_interface_entry (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 8339afb97df57f5080629dfed08823c5c091c5a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2f182149eeac887292391cbb06f625aff261e91f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114880"
 ---
 # <a name="com_interface_entry-c"></a>com_interface_entry (C++)
 
@@ -24,12 +25,12 @@ ms.locfileid: "88844114"
   com_interface_entry) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *com_interface_entry*<br/>
 一个字符串，其中包含该项的实际文本。 有关可能值的列表，请参阅 [COM_INTERFACE_ENTRY 宏](../../atl/reference/com-interface-entry-macros.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Com_interface_entry** c + + 特性将字符串的 unabridged 内容插入目标对象的 com 接口映射。 如果将特性应用于目标对象一次，则会将该项插入到现有接口映射的开头。 如果该属性重复应用到同一个目标对象，则这些条目将按接收顺序插入到接口映射的开头。
 
@@ -45,7 +46,7 @@ ms.locfileid: "88844114"
 
 - COM_INTERFACE_ENTRY2_IID
 
-**Com_interface_entry**特性的其他用法可以使用所有支持的 COM_INTERFACE_ENTRY 类型。
+**Com_interface_entry** 特性的其他用法可以使用所有支持的 COM_INTERFACE_ENTRY 类型。
 
 此限制是必需的，因为 ATL 在接口映射中使用第一项作为标识 `IUnknown` ; 因此，该项必须是有效接口。 例如，下面的代码示例是无效的，因为接口映射中的第一个条目未指定实际的 COM 接口。
 
@@ -114,7 +115,7 @@ END_COM_MAP()
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

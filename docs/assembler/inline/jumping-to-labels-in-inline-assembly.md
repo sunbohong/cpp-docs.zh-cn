@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：跳转到内联程序集中的标签
 title: 在内联汇编程序内跳转到标签
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 0c411289745466bd6478cc82ab30e6a05be9cc25
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b4a32dd9baace77245f612d68b58f954a81075ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191997"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117713"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>在内联汇编程序内跳转到标签
 
 **Microsoft 专用**
 
-与普通的 C 或 c + + 标签一样，块中的标签在 **`__asm`** 定义它的函数中具有范围（而不仅是在块中）。 程序集指令和 **`goto`** 语句可以跳转到块内部或外部的标签 **`__asm`** 。
+与普通的 C 或 c + + 标签一样，块中的标签在其 **`__asm`** 定义的函数中具有范围 (不仅在块) 中。 程序集指令和 **`goto`** 语句可以跳转到块内部或外部的标签 **`__asm`** 。
 
 块中定义的标签 **`__asm`** 不区分大小写; **`goto`** 语句和程序集指令可以引用这些标签，而不考虑大小写。 C 和 c + + 标签仅在由语句使用时区分大小写 **`goto`** 。 程序集指令可以跳转到 C 或 C++ 标签而不考虑大小写。
 
@@ -66,7 +67,7 @@ exit:
    ; More __asm code follows
 ```
 
-由于**exit**是 C 库函数的名称，此代码可能会导致跳转到**exit**函数而不是所需的位置。
+由于 **exit** 是 C 库函数的名称，此代码可能会导致跳转到 **exit** 函数而不是所需的位置。
 
 与在 MASM 程序中一样，美元符号 (`$`) 用作当前位置计数器。 它是当前组合的指令的标签。 在 **`__asm`** 块中，其主要用途是发出长条件跳转：
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CBaseTabbedPane 类
 title: CBaseTabbedPane 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 21f2821392d2b9e71837997f5a9a10ab80ba073f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 980f2691aa9e129b0e47070d7ff095d486c45b65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838667"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122741"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 类
 
@@ -83,13 +84,13 @@ class CBaseTabbedPane : public CDockablePane
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`CBaseTabbedPane::CBaseTabbedPane`|默认构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CBaseTabbedPane：： AddTab](#addtab)|向选项卡式窗格添加新选项卡。|
 |[CBaseTabbedPane：： AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定是否可以销毁空的选项卡式窗格。|
@@ -124,7 +125,7 @@ class CBaseTabbedPane : public CDockablePane
 |[CBaseTabbedPane：： SetAutoHideMode](#setautohidemode)|在显示和自动隐藏模式之间切换停靠窗格。  (重写 [CDockablePane：： SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode)。 ) |
 |[CBaseTabbedPane：： Showtab "](#showtab)|显示或隐藏选项卡。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类是一个抽象类，不能进行实例化。 它实现了所有类型的选项卡式窗格通用的服务。
 
@@ -166,7 +167,7 @@ virtual BOOL AddTab(
     BOOL bDetachable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pNewBar*<br/>
 [in，out]指向要添加的窗格的指针。 调用此方法后，此指针可能变为无效。 有关详细信息，请参阅“备注”部分。
@@ -184,7 +185,7 @@ virtual BOOL AddTab(
 
 如果已成功将窗格添加为选项卡并且未在进程中销毁，则为 TRUE。 如果要添加的窗格为类型的对象，则为 FALSE `CBaseTabbedPane` 。 有关详细信息，请参阅“备注”部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法可将窗格添加为选项卡式窗格上的新选项卡。 如果 *pNewBar* 指向类型的对象，则 `CBaseTabbedPane` 会将其所有选项卡复制到选项卡式窗格，然后 *pNewBar* 销毁。 因此， *pNewBar* 将成为无效指针，不应使用。
 
@@ -200,7 +201,7 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 如果可以销毁空的选项卡式窗格，则为 TRUE;否则为 FALSE。 默认实现始终返回 TRUE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果不允许销毁空的选项卡式窗格，框架将改为隐藏该窗格。
 
@@ -212,12 +213,12 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bUseTabIndexes*<br/>
 中此参数由框架在内部使用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在从注册表重新加载停靠状态信息时，框架会调用此方法。 方法获取有关选项卡式窗格的选项卡顺序和选项卡名称的信息。
 
@@ -245,7 +246,7 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 
 如果选项卡式窗格的标题文本设置为活动选项卡的文本，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 方法用于确定选项卡式窗格标题上显示的文本是否复制活动选项卡的标签。可以通过调用 [CBaseTabbedPane：： EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)启用或禁用此功能。
 
@@ -257,10 +258,10 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bActiveTabOnly*<br/>
-中转换选项卡式窗格时，将指定为 TRUE 以仅转换活动选项卡。指定 FALSE 可转换窗格中的所有选项卡。
+中转换选项卡式窗格时，请指定 TRUE 以仅转换活动选项卡。指定 FALSE 将转换窗格中的所有选项卡。
 
 ## <a name="cbasetabbedpanedetachpane"></a><a name="detachpane"></a> CBaseTabbedPane：:D etachPane
 
@@ -272,7 +273,7 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 中指向要分离的窗格的指针。
@@ -284,7 +285,7 @@ virtual BOOL DetachPane(
 
 如果框架成功分离窗格，则为 TRUE;如果 *pBar* 为 NULL 或引用不在选项卡式窗格中的窗格，则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果可能，框架将浮动分离的窗格。 有关详细信息，请参阅 [CBasePane：： CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)。
 
@@ -296,7 +297,7 @@ virtual BOOL DetachPane(
 virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中若要使选项卡式窗格标题与活动选项卡标题同步，则为 TRUE;否则为 FALSE。
@@ -309,7 +310,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 void FillDefaultTabsOrderArray();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当框架将 Outlook 栏还原到初始状态时，将调用此方法。
 
@@ -321,7 +322,7 @@ void FillDefaultTabsOrderArray();
 virtual CWnd* FindPaneByID(UINT uBarID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uBarID*<br/>
 中指定要查找的窗格的 ID。
@@ -330,7 +331,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 
 如果找到该窗格，则为指向它的指针;否则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法比较窗格中的所有选项卡，并返回 ID 由 *uBarID* 参数指定的选项卡。
 
@@ -344,7 +345,7 @@ virtual CWnd* FindBarByTabNumber(
     BOOL bGetWrappedBar = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nTabNum*<br/>
 中指定要检索的选项卡的从零开始的索引。
@@ -356,7 +357,7 @@ virtual CWnd* FindBarByTabNumber(
 
 如果找到了窗格，则返回指向正在搜索的窗格的有效指针;否则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法可检索驻留在由 *nTabNum* 参数指定的选项卡中的窗格。
 
@@ -372,7 +373,7 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 [in，out]指向要浮动的窗格的指针。
@@ -390,7 +391,7 @@ virtual BOOL FloatTab(
 
 如果窗格浮动，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法以浮动当前驻留在可分离选项卡中的窗格。
 
@@ -408,7 +409,7 @@ const CArray<int,int>& GetDefaultTabsOrder();
 
 一个 `CArray` 对象，该对象指定窗格中选项卡的默认顺序。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当 Outlook 面板重置为初始状态时，框架会调用此方法。
 
@@ -420,7 +421,7 @@ const CArray<int,int>& GetDefaultTabsOrder();
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iTabNum*<br/>
 中对整数的引用。 此方法将第一个显示的选项卡的从零开始的索引写入此参数，如果未找到任何显示的选项卡，则为-1。
@@ -437,14 +438,14 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 virtual void GetMinSize(CSize& size) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 弄 `CSize` 使用最小允许大小填充的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果最小窗格大小的一致性处理处于活动状态 ( [CPane：： m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) ，则使用活动选项卡的最小允许大小填充*大小*。否则，将使用[CPane：： GetMinSize](../../mfc/reference/cpane-class.md#getminsize)的返回值填充*大小*。
+如果最小窗格大小的一致性处理处于活动状态 ( [CPane：： m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) ，则使用活动选项卡的最小允许大小填充 *大小* 。否则， *大小* 将用 [CPane：： GetMinSize](../../mfc/reference/cpane-class.md#getminsize)的返回值填充。
 
 ## <a name="cbasetabbedpanegetpaneicon"></a><a name="getpaneicon"></a> CBaseTabbedPane：： GetPaneIcon
 
@@ -454,14 +455,14 @@ virtual void GetMinSize(CSize& size) const;
 virtual void GetMinSize(CSize& size) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 弄 `CSize` 使用最小允许大小填充的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果最小窗格大小的一致性处理处于活动状态 ( [CPane：： m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) ，则使用活动选项卡的最小允许大小填充*大小*。否则，将使用[CPane：： GetMinSize](../../mfc/reference/cpane-class.md#getminsize)的返回值填充*大小*。
+如果最小窗格大小的一致性处理处于活动状态 ( [CPane：： m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)) ，则使用活动选项卡的最小允许大小填充 *大小* 。否则， *大小* 将用 [CPane：： GetMinSize](../../mfc/reference/cpane-class.md#getminsize)的返回值填充。
 
 ## <a name="cbasetabbedpanegetpanelist"></a><a name="getpanelist"></a> CBaseTabbedPane：： GetPaneList
 
@@ -473,7 +474,7 @@ virtual void GetPaneList(
     CRuntimeClass* pRTCFilter = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *.lst*<br/>
 弄 `CObList` ，它使用选项卡式窗格中包含的窗格进行填充。
@@ -491,7 +492,7 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectTabAreaTop*<br/>
 弄接收上部选项卡区域的屏幕坐标。
@@ -499,7 +500,7 @@ virtual void GetTabArea(
 *rectTabAreaBottom*<br/>
 弄接收下部选项卡区域的屏幕坐标。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法可确定上方和下方选项卡区域的边框（以屏幕坐标表示）。
 
@@ -539,7 +540,7 @@ virtual int GetVisibleTabsNum() const;
 
 可见选项卡的数目，将大于或等于零。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法可确定选项卡式窗格中的可见选项卡的数目。
 
@@ -555,7 +556,7 @@ virtual BOOL HasAutoHideMode() const;
 
 如果窗格可以切换到自动隐藏模式，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果自动隐藏模式处于禁用状态，则在选项卡式窗格标题上不显示任何 "固定" 按钮。
 
@@ -571,7 +572,7 @@ virtual BOOL IsHideSingleTab() const;
 
 如果在只有一个可见选项卡时未显示 "选项卡" 窗口，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果未显示该窗格是因为只有一个选项卡处于打开状态，则可以调用此方法来确定选项卡式窗格是否正常工作。
 
@@ -583,7 +584,7 @@ virtual BOOL IsHideSingleTab() const;
 virtual BOOL RemovePane(CWnd* pBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 [in，out]指向要从选项卡式窗格中删除的窗格的指针。
@@ -592,7 +593,7 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 如果已成功从选项卡式窗格中删除窗格，并且选项卡式窗格仍然有效，则为 TRUE。 如果已从选项卡式窗格中删除最后一个窗格，并且选项卡式窗格将被销毁，则为 FALSE。 如果返回值为 FALSE，请不要再使用选项卡式窗格。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法可从选项卡式窗格中删除由 *pBar* 参数指定的窗格。
 
@@ -604,12 +605,12 @@ virtual BOOL RemovePane(CWnd* pBar);
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAutoDestroy*<br/>
 中如果动态创建了选项卡式窗格并且未控制其生存期，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果动态创建选项卡式窗格，并在未控制其生存期的情况下，请将自动销毁模式设置为 TRUE。 如果自动销毁模式为 TRUE，则框架将自动销毁选项卡式窗格。
 
@@ -625,7 +626,7 @@ virtual BOOL ShowTab(
     BOOL bActivate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBar*<br/>
 中指向要显示或隐藏的窗格的指针。
@@ -643,7 +644,7 @@ virtual BOOL ShowTab(
 
 如果选项卡已成功显示或隐藏，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法时，将显示或隐藏一个窗格，具体取决于 *bShow* 参数的值。 如果隐藏某个选项卡，并且它是基础选项卡窗口中的最后一个可见选项卡，则会隐藏选项卡式窗格。 如果在之前没有可见选项卡的情况下显示选项卡，则显示选项卡式窗格。
 
@@ -655,7 +656,7 @@ virtual BOOL ShowTab(
 virtual void RecalcLayout();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果该窗格是浮动窗格，则此方法将通知框架将窗格大小调整为最小框架的当前大小。
 
@@ -673,7 +674,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
     BOOL bUseTimer = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bMode*<br/>
 中若要启用自动隐藏模式，则为 TRUE;若要启用常规停靠模式，则为 FALSE。
@@ -691,7 +692,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 
 一个指针，指向在切换到自动隐藏模式时创建的自动隐藏工具栏; 如果不创建任何工具栏，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当用户选择 "固定" 按钮以将选项卡式窗格切换为自动隐藏模式或常规停靠模式时，框架会调用此方法。
 
@@ -699,8 +700,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 
 调用此方法可通过编程方式将选项卡式窗格切换为自动隐藏模式。 该窗格必须停靠在主框架窗口中 ( [CDockablePane：： GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) 必须返回指向 [CPaneDivider](../../mfc/reference/cpanedivider-class.md)) 的有效指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)

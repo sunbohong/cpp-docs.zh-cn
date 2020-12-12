@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： Concurrency：： graphics 命名空间函数
 title: Concurrency::graphics 命名空间函数
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-ms.openlocfilehash: e767c6b3e02564d89be48f47e8bf7718600af961
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dab12e4a0d1c767d9422991679ed59152cd89c1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122273"
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency::graphics 命名空间函数
 
@@ -115,7 +116,7 @@ void copy (
     const extent<_Src_type::rank>& _Copy_extent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Copy_extent*<br/>
 要复制的纹理部分的范围。
@@ -250,7 +251,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
     const extent<_Src_type::rank>& _Copy_extent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Copy_extent*<br/>
 要复制的纹理部分的范围。
@@ -297,6 +298,6 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

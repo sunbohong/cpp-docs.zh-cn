@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Win32 预定义符号
 title: Win32 预定义符号
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: f69dddcb8b6a9a390f80ab4d0112e19c4e8d32e1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ed6d41bc82a30a40d157c2e23b999e430d505fa9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835644"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148767"
 ---
 # <a name="win32-predefined-symbols"></a>Win32 预定义符号
 
 这些符号在 Win32 标头文件中定义，它们支持标准的 Windows 应用程序功能和操作。 这些符号主要用于常见的 UI 元素。 使用资源编辑器中的控件时，这些符号将出现在与公共控件关联的 [属性窗口](/visualstudio/ide/reference/properties-window) 中。 例如，如果工具栏应显示应用程序图标，则图标将与 **属性** 窗口中的符号 IDI_SMALL 相关联。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |IDABORT| (控制) "对话框中的" 中止 "按钮|
 |IDC_STATIC|在对话框中 (控件) 静态文本|
@@ -38,7 +39,7 @@ ms.locfileid: "88835644"
 
 Win32
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [预定义的符号 Id](../windows/predefined-symbol-ids.md)<br/>
 [MFC 预定义符号](../windows/mfc-predefined-symbols.md)<br/>

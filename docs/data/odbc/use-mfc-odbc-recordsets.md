@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：使用 MFC ODBC 记录集
 title: 使用 MFC ODBC 记录集
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-ms.openlocfilehash: 42316b5411637e16480abbde196dc15fc6c256c3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0da2de00c707e5f3d8ea74688f49853c6e916330
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124470"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>使用 MFC ODBC 记录集
 
@@ -30,13 +31,13 @@ ms.locfileid: "80212533"
 
 ### <a name="recordset-design-and-implementation"></a>记录集设计和实现
 
-- [了解记录字段交换（RFX）](../../data/odbc/record-field-exchange-rfx.md)
+- [了解记录字段交换 (RFX) ](../../data/odbc/record-field-exchange-rfx.md)
 
 - [在数据库和记录集对象之间交换数据](../../data/odbc/record-field-exchange-using-rfx.md)
 
 - [自定义由向导生成的记录集代码](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)
 
-- [使用记录字段交换（RFX）函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [使用记录字段交换 (RFX) 函数](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
 ### <a name="recordset-performance-and-convenience"></a>记录集性能和便利性
 
@@ -76,6 +77,6 @@ ms.locfileid: "80212533"
 
 - [在运行时动态绑定记录集中的数据列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[开放式数据库连接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[ODBC)  (打开数据库连接 ](../../data/odbc/open-database-connectivity-odbc.md)

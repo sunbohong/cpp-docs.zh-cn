@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： helpstringdll
 title: 'helpstringdll (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 0c90a6a203189eff927819a3319fac6a8e9f6a55
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 13a64f7f98a9d63e6a176911caad1246ad64af75
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842840"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148793"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -23,14 +24,14 @@ ms.locfileid: "88842840"
 [ helpstringdll("string") ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *string*<br/>
 要用于执行文档字符串查找的 DLL。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Helpstringdll** c + + 特性具有与[helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 特性相同的功能。
+**Helpstringdll** c + + 特性具有与 [helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -58,7 +59,7 @@ __interface IMyI
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>

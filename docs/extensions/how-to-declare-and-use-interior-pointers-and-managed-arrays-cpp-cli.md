@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅如何：在 c + +/CLI (声明和使用内部指针和托管数组) '
 title: 如何：声明和使用内部指针及托管数组 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - pointers, interior
 - arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-ms.openlocfilehash: 88308e0ba79a8272b2fc323b9219a29e234b25ef
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 36e339ad1d60e2416171f2b4d6672b964b478b10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181975"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119338"
 ---
 # <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>如何：声明和使用内部指针及托管数组 (C++/CLI)
 
@@ -54,6 +55,6 @@ ipi points to memory address whose value is: 1
 after incrementing ipi, it points to memory address whose value is: 2
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)
+[interior_ptr (c + +/CLI) ](interior-ptr-cpp-cli.md)

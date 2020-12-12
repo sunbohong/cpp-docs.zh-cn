@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： atexit
 title: atexit
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-ms.openlocfilehash: b91e6dad81f006b0b94ac17a940e840386f6d2b1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 82c0bbfdb9af62faff9239781b5db340183e25fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939662"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117531"
 ---
 # <a name="atexit"></a>atexit
 
@@ -43,22 +44,22 @@ int atexit(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *func*<br/>
 要调用的函数。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则**atexit**返回 0; 如果出现错误，则返回非零值。
+如果成功，则 **atexit** 返回 0; 如果出现错误，则返回非零值。
 
 ## <a name="remarks"></a>备注
 
-当程序正常终止时，向**atexit**函数传递要调用的函数*func*的地址。 对**atexit**的后续调用将创建一个函数寄存器，这些函数按后进先出（LIFO）顺序执行。 传递给**atexit**的函数不能采用参数。 **atexit**和 **_onexit**使用堆来保存函数的注册。 因此，可以注册的函数的数量仅受堆内存限制。
+当程序正常终止时，向 **atexit** 函数传递要调用的函数 *func* 的地址。 对 **atexit** 的后续调用将创建一个函数寄存器，这些函数将在后进先出 (后进先出) 顺序执行。 传递给 **atexit** 的函数不能采用参数。 **atexit** 和 **_onexit** 使用堆来保存函数的注册。 因此，可以注册的函数的数量仅受堆内存限制。
 
-**Atexit**函数中的代码不应包含任何在调用**atexit**函数时可能已卸载的 DLL 的依赖项。
+**Atexit** 函数中的代码不应包含任何在调用 **atexit** 函数时可能已卸载的 DLL 的依赖项。
 
-若要生成符合 ANSI 标准的应用程序，请使用 ANSI 标准的**atexit**函数（而不是类似的 **_onexit**函数）。
+若要生成符合 ANSI 标准的应用程序，请使用 ANSI 标准的 **atexit** 函数 (而不是类似的 **_onexit** 函数) 。
 
 ## <a name="requirements"></a>要求
 
@@ -68,7 +69,7 @@ int atexit(
 
 ## <a name="example"></a>示例
 
-调用**atexit**时，此程序将四个函数推送到要执行的函数堆栈上。 当程序退出时，这些程序以后进先出的方式执行。
+调用 **atexit** 时，此程序将四个函数推送到要执行的函数堆栈上。 当程序退出时，这些程序以后进先出的方式执行。
 
 ```C
 // crt_atexit.c
@@ -115,6 +116,6 @@ This is executed next.
 ## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[abort](abort.md)<br/>
-[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[中止](abort.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](onexit-onexit-m.md)<br/>

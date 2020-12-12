@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： ATL 编码引用
 title: ATL 编码引用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - encoding
 - encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-ms.openlocfilehash: a284645030b5bcdb30b72d7df92231680efb36b4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 309c4cbf695b5f40e58116c9422f8da481799cbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148663"
 ---
 # <a name="atl-encoding-reference"></a>ATL 编码引用
 
@@ -18,7 +19,7 @@ ms.locfileid: "88831887"
 
 ### <a name="functions"></a>函数
 
-| 函数 | 用例 |
+| 函数 | 使用案例 |
 |--|--|
 | [AtlGetHexValue](reference/atl-text-encoding-functions.md#atlgethexvalue) | 调用此函数可获取十六进制数字的数值。 |
 | [AtlHexDecode](reference/atl-text-encoding-functions.md#atlhexdecode) | 对已编码为十六进制文本的数据字符串进行解码，如上一次对 [AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)的调用。 |
@@ -42,7 +43,7 @@ ms.locfileid: "88831887"
 | [UUEncode](reference/atl-text-encoding-functions.md#uuencode) | 调用此函数可对某些数据进行 uuencode。 |
 | [UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength) | 调用此函数可获取某个缓冲区的大小（以字符为单位），该缓冲区可包含从指定大小的数据编码而来的字符串。 |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概念](../atl/active-template-library-atl-concepts.md)<br/>
 [ATL COM 桌面组件](../atl/atl-com-desktop-components.md)

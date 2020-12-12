@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：在 __asm 块中使用 C 或 c + +
 title: 在 __asm 块中使用 C 或 C++
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-ms.openlocfilehash: 05e63d666f3fc39126d6f48e8fc523c4a02e76df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2fc1987339fcbabee07e2b626c3ae764c3d5e2e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87191412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97121922"
 ---
 # <a name="using-c-or-c-in-__asm-blocks"></a>在 __asm 块中使用 C 或 C++
 
@@ -35,13 +36,13 @@ ms.locfileid: "87191412"
 
 - 宏和预处理器指令
 
-- __ / \* 注释 \* （ / __和 __//__ ）
+- __/ \* 注释 \* (/__ 和 __//__ ) 
 
 - 类型名称（其中的 MASM 类型是合法的）
 
-- **`typedef`** 名称，通常与运算符（如**PTR**和**类型**）一起使用，或者用于指定结构或联合成员
+- **`typedef`** 名称，通常与运算符（如 **PTR** 和 **类型** ）一起使用，或者用于指定结构或联合成员
 
-在 **`__asm`** 块中，可以使用 C 表示法或汇编程序基数表示法指定整数常量（例如，0x100 和100h 等效）。 这允许您在 C 中定义（使用 `#define`）常量，然后在 C 或 C++ 以及程序的程序集部分中使用该常量。 您还可以通过在其前面放置 0 以八进制指定常量。 例如，0777 指定一个八进制常量。
+在 **`__asm`** 块中，可以使用 C 表示法或汇编程序基数表示法指定整数常量 (0x100 和100h 等效，如) 。 这允许您在 C 中定义（使用 `#define`）常量，然后在 C 或 C++ 以及程序的程序集部分中使用该常量。 您还可以通过在其前面放置 0 以八进制指定常量。 例如，0777 指定一个八进制常量。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>你想进一步了解什么？
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __if_not_exists 语句
 title: __if_not_exists 语句
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-ms.openlocfilehash: e99fcee440bd69eabafec693df99d347f3aee828
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 29f98c2d07858077207c10dfcdd45b9ce51268e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113943"
 ---
 # <a name="__if_not_exists-statement"></a>__if_not_exists 语句
 
@@ -25,7 +26,7 @@ statements
 };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *identifier*\
 要测试其存在性的标识符。
@@ -52,7 +53,7 @@ statements
 
 有关如何使用的示例 **`__if_not_exists`** ，请参阅 [__if_exists 语句](../cpp/if-exists-statement.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [选择语句](../cpp/selection-statements-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)<br/>

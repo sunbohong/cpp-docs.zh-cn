@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：递增和递减运算符重载 (c + +) '
 title: 递增和递减运算符重载 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-ms.openlocfilehash: 10cda57b74a7da57f2d48b91854b5d37c8d181f1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f2704a1c10375bf8422324d90f41c6e3ac245505
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113917"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>递增和递减运算符重载 (C++)
 
@@ -124,8 +125,8 @@ int main()
 }
 ```
 
-除显式调用之外，没有针对使用递增或递减运算符来传递这些值的语法，如前面的代码所示。 实现此功能的一种更简单的方法是重载加法/赋值运算符（ **+=** ）。
+除显式调用之外，没有针对使用递增或递减运算符来传递这些值的语法，如前面的代码所示。 实现此功能的一种更简单的方法是 () 重载加法/赋值运算符 **+=** 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [运算符重载](../cpp/operator-overloading.md)

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：内联程序集中的 MASM 表达式
 title: 内联程序集中的 MASM 表达式
 ms.date: 08/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - inline assembly, MASM expressions
 - MASM (Microsoft Macro Assembler), expressions
 ms.assetid: c80e89e6-1084-4654-bb14-68c5f6ef2840
-ms.openlocfilehash: 6a78b0a07563fb7fb046b760db11c4875ab19ead
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949a58ca4b11ac6ac65c8da9c23e020099c8eb22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97117597"
 ---
 # <a name="masm-expressions-in-inline-assembly"></a>内联程序集中的 MASM 表达式
 
@@ -22,6 +23,6 @@ ms.locfileid: "80169300"
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [在 __asm 块中使用汇编语言](../../assembler/inline/using-assembly-language-in-asm-blocks.md)<br/>

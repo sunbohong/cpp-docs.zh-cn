@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： com：:p tr 类
 title: com::ptr 类
 ms.date: 01/16/2019
 ms.topic: reference
@@ -16,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 9cb0ad23450d06bb314b0e2d6fa1d01784d633e2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73016d425d06ecbda12702afc1793a4bab81ccc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214901"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124392"
 ---
 # <a name="comptr-class"></a>com::ptr 类
 
-可用作 CLR 类的成员的 COM 对象的包装器。  该包装器还可自动执行 COM 对象的生存期管理，并在调用对象的析构函数时释放对象上所有拥有的引用。 类似于[CComPtr 类](../atl/reference/ccomptr-class.md)。
+可用作 CLR 类的成员的 COM 对象的包装器。  该包装器还可自动执行 COM 对象的生存期管理，并在调用对象的析构函数时释放对象上所有拥有的引用。 类似于 [CComPtr 类](../atl/reference/ccomptr-class.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -34,7 +35,7 @@ template<class _interface_type>
 ref class ptr;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_interface_type*<br/>
 COM 接口。
@@ -43,7 +44,7 @@ COM 接口。
 
 `com::ptr` 还可用作局部函数变量，用来简化各种 COM 任务和自动执行生成期管理。
 
-`com::ptr`不能直接用作函数参数; 请改用[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)或[对象运算符（^）的句柄](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
+`com::ptr`不能直接用作函数参数; 请改用[跟踪引用运算符](../extensions/tracking-reference-operator-cpp-component-extensions.md)或[对象运算符的句柄， (^) ](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) 。
 
 `com::ptr`不能直接从函数返回，请改用句柄。
 
@@ -196,9 +197,9 @@ int main() {
 
 **头文件** \<msclr\com\ptr.h>
 
-**命名空间**msclr：： com
+**命名空间** msclr：： com
 
-## <a name="ptrptr"></a><a name="ptr"></a>ptr：:p tr
+## <a name="ptrptr"></a><a name="ptr"></a> ptr：:p tr
 
 返回指向拥有的 COM 对象的指针。
 
@@ -209,7 +210,7 @@ ptr(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *P*<br/>
 COM 接口指针。
@@ -285,7 +286,7 @@ int main() {
 }
 ```
 
-## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr：： ~ ptr
+## <a name="ptrptr"></a><a name="tilde-ptr"></a> ptr：： ~ ptr
 
 Destructs `com::ptr` 。
 
@@ -360,7 +361,7 @@ int main() {
 }
 ```
 
-## <a name="ptrattach"></a><a name="attach"></a>ptr：： Attach
+## <a name="ptrattach"></a><a name="attach"></a> ptr：： Attach
 
 将 COM 对象附加到 `com::ptr` 。
 
@@ -370,7 +371,7 @@ void Attach(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 要附加的 COM 接口指针。
@@ -461,7 +462,7 @@ int main() {
 }
 ```
 
-## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr：： CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a> ptr：： CreateInstance
 
 在中创建 COM 对象的实例 `com::ptr` 。
 
@@ -504,19 +505,19 @@ void CreateInstance(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *progid*<br/>
 `ProgID` 字符串。
 
 *pouter*<br/>
-指向聚合对象的 IUnknown 接口的指针（控制 IUnknown）。 如果 `pouter` 未指定， `NULL` 则使用。
+指向聚合对象的 IUnknown 接口的指针 (控制 IUnknown) 。 如果 `pouter` 未指定， `NULL` 则使用。
 
 *cls_context*<br/>
 用于管理新创建的对象的代码将运行的上下文。 值取自 `CLSCTX` 枚举。 如果 `cls_context` 未指定，则使用 CLSCTX_ALL 值。
 
 *rclsid*<br/>
-`CLSID`与将用于创建对象的数据和代码相关联。
+`CLSID` 与将用于创建对象的数据和代码相关联。
 
 ### <a name="exceptions"></a>例外
 
@@ -526,7 +527,7 @@ void CreateInstance(
 
 ### <a name="remarks"></a>备注
 
-`CreateInstance`用于 `CoCreateInstance` 创建指定对象的新实例，该实例由 ProgID 或 CLSID 标识。 `com::ptr`引用新创建的对象，并将在销毁时自动释放所有拥有的引用。
+`CreateInstance` 用于 `CoCreateInstance` 创建指定对象的新实例，该实例由 ProgID 或 CLSID 标识。 `com::ptr`引用新创建的对象，并将在销毁时自动释放所有拥有的引用。
 
 ### <a name="example"></a>示例
 
@@ -579,7 +580,7 @@ int main() {
 }
 ```
 
-## <a name="ptrdetach"></a><a name="detach"></a>ptr：:D etach
+## <a name="ptrdetach"></a><a name="detach"></a> ptr：:D etach
 
 提供 COM 对象的所有权，并返回指向对象的指针。
 
@@ -599,7 +600,7 @@ _interface_type * Detach();
 
 ### <a name="remarks"></a>备注
 
-`Detach`首先，代表调用方添加对 COM 对象的引用，然后释放由拥有的所有引用 `com::ptr` 。  调用方必须最终释放返回的对象以销毁它。
+`Detach` 首先，代表调用方添加对 COM 对象的引用，然后释放由拥有的所有引用 `com::ptr` 。  调用方必须最终释放返回的对象以销毁它。
 
 ### <a name="example"></a>示例
 
@@ -684,7 +685,7 @@ int main() {
 }
 ```
 
-## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr：： GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a> ptr：： GetInterface
 
 返回指向拥有的 COM 对象的指针。
 
@@ -826,7 +827,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr：： QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a> ptr：： QueryInterface
 
 查询接口的所有 COM 对象并将结果附加到另一个 `com::ptr` 。
 
@@ -837,7 +838,7 @@ void QueryInterface(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 `com::ptr`将获取接口的。
@@ -852,7 +853,7 @@ void QueryInterface(
 
 ### <a name="example"></a>示例
 
-本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `WriteTopLevelNode`成员函数使用 `QueryInterface` 来填充本地， `com::ptr` 并将 `IXMLDOMNode` `com::ptr` （通过跟踪引用）传递给向控制台写入节点名称和文本属性的私有成员函数。
+本示例实现使用 `com::ptr` 包装其私有成员 `IXMLDOMDocument` 对象的 CLR 类。 `WriteTopLevelNode`成员函数使用 `QueryInterface` 填充本地， `com::ptr` `IXMLDOMNode` 并 `com::ptr` 通过跟踪引用将 (传递给向控制台写入节点名称和文本属性的私有成员函数) 。
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -957,7 +958,7 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="ptrrelease"></a><a name="release"></a>ptr：： Release
+## <a name="ptrrelease"></a><a name="release"></a> ptr：： Release
 
 释放对 COM 对象的所有拥有的引用。
 
@@ -1045,7 +1046,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr：： operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a> ptr：： operator-&gt;
 
 成员访问运算符，用于对拥有的 COM 对象调用方法。
 
@@ -1187,7 +1188,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptroperator"></a><a name="operator-assign"></a>ptr：： operator =
+## <a name="ptroperator"></a><a name="operator-assign"></a> ptr：： operator =
 
 将 COM 对象附加到 `com::ptr` 。
 
@@ -1197,7 +1198,7 @@ ptr<_interface_type> % operator=(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_right*<br/>
 要附加的 COM 接口指针。
@@ -1292,7 +1293,7 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr：： operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a> ptr：： operator bool
 
 用于 `com::ptr` 条件表达式中的运算符。
 
@@ -1302,7 +1303,7 @@ operator bool();
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果拥有的 COM 对象有效，则为; 否则为。**`false`** 否则为。
+**`true`** 如果拥有的 COM 对象有效，则为; 否则为。 **`false`** 否则为。
 
 ### <a name="remarks"></a>备注
 
@@ -1363,7 +1364,7 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr：： operator！
+## <a name="ptroperator"></a><a name="operator-logical-not"></a> ptr：： operator！
 
 运算符来确定拥有的 COM 对象是否无效。
 
@@ -1373,7 +1374,7 @@ bool operator!();
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果拥有的 COM 对象无效，则为; 否则为。**`false`** 否则为。
+**`true`** 如果拥有的 COM 对象无效，则为; 否则为。 **`false`** 否则为。
 
 ### <a name="remarks"></a>备注
 

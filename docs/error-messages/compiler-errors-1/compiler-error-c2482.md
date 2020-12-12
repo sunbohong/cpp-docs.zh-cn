@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2482
 title: 编译器错误 C2482
 ms.date: 09/15/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-ms.openlocfilehash: a68c3f06daf977bda4700a293803859d4aa96771
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ffde4d7ea9f4eccdd643b3ac6efe0545775816a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123924"
 ---
 # <a name="compiler-error-c2482"></a>编译器错误 C2482
 
@@ -19,11 +20,11 @@ ms.locfileid: "87216201"
 
 ## <a name="remarks"></a>备注
 
-在托管或 WinRT 代码中，使用[__declspec （thread）](../../cpp/thread.md)存储类修饰符特性或[thread_local](../../cpp/storage-classes-cpp.md#thread_local)存储类说明符声明的变量无法使用需要在运行时计算的表达式进行初始化。 `__declspec(thread)` **`thread_local`** 在这些运行时环境中初始化或数据需要静态表达式。
+在托管或 WinRT 代码中，使用 [__declspec (线程) ](../../cpp/thread.md) 存储类修饰符特性或 [thread_local](../../cpp/storage-classes-cpp.md#thread_local) 存储类说明符声明的变量不能使用需要在运行时计算的表达式进行初始化。 `__declspec(thread)` **`thread_local`** 在这些运行时环境中初始化或数据需要静态表达式。
 
 ## <a name="example"></a>示例
 
-下面的示例在托管（**/clr**）和 WinRT （**/ZW**）代码中生成 C2482：
+下面的示例在 managed (**/clr**) 和 WinRT (**/ZW**) 代码中生成 C2482：
 
 ```cpp
 // C2482.cpp

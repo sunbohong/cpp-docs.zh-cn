@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CBitmap 类
 title: CBitmap 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 8c19a54584390312cfd1657e88898cdb044179d0
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: e3d54a87cb53757f4751558b77e9c0c187484410
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122715"
 ---
 # <a name="cbitmap-class"></a>CBitmap 类
 
@@ -126,7 +127,7 @@ BOOL CreateBitmap(
     const void* lpBits);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 指定位图的宽度（以像素为单位）。
@@ -165,7 +166,7 @@ BOOL CreateBitmap(
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpBitmap*<br/>
 指向包含位图相关信息的 [位图](/windows/win32/api/wingdi/ns-wingdi-bitmap) 结构。
@@ -193,7 +194,7 @@ BOOL CreateCompatibleBitmap(
     int nHeight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指定设备上下文。
@@ -231,7 +232,7 @@ BOOL CreateDiscardableBitmap(
     int nHeight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指定设备上下文。
@@ -262,7 +263,7 @@ BOOL CreateDiscardableBitmap(
 static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hBitmap*<br/>
 指定 Windows GDI 位图。
@@ -283,7 +284,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 int GetBitmap(BITMAP* pBitMap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBitMap*<br/>
 指向将接收图像属性的 [位图](/windows/win32/api/wingdi/ns-wingdi-bitmap) 结构的指针。 此参数不得为 NULL。
@@ -304,7 +305,7 @@ DWORD GetBitmapBits(
     LPVOID lpBits) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwCount*<br/>
 要复制到缓冲区的字节数。
@@ -345,7 +346,7 @@ BOOL LoadBitmap(LPCTSTR lpszResourceName);
 BOOL LoadBitmap(UINT nIDResource);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszResourceName*<br/>
 指向以 null 结尾的字符串，该字符串包含位图资源的名称。
@@ -386,7 +387,7 @@ BOOL LoadMappedBitmap(
     int nMapSize = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDBitmap*<br/>
 位图资源的 ID。
@@ -418,7 +419,7 @@ BOOL LoadMappedBitmap(
 BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDBitmap*<br/>
 预定义的 Windows 位图的 ID 号。 下面从 WINDOWS 列出了可能的值。高
@@ -504,7 +505,7 @@ DWORD SetBitmapBits(
     const void* lpBits);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwCount*<br/>
 指定 *lpBits* 指向的字节数。
@@ -526,7 +527,7 @@ CSize SetBitmapDimension(
     int nHeight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 指定位图的宽度（以 0.1-毫米单位)  (。
@@ -542,7 +543,7 @@ CSize SetBitmapDimension(
 
 GDI 不会使用这些值，只是在应用程序调用 [GetBitmapDimension](#getbitmapdimension) 成员函数时返回这些值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject 类](../../mfc/reference/cgdiobject-class.md)<br/>

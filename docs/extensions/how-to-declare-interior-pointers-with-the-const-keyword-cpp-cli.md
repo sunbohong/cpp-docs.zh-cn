@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息：如何：在 c + +/CLI (用 const 关键字声明内部指针) '
 title: 如何：用 const 关键字声明内部指针 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-ms.openlocfilehash: c5768487c9b720b1a49e50de88022a2bdc02d482
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f977d0766126c073dc94273e44e27ac32f34d82b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214277"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119301"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：用 const 关键字声明内部指针 (C++/CLI)
 
@@ -78,6 +79,6 @@ int main() {
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[interior_ptr （c + +/CLI）](interior-ptr-cpp-cli.md)
+[interior_ptr (c + +/CLI) ](interior-ptr-cpp-cli.md)

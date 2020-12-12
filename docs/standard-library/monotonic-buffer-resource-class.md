@@ -1,18 +1,19 @@
 ---
+description: 了解详细信息： monotonic_buffer_resource 类
 title: monotonic_buffer_resource 类
 ms.date: 11/04/2016
 f1_keywords:
 - memory_resource/std::monotonic_buffer_resource
 helpviewer_keywords:
 - std::monotonic_buffer_resource
-ms.openlocfilehash: 019d9ce7328ccc7bd65461fb966ac5dcb915209e
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b7821dcaf441972eff415da93078ef3d8f0b59ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115009"
 ---
-# <a name="monotonicbufferresource-class"></a>monotonic_buffer_resource 类
+# <a name="monotonic_buffer_resource-class"></a>monotonic_buffer_resource 类
 
 ## <a name="syntax"></a>语法
 

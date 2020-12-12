@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅如何：在 c + +/CLI (用 interior_ptr 关键字声明值类型) '
 title: 如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,25 +7,25 @@ helpviewer_keywords:
 - _ptr keyword
 - value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-ms.openlocfilehash: b5d17f3621271faa03e30e24f259d8d7cebbb491
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: b8d5c554f212a9536b0ad063d67e044c08194015
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119169"
 ---
 # <a name="how-to-declare-value-types-with-the-interior_ptr-keyword-ccli"></a>如何：用 interior_ptr 关键字声明值类型 (C++/CLI)
 
-interior_ptr**** 可以用于值类型。
+interior_ptr 可以用于值类型。
 
 > [!IMPORTANT]
 > `/clr` 编译器选项支持此语言功能，但是 `/ZW` 编译器选项不支持此语言功能。
 
 ## <a name="example-interior_ptr-with-value-type"></a>示例：值类型 interior_ptr
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
-下面的 C++/CLI 示例展示了如何将 interior_ptr**** 用于值类型。
+下面的 C++/CLI 示例展示了如何将 interior_ptr 用于值类型。
 
 ### <a name="code"></a>代码
 
@@ -67,7 +68,7 @@ int main() {
 
 ## <a name="example-this-pointer"></a>示例： this 指针
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 在值类型中， **`this`** 指针的计算结果为 interior_ptr。
 
@@ -89,7 +90,7 @@ value struct V {
 
 ## <a name="example-address-of-operator"></a>示例： address 运算符
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 下面的示例演示了如何将 address-of 运算符与静态成员一起使用。
 

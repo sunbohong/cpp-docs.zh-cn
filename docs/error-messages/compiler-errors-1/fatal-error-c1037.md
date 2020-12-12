@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：严重错误 C1037
 title: 错误 C1037
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1037
 ms.assetid: 79103bca-ccfb-42e7-aef9-9b90c15b162f
-ms.openlocfilehash: 782ccec01faad34ba79553626db06cf87ba0740c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 9947843fa99b6b545ffc4120d839d4bae5c2cee0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97123833"
 ---
 # <a name="fatal-error-c1037"></a>错误 C1037
 
@@ -25,6 +26,6 @@ ms.locfileid: "80075036"
 
 1. 内存不足，无法打开该文件。
 
-1. 另一进程正在使用该文件。
+1. 另一个进程正在使用该文件。
 
 1. 一个只读文件具有相同的名称。

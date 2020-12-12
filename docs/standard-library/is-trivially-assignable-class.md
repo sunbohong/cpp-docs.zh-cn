@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_trivially_assignable 类
 title: is_trivially_assignable 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-ms.openlocfilehash: 14a3ee638bd6df3b52e7327ca6e3c77f4a0e8b71
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fbbf14b83dff4bea9ed50eddf93512899f6d9fb1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224859"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118545"
 ---
 # <a name="is_trivially_assignable-class"></a>is_trivially_assignable 类
 
@@ -24,7 +25,7 @@ template <class To, class From>
 struct is_trivially_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *自*\
 接收赋值的对象的类型。
@@ -42,6 +43,6 @@ struct is_trivially_assignable;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)
