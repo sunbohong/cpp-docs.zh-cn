@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： unorm_2 类
 title: unorm_2 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1a91c1c203466f6ece535d45d5c2c828c8150dbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326371"
 ---
 # <a name="unorm_2-class"></a>unorm_2 类
 
@@ -45,67 +46,67 @@ ms.locfileid: "77126196"
 class unorm_2;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[unorm_2 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|unorm_2::get_x||
-|unorm_2::get_xy||
-|unorm_2::get_y||
-|unorm_2::get_yx||
-|unorm_2::ref_g||
-|unorm_2::ref_r||
-|unorm_2::ref_x||
-|unorm_2::ref_y||
-|unorm_2::set_x||
-|unorm_2::set_xy||
-|unorm_2::set_y||
-|unorm_2::set_yx||
+|unorm_2：： get_x||
+|unorm_2：： get_xy||
+|unorm_2：： get_y||
+|unorm_2：： get_yx||
+|unorm_2：： ref_g||
+|unorm_2：： ref_r||
+|unorm_2：： ref_x||
+|unorm_2：： ref_y||
+|unorm_2：： set_x||
+|unorm_2：： set_xy||
+|unorm_2：： set_y||
+|unorm_2：： set_yx||
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|unorm_2::operator--||
-|unorm_2::operator*=||
-|unorm_2::operator/=||
-|unorm_2::operator++||
-|unorm_2::operator+=||
-|unorm_2::operator=||
-|unorm_2::operator-=||
+|unorm_2：： operator--||
+|unorm_2：： operator * =||
+|unorm_2：： operator/=||
+|unorm_2：： operator + +||
+|unorm_2：： operator + =||
+|unorm_2：： operator =||
+|unorm_2：： operator-=||
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |unorm_2::size 常量||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|unorm_2::g||
-|unorm_2::gr||
-|unorm_2::r||
-|unorm_2::rg||
-|unorm_2::x||
-|unorm_2::xy||
-|unorm_2::y||
-|unorm_2::yx||
+|unorm_2：： g||
+|unorm_2：： gr||
+|unorm_2：： r||
+|unorm_2：： rg||
+|unorm_2：： x||
+|unorm_2：： xy||
+|unorm_2：： y||
+|unorm_2：： yx||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -117,7 +118,7 @@ class unorm_2;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a>unorm_2
+## <a name="unorm_2"></a><a name="ctor"></a> unorm_2
 
 默认构造函数，用0初始化所有元素。
 
@@ -168,7 +169,7 @@ explicit inline unorm_2(
     cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_V0*<br/>
 要初始化元素0的值。
@@ -182,12 +183,12 @@ explicit inline unorm_2(
 *_Other*<br/>
 用于初始化的对象。
 
-## <a name="unorm_2__size"></a>规格
+## <a name="size"></a><a name="unorm_2__size"></a> 规格
 
 ```cpp
 static const int size = 2;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

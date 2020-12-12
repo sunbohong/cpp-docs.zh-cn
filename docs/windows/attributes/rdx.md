@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： rdx
 title: 'rdx (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: f61eaf535102c8885e828176434acf221dfe2457
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7d31e33bcc1883bfb787b21ec8f5c1f8bed60208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329651"
 ---
 # <a name="rdx"></a>rdx
 
@@ -23,9 +24,9 @@ ms.locfileid: "88836876"
 [ rdx(key, valuename=NULL, regtype) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
+*key*<br/>
 要创建或打开的项的名称。
 
 *valuename*<br/>
@@ -34,7 +35,7 @@ ms.locfileid: "88836876"
 *regtype*<br/>
 要添加的注册表项的类型。 可以是下列其中一项： `text` 、 `dword` 、 `binary` 或 `CString` 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Rdx** c + + 属性创建或修改 COM 组件的现有注册表项。 特性将 BEGIN_RDX_MAP 宏添加到实现目标成员的对象。 `RegistryDataExchange`，作为 BEGIN_RDX_MAP 宏的结果注入的函数可用于在注册表和数据成员之间传输数据
 
@@ -74,7 +75,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [registration_script](registration-script.md)

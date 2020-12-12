@@ -1,4 +1,5 @@
 ---
+description: 了解有关数据转换的详细信息
 title: 数据转换
 ms.date: 03/21/2018
 f1_keywords:
@@ -7,26 +8,26 @@ helpviewer_keywords:
 - data conversion routines [C++]
 - converting data
 ms.assetid: b15b5268-7467-49f1-bf95-5299b598f94c
-ms.openlocfilehash: 94e6a8182e12ecd74f9d2cd5dddaa84a1e3eb847
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ce9a7e04ed8d7e561e256929b8b8625e34d2620
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327043"
 ---
 # <a name="data-conversion"></a>数据转换
 
-这些例程可将数据从一种形式转换为另一种形式。 通常，这些例程比可能编写的转换执行速度更快。 每个以 to 前缀开头的例程都作为函数和宏实现**。 请参阅[在函数和宏之间选择](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)，了解关于选择实现的信息。
+这些例程可将数据从一种形式转换为另一种形式。 通常，这些例程比可能编写的转换执行速度更快。 每个以 to 前缀开头的例程都作为函数和宏实现。 请参阅[在函数和宏之间选择](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)，了解关于选择实现的信息。
 
 ## <a name="data-conversion-routines"></a>数据转换例程
 
-|例程所返回的值|用途|
+|例程所返回的值|使用|
 |-------------|---------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|查找整数的绝对值|
-|[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将字符串转换为**`float`**|
-|[atoi、_atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|将字符串转换为**`int`**|
-|[_atoi64、_atoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|将字符串转换为 **`__int64`** 或**`long long`**|
-|[atol、_atol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|将字符串转换为**`long`**|
+|[atof、_atof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将字符串转换为 **`float`**|
+|[atoi、_atoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|将字符串转换为 **`int`**|
+|[_atoi64、_atoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|将字符串转换为 **`__int64`** 或 **`long long`**|
+|[atol、_atol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|将字符串转换为 **`long`**|
 |[c16rtomb, c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|将 UTF-16 或 UTF-32 字符转换为等效多字节字符|
 |[_ecvt](../c-runtime-library/reference/ecvt.md)、[_ecvt_s](../c-runtime-library/reference/ecvt-s.md)|转换 **`double`** 为指定长度的字符串|
 |[_fcvt](../c-runtime-library/reference/fcvt.md)、[_fcvt_s](../c-runtime-library/reference/fcvt-s.md)|转换 **`double`** 为在小数点后具有指定位数的字符串|
@@ -43,7 +44,7 @@ ms.locfileid: "87218762"
 |[mbrtoc16、mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|将多字节字符转换为等效 UTF-16 或 UTF-32 字符|
 |[mbstowcs、_mbstowcs_l](../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)、[mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)|将多字节字符序列转换为对应的宽字符序列|
 |[mbtowc、_mbtowc_l](../c-runtime-library/reference/mbtowc-mbtowc-l.md)|将多字节字符转换为对应的宽字符|
-|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|将字符串转换为**`double`**|
+|[strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)|将字符串转换为 **`double`**|
 |[strtol、wcstol、_strtol_l、_wcstol_l](../c-runtime-library/reference/strtol-wcstol-strtol-l-wcstol-l.md)|将字符串转换为 **`long`** 整数|
 |[strtoul、_strtoul_l、wcstoul、_wcstoul_l](../c-runtime-library/reference/strtoul-strtoul-l-wcstoul-wcstoul-l.md)|将字符串转换为 **`unsigned long`** 整数|
 |[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)|根据特定于区域设置的信息将字符串转换为排序格式|
@@ -54,11 +55,11 @@ ms.locfileid: "87218762"
 |[toupper、_toupper、towupper、_toupper_l、_towupper_l](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)|无条件将字符转换为大写形式|
 |[wcstombs、_wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)、[wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|将宽字符序列转换为相应的多字节字符序列|
 |[wctomb、_wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)、[wctomb_s、_wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|将宽字符转换为相应的多字节字符|
-|[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将宽字符字符串转换为**`double`**|
-|[_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|将宽字符字符串转换为**`int`**|
-|[_wtoi64、_wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|将宽字符字符串转换为 **`__int64`** 或**`long long`**|
-|[_wtol、_wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|将宽字符字符串转换为**`long`**|
+|[_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|将宽字符字符串转换为 **`double`**|
+|[_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|将宽字符字符串转换为 **`int`**|
+|[_wtoi64、_wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|将宽字符字符串转换为 **`__int64`** 或 **`long long`**|
+|[_wtol、_wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|将宽字符字符串转换为 **`long`**|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

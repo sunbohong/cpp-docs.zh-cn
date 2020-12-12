@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDataConnection 类
 title: CDataConnection 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: c456f4bf5891f550fcd9523fa376333d66e079a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 7cdcb681c40d1ef4e93baee5dc4e4395e6ea9c5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509109"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328811"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 类
 
@@ -86,7 +87,7 @@ class CDataConnection
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[CDataConnection](#cdataconnection)|构造函数。 实例化并初始化一个 `CDataConnection` 对象。|
 |[复制](#copy)|创建现有数据连接的副本。|
@@ -95,7 +96,7 @@ class CDataConnection
 
 ### <a name="operators"></a>运算符
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[operator BOOL](#op_bool)|确定当前会话是否已打开。|
 |[operator bool](#op_bool_ole)|确定当前会话是否已打开。|
@@ -104,7 +105,7 @@ class CDataConnection
 |[operator CSession&](#op_csession_amp)|返回对包含的对象的引用 `CSession` 。|
 |[运算符 CSession*](#op_csession_star)|返回指向包含的 `CSession` 对象的指针。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CDataConnection` 用于创建客户端的有用类，因为它封装了必需的对象 (数据源和会话) 以及连接到数据源时需要执行的一些工作
 
@@ -126,12 +127,12 @@ CDataConnection();
 CDataConnection(const CDataConnection &ds);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ds*<br/>
 中对现有数据连接的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个重写使用默认设置创建一个新的 `CDataConnection` 对象。
 
@@ -147,7 +148,7 @@ CDataConnection(const CDataConnection &ds);
 CDataConnection& Copy(const CDataConnection & ds) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ds*<br/>
 中对要复制的现有数据连接的引用。
@@ -162,7 +163,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 HRESULT Open(LPCOLESTR szInitString) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *szInitString*<br/>
 中数据源的初始化字符串。
@@ -181,12 +182,12 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 HRESULT OpenNewSession(CSession & session) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *会议*<br/>
 [in/out]对新会话对象的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 新会话使用当前连接对象的包含数据源对象作为其父对象，并可访问与数据源相同的所有信息。
 

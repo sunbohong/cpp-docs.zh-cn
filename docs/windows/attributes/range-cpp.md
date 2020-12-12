@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：范围 (c + +) '
 title: '范围 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 8ed0ba2c53992dd19d1c4491f8085e955146224c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0c1a45ac1f4e968de52c9ed2bffb89ac2cf5fd04
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839473"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327356"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -23,7 +24,7 @@ ms.locfileid: "88839473"
 [ range(low, high) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *低级*<br/>
 低范围值。
@@ -31,9 +32,9 @@ ms.locfileid: "88839473"
 *严重*<br/>
 高范围值。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**范围**c + + 特性具有与[范围](/windows/win32/Midl/range)MIDL 特性相同的功能。
+**范围** c + + 特性具有与 [范围](/windows/win32/Midl/range)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -62,7 +63,7 @@ __interface ICustom {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>

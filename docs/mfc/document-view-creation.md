@@ -1,5 +1,6 @@
 ---
-title: 文档-视图创建
+description: 了解详细信息：文档/视图创建
+title: Document-View 创建
 ms.date: 11/04/2016
 helpviewer_keywords:
 - documents [MFC], creating
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - MFC, documents
 - tables [MFC], objects each MFC object creates
 ms.assetid: bda14f41-ed50-439d-af9e-591174e7dd64
-ms.openlocfilehash: 5441827188f5bff98638cc85cd29e2efd79f8ae8
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 128b68eb53bd596ba2e4b4df4f2c5e865452fe2a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620345"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326430"
 ---
 # <a name="documentview-creation"></a>文档/视图创建
 
-框架提供 "**文件**" 菜单上的**新**的和**打开**的命令的实现。 在应用程序对象、文档模板、新创建的文档和新创建的框架窗口中，创建新文档及其关联的视图和框架窗口是一项协作工作。 下表总结了哪些对象创建了什么。
+该框架提供了 **新** 的和 **打开** 的命令的实现 (其他 **文件** 菜单中的其他) 。 在应用程序对象、文档模板、新创建的文档和新创建的框架窗口中，创建新文档及其关联的视图和框架窗口是一项协作工作。 下表总结了哪些对象创建了什么。
 
 ### <a name="object-creators"></a>对象创建者
 
@@ -30,9 +31,9 @@ ms.locfileid: "84620345"
 |应用程序对象|文档模板|
 |文档模板|文档|
 |文档模板|框架窗口|
-|框架窗口|视图|
+|框架窗口|查看|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文档模板和文档/视图创建过程](document-templates-and-the-document-view-creation-process.md)<br/>
 [文档模板创建](document-template-creation.md)<br/>

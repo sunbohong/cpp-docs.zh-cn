@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4946
 title: 编译器警告（等级 1）C4946
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-ms.openlocfilehash: 3b829eb7cdd0adc58a3ddb225115a4b188a2336f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 75422a3923f0c39ec79945a2e1c6f8b91c00ace8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199067"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328000"
 ---
 # <a name="compiler-warning-level-1-c4946"></a>编译器警告（等级 1）C4946
 
 reinterpret_cast 在相关类之间使用:“class1”和“class2”
 
-不要使用[reinterpret_cast](../../cpp/reinterpret-cast-operator.md)在相关类型之间强制转换。 请改用[static_cast](../../cpp/static-cast-operator.md) ，对于多态类型，请使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)。
+不要使用 [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) 在相关类型之间强制转换。 请改用 [static_cast](../../cpp/static-cast-operator.md) ，对于多态类型，请使用 [dynamic_cast](../../cpp/dynamic-cast-operator.md)。
 
 默认情况下，此警告处于关闭状态。 有关详细信息，请参阅 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 

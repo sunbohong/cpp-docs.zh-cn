@@ -1,19 +1,20 @@
 ---
-title: 编译器警告（等级2） C4094
+description: 详细了解：编译器警告 (等级 2) C4094
+title: 编译器警告 (等级 2) C4094
 ms.date: 11/04/2016
 f1_keywords:
 - C4094
 helpviewer_keywords:
 - C4094
 ms.assetid: e68929fb-3a1c-4be7-920b-d5f79f534f99
-ms.openlocfilehash: c90ad202e193f21955d396dd2aff6b39d3a968c7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 63c554703c1eb6f7ecb831d1046641a0cde2094a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80174331"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326526"
 ---
-# <a name="compiler-warning-level-2-c4094"></a>编译器警告（等级2） C4094
+# <a name="compiler-warning-level-2-c4094"></a>编译器警告 (等级 2) C4094
 
 未标记的 "token" 未声明符号
 
@@ -33,4 +34,4 @@ int main()
 }
 ```
 
-此条件在 ANSI 兼容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下生成错误。
+此条件在 ANSI 兼容性 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) 上生成错误。

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：可选 (c + +) '
 title: '可选 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: 31e2dbac988cdbac8aca2d01a70177825d764a5b
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 70ae49854a496aad35edc87bdd1ac5facb899448
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329723"
 ---
 # <a name="optional-c"></a>optional (C++)
 
@@ -25,7 +26,7 @@ ms.locfileid: "88842164"
 
 ## <a name="remarks"></a>备注
 
-**可选**的 c + + 特性与[可选](/windows/win32/Midl/optional)的 MIDL 特性具有相同的功能。
+**可选** 的 c + + 特性与 [可选](/windows/win32/Midl/optional)的 MIDL 特性具有相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -55,7 +56,7 @@ __interface IFireTabCtrl : IDispatch
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [参数属性](parameter-attributes.md)

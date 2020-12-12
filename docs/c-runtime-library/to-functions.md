@@ -1,4 +1,5 @@
 ---
+description: 了解有关： to 函数的详细信息
 title: to 函数
 ms.date: 11/04/2016
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: a54f20d6ae4dead5ba7c606fd28d456e96ff31d6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4e2e8993bfe3ecc85071ab53bcd38c38c9da3370
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326862"
 ---
 # <a name="to-functions"></a>to 函数
 
@@ -38,7 +39,7 @@ ms.locfileid: "88836073"
 [tolower、_tolower、towlower](../c-runtime-library/reference/tolower-tolower-towlower-tolower-l-towlower-l.md)\
 [toupper、_toupper、towupper](../c-runtime-library/reference/toupper-toupper-towupper-toupper-l-towupper-l.md)
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **to** 函数和宏转换如下所示。
 
@@ -52,7 +53,7 @@ ms.locfileid: "88836073"
 |`_toupper`|`_toupper`|将 `c` 转换为大写|
 |`towupper`|无|将 c 转换为相应的宽字符大写字母|
 
-若要将 ** 的函数版本用于同时定义为宏的 ** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。
+若要将 **的函数版本用于同时定义为宏的** 例程，或者使用 `#undef` 指令移除宏定义或不包括 CTYPE.H。 如果使用 /Za 编译器选项，编译器将使用 `toupper` 或 `tolower` 的函数版本。 `toupper` 和 `tolower` 函数的声明位于 STDLIB.H 中。
 
 `__toascii` 例程集将除低顺序 7 位以外的所有 `c` 设置为 0，使转换后的值表示 ASCII 字符集中的字符。 如果 `c` 已表示 ASCII 字符，则 `c` 保持不变。
 
@@ -66,7 +67,7 @@ ms.locfileid: "88836073"
 
 - 是 `tolower` 和 **toupper** 区域设置独立的、速度更快的版本。
 
-- 仅当**isascii (** `c` **) **并且**isupper (** `c` **) **或**islower (** `c` **) **分别为非零值时才可使用。
+- 仅当 **isascii (** `c` **)** 并且 **isupper (** `c` **)** 或 **islower (** `c` **)** 分别为非零值时才可使用。
 
 - 如果 `c` 不是用于转换的正确大小写的 ASCII 字母，则结果不确定。
 
@@ -114,7 +115,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../c-runtime-library/data-conversion.md)<br/>
 [区域设置](../c-runtime-library/locale.md)<br/>

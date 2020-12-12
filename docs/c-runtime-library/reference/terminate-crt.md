@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：终止 (CRT) '
 title: terminate (CRT)
 ms.date: 4/2/2020
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8370c1f1aff54b5286ad4472b053275e3468a8d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326163"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-调用[abort](abort.md)或使用**set_terminate**指定的函数。
+调用 [abort](abort.md) 或使用 **set_terminate** 指定的函数。
 
 ## <a name="syntax"></a>语法
 
@@ -46,7 +47,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>备注
 
-**Terminate**函数与 c + + 异常处理一起使用，并在以下情况下调用：
+**Terminate** 函数与 c + + 异常处理一起使用，并在以下情况下调用：
 
 - 无法为引发的 C++ 异常找到匹配的 catch 处理程序。
 
@@ -54,13 +55,13 @@ void terminate( void );
 
 - 在引发异常后，堆栈已损坏。
 
-默认情况下，**终止**调用[中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用**set_terminate** ，并将函数名称作为其参数。 **terminate**调用作为**set_terminate**的参数提供的最后一个函数。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
+默认情况下，**终止** 调用 [中止](abort.md)。 可以通过以下方式更改此默认设置：编写自己的终止函数并调用 **set_terminate** ，并将函数名称作为其参数。 **terminate** 调用作为 **set_terminate** 的参数提供的最后一个函数。 有关详细信息，请参阅 [未经处理的 C++ 异常](../../cpp/unhandled-cpp-exceptions.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**终止**|\<eh.h>|
 
@@ -112,7 +113,7 @@ void term_func()
 term_func() was called by terminate().
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
 [中止](abort.md)<br/>

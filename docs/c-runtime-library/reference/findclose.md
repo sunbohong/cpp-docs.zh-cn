@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _findclose
 title: _findclose
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: dffe2ff71f1eecaec78c75867ebb7e34a963ee3a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 389a8aaf55605a1d9e3193c86ce500bf313fd631
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329197"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -47,18 +48,18 @@ int _findclose(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *柄*<br/>
-之前对 **_findfirst**的调用返回的搜索句柄。
+之前对 **_findfirst** 的调用返回的搜索句柄。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_findclose**将返回0。 否则，它将返回-1，并将**errno**设置为**ENOENT**，指示找不到更多匹配的文件。
+如果成功， **_findclose** 将返回0。 否则，它将返回-1，并将 **errno** 设置为 **ENOENT**，指示找不到更多匹配的文件。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -68,7 +69,7 @@ int _findclose(
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [系统调用](../../c-runtime-library/system-calls.md)<br/>
 [文件名搜索函数](../../c-runtime-library/filename-search-functions.md)<br/>

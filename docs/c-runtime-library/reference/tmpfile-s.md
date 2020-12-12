@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： tmpfile_s
 title: tmpfile_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b5830375644cdcdd3d0c400d00735319b3af671
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919931"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326135"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -47,7 +48,7 @@ errno_t tmpfile_s(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFilePtr*<br/>
 指针地址，用于存储生成的指向流的指针的地址。
@@ -60,23 +61,23 @@ errno_t tmpfile_s(
 
 |*pFilePtr*|**返回值**|*PFilePtr* **的内容**  |
 |----------------|----------------------|---------------------------------|
-|**Null**|**EINVAL**|未更改|
+|**NULL**|**EINVAL**|未更改|
 
-如果出现以上参数验证错误，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且返回值为**EINVAL**。
+如果出现以上参数验证错误，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **EINVAL** ，并且返回值为 **EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Tmpfile_s**函数将创建一个临时文件，并在*pFilePtr*参数中放置一个指向该流的指针。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
+**Tmpfile_s** 函数将创建一个临时文件，并在 *pFilePtr* 参数中放置一个指向该流的指针。 在根目录中创建了临时文件。 若要在目录（而非根）中创建临时文件，请将 [tmpnam_s](tmpnam-s-wtmpnam-s.md) 或 [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) 与 [fopen](fopen-wfopen.md) 结合使用。
 
-如果文件无法打开， **tmpfile_s**会将**NULL**写入*pFilePtr*参数。 当文件关闭、程序正常终止时，或在调用 **_rmtmp**时，如果当前工作目录未更改，则会自动删除此临时文件。 临时文件以**w + b** （二进制读取/写入）模式打开。
+如果文件无法打开， **tmpfile_s** 会将 **NULL** 写入 *pFilePtr* 参数。 当文件关闭、程序正常终止时，或在调用 **_rmtmp** 时，如果当前工作目录未更改，则会自动删除此临时文件。 临时文件以 **w + b** (二进制读/写) 模式打开。
 
-如果尝试的**TMP_MAX_S 超过**（请参阅 stdio.h。H）对**tmpfile_s**调用。
+如果尝试的 **TMP_MAX_S 超过** (请参阅 stdio.h。H) 调用 **tmpfile_s**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 
@@ -124,7 +125,7 @@ Temporary file 3 was created
 3 temporary files deleted
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_rmtmp](rmtmp.md)<br/>

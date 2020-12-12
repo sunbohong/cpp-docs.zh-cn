@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：对象 (c + +) '
 title: '对象 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: c0c0ff552d8a33ebe70f56b9b186e963cc8e9b3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 82f259f6ca36c44f33eb68970d8b76ae2acc5853
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843100"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329749"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -31,7 +32,7 @@ ms.locfileid: "88843100"
 
 ## <a name="example"></a>示例
 
-有关如何使用**对象**的示例，请参阅[nonbrowsable](nonbrowsable.md) 。
+有关如何使用 **对象** 的示例，请参阅 [nonbrowsable](nonbrowsable.md) 。
 
 ## <a name="requirements"></a>要求
 
@@ -44,11 +45,11 @@ ms.locfileid: "88843100"
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>
-[dual](dual.md)<br/>
+[双重](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [客户](custom-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

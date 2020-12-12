@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： uninitialized_object 类
 title: uninitialized_object 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4929de9e865492c9fb468f5fac336f67fb307efb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326385"
 ---
 # <a name="uninitialized_object-class"></a>uninitialized_object 类
 
@@ -25,11 +26,11 @@ ms.locfileid: "77127694"
 class uninitialized_object : public runtime_exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[uninitialized_object 构造函数](#uninitialized_object)|初始化 `uninitialized_object` 类的新实例。|
 
@@ -47,9 +48,9 @@ class uninitialized_object : public runtime_exception;
 
 **命名空间：** 并发
 
-## <a name="uninitialized_object"></a>uninitialized_object
+## <a name="uninitialized_object"></a><a name="uninitialized_object"></a> uninitialized_object
 
-构造 `uninitialized_object` 异常的新实例。
+构造异常的新实例 `uninitialized_object` 。
 
 ### <a name="syntax"></a>语法
 
@@ -60,15 +61,15 @@ explicit uninitialized_object(
 uninitialized_object() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
-错误说明。
+对错误的说明。
 
 ### <a name="return-value"></a>返回值
 
-`uninitialized_object` exception 对象。
+`uninitialized_object`异常对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

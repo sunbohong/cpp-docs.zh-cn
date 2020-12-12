@@ -1,26 +1,27 @@
 ---
-title: Typedef、Enum、Union 和 Struct 特性（c + + COM）
+description: 了解更多相关信息： Typedef、Enum、Union 和 Struct 特性
+title: 'Typedef、Enum、Union 和 Struct 特性 (c + + COM) '
 ms.date: 10/02/2018
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-ms.openlocfilehash: 5e9eccd5e4464e92757d6dd78dd0f5187372ea3e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9f72f5ff45709287d31aa4da05b2569a0b37baff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222103"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327234"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 特性
 
-以下属性适用于[typedef](../../cpp/aliases-and-typedefs-cpp.md)、[结构](../../cpp/struct-cpp.md)和[枚举](../../cpp/enumerations-cpp.md)c + + 关键字。
+以下属性适用于 [typedef](../../cpp/aliases-and-typedefs-cpp.md)、 [结构](../../cpp/struct-cpp.md)和 [枚举](../../cpp/enumerations-cpp.md) c + + 关键字。
 
 ### <a name="typedef"></a>typedef
 
-|Attribute|描述|
+|特性|描述|
 |---------------|-----------------|
-|[case](case-cpp.md)|与中的[switch_type](switch-type.md)特性一起使用 **`union`** 。|
+|[case](case-cpp.md)|与中的 [switch_type](switch-type.md) 特性一起使用 **`union`** 。|
 |[客户](custom-cpp.md)|允许您定义自己的属性。|
 |[先导](export.md)|导致将数据结构放置在 .idl 文件中。|
 |[first_is](first-is.md)|指定要传输的第一个数组元素的索引。|
@@ -29,7 +30,7 @@ ms.locfileid: "87222103"
 |[helpstring](helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
 |[library_block](library-block.md)|将构造置于 .idl 文件的库块内。|
 |[ptr](ptr.md)|将指针指定为完全指针。|
-|[public](public-cpp-attributes.md)|确保 typedef 将进入类型库，即使它未从 .idl 文件中引用。|
+|公共|确保 typedef 将进入类型库，即使它未从 .idl 文件中引用。|
 |[ref](ref-cpp.md)|标识引用指针。|
 |[switch_is](switch-is.md)|指定充当用于选择联合成员的联合判别的表达式或标识符。|
 |[switch_type](switch-type.md)|标识用作联合判别的变量的类型。|
@@ -38,7 +39,7 @@ ms.locfileid: "87222103"
 
 ### <a name="enum"></a>枚举
 
-|Attribute|描述|
+|特性|描述|
 |---------------|-----------------|
 |[客户](custom-cpp.md)|允许您定义自己的属性。|
 |[先导](export.md)|导致将数据结构放置在 .idl 文件中。|
@@ -47,7 +48,7 @@ ms.locfileid: "87222103"
 
 ### <a name="union"></a>union
 
-|Attribute|描述|
+|特性|描述|
 |---------------|-----------------|
 |[客户](custom-cpp.md)|允许您定义自己的属性。|
 |[先导](export.md)|导致将数据结构放置在 .idl 文件中。|
@@ -61,14 +62,14 @@ ms.locfileid: "87222103"
 
 ### <a name="nonencapsulated-union"></a>Nonencapsulated 联合
 
-|Attribute|描述|
+|特性|描述|
 |---------------|-----------------|
 |[ms_union](ms-union.md)|控制 nonencapsulated 联合的网络数据表示形式的对齐方式。|
 |[no_injected_text](no-injected-text.md)|阻止编译器将代码注入到属性使用的结果中。|
 
 ### <a name="struct"></a>struct
 
-|Attribute|描述|
+|特性|描述|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|指示类支持聚合。|
 |[集中](aggregates.md)|指示控件聚合目标类。|
@@ -102,6 +103,6 @@ ms.locfileid: "87222103"
 |[version](version-cpp.md)|标识类的多个版本中的特定版本。|
 |[vi_progid](vi-progid.md)|指定 ProgID 的与版本无关的形式。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按使用情况的属性](attributes-by-usage.md)

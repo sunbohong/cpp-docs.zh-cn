@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： transmit_as
 title: 'transmit_as (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 9483bfd7ca95aa1121beb56aac8a286c25fa17cb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5f626612257decaf8c7ac6253e3a586b9753deeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840799"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329545"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -25,12 +26,12 @@ ms.locfileid: "88840799"
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+type<br/>
 指定在客户端和服务器之间传输的数据类型。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Transmit_as** c + + 特性具有与[transmit_as](/windows/win32/Midl/transmit-as) MIDL 特性相同的功能。
+**Transmit_as** c + + 特性具有与 [transmit_as](/windows/win32/Midl/transmit-as) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -75,7 +76,7 @@ struct _TREE_NODE_TYPE * right;
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

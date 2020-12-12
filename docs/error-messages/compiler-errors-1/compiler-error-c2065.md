@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2065
 title: 编译器错误 C2065
 ms.date: 08/19/2019
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: 68817498d6f29ef5982b72a2fee4e64a4423ccde
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a686276aa093e1f2011212d5999d43c76062487f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214810"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328556"
 ---
 # <a name="compiler-error-c2065"></a>编译器错误 C2065
 
 > "*identifier*"：未声明的标识符
 
-编译器找不到标识符的声明。 此错误有许多可能的原因。 C2065 的最常见原因是未声明标识符，标识符的拼写错误，文件中未包含声明标识符的标头，或者标识符缺少作用域限定符，例如， `cout` 而不是 `std::cout` 。 有关 c + + 中的声明的详细信息，请参阅[声明和定义（c + +）](../../cpp/declarations-and-definitions-cpp.md)。
+编译器找不到标识符的声明。 此错误有许多可能的原因。 C2065 的最常见原因是未声明标识符，标识符的拼写错误，文件中未包含声明标识符的标头，或者标识符缺少作用域限定符，例如， `cout` 而不是 `std::cout` 。 有关 c + + 中的声明的详细信息，请参阅 [c + +)  (声明和定义 ](../../cpp/declarations-and-definitions-cpp.md)。
 
 下面是一些常见的问题和解决方案。
 
@@ -73,7 +74,7 @@ int main() {
 
 ## <a name="example-precompiled-header-isnt-first"></a>示例：预编译头不是第一
 
-如果在预编译头文件 #include 之前放置了任何预处理器指令，如 #include、#define 或 #pragma，则会发生此错误。 如果源文件使用预编译头文件（即，如果它是使用 **/yu**编译器选项编译的），则将忽略预编译头文件之前的所有预处理器指令。
+如果在预编译头文件 #include 之前放置了任何预处理器指令，如 #include、#define 或 #pragma，则会发生此错误。 如果源文件使用的是预编译头文件 (即，如果它是使用 **/yu** 编译器选项编译的) 则忽略预编译头文件之前的所有预处理器指令。
 
 此示例无法编译，因为 `cout` 和 `endl` 在 \<iostream> 标头中定义，这会被忽略，因为它包含在预编译头文件之前。 若要生成此示例，请创建所有三个文件，然后编译 stdafx.h，然后编译 C2065_pch .cpp。
 
@@ -155,7 +156,7 @@ int main() {
 
 ## <a name="example-use-iterator-outside-for-loop-scope"></a>示例：在 for 循环范围之外使用迭代器
 
-如果在循环中声明迭代器变量 **`for`** ，然后尝试在循环范围之外使用该迭代器变量，则会发生此错误 **`for`** 。 默认情况下，编译器启用[/zc： forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)编译器选项。 有关详细信息，请参阅[调试迭代器支持](../../standard-library/debug-iterator-support.md)。
+如果在循环中声明迭代器变量 **`for`** ，然后尝试在循环范围之外使用该迭代器变量，则会发生此错误 **`for`** 。 默认情况下，编译器启用 [/zc： forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 编译器选项。 有关详细信息，请参阅 [调试迭代器支持](../../standard-library/debug-iterator-support.md) 。
 
 ```cpp
 // C2065_iter.cpp
@@ -205,7 +206,7 @@ int main() {
 
 ## <a name="example-ccli-type-deduction-failure"></a>示例： c + +/CLI 类型推导失败
 
-如果无法从使用的参数推导出预期类型参数，则调用泛型函数时可能会发生此错误。 有关详细信息，请参阅[泛型函数（c + +/cli）](../../extensions/generic-functions-cpp-cli.md)。
+如果无法从使用的参数推导出预期类型参数，则调用泛型函数时可能会发生此错误。 有关详细信息，请参阅 [c + +/cli)  (泛型函数 ](../../extensions/generic-functions-cpp-cli.md)。
 
 ```cpp
 // C2065_b.cpp

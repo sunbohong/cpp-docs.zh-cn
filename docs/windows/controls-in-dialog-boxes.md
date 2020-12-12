@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：对话框控件 (c + +) '
 title: 对话框控件 (c + +) |Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 449e60e968916f7741422ca2766375ad29afd062
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: e68547ebd550797d4ad195c6bef4c3f2a71e769e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505711"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327143"
 ---
 # <a name="dialog-box-controls-c"></a>对话框控件 (c + +) 
 
@@ -30,7 +31,7 @@ ms.locfileid: "91505711"
 
 将控件添加到对话框后，可以在 " [属性" 窗口](/visualstudio/ide/reference/properties-window)中更改属性，例如其标题。 还可以选择多个控件，并同时更改它们的属性。
 
-有关 **对话框编辑器**的详细信息，请参阅如何 [添加、编辑或删除控件](adding-editing-or-deleting-controls.md)、 [布局控件](../windows/arrangement-of-controls-on-dialog-boxes.md)以及 [定义控件访问和值](../windows/defining-mnemonics-access-keys.md)。
+有关 **对话框编辑器** 的详细信息，请参阅如何 [添加、编辑或删除控件](adding-editing-or-deleting-controls.md)、 [布局控件](../windows/arrangement-of-controls-on-dialog-boxes.md)以及 [定义控件访问和值](../windows/defining-mnemonics-access-keys.md)。
 
 有关控件和对话框的详细信息，请参阅 [控件类](../mfc/control-classes.md)、 [对话框类](../mfc/dialog-box-classes.md)和 [滚动条样式](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)。
 
@@ -53,7 +54,7 @@ ms.locfileid: "91505711"
 > [!NOTE]
 > 有关将 **RichEdit 1.0** 控件与 mfc 一起使用的详细信息，请参阅 [将 RichEdit 1.0 控件与 Mfc](./adding-editing-or-deleting-controls.md) 和 [Rich Edit 控件](../mfc/rich-edit-control-examples.md)结合使用。
 
-"**工具箱**" 中提供的[Windows 公共控件](../mfc/controls-mfc.md)可提供更多功能：
+"**工具箱**" 中提供的 [Windows 公共控件](../mfc/controls-mfc.md)可提供更多功能：
 
 |控件名称|默认事件|
 |---|---|

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： propput
 title: 'propput (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-ms.openlocfilehash: 11f216dd183f3977aee9af90c6579d01cad45fdf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f7b33996c4575de6b94fc3127c33a88c6f791aed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327381"
 ---
 # <a name="propput"></a>propput
 
@@ -25,11 +26,11 @@ ms.locfileid: "88839941"
 
 ## <a name="remarks"></a>备注
 
-**Propput** c + + 特性具有与[propput](/windows/win32/Midl/propput) MIDL 特性相同的功能。
+**Propput** c + + 特性具有与 [propput](/windows/win32/Midl/propput) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-有关**propput**的示例用法，请参阅可[绑定](bindable.md)的示例。
+有关 **propput** 的示例用法，请参阅可 [绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -42,7 +43,7 @@ ms.locfileid: "88839941"
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>

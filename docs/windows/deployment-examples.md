@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：部署示例
 title: 部署示例
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - deploying applications [C++], examples
 - examples [C++], deployment
 ms.assetid: a2904fea-2703-48dc-881b-5bfc1f11b67f
-ms.openlocfilehash: d4beaf4f090a989bb0cf09a5828693498a9a5a42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3e47dfdb4d09d617991009987263c8c8bcdcd11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327070"
 ---
 # <a name="deployment-examples"></a>部署示例
 
@@ -23,7 +24,7 @@ ms.locfileid: "62345378"
 
 [演练：将 Visual C++ 应用程序部署到应用程序本地文件夹](walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
 
-[演练：使用 Visual C++ 可再发行软件包部署 Visual C++ 应用程序](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
+[演练：使用 Visual C++ 可再发行组件包部署 Visual C++ 应用程序](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
 
 [准备用于运行调试可执行文件的测试计算机](preparing-a-test-machine-to-run-a-debug-executable.md)
 

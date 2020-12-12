@@ -1,13 +1,14 @@
 ---
+description: '了解更多相关信息：在 c + +/CX (获取数据缓冲区的指针) '
 title: 获取数据缓冲区的指针 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 0b5163dd111adfe5c745a1ad3bbcdc06a675c52c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4fc883d7a7d0bae5d72c6aabd42446c74162c42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87185536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328935"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>获取数据缓冲区的指针 (C++/CX)
 
@@ -49,7 +50,7 @@ byte* Class1::GetPointerToPixelData(IBuffer^ pixelBuffer, unsigned int *length)
 }
 ```
 
-## <a name="complete-example"></a>完整示例
+## <a name="complete-example"></a>完整的示例
 
 下面的步骤演示如何创建 c # 通用 Windows 平台应用程序，该应用程序将传递 `WriteableBitmap` 到 c + + Windows 运行时组件 DLL。 此 C++ 代码包含一个指向像素缓冲区的指针，并在图像上就地执行简单的修改。 另外也可以使用 Visual Basic、JavaScript 或 C++ 代替 C# 来创建该客户端应用程序。 如果使用 C++，则不需要该组件 DLL；你可以将这些方法直接添加到 MainPage 类或你定义的某个其他类。
 

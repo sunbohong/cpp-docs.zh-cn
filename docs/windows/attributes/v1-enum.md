@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： v1_enum
 title: 'v1_enum (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 6529a32b0bfe2de09191e9cced8f6bd98e7ffdcc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c096ec78971e8980b68572c7f0bbb4510d03d3d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327195"
 ---
 # <a name="v1_enum"></a>v1_enum
 
@@ -25,7 +26,7 @@ ms.locfileid: "88832979"
 
 ## <a name="remarks"></a>备注
 
-**V1_enum** c + + 特性具有与[v1_enum](/windows/win32/Midl/v1-enum) MIDL 特性相同的功能。
+**V1_enum** c + + 特性具有与 [v1_enum](/windows/win32/Midl/v1-enum) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -53,7 +54,7 @@ enum eList {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)

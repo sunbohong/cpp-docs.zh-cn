@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： requires_category
 title: 'requires_category (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-ms.openlocfilehash: d566e74a9019259e526fa27aec26500e9ef3e1c1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4d2a68e682c4247174ffba630126b5d2f6061788
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845999"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327310"
 ---
 # <a name="requires_category"></a>requires_category
 
@@ -24,12 +25,12 @@ ms.locfileid: "88845999"
   requires_category) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *requires_category*<br/>
 所需类别的 ID。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Requires_category** c + + 特性指定目标类所需的组件类别。 有关详细信息，请参阅 [REQUIRED_CATEGORY](../../atl/reference/category-macros.md#required_category)。
 
@@ -64,7 +65,7 @@ class CMyClass {};
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [COM 特性](com-attributes.md)<br/>
 [implements_category](implements-category.md)

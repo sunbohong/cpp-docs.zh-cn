@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：在 MFC 中使用对话框
 title: 在 MFC 中使用对话框
 ms.date: 09/27/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], life cycle
 - life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
-ms.openlocfilehash: d365be21ef19a6779df649e9368fdc0cda4851df
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5e88d34ab26f8abd24923aacafa02c3c62ec7f06
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621450"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327790"
 ---
 # <a name="working-with-dialog-boxes-in-mfc"></a>在 MFC 中使用对话框
 
@@ -45,10 +46,10 @@ ms.locfileid: "84621450"
 
 - [销毁对话框](destroying-the-dialog-box.md)
 
-- [对话框数据交换（DDX）和验证（DDV）](dialog-data-exchange-and-validation.md)
+- [对话框数据交换 (DDX) 和验证 (DDV) ](dialog-data-exchange-and-validation.md)
 
 - [属性表对话框](property-sheets-and-property-pages-mfc.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [对话框](dialog-boxes.md)

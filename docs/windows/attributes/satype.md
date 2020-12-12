@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： satype
 title: 'satype (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-ms.openlocfilehash: 16da256f491dbb0002d92cadaceda14a49eb2192
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dab0f866eba5501a9a83d531d9cbdf50501dcff0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842775"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327314"
 ---
 # <a name="satype"></a>satype
 
@@ -23,7 +24,7 @@ ms.locfileid: "88842775"
 [ satype(data_type) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 data_type<br/>
 `SAFEARRAY`作为参数传递给接口方法的数据结构的数据类型。
@@ -57,7 +58,7 @@ __interface A {
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
 [参数属性](parameter-attributes.md)<br/>

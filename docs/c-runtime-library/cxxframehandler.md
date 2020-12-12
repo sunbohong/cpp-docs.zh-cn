@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __CxxFrameHandler
 title: __CxxFrameHandler
 ms.date: 11/04/2016
 api_name:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - __CxxFrameHandler
 ms.assetid: b79ac97f-425a-42ae-9b91-8beaef935333
-ms.openlocfilehash: b6350568bdba41da90609dfd5e2e60269e7d729f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3ebd4cefb303661b4b0293f3b4b3d42a915ddd56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326358"
 ---
 # <a name="__cxxframehandler"></a>__CxxFrameHandler
 
@@ -42,7 +43,7 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
    )
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pExcept*<br/>
 传递给可能的语句的异常记录 **`catch`** 。
@@ -58,7 +59,7 @@ EXCEPTION_DISPOSITION __CxxFrameHandler(
 
 ## <a name="return-value"></a>返回值
 
-由 [try-except 语句](../cpp/try-except-statement.md)使用的 filter expression ** 值之一。
+由 [try-except 语句](../cpp/try-except-statement.md)使用的 filter expression 值之一。
 
 ## <a name="remarks"></a>备注
 

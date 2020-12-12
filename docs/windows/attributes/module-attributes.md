@@ -1,25 +1,26 @@
 ---
-title: 模块属性（C++ COM）
+description: 了解有关以下方面的详细信息：模块属性
+title: C + + COM)  (模块属性
 ms.date: 10/02/2018
 helpviewer_keywords:
 - module attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: 46d135dc-613f-4810-90a4-e155ab8ed91a
-ms.openlocfilehash: 70c6c135f61ef1771acc7e0e6c6ab6398ba16a01
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 85ac524b7b8568822e5c026cfba7bfa2033e3421
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321846"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329790"
 ---
 # <a name="module-attributes"></a>模块特性
 
-以下属性只能应用于[模块](module-cpp.md)属性。
+以下特性只能应用于 [module](module-cpp.md) 特性。
 
 |特性|描述|
 |---------------|-----------------|
-|[helpstringdll](helpstringdll.md)|指定用于执行文档字符串查找（本地化）的 DLL 的名称。|
+|[helpstringdll](helpstringdll.md)|指定要用于执行文档字符串查找 (本地化) 的 DLL 的名称。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按用法分的特性](attributes-by-usage.md)
+[按使用情况的属性](attributes-by-usage.md)

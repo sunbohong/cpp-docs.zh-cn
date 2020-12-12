@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCColorButton 类
 title: CMFCColorButton 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -44,12 +45,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 7abe37969799d7fcd78d525a5ec1c6faa9d876ee
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b3f3e40f1e52c1a387563fde2aa1027046d557f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560993"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327703"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 类
 
@@ -65,13 +66,13 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|构造新的 `CMFCColorButton` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|启用和禁用定位在常规颜色按钮之上的 "自动" 按钮。  (标准系统 "自动" 按钮标记为 " **自动**"。 ) |
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|启用和禁用 "其他" 按钮，该按钮位于常规颜色按钮的下方。  (标准系统 "其他" 按钮标记为 "其他 **颜色**"。 ) |
@@ -86,7 +87,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|指示当前颜色按钮是否以 Windows XP 视觉样式显示。|
 |[CMFCColorButton：： OnDraw](#ondraw)|由框架调用以显示按钮的图像。|
@@ -98,9 +99,9 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|`m_bAltColorDlg`|一个布尔值。 如果为 TRUE，则在单击*其他*按钮时，框架会显示 " [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)颜色" 对话框，如果为 "FALSE"，则显示 "系统颜色" 对话框。 默认值为 TRUE。 有关详细信息，请参阅 [CMFCColorButton：： EnableOtherButton](#enableotherbutton)。|
+|`m_bAltColorDlg`|一个布尔值。 如果为 TRUE，则在单击 *其他* 按钮时，框架会显示 " [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)颜色" 对话框，如果为 "FALSE"，则显示 "系统颜色" 对话框。 默认值为 TRUE。 有关详细信息，请参阅 [CMFCColorButton：： EnableOtherButton](#enableotherbutton)。|
 |`m_bAutoSetFocus`|一个布尔值。 如果为 TRUE，则在显示菜单时，框架会在颜色菜单上设置焦点; 如果为 FALSE，则不更改焦点。 默认值为 TRUE。|
 |[CMFCColorButton：： m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|指示是否为颜色按钮启用了自定义模式。|
 |`m_Color`|[COLORREF](/windows/win32/gdi/colorref)值。 包含当前选定的颜色。|
@@ -154,7 +155,7 @@ void EnableAutomaticButton(
     BOOL bEnable=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszLabel*<br/>
 中指定 "自动" 按钮的文本。
@@ -178,7 +179,7 @@ void EnableOtherButton(
     BOOL bEnable=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszLabel*<br/>
 中指定按钮的文本。
@@ -258,7 +259,7 @@ virtual void OnDraw(
     UINT uiState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向用于呈现按钮图像的设备上下文。
@@ -284,7 +285,7 @@ virtual void OnDrawBorder(
     UINT uiState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向用于绘制边框的设备上下文。
@@ -309,7 +310,7 @@ virtual void OnDrawFocusRect(
     const CRect& rectClient);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 中指向用于绘制聚焦框的设备上下文。
@@ -339,7 +340,7 @@ virtual void OnShowColorPopup();
 void RebuildPalette(CPalette* pPal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPal*\
 中指向逻辑调色板或 NULL 的指针。 如果为 NULL，则使用默认系统调色板。
@@ -352,7 +353,7 @@ void RebuildPalette(CPalette* pPal);
 void SetColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *color*<br/>
 中一个 RGB 值。
@@ -369,7 +370,7 @@ static void SetColorName(
     const CString& strName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *color*<br/>
 中颜色的 RGB 值。
@@ -389,7 +390,7 @@ static void SetColorName(
 void SetColumnsNumber(int nColumns);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColumns*<br/>
 中指定列数。
@@ -408,7 +409,7 @@ void SetDocumentColors(
     CList<COLORREF,COLORREF>& lstColors);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszLabel*<br/>
 中指定要与文档颜色集一起显示的标签。
@@ -428,7 +429,7 @@ void SetDocumentColors(
 void SetPalette(CPalette* pPalette);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPalette*<br/>
 中指向调色板的指针。
@@ -443,7 +444,7 @@ void SetPalette(CPalette* pPalette);
 virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCalcOnly*<br/>
 中如果为非零值，则会计算按钮控件的新大小，但不会更改实际大小。
@@ -462,7 +463,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 virtual void UpdateColor(COLORREF color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *color*<br/>
 中用户选择的颜色。
@@ -471,10 +472,10 @@ virtual void UpdateColor(COLORREF color);
 
 `UpdateColor`函数通过使用 BN_CLICKED 标准通知发送 WM_COMMAND 消息，来更改当前选择的按钮颜色并通知其父项。 使用 [CMFCColorButton：： GetColor](#getcolor) 方法检索选定的颜色。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCButton 类](../../mfc/reference/cmfcbutton-class.md)<br/>
 [CMFCColorBar 类](../../mfc/reference/cmfccolorbar-class.md)<br/>
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>

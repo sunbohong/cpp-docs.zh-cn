@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： vararg
 title: 'vararg (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: edfcfdb32abeaff487134eac35033117b470d7d2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7eb2df5f0a2be212bc49c69f329f875f02bf408d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329498"
 ---
 # <a name="vararg"></a>vararg
 
@@ -25,7 +26,7 @@ ms.locfileid: "88832966"
 
 ## <a name="remarks"></a>备注
 
-**Vararg** c + + 特性具有与[vararg](/windows/win32/Midl/vararg) MIDL 特性相同的功能。
+**Vararg** c + + 特性具有与 [vararg](/windows/win32/Midl/vararg) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -56,7 +57,7 @@ __interface X : public IUnknown
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)

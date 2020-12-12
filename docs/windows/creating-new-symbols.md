@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅如何：在 c + + (创建符号) '
 title: '如何： (c + + 创建符号) '
 ms.date: 02/14/2019
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 008d2ab420034e628251c08222bf2e9f723deab1
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 961c186796e239471507b83dc301186d05004800
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329467"
 ---
 # <a name="how-to-create-symbols-c"></a>如何： (c + + 创建符号) 
 
@@ -37,10 +38,10 @@ ms.locfileid: "91504501"
 
 此对话框包含以下属性：
 
-|属性|说明|
+|Property|描述|
 |--------------------------|------------------------------------------|
 |**名称**|显示符号的名称。<br/><br/>有关详细信息，请参阅 [符号名限制](./changing-a-symbol-or-symbol-name-id.md)。|
-|**值**|显示符号的数值。<br/><br/>有关详细信息，请参阅 [符号值限制](./changing-a-symbol-or-symbol-name-id.md)。|
+|值|显示符号的数值。<br/><br/>有关详细信息，请参阅 [符号值限制](./changing-a-symbol-or-symbol-name-id.md)。|
 |**正在使用**|选中后，指定符号正由一个或多个资源使用。<br/><br/>资源在 " **使用者** " 框中列出。|
 |**显示只读符号**|选定后，显示只读资源。<br/><br/>默认情况下，" **资源符号** " 对话框仅显示资源脚本文件中的可修改资源，但选中此选项后，可修改的资源以粗体文本显示，只读资源以纯文本格式显示。|
 |**使用者**|显示使用符号列表中所选符号的一个或多个资源。<br/><br/>若要移动到给定资源的编辑器，请在 " **使用者** " 框中选择资源，然后选择 " **查看使用**"。|
@@ -65,14 +66,14 @@ ms.locfileid: "91504501"
 
 ## <a name="to-view-resource-symbols"></a>查看资源符号
 
-在[资源视图](how-to-create-a-resource-script-file.md#create-resources)中，右键单击 *.rc*文件，然后在 "**资源**符号" 对话框中选择 "**资源符号**" 以查看资源符号表。
+在 [资源视图](how-to-create-a-resource-script-file.md#create-resources)中，右键单击 *.rc* 文件，然后在 "**资源** 符号" 对话框中选择 "**资源符号**" 以查看资源符号表。
 
 > [!NOTE]
 > 若要查看预定义的符号，请选中 " **显示只读符号** " 复选框。
 
 ### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>打开给定符号的资源编辑器
 
-浏览 **资源符号**中的符号时，可能需要有关如何使用特定符号的详细信息。 " **查看使用** " 按钮提供了获取此信息的快速方法。
+浏览 **资源符号** 中的符号时，可能需要有关如何使用特定符号的详细信息。 " **查看使用** " 按钮提供了获取此信息的快速方法。
 
 1. 在 "**名称**" 框中的 "**资源符号**" 对话框中，选择符号。
 

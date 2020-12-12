@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _tempnam、_wtempnam、tmpnam、_wtmpnam
 title: _tempnam、_wtempnam、tmpnam、_wtmpnam
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-ms.openlocfilehash: 9fd1eb9f2f718afec5b7d5555145fcd7e5cc17cf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee127a7d3ee59ec697dc0032fefb04b84b839c4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957522"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326191"
 ---
 # <a name="_tempnam-_wtempnam-tmpnam-_wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
 
@@ -73,12 +74,12 @@ wchar_t *_wtmpnam(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prefix*<br/>
-将预先挂起到 **_tempnam**返回的名称的字符串。
+将预先挂起到 **_tempnam** 返回的名称的字符串。
 
-*目录*<br/>
+*dir*<br/>
 文件名中使用的路径（如果不存在 TMP 环境变量或 TMP 不是有效的目录）。
 
 *str*<br/>
@@ -86,30 +87,30 @@ wchar_t *_wtmpnam(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数均返回一个指向生成的名称的指针，如果出现错误，则返回**NULL** 。 如果尝试超过**TMP_MAX** ，则可能会失败（请参阅 stdio.h。H）使用**tmpnam**调用，或者，如果使用的是 **_tempnam** ，并且在 TMP 环境变量和*dir*参数中指定了无效的目录名称。
+其中每个函数均返回一个指向生成的名称的指针，如果出现错误，则返回 **NULL** 。 如果尝试的 **TMP_MAX 超过** (请参阅 stdio.h。H) 使用 **tmpnam** 调用，或使用 **_TEMPNAM** 并且在 TMP 环境变量和 *dir* 参数中指定了无效的目录名称。
 
 > [!NOTE]
-> **Tmpnam**和 **_wtmpnam**所返回的指针指向内部静态缓冲区。 不应调用 [free](free.md) 来释放这些指针。 需要为 **_tempnam**和 **_wtempnam**所分配的指针调用**free** 。
+> **Tmpnam** 和 **_wtmpnam** 指向内部静态缓冲区返回的指针。 不应调用 [free](free.md) 来释放这些指针。 需要为 **_tempnam** 和 **_wtempnam** 分配的指针调用 **free** 。
 
 ## <a name="remarks"></a>备注
 
-这些函数返回的文件名当前不存在。 **tmpnam**返回由[GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)返回的指定 Windows 临时目录中唯一的名称。 tempnam 在指定的目录以外的目录中生成唯一名称。  **\_** 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。
+这些函数返回的文件名当前不存在。 **tmpnam** 返回由 [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)返回的指定 Windows 临时目录中唯一的名称。 **\_ tempnam** 在指定的目录以外的目录中生成唯一名称。 请注意，如果一个文件名称使用反斜杠作为前缀（如 \fname21），表示该名称对当前工作目录有效。
 
-对于**tmpnam**，你可以将生成的文件名存储在*str*中。 如果*str*为**NULL**，则**tmpnam**将结果保留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 由**tmpnam**生成的名称包含程序生成的文件名，并在第一次调用 tmpnam 后，在第32（. 1-，TMP_MAX 中的**stdio.h**时，为的文件扩展名。H 为32767）。
+对于 **tmpnam**，你可以将生成的文件名存储在 *str* 中。 如果 *str* 为 **NULL**，则 **tmpnam** 将结果保留在内部静态缓冲区中。 因此，任何后续调用都会破坏该值。 Tmpnam 生成的名称包含程序生成的文件名，在首次调用 tmpnam 后， 中的序列 ( 32 号的文件扩展名为，在 stdio.h 中 **TMP_MAX** 。H 为 32767) 。
 
-**_tempnam**将为以下规则所选择的目录生成唯一的文件名：
+**_tempnam** 将为以下规则所选择的目录生成唯一的文件名：
 
 - 如果定义了 TMP 环境变量并将其设置为有效的目录名称，则 TMP 所指定的目录将生成唯一文件名。
 
-- 如果未定义 TMP 环境变量，或者未将其设置为不存在的目录的名称，则 **_tempnam**将使用*dir*参数作为其将生成唯一名称的路径。
+- 如果未定义 TMP 环境变量，或将其设置为不存在的目录的名称， **_tempnam** 将使用 *dir* 参数作为将为其生成唯一名称的路径。
 
-- 如果未定义 TMP 环境变量，或将其设置为不存在的目录的名称，并且*dir*为**空**或设置为不存在的目录的名称，则 **_tempnam**将使用当前工作目录基因为唯一名称打分。 目前，如果 TMP 和*目录*均指定不存在的目录的名称，则 **_tempnam**函数调用将失败。
+- 如果未定义 TMP 环境变量，或将其设置为不存在的目录的名称，并且 *dir* 为 **空** 或设置为不存在的目录的名称，则 **_tempnam** 将使用当前工作目录生成唯一名称。 目前，如果 TMP 和 *dir* 都指定了不存在的目录的名称，则 **_tempnam** 函数调用将失败。
 
-**_Tempnam**返回的名称将是*前缀*和序列号的串联，这将组合起来为指定目录创建唯一的文件名。 **_tempnam**生成无扩展名的文件名。 **_tempnam**使用[malloc](malloc.md)为文件名分配空间;程序负责在不再需要此空间时将其释放。
+**_Tempnam** 返回的名称将是 *前缀* 和序列号的串联，这将组合起来为指定目录创建唯一的文件名。 **_tempnam** 生成没有扩展名的文件名。 **_tempnam** 使用 [malloc](malloc.md) 为文件名分配空间;程序负责在不再需要此空间时将其释放。
 
-**_tempnam**和**tmpnam**会根据需要自动处理多字节字符串参数，根据从操作系统获取的 OEM 代码页识别多字节字符序列。 **_wtempnam**是 **_tempnam**的宽字符版本; **_wtempnam**的参数和返回值是宽字符字符串。 **_wtempnam**和 **_tempnam**的行为相同，只不过 **_wtempnam**不处理多字节字符字符串。 **_wtmpnam**是**tmpnam**的宽字符版本; **_wtmpnam**的参数和返回值是宽字符字符串。 **_wtmpnam**和**tmpnam**的行为相同，只不过 **_wtmpnam**不处理多字节字符字符串。
+**_tempnam** 和 **tmpnam** 会根据需要自动处理多字节字符串参数，根据从操作系统获取的 OEM 代码页识别多字节字符序列。 **_wtempnam** 是 **_tempnam** 的宽字符版本; **_wtempnam** 的参数和返回值都是宽字符字符串。 **_wtempnam** 和 **_tempnam** 的行为相同，只是 **_wtempnam** 不处理多字节字符字符串。 **_wtmpnam** 是 **tmpnam** 的宽字符版本; **_wtmpnam** 的参数和返回值是宽字符字符串。 **_wtmpnam** 和 **tmpnam** 的行为相同，只不过 **_wtmpnam** 不处理多字节字符字符串。
 
-如果定义了 **_debug**和 **_CRTDBG_MAP_ALLOC** ，则 **_tempnam**和 **_wtempnam**将被调用[_tempnam_dbg 和 _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md)。
+如果定义了 **_DEBUG** 和 **_CRTDBG_MAP_ALLOC** ，则 **_tempnam** 和 **_wtempnam** 会被调用 [_tempnam_dbg 和 _wtempnam_dbg](tempnam-dbg-wtempnam-dbg.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -123,10 +124,10 @@ wchar_t *_wtmpnam(
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_tempnam**|\<stdio.h>|
-|**_wtempnam**、 **_wtmpnam**|\<stdio.h> 或 \<wchar.h>|
+|**_wtempnam**， **_wtmpnam**|\<stdio.h> 或 \<wchar.h>|
 |**tmpnam**|\<stdio.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

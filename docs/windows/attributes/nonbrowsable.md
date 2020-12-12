@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： nonbrowsable
 title: 'nonbrowsable (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 561622cc30573ace606eccb6aa7b5f2dfd188dfe
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 943458ff989a3f00d2ce33a4f5681a8bd29a76ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329760"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +26,7 @@ ms.locfileid: "88836099"
 
 ## <a name="remarks"></a>备注
 
-**Nonbrowsable** c + + 特性具有与[nonbrowsable](/windows/win32/Midl/nonbrowsable) MIDL 特性相同的功能。
+**Nonbrowsable** c + + 特性具有与 [nonbrowsable](/windows/win32/Midl/nonbrowsable) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -54,7 +55,7 @@ __interface IMyI
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)

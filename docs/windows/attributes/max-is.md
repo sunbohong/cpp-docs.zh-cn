@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： max_is
 title: 'max_is (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: 409211bc59d9df8a82a9f452efeff6b6db0fde39
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 305acba3a2831448cf677eb16810c567b3561b3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329800"
 ---
 # <a name="max_is"></a>max_is
 
@@ -28,9 +29,9 @@ ms.locfileid: "88837107"
 *expression*<br/>
 一个或多个 C 语言表达式。 允许空参数槽。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Max_is** c + + 特性具有与[max_is](/windows/win32/Midl/max-is) MIDL 特性相同的功能。
+**Max_is** c + + 特性具有与 [max_is](/windows/win32/Midl/max-is) MIDL 特性相同的功能。
 
 ## <a name="requirements"></a>要求
 
@@ -47,7 +48,7 @@ ms.locfileid: "88837107"
 
 有关如何指定数组的部分的示例，请参阅 [first_is](first-is.md) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

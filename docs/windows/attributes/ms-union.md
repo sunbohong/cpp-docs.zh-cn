@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ms_union
 title: 'ms_union (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: ae99a996cd7969da27f38ad3532f0472f389ee3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a2083fd4f1acb3715edd0e194c64e03e98db9b7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838836"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329777"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -25,11 +26,11 @@ ms.locfileid: "88838836"
 
 ## <a name="remarks"></a>备注
 
-**Ms_union** c + + 特性具有与[ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 特性相同的功能。
+**Ms_union** c + + 特性具有与 [ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
-下面的代码演示 **ms_union**的位置：
+下面的代码演示 **ms_union** 的位置：
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -65,7 +66,7 @@ __interface IFireTabCtrl {
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)

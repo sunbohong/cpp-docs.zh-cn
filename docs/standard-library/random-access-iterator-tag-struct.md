@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： random_access_iterator_tag 结构
 title: random_access_iterator_tag 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-ms.openlocfilehash: edbd7ad33b2487060840ec690b363d7b934fec27
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0186f451d5fbd98b8eebcd30fe469e75577954d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458310"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327552"
 ---
-# <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 结构
+# <a name="random_access_iterator_tag-struct"></a>random_access_iterator_tag 结构
 
-一个类, 该类提供表示随机访问`iterator_category`迭代器的函数的返回类型。
+一个类，该类提供 `iterator_category` 表示随机访问迭代器的函数的返回类型。
 
 ## <a name="syntax"></a>语法
 
@@ -26,9 +27,9 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 ## <a name="remarks"></a>备注
 
-分类标记类用作算法选择的编译标记。 模板函数需要查找其迭代器参数的最特定的类别，以便可以在编译时使用最高效的算法。 对于每个 `Iterator` 类型的迭代器，`iterator_traits`< `Iterator`>  **::iterator_category** 必须定义为最特定的类别标记，用于描述迭代器的行为。
+分类标记类用作算法选择的编译标记。 模板函数需要查找其迭代器参数的最特定的类别，以便可以在编译时使用最高效的算法。 对于每个 `Iterator` 类型的迭代器，`iterator_traits`< `Iterator`> **::iterator_category** 必须定义为最特定的类别标记，用于描述迭代器的行为。
 
-当描述可用作随机访问迭代器的对象`Iter`时, 该类型与**iterator** \< **Iter**>  **:: iterator_category**相同。
+此类型与 **iterator** \< **Iter**> **：： iterator_category** 在 `Iter` 描述可用作随机访问迭代器的对象时相同。
 
 ## <a name="example"></a>示例
 
@@ -98,12 +99,12 @@ The iterators are not the same.
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<iterator>
+**标头：**\<iterator>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
 [bidirectional_iterator_tag 结构](../standard-library/bidirectional-iterator-tag-struct.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：输出文件流成员函数
 title: 输出文件流成员函数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-ms.openlocfilehash: f20ed4e238d23211a6eeec4a3091daeb4d02a9b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f2e9bde7bcac8ebccc668c68f222b495b53e0889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327570"
 ---
 # <a name="output-file-stream-member-functions"></a>输出文件流成员函数
 
@@ -17,7 +18,7 @@ ms.locfileid: "87217670"
 
 ## <a name="the-open-function-for-output-streams"></a>输出流的 open 函数
 
-若要使用输出文件流（[ofstream](../standard-library/basic-ofstream-class.md)），则必须将该流与构造函数或函数中的特定磁盘文件相关联 `open` 。 如果使用 `open` 函数，则可以对一系列文件重复使用同一个流对象。 在任一情况下，描述该文件的参数是相同的。
+若要 ([ofstream](../standard-library/basic-ofstream-class.md)) 使用输出文件流，必须将该流与构造函数或函数中的特定磁盘文件相关联 `open` 。 如果使用 `open` 函数，则可以对一系列文件重复使用同一个流对象。 在任一情况下，描述该文件的参数是相同的。
 
 打开与输出流关联的文件时，通常会指定一个 `open_mode` 标志。 可以将在 `ios` 类中定义为枚举器的这些标志与按位 OR ( &#124; ) 运算符合并。 有关枚举器的列表，请参阅 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
@@ -104,14 +105,14 @@ int main( )
 
 |函数|返回值|
 |--------------|------------------|
-|[无效](basic-ios-class.md#bad)|**`true`** 如果出现不可恢复的错误，则返回。|
+|[dfx](basic-ios-class.md#bad)|**`true`** 如果出现不可恢复的错误，则返回。|
 |[失败](basic-ios-class.md#fail)|**`true`** 如果出现不可恢复的错误或 "预期" 条件（如转换错误），或者如果找不到该文件，则返回。 使用零参数对的调用后，处理通常可以恢复 `clear` 。|
-|[良好](basic-ios-class.md#good)|**`true`** 如果没有错误条件（不可恢复或其他），并且未设置文件尾标志，则返回。|
+|[good](basic-ios-class.md#good)|**`true`** 如果没有错误条件 (无法恢复或) ，并且未设置文件尾标志，则返回。|
 |[eof](basic-ios-class.md#eof)|返回 **`true`** 文件尾条件。|
-|[清除](basic-ios-class.md#clear)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
-|rdstate（基本-ios-类 md # rdstate|返回当前错误状态。|
+|[clear](basic-ios-class.md#clear)|设置内部错误状态。 如果通过默认参数调用，则它会清除所有错误位。|
+|[rdstate] (基本-ios-类. md # rdstate|返回当前错误状态。|
 
-**！** 重载运算符以执行与函数相同的函数 `fail` 。 因此表达式：
+重载 **!** 重载运算符以执行与函数相同的函数 `fail` 。 因此表达式：
 
 ```cpp
 if(!cout)...
@@ -135,8 +136,8 @@ if(cout)...
 if(!cout.fail())...
 ```
 
-**Void \* （）** 运算符不等效于， `good` 因为它不会测试文件的结尾。
+**Void \* ( # B1** 运算符不等效于， `good` 因为它不会测试文件的结尾。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [输出流](../standard-library/output-streams.md)

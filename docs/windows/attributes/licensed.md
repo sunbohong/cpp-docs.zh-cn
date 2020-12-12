@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：已获得许可
 title: " (c + + COM 特性) "
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 07a2b68517721ac4244fc1952e4fe3c5f2fbb153
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 348180412c1e8b19994cf5ef3e9bedb4115bfbda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327524"
 ---
 # <a name="licensed"></a>licensed
 
@@ -25,7 +26,7 @@ ms.locfileid: "88832485"
 
 ## <a name="remarks"></a>备注
 
-**许可**的 c + + 特性与[许可](/windows/win32/Midl/licensed)的 MIDL 特性具有相同的功能。
+**许可** 的 c + + 特性与 [许可](/windows/win32/Midl/licensed)的 MIDL 特性具有相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -59,7 +60,7 @@ public:
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)

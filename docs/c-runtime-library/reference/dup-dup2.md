@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _dup、_dup2
 title: _dup、_dup2
 ms.date: 4/2/2020
 api_name:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - dup2 function
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
-ms.openlocfilehash: 6c635930fdbc8da550a2a32ea614e150fbeb08a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e9801cc11b6d7a8d4250f61780c5c9b23dd3e1ac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915216"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97327001"
 ---
 # <a name="_dup-_dup2"></a>_dup、_dup2
 
-为打开的文件（**_dup**）创建第二个文件描述符，或重新分配文件描述符（**_dup2**）。
+为打开的文件 (**_dup**) 创建另一个文件描述符，或将文件描述符重新分配 (**_dup2**) 。
 
 ## <a name="syntax"></a>语法
 
@@ -52,7 +53,7 @@ int _dup( int fd );
 int _dup2( int fd1, int fd2 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*， *fd1*<br/>
 引用打开的文件的文件说明符。
@@ -62,30 +63,30 @@ int _dup2( int fd1, int fd2 );
 
 ## <a name="return-value"></a>返回值
 
-**_dup**返回一个新的文件说明符。 **_dup2**返回0以指示成功。 如果发生错误，则每个函数将返回-1，并将**errno**设置为**ebadf (** （如果文件描述符无效）或设置为**EMFILE** （如果没有更多的文件描述符可用）。 对于无效的文件描述符，函数还调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+**_dup** 返回一个新的文件说明符。 **_dup2** 返回0以指示成功。 如果发生错误，则每个函数将返回-1，并将 **errno** 设置为 **ebadf (** （如果文件描述符无效）或设置为 **EMFILE** （如果没有更多的文件描述符可用）。 对于无效的文件描述符，函数还调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 有关这些属性和其他的更多信息返回代码示例，请参见 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Dup**和 **_dup2**函数将另一个文件说明符与当前打开的文件相关联。 这些函数可用于将预定义文件描述符（如用于**stdout**的文件）与其他文件相关联。 可以使用任一文件说明符执行针对文件的操作。 文件允许的访问类型不受新说明符创建的影响。 **_dup**返回给定文件的下一个可用文件说明符。 **_dup2**强制*fd2*引用与*fd1*相同的文件。 如果*fd2*与调用时打开的文件相关联，则关闭该文件。
+**_Dup** 和 **_dup2** 函数将另一个文件说明符与当前打开的文件相关联。 这些函数可用于将预定义文件描述符（如用于 **stdout** 的文件）与其他文件相关联。 可以使用任一文件说明符执行针对文件的操作。 文件允许的访问类型不受新说明符创建的影响。 **_dup** 返回给定文件的下一个可用文件说明符。 **_dup2** 强制 *fd2* 引用与 *fd1* 相同的文件。 如果 *fd2* 与调用时打开的文件相关联，则关闭该文件。
 
-**_Dup**和 **_dup2**接受文件说明符作为参数。 若要将流（`FILE *`）传递给这些函数中的任何一个，请使用[_fileno](fileno.md)。 **Fileno**例程返回当前与给定流关联的文件描述符。 下面的示例演示如何将**stderr** （在 stdio.h 中`FILE *`定义为）与文件描述符关联：
+**_Dup** 和 **_dup2** 接受文件说明符作为参数。 若要将流 (`FILE *`) 传递给这些函数中的任何一个，请使用 [_fileno](fileno.md)。 **Fileno** 例程返回当前与给定流关联的文件描述符。 下面的示例演示如何将 Stdio.h) 中定义为的 **stderr** (`FILE *` 与文件描述符关联：
 
 ```C
 int cstderr = _dup( _fileno( stderr ));
 ```
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_dup**|\<io.h>|
 |**_dup2**|\<io.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout** 和 **stderr** 关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -148,7 +149,7 @@ The file 'data' contains:
 This goes to file 'data'
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [低级别 i/o](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>

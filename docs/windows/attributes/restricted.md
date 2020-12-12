@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：受限
 title: '受限 (c + + COM 特性) '
 ms.date: 10/03/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: a1f543c4d8edac751195d37414c030dfe2df94fa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8c0dc33d1ae7cff3625f1a938cac05c7ac72f474
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846350"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329615"
 ---
 # <a name="restricted"></a>restricted
 
@@ -25,14 +26,14 @@ ms.locfileid: "88846350"
 ) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *interfaces*<br/>
 不能对 COM 对象任意调用的一个或多个接口。 仅当应用于类时，此参数才有效。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**受限制**的 c + + 属性具有与[受限](/windows/win32/Midl/restricted)MIDL 属性相同的功能。
+**受限制** 的 c + + 属性具有与 [受限](/windows/win32/Midl/restricted)MIDL 属性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -67,12 +68,12 @@ class c : public a, public b
 |-|-|
 |**适用于**|Interface 方法、 **interface**、 **`class`** 、 **`struct`**|
 |**且**|否|
-|**必需属性**|**coclass**当应用于 **`class`** 或) 时，组件类 (**`struct`**|
+|**必需属性**|当应用于 **`class`** 或) 时，组件类 (**`struct`**|
 |**无效的特性**|无|
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>

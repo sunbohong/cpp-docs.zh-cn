@@ -1,27 +1,28 @@
 ---
-title: 编译器警告（等级2） C4146
+description: 详细了解：编译器警告 (等级 2) C4146
+title: 编译器警告 (等级 2) C4146
 ms.date: 11/04/2016
 f1_keywords:
 - C4146
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-ms.openlocfilehash: b945853a3d32f91c821d6fa174371df39bf183b3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 85aebd34ed83ef14e306f7512689ccdfba713eec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326499"
 ---
-# <a name="compiler-warning-level-2-c4146"></a>编译器警告（等级2） C4146
+# <a name="compiler-warning-level-2-c4146"></a>编译器警告 (等级 2) C4146
 
 一元负运算符应用于无符号类型，结果仍为无符号
 
-无符号类型只能包含非负值，因此一元负号（求反）在应用于无符号类型时通常不适合。 操作数和结果均为非负值。
+无符号类型只能保存非负值值，因此，一元减 (求反) 在应用于无符号类型时通常不适合。 操作数和结果均为非负值。
 
 实际上，当程序员尝试表达最小整数值时，就会发生这种情况，即-2147483648。 不能将此值写为-2147483648，因为该表达式分为两个阶段：
 
-1. 将计算编号2147483648。 因为它大于最大整数值2147483647，所以2147483648的类型不是[int](../../c-language/integer-types.md)，而是 **`unsigned int`** 。
+1. 将计算编号2147483648。 因为它大于最大整数值2147483647，所以2147483648的类型不是 [int](../../c-language/integer-types.md)，而是 **`unsigned int`** 。
 
 1. 一元减号适用于值，具有无符号结果，也就是2147483648。
 

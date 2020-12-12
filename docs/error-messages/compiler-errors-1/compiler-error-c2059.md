@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2059
 title: 编译器错误 C2059
 ms.date: 03/26/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: 52b389806f5bacac78750bc745cd77699eb59735
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7de765a1985e67388f2853abb1d5dc2e1ecaf043
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212873"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328754"
 ---
 # <a name="compiler-error-c2059"></a>编译器错误 C2059
 
@@ -44,7 +45,7 @@ enum class DIGITS {
 };
 ```
 
-如果符号的计算结果为 nothing （当使用 **/d**_符号_进行编译时可能出现这种情况），则可能会出现 C2059 **=** 。
+如果符号的计算结果为 nothing （当使用 **/d**_符号_ 进行编译时可能出现这种情况），则可能会出现 C2059 **=** 。
 
 ```cpp
 // C2059a.cpp
@@ -111,7 +112,7 @@ namespace A  {
 }
 ```
 
-如果可限定名称（ `::` 、 `->` 和）的运算符 `.` 必须后跟关键字，则可能出现 C2059 **`template`** ，如以下示例中所示：
+如果可限定名称的运算符 (`::` 、 `->` 和 `.`) 必须后跟关键字，则可能会出现 C2059 **`template`** ，如以下示例中所示：
 
 ```cpp
 template <typename T> struct Allocator {

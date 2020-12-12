@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：时间、_time32、_time64
 title: time、_time32、_time64
 ms.date: 11/06/2018
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8602e485c15b11b8f4e740ceead382aa88f8f5f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946092"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97326149"
 ---
 # <a name="time-_time32-_time64"></a>time、_time32、_time64
 
@@ -55,7 +56,7 @@ __time32_t _time32( __time32_t *destTime );
 __time64_t _time64( __time64_t *destTime );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *destTime*<br/>
 指针指向时间的存储位置。
@@ -66,17 +67,17 @@ __time64_t _time64( __time64_t *destTime );
 
 ## <a name="remarks"></a>备注
 
-**Time**函数根据系统时钟返回自00:00:00 年1月 1970 1 日午夜（）开始经过的秒数（协调世界时（UTC））。 返回值存储在由*destTime*指定的位置。 此参数可以为**NULL**，在这种情况下不存储返回值。
+**Time** 函数根据系统时钟返回自 (00:00:00) ，年1月 1970 1 日午夜 (UTC) 午夜以来经过的秒数。 返回值存储在由 *destTime* 指定的位置。 此参数可以为 **NULL**，在这种情况下不存储返回值。
 
-**time**是 **_time64**的包装器，默认情况下， **time_t**等效于 **__time64_t**。 如果需要强制编译器将**time_t**解释为旧的32位**time_t**，可定义 **_USE_32BIT_TIME_T**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；64 位平台上不允许使用此宏。
+**time** 是 **_time64** 的包装，默认情况下， **time_t** 与 **__time64_t** 等效。 如果需要强制编译器将 **time_t** 解释为旧32位 **time_t**，可以定义 **_USE_32BIT_TIME_T**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；64 位平台上不允许使用此宏。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的 C 标头|必需的 C++ 标头|
 |-------|------|---------------------|
-|**time**  **、\_time32**、 **time64 \_**|\<time.h>|\<ctime > 或\<time .h >|
+|**time**、 **\_ time32**、 **\_ time64**|\<time.h>|\<ctime> 或 \<time.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -239,5 +240,5 @@ Today is Friday, day 25 of April in the year 2003.
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
-[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
+[localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
 [_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](utime-utime32-utime64-wutime-wutime32-wutime64.md)<br/>

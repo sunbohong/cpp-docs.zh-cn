@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： lcid
 title: 'lcid (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: 7533cd9b269a879c5c2f061dcdfc632b1b27c871
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2af34574539372a07daadc48874316b0b268f317
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329854"
 ---
 # <a name="lcid"></a>lcid
 
@@ -25,7 +26,7 @@ ms.locfileid: "88834175"
 
 ## <a name="remarks"></a>备注
 
-**Lcid** c + + 属性实现[lcid](/windows/win32/Midl/lcid) MIDL 特性的功能。 如果要实现库块的区域设置，请将**lcid =** `lcid` 参数用于[module](module-cpp.md)特性。
+**Lcid** c + + 属性实现 [lcid](/windows/win32/Midl/lcid) MIDL 特性的功能。 如果要实现库块的区域设置，请将 **lcid =** `lcid` 参数用于 [module](module-cpp.md)特性。
 
 ## <a name="example"></a>示例
 
@@ -53,7 +54,7 @@ __interface IStatic {
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [参数属性](parameter-attributes.md)

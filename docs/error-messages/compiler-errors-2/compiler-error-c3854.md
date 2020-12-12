@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3854
 title: 编译器错误 C3854
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f6c2399ff4c38cfbb306bd90e5bb5e96b34220eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74754844"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97328158"
 ---
 # <a name="compiler-error-c3854"></a>编译器错误 C3854
 
-"=" 左边的表达式的计算结果为函数。 不能分配给函数（函数不是左值）
+"=" 左边的表达式的计算结果为函数。  (函数不是左值，因此无法分配给函数) 
 
 无法重新初始化引用。 取消引用函数引用将生成一个函数，该函数是右值，不能分配。 因此，不能通过对函数的引用进行赋值。
 
