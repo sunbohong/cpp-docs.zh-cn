@@ -1,19 +1,20 @@
 ---
+description: '了解详细信息：别名和 typedef (c + +) '
 title: 别名和 typedef (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-ms.openlocfilehash: 6054b7119614d9325bd099dd39b8aa1365d97ed7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7b5924fd30fe1d22e6a82fb82e2d252409d782ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239852"
 ---
 # <a name="aliases-and-typedefs-c"></a>别名和 typedef (C++)
 
-可以使用*别名声明*来声明一个名称，用作之前声明的类型的同义词。 （此机制也称为 "*类型别名*"。 你还可以使用此机制来创建*别名模板*，该模板对于自定义分配器特别有用。
+可以使用 *别名声明* 来声明一个名称，用作之前声明的类型的同义词。  (这种机制也称为 " *别名) 类型* 。 你还可以使用此机制来创建 *别名模板*，该模板对于自定义分配器特别有用。
 
 ## <a name="syntax"></a>语法
 
@@ -26,7 +27,7 @@ using identifier = type;
 *identifier*<br/>
 别名的名称。
 
-*type*<br/>
+type<br/>
 您为其创建别名的类型标识符。
 
 别名未引入新类型，且无法更改现有类型名称的含义。
@@ -141,13 +142,13 @@ int main ()
 
 ## <a name="typedefs"></a>Typedef
 
-**`typedef`** 声明会引入一个名称，该名称在其作用域内成为声明的*类型声明*部分提供的类型的同义词。
+**`typedef`** 声明会引入一个名称，该名称在其作用域内成为声明的 *类型声明* 部分提供的类型的同义词。
 
 使用 typedef 声明，可以为已由语言定义的类型和对你已声明的类型构造更短或更有意义的名称。 利用 Typedef 名称，您可以封装可能会发生更改的实现详细信息。
 
 与 **`class`** 、 **`struct`** 、 **`union`** 和声明不同， **`enum`** **`typedef`** 声明不会引入新类型，而是引入现有类型的新名称。
 
-使用声明 **`typedef`** 的名称将占用与其他标识符相同的命名空间（不包括语句标签）。 因此，它们不能使用与前一个声明的名称相同的标识符（除了在类类型声明中）。 请考虑以下示例：
+使用声明 **`typedef`** 的名称占用与其他标识符相同的命名空间， (除了语句标签) 。 因此，它们不能使用与前一个声明的名称相同的标识符（除了在类类型声明中）。 请看下面的示例：
 
 ```cpp
 // typedef_names1.cpp
@@ -287,9 +288,9 @@ typedef char CHAR;
 #include "file2.h"   // OK
 ```
 
-程序*进程。CPP*包括两个头文件，两者都包含 **`typedef`** 名称的声明 `CHAR` 。 只要两个声明都引用同一个类型，则此类重新声明是可以接受的。
+程序 *进程。CPP* 包括两个头文件，两者都包含 **`typedef`** 名称的声明 `CHAR` 。 只要两个声明都引用同一个类型，则此类重新声明是可以接受的。
 
-**`typedef`** 不能重新定义以前声明为不同类型的名称。 因此，如果*FILE2。H*包含
+**`typedef`** 不能重新定义以前声明为不同类型的名称。 因此，如果 *FILE2。H* 包含
 
 ```cpp
 // FILE2.H
@@ -335,7 +336,7 @@ POINT ptOrigin;
 struct point_t ptOrigin;
 ```
 
-在 c + + 中， **`typedef`** 名称和实类型（用 **`class`** 、 **`struct`** 、和关键字声明）之间的差异 **`union`** **`enum`** 更不同。 尽管在语句中声明无编号结构的 C 惯例 **`typedef`** 仍有效，但它不像在 c 中那样提供任何符号的好处。
+在 c + + 中，" **`typedef`** 名称" 和 "真实类型" 之间的差异 (用 **`class`** 、 **`struct`** 、和关键字声明的 **`union`** **`enum`**) 更为独特。 尽管在语句中声明无编号结构的 C 惯例 **`typedef`** 仍有效，但它不像在 c 中那样提供任何符号的好处。
 
 ```cpp
 // typedef_with_class_types2.cpp
@@ -349,7 +350,7 @@ typedef struct {
 
 前面的示例 `POINT` 使用未命名的类语法声明一个名为的类 **`typedef`** 。 `POINT` 被视为类名称；但是，以下限制适用于通过这种方式引入的名称：
 
-- 名称（同义词）不能出现在 **`class`** 、 **`struct`** 或 **`union`** 前缀之后。
+- 同义词)  (名称不能出现在 **`class`** 、 **`struct`** 或 **`union`** 前缀之后。
 
 - 名称不能用作类声明中的构造函数名称或析构函数名称。
 

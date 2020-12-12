@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CJumpList 类
 title: CJumpList 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 2e45e2e58bd51d36b6412940b7ed01aa119017ed
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 07e896c5b3a205a44850d45dcc4876103a48f2fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754936"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236901"
 ---
 # <a name="cjumplist-class"></a>CJumpList 类
 
-A`CJumpList`是右键单击任务栏中的图标时显示的快捷方式列表。
+`CJumpList`是右键单击任务栏中的图标时显示的快捷方式列表。
 
 ## <a name="syntax"></a>语法
 
@@ -57,27 +58,27 @@ class CJumpList;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[跳转列表：：跳转列表](#cjumplist)|构造 `CJumpList` 对象。|
-|[跳转列表：*跳转列表](#_dtorcjumplist)|销毁 `CJumpList` 对象。|
+|[CJumpList::CJumpList](#cjumplist)|构造 `CJumpList` 对象。|
+|[CJumpList：： ~ CJumpList](#_dtorcjumplist)|销毁 `CJumpList` 对象。|
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[跳转列表：：中止列表](#abortlist)|在不提交的情况下中止列表生成事务。|
-|[跳转列表：：添加目的地](#adddestination)|已重载。 将目标添加到列表中。|
-|[跳转列表：：添加已知类别](#addknowncategory)|将已知类别追加到列表中。|
-|[跳转列表：：添加任务](#addtask)|已重载。 将项添加到规范任务类别。|
-|[跳转列表：：添加任务](#addtasks)|将项添加到规范任务类别。|
-|[跳转列表：：添加任务分离器](#addtaskseparator)|在任务之间添加分隔符。|
-|[跳转列表：清除所有](#clearall)|删除到目前为止已添加到当前实例`CJumpList`的所有任务和目标。|
-|[跳转列表：清除所有目标](#clearalldestinations)|删除到目前为止已添加到当前实例`CJumpList`的所有目标。|
-|[跳转列表：提交列表](#commitlist)|结束列表生成事务并将报告的列表提交到关联的存储（在这种情况下为注册表）。|
-|[跳转列表：获取目的地列表](#getdestinationlist)|检索指向目标列表的接口指针。|
-|[跳转列表：获取 MaxSlots](#getmaxslots)|检索最大项目数，包括可在调用应用程序的目标菜单中显示的类别标头。|
-|[跳转列表：：获取删除的项目](#getremoveditems)|返回表示已删除目标的项数组。|
-|[跳转列表：：初始化列表](#initializelist)|开始列表生成事务。|
-|[跳转列表：：设置AppID](#setappid)|为要生成的列表设置应用程序用户模型 ID。|
+|[CJumpList::AbortList](#abortlist)|中止列表生成事务，而不进行提交。|
+|[CJumpList::AddDestination](#adddestination)|已重载。 将目标添加到列表。|
+|[CJumpList::AddKnownCategory](#addknowncategory)|向列表追加一个已知类别。|
+|[CJumpList：： AddTask](#addtask)|已重载。 向规范任务类别中添加项。|
+|[CJumpList::AddTasks](#addtasks)|向规范任务类别中添加项。|
+|[CJumpList::AddTaskSeparator](#addtaskseparator)|在任务之间添加分隔符。|
+|[CJumpList：： ClearAll](#clearall)|删除目前已添加到的当前实例中的所有任务和目标 `CJumpList` 。|
+|[CJumpList::ClearAllDestinations](#clearalldestinations)|删除目前已添加到的当前实例中的所有目标 `CJumpList` 。|
+|[CJumpList::CommitList](#commitlist)|在这种情况下，结束列表生成事务并将报告的列表提交给关联的存储 (注册表。 ) |
+|[CJumpList::GetDestinationList](#getdestinationlist)|检索指向目标列表的接口指针。|
+|[CJumpList::GetMaxSlots](#getmaxslots)|检索可在调用应用程序的目标菜单中显示的最大项数。|
+|[CJumpList::GetRemovedItems](#getremoveditems)|返回表示删除目标的项的数组。|
+|[CJumpList::InitializeList](#initializelist)|开始生成列表事务。|
+|[CJumpList::SetAppID](#setappid)|设置要生成的列表的应用程序用户模型 ID。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -85,9 +86,9 @@ class CJumpList;
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxadv.h
+**标头：** afxadv
 
-## <a name="cjumplistcjumplist"></a><a name="_dtorcjumplist"></a>跳转列表：*跳转列表
+## <a name="cjumplistcjumplist"></a><a name="_dtorcjumplist"></a> CJumpList：： ~ CJumpList
 
 销毁 `CJumpList` 对象。
 
@@ -95,9 +96,9 @@ class CJumpList;
 ~CJumpList();
 ```
 
-## <a name="cjumplistabortlist"></a><a name="abortlist"></a>跳转列表：：中止列表
+## <a name="cjumplistabortlist"></a><a name="abortlist"></a> CJumpList::AbortList
 
-在不提交的情况下中止列表生成事务。
+中止列表生成事务，而不进行提交。
 
 ```cpp
 void AbortList();
@@ -105,11 +106,11 @@ void AbortList();
 
 ### <a name="remarks"></a>备注
 
-调用此方法的效果与不调用`CJumpList``CommitList`销毁的效果相同。
+调用此方法与在未调用的情况下销毁的效果相同 `CJumpList` `CommitList` 。
 
-## <a name="cjumplistadddestination"></a><a name="adddestination"></a>跳转列表：：添加目的地
+## <a name="cjumplistadddestination"></a><a name="adddestination"></a> CJumpList::AddDestination
 
-将目标添加到列表中。
+将目标添加到列表。
 
 ```
 BOOL AddDestination(
@@ -125,51 +126,51 @@ BOOL AddDestination(
     IShellLink* pShellLink);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lpcsz 类别名称*<br/>
-指定类别名称。 如果指定的类别不存在，将创建该类别。
+*lpcszCategoryName*<br/>
+指定类别名称。 如果指定的类别不存在，将创建它。
 
-*串目标路径*<br/>
+*strDestinationPath*<br/>
 指定目标文件的路径。
 
-*串名称*<br/>
-指定类别名称。 如果指定的类别不存在，将创建该类别。
+*strCategoryName*<br/>
+指定类别名称。 如果指定的类别不存在，将创建它。
 
-*p壳牌项目*<br/>
-指定表示要添加目标的行壳项目。
+*pShellItem*<br/>
+指定表示要添加的目标的 Shell 项。
 
-*p壳牌链接*<br/>
-指定表示要添加目标的 Shell 链接。
+*pShellLink*<br/>
+指定表示要添加的目标的 Shell 链接。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-内部实例`CJumpList`累积添加的目标，然后在 中`CommitList`提交它们。
+实例在 `CJumpList` 内部累计添加的目标，然后在中提交它们 `CommitList` 。
 
-## <a name="cjumplistaddknowncategory"></a><a name="addknowncategory"></a>跳转列表：：添加已知类别
+## <a name="cjumplistaddknowncategory"></a><a name="addknowncategory"></a> CJumpList::AddKnownCategory
 
-将已知类别追加到列表中。
+向列表追加一个已知类别。
 
 ```
 BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *category*<br/>
-指定已知的类别类型。 可以是KDC_RECENT，也可以是KDC_KNOWN。
+指定一个已知的类别类型。 可以是 KDC_RECENT 或 KDC_KNOWN。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-已知类别是我们将自动计算每个使用的应用程序的频繁和最近类别`SHAddToRecentDocs`（或在某些情况下间接使用它，因为 shell 会代表应用程序调用它）。
+已知类别是经常和最近的类别，我们将为利用 (的每个应用程序自动计算这些类别， `SHAddToRecentDocs` 或间接使用该类别，因为 shell 将在某些情况下代表应用程序调用它) 。
 
-## <a name="cjumplistaddtask"></a><a name="addtask"></a>跳转列表：：添加任务
+## <a name="cjumplistaddtask"></a><a name="addtask"></a> CJumpList：： AddTask
 
-将项添加到规范任务类别。
+向规范任务类别中添加项。
 
 ```
 BOOL AddTask(
@@ -182,52 +183,52 @@ BOOL AddTask(
 BOOL AddTask(IShellLink* pShellLink);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*str目标可执行路径*<br/>
+*strTargetExecutablePath*<br/>
 指定目标任务路径。
 
-*斯特鲁茨线*<br/>
-指定*strTarget 可执行路径*指定的可执行文件的命令行参数。
+*strCommandLineArgs*<br/>
+指定由 *strTargetExecutablePath* 指定的可执行文件的命令行参数。
 
-*斯特标题*<br/>
-将在目标列表中显示的任务名称。
+*strTitle*<br/>
+将显示在目标列表中的任务名称。
 
-*串图标位置*<br/>
-将在"目标列表"中以及标题中显示的图标的位置。
+*strIconLocation*<br/>
+将显示在目标列表中的图标的位置以及标题。
 
 *iIconIndex*<br/>
 图标索引。
 
-*p壳牌链接*<br/>
-表示要添加的任务的 Shell 链接。
+*pShellLink*<br/>
+Shell 链接，表示要添加的任务。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-实例`CJumpList`将累积指定的任务，并在 期间`CommitList`将它们添加到目标列表。 任务项将显示在应用程序目标菜单底部的类别中。 此类别在 UI 中填充时优先于所有其他类别。
+的实例 `CJumpList` 累积指定的任务，并在期间将它们添加到目标列表中 `CommitList` 。 任务项将出现在应用程序 "目标" 菜单底部的 "类别" 中。 此类别在用户填充 UI 时优先于所有其他类别。
 
-## <a name="cjumplistaddtasks"></a><a name="addtasks"></a>跳转列表：：添加任务
+## <a name="cjumplistaddtasks"></a><a name="addtasks"></a> CJumpList::AddTasks
 
-将项添加到规范任务类别。
+向规范任务类别中添加项。
 
 ```
 BOOL AddTasks(IObjectArray* pObjectCollection);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*pObject集合*<br/>
+*pObjectCollection*<br/>
 要添加的任务的集合。
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-CJumpList 的实例累积指定的任务，并在 期间`CommitList`将它们添加到目标列表中。 任务项将显示在应用程序目标菜单底部的类别中。 此类别在 UI 中填充时优先于所有其他类别。
+CJumpList 实例累积指定的任务，并在期间将它们添加到目标列表 `CommitList` 。 任务项将出现在应用程序 "目标" 菜单底部的 "类别" 中。 此类别在用户填充 UI 时优先于所有其他类别。
 
-## <a name="cjumplistaddtaskseparator"></a><a name="addtaskseparator"></a>跳转列表：：添加任务分离器
+## <a name="cjumplistaddtaskseparator"></a><a name="addtaskseparator"></a> CJumpList::AddTaskSeparator
 
 在任务之间添加分隔符。
 
@@ -237,9 +238,9 @@ BOOL AddTaskSeparator();
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则非零，如果为非零，则为 0。
+如果成功，则为非零; 否则为0。
 
-## <a name="cjumplistcjumplist"></a><a name="cjumplist"></a>跳转列表：：跳转列表
+## <a name="cjumplistcjumplist"></a><a name="cjumplist"></a> CJumpList::CJumpList
 
 构造 `CJumpList` 对象。
 
@@ -247,14 +248,14 @@ BOOL AddTaskSeparator();
 CJumpList(BOOL bAutoCommit = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*bAuto提交*<br/>
-如果此参数为 FALSE，则列表不会自动提交到析构函数中。
+*bAutoCommit*<br/>
+如果此参数为 FALSE，则不会在析构函数中自动提交列表。
 
-## <a name="cjumplistclearall"></a><a name="clearall"></a>跳转列表：清除所有
+## <a name="cjumplistclearall"></a><a name="clearall"></a> CJumpList：： ClearAll
 
-删除到目前为止已添加到当前实例`CJumpList`的所有任务和目标。
+删除目前已添加到的当前实例中的所有任务和目标 `CJumpList` 。
 
 ```cpp
 void ClearAll();
@@ -262,11 +263,11 @@ void ClearAll();
 
 ### <a name="remarks"></a>备注
 
-此方法清除和释放所有数据和内部接口。
+此方法清除并释放所有数据和内部接口。
 
-## <a name="cjumplistclearalldestinations"></a><a name="clearalldestinations"></a>跳转列表：清除所有目标
+## <a name="cjumplistclearalldestinations"></a><a name="clearalldestinations"></a> CJumpList::ClearAllDestinations
 
-删除到目前为止已添加到 CJumpList 当前实例的所有目标。
+删除目前已添加到 CJumpList 的当前实例中的所有目标。
 
 ```cpp
 void ClearAllDestinations();
@@ -274,11 +275,11 @@ void ClearAllDestinations();
 
 ### <a name="remarks"></a>备注
 
-如果需要删除到目前为止在目标列表生成会话中添加的所有目标，然后再次添加其他目标，请调用此功能。 如果内部`ICustomDestinationList`已初始化，则它保持活动状态。
+如果需要删除目前目标列表生成的当前会话中已添加的所有目标，并再次添加其他目标，请调用此函数。 如果内部 `ICustomDestinationList` 已初始化，则会保持活动状态。
 
-## <a name="cjumplistcommitlist"></a><a name="commitlist"></a>跳转列表：提交列表
+## <a name="cjumplistcommitlist"></a><a name="commitlist"></a> CJumpList::CommitList
 
-结束列表生成事务并将报告的列表提交到关联的存储（本例中的注册表）。
+结束一个列表生成事务，并将报告的列表提交给关联的存储 (注册表的这种情况下) 。
 
 ```
 BOOL CommitList();
@@ -288,9 +289,9 @@ BOOL CommitList();
 
 ### <a name="remarks"></a>备注
 
-提交是原子的。 如果提交失败，将返回错误。  调用`CommitList`时，将清理当前已删除项的列表。 调用此方法将重置对象，使其没有活动的列表生成事务。 要更新列表，`BeginList`需要再次调用。
+Commit 是原子的。 如果提交失败，将返回错误。  `CommitList`调用时，将清除已删除项的当前列表。 调用此方法将重置对象，使其没有活动的列表生成事务。 若要更新列表， `BeginList` 需再次调用。
 
-## <a name="cjumplistgetdestinationlist"></a><a name="getdestinationlist"></a>跳转列表：获取目的地列表
+## <a name="cjumplistgetdestinationlist"></a><a name="getdestinationlist"></a> CJumpList::GetDestinationList
 
 检索指向目标列表的接口指针。
 
@@ -304,9 +305,9 @@ ICustomDestinationList* GetDestinationList();
 
 如果跳转列表尚未初始化，或已提交或中止，则返回的值将为 NULL。
 
-## <a name="cjumplistgetmaxslots"></a><a name="getmaxslots"></a>跳转列表：获取 MaxSlots
+## <a name="cjumplistgetmaxslots"></a><a name="getmaxslots"></a> CJumpList::GetMaxSlots
 
-检索最大项目数，包括可在调用应用程序的目标菜单中显示的类别标头。
+检索可在调用应用程序的目标菜单中显示的最大项数。
 
 ```
 UINT GetMaxSlots() const;
@@ -316,11 +317,11 @@ UINT GetMaxSlots() const;
 
 ### <a name="remarks"></a>备注
 
-应用程序只能报告多个项和类别标头，这些项目和类别标头组合到此值。 如果调用`AppendCategory`、`AppendKnownCategory`或`AddUserTasks`超过此号码，它们将返回失败。
+应用程序只会报告多个项目和类别标题与此值的组合。 如果对 `AppendCategory` 、或的调用 `AppendKnownCategory` `AddUserTasks` 超过此数字，则它们将返回失败。
 
-## <a name="cjumplistgetremoveditems"></a><a name="getremoveditems"></a>跳转列表：：获取删除的项目
+## <a name="cjumplistgetremoveditems"></a><a name="getremoveditems"></a> CJumpList::GetRemovedItems
 
-返回表示已删除目标的项数组。
+返回表示删除目标的项的数组。
 
 ```
 IObjectArray* GetRemovedItems();
@@ -330,11 +331,11 @@ IObjectArray* GetRemovedItems();
 
 ### <a name="remarks"></a>备注
 
-在跳转列表的初始化过程中检索已删除的目标。 生成新目标列表时，应用程序应首先处理删除的目标列表，清除其跟踪数据，以访问删除的列表枚举器返回的任何项。 如果应用程序尝试提供当前调用启动`BeginList`的事务中刚刚删除的项，则重新添加该项的方法调用将失败，以确保应用程序遵守已删除的列表。
+删除的目标将在跳转列表初始化期间检索。 生成新的目标列表时，应用程序应首先处理删除的目标列表，并清除删除的列表枚举器返回的任何项的跟踪数据。 如果应用程序尝试提供刚在当前调用开始的事务中删除的项 `BeginList` ，则重新添加该项的方法调用将失败，以确保应用程序遵循删除的列表。
 
-## <a name="cjumplistinitializelist"></a><a name="initializelist"></a>跳转列表：：初始化列表
+## <a name="cjumplistinitializelist"></a><a name="initializelist"></a> CJumpList::InitializeList
 
-开始列表生成事务。
+开始生成列表事务。
 
 ```
 BOOL InitializeList();
@@ -344,20 +345,20 @@ BOOL InitializeList();
 
 ### <a name="remarks"></a>备注
 
-不需要显式调用此方法，除非您希望检索`ICustomDestinationList`指向 的指针，`GetDestinationList`使用 的`GetMaxSlots`可用插槽数或使用 或 使用`GetRemovedItems`的已删除项列表。
+无需显式调用此方法，除非你想要使用、使用的 `ICustomDestinationList` `GetDestinationList` 可用槽的数目 `GetMaxSlots` 或使用移除的项的列表 `GetRemovedItems` 。
 
-## <a name="cjumplistsetappid"></a><a name="setappid"></a>跳转列表：：设置AppID
+## <a name="cjumplistsetappid"></a><a name="setappid"></a> CJumpList::SetAppID
 
-为要生成的列表设置应用程序用户模型 ID。
+设置要生成的列表的应用程序用户模型 ID。
 
 ```cpp
 void SetAppID(LPCTSTR strAppID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*斯特雷帕维德*<br/>
-指定应用程序用户模型 ID 的字符串。
+*strAppID*<br/>
+一个字符串，指定应用程序用户模型 ID。
 
 ## <a name="see-also"></a>请参阅
 

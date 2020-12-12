@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：类工厂和许可
 title: 类工厂和许可
 ms.date: 11/04/2016
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: 939d7156a9bd7bf0778d2ab4a40acb2afe10cf6e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7470a5828df358a28db5a30832f98314e09a133e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845921"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236836"
 ---
 # <a name="class-factories-and-licensing"></a>类工厂和许可
 
@@ -21,7 +22,7 @@ OLE 控件的另一个重要功能是强制使用许可证。 ControlWizard 可�
 
 ### <a name="class-factories-and-licensing"></a>类工厂和许可
 
-|宏或函数|说明|
+|宏或函数|描述|
 |-|-|
 |[DECLARE_OLECREATE_EX](#declare_olecreate_ex)|声明 OLE 控件或属性页的类工厂。|
 |[IMPLEMENT_OLECREATE_EX](#implement_olecreate_ex)|实现控件的 `GetClassID` 函数并声明类工厂的实例。|
@@ -37,12 +38,12 @@ OLE 控件的另一个重要功能是强制使用许可证。 ControlWizard 可�
 DECLARE_OLECREATE_EX(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 控件类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于不支持授权的控件，请在控件类头文件中使用此宏。
 
@@ -75,7 +76,7 @@ IMPLEMENT_OLECREATE_EX(
     b8)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 控件属性页类的名称。
@@ -86,7 +87,7 @@ IMPLEMENT_OLECREATE_EX(
 *l，w1，w2，b1，b2，b3，b4，b5，b6，b7，b8*<br/>
 类的 CLSID 的组件。 有关这些参数的详细信息，请参阅 [IMPLEMENT_OLECREATE](run-time-object-model-services.md#implement_olecreate)的备注。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏必须出现在使用 DECLARE_OLECREATE_EX 宏或 BEGIN_OLEFACTORY 和 END_OLEFACTORY 宏的任何控件类的实现文件中。 外部名称是向其他应用程序公开的 OLE 控件的标识符。 容器使用此名称来请求此控件类的对象。
 
@@ -102,12 +103,12 @@ IMPLEMENT_OLECREATE_EX(
 BEGIN_OLEFACTORY(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 指定类工厂为的控件类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类工厂授权函数的声明应在 BEGIN_OLEFACTORY 后立即开始。
 
@@ -123,7 +124,7 @@ BEGIN_OLEFACTORY(class_name)
 END_OLEFACTORY(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 其类工厂为的控件类的名称。
@@ -144,7 +145,7 @@ BOOL AFXAPI AfxVerifyLicFile(
     UINT cch = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 与已授权控件关联的 DLL 的实例句柄。
@@ -156,13 +157,13 @@ BOOL AFXAPI AfxVerifyLicFile(
 指向一个字节序列，该序列序列必须与许可证文件的开头处找到的序列匹配。
 
 *cch*<br/>
-*PszLicFileContents*中的字符数。
+*PszLicFileContents* 中的字符数。
 
 ### <a name="return-value"></a>返回值
 
-如果许可证文件存在并以 *pszLicFileContents*中的字符序列开头，则为非零值;否则为0。
+如果许可证文件存在并以 *pszLicFileContents* 中的字符序列开头，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *cch* 为-1，则此函数使用：
 
@@ -172,6 +173,6 @@ BOOL AFXAPI AfxVerifyLicFile(
 
   **标头** afxctl。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

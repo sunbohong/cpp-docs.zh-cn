@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CKeyboardManager 类
 title: CKeyboardManager 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: e67bbb18b6a87edfaa4bc4c410ec28eb613ed51d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9296c1d81cc2d915fe8ba84bfeedb64ae546fdd5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841488"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236888"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 类
 
@@ -51,13 +52,13 @@ class CKeyboardManager : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CKeyboardManager：： CKeyboardManager](#ckeyboardmanager)|构造 `CKeyboardManager` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[CKeyboardManager：：清理](#cleanup)|清除快捷键表。|
 |[CKeyboardManager：： FindDefaultAccelerator](#finddefaultaccelerator)|检索指定命令和窗口的默认快捷键。|
@@ -71,7 +72,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager：： TranslateCharToUpper](#translatechartoupper)|将字符转换为它的上限。|
 |[CKeyboardManager：： UpdateAccelTable](#updateacceltable)|使用新的快捷键表更新快捷键表。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 利用此类的成员，您可以将快捷键表保存和加载到 Windows 注册表中，使用模板更新简短的键表，并在框架窗口中查找命令的默认快捷键。 此外， `CKeyboardManager` 对象还允许您控制如何向用户显示快捷键。
 
@@ -101,7 +102,7 @@ class CKeyboardManager : public CObject
 CKeyboardManager();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在大多数情况下，无需 `CKeyboardManager` 直接创建。 默认情况下，框架为你创建一个。 若要获取指向的指针 `CKeyboardManager` ，请调用 [CWinAppEx：： GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)。 如果手动创建一个，则必须用方法 [CWinAppEx：： InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)对其进行初始化。
 
@@ -113,7 +114,7 @@ CKeyboardManager();
 static void CleanUp();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关快捷键的详细信息，请参阅 [键盘和鼠标自定义](../../mfc/keyboard-and-mouse-customization.md)。
 
@@ -131,12 +132,12 @@ static BOOL FindDefaultAccelerator(
     BOOL bIsDefaultFrame);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiCmd*<br/>
 中命令 ID。
 
-*字符串*<br/>
+*str*<br/>
 弄对对象的引用 `CString` 。
 
 *pWndFrame*<br/>
@@ -149,7 +150,7 @@ static BOOL FindDefaultAccelerator(
 
 如果找到快捷方式，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法查找 *uiCmd* 指定的命令，并检索默认快捷键。 然后，该方法将使用与此快捷键相关联的字符串，并将值写入 *str* 参数。
 
@@ -165,7 +166,7 @@ static BOOL __stdcall IsKeyHandled(
     BOOL bIsDefaultFrame);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nKey*\
 中要检查的键。
@@ -183,9 +184,9 @@ static BOOL __stdcall IsKeyHandled(
 
 如果已处理快捷键，则为 TRUE。 如果未处理该键，则为 FALSE; 如果 *pWndFrame* 为 NULL，则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-输入参数必须与 *nKey* 和 *fVirt* 的快捷键对应表中的条目匹配，以确定是否在 *pWndFrame*中处理快捷键。
+输入参数必须与 *nKey* 和 *fVirt* 的快捷键对应表中的条目匹配，以确定是否在 *pWndFrame* 中处理快捷键。
 
 ## <a name="ckeyboardmanageriskeyprintable"></a><a name="iskeyprintable"></a> CKeyboardManager：： IsKeyPrintable
 
@@ -195,7 +196,7 @@ static BOOL __stdcall IsKeyHandled(
 static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*\
 中此方法检查的字符。
@@ -204,7 +205,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 如果字符可打印，则为非零; 否则为零。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果对 [GetKeyboardState](/windows/win32/api/winuser/nf-winuser-getkeyboardstate) 的调用失败，则此方法将失败。
 
@@ -220,7 +221,7 @@ static BOOL IsShowAllAccelerators();
 
 如果应用程序列出了菜单命令的所有快捷键，则为非零值;如果应用程序仅显示默认快捷键，则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应用程序会在菜单栏中列出菜单命令的快捷键。 使用函数 [CKeyboardManager：： ShowAllAccelerators](#showallaccelerators) 可控制应用程序是列出所有快捷键还是只列出默认快捷键。
 
@@ -234,7 +235,7 @@ BOOL LoadState(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 中保存数据的注册表路径 `CKeyboardManager` 。
@@ -246,7 +247,7 @@ BOOL LoadState(
 
 如果状态已成功加载，则为非零; 否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *lpszProfileName* 参数为 NULL，此方法将检查数据的默认注册表位置 `CKeyboardManager` 。 默认注册表位置由 [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)指定。 数据以前必须用方法 [CKeyboardManager：： SaveState](#savestate)来编写。
 
@@ -260,7 +261,7 @@ BOOL LoadState(
 void ResetAll();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数清除实例中存储的快捷方式 `CKeyboardManager` 。 然后，它将从应用程序资源重新加载键盘管理器的状态。
 
@@ -274,7 +275,7 @@ BOOL SaveState(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszProfileName*<br/>
 中用于保存状态的注册表路径 `CKeyboardManager` 。
@@ -286,7 +287,7 @@ BOOL SaveState(
 
 如果成功保存键盘管理器状态，则为非零; 否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *lpszProfileName* 参数为 NULL，则此方法会将 `CKeyboardManager` 状态写入 [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)指定的默认位置。 如果指定位置，则可以在以后使用方法 [CKeyboardManager：： LoadState](#loadstate)加载数据。
 
@@ -302,7 +303,7 @@ static void ShowAllAccelerators(
     LPCTSTR lpszDelimiter = _afxDefaultAcceleratorDelimiter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShowAll*<br/>
 中如果为 TRUE，则将显示所有快捷键。 如果为 FALSE，则只显示第一个快捷键。
@@ -310,7 +311,7 @@ static void ShowAllAccelerators(
 *lpszDelimiter*<br/>
 中要在快捷键之间插入的字符串。 如果只显示一个快捷键，则此分隔符不起作用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下，如果命令有多个关联的快捷键，则只会显示第一个快捷键。 此函数使您能够列出与所有命令相关联的所有快捷键。
 
@@ -324,7 +325,7 @@ static void ShowAllAccelerators(
 static UINT TranslateCharToUpper(const UINT nChar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nChar*<br/>
 中要转换的字符。
@@ -350,7 +351,7 @@ BOOL UpdateAccelTable(
     CFrameWnd* pDefaultFrame = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pTemplate*<br/>
 中指向文档模板的指针。
@@ -371,14 +372,14 @@ BOOL UpdateAccelTable(
 
 如果方法成功，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此函数可以将现有的快捷方式表替换为多个框架窗口对象的新快捷键。 函数接收文档模板作为参数，以获取对连接到给定文档模板的所有框架窗口对象的访问权限。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx 类](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx：： InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [键盘和鼠标自定义](../../mfc/keyboard-and-mouse-customization.md)

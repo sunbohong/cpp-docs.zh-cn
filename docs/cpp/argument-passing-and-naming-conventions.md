@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：参数传递和命名约定
 title: 参数传递和命名约定
 ms.date: 12/17/2018
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 32f32ceb56267dc39b58b8eed1b30af697ca6d74
-ms.sourcegitcommit: d5a7ea8e462f555fbb3852d6fe5112521fef3133
+ms.openlocfilehash: bd51187fcc65dfce6c473c784c85c6afcae0bcf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96324171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239826"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>参数传递和命名约定
 
@@ -42,7 +43,7 @@ Visual C/C++ 编译器支持下列调用约定。
 |关键字|堆栈清理|参数传递|
 |-------------|-------------------|-----------------------|
 |[__cdecl](../cpp/cdecl.md)|调用方|在堆栈上按相反顺序推送参数（从右到左）|
-|[__clrcall](../cpp/clrcall.md)|不适用|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|
+|[__clrcall](../cpp/clrcall.md)|n/a|按顺序将参数加载到 CLR 表达式堆栈上（从左到右）。|
 |[__stdcall](../cpp/stdcall.md)|被调用方|在堆栈上按相反顺序推送参数（从右到左）|
 |[__fastcall](../cpp/fastcall.md)|被调用方|存储在寄存器中，然后在堆栈上推送|
 |[__thiscall](../cpp/thiscall.md)|被调用方|已推送到堆栈上; **`this`** 存储在 ECX 中的指针|

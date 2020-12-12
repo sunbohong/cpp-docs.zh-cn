@@ -1,4 +1,5 @@
 ---
+description: 了解更多： C 运行时错误 R6019
 title: C 运行时错误 R6019
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-ms.openlocfilehash: b647825b7e856be9dc51a5a652be87a4cc6d0e23
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 190b836d5c0823b3644e4ff49812b5de05f421e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197257"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237629"
 ---
 # <a name="c-runtime-error-r6019"></a>C 运行时错误 R6019
 
@@ -23,7 +24,7 @@ ms.locfileid: "80197257"
 > 可以尝试以下步骤来修复此错误：
 >
 > - 以管理员身份运行该程序。
-> - 使用**控制面板**中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
+> - 使用 **控制面板** 中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
 > - 检查 "**控制面板**" 中的 "软件更新" **Windows 更新**。
 > - 检查应用的更新版本。 如果问题仍然存在，请与应用程序供应商联系。
 

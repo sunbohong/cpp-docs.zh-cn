@@ -1,17 +1,18 @@
 ---
+description: '了解详细信息： BSCMAKE 错误和警告 (BKxxxx) '
 title: BSCMAKE 错误和警告
 ms.date: 04/16/2019
 ms.assetid: 3767baa6-e639-472e-99fd-7543fd945cd3
-ms.openlocfilehash: e6abc334d9ecf5df54d200ab242c91a7035ab226
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 8273782f82102c81cf7f7dd5e93b7e1ec6d1703e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237902"
 ---
 # <a name="bscmake-errors-and-warnings-bkxxxx"></a>BSCMAKE 错误和警告 (BKxxxx)
 
-本部分是对错误的引用，生成的 BSCMAKE 警告的生成工具。 BSCMAKE 错误和警告具有窗体 BK*xxxx*，其中*xxxx*是一个四位数字。
+本部分是由 BSCMAKE 生成工具生成的错误和警告的参考。 BSCMAKE 错误和警告的形式为 BK *xxxx*，其中 *xxxx* 为四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -40,5 +41,5 @@ ms.locfileid: "64856363"
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[C/c + + 编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [BSCMake 参考](../../build/reference/bscmake-reference.md)
