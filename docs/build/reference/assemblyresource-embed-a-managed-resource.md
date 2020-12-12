@@ -1,4 +1,5 @@
 ---
+description: '了解更多相关信息：/ASSEMBLYRESOURCE (嵌入托管资源) '
 title: /ASSEMBLYRESOURCE（嵌入托管资源）
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 1eac489ffd01f6bd79fc8c5bbda23adb751c9486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f79cc177df72bb83288a0a229fdf47adb0e7fc0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295066"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182913"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE（嵌入托管资源）
 
@@ -24,25 +25,25 @@ ms.locfileid: "62295066"
 /ASSEMBLYRESOURCE:filename[,[name][,PRIVATE]]
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
 *filename*<br/>
-你想要在此程序集中嵌入托管的资源。
+要在此程序集中嵌入的托管资源。
 
-*name*<br/>
-可选。 资源; 的逻辑名称用来加载资源的名称。 默认值是文件的名称。
+name<br/>
+可选。 资源的逻辑名称;用于加载资源的名称。 默认值是文件的名称。
 
-或者，可以指定是否该文件应为私有程序集清单中。 默认情况下*名称*在程序集是公共的。
+（可选）可以指定文件是否应为程序集清单中的私有文件。 默认情况下， *名称* 在程序集中是公共的。
 
 ## <a name="remarks"></a>备注
 
-/ASSEMBLYRESOURCE 选项用于在程序集中嵌入资源。
+使用/ASSEMBLYRESOURCE 选项可在程序集中嵌入资源。
 
-资源是在公共程序集时使用链接器创建的。 链接器不允许你重命名的程序集中的资源。
+当通过链接器创建时，资源在程序集中是公共的。 链接器不允许重命名程序集中的资源。
 
-如果*文件名*是.NET Framework 创建的资源 (.resources) 文件的示例中，通过[资源文件生成器 (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中，则可以使用来访问中的成员**System.Resources**命名空间 (请参阅[System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager)有关详细信息)。 对于所有其他资源，请使用**GetManifestResource** \*中的方法**不过 System.Reflection.Assembly**类，以在运行时访问资源。
+如果 *filename* 是 .NET Framework 资源 () 文件创建的资源（例如，通过 [资源文件生成器 ( # A0)](/dotnet/framework/tools/resgen-exe-resource-file-generator)或在开发环境中），则可以使用 **system.exception 命名空间中的成员** 访问该资源。有关详细信息，[请参阅。](/dotnet/api/system.resources.resourcemanager) 对于所有其他资源，请使用 **GetManifestResource** \* 类中的方法在运行时访问资源。
 
-影响的程序集生成其他链接器选项有：
+影响程序集生成的其他链接器选项包括：
 
 - [/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)
 
@@ -60,13 +61,13 @@ ms.locfileid: "62295066"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击**链接器**文件夹。
+1. 单击“链接器”文件夹。
 
-1. 单击**输入**属性页。
+1. 单击 " **输入** " 属性页。
 
-1. 修改**嵌入托管资源文件**属性。
+1. 修改 " **嵌入托管资源文件** " 属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

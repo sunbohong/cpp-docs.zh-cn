@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __getmainargs、__wgetmainargs
 title: __getmainargs、__wgetmainargs
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-ms.openlocfilehash: 01658c6146706d8ea7bfd70d002efcfff88031b0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6f06f83a72d037df6a0973b24ac92ecade6c21eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181743"
 ---
 # <a name="__getmainargs-__wgetmainargs"></a>__getmainargs、__wgetmainargs
 
@@ -40,16 +41,16 @@ ms.locfileid: "80171588"
 int __getmainargs(
     int * _Argc,
    char *** _Argv,
-   char *** _Env,
+   char **_ _Env,
    int _DoWildCard,
-_startupinfo * _StartInfo);
+_startupinfo _ _StartInfo);
 
 int __wgetmainargs (
    int *_Argc,
    wchar_t ***_Argv,
-   wchar_t ***_Env,
+   wchar_t **__Env,
    int _DoWildCard,
-   _startupinfo * _StartInfo)
+   _startupinfo _ _StartInfo)
 ```
 
 #### <a name="parameters"></a>parameters
@@ -58,10 +59,10 @@ int __wgetmainargs (
 包含 `argv` 后面的参数数的整数。 `argc` 参数始终大于或等于 1。
 
 `_Argv`<br/>
-表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定，`argv[0]` 是用于调用程序的命令，argv[1] 是第一个命令行参数，依此类推，直到 argv[argc]（其始终为 NULL）。 第一个命令行参数始终是 `argv[1]`，而最后一个命令行参数是 `argv[argc - 1]`。
+表示由杂注用户输入的命令行自变量的以 null 结尾的字符串的数组。 按照约定， `argv[0]` 是用于调用程序的命令，argv [1] 是第一个命令行参数，依此类推，直到 argv [argc] （始终 **为 NULL**）。 第一个命令行参数始终是 `argv[1]`，而最后一个命令行参数是 `argv[argc - 1]`。
 
 `_Env`<br/>
-表示用户环境中的变量集的字符串数组。 该数组由 NULL 项终止。
+表示用户环境中的变量集的字符串数组。 此数组由 **NULL** 项终止。
 
 `_DoWildCard`<br/>
 一个整数，如果将其设置为 1，则扩展命令行自变量中的通配符；如果设置为 0，则不执行任何操作。
@@ -79,7 +80,7 @@ int __wgetmainargs (
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |__getmainargs|internal.h|
 |__wgetmainargs|internal.h|

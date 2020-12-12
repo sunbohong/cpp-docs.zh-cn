@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/CLRSUPPORTLASTERROR (保留 PInvoke 调用的最后一个错误代码) '
 title: /CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: ccf13971bf77fb8e960b781e4a1aa2a0e06a5d61
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 253d67e2ced2667d3ca8c7b9330ed3e6d4182d9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686098"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182406"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR（为 PInvoke 调用保留上次的错误代码）
 
-默认情况下， **/CLRSUPPORTLASTERROR**将保留通过 P/Invoke 机制调用的函数的最后一个错误代码，该机制允许您通过使用 **/clr**编译的代码调用 dll 中的本机函数。
+默认情况下， **/CLRSUPPORTLASTERROR** 将保留通过 P/Invoke 机制调用的函数的最后一个错误代码，该机制允许您通过使用 **/clr** 编译的代码调用 dll 中的本机函数。
 
 ## <a name="syntax"></a>语法
 
@@ -26,9 +27,9 @@ ms.locfileid: "90686098"
 
 ## <a name="remarks"></a>备注
 
-保留上一个错误代码表示性能下降。  如果你不希望对保留上一个错误代码产生性能影响，请与  **/CLRSUPPORTLASTERROR： NO**关联。
+保留上一个错误代码表示性能下降。  如果你不希望对保留上一个错误代码产生性能影响，请与  **/CLRSUPPORTLASTERROR： NO** 关联。
 
-你可以通过链接 **/CLRSUPPORTLASTERROR： SYSTEMDLL**来最大程度地降低性能影响，后者仅保留系统 dll 中函数的最后一个错误代码。
+你可以通过链接 **/CLRSUPPORTLASTERROR： SYSTEMDLL** 来最大程度地降低性能影响，后者仅保留系统 dll 中函数的最后一个错误代码。
 
 > [!NOTE]
 > 对于 CLR 代码在同一模块中使用的非托管函数，不支持保留上一个错误。
@@ -39,9 +40,9 @@ ms.locfileid: "90686098"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击“链接器”文件夹****。
+1. 单击“链接器”文件夹。
 
-1. 点击“命令行” **** 属性页。
+1. 点击“命令行”  属性页。
 
 1. 在 " **附加选项** " 框中键入选项。
 

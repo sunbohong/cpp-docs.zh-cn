@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用 Visual C++ "添加新项" 模板
 title: 使用 Visual C++ 的“添加新项”模板
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 11e7057f563ac446daf8e7506896a5af778fdac4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217758"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182198"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 的“添加新项”模板
 
-您可以方便地添加通过使用 Visual Studio 项目通用的项**添加新项**命令。 使用“添加新项”命令时，将显示带有项模板列表的 `Add New Item` 对话框，这些模板将向项目添加相应的文件。
+通过使用 " **添加新项** " 命令，你可以轻松添加适用于 Visual Studio 项目的项。 使用“添加新项”命令时，将显示带有项模板列表的 `Add New Item` 对话框，这些模板将向项目添加相应的文件。
 
-下表是 Visual Studio 将添加新项模板的字母顺序列表。
+下表是 Visual Studio "添加新项" 模板的按字母顺序排列的列表。
 
 |模板|描述|
 |--------------|-----------------|
@@ -45,7 +46,7 @@ ms.locfileid: "65217758"
 |资源模板文件 (.rct)|创建资源模板文件。|
 |功能区 (.mfcribbon-ms)|创建功能区文件。|
 |服务器响应文件 (.srf)|创建与 ATL 服务器一起使用的服务器响应文件。|
-|SQL 脚本文件 (.sql)|创建 SQL 脚本文件。 **注意：** 该专业版功能不提供此模板。|
+|SQL 脚本文件 (.sql)|创建 SQL 脚本文件。 注意：此专业版功能不提供此模板。|
 |样式表 (.css)|添加用于 Rich HTML 样式定义的级联样式表。|
 |文本文件 (.txt)|添加空白文本文件。|
 |用户控件|使用 CLR 功能添加用户控件。|

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/CLRUNMANAGEDCODECHECK (删除 SuppressUnmanagedCodeSecurityAttribute) '
 title: /CLRUNMANAGEDCODECHECK（删除 SuppressUnmanagedCodeSecurityAttribute）
 ms.date: 05/16/2019
 ms.topic: reference
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: ecc560673a8e98752289ef0e0f89d3abfc1938e4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: e08b7b4b18a463122316b041ad81d6ddd2598bca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182393"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK（删除 SuppressUnmanagedCodeSecurityAttribute）
 
@@ -23,7 +24,7 @@ ms.locfileid: "65837239"
 
 ## <a name="syntax"></a>语法
 
-> **/CLRUNMANAGEDCODECHECK**[ **:NO**]
+> **/CLRUNMANAGEDCODECHECK**[**:NO**]
 
 ## <a name="remarks"></a>备注
 

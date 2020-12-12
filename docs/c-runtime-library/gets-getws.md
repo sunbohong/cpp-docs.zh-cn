@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：获取、_getws
 title: gets、_getws
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 1c60cf14334a0dcc0492b23da10a36c3219bb699
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cb2bf89bfcec8e10e05fa479cd7c9d78d9c6d80e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97181717"
 ---
 # <a name="gets-_getws"></a>gets、_getws
 
@@ -70,14 +71,14 @@ wchar_t *_getws(
 ); // C++ only
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *宽限*<br/>
 输入字符串的存储位置。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回其参数。 NULL 指针指示错误或文件尾条件****。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述****。 如果允许执行继续，则这些函数返回 NULL 并将 errno 设置为 `EINVAL`****。
+如果成功，则返回其参数。 NULL 指针指示错误或文件尾条件。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 确定已发生哪种情况。 如果 `buffer` 为 NULL，这些函数则会调用无效的参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数返回 NULL 并将 errno 设置为 `EINVAL`。
 
 ## <a name="remarks"></a>备注
 
@@ -88,7 +89,7 @@ wchar_t *_getws(
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -98,7 +99,7 @@ wchar_t *_getws(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`gets`|\<stdio.h>|
 |`_getws`|\<stdio.h> 或 \<wchar.h>|
@@ -130,7 +131,7 @@ int main( void )
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../c-runtime-library/stream-i-o.md)<br/>
 [fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>

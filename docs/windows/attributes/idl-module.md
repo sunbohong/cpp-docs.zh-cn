@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： idl_module
 title: 'idl_module (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 651d2e133d7ef08fce48feded1b7a5aff458adb1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 01fbb6cb04f31d9df4466e148a89fccb012835e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183134"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -53,11 +54,11 @@ function declaration
 *函数声明*<br/>
 要定义的函数。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **Idl_module** c + + 特性使你能够在 .dll 文件中指定入口点，从而允许你从 .dll 文件导入。
 
-**Idl_module**属性的功能类似于[模块](/windows/win32/Midl/module)MIDL 特性。
+**Idl_module** 属性的功能类似于 [模块](/windows/win32/Midl/module)MIDL 特性。
 
 您可以通过将 DLL 入口点置于 .idl 文件的库块中，从一个 COM 对象导出可以从 .dll 文件导出的任何内容。
 
@@ -87,7 +88,7 @@ void FuncName(int i);
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [独立属性](stand-alone-attributes.md)<br/>

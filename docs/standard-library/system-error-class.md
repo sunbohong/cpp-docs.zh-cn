@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： system_error 类
 title: system_error 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-ms.openlocfilehash: 7a18d2f9f229a62a539be072870e38a990677636
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 51e629e9fffca6ec82e06521d1d81174da5ff1f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076363"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183160"
 ---
 # <a name="system_error-class"></a>system_error 类
 
@@ -33,6 +34,6 @@ class system_error : public runtime_error {
 
 ## <a name="remarks"></a>备注
 
-由 `what`[ 类中的 ](../standard-library/exception-class.md) 返回的值根据 `_Message` 和 [error_code](../standard-library/error-code-class.md)（`code` 或 `error_code(_Errval, _Errcat)`）进行构造。
+由 [](../standard-library/exception-class.md) 类中的 `what` 返回的值根据 `_Message` 和 [error_code](../standard-library/error-code-class.md)（`code` 或 `error_code(_Errval, _Errcat)`）进行构造。
 
 成员函数 `code` 返回存储的 [error_code](../standard-library/error-code-class.md) 对象。

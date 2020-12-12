@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息：生成文件中的注释
 title: 生成文件中的注释
 ms.date: 11/04/2016
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-ms.openlocfilehash: c66819210d2112f9a68243ed4d3b34f491caae9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9edee594c0299d8e93928c1284b7244af71f61e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182289"
 ---
 # <a name="comments-in-a-makefile"></a>生成文件中的注释
 
-前加上注释以数字符号 （#）。 NMAKE 忽略从数字符号到下一步的换行字符的文本。 示例：
+在注释前面加上数字符号 ( # ) 。 NMAKE 忽略数字符号中的文本到下一个换行符。 示例：
 
 ```
 # Comment on line by itself
@@ -33,7 +34,7 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this
 ```
 
-若要指定文本的数字符号，请在它前面加一个插入符号 (**^**)，按如下所示：
+若要指定文本数字符号，请在其前面加上一个插入符号 (**^**) ，如下所示：
 
 ```
 DEF = ^#define  #Macro for a C preprocessing directive

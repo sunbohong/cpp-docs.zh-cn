@@ -1,15 +1,16 @@
 ---
+description: 了解更多相关信息： ATL 程序或控件的源文件和头文件
 title: ATL 程序或控件的源文件和头文件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: 5c1e5fc111b38fc9e4173598f11fbad7a658d755
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 05407e74931112a1680fb103c20c4a2022185026
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182783"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL 程序或控件的源文件和头文件
 
@@ -19,8 +20,8 @@ ms.locfileid: "65707506"
 
 |文件名|说明|
 |---------------|-----------------|
-|projname.h|主包含文件，其中包含 C++ 接口定义和在 ATLSample.idl 中定义的项的 GUID 声明。 它是由 MIDL 在编译期间重新生成的。|
-|Projname.cpp|主程序源文件。 它包含实现进程内服务器的 DLL 的导出和实现本地服务器的 `WinMain`。 对于服务，它还实现所有服务管理函数。|
+|*Projname*|主包含文件，其中包含 C++ 接口定义和在 ATLSample.idl 中定义的项的 GUID 声明。 它是由 MIDL 在编译期间重新生成的。|
+|*Projname*.cpp|主程序源文件。 它包含实现进程内服务器的 DLL 的导出和实现本地服务器的 `WinMain`。 对于服务，它还实现所有服务管理函数。|
 |Resource.h|资源文件的头文件。|
 |StdAfx.cpp|包括 StdAfx.h 和 Atlimpl.cpp 文件。|
 |StdAfx.h|包括 ATL 头文件。|

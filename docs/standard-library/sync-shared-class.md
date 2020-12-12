@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： sync_shared 类
 title: sync_shared 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: 8b516762f0ae2f6d25c4d5109cbc9870f1254b89
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 4093b85ce6f10552cba462074aee2a448cc5ce3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183277"
 ---
 # <a name="sync_shared-class"></a>sync_shared 类
 
@@ -30,7 +31,7 @@ template <class Cache>
 class sync_shared
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *区*\
 与同步筛选器相关联的缓存类型。 它可以是 [`cache_chunklist`](../standard-library/cache-chunklist-class.md) 、 [`cache_freelist`](../standard-library/cache-freelist-class.md) 或 [`cache_suballoc`](../standard-library/cache-suballoc-class.md) 。
@@ -57,7 +58,7 @@ class sync_shared
 void *allocate(std::size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *计*\
 数组中要分配的元素数目。
@@ -78,7 +79,7 @@ void *allocate(std::size_t count);
 void deallocate(void* ptr, std::size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要从存储中释放的第一个对象的指针。
@@ -98,7 +99,7 @@ void deallocate(void* ptr, std::size_t count);
 bool equals(const sync_shared<Cache>& Other) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *区*\
 与同步筛选器相关联的缓存类型。
@@ -112,6 +113,6 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)
