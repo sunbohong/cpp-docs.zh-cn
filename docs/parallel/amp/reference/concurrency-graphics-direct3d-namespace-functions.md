@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Concurrency：： graphics：:d irect3d 命名空间函数
 title: Concurrency::graphics::direct3d 命名空间函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: 66db1d348c6c58a9226322b51662ef7a4ef75b3d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 52556835c843744e03661b3ef5b718c884765c08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122351"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空间函数
 
@@ -41,7 +42,7 @@ IUnknown* get_sampler(
     const sampler& _Sampler) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Av*<br/>
 要在其上创建 D3D 采样器状态的 D3D 加速器视图。
@@ -80,7 +81,7 @@ _Ret_ IUnknown *get_texture(
     const texture_view<value_type, _Rank>& _Texture) restrict(cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *value_type*<br/>
 纹理的元素类型。
@@ -103,7 +104,7 @@ _Ret_ IUnknown *get_texture(
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_D3D_sampler*<br/>
 用于从其创建采样器的 D3D 采样器状态的 IUnknown 接口指针。
@@ -127,7 +128,7 @@ texture<value_type, _Rank> make_texture(
     DXGI_FORMAT _View_format = DXGI_FORMAT_UNKNOWN) restrict(cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *value_type*<br/>
 纹理中元素的类型。
@@ -159,7 +160,7 @@ inline uint4 msad4(
     uint4 _Accum) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Reference*<br/>
 一个 uint 值中4个字节的引用数组
@@ -180,6 +181,6 @@ inline uint4 msad4(
 
 **命名空间：** Concurrency：： graphics：:d irect3d
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency：： graphics：:d irect3d 命名空间](concurrency-graphics-direct3d-namespace.md)

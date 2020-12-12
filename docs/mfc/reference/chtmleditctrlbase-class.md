@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CHtmlEditCtrlBase 类
 title: CHtmlEditCtrlBase 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -220,12 +221,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 74df35a82342bad59e9065ef593581add6d3d734
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 2dfe61dfce86230f87f7e4883f6800e897c3770b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115412"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 类
 
@@ -351,7 +352,7 @@ template <class T> class CHtmlEditCtrlBase
 |[CHtmlEditCtrlBase：：取消链接](#unlink)|从当前所选内容中移除任何超链接。|
 |[CHtmlEditCtrlBase::UnorderList](#unorderlist)|在排序列表和普通格式块之间切换当前选定内容。|
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生类的名称。
@@ -386,7 +387,7 @@ HRESULT AddToGlyphTable(
     unsigned int nImgHeight) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szTag*<br/>
 标记名称 (例如，"P" 或 "table" ) 。
@@ -446,7 +447,7 @@ HRESULT Bold() const;
 HRESULT Button(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 按钮控件的 ID。
@@ -467,7 +468,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 复选框控件的 ID。
@@ -552,7 +553,7 @@ HRESULT Delete() const;
 HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 下拉选择控件的 ID。
@@ -600,7 +601,7 @@ HRESULT ExecCommand(
     VARIANT* pOutVar = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 要执行的命令 ID。 有关列表，请参阅 [MSHTML 命令标识符](/previous-versions/aa741315\(v=vs.85\))。
@@ -649,7 +650,7 @@ HRESULT Font() const;
 HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果该元素的 position 属性设置为 "绝对"，则为 TRUE。
@@ -670,7 +671,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 HRESULT GetBackColor(int& nColor) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColor*<br/>
 背景色。
@@ -691,7 +692,7 @@ HRESULT GetBackColor(int& nColor) const;
 HRESULT GetBlockFormat(CString& strFormat) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strFormat*<br/>
 当前的块格式标记。
@@ -712,7 +713,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 HRESULT GetBlockFormatNames(CStringArray& sa) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sa*<br/>
 可用的块格式标记，作为字符串数组。
@@ -733,7 +734,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 HRESULT GetBookMark(CString& strAnchor) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strAnchor*<br/>
 书签定位点的名称。
@@ -754,7 +755,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppDoc*<br/>
 文档对象。
@@ -771,7 +772,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 HRESULT GetDocumentHTML(CString& szHTML) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szHTML*<br/>
 HTML。
@@ -788,7 +789,7 @@ HTML。
 HRESULT GetDocumentTitle(CString& szTitle) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szTitle*<br/>
 文档的标题。
@@ -805,7 +806,7 @@ HRESULT GetDocumentTitle(CString& szTitle) const;
 HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppEventObj*<br/>
 事件对象。
@@ -822,7 +823,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppSrcElement*<br/>
 激发事件的元素。
@@ -839,7 +840,7 @@ HRESULT GetEventSrcElement(IHTMLElement** ppSrcElement) const;
 HRESULT GetFontFace(CString& strFace) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strFace*<br/>
 字体名称。
@@ -862,7 +863,7 @@ HRESULT GetFontFace(CString& strFace) const;
 HRESULT GetFontSize(short& nSize) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSize*<br/>
 字号。
@@ -883,7 +884,7 @@ HRESULT GetFontSize(short& nSize) const;
 HRESULT GetForeColor(int& nColor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColor*<br/>
 前景色。
@@ -904,7 +905,7 @@ HRESULT GetForeColor(int& nColor);
 HRESULT GetFrameZone(short& nZone) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nZone*<br/>
 安全区域。
@@ -937,7 +938,7 @@ HRESULT GetIsDirty() const;
 HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果为具有属性的所有元素显示标志符号，则为 TRUE `styleFloat` ;如果不显示标志符号，则为 FALSE。
@@ -958,7 +959,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 HRESULT GetShowAllTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示字形以显示文档中所有标记的位置，则为 TRUE; 否则为 TRUE。如果不是，则为 FALSE。
@@ -979,7 +980,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 HRESULT GetShowAreaTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示区域标记的标志符号，则为 TRUE; 否则为 FALSE。
@@ -1000,7 +1001,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 HRESULT GetShowBRTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示 br 标记的标志符号，则为 TRUE; 否则为 FALSE。
@@ -1021,7 +1022,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 HRESULT GetShowCommentTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示注释标记的标志符号，则为 TRUE; 否则为 FALSE。
@@ -1042,7 +1043,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 HRESULT GetShowMiscTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示了 Microsoft Internet Explorer 4.0 中显示的所有标记，则为 TRUE; 否则为 FALSE。
@@ -1063,7 +1064,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 HRESULT GetShowScriptTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示所有脚本标记的标志符号，则为 TRUE; 否则为 FALSE。
@@ -1084,7 +1085,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 HRESULT GetShowStyleTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示所有样式标记的标志符号，则为 TRUE; 否则为 FALSE。
@@ -1105,7 +1106,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bCurValue*<br/>
 如果 WebBrowser 显示所有未知标记的标志符号，则为 TRUE; 否则为 FALSE。
@@ -1126,7 +1127,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szID*<br/>
 水平线的 ID。
@@ -1147,7 +1148,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szUrl*<br/>
 超链接 URL。
@@ -1168,7 +1169,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 HRESULT IE50Paste(LPCTSTR szData) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szData*<br/>
 要粘贴的字符串。
@@ -1189,7 +1190,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 HRESULT Iframe(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 内嵌帧的 ID。
@@ -1210,7 +1211,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 HRESULT Image(LPCTSTR szUrl = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szUrl*<br/>
 要插入的图像的路径和文件名。
@@ -1247,7 +1248,7 @@ HRESULT Indent() const;
 HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 框的 ID。
@@ -1268,7 +1269,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 按钮控件的 ID。
@@ -1289,7 +1290,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 隐藏控件的 ID。
@@ -1310,7 +1311,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 图像控件的 ID。
@@ -1331,7 +1332,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 密码控件的 ID。
@@ -1352,7 +1353,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 Reset 控件的 ID。
@@ -1373,7 +1374,7 @@ Reset 控件的 ID。
 HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 提交控件的 ID。
@@ -1394,7 +1395,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 文件上传控件的 ID。
@@ -1415,7 +1416,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 HRESULT Is1DElement(bool& bValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bValue*<br/>
 如果元素静态定位，则为 TRUE; 否则为 FALSE。
@@ -1436,7 +1437,7 @@ HRESULT Is1DElement(bool& bValue) const;
 HRESULT Is2DElement(bool& bValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bValue*<br/>
 如果元素绝对定位，则为 TRUE; 否则为 FALSE。
@@ -1521,7 +1522,7 @@ HRESULT JustifyRight() const;
 HRESULT ListBox(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 列表框控件的 ID。
@@ -1542,7 +1543,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 HRESULT Marquee(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 字幕的 ID。
@@ -1575,7 +1576,7 @@ HRESULT NewDocument() const;
 HRESULT OrderList(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 已排序列表的 ID。
@@ -1612,7 +1613,7 @@ HRESULT Outdent() const;
 HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 段落 ID。
@@ -1651,7 +1652,7 @@ HRESULT PrintDocument(LPCTSTR szPrintTemplate) const;
 HRESULT PrintDocument(bool bShowPrintDialog) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szPrintTemplate*<br/>
 打印模板的路径;如果未指定任何值，则使用默认的打印模板。
@@ -1676,7 +1677,7 @@ HRESULT PrintPreview() const;
 HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szPrintTemplate*<br/>
 打印模板的路径。
@@ -1697,7 +1698,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 long QueryStatus(long cmdID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 命令 ID。 命令标识符取自 CGID_MSHTML 命令组。 这些命令在 Mshtmcid 中定义。 你还可以在 [MSHTML 命令标识符](/previous-versions/aa741315(v=vs.85))上联机查找列表。
@@ -1714,7 +1715,7 @@ long QueryStatus(long cmdID) const;
 HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 单选按钮的 ID。
@@ -1767,7 +1768,7 @@ HRESULT RemoveFormat() const;
 HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szPath*<br/>
 要将网页保存到的路径和文件名。
@@ -1804,7 +1805,7 @@ HRESULT SelectAll() const;
 HRESULT Set2DPosition(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则可以通过拖动移动绝对定位的元素。
@@ -1825,7 +1826,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 HRESULT SetAbsolutePosition(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则元素的位置属性为 "绝对";如果为 FALSE，则为 "static"。
@@ -1846,7 +1847,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 HRESULT SetAtomicSelection(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则将 ATOMICSELECTION 特性设置为 TRUE 的任何元素将仅作为一个单元进行选择。
@@ -1867,7 +1868,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则启用自动 URL 检测。
@@ -1889,7 +1890,7 @@ HRESULT SetBackColor(int nColor) const;
 HRESULT SetBackColor(LPCTSTR szColor) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColor*<br/>
 颜色。 请参阅 [IDM_BACKCOLOR 命令 ID](/previous-versions/aa769858\(v=vs.85\))中的 *pvaIn* 。
@@ -1913,7 +1914,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szFormat*<br/>
 格式标记。
@@ -1934,7 +1935,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szAnchorName*<br/>
 定位点名称。
@@ -1955,7 +1956,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 HRESULT SetCSSEditingLevel(short nLevel) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLevel*<br/>
 CSS 级别。 如果不想要支持 CSS，请传递0。
@@ -1983,7 +1984,7 @@ HRESULT SetDefaultComposeSettings(
     bool bUnderline = false) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szFontName*<br/>
 字体名称。
@@ -2022,7 +2023,7 @@ HRESULT SetDefaultComposeSettings(
 BOOL SetDesignMode(BOOL bMode) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bMode*<br/>
 如果为 TRUE，则打开设计模式。
@@ -2039,7 +2040,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则在设计模式下元素具有 "编辑焦点" 时禁用可选择元素周围的阴影线边框和句柄;也就是说，可以编辑元素的文本或内容。
@@ -2060,7 +2061,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szHTML*<br/>
 HTML。
@@ -2077,7 +2078,7 @@ HTML。
 HRESULT SetFontFace(LPCTSTR szFace) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szFace*<br/>
 字体名称。
@@ -2098,7 +2099,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 HRESULT SetFontSize(unsigned short size) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 HTML 字号 (1-7) 。 值0将字体大小设置为1。
@@ -2120,7 +2121,7 @@ HRESULT SetForeColor(LPCTSTR szColor) const;
 HRESULT SetForeColor(int nColor) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szColor*<br/>
 颜色。
@@ -2144,7 +2145,7 @@ HRESULT SetForeColor(int nColor) const;
 HRESULT SetIE5PasteMode(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则所有粘贴操作都与 Internet Explorer 5 兼容;如果为 FALSE，则粘贴操作与 Internet Explorer 5.5 兼容。
@@ -2165,7 +2166,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 HRESULT SetLiveResize(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则在调整大小或移动操作过程中，会导致 WebBrowser 连续更新元素的外观;如果为 FALSE，则仅在移动或调整大小完成时更新。
@@ -2186,7 +2187,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 HRESULT SetMultiSelect(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则允许在用户按住 SHIFT 或 CTRL 键的同时选择多个站点可选择的元素。
@@ -2207,7 +2208,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 HRESULT SetOverrideCursor(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则 WebBrowser 不会更改鼠标指针。
@@ -2228,7 +2229,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 HRESULT SetOverwriteMode(bool bMode) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bMode*<br/>
 如果为 TRUE，则文本输入模式为 overwrite;如果为 FALSE，则文本输入模式为 insert。
@@ -2249,7 +2250,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则将可见性设置为 "hidden" 或显示属性设置为 "none" 的任何元素都不会在设计模式和浏览模式下显示;如果为 FALSE，则仅在浏览模式下显示这些元素。
@@ -2270,7 +2271,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示具有属性的所有元素的标志符号 `styleFloat` 。
@@ -2291,7 +2292,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 HRESULT SetShowAllTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示字形以显示文档中所有标记的位置。
@@ -2312,7 +2313,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 HRESULT SetShowAreaTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示所有区域标记的标志符号。
@@ -2333,7 +2334,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 HRESULT SetShowBRTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示所有 br 标记的标志符号。
@@ -2354,7 +2355,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 HRESULT SetShowCommentTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示所有注释标记的标志符号。
@@ -2375,7 +2376,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 HRESULT SetShowMiscTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示在 Microsoft Internet Explorer 4.0 中显示的所有标记。
@@ -2396,7 +2397,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 HRESULT SetShowScriptTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示所有脚本标记的标志符号。
@@ -2417,7 +2418,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 HRESULT SetShowStyleTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示所有样式标记的标志符号。
@@ -2438,7 +2439,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 HRESULT SetShowUnknownTags(bool bNewValue) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNewValue*<br/>
 如果为 TRUE，则显示所有未知标记的标志符号。
@@ -2459,7 +2460,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 HRESULT TextArea(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 多行文本输入控件的 ID。
@@ -2480,7 +2481,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 HRESULT TextBox(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 文本控件的 ID。
@@ -2549,7 +2550,7 @@ HRESULT Unlink() const;
 HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 无序列表的 ID。
@@ -2562,7 +2563,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 此方法将 [IDM_UNORDERLIST 命令 ID](/previous-versions/aa769987\(v=vs.85\)) 发送到 WebBrowser 控件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [HTMLEdit 示例](../../overview/visual-cpp-samples.md)

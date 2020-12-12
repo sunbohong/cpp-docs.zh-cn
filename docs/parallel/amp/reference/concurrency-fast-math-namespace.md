@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息： Concurrency：： fast_math 命名空间
 title: Concurrency::fast_math 命名空间
 ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 6ed8dcfa2faff49e8811769b76aad9df15b2fe7b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 99638e3d8b0a452774d1e92d408ce3edddfa861c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122364"
 ---
 # <a name="concurrencyfast_math-namespace"></a>Concurrency::fast_math 命名空间
 
-命名空间中的函数 `fast_math` 的准确性较低，仅支持单精度（ **`float`** ），并调用 DirectX 内部函数。 每个函数都有两个版本，例如 `cos` 和 `cosf` 。 这两个版本都采用并返回 **`float`** ，但每个版本都调用相同的 DirectX 内部函数。
+命名空间中的函数 `fast_math` 的准确性较低，仅支持单精度 (**`float`**) ，并调用 DirectX 内部函数。 每个函数都有两个版本，例如 `cos` 和 `cosf` 。 这两个版本都采用并返回 **`float`** ，但每个版本都调用相同的 DirectX 内部函数。
 
 ## <a name="syntax"></a>语法
 
@@ -25,7 +26,7 @@ namespace fast_math;
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[缆](concurrency-fast-math-namespace-functions.md#cos)|计算参数的反余弦|
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|计算参数的反余弦|
@@ -47,7 +48,7 @@ namespace fast_math;
 |[expf](concurrency-fast-math-namespace-functions.md#expf)|计算自变量的以 e 为底的指数|
 |[fabs](concurrency-fast-math-namespace-functions.md#fabs)|返回参数的绝对值。|
 |[fabsf](concurrency-fast-math-namespace-functions.md#fabsf)|返回参数的绝对值。|
-|[突破](concurrency-fast-math-namespace-functions.md#floor)|计算参数的下限|
+|[floor](concurrency-fast-math-namespace-functions.md#floor)|计算参数的下限|
 |[floorf](concurrency-fast-math-namespace-functions.md#floorf)|计算参数的下限|
 |[fmax](concurrency-fast-math-namespace-functions.md#fmax)|确定参数的最大数值|
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|确定参数的最大数值|
@@ -99,6 +100,6 @@ namespace fast_math;
 
 **命名空间：** Concurrency：： fast_math
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[并发命名空间（C++ AMP）](concurrency-namespace-cpp-amp.md)
+[并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

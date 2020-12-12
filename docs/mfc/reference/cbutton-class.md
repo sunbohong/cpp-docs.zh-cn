@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CButton 类
 title: CButton 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -74,12 +75,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 7e2156c7fba6d5c621ab9e73b4739be45941fcc5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: af7b9bec8298942bcb414e83be24257dd62652cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561981"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122572"
 ---
 # <a name="cbutton-class"></a>CButton 类
 
@@ -95,13 +96,13 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CButton：： CButton](#cbutton)|构造 `CButton` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CButton：： Create](#create)|创建 Windows 按钮控件并将其附加到 `CButton` 对象。|
 |[CButton：:D rawItem](#drawitem)|重写以绘制所有者描述的 `CButton` 对象。|
@@ -153,7 +154,7 @@ class CButton : public CWnd
 
 每个消息映射项都采用以下形式：
 
-**开启 \_ **_通知_ ** (** _id_， _memberFxn_ **) **
+**开启 \_**_通知_ **(** _id_， _memberFxn_ **)**
 
 其中， *id* 指定发送通知的控件的子窗口 Id， *memberFxn* 是您已编写的用于处理通知的父成员函数的名称。
 
@@ -211,7 +212,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCaption*<br/>
 指定按钮控件的文本。
@@ -262,7 +263,7 @@ virtual BOOL Create(
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
 指向 [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 结构的长指针。 结构包含有关要绘制的项的信息以及所需的绘图类型。
@@ -373,7 +374,7 @@ HICON GetIcon() const;
 BOOL GetIdealSize(SIZE* psize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *psize*<br/>
 指向按钮当前大小的指针。
@@ -394,7 +395,7 @@ BOOL GetIdealSize(SIZE* psize);
 BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbuttonImagelist*<br/>
 指向对象的图像列表的指针 `CButton` 。
@@ -419,7 +420,7 @@ BOOL GetNote(
     UINT* cchNote) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszNote*\
 弄指向缓冲区的指针，调用方负责分配和解除分配。 如果返回值为 TRUE，则缓冲区包含与当前命令链接控件关联的注释文本;否则，缓冲区将保持不变。
@@ -505,7 +506,7 @@ CImageList* GetSplitImageList() const;
 BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pInfo*\
 弄指向 [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 结构的指针，该结构接收当前拆分按钮控件的相关信息。 调用方负责分配结构。
@@ -528,7 +529,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 BOOL GetSplitSize(LPSIZE pSize) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSize*\
 弄指向接收矩形说明的 [大小](/windows/win32/api/windef/ns-windef-size) 结构的指针。
@@ -577,7 +578,7 @@ UINT GetState() const;
 
 一个位域，其中包含指示按钮控件的当前状态的值的组合。 下表列出了可能的值。
 
-|按钮状态|值|说明|
+|按钮状态|值|描述|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|初始状态。|
 |BST_CHECKED|0x0001|按钮控件处于选中状态。|
@@ -601,7 +602,7 @@ UINT GetState() const;
 BOOL GetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pmargin*<br/>
 指向对象的文本边距的指针 `CButton` 。
@@ -626,7 +627,7 @@ BOOL GetTextMargin(RECT* pmargin);
 HBITMAP SetBitmap(HBITMAP hBitmap);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hBitmap*<br/>
 位图的句柄。
@@ -669,7 +670,7 @@ void SetButtonStyle(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStyle*<br/>
 指定 [按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。
@@ -693,7 +694,7 @@ void SetButtonStyle(
 void SetCheck(int nCheck);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *n*<br/>
 指定复选状态。 此参数可以是以下项之一：
@@ -720,7 +721,7 @@ void SetCheck(int nCheck);
 HCURSOR SetCursor(HCURSOR hCursor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hCursor*<br/>
 游标的句柄。
@@ -759,7 +760,7 @@ HCURSOR SetCursor(HCURSOR hCursor);
 BOOL SetDropDownState(BOOL fDropDown);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fDropDown*\
 中若要设置 BST_DROPDOWNPUSHED 状态，则为 TRUE;否则为 FALSE。
@@ -794,7 +795,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 BOOL SetElevationRequired(BOOL fElevationRequired);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fElevationRequired*\
 中如果设置状态，则为 TRUE `elevation required` ; 否则为 FALSE。
@@ -817,7 +818,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 HICON SetIcon(HICON hIcon);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hIcon*<br/>
 图标的句柄。
@@ -856,7 +857,7 @@ HICON SetIcon(HICON hIcon);
 BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbuttonImagelist*<br/>
 指向新图像列表的指针。
@@ -877,7 +878,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 BOOL SetNote(LPCTSTR lpszNote);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszNote*\
 中指向设置为命令链接控件的注释文本的 Unicode 字符串的指针。
@@ -912,7 +913,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 BOOL SetSplitGlyph(TCHAR chGlyph);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *chGlyph*\
 中一个字符，指定用作拆分按钮下拉箭头的标志符号。
@@ -925,9 +926,9 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 仅将此方法用于按钮样式 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
-标志符号是特定字体中的字符的物理表示形式。 *ChGlyph*参数不用作标志符号，而是用于从一组系统定义的标志符号中选择一个标志符号。 默认的下拉箭头标志符号由字符 "6" 指定，类似于 Unicode 字符黑色下指三角形 (U + 25BC) 。
+标志符号是特定字体中的字符的物理表示形式。 *ChGlyph* 参数不用作标志符号，而是用于从一组系统定义的标志符号中选择一个标志符号。 默认的下拉箭头标志符号由字符 "6" 指定，类似于 Unicode 字符黑色下指三角形 (U + 25BC) 。
 
-此方法 `mask` 使用 BCSIF_GLYPH 标志和具有 chGlyph 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `himlGlyph` ，然后*chGlyph*将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
+此方法 `mask` 使用 BCSIF_GLYPH 标志和具有 chGlyph 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `himlGlyph` ，然后将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
 
 ## <a name="cbuttonsetsplitimagelist"></a><a name="setsplitimagelist"></a> CButton：： SetSplitImageList
 
@@ -937,7 +938,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 BOOL SetSplitImageList(CImageList* pSplitImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSplitImageList*\
 中指向要分配给当前拆分按钮控件的 [CImageList](../../mfc/reference/cimagelist-class.md) 对象的指针。
@@ -950,7 +951,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 仅将此方法用于按钮样式为 BS_SPLITBUTTON 或 BS_DEFSPLITBUTTON 的控件。
 
-此方法 `mask` 使用 BCSIF_IMAGE 标志和具有 pSplitImageList 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `himlGlyph` ，然后*pSplitImageList*将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
+此方法 `mask` 使用 BCSIF_IMAGE 标志和具有 pSplitImageList 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `himlGlyph` ，然后将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
 
 ## <a name="cbuttonsetsplitinfo"></a><a name="setsplitinfo"></a> CButton：： SetSplitInfo
 
@@ -960,7 +961,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pInfo*\
 中指向定义当前拆分按钮控件的 [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 结构的指针。
@@ -995,7 +996,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 BOOL SetSplitSize(LPSIZE pSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSize*\
 中指向描述边框的 [大小](/windows/win32/api/windef/ns-windef-size) 结构的指针。
@@ -1010,7 +1011,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 展开拆分按钮控件后，它可以显示一个下拉组件，如列表控件或页导航控件。 此方法指定包含下拉组件的边框的大小。
 
-此方法 `mask` 使用 BCSIF_SIZE 标志和具有 pSize 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `size` ，然后*pSize*将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
+此方法 `mask` 使用 BCSIF_SIZE 标志和具有 pSize 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `size` ，然后将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
 
 ### <a name="example"></a>示例
 
@@ -1032,7 +1033,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 BOOL SetSplitStyle(UINT uSplitStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uSplitStyle*\
 中拆分按钮样式的按位组合。 有关详细信息，请参阅 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 结构的成员。
@@ -1047,7 +1048,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 拆分按钮样式指定 Windows 用于绘制拆分按钮图标的对齐方式、纵横比和图形格式。 有关详细信息，请参阅 `uSplitStyle` [BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo) 结构的成员。
 
-此方法 `mask` 使用 BCSIF_STYLE 标志和具有 uSplitStyle 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `uSplitStyle` ，然后*uSplitStyle*将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
+此方法 `mask` 使用 BCSIF_STYLE 标志和具有 uSplitStyle 参数的成员初始化[BUTTON_SPLITINFO](/windows/win32/api/commctrl/ns-commctrl-button_splitinfo)结构的成员 `uSplitStyle` ，然后将该结构发送到 Windows SDK 中描述的[BCM_GETSPLITINFO](/windows/win32/Controls/bcm-getsplitinfo)消息。
 
 ### <a name="example"></a>示例
 
@@ -1069,7 +1070,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 void SetState(BOOL bHighlight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bHighlight*<br/>
 指定是否突出显示该按钮。 非零值突出显示按钮;0值会删除任何突出显示。
@@ -1092,7 +1093,7 @@ void SetState(BOOL bHighlight);
 BOOL SetTextMargin(RECT* pmargin);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pmargin*<br/>
 指向新文本边距的指针。
@@ -1105,7 +1106,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 此成员函数模拟 BCM_SETTEXTMARGIN 消息的功能，如 Windows SDK 的 " [按钮](/windows/win32/controls/buttons) " 一节中所述。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

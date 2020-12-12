@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Concurrency：： fast_math 命名空间函数
 title: Concurrency::fast_math 命名空间函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,12 +47,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: ff919016449723ad67e029a249ec222ccf1fe6a4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aef9b660b0f707baeb0b7b87da520a0510f89cc2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97122429"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Concurrency::fast_math 命名空间函数
 
@@ -139,7 +140,7 @@ ms.locfileid: "88831055"
 inline float acos(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -156,7 +157,7 @@ inline float acos(float _X) restrict(amp);
 inline float acosf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -173,7 +174,7 @@ inline float acosf(float _X) restrict(amp);
 inline float asin(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -190,7 +191,7 @@ inline float asin(float _X) restrict(amp);
 inline float asinf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -207,7 +208,7 @@ inline float asinf(float _X) restrict(amp);
 inline float atan(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -226,7 +227,7 @@ inline float atan2(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Y*<br/>
 浮点值
@@ -248,7 +249,7 @@ inline float atan2f(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Y*<br/>
 浮点值
@@ -268,7 +269,7 @@ inline float atan2f(
 inline float atanf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -285,7 +286,7 @@ inline float atanf(float _X) restrict(amp);
 inline float ceil(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -302,7 +303,7 @@ inline float ceil(float _X) restrict(amp);
 inline float ceilf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -319,7 +320,7 @@ inline float ceilf(float _X) restrict(amp);
 inline float cosf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -336,7 +337,7 @@ inline float cosf(float _X) restrict(amp);
 inline float coshf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -353,7 +354,7 @@ inline float coshf(float _X) restrict(amp);
 inline float cos(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -370,7 +371,7 @@ inline float cos(float _X) restrict(amp);
 inline float cosh(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -387,7 +388,7 @@ inline float cosh(float _X) restrict(amp);
 inline float exp(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -404,7 +405,7 @@ inline float exp(float _X) restrict(amp);
 inline float exp2(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -421,7 +422,7 @@ inline float exp2(float _X) restrict(amp);
 inline float exp2f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -438,7 +439,7 @@ inline float exp2f(float _X) restrict(amp);
 inline float expf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -455,7 +456,7 @@ inline float expf(float _X) restrict(amp);
 inline float fabs(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -472,7 +473,7 @@ inline float fabs(float _X) restrict(amp);
 inline float fabsf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -489,7 +490,7 @@ inline float fabsf(float _X) restrict(amp);
 inline float floor(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -506,7 +507,7 @@ inline float floor(float _X) restrict(amp);
 inline float floorf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -525,7 +526,7 @@ inline float max(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -547,7 +548,7 @@ inline float fmaxf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -569,7 +570,7 @@ inline float min(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -591,7 +592,7 @@ inline float fminf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -613,7 +614,7 @@ inline float fmod(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -635,7 +636,7 @@ inline float fmodf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -657,7 +658,7 @@ inline float frexp(
     _Out_ int* _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -679,7 +680,7 @@ inline float frexpf(
     _Out_ int* _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -699,7 +700,7 @@ inline float frexpf(
 inline int isfinite(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -716,7 +717,7 @@ inline int isfinite(float _X) restrict(amp);
 inline int isinf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -733,7 +734,7 @@ inline int isinf(float _X) restrict(amp);
 inline int isnan(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -752,7 +753,7 @@ inline float ldexp(
     int _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值，尾数
@@ -774,7 +775,7 @@ inline float ldexpf(
     int _Exp) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值，尾数
@@ -794,7 +795,7 @@ inline float ldexpf(
 inline float log(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -811,7 +812,7 @@ inline float log(float _X) restrict(amp);
 inline float log10(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -828,7 +829,7 @@ inline float log10(float _X) restrict(amp);
 inline float log10f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -845,7 +846,7 @@ inline float log10f(float _X) restrict(amp);
 inline float log2(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -862,7 +863,7 @@ inline float log2(float _X) restrict(amp);
 inline float log2f(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -879,7 +880,7 @@ inline float log2f(float _X) restrict(amp);
 inline float logf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -898,7 +899,7 @@ inline float modf(
     float* _Ip) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -920,7 +921,7 @@ inline float modff(
     float* _Ip) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -942,7 +943,7 @@ inline float pow(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值，底数
@@ -964,7 +965,7 @@ inline float powf(
     float _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值，底数
@@ -982,7 +983,7 @@ inline float powf(
 inline float round(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -999,7 +1000,7 @@ inline float round(float _X) restrict(amp);
 inline float roundf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1016,7 +1017,7 @@ inline float roundf(float _X) restrict(amp);
 inline float rsqrt(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1033,7 +1034,7 @@ inline float rsqrt(float _X) restrict(amp);
 inline float rsqrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1050,7 +1051,7 @@ inline float rsqrtf(float _X) restrict(amp);
 inline int signbit(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1067,7 +1068,7 @@ inline int signbit(float _X) restrict(amp);
 inline int signbitf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1084,7 +1085,7 @@ inline int signbitf(float _X) restrict(amp);
 inline float sin(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1101,7 +1102,7 @@ inline float sin(float _X) restrict(amp);
 inline float sinf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1121,7 +1122,7 @@ inline void sincos(
     float* _C) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1143,7 +1144,7 @@ inline void sincosf(
     float* _C) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1162,7 +1163,7 @@ inline void sincosf(
 inline float sinh(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1179,7 +1180,7 @@ inline float sinh(float _X) restrict(amp);
 inline float sinhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1196,7 +1197,7 @@ inline float sinhf(float _X) restrict(amp);
 inline float sqrt(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1213,7 +1214,7 @@ inline float sqrt(float _X) restrict(amp);
 inline float sqrtf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1230,7 +1231,7 @@ inline float sqrtf(float _X) restrict(amp);
 inline float tan(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1247,7 +1248,7 @@ inline float tan(float _X) restrict(amp);
 inline float tanf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1264,7 +1265,7 @@ inline float tanf(float _X) restrict(amp);
 inline float tanh(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1281,7 +1282,7 @@ inline float tanh(float _X) restrict(amp);
 inline float tanhf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1298,7 +1299,7 @@ inline float tanhf(float _X) restrict(amp);
 inline float trunc(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1315,7 +1316,7 @@ inline float trunc(float _X) restrict(amp);
 inline float truncf(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -1328,6 +1329,6 @@ inline float truncf(float _X) restrict(amp);
 
 **标头：** Amp_math **命名空间：** Concurrency：： fast_math
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::fast_math 命名空间](concurrency-fast-math-namespace.md)
