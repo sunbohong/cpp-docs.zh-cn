@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：提供 Flicker-Free 激活
 title: 提供无闪烁激活
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,22 +7,22 @@ helpviewer_keywords:
 - flicker, MFC ActiveX controls
 - activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
-ms.openlocfilehash: fad24d6201260e87ff32436752a9fbf035e822ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0af1ccdd4795f55296ff38e0e74bc6492f79eb1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248822"
 ---
 # <a name="providing-flicker-free-activation"></a>提供无闪烁激活
 
-如果控件绘制自身相同处于非活动和活动状态 （和不使用无窗口激活），则可以消除绘制操作和进行非活动状态之间转换时，通常会发生随附 visual 闪烁和活动状态。 若要执行此操作，包括**noFlickerActivate**标志的标志返回的集中[colecontrol:: Getcontrolflags](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如：
+如果控件在非活动 (状态和活动状态下都以相同的方式绘制，并且不使用无窗口激活) ，则可以消除绘图操作和伴随的视觉闪烁，这种情况通常会在非活动状态和活动状态之间进行转换时出现。 为此，请在 [COleControl：： GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)返回的一组标志中包含 **noFlickerActivate** 标志。 例如：
 
 [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]
 [!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]
 [!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-flicker-free-activation_3.cpp)]
 
-如果你选择自动生成代码以包括此标志**无闪烁激活**选项卡上[控制设置](../mfc/reference/control-settings-mfc-activex-control-wizard.md)页面时使用 MFC ActiveX 控件向导创建您的控件。
+如果在通过 MFC ActiveX 控件向导创建控件时在 "[控件设置](../mfc/reference/control-settings-mfc-activex-control-wizard.md)" 页上选择 "**无闪烁激活**" 选项，则会自动生成包含此标志的代码。
 
 如果使用无窗口激活，则此优化不起作用。
 

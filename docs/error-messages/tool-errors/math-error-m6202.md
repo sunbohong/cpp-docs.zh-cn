@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：数学错误 M6202
 title: 数学错误 M6202
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - M6202
 ms.assetid: 4d17045f-c6dc-4705-9512-e9af12c35fb4
-ms.openlocfilehash: b8a3a4ab87a410c4cee8f7e4a1a0517c169d0364
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f6d4c9c8abab59708854eaac6763181018f47473
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80173655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244298"
 ---
 # <a name="math-error-m6202"></a>数学错误 M6202
 
@@ -19,4 +20,4 @@ ms.locfileid: "80173655"
 
 给定函数的参数是此函数的奇点值。 未为该参数定义函数。
 
-此错误将调用具有函数名称、其参数和错误类型的 `_matherr` 函数。 您可以重写 `_matherr` 函数，以自定义对某些运行时浮点算术错误的处理。
+此错误将调用函数 `_matherr` ，其函数名称、参数的参数和错误类型。 您可以重写此 `_matherr` 函数，以自定义对某些运行时浮点算术错误的处理。

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDateTimeCtrl 类
 title: CDateTimeCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: f04cce93aa6a86d11c2d9ec953992a0f90f635c5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: cfed57d74e16f8433a5199ca912379b90a4f48cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247925"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 类
 
@@ -61,13 +62,13 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDateTimeCtrl：： CDateTimeCtrl](#cdatetimectrl)|构造 `CDateTimeCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDateTimeCtrl：： CloseMonthCal](#closemonthcal)|关闭当前日期和时间选取器控件。|
 |[CDateTimeCtrl：： Create](#create)|创建日期和时间选取器控件，并将其附加到 `CDateTimeCtrl` 对象。|
@@ -152,7 +153,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定日期时间控件样式的组合。 有关日期和时间选择器样式的详细信息，请参阅 [日期和时间选取器控件 Windows SDK 样式](/windows/win32/Controls/date-and-time-picker-control-styles) 。
@@ -192,7 +193,7 @@ virtual BOOL Create(
 BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDateTimePickerInfo*\
 弄指向 [DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo) 结构的指针，该结构接收当前日期和时间选取器控件的说明。 调用方负责分配此结构。 但是，此方法初始化结构的 *cbSize* 成员。
@@ -225,10 +226,10 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 COLORREF GetMonthCalColor(int iColor) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iColor*<br/>
-一个 **`int`** 值，该值指定要检索的月历的颜色区域。 有关值的列表，请参阅[SetMonthCalColor](#setmonthcalcolor)的*iColor*参数。
+一个 **`int`** 值，该值指定要检索的月历的颜色区域。 有关值的列表，请参阅 [SetMonthCalColor](#setmonthcalcolor)的 *iColor* 参数。
 
 ### <a name="return-value"></a>返回值
 
@@ -308,7 +309,7 @@ DWORD GetRange(
     CTime* pMaxRange) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMinRange*<br/>
 指向 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 对象或 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 对象的指针，该对象包含对象中允许的最早时间 `CDateTimeCtrl` 。
@@ -346,7 +347,7 @@ DWORD GetTime(CTime& timeDest) const;
 DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *timeDest*<br/>
 在第一个版本中，是对将接收系统时间信息的 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 对象的引用。 在第二个版本中，是对将接收系统时间信息的 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 对象的引用。
@@ -356,13 +357,13 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 
 ### <a name="return-value"></a>返回值
 
-在第一个版本中，如果成功将时间写入对象，则 `COleDateTime` 为非零值; 否则为0。 在第二个和第三个版本中，DWORD 值等于[NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange)结构中的*dwFlag*成员集。 有关详细信息，请参阅下面的 " **备注** " 部分。
+在第一个版本中，如果成功将时间写入对象，则 `COleDateTime` 为非零值; 否则为0。 在第二个和第三个版本中，DWORD 值等于 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange)结构中的 *dwFlag* 成员集。 有关详细信息，请参阅下面的 " **备注** " 部分。
 
 ### <a name="remarks"></a>备注
 
 此成员函数实现 Win32 消息 [DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime)的行为，如 Windows SDK 中所述。 在的 MFC 实现中 `GetTime` ，您可以使用 `COleDateTime` 或 `CTime` 类，也可以使用 `SYSTEMTIME` 结构来存储时间信息。
 
-在第二个和第三个版本中，上述第二个和第三个版本中的返回值 DWORD 指示日期和时间选取器控件是否设置为 "no date" 状态，如 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) 结构成员 *dwFlags*中所示。 如果返回的值等于 GDT_NONE，则控件设置为 "无日期" 状态，并使用 DTS_SHOWNONE 样式。 如果返回的值等于 GDT_VALID，则系统时间将成功存储在目标位置。
+在第二个和第三个版本中，上述第二个和第三个版本中的返回值 DWORD 指示日期和时间选取器控件是否设置为 "no date" 状态，如 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) 结构成员 *dwFlags* 中所示。 如果返回的值等于 GDT_NONE，则控件设置为 "无日期" 状态，并使用 DTS_SHOWNONE 样式。 如果返回的值等于 GDT_VALID，则系统时间将成功存储在目标位置。
 
 ### <a name="example"></a>示例
 
@@ -376,7 +377,7 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 BOOL GetIdealSize(LPSIZE psize) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *psize*\
 弄指向包含控件理想大小的 [大小](/windows/win32/api/windef/ns-windef-size) 结构的指针。
@@ -409,7 +410,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 BOOL SetFormat(LPCTSTR pstrFormat);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrFormat*<br/>
 指向以零结尾的格式字符串的指针，该字符串定义所需的显示。 如果将此参数设置为 NULL，则会将控件重置为当前样式的默认格式字符串。
@@ -439,7 +440,7 @@ COLORREF SetMonthCalColor(
     COLORREF ref);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iColor*<br/>
 **`int`** 值，该值指定要设置月历控件的哪个区域。 此值可以是下列值之一。
@@ -478,7 +479,7 @@ void SetMonthCalFont(
     BOOL bRedraw = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hFont*<br/>
 要设置的字体的句柄。
@@ -505,7 +506,7 @@ void SetMonthCalFont(
 DWORD SetMonthCalStyle(DWORD dwStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*\
 中新的月历控件样式，它是月历控件样式的按位组合 (或) 。 有关详细信息，请参阅 [月历控件样式](/windows/win32/Controls/month-calendar-control-styles)。
@@ -544,7 +545,7 @@ BOOL SetRange(
     const CTime* pMaxRange);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMinRange*<br/>
 指向 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 对象或 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 对象的指针，该对象包含对象中允许的最早时间 `CDateTimeCtrl` 。
@@ -574,7 +575,7 @@ BOOL SetTime(const CTime* pTimeNew);
 BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *timeNew*<br/>
 对 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 对象的引用，该对象包含将设置控件的。
@@ -594,7 +595,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDaoWorkspace 类
 title: CDaoWorkspace 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -62,12 +63,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: eea3fb29f219890ebe596c5d8109257e9d422054
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 73236019db3ecf4a79ef93e19a55d909e6e0d61d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247991"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 类
 
@@ -83,13 +84,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|构造工作区对象。 之后，调用 `Create` 或 `Open` 。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDaoWorkspace：： Append](#append)|将新创建的工作区追加到数据库引擎的工作区集合。|
 |[CDaoWorkspace：： BeginTrans](#begintrans)|开始一个新事务，该事务应用于工作区中打开的所有数据库。|
@@ -120,11 +121,11 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CDaoWorkspace：： m_pDAOWorkspace](#m_pdaoworkspace)|指向基础 DAO 工作区对象。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 在大多数情况下，你将不需要多个工作区，并且无需创建显式工作区对象;打开数据库和记录集对象时，它们使用 DAO 的默认工作区。 但是，如果需要，可以通过创建其他工作区对象一次运行多个会话。 每个工作区对象可以在其自身的数据库集合中包含多个打开的数据库对象。 在 MFC 中，工作区主要是一种事务管理器，它在同一 "事务空间" 中指定一组打开的数据库。
 
@@ -201,7 +202,7 @@ MFC 在下列情况下隐式使用 DAO 的默认工作区：
 virtual void Append();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `Append` 将新创建的工作区对象追加到数据库引擎的工作区集合。 工作区不会在数据库引擎会话之间保持不变;它们仅存储在内存中，而不是存储在磁盘上。 你不必追加工作区;否则，仍然可以使用它。
 
@@ -217,7 +218,7 @@ virtual void Append();
 void BeginTrans();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用后 `BeginTrans` ，您对数据或数据库结构所做的更新将在提交事务时生效。 由于工作区定义了单个事务空间，因此该事务适用于工作区中的所有打开的数据库。 可以通过两种方法来完成事务：
 
@@ -237,7 +238,7 @@ void BeginTrans();
 CDaoWorkspace();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造 c + + 对象后，可以使用两个选项：
 
@@ -257,7 +258,7 @@ CDaoWorkspace();
 virtual void Close();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 关闭打开的工作区对象会释放基础 DAO 对象，如果工作区是工作区集合的成员，则会将其从集合中移除。 调用 `Close` 是良好的编程做法。
 
@@ -276,7 +277,7 @@ virtual void Close();
 void CommitTrans();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 事务由一系列对数据库数据或其结构的更改（从对 [BeginTrans](#begintrans)的调用开始）组成。 完成事务后，提交或回滚事务 (取消) 与 [回滚](#rollback)的更改。 默认情况下，如果没有事务，将立即提交记录更新。 调用 `BeginTrans` 会导致将更新提交到延迟，直到调用 `CommitTrans` 。
 
@@ -307,19 +308,19 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSrcName*<br/>
 现有的已关闭数据库的名称。 它可以是完整路径和文件名，如 "C： \\ \MYDB。MDB "。 如果文件名有扩展名，则必须指定扩展名。 如果你的网络支持 (UNC) 的统一命名约定，则还可以指定网络路径，例如 " \\ \\ \\ \MYSERVER \\ \MYSHARE \\ \MYDIR \\ \MYDB。MDB "。 路径字符串中需要 (双反斜杠，因为 " \\ " 是 c + + 转义符。 ) 
 
 *lpszDestName*<br/>
-正在创建的压缩数据库的完整路径。 还可以指定与 *lpszSrcName*的网络路径。 不能使用 *lpszDestName* 参数指定与 *lpszSrcName*相同的数据库文件。
+正在创建的压缩数据库的完整路径。 还可以指定与 *lpszSrcName* 的网络路径。 不能使用 *lpszDestName* 参数指定与 *lpszSrcName* 相同的数据库文件。
 
 *lpszPassword*<br/>
 一个密码，在你想要压缩受密码保护的数据库时使用。 请注意，如果您使用的版本 `CompactDatabase` 采用密码，则必须提供所有参数。 此外，由于这是一个连接参数，它需要特殊格式，如下所示：;PWD = *lpszPassword*。 例如：;PWD = "满意"。 需要 (前导分号。 ) 
 
 *lpszLocale*<br/>
-用于指定创建 *lpszDestName*的排序顺序的字符串表达式。 如果通过接受下面)  (的默认值来省略此参数 `dbLangGeneral` ，则新数据库的区域设置与旧数据库的区域设置相同。 可能的值包括：
+用于指定创建 *lpszDestName* 的排序顺序的字符串表达式。 如果通过接受下面)  (的默认值来省略此参数 `dbLangGeneral` ，则新数据库的区域设置与旧数据库的区域设置相同。 可能的值为：
 
 - `dbLangGeneral` 英语、德语、法语、葡萄牙语、意大利语和新式西班牙语
 
@@ -352,7 +353,7 @@ static void PASCAL CompactDatabase(
 - `dbLangTurkish` 土耳其语
 
 *nOptions*<br/>
-指示目标数据库的一个或多个选项， *lpszDestName*。 如果通过接受默认值来省略此参数，则 *lpszDestName* 将具有与 *lpszSrcName*相同的加密和版本。 您可以 `dbEncrypt` `dbDecrypt` 使用按位 "或" 运算符将或选项与其中一个版本选项组合在一起。 指定数据库格式的可能值（而不是数据库引擎版本）为：
+指示目标数据库的一个或多个选项， *lpszDestName*。 如果通过接受默认值来省略此参数，则 *lpszDestName* 将具有与 *lpszSrcName* 相同的加密和版本。 您可以 `dbEncrypt` `dbDecrypt` 使用按位 "或" 运算符将或选项与其中一个版本选项组合在一起。 指定数据库格式的可能值（而不是数据库引擎版本）为：
 
 - `dbEncrypt` 在压缩时加密数据库。
 
@@ -366,12 +367,12 @@ static void PASCAL CompactDatabase(
 
 - `dbVersion30` 在压缩时创建使用 Microsoft Jet 数据库引擎版本3.0 的数据库。
 
-您可以使用 `dbEncrypt` 或 `dbDecrypt` 在 options 参数中指定是否对数据库进行加密或解密。 如果省略了加密常数，或者同时包含 `dbDecrypt` 和，则 `dbEncrypt` *lpszDestName* 将具有与 *lpszSrcName*相同的加密。 您可以使用 options 参数中的一个版本常量来指定压缩数据库的数据格式版本。 此常量仅影响 *lpszDestName*的数据格式版本。 只能指定一个版本常量。 如果省略版本常量， *lpszDestName* 将具有与 *lpszSrcName*相同的版本。 只能将 *lpszDestName* 压缩到与 *lpszSrcName*的版本相同或更高的版本。
+您可以使用 `dbEncrypt` 或 `dbDecrypt` 在 options 参数中指定是否对数据库进行加密或解密。 如果省略了加密常数，或者同时包含 `dbDecrypt` 和，则 `dbEncrypt` *lpszDestName* 将具有与 *lpszSrcName* 相同的加密。 您可以使用 options 参数中的一个版本常量来指定压缩数据库的数据格式版本。 此常量仅影响 *lpszDestName* 的数据格式版本。 只能指定一个版本常量。 如果省略版本常量， *lpszDestName* 将具有与 *lpszSrcName* 相同的版本。 只能将 *lpszDestName* 压缩到与 *lpszSrcName* 的版本相同或更高的版本。
 
 > [!CAUTION]
 > 如果数据库未加密，即使您实现用户/密码安全，也可能会直接读取构成数据库的二进制磁盘文件。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 更改数据库中的数据时，数据库文件可能会成为碎片，并使用比所需的更多的磁盘空间。 应定期压缩数据库以对数据库文件进行碎片整理。 压缩的数据库通常较小。 您还可以选择在复制和压缩数据库时更改排序顺序、加密或数据格式的版本。
 
@@ -394,18 +395,18 @@ virtual void Create(
     LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 一个最多包含14个字符的字符串，用于唯一命名新的工作区对象。 必须提供名称。 有关相关信息，请参阅 DAO 帮助中的主题 "名称属性"。
 
 *lpszUserName*<br/>
-工作区所有者的用户名。 有关要求，请参阅[SetDefaultUser](#setdefaultuser)成员函数的*lpszDefaultUser*参数。 有关相关信息，请参阅 DAO 帮助中的主题 "UserName 属性"。
+工作区所有者的用户名。 有关要求，请参阅 [SetDefaultUser](#setdefaultuser)成员函数的 *lpszDefaultUser* 参数。 有关相关信息，请参阅 DAO 帮助中的主题 "UserName 属性"。
 
 *lpszPassword*<br/>
 新工作区对象的密码。 密码长度最大可为14个字符，并且可以包含除 ASCII 0 (空) 以外的任何字符。 密码是区分大小写的。 相关信息，请参阅 DAO 帮助中的 "Password 属性" 主题。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 总体创建过程如下：
 
@@ -429,7 +430,7 @@ short GetDatabaseCount();
 
 工作区中打开的数据库的数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `GetDatabaseCount` 如果需要循环遍历工作区的数据库集合中的所有已定义数据库，则此方法很有用。 若要获取有关集合中某个给定数据库的信息，请参阅 [oomads.getdatabaseinfo](#getdatabaseinfo)。 典型用法是调用 `GetDatabaseCount` 打开数据库的数目，然后将该数字用作循环索引，以便对的重复调用 `GetDatabaseInfo` 。
 
@@ -449,7 +450,7 @@ void GetDatabaseInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 工作区的数据库集合中数据库对象的从零开始的索引，用于按索引查找。
@@ -469,11 +470,11 @@ void GetDatabaseInfo(
 *lpszName*<br/>
 用于按名称查找的数据库对象的名称。 该名称是一个字符串，最多包含14个字符来唯一命名新的工作区对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数的一个版本允许您按索引查找数据库。 其他版本允许您按名称查找数据库。
 
-有关 *dbinfo*中返回的信息的说明，请参阅 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions*中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取任何以前的级别的信息。
+有关 *dbinfo* 中返回的信息的说明，请参阅 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions* 中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取任何以前的级别的信息。
 
 ## <a name="cdaoworkspacegetinipath"></a><a name="getinipath"></a> CDaoWorkspace::GetIniPath
 
@@ -487,7 +488,7 @@ static CString PASCAL GetIniPath();
 
 包含注册表位置的 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 您可以使用该位置获取有关数据库引擎设置的信息。 返回的信息实际上是注册表子项的名称。
 
@@ -505,7 +506,7 @@ BOOL GetIsolateODBCTrans();
 
 如果分离 ODBC 事务，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在某些情况下，您可能需要在同一个 ODBC 数据库上同时挂起多个事务。 为此，需要为每个事务打开一个单独的工作区。 请记住，尽管每个工作区都可以有自己的数据库的 ODBC 连接，但这会降低系统性能。 因为事务隔离通常不是必需的，所以，默认情况下共享来自同一用户打开的多个工作区对象的 ODBC 连接。
 
@@ -525,7 +526,7 @@ static short PASCAL GetLoginTimeout();
 
 尝试登录到 ODBC 数据库时出现错误之前等待的秒数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此值表示在尝试登录到 ODBC 数据库时出现错误之前等待的秒数。 默认的 LoginTimeout 设置为20秒。 如果将 LoginTimeout 设置为0，则不会发生超时，并且与数据源的通信可能会停止响应。
 
@@ -545,7 +546,7 @@ CString GetName();
 
 一个 [CString](../../atl-mfc-shared/reference/cstringt-class.md) ，其中包含 DAO 工作区对象的用户定义名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该名称可用于按名称访问数据库引擎的工作区集合中的 DAO 工作区对象。
 
@@ -563,7 +564,7 @@ CString GetUserName();
 
 一个 [CString](../../atl-mfc-shared/reference/cstringt-class.md) ，表示工作区对象的所有者。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 若要获取或设置工作区所有者的权限，请直接调用 DAO 来检查权限属性设置;这将确定用户拥有的权限。 若要处理权限，需要一个系统。MDA 文件。
 
@@ -581,7 +582,7 @@ static CString PASCAL GetVersion();
 
 一个 [CString](../../atl-mfc-shared/reference/cstringt-class.md) ，指示与对象关联的数据库引擎的版本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的值以 "主要. 次要" 格式表示版本号;例如 "3.0"。 产品版本号 (例如，3.0) 包含版本号 (3) 、句点和发布号 (0) 。
 
@@ -599,7 +600,7 @@ short GetWorkspaceCount();
 
 工作区集合中打开的工作区的数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此计数不包括未追加到集合的任何打开的工作区。 `GetWorkspaceCount` 如果需要遍历工作区集合中所有定义的工作区，则会很有用。 若要获取有关集合中给定工作区的信息，请参阅 [GetWorkspaceInfo](#getworkspaceinfo)。 典型用法是调用 `GetWorkspaceCount` 打开的工作区的数目，然后将该数字用作循环索引，以便对的重复调用 `GetWorkspaceInfo` 。
 
@@ -619,7 +620,7 @@ void GetWorkspaceInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 工作区集合中数据库对象的从零开始的索引，用于按索引查找。
@@ -639,9 +640,9 @@ void GetWorkspaceInfo(
 *lpszName*<br/>
 用于按名称查找的工作区对象的名称。 该名称是一个字符串，最多包含14个字符来唯一命名新的工作区对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-有关 *wkspcinfo*中返回的信息的说明，请参阅 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions*中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取以前的级别的信息。
+有关 *wkspcinfo* 中返回的信息的说明，请参阅 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions* 中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取以前的级别的信息。
 
 ## <a name="cdaoworkspaceidle"></a><a name="idle"></a> CDaoWorkspace：： Idle
 
@@ -651,12 +652,12 @@ void GetWorkspaceInfo(
 static void PASCAL Idle(int nAction = dbFreeLocks);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *N 操作*<br/>
 在空闲处理期间要执行的操作。 目前唯一有效的操作是 `dbFreeLocks` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在多用户的多任务环境中，如果后台处理时间不足以使记录集中的所有记录保持最新，则通常会出现这种情况。
 
@@ -681,7 +682,7 @@ BOOL IsOpen() const;
 
 如果工作区对象处于打开状态，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以调用处于打开状态的工作区的任何成员函数。
 
@@ -689,7 +690,7 @@ BOOL IsOpen() const;
 
 指向基础 DAO 工作区对象的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果需要直接访问基础 DAO 对象，请使用此数据成员。 可以通过此指针调用 DAO 对象的接口。
 
@@ -703,16 +704,16 @@ BOOL IsOpen() const;
 virtual void Open(LPCTSTR lpszName = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
-要打开的 DAO 工作区对象的名称-最多包含14个字符的字符串，用于唯一命名工作区。 接受默认值 NULL，以显式打开默认工作区。 有关命名要求，请参阅[Create](#create)的*lpszName*参数。 有关相关信息，请参阅 DAO 帮助中的主题 "名称属性"。
+要打开的 DAO 工作区对象的名称-最多包含14个字符的字符串，用于唯一命名工作区。 接受默认值 NULL，以显式打开默认工作区。 有关命名要求，请参阅 [Create](#create)的 *lpszName* 参数。 有关相关信息，请参阅 DAO 帮助中的主题 "名称属性"。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造对象后 `CDaoWorkspace` ，调用此成员函数以执行下列操作之一：
 
-- 显式打开默认工作区。 为 *lpszName*传递 NULL。
+- 显式打开默认工作区。 为 *lpszName* 传递 NULL。
 
 - `CDaoWorkspace`按名称打开现有对象，即工作区集合的成员。 传递现有工作区对象的有效名称。
 
@@ -728,7 +729,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
    :::column-end:::
    :::column span="":::
       [GetVersion](#getversion)\
-      [空闲](#idle)
+      [闲置](#idle)
    :::column-end:::
    :::column span="":::
       [SetDefaultPassword](#setdefaultpassword)\
@@ -748,14 +749,14 @@ virtual void Open(LPCTSTR lpszName = NULL);
 static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 现有 Microsoft Jet 引擎数据库文件的路径和文件名。 如果省略该路径，将仅搜索当前目录。 如果系统支持 (UNC) 的统一命名约定，则还可以指定网络路径，例如： " \\ \\ \\ \MYSERVER \\ \MYSHARE \\ \MYDIR \\ \MYDB。MDB "。 路径字符串中需要 (双反斜杠，因为 " \\ " 是 c + + 转义符。 ) 
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-修复 LpszName 之前，必须先关闭由*lpszName*指定的数据库。 在多用户环境中，其他用户在修复它时无法打开 *lpszName* 。 如果 *lpszName* 未关闭或不可供独占使用，则会出现错误。
+修复 LpszName 之前，必须先关闭由指定的数据库。 在多用户环境中，其他用户在修复它时无法打开 *lpszName* 。 如果 *lpszName* 未关闭或不可供独占使用，则会出现错误。
 
 此成员函数尝试修复通过不完整的写入操作被标记为可能损坏的数据库。 如果由于断电或计算机硬件问题而导致使用 Microsoft Jet 数据库引擎的应用程序意外关闭，则会发生这种情况。 如果完成操作并调用 [Close](../../mfc/reference/cdaodatabase-class.md#close) 成员函数或以常规方式退出应用程序，则数据库不会标记为可能已损坏。
 
@@ -772,7 +773,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 void Rollback();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 > [!CAUTION]
 > 在一个工作区对象中，事务对工作区始终是全局性的，并不局限于一个数据库或记录集。 如果对一个工作区事务中的多个数据库或记录集执行操作，将 `Rollback` 还原所有这些数据库和记录集上的所有操作。
@@ -790,12 +791,12 @@ void Rollback();
 static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszPassword*<br/>
 默认密码。 密码长度最大可为14个字符，并且可以包含除 ASCII 0 (空) 以外的任何字符。 密码是区分大小写的。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 所设置的默认密码将应用于调用后创建的新工作区。 创建后续工作区时，无需在 " [创建](#create) 调用" 中指定密码。
 
@@ -819,12 +820,12 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszDefaultUser*<br/>
 默认用户名。 用户名长度为 1-20 个字符，包括字母字符、重音字符、数字、空格和符号，但以下内容除外： " (引号) ，/ (正斜杠) ，\ (反斜杠) ， (\[ \] 方括号) ， () 冒号 &#124;， () # (， \< (less-than sign), >) 大于号 (，+) + 符号 (，=) 等号，; (分号) ，， ( 逗号) ， (问号) 、 \* (星号) 、前导空格和控制字符 (ascii 00 到 ascii 31) 。 有关相关信息，请参阅 DAO 帮助中的主题 "UserName 属性"。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 设置的默认用户名适用于在调用后创建的新工作区。 创建后续工作区时，无需在 " [创建](#create) 调用" 中指定用户名。
 
@@ -848,12 +849,12 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszRegistrySubkey*<br/>
 一个字符串，其中包含用于 Microsoft Jet 数据库引擎设置的位置或可安装的 ISAM 数据库所需参数的 Windows 注册表子项的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `SetIniPath`仅当需要指定特殊设置时才调用。 有关详细信息，请参阅 DAO 帮助中的主题 "IniPath 属性"。
 
@@ -870,12 +871,12 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bIsolateODBCTrans*<br/>
 如果要开始隔离 ODBC 事务，则传递 TRUE。 如果要停止隔离 ODBC 事务，则传递 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在某些情况下，您可能需要在同一个 ODBC 数据库上同时挂起多个事务。 为此，需要为每个事务打开一个单独的工作区。 尽管每个工作区都可以有自己的数据库的 ODBC 连接，但这会降低系统性能。 因为事务隔离通常不是必需的，所以，默认情况下共享来自同一用户打开的多个工作区对象的 ODBC 连接。
 
@@ -889,12 +890,12 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 static void PASCAL SetLoginTimeout(short nSeconds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSeconds*<br/>
 尝试登录到 ODBC 数据库时出现错误之前等待的秒数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此值表示在尝试登录到 ODBC 数据库时出现错误之前等待的秒数。 默认的 LoginTimeout 设置为20秒。 如果将 LoginTimeout 设置为0，则不会发生超时，并且与数据源的通信可能会停止响应。
 
@@ -902,7 +903,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 有关相关信息，请参阅 DAO 帮助中的主题 "LoginTimeout 属性"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

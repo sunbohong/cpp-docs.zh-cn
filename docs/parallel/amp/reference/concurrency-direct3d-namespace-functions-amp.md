@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：并发：:d irect3d 命名空间函数 (AMP) '
 title: Concurrency::direct3d 命名空间函数 (AMP)
 ms.date: 08/31/2018
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: bf98249001c2b8227581fbbbcceeebd085e5d820
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c446e89835e49d9afd7b11abd73ccccd032a7321
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247821"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空间函数 (AMP)
 
@@ -79,7 +80,7 @@ ms.locfileid: "88831107"
 inline int abs(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -104,7 +105,7 @@ inline int clamp(
     int _Max) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 要限制的值
@@ -127,7 +128,7 @@ inline int clamp(
 inline unsigned int countbits(unsigned int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 无符号整数值
@@ -153,7 +154,7 @@ accelerator_view create_accelerator_view(
     queuing_mode _Qmode = queuing_mode_automatic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Accelerator*<br/>
 要在其上创建新 accelerator_view 的快捷键。
@@ -171,7 +172,7 @@ accelerator_view create_accelerator_view(
 
 `accelerator_view`从通过的 Direct3D 设备接口创建的对象。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此函数使用现有的 `accelerator_view` Direct3D 设备接口指针创建一个新的对象。 如果函数调用成功，则通过调用接口来递增参数的引用计数 `AddRef` 。 当你的 DirectX 代码中不再需要该对象时，可以安全地释放它。 如果方法调用失败，则会引发 [runtime_exception](runtime-exception-class.md) 。
 
@@ -187,7 +188,7 @@ accelerator_view create_accelerator_view(
 void __cdecl d3d_access_lock(accelerator_view& _Av);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Av*<br/>
 要锁定的 accelerator_view。
@@ -200,7 +201,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
 bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Av*<br/>
 要锁定的 accelerator_view。
@@ -217,7 +218,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 void __cdecl d3d_access_unlock(accelerator_view& _Av);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Av*<br/>
 要为其释放锁的 accelerator_view。
@@ -230,7 +231,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
 inline int firstbithigh(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -247,7 +248,7 @@ inline int firstbithigh(int _X) restrict(amp);
 inline int firstbitlow(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -269,7 +270,7 @@ IUnknown *get_buffer(
     const array<value_type, _Rank>& _Array)  ;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *value_type*<br/>
 数组中元素的类型。
@@ -292,7 +293,7 @@ Direct3D accelerator_view 上的一个数组，将为其返回基础 Direct3D �
 IUnknown* get_device(const accelerator_view Av);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Av*<br/>
 为其返回基础 D3D 设备接口的 D3D accelerator_view。
@@ -311,7 +312,7 @@ inline int imax(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -333,7 +334,7 @@ inline int imin(
     int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -353,7 +354,7 @@ inline int imin(
 bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Accelerator_view*<br/>
 要查询其超时禁用设置的 accelerator_view。
@@ -388,7 +389,7 @@ inline unsigned int mad(
     unsigned int _Z) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 第一个指定的参数。
@@ -418,7 +419,7 @@ array<value_type, _Rank> make_array(
     IUnknown* _D3D_buffer)  ;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *value_type*<br/>
 要创建的数组的元素类型。
@@ -447,7 +448,7 @@ array<value_type, _Rank> make_array(
 inline float noise(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 从其生成 Perlin 噪音的浮点值
@@ -464,7 +465,7 @@ inline float noise(float _X) restrict(amp);
 inline float radians(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -483,7 +484,7 @@ inline float rcp(float _X) restrict(amp);
 inline double rcp(double _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 要为其计算倒数的值。
@@ -500,7 +501,7 @@ inline double rcp(double _X) restrict(amp);
 inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 无符号整数值
@@ -517,7 +518,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 inline float saturate(float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 浮点值
@@ -534,7 +535,7 @@ inline float saturate(float _X) restrict(amp);
 inline int sign(int _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -554,7 +555,7 @@ inline float smoothstep(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Min*<br/>
 浮点值
@@ -579,7 +580,7 @@ inline float step(
     float _X) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Y*<br/>
 浮点值
@@ -601,7 +602,7 @@ inline unsigned int umax(
     unsigned int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -623,7 +624,7 @@ inline unsigned int umin(
     unsigned int _Y) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_X*<br/>
 整数值
@@ -635,6 +636,6 @@ inline unsigned int umin(
 
 返回参数的最小数值
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::direct3d 命名空间](concurrency-direct3d-namespace.md)

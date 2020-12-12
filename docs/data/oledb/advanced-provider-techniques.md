@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：高级提供程序技术
 title: 高级提供程序技术
 ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB providers, using
 ms.assetid: 002a9731-7e06-49ac-be50-3cc26aa43759
-ms.openlocfilehash: e9a3a9b7cf9a7c7cadeec956a118737038807140
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c81ca6221c0b7b1dd16e6d10e70aea390902edac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212313"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246027"
 ---
 # <a name="advanced-provider-techniques"></a>高级提供程序技术
 
@@ -19,13 +20,13 @@ ms.locfileid: "80212313"
 
 - [支持架构行集](../../data/oledb/supporting-schema-rowsets.md)
 
-- [用于书签的提供程序支持](../../data/oledb/provider-support-for-bookmarks.md)
+- [提供程序支持书签](../../data/oledb/provider-support-for-bookmarks.md)
 
-- [通过 OLE DB 一致性测试](../../data/oledb/passing-ole-db-conformance-tests.md)
+- [传递 OLE DB 一致性测试](../../data/oledb/passing-ole-db-conformance-tests.md)
 
 - [OLE DB 资源池和服务](../../data/oledb/ole-db-resource-pooling-and-services.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板参考](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: '详细了解： struct (c + +) '
 title: struct (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: d0092cf107159f4c84b431f5eeae130df64dc835
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4c7f8ab04bec2f161e303c3fed93414332fddeb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246248"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -27,7 +28,7 @@ ms.locfileid: "91507460"
 [struct] tag declarators;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *template-规范*<br/>
 可选模板规范。 有关详细信息，请参阅 [模板规范](templates-cpp.md)。
@@ -38,10 +39,10 @@ ms.locfileid: "91507460"
 *decl-规范*<br/>
 可选存储类规范。 有关详细信息，请参阅 [__declspec](../cpp/declspec.md) 关键字。
 
-*符*<br/>
+*标记*<br/>
 为结构提供的类型名称。 标记将变成结构范围内的保留字。 标记是可选项。 如果省略，则定义匿名结构。 有关详细信息，请参阅 [匿名类类型](../cpp/anonymous-class-types.md)。
 
-base-list**<br/>
+base-list<br/>
 此结构将从中派生其成员的类或结构的可选列表。 有关详细信息，请参阅 [基类](../cpp/base-classes.md) 。 每个基类或结构名称的前面可以有一个访问说明符 ([public](../cpp/public-cpp.md)、 [private](../cpp/private-cpp.md)、 [protected](../cpp/protected-cpp.md)) 和 [virtual](../cpp/virtual-cpp.md) 关键字。 有关详细信息，请参阅 [控制对类成员的访问](member-access-control-cpp.md) 中的成员访问表。
 
 *成员列表*<br/>
@@ -50,7 +51,7 @@ base-list**<br/>
 *声明符*<br/>
 指定结构名称的声明符列表。 声明符列表声明了一个或多个结构类型实例。 如果结构的所有数据成员都为，则声明符可以包含初始值设定项列表 **`public`** 。 初始值设定项列表在结构中很常见，因为 **`public`** 默认情况下数据成员为。  有关详细信息，请参阅 [声明符的概述](./declarations-and-definitions-cpp.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 结构类型是用户定义的复合类型。 它由可具有不同类型的字段或成员构成。
 

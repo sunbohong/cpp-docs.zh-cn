@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_same 类
 title: is_same 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 19e0ecec009227c0785c263893aa32beff4049e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247717"
 ---
-# <a name="issame-class"></a>is_same 类
+# <a name="is_same-class"></a>is_same 类
 
 测试两个类型是否相同。
 
@@ -25,7 +26,7 @@ template <class Ty1, class Ty2>
 struct is_same;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty1*\
 要查询的第一个类型。
@@ -35,7 +36,7 @@ struct is_same;
 
 ## <a name="remarks"></a>备注
 
-如果类型*Ty1*和*Ty2*为同一类型, 则类型谓词的实例为 true; 否则为 false。
+如果类型 *Ty1* 和 *Ty2* 为同一类型，则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -82,9 +83,9 @@ is_same<int, const int> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

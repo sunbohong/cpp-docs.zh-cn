@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅如何：在 c + +/CLI (中定义接口静态构造函数) '
 title: 如何：定义接口静态构造函数 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 562605a579ac372e4a69953853a6e32668357565
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2cc6eca19a26f9857c029fc01c500ed9f4691e8d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79544969"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245897"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>如何：定义接口静态构造函数 (C++/CLI)
 
@@ -54,6 +55,6 @@ in MyInterface static constructor
 99
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [接口类](../extensions/interface-class-cpp-component-extensions.md)

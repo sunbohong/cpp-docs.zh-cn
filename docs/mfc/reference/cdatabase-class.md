@@ -1,4 +1,5 @@
 ---
+description: 了解有关： CDatabase 类的详细信息
 title: CDatabase 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: ee1503f49f0e60b24e0ef3a9c9631f039ad9355e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 82859ebcffeb833ca5afe885b0ae35916da4cf28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223104"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247976"
 ---
 # <a name="cdatabase-class"></a>CDatabase 类
 
@@ -71,19 +72,19 @@ class CDatabase : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDatabase：： CDatabase](#cdatabase)|构造 `CDatabase` 对象。 必须通过调用或初始化对象 `OpenEx` `Open` 。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDatabase：： BeginTrans](#begintrans)|`AddNew` `Edit` `Delete` `Update` `CRecordset` 对连接的数据源启动一系列对类的、、和成员函数的可逆调用。 数据源必须支持的事务 `BeginTrans` 才能产生任何影响。|
 |[CDatabase：： BindParameters](#bindparameters)|允许在调用之前绑定参数 `CDatabase::ExecuteSQL` 。|
 |[CDatabase：： Cancel](#cancel)|取消异步操作或来自另一个线程的进程。|
 |[CDatabase：： CanTransact](#cantransact)|如果数据源支持事务，则返回非零值。|
-|[CDatabase：： CanUpdate](#canupdate)|如果 `CDatabase` 对象可更新（非只读），则返回非零值。|
+|[CDatabase：： CanUpdate](#canupdate)|如果 `CDatabase` 对象可更新 (非只读) ，则返回非零值。|
 |[CDatabase：： Close](#close)|关闭数据源连接。|
 |[CDatabase：： CommitTrans](#committrans)|完成由开始的事务 `BeginTrans` 。 将执行更改数据源的事务中的命令。|
 |[CDatabase：： ExecuteSQL](#executesql)|执行 SQL 语句。 不返回任何数据记录。|
@@ -94,28 +95,28 @@ class CDatabase : public CObject
 |[CDatabase：： GetDatabaseName](#getdatabasename)|返回当前正在使用的数据库的名称。|
 |[CDatabase：： IsOpen](#isopen)|如果 `CDatabase` 对象当前已连接到数据源，则返回非零值。|
 |[CDatabase：： OnSetOptions](#onsetoptions)|由框架调用以设置标准连接选项。 默认实现设置查询超时值。 可以通过调用来提前建立这些选项 `SetQueryTimeout` 。|
-|[CDatabase：： Open](#open)|建立与数据源的连接（通过 ODBC 驱动程序）。|
-|[CDatabase：： Microsoft.office.interop.visio.documents.open](#openex)|建立与数据源的连接（通过 ODBC 驱动程序）。|
+|[CDatabase：： Open](#open)|建立与通过 ODBC 驱动程序)  (到数据源的连接。|
+|[CDatabase：： Microsoft.office.interop.visio.documents.open](#openex)|建立与通过 ODBC 驱动程序)  (到数据源的连接。|
 |[CDatabase：： Rollback](#rollback)|撤消在当前事务中所做的更改。 数据源恢复为其以前的状态，如在调用时定义的，该状态 `BeginTrans` 未经更改。|
 |[CDatabase：： SetLoginTimeout](#setlogintimeout)|设置秒数，在这段时间之后数据源连接尝试将超时。|
 |[CDatabase：： SetQueryTimeout](#setquerytimeout)|设置在多少秒后数据库查询操作将超时。影响所有后续的记录集 `Open` 、 `AddNew` 、 `Edit` 和 `Delete` 调用。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CDatabase：： m_hdbc](#m_hdbc)|数据源的开放式数据库连接（ODBC）连接句柄。 键入*HDBC*。|
+|[CDatabase：： m_hdbc](#m_hdbc)|打开数据库连接 (ODBC) 到数据源的连接句柄。 键入 *HDBC*。|
 
 ## <a name="remarks"></a>备注
 
-数据源是由某些数据库管理系统（DBMS）承载的特定数据实例。 示例包括 Microsoft SQL Server、Microsoft Access、Borland dBASE 和 xBASE。 在应用程序中，一次可以有一个或多个 `CDatabase` 对象处于活动状态。
+数据源是由某些数据库管理系统托管的特定数据实例 (DBMS) 。 示例包括 Microsoft SQL Server、Microsoft Access、Borland dBASE 和 xBASE。 在应用程序中，一次可以有一个或多个 `CDatabase` 对象处于活动状态。
 
 > [!NOTE]
-> 如果使用的是数据访问对象（DAO）类而不是开放式数据库连接（ODBC）类，请改用类[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 。 有关详细信息，请参阅文章[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
+> 如果使用的是 (DAO) 类的数据访问对象，而不是 ODBC) 类 (开放式数据库连接，请改用类 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 。 有关详细信息，请参阅文章 [概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
-若要使用 `CDatabase` ，请构造一个 `CDatabase` 对象并调用其 `OpenEx` 成员函数。 这将打开一个连接。 然后 `CRecordset` ，在连接的数据源上构造用于操作的对象时，请向记录集构造函数传递一个指向对象的指针 `CDatabase` 。 使用完连接后，调用 `Close` 成员函数并销毁 `CDatabase` 对象。 `Close`关闭之前未关闭的任何记录集。
+若要使用 `CDatabase` ，请构造一个 `CDatabase` 对象并调用其 `OpenEx` 成员函数。 这将打开一个连接。 然后 `CRecordset` ，在连接的数据源上构造用于操作的对象时，请向记录集构造函数传递一个指向对象的指针 `CDatabase` 。 使用完连接后，调用 `Close` 成员函数并销毁 `CDatabase` 对象。 `Close` 关闭之前未关闭的任何记录集。
 
-有关的详细信息 `CDatabase` ，请参阅文章[数据源（ODBC）](../../data/odbc/data-source-odbc.md)和[概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
+有关的详细信息 `CDatabase` ，请参阅文章 [数据源 (ODBC) ](../../data/odbc/data-source-odbc.md) 和 [概述：数据库编程](../../data/data-access-programming-mfc-atl.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -127,7 +128,7 @@ class CDatabase : public CObject
 
 **标头：** afxdb
 
-## <a name="cdatabasebegintrans"></a><a name="begintrans"></a>CDatabase：： BeginTrans
+## <a name="cdatabasebegintrans"></a><a name="begintrans"></a> CDatabase：： BeginTrans
 
 调用此成员函数以使用连接的数据源开始事务。
 
@@ -141,29 +142,29 @@ BOOL BeginTrans();
 
 ### <a name="remarks"></a>备注
 
-事务由一个或多个对 `AddNew` 对象的、 `Edit` 、 `Delete` 和 `Update` 成员函数 `CRecordset` 的调用组成。 开始事务之前， `CDatabase` 对象必须已通过调用其 `OpenEx` 或成员函数连接到数据源 `Open` 。 若要结束事务，请调用[CommitTrans](#committrans)以接受对数据源所做的所有更改（并执行这些更改）或调用[Rollback](#rollback)来中止整个事务。 `BeginTrans`打开事务中涉及的任何记录集并尽可能接近实际的更新操作后调用。
+事务由一个或多个对 `AddNew` 对象的、 `Edit` 、 `Delete` 和 `Update` 成员函数 `CRecordset` 的调用组成。 开始事务之前， `CDatabase` 对象必须已通过调用其 `OpenEx` 或成员函数连接到数据源 `Open` 。 若要结束事务，请调用 [CommitTrans](#committrans) 以接受对数据源所做的所有更改 (并将其执行) 或调用 [Rollback](#rollback) 来中止整个事务。 `BeginTrans`打开事务中涉及的任何记录集并尽可能接近实际的更新操作后调用。
 
 > [!CAUTION]
-> 根据 ODBC 驱动程序的不同，在调用前打开记录集 `BeginTrans` 可能会在调用时导致问题 `Rollback` 。 你应检查正在使用的特定驱动程序。 例如，使用 Microsoft ODBC 桌面驱动程序包3.0 中包含的 Microsoft Access 驱动程序时，必须考虑 Jet 数据库引擎的要求，即不应在具有打开的游标的任何数据库上开始事务。 在 MFC 数据库类中，打开的游标表示打开的 `CRecordset` 对象。 有关详细信息，请参阅[技术说明 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)。
+> 根据 ODBC 驱动程序的不同，在调用前打开记录集 `BeginTrans` 可能会在调用时导致问题 `Rollback` 。 你应检查正在使用的特定驱动程序。 例如，使用 Microsoft ODBC 桌面驱动程序包3.0 中包含的 Microsoft Access 驱动程序时，必须考虑 Jet 数据库引擎的要求，即不应在具有打开的游标的任何数据库上开始事务。 在 MFC 数据库类中，打开的游标表示打开的 `CRecordset` 对象。 有关详细信息，请参阅 [技术说明 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)。
 
-`BeginTrans`还可能会锁定服务器上的数据记录，具体取决于所请求的并发和数据源的功能。 有关锁定数据的信息，请参阅[记录记录：锁定记录（ODBC）](../../data/odbc/recordset-locking-records-odbc.md)一文。
+`BeginTrans` 还可能会锁定服务器上的数据记录，具体取决于所请求的并发和数据源的功能。 有关锁定数据的信息，请参阅文章 [记录集： (ODBC) 锁定记录 ](../../data/odbc/recordset-locking-records-odbc.md)。
 
-[事务（ODBC）](../../data/odbc/transaction-odbc.md)一文中介绍了用户定义的事务。
+[ (ODBC) ](../../data/odbc/transaction-odbc.md)一文中介绍了用户定义的事务。
 
-`BeginTrans`确定事务序列可以回滚到的状态。 若要为回滚建立新状态，请提交所有当前事务，然后 `BeginTrans` 再次调用。
+`BeginTrans` 确定事务序列可以回滚到 (反转) 的状态。 若要为回滚建立新状态，请提交所有当前事务，然后 `BeginTrans` 再次调用。
 
 > [!CAUTION]
 > `BeginTrans`再次调用而不调用 `CommitTrans` 或 `Rollback` 为错误。
 
-调用[CanTransact](#cantransact)成员函数，以确定驱动程序是否支持给定数据库的事务。 还应调用[GetCursorCommitBehavior](#getcursorcommitbehavior)和[GetCursorRollbackBehavior](#getcursorrollbackbehavior)来确定是否支持游标保存。
+调用 [CanTransact](#cantransact) 成员函数，以确定驱动程序是否支持给定数据库的事务。 还应调用 [GetCursorCommitBehavior](#getcursorcommitbehavior) 和 [GetCursorRollbackBehavior](#getcursorrollbackbehavior) 来确定是否支持游标保存。
 
-有关事务的详细信息，请参阅[事务（ODBC）](../../data/odbc/transaction-odbc.md)一文。
+有关事务的详细信息，请参阅文章 [Transaction (ODBC) ](../../data/odbc/transaction-odbc.md)。
 
 ### <a name="example"></a>示例
 
-  请参阅[事务：在记录集中执行事务（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)一文。
+  请参阅 [事务：在记录集中执行事务 (ODBC) ](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
-## <a name="cdatabasebindparameters"></a><a name="bindparameters"></a>CDatabase：： BindParameters
+## <a name="cdatabasebindparameters"></a><a name="bindparameters"></a> CDatabase：： BindParameters
 
 `BindParameters`需要在调用[CDatabase：： ExecuteSQL](#executesql)之前绑定参数时重写。
 
@@ -171,7 +172,7 @@ BOOL BeginTrans();
 virtual void BindParameters(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstmt*<br/>
 要将参数绑定到的 ODBC 语句句柄。
@@ -180,9 +181,9 @@ virtual void BindParameters(HSTMT hstmt);
 
 当不需要来自存储过程的结果集时，此方法非常有用。
 
-在重写中，调用 `SQLBindParameters` 和相关的 ODBC 函数以便绑定参数。 MFC 在调用之前调用你的重写 `ExecuteSQL` 。 无需调用，只需 `SQLPrepare` 调用 `ExecuteSQL` `SQLExecDirect` 并销毁*hstmt*。
+在重写中，调用 `SQLBindParameters` 和相关的 ODBC 函数以便绑定参数。 MFC 在调用之前调用你的重写 `ExecuteSQL` 。 无需调用，只需 `SQLPrepare` 调用 `ExecuteSQL` `SQLExecDirect` 并销毁 *hstmt*。
 
-## <a name="cdatabasecancel"></a><a name="cancel"></a>CDatabase：： Cancel
+## <a name="cdatabasecancel"></a><a name="cancel"></a> CDatabase：： Cancel
 
 调用此成员函数以请求数据源取消正在进行的异步操作或从另一个线程中的进程。
 
@@ -192,9 +193,9 @@ void Cancel();
 
 ### <a name="remarks"></a>备注
 
-请注意，MFC ODBC 类不再使用异步处理;若要执行异步操作，必须直接调用 ODBC API 函数[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)。 有关详细信息，请参阅[异步执行](/sql/odbc/reference/develop-app/asynchronous-execution)。
+请注意，MFC ODBC 类不再使用异步处理;若要执行异步操作，必须直接调用 ODBC API 函数 [SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)。 有关详细信息，请参阅 [异步执行](/sql/odbc/reference/develop-app/asynchronous-execution)。
 
-## <a name="cdatabasecantransact"></a><a name="cantransact"></a>CDatabase：： CanTransact
+## <a name="cdatabasecantransact"></a><a name="cantransact"></a> CDatabase：： CanTransact
 
 调用此成员函数以确定数据库是否允许事务。
 
@@ -208,9 +209,9 @@ BOOL CanTransact() const;
 
 ### <a name="remarks"></a>备注
 
-有关事务的信息，请参阅[事务（ODBC）](../../data/odbc/transaction-odbc.md)一文。
+有关事务的信息，请参阅文章 [Transaction (ODBC) ](../../data/odbc/transaction-odbc.md)。
 
-## <a name="cdatabasecanupdate"></a><a name="canupdate"></a>CDatabase：： CanUpdate
+## <a name="cdatabasecanupdate"></a><a name="canupdate"></a> CDatabase：： CanUpdate
 
 调用此成员函数以确定对象是否 `CDatabase` 允许更新。
 
@@ -220,13 +221,13 @@ BOOL CanUpdate() const;
 
 ### <a name="return-value"></a>返回值
 
-如果 `CDatabase` 对象允许更新，则为非零; 否则为0，指示打开对象时在*bReadOnly*中传递了 TRUE， `CDatabase` 或数据源本身是只读的。 如果调用 SQL_DATASOURCE_READ_ONLY 的 ODBC API 函数 `SQLGetInfo` 返回 "y"，则数据源为只读。
+如果 `CDatabase` 对象允许更新，则为非零; 否则为0，指示打开对象时在 *bReadOnly* 中传递了 TRUE， `CDatabase` 或数据源本身是只读的。 如果调用 SQL_DATASOURCE_READ_ONLY 的 ODBC API 函数 `SQLGetInfo` 返回 "y"，则数据源为只读。
 
 ### <a name="remarks"></a>备注
 
 并非所有驱动程序都支持更新。
 
-## <a name="cdatabasecdatabase"></a><a name="cdatabase"></a>CDatabase：： CDatabase
+## <a name="cdatabasecdatabase"></a><a name="cdatabase"></a> CDatabase：： CDatabase
 
 构造 `CDatabase` 对象。
 
@@ -248,7 +249,7 @@ CDatabase();
 
 [!code-cpp[NVC_MFCDatabase#10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]
 
-## <a name="cdatabaseclose"></a><a name="close"></a>CDatabase：： Close
+## <a name="cdatabaseclose"></a><a name="close"></a> CDatabase：： Close
 
 如果要断开与数据源的连接，请调用此成员函数。
 
@@ -266,7 +267,7 @@ virtual void Close();
 
 [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]
 
-## <a name="cdatabasecommittrans"></a><a name="committrans"></a>CDatabase：： CommitTrans
+## <a name="cdatabasecommittrans"></a><a name="committrans"></a> CDatabase：： CommitTrans
 
 完成事务时调用此成员函数。
 
@@ -280,17 +281,17 @@ BOOL CommitTrans();
 
 ### <a name="remarks"></a>备注
 
-事务由一系列对 `AddNew` 对象的、、和成员函数的调用，以对 `Edit` `Delete` `Update` `CRecordset` [BeginTrans](#begintrans)成员函数的调用开始。 `CommitTrans`提交事务。 默认情况下，将立即提交更新;调用 `BeginTrans` 会导致在调用之前将更新提交到延迟 `CommitTrans` 。
+事务由一系列对 `AddNew` 对象的、、和成员函数的调用，以对 `Edit` `Delete` `Update` `CRecordset` [BeginTrans](#begintrans) 成员函数的调用开始。 `CommitTrans` 提交事务。 默认情况下，将立即提交更新;调用 `BeginTrans` 会导致在调用之前将更新提交到延迟 `CommitTrans` 。
 
-在您调用 `CommitTrans` 以结束事务之前，您可以调用[Rollback](#rollback)成员函数来中止该事务，并使数据源保持其原始状态。 若要开始新的事务，请 `BeginTrans` 再次调用。
+在您调用 `CommitTrans` 以结束事务之前，您可以调用 [Rollback](#rollback) 成员函数来中止该事务，并使数据源保持其原始状态。 若要开始新的事务，请 `BeginTrans` 再次调用。
 
-有关事务的详细信息，请参阅[事务（ODBC）](../../data/odbc/transaction-odbc.md)一文。
+有关事务的详细信息，请参阅文章 [Transaction (ODBC) ](../../data/odbc/transaction-odbc.md)。
 
 ### <a name="example"></a>示例
 
-  请参阅[事务：在记录集中执行事务（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)一文。
+  请参阅 [事务：在记录集中执行事务 (ODBC) ](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
-## <a name="cdatabaseexecutesql"></a><a name="executesql"></a>CDatabase：： ExecuteSQL
+## <a name="cdatabaseexecutesql"></a><a name="executesql"></a> CDatabase：： ExecuteSQL
 
 当需要直接执行 SQL 命令时，调用此成员函数。
 
@@ -298,14 +299,14 @@ BOOL CommitTrans();
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszSQL*<br/>
-指向以 null 结尾的字符串的指针，该字符串包含要执行的有效 SQL 命令。 可以传递[CString](../../atl-mfc-shared/reference/cstringt-class.md)。
+指向以 null 结尾的字符串的指针，该字符串包含要执行的有效 SQL 命令。 可以传递 [CString](../../atl-mfc-shared/reference/cstringt-class.md)。
 
 ### <a name="remarks"></a>备注
 
-创建以 null 结尾的字符串形式的命令。 `ExecuteSQL`不返回数据记录。 如果要对记录进行操作，请改用记录集对象。
+创建以 null 结尾的字符串形式的命令。 `ExecuteSQL` 不返回数据记录。 如果要对记录进行操作，请改用记录集对象。
 
 数据源的大多数命令都是通过记录集对象发出的，记录集对象支持用于选择数据、插入新记录、删除记录和编辑记录的命令。 但是，数据库类不会直接支持所有 ODBC 功能，因此，有时你可能需要使用进行直接 SQL 调用 `ExecuteSQL` 。
 
@@ -313,7 +314,7 @@ void ExecuteSQL(LPCTSTR lpszSQL);
 
 [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]
 
-## <a name="cdatabasegetbookmarkpersistence"></a><a name="getbookmarkpersistence"></a>CDatabase：： GetBookmarkPersistence
+## <a name="cdatabasegetbookmarkpersistence"></a><a name="getbookmarkpersistence"></a> CDatabase：： GetBookmarkPersistence
 
 在某些操作之后，通过调用此成员函数确定记录集对象上的书签的持久性。
 
@@ -341,9 +342,9 @@ DWORD GetBookmarkPersistence() const;
 |SQL_BP_UPDATE|行的书签在 `Update` 对该行执行操作后有效。|
 |SQL_BP_OTHER_HSTMT|与某个记录集对象关联的书签在另一个记录集上有效。|
 
-有关此返回值的详细信息，请参阅 Windows SDK 中的 ODBC API 函数 `SQLGetInfo` 。 有关书签的详细信息，请参阅[记录记录集：书签和绝对位置（ODBC）](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)一文。
+有关此返回值的详细信息，请参阅 Windows SDK 中的 ODBC API 函数 `SQLGetInfo` 。 有关书签的详细信息，请参阅文章 [记录集：书签和绝对位置 (ODBC) ](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。
 
-## <a name="cdatabasegetconnect"></a><a name="getconnect"></a>CDatabase：： GetConnect
+## <a name="cdatabasegetconnect"></a><a name="getconnect"></a> CDatabase：： GetConnect
 
 调用此成员函数以检索在调用期间使用的连接字符串 `OpenEx` ，或将 `Open` 对象连接 `CDatabase` 到数据源的连接字符串。
 
@@ -353,15 +354,15 @@ const CString GetConnect() const;
 
 ### <a name="return-value"></a>返回值
 
-**`const`** 如果调用了或，则为包含连接字符串的[CString](../../atl-mfc-shared/reference/cstringt-class.md) `OpenEx` `Open` ; 否则为空字符串。
+**`const`** 如果调用了或，则为包含连接字符串的 [CString](../../atl-mfc-shared/reference/cstringt-class.md) `OpenEx` `Open` ; 否则为空字符串。
 
 ### <a name="remarks"></a>备注
 
-有关如何创建连接字符串的说明，请参阅[CDatabase：： Open](#open) 。
+有关如何创建连接字符串的说明，请参阅 [CDatabase：： Open](#open) 。
 
-## <a name="cdatabasegetcursorcommitbehavior"></a><a name="getcursorcommitbehavior"></a>CDatabase：： GetCursorCommitBehavior
+## <a name="cdatabasegetcursorcommitbehavior"></a><a name="getcursorcommitbehavior"></a> CDatabase：： GetCursorCommitBehavior
 
-调用此成员函数来确定[CommitTrans](#committrans)操作如何影响打开的记录集对象上的游标。
+调用此成员函数来确定 [CommitTrans](#committrans) 操作如何影响打开的记录集对象上的游标。
 
 ```
 int GetCursorCommitBehavior() const;
@@ -381,11 +382,11 @@ int GetCursorCommitBehavior() const;
 |SQL_CB_DELETE|`CRecordset::Close`在事务提交之后立即调用。|
 |SQL_CB_PRESERVE|正常执行 `CRecordset` 操作。|
 
-有关此返回值的详细信息，请参阅 Windows SDK 中的 ODBC API 函数 `SQLGetInfo` 。 有关事务的详细信息，请参阅[事务（ODBC）](../../data/odbc/transaction-odbc.md)一文。
+有关此返回值的详细信息，请参阅 Windows SDK 中的 ODBC API 函数 `SQLGetInfo` 。 有关事务的详细信息，请参阅文章 [Transaction (ODBC) ](../../data/odbc/transaction-odbc.md)。
 
-## <a name="cdatabasegetcursorrollbackbehavior"></a><a name="getcursorrollbackbehavior"></a>CDatabase：： GetCursorRollbackBehavior
+## <a name="cdatabasegetcursorrollbackbehavior"></a><a name="getcursorrollbackbehavior"></a> CDatabase：： GetCursorRollbackBehavior
 
-调用此成员函数以确定[回滚](#rollback)操作如何影响打开的记录集对象上的游标。
+调用此成员函数以确定 [回滚](#rollback) 操作如何影响打开的记录集对象上的游标。
 
 ```
 int GetCursorRollbackBehavior() const;
@@ -405,11 +406,11 @@ int GetCursorRollbackBehavior() const;
 |SQL_CB_DELETE|`CRecordset::Close`在事务回滚之后立即调用。|
 |SQL_CB_PRESERVE|正常执行 `CRecordset` 操作。|
 
-有关此返回值的详细信息，请参阅 Windows SDK 中的 ODBC API 函数 `SQLGetInfo` 。 有关事务的详细信息，请参阅[事务（ODBC）](../../data/odbc/transaction-odbc.md)一文。
+有关此返回值的详细信息，请参阅 Windows SDK 中的 ODBC API 函数 `SQLGetInfo` 。 有关事务的详细信息，请参阅文章 [Transaction (ODBC) ](../../data/odbc/transaction-odbc.md)。
 
-## <a name="cdatabasegetdatabasename"></a><a name="getdatabasename"></a>CDatabase：： GetDatabaseName
+## <a name="cdatabasegetdatabasename"></a><a name="getdatabasename"></a> CDatabase：： GetDatabaseName
 
-调用此成员函数以检索当前连接的数据库的名称（前提是数据源定义了名为 "database" 的命名对象）。
+调用此成员函数以检索当前连接的数据库 (的名称，前提是数据源定义了名为 "database" ) 的命名对象。
 
 ```
 CString GetDatabaseName() const;
@@ -417,15 +418,15 @@ CString GetDatabaseName() const;
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为包含数据库名称的[CString](../../atl-mfc-shared/reference/cstringt-class.md) ;否则为空 `CString` 。
+如果成功，则为包含数据库名称的 [CString](../../atl-mfc-shared/reference/cstringt-class.md) ;否则为空 `CString` 。
 
 ### <a name="remarks"></a>备注
 
-这与或调用中指定的数据源名称（DSN）不相同 `OpenEx` `Open` 。 `GetDatabaseName`返回的内容取决于 ODBC。 通常，数据库是表的集合。 如果此实体具有名称， `GetDatabaseName` 则返回该名称。
+这与或调用中指定的 (DSN) 的数据源名称不同 `OpenEx` `Open` 。 `GetDatabaseName`返回的内容取决于 ODBC。 通常，数据库是表的集合。 如果此实体具有名称， `GetDatabaseName` 则返回该名称。
 
 例如，您可能希望在标题中显示此名称。 如果从 ODBC 检索名称时出现错误，则 `GetDatabaseName` 返回空 `CString` 。
 
-## <a name="cdatabaseisopen"></a><a name="isopen"></a>CDatabase：： IsOpen
+## <a name="cdatabaseisopen"></a><a name="isopen"></a> CDatabase：： IsOpen
 
 调用此成员函数以确定 `CDatabase` 对象当前是否已连接到数据源。
 
@@ -437,7 +438,7 @@ BOOL IsOpen() const;
 
 如果 `CDatabase` 对象当前已连接，则为非零; 否则为0。
 
-## <a name="cdatabasem_hdbc"></a><a name="m_hdbc"></a>CDatabase：： m_hdbc
+## <a name="cdatabasem_hdbc"></a><a name="m_hdbc"></a> CDatabase：： m_hdbc
 
 包含 ODBC 数据源连接的公共句柄，即 "连接句柄"。
 
@@ -451,7 +452,7 @@ BOOL IsOpen() const;
 
 [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]
 
-## <a name="cdatabaseonsetoptions"></a><a name="onsetoptions"></a>CDatabase：： OnSetOptions
+## <a name="cdatabaseonsetoptions"></a><a name="onsetoptions"></a> CDatabase：： OnSetOptions
 
 当使用成员函数直接执行 SQL 语句时，框架会调用此成员函数 `ExecuteSQL` 。
 
@@ -459,16 +460,16 @@ BOOL IsOpen() const;
 virtual void OnSetOptions(HSTMT hstmt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hstmt*<br/>
 正在为其设置选项的 ODBC 语句句柄。
 
 ### <a name="remarks"></a>备注
 
-`CRecordset::OnSetOptions`还将调用此成员函数。
+`CRecordset::OnSetOptions` 还将调用此成员函数。
 
-`OnSetOptions`设置登录超时值。 如果以前对 `SetQueryTimeout` 和成员函数的调用，则 `OnSetOptions` 反映当前值; 否则，它将设置默认值。
+`OnSetOptions` 设置登录超时值。 如果以前对 `SetQueryTimeout` 和成员函数的调用，则 `OnSetOptions` 反映当前值; 否则，它将设置默认值。
 
 > [!NOTE]
 > 在 MFC 4.2 之前， `OnSetOptions` 还应将处理模式设置为 "snychronous" 或 "异步"。 从 MFC 4.2 开始，所有操作都是同步的。 若要执行异步操作，必须直接调用 ODBC API 函数 `SQLSetPos` 。
@@ -477,7 +478,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 
 `OnSetOptions`如果要设置其他选项，请重写。 重写应在 `OnSetOptions` 调用 ODBC API 函数之前或之后调用基类 `SQLSetStmtOption` 。 按照框架的默认实现中所示的方法进行操作 `OnSetOptions` 。
 
-## <a name="cdatabaseopen"></a><a name="open"></a>CDatabase：： Open
+## <a name="cdatabaseopen"></a><a name="open"></a> CDatabase：： Open
 
 调用此成员函数以初始化新构造的 `CDatabase` 对象。
 
@@ -490,22 +491,22 @@ virtual BOOL Open(
     BOOL bUseCursorLib = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszDSN*<br/>
-指定数据源名称-通过 ODBC 管理程序在 ODBC 中注册的名称。 如果在*lpszConnect*中指定了 dsn 值（格式为 "DSN = \<data-source> "），则不能在*lpszDSN*中再次指定它。 在这种情况下， *lpszDSN*应为 NULL。 否则，如果要向用户显示 "数据源" 对话框（用户可以在其中选择数据源），则可以传递 NULL。 有关详细信息，请参阅 "备注"。
+指定数据源名称-通过 ODBC 管理程序在 ODBC 中注册的名称。 如果在 *lpszConnect* (中指定 dsn 值的格式为 "DSN = \<data-source> " ) ，则不得在 *lpszDSN* 中再次指定它。 在这种情况下， *lpszDSN* 应为 NULL。 否则，如果要向用户显示 "数据源" 对话框（用户可以在其中选择数据源），则可以传递 NULL。 有关详细信息，请参阅 "备注"。
 
 *bExclusive*<br/>
-在此版本的类库中不受支持。 目前，如果此参数为 TRUE，则断言失败。 数据源始终以共享方式打开（非独占）。
+在此版本的类库中不受支持。 目前，如果此参数为 TRUE，则断言失败。 数据源始终作为共享 (以非独占方式打开) 。
 
 *bReadOnly*<br/>
 如果希望连接为只读并且禁止更新数据源，则为 TRUE。 所有依赖记录集均继承此属性。 默认值是 FALSE。
 
 *lpszConnect*<br/>
-指定连接字符串。 连接字符串会连接信息，其中可能包括数据源名称、对数据源有效的用户 ID、用户身份验证字符串（如果数据源需要密码，则为密码）和其他信息。 整个连接字符串必须以字符串 "ODBC;" 作为前缀。（大写或小写）。 "ODBC;" 字符串用于指示连接到 ODBC 数据源;这是为了在将来版本的类库可能支持非 ODBC 数据源时实现向上兼容性。
+指定连接字符串。 连接字符串会连接信息，其中可能包括数据源名称、数据源中有效的用户 ID、用户身份验证字符串 (密码、如果数据源需要一个) 和其他信息。 整个连接字符串必须以字符串 "ODBC;" 作为前缀 (大写或小写) 。 "ODBC;" 字符串用于指示连接到 ODBC 数据源;这是为了在将来版本的类库可能支持非 ODBC 数据源时实现向上兼容性。
 
 *bUseCursorLib*<br/>
-如果要加载 ODBC 游标库 DLL，则为 TRUE。 游标库屏蔽基础 ODBC 驱动程序的某些功能，有效阻止使用动态集（如果驱动程序支持）。 如果加载游标库，则仅支持静态快照和只进游标。 默认值为 TRUE。 如果您计划直接从中创建记录集对象 `CRecordset` ，则不应加载游标库。
+如果要加载 ODBC 游标库 DLL，则为 TRUE。 游标库屏蔽基础 ODBC 驱动程序的某些功能，有效阻止使用动态集 (如果驱动程序支持) 动态集。 如果加载游标库，则仅支持静态快照和只进游标。 默认值为 TRUE。 如果您计划直接从中创建记录集对象 `CRecordset` ，则不应加载游标库。
 
 ### <a name="return-value"></a>返回值
 
@@ -516,13 +517,13 @@ virtual BOOL Open(
 必须先初始化数据库对象，然后才能使用它构造记录集对象。
 
 > [!NOTE]
-> 调用[microsoft.office.interop.visio.documents.open](#openex)成员函数是连接到数据源和初始化数据库对象的首选方式。
+> 调用 [microsoft.office.interop.visio.documents.open](#openex) 成员函数是连接到数据源和初始化数据库对象的首选方式。
 
-如果调用中的参数 `Open` 未包含足够的信息来建立连接，ODBC 驱动程序将打开一个对话框，以获取用户所需的信息。 当你调用时 `Open` ，你的连接字符串*lpszConnect*将私下存储在对象中， `CDatabase` 并通过调用[GetConnect](#getconnect)成员函数提供。
+如果调用中的参数 `Open` 未包含足够的信息来建立连接，ODBC 驱动程序将打开一个对话框，以获取用户所需的信息。 当你调用时 `Open` ，你的连接字符串 *lpszConnect* 将私下存储在对象中， `CDatabase` 并通过调用 [GetConnect](#getconnect) 成员函数提供。
 
 如果需要，您可以在调用 `Open` 以从用户那里获取信息（如密码）之前打开自己的对话框，然后将该信息添加到您传递到的连接字符串中 `Open` 。 或者你可能想要保存传递的连接字符串，以便在下次应用程序对对象调用时，可以重复使用它 `Open` `CDatabase` 。
 
-你还可以使用连接字符串进行多个级别的登录授权（每个都针对不同的 `CDatabase` 对象）或传达其他特定于数据源的信息。 有关连接字符串的详细信息，请参阅 Windows SDK 中的第5章。
+你还可以将连接字符串用于多个级别的登录授权 (分别用于不同的 `CDatabase` 对象) 或传达其他特定于数据源的信息。 有关连接字符串的详细信息，请参阅 Windows SDK 中的第5章。
 
 例如，如果 DBMS 主机不可用，则连接尝试可能会超时。 如果连接尝试失败， `Open` 则会引发 `CDBException` 。
 
@@ -530,7 +531,7 @@ virtual BOOL Open(
 
 [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]
 
-## <a name="cdatabaseopenex"></a><a name="openex"></a>CDatabase：： Microsoft.office.interop.visio.documents.open
+## <a name="cdatabaseopenex"></a><a name="openex"></a> CDatabase：： Microsoft.office.interop.visio.documents.open
 
 调用此成员函数以初始化新构造的 `CDatabase` 对象。
 
@@ -540,23 +541,23 @@ virtual BOOL OpenEx(
     DWORD dwOptions = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszConnectString*<br/>
-指定 ODBC 连接字符串。 这包括数据源名称以及其他可选信息，如用户 ID 和密码。 例如，"DSN = SQLServer_Source;UID = SA;PWD = abc123 "是可能的连接字符串。 请注意，如果为*lpszConnectString*传递 NULL，"数据源" 对话框将提示用户选择一个数据源。
+指定 ODBC 连接字符串。 这包括数据源名称以及其他可选信息，如用户 ID 和密码。 例如，"DSN = SQLServer_Source;UID = SA;PWD = abc123 "是可能的连接字符串。 请注意，如果为 *lpszConnectString* 传递 NULL，"数据源" 对话框将提示用户选择一个数据源。
 
 *dwOptions*<br/>
 一个位掩码，指定以下值的组合。 默认值为0，表示数据库将以写访问权限打开，将不加载 ODBC 游标库 DLL，并且仅当没有足够的信息建立连接时，"ODBC 连接" 对话框才会显示。
 
-- `CDatabase::openExclusive`在此版本的类库中不受支持。 数据源始终以共享方式打开（非独占）。 目前，如果指定此选项，则断言失败。
+- `CDatabase::openExclusive` 在此版本的类库中不受支持。 数据源始终作为共享 (以非独占方式打开) 。 目前，如果指定此选项，则断言失败。
 
-- `CDatabase::openReadOnly`以只读方式打开数据源。
+- `CDatabase::openReadOnly` 以只读方式打开数据源。
 
-- `CDatabase::useCursorLib`加载 ODBC 游标库 DLL。 游标库屏蔽基础 ODBC 驱动程序的某些功能，有效阻止使用动态集（如果驱动程序支持）。 如果加载游标库，则仅支持静态快照和只进游标。 如果您计划直接从中创建记录集对象 `CRecordset` ，则不应加载游标库。
+- `CDatabase::useCursorLib` 加载 ODBC 游标库 DLL。 游标库屏蔽基础 ODBC 驱动程序的某些功能，有效阻止使用动态集 (如果驱动程序支持) 动态集。 如果加载游标库，则仅支持静态快照和只进游标。 如果您计划直接从中创建记录集对象 `CRecordset` ，则不应加载游标库。
 
-- `CDatabase::noOdbcDialog`不管是否提供足够的连接信息，都不会显示 "ODBC 连接" 对话框。
+- `CDatabase::noOdbcDialog` 不管是否提供足够的连接信息，都不会显示 "ODBC 连接" 对话框。
 
-- `CDatabase::forceOdbcDialog`始终显示 "ODBC 连接" 对话框。
+- `CDatabase::forceOdbcDialog` 始终显示 "ODBC 连接" 对话框。
 
 ### <a name="return-value"></a>返回值
 
@@ -566,11 +567,11 @@ virtual BOOL OpenEx(
 
 必须先初始化数据库对象，然后才能使用它构造记录集对象。
 
-如果调用中的*lpszConnectString*参数 `OpenEx` 包含的信息不足，无法建立连接，ODBC 驱动程序将打开一个对话框，以获取用户所需的信息，前提是未在 `CDatabase::noOdbcDialog` `CDatabase::forceOdbcDialog` *dwOptions*参数中设置或。 当你调用时 `OpenEx` ，你的连接字符串*lpszConnectString*将私下存储在对象中， `CDatabase` 并通过调用[GetConnect](#getconnect)成员函数提供。
+如果调用中的 *lpszConnectString* 参数 `OpenEx` 包含的信息不足，无法建立连接，ODBC 驱动程序将打开一个对话框，以获取用户所需的信息，前提是未在 `CDatabase::noOdbcDialog` `CDatabase::forceOdbcDialog` *dwOptions* 参数中设置或。 当你调用时 `OpenEx` ，你的连接字符串 *lpszConnectString* 将私下存储在对象中， `CDatabase` 并通过调用 [GetConnect](#getconnect) 成员函数提供。
 
 如果需要，您可以在调用 `OpenEx` 以从用户那里获取信息（如密码）之前打开自己的对话框，然后将该信息添加到您传递到的连接字符串中 `OpenEx` 。 或者你可能想要保存传递的连接字符串，以便在下次应用程序对对象调用时，可以重复使用它 `OpenEx` `CDatabase` 。
 
-你还可以使用连接字符串进行多个级别的登录授权（每个都针对不同的 `CDatabase` 对象）或传达其他特定于数据源的信息。 有关连接字符串的详细信息，请参阅*ODBC 程序员参考*中的第6章。
+你还可以将连接字符串用于多个级别的登录授权 (分别用于不同的 `CDatabase` 对象) 或传达其他特定于数据源的信息。 有关连接字符串的详细信息，请参阅 *ODBC 程序员参考* 中的第6章。
 
 例如，如果 DBMS 主机不可用，则连接尝试可能会超时。 如果连接尝试失败， `OpenEx` 则会引发 `CDBException` 。
 
@@ -578,7 +579,7 @@ virtual BOOL OpenEx(
 
 [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]
 
-## <a name="cdatabaserollback"></a><a name="rollback"></a>CDatabase：： Rollback
+## <a name="cdatabaserollback"></a><a name="rollback"></a> CDatabase：： Rollback
 
 调用此成员函数可以撤消在事务中所做的更改。
 
@@ -596,13 +597,13 @@ BOOL Rollback();
 
 调用后 `Rollback` ，该事务将会结束，并且必须 `BeginTrans` 再次调用另一个事务。 调用之前的当前记录 `BeginTrans` 将在之后再次成为当前记录 `Rollback` 。
 
-回滚后，回滚之前的当前记录将保持为最新。 有关回滚后记录集的状态和数据源的详细信息，请参阅[事务（ODBC）](../../data/odbc/transaction-odbc.md)一文。
+回滚后，回滚之前的当前记录将保持为最新。 有关回滚后记录集的状态和数据源的详细信息，请参阅文章 [Transaction (ODBC) ](../../data/odbc/transaction-odbc.md)。
 
 ### <a name="example"></a>示例
 
-  请参阅[事务：在记录集中执行事务（ODBC）](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)一文。
+  请参阅 [事务：在记录集中执行事务 (ODBC) ](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。
 
-## <a name="cdatabasesetlogintimeout"></a><a name="setlogintimeout"></a>CDatabase：： SetLoginTimeout
+## <a name="cdatabasesetlogintimeout"></a><a name="setlogintimeout"></a> CDatabase：： SetLoginTimeout
 
 调用或之前调用此成员函数， `OpenEx` `Open` 以重写尝试的数据源连接超时之前允许的默认秒数。
 
@@ -610,7 +611,7 @@ BOOL Rollback();
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSeconds*<br/>
 连接尝试超时之前允许的秒数。
@@ -621,7 +622,7 @@ void SetLoginTimeout(DWORD dwSeconds);
 
 登录超时的默认值为15秒。 并非所有数据源都支持指定登录超时值的功能。 如果数据源不支持超时，则会获得跟踪输出，但不会出现异常。 值0表示 "无限大"。
 
-## <a name="cdatabasesetquerytimeout"></a><a name="setquerytimeout"></a>CDatabase：： SetQueryTimeout
+## <a name="cdatabasesetquerytimeout"></a><a name="setquerytimeout"></a> CDatabase：： SetQueryTimeout
 
 调用此成员函数以覆盖在连接的数据源上的后续操作超时之前允许的默认秒数。
 
@@ -629,7 +630,7 @@ void SetLoginTimeout(DWORD dwSeconds);
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSeconds*<br/>
 查询尝试超时之前允许的秒数。
@@ -640,7 +641,7 @@ void SetQueryTimeout(DWORD dwSeconds);
 
 查询超时的默认值为15秒。 并非所有数据源都支持设置查询超时值的功能。 如果将查询超时值设置为0，则不会发生超时;与数据源的通信可能会停止响应。 在开发过程中，此行为可能会很有用。 如果数据源不支持超时，则会获得跟踪输出，但不会出现异常。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
