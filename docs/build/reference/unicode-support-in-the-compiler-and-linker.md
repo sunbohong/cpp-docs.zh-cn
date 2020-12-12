@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器和链接器中的 Unicode 支持
 title: 编译器和链接器中的 Unicode 支持
 ms.date: 12/15/2017
 f1_keywords:
@@ -8,20 +9,20 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c853907dd0d70a4ab7311c41f51d8d73bb25cf20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178948"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>编译器和链接器中的 Unicode 支持
 
-大多数视觉C++对象生成工具都支持 Unicode 输入和输出。
+大多数 Visual C++ 生成工具都支持 Unicode 输入和输出。
 
 ## <a name="filenames"></a>文件名
 
-在命令行上或在编译器指令中指定的文件名（如 `#include`）可能包含 Unicode 字符。
+命令行或编译器指令中指定的文件名 (如 `#include`) 可能包含 Unicode 字符。
 
 ## <a name="source-code-files"></a>源代码文件
 
@@ -29,7 +30,7 @@ ms.locfileid: "80168832"
 
 Unicode 可以在源代码文件中输入以下编码：
 
-- 具有或不具有字节顺序标记（BOM）的 UTF-16 little endian
+- 具有或不具有字节顺序标记 (BOM 的 UTF-16 little endian) 
 
 - 带有或不带 BOM 的 UTF-16 大 endian
 
@@ -45,8 +46,8 @@ Unicode 可以在源代码文件中输入以下编码：
 
 ## <a name="asm-and-cod-dumps"></a>.asm 和. 货转储
 
-默认情况下，.asm 和. 货到的转储在 ANSI 中是为了与 MASM 兼容。 使用[/FAu](fa-fa-listing-file.md)输出 utf-8。 请注意，如果指定 **/FAs**，则只会直接打印混合源，并且可能会出现乱码，例如，如果源代码为 utf-8，而你未指定 **/FAsu**。
+默认情况下，.asm 和. 货到的转储在 ANSI 中是为了与 MASM 兼容。 使用 [/FAu](fa-fa-listing-file.md) 输出 utf-8。 请注意，如果指定 **/FAs**，则只会直接打印混合源，并且可能会出现乱码，例如，如果源代码为 utf-8，而你未指定 **/FAsu**。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [通过命令行使用 MSVC 工具集](../building-on-the-command-line.md)

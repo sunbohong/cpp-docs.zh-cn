@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： `__super`
 title: __super
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: 3afc2e8049cfcca40db389bed84baa6f42dae126
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 30f2733abbd4599deabfa989d72b099c929cb050
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178129"
 ---
 # `__super`
 
@@ -31,9 +32,9 @@ __super::member_function();
 
 **`__super`** 只能出现在成员函数体中。
 
-**`__super`** 不能与 using 声明一起使用。 有关详细信息，请参阅[Using 声明](../cpp/using-declaration.md)。
+**`__super`** 不能与 using 声明一起使用。 有关详细信息，请参阅 [Using 声明](../cpp/using-declaration.md) 。
 
-引入用于注入代码的[特性](../windows/attributes/attributes-alphabetical-reference.md)后，你的代码可能包含一个或多个基类，这些基类的名称可能不知道，但包含你希望调用的方法。
+引入用于注入代码的 [特性](../windows/attributes/attributes-alphabetical-reference.md) 后，你的代码可能包含一个或多个基类，这些基类的名称可能不知道，但包含你希望调用的方法。
 
 ## <a name="example"></a>示例
 

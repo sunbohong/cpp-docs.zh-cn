@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： mbsinit
 title: mbsinit
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48edb74e47549cb9e1a97757d4922bc0bd8b6c24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178597"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -42,18 +43,18 @@ int mbsinit(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ps*<br/>
 指向 [mbstate_t](../../c-runtime-library/standard-types.md) 变量的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果*ps*为 NULL 或者不在转换的中间，则为非零**值**。
+如果 *ps* 为 NULL 或者不在转换的中间，则为非零 **值** 。
 
 ## <a name="remarks"></a>备注
 
-使用采用**mbstate_t**指针的 ANSI 函数之一时，传递**mbstate_t**的地址将返回有关缓冲区中的最后一个字节是否已转换的信息。
+使用采用 **mbstate_t** 指针的 ANSI 函数之一时，传递 **mbstate_t** 的地址将返回有关缓冲区中的最后一个字节是否已转换的信息。
 
 需要安装适当的代码页来支持多字节字符。
 

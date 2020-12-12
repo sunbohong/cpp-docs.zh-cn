@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _fpreset
 title: _fpreset
 ms.date: 04/05/2018
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7818e0f02f6165c5041245e342a81b1dde25b091
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957015"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178688"
 ---
 # <a name="_fpreset"></a>_fpreset
 
@@ -46,9 +47,9 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>备注
 
-**_Fpreset**函数重新初始化浮点数学包。 **_fpreset**通常与**信号**、**系统**或 **_exec**或 **_spawn**函数一起使用。 如果程序使用**信号**捕获浮点错误信号（**SIGFPE**），则它可以通过调用 **_fpreset**并使用**longjmp**从浮点错误中安全地恢复。
+**_Fpreset** 函数将重新初始化浮点数学包。 **_fpreset** 通常与 **信号**、 **系统** 或 **_exec** 或 **_spawn** 函数一起使用。 如果程序使用 **信号** 捕获浮点错误信号 (**SIGFPE**) ，则它可以通过调用 **_fpreset** 并使用 **longjmp** 从浮点错误中安全地恢复。
 
-使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)进行编译时，不推荐使用此函数，因为公共语言运行时仅支持默认的浮点精度。
+使用 [/clr (公共语言运行时编译) ](../../build/reference/clr-common-language-runtime-compilation.md) 进行编译时弃用此函数，因为公共语言运行时仅支持默认的浮点精度。
 
 ## <a name="requirements"></a>要求
 
@@ -56,7 +57,7 @@ void _fpreset( void );
 |--------------|---------------------|
 |**_fpreset**|\<float.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -175,7 +176,7 @@ Error 131: Divide by zero
 ## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[_exec、_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec，_wexec 函数](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [signal](signal.md)<br/>
-[_spawn、_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn，_wspawn 函数](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

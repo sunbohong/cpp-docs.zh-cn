@@ -1,25 +1,26 @@
 ---
+description: 了解有关以下内容的详细信息：生成文件中的命令
 title: 生成文件中的命令
 ms.date: 11/04/2016
 helpviewer_keywords:
 - commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-ms.openlocfilehash: fcb8737070931cf95d7bfb3971a84e22c7ad70a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4f3c6d3cc9b5d567548d7b3f2bd7679d492ebf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294390"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179078"
 ---
 # <a name="commands-in-a-makefile"></a>生成文件中的命令
 
-描述块或推理规则指定要运行如果依赖项已过期的命令块。 NMAKE 之前，将显示每个命令运行它，除非 /S， **。无提示**， **！CMDSWITCHES**，或\@使用。 如果描述块未遵循由命令块，NMAKE 查找匹配的推断规则。
+描述块或推理规则指定在依赖项过期时要运行的命令块。 在运行命令之前，NMAKE 显示每个命令，除非/S **。无提示**， **！使用 CMDSWITCHES** 或 \@ 。 如果说明块后面没有命令块，NMAKE 将查找匹配推理规则。
 
-命令块包含一个或多个命令，在其对应行的每个命令。 依赖项或规则与命令块之间可以显示没有空白的行。 但是，可以显示包含仅空格或制表符的行;这行解释为一个空的命令，并且不会出现错误。 允许命令行之间有空行。
+命令块包含一个或多个命令，每个命令都在其自己的行上。 依赖项或规则与命令块之间不能出现空行。 但是，只包含空格或制表符的行可以显示;该行被解释为 null 命令，不发生错误。 在命令行之间允许使用空行。
 
-命令行开始用一个或多个空格或制表符。 换行字符后跟一个反斜杠 (\) 被解释为命令; 中的空间在行尾使用反斜杠以继续到下一行上的命令。 NMAKE 按原义解释反斜杠如果任何其他字符，包括空格或选项卡上后, 跟反斜杠。
+命令行以一个或多个空格或制表符开头。 后跟换行符的反斜杠 ( \ ) 在命令中被解释为空格;在行尾使用反斜杠将命令继续到下一行。 如果有任何其他字符（包括空格或制表符）跟随反斜杠，NMAKE 会按字面解释反斜杠。
 
-命令前面加一个分号 （;） 是否紧跟命令块中显示的一个依赖项的行或推理规则：
+前面带有分号 (; ) 可以出现在依赖项行或推理规则上，不管命令块是否如下：
 
 ```
 project.obj : project.c project.h ; cl /c project.c

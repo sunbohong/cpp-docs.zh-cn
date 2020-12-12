@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：范围规则摘要
 title: 范围规则摘要
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: 024a61419129f669485944a427379dd41c385404
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbb5fdc448039e2e7ac998fa8dc5754ef7026d8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231060"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178155"
 ---
 # <a name="summary-of-scope-rules"></a>范围规则摘要
 
-名称的使用在其范围内必须是明确的（直至确定重载的点）。 如果名称表示一个函数，则该函数的参数的数目和类型必须明确。 如果名称不明确，则应用[成员访问](../cpp/member-access-control-cpp.md)规则。
+名称的使用在其范围内必须是明确的（直至确定重载的点）。 如果名称表示一个函数，则该函数的参数的数目和类型必须明确。 如果名称不明确，则应用 [成员访问](../cpp/member-access-control-cpp.md) 规则。
 
 ## <a name="constructor-initializers"></a>构造函数初始值设定项
 
-[构造函数初始值设定项](constructors-cpp.md#member_init_list)在为其指定的构造函数的最外层块的范围内进行计算。 因此，它们可使用构造函数的参数名。
+[构造函数初始值设定项](constructors-cpp.md#member_init_list) 在为其指定的构造函数的最外层块的范围内进行计算。 因此，它们可使用构造函数的参数名。
 
 ## <a name="global-names"></a>全局名称
 
@@ -29,15 +30,15 @@ ms.locfileid: "87231060"
 
 - 范围解析 (`::`)
 
-- 对象和引用的成员选择（**.**）
+- **(的** 对象和引用的成员选择) 
 
-- 指针的成员选择（ **->** ）
+- 指针 () 的成员选择 **->**
 
 ## <a name="qualified-names"></a>限定名称
 
 用于二进制范围解析运算符 (`::`) 的名称称为“限定名”。 在二进制范围解析运算符后指定的名称必须是在该运算符左侧指定的类的成员或其基类的成员。
 
-在成员选择运算符（**.** 或 **->** ）必须是在运算符左侧指定的对象的类类型成员或其基类的成员。 成员选择运算符（）右侧指定的名称 **->** 也可以是另一个类类型的对象，前提 **->** 是左侧是类对象，而类定义了 **->** 计算结果为指向某个其他类类型的指针的重载成员选择运算符（）。 （[类成员访问](../cpp/member-access.md)中更详细地讨论了此设置。）
+在成员选择运算符 (之后指定的名称 **。** 或 **->**) 必须是位于运算符左侧指定的对象的类类型成员或其基类 (es) 成员的成员。 成员选择运算符右侧指定的名称 (**->**) 也可以是另一个类类型的对象，前提 **->** 是左侧是类对象，而类定义 (**->**) 计算为指向某个其他类类型的指针的重载成员选择运算符。  (在 [类成员访问](../cpp/member-access.md)中更详细地讨论了这一设置。 ) 
 
 编译器将按以下顺序搜索名称，并在找到名称时停止搜索：
 
@@ -59,7 +60,7 @@ ms.locfileid: "87231060"
 
 1. 前面带有 **`class`** 、 **`struct`** 和关键字的名称 **`union`** 强制编译器仅搜索 **`class`** 、 **`struct`** 或 **`union`** 名称。
 
-1. 范围解析运算符（）左侧的名称只能 `::` 是 **`class`** 、、 **`struct`** **`namespace`** 或 **`union`** 名称。
+1. 范围解析运算符的左侧的名称 (`::`) 只能是 **`class`** 、、 **`struct`** **`namespace`** 或 **`union`** 名称。
 
 如果名称引用非静态成员，但用于静态成员函数，则将生成错误消息。 同样，如果名称引用封闭类中的任何非静态成员，则会生成错误消息，因为封闭的类不具有封闭类 **`this`** 指针。
 

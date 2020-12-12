@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/CLRTHREADATTRIBUTE (设置 CLR 线程特性) '
 title: /CLRTHREADATTRIBUTE（设置 CLR 线程特性）
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 119797ee10ed0c08477b8e08635605e4299ffd41
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272463"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179117"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE（设置 CLR 线程特性）
 
-显式指定用于 CLR 程序入口点的线程特性。
+显式指定 CLR 程序入口点的线程特性。
 
 ## <a name="syntax"></a>语法
 
@@ -24,40 +25,40 @@ ms.locfileid: "62272463"
 /CLRTHREADATTRIBUTE:{STA|MTA|NONE}
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 **MTA**<br/>
-MTAThreadAttribute 特性应用于您的程序的入口点。
+将 MTAThreadAttribute 特性应用于程序的入口点。
 
-**无**<br/>
-与不指定 /CLRTHREADATTRIBUTE 相同。  允许公共语言运行时 (CLR) 设置默认线程特性。
+**NONE**<br/>
+与不指定/CLRTHREADATTRIBUTE. 相同  使公共语言运行时 (CLR) 设置默认线程特性。
 
 **STA**<br/>
-STAThreadAttribute 特性应用于您的程序的入口点。
+将 STAThreadAttribute 特性应用于程序的入口点。
 
 ## <a name="remarks"></a>备注
 
-设置将 thread 特性有效时才生成.exe，因为它会影响主线程的入口点。
+设置 thread 特性仅在生成 .exe 时有效，因为它会影响主线程的入口点。
 
-如果使用的默认入口点 （main 或 wmain，例如） 指定的线程模型是通过 /CLRTHREADATTRIBUTE 或上来将线程处理特性 （STAThreadAttribute 或 MTAThreadAttribute） 上的默认入口函数。
+例如，如果使用 (main 或 wmain 的默认入口点，则) 使用/CLRTHREADATTRIBUTE 或通过将线程特性置于默认项函数上 (STAThreadAttribute 或 MTAThreadAttribute) 来指定线程模型。
 
-如果使用非默认入口点，指定线程模型使用 /CLRTHREADATTRIBUTE 或放置线程处理特性，可以在非默认入口函数，并指定使用的非默认入口点[/ENTRY](entry-entry-point-symbol.md).
+如果使用非默认入口点，请使用/CLRTHREADATTRIBUTE 或通过将线程特性置于非默认项函数来指定线程模型，然后使用 [/ENTRY](entry-entry-point-symbol.md)指定非默认入口点。
 
-如果 /CLRTHREADATTRIBUTE 使用指定的线程模型不一致的源代码中指定的线程处理模型，将忽略 /CLRTHREADATTRIBUTE 链接器并将其应用源代码中指定的线程处理模型。
+如果源代码中指定的线程模型不同意使用/CLRTHREADATTRIBUTE 指定的线程模型，则链接器将忽略/CLRTHREADATTRIBUTE 并应用在源代码中指定的线程模型。
 
-如果 CLR 程序承载使用单线程的 COM 对象，它将使用单线程处理，例如，你所必需的。  如果您的 CLR 程序使用多线程处理，它不能承载使用单线程的 COM 对象。
+例如，如果您的 CLR 程序托管使用单线程的 COM 对象，则必须使用单线程。  如果 CLR 程序使用多线程处理，则它不能承载使用单线程的 COM 对象。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 展开“配置属性”节点。
 
-1. 展开**链接器**节点。
+1. 展开“链接器”节点。
 
-1. 选择**高级**属性页。
+1. 选择“高级”属性页。
 
-1. 修改**CLR 线程特性**属性。
+1. 修改 **CLR 线程特性** 属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

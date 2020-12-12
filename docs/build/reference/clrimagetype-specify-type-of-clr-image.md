@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/CLRIMAGETYPE (指定 CLR 映像的类型) '
 title: /CLRIMAGETYPE（指定 CLR 映像的类型）
 ms.date: 05/16/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /CLRIMAGETYPE linker option
 - -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
-ms.openlocfilehash: ee2e2ce359a4b877551adf9af71e0187b42cfd42
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 7c499eeddcacd674a9dfc2134e059fd8b3b9a6b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179143"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE（指定 CLR 映像的类型）
 
@@ -21,7 +22,7 @@ ms.locfileid: "65837481"
 
 ## <a name="syntax"></a>语法
 
-> **/CLRIMAGETYPE:** {**IJW**|**PURE**|**SAFE**|**SAFE32BITPREFERRED**}
+> **/CLRIMAGETYPE:**{**IJW**|**PURE**|**SAFE**|**SAFE32BITPREFERRED**}
 
 ## <a name="remarks"></a>备注
 
