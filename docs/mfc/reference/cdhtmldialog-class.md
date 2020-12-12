@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDHtmlDialog 类
 title: CDHtmlDialog 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -116,12 +117,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cc01c94357d7aac7fa6fa98127628a60746e1e8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa99d10b0d0ff6920f839d7588d80f489b971384
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185279"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 类
 
@@ -137,14 +138,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDHtmlDialog：： CDHtmlDialog](#cdhtmldialog)|构造 CDHtmlDialog 对象。|
 |[CDHtmlDialog：： ~ CDHtmlDialog](#_dtorcdhtmldialog)|销毁 CDHtmlDialog 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDHtmlDialog：： CanAccessExternal](#canaccessexternal)|作为访问检查调用的可重写，用于查看已加载页上的脚本对象是否可以访问控件站点的外部调度。 检查以确保调度对于脚本是安全的，或者当前区域允许对不安全的对象进行脚本编写。|
 |[CDHtmlDialog：： CreateControlSite](#createcontrolsite)|可重写，用于创建控件站点实例以承载对话框中的 WebBrowser 控件。|
@@ -197,7 +198,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CDHtmlDialog：： m_bUseHtmlTitle](#m_busehtmltitle)|指示是否使用 HTML 文档的标题作为对话框标题。|
 |[CDHtmlDialog：： m_nHtmlResID](#m_nhtmlresid)|要显示的 HTML 资源的资源 ID。|
@@ -206,7 +207,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog：： m_strCurrentUrl](#m_strcurrenturl)|当前 URL。|
 |[CDHtmlDialog：： m_szHtmlResID](#m_szhtmlresid)|HTML 资源 ID 的字符串版本。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CDHtmlDialog` 可以从 HTML 资源或 URL 加载要显示的 HTML。
 
@@ -242,7 +243,7 @@ DDX_DHtml helper 宏允许在 HTML 页上轻松访问控件的常用属性。
 
 ### <a name="data-exchange-macros"></a>数据交换宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DDX_DHtml_ElementValue](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementvalue)|设置或检索选定控件的值属性。|
 |[DDX_DHtml_ElementInnerText](../../mfc/reference/ddx-dhtml-helper-macros.md#ddx_dhtml_elementinnertext)|设置或检索当前元素的开始标记和结束标记之间的文本。|
@@ -283,7 +284,7 @@ CDHtmlDialog(
     CWnd *pParentWnd = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszTemplateName*<br/>
 以 null 结尾的字符串，它是对话框模板资源的名称。
@@ -300,7 +301,7 @@ CDHtmlDialog(
 *nHtmlResID*<br/>
 包含 HTML 资源的 ID 号。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数的第二种形式通过模板名称提供对对话框资源的访问。 第三种形式的构造函数通过资源模板的 ID 提供对对话框资源的访问。 通常，ID 以 **IDD_** 前缀开头。
 
@@ -312,7 +313,7 @@ CDHtmlDialog(
 virtual ~CDHtmlDialog();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CWnd：:D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow)成员函数必须用于销毁[CDialog：： Create](../../mfc/reference/cdialog-class.md#create)创建的无模式对话框。
 
@@ -328,7 +329,7 @@ virtual BOOL CreateControlSite(
     REFCLSID /* clsid */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pContainer*<br/>
 指向 [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) 对象的指针
@@ -340,7 +341,7 @@ virtual BOOL CreateControlSite(
 
 如果成功，则不为 0；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 您可以重写此成员函数以返回您自己的控件站点类的实例。
 
@@ -362,7 +363,7 @@ void DDX_DHtml_AxControl(
     VARIANT& var);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -394,7 +395,7 @@ void DDX_DHtml_CheckBox(
     int& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -457,7 +458,7 @@ void DDX_DHtml_ElementText(
     double& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -482,7 +483,7 @@ void DDX_DHtml_Radio(
     long& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -504,7 +505,7 @@ void DDX_DHtml_SelectIndex(
     long& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -526,7 +527,7 @@ void DDX_DHtml_SelectString(
     CString& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -548,7 +549,7 @@ void DDX_DHtml_SelectValue(
     CString& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -579,16 +580,16 @@ void DestroyModeless();
 STDMETHOD(EnableModeless)(BOOL fEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fEnable*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))中的*fEnable* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))中的 *fEnable* 。
 
 ### <a name="return-value"></a>返回值
 
 返回 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -602,19 +603,19 @@ STDMETHOD(FilterDataObject)(
     IDataObject** ppDORet);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDO*<br/>
-请参阅 Windows SDK 中的[IDocHostUIHandler：： FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))中的*pDO* 。
+请参阅 Windows SDK 中的 [IDocHostUIHandler：： FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))中的 *pDO* 。
 
 *ppDORet*<br/>
-请*ppDORet*参阅 `IDocHostUIHandler::FilterDataObject` Windows SDK 中的 ppDORet。
+请参阅 `IDocHostUIHandler::FilterDataObject` Windows SDK 中的 ppDORet。
 
 ### <a name="return-value"></a>返回值
 
 返回 S_FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -628,7 +629,7 @@ HRESULT GetControlDispatch(
     IDispatch** ppdisp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 ActiveX 控件的 HTML ID。
@@ -658,7 +659,7 @@ VARIANT GetControlProperty(
     DISPID dispId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szId*<br/>
 ActiveX 控件的 HTML ID。
@@ -676,7 +677,7 @@ ActiveX 控件的 HTML ID。
 
 一个包含所请求的属性的变量，如果找不到该控件或属性，则为空变量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从最小的位置按最有效的重载列出重载。
 
@@ -688,7 +689,7 @@ ActiveX 控件的 HTML ID。
 void GetCurrentUrl(CString& szUrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szUrl*<br/>
 一个 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 对象，其中包含要检索的 URL。
@@ -701,9 +702,9 @@ void GetCurrentUrl(CString& szUrl);
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-* \* \* pphtmlDoc*指向 HTML 文档的指针的指针。
+*\* \* pphtmlDoc* 指向 HTML 文档的指针的指针。
 
 ### <a name="return-value"></a>返回值
 
@@ -719,25 +720,25 @@ STDMETHOD(GetDropTarget)(
     IDropTarget** ppDropTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDropTarget*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))中的*pDropTarget* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))中的 *pDropTarget* 。
 
 *ppDropTarget*<br/>
-请*ppDropTarget*参阅 `IDocHostUIHandler::GetDropTarget` Windows SDK 中的 ppDropTarget。
+请参阅 `IDocHostUIHandler::GetDropTarget` Windows SDK 中的 ppDropTarget。
 
 ### <a name="return-value"></a>返回值
 
 返回 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))实现，如 Windows SDK 中所述。
 
 ## <a name="cdhtmldialoggetelement"></a><a name="getelement"></a> CDHtmlDialog：： GetElement
 
-返回由 *szElementId*指定的 HTML 元素上的接口。
+返回由 *szElementId* 指定的 HTML 元素上的接口。
 
 ```
 HRESULT GetElement(
@@ -750,7 +751,7 @@ HRESULT GetElement(
     IHTMLElement** pphtmlElement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
@@ -768,7 +769,7 @@ HTML 元素的 ID。
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果需要处理可能存在多个具有指定 ID 的元素的条件，请使用第一个重载。 您可以使用最后一个参数来查明返回的接口指针是否指向集合或单个项。 如果接口指针位于集合上，则可以查询 `IHTMLElementCollection` 并使用其 `item` 属性，按序号位置引用元素。
 
@@ -776,24 +777,24 @@ HTML 元素的 ID。
 
 ## <a name="cdhtmldialoggetelementhtml"></a><a name="getelementhtml"></a> CDHtmlDialog：： GetElementHtml
 
-检索 `innerHTML` 由 *szElementId*标识的 HTML 元素的属性。
+检索 `innerHTML` 由 *szElementId* 标识的 HTML 元素的属性。
 
 ```
 BSTR GetElementHtml(LPCTSTR szElementId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
 
 ### <a name="return-value"></a>返回值
 
-`innerHTML`如果找不到元素，则为*szElementId*标识的 HTML 元素的属性。
+`innerHTML`如果找不到元素，则为 *szElementId* 标识的 HTML 元素的属性。
 
 ## <a name="cdhtmldialoggetelementinterface"></a><a name="getelementinterface"></a> CDHtmlDialog：： GetElementInterface
 
-从 *szElementId*标识的 HTML 元素检索请求的接口指针。
+从 *szElementId* 标识的 HTML 元素检索请求的接口指针。
 
 ```
 template <class Q> HRESULT GetElementInterface(
@@ -806,7 +807,7 @@ HRESULT GetElementInterface(
     void** ppvObj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
@@ -827,7 +828,7 @@ HTML 元素的 ID。
 
 ## <a name="cdhtmldialoggetelementproperty"></a><a name="getelementproperty"></a> CDHtmlDialog：： GetElementProperty
 
-检索由 *dispId* 标识的属性的值，该属性由 *szElementId*标识。
+检索由 *dispId* 标识的属性的值，该属性由 *szElementId* 标识。
 
 ```
 VARIANT GetElementProperty(
@@ -835,7 +836,7 @@ VARIANT GetElementProperty(
     DISPID dispId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
@@ -849,20 +850,20 @@ HTML 元素的 ID。
 
 ## <a name="cdhtmldialoggetelementtext"></a><a name="getelementtext"></a> CDHtmlDialog：： GetElementText
 
-检索 `innerText` 由 *szElementId*标识的 HTML 元素的属性。
+检索 `innerText` 由 *szElementId* 标识的 HTML 元素的属性。
 
 ```
 BSTR GetElementText(LPCTSTR szElementId);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
 
 ### <a name="return-value"></a>返回值
 
-`innerText`由*szElementId*标识的 HTML 元素的属性，如果找不到该属性或元素，则为 NULL。
+`innerText`由 *szElementId* 标识的 HTML 元素的属性，如果找不到该属性或元素，则为 NULL。
 
 ## <a name="cdhtmldialoggetevent"></a><a name="getevent"></a> CDHtmlDialog：： GetEvent
 
@@ -872,7 +873,7 @@ HTML 元素的 ID。
 HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppEventObj*<br/>
 将用接口指针填充的指针的地址 `IHTMLEventObj` 。
@@ -881,7 +882,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 只应从 DHTML 事件处理程序中调用此函数。
 
@@ -893,16 +894,16 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ppDispatch*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))中的*ppDispatch* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))中的 *ppDispatch* 。
 
 ### <a name="return-value"></a>返回值
 
 失败时返回 S_OK 或失败时 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -914,16 +915,16 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pInfo*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))中的*pInfo* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))中的 *pInfo* 。
 
 ### <a name="return-value"></a>返回值
 
 返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -937,19 +938,19 @@ STDMETHOD(GetOptionKeyPath)(
     DWORD dw);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pchKey*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))中的*pchKey* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))中的 *pchKey* 。
 
 *dw*<br/>
-请*dw*参阅 `IDocHostUIHandler::GetOptionKeyPath` Windows SDK 中的 dw。
+请参阅 `IDocHostUIHandler::GetOptionKeyPath` Windows SDK 中的 dw。
 
 ### <a name="return-value"></a>返回值
 
 返回 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -965,7 +966,7 @@ STDMETHOD(HideUI)(void);
 
 返回 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -990,7 +991,7 @@ BOOL LoadFromResource(LPCTSTR lpszResource);
 BOOL LoadFromResource(UINT nRes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszResource*<br/>
 指向字符串的指针，该字符串包含要加载的资源的名称。
@@ -1010,9 +1011,9 @@ BOOL LoadFromResource(UINT nRes);
 BOOL m_bUseHtmlTitle;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果 **m**_ **bUseHtmlTitle** 为 TRUE，则将对话框标题设置为等于 HTML 文档的标题;否则，将使用对话框资源中的标题。
+如果 **m** _ **bUseHtmlTitle** 为 TRUE，则将对话框标题设置为等于 HTML 文档的标题;否则，将使用对话框资源中的标题。
 
 ## <a name="cdhtmldialogm_nhtmlresid"></a><a name="m_nhtmlresid"></a> CDHtmlDialog：： m_nHtmlResID
 
@@ -1064,7 +1065,7 @@ LPTSTR m_szHtmlResID;
 
 ## <a name="cdhtmldialognavigate"></a><a name="navigate"></a> CDHtmlDialog：：导航
 
-导航到由 *lpszURL*指定的 URL 标识的资源。
+导航到由 *lpszURL* 指定的 URL 标识的资源。
 
 ```cpp
 void Navigate(
@@ -1076,7 +1077,7 @@ void Navigate(
     DWORD dwPostDataLen = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszURL*<br/>
 指向包含目标 URL 的字符串的指针。
@@ -1106,7 +1107,7 @@ virtual void OnBeforeNavigate(
     LPCTSTR szUrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDisp*<br/>
 指向 `IDispatch` 对象的指针。
@@ -1124,7 +1125,7 @@ virtual void OnDocumentComplete(
     LPCTSTR szUrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDisp*<br/>
 指向 `IDispatch` 对象的指针。
@@ -1140,16 +1141,16 @@ virtual void OnDocumentComplete(
 STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fActivate*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))中的*fActivate* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))中的 *fActivate* 。
 
 ### <a name="return-value"></a>返回值
 
 返回 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -1161,16 +1162,16 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fActivate*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： onframewindowactivate 调用](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))中的*fActivate* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： onframewindowactivate 调用](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))中的 *fActivate* 。
 
 ### <a name="return-value"></a>返回值
 
 返回 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： onframewindowactivate 调用](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -1186,7 +1187,7 @@ virtual BOOL OnInitDialog();
 
 默认实现返回 TRUE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此消息将在执行、或调用期间发送到对话框，该对话框会在 `Create` `CreateIndirect` `DoModal` 对话框显示之前立即发生。
 
@@ -1204,7 +1205,7 @@ virtual void OnNavigateComplete(
     LPCTSTR szUrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDisp*<br/>
 指向 `IDispatch` 对象的指针。
@@ -1223,16 +1224,16 @@ STDMETHOD(ResizeBorder)(
     BOOL fRameWindow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *prcBorder*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))中的*prcBorder* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))中的 *prcBorder* 。
 
 *pUIWindow*<br/>
-请*pUIWindow*参阅 `IDocHostUIHandler::ResizeBorder` Windows SDK 中的 pUIWindow。
+请参阅 `IDocHostUIHandler::ResizeBorder` Windows SDK 中的 pUIWindow。
 
 *fFrameWindow*<br/>
-请*fFrameWindow*参阅 `IDocHostUIHandler::ResizeBorder` Windows SDK 中的 fFrameWindow。
+请参阅 `IDocHostUIHandler::ResizeBorder` Windows SDK 中的 fFrameWindow。
 
 ### <a name="return-value"></a>返回值
 
@@ -1259,7 +1260,7 @@ void SetControlProperty(
     VARIANT* pVar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 ActiveX 控件的 HTML ID。
@@ -1290,7 +1291,7 @@ void SetElementHtml(
     BSTR bstrText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
@@ -1312,7 +1313,7 @@ void SetElementProperty(
     VARIANT* pVar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
@@ -1337,7 +1338,7 @@ void SetElementText(
     BSTR bstrText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *szElementId*<br/>
 HTML 元素的 ID。
@@ -1356,7 +1357,7 @@ HTML 元素的 ID。
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pdispExternal*<br/>
 新 `IDispatch` 接口。
@@ -1369,7 +1370,7 @@ void SetExternalDispatch(IDispatch* pdispExternal);
 void SetHostFlags(DWORD dwFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 dwFlags <br/>
 有关可能的值，请参阅 Windows SDK 中的 [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) 。
@@ -1386,25 +1387,25 @@ STDMETHOD(ShowContextMenu)(
     IDispatch* pdispReserved);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwID*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))中的*dwID* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))中的 *dwID* 。
 
 *ppt*<br/>
-请*ppt*参阅 `IDocHostUIHandler::ShowContextMenu` Windows SDK 中的 ppt。
+请参阅 `IDocHostUIHandler::ShowContextMenu` Windows SDK 中的 ppt。
 
 *pcmdtReserved*<br/>
-请*pcmdtReserved*参阅 `IDocHostUIHandler::ShowContextMenu` Windows SDK 中的 pcmdtReserved。
+请参阅 `IDocHostUIHandler::ShowContextMenu` Windows SDK 中的 pcmdtReserved。
 
 *pdispReserved*<br/>
-请*pdispReserved*参阅 `IDocHostUIHandler::ShowContextMenu` Windows SDK 中的 pdispReserved。
+请参阅 `IDocHostUIHandler::ShowContextMenu` Windows SDK 中的 pdispReserved。
 
 ### <a name="return-value"></a>返回值
 
 返回 S_FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -1421,28 +1422,28 @@ STDMETHOD(ShowUI)(
     IOleInPlaceUIWindow* pDoc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwID*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))中的*dwID* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))中的 *dwID* 。
 
 *pActiveObject*<br/>
 请参阅 Windows SDK 中的 *d pActiveObject* in `IDocHostUIHandler::ShowUI` 。
 
 *pCommandTarget*<br/>
-请*pCommandTarget*参阅 `IDocHostUIHandler::ShowUI` Windows SDK 中的 pCommandTarget。
+请参阅 `IDocHostUIHandler::ShowUI` Windows SDK 中的 pCommandTarget。
 
 *pFrame*<br/>
-请*pFrame*参阅 `IDocHostUIHandler::ShowUI` Windows SDK 中的 pFrame。
+请参阅 `IDocHostUIHandler::ShowUI` Windows SDK 中的 pFrame。
 
 *pDoc*<br/>
-请*pDoc*参阅 `IDocHostUIHandler::ShowUI` Windows SDK 中的 pDoc。
+请参阅 `IDocHostUIHandler::ShowUI` Windows SDK 中的 pDoc。
 
 ### <a name="return-value"></a>返回值
 
 返回 S_FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -1457,22 +1458,22 @@ STDMETHOD(TranslateAccelerator)(
     DWORD nCmdID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpMsg*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))中的*lpMsg* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))中的 *lpMsg* 。
 
 *pguidCmdGroup*<br/>
-请*pguidCmdGroup*参阅 `IDocHostUIHandler::TranslateAccelerator` Windows SDK 中的 pguidCmdGroup。
+请参阅 `IDocHostUIHandler::TranslateAccelerator` Windows SDK 中的 pguidCmdGroup。
 
 *nCmdID*<br/>
-请*nCmdID*参阅 `IDocHostUIHandler::TranslateAccelerator` Windows SDK 中的 nCmdID。
+请参阅 `IDocHostUIHandler::TranslateAccelerator` Windows SDK 中的 nCmdID。
 
 ### <a name="return-value"></a>返回值
 
 返回 S_FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -1487,22 +1488,22 @@ STDMETHOD(TranslateUrl)(
     OLECHAR** ppchURLOut);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwTranslate*<br/>
-请参阅 Windows SDK 中[IDocHostUIHandler：： TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))中的*dwTranslate* 。
+请参阅 Windows SDK 中 [IDocHostUIHandler：： TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))中的 *dwTranslate* 。
 
 *pchURLIn*<br/>
-请*pchURLIn*参阅 `IDocHostUIHandler::TranslateUrl` Windows SDK 中的 pchURLIn。
+请参阅 `IDocHostUIHandler::TranslateUrl` Windows SDK 中的 pchURLIn。
 
 *ppchURLOut*<br/>
-请*ppchURLOut*参阅 `IDocHostUIHandler::TranslateUrl` Windows SDK 中的 ppchURLOut。
+请参阅 `IDocHostUIHandler::TranslateUrl` Windows SDK 中的 ppchURLOut。
 
 ### <a name="return-value"></a>返回值
 
 返回 S_FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))实现，如 Windows SDK 中所述。
 
@@ -1518,11 +1519,11 @@ STDMETHOD(UpdateUI)(void);
 
 返回 E_NOTIMPL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数是 CDHtmlDialog 的 [IDocHostUIHandler：： UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))实现，如 Windows SDK 中所述。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 DHtmlExplore](../../overview/visual-cpp-samples.md)<br/>
 [DDX_DHtml Helper 宏](#ddx_dhtml_helper_macros)<br/>

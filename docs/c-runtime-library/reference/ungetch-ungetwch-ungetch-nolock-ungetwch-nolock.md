@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 4/2/2020
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2a7b3b2a71b633eac64ad5ebc5203d70f31626ed
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d7491f80f5c8a619d6382f5811c0ff2fccc00125
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909292"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341394"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -82,22 +83,22 @@ wint_t _ungetwch_nolock(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要推送的字符。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，两个函数都将返回字符*c* 。 如果出现错误， **_ungetch**将返回值**EOF** ， **_ungetwch**返回**WEOF**。
+如果成功，两个函数都将返回字符 *c* 。 如果出现错误， **_ungetch** 将返回值 **EOF** ， **_ungetwch** 返回 **WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符*c*推送回控制台，导致*c*成为 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**）读取的下一个字符。 如果在下一次读取之前调用多次，则 **_ungetch**和 **_ungetwch**失败。 *C*参数不能为**EOF** （或**WEOF**）。
+这些函数将字符 *c* 推送回控制台，导致 *c* 成为 **_getch** 或 **_getche** (或 **_getwch** 或 **_getwche**) 读取的下一个字符。 如果在下一次读取之前调用多次，则 **_ungetch** 和 **_ungetwch** 失败。 *C* 参数不能为 **EOF** (或 **WEOF**) 。
 
 后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -108,7 +109,7 @@ wint_t _ungetwch_nolock(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ungetch**， **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
@@ -157,7 +158,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>

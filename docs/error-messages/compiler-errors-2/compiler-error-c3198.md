@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3198
 title: 编译器错误 C3198
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3198
 ms.assetid: ec4ecf61-0067-4aa4-b443-a91013a1e59d
-ms.openlocfilehash: b9e0ce4a84b312e3a9277898b3fc264ea3ae22bb
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 8f72dd32af7f004696afd87b7141768f09ea5f12
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74739150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97321978"
 ---
 # <a name="compiler-error-c3198"></a>编译器错误 C3198
 
 使用浮点 pragma 无效： fenv_access 杂注仅在精确模式下运行
 
-[fenv_access](../../preprocessor/fenv-access.md)杂注用于 **/fp：精确**的[/fp](../../build/reference/fp-specify-floating-point-behavior.md)设置下。
+[fenv_access](../../preprocessor/fenv-access.md)杂注用于 **/fp：精确** 的 [/fp](../../build/reference/fp-specify-floating-point-behavior.md)设置下。
 
 下面的示例生成 C3198：
 

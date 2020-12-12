@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： errno 常量
 title: errno 常量
 ms.date: 09/17/2018
 f1_keywords:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.openlocfilehash: 4eb92b66970f1ef9455a0d7dd741ad02a60c26d2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898749"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329335"
 ---
 # <a name="errno-constants"></a>errno 常量
 
@@ -58,7 +59,7 @@ ms.locfileid: "74898749"
 
 ## <a name="remarks"></a>备注
 
-**errno** 值是在出现各种错误条件时分配给 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常量。
+errno 值是在出现各种错误条件时分配给 [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的常量。
 
 ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供定义都可用于 32 位 Windows 操作系统。 ERRNO.H 中的某些值的存在是为了保持与 UNIX 系列操作系统的兼容性。
 
@@ -171,6 +172,6 @@ ERRNO.H 包含 errno 值的定义。 但是，并非 ERRNO.H 中给定的提供�
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [全局常量](../c-runtime-library/global-constants.md)

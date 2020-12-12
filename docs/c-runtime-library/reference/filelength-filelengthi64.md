@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _filelength、_filelengthi64
 title: _filelength、_filelengthi64
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: 5fea019591fc5a90aab07f0347aa3f02fe0d43f3
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 21004112e731827240b66c343b69cc00133aa6ab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910221"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329289"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength、_filelengthi64
 
@@ -57,18 +58,18 @@ __int64 _filelengthi64(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*<br/>
 以文件说明符为目标。
 
 ## <a name="return-value"></a>返回值
 
-**_Filelength**和 **_filelengthi64**都返回与*fd*关联的目标文件的文件长度（以字节为单位）。 如果*fd*是无效的文件描述符，则此函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这两个函数都将返回-1L 以指示错误，并将**errno**设置为**ebadf (**。
+**_Filelength** 和 **_filelengthi64** 都返回与 *fd* 关联的目标文件的文件长度（以字节为单位）。 如果 *fd* 是无效的文件描述符，则此函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这两个函数都将返回-1L 以指示错误，并将 **errno** 设置为 **ebadf (**。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -83,7 +84,7 @@ __int64 _filelengthi64(
 
 请参见 [_chsize](chsize.md) 的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_chsize](chsize.md)<br/>

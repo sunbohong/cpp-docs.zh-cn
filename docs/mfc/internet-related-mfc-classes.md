@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： Internet-Related MFC 类
 title: 与 Internet 相关的 MFC 类
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet classes
 ms.assetid: e50c6b39-4b65-4b8a-8101-8934d0780723
-ms.openlocfilehash: 1c784e9ae98e2fb51a31521511967b1755c3ea12
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e1cdbbbb1079ae63d07a6f31c021a2c765f61964
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621625"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335858"
 ---
 # <a name="internet-related-mfc-classes"></a>与 Internet 相关的 MFC 类
 
@@ -65,6 +66,6 @@ ms.locfileid: "84621625"
 
 - [CInternetException](reference/cinternetexception-class.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC Internet 编程基础知识](mfc-internet-programming-basics.md)

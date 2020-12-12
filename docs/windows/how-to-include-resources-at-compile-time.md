@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅如何：在编译时包括资源 (c + +) '
 title: 如何：在 c + +) 编译时包含资源 (
 ms.date: 02/14/2019
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 5ac4cba4e8ad8a08fa1010758c5a343501d3af2c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 18c391351c3a97a8adbbd79691f9c0e3ec07abae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329357"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>如何：在 c + +) 编译时包含资源 (
 
@@ -50,7 +51,7 @@ ms.locfileid: "91504416"
 
 若要开始操作，请打开 " **资源包括** " 对话框，方法是右键单击 " [资源视图](how-to-create-a-resource-script-file.md#create-resources)中的 .rc 文件，选择" **资源包括** "，并注意以下属性：
 
-| 属性 | 说明 |
+| Property | 描述 |
 |---|---|
 | **符号头文件** | 允许你更改存储资源文件的符号定义的标头文件的名称。<br/><br/>有关详细信息，请参阅 [更改符号头文件的名称](./changing-a-symbol-or-symbol-name-id.md)。 |
 | **只读符号指令** | 使您能够包含包含不应修改的符号的头文件。<br/><br/>例如，要与其他项目共享的符号文件。 这还可以包括 MFC .h 文件。 有关详细信息，请参阅 [包含共享 (只读) 或计算符号](./changing-a-symbol-or-symbol-name-id.md)。 |
@@ -65,7 +66,7 @@ ms.locfileid: "91504416"
 
 1. 将资源置于具有唯一文件名的资源脚本文件中。 不要使用 *项目名称 .rc*，因为这是用于主资源脚本文件的文件的名称。
 
-1. 右键单击[资源视图](how-to-create-a-resource-script-file.md#create-resources)中的 *.rc*文件，然后选择 "**资源包括**"。
+1. 右键单击 [资源视图](how-to-create-a-resource-script-file.md#create-resources)中的 *.rc* 文件，然后选择 "**资源包括**"。
 
 1. 在 " **编译时指令** " 框中，添加 [#include](../preprocessor/hash-include-directive-c-cpp.md) 编译器指令以将新的资源文件包含在开发环境中的主资源文件中。
 
@@ -73,16 +74,16 @@ ms.locfileid: "91504416"
 
 ### <a name="to-specify-include-directories-for-a-specific-resource-rc-file"></a>若要为特定资源指定包含目录 ( .rc) 文件
 
-1. 右键单击**解决方案资源管理器**中的 *.rc*文件，然后选择 "**属性**"。
+1. 右键单击 **解决方案资源管理器** 中的 *.rc* 文件，然后选择 "**属性**"。
 
 1. 选择左窗格中的 " **资源** " 节点，然后在 " **附加包含目录** " 属性中指定任何其他包含目录。
 
 ### <a name="to-find-symbols-in-resources"></a>在资源中查找符号
 
-1. 中转到菜单**编辑**  >  [查找符号](/visualstudio/ide/go-to)。
+1. 中转到菜单 **编辑**  >  [查找符号](/visualstudio/ide/go-to)。
 
    > [!TIP]
-   > 若要在搜索中使用[正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)，请在 "**编辑**" 菜单中选择 "[在文件中查找](/visualstudio/ide/reference/find-command)"，而不是**查找符号**。 在 "[查找](/visualstudio/ide/finding-and-replacing-text)" 对话框和 "**查找内容**" 框中，选择 "**使用：正则表达式**" 复选框，可以从下拉列表中选择一个常规搜索表达式。 从此列表中选择表达式时，会将其替换为 " **查找内容** " 框中的搜索文本。
+   > 若要在搜索中使用 [正则表达式](/visualstudio/ide/using-regular-expressions-in-visual-studio)，请在 "**编辑**" 菜单中选择 "[在文件中查找](/visualstudio/ide/reference/find-command)"，而不是 **查找符号**。 在 "[查找](/visualstudio/ide/finding-and-replacing-text)" 对话框和 "**查找内容**" 框中，选择 "**使用：正则表达式**" 复选框，可以从下拉列表中选择一个常规搜索表达式。 从此列表中选择表达式时，会将其替换为 " **查找内容** " 框中的搜索文本。
 
 1. 在 " **查找内容** " 框中，从下拉列表中选择之前的搜索字符串，或键入要查找的快捷键，例如 `ID_ACCEL1` 。
 

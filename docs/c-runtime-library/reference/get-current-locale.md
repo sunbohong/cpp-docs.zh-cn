@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _get_current_locale
 title: _get_current_locale
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - locales, getting information on
 - __get_current_locale function
 ms.assetid: 572217f2-a37a-4105-a293-a250b4fabd99
-ms.openlocfilehash: a17e730b350eaf88cf1c51502fda3df5ae30f611
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 672914875aebbe020fbfab0c4958ce2963958432
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956089"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341485"
 ---
 # <a name="_get_current_locale"></a>_get_current_locale
 
@@ -52,9 +53,9 @@ _locale_t _get_current_locale(void);
 
 ## <a name="remarks"></a>备注
 
-**_Get_current_locale**函数获取线程的当前设置的区域设置，并返回表示该区域设置的区域设置对象。
+**_Get_current_locale** 函数获取线程的当前设置的区域设置，并返回表示该区域设置的区域设置对象。
 
-此函数的先前名称 **__get_current_locale** （具有两个前导下划线）已弃用。
+此函数的以前的名称， **__get_current_locale** 已弃用了两个前导下划线)  (。
 
 ## <a name="requirements"></a>要求
 
@@ -62,7 +63,7 @@ _locale_t _get_current_locale(void);
 |-------------|---------------------|
 |**_get_current_locale**|\<locale.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 

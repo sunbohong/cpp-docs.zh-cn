@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2906
 title: 编译器错误 C2906
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2906
 ms.assetid: 30f652f1-6af6-4a2f-a69e-a1a4876cc8c6
-ms.openlocfilehash: bf21c4f14948d56fe781226e5aaf1b479059cb55
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 49a7e5736c1f5e1869b04e79f1c979c3620b58ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97270662"
 ---
 # <a name="compiler-error-c2906"></a>编译器错误 C2906
 
-"专用化"：显式专用化需要 "template < >"
+"专用化"：显式专用化需要 "template <>"
 
 必须使用新语法来显式专用化模板。
 

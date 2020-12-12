@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用导入库和导出文件
 title: 使用导入库和导出文件
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,26 +7,26 @@ helpviewer_keywords:
 - import libraries, using
 - export files
 ms.assetid: 2634256a-8aa5-4495-8c9e-6cde10e4ed76
-ms.openlocfilehash: 030b792d4bbebecef9d9303238657a564a142ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f42a98ebe19cb32fb77964f26c37928776b5b30c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247015"
 ---
 # <a name="using-an-import-library-and-export-file"></a>使用导入库和导出文件
 
-（可执行文件或 DLL） 在一个程序时导出到另一个程序，它还会导入，或者如果两个以上程序都将导出到和从每个其他导入，链接这些程序的命令必须提供循环导出。
+当程序 (可执行文件或 DLL) 导出到它也从其导入的另一个程序时，或者如果两个以上的程序都导出到另一个程序并从中导入，则用于链接这些程序的命令必须适应循环导出。
 
-中没有循环导出的情况下，当链接程序使用的其他程序中，导出时必须指定导出的程序的导入库。 导出程序的导入库链接该导出程序时创建。 因此，必须在链接导出程序之前导入程序。 例如，如果从 ONE.dll 导入 TWO.dll，必须先链接 ONE.dll 并获取导入库 ONE.lib。 然后，链接 TWO.dll 时指定 ONE.lib。 当链接器创建 TWO.dll 时，它还会创建其导入库，TWO.lib。 链接从 TWO.dll 导入的程序时，请使用 TWO.lib。
+在没有循环导出的情况下，当链接使用其他程序的导出的程序时，必须指定导出程序的导入库。 当你链接该导出程序时，将创建导出程序的导入库。 因此，您必须在导入程序之前链接导出程序。 例如，如果从 ONE.dll TWO.dll 导入，则必须首先链接 ONE.dll 并将导入库导入。 然后，在链接 TWO.dll 时指定一个 .lib。 当链接器创建 TWO.dll 时，它还会创建它的导入库。 在链接从 TWO.dll 导入的程序时，请使用两个 .lib。
 
-但是，在循环导出的情况，不能链接所有相互依赖的程序使用其他程序的导入库。 在前面所述，如果 TWO.dll 还将导出到 ONE.dll、 TWO.dll 的导入库不会存在尚未 ONE.dll 链接时的示例。 循环导出存在时，必须使用 LIB 创建的导入库和导出文件的程序之一。
+但是，在循环导出情况下，不能使用其他程序中的 "导入库" 链接所有相互依赖的程序。 在前面所述的示例中，如果 TWO.dll 也导出到 ONE.dll，则在 ONE.dll 链接时，TWO.dll 的导入库仍不存在。 存在循环导出时，必须使用 LIB 为某个程序创建导入库和导出文件。
 
-若要开始，请选择一个在其上运行 LIB 的程序。 LIB 命令中列出的所有对象和程序库，并指定 /def。 如果程序使用.def 文件或 /EXPORT 规范，则还应指定这些。
+若要开始，请选择要在其中运行 LIB 的程序之一。 在 LIB 命令中，列出程序的所有对象和库，并指定/DEF。 如果程序使用 .def 文件或/EXPORT 规范，还应指定这些规范。
 
-创建导入库 (.lib) 和该程序的导出文件 (.exp) 后，在链接其他程序时使用的导入库。 链接创建每个导出程序生成导入库。 例如，如果 ONE.dll 对对象和导出运行 LIB，则创建 ONE.lib 和 ONE.exp。链接 TWO.dll; 时，现在可以使用 ONE.lib此步骤还创建导入库 TWO.lib。
+创建 ( .lib) 和该程序的导出文件 ( .exp) 后，在链接其他程序或程序时使用导入库。 LINK 为生成的每个导出程序创建导入库。 例如，如果在 ONE.dll 的对象和导出上运行 LIB，则创建一个 .lib 和一个 .exp。你现在可以在链接时使用一个 .lib TWO.dll;此步骤还创建了两个导入库。
 
-最后，链接以开头的程序。 LINK 命令中，在指定的对象和程序 LIB 创建计划，和导入库的.exp 文件的库或用于程序所使用的导出库。 若要继续此示例，ONE.dll 链接命令包含 ONE.exp 和 TWO.lib，以及对象和进入 ONE.dll 的库。 在链接命令中; 不能指定 /EXPORT 规范的.def 文件这些不是需要，因为.exp 文件中包含的导出定义。 链接时使用了.exp 文件，链接不会创建导入库，因为它假定一个创建时已创建了.exp 文件。
+最后，链接开始的程序。 在 "链接" 命令中，指定程序的对象和库、LIB 为程序创建的 .exp 文件以及该程序使用的导出的导入库。 若要继续此示例，ONE.dll 的链接命令包含一个 .exp 和两个 .lib 以及进入 ONE.dll 的对象和库。 请勿在 LINK 命令中指定 .def 文件或/EXPORT 规范;这不是必需的，因为导出定义包含在 .exp 文件中。 使用 .exp 文件进行链接时，LINK 不会创建导入库，因为它假定创建 .exp 文件时创建了一个导入库。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ___lc_locale_name_func
 title: ___lc_locale_name_func
 ms.date: 4/2/2020
 api_name:
@@ -22,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: c48041c6c01e22c7771c0b5449de2cc8df1a2df0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 3431318608516fda908cd3c8ab9562c5044d20ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246547"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -49,15 +50,15 @@ wchar_t** ___lc_locale_name_func(void);
 
 内部 CRT 函数特定于实现且会根据每个发行版本发生更改。 不建议在代码中使用它们。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`___lc_locale_name_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

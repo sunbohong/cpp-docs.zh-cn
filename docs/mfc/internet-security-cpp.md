@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： Internet Security (c + +) '
 title: Internet 安全性 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Internet applications [MFC], security
 - Web application security [MFC], Internet security approaches
 ms.assetid: bf0da697-81bc-41f0-83fa-d7f82ed83df8
-ms.openlocfilehash: ce044014c5c2e13528cea8b982227b0ec8bc03fc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 870695abc89ba022a333829ec974d2f1e9147a53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335844"
 ---
 # <a name="internet-security-c"></a>Internet 安全性 (C++)
 
@@ -28,7 +29,7 @@ ms.locfileid: "84621544"
 
 在第一种情况下，你相信该应用程序不会有任何损害，并且你信任该应用程序的来源。 在第二种情况下，数字签名用于验证真实性。 数字签名是一种行业标准，用于标识和提供有关代码发布者的详细信息。 其技术基于标准，包括 RSA 和 x.509。 浏览器通常允许用户选择是否要下载并运行未知来源的代码。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC Internet 编程任务](mfc-internet-programming-tasks.md)<br/>
 [MFC Internet 编程基础知识](mfc-internet-programming-basics.md)

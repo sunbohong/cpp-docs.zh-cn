@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：支持多字节字符集 (Mbcs) '
 title: 支持多字节字符集 (MBCS)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ab6af7aa77942b39785faf68ea6a530867abff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335766"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>支持多字节字符集 (MBCS)
 
@@ -28,11 +29,11 @@ ms.locfileid: "81375769"
 
 请在 MBCS 编程中考虑以下各方面。
 
-环境中 MBCS 字符中的 MBCS 字符可以显示在字符串中，如文件和目录名称。
+环境中的 MBCS 字符可以出现在字符串中，如文件和目录名称。
 
 ### <a name="editing-operations"></a>编辑操作
 
-MBCS 应用程序中的编辑操作应在字符上（而不是在字节上）执行。 该字符不应拆分字符，**右箭头**键应向右移动一个字符，等等。 **删除**应删除字符;**撤消**应重新插入它。
+MBCS 应用程序中的编辑操作应在字符上（而不是在字节上）执行。 脱字号不应拆分字符， **向右箭头** 键应向右移动一个字符，依此类推。 **Delete** 应删除一个字符; **Undo** 应重新插入它。
 
 ### <a name="string-handling"></a>字符串处理
 
@@ -40,20 +41,20 @@ MBCS 应用程序中的编辑操作应在字符上（而不是在字节上）执
 
 ### <a name="run-time-library-support"></a>运行时库支持
 
-C 运行时库和 MFC 支持单字节、MBCS 和 Unicode 编程。 单字节字符串使用运行时函数`str`系列进行处理，MBCS 字符串使用相应的`_mbs`函数进行处理，Unicode 字符串使用相应的`wcs`函数进行处理。 MFC 类成员函数的实现使用可移植运行时函数，该函数在适当情况下映射到 `str` 系列的函数、MBCS 函数或 Unicode 函数，如“MBCS/Unicode 可移植性”中所述。
+C 运行时库和 MFC 支持单字节、MBCS 和 Unicode 编程。 单字节字符串通过 `str` 运行时函数系列处理，用相应的函数处理 MBCS 字符串 `_mbs` ，并通过相应的函数处理 Unicode 字符串 `wcs` 。 MFC 类成员函数的实现使用可移植运行时函数，该函数在适当情况下映射到 `str` 系列的函数、MBCS 函数或 Unicode 函数，如“MBCS/Unicode 可移植性”中所述。
 
 ### <a name="mbcsunicode-portability"></a>MBCS/Unicode 可移植性
 
-使用 tchar.h 标头文件，可以从同一源生成单字节、MBCS 和 Unicode 应用程序。 Tchar.h 定义以 *_tcs* （） 的预缀的宏`str`，`_mbs`这些宏`wcs`将 映射到 或 函数（视适用而言）。 要生成 MBCS，请定义`_MBCS`符号 。 要生成 Unicode，请定义`_UNICODE`符号 。 默认情况下，`_UNICODE`为 MFC 应用程序定义。 有关详细信息，请参阅[tchar.h 中的通用文本映射](../text/generic-text-mappings-in-tchar-h.md)。
+使用 tchar 头文件，可以从相同的源构建单字节、MBCS 和 Unicode 应用程序。 Tchar 定义了带 *_tcs* 前缀的宏，该宏将 `str` 根据需要映射到、 `_mbs` 或 `wcs` 函数。 若要生成 MBCS，请定义符号 `_MBCS` 。 若要生成 Unicode，请定义符号 `_UNICODE` 。 默认情况下， `_UNICODE` 为 MFC 应用程序定义。 有关详细信息，请参阅 [tchar 中的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)。
 
 > [!NOTE]
-> 如果同时定义`_UNICODE`和`_MBCS`，则行为未定义。
+> 如果同时定义和，则行为是不确定的 `_UNICODE` `_MBCS` 。
 
 Mbctype.h 和 Mbstring.h 头文件定义特定于 MBCS 的函数和宏，你可能在某些情况下需要它们。 例如，`_ismbblead` 告诉你字符串中的特定字节是否为前导字节。
 
-为获得国际可移植性，请使用[Unicode](../text/support-for-unicode.md)或多字节字符集 （MBCS） 对程序进行编码。
+为实现国际便携性，请用 [Unicode](../text/support-for-unicode.md) 或多字节字符集来编写程序代码， (mbcs) 。
 
-## <a name="what-do-you-want-to-do"></a>您希望做什么？
+## <a name="what-do-you-want-to-do"></a>你希望做什么？
 
 - [在我的程序中启用 MBCS](../text/international-enabling.md)
 
@@ -65,7 +66,7 @@ Mbctype.h 和 Mbstring.h 头文件定义特定于 MBCS 的函数和宏，你可�
 
 - [了解字节宽度可移植性的一般文本映射](../text/generic-text-mappings-in-tchar-h.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文本和字符串](../text/text-and-strings-in-visual-cpp.md)<br/>
 [Visual C++ 中的 MBCS 支持](../text/mbcs-support-in-visual-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _crtDbgFlag
 title: _CRTDBG_CHECK_CRT_DF
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,14 +14,14 @@ helpviewer_keywords:
 - enable memory allocation tracking flag
 - memory, tracking on the debug heap
 ms.assetid: 9e7adb47-8ab9-4e19-81d5-e2f237979973
-ms.openlocfilehash: a967b436d53acab6d76fa36fdf9b13c7c24d49c3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ef3c72b89ea9e5e557a567af9a9c52c8e85370ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246739"
 ---
-# <a name="crtdbgflag"></a>_CRTDBG_CHECK_CRT_DF
+# <a name="_crtdbgflag"></a>_CRTDBG_CHECK_CRT_DF
 
 **_crtDbgFlag** 标志由五个位域组成，这些字段可控制如何在堆的调试版本上跟踪、验证、报告和转储内存分配。 使用 [_CrtSetDbgFlag](../c-runtime-library/reference/crtsetdbgflag.md) 函数设置该标志的位域。 将在 Crtdbg.h 中声明此标志及其位域。 此标志仅当已在应用程序中定义 [_DEBUG](../c-runtime-library/debug.md) 标志时才可用。
 
@@ -28,4 +29,4 @@ ms.locfileid: "57746977"
 
 ## <a name="see-also"></a>请参阅
 
-[控制标志](../c-runtime-library/control-flags.md)
+[控件标志](../c-runtime-library/control-flags.md)

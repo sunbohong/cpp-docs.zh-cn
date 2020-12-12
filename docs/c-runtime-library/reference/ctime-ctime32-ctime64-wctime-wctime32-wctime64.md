@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64
 title: ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 ms.date: 4/2/2020
 api_name:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - wctime function
 - time, converting
 ms.assetid: 2423de37-a35c-4f0a-a378-3116bc120a9d
-ms.openlocfilehash: 7dc87f417db93f8ad0d90de1270c19997669fb7c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e50e5dca470b7e764a7b71a596d4c253d023083b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329315"
 ---
 # <a name="ctime-_ctime32-_ctime64-_wctime-_wctime32-_wctime64"></a>ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64
 
@@ -78,26 +79,26 @@ wchar_t *_wctime32( const __time32_t *sourceTime );
 wchar_t *_wctime64( const __time64_t *sourceTime );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *sourceTime*<br/>
 指向要转换的存储时间的指针。
 
 ## <a name="return-value"></a>返回值
 
-指向字符串结果的指针。 如果以下情况，将返回**NULL** ：
+指向字符串结果的指针。 如果以下情况，将返回 **NULL** ：
 
-- *sourceTime*表示1970年1月1日午夜之前的日期。
+- *sourceTime* 表示1970年1月1日午夜之前的日期。
 
-- 如果使用 **_ctime32**或 **_wctime32**并且*SourceTime*表示23:59:59 年1月 2038 18 日之后的日期，则为。
+- 如果使用 **_ctime32** 或 **_wctime32** 并且 *SourceTime* 表示23:59:59 年1月 2038 18 日之后的日期，则为。
 
-- 如果使用 **_ctime64**或 **_wctime64**并且*SourceTime*表示23:59:59 年12月 3000 31 日之后的日期（UTC）。
+- 如果使用 **_ctime64** 或 **_wctime64** 并且 *SourceTime* 表示23:59:59 年12月 3000 31 日之后的日期（UTC）。
 
-**ctime**是一个内联函数，其计算结果为 **_ctime64** ， **time_t**等效于 **__time64_t**。 如果需要强制编译器将**time_t**解释为旧32位**time_t**，可以定义 **_USE_32BIT_TIME_T**。 这样做将导致**ctime**计算为 **_ctime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
+**ctime** 是一个内联函数，其计算结果为 **_ctime64** ， **time_t** 等效于 **__time64_t**。 如果需要强制编译器将 **time_t** 解释为旧32位 **time_t**，可以定义 **_USE_32BIT_TIME_T**。 这样做将导致 **ctime** 计算为 **_ctime32**。 不建议这样做，因为应用程序可能会在 2038 年 1 月 18 日后失效；且在 64 位平台上不允许使用它。
 
 ## <a name="remarks"></a>备注
 
-**Ctime**函数将作为[time_t](../../c-runtime-library/standard-types.md)值存储的时间值转换为字符串。 *SourceTime*值通常是从对[time](time-time32-time64.md)的调用中获取的，它返回自午夜（00:00:00）起，年1月 1970 1 日（协调世界时（UTC））开始经过的秒数。 返回值字符串正好包含 26 个字符，且格式为：
+**Ctime** 函数将作为 [time_t](../../c-runtime-library/standard-types.md)值存储的时间值转换为字符串。 *SourceTime* 值通常是从对 [time](time-time32-time64.md)的调用中获取的，它返回自 00:00:00) 年1月 1970 1 日午夜 (（协调世界时） (UTC) 之前经过的秒数。 返回值字符串正好包含 26 个字符，且格式为：
 
 ```Output
 Wed Jan 02 02:03:55 1980\n\0
@@ -105,15 +106,15 @@ Wed Jan 02 02:03:55 1980\n\0
 
 使用 24 小时制。 所有字段都具有固定宽度。 换行符 ('\n') 和空字符 ('\0') 占据字符串的最后两个位置。
 
-转换的字符串同时根据本地时区设置进行调整。 有关定义时区环境和全局变量的详细信息，请参阅[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime](localtime-localtime32-localtime64.md)函数，以获取有关配置本地时间和[_tzset](tzset.md)功能的详细信息。
+转换的字符串同时根据本地时区设置进行调整。 有关定义时区环境和全局变量的详细信息，请参阅 [time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和 [localtime](localtime-localtime32-localtime64.md) 函数，以获取有关配置本地时间和 [_tzset](tzset.md) 功能的详细信息。
 
-调用**ctime**会修改**gmtime**和**localtime**函数使用的单个静态分配的缓冲区。 每次调用这些例程都会破坏上一次调用的结果。 **ctime**使用**asctime**函数共享静态缓冲区。 因此，调用**ctime**会销毁对**asctime**、 **localtime**或**gmtime**的任何以前调用的结果。
+调用 **ctime** 会修改 **gmtime** 和 **localtime** 函数使用的单个静态分配的缓冲区。 每次调用这些例程都会破坏上一次调用的结果。 **ctime** 使用 **asctime** 函数共享静态缓冲区。 因此，调用 **ctime** 会销毁对 **asctime**、 **localtime** 或 **gmtime** 的任何以前调用的结果。
 
-**_wctime**和 **_wctime64**是**ctime**和 **_ctime64**的宽字符版本;返回指向宽字符字符串的指针。 否则， **_ctime64**、 **_wctime**和 **_wctime64**与**ctime**的行为相同。
+**_wctime** 和 **_wctime64** 是 **ctime** 和 **_ctime64** 的宽字符版本;返回指向宽字符字符串的指针。 否则， **_ctime64**、 **_wctime** 和 **_wctime64** 与 **ctime** 的行为相同。
 
-这些函数验证其参数。 如果*sourceTime*为 null 指针，或*sourceTime*值为负，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
+这些函数验证其参数。 如果 *sourceTime* 为 null 指针，或 *sourceTime* 值为负，则这些函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回 **NULL** ，并将 **Errno** 设置为 **EINVAL**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -125,7 +126,7 @@ Wed Jan 02 02:03:55 1980\n\0
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**ctime**|\<time.h>|
 |**_ctime32**|\<time.h>|
@@ -163,12 +164,12 @@ int main( void )
 The time is Wed Feb 13 16:04:43 2002
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime、_wasctime](asctime-wasctime.md)<br/>
 [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>
-[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)<br/>
+[_ftime, _ftime32, _ftime64](ftime-ftime32-ftime64.md)<br/>
 [gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
 [localtime、_localtime32、_localtime64](localtime-localtime32-localtime64.md)<br/>
 [time、_time32、_time64](time-time32-time64.md)<br/>

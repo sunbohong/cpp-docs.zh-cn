@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CException 类
 title: CException 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: e27802e05c832d28d848d9eb1235d6ef5980b306
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 39d3266817ee1be20acde0b01c7c5d1aa90313cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841553"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184655"
 ---
 # <a name="cexception-class"></a>CException 类
 
@@ -33,24 +34,24 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CException：： CException](#cexception)|构造 `CException` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CException：:D e) ](#delete)|删除 `CException` 对象。|
 |[CException：： ReportError](#reporterror)|在消息框中向用户报告一条错误消息。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 由于 `CException` 是抽象基类，因此您不能 `CException` 直接创建对象; 您必须创建派生类的对象。 如果需要创建您自己 `CException` 的类，请使用上面列出的派生类之一作为模型。 请确保派生类也使用 `IMPLEMENT_DYNAMIC` 。
 
 下面列出了派生类及其说明：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|用于资源关键性的 MFC 异常的基类|
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|参数异常条件无效|
@@ -92,12 +93,12 @@ class AFX_NOVTABLE CException : public CObject
 explicit CException(BOOL bAutoDelete);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *b_AutoDelete*<br/>
 如果 `CException` 已在堆上分配了对象的内存，则指定 TRUE。 这将导致在 `CException` `Delete` 调用成员函数删除异常时删除该对象。 如果 `CException` 对象位于堆栈上或是全局对象，则指定 FALSE。 在这种情况下， `CException` `Delete` 调用成员函数时不会删除对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常不需要直接调用此构造函数。 引发异常的函数应创建 `CException` 派生类的实例并调用其构造函数，或者应使用其中一种 MFC 引发函数（如 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)）来引发预定义类型。 提供此文档只是为了提供完整的完整性。
 
@@ -109,7 +110,7 @@ explicit CException(BOOL bAutoDelete);
 void Delete();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 删除对象时 `CException` ，请使用 `Delete` 成员函数删除该异常。 不要 **`delete`** 直接使用运算符，因为该 `CException` 对象可能是全局对象或已在堆栈上创建的。
 
@@ -178,9 +179,9 @@ virtual int ReportError(
     UINT nMessageID = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-nType**<br/>
+nType<br/>
 指定消息框的样式。 将 [消息框样式](styles-used-by-mfc.md#message-box-styles) 的任意组合应用到框。 如果未指定此参数，则默认值为 MB_OK。
 
 *nMessageID*<br/>
@@ -226,7 +227,7 @@ else
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](cobject-class.md)<br/>
 [层次结构图](../hierarchy-chart.md)<br/>
