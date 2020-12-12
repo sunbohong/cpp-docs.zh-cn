@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： operation_timed_out 类
 title: operation_timed_out 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-ms.openlocfilehash: 7a2513d30aa68798707f3bb16318db9b594b9e16
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 476dfc2d7f29b2769c076ff525f3d0eb1e20a8f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77138875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236550"
 ---
 # <a name="operation_timed_out-class"></a>operation_timed_out 类
 
@@ -25,11 +26,11 @@ ms.locfileid: "77138875"
 class operation_timed_out : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[operation_timed_out](#ctor)|已重载。 构造 `operation_timed_out` 对象。|
 
@@ -45,7 +46,7 @@ class operation_timed_out : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>operation_timed_out
+## <a name="operation_timed_out"></a><a name="ctor"></a> operation_timed_out
 
 构造 `operation_timed_out` 对象。
 
@@ -55,11 +56,11 @@ explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
 operation_timed_out() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

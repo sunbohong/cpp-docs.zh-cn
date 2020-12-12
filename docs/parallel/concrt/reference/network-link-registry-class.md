@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： network_link_registry 类
 title: network_link_registry 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 18fabd0e741c144201f299271cdd01eb9ac55fac
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d14ec5758b399d46d5a5f04200b9422b030305f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222675"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236589"
 ---
 # <a name="network_link_registry-class"></a>network_link_registry 类
 
@@ -30,7 +31,7 @@ template<class _Block>
 class network_link_registry;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Block*<br/>
 要存储在中的块数据类型 `network_link_registry` 。
@@ -54,7 +55,7 @@ class network_link_registry;
 |[准备](#begin)|当在派生类中重写时，将返回一个迭代器，该迭代器指向对象中的第一个元素 `network_link_registry` 。|
 |[contains](#contains)|当在派生类中重写时，在对象中搜索 `network_link_registry` 指定的块。|
 |[计数](#count)|当在派生类中重写时，返回对象中的项数 `network_link_registry` 。|
-|[删除](#remove)|当在派生类中重写时，从对象中移除指定的块 `network_link_registry` 。|
+|[remove](#remove)|当在派生类中重写时，从对象中移除指定的块 `network_link_registry` 。|
 
 ## <a name="remarks"></a>备注
 
@@ -70,7 +71,7 @@ class network_link_registry;
 
 **命名空间：** 并发
 
-## <a name="add"></a><a name="add"></a>把
+## <a name="add"></a><a name="add"></a> 把
 
 当在派生类中重写时，将添加一个指向对象的链接 `network_link_registry` 。
 
@@ -78,12 +79,12 @@ class network_link_registry;
 virtual void add(_EType _Link) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Link*<br/>
 指向要添加的块的指针。
 
-## <a name="begin"></a><a name="begin"></a>准备
+## <a name="begin"></a><a name="begin"></a> begin
 
 当在派生类中重写时，将返回一个迭代器，该迭代器指向对象中的第一个元素 `network_link_registry` 。
 
@@ -99,7 +100,7 @@ virtual iterator begin() = 0;
 
 迭代器的结束状态由 `NULL` 链接指示。
 
-## <a name="contains"></a><a name="contains"></a>有
+## <a name="contains"></a><a name="contains"></a> 有
 
 当在派生类中重写时，在对象中搜索 `network_link_registry` 指定的块。
 
@@ -107,7 +108,7 @@ virtual iterator begin() = 0;
 virtual bool contains(_EType _Link) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Link*<br/>
 指向在对象中搜索的块的指针 `network_link_registry` 。
@@ -116,7 +117,7 @@ virtual bool contains(_EType _Link) = 0;
 
 **`true`** 如果找到该块，则 **`false`** 为; 否则为。
 
-## <a name="count"></a><a name="count"></a>计
+## <a name="count"></a><a name="count"></a> 计
 
 当在派生类中重写时，返回对象中的项数 `network_link_registry` 。
 
@@ -128,7 +129,7 @@ virtual size_t count() = 0;
 
 `network_link_registry` 对象中的项数。
 
-## <a name="remove"></a><a name="remove"></a>取消
+## <a name="remove"></a><a name="remove"></a> 取消
 
 当在派生类中重写时，从对象中移除指定的块 `network_link_registry` 。
 
@@ -136,7 +137,7 @@ virtual size_t count() = 0;
 virtual bool remove(_EType _Link) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Link*<br/>
 指向要删除的块的指针（如果找到）。
@@ -145,7 +146,7 @@ virtual bool remove(_EType _Link) = 0;
 
 **`true`** 如果找到并删除了链接，则 **`false`** 为; 否则为。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [single_link_registry 类](single-link-registry-class.md)<br/>
