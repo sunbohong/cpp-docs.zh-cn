@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strchr、wcschr、_mbschr、_mbschr_l
 title: strchr、wcschr、_mbschr、_mbschr_l
 ms.date: 4/2/2020
 api_name:
@@ -47,12 +48,12 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: a7cea0b2c640b7cb87d7097cea7bdf94a73abfb8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8971022e529a03199a890d769843fd77ec44c5af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229306"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306217"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr、wcschr、_mbschr、_mbschr_l
 
@@ -117,12 +118,12 @@ const unsigned char *_mbschr_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 null 终止的源字符串。
 
-*ansi-c*<br/>
+*c*<br/>
 要查找的字符。
 
 *locale*<br/>
@@ -130,19 +131,19 @@ null 终止的源字符串。
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数都会返回指向*str*中第一个匹配*项的指针*; 如果找不到*c* ，则返回 NULL。
+其中每个函数都会返回指向 *str* 中第一个匹配 *项的指针*; 如果找不到 *c* ，则返回 NULL。
 
 ## <a name="remarks"></a>备注
 
-`strchr`函数在*str*中查找*c*的第一个匹配项，如果找不到*c* ，则返回 NULL。 搜索中包括 null 终止的字符。
+`strchr`函数在 *str* 中查找 *c* 的第一个匹配项，如果找不到 *c* ，则返回 NULL。 搜索中包括 null 终止的字符。
 
 `wcschr`、`_mbschr` 和 `_mbschr_l` 是 `strchr` 的宽字符及多字节字符版本。 `wcschr` 的参数和返回值是宽字符字符串；而 `_mbschr` 的则是多字节字符字符串。 `_mbschr` 可识别多字节字符序列。 同样，如果字符串为空指针，则 `_mbschr` 将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 `_mbschr` 返回 NULL，并将设置 `errno` 为 EINVAL。 `strchr` 和 `wcschr` 不会验证其参数。 否则这三个函数否则具有相同行为。
 
-输出值受区域设置的 LC_CTYPE 类别设置的设置的影响;有关详细信息，请参阅[setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置的设置的影响;有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向 **`const`** 非的指针 **`const`** 。 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 _CRT_CONST_CORRECT_OVERLOADS **`const`** 。 如果 **`const`** 这两个 c + + 重载都需要非行为，请定义符号 _CONST_RETURN。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -218,11 +219,11 @@ Result:   first r found at position 12
 Result:   last r found at position 30
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

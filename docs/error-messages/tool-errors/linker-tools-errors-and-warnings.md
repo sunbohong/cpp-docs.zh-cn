@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：链接器工具错误和警告 (LNKxxxx) '
 title: 链接器工具错误和警告
 ms.date: 09/10/2019
 f1_keywords:
@@ -313,16 +314,16 @@ helpviewer_keywords:
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: e845ba44476508892be63f0a99f8b2c2fedf0d8e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 97d73a56469ac2337546859517d3057f1d078132
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332095"
 ---
 # <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>链接器工具错误和警告 (LNKxxxx)
 
-链接器工具 LINK、LIB、DUMPBIN 和 EDITBIN 共享生成这些错误和警告的常见可执行文件。 这些工具会生成形式为 .LNK*xxxx*的警告，其中*xxxx*为四位数字。
+链接器工具 LINK、LIB、DUMPBIN 和 EDITBIN 共享生成这些错误和警告的常见可执行文件。 这些工具会生成形式为 .LNK *xxxx* 的警告，其中 *xxxx* 为四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -453,6 +454,6 @@ ms.locfileid: "79445465"
 [链接器工具警告 LNK4254](../../error-messages/tool-errors/linker-tools-warning-lnk4254.md) \
 [链接器工具警告 LNK4286](../../error-messages/tool-errors/linker-tools-warning-lnk4286.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C/C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ 编译器和生成工具错误与警告](../compiler-errors-1/c-cpp-build-errors.md)

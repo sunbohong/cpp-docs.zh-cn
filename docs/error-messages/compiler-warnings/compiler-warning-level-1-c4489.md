@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4489
 title: 编译器警告（等级 1）C4489
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-ms.openlocfilehash: e9811e9f9c17463fdcd550ffd82af4f81a40bb34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d2865f7f2eba4db72fa4cbf622609b319197f942
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80186603"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212410"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>编译器警告（等级 1）C4489
 
@@ -19,7 +20,7 @@ ms.locfileid: "80186603"
 
 在接口方法上错误地使用了说明符关键字。
 
-有关详细信息，请参阅[重写说明符](../../extensions/override-specifiers-cpp-component-extensions.md)。
+有关详细信息，请参阅 [重写说明符](../../extensions/override-specifiers-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

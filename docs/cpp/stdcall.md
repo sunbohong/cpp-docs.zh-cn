@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __stdcall
 title: __stdcall
 ms.date: 10/10/2018
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: 85d1b29fddece741aa94364bb6edfdf3b973faaf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 86ed4604eeb33c31f79ceac57b28f7f4655e78f3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317930"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -27,17 +28,17 @@ ms.locfileid: "87213172"
 
 以下列表显示此调用约定的实现。
 
-|元素|实施|
+|元素|实现|
 |-------------|--------------------|
-|参数传递顺序|从右到左。|
+|参数传递顺序|从右向左。|
 |参数传递约定|按值，除非传递指针或引用类型。|
 |堆栈维护职责|调用的函数从堆栈中弹出自己的参数。|
-|名称修饰约定|下划线（ `_` ）是名称的前缀。 该名称后跟 "in" 符号（ `@` ），后跟自变量列表中的字节数（以十进制为单位）。 因此，声明为 `int func( int a, double b )` 的函数按如下所示进行修饰：`_func@12`|
+|名称修饰约定|下划线 (`_`) 的名称为前缀。 该名称后跟符号 (`@`) 后跟参数列表中十进制)  (的字节数。 因此，声明为 `int func( int a, double b )` 的函数按如下所示进行修饰：`_func@12`|
 |大小写转换约定|无|
 
 [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)编译器选项 **`__stdcall`** 为所有未使用不同调用约定显式声明的函数指定。
 
-对于与以前版本的兼容性，为， **`_stdcall`** **`__stdcall`** 除非指定编译器选项 " [ `/Za` \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"，否则将是同义词。
+为了与早期版本兼容， **`_stdcall`** 将作为同义词， **`__stdcall`** 除非指定了编译器选项 " [ `/Za` \( 禁用语言扩展")](../build/reference/za-ze-disable-language-extensions.md) 。
 
 使用 **`__stdcall`** 修饰符声明的函数以与使用声明的函数相同的方式返回值 [`__cdecl`](../cpp/cdecl.md) 。
 
@@ -74,7 +75,7 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [参数传递和命名约定](../cpp/argument-passing-and-naming-conventions.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

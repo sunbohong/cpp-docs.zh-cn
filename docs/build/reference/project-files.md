@@ -1,16 +1,17 @@
 ---
+description: 了解更多：项目文件
 title: 示例项目文件
 ms.date: 08/19/2019
 helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: eef28961ab8c4d3a34a74999c7e0c69a4fc3fced
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: caadd7c88b910b522868a6481219a3169cab2593
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924008"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225760"
 ---
 # <a name="project-files"></a>项目文件
 
@@ -20,13 +21,13 @@ Visual Studio 中的 c + + 项目文件是基于 XML 的文件，其文件扩展
 
 ::: moniker range=">=msvc-160"
 
-下面的 .vcxproj 文件是通过在 " **新建项目** " 对话框中选择 " **Windows 桌面向导** " 生成的。 要处理项目文件，请在命令行处使用 msbuild.exe 工具或使用 IDE 中的“生成”命令  。  (无法处理此示例，因为未提供所需的源文件和头文件。 ) 有关项目文件中的 XML 元素的详细信息，请参阅 [项目文件架构参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
+下面的 .vcxproj 文件是通过在 "**新建项目**" 对话框中选择 " **Windows 桌面向导**" 生成的。 要处理项目文件，请在命令行处使用 msbuild.exe 工具或使用 IDE 中的“生成”命令。  (无法处理此示例，因为未提供所需的源文件和头文件。 ) 有关项目文件中的 XML 元素的详细信息，请参阅 [项目文件架构参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
 
 ::: moniker-end
 
 ::: moniker range="<=msvc-150"
 
-以下示例 .vcxproj 文件是由在“新建项目”对话框中指定“Win32 控制台应用程序”而生成的  。 要处理项目文件，请在命令行处使用 msbuild.exe 工具或使用 IDE 中的“生成”命令  。  (无法处理此示例，因为未提供所需的源文件和头文件。 ) 有关项目文件中的 XML 元素的详细信息，请参阅 [项目文件架构参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
+以下示例 .vcxproj 文件是由在“新建项目”对话框中指定“Win32 控制台应用程序”而生成的。 要处理项目文件，请在命令行处使用 msbuild.exe 工具或使用 IDE 中的“生成”命令。  (无法处理此示例，因为未提供所需的源文件和头文件。 ) 有关项目文件中的 XML 元素的详细信息，请参阅 [项目文件架构参考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。
 
 ::: moniker-end
 

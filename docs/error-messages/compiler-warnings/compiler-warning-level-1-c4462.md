@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4462
 title: 编译器警告（等级 1）C4462
 ms.date: 10/25/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-ms.openlocfilehash: bd4d5c1fd7dd8d7419fc901149ceab7e769e7076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81696df228b2cbe6278521f602d2a6f986cacb13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404047"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212527"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>编译器警告（等级 1）C4462
 
@@ -19,7 +20,7 @@ ms.locfileid: "62404047"
 
 当作为某个 Windows 运行时应用程序或组件的类型参数之一的公共 `TypedEventHandler` 具有对封闭类的引用时，该应用程序或组件中将出现警告 C4462。
 
-此警告被自动提升为错误。 如果你想要修改此行为，使用[#pragma 警告](../../preprocessor/warning.md)。 例如，若要使 C4462 成为第 4 级警告问题，可以将此行添加到源代码文件上：
+此警告会自动提升为错误。 如果要修改此行为，请使用 [#pragma 警告](../../preprocessor/warning.md)。 例如，若要将 C4462 添加到第4级警告问题，请将以下代码行添加到源代码文件中：
 
 ```cpp
 #pragma warning(4:4462)
@@ -27,7 +28,7 @@ ms.locfileid: "62404047"
 
 ## <a name="example"></a>示例
 
-此示例将生成警告 C4462:
+此示例生成警告 C4462：
 
 ```cpp
 namespace N

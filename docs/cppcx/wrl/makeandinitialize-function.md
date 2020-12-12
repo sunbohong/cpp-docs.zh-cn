@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： MakeAndInitialize 函数
 title: MakeAndInitialize 函数
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-ms.openlocfilehash: 28d9e586a766a131e7ab6280859845810c1d9814
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 108da1f19d6956527f06e5239f5ce2e14716d664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213793"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317917"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 函数
 
@@ -47,7 +48,7 @@ HRESULT MakeAndInitialize(
 ### <a name="parameters"></a>parameters
 
 *T*<br/>
-继承自 `WRL::RuntimeClass`的用户指定的类。
+从继承的用户指定的类 `WRL::RuntimeClass` 。
 
 *TArg1*<br/>
 传递到指定的运行时类的参数1的类型。
@@ -109,7 +110,7 @@ HRESULT 值。
 
 ## <a name="remarks"></a>备注
 
-有关示例，请参阅[如何：直接实例化 WRL 组件](how-to-instantiate-wrl-components-directly.md)来了解此函数与[MICROSOFT：： WRL：： Make](make-function.md)之间的差异。
+有关示例，请参阅 [如何：直接实例化 WRL 组件](how-to-instantiate-wrl-components-directly.md) 来了解此函数与 [MICROSOFT：： WRL：： Make](make-function.md)之间的差异。
 
 ## <a name="requirements"></a>要求
 
@@ -117,6 +118,6 @@ HRESULT 值。
 
 **命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)
+[Microsoft：： WRL：:D etails 命名空间](microsoft-wrl-details-namespace.md)

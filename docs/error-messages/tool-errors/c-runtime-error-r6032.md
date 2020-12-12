@@ -1,4 +1,5 @@
 ---
+description: 了解更多： C 运行时错误 R6032
 title: C 运行时错误 R6032
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6032
 ms.assetid: 52092a63-cc51-444a-bfc3-fad965a3558e
-ms.openlocfilehash: b29b946d08cff903cf0ca398ba0d7589cb5d54ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b0fbc7730867fb6e9045adf4e5e2b8667f741784
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275888"
 ---
 # <a name="c-runtime-error-r6032"></a>C 运行时错误 R6032
 
@@ -23,7 +24,7 @@ ms.locfileid: "80197088"
 > 可以尝试以下步骤来修复此错误：
 >
 > - 关闭其他正在运行的应用程序或重新启动计算机以释放内存。
-> - 使用**控制面板**中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
+> - 使用 **控制面板** 中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
 > - 检查 "**控制面板**" 中的 "软件更新" **Windows 更新**。
 > - 检查应用的更新版本。 如果问题仍然存在，请与应用程序供应商联系。
 

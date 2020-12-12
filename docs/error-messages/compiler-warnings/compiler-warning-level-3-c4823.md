@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (等级 3) C4823
 title: 编译器警告（等级 3）C4823
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4823
 ms.assetid: 8a77560d-dcea-4cae-aebb-8ebf1b4cef85
-ms.openlocfilehash: a96877252b0b7699f5e4033f8e695f4d9016a6c9
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: b5f4efcf25e59025ad086832c2446d856918542a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541269"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332101"
 ---
 # <a name="compiler-warning-level-3-c4823"></a>编译器警告（等级 3）C4823
 
 "function"：使用钉住指针，但未启用展开语义。 考虑使用/EHa
 
-若要取消固定托管堆上的对象（由块范围中声明的固定指针所指向的对象），编译器将模拟局部类的析构函数的行为，"伪装" 钉住指针具有 nullifies 指针的析构函数。 若要在引发异常后启用对析构函数的调用，则必须启用对象展开，这可以通过使用[/ehsc](../../build/reference/eh-exception-handling-model.md)来执行。
+若要取消固定托管堆上的对象（由块范围中声明的固定指针所指向的对象），编译器将模拟局部类的析构函数的行为，"伪装" 钉住指针具有 nullifies 指针的析构函数。 若要在引发异常后启用对析构函数的调用，则必须启用对象展开，这可以通过使用 [/ehsc](../../build/reference/eh-exception-handling-model.md)来执行。
 
 你还可以手动取消固定对象并忽略该警告。
 

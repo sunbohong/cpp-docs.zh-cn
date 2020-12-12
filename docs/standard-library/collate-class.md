@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： collate 类
 title: collate 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: ccdf05a7a41fc7f646852e7d326832b86c41dde8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cef6d30167aa61c674913ac7844f6eb021a82529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325057"
 ---
 # <a name="collate-class"></a>collate 类
 
@@ -40,7 +41,7 @@ template <class CharType>
 class collate : public locale::facet;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对字符进行编码的类型。
@@ -51,7 +52,7 @@ class collate : public locale::facet;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[collate](#collate)|用作区域设置 facet 以处理字符串排序转换的 `collate` 类的对象的构造函数。|
 
@@ -79,7 +80,7 @@ class collate : public locale::facet;
 
 **命名空间:** std
 
-## <a name="collatechar_type"></a><a name="char_type"></a>collate：： char_type
+## <a name="collatechar_type"></a><a name="char_type"></a> collate：： char_type
 
 一种类型，此类型描述 `CharType` 类型字符。
 
@@ -91,7 +92,7 @@ typedef CharType char_type;
 
 类型是模板参数 `CharType` 的同义词。
 
-## <a name="collatecollate"></a><a name="collate"></a>collate：： collate
+## <a name="collatecollate"></a><a name="collate"></a> collate：： collate
 
 用作区域设置 facet 以处理字符串排序转换的 collate 类的对象的构造函数。
 
@@ -106,7 +107,7 @@ const char* _Locname,
     size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。
@@ -116,17 +117,17 @@ const char* _Locname,
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为：
+*_Refs* 参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1：未定义这些值。
+- \> 1：未定义这些值。
 
-构造函数通过**locale：：**[facet](../standard-library/locale-class.md#facet_class)（）初始化其基对象 `_Refs` 。
+构造函数通过 **locale：：**[facet](../standard-library/locale-class.md#facet_class) () 初始化其基对象 `_Refs` 。
 
-## <a name="collatecompare"></a><a name="compare"></a>collate：： compare
+## <a name="collatecompare"></a><a name="compare"></a> collate：： compare
 
 根据两个字符序列的特定于 facet 的规则，比较这两个字符序列是否相等。
 
@@ -137,7 +138,7 @@ int compare(const CharType* first1,
     const CharType* last2) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *first1*\
 指向第一个序列中要比较的第一个元素的指针。
@@ -165,7 +166,7 @@ int compare(const CharType* first1,
 
 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。
 
-此成员函数返回[do_compare](#do_compare)（ `first1` 、 `last1` 、 `first2` 、 `last2` ）。
+此成员函数返回 [do_compare](#do_compare) ( `first1` ，，， `last1` `first2` `last2`) 。
 
 ### <a name="example"></a>示例
 
@@ -192,7 +193,7 @@ int main() {
 }
 ```
 
-## <a name="collatedo_compare"></a><a name="do_compare"></a>collate：:d o_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a> collate：:d o_compare
 
 一种虚拟函数，通过调用此函数可根据两个字符序列的特定于 facet 的规则来比较这两个序列是否相等。
 
@@ -203,7 +204,7 @@ virtual int do_compare(const CharType* first1,
     const CharType* last2) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *first1*\
 指向第一个序列中要比较的第一个元素的指针。
@@ -229,13 +230,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数将 [* first1，Last1） * 上的序列与 *[first2，last2*）上的序列进行比较。 它通过应用类型的 `operator<` 对应元素对之间的来比较值 `CharType` 。 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。
+受保护的虚拟成员函数将 [* first1，Last1) * 顺序与 *[first2，last2*) 处的序列进行比较。 它通过应用类型的 `operator<` 对应元素对之间的来比较值 `CharType` 。 如果序列中的最早不相等对存在较小元素，或如果不存在不相等对，但第一个序列长度较短，则第一个序列相对较小。
 
 ### <a name="example"></a>示例
 
 请参阅 [collate:: compare](#compare) 的示例，它调用 `do_compare`。
 
-## <a name="collatedo_hash"></a><a name="do_hash"></a>collate：:d o_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a> collate：:d o_hash
 
 一种虚拟函数，通过调用此函数可根据序列的特定于 facet 的规则来确定它们的哈希值。
 
@@ -243,7 +244,7 @@ virtual int do_compare(const CharType* first1,
 virtual long do_hash(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 一个指向序列中具有待定值的第一个字符的指针。
@@ -263,7 +264,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 请参阅 [hash](#hash) 的示例，它调用`do_hash`。
 
-## <a name="collatedo_transform"></a><a name="do_transform"></a>collate：:d o_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a> collate：:d o_transform
 
 一种虚拟函数，通过调用此函数可将字符序列从区域设置转换为字符串，可使用此字符串与以类似方式从同一区域设置转换的其他字符序列按字典顺序进行比较。
 
@@ -271,7 +272,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 virtual string_type do_transform(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 指向序列中要转换的第一个字符的指针。
@@ -285,13 +286,13 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="remarks"></a>备注
 
-受保护的虚拟成员函数将返回类[string_type](#string_type)的对象，其受控序列为序列 [ `first` ，）的副本 `last` 。 如果从 collate 派生的类 \< **CharType**> [do_compare](#do_compare)，则它也应重写 `do_transform` 以匹配。 传递给 `collate::compare` 时，两个已转换的字符串应产生相同的结果，你会从传递未经转换的字符串中获得此结果以在派生类中进行比较。
+受保护的虚拟成员函数将返回类 [string_type](#string_type) 的对象，其受控序列是序列 [ `first` ，) 的副本 `last` 。 如果从 collate 派生的类 \< **CharType**> [do_compare](#do_compare)，则它也应重写 `do_transform` 以匹配。 传递给 `collate::compare` 时，两个已转换的字符串应产生相同的结果，你会从传递未经转换的字符串中获得此结果以在派生类中进行比较。
 
 ### <a name="example"></a>示例
 
 请参阅 [transform](#transform) 的示例，它调用 `do_transform`。
 
-## <a name="collatehash"></a><a name="hash"></a>collate：： hash
+## <a name="collatehash"></a><a name="hash"></a> collate：： hash
 
 根据序列的特定于 facet 的规则来确定它们的哈希值。
 
@@ -299,7 +300,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 long hash(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 一个指向序列中具有待定值的第一个字符的指针。
@@ -313,7 +314,7 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回[do_hash](#do_hash)（ `first` 、 `last` ）。
+该成员函数将返回 [do_hash](#do_hash) ( `first` ， `last`) 。
 
 哈希值可用于在列表数组中伪随机分布序列等。
 
@@ -345,7 +346,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="collatestring_type"></a><a name="string_type"></a>collate：： string_type
+## <a name="collatestring_type"></a><a name="string_type"></a> collate：： string_type
 
 一种类型，此类型描述包含 `basic_string` 类型字符的 `CharType` 类型字符串。
 
@@ -355,13 +356,13 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>备注
 
-该类型描述类模板[basic_string](../standard-library/basic-string-class.md)的专用化，其对象可以存储源序列的副本。
+该类型描述类模板 [basic_string](../standard-library/basic-string-class.md) 的专用化，其对象可以存储源序列的副本。
 
 ### <a name="example"></a>示例
 
 有关如何声明和使用 `string_type` 的示例，请参阅 [transform](#transform)。
 
-## <a name="collatetransform"></a><a name="transform"></a>collate：： transform
+## <a name="collatetransform"></a><a name="transform"></a> collate：： transform
 
 将字符序列从区域设置转换为字符串，可使用此字符串与以类似方式从同一区域设置转换的其他字符序列按字典顺序进行比较。
 
@@ -369,7 +370,7 @@ typedef basic_string<CharType> string_type;
 string_type transform(const CharType* first, const CharType* last) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 指向序列中要转换的第一个字符的指针。
@@ -383,7 +384,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>备注
 
-此成员函数返回[do_transform](#do_transform)（ `first` 、 `last` ）。
+该成员函数将返回 [do_transform](#do_transform) (`first` ， `last`) 。
 
 ### <a name="example"></a>示例
 
@@ -427,7 +428,7 @@ int main( )
 -1-11
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

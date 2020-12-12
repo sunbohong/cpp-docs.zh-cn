@@ -1,5 +1,6 @@
 ---
-title: IDL 特性（c + + COM）
+description: 了解有关以下内容的详细信息： IDL 特性
+title: " (c + + COM) 的 IDL 特性"
 ms.date: 10/02/2018
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 8cceae2f1c4880b72f1ffc30070d6aa6bf8e3a51
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1db49b6c68d0dd4e4f4c6c5dcfb148cafc39159d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275459"
 ---
 # <a name="idl-attributes"></a>IDL 特性
 
@@ -25,18 +26,18 @@ ms.locfileid: "87211965"
 
 现在，你可以使用 Visual C++ IDL 特性从源代码文件内修改 .idl 文件。 在许多情况下，Visual C++ IDL 特性与 MIDL 特性具有相同的名称。 当 Visual C++ IDL 特性和 MIDL 特性的名称相同时，这意味着在源代码文件中放置 Visual C++ 属性将导致包含其 namesake MIDL 特性的 .idl 文件。 但 Visual C++ IDL 特性可能不提供 MIDL 特性的所有功能。
 
-当不用于[COM 特性](com-attributes.md)时，IDL 特性允许您定义接口。 编译源代码后，将使用特性来定义生成的 .idl 文件。 在 ATL 项目中与 COM 特性结合使用时，某些 IDL 特性（如 `coclass` ）会使代码注入到项目中。
+当不用于 [COM 特性](com-attributes.md)时，IDL 特性允许您定义接口。 编译源代码后，将使用特性来定义生成的 .idl 文件。 在 ATL 项目中与 COM 特性结合使用时，某些 IDL 特性（如 `coclass` ）会使代码注入到项目中。
 
-请注意， [idl_quote](idl-quote.md)允许使用 Visual C++ 的当前版本中不支持的 MIDL 构造。 此属性及其他属性（例如[importlib](importlib.md)和[includelib](includelib-cpp.md) ）可帮助你在当前的 Visual Studio c + + 项目中使用现有的 .idl 文件。
+请注意， [idl_quote](idl-quote.md) 允许使用 Visual C++ 的当前版本中不支持的 MIDL 构造。 此属性及其他属性（例如 [importlib](importlib.md) 和 [includelib](includelib-cpp.md) ）可帮助你在当前的 Visual Studio c + + 项目中使用现有的 .idl 文件。
 
-|Attribute|描述|
+|特性|描述|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|指示控件可由另一个控件聚合。|
 |[appobject](appobject.md)|将 coclass 标识为与完整 EXE 应用程序关联的应用程序对象，并指示 coclass 的函数和属性在此类型库中全局可用。|
 |[async_uuid](async-uuid.md)|指定指示 MIDL 编译器定义 COM 接口的同步和异步版本的 UUID。|
 |[bindable](bindable.md)|指示该属性支持数据绑定。|
 |[call_as](call-as.md)|使不可远程处理函数能够映射到远程函数。|
-|[case](case-cpp.md)|与联合中的[switch_type](switch-type.md)特性一起使用。|
+|[case](case-cpp.md)|与联合中的 [switch_type](switch-type.md) 特性一起使用。|
 |[coclass](coclass.md)|将类定义作为组件类放置到 .idl 文件中。|
 |[control](control.md)|指定用户定义类型为控件。|
 |[cpp_quote](cpp-quote.md)|向生成的标头文件发出指定的字符串（不含引号字符）。|
@@ -47,18 +48,18 @@ ms.locfileid: "87211965"
 |[defaultvtable](defaultvtable.md)|将接口定义为控件的默认 vtable 接口。|
 |[dispinterface](dispinterface.md)|将一个接口作为调度接口置于 .idl 文件中。|
 |[displaybind](displaybind.md)|指示应作为可绑定属性显示给用户的属性。|
-|[dual](dual.md)|将一个接口作为双重接口放置在 .idl 文件中。|
+|[双重](dual.md)|将一个接口作为双重接口放置在 .idl 文件中。|
 |[条目](entry.md)|通过标识 DLL 中的入口点，在模块中指定导出的函数或常量。|
 |[first_is](first-is.md)|指定要传输的第一个数组元素的索引。|
 |[helpcontext](helpcontext.md)|指定一个上下文 ID，该 ID 允许用户在帮助文件中查看有关此元素的信息。|
 |[helpfile](helpfile.md)|设置类型库的帮助文件的名称。|
 |[helpstringcontext](helpstringcontext.md)|指定 .hlp 或 .chm 文件中帮助主题的 ID。|
-|[helpstringdll](helpstringdll.md)|指定要用于执行文档字符串查找（本地化）的 DLL 的名称。|
+|[helpstringdll](helpstringdll.md)|指定要用于执行文档字符串查找 (本地化) 的 DLL 的名称。|
 |[helpstring](helpstring.md)|指定一个字符串，用于描述应用该字符串的元素。|
 |[消隐](hidden.md)|指示该项存在，但不应在面向用户的浏览器中显示。|
 |[idl_module](idl-module.md)|指定 DLL 中的入口点。|
 |[idl_quote](idl-quote.md)|允许使用 Visual C++ 的当前版本中不支持的属性或 IDL 构造。|
-|[id](id.md)|为成员函数（在接口或调度接口中为属性或方法）指定 DISPID。|
+|[id](id.md)|为接口或调度接口) 中的属性或方法 (的成员函数指定 DISPID。|
 |[iid_is](iid-is.md)|指定接口指针所指向的 COM 接口的 IID。|
 |[immediatebind](immediatebind.md)|指示将立即通知数据库对数据绑定对象的属性所做的所有更改。|
 |[importlib](importlib.md)|使已编译到另一个类型库中的类型可供所创建的类型库使用。|
@@ -69,7 +70,7 @@ ms.locfileid: "87211965"
 |[last_is](last-is.md)|指定要传输的最后一个数组元素的索引。|
 |[lcid](lcid.md)|使你可以将区域设置标识符传递给函数。|
 |[length_is](length-is.md)|指定要传输的数组元素的数目。|
-|[licensed](licensed.md)|指示它所应用到的 coclass 已获得许可，必须使用实例化 `IClassFactory2` 。|
+|[认证](licensed.md)|指示它所应用到的 coclass 已获得许可，必须使用实例化 `IClassFactory2` 。|
 |[地方](local-cpp.md)|允许在接口标头中使用 MIDL 编译器时将其用作标头生成器。 在单独的函数中使用时，指定不会为其生成存根的本地过程。|
 |[max_is](max-is.md)|指定有效数组索引的最大值。|
 |[模块](module-cpp.md)|定义.Idl 文件中的库块。|
@@ -79,18 +80,18 @@ ms.locfileid: "87211965"
 |[noncreatable](noncreatable.md)|定义一个对象，该对象不能单独实例化。|
 |[nonextensible](nonextensible.md)|指定 `IDispatch` 实现仅包含接口说明中列出的属性和方法，而不能在运行时与其他成员一起扩展。|
 |[object](object-cpp.md)|标识自定义接口;与自定义属性同义。|
-|[odl](odl.md)|将接口标识为对象描述语言（ODL）接口。|
+|[odl](odl.md)|将接口标识为对象描述语言 (ODL) 接口。|
 |[oleautomation](oleautomation.md)|指示接口与自动化兼容。|
 |[可有可无](optional-cpp.md)|为成员函数指定一个可选参数。|
 |[out](out-cpp.md)|标识从被调用过程返回到调用过程（从服务器到客户端）的指针参数。|
 |[pointer_default](pointer-default.md)|为除 "参数列表" 中显示的顶级指针之外的所有指针指定默认指针特性。|
-|[pragma](pragma.md)|向生成的 .idl 文件发出指定的字符串（不含引号字符）。|
+|[杂](pragma.md)|向生成的 .idl 文件发出指定的字符串（不含引号字符）。|
 |[progid](progid.md)|指定 COM 对象的 ProgID。|
-|[propget](propget.md)|指定属性访问器（get）函数。|
+|[propget](propget.md)|指定 (获取) 函数的属性访问器。|
 |[propputref](propputref.md)|指定使用引用而不是值的属性设置函数。|
 |[propput](propput.md)|指定属性设置功能。|
 |[ptr](ptr.md)|将指针指定为完全指针。|
-|[public](public-cpp-attributes.md)|确保 typedef 将进入类型库，即使它未从 .idl 文件中引用。|
+|公共|确保 typedef 将进入类型库，即使它未从 .idl 文件中引用。|
 |[range](range-cpp.md)|为其值在运行时设置的参数或字段指定一系列允许的值。|
 |[readonly](readonly-cpp.md)|禁止对变量赋值。|
 |[ref](ref-cpp.md)|标识引用指针。|
@@ -112,6 +113,6 @@ ms.locfileid: "87211965"
 |[vi_progid](vi-progid.md)|指定 ProgID 的与版本无关的形式。|
 |[wire_marshal](wire-marshal.md)|指定将用于传输的数据类型，而不是特定于应用程序的数据类型。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按组的属性](attributes-by-group.md)

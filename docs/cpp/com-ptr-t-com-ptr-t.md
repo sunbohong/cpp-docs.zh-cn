@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _com_ptr_t：： _com_ptr_t
 title: _com_ptr_t::_com_ptr_t
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: e8d3d09bf385cb9fdaa02d460952fadbf83bc193
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b92d36b1138ba2615aa8d70acb191c1f4ed43bb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233790"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295557"
 ---
 # <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Microsoft 专用**
 
-构造一个 **_com_ptr_t**对象。
+构造一个 **_com_ptr_t** 对象。
 
 ## <a name="syntax"></a>语法
 
@@ -133,7 +134,7 @@ explicit _com_ptr_t(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pInterface*<br/>
 原始接口指针。
@@ -142,10 +143,10 @@ explicit _com_ptr_t(
 如果为 **`true`** ， `AddRef` 则调用来增加封装的接口指针的引用计数。
 
 *cp*<br/>
-一个 **_com_ptr_t**对象。
+一个 **_com_ptr_t** 对象。
 
 *h-p*<br/>
-原始接口指针，其类型不同于此 **_com_ptr_t**对象的智能指针类型。
+原始接口指针，其类型不同于此 **_com_ptr_t** 对象的智能指针类型。
 
 *varSrc*<br/>
 `_variant_t` 对象。
@@ -157,7 +158,7 @@ explicit _com_ptr_t(
 运行可执行代码的上下文。
 
 *lpcStr*<br/>
-包含 `CLSID` （以 "**{**" 开头）或的多字节字符串 `ProgID` 。
+包含 `CLSID` 以 "**{**" 开头的 () 或的多字节字符串 `ProgID` 。
 
 *pOuter*<br/>
 [聚合](/windows/win32/com/aggregation)的外部未知。

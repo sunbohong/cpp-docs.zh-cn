@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4800
 title: 编译器警告 (等级 4) C4800
 ms.date: 03/14/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-ms.openlocfilehash: bcc98b9bb24f77e39a31332b8fbe2f7dcc5a7638
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bb46807e6225d4b73b589f8b1b95ea777f69d5b2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332110"
 ---
 # <a name="compiler-warning-level-4-c4800"></a>编译器警告 (等级 4) C4800
 
 ::: moniker range=">= msvc-160"
 Visual Studio 2019 及更高版本：
-> 从 " *type* " 到布尔值的隐式转换。 可能的信息丢失
+> 从 "*type*" 到布尔值的隐式转换。 可能的信息丢失
 ::: moniker-end
 
 C4800 是 Visual Studio 2015 及更早版本中的3级警告：
-> " *type* "：将值强制为布尔值 "true" 或 "false" (性能警告) 
+> "*type*"：将值强制为布尔值 "true" 或 "false" (性能警告) 
 
 当值隐式转换为类型时，将生成此警告 **`bool`** 。 通常情况下，此消息是通过以下方式引起的：将变量赋给变量， **`int`** **`bool`** 其中 **`int`** 变量只包含值 **`true`** 和 **`false`** ，并且可以重新声明为类型 **`bool`** 。 如果无法重写表达式以使用类型 **`bool`** ，则可以将 "" 添加 `!=0` 到表达式中，后者将提供表达式类型 **`bool`** 。 将表达式强制转换为类型 **`bool`** 不会禁用该警告，这是设计使然。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4436
 title: 编译器警告（等级 1）C4436
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4436
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-ms.openlocfilehash: 6a15220cb02a48fb11936b69e5830412f1221108
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 78d6ab1d6b80c06448b6dfdd8401cb9fd2d76b02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230670"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212592"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>编译器警告（等级 1）C4436
 
@@ -73,8 +74,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[编译器警告（等级4） C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+[编译器警告 (等级 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

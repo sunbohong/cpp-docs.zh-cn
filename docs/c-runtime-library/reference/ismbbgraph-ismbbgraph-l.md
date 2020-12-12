@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ismbbgraph、_ismbbgraph_l
 title: _ismbbgraph、_ismbbgraph_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: 60b8a974ab27878a379e3a9ad2596a23ed31757f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 093d7d2ca9b9bde427078f390f2036866529d8da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306347"
 ---
 # <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph、_ismbbgraph_l
 
@@ -57,9 +58,9 @@ int _ismbbgraph_l (
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要测试的整数。
 
 *locale*<br/>
@@ -71,15 +72,15 @@ int _ismbbgraph_l (
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-对于*c*，为非零; 否则为0。 **_ismbbgraph**为任何与区域设置相关的行为使用当前区域设置。 **_ismbbgraph_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+对于 *c*，为非零; 否则为0。 **_ismbbgraph** 为任何与区域设置相关的行为使用当前区域设置。 **_ismbbgraph_l** 相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbbgraph**|\<mbctype.h>|
 |**_ismbbgraph_l**|\<mbctype.h>|
@@ -90,7 +91,7 @@ int _ismbbgraph_l (
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字节分类](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

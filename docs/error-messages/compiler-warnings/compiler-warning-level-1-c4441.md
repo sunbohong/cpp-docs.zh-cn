@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4441
 title: 编译器警告（等级 1）C4441
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-ms.openlocfilehash: 4de80a9b7ad5601d9f8760d7c55a64a8631307a8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f09e25696edffadaeb843d0dbb7ec47f4bcf8a49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80162369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97212566"
 ---
 # <a name="compiler-warning-level-1-c4441"></a>编译器警告（等级 1）C4441
 
 已忽略 "cc1" 的调用约定;改为使用 "cc2"
 
-托管用户定义类型中的成员函数和全局函数泛型必须使用[__clrcall](../../cpp/clrcall.md)调用约定。  编译器使用 `__clrcall`。
+托管用户定义类型中的成员函数和全局函数泛型必须使用 [__clrcall](../../cpp/clrcall.md) 调用约定。  使用的编译器 `__clrcall` 。
 
 ## <a name="example"></a>示例
 

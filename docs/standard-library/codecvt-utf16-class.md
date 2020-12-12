@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： codecvt_utf16
 title: codecvt_utf16
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 264324d0f827e8999b065205010874ebf62ca501
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325083"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -30,7 +31,7 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 *Maxcode*\
 区域设置 facet 的最大字符数。
 
-*模式*\
+*众*\
 配置区域设置 facet 的信息。
 
 ## <a name="remarks"></a>备注
@@ -41,6 +42,6 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="requirements"></a>要求
 
-标头： \<codecvt >
+标头：\<codecvt>
 
 命名空间: std

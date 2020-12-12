@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息： chrono 文本
 title: chrono 文本
 ms.date: 11/04/2016
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: d8416580df09a8a466678702cb20ba4ddf37eb28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 497094d920a25635496fb0aa30295d378571418c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325150"
 ---
 # <a name="chrono-literals"></a>chrono 文本
 
-（C + + 14）\<chrono>标头定义 12[个用户定义的文本](../cpp/user-defined-literals-cpp.md)，以方便使用表示小时、分钟、秒、毫秒、微秒和纳秒的文本。 每个用户定义的文本都具有一个整型重载和一个浮点重载。 这些文本是在 literals::chrono_literals 内联命名空间中定义的，当 std::chrono 位于范围内时，该命名空间将被自动置于范围中。
+ (c + + 14) \<chrono> 标头定义12个 [用户定义的文本](../cpp/user-defined-literals-cpp.md) ，以方便使用表示小时、分钟、秒、毫秒、微秒和纳秒的文本。 每个用户定义的文本都具有一个整型重载和一个浮点重载。 这些文本是在 literals::chrono_literals 内联命名空间中定义的，当 std::chrono 位于范围内时，该命名空间将被自动置于范围中。
 
 ## <a name="syntax"></a>语法
 

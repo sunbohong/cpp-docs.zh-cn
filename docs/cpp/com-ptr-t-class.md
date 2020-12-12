@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _com_ptr_t 类
 title: _com_ptr_t 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-ms.openlocfilehash: 2c299ea4a5aaabba847c85500a6023d7b112d492
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a68b522806cec14baffe7857c71ac171ed0407f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838498"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295609"
 ---
 # <a name="_com_ptr_t-class"></a>_com_ptr_t 类
 
 **Microsoft 专用**
 
-**_Com_ptr_t**对象封装 com 接口指针，并且称为 "智能" 指针。 此模板类通过对成员函数的函数调用来管理资源分配和释放 `IUnknown` ： `QueryInterface` 、 `AddRef` 和 `Release` 。
+**_Com_ptr_t** 对象封装 com 接口指针，并且称为 "智能" 指针。 此模板类通过对成员函数的函数调用来管理资源分配和释放 `IUnknown` ： `QueryInterface` 、 `AddRef` 和 `Release` 。
 
 智能指针通常由 _COM_SMARTPTR_TYPEDEF 宏提供的 typedef 定义引用。 此宏采用接口名称和 IID，并声明使用接口名称加上后缀的 **_com_ptr_t** 的专用化 `Ptr` 。 例如：
 
@@ -31,13 +32,13 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 
 ### <a name="construction"></a>建筑
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|构造一个 **_com_ptr_t** 对象。|
 
 ### <a name="low-level-operations"></a>低级别运算
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddRef](../cpp/com-ptr-t-addref.md)|`AddRef` `IUnknown` 在封装的接口指针上调用的成员函数。|
 |[附加](../cpp/com-ptr-t-attach.md)|封装此智能指针的类型的原始接口指针。|
@@ -50,7 +51,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 
 ### <a name="operators"></a>运算符
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[operator =](../cpp/com-ptr-t-operator-equal.md)|将新值分配给现有的 **_com_ptr_t** 对象。|
 |[运算符 = =、！ =、 \<, > 、 \<=, >=](../cpp/com-ptr-t-relational-operators.md)|将智能指针对象与另一个智能指针、原始接口指针或 NULL 进行比较。|
@@ -62,8 +63,8 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 
 **标头：**\<comip.h>
 
-**Lib：** comsuppw.lib 或 comsuppwd.lib (参阅 [/zc： Wchar_t (Wchar_t 是本机类型) ](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 有关详细信息) 
+**Lib：** comsuppw.lib 或 comsuppwd.lib (参阅 [/zc： Wchar_t (Wchar_t 是本机类型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 有关详细信息) 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器 COM 支持类](../cpp/compiler-com-support-classes.md)

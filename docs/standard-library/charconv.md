@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： &lt; charconv&gt;
 title: '&lt;charconv&gt;'
 ms.date: 07/22/2020
 f1_keywords:
 - <charconv>
 helpviewer_keywords:
 - charconv header
-ms.openlocfilehash: c9dfb8e18a8f7fd367ec4f6b52b1a0af74b3f939
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9faab40d2b601317e9dd739053c31000da5ea18b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325203"
 ---
 # <a name="ltcharconvgt"></a>&lt;charconv&gt;
 
@@ -39,7 +40,7 @@ ms.locfileid: "91507709"
 
 ### <a name="types"></a>类型
 
-| 类型 | 说明 |
+| 类型 | 描述 |
 |-|:-|
 | [chars_format](chars-format-class.md) | 指定格式设置类型，例如科学、十六进制等。 |
 | [from_chars_result](from-chars-result-structure.md) | 保存转换的结果 `from_chars` 。 |
@@ -47,7 +48,7 @@ ms.locfileid: "91507709"
 
 ### <a name="functions"></a>函数
 
-| 函数 | 说明 |
+| 函数 | 描述 |
 |-|:-|
 | [from_chars](charconv-functions.md#from_chars) | 将字符转换为整数、float 或 double。 |
 | [to_chars](charconv-functions.md#to_chars)| 将 integer、float 或 double 转换为字符。 |

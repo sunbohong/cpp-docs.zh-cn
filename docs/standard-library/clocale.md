@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; clocale&gt;
 title: '&lt;clocale&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - clocale header
 ms.assetid: 5bde3e01-cf67-4f1f-a383-447ec814d00e
-ms.openlocfilehash: 60d15795328de567a8ba626f5344b2fb08e57aa7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3a1efb972d33ccb5b28fac6d77803aa6de2e08c7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325109"
 ---
 # <a name="ltclocalegt"></a>&lt;clocale&gt;
 
@@ -19,9 +20,9 @@ ms.locfileid: "68459351"
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<clocale >
+**标头：**\<clocale>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="remarks"></a>备注
 
@@ -39,7 +40,7 @@ ms.locfileid: "68459351"
 #define LC_TIME see below
 ```
 
-## <a name="structures"></a>结构
+## <a name="structures"></a>結構
 
 ```cpp
 struct lconv;
@@ -54,6 +55,6 @@ lconv* localeconv();
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

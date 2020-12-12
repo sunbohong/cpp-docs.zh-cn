@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; chrono&gt;
 title: '&lt;chrono&gt;'
 ms.date: 05/07/2019
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: b74c25e9c26d5767426576633e0999ae3ca44954
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a59ad0d88a1d9266e61a8ef49e7cf9184da803b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325136"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -33,32 +34,32 @@ ms.locfileid: "88840643"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[duration 类](../standard-library/duration-class.md)|描述保持时间间隔的类型。|
 |[time_point 类](../standard-library/time-point-class.md)|描述表示时间点的类型。|
 
 ### <a name="structs"></a>结构
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[common_type 结构](../standard-library/common-type-structure.md)|描述和的实例化类模板 [common_type](../standard-library/common-type-class.md) 的专用化 `duration` `time_point` 。|
 |[duration_values 结构](../standard-library/duration-values-structure.md)|提供 `duration` 模板参数 `Rep` 的特定值。|
 |[high_resolution_clock 结构](../standard-library/high-resolution-clock-struct.md)||
 |[steady_clock 结构](../standard-library/steady-clock-struct.md)|表示 `steady` 时钟。|
-|[system_clock 结构](../standard-library/system-clock-structure.md)|表示基于系统实时时钟的*时钟类型*。|
+|[system_clock 结构](../standard-library/system-clock-structure.md)|表示基于系统实时时钟的 *时钟类型*。|
 |[treat_as_floating_point 结构](../standard-library/treat-as-floating-point-structure.md)|指定是否可将一种类型视为浮点类型。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|将 `duration` 对象转换为指定类型。|
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|将 `time_point` 对象转换为指定类型。|
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[操作员](../standard-library/chrono-operators.md#operator-)|用于对 `duration` 和 `time_point` 对象进行减法或求反运算的运算符。|
 |[operator！ =](../standard-library/chrono-operators.md#op_neq)|与 `duration` 或 `time_point` 对象一起使用的不等运算符。|
@@ -76,7 +77,7 @@ ms.locfileid: "88840643"
 
 有关在以下 typedef 中使用的比率类型的详细信息，请参阅 [\<ratio>](../standard-library/ratio.md) 。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`typedef duration<long long, nano> nanoseconds;`|`duration`计时周期为1纳秒的类型的同义词。|
 |`typedef duration<long long, micro> microseconds;`|`duration`计时周期为1微秒的类型的同义词。|
@@ -87,9 +88,9 @@ ms.locfileid: "88840643"
 
 ### <a name="literals"></a>文本
 
-** (c + + 11) **\<chrono>标头定义了以下[用户定义的文本](../cpp/user-defined-literals-cpp.md)，您可以使用这些文本来更方便地使用、类型安全和代码的可维护性。 这些文本在 `literals::chrono_literals` 内联命名空间中定义，并且在 std::chrono 存在于作用域中时也存在于作用域中。
+**(c + + 11)**\<chrono>标头定义了以下 [用户定义的文本](../cpp/user-defined-literals-cpp.md)，您可以使用这些文本来更方便地使用、类型安全和代码的可维护性。 这些文本在 `literals::chrono_literals` 内联命名空间中定义，并且在 std::chrono 存在于作用域中时也存在于作用域中。
 
-|声明|说明|
+|声明|描述|
 |-|-|
 |`hours operator "" h(unsigned long long Val)`|指定整数值形式的小时数。|
 |`duration<double, ratio<3600> > operator "" h(long double Val)`|指定浮点值形式的小时数。|
@@ -112,6 +113,6 @@ constexpr auto week = 24h* 7;
 constexpr auto my_duration_unit = 108ms;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

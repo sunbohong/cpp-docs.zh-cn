@@ -1,4 +1,5 @@
 ---
+description: 了解更多：文件特性常量
 title: 文件特性常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 271459c33cdcc1110222871bdca06d3f04edb497
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8b57549b4a21cc5d699f933009c575b3f3fca81d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750879"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306360"
 ---
 # <a name="file-attribute-constants"></a>文件特性常量
 
@@ -46,7 +47,7 @@ ms.locfileid: "57750879"
 
 特性可以通过以下清单常量表示：
 
-|返回的常量|说明|
+|返回的常量|描述|
 |-|-|
 |`_A_ARCH`| 存档。 每当通过 BACKUP 命令更改或清除文件时进行设置。 值：0x20|
 |`_A_HIDDEN`| 隐藏文件。 使用 DIR 命令时通常不可见，除非使用 /AH 选项。 返回常规文件和具有此特性的文件的相关信息。 值：0x02|

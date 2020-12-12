@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： char_traits 结构
 title: char_traits 结构
 ms.date: 05/07/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 834572e96d9d8c19ae5d75a57dfa6c0053ae0ec5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a42aa29f2400d4610974530de04699daa32b7f1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325230"
 ---
 # <a name="char_traits-struct"></a>char_traits 结构
 
@@ -45,14 +46,14 @@ template <class CharType>
 struct char_traits;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 元素数据类型。
 
 ## <a name="remarks"></a>备注
 
-模板结构描述类型的各种字符特征 `CharType` 。 类模板[basic_string](../standard-library/basic-string-class.md)和多个 iostream 类模板，包括[basic_ios](../standard-library/basic-ios-class.md)，请使用此信息来操作类型为的元素 `CharType` 。 此元素类型不得要求显式构造或析构。 它必须提供带预期语义的默认构造函数、复制构造函数和赋值运算符。 按位复制必须具有与赋值相同的效果。 结构 char_traits 的任何成员函数均无法引发异常。
+模板结构描述类型的各种字符特征 `CharType` 。 类模板 [basic_string](../standard-library/basic-string-class.md) 和多个 iostream 类模板，包括 [basic_ios](../standard-library/basic-ios-class.md)，请使用此信息来操作类型为的元素 `CharType` 。 此元素类型不得要求显式构造或析构。 它必须提供带预期语义的默认构造函数、复制构造函数和赋值运算符。 按位复制必须具有与赋值相同的效果。 结构 char_traits 的任何成员函数均无法引发异常。
 
 ### <a name="typedefs"></a>Typedef
 
@@ -70,7 +71,7 @@ struct char_traits;
 |-|-|
 |[assign](#assign)|将一个字符值分配给另一个。|
 |[并排](#compare)|将两个字符串中指定数量的字符进行比较。|
-|[copy](#copy)|将指定数量的字符从一个字符串复制到另一个字符串。 已否决。 改为使用 [char_traits::_Copy_s](#copy_s)。|
+|[copy](#copy)|将指定数量的字符从一个字符串复制到另一个字符串。 已弃用。 改为使用 [char_traits::_Copy_s](#copy_s)。|
 |[_Copy_s](#copy_s)|将指定数量的字符从一个字符串复制到另一个字符串。|
 |[eof](#eof)|返回文件尾 (EOF) 字符。|
 |[eq](#eq)|测试两个 `char_type` 字符是否相等。|
@@ -78,7 +79,7 @@ struct char_traits;
 |[find](#find)|在字符范围中搜索指定字符的第一个匹配项。|
 |[length](#length)|返回字符串的长度。|
 |[lt](#lt)|测试一个字符是否小于另一个。|
-|[move](#move)|将指定数量的字符从一个字符串复制到另一个字符串，可能会发生重叠。 已否决。 改为使用 [char_traits::_Move_s](#move_s)。|
+|[move](#move)|将指定数量的字符从一个字符串复制到另一个字符串，可能会发生重叠。 已弃用。 改为使用 [char_traits::_Move_s](#move_s)。|
 |[_Move_s](#move_s)|将指定数量的字符从一个字符串复制到另一个字符串，可能会发生重叠。|
 |[not_eof](#not_eof)|测试字符是否为文件尾 (EOF) 字符。|
 |[to_char_type](#to_char_type)|将 `int_type` 字符转换为相应的 `char_type` 字符，并返回结果。|
@@ -90,7 +91,7 @@ struct char_traits;
 
 **命名空间:** std
 
-## <a name="char_traitsassign"></a><a name="assign"></a>char_traits：： assign
+## <a name="char_traitsassign"></a><a name="assign"></a> char_traits：： assign
 
 将一个字符值分配到其他或字符串中的一系列元素。
 
@@ -103,9 +104,9 @@ static char_type *assign(char_type* strTo,
     char_type _CharFrom);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-**_** *CharFrom*要分配其值的字符。
+**_** *CharFrom* 要分配其值的字符。
 
 *_CharTo*\
 要为其分配字符值的元素。
@@ -118,7 +119,7 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="return-value"></a>返回值
 
-第二个成员函数返回一个指向字符串的指针，该字符串的第一个 *_Num*元素已分配 *_CharFrom*值。
+第二个成员函数返回一个指向字符串的指针，该字符串的第一个 *_Num* 元素已分配 *_CharFrom* 值。
 
 ### <a name="example"></a>示例
 
@@ -161,7 +162,7 @@ The target string s1 is: abcd-1234-abcd
 The result1 = assign ( s1 , 4 , 'f' ) is: ffff-1234-abcd
 ```
 
-## <a name="char_traitschar_type"></a><a name="char_type"></a>char_traits：： char_type
+## <a name="char_traitschar_type"></a><a name="char_type"></a> char_traits：： char_type
 
 一种字符类型。
 
@@ -177,7 +178,7 @@ typedef CharType char_type;
 
 有关如何声明和使用 `char_type` 的示例，请参阅 [copy](#copy) 的示例。
 
-## <a name="char_traitscompare"></a><a name="compare"></a>char_traits：： compare
+## <a name="char_traitscompare"></a><a name="compare"></a> char_traits：： compare
 
 将两个字符串中指定数量的字符进行比较。
 
@@ -187,7 +188,7 @@ static int compare(const char_type* str1,
     size_t _Num);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *str1*\
 要进行比较的两个字符串中的第一个。
@@ -241,7 +242,7 @@ int main() {
 }
 ```
 
-## <a name="char_traitscopy"></a><a name="copy"></a>char_traits：： copy
+## <a name="char_traitscopy"></a><a name="copy"></a> char_traits：： copy
 
 将指定数量的字符从一个字符串复制到另一个字符串。
 
@@ -253,7 +254,7 @@ static char_type *copy(char_type* _To,
     size_t _Num);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_To*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
@@ -303,7 +304,7 @@ The destination string is: ABCD-1234
 The result1 = copy ( s1 , s2 , 4 ) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traits_copy_s"></a><a name="copy_s"></a>char_traits：： _Copy_s
+## <a name="char_traits_copy_s"></a><a name="copy_s"></a> char_traits：： _Copy_s
 
 将指定数量的字符从一个字符串复制到另一个字符串。
 
@@ -315,13 +316,13 @@ static char_type *_Copy_s(
     size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *目的*\
 用于接收复制的字符序列的字符串或字符数组。
 
 *dest_size*\
-*Dest*的大小。 如果 `char_type` 为 **`char`** ，则此大小以字节为单位。 如果 `char_type` 为 **`wchar_t`** ，则此大小为单词。
+*Dest* 的大小。 如果 `char_type` 为 **`char`** ，则此大小以字节为单位。 如果 `char_type` 为 **`wchar_t`** ，则此大小为单词。
 
 *_From*\
 要复制的源字符串或字符数组。
@@ -368,7 +369,7 @@ The destination string is: ABCD-1234
 The result1 = _Copy_s(s1, char_traits<char>::length(s1), s2, 4) is: ABCD-1234-abcd
 ```
 
-## <a name="char_traitseof"></a><a name="eof"></a>char_traits：： eof
+## <a name="char_traitseof"></a><a name="eof"></a> char_traits：： eof
 
 返回文件尾 (EOF) 字符。
 
@@ -382,7 +383,7 @@ EOF 字符。
 
 ### <a name="remarks"></a>备注
 
-一个表示文件结尾的值（例如 EOF 或 WEOF）。
+一个值，该值表示文件结尾 (例如 EOF 或 WEOF) 。
 
 C++ 标准声明此值不能对应于有效的 `char_type` 值。 Microsoft c + + 编译器对类型 **`char`** （而不是类型）强制此约束 **`wchar_t`** 。 下面的示例将说明这一点。
 
@@ -419,7 +420,7 @@ The eof marker for char_traits<char> is: -1
 The eof marker for char_traits<wchar_t> is: 65535
 ```
 
-## <a name="char_traitseq"></a><a name="eq"></a>char_traits：： eq
+## <a name="char_traitseq"></a><a name="eq"></a> char_traits：： eq
 
 测试两个 `char_type` 字符是否相等。
 
@@ -427,7 +428,7 @@ The eof marker for char_traits<wchar_t> is: 65535
 static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch1*\
 要测试是否相等的两个字符中的第一个。
@@ -479,7 +480,7 @@ The character ch1 is not equal to the character ch2.
 The character ch1 is equal to the character ch3.
 ```
 
-## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a>char_traits：： eq_int_type
+## <a name="char_traitseq_int_type"></a><a name="eq_int_type"></a> char_traits：： eq_int_type
 
 测试两个表示为 `int_type` 的字符是否相等。
 
@@ -487,7 +488,7 @@ The character ch1 is equal to the character ch3.
 static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch1*\
 要测试是否相等的两个字符中的第一个字符 `int_type` 。
@@ -564,7 +565,7 @@ The int_type representation of character ch1
 is equal to the int_type representation of ch3.
 ```
 
-## <a name="char_traitsfind"></a><a name="find"></a>char_traits：： find
+## <a name="char_traitsfind"></a><a name="find"></a> char_traits：： find
 
 在字符范围中搜索指定字符的第一个匹配项。
 
@@ -574,7 +575,7 @@ static const char_type* find(const char_type* str,
     const char_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *字符串*\
 要搜索的字符串中的第一个字符。
@@ -631,7 +632,7 @@ of the character 'd' is: d-1234-abcd
 The result2 of the search is NULL.
 ```
 
-## <a name="char_traitsint_type"></a><a name="int_type"></a>char_traits：： int_type
+## <a name="char_traitsint_type"></a><a name="int_type"></a> char_traits：： int_type
 
 一种整数类型，该类型可以表示类型为 `char_type` 的字符或文件尾 (EOF) 字符。
 
@@ -647,7 +648,7 @@ typedef long int_type;
 
 有关如何声明和使用 `int_type` 的示例，请参阅 [eq_int_type](#eq_int_type) 的示例。
 
-## <a name="char_traitslength"></a><a name="length"></a>char_traits：： length
+## <a name="char_traitslength"></a><a name="length"></a> char_traits：： length
 
 返回字符串的长度。
 
@@ -655,7 +656,7 @@ typedef long int_type;
 static size_t length(const char_type* str);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *字符串*\
 要测量其长度的 C 字符串。
@@ -690,7 +691,7 @@ The C-string str1 is: Hello
 The length of C-string str1 is: 5.
 ```
 
-## <a name="char_traitslt"></a><a name="lt"></a>char_traits：： lt
+## <a name="char_traitslt"></a><a name="lt"></a> char_traits：： lt
 
 测试一个字符是否小于另一个。
 
@@ -698,7 +699,7 @@ The length of C-string str1 is: 5.
 static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch1*\
 要测试是否小于的两个字符中的第一个。
@@ -749,7 +750,7 @@ The character ch1 is less than the character ch2.
 The character ch3 is not less than the character ch2.
 ```
 
-## <a name="char_traitsmove"></a><a name="move"></a>char_traits：： move
+## <a name="char_traitsmove"></a><a name="move"></a> char_traits：： move
 
 将某个序列中指定数量的字符复制到另一个序列，可能会发生序列重叠。
 
@@ -761,7 +762,7 @@ static char_type *move(char_type* _To,
     size_t _Num);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_To*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
@@ -774,7 +775,7 @@ static char_type *move(char_type* _To,
 
 ### <a name="return-value"></a>返回值
 
-第一个元素 *_To*复制到用于接收复制的字符序列的字符串或字符数组中。
+第一个元素 *_To* 复制到用于接收复制的字符序列的字符串或字符数组中。
 
 ### <a name="remarks"></a>备注
 
@@ -826,7 +827,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = move ( sToFrom2 , findc , 8 ) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traits_move_s"></a><a name="move_s"></a>char_traits：： _Move_s
+## <a name="char_traits_move_s"></a><a name="move_s"></a> char_traits：： _Move_s
 
 将某个序列中指定数量的字符复制到另一个序列，可能会发生序列重叠。
 
@@ -838,13 +839,13 @@ static char_type *_Move_s(
     size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *目的*\
 用于接收复制的字符序列的字符串或字符数组的开头处的元素。
 
 *dest_size*\
-*Dest*的大小。 如果 `char_type` 为 **`char`** ，则以字节为单位。 如果 `char_type` 为 **`wchar_t`** ，则此项为单词。
+*Dest* 的大小。 如果 `char_type` 为 **`char`** ，则以字节为单位。 如果 `char_type` 为 **`wchar_t`** ，则此项为单词。
 
 *_From*\
 要复制的源字符串或字符数组的开头处的元素。
@@ -854,7 +855,7 @@ static char_type *_Move_s(
 
 ### <a name="return-value"></a>返回值
 
-复制到字符串或字符数组的第一个元素*dest* ，用于接收复制的字符序列。
+复制到字符串或字符数组的第一个元素 *dest* ，用于接收复制的字符序列。
 
 ### <a name="remarks"></a>备注
 
@@ -906,7 +907,7 @@ The source/destination string sToFrom2 is: abcd-1234-ABCD
 The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) is: cd-1234-4-ABCD
 ```
 
-## <a name="char_traitsnot_eof"></a><a name="not_eof"></a>char_traits：： not_eof
+## <a name="char_traitsnot_eof"></a><a name="not_eof"></a> char_traits：： not_eof
 
 测试字符是否不是文件尾 (EOF) 字符或 EOF。
 
@@ -914,7 +915,7 @@ The result2 = _Move_s(sToFrom2, char_traits<char>::length(sToFrom2), findc, 8) i
 static int_type not_eof(const int_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 表示为 `int_type` 且要测试其是否为 EOF 字符的字符。
@@ -978,7 +979,7 @@ The eofTest1 returns: 120, which is the character: x.
 The eofTest2 indicates int2 is an EOF character.
 ```
 
-## <a name="char_traitsoff_type"></a><a name="off_type"></a>char_traits：： off_type
+## <a name="char_traitsoff_type"></a><a name="off_type"></a> char_traits：： off_type
 
 一种整数类型，该类型可以表示流中两个位置之间的偏移量。
 
@@ -990,7 +991,7 @@ typedef streamoff off_type;
 
 此类型为带符号整数，描述的对象可存储多个流定位操作涉及的字节偏移量。 它通常为 [streamoff](../standard-library/ios-typedefs.md#streamoff) 的同义词，但它具有与该类型实质上相同的属性。
 
-## <a name="char_traitspos_type"></a><a name="pos_type"></a>char_traits：:p os_type
+## <a name="char_traitspos_type"></a><a name="pos_type"></a> char_traits：:p os_type
 
 一种整数类型，该类型可以表示流中的位置。
 
@@ -1002,7 +1003,7 @@ typedef streampos pos_type;
 
 此类型描述了一个对象，该对象可以存储还原某个流内的任意文件位置指示器所需的全部信息。 它通常为 [streamoff](../standard-library/ios-typedefs.md#streampos) 的同义词，但在任何情况下，它都具有与该类型实质上相同的属性。
 
-## <a name="char_traitsstate_type"></a><a name="state_type"></a>char_traits：： state_type
+## <a name="char_traitsstate_type"></a><a name="state_type"></a> char_traits：： state_type
 
 一种类型，该类型表示流中的多字节字符的转换状态。
 
@@ -1014,7 +1015,7 @@ typedef implementation-defined state_type;
 
 此类型描述一个可以表示转换状态的对象。 它通常为 `mbstate_t` 的同义词，但在任何情况下，它具有与该类型实质上相同的属性。
 
-## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a>char_traits：： to_char_type
+## <a name="char_traitsto_char_type"></a><a name="to_char_type"></a> char_traits：： to_char_type
 
 将 `int_type` 字符转换为相应的 `char_type` 字符，并返回结果。
 
@@ -1022,7 +1023,7 @@ typedef implementation-defined state_type;
 static char_type to_char_type(const int_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 要表示为 `char_type` 的 `int_type` 字符。
@@ -1031,7 +1032,7 @@ static char_type to_char_type(const int_type& _Ch);
 
 对应于 `int_type` 字符的 `char_type` 字符。
 
-不能表示为的 *_Ch*的值将产生未指定的结果。
+不能表示为的 *_Ch* 的值将产生未指定的结果。
 
 ### <a name="remarks"></a>备注
 
@@ -1120,7 +1121,7 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a>char_traits：： to_int_type
+## <a name="char_traitsto_int_type"></a><a name="to_int_type"></a> char_traits：： to_int_type
 
 将 `char_type` 字符转换为相应的 `int_type` 字符，并返回结果。
 
@@ -1128,7 +1129,7 @@ The recovered char_type of ch2 is equal to the original ch2.
 static int_type to_int_type(const char_type& _Ch);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 表示为 `int_type` 的 `char_type` 字符。
@@ -1143,7 +1144,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 `to_int_type` ( `to_char_type` ( *x* ) ) == *x*
 
-对于任何 `int_type` *x*和
+对于任何 `int_type` *x* 和
 
 `to_char_type` ( `to_int_type` ( *x* ) ) == *x*
 
@@ -1223,6 +1224,6 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
