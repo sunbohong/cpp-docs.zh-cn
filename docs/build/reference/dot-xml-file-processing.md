@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：。Xml 文件处理
 title: .Xml 文件处理
 ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: 1a0d231a066209307041681232cc3410210d4d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ded4551adcc4bec4aef27fe38f47470065ea9ef4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192689"
 ---
 # <a name="xml-file-processing"></a>.Xml 文件处理
 
@@ -31,8 +32,8 @@ ms.locfileid: "62293558"
   | F | Field — 字段 |
   | P | 属性（包括索引器或其他的索引属性） |
   | M | 方法（包括构造函数、运算符等特殊方法） |
-  | E | Event — 事件 |
-  | ! | 错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 MSVC 编译器错误的生成信息无法解析的链接。 |
+  | E | event |
+  | ! | 错误字符串<br /><br /> 字符串的其余部分提供有关错误的信息。 对于无法解析的链接，MSVC 编译器将生成错误消息。 |
 
 - 该字符串的第二部分是项目的完全限定名称，从命名空间的根开始。 用句点分隔项目名称、其封闭类型和命名空间。 如果项目名称本身包含句点，会将其替换为哈希符号 ('#')。 假定没有项目恰好在其名称中包含哈希符号。 例如，`String` 构造函数的完全限定名称将是“System.String.#ctor”。
 
@@ -46,19 +47,19 @@ ms.locfileid: "62293558"
 
   - ELEMENT_TYPE_BYREF 表示为修改类型之后的“\@”。
 
-  - ELEMENT_TYPE_PINNED 表示为修改类型之后的“^”。 MSVC 编译器绝不生成它。
+  - ELEMENT_TYPE_PINNED 表示为修改类型之后的“^”。 MSVC 编译器从不生成此。
 
-  - ELEMENT_TYPE_CMOD_REQ 表示为“&#124;”和修饰符类的完全限定名称，前面是修改类型。 MSVC 编译器绝不生成它。
+  - ELEMENT_TYPE_CMOD_REQ 表示为“&#124;”和修饰符类的完全限定名称，前面是修改类型。 MSVC 编译器从不生成此。
 
   - ELEMENT_TYPE_CMOD_OPT 表示为“!”和修饰符类的完全限定名称，前面是修改类型。
 
   - ELEMENT_TYPE_SZARRAY 表示为“[]”，前面是数组的元素类型。
 
-  - ELEMENT_TYPE_GENERICARRAY 表示为“[?]”，前面是数组的元素类型。 MSVC 编译器绝不生成它。
+  - ELEMENT_TYPE_GENERICARRAY 表示为“[?]”，前面是数组的元素类型。 MSVC 编译器从不生成此。
 
   - ELEMENT_TYPE_ARRAY 表示为 [*lowerbound*:`size`,*lowerbound*:`size`]，其中逗号的数量是秩 - 1，每个维度的下限和大小（如果已知）以十进制形式表示。 如果未指定下限或大小，则只需将其省略。 如果省略某个特定维度的下限和大小，也会省略“:”。 例如，以 1 作为下限并且未指定大小的二维数组是 [1:,1:]。
 
-  - ELEMENT_TYPE_FNPTR 表示为“=FUNC:`type`(*signature*)”，其中 `type` 是返回类型，*signature* 是方法的自变量。 如果没有任何自变量，则省略括号。 MSVC 编译器绝不生成它。
+  - ELEMENT_TYPE_FNPTR 表示为“=FUNC:`type`(*signature*)”，其中 `type` 是返回类型，*signature* 是方法的自变量。 如果没有任何自变量，则省略括号。 MSVC 编译器从不生成此。
 
   不表示下列签名组件，因为它们永远不会用于区分重载方法：
 

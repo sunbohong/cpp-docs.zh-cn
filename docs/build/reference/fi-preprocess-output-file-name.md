@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： `/Fi` (预处理输出文件名) '
 title: /Fi（预处理输出文件名）
 ms.date: 08/12/2020
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 82bf09a8f01f656f90ad9971530b05f108fc95a4
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: c598730b19b843aa312df71d745ed363d082cc43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561084"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192221"
 ---
 # <a name="fi-preprocess-output-file-name"></a>`/Fi` (预处理输出文件名) 
 
@@ -24,7 +25,7 @@ ms.locfileid: "88561084"
 
 > **`/Fi`**_`pathname`_
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *`pathname`*\
 编译器选项生成的输出文件的相对或绝对路径和文件名 **`/P`** 。 或， *`.i`* 当指定多个输入文件时，输出文件的目录路径。 不要在选项和之间加空格 **`/Fi`** *`pathname`* 。
@@ -65,7 +66,7 @@ CL /P /Fi".\\preprocessed\\" main.cpp helper.cpp
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [`/P` (预处理到文件) ](p-preprocess-to-a-file.md)<br/>

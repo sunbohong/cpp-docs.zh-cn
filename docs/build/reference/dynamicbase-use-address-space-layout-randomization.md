@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/DYNAMICBASE (使用地址空间布局随机化) '
 title: /DYNAMICBASE（使用地址空间布局随机化功能）
 ms.date: 06/12/2018
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 9af502d65dd81efdedc6b80951f11d68f766cb31
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 481194b0da1a64d8170104344911223bf6ca6f6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842619"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192600"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE（使用地址空间布局随机化功能）
 
@@ -23,17 +24,17 @@ ms.locfileid: "88842619"
 
 > **/DYNAMICBASE**[**： NO**]
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**/DYNAMICBASE**选项修改*可执行映像*（.dll 或 .exe 文件）的标头，以指示应用程序是否应在加载时随机变基，并启用虚拟地址分配随机化，这会影响堆、堆栈和其他操作系统分配的虚拟内存位置。 **/DYNAMICBASE**选项适用于32位和64位映像。 Windows Vista 和更高版本的操作系统支持 ASLR。 早期的操作系统将忽略此选项。
+**/DYNAMICBASE** 选项修改 *可执行映像*（.dll 或 .exe 文件）的标头，以指示应用程序是否应在加载时随机变基，并启用虚拟地址分配随机化，这会影响堆、堆栈和其他操作系统分配的虚拟内存位置。 **/DYNAMICBASE** 选项适用于32位和64位映像。 Windows Vista 和更高版本的操作系统支持 ASLR。 早期的操作系统将忽略此选项。
 
-默认情况下， **/DYNAMICBASE** 处于启用状态。 若要禁用此选项，请使用 **/DYNAMICBASE： NO**。 若要使[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)选项生效， **/DYNAMICBASE**选项是必需的。
+默认情况下， **/DYNAMICBASE** 处于启用状态。 若要禁用此选项，请使用 **/DYNAMICBASE： NO**。 若要使 [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)选项生效， **/DYNAMICBASE** 选项是必需的。
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中设置此链接器选项
 
-1. 打开项目“属性页” **** 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择 "**配置属性**  >  **链接器**  >  **高级**属性" 页。
+1. 选择 "**配置属性**  >  **链接器**  >  **高级** 属性" 页。
 
 1. 修改 " **随机基址** " 属性。
 
@@ -41,7 +42,7 @@ ms.locfileid: "88842619"
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RandomizedBaseAddress%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSVC 链接器参考](linking.md)
 - [MSVC 链接器选项](linker-options.md)

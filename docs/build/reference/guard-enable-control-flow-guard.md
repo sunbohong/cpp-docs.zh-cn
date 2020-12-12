@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息：/guard (启用控制流防护) '
 title: /guard（启用控制流保护）
 ms.date: 11/04/2016
 f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8661f94e0ee35f8d5e2c8caba1fc01bbf4072876
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65a027a845ab7ea53fbe2ef1a6ba6bcd4a3dde87
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190684"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191766"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard（启用控制流保护）
 
@@ -48,7 +49,7 @@ ms.locfileid: "87190684"
 
 1. 在下拉控件中，选择 **“是”** 以启用控制流保护，或选择 **“否”** 加以禁用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

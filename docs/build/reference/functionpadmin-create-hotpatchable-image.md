@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/FUNCTIONPADMIN (创建可热修补映像) '
 title: /FUNCTIONPADMIN（创建可热修补的映像）
 ms.date: 03/09/2018
 f1_keywords:
@@ -7,39 +8,39 @@ helpviewer_keywords:
 - -FUNCTIONPADMIN linker option
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
-ms.openlocfilehash: 699da3cea9914b5a10bdf769015d41c33936a902
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86adb2001adacf1b6c8a03a90b7452505841c08
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292388"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192000"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN（创建可热修补的映像）
 
-准备映像进行热修补。
+准备映像以进行热修补。
 
 ## <a name="syntax"></a>语法
 
-> **/FUNCTIONPADMIN**[**:**_space_]
+> **/FUNCTIONPADMIN**[**：**_space_]
 
-### <a name="arguments"></a>自变量
+### <a name="arguments"></a>参数
 
-*space*<br/>
-要添加到的以字节为单位的每个函数开头的填充量。 在 x86 上此值默认为 5 个字节的填充和 x64 上此值默认为 6 个字节。 在其他目标上必须提供一个值。
+*空间*<br/>
+要添加到每个函数开头的填充量（以字节为单位）。 在 x86 上，此值默认为5个字节，在 x64 上默认为6个字节。 在其他目标上，必须提供一个值。
 
 ## <a name="remarks"></a>备注
 
-为了使链接器以生成可热修补映像，.obj 文件必须具有已编译[/hotpatch （创建可热修补映像）](hotpatch-create-hotpatchable-image.md)。
+为了使链接器生成可热修补的图像，必须已使用/hotpatch 编译 .obj 文件 [ (创建可热修补映像) ](hotpatch-create-hotpatchable-image.md)。
 
-编译和链接的单次调用的 cl.exe，与映像时 **/hotpatch**意味着 **/functionpadmin**。
+当你使用 cl.exe 的单个调用来编译和链接图像时， **/hotpatch** 表示 **/functionpadmin**。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **链接器** > **命令行**属性页。
+1. 选择“配置属性” > “链接器” > “命令行”属性页    。
 
-1. 输入 **/FUNCTIONPADMIN**选项**其他选项**。 选择“确定”以保存更改。
+1. 在 "**其他选项**" 中输入 **/FUNCTIONPADMIN** 选项。 选择“确定”以保存更改  。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

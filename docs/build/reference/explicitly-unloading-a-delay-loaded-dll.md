@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：显式卸载 Delay-Loaded DLL
 title: 显式卸载延迟加载的 DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-ms.openlocfilehash: 9909a3e179aa6c0af3a622c7bf1b545326f90bbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03df08487acc1be05226021d6b7c1593eb0f031b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293454"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192377"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>显式卸载延迟加载的 DLL
 
-[/延迟](delay-delay-load-import-settings.md): unload 链接器选项可以卸载已被延迟加载的 DLL。 默认情况下，当你的代码卸载该 DLL (使用 /delay: unload 并 **__FUnloadDelayLoadedDLL2**)，延迟加载导入内容保留在导入地址表 (IAT)。 但是，如果您使用 /delay: unload 链接器命令行上，该帮助器函数将支持显式卸载 DLL，正在 IAT 重置为其原始形式;现在无效指针将被覆盖。 IAT 是中的字段[ImgDelayDescr](calling-conventions-parameters-and-return-type.md) （如果存在） 包含一份原始 IAT 的地址。
+使用 [/delay](delay-delay-load-import-settings.md)： unload 链接器选项可以卸载延迟加载的 DLL。 默认情况下，当代码使用/delay： unload 和 **__FUnloadDelayLoadedDLL2**) 卸载 (DLL 时，延迟加载的导入将保留在导入地址表 (IAT) 中。 但是，如果在链接器命令行中使用/delay： unload，则 helper 函数将支持显式卸载 DLL，并将 IAT 重置为其原始形式;将覆盖现在无效的指针。 IAT 是 [ImgDelayDescr](calling-conventions-parameters-and-return-type.md) 中的一个字段，其中包含原始 IAT (（如果存在）) 的副本的地址。
 
 ## <a name="example"></a>示例
 
@@ -49,14 +50,14 @@ int main()
 
 ### <a name="comments"></a>注释
 
-卸载延迟加载的 DLL 的重要说明：
+有关卸载延迟加载的 DLL 的重要说明：
 
-- 您可以找到的实现 **__FUnloadDelayLoadedDLL2**文件中的函数 \VC7\INCLUDE\DELAYHLP。CPP。
+- 您可以在 \VC7\INCLUDE\DELAYHLP. 文件中找到 **__FUnloadDelayLoadedDLL2** 函数的实现。.CPP.
 
-- Name 参数 **__FUnloadDelayLoadedDLL2**函数必须完全匹配 （包括示例） 导入库包含的内容 （即字符串也是在图像中导入表中）。 可以查看的内容使用的导入库[DUMPBIN /DEPENDENTS](dependents.md)。 如果需要，不区分大小写的字符串匹配，则可以更新 **__FUnloadDelayLoadedDLL2**使用一个 CRT 字符串函数或 Windows API 调用。
+- **__FUnloadDelayLoadedDLL2** 函数的 name 参数必须完全匹配 (包括) 导入库包含的大小写 (该字符串也在图像) 的导入表中。 可以通过 [DUMPBIN/DEPENDENTS](dependents.md)查看导入库的内容。 如果需要不区分大小写的字符串匹配，可以将 **__FUnloadDelayLoadedDLL2** 更新为使用其中一个 CRT 字符串函数或 Windows API 调用。
 
-请参阅[卸载延迟加载的 DLL](unloading-a-delay-loaded-dll.md)有关详细信息。
+有关详细信息，请参阅 [卸载 Delay-Loaded DLL](unloading-a-delay-loaded-dll.md) 。
 
 ## <a name="see-also"></a>请参阅
 
-[延迟加载 DLL 的链接器支持](linker-support-for-delay-loaded-dlls.md)
+[Delay-Loaded Dll 的链接器支持](linker-support-for-delay-loaded-dlls.md)

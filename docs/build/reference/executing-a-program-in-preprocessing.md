@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息：在预处理中执行程序
 title: 在预处理中执行程序
 ms.date: 11/04/2016
 helpviewer_keywords:
 - program execution [C++]
 ms.assetid: 5ecf123a-20e5-40cd-b8d8-dd5a9fdd4b24
-ms.openlocfilehash: 564e4aebb3a0502f18550fb9d323e8b30f1303f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72743fe1b75e170ce1aa7ea04dd5a0c70440de59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271588"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192364"
 ---
 # <a name="executing-a-program-in-preprocessing"></a>在预处理中执行程序
 
-若要在预处理期间使用命令的退出代码，请用方括号 ([]) 内的任意参数指定命令。 任何宏被展开前执行此命令。 NMAKE 替换该命令的退出代码，可以在表达式中使用来控制预处理命令规范。
+若要在预处理期间使用命令的退出代码，请在方括号 ( [] ) 中指定命令，其中包含任何参数。 执行命令前，将展开任何宏。 NMAKE 将命令规范替换为命令的退出代码，该代码可在表达式中用于控制预处理。
 
 ## <a name="see-also"></a>请参阅
 

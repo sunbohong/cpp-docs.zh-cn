@@ -1,20 +1,21 @@
 ---
+description: '了解详细信息： (c + + 的析构函数) '
 title: 析构函数 (C++)
 ms.date: 07/20/2019
 helpviewer_keywords:
 - objects [C++], destroying
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5da7659d2d45bca9efba21be2cd0bf581d539780
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 121df368fc79f7dbabe4ccac6fe93c36788c5e51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195562"
 ---
 # <a name="destructors-c"></a>析构函数 (C++)
 
-析构函数是一个成员函数，该函数在对象超出范围时自动调用，或通过对的调用进行显式销毁 **`delete`** 。 析构函数具有与类相同的名称，前面有一个波形符（ `~` ）。 例如，声明 `String` 类的析构函数：`~String()`。
+析构函数是一个成员函数，该函数在对象超出范围时自动调用，或通过对的调用进行显式销毁 **`delete`** 。 析构函数具有与类相同的名称，前面有一个波形符 (`~`) 。 例如，声明 `String` 类的析构函数：`~String()`。
 
 如果未定义析构函数，则编译器将提供一个默认析构函数;对于许多类，这就足够了。 仅当类将句柄存储到需要释放的系统资源或拥有它们指向的内存的指针时，才需要定义自定义析构函数。
 
@@ -67,7 +68,7 @@ int main() {
 
 - 不接受自变量。
 
-- 不返回值（或 **`void`** ）。
+- 不要将值返回 (或 **`void`**) 。
 
 - 不能声明为 **`const`** 、 **`volatile`** 或 **`static`** 。 但是，可以调用它们来销毁作为、或声明的对象 **`const`** **`volatile`** **`static`** 。
 
@@ -213,7 +214,7 @@ class MultInherit : public Base1, public Base2
 
 ## <a name="explicit-destructor-calls"></a>显式析构函数调用
 
-很少需要显式调用析构函数。 但是，对置于绝对地址的对象进行清理会很有用。 这些对象通常使用采用位置参数的用户定义 **`new`** 运算符进行分配。 **`delete`** 操作员无法释放此内存，因为它未从免费存储分配（有关详细信息，请参阅[new 和 delete 运算符](../cpp/new-and-delete-operators.md)）。 但是，对析构函数的调用可以执行相应的清理。 若要显式调用 `s` 类的对象 `String` 的析构函数，请使用下列语句之一：
+很少需要显式调用析构函数。 但是，对置于绝对地址的对象进行清理会很有用。 这些对象通常使用采用位置参数的用户定义 **`new`** 运算符进行分配。 **`delete`** 操作员无法释放此内存，因为它不是从免费存储分配 (有关详细信息，请参阅 [new 和 delete 运算符](../cpp/new-and-delete-operators.md)) 。 但是，对析构函数的调用可以执行相应的清理。 若要显式调用 `s` 类的对象 `String` 的析构函数，请使用下列语句之一：
 
 ```cpp
 s.String::~String();     // non-virtual call
@@ -244,7 +245,7 @@ void copy_strings()
 
 显式定义析构函数、复制构造函数或复制赋值运算符会阻止移动构造函数和移动赋值运算符的隐式定义。 在这种情况下，如果复制开销较高，则无法提供移动操作，这种情况会导致丢失优化机会。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [复制构造函数和复制赋值运算符](../cpp/copy-constructors-and-copy-assignment-operators-cpp.md)</br>
 [移动构造函数和移动赋值运算符](../cpp/move-constructors-and-move-assignment-operators-cpp.md)

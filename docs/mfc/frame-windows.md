@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：框架窗口
 title: 框架窗口
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,16 +16,16 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 39c0b4b866fa123d8bcae639342c925570d96e1b
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ee993b7f8314c28dba38c9ca607366f6fb93da1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193495"
 ---
 # <a name="frame-windows"></a>框架窗口
 
-当应用程序在 Windows 下运行时，用户与框架窗口中显示的文档交互。 文档框架窗口具有两个主要组件：框架和它所框架的内容。 文档框架窗口可以是[单文档界面](sdi-and-mdi.md)（SDI）框架窗口，也可以是[多文档界面](sdi-and-mdi.md)（MDI）子窗口。 Windows 管理大多数用户与框架窗口的交互：移动窗口并调整窗口大小，将其关闭，然后最小化和最大化。 您可以管理框架内的内容。
+当应用程序在 Windows 下运行时，用户与框架窗口中显示的文档交互。 文档框架窗口具有两个主要组件：框架和它所框架的内容。 文档框架窗口可以是 [单文档界面](sdi-and-mdi.md) (SDI) 框架窗口或 [多文档界面](sdi-and-mdi.md) (MDI) 子窗口。 Windows 管理大多数用户与框架窗口的交互：移动窗口并调整窗口大小，将其关闭，然后最小化和最大化。 您可以管理框架内的内容。
 
 ## <a name="frame-windows-and-views"></a>框架窗口和视图
 
@@ -35,7 +36,7 @@ MFC 框架使用框架窗口来包含视图。 两个组件（框架和内容）
 
 ## <a name="frame-windows-and-splitter-windows"></a>框架窗口和拆分窗口
 
-另一种常见的布局是，框架窗口通常使用[拆分窗口](multiple-document-types-views-and-frame-windows.md)来框架多个视图。 在拆分窗口中，框架窗口的工作区由拆分器窗口占用，拆分器窗口又具有多个称为 "窗格" 的子窗口。
+另一种常见的布局是，框架窗口通常使用 [拆分窗口](multiple-document-types-views-and-frame-windows.md)来框架多个视图。 在拆分窗口中，框架窗口的工作区由拆分器窗口占用，拆分器窗口又具有多个称为 "窗格" 的子窗口。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
@@ -45,7 +46,7 @@ MFC 框架使用框架窗口来包含视图。 两个组件（框架和内容）
 
 - [框架窗口类](frame-window-classes.md)
 
-- [应用程序向导创建的框架窗口类](frame-window-classes-created-by-the-application-wizard.md)
+- [应用程序向导创建的 Frame-Window 类](frame-window-classes-created-by-the-application-wizard.md)
 
 - [框架窗口样式](frame-window-styles-cpp.md)
 
@@ -63,17 +64,17 @@ MFC 框架使用框架窗口来包含视图。 两个组件（框架和内容）
 
 - 在包含多个视图的框架窗口中[管理当前视图](managing-the-current-view.md)
 
-- [管理菜单、控件条和快捷键（共享框架窗口空间的其他对象）](managing-menus-control-bars-and-accelerators.md)
+- [管理菜单、控件条和快捷键 (共享框架窗口空间的其他对象) ](managing-menus-control-bars-and-accelerators.md)
 
 **有关特殊框架窗口功能的主题**
 
 - 将文件从文件资源管理器或文件管理器[拖放](dragging-and-dropping-files-in-a-frame-window.md)到框架窗口
 
-- [响应动态数据交换（DDE）](responding-to-dynamic-data-exchange-dde.md)
+- [响应动态数据交换 (DDE) ](responding-to-dynamic-data-exchange-dde.md)
 
-- [半模式状态：上下文相关的 Windows 帮助（协调其他窗口操作）](orchestrating-other-window-actions.md)
+- [半模式状态：上下文相关的 Windows 帮助 (协调其他窗口操作) ](orchestrating-other-window-actions.md)
 
-- [半模式状态：打印和打印预览（协调其他窗口操作）](orchestrating-other-window-actions.md)
+- [半模式状态：打印和打印预览 (协调其他窗口操作) ](orchestrating-other-window-actions.md)
 
 **有关其他类型的窗口的主题**
 
@@ -83,6 +84,6 @@ MFC 框架使用框架窗口来包含视图。 两个组件（框架和内容）
 
 - [控件](controls-mfc.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Windows](windows.md)

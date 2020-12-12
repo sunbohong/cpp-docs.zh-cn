@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/E (预处理为 stdout) '
 title: /E（预处理到 stdout）
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: 710be7e1dfc4de89bc1eed3e23e4803c561da10c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d6c9ea3a5fcf8e7ba06ede6e7e70d933b5c921a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192599"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E（预处理到 stdout）
 
-预处理 C 和C++源文件，并将预处理过的文件复制到标准输出设备。
+预处理 C 和 c + + 源文件，并将预处理过的文件复制到标准输出设备。
 
 ## <a name="syntax"></a>语法
 
@@ -28,21 +29,21 @@ ms.locfileid: "62273256"
 
 ## <a name="remarks"></a>备注
 
-在此过程中，所有预处理器指令则不会执行、 执行宏展开，并会删除注释。 若要保留预处理的输出中的注释，请使用[/C （预处理期间保留注释）](c-preserve-comments-during-preprocessing.md)编译器选项。
+在此过程中，将执行所有预处理器指令，执行宏展开，并删除注释。 若要在预处理输出中保留注释，请在 [预处理) 编译器选项时使用/c (保留注释 ](c-preserve-comments-during-preprocessing.md) 。
 
-**/E**添加`#line`对的开头和结尾的每个包含的文件以及由预处理器指令进行条件编译删除的行的周围的输出的指令。 这些指令重新编号预处理过的文件的行。 结果是，在后续阶段中的处理过程中生成的错误引用的原始源文件而不是预处理过的文件中的行的行号。
+**/E** 将 `#line` 指令添加到每个包含的文件的开头和结尾处以及由预处理器指令删除的行，以进行条件编译。 这些指令对预处理文件的行进行重新编号。 因此，在后续的处理阶段生成的错误将引用原始源文件的行号，而不是预处理后的文件中的行的行号。
 
-**/E**选项将取消编译。 必须重新提交预处理过的文件进行编译。 **/E**也会从输出文件禁止显示 **/FA**， **/Fa**，并且 **/Fm**选项。 有关详细信息，请参阅[/FA、 /Fa （列表文件）](fa-fa-listing-file.md)并[/Fm （命名映射文件）](fm-name-mapfile.md)。
+**/E** 选项取消编译。 您必须重新提交预处理后的文件以进行编译。 **/E** 还禁止显示 **/FA**、 **/FA** 和 **/Fm** 选项中的输出文件。 有关详细信息，请参阅 [/FA、/FA (列出文件) ](fa-fa-listing-file.md) 和 [/Fm (名称映射文件) ](fm-name-mapfile.md)。
 
-若要禁止显示`#line`指令，使用[/EP （不预处理到 stdout #line 指令)](ep-preprocess-to-stdout-without-hash-line-directives.md)选项。
+若要取消 `#line` 指令，请使用 [/EP (预处理为 stdout，而不 #line 指令) ](ep-preprocess-to-stdout-without-hash-line-directives.md) 选项。
 
-若要将预处理的输出发送到文件而不是`stdout`，使用[/P （预处理到文件）](p-preprocess-to-a-file.md)选项。
+若要将预处理输出发送到文件而不是发送到 `stdout` ，请改用 [/P (预处理到文件) ](p-preprocess-to-a-file.md) 选项。
 
-若要禁止显示`#line`指令和发送到文件中，预处理的输出使用 **/P**并 **/EP**在一起。
+若要取消 `#line` 指令并将预处理输出发送到文件，请同时使用 **/P** 和 **/EP** 。
 
-不能使用预编译标头 **/E**选项。
+不能将预编译标头与 **/e** 选项一起使用。
 
-请注意，当预处理到单独的文件时，未在标记后发出空格。 这可以导致非法的程序或具有意外的副作用。 已成功编译以下程序：
+请注意，在向单独的文件进行预处理时，不会在标记后发出空格。 这可能导致非法程序或意外的副作用。 以下程序编译成功：
 
 ```
 #define m(x) x
@@ -52,23 +53,23 @@ m(int)main( )
 }
 ```
 
-但是，如果使用进行编译：
+但是，如果用以下内容编译：
 
 ```
 cl -E test.cpp > test2.cpp
 ```
 
-`int main` 在 test2.cpp 错误地将`intmain`。
+`int main` 不正确的 `intmain` test2。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
 1. 点击“命令行”  属性页。
 
-1. 键入中的编译器选项**其他选项**框。
+1. 在 " **附加选项**" 框中键入编译器选项。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
@@ -76,7 +77,7 @@ cl -E test.cpp > test2.cpp
 
 ## <a name="example"></a>示例
 
-下面的命令行对进行预处理`ADD.C`，保留注释，添加`#line`指令，并在标准输出设备上显示结果：
+以下命令行预处理 `ADD.C` 、保留注释、添加 `#line` 指令，并显示标准输出设备上的结果：
 
 ```
 CL /E /C ADD.C
@@ -85,4 +86,4 @@ CL /E /C ADD.C
 ## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

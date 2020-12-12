@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; ostream&gt;
 title: '&lt;ostream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: ffcb6c7b2f95b0b62659f6080c9ed0d1f111237c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3b17ff221e08b9fc709f1d2c32c5862f6075e451
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193027"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -34,7 +35,7 @@ ms.locfileid: "88846389"
 
 ### <a name="manipulators"></a>操控器
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[endl](../standard-library/ostream-functions.md#endl)|终止行并刷新缓冲区。|
 |[结尾](../standard-library/ostream-functions.md#ends)|终止字符串。|
@@ -43,17 +44,17 @@ ms.locfileid: "88846389"
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[运算符<<](../standard-library/ostream-operators.md#op_lt_lt)|将各种类型写入流。|
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|类模板描述了控制元素和编码对象插入流缓冲区的对象。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

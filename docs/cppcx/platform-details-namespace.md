@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：:D etails 命名空间
 title: Platform::Details 命名空间
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-ms.openlocfilehash: 05677a08b7c63ddbe2196da946d62c00004d8942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693dea2aa366868fe6a118baf5c57ac58b338cf8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195367"
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details 命名空间
 
@@ -32,7 +33,7 @@ namespace Platform {
 
 |名称|备注|
 |----------|------------|
-|Console|类。 在单位测试中显示输出。|
+|控制台|类。 在单位测试中显示输出。|
 |_GUID|结构|
 |堆|类|
 |HeapAllocationTrackingLevel|枚举|
@@ -51,10 +52,10 @@ namespace Platform {
 
 ### <a name="requirements"></a>要求
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 **命名空间：** Platform::Details
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台命名空间](platform-namespace-c-cx.md)

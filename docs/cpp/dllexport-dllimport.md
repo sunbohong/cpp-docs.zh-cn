@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： dllexport、dllimport
 title: dllexport、dllimport
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-ms.openlocfilehash: f03c945375cbe8c399e604e12f070b5a63d316f7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7147aa07d5579a61a2913fcc0beb85634dc1d8df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221648"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195499"
 ---
 # <a name="dllexport-dllimport"></a>dllexport、dllimport
 
@@ -32,15 +33,15 @@ ms.locfileid: "87221648"
 
 ## <a name="remarks"></a>备注
 
-这些特性显式定义 DLL 到其客户端的接口，可以是可执行文件或另一个 DLL。 将函数声明为 **`dllexport`** 不再需要模块定义（.def）文件，至少与导出函数的规范有关。 **`dllexport`** 属性替换 **__export**关键字。
+这些特性显式定义 DLL 到其客户端的接口，可以是可执行文件或另一个 DLL。 将函数声明为 **`dllexport`** 不再需要模块定义 ( .def) 文件，至少与导出函数的规范有关。 **`dllexport`** 属性替换 **__export** 关键字。
 
 如果将类标记为 declspec(dllexport)，则类层次结构中类模板的任何专用化都将隐式标记为 declspec(dllexport)。 这意味着类模板将进行显式实例化，且必须定义类的成员。
 
-**`dllexport`** 函数使用其修饰名称公开函数。 对于 C++ 函数，这包括名称重整。 对于 C 函数或声明为 `extern "C"` 的函数，这包括基于调用约定的平台特定修饰。 有关 C/c + + 代码中的名称修饰的信息，请参阅[修饰名](../build/reference/decorated-names.md)。 使用调用约定将任何名称修饰应用于导出的 C 函数或 c + + `extern "C"` 函数 **`__cdecl`** 。
+**`dllexport`** 函数使用其修饰名称公开函数。 对于 C++ 函数，这包括名称重整。 对于 C 函数或声明为 `extern "C"` 的函数，这包括基于调用约定的平台特定修饰。 有关 C/c + + 代码中的名称修饰的信息，请参阅 [修饰名](../build/reference/decorated-names.md)。 使用调用约定将任何名称修饰应用于导出的 C 函数或 c + + `extern "C"` 函数 **`__cdecl`** 。
 
-若要导出未修饰名，可以通过使用模块定义 (.def) 文件进行链接，该文件在 EXPORTS 部分定义未修饰名。 有关详细信息，请参阅[导出](../build/reference/exports.md)。 导出未修饰名称的另一种方法是 `#pragma comment(linker, "/export:alias=decorated_name")` 在源代码中使用指令。
+若要导出未修饰名，可以通过使用模块定义 (.def) 文件进行链接，该文件在 EXPORTS 部分定义未修饰名。 有关详细信息，请参阅 [导出](../build/reference/exports.md)。 导出未修饰名称的另一种方法是 `#pragma comment(linker, "/export:alias=decorated_name")` 在源代码中使用指令。
 
-在声明 **`dllexport`** 或时 **`dllimport`** ，必须使用[扩展的特性语法](../cpp/declspec.md)和 **`__declspec`** 关键字。
+在声明 **`dllexport`** 或时 **`dllimport`** ，必须使用 [扩展的特性语法](../cpp/declspec.md) 和 **`__declspec`** 关键字。
 
 ## <a name="example"></a>示例
 

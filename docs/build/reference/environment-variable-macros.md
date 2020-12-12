@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Environment-Variable 宏
 title: 环境变量宏
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - environment variables, macros in NMAKE
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-ms.openlocfilehash: a96b2de8469ace971d7fbc2707d3f786e873bb26
-ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
+ms.openlocfilehash: b7beaf8f3e98ea7447d798041f7531ed5da671ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67787342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97192585"
 ---
 # <a name="environment-variable-macros"></a>环境变量宏
 
-NMAKE 继承在会话开始之前存在的环境变量的宏定义。 如果变量在操作系统环境中设置的现在以 NMAKE 宏。 继承的名称转换为大写。 继承在预处理前发生。 /E 选项用于使继承从环境变量重写任何宏，并生成文件中具有相同名称的宏。
+NMAKE 继承会话开始之前存在的环境变量的宏定义。 如果变量是在操作系统环境中设置的，则可将其作为 NMAKE 宏提供。 继承的名称将转换为大写。 在预处理之前发生继承。 使用/E 选项可使从环境变量继承的宏替代生成文件中具有相同名称的任何宏。
 
-在会话中，可以重新定义环境变量宏，这将更改相应的环境变量。 此外可以更改通过 SET 命令的环境变量。 使用 SET 命令在会话中更改环境变量不会更改相应的宏，但是。
+环境变量宏可在会话中重新定义，这将更改相应的环境变量。 还可以通过 SET 命令更改环境变量。 不过，使用 SET 命令更改会话中的环境变量不会更改对应的宏。
 
 例如：
 
@@ -28,9 +29,9 @@ all:
     echo %%PATH%%
 ```
 
-在此示例中，更改`PATH`将更改相应的环境变量`PATH`; 它将追加`\nonesuch`到你的路径。
+在此示例中，更改 `PATH` 了相应的环境变量， `PATH` 并将其附加 `\nonesuch` 到你的路径。
 
-如果环境变量定义为字符串的语法不正确生成文件中，没有宏创建，并不生成任何警告。 如果变量的值包含美元符号 （$），NMAKE 将其解释为宏调用的开头。 使用宏会导致意外的行为。
+如果环境变量定义为在生成文件中语法不正确的字符串，则不会创建宏，也不会生成任何警告。 如果变量的值包含美元符号 ($) ，NMAKE 会将其解释为宏调用的开头。 使用宏可能导致意外的行为。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,5 +1,6 @@
 ---
-title: CMFC 桌面警报对话类
+description: 了解详细信息： CMFCDesktopAlertDialog 类
+title: CMFCDesktopAlertDialog 类
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDesktopAlertDialog
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - CMFCDesktopAlertDialog [MFC], HasFocus
 - CMFCDesktopAlertDialog [MFC], PreTranslateMessage
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
-ms.openlocfilehash: 479959e9b021255e309caf6fee02588a8cd8f1d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 327ec72b1e58d90e768f51c083ff9545f24f6f0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193183"
 ---
-# <a name="cmfcdesktopalertdialog-class"></a>CMFC 桌面警报对话类
+# <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog 类
 
-该`CMFCDesktopAlertDialog`类与[CMFC DesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)一起使用，以在弹出窗口中显示自定义对话框。
+`CMFCDesktopAlertDialog`类与[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)一起用于在弹出窗口中显示自定义对话框。
 
-有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
+有关更多详细信息，请参阅位于 Visual Studio 安装的 **VC \\ atlmfc \\ src \\ mfc** 文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -37,10 +38,10 @@ class CMFCDesktopAlertDialog : public CDialogEx
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCDesktopAlertDialog::CreateFromParams](#createfromparams)||
-|[CMFC 桌面警报对话：：获取Dlgsize](#getdlgsize)||
+|[CMFCDesktopAlertDialog::GetDlgSize](#getdlgsize)||
 |[CMFCDesktopAlertDialog::HasFocus](#hasfocus)||
 |[CMFCDesktopAlertDialog::PreTranslateMessage](#pretranslatemessage)|（重写 `CDialogEx::PreTranslateMessage`。）|
 
@@ -52,7 +53,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
 
 1. 在项目的资源中创建子对话框模板。
 
-1. 调用[CMFCDesktopAlertwnd：：](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)使用对话框模板的资源 ID 和指向派生类的运行时类信息的指针作为参数进行创建。
+1. 调用 [CMFCDesktopAlertWnd：： Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) ，并使用对话框模板的资源 ID 和指向派生类的运行时类信息的指针作为参数。
 
 1. 对自定义对话框进行编程以处理来自托管控件的所有通知，或对托管控件进行编程以直接处理这些通知。
 
@@ -72,9 +73,9 @@ class CMFCDesktopAlertDialog : public CDialogEx
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxDesktopAlertDialog.h
+**标头：** afxDesktopAlertDialog
 
-## <a name="cmfcdesktopalertdialogcreatefromparams"></a><a name="createfromparams"></a>CMFC 桌面警报对话：：从帕拉姆斯创建
+## <a name="cmfcdesktopalertdialogcreatefromparams"></a><a name="createfromparams"></a> CMFCDesktopAlertDialog::CreateFromParams
 
 ```
 BOOL CreateFromParams(
@@ -82,17 +83,17 @@ BOOL CreateFromParams(
     CMFCDesktopAlertWnd* pParent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*参数*<br/>
+中 *params*<br/>
 
-[在]*p 父级*<br/>
+中 *pParent*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcdesktopalertdialoggetdlgsize"></a><a name="getdlgsize"></a>CMFC 桌面警报对话：：获取Dlgsize
+## <a name="cmfcdesktopalertdialoggetdlgsize"></a><a name="getdlgsize"></a> CMFCDesktopAlertDialog::GetDlgSize
 
 ```
 CSize GetDlgSize();
@@ -102,7 +103,7 @@ CSize GetDlgSize();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcdesktopalertdialoghasfocus"></a><a name="hasfocus"></a>CMFC 桌面警报对话：：有焦点
+## <a name="cmfcdesktopalertdialoghasfocus"></a><a name="hasfocus"></a> CMFCDesktopAlertDialog::HasFocus
 
 ```
 BOOL HasFocus() const;
@@ -112,24 +113,24 @@ BOOL HasFocus() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcdesktopalertdialogpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFC 桌面警报对话：:P重新翻译消息
+## <a name="cmfcdesktopalertdialogpretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCDesktopAlertDialog：:P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pMsg*<br/>
+中 *pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCDesktopAlertWnd 类](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
 [CMFCDesktopAlertWndInfo 类](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
 [CDialogEx 类](../../mfc/reference/cdialogex-class.md)

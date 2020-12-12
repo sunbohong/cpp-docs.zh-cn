@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： Enum 类
 title: Platform::Enum 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-ms.openlocfilehash: 67870a0fcc685c420c7d24510e90c6f4ef9b72a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7cffc7529c0abf23d563b7b60a17248ce02ac2b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195250"
 ---
 # <a name="platformenum-class"></a>Platform::Enum 类
 
@@ -40,7 +41,7 @@ public class Enum
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 
