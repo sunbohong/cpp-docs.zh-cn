@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 异常&gt;
 title: '&lt;exception&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 1533e8238b40f6ca5dc6faaef35a65db9020defd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b4cba2def6416e7bcabb8d769e92c7c7f2af4281
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232520"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -27,7 +28,7 @@ ms.locfileid: "88835964"
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)|该类型描述指向异常的指针。|
 |[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)|该类型描述指向适合用作 `terminate_handler` 的函数的指针。|
@@ -35,7 +36,7 @@ ms.locfileid: "88835964"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[current_exception](../standard-library/exception-functions.md#current_exception)|获取指向当前异常的指针。|
 |[get_terminate](../standard-library/exception-functions.md#get_terminate)|获取当前的 `terminate_handler` 函数。|
@@ -52,13 +53,13 @@ ms.locfileid: "88835964"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[bad_exception 类](../standard-library/bad-exception-class.md)|该类描述可从 `unexpected_handler` 引发的异常。|
 |[exception 类](../standard-library/exception-class.md)|该类用作某些表达式和 C++ 标准库所引发的所有异常的基类。|
 |[nested_exception 类](../standard-library/nested-exception-class.md)|类描述了一个可以捕获和存储的异常，以便以后使用。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

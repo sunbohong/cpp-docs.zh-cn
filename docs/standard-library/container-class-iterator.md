@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息： Container Class：： iterator
 title: Container Class::iterator
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator method
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
-ms.openlocfilehash: c761473a5fa3438dc8e6bd824a0b32fa32936376
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9a6d812c3e43b671db2276a77390871d84910407
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258219"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233482"
 ---
 # <a name="container-classiterator"></a>Container Class::iterator
 
 > [!NOTE]
-> 本主题在 Microsoft C++文档中作为在C++标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
+> 本主题在 Microsoft c + + 文档中作为 c + + 标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
 描述可用作受控序列迭代器的对象。
 
@@ -26,8 +27,8 @@ typedef T5 iterator;
 
 ## <a name="remarks"></a>备注
 
-此处描述为未指定类型的同义词 `T5`。 `iterator` 类型的对象可以转换为[const_iterator](../standard-library/container-class-const-iterator.md)类型的对象。
+此处描述为未指定类型的同义词 `T5` 。 类型的对象 `iterator` 可以转换为 [const_iterator](../standard-library/container-class-const-iterator.md)类型的对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Sample Container 类](../standard-library/sample-container-class.md)
+[示例容器类](../standard-library/sample-container-class.md)

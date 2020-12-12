@@ -1,4 +1,5 @@
 ---
+description: 了解更多：标准类型
 title: 标准类型
 ms.date: 11/04/2016
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 376c29371fb9213ed46435b41bea1666058c7b4e
-ms.sourcegitcommit: 30792632548d1c71894f9fecbe2f554294b86020
+ms.openlocfilehash: 49a8e877987af97e961bb32f47bd857b4eceddfc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91765317"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235744"
 ---
 # <a name="standard-types"></a>标准类型
 
@@ -189,7 +190,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |int_fast64_t、uint_fast64_t|long long、unsigned long long|
 |intmax_t、uintmax_t|long long、unsigned long long|
 
-|类型|说明|声明位置|
+|类型|描述|声明位置|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|存储时间值；由 [clock](../c-runtime-library/reference/clock.md) 使用。|TIME.H|
 |`_complex` 结构|存储复数的实数部分和虚数部分；由 [_cabs](../c-runtime-library/reference/cabs.md) 使用。|MATH.H|
@@ -198,7 +199,7 @@ Microsoft 运行库定义下列标准类型和 typedef。
 |`_CrtMemState` 结构|提供有关 C 运行时调试堆的当前状态的信息。|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|将在 [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 中调用的回调函数的类型定义。<br /><br /> 此函数的参数包括：报告类型、输出消息和回调函数的返回值。|CRTDBG.H|
 |`dev_t`、`_dev_t` short 或 unsigned integer|表示设备句柄。|SYS\TYPES.H|
-|`_diskfree_t` 结构|包含有关磁盘驱动器的信息。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**** 使用。|DOS.H 和 DIRECT.H|
+|`_diskfree_t` 结构|包含有关磁盘驱动器的信息。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) 使用。|DOS.H 和 DIRECT.H|
 |`div_t`、`ldiv_t` 和 `lldiv_t` 结构|存储由 [div](reference/div.md)、[ldiv](./reference/div.md) 和 [lldiv](./reference/div.md) 分别返回的值。|STDLIB.H|
 |`errno_t` integer|用于处理 `errno` 的错误代码的函数返回类型或参数。|STDDEF.H、<br /><br /> CRTDEFS.H|
 |`_exception` 结构|存储 [_matherr](../c-runtime-library/reference/matherr.md) 的错误信息。|MATH.H|
@@ -255,4 +256,4 @@ Microsoft 运行库定义下列标准类型和 typedef。
 
 ## <a name="see-also"></a>请参阅
 
-[C 运行时库参考](../c-runtime-library/c-run-time-library-reference.md)
+[C Run-Time 库参考](../c-runtime-library/c-run-time-library-reference.md)

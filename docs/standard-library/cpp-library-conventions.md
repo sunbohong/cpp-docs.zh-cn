@@ -1,4 +1,5 @@
 ---
+description: 了解更多： c + + 库约定
 title: C++ 库约定
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4426996b7420c056a964378655c72c43b99fcf97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233365"
 ---
 # <a name="c-library-conventions"></a>C++ 库约定
 
@@ -24,7 +25,7 @@ C++ 库遵循的约定与标准 C 库大致相同，同时还遵循此处所述�
 
 实现在 C++ 库中声明类型和函数时存在某些限制：
 
-- 标准 C 库中的函数名称可能具有 extern "C++" 或 Extern "C" 链接。 包含相应的标准 C 标头，不要声明一个库实体内联。
+- 标准 C 库中的函数名称可能具有 extern "c + +" 或 extern "C" 链接。 包含相应的标准 C 标头，不要声明一个库实体内联。
 
 - 库类中的成员函数名称除了本文档中列出的内容可能还有其他函数签名。 可以确定此处所述的函数调用将按预期执行，但你无法可靠地采用库成员函数的地址。 （类型可能不是你所预期的。）
 
@@ -46,9 +47,9 @@ C++ 库遵循的约定与标准 C 库大致相同，同时还遵循此处所述�
 
 - 由 C++ 库定义的两种类型始终不同，除非此文档明确提供不同的建议。
 
-- 库提供的函数（包括可替换函数的默认版本）*最多*可能会引发任何异常规范中列出的那些异常。 库提供的析构函数不会引发异常。 标准 C 库中的函数可能会传播异常，比如当 `qsort` 调用比较函数时引发的异常，但它们不会另行引发异常。
+- 库提供的函数（包括可替换函数的默认版本）*最多* 可能会引发任何异常规范中列出的那些异常。 库提供的析构函数不会引发异常。 标准 C 库中的函数可能会传播异常，比如当 `qsort` 调用比较函数时引发的异常，但它们不会另行引发异常。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

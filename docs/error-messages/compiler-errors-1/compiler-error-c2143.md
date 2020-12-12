@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2143
 title: 编译器错误 C2143
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: 310083a650f842c6c0f0912efe1ceddb66c4fd6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4218a14520016ef7b9180c2f5c8c7ddee55ffec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214745"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235510"
 ---
 # <a name="compiler-error-c2143"></a>编译器错误 C2143
 
 语法错误： "token2" 之前缺少 "token1"
 
-编译器需要一个特定的令牌（即，非空白语言元素），并找到另一个令牌。
+编译器需要特定的令牌 (也就是说，除空格以外的语言元素) 并找到其他令牌。
 
-检查[c + + 语言参考](../../cpp/cpp-language-reference.md)，确定代码语法不正确的位置。 由于编译器在遇到导致问题的行后可能会报告此错误，因此请检查错误之前的几行代码。
+检查 [c + + 语言参考](../../cpp/cpp-language-reference.md) ，确定代码语法不正确的位置。 由于编译器在遇到导致问题的行后可能会报告此错误，因此请检查错误之前的几行代码。
 
 C2143 可能会在不同的情况下发生。
 
-如果可限定名称的运算符（ `::` 、 `->` 和 `.` ）必须后跟关键字，则会发生这种情况 **`template`** ，如本示例所示：
+如果可以 (、和) 限定名称的操作员必须后跟关键字，则会发生这种情况 `::` `->` `.` **`template`** ，如本示例所示：
 
 ```cpp
 class MyClass
@@ -47,7 +48,7 @@ class MyClass
 };
 ```
 
-当使用 **/clr**并且 **`using`** 指令具有语法错误时，可能会发生 C2143：
+当使用 **/clr** 并且 **`using`** 指令具有语法错误时，可能会发生 C2143：
 
 ```cpp
 // C2143a.cpp

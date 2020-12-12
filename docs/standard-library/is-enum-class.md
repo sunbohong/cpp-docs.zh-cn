@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_enum 类
 title: is_enum 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6eaffc4258dd7741e177718ed39a3d8c3f75f96f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231142"
 ---
-# <a name="isenum-class"></a>is_enum 类
+# <a name="is_enum-class"></a>is_enum 类
 
 测试类型是否为枚举。
 
@@ -25,14 +26,14 @@ template <class Ty>
 struct is_enum;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型*Ty*是枚举类型或`cv-qualified`枚举类型的形式, 则类型谓词的实例为 true; 否则为 false。
+如果类型 *Ty* 是枚举类型或枚举类型的形式，则类型谓词的实例为 true `cv-qualified` ; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -71,9 +72,9 @@ is_enum<int> == false
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

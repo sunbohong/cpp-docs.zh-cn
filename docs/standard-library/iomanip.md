@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; iomanip&gt;
 title: '&lt;iomanip&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: f3f6c4886d22c7cd12b29950c114fbcde8905c28
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7419900d4cd852ab260a6eeb92ee51623f8f71ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845739"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231480"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
@@ -30,7 +31,7 @@ ms.locfileid: "88845739"
 
 ### <a name="manipulators"></a>操控器
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[get_money](../standard-library/iomanip-functions.md#iomanip_get_money)|获取货币金额（可选择采用国际格式）。|
 |[get_time](../standard-library/iomanip-functions.md#iomanip_get_time)|使用指定格式以某种时间结构获取时间。|
@@ -44,7 +45,7 @@ ms.locfileid: "88845739"
 |[setprecision](../standard-library/iomanip-functions.md#setprecision)|为浮点值设置精度。|
 |[setw](../standard-library/iomanip-functions.md#setw)|指定显示字段的宽度。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

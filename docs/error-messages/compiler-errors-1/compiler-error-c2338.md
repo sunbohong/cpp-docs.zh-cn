@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2338
 title: 编译器错误 C2338
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-ms.openlocfilehash: c92a95b97cb4c57d3ad5cfbf8fe1d9980d5362cd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7bbbc7fd6240fce2def470a0d16aa0dba152a109
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234795"
 ---
 # <a name="compiler-error-c2338"></a>编译器错误 C2338
 
@@ -21,7 +22,7 @@ ms.locfileid: "87221206"
 
 此错误消息还可以由外部提供程序生成到编译器。 在大多数情况下，属性提供程序 DLL （如 ATLPROV）会报告这些错误。 此消息的一些常见形式包括：
 
-- "*attribute*" Atl 特性提供程序：错误 Atl*编号**消息*
+- "*attribute*" Atl 特性提供程序：错误 Atl *编号**消息*
 
 - 特性 "*attribute*" 的用法不正确
 

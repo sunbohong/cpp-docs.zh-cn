@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2144
 title: 编译器错误 C2144
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 172ccb897937008aa305616eea19f234dfc6a3bd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80207241"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235497"
 ---
 # <a name="compiler-error-c2144"></a>编译器错误 C2144
 
 > 语法错误： "*type*" 前面应为 "*token*"
 
-编译器需要*标记*，而应找到*类型*。
+编译器需要 *标记* ，而应找到 *类型* 。
 
 此错误可能由缺少右大括号、右括号或分号引起。
 
 尝试从包含空格字符的 CLR 关键字创建宏时也可能会发生 C2144。
 
-如果尝试进行类型转发，还可能会看到 C2144。 有关详细信息，请参阅[类型转发（C++/cli）](../../extensions/type-forwarding-cpp-cli.md) 。
+如果尝试进行类型转发，还可能会看到 C2144。 有关详细信息，请参阅 [类型转发 (c + +/cli) ](../../extensions/type-forwarding-cpp-cli.md) 。
 
 ## <a name="examples"></a>示例
 

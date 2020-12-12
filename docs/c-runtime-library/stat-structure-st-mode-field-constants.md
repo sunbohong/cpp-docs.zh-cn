@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _stat 结构 st_mode 字段常量
 title: _stat 结构 st_mode 字段常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -35,14 +36,14 @@ helpviewer_keywords:
 - _S_IREAD constant
 - _S_IFCHR constant
 ms.assetid: fd462004-7563-4766-8443-30b0a86174b6
-ms.openlocfilehash: ff2b6ac806b774ae3fe80f9b3cf4b3d2e82a2a9c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: bd304119c705196981342caf5a257cc113fed923
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235731"
 ---
-# <a name="stat-structure-stmode-field-constants"></a>_stat 结构 st_mode 字段常量
+# <a name="_stat-structure-st_mode-field-constants"></a>_stat 结构 st_mode 字段常量
 
 ## <a name="syntax"></a>语法
 
@@ -59,9 +60,9 @@ ms.locfileid: "57744689"
 |返回的常量|含义|
 |--------------|-------------|
 |`_S_IFMT`|文件类型掩码|
-|`_S_IFDIR`|目录|
+|`_S_IFDIR`|Directory|
 |`_S_IFCHR`|特殊字符（指示设备，如果已设置）|
-|`_S_IFREG`|规则|
+|`_S_IFREG`|常规|
 |`_S_IREAD`|读取权限，所有者|
 |`_S_IWRITE`|写入权限，所有者|
 |`_S_IEXEC`|执行/搜索权限，所有者|

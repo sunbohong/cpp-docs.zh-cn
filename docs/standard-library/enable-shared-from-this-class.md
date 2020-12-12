@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： enable_shared_from_this 类
 title: enable_shared_from_this 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - enable_shared_from_this class
 - enable_shared_from_this
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
-ms.openlocfilehash: 9b417eabdaf6002724a0fa947dd97dea6f0df0a5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6c6103846810bee07000821f4613c8f7979174ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232663"
 ---
 # <a name="enable_shared_from_this-class"></a>enable_shared_from_this 类
 
@@ -36,7 +37,7 @@ protected:
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 由共享指针控制的类型。
@@ -45,11 +46,11 @@ protected:
 
 从 `enable_shared_from_this` 派生的对象可以在成员函数中使用 `shared_from_this` 方法来创建实例的 [shared_ptr](../standard-library/shared-ptr-class.md) 所有者，这些所有者与现有 `shared_ptr` 所有者共享所有权。 否则，如果使用创建一个新 `shared_ptr` 的 **`this`** ，它与现有 `shared_ptr` 所有者不同，后者可能导致无效引用或导致对象被删除多次。
 
-保护构造函数、析构函数和赋值运算符，以帮助预防意外的误用。 模板参数类型*Ty*必须是派生类的类型。
+保护构造函数、析构函数和赋值运算符，以帮助预防意外的误用。 模板参数类型 *Ty* 必须是派生类的类型。
 
 有关使用示例，请参阅 [enable_shared_from_this::shared_from_this](#shared_from_this)。
 
-## <a name="shared_from_this"></a><a name="shared_from_this"></a>shared_from_this
+## <a name="shared_from_this"></a><a name="shared_from_this"></a> shared_from_this
 
 生成与现有 `shared_ptr` 所有者共享实例所有权的 `shared_ptr`。
 
@@ -96,7 +97,7 @@ int main()
 sp2->val == 3
 ```
 
-## <a name="weak_from_this"></a><a name="weak_from_this"></a>weak_from_this
+## <a name="weak_from_this"></a><a name="weak_from_this"></a> weak_from_this
 
 ```cpp
 weak_ptr<T> weak_from_this() noexcept;

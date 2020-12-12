@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： integral_constant 类、bool_constant 类
 title: integral_constant 类、bool_constant 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: 30e00fdc166b4a6f2db64a3552a3bb87335c7e32
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a910581af81742c32f4eb32a1f8f625cbc6cd346
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233140"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231532"
 ---
 # <a name="integral_constant-class-bool_constant-class"></a>integral_constant 类、bool_constant 类
 
@@ -34,7 +35,7 @@ struct integral_constant {
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 常量的类型。
@@ -44,9 +45,9 @@ struct integral_constant {
 
 ## <a name="remarks"></a>备注
 
-`integral_constant`当使用整数类型*T*和该类型的值*v*进行专用化时，类模板表示一个对象，该对象包含具有指定值的该整型类型的常量。 名为 `type` 的成员是生成的模板专用化类型的别名，`value` 成员具有用于创建此专用化的值 *v*。
+`integral_constant`当使用整数类型 *T* 和该类型的值 *v* 进行专用化时，类模板表示一个对象，该对象包含具有指定值的该整型类型的常量。 名为 `type` 的成员是生成的模板专用化类型的别名，`value` 成员具有用于创建此专用化的值 *v*。
 
-`bool_constant`类模板是 `integral_constant` **`bool`** 作为*T*参数使用的的显式部分专用化。
+`bool_constant`类模板是 `integral_constant` **`bool`** 作为 *T* 参数使用的的显式部分专用化。
 
 ## <a name="example"></a>示例
 
@@ -78,7 +79,7 @@ integral_constant<bool, false> == false
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
 [false_type](../standard-library/type-traits-typedefs.md#false_type)\

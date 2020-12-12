@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： stdin、stdout、stderr
 title: stdin、stdout、stderr
 ms.date: 10/23/2018
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-ms.openlocfilehash: 5de1ff01282f30ad133f909cb87f5d7c8d521ae5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: ba31487c472bd714560e919f45ec9e9aa5acd717
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235718"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 
@@ -39,7 +40,7 @@ FILE *stderr;
 
 下列流指针可用于访问标准流：
 
-|指针|流|
+|指针|Stream|
 |-------------|------------|
 |`stdin`|标准输入|
 |`stdout`|标准输出|

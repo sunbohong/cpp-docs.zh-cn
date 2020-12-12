@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： duration 类
 title: duration 类
 ms.date: 03/27/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 454c03aeb1a4666543a28759d02405a512453ffc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9a37d3682e70f840c6c32eed55eb52ce133ab6f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217787"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232728"
 ---
 # <a name="duration-class"></a>duration 类
 
@@ -48,7 +49,7 @@ class duration <duration<Rep, Period1>, Period2>;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[duration](#duration)|构造 `duration` 对象。|
 
@@ -81,7 +82,7 @@ class duration <duration<Rep, Period1>, Period2>;
 
 **命名空间：** std::chrono
 
-## <a name="durationcount"></a><a name="count"></a>duration：： count
+## <a name="durationcount"></a><a name="count"></a> duration：： count
 
 检索时间间隔内的时钟计时周期数。
 
@@ -93,7 +94,7 @@ constexpr Rep count() const;
 
 时间间隔内的时钟计时周期数。
 
-## <a name="durationduration-constructor"></a><a name="duration"></a>持续时间：:d u 构造函数
+## <a name="durationduration-constructor"></a><a name="duration"></a> 持续时间：:d u 构造函数
 
 构造 `duration` 对象。
 
@@ -107,7 +108,7 @@ template <class Rep2, class Period2>
 constexpr duration(const duration<Rep2, Period2>& Dur);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Rep2*\
 表示计时周期数的算术类型。
@@ -119,23 +120,23 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 默认时间段的计时周期数。
 
 *工期*\
-*Period2*指定的时间段的计时周期数。
+*Period2* 指定的时间段的计时周期数。
 
 ### <a name="remarks"></a>备注
 
 默认构造函数构造未经初始化的对象。 通过使用空大括号进行的值初始化会初始化表示零个时钟计时周期的时间间隔的对象。
 
-第二，一个模板参数构造函数构造一个对象，该对象表示使用的默认时间段的*R*时钟计时周期的时间间隔 `std::ratio<1>` 。 若要避免刻度计数的舍入，从表示类型*Rep2*构造持续时间对象的错误是错误的，当不能将其视为浮点类型时，可以将该对象视为浮点类型 `duration::rep` 。
+第二，一个模板参数构造函数构造一个对象，该对象表示使用的默认时间段的 *R* 时钟计时周期的时间间隔 `std::ratio<1>` 。 若要避免刻度计数的舍入，从表示类型 *Rep2* 构造持续时间对象的错误是错误的，当不能将其视为浮点类型时，可以将该对象视为浮点类型 `duration::rep` 。
 
-第三，两个模板参数构造函数构造一个对象，该对象表示时间间隔，其长度是由*工期*指定的时间间隔。 若要避免计时周期计数截断，从另一个其类型与目标类型之间为*不可公度*的持续时间对象构造一个持续时间对象这一做法是错误的。
+第三，两个模板参数构造函数构造一个对象，该对象表示时间间隔，其长度是由 *工期* 指定的时间间隔。 若要避免计时周期计数截断，从另一个其类型与目标类型之间为 *不可公度* 的持续时间对象构造一个持续时间对象这一做法是错误的。
 
-`D1`如果无法将持续*incommensurable*时间类型 `D2` `D2` 视为浮点类型并且[ratio_divide \<D1::period, D2::period> ：： type：:d en](../standard-library/ratio.md)不是1，则持续时间类型为公度。
+`D1`如果无法将持续时间类型 `D2` `D2` 视为浮点类型并且[ratio_divide \<D1::period, D2::period> ：： type：:d en](../standard-library/ratio.md)不是1，则持续时间类型为公度。
 
-除非*Rep2*可隐式转换为 `rep` 且为 `treat_as_floating_point<rep>` *true*或 `treat_as_floating_point<Rep2>` *保留为 false*，否则第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
+除非 *Rep2* 可隐式转换为 `rep` 且为 `treat_as_floating_point<rep>` *true* 或 `treat_as_floating_point<Rep2>` *保留为 false*，否则第二个构造函数不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
 除非转换中没有引发溢出且 `treat_as_floating_point<rep>`*为 true*，或 `ratio_divide<Period2, period>::den` 等于 1 且 `treat_as_floating_point<Rep2>`*为 false*，否则第三个构造函数将不参与重载决策。 有关详细信息，请参阅 [<type_traits>](../standard-library/type-traits.md)。
 
-## <a name="durationmax"></a><a name="max"></a>duration：： max
+## <a name="durationmax"></a><a name="max"></a> duration：： max
 
 返回模板参数类型 `Ref` 的值上限的静态方法。
 
@@ -147,7 +148,7 @@ static constexpr duration max();
 
 实际上，返回 `duration(duration_values<rep>::max())`。
 
-## <a name="durationmin"></a><a name="min"></a>duration：： min
+## <a name="durationmin"></a><a name="min"></a> duration：： min
 
 返回模板参数类型 `Ref` 的值下限的静态方法。
 
@@ -159,7 +160,7 @@ static constexpr duration min();
 
 实际上，返回 `duration(duration_values<rep>::min())`。
 
-## <a name="durationoperator-"></a><a name="operator-"></a>duration：： operator-
+## <a name="durationoperator-"></a><a name="operator-"></a> duration：： operator-
 
 返回 `duration` 对象的副本及求反后的计时周期计数。
 
@@ -167,7 +168,7 @@ static constexpr duration min();
 constexpr duration operator-() const;
 ```
 
-## <a name="durationoperator--"></a><a name="operator--"></a>duration：： operator--
+## <a name="durationoperator--"></a><a name="operator--"></a> duration：： operator--
 
 减小存储的计时周期计数。
 
@@ -183,7 +184,7 @@ duration operator--(int);
 
 第二种方法返回在 **`*this`** 减量之前创建的的副本。
 
-## <a name="durationoperator"></a><a name="op_eq"></a>duration：： operator =
+## <a name="durationoperator"></a><a name="op_eq"></a> duration：： operator =
 
 将存储的计时周期计数取模减少指定值。
 
@@ -193,16 +194,16 @@ duration& operator%=(const rep& Div);
 duration& operator%=(const duration& Div);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *V*\
-对于第一种方法， *Div*表示滴答计数。 对于第二种方法， *Div*是 `duration` 包含滴答计数的对象。
+对于第一种方法， *Div* 表示滴答计数。 对于第二种方法， *Div* 是 `duration` 包含滴答计数的对象。
 
 ### <a name="return-value"></a>返回值
 
 执行取模操作后的 `duration` 对象。
 
-## <a name="durationoperator"></a><a name="op_star_eq"></a>duration：： operator * =
+## <a name="durationoperator"></a><a name="op_star_eq"></a> duration：： operator * =
 
 将存储的计时周期计数乘以指定值。
 
@@ -210,7 +211,7 @@ duration& operator%=(const duration& Div);
 duration& operator*=(const rep& Mult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Mult*\
 `duration::rep` 指定的类型的值。
@@ -219,7 +220,7 @@ duration& operator*=(const rep& Mult);
 
 执行相乘后的 `duration` 对象。
 
-## <a name="durationoperator"></a><a name="op_div_eq"></a>duration：： operator/=
+## <a name="durationoperator"></a><a name="op_div_eq"></a> duration：： operator/=
 
 将存储的计时周期计数除以指定值。
 
@@ -227,7 +228,7 @@ duration& operator*=(const rep& Mult);
 duration& operator/=(const rep& Div);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *V*\
 `duration::rep` 指定的类型的值。
@@ -236,7 +237,7 @@ duration& operator/=(const rep& Div);
 
 执行相除后的 `duration` 对象。
 
-## <a name="durationoperator"></a><a name="op_add"></a>duration：： operator +
+## <a name="durationoperator"></a><a name="op_add"></a> duration：： operator +
 
 返回 **`*this`** 。
 
@@ -244,7 +245,7 @@ duration& operator/=(const rep& Div);
 constexpr duration operator+() const;
 ```
 
-## <a name="durationoperator"></a><a name="op_add_add"></a>duration：： operator + +
+## <a name="durationoperator"></a><a name="op_add_add"></a> duration：： operator + +
 
 增加存储的计时周期计数。
 
@@ -260,7 +261,7 @@ duration operator++(int);
 
 第二个方法返回在 **`*this`** 增量之前所做的的副本。
 
-## <a name="durationoperator"></a><a name="op_add_eq"></a>duration：： operator + =
+## <a name="durationoperator"></a><a name="op_add_eq"></a> duration：： operator + =
 
 将存储的计时周期计数加上指定的 `duration` 对象的计时周期计数。
 
@@ -268,7 +269,7 @@ duration operator++(int);
 duration& operator+=(const duration& Dur);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *工期*\
 `duration` 对象。
@@ -277,7 +278,7 @@ duration& operator+=(const duration& Dur);
 
 执行相加后的 `duration` 对象。
 
-## <a name="durationoperator-"></a><a name="operator-_eq"></a>duration：： operator-=
+## <a name="durationoperator-"></a><a name="operator-_eq"></a> duration：： operator-=
 
 从存储的计时周期计数减去指定的 `duration` 对象的计时周期计数。
 
@@ -285,7 +286,7 @@ duration& operator+=(const duration& Dur);
 duration& operator-=(const duration& Dur);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *工期*\
 `duration` 对象。
@@ -294,7 +295,7 @@ duration& operator-=(const duration& Dur);
 
 执行相减后的 `duration` 对象。
 
-## <a name="durationzero"></a><a name="zero"></a>duration：：零
+## <a name="durationzero"></a><a name="zero"></a> duration：：零
 
 返回 `duration(duration_values<rep>::zero())`。
 
@@ -302,7 +303,7 @@ duration& operator-=(const duration& Dur);
 static constexpr duration zero();
 ```
 
-## <a name="durationoperator-mod"></a><a name="op_mod_eq"></a>duration：： operator mod =
+## <a name="durationoperator-mod"></a><a name="op_mod_eq"></a> duration：： operator mod =
 
 减少存储的滴答计数取模 Div 或 Div.count()。
 
@@ -310,7 +311,7 @@ static constexpr duration zero();
 duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *V*\
 除数是表示滴答计数的 duration 对象或值。
@@ -319,7 +320,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 第一个成员函数将减少存储的滴答计数取模 Div 并返回 *this。 第二个成员函数将减少存储的计时周期计数取模 Div.count() 并返回 \*this。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)\

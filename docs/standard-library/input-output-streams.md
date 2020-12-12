@@ -1,22 +1,23 @@
 ---
-title: 输入/输出流
+description: 了解详细信息：输入/输出流
+title: Input-Output 流
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [C++], stream
 - stream I/O
 ms.assetid: 21a97566-91a7-42d6-b2f8-a4c16bc926f1
-ms.openlocfilehash: 54b53f96d487e466106fe92a01affa7bd3e55c16
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd261bfdac5b9ce95b04430e9d77c6bd1df56c7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231636"
 ---
 # <a name="inputoutput-streams"></a>输入/输出流
 
 `basic_iostream`在标头文件中定义的 \<istream> 是用于处理输入和输出基于字符的 i/o 流的对象的类模板。
 
-有两个 typedef 可用于定义的特定于字符的专用化 `basic_iostream` ，并有助于使代码更易于阅读： `iostream` （不与标头文件混淆 \<iostream> ）是基于的 i/o 流 `basic_iostream<char>` ; 是基于的 i/o `wiostream` 流 `basic_iostream<wchar_t>` 。
+有两个 typedef 可用于定义的特定于字符的专用化 `basic_iostream` ，并有助于使代码更易于阅读： `iostream` (不要与标头文件混淆， \<iostream>) 是基于的 i/o 流 `basic_iostream<char>` ; `wiostream` 是基于的 i/o 流 `basic_iostream<wchar_t>` 。
 
 有关详细信息，请参阅 [basic_iostream 类](../standard-library/basic-iostream-class.md)、[iostream](../standard-library/basic-iostream-class.md) 和 [wiostream](../standard-library/basic-iostream-class.md)。
 
@@ -29,10 +30,10 @@ ms.locfileid: "87228253"
 
 通常使用类模板 `basic_stringstream` 及其一般专用化 `stringstream` 来处理 I/O 流对象，以插入和提取字符数据。 有关详细信息，请参阅 [basic_stringstream Class](../standard-library/basic-stringstream-class.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [stringstream](../standard-library/basic-stringstream-class.md)\
 [basic_stringstream 类](../standard-library/basic-stringstream-class.md)\
 [\<sstream>](../standard-library/sstream.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\
-[C + + 标准库](../standard-library/cpp-standard-library-reference.md)
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)

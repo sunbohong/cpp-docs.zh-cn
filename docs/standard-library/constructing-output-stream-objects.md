@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：构造输出流对象
 title: 构造输出流对象
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output stream objects
 ms.assetid: 93c8eab6-610c-4f48-b76d-1d960cac7641
-ms.openlocfilehash: d7bec211f30986deccc869a879dd5155ea70996b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e730e4cb675b216fa56b5624feb69fadcd61400a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457284"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233638"
 ---
 # <a name="constructing-output-stream-objects"></a>构造输出流对象
 
@@ -19,7 +20,7 @@ ms.locfileid: "68457284"
 
 - [输出字符串流构造函数](#vclrfoutputstringstreamconstructorsanchor2)
 
-## <a name="vclrfoutputfilestreamconstructorsanchor1"></a> 输出文件流构造函数
+## <a name="output-file-stream-constructors"></a><a name="vclrfoutputfilestreamconstructorsanchor1"></a> 输出文件流构造函数
 
 可使用以下两种方式之一构造输出文件流：
 
@@ -39,7 +40,7 @@ ms.locfileid: "68457284"
    ofstream myFile("filename", ios_base::out);
    ```
 
-## <a name="vclrfoutputstringstreamconstructorsanchor2"></a>输出字符串流构造函数
+## <a name="output-string-stream-constructors"></a><a name="vclrfoutputstringstreamconstructorsanchor2"></a>输出字符串流构造函数
 
 若要构造一个输出字符串流，可以按照以下方法使用 `ostringstream`：
 

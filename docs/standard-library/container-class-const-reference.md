@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息： Container Class：： const_reference
 title: Container Class::const_reference
 ms.date: 11/04/2016
 helpviewer_keywords:
 - const_reference method
 ms.assetid: 7a5cfddb-3abf-4c98-b4ad-bbe4da9a5c1b
-ms.openlocfilehash: 3960934b075ae43db0dd14a7754fface5a8d44cf
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 7c6315bbfad9065f5e585a5cbcb4e4012360377e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233573"
 ---
 # <a name="container-classconst_reference"></a>Container Class::const_reference
 
 > [!NOTE]
-> 本主题在 Microsoft C++文档中作为在C++标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
+> 本主题在 Microsoft c + + 文档中作为 c + + 标准库中使用的容器的非功能性示例。 有关详细信息，请参阅 [C++ 标准库容器](../standard-library/stl-containers.md)。
 
 描述可用作受控序列元素的常量引用的对象。
 
@@ -26,8 +27,8 @@ typedef T3 const_reference;
 
 ## <a name="remarks"></a>备注
 
-此处描述为未指定类型 `T3` 的同义词（通常为 `Alloc::const_reference`）。
+此处描述为未指定类型的同义词 `T3` (通常 `Alloc::const_reference`) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Sample Container 类](../standard-library/sample-container-class.md)
+[示例容器类](../standard-library/sample-container-class.md)
