@@ -1,4 +1,5 @@
 ---
+description: 详细了解： c + +/CLI 和 c + +/CX) 部分 (
 title: partial（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 0f9de5dda1b0838a624431e579e6bc6b328d9013
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 8e6506e0ae5af40f1783241b5783228cfc919862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97173098"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial（C++/CLI 和 C++/CX）
 
@@ -41,7 +42,7 @@ class-key identifier {
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 class-key<br/>
 声明 Windows 运行时支持的类或结构的关键字。 可取值为 ref class、value class、ref struct 或 value struct。
@@ -57,7 +58,7 @@ class-key<br/>
 
 identifier 的分部类定义中使用的访问说明符不会影响，identifier 的后续分部类定义或完整类定义中的默认可访问性。 允许使用静态数据成员的内联定义。
 
-声明：类 *标识符* 的分部定义只引入 name *标识符* ，但不能以需要类定义的方式使用 *标识符* 。 在编译器遇到 identifier 的完整定义之前，名称 identifier 无法用于确定 identifier 的大小，也无法用于使用 identifier 的基或成员。
+声明：类 *标识符* 的分部定义只引入 name *标识符*，但不能以需要类定义的方式使用 *标识符* 。 在编译器遇到 identifier 的完整定义之前，名称 identifier 无法用于确定 identifier 的大小，也无法用于使用 identifier 的基或成员。
 
 数量和顺序： *标识符* 可以有零个或多个分部类定义。 identifier 的每个分部类定义都必须在词法上排在 identifier 的一个完整定义前（如果有完整定义的话；否则，无法使用类，除非有前向声明），但不必排在 identifier 的前向声明前。 所有 class-key 都必须匹配。
 
@@ -77,6 +78,6 @@ identifier 的分部类定义中使用的访问说明符不会影响，identifie
 
 （此语言功能不适用于公共语言运行时。）
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [分部类 (C++/CX)](../cppcx/partial-classes-c-cx.md)

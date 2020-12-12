@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _byteswap_uint64、_byteswap_ulong _byteswap_ushort
 title: _byteswap_uint64、_byteswap_ulong、_byteswap_ushort
 ms.date: 11/04/2016
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - byteswap_ulong function
 - _byteswap_ulong function
 ms.assetid: 83bda211-f02f-4cf0-8a78-d6de1f175970
-ms.openlocfilehash: 46ebc82919327ef5d51b760ae1aae15425910b4c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 741b9dc5e6db789ab9b1847c841486f0d19bde4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171681"
 ---
 # <a name="_byteswap_uint64-_byteswap_ulong-_byteswap_ushort"></a>_byteswap_uint64、_byteswap_ulong、_byteswap_ushort
 
@@ -58,9 +59,9 @@ unsigned long _byteswap_ulong ( unsigned long val );
 unsigned __int64 _byteswap_uint64 ( unsigned __int64 val );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*val*<br/>
+*初始值*<br/>
 要颠倒字节顺序的整数。
 
 ## <a name="requirements"></a>要求
@@ -71,7 +72,7 @@ unsigned __int64 _byteswap_uint64 ( unsigned __int64 val );
 |**_byteswap_ulong**|\<stdlib.h>|
 |**_byteswap_uint64**|\<stdlib.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

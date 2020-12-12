@@ -1,16 +1,17 @@
 ---
+description: 了解有关的详细信息：如何：使用分配和自由提高内存性能
 title: 如何：使用 Alloc 和 Free 提高内存性能
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: e5e5207fe435e73df60b757d4f595aacbb70fe72
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: ab9a7bb9ad067bd7a5650b9e66d1708f08ffc183
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172565"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>如何：使用 Alloc 和 Free 提高内存性能
 
@@ -58,7 +59,7 @@ Took 656 ms with Alloc/Free.
 
 > **cl.exe/EHsc 分配器**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存管理函数](../../parallel/concrt/memory-management-functions.md)<br/>
 [Alloc 函数](reference/concurrency-namespace-functions.md#alloc)<br/>

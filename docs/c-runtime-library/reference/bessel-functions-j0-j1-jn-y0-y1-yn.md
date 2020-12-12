@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下方面的详细信息：贝赛耳函数： _j0、_j1、_jn、_y0、_y1、_yn
 title: 贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8ada869b615e26d004e10ccc3355e83c9772888f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913467"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171863"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>贝塞尔函数：_j0、_j1、_jn、_y0、_y1、_yn
 
@@ -84,7 +85,7 @@ double _yn(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 浮点值。
@@ -94,17 +95,17 @@ Bessel 函数的整数顺序。
 
 ## <a name="return-value"></a>返回值
 
-其中每个例程都返回*x*的贝赛耳函数。 如果*x*在 **_y0**、 **_y1**或 **_yn**函数中为负，则例程会将**errno**设置为**EDOM**，将 **_DOMAIN**错误消息输出到**stderr**，并返回 **_HUGE_VAL**。 您可以使用 **_matherr**修改错误处理。
+其中每个例程都返回 *x* 的贝赛耳函数。 如果 *x* 在 **_y0**、 **_y1** 或 **_yn** 函数中为负，则例程会将 **errno** 设置为 **EDOM**，将 **_DOMAIN** 错误消息输出到 **stderr**，并返回 **_HUGE_VAL**。 您可以使用 **_matherr** 修改错误处理。
 
 ## <a name="remarks"></a>备注
 
-**_J0**、 **_j1**和 **_jn**例程分别返回第一种类型的贝赛耳函数： orders 0、1和 n。
+**_J0**、 **_j1** 和 **_jn** 例程分别返回第一种类型的贝赛耳函数： orders 0、1和 n。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
 |± **QNAN**， **IND**|**无效**|**_DOMAIN**|
 
-**_Y0**、 **_y1**和 **_yn**例程将返回第二种类型的贝赛耳函数：分别为 "orders 0"、"1" 和 "n"。
+**_Y0**、 **_y1** 和 **_yn** 例程将返回第二种类型的贝赛耳函数：分别为 "orders 0"、"1" 和 "n"。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
@@ -112,13 +113,13 @@ Bessel 函数的整数顺序。
 |±0|**ZERODIVIDE**|**_SING**|
 |&#124;x&#124; < 0。0|**无效**|**_DOMAIN**|
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (c + +) 、 \<math.h> (c、c + +) |
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -163,7 +164,7 @@ Bessel functions for x = 2.387000:
    Second 4      _yn( 4, x )  -1.626833
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

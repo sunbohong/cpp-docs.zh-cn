@@ -1,37 +1,38 @@
 ---
+description: '了解详细信息：属性 (c + +/CLI 和 c + +/CX) '
 title: property（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: fbec97a5bd30bb9bb76459ef2f7b0956ae6a264f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bc3a4e7bd55d82244195a4d9ecf0072a6c513b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225132"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172994"
 ---
 # <a name="property--ccli-and-ccx"></a>property（C++/CLI 和 C++/CX）
 
-声明属性**，这是行为和访问方式与数据成员或数组元素类似的成员函数。
+声明属性，这是行为和访问方式与数据成员或数组元素类似的成员函数。
 
 ## <a name="all-runtimes"></a>所有运行时
 
 你可以声明以下一种属性类型。
 
-简单属性**<br/>
-默认创建分配属性值的 set 取值函数**、检索属性值的 get 取值函数**，以及编译器生成的私有数据成员（其中包含属性值）。
+简单属性<br/>
+默认创建分配属性值的 set 取值函数、检索属性值的 get 取值函数，以及编译器生成的私有数据成员（其中包含属性值）。
 
-属性块**<br/>
+属性块<br/>
 用于创建用户定义的 get 和/或 set 访问器。 如果定义了 get 及 set 访问器，则属性为读/写，如果只定义了 get 访问器，则属性为只读，如果只定义了 set 访问器，则属性为只写。
 
 必须显式声明数据成员，以包含属性值。
 
-索引属性**<br/>
+索引属性<br/>
 可用于获取和设置由一个或多个索引指定的属性值的属性块。
 
-可以创建包含用户定义属性名或默认** 属性名的索引属性。 默认索引属性的名称是在其中定义该属性的类的名称。 若要声明默认属性，请指定 **`default`** 关键字而不是属性名称。
+可以创建包含用户定义属性名或默认属性名的索引属性。 默认索引属性的名称是在其中定义该属性的类的名称。 若要声明默认属性，请指定 **`default`** 关键字而不是属性名称。
 
 必须显式声明数据成员，以包含属性值。 对于索引属性，数据成员通常是一个数组或集合。
 
@@ -58,28 +59,28 @@ property type default[index_list] {
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+type<br/>
 属性值的数据类型，因此是属性本身。
 
 property_name<br/>
 属性的名称。
 
-access-modifier**<br/>
+access-modifier<br/>
 访问限定符。 有效限定符为 **`static`** 和 **`virtual`** 。
 
 Get 或 set 访问器不需要在限定符上达成一致 **`virtual`** ，但必须在限定符上达成一致 **`static`** 。
 
-inheritance-modifier**<br/>
-继承限定符。 有效限定符为 abstract**** 和 sealed****。
+inheritance-modifier<br/>
+继承限定符。 有效限定符为 abstract 和 sealed。
 
-index_list**<br/>
+index_list<br/>
 以逗号分隔的一个或多个索引列表。 每个索引包含索引类型，以及可以在属性方法体中使用的可选标识符。
 
 *value*<br/>
 在设置操作中分配给属性的值，或在 get 操作中检索的值。
 
-property_body**<br/>
-Set 或 get 访问器的属性方法体。 property_body** 可以使用 index_list** 来访问基础属性数据成员，或在用户定义处理中将它用作参数。
+property_body<br/>
+Set 或 get 访问器的属性方法体。 property_body 可以使用 index_list 来访问基础属性数据成员，或在用户定义处理中将它用作参数。
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
@@ -108,29 +109,29 @@ modifier property type default[index];
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *组合键*<br/>
 可用于属性声明或 get/set 访问器方法的修饰符。 可能的值为 **`static`** 和 **`virtual`** 。
 
-*type*<br/>
+type<br/>
 由属性表示的值类型。
 
 property_name<br/>
 引发方法的参数；必须与委托签名匹配。
 
-index_list**<br/>
+index_list<br/>
 一个或多个以逗号分隔的索引的列表，在方括号（下标运算符 ([])）中指定。 对于每个索引，指定类型以及选择指定可以在属性方法体中使用的标识符。
 
 ### <a name="remarks"></a>备注
 
-第一个语法示例展示了同时隐式声明 `set` 和 `get` 方法的简单属性**。 编译器将自动创建私有字段以存储属性值。
+第一个语法示例展示了同时隐式声明 `set` 和 `get` 方法的简单属性。 编译器将自动创建私有字段以存储属性值。
 
-第二个语法示例展示了同时显式声明 `set` 和 `get` 方法的属性块**。
+第二个语法示例展示了同时显式声明 `set` 和 `get` 方法的属性块。
 
-第三个语法示例展示了客户定义的索引属性**。 除了要设置或检索的值外，索引属性也接受参数。 必须指定属性名。 与简单的属性不同，索引属性的 `set` 和/或 `get` 方法必须显式定义，并且必须指定属性名。
+第三个语法示例展示了客户定义的索引属性。 除了要设置或检索的值外，索引属性也接受参数。 必须指定属性名。 与简单的属性不同，索引属性的 `set` 和/或 `get` 方法必须显式定义，并且必须指定属性名。
 
-第四个语法示例展示了提供对类型实例的类似数组访问权限的默认** 属性。 关键字 **`default`** 仅用于指定默认属性。 默认属性的名称是定义属性所属类型的名称。
+第四个语法示例展示了提供对类型实例的类似数组访问权限的默认属性。 关键字 **`default`** 仅用于指定默认属性。 默认属性的名称是定义属性所属类型的名称。
 
 **`property`** 关键字可以出现在类、接口或值类型中。 属性可以有 get 函数（只读）、set 函数（只写）或二者皆可（读写）。
 
@@ -210,6 +211,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

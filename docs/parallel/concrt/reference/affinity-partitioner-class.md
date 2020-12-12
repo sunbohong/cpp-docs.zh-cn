@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： affinity_partitioner 类
 title: affinity_partitioner 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - affinity_partitioner class
 ms.assetid: 31bf7bb1-bd01-491c-9760-d9d60edfccad
-ms.openlocfilehash: 0ae6bbee49d1b8873190a7054e55f65b40b31b13
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 44aa693d5007507e33f062a673713d1ddbda3172
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172318"
 ---
 # <a name="affinity_partitioner-class"></a>affinity_partitioner 类
 
@@ -25,14 +26,14 @@ ms.locfileid: "77142878"
 class affinity_partitioner;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[affinity_partitioner](#ctor)|构造 `affinity_partitioner` 对象。|
-|[~ affinity_partitioner 析构函数](#dtor)|销毁 `affinity_partitioner` 的对象。|
+|[~ affinity_partitioner 析构函数](#dtor)|销毁 `affinity_partitioner` 对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -44,15 +45,15 @@ class affinity_partitioner;
 
 **命名空间：** 并发
 
-## <a name="dtor"></a>~ affinity_partitioner
+## <a name="affinity_partitioner"></a><a name="dtor"></a> ~ affinity_partitioner
 
-销毁 `affinity_partitioner` 的对象。
+销毁 `affinity_partitioner` 对象。
 
 ```cpp
 ~affinity_partitioner();
 ```
 
-## <a name="ctor"></a>affinity_partitioner
+## <a name="affinity_partitioner"></a><a name="ctor"></a> affinity_partitioner
 
 构造 `affinity_partitioner` 对象。
 
@@ -60,6 +61,6 @@ class affinity_partitioner;
 affinity_partitioner();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

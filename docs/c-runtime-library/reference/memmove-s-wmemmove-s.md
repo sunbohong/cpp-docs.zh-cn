@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： memmove_s、wmemmove_s
 title: memmove_s、wmemmove_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: faa68f073949c9c1bcd3d96bb48472484adc312c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171395"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -58,9 +59,9 @@ errno_t wmemmove_s(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-dest**<br/>
+*目的*<br/>
 目标对象。
 
 *numberOfElements*<br/>
@@ -70,7 +71,7 @@ dest**<br/>
 源对象。
 
 *计数*<br/>
-要复制的字节数（**memmove_s**）或字符数（**wmemmove_s**）。
+要复制 (**memmove_s**) 或字符 (**wmemmove_s**) 的字节数。
 
 ## <a name="return-value"></a>返回值
 
@@ -78,23 +79,23 @@ dest**<br/>
 
 ### <a name="error-conditions"></a>错误条件
 
-|dest**|*numberOfElements*|*src*|返回值|*Dest*的内容|
+|*目的*|*numberOfElements*|*src*|返回值|*Dest* 的内容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**Null**|any|any|**EINVAL**|未修改|
-|any|any|**Null**|**EINVAL**|未修改|
+|**NULL**|any|any|**EINVAL**|未修改|
+|any|any|**NULL**|**EINVAL**|未修改|
 |any|< *计*|any|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>备注
 
-将*count*个字符从*src*复制到*目标*。 如果源区域的某些区域和目标重叠，则**memmove_s**确保在覆盖重叠区域中的原始源字节后将其复制。
+将 *count* 个字符从 *src* 复制到 *目标*。 如果源区域的某些区域和目标重叠，则 **memmove_s** 确保在覆盖重叠区域中的原始源字节后将其复制。
 
-如果*dest*或*src*为空指针，或者如果目标字符串过小，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EINVAL** ，并将**Errno**设置为**EINVAL**。
+如果 *dest* 或 *src* 为空指针，或者如果目标字符串过小，则这些函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。 如果允许执行继续，则这些函数将返回 **EINVAL** ，并将 **Errno** 设置为 **EINVAL**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
@@ -130,7 +131,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Before: 0123456789

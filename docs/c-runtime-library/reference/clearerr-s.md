@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： clearerr_s
 title: clearerr_s
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 3e300562a52029fe835ebd4fe34e9a7ef247a76a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: cbc9ac5122b5754b43f6fb93c4301afd6e449568
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171525"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -47,26 +48,26 @@ errno_t clearerr_s(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *流*<br/>
-指向**文件**结构的指针
+指向 **文件** 结构的指针
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为零;如果*stream*为**NULL**，则为**EINVAL** 。
+如果成功，则为零;如果 *stream* 为 **NULL**，则为 **EINVAL** 。
 
 ## <a name="remarks"></a>备注
 
-**Clearerr_s**函数将重置*流*的错误指示符和文件尾指示符。 错误指示器不会自动清除;设置指定流的错误指示符后，对该流执行的操作将继续返回错误值，直到调用**clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或[倒带](rewind.md)。
+**Clearerr_s** 函数将重置 *流* 的错误指示符和文件尾指示符。 错误指示器不会自动清除;设置指定流的错误指示符后，对该流执行的操作将继续返回错误值，直到调用 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos** 或 [倒带](rewind.md) 。
 
-如果*stream*为**NULL**，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
+如果 *stream* 为 **NULL**，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将 **errno** 设置为 **EINVAL** 并返回 **EINVAL**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： cacosh、cacoshf、cacoshl
 title: cacosh、cacoshf、cacoshl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-ms.openlocfilehash: 05ba0b37540e9f1b2dbb4d255e0fa033b54762d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c822a63021d68c7b07768b19c55be344f258e195
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171564"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
@@ -64,30 +65,30 @@ _Lcomplex cacoshl(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *z*<br/>
 表示角度的复数（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-*Z*的反双曲余弦值（以弧度表示）。 沿实轴的结果为无限和非负值，并沿虚轴的间隔 [-i π，+ i π]。
+*Z* 的反双曲余弦值（以弧度表示）。 沿实轴的结果为无限和非负值，并沿虚轴的间隔 [-i π，+ i π]。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**cacosh**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **cacosh**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，因此可以调用 **cacosh** 的重载，该重载采用并返回 **_Fcomplex** 和 **_Lcomplex** 值。 在 C 程序中， **cacosh** 始终采用并返回 **_Dcomplex** 值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**cacosh**、 **cacoshf**、 **cacoshl**|\<complex.h>|\<ccomplex>|
+|**cacosh**、               **cacoshf**、 **cacoshl**|\<complex.h>|\<ccomplex>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

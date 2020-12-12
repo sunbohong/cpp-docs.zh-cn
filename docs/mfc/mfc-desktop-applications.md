@@ -1,4 +1,5 @@
 ---
+description: 了解更多： MFC 桌面应用程序
 title: MFC 桌面应用程序
 ms.date: 07/28/2019
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 3811fdcf278129ee72872ea489b42f8389957761
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac89ecfc603593a4328876bae061657fba26fed1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359344"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172786"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面应用程序
 
-Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对象的包装器。 虽然此包装器可用于创建极为简单的桌面应用程序，但当你需要开发具有多个控件的更复杂的用户界面时，此包装器将最为有用。 可以使用 MFC 创建带有 Office 样式用户界面的应用程序。 有关 Windows 平台本身的文档，请参阅[Windows 文档](/windows/index)。 有关在没有 MFC 的情况下在 C++中构建 Windows 应用程序的信息，请参阅[使用 Win32 API 构建桌面 Windows 应用程序](/windows/win32/index)。
+Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对象的包装器。 虽然此包装器可用于创建极为简单的桌面应用程序，但当你需要开发具有多个控件的更复杂的用户界面时，此包装器将最为有用。 可以使用 MFC 创建带有 Office 样式用户界面的应用程序。 有关 Windows 平台本身的文档，请参阅 [windows 文档](/windows/index)。 有关使用 c + + 生成 Windows 应用程序的信息，请参阅 [使用 Win32 API 生成桌面 windows 应用](/windows/win32/index)。
 
 “MFC 参考”介绍了构成 Microsoft 基础类库的类、全局函数、全局变量和宏。
 
@@ -30,14 +31,14 @@ Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对�
 > [!IMPORTANT]
 > MFC 类及其成员不能在 Windows 运行时环境中执行的应用程序中使用。
 >
-> 用于多字节字符编码 (MBCS) 的 MFC 库 (DLL) 不再包含于 Visual Studio 中，但可用作 Visual Studio 加载项。 有关详细信息，请参阅[MFC MBCS DLL 加载项](mfc-mbcs-dll-add-on.md)。
+> 用于多字节字符编码 (MBCS) 的 MFC 库 (DLL) 不再包含于 Visual Studio 中，但可用作 Visual Studio 加载项。 有关详细信息，请参阅 [MFC MBCS DLL 加载项](mfc-mbcs-dll-add-on.md)。
 
 ## <a name="in-this-section"></a>本节内容
 
 [概念](mfc-concepts.md)<br/>
 有关 MFC 主题的概念文章。
 
-[层次结构图表](hierarchy-chart.md)<br/>
+[层次结构图](hierarchy-chart.md)<br/>
 形象说明类库中的类关系。
 
 [类概述](class-library-overview.md)<br/>
@@ -52,7 +53,7 @@ Microsoft 基础类 (MFC) 库针对大部分 Win32 和 COM API 提供面向对�
 [MFC 自定义](customization-for-mfc.md)<br/>
 提供有关自定义 MFC 应用程序的一些提示。
 
-[类](reference/mfc-classes.md)<br/>
+[Classes](reference/mfc-classes.md)<br/>
 提供 MFC 类的链接和有关 MFC 类的头文件信息。
 
 [内部类](reference/internal-classes.md)<br/>
@@ -72,13 +73,13 @@ Visual Studio 中用于创建 MFC 应用程序的功能的指南。
 
 ## <a name="related-sections"></a>相关章节
 
-[层次结构图表类别](hierarchy-chart-categories.md)<br/>
+[层次结构图类别](hierarchy-chart-categories.md)<br/>
 按类别说明 MFC 层次结构图表。
 
 [ATL/MFC 共享类](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 提供 MFC 与 ATL 共享的类的链接。
 
-[MFC 样品](../overview/visual-cpp-samples.md#mfc-samples)<br/>
+[MFC 示例](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 提供演示如何使用 MFC 的示例的链接。
 
 [Visual C++ 库参考](../standard-library/cpp-standard-library-reference.md)<br/>
@@ -87,6 +88,6 @@ Visual Studio 中用于创建 MFC 应用程序的功能的指南。
 [在 Visual Studio 中进行调试](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 提供一些链接，所涉及内容为使用 Visual Studio 调试器纠正应用程序或存储过程中的逻辑错误。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 和 ATL](mfc-and-atl.md)

@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：如何：使用消息块筛选器
 title: 如何：使用消息块筛选器
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: ac58ef2240d2ea6ba34b334106c08595e70b02e8
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 3c07aa7f12ed952d5256ba8fc7f53b619edefb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172580"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>如何：使用消息块筛选器
 

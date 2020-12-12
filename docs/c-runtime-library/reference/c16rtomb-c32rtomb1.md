@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： c16rtomb、c32rtomb
 title: c16rtomb, c32rtomb
 ms.date: 10/22/2019
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: 8f480d9b450b528275fea78ae878269fa6a4fa54
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: 35fb8f46693008cca9ee2a28e5b2656f009e4a6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171668"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb, c32rtomb
 
@@ -55,7 +56,7 @@ size_t c32rtomb(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *mbchar*\
 指向用于存储转换后的 UTF-8 多字节字符的数组的指针。
@@ -64,36 +65,36 @@ size_t c32rtomb(
 要转换的宽字符。
 
 *状态*\
-指向**mbstate_t**对象的指针。
+指向 **mbstate_t** 对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-数组对象*mbchar*中存储的字节数，包括任何移位序列。 如果*wchar*不是有效的宽字符，则返回值（**size_t**）（-1）， **errno**设置为**eilseq 且**，*状态*的值未指定。
+数组对象 *mbchar* 中存储的字节数，包括任何移位序列。 如果 *wchar* 不是有效的宽字符，则返回 **size_t** (值) # A2-1) ， **errno** 设置为 **eilseq 且**， *状态* 的值未指定。
 
 ## <a name="remarks"></a>备注
 
-**C16rtomb**函数将 utf-16 LE 字符*wchar*转换为等效的 utf-8 多字节窄字符序列。 如果*mbchar*不是空指针，则该函数将转换后的序列存储在由*mbchar*指向的数组对象中。 最多**MB_CUR_MAX**字节存储在*mbchar*中，*状态*设置为生成的多字节移位状态。
+**C16rtomb** 函数将 utf-16 LE 字符 *wchar* 转换为等效的 utf-8 多字节窄字符序列。 如果 *mbchar* 不是空指针，则该函数将转换后的序列存储在由 *mbchar* 指向的数组对象中。 最多 **MB_CUR_MAX** 个字节存储在 *mbchar* 中， *状态* 设置为生成的多字节移位状态。
 
-如果*wchar*是 null 宽字符，则会存储还原初始移位状态所需的序列，如果需要，后面跟 null 字符。 *状态*设置为初始转换状态。 **C32rtomb**函数是相同的，但会转换32字符。
+如果 *wchar* 是 null 宽字符，则会存储还原初始移位状态所需的序列，如果需要，后面跟 null 字符。 *状态* 设置为初始转换状态。 **C32rtomb** 函数是相同的，但会转换32字符。
 
-如果*mbchar*为 null 指针，则行为等效于调用函数的函数，该函数将内部缓冲区替换为*mbchar* ，将宽 null 字符替换为*wchar*。
+如果 *mbchar* 为 null 指针，则行为等效于调用函数的函数，该函数将内部缓冲区替换为 *mbchar* ，将宽 null 字符替换为 *wchar*。
 
-通过*状态*转换状态对象，您可以对此函数和其他保留多字节输出字符的移位状态的可重启函数进行后续调用。 混合使用可重启和不可重启的功能时，结果是不确定的。
+通过 *状态* 转换状态对象，您可以对此函数和其他保留多字节输出字符的移位状态的可重启函数进行后续调用。 混合使用可重启和不可重启的功能时，结果是不确定的。
 
-若要将 UTF-16 字符转换为非 UTF-8 多字节字符，请使用[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)、 [wcstombs_s 或 _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)函数。
+若要将 UTF-16 字符转换为非 UTF-8 多字节字符，请使用 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)、 [wcstombs_s 或 _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md) 函数。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**c16rtomb**、 **c32rtomb**|C, C++: \<uchar.h>|
+|**c16rtomb**、 **c32rtomb**|C、C + +： \<uchar.h>|
 
-有关兼容性信息，请参阅 [兼容性](../compatibility.md)。
+有关兼容性信息，请参阅[兼容性](../compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [数据转换](../data-conversion.md)\
-[区域设置](../locale.md)\
+[本地](../locale.md)\
 [多字节字符序列的解释](../interpretation-of-multibyte-character-sequences.md)\
 [mbrtoc16、mbrtoc32](mbrtoc16-mbrtoc323.md)\
 [wcrtomb](wcrtomb.md)\

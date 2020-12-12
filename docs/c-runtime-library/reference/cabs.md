@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _cabs
 title: _cabs
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 362121ab160e46ec0922b193ccedf77d5bf99468
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171629"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -48,24 +49,24 @@ double _cabs(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *z*<br/>
 复数。
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_cabs**返回其参数的绝对值。 溢出时， **_cabs**返回**HUGE_VAL**并将**errno**设置为**ERANGE**。 可以使用 [_matherr](matherr.md) 更改错误处理。
+如果成功， **_cabs** 返回其参数的绝对值。 溢出时， **_cabs** 返回 **HUGE_VAL** 并将 **errno** 设置为 **ERANGE**。 可以使用 [_matherr](matherr.md) 更改错误处理。
 
 ## <a name="remarks"></a>备注
 
-**_Cabs**函数计算复数的绝对值，它必须是[_complex](../../c-runtime-library/standard-types.md)类型的结构。 结构*z*由实部分量*x*和虚部*y*组成。 对 **_cabs**的调用会生成一个与表达式`sqrt( z.x * z.x + z.y * z.y )`的值等效的值。
+**_Cabs** 函数计算复数的绝对值，它必须是 [_complex](../../c-runtime-library/standard-types.md)类型的结构。 结构 *z* 由实部分量 *x* 和虚部 *y* 组成。 对 **_cabs** 的调用会生成一个与表达式的值等效的值 `sqrt( z.x * z.x + z.y * z.y )` 。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
@@ -96,7 +97,7 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>

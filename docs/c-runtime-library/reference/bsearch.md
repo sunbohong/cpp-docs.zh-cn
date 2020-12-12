@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： bsearch
 title: bsearch
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 3a6083f39e12182ae512f5327b5f7d8d89deb2a2
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5afdd00576392b4e464880ec88772357e3ae2135
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171772"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -51,7 +52,7 @@ void *bsearch(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *按键*\
 指向要搜索的键的指针。
@@ -70,13 +71,13 @@ void *bsearch(
 
 ## <a name="return-value"></a>返回值
 
-**bsearch**返回一个指针，该指针指向由*base*指向的数组中的*键*的匹配项。 如果未找到 *键* ，则该函数返回 **NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
+**bsearch** 返回一个指针，该指针指向由 *base* 指向的数组中的 *键* 的匹配项。 如果未找到 *键* ，则该函数返回 **NULL**。 如果数组不是以升序排序的，或包含具有相同键的重复记录，则不可预知结果。
 
 ## <a name="remarks"></a>备注
 
-**Bsearch**函数对*数字*元素的已排序数组执行二进制搜索，其中每个大小均为大小的*宽度*字节。 *基值*是指向要搜索的数组的基的指针，而*键*是正在查找的值。 *Compare*参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较。 它将返回以下值之一，用于指定其关系：
+**Bsearch** 函数对 *数字* 元素的已排序数组执行二进制搜索，其中每个大小均为大小的 *宽度* 字节。 *基值* 是指向要搜索的数组的基的指针，而 *键* 是正在查找的值。 *Compare* 参数是指向用户提供的例程的指针，它将所请求的密钥与数组元素进行比较。 它将返回以下值之一，用于指定其关系：
 
-|*比较*例程返回的值|说明|
+|*比较* 例程返回的值|描述|
 |-----------------------------------------|-----------------|
 |`< 0`|键小于数组元素。|
 |`0`|键等于数组元素。|
@@ -139,7 +140,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)\
 [_lfind](lfind.md)\

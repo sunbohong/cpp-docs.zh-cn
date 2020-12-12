@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息：类型转发 (c + +/CLI) '
 title: 类型转发 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 360ca624103c8021c17300f897b1091c13e898a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171926"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172877"
 ---
 # <a name="type-forwarding-ccli"></a>类型转发 (C++/CLI)
 
@@ -33,7 +34,7 @@ Windows 运行时不支持此功能。
 
 ### <a name="parameters"></a>parameters
 
-*全新*<br/>
+*new*<br/>
 要将类型定义移到其中的程序集。
 
 type<br/>
@@ -59,7 +60,7 @@ type<br/>
 
 - 枚举
 
-- 接口
+- interfaces
 
 无法转发以下类型：
 

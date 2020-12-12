@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：使用选项卡控件
 title: 使用选项卡控件
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-ms.openlocfilehash: 1ff4d57f9968f79a964a57b26fc79d68245c1a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e84f636019fa3b63c3e19b23ac639486c5f2353
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172605"
 ---
 # <a name="working-with-a-tab-control"></a>使用选项卡控件
 
-若要使用的选项卡控件的最简单方法 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 是使用对话框编辑器将其添加到对话框模板资源。 您还可单独使用选项卡控件。 MFC 调用`InitCommonControls`为您。 关键任务如下所示：
+ ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 使用选项卡控件的最简单方法是使用对话框编辑器将其添加到对话框模板资源。 您还可单独使用选项卡控件。 MFC `InitCommonControls` 将为您调用。 关键任务如下所示：
 
 - [创建选项卡控件](../mfc/creating-the-tab-control.md)
 

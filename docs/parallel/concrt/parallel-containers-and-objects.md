@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：并行容器和对象
 title: 并行容器和对象
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -6,20 +7,20 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 7387173378e79a4707008a11846eab19d7ae4341
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d0b6b491fbe41ea74ad0e6c138cb270558f6e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172435"
 ---
 # <a name="parallel-containers-and-objects"></a>并行容器和对象
 
 并行模式库 (PPL) 包含若干容器和对象，它们提供对其元素的线程安全访问。
 
-*并发容器*提供对最重要的操作的并发安全访问。 此处，并发安全意味着指针或迭代器始终有效。 它不能保证元素初始化，也不能保证特定的遍历顺序。 这些容器的功能类似于 c + + 标准库提供的功能。 例如， [concurrency：： concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 类类似于 [std：： vector](../../standard-library/vector-class.md) 类，不同之处在于 `concurrent_vector` 类使你能够并行追加元素。 如果有并行代码需要对同一容器的读取和写入访问权限，请使用并发容器。
+*并发容器* 提供对最重要的操作的并发安全访问。 此处，并发安全意味着指针或迭代器始终有效。 它不能保证元素初始化，也不能保证特定的遍历顺序。 这些容器的功能类似于 c + + 标准库提供的功能。 例如， [concurrency：： concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) 类类似于 [std：： vector](../../standard-library/vector-class.md) 类，不同之处在于 `concurrent_vector` 类使你能够并行追加元素。 如果有并行代码需要对同一容器的读取和写入访问权限，请使用并发容器。
 
-*并发对象*同时在多个组件之间共享。 计算并行对象的状态的进程并行产生的结果与按顺序计算相同状态的另一个进程产生的结果相同。 [Concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md)类是并发对象类型的一个示例。 `combinable`利用类，可以并行执行计算，然后将这些计算合并为最终结果。 如果要在其他情况下使用同步机制（例如 mutex）来同步对共享变量或资源的访问，请使用并发对象。
+*并发对象* 同时在多个组件之间共享。 计算并行对象的状态的进程并行产生的结果与按顺序计算相同状态的另一个进程产生的结果相同。 [Concurrency：：可组合](../../parallel/concrt/reference/combinable-class.md)类是并发对象类型的一个示例。 `combinable`利用类，可以并行执行计算，然后将这些计算合并为最终结果。 如果要在其他情况下使用同步机制（例如 mutex）来同步对共享变量或资源的访问，请使用并发对象。
 
 ## <a name="sections"></a><a name="top"></a> 个
 
@@ -87,7 +88,7 @@ ms.locfileid: "88831783"
 
 - 运行时未为类型定义专用版本 `concurrent_vector` **`bool`** 。
 
-### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> 并发安全操作
+### <a name="concurrency-safe-operations"></a><a name="vector-safety"></a> Concurrency-Safe 操作
 
 追加到或增加 `concurrent_vector` 对象大小或访问对象中元素的所有方法 `concurrent_vector` 均为并发安全方法。 此处，并发安全意味着指针或迭代器始终有效。 它不能保证元素初始化，也不能保证特定的遍历顺序。 此规则的例外情况是 `resize` 方法。
 
@@ -176,7 +177,7 @@ ms.locfileid: "88831783"
 
 - `concurrent_queue`类提供[unsafe_size](reference/concurrent-queue-class.md#unsafe_size)方法，而不是 `size` 方法。 `unsafe_size`方法不是并发安全方法。
 
-### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> 并发安全操作
+### <a name="concurrency-safe-operations"></a><a name="queue-safety"></a> Concurrency-Safe 操作
 
 所有从对象进行排队或取消排队的方法 `concurrent_queue` 都是并发安全方法。 此处，并发安全意味着指针或迭代器始终有效。 它不能保证元素初始化，也不能保证特定的遍历顺序。
 
@@ -222,7 +223,7 @@ ms.locfileid: "88831783"
 
 `concurrent_queue`迭代器仅按向前方向遍历元素。 下表显示每个迭代器支持的运算符。
 
-|操作员|说明|
+|运算符|描述|
 |--------------|-----------------|
 |`operator++`|前进到队列中的下一项。 重载此运算符以提供前递增和递增后的语义。|
 |`operator*`|检索对当前项的引用。|
@@ -254,7 +255,7 @@ ms.locfileid: "88831783"
 
 若要帮助避免死锁， `concurrent_unordered_map` 则在调用内存分配器、哈希函数或其他用户定义的代码时，没有方法持有锁。 此外，必须确保哈希函数始终将相等键计算为相同的值。 最佳哈希函数会在哈希代码空间中统一分布密钥。
 
-### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> 并发安全操作
+### <a name="concurrency-safe-operations"></a><a name="map-safety"></a> Concurrency-Safe 操作
 
 `concurrent_unordered_map`类可实现并发安全插入和元素访问操作。 插入操作不会使现有指针或迭代器失效。 迭代器访问和遍历操作也是并发安全的。 此处，并发安全意味着指针或迭代器始终有效。 它不能保证元素初始化，也不能保证特定的遍历顺序。 下表显示了 `concurrent_unordered_map` 并发安全的常用方法和运算符。
 
@@ -357,10 +358,10 @@ ms.locfileid: "88831783"
 
 下表显示了类的一些重要方法 `combinable` 。 有关所有类方法的详细信息 `combinable` ，请参阅 " [组合类](../../parallel/concrt/reference/combinable-class.md)"。
 
-|方法|说明|
+|方法|描述|
 |------------|-----------------|
 |[地方](reference/combinable-class.md#local)|检索对与当前线程上下文关联的本地变量的引用。|
-|[清除](reference/combinable-class.md#clear)|从对象中移除所有线程本地变量 `combinable` 。|
+|[clear](reference/combinable-class.md#clear)|从对象中移除所有线程本地变量 `combinable` 。|
 |[or](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|使用提供的组合函数从所有线程本地计算的集合中生成最终值。|
 
 `combinable`类是在最终合并的结果中进行参数化的模板类。 如果调用默认构造函数，则 `T` 模板参数类型必须具有默认构造函数和复制构造函数。 如果 `T` 模板参数类型没有默认构造函数，则调用采用初始化函数作为参数的构造函数的重载版本。
@@ -377,7 +378,7 @@ ms.locfileid: "88831783"
 
 [[顶部](#top)]
 
-## <a name="related-topics"></a>“相关主题”
+## <a name="related-topics"></a>相关主题
 
 [如何：使用并行容器提高效率](../../parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md)<br/>
 演示如何使用并行容器以并行方式有效地存储和访问数据。

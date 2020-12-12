@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _STATIC_ASSERT 宏
 title: _STATIC_ASSERT 宏
 ms.date: 11/04/2016
 api_location:
@@ -21,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - _STATIC_ASSERT macro
 ms.assetid: 89b0350c-2c2f-4be6-9786-8b1f0780a5da
-ms.openlocfilehash: 78544424b727797158109fa3000ee2ebf8066cf7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bbdb615cccfb245868d4c282acf86c9228ea574b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229319"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171194"
 ---
 # <a name="_static_assert-macro"></a>_STATIC_ASSERT 宏
 
-在编译时计算表达式，并在结果为**FALSE**时生成错误。
+在编译时计算表达式，并在结果为 **FALSE** 时生成错误。
 
 ## <a name="syntax"></a>语法
 
@@ -40,18 +41,18 @@ _STATIC_ASSERT(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *booleanExpression*<br/>
-计算结果为非零值（**TRUE**）或0（**FALSE**）的表达式（包括指针）。
+表达式 (包括) 计算结果为非零 (**TRUE**) 或 0 (**FALSE**) 的指针。
 
 ## <a name="remarks"></a>备注
 
-此宏类似于[_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只是在编译时（而不是在运行时）对*booleanExpression*进行计算。 如果*booleanExpression*的计算结果为**FALSE** （0），则会生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 。
+此宏类似于 [_ASSERT 和 _ASSERTE 宏](assert-asserte-assert-expr-macros.md)，只是在编译时（而不是在运行时）对 *booleanExpression* 进行计算。 如果 *booleanExpression* 的计算结果为 **FALSE** (0) ，则会生成 [编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) 。
 
 ## <a name="example"></a>示例
 
-在此示例中，我们检查[sizeof](../../c-language/sizeof-operator-c.md)的是否大于 **`int`** 或等于2字节以及[sizeof](../../c-language/sizeof-operator-c.md) a 是否 **`long`** 为1字节。 该程序将不会进行编译，并且它将生成[编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ，因为大于 **`long`** 1 字节。
+在此示例中，我们检查 [sizeof](../../c-language/sizeof-operator-c.md) 的是否大于 **`int`** 或等于2字节以及 [sizeof](../../c-language/sizeof-operator-c.md) a 是否 **`long`** 为1字节。 该程序将不会进行编译，并且它将生成 [编译器错误 C2466](../../error-messages/compiler-errors-1/compiler-error-c2466.md) ，因为大于 **`long`** 1 字节。
 
 ```C
 // crt__static_assert.c
@@ -77,7 +78,7 @@ int main()
 |-----------|---------------------|
 |**_STATIC_ASSERT**|\<crtdbg.h>|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [_ASSERT、_ASSERTE _ASSERT_EXPR 宏](assert-asserte-assert-expr-macros.md)<br/>

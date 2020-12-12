@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： memmove、wmemmove
 title: memmove、wmemmove
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: bca0badb13dbbc754b6546f62cdd865eacd14fbc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 15dee8eab2a1b7eedd3891d8673647a711c0e499
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171382"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -54,28 +55,28 @@ wchar_t *wmemmove(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-dest<br/>
+*目的*<br/>
 目标对象。
 
 *src*<br/>
 源对象。
 
-*count*<br/>
-要复制的字节数（**memmove**）或字符数（**wmemmove**）。
+*计数*<br/>
+要 **复制 ()** 或多个字符 (**wmemmove**) 的字节数。
 
 ## <a name="return-value"></a>返回值
 
-*Dest*的值。
+*Dest* 的值。
 
 ## <a name="remarks"></a>备注
 
-将*计数*字节（**memmove**）或字符（**wmemmove**）从*src*复制到*目标*。 如果源区域的某些区域和目标重叠，则两个函数都可确保在重叠区域中的原始源字节被覆盖之前对其进行复制。
+将 *计数* 字节 (**memmove**) 或字符 (从 *src* 到 *目标* 的 **wmemmove**) 。 如果源区域的某些区域和目标重叠，则两个函数都可确保在重叠区域中的原始源字节被覆盖之前对其进行复制。
 
 **安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-仅当在包含语句之前定义了常量 **_CRT_SECURE_DEPRECATE_MEMORY** ，才能弃用**memmove**和**wmemmove**函数，如以下示例中所示：
+仅当在包含语句之前定义了常量 **_CRT_SECURE_DEPRECATE_MEMORY** （如以下示例中所示）时，才会弃用 **memmove** 和 **wmemmove** 函数：
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -96,7 +97,7 @@ dest<br/>
 |**memmove**|\<string.h>|
 |**wmemmove**|\<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

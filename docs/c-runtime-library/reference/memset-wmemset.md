@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： memset、wmemset
 title: memset、wmemset
 ms.date: 11/04/2016
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 6e1db021da70f0af7b045e2a3100dbaaa81e5a50
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 547cbbcab4966291ab540b6e57f68d4057995ff8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951742"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97171343"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -55,26 +56,26 @@ wchar_t *wmemset(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*dest*<br/>
+*目的*<br/>
 指向目标的指针。
 
 *c*<br/>
 要设置的字符。
 
-*count*<br/>
+*计数*<br/>
 字符数。
 
 ## <a name="return-value"></a>返回值
 
-*Dest*的值。
+*Dest* 的值。
 
 ## <a name="remarks"></a>备注
 
-将*dest*的第一个*计数*字符设置为字符*c*。
+将 *dest* 的第一个 *计数* 字符设置为字符 *c*。
 
-**安全说明**请确保目标缓冲区有足够的空间来容纳至少*数量*的字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+**安全说明** 请确保目标缓冲区有足够的空间来容纳至少 *数量* 的字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>要求
 
@@ -83,7 +84,7 @@ wchar_t *wmemset(
 |**memset**|\<memory.h> 或 \<string.h>|
 |**wmemset**|\<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -110,7 +111,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Before: This is a test of the memset function
