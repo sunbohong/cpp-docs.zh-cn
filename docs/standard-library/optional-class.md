@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：可选类
 title: 可选类
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - optional/std::optional::reset
 - optional/std::optional::value
 - optional/std::optional::value_or
-ms.openlocfilehash: b1e77325cc485da1caec91316ce5d46cfa6357dc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fc0f14eb8bffc55c10db73b9b2f1ea5bcfdf6995
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841930"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201932"
 ---
 # <a name="optional-class"></a>可选类
 
@@ -46,10 +47,10 @@ template<class T> optional(T) -> optional<T>;
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 | **构造函数和析构函数** | |
-|[可选](#optional) | 构造 `optional` 类型的对象。 |
+|[可有可无](#optional) | 构造 `optional` 类型的对象。 |
 |[~ 可选](#optional-destructor) | 销毁类型的对象 `optional` 。 |
 | **分配** | |
 | [operator =](#op_eq) | 将替换为另一个的 `optional` 副本 `optional` 。 |
@@ -98,7 +99,7 @@ template <class U>
 explicit optional(optional<U>&& rhs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rhs*\
 `optional`要复制或移动的构造包含的值。
@@ -109,7 +110,7 @@ explicit optional(optional<U>&& rhs);
 *args*\
 要从其构造包含的值的参数列表。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `constexpr optional() noexcept;`
 `constexpr optional(nullopt_t nullopt) noexcept;` 这些构造函数构造了 `optional` 不包含值的。
@@ -136,7 +137,7 @@ explicit optional(optional<U>&& rhs);
 ~optional();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 `T` 是完全易损坏，则 `optional<T>` 也是完全易损坏。
 
@@ -226,6 +227,6 @@ template <class U>
     constexpr T value_or(U&&) &&;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<optional>](optional.md)

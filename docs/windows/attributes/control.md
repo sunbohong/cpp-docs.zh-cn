@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：控件
 title: '控制 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 14ceb3ce51396efefe77404e8f18a36a7d7a4825
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 80148c636e14e7d19bec784b411944c44993ee15
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844153"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306399"
 ---
 # <a name="control"></a>控制
 
@@ -25,7 +26,7 @@ ms.locfileid: "88844153"
 
 ## <a name="remarks"></a>备注
 
-**Control**特性隐含[coclass](coclass.md)特性。 **Control** c + + 特性具有与[控件](/windows/win32/Midl/control)MIDL 特性相同的功能。
+**Control** 特性隐含 [coclass](coclass.md)特性。 **Control** c + + 特性具有与 [控件](/windows/win32/Midl/control)MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -55,7 +56,7 @@ class CTest : public ICustom {};
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [类特性](class-attributes.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; cfloat&gt;
 title: '&lt;cfloat&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - cfloat header
 ms.assetid: 25ec4ab9-3c1d-46e3-9e68-ad9a8762cadb
-ms.openlocfilehash: 0ce5a4612363dde1daa991d4f84eb8a77aebaaa5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fb445044945791a9b105d39a60f6ce3c93c8978d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325270"
 ---
 # <a name="ltcfloatgt"></a>&lt;cfloat&gt;
 
-包含标准 C 库标头 \<float.h>。
+包含标准 C 库标头 \<float.h> 。
 
 ## <a name="syntax"></a>语法
 
@@ -70,6 +71,6 @@ ms.locfileid: "68449005"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

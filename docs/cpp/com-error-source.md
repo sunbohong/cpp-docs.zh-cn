@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _com_error：： Source
 title: _com_error::Source
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Source method [C++]
 ms.assetid: 55353741-fabc-4b0c-9787-b5a69bb189f2
-ms.openlocfilehash: 43dd21297ddd54863d535402dddd59243d589eec
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3b6cf35420454e8285d3d8b4deee3df8fe8771e4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180519"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295765"
 ---
 # <a name="_com_errorsource"></a>_com_error::Source
 
@@ -27,7 +28,7 @@ _bstr_t Source() const;
 
 ## <a name="return-value"></a>返回值
 
-返回在 `_com_error` 对象内记录的 `IErrorInfo` 对象的 `IErrorInfo::GetSource` 结果。 生成的 `BSTR` 封装在 `_bstr_t` 对象中。 如果未记录任何 `IErrorInfo`，它将返回一个空 `_bstr_t`。
+返回 `IErrorInfo::GetSource` `IErrorInfo` 对象中记录的对象的结果 `_com_error` 。 生成的 `BSTR` 封装在 `_bstr_t` 对象中。 如果未 `IErrorInfo` 记录，则返回空 `_bstr_t` 。
 
 ## <a name="remarks"></a>备注
 
@@ -35,6 +36,6 @@ _bstr_t Source() const;
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_com_error 类](../cpp/com-error-class.md)

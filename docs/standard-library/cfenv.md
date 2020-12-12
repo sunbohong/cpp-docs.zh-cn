@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息： &lt; cfenv&gt;
 title: '&lt;cfenv&gt;'
 ms.date: 11/04/2016
 ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-ms.openlocfilehash: b1ae987d49c95b781cb255a4d7e3a9a04ab6043a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e01a74b9df3431ed257cb015260d0775320a88ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325284"
 ---
 # <a name="ltcfenvgt"></a>&lt;cfenv&gt;
 
@@ -62,6 +63,6 @@ int feupdateenv(const fenv_t* penv);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

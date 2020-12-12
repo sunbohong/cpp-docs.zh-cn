@@ -1,4 +1,5 @@
 ---
+description: 了解：文件和数据库类的详细信息
 title: 文件和数据库类
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - database classes [MFC]
 - file classes [MFC]
 ms.assetid: 580b169c-e26e-4395-b128-5408d08c98fe
-ms.openlocfilehash: 8874b9f99d3a5756b4ce66e2f5732f856bdd7078
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ced377a1a23625f16ad3e42149859af220c7d7e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189283"
 ---
 # <a name="file-and-database-classes"></a>文件和数据库类
 
@@ -27,6 +28,6 @@ ms.locfileid: "84622628"
 
 - [ODBC 类](odbc-classes.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

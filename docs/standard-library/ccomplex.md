@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; ccomplex&gt;
 title: '&lt;ccomplex&gt;'
 ms.date: 07/11/2019
 f1_keywords:
@@ -7,34 +8,34 @@ f1_keywords:
 helpviewer_keywords:
 - ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: 5b5383b1eca4fda72f5f9e3a78637373acbcf7ab
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: d657d7b0b2a203bcbad93ff1c78f6b78eb4d7707
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325310"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-包括C++标准库标头[ \<复杂 >](complex.md)。
+包括 c + + 标准库标头 [\<complex>](complex.md) 。
 
 > [!NOTE]
-> \<Ccomplex > 不包含\<C 标准库 complex .h > 标头, 因为它实际上被复杂 > 和\<h > C++中\<的重载替换。 这会使\<ccomplex > 标头冗余。 不推荐使用C++复杂的.h>标\<头。 \<Ccomplex > 标头在 c + + 17 中已弃用, 并已在草案 c + + 20 标准中删除。
+> C 标准库 \<complex.h> 标头未包含 \<ccomplex> 在中，因为它实际上被和中的 c + + 重载替换 \<complex> \<cmath> 。 这会使 \<ccomplex> 标头冗余。 \<complex.h>C + + 中弃用了标头。 \<ccomplex>标头已在 c + + 17 中弃用，并已在草案 c + + 20 标准中删除。
 
 ## <a name="requirements"></a>要求
 
-**标头:** \<ccomplex >
+**标头：**\<ccomplex>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="remarks"></a>备注
 
-在 iostream `clog`中声明的名称 ( \<在复杂的 .h > 中声明`std` ) 未在命名空间中定义, 因为`clog`可能与在[ \<>](iostream.md)中声明的发生冲突。
+命名空间中声明的名称不是在 `clog` \<complex.h> 命名空间中定义的， `std` 因为可能与 `clog` 在中声明的发生冲突 [\<iostream>](iostream.md) 。
 
 ## <a name="see-also"></a>请参阅
 
-[\<复杂 >](complex.md)\
-[\<cmath 1>](cmath.md)\
+[\<complex>](complex.md)\
+[\<cmath>](cmath.md)\
 [标头文件引用](cpp-standard-library-header-files.md)\
-[C++标准库概述](cpp-standard-library-overview.md)\
-[标准库中的C++线程安全](thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库概述](cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)
