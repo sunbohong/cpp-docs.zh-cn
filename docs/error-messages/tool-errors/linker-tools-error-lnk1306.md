@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：链接器工具错误 LNK1306
 title: 链接器工具错误 LNK1306
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1306
 ms.assetid: fad1df6a-0bd9-412f-b0d1-7c9bc749c584
-ms.openlocfilehash: ddaa8797e0cf8ff617408aedc770b21cc656cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa6386da7c836eea8365d8a4ffde0bbd80d0fa81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193651"
 ---
 # <a name="linker-tools-error-lnk1306"></a>链接器工具错误 LNK1306
 
-> DLL 入口点函数不能进行管理;编译为本机
+> 无法管理 DLL 入口点函数;编译为本机
 
-`DllMain` 不能编译为 MSIL;必须为本机编译。
+`DllMain` 不能编译为 MSIL;它必须编译为本机。
 
 若要解决此问题，
 
-- 包含入口点，而无需将文件编译 **/clr**。
+- 编译包含没有 **/clr** 的入口点的文件。
 
-- 将入口点放在`#pragma unmanaged`部分。
+- 将入口点置于某个 `#pragma unmanaged` 部分。
 
-有关详细信息，请参见:
+有关详细信息，请参阅：
 
 - [/cgthreads（公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [managed, unmanaged](../../preprocessor/managed-unmanaged.md)
+- [managed、unmanaged](../../preprocessor/managed-unmanaged.md)
 
 - [混合程序集的初始化](../../dotnet/initialization-of-mixed-assemblies.md)
 
@@ -49,7 +50,7 @@ int __stdcall NewDllMain( HINSTANCE h, ULONG ulReason, PVOID pvReserved ) {
 }
 ```
 
-若要解决此问题，请执行不使用 /clr 选项编译此文件中，或使用`#pragma`指令以将入口点定义放在非托管部分中，在此示例中所示：
+若要解决此问题，请不要使用/clr 选项来编译此文件，也不要使用 `#pragma` 指令将入口点定义放置在非托管节中，如以下示例中所示：
 
 ```cpp
 // LNK1306fix.cpp

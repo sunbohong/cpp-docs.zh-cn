@@ -1,4 +1,5 @@
 ---
+description: 了解更多： MFC ActiveX 控件：使用字体
 title: MFC ActiveX 控件：使用字体
 ms.date: 11/19/2018
 f1_keywords:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 02c52d2544afdc9d13fc3ec67ad9eed757a3f277
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5f0c495ee92dbcfcb27627628f3bcf92982f719f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499693"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206001"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控件：使用字体
 
@@ -58,7 +59,7 @@ ms.locfileid: "91499693"
 
 1. 在 " **属性名称** " 框中，单击 " **字体**"。
 
-1. 单击“完成”  。
+1. 单击“完成”。
 
 "添加属性向导" 将以下行添加到控件的调度映射，该映射位于控件类实现文件中：
 
@@ -84,7 +85,7 @@ Stock Caption 属性是可以使用常用字体属性信息绘制的文本属性
 
 1. 在 " **属性名称** " 框中，单击 " **标题**"。
 
-1. 单击“完成”  。
+1. 单击“完成”。
 
 "添加属性向导" 将以下行添加到控件的调度映射，该映射位于控件类实现文件中：
 
@@ -126,11 +127,11 @@ Stock Caption 属性是可以使用常用字体属性信息绘制的文本属性
 
 1. 在 " **属性名称** " 框中，键入属性的名称。 对于本示例，请使用 **HeadingFont**。
 
-1. 对于“实现类型” ****，请单击“Get/Set 方法” ****。
+1. 对于“实现类型” ，请单击“Get/Set 方法” 。
 
-1. 在 "**属性类型**" 框中**IDispatch** ， <strong>\*</strong> 为该属性的类型选择 "IDispatch"。
+1. 在 "**属性类型**" 框中 ， <strong>\*</strong> 为该属性的类型选择 "IDispatch"。
 
-1. 单击“完成”  。
+1. 单击“完成”。
 
 "添加属性向导" 创建用于将 `HeadingFont` 自定义属性添加到 `CSampleCtrl` 类和示例的代码。IDL 文件。 由于 `HeadingFont` 是 Get/Set 属性类型，因此添加属性向导会修改 `CSampleCtrl` 该类的调度映射，以包括 DISP_PROPERTY_EX_ID[DISP_PROPERTY_EX](reference/dispatch-maps.md#disp_property_ex) 宏项：
 
@@ -202,7 +203,7 @@ DISP_PROPERTY_EX 宏将 `HeadingFont` 属性名称与其相应的 `CSampleCtrl` 
 
 在大多数情况下，控件需要知道何时修改了 font 对象的特征。 每个字体对象都可以在通过调用由实现的接口的成员函数来更改时提供通知 `IFontNotification` `COleControl` 。
 
-如果控件使用 "常用字体" 属性，则其通知由的 `OnFontChanged` 成员函数进行处理 `COleControl` 。 添加自定义字体属性时，可以让它们使用相同的实现。 在上一部分的示例中，这是通过在初始化*m_fontHeading*成员变量时传递 &*m_xFontNotification*来实现的。
+如果控件使用 "常用字体" 属性，则其通知由的 `OnFontChanged` 成员函数进行处理 `COleControl` 。 添加自定义字体属性时，可以让它们使用相同的实现。 在上一部分的示例中，这是通过在初始化 *m_fontHeading* 成员变量时传递 &*m_xFontNotification* 来实现的。
 
 ![实现多个字体对象接口](../mfc/media/vc373q1.gif "实现多个字体对象接口") <br/>
 实现多个字体对象接口

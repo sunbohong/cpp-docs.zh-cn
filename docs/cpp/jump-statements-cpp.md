@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： (c + +) 的跳转语句
 title: 跳转语句 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - jump statements
 ms.assetid: 7d8ff59c-b1bd-4164-85e9-f508851ed62c
-ms.openlocfilehash: 5702f84a08c53d9eab6a11956d4bdcd985d7221d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c304b21b2ae88ce6a82f92d597cb441a9f879618
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291969"
 ---
 # <a name="jump-statements-c"></a>跳转语句 (C++)
 
@@ -34,8 +35,8 @@ goto identifier;
 
 - [return 语句](../cpp/return-statement-cpp.md)
 
-- [goTo 语句](../cpp/goto-statement-cpp.md)
+- [goto 语句](../cpp/goto-statement-cpp.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[ 语句概述](../cpp/overview-of-cpp-statements.md)
+[C + + 语句概述](../cpp/overview-of-cpp-statements.md)

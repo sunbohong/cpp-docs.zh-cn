@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： nested_exception 类
 title: nested_exception 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 4ab48f714e8b4de1a47674f1af8fe25467279f94
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fd2a0d5b62eb0ec9ae1e70233984fe7457127414
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338200"
 ---
 # <a name="nested_exception-class"></a>nested_exception 类
 
@@ -32,13 +33,13 @@ class nested_exception {
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator =](#op_as)|赋值运算符。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[rethrow_nested](#rethrow_nested)|引发存储的异常。|
 |[nested_ptr](#nested_ptr)|返回存储的异常。|
@@ -65,7 +66,7 @@ exception_ptr nested_ptr() const;
 [[noreturn]] void rethrow_nested() const;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 如果 `nested_ptr()` 返回一个 null 指针，则该函数将调用 `std::terminate()` 。 否则，它会引发由捕获的存储异常 **`*this`** 。
 
@@ -75,7 +76,7 @@ exception_ptr nested_ptr() const;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [exception 类](../standard-library/exception-class.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

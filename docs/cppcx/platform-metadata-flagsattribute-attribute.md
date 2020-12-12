@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： Metadata：： FlagsAttribute 特性
 title: Platform::Metadata::FlagsAttribute 特性
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-ms.openlocfilehash: 3a09aa89cbe73469e994271179192ef7713e3a0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 943f70eead655b3e429c538ca41689cd24159a67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183265"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291956"
 ---
 # <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute 特性
 
@@ -26,7 +27,7 @@ public ref class Flags abstract : Attribute
 
 ## <a name="inheritance"></a>继承
 
-[Platform::Object](../cppcx/platform-object-class.md)
+Platform::Object[](../cppcx/platform-object-class.md)
 
 [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)
 
@@ -40,8 +41,8 @@ public ref class Flags abstract : Attribute
 
 **命名空间：** Platform::Metadata
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 
-[Platform::Metadata 命名空间](../cppcx/platform-metadata-namespace.md)
+[Platform：： Metadata 命名空间](../cppcx/platform-metadata-namespace.md)

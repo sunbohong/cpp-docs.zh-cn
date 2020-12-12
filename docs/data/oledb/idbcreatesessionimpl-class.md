@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IDBCreateSessionImpl 类
 title: IDBCreateSessionImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IDBCreateSessionImpl class
 - CreateSession method
 ms.assetid: 48c02c5c-8362-45ac-af8e-bb119cf8c5c7
-ms.openlocfilehash: aeeca008499ca43cdcebd008390e5cb6c5a9e63c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8456ce4ec7bde5721ac6753ed9ec64d69c63e41f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845518"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317475"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl 类
 
@@ -31,7 +32,7 @@ class ATL_NO_VTABLE IDBCreateSessionImpl
    : public IDBCreateSession
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 你的类，派生自
@@ -47,11 +48,11 @@ Session 对象。
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[CreateSession](#createsession)|从数据源对象创建新的会话，并返回新创建的会话上所请求的接口。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 数据源对象上的必需接口。
 
@@ -67,11 +68,11 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
    IUnknown ** ppDBSession);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IDBCreateSession：： CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IDBCreateSession：： CreateSession](/previous-versions/windows/desktop/ms714942(v=vs.85)) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 提供程序模板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供程序模板体系结构](../../data/oledb/ole-db-provider-template-architecture.md)

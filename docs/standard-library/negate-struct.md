@@ -1,4 +1,5 @@
 ---
+description: 了解有关：否定 Struct 的详细信息
 title: negate 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fccc583d38b797a856ed4e0915e5e0255bb9eaee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338241"
 ---
 # <a name="negate-struct"></a>negate 结构
 
@@ -37,17 +38,17 @@ struct negate<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*\
+*类别*\
 支持 `operator-` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-要进行求反的操作数。 专用化的模板可完美转移左值和右值引用参数的类型推断*类型*。
+*左中*\
+要进行求反的操作数。 专用模板完全转发推断类型 *类型* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 
-`-Left` 的结果。 专用化的模板可完美转移结果，结果具有由一元类型`operator-`。
+`-Left` 的结果。 专用模板完全转发结果，该结果具有由一元返回的类型 `operator-` 。
 
 ## <a name="example"></a>示例
 

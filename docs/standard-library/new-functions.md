@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 新 &gt; 函数
 title: '&lt;new&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: 6b51a5bcbb9c90370cef1391d4020862d2e2cefd
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b46a21223fcee4f1e208f97e087e47445d5526c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87212171"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338190"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 函数
 
-## <a name="get_new_handler"></a><a name="get_new_handler"></a>get_new_handler
+## <a name="get_new_handler"></a><a name="get_new_handler"></a> get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -25,21 +26,21 @@ new_handler get_new_handler() noexcept;
 
 返回当前 `new_handler`。
 
-## <a name="launder"></a><a name="launder"></a>launder
+## <a name="launder"></a><a name="launder"></a> launder
 
 ```cpp
 template <class T>
     constexpr T* launder(T* ptr) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
-内存中的字节地址，其中包含类型类似于*T*的对象。
+内存中的字节地址，其中包含类型类似于 *T* 的对象。
 
 ### <a name="return-value"></a>返回值
 
-指向 X 的类型*T \* *的值。
+指向 X 的类型 *T \** 的值。
 
 ### <a name="remarks"></a>备注
 
@@ -59,7 +60,7 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a><a name="nothrow"></a>nothrow
+## <a name="nothrow"></a><a name="nothrow"></a> nothrow
 
 提供一个对象，该对象用作和的版本的参数 **`nothrow`** **`new`** **`delete`** 。
 
@@ -75,15 +76,15 @@ extern const std::nothrow_t nothrow;
 
 有关如何将 `std::nothrow_t` 用作函数参数的示例，请参阅[运算符 new](../standard-library/new-operators.md#op_new) 和[运算符 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。
 
-## <a name="set_new_handler"></a><a name="set_new_handler"></a>set_new_handler
+## <a name="set_new_handler"></a><a name="set_new_handler"></a> set_new_handler
 
-安装一个用户函数，当**运算符 new**尝试分配内存失败时将调用该函数。
+安装一个用户函数，当 **运算符 new** 尝试分配内存失败时将调用该函数。
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Pnew*\
 `new_handler`要安装的。
@@ -94,7 +95,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="remarks"></a>备注
 
-函数将*Pnew*存储在它所维护的静态[新处理程序](../standard-library/new-typedefs.md#new_handler)指针中，然后返回以前存储在指针中的值。 New 处理程序由[运算符 new](../standard-library/new-operators.md#op_new)（**size_t**）使用。
+函数将 *Pnew* 存储在它所维护的静态 [新处理程序](../standard-library/new-typedefs.md#new_handler) 指针中，然后返回以前存储在指针中的值。 New 处理程序由 [运算符 new](../standard-library/new-operators.md#op_new) (**size_t**) 使用。
 
 ### <a name="example"></a>示例
 

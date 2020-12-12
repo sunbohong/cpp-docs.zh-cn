@@ -1,4 +1,5 @@
 ---
+description: 了解更多： MFC ActiveX 控件：属性
 title: MFC ActiveX 控件：属性
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-ms.openlocfilehash: c7ed0fddea660409f5089159b71d39a29b01d538
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9331be68c2e09fe3a4ad83d21e3ed58bbdfdd61e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618182"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206131"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控件：属性
 
@@ -19,9 +20,9 @@ ActiveX 控件激活事件以便与其控件容器通信。 容器返回，使�
 
 属性也称为属性。
 
-有关 ActiveX 控件方法的详细信息，请参阅[MFC ActiveX 控件：方法](mfc-activex-controls-methods.md)一文。
+有关 ActiveX 控件方法的详细信息，请参阅 [MFC ActiveX 控件：方法](mfc-activex-controls-methods.md)一文。
 
-ActiveX 控件可以实现常用和自定义方法和属性。 类 `COleControl` 提供常用属性的实现。 （有关常用属性的完整列表，请参阅[MFC ActiveX 控件：添加常用属性](mfc-activex-controls-adding-stock-properties.md)一文。）自定义属性（由开发人员定义）向 ActiveX 控件添加专用功能。 有关详细信息，请参阅[MFC ActiveX 控件：添加自定义属性](mfc-activex-controls-adding-custom-properties.md)。
+ActiveX 控件可以实现常用和自定义方法和属性。 类 `COleControl` 提供常用属性的实现。  (有关常用属性的完整列表，请参阅 [MFC ActiveX 控件：添加常用属性](mfc-activex-controls-adding-stock-properties.md)一文。 ) 自定义属性（由开发人员定义）向 ActiveX 控件添加专用功能。 有关详细信息，请参阅 [MFC ActiveX 控件：添加自定义属性](mfc-activex-controls-adding-custom-properties.md)。
 
 自定义属性和常用属性（例如方法）都受一个机制支持，该机制由处理属性和方法的调度映射和类的现有成员函数组成 `COleControl` 。 此外，这些属性还可以包含开发人员用来向控件传递额外信息的参数。
 
@@ -35,6 +36,6 @@ ActiveX 控件可以实现常用和自定义方法和属性。 类 `COleControl`
 
 - [MFC ActiveX 控件：访问环境属性](mfc-activex-controls-accessing-ambient-properties.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](mfc-activex-controls.md)

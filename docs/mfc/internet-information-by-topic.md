@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：按主题的 Internet 信息
 title: 按主题划分的 Internet 信息
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: 93a8b6c9-d274-492a-90b3-cf43a77edb1d
-ms.openlocfilehash: a74c32fb0111ec9a3b0b067239ab491ff7c63248
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bcc8879645bbbf706ddea3e51649f7dd12f33b9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837653"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338350"
 ---
 # <a name="internet-information-by-topic"></a>按主题划分的 Internet 信息
 
@@ -45,6 +46,6 @@ ms.locfileid: "88837653"
 
 [典型 HTTP 客户端应用程序中的步骤](steps-in-a-typical-http-client-application.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC Internet 编程基础知识](mfc-internet-programming-basics.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IErrorRecordsImpl 类
 title: IErrorRecordsImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -63,12 +64,12 @@ helpviewer_keywords:
 - GetRecordCount method
 - m_rgErrors
 ms.assetid: dea8e938-c5d8-45ab-86de-eb8fbf534ffb
-ms.openlocfilehash: cb0e236a31846e3465d76b6904a7b4c57a2b8cf4
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2c4a674a6197178e3418afc6e62cda1894497599
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97317449"
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 类
 
@@ -81,7 +82,7 @@ template <class T, class RecordClass = ATLERRORINFO>
 class IErrorRecordsImpl : public IErrorRecords
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `IErrorRecordsImpl` 。
@@ -97,7 +98,7 @@ class IErrorRecordsImpl : public IErrorRecords
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[GetErrorDescriptionString](#geterrordescriptionstring)|获取错误记录中的错误描述字符串。|
 |[GetErrorGUID](#geterrorguid)|获取错误记录中的错误 GUID。|
@@ -107,7 +108,7 @@ class IErrorRecordsImpl : public IErrorRecords
 
 ### <a name="interface-methods"></a>接口方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddErrorRecord](#adderrorrecord)|向 OLE DB 错误对象添加记录。|
 |[GetBasicErrorInfo](#getbasicerrorinfo)|返回有关错误的基本信息，如返回代码和特定于提供程序的错误号。|
@@ -118,7 +119,7 @@ class IErrorRecordsImpl : public IErrorRecords
 
 ### <a name="data-members"></a>数据成员
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[m_rgErrors](#rgerrors)|错误记录的数组。|
 
@@ -132,7 +133,7 @@ class IErrorRecordsImpl : public IErrorRecords
 LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *rCurError*<br/>
 `ERRORINFO`接口中的记录 `IErrorInfo` 。
@@ -151,7 +152,7 @@ LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
 REFGUID GetErrorGUID(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *rCurError*<br/>
 `ERRORINFO`接口中的记录 `IErrorInfo` 。
@@ -170,7 +171,7 @@ REFGUID GetErrorGUID(ERRORINFO& rCurError);
 DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *rCurError*<br/>
 `ERRORINFO`接口中的记录 `IErrorInfo` 。
@@ -189,7 +190,7 @@ DWORD GetErrorHelpContext(ERRORINFO& rCurError);
 LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *rCurError*<br/>
 `ERRORINFO`接口中的记录 `IErrorInfo` 。
@@ -208,7 +209,7 @@ LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
 LPOLESTR GetErrorSource(ERRORINFO& rCurError);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *rCurError*<br/>
 `ERRORINFO`接口中的记录 `IErrorInfo` 。
@@ -231,9 +232,9 @@ STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
    DWORD dwDynamicErrorID);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： AddErrorRecord](/previous-versions/windows/desktop/ms725362(v=vs.85)) 。
 
 ## <a name="ierrorrecordsimplgetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a> IErrorRecordsImpl：： GetBasicErrorInfo
 
@@ -246,9 +247,9 @@ STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
    ERRORINFO *pErrorInfo);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) 。
 
 ## <a name="ierrorrecordsimplgetcustomerrorobject"></a><a name="getcustomerrorobject"></a> IErrorRecordsImpl：： GetCustomErrorObject
 
@@ -262,9 +263,9 @@ STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
    IUnknown **ppObject);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) 。
 
 ## <a name="ierrorrecordsimplgeterrorinfo"></a><a name="geterrorinfo"></a> IErrorRecordsImpl：： GetErrorInfo
 
@@ -278,9 +279,9 @@ STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
    IErrorInfo **ppErrorInfo);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) 。
 
 ## <a name="ierrorrecordsimplgeterrorparameters"></a><a name="geterrorparameters"></a> IErrorRecordsImpl：： GetErrorParameters
 
@@ -293,9 +294,9 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
    DISPPARAMS *pdispparams);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) 。
 
 ## <a name="ierrorrecordsimplgetrecordcount"></a><a name="getrecordcount"></a> IErrorRecordsImpl：： GetRecordCount
 
@@ -307,9 +308,9 @@ STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
 STDMETHOD(GetRecordCount )(ULONG *pcRecords);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[IErrorRecords：： GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [IErrorRecords：： GetRecordCount](/previous-versions/windows/desktop/ms722724(v=vs.85)) 。
 
 ## <a name="ierrorrecordsimplm_rgerrors"></a><a name="rgerrors"></a> IErrorRecordsImpl：： m_rgErrors
 

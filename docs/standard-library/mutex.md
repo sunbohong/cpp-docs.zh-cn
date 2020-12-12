@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： &lt; 互斥体&gt;
 title: '&lt;mutex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: d5ff6f2a81a5caa564792e2c0cb43b7722c3e1dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b04b62629253e725e650009f373702f907b9116a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338248"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -24,12 +25,12 @@ ms.locfileid: "88838540"
 
 **命名空间:** std
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 > [!NOTE]
-> 在使用 **/clr**编译的代码中，此标头被阻止。
+> 在使用 **/clr** 编译的代码中，此标头被阻止。
 
-类 `mutex` 和 `recursive_mutex` 是互斥体类型**。 互斥体类型的默认构造函数和析构函数不会引发异常。 当多个线程尝试锁定同一对象时，这些对象有方法实现互相排斥。 具体而言，互斥体类型包含的方法有 `lock`、`try_lock` 和 `unlock`：
+类 `mutex` 和 `recursive_mutex` 是互斥体类型。 互斥体类型的默认构造函数和析构函数不会引发异常。 当多个线程尝试锁定同一对象时，这些对象有方法实现互相排斥。 具体而言，互斥体类型包含的方法有 `lock`、`try_lock` 和 `unlock`：
 
 - `lock` 方法是阻止调用线程，直到线程获取互斥体的所有权。 忽略其返回值。
 
@@ -39,19 +40,19 @@ ms.locfileid: "88838540"
 
 可以使用互斥体类型作为类型参数来对模板 `lock_guard` 和 `unique_lock` 进行实例化。 可以将这些类型的对象作为 `Lock` 自变量以用于模板 [condition_variable_any](../standard-library/condition-variable-any-class.md) 中的等待成员函数。
 
-定时互斥体类型** 满足互斥体类型的需求。 此外，它还具有 `try_lock_for` 和 `try_lock_until` 方法，这些方法必须可使用一个参数进行调用，并且必须返回可转换为的类型 **`bool`** 。 定时互斥体类型可使用其他自变量来定义这些函数，前提是这些其他自变量都具有默认值。
+定时互斥体类型满足互斥体类型的需求。 此外，它还具有 `try_lock_for` 和 `try_lock_until` 方法，这些方法必须可使用一个参数进行调用，并且必须返回可转换为的类型 **`bool`** 。 定时互斥体类型可使用其他自变量来定义这些函数，前提是这些其他自变量都具有默认值。
 
 - `try_lock_for` 方法必须可使用一个自变量 `Rel_time` 进行调用，该自变量的类型是 [chrono::duration](../standard-library/duration-class.md) 的实例化。 此方法尝试获取互斥体的所有权，但无论成功与否，都会在 `Rel_time` 指定的时间内返回。 如果方法获取所有权，则返回值将转换为 **`true`** ; 否则，返回值将转换为 **`false`** 。
 
 - `try_lock_until` 方法必须可使用一个自变量 `Abs_time` 进行调用，该自变量的类型是 [chrono::time_point](../standard-library/time-point-class.md) 的实例化。 此方法尝试获取互斥体的所有权，但无论成功与否，都会在不迟于 `Abs_time` 指定的时间内返回。 如果方法获取所有权，则返回值将转换为 **`true`** ; 否则，返回值将转换为 **`false`** 。
 
-互斥体类型也称为可锁定类型**。 如果未提供成员函数 `try_lock`，则为基本可锁定类型**。 定时互斥体类型也称为定时可锁定类型**。
+互斥体类型也称为可锁定类型。 如果未提供成员函数 `try_lock`，则为基本可锁定类型。 定时互斥体类型也称为定时可锁定类型。
 
 ## <a name="members"></a>成员
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[lock_guard 类](../standard-library/lock-guard-class.md)|表示可进行实例化以创建其析构函数解锁 `mutex` 的对象的模板。|
 |[mutex 类 (c + + 标准库) ](../standard-library/mutex-class-stl.md)|表示互斥体类型。 使用此类型的对象以在程序内强制实现互相排斥。|
@@ -63,7 +64,7 @@ ms.locfileid: "88838540"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|提供在执行期间只调用一次指定的可调用对象的机制。|
 |[lock](../standard-library/mutex-functions.md#lock)|尝试在不死锁的情况下锁定所有自变量。|
@@ -72,7 +73,7 @@ ms.locfileid: "88838540"
 
 ### <a name="structs"></a>结构
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[adopt_lock_t 结构](../standard-library/adopt-lock-t-structure.md)|表示用于定义 `adopt_lock` 的类型。|
 |[defer_lock_t 结构](../standard-library/defer-lock-t-structure.md)|表示定义用于选择 `unique_lock` 的重载构造函数之一的 `defer_lock` 对象的类型。|
@@ -81,12 +82,12 @@ ms.locfileid: "88838540"
 
 ### <a name="variables"></a>变量
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|表示可传递给 `lock_guard` 和 `unique_lock` 的构造函数，以指示同样传递给该构造函数的互斥体对象已锁定的对象。|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数不应锁定同样传递给它的互斥体对象。|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|表示可以传递给 `unique_lock` 的构造函数的对象，以指示该构造函数应尝试在不阻止的情况下解锁同样传递给它的 `mutex`。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

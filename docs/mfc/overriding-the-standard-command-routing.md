@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：重写标准命令传送
 title: 重写标准命令传送
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
-ms.openlocfilehash: 680b185f8d68a834862bc0fe14bf6e7984effd65
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5241e767beee85f92875128cc5ebccd1a23477f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617727"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97205988"
 ---
 # <a name="overriding-the-standard-command-routing"></a>重写标准命令传送
 
@@ -22,8 +23,8 @@ ms.locfileid: "84617727"
 
 - 在新的非默认对象或它可能依次将命令传递到的命令目标中。
 
-如果您将某个新的对象插入路由，则其类必须是命令目标类。 在 `OnCmdMsg` 的重写版本中，请确保调用您要重写的版本。 有关示例，请参阅 MFC 参考中的类的[OnCmdMsg](reference/ccmdtarget-class.md#oncmdmsg)成员函数 `CCmdTarget` ，以及此类类中的*MFC Reference* `CView` 和和 `CDocument` 中提供的版本。
+如果您将某个新的对象插入路由，则其类必须是命令目标类。 在 `OnCmdMsg` 的重写版本中，请确保调用您要重写的版本。 有关示例，请参阅 MFC 参考中的类的[OnCmdMsg](reference/ccmdtarget-class.md#oncmdmsg)成员函数 `CCmdTarget` ，以及此类类中的 `CView` 和和 `CDocument` 中提供的版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [框架如何调用处理程序](how-the-framework-calls-a-handler.md)

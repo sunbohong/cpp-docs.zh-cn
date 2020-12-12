@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __interface
 title: __interface
 ms.date: 05/07/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 9ca13ed91601fa3a64071304c14d483e84c314a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 03ce2b6feb276ed90c3b8855b375a9240e061bba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97291982"
 ---
 # <a name="__interface"></a>__interface
 
@@ -39,7 +40,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>备注
 
-可以使用这些规则实现 c + +[类](../cpp/class-cpp.md)或[结构](../cpp/struct-cpp.md)，但强制执行这些规则 **`__interface`** 。
+可以使用这些规则实现 c + + [类](../cpp/class-cpp.md) 或 [结构](../cpp/struct-cpp.md) ，但强制执行这些规则 **`__interface`** 。
 
 例如，以下是示例接口定义：
 
@@ -50,7 +51,7 @@ __interface IMyInterface {
 };
 ```
 
-有关托管接口的信息，请参阅[接口类](../extensions/interface-class-cpp-component-extensions.md)。
+有关托管接口的信息，请参阅 [接口类](../extensions/interface-class-cpp-component-extensions.md)。
 
 请注意，您无需显式指示 `CommitX` 和 `get_X` 函数是纯虚函数。 第一个函数的等效声明为：
 
@@ -58,7 +59,7 @@ __interface IMyInterface {
 virtual HRESULT CommitX() = 0;
 ```
 
-**`__interface`** 表示[novtable](../cpp/novtable.md) **`__declspec`** 修饰符。
+**`__interface`** 表示 [novtable](../cpp/novtable.md) **`__declspec`** 修饰符。
 
 ## <a name="example"></a>示例
 

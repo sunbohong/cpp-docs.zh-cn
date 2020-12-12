@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：复杂 &lt; 双精度&gt;
 title: complex&lt;double&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: b9bf4780dd78800653804762301b36ff6bb30a92
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9238e71fcdd70576276eb1ba429a48eeec954601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97325031"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
@@ -34,7 +35,7 @@ constexpr explicit complex(const complex<long double>& complexNum);
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *RealVal*\
 **`double`** 正在构造的复数的实部的类型值。
@@ -53,7 +54,7 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 类模板复杂的类模板的显式专用化只与它所 **`double`** 定义的构造函数中的类模板不同。 允许从到的转换是 **`float`** **`double`** 隐式的，但从到的 **`long double`** 转换 **`double`** 是必需的 **`explicit`** 。 使用 **`explicit`** 赋值语法将规则用于类型转换的启动。
 
-有关类模板的详细信息 `complex` ，请参阅[complex 类](../standard-library/complex-class.md)。 有关类模板的成员列表 `complex` ，请参见。
+有关类模板的详细信息 `complex` ，请参阅 [complex 类](../standard-library/complex-class.md)。 有关类模板的成员列表 `complex` ，请参见。
 
 ## <a name="example"></a>示例
 
@@ -112,11 +113,11 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="requirements"></a>要求
 
-**标头**：\<complex>
+**标头**： \<complex>
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [complex 类](../standard-library/complex-class.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
