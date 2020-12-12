@@ -1,4 +1,5 @@
 ---
+description: '详细了解：平台、默认和 cli 命名空间 (c + +/CLI 和 c + +/CX) '
 title: 平台默认 cli 命名空间（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: df699b12404d9de1a9acaae6e9dc8c00fd2f15df
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b4b47a1568b1a137bc49a09b8b50feb8ec3a76b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87195351"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185669"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>平台默认 cli 命名空间（C++/CLI 和 C++/CX）
 
@@ -42,15 +43,15 @@ using namespace cli;
 
 ### <a name="remarks"></a>备注
 
-C++/CLI 支持 cli**** 命名空间。 在编译时 `/clr` ，" **`using`** 语法" 部分中的语句是隐含的。
+C++/CLI 支持 cli 命名空间。 在编译时 `/clr` ，" **`using`** 语法" 部分中的语句是隐含的。
 
-cli**** 命名空间包含以下语言功能：
+cli 命名空间包含以下语言功能：
 
 - [数组](arrays-cpp-component-extensions.md)
 
-- [interior_ptr （c + +/CLI）](interior-ptr-cpp-cli.md)
+- [interior_ptr (c + +/CLI) ](interior-ptr-cpp-cli.md)
 
-- [pin_ptr （c + +/CLI）](pin-ptr-cpp-cli.md)
+- [pin_ptr (c + +/CLI) ](pin-ptr-cpp-cli.md)
 
 - [safe_cast](safe-cast-cpp-component-extensions.md)
 
@@ -60,7 +61,7 @@ cli**** 命名空间包含以下语言功能：
 
 ### <a name="examples"></a>示例
 
-下面的代码示例展示了可以将 cli**** 命名空间中的符号用作代码中的用户定义符号。  不过，一旦这样做，必须显式或隐式限定对同名 cli**** 语言元素的引用。
+下面的代码示例展示了可以将 cli 命名空间中的符号用作代码中的用户定义符号。  不过，一旦这样做，必须显式或隐式限定对同名 cli 语言元素的引用。
 
 ```cpp
 // cli_namespace.cpp
@@ -78,6 +79,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

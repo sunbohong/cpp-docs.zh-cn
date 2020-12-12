@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：确定要重新分发的 Dll
 title: 确定要重新分发的 DLL
 ms.date: 07/15/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 079bfa33ced9f62d6abbccca86435b1b5654a2de
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 016351a6d204c71cfef516862c9b57bebafcc1a2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329399"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>确定要重新分发的 DLL
 
@@ -59,7 +60,7 @@ ms.locfileid: "93344704"
 
 通常情况下，无需重新发布系统 DLL，因为它们是操作系统的一部分。 但可能存在例外，例如，当应用程序将在几个版本的 Microsoft 操作系统上运行时。 在这种情况下，请务必阅读相应的许可条款。 此外，请尝试通过 Microsoft 提供的 Windows 更新、Service Pack 或使用可再发行组件包来升级系统 DLL。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [选择部署方法](choosing-a-deployment-method.md)<br/>
 [部署桌面应用程序](deploying-native-desktop-applications-visual-cpp.md)

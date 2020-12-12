@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息： typeid (c + +/CLI 和 c + +/CX) '
 title: typeid（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: bfb226bc11f0fd7d3feddfb2c50ffe1aa6311d3d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0452de57b93eb5d55bed34fc1f9745280a6b6184
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500380"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185656"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid（C++/CLI 和 C++/CX）
 
@@ -27,7 +28,7 @@ ms.locfileid: "91500380"
 T::typeid
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 类型名称。
@@ -40,12 +41,12 @@ T::typeid
 Platform::Type^ type = T::typeid;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 类型名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在 C++/CX 中，typeid 返回根据运行时类型信息构造的 [Platform::Type](../cppcx/platform-type-class.md)。
 
@@ -66,7 +67,7 @@ type::typeid
 type<br/>
 要为其获取 `System::Type` 对象的类型（抽象声明符）的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **`typeid`** 用于 <xref:System.Type> 在编译时获取类型的。
 
@@ -74,7 +75,7 @@ type<br/>
 
 **`typeid`** 必须能够在编译时 (类型) 计算类型名称，而 GetType 计算在运行时返回的类型。
 
-**`typeid`** 可以采用本机类型名称或公共语言运行时别名作为本机类型名称;有关详细信息，请参阅 c + [+/cli)  (.NET Framework 等效 ](../dotnet/managed-types-cpp-cli.md#dotnet) 项。
+**`typeid`** 可以采用本机类型名称或公共语言运行时别名作为本机类型名称;有关详细信息，请参阅 c + [+/cli)  (.NET Framework 等效](../dotnet/managed-types-cpp-cli.md#dotnet) 项。
 
 **`typeid`** 还适用于本机类型，但它仍返回 `System::Type` 。  若要获取 type_info 结构，请使用[ `typeid` 运算符](../cpp/typeid-operator.md)。
 
