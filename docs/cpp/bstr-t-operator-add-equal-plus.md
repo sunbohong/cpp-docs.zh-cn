@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _bstr_t：： operator + =、+
 title: _bstr_t::operator +=, +
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - += operator [C++], appending strings
 - + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
-ms.openlocfilehash: b9eddca85d66f4978e1b33299ca655cd880cf45e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e3ae71a3a43e189251ac0ddaf77572656a031aaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308804"
 ---
 # <a name="_bstr_toperator--"></a>_bstr_t::operator +=, +
 
@@ -35,7 +36,7 @@ friend _bstr_t operator+( const wchar_t* s3, const _bstr_t& s1);
 s1<br/>
 `_bstr_t` 对象。
 
-s2<br/>
+*s2*<br/>
 多字节字符串。
 
 *s3*<br/>
@@ -45,16 +46,16 @@ s2<br/>
 
 以下运算符将执行字符串串联：
 
-- **operator + = （** *s1* **）** 将*s1*的封装 `BSTR` 中的字符追加到该对象的封装 `BSTR`的末尾。
+- **operator + = (** *s1* **)** 将封装的 s1 中的字符追加 `BSTR` 到该对象的封装末尾 `BSTR` 。    
 
-- **operator + （** *s1* **）** 返回通过将此对象的 `BSTR` 与*s1*进行连接而形成的新 `_bstr_t`。
+- **operator + (** *s1* **)** 返回一个新 `_bstr_t` 的，它通过将此对象 `BSTR` 与 *s1* 的连接来形成。    
 
-- **operator + （**  *s2*  **&#124;**  *s1*  **）** 返回一个新的 `_bstr_t`，该通过将多字节字符串*s2*连接起来（转换为 Unicode），并将 `BSTR` 封装在*s1*中形成。
+- **operator + (** *s2* **&#124;** *s1* **)** 返回一个新 `_bstr_t` 的，它通过将多字节字符串 *s2*（转换为 Unicode）连接到 `BSTR` *s1* 中封装的来形成。        
 
-- **operator + （** *s3* **，** *s1* **）** 返回一个新的 `_bstr_t`，通过将 Unicode 字符串*s3*与*s1*中封装的 `BSTR` 连接起来形成。
+- **operator + (** *s3* **，***s1* **)** 返回一个新 `_bstr_t` 的，它通过将 Unicode 字符串 *s3* 与 `BSTR` *s1* 中封装的连接在一起形成。      
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_bstr_t 类](../cpp/bstr-t-class.md)

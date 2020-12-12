@@ -1,4 +1,5 @@
 ---
+description: 了解更多：强制转换
 title: 强制转换
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: bb06db3af6aee031b6cb2d69b38a9404304420fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0850b20db0e3f951414ba2b1d480cdcf43fb971f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308635"
 ---
 # <a name="casting"></a>强制转换
 
@@ -28,14 +29,14 @@ ms.locfileid: "80190117"
 
 如下图所示，可对类型为 `C` 的对象进行可视化。
 
-![类 C 与子&#45;对象 B 和 A](../cpp/media/vc38zz2.gif "类 C 与子&#45;对象 B 和 A") <br/>
+![类 C，具有子&#45;对象 B 和 A](../cpp/media/vc38zz2.gif "类 C，具有子&#45;对象 B 和 A") <br/>
 具有子对象 B 和 A 的类 C
 
 给定 `C` 类的一个实例，存在 `B` 子对象和 `A` 子对象。 包括 `C` 和 `A` 子对象的 `B` 实例是“完整对象。”
 
 通过使用运行时类型信息，可以检查指针实际是否指向完整对象，并可以安全转换以指向其层次结构中的另一个对象。 [Dynamic_cast](../cpp/dynamic-cast-operator.md)运算符可用于进行这些类型的强制转换。 它还执行必要的运行时检查以确保操作安全。
 
-对于非多态类型的转换，可以使用[static_cast](../cpp/static-cast-operator.md)运算符（本主题说明静态和动态强制转换转换之间的差异，以及何时适合使用每个转换）。
+对于非多态类型的转换，可以使用 [static_cast](../cpp/static-cast-operator.md) 运算符 (本主题说明静态和动态强制转换之间的差异，以及何时适合使用每个) 。
 
 本部分涵盖了以下主题：
 
@@ -43,6 +44,6 @@ ms.locfileid: "80190117"
 
 - [运行时类型信息](../cpp/run-time-type-information.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [表达式](../cpp/expressions-cpp.md)

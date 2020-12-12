@@ -1,4 +1,5 @@
 ---
+description: 了解更多： Platform：： Runtime：： InteropServices 命名空间
 title: Platform::Runtime::InteropServices 命名空间
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-ms.openlocfilehash: c527c642228d97d8b185e3b97ff38304b09d5769
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 710da76e27f8b1d6460a8f2c9809efff07ce132c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308024"
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices 命名空间
 
@@ -32,12 +33,12 @@ namespace Platform {
 
 |名称|备注|
 |----------|------------|
-|ComInterfaceType|Enumeration — 枚举|
+|ComInterfaceType|枚举|
 |InterfaceTypeAttribute||
-|LayoutKind|Enumeration — 枚举|
+|LayoutKind|枚举|
 |MarshalAsAttribute||
 |StuctLayoutAttribute||
-|UnmanagedType|Enumeration — 枚举|
+|UnmanagedType|枚举|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -45,10 +46,10 @@ namespace Platform {
 
 ### <a name="requirements"></a>要求
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 **命名空间：** Platform::InteropServices
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台命名空间](platform-namespace-c-cx.md)

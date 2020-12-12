@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：： Object 类
 title: Platform::Object 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: dded4602eda9653f50d26ef1b4aae86af96a262b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a190d5a56bb27fb95ac2c2c8bd2ba0e0d0572427
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213029"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308245"
 ---
 # <a name="platformobject-class"></a>Platform::Object 类
 
@@ -33,7 +34,7 @@ public ref class Object : Object
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[Object::Object](#ctor)|初始化该对象类的新实例。|
 
@@ -59,7 +60,7 @@ public ref class Object : Object
 
 **命名空间：** Platform
 
-## <a name="objectequals-method"></a><a name="equals"></a>Object：： Equals 方法
+## <a name="objectequals-method"></a><a name="equals"></a> Object：： Equals 方法
 
 确定指定对象是否等于当前对象。
 
@@ -80,7 +81,7 @@ bool Equals(
 
 **`true`** 如果对象相等，则为; 否则为 **`false`** 。
 
-## <a name="objectgethashcode-method"></a><a name="gethashcode"></a>Object：： GetHashCode 方法
+## <a name="objectgethashcode-method"></a><a name="gethashcode"></a> Object：： GetHashCode 方法
 
 返回此实例的 `IUnknown`* 标识值（如果它是 COM 对象）或计算所得的哈希值（如果它不是 COM 对象）。
 
@@ -96,11 +97,11 @@ public:int GetHashCode();
 
 ### <a name="remarks"></a>备注
 
-可以在映射中使用 GetHashCode 创建对象的键。 您可以通过使用[Object：： Equals](#equals)来比较哈希代码。 如果代码路径极为重要，并且 `GetHashCode` 和 `Equals` 不足够快，则可以下降到基础 COM 层并执行本机 `IUnknown` 指针比较。
+可以在映射中使用 GetHashCode 创建对象的键。 您可以通过使用 [Object：： Equals](#equals)来比较哈希代码。 如果代码路径极为重要，并且 `GetHashCode` 和 `Equals` 不足够快，则可以下降到基础 COM 层并执行本机 `IUnknown` 指针比较。
 
-## <a name="objectgettype-method"></a><a name="gettype"></a>Object：： GetType 方法
+## <a name="objectgettype-method"></a><a name="gettype"></a> Object：： GetType 方法
 
-返回描述对象的运行时类型的[Platform：： Type](../cppcx/platform-type-class.md)对象。
+返回描述对象的运行时类型的 [Platform：： Type](../cppcx/platform-type-class.md) 对象。
 
 ### <a name="syntax"></a>语法
 
@@ -110,21 +111,21 @@ Object::GetType();
 
 ### <a name="property-valuereturn-value"></a>属性值/返回值
 
-描述对象的运行时类型的[Platform：： Type](../cppcx/platform-type-class.md)对象。
+描述对象的运行时类型的 [Platform：： Type](../cppcx/platform-type-class.md) 对象。
 
 ### <a name="remarks"></a>备注
 
-静态[类型：： GetTypeCode](../cppcx/platform-type-class.md#gettypecode)可用于获取表示当前类型的[Platform：： TypeCode 枚举](../cppcx/platform-typecode-enumeration.md)值。 这对于内置类型通常很有用。 任何 ref 类（ [Platform：： String](../cppcx/platform-string-class.md)除外）的类型代码均为 Object （1）。
+静态 [类型：： GetTypeCode](../cppcx/platform-type-class.md#gettypecode) 可用于获取表示当前类型的 [Platform：： TypeCode 枚举](../cppcx/platform-typecode-enumeration.md) 值。 这对于内置类型通常很有用。 任何 ref 类（ [Platform：： String](../cppcx/platform-string-class.md) 除外）的类型代码均为 Object (1) 。
 
-Windows [：： UI：： Xaml：： Interop：： TypeName](/uwp/api/windows.ui.xaml.interop.typename)类在 windows api 中用作在 windows 组件和应用之间传递类型信息的独立于语言的方式。 T[Platform：： Type 类](../cppcx/platform-type-class.md)具有用于在和之间进行转换的运算符 `Type` `TypeName` 。
+Windows [：： UI：： Xaml：： Interop：： TypeName](/uwp/api/windows.ui.xaml.interop.typename) 类在 windows api 中用作在 windows 组件和应用之间传递类型信息的独立于语言的方式。 T[Platform：： Type 类](../cppcx/platform-type-class.md) 具有用于在和之间进行转换的运算符 `Type` `TypeName` 。
 
-使用[typeid](../extensions/typeid-cpp-component-extensions.md)运算符可返回 `Platform::Type` 类名称的对象，例如在 XAML 页面之间导航时：
+使用 [typeid](../extensions/typeid-cpp-component-extensions.md) 运算符可返回 `Platform::Type` 类名称的对象，例如在 XAML 页面之间导航时：
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="objectobject-constructor"></a><a name="ctor"></a>Object：： Object 构造函数
+## <a name="objectobject-constructor"></a><a name="ctor"></a> Object：： Object 构造函数
 
 初始化该对象类的新实例。
 
@@ -134,7 +135,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 public:Object();
 ```
 
-## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a>Object：： ReferenceEquals 方法
+## <a name="objectreferenceequals-method"></a><a name="referenceequals"></a> Object：： ReferenceEquals 方法
 
 确定指定对象实例是否为同一实例。
 
@@ -144,7 +145,7 @@ public:Object();
 public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *obj1*<br/>
 要比较的第一个对象。
@@ -156,7 +157,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 **`true`** 如果两个对象相同，则为; 否则为。否则为 **`false`** 。
 
-## <a name="objecttostring-method-ccx"></a><a name="tostring"></a>Object：： ToString 方法（c + +/CX）
+## <a name="objecttostring-method-ccx"></a><a name="tostring"></a> Object：： ToString 方法 (c + +/CX) 
 
 返回表示当前对象的字符串。
 
@@ -183,7 +184,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)<br/>
 [Platform：： Type 类](platform-type-class.md)<br/>

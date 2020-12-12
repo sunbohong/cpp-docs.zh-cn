@@ -1,25 +1,26 @@
 ---
+description: 了解详细信息：演练：实现先期情况
 title: 演练：实现 Future
 ms.date: 04/25/2019
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-ms.openlocfilehash: 9bf46b7f2a761aaf0c07e1017524c8ddf533aca6
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b2ea0b273f25ce42f8b177ce2d8e4b4aef195109
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309220"
 ---
 # <a name="walkthrough-implementing-futures"></a>演练：实现 Future
 
 本主题演示如何在应用程序中实现先期备货。 本主题演示如何将并发运行时中的现有功能合并到执行更多操作的内容中。
 
 > [!IMPORTANT]
-> 为了便于演示，本主题阐释将来的概念。 如果需要一个计算值以供将来使用的异步任务，建议使用[std：：未来](../../standard-library/future-class.md)或[concurrency：： task](../../parallel/concrt/reference/task-class.md) 。
+> 为了便于演示，本主题阐释将来的概念。 如果需要一个计算值以供将来使用的异步任务，建议使用 [std：：未来](../../standard-library/future-class.md) 或 [concurrency：： task](../../parallel/concrt/reference/task-class.md) 。
 
-*任务*是一种计算，可分解为其他更细化的计算。 *将来*是计算值以供将来使用的异步任务。
+*任务* 是一种计算，可分解为其他更细化的计算。 *将来* 是计算值以供将来使用的异步任务。
 
 为了实现先期，本主题定义 `async_future` 类。 `async_future`类使用并发运行时的以下组件： [Concurrency：： task_group](reference/task-group-class.md)类和[concurrency：： single_assignment](../../parallel/concrt/reference/single-assignment-class.md)类。 `async_future`类使用 `task_group` 类异步计算值，并使用 `single_assignment` 类来存储计算的结果。 类的构造函数 `async_future` 使用计算结果的工作函数，并且 `get` 方法检索结果。
 
@@ -33,7 +34,7 @@ ms.locfileid: "87230293"
 
 [!code-cpp[concrt-futures#3](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_2.cpp)]
 
-1. 在 **`public`** 类的节中 `async_future` ，实现构造函数。 构造函数是一个在计算结果的工作函数中参数化的模板。 构造函数以异步方式在数据成员中执行工作函数 `task_group` ，并使用[concurrency：： send](reference/concurrency-namespace-functions.md#send)函数将结果写入到 `single_assignment` 数据成员。
+1. 在 **`public`** 类的节中 `async_future` ，实现构造函数。 构造函数是一个在计算结果的工作函数中参数化的模板。 构造函数以异步方式在数据成员中执行工作函数 `task_group` ，并使用 [concurrency：： send](reference/concurrency-namespace-functions.md#send) 函数将结果写入到 `single_assignment` 数据成员。
 
 [!code-cpp[concrt-futures#4](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_3.cpp)]
 
@@ -41,7 +42,7 @@ ms.locfileid: "87230293"
 
 [!code-cpp[concrt-futures#5](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_4.cpp)]
 
-1. 在 **`public`** 类的节中 `async_future` ，实现 `get` 方法。 此方法使用[concurrency：： receive](reference/concurrency-namespace-functions.md#receive)函数检索工作函数的结果。
+1. 在 **`public`** 类的节中 `async_future` ，实现 `get` 方法。 此方法使用 [concurrency：： receive](reference/concurrency-namespace-functions.md#receive) 函数检索工作函数的结果。
 
 [!code-cpp[concrt-futures#6](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_5.cpp)]
 
@@ -69,7 +70,7 @@ average:  4981
 
 ## <a name="robust-programming"></a>可靠编程
 
-若要扩展 `async_future` 类以处理由工作函数引发的异常，请修改 `async_future::get` 方法以调用[concurrency：： task_group：： wait](reference/task-group-class.md#wait)方法。 `task_group::wait`方法会引发工作函数生成的任何异常。
+若要扩展 `async_future` 类以处理由工作函数引发的异常，请修改 `async_future::get` 方法以调用 [concurrency：： task_group：： wait](reference/task-group-class.md#wait) 方法。 `task_group::wait`方法会引发工作函数生成的任何异常。
 
 下面的示例演示了类的修改版本 `async_future` 。 `wmain`函数使用 **`try`** - **`catch`** 块来打印对象的结果， `async_future` 或者打印工作函数生成的异常值。
 
@@ -81,7 +82,7 @@ average:  4981
 caught exception: error
 ```
 
-有关并发运行时中的异常处理模型的详细信息，请参阅[异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
+有关并发运行时中的异常处理模型的详细信息，请参阅 [异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
 ## <a name="compiling-the-code"></a>编译代码
 
@@ -89,7 +90,7 @@ caught exception: error
 
 **cl.exe/EHsc 先期备货**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [异常处理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>

@@ -1,5 +1,6 @@
 ---
-title: CMFC颜色拾取器课程
+description: 了解详细信息： CMFCColorPickerCtrl 类
+title: CMFCColorPickerCtrl 类
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
@@ -40,16 +41,16 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e4363c08af86dee96df1492e9a029414d9902435
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752534"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313068"
 ---
-# <a name="cmfccolorpickerctrl-class"></a>CMFC颜色拾取器课程
+# <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 类
 
-类`CMFCColorPickerCtrl`为用于选择颜色的控件提供功能。
+`CMFCColorPickerCtrl`类提供用于选择颜色的控件功能。
 
 ## <a name="syntax"></a>语法
 
@@ -61,57 +62,57 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFC颜色拾取器：：CMFC颜色拾取器](#cmfccolorpickerctrl)|构造 `CMFCColorPickerCtrl` 对象。|
+|[CMFCColorPickerCtrl：： CMFCColorPickerCtrl](#cmfccolorpickerctrl)|构造 `CMFCColorPickerCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFC颜色拾取器：：获取颜色](#getcolor)|检索用户选择的颜色。|
-|[CMFC颜色拾取器：：GetHLS](#gethls)|检索用户选择的颜色的色调、亮度和饱和度值。|
-|[CMFC颜色拾取器：：GetHue](#gethue)|检索用户选择的颜色的色调组件。|
-|[CMFC颜色拾取器：：获取亮度](#getluminance)|检索用户选择的颜色的亮度组件。|
-|[CMFC颜色拾取器：：获取饱和度](#getsaturation)|检索用户选择的颜色的饱和度分量。|
-|[CMFC颜色拾取器：：选择CellHexagon](#selectcellhexagon)|将当前颜色设置为指定 RGB 颜色分量或指定单元格六边形定义的颜色。|
-|[CMFC颜色拾取器：：设置颜色](#setcolor)|将当前颜色设置为指定的 RGB 颜色值。|
-|[CMFC颜色拾取器：：SetHLS](#sethls)|将当前颜色设置为指定的 HLS 颜色值。|
-|[CMFC颜色拾取器：：SetHue](#sethue)|更改当前所选颜色的色调分量。|
-|[CMFC颜色拾取器：：设置亮度](#setluminance)|更改当前所选颜色的亮度分量。|
-|[CMFC颜色拾取器：：设置亮度条宽](#setluminancebarwidth)|设置颜色选取器控件中亮度条的宽度。|
-|[CMFC颜色选取器Ctrl：设置原始颜色](#setoriginalcolor)|设置初始所选颜色。|
-|[CMFC颜色拾取器：：设置调色板](#setpalette)|设置当前调色板。|
-|[CMFC颜色拾取器：：设置饱和度](#setsaturation)|更改当前所选颜色的饱和度分量。|
-|[CMFC颜色拾取器：：设置类型](#settype)|设置要显示的颜色选取器控件的类型。|
+|[CMFCColorPickerCtrl：： GetColor](#getcolor)|检索用户选择的颜色。|
+|[CMFCColorPickerCtrl：： GetHLS](#gethls)|检索用户选择的颜色的色调、亮度和饱和度值。|
+|[CMFCColorPickerCtrl：： GetHue](#gethue)|检索用户选择的颜色的色调部分。|
+|[CMFCColorPickerCtrl：： GetLuminance](#getluminance)|检索用户选择的颜色的亮度部分。|
+|[CMFCColorPickerCtrl：： GetSaturation](#getsaturation)|检索用户选择的颜色的饱和度部分。|
+|[CMFCColorPickerCtrl：： SelectCellHexagon](#selectcellhexagon)|将当前颜色设置为指定的 RGB 颜色分量或指定的单元格六边形定义的颜色。|
+|[CMFCColorPickerCtrl：： SetColor](#setcolor)|将当前颜色设置为指定的 RGB 颜色值。|
+|[CMFCColorPickerCtrl：： SetHLS](#sethls)|将当前颜色设置为指定的 HLS 颜色值。|
+|[CMFCColorPickerCtrl：： SetHue](#sethue)|更改当前选定颜色的色调部分。|
+|[CMFCColorPickerCtrl：： SetLuminance](#setluminance)|更改当前选定颜色的亮度部分。|
+|[CMFCColorPickerCtrl：： SetLuminanceBarWidth](#setluminancebarwidth)|设置颜色选取器控件中亮度栏的宽度。|
+|[CMFCColorPickerCtrl：： SetOriginalColor](#setoriginalcolor)|设置初始选定的颜色。|
+|[CMFCColorPickerCtrl：： SetPalette](#setpalette)|设置当前调色板。|
+|[CMFCColorPickerCtrl：： SetSaturation](#setsaturation)|更改当前选定颜色的饱和度部分。|
+|[CMFCColorPickerCtrl：： SetType](#settype)|设置要显示的颜色选取器控件的类型。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CMFC颜色拾取器：:D生光标](#drawcursor)|显示指向所选颜色的光标之前由框架调用。|
+|[CMFCColorPickerCtrl：:D rawCursor](#drawcursor)|在显示指向选定颜色的光标之前由框架调用。|
 
 ## <a name="remarks"></a>备注
 
-标准颜色是从六边形调色板中选择的，自定义颜色是从亮度条中选择的，其中使用红色/绿色/蓝色表示法或色调/色度/亮度表示法指定颜色。
+标准颜色是从六角调色板中选择的，并且自定义颜色是从亮度栏中选择的，其中颜色是使用红色/绿色/蓝色表示法或色相/satuaration/亮度表示法指定的。
 
-下图描述了多个`CMFCColorPickerCtrl`对象。
+下图描绘了几个 `CMFCColorPickerCtrl` 对象。
 
 ![CMFCColorPickerCtrl 对话框](../../mfc/reference/media/colorpicker.png "CMFCColorPickerCtrl 对话框")
 
-支持`CMFCColorPickerCtrl`两对样式。 HEX 和 HEX_GREYSCALE 样式适用于标准颜色选择。 PICKER 和 LUMINANCE 样式适用于自定义颜色选择。
+`CMFCColorPickerCtrl`支持两对样式。 HEX 和 HEX_GREYSCALE 样式适用于标准颜色选择。 选取器和亮度样式适用于自定义颜色选择。
 
-执行以下步骤将`CMFCColorPickerCtrl`控件合并到对话框中：
+执行以下步骤以将控件合并 `CMFCColorPickerCtrl` 到您的对话框中：
 
-1. 如果使用**ClassWizard，** 请在对话框模板中插入新的按钮控件（因为`CMFCColorPickerCtrl`类是从类继承的）。 `CButton`
+1. 如果使用 **ClassWizard**，请将新的按钮控件插入对话框模板 (因为 `CMFCColorPickerCtrl` 该类继承自 `CButton` 类) 。
 
-1. 将与新按钮控件关联的成员变量插入到对话框类中。 然后将变量类型从`CButton`更改为`CMFCColorPickerCtrl`。
+1. 将与新按钮控件关联的成员变量插入对话框类中。 然后，将变量类型从更改 `CButton` 为 `CMFCColorPickerCtrl` 。
 
-1. 插入`WM_INITDIALOG`对话框类的消息处理程序。 在处理程序中，设置`CMFCColorPickerCtrl`控件的类型、调色板和初始选择颜色。
+1. `WM_INITDIALOG`为对话框类插入消息处理程序。 在处理程序中，设置控件的类型、调色板和初始选定颜色 `CMFCColorPickerCtrl` 。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用`CMFCColorPickerCtrl``CMFCColorPickerCtrl`类中的各种方法配置对象。 该示例演示如何设置选取器控件的类型，以及如何设置其颜色、色调、亮度和饱和度。 该示例是["新控件"示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何 `CMFCColorPickerCtrl` 使用类中的各种方法配置对象 `CMFCColorPickerCtrl` 。 该示例演示如何设置选取器控件的类型，以及如何设置其颜色、色调、亮度和饱和度。 该示例是 [新控件示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]
@@ -130,9 +131,9 @@ class CMFCColorPickerCtrl : public CButton
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxpickerctrl.h
+**标头：** afxcolorpickerctrl
 
-## <a name="cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a>CMFC颜色拾取器：：CMFC颜色拾取器
+## <a name="cmfccolorpickerctrlcmfccolorpickerctrl"></a><a name="cmfccolorpickerctrl"></a> CMFCColorPickerCtrl：： CMFCColorPickerCtrl
 
 构造 `CMFCColorPickerCtrl` 对象。
 
@@ -144,9 +145,9 @@ CMFCColorPickerCtrl();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a>CMFC颜色拾取器：:D生光标
+## <a name="cmfccolorpickerctrldrawcursor"></a><a name="drawcursor"></a> CMFCColorPickerCtrl：:D rawCursor
 
-显示指向所选颜色的光标之前由框架调用。
+在显示指向选定颜色的光标之前由框架调用。
 
 ```
 virtual void DrawCursor(
@@ -154,19 +155,19 @@ virtual void DrawCursor(
     const CRect& rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
-[在]指向设备上下文的指针。
+中指向设备上下文的指针。
 
-*矩形*<br/>
-[在]指定所选颜色周围的矩形区域。
+*rect*<br/>
+中指定围绕选定颜色的矩形区域。
 
 ### <a name="remarks"></a>备注
 
-当您需要更改指向所选颜色的光标的形状时，将重写此方法。
+需要更改指向所选颜色的光标形状时，请重写此方法。
 
-## <a name="cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a>CMFC颜色拾取器：：获取颜色
+## <a name="cmfccolorpickerctrlgetcolor"></a><a name="getcolor"></a> CMFCColorPickerCtrl：： GetColor
 
 检索用户选择的颜色。
 
@@ -176,11 +177,11 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>返回值
 
-所选颜色的 RGB 值。
+选定颜色的 RGB 值。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlgethls"></a><a name="gethls"></a>CMFC颜色拾取器：：GetHLS
+## <a name="cmfccolorpickerctrlgethls"></a><a name="gethls"></a> CMFCColorPickerCtrl：： GetHLS
 
 检索用户选择的颜色的色调、亮度和饱和度值。
 
@@ -191,22 +192,22 @@ void GetHLS(
     double* saturation);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*色调*<br/>
-[出]指向接收色调信息的双型变量的指针。
+*色相*<br/>
+弄一个指针，指向类型为 double 的变量，该变量接收色相信息。
 
-*亮度*<br/>
-[出]指向接收亮度信息的双型变量的指针。
+*基色*<br/>
+弄一个指针，指向用于接收亮度信息的双精度类型的变量。
 
-*饱和*<br/>
-[出]指向接收饱和度信息的双型变量的指针。
+*浓度*<br/>
+弄一个指针，指向类型为 double 的变量，该变量接收饱和度信息。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlgethue"></a><a name="gethue"></a>CMFC颜色拾取器：：GetHue
+## <a name="cmfccolorpickerctrlgethue"></a><a name="gethue"></a> CMFCColorPickerCtrl：： GetHue
 
-检索用户选择的颜色的色调组件。
+检索用户选择的颜色的色调部分。
 
 ```
 double GetHue() const;
@@ -214,13 +215,13 @@ double GetHue() const;
 
 ### <a name="return-value"></a>返回值
 
-所选颜色的色调分量。
+选定颜色的色调部分。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a>CMFC颜色拾取器：：获取亮度
+## <a name="cmfccolorpickerctrlgetluminance"></a><a name="getluminance"></a> CMFCColorPickerCtrl：： GetLuminance
 
-检索用户选择的颜色的亮度组件。
+检索用户选择的颜色的亮度部分。
 
 ```
 double GetLuminance() const;
@@ -228,11 +229,11 @@ double GetLuminance() const;
 
 ### <a name="return-value"></a>返回值
 
-所选颜色的亮度分量。
+选定颜色的亮度分量。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a>CMFC颜色拾取器：：获取饱和度
+## <a name="cmfccolorpickerctrlgetsaturation"></a><a name="getsaturation"></a> CMFCColorPickerCtrl：： GetSaturation
 
 检索用户选择的颜色的饱和度值。
 
@@ -242,13 +243,13 @@ double GetSaturation() const;
 
 ### <a name="return-value"></a>返回值
 
-所选颜色的饱和度分量。
+选定颜色的饱和度部分。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a>CMFC颜色拾取器：：选择CellHexagon
+## <a name="cmfccolorpickerctrlselectcellhexagon"></a><a name="selectcellhexagon"></a> CMFCColorPickerCtrl：： SelectCellHexagon
 
-将当前颜色设置为指定 RGB 颜色分量或指定单元格六边形定义的颜色。
+将当前颜色设置为指定的 RGB 颜色分量或指定的单元格六边形定义的颜色。
 
 ```cpp
 void SelectCellHexagon(
@@ -261,22 +262,22 @@ BOOL SelectCellHexagon(
     int y);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *R*<br/>
-[在]红色组件。
+中红色成分。
 
 *G*<br/>
-[在]绿色组件。
+中绿色颜色部分。
 
 *B*<br/>
-[在]蓝色组件。
+中蓝色颜色组件。
 
 *x*<br/>
-[在]光标的 x 坐标，它指向单元格六边形。
+中光标的 x 坐标，它指向一个单元格的六边形。
 
-*Y*<br/>
-[在]光标的 y 坐标，它指向单元格六边形。
+*y*<br/>
+中光标的 y 坐标，它指向一个单元格的六边形。
 
 ### <a name="return-value"></a>返回值
 
@@ -284,11 +285,11 @@ BOOL SelectCellHexagon(
 
 ### <a name="remarks"></a>备注
 
-此方法的第一个重载将当前颜色设置为对应于颜色选择控件指定的红色、绿色和蓝色分量的颜色。
+此方法的第一个重载将当前颜色设置为与颜色选择控件的指定红色、绿色和蓝色分量相对应的颜色。
 
-此方法的第二个重载将当前颜色设置为由指定的光标位置指向的单元格六边形的颜色。
+此方法的第二个重载将当前颜色设置为指定光标位置指向的单元格六边形的颜色。
 
-## <a name="cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a>CMFC颜色拾取器：：设置颜色
+## <a name="cmfccolorpickerctrlsetcolor"></a><a name="setcolor"></a> CMFCColorPickerCtrl：： SetColor
 
 将当前颜色设置为指定的 RGB 颜色值。
 
@@ -296,14 +297,14 @@ BOOL SelectCellHexagon(
 void SetColor(COLORREF Color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*彩色*<br/>
-[在]RGB 颜色值。
+*颜色*<br/>
+中RGB 颜色值。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlsethls"></a><a name="sethls"></a>CMFC颜色拾取器：：SetHLS
+## <a name="cmfccolorpickerctrlsethls"></a><a name="sethls"></a> CMFCColorPickerCtrl：： SetHLS
 
 将当前颜色设置为指定的 HLS 颜色值。
 
@@ -315,72 +316,72 @@ void SetHLS(
     BOOL bInvalidate=TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*色调*<br/>
-[在]色调值。
+*色相*<br/>
+中一个色调值。
 
-*亮度*<br/>
-[在]亮度值。
+*基色*<br/>
+中亮度值。
 
-*饱和*<br/>
-[在]饱和度值。
+*浓度*<br/>
+中饱和度值。
 
-*b 无效*<br/>
-[在]TRUE 强制窗口立即更新到新颜色;否则，FALSE。 默认值为 TRUE。
+*bInvalidate*<br/>
+中若要强制窗口立即更新为新颜色，则为 TRUE;否则为 FALSE。 默认值为 TRUE。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlsethue"></a><a name="sethue"></a>CMFC颜色拾取器：：SetHue
+## <a name="cmfccolorpickerctrlsethue"></a><a name="sethue"></a> CMFCColorPickerCtrl：： SetHue
 
-更改当前所选颜色的色调。
+更改当前选定颜色的色调。
 
 ```cpp
 void SetHue(double Hue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Hue*<br/>
-[在]色调值。
+中一个色调值。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a>CMFC颜色拾取器：：设置亮度
+## <a name="cmfccolorpickerctrlsetluminance"></a><a name="setluminance"></a> CMFCColorPickerCtrl：： SetLuminance
 
-更改当前所选颜色的亮度。
+更改当前选定颜色的亮度。
 
 ```cpp
 void SetLuminance(double Luminance);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *亮度*<br/>
-[在]亮度值。
+中亮度值。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a>CMFC颜色拾取器：：设置亮度条宽
+## <a name="cmfccolorpickerctrlsetluminancebarwidth"></a><a name="setluminancebarwidth"></a> CMFCColorPickerCtrl：： SetLuminanceBarWidth
 
-设置颜色选取器控件中亮度条的宽度。
+设置颜色选取器控件中亮度栏的宽度。
 
 ```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *w*<br/>
-[在]以像素为单位的亮度条的宽度。
+中亮度栏的宽度（以像素为单位）。
 
 ### <a name="remarks"></a>备注
 
-使用此方法可以调整亮度条的大小，亮度条位于颜色选取器控件的 **"自定义"** 选项卡上。 *w*参数指定亮度条的新宽度。 如果宽度值超过工作区宽度的四分之三，则忽略该值。
+使用此方法可以调整亮度栏（位于颜色选取器控件的 " **自定义** " 选项卡上）的大小。 *W* 参数指定亮度栏的新宽度。 如果 width 值超过了工作区宽度的四分之三，则将其忽略。
 
-## <a name="cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a>CMFC颜色选取器Ctrl：设置原始颜色
+## <a name="cmfccolorpickerctrlsetoriginalcolor"></a><a name="setoriginalcolor"></a> CMFCColorPickerCtrl：： SetOriginalColor
 
-设置初始所选颜色。
+设置初始选定的颜色。
 
 ```cpp
 void SetOriginalColor(COLORREF ref);
@@ -389,13 +390,13 @@ void SetOriginalColor(COLORREF ref);
 ### <a name="parameters"></a>参数
 
 *ref*<br/>
-[在]RGB 颜色值。
+中RGB 颜色值。
 
 ### <a name="remarks"></a>备注
 
-在颜色选取器控件初始化时调用此方法。
+在对颜色选取器控件进行初始化时调用此方法。
 
-## <a name="cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a>CMFC颜色拾取器：：设置调色板
+## <a name="cmfccolorpickerctrlsetpalette"></a><a name="setpalette"></a> CMFCColorPickerCtrl：： SetPalette
 
 设置当前调色板。
 
@@ -403,31 +404,31 @@ void SetOriginalColor(COLORREF ref);
 void SetPalette(CPalette* pPalette);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pPalette*<br/>
-[在]指向调色板的指针。
+中指向调色板的指针。
 
 ### <a name="remarks"></a>备注
 
-调色板定义颜色选取器控件中显示的颜色数组。
+调色板定义颜色选取器控件中显示的颜色的数组。
 
-## <a name="cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a>CMFC颜色拾取器：：设置饱和度
+## <a name="cmfccolorpickerctrlsetsaturation"></a><a name="setsaturation"></a> CMFCColorPickerCtrl：： SetSaturation
 
-更改当前所选颜色的饱和度。
+更改当前选定颜色的饱和度。
 
 ```cpp
 void SetSaturation(double Saturation);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *饱和度*<br/>
-[在]饱和度值。
+中饱和度值。
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfccolorpickerctrlsettype"></a><a name="settype"></a>CMFC颜色拾取器：：设置类型
+## <a name="cmfccolorpickerctrlsettype"></a><a name="settype"></a> CMFCColorPickerCtrl：： SetType
 
 设置要显示的颜色选取器控件的类型。
 
@@ -435,19 +436,19 @@ void SetSaturation(double Saturation);
 void SetType(COLORTYPE colorType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*颜色类型*<br/>
-[在]颜色选取器控件类型。
+*colorType*<br/>
+中颜色选取器控件类型。
 
-类型由`CMFCColorPickerCtrl::COLORTYPE`枚举定义。 可能的类型包括亮度、拾取器、HEX 和HEX_GREYSCALE。 默认类型为"选取器"。
+类型由 `CMFCColorPickerCtrl::COLORTYPE` 枚举定义。 可能的类型包括亮度、选取器、HEX 和 HEX_GREYSCALE。 默认类型为 "选择器"。
 
 ### <a name="remarks"></a>备注
 
-要指定颜色选取器控件类型，请在创建 Windows 控件之前调用此方法。
+若要指定颜色选取器控件类型，请在创建 Windows 控件之前调用此方法。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCColor对话类](../../mfc/reference/cmfccolordialog-class.md)
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCColorDialog 类](../../mfc/reference/cmfccolordialog-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： STAThreadAttribute 类
 title: Platform::STAThreadAttribute 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-ms.openlocfilehash: 6a8220d8cddca29e621b21fc56966efdb42cb32e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1c235ef9a171e650c960df184b081c4b6511cf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307998"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 类
 
@@ -34,11 +35,11 @@ public ref class STAThreadAttribute sealed : Attribute
 
 |“属性”|描述|
 |----------|-----------------|
-|[STAThreadAttribute 构造函数 1](#ctor)|初始化此类的新实例。|
+|[STAThreadAttribute 构造函数 1](#ctor)|初始化类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-STAThreadAttribute 属性继承自[Platform：： Object 类](../cppcx/platform-object-class.md)。 STAThreadAttribute 还会重载或具有以下成员：
+STAThreadAttribute 属性继承自 [Platform：： Object 类](../cppcx/platform-object-class.md)。 STAThreadAttribute 还会重载或具有以下成员：
 
 |名称|描述|
 |----------|-----------------|
@@ -66,7 +67,7 @@ STAThreadAttribute 属性继承自[Platform：： Object 类](../cppcx/platform-
 public:STAThreadAttribute();
 ```
 
-## <a name="stathreadattributeequals"></a><a name="equals"></a>STAThreadAttribute：： Equals
+## <a name="stathreadattributeequals"></a><a name="equals"></a> STAThreadAttribute：： Equals
 
 确定指定对象是否等于当前对象。
 
@@ -85,7 +86,7 @@ public:virtual override bool Equals( Object^ obj );
 
 **`true`** 如果对象相等，则为; 否则为。否则为 **`false`** 。
 
-## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a>STAThreadAttribute：： GetHashCode
+## <a name="stathreadattributegethashcode"></a><a name="gethashcode"></a> STAThreadAttribute：： GetHashCode
 
 返回此实例的哈希代码。
 
@@ -99,7 +100,7 @@ public:int GetHashCode();
 
 此实例的哈希代码。
 
-## <a name="stathreadattributetostring"></a><a name="tostring"></a>STAThreadAttribute：： ToString
+## <a name="stathreadattributetostring"></a><a name="tostring"></a> STAThreadAttribute：： ToString
 
 返回表示当前对象的字符串。
 
@@ -113,6 +114,6 @@ public:String^ ToString();
 
 表示当前对象的字符串。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)

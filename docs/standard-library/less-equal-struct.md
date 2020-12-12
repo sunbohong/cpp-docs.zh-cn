@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： less_equal 结构
 title: less_equal 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-ms.openlocfilehash: 67a686b139ae4abbf25a42a994cceaba008decf5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b2d715971c5278629a6ea812c5a9c199f00c4a07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312886"
 ---
-# <a name="lessequal-struct"></a>less_equal 结构
+# <a name="less_equal-struct"></a>less_equal 结构
 
-执行不太比-或者-等于运算的二元谓词 (`operator<=`) 对其自变量。
+一个二元谓词，该谓词对其参数执行 () 的小于或等于运算 `operator<=` 。
 
 ## <a name="syntax"></a>语法
 
@@ -37,16 +38,16 @@ struct less_equal<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持 `operator<=` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-小于或等于运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+*左中*\
+小于或等于运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*右侧*\
-小于或等于运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+*然后*\
+小于或等于运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 
@@ -54,7 +55,7 @@ struct less_equal<void>
 
 ## <a name="remarks"></a>备注
 
-二元谓词`less_equal` < `Type`> 提供严格弱排序的一组类型的元素值*类型*向等价类，当且仅当满足此类型的标准数学正在如此进行排序的要求。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
+`less_equal` < `Type` 当且仅当此类型满足标准数学要求以便进行排序时，二进制谓词> 提供一组类型为 *type* 类型的元素值到等效类的严格弱排序。 任何指针类型的专用化都会产生元素的全序，所有不同值的元素都会相对于彼此进行排序。
 
 ## <a name="example"></a>示例
 

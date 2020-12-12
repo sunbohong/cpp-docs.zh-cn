@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： ObjectDisposedException 类
 title: Platform::ObjectDisposedException 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ObjectDisposedException
 ms.assetid: 68506fe4-d09c-4407-999f-1e3edb261d41
-ms.openlocfilehash: 566f8a05a6b81adb78113dd4ba0fb1c47fc65a2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7bbab72a8d641a4fdef0fed837ffcc127eea7d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183127"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308232"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException 类
 
@@ -37,8 +38,8 @@ public ref class ObjectDisposedException : COMException,    IException,    IPrin
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 
-[Platform::COMException 类](../cppcx/platform-comexception-class.md)
+[Platform：： COMException 类](../cppcx/platform-comexception-class.md)

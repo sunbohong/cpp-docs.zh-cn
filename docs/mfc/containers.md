@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：容器
 title: 容器
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 20f31535f055312de3da05f5fa3e469183941f25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84620639"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310273"
 ---
 # <a name="containers"></a>容器
 
@@ -31,9 +32,9 @@ ms.locfileid: "84620639"
 
 [容器的高级功能](containers-advanced-features.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE](ole-in-mfc.md)<br/>
 [服务器](servers.md)<br/>
-[激活](activation-cpp.md)<br/>
-[菜单和资源（OLE）](menus-and-resources-ole.md)
+[启动](activation-cpp.md)<br/>
+[OLE)  (菜单和资源 ](menus-and-resources-ole.md)

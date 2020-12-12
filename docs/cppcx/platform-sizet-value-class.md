@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： SizeT 值类
 title: Platform::SizeT 值类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ebcca27a94d23082374daafaa9fd7db180955a30
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308011"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 值类
 
@@ -26,21 +27,21 @@ public ref class SizeT sealed : ValueType
 
 ### <a name="members"></a>成员
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |[SizeT::SizeT 构造函数](#ctor)|使用指定的值初始化类的新实例。|
 
 ### <a name="requirements"></a>要求
 
-**受支持的最小客户端：** 视窗 8
+**支持的最低客户端：** Windows 8
 
-**受支持的服务器最少：** 视窗服务器 2012
+**支持的最低服务器：** Windows Server 2012
 
 **命名空间：** Platform
 
-**元数据：** 平台.winmd
+**Metadata：** platform.string
 
-## <a name="sizetsizet-constructor"></a><a name="ctor"></a>大小T：：SizeT构造函数
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a> SizeT：： SizeT 构造函数
 
 使用指定值初始化 SizeT 的新实例。
 
@@ -50,14 +51,14 @@ public ref class SizeT sealed : ValueType
 SizeT( uint32 value1 );   SizeT( void* value2 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*值1*<br/>
+*value1*<br/>
 32 位无符号值。
 
-*值2*<br/>
+*value2*<br/>
 指向 32 位无符号值的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Platform 命名空间](../cppcx/platform-namespace-c-cx.md)

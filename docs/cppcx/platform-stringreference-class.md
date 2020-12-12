@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： StringReference 类
 title: Platform::StringReference 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5c211776bccbd3ba2fedaf769502f7dad71b6eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97307946"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 类
 
@@ -32,37 +33,37 @@ class StringReference
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[字符串引用：：字符串引用](#ctor)|两个用于创建 `StringReference`实例的构造函数。|
+|[StringReference：： StringReference](#ctor)|两个用于创建 `StringReference`实例的构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[字符串参考：:D](#data)|返回 char16 值数组形式的字符串数据。|
-|[字符串参考：长度](#length)|返回字符串中的字符数。|
-|[字符串参考：：获取HSTRING](#gethstring)|返回 HSTRING 形式的字符串数据。|
-|[字符串引用：：获取String](#getstring)|返回 `Platform::String^`形式的字符串数据。|
+|[StringReference：:D ata](#data)|返回 char16 值数组形式的字符串数据。|
+|[StringReference：： Length](#length)|返回字符串中的字符数。|
+|[StringReference：： GetHSTRING](#gethstring)|返回 HSTRING 形式的字符串数据。|
+|[StringReference：： GetString](#getstring)|返回 `Platform::String^`形式的字符串数据。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[字符串参考：：运算符*](#operator-assign)|将 `StringReference` 分配给新 `StringReference` 实例。|
-|[字符串引用：：运算符（）](#operator-call)|将 `StringReference` 转换为 `Platform::String^`。|
+|[StringReference：： operator =](#operator-assign)|将 `StringReference` 分配给新 `StringReference` 实例。|
+|[StringReference：： operator ( # B1 ](#operator-call)|将 `StringReference` 转换为 `Platform::String^`。|
 
 ### <a name="requirements"></a>要求
 
-**受支持的最小客户端：** 视窗 8
+**支持的最低客户端：** Windows 8
 
-**受支持的服务器最少：** 视窗服务器 2012
+**支持的最低服务器：** Windows Server 2012
 
 **命名空间：** Platform
 
 **标头：** vccorlib.h
 
-## <a name="stringreferencedata-method"></a><a name="data"></a>字符串参考：:Data 方法
+## <a name="stringreferencedata-method"></a><a name="data"></a> StringReference：:D ata 方法
 
 以 char16 值数组形式返回此 `StringReference` 的内容。
 
@@ -76,7 +77,7 @@ const ::default::char16 * Data() const;
 
 char16 UNICODE 文本字符的数组。
 
-## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>字符串引用：getHSTRING 方法
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a> StringReference：： GetHSTRING 方法
 
 以 `__abi_HSTRING` 形式返回字符串内容。
 
@@ -92,7 +93,7 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>字符串引用：：获取字符串方法
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a> StringReference：： GetString 方法
 
 以 `Platform::String^` 形式返回字符串内容。
 
@@ -107,7 +108,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 一个包含字符串数据的 `Platform::String^`。
 
-## <a name="stringreferencelength-method"></a><a name="length"></a>字符串引用：长度方法
+## <a name="stringreferencelength-method"></a><a name="length"></a> StringReference：： Length 方法
 
 返回字符串中的字符数。
 
@@ -123,7 +124,7 @@ unsigned int Length() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>字符串参考：：：运算符= 运算符
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a> StringReference：： operator = 运算符
 
 将指定对象分配给当前 `StringReference` 对象。
 
@@ -134,7 +135,7 @@ StringReference& operator=(const StringReference& __fstrArg);
 StringReference& operator=(const ::default::char16* __strArg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *__fstrArg*<br/>
 用于初始化当前 `StringReference` 对象的 `StringReference` 对象的地址。
@@ -148,9 +149,9 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="remarks"></a>备注
 
-因为它是`StringReference`标准C++类，而不是 ref 类，所以它不出现在**对象浏览器**中。
+由于 `StringReference` 是标准 c + + 类，而不是 ref 类，因此它不会显示在 **对象浏览器** 中。
 
-## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>字符串参考：：运算符（） 运算符
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a> StringReference：： operator ( # A1 运算符
 
 将 `StringReference` 对象转换为 `Platform::String^` 对象。
 
@@ -165,7 +166,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 `Platform::String` 类型的对象的句柄。
 
-## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>字符串引用：：字符串引用构造函数
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a> StringReference：： StringReference 构造函数
 
 初始化 `StringReference` 类的新实例。
 
@@ -178,7 +179,7 @@ StringReference(const ::default::char16* __strArg);
 StringReference(const ::default::char16* __strArg, size_t __lenArg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *__fstrArg*<br/>
 其数据用于初始化新实例的 `StringReference`。
@@ -193,6 +194,6 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 
 此构造函数的第一个版本是默认构造函数。 第二个版本从 `StringReference` 参数指定的对象初始化新 `__fstrArg` 实例类。 第三和第四个重载从 char16 值数组初始化新 `StringReference` 实例。 char16 表示 16 位 UNICODE 文本字符。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[平台：字符串引用类](../cppcx/platform-stringreference-class.md)
+[Platform：： StringReference 类](../cppcx/platform-stringreference-class.md)

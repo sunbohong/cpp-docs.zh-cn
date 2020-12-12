@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： MTAThreadAttribute 类
 title: Platform::MTAThreadAttribute 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-ms.openlocfilehash: 700eeae226be48c1f6659d621f2f5c0ed397bb7f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cc8586b37b4e5a1f6a6d0f33a27a21acca4aceb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308362"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 类
 
@@ -32,11 +33,11 @@ public ref class MTAThreadAttribute sealed : Attribute
 
 |“属性”|描述|
 |----------|-----------------|
-|[MTAThreadAttribute 构造函数 1](#ctor)构造函数|初始化此类的新实例。|
+|[MTAThreadAttribute 构造函数 1](#ctor) 构造函数|初始化类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-MTAThreadAttribute 属性继承自[Platform：： Object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：
+MTAThreadAttribute 属性继承自 [Platform：： Object 类](../cppcx/platform-object-class.md)。 MTAThreadAttribute 还会重载或具有以下成员：
 
 |名称|描述|
 |----------|-----------------|
@@ -54,7 +55,7 @@ MTAThreadAttribute 属性继承自[Platform：： Object 类](../cppcx/platform-
 
 **命名空间：** Platform
 
-## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a>MTAThreadAttribute 构造函数
+## <a name="mtathreadattribute-constructor"></a><a name="ctor"></a> MTAThreadAttribute 构造函数
 
 初始化 MTAThreadAttribute 类的新实例。
 
@@ -64,7 +65,7 @@ MTAThreadAttribute 属性继承自[Platform：： Object 类](../cppcx/platform-
 public:MTAThreadAttribute();
 ```
 
-## <a name="mtathreadattributeequals"></a><a name="equals"></a>MTAThreadAttribute：： Equals
+## <a name="mtathreadattributeequals"></a><a name="equals"></a> MTAThreadAttribute：： Equals
 
 确定指定对象是否等于当前对象。
 
@@ -83,7 +84,7 @@ public:virtual override bool Equals( Object^ obj );
 
 **`true`** 如果对象相等，则为; 否则为。否则为 **`false`** 。
 
-## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a>MTAThreadAttribute：： GetHashCode
+## <a name="mtathreadattributegethashcode"></a><a name="gethashcode"></a> MTAThreadAttribute：： GetHashCode
 
 返回此实例的哈希代码。
 
@@ -97,7 +98,7 @@ public:int GetHashCode();
 
 此实例的哈希代码。
 
-## <a name="mtathreadattributetostring"></a><a name="tostring"></a>MTAThreadAttribute：： ToString
+## <a name="mtathreadattributetostring"></a><a name="tostring"></a> MTAThreadAttribute：： ToString
 
 返回表示当前对象的字符串。
 
@@ -111,6 +112,6 @@ public:String^ ToString();
 
 表示当前对象的字符串。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)

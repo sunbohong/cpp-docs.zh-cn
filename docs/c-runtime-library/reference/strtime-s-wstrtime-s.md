@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _strtime_s、_wstrtime_s
 title: _strtime_s、_wstrtime_s
 ms.date: 4/2/2020
 api_name:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7bc12d4749f0d79f00ff60901620e272a7c69917
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309142"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s、_wstrtime_s
 
@@ -68,7 +69,7 @@ errno_t _wstrtime_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *宽限*<br/>
 至少为 10 个字节长的缓冲区，将在其中写入时间。
@@ -84,30 +85,30 @@ errno_t _wstrtime_s(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*宽限*|*numberOfElements*|返回|*缓冲区*内容|
+|*宽限*|*numberOfElements*|返回|*缓冲区* 内容|
 |--------------|------------------------|------------|--------------------------|
-|**Null**|（任意数值）|**EINVAL**|未修改|
-|Not **NULL** （指向有效的缓冲区）|0|**EINVAL**|未修改|
-|Not **NULL** （指向有效的缓冲区）|0 < 大小 < 9|**EINVAL**|空字符串|
-|Not **NULL** （指向有效的缓冲区）|大小 > 9|0|注解中指定的当前时间格式|
+|**NULL**|（任意数值）|**EINVAL**|未修改|
+|指向有效缓冲区 (Not **NULL**) |0|**EINVAL**|未修改|
+|指向有效缓冲区 (Not **NULL**) |0 < 大小 < 9|**EINVAL**|空字符串|
+|指向有效缓冲区 (Not **NULL**) |大小 > 9|0|注解中指定的当前时间格式|
 
 ## <a name="security-issues"></a>安全问题
 
-如果*numberOfElements*参数大于9，则为缓冲区传入无效的非**NULL**值将导致访问冲突。
+如果 *numberOfElements* 参数大于9，则为缓冲区传入无效的非 **NULL** 值将导致访问冲突。
 
-传递*numberOfElements*的值大于缓冲区的实际大小将导致缓冲区溢出。
+传递 *numberOfElements* 的值大于缓冲区的实际大小将导致缓冲区溢出。
 
 ## <a name="remarks"></a>备注
 
-这些函数为[_strtime](strtime-wstrtime.md)和[_wstrtime](strtime-wstrtime.md)提供更安全的版本。 **_Strtime_s**函数将当前的本地时间复制到*timestr*所指向的缓冲区中。 此时间的格式为**hh： mm： ss** ，其中， **hh**是表示小时的两位数字，以24小时表示法表示， **mm**是表示分钟后的分钟数的两位数， **ss**是表示秒的两位数。 例如，字符串**18:23:44**表示23分钟到 6 p.m 之前的44秒。 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
+这些函数为 [_strtime](strtime-wstrtime.md) 和 [_wstrtime](strtime-wstrtime.md)提供更安全的版本。 **_Strtime_s** 函数将当前的本地时间复制到 *timestr* 所指向的缓冲区中。 此时间的格式为 **hh： mm： ss** ，其中， **hh** 是表示小时的两位数字，以24小时表示法表示， **mm** 是表示分钟后的分钟数的两位数， **ss** 是表示秒的两位数。 例如，字符串 **18:23:44** 表示23分钟到 6 p.m 之前的44秒。 缓冲区必须至少为 9 个字节长；实际大小由第二个参数指定。
 
-**_wstrtime**是 **_strtime**的宽字符版本;**_wstrtime**的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
+**_wstrtime** 是 **_strtime** 的宽字符版本; **_wstrtime** 的参数和返回值是宽字符字符串。 否则这些函数具有相同行为。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 这些函数的调试库版本首先用0xFE 填充缓冲区。 若要禁用此行为，请使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射：
 
@@ -117,7 +118,7 @@ errno_t _wstrtime_s(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> 或 \<wchar.h>|
@@ -167,7 +168,7 @@ OS time:            14:37:49
 OS date:            04/25/03
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>

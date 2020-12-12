@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： value_compare 类 (&lt; map &gt;) '
 title: value_compare 类（&lt;映射&gt;）
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-ms.openlocfilehash: 1f872edce6f0114be7c90a8108ba248fd793a989
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c5b7ba865606e0bc5a5c8238de72824f9061c1b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312808"
 ---
 # <a name="value_compare-class-ltmapgt"></a>value_compare 类（&lt;映射&gt;）
 
@@ -34,22 +35,22 @@ protected:
 
 ## <a name="remarks"></a>备注
 
-由映射所包含的整个元素的 `value_types` 之间 `value_compare` 提供的比较条件由辅助类构造的各个元素的键之间的比较引起。 成员函数运算符使用 `value_compare` 提供的函数对象中存储 `key_compare` 类型的对象 `comp` 来比较两个元素的排序键组件。
+由 `value_compare` `value_types` 映射所包含的整个元素之间提供的比较条件由辅助类构造的各个元素的键之间的比较引起。 成员函数运算符使用 `comp` `key_compare` 由提供的函数对象中存储的类型的对象 `value_compare` 来比较两个元素的排序键组件。
 
 对于 set 和 multiset（二者均为键值与元素值完全相同的简单容器），`value_compare` 等效于 `key_compare`；对于 map 和 multimap，它们则不相等，因为类型 `pair` 元素的值与元素的键值不完全相同。
 
 ## <a name="example"></a>示例
 
-有关如何声明和使用 [ 的示例，请参阅 ](../standard-library/map-class.md#value_comp)value_comp`value_compare` 的示例。
+有关如何声明和使用 `value_compare` 的示例，请参阅 [value_comp](../standard-library/map-class.md#value_comp) 的示例。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<映射 >
+**标头：**\<map>
 
-**命名空间：** std
+**命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [binary_function 结构](../standard-library/binary-function-struct.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

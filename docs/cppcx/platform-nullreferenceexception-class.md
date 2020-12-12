@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： NullReferenceException 类
 title: Platform::NullReferenceException 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-ms.openlocfilehash: f513331757031c6f2f1231bb2c5fcb573d1645b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 181162163fa2fa1ef2fdc97f3c55db060ef54c2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183251"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97308258"
 ---
 # <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException 类
 
@@ -37,8 +38,8 @@ public ref class NullReferenceException : COMException,    IException,    IPrint
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 
-[Platform::COMException 类](../cppcx/platform-comexception-class.md)
+[Platform：： COMException 类](../cppcx/platform-comexception-class.md)

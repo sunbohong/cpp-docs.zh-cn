@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _set_new_handler
 title: _set_new_handler
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: cd6e4df47b28e84bb0ac5ee857cfa1a3e7cf805a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1e693e010bcbb9489426fc5c67e888d50f430765
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218541"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312392"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -47,24 +48,24 @@ ms.locfileid: "87218541"
 _PNH _set_new_handler( _PNH pNewHandler );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pNewHandler*<br/>
 指向应用程序提供的内存处理函数的指针。 自变量为 0 会导致新的处理程序被移除。
 
 ## <a name="return-value"></a>返回值
 
-返回一个指向 **_set_new_handler**注册的上一个异常处理函数的指针，以便稍后可以还原以前的函数。 如果以前未设置任何函数，则返回值可用于还原默认行为;此值可以为**NULL**。
+返回一个指向 **_set_new_handler** 注册的上一个异常处理函数的指针，以便稍后可以还原以前的函数。 如果以前未设置任何函数，则返回值可用于还原默认行为;此值可以为 **NULL**。
 
 ## <a name="remarks"></a>备注
 
-C + + **_set_new_handler**函数指定一个异常处理函数，该函数在 **`new`** 运算符无法分配内存时获得控制权。 如果 **`new`** 失败，则运行时系统将自动调用作为参数传递给 **_set_new_handler**的异常处理函数。 **_PNH**（在新的 .h 中定义）是指向函数的指针，该函数返回类型 **`int`** 并采用**size_t**类型的参数。 使用**size_t**来指定要分配的空间量。
+C + + **_set_new_handler** 函数指定一个异常处理函数，该函数在 **`new`** 运算符无法分配内存时获得控制权。 如果 **`new`** 失败，则运行时系统将自动调用作为参数传递给 **_set_new_handler** 的异常处理函数。 **_PNH**（在新的 .h 中定义）是指向函数的指针，该函数返回类型 **`int`** 并采用 **size_t** 类型的参数。 使用 **size_t** 来指定要分配的空间量。
 
 没有默认处理程序。
 
-**_set_new_handler**本质上是一种垃圾回收方案。 如果您的函数返回非零值，则运行时系统会重试分配；如果您的函数返回 0，则将失败。
+**_set_new_handler** 本质上是一种垃圾回收方案。 如果您的函数返回非零值，则运行时系统会重试分配；如果您的函数返回 0，则将失败。
 
-在程序中出现 **_set_new_handler**函数时，将使用运行时系统注册参数列表中指定的异常处理函数：
+在程序中出现 **_set_new_handler** 函数时，将使用运行时系统注册参数列表中指定的异常处理函数：
 
 ```cpp
 // set_new_handler1.cpp
@@ -84,7 +85,7 @@ int main( void )
 }
 ```
 
-可以保存上次传递到 **_set_new_handler**函数的函数地址，并在稍后恢复它：
+可以保存上次传递到 **_set_new_handler** 函数的函数地址，并在稍后恢复它：
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -95,7 +96,7 @@ int main( void )
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) 函数将为 [malloc](malloc.md) 设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc**是否调用由 **_set_new_handler**设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc**不会调用新的处理程序例程。 您可以重写此默认行为，以便在**malloc**无法分配内存时， **malloc**会调用新的处理程序例程，其方式与 **`new`** 运算符在相同原因发生故障时相同。 若要重写默认值，请调用：
+C++ [_set_new_mode](set-new-mode.md) 函数将为 [malloc](malloc.md) 设置新的处理程序模式。 新处理程序模式指示在失败时， **malloc** 是否调用由 **_set_new_handler** 设置的新处理程序例程。 默认情况下，在无法分配内存时， **malloc** 不会调用新的处理程序例程。 您可以重写此默认行为，以便在 **malloc** 无法分配内存时， **malloc** 会调用新的处理程序例程，其方式与 **`new`** 运算符在相同原因发生故障时相同。 若要重写默认值，请调用：
 
 ```cpp
 _set_new_mode(1);
@@ -105,9 +106,9 @@ _set_new_mode(1);
 
 如果提供了用户定义的 `operator new` ，则不会在失败时自动调用新的处理程序函数。
 
-有关详细信息，请参阅 *C++ 语言参考*中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。
+有关详细信息，请参阅 *C++ 语言参考* 中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。
 
-所有动态链接的 Dll 或可执行文件都有单个 **_set_new_handler**处理程序;即使调用 **_set_new_handler**处理程序也可能被另一个 DLL 或可执行文件所设置的处理程序所替换。
+所有动态链接的 Dll 或可执行文件都有单个 **_set_new_handler** 处理程序;即使调用 **_set_new_handler** 处理程序也可能被另一个 DLL 或可执行文件所设置的处理程序所替换。
 
 ## <a name="requirements"></a>要求
 
@@ -167,9 +168,9 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[忙](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
