@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-ms.openlocfilehash: 555739fbcdd3503461d7b831660a94602f244aa3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1249395c883306c04eb0b294d06ec73c4f04447c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252839"
 ---
 # <a name="_printf_p-_printf_p_l-_wprintf_p-_wprintf_p_l"></a>_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 
@@ -76,12 +77,12 @@ int _wprintf_p_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *format*<br/>
 设置控件格式。
 
-*实际*<br/>
+argument <br/>
 可选参数。
 
 *locale*<br/>
@@ -93,18 +94,18 @@ int _wprintf_p_l(
 
 ## <a name="remarks"></a>备注
 
-**_Printf_p**函数格式化一系列字符和值并将其输出到标准输出流（ **stdout**）。 如果参数跟在*格式*字符串之后，*格式*字符串必须包含确定自变量的输出格式的规范（请参阅[printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)）。
+**_Printf_p** 函数将一系列字符和值输出到标准输出流（ **stdout**）。 如果参数跟在 *格式* 字符串之后， *格式* 字符串必须包含确定自变量的输出格式的规范 (参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)) 。
 
-**_Printf_p**和**printf_s**之间的区别在于 **_printf_p**支持位置参数，这允许指定在格式字符串中使用参数的顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_Printf_p** 和 **printf_s** 之间的区别在于 **_printf_p** 支持位置参数，这允许指定在格式字符串中使用参数的顺序。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_wprintf_p**是 **_printf_p**的宽字符版本;如果在 ANSI 模式下打开流，则它们的行为相同。 **_printf_p**当前不支持输出到 UNICODE 流中。
+**_wprintf_p** 是 **_printf_p** 的宽字符版本;如果在 ANSI 模式下打开流，则它们的行为相同。 **_printf_p** 当前不支持输出到 UNICODE 流中。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
-> 确保 format不是用户定义的字符串。
+> 确保 format 不是用户定义的字符串。
 
-如果*格式*或*参数*为**NULL**，或者格式字符串包含无效的格式字符，则 **_printf_p**和 **_wprintf_p**函数将调用无效参数处理程序，如[参数验证中所述](../../c-runtime-library/parameter-validation.md)。 如果允许执行继续，则该函数将返回-1，并将**errno**设置为**EINVAL**。
+如果 *格式* 或 *参数* 为 **NULL**，或者格式字符串包含无效的格式字符，则 **_printf_p** 和 **_wprintf_p** 函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -117,10 +118,10 @@ int _wprintf_p_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_printf_p**、 **_printf_p_l**|\<stdio.h>|
-|**_wprintf_p**、 **_wprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
+|**_printf_p**， **_printf_p_l**|\<stdio.h>|
+|**_wprintf_p**， **_wprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向, 然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout** 和 **stderr** 关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -157,13 +158,13 @@ Width specifiers:     Hello
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[fopen、_wfopen_wfopen](fopen-wfopen.md)<br/>
+[fopen、_wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)<br/>
 [scanf、_scanf_l、wscanf、_wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
-[_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)<br/>
 [vprintf 函数](../../c-runtime-library/vprintf-functions.md)<br/>

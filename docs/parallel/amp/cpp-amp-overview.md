@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： C++ AMP 概述
 title: C++ AMP 概述
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 0eeda43a279be74ea71669b55356603e980cab40
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: edbf20385724c062deea00ff8ea159d7021f9c63
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344743"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254633"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概述
 
@@ -31,7 +32,7 @@ C++ Accelerated Massive Parallelism (C++ AMP) 通过利用数据并行硬件（�
 
 - 注意： ARM64 目前不支持 AMP。
 
-## <a name="introduction"></a>简介
+## <a name="introduction"></a>介绍
 
 以下两个示例演示了 C++ AMP 的主要组件。 假设要添加 2 1 维数组的对应元素。 例如，你可能想要添加 `{1, 2, 3, 4, 5}` 和 `{6, 7, 8, 9, 10}` 以获取 `{7, 9, 11, 13, 15}` 。 如果不使用 C++ AMP，则可以编写以下代码来添加数字并显示结果。
 
@@ -104,7 +105,7 @@ void CppAmpMethod() {
 
 - 数据：使用 c + + 数组构造三个 C++ AMP [array_view](../../parallel/amp/reference/array-view-class.md) 对象。 提供四个值来构造 `array_view` 对象：数据值、级别、元素类型以及 `array_view` 每个维度中的对象的长度。 秩和类型作为类型参数进行传递。 数据和长度作为构造函数参数传递。 在此示例中，传递给构造函数的 c + + 数组是一维的。 秩和长度用于构造对象中数据的矩形形状 `array_view` ，数据值用于填充数组，而这些数据值用于填充数组。 运行时库还包括 [数组类，该类](../../parallel/amp/reference/array-class.md)具有一个类似于类的接口， `array_view` 本文稍后将对此进行讨论。
 
-- 迭代： [Parallel_for_each 函数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 提供一种机制来循环访问数据元素或 *计算域* 。 在此示例中，计算域由指定 `sum.extent` 。 要执行的代码包含在 lambda 表达式或 *核心函数* 中。 `restrict(amp)`指示只使用 C++ AMP 的 c + + 语言的子集。
+- 迭代： [Parallel_for_each 函数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 提供一种机制来循环访问数据元素或 *计算域*。 在此示例中，计算域由指定 `sum.extent` 。 要执行的代码包含在 lambda 表达式或 *核心函数* 中。 `restrict(amp)`指示只使用 C++ AMP 的 c + + 语言的子集。
 
 - Index： [索引类](../../parallel/amp/reference/index-class.md) 变量（ `idx` ）被声明为与对象的排名相匹配的一个级别 `array_view` 。 使用索引可以访问对象的各个元素 `array_view` 。
 
@@ -360,7 +361,7 @@ void AddArraysWithFunction() {
 
 ## <a name="accelerating-code-tiles-and-barriers"></a>加速代码: 平铺和屏障
 
-您可以使用平铺获取更多加速。 平铺将线程划分为相等的矩形子集或 *图块* 。 根据数据集和要编码的算法，确定相应的磁贴大小。 对于每个线程，你可以访问相对于整个或的数据元素 *全局* 位置，并可访问与 `array` `array_view` 磁贴相关的 *本地* 位置。 使用本地索引值可以简化代码，因为无需编写代码来将索引值从 global 转换为本地。 若要使用平铺，请在方法中调用计算域上的 [区：：磁贴方法](reference/extent-class.md#tile) `parallel_for_each` ，并使用 lambda 表达式中的 [tiled_index](../../parallel/amp/reference/tiled-index-class.md) 对象。
+您可以使用平铺获取更多加速。 平铺将线程划分为相等的矩形子集或 *图块*。 根据数据集和要编码的算法，确定相应的磁贴大小。 对于每个线程，你可以访问相对于整个或的数据元素 *全局* 位置，并可访问与 `array` `array_view` 磁贴相关的 *本地* 位置。 使用本地索引值可以简化代码，因为无需编写代码来将索引值从 global 转换为本地。 若要使用平铺，请在方法中调用计算域上的 [区：：磁贴方法](reference/extent-class.md#tile) `parallel_for_each` ，并使用 lambda 表达式中的 [tiled_index](../../parallel/amp/reference/tiled-index-class.md) 对象。
 
 在典型的应用程序中，磁贴中的元素在某种程度上是相关的，代码必须访问和跟踪磁贴中的值。 使用 [Tile_static 关键字](../../cpp/tile-static-keyword.md) 关键字和 [tile_barrier：： wait 方法](reference/tile-barrier-class.md#wait) 完成此操作。 具有 **tile_static** 关键字的变量在整个磁贴中具有范围，并为每个图块创建变量实例。 必须处理对变量的平铺线程访问的同步。 [Tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)将停止当前线程的执行，直到磁贴中的所有线程都已达到对的调用 `tile_barrier::wait` 。 因此，您可以使用 **tile_static** 变量在磁贴范围内累计值。 然后，可以完成任何需要访问所有值的计算。
 
@@ -503,7 +504,7 @@ C++ AMP 包含为加速图形编程而设计的图形库。 此库仅在支持�
 
 无符号整数的模数和除法具有比带符号整数的模数和除法更好的性能。 建议尽可能使用无符号整数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Lambda 表达式语法](../../cpp/lambda-expression-syntax.md)<br/>

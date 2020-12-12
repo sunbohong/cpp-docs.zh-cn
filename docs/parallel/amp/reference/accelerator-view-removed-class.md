@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： accelerator_view_removed 类
 title: accelerator_view_removed 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed::accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: 9a3f6f349fc3103893639fe209dcf23a07ffec56
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 86a5b89d3b8065bccd8eec8b10bade9ed26d6a05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127119"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254490"
 ---
 # <a name="accelerator_view_removed-class"></a>accelerator_view_removed 类
 
@@ -26,17 +27,17 @@ ms.locfileid: "77127119"
 class accelerator_view_removed : public runtime_exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[accelerator_view_removed 构造函数](#ctor)|初始化 `accelerator_view_removed` 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[get_view_removed_reason](#get_view_removed_reason)|返回一个 HRESULT 错误代码，指示移除 `accelerator_view` 对象的原因。|
 
@@ -54,9 +55,9 @@ class accelerator_view_removed : public runtime_exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>accelerator_view_removed
+## <a name="accelerator_view_removed"></a><a name="ctor"></a> accelerator_view_removed
 
-初始化[accelerator_view_removed](accelerator-view-removed-class.md)类的新实例。
+初始化 [accelerator_view_removed](accelerator-view-removed-class.md) 类的新实例。
 
 ### <a name="syntax"></a>语法
 
@@ -69,10 +70,10 @@ explicit accelerator_view_removed(
     HRESULT view_removed_reason ) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *message*<br/>
-错误说明。
+对错误的说明。
 
 *view_removed_reason*<br/>
 指示 `accelerator_view` 对象移除原因的 HRESULT 错误代码。
@@ -81,7 +82,7 @@ explicit accelerator_view_removed(
 
 `accelerator_view_removed` 类的新实例。
 
-## <a name="get_view_removed_reason"></a>get_view_removed_reason
+## <a name="get_view_removed_reason"></a><a name="get_view_removed_reason"></a> get_view_removed_reason
 
 返回一个 HRESULT 错误代码，指示移除 `accelerator_view` 对象的原因。
 
@@ -91,6 +92,6 @@ explicit accelerator_view_removed(
 HRESULT get_view_removed_reason() const throw();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

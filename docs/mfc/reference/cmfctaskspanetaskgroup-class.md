@@ -1,5 +1,6 @@
 ---
-title: CMFC任务窗格任务组类
+description: 了解详细信息： CMFCTasksPaneTaskGroup 类
+title: CMFCTasksPaneTaskGroup 类
 ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 4c24eba646bede462a5f3cfb85715278cfa7daee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b09923c70ad6208b1b029e6ad555c22cd4c771f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366256"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254698"
 ---
-# <a name="cmfctaskspanetaskgroup-class"></a>CMFC任务窗格任务组类
+# <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 类
 
-该`CMFCTasksPaneTaskGroup`类是[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件使用的帮助器类。 `CMFCTasksPaneTaskGroup` 类型的对象表示一个任务组 **。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。
+`CMFCTasksPaneTaskGroup`类是[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件使用的帮助器类。 `CMFCTasksPaneTaskGroup` 类型的对象表示一个任务组 。 任务组是框架在具有折叠按钮的单独框中显示的项列表。 此框可具有一个可选标题（组名）。 如果一个组处于折叠状态，则任务列表不可见。
 
 ## <a name="syntax"></a>语法
 
@@ -45,44 +46,44 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFC任务窗格任务组：：CMFC任务窗格任务组](#cmfctaskspanetaskgroup)|构造 `CMFCTasksPaneTaskGroup` 对象。|
+|[CMFCTasksPaneTaskGroup：： CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|构造 `CMFCTasksPaneTaskGroup` 对象。|
 |`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFC任务窗格任务组：：设置ACC数据](#setaccdata)|确定当前任务组的辅助功能数据。|
+|[CMFCTasksPaneTaskGroup：： SetACCData](#setaccdata)|确定当前任务组的辅助功能数据。|
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CMFC任务窗格任务组：：m_bIsBottom](#m_bisbottom)|确定任务组是否与任务窗格控件的底部对齐。|
-|[CMFC任务窗格任务组：：m_bIsCollapsed](#m_biscollapsed)|确定任务组是否折叠。|
-|[CMFC任务窗格任务组：：m_bIsSpecial](#m_bisspecial)|确定任务组是否*特殊。* 框架以不同颜色显示特殊标题。|
-|[CMFC任务窗格任务组：：m_lstTasks](#m_lsttasks)|包含任务的内部列表。|
-|[CMFC任务窗格任务组：：m_rect](#m_rect)|指定组标题的边界矩形。|
-|[CMFC任务窗格任务组：：m_rectGroup](#m_rectgroup)|指定组的边界矩形。|
-|[CMFC任务窗格任务组：：m_strName](#m_strname)|指定组的名称。|
+|[CMFCTasksPaneTaskGroup：： m_bIsBottom](#m_bisbottom)|确定任务组是否与任务窗格控件的底部对齐。|
+|[CMFCTasksPaneTaskGroup：： m_bIsCollapsed](#m_biscollapsed)|确定任务组是否折叠。|
+|[CMFCTasksPaneTaskGroup：： m_bIsSpecial](#m_bisspecial)|确定任务组是否为 *特殊组。* 框架以不同的颜色显示特殊的标题。|
+|[CMFCTasksPaneTaskGroup：： m_lstTasks](#m_lsttasks)|包含任务的内部列表。|
+|[CMFCTasksPaneTaskGroup：： m_rect](#m_rect)|指定组标题的边框。|
+|[CMFCTasksPaneTaskGroup：： m_rectGroup](#m_rectgroup)|指定组的边框。|
+|[CMFCTasksPaneTaskGroup：： m_strName](#m_strname)|指定组的名称。|
 
 ## <a name="remarks"></a>备注
 
-下图显示了展开的任务组：
+下图显示了一个扩展的任务组：
 
 ![已展开的任务组](../../mfc/reference/media/nexttaskgrpexpand.png "已展开的任务组")
 
-下图显示了折叠的任务组：
+下图显示了一个折叠的任务组：
 
 ![已折叠的任务组](../../mfc/reference/media/nexttaskgrpcollapse.png "已折叠的任务组")
 
-下图显示了没有标题的任务组：
+下图显示了不带标题的任务组：
 
 ![无标题的任务组](../../mfc/reference/media/nexttaskgrpnocapt.png "无标题的任务组")
 
-下图显示了两个任务组。 通过将`m_bIsSpecial`标志设置为 TRUE，将第一个任务组标记为特殊，而第二个任务组不特殊。 请注意第一个任务组的标题如何比第二个任务组暗：
+下图显示了两个任务组。 将标志设置为 TRUE，将第一个任务组标记为特殊 `m_bIsSpecial` ，同时第二个任务组不是特殊组。 请注意，第一个任务组的标题比第二个任务组的标题更暗：
 
 ![特殊任务组](../../mfc/reference/media/nexttaskgrpspecial.png "特殊任务组")
 
@@ -94,9 +95,9 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxTasksPane.h
+**标头：** afxtaskspane。h
 
-## <a name="cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a>CMFC任务窗格任务组：：CMFC任务窗格任务组
+## <a name="cmfctaskspanetaskgroupcmfctaskspanetaskgroup"></a><a name="cmfctaskspanetaskgroup"></a> CMFCTasksPaneTaskGroup：： CMFCTasksPaneTaskGroup
 
 构造 `CMFCTasksPaneTaskGroup` 对象。
 
@@ -110,18 +111,18 @@ CMFCTasksPaneTaskGroup(
     HICON hIcon=NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lpsz名称*<br/>
-在组标题中指定组的名称。
+*lpszName*<br/>
+指定组标题中组的名称。
 
 *bIsBottom*<br/>
 指定组是否与任务窗格控件的底部对齐。
 
-*b 特别*<br/>
-指定组是否指定为*特殊*，因此，组标题是否以不同颜色填充。
+*bIsSpecial*<br/>
+指定组是否被指定为 *特殊* 组，以及是否使用不同的颜色填充组标题。
 
-*bIs 折叠*<br/>
+*bIsCollapsed*<br/>
 指定组是否折叠。
 
 *pPage*<br/>
@@ -132,7 +133,7 @@ CMFCTasksPaneTaskGroup(
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfctaskspanetaskgroupm_bisbottom"></a><a name="m_bisbottom"></a>CMFC任务窗格任务组：：m_bIsBottom
+## <a name="cmfctaskspanetaskgroupm_bisbottom"></a><a name="m_bisbottom"></a> CMFCTasksPaneTaskGroup：： m_bIsBottom
 
 确定任务组是否与任务窗格控件的底部对齐。
 
@@ -142,9 +143,9 @@ BOOL m_bIsBottom;
 
 ### <a name="remarks"></a>备注
 
-只能将一个组与任务窗格控件的底部对齐。 必须最后添加此任务组。 有关详细信息，请参阅[CMFC任务窗格：：添加组](../../mfc/reference/cmfctaskspane-class.md#addgroup)。
+只有一个组可以与任务窗格控件的底部对齐。 必须最后添加此任务组。 有关详细信息，请参阅 [CMFCTasksPane：： AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)。
 
-## <a name="cmfctaskspanetaskgroupm_biscollapsed"></a><a name="m_biscollapsed"></a>CMFC任务窗格任务组：：m_bIsCollapsed
+## <a name="cmfctaskspanetaskgroupm_biscollapsed"></a><a name="m_biscollapsed"></a> CMFCTasksPaneTaskGroup：： m_bIsCollapsed
 
 确定任务组是否折叠。
 
@@ -154,11 +155,11 @@ BOOL m_bIsCollapsed;
 
 ### <a name="remarks"></a>备注
 
-您可以通过调用[CMFCTasksPane：：启用组折叠](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)来启用或禁用在任务窗格上折叠组的能力。
+可以通过调用 [CMFCTasksPane：： EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse)，启用或禁用折叠任务窗格上的组的功能。
 
-## <a name="cmfctaskspanetaskgroupm_bisspecial"></a><a name="m_bisspecial"></a>CMFC任务窗格任务组：：m_bIsSpecial
+## <a name="cmfctaskspanetaskgroupm_bisspecial"></a><a name="m_bisspecial"></a> CMFCTasksPaneTaskGroup：： m_bIsSpecial
 
-确定任务组是否*特殊*，以及是否应以不同颜色标识特殊任务组的标题。
+确定任务组是否是 *特殊* 的，以及是否应使用不同的颜色来标识特殊任务组的标题。
 
 ```
 BOOL m_bIsSpecial;
@@ -166,9 +167,9 @@ BOOL m_bIsSpecial;
 
 ### <a name="remarks"></a>备注
 
-如果应用程序使用 Windows XP 可视主题，并且`m_bIsSpecial`为 FALSE，则框架`DrawThemeBackground`将使用EBP_NORMALGROUPBACKGROUND标志调用。 如果`m_bIsSpecial`为 TRUE，则框架`DrawThemeBackground`使用EBP_SPECIALGROUPBACKGROUND标志调用。
+如果你的应用程序使用的是 Windows XP 视觉主题且 `m_bIsSpecial` 为 FALSE，则框架将 `DrawThemeBackground` 使用 EBP_NORMALGROUPBACKGROUND 标志调用。 如果 `m_bIsSpecial` 为 TRUE，则框架将调用 `DrawThemeBackground` 并带有 EBP_SPECIALGROUPBACKGROUND 标志。
 
-## <a name="cmfctaskspanetaskgroupm_lsttasks"></a><a name="m_lsttasks"></a>CMFC任务窗格任务组：：m_lstTasks
+## <a name="cmfctaskspanetaskgroupm_lsttasks"></a><a name="m_lsttasks"></a> CMFCTasksPaneTaskGroup：： m_lstTasks
 
 包含任务的内部列表。
 
@@ -178,11 +179,11 @@ CObList m_lstTasks;
 
 ### <a name="remarks"></a>备注
 
-要填写此列表，请致电[CMFC任务窗格：：添加任务](../../mfc/reference/cmfctaskspane-class.md#addtask)。
+若要填充此列表，请调用 [CMFCTasksPane：： AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask)。
 
-## <a name="cmfctaskspanetaskgroupm_rect"></a><a name="m_rect"></a>CMFC任务窗格任务组：：m_rect
+## <a name="cmfctaskspanetaskgroupm_rect"></a><a name="m_rect"></a> CMFCTasksPaneTaskGroup：： m_rect
 
-指定组标题的边界矩形。
+指定组标题的边框。
 
 ```
 CRect m_rect;
@@ -192,9 +193,9 @@ CRect m_rect;
 
 此值由框架自动计算。
 
-## <a name="cmfctaskspanetaskgroupm_rectgroup"></a><a name="m_rectgroup"></a>CMFC任务窗格任务组：：m_rectGroup
+## <a name="cmfctaskspanetaskgroupm_rectgroup"></a><a name="m_rectgroup"></a> CMFCTasksPaneTaskGroup：： m_rectGroup
 
-指定组的边界矩形。
+指定组的边框。
 
 ```
 CRect m_rectGroup;
@@ -204,7 +205,7 @@ CRect m_rectGroup;
 
 此值由框架自动计算。
 
-## <a name="cmfctaskspanetaskgroupm_strname"></a><a name="m_strname"></a>CMFC任务窗格任务组：：m_strName
+## <a name="cmfctaskspanetaskgroupm_strname"></a><a name="m_strname"></a> CMFCTasksPaneTaskGroup：： m_strName
 
 指定组的名称。
 
@@ -214,9 +215,9 @@ CString m_strName;
 
 ### <a name="remarks"></a>备注
 
-如果此值为空，则不显示组标题，并且无法折叠组。
+如果此值为空，则不显示组标题，并且不能折叠组。
 
-## <a name="cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a>CMFC任务窗格任务组：：设置ACC数据
+## <a name="cmfctaskspanetaskgroupsetaccdata"></a><a name="setaccdata"></a> CMFCTasksPaneTaskGroup：： SetACCData
 
 确定当前任务组的辅助功能数据。
 
@@ -226,23 +227,23 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p 父级*<br/>
-[在]表示当前任务组的父窗口。
+*pParent*<br/>
+中表示当前任务组的父窗口。
 
-*数据*<br/>
-[出]使用当前任务组的`CAccessibilityData`辅助功能数据填充的类型对象。
+*data*<br/>
+弄一个类型为的对象，该对象 `CAccessibilityData` 用当前任务组的可访问性数据填充。
 
 ### <a name="return-value"></a>返回值
 
-如果*数据*参数已成功填充当前任务组的辅助功能数据，则为 TRUE;否则，FALSE。
+如果已成功用当前任务组的可访问性数据填充 *数据* 参数，则为 TRUE;否则为 FALSE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
-[CMFC任务窗格类](../../mfc/reference/cmfctaskspane-class.md)<br/>
-[CMFC任务窗格任务类](../../mfc/reference/cmfctaskspanetask-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CMFCTasksPane 类](../../mfc/reference/cmfctaskspane-class.md)<br/>
+[CMFCTasksPaneTask 类](../../mfc/reference/cmfctaskspanetask-class.md)<br/>
 [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)

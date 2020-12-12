@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：图形 (C++ AMP) '
 title: 图形 (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 97fd433387aac809053ea6dd8ac59a56207a4fc8
-ms.sourcegitcommit: d77159732a8e782b2a1b7abea552065f2b6f61c1
+ms.openlocfilehash: 79e908ac673fb8fcc5ac370d6900697b3274585c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93344717"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254542"
 ---
 # <a name="graphics-c-amp"></a>图形 (C++ AMP)
 
@@ -21,7 +22,7 @@ C++ AMP 包含 [Concurrency：： graphics](../../parallel/amp/reference/concurr
 
 ## <a name="the-norm-and-unorm-types"></a>norm 和 unorm 类型
 
-`norm`和 `unorm` 类型是限制值范围的标量类型 **`float`** ; 这称为 *钳位* 。 这些类型可从其他标量类型显式构造。 在强制转换中，值首先转换为 **`float`** ，然后限制到标准 [-1.0，1.0] 或 unorm [0.0，1.0] 所允许的相应区域。 从 +/- 无穷强制转换时将返回 +/-1。 未定义从 NaN 的强制转换。 可以从 unorm 隐式构造 norm，而且不会丢失数据。 这些类型已定义到浮点类型的隐式转换运算符。 二元运算符是在这些类型和其他内置标量类型（例如和）之间定义的 **`float`** **`int`** ： +、-、 \* 、/、= =、！ =、>、 \<, > =、<=。 还支持复合赋值运算符： + =、-=、 \* =、/=。 Norm 类型已定义一元求反运算符 (-)。
+`norm`和 `unorm` 类型是限制值范围的标量类型 **`float`** ; 这称为 *钳位*。 这些类型可从其他标量类型显式构造。 在强制转换中，值首先转换为 **`float`** ，然后限制到标准 [-1.0，1.0] 或 unorm [0.0，1.0] 所允许的相应区域。 从 +/- 无穷强制转换时将返回 +/-1。 未定义从 NaN 的强制转换。 可以从 unorm 隐式构造 norm，而且不会丢失数据。 这些类型已定义到浮点类型的隐式转换运算符。 二元运算符是在这些类型和其他内置标量类型（例如和）之间定义的 **`float`** **`int`** ： +、-、 \* 、/、= =、！ =、>、 \<, > =、<=。 还支持复合赋值运算符： + =、-=、 \* =、/=。 Norm 类型已定义一元求反运算符 (-)。
 
 ## <a name="short-vector-library"></a>短矢量库
 
@@ -29,7 +30,7 @@ Short 向量库提供了 HLSL 中定义的 [矢量类型](/windows/win32/direct3
 
 |类型|长度 2|长度3|长度4|
 |-|--------------|--------------|--------------|
-|Double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
+|double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
 |float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
 |int|int_2<br /><br /> int2|int_3<br /><br /> int3|int_4<br /><br /> int4|
 |norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|
@@ -57,13 +58,13 @@ Short 向量库提供了 HLSL 中定义的 [矢量类型](/windows/win32/direct3
 
 ### <a name="swizzling-expressions"></a>Swizzling 表达式
 
-短矢量库支持 `vector_type.identifier` 访问器构造来访问短矢量的组件。 `identifier`（称为 *swizzling 表达式* ）指定矢量的组件。 此表达式可以是左值或右值。 标识符中的单个字符可以是： x、y、z 和 w;或 r、g、b 和 a。 "x" 和 "r" 表示零个分量，"y" 和 "g" 表示第一个组件，依此类推。  (请注意，不能在同一标识符中使用 "x" 和 "r"。 ) 因此，"rgba" 和 "xyzw" 将返回相同的结果。 诸如“x”和“y”等单组件访问器属于标量值类型。 多组件访问器属于短矢量类型。 例如，如果构造一个名为 `int_4` 且值为 2、4、6、8 的 `fourInts` 矢量，则 `fourInts.y` 将返回整数 4，而 `fourInts.rg` 将返回一个值为 2、4 的 `int_2` 对象。
+短矢量库支持 `vector_type.identifier` 访问器构造来访问短矢量的组件。 `identifier`（称为 *swizzling 表达式*）指定矢量的组件。 此表达式可以是左值或右值。 标识符中的单个字符可以是： x、y、z 和 w;或 r、g、b 和 a。 "x" 和 "r" 表示零个分量，"y" 和 "g" 表示第一个组件，依此类推。  (请注意，不能在同一标识符中使用 "x" 和 "r"。 ) 因此，"rgba" 和 "xyzw" 将返回相同的结果。 诸如“x”和“y”等单组件访问器属于标量值类型。 多组件访问器属于短矢量类型。 例如，如果构造一个名为 `int_4` 且值为 2、4、6、8 的 `fourInts` 矢量，则 `fourInts.y` 将返回整数 4，而 `fourInts.rg` 将返回一个值为 2、4 的 `int_2` 对象。
 
 ## <a name="texture-classes"></a>纹理类
 
 许多 GPU 具有已进行优化的硬件和缓存，适用于获取像素和纹素以及呈现图像和纹理。 [纹理 \<T,N> ](../../parallel/amp/reference/texture-class.md)类是纹素对象的容器类，它公开了这些 gpu 的纹理功能。 纹素可以是：
 
-- **`int`** 、 `uint` 、、 **`float`** **`double`** 、 `norm` 或 `unorm` 标量。
+- **`int`**、 `uint` 、、 **`float`** **`double`** 、 `norm` 或 `unorm` 标量。
 
 - 具有两个或四个组件的短矢量。 唯一的例外是 `double_4`，不允许使用此短矢量。
 
@@ -406,7 +407,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 C++ AMP 运行时支持 `texture<T,1>` 与 [ID3D11Texture1D 接口](/windows/win32/api/d3d11/nn-d3d11-id3d11texture1d)之间的互操作性，以及 `texture<T,2>` [ID3D11Texture2D 接口](/windows/win32/api/d3d11/nn-d3d11-id3d11texture2d)之间以及 `texture<T,3>` 和 [ID3D11Texture3D 接口](/windows/win32/api/d3d11/nn-d3d11-id3d11texture3d)之间的互操作性。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法采用 `texture` 对象并返回 `IUnknown` 接口。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法采用 `IUnknown` 接口和 `accelerator_view` 对象，并返回一个 `texture` 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [double_2 类](../../parallel/amp/reference/double-2-class.md)<br/>
 [double_3 类](../../parallel/amp/reference/double-3-class.md)<br/>
