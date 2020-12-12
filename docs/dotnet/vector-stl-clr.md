@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：向量 (STL/CLR) '
 title: vector (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -91,12 +92,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 9abecfa6e0bbdf74514e2b7162d1d22a84fa01b2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 5997a70fb6b6e37fd4b1ff19c34fdc15750bbe4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502418"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298729"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -120,9 +121,9 @@ template<typename Value>
     { ..... };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*值*<br/>
+值<br/>
 受控序列中的元素的类型。
 
 ## <a name="requirements"></a>要求
@@ -149,7 +150,7 @@ template<typename Value>
 |[vector::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[vector::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[vector::assign (STL/CLR)](#assign)|替换所有元素。|
 |[vector::at (STL/CLR)](#at)|访问指定位置处的元素。|
@@ -173,12 +174,12 @@ template<typename Value>
 |[vector::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 |[vector::vector (STL/CLR)](#vector)|构造容器对象。|
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |[vector::back_item (STL/CLR)](#back_item)|访问最后一个元素。|
 |[vector::front_item (STL/CLR)](#front_item)|访问第一个元素。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[vector::operator= (STL/CLR)](#op_as)|替换受控序列。|
 |[vector::operator(STL/CLR)](#op)|访问指定位置处的元素。|
@@ -189,9 +190,9 @@ template<typename Value>
 |[operator> (vector) (STL/CLR)](#op_gt)|确定 `vector` 对象是否大于另一个 `vector` 对象。|
 |[运算符>= (vector)  (STL/CLR) ](#op_gteq)|确定 `vector` 对象是否大于或等于另一个 `vector` 对象。|
 
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>界面
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
@@ -201,7 +202,7 @@ template<typename Value>
 |<xref:System.Collections.Generic.IList%601>|维护类型化元素的有序组。|
 |IVector<值\>|维护泛型容器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 对象通过存储的值元素数组为其控制的序列分配并释放存储，这些 *值* 元素按需增长。 增长发生的方式是：追加新元素的成本是分期常量时间。 换句话说，在结尾添加元素的成本并不会平均增加，因为受控序列的长度越大。 因此，向量非常适合用于模板类 [堆栈 (STL/CLR) ](../dotnet/stack-stl-clr.md)的基础容器。
 
@@ -228,7 +229,7 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计数*<br/>
 要插入的元素数。
@@ -245,13 +246,13 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *初始值*<br/>
 要插入的元素的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个成员函数会将受控序列替换为值*val*的*计数*元素的重复。 使用它可以将具有相同值的元素填充到容器中。
+第一个成员函数会将受控序列替换为值 *val* 的 *计数* 元素的重复。 使用它可以将具有相同值的元素填充到容器中。
 
 如果 `InIt` 是整数类型，则第二个成员函数的行为与相同 `assign((size_type)first, (value_type)last)` 。 否则，它会将受控序列替换为序列 [ `first` ， `last`) 。 用于使受控序列成为副本的另一个序列。
 
-第三个成员函数将受控序列替换 *为枚举器*指定的序列。 用于使受控序列成为枚举器所描述的序列的副本。
+第三个成员函数将受控序列替换 *为枚举器* 指定的序列。 用于使受控序列成为枚举器所描述的序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -311,9 +312,9 @@ reference at(size_type pos);
 pos<br/>
 要访问的元素的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数返回 *对位置位置*的受控序列的元素的引用。使用它可读取或写入您知道的位置的元素。
+成员函数返回 *对位置位置* 的受控序列的元素的引用。使用它可读取或写入您知道的位置的元素。
 
 ### <a name="example"></a>示例
 
@@ -911,7 +912,7 @@ iterator erase(iterator where);
 iterator erase(iterator first, iterator last);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要清除的范围的开头。
@@ -922,9 +923,9 @@ iterator erase(iterator first, iterator last);
 *where*<br/>
 要清除的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个成员函数删除由 *where*指向的受控序列的元素。 使用它可以删除单个元素。
+第一个成员函数删除由 *where* 指向的受控序列的元素。 使用它可以删除单个元素。
 
 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 使用它可以删除零个或多个连续元素。
 
@@ -1333,7 +1334,7 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计数*<br/>
 要插入的元素数。
@@ -1353,17 +1354,17 @@ void insert(iterator where,
 *where*<br/>
 要插入到的容器中的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个成员函数在由控制的序列中的 *位置* 指向的元素之前，插入由剩余操作数指定的序列。
 
 第一个成员函数插入具有值 *val* 的元素，并返回指定新插入的元素的迭代器。 用于在迭代器指定的位置之前插入单个元素。
 
-第二个成员函数插入值*val*的*计数*元素的重复。 使用它可以插入零个或多个连续元素，这些元素是同一值的所有副本。
+第二个成员函数插入值 *val* 的 *计数* 元素的重复。 使用它可以插入零个或多个连续元素，这些元素是同一值的所有副本。
 
 如果 `InIt` 是整数类型，则第三个成员函数的行为与 `insert(where, (size_type)first, (value_type)last)` 相同。 否则，将插入序列 [ `first` ， `last`) 。 使用它可以插入从另一个序列复制的零个或多个连续元素。
 
-第四个成员函数插入由 *权限*指定的序列。 使用它可以插入枚举器描述的序列。
+第四个成员函数插入由 *权限* 指定的序列。 使用它可以插入枚举器描述的序列。
 
 在插入单个元素时，元素副本的数目在插入点与序列的最近结束之间的元素数中是线性的。  (在序列的任一端插入一个或多个元素时，不会发生元素复制。 ) 如果 `InIt` 是输入迭代器，则第三个成员函数将为序列中的每个元素有效地执行单个插入。 否则，在插入 `N` 元素时，元素副本的数量为线性， `N` 并加上插入点与序列的最近结束之间的元素数。
 
@@ -1486,14 +1487,14 @@ x b c
 vector<Value>% operator=(vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 用于复制的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧* 受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1544,7 +1545,7 @@ reference operator[](size_type pos);
 pos<br/>
 要访问的元素的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员运算符返回 referene *位置处的元素。* 使用它可以访问您知道的位置的元素。
 
@@ -1844,12 +1845,12 @@ y x c
 void reserve(size_type count);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计数*<br/>
 容器的新的最小容量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数可确保 `capacity()` 之后返回至少 *计数*。 使用此方法可以确保容器不需要为受控序列重新分配存储，直到它已增大到指定的大小。
 
@@ -1900,7 +1901,7 @@ void resize(size_type new_size);
 void resize(size_type new_size, value_type val);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *new_size*<br/>
 受控序列的新大小。
@@ -1908,9 +1909,9 @@ void resize(size_type new_size, value_type val);
 *初始值*<br/>
 填充元素的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数确保[ (STL/CLR) 的 vector：： size](#size) `()` 返回*new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `value_type()` ，而第二个成员函数则追加值为 *val*的元素。 为了使受控序列更短，两个成员函数将有效地擦除最后一个元素[vector：： size (STL/CLR) ](#size) `() -` `new_size` 时间。 使用它可以通过修整或填充当前受控序列来确保受控序列 *new_size*大小。
+成员函数确保 [ (STL/CLR) 的 vector：： size](#size) `()` 返回 *new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `value_type()` ，而第二个成员函数则追加值为 *val* 的元素。 为了使受控序列更短，两个成员函数将有效地擦除最后一个元素[vector：： size (STL/CLR) ](#size) `() -` `new_size` 时间。 使用它可以通过修整或填充当前受控序列来确保受控序列 *new_size* 大小。
 
 ### <a name="example"></a>示例
 
@@ -2106,14 +2107,14 @@ end()-begin() = 3
 void swap(vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要与其交换内容的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数交换和右之间的受控 **`*this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
+成员函数交换和右之间的受控 **`*this`** 序列。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2221,7 +2222,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *值*的同义词。
+该类型是模板参数 *值* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2271,7 +2272,7 @@ template<typename InIt>
 vector(System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计数*<br/>
 要插入的元素数。
@@ -2288,7 +2289,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 *初始值*<br/>
 要插入的元素的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数：
 
@@ -2300,13 +2301,13 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `vector(vector<Value>% right);`
 
-用序列 [，) 初始化受控序列 `right.begin()` `right.end()` 。 用于指定初始受控序列，该序列是由 vector 对象 *权限*控制的序列的副本。
+用序列 [，) 初始化受控序列 `right.begin()` `right.end()` 。 用于指定初始受控序列，该序列是由 vector 对象 *权限* 控制的序列的副本。
 
 构造函数：
 
 `vector(vector<Value>^ right);`
 
-用序列 [，) 初始化受控序列 `right->begin()` `right->end()` 。 使用此方法可以指定初始受控序列，该序列是由句柄 *正确*的矢量对象控制的序列副本。
+用序列 [，) 初始化受控序列 `right->begin()` `right->end()` 。 使用此方法可以指定初始受控序列，该序列是由句柄 *正确* 的矢量对象控制的序列副本。
 
 构造函数：
 
@@ -2318,7 +2319,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `vector(size_type count, value_type val);`
 
-用每*个值为值的**计数*元素初始化受控序列。 使用它可以将具有相同值的元素填充到容器中。
+用每 *个值为值的**计数* 元素初始化受控序列。 使用它可以将具有相同值的元素填充到容器中。
 
 构造函数：
 
@@ -2332,7 +2333,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `vector(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-使用枚举器 *权限*指定的序列初始化受控序列。 用于使受控序列成为枚举器所描述的另一序列的副本。
+使用枚举器 *权限* 指定的序列初始化受控序列。 用于使受控序列成为枚举器所描述的另一序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2411,7 +2412,7 @@ template<typename Value>
         vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2419,9 +2420,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素对两个向量进行*比较时，是否按原样对**左侧*进行排序。
+Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素对两个向量进行 *比较时，是否按原样对**左侧* 进行排序。
 
 ### <a name="example"></a>示例
 
@@ -2480,7 +2481,7 @@ template<typename Value>
         vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2488,9 +2489,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回 `left->size() < right->size()` 用于测试在按元素对两个向量*right*进行比较的情况下，是否对*左侧*排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回 `left->size() < right->size()` 用于测试在按元素对两个向量进行比较的情况下，是否对 *左侧* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2549,7 +2550,7 @@ template<typename Value>
         vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2557,9 +2558,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)` 。 使用此方法可以测试是否在按元素对两个向量进行*比较时向**左*排序。
+Operator 函数返回 `!(right < left)` 。 使用此方法可以测试是否在按元素对两个向量进行 *比较时向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2618,7 +2619,7 @@ template<typename Value>
         vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2626,9 +2627,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个向量进行*比较时，是否按原样对**左侧*排序。
+仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个向量进行 *比较时，是否按原样对**左侧* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2687,7 +2688,7 @@ template<typename Value>
         vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2695,9 +2696,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left` 。 使用此方法可以测试是否在按元素对两个向量进行比较时*向**左*排序。
+Operator 函数返回 `right` `<` `left` 。 使用此方法可以测试是否在按元素对两个向量进行比较时 *向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2756,7 +2757,7 @@ template<typename Value>
         vector<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2764,9 +2765,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个向量进行比较*时，是否向**左*排序。
+Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个向量进行比较 *时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 

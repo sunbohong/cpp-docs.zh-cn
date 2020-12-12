@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __max
 title: __max
 ms.date: 04/05/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 709bbb7aee48e65fdd3feb21eb1984135faae2f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170184"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299640"
 ---
 # <a name="__max"></a>__max
 
@@ -50,13 +51,13 @@ ms.locfileid: "80170184"
 
 ## <a name="return-value"></a>返回值
 
-**__max**返回其参数中的较大者。
+**__max** 返回其参数中的较大者。
 
 ## <a name="remarks"></a>备注
 
-**__Max**宏比较两个值，并返回较大值的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
+**__Max** 宏比较两个值，并返回较大值的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
 
-返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如 `*p++`），这可能会导致意外的结果。
+返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如），则这可能会导致意外的结果 `*p++` 。
 
 ## <a name="requirements"></a>要求
 
@@ -68,7 +69,7 @@ ms.locfileid: "80170184"
 
 有关详细信息，请参阅 [__min](min.md) 中的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [__min](min.md)<br/>

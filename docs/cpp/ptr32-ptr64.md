@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __ptr32、__ptr64
 title: __ptr32、__ptr64
 ms.date: 10/09/2018
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 5ff2fa22c8a466252cfaf8b80dc8d56774aff58e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3393cdfddf08ba2ae5366cacae8554faa7c4a50c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299028"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32、__ptr64
 
@@ -39,9 +40,9 @@ int * __ptr64 p64;
 在32位系统中，使用声明的指针被 **`__ptr64`** 截断为32位指针。 在64位系统中，使用声明的指针 **`__ptr32`** 被强制转换为64位指针。
 
 > [!NOTE]
-> 使用 **`__ptr32`** **`__ptr64`** **/clr： pure**进行编译时，不能使用或。 否则，将生成编译器错误 C2472。 **/Clr： pure**和 **/clr： safe**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
+> 使用 **`__ptr32`** **`__ptr64`** **/clr： pure** 进行编译时，不能使用或。 否则，将生成编译器错误 C2472。 **/Clr： pure** 和 **/clr： safe** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-为了与早期版本兼容， **_ptr32**和 **_ptr64**是指定的同义词， **`__ptr32`** **`__ptr64`** 除非指定编译器选项[/za \( 禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
+为了与早期版本兼容， **_ptr32** 和 **_ptr64** 是的同义词 **`__ptr32`** ， **`__ptr64`** 除非指定了编译器选项 [/za \( 禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 

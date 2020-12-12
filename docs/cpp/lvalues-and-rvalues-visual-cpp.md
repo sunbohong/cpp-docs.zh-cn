@@ -1,28 +1,29 @@
 ---
-title: 值类别：左值和右（c + +）
+description: '了解详细信息：左值和右 (c + +) '
+title: '值类别：左值和右 (c + +) '
 ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: b4b3ba5fdbc11ec97870b0f06fd1aabd3b57f5ca
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b92ddc3aad62f1eaf7af6a6bc113c1a0fdd70769
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299236"
 ---
 # <a name="lvalues-and-rvalues-c"></a>Lvalues 和 Rvalues (C++)
 
-每个 c + + 表达式都具有类型，属于*值类别*。 值类别是编译器在表达式计算过程中创建、复制和移动临时对象时必须遵循的规则的基础。
+每个 c + + 表达式都具有类型，属于 *值类别*。 值类别是编译器在表达式计算过程中创建、复制和移动临时对象时必须遵循的规则的基础。
 
 C + + 17 标准定义表达式值类别，如下所示：
 
-- *Glvalue*是一个表达式，其计算确定对象、位域或函数的标识。
-- *Prvalue*是一个表达式，其计算初始化对象或位域，或计算运算符的操作数的值，由其出现的上下文指定。
-- *Xvalue*是一个 glvalue，它表示可重复使用其资源的对象或位域（通常是因为它接近生存期的末尾）。 示例：涉及 rvalue 引用（8.3.2）的某些类型的表达式生成 xvalues，如对其返回类型为右值引用或强制转换为右值引用类型的函数的调用。
-- *左*值是不是 xvalue 的 glvalue。
-- *右*值为 prvalue 或 xvalue。
+- *Glvalue* 是一个表达式，其计算确定对象、位域或函数的标识。
+- *Prvalue* 是一个表达式，其计算初始化对象或位域，或计算运算符的操作数的值，由其出现的上下文指定。
+- *Xvalue* 是一个 glvalue，它表示可重复使用其资源的对象或位域， (通常是因为它接近生存期) 结束。 示例：涉及) 右值引用的某些类型的表达式 (8.3.2 生成 xvalues，如对其返回类型为右值引用或强制转换为右值引用类型的函数的调用。
+- *左* 值是不是 xvalue 的 glvalue。
+- *右* 值为 prvalue 或 xvalue。
 
 下图说明了类别之间的关系：
 
@@ -66,9 +67,9 @@ int main()
 > [!NOTE]
 > 此主题中的示例阐释了未重载运算符时的正确和错误用法。 通过重载运算符，可以使表达式（如 `j * 4`）成为左值。
 
-当引用对象引用时，通常使用字词*lvalue*和*右*值。 有关引用的详细信息，请参阅[Lvalue 引用声明符： &](../cpp/lvalue-reference-declarator-amp.md)和[右值引用声明符：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+当引用对象引用时，通常使用字词 *lvalue* 和 *右* 值。 有关引用的详细信息，请参阅 [Lvalue 引用声明符： &](../cpp/lvalue-reference-declarator-amp.md) 和 [右值引用声明符：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [基本概念](../cpp/basic-concepts-cpp.md)<br/>
 [Lvalue 引用声明符：&](../cpp/lvalue-reference-declarator-amp.md)<br/>

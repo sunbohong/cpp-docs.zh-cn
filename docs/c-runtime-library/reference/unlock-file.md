@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _unlock_file
 title: _unlock_file
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6b639ca178f9cb397e9ec14f383b952e94400e7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299353"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -49,26 +50,26 @@ void _unlock_file(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*文件*<br/>
+*file*<br/>
 文件句柄。
 
 ## <a name="remarks"></a>备注
 
-**_Unlock_file**函数将取消*文件*指定的文件的锁定。 解锁文件可允许其他进程访问此文件。 除非以前在*文件*指针上调用了 **_lock_file** ，否则不应调用此函数。 对未锁定的文件调用 **_unlock_file**可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
+**_Unlock_file** 函数将取消 *文件* 指定的文件的锁定。 解锁文件可允许其他进程访问此文件。 除非以前在 *文件* 指针上调用了 **_lock_file** ，否则不应调用此函数。 对未锁定的文件调用 **_unlock_file** 可能会导致死锁。 有关示例，请参阅 [_lock_file](lock-file.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_unlock_file**|\<stdio.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>

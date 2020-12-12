@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： embedded_idl import 特性
 title: embedded_idl 导入属性
 ms.date: 08/29/2019
 f1_keywords:
@@ -6,30 +7,30 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a56c6e664c082db4b6eac078b7133a1ead947d3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300588"
 ---
 # <a name="embedded_idl-import-attribute"></a>embedded_idl 导入属性
 
-**C++相关**
+**C++ 专用**
 
-指定是否将类型库写入`.tlh`包含特性生成的代码的文件。
+指定是否将类型库写入 `.tlh` 包含特性生成的代码的文件。
 
 ## <a name="syntax"></a>语法
 
-> **#import***类型库***embedded_idl**[ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
+> **#import** *类型-library* **embedded_idl** [ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 **emitidl**\
-从*类型库*导入的类型信息出现在为特性化项目生成的 IDL 中。 此行为是默认行为, 并且如果未指定参数`embedded_idl`, 则该行为生效。
+从 *类型库* 导入的类型信息出现在为特性化项目生成的 IDL 中。 此行为是默认行为，并且如果未指定参数，则该行为生效 `embedded_idl` 。
 
-**"no_emitidl"** \
-从*类型库*导入的类型信息在为特性化项目生成的 IDL 中不存在。
+**"no_emitidl"**\
+从 *类型库* 导入的类型信息在为特性化项目生成的 IDL 中不存在。
 
 ## <a name="example"></a>示例
 
@@ -41,7 +42,7 @@ ms.locfileid: "70216323"
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-**结束C++特定**
+**结束 C++ 专用**
 
 ## <a name="see-also"></a>请参阅
 

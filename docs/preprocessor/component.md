@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：组件杂注
 title: component 杂注
 ms.date: 08/29/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: 73b308fdc426be9b403b808d4e638b4f5c1e9149
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 2eeb70701c490e0f797dfbd6da7ac11030283073
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300796"
 ---
 # <a name="component-pragma"></a>component 杂注
 
@@ -21,9 +22,9 @@ ms.locfileid: "90040725"
 
 ## <a name="syntax"></a>语法
 
-> **#pragma 组件 ( 浏览器 "、** " 关闭 **"、** \| **off** " \[ **,** **引用** \[ **"、"** *名称*"] **) ** \
-> **#pragma 组件 ( minrebuild，** {0} **on** \| **off** **) ** \
-> **#pragma 组件 ( mintypeinfo，** {0} **on** \| **off** **) **
+> **#pragma 组件 ( 浏览器 "、** " 关闭 **"、** \|  " \[  **引用** \[ **"、"** *名称*"] **)** \
+> **#pragma 组件 ( minrebuild，** {0}  \|  **)** \
+> **#pragma 组件 ( mintypeinfo，** {0}  \|  **)**
 
 ## <a name="remarks"></a>备注
 
@@ -42,7 +43,7 @@ ms.locfileid: "90040725"
 > [!NOTE]
 > 若要启用通过此杂注收集浏览信息， [必须先启用浏览信息](../build/reference/building-browse-information-files-overview.md)。
 
-**引用**选项可与或不带*name*参数一起使用。 如果使用不带*名称*的**引用**，则会继续收集引用 (其他浏览信息将继续收集，但) 。 例如：
+**引用** 选项可与或不带 *name* 参数一起使用。 如果使用不带 *名称* 的 **引用**，则会继续收集引用 (其他浏览信息将继续收集，但) 。 例如：
 
 ```cpp
 #pragma component(browser, off, references)
@@ -50,19 +51,19 @@ ms.locfileid: "90040725"
 
 停止编译器收集引用信息。
 
-使用*名称*和**off** **引用**可防止在 "浏览信息" 窗口中显示*名称*引用。 使用此语法可忽略您不感兴趣的名称和类型，并减小浏览信息文件的大小。 例如：
+使用 *名称* 和 **off** **引用** 可防止在 "浏览信息" 窗口中显示 *名称* 引用。 使用此语法可忽略您不感兴趣的名称和类型，并减小浏览信息文件的大小。 例如：
 
 ```cpp
 #pragma component(browser, off, references, DWORD)
 ```
 
-忽略从该点开始对 DWORD 值的引用。 可以通过使用 **在**上打开对 DWORD 的引用的收集：
+忽略从该点开始对 DWORD 值的引用。 可以通过使用 **在** 上打开对 DWORD 的引用的收集：
 
 ```cpp
 #pragma component(browser, on, references, DWORD)
 ```
 
-这是继续收集 *名称*引用的唯一方法;您必须显式打开已关闭的任何 *名称* 。
+这是继续收集 *名称* 引用的唯一方法;您必须显式打开已关闭的任何 *名称* 。
 
 若要防止预处理器展开 *名称* (例如将 NULL 扩展到 0) ，请在其两侧加上引号：
 
@@ -84,6 +85,6 @@ LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subs
 
 有关详细信息，请参阅 [/gm (启用最小重新生成) ](../build/reference/gm-enable-minimal-rebuild.md)  编译器选项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

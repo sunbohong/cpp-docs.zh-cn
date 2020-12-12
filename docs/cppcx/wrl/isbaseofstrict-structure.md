@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IsBaseOfStrict 结构
 title: IsBaseOfStrict 结构
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsBaseOfStrict structure
 - Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-ms.openlocfilehash: 11acb4c7162a17ff763a574c27c186061ae476a7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bcdab9c4b6b5a2ab108b59d3127c08b53589e16a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298950"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 结构
 
@@ -30,7 +31,7 @@ template <typename Base>
 struct IsBaseOfStrict<Base, Base>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *基座*<br/>
 基类型。
@@ -62,7 +63,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 **命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="isbaseofstrictvalue"></a><a name="value"></a>IsBaseOfStrict：： value
+## <a name="isbaseofstrictvalue"></a><a name="value"></a> IsBaseOfStrict：： value
 
 支持 WRL 基础结构，不应在代码中直接使用。
 

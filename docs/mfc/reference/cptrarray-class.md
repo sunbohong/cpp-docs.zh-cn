@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CPtrArray 类
 title: CPtrArray 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CPtrArray [MFC], SetAtGrow
 - CPtrArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
-ms.openlocfilehash: 5db9f69348e96fffc1aa6fdc88134d777eb5406d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7cde7f76d604562c1161ccc577feea1e43b2076e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226849"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301342"
 ---
 # <a name="cptrarray-class"></a>CPtrArray 类
 
@@ -61,7 +62,7 @@ class CPtrArray : public CObject
 
 ## <a name="members"></a>成员
 
-的成员函数 `CPtrArray` 类似于类[CObArray](../../mfc/reference/cobarray-class.md)的成员函数。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论你在何处看到 `CObject` 作为函数参数或返回值的指针，都要将指针替换为 **`void`** 。
+的成员函数 `CPtrArray` 类似于类 [CObArray](../../mfc/reference/cobarray-class.md)的成员函数。 由于此相似性，因此你可以使用 `CObArray` 参考文档获取成员函数细节。 无论你在何处看到 `CObject` 作为函数参数或返回值的指针，都要将指针替换为 **`void`** 。
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,13 +72,13 @@ class CPtrArray : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CPtrArray::CPtrArray](../../mfc/reference/cobarray-class.md#cobarray)|构造一个空数组。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CPtrArray：： Add](../../mfc/reference/cobarray-class.md#add)|向数组的末尾添加一个元素；根据需要扩展该数组。|
 |[CPtrArray：： Append](../../mfc/reference/cobarray-class.md#append)|将另一个数组追加到该数组中；根据需要扩展该数组。|
@@ -99,13 +100,13 @@ class CPtrArray : public CObject
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CPtrArray：： operator \[\]](../../mfc/reference/cobarray-class.md#operator_at)|设置或获取位于指定索引处的元素。|
 
 ## <a name="remarks"></a>备注
 
-`CPtrArray`合并了 IMPLEMENT_DYNAMIC 宏，以支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单个指针数组元素的转储，则必须将转储上下文的深度设置为1或更大。
+`CPtrArray` 合并了 IMPLEMENT_DYNAMIC 宏，以支持运行时类型访问和转储到 `CDumpContext` 对象。 如果需要单个指针数组元素的转储，则必须将转储上下文的深度设置为1或更大。
 
 > [!NOTE]
 > 在使用数组之前，先使用 `SetSize` 建立其大小并为其分配内存。 如果不使用 `SetSize`，则向数组添加元素会导致它经常重新分配和复制。 经常重新分配和复制会降低效率而且会产生内存碎片。
@@ -114,7 +115,7 @@ class CPtrArray : public CObject
 
 如果删除了指针数组，或删除了其元素，则只会移除指针，而不会移除它们引用的实体。
 
-有关使用的详细信息 `CPtrArray` ，请参阅文章[集合](../../mfc/collections.md)。
+有关使用的详细信息 `CPtrArray` ，请参阅文章 [集合](../../mfc/collections.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -126,7 +127,7 @@ class CPtrArray : public CObject
 
 **标头：** afxcoll。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：泛型类 (c + +/CLI) '
 title: 泛型类 (C++/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: fd287d8e9fe08ccd42436569eafee3f6935700e2
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 6b27f5220ab45fb62858bca2cec9ba0e46e9ec0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301758"
 ---
 # <a name="generic-classes-ccli"></a>泛型类 (C++/CLI)
 
@@ -40,32 +41,32 @@ class-body
 *attributes*<br/>
 （可选）其他声明性信息。 有关特性和特性类的详细信息，请参阅“特性”。
 
-class-key**<br/>
-**`class`** 或**`typename`**
+class-key<br/>
+**`class`** 或 **`typename`**
 
-type-parameter-identifier(s)**：标识符的逗号分隔列表，用于指定类型参数的名称。
+type-parameter-identifier(s)：标识符的逗号分隔列表，用于指定类型参数的名称。
 
-constraint-clauses**<br/>
-where**** 子句的非逗号分隔列表，用于指定类型参数的约束。 采用以下形式：
+constraint-clauses<br/>
+where 子句的非逗号分隔列表，用于指定类型参数的约束。 采用以下形式：
 
 > **where** *类型参数标识符* **：** *constraint-list*  **...**
 
-constraint-list**<br/>
+constraint-list<br/>
 *类或接口*[ `,` *...*]
 
-accessibility-modifiers**<br/>
+accessibility-modifiers<br/>
 泛型类的可访问性修饰符。 对于 Windows 运行时，唯一允许的修饰符是 **`private`** 。 对于公共语言运行时，允许的修饰符为 **`private`** 和 **`public`** 。
 
 *identifier*<br/>
 泛型类的名称，即任意有效的 C++ 标识符。
 
 *组成*<br/>
-（可选）允许的修饰符包括 sealed**** 和 abstract****。
+（可选）允许的修饰符包括 sealed 和 abstract。
 
-base-list**<br/>
+base-list<br/>
 包含一个基类和任何实现接口（全都以逗号分隔）的列表。
 
-class-body**<br/>
+class-body<br/>
 包含字段、成员函数等的类主体。
 
 *声明符*<br/>

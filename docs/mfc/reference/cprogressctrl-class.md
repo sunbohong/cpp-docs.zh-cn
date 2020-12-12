@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CProgressCtrl 类
 title: CProgressCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: eda19ca2b94978201806e60d2ae8399e00e13f1f
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f5bd1bcae041d6bd61b715275b232fc5536cba2f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301407"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 类
 
@@ -63,13 +64,13 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CProgressCtrl：： CProgressCtrl](#cprogressctrl)|构造 `CProgressCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CProgressCtrl：： Create](#create)|创建一个进度栏控件，并将其附加到 `CProgressCtrl` 对象。|
 |[CProgressCtrl：： CreateEx](#createex)|创建具有指定 Windows 扩展样式的进度控件，并将其附加到 `CProgressCtrl` 对象。|
@@ -139,7 +140,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定进度栏控件的样式。 除了下面的进度栏控件样式以外，还可将 [Windows SDK 中的](/windows/win32/api/winuser/nf-winuser-createwindoww) 所有窗口 stylesdescribed 组合应用到控件：
@@ -149,7 +150,7 @@ virtual BOOL Create(
 - PBS_SMOOTH 在进度栏控件中显示渐变的平滑填充。 如果没有此标志，控件将填充块。
 
 *rect*<br/>
-指定进度栏控件的大小和位置。 它可以是 [CRect](../../atl-mfc-shared/reference/crect-class.md) 对象或 [RECT](/windows/win32/api/windef/ns-windef-rect) 结构。 由于控件必须是子窗口，因此指定的坐标是相对于 *pParentWnd*的工作区的。
+指定进度栏控件的大小和位置。 它可以是 [CRect](../../atl-mfc-shared/reference/crect-class.md) 对象或 [RECT](/windows/win32/api/windef/ns-windef-rect) 结构。 由于控件必须是子窗口，因此指定的坐标是相对于 *pParentWnd* 的工作区的。
 
 *pParentWnd*<br/>
 指定进度栏控件的父窗口（通常为） `CDialog` 。 值不得为 NULL。
@@ -182,16 +183,16 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
+指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的 *dwExStyle* 参数。
 
 *dwStyle*<br/>
 指定进度栏控件的样式。 应用在 [Windows SDK 中所](/windows/win32/api/winuser/nf-winuser-createwindoww) 述的任何窗口样式组合。
 
 *rect*<br/>
-对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd*的工作区坐标表示）。
+对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd* 的工作区坐标表示）。
 
 *pParentWnd*<br/>
 指向作为控件的父级的窗口的指针。
@@ -269,7 +270,7 @@ void GetRange(
     int& nUpper);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLower*<br/>
 对接收进度栏控件下限的整数的引用。
@@ -279,7 +280,7 @@ void GetRange(
 
 ### <a name="remarks"></a>备注
 
-此函数将下限和上限的值复制到 *nLower* 和 *nUpper*所引用的整数。
+此函数将下限和上限的值复制到 *nLower* 和 *nUpper* 所引用的整数。
 
 ### <a name="example"></a>示例
 
@@ -357,7 +358,7 @@ int GetStep() const;
 int OffsetPos(int nPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 此位置的提升量。
@@ -378,7 +379,7 @@ int OffsetPos(int nPos);
 COLORREF SetBarColor(COLORREF clrBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrBar*\
 中指定进度指示器栏的新颜色的 [COLORREF](/windows/win32/gdi/colorref) 值。 指定 CLR_DEFAULT 会导致进度栏使用其默认颜色。
@@ -413,7 +414,7 @@ COLORREF SetBarColor(COLORREF clrBar);
 COLORREF SetBkColor(COLORREF clrNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrNew*<br/>
 指定新背景色的 COLORREF 值。 指定 CLR_DEFAULT 值以使用进度栏的默认背景色。
@@ -436,7 +437,7 @@ BOOL SetMarquee(
     int nInterval);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fMarqueeMode*\
 中若要启用选框模式，则为 TRUE; 如果为 FALSE，则关闭选框模式。
@@ -474,7 +475,7 @@ BOOL SetMarquee(
 int SetPos(int nPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 进度栏控件的新位置。
@@ -505,7 +506,7 @@ void SetRange32(
     int nUpper);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nLower*<br/>
 指定范围 (默认值为零) 的下限。
@@ -529,7 +530,7 @@ void SetRange32(
 int SetState(int iState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iState*\
 中要设置进度栏的状态。 使用以下值之一：
@@ -566,7 +567,7 @@ int SetState(int iState);
 int SetStep(int nStep);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nStep*<br/>
 新步骤增量。
@@ -605,7 +606,7 @@ int StepIt();
 
 [!code-cpp[NVC_MFC_CProgressCtrl#10](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_16.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>

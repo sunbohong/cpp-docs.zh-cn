@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： timespec_get、_timespec32_get _timespec64_get
 title: timespec_get、_timespec32_get、_timespec64_get1
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 7e3c56805b3af9bb5e739bd74d03bce015c65895
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6fc7c84d21bdeb8394602565dfe83fe22b59cb2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233920"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299522"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -67,7 +68,7 @@ int _timespec64_get(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *time_spec*<br/>
 设置为自时期开始以来的时间（以秒和纳秒为单位）的结构的指针。
@@ -77,29 +78,29 @@ int _timespec64_get(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则为*base*的值; 否则返回零。
+如果成功，则为 *base* 的值; 否则返回零。
 
 ## <a name="remarks"></a>备注
 
-**Timespec_get**函数设置由*time_spec*参数指向的结构中的当前时间。 此结构的所有版本都具有两个成员， **tv_sec**和**tv_nsec**。 将**tv_sec**值设置为在由*base*指定的 epoch 开始后的整数毫微秒数，并**tv_nsec**舍入到系统时钟的分辨率。
+**Timespec_get** 函数设置由 *time_spec* 参数指向的结构中的当前时间。 此结构的所有版本都具有两个成员， **tv_sec** 和 **tv_nsec**。 将 **tv_sec** 值设置为在由 *base* 指定的 epoch 开始后的整数毫微秒数，并 **tv_nsec** 舍入到系统时钟的分辨率。
 
 **Microsoft 专用**
 
-这些函数仅支持作为*基值* **TIME_UTC** 。 这会将*time_spec*值设置为自1970年1月1日午夜（1970，协调世界时（UTC）午夜）以来的秒数和纳秒数。 在 **`struct`** **_timespec32**中， **tv_sec**为 **__time32_t**值。 在 **`struct`** **_timespec64**中， **tv_sec**为 **__time64_t**值。 在 **`struct`** **timespec**中， **tv_sec**是**time_t**类型，其长度为32位或64位，具体取决于是否定义预处理器宏 _USE_32BIT_TIME_T。 **Timespec_get**函数是一个内联函数，如果定义 _USE_32BIT_TIME_T，则调用 **_timespec32_get** ;否则，它会调用 **_timespec64_get**。
+这些函数仅支持作为 *基值* **TIME_UTC** 。 这会将 *time_spec* 值设置为自1970年1月1日午夜（1970，协调世界时 (UTC) 午夜）以来的秒数和纳秒数。 在 **`struct`** **_timespec32** 中， **tv_sec** 为 **__time32_t** 值。 在 **`struct`** **_timespec64** 中， **tv_sec** 为 **__time64_t** 值。 在 **`struct`** **timespec** 中， **tv_sec** 是 **time_t** 类型，其长度为32位或64位，具体取决于是否定义预处理器宏 _USE_32BIT_TIME_T。 **Timespec_get** 函数是一个内联函数，如果定义 _USE_32BIT_TIME_T，则调用 **_timespec32_get** ;否则，它会调用 **_timespec64_get**。
 
 **结束 Microsoft 专用**
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**timespec_get**、 **_timespec32_get** **_timespec64_get**|C： \<time.h> ，c + +： \<ctime> 或\<time.h>|
+|**timespec_get**、 **_timespec32_get** **_timespec64_get**|C： \<time.h> ，c + +： \<ctime> 或 \<time.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime、_wasctime](asctime-wasctime.md)<br/>

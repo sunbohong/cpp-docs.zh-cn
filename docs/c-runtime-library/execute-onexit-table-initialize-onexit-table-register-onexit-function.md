@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _execute_onexit_table、_initialize_onexit_table _register_onexit_function
 title: _execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 051961f049109b4fa6a2881e442e621036cb279c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 5bd0449c4b353c6a417e145f864b07794ae40ca3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913838"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97300068"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
@@ -55,7 +56,7 @@ int _execute_onexit_table(
     );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *table*<br/>
 [in, out] 指向 onexit 函数表的指针。
@@ -69,7 +70,7 @@ int _execute_onexit_table(
 
 ## <a name="remarks"></a>备注
 
-这些函数是用来支持 C 运行时的基础结构实现详细信息，不应在代码中直接调用。 C 运行时使用*onexit 函数表*来表示通过对`atexit`、 `at_quick_exit`和`_onexit`的调用注册的函数序列。 onexit 函数表数据结构是 C 运行时的非跳转实现详细信息；可以更改此数据成员的顺序和含义。 它们不应由外部代码进行检查。
+这些函数是用来支持 C 运行时的基础结构实现详细信息，不应在代码中直接调用。 C 运行时使用 *onexit 函数表* 来表示通过对、和的调用注册的函数 `atexit` 序列 `at_quick_exit` `_onexit` 。 onexit 函数表数据结构是 C 运行时的非跳转实现详细信息；可以更改此数据成员的顺序和含义。 它们不应由外部代码进行检查。
 
 `_initialize_onexit_table` 函数将 onexit 函数表初始化为其初始值。  将 onexit 函数表传递给 `_register_onexit_function` 或 `_execute_onexit_table` 前，必须调用此函数。
 
@@ -77,18 +78,18 @@ int _execute_onexit_table(
 
 `_execute_onexit_table` 函数执行 onexit 函数表中的所有函数，并清除表，然后返回。 在调用 `_execute_onexit_table` 后，表处于无效状态；必须通过调用 `_initialize_onexit_table` 以对其重新初始化后才能再次使用。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
+|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C、C + +： \<process.h>|
 
-`_initialize_onexit_table`、 `_register_onexit_function`和`_execute_onexit_table`函数是 Microsoft 特定的。 有关兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
+`_initialize_onexit_table`、 `_register_onexit_function` 和 `_execute_onexit_table` 函数是 Microsoft 特定的。 有关兼容性信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

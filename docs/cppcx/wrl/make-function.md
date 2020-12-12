@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Make 函数
 title: Make 函数
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb83c6c163440f911bc625a8646d1758442b25f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298898"
 ---
 # <a name="make-function"></a>Make 函数
 
@@ -162,7 +163,7 @@ template <
 ComPtr<T> Make();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 从继承的用户指定的类 `WRL::RuntimeClass` 。
@@ -227,7 +228,7 @@ ComPtr<T> Make();
 
 ## <a name="remarks"></a>备注
 
-有关示例，请参阅[如何：直接实例化 WRL 组件](how-to-instantiate-wrl-components-directly.md)来了解此函数与[MICROSOFT：： WRL：:D Etails：： MakeAndInitialize](makeandinitialize-function.md)之间的差异。
+有关示例，请参阅 [如何：直接实例化 WRL 组件](how-to-instantiate-wrl-components-directly.md) 来了解此函数与 [MICROSOFT：： WRL：:D Etails：： MakeAndInitialize](makeandinitialize-function.md)之间的差异。
 
 ## <a name="requirements"></a>要求
 
@@ -235,6 +236,6 @@ ComPtr<T> Make();
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strftime、wcsftime、_strftime_l、_wcsftime_l
 title: strftime、wcsftime、_strftime_l、_wcsftime_l
 ms.date: 4/2/2020
 api_name:
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 36a84c5de41f3358adbcba42010ed8e6f3c83939
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f6297af6ad7c0f6f9a0280cc47ea7a0caa6440af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299561"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 
@@ -84,13 +85,13 @@ size_t _wcsftime_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *strDest*<br/>
 输出字符串。
 
 *maxsize*<br/>
-*StrDest*缓冲区的大小（以字符为单位） (**`char`** 或 **`wchar_t`**) 。
+*StrDest* 缓冲区的大小（以字符为单位） (**`char`** 或 **`wchar_t`**) 。
 
 *format*<br/>
 窗体控件字符串。
@@ -107,13 +108,13 @@ size_t _wcsftime_l(
 
 如果字符总数（包括终止 null）大于 *maxsize*，则 **strftime** 和 **Wcsftime** 都返回0， *strDest* 的内容不确定。
 
-*StrDest*中的字符数等于*格式*中的文本字符数，以及可以通过格式设置代码添加到*格式*的任何字符。 返回值中一般不计算以 null 终止的字符串。
+*StrDest* 中的字符数等于 *格式* 中的文本字符数，以及可以通过格式设置代码添加到 *格式* 的任何字符。 返回值中一般不计算以 null 终止的字符串。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Strftime**和**wcsftime**函数根据提供的*格式*参数格式化*timeptr*中的**tm** time 值，并将结果存储在缓冲区*strDest*中。 最多可以在字符串中放置 *maxsize* 字符。 有关 *timeptr* 结构中的字段的说明，请参阅 [asctime](asctime-wasctime.md)。 **wcsftime** 是 **strftime**的宽字符等效项;其字符串指针参数指向宽字符字符串。 否则这些函数具有相同行为。
+**Strftime** 和 **wcsftime** 函数根据提供的 *格式* 参数格式化 *timeptr* 中的 **tm** time 值，并将结果存储在缓冲区 *strDest* 中。 最多可以在字符串中放置 *maxsize* 字符。 有关 *timeptr* 结构中的字段的说明，请参阅 [asctime](asctime-wasctime.md)。 **wcsftime** 是 **strftime** 的宽字符等效项;其字符串指针参数指向宽字符字符串。 否则这些函数具有相同行为。
 
-此函数验证其参数。 如果*strDest*、 *format*或*timeptr*为 null 指针，或*timeptr*解决的**tm**数据结构无效 (例如，如果它包含的时间或日期) 超出范围值，或者*格式*字符串包含无效的格式设置代码，则将调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回0并将 **errno** 设置为 **EINVAL**。
+此函数验证其参数。 如果 *strDest*、 *format* 或 *timeptr* 为 null 指针，或 *timeptr* 解决的 **tm** 数据结构无效 (例如，如果它包含的时间或日期) 超出范围值，或者 *格式* 字符串包含无效的格式设置代码，则将调用无效的参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则该函数将返回0并将 **errno** 设置为 **EINVAL**。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -123,9 +124,9 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-*Format*参数包含一个或多个代码;与**printf**中一样，格式设置代码前面有一个百分号 (**%**) 。 不以开头的字符 **%** 将复制到 *strDest*中。 当前区域设置的 **LC_TIME** 类别将影响 **strftime**的输出格式。  (有关 **LC_TIME**的详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 ) **strftime** 和 **wcsftime** 函数使用当前设置的区域设置。 这些函数的 **_strftime_l** 和 **_wcsftime_l** 版本相同，只不过它们将区域设置用作参数并使用它，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+*Format* 参数包含一个或多个代码;与 **printf** 中一样，格式设置代码前面有一个百分号 (**%**) 。 不以开头的字符 **%** 将复制到 *strDest* 中。 当前区域设置的 **LC_TIME** 类别将影响 **strftime** 的输出格式。  (有关 **LC_TIME** 的详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 ) **strftime** 和 **wcsftime** 函数使用当前设置的区域设置。 这些函数的 **_strftime_l** 和 **_wcsftime_l** 版本相同，只不过它们将区域设置用作参数并使用它，而不是使用当前设置的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-**Strftime**函数支持以下格式代码：
+**Strftime** 函数支持以下格式代码：
 
 |代码|替换字符串|
 |-|-|
@@ -176,7 +177,7 @@ size_t _wcsftime_l(
 |**% #x**|适用于区域设置的长日期表示形式。 例如：“1995 年 3 月 14 日，星期二”。|
 |**% #d**， **% #D**， **% #e**， **% #F**， **% #H**， **% #I**， **% #j**， **% #m**， **% #M**， **%** **#r，% #R，**% **#S**， **%**#T， **% #U**，% **#V**， **% #W**， **% #y**， **% #Y**|如果任何) ，删除前导零或空格 (。|
 
-**% V**、 **% g**和 **% g**生成的基于 ISO 8601 周和每周的年份使用的周始于星期一，其中第1周是包含一年中至少四天的第一周。 如果该年的第一个星期一为第二个、第三个或第四个星期，则前一年的最后一周是第一天。 对于这些天， **% V** 被替换为53，而 **% g** 和 **% g** 均替换为上一年的位数。
+**% V**、 **% g** 和 **% g** 生成的基于 ISO 8601 周和每周的年份使用的周始于星期一，其中第1周是包含一年中至少四天的第一周。 如果该年的第一个星期一为第二个、第三个或第四个星期，则前一年的最后一周是第一天。 对于这些天， **% V** 被替换为53，而 **% g** 和 **% g** 均替换为上一年的位数。
 
 > [!NOTE]
 > 将其中一个 `strftime` 函数与从返回的指针一起使用时 `tm` `gmtime` ，通过和说明符打印的值 `%Z` `%z` 将不准确。 这是因为 `tm` C 标准指定的结构不包含时区名称的信息，也不包含偏移量的信息。 而是通过全局变量[ `_timezone` 和 `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)填充时区信息。
@@ -190,13 +191,13 @@ size_t _wcsftime_l(
 |**_strftime_l**|\<time.h>|
 |**_wcsftime_l**|\<time.h> 或 \<wchar.h>|
 
-**_Strftime_l**和 **_Wcsftime_l**函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+**_Strftime_l** 和 **_Wcsftime_l** 函数是 Microsoft 特定的。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
 请参阅 [time](time-time32-time64.md) 的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [区域设置](../../c-runtime-library/locale.md) <br/>
 [时间管理](../../c-runtime-library/time-management.md) <br/>

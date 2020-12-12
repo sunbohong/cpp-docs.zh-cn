@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _matherr
 title: _matherr
 ms.date: 04/05/2018
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 340e3b8562e1f0f564810bc63cf6bd2e87ffdf63
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 406f9fe43ed64b24637f94cc5bf1ef01d4c94567
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952762"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299626"
 ---
 # <a name="_matherr"></a>_matherr
 
@@ -42,24 +43,24 @@ ms.locfileid: "70952762"
 int _matherr( struct _exception * except );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*except*<br/>
+*只有*<br/>
 指向包含错误信息的结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-**_matherr**返回0表示错误，或返回非零值指示成功。 如果 **_matherr**返回0，则可以显示错误消息，并将**errno**设置为适当的错误值。 如果 **_matherr**返回非零值，则不会显示错误消息，并且**errno**保持不变。
+**_matherr** 返回0来指示错误，或返回非零值指示成功。 如果 **_matherr** 返回0，则可能显示一条错误消息，并且 **errno** 设置为适当的错误值。 如果 **_matherr** 返回一个非零值，则不会显示错误消息，并且 **errno** 将保持不变。
 
 有关返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Matherr**函数将处理数学库的浮点函数生成的错误。 当检测到错误时，这些函数将调用 **_matherr** 。
+**_Matherr** 函数处理数学库的浮点函数生成的错误。 当检测到错误时，这些函数将调用 **_matherr** 。
 
-对于特殊的错误处理，可以提供不同的 **_matherr**定义。 如果使用 C 运行时库（CRT）的动态链接版本，则可以将客户端可执行文件中的默认 **_matherr**例程替换为用户定义的版本。 但是，不能在 CRT DLL 的 DLL 客户端中替换默认的 **_matherr**例程。
+对于特殊的错误处理，可以提供 **_matherr** 的不同定义。 如果使用 (CRT) 的 C 运行时库的动态链接版本，则可以将客户端可执行文件中的默认 **_matherr** 例程替换为用户定义的版本。 但是，不能在 CRT DLL 的 DLL 客户端中替换默认 **_matherr** 例程。
 
-当数学例程中出现错误时，将调用 **_matherr** ，并将指针指向 **_exception**类型结构（在 math > \<中定义）作为参数。 **_exception** 结构包含下列元素。
+当数学例程中出现错误时，将使用指向 **_exception** 类型结构的指针调用 **_matherr** (在) 中定义 \<math.h> 为参数。 **_exception** 结构包含下列元素。
 
 ```C
 struct _exception
@@ -72,7 +73,7 @@ struct _exception
 };
 ```
 
-**类型**成员指定数学错误的类型。 这是在 math > 中\<定义的以下值之一：
+**类型** 成员指定数学错误的类型。 它是在中定义的以下值之一 \<math.h> ：
 
 |宏|含义|
 |-|-|
@@ -83,7 +84,7 @@ struct _exception
 | **_TLOSS** | 重要性的总损失 |
 | **_UNDERFLOW** | 结果太小无法表示。 （目前不支持此条件。） |
 
-结构成员 **name** 是指针，指向包含导致错误的函数名称的以 null 结尾的字符串。 结构成员 **arg1** 和 **arg2** 指定导致错误的值。 如果只提供一个参数，则它将存储在**arg1**中。
+结构成员 **name** 是指针，指向包含导致错误的函数名称的以 null 结尾的字符串。 结构成员 **arg1** 和 **arg2** 指定导致错误的值。 如果只提供一个参数，则它将存储在 **arg1** 中。
 
 给定错误的默认返回值为 **retval**。 如果更改返回值，则必须指定是否实际出现了错误。
 
@@ -93,7 +94,7 @@ struct _exception
 |-------------|---------------------|
 |**_matherr**|\<math.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

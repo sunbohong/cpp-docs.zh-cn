@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _tell、_telli64
 title: _tell、_telli64
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 27653f7b65acd1681cc96a99576a416a211fcd19
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82b79a65edb7c88944336604ed329d67876094a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912248"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299548"
 ---
 # <a name="_tell-_telli64"></a>_tell、_telli64
 
@@ -57,7 +58,7 @@ __int64 _telli64(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *柄*<br/>
 引用打开的文件的文件说明符。
@@ -66,19 +67,19 @@ __int64 _telli64(
 
 文件指针的当前位置。 在无法查找的设备上，返回值是未定义的。
 
-返回值-1L 指示一个错误。 如果*句柄*是无效的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**Ebadf (** 并返回1L。
+返回值-1L 指示一个错误。 如果 *句柄* 是无效的文件描述符，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将 **errno** 设置为 **Ebadf (** 并返回1L。
 
 关于此代码以及其他返回代码的详细信息，请参阅 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>备注
 
-**_Tell**函数获取与*handle*参数关联的文件指针（如果有）的当前位置。 位置将表示为自文件开头起的字节数。 对于 **_telli64**函数，此值表示为64位整数。
+**_Tell** 函数获取与 *句柄* 参数关联的任何)  (文件指针的当前位置。 位置将表示为自文件开头起的字节数。 对于 **_telli64** 函数，此值表示为64位整数。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_tell**， **_telli64**|\<io.h>|
 

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：受保护的 (c + +) '
 title: protected (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 25b25447737a075bcf4f02f1c3049c996fb4c678
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 17b74db6ae257e757253c12fdfeb4fa9bac2a3db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299106"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -26,7 +27,7 @@ protected base-class
 
 ## <a name="remarks"></a>备注
 
-**`protected`** 关键字指定对*成员列表*中的类成员的访问，直到下一个访问说明符（ **`public`** 或 **`private`** ）或类定义的末尾。 声明为的类成员只能 **`protected`** 由以下项使用：
+**`protected`** 关键字指定对 *成员列表* 中的类成员的访问，直到下一个访问说明符 (**`public`** 或 **`private`**) 或类定义的末尾。 声明为的类成员只能 **`protected`** 由以下项使用：
 
 - 最初声明这些成员的类的成员函数。
 
@@ -46,10 +47,10 @@ protected base-class
 
 ## <a name="clr-specific"></a>/clr 专用
 
-在 CLR 类型中，c + + 访问说明符关键字（ **`public`** 、 **`private`** 和 **`protected`** ）会影响程序集的类型和方法的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。
+在 CLR 类型中，c + + 访问说明符关键字 (**`public`** 、 **`private`** 和 **`protected`**) 可能会影响有关程序集的类型和方法的可见性。 有关详细信息，请参阅 [成员访问控制](member-access-control-cpp.md)。
 
 > [!NOTE]
-> 使用[/LN](../build/reference/ln-create-msil-module.md)编译的文件不受此行为的影响。 在这种情况下，所有托管类（公共或私有）都将可见。
+> 使用 [/LN](../build/reference/ln-create-msil-module.md) 编译的文件不受此行为的影响。 在这种情况下，所有托管类（公共或私有）都将可见。
 
 ## <a name="end-clr-specific"></a>END /clr 专用
 
@@ -87,7 +88,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制对类成员的访问](member-access-control-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

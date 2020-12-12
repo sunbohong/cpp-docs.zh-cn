@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： malloc
 title: malloc
 ms.date: 4/2/2020
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-ms.openlocfilehash: a093dbdbc4849b1c2f3d86e85a5e2b25a7b988e2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8026cf24ee49999026c58787b83b2c8c0a238a2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97299782"
 ---
 # <a name="malloc"></a>malloc
 
@@ -46,22 +47,22 @@ void *malloc(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
 要分配的字节数。
 
 ## <a name="return-value"></a>返回值
 
-**malloc** 返回指向已分配空间的 void 指针; 如果可用内存不足，则返回 **NULL** 。 若要返回指向以外的类型的指针 **`void`** ，请在返回值上使用类型转换。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。  (在 Visual C++ 中，基本对齐方式是或8字节所需的对齐方式 **`double`** 。 在面向64位平台的代码中，它是16个字节。 ) 使用 [_aligned_malloc](aligned-malloc.md) 为具有更大对齐要求的对象分配存储空间，例如，SSE 类型 [__m128](../../cpp/m128.md) 和 **`__m256`** ，以及使用 `__declspec(align( n ))` **n** 大于8的声明的类型。 如果 *size* 为0，则 **malloc** 将在堆中分配一个长度为零的项，并返回指向该项的有效指针。 即使请求的内存量较小，也始终检查 **malloc**的返回值。
+**malloc** 返回指向已分配空间的 void 指针; 如果可用内存不足，则返回 **NULL** 。 若要返回指向以外的类型的指针 **`void`** ，请在返回值上使用类型转换。 返回值指向的存储空间确保可以正好与对齐要求小于或等于基本对齐要求的任意对象类型的存储对齐。  (在 Visual C++ 中，基本对齐方式是或8字节所需的对齐方式 **`double`** 。 在面向64位平台的代码中，它是16个字节。 ) 使用 [_aligned_malloc](aligned-malloc.md) 为具有更大对齐要求的对象分配存储空间，例如，SSE 类型 [__m128](../../cpp/m128.md) 和 **`__m256`** ，以及使用 `__declspec(align( n ))` **n** 大于8的声明的类型。 如果 *size* 为0，则 **malloc** 将在堆中分配一个长度为零的项，并返回指向该项的有效指针。 即使请求的内存量较小，也始终检查 **malloc** 的返回值。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Malloc**函数分配的内存块的*大小*至少为个字节。 由于对齐和维护信息所需的空间，块可能大于 *大小* 字节。
+**Malloc** 函数分配的内存块的 *大小* 至少为个字节。 由于对齐和维护信息所需的空间，块可能大于 *大小* 字节。
 
-如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**， **malloc**会将**errno**设置为**ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果内存分配失败或请求的内存量超过 **_HEAP_MAXREQ**， **malloc** 会将 **errno** 设置为 **ENOMEM** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-启动代码使用 **malloc** 为 **_environ**、 *envp*和 *argv* 变量分配存储。 以下函数及其宽字符对应项也调用 **malloc**。
+启动代码使用 **malloc** 为 **_environ**、 *envp* 和 *argv* 变量分配存储。 以下函数及其宽字符对应项也调用 **malloc**。
 
 :::row:::
    :::column span="":::
@@ -169,10 +170,10 @@ Memory space allocated for path name
 Memory freed
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[忙](free.md)<br/>
+[free](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_aligned_malloc](aligned-malloc.md)<br/>

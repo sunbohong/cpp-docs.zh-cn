@@ -1,4 +1,5 @@
 ---
+description: '了解更多相关信息： Windows Operations (c + +/CLI) '
 title: Windows 操作 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: 3c4ef2a69c25313ff444e0fabaea6eef2feeeee2
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 95fff25cb5c921272972e343dd3a85d53f909c52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501664"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298716"
 ---
 # <a name="windows-operations-ccli"></a>Windows 操作 (C++/CLI)
 
@@ -140,7 +141,7 @@ int main( )
 }
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 <xref:Microsoft.Win32.Registry>类只是的静态实例的容器 <xref:Microsoft.Win32.RegistryKey> 。 每个实例都表示一个根注册表节点。 实例为、、、 <xref:Microsoft.Win32.Registry.ClassesRoot> <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> 和 <xref:Microsoft.Win32.Registry.Users> 。
 
@@ -501,9 +502,9 @@ int main()
 }
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-你可以使用 .NET Framework 使用和类来访问注册表 <xref:Microsoft.Win32.Registry> ，这些 <xref:Microsoft.Win32.RegistryKey> 类在 <xref:Microsoft.Win32> 命名空间中定义。 **注册表**类是类的静态实例的容器 <xref:Microsoft.Win32.RegistryKey> 。 每个实例都表示一个根注册表节点。 实例为、、、 <xref:Microsoft.Win32.Registry.ClassesRoot> <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> 和 <xref:Microsoft.Win32.Registry.Users> 。
+你可以使用 .NET Framework 使用和类来访问注册表 <xref:Microsoft.Win32.Registry> ，这些 <xref:Microsoft.Win32.RegistryKey> 类在 <xref:Microsoft.Win32> 命名空间中定义。 **注册表** 类是类的静态实例的容器 <xref:Microsoft.Win32.RegistryKey> 。 每个实例都表示一个根注册表节点。 实例为、、、 <xref:Microsoft.Win32.Registry.ClassesRoot> <xref:Microsoft.Win32.Registry.CurrentConfig> <xref:Microsoft.Win32.Registry.CurrentUser> <xref:Microsoft.Win32.Registry.LocalMachine> 和 <xref:Microsoft.Win32.Registry.Users> 。
 
 ## <a name="related-sections"></a>相关章节
 

@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：创建 MFC ActiveX 控件
 title: 创建 MFC ActiveX 控件
 ms.date: 08/19/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 19e9ca6f985423bb01a8dea38988c5dcf7285683
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4b35187ffa3e5e4a11d293d4fe202c6e04213664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301251"
 ---
 # <a name="creating-an-mfc-activex-control"></a>创建 MFC ActiveX 控件
 
@@ -32,9 +33,9 @@ ActiveX 控制程序是设计用于向父应用程序授予特定类型的功能
     > [!NOTE]
     >  跳过此步骤可保留向导的默认设置。
 
-1. 单击“完成”关闭向导并在开发环境中打开新项目****。
+1. 单击“完成”关闭向导并在开发环境中打开新项目。
 
-创建项目后，可以在 **解决方案资源管理器**中查看创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[为 Visual Studio C++ 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+创建项目后，可以在 **解决方案资源管理器** 中查看创建的文件。 有关向导为项目创建的文件的更多信息，请参见项目生成的文件 ReadMe.txt。 有关文件类型的详细信息，请参阅[为 Visual Studio C++ 项目创建的文件类型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 创建项目后，可以使用代码向导添加 [函数](../../ide/adding-a-member-function-visual-cpp.md#add-member-function-wizard)、 [变量](../../ide/adding-a-member-variable-visual-cpp.md#add-member-variable-wizard)、 [事件](../../ide/adding-an-event-visual-cpp.md#add-event-wizard)、 [属性](../../ide/adding-a-property-visual-cpp.md#names-add-property-wizard)和 [方法](../../ide/adding-a-method-visual-cpp.md#add-method-wizard)。 有关自定义 ActiveX 控件的详细信息，请参阅 [MFC ActiveX 控件](../../mfc/mfc-activex-controls.md)。
 

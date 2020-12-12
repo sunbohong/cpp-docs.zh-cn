@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CPaneContainerManager 类
 title: CPaneContainerManager 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -106,17 +107,17 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 6b4c406360158795b9c9554bfd70e7d41875be13
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a9f01fece7417e6945b2eb8f56e95b3941c27386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81753635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301524"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 类
 
-该`CPaneContainerManager`类管理当前停靠布局的存储和显示。
-有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
+`CPaneContainerManager`类管理当前停靠布局的存储和显示。
+有关更多详细信息，请参阅位于 Visual Studio 安装的 **VC \\ atlmfc \\ src \\ mfc** 文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -128,68 +129,68 @@ class CPaneContainerManager : public CObject
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CPane 容器管理器：：添加窗格](#addpane)||
-|[CPane 容器管理器：：添加窗格容器管理器](#addpanecontainermanager)||
-|[CPane 容器管理器：：添加窗格容器管理器到可停靠窗格](#addpanecontainermanagertodockablepane)||
-|[CPane 容器管理器：：添加窗格列表](#addpanestolist)||
-|[CPane 容器管理器：：添加窗格列表](#addpanetolist)||
-|[CPane 容器管理器：：将窗格添加到最近窗格容器](#addpanetorecentpanecontainer)||
-|[CPane 容器管理器：：卡克拉茨](#calcrects)||
-|[CPane 容器管理器：：可以附加](#canbeattached)||
-|[CPane 容器管理器：：检查并删除非有效窗格](#checkandremovenonvalidpane)||
-|[CPane 容器管理器：：检查 Miniframe 和标题](#checkforminiframeandcaption)||
-|[CPane 容器管理器：创建](#create)||
-|[CPane 容器管理器：:DoesAllowDynInsert 之前](#doesallowdyninsertbefore)||
-|[CPane 容器管理器：:D包含浮动窗格](#doescontainfloatingpane)||
-|[CPane 容器管理器：：启用夹板](#enablegrippers)||
-|[CPane 容器管理器：：查找窗格容器](#findpanecontainer)||
-|[CPane 容器管理器：：查找 TabbedPane](#findtabbedpane)||
-|[CPane 容器管理器：获取可用空间](#getavailablespace)||
-|[CPane 容器管理器：获取默认窗格分隔符](#getdefaultpanedivider)||
-|[CPane 容器管理器：：获取DockSiteFramewnd](#getdocksiteframewnd)||
-|[CPane 容器管理器：获取第一窗格](#getfirstpane)||
-|[CPane 容器管理器：获取第一个可见窗格](#getfirstvisiblepane)||
-|[CPane 容器管理器：：获取最小最大偏移](#getminmaxoffset)||
-|[CPane 容器管理器：获取最小值](#getminsize)||
-|[CPane 容器管理器：：获取节点计数](#getnodecount)||
-|[CPane 容器管理器：：获取 Pane 容器RTC](#getpanecontainerrtc)||
-|[CPane 容器管理器：：获取窗格计数](#getpanecount)||
-|[CPane 容器管理器：获取总引用计数](#gettotalrefcount)||
-|[CPane 容器管理器：：获取可见窗格计数](#getvisiblepanecount)||
-|[CPane 容器管理器：：获取窗口重新完成](#getwindowrect)||
-|[CPane 容器管理器：隐藏所有](#hideall)||
-|[CPane 容器管理器：：插入窗格](#insertpane)||
-|[CPane 容器管理器：：自动隐藏模式](#isautohidemode)||
-|[CPane 容器管理器：：为空](#isempty)||
-|[CPane 容器管理器：：是 RootPane 容器可见](#isrootpanecontainervisible)||
-|[CPane 容器管理器：：通知窗格转换器](#notifypanedivider)||
-|[CPane 容器管理器：：上窗格分隔移位](#onpanedividermove)||
-|[CPane 容器管理器：：在显示窗格上](#onshowpane)||
-|[CPane 容器管理器：:P从点](#panefrompoint)||
-|[CPane 容器管理器：：释放空窗格容器](#releaseemptypanecontainers)||
-|[CPane 容器管理器：：删除所有窗格和窗格分隔符](#removeallpanesandpanedividers)||
-|[CPane 容器管理器：：删除非有效窗格](#removenonvalidpanes)||
-|[CPane 容器管理器：：删除窗格分隔符](#removepanedivider)||
-|[CPane 容器管理器：从窗格容器中删除窗格](#removepanefrompanecontainer)||
-|[CPane 容器管理器：：替换窗格](#replacepane)||
-|[CPane 容器管理器：调整窗格容器的大小](#resizepanecontainers)||
-|[CPane 容器管理器：序列化](#serialize)|从存档读取该对象或将该对象写入存档。 （重写 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。）|
-|[CPane 容器管理器：：设置默认窗格分隔器ForPanes](#setdefaultpanedividerforpanes)||
-|[CPane 容器管理器：：设置窗格容器RTC](#setpanecontainerrtc)||
-|[CPane 容器管理器：：设置重新调整模式](#setresizemode)||
-|[CPane 容器管理器：：存储最新网站信息](#storerecentdocksiteinfo)||
+|[CPaneContainerManager：： AddPane](#addpane)||
+|[CPaneContainerManager：： AddPaneContainerManager](#addpanecontainermanager)||
+|[CPaneContainerManager：： AddPaneContainerManagerToDockablePane](#addpanecontainermanagertodockablepane)||
+|[CPaneContainerManager：： AddPanesToList](#addpanestolist)||
+|[CPaneContainerManager：： AddPaneToList](#addpanetolist)||
+|[CPaneContainerManager：： AddPaneToRecentPaneContainer](#addpanetorecentpanecontainer)||
+|[CPaneContainerManager：： CalcRects](#calcrects)||
+|[CPaneContainerManager：： CanBeAttached](#canbeattached)||
+|[CPaneContainerManager：： CheckAndRemoveNonValidPane](#checkandremovenonvalidpane)||
+|[CPaneContainerManager：： CheckForMiniFrameAndCaption](#checkforminiframeandcaption)||
+|[CPaneContainerManager：： Create](#create)||
+|[CPaneContainerManager：:D oesAllowDynInsertBefore](#doesallowdyninsertbefore)||
+|[CPaneContainerManager：:D oesContainFloatingPane](#doescontainfloatingpane)||
+|[CPaneContainerManager：： EnableGrippers](#enablegrippers)||
+|[CPaneContainerManager：： FindPaneContainer](#findpanecontainer)||
+|[CPaneContainerManager：： FindTabbedPane](#findtabbedpane)||
+|[CPaneContainerManager：： GetAvailableSpace](#getavailablespace)||
+|[CPaneContainerManager：： GetDefaultPaneDivider](#getdefaultpanedivider)||
+|[CPaneContainerManager：： GetDockSiteFrameWnd](#getdocksiteframewnd)||
+|[CPaneContainerManager：： GetFirstPane](#getfirstpane)||
+|[CPaneContainerManager：： GetFirstVisiblePane](#getfirstvisiblepane)||
+|[CPaneContainerManager：： GetMinMaxOffset](#getminmaxoffset)||
+|[CPaneContainerManager：： GetMinSize](#getminsize)||
+|[CPaneContainerManager：： GetNodeCount](#getnodecount)||
+|[CPaneContainerManager：： GetPaneContainerRTC](#getpanecontainerrtc)||
+|[CPaneContainerManager：： GetPaneCount](#getpanecount)||
+|[CPaneContainerManager：： GetTotalRefCount](#gettotalrefcount)||
+|[CPaneContainerManager：： GetVisiblePaneCount](#getvisiblepanecount)||
+|[CPaneContainerManager：： GetWindowRect](#getwindowrect)||
+|[CPaneContainerManager：： HideAll](#hideall)||
+|[CPaneContainerManager：： InsertPane](#insertpane)||
+|[CPaneContainerManager：： IsAutoHideMode](#isautohidemode)||
+|[CPaneContainerManager：： IsEmpty](#isempty)||
+|[CPaneContainerManager：： IsRootPaneContainerVisible](#isrootpanecontainervisible)||
+|[CPaneContainerManager：： NotifyPaneDivider](#notifypanedivider)||
+|[CPaneContainerManager：： OnPaneDividerMove](#onpanedividermove)||
+|[CPaneContainerManager：： OnShowPane](#onshowpane)||
+|[CPaneContainerManager：:P aneFromPoint](#panefrompoint)||
+|[CPaneContainerManager：： ReleaseEmptyPaneContainers](#releaseemptypanecontainers)||
+|[CPaneContainerManager：： RemoveAllPanesAndPaneDividers](#removeallpanesandpanedividers)||
+|[CPaneContainerManager：： RemoveNonValidPanes](#removenonvalidpanes)||
+|[CPaneContainerManager：： RemovePaneDivider](#removepanedivider)||
+|[CPaneContainerManager：： RemovePaneFromPaneContainer](#removepanefrompanecontainer)||
+|[CPaneContainerManager：： ReplacePane](#replacepane)||
+|[CPaneContainerManager：： ResizePaneContainers](#resizepanecontainers)||
+|[CPaneContainerManager：：串行化](#serialize)|从存档读取该对象或将该对象写入存档。 （重写 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。）|
+|[CPaneContainerManager：： SetDefaultPaneDividerForPanes](#setdefaultpanedividerforpanes)||
+|[CPaneContainerManager：： SetPaneContainerRTC](#setpanecontainerrtc)||
+|[CPaneContainerManager：： SetResizeMode](#setresizemode)||
+|[CPaneContainerManager：： StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
 
 ### <a name="remarks"></a>备注
 
-框架会自动创建`CPaneContainerManager`对象的实例，并将它们嵌入到[CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)对象或[CMultiPaneFramewnd 类](../../mfc/reference/cmultipaneframewnd-class.md)对象中。
+框架自动创建对象的实例 `CPaneContainerManager` ，并将其嵌入 [CPaneDivider 类](../../mfc/reference/cpanedivider-class.md) 对象或 [CMultiPaneFrameWnd 类](../../mfc/reference/cmultipaneframewnd-class.md) 对象。
 
-类`CPaneContainerManager`存储指向从[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)对象生成的二进制树的根的指针。
+`CPaneContainerManager`类存储一个指针，该指针指向从[CPaneContainer](../../mfc/reference/cpanecontainer-class.md)对象生成的二进制树的根。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何获取对`CPaneContainerManager`对象的引用。 此代码段是["设置窗格大小"示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何获取对对象的引用 `CPaneContainerManager` 。 此代码段是 " [集窗格大小" 示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 
@@ -201,21 +202,21 @@ class CPaneContainerManager : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxpane 容器管理器.h
+**标头：** afxpanecontainermanager
 
-## <a name="cpanecontainermanageraddpane"></a><a name="addpane"></a>CPane 容器管理器：：添加窗格
+## <a name="cpanecontainermanageraddpane"></a><a name="addpane"></a> CPaneContainerManager：： AddPane
 
 ```
 virtual void AddPane(CDockablePane* pControlBarToAdd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*p 控制栏添加*<br/>
+中 *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanageraddpanecontainermanager"></a><a name="addpanecontainermanager"></a>CPane 容器管理器：：添加窗格容器管理器
+## <a name="cpanecontainermanageraddpanecontainermanager"></a><a name="addpanecontainermanager"></a> CPaneContainerManager：： AddPaneContainerManager
 
 ```
 virtual BOOL AddPaneContainerManager(
@@ -229,19 +230,19 @@ virtual BOOL AddPaneContainerManager(
     BOOL bCopy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*srcManager*<br/>
-[在]*bouterEdge*<br/>
-[在]*p目标控制栏*<br/>
-[在]*dwalignment*<br/>
-[在]*bCopy*<br/>
+中 *srcManager*<br/>
+中 *bOuterEdge*<br/>
+中 *pTargetControlBar*<br/>
+中 *dwAlignment*<br/>
+中 *bCopy*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanageraddpanecontainermanagertodockablepane"></a><a name="addpanecontainermanagertodockablepane"></a>CPane 容器管理器：：添加窗格容器管理器到可停靠窗格
+## <a name="cpanecontainermanageraddpanecontainermanagertodockablepane"></a><a name="addpanecontainermanagertodockablepane"></a> CPaneContainerManager：： AddPaneContainerManagerToDockablePane
 
 ```
 virtual BOOL AddPaneContainerManagerToDockablePane(
@@ -249,16 +250,16 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
     CPaneContainerManager& srcManager);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*p目标控制栏*<br/>
-[在]*srcManager*<br/>
+中 *pTargetControlBar*<br/>
+中 *srcManager*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanageraddpanestolist"></a><a name="addpanestolist"></a>CPane 容器管理器：：添加窗格列表
+## <a name="cpanecontainermanageraddpanestolist"></a><a name="addpanestolist"></a> CPaneContainerManager：： AddPanesToList
 
 ```cpp
 void AddPanesToList(
@@ -266,26 +267,26 @@ void AddPanesToList(
     CObList* plstSliders);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*plst控制栏*<br/>
-[在]*plstSliders*<br/>
+中 *plstControlBars*<br/>
+中 *plstSliders*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanageraddpanetolist"></a><a name="addpanetolist"></a>CPane 容器管理器：：添加窗格列表
+## <a name="cpanecontainermanageraddpanetolist"></a><a name="addpanetolist"></a> CPaneContainerManager：： AddPaneToList
 
 ```cpp
 void AddPaneToList(CDockablePane* pControlBarToAdd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*p 控制栏添加*<br/>
+中 *pControlBarToAdd*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanageraddpanetorecentpanecontainer"></a><a name="addpanetorecentpanecontainer"></a>CPane 容器管理器：：将窗格添加到最近窗格容器
+## <a name="cpanecontainermanageraddpanetorecentpanecontainer"></a><a name="addpanetorecentpanecontainer"></a> CPaneContainerManager：： AddPaneToRecentPaneContainer
 
 ```
 virtual CDockablePane* AddPaneToRecentPaneContainer(
@@ -293,16 +294,16 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
     CPaneContainer* pRecentContainer);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pbartoadd*<br/>
-[在]*p最新容器*<br/>
+中 *pBarToAdd*<br/>
+中 *pRecentContainer*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagercalcrects"></a><a name="calcrects"></a>CPane 容器管理器：：卡克拉茨
+## <a name="cpanecontainermanagercalcrects"></a><a name="calcrects"></a> CPaneContainerManager：： CalcRects
 
 ```cpp
 void CalcRects(
@@ -315,19 +316,19 @@ void CalcRects(
     CSize sizeMinInserted);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*rectoriginal*<br/>
-[在]*重新插入*<br/>
-[在]*整流滑*<br/>
-[在]*dwSlider样式*<br/>
-[在]*dwalignment*<br/>
-[在]*大小明原*<br/>
-[在]*大小明插入*<br/>
+中 *rectOriginal*<br/>
+中 *rectInserted*<br/>
+中 *rectSlider*<br/>
+中 *dwSliderStyle*<br/>
+中 *dwAlignment*<br/>
+中 *sizeMinOriginal*<br/>
+中 *sizeMinInserted*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagercanbeattached"></a><a name="canbeattached"></a>CPane 容器管理器：：可以附加
+## <a name="cpanecontainermanagercanbeattached"></a><a name="canbeattached"></a> CPaneContainerManager：： CanBeAttached
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -337,21 +338,21 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagercheckandremovenonvalidpane"></a><a name="checkandremovenonvalidpane"></a>CPane 容器管理器：：检查并删除非有效窗格
+## <a name="cpanecontainermanagercheckandremovenonvalidpane"></a><a name="checkandremovenonvalidpane"></a> CPaneContainerManager：： CheckAndRemoveNonValidPane
 
 ```
 BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pwnd*<br/>
+中 *pWnd*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagercheckforminiframeandcaption"></a><a name="checkforminiframeandcaption"></a>CPane 容器管理器：：检查 Miniframe 和标题
+## <a name="cpanecontainermanagercheckforminiframeandcaption"></a><a name="checkforminiframeandcaption"></a> CPaneContainerManager：： CheckForMiniFrameAndCaption
 
 ```
 virtual BOOL CheckForMiniFrameAndCaption(
@@ -359,16 +360,16 @@ virtual BOOL CheckForMiniFrameAndCaption(
     CDockablePane** ppTargetControlBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*点*<br/>
-[在]*ppTarget控制栏*<br/>
+中 *点*<br/>
+中 *ppTargetControlBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagercreate"></a><a name="create"></a>CPane 容器管理器：创建
+## <a name="cpanecontainermanagercreate"></a><a name="create"></a> CPaneContainerManager：： Create
 
 ```
 virtual BOOL Create(
@@ -377,17 +378,17 @@ virtual BOOL Create(
     CRuntimeClass* pContainerRTC = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pparentwnd*<br/>
-[在]*p默认滑块*<br/>
-[在]*p集装箱RTC*<br/>
+中 *pParentWnd*<br/>
+中 *pDefaultSlider*<br/>
+中 *pContainerRTC*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerdoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>CPane 容器管理器：:DoesAllowDynInsert 之前
+## <a name="cpanecontainermanagerdoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a> CPaneContainerManager：:D oesAllowDynInsertBefore
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -397,7 +398,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerdoescontainfloatingpane"></a><a name="doescontainfloatingpane"></a>CPane 容器管理器：:D包含浮动窗格
+## <a name="cpanecontainermanagerdoescontainfloatingpane"></a><a name="doescontainfloatingpane"></a> CPaneContainerManager：:D oesContainFloatingPane
 
 ```
 virtual BOOL DoesContainFloatingPane();
@@ -407,19 +408,19 @@ virtual BOOL DoesContainFloatingPane();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerenablegrippers"></a><a name="enablegrippers"></a>CPane 容器管理器：：启用夹板
+## <a name="cpanecontainermanagerenablegrippers"></a><a name="enablegrippers"></a> CPaneContainerManager：： EnableGrippers
 
 ```
 virtual void EnableGrippers(BOOL bEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*b 启用*<br/>
+中 *bEnable*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerfindpanecontainer"></a><a name="findpanecontainer"></a>CPane 容器管理器：：查找窗格容器
+## <a name="cpanecontainermanagerfindpanecontainer"></a><a name="findpanecontainer"></a> CPaneContainerManager：： FindPaneContainer
 
 ```
 virtual CPaneContainer* FindPaneContainer(
@@ -427,42 +428,42 @@ virtual CPaneContainer* FindPaneContainer(
     BOOL& bLeftBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pBar*<br/>
-[在]*b左栏*<br/>
+中 *pBar*<br/>
+中 *bLeftBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerfindtabbedpane"></a><a name="findtabbedpane"></a>CPane 容器管理器：：查找 TabbedPane
+## <a name="cpanecontainermanagerfindtabbedpane"></a><a name="findtabbedpane"></a> CPaneContainerManager：： FindTabbedPane
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*nID*<br/>
+中 *nID*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetavailablespace"></a><a name="getavailablespace"></a>CPane 容器管理器：获取可用空间
+## <a name="cpanecontainermanagergetavailablespace"></a><a name="getavailablespace"></a> CPaneContainerManager：： GetAvailableSpace
 
 ```
 virtual void GetAvailableSpace(CRect& rect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*rect*<br/>
+中 *rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a>CPane 容器管理器：获取默认窗格分隔符
+## <a name="cpanecontainermanagergetdefaultpanedivider"></a><a name="getdefaultpanedivider"></a> CPaneContainerManager：： GetDefaultPaneDivider
 
 ```
 CPaneDivider* GetDefaultPaneDivider() const;
@@ -472,7 +473,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a>CPane 容器管理器：：获取DockSiteFramewnd
+## <a name="cpanecontainermanagergetdocksiteframewnd"></a><a name="getdocksiteframewnd"></a> CPaneContainerManager：： GetDockSiteFrameWnd
 
 ```
 virtual CWnd* GetDockSiteFrameWnd();
@@ -482,7 +483,7 @@ virtual CWnd* GetDockSiteFrameWnd();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetfirstpane"></a><a name="getfirstpane"></a>CPane 容器管理器：获取第一窗格
+## <a name="cpanecontainermanagergetfirstpane"></a><a name="getfirstpane"></a> CPaneContainerManager：： GetFirstPane
 
 ```
 virtual CBasePane* GetFirstPane() const;
@@ -492,7 +493,7 @@ virtual CBasePane* GetFirstPane() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a>CPane 容器管理器：获取第一个可见窗格
+## <a name="cpanecontainermanagergetfirstvisiblepane"></a><a name="getfirstvisiblepane"></a> CPaneContainerManager：： GetFirstVisiblePane
 
 ```
 virtual CWnd* GetFirstVisiblePane() const;
@@ -502,7 +503,7 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetminmaxoffset"></a><a name="getminmaxoffset"></a>CPane 容器管理器：：获取最小最大偏移
+## <a name="cpanecontainermanagergetminmaxoffset"></a><a name="getminmaxoffset"></a> CPaneContainerManager：： GetMinMaxOffset
 
 ```
 virtual void GetMinMaxOffset(
@@ -512,28 +513,28 @@ virtual void GetMinMaxOffset(
     int& nStep);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pSlider*<br/>
-[在]*n明宁*<br/>
-[在]*nMax偏移*<br/>
-[在]*n步步*<br/>
+中 *pSlider*<br/>
+中 *nMinOffset*<br/>
+中 *nMaxOffset*<br/>
+中 *nStep*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetminsize"></a><a name="getminsize"></a>CPane 容器管理器：获取最小值
+## <a name="cpanecontainermanagergetminsize"></a><a name="getminsize"></a> CPaneContainerManager：： GetMinSize
 
 ```
 virtual void GetMinSize(CSize& size);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*大小*<br/>
+中 *大小*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetnodecount"></a><a name="getnodecount"></a>CPane 容器管理器：：获取节点计数
+## <a name="cpanecontainermanagergetnodecount"></a><a name="getnodecount"></a> CPaneContainerManager：： GetNodeCount
 
 ```
 int GetNodeCount() const;
@@ -543,7 +544,7 @@ int GetNodeCount() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetpanecontainerrtc"></a><a name="getpanecontainerrtc"></a>CPane 容器管理器：：获取 Pane 容器RTC
+## <a name="cpanecontainermanagergetpanecontainerrtc"></a><a name="getpanecontainerrtc"></a> CPaneContainerManager：： GetPaneContainerRTC
 
 ```
 CRuntimeClass* GetPaneContainerRTC() const;
@@ -553,7 +554,7 @@ CRuntimeClass* GetPaneContainerRTC() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetpanecount"></a><a name="getpanecount"></a>CPane 容器管理器：：获取窗格计数
+## <a name="cpanecontainermanagergetpanecount"></a><a name="getpanecount"></a> CPaneContainerManager：： GetPaneCount
 
 ```
 int GetPaneCount() const;
@@ -563,7 +564,7 @@ int GetPaneCount() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergettotalrefcount"></a><a name="gettotalrefcount"></a>CPane 容器管理器：获取总引用计数
+## <a name="cpanecontainermanagergettotalrefcount"></a><a name="gettotalrefcount"></a> CPaneContainerManager：： GetTotalRefCount
 
 ```
 int GetTotalRefCount() const;
@@ -573,7 +574,7 @@ int GetTotalRefCount() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetvisiblepanecount"></a><a name="getvisiblepanecount"></a>CPane 容器管理器：：获取可见窗格计数
+## <a name="cpanecontainermanagergetvisiblepanecount"></a><a name="getvisiblepanecount"></a> CPaneContainerManager：： GetVisiblePaneCount
 
 ```
 virtual int GetVisiblePaneCount() const;
@@ -583,19 +584,19 @@ virtual int GetVisiblePaneCount() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagergetwindowrect"></a><a name="getwindowrect"></a>CPane 容器管理器：：获取窗口重新完成
+## <a name="cpanecontainermanagergetwindowrect"></a><a name="getwindowrect"></a> CPaneContainerManager：： GetWindowRect
 
 ```
 virtual void GetWindowRect(CRect& rect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*rect*<br/>
+中 *rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerhideall"></a><a name="hideall"></a>CPane 容器管理器：隐藏所有
+## <a name="cpanecontainermanagerhideall"></a><a name="hideall"></a> CPaneContainerManager：： HideAll
 
 ```
 virtual void HideAll();
@@ -603,7 +604,7 @@ virtual void HideAll();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerinsertpane"></a><a name="insertpane"></a>CPane 容器管理器：：插入窗格
+## <a name="cpanecontainermanagerinsertpane"></a><a name="insertpane"></a> CPaneContainerManager：： InsertPane
 
 ```
 virtual BOOL InsertPane(
@@ -614,19 +615,19 @@ virtual BOOL InsertPane(
     AFX_DOCK_METHOD dockMethod = DM_UNKNOWN);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*p 控制栏插入*<br/>
-[在]*p目标控制栏*<br/>
-[在]*dwalignment*<br/>
-[在]*lpRect*<br/>
-[在]*基方法*<br/>
+中 *pControlBarToInsert*<br/>
+中 *pTargetControlBar*<br/>
+中 *dwAlignment*<br/>
+中 *lpRect*<br/>
+中 *dockMethod*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerisautohidemode"></a><a name="isautohidemode"></a>CPane 容器管理器：：自动隐藏模式
+## <a name="cpanecontainermanagerisautohidemode"></a><a name="isautohidemode"></a> CPaneContainerManager：： IsAutoHideMode
 
 ```
 BOOL IsAutoHideMode() const;
@@ -636,7 +637,7 @@ BOOL IsAutoHideMode() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerisempty"></a><a name="isempty"></a>CPane 容器管理器：：为空
+## <a name="cpanecontainermanagerisempty"></a><a name="isempty"></a> CPaneContainerManager：： IsEmpty
 
 ```
 BOOL IsEmpty() const;
@@ -646,7 +647,7 @@ BOOL IsEmpty() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerisrootpanecontainervisible"></a><a name="isrootpanecontainervisible"></a>CPane 容器管理器：：是 RootPane 容器可见
+## <a name="cpanecontainermanagerisrootpanecontainervisible"></a><a name="isrootpanecontainervisible"></a> CPaneContainerManager：： IsRootPaneContainerVisible
 
 ```
 virtual BOOL IsRootPaneContainerVisible() const;
@@ -656,7 +657,7 @@ virtual BOOL IsRootPaneContainerVisible() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagernotifypanedivider"></a><a name="notifypanedivider"></a>CPane 容器管理器：：通知窗格转换器
+## <a name="cpanecontainermanagernotifypanedivider"></a><a name="notifypanedivider"></a> CPaneContainerManager：： NotifyPaneDivider
 
 ```cpp
 void NotifyPaneDivider();
@@ -664,7 +665,7 @@ void NotifyPaneDivider();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanageronpanedividermove"></a><a name="onpanedividermove"></a>CPane 容器管理器：：上窗格分隔移位
+## <a name="cpanecontainermanageronpanedividermove"></a><a name="onpanedividermove"></a> CPaneContainerManager：： OnPaneDividerMove
 
 ```
 virtual int OnPaneDividerMove(
@@ -674,18 +675,18 @@ virtual int OnPaneDividerMove(
     HDWP& hdwp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pSlider*<br/>
-[在]*uFlags*<br/>
-[在]*n偏移*<br/>
-[在]*hdwp*<br/>
+中 *pSlider*<br/>
+中 *uFlags*<br/>
+中 *nOffset*<br/>
+中 *hdwp*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanageronshowpane"></a><a name="onshowpane"></a>CPane 容器管理器：：在显示窗格上
+## <a name="cpanecontainermanageronshowpane"></a><a name="onshowpane"></a> CPaneContainerManager：： OnShowPane
 
 ```
 virtual BOOL OnShowPane(
@@ -693,16 +694,16 @@ virtual BOOL OnShowPane(
     BOOL bShow);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pBar*<br/>
-[在]*b显示*<br/>
+中 *pBar*<br/>
+中 *bShow*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerpanefrompoint"></a><a name="panefrompoint"></a>CPane 容器管理器：:P从点
+## <a name="cpanecontainermanagerpanefrompoint"></a><a name="panefrompoint"></a> CPaneContainerManager：:P aneFromPoint
 
 ```
 virtual CDockablePane* PaneFromPoint(
@@ -713,19 +714,19 @@ virtual CDockablePane* PaneFromPoint(
     BOOL& bCaption);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*点*<br/>
-[在]*nSensitivity*<br/>
-[在]*bExactBar*<br/>
-[在]*bIsTab区域*<br/>
-[在]*bCaption*<br/>
+中 *点*<br/>
+中 *nSensitivity*<br/>
+中 *bExactBar*<br/>
+中 *bIsTabArea*<br/>
+中 *bCaption*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>CPane 容器管理器：：释放空窗格容器
+## <a name="cpanecontainermanagerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a> CPaneContainerManager：： ReleaseEmptyPaneContainers
 
 ```cpp
 void ReleaseEmptyPaneContainers();
@@ -733,7 +734,7 @@ void ReleaseEmptyPaneContainers();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerremoveallpanesandpanedividers"></a><a name="removeallpanesandpanedividers"></a>CPane 容器管理器：：删除所有窗格和窗格分隔符
+## <a name="cpanecontainermanagerremoveallpanesandpanedividers"></a><a name="removeallpanesandpanedividers"></a> CPaneContainerManager：： RemoveAllPanesAndPaneDividers
 
 ```cpp
 void RemoveAllPanesAndPaneDividers();
@@ -741,7 +742,7 @@ void RemoveAllPanesAndPaneDividers();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a>CPane 容器管理器：：删除非有效窗格
+## <a name="cpanecontainermanagerremovenonvalidpanes"></a><a name="removenonvalidpanes"></a> CPaneContainerManager：： RemoveNonValidPanes
 
 ```cpp
 void RemoveNonValidPanes();
@@ -749,33 +750,33 @@ void RemoveNonValidPanes();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerremovepanedivider"></a><a name="removepanedivider"></a>CPane 容器管理器：：删除窗格分隔符
+## <a name="cpanecontainermanagerremovepanedivider"></a><a name="removepanedivider"></a> CPaneContainerManager：： RemovePaneDivider
 
 ```
 virtual void RemovePaneDivider(CPaneDivider* pSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pSlider*<br/>
+中 *pSlider*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerremovepanefrompanecontainer"></a><a name="removepanefrompanecontainer"></a>CPane 容器管理器：从窗格容器中删除窗格
+## <a name="cpanecontainermanagerremovepanefrompanecontainer"></a><a name="removepanefrompanecontainer"></a> CPaneContainerManager：： RemovePaneFromPaneContainer
 
 ```
 virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*p控制栏*<br/>
+中 *pControlBar*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerreplacepane"></a><a name="replacepane"></a>CPane 容器管理器：：替换窗格
+## <a name="cpanecontainermanagerreplacepane"></a><a name="replacepane"></a> CPaneContainerManager：： ReplacePane
 
 ```
 virtual BOOL ReplacePane(
@@ -783,16 +784,16 @@ virtual BOOL ReplacePane(
     CDockablePane* pBarNew);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*普巴尔Old*<br/>
-[在]*pBar New*<br/>
+中 *pBarOld*<br/>
+中 *pBarNew*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerresizepanecontainers"></a><a name="resizepanecontainers"></a>CPane 容器管理器：调整窗格容器的大小
+## <a name="cpanecontainermanagerresizepanecontainers"></a><a name="resizepanecontainers"></a> CPaneContainerManager：： ResizePaneContainers
 
 ```
 virtual void ResizePaneContainers(
@@ -806,80 +807,80 @@ virtual void ResizePaneContainers(
     HDWP& hdwp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*n侧*<br/>
-[在]*b 扩展*<br/>
-[在]*n偏移*<br/>
-[在]*hdwp*<br/>
-[在]*rect*<br/>
+中 *nSide*<br/>
+中 *bExpand*<br/>
+中 *nOffset*<br/>
+中 *hdwp*<br/>
+中 *rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerserialize"></a><a name="serialize"></a>CPane 容器管理器：序列化
+## <a name="cpanecontainermanagerserialize"></a><a name="serialize"></a> CPaneContainerManager：：串行化
 
 ```cpp
 void Serialize(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*阿尔*<br/>
+中 *ar*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagersetdefaultpanedividerforpanes"></a><a name="setdefaultpanedividerforpanes"></a>CPane 容器管理器：：设置默认窗格分隔器ForPanes
+## <a name="cpanecontainermanagersetdefaultpanedividerforpanes"></a><a name="setdefaultpanedividerforpanes"></a> CPaneContainerManager：： SetDefaultPaneDividerForPanes
 
 ```cpp
 void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pSlider*<br/>
+中 *pSlider*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagersetpanecontainerrtc"></a><a name="setpanecontainerrtc"></a>CPane 容器管理器：：设置窗格容器RTC
+## <a name="cpanecontainermanagersetpanecontainerrtc"></a><a name="setpanecontainerrtc"></a> CPaneContainerManager：： SetPaneContainerRTC
 
 ```cpp
 void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*p集装箱RTC*<br/>
+中 *pContainerRTC*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagersetresizemode"></a><a name="setresizemode"></a>CPane 容器管理器：：设置重新调整模式
+## <a name="cpanecontainermanagersetresizemode"></a><a name="setresizemode"></a> CPaneContainerManager：： SetResizeMode
 
 ```
 virtual void SetResizeMode(BOOL bResize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bResize*<br/>
+中 *bResize*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cpanecontainermanagerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>CPane 容器管理器：：存储最新网站信息
+## <a name="cpanecontainermanagerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a> CPaneContainerManager：： StoreRecentDockSiteInfo
 
 ```
 virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pBar*<br/>
+中 *pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [CPaneContainer 类](../../mfc/reference/cpanecontainer-class.md)<br/>
 [CPaneDivider 类](../../mfc/reference/cpanedivider-class.md)

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： (c + +/CLI 的泛型接口) '
 title: 泛型接口 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-ms.openlocfilehash: 61ab514d244c8b41d467d382fa97e30556ccbb32
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 7ba7cec76d23262977180a050326a0c5cf2966e9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135523"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301693"
 ---
 # <a name="generic-interfaces-ccli"></a>泛型接口 (C++/CLI)
 
@@ -35,25 +36,25 @@ ms.locfileid: "92135523"
 *attributes*<br/>
 （可选）其他声明性信息。 有关特性和特性类的详细信息，请参阅 **特性**。
 
-class-key**<br/>
+class-key<br/>
 **`class`** 或 **`typename`**
 
-type-parameter-identifier(s)**<br/>
+type-parameter-identifier(s)<br/>
 标识符的逗号分隔列表。
 
-type-parameter-constraints-clauses**<br/>
+type-parameter-constraints-clauses<br/>
 采用[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的形式
 
-accessibility-modifiers**<br/>
+accessibility-modifiers<br/>
  (可选) 可访问性修饰符 (例如 **public、private**) 。
 
 *identifier*<br/>
 接口名称。
 
-base-list**<br/>
+base-list<br/>
 （可选）包含一个或多个显式基接口的逗号分隔列表。
 
-interface-body**<br/>
+interface-body<br/>
 接口成员的声明。
 
 *声明符*<br/>

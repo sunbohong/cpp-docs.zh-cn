@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下内容的详细信息：泛型委托 (c + +/CLI) '
 title: 泛型委托 (C++/CLI)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 980beb21325e78baa9c6f3691f7b814c5266b79a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c3ce8f27d0a16d84774f3eeafbd5668384e3cf17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686608"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97301745"
 ---
 # <a name="generic-delegates-ccli"></a>泛型委托 (C++/CLI)
 
@@ -27,18 +28,18 @@ generic < [class | typename] type-parameter-identifiers>
 ([formal-parameters]);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *attributes*<br/>
 （可选）其他声明性信息。 有关特性和特性类的详细信息，请参阅“特性”。
 
-type-parameter-identifier(s)**<br/>
+type-parameter-identifier(s)<br/>
 类型参数标识符的逗号分隔列表。
 
-type-parameter-constraints-clauses**<br/>
+type-parameter-constraints-clauses<br/>
 采用[泛型类型参数的约束 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) 中指定的形式
 
-accessibility-modifiers**<br/>
+accessibility-modifiers<br/>
  (可选) 可访问性修饰符 (**`public`** 例如 **`private`**) 。
 
 *result-类型*<br/>
@@ -47,7 +48,7 @@ accessibility-modifiers**<br/>
 *identifier*<br/>
 委托名称。
 
-formal-parameters**<br/>
+formal-parameters<br/>
 （可选）委托的参数列表。
 
 ## <a name="examples"></a>示例

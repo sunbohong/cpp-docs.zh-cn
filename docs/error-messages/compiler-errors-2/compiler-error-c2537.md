@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2537
 title: 编译器错误 C2537
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2537
 ms.assetid: aee81d8e-300e-4a8b-b6c4-b3828398b34e
-ms.openlocfilehash: 0dfe9f88fcdfda1325150d480670777a4d42d896
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 46603ded270b4702d4b7d4de97352547c5f503f8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302031"
 ---
 # <a name="compiler-error-c2537"></a>编译器错误 C2537
 
@@ -21,7 +22,7 @@ ms.locfileid: "74758627"
 
 1. 不支持链接说明符。 仅支持 "C" 链接说明符。
 
-1. 为一组重载函数中的多个函数指定了 "C" 链接。 不允许这样做。
+1. 为一组重载函数中的多个函数指定了 "C" 链接。 这是不允许的。
 
 下面的示例生成 C2537：
 
