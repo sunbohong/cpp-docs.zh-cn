@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：隐藏
 title: '隐藏 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: ffa1ce01cfd570de7b699e415f10b27acf525047
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0609ef8b0dedb08e26e5442fd5070ca6a29e11d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830951"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180222"
 ---
 # <a name="hidden"></a>隐藏
 
@@ -25,11 +26,11 @@ ms.locfileid: "88830951"
 
 ## <a name="remarks"></a>备注
 
-**隐藏**的 c + + 特性与[隐藏](/windows/win32/Midl/hidden)的 MIDL 特性具有相同的功能。
+**隐藏** 的 c + + 特性与 [隐藏](/windows/win32/Midl/hidden)的 MIDL 特性具有相同的功能。
 
 ## <a name="example"></a>示例
 
-有关如何使用**hidden**的示例，请参阅可[绑定](bindable.md)的示例。
+有关如何使用 **hidden** 的示例，请参阅可 [绑定](bindable.md)的示例。
 
 ## <a name="requirements"></a>要求
 
@@ -37,12 +38,12 @@ ms.locfileid: "88830951"
 |-|-|
 |**适用于**|**interface**、 **`class`** ， **`struct`** 、method、property|
 |**且**|否|
-|**必需属性**|**coclass**当应用于 **`class`** 或) 时，组件类 (**`struct`**|
+|**必需属性**|当应用于 **`class`** 或) 时，组件类 (**`struct`**|
 |**无效的特性**|无|
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>

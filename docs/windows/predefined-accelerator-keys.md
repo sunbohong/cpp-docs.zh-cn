@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：快捷键 (c + +) '
 title: " (c + +) 的快捷键"
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 4f838caa8ca9e4a996fa4cb8018d663c6c7aecea
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 397e0735ba33af6adf8f10c6188f73d6f504e68b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97180092"
 ---
 # <a name="accelerator-keys-c"></a> (c + +) 的快捷键
 
@@ -21,7 +22,7 @@ ms.locfileid: "91504291"
 
 有多个预定义快捷键，它们可能是 Windows 应用程序项目的一部分。 部分虚拟键适用于 Windows 环境。 其他支持浏览器或 Unicode 应用程序。 你可以在任何快捷键中使用这些键。
 
-|键|说明|
+|密钥|描述|
 |---------|-----------------|
 |VK_ACCEPT|) 接受 (IME|
 |VK_BROWSER_BACK| (Windows) 浏览器， **后退** 键|
@@ -57,7 +58,7 @@ ms.locfileid: "91504291"
 |VK_OEM_2|为美国标准键盘 (Windows) ， **/？** key|
 |VK_OEM_3| (美国标准键盘的 Windows) ， **`~** 键|
 |VK_OEM_4| (美国标准键盘的 Windows) ， **[{** key|
-|VK_OEM_5| (美国标准键盘的 Windows) ， ** \\&#124;** 键|
+|VK_OEM_5| (美国标准键盘的 Windows) ， **\\&#124;** 键|
 |VK_OEM_6| (美国标准键盘的 Windows) ，则为 **]}** 键|
 |VK_OEM_7| (美国标准键盘的 Windows) ，"单引号/双引号" 键|
 |VK_OEM_COMMA| (适用于任何国家/地区的 Windows) ， **，** 密钥|

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/arch (最小 CPU 体系结构) '
 title: /arch（最小 CPU 体系结构）
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - /arch compiler option [C++]
 - arch compiler option [C++]
 ms.assetid: cc17da15-47bd-4e74-b905-4e73c3bdb8a0
-ms.openlocfilehash: 83379ad7daca7dcb21f4ed0c0b94bb354161204a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01030d3c9f5680f305d602340cc31477d572732f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179546"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch（最小 CPU 体系结构）
 
@@ -29,4 +30,4 @@ ms.locfileid: "62273944"
 ## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

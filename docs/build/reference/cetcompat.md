@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/CETCOMPAT (CET 影子堆栈兼容) '
 title: '/CETCOMPAT (CET 阴影堆栈兼容) '
 ms.date: 09/01/2020
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 7de7c2007c29769cb3ac8f89d07de8b00bf44c26
-ms.sourcegitcommit: e58918c45316d799c1952ca7797a85adbcd0c472
+ms.openlocfilehash: 923272a3b3829d0b00f22d2f8c9474f02b7306d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89281818"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179273"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (CET 阴影堆栈兼容) 
 
@@ -41,7 +42,7 @@ ms.locfileid: "89281818"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../working-with-project-properties.md)。
 
-1. 选择 "**配置属性**  >  **链接器**  >  **高级**属性" 页。
+1. 选择 "**配置属性**  >  **链接器**  >  **高级** 属性" 页。
 
 1. 选择 **CET 影子堆栈兼容** 的属性。
 
@@ -51,7 +52,7 @@ ms.locfileid: "89281818"
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[使用项目属性](../working-with-project-properties.md)。
 
-1. 选择 "**配置属性**  >  **链接器**  >  **命令行**" 属性页。
+1. 选择“配置属性” > “链接器” > “命令行”属性页    。
 
 1. 在 **其他选项** 编辑控件中，添加 *`/CETCOMPAT`* 以将二进制文件标记为 CET 影子堆栈兼容，或将 *`/CETCOMPAT:NO`* 其显式标记为不兼容。
 
@@ -59,6 +60,6 @@ ms.locfileid: "89281818"
 
 此选项不具有编程等效项。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [链接器选项](linker-options.md)

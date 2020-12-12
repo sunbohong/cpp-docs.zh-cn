@@ -1,23 +1,24 @@
 ---
+description: 了解详细信息：计算所需值
 title: 计算所需值
 ms.date: 11/04/2016
 helpviewer_keywords:
 - helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-ms.openlocfilehash: 75952bbcdf823aa675b35702841c81e511105ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92d8462be2db55dbc10375629b133d9286560878
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272645"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179338"
 ---
 # <a name="calculating-necessary-values"></a>计算所需值
 
-需要通过延迟帮助器例程来计算两个关键信息。 为此，用于计算此信息 delayhlp.cpp 中有两个内联函数。
+延迟 helper 例程需要计算两项关键信息。 为此，在 delayhlp 中有两个用于计算此信息的内联函数。
 
-- 第一个计算当前导入 （导入地址表 (IAT)、 绑定导入地址表 (BIAT) 和未绑定导入地址表 (UIAT)） 在三个不同的表的索引。
+- 首先计算当前导入到三个不同表中的索引 (导入地址表 (IAT) 、绑定导入地址表 (BIAT) 和未绑定导入地址表 (UIAT) # A7。
 
-- 第二个中有效 IAT 的导入的计数。
+- 第二个计算有效 IAT 中的导入数。
 
 ```cpp
 // utility function for calculating the index of the current import
