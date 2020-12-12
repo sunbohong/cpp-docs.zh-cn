@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：管理符号
 title: 如何：管理符号
 ms.date: 02/14/2019
 f1_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 67a5c801c13038e7215473edecc2d41a8f7086e0
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2a7bdc6994bfcdadc9b7d1d5b98350fcd47ad6fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118220"
 ---
 # <a name="how-to-manage-symbols"></a>如何：管理符号
 
@@ -74,11 +75,11 @@ ms.locfileid: "91505720"
 
 符号名具有描述性前缀，可指示它们所表示的资源或对象的类型。 这些描述性前缀以文本组合 ID 开头。 Microsoft 基础类 (MFC) 库使用下表中所示的符号命名约定：
 
-|Category|前缀|用途|
+|类别|前缀|使用|
 |--------------|------------|---------|
 |资源|IDR_、IDD_、IDC_、IDI_、IDB_|加速器或菜单 (和关联资源或自定义资源) 、对话框、光标、图标、位图|
 |菜单项|ID_|Menu item|
-|命令|ID_|Command|
+|命令|ID_|命令|
 |控件和子窗口|IDC_|控制|
 |字符串|IDS_|字符串表中的字符串|
 |MFC|AFX_|为预定义 MFC 符号保留|
@@ -200,7 +201,7 @@ ms.locfileid: "91505720"
 
    每次打开资源文件时，都将计算以这种方式包含的文件中的符号，但保存文件时不会在磁盘上进行替换。
 
-1. 选择“确定” 。
+1. 选择“确定”。
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>更改资源符号头文件的名称
 

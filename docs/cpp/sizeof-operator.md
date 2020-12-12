@@ -1,4 +1,5 @@
 ---
+description: 了解有关： sizeof 运算符的详细信息
 title: sizeof 运算符
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-ms.openlocfilehash: 13e181bf84e359d433fbe951b1aa69320a1f0013
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d4af55697a1466829e81f5eb220ffba72bf73f6a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116881"
 ---
 # <a name="sizeof-operator"></a>sizeof 运算符
 
 根据类型的大小生成操作数的大小 **`char`** 。
 
 > [!NOTE]
-> 有关运算符的信息 `sizeof ...` ，请参阅[省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)。
+> 有关运算符的信息 `sizeof ...` ，请参阅 [省略号和可变参数模板](../cpp/ellipses-and-variadic-templates.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -77,7 +78,7 @@ The size of the pointer is 4
 
 **`sizeof`** 运算符不能与以下操作数一起使用：
 
-- 函数。 （但是， **`sizeof`** 可应用到指向函数的指针。）
+- 函数。 但 (**`sizeof`** 可应用到指向函数的指针 ) 
 
 - 位域。
 
@@ -95,7 +96,7 @@ The size of the pointer is 4
 
 将 **`sizeof`** 运算符应用于引用时，结果与应用于对象本身的结果相同 **`sizeof`** 。
 
-如果成员列表数组数组是结构的最后一个元素，则运算符将 **`sizeof`** 返回不带数组的结构的大小。
+如果未调整大小的数组是结构的最后一个元素，则 `sizeof` 运算符返回没有此数组的结构的大小。
 
 **`sizeof`** 运算符通常用于计算数组中使用以下形式的表达式的元素数：
 

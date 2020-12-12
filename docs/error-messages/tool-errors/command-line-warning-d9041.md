@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Command-Line 警告 D9041
 title: 命令行警告 D9041
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-ms.openlocfilehash: e685e9bd0ffb58065f20f466131f8894baaf359f
-ms.sourcegitcommit: 6e55aeb538b1c39af754f82d6f7738a18f5aa031
+ms.openlocfilehash: d6226d4e5dd89176c0ed3722a9fd24e1244cacac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87389722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97119757"
 ---
 # <a name="command-line-warning-d9041"></a>命令行警告 D9041
 

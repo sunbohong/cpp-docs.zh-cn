@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：类成员概述
 title: 类成员概述
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-ms.openlocfilehash: 02c5593d9fb5e72ee6b398c9637397ab26c9f3f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6059fc589d7065863c37f03a6e40882e1039b17c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114112"
 ---
 # <a name="class-member-overview"></a>类成员概述
 
@@ -30,7 +31,7 @@ ms.locfileid: "87229059"
 
 - 运算符
 
-- [嵌套类声明](nested-class-declarations.md)和。）
+- [嵌套类声明](nested-class-declarations.md) 和。 ) 
 
 - [Unions](unions.md)
 
@@ -92,11 +93,11 @@ int TestRun::_instances{ 0 };
 
 ## <a name="member-accessibility"></a>成员可访问性
 
-在成员列表中声明类的成员。 类的成员列表可以分为任意数量 **`private`** ， **`protected`** 并 **`public`** 使用关键字称为访问说明符。  冒号 **：** 必须遵循访问说明符。  这些部分不需要是连续的，也就是说，这些关键字中的任何一个都可能在成员列表中多次出现。  关键字指定所有成员直到下一个访问说明符或右大括号的访问。 有关详细信息，请参阅[成员访问控制（c + +）](../cpp/member-access-control-cpp.md)。
+在成员列表中声明类的成员。 类的成员列表可以分为任意数量 **`private`** ， **`protected`** 并 **`public`** 使用关键字称为访问说明符。  冒号 **：** 必须遵循访问说明符。  这些部分不需要是连续的，也就是说，这些关键字中的任何一个都可能在成员列表中多次出现。  关键字指定所有成员直到下一个访问说明符或右大括号的访问。 有关详细信息，请参阅 [成员访问控制 (c + +) ](../cpp/member-access-control-cpp.md)。
 
 ## <a name="static-members"></a>静态成员
 
-可将数据成员声明为静态，这表示类的所有对象都有权访问它的同一副本。 成员函数可以声明为静态，在这种情况下，它只能访问类的静态数据成员（并且没有*此*指针）。 有关详细信息，请参阅[静态数据成员](../cpp/static-members-cpp.md)。
+可将数据成员声明为静态，这表示类的所有对象都有权访问它的同一副本。 成员函数可以声明为静态，在这种情况下，它只能访问类的静态数据成员 (并且不) *此* 指针。 有关详细信息，请参阅 [静态数据成员](../cpp/static-members-cpp.md)。
 
 ## <a name="special-member-functions"></a>特殊成员函数
 
@@ -106,15 +107,15 @@ int TestRun::_instances{ 0 };
 
 1. 复制构造函数
 
-1. **（C + + 11）** 移动构造函数
+1. **(c + + 11)** 移动构造函数
 
 1. 复制赋值运算符
 
-1. **（C + + 11）** 移动赋值运算符
+1. **(c + + 11)** 移动赋值运算符
 
 1. 析构函数
 
-有关详细信息，请参阅[特殊成员函数](../cpp/special-member-functions.md)。
+有关详细信息，请参阅 [特殊成员函数](../cpp/special-member-functions.md)。
 
 ## <a name="memberwise-initialization"></a>按成员初始化
 
@@ -142,7 +143,7 @@ int main()
 
 如果在构造函数中对一个成员分配了一个值，则该值将覆盖声明时用于初始化该成员的值。
 
-对于给定类类型的所有对象，只有一个静态数据成员的共享副本。 必须在文件范围内定义静态数据成员并可在此范围内将其初始化。 （有关静态数据成员的详细信息，请参阅[静态数据成员](../cpp/static-members-cpp.md)。）下面的示例演示如何执行这些初始化：
+对于给定类类型的所有对象，只有一个静态数据成员的共享副本。 必须在文件范围内定义静态数据成员并可在此范围内将其初始化。  (有关静态数据成员的详细信息，请参阅 [静态数据成员](../cpp/static-members-cpp.md)。 ) 下面的示例演示如何执行这些初始化：
 
 ```cpp
 // class_members2.cpp
@@ -170,6 +171,6 @@ int CanInit2::j = i;
 > [!NOTE]
 > 类名 `CanInit2` 的前面必须有 `i` 以指定所定义的 `i` 是类 `CanInit2` 的成员。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](../cpp/classes-and-structs-cpp.md)

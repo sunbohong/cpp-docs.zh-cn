@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：添加 ATL 对话框
 title: 添加 ATL 对话框
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - MFC dialog boxes, ATL dialogs
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
-ms.openlocfilehash: 71290cf0763ac6594985acc4cb11562efe7028e6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 9d4abcafd5e12c6b8cffd636bf28a9e79f96e5ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499364"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165714"
 ---
 # <a name="adding-an-atl-dialog-box"></a>添加 ATL 对话框
 
@@ -26,7 +27,7 @@ ms.locfileid: "91499364"
 
 1. 使用 [Atl 项目向导](../../atl/reference/atl-project-wizard.md)创建 ATL 项目。
 
-1. 在 [类视图](/visualstudio/ide/viewing-the-structure-of-code)中，右键单击项目名称，然后从快捷菜单中单击 " **添加** "。 单击“添加类”****。
+1. 在 [类视图](/visualstudio/ide/viewing-the-structure-of-code)中，右键单击项目名称，然后从快捷菜单中单击 " **添加** "。 单击“添加类”。
 
 1. 在 "[添加类](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)" 对话框的 "**模板**" 窗格中，单击 " **ATL 对话框**"。 单击 " **打开** " 显示 [ATL 对话框向导](../../atl/reference/atl-dialog-wizard.md)。
 

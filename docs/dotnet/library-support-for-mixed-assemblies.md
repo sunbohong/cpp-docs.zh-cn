@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：库对混合程序集的支持
 title: 混合程序集的库支持
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -7,40 +8,40 @@ helpviewer_keywords:
 - msvcmrt[d].lib
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-ms.openlocfilehash: 42116c09d5b31cf669eb6d5d1e75eae60b2610a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20069c2caa1cf46ebdb54907de586630d4ee71c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312003"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113709"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>混合程序集的库支持
 
-VisualC++支持使用C++标准库，C 运行时库 (CRT)、 ATL 和 MFC 与编译的应用程序[/clr （公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)。 这样，使用这些库使用.NET Framework 的功能的现有应用程序。
+Visual C++ 支持使用 c + + 标准库、C 运行库 (CRT) 、ATL 以及使用/clr 编译的应用程序的 MFC [ (公共语言运行时编译) ](../build/reference/clr-common-language-runtime-compilation.md)。 这样，使用这些库的现有应用程序也可以使用 .NET Framework 的功能。
 
 > [!IMPORTANT]
-> **/Clr: pure**并 **/clr: safe**编译器选项在 Visual Studio 2015 中弃用，在 Visual Studio 2017 中不受支持。
+> **/Clr： pure** 和 **/clr： safe** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-此支持包括 DLL 和导入以下库：
+此支持包括以下 DLL 和导入库：
 
-- 如果使用编译的 Msvcmrt [d].lib **/clr**。 混合程序集链接到导入该库。
+- 如果用 **/clr** 编译，则为 msvcmrt.lib [d] .lib。 混合程序集链接到此导入库。
 
-这一支持提供了多个相关优势：
+此支持提供了几个相关优势：
 
-- CRT 和C++标准库可供混合代码。 CRT 和C++标准库提供的不是可验证;从根本上讲，你的调用仍传送到相同的 CRT 和C++为您的标准库使用从本机代码。
+- CRT 和 c + + 标准库可用于混合代码。 提供的 CRT 和 c + + 标准库不可验证;最终，在使用本机代码时，你的调用仍会路由到同一个 CRT 和 c + + 标准库。
 
-- 正确统一的异常处理在混合映像中。
+- 更正混合图像中的统一异常处理。
 
-- 静态初始化的C++混合映像中的变量。
+- 混合图像中 c + + 变量的静态初始化。
 
-- 支持在托管代码中的每个 AppDomain 和每个进程变量。
+- 支持托管代码中的每个 AppDomain 和每个进程变量。
 
-- 解析应用于在 Visual Studio 2003 及更早版本编译的混合 Dll 加载程序锁问题。
+- 解决应用于在 Visual Studio 2003 及更早版本中编译的混合 Dll 的加载程序锁问题。
 
-此外，这一支持也有以下限制：
+此外，此支持还提供以下限制：
 
-- 仅将 CRT DLL 模型支持编译的代码与 **/clr**。 不存在静态 CRT 库支持 **/clr**生成。
+- 对于用 **/clr** 编译的代码，仅支持 CRT DLL 模型。 没有支持 **/clr** 生成的静态 CRT 库。
 
 ## <a name="see-also"></a>请参阅
 
-- [混合（本机和托管）程序集](../dotnet/mixed-native-and-managed-assemblies.md)
+- [混合 (本机和托管) 程序集](../dotnet/mixed-native-and-managed-assemblies.md)

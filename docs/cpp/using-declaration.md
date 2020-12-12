@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用声明
 title: using 声明
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 072ecd325a76e80dbd710c241e39fdf7b969e537
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: eb0c3367b3d526c0b5cc30eff6865d41ba33070b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116842"
 ---
 # <a name="using-declaration"></a>using 声明
 
@@ -31,11 +32,11 @@ using declarator-list ;
 
 *非限定 id* 非限定 id 表达式，可以是标识符、重载运算符名称、用户定义的文本运算符或转换函数名称、类析构函数名称或模板名称和参数列表。
 
-*声明符-列表* 以逗号分隔的列表，其中列出了 [ **`typename`** ] *嵌套名称说明符*非 *限定标识符* ，后面跟有省略号。
+*声明符-列表* 以逗号分隔的列表，其中列出了 [ **`typename`** ] *嵌套名称说明符* 非 *限定标识符* ，后面跟有省略号。
 
 ## <a name="remarks"></a>备注
 
-使用声明会将非限定名称引入到在其他位置声明的实体的同义词。 它允许使用特定命名空间中的单个名称，而无需在其出现的声明区域中进行显式限定。 这与 [using 指令](../cpp/namespaces-cpp.md#using_directives)相反，后者允许使用命名空间中的 *所有* 名称而无需进行限定。 **`using`** 关键字还用于[类型别名](../cpp/aliases-and-typedefs-cpp.md)。
+使用声明会将非限定名称引入到在其他位置声明的实体的同义词。 它允许使用特定命名空间中的单个名称，而无需在其出现的声明区域中进行显式限定。 这与 [using 指令](../cpp/namespaces-cpp.md#using_directives)相反，后者允许使用命名空间中的 *所有* 名称而无需进行限定。 **`using`** 关键字还用于 [类型别名](../cpp/aliases-and-typedefs-cpp.md)。
 
 ## <a name="example-using-declaration-in-class-field"></a>示例： `using` 类字段中的声明
 

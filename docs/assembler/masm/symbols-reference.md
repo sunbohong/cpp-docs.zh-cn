@@ -1,15 +1,16 @@
 ---
+description: 了解有关以下内容的详细信息：符号引用
 title: 符号参考
 ms.date: 07/15/2020
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
-ms.openlocfilehash: a207de02a44ad960e84c6de3f78323c2f990e42c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 48b53d6002ba8b50005edebcb2932b41c5f30f8a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97125237"
 ---
 # <a name="symbols-reference"></a>符号参考
 
@@ -113,7 +114,7 @@ ms.locfileid: "88832148"
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

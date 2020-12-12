@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：调试和错误报告全局函数
 title: 调试和错误报告全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-ms.openlocfilehash: 10aca6862f6989c126981a9f6437c61f1c07bdae
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 3c729a7d8e870ce7b104ca53cd83bf8c41112dea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139979"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>调试和错误报告全局函数
 
@@ -51,7 +52,7 @@ HRESULT AtlHresultFromLastError();
 AtlHresultFromWin32(DWORD error);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *error*<br/>
 要转换的错误值。
@@ -117,7 +118,7 @@ HRESULT WINAPI AtlReportError(
     HINSTANCE hInst = _AtlBaseModule.GetResourceInstance());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 中报告错误的对象的 CLSID。
@@ -132,7 +133,7 @@ HRESULT WINAPI AtlReportError(
 中要返回给调用方的 HRESULT。
 
 *nID*<br/>
-中存储错误说明字符串的资源标识符。 此值应介于0x0200 和0xFFFF 之间，包括在内。 在调试版本中，如果*nID*未为有效字符串编制索引，则会产生**断言**。 在发布版本中，错误描述字符串将设置为 "未知错误"。
+中存储错误说明字符串的资源标识符。 此值应介于0x0200 和0xFFFF 之间，包括在内。 在调试版本中，如果 *nID* 未为有效字符串编制索引，则会产生 **断言**。 在发布版本中，错误描述字符串将设置为 "未知错误"。
 
 *dwHelpID*<br/>
 中错误的帮助上下文标识符。
@@ -145,7 +146,7 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="return-value"></a>返回值
 
-如果 *hRes* 参数为非零，则返回 *hRes*的值。 如果 *hRes* 为零，则返回的前四个版本 `AtlReportError` DISP_E_EXCEPTION。 最后两个版本返回宏的结果 **MAKE_HRESULT ( 1，FACILITY_ITF，** `nID` **) **。
+如果 *hRes* 参数为非零，则返回 *hRes* 的值。 如果 *hRes* 为零，则返回的前四个版本 `AtlReportError` DISP_E_EXCEPTION。 最后两个版本返回宏的结果 **MAKE_HRESULT ( 1，FACILITY_ITF，** `nID` **)**。
 
 ### <a name="remarks"></a>备注
 
@@ -170,7 +171,7 @@ HRESULT WINAPI AtlReportError(
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *小时*<br/>
 标准 HRESULT 值。

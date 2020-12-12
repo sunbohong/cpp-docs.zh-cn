@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： wire_marshal
 title: 'wire_marshal (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: 04d6e7dcc887815b6f1b3becd67bd11bef4a81d7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 69e3b85137d656e40cb77f9f75c361495c88f4a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832876"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118285"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -25,7 +26,7 @@ ms.locfileid: "88832876"
 
 ## <a name="remarks"></a>备注
 
-**Wire_marshal** c + + 特性具有与[wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 特性相同的功能。
+**Wire_marshal** c + + 特性具有与 [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -58,7 +59,7 @@ ms.locfileid: "88832876"
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)

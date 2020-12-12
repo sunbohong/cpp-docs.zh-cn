@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CWndClassInfo 类
 title: CWndClassInfo 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-ms.openlocfilehash: c1b516f6e92f98d660f7757870a3e634dcef4518
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7a857812fa35743fbab0968fb94095bf8fdcabcf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140018"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 类
 
@@ -45,7 +46,7 @@ class CWndClassInfo
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[m_atom](#m_atom)|唯一标识已注册的窗口类。|
 |[m_bSystemCursor](#m_bsystemcursor)|指定光标资源是指系统游标还是引用模块资源中包含的游标。|
@@ -55,7 +56,7 @@ class CWndClassInfo
 |[m_wc](#m_wc)|在结构中维护窗口类信息 `WNDCLASSEX` 。|
 |[pWndProc](#pwndproc)|指向现有窗口类的窗口过程。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CWndClassInfo` 管理窗口类的信息。 通常使用 `CWndClassInfo` 三个宏之一，DECLARE_WND_CLASS、DECLARE_WND_CLASS_EX 或 DECLARE_WND_SUPERCLASS，如下表中所述：
 
@@ -95,7 +96,7 @@ ATOM m_atom;
 BOOL m_bSystemCursor;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 否则，将加载模块中包含的游标资源。
 
@@ -109,7 +110,7 @@ BOOL m_bSystemCursor;
 LPCTSTR m_lpszCursorID;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当注册窗口类时，由标识的游标的句柄由 `m_lpszCursorID` [m_wc](#m_wc)检索并存储。
 
@@ -123,7 +124,7 @@ LPCTSTR m_lpszCursorID;
 LPCTSTR m_lpszOrigName;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CWndClassInfo``m_lpszOrigName`仅在类定义中包含[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏时使用。 在这种情况下，将 `CWndClassInfo` 基于名为的类注册一个窗口类 `m_lpszOrigName` 。 有关详细信息，请参阅 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 概述。
 
@@ -135,7 +136,7 @@ LPCTSTR m_lpszOrigName;
 TCHAR m_szAutoName[13];
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CWndClassInfo``m_szAutoName`仅在将 NULL 传递给 `WndClassName` 参数[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)、 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)或[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)时使用。 当注册窗口类时，ATL 将构造一个名称。
 
@@ -147,7 +148,7 @@ TCHAR m_szAutoName[13];
 WNDCLASSEX m_wc;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果已指定 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) ([CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 宏中的默认值，则 `m_wc` 包含有关新窗口类的信息。
 
@@ -161,7 +162,7 @@ WNDCLASSEX m_wc;
 WNDPROC pWndProc;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CWndClassInfo``pWndProc`仅在类定义中包含[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)宏时使用。 在这种情况下，将 `CWndClassInfo` 注册一个基于现有类但使用不同窗口过程的窗口类。 现有窗口类的窗口过程保存在中 `pWndProc` 。 有关详细信息，请参阅 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 概述。
 
@@ -173,7 +174,7 @@ WNDPROC pWndProc;
 ATOM Register(WNDPROC* pProc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pProc*<br/>
 弄指定现有窗口类的原始窗口过程。
@@ -182,13 +183,13 @@ ATOM Register(WNDPROC* pProc);
 
 如果成功，则为唯一标识要注册的窗口类的 atom。 否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果已指定 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) ([CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 宏中的默认值，则会 `Register` 注册一个新的窗口类。 在这种情况下，不使用 *pProc* 参数。
 
-如果已指定 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 宏，则 `Register` 会注册一个超类，这是一个基于现有类但使用不同窗口过程的窗口类。 在 *pProc*中返回现有窗口类的窗口过程。
+如果已指定 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 宏，则 `Register` 会注册一个超类，这是一个基于现有类但使用不同窗口过程的窗口类。 在 *pProc* 中返回现有窗口类的窗口过程。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComControl 类](../../atl/reference/ccomcontrol-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

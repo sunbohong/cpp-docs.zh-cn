@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息： (Visual C++ 的潜在升级问题概述) '
 title: 潜在的升级问题概述 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: d62bccfb3e508145773c01b26976f46dbcb6490f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 42060fc7bd1aeedebf6cdfc7f645ad8eea38153c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115204"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潜在的升级问题概述 (Visual C++)
 
@@ -88,13 +89,13 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t（wchar_t 是本机类型）
 
-Microsoft Visual C++ 6.0 及更早版本中的 (**`wchar_t`** 未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。 ) c + + 标准要求 **`wchar_t`** 是内置类型。 使用 typedef 版本可能导致可移植性问题。 如果从 Visual Studio 的早期版本升级并遇到编译器错误 C2664，因为代码尝试将隐式转换 **`wchar_t`** 为，所以 **`unsigned short`** 建议更改代码以修复错误，而不是设置 `/Zc:wchar_t-` 。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+Microsoft Visual C++ 6.0 及更早版本中的 (**`wchar_t`** 未作为内置类型实现，但在 wchar 中声明为无符号 short 的 typedef。 ) c + + 标准要求 **`wchar_t`** 是内置类型。 使用 typedef 版本可能导致可移植性问题。 如果从 Visual Studio 的早期版本升级并遇到编译器错误 C2664，因为代码尝试将隐式转换 **`wchar_t`** 为，所以 **`unsigned short`** 建议更改代码以修复错误，而不是设置 `/Zc:wchar_t-` 。 有关详细信息，请参阅 [/zc： wchar_t (Wchar_t 是本机类型) ](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用链接器选项 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升级。
 
-通过 `/NODEFAULTLIB` 链接器选项（或“忽略所有默认库”链接器属性），可使链接器不在 CRT 等默认库中自动链接。 这意味着，每个库都必须作为输入单独列出。 “项目属性”对话框的“链接器”部分中的“附加依赖项”属性中，提供了此库列表************。
+通过 `/NODEFAULTLIB` 链接器选项（或“忽略所有默认库”链接器属性），可使链接器不在 CRT 等默认库中自动链接。 这意味着，每个库都必须作为输入单独列出。 “项目属性”对话框的“链接器”部分中的“附加依赖项”属性中，提供了此库列表。
 
-在升级过程中，使用此选项的项目会出现问题，因为某些默认库的内容已重构。 因为每个库都需要在“附加依赖项”属性或链接器命令行中列出，所以需要使用所有当前名称来更新库列表****。
+在升级过程中，使用此选项的项目会出现问题，因为某些默认库的内容已重构。 因为每个库都需要在“附加依赖项”属性或链接器命令行中列出，所以需要使用所有当前名称来更新库列表。
 
 下表显示自 Studio 2015 开始内容已更改的库。 若要升级，需要将第二列中的新库名称添加到第一列的库中。 其中一些库是导入库，但这并不重要。
 
@@ -125,7 +126,7 @@ Microsoft Visual C++ 6.0 及更早版本中的 (**`wchar_t`** 未作为内置类
 
 可以按 **F12** (**中转到 "定义** ") ，以查看相关类型的定义位置。
 
-此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++” > “高级”页，并将“显示包含文件”设置为“是”********************。 然后重新生成项目，并在输出窗口中查看 `#include` 列表。 每个标头在包含它的标头下都是缩进的。
+此处可使用 [/showIncludes](../build/reference/showincludes-list-include-files.md) 编译器选项。 在项目的“属性页”对话框中，打开“C/C++” > “高级”页，并将“显示包含文件”设置为“是”。 然后重新生成项目，并在输出窗口中查看 `#include` 列表。 每个标头在包含它的标头下都是缩进的。
 
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函数的错误
 
@@ -133,7 +134,7 @@ Microsoft Visual C++ 6.0 及更早版本中的 (**`wchar_t`** 未作为内置类
 
 如果错误涉及 CRT 函数，请搜索 [Visual C++ 更改历史记录 (2003 - 2015)](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 中 C++ 的符合性改进](../overview/cpp-conformance-improvements.md)，查阅这些文章中是否包含任何附加信息。 如果错误为 LNK2019，无法解析的外部对象，请确保未删除函数。 否则，若确定函数仍存在，且调用代码正确，请检查项目是否使用了 `/NODEFAULTLIB`。 在这种情况下，需更新库列表，以便项目使用新的通用 (UCRT) 库。 有关详细信息，请参阅以上有关库和依赖项的部分。
 
-如果错误涉及 `printf` 或 `scanf`，请确保未在不包含 stdio.h 的情况下私下定义这两种函数中的任意一种。 如果定义了，请删除私有定义或删除到 legacy\_stdio\_definitions.lib 的链接。 可以在“附加依赖项”属性中的“配置属性” > “链接器” > “输入”下的“属性页”对话框中对此库进行设置********************。 若要使用 Windows SDK 8.1 或更早的版本进行链接，请添加 legacy\_stdio\_definitions.lib。
+如果错误涉及 `printf` 或 `scanf`，请确保未在不包含 stdio.h 的情况下私下定义这两种函数中的任意一种。 如果定义了，请删除私有定义或删除到 legacy\_stdio\_definitions.lib 的链接。 可以在“附加依赖项”属性中的“配置属性” > “链接器” > “输入”下的“属性页”对话框中对此库进行设置。 若要使用 Windows SDK 8.1 或更早的版本进行链接，请添加 legacy\_stdio\_definitions.lib。
 
 如果错误涉及格式字符串参数，这可能是由于编译器在强制执行标准方面更严格。 有关详细信息，请参阅更改历史记录。 请密切注意此处的任何错误，因为它们可能表示存在安全风险。
 
@@ -149,7 +150,7 @@ C++ 标准发展的方式并不总是后向兼容。 在 C++11 中引入移动�
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>使用安全 CRT 函数的警告
 
-多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 若要为解决方案中的所有项目禁用警告，请打开 "**视图**"  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择 "**属性**"。 在“配置属性” > “C/C++” > “高级”下的“属性页”中，选择“禁用特定警告”********************。 **** 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。  (不包含前缀 "C"。 ) 有关详细信息，请参阅 [移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
+多年来，已引入 C 运行时函数的多个安全版本。 尽管不安全的旧版本仍然可用，但建议更改代码以使用安全版本。 编译器将对使用不安全版本的行为发出警告。 可选择禁用或忽略这些警告。 若要为解决方案中的所有项目禁用警告，请打开 "**视图**"  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择 "**属性**"。 在“配置属性” > “C/C++” > “高级”下的“属性页”中，选择“禁用特定警告”。 单击下拉箭头，然后单击“编辑”。 在文本框中输入 4996。  (不包含前缀 "C"。 ) 有关详细信息，请参阅 [移植以使用安全 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>对 Windows API 或已过时 SDK 进行的更改所导致的错误
 
@@ -179,11 +180,11 @@ MFC 应用程序中可能发生此错误。 它指示 CRT 库和 MFC 库之间�
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 和 MBCS/ASCII
 
-在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 若要为解决方案中的所有项目禁用该选项，请打开 "**视图**  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择"**属性**"。 在“属性页”对话框中，选择“配置属性” > “C/C++” > “高级”****************。 在 "  **禁用特定警告** " 属性中，打开下拉箭头，然后选择 " **编辑**"。 在文本框中输入 4996。  (不包含 "C" 前缀。 ) 选择 **"确定"** 保存属性，然后选择 **"确定"** 保存更改。
+在标准化 Unicode 之前，许多程序使用多字节字符集 (MBCS) 来表示未包含在 ASCII 字符集中的字符。 在较早的 MFC 项目中，MBCS 是默认设置，在升级此类程序时，你将收到建议使用 Unicode 的警告。 如果认为因开发成本的原因而不值得转换至 Unicode，则可以选择禁用或忽略此警告。 若要为解决方案中的所有项目禁用该选项，请打开 "**视图**  >  **属性管理器**，选择要禁用警告的所有项目，然后右键单击所选项，然后选择"**属性**"。 在“属性页”对话框中，选择“配置属性” > “C/C++” > “高级”。 在 "  **禁用特定警告** " 属性中，打开下拉箭头，然后选择 " **编辑**"。 在文本框中输入 4996。  (不包含 "C" 前缀。 ) 选择 **"确定"** 保存属性，然后选择 **"确定"** 保存更改。
 
 有关详细信息，请参阅[从 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 有关 MBCS 与 Unicode 的一般信息，请参阅 Visual C++ 和[国际化](../c-runtime-library/internationalization.md)[中的文本和字符串](../text/text-and-strings-in-visual-cpp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [从 Visual C++ 早期版本升级项目](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 符合性改进](../overview/cpp-conformance-improvements.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：单一继承
 title: 单个继承
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 306f5eb3624797ca48848ef0a8f69625e0f6b574
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a750cf66074612ce40f9a4fa03d8453ae2decfef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87186355"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97116946"
 ---
 # <a name="single-inheritance"></a>单个继承
 
@@ -154,4 +155,4 @@ int main() {
 由于 `Document` 类具有一个 `PrintNameOf` 函数，因此它可以打印库中每本书的名称，但它可能会忽略某些特定于文档类型的信息（`Book` 的页计数、`HelpFile` 的字节数等）。
 
 > [!NOTE]
-> 强制使用基类来实现函数（如 `PrintNameOf`）通常不是最佳设计。 [虚函数](../cpp/virtual-functions.md)提供其他设计替代项。
+> 强制使用基类来实现函数（如 `PrintNameOf`）通常不是最佳设计。 [虚函数](../cpp/virtual-functions.md) 提供其他设计替代项。

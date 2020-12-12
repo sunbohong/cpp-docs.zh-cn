@@ -1,15 +1,16 @@
 ---
+description: '了解更多相关信息：类和结构 (c + +) '
 title: 类和结构 (C++)
 ms.date: 05/07/2019
 helpviewer_keywords:
 - C++, classes and structs
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
-ms.openlocfilehash: d593f6575fec64aa0eb14c7aa0fcbb5c4eb66691
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d845cf130c2cbf06e182a49f3d83c78745864d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220595"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114060"
 ---
 # <a name="classes-and-structs-c"></a>类和结构 (C++)
 
@@ -19,7 +20,7 @@ ms.locfileid: "87220595"
 
 本文包含以下主题：
 
-- class
+- [class](../cpp/class-cpp.md)
 
 - [struct](../cpp/struct-cpp.md)
 
@@ -45,15 +46,15 @@ ms.locfileid: "87220595"
 
 - [C + + 位域](../cpp/cpp-bit-fields.md)
 
-三种类类型是结构、类和联合。 它们使用[结构](../cpp/struct-cpp.md)、[类](../cpp/class-cpp.md)和[联合](../cpp/unions.md)关键字进行声明。 下表显示三种类类型之间的差异。
+三种类类型是结构、类和联合。 它们使用 [结构](../cpp/struct-cpp.md)、 [类](../cpp/class-cpp.md)和 [联合](../cpp/unions.md) 关键字进行声明。 下表显示三种类类型之间的差异。
 
-有关联合的详细信息，请参阅[联合](../cpp/unions.md)。 有关 c + +/CLI 和 c + +/CX 中的类和结构的信息，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)。
+有关联合的详细信息，请参阅 [联合](../cpp/unions.md)。 有关 c + +/CLI 和 c + +/CX 中的类和结构的信息，请参阅 [类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>结构、类和联合的访问控制和约束
 
 |结构|类|Unions|
 |----------------|-------------|------------|
-|类键是**`struct`**|类键是**`class`**|类键是**`union`**|
+|类键是 **`struct`**|类键是 **`class`**|类键是 **`union`**|
 |默认访问是公共的|默认访问是私有的|默认访问是公共的|
 |没有使用约束|没有使用约束|一次只使用一个成员|
 

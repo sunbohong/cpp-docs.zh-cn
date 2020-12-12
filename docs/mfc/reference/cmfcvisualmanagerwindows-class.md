@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCVisualManagerWindows 类
 title: CMFCVisualManagerWindows 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -140,18 +141,18 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: 05b4d6129f5c398df7f3e1efc249cf51c2326914
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: b3b4a73b5e5a0e7b2d8280af2925a9268785d53d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752832"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143385"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows 类
 
-`CMFCVisualManagerWindows`当用户选择 Windows XP 或 Vista 主题时，模仿微软 Windows XP 或 Microsoft Vista 的外观。
+`CMFCVisualManagerWindows` 当用户选择 Windows XP 或 Vista 主题时，模仿 Microsoft Windows XP 或 Microsoft Vista 的外观。
 
-有关详细信息，请参阅位于 Visual Studio 安装的**VC\\\\atlmfc src\\mfc**文件夹中的源代码。
+有关更多详细信息，请参阅位于 Visual Studio 安装的 **VC \\ atlmfc \\ src \\ mfc** 文件夹中的源代码。
 
 ## <a name="syntax"></a>语法
 
@@ -163,96 +164,96 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|默认构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFC可视化管理器窗口：：始终突出显示3D选项卡](#alwayshighlight3dtabs)|框架调用此方法以确定是否应始终在应用程序中突出显示 3D 选项卡。 （覆盖[CMFC 视觉管理器：始终突出显示 3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).|
-|[CMFC视觉管理器窗口：:D原始ComboBorderWinXP](#drawcomboborderwinxp)|（重写 `CMFCVisualManager::DrawComboBorderWinXP`。）|
-|[CMFC视觉管理器窗口：:D原始ComboDropButtonWinXP](#drawcombodropbuttonwinxp)|（覆盖[CMFC 视觉管理器：:D原始ComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).）|
-|[CMFC视觉管理器窗口：:D原始按钮温XP](#drawpushbuttonwinxp)|（覆盖[CMFC 视觉管理器：:D原始按钮WinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp).）|
-|[CMFC可视化管理器窗口：获取按钮额外边框](#getbuttonextraborder)|框架在绘制工具栏按钮时调用此方法。 （覆盖[CMFC 视觉管理器：获取按钮额外边框](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder).）|
-|[CMFC可视化管理器窗口：：获取字幕按钮额外边框](#getcaptionbuttonextraborder)|（覆盖[CMFC 视觉管理器：获取标题按钮额外边框](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder).）|
-|[CMFC可视化管理器窗口：：获取对接窗格标题额外高度](#getdockingpanecaptionextraheight)|（重写 `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`。）|
-|[CMFC可视化管理器窗口：：获取突出显示的菜单项目文本颜色](#gethighlightedmenuitemtextcolor)|（重写 `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`。）|
-|[CMFC可视化管理器窗口：：获取弹出菜单](#getpopupmenugap)|（重写 `CMFCVisualManagerOfficeXP::GetPopupMenuGap`。）|
-|[CMFC视觉管理器窗口：：获取工具栏按钮文本颜色](#gettoolbarbuttontextcolor)|（重写 `CMFCVisualManagerOfficeXP::GetToolbarButtonTextColor`。）|
-|[CMFC可视化管理器窗口：：默认WinXPPopup按钮](#isdefaultwinxppopupbutton)|（覆盖[CMFC 视觉管理器：是默认WinXPPopup按钮](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton).）|
-|[CMFC可视化管理器窗口：：是亮点完整菜单项目](#ishighlightwholemenuitem)|（重写 `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`。）|
-|[CMFC可视化管理器：：IsOffice样式菜单](#isofficestylemenus)||
-|[CMFC可视化管理器：：IsOfficeXP样式菜单](#isofficexpstylemenus)|指示可视化管理器是否实现 Office XP 样式菜单。 （覆盖[CMFC 视觉管理器：IsOfficeXP样式菜单](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus).）|
-|[CMFC可视化管理器窗口：：支持视窗](#iswindowsthemingsupported)|（重写 `CMFCVisualManager::IsWindowsThemingSupported`。）|
-|[CMFC视觉管理器窗口：：IswinXP主题可用](#iswinxpthemeavailable)|指示 Windows 主题是否可用。|
-|[CMFC可视化管理器窗口：：在绘制巴格里珀](#ondrawbargripper)|（重写 `CMFCVisualManagerOfficeXP::OnDrawBarGripper`。）|
-|[CMFC可视化管理器窗口：：在画浏览按钮](#ondrawbrowsebutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`。）|
-|[CMFC可视化管理器窗口：：在绘制按钮边框](#ondrawbuttonborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`。）|
-|[CMFC可视化管理器窗口：：在DrawButton分离器](#ondrawbuttonseparator)|（重写 `CMFCVisualManagerOfficeXP::OnDrawButtonSeparator`。）|
-|[CMFC视觉管理器窗口：：在画字幕按钮](#ondrawcaptionbutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`。）|
-|[CMFC视觉管理器窗口：：在画字幕按钮图标](#ondrawcaptionbuttonicon)|（重写 `CMFCVisualManagerOfficeXP::OnDrawCaptionButtonIcon`。）|
-|[CMFC可视化管理器窗口：：在DrawcheckBoxEx上](#ondrawcheckboxex)|（覆盖[CMFC 视觉管理器：onDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex).）|
-|[CMFC可视化管理器窗口：：在绘制Combo边界](#ondrawcomboborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawComboBorder`。）|
-|[CMFC视觉管理器窗口：：OnDrawComDrop按钮](#ondrawcombodropbutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`。）|
-|[CMFC可视化管理器窗口：：在绘制控制边框](#ondrawcontrolborder)|（覆盖[CMFC 视觉管理器：OnDrawControl 边界](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder).）|
-|[CMFC可视化管理器窗口：：在绘制边界](#ondraweditborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawEditBorder`。）|
-|[CMFC可视化管理器窗口：：在画扩展框](#ondrawexpandingbox)|（覆盖[CMFC 视觉管理器：onDraw 扩展框](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox).）|
-|[CMFC可视化管理器窗口：：在绘制浮动工具栏边框](#ondrawfloatingtoolbarborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`。）|
-|[CMFC可视化管理器窗口：：在绘制标题Ctrl边框](#ondrawheaderctrlborder)|当框架在[CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)的实例周围绘制边框时，该框架调用此方法。 （覆盖[CMFC 视觉管理器：onDrawheaderCtrl边框](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder).）|
-|[CMFC可视化管理器窗口：：画眉头](#ondrawheaderctrlsortarrow)|当框架绘制标头控件的排序箭头时，它将调用此函数。 （覆盖[CMFC 视觉管理器：onDrawHeaderCtssa.）](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow)|
-|[CMFC可视化管理器窗口：：在绘制菜单边框](#ondrawmenuborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`。）|
-|[CMFC可视化管理器窗口：：在画菜单系统按钮](#ondrawmenusystembutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`。）|
-|[CMFC可视化管理器窗口：：在绘制迷你框架边框](#ondrawminiframeborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`。）|
-|[CMFC可视化管理器窗口：：在绘制Outlook页面按钮边框](#ondrawoutlookpagebuttonborder)|绘制 Outlook 页面按钮的边框时由框架调用。 （覆盖[CMFC 视觉管理器：：在 DrawOutlookPageButton 边框](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder).）|
-|[CMFC可视化管理器窗口：：在绘制窗格边框](#ondrawpaneborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`。）|
-|[CMFC可视化管理器窗口：：画上画框](#ondrawpanecaption)|（重写 `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`。）|
-|[CMFC可视化管理器窗口：：在窗口按钮边框上](#ondrawpopupwindowbuttonborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`。）|
-|[CMFC可视化管理器窗口：：OnDrawScroll按钮](#ondrawscrollbuttons)|（重写 `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`。）|
-|[CMFC可视化管理器窗口：OnDraw分离器](#ondrawseparator)|（重写 `CMFCVisualManagerOfficeXP::OnDrawSeparator`。）|
-|[CMFC可视化管理器窗口：：在牵引按钮](#ondrawspinbuttons)|（重写 `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`。）|
-|[CMFC可视化管理器窗口：：在绘制状态栏窗格边框](#ondrawstatusbarpaneborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`。）|
-|[CMFC可视化管理器窗口：：在绘制状态栏进度](#ondrawstatusbarprogress)|当框架在[CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)对象上绘制进度指示器时，它将调用此方法。 （覆盖[CMFC 视觉管理器：OnDraw 状态栏进度](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress).）|
-|[CMFC可视化管理器窗口：：在绘制状态栏框](#ondrawstatusbarsizebox)|当框架绘制[CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)的大小框时，它将调用此方法。 （覆盖[CMFC 视觉管理器：OnDraw 状态栏框](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox).）|
-|[CMFC可视化管理器窗口：：在绘制选项卡](#ondrawtab)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTab`。）|
-|[CMFC可视化管理器窗口：：在绘制标签关闭按钮](#ondrawtabclosebutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`。）|
-|[CMFC可视化管理器窗口：：在DrawTabs按钮边框](#ondrawtabsbuttonborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`。）|
-|[CMFC可视化管理器窗口：：在画任务](#ondrawtask)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTask`。）|
-|[CMFC可视化管理器窗口：：在绘制任务组区域边框](#ondrawtasksgroupareaborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`。）|
-|[CMFC可视化管理器窗口：：在画任务组标题](#ondrawtasksgroupcaption)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`。）|
-|[CMFC视觉管理器窗口：：画中画](#ondrawtearoffcaption)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`。）|
-|[CMFC可视化管理器窗口：：打开"擦除窗口按钮"](#onerasepopupwindowbutton)|（重写 `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`。）|
-|[CMFC可视化管理器窗口：：在EraseTabs区域](#onerasetabsarea)|（重写 `CMFCVisualManagerOfficeXP::OnEraseTabsArea`。）|
-|[CMFC可视化管理器窗口：：打开EraseTabs按钮](#onerasetabsbutton)|（重写 `CMFCVisualManagerOfficeXP::OnEraseTabsButton`。）|
-|[CMFC可视化管理器窗口：：在EraseTabs框架上](#onerasetabsframe)|当框架擦除[CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)上的帧时，它将调用此方法。 （覆盖[CMFC 可视化管理器：：在 EraseTabFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe)上。|
-|[CMFC可视化管理器窗口：：在填充栏背景](#onfillbarbackground)|（重写 `CMFCVisualManagerOfficeXP::OnFillBarBackground`。）|
-|[CMFC可视化管理器窗口：：打开填充按钮内部](#onfillbuttoninterior)|（重写 `CMFCVisualManagerOfficeXP::OnFillButtonInterior`。）|
-|[CMFC可视化管理器窗口：：在填充命令列表背景](#onfillcommandslistbackground)|（重写 `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`。）|
-|[CMFC可视化管理器窗口：：在填充迷你框架标题](#onfillminiframecaption)|（重写 `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`。）|
-|[CMFC可视化管理器窗口：：在填充OutlookPage按钮上](#onfilloutlookpagebutton)|当此方法填充 Outlook 页面按钮的内部时，框架将调用此方法。 （覆盖[CMFC 视觉管理器：：在填充OutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton).）|
-|[CMFC可视化管理器窗口：：在填充任务组内部](#onfilltasksgroupinterior)|（重写 `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`。）|
-|[CMFC可视化管理器窗口：：在填充任务窗格背景](#onfilltaskspanebackground)|当此方法填充[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)控件的背景时，框架将调用此方法。 （覆盖[CMFC 可视化管理器：：在填充任务窗格背景](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground).）|
-|[CMFC可视化管理器窗口：：在突出显示菜单项上](#onhighlightmenuitem)|（重写 `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`。）|
-|[CMFCVisual管理器窗口：：在突出显示很少使用菜单项](#onhighlightrarelyusedmenuitems)|（重写 `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`。）|
-|[CMFC可视化管理器窗口：：更新系统颜色](#onupdatesystemcolors)|（重写 `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`。）|
-|[CMFC可视化管理器窗口：：设置Office样式菜单](#setofficestylemenus)||
+|[CMFCVisualManagerWindows：： AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|框架调用此方法来确定3D 选项卡是否应始终在应用程序中突出显示。  (重写 [CMFCVisualManager：： AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs)。 ) |
+|[CMFCVisualManagerWindows：:D rawComboBorderWinXP](#drawcomboborderwinxp)|（重写 `CMFCVisualManager::DrawComboBorderWinXP`。）|
+|[CMFCVisualManagerWindows：:D rawComboDropButtonWinXP](#drawcombodropbuttonwinxp)| (重写 [CMFCVisualManager：:D rawcombodropbuttonwinxp](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp)。 ) |
+|[CMFCVisualManagerWindows：:D rawPushButtonWinXP](#drawpushbuttonwinxp)| (重写 [CMFCVisualManager：:D rawpushbuttonwinxp](../../mfc/reference/cmfcvisualmanager-class.md#drawpushbuttonwinxp)。 ) |
+|[CMFCVisualManagerWindows：： GetButtonExtraBorder](#getbuttonextraborder)|框架在绘制工具栏按钮时调用此方法。  (重写 [CMFCVisualManager：： GetButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getbuttonextraborder)。 ) |
+|[CMFCVisualManagerWindows：： GetCaptionButtonExtraBorder](#getcaptionbuttonextraborder)| (重写 [CMFCVisualManager：： GetCaptionButtonExtraBorder](../../mfc/reference/cmfcvisualmanager-class.md#getcaptionbuttonextraborder)。 ) |
+|[CMFCVisualManagerWindows：： GetDockingPaneCaptionExtraHeight](#getdockingpanecaptionextraheight)|（重写 `CMFCVisualManager::GetDockingPaneCaptionExtraHeight`。）|
+|[CMFCVisualManagerWindows：： GetHighlightedMenuItemTextColor](#gethighlightedmenuitemtextcolor)|（重写 `CMFCVisualManagerOfficeXP::GetHighlightedMenuItemTextColor`。）|
+|[CMFCVisualManagerWindows：： GetPopupMenuGap](#getpopupmenugap)|（重写 `CMFCVisualManagerOfficeXP::GetPopupMenuGap`。）|
+|[CMFCVisualManagerWindows：： GetToolbarButtonTextColor](#gettoolbarbuttontextcolor)|（重写 `CMFCVisualManagerOfficeXP::GetToolbarButtonTextColor`。）|
+|[CMFCVisualManagerWindows：： IsDefaultWinXPPopupButton](#isdefaultwinxppopupbutton)| (重写 [CMFCVisualManager：： IsDefaultWinXPPopupButton](../../mfc/reference/cmfcvisualmanager-class.md#isdefaultwinxppopupbutton)。 ) |
+|[CMFCVisualManagerWindows：： IsHighlightWholeMenuItem](#ishighlightwholemenuitem)|（重写 `CMFCVisualManagerOfficeXP::IsHighlightWholeMenuItem`。）|
+|[CMFCVisualManagerWindows：： IsOfficeStyleMenus](#isofficestylemenus)||
+|[CMFCVisualManagerWindows：： IsOfficeXPStyleMenus](#isofficexpstylemenus)|指示视觉对象管理器是否实现 Office XP 样式的菜单。  (重写 [CMFCVisualManager：： IsOfficeXPStyleMenus](../../mfc/reference/cmfcvisualmanager-class.md#isofficexpstylemenus)。 ) |
+|[CMFCVisualManagerWindows：： IsWindowsThemingSupported](#iswindowsthemingsupported)|（重写 `CMFCVisualManager::IsWindowsThemingSupported`。）|
+|[CMFCVisualManagerWindows：： IsWinXPThemeAvailable](#iswinxpthemeavailable)|指示 Windows 主题是否可用。|
+|[CMFCVisualManagerWindows：： OnDrawBarGripper](#ondrawbargripper)|（重写 `CMFCVisualManagerOfficeXP::OnDrawBarGripper`。）|
+|[CMFCVisualManagerWindows：： OnDrawBrowseButton](#ondrawbrowsebutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawBrowseButton`。）|
+|[CMFCVisualManagerWindows：： OnDrawButtonBorder](#ondrawbuttonborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawButtonBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawButtonSeparator](#ondrawbuttonseparator)|（重写 `CMFCVisualManagerOfficeXP::OnDrawButtonSeparator`。）|
+|[CMFCVisualManagerWindows：： OnDrawCaptionButton](#ondrawcaptionbutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawCaptionButton`。）|
+|[CMFCVisualManagerWindows：： OnDrawCaptionButtonIcon](#ondrawcaptionbuttonicon)|（重写 `CMFCVisualManagerOfficeXP::OnDrawCaptionButtonIcon`。）|
+|[CMFCVisualManagerWindows：： OnDrawCheckBoxEx](#ondrawcheckboxex)| (重写 [CMFCVisualManager：： OnDrawCheckBoxEx](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcheckboxex)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawComboBorder](#ondrawcomboborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawComboBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawComboDropButton](#ondrawcombodropbutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawComboDropButton`。）|
+|[CMFCVisualManagerWindows：： OnDrawControlBorder](#ondrawcontrolborder)| (重写 [CMFCVisualManager：： OnDrawControlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawcontrolborder)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawEditBorder](#ondraweditborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawEditBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawExpandingBox](#ondrawexpandingbox)| (重写 [CMFCVisualManager：： OnDrawExpandingBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawexpandingbox)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawFloatingToolbarBorder](#ondrawfloatingtoolbarborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawFloatingToolbarBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawHeaderCtrlBorder](#ondrawheaderctrlborder)|框架在 [CMFCHeaderCtrl 类](../../mfc/reference/cmfcheaderctrl-class.md)的实例周围绘制边框时调用此方法。  (重写 [CMFCVisualManager：： OnDrawHeaderCtrlBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlborder)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawHeaderCtrlSortArrow](#ondrawheaderctrlsortarrow)|框架在绘制标题控件的排序箭头时调用此函数。  (重写 [CMFCVisualManager：： OnDrawHeaderCtrlSortArrow](../../mfc/reference/cmfcvisualmanager-class.md#ondrawheaderctrlsortarrow)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawMenuBorder](#ondrawmenuborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawMenuBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawMenuSystemButton](#ondrawmenusystembutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawMenuSystemButton`。）|
+|[CMFCVisualManagerWindows：： OnDrawMiniFrameBorder](#ondrawminiframeborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawMiniFrameBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawOutlookPageButtonBorder](#ondrawoutlookpagebuttonborder)|当框架绘制 Outlook 页面按钮的边框时由框架调用。  (重写 [CMFCVisualManager：： OnDrawOutlookPageButtonBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondrawoutlookpagebuttonborder)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawPaneBorder](#ondrawpaneborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawPaneBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawPaneCaption](#ondrawpanecaption)|（重写 `CMFCVisualManagerOfficeXP::OnDrawPaneCaption`。）|
+|[CMFCVisualManagerWindows：： OnDrawPopupWindowButtonBorder](#ondrawpopupwindowbuttonborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawPopupWindowButtonBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawScrollButtons](#ondrawscrollbuttons)|（重写 `CMFCVisualManagerOfficeXP::OnDrawScrollButtons`。）|
+|[CMFCVisualManagerWindows：： OnDrawSeparator](#ondrawseparator)|（重写 `CMFCVisualManagerOfficeXP::OnDrawSeparator`。）|
+|[CMFCVisualManagerWindows：： OnDrawSpinButtons](#ondrawspinbuttons)|（重写 `CMFCVisualManagerOfficeXP::OnDrawSpinButtons`。）|
+|[CMFCVisualManagerWindows：： OnDrawStatusBarPaneBorder](#ondrawstatusbarpaneborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawStatusBarPaneBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawStatusBarProgress](#ondrawstatusbarprogress)|在 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md) 对象上绘制进度指示器时，框架会调用此方法。  (重写 [CMFCVisualManager：： OnDrawStatusBarProgress](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarprogress)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawStatusBarSizeBox](#ondrawstatusbarsizebox)|框架在绘制 [CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)的大小框时调用此方法。  (重写 [CMFCVisualManager：： OnDrawStatusBarSizeBox](../../mfc/reference/cmfcvisualmanager-class.md#ondrawstatusbarsizebox)。 ) |
+|[CMFCVisualManagerWindows：： OnDrawTab](#ondrawtab)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTab`。）|
+|[CMFCVisualManagerWindows：： OnDrawTabCloseButton](#ondrawtabclosebutton)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTabCloseButton`。）|
+|[CMFCVisualManagerWindows：： OnDrawTabsButtonBorder](#ondrawtabsbuttonborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTabsButtonBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawTask](#ondrawtask)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTask`。）|
+|[CMFCVisualManagerWindows：： OnDrawTasksGroupAreaBorder](#ondrawtasksgroupareaborder)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTasksGroupAreaBorder`。）|
+|[CMFCVisualManagerWindows：： OnDrawTasksGroupCaption](#ondrawtasksgroupcaption)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTasksGroupCaption`。）|
+|[CMFCVisualManagerWindows：： OnDrawTearOffCaption](#ondrawtearoffcaption)|（重写 `CMFCVisualManagerOfficeXP::OnDrawTearOffCaption`。）|
+|[CMFCVisualManagerWindows：： OnErasePopupWindowButton](#onerasepopupwindowbutton)|（重写 `CMFCVisualManagerOfficeXP::OnErasePopupWindowButton`。）|
+|[CMFCVisualManagerWindows：： OnEraseTabsArea](#onerasetabsarea)|（重写 `CMFCVisualManagerOfficeXP::OnEraseTabsArea`。）|
+|[CMFCVisualManagerWindows：： OnEraseTabsButton](#onerasetabsbutton)|（重写 `CMFCVisualManagerOfficeXP::OnEraseTabsButton`。）|
+|[CMFCVisualManagerWindows：： OnEraseTabsFrame](#onerasetabsframe)|框架在 [CMFCBaseTabCtrl 类](../../mfc/reference/cmfcbasetabctrl-class.md)上擦除框架时调用此方法。  (重写 [CMFCVisualManager：： OnEraseTabsFrame](../../mfc/reference/cmfcvisualmanager-class.md#onerasetabsframe)。 ) |
+|[CMFCVisualManagerWindows：： OnFillBarBackground](#onfillbarbackground)|（重写 `CMFCVisualManagerOfficeXP::OnFillBarBackground`。）|
+|[CMFCVisualManagerWindows：： OnFillButtonInterior](#onfillbuttoninterior)|（重写 `CMFCVisualManagerOfficeXP::OnFillButtonInterior`。）|
+|[CMFCVisualManagerWindows：： OnFillCommandsListBackground](#onfillcommandslistbackground)|（重写 `CMFCVisualManagerOfficeXP::OnFillCommandsListBackground`。）|
+|[CMFCVisualManagerWindows：： OnFillMiniFrameCaption](#onfillminiframecaption)|（重写 `CMFCVisualManagerOfficeXP::OnFillMiniFrameCaption`。）|
+|[CMFCVisualManagerWindows：： OnFillOutlookPageButton](#onfilloutlookpagebutton)|当框架填充 Outlook 页面按钮的内部时，框架会调用此方法。  (重写 [CMFCVisualManager：： OnFillOutlookPageButton](../../mfc/reference/cmfcvisualmanager-class.md#onfilloutlookpagebutton)。 ) |
+|[CMFCVisualManagerWindows：： OnFillTasksGroupInterior](#onfilltasksgroupinterior)|（重写 `CMFCVisualManagerOfficeXP::OnFillTasksGroupInterior`。）|
+|[CMFCVisualManagerWindows：： OnFillTasksPaneBackground](#onfilltaskspanebackground)|当框架填充 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) 控件的背景时，框架会调用此方法。  (重写 [CMFCVisualManager：： OnFillTasksPaneBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfilltaskspanebackground)。 ) |
+|[CMFCVisualManagerWindows：： OnHighlightMenuItem](#onhighlightmenuitem)|（重写 `CMFCVisualManagerOfficeXP::OnHighlightMenuItem`。）|
+|[CMFCVisualManagerWindows：： OnHighlightRarelyUsedMenuItems](#onhighlightrarelyusedmenuitems)|（重写 `CMFCVisualManagerOfficeXP::OnHighlightRarelyUsedMenuItems`。）|
+|[CMFCVisualManagerWindows：： OnUpdateSystemColors](#onupdatesystemcolors)|（重写 `CMFCVisualManagerOfficeXP::OnUpdateSystemColors`。）|
+|[CMFCVisualManagerWindows：： SetOfficeStyleMenus](#setofficestylemenus)||
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CMFC可视化管理器：m_b3DTabsXPTheme](#m_b3dtabsxptheme)|指定 Windows XP 主题是否显示 3D 选项卡。|
+|[CMFCVisualManagerWindows：： m_b3DTabsXPTheme](#m_b3dtabsxptheme)|指定 Windows XP 主题是否显示三维选项卡。|
 
 ## <a name="remarks"></a>备注
 
-使用`CMFCVisualManagerWindows`类更改应用程序的外观以模拟应用程序运行的计算机上的当前主题。
+使用 `CMFCVisualManagerWindows` 类更改应用程序的外观，以便在运行应用程序的计算机上模拟当前主题。
 
-但是，如果应用程序在 Windows XP 之前的版本上运行，或者由于用户使用**经典**视图而禁用主题，则 Windows 主题可能不可用。 如果没有可用的主题，应用程序将使用[CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)中定义的默认可视化管理器。
+但是，如果你的应用程序在早于 Windows XP 的 Windows 版本上运行，或者如果由于用户使用的是 **经典** 视图而禁用了主题，则 Windows 主题可能不可用。 如果没有可用的主题，应用程序将使用 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)中定义的默认可视化管理器。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用`CMFCVisualManagerWindows`。 此代码段是[桌面警报演示示例](../../overview/visual-cpp-samples.md)的一部分。
+下面的示例演示如何使用 `CMFCVisualManagerWindows` 。 此代码片段是 [桌面警报演示示例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]
 
@@ -260,19 +261,19 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCBase可视化管理器](../../mfc/reference/cmfcbasevisualmanager-class.md)
+[CMFCBaseVisualManager](../../mfc/reference/cmfcbasevisualmanager-class.md)
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFC可视化经理办公室XP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerWindows](../../mfc/reference/cmfcvisualmanagerwindows-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxvisualmanagerwindows.h
+**标头：** afxvisualmanagerwindows
 
-## <a name="cmfcvisualmanagerwindowsalwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a>CMFC可视化管理器窗口：：始终突出显示3D选项卡
+## <a name="cmfcvisualmanagerwindowsalwayshighlight3dtabs"></a><a name="alwayshighlight3dtabs"></a> CMFCVisualManagerWindows：： AlwaysHighlight3DTabs
 
 ```
 virtual BOOL AlwaysHighlight3DTabs() const;
@@ -282,19 +283,19 @@ virtual BOOL AlwaysHighlight3DTabs() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowscmfcvisualmanagerwindows"></a><a name="cmfcvisualmanagerwindows"></a>CMFC可视化管理器窗口：CMFC可视化管理器窗口
+## <a name="cmfcvisualmanagerwindowscmfcvisualmanagerwindows"></a><a name="cmfcvisualmanagerwindows"></a> CMFCVisualManagerWindows：： CMFCVisualManagerWindows
 
 ```
 CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*b临时*<br/>
+中 *bIsTemporary*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a>CMFC视觉管理器窗口：:D原始ComboBorderWinXP
+## <a name="cmfcvisualmanagerwindowsdrawcomboborderwinxp"></a><a name="drawcomboborderwinxp"></a> CMFCVisualManagerWindows：:D rawComboBorderWinXP
 
 ```
 virtual BOOL DrawComboBorderWinXP(
@@ -305,19 +306,19 @@ virtual BOOL DrawComboBorderWinXP(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*b 残疾*<br/>
-[在]*bIs放弃*<br/>
-[在]*bIs 突出显示*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bDisabled*<br/>
+中 *bIsDropped*<br/>
+中 *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a>CMFC视觉管理器窗口：:D原始ComboDropButtonWinXP
+## <a name="cmfcvisualmanagerwindowsdrawcombodropbuttonwinxp"></a><a name="drawcombodropbuttonwinxp"></a> CMFCVisualManagerWindows：:D rawComboDropButtonWinXP
 
 ```
 virtual BOOL DrawComboDropButtonWinXP(
@@ -328,19 +329,19 @@ virtual BOOL DrawComboDropButtonWinXP(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*b 残疾*<br/>
-[在]*bIs放弃*<br/>
-[在]*bIs 突出显示*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bDisabled*<br/>
+中 *bIsDropped*<br/>
+中 *bIsHighlighted*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a>CMFC视觉管理器窗口：:D原始按钮温XP
+## <a name="cmfcvisualmanagerwindowsdrawpushbuttonwinxp"></a><a name="drawpushbuttonwinxp"></a> CMFCVisualManagerWindows：:D rawPushButtonWinXP
 
 ```
 virtual BOOL DrawPushButtonWinXP(
@@ -350,18 +351,18 @@ virtual BOOL DrawPushButtonWinXP(
     UINT uiState);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*pButton*<br/>
-[在]*uiState*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *pButton*<br/>
+中 *uiState*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsgetbuttonextraborder"></a><a name="getbuttonextraborder"></a>CMFC可视化管理器窗口：获取按钮额外边框
+## <a name="cmfcvisualmanagerwindowsgetbuttonextraborder"></a><a name="getbuttonextraborder"></a> CMFCVisualManagerWindows：： GetButtonExtraBorder
 
 ```
 virtual CSize GetButtonExtraBorder() const;
@@ -371,7 +372,7 @@ virtual CSize GetButtonExtraBorder() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsgetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a>CMFC可视化管理器窗口：：获取字幕按钮额外边框
+## <a name="cmfcvisualmanagerwindowsgetcaptionbuttonextraborder"></a><a name="getcaptionbuttonextraborder"></a> CMFCVisualManagerWindows：： GetCaptionButtonExtraBorder
 
 ```
 virtual CSize GetCaptionButtonExtraBorder() const;
@@ -381,7 +382,7 @@ virtual CSize GetCaptionButtonExtraBorder() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsgetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a>CMFC可视化管理器窗口：：获取对接窗格标题额外高度
+## <a name="cmfcvisualmanagerwindowsgetdockingpanecaptionextraheight"></a><a name="getdockingpanecaptionextraheight"></a> CMFCVisualManagerWindows：： GetDockingPaneCaptionExtraHeight
 
 ```
 virtual int GetDockingPaneCaptionExtraHeight() const;
@@ -391,21 +392,21 @@ virtual int GetDockingPaneCaptionExtraHeight() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsgethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a>CMFC可视化管理器窗口：：获取突出显示的菜单项目文本颜色
+## <a name="cmfcvisualmanagerwindowsgethighlightedmenuitemtextcolor"></a><a name="gethighlightedmenuitemtextcolor"></a> CMFCVisualManagerWindows：： GetHighlightedMenuItemTextColor
 
 ```
 virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pButton*<br/>
+中 *pButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsgetpopupmenugap"></a><a name="getpopupmenugap"></a>CMFC可视化管理器窗口：：获取弹出菜单
+## <a name="cmfcvisualmanagerwindowsgetpopupmenugap"></a><a name="getpopupmenugap"></a> CMFCVisualManagerWindows：： GetPopupMenuGap
 
 ```
 virtual int GetPopupMenuGap() const;
@@ -415,7 +416,7 @@ virtual int GetPopupMenuGap() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsgettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a>CMFC视觉管理器窗口：：获取工具栏按钮文本颜色
+## <a name="cmfcvisualmanagerwindowsgettoolbarbuttontextcolor"></a><a name="gettoolbarbuttontextcolor"></a> CMFCVisualManagerWindows：： GetToolbarButtonTextColor
 
 ```
 virtual COLORREF GetToolbarButtonTextColor(
@@ -423,30 +424,30 @@ virtual COLORREF GetToolbarButtonTextColor(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pButton*<br/>
-[在]*状态*<br/>
+中 *pButton*<br/>
+中 *状态*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a>CMFC可视化管理器窗口：：默认WinXPPopup按钮
+## <a name="cmfcvisualmanagerwindowsisdefaultwinxppopupbutton"></a><a name="isdefaultwinxppopupbutton"></a> CMFCVisualManagerWindows：： IsDefaultWinXPPopupButton
 
 ```
 virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pButton*<br/>
+中 *pButton*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a>CMFC可视化管理器窗口：：是亮点完整菜单项目
+## <a name="cmfcvisualmanagerwindowsishighlightwholemenuitem"></a><a name="ishighlightwholemenuitem"></a> CMFCVisualManagerWindows：： IsHighlightWholeMenuItem
 
 ```
 virtual BOOL IsHighlightWholeMenuItem();
@@ -456,7 +457,7 @@ virtual BOOL IsHighlightWholeMenuItem();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsisofficestylemenus"></a><a name="isofficestylemenus"></a>CMFC可视化管理器：：IsOffice样式菜单
+## <a name="cmfcvisualmanagerwindowsisofficestylemenus"></a><a name="isofficestylemenus"></a> CMFCVisualManagerWindows：： IsOfficeStyleMenus
 
 ```
 BOOL IsOfficeStyleMenus() const;
@@ -466,7 +467,7 @@ BOOL IsOfficeStyleMenus() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a>CMFC可视化管理器：：IsOfficeXP样式菜单
+## <a name="cmfcvisualmanagerwindowsisofficexpstylemenus"></a><a name="isofficexpstylemenus"></a> CMFCVisualManagerWindows：： IsOfficeXPStyleMenus
 
 ```
 virtual BOOL IsOfficeXPStyleMenus() const;
@@ -476,7 +477,7 @@ virtual BOOL IsOfficeXPStyleMenus() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsiswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a>CMFC可视化管理器窗口：：支持视窗
+## <a name="cmfcvisualmanagerwindowsiswindowsthemingsupported"></a><a name="iswindowsthemingsupported"></a> CMFCVisualManagerWindows：： IsWindowsThemingSupported
 
 ```
 virtual BOOL IsWindowsThemingSupported() const;
@@ -486,7 +487,7 @@ virtual BOOL IsWindowsThemingSupported() const;
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsiswinxpthemeavailable"></a><a name="iswinxpthemeavailable"></a>CMFC视觉管理器窗口：：IswinXP主题可用
+## <a name="cmfcvisualmanagerwindowsiswinxpthemeavailable"></a><a name="iswinxpthemeavailable"></a> CMFCVisualManagerWindows：： IsWinXPThemeAvailable
 
 确定 Windows 主题是否可用。
 
@@ -496,25 +497,25 @@ static BOOL IsWinXPThemeAvailible();
 
 ### <a name="return-value"></a>返回值
 
-如果主题可用，则非零;否则 0。
+如果主题可用，则为非零值;否则为0。
 
 ### <a name="remarks"></a>备注
 
-此方法对所有 Windows XP 和更高版本有效。
+此方法对所有 Windows XP 和更高版本的主题都有效。
 
-`IsWinXPThemeAvailable`与`CMFCVisualManagerWindows::IsWindowsThemingAvailable`静态方法相同，`IsWinXPThemeAvailable`但只是静态方法。 因此，如果不存在，它将创建一个临时可视化管理器。
+`IsWinXPThemeAvailable` 与为 `CMFCVisualManagerWindows::IsWindowsThemingAvailable` `IsWinXPThemeAvailable` 静态方法除外。 因此，它将创建一个临时的可视化管理器（如果不存在）。
 
-`IsWinXPThemeAvailable`始终返回比 Windows XP 更早版本的 Windows 0。
+`IsWinXPThemeAvailable` 对于早于 Windows XP 的 Windows 版本，始终返回0。
 
-## <a name="cmfcvisualmanagerwindowsm_b3dtabsxptheme"></a><a name="m_b3dtabsxptheme"></a>CMFC可视化管理器：m_b3DTabsXPTheme
+## <a name="cmfcvisualmanagerwindowsm_b3dtabsxptheme"></a><a name="m_b3dtabsxptheme"></a> CMFCVisualManagerWindows：： m_b3DTabsXPTheme
 
-确定视觉管理器是否显示 3D 选项卡的布尔参数。
+确定可视管理器是否显示三维选项卡的布尔型参数。
 
 ```
 AFX_IMPORT_DATA static BOOL m_b3DTabsXPTheme;
 ```
 
-## <a name="cmfcvisualmanagerwindowsondrawbargripper"></a><a name="ondrawbargripper"></a>CMFC可视化管理器窗口：：在绘制巴格里珀
+## <a name="cmfcvisualmanagerwindowsondrawbargripper"></a><a name="ondrawbargripper"></a> CMFCVisualManagerWindows：： OnDrawBarGripper
 
 ```
 virtual void OnDrawBarGripper(
@@ -524,16 +525,16 @@ virtual void OnDrawBarGripper(
     CBasePane* pBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rectGripper*<br/>
-[在]*布霍兹*<br/>
-[在]*pBar*<br/>
+中 *pDC*<br/>
+中 *rectGripper*<br/>
+中 *bHorz*<br/>
+中 *pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a>CMFC可视化管理器窗口：：在画浏览按钮
+## <a name="cmfcvisualmanagerwindowsondrawbrowsebutton"></a><a name="ondrawbrowsebutton"></a> CMFCVisualManagerWindows：： OnDrawBrowseButton
 
 ```
 virtual BOOL OnDrawBrowseButton(
@@ -544,19 +545,19 @@ virtual BOOL OnDrawBrowseButton(
     COLORREF& clrText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*pEdit*<br/>
-[在]*状态*<br/>
-[在]*clrText*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *pEdit*<br/>
+中 *状态*<br/>
+中 *clrText*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawbuttonborder"></a><a name="ondrawbuttonborder"></a>CMFC可视化管理器窗口：：在绘制按钮边框
+## <a name="cmfcvisualmanagerwindowsondrawbuttonborder"></a><a name="ondrawbuttonborder"></a> CMFCVisualManagerWindows：： OnDrawButtonBorder
 
 ```
 virtual void OnDrawButtonBorder(
@@ -566,16 +567,16 @@ virtual void OnDrawButtonBorder(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pButton*<br/>
-[在]*rect*<br/>
-[在]*状态*<br/>
+中 *pDC*<br/>
+中 *pButton*<br/>
+中 *rect*<br/>
+中 *状态*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a>CMFC可视化管理器窗口：：在DrawButton分离器
+## <a name="cmfcvisualmanagerwindowsondrawbuttonseparator"></a><a name="ondrawbuttonseparator"></a> CMFCVisualManagerWindows：： OnDrawButtonSeparator
 
 ```
 virtual void OnDrawButtonSeparator(
@@ -586,17 +587,17 @@ virtual void OnDrawButtonSeparator(
     BOOL bHorz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pButton*<br/>
-[在]*rect*<br/>
-[在]*状态*<br/>
-[在]*布霍兹*<br/>
+中 *pDC*<br/>
+中 *pButton*<br/>
+中 *rect*<br/>
+中 *状态*<br/>
+中 *bHorz*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a>CMFC视觉管理器窗口：：在画字幕按钮
+## <a name="cmfcvisualmanagerwindowsondrawcaptionbutton"></a><a name="ondrawcaptionbutton"></a> CMFCVisualManagerWindows：： OnDrawCaptionButton
 
 ```
 virtual void OnDrawCaptionButton(
@@ -609,19 +610,19 @@ virtual void OnDrawCaptionButton(
     int nImageID = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pButton*<br/>
-[在]*b 活动*<br/>
-[在]*布霍兹*<br/>
-[在]*b 最大化*<br/>
-[在]*b 残疾*<br/>
-[在]*nImageID*<br/>
+中 *pDC*<br/>
+中 *pButton*<br/>
+中 *bActive*<br/>
+中 *bHorz*<br/>
+中 *bMaximized*<br/>
+中 *bDisabled*<br/>
+中 *nImageID*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawcaptionbuttonicon"></a><a name="ondrawcaptionbuttonicon"></a>CMFC视觉管理器窗口：：在画字幕按钮图标
+## <a name="cmfcvisualmanagerwindowsondrawcaptionbuttonicon"></a><a name="ondrawcaptionbuttonicon"></a> CMFCVisualManagerWindows：： OnDrawCaptionButtonIcon
 
 ```
 virtual void OnDrawCaptionButtonIcon(
@@ -633,18 +634,18 @@ virtual void OnDrawCaptionButtonIcon(
     CPoint ptImage);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pButton*<br/>
-[在]*id*<br/>
-[在]*b 活动*<br/>
-[在]*b 残疾*<br/>
-[在]*ptImage*<br/>
+中 *pDC*<br/>
+中 *pButton*<br/>
+中 *id*<br/>
+中 *bActive*<br/>
+中 *bDisabled*<br/>
+中 *ptImage*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawcheckboxex"></a><a name="ondrawcheckboxex"></a>CMFC可视化管理器窗口：：在DrawcheckBoxEx上
+## <a name="cmfcvisualmanagerwindowsondrawcheckboxex"></a><a name="ondrawcheckboxex"></a> CMFCVisualManagerWindows：： OnDrawCheckBoxEx
 
 ```
 virtual void OnDrawCheckBoxEx(
@@ -656,18 +657,18 @@ virtual void OnDrawCheckBoxEx(
     BOOL bEnabled);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*n州*<br/>
-[在]*b 突出显示*<br/>
-[在]*bPressed*<br/>
-[在]*b 启用*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *nState*<br/>
+中 *bHighlighted*<br/>
+中 *bPressed*<br/>
+中 *bEnabled*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawcomboborder"></a><a name="ondrawcomboborder"></a>CMFC可视化管理器窗口：：在绘制Combo边界
+## <a name="cmfcvisualmanagerwindowsondrawcomboborder"></a><a name="ondrawcomboborder"></a> CMFCVisualManagerWindows：： OnDrawComboBorder
 
 ```
 virtual void OnDrawComboBorder(
@@ -679,18 +680,18 @@ virtual void OnDrawComboBorder(
     CMFCToolBarComboBoxButton* pButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*b 残疾*<br/>
-[在]*bIs放弃*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*pButton*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bDisabled*<br/>
+中 *bIsDropped*<br/>
+中 *bIsHighlighted*<br/>
+中 *pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a>CMFC视觉管理器窗口：：OnDrawComDrop按钮
+## <a name="cmfcvisualmanagerwindowsondrawcombodropbutton"></a><a name="ondrawcombodropbutton"></a> CMFCVisualManagerWindows：： OnDrawComboDropButton
 
 ```
 virtual void OnDrawComboDropButton(
@@ -702,30 +703,30 @@ virtual void OnDrawComboDropButton(
     CMFCToolBarComboBoxButton* pButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*b 残疾*<br/>
-[在]*bIs放弃*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*pButton*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bDisabled*<br/>
+中 *bIsDropped*<br/>
+中 *bIsHighlighted*<br/>
+中 *pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawcontrolborder"></a><a name="ondrawcontrolborder"></a>CMFC可视化管理器窗口：：在绘制控制边框
+## <a name="cmfcvisualmanagerwindowsondrawcontrolborder"></a><a name="ondrawcontrolborder"></a> CMFCVisualManagerWindows：： OnDrawControlBorder
 
 ```
 virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pWndCtrl*<br/>
+中 *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondraweditborder"></a><a name="ondraweditborder"></a>CMFC可视化管理器窗口：：在绘制边界
+## <a name="cmfcvisualmanagerwindowsondraweditborder"></a><a name="ondraweditborder"></a> CMFCVisualManagerWindows：： OnDrawEditBorder
 
 ```
 virtual void OnDrawEditBorder(
@@ -736,17 +737,17 @@ virtual void OnDrawEditBorder(
     CMFCToolBarEditBoxButton* pButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*b 残疾*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*pButton*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bDisabled*<br/>
+中 *bIsHighlighted*<br/>
+中 *pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawexpandingbox"></a><a name="ondrawexpandingbox"></a>CMFC可视化管理器窗口：：在画扩展框
+## <a name="cmfcvisualmanagerwindowsondrawexpandingbox"></a><a name="ondrawexpandingbox"></a> CMFCVisualManagerWindows：： OnDrawExpandingBox
 
 ```
 virtual void OnDrawExpandingBox(
@@ -756,16 +757,16 @@ virtual void OnDrawExpandingBox(
     COLORREF colorBox);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*bIs 打开*<br/>
-[在]*彩色框*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bIsOpened*<br/>
+中 *colorBox*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a>CMFC可视化管理器窗口：：在绘制浮动工具栏边框
+## <a name="cmfcvisualmanagerwindowsondrawfloatingtoolbarborder"></a><a name="ondrawfloatingtoolbarborder"></a> CMFCVisualManagerWindows：： OnDrawFloatingToolbarBorder
 
 ```
 virtual void OnDrawFloatingToolbarBorder(
@@ -775,16 +776,16 @@ virtual void OnDrawFloatingToolbarBorder(
     CRect rectBorderSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pToolBar*<br/>
-[在]*rectBorder*<br/>
-[在]*整边界大小*<br/>
+中 *pDC*<br/>
+中 *pToolBar*<br/>
+中 *rectBorder*<br/>
+中 *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a>CMFC可视化管理器窗口：：在绘制标题Ctrl边框
+## <a name="cmfcvisualmanagerwindowsondrawheaderctrlborder"></a><a name="ondrawheaderctrlborder"></a> CMFCVisualManagerWindows：： OnDrawHeaderCtrlBorder
 
 ```
 virtual void OnDrawHeaderCtrlBorder(
@@ -795,17 +796,17 @@ virtual void OnDrawHeaderCtrlBorder(
     BOOL bIsHighlighted);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pCtrl*<br/>
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*bIsPressed*<br/>
-[在]*bIs 突出显示*<br/>
+中 *pCtrl*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bIsPressed*<br/>
+中 *bIsHighlighted*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a>CMFC可视化管理器窗口：：画眉头
+## <a name="cmfcvisualmanagerwindowsondrawheaderctrlsortarrow"></a><a name="ondrawheaderctrlsortarrow"></a> CMFCVisualManagerWindows：： OnDrawHeaderCtrlSortArrow
 
 ```
 virtual void OnDrawHeaderCtrlSortArrow(
@@ -815,16 +816,16 @@ virtual void OnDrawHeaderCtrlSortArrow(
     BOOL bIsUp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pCtrl*<br/>
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*bIsUp*<br/>
+中 *pCtrl*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bIsUp*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawmenuborder"></a><a name="ondrawmenuborder"></a>CMFC可视化管理器窗口：：在绘制菜单边框
+## <a name="cmfcvisualmanagerwindowsondrawmenuborder"></a><a name="ondrawmenuborder"></a> CMFCVisualManagerWindows：： OnDrawMenuBorder
 
 ```
 virtual void OnDrawMenuBorder(
@@ -833,15 +834,15 @@ virtual void OnDrawMenuBorder(
     CRect rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pMenu*<br/>
-[在]*rect*<br/>
+中 *pDC*<br/>
+中 *pMenu*<br/>
+中 *rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a>CMFC可视化管理器窗口：：在画菜单系统按钮
+## <a name="cmfcvisualmanagerwindowsondrawmenusystembutton"></a><a name="ondrawmenusystembutton"></a> CMFCVisualManagerWindows：： OnDrawMenuSystemButton
 
 ```
 virtual void OnDrawMenuSystemButton(
@@ -852,17 +853,17 @@ virtual void OnDrawMenuSystemButton(
     BOOL bHighlight);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*uiSystem命令*<br/>
-[在]*n样式*<br/>
-[在]*b 高光*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *uiSystemCommand*<br/>
+中 *nStyle*<br/>
+中 *bHighlight*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawminiframeborder"></a><a name="ondrawminiframeborder"></a>CMFC可视化管理器窗口：：在绘制迷你框架边框
+## <a name="cmfcvisualmanagerwindowsondrawminiframeborder"></a><a name="ondrawminiframeborder"></a> CMFCVisualManagerWindows：： OnDrawMiniFrameBorder
 
 ```
 virtual void OnDrawMiniFrameBorder(
@@ -872,16 +873,16 @@ virtual void OnDrawMiniFrameBorder(
     CRect rectBorderSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pFramewnd*<br/>
-[在]*rectBorder*<br/>
-[在]*整边界大小*<br/>
+中 *pDC*<br/>
+中 *pFrameWnd*<br/>
+中 *rectBorder*<br/>
+中 *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a>CMFC可视化管理器窗口：：在绘制Outlook页面按钮边框
+## <a name="cmfcvisualmanagerwindowsondrawoutlookpagebuttonborder"></a><a name="ondrawoutlookpagebuttonborder"></a> CMFCVisualManagerWindows：： OnDrawOutlookPageButtonBorder
 
 ```
 virtual void OnDrawOutlookPageButtonBorder(
@@ -891,16 +892,16 @@ virtual void OnDrawOutlookPageButtonBorder(
     BOOL bIsPressed);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*雷克Btn*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*bIsPressed*<br/>
+中 *pDC*<br/>
+中 *rectBtn*<br/>
+中 *bIsHighlighted*<br/>
+中 *bIsPressed*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawpaneborder"></a><a name="ondrawpaneborder"></a>CMFC可视化管理器窗口：：在绘制窗格边框
+## <a name="cmfcvisualmanagerwindowsondrawpaneborder"></a><a name="ondrawpaneborder"></a> CMFCVisualManagerWindows：： OnDrawPaneBorder
 
 ```
 virtual void OnDrawPaneBorder(
@@ -909,15 +910,15 @@ virtual void OnDrawPaneBorder(
     CRect& rect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pBar*<br/>
-[在]*rect*<br/>
+中 *pDC*<br/>
+中 *pBar*<br/>
+中 *rect*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawpanecaption"></a><a name="ondrawpanecaption"></a>CMFC可视化管理器窗口：：画上画框
+## <a name="cmfcvisualmanagerwindowsondrawpanecaption"></a><a name="ondrawpanecaption"></a> CMFCVisualManagerWindows：： OnDrawPaneCaption
 
 ```
 virtual COLORREF OnDrawPaneCaption(
@@ -928,19 +929,19 @@ virtual COLORREF OnDrawPaneCaption(
     CRect rectButtons);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pBar*<br/>
-[在]*b 活动*<br/>
-[在]*rectCaption*<br/>
-[在]*rectButtons*<br/>
+中 *pDC*<br/>
+中 *pBar*<br/>
+中 *bActive*<br/>
+中 *rectCaption*<br/>
+中 *rectButtons*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a>CMFC可视化管理器窗口：：在窗口按钮边框上
+## <a name="cmfcvisualmanagerwindowsondrawpopupwindowbuttonborder"></a><a name="ondrawpopupwindowbuttonborder"></a> CMFCVisualManagerWindows：： OnDrawPopupWindowButtonBorder
 
 ```
 virtual void OnDrawPopupWindowButtonBorder(
@@ -949,15 +950,15 @@ virtual void OnDrawPopupWindowButtonBorder(
     CMFCDesktopAlertWndButton* pButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rectClient*<br/>
-[在]*pButton*<br/>
+中 *pDC*<br/>
+中 *rectClient*<br/>
+中 *pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a>CMFC可视化管理器窗口：：OnDrawScroll按钮
+## <a name="cmfcvisualmanagerwindowsondrawscrollbuttons"></a><a name="ondrawscrollbuttons"></a> CMFCVisualManagerWindows：： OnDrawScrollButtons
 
 ```
 virtual void OnDrawScrollButtons(
@@ -968,17 +969,17 @@ virtual void OnDrawScrollButtons(
     BOOL bHilited);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*n边框大小*<br/>
-[在]*i图像*<br/>
-[在]*bHilited*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *nBorderSize*<br/>
+中 *iImage*<br/>
+中 *bHilited*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawseparator"></a><a name="ondrawseparator"></a>CMFC可视化管理器窗口：OnDraw分离器
+## <a name="cmfcvisualmanagerwindowsondrawseparator"></a><a name="ondrawseparator"></a> CMFCVisualManagerWindows：： OnDrawSeparator
 
 ```
 virtual void OnDrawSeparator(
@@ -988,16 +989,16 @@ virtual void OnDrawSeparator(
     BOOL bIsHoriz);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pBar*<br/>
-[在]*rect*<br/>
-[在]*比绍里兹*<br/>
+中 *pDC*<br/>
+中 *pBar*<br/>
+中 *rect*<br/>
+中 *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawspinbuttons"></a><a name="ondrawspinbuttons"></a>CMFC可视化管理器窗口：：在牵引按钮
+## <a name="cmfcvisualmanagerwindowsondrawspinbuttons"></a><a name="ondrawspinbuttons"></a> CMFCVisualManagerWindows：： OnDrawSpinButtons
 
 ```
 virtual void OnDrawSpinButtons(
@@ -1008,17 +1009,17 @@ virtual void OnDrawSpinButtons(
     CMFCSpinButtonCtrl* pSpinCtrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*雷平斯平*<br/>
-[在]*n州*<br/>
-[在]*b方向*<br/>
-[在]*普斯皮内尔*<br/>
+中 *pDC*<br/>
+中 *rectSpin*<br/>
+中 *nState*<br/>
+中 *bOrientation*<br/>
+中 *pSpinCtrl*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a>CMFC可视化管理器窗口：：在绘制状态栏窗格边框
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarpaneborder"></a><a name="ondrawstatusbarpaneborder"></a> CMFCVisualManagerWindows：： OnDrawStatusBarPaneBorder
 
 ```
 virtual void OnDrawStatusBarPaneBorder(
@@ -1029,17 +1030,17 @@ virtual void OnDrawStatusBarPaneBorder(
     UINT nStyle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pBar*<br/>
-[在]*rectPane*<br/>
-[在]*uiID*<br/>
-[在]*n样式*<br/>
+中 *pDC*<br/>
+中 *pBar*<br/>
+中 *rectPane*<br/>
+中 *uiID*<br/>
+中 *nStyle*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a>CMFC可视化管理器窗口：：在绘制状态栏进度
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarprogress"></a><a name="ondrawstatusbarprogress"></a> CMFCVisualManagerWindows：： OnDrawStatusBarProgress
 
 ```
 virtual void OnDrawStatusBarProgress(
@@ -1054,21 +1055,21 @@ virtual void OnDrawStatusBarProgress(
     BOOL bProgressText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pStatusbar*<br/>
-[在]*rectProgress*<br/>
-[在]*n 进步总计*<br/>
-[在]*nProgressCurr*<br/>
-[在]*clrBar*<br/>
-[在]*clrProgressBarDest*<br/>
-[在]*clrProgress文本*<br/>
-[在]*b 进度文本*<br/>
+中 *pDC*<br/>
+中 *pStatusBar*<br/>
+中 *rectProgress*<br/>
+中 *nProgressTotal*<br/>
+中 *nProgressCurr*<br/>
+中 *clrBar*<br/>
+中 *clrProgressBarDest*<br/>
+中 *clrProgressText*<br/>
+中 *bProgressText*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a>CMFC可视化管理器窗口：：在绘制状态栏框
+## <a name="cmfcvisualmanagerwindowsondrawstatusbarsizebox"></a><a name="ondrawstatusbarsizebox"></a> CMFCVisualManagerWindows：： OnDrawStatusBarSizeBox
 
 ```
 virtual void OnDrawStatusBarSizeBox(
@@ -1077,15 +1078,15 @@ virtual void OnDrawStatusBarSizeBox(
     CRect rectSizeBox);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pStatBar*<br/>
-[在]*整式框*<br/>
+中 *pDC*<br/>
+中 *pStatBar*<br/>
+中 *rectSizeBox*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawtab"></a><a name="ondrawtab"></a>CMFC可视化管理器窗口：：在绘制选项卡
+## <a name="cmfcvisualmanagerwindowsondrawtab"></a><a name="ondrawtab"></a> CMFCVisualManagerWindows：： OnDrawTab
 
 ```
 virtual void OnDrawTab(
@@ -1096,17 +1097,17 @@ virtual void OnDrawTab(
     const CMFCBaseTabCtrl* pTabWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rectTab*<br/>
-[在]*iTab*<br/>
-[在]*bIsActive*<br/>
-[在]*pTabwnd*<br/>
+中 *pDC*<br/>
+中 *rectTab*<br/>
+中 *iTab*<br/>
+中 *bIsActive*<br/>
+中 *pTabWnd*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a>CMFC可视化管理器窗口：：在绘制标签关闭按钮
+## <a name="cmfcvisualmanagerwindowsondrawtabclosebutton"></a><a name="ondrawtabclosebutton"></a> CMFCVisualManagerWindows：： OnDrawTabCloseButton
 
 ```
 virtual void OnDrawTabCloseButton(
@@ -1118,18 +1119,18 @@ virtual void OnDrawTabCloseButton(
     BOOL bIsDisabled);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*pTabwnd*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*bIsPressed*<br/>
-[在]*bIs 已禁用*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *pTabWnd*<br/>
+中 *bIsHighlighted*<br/>
+中 *bIsPressed*<br/>
+中 *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a>CMFC可视化管理器窗口：：在DrawTabs按钮边框
+## <a name="cmfcvisualmanagerwindowsondrawtabsbuttonborder"></a><a name="ondrawtabsbuttonborder"></a> CMFCVisualManagerWindows：： OnDrawTabsButtonBorder
 
 ```
 virtual void OnDrawTabsButtonBorder(
@@ -1140,17 +1141,17 @@ virtual void OnDrawTabsButtonBorder(
     CMFCBaseTabCtrl* pWndTab);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*pButton*<br/>
-[在]*uiState*<br/>
-[在]*pWndTab*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *pButton*<br/>
+中 *uiState*<br/>
+中 *pWndTab*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawtask"></a><a name="ondrawtask"></a>CMFC可视化管理器窗口：：在画任务
+## <a name="cmfcvisualmanagerwindowsondrawtask"></a><a name="ondrawtask"></a> CMFCVisualManagerWindows：： OnDrawTask
 
 ```
 virtual void OnDrawTask(
@@ -1161,17 +1162,17 @@ virtual void OnDrawTask(
     BOOL bIsSelected = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pTask*<br/>
-[在]*图标*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*bIs选择*<br/>
+中 *pDC*<br/>
+中 *pTask*<br/>
+中 *pIcons*<br/>
+中 *bIsHighlighted*<br/>
+中 *bIsSelected*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a>CMFC可视化管理器窗口：：在绘制任务组区域边框
+## <a name="cmfcvisualmanagerwindowsondrawtasksgroupareaborder"></a><a name="ondrawtasksgroupareaborder"></a> CMFCVisualManagerWindows：： OnDrawTasksGroupAreaBorder
 
 ```
 virtual void OnDrawTasksGroupAreaBorder(
@@ -1181,16 +1182,16 @@ virtual void OnDrawTasksGroupAreaBorder(
     BOOL bNoTitle = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*b 特别*<br/>
-[在]*b 无标题*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bSpecial*<br/>
+中 *bNoTitle*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a>CMFC可视化管理器窗口：：在画任务组标题
+## <a name="cmfcvisualmanagerwindowsondrawtasksgroupcaption"></a><a name="ondrawtasksgroupcaption"></a> CMFCVisualManagerWindows：： OnDrawTasksGroupCaption
 
 ```
 virtual void OnDrawTasksGroupCaption(
@@ -1201,17 +1202,17 @@ virtual void OnDrawTasksGroupCaption(
     BOOL bCanCollapse = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*p组*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*bIs选择*<br/>
-[在]*bCan折叠*<br/>
+中 *pDC*<br/>
+中 *pGroup*<br/>
+中 *bIsHighlighted*<br/>
+中 *bIsSelected*<br/>
+中 *bCanCollapse*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a>CMFC视觉管理器窗口：：画中画
+## <a name="cmfcvisualmanagerwindowsondrawtearoffcaption"></a><a name="ondrawtearoffcaption"></a> CMFCVisualManagerWindows：： OnDrawTearOffCaption
 
 ```
 virtual void OnDrawTearOffCaption(
@@ -1220,15 +1221,15 @@ virtual void OnDrawTearOffCaption(
     BOOL bIsActive);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*bIsActive*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bIsActive*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a>CMFC可视化管理器窗口：：打开"擦除窗口按钮"
+## <a name="cmfcvisualmanagerwindowsonerasepopupwindowbutton"></a><a name="onerasepopupwindowbutton"></a> CMFCVisualManagerWindows：： OnErasePopupWindowButton
 
 ```
 virtual void OnErasePopupWindowButton(
@@ -1237,15 +1238,15 @@ virtual void OnErasePopupWindowButton(
     CMFCDesktopAlertWndButton* pButton);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rectClient*<br/>
-[在]*pButton*<br/>
+中 *pDC*<br/>
+中 *rectClient*<br/>
+中 *pButton*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonerasetabsarea"></a><a name="onerasetabsarea"></a>CMFC可视化管理器窗口：：在EraseTabs区域
+## <a name="cmfcvisualmanagerwindowsonerasetabsarea"></a><a name="onerasetabsarea"></a> CMFCVisualManagerWindows：： OnEraseTabsArea
 
 ```
 virtual void OnEraseTabsArea(
@@ -1254,15 +1255,15 @@ virtual void OnEraseTabsArea(
     const CMFCBaseTabCtrl* pTabWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*pTabwnd*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *pTabWnd*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonerasetabsbutton"></a><a name="onerasetabsbutton"></a>CMFC可视化管理器窗口：：打开EraseTabs按钮
+## <a name="cmfcvisualmanagerwindowsonerasetabsbutton"></a><a name="onerasetabsbutton"></a> CMFCVisualManagerWindows：： OnEraseTabsButton
 
 ```
 virtual void OnEraseTabsButton(
@@ -1272,16 +1273,16 @@ virtual void OnEraseTabsButton(
     CMFCBaseTabCtrl* pWndTab);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*pButton*<br/>
-[在]*pWndTab*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *pButton*<br/>
+中 *pWndTab*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonerasetabsframe"></a><a name="onerasetabsframe"></a>CMFC可视化管理器窗口：：在EraseTabs框架上
+## <a name="cmfcvisualmanagerwindowsonerasetabsframe"></a><a name="onerasetabsframe"></a> CMFCVisualManagerWindows：： OnEraseTabsFrame
 
 ```
 virtual BOOL OnEraseTabsFrame(
@@ -1290,17 +1291,17 @@ virtual BOOL OnEraseTabsFrame(
     const CMFCBaseTabCtrl* pTabWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*pTabwnd*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *pTabWnd*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonfillbarbackground"></a><a name="onfillbarbackground"></a>CMFC可视化管理器窗口：：在填充栏背景
+## <a name="cmfcvisualmanagerwindowsonfillbarbackground"></a><a name="onfillbarbackground"></a> CMFCVisualManagerWindows：： OnFillBarBackground
 
 ```
 virtual void OnFillBarBackground(
@@ -1311,17 +1312,17 @@ virtual void OnFillBarBackground(
     BOOL bNCArea = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pBar*<br/>
-[在]*rectClient*<br/>
-[在]*整流*<br/>
-[在]*bNCArea*<br/>
+中 *pDC*<br/>
+中 *pBar*<br/>
+中 *rectClient*<br/>
+中 *rectClip*<br/>
+中 *bNCArea*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonfillbuttoninterior"></a><a name="onfillbuttoninterior"></a>CMFC可视化管理器窗口：：打开填充按钮内部
+## <a name="cmfcvisualmanagerwindowsonfillbuttoninterior"></a><a name="onfillbuttoninterior"></a> CMFCVisualManagerWindows：： OnFillButtonInterior
 
 ```
 virtual void OnFillButtonInterior(
@@ -1331,16 +1332,16 @@ virtual void OnFillButtonInterior(
     CMFCVisualManager::AFX_BUTTON_STATE state);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pButton*<br/>
-[在]*rect*<br/>
-[在]*状态*<br/>
+中 *pDC*<br/>
+中 *pButton*<br/>
+中 *rect*<br/>
+中 *状态*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a>CMFC可视化管理器窗口：：在填充命令列表背景
+## <a name="cmfcvisualmanagerwindowsonfillcommandslistbackground"></a><a name="onfillcommandslistbackground"></a> CMFCVisualManagerWindows：： OnFillCommandsListBackground
 
 ```
 virtual COLORREF OnFillCommandsListBackground(
@@ -1349,17 +1350,17 @@ virtual COLORREF OnFillCommandsListBackground(
     BOOL bIsSelected = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*bIs选择*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bIsSelected*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonfillminiframecaption"></a><a name="onfillminiframecaption"></a>CMFC可视化管理器窗口：：在填充迷你框架标题
+## <a name="cmfcvisualmanagerwindowsonfillminiframecaption"></a><a name="onfillminiframecaption"></a> CMFCVisualManagerWindows：： OnFillMiniFrameCaption
 
 ```
 virtual COLORREF OnFillMiniFrameCaption(
@@ -1369,18 +1370,18 @@ virtual COLORREF OnFillMiniFrameCaption(
     BOOL bActive);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rectCaption*<br/>
-[在]*pFramewnd*<br/>
-[在]*b 活动*<br/>
+中 *pDC*<br/>
+中 *rectCaption*<br/>
+中 *pFrameWnd*<br/>
+中 *bActive*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a>CMFC可视化管理器窗口：：在填充OutlookPage按钮上
+## <a name="cmfcvisualmanagerwindowsonfilloutlookpagebutton"></a><a name="onfilloutlookpagebutton"></a> CMFCVisualManagerWindows：： OnFillOutlookPageButton
 
 ```
 virtual void OnFillOutlookPageButton(
@@ -1391,17 +1392,17 @@ virtual void OnFillOutlookPageButton(
     COLORREF& clrText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*bIs 突出显示*<br/>
-[在]*bIsPressed*<br/>
-[在]*clrText*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bIsHighlighted*<br/>
+中 *bIsPressed*<br/>
+中 *clrText*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a>CMFC可视化管理器窗口：：在填充任务组内部
+## <a name="cmfcvisualmanagerwindowsonfilltasksgroupinterior"></a><a name="onfilltasksgroupinterior"></a> CMFCVisualManagerWindows：： OnFillTasksGroupInterior
 
 ```
 virtual void OnFillTasksGroupInterior(
@@ -1410,15 +1411,15 @@ virtual void OnFillTasksGroupInterior(
     BOOL bSpecial = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rect*<br/>
-[在]*b 特别*<br/>
+中 *pDC*<br/>
+中 *rect*<br/>
+中 *bSpecial*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a>CMFC可视化管理器窗口：：在填充任务窗格背景
+## <a name="cmfcvisualmanagerwindowsonfilltaskspanebackground"></a><a name="onfilltaskspanebackground"></a> CMFCVisualManagerWindows：： OnFillTasksPaneBackground
 
 ```
 virtual void OnFillTasksPaneBackground(
@@ -1426,14 +1427,14 @@ virtual void OnFillTasksPaneBackground(
     CRect rectWorkArea);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*rectWork区域*<br/>
+中 *pDC*<br/>
+中 *rectWorkArea*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonhighlightmenuitem"></a><a name="onhighlightmenuitem"></a>CMFC可视化管理器窗口：：在突出显示菜单项上
+## <a name="cmfcvisualmanagerwindowsonhighlightmenuitem"></a><a name="onhighlightmenuitem"></a> CMFCVisualManagerWindows：： OnHighlightMenuItem
 
 ```
 virtual void OnHighlightMenuItem(
@@ -1443,16 +1444,16 @@ virtual void OnHighlightMenuItem(
     COLORREF& clrText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*pButton*<br/>
-[在]*rect*<br/>
-[在]*clrText*<br/>
+中 *pDC*<br/>
+中 *pButton*<br/>
+中 *rect*<br/>
+中 *clrText*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a>CMFCVisual管理器窗口：：在突出显示很少使用菜单项
+## <a name="cmfcvisualmanagerwindowsonhighlightrarelyusedmenuitems"></a><a name="onhighlightrarelyusedmenuitems"></a> CMFCVisualManagerWindows：： OnHighlightRarelyUsedMenuItems
 
 ```
 virtual void OnHighlightRarelyUsedMenuItems(
@@ -1460,14 +1461,14 @@ virtual void OnHighlightRarelyUsedMenuItems(
     CRect rectRarelyUsed);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pDC*<br/>
-[在]*整流*<br/>
+中 *pDC*<br/>
+中 *rectRarelyUsed*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowsonupdatesystemcolors"></a><a name="onupdatesystemcolors"></a>CMFC可视化管理器窗口：：更新系统颜色
+## <a name="cmfcvisualmanagerwindowsonupdatesystemcolors"></a><a name="onupdatesystemcolors"></a> CMFCVisualManagerWindows：： OnUpdateSystemColors
 
 ```
 virtual void OnUpdateSystemColors();
@@ -1475,21 +1476,21 @@ virtual void OnUpdateSystemColors();
 
 ### <a name="remarks"></a>备注
 
-## <a name="cmfcvisualmanagerwindowssetofficestylemenus"></a><a name="setofficestylemenus"></a>CMFC可视化管理器窗口：：设置Office样式菜单
+## <a name="cmfcvisualmanagerwindowssetofficestylemenus"></a><a name="setofficestylemenus"></a> CMFCVisualManagerWindows：： SetOfficeStyleMenus
 
 ```cpp
 void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bon*<br/>
+中 *bOn*<br/>
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager 类](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
 [CMFCVisualManagerOfficeXP 类](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)

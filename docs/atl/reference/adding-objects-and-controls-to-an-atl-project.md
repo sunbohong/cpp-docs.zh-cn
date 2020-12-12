@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：向 ATL 项目添加对象和控件
 title: 将对象和控件添加到 ATL 项目
 ms.date: 05/09/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 6acd60d430f13906d11e9a9b3e7c5655ee94badb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 979e15a6fe27599e68841e82ef03a457d66d3bf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499302"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97165584"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>将对象和控件添加到 ATL 项目
 
@@ -32,7 +33,7 @@ ms.locfileid: "91499302"
 - [ATL Active Server Page 组件](../../atl/reference/atl-active-server-page-component-wizard.md)
 - [ATL OLE DB 使用者](../../atl/reference/atl-ole-db-consumer-wizard.md)
 - [向 MFC 添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)
-- [ATL COM+ 1.0 组件向导](../../atl/reference/atl-com-plus-1-0-component-wizard.md)
+- [ATL COM + 1.0 组件向导](../../atl/reference/atl-com-plus-1-0-component-wizard.md)
 - [ATL OLE DB 提供程序](../../atl/reference/atl-ole-db-provider-wizard.md)
 
 > [!NOTE]
@@ -40,21 +41,21 @@ ms.locfileid: "91499302"
 
 ## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>使用 ATL 控件向导添加对象或控件
 
-1. 在“解决方案资源管理器”中，右键单击项目节点，然后单击快捷菜单中的“添加”********。 单击“添加类”****。
+1. 在“解决方案资源管理器”中，右键单击项目节点，然后单击快捷菜单中的“添加”。 单击“添加类”。
 
    随即将显示[“添加类”](../../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)对话框。
 
-1. 在“类别”窗格中选择 ATL 文件夹后，从“模板”窗格中选择要插入的对象************。 单击“打开”。 随即将显示所选对象的代码向导。
+1. 在“类别”窗格中选择 ATL 文件夹后，从“模板”窗格中选择要插入的对象。 单击“打开”。 随即将显示所选对象的代码向导。
 
    > [!NOTE]
    > 如果要将 ATL 对象添加到 MFC 项目，则必须向现有项目添加 ATL 支持。 可以按照[向 MFC 项目添加 ATL 支持](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)中的说明来执行此操作。
 
-   或者，如果尝试在未事先添加 ATL 支持的情况下将 ATL 对象添加到 MFC 项目，Visual Studio 会提示你指定是否要向项目添加 ATL 支持。 单击“是”向项目添加 ATL 支持并打开所选的 ATL 向导****。
+   或者，如果尝试在未事先添加 ATL 支持的情况下将 ATL 对象添加到 MFC 项目，Visual Studio 会提示你指定是否要向项目添加 ATL 支持。 单击“是”向项目添加 ATL 支持并打开所选的 ATL 向导。
 
 ## <a name="see-also"></a>请参阅
 
 [ATL 项目向导](../../atl/reference/atl-project-wizard.md)<br/>
 [Visual Studio 中的 C++ 项目类型](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL COM 对象的基本知识](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[用 ATL 和 C 运行时代码进行编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
+[用 ATL 和 C Run-Time 代码编程](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [默认 ATL 项目配置](../../atl/reference/default-atl-project-configurations.md)

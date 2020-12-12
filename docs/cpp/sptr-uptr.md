@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __sptr、__uptr
 title: __sptr、__uptr
 ms.date: 10/10/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - __sptr modifier
 - __uptr modifier
 ms.assetid: c7f5f3b2-9106-4a0b-a6de-d1588ab153ed
-ms.openlocfilehash: 5aac130073a635d0bc5f537aff75c526a9f086c2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 13e365e0e8258c1860df2f107a3dad0ade76e529
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225834"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97113722"
 ---
 # <a name="__sptr-__uptr"></a>__sptr、__uptr
 
@@ -27,7 +28,7 @@ ms.locfileid: "87225834"
 
 为 64 位平台提供支持的 Microsoft 文档有时将 32 位指针的最高有效位用作符号位。 默认情况下，编译器使用符号扩展来将 32 位指针转换为 64 位指针。 即，将 64 位指针的最低有效 32 位设置为 32 位指针的值，并将最高有效 32 位设置为 32 位指针的符号位的值。 如果符号位为 0，则此转换会生成正确的结果；如果符号位为 1，则此转换不会生成正确的结果。 例如，32 位地址 0x7FFFFFFF 生成等效的 64 位地址 0x000000007FFFFFFF，但 32 位地址 0x80000000 未正确地更改为 0xFFFFFFFF80000000。
 
-**`__sptr`** 或带符号的指针修饰符指定指针转换将64位指针的最高有效位设置为32位指针的符号位。 **`__uptr`** 修饰符或无符号指针指定转换将最高有效位设置为零。 以下声明显示了 **`__sptr`** **`__uptr`** 用于两个非限定指针的和修饰符，两个用[__ptr32](../cpp/ptr32-ptr64.md)类型限定的指针和一个函数参数。
+**`__sptr`** 或带符号的指针修饰符指定指针转换将64位指针的最高有效位设置为32位指针的符号位。 **`__uptr`** 修饰符或无符号指针指定转换将最高有效位设置为零。 以下声明显示了 **`__sptr`** **`__uptr`** 用于两个非限定指针的和修饰符，两个用 [__ptr32](../cpp/ptr32-ptr64.md) 类型限定的指针和一个函数参数。
 
 ```cpp
 int * __sptr psp;
@@ -37,9 +38,9 @@ int * __ptr32 __uptr pup32;
 void MyFunction(char * __uptr __ptr32 myValue);
 ```
 
-将 **`__sptr`** 和 **`__uptr`** 修饰符与指针声明一起使用。 在[指针类型限定符](../c-language/pointer-declarations.md)的位置使用修饰符，这意味着修饰符必须位于星号之后。 不能将修饰符用于[指向成员的指针](../cpp/pointers-to-members.md)。 修饰符不影响非指针声明。
+将 **`__sptr`** 和 **`__uptr`** 修饰符与指针声明一起使用。 在 [指针类型限定符](../c-language/pointer-declarations.md)的位置使用修饰符，这意味着修饰符必须位于星号之后。 不能将修饰符用于 [指向成员的指针](../cpp/pointers-to-members.md)。 修饰符不影响非指针声明。
 
-为了与早期版本兼容， **_sptr**和 **_uptr**是指定的同义词， **`__sptr`** **`__uptr`** 除非指定编译器选项[/za \( 禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
+为了与早期版本兼容， **_sptr** 和 **_uptr** 是的同义词 **`__sptr`** ， **`__uptr`** 除非指定了编译器选项 [/za \( 禁用语言扩展)](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 

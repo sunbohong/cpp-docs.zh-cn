@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _set_printf_count_output
 title: _set_printf_count_output
 ms.date: 11/04/2016
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 455c4f0e49ce111853145a05d78efabcd76386fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948423"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114242"
 ---
 # <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-启用或禁用[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)系列函数中的 **% n**格式支持。
+启用或禁用在 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)系列函数中支持 **% n** 格式。
 
 ## <a name="syntax"></a>语法
 
@@ -49,15 +50,15 @@ int _set_printf_count_output(
 ### <a name="parameters"></a>参数
 
 *enable*<br/>
-若要启用 **% n**支持，则为非零值，0指示禁用 **% n**支持。
+若要启用 **% n** 支持，则为非零值，0指示禁用 **% n** 支持。
 
 ## <a name="property-valuereturn-value"></a>属性值/返回值
 
-在调用此函数之前， **% n**的状态支持：如果启用了 **% n**支持，则为非零; 如果已禁用，则为0。
+在调用此函数之前， **% n** 的状态支持：如果启用了 **% n** 支持，则为非零; 如果已禁用，则为0。
 
 ## <a name="remarks"></a>备注
 
-出于安全考虑，默认情况下，在**printf**及其所有变体中禁用对 **% n**格式说明符的支持。 如果在**printf**格式规范中遇到 **% n** ，则默认行为是调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 使用非零参数调用 **_set_printf_count_output**将导致**printf**系列函数解释 **% n** ，如[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)中所述。
+出于安全考虑，默认情况下，在 **printf** 及其所有变体中禁用对 **% n** 格式说明符的支持。 如果在 **printf** 格式规范中遇到 **% n** ，则默认行为是调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 使用非零参数调用 **_set_printf_count_output** 将导致 **printf** 系列函数解释 **% n** ，如 [格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)所述。
 
 ## <a name="requirements"></a>要求
 
@@ -65,7 +66,7 @@ int _set_printf_count_output(
 |-------------|---------------------|
 |**_set_printf_count_output**|\<stdio.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

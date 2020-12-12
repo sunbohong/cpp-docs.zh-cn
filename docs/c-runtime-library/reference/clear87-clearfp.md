@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _clear87、_clearfp
 title: _clear87、_clearfp
 ms.date: 04/05/2018
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-ms.openlocfilehash: 4ca49895b881d9e307c1116681bc36f86b167c25
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c15dd66f9a6598f351a54f0269619d9768eaa152
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124951"
 ---
 # <a name="_clear87-_clearfp"></a>_clear87、_clearfp
 
@@ -52,15 +53,15 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>返回值
 
-返回值中的位表示调用 **_clear87**或 **_clearfp**之前的浮点状态。 有关 **_clear87**返回的位的完整定义，请参阅 Float。 许多数学库函数修改了 8087/80287 状态字，结果不可预知。 当浮点状态字的已知状态之间执行的浮点运算越少， **_clear87**和 **_status87**的返回值就会变得更可靠。
+返回的值中的位指示调用 **_clear87** 或 **_clearfp** 之前的浮点状态。 有关 **_clear87** 返回的位的完整定义，请参阅 Float。 许多数学库函数修改了 8087/80287 状态字，结果不可预知。 如果在浮点状态字的已知状态之间执行的浮点运算更少，则从 **_clear87** 和 **_status87** 返回值变得更可靠。
 
 ## <a name="remarks"></a>备注
 
-**_Clear87**函数将清除浮点状态字中的异常标记，将繁忙位设置为0，并返回状态字。 浮点状态字是 8087/80287 状态字和通过 8087/80287 异常处理程序检测到的其他条件（如浮点堆栈上溢和下溢）组合而成。
+**_Clear87** 函数将清除浮点状态字中的异常标记，将繁忙位设置为0，并返回状态字。 浮点状态字是 8087/80287 状态字和通过 8087/80287 异常处理程序检测到的其他条件（如浮点堆栈上溢和下溢）组合而成。
 
-**_clearfp**是一种独立于平台、可移植的 **_clear87**例程版本。 它与 Intel （x86）平台上的 **_clear87**完全相同，并且也受 X64 和 ARM 平台的支持。 若要确保你的浮点代码可移植到 x64 和 ARM，请使用 **_clearfp**。 如果仅面向 x86 平台，可以使用 **_clear87**或 **_clearfp**。
+**_clearfp** 是一种独立于平台的、可移植版本的 **_clear87** 例程。 它与 Intel (x86) 平台上的 **_clear87** 完全相同，并且也受 X64 和 ARM 平台的支持。 若要确保你的浮点代码可移植到 x64 和 ARM，请使用 **_clearfp**。 如果你只面向 x86 平台，则可以使用 **_clear87** 或 **_clearfp**。
 
-使用[/clr （公共语言运行时编译）](../../build/reference/clr-common-language-runtime-compilation.md)进行编译时，这些函数将被弃用，因为公共语言运行时仅支持默认的浮点精度。
+使用 [/clr (公共语言运行时编译) ](../../build/reference/clr-common-language-runtime-compilation.md) 进行编译时，这些函数将被弃用，因为公共语言运行时仅支持默认的浮点精度。
 
 ## <a name="requirements"></a>要求
 
@@ -69,7 +70,7 @@ unsigned int _clearfp( void );
 |**_clear87**|\<float.h>|
 |**_clearfp**|\<float.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -113,5 +114,5 @@ Status: 80000 - denormal
 ## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)<br/>
-[_status87、_statusfp、_statusfp2](status87-statusfp-statusfp2.md)<br/>
+[_control87、_controlfp \_ _control87_2](control87-controlfp-control87-2.md)<br/>
+[_status87, _statusfp, _statusfp2](status87-statusfp-statusfp2.md)<br/>

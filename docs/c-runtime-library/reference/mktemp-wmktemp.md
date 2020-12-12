@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _mktemp、_wmktemp
 title: _mktemp、_wmktemp
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 536a63841c6e29fa003eb8b99c896f6d1cf5519f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 06f75f8fd46bdd7ece42c292fd8ab6272ad39250
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919091"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114165"
 ---
 # <a name="_mktemp-_wmktemp"></a>_mktemp、_wmktemp
 
@@ -69,20 +70,20 @@ wchar_t *_wmktemp(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nameTemplate*<br/>
 文件名模式。
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数都会返回指向修改后的 nameTemplate 的指针。 如果*nameTemplate*的格式不正确，或者无法从给定的 nameTemplate 创建更多唯一名称，则函数将返回**NULL** 。
+其中每个函数都会返回指向修改后的 nameTemplate 的指针。 如果 *nameTemplate* 的格式不正确，或者无法从给定的 nameTemplate 创建更多唯一名称，则函数将返回 **NULL** 。
 
 ## <a name="remarks"></a>备注
 
-**_Mktemp**函数通过修改*nameTemplate*参数创建唯一的文件名。 **_mktemp**会根据需要自动处理多字节字符串参数，根据运行时系统当前使用的多字节代码页识别多字节字符序列。 **_wmktemp**是 **_mktemp**的宽字符版本;**_wmktemp**的参数和返回值是宽字符字符串。 除非 **_wmktemp**不处理多字节字符字符串，否则 **_wmktemp**和 **_mktemp**的行为相同。
+**_Mktemp** 函数通过修改 *nameTemplate* 参数创建唯一的文件名。 **_mktemp** 会根据需要自动处理多字节字符串参数，根据运行时系统当前使用的多字节代码页识别多字节字符序列。 **_wmktemp** 是 **_mktemp** 的宽字符版本; **_wmktemp** 的参数和返回值是宽字符字符串。 除非 **_wmktemp** 不处理多字节字符字符串，否则 **_wmktemp** 和 **_mktemp** 的行为相同。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -90,17 +91,17 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*参数的格式为*base*XXXXXX，其中*base*是你提供的新文件名的一部分，每个 X 是 **_mktemp**提供的字符的占位符。 *NameTemplate*中的每个占位符字符都必须是大写的 x。 **_mktemp**保留*基*，并将第一个尾随 X 替换为字母字符。 **_mktemp**将以下尾随 X 替换为五位值;此值是标识调用进程的唯一数字，或在多线程程序中调用线程。
+*NameTemplate* 参数的格式为 *base* XXXXXX，其中 *base* 是你提供的新文件名的一部分，每个 X 是 **_mktemp** 提供的字符的占位符。 *NameTemplate* 中的每个占位符字符都必须是大写的 x。 **_mktemp** 保留 *基*，并将第一个尾随 X 替换为字母字符。 **_mktemp** 将以下尾随 X 替换为五位值;此值是标识调用进程的唯一数字，或在多线程程序中调用线程。
 
-**_Mktemp**的每个成功调用都将修改*nameTemplate*。 在来自具有相同*nameTemplate*参数的相同进程或线程的每个后续调用中， **_mktemp**将检查与以前的调用中的 **_mktemp**返回的名称匹配的文件名。 如果给定名称中不存在任何文件， **_mktemp**将返回该名称。 如果所有以前返回的名称都存在文件， **_mktemp**会通过将之前返回的名称中使用的字母字符替换为下一个可用小写字母（按顺序从 "a" 到 "z"）来创建新名称。 例如，如果*base*为：
+**_Mktemp** 的每个成功调用都将修改 *nameTemplate*。 在来自具有相同 *nameTemplate* 参数的相同进程或线程的每个后续调用中， **_mktemp** 将检查与以前的调用中的 **_mktemp** 返回的名称匹配的文件名。 如果给定名称中不存在任何文件， **_mktemp** 将返回该名称。 如果所有以前返回的名称都存在文件， **_mktemp** 会通过将之前返回的名称中使用的字母字符替换为下一个可用小写字母（按顺序从 "a" 到 "z"）来创建新名称。 例如，如果 *base* 为：
 
 > **fn**
 
-**_mktemp**提供的五位数值为12345，则返回的第一个名称为：
+**_mktemp** 提供的五位数值为12345，则返回的第一个名称为：
 
 > **fna12345**
 
-如果此名称用于创建文件 FNA12345，但该文件仍然存在，则在调用时返回的下一个名称与*nameTemplate*具有相同*基准*的相同进程或线程相同：
+如果此名称用于创建文件 FNA12345，但该文件仍然存在，则在调用时返回的下一个名称与 *nameTemplate* 具有相同 *基准* 的相同进程或线程相同：
 
 > **fnb12345**
 
@@ -108,15 +109,15 @@ wchar_t *_wmktemp(
 
 > **fna12345**
 
-**_mktemp**可以为*base*和*nameTemplate*值的任意给定组合创建最多26个唯一文件名。 因此，FNZ12345 是 **_mktemp**可以为本示例中使用的*base*和*nameTemplate*值创建的最后一个唯一文件名。
+**_mktemp** 可以为 *base* 和 *nameTemplate* 值的任意给定组合创建最多26个唯一文件名。 因此，FNZ12345 是 **_mktemp** 可以为本示例中使用的 *base* 和 *nameTemplate* 值创建的最后一个唯一文件名。
 
-失败时，将设置**errno** 。 如果*nameTemplate*具有无效的格式（例如，少于6个 X），则**errno**将设置为**EINVAL**。 如果 **_mktemp**因为所有26个可能的文件名都已存在而无法创建唯一名称，则 **_mktemp**将 nameTemplate 设置为空字符串并返回**EEXIST**。
+失败时，将设置 **errno** 。 如果 *nameTemplate* 具有无效格式 (例如，少于 6 X) ，则将 **Errno** 设置为 **EINVAL**。 如果 **_mktemp** 因为所有26个可能的文件名都已存在而无法创建唯一名称，则 **_mktemp** 将 nameTemplate 设置为空字符串并返回 **EEXIST**。
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_mktemp**|\<io.h>|
 |**_wmktemp**|\<io.h> 或 \<wchar.h>|
@@ -209,7 +210,7 @@ Problem creating the template.
 Out of unique filenames.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [fopen、_wfopen](fopen-wfopen.md)<br/>

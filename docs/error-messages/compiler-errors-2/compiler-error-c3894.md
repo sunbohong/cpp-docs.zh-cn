@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3894
 title: 编译器错误 C3894
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6290cb247e45c4bd3fd3b140f467d608203b488b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749433"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97115776"
 ---
 # <a name="compiler-error-c3894"></a>编译器错误 C3894
 
 "var"： initonly 静态数据成员的左值只允许在类 "class" 的类构造函数中使用
 
-静态[initonly](../../dotnet/initonly-cpp-cli.md)数据成员仅可在其声明或静态构造函数中用作左值。
+静态 [initonly](../../dotnet/initonly-cpp-cli.md) 数据成员仅可在其声明或静态构造函数中用作左值。
 
-实例（非静态） initonly 数据成员只能用作其声明点或实例（非静态）构造函数中的左值。
+实例 (非静态) initonly 数据成员只能用作其声明点上的左值，或者在 (非静态) 构造函数的实例中使用。
 
 下面的示例生成 C3894：
 

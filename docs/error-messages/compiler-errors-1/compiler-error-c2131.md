@@ -1,16 +1,17 @@
 ---
+description: 了解更多：编译器错误 C2131
 title: 编译器错误 C2131
 ms.date: 02/28/2019
 f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c1f4e783c9341acf9e41fff99bba784acd8bbec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97124171"
 ---
 # <a name="compiler-error-c2131"></a>编译器错误 C2131
 
@@ -42,7 +43,7 @@ c2131.cpp(7): note: failure was caused by non-constant arguments or reference to
 c2131.cpp(7): note: see usage of 'array_size'
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [const](../../cpp/const-cpp.md)<br/>
 [constexpr](../../cpp/constexpr-cpp.md)<br/>

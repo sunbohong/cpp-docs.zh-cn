@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：针对 Visual C++ 应用程序的 ClickOnce 部署
 title: ClickOnce Deployment for Visual C++ Applications
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 4726fda8c5eca70ce7acde19f141a7c096395e95
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: eb888e9236eec16ba82c82c11a23428163679e97
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316611"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97118207"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>ClickOnce Deployment for Visual C++ Applications
 
@@ -19,16 +20,16 @@ Visual Studio 提供了两种不同的技术来部署 Windows 应用程序：Cli
 
 ## <a name="clickonce-deployment-in-c"></a>C++ 中的 ClickOnce 部署
 
-Visual C++开发环境并不直接支持使用 ClickOnce 部署 Visual Studio C++项目，但可以使用这些工具。
+Visual C++ 开发环境不直接支持使用 ClickOnce 部署 Visual Studio c + + 项目，但可以使用工具。
 
 > [!NOTE]
-> Visual Studio 支持在 Visual C# 和 Visual Basic 开发环境中使用 ClickOnce。 如果 Visual Studio C++项目是 Visual C++ 项目的依赖项，则可以使用从 Visual C# 开发环境进行 ClickOnce 部署来发布应用程序（包括其依赖项）。
+> Visual Studio 支持在 Visual C# 和 Visual Basic 开发环境中使用 ClickOnce。 如果你的 Visual Studio c + + 项目是 Visual c # 项目的依赖项，则可以从 Visual c # 开发环境使用 ClickOnce 部署) 发布应用程序 (包括其依赖项。
 
 要使用 ClickOnce 部署 Visual C++ 应用程序，首先必须使用 [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)或其图形用户界面版本生成 [ClickOnce 应用程序清单](/visualstudio/deployment/clickonce-application-manifest)和 [ClickOnce 部署清单](/visualstudio/deployment/clickonce-deployment-manifest)。相关信息请参阅 [MageUI.exe（图形客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)。
 
 首先使用 Mage.exe 生成应用程序清单；其结果文件具有扩展名 .manifest。 然后使用 Mage.exe 生成部署清单；其结果文件具有扩展名 .application。 然后对清单签名。
 
-应用程序清单必须指定目标处理器（x86、x64 或 ARM）************。 若要了解这些选项，请参阅[部署 64 位应用程序的必备组件](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications)。
+应用程序清单必须指定目标处理器（x86、x64 或 ARM）。 若要了解这些选项，请参阅[部署 64 位应用程序的必备组件](/visualstudio/deployment/deploying-prerequisites-for-64-bit-applications)。
 
 此外，应用程序和部署清单的名称必须不同于 C++ 应用程序的名称。 这样可避免由 Mage.exe 创建的应用程序清单与作为 C++ 应用程序一部分的外部清单之间发生冲突。
 
@@ -38,14 +39,14 @@ Visual C++开发环境并不直接支持使用 ClickOnce 部署 Visual Studio C+
 
 有关此技术的更详细说明，请参阅 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)。 有关 ClickOnce 部署的详细示例，请参阅[演练：手动部署 ClickOnce 应用程序](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Mage.exe（清单生成和编辑工具）](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
-[MageUI.exe（清单生成和编辑工具，图形客户端）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
+[MageUI.exe（图形化客户端中的清单生成和编辑工具）](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
 [Makecert.exe（证书创建工具）](/windows/win32/SecCrypto/makecert)<br>
 [部署桌面应用程序](deploying-native-desktop-applications-visual-cpp.md)<br>
 [部署应用程序、服务和组件](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [ClickOnce 安全和部署](/visualstudio/deployment/clickonce-security-and-deployment)<br>
 [创建引导程序包](/visualstudio/deployment/creating-bootstrapper-packages)<br>
-[.NET 编程，带C++/CLI（视觉C++）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br>
-[本机和 .NET 的互操作性](../dotnet/native-and-dotnet-interoperability.md)
+[用 c + +/CLI (Visual C++ 的 .NET 编程) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br>
+[本机和 .NET 互操作性](../dotnet/native-and-dotnet-interoperability.md)
