@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _AddressOfReturnAddress
 title: _AddressOfReturnAddress
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: d705029c30fdbc117c4c6e96923691e43e072e23
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a79ccbe7ddc2865d8225a62cd0d294f0bc66b4a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221073"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331924"
 ---
 # <a name="_addressofreturnaddress"></a>_AddressOfReturnAddress
 
 **Microsoft 专用**
 
-提供保存当前函数的返回地址的内存位置的地址。 此地址不能用于访问其他内存位置 (例如, 函数的参数)。
+提供保存当前函数的返回地址的内存位置的地址。 此地址不能用于访问其他内存位置 (例如，函数的参数) 。
 
 ## <a name="syntax"></a>语法
 
@@ -29,15 +30,15 @@ void * _AddressOfReturnAddress();
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`_AddressOfReturnAddress`|x86、x64、ARM、ARM64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-当`_AddressOfReturnAddress`在使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)编译的程序中使用时, 包含该`_AddressOfReturnAddress`调用的函数将编译为本机函数。 当编译为对包含`_AddressOfReturnAddress`的函数的托管调用的函数时, `_AddressOfReturnAddress`可能不会按预期方式运行。
+当 `_AddressOfReturnAddress` 在使用 [/clr](../build/reference/clr-common-language-runtime-compilation.md)编译的程序中使用时，包含该调用的函数将 `_AddressOfReturnAddress` 编译为本机函数。 当编译为对包含的函数的托管调用的函数时 `_AddressOfReturnAddress` ， `_AddressOfReturnAddress` 可能不会按预期方式运行。
 
 此例程仅可用作内部函数。
 

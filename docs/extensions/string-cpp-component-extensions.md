@@ -1,4 +1,5 @@
 ---
+description: '详细了解：字符串 (c + +/CLI 和 c + +/CX) '
 title: String（C++/CLI 和 C++/CX）
 ms.date: 10/08/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-ms.openlocfilehash: b9da900ffbfff34dc596d8981095d8285bf37208
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a47842713d1e7349717eaaeddcd4f3cba86fbbea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171939"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97206326"
 ---
 # <a name="string--ccli-and-ccx"></a>String（C++/CLI 和 C++/CX）
 
@@ -19,7 +20,7 @@ Windows 运行时和公共语言运行时将字符串表示为，已分配内存
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
-Windows 运行时体系结构要求，`String` 数据类型必须位于 `Platform` 命名空间中。 为了方便起见，Visual C++ 还在 `string` 命名空间中提供了 `Platform::String` 数据类型（它是 `default` 的同义词）。
+Windows 运行时体系结构要求，`String` 数据类型必须位于 `Platform` 命名空间中。 为了方便起见，Visual C++ 还在 `default` 命名空间中提供了 `string` 数据类型（它是 `Platform::String` 的同义词）。
 
 ### <a name="syntax"></a>语法
 
@@ -259,8 +260,8 @@ System.SByte*
 System.String
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[ .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
+[适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)<br/>
 [字符串和字符文本](../cpp/string-and-character-literals-cpp.md)<br/>
 [/cgthreads（公共语言运行时编译）](../build/reference/clr-common-language-runtime-compilation.md)
