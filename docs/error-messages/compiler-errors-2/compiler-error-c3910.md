@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3910
 title: 编译器错误 C3910
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3910
 ms.assetid: cfcbe620-b463-463b-95ea-2d60ad33ebb5
-ms.openlocfilehash: ef63b8f5d1ee4b3f094bed3549eec8157a950e91
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 802aac0d27e230920a906b96afc78100296c75de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74748874"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97144139"
 ---
 # <a name="compiler-error-c3910"></a>编译器错误 C3910
 
@@ -19,7 +20,7 @@ ms.locfileid: "74748874"
 
 定义了一个事件，但它不包含指定的、必需的访问器方法。
 
-有关详细信息，请参阅[事件](../../extensions/event-cpp-component-extensions.md)。
+有关详细信息，请参阅 [事件](../../extensions/event-cpp-component-extensions.md)。
 
 下面的示例生成 C3910：
 

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：注册表宏
 title: 注册表宏
 ms.date: 08/19/2019
 f1_keywords:
@@ -12,24 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: dac1c187bae0eb55b954fc02cd4fb4c981f272f4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: e1f85e43f64dd34455cb9ec453ab3719b07f67f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138876"
 ---
 # <a name="registry-macros"></a>注册表宏
 
 这些宏定义有用的类型库和注册表功能。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[_ATL_STATIC_REGISTRY](#_atl_static_registry)|指示你希望对象的注册代码位于对象中，以避免依赖于 ATL.DLL。|
 |[DECLARE_LIBID](#declare_libid)|为 ATL 提供了一种方法来获取类型库的 *libid* 。|
 |[DECLARE_NO_REGISTRY](#declare_no_registry)|避免默认的 ATL 注册。|
 |[DECLARE_REGISTRY](#declare_registry)|在系统注册表中输入或删除主对象的条目。|
-|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自动注册 *appid*所需的信息。|
+|[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|指定自动注册 *appid* 所需的信息。|
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|查找指定的资源，并在其中运行注册表脚本。|
 |[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|查找由 ID 号标识的资源，并在其中运行注册表脚本。|
 
@@ -45,7 +46,7 @@ ms.locfileid: "88834513"
 #define _ATL_STATIC_REGISTRY
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在定义 ATL_STATIC_REGISTRY 时，应使用以下代码：
 
@@ -59,12 +60,12 @@ ms.locfileid: "88834513"
 DECLARE_LIBID( libid )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *libid*<br/>
 类型库的 GUID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用派生类中的 DECLARE_LIBID `CAtlModuleT` 。
 
@@ -93,7 +94,7 @@ DECLARE_REGISTRY(
     flags )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class*<br/>
 中为了向后兼容而提供。
@@ -110,7 +111,7 @@ pid<br/>
 *flag*<br/>
 中包含注册表中程序的线程模型的 DWORD。 必须是下列值之一： THREADFLAGS_APARTMENT、THREADFLAGS_BOTH 或 AUTPRXFLAG。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 标准注册包含 CLSID、程序 ID、独立于版本的程序 ID、说明字符串和线程模型。
 
@@ -118,7 +119,7 @@ pid<br/>
 
 ## <a name="declare_registry_appid_resourceid"></a><a name="declare_registry_appid_resourceid"></a> DECLARE_REGISTRY_APPID_RESOURCEID
 
-指定自动注册 *appid*所需的信息。
+指定自动注册 *appid* 所需的信息。
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
@@ -126,15 +127,15 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
     appid )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *resid 标识*<br/>
-包含 *appid*相关信息的 .rgs 文件的资源 id。
+包含 *appid* 相关信息的 .rgs 文件的资源 id。
 
 *appid*<br/>
 一个 GUID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用派生类中的 DECLARE_REGISTRY_APPID_RESOURCEID `CAtlModuleT` 。
 
@@ -150,12 +151,12 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 DECLARE_REGISTRY_RESOURCE( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中资源的字符串标识符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当使用 ATL 项目向导创建对象或控件时，向导将自动实现基于脚本的注册表支持，并将与 DECLARE_REGISTRY_RESOURCE 类似的 [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) 宏添加到文件。
 
@@ -175,12 +176,12 @@ DECLARE_REGISTRY_RESOURCE( x )
 DECLARE_REGISTRY_RESOURCEID( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中向导生成的资源标识符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 ATL 项目向导创建对象或控件时，向导将自动实现基于脚本的注册表支持并将 DECLARE_REGISTRY_RESOURCEID 宏添加到文件中。
 
@@ -192,6 +193,6 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 有关可替换参数和脚本的详细信息，请参阅 [ (注册器) 的 ATL 注册表组件 ](../../atl/atl-registry-component-registrar.md)一文。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)

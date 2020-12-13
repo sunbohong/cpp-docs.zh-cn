@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：安全标识符全局函数
 title: 安全标识符全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: e040cbb76e851bd323360f4f5ae602f9c73651d1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 035cdf2991f00d518bf4cfc3a93a226650728846
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834474"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138861"
 ---
 # <a name="security-identifier-global-functions"></a>安全标识符全局函数
 
@@ -51,7 +52,7 @@ ms.locfileid: "88834474"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[Sids::AccountOps](#accountops)|返回 DOMAIN_ALIAS_RID_ACCOUNT_OPS SID。|
 |[Sids::Admins](#admins)|返回 DOMAIN_ALIAS_RID_ADMINS SID。|
@@ -218,7 +219,7 @@ CSid Network() throw(...);
 CSid NetworkService() throw(...);
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 NetworkService 使 NT AUTHORITY\NetworkService 用户能够读取 CPerfMon 安全对象。 NetworkService 将 SecurityAttribute 添加到 ATLServer 代码，这将允许 DLL 在 Windows XP Home Edition、Windows XP Professional、Windows Server 2003 和更高版本的操作系统上的 NetworkService 帐户下登录。
 

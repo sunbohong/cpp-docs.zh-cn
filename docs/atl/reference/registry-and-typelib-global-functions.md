@@ -1,4 +1,5 @@
 ---
+description: 了解更多：注册表和 TypeLib 全局函数
 title: 注册表和类型库全局函数
 ms.date: 03/27/2019
 f1_keywords:
@@ -17,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 0f29f8cac62a7452781e8fde697cdf992db00b8c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d7420dbbb472f1fc8b01329e9ded4c887e2bd71d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834613"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138875"
 ---
 # <a name="registry-and-typelib-global-functions"></a>注册表和类型库全局函数
 
@@ -31,7 +32,7 @@ ms.locfileid: "88834613"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxRegCreateKey](#afxregcreatekey)|创建指定的注册表项。|
 |[AfxRegDeleteKey](#afxregdeletekey)|删除指定的注册表项。|
@@ -47,7 +48,7 @@ ms.locfileid: "88834613"
 
 这些函数控制程序用来存储信息的注册表中的节点。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|检索应用程序是否将注册表访问重定向到 **HKEY_CURRENT_USER** ( **HKCU**) 节点。|
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|设置应用程序是否将注册表访问重定向到 **HKEY_CURRENT_USER** ( **HKCU**) 节点。|
@@ -66,7 +67,7 @@ ms.locfileid: "88834613"
 ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pEnabled*<br/>
 弄TRUE 指示将注册表信息定向到 **HKCU** 节点;FALSE 表示应用程序将注册表信息写入默认节点。 默认节点 **HKEY_CLASSES_ROOT** (**HKCR**) 。
@@ -75,9 +76,9 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 如果方法成功，则 S_OK; 否则，如果发生错误，则为 HRESULT 错误代码。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-默认情况下，不启用注册表重定向。 如果启用此选项，注册表访问将重定向到 **HKEY_CURRENT_USER \software\classes**。
+默认情况下，不启用注册表重定向。 如果启用此选项，则会将注册表访问重定向到 **HKEY_CURRENT_USER\Software\Classes**。
 
 重定向不是全局的。 此注册表重定向仅影响 MFC 和 ATL 框架。
 
@@ -95,7 +96,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -127,7 +128,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -156,7 +157,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeName, LPCTSTR lpszFilterExt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCLSID*<br/>
 指定处理程序的 CLSID。
@@ -179,7 +180,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstTypeLib*<br/>
 模块实例的句柄。
@@ -191,7 +192,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)和[CAtlComModule：： RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)使用此 helper 函数。
 
@@ -209,7 +210,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -241,7 +242,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM samDesired, PHKEY phkResult, CAtlTransactionManager* pTM = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -279,7 +280,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszCLSID*<br/>
 指定要注销的处理程序的 CLSID。
@@ -298,7 +299,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中TRUE 指示将注册表信息定向到 **HKCU** 节点;FALSE 表示应用程序将注册表信息写入默认节点。 默认节点 **HKEY_CLASSES_ROOT** (**HKCR**) 。
@@ -307,9 +308,9 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 如果方法成功，则 S_OK; 否则，如果发生错误，则为 HRESULT 错误代码。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-默认情况下，不启用注册表重定向。 如果启用此选项，注册表访问将重定向到 **HKEY_CURRENT_USER \software\classes**。
+默认情况下，不启用注册表重定向。 如果启用此选项，则会将注册表访问重定向到 **HKEY_CURRENT_USER\Software\Classes**。
 
 重定向不是全局的。 此注册表重定向仅影响 MFC 和 ATL 框架。
 
@@ -329,7 +330,7 @@ ATLAPI AtlUnRegisterTypeLib(
     LPCOLESTR lpszIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstTypeLib*<br/>
 模块实例的句柄。
@@ -341,7 +342,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此 helper 函数可由 [CAtlComModule：： UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) 和 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)使用。
 
@@ -363,7 +364,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
     ITypeLib** ppTypeLib);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstTypeLib*<br/>
 与类型库关联的模块的句柄。
@@ -381,7 +382,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此 helper 函数由 [AtlRegisterTypeLib](#atlregistertypelib) 和 [AtlUnRegisterTypeLib](#atlunregistertypelib)使用。
 
@@ -406,7 +407,7 @@ HRESULT RegistryDataExchange(
     void* pItem = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *五*<br/>
 指向当前对象的指针。
@@ -421,13 +422,13 @@ HRESULT RegistryDataExchange(
 
 如果成功，则返回 S_OK; 否则返回错误 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 宏 [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) 和 [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) 展开到调用的函数 `RegistryDataExchange` 。
 
 下表显示了指示函数应执行的操作的可能的枚举值：
 
-|枚举值|Operation|
+|枚举值|操作|
 |----------------|---------------|
 |eReadFromReg|从注册表读取数据。|
 |eWriteToReg|将数据写入注册表。|

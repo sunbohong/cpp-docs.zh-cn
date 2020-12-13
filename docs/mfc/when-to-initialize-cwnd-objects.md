@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：何时初始化 CWnd 对象
 title: 何时初始化 CWnd 对象
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - HWND, when attached to CWnd object
 - CWnd objects [MFC], when to initialize
 ms.assetid: 4d31bcb1-73db-4f2f-b71c-89b087569a10
-ms.openlocfilehash: aa396ade2e8ab4e1245e161423de7bd5bfafaaf8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89d40b826507574fddd41364ac6cecc526663519
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405711"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142761"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>何时初始化 CWnd 对象
 
-无法创建你自己的子窗口或调用的构造函数中的任何 Windows API 函数`CWnd`-派生的对象。 这是因为`HWND`为`CWnd`尚未创建对象。 必须完成最特定于 Windows 的初始化，如添加子窗口[OnCreate](../mfc/reference/cwnd-class.md#oncreate)消息处理程序。
+不能创建自己的子窗口，也不能在派生对象的构造函数中调用任何 Windows API 函数 `CWnd` 。 这是因为尚未 `HWND` `CWnd` 创建对象的。 大多数特定于 Windows 的初始化（如添加子窗口）都必须在 [OnCreate](../mfc/reference/cwnd-class.md#oncreate) 消息处理程序中完成。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [创建文档框架窗口](../mfc/creating-document-frame-windows.md)
 

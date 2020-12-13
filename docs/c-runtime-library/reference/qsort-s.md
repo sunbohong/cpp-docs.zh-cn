@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： qsort_s
 title: qsort_s
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-ms.openlocfilehash: 934801531804345a8cede6ed1ac4abb06bae45b4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 01890db21bc1eb470b57aa796313da4c6f0c50a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913279"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137158"
 ---
 # <a name="qsort_s"></a>qsort_s
 
@@ -53,7 +54,7 @@ void qsort_s(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *base*<br/>
 目标数组的开头。
@@ -65,14 +66,14 @@ width <br/>
 元素大小（字节）。
 
 *并排*<br/>
-比较函数。 第一个参数是*上下文*指针。 第二个参数是指向搜索*键*的指针。 第三个参数是指向要与*该键*进行比较的数组元素的指针。
+比较函数。 第一个参数是 *上下文* 指针。 第二个参数是指向搜索 *键* 的指针。 第三个参数是指向要与 *该键* 进行比较的数组元素的指针。
 
 *上下文*<br/>
-指向上下文的指针，它可以是*比较*例程需要访问的任何对象。
+指向上下文的指针，它可以是 *比较* 例程需要访问的任何对象。
 
 ## <a name="remarks"></a>备注
 
-**Qsort_s**函数实现了一种快速排序算法，用于对*数字*元素数组（每个*宽度*字节）进行排序。 参数*基*是指向要排序的数组基的指针。 **qsort_s**用已排序的元素覆盖此数组。 参数*比较*是指向用户提供的例程的指针，它比较两个数组元素，并返回指定其关系的值。 **qsort_s**在排序过程中一次或多次调用*比较*例程，将指针传递给每个调用上的两个数组元素：
+**Qsort_s** 函数实现了一种快速排序算法，用于对 *数字* 元素数组（每个 *宽度* 字节）进行排序。 参数 *基* 是指向要排序的数组基的指针。 **qsort_s** 用已排序的元素覆盖此数组。 参数 *比较* 是指向用户提供的例程的指针，它比较两个数组元素，并返回指定其关系的值。 **qsort_s** 在排序过程中一次或多次调用 *比较* 例程，将指针传递给每个调用上的两个数组元素：
 
 ```C
 compare( context, (void *) & elem1, (void *) & elem2 );
@@ -80,32 +81,32 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 该例程必须比较这些元素，然后返回下列值之一：
 
-|返回值|说明|
+|返回值|描述|
 |------------------|-----------------|
-|< 0|**elem1**小于**elem2**|
-|0|**elem1**等效于**elem2**|
-|> 0|**elem1**大于**elem2**|
+|< 0|**elem1** 小于 **elem2**|
+|0|**elem1** 等效于 **elem2**|
+|> 0|**elem1** 大于 **elem2**|
 
 数组按比较函数中定义的升序进行排序。 若要以降序对数组进行排序，请反转比较函数中的“大于”和“小于”的意义。
 
-如果传递到函数的参数无效，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回，并且**errno**设置为**EINVAL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果传递到函数的参数无效，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回，并且 **errno** 设置为 **EINVAL**。 有关详细信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="error-conditions"></a>错误条件
 
-|键|base|compare|num|width|errno|
+|key|base|compare|num|width|errno|
 |---------|----------|-------------|---------|-----------|-----------|
-|**Null**|any|any|any|any|**EINVAL**|
-|any|**Null**|any|!= 0|any|**EINVAL**|
+|**NULL**|any|any|any|any|**EINVAL**|
+|any|**NULL**|any|!= 0|any|**EINVAL**|
 |any|any|any|any|<= 0|**EINVAL**|
-|any|any|**Null**|any|any|**EINVAL**|
+|any|any|**NULL**|any|any|**EINVAL**|
 
-**qsort_s**具有与**qsort**相同的行为，但具有*上下文*参数并设置**errno**。 通过传递*上下文*参数，比较函数可以使用对象指针访问对象功能或无法通过元素指针访问的其他信息。 添加*上下文*参数使得**qsort_s**更安全，因为*上下文*可用于避免使用静态变量引入的重入 bug，使共享信息可用于*比较*函数。
+**qsort_s** 具有与 **qsort** 相同的行为，但具有 *上下文* 参数并设置 **errno**。 通过传递 *上下文* 参数，比较函数可以使用对象指针访问对象功能或无法通过元素指针访问的其他信息。 添加 *上下文* 参数使得 **qsort_s** 更安全，因为 *上下文* 可用于避免使用静态变量引入的重入 bug，使共享信息可用于 *比较* 函数。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**qsort_s**|\<stdlib.h> 和 \<search.h>|
 
@@ -115,7 +116,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何在**qsort_s**函数中使用*上下文*参数。 通过*上下文*参数，可更轻松地执行线程安全排序。 不要使用必须同步以确保线程安全的静态变量，而应在每个排序中传递一个不同的*上下文*参数。 在此示例中，区域设置对象用作*上下文*参数。
+下面的示例演示如何在 **qsort_s** 函数中使用 *上下文* 参数。 通过 *上下文* 参数，可更轻松地执行线程安全排序。 不要使用必须同步以确保线程安全的静态变量，而应在每个排序中传递一个不同的 *上下文* 参数。 在此示例中，区域设置对象用作 *上下文* 参数。
 
 ```cpp
 // crt_qsort_s.cpp
@@ -267,7 +268,7 @@ España Español espantado
 table tablet tableux
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [搜索和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
 [bsearch_s](bsearch-s.md)<br/>

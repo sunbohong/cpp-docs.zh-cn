@@ -1,48 +1,49 @@
 ---
+description: 了解详细信息：可视化管理器
 title: 可视化管理器
 ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b99331503e4e7e69cc5d8a19fde7641c1b1daeeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358506"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143203"
 ---
 # <a name="visualization-manager"></a>可视化管理器
 
-视觉管理器是一个对象，用于控制整个应用程序的外观。 它充当一个类可以为应用程序放置所有绘图代码。 MFC 库包含多个视觉管理器。 如果你想要创建你的应用程序的自定义视图，还可以创建自己的可视化管理器。 下图显示相同的应用程序时启用不同的视觉管理器：
+可视化管理器是一个控制整个应用程序外观的对象。 它充当单个类，您可以在其中放置应用程序的所有绘制代码。 MFC 库包含多个可视化管理器。 如果要为应用程序创建自定义视图，还可以创建自己的可视化管理器。 以下图像显示启用了不同视觉对象管理器的同一应用程序：
 
 ![由 CMFCVisualManagerWindows 呈现的 MyApp](../mfc/media/vmwindows.png "由 CMFCVisualManagerWindows 呈现的 MyApp") <br/>
-使用 CMFCVisualManagerWindows 视觉管理器的 MyApp
+使用 CMFCVisualManagerWindows 视觉对象管理器的 MyApp
 
 ![由 CMFCVisualManagerVS2005 呈现的 MyApp](../mfc/media/vmvs2005.png "由 CMFCVisualManagerVS2005 呈现的 MyApp") <br/>
-使用 CMFCVisualManagerVS2005 视觉管理器的 MyApp
+使用 CMFCVisualManagerVS2005 视觉对象管理器的 MyApp
 
 ![由 CMFCVisualManagerOfficeXP 呈现的 MyApp](../mfc/media/vmofficexp.png "由 CMFCVisualManagerOfficeXP 呈现的 MyApp") <br/>
-使用 CMFCVisualManagerOfficeXP 视觉管理器的 MyApp
+使用 CMFCVisualManagerOfficeXP 视觉对象管理器的 MyApp
 
 ![由 CMFCVisualManagerOffice2003 呈现的 MyApp](../mfc/media/vmoffice2003.png "由 CMFCVisualManagerOffice2003 呈现的 MyApp") <br/>
-使用 CMFCVisualManagerOffice2003 视觉管理器的 MyApp
+使用 CMFCVisualManagerOffice2003 视觉对象管理器的 MyApp
 
 ![由 CMFCVisualManagerOffice2007 呈现的 MyApp](../mfc/media/msoffice2007.png "由 CMFCVisualManagerOffice2007 呈现的 MyApp") <br/>
-使用 CMFCVisualManagerOffice2007 视觉管理器的 MyApp
+使用 CMFCVisualManagerOffice2007 视觉对象管理器的 MyApp
 
-默认情况下，visual manager 会维护多个 GUI 元素的绘制代码。 若要提供自定义 UI 元素，您需要重写视觉管理器的相关绘图方法。 有关这些方法的列表，请参阅[CMFCVisualManager 类](../mfc/reference/cmfcvisualmanager-class.md)。 可以重写以提供自定义外观的方法是以开头的所有方法`OnDraw`。
+默认情况下，可视化管理器将为多个 GUI 元素维护绘图代码。 若要提供自定义 UI 元素，需要重写可视管理器的相关绘图方法。 有关这些方法的列表，请参阅 [CMFCVisualManager 类](../mfc/reference/cmfcvisualmanager-class.md)。 可以重写以提供自定义外观的方法是以开头的所有方法 `OnDraw` 。
 
-你的应用程序只能有一个`CMFCVisualManager`对象。 若要获取你的应用程序的可视化管理器的指针，调用静态函数[CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance)。 由于所有视觉管理器继承自`CMFCVisualManager`，则`CMFCVisualManager::GetInstance`方法将获得一个指向相应的视觉管理器，即使您创建自定义视觉管理器。
+应用程序只能有一个 `CMFCVisualManager` 对象。 若要获取指向应用程序的可视化管理器的指针，请调用静态函数 [CMFCVisualManager：： GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance)。 由于所有可视化管理器都继承自 `CMFCVisualManager` ，因此该 `CMFCVisualManager::GetInstance` 方法将获得指向相应可视管理器的指针，即使您创建了一个自定义视觉对象管理器也是如此。
 
-如果你想要创建自定义视觉管理器，必须从已存在的可视管理器对它进行派生。 要派生的默认类是`CMFCVisualManager`。 但是，如果它更好地类似于您可以在你的应用程序可以使用不同的视觉管理器。 例如，如果你想要使用`CMFCVisualManagerOffice2007`视觉管理器，但希望只可以更改分隔符外观，您可能派生自定义从`CMFCVisualManagerOffice2007`。 在此方案中，你应覆盖仅用于绘制分隔符的方法。
+如果你想要创建自定义的视觉对象管理器，你必须从已存在的可视管理器中派生它。 派生自的默认类是 `CMFCVisualManager` 。 但是，如果它更适合应用程序的所需内容，则可以使用不同的可视化管理器。 例如，如果你想要使用 `CMFCVisualManagerOffice2007` 可视化管理器，但只想更改分隔符的外观，则可以从派生自定义类 `CMFCVisualManagerOffice2007` 。 在这种情况下，应仅覆盖用于绘制分隔符的方法。
 
-有两种可行方法为应用程序使用特定的视觉管理器。 一种方法是调用[CMFCVisualManager::SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager)方法并传递相应视觉管理器作为参数。 下面的代码示例演示如何使用`CMFCVisualManagerVS2005`视觉管理器使用此方法：
+可以通过两种方式将特定的可视化管理器用于应用程序。 一种方法是调用 [CMFCVisualManager：： SetDefaultManager](../mfc/reference/cmfcvisualmanager-class.md#setdefaultmanager) 方法，并以参数的形式传递适当的可视化管理器。 下面的代码示例演示如何 `CMFCVisualManagerVS2005` 通过此方法使用视觉对象管理器：
 
 ```cpp
 CMFCVisualManager::SetDefaultManager (RUNTIME_CLASS (CMFCVisualManagerVS2005));
 ```
 
-在应用程序中使用视觉管理器的其他方法是手动创建。 应用程序然后将使用此新的视觉管理器的呈现。 但是，因为可能只有一个`CMFCVisualManager`每个应用程序，必须删除当前的视觉管理器，然后创建一个新的对象。 在以下示例中，`CMyVisualManager`是派生自的自定义视觉管理器`CMFCVisualManager`。 以下方法将更改哪些视觉管理器用于显示应用程序，具体取决于索引：
+在应用程序中使用可视化管理器的另一种方法是手动创建。 然后，应用程序会将此新的视觉管理器用于所有呈现。 但是，因为 `CMFCVisualManager` 每个应用程序只能有一个对象，所以在创建新的可视化管理器之前，必须先删除当前的可视化管理器。 在下面的示例中， `CMyVisualManager` 是派生自的自定义可视化管理器 `CMFCVisualManager` 。 以下方法将根据索引更改用于显示应用程序的视觉对象管理器：
 
 ```cpp
 void CMyApp::SetSkin (int index)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CInterfaceList 类
 title: CInterfaceList 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: 0a7fd781c63e4ea084cf078e49fc9efb9cfa2d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2612ba4700466bb877f84978c55bfd018f1dd286
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141526"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 类
 
-此类提供了构造 COM 接口指针列表时有用的方法。
+此类提供的方法在构造 COM 接口指针的列表时很有用。
 
 ## <a name="syntax"></a>语法
 
@@ -28,27 +29,27 @@ class CInterfaceList
                      CComQIPtrElementTraits<I, piid>>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*Ⅰ*<br/>
-指定要存储的指针类型的 COM 接口。
+*I*<br/>
+一个 COM 接口，指定要存储的指针的类型。
 
-*皮伊德*<br/>
-指向*I*的 IID 的指针。
+*piid*<br/>
+指向 *I* 的 IID 的指针。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[C接口列表：C接口列表](#cinterfacelist)|接口列表的构造函数。|
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|接口列表的构造函数。|
 
 ## <a name="remarks"></a>备注
 
-此类提供用于创建 COM 接口指针列表的构造函数和派生方法。 当需要数组时，请使用[CInterfaceArray。](../../atl/reference/cinterfacearray-class.md)
+此类提供构造函数和用于创建 COM 接口指针列表的派生方法。 需要数组时，请使用 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) 。
 
-有关详细信息，请参阅[ATL 收集类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅 [ATL Collection 类](../../atl/atl-collection-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -58,9 +59,9 @@ class CInterfaceList
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlcoll.h
+**标头：** atlcoll
 
-## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>C接口列表：C接口列表
+## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a> CInterfaceList::CInterfaceList
 
 接口列表的构造函数。
 
@@ -68,16 +69,16 @@ class CInterfaceList
 CInterfaceList(UINT nBlockSize = 10) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBlockSize*<br/>
-块大小，默认值为 10。
+块大小，默认值为10。
 
 ### <a name="remarks"></a>备注
 
-块大小是需要新元素时分配的内存量的度量。 较大的块大小减少了对内存分配例程的调用，但使用的资源更多。
+块大小是在需要新元素时分配的内存量的度量值。 较大的块大小可减少对内存分配例程的调用，但会占用更多资源。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CAtlList 类](../../atl/reference/catllist-class.md)<br/>
 [CComQIPtr 类](../../atl/reference/ccomqiptr-class.md)<br/>

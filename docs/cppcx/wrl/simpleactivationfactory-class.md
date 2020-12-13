@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： SimpleActivationFactory 类
 title: SimpleActivationFactory 类
 ms.date: 09/07/2018
 ms.topic: reference
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName method
 - Microsoft::WRL::SimpleActivationFactory::GetTrustLevel method
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-ms.openlocfilehash: 39e539c63e91b508f51656114ee8fbd68150991f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 83643c69977b887e58e430bbd500fcf7c2e81ca6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135208"
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory 类
 
@@ -31,16 +32,16 @@ template<typename Base>
 class SimpleActivationFactory : public ActivationFactory<>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*基地*<br/>
+*基座*<br/>
 基类。
 
 ## <a name="remarks"></a>备注
 
 基类必须提供默认构造函数。
 
-以下代码示例演示如何将简单激活工厂与[可激活的类与 FactoryEx](activatableclass-macros.md)宏一起使用。
+下面的代码示例演示如何将 SimpleActivationFactory 与 [ActivatableClassWithFactoryEx](activatableclass-macros.md) 宏一起使用。
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`
 
@@ -48,11 +49,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[SimpleActivationFactory::ActivateInstance 方法](#activateinstance)|创建指定接口的实例。|
-|[SimpleActivationFactory::GetRuntimeClassName 方法](#getruntimeclassname)|获取*Base*类模板参数指定的类实例的运行时类名称。|
-|[SimpleActivationFactory::GetTrustLevel 方法](#gettrustlevel)|获取*Base*类模板参数指定的类实例的信任级别。|
+|[SimpleActivationFactory::GetRuntimeClassName 方法](#getruntimeclassname)|获取由 *基类* 模板参数指定的类的实例的运行时类名称。|
+|[SimpleActivationFactory::GetTrustLevel 方法](#gettrustlevel)|获取由 *基类* 模板参数指定的类的实例的信任级别。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -80,11 +81,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 模块.h
+**标头：** 模块。h
 
 **命名空间：** Microsoft::WRL
 
-## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a>简单激活工厂：：激活实例方法
+## <a name="simpleactivationfactoryactivateinstance-method"></a><a name="activateinstance"></a> SimpleActivationFactory：： ActivateInstance 方法
 
 创建指定接口的实例。
 
@@ -94,10 +95,10 @@ STDMETHOD( ActivateInstance )(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ppvObject*<br/>
-此操作完成后，将指针指向`Base`类模板参数指定的对象的实例。
+此操作完成后，指向由类模板参数指定的对象的实例的指针 `Base` 。
 
 ### <a name="return-value"></a>返回值
 
@@ -105,11 +106,11 @@ STDMETHOD( ActivateInstance )(
 
 ### <a name="remarks"></a>备注
 
-如果`__WRL_STRICT__`已定义，如果类模板参数中指定的基类不是从[RuntimeClass](runtimeclass-class.md)派生，或者未配置 WinRt 或 WinRtClassicComMix[运行时类型](runtimeclasstype-enumeration.md)枚举值，则将发出断言错误。
+如果 `__WRL_STRICT__` 定义了，则在类模板参数中指定的基类不是从 [RuntimeClass](runtimeclass-class.md)派生的或未使用 WinRt 或 WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md) 枚举值配置的情况下，将发出断言错误。
 
-## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a>简单激活工厂：：获取运行时类名称方法
+## <a name="simpleactivationfactorygetruntimeclassname-method"></a><a name="getruntimeclassname"></a> SimpleActivationFactory：： GetRuntimeClassName 方法
 
-获取`Base`类模板参数指定的类实例的运行时类名称。
+获取类模板参数指定的类的实例的运行时类名称 `Base` 。
 
 ```cpp
 STDMETHOD( GetRuntimeClassName )(
@@ -117,9 +118,9 @@ STDMETHOD( GetRuntimeClassName )(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*运行时名称*<br/>
+*runtimeName*<br/>
 此操作完成后，运行时类名称。
 
 ### <a name="return-value"></a>返回值
@@ -128,11 +129,11 @@ STDMETHOD( GetRuntimeClassName )(
 
 ### <a name="remarks"></a>备注
 
-如果`__WRL_STRICT__`已定义，如果`Base`类模板参数指定的类不是从[RuntimeClass](runtimeclass-class.md)派生，或者未配置 WinRt 或 WinRtClassicComMix[运行时类型](runtimeclasstype-enumeration.md)枚举值，则将发出断言错误。
+如果 `__WRL_STRICT__` 定义了，则在 `Base` 类模板参数指定的类不是从 [RuntimeClass](runtimeclass-class.md)派生的情况下发出断言错误，也不会使用 WinRt 或 WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md) 枚举值进行配置。
 
-## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a>简单激活工厂：：获取信任级别方法
+## <a name="simpleactivationfactorygettrustlevel-method"></a><a name="gettrustlevel"></a> SimpleActivationFactory：： GetTrustLevel 方法
 
-获取`Base`类模板参数指定的类实例的信任级别。
+获取由类模板参数指定的类的实例的信任级别 `Base` 。
 
 ```cpp
 STDMETHOD(
@@ -140,9 +141,9 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*信任吕尔*<br/>
+*trustLvl*<br/>
 此操作完成后，当前类对象的信任级别。
 
 ### <a name="return-value"></a>返回值

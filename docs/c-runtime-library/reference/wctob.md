@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： wctob
 title: wctob
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 3740e4bebcc63f0f664d40b2e048f19c2aa24c99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 184c9858aebcdecf3b5d9857980f27be45a5d2d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136860"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,22 +48,22 @@ int wctob(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wchar*<br/>
 要转换的值。
 
 ## <a name="return-value"></a>返回值
 
-如果**wctob**成功地转换宽字符，则它仅在多字节字符正好为一个字节时返回其多字节字符表示形式。 如果**wctob**遇到不能转换为多字节字符的宽字符，或者多字节字符的长度不能正好为一个字节，则返回-1。
+如果 **wctob** 成功地转换宽字符，则它仅在多字节字符正好为一个字节时返回其多字节字符表示形式。 如果 **wctob** 遇到不能转换为多字节字符的宽字符，或者多字节字符的长度不能正好为一个字节，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-如果**wctob**多字节字符的*wchar* **`int`** 长度正好为一个字节，则 wctob 函数将 wchar 中包含的宽字符转换为返回值传递的相应多字节字符。
+如果多字节字符的 **`int`** 长度正好为一个字节，则 wctob 函数将 wchar 中包含的宽字符转换为返回值传递的相应多字节字符。
 
-如果**wctob**不成功且未找到相应的多字节字符，则该函数将**Errno**设置为**eilseq 且**并返回-1。
+如果 **wctob** 不成功且未找到相应的多字节字符，则该函数将 **Errno** 设置为 **eilseq 且** 并返回-1。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -74,7 +75,7 @@ int wctob(
 
 ## <a name="example"></a>示例
 
-此程序演示**wcstombs**函数的行为。
+此程序演示 **wcstombs** 函数的行为。
 
 ```C
 // crt_wctob.c
@@ -106,7 +107,7 @@ int main( void )
 Determined the corresponding multibyte character to be "A".
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>

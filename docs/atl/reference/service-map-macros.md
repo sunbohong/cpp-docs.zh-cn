@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：服务映射宏
 title: 服务映射宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-ms.openlocfilehash: 1fa163098d89dd949c17ee7cd5e4ddc46cd2a091
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 08a26ac4043b62f8377ca9b4728eb262494f1aa1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138822"
 ---
 # <a name="service-map-macros"></a>服务映射宏
 
 这些宏定义服务映射和条目。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_SERVICE_MAP](#begin_service_map)|标记 ATL 服务映射的开头。|
 |[END_SERVICE_MAP](#end_service_map)|标记 ATL 服务映射的结尾。|
@@ -37,12 +38,12 @@ ms.locfileid: "88835202"
 BEGIN_SERVICE_MAP(theClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 中指定包含服务映射的类。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用服务映射在 COM 对象上实现服务提供程序功能。 首先，必须从 [IServiceProviderImpl](../../atl/reference/iserviceproviderimpl-class.md)派生类。 有两种类型的条目：
 
@@ -68,13 +69,13 @@ END_SERVICE_MAP()
 
 ## <a name="service_entry"></a><a name="service_entry"></a> SERVICE_ENTRY
 
-指示对象支持 *SID*指定的服务 id。
+指示对象支持 *SID* 指定的服务 id。
 
 ```
 SERVICE_ENTRY( SID )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *SID*<br/>
 服务 ID。
@@ -85,13 +86,13 @@ SERVICE_ENTRY( SID )
 
 ## <a name="service_entry_chain"></a><a name="service_entry_chain"></a> SERVICE_ENTRY_CHAIN
 
-指示 [IServiceProviderImpl：： QueryService](#queryservice) 链接到 *punk*指定的对象。
+指示 [IServiceProviderImpl：： QueryService](#queryservice) 链接到 *punk* 指定的对象。
 
 ```
 SERVICE_ENTRY_CHAIN( punk )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punk*<br/>
 指向要链接到的 **IUnknown** 接口的指针。
@@ -111,7 +112,7 @@ STDMETHOD(QueryService)(
     void** ppvObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *guidService*<br/>
 中指向服务标识符 (SID) 的指针。
@@ -131,14 +132,14 @@ STDMETHOD(QueryService)(
 |S_OK|已成功创建或检索服务。|
 |E_INVALIDARG|一个或多个自变量无效。|
 |E_OUTOFMEMORY|内存不足，无法创建服务。|
-|E_UNEXPECTED|出现未知错误。|
+|E_UNEXPECTED|发生未知错误。|
 |E_NOINTERFACE|请求的接口不是此服务的一部分，或者该服务是未知的。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `QueryService` 返回指向指定服务中所请求的接口的间接指针。 调用方负责在不再需要此指针时释放它。
 
-调用时 `QueryService` ，会将服务标识符 () 并 (*guidService* *riid*) 传递接口标识符。 *GuidService*指定要访问的服务， *riid*会标识属于该服务的接口。 返回时，会收到指向接口的间接指针。
+调用时 `QueryService` ，会将服务标识符 () 并 ( *riid*) 传递接口标识符。 *GuidService* 指定要访问的服务， *riid* 会标识属于该服务的接口。 返回时，会收到指向接口的间接指针。
 
 实现接口的对象还可以实现属于其他服务的接口。 考虑以下情况：
 
@@ -150,6 +151,6 @@ STDMETHOD(QueryService)(
 
 两种不同的服务（如 SID_SMyService 和 SID_SYourService）都可以指定同一接口的使用，即使接口的实现在这两个服务之间可能没有任何共性。 这可行，因为对 `QueryService` (SID_SMyService、IID_IDispatch) 的调用返回的对象不同于 (SID_SYourService IID_IDispatch) `QueryService` 。 指定不同的服务标识符时，不会假定对象标识。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)

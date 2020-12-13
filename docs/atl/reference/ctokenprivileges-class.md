@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CTokenPrivileges 类
 title: CTokenPrivileges 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,19 +19,19 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 22953c0d2aa8c4fa7dd0b79b001e46797bd3ca25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747360"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140304"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 类
 
-此类是结构的`TOKEN_PRIVILEGES`包装器。
+此类是结构的包装器 `TOKEN_PRIVILEGES` 。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -42,72 +43,72 @@ class CTokenPrivileges
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CToken 特权：：CToken 特权](#ctokenprivileges)|构造函数。|
-|[CToken 特权：：*CToken 特权](#dtor)|析构函数。|
+|[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|构造函数。|
+|[CTokenPrivileges：： ~ CTokenPrivileges](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CToken 特权：：添加](#add)|向`CTokenPrivileges`对象添加一个或多个权限。|
-|[CToken 特权：:Delete](#delete)|从`CTokenPrivileges`对象中删除权限。|
-|[CToken 特权：:DeleteAll](#deleteall)|从`CTokenPrivileges`对象中删除所有权限。|
-|[CToken 特权：：获取计数](#getcount)|返回`CTokenPrivileges`对象中的权限条目数。|
-|[CToken 特权：：获取显示名称](#getdisplaynames)|检索对象中包含的特权的`CTokenPrivileges`显示名称。|
-|[CToken 特权：获取长度](#getlength)|返回保存`TOKEN_PRIVILEGES``CTokenPrivileges`对象表示的结构所需的缓冲区大小（以字节为单位）。|
-|[CToken 特权：：获取 Luids 和属性](#getluidsandattributes)|从`CTokenPrivileges`对象检索本地唯一标识符 （LUID） 和属性标志。|
-|[CToken 特权：获取名称和属性](#getnamesandattributes)|从`CTokenPrivileges`对象检索特权名称和属性标志。|
-|[CToken 特权：：GetPTOKEN_PRIVILEGES](#getptoken_privileges)|返回指向结构的`TOKEN_PRIVILEGES`指针。|
-|[CToken 特权：：查找特权](#lookupprivilege)|检索与给定权限名称关联的属性。|
+|[CTokenPrivileges：： Add](#add)|向对象添加一个或多个权限 `CTokenPrivileges` 。|
+|[CTokenPrivileges：:D e) ](#delete)|从对象中删除特权 `CTokenPrivileges` 。|
+|[CTokenPrivileges：:D eleteAll](#deleteall)|删除对象中的所有特权 `CTokenPrivileges` 。|
+|[CTokenPrivileges：： GetCount](#getcount)|返回对象中的特权项的数目 `CTokenPrivileges` 。|
+|[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|检索对象中包含的权限的显示名称 `CTokenPrivileges` 。|
+|[CTokenPrivileges：： GetLength](#getlength)|返回保存对象所代表的结构所需的缓冲区大小（以字节为单位） `TOKEN_PRIVILEGES` `CTokenPrivileges` 。|
+|[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|从对象中检索 (Luid) 和特性标志的本地唯一标识符 `CTokenPrivileges` 。|
+|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|从对象中检索权限名称和特性标志 `CTokenPrivileges` 。|
+|[CTokenPrivileges：： GetPTOKEN_PRIVILEGES](#getptoken_privileges)|返回指向结构的指针 `TOKEN_PRIVILEGES` 。|
+|[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|检索与给定的特权名称关联的特性。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CToken 特权：：运算符 TOKEN_PRIVILEGES |](#operator_const_token_privileges__star)|将值投射到指向结构的`TOKEN_PRIVILEGES`指针。|
-|[CToken 特权：：运算符 |](#operator_eq)|赋值运算符。|
+|[CTokenPrivileges：： operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|将值强制转换为指向结构的指针 `TOKEN_PRIVILEGES` 。|
+|[CTokenPrivileges：： operator =](#operator_eq)|赋值运算符。|
 
 ## <a name="remarks"></a>备注
 
-[访问令牌](/windows/win32/SecAuthZ/access-tokens)是描述进程或线程的安全上下文并分配给登录到 Windows 系统的每个用户的对象。
+[访问令牌](/windows/win32/SecAuthZ/access-tokens)是一个对象，该对象描述进程或线程的安全上下文，并分配给登录到 Windows 系统的每个用户。
 
-访问令牌用于描述授予每个用户的各种安全特权。 特权由称为本地唯一标识符[（LUID](/windows/win32/api/winnt/ns-winnt-luid)） 的 64 位数字和描述符字符串组成。
+访问令牌用于描述授予每个用户的各种安全权限。 权限由64位数字组成，该数字称为本地唯一标识符 ( [LUID](/windows/win32/api/winnt/ns-winnt-luid)) 和描述符字符串。
 
-类`CTokenPrivileges`是[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的包装器，包含 0 或更多权限。 可以使用提供的类方法添加、删除或查询权限。
+`CTokenPrivileges`类是[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的包装，包含0个或多个权限。 可以使用提供的类方法添加、删除或查询权限。
 
-有关 Windows 中访问控制模型的简介，请参阅 Windows SDK 中[的访问控制](/windows/win32/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介，请参阅 Windows SDK 中的 [访问控制](/windows/win32/SecAuthZ/access-control) 。
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="ctokenprivilegesadd"></a><a name="add"></a>CToken 特权：：添加
+## <a name="ctokenprivilegesadd"></a><a name="add"></a> CTokenPrivileges：： Add
 
-向`CTokenPrivileges`访问令牌对象添加一个或多个权限。
+将一个或多个权限添加到 `CTokenPrivileges` 访问令牌对象中。
 
 ```
 bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);
 void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*psz特权*<br/>
-指向 null 端接字符串的指针，该字符串指定在 WINNT 中定义的特权的名称。H 头文件。
+*pszPrivilege*<br/>
+指向以 null 结尾的字符串的指针，该字符串指定了在 WINNT 中定义的特权的名称。H 标头文件。
 
-*b 启用*<br/>
-如果为 true，则启用该权限。 如果为 false，则禁用该特权。
+*bEnable*<br/>
+如果为 true，则启用特权。 如果为 false，则禁用特权。
 
-*r特权*<br/>
-对[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的引用。 特权和属性从此结构复制并添加到`CTokenPrivileges`对象中。
+*rPrivileges*<br/>
+对 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构的引用。 将从该结构中复制权限和属性，并将其添加到 `CTokenPrivileges` 对象。
 
 ### <a name="return-value"></a>返回值
 
-如果成功添加权限，此方法的第一种形式将返回 true，否则为 false。
+如果成功添加了权限，则此方法的第一种形式将返回 true，否则返回 false。
 
-## <a name="ctokenprivilegesctokenprivileges"></a><a name="ctokenprivileges"></a>CToken 特权：：CToken 特权
+## <a name="ctokenprivilegesctokenprivileges"></a><a name="ctokenprivileges"></a> CTokenPrivileges::CTokenPrivileges
 
 构造函数。
 
@@ -117,19 +118,19 @@ CTokenPrivileges(const CTokenPrivileges& rhs) throw(... );
 CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-rhs**<br/>
-要`CTokenPrivileges`分配给新对象的对象。
+*rhs*<br/>
+`CTokenPrivileges`要分配给新对象的对象。
 
-*r特权*<br/>
-要[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)分配给新`CTokenPrivileges`对象的TOKEN_PRIVILEGES结构。
+*rPrivileges*<br/>
+要分配给新对象的 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构 `CTokenPrivileges` 。
 
 ### <a name="remarks"></a>备注
 
-可以选择`CTokenPrivileges`使用`TOKEN_PRIVILEGES`结构或以前定义`CTokenPrivileges`的对象创建该对象。
+`CTokenPrivileges`可以选择使用 `TOKEN_PRIVILEGES` 结构或以前定义的对象来创建对象 `CTokenPrivileges` 。
 
-## <a name="ctokenprivilegesctokenprivileges"></a><a name="dtor"></a>CToken 特权：：*CToken 特权
+## <a name="ctokenprivilegesctokenprivileges"></a><a name="dtor"></a> CTokenPrivileges：： ~ CTokenPrivileges
 
 析构函数。
 
@@ -139,32 +140,32 @@ virtual ~CTokenPrivileges() throw();
 
 ### <a name="remarks"></a>备注
 
-析构函数释放所有分配的资源。
+析构函数释放所有已分配的资源。
 
-## <a name="ctokenprivilegesdelete"></a><a name="delete"></a>CToken 特权：:Delete
+## <a name="ctokenprivilegesdelete"></a><a name="delete"></a> CTokenPrivileges：:D e) 
 
-从`CTokenPrivileges`访问令牌对象中删除权限。
+从 `CTokenPrivileges` 访问令牌对象中删除特权。
 
 ```
 bool Delete(LPCTSTR pszPrivilege) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*psz特权*<br/>
-指向 null 端接字符串的指针，该字符串指定在 WINNT 中定义的特权的名称。H 头文件。 例如，此参数可以指定常量SE_SECURITY_NAME或其相应的字符串"SeSecurity特权"。
+*pszPrivilege*<br/>
+指向以 null 结尾的字符串的指针，该字符串指定了在 WINNT 中定义的特权的名称。H 标头文件。 例如，此参数可以指定常量 SE_SECURITY_NAME 或其对应的字符串 "SeSecurityPrivilege"。
 
 ### <a name="return-value"></a>返回值
 
-如果成功删除权限，则返回 true，否则为 false。
+如果已成功删除特权，则返回 true，否则返回 false。
 
 ### <a name="remarks"></a>备注
 
 此方法可用作创建受限令牌的工具。
 
-## <a name="ctokenprivilegesdeleteall"></a><a name="deleteall"></a>CToken 特权：:DeleteAll
+## <a name="ctokenprivilegesdeleteall"></a><a name="deleteall"></a> CTokenPrivileges：:D eleteAll
 
-从`CTokenPrivileges`访问令牌对象中删除所有权限。
+删除访问令牌对象中的所有特权 `CTokenPrivileges` 。
 
 ```cpp
 void DeleteAll() throw();
@@ -172,30 +173,30 @@ void DeleteAll() throw();
 
 ### <a name="remarks"></a>备注
 
-删除`CTokenPrivileges`访问令牌对象中包含的所有权限。
+删除访问令牌对象中包含的所有特权 `CTokenPrivileges` 。
 
-## <a name="ctokenprivilegesgetdisplaynames"></a><a name="getdisplaynames"></a>CToken 特权：：获取显示名称
+## <a name="ctokenprivilegesgetdisplaynames"></a><a name="getdisplaynames"></a> CTokenPrivileges::GetDisplayNames
 
-检索访问令牌对象中包含的特权的`CTokenPrivileges`显示名称。
+检索访问令牌对象中包含的权限的显示名称 `CTokenPrivileges` 。
 
 ```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p 显示名称*<br/>
-指向 `CString` 对象的数组的指针。 `CNames`定义为类型def： `CTokenPrivileges::CAtlArray<CString>`。
+*pDisplayNames*<br/>
+指向 `CString` 对象的数组的指针。 `CNames` 定义为 typedef： `CTokenPrivileges::CAtlArray<CString>` 。
 
 ### <a name="remarks"></a>备注
 
-参数`pDisplayNames`是指向对象数组的`CString`指针，该数组将接收与对象中包含的特权对应的`CTokenPrivileges`显示名称。 此方法仅检索 WINNT"定义权限"部分中指定的权限的显示名称。H。
+参数 `pDisplayNames` 是指向对象数组的指针， `CString` 这些对象将接收与对象中包含的权限相对应的显示名称 `CTokenPrivileges` 。 此方法仅检索在 WINNT 的 "定义的权限" 部分中指定的特权的显示名称。
 
-此方法检索可显示的名称：例如，如果属性名称SE_REMOTE_SHUTDOWN_NAME，则可显示的名称为"从远程系统强制关闭"。 要获取系统名称，请使用[Ctoken 特权：：获取名称和属性](#getnamesandattributes)。
+此方法检索可显示名称：例如，如果 SE_REMOTE_SHUTDOWN_NAME 属性名称，则可显示名称为 "从远程系统强制关机"。 若要获取系统名称，请使用 [CTokenPrivileges：： GetNamesAndAttributes](#getnamesandattributes)。
 
-## <a name="ctokenprivilegesgetcount"></a><a name="getcount"></a>CToken 特权：：获取计数
+## <a name="ctokenprivilegesgetcount"></a><a name="getcount"></a> CTokenPrivileges：： GetCount
 
-返回`CTokenPrivileges`对象中的权限条目数。
+返回对象中的特权项的数目 `CTokenPrivileges` 。
 
 ```
 UINT GetCount() const throw();
@@ -203,11 +204,11 @@ UINT GetCount() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`CTokenPrivileges`对象中包含的权限数。
+返回对象中包含的特权的数目 `CTokenPrivileges` 。
 
-## <a name="ctokenprivilegesgetlength"></a><a name="getlength"></a>CToken 特权：获取长度
+## <a name="ctokenprivilegesgetlength"></a><a name="getlength"></a> CTokenPrivileges：： GetLength
 
-返回`CTokenPrivileges`对象的长度。
+返回对象的长度 `CTokenPrivileges` 。
 
 ```
 UINT GetLength() const throw();
@@ -215,11 +216,11 @@ UINT GetLength() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回保存`TOKEN_PRIVILEGES``CTokenPrivileges`由对象表示的结构所需的字节数，包括它包含的所有特权条目。
+返回保存对象所代表的结构所需的字节数 `TOKEN_PRIVILEGES` `CTokenPrivileges` ，包括它包含的所有权限项。
 
-## <a name="ctokenprivilegesgetluidsandattributes"></a><a name="getluidsandattributes"></a>CToken 特权：：获取 Luids 和属性
+## <a name="ctokenprivilegesgetluidsandattributes"></a><a name="getluidsandattributes"></a> CTokenPrivileges::GetLuidsAndAttributes
 
-从`CTokenPrivileges`对象检索本地唯一标识符 （LUID） 和属性标志。
+从对象中检索 (Luid) 和特性标志的本地唯一标识符 `CTokenPrivileges` 。
 
 ```cpp
 void GetLuidsAndAttributes(
@@ -227,21 +228,21 @@ void GetLuidsAndAttributes(
     CAttributes* pAttributes = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p特权*<br/>
-指向[LUID](/windows/win32/api/winnt/ns-winnt-luid)对象的数组。 `CLUIDArray`是定义为`CAtlArray<LUID> CLUIDArray`的类型def。
+*pPrivileges*<br/>
+指向 [LUID](/windows/win32/api/winnt/ns-winnt-luid) 对象的数组的指针。 `CLUIDArray` 是一个定义为的 typedef `CAtlArray<LUID> CLUIDArray` 。
 
 *pAttributes*<br/>
-指向 DWORD 对象的数组。 如果省略此参数或 NULL，则不检索属性。 `CAttributes`是定义为`CAtlArray <DWORD> CAttributes`的类型def。
+指向 DWORD 对象的数组的指针。 如果省略此参数或为 NULL，则不检索特性。 `CAttributes` 是一个定义为的 typedef `CAtlArray <DWORD> CAttributes` 。
 
 ### <a name="remarks"></a>备注
 
-此方法将枚举`CTokenPrivileges`访问令牌对象中包含的所有权限，并将单独的 LUID 和（可选）属性标志放入数组对象中。
+此方法将枚举访问令牌对象中包含的所有权限 `CTokenPrivileges` ，并将各 luid 和 (（可选）) 特性标志合并为数组对象。
 
-## <a name="ctokenprivilegesgetnamesandattributes"></a><a name="getnamesandattributes"></a>CToken 特权：获取名称和属性
+## <a name="ctokenprivilegesgetnamesandattributes"></a><a name="getnamesandattributes"></a> CTokenPrivileges::GetNamesAndAttributes
 
-从`CTokenPrivileges`对象检索名称和属性标志。
+从对象中检索名称和特性标志 `CTokenPrivileges` 。
 
 ```cpp
 void GetNamesAndAttributes(
@@ -249,23 +250,23 @@ void GetNamesAndAttributes(
     CAttributes* pAttributes = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p名称*<br/>
-指向对象数组的`CString`指针。 `CNames`是定义为`CAtlArray <CString> CNames`的类型def。
+*pNames*<br/>
+指向对象的数组的指针 `CString` 。 `CNames` 是一个定义为的 typedef `CAtlArray <CString> CNames` 。
 
 *pAttributes*<br/>
-指向 DWORD 对象的数组。 如果省略此参数或 NULL，则不检索属性。 `CAttributes`是定义为`CAtlArray <DWORD> CAttributes`的类型def。
+指向 DWORD 对象的数组的指针。 如果省略此参数或为 NULL，则不检索特性。 `CAttributes` 是一个定义为的 typedef `CAtlArray <DWORD> CAttributes` 。
 
 ### <a name="remarks"></a>备注
 
-此方法将枚举`CTokenPrivileges`对象中包含的所有权限，将名称和（可选）属性标志放入数组对象中。
+此方法将枚举对象中包含的所有权限 `CTokenPrivileges` ，并将该名称和 (（可选）) 特性标志写入数组对象。
 
-此方法检索属性名称，而不是可显示的名称：例如，如果属性名称SE_REMOTE_SHUTDOWN_NAME，则系统名称为"SeRemote 关闭权限"。 要获取可显示名称，请使用方法[CToken 特权：：获取显示名称](#getdisplaynames)。
+此方法检索属性名称，而不是可显示名称：例如，如果 SE_REMOTE_SHUTDOWN_NAME 属性名称，则系统名称为 "SeRemoteShutdownPrivilege"。 若要获取可显示名称，请使用方法 [CTokenPrivileges：： GetDisplayNames](#getdisplaynames)。
 
-## <a name="ctokenprivilegesgetptoken_privileges"></a><a name="getptoken_privileges"></a>CToken 特权：：GetPTOKEN_PRIVILEGES
+## <a name="ctokenprivilegesgetptoken_privileges"></a><a name="getptoken_privileges"></a> CTokenPrivileges：： GetPTOKEN_PRIVILEGES
 
-返回指向结构的`TOKEN_PRIVILEGES`指针。
+返回指向结构的指针 `TOKEN_PRIVILEGES` 。
 
 ```
 const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
@@ -273,11 +274,11 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 
 ### <a name="return-value"></a>返回值
 
-返回指向[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的指针。
+返回指向 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构的指针。
 
-## <a name="ctokenprivilegeslookupprivilege"></a><a name="lookupprivilege"></a>CToken 特权：：查找特权
+## <a name="ctokenprivilegeslookupprivilege"></a><a name="lookupprivilege"></a> CTokenPrivileges::LookupPrivilege
 
-检索与给定权限名称关联的属性。
+检索与给定的特权名称关联的特性。
 
 ```
 bool LookupPrivilege(
@@ -285,19 +286,19 @@ bool LookupPrivilege(
     DWORD* pdwAttributes = NULL) const throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*psz特权*<br/>
-指向 null 端接字符串的指针，该字符串指定在 WINNT 中定义的特权的名称。H 头文件。 例如，此参数可以指定常量SE_SECURITY_NAME或其相应的字符串"SeSecurity特权"。
+*pszPrivilege*<br/>
+指向以 null 结尾的字符串的指针，该字符串指定了在 WINNT 中定义的特权的名称。H 标头文件。 例如，此参数可以指定常量 SE_SECURITY_NAME 或其对应的字符串 "SeSecurityPrivilege"。
 
 *pdwAttributes*<br/>
-指向接收属性的变量的指针。
+指向接收特性的变量的指针。
 
 ### <a name="return-value"></a>返回值
 
-如果成功检索属性，则返回 true，否则为 false。
+如果成功检索属性，则返回 true，否则返回 false。
 
-## <a name="ctokenprivilegesoperator-"></a><a name="operator_eq"></a>CToken 特权：：运算符 |
+## <a name="ctokenprivilegesoperator-"></a><a name="operator_eq"></a> CTokenPrivileges：： operator =
 
 赋值运算符。
 
@@ -306,21 +307,21 @@ CTokenPrivileges& operator= (const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*r特权*<br/>
-要[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)分配给`CTokenPrivileges`对象的TOKEN_PRIVILEGES结构。
+*rPrivileges*<br/>
+要分配给对象的 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构 `CTokenPrivileges` 。
 
-rhs**<br/>
-要`CTokenPrivileges`分配给对象的对象。
+*rhs*<br/>
+`CTokenPrivileges`要分配给对象的对象。
 
 ### <a name="return-value"></a>返回值
 
-返回更新`CTokenPrivileges`的对象。
+返回已更新的 `CTokenPrivileges` 对象。
 
-## <a name="ctokenprivilegesoperator-const-token_privileges-"></a><a name="operator_const_token_privileges__star"></a>CToken 特权：：运算符 TOKEN_PRIVILEGES\*
+## <a name="ctokenprivilegesoperator-const-token_privileges-"></a><a name="operator_const_token_privileges__star"></a> CTokenPrivileges：： operator const TOKEN_PRIVILEGES \*
 
-将值投射到指向结构的`TOKEN_PRIVILEGES`指针。
+将值强制转换为指向结构的指针 `TOKEN_PRIVILEGES` 。
 
 ```
 operator const TOKEN_PRIVILEGES *() const throw(...);
@@ -328,13 +329,13 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ### <a name="remarks"></a>备注
 
-将值投射到指向[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)结构的指针。
+将一个值转换为指向 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 结构的指针。
 
 ## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>
-[卢ID](/windows/win32/api/winnt/ns-winnt-luid)<br/>
+[LUID](/windows/win32/api/winnt/ns-winnt-luid)<br/>
 [LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
-[安全全局功能](../../atl/reference/security-global-functions.md)
+[安全全局函数](../../atl/reference/security-global-functions.md)

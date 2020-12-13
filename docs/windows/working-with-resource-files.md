@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用资源文件
 title: 使用资源文件 (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 3e387a1cefb6577760a34c7957d4f5019b1d49ef
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: c8e1a891839ee19201a98f9beb5e538e24c1d3f0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135793"
 ---
 # <a name="working-with-resource-files"></a>使用资源文件
 
@@ -30,7 +31,7 @@ ms.locfileid: "91502906"
 可以向项目添加新资源并使用适当的资源编辑器修改这些资源。 大多数 Visual C++ 向导自动为项目生成 .rc 文件。
 
 > [!NOTE]
-> **资源编辑器**和**资源视图**在 Express 版本中不可用。
+> **资源编辑器** 和 **资源视图** 在 Express 版本中不可用。
 
 若要手动将资源文件添加到托管项目，请参阅 [创建桌面应用的资源文件](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 本文包括如何访问资源、显示静态资源和将资源字符串分配给属性。
 

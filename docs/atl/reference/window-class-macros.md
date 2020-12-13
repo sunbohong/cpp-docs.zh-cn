@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：窗口类宏
 title: 窗口类宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 - atlwin/ATL::DECLARE_WND_SUPERCLASS
 - atlwin/ATL::DECLARE_WND_CLASS_EX
 ms.assetid: ce18681a-2bab-4453-9895-0f3ea47c2b24
-ms.openlocfilehash: ca19eba1632ef3754b704c82ad5a872160ae0c91
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eb1abcdfea2f3f7e3a8859473d3fabe734906afe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138680"
 ---
 # <a name="window-class-macros"></a>窗口类宏
 
 这些宏定义了 window 类实用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DECLARE_WND_CLASS](#declare_wnd_class)|允许您指定新窗口类的名称。|
 |[DECLARE_WND_CLASS2](#declare_wnd_class2)| (Visual Studio 2017) ，你可以指定新窗口类的名称以及新类将使用的窗口过程的封闭类。|
@@ -36,12 +37,12 @@ ms.locfileid: "88834461"
 DECLARE_WND_CLASS( WndClassName )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
 中新窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果使用/permissive-编译器选项，则 DECLARE_WND_CLASS 将导致编译器错误;改用 DECLARE_WND_CLASS2。
 
@@ -71,7 +72,7 @@ DECLARE_WND_CLASS 还指定了默认窗口的背景色。 使用 [DECLARE_WND_CL
 DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
 中新窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
@@ -79,7 +80,7 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 *EnclosingClass*<br/>
 中括起新窗口类的窗口类的名称。 不能为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果使用/permissive-选项，则 DECLARE_WND_CLASS 会导致编译错误，因为它包含依赖名称。 DECLARE_WND_CLASS2 要求你显式命名在其中使用此宏的类，而不会导致/permissive-标志下的错误。
 否则，此宏等同于 [DECLARE_WND_CLASS](#declare_wnd_class)。
@@ -92,15 +93,15 @@ DECLARE_WND_CLASS2( WndClassName, EnclosingClass )
 DECLARE_WND_SUPERCLASS( WndClassName, OrigWndClassName )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
-中将 *OrigWndClassName*的超类的窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
+中将 *OrigWndClassName* 的超类的窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
 
 *OrigWndClassName*<br/>
 中现有窗口类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏允许您指定将向现有窗口类超类的窗口类的名称。 [CWndClassInfo](cwndclassinfo-class.md) 管理超类的信息。
 
@@ -122,7 +123,7 @@ DECLARE_WND_SUPERCLASS 实现以下静态函数：
 DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *WndClassName*<br/>
 中新窗口类的名称。 如果为 NULL，则 ATL 将生成一个窗口类名。
@@ -133,7 +134,7 @@ style<br/>
 *背景*<br/>
 中窗口的背景色。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏允许您指定新窗口类的类参数，该窗口类的信息将由 [CWndClassInfo](cwndclassinfo-class.md)管理。 DECLARE_WND_CLASS_EX 通过实现以下静态函数来定义新的窗口类：
 
@@ -141,6 +142,6 @@ style<br/>
 
 如果要使用默认样式和背景色，请使用 [DECLARE_WND_CLASS](#declare_wnd_class) 宏。 有关在 ATL 中使用 windows 的详细信息，请参阅 [Atl 窗口类](../../atl/atl-window-classes.md)一文。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](atl-macros.md)
