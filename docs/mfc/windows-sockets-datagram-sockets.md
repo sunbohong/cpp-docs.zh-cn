@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： Windows 套接字：数据报套接字
 title: Windows 套接字：数据报套接字
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - Windows Sockets [MFC], datagram
 - sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
-ms.openlocfilehash: 14d33ece66d902b5705e573e9863ea78fff9737f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de374d6e96348504d4b1fc126c1607c029cd6c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132972"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows 套接字：数据报套接字
 
-本文介绍数据报套接字，可用的两个 Windows 套接字类型之一。 (另一种类型是[流套接字](../mfc/windows-sockets-stream-sockets.md)。)
+本文介绍了数据报套接字，其中一种是可用的两种 Windows 套接字类型。  (另一种类型是 [流套接字](../mfc/windows-sockets-stream-sockets.md)。 ) 
 
-数据报套接字支持双向数据流不保证按顺序和不重复。 数据报也不保证能够可靠;它们可能无法到达。 数据报数据可能会到达顺序并且可能会重复，但前提是接收方的内部大小限制比小的记录将会保留记录边界的数据中。 你负责管理序列化和可靠性。 （可靠性往往是本地区域网络 [LAN] 上很好但更少，在广域网络 [WAN]，如 Internet）
+数据报套接字支持双向数据流，此数据流不保证得到排序或无重复。 数据报也不一定是可靠的;它们可能无法送达。 数据报数据可能不按顺序到达并可能重复，但只要记录小于接收方的内部大小限制，就会保留数据中的记录边界。 你负责管理顺序和可靠性。  (的可靠性往往在本地网络 [LAN] 上很好，但在广域网 [WAN] （如 Internet）上更少。 ) 
 
-数据报"无连接"，即建立显式连接;将数据报消息发送到指定套接字和可以从指定套接字接收消息。
+数据报为 "无连接"，即未建立显式连接;将数据报消息发送到指定的套接字，可以从指定的套接字接收消息。
 
-数据报套接字的示例是保持系统时钟同步在网络的应用程序。 这说明了一项额外功能的一些设置中的数据报套接字： 将消息广播到大量的网络地址。
+数据报套接字的一个示例是使网络上的系统时钟保持同步的应用程序。 这说明了至少部分设置中的数据报套接字的附加功能：将消息广播到大量网络地址。
 
-数据报套接字要优于面向记录的数据的流套接字。 有关数据报套接字的详细信息，请参阅 Windows SDK 中提供的 Windows 套接字规范。
+数据报套接字优于面向记录的数据的流套接字。 有关数据报套接字的详细信息，请参阅 Windows SDK 中提供的 Windows 套接字规范。
 
 ## <a name="see-also"></a>请参阅
 
