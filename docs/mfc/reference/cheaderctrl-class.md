@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CHeaderCtrl 类
 title: CHeaderCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -64,12 +65,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: f225d406ab1560b4308a468ebd71b3dfd88cfa2a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9fe17b6c2553526af40ead253cd7c03fa6b57612
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184005"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 类
 
@@ -85,13 +86,13 @@ class CHeaderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CHeaderCtrl：： CHeaderCtrl](#cheaderctrl)|构造 `CHeaderCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CHeaderCtrl：： ClearAllFilters](#clearallfilters)|清除标头控件的所有筛选器。|
 |[CHeaderCtrl：： ClearFilter](#clearfilter)|清除标头控件的筛选器。|
@@ -196,7 +197,7 @@ BOOL ClearAllFilters();
 BOOL ClearFilter(int nColumn);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
 指示要清除的筛选器的列值。
@@ -225,7 +226,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*<br/>
 指定标头控件的样式。 有关标头控件样式的说明，请参阅 Windows SDK 中的 [标题控件样式](/windows/win32/Controls/header-control-styles) 。
@@ -292,16 +293,16 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*<br/>
-指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
+指定正在创建的控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的 *dwExStyle* 参数。
 
 *dwStyle*<br/>
 标头控件的样式。 有关标头控件样式的说明，请参阅 Windows SDK 中的 [标题控件样式](/windows/win32/Controls/header-control-styles) 。 有关其他样式的列表，请参阅 [创建](#create) 。
 
 *rect*<br/>
-对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd*的工作区坐标表示）。
+对 [矩形](/windows/win32/api/windef/ns-windef-rect) 结构的引用，该结构描述要创建的窗口的大小和位置（以 *pParentWnd* 的工作区坐标表示）。
 
 *pParentWnd*<br/>
 指向作为控件的父级的窗口的指针。
@@ -325,7 +326,7 @@ virtual BOOL CreateEx(
 CImageList* CreateDragImage(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 标头控件中项的从零开始的索引。 为此项分配的图像是透明图像的基础。
@@ -348,7 +349,7 @@ CImageList* CreateDragImage(int nIndex);
 BOOL DeleteItem(int nPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 指定要删除的项的从零开始的索引。
@@ -369,7 +370,7 @@ BOOL DeleteItem(int nPos);
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpDrawItemStruct*<br/>
 指向 [DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 结构的指针，该结构描述要绘制的项。
@@ -396,7 +397,7 @@ BOOL EditFilter(
     BOOL bDiscardChanges);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nColumn*<br/>
 要编辑的列。
@@ -496,7 +497,7 @@ BOOL GetItem(
     HDITEM* pHeaderItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 指定要检索的项的从零开始的索引。
@@ -538,7 +539,7 @@ BOOL GetItemDropDownRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iItem*\
 中HDF_SPLITBUTTON 其样式的标头项的从零开始的索引。 有关详细信息，请参阅 `fmt` [HDITEM](/windows/win32/api/commctrl/ns-commctrl-hditemw) 结构的成员。
@@ -576,7 +577,7 @@ BOOL GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 标头控件项的从零开始的索引。
@@ -602,7 +603,7 @@ BOOL GetOrderArray(
     int iCount);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *piArray*<br/>
 指向缓冲区的地址的指针，该缓冲区接收标头控件中项的索引值（按照它们从左到右的显示顺序）。
@@ -630,7 +631,7 @@ BOOL GetOrderArray(
 BOOL GetOverflowRect(LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*\
 弄一个指针，指向用于接收边框信息的 [RECT](/windows/win32/api/windef/ns-windef-rect) 结构。
@@ -665,7 +666,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 int HitTest(LPHDHITTESTINFO* phdhti);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *phdhti*\
 [in，out]指向 [HDHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-hdhittestinfo) 结构的指针，该结构指定测试和接收测试结果的点。
@@ -700,7 +701,7 @@ int InsertItem(
     HDITEM* phdi);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 要插入的项的索引（索引从零开始）。 如果值为零，则在标头控件的开头插入该项。 如果该值大于最大值，则会在标头控件的末尾插入该项。
@@ -724,7 +725,7 @@ int InsertItem(
 BOOL Layout(HDLAYOUT* pHeaderLayout);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pHeaderLayout*<br/>
 指向 [HDLAYOUT](/windows/win32/api/commctrl/ns-commctrl-hdlayout) 结构的指针，该结构包含用于设置标头控件的大小和位置的信息。
@@ -749,7 +750,7 @@ BOOL Layout(HDLAYOUT* pHeaderLayout);
 int OrderToIndex(int nOrder) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOrder*<br/>
 项在标题控件中显示的从零开始的顺序，从左到右。
@@ -770,7 +771,7 @@ int OrderToIndex(int nOrder) const;
 int SetBitmapMargin(int nWidth);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nWidth*<br/>
 现有标题控件内的位图周围的边距的宽度（以像素为单位指定）。
@@ -795,7 +796,7 @@ int SetBitmapMargin(int nWidth);
 int SetFilterChangeTimeout(DWORD dwTimeOut);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwTimeOut*<br/>
 超时值（以毫秒为单位）。
@@ -820,7 +821,7 @@ int SetFilterChangeTimeout(DWORD dwTimeOut);
 BOOL SetFocusedItem(int iItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iItem*\
 中标头项的从零开始的索引。
@@ -854,7 +855,7 @@ int SetHotDivider(CPoint pt);
 int SetHotDivider(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pt*<br/>
 指针的位置。 标头控件基于指针的位置突出显示相应的分隔线。
@@ -882,7 +883,7 @@ int SetHotDivider(int nIndex);
 CImageList* SetImageList(CImageList* pImageList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pImageList*<br/>
 指向对象的指针， `CImageList` 该对象包含要分配给标头控件的图像列表。
@@ -909,7 +910,7 @@ BOOL SetItem(
     HDITEM* pHeaderItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nPos*<br/>
 要操作的项的从零开始的索引。
@@ -935,7 +936,7 @@ BOOL SetOrderArray(
     LPINT piArray);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iCount*<br/>
 标头控件项的数目。
@@ -955,7 +956,7 @@ BOOL SetOrderArray(
 
   请参阅 [CHeaderCtrl：： GetOrderArray](#getorderarray)的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：记录集：创建和关闭记录集 (ODBC) '
 title: 记录集：创建和关闭记录集 (ODBC)
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 1ff6f3050ff8ca0be746b91216300632323dcd85
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8c79afe483ab9fcd03b2102ec93d6574092acf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216513"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186098"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>记录集：创建和关闭记录集 (ODBC)
 
@@ -59,7 +60,7 @@ ms.locfileid: "87216513"
 
    默认情况下，记录集使用存储在 `CRecordset` 数据成员 `m_nDefaultType` 中的默认类型。 向导将编写代码以将 `m_nDefaultType` 初始化为你在向导中选择的记录集类型。 如果不接受此默认设置，可以替换另一个记录集类型。
 
-- 指定字符串以替换记录集构造的默认 SQL SELECT 语句****。
+- 指定字符串以替换记录集构造的默认 SQL SELECT 语句。
 
 - 指定记录集是只读的还是仅追加的。 默认情况下，记录集允许完全更新，但可以将此限制为仅添加新记录，或者可以禁止所有更新。
 
@@ -74,10 +75,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-调用 `Open` 后，使用对象的成员函数和数据成员来处理记录。 在某些情况下，你可能需要再次查询或刷新记录集来包含数据源上发生的更改。 有关详细信息，请参阅[记录集：重新查询记录集（ODBC）](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
+调用 `Open` 后，使用对象的成员函数和数据成员来处理记录。 在某些情况下，你可能需要再次查询或刷新记录集来包含数据源上发生的更改。 有关详细信息，请参阅 [记录集： (ODBC) 中重新查询记录集 ](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。
 
 > [!TIP]
-> 你在开发期间使用的连接字符串可能与最终用户所需的连接字符串不同。 有关在这方面通用化应用程序的建议，请参阅[数据源：管理连接（ODBC）](../../data/odbc/data-source-managing-connections-odbc.md)。
+> 你在开发期间使用的连接字符串可能与最终用户所需的连接字符串不同。 有关在这方面通用化应用程序的建议，请参阅 [数据源：管理连接 (ODBC) ](../../data/odbc/data-source-managing-connections-odbc.md)。
 
 ## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> 设置记录集选项
 
@@ -110,8 +111,8 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 `Close` 释放记录集的 `HSTMT` 句柄。 它不会销毁 C++ 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [记录集：滚动 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[记录集：添加、更新和删除记录（ODBC）](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[记录集： (ODBC) 添加、更新和删除记录 ](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

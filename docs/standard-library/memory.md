@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 内存&gt;
 title: '&lt;memory&gt;'
 ms.date: 08/04/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 0e3ce4a4411bd6d4c352802a96c97e93c66491df
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27aea86d8329ee37c3aa1409b7dde7091cfe43bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183771"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -28,7 +29,7 @@ ms.locfileid: "88836460"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[addressof](../standard-library/memory-functions.md#addressof)|获取对象的实际地址。|
 |[align](../standard-library/memory-functions.md#align)|根据所提供的对齐和起始地址，返回指向给定大小范围的指针。|
@@ -77,7 +78,7 @@ ms.locfileid: "88836460"
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator！ =](../standard-library/memory-operators.md#op_neq)|测试指定类的分配器对象之间是否不相等。|
 |[operator = =](../standard-library/memory-operators.md#op_eq_eq)|测试指定类的分配器对象之间是否相等。|
@@ -89,11 +90,11 @@ ms.locfileid: "88836460"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
-|[分配器](../standard-library/allocator-class.md)|类模板描述了一个对象，该对象 **管理类型为**的对象数组的存储分配和释放。|
+|[器](../standard-library/allocator-class.md)|类模板描述了一个对象，该对象 **管理类型为** 的对象数组的存储分配和释放。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|描述一个对象，用于确定支持分配器的容器所需要的全部信息。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|类模板描述了一个对象，该对象存储 **指向类型为的已**分配对象的指针 <strong>\*</strong> ，该指针可确保在销毁 auto_ptr 时，将删除它所指向的对象。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|类模板描述了一个对象，该对象存储 **指向类型为的已** 分配对象的指针 <strong>\*</strong> ，该指针可确保在销毁 auto_ptr 时，将删除它所指向的对象。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|报告不良的 weak_ptr 异常。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|帮助生成一个 `shared_ptr`。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|提供类型的对象所需的信息， `allocator_traits` 以描述带有指针类型的分配器 `Ptr` 。|
@@ -102,9 +103,9 @@ ms.locfileid: "88836460"
 |[unique_ptr](../standard-library/unique-ptr-class.md)|存储指向拥有的对象的指针。 指针不归任何其他 `unique_ptr` 所拥有。 当所有者被销毁后，`unique_ptr` 也会被销毁。|
 |[weak_ptr](../standard-library/weak-ptr-class.md)|回绕弱链接指针。|
 
-### <a name="structures"></a>结构
+### <a name="structures"></a>結構
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
@@ -114,11 +115,11 @@ ms.locfileid: "88836460"
 
 ### <a name="specializations"></a>专用化
 
-|名称|说明|
+|名称|描述|
 |-|-|
-|[分配器\<void>](../standard-library/allocator-void-class.md)|类模板分配器到类型的专用化 **`void`** ，仅定义在此专用化上下文中有意义的成员类型。|
+|[器\<void>](../standard-library/allocator-void-class.md)|类模板分配器到类型的专用化 **`void`** ，仅定义在此专用化上下文中有意义的成员类型。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

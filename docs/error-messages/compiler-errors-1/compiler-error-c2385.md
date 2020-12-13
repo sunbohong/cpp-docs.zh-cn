@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2385
 title: 编译器错误 C2385
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2385
 ms.assetid: 6d3dd1f2-e56d-49d7-865c-6a9acdb17417
-ms.openlocfilehash: 1247e4da05d65677f602a82591efd3e0c0c374e0
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 7978af162045d52e187e41999c55dcad716baeb1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74745247"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185903"
 ---
 # <a name="compiler-error-c2385"></a>编译器错误 C2385
 
 对 "member" 的访问不明确
 
-成员可以从多个对象派生（它继承自多个对象）。  若要解决此错误，
+成员可以从多个对象派生 (它继承自多个) 的对象。  若要解决此错误，
 
 - 提供强制转换，使成员明确。
 

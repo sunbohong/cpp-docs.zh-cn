@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： wstring_convert 类
 title: wstring_convert 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 01754ca4239d89a64fdb67a85e82b90c5a24872d
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 53c3e311967295294d158bb0342d365d45f5e031
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560747"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187736"
 ---
 # <a name="wstring_convert-class"></a>wstring_convert 类
 
@@ -40,7 +41,7 @@ template <class Codecvt, class Elem = wchar_t>
 class wstring_convert
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Codecvt*\
 表示转换对象的[区域设置](../standard-library/locale-class.md)方面。
@@ -86,7 +87,7 @@ class wstring_convert
 |[from_bytes](#from_bytes)|将字节字符串转换为宽字符串。|
 |[to_bytes](#to_bytes)|将宽字符串转换为字节字符串。|
 |[converted](#converted)|返回成功转换数。|
-|State|返回表示转换状态的对象。|
+|[state](#state)|返回表示转换状态的对象。|
 
 ## <a name="requirements"></a>要求
 
@@ -133,7 +134,7 @@ wide_string from_bytes(const byte_string& Bstr);
 wide_string from_bytes(const char* first, const char* last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位*\
 要转换的单元素字节序列。
@@ -209,7 +210,7 @@ byte_string to_bytes(const wide_string& Wstr);
 byte_string to_bytes(const Elem* first, const Elem* last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Char*\
 要转换的宽字符。
@@ -254,7 +255,7 @@ wstring_convert(Codecvt *Pcvt, state_type _State);
 wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *\*Pcvt*\
 用于执行转换的 `Codecvt` 类型的对象。
@@ -270,4 +271,4 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数将存储[转换对象](../standard-library/wstring-convert-class.md)中的 Pcvt_arg**
+第一个构造函数将存储[转换对象](../standard-library/wstring-convert-class.md)中的 Pcvt_arg

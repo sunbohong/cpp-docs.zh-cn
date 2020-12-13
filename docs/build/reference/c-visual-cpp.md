@@ -1,5 +1,6 @@
 ---
-title: '&lt;c > (C++文档注释)'
+description: 了解详细信息： &lt; c&gt;
+title: '&lt;c> (c + + 文档注释) '
 ms.date: 11/04/2016
 f1_keywords:
 - <c>
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - <c> C++ XML tag
 - c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-ms.openlocfilehash: 43e1417e5a749f2ea51346bbf6db235ba08a7bcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35d06183136a82c602b5e4daa288fb4518962154
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294767"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182614"
 ---
 # <a name="ltcgt"></a>&lt;c&gt;
 
-\<c> 标记指示应将说明内的文本应标记为代码。 使用 [\<code>](code-visual-cpp.md) 指示作为代码的多行文本。
+\<c>标记指示应将说明中的文本标记为代码。 使用 [\<code>](code-visual-cpp.md) 指示作为代码的多行文本。
 
 ## <a name="syntax"></a>语法
 
@@ -24,14 +25,14 @@ ms.locfileid: "62294767"
 <c>text</c>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*文本*<br/>
+*text*<br/>
 要指示为代码的文本。
 
 ## <a name="remarks"></a>备注
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

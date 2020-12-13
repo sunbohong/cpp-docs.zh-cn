@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _chdir、_wchdir
 title: _chdir、_wchdir
 ms.date: 4/2/2020
 api_name:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: a54b42ee92392971fdb6979ee2dc3a3b9c65f184
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 190e9d6445417aed8c35843cb4c386d49535ebbd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917044"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97186709"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir、_wchdir
 
@@ -60,28 +61,28 @@ int _wchdir(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dirname*<br/>
 新工作目录的路径。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，这些函数会返回值 0。 返回值-1 表示失败。 如果找不到指定的路径，则将**errno**设置为**ENOENT**。 如果*dirname*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回-1。
+如果成功，这些函数会返回值 0。 返回值-1 表示失败。 如果找不到指定的路径，则将 **errno** 设置为 **ENOENT**。 如果 *dirname* 为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **EINVAL** ，并且该函数将返回-1。
 
 ## <a name="remarks"></a>备注
 
-**_Chdir**函数将当前工作目录更改为*dirname*指定的目录。 *Dirname*参数必须引用现有目录。 此函数可更改任何驱动器上的当前工作目录。 如果在*dirname*中指定了新的驱动器号，则也会更改默认的驱动器号。 例如，如果 A 为默认的驱动器号而 \BIN 是当前工作目录，则以下调用会更改驱动器 C 的当前工作目录，且会将 C 建立为新的默认驱动器：
+**_Chdir** 函数将当前工作目录更改为 *dirname* 指定的目录。 *Dirname* 参数必须引用现有目录。 此函数可更改任何驱动器上的当前工作目录。 如果在 *dirname* 中指定了新的驱动器号，则也会更改默认的驱动器号。 例如，如果 A 为默认的驱动器号而 \BIN 是当前工作目录，则以下调用会更改驱动器 C 的当前工作目录，且会将 C 建立为新的默认驱动器：
 
 ```C
 _chdir("c:\temp");
 ```
 
-在路径中使用可选的反斜杠字符（**&#92;**）时，必须在 C 字符串中放置两个反斜杠（**&#92;&#92;**），以表示单个反斜杠（**&#92;**）。
+在路径中使用可选的反斜杠字符 (**&#92;**) 时，必须在 C 字符串中放置两个反斜杠 (**&#92;&#92;**) **(&#92;)** 。
 
-**_wchdir**是 **_chdir**的宽字符版本;**_wchdir**的*dirname*参数是宽字符字符串。 否则 **_wchdir**和 **_chdir**的行为相同。
+**_wchdir** 是 **_chdir** 的宽字符版本;**_wchdir** 的 *dirname* 参数是宽字符字符串。 否则 **_wchdir** 和 **_chdir** 的行为相同。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文本例程映射：
 
@@ -91,7 +92,7 @@ _chdir("c:\temp");
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> 或 \<wchar.h>|\<errno.h>|
@@ -157,9 +158,9 @@ Directory of c:\windows
                0 Dir(s)  67,326,029,824 bytes free
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)<br/>
+[目录控件](../../c-runtime-library/directory-control.md)<br/>
 [_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>
 [_rmdir、_wrmdir](rmdir-wrmdir.md)<br/>
 [system、_wsystem](system-wsystem.md)<br/>

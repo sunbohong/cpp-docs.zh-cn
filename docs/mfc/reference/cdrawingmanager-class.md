@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDrawingManager 类
 title: CDrawingManager 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -56,12 +57,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 1cc469b63e448e964dacc4d853905b22155dfe0e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b30218dd41e3591c4a39df078bb19e3ac653ba1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184785"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 类
 
@@ -77,14 +78,14 @@ class CDrawingManager : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDrawingManager::CDrawingManager](#cdrawingmanager)|构造 `CDrawingManager` 对象。|
 |`CDrawingManager::~CDrawingManager`|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDrawingManager：： CreateBitmap_32](#createbitmap_32)|创建应用程序可以直接写入的与32位设备无关的位图 (DIB) 。|
 |[CDrawingManager：:D rawAlpha](#drawalpha)|显示具有透明或半透明像素的位图。|
@@ -133,9 +134,9 @@ class CDrawingManager : public CObject
 CDrawingManager(CDC& dc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*台*<br/>
+*dc*<br/>
 中对设备上下文的引用。 `CDrawingManager`使用此上下文进行绘制。
 
 ## <a name="cdrawingmanagercreatebitmap_32"></a><a name="createbitmap_32"></a> CDrawingManager：： CreateBitmap_32
@@ -152,7 +153,7 @@ static HBITMAP __stdcall CreateBitmap_32(
     COLORREF clrTransparent = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *规格*\
 中一个指示位图大小的 [CSize](../../atl-mfc-shared/reference/csize-class.md) 参数。
@@ -186,7 +187,7 @@ void DrawAlpha(
     const CRect& rectSrc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDstDC*<br/>
 中指向目标的设备上下文的指针。
@@ -215,7 +216,7 @@ void DrawEllipse(
     COLORREF clrLine);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中椭圆的边框。
@@ -245,7 +246,7 @@ BOOL DrawGradientRing(
     COLORREF clrFace = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中指定渐变环边界的 [CRect](../../atl-mfc-shared/reference/crect-class.md) 参数。
@@ -296,7 +297,7 @@ void DrawLineA(
     COLORREF clrLine);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x1*\
 中行开始处的 x 坐标。
@@ -328,7 +329,7 @@ void DrawRect(
     COLORREF clrLine);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中矩形的边界。
@@ -359,7 +360,7 @@ BOOL DrawShadow(
     BOOL bRightShadow = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中应用程序中的矩形区域。 绘图管理器将在此区域下绘制阴影。
@@ -391,7 +392,7 @@ BOOL DrawShadow(
 
 ### <a name="remarks"></a>备注
 
-可以使用参数 *pBmpSaveBottom* 和 *pBmpSaveRight*为下阴影和右阴影提供两个有效的位图。 如果这些 [CBitmap](../../mfc/reference/cbitmap-class.md) 对象具有附加的 GDI 对象， `DrawShadow` 则将使用这些位图作为阴影。 如果 `CBitmap` 参数没有附加的 GDI 对象，则 `DrawShadow` 绘制阴影并将位图附加到参数。 在以后对的调用中 `DrawShadow` ，您可以提供这些位图来加快绘制过程的速度。 有关 `CBitmap` 类和 GDI 对象的详细信息，请参阅 [图形对象](../../mfc/graphic-objects.md)。
+可以使用参数 *pBmpSaveBottom* 和 *pBmpSaveRight* 为下阴影和右阴影提供两个有效的位图。 如果这些 [CBitmap](../../mfc/reference/cbitmap-class.md) 对象具有附加的 GDI 对象， `DrawShadow` 则将使用这些位图作为阴影。 如果 `CBitmap` 参数没有附加的 GDI 对象，则 `DrawShadow` 绘制阴影并将位图附加到参数。 在以后对的调用中 `DrawShadow` ，您可以提供这些位图来加快绘制过程的速度。 有关 `CBitmap` 类和 GDI 对象的详细信息，请参阅 [图形对象](../../mfc/graphic-objects.md)。
 
 如果其中一个参数为 `NULL` ，则 `DrawShadow` 将自动绘制阴影。
 
@@ -418,7 +419,7 @@ void Fill4ColorsGradient(
     int nPercentage = 50);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中要填充的矩形。
@@ -443,7 +444,7 @@ void Fill4ColorsGradient(
 
 ### <a name="remarks"></a>备注
 
-当用两种颜色渐变填充矩形时，它们可能彼此位于彼此上方或相邻，具体取决于 *bHorz*的值。 每种颜色渐变都是独立于方法 [CDrawingManager：： FillGradient](#fillgradient)来计算的。
+当用两种颜色渐变填充矩形时，它们可能彼此位于彼此上方或相邻，具体取决于 *bHorz* 的值。 每种颜色渐变都是独立于方法 [CDrawingManager：： FillGradient](#fillgradient)来计算的。
 
 如果 *nPercentage* 小于0或大于100，则此方法将生成断言失败。
 
@@ -461,7 +462,7 @@ void FillGradient(
     int nEndFlatPercentage = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中要填充的矩形区域。
@@ -499,7 +500,7 @@ void FillGradient2 (
     int nAngle = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中要填充的矩形区域。
@@ -535,7 +536,7 @@ BOOL GrayRect(
     COLORREF clrDisabled = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中要填充的矩形区域。
@@ -557,7 +558,7 @@ BOOL GrayRect(
 
 对于参数 *nPercentage*，值越小表示颜色越暗。
 
-*NPercentage*的最大值为200。 大于200的值不会更改矩形的外观。 如果值为-1，则此方法使用 *clrDisabled* 来限制矩形的饱和度。
+*NPercentage* 的最大值为200。 大于200的值不会更改矩形的外观。 如果值为-1，则此方法使用 *clrDisabled* 来限制矩形的饱和度。
 
 ## <a name="cdrawingmanagerhighlightrect"></a><a name="highlightrect"></a> CDrawingManager::HighlightRect
 
@@ -572,7 +573,7 @@ BOOL HighlightRect(
     COLORREF clrBlend = (COLORREF)-1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中要突出显示的矩形区域。
@@ -610,7 +611,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
     double S);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *H*<br/>
 中一个介于0和1之间的数字，表示颜色的色调。
@@ -642,7 +643,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
     double S);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *H*<br/>
 中0到360之间的一个数字，用于表示颜色的色调。
@@ -674,7 +675,7 @@ static COLORREF __stdcall HSVtoRGB(
     double V);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *高*\
 中一个介于0到360之间的数字，用于指示颜色的色调。
@@ -709,7 +710,7 @@ static BYTE __stdcall HueToRGB(
     float rh);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *限*<br/>
 中请参阅 "备注"。
@@ -755,7 +756,7 @@ void MirrorRect(
     BOOL bHorz = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rect*<br/>
 中要翻转的区域的边框。
@@ -788,7 +789,7 @@ static COLORREF __stdcall PixelAlpha(
     int percent);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *srcPixel*<br/>
 中像素的初始颜色。
@@ -816,7 +817,7 @@ static COLORREF __stdcall PixelAlpha(
 
 这是一个帮助器类，用于着色半透明位图，而不是由程序员直接调用。
 
-使用具有 *dstPixel*的方法版本时，最终颜色是 *dstPixel* 和 *srcPixel*的组合。 *SrcPixel*颜色是*dstPixel*基本颜色上的部分透明颜色。
+使用具有 *dstPixel* 的方法版本时，最终颜色是 *dstPixel* 和 *srcPixel* 的组合。 *SrcPixel* 颜色是 *dstPixel* 基本颜色上的部分透明颜色。
 
 ## <a name="cdrawingmanagerprepareshadowmask"></a><a name="prepareshadowmask"></a> CDrawingManager：:P repareShadowMask
 
@@ -830,7 +831,7 @@ static HBITMAP __stdcall PrepareShadowMask (
     int iMaxBrightness = 100);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nDepth*<br/>
 中阴影的宽度和高度。
@@ -864,7 +865,7 @@ static void __stdcall RGBtoHSL(
     double* L);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rgb*\
 中RGB 值中的颜色。
@@ -882,7 +883,7 @@ static void __stdcall RGBtoHSL(
 
 颜色可以表示为 " (HSV"、"饱和度" 和 "值") ，"HSL (色调"、"饱和度"、"发光度) " 或 "RGB (红色、绿色和蓝色) "。 有关颜色不同表示形式的详细信息，请参阅 [颜色](/windows/win32/uxguide/vis-color)。
 
-*H*返回的值表示为0和1之间的一个小部分，其中0和1表示红色。 为 *S* 和 *L* 返回的值为介于0到1之间的数字。
+*H* 返回的值表示为0和1之间的一个小部分，其中0和1表示红色。 为 *S* 和 *L* 返回的值为介于0到1之间的数字。
 
 ## <a name="cdrawingmanagerrgbtohsv"></a><a name="rgbtohsv"></a> CDrawingManager::RGBtoHSV
 
@@ -896,7 +897,7 @@ static void __stdcall RGBtoHSV(
     double* V);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rgb*<br/>
 中要在 RGB 表示形式中转换的颜色。
@@ -907,14 +908,14 @@ static void __stdcall RGBtoHSV(
 *S*<br/>
 弄一个指针，指向一种双精度型，其中此方法用于存储颜色的生成饱和度。
 
-*向量*<br/>
+*V*<br/>
 弄指向双精度值的指针，此方法存储颜色的结果值。
 
 ### <a name="remarks"></a>备注
 
 颜色可以表示为 " (HSV"、"饱和度" 和 "值") ，"HSL (色调"、"饱和度"、"发光度) " 或 "RGB (红色、绿色和蓝色) "。 有关颜色不同表示形式的详细信息，请参阅 [颜色](/windows/win32/uxguide/vis-color)。
 
-*H*的返回值是0到360之间的一个数字，其中0和360表示红色。 *S*和*V*的返回值为介于0到1之间的数字。
+*H* 的返回值是0到360之间的一个数字，其中0和360表示红色。 *S* 和 *V* 的返回值为介于0到1之间的数字。
 
 ## <a name="cdrawingmanagersetalphapixel"></a><a name="setalphapixel"></a> CDrawingManager::SetAlphaPixel
 
@@ -932,7 +933,7 @@ static void __stdcall SetAlphaPixel(
     BOOL bIsRight = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBits*<br/>
 中指向位图位值的指针。
@@ -962,7 +963,7 @@ static void __stdcall SetAlphaPixel(
 
 此方法是 [CDrawingManager：:D rawshadow](#drawshadow) 方法使用的帮助器方法。 如果要绘制阴影，则建议改为调用 `CDrawingManager::DrawShadow` 。
 
-如果将*bIsRight*设置为 TRUE，则从*矩形*的右边缘开始度量的像素为*x*像素。 如果该参数为 FALSE，则将像素设置为从*矩形*左边缘开始算起的*x*像素。
+如果将 *bIsRight* 设置为 TRUE，则从 *矩形* 的右边缘开始度量的像素为 *x* 像素。 如果该参数为 FALSE，则将像素设置为从 *矩形* 左边缘开始算起的 *x* 像素。
 
 ## <a name="cdrawingmanagersetpixel"></a><a name="setpixel"></a> CDrawingManager::SetPixel
 
@@ -978,7 +979,7 @@ static void __stdcall SetPixel(
     COLORREF color);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pBits*\
 中指向位图位值的指针。
@@ -1011,7 +1012,7 @@ static COLORREF __stdcall SmartMixColors(
     int k2 = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *color1*\
 中要混合的第一种颜色。
@@ -1036,7 +1037,7 @@ static COLORREF __stdcall SmartMixColors(
 
 如果 *版 k1* 或 *k2* 小于零，则此方法将失败并出现错误。 如果这两个参数均设置为0，则该方法返回 `RGB(0, 0, 0)` 。
 
-加权比率的计算公式如下： (color1 \* 版 k1 + color2 \* k2) / (版 k1 + k2) 。 确定了加权比率后，方法将计算混合颜色的发光度。 然后，它通过 *dblLumRatio*将发光度相乘。 如果该值大于1.0，则方法将混合颜色的发光度设置为新值。 否则，发光度设置为1.0。
+加权比率的计算公式如下： (color1 \* 版 k1 + color2 \* k2) / (版 k1 + k2) 。 确定了加权比率后，方法将计算混合颜色的发光度。 然后，它通过 *dblLumRatio* 将发光度相乘。 如果该值大于1.0，则方法将混合颜色的发光度设置为新值。 否则，发光度设置为1.0。
 
 ## <a name="cdrawingmanagerdrawrotated"></a><a name="drawrotated"></a> CDrawingManager：:D rawRotated
 
@@ -1049,7 +1050,7 @@ void DrawRotated(
     BOOL bClockWise);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectDest*<br/>
 目标矩形。
@@ -1062,7 +1063,7 @@ TRUE 指示旋转 + 90 度;FALSE 指示旋转-90 度。
 
 ### <a name="remarks"></a>备注
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [类](../../mfc/reference/mfc-classes.md)

@@ -1,5 +1,6 @@
 ---
-title: CDocObjectServer 项目类
+description: 了解详细信息： CDocObjectServerItem 类
+title: CDocObjectServerItem 类
 ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
@@ -16,14 +17,14 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: 1f0f5cf93aab35a17f7174b2beee0d1398564a3d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2d0d924433d812ec5f283d67e8313d20203ca3e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97184915"
 ---
-# <a name="cdocobjectserveritem-class"></a>CDocObjectServer 项目类
+# <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 类
 
 实现特别针对 DocObject 服务器的 OLE 服务器谓词。
 
@@ -37,31 +38,31 @@ class CDocObjectServerItem : public COleServerItem
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CDocObjectServer项目：CDocObjectServer项目](#cdocobjectserveritem)|构造 `CDocObjectServerItem` 对象。|
+|[CDocObjectServerItem：： CDocObjectServerItem](#cdocobjectserveritem)|构造 `CDocObjectServerItem` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CDocObjectServer项目：获取文档](#getdocument)|检索指向包含项的文档的指针。|
+|[CDocObjectServerItem：： GetDocument](#getdocument)|检索指向包含该项的文档的指针。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CDocObjectServer项目：：OnDoVerb](#ondoverb)|被调用以执行动词。|
-|[CDocObjectServer项目：：打开隐藏](#onhide)|如果框架尝试隐藏 DocObject 项，则引发异常。|
-|[CDocObjectServer项目：：在展会上](#onshow)|由框架调用以使 DocObject 项就地处于活动状态。 如果项目不是 DocObject，请调用[COleServerItem：：onShow。](../../mfc/reference/coleserveritem-class.md#onshow)|
+|[CDocObjectServerItem：： OnDoVerb](#ondoverb)|调用以执行谓词。|
+|[CDocObjectServerItem：： OnHide](#onhide)|如果框架尝试隐藏 DocObject 项，将引发异常。|
+|[CDocObjectServerItem：： OnShow](#onshow)|由框架调用以使 DocObject 项处于就地活动状态。 如果项不是 DocObject，则调用 [COleServerItem：： OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|
 
 ## <a name="remarks"></a>备注
 
-`CDocObjectServerItem`定义可重写的成员函数[：OnHide、OnDoVerb](#onhide)和[OnShow](#onshow)。 [OnDoVerb](#ondoverb)
+`CDocObjectServerItem` 定义可重写成员函数： [OnHide](#onhide)、 [OnDoVerb](#ondoverb)和 [OnShow](#onshow)。
 
-要使用`CDocObjectServerItem`，`COleServerDoc`确保派生类中的`CDocObjectServerItem`[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)重写返回一个新对象。 如果需要更改项目中的任何功能，可以创建自己的`CDocObjectServerItem`派生类的新实例。
+若要使用 `CDocObjectServerItem` ，请确保派生类中的 [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) 重写 `COleServerDoc` 返回一个新的 `CDocObjectServerItem` 对象。 如果需要更改项中的任何功能，则可以创建自己的派生类的新实例 `CDocObjectServerItem` 。
 
-有关文档对象的详细信息，请参阅*MFC 参考*中的[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和[COleCmdUI。](../../mfc/reference/colecmdui-class.md)
+有关 DocObjects 的详细信息，请参阅 *MFC 参考* 中的 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和 [COleCmdUI](../../mfc/reference/colecmdui-class.md) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -77,9 +78,9 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxdocob.h
+**标头：** afxdocob
 
-## <a name="cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a>CDocObjectServer项目：CDocObjectServer项目
+## <a name="cdocobjectserveritemcdocobjectserveritem"></a><a name="cdocobjectserveritem"></a> CDocObjectServerItem：： CDocObjectServerItem
 
 构造 `CDocObjectServerItem` 对象。
 
@@ -87,17 +88,17 @@ class CDocObjectServerItem : public COleServerItem
 CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pServerDoc*<br/>
 指向将包含新 DocObject 项的文档的指针。
 
-*b自动删除*<br/>
-指示在释放指向该对象的链接时是否可以删除该对象。 如果对象是文档数据的组成部分，`CDocObjectServerItem`则将参数设置为 FALSE。 如果对象是用于标识文档数据中可由框架删除的范围的辅助结构，则将其设置为 TRUE。
+*bAutoDelete*<br/>
+指示在释放对象的链接时是否可将其删除。 如果对象是文档数据的组成部分，则将参数设置为 FALSE `CDocObjectServerItem` 。 如果对象是一个辅助结构，则将其设置为 TRUE，该结构用于标识可由框架删除的文档数据中的范围。
 
-## <a name="cdocobjectserveritemgetdocument"></a><a name="getdocument"></a>CDocObjectServer项目：获取文档
+## <a name="cdocobjectserveritemgetdocument"></a><a name="getdocument"></a> CDocObjectServerItem：： GetDocument
 
-检索指向包含项的文档的指针。
+检索指向包含该项的文档的指针。
 
 ```
 COleServerDoc* GetDocument() const;
@@ -105,13 +106,13 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="return-value"></a>返回值
 
-指向包含项的文档的指针;如果项目不是文档的一部分，则 NULL。
+指向包含该项的文档的指针;如果项不是文档的一部分，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-这允许访问作为参数传递给[CDocObjectServerItem](#cdocobjectserveritem)构造函数的服务器文档。
+这允许访问作为参数传递给 [CDocObjectServerItem](#cdocobjectserveritem) 构造函数的服务器文档。
 
-## <a name="cdocobjectserveritemondoverb"></a><a name="ondoverb"></a>CDocObjectServer项目：：OnDoVerb
+## <a name="cdocobjectserveritemondoverb"></a><a name="ondoverb"></a> CDocObjectServerItem：： OnDoVerb
 
 由框架调用以执行指定的谓词。
 
@@ -119,18 +120,18 @@ COleServerDoc* GetDocument() const;
 virtual void OnDoVerb(LONG iVerb);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iVerb*<br/>
-指定要执行的谓词。 有关可能的值，请参阅 Windows SDK 中的[IOleObject：:DoVerb。](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb)
+指定要执行的谓词。 有关可能的值，请参阅 IOleObject： Windows SDK 中的 [：:D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 。
 
 ### <a name="remarks"></a>备注
 
-如果项目是 DocObject 并指定了OLEIVERB_INPLACEACTIVATE或OLEIVERB_SHOW，则默认实现将调用[OnShow](#onshow)成员函数。 如果项不是 DocObject 或指定了其他谓词，则默认实现将调用[COleServerItem：：OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
+如果项是 DocObject 并且指定了 OLEIVERB_INPLACEACTIVATE 或 OLEIVERB_SHOW，则默认实现将调用 [OnShow](#onshow) 成员函数。 如果项不是 DocObject 或指定了其他谓词，则默认实现将调用 [COleServerItem：： OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
 
-## <a name="cdocobjectserveritemonhide"></a><a name="onhide"></a>CDocObjectServer项目：：打开隐藏
+## <a name="cdocobjectserveritemonhide"></a><a name="onhide"></a> CDocObjectServerItem：： OnHide
 
-由框架调用以隐藏项。
+由框架调用以隐藏该项。
 
 ```
 virtual void OnHide();
@@ -138,11 +139,11 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>备注
 
-如果项是 DocObject，则默认实现将引发异常。 不能隐藏活动文档对象项，因为它占用整个视图。 您必须停用 DocObject 项才能将其消失。 如果项目不是 DocObject，则默认实现将调用[COleServerItem：：onHide。](../../mfc/reference/coleserveritem-class.md#onhide)
+如果项是 DocObject，则默认实现会引发异常。 不能隐藏活动的 DocObject 项，因为它将使用整个视图。 必须停用 DocObject 项以使其消失。 如果项不是 DocObject，则默认实现将调用 [COleServerItem：： OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。
 
-## <a name="cdocobjectserveritemonshow"></a><a name="onshow"></a>CDocObjectServer项目：：在展会上
+## <a name="cdocobjectserveritemonshow"></a><a name="onshow"></a> CDocObjectServerItem：： OnShow
 
-由框架调用，指示服务器应用程序使 DocObject 项就地处于活动状态。
+由框架调用，指示服务器应用程序将 DocObject 项设置为就地活动。
 
 ```
 virtual void OnShow();
@@ -150,11 +151,11 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>备注
 
-如果项目不是 DocObject，则默认实现将调用[COleServerItem：：onShow。](../../mfc/reference/coleserveritem-class.md#onopen) 如果要在打开 DocObject 项时执行特殊处理，则重写此函数。
+如果项不是 DocObject，则默认实现将调用 [COleServerItem：： OnShow](../../mfc/reference/coleserveritem-class.md#onopen)。 如果希望在打开 DocObject 项时执行特殊处理，请重写此函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[COleServer 项目类](../../mfc/reference/coleserveritem-class.md)<br/>
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
+[COleServerItem 类](../../mfc/reference/coleserveritem-class.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CDocObjectServer 类](../../mfc/reference/cdocobjectserver-class.md)<br/>
 [COleDocObjectItem 类](../../mfc/reference/coledocobjectitem-class.md)

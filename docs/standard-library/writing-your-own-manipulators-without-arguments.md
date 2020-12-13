@@ -1,19 +1,20 @@
 ---
+description: 了解更多相关信息：编写自己的无参数的操控器
 title: 自行编写无自变量的操控器
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manipulators
 ms.assetid: 2dc62d09-45b7-454d-bd9d-55f3c72c206d
-ms.openlocfilehash: 9a1f72ae3e6860d8ab532a72a1776b77c7204f48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 593db0a3dacb54c94cc865ebc20b1e1b39d2c208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187749"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>自行编写无自变量的操控器
 
-编写不使用参数的操控器既不需要类派生，也不需要使用复杂宏。 假设你的打印机需要使用对 \<ESC>[ 才能进入粗体模式。 可直接将此对插入到流中：
+编写不使用参数的操控器既不需要类派生，也不需要使用复杂宏。 假设您的打印机需要 "对 \<ESC> [进入粗体模式"。 可直接将此对插入到流中：
 
 ```cpp
 cout << "regular " << '\033' << '[' << "boldface" << endl;

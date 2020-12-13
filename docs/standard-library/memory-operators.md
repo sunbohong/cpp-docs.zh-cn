@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 内存 &gt; 运算符
 title: '&lt;memory&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: 15762e4853cfd018c7cff997a3ed9ba7d86b3c2e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cbf52aa2af13a0eae241444d88e0eeabe7efe47b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233049"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97183940"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 运算符
 
-## <a name="operator"></a><a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 测试各对象之间是否不相等。
 
@@ -40,7 +41,7 @@ bool operator!=(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要测试不相等的对象之一。
@@ -56,7 +57,7 @@ bool operator!=(
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果对象不相等，则为; 否则为。**`false`** 如果对象相等，则为。
+**`true`** 如果对象不相等，则为; 否则为。 **`false`** 如果对象相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -120,7 +121,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 测试两个对象是否相等。
 
@@ -141,7 +142,7 @@ bool operator==(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要测试是否相等的其中一个对象。
@@ -232,7 +233,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 操作员&gt;=
 
 测试一个对象是否大于或等于另一个对象。
 
@@ -248,7 +249,7 @@ bool operator>=(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要比较的对象之一。
@@ -266,7 +267,7 @@ bool operator>=(
 
 模板运算符返回 `left.get() >= right.get()`。
 
-## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 操作员&lt;
 
 测试某一对象是否小于另一对象。
 
@@ -282,7 +283,7 @@ bool operator<(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要比较的对象之一。
@@ -296,7 +297,7 @@ bool operator<(
 *Ty2*\
 由右侧指针控制的类型。
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 操作员&lt;=
 
 测试某一对象是否小于或等于另一个对象。
 
@@ -312,7 +313,7 @@ bool operator<=(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要比较的对象之一。
@@ -330,7 +331,7 @@ bool operator<=(
 
 模板运算符返回 `left.get() <= right.get()`
 
-## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 操作员&gt;
 
 测试一个对象是否大于或等于第二个对象。
 
@@ -346,7 +347,7 @@ bool operator>(
     const shared_ptr<Ty2>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要比较的对象之一。
@@ -360,7 +361,7 @@ bool operator>(
 *Ty2*\
 由右侧共享指针控制的类型。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a>操作员&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 操作员&lt;&lt;
 
 将共享指针写入该流。
 
@@ -370,7 +371,7 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
     shared_ptr<Ty>& sp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Elem*\
 流元素的类型。

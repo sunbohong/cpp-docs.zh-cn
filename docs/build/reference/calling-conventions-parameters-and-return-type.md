@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：调用约定、参数和返回类型
 title: 调用约定、参数和返回类型
 ms.date: 02/13/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 8813bab0cb55aa57792d0031433d96eefb095da4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f840ecbe3364f293e9445239984ad375eed48aac
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223910"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97182523"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>调用约定、参数和返回类型
 
@@ -24,15 +25,15 @@ FARPROC WINAPI __delayLoadHelper2(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pidd*<br/>
-**`const`** 指向的指针， `ImgDelayDescr` 该指针包含各种导入相关数据的偏移量、绑定信息的时间戳，以及提供有关描述符内容的进一步信息的一组属性。 目前只有一个属性，该属性 `dlattrRva` 指示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅*delayimp.lib*中的声明。
+**`const`** 指向的指针， `ImgDelayDescr` 该指针包含各种导入相关数据的偏移量、绑定信息的时间戳，以及提供有关描述符内容的进一步信息的一组属性。 目前只有一个属性，该属性 `dlattrRva` 指示描述符中的地址是相对虚拟地址。 有关详细信息，请参阅 *delayimp.lib* 中的声明。
 
-有关结构的定义 `PCImgDelayDescr` ，请参阅[结构和常量定义](structure-and-constant-definitions.md)。
+有关结构的定义 `PCImgDelayDescr` ，请参阅 [结构和常量定义](structure-and-constant-definitions.md)。
 
 *ppfnIATEntry*<br/>
-指向延迟加载导入地址表（IAT）中的槽的指针，该槽是使用导入函数的地址更新的。 Helper 例程需要存储返回到此位置的相同值。
+指向延迟加载导入地址表中的槽的指针， (IAT) 使用导入函数的地址更新。 Helper 例程需要存储返回到此位置的相同值。
 
 ## <a name="expected-return-values"></a>预期的返回值
 
@@ -135,6 +136,6 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [了解 Helper 函数](understanding-the-helper-function.md)
