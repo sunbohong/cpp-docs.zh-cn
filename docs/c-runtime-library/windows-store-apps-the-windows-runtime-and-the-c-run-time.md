@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息： UWP 应用、Windows 运行时和 C Run-Time
 title: UWP 应用、Windows 运行时和 C 运行时
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: cfbbdbde19b882fb51b8fd8782b20e4205bdb00b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136742"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 应用、Windows 运行时和 C 运行时
 
