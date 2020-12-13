@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _InterlockedAdd 内部函数
 title: _InterlockedAdd 内部函数
 ms.date: 09/02/2019
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: c611a22e696b9dda0c6910cd4aac84399cc7d20a
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: b467cc855e674a50899999c6e945321390735b00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135549"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336887"
 ---
 # <a name="_interlockedadd-intrinsic-functions"></a>_InterlockedAdd 内部函数
 
@@ -76,7 +77,7 @@ __int64 _InterlockedAdd64_rel(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *加数*\
 [in，out]指向要添加到的整数的指针;替换为添加的结果。
@@ -103,13 +104,13 @@ __int64 _InterlockedAdd64_rel(
 
 **头文件** \<intrin.h>
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 带 `_acq` 或 `_rel` 后缀的这些版本的函数可在获取或发布语义后执行互锁加法。 *获取语义* 意味着在以后的内存读取和写入之前，操作的结果将对所有线程和处理器可见。 进入临界区时，获取十分有用。 *版本语义* 表示在操作的结果使其自身可见之前，所有内存读取和写入均强制对所有线程和处理器可见。 离开临界区时，发布十分有用。 `_nf` ( "无防护" ) 后缀的内部函数不能充当内存屏障。
 
 这些例程只能用作内部函数。
 
-## <a name="example-_interlockedadd"></a>示例：`_InterlockedAdd`
+## <a name="example-_interlockedadd"></a>示例： `_InterlockedAdd`
 
 ```cpp
 // interlockedadd.cpp
@@ -136,7 +137,7 @@ int main()
 0xffffff00 0xff0000 0xffffff00
 ```
 
-## <a name="example-_interlockedadd64"></a>示例：`_InterlockedAdd64`
+## <a name="example-_interlockedadd64"></a>示例： `_InterlockedAdd64`
 
 ```cpp
 // interlockedadd64.cpp

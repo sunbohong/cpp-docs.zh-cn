@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2611
 title: 编译器错误 C2611
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2611
 ms.assetid: 3f2d5253-f24f-4724-83d0-6b2aa6a4e551
-ms.openlocfilehash: 345a942b0d0c6475a2087717454404685e8fb320
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1bcc7f1992e2a58b77319b86b534f8474cd05e90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338693"
 ---
 # <a name="compiler-error-c2611"></a>编译器错误 C2611
 
-"token"：非法后面的 "~" （应为标识符）
+"token"：非法后面的 "~" (所需的标识符) 
 
 该令牌不是标识符。
 

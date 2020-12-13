@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2390
 title: 编译器错误 C2390
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2390
 ms.assetid: 06b749ee-d072-4db1-b229-715f2c0728b5
-ms.openlocfilehash: 48012c0fe31b2017cad29cc98992c9b1121efa7c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91539cea6ed89c02734c08f068f3d6474283dfa9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221180"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337592"
 ---
 # <a name="compiler-error-c2390"></a>编译器错误 C2390
 
@@ -25,7 +26,7 @@ ms.locfileid: "87221180"
 
 - 如果标识符是形参或局部变量，则使用自动存储来声明它。
 
-- 如果标识符是全局变量，请在不使用存储类（自动存储）的情况下对其进行声明。
+- 如果该标识符是全局变量，请在不使用存储类的情况下声明它 (自动存储) 。
 
 ## <a name="example"></a>示例
 

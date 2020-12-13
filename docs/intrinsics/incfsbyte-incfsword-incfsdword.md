@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __incfsbyte、__incfsword __incfsdword
 title: __incfsbyte, __incfsword, __incfsdword
 ms.date: 09/02/2019
 f1_keywords:
@@ -13,18 +14,18 @@ helpviewer_keywords:
 - __incfsdword intrinsic
 - __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-ms.openlocfilehash: 43824829043304f5762d049b5c75a72b57e2102c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 29d86de51ad282789cb19b72ca953f65af2dc19d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222125"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336964"
 ---
 # <a name="__incfsbyte-__incfsword-__incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
 
 **Microsoft 专用**
 
-在相对于`FS`段开头的偏移量指定的内存位置, 向值添加一个值。
+在相对于段开头的偏移量指定的内存位置，向值添加一个值 `FS` 。
 
 ## <a name="syntax"></a>语法
 
@@ -40,30 +41,30 @@ void __incfsdword(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *抵销*\
-中与开头`FS`之间的偏移量。
+中与开头之间的偏移量 `FS` 。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__incfsbyte`|x86|
 |`__incfsword`|x86|
 |`__incfsdword`|x86|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-这些内部函数仅在内核模式下可用, 且例程只能用作内部函数。
+这些内部函数仅在内核模式下可用，且例程只能用作内部函数。
 
 **结束 Microsoft 专用**
 
 ## <a name="see-also"></a>请参阅
 
-[\__addfsbyte、 \__addfsword、 \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)\
-[\__readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
-[\__writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[\__addfsbyte、 \_ _addfsword \_ _addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)\
+[\__readfsbyte、 \_ _readfsdword、 \_ _readfsqword \_ _readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[\__writefsbyte、 \_ _writefsdword、 \_ _writefsqword \_ _writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

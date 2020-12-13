@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： raw_storage_iterator 类
 title: raw_storage_iterator 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: e5423d3b0801570167e1e0424aad18b9e8f74e7c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fd397de39118a5aa47ea45a8da0052937958bd17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831419"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337915"
 ---
 # <a name="raw_storage_iterator-class"></a>raw_storage_iterator 类
 
@@ -28,7 +29,7 @@ template <class OutputIterator, class Type>
     class raw_storage_iterator
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *OutputIterator*\
 为正被存储的对象指定输出迭代器。
@@ -36,9 +37,9 @@ template <class OutputIterator, class Type>
 *类别*\
 正为其分配存储的对象的类型。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-此类描述一个输出迭代器，该迭代器 `Type` 按其生成的序列构造类型的对象。 类的对象 `raw_storage_iterator` \< **ForwardIterator**, **Type**> 通过类的前向迭代器对象访问存储，在 `ForwardIterator` 构造对象时指定。 对于第一类对象 `ForwardIterator` ，表达式** & \* first**必须为 `Type` 生成序列中) 类型的下一个对象 (指定未构造存储。
+此类描述一个输出迭代器，该迭代器 `Type` 按其生成的序列构造类型的对象。 类的对象 `raw_storage_iterator` \< **ForwardIterator**, **Type**> 通过类的前向迭代器对象访问存储，在 `ForwardIterator` 构造对象时指定。 对于第一类对象 `ForwardIterator` ，表达式 **& \* first** 必须为 `Type` 生成序列中) 类型的下一个对象 (指定未构造存储。
 
 在需要分隔内存分配和对象构造时使用此适配器类。 `raw_storage_iterator` 可用于将对象复制到未初始化的存储中，如使用 `malloc` 函数分配的内存。
 
@@ -46,20 +47,20 @@ template <class OutputIterator, class Type>
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|使用指定的基础输出迭代器构造原始存储迭代器。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[element_type](#element_type)|提供一种类型，该类型描述要存储在原始存储迭代器中的元素。|
 |[iter_type](#iter_type)|提供了一种类型，该类型描述原始存储迭代器所基于的迭代器。|
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[操作员](#op_star)|用于实现输出迭代器表达式的取消引用运算符 \* `ii`  =  `x` 。|
 |[operator =](#op_eq)|用于实现 \* `i`  =  `x` 存储在内存中的原始存储迭代器表达式的赋值运算符。|
@@ -73,7 +74,7 @@ template <class OutputIterator, class Type>
 typedef Type element_type;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该类型是 raw_storage_iterator 类模板参数的同义词 `Type` 。
 
@@ -85,13 +86,13 @@ typedef Type element_type;
 typedef ForwardIterator iter_type;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 类型是模板参数 `ForwardIterator` 的同义词。
 
 ### <a name="operator"></a><a name="op_star"></a> 操作员\*
 
-用于实现原始存储迭代器表达式 \* *ii*  =  *x*的取消引用运算符。
+用于实现原始存储迭代器表达式 \* *ii*  =  *x* 的取消引用运算符。
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator*();
@@ -101,9 +102,9 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 
 对原始存储迭代器的引用
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-的要求 `ForwardIterator` 是原始存储迭代器必须满足仅要求表达式 \* *ii*  =  *t*有效，并且它不会显示任何有关或本身的内容 **`operator`** `operator=` 。 此实现中的成员运算符返回** \* this**，因此[operator =](#op_eq) (**constType**&) 可以在表达式中执行实际的存储，如 \* *ptr*  =  `val` 。
+的要求 `ForwardIterator` 是原始存储迭代器必须满足仅要求表达式 \* *ii*  =  *t* 有效，并且它不会显示任何有关或本身的内容 **`operator`** `operator=` 。 此实现中的成员运算符返回 **\* this**，因此 [operator =](#op_eq) (**constType**&) 可以在表达式中执行实际的存储，如 \* *ptr*  =  `val` 。
 
 #### <a name="example"></a>示例
 
@@ -159,14 +160,14 @@ Constructing 5
 
 ### <a name="operator"></a><a name="op_eq"></a> operator =
 
-赋值运算符，用于实现 \* *i*  =  存储在内存中的原始存储迭代器表达式 i*x* 。
+赋值运算符，用于实现 \*   =  存储在内存中的原始存储迭代器表达式 i *x* 。
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *初始值*\
 要插入到内存中的类型的对象的值 `Type` 。
@@ -175,9 +176,9 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 运算符会将 `val` 插入到内存，然后向原始存储迭代器返回引用。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-`ForwardIterator`原始存储迭代器必须满足的状态的要求仅要求表达式 \* *ii*  =  *t*有效，并且它不会 **`operator`** 对或自身显示任何内容 `operator=` 。 这些成员运算符返回 **`*this`** 。
+`ForwardIterator`原始存储迭代器必须满足的状态的要求仅要求表达式 \* *ii*  =  *t* 有效，并且它不会 **`operator`** 对或自身显示任何内容 `operator=` 。 这些成员运算符返回 **`*this`** 。
 
 赋值运算符使用存储的迭代器值 `first` ，通过计算位置 new 表达式来构造输出序列中的下一个对象 `new ( (void*) & *first ) Type( val )` 。
 
@@ -245,13 +246,13 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
 
 原始存储迭代器或对原始存储迭代器的引用。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 第一个运算符最终尝试 `CharType` 从关联的输入流提取和存储类型的对象。 第二个运算符生成对象的副本，递增对象，然后返回副本。
 
-第一个前置递增运算符递增存储的输出迭代器对象，然后返回** \* this**。
+第一个前置递增运算符递增存储的输出迭代器对象，然后返回 **\* this**。
 
-第二个后置递增运算符生成** \* 此**的副本，递增存储的输出迭代器对象，然后返回副本。
+第二个后置递增运算符生成 **\* 此** 的副本，递增存储的输出迭代器对象，然后返回副本。
 
 构造函数存储 `first` 为输出迭代器对象。
 
@@ -296,7 +297,7 @@ array 4 = 8
 explicit raw_storage_iterator(ForwardIterator first);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *1*\
 前向迭代器，是正在构造的 `raw_storage_iterator` 对象的基础。

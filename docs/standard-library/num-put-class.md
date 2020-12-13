@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： num_put 类
 title: num_put 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: 32bfc29b7bc645dd37ae4aaaf498823c0d139dfc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 44f7d5248914969b360454bbec80e767a21be55f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224703"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338074"
 ---
 # <a name="num_put-class"></a>num_put 类
 
@@ -33,7 +34,7 @@ template <class CharType,
 class num_put : public locale::facet;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
@@ -71,7 +72,7 @@ class num_put : public locale::facet;
 
 **命名空间:** std
 
-## <a name="num_putchar_type"></a><a name="char_type"></a>num_put：： char_type
+## <a name="num_putchar_type"></a><a name="char_type"></a> num_put：： char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -83,7 +84,7 @@ typedef CharType char_type;
 
 类型是模板参数 `CharType` 的同义词。
 
-## <a name="num_putdo_put"></a><a name="do_put"></a>num_put：:d o_put
+## <a name="num_putdo_put"></a><a name="do_put"></a> num_put：:d o_put
 
 一种虚拟函数，通过调用此函数可将数字转换为 `CharType` 序列以表示针对给定区域设置而设置格式的数字。
 
@@ -137,7 +138,7 @@ virtual iter_type do_put(
     const unsigned long long val) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *一个*\
 发现插入的字符串中第一个元素的迭代器。
@@ -157,35 +158,35 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>备注
 
-第一个受保护的虚拟成员函数将生成从 " *val*" 值生成一个整数输出*字段时开始*的连续元素。 该函数返回一个迭代器，指定生成的整数输出字段外下一个要插入元素的位置。
+第一个受保护的虚拟成员函数将生成从 " *val*" 值生成一个整数输出 *字段时开始* 的连续元素。 该函数返回一个迭代器，指定生成的整数输出字段外下一个要插入元素的位置。
 
 整数输出字段由 print 函数使用的相同规则生成，用于为文件生成一系列 **`char`** 元素。 假定每个 char 元素都按简单的一对一映射映射到类型的等效元素 `CharType` 。 不过，print 函数使用空格或数字0填充字段， `do_put` 而改用 `fill` 。 确定等效的打印转换规格，如下所示：
 
-- 如果 **iosbase**. [flags](../standard-library/ios-base-class.md#flags)  &  `ios_base::basefield` 标志  ==  `ios_base::`[oct](../standard-library/ios-functions.md#oct)，转换规格为 `lo` 。
+- 如果 **iosbase**. [](../standard-library/ios-base-class.md#flags)  &  `ios_base::basefield` 标志  ==  `ios_base::`[oct](../standard-library/ios-functions.md#oct)，转换规格为 `lo` 。
 
-- 如果**iosbase**  &  **ios_base：： basefield**  ==  `ios_base::` [hex](../standard-library/ios-functions.md#hex)，则转换规格为 `lx` 。
+- 如果 **iosbase**  &  **ios_base：： basefield**  ==  `ios_base::` [hex](../standard-library/ios-functions.md#hex)，则转换规格为 `lx` 。
 
 - 否则，转换规格为 `ld`。
 
 如果 **iosbase**. [width](../standard-library/ios-base-class.md#width) 为非零值，则将预置此值的字段宽度。 然后，该函数将调用 **iosbase**. **width**(0) 以便将字段宽度重置为零。
 
-发生填充的条件仅限于指定输出字段所需的元素 *N* 的最小数小于 **iosbase**. [宽度](../standard-library/ios-base-class.md#width)。 此类填充由一个包含*N*个  -  **宽度**副本的**fill**序列组成。 然后将出现填充，如下所示：
+发生填充的条件仅限于指定输出字段所需的元素 *N* 的最小数小于 **iosbase**. [宽度](../standard-library/ios-base-class.md#width)。 此类填充由一个包含 *N* 个  -  **宽度** 副本的序列组成。 然后将出现填充，如下所示：
 
-- 如果 **iosbase**. **flags**  &  `ios_base::adjustfield` 标志  ==  `ios_base::`[左对齐](../standard-library/ios-functions.md#left)标志 **-** 。 （将在生成的文本后出现填充。）
+- 如果 **iosbase**.   &  `ios_base::adjustfield` 标志  ==  `ios_base::`[左对齐](../standard-library/ios-functions.md#left)标志 **-** 。 （将在生成的文本后出现填充。）
 
-- 如果**iosbase**  &  **ios_base：： adjustfield**  ==  `ios_base::` [内部](../standard-library/ios-functions.md#internal)，则会预置标志**0** 。 （对于数值输出字段，将在以 0 填充 print 函数的位置出现填充。）
+- 如果 **iosbase**  &  **ios_base：： adjustfield**  ==  `ios_base::` [内部](../standard-library/ios-functions.md#internal)，则会预置标志 **0** 。 （对于数值输出字段，将在以 0 填充 print 函数的位置出现填充。）
 
 - 否则，不会预置任何其他标志。 （在生成的序列之前出现填充。）
 
 最后：
 
-- 如果 **iosbase**. **flags**  &  标志 `ios_base::`[showpos](../standard-library/ios-functions.md#showpos)为非零值，则将标志 **+** 附加到转换规范。
+- 如果 **iosbase**.   &  标志 `ios_base::`[showpos](../standard-library/ios-functions.md#showpos)为非零值，则将标志 **+** 附加到转换规范。
 
 - 如果 **iosbase**. **标志**  & **ios_base：：**[showbase](../standard-library/ios-functions.md#showbase)为非零值，则将标志 **#** 附加到转换规格。
 
-整数输出字段的格式由**fac**调用[use_facet](../standard-library/locale-functions.md#use_facet)numpunct （iosbase 返回）的[区域设置 facet](../standard-library/locale-class.md#facet_class)进一步决定  <  [numpunct](../standard-library/numpunct-class.md) \< **Elem**> 。 **iosbase** [getloc](../standard-library/ios-base-class.md#getloc)）。 具体而言：
+整数输出字段的格式由 **fac** 调用 [use_facet](../standard-library/locale-functions.md#use_facet)numpunct ( iosbase 返回的 [区域设置 facet](../standard-library/locale-class.md#facet_class)  <  [](../standard-library/numpunct-class.md) \< **Elem**> 。  [getloc](../standard-library/ios-base-class.md#getloc)) 。 具体而言：
 
-- **fac**. [分组](../standard-library/numpunct-class.md#grouping)确定如何将位数分组到任何小数点左侧
+- **fac**. [分组](../standard-library/numpunct-class.md#grouping) 确定如何将位数分组到任何小数点左侧
 
 - **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) 确定将任何小数点左侧的数字进行分组的序列
 
@@ -213,17 +214,17 @@ virtual iter_type do_put(iter_type next,
 
 行为与第一个相同，只不过它从 **val** 值生成一个浮点输出字段。 **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) 确定从小数位分隔整数位的序列。 确定等效的打印转换规格，如下所示：
 
-- 如果 **iosbase**. **flags**  &  `ios_base::floatfield` 标志  ==  `ios_base::`[修复](../standard-library/ios-functions.md#fixed)，转换规范为 `lf` 。
+- 如果 **iosbase**.   &  `ios_base::floatfield` 标志  ==  `ios_base::`[修复](../standard-library/ios-functions.md#fixed)，转换规范为 `lf` 。
 
-- 如果 **iosbase**. **标志**  & **ios_base：： floatfield**  ==  `ios_base::`[科学记数法](../standard-library/ios-functions.md#scientific)，转换规格为 `le` 。 如果 **iosbase**. **flags**  &  标志 `ios_base::`[大写字母](../standard-library/ios-functions.md#uppercase)为非零， `e` 将替换为 `E` 。
+- 如果 **iosbase**. **标志**  & **ios_base：： floatfield**  ==  `ios_base::`[科学记数法](../standard-library/ios-functions.md#scientific)，转换规格为 `le` 。 如果 **iosbase**.   &  标志 `ios_base::`[大写字母](../standard-library/ios-functions.md#uppercase)为非零， `e` 将替换为 `E` 。
 
-- 否则，转换规格为 **lg**。 如果 **iosbase**. **标志**  & **ios_base：：大写**不为零， `g` 将替换为 `G` 。
+- 否则，转换规格为 **lg**。 如果 **iosbase**. **标志**  & **ios_base：：大写** 不为零， `g` 将替换为 `G` 。
 
-如果 **iosbase**. **标志**  & **ios_base：： fixed**不为零，或者如果为**iosbase**。 [precision](../standard-library/ios-base-class.md#precision) 大于零，则具有值 **iosbase**. **precision** 的精度将被预置到转换规格。 任何填充行为与整数输出字段的填充行为相同。 填充字符为 **fill**。 最后：
+如果 **iosbase**. **标志**  & **ios_base：： fixed** 不为零，或者如果为 **iosbase**。 [precision](../standard-library/ios-base-class.md#precision) 大于零，则具有值 **iosbase**. **precision** 的精度将被预置到转换规格。 任何填充行为与整数输出字段的填充行为相同。 填充字符为 **fill**。 最后：
 
-- 如果 **iosbase**. **flags**  &  标志 `ios_base::`[showpos](../standard-library/ios-functions.md#showpos)为非零值，则将标志 **+** 附加到转换规范。
+- 如果 **iosbase**.   &  标志 `ios_base::`[showpos](../standard-library/ios-functions.md#showpos)为非零值，则将标志 **+** 附加到转换规范。
 
-- 如果 **iosbase**. **flags**  &  标志 `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint)为非零值，则将标志 **#** 附加到转换规范。
+- 如果 **iosbase**.   &  标志 `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint)为非零值，则将标志 **#** 附加到转换规范。
 
 第四个受保护的虚拟成员函数：
 
@@ -256,9 +257,9 @@ virtual iter_type do_put(iter_type next,
     bool val) const;
 ```
 
-的行为与第一个相同，只不过它从*val*生成布尔输出字段。
+的行为与第一个相同，只不过它从 *val* 生成布尔输出字段。
 
-布尔输出字段采用以下两种形式之一。 如果 `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha)为 **`false`** ，则成员函数将返回 `do_put(_Next, _Iosbase, _Fill, (long)val)` ，这通常会生成一个为0（对于 **`false`** ）或1（对于）的生成序列 **`true`** 。 否则，生成的序列为*fac*。[falsename](../standard-library/numpunct-class.md#falsename) （适用于 **`false`** ）或*fac*。[truename](../standard-library/numpunct-class.md#truename) （适用于 **`true`** ）。
+布尔输出字段采用以下两种形式之一。 如果 `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha)为 **`false`** ，则成员函数将返回 `do_put(_Next, _Iosbase, _Fill, (long)val)` ，这通常会生成) 为 0 (的生成序列， **`false`** 或者为 (**`true`**) 生成1。 否则，生成的序列为 *fac*。[](../standard-library/numpunct-class.md#falsename) **`false`**) 或 *fac* 的 falsename (。[](../standard-library/numpunct-class.md#truename)) 的 truename (**`true`** 。
 
 第七个受保护的虚拟成员函数：
 
@@ -286,7 +287,7 @@ virtual iter_type do_put(iter_type next,
 
 请参阅 [put](#put) 的示例，它调用 `do_put`。
 
-## <a name="num_putiter_type"></a><a name="iter_type"></a>num_put：： iter_type
+## <a name="num_putiter_type"></a><a name="iter_type"></a> num_put：： iter_type
 
 一种类型，此类型描述输出迭代器。
 
@@ -298,7 +299,7 @@ typedef OutputIterator iter_type;
 
 该类型是模板参数 **OutputIterator** 的同义词。
 
-## <a name="num_putnum_put"></a><a name="num_put"></a>num_put：： num_put
+## <a name="num_putnum_put"></a><a name="num_put"></a> num_put：： num_put
 
 `num_put` 类型的对象的构造函数。
 
@@ -306,26 +307,26 @@ typedef OutputIterator iter_type;
 explicit num_put(size_t _Refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Refs*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*_Refs*参数的可能值及其重要性为：
+*_Refs* 参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1：未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
 构造函数通过 **locale::**[facet](../standard-library/locale-class.md#facet_class)(_ *Refs*) 初始化其基对象。
 
-## <a name="num_putput"></a><a name="put"></a>num_put：:p
+## <a name="num_putput"></a><a name="put"></a> num_put：:p
 
 将数字转换为 `CharType` 表示为给定区域设置而设置格式的数字的序列。
 
@@ -379,7 +380,7 @@ iter_type put(
     const void* val) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *目的*\
 发现插入的字符串中第一个元素的迭代器。
@@ -399,7 +400,7 @@ iter_type put(
 
 ### <a name="remarks"></a>备注
 
-所有成员函数都返回[do_put](#do_put)（ `next` 、 `_Iosbase` 、 `_Fill` 、 `val` ）。
+所有成员函数都返回 [do_put](#do_put) (，，， `next` `_Iosbase` `_Fill` `val`) 。
 
 ### <a name="example"></a>示例
 
@@ -437,7 +438,7 @@ The thousands separator is: .
 num_put( ) = 1.000,67
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [facet 类](../standard-library/locale-class.md#facet_class)\

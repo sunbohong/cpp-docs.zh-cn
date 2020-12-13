@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _get_terminate
 title: _get_terminate
 ms.date: 4/2/2020
 api_name:
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 958ecb51620497c459b0505431036d5e9d546862
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920416"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338979"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
-返回**终止**时要调用的终止例程。
+返回 **终止** 时要调用的终止例程。
 
 ## <a name="syntax"></a>语法
 
@@ -49,21 +50,21 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>返回值
 
-返回指向 [set_terminate](set-terminate-crt.md) 注册的函数的指针。 如果尚未设置函数，则返回值可用于还原默认行为;此值可以为**NULL**。
+返回指向 [set_terminate](set-terminate-crt.md) 注册的函数的指针。 如果尚未设置函数，则返回值可用于还原默认行为;此值可以为 **NULL**。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_get_terminate**|\<eh.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
 [中止](abort.md)<br/>

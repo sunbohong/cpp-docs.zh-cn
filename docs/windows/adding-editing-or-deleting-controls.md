@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅如何：添加、编辑或删除控件 (c + +) '
 title: '如何：在 c + + (中添加、编辑或删除控件) '
 ms.date: 02/15/2019
 f1_keywords:
@@ -42,27 +43,27 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: be2923c98ed1b92d4aeb2692591abcaf9f13c5ec
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4ff0f3bdf7e4da935cba3437900e2319218de771
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508831"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337821"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>如何：在 c + + (中添加、编辑或删除控件) 
 
 使用 **对话框编辑器**，可以在对话框中添加、调整大小、编辑和删除控件。 你还可以编辑控件的属性（例如它的 ID），或在运行时其最初是否可见。
 
-在**对话框编辑器**中工作时，"[工具箱" 窗口](/visualstudio/ide/reference/toolbox)中将显示 "**对话框编辑器**" 选项卡。 还可以自定义 " **工具箱** " 窗口，以便更轻松地使用。 有关详细信息，请参阅 [使用工具箱](/visualstudio/ide/using-the-toolbox) 和 [显示或隐藏 "工具箱" 窗口](./dialog-editor.md)。
+在 **对话框编辑器** 中工作时，"[工具箱" 窗口](/visualstudio/ide/reference/toolbox)中将显示 "**对话框编辑器**" 选项卡。 还可以自定义 " **工具箱** " 窗口，以便更轻松地使用。 有关详细信息，请参阅 [使用工具箱](/visualstudio/ide/using-the-toolbox) 和 [显示或隐藏 "工具箱" 窗口](./dialog-editor.md)。
 
 > [!TIP]
-> 使用 **对话框编辑器**时，在许多情况下，您可以选择鼠标右键以显示常用命令的快捷菜单。
+> 使用 **对话框编辑器** 时，在许多情况下，您可以选择鼠标右键以显示常用命令的快捷菜单。
 
 ## <a name="add-controls"></a>添加控件
 
 ### <a name="to-add-a-control"></a>添加控件
 
-1. 确保对话框选项卡式窗口是编辑器框架中的当前文档。 如果对话框不是当前文档，则不会在**工具箱**中看到 "**对话框编辑器" 选项卡**。
+1. 确保对话框选项卡式窗口是编辑器框架中的当前文档。 如果对话框不是当前文档，则不会在 **工具箱** 中看到 "**对话框编辑器" 选项卡**。
 
 1. 在 "**工具箱**" 窗口的 "**对话框编辑器**" 选项卡上，选择所需的控件，然后执行以下任一操作：
 
@@ -112,18 +113,18 @@ ms.locfileid: "91508831"
 1. 在 [属性窗口](/visualstudio/ide/reference/properties-window)中，更改控件的属性。
 
    > [!NOTE]
-   > 当您为按钮、单选按钮或复选框控件设置的 **位图** 属性等于 **True**时，将为您的控件实现样式 BS_BITMAP。 有关详细信息，请参阅 [按钮样式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 有关将位图与控件相关联的示例，请参阅 [CButton：： SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 在 **对话框编辑器**中时，不会在控件上显示位图。
+   > 当您为按钮、单选按钮或复选框控件设置的 **位图** 属性等于 **True** 时，将为您的控件实现样式 BS_BITMAP。 有关详细信息，请参阅 [按钮样式](../mfc/reference/styles-used-by-mfc.md#button-styles)。 有关将位图与控件相关联的示例，请参阅 [CButton：： SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)。 在 **对话框编辑器** 中时，不会在控件上显示位图。
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>撤消对控件的属性所做的更改
 
-1. 请确保控件在 **对话框编辑器**中具有焦点。
+1. 请确保控件在 **对话框编辑器** 中具有焦点。
 
 1. "切换到菜单" "**编辑**" "  >  **撤消**"。 如果焦点不在控件上，则 " **撤消** " 命令将不可用。
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>定义（非按钮）对话框控件的成员变量
 
 > [!NOTE]
-> 此过程仅适用于 MFC 项目中的对话框控件。 ATL 项目应使用 " **新建 Windows 消息和事件处理程序** " 对话框。 有关详细信息，请参阅 [与用户界面对象关联的消息类型](../mfc/reference/message-types-associated-with-user-interface-objects.md)、 [编辑消息处理程序](../mfc/reference/editing-a-message-handler.md)和 [为反射消息定义消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。
+> 此过程仅适用于 MFC 项目中的对话框控件。 ATL 项目应使用 " **新建 Windows 消息和事件处理程序** " 对话框。 有关详细信息，请参阅 [与 User-Interface 对象关联的消息类型](../mfc/reference/message-types-associated-with-user-interface-objects.md)、 [编辑消息处理程序](../mfc/reference/editing-a-message-handler.md)和 [为反射消息定义消息处理程序](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。
 
 1. 在 [对话框编辑器](dialog-editor.md)中，选择一个控件。
 
@@ -138,11 +139,11 @@ ms.locfileid: "91508831"
 > [!TIP]
 > 若要从任何对话框控件跳转到其现有的处理程序，请双击该控件。
 
-您还可以使用[MFC 类向导](../mfc/reference/mfc-class-wizard.md)中的 "**成员变量**" 选项卡来为指定的类添加新的成员变量，以及查看已定义的成员变量。
+您还可以使用 [MFC 类向导](../mfc/reference/mfc-class-wizard.md)中的 "**成员变量**" 选项卡来为指定的类添加新的成员变量，以及查看已定义的成员变量。
 
 ## <a name="delete-controls"></a>删除控件
 
-在对话框中，选择控件，然后按**Delete**键，或者单击 "浏览" "**编辑**" "  >  **删除**"。
+在对话框中，选择控件，然后按 **Delete** 键，或者单击 "浏览" "**编辑**" "  >  **删除**"。
 
 ## <a name="other-issues"></a>其他问题
 
@@ -207,7 +208,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 使用 " **插入 Activex 控件** " 对话框，可以在使用 [对话框编辑器](dialog-editor.md)时将 ActiveX 控件插入对话框中。 此对话框包含以下属性：
 
-|属性|说明|
+|Property|描述|
 |---|---|
 |**ActiveX 控件**|显示 ActiveX 控件的列表。<br/><br/>从此对话框插入控件不会生成包装类。 如果需要包装类，请使用 [类视图](/visualstudio/ide/viewing-the-structure-of-code) 来创建一个，请参阅 [添加类](../ide/adding-a-class-visual-cpp.md)。<br/><br/>如果 ActiveX 控件未出现在此对话框中，请尝试根据供应商的说明安装控件。|
 |**路径**|显示在其中找到 ActiveX 控件的文件。|
@@ -217,7 +218,7 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 ### <a name="to-add-an-activex-control"></a>添加 ActiveX 控件
 
-1. 在 **对话框编辑器**中打开一个对话框。
+1. 在 **对话框编辑器** 中打开一个对话框。
 
 1. 右键单击对话框正文中的任意位置，然后选择 " **插入 ActiveX 控件**"。
 
@@ -232,9 +233,9 @@ Visual Studio 使你可以将 ActiveX 控件插入对话框中。 有关详细�
 
 ### <a name="to-edit-properties-for-an-activex-control"></a>编辑 ActiveX 控件的属性
 
-独立供应商提供的 ActiveX 控件可以具有其自己的属性和特性。 这些属性将显示在 " **属性** " 窗口中。 由 ActiveX 控件的编写器创建的所有属性页都显示在 " **属性页** " 对话框中。  (查看特定 ActiveX 控件的**属性页**，请在 "[属性窗口](/visualstudio/ide/reference/properties-window)") 中选择 "**属性页**" 按钮。
+独立供应商提供的 ActiveX 控件可以具有其自己的属性和特性。 这些属性将显示在 " **属性** " 窗口中。 由 ActiveX 控件的编写器创建的所有属性页都显示在 " **属性页** " 对话框中。  (查看特定 ActiveX 控件的 **属性页**，请在 "[属性窗口](/visualstudio/ide/reference/properties-window)") 中选择 "**属性页**" 按钮。
 
-- 选择**ActiveX**控件并单击 "浏览" "**查看**  >  **属性" 页**以查看属性。 根据需要在属性页中进行更改。
+- 选择 **ActiveX** 控件并单击 "浏览" "**查看**  >  **属性" 页** 以查看属性。 根据需要在属性页中进行更改。
 
    ActiveX 控件的属性页中显示了各种选项卡，具体取决于作为 ActiveX 控件一部分的属性表。
 

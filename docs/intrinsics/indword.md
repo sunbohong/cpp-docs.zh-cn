@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __indword
 title: __indword
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: 790b65c8a565124df92b82b7ea17174788086a96
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: bd637027ee930b551f08508874554e2b19f22461
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336930"
 ---
 # <a name="__indword"></a>__indword
 
 **Microsoft 专用**
 
-使用`in`指令从指定端口读取一个双字数据。
+使用指令从指定端口读取一个双字数据 `in` 。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +30,7 @@ unsigned long __indword(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *口*\
 中要从其读取的端口。
@@ -40,11 +41,11 @@ unsigned long __indword(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__indword`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 

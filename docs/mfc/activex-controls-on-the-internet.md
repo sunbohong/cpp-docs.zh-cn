@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Internet 上的 ActiveX 控件
 title: Internet 上的 ActiveX 控件
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -9,19 +10,19 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: f06a6f6f71e922163fd95c59836c50b88b05ed3a
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5f186d74ff0b448d1cef6a956a6495f6a8890798
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339133"
 ---
 # <a name="activex-controls-on-the-internet"></a>Internet 上的 ActiveX 控件
 
 ActiveX 控件是 OLE 控件规范的更新版本。
 
 >[!IMPORTANT]
-> ActiveX 是一种不能用于新开发的旧技术。 有关详细信息，请参阅[ActiveX 控件](activex-controls.md)。
+> ActiveX 是一种不能用于新开发的旧技术。 有关详细信息，请参阅 [ActiveX 控件](activex-controls.md)。
 
 控件是开发可在各种不同容器（包括 Internet 上的 COM 感知 Web 浏览器）中使用的可编程软件组件的主要体系结构。 任何 ActiveX 控件都可以是 Internet 控件，并且可将其功能添加到活动文档或成为网页的一部分。 网页上的控件可以使用脚本互相通信。
 
@@ -39,7 +40,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 - 是 COM 对象。
 
-- 导出**DLLRegisterServer**和**DLLUnRegisterServer**。
+- 导出 **DLLRegisterServer** 和 **DLLUnRegisterServer**。
 
 - 支持功能所需的其他接口。
 
@@ -49,7 +50,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 若要提高控件的性能，请遵循下列有关效率注意事项的提示：
 
-- 实现[ActiveX 控件：优化](mfc-activex-controls-optimization.md)一文中所述的方法。
+- 实现 [ActiveX 控件：优化](mfc-activex-controls-optimization.md)一文中所述的方法。
 
 - 考虑如何实例化控件。
 
@@ -85,9 +86,9 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 1. 单击 "**文件**" 菜单上的 "**新建**"。
 
-1. 从 Visual Studio c + + 项目中选择 " **MFC ActiveX 控件向导**" 并命名你的项目。
+1. 从 Visual Studio c + + 项目中选择 " **MFC ActiveX 控件向导** " 并命名你的项目。
 
-1. 在 "**控件设置**" 页上，选择 "**异步加载属性**"。 选择此选项将为您设置就绪状态属性和就绪状态更改事件。
+1. 在 " **控件设置** " 页上，选择 " **异步加载属性**"。 选择此选项将为您设置就绪状态属性和就绪状态更改事件。
 
    还可以选择其他优化，如 " [ActiveX 控件：优化](mfc-activex-controls-optimization.md)" 中所述的 "**无窗口激活**"。
 
@@ -101,25 +102,25 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 1. 在此类中，重写 `OnDataAvailable`。 将在数据可显示时调用此函数。 在数据变得可用后，您可以通过选择的任何方式（例如，逐渐呈现的方式）处理数据。
 
-   下面的代码摘要是在编辑控件中逐渐显示数据的简单示例。 请注意，使用标志**BSCF_FIRSTDATANOTIFICATION**清除编辑控件。
+   下面的代码摘要是在编辑控件中逐渐显示数据的简单示例。 请注意，使用标志 **BSCF_FIRSTDATANOTIFICATION** 清除编辑控件。
 
    [!code-cpp[NVC_MFCActiveXControl#1](codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]
 
    请注意，您必须包括 AFXCMN.H 以使用 `CListCtrl` 类。
 
-1. 当控件的整体状态发生更改（例如，从正在加载到已初始化或用户交互），请调用 `COleControl::InternalSetReadyState`。 如果控件只有一个数据路径属性，则可以在**BSCF_LASTDATANOTIFICATION**上添加代码以通知容器下载已完成。 例如：
+1. 当控件的整体状态发生更改（例如，从正在加载到已初始化或用户交互），请调用 `COleControl::InternalSetReadyState`。 如果控件只有一个数据路径属性，则可以在 **BSCF_LASTDATANOTIFICATION** 上添加代码以通知容器下载已完成。 例如：
 
    [!code-cpp[NVC_MFCActiveXControl#2](codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 
-1. 重写 `OnProgress`。 在 `OnProgress` 中，将为您传递一个显示最大范围的数以及一个显示当前下载还有多久完成的数。 您可以使用这些数字向用户显示完成百分比等状态。
+1. 替代 `OnProgress`。 在 `OnProgress` 中，将为您传递一个显示最大范围的数以及一个显示当前下载还有多久完成的数。 您可以使用这些数字向用户显示完成百分比等状态。
 
 下一个过程将属性添加到控件以使用刚刚派生的类。
 
 #### <a name="to-add-a-property"></a>添加属性
 
-1. 在**类视图**中，右键单击 "库" 节点下的接口并选择 "**添加**"，然后选择 "**添加属性**"。 这将启动 "**添加属性向导**"。
+1. 在 **类视图** 中，右键单击 "库" 节点下的接口并选择 " **添加**"，然后选择 " **添加属性**"。 这将启动 " **添加属性向导**"。
 
-1. 在**添加属性向导**中，选择 "**设置/获取方法**" 单选按钮，键入**属性名称**（例如 EDITCONTROLTEXT），并选择 "BSTR" 作为**属性类型**。
+1. 在 **添加属性向导** 中，选择 " **设置/获取方法** " 单选按钮，键入 **属性名称**（例如 EDITCONTROLTEXT），并选择 "BSTR" 作为 **属性类型**。
 
 1. 单击“完成”。
 
@@ -131,11 +132,11 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
    [!code-cpp[NVC_MFCActiveXControl#4](codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 
-1. 在[DoPropExchange](reference/colecontrol-class.md#dopropexchange)中，添加以下行：
+1. 在 [DoPropExchange](reference/colecontrol-class.md#dopropexchange)中，添加以下行：
 
    [!code-cpp[NVC_MFCActiveXControl#5](codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]
 
-1. 重写[ResetData](reference/cdatapathproperty-class.md#resetdata)以通知属性通过添加以下行来重置其控件：
+1. 重写 [ResetData](reference/cdatapathproperty-class.md#resetdata) 以通知属性通过添加以下行来重置其控件：
 
    [!code-cpp[NVC_MFCActiveXControl#6](codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]
 
@@ -159,7 +160,7 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 例如，如果仅提供 10 个字节并且对 1K 文件异步调用“读取”，则“读取”将不阻止，但与目前可用的 10 字节一起返回。
 
-使用类实现[异步名字对象](asynchronous-monikers-on-the-internet.md) `CAsyncMonikerFile` 。 但是，ActiveX 控件可以使用 `CDataPathProperty` 类（派生自 `CAsyncMonikerFile`）帮助实现异步控件属性。
+使用类实现 [异步名字对象](asynchronous-monikers-on-the-internet.md) `CAsyncMonikerFile` 。 但是，ActiveX 控件可以使用 `CDataPathProperty` 类（派生自 `CAsyncMonikerFile`）帮助实现异步控件属性。
 
 ## <a name="displaying-a-control-on-a-web-page"></a>在网页上显示控件
 
@@ -183,15 +184,15 @@ ActiveX 控件不受 Internet 限制。 ActiveX 控件还可在任何容器中�
 
 ## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>将现有 OLE 控件更新为使用新的 ActiveX 控件功能
 
-如果 OLE 控件是使用 4.2 之前的 Visual C++ 版本创建的，则您可执行下列步骤来提高其性能并增强其功能。 有关这些更改的详细讨论，请参阅[ActiveX 控件：优化](mfc-activex-controls-optimization.md)。
+如果 OLE 控件是使用 4.2 之前的 Visual C++ 版本创建的，则您可执行下列步骤来提高其性能并增强其功能。 有关这些更改的详细讨论，请参阅 [ActiveX 控件：优化](mfc-activex-controls-optimization.md)。
 
 如果要向现有控件添加异步属性支持，则需要添加就绪状态属性和 `ReadyStateChange` 事件。 在控件的构造函数中，添加：
 
 [!code-cpp[NVC_MFCActiveXControl#8](codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]
 
-你将在通过调用[COleControl：： InternalSetReadyState](reference/colecontrol-class.md#internalsetreadystate)下载代码时更新就绪状态。 您可以调用 `InternalSetReadyState` 的一个位置是从 `OnProgress` 派生类的 `CDataPathProperty` 重写。
+你将在通过调用 [COleControl：： InternalSetReadyState](reference/colecontrol-class.md#internalsetreadystate)下载代码时更新就绪状态。 您可以调用 `InternalSetReadyState` 的一个位置是从 `OnProgress` 派生类的 `CDataPathProperty` 重写。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC Internet 编程任务](mfc-internet-programming-tasks.md)<br/>
 [MFC Internet 编程基础知识](mfc-internet-programming-basics.md)

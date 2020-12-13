@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2486
 title: 编译器错误 C2486
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
-ms.openlocfilehash: 75705bd8ecc850839e22fccbed1abf08687b3823
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c45e0bdb0f515743694fe372bea3afdb24e00177
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74743505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339353"
 ---
 # <a name="compiler-error-c2486"></a>编译器错误 C2486
 
 仅在具有 "naked" 特性的函数中允许 "__LOCAL_SIZE"
 
-在内联程序集函数中，名称 `__LOCAL_SIZE` 保留给用[naked](../../cpp/naked-cpp.md)特性声明的函数。
+在内联程序集函数中，该名称 `__LOCAL_SIZE` 将保留给用 [naked](../../cpp/naked-cpp.md) 特性声明的函数。
 
 下面的示例生成 C2486：
 

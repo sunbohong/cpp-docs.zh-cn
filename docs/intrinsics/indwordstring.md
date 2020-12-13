@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __indwordstring
 title: __indwordstring
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __indwordstring intrinsic
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
-ms.openlocfilehash: b0b160ba00b1c0b7aa6bffc913e4cb56d503c2ff
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 18d18a8981a2dd58c0f7bcd366faaf46629647c0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336910"
 ---
 # <a name="__indwordstring"></a>__indwordstring
 
 **Microsoft 专用**
 
-使用`rep insd`指令从指定端口读取数据。
+使用指令从指定端口读取数据 `rep insd` 。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +32,7 @@ void __indwordstring(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *口*\
 中要从其读取的端口。
@@ -44,11 +45,11 @@ void __indwordstring(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__indwordstring`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 

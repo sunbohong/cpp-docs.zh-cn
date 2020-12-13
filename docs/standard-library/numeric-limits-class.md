@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： numeric_limits 类
 title: numeric_limits 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -70,12 +71,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-ms.openlocfilehash: eb2ee9bc6bc887ff6739c3da1bf2566dbdcbc016
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c0f3532b80eb2cba03a7c230d7b16aa8d3c6b616
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830678"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338054"
 ---
 # <a name="numeric_limits-class"></a>numeric_limits 类
 
@@ -88,12 +89,12 @@ template <class Type>
     class numeric_limits
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 正在测试、查询或设置其属性的基础元素数据类型。 *类型* 还可以声明为 **`const`** 、 **`volatile`** 或 **`const volatile`** 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 标头为类型、、、、、、、、、、、、、、、、和定义显式专用化 **`wchar_t`** **`bool`** **`char`** **`signed char`** **`unsigned char`** **`short`** **`unsigned short`** **`int`** **`unsigned int`** **`long`** **`unsigned long`** **`float`** **`double`** **`long double`** **`long long`** **`unsigned long long`** **`char16_t`** **`char32_t`** 。 对于这些显式专用化，成员 [numeric_limits：： is_specialized](#is_specialized) 为 **`true`** ，并且所有相关成员都具有有意义的值。 程序可提供额外的显式专用化。 类的大多数成员函数描述或测试的可能实现 **`float`** 。
 
@@ -101,7 +102,7 @@ template <class Type>
 
 ## <a name="static-functions-and-constants"></a>静态函数和常数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[denorm_min](#denorm_min)|返回最小的非规范化非零值。|
 |[位数](#digits)|返回类型可以表示而不会降低精度的基数数字的位数。|
@@ -120,7 +121,7 @@ template <class Type>
 |[is_modulo](#is_modulo)|测试某一类型是否具有具有取模表示形式。|
 |[is_signed](#is_signed)|测试某一类型是否具有带符号的表示形式。|
 |[is_specialized](#is_specialized)|测试某一类型是否具有类模板中定义的显式专用化 `numeric_limits` 。|
-|[lowest](#lowest)|返回最小的负有限值。|
+|[层](#lowest)|返回最小的负有限值。|
 |[max](#max)|返回某个类型的最大有限值。|
 |[max_digits10](#max_digits10)|返回确保类型的两个非重复值具有不同的十进制表示形式所需的十进制数字的位数。|
 |[max_exponent](#max_exponent)|返回最大正整数指数，当计算基数的该指数次幂时，浮点类型可将其表示为有限值。|
@@ -148,7 +149,7 @@ static constexpr Type denorm_min() throw();
 
 最小的非规范化非零值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 **`long double`** 与 **`double`** c + + 编译器相同。
 
@@ -207,7 +208,7 @@ static constexpr int digits = 0;
 
 该类型可以表示且不会降低精度的基数数字的位数。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该成员存储该类型可以表示且无需更改的基数数字的位数，这是预定义的整数类型的任何符号位以外的比特数或预定义的浮点类型的尾数的位数。
 
@@ -295,9 +296,9 @@ static constexpr Type epsilon() throw();
 
 数据类型可以表示的 1 与大于 1 的最小值之间的差值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-值为类型 FLT_EPSILON **`float`** 。 `epsilon`类型是最小的正浮点数*n* ，因此*n*  +  `epsilon`  +  *n*可表示。
+值为类型 FLT_EPSILON **`float`** 。 `epsilon`类型是最小的正浮点数 *n* ，因此 *n*  +  `epsilon`  +  *n* 可表示。
 
 #### <a name="example"></a>示例
 
@@ -347,7 +348,7 @@ static constexpr float_denorm_style has_denorm = denorm_absent;
 
 类型的枚举值 `const float_denorm_style` ，指示类型是否允许非规范化值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 `denorm_present`具有非规范化值的浮点类型的成员存储，实际上是可变数量的指数位。
 
@@ -393,7 +394,7 @@ static constexpr bool has_denorm_loss = false;
 
 **`true`** 如果准确性损失被检测为非规范化损失，则为; **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该成员将确定值是否已损失准确性的类型存储为 true，因为将该值作为非规范化结果传递（该值太小，从而无法表示为规范化的值）或者因为该值不精确（与不受指数范围和精度限制的结果不同），具有 IEC 559 浮点表示形式的选项可能会影响某些结果。
 
@@ -439,9 +440,9 @@ static constexpr bool has_infinity = false;
 
 **`true`** 如果该类型具有正无穷大的表示形式，则为; 否则为。 **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-**`true`** 如果[is_iec559](#is_iec559)为，则成员返回 **`true`** 。
+**`true`** 如果 [is_iec559](#is_iec559)为，则成员返回 **`true`** 。
 
 #### <a name="example"></a>示例
 
@@ -485,9 +486,9 @@ static constexpr bool has_quiet_NaN = false;
 
 **`true`** 如果该 **类型** 具有 quiet NAN 的表示形式，则为; 否则为。 **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-静默 NAN 为非数值的编码，不表示其在表达式中的存在。 **`true`** 如果[is_iec559](#is_iec559)为 true，则返回值为。
+静默 NAN 为非数值的编码，不表示其在表达式中的存在。 **`true`** 如果 [is_iec559](#is_iec559)为 true，则返回值为。
 
 #### <a name="example"></a>示例
 
@@ -531,9 +532,9 @@ static constexpr bool has_signaling_NaN = false;
 
 **`true`** 如果该类型具有信号 NAN 的表示形式，则为; 否则为。 **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
-信号 NAN为非数值的编码，表示其在表达式中的存在。 **`true`** 如果[is_iec559](#is_iec559)为 true，则返回值为。
+信号 NAN为非数值的编码，表示其在表达式中的存在。 **`true`** 如果 [is_iec559](#is_iec559)为 true，则返回值为。
 
 #### <a name="example"></a>示例
 
@@ -577,7 +578,7 @@ static constexpr Type infinity() throw();
 
 用于表示某一类型的正无穷的值（若适用）。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 仅当 [has_infinity](#has_infinity) 为时，返回值才有意义 **`true`** 。
 
@@ -631,7 +632,7 @@ static constexpr bool is_bounded = false;
 
 **`true`** 如果类型具有一组限定的可表示值，则为; **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 所有预定义类型都具有一组限定的可表示值并返回 **`true`** 。
 
@@ -685,7 +686,7 @@ static constexpr bool is_exact = false;
 
 **`true`** 如果计算没有舍入误差，则为; **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 所有预定义的整数类型都具有其值的准确表示形式，并返回 **`false`** 。 定点的或合理的表示形式也被视为准确的表示形式，但浮点表示形式不是。
 
@@ -739,7 +740,7 @@ static constexpr bool is_iec559 = false;
 
 **`true`** 如果类型符合 IEC 559 标准，则为; **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 IEC 559 是一个国际标准，用于表示浮点值，在美国也称为 IEEE 754。
 
@@ -789,7 +790,7 @@ static constexpr bool is_integer = false;
 
 **`true`** 如果该类型具有整数表示形式，则为; 否则为。 **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 所有预定义的整数类型都有整数表示形式。
 
@@ -839,7 +840,7 @@ static constexpr bool is_modulo = false;
 
 **`true`** 如果类型具有取模表示形式，则为; 否则为。 **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 取模表示形式是一种将所有结果减去某些值的取模结果的表示形式。 所有预定义的无符号整数类型都有取模表示形式。
 
@@ -889,7 +890,7 @@ static constexpr bool is_signed = false;
 
 **`true`** 如果类型具有有符号的表示形式，则为; 否则为。 **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该成员将具有带符号的表示形式的类型存储为 true，这种情况适用于所有预定义的浮点类型和带符号的整数类型。
 
@@ -939,7 +940,7 @@ static constexpr bool is_specialized = false;
 
 **`true`** 如果该类型具有在类模板中定义的显式专用化，则为; 否则为。 **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 除指针之外的所有标量类型都具有为类模板定义的显式专用化 `numeric_limits` 。
 
@@ -993,7 +994,7 @@ static constexpr Type lowest() throw();
 
 返回最小的负有限值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 返回此类型最小的有限值（通常，整数类型使用 `min()`，浮点类型使用 `-max()`）。 如果为，则返回值是有意义的 `is_bounded` **`true`** 。
 
@@ -1009,7 +1010,7 @@ static constexpr Type max() throw();
 
 某个类型的最大有限值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 类型类型和 FLT_MAX INT_MAX 的最大有限值 **`int`** **`float`** 。 如果 [is_bounded](#is_bounded) 为，则返回值是有意义的 **`true`** 。
 
@@ -1051,7 +1052,7 @@ static constexpr int max_digits10 = 0;
 
 返回所需的十进制数字的位数以确保类型的两个非重复值具有不同的十进制表示形式。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 成员存储所需的十进制数字的位数以确保类型的两个非重复值具有不同的十进制表示形式。
 
@@ -1067,7 +1068,7 @@ static constexpr int max_exponent = 0;
 
 可由该类型表示的以整型基数为底数的最大指数。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 成员函数返回仅对浮点类型有意义。 `max_exponent`是类型 FLT_MAX_EXP 的值 **`float`** 。
 
@@ -1113,7 +1114,7 @@ static constexpr int max_exponent10 = 0;
 
 可由该类型表示的以整型基数 10 为底数的最大指数。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 成员函数返回仅对浮点类型有意义。 `max_exponent`是类型 FLT_MAX_10 的值 **`float`** 。
 
@@ -1159,7 +1160,7 @@ static constexpr Type min() throw();
 
 该类型的最小规范化值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 最小标准化值为类型的类型 **`int`** 和 FLT_MIN INT_MIN **`float`** 。 如果 [is_bounded](#is_bounded) 为 **`true`** 或 [is_signed](#is_signed) 为，则返回值有意义 **`false`** 。
 
@@ -1209,7 +1210,7 @@ static constexpr int min_exponent = 0;
 
 可由该类型表示的以整型基数为底数的最小指数。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 成员函数仅对浮点类型有意义。 `min_exponent`是类型 FLT_MIN_EXP 的值 **`float`** 。
 
@@ -1255,7 +1256,7 @@ static constexpr int min_exponent10 = 0;
 
 可由该类型表示的以整型基数 10 为底数的最小指数。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 成员函数仅对浮点类型有意义。 `min_exponent10`是类型 FLT_MIN_10_EXP 的值 **`float`** 。
 
@@ -1301,7 +1302,7 @@ static constexpr Type quiet_NaN() throw();
 
 该类型的静默 NAN 的表示形式。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 仅当 [has_quiet_NaN](#has_quiet_nan) 为时，返回值才有意义 **`true`** 。
 
@@ -1347,7 +1348,7 @@ static constexpr int radix = 0;
 
 表示该类型的整型底数。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 对于预定义的整数类型，底数为 2，并且计算了该底数的指数；对于预定义的浮点类型，则为 FLT_RADIX。
 
@@ -1435,7 +1436,7 @@ static constexpr float_round_style round_style = round_toward_zero;
 
 用于描述舍入样式的 `float_round_style` 枚举中的值。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该成员存储一个值，以描述可供实现选择用于将浮点值舍入为整数值的各种方法。
 
@@ -1482,7 +1483,7 @@ static constexpr Type signaling_NaN() throw();
 
 该类型的信号 NAN 的表示形式。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 仅当 [has_signaling_NaN](#has_signaling_nan) 为时，返回值才有意义 **`true`** 。
 
@@ -1522,7 +1523,7 @@ static constexpr bool tinyness_before = false;
 
 **`true`** 如果该类型可以在舍入之前检测小值，则为; **`false`** 否则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 将可以检测到微小值的类型包含为具有 IEC 559 浮点表示形式的选项，并且其实现可能会影响某些结果。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 ms.date: 4/2/2020
 api_name:
@@ -54,19 +55,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 08921ff44d2d69ab77eb210b2123016ea61c4f67
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: eb4ea7c5f7b288640fe0797d9f6c5428fe28e0af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008278"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336482"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
 将一个字符串的字符复制到另一个字符串。  这些版本的 [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) 具有安全性增强功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
 > [!IMPORTANT]
-> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsncpy_s**和 **_mbsncpy_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsncpy_s** 和 **_mbsncpy_s_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -174,7 +175,7 @@ errno_t _mbsncpy_s_l(
 
 ### <a name="error-conditions"></a>错误条件
 
-|*strDest*|*numberOfElements*|*strSource*|返回值|*StrDest*的内容|
+|*strDest*|*numberOfElements*|*strSource*|返回值|*StrDest* 的内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|any|any|**EINVAL**|未修改|
 |any|any|**NULL**|**EINVAL**|*strDest*[0] 设置为0|
@@ -183,11 +184,11 @@ errno_t _mbsncpy_s_l(
 
 ## <a name="remarks"></a>备注
 
-这些函数尝试将*strSource*的前*D*个字符复制到*strDest*，其中*D*是*count*和*strSource*的长度。 如果这些 *D* 字符将放在 *strDest* (其大小被指定为 *numberOfElements*) 并且仍为 null 终止符留下空间，则会复制这些字符，并追加一个终止 null。否则， *strDest*[0] 设置为 null 字符，并调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+这些函数尝试将 *strSource* 的前 *D* 个字符复制到 *strDest*，其中 *D* 是 *count* 和 *strSource* 的长度。 如果这些 *D* 字符将放在 *strDest* (其大小被指定为 *numberOfElements*) 并且仍为 null 终止符留下空间，则会复制这些字符，并追加一个终止 null。否则， *strDest*[0] 设置为 null 字符，并调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
-在上段描述的内容中有一个例外。 如果*count*是 **_TRUNCATE**的，则在仍留出用于终止 null 的空间（始终追加）的情况下，将复制*StrDest*中可容纳的*strSource*数量。
+在上段描述的内容中有一个例外。 如果 *count* 是 **_TRUNCATE** 的，则在仍留出用于终止 null 的空间（始终追加）的情况下，将复制 *StrDest* 中可容纳的 *strSource* 数量。
 
-例如，
+例如，应用于对象的
 
 ```C
 char dst[5];
@@ -203,15 +204,15 @@ strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-请注意，与**strncpy**不同的是，如果*count*大于*STRSOURCE*的长度，则不会将目标字符串填充到长度为零*的空字符。*
+请注意，与 **strncpy** 不同的是，如果 *count* 大于 *STRSOURCE* 的长度，则不会将目标字符串填充到长度为零 *的空字符。*
 
 如果源和目标字符串重叠，则 **strncpy_s** 的行为不确定。
 
 如果 *strDest* 或 *strSource* 为 **NULL**，或者 *numberOfElements* 为0，则调用无效的参数处理程序。 如果允许执行继续，则该函数将返回 **EINVAL** ，并将 **Errno** 设置为 **EINVAL**。
 
-**wcsncpy_s** 和 **_mbsncpy_s** 是 **strncpy_s**的宽字符和多字节字符版本。 **Wcsncpy_s**和**mbsncpy_s**的参数和返回值将相应变化。 否则这六个函数具有相同行为。
+**wcsncpy_s** 和 **_mbsncpy_s** 是 **strncpy_s** 的宽字符和多字节字符版本。 **Wcsncpy_s** 和 **mbsncpy_s** 的参数和返回值将相应变化。 否则这六个函数具有相同行为。
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，使用这些函数由模板重载简化；重载可以自动推导出缓冲区长度 (不再需要指定大小自变量)，并且它们可以自动用以更新、更安全的对应物替换旧的、不安全的函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 

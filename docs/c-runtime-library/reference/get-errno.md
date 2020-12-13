@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _get_errno
 title: _get_errno
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-ms.openlocfilehash: f1678628685c74519077fb68ca9c810aebe30fdd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6df162974494a29d55af9e27eb7a2b526a27cf45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336514"
 ---
 # <a name="_get_errno"></a>_get_errno
 
@@ -47,20 +48,20 @@ errno_t _get_errno(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pValue*<br/>
-指向要使用**errno**变量的当前值填充的整数的指针。
+指向要使用 **errno** 变量的当前值填充的整数的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回零；如果失败，则返回错误代码。 如果*pValue*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EINVAL**。
+如果成功，则返回零；如果失败，则返回错误代码。 如果 *pValue* 为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将 **errno** 设置为 **EINVAL** 并返回 **EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Errno**的可能值在 errno 中定义。 此外，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
+**Errno** 的可能值在 errno 中定义。 此外，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="example"></a>示例
 
@@ -90,13 +91,13 @@ fyi, ENOENT = 2
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_get_errno**|\<stdlib.h>|\<errno.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_set_errno](set-errno.md)<br/>
 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

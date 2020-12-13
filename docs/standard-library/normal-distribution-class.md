@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： normal_distribution 类
 title: normal_distribution 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: 0fed268b6c3f318b3e308f90e94862fdf969e3fa
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: eb27debf104df3e33a324a0297624769af4860b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338134"
 ---
 # <a name="normal_distribution-class"></a>normal_distribution 类
 
@@ -69,19 +70,19 @@ public:
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *RealType*\
 浮点结果类型，默认为 **`double`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类模板描述产生用户指定的整型值的分布，如果未提供任何值，则 **`double`** 根据正态分布分配值。 下表链接到有关各个成员的文章。
 
 [normal_distribution](#normal_distribution)\
 [param_type](#param_type)
 
-属性函数 `mean()` 和 `stddev()` 分别返回存储的分布参数的值和*mean* *stddev* 。
+属性函数 `mean()` 和 `stddev()` 分别返回存储的分布参数的值和 *stddev* 。
 
 属性成员 `param()` 将设置或返回 `param_type` 存储的分布参数包。
 
@@ -194,7 +195,7 @@ explicit normal_distribution(result_type mean = 0.0, result_type stddev = 1.0);
 explicit normal_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *格林威治时间*\
 `mean` 分布参数。
@@ -205,13 +206,13 @@ explicit normal_distribution(const param_type& parm);
 *parm*\
 用于构造分布的参数结构。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **前提条件：**`0.0 < stddev`
 
 第一个构造函数将构造一个对象，该对象存储的 `mean` 值保留值 *mean*，并且该对象存储的 `stddev` 值保留值 *stddev*。
 
-第二个构造函数将构造一个从 parm** 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
+第二个构造函数将构造一个从 parm 初始化其存储的参数的对象。 通过调用 `param()` 成员函数，可获取和设置当前的现有分发参数。
 
 ## <a name="normal_distributionparam_type"></a><a name="param_type"></a> normal_distribution：:p aram_type
 
@@ -229,7 +230,7 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *格林威治时间*\
 `mean` 分布参数。
@@ -240,12 +241,12 @@ struct param_type {
 *然后*\
 用于比较的 `param_type` 结构。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **前提条件：**`0.0 < stddev`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： emitidl
 title: 'emitidl (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-ms.openlocfilehash: 32362f287320e69d1680cbe07ca050143b507514
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 21c4f7fc067eb37b8816bdedd1f338908950566e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337792"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -23,12 +24,12 @@ ms.locfileid: "88846324"
 [ emitidl(state, defaultimports=boolean) ];
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-State<br/>
+*state*<br/>
 以下可能的值之一： **`true`** 、 **`false`** 、 `forced` 、 `restricted` 、 `push` 或 `pop` 。
 
-- 如果 **`true`** 为，则在生成的 .idl 文件中放置在源代码文件中遇到的任何 idl 类别属性。 这是 **emitidl**的默认设置。
+- 如果 **`true`** 为，则在生成的 .idl 文件中放置在源代码文件中遇到的任何 idl 类别属性。 这是 **emitidl** 的默认设置。
 
 - 如果 **`false`** 为，则在源代码文件中遇到的任何 idl 类别特性都不会放置在生成的 .idl 文件中。
 
@@ -44,7 +45,7 @@ State<br/>
 
 - 如果 *布尔值* 为 **`false`** ，则不会将 docobj 导入到生成的 .idl 文件中。 必须显式导入包含 [import](import.md)的 .idl 文件。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 在源代码文件中遇到 **emitidl** c + + 属性后，idl 类别属性将放置在生成的 .idl 文件中。 如果没有 **emitidl** 属性，则源代码文件中的 IDL 属性将输出到生成的 .idl 文件。
 
@@ -63,7 +64,7 @@ State<br/>
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
 [独立属性](stand-alone-attributes.md)

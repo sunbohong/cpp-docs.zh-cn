@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： atof、_atof_l、_wtof、_wtof_l
 title: atof、_atof_l、_wtof、_wtof_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: 8eee8db691b3b652768980237fc90bd675bac89b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b583b4d443264d82fa83124f4dacd597fe8829b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337782"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -84,9 +85,9 @@ double _wtof_l(
 );
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 要转换的字符串。
 
 *locale*<br/>
@@ -96,7 +97,7 @@ double _wtof_l(
 
 每个函数都返回 **`double`** 通过将输入字符解释为数字而生成的值。 如果输入无法转换为该类型的值，则返回值为 0.0。
 
-在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
+在所有超出范围的情况下， **errno** 设置为 **ERANGE**。 如果传入的参数为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将 **errno** 设置为 **EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
@@ -104,17 +105,17 @@ double _wtof_l(
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的空字符（'\0' 或 L'\0'）。
 
-**Atof**和 **_wtof**的*str*参数具有以下形式：
+**Atof** 和 **_wtof** 的 *str* 参数具有以下形式：
 
 [*空格*][*sign*][*数字*][__.__*数字*][{**e** &#124; **e** } [*sign*]*数字*]
 
-*空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个十进制数字。 如果小数点前没有数字，则小数点后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个引导字母（**e**或**e**）和一个有符号的十进制整数。
+*空白* 包含被忽略的空格或制表符;*sign* (+) 或减号 (-) ;和 *数字* 是一个或多个十进制数字。 如果小数点前没有数字，则小数点后必须至少有一个数字。 十进制数字后面可以跟一个指数，其中包含一个引导字母 (**e** 或 **e**) ，以及一个有符号的十进制整数。
 
-这些函数的 UCRT 版本不支持 Fortran 样式（**d**或**d**）指数字母的转换。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
+这些函数的 UCRT 版本不支持) 指数号的 Fortran 样式 (**d** 或 **d** 。 这个非标准扩展受早期版本的 CRT 支持，可能会为你的代码的带来重大变化。
 
-这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的*区域设置*参数而不是当前区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的 *区域设置* 参数而不是当前区域设置。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -127,12 +128,12 @@ double _wtof_l(
 
 |例程|必需的标头|
 |------------------|---------------------|
-|**atof**、 **_atof_l**|C： \<math.h> 或 \<stdlib.h> c + +： \<cstdlib> 、 \<stdlib.h> \<cmath> 或\<math.h>|
-|**_wtof**， **_wtof_l**|C： \<stdlib.h> 或 \<wchar.h> c + +： \<cstdlib> 、 \<stdlib.h> 或\<wchar.h>|
+|**atof**、 **_atof_l**|C： \<math.h> 或 \<stdlib.h> c + +： \<cstdlib> 、 \<stdlib.h> \<cmath> 或 \<math.h>|
+|**_wtof**， **_wtof_l**|C： \<stdlib.h> 或 \<wchar.h> c + +： \<cstdlib> 、 \<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>示例
 
-此程序说明如何使用**atof**和 **_atof_l**函数将存储为字符串的数字转换为数值。
+此程序说明如何使用 **atof** 和 **_atof_l** 函数将存储为字符串的数字转换为数值。
 
 ```C
 // crt_atof.c
@@ -181,7 +182,7 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
 title: _strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
 ms.date: 4/2/2020
 api_name:
@@ -70,19 +71,19 @@ helpviewer_keywords:
 - tcsnicoll function
 - _strnicoll function
 ms.assetid: abf0c569-725b-428d-9ff2-924f430104b4
-ms.openlocfilehash: 7694edda5ef2b214a1ca391ab1b922b8bfbf35e0
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 7fbbf44747bdcd0b95ccb603d735fc2ac0ecf6b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336477"
 ---
 # <a name="_strnicoll-_wcsnicoll-_mbsnicoll-_strnicoll_l-_wcsnicoll_l-_mbsnicoll_l"></a>_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
 
 使用特定于区域设置的信息比较字符串。
 
 > [!IMPORTANT]
-> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsnicoll**和 **_mbsnicoll_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> 不能在 Windows 运行时中执行的应用程序中使用 **_mbsnicoll** 和 **_mbsnicoll_l** 。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
 
 ## <a name="syntax"></a>语法
 
@@ -122,7 +123,7 @@ int _mbsnicoll_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *string1*、 *string2*<br/>
 要比较的 null 终止的字符串
@@ -135,23 +136,23 @@ int _mbsnicoll_l(
 
 ## <a name="return-value"></a>返回值
 
-其中每个函数都将返回一个值，该值指示*string1*和*string2*子字符串的关系，如下所示。
+其中每个函数都将返回一个值，该值指示 *string1* 和 *string2* 子字符串的关系，如下所示。
 
 |返回值|string1 与 string2 的关系|
 |------------------|----------------------------------------|
-|< 0|*string1*小于*string2*|
-|0|*string1*等于*string2*|
-|> 0|*string1*大于*string2*|
+|< 0|*string1* 小于 *string2*|
+|0|*string1* 等于 *string2*|
+|> 0|*string1* 大于 *string2*|
 
-其中每个函数都将返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，请包含任意一个字符串。H 或 MBSTRING.H。高. 如果*string1*或*string2*包含排序序列域外部的宽字符代码，则 **_wcsnicoll**可能失败。 出现错误时， **_wcsnicoll**可能会将**Errno**设置为**EINVAL**。 若要检查对 **_wcsnicoll**的调用是否有错误，请将**errno**设置为0，然后在调用 **_wcsnicoll**后检查**errno** 。
+其中每个函数都将返回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，请包含任意一个字符串。H 或 MBSTRING.H。 如果 *string1* 或 *string2* 包含排序序列域外部的宽字符代码，则 **_wcsnicoll** 可能失败。 出现错误时， **_wcsnicoll** 可能会将 **Errno** 设置为 **EINVAL**。 若要检查对 **_wcsnicoll** 的调用是否有错误，请将 **errno** 设置为0，然后在调用 **_wcsnicoll** 后检查 **errno** 。
 
 ## <a name="remarks"></a>备注
 
-其中的每个函数都根据代码页对*string1*和*string2*中的第一个*计数*字符执行不区分大小写的比较。 仅当在代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。 不带 **_l**后缀的这些函数的版本使用当前区域设置和代码页。 带有 **_l**后缀的版本是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+其中的每个函数都根据代码页对 *string1* 和 *string2* 中的第一个 *计数* 字符执行不区分大小写的比较。 仅当在代码页中的字符集顺序与字典字符顺序之间存在差异，并且此差异对于字符串比较有关系时，才应使用这些函数。 不带 **_l** 后缀的这些函数的版本使用当前区域设置和代码页。 带有 **_l** 后缀的版本是相同的，只不过它们使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-所有这些函数都验证其参数。 如果*string1*或*string2*是 null 指针，或者计数大于**INT_MAX**，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR** ，并将**Errno**设置为**EINVAL**。
+所有这些函数都验证其参数。 如果 *string1* 或 *string2* 是 null 指针，或者计数大于 **INT_MAX**，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md) 中所述。 如果允许执行继续，则这些函数将返回 **_NLSCMPERROR** ，并将 **Errno** 设置为 **EINVAL**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -163,7 +164,7 @@ int _mbsnicoll_l(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_strnicoll**， **_strnicoll_l**|\<string.h>|
 |**_wcsnicoll**， **_wcsnicoll_l**|\<wchar.h> 或 \<string.h>|
@@ -171,9 +172,9 @@ int _mbsnicoll_l(
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [字符串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcoll 函数](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>

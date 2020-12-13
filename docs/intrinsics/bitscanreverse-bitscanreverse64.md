@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _BitScanReverse、_BitScanReverse64
 title: _BitScanReverse、_BitScanReverse64
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: 848c153967e5581f08f1d499a28ab282ee2602df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 1a535dcc95f9fbf791de3ecd2c2d54eddcc0399c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216957"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337211"
 ---
 # <a name="_bitscanreverse-_bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 
@@ -37,10 +38,10 @@ unsigned char _BitScanReverse64(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *编入*\
-弄加载时找到第一组位 (1) 的位位置。
+弄加载时，) 找到第一个设置位 (1。
 
 *掩盖*\
 中要搜索的32位或64位值。
@@ -51,10 +52,10 @@ unsigned char _BitScanReverse64(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`_BitScanReverse`|x86、ARM、x64、ARM64|\<intrin.h>|
-|`_BitScanReverse64`|ARM64, x64|\<intrin.h>|
+|`_BitScanReverse64`|ARM64，x64|\<intrin.h>|
 
 ## <a name="example"></a>示例
 

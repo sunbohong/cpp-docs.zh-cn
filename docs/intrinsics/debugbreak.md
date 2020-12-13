@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __debugbreak
 title: __debugbreak
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: e4cf2c85818a878417c560ddb5a80f8690e60a93
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 83a670d9fa9c1f6b41c1c405c59af71c7aa0c8a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337105"
 ---
 # <a name="__debugbreak"></a>__debugbreak
 
@@ -29,18 +30,18 @@ void __debugbreak();
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`__debugbreak`|x86、x64、ARM、ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>备注
 
-`__debugbreak`编译器内部函数（类似于 [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak)）是导致断点的可移植 Win32 方法。
+`__debugbreak`编译器内部函数（类似于[DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak)）是导致断点的可移植 Win32 方法。
 
 > [!NOTE]
-> 使用 **/clr**进行编译时，包含`__debugbreak`的函数将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅[__asm](../assembler/inline/asm.md)。
+> 使用 **/clr** 进行编译时，包含的函数 `__debugbreak` 将编译为 MSIL。 `asm int 3` 可将函数编译为本机函数。 有关详细信息，请参阅 [__asm](../assembler/inline/asm.md)。
 
-例如:
+例如：
 
 ```C
 main() {
@@ -60,7 +61,7 @@ main() {
 
 在 x86 计算机上。
 
-在 ARM64 上， `__debugbreak`将内部函数编译到指令`brk #0xF000`中。
+在 ARM64 上，将 `__debugbreak` 内部函数编译到指令中 `brk #0xF000` 。
 
 此例程仅可用作内部函数。
 

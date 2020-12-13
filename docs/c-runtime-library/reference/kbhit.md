@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _kbhit
 title: _kbhit
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: bfe26a988c491c4d137bfc1badc093d56cde4010
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 439c3ef6a738bdd7802580eeef1056d0ea02ed58
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916554"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338889"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -57,17 +58,17 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>返回值
 
-如果已按下某个键， **_kbhit**将返回一个非零值。 否则，返回 0。
+如果已按下某个键， **_kbhit** 将返回一个非零值。 否则，返回 0。
 
 ## <a name="remarks"></a>备注
 
-**_Kbhit**函数检查控制台中最近的击键。 如果函数返回一个非零值，则键击将在缓冲区中等待。 然后，程序可以调用 **_getch**或 **_getche**以获取击键。
+**_Kbhit** 函数检查控制台中最近的击键。 如果函数返回一个非零值，则键击将在缓冲区中等待。 然后，程序可以调用 **_getch** 或 **_getche** 以获取击键。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
@@ -109,6 +110,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>

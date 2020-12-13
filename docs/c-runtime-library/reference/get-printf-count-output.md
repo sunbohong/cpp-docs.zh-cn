@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _get_printf_count_output
 title: _get_printf_count_output
 ms.date: 11/04/2016
 api_name:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-ms.openlocfilehash: 15b37ac759821ad56cc5c03c9b98719d8f0cc19a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fe5ee728b7bc8400cd93ec4e93131496d59334c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955713"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339012"
 ---
 # <a name="_get_printf_count_output"></a>_get_printf_count_output
 
-指示[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)系列函数是否支持 **% n**格式。
+指示 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)系列函数是否支持 **% n** 格式。
 
 ## <a name="syntax"></a>语法
 
@@ -50,7 +51,7 @@ int _get_printf_count_output();
 
 ## <a name="remarks"></a>备注
 
-如果不支持 **% n** （默认值），则在任何**printf**函数的格式字符串中遇到 **% n**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果启用 **% n**支持（请参阅[_set_printf_count_output](set-printf-count-output.md)），则 **% n**将按[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)中所述的方式进行。
+如果不支持 **% n** (默认) ，则在任何 **printf** 函数的格式字符串中遇到 **% n** 时，将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果启用了 **% n** 支持 (请参阅 [_set_printf_count_output](set-printf-count-output.md)) ， **% n** 将按 [格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)中所述的方式运行。
 
 ## <a name="requirements"></a>要求
 
@@ -58,7 +59,7 @@ int _get_printf_count_output();
 |-------------|---------------------|
 |**_get_printf_count_output**|\<stdio.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

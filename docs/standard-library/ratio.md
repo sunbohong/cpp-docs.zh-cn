@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 比率&gt;
 title: '&lt;ratio&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -31,16 +32,16 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 5f6919c84c3fb125e149ba6bcd69b6b7f996d17f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8fab74cde47e4078781b665044bc2becd0a9dac3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687065"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337947"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
-包括标准标头 \<ratio>，以定义用于在编译时存储和操作有理数的常量和模板。
+包含标准标头 \<ratio> 以定义用于在编译时存储和处理有理数的常量和模板。
 
 ## <a name="syntax"></a>语法
 
@@ -60,17 +61,17 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-模板 `ratio` 定义静态常量 `num` 和 `den`，`num`  /  `den` = = 分子/分母，`num` 和 `den` 没有任何常见因素。 `num`  /  `den` 是由类模板表示的值。 因此，`type` 指定实例化 `ratio<num, den>`。
+该模板 `ratio` 定义静态常量 `num` ，并且 `den` `num`  /  `den` `num` `den` 不包含任何共同因素。 `num` / `den` 是由类模板表示的值。 因此， `type` 指定实例化 `ratio<num, den>` 。
 
 ### <a name="specializations"></a>专用化
 
-\<ratio> 还定义具有以下形式的 `ratio` 的专用化。
+\<ratio> 还定义 `ratio` 了具有以下形式的的专用化。
 
 `template <class R1, class R2> struct ratio_specialization`
 
 每个专用化采用两个同时必须为 `ratio` 的专用化的模板参数。 `type` 的值由关联的逻辑操作确定。
 
-|“属性”|`type` 值|
+|名称|`type` 值|
 |----------|------------------|
 |`ratio_add`|`R1 + R2`|
 |`ratio_divide`|`R1 / R2`|

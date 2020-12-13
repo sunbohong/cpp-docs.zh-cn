@@ -1,4 +1,5 @@
 ---
+description: '了解更多相关信息： friend (c + +) '
 title: 友元 (C++)
 ms.date: 07/15/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 772eada8257917a6127b15ea2e50946aebb3bc74
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6e25beb10a727d0dcefce15e96059b49c5661601
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227460"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337734"
 ---
 # <a name="friend-c"></a>友元 (C++)
 
@@ -30,7 +31,7 @@ friend F;
 
 如果声明以前未声明的友元函数，则该函数将被导出到封闭非类范围。
 
-友元声明中声明的函数被视为已使用关键字声明的函数 **`extern`** 。 有关详细信息，请参阅[extern](extern-cpp.md)。
+友元声明中声明的函数被视为已使用关键字声明的函数 **`extern`** 。 有关详细信息，请参阅 [extern](extern-cpp.md)。
 
 尽管具有全局范围的函数可以在其原型之前声明为友元函数，但是成员函数在它们的完整类声明出现前不能声明为友元函数。 以下代码演示此失败的原因：
 
@@ -119,7 +120,7 @@ class G
 
 ## <a name="friend-functions"></a>友元函数
 
-**`friend`** 函数是一个函数，它不是类的成员，但可以访问类的私有和受保护成员。 友元函数不被视为类成员；它们是获得了特殊访问权限的普通外部函数。 友元不在类的范围内，并且不使用成员选择运算符（**.** 和- **>** ），除非它们是另一个类的成员。 **`friend`** 函数由授予访问权限的类声明。 **`friend`** 声明可放置在类声明中的任何位置。 它不受访问控制关键字的影响。
+**`friend`** 函数是一个函数，它不是类的成员，但可以访问类的私有和受保护成员。 友元函数不被视为类成员；它们是获得了特殊访问权限的普通外部函数。 友元不在类的范围内，并且不是使用成员选择运算符 (来调用的 **。** 和- **>**) ，除非它们是另一个类的成员。 **`friend`** 函数由授予访问权限的类声明。 **`friend`** 声明可放置在类声明中的任何位置。 它不受访问控制关键字的影响。
 
 以下示例显示 `Point` 类和友元函数 `ChangePrivate`。 **`friend`** 函数有权访问作为参数接收的对象的私有数据成员 `Point` 。
 
@@ -155,7 +156,7 @@ int main()
 
 ## <a name="class-members-as-friends"></a>作为友元的类成员
 
-类成员函数可以声明为其他类中的友元。 请考虑以下示例：
+类成员函数可以声明为其他类中的友元。 请看下面的示例：
 
 ```cpp
 // classes_as_friends1.cpp
@@ -224,7 +225,7 @@ int main() {
 
 友元关系不是相互的，除非如此显式指定。 在上面的示例中，`YourClass` 的成员函数无法访问 `YourOtherClass` 的私有成员。
 
-托管类型（c + +/CLI）不能有任何友元函数、友元类或友元接口。
+C + +/CLI) 中的托管类型 (不能有任何友元函数、友元类或友元接口。
 
 友元关系不能继承，这意味着从 `YourOtherClass` 派生的类不能访问 `YourClass` 的私有成员。 友元关系不可传递，因此 `YourOtherClass` 的友元类无法访问 `YourClass` 的私有成员。
 
@@ -235,8 +236,8 @@ int main() {
 
 ## <a name="inline-friend-definitions"></a>内联友元定义
 
-可以在类声明中定义友元函数（给定函数体）。 这些函数是内联函数，类似于成员内联函数，其行为就像它们在所有类成员显示后但在类范围关闭前（类声明的结尾）被定义时的行为一样。 在类声明中定义的友元函数在封闭类的范围内。
+可以 (给定函数体) 在类声明中定义友元函数。 这些函数是内联函数，类似于成员内联函数，其行为就像它们在所有类成员显示后但在类范围关闭前（类声明的结尾）被定义时的行为一样。 在类声明中定义的友元函数在封闭类的范围内。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [关键字](../cpp/keywords-cpp.md)

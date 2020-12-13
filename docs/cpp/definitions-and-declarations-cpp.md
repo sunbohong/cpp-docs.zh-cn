@@ -1,19 +1,20 @@
 ---
+description: '了解详细信息： (c + + 的定义和声明) '
 title: 定义和声明 (C++)
 ms.date: 11/04/2016
 ms.assetid: 56b809c0-e602-4f18-9ca5-cd7a8fbaaf30
-ms.openlocfilehash: c35c0adaa1b81e5bf9bfd9e779037bc6068b3174
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c22274534193011c1c5ec26aedbece339a9302b4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339431"
 ---
 # <a name="definitions-and-declarations-c"></a>定义和声明 (C++)
 
 **Microsoft 专用**
 
-DLL 接口引用已知由系统中的某个程序导出的所有项（函数和数据）;也就是说，声明为或的所有项 **`dllimport`** **`dllexport`** 。 DLL 接口中包含的所有声明都必须指定 **`dllimport`** 或 **`dllexport`** 属性。 但是，定义必须仅指定 **`dllexport`** 属性。 例如，以下函数定义产生了一个编译器错误：
+DLL 接口引用了系统中的某些程序要导出 (函数和数据) 的所有项;也就是说，声明为或的所有项 **`dllimport`** **`dllexport`** 。 DLL 接口中包含的所有声明都必须指定 **`dllimport`** 或 **`dllexport`** 属性。 但是，定义必须仅指定 **`dllexport`** 属性。 例如，以下函数定义产生了一个编译器错误：
 
 ```
 __declspec( dllimport ) int func() {   // Error; dllimport

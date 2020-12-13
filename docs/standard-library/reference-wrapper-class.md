@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： reference_wrapper 类
 title: reference_wrapper 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: 623e1480bdec85120e504c8dc71b28d017c8872a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5d3550a6ff579ea1e4174459d3ab1eab07b8a5d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845063"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337857"
 ---
 # <a name="reference_wrapper-class"></a>reference_wrapper 类
 
@@ -59,26 +60,26 @@ class reference_wrapper
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[reference_wrapper](#reference_wrapper)|构造一个 `reference_wrapper`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[result_type](#result_type)|已包装引用的弱结果类型。|
-|[type](#type)|已包装引用的类型。|
+|type|已包装引用的类型。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[get](#get)|获取已包装的引用。|
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[运算符 Ty&amp;](#op_ty_amp)|获取指向已包装引用的指针。|
 |[运算符 ( # B1 ](#op_call)|调用已包装的引用。|
@@ -91,7 +92,7 @@ class reference_wrapper
 Ty& get() const noexcept;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回已包装的引用。
 
@@ -130,7 +131,7 @@ i = -1
 operator Ty&() const noexcept;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员运算符将返回 `*ptr`。
 
@@ -167,7 +168,7 @@ template <class... Types>
 auto operator()(Types&&... args);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *各种*\
 参数列表类型。
@@ -175,7 +176,7 @@ auto operator()(Types&&... args);
 *args*\
 参数列表。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板成员 `operator()` 返回 `std::invoke(get(), std::forward<Types>(args)...)`。
 
@@ -212,7 +213,7 @@ rwi(3) = -3
 reference_wrapper(Ty& val) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要包装的类型。
@@ -220,7 +221,7 @@ reference_wrapper(Ty& val) noexcept;
 *初始值*\
 要包装的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该构造函数将存储的值 `ptr` 设置为 `&val`。
 
@@ -263,7 +264,7 @@ i = -1
 typedef R result_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `result_type` typedef 是已包装函数的弱结果类型的同义词。 typedef 仅对函数类型有意义。
 
@@ -302,7 +303,7 @@ val = -3
 typedef Ty type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 Typedef 是模板参数 `Ty`的同义词。
 

@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息：安装和配置工具以使用 iOS 进行生成
 title: 安装并配置使用 iOS 进行构建的工具
 ms.date: 10/17/2019
 ms.assetid: d0c311c9-9eb9-42c5-ba07-25604362cd28
-ms.openlocfilehash: 26dea080f3d3f05885f348dcaf1c66a0db2a36b5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: e6d91dc679d86085c1886cab0d330a4fafb3c617
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041986"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339457"
 ---
 # <a name="install-and-configure-tools-to-build-using-ios"></a>安装并配置使用 iOS 进行构建的工具
 
-可以将 Visual Studio 与使用 C++ 进行跨平台移动开发的工具一起使用，以编辑、调试 iOS 代码，并将其部署到 iOS 模拟器或 iOS 设备****。 但由于许可限制，必须在 Mac 上远程生成和运行代码。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://www.npmjs.com/package/vcremote)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
+可以将 Visual Studio 与使用 C++ 进行跨平台移动开发的工具一起使用，以编辑、调试 iOS 代码，并将其部署到 iOS 模拟器或 iOS 设备。 但由于许可限制，必须在 Mac 上远程生成和运行代码。 若要使用 Visual Studio 生成和运行 iOS 应用，需要在 Mac 上安装并配置远程代理 [vcremote](https://www.npmjs.com/package/vcremote)。 该远程代理会处理来自 Visual Studio 的生成请求，并在连接到 Mac 的 iOS 设备上或 Mac 上的 iOS 仿真程序中运行应用。
 
 > [!NOTE]
 > 有关使用云托管的 Mac 服务而不是 Mac 的信息，请参阅[配置 Visual Studio 以连接到云托管的 Mac](/visualstudio/cross-platform/tools-for-cordova/tips-workarounds/host-a-mac-in-the-cloud?view=toolsforcordova-2017&preserve-view=true#configure-visual-studio-to-connect-to-your-cloud-hosted-mac)。 此说明适用于使用 Visual Studio Tools for Apache Cordova 进行生成。 要通过 C++ 使用指令进行生成，请将 `vcremote` 替换为 `remotebuild`。
@@ -42,7 +43,7 @@ ms.locfileid: "90041986"
 
 - 在 Xcode 中配置的 Apple ID 帐户作为用于对应用进行签名的签名标识
 
-   若要查看或设置 Xcode 中的签名标识，打开 **Xcode** 菜单并选择 ****“首选项”。 选择“帐户” **** 并选择你的 Apple ID，然后选择“查看详细信息” **** 按钮。 有关详细说明，请参阅 [Add your Apple ID account](https://help.apple.com/xcode/mac/current/#/devaf282080a)（添加 Apple ID 帐户）。
+   若要查看或设置 Xcode 中的签名标识，打开 **Xcode** 菜单并选择 “首选项”。 选择“帐户”  并选择你的 Apple ID，然后选择“查看详细信息”  按钮。 有关详细说明，请参阅 [Add your Apple ID account](https://help.apple.com/xcode/mac/current/#/devaf282080a)（添加 Apple ID 帐户）。
 
    有关签名要求的详细信息，请参阅 [What is app signing](https://help.apple.com/xcode/mac/current/#/dev3a05256b8)（什么是应用签名）。
 
@@ -121,7 +122,7 @@ ms.locfileid: "90041986"
 
 #### <a name="to-stop-the-remote-agent"></a>停用远程代理
 
-- 在终端窗口中 `vcremote` 运行的中，输入**Control** + **C**。
+- 在终端窗口中 `vcremote` 运行的中，输入 **Control** + **C**。
 
 ## <a name="configure-the-remote-agent-in-visual-studio"></a><a name="ConfigureVS"></a> 在 Visual Studio 中配置远程代理
 
@@ -135,28 +136,28 @@ ms.locfileid: "90041986"
 
    可以通过在终端窗口中使用 **ifconfig** 命令来获取 IP 地址。 请使用活动网络接口下列出的 inet 地址。
 
-1. 在 Visual Studio 菜单栏上，依次选择“工具”**** 和“选项”****。
+1. 在 Visual Studio 菜单栏上，依次选择“工具”和“选项”。
 
-1. 在“选项”**** 对话框中，展开“跨平台”****、“C++”**** 和“iOS”****。
+1. 在“选项”对话框中，展开“跨平台”、“C++”和“iOS”。
 
-1. 在“主机名” **** 和“端口” **** 字段，输入远程代理在启动时指定的值。 主机名可以是 DNS 名或 Mac 的 IP 地址。 默认端口为 3030。
+1. 在“主机名”  和“端口”  字段，输入远程代理在启动时指定的值。 主机名可以是 DNS 名或 Mac 的 IP 地址。 默认端口为 3030。
 
    > [!NOTE]
    > 如果无法使用主机名 ping Mac，则可能需要使用 IP 地址。
 
-1. 如果以默认安全连接模式使用远程代理，请勾选“安全” **** 复选框，然后在 **Pin** 字段输入由远程代理指定的 PIN 值。 如果以非安全连接模式使用远程代理，请清除“安全” **** 复选框并将 **Pin** 字段留空。
+1. 如果以默认安全连接模式使用远程代理，请勾选“安全”  复选框，然后在 **Pin** 字段输入由远程代理指定的 PIN 值。 如果以非安全连接模式使用远程代理，请清除“安全”  复选框并将 **Pin** 字段留空。
 
-1. 选择“配对”**** 以启用配对。
+1. 选择“配对”以启用配对。
 
    ![为 iOS 版本配置 vcremote 连接](../cross-platform/media/cppmdd-options-ios.png "为 iOS 版本配置 vcremote 连接")
 
-   除非更改主机名或端口，否则配对会一直存在。 如果在“选项” **** 对话框中更改了主机名或端口，要撤销此更改，请选择“还原” **** 按钮以还原到上一配对。
+   除非更改主机名或端口，否则配对会一直存在。 如果在“选项”  对话框中更改了主机名或端口，要撤销此更改，请选择“还原”  按钮以还原到上一配对。
 
-   如果配对失败，请按照 [Start the remote agent](#Start)中的步骤验证远程代理是否正在运行。 如果生成远程代理 PIN 后已经过了很久，请在 Mac 上执行 [Generate a new security PIN](#GeneratePIN) 中的步骤，然后重试。 如果你使用的是 Mac 的主机名，请转而尝试在“主机名” **** 字段中使用 IP 地址。
+   如果配对失败，请按照 [Start the remote agent](#Start)中的步骤验证远程代理是否正在运行。 如果生成远程代理 PIN 后已经过了很久，请在 Mac 上执行 [Generate a new security PIN](#GeneratePIN) 中的步骤，然后重试。 如果你使用的是 Mac 的主机名，请转而尝试在“主机名”  字段中使用 IP 地址。
 
 1. 更新 " **远程根目录** " 字段中的文件夹名称，以指定你的 Home (*~* Mac 上的 ") " 目录中的远程代理所用的文件夹。 默认情况下，远程代理会使用 `/Users/<username>/vcremote` 作为远程根目录。
 
-1. 选择“确定” **** 以保存远程配对连接设置。
+1. 选择“确定”  以保存远程配对连接设置。
 
 你每次在 Visual Studio 时，它会使用相同信息连接到 Mac 上的远程代理。 除非你在 Mac 上生成了新的安全证书，或其主机名或 IP 地址发生了更改，否则，你无需再次将 Visual Studio 与远程代理进行配对。
 
@@ -210,7 +211,7 @@ ms.locfileid: "90041986"
 
    `vcremote --secure false`
 
-   如果使用此选项，请在 Visual Studio 中配置代理时清除“安全”**** 复选框，并将“Pin”**** 字段留空。
+   如果使用此选项，请在 Visual Studio 中配置代理时清除“安全”复选框，并将“Pin”字段留空。
 
 - 要为远程代理文件指定位置，请输入：
 
@@ -274,6 +275,6 @@ ms.locfileid: "90041986"
 
 然后，再次验证 `ideviceinstaller` 是否可以与设备通信。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [使用 C++ 安装跨平台移动开发](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md)

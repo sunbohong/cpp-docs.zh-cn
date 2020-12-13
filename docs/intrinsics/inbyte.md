@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __inbyte
 title: __inbyte
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 77cc1cfb792ffa2f6aef9879820e644372895193
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337019"
 ---
 # <a name="__inbyte"></a>__inbyte
 
 **Microsoft 专用**
 
-生成指令, 并返回从`Port`指定的端口读取的单个字节。 `in`
+生成 `in` 指令，并返回从指定的端口读取的单个字节 `Port` 。
 
 ## <a name="syntax"></a>语法
 
@@ -29,7 +30,7 @@ unsigned char __inbyte(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *口*\
 中要从其读取的端口。
@@ -40,11 +41,11 @@ unsigned char __inbyte(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__inbyte`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 **结束 Microsoft 专用**
 

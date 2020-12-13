@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： num_get 类
 title: num_get 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: d5a88e904c437e79eabfa854a196aa48dbad955e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0236aac2e7c7859f966430bd276b4dffc42820b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228162"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338088"
 ---
 # <a name="num_get-class"></a>num_get 类
 
@@ -32,7 +33,7 @@ template <class CharType, class InputIterator = istreambuf_iterator<CharType>>
 class num_get : public locale::facet;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *CharType*\
 在程序中用于对区域设置中的字符进行编码的类型。
@@ -70,7 +71,7 @@ class num_get : public locale::facet;
 
 **命名空间:** std
 
-## <a name="num_getchar_type"></a><a name="char_type"></a>num_get：： char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a> num_get：： char_type
 
 一种类型，此类型用于描述区域设置使用的字符。
 
@@ -82,7 +83,7 @@ typedef CharType char_type;
 
 该类型是模板参数 **CharType** 的同义词。
 
-## <a name="num_getdo_get"></a><a name="do_get"></a>num_get：:d o_get
+## <a name="num_getdo_get"></a><a name="do_get"></a> num_get：:d o_get
 
 为从字符序列提取数值或布尔值而调用的虚拟函数。
 
@@ -165,7 +166,7 @@ virtual iter_type do_get(
     bool& val) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 从其中读取数字的字符范围的起始处。
@@ -199,9 +200,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-匹配顺序元素，从序列中的*第一个*开始 `[first, last)` 直到识别完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型 **`long`** ，并将结果存储为*val*。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数将不存储*val*中的任何内容，并 `ios_base::failbit` 在中设置 `state` 。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。
+匹配顺序元素，从序列中的 *第一个* 开始 `[first, last)` 直到识别完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型 **`long`** ，并将结果存储为 *val*。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，该函数将不存储 *val* 中的任何内容，并 `ios_base::failbit` 在中设置 `state` 。 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回的值等于 `last`，该函数在 `state` 中设置 `ios_base::eofbit`。
 
-整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列元素进行匹配和转换 **`char`** 。 （假定每个此类 **`char`** 元素都按简单的一对一映射映射到类型的等效元素 `Elem` 。）确定等效的扫描转换规范，如下所示：
+整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列元素进行匹配和转换 **`char`** 。  (假设每个此类 **`char`** 元素都按简单的一对一映射映射到类型的等效元素 `Elem` 。 ) 按如下方式确定等效的扫描转换规范：
 
 如果 `iosbase.` [ios_base：： flags](../standard-library/ios-base-class.md#flags) `() & ios_base::basefield == ios_base::` [oct](../standard-library/ios-functions.md#oct)，则转换规格为 `lo` 。
 
@@ -211,7 +212,7 @@ virtual iter_type do_get(
 
 否则，转换规格为 `ld`。
 
-整数输入字段的格式由[locale facet](../standard-library/locale-class.md#facet_class) `fac` 调用[use_facet](../standard-library/locale-functions.md#use_facet) `<` [numpunct](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [ios_base：： getloc](../standard-library/ios-base-class.md#getloc)的调用返回的区域设置 facet 进一步决定 `())` 。 具体而言：
+整数输入字段的格式由[](../standard-library/locale-class.md#facet_class) `fac` 调用[use_facet](../standard-library/locale-functions.md#use_facet) `<` [numpunct](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [ios_base：： getloc](../standard-library/ios-base-class.md#getloc)的调用返回的区域设置 facet 进一步决定 `())` 。 具体而言：
 
 `fac.`[numpunct：：分组](../standard-library/numpunct-class.md#grouping) `()`确定如何对任何小数点左侧的数字进行分组
 
@@ -230,7 +231,7 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功，它会将数字输入字段转换为类型的值 **`unsigned long`** ，并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功，它会将数字输入字段转换为类型的值 **`unsigned long`** ，并将该值存储在 *val* 中。
 
 第五个受保护的虚拟成员函数：
 
@@ -243,7 +244,7 @@ virtual iter_type do_get(
     long long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lld`。 如果成功，它会将数字输入字段转换为类型的值 **`long long`** ，并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lld`。 如果成功，它会将数字输入字段转换为类型的值 **`long long`** ，并将该值存储在 *val* 中。
 
 第六个受保护的虚拟成员函数：
 
@@ -256,7 +257,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `llu`。 如果成功，它会将数字输入字段转换为类型的值 **`unsigned long long`** ，并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `llu`。 如果成功，它会将数字输入字段转换为类型的值 **`unsigned long long`** ，并将该值存储在 *val* 中。
 
 第七个受保护的虚拟成员函数：
 
@@ -321,15 +322,15 @@ virtual iter_type do_get(
     bool& val) const;
 ```
 
-行为与第一个相同，只不过它旨在匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为类型的值 **`bool`** ，并将该值存储在*val*中。
+行为与第一个相同，只不过它旨在匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为类型的值 **`bool`** ，并将该值存储在 *val* 中。
 
-布尔输入字段采用以下两种形式之一。 如果 `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 为 false，则它与整数输入字段相同，只不过转换的值必须为 0（若为 false）或 1（若为 true）。 否则，序列必须与 `fac.` [numpunct：： falsename](../standard-library/numpunct-class.md#falsename) `()` （对于 false）或 `fac.` [numpunct：： truename](../standard-library/numpunct-class.md#truename) `()` （对于 true）匹配。
+布尔输入字段采用以下两种形式之一。 如果 `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 为 false，则它与整数输入字段相同，只不过转换的值必须为 0（若为 false）或 1（若为 true）。 否则，序列必须与 `fac.` true) 的[numpunct：： falsename](../standard-library/numpunct-class.md#falsename) `()` (或 true) 匹配 `fac.` [numpunct：： truename](../standard-library/numpunct-class.md#truename) `()` (。
 
 ### <a name="example"></a>示例
 
 请参阅 [get](#get) 的示例，其中虚拟成员函数由 `do_get` 调用。
 
-## <a name="num_getget"></a><a name="get"></a>num_get：： get
+## <a name="num_getget"></a><a name="get"></a> num_get：： get
 
 从字符序列提取数值或布尔值。
 
@@ -412,7 +413,7 @@ iter_type get(
     void *& val) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *1*\
 从其中读取数字的字符范围的起始处。
@@ -437,7 +438,7 @@ iter_type get(
 
 所有成员函数都返回[do_get](#do_get) `( first, last, iosbase, state, val)` 。
 
-第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型 **`long`** ，并将结果存储在*val*中。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，此函数在*val*和 in 状态中不存储任何内容 `ios_base::failbit` 。 *state* 它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回值等于 " *last*"，则函数将设置 `ios_base::eofbit` 为 "*状态*"。
+第一个受保护的虚拟成员函数首先会在序列 [ `first`, `last`) 中尝试匹配序列连续元素，直到识别到完整的非空整数输入字段。 如果成功，它会将此字段转换为其等效的值作为类型 **`long`** ，并将结果存储在 *val* 中。 它将返回一个迭代器，指定第一个超出数字输入字段的元素。 否则，此函数在 *val* 和 in 状态中不存储任何内容 `ios_base::failbit` 。  它将返回一个迭代器，指定第一个超出有效整数输入字段的任何前缀的元素。 在任一情况下，如果返回值等于 " *last*"，则函数将设置 `ios_base::eofbit` 为 " *状态*"。
 
 整数输入字段由扫描函数使用的相同规则进行转换，以便对文件中的一系列元素进行匹配和转换 **`char`** 。 假定每个此类 **`char`** 元素都 `CharType` 按简单的一对一映射映射到类型的等效元素。 确定等效的扫描转换规格，如下所示：
 
@@ -449,11 +450,11 @@ iter_type get(
 
 - 否则，转换规格为 `ld`。
 
-整数输入字段的格式由[locale facet](../standard-library/locale-class.md#facet_class) `fac` 调用[use_facet](../standard-library/locale-functions.md#use_facet) `<` [`numpunct`](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [getloc](../standard-library/ios-base-class.md#getloc) `())` 返回的区域设置 facet 进一步决定。 具体而言：
+整数输入字段的格式由[](../standard-library/locale-class.md#facet_class) `fac` 调用[use_facet](../standard-library/locale-functions.md#use_facet) `<` [`numpunct`](../standard-library/numpunct-class.md) `<Elem>(iosbase.` [getloc](../standard-library/ios-base-class.md#getloc) `())` 返回的区域设置 facet 进一步决定。 具体而言：
 
-- `fac.`[分组](../standard-library/numpunct-class.md#grouping)确定如何将位数分组到任何小数点左侧。
+- `fac.`[分组](../standard-library/numpunct-class.md#grouping) 确定如何将位数分组到任何小数点左侧。
 
-- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep)确定分隔任意小数点左边数字组的顺序。
+- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep) 确定分隔任意小数点左边数字组的顺序。
 
 如果数字输入字段中没有出现 `fac.thousands_sep` 的任何实例，则不会采用应用分组约束。 否则，强制执行任何分组约束， `fac.grouping` 并在扫描转换发生之前删除分隔符。
 
@@ -467,7 +468,7 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功，它会将数字输入字段转换为类型的值 **`unsigned long`** ，并将该值存储在*val*中。
+行为与第一个相同，只不过它将转换规格 `ld` 替换为 `lu`。 如果成功，它会将数字输入字段转换为类型的值 **`unsigned long`** ，并将该值存储在 *val* 中。
 
 第三个受保护的虚拟成员函数：
 
@@ -479,7 +480,7 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```
 
-行为与第一个相同，只不过它尝试匹配完整的非空浮点输入字段。 `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point)确定将整数位与小数位分隔的顺序。 等效的扫描转换说明符是 `lf`。
+行为与第一个相同，只不过它尝试匹配完整的非空浮点输入字段。 `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point) 确定将整数位与小数位分隔的顺序。 等效的扫描转换说明符是 `lf`。
 
 第四个受保护的虚拟成员函数：
 
@@ -515,9 +516,9 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```
 
-行为与第一个相同，只不过它尝试匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为类型的值 **`bool`** ，并将该值存储在*val*中。
+行为与第一个相同，只不过它尝试匹配完整的非空布尔输入字段。 如果成功，它会将布尔输入字段转换为类型的值 **`bool`** ，并将该值存储在 *val* 中。
 
-布尔输入字段采用以下两种形式之一。 如果 `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha)为 **`false`** ，则它与整数输入字段相同，不同之处在于转换后的值必须是0（对于 **`false`** ）或1（对于 **`true`** ）。 否则，序列必须与 `fac.` [falsename](../standard-library/numpunct-class.md#falsename) （适用于 **`false`** ）或 `fac.` [truename](../standard-library/numpunct-class.md#truename) （对于）匹配 **`true`** 。
+布尔输入字段采用以下两种形式之一。 如果 `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha)为 **`false`** ，则它与整数输入字段相同，不同之处在于转换后的值必须为 0 (**`false`**) 或 1 (**`true`**) 。 否则，序列必须与) 的 `fac.` [falsename](../standard-library/numpunct-class.md#falsename) (**`false`** 或) 的 `fac.` [truename](../standard-library/numpunct-class.md#truename) (匹配 **`true`** 。
 
 ### <a name="example"></a>示例
 
@@ -551,7 +552,7 @@ int main( )
 }
 ```
 
-## <a name="num_getiter_type"></a><a name="iter_type"></a>num_get：： iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a> num_get：： iter_type
 
 一种类型，此类型描述输入迭代器。
 
@@ -563,7 +564,7 @@ typedef InputIterator iter_type;
 
 类型是模板参数 `InputIterator` 的同义词。
 
-## <a name="num_getnum_get"></a><a name="num_get"></a>num_get：： num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a> num_get：： num_get
 
 用于从序列提取数值的 `num_get` 类型对象的构造函数。
 
@@ -571,26 +572,26 @@ typedef InputIterator iter_type;
 explicit num_get(size_t refs = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *引用*\
 用于指定对象的内存管理类型的整数值。
 
 ### <a name="remarks"></a>备注
 
-*Refs*参数的可能值及其重要性为：
+*Refs* 参数的可能值及其重要性为：
 
 - 0：对象的生存期由包含该对象的区域设置管理。
 
 - 1：必须手动管理对象的生存期。
 
-- \>1：未定义这些值。
+- \> 1：未定义这些值。
 
 由于该析构函数受到保护，可能没有直接的示例。
 
-构造函数用 facet 初始化其基对象 `locale::` [facet](../standard-library/locale-class.md#facet_class) `(refs)` 。
+构造函数用 facet 初始化其基对象 `locale::` [](../standard-library/locale-class.md#facet_class) `(refs)` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<locale>](../standard-library/locale.md)\
 [facet 类](../standard-library/locale-class.md#facet_class)\

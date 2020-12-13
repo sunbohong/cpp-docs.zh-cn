@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：排名类
 title: rank 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - rank class
 - rank
 ms.assetid: bc9f1b8f-800f-46ca-b6f4-d8579ed5406a
-ms.openlocfilehash: cab8d4bb782c7e02df62874a40db14479558da99
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0ec9e66b31e4dd118de3e21761bb9b2175b0c5e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337925"
 ---
 # <a name="rank-class"></a>rank 类
 
@@ -25,14 +26,14 @@ template <class Ty>
 struct rank;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-类型查询将保留数组类型*Ty*的维数的值, 如果*Ty*不是数组类型, 则为0。
+类型查询将保留数组类型 *Ty* 的维数的值，如果 *Ty* 不是数组类型，则为0。
 
 ## <a name="example"></a>示例
 
@@ -63,11 +64,11 @@ rank<int[5][10]> == 2
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
-[extent 类](../standard-library/extent-class.md)
+[区类](../standard-library/extent-class.md)

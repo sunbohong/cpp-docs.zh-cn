@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 ms.date: 4/2/2020
 api_name:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 44b1abf816020258240d653cfbf8cd806fcb7dd1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4980206a13baccdd510ee2532d37cf3556bd46db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232555"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338997"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -84,9 +85,9 @@ __int64 _wtoi64_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 要转换的字符串。
 
 *locale*<br/>
@@ -94,11 +95,11 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>返回值
 
-每个函数都返回 **`__int64`** 通过将输入字符解释为数字而生成的值。 如果输入不能转换为该类型的值，则 **_atoi64**的返回值为0。
+每个函数都返回 **`__int64`** 通过将输入字符解释为数字而生成的值。 如果输入不能转换为该类型的值，则 **_atoi64** 的返回值为0。
 
-对于具有较大正整数值的溢出， **_atoi64**返回**I64_MAX**和**I64_MIN** ，在溢出时会出现大量的整数值。
+对于具有较大正整数值的溢出， **_atoi64** 返回 **I64_MAX** 和 **I64_MIN** ，在溢出时会出现大量的整数值。
 
-在所有超出范围的情况下， **errno**设置为**ERANGE**。 如果传入的参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将**errno**设置为**EINVAL** ，并返回0。
+在所有超出范围的情况下， **errno** 设置为 **ERANGE**。 如果传入的参数为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数会将 **errno** 设置为 **EINVAL** ，并返回0。
 
 ## <a name="remarks"></a>备注
 
@@ -106,17 +107,17 @@ __int64 _wtoi64_l(
 
 输入字符串是一系列字符，可以解释为指定类型的数值。 该函数在首个它无法无法识别为数字一部分的字符处停止读取输入字符串。 此字符可能是终止字符串的 null 字符（'\0' 或 L'\0'）。
 
-**_Atoi64**的*str*参数具有以下形式：
+**_Atoi64** 的 *str* 参数具有以下形式：
 
 > [*空格*][*sign*][*数字*]
 
-*空白*包含被忽略的空格或制表符;*sign*为加号（+）或减号（-）;和*数字*是一个或多个数字。
+*空白* 包含被忽略的空格或制表符;*sign* (+) 或减号 (-) ;和 *数字* 是一个或多个数字。
 
-**_wtoi64**与 **_atoi64**相同，只不过它采用宽字符字符串作为参数。
+**_wtoi64** 与 **_atoi64** 相同，只不过它采用宽字符字符串作为参数。
 
-这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -134,7 +135,7 @@ __int64 _wtoi64_l(
 
 ## <a name="example"></a>示例
 
-此程序说明如何使用 **_atoi64**函数将存储为字符串的数字转换为数值。
+此程序说明如何使用 **_atoi64** 函数将存储为字符串的数字转换为数值。
 
 ```C
 // crt_atoi64.c
@@ -181,7 +182,7 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>

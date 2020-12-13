@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __emul、__emulu
 title: __emul, __emulu
 ms.date: 09/02/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-ms.openlocfilehash: 16b2b38f6f44b99c9f5b9370ba586342a860684e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: cdcbd14e4e72bcaf7d2c7fd5f098a291e32227cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216741"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97337054"
 ---
 # <a name="__emul-__emulu"></a>__emul, __emulu
 
@@ -36,7 +37,7 @@ unsigned __int64 __emulu(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *的*\
 中乘法的第一个整数操作数。
@@ -50,18 +51,18 @@ unsigned __int64 __emulu(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__emul`|x86、x64|
 |`__emulu`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-`__emul`采用 2 32 位的带符号值, 并以64位带符号整数值的形式返回相乘的结果。
+`__emul` 采用 2 32 位的带符号值，并以64位带符号整数值的形式返回相乘的结果。
 
-`__emulu`采用 2 32 位无符号整数值, 并以64位无符号整数值的形式返回相乘的结果。
+`__emulu` 采用 2 32 位无符号整数值，并以64位无符号整数值的形式返回相乘的结果。
 
 ## <a name="example"></a>示例
 
@@ -95,7 +96,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 -268435456 * 2 = -536870912

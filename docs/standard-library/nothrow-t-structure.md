@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： nothrow_t 结构
 title: nothrow_t 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - nothrow_t class
 ms.assetid: dc7d5d42-ed5a-4919-88fe-bbad519b7a1d
-ms.openlocfilehash: bd65b5006326850522a251cbcf7d655133a1aa8a
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 974fbe3a1e27da41c6366c62d748426293a54437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97338091"
 ---
-# <a name="nothrowt-structure"></a>nothrow_t 结构
+# <a name="nothrow_t-structure"></a>nothrow_t 结构
 
 该结构用作运算符 new 的函数参数，指示函数应返回一个 null 指针来报告分配失败，而不是引发异常。
 
