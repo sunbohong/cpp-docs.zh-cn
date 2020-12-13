@@ -1,25 +1,26 @@
 ---
+description: 了解详细信息：使用磁贴
 title: 使用平铺
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: edef9154b0c4da6f53c8ac40ee84e55e9b38a9b7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6277faf867cd64e5ea0e4503bb36f8e1d4a8bc74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228461"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150158"
 ---
 # <a name="using-tiles"></a>使用平铺
 
-您可以使用平铺来最大化应用程序的加速。 平铺将线程划分为相等的矩形子集或*图块*。 如果使用合适的磁贴大小和平铺算法，则可以从 C++ AMP 代码获取更多加速。 平铺的基本组件是：
+您可以使用平铺来最大化应用程序的加速。 平铺将线程划分为相等的矩形子集或 *图块*。 如果使用合适的磁贴大小和平铺算法，则可以从 C++ AMP 代码获取更多加速。 平铺的基本组件是：
 
-- `tile_static`变化. 平铺的主要优点是访问的性能增益 `tile_static` 。 访问 `tile_static` 内存中的数据比访问全局空间（ `array` 或对象）中的数据的速度要快得多 `array_view` 。 `tile_static`为每个图块创建变量的实例，并且磁贴中的所有线程都可以访问该变量。 在典型的平铺算法中，将数据 `tile_static` 从全局内存复制到内存一次，然后从内存中多次访问 `tile_static` 。
+- `tile_static` 变化. 平铺的主要优点是访问的性能增益 `tile_static` 。 对内存中数据的访问 `tile_static` 速度要快于访问全局空间 (`array` 或对象) 中的数据 `array_view` 。 `tile_static`为每个图块创建变量的实例，并且磁贴中的所有线程都可以访问该变量。 在典型的平铺算法中，将数据 `tile_static` 从全局内存复制到内存一次，然后从内存中多次访问 `tile_static` 。
 
 - [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)。 调用会 `tile_barrier::wait` 挂起当前线程的执行，直到同一磁贴中的所有线程都达到对的调用 `tile_barrier::wait` 。 你不能保证线程将在中运行的顺序，只是磁贴中的任何线程都不会在调用之后执行， `tile_barrier::wait` 直到所有线程都已到达调用为止。 这意味着，通过使用方法，可以按平铺的方式而不是逐个线程的方式来 `tile_barrier::wait` 执行任务。 典型的平铺算法有代码来初始化 `tile_static` 整个磁贴的内存，然后调用 `tile_barrier::wait` 。 下面的代码 `tile_barrier::wait` 包含需要访问所有值的计算 `tile_static` 。
 
 - 本地和全局索引。 您可以访问相对于整个或对象的线程索引 `array_view` `array` 和相对于磁贴的索引。 使用本地索引可以使代码更易于读取和调试。 通常，使用本地索引访问 `tile_static` 变量，使用全局索引访问 `array` 和 `array_view` 变量。
 
-- [Tiled_extent 类](../../parallel/amp/reference/tiled-extent-class.md)和[tiled_index 类](../../parallel/amp/reference/tiled-index-class.md)。 使用 `tiled_extent` 对象而不是 `extent` 调用中的对象 `parallel_for_each` 。 使用 `tiled_index` 对象而不是 `index` 调用中的对象 `parallel_for_each` 。
+- [Tiled_extent 类](../../parallel/amp/reference/tiled-extent-class.md) 和 [tiled_index 类](../../parallel/amp/reference/tiled-index-class.md)。 使用 `tiled_extent` 对象而不是 `extent` 调用中的对象 `parallel_for_each` 。 使用 `tiled_index` 对象而不是 `index` 调用中的对象 `parallel_for_each` 。
 
 若要利用磁贴，你的算法必须将计算域分区为磁贴，然后将磁贴数据复制到 `tile_static` 变量中以实现更快的访问。
 
@@ -147,9 +148,9 @@ int main() {
 
 2. `parallel_for_each`使用 `tiled_extent` 对象作为计算域调用方法。 `tiled_extent`对象是通过调用 `extent::tile()` 变量的方法创建的 `descriptions` 。 对的调用的类型参数 `extent::tile()` `<2,3>` 指定创建2x3 图块。 因此，8x9 矩阵平铺为12个图块、四行和三列。
 
-3. `parallel_for_each`使用 `tiled_index<2,3>` 对象（ `t_idx` ）作为索引来调用方法。 索引（）的类型参数 `t_idx` 必须与计算域（）的类型参数匹配 `descriptions.extent.tile< 2, 3>()` 。
+3. `parallel_for_each`方法通过使用 `tiled_index<2,3>` () 作为索引的对象来调用 `t_idx` 。 索引 () 的类型参数 `t_idx` 必须与计算域 () 的类型参数匹配 `descriptions.extent.tile< 2, 3>()` 。
 
-4. 执行每个线程时，该索引将 `t_idx` 返回有关该线程所在图块的信息（ `tiled_index::tile` 属性）以及该线程在磁贴（属性）中的位置 `tiled_index::local` 。
+4. 当执行每个线程时，索引将 `t_idx` 返回有关线程 (属性的图块的信息， `tiled_index::tile`) 和图块中的线程 (`tiled_index::local` 属性) 的位置。
 
 ## <a name="tile-synchronizationtile_static-and-tile_barrierwait"></a>磁贴同步-tile_static 和 tile_barrier：： wait
 
@@ -289,7 +290,7 @@ t_idx.barrier.wait();
 
 - `tile_static`
 
-*内存隔离*确保内存访问可用于线程磁贴中的其他线程，并且根据程序顺序执行内存访问。 为了确保这一点，编译器和处理器不会将读取和写入操作重新排序到整个防护。 在 C++ AMP 中，通过调用以下方法之一来创建内存隔离：
+*内存隔离* 确保内存访问可用于线程磁贴中的其他线程，并且根据程序顺序执行内存访问。 为了确保这一点，编译器和处理器不会将读取和写入操作重新排序到整个防护。 在 C++ AMP 中，通过调用以下方法之一来创建内存隔离：
 
 - [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)：在全局和内存周围创建一个防护 `tile_static` 。
 
@@ -329,7 +330,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static 关键字](../../cpp/tile-static-keyword.md)

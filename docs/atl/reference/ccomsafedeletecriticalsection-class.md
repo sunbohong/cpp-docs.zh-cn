@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComSafeDeleteCriticalSection 类
 title: CComSafeDeleteCriticalSection 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-ms.openlocfilehash: 115cbd466f51db271f4be65ce708fe54c7f2b2ce
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 73e27fb267cbfc8cde248c7ac896d29de2a91f77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833629"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142164"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 类
 
@@ -33,14 +34,14 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection](#ccomsafedeletecriticalsection)|构造函数。|
 |[CComSafeDeleteCriticalSection：： ~ CComSafeDeleteCriticalSection](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComSafeDeleteCriticalSection：： Init](#init)|创建并初始化一个临界区对象。|
 |[CComSafeDeleteCriticalSection：： Lock](#lock)|获取临界区对象的所有权。|
@@ -48,11 +49,11 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 
 ### <a name="data-members"></a>数据成员
 
-|数据成员|说明|
+|数据成员|描述|
 |-|-|
 |[m_bInitialized](#m_binitialized)|标记内部对象是否 `CRITICAL_SECTION` 已初始化。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CComSafeDeleteCriticalSection` 派生自类 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 但是， `CComSafeDeleteCriticalSection` 通过 [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)提供其他安全机制。
 
@@ -78,7 +79,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 CComSafeDeleteCriticalSection();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 [m_bInitialized](#m_binitialized) 数据成员设置为 FALSE。
 
@@ -90,7 +91,7 @@ CComSafeDeleteCriticalSection();
 ~CComSafeDeleteCriticalSection() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CRITICAL_SECTION`如果[m_bInitialized](#m_binitialized)数据成员设置为 TRUE，则从内存中释放内部对象。
 
@@ -118,7 +119,7 @@ HRESULT Lock();
 
 返回 [CComCriticalSection：： Lock](../../atl/reference/ccomcriticalsection-class.md#lock)的结果。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法假定在输入时将 [m_bInitialized](#m_binitialized) 数据成员设置为 TRUE。 如果不满足此条件，则会在调试版本中生成断言。
 
@@ -132,7 +133,7 @@ HRESULT Lock();
 bool m_bInitialized;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `m_bInitialized`数据成员用于跟踪 `CRITICAL_SECTION` 与[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)类关联的基础对象的有效性。 `CRITICAL_SECTION`如果此标志未设置为 TRUE，则将不会尝试从内存中释放基础对象。
 
@@ -148,11 +149,11 @@ HRESULT Term() throw();
 
 返回 [CComCriticalSection：： Term](../../atl/reference/ccomcriticalsection-class.md#term)的结果，如果在输入时将 [M_BINITIALIZED](#m_binitialized) 设置为 FALSE，则返回 S_OK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 即使内部对象无效，也可以安全地调用此方法 `CRITICAL_SECTION` 。 如果 [m_bInitialized](#m_binitialized) 数据成员设置为 TRUE，则此类的析构函数将调用此方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComCriticalSection 类](../../atl/reference/ccomcriticalsection-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

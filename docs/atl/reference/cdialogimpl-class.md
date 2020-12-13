@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDialogImpl 类
 title: CDialogImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b92b5130b31e88565d79b59a24b2bd377d0d84c0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 228a63edde7eb66960a0acad5d60088d909946a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834721"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141851"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 类
 
@@ -39,7 +40,7 @@ template <class T,
     class ATL_NO_VTABLE CDialogImpl : public CDialogImplBaseT<TBase>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 派生自的类 `CDialogImpl` 。
@@ -60,7 +61,7 @@ template <class T,
 
 ### <a name="cdialogimplbaset-methods"></a>CDialogImplBaseT 方法
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[GetDialogProc](#getdialogproc)|返回当前对话框的过程。|
 |[MapDialogRect](#mapdialogrect)|将指定矩形的对话框单位映射到屏幕单位 (像素) 。|
@@ -68,12 +69,12 @@ template <class T,
 
 ### <a name="static-functions"></a>静态函数
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[DialogProc](#dialogproc)|处理发送到对话框的消息。|
 |[StartDialogProc](#startdialogproc)|当收到第一条消息来处理发送到对话框的消息时调用。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 使用 `CDialogImpl` 可以创建模式对话框或无模式对话框。 `CDialogImpl` 提供对话框过程，该过程使用默认消息映射将消息定向到适当的处理程序。
 
@@ -86,9 +87,9 @@ template <class T,
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]
 
-其中 `MyDlg` ，是在向导的 "**名称**" 页中输入的**短名称**。
+其中 `MyDlg` ，是在向导的 "**名称**" 页中输入的 **短名称**。
 
-|详细信息|查看|
+|详细信息|请参阅|
 |--------------------------------|---------|
 |创建控件|[ATL 教程](../../atl/active-template-library-atl-tutorial.md)|
 |在 ATL 中使用对话框|[ATL 窗口类](../../atl/atl-window-classes.md)|
@@ -114,7 +115,7 @@ HWND Create(
     LPARAM dwInitParam = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 中所有者窗口的句柄。
@@ -128,7 +129,7 @@ HWND Create(
 
 新创建的对话框的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此对话框自动附加到 `CDialogImpl` 对象。 若要创建模式对话框，请调用 [DoModal](#domodal)。 上面的第二个替代仅用于 [CComControl](../../atl/reference/ccomcontrol-class.md)。
 
@@ -144,7 +145,7 @@ BOOL DestroyWindow();
 
 如果成功销毁对话框，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果成功销毁对话框，则返回 TRUE;否则为 FALSE。
 
@@ -160,7 +161,7 @@ static LRESULT CALLBACK DialogProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 中对话框的句柄。
@@ -178,7 +179,7 @@ static LRESULT CALLBACK DialogProc(
 
 如果处理消息，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `DialogProc` 使用默认消息映射将消息定向到适当的处理程序。
 
@@ -194,7 +195,7 @@ INT_PTR DoModal(
     LPARAM dwInitParam = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWndParent*<br/>
 中所有者窗口的句柄。 默认值为 [GetActiveWindow](/windows/win32/api/winuser/nf-winuser-getactivewindow) Win32 函数的返回值。
@@ -204,9 +205,9 @@ INT_PTR DoModal(
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则为对[EndDialog](#enddialog)的调用中指定的*nRetCode*参数的值。 否则，为 -1。
+如果成功，则为对 [EndDialog](#enddialog)的调用中指定的 *nRetCode* 参数的值。 否则，为 -1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此对话框自动附加到 `CDialogImpl` 对象。
 
@@ -220,7 +221,7 @@ INT_PTR DoModal(
 BOOL EndDialog(int nRetCode);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nRetCode*<br/>
 中要由 CDialogImpl 返回的值 [：:D omodal](#domodal)。
@@ -229,7 +230,7 @@ BOOL EndDialog(int nRetCode);
 
 如果销毁对话框，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `EndDialog` 必须通过对话框过程调用。 销毁对话框后，Windows 会将 *nRetCode* 的值用作创建对话框的的返回值 `DoModal` 。
 
@@ -248,7 +249,7 @@ virtual WNDPROC GetDialogProc();
 
 当前对话框的过程。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重写此方法以将对话框过程替换为您自己的。
 
@@ -260,7 +261,7 @@ virtual WNDPROC GetDialogProc();
 BOOL MapDialogRect(LPRECT lpRect);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpRect*<br/>
 指向 `CRect` 对象或 [RECT](/windows/win32/api/windef/ns-windef-rect) 结构，该结构将接收包含更新区域的更新的客户端坐标。
@@ -269,7 +270,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 
 如果更新成功，则为非零值;如果更新失败，则为0。 若要获得扩展的错误信息，请调用 `GetLastError`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数将指定结构中的坐标替换 `RECT` 为转换后的坐标，这允许在对话框中使用结构来创建对话框或定位控件。
 
@@ -281,12 +282,12 @@ BOOL MapDialogRect(LPRECT lpRect);
 virtual void OnFinalMessage(HWND hWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 中要销毁的窗口的句柄。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，如果想要在销毁窗口后自动删除对象，可以在此处调用 **delete** 。
 
@@ -302,7 +303,7 @@ static LRESULT CALLBACK StartDialogProc(
     LPARAM lParam);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hWnd*<br/>
 中对话框的句柄。
@@ -320,11 +321,11 @@ static LRESULT CALLBACK StartDialogProc(
 
 窗口过程。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 初次调用后，将 `StartDialogProc` `DialogProc` 设置为一个对话框过程，并在此调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [类概述](../../atl/atl-class-overview.md)

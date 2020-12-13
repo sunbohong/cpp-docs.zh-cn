@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CRBTree 类
 title: CRBTree 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -27,16 +28,16 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 7b8e47b5cd0ac278711947abc867956333371be3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3c45c8b05429ba75905912d76f87605a07ff49e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833486"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140967"
 ---
 # <a name="crbtree-class"></a>CRBTree 类
 
-此类提供用于创建和使用红黑树的方法。
+此类提供用于创建和使用 Red-Black 树的方法。
 
 ## <a name="syntax"></a>语法
 
@@ -48,12 +49,12 @@ template <typename K,
 class CRBTree
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*温度*<br/>
+*K*<br/>
 键元素类型。
 
-*向量*<br/>
+*V*<br/>
 值元素类型。
 
 *KTraits*<br/>
@@ -66,7 +67,7 @@ class CRBTree
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CRBTree::KINARGTYPE](#kinargtype)|当键作为输入参数传递时使用的类型。|
 |[CRBTree::KOUTARGTYPE](#koutargtype)|当键作为输出参数返回时使用的类型。|
@@ -75,19 +76,19 @@ class CRBTree
 
 ### <a name="public-classes"></a>公共类
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CRBTree：： CPair 类](#cpair_class)|一个包含键和值元素的类。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CRBTree：： ~ CRBTree](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|调用此方法可查找使用下一个可用键的元素的位置。|
 |[CRBTree：： GetAt](#getat)|调用此方法可在树中的给定位置获取元素。|
@@ -106,9 +107,9 @@ class CRBTree
 |[CRBTree：： RemoveAt](#removeat)|调用此方法可删除对象中给定位置的元素 `CRBTree` 。|
 |[CRBTree::SetValueAt](#setvalueat)|调用此方法可更改存储在对象中指定位置的值 `CRBTree` 。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-红色-黑色树是一个二元搜索树，它为每个节点使用额外的信息，以确保其保持 "平衡"，也就是说，树高度不会以不太大的比例增长，因而会影响性能。
+Red-Black 树是一个二元搜索树，它为每个节点使用额外的信息，以确保其保持 "平衡"，也就是说，树高度不会以不太大的比例增长，会影响性能。
 
 此模板类设计为由 [CRBMap](../../atl/reference/crbmap-class.md) 和 [CRBMultiMap](../../atl/reference/crbmultimap-class.md)使用。 构成这些派生类的大部分方法由提供 `CRBTree` 。
 
@@ -126,13 +127,13 @@ class CRBTree
 class CPair : public __POSITION
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类由 [CRBTree：： GetAt](#getat)、 [CRBTree：： GetNext](#getnext)和 [CRBTree：： GetPrev](#getprev) 方法用来访问存储在树结构中的键和值元素。
 
 成员如下：
 
-|数据成员|说明|
+|数据成员|描述|
 |-|-|
 |`m_key`|存储密钥元素的数据成员。|
 |`m_value`|存储 value 元素的数据成员。|
@@ -145,7 +146,7 @@ class CPair : public __POSITION
 ~CRBTree() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 释放所有已分配的资源。 调用 [CRBTree：： RemoveAll](#removeall) 以删除所有元素。
 
@@ -157,16 +158,16 @@ class CPair : public __POSITION
 POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
+*key*<br/>
 键值。
 
 ### <a name="return-value"></a>返回值
 
 返回使用下一个可用键的元素的位置值。 如果没有更多元素，则返回 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法可以轻松地遍历树，无需事先计算位置值。
 
@@ -182,10 +183,10 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置值。
 
-*键*<br/>
+*key*<br/>
 接收密钥的变量。
 
 *value*<br/>
@@ -195,7 +196,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 
 前两个窗体返回指向 [CPair](#cpair_class)的指针。 第三个窗体获取给定位置的键和值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 位置值可以通过调用方法（如 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： GetTailPosition](#gettailposition)）来确定。
 
@@ -225,7 +226,7 @@ POSITION GetHeadPosition() const throw();
 
 返回树开头的元素的位置值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的值 `GetHeadPosition` 可用于方法 [CRBTree：： GetKeyAt](#getkeyat) 或 [CRBTree：： GetNext](#getnext) 等方法遍历树并检索值。
 
@@ -239,14 +240,14 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置值。
 
 ### <a name="return-value"></a>返回值
 
 返回 *存储在树中位置位置* 的键。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *pos* 不是有效的位置值，则结果是不可预知的。 在调试版本中，如果 *pos* 等于 NULL，则将发生断言失败。
 
@@ -261,14 +262,14 @@ CPair* GetNext(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
 ### <a name="return-value"></a>返回值
 
 返回一个指针，该指针指向树中的下一个 [CPair](#cpair_class) 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每次调用后， *pos* 位置计数器就会更新。 如果检索到的元素是树中的最后一个，则 *pos* 将设置为 NULL。
 
@@ -285,16 +286,16 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
-*键*<br/>
+*key*<br/>
 指定树的键类型的模板参数。
 
 *value*<br/>
 指定树值类型的模板参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每次调用后， *pos* 位置计数器就会更新。 如果检索到的元素是树中的最后一个，则 *pos* 将设置为 NULL。
 
@@ -308,14 +309,14 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
 ### <a name="return-value"></a>返回值
 
 返回对树中的下一个键的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 更新当前位置计数器， *pos*。如果树中没有更多条目，则位置计数器设置为 NULL。
 
@@ -330,14 +331,14 @@ V& GetNextValue(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
 ### <a name="return-value"></a>返回值
 
 返回对树中下一个值的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 更新当前位置计数器， *pos*。如果树中没有更多条目，则位置计数器设置为 NULL。
 
@@ -352,14 +353,14 @@ CPair* GetPrev(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
 ### <a name="return-value"></a>返回值
 
 返回一个指向存储在树中的上一个 [CPair](#cpair_class) 值的指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 更新当前位置计数器， *pos*。如果树中没有更多条目，则位置计数器设置为 NULL。
 
@@ -375,7 +376,7 @@ POSITION GetTailPosition() const throw();
 
 返回树尾部元素的位置值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的值 `GetTailPosition` 可用于方法 [CRBTree：： GetKeyAt](#getkeyat) 或 [CRBTree：： GetPrev](#getprev) 等方法遍历树并检索值。
 
@@ -390,7 +391,7 @@ V& GetValueAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
 ### <a name="return-value"></a>返回值
@@ -433,7 +434,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 void RemoveAll() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 清除 `CRBTree` 对象，释放用于存储元素的内存。
 
@@ -447,12 +448,12 @@ void RemoveAt(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-删除存储在指定位置的键/值对。 将释放用于存储元素的内存。 *Pos*引用的位置变为无效，并且树中任何其他元素的位置保持有效，它们不一定保持相同的顺序。
+删除存储在指定位置的键/值对。 将释放用于存储元素的内存。 *Pos* 引用的位置变为无效，并且树中任何其他元素的位置保持有效，它们不一定保持相同的顺序。
 
 ## <a name="crbtreesetvalueat"></a><a name="setvalueat"></a> CRBTree::SetValueAt
 
@@ -464,13 +465,13 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
+pos<br/>
 位置计数器，由先前对 [CRBTree：： GetHeadPosition](#getheadposition) 或 [CRBTree：： FindFirstKeyAfter](#findfirstkeyafter)等方法的调用返回。
 
 *value*<br/>
 要添加到对象的值 `CRBTree` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 更改存储在对象中给定位置的值元素 `CRBTree` 。
 
@@ -490,6 +491,6 @@ typedef VTraits::INARGTYPE VINARGTYPE;
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

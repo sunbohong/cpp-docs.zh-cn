@@ -1,4 +1,5 @@
 ---
+description: 了解更多： OLE 类
 title: OLE 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96b3a45b60a1b229daa73e4f896a867ec4921715
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617842"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150171"
 ---
 # <a name="ole-classes"></a>OLE 类
 
@@ -48,8 +49,8 @@ OLE 类可与其他应用程序框架类一起使用来方便对 ActiveX API 的
 
 - [OLE 相关类](ole-related-classes.md)
 
-若要查看类的继承，请使用[类层次结构图](hierarchy-chart.md)。
+若要查看类的继承，请使用 [类层次结构图](hierarchy-chart.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

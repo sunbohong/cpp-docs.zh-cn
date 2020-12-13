@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：复合控件宏
 title: 复合控件宏
 ms.date: 05/06/2019
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 7ac13a11646faca53b38ec610dc0388bdd14d251
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0107f91350516bd0f7e35cf82a49f79ff3c5797e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141188"
 ---
 # <a name="composite-control-macros"></a>复合控件宏
 
@@ -41,7 +42,7 @@ ms.locfileid: "88833538"
 BEGIN_SINK_MAP(_class)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_class*<br/>
 中指定控件。
@@ -50,7 +51,7 @@ BEGIN_SINK_MAP(_class)
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ActiveX 事件接收器的 CE ATL 实现仅支持事件处理程序方法中类型为 HRESULT 或 void 的返回值;不支持任何其他返回值，并且其行为不确定。
 
@@ -66,19 +67,19 @@ END_SINK_MAP()
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ActiveX 事件接收器的 CE ATL 实现仅支持事件处理程序方法中类型为 HRESULT 或 void 的返回值;不支持任何其他返回值，并且其行为不确定。
 
 ## <a name="sink_entry"></a><a name="sink_entry"></a> SINK_ENTRY
 
-声明由*id*标识的控件的指定事件 (*dispid*)  (*fn*) 的处理程序函数。
+声明由 *id* 标识的控件的指定事件 (*dispid*)  (*fn*) 的处理程序函数。
 
 ```
 SINK_ENTRY( id, dispid, fn )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中标识控件。
@@ -93,20 +94,20 @@ SINK_ENTRY( id, dispid, fn )
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ActiveX 事件接收器的 CE ATL 实现仅支持事件处理程序方法中类型为 HRESULT 或 void 的返回值;不支持任何其他返回值，并且其行为不确定。
 
 ## <a name="sink_entry_ex-and-sink_entry_ex_p"></a><a name="sink_entry_ex"></a> SINK_ENTRY_EX 和 SINK_ENTRY_EX_P
 
-对于*id*标识的控件，将 (*fn*) 的处理程序函数声明为调度接口 (*iid*) 的指定事件 (*dispid*) 。
+对于 *id* 标识的控件，将 (*fn*) 的处理程序函数声明为调度接口 (*iid*) 的指定事件 (*dispid*) 。
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
 SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
 中标识控件。
@@ -127,7 +128,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 [!code-cpp[NVC_ATL_Windowing#136](../../atl/codesnippet/cpp/composite-control-macros_2.h)]
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ActiveX 事件接收器的 CE ATL 实现仅支持事件处理程序方法中类型为 HRESULT 或 void 的返回值;不支持任何其他返回值，并且其行为不确定。
 
@@ -140,10 +141,10 @@ SINK_ENTRY_INFO( id, iid, dispid, fn, info )
 SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *id*<br/>
-中标识事件源的无符号整数。 此值必须与相关[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基类中使用的*nID*模板参数匹配。
+中标识事件源的无符号整数。 此值必须与相关 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基类中使用的 *nID* 模板参数匹配。
 
 *iid*<br/>
 中IID 标识调度接口。
@@ -160,11 +161,11 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 *信息*<br/>
 中事件处理程序函数的类型信息。 此类型信息以指向结构的指针的形式提供 `_ATL_FUNC_INFO` 。 CC_CDECL 是结构的 CALLCONV 字段在 Windows CE 中唯一支持的选项 `_ATL_FUNC_INFO` 。 不支持任何其他值，因此其行为未定义。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 前四个宏参数与 [SINK_ENTRY_EX](#sink_entry_ex) 宏的参数相同。 最终参数提供事件的类型信息。 ActiveX 事件接收器的 CE ATL 实现仅支持事件处理程序方法中类型为 HRESULT 或 void 的返回值;不支持任何其他返回值，并且其行为不确定。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)<br/>
 [复合控件全局函数](../../atl/reference/composite-control-global-functions.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：演练：使用 join 避免死锁
 title: 演练：使用 join 避免死锁
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: 5bdd6cd81051d224714dd66d4604cbdec4ddb552
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b74a7cd3f5f2326bb73ece13e16be95d6677bdd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150145"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>演练：使用 join 避免死锁
 
-本主题使用哲学家就餐问题说明如何使用[concurrency：： join](../../parallel/concrt/reference/join-class.md)类来防止应用程序中出现死锁。 在软件应用中，如果两个或多个进程分别留有资源，且相互等待另一进程释放其他资源，就会发生死锁**。
+本主题使用哲学家就餐问题说明如何使用 [concurrency：： join](../../parallel/concrt/reference/join-class.md) 类来防止应用程序中出现死锁。 在软件应用中，如果两个或多个进程分别留有资源，且相互等待另一进程释放其他资源，就会发生死锁。
 
 哲学家就餐问题是在多个并发进程间共享一组资源时可能出现的一般问题集的一个具体示例。
 
@@ -26,7 +27,7 @@ ms.locfileid: "87217878"
 
 - [异步代理](../../parallel/concrt/asynchronous-agents.md)
 
-- [演练：创建基于代理的应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
+- [演练：创建 Agent-Based 应用程序](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)
 
 - [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -34,7 +35,7 @@ ms.locfileid: "87217878"
 
 - [同步数据结构](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="sections"></a><a name="top"></a>个
+## <a name="sections"></a><a name="top"></a> 个
 
 本演练包含以下各节：
 
@@ -44,7 +45,7 @@ ms.locfileid: "87217878"
 
 - [使用 join 避免死锁](#solution)
 
-## <a name="the-dining-philosophers-problem"></a><a name="problem"></a>哲学家就餐问题
+## <a name="the-dining-philosophers-problem"></a><a name="problem"></a> 哲学家就餐问题
 
 哲学家就餐问题说明了应用程序中出现死锁的情况。 在此问题中，有五个哲学家坐在一个圆桌上。 每个哲学家在思考与吃间都有不同之处。 每个哲学家都必须与左侧的邻居共享 chopstick，并将另一个 chopstick 与右侧的邻居共享。 下图显示了此布局。
 
@@ -54,9 +55,9 @@ ms.locfileid: "87217878"
 
 [[顶部](#top)]
 
-## <a name="a-nave-implementation"></a><a name="deadlock"></a>简单实现
+## <a name="a-nave-implementation"></a><a name="deadlock"></a> 简单实现
 
-下面的示例演示了哲学家就餐问题的简单实现。 `philosopher`从[concurrency：： agent](../../parallel/concrt/reference/agent-class.md)派生的类使每个哲学家可以独立操作。 该示例使用一个[并发的 concurrency：： critical_section](../../parallel/concrt/reference/critical-section-class.md)对象数组向每个 `philosopher` 对象授予对一对筷子的独占访问权限。
+下面的示例演示了哲学家就餐问题的简单实现。 `philosopher`从[concurrency：： agent](../../parallel/concrt/reference/agent-class.md)派生的类使每个哲学家可以独立操作。 该示例使用一个 [并发的 concurrency：： critical_section](../../parallel/concrt/reference/critical-section-class.md) 对象数组向每个 `philosopher` 对象授予对一对筷子的独占访问权限。
 
 为了使实现与插图相关， `philosopher` 类表示一个哲学家。 **`int`** 变量表示每个 chopstick。 `critical_section`对象充当筷子的剩余对象。 `run`方法模拟哲学家的生存期。 `think`方法模拟思考的行为， `eat` 方法模拟吃的行为。
 
@@ -76,17 +77,17 @@ ms.locfileid: "87217878"
 
 [[顶部](#top)]
 
-## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a>使用 join 避免死锁
+## <a name="using-join-to-prevent-deadlock"></a><a name="solution"></a> 使用 join 避免死锁
 
 本部分演示如何使用消息缓冲区和消息传递函数来消除死锁的可能性。
 
-为了使此示例与前面的示例相关， `philosopher` 类 `critical_section` 使用[concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md)对象和对象替换了每个对象 `join` 。 `join`对象充当向哲学家提供筷子的仲裁器。
+为了使此示例与前面的示例相关， `philosopher` 类 `critical_section` 使用 [concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md) 对象和对象替换了每个对象 `join` 。 `join`对象充当向哲学家提供筷子的仲裁器。
 
 此示例使用 `unbounded_buffer` 类，因为当目标接收来自对象的消息时 `unbounded_buffer` ，将从消息队列中删除该消息。 这会使 `unbounded_buffer` 包含一条消息的对象指示 chopstick 可用。 `unbounded_buffer`不包含任何消息的对象指示正在使用 chopstick。
 
 此示例使用非贪婪对象， `join` 因为非贪婪联接 `philosopher` 仅在两个 `unbounded_buffer` 对象都包含一条消息时为每个对象提供对这两个筷子的访问权限。 贪婪联接不会阻止死锁，因为贪婪联接会在消息可用时立即接受消息。 如果所有贪婪 `join` 对象均收到其中一条消息，但等待另一条消息变得可用，则会发生死锁。
 
-有关贪婪和非贪婪联接的详细信息以及各种消息缓冲区类型之间的差异，请参阅[异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。
+有关贪婪和非贪婪联接的详细信息以及各种消息缓冲区类型之间的差异，请参阅 [异步消息块](../../parallel/concrt/asynchronous-message-blocks.md)。
 
 ### <a name="to-prevent-deadlock-in-this-example"></a>在此示例中防止死锁
 
@@ -144,7 +145,7 @@ plato ate 50 times.
 
 [[顶部](#top)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)<br/>

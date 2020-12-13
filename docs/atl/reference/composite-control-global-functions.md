@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：复合控件全局函数
 title: 复合控件全局函数
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: fe9d9a3a0538e2e5744987adcd64e67562711ea8
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: fa46cc46247d409b85772e6c1aab229d97fd1c36
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141240"
 ---
 # <a name="composite-control-global-functions"></a>复合控件全局函数
 
@@ -32,7 +33,7 @@ ms.locfileid: "91353111"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[AtlAxDialogBox](#atlaxdialogbox)|从用户提供的对话框模板创建模式对话框。 生成的对话框可以包含 ActiveX 控件。|
 |[AtlAxCreateDialog](#atlaxcreatedialog)|从用户提供的对话框模板创建无模式对话框。 生成的对话框可以包含 ActiveX 控件。|
@@ -86,9 +87,9 @@ ATLAPI_(int) AtlAxDialogBox(
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-若要将 `AtlAxDialogBox` 与包含 ActiveX 控件的对话框模板一起使用，请将有效的 CLSID、APPID 或 URL 字符串指定为对话框资源的**控件**部分的*文本*字段，并将 "AtlAxWin80" 指定为同一节下的*类名称*字段。 下面演示了有效的 **控件** 部分可能如下所示：
+若要将 `AtlAxDialogBox` 与包含 ActiveX 控件的对话框模板一起使用，请将有效的 CLSID、APPID 或 URL 字符串指定为对话框资源的 **控件** 部分的 *文本* 字段，并将 "AtlAxWin80" 指定为同一节下的 *类名称* 字段。 下面演示了有效的 **控件** 部分可能如下所示：
 
 ```
 CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
@@ -133,7 +134,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 生成的对话框可以包含 ActiveX 控件。
 
@@ -182,7 +183,7 @@ ATLAPI AtlAxCreateControl(
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此 global 函数提供与调用 [AtlAxCreateControlEx](#atlaxcreatecontrolex) (*lpszName*， *hWnd*， *pStream*，null，null，null，null) ; 的结果相同的结果。
 
@@ -243,7 +244,7 @@ ATLAPI AtlAxCreateControlEx(
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AtlAxCreateControlEx` 类似于 [AtlAxCreateControl](#atlaxcreatecontrol) ，但也可用于接收指向新创建的控件的接口指针，并设置用于接收由控件触发的事件的事件接收器。
 
@@ -359,7 +360,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AtlAxCreateControlLicEx` 类似于 [AtlAxCreateControlLic](#atlaxcreatecontrollic) ，但也可用于接收指向新创建的控件的接口指针，并设置用于接收由控件触发的事件的事件接收器。
 
@@ -393,7 +394,7 @@ ATLAPI AtlAxAttachControl(
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 [AtlAxCreateControlEx](#atlaxcreatecontrolex) 和 [AtlAxCreateControl](#atlaxcreatecontrol) 同时创建和附加控件。
 
@@ -472,9 +473,9 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 如果控件承载代码的初始化成功，则为非零值;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-使用 ATL 控件托管 API 之前，必须先调用此函数。 调用此函数后，可以在对[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)或[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的调用中使用 **"AtlAxWin"** 窗口类，如 Windows SDK 中所述。
+使用 ATL 控件托管 API 之前，必须先调用此函数。 调用此函数后，可以在对 [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)或 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的调用中使用 **"AtlAxWin"** 窗口类，如 Windows SDK 中所述。
 
 ## <a name="atlaxwinterm"></a><a name="atlaxwinterm"></a> AtlAxWinTerm
 
@@ -488,7 +489,7 @@ inline BOOL AtlAxWinTerm();
 
 始终返回 TRUE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数只需调用 [UnregisterClass](/windows/win32/api/winuser/nf-winuser-unregisterclassw) ，如 Windows SDK 中所述。
 
@@ -528,7 +529,7 @@ ATLAPI AtlGetObjectSourceInterface(
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `AtlGetObjectSourceInterface` 可为您提供默认源接口的接口 ID，以及描述该接口的类型库的 LIBID 和主版本号和次版本号。
 

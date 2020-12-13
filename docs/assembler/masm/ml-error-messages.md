@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： ML 错误消息
 title: ML 错误消息
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: 1b065433a1a6baf9bf2631aeb2f53421f8efb83b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 08f9a3ccd1bfe79195bf3ba9acf5b5347cc35a1f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75312620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129696"
 ---
 # <a name="ml-error-messages"></a>ML 错误消息
 
@@ -26,28 +27,28 @@ MASM 组件生成的错误消息分为三个类别：
 
 所有错误消息采用以下形式：
 
-> *实用工具*：*文件名*（*行*）： {*Error_type*} （*代码*）： *Message_text*
+> *实用工具*： *文件名* (*行*) ： {*Error_type*} (*代码*) ： *Message_text*
 
 其中：
 
-*实用工具*\
+*检测*\
 发送错误消息的程序。
 
-*文件名*\
+*名字*\
 包含错误生成条件的文件。
 
-*行*\
+*内嵌*\
 错误条件所在的大概行。
 
 *Error_type*\
 错误、错误或警告。
 
-*代码*\
+*编写*\
 唯一的5或6位错误代码。
 
 *Message_text*\
 错误条件的简短和一般说明。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft 宏汇编程序参考](microsoft-macro-assembler-reference.md)

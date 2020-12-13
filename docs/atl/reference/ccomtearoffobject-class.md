@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComTearOffObject 类
 title: CComTearOffObject 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: 3eee1d33d5eded75d8805584a24e6b6f396a8369
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b9fe9e7a790a004aec1de059415bd5f47572455b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833616"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142150"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 类
 
@@ -33,7 +34,7 @@ template<class Base>
 class CComTearOffObject : public Base
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *基座*<br/>
 从派生的类， `CComTearOffObjectBase` 以及要使其支持您的脱离对象的接口。
@@ -44,14 +45,14 @@ ATL 在两个阶段内实现其脱离接口： `CComTearOffObjectBase` 方法会
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|构造函数。|
 |[CComTearOffObject：： ~ CComTearOffObject](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CComTearOffObject：： AddRef](#addref)|递增对象的引用计数 `CComTearOffObject` 。|
 |[CComTearOffObject：： QueryInterface](#queryinterface)|返回一个指针，该指针指向您的脱离类或所有者类上所请求的接口。|
@@ -59,17 +60,17 @@ ATL 在两个阶段内实现其脱离接口： `CComTearOffObjectBase` 方法会
 
 ### <a name="ccomtearoffobjectbase-methods"></a>CComTearOffObjectBase 方法
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[CComTearOffObjectBase](#ccomtearoffobjectbase)|构造函数。|
 
 ### <a name="ccomtearoffobjectbase-data-members"></a>CComTearOffObjectBase 数据成员
 
-|数据成员|说明|
+|数据成员|描述|
 |-|-|
 |[m_pOwner](#m_powner)|指向 `CComObject` 派生自所有者类的指针。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CComTearOffObject` 将独立的接口实现为单独的对象，该对象仅在查询该接口时进行实例化。 在引用计数变为零时，将删除该删除。 通常，你为很少使用的接口生成了一个脱离接口，因为使用脱离会将 vtable 指针保存在主对象的所有实例中。
 
@@ -111,12 +112,12 @@ STDMETHOD_(ULONG, AddRef)();
 CComTearOffObject(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 中将转换为指向对象的指针的指针 `CComObject<Owner>` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将所有者的引用计数递增1。
 
@@ -128,7 +129,7 @@ CComTearOffObject(void* pv);
 ~CComTearOffObject();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 释放所有已分配的资源，调用 FinalRelease，并递减模块锁计数。
 
@@ -140,24 +141,24 @@ CComTearOffObject(void* pv);
 CComTearOffObjectBase();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 [m_pOwner](#m_powner) 成员初始化为 NULL。
 
 ## <a name="ccomtearoffobjectm_powner"></a><a name="m_powner"></a> CComTearOffObject：： m_pOwner
 
-指向从*所有者*派生的[CComObject](../../atl/reference/ccomobject-class.md)对象的指针。
+指向从 *所有者* 派生的 [CComObject](../../atl/reference/ccomobject-class.md)对象的指针。
 
 ```
 CComObject<Owner>* m_pOwner;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *所有者*<br/>
 中正在实现其脱离的类。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在构造过程中，指针初始化为 NULL。
 
@@ -169,19 +170,19 @@ CComObject<Owner>* m_pOwner;
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中所请求的接口的 IID。
 
 *ppvObject*<br/>
-弄指向由 *iid*标识的接口指针的指针; 如果找不到接口，则为 NULL。
+弄指向由 *iid* 标识的接口指针的指针; 如果找不到接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 首先查询脱离类的接口。 如果接口不存在，则对所有者对象上的接口进行查询。 如果请求的接口为 `IUnknown` ，则返回 `IUnknown` 所有者的。
 
@@ -197,7 +198,7 @@ STDMETHOD_ULONG Release();
 
 在非调试版本中，始终返回零。 在调试版本中，将返回一个值，该值对于诊断或测试可能很有用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComCachedTearOffObject 类](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
 [类概述](../../atl/atl-class-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CFirePropNotifyEvent 类
 title: CFirePropNotifyEvent 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,19 +12,19 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-ms.openlocfilehash: 1dfce42176341d74ffc7d9b42f856e71b17bf4f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 09102e67408195751e083807f444c1b028fd2762
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81326968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141721"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 类
 
-此类提供了有关控件属性更改的通知容器接收器的方法。
+此类提供用于通知容器接收器有关控件属性更改的方法。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -35,71 +36,71 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CFireProp通知事件：：火种](#fireonchanged)|（静态）通知容器的接收器控件属性已更改。|
-|[CFireProp通知事件：：火对请求编辑](#fireonrequestedit)|（静态）通知容器的接收器控件属性即将更改。|
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)| (静态) 通知容器接收器控件属性已更改。|
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)| (静态) 通知容器接收器控件属性即将更改。|
 
 ## <a name="remarks"></a>备注
 
-`CFirePropNotifyEvent`有两种方法通知容器的接收器控件属性已更改或即将更改。
+`CFirePropNotifyEvent` 具有两个方法，通知容器接收器控件属性已更改或即将更改。
 
-如果实现控件的`IPropertyNotifySink`类派生自 调用`CFirePropNotifyEvent``FireOnRequestEdit`或`FireOnChanged`时调用 的方法。 如果控件类不是派生自`IPropertyNotifySink`，则对这些函数的调用将返回S_OK。
+如果实现控件的类派生自，则在 `IPropertyNotifySink` `CFirePropNotifyEvent` 调用或时将调用方法 `FireOnRequestEdit` `FireOnChanged` 。 如果控件类不是从派生的 `IPropertyNotifySink` ，则对这些函数的调用将返回 S_OK。
 
-有关创建控件的详细信息，请参阅[ATL 教程](../../atl/active-template-library-atl-tutorial.md)。
+有关创建控件的详细信息，请参阅 [ATL 教程](../../atl/active-template-library-atl-tutorial.md)。
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlctl.h
+**标头：** atlctl
 
-## <a name="cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a>CFireProp通知事件：：火种
+## <a name="cfirepropnotifyeventfireonchanged"></a><a name="fireonchanged"></a> CFirePropNotifyEvent::FireOnChanged
 
-通知所有连接的[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)接口（在对象的每个连接点上），指定对象属性已更改。
+通知) 指定对象属性已更改的对象的每个连接点 (所有连接的 [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) 接口。
 
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*朋 克*<br/>
-[在]指向`IUnknown`发送通知的对象的指针。
+*pUnk*<br/>
+中指向发送通知的对象的的指针 `IUnknown` 。
 
-*脱从ID*<br/>
-[在]已更改的属性的标识符。
+*dispID*<br/>
+中已更改的属性的标识符。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值之一。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-即使控件不支持连接点，此函数也是安全的调用。
+即使您的控件不支持连接点，也可以安全地调用此函数。
 
-## <a name="cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a>CFireProp通知事件：：火对请求编辑
+## <a name="cfirepropnotifyeventfireonrequestedit"></a><a name="fireonrequestedit"></a> CFirePropNotifyEvent::FireOnRequestEdit
 
-通知所有连接的[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)接口（在对象的每个连接点上），指定对象属性即将更改。
+通知) 指定对象属性将要更改的对象的每个连接点 (所有连接的 [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) 接口。
 
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*朋 克*<br/>
-[在]指向`IUnknown`发送通知的对象的指针。
+*pUnk*<br/>
+中指向发送通知的对象的的指针 `IUnknown` 。
 
-*脱从ID*<br/>
-[在]要更改的属性的标识符。
+*dispID*<br/>
+中要更改的属性的标识符。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值之一。
+标准的 HRESULT 值之一。
 
 ### <a name="remarks"></a>备注
 
-即使控件不支持连接点，此函数也是安全的调用。
+即使您的控件不支持连接点，也可以安全地调用此函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)

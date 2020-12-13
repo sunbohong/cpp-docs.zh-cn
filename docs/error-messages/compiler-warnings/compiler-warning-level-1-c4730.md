@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4730
 title: 编译器警告（等级 1）C4730
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: a132dcc795d6055c854a5ad147940868fe4e088b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e026d44bc76d58c934eeccc363f4385f43d15597
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228773"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97150652"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>编译器警告（等级 1）C4730
 
 "main"：混合 _m64 和浮点表达式可能导致不正确的代码
 
-函数使用[__m64](../../cpp/m64.md)和 **`float`** / **`double`** 类型。 由于 MMX 和浮点寄存器共享同一物理寄存器空间（不能同时使用），因此 **`__m64`** **`float`** / **`double`** 在同一函数中使用和类型可能会导致数据损坏，并可能导致异常。
+函数使用 [__m64](../../cpp/m64.md)和 **`float`** / **`double`** 类型。 由于 MMX 和浮点寄存器共享同一物理寄存器空间 (不能同时使用) ，因此 **`__m64`** **`float`** / **`double`** 在同一函数中使用和类型可能会导致数据损坏，这可能会导致异常。
 
-为了安全地 **`__m64`** 在同一函数中使用类型和浮点类型，使用其中一种类型的每个指令都应由 **_m_empty （）** （对于 MMX）或 **_m_femms （）** （对于3DNow！）内部函数进行分隔。
+为了安全地 **`__m64`** 在同一函数中使用类型和浮点类型，每个使用一种类型的指令应由用于 MMX) 的 **_m_empty ( # B1** (或 **_m_femms ( # B5** (for 3DNow！ ) 内部。
 
 下面的示例生成 C4730：
 

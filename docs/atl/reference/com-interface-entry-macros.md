@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： COM_INTERFACE_ENTRY 宏
 title: COM 接口入口宏
 ms.date: 03/28/2017
 f1_keywords:
@@ -18,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 1358a51f6bcb65f9c54c2006a6a467cf96593b5f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 0564c1e4ba6b9778865442d281453ff3a4a56d7c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834695"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141357"
 ---
 # <a name="com_interface_entry-macros"></a>COM_INTERFACE_ENTRY 宏
 
@@ -37,8 +38,8 @@ ms.locfileid: "88834695"
 |[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|与 [COM_INTERFACE_ENTRY2](#com_interface_entry2)相同，只不过您可以指定不同的 IID。|
 |[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|查询由 *iid* 标识的接口时，将 `COM_INTERFACE_ENTRY_AGGREGATE` 转发到 `punk` 。|
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|与 [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)相同，不同之处在于查询任何 IID 会导致将查询转发到 *punk*。|
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|与 [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)相同，除非 *punk* 为 NULL，否则将自动创建 *clsid*描述的聚合。|
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|与 [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)相同，不同之处在于，查询任何 IID 会导致将查询转发到 *punk*，如果 *punk* 为 NULL，则会自动创建 *clsid*描述的聚合。|
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|与 [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)相同，除非 *punk* 为 NULL，否则将自动创建 *clsid* 描述的聚合。|
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|与 [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)相同，不同之处在于，查询任何 IID 会导致将查询转发到 *punk*，如果 *punk* 为 NULL，则会自动创建 *clsid* 描述的聚合。|
 |[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|当查询指定的接口时，使程序调用 [DebugBreak](/windows/win32/api/debugapi/nf-debugapi-debugbreak) 。|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|为每个实例保存特定于接口的数据。|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|公开您的脱离接口。|
@@ -61,12 +62,12 @@ ms.locfileid: "88834695"
 COM_INTERFACE_ENTRY( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中类对象直接派生自的接口的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常，这是最常使用的条目类型。
 
@@ -92,7 +93,7 @@ END_COM_MAP()
 COM_INTERFACE_ENTRY2(x, x2)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中要从对象公开的接口的名称。
@@ -100,7 +101,7 @@ COM_INTERFACE_ENTRY2(x, x2)
 *x2*<br/>
 中从中公开 *x* 的继承分支的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 例如，如果从两个双重接口派生类对象，则可以 `IDispatch` 使用 COM_INTERFACE_ENTRY2 公开，因为 `IDispatch` 可以从任一接口获取这些对象。
 
@@ -116,13 +117,13 @@ COM_INTERFACE_ENTRY2(x, x2)
 COM_INTERFACE_ENTRY_IID(iid, x)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中公开的接口的 GUID。
 
 *x*<br/>
-中类的名称，其 vtable 将公开为由 *iid*标识的接口。
+中类的名称，其 vtable 将公开为由 *iid* 标识的接口。
 
 ### <a name="example"></a>示例
 
@@ -136,7 +137,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
 COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中为接口指定的 GUID。
@@ -155,7 +156,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中查询的接口的 GUID。
@@ -163,7 +164,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 *punk*<br/>
 中指针的名称 `IUnknown` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 假定 *punk* 参数指向聚合的内部未知或为 NULL，在这种情况下，将忽略该条目。 通常，您会 `CoCreate` 在中进行聚合 `FinalConstruct` 。
 
@@ -179,12 +180,12 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
 COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punk*<br/>
 中指针的名称 `IUnknown` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果接口查询失败，则会继续处理 COM 映射。
 
@@ -194,13 +195,13 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
 
 ## <a name="com_interface_entry_autoaggregate"></a><a name="com_interface_entry_autoaggregate"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE
 
-与 [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)相同，除非 *punk* 为 NULL，否则将自动创建 *clsid*描述的聚合。
+与 [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)相同，除非 *punk* 为 NULL，否则将自动创建 *clsid* 描述的聚合。
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中查询的接口的 GUID。
@@ -211,7 +212,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 *clsid*<br/>
 中如果 *punk* 为 NULL，则将创建聚合的标识符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="example"></a>示例
 
@@ -219,13 +220,13 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
 
 ## <a name="com_interface_entry_autoaggregate_blind"></a><a name="com_interface_entry_autoaggregate_blind"></a> COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
 
-与 [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)相同，不同之处在于，查询任何 IID 会导致将查询转发到 *punk*，如果 *punk* 为 NULL，则会自动创建 *clsid*描述的聚合。
+与 [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)相同，不同之处在于，查询任何 IID 会导致将查询转发到 *punk*，如果 *punk* 为 NULL，则会自动创建 *clsid* 描述的聚合。
 
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *punk*<br/>
 中指针的名称 `IUnknown` 。 必须是包含 COM 映射的类的成员。
@@ -233,7 +234,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 *clsid*<br/>
 中如果 *punk* 为 NULL，则将创建聚合的标识符。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果接口查询失败，则会继续处理 COM 映射。
 
@@ -249,12 +250,12 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 COM_INTERFACE_ENTRY_BREAK(x)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中用于构造接口标识符的文本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 接口 IID 将通过将 *x* 追加到来构造 `IID_` 。 例如，如果 *x* 为 `IPersistStorage` ，则 IID 将为 `IID_IPersistStorage` 。
 
@@ -266,7 +267,7 @@ COM_INTERFACE_ENTRY_BREAK(x)
 COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中撕接口的 GUID。
@@ -277,7 +278,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 *punk*<br/>
 中指针的名称 `IUnknown` 。 必须是包含 COM 映射的类的成员。 应在类对象的构造函数中初始化为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果未使用接口，这将降低对象的总体实例大小。
 
@@ -293,7 +294,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
 COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中撕接口的 GUID。
@@ -301,7 +302,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 *x*<br/>
 中实现接口的类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 一个脱离接口实现为一个单独的对象，每次查询它所代表的接口时，都会实例化该对象。 通常，如果接口很少使用，则将接口构建为脱离，因为这会在主对象的每个实例中保存 vtable 指针。 在引用计数变为零时，将删除该删除。 实现分离的类应从派生 `CComTearOffObjectBase` ，并具有自己的 COM 映射。
 
@@ -317,18 +318,18 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
 COM_INTERFACE_ENTRY_CHAIN(classname)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 classname<br/>
 中当前对象的基类。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 例如，在以下代码中：
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-请注意，COM 映射中的第一项必须是包含 COM 映射的对象上的接口。 因此，你不能使用 COM_INTERFACE_ENTRY_CHAIN 启动 com 映射条目，这会导致在**COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **) **出现在对象的 com 映射中时，搜索不同对象的 com 映射。 如果要首先搜索另一对象的 COM 映射，请将的接口条目添加 `IUnknown` 到 com 映射，然后将另一个对象的 COM 映射链接起来。 例如：
+请注意，COM 映射中的第一项必须是包含 COM 映射的对象上的接口。 因此，你不能使用 COM_INTERFACE_ENTRY_CHAIN 启动 com 映射条目，这会导致在 **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** 出现在对象的 com 映射中时，搜索不同对象的 com 映射。 如果要首先搜索另一对象的 COM 映射，请将的接口条目添加 `IUnknown` 到 com 映射，然后将另一个对象的 COM 映射链接起来。 例如：
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 
@@ -340,24 +341,24 @@ classname<br/>
 COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中公开的接口的 GUID。
 
 *dw*<br/>
-中传递给 *函数*的参数。
+中传递给 *函数* 的参数。
 
 *func*<br/>
-中将返回 *iid*的函数指针。
+中将返回 *iid* 的函数指针。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 *iid* 与查询的接口的 iid 匹配，则调用由 *func* 指定的函数。 函数的声明应为：
 
 `HRESULT WINAPI func(void* pv, REFIID riid, LPVOID* ppv, DWORD_PTR dw);`
 
-调用函数时， `pv` 将指向类对象。 *Riid*参数是指正在查询的接口， `ppv` 它是指向函数应将指针存储到接口的位置的指针，而*dw*是在项中指定的参数。 \* `ppv` 如果选择不返回接口，则函数应设置为 NULL，并返回 E_NOINTERFACE 或 S_FALSE。 对于 E_NOINTERFACE，COM 映射处理终止。 在 S_FALSE 的情况下，即使未返回接口指针，COM 映射处理仍将继续进行。 如果函数返回接口指针，则它应返回 S_OK。
+调用函数时， `pv` 将指向类对象。 *Riid* 参数是指正在查询的接口， `ppv` 它是指向函数应将指针存储到接口的位置的指针，而 *dw* 是在项中指定的参数。 \* `ppv` 如果选择不返回接口，则函数应设置为 NULL，并返回 E_NOINTERFACE 或 S_FALSE。 对于 E_NOINTERFACE，COM 映射处理终止。 在 S_FALSE 的情况下，即使未返回接口指针，COM 映射处理仍将继续进行。 如果函数返回接口指针，则它应返回 S_OK。
 
 ## <a name="com_interface_entry_func_blind"></a><a name="com_interface_entry_func_blind"></a> COM_INTERFACE_ENTRY_FUNC_BLIND
 
@@ -367,15 +368,15 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dw*<br/>
-中传递给 *函数*的参数。
+中传递给 *函数* 的参数。
 
 *func*<br/>
 中处理 COM 映射中的此项时调用的函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 任何失败都将导致在 COM 映射上继续进行处理。 如果函数返回接口指针，则它应返回 S_OK。
 
@@ -387,12 +388,12 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 COM_INTERFACE_ENTRY_NOINTERFACE(x)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中用于构造接口标识符的文本。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏可用于阻止在特定情况下使用接口。 例如，你可以在 COM_INTERFACE_ENTRY_AGGREGATE_BLIND 之前将此宏插入 COM 映射，以防止将接口查询转发到聚合的内部未知。
 

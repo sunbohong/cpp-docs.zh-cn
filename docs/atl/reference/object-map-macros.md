@@ -1,4 +1,5 @@
 ---
+description: 了解更多：对象映射宏
 title: 对象映射宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_AUTO
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
-ms.openlocfilehash: 2eb24914561a958a6d6d79dab6779e0ba0a70201
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: accd1fdaebaab3a5c71730dcfd5db83fc2b320de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139030"
 ---
 # <a name="object-map-macros"></a>对象映射宏
 
 这些宏定义对象映射和条目。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|允许指定类对象的文本说明，该说明将被输入到对象映射中。|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|向对象映射中输入 ATL 对象，更新注册表，并创建对象的实例。|
@@ -35,12 +36,12 @@ ms.locfileid: "88835280"
 DECLARE_OBJECT_DESCRIPTION( x )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 中类对象的说明。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ATL 通过 [OBJECT_ENTRY_AUTO](#object_entry_auto) 宏将此说明输入到对象映射。
 
@@ -62,15 +63,15 @@ DECLARE_OBJECT_DESCRIPTION 实现一个 `GetObjectDescription` 函数，该函�
 OBJECT_ENTRY_AUTO( clsid, class )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
-中由 c + + 类实现的名为 *class*的 COM 类的 CLSID。
+中由 c + + 类实现的名为 *class* 的 COM 类的 CLSID。
 
 *class*<br/>
-中实现 *clsid*所表示的 COM 类的 c + + 类的名称。
+中实现 *clsid* 所表示的 COM 类的 c + + 类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对象项宏置于项目中的全局范围内，以提供对类的注册、初始化和创建的支持。
 
@@ -94,20 +95,20 @@ OBJECT_ENTRY_AUTO 将此对象的 creator 类和类工厂创建者类函数的�
 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
-中由 c + + 类实现的名为 *class*的 COM 类的 CLSID。
+中由 c + + 类实现的名为 *class* 的 COM 类的 CLSID。
 
 *class*<br/>
-中实现 *clsid*所表示的 COM 类的 c + + 类的名称。
+中实现 *clsid* 所表示的 COM 类的 c + + 类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对象项宏置于项目中的全局范围内，以提供对类的注册、初始化和创建的支持。
 
 OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO 允许你指定应注册和初始化对象 (请参阅 [OBJECT_ENTRY_AUTO](#object_entry_auto) 了解) 的详细信息，但它不能通过进行创建 `CoCreateInstance` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)

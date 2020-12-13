@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IOleControlImpl 类
 title: IOleControlImpl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,19 +12,19 @@ f1_keywords:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-ms.openlocfilehash: 947ec16e91b99cc42cff90abe7df4a5d13576e98
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e224f6f8db79c05cb8a774cd57517ba06108e592
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97139420"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 类
 
-此类提供接口和实现`IOleControl``IUnknown`的默认实现。
+此类提供接口的默认实现 `IOleControl` 并实现 `IUnknown` 。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -32,27 +33,27 @@ template<class T>
 class IOleControlImpl
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
-您的类，派生自`IOleControlImpl`。
+派生自的类 `IOleControlImpl` 。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[IOleControlimpl：：冻结事件](#freezeevents)|指示容器是否忽略或接受来自控件的事件。|
-|[IOleControlimpl：获取控制信息](#getcontrolinfo)|填写有关控件的键盘行为的信息。 ATL 实现返回E_NOTIMPL。|
-|[IOleControlimpl：：环境属性更改](#onambientpropertychange)|通知控件一个或多个容器的环境属性已更改。 ATL 实现返回S_OK。|
-|[IOleControlimpl：：对内记](#onmnemonic)|通知控件用户已按下指定的击键。 ATL 实现返回E_NOTIMPL。|
+|[IOleControlImpl：： Freezeevents 时调用](#freezeevents)|指示容器是否忽略或接受来自控件的事件。|
+|[IOleControlImpl：： GetControlInfo](#getcontrolinfo)|填充有关控件键盘行为的信息。 ATL 实现返回 E_NOTIMPL。|
+|[IOleControlImpl：： OnAmbientPropertyChange](#onambientpropertychange)|通知控件一个或多个容器的环境属性已更改。 ATL 实现返回 S_OK。|
+|[IOleControlImpl::OnMnemonic](#onmnemonic)|通知控件用户已按下了指定的击键。 ATL 实现返回 E_NOTIMPL。|
 
 ## <a name="remarks"></a>备注
 
-类`IOleControlImpl`提供[IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol)接口的默认实现，并通过`IUnknown`在调试版本中向转储设备发送信息实现。
+类 `IOleControlImpl` 提供 [IOleControl](/windows/win32/api/ocidl/nn-ocidl-iolecontrol) 接口的默认实现，并 `IUnknown` 通过在调试版本中将信息发送到转储设备来实现。
 
-**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)， 创建[ATL 项目](../../atl/reference/creating-an-atl-project.md)
+**相关文章** [ATL 教程](../../atl/active-template-library-atl-tutorial.md)， [创建 atl 项目](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -62,11 +63,11 @@ class IOleControlImpl
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlctl.h
+**标头：** atlctl
 
-## <a name="iolecontrolimplfreezeevents"></a><a name="freezeevents"></a>IOleControlimpl：：冻结事件
+## <a name="iolecontrolimplfreezeevents"></a><a name="freezeevents"></a> IOleControlImpl：： Freezeevents 时调用
 
-在 ATL 的实现`FreezeEvents`中，如果`m_nFreezeEvents``bFreeze`为 TRUE，则增加控制类的数据成员，`m_nFreezeEvents`如果`bFreeze`为 FALSE，则递减。
+在 ATL 的实现中， `FreezeEvents` 如果为 TRUE，则递增控件类的 `m_nFreezeEvents` 数据成员 `bFreeze` ; `m_nFreezeEvents` 如果 `bFreeze` 为 FALSE，则递减。
 
 ```
 HRESULT FreezeEvents(BOOL bFreeze);
@@ -74,13 +75,13 @@ HRESULT FreezeEvents(BOOL bFreeze);
 
 ### <a name="remarks"></a>备注
 
-`FreezeEvents`然后返回S_OK。
+`FreezeEvents` 然后返回 S_OK。
 
-请参阅[IOleControl：Windows](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) SDK 中的冻结事件。
+请参阅 Windows SDK 中的 [IOleControl：： freezeevents 时调用](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-freezeevents) 。
 
-## <a name="iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a>IOleControlimpl：获取控制信息
+## <a name="iolecontrolimplgetcontrolinfo"></a><a name="getcontrolinfo"></a> IOleControlImpl：： GetControlInfo
 
-填写有关控件的键盘行为的信息。
+填充有关控件键盘行为的信息。
 
 ```
 HRESULT GetControlInfo(LPCONTROLINFO pCI);
@@ -88,13 +89,13 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleControl：在](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo)Windows SDK 中获取控制信息。
+请参阅 Windows SDK 中的 [IOleControl： GetControlInfo](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-getcontrolinfo) 。
 
 ### <a name="return-value"></a>返回值
 
 返回 E_NOTIMPL。
 
-## <a name="iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a>IOleControlimpl：：环境属性更改
+## <a name="iolecontrolimplonambientpropertychange"></a><a name="onambientpropertychange"></a> IOleControlImpl：： OnAmbientPropertyChange
 
 通知控件一个或多个容器的环境属性已更改。
 
@@ -104,15 +105,15 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 
 ### <a name="return-value"></a>返回值
 
-返回S_OK。
+返回 S_OK。
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleControl：Windows](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) SDK 中的环境属性更改。
+请参阅 Windows SDK 中的 [IOleControl：： OnAmbientPropertyChange](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onambientpropertychange) 。
 
-## <a name="iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a>IOleControlimpl：：对内记
+## <a name="iolecontrolimplonmnemonic"></a><a name="onmnemonic"></a> IOleControlImpl::OnMnemonic
 
-通知控件用户已按下指定的击键。
+通知控件用户已按下了指定的击键。
 
 ```
 HRESULT OnMnemonic(LPMSG pMsg);
@@ -124,10 +125,10 @@ HRESULT OnMnemonic(LPMSG pMsg);
 
 ### <a name="remarks"></a>备注
 
-请参阅[IOleControl：Windows SDK 中的"OnMnemonic"。](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic)
+请参阅 Windows SDK 中的 [IOleControl：： OnMnemonic](/windows/win32/api/ocidl/nf-ocidl-iolecontrol-onmnemonic) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IOleObjectImpl 类](../../atl/reference/ioleobjectimpl-class.md)<br/>
-[ActiveX 控制接口](/windows/win32/com/activex-controls-interfaces)<br/>
+[ActiveX 控件接口](/windows/win32/com/activex-controls-interfaces)<br/>
 [类概述](../../atl/atl-class-overview.md)
