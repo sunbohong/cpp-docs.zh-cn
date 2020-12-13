@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4233
 title: 编译器警告（等级 4）C4233
 ms.date: 10/25/2017
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4233
 ms.assetid: 9aa51fc6-8ef3-43b5-bafb-c9333cf60de3
-ms.openlocfilehash: 361e00b7361aab51ea077d7e248503f3654e5e58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e797bcefeaeee615014ea8e0bd109e4cf4ffbef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344011"
 ---
 # <a name="compiler-warning-level-4-c4233"></a>编译器警告（等级 4）C4233
 
-> 使用了非标准扩展:*关键字*关键字只能在C++，不 C
+> 使用了非标准扩展：仅在 c + + 中 *支持关键字关键字*，而不支持 c
 
-编译器将编译为 C 源代码而不是C++，而使用的关键字仅在有效的C++。 编译器会将源文件编译为 C 如果源代码文件的扩展名为.c 或使用[/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)。
+编译器将源代码编译为 C 而不是 c + +，而使用的关键字只在 c + + 中有效。 如果源文件的扩展名为 .c 或使用 [/tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)，则编译器会将源文件编译为 c。
 
-此警告被自动提升为错误。 如果你想要修改此行为，使用[#pragma 警告](../../preprocessor/warning.md)。 例如，若要使第 4 级警告问题 C4233，可以将此行添加到源代码文件上：
+此警告会自动提升为错误。 如果要修改此行为，请使用 [#pragma 警告](../../preprocessor/warning.md)。 例如，若要将 C4233 添加到第4级警告问题，请将以下代码行添加到源代码文件中：
 
 ```cpp
 #pragma warning(4:4233)

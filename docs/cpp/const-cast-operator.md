@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： const_cast 运算符
 title: const_cast 运算符
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_cast keyword [C++]
 ms.assetid: 4d8bb203-ef33-4a10-9f9f-c64d4fbc1687
-ms.openlocfilehash: 36de296d1e871ca759108497922973ddea8e3382
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c0c08402450773368914facb719c4ddf97b7503d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344661"
 ---
 # <a name="const_cast-operator"></a>const_cast 运算符
 
-**`const`** **`volatile`** **`__unaligned`** 从类中移除、和特性。
+**`const`** **`volatile`** **`__unaligned`** 从类中移除)  (的、和特性。
 
 ## <a name="syntax"></a>语法
 
@@ -64,7 +65,7 @@ int main() {
 
 在包含的行上 **`const_cast`** ，指针的数据类型 **`this`** 为 `const CCTest *` 。 **`const_cast`** 运算符将指针的数据类型更改 **`this`** 为 `CCTest *` ，从而允许修改该成员 `number` 。 强制转换仅对其所在的语句中的其余部分持续。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [转换运算符](../cpp/casting-operators.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

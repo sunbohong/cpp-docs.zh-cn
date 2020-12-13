@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：条件运算符： &quest; ：
 title: 条件运算符： &quest; ：
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 1f2c58d5b7c31e9c29a72aea0e62494549fc10a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fac9a6553af428664535ca4ce5e6e201a1819d6b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232321"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344687"
 ---
 # <a name="conditional-operator-quest-"></a>条件运算符： &quest; ：
 
@@ -25,13 +26,13 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>备注
 
-条件运算符（**？：**）是一个三元运算符（采用三个操作数）。 条件运算符按以下方式运行：
+条件运算符 (**？：**) 是三元运算符， (它采用三个操作数) 。 条件运算符按以下方式运行：
 
 - 第一个操作数将隐式转换为 **`bool`** 。 计算该操作数，并在继续前完成所有副作用。
 
-- 如果第一个操作数的计算结果为 **`true`** （1），则计算第二个操作数。
+- 如果第一个操作数的计算结果为 **`true`** (1) ，则计算第二个操作数。
 
-- 如果第一个操作数的计算结果为 **`false`** （0），则计算第三个操作数。
+- 如果第一个操作数的计算结果为 **`false`** (0) ，则计算第三个操作数。
 
 条件运算符的结果是操作数（无论是第二个还是第三个）的计算结果。 只有最后两个操作数之一在条件表达式中计算。
 
@@ -39,7 +40,7 @@ expression ? expression : expression
 
 - 如果两个操作数是相同的类型，则结果也是该类型。
 
-- 如果两个操作数都是算术或枚举类型，则执行常用算术转换（在[标准转换](standard-conversions.md)中进行了介绍）以将它们转换为通用类型。
+- 如果两个操作数都是算术或枚举类型，则执行 [标准转换](standard-conversions.md) (中涵盖的常用算术转换) 将它们转换为通用类型。
 
 - 如果两个操作数都是指针类型，或者一个是指针类型，另一个是计算结果为 0 的常量表达式，则执行指针转换来将它们转换为通用类型。
 
@@ -70,7 +71,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ 内置运算符、优先级和关联性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [条件表达式运算符](../c-language/conditional-expression-operator.md)

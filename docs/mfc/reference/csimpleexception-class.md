@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSimpleException 类
 title: CSimpleException 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-ms.openlocfilehash: afd83c1ddd6f68b10c5cc8c47c0e939bbd01b6c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8070604e05fa59f7fcdfef6dcaad12ab0497da9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840708"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342813"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 类
 
@@ -31,21 +32,21 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSimpleException::CSimpleException](#csimpleexception)|构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSimpleException::GetErrorMessage](#geterrormessage)|提供有关已发生的错误的文本。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CSimpleException` 是资源关键的 MFC 异常的基类，并处理错误消息的所有权和初始化。 以下类用作 `CSimpleException` 其基类：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[CMemoryException 类](../../mfc/reference/cmemoryexception-class.md)|内存不足异常|
 |[CNotSupportedException 类](../../mfc/reference/cnotsupportedexception-class.md)|请求不受支持的操作|
@@ -78,12 +79,12 @@ CSimpleException();
 explicit CSimpleException(BOOL bAutoDelete);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bAutoDelete*<br/>
 如果 `CSimpleException` 已在堆上分配了对象的内存，则指定 TRUE。 这将导致在 `CSimpleException` `Delete` 调用成员函数删除异常时删除该对象。 如果 `CSimpleException` 对象位于堆栈上或是全局对象，则指定 FALSE。 在这种情况下， `CSimpleException` `Delete` 调用成员函数时不会删除对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常不需要直接调用此构造函数。 引发异常的函数应创建 `CException` 派生类的实例并调用其构造函数，或者应使用其中一种 MFC 引发函数（如 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)）来引发预定义类型。
 
@@ -98,7 +99,7 @@ virtual BOOL GetErrorMessage(
     PUNIT  pnHelpContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszError*<br/>
 指向将接收错误消息的缓冲区的指针。
@@ -113,11 +114,11 @@ virtual BOOL GetErrorMessage(
 
 如果函数成功，则为非零值;如果没有可用的错误消息文本，则为 0; 否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关详细信息，请参阅 [CException：： GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CException 类](../../mfc/reference/cexception-class.md)<br/>

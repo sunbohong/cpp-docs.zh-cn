@@ -1,5 +1,6 @@
 ---
-title: lock
+description: 了解详细信息：锁定
+title: 锁 (lock)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - lock
 - synchronization
 ms.assetid: 48c90da6-d6fb-4710-9c7c-2b9c9344bda1
-ms.openlocfilehash: b6d7dc28fc840a99fe0f3f05f92252e996b37944
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d84c6604025e95a7ff0dd7485a38c3eb3a827a64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545851"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344466"
 ---
-# <a name="lock"></a>lock
+# <a name="lock"></a>锁 (lock)
 
-定义自动同步对对象的访问的 `lock` 类。
+定义 `lock` 自动同步对对象的访问的类。
 
 ## <a name="syntax"></a>语法
 
@@ -33,6 +34,6 @@ ms.locfileid: "79545851"
 
 [lock_when 枚举](../dotnet/lock-when-enum.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C++ 支持库](../dotnet/cpp-support-library.md)
+[C + + 支持库](../dotnet/cpp-support-library.md)

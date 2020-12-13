@@ -1,4 +1,5 @@
 ---
+description: '详细了解： const (c + +) '
 title: const (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
-ms.openlocfilehash: db79e228f1fabc4b2da0a7778126a1b576a67768
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 35943a9b417029e92fe478d375423901c201b810
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344648"
 ---
 # <a name="const-c"></a>const (C++)
 
@@ -37,7 +38,7 @@ int main() {
 }
 ```
 
-在 c + + 中，可以使用 **`const`** 关键字而不是[#define](../preprocessor/hash-define-directive-c-cpp.md)预处理器指令来定义常量值。 使用定义的值 **`const`** 受类型检查的约束，可用于代替常量表达式。 在 c + + 中，可以使用变量指定数组的大小，如下所示 **`const`** ：
+在 c + + 中，可以使用 **`const`** 关键字而不是 [#define](../preprocessor/hash-define-directive-c-cpp.md) 预处理器指令来定义常量值。 使用定义的值 **`const`** 受类型检查的约束，可用于代替常量表达式。 在 c + + 中，可以使用变量指定数组的大小，如下所示 **`const`** ：
 
 ```cpp
 // constant_values2.cpp
@@ -166,6 +167,6 @@ extern "C" const int x=10;
 
 - [#define](../preprocessor/hash-define-directive-c-cpp.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [关键字](../cpp/keywords-cpp.md)

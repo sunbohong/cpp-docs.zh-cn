@@ -1,4 +1,5 @@
 ---
+description: 了解更多： const 和 volatile 指针
 title: 固定和可变指针
 ms.date: 11/19/2019
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: a8fd25777d1169ba281fbee173c1c8f5673c8b56
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 142c6b83c242af969c5f6e1494a56e9598cf537d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227564"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344674"
 ---
 # <a name="const-and-volatile-pointers"></a>固定和可变指针
 
@@ -43,7 +44,7 @@ const char cch = 'A';
 char ch = 'B';
 ```
 
-如果前面有两个对象的声明（ `cch` 、类型为**const char**、类型 `ch` 为**char）**，则以下声明/初始化有效：
+假设有两个对象的前面的声明 (`cch` ，类型为 **const char**，类型 `ch` 为 **char)**，则以下声明/初始化有效：
 
 ```cpp
 const char *pch1 = &cch;
@@ -84,10 +85,10 @@ pch4 = &ch;   // Error: pointer declared const
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-前面的语句声明一个函数[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中有两个参数的类型为指针 **`char`** 。 由于参数是通过引用传递的，而不是按值传递的，因此， `strDestination` `strSource` 如果 `strSource` 未将声明为，则函数将可以自由修改和 **`const`** 。 的声明 `strSource` **`const`** 可确保 `strSource` 被调用函数无法更改调用方。
+前面的语句声明一个函数 [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中有两个参数的类型为指针 **`char`** 。 由于参数是通过引用传递的，而不是按值传递的，因此， `strDestination` `strSource` 如果 `strSource` 未将声明为，则函数将可以自由修改和 **`const`** 。 的声明 `strSource` **`const`** 可确保 `strSource` 被调用函数无法更改调用方。
 
 > [!NOTE]
-> 由于存在从*typename* <strong>\*</strong> 到 typename 的标准转换 **`const`** *typename* <strong>\*</strong> ，因此将类型的参数传递 `char *` 到[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)是合法的。 但是，反之亦然。不存在用于 **`const`** 从对象或指针中删除特性的隐式转换。
+> 由于存在从 *typename* <strong>\*</strong> 到 typename 的标准转换 **`const`**  <strong>\*</strong> ，因此将类型的参数传递 `char *` 到 [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)是合法的。 但是，反之亦然。不存在用于 **`const`** 从对象或指针中删除特性的隐式转换。
 
 **`const`** 可以将给定类型的指针分配给同一类型的指针。 但是，不 **`const`** 能将指针分配给 **`const`** 指针。 以下代码显示了正确和错误的赋值：
 
@@ -124,7 +125,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [指针](pointers-cpp.md) 
 [原始指针](raw-pointers.md)

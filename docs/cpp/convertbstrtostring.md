@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ConvertBSTRToString
 title: ConvertBSTRToString
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-ms.openlocfilehash: 1d0ad8727dd4d5ec06a45ec26c67dd3ad268f524
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 72d6033003f186f358d9b4143498df65858ee354
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80189516"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344609"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
@@ -32,7 +33,7 @@ BSTR 变量。
 
 ## <a name="remarks"></a>备注
 
-**ConvertBSTRToString**分配必须删除的字符串。
+**ConvertBSTRToString** 分配必须删除的字符串。
 
 ## <a name="example"></a>示例
 
@@ -64,10 +65,10 @@ char * text: Test
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<comutil.h >
+**标头：**\<comutil.h>
 
-**Lib：** comsuppw.lib 或 comsuppwd.lib （有关详细信息，请参阅[/zc： Wchar_t （Wchar_t 为本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
+**Lib：** comsuppw.lib 或 comsuppwd.lib (参阅 [/zc： Wchar_t (Wchar_t 是本机类型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 有关详细信息) 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)

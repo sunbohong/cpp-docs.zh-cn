@@ -1,4 +1,5 @@
 ---
+description: 了解有关详细信息，请参阅 STL/CLR)  (
 title: list (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -108,12 +109,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-ms.openlocfilehash: 9ef9f68c6bef72bf251d270b3bc8142448016a11
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b23bc3f53cc13338e09ee8a6171d3da3b0b75d67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344505"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -136,9 +137,9 @@ template<typename Value>
     { ..... };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*值*<br/>
+值<br/>
 受控序列中的元素的类型。
 
 ## <a name="requirements"></a>要求
@@ -165,7 +166,7 @@ template<typename Value>
 |[list::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[list::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[list::assign (STL/CLR)](#assign)|替换所有元素。|
 |[list::back (STL/CLR)](#back)|访问最后一个元素。|
@@ -195,12 +196,12 @@ template<typename Value>
 |[list::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 |[list::unique (STL/CLR)](#unique)|删除通过了指定测试的相邻元素。|
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |[list::back_item (STL/CLR)](#back_item)|访问最后一个元素。|
 |[list::front_item (STL/CLR)](#front_item)|访问第一个元素。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[list::operator= (STL/CLR)](#op_as)|替换受控序列。|
 |[operator！ = (list)  (STL/CLR) ](#op_neq)|确定对象是否 `list` 不等于另一个 `list` 对象。|
@@ -210,9 +211,9 @@ template<typename Value>
 |[operator> (list)  (STL/CLR) ](#op_gt)|确定 `list` 对象是否大于另一个 `list` 对象。|
 |[operator>= (list) (STL/CLR)](#op_gteq)|确定 `list` 对象是否大于或等于另一个 `list` 对象。|
 
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>界面
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
@@ -221,13 +222,13 @@ template<typename Value>
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
 |IList\<Value>|维护泛型容器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 对象为其控制的序列分配并释放存储，并将其控制为双向链接列表中的单个节点。 它通过更改节点之间的链接来重新排列元素，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。 因此，列表非常适合用于模板类队列的基础容器 [ (stl/clr) ](../dotnet/queue-stl-clr.md) 或 template 类 [stack (stl/clr) ](../dotnet/stack-stl-clr.md)。
 
 `list`对象支持双向迭代器，这意味着，如果迭代器指定了受控序列中的元素，则可以单步执行相邻元素。 特殊头节点对应于[list：： end (STL/CLR) ](#end)返回的迭代器 `()` 。 可以递减此迭代器以到达受控序列中的最后一个元素（如果存在）。 您可以递增列表迭代器以到达头节点，然后将其与相等 `end()` 。 但不能取消引用返回的迭代器 `end()` 。
 
-请注意，不能直接引用列表元素，因为它的数字位置需要随机访问迭代器。 因此，列表 *不能* 用作模板类的基础容器， [ (STL/CLR) priority_queue ](../dotnet/priority-queue-stl-clr.md)。
+请注意，不能直接引用列表元素，因为它的数字位置需要随机访问迭代器。 因此，列表 *不能* 用作模板类的基础容器， [ (STL/CLR) priority_queue](../dotnet/priority-queue-stl-clr.md)。
 
 列表迭代器将句柄存储到其关联的列表节点，后者又将句柄存储到其关联的容器。 只能将迭代器与其关联的容器对象一起使用。 只要列表迭代器的关联列表节点与某个列表相关联，它就会保持有效。 而且，有效的迭代器是 dereferencable 的，您可以使用它来访问或更改它指定的元素值，但前提是它不等于 `end()` 。
 
@@ -248,7 +249,7 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计数*<br/>
 要插入的元素数。
@@ -265,13 +266,13 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *初始值*<br/>
 要插入的元素的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个成员函数会将受控序列替换为值*val*的*计数*元素的重复。 使用它可以将具有相同值的元素填充到容器中。
+第一个成员函数会将受控序列替换为值 *val* 的 *计数* 元素的重复。 使用它可以将具有相同值的元素填充到容器中。
 
 如果 `InIt` 是整数类型，则第二个成员函数的行为与相同 `assign((size_type)first, (value_type)last)` 。 否则，它会将受控序列替换为序列 [ `first` ， `last`) 。 用于使受控序列成为副本的另一个序列。
 
-第三个成员函数将受控序列替换 *为枚举器*指定的序列。 用于使受控序列成为枚举器所描述的序列的副本。
+第三个成员函数将受控序列替换 *为枚举器* 指定的序列。 用于使受控序列成为枚举器所描述的序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -830,7 +831,7 @@ iterator erase(iterator where);
 iterator erase(iterator first, iterator last);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要清除的范围的开头。
@@ -841,9 +842,9 @@ iterator erase(iterator first, iterator last);
 *where*<br/>
 要清除的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个成员函数删除由 *where*指向的受控序列的元素。 使用它可以删除单个元素。
+第一个成员函数删除由 *where* 指向的受控序列的元素。 使用它可以删除单个元素。
 
 第二个成员函数将移除范围 [`first`、`last`) 中的受控序列的元素。 使用它可以删除零个或多个连续元素。
 
@@ -1252,7 +1253,7 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计数*<br/>
 要插入的元素数。
@@ -1272,17 +1273,17 @@ void insert(iterator where,
 *where*<br/>
 要插入到的容器中的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个成员函数在由控制的序列中的 *位置* 指向的元素之前，插入由剩余操作数指定的序列。
 
 第一个成员函数插入具有值 *val* 的元素，并返回指定新插入的元素的迭代器。 用于在迭代器指定的位置之前插入单个元素。
 
-第二个成员函数插入值*val*的*计数*元素的重复。 使用它可以插入零个或多个连续元素，这些元素是同一值的所有副本。
+第二个成员函数插入值 *val* 的 *计数* 元素的重复。 使用它可以插入零个或多个连续元素，这些元素是同一值的所有副本。
 
 如果 `InIt` 是整数类型，则第三个成员函数的行为与 `insert(where, (size_type)first, (value_type)last)` 相同。 否则，将插入序列 [ `first` ， `last`) 。 使用它可以插入从另一个序列复制的零个或多个连续元素。
 
-第四个成员函数插入由 *权限*指定的序列。 使用它可以插入枚举器描述的序列。
+第四个成员函数插入由 *权限* 指定的序列。 使用它可以插入枚举器描述的序列。
 
 在插入单个元素时，元素副本的数目在插入点与序列的最近结束之间的元素数中是线性的。  (在序列的任一端插入一个或多个元素时，不会发生元素复制。 ) 如果 `InIt` 是输入迭代器，则第三个成员函数将为序列中的每个元素有效地执行单个插入。 否则，在插入 `N` 元素时，元素副本的数量为线性， `N` 并加上插入点与序列的最近结束之间的元素数。
 
@@ -1421,7 +1422,7 @@ template<typename InIt>
 list(System::Collections::Generic::IEnumerable<Value>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *计数*<br/>
 要插入的元素数。
@@ -1438,7 +1439,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 *初始值*<br/>
 要插入的元素的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数：
 
@@ -1450,13 +1451,13 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(list<Value>% right);`
 
-用序列 [，) 初始化受控序列 `right.begin()` `right.end()` 。 用于指定初始受控序列，该序列是由 list 对象 *权限*控制的序列的副本。
+用序列 [，) 初始化受控序列 `right.begin()` `right.end()` 。 用于指定初始受控序列，该序列是由 list 对象 *权限* 控制的序列的副本。
 
 构造函数：
 
 `list(list<Value>^ right);`
 
-用序列 [，) 初始化受控序列 `right->begin()` `right->end()` 。 用于指定初始受控序列，该序列是由其句柄为 *right*的列表对象控制的序列副本。
+用序列 [，) 初始化受控序列 `right->begin()` `right->end()` 。 用于指定初始受控序列，该序列是由其句柄为 *right* 的列表对象控制的序列副本。
 
 构造函数：
 
@@ -1468,7 +1469,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(size_type count, value_type val);`
 
-用每*个值为值的**计数*元素初始化受控序列。 使用它可以将具有相同值的元素填充到容器中。
+用每 *个值为值的**计数* 元素初始化受控序列。 使用它可以将具有相同值的元素填充到容器中。
 
 构造函数：
 
@@ -1482,7 +1483,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `list(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-使用枚举器 *权限*指定的序列初始化受控序列。 用于使受控序列成为枚举器所描述的另一序列的副本。
+使用枚举器 *权限* 指定的序列初始化受控序列。 用于使受控序列成为枚举器所描述的另一序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1561,7 +1562,7 @@ template<typename Pred2>
     void merge(list<Value>% right, Pred2 pred);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pred*<br/>
 元素对的比较器。
@@ -1569,13 +1570,13 @@ template<typename Pred2>
 *然后*<br/>
 要合并的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个成员函数从 *右* 控制的序列中移除所有元素，并将其插入到受控序列中。 这两个序列必须以前按顺序排序 `operator<` --元素在您通过任一顺序进行的进度中都不能减少。 结果序列也按排序 `operator<` 。 您可以使用此成员函数将值增加的两个序列合并为一个也增加值的序列。
 
 第二个成员函数的行为与第一个相同，不同之处在于 `pred`  --  `pred(X, Y)` 对于 `X` 序列中跟随元素的任何元素，序列按排序方式必须为 false `Y` 。 用于合并由指定的谓词函数或委托排序的两个序列。
 
-这两个函数执行稳定合并-在生成的受控序列中，任何一个原始受控序列中的元素都不会反转。 此外，如果生成的受控序列中的一对元素 `X` 和 `Y` 具有等效的排序---- `!(X < Y) && !(X < Y)` 来自原始受控序列的元素出现在由 *right*控制的序列中的元素之前。
+这两个函数执行稳定合并-在生成的受控序列中，任何一个原始受控序列中的元素都不会反转。 此外，如果生成的受控序列中的一对元素 `X` 和 `Y` 具有等效的排序---- `!(X < Y) && !(X < Y)` 来自原始受控序列的元素出现在由 *right* 控制的序列中的元素之前。
 
 ### <a name="example"></a>示例
 
@@ -1656,14 +1657,14 @@ c1.size() = 0
 list<Value>% operator=(list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 用于复制的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧* 受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1993,12 +1994,12 @@ A B C
 void remove(value_type val);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *初始值*<br/>
 要移除的元素的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数删除受控序列中的元素，该元素在 `((System::Object^)val)->Equals((System::Object^)x)` 任何)  (为 true。 使用此方法可以清除具有指定值的任意元素。
 
@@ -2053,12 +2054,12 @@ template<typename Pred1>
     void remove_if(Pred1 pred);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pred*<br/>
 测试要删除的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数从受控序列中移除 (将) 为 true 的每个元素 `X` 进行擦除 `pred(X)` 。 使用它可以删除满足您指定为函数或委托的条件的所有元素。
 
@@ -2173,7 +2174,7 @@ void resize(size_type new_size);
 void resize(size_type new_size, value_type val);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *new_size*<br/>
 受控序列的新大小。
@@ -2181,9 +2182,9 @@ void resize(size_type new_size, value_type val);
 *初始值*<br/>
 填充元素的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数均可确保[STL/CLR) 之后 (的 list：： size](#size) `()` 返回*new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `value_type()` ，而第二个成员函数则追加值为 *val*的元素。 若要使受控序列更短，两个成员函数将有效地清除最后一个元素[列表：： size (STL/CLR) ](#size) `() -` `new_size` 时间。 使用它可以通过修整或填充当前受控序列来确保受控序列 *new_size*大小。
+成员函数均可确保 [STL/CLR) 之后 (的 list：： size](#size) `()` 返回 *new_size*。 如果它必须使受控序列更长，则第一个成员函数将追加值为的元素 `value_type()` ，而第二个成员函数则追加值为 *val* 的元素。 若要使受控序列更短，两个成员函数将有效地清除最后一个元素[列表：： size (STL/CLR) ](#size) `() -` `new_size` 时间。 使用它可以通过修整或填充当前受控序列来确保受控序列 *new_size* 大小。
 
 ### <a name="example"></a>示例
 
@@ -2431,12 +2432,12 @@ template<typename Pred2>
     void sort(Pred2 pred);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pred*<br/>
 元素对的比较器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个成员函数重新排列受控序列中的元素，以便在按顺序进行排序时，它们按 `operator<` --元素排序不会减少。 您可以使用此成员函数按递增顺序对序列进行排序。
 
@@ -2498,7 +2499,7 @@ void splice(iterator where, list<Value>% right,
     iterator first, iterator last);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要拼接的范围的开头。
@@ -2512,13 +2513,13 @@ void splice(iterator where, list<Value>% right,
 *where*<br/>
 要在其中接合的容器中的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个成员函数将由*右*控制的序列插入到所指向的受控序列中的元素*之前。* 它还会删除 *右侧*的所有元素。  (`%right` 不得相等 **`this`** 。 ) 使用它将所有列表拼接到另一个列表。
+第一个成员函数将由 *右* 控制的序列插入到所指向的受控序列中的元素 *之前。* 它还会删除 *右侧* 的所有元素。  (`%right` 不得相等 **`this`** 。 ) 使用它将所有列表拼接到另一个列表。
 
-第二个成员函数删除由*right*控制的序列中的*第一个*元素，并将其插入到所指向的受控序列中的元素*之前。*  (`where` `==` `first` `||` `where` `== ++first` ，则不会发生任何更改。 ) 使用它将一个列表中的单个元素接合到另一个列表。
+第二个成员函数删除由 *right* 控制的序列中的 *第一个* 元素，并将其插入到所指向的受控序列中的元素 *之前。*  (`where` `==` `first` `||` `where` `== ++first` ，则不会发生任何更改。 ) 使用它将一个列表中的单个元素接合到另一个列表。
 
-第三个成员函数将由 [、) 指定的子范围插入由 `first` `last` *右端* 控制的序列中的元素，在由 *where*指向的受控序列中的元素之前。 它还将从 *权限*控制的序列中删除原始子范围。  (如果 `right == this` ，范围 [ `first` ， `last`) 不能包含 *指向的*元素。 ) 使用它将零个或多个元素的子序列从一个列表接合到另一个列表。
+第三个成员函数将由 [、) 指定的子范围插入由 `first` `last` *右端* 控制的序列中的元素，在由 *where* 指向的受控序列中的元素之前。 它还将从 *权限* 控制的序列中删除原始子范围。  (如果 `right == this` ，范围 [ `first` ， `last`) 不能包含 *指向的* 元素。 ) 使用它将零个或多个元素的子序列从一个列表接合到另一个列表。
 
 ### <a name="example"></a>示例
 
@@ -2587,14 +2588,14 @@ c2.size() = 0
 void swap(list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要与其交换内容的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数交换和右之间的受控 **`*this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
+成员函数交换和右之间的受控 **`*this`** 序列。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2702,12 +2703,12 @@ template<typename Pred2>
     void unique(Pred2 pred);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pred*<br/>
 元素对的比较器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个成员函数从受控序列中移除 (将) 每个与前一个元素相等的元素（如果元素 `X` 位于元素和之前）删除 `Y` `X == Y` `Y` 。 使用它可以删除比较相等的相邻元素的每个子序列的所有副本。 请注意，如果对受控序列进行排序，例如通过调用[list：： sort (STL/CLR) ](#sort) `()` ，则该成员函数仅保留具有唯一值的元素。 （由此而得名）。
 
@@ -2768,7 +2769,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *值*的同义词。
+该类型是模板参数 *值* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2813,7 +2814,7 @@ template<typename Value>
         list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2821,9 +2822,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素比较两个*列表时，是否按原样对**左侧*进行排序。
+Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素比较两个 *列表时，是否按原样对**左侧* 进行排序。
 
 ### <a name="example"></a>示例
 
@@ -2882,7 +2883,7 @@ template<typename Value>
         list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2890,9 +2891,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回， `left->size() < right->size()` 以便在按元素比较两个列表*right*时，使用它来测试是否对*左侧*排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它会返回， `left->size() < right->size()` 以便在按元素比较两个列表时，使用它来测试是否对 *左侧* 排序。
 
 ### <a name="example"></a>示例
 
@@ -2951,7 +2952,7 @@ template<typename Value>
         list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -2959,9 +2960,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个列表进行比较*时，是否向**左*排序。
+Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个列表进行比较 *时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -3020,7 +3021,7 @@ template<typename Value>
         list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -3028,9 +3029,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以测试在按元素比较两个列表*时，* 是否向*左*排序。
+仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 使用此方法可以测试在按元素比较两个列表 *时，* 是否向 *左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -3089,7 +3090,7 @@ template<typename Value>
         list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -3097,9 +3098,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left` 。 用于测试在按元素比较两个*列表时，是否向**左*排序。
+Operator 函数返回 `right` `<` `left` 。 用于测试在按元素比较两个 *列表时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -3158,7 +3159,7 @@ template<typename Value>
         list<Value>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -3166,9 +3167,9 @@ template<typename Value>
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left` `<` `right)` 。 用于测试在按元素比较两个*列表时，是否向**左*排序。
+Operator 函数返回 `!(left` `<` `right)` 。 用于测试在按元素比较两个 *列表时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 

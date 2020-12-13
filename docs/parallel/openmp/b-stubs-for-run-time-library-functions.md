@@ -1,20 +1,21 @@
 ---
+description: 了解有关以下方面的详细信息： b. 用于运行时库函数的存根
 title: B. 运行时库函数的存根
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e6ccb4e03d9fc74eede80f035090a814d7669918
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342512"
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. 运行时库函数的存根
 
-本部分提供 OpenMP C 和C++ API 中定义的运行时库函数的存根。 提供存根是为了实现对不支持 OpenMP C 和C++ API 的平台的可移植性。 在这些平台上，OpenMP 程序必须与包含这些存根函数的库链接。 存根函数假设 OpenMP 程序中的指令被忽略。 因此，它们模拟了串行语义。
+本部分提供 OpenMP C 和 c + + API 中定义的运行时库函数的存根。 提供存根是为了实现对不支持 OpenMP C 和 c + + API 的平台的可移植性。 在这些平台上，OpenMP 程序必须与包含这些存根函数的库链接。 存根函数假设 OpenMP 程序中的指令被忽略。 因此，它们模拟了串行语义。
 
 > [!NOTE]
-> 必须通过这些函数以独占方式访问锁定函数中出现的锁定变量。 不应在用户程序中初始化或修改它。 用户不应对 OpenMP C 和C++实现所使用的机制作出假设，以根据存根函数使用的方案来实现锁。
+> 必须通过这些函数以独占方式访问锁定函数中出现的锁定变量。 不应在用户程序中初始化或修改它。 用户不应对 OpenMP C 和 c + + 实现使用的机制作出假设，以根据存根函数使用的方案来实现锁。
 
 ## <a name="code"></a>代码
 

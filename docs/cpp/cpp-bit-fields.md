@@ -1,4 +1,5 @@
 ---
+description: 了解更多： c + + 位域
 title: C++ 位域
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: 7c2dbb6e2932265984c8cb4e1e34504921e5d666
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3cf1eb3e3beb0da69a4c148a48e7c68e23804d1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344583"
 ---
 # <a name="c-bit-fields"></a>C++ 位域
 
-类和结构可包含比整型类型占用更少存储空间的成员。 这些成员被指定为位域。 位字段*成员声明符*的语法如下所示：
+类和结构可包含比整型类型占用更少存储空间的成员。 这些成员被指定为位域。 位字段 *成员声明符* 的语法如下所示：
 
 ## <a name="syntax"></a>语法
 
@@ -23,10 +24,10 @@ ms.locfileid: "87221778"
 
 ## <a name="remarks"></a>备注
 
-（可选）*声明符*是在程序中访问该成员时所依据的名称。 它必须是整型类型（包括枚举类型）。 *常数表达式*指定成员在结构中所占用的位数。 匿名位域 — 即不带标识符的位域成员，可用于填充。
+ (可选) *声明符* 是在程序中访问该成员时所依据的名称。 它必须是整型类型（包括枚举类型）。 *常数表达式* 指定成员在结构中所占用的位数。 匿名位域 — 即不带标识符的位域成员，可用于填充。
 
 > [!NOTE]
-> 宽度为0的未命名位域强制将下一个位域与下一个**类型**边界对齐，其中**type**是成员的类型。
+> 宽度为0的未命名位域强制将下一个位域与下一个 **类型** 边界对齐，其中 **type** 是成员的类型。
 
 下面的示例声明包含位域的结构：
 
@@ -73,7 +74,7 @@ struct Date {
 ![具有零&#45;长度位域的 Date 对象的布局](../cpp/media/vc38uq2.png "具有零&#45;长度位域的 Date 对象的布局") <br/>
 带有零长度位域的数据对象的布局
 
-位域的基础类型必须是整型，如[内置类型](../cpp/fundamental-types-cpp.md)中所述。
+位域的基础类型必须是整型，如 [内置类型](../cpp/fundamental-types-cpp.md)中所述。
 
 如果类型引用的初始值设定项 `const T&` 是引用类型的位域的左值 `T` ，则引用不会直接绑定到位域。 相反，引用绑定到一个临时初始化的，以容纳位域的值。
 
@@ -85,6 +86,6 @@ struct Date {
 
 - **`const`** 使用位域初始化非引用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类和结构](../cpp/classes-and-structs-cpp.md)

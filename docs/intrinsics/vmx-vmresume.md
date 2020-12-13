@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __vmx_vmresume
 title: __vmx_vmresume
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-ms.openlocfilehash: 34d0e6814dd00da07076e644513400bd5be36bd3
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 35c1ca7eeca847b14d16c451752a186c63a59749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343773"
 ---
 # <a name="__vmx_vmresume"></a>__vmx_vmresume
 
@@ -43,11 +44,11 @@ unsigned char __vmx_vmresume(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__vmx_vmresume`|X64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 **结束 Microsoft 专用**
 

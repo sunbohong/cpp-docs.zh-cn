@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ConvertStringToBSTR
 title: ConvertStringToBSTR
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-ms.openlocfilehash: 2065011ee6bbf98ce2c83be494f1e6631af9f7cf
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7348fdec3448d17b51fd77385297422a8f10fd05
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344596"
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 
@@ -60,10 +61,10 @@ BSTR text: Test
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<comutil.h >
+**标头：**\<comutil.h>
 
-**Lib：** comsuppw.lib 或 comsuppwd.lib （有关详细信息，请参阅[/zc： Wchar_t （Wchar_t 为本机类型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)
+**Lib：** comsuppw.lib 或 comsuppwd.lib (参阅 [/zc： Wchar_t (Wchar_t 是本机类型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 有关详细信息) 
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器 COM 全局函数](../cpp/compiler-com-global-functions.md)

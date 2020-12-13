@@ -1,5 +1,6 @@
 ---
-title: 函数调用运算符：（）
+description: '了解有关以下方面的详细信息：函数调用运算符： ( # A1'
+title: '函数调用运算符： ( # A1'
 ms.date: 06/11/2020
 helpviewer_keywords:
 - ( ) function call operator
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
-ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
+ms.openlocfilehash: 351674f345c7213a3c164ff88e9a165775088c68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813545"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344557"
 ---
 # <a name="function-call-operator-"></a>函数调用运算符：()
 
@@ -30,7 +31,7 @@ ms.locfileid: "85813545"
 
 ## <a name="remarks"></a>备注
 
-函数调用运算符的参数来自以 *`argument-expression-list`* 逗号分隔的表达式列表。 这些表达式的值作为参数传递给函数。 *参数表达式列表*可以为空。 在 c + + 17 之前，函数表达式的计算顺序是未指定的，并且可以按任意顺序出现。 在 c + + 17 和更高版本中，函数表达式在任何参数表达式或默认参数之前计算。 参数表达式按不确定的顺序进行计算。
+函数调用运算符的参数来自以 *`argument-expression-list`* 逗号分隔的表达式列表。 这些表达式的值作为参数传递给函数。 *参数表达式列表* 可以为空。 在 c + + 17 之前，函数表达式的计算顺序是未指定的，并且可以按任意顺序出现。 在 c + + 17 和更高版本中，函数表达式在任何参数表达式或默认参数之前计算。 参数表达式按不确定的顺序进行计算。
 
 *`postfix-expression`* 计算结果为要调用的函数。 它可以采用以下任意一种形式：
 
@@ -136,7 +137,7 @@ int main()
 }
 ```
 
-前面的代码定义一个名为的类 `Point` ，该类包含表示*x*和*y*坐标的私有数据对象。 必须修改这些数据对象，并且必须检索其值。 该程序只是针对此类的多个设计之一；另一种可能的设计是使用 `GetX` 与 `SetX` 函数或使用 `GetY` 与 `SetY` 函数。
+前面的代码定义一个名为的类 `Point` ，该类包含表示 *x* 和 *y* 坐标的私有数据对象。 必须修改这些数据对象，并且必须检索其值。 该程序只是针对此类的多个设计之一；另一种可能的设计是使用 `GetX` 与 `SetX` 函数或使用 `GetY` 与 `SetY` 函数。
 
 返回类类型的函数、指向类类型的指针或对类类型的引用可以用作成员选择运算符的左操作数。 以下代码是合法的：
 
@@ -181,7 +182,7 @@ int main() {
 }
 ```
 
-可以递归方式调用函数。 有关函数声明的详细信息，请参阅[函数](functions-cpp.md)。 相关材料位于[翻译单元和链接](../cpp/program-and-linkage-cpp.md)中。
+可以递归方式调用函数。 有关函数声明的详细信息，请参阅 [函数](functions-cpp.md)。 相关材料位于 [翻译单元和链接](../cpp/program-and-linkage-cpp.md)中。
 
 ## <a name="see-also"></a>请参阅
 

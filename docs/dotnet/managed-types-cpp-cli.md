@@ -1,4 +1,5 @@
 ---
+description: '了解更多： c + +/CLI (托管类型) '
 title: 托管类型 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,20 +18,20 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c542151bda780e5306db35049d988e6514fffd62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ccf126152216cfddb9a78cb5abc608f23cc3ba80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225600"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344453"
 ---
 # <a name="managed-types-ccli"></a>托管类型 (C++/CLI)
 
 Visual C++ 允许通过托管类型访问 .NET 功能，这些类型支持公共语言运行时的功能，并且受运行时的优点和限制的限制。
 
-## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a>托管类型和 main 函数
+## <a name="managed-types-and-the-main-function"></a><a name="main_functions"></a> 托管类型和 main 函数
 
-当使用编写应用程序时 **`/clr`** ， **main （）** 函数的参数不能是托管类型。
+当使用编写应用程序时 **`/clr`** ， **main ( # B1** 函数的参数不能是托管类型。
 
 正确签名的示例如下：
 
@@ -40,9 +41,9 @@ Visual C++ 允许通过托管类型访问 .NET 功能，这些类型支持公共
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a>与 c + + 本机类型等效 .NET Framework
+## <a name="net-framework-equivalents-to-c-native-types"></a><a name="dotnet"></a> 与 c + + 本机类型等效 .NET Framework
 
-下表显示了内置 Visual C++ 类型的关键字，这些关键字是**System**命名空间中预定义类型的别名。
+下表显示了内置 Visual C++ 类型的关键字，这些关键字是 **System** 命名空间中预定义类型的别名。
 
 |Visual C++ 类型|.NET Framework 类型|
 |-----------------------|-------------------------|
@@ -53,20 +54,20 @@ int main(int, char*[], char*[]) {}
 |**`wchar_t`**|<xref:System.Char?displayProperty=nameWithType>|
 |**`short`** 和 **`signed short`**|<xref:System.Int16?displayProperty=nameWithType>|
 |**`unsigned short`**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**`int`**、 **`signed int`** 、 **`long`** 和**`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
+|**`int`**、 **`signed int`** 、 **`long`** 和 **`signed long`**|<xref:System.Int32?displayProperty=nameWithType>|
 |**`unsigned int`** 和 **`unsigned long`**|<xref:System.UInt32?displayProperty=nameWithType>|
 |**`__int64`** 和 **`signed __int64`**|<xref:System.Int64?displayProperty=nameWithType>|
 |**`unsigned __int64`**|<xref:System.UInt64?displayProperty=nameWithType>|
 |**`float`**|<xref:System.Single?displayProperty=nameWithType>|
 |**`double`** 和 **`long double`**|<xref:System.Double?displayProperty=nameWithType>|
 
-有关编译器选项默认为或的详细信息 **`signed char`** **`unsigned char`** ，请参阅[ `/J` （默认 **`char`** 类型为 **`unsigned`** ）](../build/reference/j-default-char-type-is-unsigned.md)。
+有关编译器选项默认为或的详细信息 **`signed char`** **`unsigned char`** ，请参阅 [ `/J` **`char`** **`unsigned`**)  (默认类型](../build/reference/j-default-char-type-is-unsigned.md)。
 
-## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a>嵌套在本机类型中的值类型的版本问题
+## <a name="version-issues-for-value-types-nested-in-native-types"></a><a name="version_issues"></a> 嵌套在本机类型中的值类型的版本问题
 
-考虑用于生成客户端程序集的已签名（强名称）程序集组件。 组件包含一个值类型，该类型在客户端中用作本机联合、类或数组的成员的类型。 如果组件的未来版本更改了值类型的大小或布局，则必须重新编译该客户端。
+请考虑使用已签名 (强名称) 用于生成客户端程序集的程序集组件。 组件包含一个值类型，该类型在客户端中用作本机联合、类或数组的成员的类型。 如果组件的未来版本更改了值类型的大小或布局，则必须重新编译该客户端。
 
-使用[sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) （）创建 keyfile `sn -k mykey.snk` 。
+使用 [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) () 创建 keyfile `sn -k mykey.snk` 。
 
 ### <a name="example"></a>示例
 
@@ -125,9 +126,9 @@ S.i = 11
 
 ### <a name="comments"></a>注释
 
-但是，如果将另一个成员添加到 `struct S` nested_value_types .cpp 中（例如 `double d;` ），并重新编译该组件而不重新编译该客户端，则结果是未经处理的异常（类型为 <xref:System.IO.FileLoadException?displayProperty=fullName> ）。
+但是，如果将另一个成员添加到 `struct S` nested_value_types，则 (例如， `double d;`) 和重新编译组件而不重新编译客户端，则结果为类型) 的未经处理的异常 (<xref:System.IO.FileLoadException?displayProperty=fullName> 。
 
-## <a name="how-to-test-for-equality"></a><a name="test_equality"></a>如何：测试相等性
+## <a name="how-to-test-for-equality"></a><a name="test_equality"></a> 如何：测试相等性
 
 在下面的示例中，使用 Managed Extensions for C++ 的相等性测试基于句柄引用的内容。
 
@@ -152,7 +153,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a>如何：诊断和修复程序集兼容性问题
+## <a name="how-to-diagnose-and-fix-assembly-compatibility-problems"></a><a name="diagnose_fix"></a> 如何：诊断和修复程序集兼容性问题
 
 本主题说明在编译时引用的程序集的版本与运行时引用的程序集的版本不匹配以及如何避免此问题可能会发生的情况。
 
@@ -227,9 +228,9 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[用 c + +/CLI 进行 .NET 编程（Visual C++）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+[用 c + +/CLI (Visual C++ 的 .NET 编程) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [与其他 .NET 语言的互操作性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)<br/>
 [托管类型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)<br/>
 [#using 指令](../preprocessor/hash-using-directive-cpp.md)

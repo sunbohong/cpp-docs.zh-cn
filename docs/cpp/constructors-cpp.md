@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下方面的详细信息： c + + (构造函数) '
 title: 构造函数 (C++)
 ms.date: 12/27/2019
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: b8373eda52967db881d7d58477fcd2a9181ac3ee
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: bd93053d63e76aef9f2284e18f7748334a3fc6ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924732"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97344622"
 ---
 # <a name="constructors-c"></a>构造函数 (C++)
 
-若要自定义类成员的初始化方式，或在创建类的对象时调用函数，请定义 *构造函数* 。 构造函数具有与类相同的名称，没有返回值。 你可以根据需要定义任意多个重载构造函数，以各种方式自定义初始化。 通常，构造函数具有公共可访问性，以便类定义或继承层次结构外的代码可以创建类的对象。 但也可以将构造函数声明为 **`protected`** 或 **`private`** 。
+若要自定义类成员的初始化方式，或在创建类的对象时调用函数，请定义 *构造函数*。 构造函数具有与类相同的名称，没有返回值。 你可以根据需要定义任意多个重载构造函数，以各种方式自定义初始化。 通常，构造函数具有公共可访问性，以便类定义或继承层次结构外的代码可以创建类的对象。 但也可以将构造函数声明为 **`protected`** 或 **`private`** 。
 
 构造函数可以选择采用成员 init list。 这是一种更有效的方法来初始化类成员，而不是在构造函数主体中赋值。 下面的示例演示 `Box` 具有三个重载构造函数的类。 最后两个使用成员 init 列表：
 
@@ -202,7 +203,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
     Box (const Box& other) = delete;
 ```
 
-尝试复制对象会生成错误 *C2280：正在尝试引用已删除的函数* 。
+尝试复制对象会生成错误 *C2280：正在尝试引用已删除的函数*。
 
 ## <a name="move-constructors"></a><a name="move_constructors"></a> 移动构造函数
 
@@ -643,7 +644,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=msvc-150"
 
-**Visual Studio 2017 及更高版本** ： **`using`** **/std： c + + 17** 模式中的语句使基类中的所有构造函数的作用域除外，但对派生类中的构造函数具有完全相同的签名。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。
+**Visual Studio 2017 及更高版本**： **`using`** **/std： c + + 17** 模式中的语句使基类中的所有构造函数的作用域除外，但对派生类中的构造函数具有完全相同的签名。 一般而言，当派生类未声明新数据成员或构造函数时，最好使用继承构造函数。
 
 ::: moniker-end
 
@@ -661,7 +662,7 @@ class Derived : T {
 
 ## <a name="constructors-and-composite-classes"></a><a name="constructors_in_composite_classes"></a> 构造函数和复合类
 
-包含类类型成员的类称为 *复合类* 。 创建复合类的类类型成员时，调用类自己的构造函数之前，先调用构造函数。 当包含的类没有默认构造函数是，必须使用复合类构造函数中的初始化列表。 在之前的 `StorageBox` 示例中，如果将 `m_label` 成员变量的类型更改为新的 `Label` 类，则必须调用基类构造函数，并且将 `m_label` 变量（位于 `StorageBox` 构造函数中）初始化：
+包含类类型成员的类称为 *复合类*。 创建复合类的类类型成员时，调用类自己的构造函数之前，先调用构造函数。 当包含的类没有默认构造函数是，必须使用复合类构造函数中的初始化列表。 在之前的 `StorageBox` 示例中，如果将 `m_label` 成员变量的类型更改为新的 `Label` 类，则必须调用基类构造函数，并且将 `m_label` 变量（位于 `StorageBox` 构造函数中）初始化：
 
 ```cpp
 class Label {
