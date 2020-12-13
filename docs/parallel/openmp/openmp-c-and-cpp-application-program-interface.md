@@ -1,25 +1,26 @@
 ---
+description: 了解详细信息： OpenMP C 和 c + + 应用程序接口
 title: OpenMP C 和 C++ 应用程序接口
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
-ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a06c2640c78a48b88a243a4d11153ec808f83208
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342447"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP C 和 C++ 应用程序接口
 
-讨论 OpenMP C 和C++API，从 OpenMP 体系结构评审委员会的版本 2.0 规范中所述。
+讨论 OpenMP C 和 c + + API，如 OpenMP 体系结构审查委员会版本2.0 中所述。
 
-版本 2.0 2002 年 3 月
+版本 2.0 3 月2002
 
-版权 1997年-2002 OpenMP 体系结构评审板。
+版权所有 1997-2002 OpenMP 体系结构审查委员会。
 
-授予所有费用或此材料的一部分的情况下复制的权限，提供 OpenMP 体系结构 Review Board 版权声明和本文档的标题显示。 请注意是，鉴于复制是由 OpenMP 体系结构评审看板的权限。
+只要 OpenMP 体系结构审查委员会版权声明并显示此文档的标题，就会授予无需付费的全部或部分内容的复制权限。 请注意，复制是 OpenMP 体系结构审查委员会的权限。
 
-## <a name="contents"></a>内容
+## <a name="contents"></a>目录
 
 1. [介绍](1-introduction.md)
 
@@ -31,7 +32,7 @@ ms.locfileid: "62362694"
 
 ### <a name="appendices"></a>附录
 
-答： [示例](a-examples.md)
+A. [示例](a-examples.md)
 
 B. [运行时库函数的存根](b-stubs-for-run-time-library-functions.md)
 

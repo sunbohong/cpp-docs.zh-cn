@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：静态库 (c + +/CX) '
 title: 静态库 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 756f8d2c1af2c6be414ad39b4a96fa6cc7ccfb02
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0e8a0100e2822719e4105ed4e9b1029a4ff488da
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341927"
 ---
 # <a name="static-libraries-ccx"></a>静态库 (C++/CX)
 
@@ -23,9 +24,9 @@ ms.locfileid: "92924719"
 
 1. 在菜单栏上，选择“文件”>“新建”>“项目”，打开“创建新项目”对话框     。
 
-1. 在对话框顶部，将 "  **语言** " 设置为 " **c + +** "，将 " **平台** " 设置为 " **Windows** "，将 " **项目类型** " 设置为 **UWP** 。
+1. 在对话框顶部，将 "  **语言** " 设置为 " **c + +**"，将 " **平台** " 设置为 " **Windows**"，将 " **项目类型** " 设置为 **UWP**。
 
-1. 从筛选后的项目类型列表中，选择 " **静态库 (通用 Windows-c + +/cx)** ，然后选择" **下一步** "。 在下一页中，为项目指定一个名称，并指定项目位置（如果需要）。
+1. 从筛选后的项目类型列表中，选择 " **静态库 (通用 Windows-c + +/cx)** ，然后选择" **下一步**"。 在下一页中，为项目指定一个名称，并指定项目位置（如果需要）。
 
 1. 选择“创建”  按钮创建项目。
 
@@ -35,15 +36,15 @@ ms.locfileid: "92924719"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>在 Visual Studio 2017 或 Visual Studio 2015 中创建 UWP 静态库
 
-1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。 在 " **Visual C++**  >  **Windows 通用** " 下，选择 " **静态库" (通用 Windows)** "。
+1. 在菜单栏上，依次选择“文件” > “新建” > “项目”。 在 " **Visual C++**  >  **Windows 通用**" 下，选择 "**静态库" (通用 Windows)**"。
 
-1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。 在 " **属性** " 对话框的 " **配置属性** " "  >  **c/c + +** " 页上，将 " **使用 Windows 运行时扩展** " 设置为 **"是" (/ZW)** 。
+1. 在“解决方案资源管理器” 中，打开项目的快捷菜单，然后选择“属性” 。 在 "**属性**" 对话框的 "**配置属性**" "  >  **c/c + +** " 页上，将 "**使用 Windows 运行时扩展**" 设置为 **"是" (/ZW)**。
 
 ::: moniker-end
 
 编译新的静态库时，如果调用了对 UWP 应用排除的 Win32 API，编译器将引发错误 C3861 "找不到标识符"。 若要查找 Windows 运行时支持的替代方法，请参阅 [UWP 应用中的 Windows api 的替代](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)方法。
 
-如果向 UWP 应用解决方案添加 c + + 静态库项目，则可能需要更新库项目的属性设置，以便 "UWP 支持" 属性设置为 **"是"** 。 如果没有此设置，代码将生成和链接，但当你尝试验证 Microsoft Store 的应用时，会发生错误。 编译静态库时的编译器设置应与使用该库的项目的编译器设置相同。
+如果向 UWP 应用解决方案添加 c + + 静态库项目，则可能需要更新库项目的属性设置，以便 "UWP 支持" 属性设置为 **"是"**。 如果没有此设置，代码将生成和链接，但当你尝试验证 Microsoft Store 的应用时，会发生错误。 编译静态库时的编译器设置应与使用该库的项目的编译器设置相同。
 
 如果使用创建公共 `ref` 类、公共接口类或公共值类的静态库，则链接器会引发此警告：
 

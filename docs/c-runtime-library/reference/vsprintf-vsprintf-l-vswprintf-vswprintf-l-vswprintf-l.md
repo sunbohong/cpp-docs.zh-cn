@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 title: vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 ms.date: 09/03/2019
 api_name:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 9efb30428a146ec72c48d68ec411b21ca5bfef79
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dd7e06817049f26e80c4be9f1d3f3df40444feaf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342109"
 ---
 # <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 
@@ -121,7 +122,7 @@ int _vswprintf_l(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *宽限*\
 输出的存储位置
@@ -140,22 +141,22 @@ int _vswprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-**vsprintf**和**vswprintf**返回写入的字符数，不包括终止 null 字符，或在出现输出错误时返回一个负值。 如果*缓冲区*或*格式*为 null 指针，则这些函数将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
+**vsprintf** 和 **vswprintf** 返回写入的字符数，不包括终止 null 字符，或在出现输出错误时返回一个负值。 如果 *缓冲区* 或 *格式* 为 null 指针，则这些函数将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入*缓冲区*指向的内存。
+其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入 *缓冲区* 指向的内存。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
-> 使用**vsprintf**，无法限制写入的字符数，这意味着使用此函数的代码容易受到缓冲区溢出的影响。 改用 [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 或调用 [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 以确定需要多大的缓冲区。 此外，请确保该*格式*不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 使用 **vsprintf**，无法限制写入的字符数，这意味着使用此函数的代码容易受到缓冲区溢出的影响。 改用 [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 或调用 [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 以确定需要多大的缓冲区。 此外，请确保该 *格式* 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-**vswprintf**符合 ISO C 标准，该标准需要类型为**size_t**的第二个参数*count*。 若要强制使用旧的非标准行为，请定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 旧的行为可能不在未来的版本中，因此应将代码更改为使用新的符合的行为。
+**vswprintf** 符合 ISO C 标准，该标准需要 **size_t** 类型的第二个参数 *count*。 若要强制使用旧的非标准行为，请定义 **_CRT_NON_CONFORMING_SWPRINTFS**。 旧的行为可能不在未来的版本中，因此应将代码更改为使用新的符合的行为。
 
-在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -169,11 +170,11 @@ int _vswprintf_l(
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
 |**vsprintf**、 **_vsprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**vswprintf**、 **_vswprintf_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vswprintf**、 **_vswprintf_l**|\<stdio.h> 或 \<wchar.h> 、和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -226,10 +227,10 @@ This is a string
 
 ## <a name="see-also"></a>请参阅
 
-[流 I/O](../../c-runtime-library/stream-i-o.md)\
+[流 i/o](../../c-runtime-library/stream-i-o.md)\
 [vprintf 函数](../../c-runtime-library/vprintf-functions.md)\
-[格式规范语法：printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
+[格式规范语法： printf 和 wprintf 函数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)

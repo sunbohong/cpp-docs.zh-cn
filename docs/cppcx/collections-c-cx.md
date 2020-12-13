@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息： (c + +/CX 的集合) '
 title: 集合 (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 84c6ecad5ffb4920972faf5aa564103ec1f5b5df
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 4843441b5d5091bea36ff8c74bd84bddd5f7fa4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610941"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342044"
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 
@@ -57,7 +58,7 @@ Windows 运行时定义集合和相关类型的接口，并且 c + +/CX 在集�
 
 ## <a name="vectorproxy-elements"></a>VectorProxy 元素
 
-[Platform：：集合：： VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)和[Platform：：集合：： VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)允许使用 `range for` 循环和算法（如[Std：： sort](../standard-library/algorithm-functions.md#sort) ）与[IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1)容器。 但是，无法通过 C++ 指针取消引用来访问 `IVector` 元素，只能通过 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) 和 [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) 方法访问此类元素。 因此，这些迭代器使用代理类， `Platform::Details::VectorProxy<T>` 并 `Platform::Details::ArrowProxy<T>` 通过、和] 运算符提供对各个元素的访问， __\*__ __->__ 如标准库所要求。 __ \[ __ 严格来说，给定 `IVector<Person^> vec`， `*begin(vec)` 的类型为 `VectorProxy<Person^>`。 不过，代理对象对于你的代码几乎始终是透明的。 我们不讨论这些代理对象，因为它们仅由迭代器在内部使用，但了解该机制的工作原理将非常有用。
+[Platform：：集合：： VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)和[Platform：：集合：： VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)允许使用 `range for` 循环和算法（如[Std：： sort](../standard-library/algorithm-functions.md#sort) ）与[IVector \<T> ](/uwp/api/windows.foundation.collections.ivector-1)容器。 但是，无法通过 C++ 指针取消引用来访问 `IVector` 元素，只能通过 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) 和 [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) 方法访问此类元素。 因此，这些迭代器使用代理类， `Platform::Details::VectorProxy<T>` 并 `Platform::Details::ArrowProxy<T>` 通过、和] 运算符提供对各个元素的访问， __\*__ __->__ 如标准库所要求。 __\[__ 严格来说，给定 `IVector<Person^> vec`， `*begin(vec)` 的类型为 `VectorProxy<Person^>`。 不过，代理对象对于你的代码几乎始终是透明的。 我们不讨论这些代理对象，因为它们仅由迭代器在内部使用，但了解该机制的工作原理将非常有用。
 
 对 `range for` 容器使用 `IVector` 循环时，请使用 `auto&&` 以使迭代器变量正确绑定到 `VectorProxy` 元素。 如果使用 **`auto`** 或 `auto&` ，将引发编译器警告 C4239，并 `VectoryProxy` 在警告文本中提到。
 
@@ -143,7 +144,7 @@ void FindButton(UIElementCollection^ col)
 
 [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) 和 [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) 委托用于指定集合更改事件的事件处理程序的签名。 [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) 公共枚举类和 `Platform::Collection::Details::MapChangedEventArgs` 与 `Platform::Collections::Details::VectorChangedEventArgs` ref 类用于存储事件参数以确定引发事件的原因。 `*EventArgs`类型是在命名空间中定义的， `Details` 因为你在使用或时无需显式构造或使用它们 `Map` `Vector` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>

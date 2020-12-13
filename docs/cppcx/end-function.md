@@ -1,4 +1,5 @@
 ---
+description: 了解更多： end 函数
 title: end 函数
 ms.date: 01/22/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-ms.openlocfilehash: c46c601be2b2ed78cf79641a7fcf5324e615a771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29595e7eb403af85abdbfa18782adf1c33c308e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341966"
 ---
 # <a name="end-function"></a>end 函数
 
@@ -38,16 +39,16 @@ template <typename T>
        );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型参数。
 
 *v*<br/>
-向量的集合\<T > 或 VectorView\<T > 对象访问的 IVector\<T >，或 IVectorView\<T > 接口。
+\<T> \<T> 由 IVector \<T> 或 IVectorView 接口访问的 Vector 或 VectorView 对象的集合 \<T> 。
 
 *i*<br/>
-对象的 arbitraty Windows 运行时集合的访问的 IIterable\<T > 接口。
+Iiterable<t> 接口访问的任意 Windows 运行时对象的集合 \<T> 。
 
 ### <a name="return-value"></a>返回值
 
@@ -61,10 +62,10 @@ template <typename T>
 
 ### <a name="requirements"></a>要求
 
-**标头：** collection.h
+**标头：** 集合。h
 
 **命名空间：** Windows::Foundation::Collections
 
 ## <a name="see-also"></a>请参阅
 
-[Windows::Foundation::Collections 命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows：： Foundation：：集合命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)

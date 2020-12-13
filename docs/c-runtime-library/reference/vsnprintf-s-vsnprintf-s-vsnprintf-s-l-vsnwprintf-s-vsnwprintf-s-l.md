@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 title: vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -43,12 +44,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: edb534eb533d63c9298b7b7e9aced1be3e8652d9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 27c91d6064b4a92da8a6f09e7d7e5b6bfb8bf95f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91502794"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342148"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 
@@ -110,7 +111,7 @@ int _vsnwprintf_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *宽限*<br/>
 输出的存储位置
@@ -157,9 +158,9 @@ int _vsnwprintf_s(
 |*计数* <= 0|-1|**EINVAL**|
 |*sizeOfBuffer* 太小 (和 *count* ！ = **_TRUNCATE**) |-1 (，并将 *缓冲区* 设置为空字符串) |**ERANGE**|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**vsnprintf_s** 与 **_vsnprintf_s**相同。 包含**vsnprintf_s**是为了符合 ANSI 标准。 保留 **_vnsprintf**以便向后兼容。
+**vsnprintf_s** 与 **_vsnprintf_s** 相同。 包含 **vsnprintf_s** 是为了符合 ANSI 标准。 保留 **_vnsprintf** 以便向后兼容。
 
 其中每个函数都采用一个指向参数列表的指针，然后将给定数据的最多个字符的 *计数* 字符写入 *缓冲区* ，并追加一个终止 null。
 
@@ -168,7 +169,7 @@ int _vsnwprintf_s(
 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
-> 确保 format ** 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
 > 若要确保终止 null 的空间，请确保 *计数* 严格小于缓冲区长度，或使用 **_TRUNCATE**。

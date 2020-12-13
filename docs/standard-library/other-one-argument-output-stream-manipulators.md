@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：其他 One-Argument 输出流操控器
 title: 其他单一参数输出流操控器
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: 8fe30a0df70d84f7a8a9eafcdf22439cbe321043
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3ad50216375de1ca5e2d9fe41b206aa01a8c8e80
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224638"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342252"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>其他单一参数输出流操控器
 
@@ -75,6 +76,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [带参数的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)

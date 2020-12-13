@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： OpenMP 子句
 title: OpenMP 子句
 ms.date: 03/20/2019
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 495f77003fa43922d49f2fc5203076cbf927f86f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3bdcb496238b2f8acef85819c43348c095293287
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342408"
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 
@@ -76,12 +77,12 @@ Visual C++ 支持以下 OpenMP 子句。
 copyin(var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
 `threadprivate`将在主线程中用变量的值初始化的变量，因为它存在于并行构造之前。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `copyin` 适用于以下指令：
 
@@ -103,12 +104,12 @@ copyin(var)
 copyprivate(var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
 要共享的一个或多个变量。 如果指定了多个变量，则用逗号分隔变量名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `copyprivate` 适用于 [单个](openmp-directives.md#single) 指令。
 
@@ -188,9 +189,9 @@ Value = 1.008000, thread = 1
 default(shared | none)
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`shared`如果 `default` 未指定子句，则表示并行区域中的任何变量都将被视为使用 [共享](#shared-openmp) 子句指定。 `none`意味着并行区域中使用的任何不属于[private](#private-openmp)、 [shared](#shared-openmp)、 [firstprivate](#firstprivate)或[lastprivate](#lastprivate)子句的[reduction](#reduction)变量都将导致编译器错误。
+`shared`如果 `default` 未指定子句，则表示并行区域中的任何变量都将被视为使用 [共享](#shared-openmp) 子句指定。 `none`意味着并行区域中使用的任何不属于[private](#private-openmp)、 [shared](#shared-openmp)、 [firstprivate](#firstprivate)或[lastprivate](#lastprivate)子句的[](#reduction)变量都将导致编译器错误。
 
 `default` 适用于以下指令：
 
@@ -212,19 +213,19 @@ default(shared | none)
 firstprivate(var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
 要在每个线程中包含实例并将用变量的值初始化的变量，因为它存在于并行构造之前。 如果指定了多个变量，则用逗号分隔变量名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `firstprivate` 适用于以下指令：
 
 - [for](openmp-directives.md#for-openmp)
 - [并行](openmp-directives.md#parallel)
 - [个](openmp-directives.md#sections-openmp)
-- single
+- [single](openmp-directives.md#single)
 
 有关详细信息，请参阅 [2.7.2.2 firstprivate](../2-directives.md#2722-firstprivate)。
 
@@ -245,7 +246,7 @@ if(expression)
 *expression*<br/>
 一个整数表达式，如果计算结果为 true (非零) ，将导致并行区域中的代码并行执行。 如果表达式的计算结果为 false (零) ，则通过单个线程) 在串行 (中执行并行区域。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `if` 适用于以下指令：
 
@@ -299,12 +300,12 @@ val = 2, parallelized with 2 threads
 lastprivate(var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
 设置为等于) 或 ( # pragma 节) 的最后一个部分的任何线程执行最终 (迭代的私有版本的变量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `lastprivate` 适用于以下指令：
 
@@ -325,13 +326,13 @@ lastprivate(var)
 nowait
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `nowait` 适用于以下指令：
 
 - [for](openmp-directives.md#for-openmp)
 - [个](openmp-directives.md#sections-openmp)
-- single
+- [single](openmp-directives.md#single)
 
 有关详细信息，请参阅 [2.4.1 for 构造](../2-directives.md#241-for-construct)、 [2.4.2 sections 节构造](../2-directives.md#242-sections-construct)和 [2.4.3 单一构造](../2-directives.md#243-single-construct)。
 
@@ -390,12 +391,12 @@ int main( )
 num_threads(num)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*num*<br/>
+*编号*<br/>
 线程数
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `num_threads`子句具有与[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)函数相同的功能。
 
@@ -419,7 +420,7 @@ num_threads(num)
 ordered
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `ordered` 适用于 [for](openmp-directives.md#for-openmp) 指令。
 
@@ -437,19 +438,19 @@ ordered
 private(var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
 要在每个线程中包含实例的变量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `private` 适用于以下指令：
 
 - [for](openmp-directives.md#for-openmp)
 - [并行](openmp-directives.md#parallel)
 - [个](openmp-directives.md#sections-openmp)
-- single
+- [single](openmp-directives.md#single)
 
 有关详细信息，请参阅 [2.7.2.1 private](../2-directives.md#2721-private)。
 
@@ -639,7 +640,7 @@ nFirstPrivate = 4 (The value prior to entering parallel region)
 reduction(operation:var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *operation*<br/>
 操作的运算符，该运算符用于对并行区域末尾的变量 *var* 执行操作。
@@ -647,7 +648,7 @@ reduction(operation:var)
 *var*<br/>
 要对其进行标量缩减的一个或多个变量。 如果指定了多个变量，则用逗号分隔变量名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `reduction` 适用于以下指令：
 
@@ -786,7 +787,7 @@ type<br/>
 *大小*<br/>
  (可选) 指定迭代的大小。 *大小* 必须为整数。 当 *类型* 为时无效 `runtime` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关详细信息，请参阅 [2.4.1 for 构造](../2-directives.md#241-for-construct)。
 
@@ -912,12 +913,12 @@ int main( )
 shared(var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
 要共享的一个或多个变量。 如果指定了多个变量，则用逗号分隔变量名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在线程之间共享变量的另一种方法是通过 [copyprivate](#copyprivate) 子句。
 

@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息： (c + +/CX 的委托) '
 title: 委托 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: 4944efc10b4590f8dc682230968d9c97ef91cb5c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3d62b48d76319d79707330e874e6ceddcc22284e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225769"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342005"
 ---
 # <a name="delegates-ccx"></a>委托 (C++/CX)
 
@@ -43,7 +44,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> 通常，对于事件处理程序，除非要格外注意以避免循环引用，否则更好的做法是使用命名函数而不是 lambda。 命名函数会通过弱引用捕获“this”指针，而 lambda 通过强引用捕获该指针并创建一个循环引用。 有关详细信息，请参阅[弱引用和中断循环](../cppcx/weak-references-and-breaking-cycles-c-cx.md)。
+> 通常，对于事件处理程序，除非要格外注意以避免循环引用，否则更好的做法是使用命名函数而不是 lambda。 命名函数会通过弱引用捕获“this”指针，而 lambda 通过强引用捕获该指针并创建一个循环引用。 有关详细信息，请参阅 [弱引用和中断循环](../cppcx/weak-references-and-breaking-cycles-c-cx.md)。
 
 按照约定，由 Windows 运行时定义的事件处理程序委托名称的形式为 * EventHandler，例如，RoutedEventHandler、SizeChangedEventHandler 或 SuspendingEventHandler。 同样按照约定，事件处理程序委托具有两个参数并返回 void。 在没有类型参数的委托中，第一个参数的类型为 [Platform::Object^](../cppcx/platform-object-class.md)，它保持对发送方即触发事件的对象的引用。 在事件处理程序方法中使用该参数前，必须转换回原始类型。 在具有类型参数的事件处理程序委托中，第一个类型参数指定发送方的类型，第二个参数是保持事件相关信息的 ref 类的句柄。 按照约定，该类名为 \* EventArgs。 例如，RoutedEventHandler 委托具有类型为 RoutedEventArgs^ 的第二个参数，DragEventHander 具有类型为 DragEventArgs^ 的第二个参数。
 
@@ -93,7 +94,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 
 可以从下列任何对象构造委托：
 
-- lambda
+- Lambda
 
 - 静态函数
 
@@ -130,7 +131,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 
 如果你熟悉 .NET 中的事件处理程序，就会知道建议做法是在激发事件之前创建事件的本地副本。 这样可以避免事件处理程序在调用事件之前被移除，尽管这种情况并不常见。 在 C++/CX 中则不必如此，因为在添加或移除事件处理程序时，将创建一个新的处理程序列表。 有一个 C++ 对象会在事件被调用之前增加处理程序列表上的引用计数，因而可以保证所有处理程序都有效。 但是，这也意味着，如果将事件处理程序从使用它的线程中移除，而发布对象仍在操作其现已过期的列表副本，则仍可能调用该处理程序。 发布对象只有在下次激发事件时才能获得更新的列表。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>

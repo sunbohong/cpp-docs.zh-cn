@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息： c + +/CX (异常) '
 title: 异常 (C++/CX)
 ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7b4475cfa92aa952dd5a2996508d9343255b7ed2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9bc04febf0d4b13a635ded6807e0cc77654dfdb0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231008"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341940"
 ---
 # <a name="exceptions-ccx"></a>异常 (C++/CX)
 
@@ -15,9 +16,9 @@ C + +/CX 中的错误处理基于异常。 在最基本的级别上，Windows �
 
 ## <a name="exceptions"></a>例外
 
-在 c + + 程序中，你可以引发和捕获来自 Windows 运行时操作的异常、派生自的异常 `std::exception` 或用户定义的类型。 仅当它将跨越应用程序二进制接口（ABI）边界时（例如，当捕获异常的代码是用 JavaScript 编写的时），才必须引发 Windows 运行时异常。 当非 Windows 运行时 c + + 异常到达 ABI 边界时，该异常转换为 `Platform::FailureException` 异常，表示 E_FAIL HRESULT。 有关 ABI 的更多信息，请参见 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+在 c + + 程序中，你可以引发和捕获来自 Windows 运行时操作的异常、派生自的异常 `std::exception` 或用户定义的类型。 仅当它将跨越应用程序二进制接口 (ABI) 边界时（例如，当捕获异常的代码是用 JavaScript 编写的时），才必须引发 Windows 运行时异常。 当非 Windows 运行时 c + + 异常到达 ABI 边界时，该异常转换为 `Platform::FailureException` 异常，表示 E_FAIL HRESULT。 有关 ABI 的更多信息，请参见 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
-您可以使用以下两个构造函数之一来声明[Platform：： Exception](platform-exception-class.md) ，该构造函数采用 hresult 参数或者 hresult 参数和[Platform：： String](platform-string-class.md)^ 参数，该参数可跨 ABI 传递到处理它的任何 Windows 运行时应用。 也可以使用两个 [Exception::CreateException 方法](platform-exception-class.md#createexception) 重载之一声明异常，这两个方法重载采用 HRESULT 参数或者 HRESULT 参数和 `Platform::String^` 参数。
+您可以使用以下两个构造函数之一来声明 [Platform：： Exception](platform-exception-class.md) ，该构造函数采用 hresult 参数或者 hresult 参数和 [Platform：： String](platform-string-class.md)^ 参数，该参数可跨 ABI 传递到处理它的任何 Windows 运行时应用。 也可以使用两个 [Exception::CreateException 方法](platform-exception-class.md#createexception) 重载之一声明异常，这两个方法重载采用 HRESULT 参数或者 HRESULT 参数和 `Platform::String^` 参数。
 
 ## <a name="standard-exceptions"></a>标准异常
 
@@ -27,7 +28,7 @@ C + +/CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准�
 
 下表列出了标准异常。
 
-|名称|基础 HRESULT|说明|
+|名称|基础 HRESULT|描述|
 |----------|------------------------|-----------------|
 |COMException|*用户定义的 hresult*|从 COM 方法调用返回无法识别的 HRESULT 时引发。|
 |AccessDeniedException|E \_ ACCESSDENIED|被拒绝访问资源或功能时引发。|
@@ -59,11 +60,11 @@ C + +/CX 支持一组表示典型 HRESULT 错误的标准异常。 每个标准�
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-若要捕捉异步操作期间引发的异常，请使用任务类并添加一个错误处理继续符。 错误处理延续将其他线程上引发的异常封送回调用线程，以便你可以在代码中一个地方处理所有潜在异常。 有关详细信息，请参阅[c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)。
+若要捕捉异步操作期间引发的异常，请使用任务类并添加一个错误处理继续符。 错误处理延续将其他线程上引发的异常封送回调用线程，以便你可以在代码中一个地方处理所有潜在异常。 有关详细信息，请参阅 [c + + 中的异步编程](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)。
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected 事件
 
-在 Windows 8.1 您可以订阅[Windows：： windows.applicationmodel.resources.core：： Core：： CoreApplication：： UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected)静态事件，该事件可访问即将关闭进程的未处理的错误。 无论错误源于何处，它都作为与事件参数一起传入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 对象到达此处理程序。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块中，你可以根据需要保存用户状态，然后通过调用来允许进程终止 **`throw`** ，或者执行一些操作使程序返回到已知状态。 下面的示例演示了基本模式：
+在 Windows 8.1 您可以订阅 [Windows：： windows.applicationmodel.resources.core：： Core：： CoreApplication：： UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) 静态事件，该事件可访问即将关闭进程的未处理的错误。 无论错误源于何处，它都作为与事件参数一起传入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 对象到达此处理程序。 对该对象调用 `Propagate` 时，它根据错误代码创建并引发相应类型的 `Platform::*Exception` 。 在 catch 块中，你可以根据需要保存用户状态，然后通过调用来允许进程终止 **`throw`** ，或者执行一些操作使程序返回到已知状态。 下面的示例演示了基本模式：
 
 在 app.xaml 中：
 
@@ -101,7 +102,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 C + +/CX 不使用 **`finally`** 子句。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + +/CX 语言参考](visual-c-language-reference-c-cx.md)<br/>
 [命名空间引用](namespaces-reference-c-cx.md)

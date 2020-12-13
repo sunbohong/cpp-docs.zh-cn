@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4606
 title: 编译器警告（等级 1）C4606
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4606
 ms.assetid: c1b45fb6-672b-42eb-9e1c-c67b3e4150d3
-ms.openlocfilehash: 9b38e9670157fd15dc7c4b6a96ced7ad40c43e34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b347be103d2a84dba2143861cb35b67f3d38fb9c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185992"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341732"
 ---
 # <a name="compiler-warning-level-1-c4606"></a>编译器警告（等级 1）C4606
 
-\#杂注警告：忽略了 "warning_number";代码分析警告与警告等级无关
+\#pragma warning：忽略 "warning_number";代码分析警告与警告等级无关
 
-对于代码分析警告，[警告](../../preprocessor/warning.md)杂注仅支持 `error`、`once`和 `default`。
+对于代码分析警告， `error` `once` `default` [警告](../../preprocessor/warning.md) 杂注仅支持、和。
 
 ## <a name="example"></a>示例
 

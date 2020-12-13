@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：枚举 (c + +/CX) '
 title: 枚举 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
-ms.openlocfilehash: 54e413e65b3130b9b83e6d1ed56b5ee87b84e0a3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cdf058dc1549a8bc483127cffaeb347492d80716
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341953"
 ---
 # <a name="enums-ccx"></a>枚举 (C++/CX)
 
@@ -15,7 +16,7 @@ C + +/CX 支持 `public enum class` 关键字，该关键字类似于标准 c + 
 
 ### <a name="remarks"></a>备注
 
-没有 `public enum class` 访问说明符（如）的将 **`public`** 被视为标准 c + +[范围枚举](../cpp/enumerations-cpp.md)。
+没有 `public enum class` 访问说明符（如）的将 **`public`** 被视为标准 c + + [范围枚举](../cpp/enumerations-cpp.md)。
 
 `public enum class`或 `public enum struct` 声明可以有任何整数类型的基础类型，尽管 Windows 运行时本身要求类型为 int32，或者是 uint32 （对于标志枚举）。 以下语法描述 `public enum class` 或 `public enum struct`的一部分。
 
@@ -37,7 +38,7 @@ C + +/CX 支持 `public enum class` 关键字，该关键字类似于标准 c + 
 
 [!code-cpp[cx_enums#04](../cppcx/codesnippet/CPP/cpp/class1.h#04)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： vscanf_s、vwscanf_s
 title: vscanf_s、vwscanf_s
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 - vscanf_s
 - vwscanf_s
 ms.assetid: 23a1c383-5b01-4887-93ce-534a1e38ed93
-ms.openlocfilehash: 9fb58e38362d709ef6d203c5602aa32727efa763
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4bd44b3e89ec1358482ed6161907fd30f13e062d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342200"
 ---
 # <a name="vscanf_s-vwscanf_s"></a>vscanf_s、vwscanf_s
 
@@ -48,7 +49,7 @@ int vwscanf_s(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *format*<br/>
 格式控制字符串。
@@ -58,22 +59,22 @@ int vwscanf_s(
 
 ## <a name="return-value"></a>返回值
 
-返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 对于错误，返回值为**EOF** ; 或者，如果在第一次尝试读取字符时遇到文件尾字符或字符串末尾字符，则为。 如果*format*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， **vscanf_s**和**vwscanf_s**返回**EOF**并将**errno**设置为**EINVAL**。
+返回已成功转换和分配的字段数量；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 对于错误，返回值为 **EOF** ; 或者，如果在第一次尝试读取字符时遇到文件尾字符或字符串末尾字符，则为。 如果 *format* 为 **空** 指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续， **vscanf_s** 和 **vwscanf_s** 返回 **EOF** 并将 **errno** 设置为 **EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**Vscanf_s**函数从标准输入流**stdin**中读取数据，并将数据写入*arglist*参数列表给定的位置。 列表中的每个自变量都必须是指向类型的变量的指针，该类型与*格式*中的类型说明符对应。 如果在重叠的字符串之间发生复制，则此行为不确定。
+**Vscanf_s** 函数从标准输入流 **stdin** 中读取数据，并将数据写入 *arglist* 参数列表给定的位置。 列表中的每个自变量都必须是指向类型的变量的指针，该类型与 *格式* 中的类型说明符对应。 如果在重叠的字符串之间发生复制，则此行为不确定。
 
-**vwscanf_s**是**vscanf_s**的宽字符版本;**vwscanf_s**的*格式*参数是宽字符字符串。 如果在 ANSI 模式下打开流，则**vwscanf_s**和**vscanf_s**的行为相同。 **vscanf_s**不支持 UNICODE 流的输入。
+**vwscanf_s** 是 **vscanf_s** 的宽字符版本;**vwscanf_s** 的 *格式* 参数是宽字符字符串。 如果在 ANSI 模式下打开流，则 **vwscanf_s** 和 **vscanf_s** 的行为相同。 **vscanf_s** 不支持 UNICODE 流的输入。
 
-与**vscanf**和**vwscanf**不同， **vscanf_s**和**vwscanf_s**需要为**c**、 **c**、 **s**、 **s**或 string 控制集类型的所有输入参数（包括在 **[]** 中）指定缓冲区大小。 字符形式的缓冲区大小作为额外参数，紧跟在指针后面传递到缓冲区或变量。 字符串的缓冲区大小（以字符为 **`wchar_t`** 单位）不同于大小（以字节为单位）。
+与 **vscanf** 和 **vwscanf** 不同， **vscanf_s** 和 **vwscanf_s** 需要为 **c**、 **c**、 **s**、 **s** 或 string 控制集类型的所有输入参数（包括在 **[]** 中）指定缓冲区大小。 字符形式的缓冲区大小作为额外参数，紧跟在指针后面传递到缓冲区或变量。 字符串的缓冲区大小（以字符为 **`wchar_t`** 单位）不同于大小（以字节为单位）。
 
 缓冲区大小包括终止 null 字符。 可以使用宽度规范字段来确保读入的标记可放入缓冲区中。 如果未使用任何宽度规范字段，并且读取的标记太大以致缓冲区中无法容纳，则不会向该缓冲区写入任何内容。
 
 > [!NOTE]
-> *大小*参数的类型为 **`unsigned`** ，而不是**size_t**。
+> *大小* 参数的类型为 **`unsigned`** ，而不是 **size_t**。
 
 有关详细信息，请参阅 [scanf 宽度规范](../../c-runtime-library/scanf-width-specification.md)。
 
@@ -92,7 +93,7 @@ int vwscanf_s(
 |**vscanf_s**|\<stdio.h>|
 |**wscanf_s**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout** 和 **stderr** 关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -157,7 +158,7 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _setmaxstdio
 title: _setmaxstdio
 ms.date: 05/21/2019
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ef34c3cf69f9664e5af593e4f0fa1e1046faff9d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342226"
 ---
 # <a name="_setmaxstdio"></a>_setmaxstdio
 
@@ -47,7 +48,7 @@ int _setmaxstdio(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *new_max*<br/>
 在流 I/O 级别同时打开的新的最大文件数。
@@ -77,7 +78,7 @@ C 运行时 I/O 现在支持在[低 I/O 级别](../../c-runtime-library/low-leve
 |-------------|---------------------|
 |**_setmaxstdio**|\<stdio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

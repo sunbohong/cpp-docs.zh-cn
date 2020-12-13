@@ -1,4 +1,5 @@
 ---
+description: '详细了解： C 运行时错误 (Rxxxx) '
 title: C 运行时错误
 ms.date: 04/16/2019
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 - R6023
 - R6034
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 8fc1c5365d4c09908235336575c80b9df6892f90
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6e2e2df65a672f774e635b4f8bceb3b0d4d3cd57
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856627"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341108"
 ---
 # <a name="c-runtime-errors-rxxxx"></a>C 运行时错误 (Rxxxx)
 
-C 运行时库 (CRT) 可能会在你的应用已加载或运行时报告的运行时错误。 即使每条消息是指 Microsoft VisualC++运行时库，它并不意味着在库中是一个 bug。 这些错误指示您的应用程序代码中的 bug，或者运行时库不能处理，如内存不足的条件。 除非你编写您的应用程序以阻止它们，或用于捕获错误并提供友好错误消息到您的用户改为您的应用程序的最终用户可能会看到这些错误。
+当你的应用程序加载或运行时，C 运行时库 (CRT) 可能会报告运行时错误。 尽管每条消息都指的是 Microsoft Visual C++ 运行时库，但并不表示库中存在 bug。 这些错误表示应用代码中存在 bug，或者运行时库无法处理的条件（如内存不足）。 应用的最终用户可能会看到这些错误，除非你编写应用来阻止它们，或者捕获错误并向用户提供友好的错误消息。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -43,4 +44,4 @@ C 运行时库 (CRT) 可能会在你的应用已加载或运行时报告的运�
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ 编译器和生成工具错误与警告](../compiler-errors-1/c-cpp-build-errors.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 title: _vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 ms.date: 11/04/2016
 api_name:
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-ms.openlocfilehash: e7448c7f3313165009de15bbdf4c1bd9baaba3d1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 434a444b7b2c8a552c148c7c369a63b0c4a9acf2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945374"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342161"
 ---
 # <a name="_vscprintf-_vscprintf_l-_vscwprintf-_vscwprintf_l"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 
@@ -79,7 +80,7 @@ int _vscwprintf_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *format*<br/>
 窗体控件字符串。
@@ -94,18 +95,18 @@ int _vscwprintf_l(
 
 ## <a name="return-value"></a>返回值
 
-如果使用指定的格式化代码打印参数列表指向的字符串或将其发送到文件或缓冲区，则 **_vscprintf**将返回将生成的字符数。 返回的值不包括终止 null 字符。 **_vscwprintf**对宽字符执行相同的功能。
+如果使用指定的格式化代码打印参数列表指向的字符串或将其发送到文件或缓冲区，则 **_vscprintf** 返回将生成的字符数。 返回的值不包括终止 null 字符。 **_vscwprintf** 对宽字符执行相同的功能。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
-如果*format*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。
+如果 *format* 为空指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-每个*自变量*（如果有）都根据*格式*的相应格式规范进行转换。 该格式包括普通字符，其形式和函数与[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*参数相同。
+如果根据 *格式* 的相应格式规范转换了任何) ，则每个 *参数* (。 该格式包括普通字符，其形式和函数与 [printf](printf-printf-l-wprintf-wprintf-l.md)的 *format* 参数相同。
 
 > [!IMPORTANT]
-> 确保*format*是用户定义的字符串，它是 null 终止的并且具有正确的参数数量和类型。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 确保 *format* 是用户定义的字符串，它是 null 终止的并且具有正确的参数数量和类型。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -118,10 +119,10 @@ int _vscwprintf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_vscprintf**、 **_vscprintf_l**|\<stdio.h>|
-|**_vscwprintf**、 **_vscwprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**_vscprintf**， **_vscprintf_l**|\<stdio.h>|
+|**_vscwprintf**， **_vscwprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

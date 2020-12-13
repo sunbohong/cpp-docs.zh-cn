@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __readcr4
 title: __readcr4
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr4 intrinsic
 ms.assetid: b841a27b-fe0d-4ee9-b76b-f91d3eb061fa
-ms.openlocfilehash: 4d43b5204d412de40284f89cfd4d74f1c1f9d86d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 3e1d3999f488d4b7c155fd2c475a2070f29f6cda
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216733"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341030"
 ---
 # <a name="__readcr4"></a>__readcr4
 
@@ -31,15 +32,15 @@ CR4 寄存器中的值。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__readcr4`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-内部函数仅在内核模式下可用, 且例程仅可用作内部函数。
+内部函数仅在内核模式下可用，且例程仅可用作内部函数。
 
 **结束 Microsoft 专用**
 

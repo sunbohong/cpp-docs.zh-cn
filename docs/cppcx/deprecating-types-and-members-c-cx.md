@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：弃用类型和成员 (c + +/CX) '
 title: 要弃用的类型和成员 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 6d61b00690cc087c3baced6d96d0b6c8d73b5850
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: fddb9ecd81045655f3ca80c41e0fa3103d3ff52d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97341992"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>要弃用的类型和成员 (C++/CX)
 
@@ -58,7 +59,7 @@ public:
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
 [C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>

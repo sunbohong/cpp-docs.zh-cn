@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： wcrtomb_s
 title: wcrtomb_s
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: 51985b008565cbe550065b85261b8beb53ed6f89
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 6f716c6eccf1c8e9fe3afbc9271bc69976d87d73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915963"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342070"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -59,7 +60,7 @@ errno_t wcrtomb_s(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pReturnValue*<br/>
 返回写入的字节数，如果发生错误，则返回 -1。
@@ -68,33 +69,33 @@ errno_t wcrtomb_s(
 生成的多字节转换字符。
 
 *sizeOfmbchar*<br/>
-*Mbchar*变量的大小（以字节为单位）。
+*Mbchar* 变量的大小（以字节为单位）。
 
 *wchar*<br/>
 要转换的宽字符。
 
 *mbstate*<br/>
-指向**mbstate_t**对象的指针。
+指向 **mbstate_t** 对象的指针。
 
 ## <a name="return-value"></a>返回值
 
-如果发生错误，则返回零或**errno**值。
+如果发生错误，则返回零或 **errno** 值。
 
 ## <a name="remarks"></a>备注
 
-**Wcrtomb_s**函数将从*mbstate*中包含的指定转换状态开始，从*wchar*中包含的值转换为*mbchar*表示的地址中的宽字符。 *PReturnValue*值将是已转换的字节数，但不能超过**MB_CUR_MAX**字节，如果出现错误，则为-1。
+**Wcrtomb_s** 函数将从 *mbstate* 中包含的指定转换状态开始，从 *wchar* 中包含的值转换为 *mbchar* 表示的地址中的宽字符。 *PReturnValue* 值将是已转换的字节数，但不能超过 **MB_CUR_MAX** 字节，如果出现错误，则为-1。
 
-如果*mbstate*为 null，则使用内部**mbstate_t**转换状态。 如果*wchar*中包含的字符没有对应的多字节字符，则*pReturnValue*的值将为-1，并且函数将返回**eilseq 且**的**errno**值。
+如果 *mbstate* 为 null，则使用内部 **mbstate_t** 转换状态。 如果 *wchar* 中包含的字符没有对应的多字节字符，则 *pReturnValue* 的值将为-1，并且函数将返回 **eilseq 且** 的 **errno** 值。
 
-**Wcrtomb_s**函数不同于可重启性[_wctomb_s_l wctomb_s](wctomb-s-wctomb-s-l.md) 。 转换状态存储在*mbstate*中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用了对**wcsrtombs_s**的后续调用而不是**wcstombs_s**，应用程序将使用**wcsrlen**而不是**wcslen**。
+**Wcrtomb_s** 函数不同于可重启性 [_wctomb_s_l wctomb_s](wctomb-s-wctomb-s-l.md) 。 转换状态存储在 *mbstate* 中，以便后续调用相同的或其他可重启的函数。 混合使用可重启函数和不可重启函数时，结果不确定。 例如，如果使用了对 **wcsrtombs_s** 的后续调用而不是 **wcstombs_s**，应用程序将使用 **wcsrlen** 而不是 **wcslen**。
 
 在 C++ 中，模板重载简化了此函数的使用；重载可以自动推导出缓冲区长度（不再需要指定大小自变量），并且它们可以自动用更新、更安全的对应物替换不安全的旧函数。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="exceptions"></a>例外
 
-只要当前线程中的任何函数在执行此函数时都不会调用**setlocale** ，并且*mbstate*为 null， **wcrtomb_s**函数就是多线程安全的。
+只要当前线程中的任何函数在执行此函数时都不会调用 **setlocale** ，并且 *mbstate* 为 null， **wcrtomb_s** 函数就是多线程安全的。
 
 ## <a name="example"></a>示例
 
@@ -142,13 +143,13 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wcrtomb_s**|\<wchar.h>|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>
