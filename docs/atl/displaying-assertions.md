@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：显示断言
 title: 显示断言
 ms.date: 05/05/2019
 helpviewer_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: fa353fe8-4656-4384-a5d2-8866bc977f06
-ms.openlocfilehash: 962a33a7d5d922f7f1655e22b2c9d0acdcf8925c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 3f925d5f3a7d1ad0ac1171ea8983b57ead147bf4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153009"
 ---
 # <a name="displaying-assertions"></a>显示断言
 
-如果客户端连接到你的服务似乎停止响应，服务可能已添加并显示一个消息框，您不能以查看。 你可以通过使用 Visual Studio 调试器来调试代码确认这一点 (请参阅[使用任务管理器](../atl/using-task-manager.md)本部分前面)。
+如果连接到服务的客户端似乎停止响应，则该服务可能已断言并显示你无法看到的消息框。 你可以通过使用 Visual Studio 调试器调试你的代码来进行确认 (参阅本部分前面的 [使用任务管理器](../atl/using-task-manager.md)) 。
 
-如果你确定你的服务显示一个消息框，您不能看到，您可能想要设置**允许服务与桌面交互**之前再次使用该服务的选项。 此选项是允许服务出现在桌面上显示的任何消息框的启动参数。 若要设置此选项，打开服务控制面板应用程序，选择服务，单击**启动**，然后选择**允许服务与桌面交互**选项。
+如果确定服务显示的是无法看到的消息框，则可能需要将 " **允许服务与桌面交互** " 选项设置为再次使用该服务。 此选项是一个启动参数，该参数允许服务显示的任何消息框显示在桌面上。 若要设置此选项，请打开 "服务" 控制面板应用程序，选择服务，单击 " **启动**"，然后选择 " **允许服务与桌面交互** " 选项。
 
 ## <a name="see-also"></a>请参阅
 

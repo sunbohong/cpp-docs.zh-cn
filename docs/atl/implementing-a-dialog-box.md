@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：实现对话框
 title: 实现对话框
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-ms.openlocfilehash: fa7b4122b513d48194dedeb39daecd1dfd7223eb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 736619b39d06cffc28bc9723c94d0c5367dd51d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499573"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152905"
 ---
 # <a name="implementing-a-dialog-box"></a>实现对话框
 
@@ -20,7 +21,7 @@ ms.locfileid: "91499573"
 
 ## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>使用 ATL 对话框向导添加对话框
 
-在 " [添加类" 对话框](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)中，选择 "Atl" 对话框对象以将对话框添加到 atl 项目。 根据需要填写 ATL 对话框向导，然后单击 " **完成**"。 向导将从 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) 派生的类添加到项目。 从 "**视图**" 菜单打开**资源视图**，找到对话框，然后双击以在资源编辑器中打开它。
+在 " [添加类" 对话框](../ide/adding-a-class-visual-cpp.md#add-class-dialog-box)中，选择 "Atl" 对话框对象以将对话框添加到 atl 项目。 根据需要填写 ATL 对话框向导，然后单击 " **完成**"。 向导将从 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) 派生的类添加到项目。 从 "**视图**" 菜单打开 **资源视图**，找到对话框，然后双击以在资源编辑器中打开它。
 
 > [!NOTE]
 > 如果对话框是从派生的 `CAxDialogImpl` ，则它可以承载 ActiveX 控件和 Windows 控件。 如果你不想在对话框类中提供 ActiveX 控件支持的开销，请改用 [CSimpleDialog](../atl/reference/csimpledialog-class.md) 或 [CDialogImpl](../atl/reference/cdialogimpl-class.md) 。

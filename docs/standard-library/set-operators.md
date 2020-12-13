@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 设置 &gt; 运算符
 title: '&lt;set&gt; 运算符'
 ms.date: 03/27/2019
 f1_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - std::operator&lt; (set)
 - std::operator&lt;= (set)
 - std::operator== (set)
-ms.openlocfilehash: a3256b7d963feca75e4a975def0f6da77538d278
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5872760bb7f9cd3517ad14ea29fcca495dbaed59
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217501"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154118"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt; 运算符
 
-## <a name="operator-set"></a><a name="op_neq"></a>operator！ = （set）
+## <a name="operator-set"></a><a name="op_neq"></a> operator！ = (集) 
 
 测试运算符左侧的 set 对象是否不等于右侧的 set 对象。
 
@@ -33,7 +34,7 @@ ms.locfileid: "87217501"
 bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `set` 类型的对象。
@@ -43,7 +44,7 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果这些集不相等，则为;**`false`** 如果集相等，则为。
+**`true`** 如果这些集不相等，则为; **`false`** 如果集相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -86,7 +87,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="operatorlt-set"></a><a name="op_lt"></a>运算符 &lt; （set）
+## <a name="operatorlt-set"></a><a name="op_lt"></a> 操作员 &lt; (集) 
 
 测试运算符左侧的集对象是否小于右侧的集对象。
 
@@ -94,7 +95,7 @@ The sets s1 and s3 are equal.
 bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `set` 类型的对象。
@@ -147,7 +148,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="operatorlt-set"></a><a name="op_lt_eq"></a>operator &lt; = （set）
+## <a name="operatorlt-set"></a><a name="op_lt_eq"></a> operator &lt; = (集) 
 
 测试运算符左侧的集对象是否小于或等于右侧的集对象。
 
@@ -155,7 +156,7 @@ The set s1 is not less than the set s3.
 bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `set` 类型的对象。
@@ -216,7 +217,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="operator-set"></a><a name="op_eq_eq"></a>operator = = （set）
+## <a name="operator-set"></a><a name="op_eq_eq"></a> operator = = (集) 
 
 测试运算符左侧的 set 对象是否等于右侧的 set 对象。
 
@@ -224,7 +225,7 @@ Set s1 is less than or equal to the set s4.
 bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `set` 类型的对象。
@@ -278,7 +279,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="operatorgt-set"></a><a name="op_gt"></a>运算符 &gt; （set）
+## <a name="operatorgt-set"></a><a name="op_gt"></a> 操作员 &gt; (集) 
 
 测试运算符左侧的集对象是否大于右侧的集对象。
 
@@ -286,7 +287,7 @@ The sets s1 and s3 are equal.
 bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `set` 类型的对象。
@@ -339,7 +340,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="operatorgt-set"></a><a name="op_gt_eq"></a>operator &gt; = （set）
+## <a name="operatorgt-set"></a><a name="op_gt_eq"></a> operator &gt; = (集) 
 
 测试运算符左侧的集对象是否大于或等于右侧的集对象。
 
@@ -347,7 +348,7 @@ The set s1 is greater than the set s3.
 bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `set` 类型的对象。
@@ -408,7 +409,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="operator-multiset"></a><a name="op_neq_multiset"></a>operator！ = （多重集）
+## <a name="operator-multiset"></a><a name="op_neq_multiset"></a> operator！ = (多集) 
 
 测试运算符左侧的 multiset 对象是否不等于右侧的 multiset 对象。
 
@@ -416,7 +417,7 @@ Set s1 is greater than or equal to set s4.
 bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multiset` 类型的对象。
@@ -426,7 +427,7 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果集或多重集不相等，则为;**`false`** 如果集或多重集相等，则为。
+**`true`** 如果集或多重集不相等，则为; **`false`** 如果集或多重集相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -470,7 +471,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a>运算符 &lt; （多重集）
+## <a name="operatorlt-multiset"></a><a name="op_lt_multiset"></a> 运算符 &lt; (多重集) 
 
 测试运算符左侧的多重集对象是否小于右侧的多重集对象。
 
@@ -478,7 +479,7 @@ The multisets s1 and s3 are equal.
 bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multiset` 类型的对象。
@@ -536,7 +537,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a>operator &lt; = （多重集）
+## <a name="operatorlt-multiset"></a><a name="op_lt_eq_multiset"></a> operator &lt; = (多重集) 
 
 测试运算符左侧的多重集对象是否小于或等于右侧的多重集对象。
 
@@ -544,7 +545,7 @@ The multiset s1 is not less than the multiset s3.
 bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multiset` 类型的对象。
@@ -611,7 +612,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a>operator = = （多重集）
+## <a name="operator-multiset"></a><a name="op_eq_eq_multiset"></a> operator = = (多集) 
 
 测试运算符左侧的 multiset 对象是否等于右侧的 multiset 对象。
 
@@ -619,7 +620,7 @@ The multiset s1 is less than or equal to the multiset s4.
 bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multiset` 类型的对象。
@@ -673,7 +674,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a>运算符 &gt; （多重集）
+## <a name="operatorgt-multiset"></a><a name="op_gt_multiset"></a> 运算符 &gt; (多重集) 
 
 测试运算符左侧的多重集对象是否大于右侧的多重集对象。
 
@@ -681,7 +682,7 @@ The multisets s1 and s3 are equal.
 bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multiset` 类型的对象。
@@ -739,7 +740,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a>operator &gt; = （多重集）
+## <a name="operatorgt-multiset"></a><a name="op_gt_eq_multiset"></a> operator &gt; = (多重集) 
 
 测试运算符左侧的多重集对象是否大于或等于右侧的多重集对象。
 
@@ -747,7 +748,7 @@ The multiset s1 is greater than the multiset s3.
 bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <Key, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multiset` 类型的对象。

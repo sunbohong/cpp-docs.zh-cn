@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息：使用插入运算符和控制格式
 title: 使用插入运算符并控制格式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-ms.openlocfilehash: 0d6a2afb320f91e51e2a89156a6e6732c6be90e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0ed0e850cb578b66ea9131d135891cbbd26da4b7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215449"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153559"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>使用插入运算符并控制格式
 
-本主题演示如何控制格式以及如何为你自己的类创建插入运算符。 **<<** 对于所有标准 c + + 数据类型，插入（）运算符（预先编程）将字节发送到输出流对象。 插入运算符使用预定义的“操控器”，操控器是更改整数自变量的默认格式的元素。
+本主题演示如何控制格式以及如何为你自己的类创建插入运算符。 插入 (**<<**) 运算符（适用于所有标准 c + + 数据类型的预先编程）将字节发送到输出流对象。 插入运算符使用预定义的“操控器”，操控器是更改整数自变量的默认格式的元素。
 
 你可以使用以下选项控制格式：
 
@@ -72,7 +73,7 @@ for (int i = 0; i <4; i++)
 ******1.23
 *****35.36
 *****653.7
-***4358.24
+**_4358.24
 ```
 
 若要在同一行中指定数据元素的宽度，请使用 `setw` 操控器：
@@ -87,7 +88,7 @@ using namespace std;
 int main( )
 {
    double values[] = { 1.23, 35.36, 653.7, 4358.24 };
-   char *names[] = { "Zoot", "Jimmy", "Al", "Stan" };
+   char _names[] = { "Zoot", "Jimmy", "Al", "Stan" };
    for( int i = 0; i < 4; i++ )
       cout << setw( 7 )  << names[i]
            << setw( 10 ) << values[i] << endl;
@@ -105,7 +106,7 @@ int main( )
 
 和均不 `setw` `width` 截断值。 如果格式化输出超出宽度，则整个值受流的精度设置的约束进行打印。 `setw`和 `width` 仅影响以下字段。 已打印一个字段之后，字段宽度将恢复为其默认行为（必要宽度）。 但是，在更改之前，其他流格式选项保持有效。
 
-## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a>关联
+## <a name="alignment"></a><a name="vclrfalignmentanchor4"></a> 关联
 
 输出流默认为右对齐的文本。 若要左对齐上一示例中的名称并右对齐数字，请将循环替换 **`for`** 为以下内容：
 
@@ -128,11 +129,11 @@ Stan     4358.24
 
 通过使用 [setiosflags](../standard-library/iomanip-functions.md#setiosflags) 操控器和 `left` 枚举器设置左对齐标志。 此枚举器在 [ios](../standard-library/basic-ios-class.md) 类中定义，因此它的引用必须包括 **ios::** 前缀。 [resetiosflags](../standard-library/iomanip-functions.md#resetiosflags) 操控器关闭左对齐标志。 与 `width` 和不同 `setw` ，和的 `setiosflags` 效果 `resetiosflags` 是永久性的。
 
-## <a name="precision"></a><a name="vclrfprecisionanchor5"></a>Precision
+## <a name="precision"></a><a name="vclrfprecisionanchor5"></a> Precision
 
 浮点精度的默认值为六。 例如，数字 3466.9768 打印为 3466.98。 若要更改此值的打印方式，请使用 [setprecision](../standard-library/iomanip-functions.md#setprecision) 操控器。 操控器具有两种标志：[fixed](../standard-library/ios-functions.md#fixed) 和 [scientific](../standard-library/ios-functions.md#scientific)。 如果设定了 [fixed](../standard-library/ios-functions.md#fixed)，则数字将打印为 3466.976800。 如果 `scientific` 已设置，则它将打印为 3.4669773 + 003。
 
-若要显示与一个有效数字[对齐](#vclrfalignmentanchor4)显示的浮点数，请按如下所示替换 **`for`** 循环：
+若要显示与一个有效数字 [对齐](#vclrfalignmentanchor4) 显示的浮点数，请按如下所示替换 **`for`** 循环：
 
 ```cpp
 for (int i = 0; i <4; i++)
@@ -181,9 +182,9 @@ Stan    4.4e+03
 
 程序会再次在小数点之后打印一位数字。 如果 `ios::fixed` `ios::scientific` 设置了或，则精度值将确定小数点后的位数。 如果两个标志均未设定，则精度值将确定有效位数的总数。 `resetiosflags` 操控器清除这些标志。
 
-## <a name="radix"></a><a name="vclrfradixanchor6"></a>基数
+## <a name="radix"></a><a name="vclrfradixanchor6"></a> 基数
 
-`dec`、 `oct` 和操控器 `hex` 设置输入和输出的默认基数。 例如，如果将操控器插入 `hex` 到输出流中，则对象会将整数的内部数据表示形式正确地转换为十六进制输出格式。 如果 [uppercase](../standard-library/ios-functions.md#uppercase) 标志已清除（默认），则数字将显示为采用小写格式的 a 到 f 的数字；否则，将以大写格式显示。 默认基数为 `dec` （十进制）。
+`dec`、 `oct` 和操控器 `hex` 设置输入和输出的默认基数。 例如，如果将操控器插入 `hex` 到输出流中，则对象会将整数的内部数据表示形式正确地转换为十六进制输出格式。 如果 [uppercase](../standard-library/ios-functions.md#uppercase) 标志已清除（默认），则数字将显示为采用小写格式的 a 到 f 的数字；否则，将以大写格式显示。 默认基数 `dec` (decimal) 。
 
 ## <a name="quoted-strings-c14"></a>引用字符串 (C++14)
 
@@ -203,12 +204,12 @@ std::cout << extracted;    //  This
 
 可以手动克服这种行为，但为了使字符串往返过程更方便，C++14 在 \<iomanip> 中添加了 `std::quoted` 流操控器。 插入时， `quoted()` 使用一个分隔符（默认情况下为双引号 ' " '）包围字符串，且在提取时，操作流以提取所有字符直到遇到最后一个分隔符。 任何嵌入的引号都使用转义符进行转义（默认为“\\\\”）。
 
-分隔符仅存在于流对象中;它们不存在于提取的字符串中，但它们存在于[basic_stringstream：： str](../standard-library/basic-stringstream-class.md#str)返回的字符串中。
+分隔符仅存在于流对象中;它们不存在于提取的字符串中，但它们存在于 [basic_stringstream：： str](../standard-library/basic-stringstream-class.md#str)返回的字符串中。
 
 插入和提取操作的空格行为不依赖于字符串在代码中的表示方式，因此，无论输入的字符串是原始字符串文本还是规则的字符串，带引号的运算符都很有用。 输入字符串，无论其格式是什么，都可以有嵌入的引号、换行符、制表符等等且所有这些都将被 quoted() 操控器保留。
 
-有关详细信息和完整代码示例，请参阅[带引号](../standard-library/iomanip-functions.md#quoted)。
+有关详细信息和完整代码示例，请参阅 [带引号](../standard-library/iomanip-functions.md#quoted)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [输出流](../standard-library/output-streams.md)

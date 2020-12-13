@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 实用工具 &gt; 运算符
 title: '&lt;utility&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,19 +17,19 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 7146c31e33b514b20703b280a7194f639c387c26
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0db6f5b18708052964353687190295084886c928
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215448"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153455"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 运算符
 
 > [!NOTE]
 > 使用 `Type&` 的运算符包含在下 `namespace rel_ops` 。
 
-## <a name="operator"></a><a name="op_neq"></a>operator！ =
+## <a name="operator"></a><a name="op_neq"></a> operator！ =
 
 测试运算符左侧和右侧的 pair 对象是否不相等。
 
@@ -40,7 +41,7 @@ template <class T, class U>
     constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `pair` 类型的对象。
@@ -50,7 +51,7 @@ template <class T, class U>
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果对不相等，则为; 否则为。**`false`** 如果对相等，则为。
+**`true`** 如果对不相等，则为; 否则为。 **`false`** 如果对相等，则为。
 
 ### <a name="remarks"></a>备注
 
@@ -103,7 +104,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
 
 测试运算符左侧和右侧的 pair 对象是否相等。
 
@@ -112,7 +113,7 @@ template <class T, class U>
 constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `pair` 类型的对象。
@@ -122,11 +123,11 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果对相等，则为; 否则为。**`false`** 如果不相等，则为 `pair` 。
+**`true`** 如果对相等，则为; 否则为。 **`false`** 如果不相等，则为 `pair` 。
 
 ### <a name="remarks"></a>备注
 
-如果两个对的每个元素对应相等，则这两个对相等。 该函数返回 `left`。 **第一**种  ==  `right` 。 **第一**种  &&  `left` 。 **second**  ==  `right` 。 **second**。 如果一个对的第一个或第二个元素不等于另一个对的相应元素，则这两个对不相等。
+如果两个对的每个元素对应相等，则这两个对相等。 该函数返回 `left`。 **第一** 种  ==  `right` 。 **第一** 种  &&  `left` 。 **second**  ==  `right` 。 **second**。 如果一个对的第一个或第二个元素不等于另一个对的相应元素，则这两个对不相等。
 
 ### <a name="example"></a>示例
 
@@ -166,7 +167,7 @@ int main( )
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt"></a>操作员&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 操作员&lt;
 
 测试运算符左侧的 pair 对象是否小于右侧的 pair 对象。
 
@@ -175,7 +176,7 @@ template <class T, class U>
 constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 运算符左侧类型 `pair` 的对象。
@@ -189,7 +190,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>备注
 
-`left` `pair` `right` `pair` 如果*left*小于且不等于*right*，则认为对象严格小于对象。
+`left` `pair` `right` `pair` 如果 *left* 小于且不等于 *right*，则认为对象严格小于对象。
 
 在配对比较中，两个对的值的第一个元素具有最高优先级。 如果它们不同，则将其比较结果作为配对比较的结果。 如果第一个元素的值不同，则比较第二个元素的值，并将其比较结果作为配对比较的结果。
 
@@ -240,7 +241,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a>操作员&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a> 操作员&lt;=
 
 测试运算符左侧的 pair 对象是否小于或等于右侧的 pair 对象。
 
@@ -252,7 +253,7 @@ template <class T, class U>
 constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 运算符左侧类型 `pair` 的对象。
@@ -325,7 +326,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is less than or equal to the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt"></a>操作员&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 操作员&gt;
 
 测试运算符左侧的 pair 对象是否大于右侧的 pair 对象。
 
@@ -337,7 +338,7 @@ template <class T, class U>
 constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 运算符左侧类型 `pair` 的对象。
@@ -351,7 +352,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="remarks"></a>备注
 
-`left` `pair` `right` `pair` 如果*left*大于且不等于*right*，则认为对象严格大于对象。
+`left` `pair` `right` `pair` 如果 *left* 大于且不等于 *right*，则认为对象严格大于对象。
 
 在配对比较中，两个对的值的第一个元素具有最高优先级。 如果它们不同，则将其比较结果作为配对比较的结果。 如果第一个元素的值不同，则比较第二个元素的值，并将其比较结果作为配对比较的结果。
 
@@ -412,7 +413,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a>操作员&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a> 操作员&gt;=
 
 测试运算符左侧的 pair 对象是否大于或等于右侧的 pair 对象。
 
@@ -424,7 +425,7 @@ template <class T, class U>
     constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 运算符左侧类型 `pair` 的对象。

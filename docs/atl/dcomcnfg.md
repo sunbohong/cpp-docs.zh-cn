@@ -1,46 +1,47 @@
 ---
+description: 了解详细信息： DCOMCNFG.EXE
 title: DCOMCNFG
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-ms.openlocfilehash: a389a46cd02b40cef46d687743fd3416cc4f3154
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d99b0018d63cedbccaf57ec4cadeb649f390dcf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250779"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153156"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 
-DCOMCNFG 是 Windows NT 4.0 实用工具，可让你在注册表中配置各种特定于 DCOM 的设置。 DCOMCNFG 窗口中有三个页面：默认安全、 默认属性和应用程序。 在 Windows 2000 下第四页上，默认协议，不存在。
+DCOMCNFG.EXE 是一种 Windows NT 4.0 实用程序，可用于在注册表中配置各种 DCOM 特定设置。 DCOMCNFG.EXE 窗口包含三个页面：默认安全性、默认属性和应用程序。 在 Windows 2000 下，有第四页（默认协议）。
 
 ## <a name="default-security-page"></a>默认安全页
 
-默认安全页可用于在系统上指定对象的默认权限。 默认安全页包含三个部分：访问、 启动和配置。 若要更改节的默认值，请单击相应**编辑默认值**按钮。 这些默认安全设置存储在注册表中`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`。
+您可以使用 "默认安全" 页来指定系统上对象的默认权限。 默认的 "安全" 页包含三个部分： "访问"、"启动" 和 "配置"。 若要更改节的默认值，请单击相应的 " **编辑默认值** " 按钮。 这些默认安全设置存储在下的注册表中 `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE` 。
 
-## <a name="default-protocols-page"></a>默认协议页
+## <a name="default-protocols-page"></a>"默认协议" 页
 
-此页列出了在此计算机上的 DCOM 可用的网络协议的集。 顺序反映了在其中将会使用它们; 的优先级在列表中的第一个具有最高优先级。 可以添加或删除此页面中的协议。
+此页列出了可用于此计算机上的 DCOM 的网络协议集。 顺序反映了它们将使用的优先级;列表中的第一个具有最高优先级。 可以在此页中添加或删除协议。
 
-## <a name="default-properties-page"></a>默认值属性页
+## <a name="default-properties-page"></a>默认属性页
 
-在默认的属性页上，必须选择**在此计算机上启用分布式 COM**复选框，如果你希望在此计算机上运行的访问 COM 对象的其他计算机上的客户端。 选择此选项设置`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM`值设为`Y`。
+如果希望其他计算机上的客户端访问在此计算机上运行的 COM 对象，则必须在 "默认属性" 页上选中 "在 **此计算机上启用分布式 COM** " 复选框。 选择此选项会将 `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` 值设置为 `Y` 。
 
-## <a name="applications-page"></a>应用程序页
+## <a name="applications-page"></a>应用程序页面
 
-更改与应用程序页的特定对象的设置。 只需从列表中选择应用程序，然后单击**属性**按钮。 属性窗口具有五个页面：
+您可以使用 "应用程序" 页更改特定对象的设置。 只需从列表中选择应用程序，然后单击 " **属性** " 按钮。 属性窗口包含五个页面：
 
-- 常规页确认您正在使用的应用程序。
+- "常规" 页确认正在处理的应用程序。
 
-- 位置页可以指定应用程序运行时在客户端调用的位置`CoCreateInstance`上相关的 CLSID。 如果选择**以下计算机上运行应用程序**复选框并输入计算机名称，则`RemoteServerName`值则会添加在该应用程序的 AppID。 清除**在此计算机上运行应用程序**复选框重命名`LocalService`值设为`_LocalService`并从而，禁用它。
+- 使用 "位置" 页，可以指定客户端调用相关 CLSID 时应运行应用程序的位置 `CoCreateInstance` 。 如果选中 "在 **下列计算机上运行应用程序** " 复选框并输入计算机名称，则 `RemoteServerName` 会在该应用程序的 AppID 下添加一个值。 清除 " **在此计算机上运行应用程序** " 复选框会将值重命名 `LocalService` 为， `_LocalService` 从而禁用它。
 
-- 安全性页具有类似于在 DCOMCNFG 窗口中，找到默认安全页，只不过这些设置仅适用于当前应用程序。 同样，设置存储在该对象的 AppID。
+- "安全性" 页类似于 "DCOMCNFG.EXE" 窗口中的 "默认安全性" 页，只不过这些设置仅应用于当前应用程序。 同样，设置存储在该对象的 AppID 下。
 
-- 标识页将标识哪个用户用来运行该应用程序。
+- 标识页面标识了用于运行应用程序的用户。
 
-- 终结点页列出的一套协议和终结点可供所选的 DCOM 服务器的客户端使用。
+- "终结点" 页列出了可供所选 DCOM 服务器的客户端使用的协议和终结点的集合。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; shared_mutex>
 title: '&lt;shared_mutex&gt;'
 ms.date: 03/27/2019
 f1_keywords:
@@ -45,12 +46,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: f33a9c5fe4c5058d039feff896f7e53fe40cbf31
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 97446b3709dd71b49389fa63ac067f7cc9ccf820
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154057"
 ---
 # <a name="ltshared_mutex"></a>&lt;shared_mutex>
 
@@ -83,7 +84,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="remarks"></a>备注
 
-类 `shared_mutex` 的实例是一个共享 mutex 类型**，该类型可控制作用域内 mutex 的共享所有权。 共享 mutex 类型满足作为 mutex 类型和成员的所有要求，以支持共享的非独占所有权。
+类 `shared_mutex` 的实例是一个共享 mutex 类型，该类型可控制作用域内 mutex 的共享所有权。 共享 mutex 类型满足作为 mutex 类型和成员的所有要求，以支持共享的非独占所有权。
 
 共享 mutex 类型支持其他其他方法 `lock_shared`、`unlock_shared` 和 `try_lock_shared`：
 
@@ -104,7 +105,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 `shared_lock`类模板将对定时锁定和所有权传输的支持扩展到共享 mutex。 Mutex 所有权可以在构造之时或之后获得，也可转移到另一个 `shared_lock` 对象。 可移动 `shared_lock` 类型的对象，但不能复制。
 
 > [!WARNING]
-> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元，且不再使用 ConcRT （当目标平台为 Windows XP 时除外）。 Shared_mutex> 中定义的类型 &lt; 不应与任何 ConcRT 类型或函数一起使用。
+> 从 Visual Studio 2015 开始，c + + 标准库同步类型基于 Windows 同步基元，不再使用 ConcRT (除非目标平台是 Windows XP) 。 Shared_mutex> 中定义的类型 &lt; 不应与任何 ConcRT 类型或函数一起使用。
 
 ## <a name="classes"></a>类
 
@@ -135,7 +136,7 @@ public:
    };
 ```
 
-### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a>shared_timed_mutex 类
+### <a name="shared_timed_mutex-class"></a><a name="class_shared_timed_mutex"></a> shared_timed_mutex 类
 
 类 `shared_timed_mutex` 实现非递归 mutex 和满足定时 mutex 类型要求的共享所有权语义。
 
@@ -215,7 +216,7 @@ private:
 
 ## <a name="functions"></a>函数
 
-### <a name="swap"></a><a name="function_swap"></a>购
+### <a name="swap"></a><a name="function_swap"></a> 购
 
 交换 `shared_lock` 对象。
 
@@ -232,7 +233,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [&lt;mutex>](../standard-library/mutex.md)

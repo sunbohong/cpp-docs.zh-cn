@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 实用工具&gt;
 title: '&lt;utility&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 1beade28ceec0f1552def4bc70c2e95e6b2aa24d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 67472492acdb0ddbc1de957a69c01b1aafaf9367
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153429"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -44,7 +45,7 @@ ms.locfileid: "87215434"
 
 |模板|描述|
 |-|-|
-|[index_sequence](../standard-library/utility-functions.md#index_sequence)|为常见情况定义的别名模板，其中 `T` 是`std::size_t`  |
+|[index_sequence](../standard-library/utility-functions.md#index_sequence)|为常见情况定义的别名模板，其中 `T` 是 `std::size_t`  |
 |[index_sequence_for](../standard-library/utility-functions.md#index_sequence_for)|用于将任何类型参数包转换为同一长度的索引序列的帮助程序别名模板|
 |[make_index_sequence](../standard-library/utility-functions.md#make_index_sequence)| 用于简化类型创建的帮助程序别名模板 `std::index_sequence` 。 |
 |[make_integer_sequence](../standard-library/utility-functions.md#make_integer_sequence)|用于简化类型创建的帮助程序别名模板 `std::integer_sequence` 。|
@@ -67,7 +68,7 @@ ms.locfileid: "87215434"
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[operator！ =](../standard-library/utility-operators.md#op_neq)|测试运算符左侧和右侧的 pair 对象是否不相等。|
 |[operator = =](../standard-library/utility-operators.md#op_eq_eq)|测试运算符左侧和右侧的 pair 对象是否相等。|
@@ -88,7 +89,7 @@ ms.locfileid: "87215434"
 |[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|用于保留单独的构造函数和函数重载的类型。|
 |[to_chars_result](../standard-library/to-chars-result-structure.md)|用于的结构 `to_chars` 。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

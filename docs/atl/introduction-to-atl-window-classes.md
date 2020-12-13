@@ -1,41 +1,42 @@
 ---
+description: 了解详细信息： ATL 窗口类简介
 title: ATL 窗口类简介
 ms.date: 11/04/2016
 helpviewer_keywords:
 - window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-ms.openlocfilehash: 0c3bc70b5edfb089a6276003625b876d8c553dcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54a9d9764450025e51f9fac368a3434ca786fe09
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152719"
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL 窗口类简介
 
-下面的 ATL 类可实现和操作窗口：
+以下 ATL 类旨在实现和操作 windows：
 
-- [CWindow](../atl/reference/cwindow-class.md)允许您附加的窗口句柄`CWindow`对象。 然后，调用`CWindow`操作窗口的方法。
+- 使用[CWindow](../atl/reference/cwindow-class.md)可以将窗口句柄附加到 `CWindow` 对象。 然后调用 `CWindow` 方法以操作窗口。
 
-- [CWindowImpl](../atl/reference/cwindowimpl-class.md) ，可实现新的窗口和处理消息映射的消息。 您可以创建基于新的 Windows 类、 超类现有类或子类现有窗口窗口。
+- [CWindowImpl](../atl/reference/cwindowimpl-class.md) 允许使用消息映射实现新窗口和处理消息。 可以基于新的 Windows 类、现有类的超类或现有窗口的子类创建窗口。
 
-- [CDialogImpl](../atl/reference/cdialogimpl-class.md) ，可实现在安装结束时或使用消息映射无模式对话框框和处理消息。
+- [CDialogImpl](../atl/reference/cdialogimpl-class.md) 允许实现模式对话框或无模式对话框并使用消息映射处理消息。
 
-- [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)是一个预生成的类，另一个类中实现其消息映射包含一个窗口。 使用`CContainedWindowT`允许您集中在一个类中的消息处理。
+- [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) 是一个预生成的类，用于实现其消息映射包含在另一个类中的窗口。 使用可以 `CContainedWindowT` 在一个类中集中处理消息处理。
 
-- [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)功能可以实现承载 ActiveX 控件的对话框 （模式或无模式）。
+- 使用[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)可以实现一个对话框， (承载 ActiveX 控件的模式或无模式) 。
 
-- [CSimpleDialog](../atl/reference/csimpledialog-class.md)功能可以实现具有基本功能的模式对话框。
+- [CSimpleDialog](../atl/reference/csimpledialog-class.md) 允许实现具有基本功能的模式对话框。
 
-- [CAxWindow](../atl/reference/caxwindow-class.md)功能可以实现承载 ActiveX 控件的窗口。
+- [CAxWindow](../atl/reference/caxwindow-class.md) 允许实现承载 ActiveX 控件的窗口。
 
-- [CAxWindow2T](../atl/reference/caxwindow2t-class.md)功能可以实现承载授权的 ActiveX 控件的窗口。
+- [CAxWindow2T](../atl/reference/caxwindow2t-class.md) 使你能够实现一个承载授权 ActiveX 控件的窗口。
 
-除了特定的窗口类，ATL 提供了几个类旨在简化 ATL 窗口对象的实现。 它们是：
+除了特定的窗口类之外，ATL 还提供了若干类，旨在简化 ATL 窗口对象的实现。 这些限制如下：
 
-- [CWndClassInfo](../atl/reference/cwndclassinfo-class.md)管理新的窗口类信息。
+- [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) 管理新窗口类的信息。
 
-- [CWinTraits](../atl/reference/cwintraits-class.md)并[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)提供标准化的 ATL 窗口对象的特性的一个简单的方法。
+- [CWinTraits](../atl/reference/cwintraits-class.md) 和 [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) 提供了一种简单的方法来标准化 ATL 窗口对象的特征。
 
 ## <a name="see-also"></a>请参阅
 

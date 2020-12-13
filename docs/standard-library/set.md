@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 设置&gt;
 title: '&lt;set&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 4ac5c0bbf94c4d17389efb424d2e12b84717c4a9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 821e48fd6c5760900a955fe10d94a873d7454dc4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846220"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154105"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
@@ -30,7 +31,7 @@ ms.locfileid: "88846220"
 
 ### <a name="operators"></a>运算符
 
-|Set 版本|Multiset 版本|说明|
+|Set 版本|Multiset 版本|描述|
 |-|-|-|
 |[operator！ = (集) ](../standard-library/set-operators.md#op_neq)|[operator！ = (多集) ](../standard-library/set-operators.md#op_neq)|测试运算符左侧的 set 或 multiset 对象是否不等于右侧的 set 或 multiset 对象。|
 |[运算符< (集) ](../standard-library/set-operators.md#op_lt)|[运算符< (多重集) ](../standard-library/set-operators.md#op_lt_multiset)|测试运算符左侧的 set 或 multiset 对象是否小于右侧的 set 或 multiset 对象。|
@@ -41,18 +42,18 @@ ms.locfileid: "88846220"
 
 ### <a name="specialized-template-functions"></a>专用化模板函数
 
-|Set 版本|Multiset 版本|说明|
+|Set 版本|Multiset 版本|描述|
 |-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[交换 (多重集) ](../standard-library/set-functions.md#swap_multiset)|交换两个集或多个集的元素。|
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[set 类](../standard-library/set-class.md)|用于存储和检索集合中的数据，此集合中包含的元素值是唯一的，并且用作数据自动排序所依据的关键字值。|
 |[多重集类](../standard-library/multiset-class.md)|用于存储和检索集合中的数据，此集合中包含的元素值不必是唯一的，并且可用作数据自动排序所依据的关键字值。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

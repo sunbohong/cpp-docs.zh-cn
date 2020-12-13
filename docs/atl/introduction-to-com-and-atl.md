@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： COM 和 ATL 简介
 title: COM 和 ATL 简介
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ATL, COM
 - COM objects, ATL
 ms.assetid: 35d6ae9c-abbb-42f0-9344-33f3c19ac3ce
-ms.openlocfilehash: a107fa9feee7b20a81ea4c1613003da1bcb47f60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d08702eed7d95a259c89138534aa53010f6e9a62
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152680"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 和 ATL 简介
 
@@ -21,10 +22,10 @@ ms.locfileid: "69492083"
 ## <a name="in-this-section"></a>本节内容
 
 [COM 简介](../atl/introduction-to-com.md)<br/>
-概述组件对象模型 (COM) 的基本概念, 包括接口、 `IUnknown`引用计数、 `QueryInterface`、封送和聚合。
+概述组件对象模型的 (COM) 基本概念，包括接口、 `IUnknown` 引用计数、 `QueryInterface` 封送处理和聚合。
 
 [ATL 简介](../atl/introduction-to-atl.md)<br/>
-简要介绍了活动模板库 (ATL) 的设计内容、模板库和 ATL 版本号。 包含在 ATL 和 MFC 之间进行选择的建议。
+简要介绍了活动模板库 (ATL) 的设计目标、模板库和 ATL 版本号。 包含在 ATL 和 MFC 之间进行选择的建议。
 
 ## <a name="related-sections"></a>相关章节
 

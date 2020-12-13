@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：集合类
 title: ATL 中的集合类
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: a93810b91cefd897b55cae4760ade32374900eb3
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: bf0b8cf1e45673dd64b1b1d60a56ed9889bb6cff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153312"
 ---
 # <a name="collection-classes"></a>集合类
 
@@ -60,11 +61,11 @@ ms.locfileid: "90041414"
 
 - [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) 此类提供由基元数据类型组成的集合类的默认方法和函数。
 
-- [CRBMap](../atl/reference/crbmap-class.md) 此类表示使用 Red-黑色二进制树的映射结构。
+- [CRBMap](../atl/reference/crbmap-class.md) 此类表示使用 Red-Black 二进制树的映射结构。
 
-- [CRBMultiMap](../atl/reference/crbmultimap-class.md) 此类表示一个映射结构，该结构允许每个键与多个值相关联，同时使用 Red-黑色二进制树。
+- [CRBMultiMap](../atl/reference/crbmultimap-class.md) 此类表示一个映射结构，该结构允许每个键与多个值相关联，同时使用 Red-Black 的二进制树。
 
-- [CRBTree](../atl/reference/crbtree-class.md) 此类提供用于创建和使用红黑树的方法。
+- [CRBTree](../atl/reference/crbtree-class.md) 此类提供用于创建和使用 Red-Black 树的方法。
 
 - [CSimpleArray](../atl/reference/csimplearray-class.md) 此类提供用于管理简单数组的方法。
 
@@ -88,7 +89,7 @@ ms.locfileid: "90041414"
 
 [ATL 集合类概述](../atl/atl-collection-classes.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../atl/atl-class-overview.md)<br/>
 [集合类](../atl/atl-collection-classes.md)

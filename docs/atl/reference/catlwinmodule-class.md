@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAtlWinModule 类
 title: CAtlWinModule 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 04dc7e5b8c0c5dd21567f23395b4bafd4ae839dc
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ed0c52a59401fa5411fd6d5acbcaf72f31aeb11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229982"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152563"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 类
 
@@ -34,7 +35,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|构造函数。|
 |[CAtlWinModule：： ~ CAtlWinModule](#dtor)|析构函数。|
@@ -60,7 +61,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 **标头：** atlbase。h
 
-## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData
+## <a name="catlwinmoduleaddcreatewnddata"></a><a name="addcreatewnddata"></a> CAtlWinModule::AddCreateWndData
 
 此方法初始化并添加 `_AtlCreateWndData` 结构。
 
@@ -68,7 +69,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pData*<br/>
 指向要 `_AtlCreateWndData` 初始化并添加到当前模块的结构的指针。
@@ -78,9 +79,9 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 
 ### <a name="remarks"></a>备注
 
-此方法调用[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) ，后者初始化[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)结构。 此结构将存储 **`this`** 用于在窗口过程中获取类实例的指针。
+此方法调用 [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) ，后者初始化 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 结构。 此结构将存储 **`this`** 用于在窗口过程中获取类实例的指针。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule
+## <a name="catlwinmodulecatlwinmodule"></a><a name="catlwinmodule"></a> CAtlWinModule::CAtlWinModule
 
 构造函数。
 
@@ -90,9 +91,9 @@ CAtlWinModule();
 
 ### <a name="remarks"></a>备注
 
-如果初始化失败，则会引发**EXCEPTION_NONCONTINUABLE**异常。
+如果初始化失败，则会引发 **EXCEPTION_NONCONTINUABLE** 异常。
 
-## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a>CAtlWinModule：： ~ CAtlWinModule
+## <a name="catlwinmodulecatlwinmodule"></a><a name="dtor"></a> CAtlWinModule：： ~ CAtlWinModule
 
 析构函数。
 
@@ -104,7 +105,7 @@ CAtlWinModule();
 
 释放所有已分配的资源。
 
-## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData
+## <a name="catlwinmoduleextractcreatewnddata"></a><a name="extractcreatewnddata"></a> CAtlWinModule::ExtractCreateWndData
 
 此方法返回指向结构的指针 `_AtlCreateWndData` 。
 
@@ -114,9 +115,9 @@ void* ExtractCreateWndData();
 
 ### <a name="return-value"></a>返回值
 
-返回一个指向 `_AtlCreateWndData` 先前用[CAtlWinModule：： AddCreateWndData](#addcreatewnddata)添加的结构的指针; 如果没有可用的对象，则返回 NULL。
+返回一个指向 `_AtlCreateWndData` 先前用 [CAtlWinModule：： AddCreateWndData](#addcreatewnddata)添加的结构的指针; 如果没有可用的对象，则返回 NULL。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

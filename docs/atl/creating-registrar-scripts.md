@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：创建注册器脚本
 title: 为 ATL 注册器创建脚本
 ms.date: 05/14/2014
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-ms.openlocfilehash: f32606701ea08736985f0b0dd2ed82712040a049
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a3ce4855460e65eda5ab522bc16f39191da02a71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153182"
 ---
 # <a name="creating-registrar-scripts"></a>创建注册器脚本
 
@@ -25,13 +26,13 @@ ATL 注册器的脚本引擎会在运行时处理你的注册器脚本。 ATL �
 
 本文介绍了与注册器脚本相关的以下主题：
 
-- [了解巴科斯-诺尔范式 (BNF) 语法](../atl/understanding-backus-naur-form-bnf-syntax.md)
+- [了解巴科斯范式 (BNF) 语法](../atl/understanding-backus-naur-form-bnf-syntax.md)
 
 - [了解分析树](../atl/understanding-parse-trees.md)
 
 - [注册表脚本示例](../atl/registry-scripting-examples.md)
 
-- [使用可替换参数（注册器预处理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)
+- [使用可替换参数 (注册器的预处理器) ](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)
 
 - [调用脚本](../atl/invoking-scripts.md)
 

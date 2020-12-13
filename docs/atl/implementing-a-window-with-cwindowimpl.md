@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用 CWindowImpl 实现窗口
 title: 使用 CWindowImpl 实现窗口
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - subclassing ATL window classes
 - superclassing, ATL
 ms.assetid: 3fc40550-f1d6-4702-8b7c-4cf682b6a855
-ms.openlocfilehash: 7ce1a2ec08e49e047aee5248bda0094d9e392614
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 4010450b21a7cbbb4c4f1e4b7a39f594ce1e466e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135510"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152876"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>使用 CWindowImpl 实现窗口
 
@@ -64,6 +65,6 @@ ms.locfileid: "92135510"
 
 `Create`调用 `SubclassWindow` 并向其传递指向你要为其划分子类的现有窗口的句柄，而不是调用。 在窗口成为子类后，它将使用 `CWindowImpl::WindowProc` (或重写此方法的函数) 将消息定向到消息映射。 若要从对象分离子类窗口，请调用 `UnsubclassWindow` 。 然后，将还原窗口的原始窗口过程。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [实现窗口](../atl/implementing-a-window.md)

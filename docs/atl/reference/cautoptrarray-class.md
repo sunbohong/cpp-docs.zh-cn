@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAutoPtrArray 类
 title: CAutoPtrArray 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 55f9382c82a1e242342d0d740c369a571c43f9ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82167654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152570"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 类
 
@@ -31,24 +32,24 @@ class CAutoPtrArray : public CAtlArray<
                         CAutoPtrElementTraits<E>>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*电邮*<br/>
+*E*<br/>
 指针类型。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|构造函数。|
 
 ## <a name="remarks"></a>备注
 
-此类提供构造函数并从[CAtlArray](../../atl/reference/catlarray-class.md)和[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)派生方法，以帮助创建存储智能指针的集合类对象。
+此类提供构造函数并从 [CAtlArray](../../atl/reference/catlarray-class.md) 和 [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) 派生方法，以帮助创建存储智能指针的集合类对象。
 
-有关详细信息，请参阅[ATL Collection 类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅 [ATL Collection 类](../../atl/atl-collection-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -60,7 +61,7 @@ class CAutoPtrArray : public CAtlArray<
 
 **标头：** atlcoll
 
-## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a> CAutoPtrArray::CAutoPtrArray
 
 构造函数。
 
@@ -72,7 +73,7 @@ CAutoPtrArray() throw();
 
 初始化智能指针数组。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CAtlArray 类](../../atl/reference/catlarray-class.md)<br/>
 [CAutoPtrElementTraits 类](../../atl/reference/cautoptrelementtraits-class.md)<br/>

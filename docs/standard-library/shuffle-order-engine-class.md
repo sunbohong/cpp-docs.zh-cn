@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： shuffle_order_engine 类
 title: shuffle_order_engine 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: 49841d0527d82bf5877322a7c4dab17e95a3360e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3be8438ac0809d697d081d998450bde09d1d583e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846194"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97154014"
 ---
 # <a name="shuffle_order_engine-class"></a>shuffle_order_engine 类
 
@@ -33,7 +34,7 @@ template <class Engine, size_t K>
 class shuffle_order_engine;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *搜索引擎优化*\
 基引擎类型。
@@ -52,7 +53,7 @@ class shuffle_order_engine;
 
 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类模板介绍了通过对其基引擎返回的值进行重新排序来产生值的 *引擎适配器* 。 每个构造函数使用基引擎返回的 *K* 值填充内部表，并在请求值时从表中选择一个随机元素。
 
@@ -62,6 +63,6 @@ class shuffle_order_engine;
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

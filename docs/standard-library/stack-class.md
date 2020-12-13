@@ -1,4 +1,5 @@
 ---
+description: 详细了解： stack 类
 title: stack 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: f1d44a4242542ac6856fd7208fe423c43ae79997
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6caec52124b247e405299d45f55a86c20f991abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844296"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97153858"
 ---
 # <a name="stack-class"></a>stack 类
 
@@ -38,7 +39,7 @@ template <class Type, class Container= deque <Type>>
 class stack
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 要存储在堆栈中的元素数据类型。
@@ -46,7 +47,7 @@ class stack
 *容器*\
 用来实现堆栈的基础容器的类型。 默认值为类 `deque` *\<Type>* 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `Type`堆栈对象的第一个模板参数中的规定类的元素与[value_type](#value_type)同义，并且必须与 `Container` 第二个模板参数规定的基础容器类中的元素类型相匹配。 `Type`必须是可赋值的，以便可以复制该类型的对象并为该类型的变量赋值。
 
@@ -64,13 +65,13 @@ class stack
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[stack](#stack)|构造一个空的或者是基容器对象副本的 `stack`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[container_type](#container_type)|一种类型，它提供将由 `stack` 采用的基容器。|
 |[size_type](#size_type)|可表示 `stack` 中元素数量的无符号整数类型。|
@@ -78,10 +79,10 @@ class stack
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[empty](#empty)|测试 `stack` 是否为空。|
-|[弹出](#pop)|从 `stack` 的顶部删除元素。|
+|[pop](#pop)|从 `stack` 的顶部删除元素。|
 |[push](#push)|将元素添加到 `stack` 顶部。|
 |[大小](#size)|返回 `stack` 中的元素数量。|
 |[返回页首](#top)|返回对 `stack` 顶部元素的引用。|
@@ -94,7 +95,7 @@ class stack
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是模板参数 `Container` 的同义词。 三个 C++ 标准库序列容器类 - 矢量类、列表类和默认的类 deque - 满足用作堆栈对象的基容器的要求。 也可能使用满足要求的用户定义的类型。
 
@@ -157,7 +158,7 @@ The stack s2 is empty.
 void pop();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 堆栈必须为非空才能应用成员函数。 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。
 
@@ -213,12 +214,12 @@ After a pop, the element at the top of the stack is 20.
 void push(const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 添加到堆栈顶部的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。
 
@@ -303,7 +304,7 @@ The stack length is now 2.
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型为堆栈采用的基容器的 `size_type` 的同义词。
 
@@ -321,7 +322,7 @@ stack();
 explicit stack(const container_type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 所构造堆栈要成为其副本的矢量。
@@ -379,7 +380,7 @@ const_reference top() const;
 
 对堆栈顶部容器中的最后一个元素的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 堆栈必须为非空才能应用成员函数。 堆栈顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。
 
@@ -424,7 +425,7 @@ The next integer down is 1.
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型为堆栈采用的基容器的 `value_type` 的同义词。
 
@@ -457,7 +458,7 @@ The value_type is AnInt = 69
 The element at the top of the stack is 69.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)
