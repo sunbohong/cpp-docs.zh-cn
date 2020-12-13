@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ismbbalpha、_ismbbalpha_l
 title: _ismbbalpha、_ismbbalpha_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-ms.openlocfilehash: 1fa92d8e0f0ed331110666add1015fbdacf20f07
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 93ae26ff54af4cdee5f99e51c8f85d14ec51ae4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917502"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335671"
 ---
 # <a name="_ismbbalpha-_ismbbalpha_l"></a>_ismbbalpha、_ismbbalpha_l
 
@@ -56,9 +57,9 @@ int _ismbbalpha_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要测试的整数。
 
 *locale*<br/>
@@ -66,19 +67,19 @@ int _ismbbalpha_l(
 
 ## <a name="return-value"></a>返回值
 
-如果表达式为，则 **_ismbbalpha**返回非零值：
+如果表达式为，则 **_ismbbalpha** 返回非零值：
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-对于*c*，为非零; 否则为0。 **_ismbbalpha**为任何与区域设置相关的字符设置使用当前区域设置。 **_ismbbalpha_l**相同，只不过它使用传入的区域设置。
+对于 *c*，为非零; 否则为0。 **_ismbbalpha** 为任何与区域设置相关的字符设置使用当前区域设置。 **_ismbbalpha_l** 相同，只不过它使用传入的区域设置。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|
@@ -89,7 +90,7 @@ int _ismbbalpha_l(
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字节分类](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

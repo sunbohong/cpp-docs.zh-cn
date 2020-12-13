@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：基类
 title: 基本类
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - virtual base classes [C++]
 - base classes [C++]
 ms.assetid: 6e6d54d0-6f21-4a16-9103-22935d98f596
-ms.openlocfilehash: 50bddef3ea1ee1462d8cf115c0980270c8deab25
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 914a09817c29683123823acfff80c0428da6b2d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181468"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335614"
 ---
 # <a name="base-classes"></a>基本类
 

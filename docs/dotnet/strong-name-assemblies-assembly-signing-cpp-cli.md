@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：强名称程序集 (程序集签名)  (c + +/CLI) '
 title: 强名称程序集（程序集签名）(C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +10,20 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fc08df759fa384ed13dbe3d8c3eb2d843183517
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384577"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335314"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>强名称程序集（程序集签名）(C++/CLI)
 
-本主题讨论如何对您的程序集，通常被称为对程序集赋予强名称签名。
+本主题讨论如何对程序集进行签名，通常称为为程序集提供强名称。
 
 ## <a name="remarks"></a>备注
 
-当使用视觉对象C++，使用链接器选项来登录您的程序集，以避免与程序集签名的 CLR 属性相关的问题：
+使用 Visual C++ 时，请使用链接器选项对程序集进行签名，以避免与用于程序集签名的 CLR 特性相关的问题：
 
 - <xref:System.Reflection.AssemblyDelaySignAttribute>
 
@@ -30,22 +31,22 @@ ms.locfileid: "62384577"
 
 - <xref:System.Reflection.AssemblyKeyNameAttribute>
 
-不使用属性的原因包括密钥的名称将显示在程序集元数据，可能会有安全风险，如果文件名称中包含机密信息的事实。 此外，生成过程视觉对象使用C++开发环境将导致与该程序集已签名，如果你使用 CLR 属性来为程序集赋予强名称，然后运行程序集上 mt.exe 之类的后续处理工具的密钥无效。
+不使用属性的原因包括密钥名称在程序集元数据中可见，如果文件名包含机密信息，这可能会带来安全风险。 此外，如果你使用 CLR 特性为程序集提供强名称，然后在程序集上运行类似于 mt.exe 的后期处理工具，则 Visual C++ 开发环境使用的生成过程将使程序集签名无效。
 
-如果你在命令行生成、 链接器选项用于对程序集签名，然后运行后续处理工具 （如 mt.exe)，您需要使用 sn.exe 程序集重新签名。 或者，可以生成和延迟签名程序集并后运行后续处理的工具，需要完成的签名。
+如果在命令行中生成，请使用链接器选项对程序集进行签名，然后运行 (如 mt.exe) 的后期处理工具，你将需要使用 sn.exe 对程序集进行重新签名。 或者，您可以生成并延迟对程序集的签名，并在运行后处理工具之后完成签名。
 
-如果在开发环境中生成时使用的签名特性，可以通过显式调用 sn.exe 成功登录该程序集 ([Sn.exe （强名称工具）](/dotnet/framework/tools/sn-exe-strong-name-tool)) 后期生成事件中。 有关详细信息，请参阅[指定生成事件](../build/specifying-build-events.md)。 如果使用属性和生成后事件，与使用链接器选项相比，生成时间可能会更少。
+如果在开发环境中生成时使用签名特性，则可以通过在生成后事件中显式调用 sn.exe ([Sn.exe (强名称工具) ](/dotnet/framework/tools/sn-exe-strong-name-tool)) 来成功对程序集进行签名。 有关详细信息，请参阅[指定生成事件](../build/specifying-build-events.md)。 与使用链接器选项相比，如果使用属性和生成后事件，则生成时间可能更少。
 
 以下链接器选项支持程序集签名：
 
-- [/DELAYSIGN（为程序集进行部分签名）](../build/reference/delaysign-partially-sign-an-assembly.md)
+- [/DELAYSIGN (对程序集进行部分签名) ](../build/reference/delaysign-partially-sign-an-assembly.md)
 
-- [/KEYFILE（指定密钥或密钥对以便为程序集签名）](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
+- [/KEYFILE (指定密钥或密钥对以对程序集进行签名) ](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)
 
-- [/KEYCONTAINER（指定密钥容器以便为程序集签名）](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
+- [/KEYCONTAINER (指定用于对程序集进行签名的密钥容器) ](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-有关强的程序集的详细信息，请参阅[创建和使用具有强名称程序集](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)。
+有关强程序集的详细信息，请参阅 [创建和使用 Strong-Named 程序集](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)。
 
 ## <a name="see-also"></a>请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[用 c + +/CLI (Visual C++ 的 .NET 编程) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

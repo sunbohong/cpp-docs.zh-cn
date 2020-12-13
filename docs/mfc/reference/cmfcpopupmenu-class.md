@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCPopupMenu 类
 title: CMFCPopupMenu 类
 ms.date: 10/18/2018
 f1_keywords:
@@ -160,12 +161,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: 89089559916419bc27b0528430fe7ad12ca804b0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 97429da34643945ff75b2a16e7bbaf6df439e425
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334761"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 类
 
@@ -182,13 +183,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CMFCPopupMenu：： CMFCPopupMenu](#cmfcpopupmenu)|构造 `CMFCPopupMenu` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMFCPopupMenu：： ActivatePopupMenu](#activatepopupmenu)||
 |[CMFCPopupMenu：： AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|设置是否允许弹出菜单显示用户定义的工具的空项。|
@@ -228,7 +229,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu：： InsertSeparator](#insertseparator)|在弹出菜单中的指定位置插入一个分隔符。|
 |[CMFCPopupMenu：： IsAlwaysClose](#isalwaysclose)||
 |[CMFCPopupMenu：： IsAlwaysShowEmptyToolsEntry](#isalwaysshowemptytoolsentry)||
-|[CMFCPopupMenu：： IsCustomizePane](#iscustomizepane)|指示弹出菜单是否作为 **QuickCustomizePane**运行。|
+|[CMFCPopupMenu：： IsCustomizePane](#iscustomizepane)|指示弹出菜单是否作为 **QuickCustomizePane** 运行。|
 |[CMFCPopupMenu：： IsEscClose](#isescclose)||
 |[CMFCPopupMenu：： IsIdle](#isidle)|指示弹出菜单当前是否处于空闲状态。|
 |[CMFCPopupMenu：： IsMenuSound](#ismenusound)||
@@ -266,13 +267,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CMFCPopupMenu：： CreateTearOffBar](#createtearoffbar)||
 |[CMFCPopupMenu：： OnChangeHot](#onchangehot)||
 |[CMFCPopupMenu：： OnChooseItem](#onchooseitem)||
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 通常，MFC 会自动创建弹出菜单。 如果要 `CMFCPopupMenu` 手动创建对象，请在堆上分配一个对象，然后调用 [CMFCPopupMenu：： create](#create)。
 
@@ -308,14 +309,14 @@ static BOOL __stdcall ActivatePopupMenu(
     CMFCPopupMenu* pPopupMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pTopFrame*<br/>
 中 *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenualwaysshowemptytoolsentry"></a><a name="alwaysshowemptytoolsentry"></a> CMFCPopupMenu：： AlwaysShowEmptyToolsEntry
 
@@ -325,7 +326,7 @@ static BOOL __stdcall ActivatePopupMenu(
 static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bShow*<br/>
 中如果弹出菜单可以显示空项，则为 TRUE;否则为 FALSE。
@@ -338,7 +339,7 @@ BOOL AreAllCommandsShown() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenucheckarea"></a><a name="checkarea"></a> CMFCPopupMenu：： CheckArea
 
@@ -348,7 +349,7 @@ BOOL AreAllCommandsShown() const;
 MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptScreen*<br/>
 中屏幕坐标中的点。
@@ -357,7 +358,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
 
 一个 MENUAREA_TYPE 参数，该参数指示点相对于弹出菜单的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 MENUAREA_TYPE 参数可以具有下列值之一。
 
@@ -371,7 +372,7 @@ MENUAREA_TYPE 参数可以具有下列值之一。
 
 - SHADOW_RIGHT- *ptScreen* 位于弹出菜单的右阴影。
 
-- *PtScreen*命令。
+- *PtScreen* 命令。
 
 ## <a name="cmfcpopupmenuclosemenu"></a><a name="closemenu"></a> CMFCPopupMenu：： CloseMenu
 
@@ -379,11 +380,11 @@ MENUAREA_TYPE 参数可以具有下列值之一。
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *bSetFocusToBar*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenucmfcpopupmenu"></a><a name="cmfcpopupmenu"></a> CMFCPopupMenu：： CMFCPopupMenu
 
@@ -395,7 +396,7 @@ CMFCPopupMenu(
     LPCTSTR lpszTitle);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pCustPage*<br/>
 中指向自定义页的指针。
@@ -403,7 +404,7 @@ CMFCPopupMenu(
 *lpszTitle*<br/>
 中包含菜单标题的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法为分配资源 `CMFCPopupMenu` 。 若要创建弹出菜单项，请调用 [CMFCPopupMenu：： create](#create)。
 
@@ -421,7 +422,7 @@ virtual BOOL Create(
     BOOL bOwnMessage = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndParent*<br/>
 中的父窗口 `CMFCPopupMenu` 。
@@ -445,9 +446,9 @@ virtual BOOL Create(
 
 如果方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果 *bOwnMessage* 为 TRUE，则框架将所有菜单消息路由到 *pWndParent*。 如果*bOwnMessage*为 TRUE，则*pWndParent*不能为 NULL。 如果 *bOwnMessage* 为 FALSE，则框架将菜单消息路由到父弹出菜单。
+如果 *bOwnMessage* 为 TRUE，则框架将所有菜单消息路由到 *pWndParent*。 如果 *bOwnMessage* 为 TRUE，则 *pWndParent* 不能为 NULL。 如果 *bOwnMessage* 为 FALSE，则框架将菜单消息路由到父弹出菜单。
 
 ### <a name="example"></a>示例
 
@@ -464,7 +465,7 @@ virtual CPane* CreateTearOffBar(
     LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pWndMain*<br/>
 中 *uiID*<br/>
@@ -472,7 +473,7 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenudefaultmouseclickonclose"></a><a name="defaultmouseclickonclose"></a> CMFCPopupMenu：:D efaultMouseClickOnClose
 
@@ -482,7 +483,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuenablemenulogo"></a><a name="enablemenulogo"></a> CMFCPopupMenu：： EnableMenuLogo
 
@@ -494,7 +495,7 @@ void EnableMenuLogo(
     LOGO_LOCATION nLogoLocation = MENU_LOGO_LEFT);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iLogoSize*<br/>
 中徽标的大小（以像素为单位）。
@@ -502,11 +503,11 @@ void EnableMenuLogo(
 *nLogoLocation*<br/>
 中指示徽标位置的枚举数据类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 若要显示徽标，请在主框架窗口中实现方法 [CFrameWndEx：： OnDrawMenuLogo](../../mfc/reference/cframewndex-class.md#ondrawmenulogo) 。
 
-*NLogoLocation*的可能值为 MENU_LOGO_LEFT、MENU_LOGO_RIGHT、MENU_LOGO_TOP 和 MENU_LOGO_BOTTOM。
+*NLogoLocation* 的可能值为 MENU_LOGO_LEFT、MENU_LOGO_RIGHT、MENU_LOGO_TOP 和 MENU_LOGO_BOTTOM。
 
 ## <a name="cmfcpopupmenuenablemenusound"></a><a name="enablemenusound"></a> CMFCPopupMenu：： EnableMenuSound
 
@@ -516,12 +517,12 @@ void EnableMenuLogo(
 static void EnableMenuSound(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中若要启用声音，则为 TRUE; 否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果启用声音，则当用户打开弹出菜单或选择菜单命令时，框架将调用 [PlaySound](/windows/win32/api/shobjidl_core/nf-shobjidl_core-iusernotification-playsound) 方法。 默认情况下，此功能处于启用状态。
 
@@ -531,11 +532,11 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 void EnableResize(CSize sizeMinResize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *sizeMinResize*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuenablescrolling"></a><a name="enablescrolling"></a> CMFCPopupMenu：： EnableScrolling
 
@@ -543,11 +544,11 @@ void EnableResize(CSize sizeMinResize);
 void EnableScrolling(BOOL = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *BOOL*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuenablevertresize"></a><a name="enablevertresize"></a> CMFCPopupMenu：： EnableVertResize
 
@@ -555,11 +556,11 @@ void EnableScrolling(BOOL = TRUE);
 void EnableVertResize(int nMinResize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nMinResize*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenufindsubitembycommand"></a><a name="findsubitembycommand"></a> CMFCPopupMenu：： FindSubItemByCommand
 
@@ -567,13 +568,13 @@ void EnableVertResize(int nMinResize);
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *uiCmd*<br/>
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenugetactivemenu"></a><a name="getactivemenu"></a> CMFCPopupMenu：： GetActiveMenu
 
@@ -587,7 +588,7 @@ static CMFCPopupMenu* GetActiveMenu();
 
 指向活动弹出菜单的指针; 如果没有弹出菜单当前处于活动状态，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个应用程序最多可以有一个活动的弹出菜单。
 
@@ -603,7 +604,7 @@ static UINT GetAnimationSpeed();
 
 一个整数，指示弹出菜单动画完成所用的时间（以毫秒为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 动画速度是一个全局值。 使用 [CMFCPopupMenu：： SetAnimationSpeed](#setanimationspeed) 可更改弹出菜单的动画速度。
 
@@ -615,7 +616,7 @@ static UINT GetAnimationSpeed();
 static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bNoSystem*<br/>
 中指示此方法是否检查全局值的布尔参数。 如果希望此方法返回 [CMFCPopupMenu 类](../../mfc/reference/cmfcpopupmenu-class.md)的此实例的动画样式，则为 FALSE。
@@ -624,13 +625,13 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 
 描述动画类型的枚举值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 弹出菜单的动画样式对于您的应用程序是全局性的。 使用 [CMFCPopupMenu：： SetAnimationType](#setanimationtype) 设置动画样式。
 
 下表列出了可能的动画类型。
 
-|值|说明|
+|值|描述|
 |-|-|
 |NO_ANIMATION|弹出菜单不会进行动画处理并立即显示出来。  |
 |展开|该框架从左上角到右下角显示弹出菜单。  |
@@ -645,7 +646,7 @@ DROP_DIRECTION GetDropDirection() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenugetforcemenufocus"></a><a name="getforcemenufocus"></a> CMFCPopupMenu：： GetForceMenuFocus
 
@@ -659,7 +660,7 @@ static BOOL GetForceMenuFocus();
 
 如果在显示弹出菜单时将输入焦点返回到菜单栏，则为 TRUE;如果弹出菜单保留焦点，则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下，应用程序不会将焦点返回到菜单栏。 若要更改此设置，请使用 [CMFCPopupMenu：： SetForceMenuFocus](#setforcemenufocus)。
 
@@ -671,7 +672,7 @@ static BOOL __stdcall GetForceShadow();
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenugethmenu"></a><a name="gethmenu"></a> CMFCPopupMenu：： GetHMenu
 
@@ -693,7 +694,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 
 指向嵌入的的指针 `CMFCPopupMenuBar` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 弹出菜单具有嵌入的 `CMFCPopupMenuBar` 对象。 如果使用的是其他嵌入类，则必须在派生类中重写此方法。
 
@@ -705,7 +706,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iIndex*<br/>
 中菜单项的从零开始的索引。
@@ -714,7 +715,7 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
 
 指向菜单项的指针。 如果索引无效，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 菜单项由 [CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)表示。 调用此方法时，它将返回一个指向相应的的指针 `CMFCToolBarMenuButton` 。
 
@@ -742,7 +743,7 @@ CWnd* GetMessageWnd() const;
 
 指向接收弹出菜单消息的窗口的指针;如果没有窗口，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用方法 [CMFCPopupMenu：： create](#create) 创建弹出菜单时，可以指定接收菜单消息的窗口。
 
@@ -752,13 +753,13 @@ CWnd* GetMessageWnd() const;
 virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenugetparentbutton"></a><a name="getparentbutton"></a> CMFCPopupMenu：： GetParentButton
 
@@ -772,7 +773,7 @@ CMFCToolBarMenuButton* GetParentButton() const;
 
 指向父工具栏按钮的指针。 如果弹出菜单没有父工具栏按钮，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CMFCPopupMenu`可以与菜单上的按钮相关联。 在此方案中，当用户选择父工具栏按钮时，将显示弹出菜单。
 
@@ -790,7 +791,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 
 指向父对象的指针 `CMFCPopupMenu` ;如果没有父弹出菜单，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 只有当弹出式菜单是子菜单时， `CMFCPopupMenu` 它才有父对象。
 
@@ -802,7 +803,7 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenugetparenttoolbar"></a><a name="getparenttoolbar"></a> CMFCPopupMenu：： GetParentToolBar
 
@@ -816,7 +817,7 @@ CMFCToolBar* GetParentToolBar() const;
 
 指向父工具栏的指针。 如果弹出菜单没有父工具栏，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 `CMFCPopupMenu` 是快捷菜单，则它没有父工具栏。
 
@@ -828,7 +829,7 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenugetselitem"></a><a name="getselitem"></a> CMFCPopupMenu：： GetSelItem
 
@@ -842,7 +843,7 @@ CMFCToolBarMenuButton* GetSelItem();
 
 指向当前选定菜单命令的指针;如果未选择任何项，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 弹出菜单上的菜单命令由 [CMFCToolBarMenuButton 类](../../mfc/reference/cmfctoolbarmenubutton-class.md)或从派生的类表示 `CMFCToolBarMenuButton` 。
 
@@ -854,7 +855,7 @@ BOOL HasBeenResized() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuhiderarelyusedcommands"></a><a name="hiderarelyusedcommands"></a> CMFCPopupMenu：： HideRarelyUsedCommands
 
@@ -868,7 +869,7 @@ BOOL HideRarelyUsedCommands() const;
 
 如果弹出菜单可以隐藏很少使用的命令，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法仅指定弹出菜单是否可以隐藏很少使用的命令，而不指定启用该配置的情况。 如果弹出菜单具有父按钮并且父窗口是从 [CMFCMenuBar 类](../../mfc/reference/cmfcmenubar-class.md)派生的，则弹出菜单可以隐藏很少使用的命令。 使用 [CMFCMenuBar：： SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) 启用此功能，并使用 [CMFCMenuBar：： IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) 来确定当前是否启用了此功能。 您必须为父窗口调用这两种方法。
 
@@ -880,7 +881,7 @@ virtual BOOL InCommand();
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuinsertitem"></a><a name="insertitem"></a> CMFCPopupMenu：： InsertItem
 
@@ -892,7 +893,7 @@ int InsertItem(
     int iInsertA = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *鼠标*<br/>
 中对要添加的菜单项的引用。
@@ -904,9 +905,9 @@ int InsertItem(
 
 插入项的位置的从零开始的索引。 如果该方法失败，则为-1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果为 *iInsertAt*提供了无效的值（例如，大于弹出菜单上当前的项数），则此方法将失败。
+如果为 *iInsertAt* 提供了无效的值（例如，大于弹出菜单上当前的项数），则此方法将失败。
 
 ## <a name="cmfcpopupmenuinsertseparator"></a><a name="insertseparator"></a> CMFCPopupMenu：： InsertSeparator
 
@@ -916,7 +917,7 @@ int InsertItem(
 int InsertSeparator(int iInsertAt = -1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iInsertAt*<br/>
 中此方法将插入分隔符的位置的从零开始的索引。
@@ -925,7 +926,7 @@ int InsertSeparator(int iInsertAt = -1);
 
 插入分隔符的位置的从零开始的索引。 如果此方法失败，则为-1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于 *iInsertAt* ，值为-1 表示此方法将分隔符添加到弹出菜单的末尾。
 
@@ -939,7 +940,7 @@ virtual BOOL IsAlwaysClose() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuisalwaysshowemptytoolsentry"></a><a name="isalwaysshowemptytoolsentry"></a> CMFCPopupMenu：： IsAlwaysShowEmptyToolsEntry
 
@@ -949,11 +950,11 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuiscustomizepane"></a><a name="iscustomizepane"></a> CMFCPopupMenu：： IsCustomizePane
 
-指示弹出菜单是否作为 **QuickCustomizePane**运行。
+指示弹出菜单是否作为 **QuickCustomizePane** 运行。
 
 ```
 BOOL IsCustomizePane();
@@ -963,9 +964,9 @@ BOOL IsCustomizePane();
 
 如果弹出窗口是 **QuckCustomizePane**，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-使用 **QuickCustomizePane** 可使用户直接自定义弹出菜单。 **QuickCustomizePane**是 `CMFCPopupMenu` 当用户单击工具栏按钮直接编辑它时显示的。
+使用 **QuickCustomizePane** 可使用户直接自定义弹出菜单。 **QuickCustomizePane** 是 `CMFCPopupMenu` 当用户单击工具栏按钮直接编辑它时显示的。
 
 应用程序应在 [CMDIFrameWndEx：： OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)期间调用此方法。
 
@@ -977,7 +978,7 @@ BOOL IsEscClose();
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuisidle"></a><a name="isidle"></a> CMFCPopupMenu：： IsIdle
 
@@ -991,7 +992,7 @@ virtual BOOL IsIdle() const;
 
 如果弹出菜单处于空闲模式，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下，如果显示动画完成并且用户未滚动弹出菜单，则弹出菜单处于空闲模式。
 
@@ -1003,7 +1004,7 @@ static UINT __stdcall IsMenuSound();
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuisquickcustomize"></a><a name="isquickcustomize"></a> CMFCPopupMenu：： IsQuickCustomize
 
@@ -1017,7 +1018,7 @@ BOOL IsQuickCustomize();
 
 如果关联的菜单按钮处于 QuickCustomize 模式下，则为 TRUE;否则为 FALSE。 如果弹出菜单与无关，则此方法也会返回 FALSE `CMFCToolBarMenuButton` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在 QuickCustomize 模式中，用户可以选择工具栏上的按钮直接自定义按钮。
 
@@ -1029,7 +1030,7 @@ BOOL IsResizeble() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuisrightalign"></a><a name="isrightalign"></a> CMFCPopupMenu：： IsRightAlign
 
@@ -1043,7 +1044,7 @@ BOOL IsRightAlign() const;
 
 如果菜单右对齐，则为 TRUE; 否则为。如果菜单左对齐，则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可以使用 [CMFCPopupMenu：： SetRightAlign](#setrightalign) 设置菜单对齐方式。 默认情况下，弹出菜单使用左对齐。
 
@@ -1057,7 +1058,7 @@ BOOL IsScrollable() const;
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuissendmenuselectmsg"></a><a name="issendmenuselectmsg"></a> CMFCPopupMenu：： IsSendMenuSelectMsg
 
@@ -1071,7 +1072,7 @@ static BOOL IsSendMenuSelectMsg();
 
 如果框架通知父框架，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 框架通过在使用的选定菜单命令时向父框架发送 WM_MENUSELECT 消息来通知父框架。
 
@@ -1093,11 +1094,11 @@ BOOL IsShown() const;
 void MoveTo(const CPoint& pt);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pt*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuonchangehot"></a><a name="onchangehot"></a> CMFCPopupMenu：： OnChangeHot
 
@@ -1105,11 +1106,11 @@ void MoveTo(const CPoint& pt);
 virtual void OnChangeHot(int nHot);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nHot*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuonchooseitem"></a><a name="onchooseitem"></a> CMFCPopupMenu：： OnChooseItem
 
@@ -1117,11 +1118,11 @@ virtual void OnChangeHot(int nHot);
 virtual void OnChooseItem(UINT uidCmdID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *uidCmdID*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuoncmdmsg"></a><a name="oncmdmsg"></a> CMFCPopupMenu：： OnCmdMsg
 
@@ -1133,7 +1134,7 @@ virtual BOOL OnCmdMsg(
     AFX_CMDHANDLERINFO* pHandlerInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *nID*<br/>
 中 *nCode*<br/>
@@ -1142,7 +1143,7 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenupostcommand"></a><a name="postcommand"></a> CMFCPopupMenu：:P ostCommand
 
@@ -1150,13 +1151,13 @@ virtual BOOL OnCmdMsg(
 BOOL PostCommand(UINT uiCommandID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *uiCommandID*<br/>
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenupretranslatemessage"></a><a name="pretranslatemessage"></a> CMFCPopupMenu：:P reTranslateMessage
 
@@ -1164,13 +1165,13 @@ BOOL PostCommand(UINT uiCommandID);
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pMsg*<br/>
 
 ### <a name="return-value"></a>返回值
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenurecalclayout"></a><a name="recalclayout"></a> CMFCPopupMenu：： RecalcLayout
 
@@ -1178,11 +1179,11 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *bNotify*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuremoveallitems"></a><a name="removeallitems"></a> CMFCPopupMenu：： RemoveAllItems
 
@@ -1200,7 +1201,7 @@ void RemoveAllItems();
 BOOL RemoveItem(int iIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iIndex*<br/>
 中要删除的项的从零开始的索引。
@@ -1209,7 +1210,7 @@ BOOL RemoveItem(int iIndex);
 
 如果方法成功，则为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法自动排列受项目删除影响的任何分隔符。 有关框架如何重排分隔符的详细信息，请参阅 [CMFCToolBar：： RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)。
 
@@ -1219,7 +1220,7 @@ BOOL RemoveItem(int iIndex);
 virtual void SaveState();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenusetanimationspeed"></a><a name="setanimationspeed"></a> CMFCPopupMenu：： SetAnimationSpeed
 
@@ -1229,16 +1230,16 @@ virtual void SaveState();
 static void SetAnimationSpeed(UINT nElapse);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nElapse*<br/>
 中新动画的速度（以毫秒为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 动画速度是全局值，会影响应用程序中的所有弹出菜单。 此值指定弹出菜单的动画完成所用的时间。
 
-默认情况下，此参数设置为30毫秒。 *NElapse*的有效值范围为0到200。
+默认情况下，此参数设置为30毫秒。 *NElapse* 的有效值范围为0到200。
 
 ## <a name="cmfcpopupmenusetanimationtype"></a><a name="setanimationtype"></a> CMFCPopupMenu：： SetAnimationType
 
@@ -1250,12 +1251,12 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ### <a name="parameters"></a>参数
 
-*type*<br/>
+type<br/>
 中指定动画类型的枚举数据类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-有关*类型*的有效值的列表，请参阅[CMFCPopupMenu：： GetAnimationType](#getanimationtype) 。
+有关 *类型* 的有效值的列表，请参阅 [CMFCPopupMenu：： GetAnimationType](#getanimationtype) 。
 
 ## <a name="cmfcpopupmenusetautodestroy"></a><a name="setautodestroy"></a> CMFCPopupMenu：： SetAutoDestroy
 
@@ -1263,11 +1264,11 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *bAutoDestroy*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenusetdefaultitem"></a><a name="setdefaultitem"></a> CMFCPopupMenu：： SetDefaultItem
 
@@ -1277,12 +1278,12 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 void SetDefaultItem(UINT uiCmd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *uiCmd*<br/>
 中新默认命令的菜单命令 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 弹出菜单中的默认命令是在弹出菜单显示时所选择的命令。
 
@@ -1294,12 +1295,12 @@ void SetDefaultItem(UINT uiCmd);
 static void SetForceMenuFocus(BOOL bValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bValue*<br/>
 中如果希望框架在显示弹出菜单时强制将输入焦点移到菜单栏，则为 TRUE。 如果希望弹出菜单保留焦点，则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法为应用程序中的所有弹出菜单设置全局标志。 默认情况下，不启用此功能。
 
@@ -1311,12 +1312,12 @@ static void SetForceMenuFocus(BOOL bValue);
 static void SetForceShadow(BOOL bValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bValue*<br/>
 中如果希望框架绘制菜单阴影，则为 TRUE; 否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用此方法时，它会在你的应用程序中设置全局标志。 此标志影响应用程序中的所有弹出菜单。
 
@@ -1328,12 +1329,12 @@ static void SetForceShadow(BOOL bValue);
 void SetMaxWidth(int iMaxWidth);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iMaxWidth*<br/>
 中弹出菜单的最大宽度（以像素为单位）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果与某个菜单命令相关联的文本将不能适应最大宽度，则该文本将被截断，并且不适合的部分将替换为三个点。
 
@@ -1343,11 +1344,11 @@ void SetMaxWidth(int iMaxWidth);
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pMsgWnd*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenusetparentribbonelement"></a><a name="setparentribbonelement"></a> CMFCPopupMenu：： SetParentRibbonElement
 
@@ -1355,11 +1356,11 @@ void SetMessageWnd(CWnd* pMsgWnd);
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pElem*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenusetquickcustomizetype"></a><a name="setquickcustomizetype"></a> CMFCPopupMenu：： SetQuickCustomizeType
 
@@ -1367,11 +1368,11 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *类型*<br/>
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenusetquickmode"></a><a name="setquickmode"></a> CMFCPopupMenu：： SetQuickMode
 
@@ -1379,7 +1380,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 void SetQuickMode();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenusetrightalign"></a><a name="setrightalign"></a> CMFCPopupMenu：： SetRightAlign
 
@@ -1389,12 +1390,12 @@ void SetQuickMode();
 void SetRightAlign(BOOL bRightAlign = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bRightAlign*<br/>
 中指示菜单对齐方式的布尔值。 TRUE 表示右对齐，FALSE 表示左对齐。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下，所有弹出菜单都是左对齐菜单。
 
@@ -1406,12 +1407,12 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
 static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bSet*<br/>
 中如果弹出菜单通知其父框架，则为 TRUE; 否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这是应用程序中的所有弹出菜单的全局选项。 如果已启用，弹出菜单将在用户选择命令时向父框架发送 WM_MENUSELECT 消息。
 
@@ -1423,7 +1424,7 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
 void ShowAllCommands();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这不是全局设置，仅影响当前的弹出菜单。
 
@@ -1433,7 +1434,7 @@ void ShowAllCommands();
 void TriggerResize();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ## <a name="cmfcpopupmenuupdateallshadows"></a><a name="updateallshadows"></a> CMFCPopupMenu：： UpdateAllShadows
 
@@ -1443,12 +1444,12 @@ void TriggerResize();
 static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprectScreen*<br/>
 中在屏幕坐标中指定要更新的区域的矩形。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当弹出菜单显示在具有动态内容的动画控件或其他窗口上时，此方法非常有用。
 
@@ -1460,17 +1461,17 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 void UpdateShadow(LPRECT lprectScreen = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lprectScreen*<br/>
 中以屏幕坐标表示的矩形，指定要更新的区域的边界。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当具有阴影的弹出菜单与动画图像重叠时，调用此方法。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCPopupMenuBar 类](../../mfc/reference/cmfcpopupmenubar-class.md)

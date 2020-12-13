@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2107
 title: 编译器错误 C2107
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2107
 ms.assetid: 2866a121-884e-4bb5-8613-36de5817000e
-ms.openlocfilehash: 1be2ebb82aca481df9efbbc4ccdd54466ae60a3f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aee5e7384f3d0a58265d1cc36448c7fb49c71f4f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335270"
 ---
 # <a name="compiler-error-c2107"></a>编译器错误 C2107
 
@@ -21,7 +22,7 @@ ms.locfileid: "87214784"
 
 ## <a name="example"></a>示例
 
-如果错误地使用 **`this`** 值类型的指针访问类型的默认索引器，则可能会发生 C2107。 有关详细信息，请参阅[this 指针的语义](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。
+如果错误地使用 **`this`** 值类型的指针访问类型的默认索引器，则可能会发生 C2107。 有关详细信息，请参阅 [this 指针的语义](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。
 
 下面的示例生成 C2107。
 

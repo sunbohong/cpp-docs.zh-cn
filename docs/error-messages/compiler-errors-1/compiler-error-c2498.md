@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2498
 title: 编译器错误 C2498
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2498
 ms.assetid: 0839f12c-aaa4-4a02-bb33-7f072715dd14
-ms.openlocfilehash: 2b6f6469a221c914e0eef9e190c79a2b2706e651
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e7cbb811cdaeea703d0f1da1c0f2012ebe8210fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756989"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335096"
 ---
 # <a name="compiler-error-c2498"></a>编译器错误 C2498
 
 "function"： "novtable" 只能应用于类声明或定义
 
-如果将 `__declspec(novtable)` 与函数结合使用，则可能会导致此错误。
+使用函数时，可能会导致此错误 `__declspec(novtable)` 。
 
 ## <a name="example"></a>示例
 

@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息：交换函数 (auto_handle) '
 title: swap 函数 (auto_handle)
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: ed0e4ab7bce52d4dee54e7f9149edae535445d65
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 24e3ad0d80cb747ddff116682cb9760b29ccc893
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91498571"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335285"
 ---
 # <a name="swap-function-auto_handle"></a>swap 函数 (auto_handle)
 
@@ -26,7 +27,7 @@ void swap(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *_left*<br/>
 一个 `auto_handle`。

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级1和等级 4) C4949
 title: 编译器警告（等级 1 和等级 4）C4949
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4949
 ms.assetid: 34f45a05-c115-49cb-9f67-0bd4f0735d9b
-ms.openlocfilehash: 7ce8b3242def187e4b8b442f403f92f013a9ca6e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2330843c34207edbe99607208baff634836044cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164776"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336014"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4949"></a>编译器警告（等级 1 和等级 4）C4949
 
@@ -27,7 +28,7 @@ ms.locfileid: "80164776"
 #pragma managed   // C4949
 ```
 
-如果在没有 **/clr**的情况下使用 **#pragma 非托管**，则 C4949 为级别4警告。
+如果在没有 **/clr** 的情况下使用 **#pragma 非托管**，则 C4949 为级别4警告。
 
 下面的示例生成 C4949：
 

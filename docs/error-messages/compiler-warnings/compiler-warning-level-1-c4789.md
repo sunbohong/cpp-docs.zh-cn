@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4789
 title: 编译器警告（等级 1）C4789
 ms.date: 03/25/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 1e089c45598a53ff337e389feb2a6983a2997041
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c08264b1790788c2eaba7857f473a5bff42a2da3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684620"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334967"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>编译器警告（等级 1）C4789
 
-> 大小为*N*字节的缓冲区 "*identifier*" 将溢出;*M*字节将在偏移*L*开始写入
+> 大小为 *N* 字节的缓冲区 "*identifier*" 将溢出;*M* 字节将在偏移 *L* 开始写入
 
 ## <a name="remarks"></a>备注
 
-当使用特定 C 运行时 (CRT) 函数时， **C4789**会发出缓冲区溢出警告。 它还可以在传递参数或进行赋值时报告大小不匹配。 如果数据大小在编译时是已知的，则可能出现此警告。 此警告针对那些可能会避开典型数据大小不匹配检测的情况。
+当使用特定 C 运行时 (CRT) 函数时， **C4789** 会发出缓冲区溢出警告。 它还可以在传递参数或进行赋值时报告大小不匹配。 如果数据大小在编译时是已知的，则可能出现此警告。 此警告针对那些可能会避开典型数据大小不匹配检测的情况。
 
-将数据复制到已知在编译时太小的数据块时， **C4789**会发出警告。
+将数据复制到已知在编译时太小的数据块时， **C4789** 会发出警告。
 
 如果副本使用以下 CRT 函数之一的内部形式，则会出现此警告：
 

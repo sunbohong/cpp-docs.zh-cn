@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _aligned_msize_dbg
 title: _aligned_msize_dbg
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
-ms.openlocfilehash: f2a0ceab906dccacb2e1c78a8789d524b608a4ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 37b21f5992db09b1b356191263788be4516decb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335683"
 ---
 # <a name="_aligned_msize_dbg"></a>_aligned_msize_dbg
 
@@ -44,12 +45,12 @@ size_t _aligned_msize_dbg(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *memblock*<br/>
 指向内存块的指针。
 
-*alignment*<br/>
+*关联*<br/>
 对齐值，必须是 2 的整数次幂。
 
 *offset*<br/>
@@ -61,13 +62,13 @@ size_t _aligned_msize_dbg(
 
 ## <a name="remarks"></a>备注
 
-*对齐*和*偏移*值必须与传递给分配了块的函数的值相同。
+*对齐* 和 *偏移* 值必须与传递给分配了块的函数的值相同。
 
-**_aligned_msize_dbg**是[_aligned_msize](aligned-msize.md)函数的调试版本。 未定义[_debug](../../c-runtime-library/debug.md)时，对 **_aligned_msize_dbg**的每次调用都会减少到对 **_aligned_msize**的调用。 **_Aligned_msize**和 **_aligned_msize_dbg**都计算基堆中的内存块的大小，但 **_aligned_msize_dbg**添加了调试功能：它在返回大小的内存块的用户部分的任一侧包括缓冲区。
+**_aligned_msize_dbg** 是 [_aligned_msize](aligned-msize.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，对 **_aligned_msize_dbg** 的每次调用都会减少到对 **_aligned_msize** 的调用。 **_Aligned_msize** 和 **_aligned_msize_dbg** 都计算基堆中的内存块的大小，但 **_aligned_msize_dbg** 会添加调试功能：它在返回大小的内存块的用户部分的任一侧包括缓冲区。
 
-此函数验证其参数。 如果*memblock*为 null 指针或*对齐*不是2的幂，则 **_msize**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数会将**errno**设置为**EINVAL** ，并返回-1。
+此函数验证其参数。 如果 *memblock* 为 null 指针或 *对齐* 不是2的幂，则 **_msize** 将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数会将 **errno** 设置为 **EINVAL** ，并返回-1。
 
-有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
+若要了解如何在基堆的调试版本中分配、初始化和管理内存块，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
 ## <a name="requirements"></a>要求
 
@@ -75,7 +76,7 @@ size_t _aligned_msize_dbg(
 |-------------|---------------------|
 |**_aligned_msize_dbg**|\<crtdbg.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

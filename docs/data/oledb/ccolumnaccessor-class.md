@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CColumnAccessor 类
 title: CColumnAccessor 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-ms.openlocfilehash: 2a3b1dac51a8300a915a7177c36f15512b583fa0
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 7551f39d34bb4f13b4ffae358db05aede2adb9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212105"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335522"
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor 类
 
@@ -39,7 +40,7 @@ class CColumnAccessor : public CAccessorBase
 
 - `SetParameterBuffer` 为参数分配缓冲区。
 
-- `AddParameter` 将参数项添加到参数输入结构。
+- `AddParameter` 向参数输入结构添加参数项。
 
 - `HasOutputColumns` 确定访问器是否具有输出列
 
@@ -51,7 +52,7 @@ class CColumnAccessor : public CAccessorBase
 
 **标头:** atldbcli.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)
