@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAtlTransactionManager 类
 title: CAtlTransactionManager 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: 74afc1a82c12d6138198f5696d300825e06aba1e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 25d5ea7e9b4838f483dd7f9ee408cdd5bd4c88cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562211"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147181"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 类
 
@@ -49,14 +50,14 @@ class CAtlTransactionManager;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager 析构函数。|
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager 构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[关闭](#close)|关闭事务句柄。|
 |[提交](#commit)|请求提交事务。|
@@ -77,7 +78,7 @@ class CAtlTransactionManager;
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[m_bFallback](#m_bfallback)|如果支持回退，则为 TRUE;否则为 FALSE。|
 |[m_hTransaction](#m_htransaction)|事务句柄。|
@@ -112,7 +113,7 @@ CAtlTransactionManager 构造函数。
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bFallback*<br/>
 TRUE 表示支持回退。 如果事务处理函数失败，类将自动调用 "非事务性" 函数。 FALSE 表示没有 "回退" 调用。
@@ -154,7 +155,7 @@ inline BOOL Commit();
 
 此包装器调用 `CommitTransaction` 函数。 方法自动在析构函数中调用。
 
-## <a name="create"></a><a name="create"></a> 创建
+## <a name="create"></a><a name="create"></a>创建
 
 创建事务句柄。
 
@@ -185,7 +186,7 @@ inline HANDLE CreateFile(
     HANDLE hTemplateFile);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFileName*<br/>
 要创建或打开的对象的名称。
@@ -224,7 +225,7 @@ inline HANDLE CreateFile(
 inline BOOL DeleteFile(LPCTSTR lpFileName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFileName*<br/>
 要删除的文件的名称。
@@ -243,7 +244,7 @@ inline HANDLE FindFirstFile(
     WIN32_FIND_DATA* pNextInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFileName*<br/>
 要搜索的目录或路径以及文件名。 此参数可以包含通配符，如星号 ( * ) 或问号 ( # A3。
@@ -267,7 +268,7 @@ inline HANDLE FindFirstFile(
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFileName*<br/>
 文件或目录的名称。
@@ -287,7 +288,7 @@ inline BOOL GetFileAttributesEx(
     LPVOID lpFileInformation);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFileName*<br/>
 文件或目录的名称。
@@ -296,7 +297,7 @@ inline BOOL GetFileAttributesEx(
 要检索的属性信息的级别。
 
 *lpFileInformation*<br/>
-指向接收属性信息的缓冲区的指针。 存储在此缓冲区中的属性信息的类型由 *fInfoLevelId*的值确定。 如果 *fInfoLevelId* 参数为 GetFileExInfoStandard，则此参数指向 WIN32_FILE_ATTRIBUTE_DATA 结构。
+指向接收属性信息的缓冲区的指针。 存储在此缓冲区中的属性信息的类型由 *fInfoLevelId* 的值确定。 如果 *fInfoLevelId* 参数为 GetFileExInfoStandard，则此参数指向 WIN32_FILE_ATTRIBUTE_DATA 结构。
 
 ### <a name="remarks"></a>备注
 
@@ -358,7 +359,7 @@ HANDLE m_hTransaction;
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpOldFileName*<br/>
 本地计算机上现有文件或目录的当前名称。
@@ -387,7 +388,7 @@ inline LSTATUS RegCreateKeyEx(
     LPDWORD lpdwDisposition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -432,7 +433,7 @@ inline LSTATUS RegCreateKeyEx(
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*\
 打开的注册表项的句柄。
@@ -461,7 +462,7 @@ inline LSTATUS RegOpenKeyEx(
     PHKEY phkResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hKey*<br/>
 打开的注册表项的句柄。
@@ -510,7 +511,7 @@ inline BOOL Rollback();
 inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpFileName*<br/>
 文件或目录的名称。
@@ -522,6 +523,6 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 
 此包装器调用 `SetFileAttributesTransacted` 函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATL COM 桌面组件](../../atl/atl-com-desktop-components.md)

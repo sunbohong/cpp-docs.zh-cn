@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： SRWLock 类
 title: SRWLock 类
 ms.date: 09/25/2018
 ms.topic: reference
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockExclusive method
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
-ms.openlocfilehash: e305ad54e30455ce7c25f356c454791da0783591
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10bc3dc700f90d5154ece1546cdf3ec464ea6e56
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377266"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135182"
 ---
 # <a name="srwlock-class"></a>SRWLock 类
 
@@ -40,38 +41,38 @@ class SRWLock;
 
 ## <a name="remarks"></a>备注
 
-超薄读取器/写入器锁用于将线程之间的访问同步到对象或资源。 有关详细信息，请参阅[同步函数](/windows/win32/Sync/synchronization-functions)。
+超薄读取器/写入器锁用于同步跨线程对对象或资源的访问。 有关详细信息，请参阅 [同步函数](/windows/win32/Sync/synchronization-functions)。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-名称                | 说明
+名称                | 描述
 ------------------- | -------------------------------------------------------------------
-`SyncLockExclusive` | 在独占模式下获取`SRWLock`的对象的同义词。
-`SyncLockShared`    | 在共享模式下获取`SRWLock`的对象的同义词。
+`SyncLockExclusive` | `SRWLock`以独占模式获取的对象的同义词。
+`SyncLockShared`    | `SRWLock`在共享模式下获取的对象的同义词。
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                     | 说明
+“属性”                                     | 描述
 ---------------------------------------- | --------------------------------------------------
-[SRWLock：SRWLock](#srwlock-constructor) | 初始化 `SRWLock` 类的新实例。
-[SRWLock：*SRWLock](#tilde-srwlock)      | 取消初始化类的`SRWLock`实例。
+[SRWLock：： SRWLock](#srwlock-constructor) | 初始化 `SRWLock` 类的新实例。
+[SRWLock：： ~ SRWLock](#tilde-srwlock)      | 取消初始化类的实例 `SRWLock` 。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                           | 说明
+“属性”                                           | 描述
 ---------------------------------------------- | -------------------------------------------------------------------------------------------------------
-[SRWLock：锁独家](#lockexclusive)       | 在独占`SRWLock`模式下获取对象。
-[SRWLock：锁定共享](#lockshared)             | 在共享模式下`SRWLock`获取对象。
-[SRWLock：尝试锁定独家](#trylockexclusive) | 尝试以独占`SRWLock`模式获取当前或指定`SRWLock`对象的对象。
-[SRWLock：尝试锁定共享](#trylockshared)       | 尝试在共享模式下`SRWLock`获取当前或指定`SRWLock`对象的对象。
+[SRWLock：： LockExclusive](#lockexclusive)       | 获取 `SRWLock` 独占模式下的对象。
+[SRWLock：： LockShared](#lockshared)             | 获取 `SRWLock` 共享模式下的对象。
+[SRWLock：： TryLockExclusive](#trylockexclusive) | 尝试以 `SRWLock` 独占模式获取当前或指定对象的对象 `SRWLock` 。
+[SRWLock：： TryLockShared](#trylockshared)       | 尝试为 `SRWLock` 当前或指定的对象获取共享模式下的对象 `SRWLock` 。
 
 ### <a name="protected-data-member"></a>受保护的数据成员
 
-名称                                      | 说明
+名称                                      | 描述
 ----------------------------------------- | -----------------------------------------------------------------------
-[SRWLock：SRWLock_](#srwlock-data-member) | 包含当前`SRWLock`对象的基础锁定变量。
+[SRWLock：： SRWLock_](#srwlock-data-member) | 包含当前对象的基础锁变量 `SRWLock` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -79,21 +80,21 @@ class SRWLock;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 核心包装.h
+**标头：** corewrappers。h
 
-**命名空间：** 微软：：WRL：包装
+**命名空间：** Microsoft：： WRL：：包装
 
-## <a name="srwlocksrwlock"></a><a name="tilde-srwlock"></a>SRWLock：*SRWLock
+## <a name="srwlocksrwlock"></a><a name="tilde-srwlock"></a> SRWLock：： ~ SRWLock
 
-取消初始化类的`SRWLock`实例。
+取消初始化类的实例 `SRWLock` 。
 
 ```cpp
 ~SRWLock();
 ```
 
-## <a name="srwlocklockexclusive"></a><a name="lockexclusive"></a>SRWLock：锁独家
+## <a name="srwlocklockexclusive"></a><a name="lockexclusive"></a> SRWLock：： LockExclusive
 
-在独占`SRWLock`模式下获取对象。
+获取 `SRWLock` 独占模式下的对象。
 
 ```cpp
 SyncLockExclusive LockExclusive();
@@ -103,18 +104,18 @@ static SyncLockExclusive LockExclusive(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*锁*<br/>
-指向对象的指针`SRWLock`。
+*lock*<br/>
+指向对象的指针 `SRWLock` 。
 
 ### <a name="return-value"></a>返回值
 
-独`SRWLock`占模式下的对象。
+`SRWLock`独占模式下的对象。
 
-## <a name="srwlocklockshared"></a><a name="lockshared"></a>SRWLock：锁定共享
+## <a name="srwlocklockshared"></a><a name="lockshared"></a> SRWLock：： LockShared
 
-在共享模式下`SRWLock`获取对象。
+获取 `SRWLock` 共享模式下的对象。
 
 ```cpp
 SyncLockShared LockShared();
@@ -124,16 +125,16 @@ static SyncLockShared LockShared(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*锁*<br/>
-指向对象的指针`SRWLock`。
+*lock*<br/>
+指向对象的指针 `SRWLock` 。
 
 ### <a name="return-value"></a>返回值
 
-共享`SRWLock`模式下的对象。
+`SRWLock`处于共享模式的对象。
 
-## <a name="srwlocksrwlock"></a><a name="srwlock-constructor"></a>SRWLock：SRWLock
+## <a name="srwlocksrwlock"></a><a name="srwlock-constructor"></a> SRWLock：： SRWLock
 
 初始化 `SRWLock` 类的新实例。
 
@@ -141,17 +142,17 @@ static SyncLockShared LockShared(
 SRWLock();
 ```
 
-## <a name="srwlocksrwlock_"></a><a name="srwlock-data-member"></a>SRWLock：SRWLock_
+## <a name="srwlocksrwlock_"></a><a name="srwlock-data-member"></a> SRWLock：： SRWLock_
 
-包含当前`SRWLock`对象的基础锁定变量。
+包含当前对象的基础锁变量 `SRWLock` 。
 
 ```cpp
 SRWLOCK SRWLock_;
 ```
 
-## <a name="srwlocktrylockexclusive"></a><a name="trylockexclusive"></a>SRWLock：尝试锁定独家
+## <a name="srwlocktrylockexclusive"></a><a name="trylockexclusive"></a> SRWLock：： TryLockExclusive
 
-尝试以独占`SRWLock`模式获取当前或指定`SRWLock`对象的对象。 如果调用成功，则调用线程将接管锁的所有权。
+尝试以 `SRWLock` 独占模式获取当前或指定对象的对象 `SRWLock` 。 如果调用成功，则调用线程获取锁的所有权。
 
 ```cpp
 SyncLockExclusive TryLockExclusive();
@@ -161,18 +162,18 @@ static SyncLockExclusive TryLockExclusive(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*锁*<br/>
-指向对象的指针`SRWLock`。
+*lock*<br/>
+指向对象的指针 `SRWLock` 。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，则`SRWLock`独占模式下的对象和调用线程将获取锁的所有权。 否则，`SRWLock`其状态无效的对象。
+如果成功，则 `SRWLock` 处于独占模式的对象和调用线程取得锁的所有权。 否则为 `SRWLock` 其状态无效的对象。
 
-## <a name="srwlocktrylockshared"></a><a name="trylockshared"></a>SRWLock：尝试锁定共享
+## <a name="srwlocktrylockshared"></a><a name="trylockshared"></a> SRWLock：： TryLockShared
 
-尝试在共享模式下`SRWLock`获取当前或指定`SRWLock`对象的对象。
+尝试为 `SRWLock` 当前或指定的对象获取共享模式下的对象 `SRWLock` 。
 
 ```cpp
 WRL_NOTHROW SyncLockShared TryLockShared();
@@ -181,11 +182,11 @@ WRL_NOTHROW static SyncLockShared TryLockShared(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*锁*<br/>
-指向对象的指针`SRWLock`。
+*lock*<br/>
+指向对象的指针 `SRWLock` 。
 
 ### <a name="return-value"></a>返回值
 
-如果成功，共享`SRWLock`模式下的对象和调用线程将获取锁的所有权。 否则，`SRWLock`其状态无效的对象。
+如果成功，则 `SRWLock` 处于共享模式的对象和调用线程取得锁的所有权。 否则为 `SRWLock` 其状态无效的对象。

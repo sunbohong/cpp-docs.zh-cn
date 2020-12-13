@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： Windows 运行时不支持的 CRT 函数
 title: Windows 运行时不支持的 CRT 函数
 ms.date: 11/04/2016
 helpviewer_keywords:
 - unsupported CRT functions, Windows Runtime
 - Windows Runtime, unsupported CRT functions
 ms.assetid: bb8386d6-0ef8-460c-88d8-addff009b6f1
-ms.openlocfilehash: 8f5b900d968bd80f9095c564f0222364769d63c9
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
-ms.translationtype: HT
+ms.openlocfilehash: 12195d083485d9591610176a7cb00b4eead844ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136781"
 ---
 # <a name="windows-runtime-unsupported-crt-functions"></a>Windows 运行时不支持的 CRT 函数
 
@@ -21,4 +22,4 @@ ms.locfileid: "70739542"
 ## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>

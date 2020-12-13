@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： VerifyInheritanceHelper 结构
 title: VerifyInheritanceHelper 结构
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInheritanceHelper structure
 - Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-ms.openlocfilehash: 3650cfb70ffc12572b3965534eff4e1f2ecb2cf5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 672455482a2d21cb695124cad31740b6325c377d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135039"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 结构
 
@@ -30,12 +31,12 @@ template <typename I>
 struct VerifyInheritanceHelper<I, Nil>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ⅰ*<br/>
+*I*<br/>
 一种类型。
 
-*基地*<br/>
+*基座*<br/>
 另一种类型。
 
 ## <a name="remarks"></a>备注
@@ -46,9 +47,9 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                       | 说明
+“属性”                                       | 描述
 ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
-[验证继承帮助程序：：验证](#verify) | 测试当前模板参数指定的两个接口，并确定一个接口是否派生自另一个接口。
+[VerifyInheritanceHelper：： Verify](#verify) | 测试当前模板参数所指定的两个接口，并确定是否一个接口派生自另一个接口。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -56,11 +57,11 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 实现.h
+**标头：** 实现。h
 
-**命名空间：** 微软：：WRL：:D
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="verifyinheritancehelperverify"></a><a name="verify"></a>验证继承帮助程序：：验证
+## <a name="verifyinheritancehelperverify"></a><a name="verify"></a> VerifyInheritanceHelper：： Verify
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -70,6 +71,6 @@ static void Verify();
 
 ### <a name="remarks"></a>备注
 
-测试当前模板参数指定的两个接口，并确定一个接口是否派生自另一个接口。
+测试当前模板参数所指定的两个接口，并确定是否一个接口派生自另一个接口。
 
-如果一个接口不是从另一个接口派生的，则发出错误。
+如果一个接口不是派生自另一个接口，则会发出错误。

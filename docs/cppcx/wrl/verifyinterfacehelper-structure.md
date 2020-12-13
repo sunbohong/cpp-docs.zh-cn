@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： VerifyInterfaceHelper 结构
 title: VerifyInterfaceHelper 结构
 ms.date: 10/03/2018
 ms.topic: reference
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a9b51eac55666d15b8362fc070d0feb731e9674d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135026"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper 结构
 
-支持 Windows 运行时C++模板库基础结构，并且不打算直接从代码中使用。
+支持 Windows 运行时 c + + 模板库基础结构，不应在代码中直接使用。
 
 ## <a name="syntax"></a>语法
 
@@ -30,12 +31,12 @@ template <typename I>
 struct VerifyInterfaceHelper<false, I>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Ⅰ*<br/>
+*I*<br/>
 要验证的接口。
 
-*是WinRT接口*
+*isWinRTInterface*
 
 ## <a name="remarks"></a>备注
 
@@ -45,7 +46,7 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                            | 说明
+“属性”                                            | 描述
 ----------------------------------------------- | ---------------------------------------------------------------------------------------------------
 [VerifyInterfaceHelper::Verify 方法](#verify) | 验证当前模板参数指定的接口是否满足某些要求。
 
@@ -55,11 +56,11 @@ struct VerifyInterfaceHelper<false, I>;
 
 ## <a name="requirements"></a>要求
 
-**标题：** 实现.h
+**标头：** 实现。h
 
-**命名空间：** 微软：：WRL：:D
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>验证接口帮助程序：：验证
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a> VerifyInterfaceHelper：： Verify
 
 支持 WRL 基础结构，不应在代码中直接使用。
 

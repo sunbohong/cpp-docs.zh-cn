@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： max_none 类
 title: max_none 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 41ada338d9b8546202ecd49ff975f9642f190ba0
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 9d3f6bf2d7dda114ed7541b91da8081d501ddec5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560538"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149248"
 ---
 # <a name="max_none-class"></a>max_none 类
 
@@ -34,7 +35,7 @@ template <std::size_t Max>
 class max_none
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *数量*\
 max 类，用于决定要存储于 `freelist` 中的最大元素数目。
@@ -63,7 +64,7 @@ max 类，用于决定要存储于 `freelist` 中的最大元素数目。
 void allocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
@@ -80,7 +81,7 @@ void allocated(std::size_t _Nx = 1);
 void deallocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
@@ -129,6 +130,6 @@ void saved();
 
 此成员函数不执行任何操作。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)

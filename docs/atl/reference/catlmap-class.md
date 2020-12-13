@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAtlMap 类
 title: CAtlMap 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -37,12 +38,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: b79e6cbd796569e6ba11c96158099de6c30b310a
-ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.openlocfilehash: 721f0f3a41afb409ec8cdc505a5f5e5324cdb9bb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82168054"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97147246"
 ---
 # <a name="catlmap-class"></a>CAtlMap 类
 
@@ -58,16 +59,16 @@ template <typename K,
 class CAtlMap
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*温度*<br/>
+*K*<br/>
 键元素类型。
 
-*向量*<br/>
+*V*<br/>
 值元素类型。
 
 *KTraits*<br/>
-用于复制或移动关键元素的代码。 有关更多详细信息，请参阅[CElementTraits 类](../../atl/reference/celementtraits-class.md)。
+用于复制或移动关键元素的代码。 有关更多详细信息，请参阅 [CElementTraits 类](../../atl/reference/celementtraits-class.md) 。
 
 *VTraits*<br/>
 用于复制或移动值元素的代码。
@@ -76,7 +77,7 @@ class CAtlMap
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CAtlMap：： KINARGTYPE](#kinargtype)|键作为输入参数传递时使用的类型|
 |[CAtlMap：： KOUTARGTYPE](#koutargtype)|当键作为输出参数返回时使用的类型。|
@@ -85,79 +86,79 @@ class CAtlMap
 
 ### <a name="public-classes"></a>公共类
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CAtlMap：： CPair 类](#cpair_class)|一个包含键和值元素的类。|
 
 ### <a name="cpair-data-members"></a>CPair 数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CPair：： m_key](#m_key)|存储密钥元素的数据成员。|
 |[CPair：： m_value](#m_value)|存储 value 元素的数据成员。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAtlMap：： CAtlMap](#catlmap)|构造函数。|
 |[CAtlMap：： ~ CAtlMap](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CAtlMap：： AssertValid](#assertvalid)|如果`CAtlMap`无效，则调用此方法以引发断言。|
-|[CAtlMap：:D isableAutoRehash](#disableautorehash)|调用此方法可禁用`CAtlMap`对象的自动 rehashing。|
-|[CAtlMap：： EnableAutoRehash](#enableautorehash)|调用此方法以启用`CAtlMap`对象的自动 rehashing。|
+|[CAtlMap：： AssertValid](#assertvalid)|如果无效，则调用此方法以引发断言 `CAtlMap` 。|
+|[CAtlMap：:D isableAutoRehash](#disableautorehash)|调用此方法可禁用对象的自动 rehashing `CAtlMap` 。|
+|[CAtlMap：： EnableAutoRehash](#enableautorehash)|调用此方法以启用对象的自动 rehashing `CAtlMap` 。|
 |[CAtlMap：： GetAt](#getat)|调用此方法可在映射中的指定位置返回元素。|
 |[CAtlMap：： GetCount](#getcount)|调用此方法可检索映射中的元素数。|
 |[CAtlMap：： GetHashTableSize](#gethashtablesize)|调用此方法以确定地图的哈希表中的储箱数。|
-|[CAtlMap：： GetKeyAt](#getkeyat)|调用此方法可以检索存储在`CAtlMap`对象中的给定位置的键。|
-|[CAtlMap：： GetNext](#getnext)|调用此方法以获取指向存储在`CAtlMap`对象中的下一个元素对的指针。|
+|[CAtlMap：： GetKeyAt](#getkeyat)|调用此方法可以检索存储在对象中的给定位置的键 `CAtlMap` 。|
+|[CAtlMap：： GetNext](#getnext)|调用此方法以获取指向存储在对象中的下一个元素对的指针 `CAtlMap` 。|
 |[CAtlMap：： GetNextAssoc](#getnextassoc)|获取用于循环访问的下一个元素。|
-|[CAtlMap：： GetNextKey](#getnextkey)|调用此方法从`CAtlMap`对象中检索下一个键。|
-|[CAtlMap：： GetNextValue](#getnextvalue)|调用此方法可从`CAtlMap`对象获取下一个值。|
+|[CAtlMap：： GetNextKey](#getnextkey)|调用此方法从对象中检索下一个键 `CAtlMap` 。|
+|[CAtlMap：： GetNextValue](#getnextvalue)|调用此方法可从对象获取下一个值 `CAtlMap` 。|
 |[CAtlMap：： GetStartPosition](#getstartposition)|调用此方法以启动地图迭代。|
-|[CAtlMap：： GetValueAt](#getvalueat)|调用此方法可以检索存储在`CAtlMap`对象中的指定位置的值。|
+|[CAtlMap：： GetValueAt](#getvalueat)|调用此方法可以检索存储在对象中的指定位置的值 `CAtlMap` 。|
 |[CAtlMap：： InitHashTable](#inithashtable)|调用此方法可初始化哈希表。|
 |[CAtlMap：： IsEmpty](#isempty)|调用此方法可测试空的地图对象。|
-|[CAtlMap：： Lookup](#lookup)|调用此方法可查找对象中的`CAtlMap`键或值。|
-|[CAtlMap：： Rehash](#rehash)|调用此方法来 rehash `CAtlMap`对象。|
-|[CAtlMap：： RemoveAll](#removeall)|调用此方法可从`CAtlMap`对象中移除所有元素。|
-|[CAtlMap：： RemoveAtPos](#removeatpos)|调用此方法可删除`CAtlMap`对象中给定位置的元素。|
-|[CAtlMap：： RemoveKey](#removekey)|调用此方法可从`CAtlMap`对象中删除元素（给定键）。|
+|[CAtlMap：： Lookup](#lookup)|调用此方法可查找对象中的键或值 `CAtlMap` 。|
+|[CAtlMap：： Rehash](#rehash)|调用此方法来 rehash `CAtlMap` 对象。|
+|[CAtlMap：： RemoveAll](#removeall)|调用此方法可从对象中移除所有元素 `CAtlMap` 。|
+|[CAtlMap：： RemoveAtPos](#removeatpos)|调用此方法可删除对象中给定位置的元素 `CAtlMap` 。|
+|[CAtlMap：： RemoveKey](#removekey)|调用此方法可从对象中删除元素 `CAtlMap` （给定键）。|
 |[CAtlMap：： SetAt](#setat)|调用此方法可将元素对插入到映射中。|
-|[CAtlMap：： SetOptimalLoad](#setoptimalload)|调用此方法可设置`CAtlMap`对象的最佳负载。|
-|[CAtlMap：： SetValueAt](#setvalueat)|调用此方法可更改存储在`CAtlMap`对象中指定位置的值。|
+|[CAtlMap：： SetOptimalLoad](#setoptimalload)|调用此方法可设置对象的最佳负载 `CAtlMap` 。|
+|[CAtlMap：： SetValueAt](#setvalueat)|调用此方法可更改存储在对象中指定位置的值 `CAtlMap` 。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|替换或将新元素添加到中`CAtlMap`。|
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|替换或将新元素添加到中 `CAtlMap` 。|
 
 ## <a name="remarks"></a>备注
 
-`CAtlMap`提供对任意给定类型的映射数组的支持，并管理关键元素的无序数组及其关联值。 使用哈希算法存储元素（包含键和值），允许有效地存储和检索大量数据。
+`CAtlMap` 提供对任意给定类型的映射数组的支持，并管理关键元素的无序数组及其关联值。  (包含键和值) 的元素使用哈希算法进行存储，这允许有效地存储和检索大量数据。
 
-*KTraits*和*VTraits*参数是包含复制或移动元素所需的任何补充代码的特征类。
+*KTraits* 和 *VTraits* 参数是包含复制或移动元素所需的任何补充代码的特征类。
 
-CRBMap 类提供`CAtlMap`的替代方法。 [CRBMap](../../atl/reference/crbmap-class.md) `CRBMap`还存储键/值对，但具有不同的性能特征。 插入项、查找项或从`CRBMap`对象中删除键所需的时间为 order *log （n）*，其中*n*是元素的数目。 对于`CAtlMap`，所有这些操作通常会花费很长时间，但最糟糕的情况是订单*n*。 因此，在典型情况下， `CAtlMap`速度更快。
+`CAtlMap` [CRBMap](../../atl/reference/crbmap-class.md)类提供的替代方法。 `CRBMap` 还存储键/值对，但具有不同的性能特征。 插入项、查找项或从对象中删除键所需的时间 `CRBMap` 为 *log (n)* 顺序，其中 *n* 是元素的数目。 对于 `CAtlMap` ，所有这些操作通常会花费很长时间，但最糟糕的情况是订单 *n*。 因此，在典型情况下， `CAtlMap` 速度更快。
 
-循环访问存储的`CRBMap`元素`CAtlMap`时，和之间的另一个差异变得明显。 在中`CRBMap`，按排序顺序访问元素。 在中`CAtlMap`，不会对元素进行排序，并且不能推断顺序。
+`CRBMap`循环访问存储的元素时，和之间的另一个差异 `CAtlMap` 变得明显。 在中 `CRBMap` ，按排序顺序访问元素。 在中 `CAtlMap` ，不会对元素进行排序，并且不能推断顺序。
 
-需要存储少量的元素时，请考虑改用[CSimpleMap](../../atl/reference/csimplemap-class.md)类。
+需要存储少量的元素时，请考虑改用 [CSimpleMap](../../atl/reference/csimplemap-class.md) 类。
 
-有关详细信息，请参阅[ATL Collection 类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅 [ATL Collection 类](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>要求
 
 **标头：** atlcoll
 
-## <a name="catlmapassertvalid"></a><a name="assertvalid"></a>CAtlMap：： AssertValid
+## <a name="catlmapassertvalid"></a><a name="assertvalid"></a> CAtlMap：： AssertValid
 
-如果`CAtlMap`对象无效，则调用此方法以引发断言。
+如果对象无效，则调用此方法以引发断言 `CAtlMap` 。
 
 ```cpp
 void AssertValid() const;
@@ -165,13 +166,13 @@ void AssertValid() const;
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果`CAtlMap`对象无效，此方法将导致断言。
+在调试版本中，如果对象无效，此方法将导致断言 `CAtlMap` 。
 
 ### <a name="example"></a>示例
 
-请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmapcatlmap"></a><a name="catlmap"></a>CAtlMap：： CAtlMap
+## <a name="catlmapcatlmap"></a><a name="catlmap"></a> CAtlMap：： CAtlMap
 
 构造函数。
 
@@ -184,7 +185,7 @@ CAtlMap(
     UINT nBlockSize = 10) throw ();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBins*<br/>
 提供指向存储元素的指针的箱数。 有关 bin 的说明，请参阅本主题后面的 "备注"。
@@ -203,25 +204,25 @@ CAtlMap(
 
 ### <a name="remarks"></a>备注
 
-`CAtlMap`通过先使用密钥的哈希算法创建索引，引用其所有存储元素。 此索引引用 "bin"，其中包含指向存储元素的指针。 如果 bin 已在使用，则将创建一个链接列表来访问后续元素。 遍历列表比直接访问正确的元素更慢，因此，地图结构需要根据性能来平衡存储要求。 在大多数情况下，已选择默认参数以获得良好的结果。
+`CAtlMap` 通过先使用密钥的哈希算法创建索引，引用其所有存储元素。 此索引引用 "bin"，其中包含指向存储元素的指针。 如果 bin 已在使用，则将创建一个链接列表来访问后续元素。 遍历列表比直接访问正确的元素更慢，因此，地图结构需要根据性能来平衡存储要求。 在大多数情况下，已选择默认参数以获得良好的结果。
 
-负载比是地图对象中存储的元素数的比率。 重新计算地图结构时，将使用*fOptimalLoad*参数值计算所需的储箱数。 可以使用[CAtlMap：： SetOptimalLoad](#setoptimalload)方法更改此值。
+负载比是地图对象中存储的元素数的比率。 重新计算地图结构时，将使用 *fOptimalLoad* 参数值计算所需的储箱数。 可以使用 [CAtlMap：： SetOptimalLoad](#setoptimalload) 方法更改此值。
 
-*FLoThreshold*参数是负载比在重新计算地图的最佳大小之前`CAtlMap`可以达到的较小值。
+*FLoThreshold* 参数是负载比在 `CAtlMap` 重新计算地图的最佳大小之前可以达到的较小值。
 
-*FHiThreshold*参数是在`CAtlMap`对象重新计算地图的最佳大小之前，负载比可以达到的上限值。
+*FHiThreshold* 参数是在 `CAtlMap` 对象重新计算地图的最佳大小之前，负载比可以达到的上限值。
 
-默认情况下，将启用此重新计算过程（称为 rehashing）。 如果要禁用此进程，可能在一次输入大量数据时调用[CAtlMap：:D isableautorehash](#disableautorehash)方法。 用[CAtlMap：： EnableAutoRehash](#enableautorehash)方法重新激活它。
+默认情况下，会启用此重新计算过程 (称为 rehashing) 。 如果要禁用此进程，可能在一次输入大量数据时调用 [CAtlMap：:D isableautorehash](#disableautorehash) 方法。 用 [CAtlMap：： EnableAutoRehash](#enableautorehash) 方法重新激活它。
 
-*NBlockSize*参数是在需要新元素时分配的内存量的度量值。 较大的块大小可减少对内存分配例程的调用，但会占用更多资源。
+*NBlockSize* 参数是在需要新元素时分配的内存量的度量值。 较大的块大小可减少对内存分配例程的调用，但会占用更多资源。
 
-在可以存储任何数据之前，必须使用对[CAtlMap：： InitHashTable](#inithashtable)的调用来初始化哈希表。
+在可以存储任何数据之前，必须使用对 [CAtlMap：： InitHashTable](#inithashtable)的调用来初始化哈希表。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_ATL_Utilities#72](../../atl/codesnippet/cpp/catlmap-class_1.cpp)]
 
-## <a name="catlmapcatlmap"></a><a name="dtor"></a>CAtlMap：： ~ CAtlMap
+## <a name="catlmapcatlmap"></a><a name="dtor"></a> CAtlMap：： ~ CAtlMap
 
 析构函数。
 
@@ -233,7 +234,7 @@ CAtlMap(
 
 释放所有已分配的资源。
 
-## <a name="catlmapcpair-class"></a><a name="cpair_class"></a>CAtlMap：： CPair 类
+## <a name="catlmapcpair-class"></a><a name="cpair_class"></a> CAtlMap：： CPair 类
 
 一个包含键和值元素的类。
 
@@ -243,11 +244,11 @@ class CPair : public __POSITION
 
 ### <a name="remarks"></a>备注
 
-此类由[CAtlMap：： GetNext](#getnext)和[CAtlMap：： Lookup](#lookup)方法用来访问存储在映射结构中的键和值元素。
+此类由 [CAtlMap：： GetNext](#getnext) 和 [CAtlMap：： Lookup](#lookup) 方法用来访问存储在映射结构中的键和值元素。
 
-## <a name="catlmapdisableautorehash"></a><a name="disableautorehash"></a>CAtlMap：:D isableAutoRehash
+## <a name="catlmapdisableautorehash"></a><a name="disableautorehash"></a> CAtlMap：:D isableAutoRehash
 
-调用此方法可禁用`CAtlMap`对象的自动 rehashing。
+调用此方法可禁用对象的自动 rehashing `CAtlMap` 。
 
 ```cpp
 void DisableAutoRehash() throw();
@@ -255,13 +256,13 @@ void DisableAutoRehash() throw();
 
 ### <a name="remarks"></a>备注
 
-启用自动 rehashing 时（默认设置），如果负载值（储箱数到数组中存储的元素数的比率）超过创建映射时指定的最大值或最小值，则将自动重新计算哈希表中的储箱数。
+当启用自动 rehashing 时 (默认情况下) ，如果负载值 (储箱中的元素数与存储在数组中的元素数之比，则将自动重新计算哈希表中的储组数) 超过创建映射时指定的最大值或最小值。
 
-`DisableAutoRehash`当将大量元素同时添加到地图时，最有用。 不会在每次超出限制时触发 rehashing 进程，调用`DisableAutoRehash`、添加元素以及最后调用[CAtlMap：： EnableAutoRehash](#enableautorehash)更有效。
+`DisableAutoRehash` 当将大量元素同时添加到地图时，最有用。 不会在每次超出限制时触发 rehashing 进程，调用 `DisableAutoRehash` 、添加元素以及最后调用 [CAtlMap：： EnableAutoRehash](#enableautorehash)更有效。
 
-## <a name="catlmapenableautorehash"></a><a name="enableautorehash"></a>CAtlMap：： EnableAutoRehash
+## <a name="catlmapenableautorehash"></a><a name="enableautorehash"></a> CAtlMap：： EnableAutoRehash
 
-调用此方法以启用`CAtlMap`对象的自动 rehashing。
+调用此方法以启用对象的自动 rehashing `CAtlMap` 。
 
 ```cpp
 void EnableAutoRehash() throw();
@@ -269,11 +270,11 @@ void EnableAutoRehash() throw();
 
 ### <a name="remarks"></a>备注
 
-启用自动 rehashing 时（默认设置），如果负载值（储箱数到数组中存储的元素数的比率）超过创建映射时指定的最大值或最小值，则将自动重新计算哈希表中的储箱数。
+当启用自动 rehashing 时 (默认情况下) ，如果负载值 (储箱中的元素数与存储在数组中的元素数之比，则将自动重新计算哈希表中的储组数) 超过创建映射时指定的最大值或最小值。
 
-`EnableAutoRefresh`在调用[CAtlMap：:D isableautorehash](#disableautorehash)后，最常使用。
+`EnableAutoRefresh` 在调用 [CAtlMap：:D isableautorehash](#disableautorehash)后，最常使用。
 
-## <a name="catlmapgetat"></a><a name="getat"></a>CAtlMap：： GetAt
+## <a name="catlmapgetat"></a><a name="getat"></a> CAtlMap：： GetAt
 
 调用此方法可在映射中的指定位置返回元素。
 
@@ -288,10 +289,10 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
-*键*<br/>
+*key*<br/>
 指定地图键类型的模板参数。
 
 *value*<br/>
@@ -303,9 +304,9 @@ CPair* GetAt(POSITION& pos) throw();
 
 ### <a name="remarks"></a>备注
 
-在调试版本中，如果*pos*等于 NULL，将发生断言错误。
+在调试版本中，如果 *pos* 等于 NULL，将发生断言错误。
 
-## <a name="catlmapgetcount"></a><a name="getcount"></a>CAtlMap：： GetCount
+## <a name="catlmapgetcount"></a><a name="getcount"></a> CAtlMap：： GetCount
 
 调用此方法可检索映射中的元素数。
 
@@ -319,9 +320,9 @@ size_t GetCount() const throw();
 
 ### <a name="example"></a>示例
 
-请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmapgethashtablesize"></a><a name="gethashtablesize"></a>CAtlMap：： GetHashTableSize
+## <a name="catlmapgethashtablesize"></a><a name="gethashtablesize"></a> CAtlMap：： GetHashTableSize
 
 调用此方法以确定地图的哈希表中的储箱数。
 
@@ -331,11 +332,11 @@ UINT GetHashTableSize() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回哈希表中的储箱数。 有关说明，请参阅[CAtlMap：： CAtlMap](#catlmap) 。
+返回哈希表中的储箱数。 有关说明，请参阅 [CAtlMap：： CAtlMap](#catlmap) 。
 
-## <a name="catlmapgetkeyat"></a><a name="getkeyat"></a>CAtlMap：： GetKeyAt
+## <a name="catlmapgetkeyat"></a><a name="getkeyat"></a> CAtlMap：： GetKeyAt
 
-调用此方法可以检索存储在`CAtlMap`对象中的给定位置的键。
+调用此方法可以检索存储在对象中的给定位置的键 `CAtlMap` 。
 
 ```cpp
 const K& GetKeyAt(POSITION pos) const throw();
@@ -343,20 +344,20 @@ const K& GetKeyAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
 ### <a name="return-value"></a>返回值
 
-返回对存储在`CAtlMap`对象中的给定位置的键的引用。
+返回对存储在对象中的给定位置的键的引用 `CAtlMap` 。
 
 ### <a name="example"></a>示例
 
-请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmapgetnext"></a><a name="getnext"></a>CAtlMap：： GetNext
+## <a name="catlmapgetnext"></a><a name="getnext"></a> CAtlMap：： GetNext
 
-调用此方法以获取指向存储在`CAtlMap`对象中的下一个元素对的指针。
+调用此方法以获取指向存储在对象中的下一个元素对的指针 `CAtlMap` 。
 
 ```cpp
 CPair* GetNext(POSITION& pos) throw();
@@ -365,14 +366,14 @@ const CPair* GetNext(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
 ### <a name="return-value"></a>返回值
 
-返回一个指向存储在映射中的下一对键/值元素的指针。 每次调用后， *pos*位置计数器就会更新。 如果检索到的元素是映射中的最后一个，则*pos*将设置为 NULL。
+返回一个指向存储在映射中的下一对键/值元素的指针。 每次调用后， *pos* 位置计数器就会更新。 如果检索到的元素是映射中的最后一个，则 *pos* 将设置为 NULL。
 
-## <a name="catlmapgetnextassoc"></a><a name="getnextassoc"></a>CAtlMap：： GetNextAssoc
+## <a name="catlmapgetnextassoc"></a><a name="getnextassoc"></a> CAtlMap：： GetNextAssoc
 
 获取用于循环访问的下一个元素。
 
@@ -385,10 +386,10 @@ void GetNextAssoc(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
-*键*<br/>
+*key*<br/>
 指定地图键类型的模板参数。
 
 *value*<br/>
@@ -396,11 +397,11 @@ void GetNextAssoc(
 
 ### <a name="remarks"></a>备注
 
-每次调用后， *pos*位置计数器就会更新。 如果检索到的元素是映射中的最后一个，则*pos*将设置为 NULL。
+每次调用后， *pos* 位置计数器就会更新。 如果检索到的元素是映射中的最后一个，则 *pos* 将设置为 NULL。
 
-## <a name="catlmapgetnextkey"></a><a name="getnextkey"></a>CAtlMap：： GetNextKey
+## <a name="catlmapgetnextkey"></a><a name="getnextkey"></a> CAtlMap：： GetNextKey
 
-调用此方法从`CAtlMap`对象中检索下一个键。
+调用此方法从对象中检索下一个键 `CAtlMap` 。
 
 ```cpp
 const K& GetNextKey(POSITION& pos) const throw();
@@ -408,8 +409,8 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
 ### <a name="return-value"></a>返回值
 
@@ -419,9 +420,9 @@ const K& GetNextKey(POSITION& pos) const throw();
 
 更新当前位置计数器， *pos*。如果映射中没有更多条目，则位置计数器设置为 NULL。
 
-## <a name="catlmapgetnextvalue"></a><a name="getnextvalue"></a>CAtlMap：： GetNextValue
+## <a name="catlmapgetnextvalue"></a><a name="getnextvalue"></a> CAtlMap：： GetNextValue
 
-调用此方法可从`CAtlMap`对象获取下一个值。
+调用此方法可从对象获取下一个值 `CAtlMap` 。
 
 ```cpp
 V& GetNextValue(POSITION& pos) throw();
@@ -430,8 +431,8 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
 ### <a name="return-value"></a>返回值
 
@@ -443,9 +444,9 @@ const V& GetNextValue(POSITION& pos) const throw();
 
 ### <a name="example"></a>示例
 
-请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmapgetstartposition"></a><a name="getstartposition"></a>CAtlMap：： GetStartPosition
+## <a name="catlmapgetstartposition"></a><a name="getstartposition"></a> CAtlMap：： GetStartPosition
 
 调用此方法以启动地图迭代。
 
@@ -459,18 +460,18 @@ POSITION GetStartPosition() const throw();
 
 ### <a name="remarks"></a>备注
 
-调用此方法可通过返回可传递给`GetNextAssoc`方法的位置值来启动映射迭代。
+调用此方法可通过返回可传递给方法的位置值来启动映射迭代 `GetNextAssoc` 。
 
 > [!NOTE]
 > 迭代顺序不可预测
 
 ### <a name="example"></a>示例
 
-请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmapgetvalueat"></a><a name="getvalueat"></a>CAtlMap：： GetValueAt
+## <a name="catlmapgetvalueat"></a><a name="getvalueat"></a> CAtlMap：： GetValueAt
 
-调用此方法可以检索存储在`CAtlMap`对象中的指定位置的值。
+调用此方法可以检索存储在对象中的指定位置的值 `CAtlMap` 。
 
 ```cpp
 V& GetValueAt(POSITION pos) throw();
@@ -479,14 +480,14 @@ const V& GetValueAt(POSITION pos) const throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
 ### <a name="return-value"></a>返回值
 
-返回对存储在`CAtlMap`对象中的给定位置的值的引用。
+返回对存储在对象中的给定位置的值的引用 `CAtlMap` 。
 
-## <a name="catlmapinithashtable"></a><a name="inithashtable"></a>CAtlMap：： InitHashTable
+## <a name="catlmapinithashtable"></a><a name="inithashtable"></a> CAtlMap：： InitHashTable
 
 调用此方法可初始化哈希表。
 
@@ -496,10 +497,10 @@ bool InitHashTable(
     bool bAllocNow = true);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBins*<br/>
-哈希表使用的箱数。 有关说明，请参阅[CAtlMap：： CAtlMap](#catlmap) 。
+哈希表使用的箱数。 有关说明，请参阅 [CAtlMap：： CAtlMap](#catlmap) 。
 
 *bAllocNow*<br/>
 应分配内存时的标志指示。
@@ -510,15 +511,15 @@ bool InitHashTable(
 
 ### <a name="remarks"></a>备注
 
-`InitHashTable`在哈希表中存储任何元素之前，必须先调用。  如果未显式调用此方法，则在第一次使用`CAtlMap`构造函数指定的 bin 计数添加元素时，将自动调用此方法。  否则，将使用*nBins*参数指定的新 bin 计数来初始化该映射。
+`InitHashTable` 在哈希表中存储任何元素之前，必须先调用。  如果未显式调用此方法，则在第一次使用构造函数指定的 bin 计数添加元素时，将自动调用此方法 `CAtlMap` 。  否则，将使用 *nBins* 参数指定的新 bin 计数来初始化该映射。
 
-如果*bAllocNow*参数为 false，则在第一次需要哈希表之前，不会分配哈希表所需的内存。 如果不确定是否将使用映射，这会很有用。
+如果 *bAllocNow* 参数为 false，则在第一次需要哈希表之前，不会分配哈希表所需的内存。 如果不确定是否将使用映射，这会很有用。
 
 ### <a name="example"></a>示例
 
-请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmapisempty"></a><a name="isempty"></a>CAtlMap：： IsEmpty
+## <a name="catlmapisempty"></a><a name="isempty"></a> CAtlMap：： IsEmpty
 
 调用此方法可测试空的地图对象。
 
@@ -530,7 +531,7 @@ bool IsEmpty() const throw();
 
 如果映射为空，则返回 TRUE，否则返回 FALSE。
 
-## <a name="catlmapkinargtype"></a><a name="kinargtype"></a>CAtlMap：： KINARGTYPE
+## <a name="catlmapkinargtype"></a><a name="kinargtype"></a> CAtlMap：： KINARGTYPE
 
 当键作为输入参数传递时使用的类型。
 
@@ -538,7 +539,7 @@ bool IsEmpty() const throw();
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```
 
-## <a name="catlmapkoutargtype"></a><a name="koutargtype"></a>CAtlMap：： KOUTARGTYPE
+## <a name="catlmapkoutargtype"></a><a name="koutargtype"></a> CAtlMap：： KOUTARGTYPE
 
 当键作为输出参数返回时使用的类型。
 
@@ -546,9 +547,9 @@ typedef KTraits::INARGTYPE KINARGTYPE;
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```
 
-## <a name="catlmaplookup"></a><a name="lookup"></a>CAtlMap：： Lookup
+## <a name="catlmaplookup"></a><a name="lookup"></a> CAtlMap：： Lookup
 
-调用此方法可查找对象中的`CAtlMap`键或值。
+调用此方法可查找对象中的键或值 `CAtlMap` 。
 
 ```cpp
 bool Lookup(KINARGTYPE key, VOUTARGTYPE value) const;
@@ -556,9 +557,9 @@ const CPair* Lookup(KINARGTYPE key) const throw();
 CPair* Lookup(KINARGTYPE key) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
+*key*<br/>
 指定标识要查找的元素的键。
 
 *value*<br/>
@@ -566,23 +567,23 @@ CPair* Lookup(KINARGTYPE key) throw();
 
 ### <a name="return-value"></a>返回值
 
-如果找到该键，则该方法的第一种形式将返回 true，否则返回 false。 第二个和第三个窗体返回指向[CPair](#cpair_class)的指针，该指针可用作调用[CAtlMap：： GetNext](#getnext)等的位置。
+如果找到该键，则该方法的第一种形式将返回 true，否则返回 false。 第二个和第三个窗体返回指向 [CPair](#cpair_class) 的指针，该指针可用作调用 [CAtlMap：： GetNext](#getnext) 等的位置。
 
 ### <a name="remarks"></a>备注
 
-`Lookup`使用哈希算法快速查找包含与给定键参数完全匹配的键的 map 元素。
+`Lookup` 使用哈希算法快速查找包含与给定键参数完全匹配的键的 map 元素。
 
-## <a name="catlmapoperator-"></a><a name="operator_at"></a>CAtlMap：： operator\[\]
+## <a name="catlmapoperator-"></a><a name="operator_at"></a> CAtlMap：： operator \[\]
 
-替换或将新元素添加到中`CAtlMap`。
+替换或将新元素添加到中 `CAtlMap` 。
 
 ```cpp
 V& operator[](kinargtype key) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
+*key*<br/>
 要添加或替换的元素的键。
 
 ### <a name="return-value"></a>返回值
@@ -591,28 +592,28 @@ V& operator[](kinargtype key) throw();
 
 ### <a name="example"></a>示例
 
-如果该键已存在，则将替换该元素。 如果该键不存在，则添加新的元素。 请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+如果该键已存在，则将替换该元素。 如果该键不存在，则添加新的元素。 请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmaprehash"></a><a name="rehash"></a>CAtlMap：： Rehash
+## <a name="catlmaprehash"></a><a name="rehash"></a> CAtlMap：： Rehash
 
-调用此方法来 rehash `CAtlMap`对象。
+调用此方法来 rehash `CAtlMap` 对象。
 
 ```cpp
 void Rehash(UINT nBins = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBins*<br/>
-要在哈希表中使用的新箱数。 有关说明，请参阅[CAtlMap：： CAtlMap](#catlmap) 。
+要在哈希表中使用的新箱数。 有关说明，请参阅 [CAtlMap：： CAtlMap](#catlmap) 。
 
 ### <a name="remarks"></a>备注
 
-如果*nBins*为0， `CAtlMap`则根据映射中的元素数和最佳负载设置计算合理的数字。 通常，rehashing 进程是自动的，但是如果已调用[CAtlMap：:D isableautorehash](#disableautorehash) ，则此方法将执行必要的大小调整。
+如果 *nBins* 为0，则 `CAtlMap` 根据映射中的元素数和最佳负载设置计算合理的数字。 通常，rehashing 进程是自动的，但是如果已调用 [CAtlMap：:D isableautorehash](#disableautorehash) ，则此方法将执行必要的大小调整。
 
-## <a name="catlmapremoveall"></a><a name="removeall"></a>CAtlMap：： RemoveAll
+## <a name="catlmapremoveall"></a><a name="removeall"></a> CAtlMap：： RemoveAll
 
-调用此方法可从`CAtlMap`对象中移除所有元素。
+调用此方法可从对象中移除所有元素 `CAtlMap` 。
 
 ```cpp
 void RemoveAll() throw();
@@ -620,11 +621,11 @@ void RemoveAll() throw();
 
 ### <a name="remarks"></a>备注
 
-清除`CAtlMap`对象，释放用于存储元素的内存。
+清除 `CAtlMap` 对象，释放用于存储元素的内存。
 
-## <a name="catlmapremoveatpos"></a><a name="removeatpos"></a>CAtlMap：： RemoveAtPos
+## <a name="catlmapremoveatpos"></a><a name="removeatpos"></a> CAtlMap：： RemoveAtPos
 
-调用此方法可删除`CAtlMap`对象中给定位置的元素。
+调用此方法可删除对象中给定位置的元素 `CAtlMap` 。
 
 ```cpp
 void RemoveAtPos(POSITION pos) throw();
@@ -632,24 +633,24 @@ void RemoveAtPos(POSITION pos) throw();
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
 ### <a name="remarks"></a>备注
 
-删除存储在指定位置的键/值对。 将释放用于存储元素的内存。 *Pos*引用的位置变为无效，而映射中任何其他元素的位置保持有效，则不一定要保持相同的顺序。
+删除存储在指定位置的键/值对。 将释放用于存储元素的内存。 *Pos* 引用的位置变为无效，而映射中任何其他元素的位置保持有效，则不一定要保持相同的顺序。
 
-## <a name="catlmapremovekey"></a><a name="removekey"></a>CAtlMap：： RemoveKey
+## <a name="catlmapremovekey"></a><a name="removekey"></a> CAtlMap：： RemoveKey
 
-调用此方法可从`CAtlMap`对象中删除元素（给定键）。
+调用此方法可从对象中删除元素 `CAtlMap` （给定键）。
 
 ```cpp
 bool RemoveKey(KINARGTYPE key) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
+*key*<br/>
 与要移除的元素对相对应的键。
 
 ### <a name="return-value"></a>返回值
@@ -658,9 +659,9 @@ bool RemoveKey(KINARGTYPE key) throw();
 
 ### <a name="example"></a>示例
 
-请参阅[CAtlMap：： CAtlMap](#catlmap)的示例。
+请参阅 [CAtlMap：： CAtlMap](#catlmap)的示例。
 
-## <a name="catlmapsetat"></a><a name="setat"></a>CAtlMap：： SetAt
+## <a name="catlmapsetat"></a><a name="setat"></a> CAtlMap：： SetAt
 
 调用此方法可将元素对插入到映射中。
 
@@ -670,25 +671,25 @@ POSITION SetAt(
     VINARGTYPE value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-要添加到`CAtlMap`对象的键值。
+*key*<br/>
+要添加到对象的键值 `CAtlMap` 。
 
 *value*<br/>
-要添加到`CAtlMap`对象的值。
+要添加到对象的值 `CAtlMap` 。
 
 ### <a name="return-value"></a>返回值
 
-返回`CAtlMap`对象中键/值元素对的位置。
+返回对象中键/值元素对的位置 `CAtlMap` 。
 
 ### <a name="remarks"></a>备注
 
-`SetAt`如果找到匹配的键，则替换现有元素。 如果未找到该键，则创建一个新的键/值对。
+`SetAt` 如果找到匹配的键，则替换现有元素。 如果未找到该键，则创建一个新的键/值对。
 
-## <a name="catlmapsetoptimalload"></a><a name="setoptimalload"></a>CAtlMap：： SetOptimalLoad
+## <a name="catlmapsetoptimalload"></a><a name="setoptimalload"></a> CAtlMap：： SetOptimalLoad
 
-调用此方法可设置`CAtlMap`对象的最佳负载。
+调用此方法可设置对象的最佳负载 `CAtlMap` 。
 
 ```cpp
 void SetOptimalLoad(
@@ -698,7 +699,7 @@ void SetOptimalLoad(
     bool bRehashNow = false);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fOptimalLoad*<br/>
 最佳负载比。
@@ -714,11 +715,11 @@ void SetOptimalLoad(
 
 ### <a name="remarks"></a>备注
 
-此方法将重定义`CAtlMap`对象的最佳负载值。 有关各个参数的讨论，请参阅[CAtlMap：： CAtlMap](#catlmap) 。 如果*bRehashNow*为 true，且元素数超出了最小值和最大值，则重新计算哈希表。
+此方法将重定义对象的最佳负载值 `CAtlMap` 。 有关各个参数的讨论，请参阅 [CAtlMap：： CAtlMap](#catlmap) 。 如果 *bRehashNow* 为 true，且元素数超出了最小值和最大值，则重新计算哈希表。
 
-## <a name="catlmapsetvalueat"></a><a name="setvalueat"></a>CAtlMap：： SetValueAt
+## <a name="catlmapsetvalueat"></a><a name="setvalueat"></a> CAtlMap：： SetValueAt
 
-调用此方法可更改存储在`CAtlMap`对象中指定位置的值。
+调用此方法可更改存储在对象中指定位置的值 `CAtlMap` 。
 
 ```cpp
 void SetValueAt(
@@ -728,17 +729,17 @@ void SetValueAt(
 
 ### <a name="parameters"></a>参数
 
-*位置*<br/>
-位置计数器，由先前对[CAtlMap：： GetNextAssoc](#getnextassoc)或[CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
+pos<br/>
+位置计数器，由先前对 [CAtlMap：： GetNextAssoc](#getnextassoc) 或 [CAtlMap：： GetStartPosition](#getstartposition)的调用返回。
 
 *value*<br/>
-要添加到`CAtlMap`对象的值。
+要添加到对象的值 `CAtlMap` 。
 
 ### <a name="remarks"></a>备注
 
-更改存储在`CAtlMap`对象中给定位置的值元素。
+更改存储在对象中给定位置的值元素 `CAtlMap` 。
 
-## <a name="catlmapvinargtype"></a><a name="vinargtype"></a>CAtlMap：： VINARGTYPE
+## <a name="catlmapvinargtype"></a><a name="vinargtype"></a> CAtlMap：： VINARGTYPE
 
 将值作为输入参数传递时使用的类型。
 
@@ -746,7 +747,7 @@ void SetValueAt(
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```
 
-## <a name="catlmapvoutargtype"></a><a name="voutargtype"></a>CAtlMap：： VOUTARGTYPE
+## <a name="catlmapvoutargtype"></a><a name="voutargtype"></a> CAtlMap：： VOUTARGTYPE
 
 将值作为输出参数传递时使用的类型。
 
@@ -754,7 +755,7 @@ typedef VTraits::INARGTYPE VINARGTYPE;
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```
 
-## <a name="catlmapcpairm_key"></a><a name="m_key"></a>CAtlMap：： CPair：： m_key
+## <a name="catlmapcpairm_key"></a><a name="m_key"></a> CAtlMap：： CPair：： m_key
 
 存储密钥元素的数据成员。
 
@@ -762,12 +763,12 @@ typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 const K m_key;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*温度*<br/>
+*K*<br/>
 键元素类型。
 
-## <a name="catlmapcpairm_value"></a><a name="m_value"></a>CAtlMap：： CPair：： m_value
+## <a name="catlmapcpairm_value"></a><a name="m_value"></a> CAtlMap：： CPair：： m_value
 
 存储 value 元素的数据成员。
 
@@ -775,12 +776,12 @@ const K m_key;
 V  m_value;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*向量*<br/>
+*V*<br/>
 值元素类型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [天棚示例](../../overview/visual-cpp-samples.md)<br/>
 [UpdatePV 示例](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： RuntimeClassType 枚举
 title: RuntimeClassType 枚举
 ms.date: 11/04/2016
 ms.topic: reference
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 10055d79148124e886c4da50e40ffdb7d3d0fec0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135273"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 枚举
 
-指定受支持的[RuntimeClass](runtimeclass-class.md)实例的类型。
+指定受支持的 [RuntimeClass](runtimeclass-class.md) 实例的类型。
 
 ## <a name="syntax"></a>语法
 
@@ -28,11 +29,11 @@ enum RuntimeClassType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`ClassicCom`|典型的 COM 运行时类。|
 |`Delegate`|等效于 `ClassicCom`。|
-|`InhibitFtmBase`|当 `__WRL_CONFIGURATION_LEGACY__` 未定义时禁用 `FtmBase` 支持。|
+|`InhibitFtmBase`|`FtmBase`未定义时禁用支持 `__WRL_CONFIGURATION_LEGACY__` 。|
 |`InhibitWeakReference`|禁用弱引用支持。|
 |`WinRt`|Windows 运行时类。|
 |`WinRtClassicComMix`|`WinRt` 和 `ClassicCom` 的组合。|
@@ -43,6 +44,6 @@ enum RuntimeClassType;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL Namespace](microsoft-wrl-namespace.md)
+[Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

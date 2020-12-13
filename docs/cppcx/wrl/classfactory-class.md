@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ClassFactory 类
 title: ClassFactory 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e6503cba1060c432b2cb85020799b83f0ee16c6d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87198094"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135299"
 ---
 # <a name="classfactory-class"></a>ClassFactory 类
 
@@ -50,7 +51,7 @@ class ClassFactory :
     >;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *I0*<br/>
 第零个接口。
@@ -65,7 +66,7 @@ class ClassFactory :
 
 利用 `ClassFactory` 提供用户定义的工厂实现。
 
-下面的编程模式演示如何使用[实现](implements-structure.md)结构在类工厂中指定三个以上的接口。
+下面的编程模式演示如何使用 [实现](implements-structure.md) 结构在类工厂中指定三个以上的接口。
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -73,7 +74,7 @@ class ClassFactory :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                        | 描述
+“属性”                                        | 描述
 ------------------------------------------- | -----------
 [ClassFactory：： ClassFactory](#classfactory) |
 
@@ -114,7 +115,7 @@ class ClassFactory :
 
 **命名空间：** Microsoft::WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory：： AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a> ClassFactory：： AddRef
 
 递增当前对象的引用计数 `ClassFactory` 。
 
@@ -129,13 +130,13 @@ STDMETHOD_(
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory：： ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a> ClassFactory：： ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory：： LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a> ClassFactory：： LockServer
 
 递增或递减由当前对象跟踪的基础对象的数量 `ClassFactory` 。
 
@@ -145,7 +146,7 @@ STDMETHOD(
 )(BOOL fLock);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fLock*<br/>
 **`true`** 递增跟踪的对象数。 **`false`** 减少跟踪的对象数。
@@ -156,9 +157,9 @@ STDMETHOD(
 
 ### <a name="remarks"></a>备注
 
-`ClassFactory`跟踪[模块](module-class.md)类的基础实例中的对象。
+`ClassFactory` 跟踪 [模块](module-class.md) 类的基础实例中的对象。
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory：： QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a> ClassFactory：： QueryInterface
 
 检索指向参数指定的接口的指针。
 
@@ -168,19 +169,19 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *riid*<br/>
 接口 ID。
 
 *ppvObject*<br/>
-此操作完成后，指向参数*riid*指定的接口的指针。
+此操作完成后，指向参数 *riid* 指定的接口的指针。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则为 S_OK；否则为描述失败的 HRESULT。
 
-## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory：： Release
+## <a name="classfactoryrelease"></a><a name="release"></a> ClassFactory：： Release
 
 递减当前对象的引用计数 `ClassFactory` 。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： rts_alloc 类
 title: rts_alloc 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 04a6578c7abd07ff84f4c0a5cee68cfd7ec8ef04
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: b2fe4bf3fe3f54e8fe1de3d89605280b2ba2b857
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88560551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148936"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc 类
 
@@ -30,7 +31,7 @@ template <class Cache>
 class rts_alloc
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *区*\
 数组中包含的缓存实例的类型。 它可以是 [`cache_chunklist`](../standard-library/cache-chunklist-class.md) 、 [`cache_freelist`](../standard-library/cache-freelist-class.md) 或 [`cache_suballoc`](../standard-library/cache-suballoc-class.md) 。
@@ -61,7 +62,7 @@ class rts_alloc
 void *allocate(std::size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *计*\
 数组中要分配的元素数目。
@@ -72,7 +73,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>备注
 
-成员函数返回 `caches[_IDX].allocate(count)` ，其中索引由 `_IDX` 所请求的块大小 *计数*确定，如果 *count* 太大，则返回 `operator new(count)` 。 用于表示缓存对象的 `cache`。
+成员函数返回 `caches[_IDX].allocate(count)` ，其中索引由 `_IDX` 所请求的块大小 *计数* 确定，如果 *count* 太大，则返回 `operator new(count)` 。 用于表示缓存对象的 `cache`。
 
 ## <a name="rts_allocdeallocate"></a><a name="deallocate"></a> rts_alloc：:d eallocate
 
@@ -82,7 +83,7 @@ void *allocate(std::size_t count);
 void deallocate(void* ptr, std::size_t count);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ptr*\
 指向要从存储中释放的第一个对象的指针。
@@ -92,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>备注
 
-成员函数将调用 `caches[_IDX].deallocate(ptr, count)` ，其中索引由 `_IDX` 所请求的块大小 *计数*确定，如果 *count* 太大，则返回 `operator delete(ptr)` 。
+成员函数将调用 `caches[_IDX].deallocate(ptr, count)` ，其中索引由 `_IDX` 所请求的块大小 *计数* 确定，如果 *count* 太大，则返回 `operator delete(ptr)` 。
 
 ## <a name="rts_allocequals"></a><a name="equals"></a> rts_alloc：： equals
 
@@ -102,7 +103,7 @@ void deallocate(void* ptr, std::size_t count);
 bool equals(const sync<_Cache>& _Other) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Cache*\
 与筛选器关联的缓存对象。
@@ -114,7 +115,7 @@ bool equals(const sync<_Cache>& _Other) const;
 
 **`true`** 如果的结果 `caches[0].equals(other.caches[0])` ，则为; 否则为 **`false`** 。 `caches` 表示缓存对象的数组。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
 [\<allocators>](../standard-library/allocators-header.md)

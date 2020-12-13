@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： max_unbounded 类
 title: max_unbounded 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: e0254563cc60db4a171527735b373c2954a5a9e5
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 64501d9028b5adba0f9e3059f3581ad57d00ea27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561955"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149235"
 ---
 # <a name="max_unbounded-class"></a>max_unbounded 类
 
@@ -57,7 +58,7 @@ class max_unbounded
 void allocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
@@ -74,7 +75,7 @@ void allocated(std::size_t _Nx = 1);
 void deallocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
@@ -123,6 +124,6 @@ void saved();
 
 此成员函数不执行任何操作。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)

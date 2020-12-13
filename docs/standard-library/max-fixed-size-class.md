@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： max_fixed_size 类
 title: max_fixed_size 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: e62884c83d71b4e9f1902fa4bc7f52f5e0a4e0ee
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 3238013547078640af42914fa21dddec622a9973
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149274"
 ---
 # <a name="max_fixed_size-class"></a>max_fixed_size 类
 
@@ -34,7 +35,7 @@ template <std::size_t Max>
 class max_fixed_size
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *数量*\
 max 类，用于决定要存储于 `freelist` 中的最大元素数目。
@@ -69,7 +70,7 @@ max 类，用于决定要存储于 `freelist` 中的最大元素数目。
 void allocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
@@ -86,7 +87,7 @@ void allocated(std::size_t _Nx = 1);
 void deallocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
@@ -147,6 +148,6 @@ void saved();
 
 此成员函数逐量增加存储值 `_Nblocks`。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)

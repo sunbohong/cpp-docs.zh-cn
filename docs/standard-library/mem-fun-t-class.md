@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： mem_fun_t 类
 title: mem_fun_t 类
 ms.date: 02/21/2019
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-ms.openlocfilehash: 3c6606fe4d2df3b6068c3bb8194dc380344f7d97
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 53c3103c8f2c855d8d6ff9a2861ace4f2c69c787
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689371"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149144"
 ---
 # <a name="mem_fun_t-class"></a>mem_fun_t 类
 
-一种适配器类，在使用指针参数进行初始化时，该类允许将不带任何自变量的 `non_const` 成员函数作为一元函数对象调用。 在 c + + 11 中已弃用，在 c + + 17 中删除。
+一种适配器类， `non_const` 在使用指针参数进行初始化时，该类允许将不带任何参数的成员函数作为一元函数对象调用。 在 c + + 11 中已弃用，在 c + + 17 中删除。
 
 ## <a name="syntax"></a>语法
 
@@ -28,13 +29,13 @@ class mem_fun_t : public unary_function<Type *, Result> {
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Pm* \
+*_Pm*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
 
-*_Pleft* \
-在其上调用 *_Pm*成员函数的对象。
+*_Pleft*\
+在其上调用 *_Pm* 成员函数的对象。
 
 ## <a name="return-value"></a>返回值
 
@@ -42,7 +43,7 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 ## <a name="remarks"></a>备注
 
-类模板存储 *_Pm*的副本，该副本必须是指向私有成员对象中 `Type` 类的成员函数的指针。 它将其成员函数定义为返回（`_Pleft` ->*  `_Pm`）（） `operator()`。
+类模板 `Type` 在私有成员对象中存储 _Pm 的副本，该副本必须是指向类的成员函数的指针。 它将其成员函数定义 `operator()` 为返回 (`_Pleft` ->*  `_Pm`) # A2 # A3。
 
 ## <a name="example"></a>示例
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： max_variable_size 类
 title: max_variable_size 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: 53d2603c82e94710ed687dce4caeec24aeb2f60a
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 0640e11e4ab68b60dc8114c88463a370e43dc749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561643"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149222"
 ---
 # <a name="max_variable_size-class"></a>max_variable_size 类
 
@@ -63,7 +64,7 @@ class max_variable_size
 void allocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
@@ -80,14 +81,14 @@ void allocated(std::size_t _Nx = 1);
 void deallocated(std::size_t _Nx = 1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Nx*\
 增量值。
 
 ### <a name="remarks"></a>备注
 
-成员函数从存储 *_Nx*的值中减去 _Nx `_Nallocs` 。 此成员函数在每次调用后调用 `cache_freelist::deallocate` 到运算符 **`delete`** 。 参数 *_Nx* 是由运算符释放的块区中的内存块数 **`delete`** 。
+成员函数从存储的值中减去 _Nx `_Nallocs` 。 此成员函数在每次调用后调用 `cache_freelist::deallocate` 到运算符 **`delete`** 。 参数 *_Nx* 是由运算符释放的块区中的内存块数 **`delete`** 。
 
 ## <a name="max_variable_sizefull"></a><a name="full"></a> max_variable_size：： full
 
@@ -141,6 +142,6 @@ void saved();
 
 此成员函数逐量增加存储值 `_Nblocks`。 每当此成员函数向空闲列表放入内存块时，`cache_freelist::deallocate` 将对其进行调用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<allocators>](../standard-library/allocators-header.md)

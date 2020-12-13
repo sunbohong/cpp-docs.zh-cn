@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：记录集： (ODBC 获取 Sum 和其他聚合结果) '
 title: 记录集：获取 SUM 及其他聚合结果 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: b9e70716ad90a14bbed552d47f48d5a3317e5a62
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 10a2ef3b013d9eba0d9733cc321591ae8d6681f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225704"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136481"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>记录集：获取 SUM 及其他聚合结果 (ODBC)
 
@@ -36,10 +37,10 @@ ms.locfileid: "87225704"
 
 - **COUNT** 计算任何数据类型列中的记录数。
 
-可以使用这些 SQL 函数来获取有关数据源中记录的统计信息，而不是用于从数据源中提取记录。 创建的记录集通常由包含值的单个记录（如果所有列为聚合）组成。 （如果使用了**GROUP by**子句，则可能有多个记录。）此值是由 SQL 函数执行的计算或提取的结果。
+可以使用这些 SQL 函数来获取有关数据源中记录的统计信息，而不是用于从数据源中提取记录。 创建的记录集通常由包含值的单个记录（如果所有列为聚合）组成。  (如果使用了 **GROUP BY** 子句，则可能有多个记录。 ) 此值是由 SQL 函数执行的计算或提取的结果。
 
 > [!TIP]
-> 若要在 SQL 语句中添加 SQL GROUP BY 子句（可能还有“HAVING”子句），请将其附加到 `m_strFilter` 的末尾********。 例如：
+> 若要在 SQL 语句中添加 SQL GROUP BY 子句（可能还有“HAVING”子句），请将其附加到 `m_strFilter` 的末尾。 例如：
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -50,13 +51,13 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 > [!CAUTION]
 > 某些聚合运算符将从其聚合的列返回不同的数据类型。
 
-- **SUM**和**AVG**可能返回下一个较大的数据类型（例如，通过调用， **`int`** 返回**LONG**或 **`double`** ）。
+- **SUM** 和 **AVG** 可能返回下一个较大的数据类型 (例如，通过调用并 **`int`** 返回 **LONG** 或 **`double`**) 。
 
-- 不管目标列的类型是什么，“COUNT”通常会返回“LONG”********。
+- 不管目标列的类型是什么，“COUNT”通常会返回“LONG”。
 
-- “MAX”和“MIN”返回与其计算列相同的数据类型********。
+- “MAX”和“MIN”返回与其计算列相同的数据类型。
 
-     例如，**添加类**向导创建 **`long`** `m_lSales` 以容纳销售列，但需要将其替换为 `double m_dblSumSales` 数据成员以容纳聚合结果。 请参阅以下示例。
+     例如， **添加类** 向导创建 **`long`** `m_lSales` 以容纳销售列，但需要将其替换为 `double m_dblSumSales` 数据成员以容纳聚合结果。 请参阅以下示例。
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>获取记录集的聚合结果
 
@@ -91,7 +92,7 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：记录集如何选择记录（ODBC）](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[记录集：记录集如何选择记录 (ODBC) ](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

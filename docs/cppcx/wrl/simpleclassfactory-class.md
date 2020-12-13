@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： SimpleClassFactory 类
 title: SimpleClassFactory 类
 ms.date: 09/7/2018
 ms.topic: reference
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 66794789e51a2635fae646cca49e4fae8385dfe0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd771909790f80048d8fee678b842f820e2f7be2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211146"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97135195"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory 类
 
@@ -27,7 +28,7 @@ template<typename Base>
 class SimpleClassFactory : public ClassFactory<>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *基座*<br/>
 基类。
@@ -36,7 +37,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 基类必须提供默认构造函数。
 
-下面的代码示例演示如何将用于 `SimpleClassFactory` [ActivatableClassWithFactoryEx](activatableclass-macros.md)宏。
+下面的代码示例演示如何将用于 `SimpleClassFactory` [ActivatableClassWithFactoryEx](activatableclass-macros.md) 宏。
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -78,7 +79,7 @@ class SimpleClassFactory : public ClassFactory<>;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory：： CreateInstance 方法
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a> SimpleClassFactory：： CreateInstance 方法
 
 创建指定接口的实例。
 
@@ -90,18 +91,18 @@ STDMETHOD( CreateInstance )(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pUnkOuter*<br/>
 必须为 **`nullptr`** ; 否则，返回值为 CLASS_E_NOAGGREGATION。
 
-SimpleClassFactory 不支持聚合。 如果支持聚合，并且所创建的对象是聚合的一部分，则*pUnkOuter*将是指向聚合的控制接口的指针 `IUnknown` 。
+SimpleClassFactory 不支持聚合。 如果支持聚合，并且所创建的对象是聚合的一部分，则 *pUnkOuter* 将是指向聚合的控制接口的指针 `IUnknown` 。
 
 *riid*<br/>
 要创建的对象的接口 ID。
 
 *ppvObject*<br/>
-此操作完成后，指针指向由*riid*参数指定的对象的实例。
+此操作完成后，指针指向由 *riid* 参数指定的对象的实例。
 
 ### <a name="return-value"></a>返回值
 
@@ -109,4 +110,4 @@ SimpleClassFactory 不支持聚合。 如果支持聚合，并且所创建的对
 
 ### <a name="remarks"></a>备注
 
-如果 `__WRL_STRICT__` 定义了，则在类模板参数中指定的基类不是从[RuntimeClass](runtimeclass-class.md)派生的或未使用 ClassicCom 或 WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md)枚举值配置的情况下，将发出断言错误。
+如果 `__WRL_STRICT__` 定义了，则在类模板参数中指定的基类不是从 [RuntimeClass](runtimeclass-class.md)派生的或未使用 ClassicCom 或 WinRtClassicComMix [RuntimeClassType](runtimeclasstype-enumeration.md) 枚举值配置的情况下，将发出断言错误。

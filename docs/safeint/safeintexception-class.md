@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： SafeIntException 类
 title: SafeIntException 类
 ms.date: 10/22/2018
 ms.topic: reference
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - SafeIntException class
 - SafeIntException, constructor
 ms.assetid: 88bef958-1f48-4d55-ad4f-d1f9581a293a
-ms.openlocfilehash: 8149a5e1216e26fafc1e0cd4a489cdad0551607c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6a7be21b0dfa42a23ba60eac7eb3f4ebbf1629ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149573"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 类
 
@@ -53,7 +54,7 @@ class SafeIntException;
 
 **命名空间：** msl:: utilities
 
-## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a>SafeIntException：： SafeIntException
+## <a name="safeintexceptionsafeintexception"></a><a name="safeintexception"></a> SafeIntException：： SafeIntException
 
 创建一个 `SafeIntException` 对象。
 
@@ -65,14 +66,14 @@ SafeIntException(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *code*<br/>
 [输入] 描述所发生错误的枚举数据值。
 
 ### <a name="remarks"></a>备注
 
-文件 Safeint.h 中定义了 code** 的可取值。 为了方便起见，此处还列出了可取值。
+文件 Safeint.h 中定义了 code 的可取值。 为了方便起见，此处还列出了可取值。
 
 - `SafeIntNoError`
 - `SafeIntArithmeticOverflow`

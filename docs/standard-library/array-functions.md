@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 数组 &gt; 函数
 title: '&lt;array&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 3389ba769d6b61a363e8cbfcf5f6a4e9ec679469
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2f6cd72c5f82f36914f96dee6924654a96a9fc1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844699"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149547"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函数
 
-\<array>标头包括两个 `get` `swap` 在**数组**对象上操作的非成员函数和。
+\<array>标头包括两个 `get` `swap` 在 **数组** 对象上操作的非成员函数和。
 
 [获取](#get)\
 [swap](#swap)
@@ -39,7 +40,7 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *编入*\
 元素偏移量。
@@ -87,14 +88,14 @@ int main()
 
 ## <a name="swap"></a><a name="swap"></a> 购
 
-`std::swap`交换两个**数组**对象的非成员模板专用化。
+`std::swap`交换两个 **数组** 对象的非成员模板专用化。
 
 ```cpp
 template <class Ty, std::size_t N>
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 元素的类型。
@@ -108,7 +109,7 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 *然后*\
 要交换的第二个数组。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该模板函数执行 `left.swap(right)`。
 
@@ -158,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<array>](../standard-library/array.md)

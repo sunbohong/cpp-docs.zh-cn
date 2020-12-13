@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： reverse_iterator 类
 title: reverse_iterator 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: 882d0f7f4930e9d809098a29384a962d0aa8f4ea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0aa8b03188d8b5a6e2ce004579b7b3cc2fb9b254
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97148962"
 ---
 # <a name="reverse_iterator-class"></a>reverse_iterator 类
 
-类模板是一个迭代器适配器，用于描述反向迭代器对象，该对象类似于随机访问或双向迭代器，仅相反。 它允许向后遍历范围。
+类模板是一个迭代器适配器，它描述的反向迭代器对象的行为类似于随机访问迭代器或双向迭代器，仅反向进行。 它允许向后遍历范围。
 
 ## <a name="syntax"></a>语法
 
@@ -36,19 +37,19 @@ template <class RandomIterator>
 class reverse_iterator
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-随机迭代器 表示要适应的迭代器的类型，可反向操作。
+RandomIterator 表示要改编以反向操作的迭代器的类型。
 
 ## <a name="remarks"></a>备注
 
-现有 C++ 标准库容器还定义 `reverse_iterator` 和 `const_reverse_iterator` 类型，并拥有返回反向迭代器的成员函数 `rbegin` 和 `rend`。 这些迭代器具有覆盖语义。 适配器`reverse_iterator`补充此功能，因为它提供插入语义，也可以与流一起使用。
+现有 C++ 标准库容器还定义 `reverse_iterator` 和 `const_reverse_iterator` 类型，并拥有返回反向迭代器的成员函数 `rbegin` 和 `rend`。 这些迭代器具有覆盖语义。 `reverse_iterator`适配器补充了此功能，因为它提供了插入语义，还可以与流一起使用。
 
-`reverse_iterator`需要`operator+=`双向迭代器的不能调用任何成员函数`operator+`、、`operator-=``operator-`或`operator[]`，这些函数只能与随机访问迭代器一起使用。
+`reverse_iterator`需要双向迭代器的不能调用任何成员函数 `operator+=` 、 `operator+` 、 `operator-=` 、 `operator-` 或 `operator[]` ，它们只能与随机访问迭代器一起使用。
 
-迭代器的范围是 [*第一*个，*最后*]，左侧的方括号表示包含*第一*个，右侧的括号表示包含的元素最多，但不包括*最后一个*本身。 相同的元素包含在反向序列中 =**首先转稿** - *first*，**最后修订** - *），因此*，如果*最后*一个元素是序列中的一个结束元素，则第一个元素在反向序列中**首先转稿** - *first*指向\*（*最后*- 1）。 将所有反向迭代器与其基础迭代器关联的标识是：
+迭代器的范围为 [*first*， *last*) ，其中左侧的方括号指示包含 *第一个* ，右侧的括号指示包含元素（直到 *最后一个* 本身）。 相同的元素包含在反向序列 [ **rev**  -  *first*， **rev**  -  *last*) 中，因此，如果 *last* 是序列中的后端元素，则反向序列中第一个元素的第一个元素将  -  指向 \* (*最后* 一个) 。 将所有反向迭代器与其基础迭代器关联的标识是：
 
-&\*（ **reverse_iterator** （ *i* ） \*= &（ *i* - 1 ）.
+&\* ( **reverse_iterator** ( *)* ) = = &( ) \* 。 
 
 在实际操作中，这意味着在反向序列中，reverse_iterator 将引用迭代器在原有序列中引用的元素之外（右侧）一个位置的元素。 因此，如果迭代器在序列 (2, 4, 6, 8) 中发现元素 6，则 `reverse_iterator` 将在反向序列 (8, 6, 4, 2) 中发现元素 4。
 
@@ -60,14 +61,14 @@ class reverse_iterator
 
 ### <a name="typedefs"></a>Typedef
 
-|类型名称|说明|
+|类型名称|描述|
 |-|-|
 |[difference_type](#difference_type)|一种类型，此类型提供引用同一容器中的元素的两个 `reverse_iterator` 之间的差异。|
 |[iterator_type](#iterator_type)|一种类型，此类型为 `reverse_iterator` 提供基础迭代器。|
-|[指针 (pointer)](#pointer)|一种类型，此类型提供指向 `reverse_iterator` 所发现元素的指针。|
-|[参考](#reference)|一种类型，此类型提供对 `reverse_iterator` 所发现元素的引用。|
+|[变为](#pointer)|一种类型，此类型提供指向 `reverse_iterator` 所发现元素的指针。|
+|[reference](#reference)|一种类型，此类型提供对 `reverse_iterator` 所发现元素的引用。|
 
-### <a name="member-functions"></a>成员职能
+### <a name="member-functions"></a>成员函数
 
 |成员函数|说明|
 |-|-|
@@ -75,25 +76,25 @@ class reverse_iterator
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[operator_star](#op_star)|返回 `reverse_iterator` 发现的元素。|
-|[运算符*](#op_add)|将偏移量添加到迭代器，并返回在新偏移位置处发现插入元素的新 `reverse_iterator`。|
-|[运算符*](#op_add_add)|将 `reverse_iterator` 递增到下一元素。|
-|[运算符*](#op_add_eq)|从 `reverse_iterator` 添加指定偏移量。|
-|[操作员-](#operator-)|从 `reverse_iterator` 减去偏移量，并返回在偏移位置处发现元素的 `reverse_iterator`。|
-|[运算符--](#operator--)|将 `reverse_iterator` 递减到前一元素。|
-|[运算符-*](#operator-_eq)|从 `reverse_iterator` 减去指定偏移量。|
-|[运算符>](#op-arrow)|返回指向 `reverse_iterator` 发现的元素的指针。|
+|[operator +](#op_add)|将偏移量添加到迭代器，并返回在新偏移位置处发现插入元素的新 `reverse_iterator`。|
+|[operator + +](#op_add_add)|将 `reverse_iterator` 递增到下一元素。|
+|[运算符 + =](#op_add_eq)|从 `reverse_iterator` 添加指定偏移量。|
+|[操作员](#operator-)|从 `reverse_iterator` 减去偏移量，并返回在偏移位置处发现元素的 `reverse_iterator`。|
+|[operator--](#operator--)|将 `reverse_iterator` 递减到前一元素。|
+|[operator-=](#operator-_eq)|从 `reverse_iterator` 减去指定偏移量。|
+|[operator->](#op-arrow)|返回指向 `reverse_iterator` 发现的元素的指针。|
 |[operator&#91;&#93;](#op_at)|返回对于从 `reverse_iterator` 发现的元素偏移指定个位置的元素的引用。|
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<iterator>
+**标头：**\<iterator>
 
 **命名空间:** std
 
-## <a name="reverse_iteratorbase"></a><a name="base"></a>reverse_iterator：基数
+## <a name="reverse_iteratorbase"></a><a name="base"></a> reverse_iterator：： base
 
 将基础迭代器从其 `reverse_iterator` 恢复。
 
@@ -109,7 +110,7 @@ RandomIterator base() const;
 
 将所有反向迭代器与其基础迭代器关联的标识是：
 
-&\*（ `reverse_iterator` *i* ） = \*&（ *i* - 1 ）.
+&\* ( `reverse_iterator` (  ) ) = = &( \* *)* 。
 
 在实际操作中，这意味着在反向序列中，`reverse_iterator` 将引用迭代器在原有序列中引用的元素之外（右侧）一个位置的元素。 因此，如果迭代器在序列 (2, 4, 6, 8) 中发现元素 6，则 `reverse_iterator` 将在反向序列 (8, 6, 4, 2) 中发现元素 4。
 
@@ -162,7 +163,7 @@ int main( )
 }
 ```
 
-## <a name="reverse_iteratordifference_type"></a><a name="difference_type"></a>reverse_iterator：:d）类型
+## <a name="reverse_iteratordifference_type"></a><a name="difference_type"></a> reverse_iterator：:d ifference_type
 
 一种类型，此类型提供引用同一容器中的元素的两个 `reverse_iterator` 之间的差异。
 
@@ -174,13 +175,13 @@ typedef typename iterator_traits<RandomIterator>::difference_type  difference_ty
 
 `reverse_iterator` 差异类型与迭代器差异类型相同。
 
-该类型是迭代器特征`iterator_traits`\<类型名称**RandomIter：:pointer**> **的同**义词。
+该类型是迭代器特征 typename `iterator_traits` \< **RandomIterator**> **：:p ointer** 的同义词。
 
 ### <a name="example"></a>示例
 
 请参阅 [reverse_iterator::operator&#91;&#93;](#op_at)，获取关于如何声明和使用 `difference_type` 的示例。
 
-## <a name="reverse_iteratoriterator_type"></a><a name="iterator_type"></a>reverse_iterator：iterator_type
+## <a name="reverse_iteratoriterator_type"></a><a name="iterator_type"></a> reverse_iterator：： iterator_type
 
 一种类型，此类型为 `reverse_iterator` 提供基础迭代器。
 
@@ -196,7 +197,7 @@ typedef RandomIterator iterator_type;
 
 请参阅 [reverse_iterator::base](#base)，获取关于如何声明和使用 `iterator_type` 的示例。
 
-## <a name="reverse_iteratoroperator"></a><a name="op_star"></a>reverse_iterator：：操作员\*
+## <a name="reverse_iteratoroperator"></a><a name="op_star"></a> reverse_iterator：： operator\*
 
 返回由 reverse_iterator 寻址的元素。
 
@@ -210,7 +211,7 @@ reference operator*() const;
 
 ### <a name="remarks"></a>备注
 
-运算符返回\*（**当前**- 1）。
+运算符返回 \* ( **电流**) 。
 
 ### <a name="example"></a>示例
 
@@ -255,7 +256,7 @@ int main( )
 }
 ```
 
-## <a name="reverse_iteratoroperator"></a><a name="op_add"></a>reverse_iterator：：操作员*
+## <a name="reverse_iteratoroperator"></a><a name="op_add"></a> reverse_iterator：： operator +
 
 将偏移量添加到迭代器，并返回在新偏移位置处发现插入元素的新 `reverse_iterator`。
 
@@ -263,9 +264,9 @@ int main( )
 reverse_iterator<RandomIterator> operator+(difference_type Off) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关闭*\
+*非*\
 要添加到反向迭代器的偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -331,7 +332,7 @@ After the +2 offset, the iterator rVPOS2 points
 to the 3rd element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iteratoroperator"></a><a name="op_add_add"></a>reverse_iterator：：操作员*
+## <a name="reverse_iteratoroperator"></a><a name="op_add_add"></a> reverse_iterator：： operator + +
 
 向上一个元素逐量添加 reverse_iterato。
 
@@ -404,7 +405,7 @@ After incrementing, the iterator rVPOS1 points
 to the second element in the reversed sequence: 7.
 ```
 
-## <a name="reverse_iteratoroperator"></a><a name="op_add_eq"></a>reverse_iterator：：操作员*
+## <a name="reverse_iteratoroperator"></a><a name="op_add_eq"></a> reverse_iterator：： operator + =
 
 从 reverse_iterator 添加指定偏移量。
 
@@ -412,9 +413,9 @@ to the second element in the reversed sequence: 7.
 reverse_iterator<RandomIterator>& operator+=(difference_type Off);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关闭*\
+*非*\
 迭代器要递增的偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -477,7 +478,7 @@ After the +2 offset, the iterator rVPOS1 now points
 to the third element in the reversed sequence: 6.
 ```
 
-## <a name="reverse_iteratoroperator-"></a><a name="operator-"></a>reverse_iterator：操作员-
+## <a name="reverse_iteratoroperator-"></a><a name="operator-"></a> reverse_iterator：： operator-
 
 从 `reverse_iterator` 减去偏移量，并返回在偏移位置处发现元素的 `reverse_iterator`。
 
@@ -485,9 +486,9 @@ to the third element in the reversed sequence: 6.
 reverse_iterator<RandomIterator> operator-(difference_type Off) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关闭*\
+*非*\
 要从 everse_iterator 中减去的偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -554,7 +555,7 @@ After the -2 offset, the iterator rVPOS2 points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iteratoroperator--"></a><a name="operator--"></a>reverse_iterator：运算符 --
+## <a name="reverse_iteratoroperator--"></a><a name="operator--"></a> reverse_iterator：： operator--
 
 向上一个元素逐量递减 reverse_iterato。
 
@@ -627,7 +628,7 @@ After the decrement, the iterator rVPOS1 points
 to the next-to-last element in the reversed sequence: 3.
 ```
 
-## <a name="reverse_iteratoroperator-"></a><a name="operator-_eq"></a>reverse_iterator：：操作员*
+## <a name="reverse_iteratoroperator-"></a><a name="operator-_eq"></a> reverse_iterator：： operator-=
 
 从 `reverse_iterator` 减去指定偏移量。
 
@@ -635,16 +636,16 @@ to the next-to-last element in the reversed sequence: 3.
 reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关闭*\
+*非*\
 要从 `reverse_iterator` 中减去的偏移量。
 
 ### <a name="remarks"></a>备注
 
 仅当 `reverse_iterator` 满足随机访问迭代器的要求时才能使用此成员函数。
 
-运算符计算**当前** + *Off，* 然后返回**\*此**。
+运算符计算 **当前** 为  +  *Off* ，然后返回 **\* this**。
 
 ### <a name="example"></a>示例
 
@@ -702,7 +703,7 @@ After the -2 offset, the iterator rVPOS1 now points
 to the 2nd element from the last in the reversed sequence: 9.
 ```
 
-## <a name="reverse_iteratoroperator-gt"></a><a name="op-arrow"></a>reverse_iterator：操作员-&gt;
+## <a name="reverse_iteratoroperator-gt"></a><a name="op-arrow"></a> reverse_iterator：： operator-&gt;
 
 返回指向 `reverse_iterator` 发现的元素的指针。
 
@@ -716,7 +717,7 @@ pointer operator->() const;
 
 ### <a name="remarks"></a>备注
 
-运算符**&\*返回\*此**。
+运算符返回 **& \* \* this**。
 
 ### <a name="example"></a>示例
 
@@ -781,7 +782,7 @@ The reverse_iterator rpos points to:
 ( 1, 2 )
 ```
 
-## <a name="reverse_iteratoroperator"></a><a name="op_at"></a>reverse_iterator：：操作员*
+## <a name="reverse_iteratoroperator"></a><a name="op_at"></a> reverse_iterator：： operator []
 
 返回对于从 `reverse_iterator` 发现的元素偏移指定个位置的元素的引用。
 
@@ -789,9 +790,9 @@ The reverse_iterator rpos points to:
 reference operator[](difference_type Off) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*关闭*\
+*非*\
 `reverse_iterator` 地址的偏移量。
 
 ### <a name="return-value"></a>返回值
@@ -800,7 +801,7 @@ reference operator[](difference_type Off) const;
 
 ### <a name="remarks"></a>备注
 
-运算符返回<strong>\*</strong>（**\*这** + `Off`）。
+运算符返回 <strong>\*</strong> **\* 此**  +  `Off`)  (。
 
 ### <a name="example"></a>示例
 
@@ -859,7 +860,7 @@ The iterator rpos points to: 6.
 The iterator rpos now points to: 2.
 ```
 
-## <a name="reverse_iteratorpointer"></a><a name="pointer"></a>reverse_iterator：:p奥米特
+## <a name="reverse_iteratorpointer"></a><a name="pointer"></a> reverse_iterator：:p ointer
 
 一种类型，此类型提供指向 `reverse_iterator` 所发现元素的指针。
 
@@ -869,7 +870,7 @@ typedef typename iterator_traits<RandomIterator>::pointer pointer;
 
 ### <a name="remarks"></a>备注
 
-该类型是迭代器特征`iterator_traits`\<类型名称*RandomIter：:pointer*> **的同**义词。
+该类型是迭代器特征 typename `iterator_traits` \< *RandomIterator*> **：:p ointer** 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -931,7 +932,7 @@ The iterator rpos points to:
 ( 1, 2 )
 ```
 
-## <a name="reverse_iteratorreference"></a><a name="reference"></a>reverse_iterator：参考
+## <a name="reverse_iteratorreference"></a><a name="reference"></a> reverse_iterator：： reference
 
 一种类型，此类型提供对 reverse_iterator 所发现元素的引用。
 
@@ -941,13 +942,13 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 
 ### <a name="remarks"></a>备注
 
-该类型是迭代器特征类型`iterator_traits`\<名称*RandomIterer：：：*> **引用**的同义词。
+该类型是迭代器特征 typename `iterator_traits` \< *RandomIterator*> **：： reference** 的同义词。
 
 ### <a name="example"></a>示例
 
-有关如何声明和使用 的示例，请参阅[reverse_iterator：：运算符&#91;&#93;](#op_at)或`reference`[reverse_iterator：：运算符*。](#op_star)
+有关如何声明和使用的示例，请参阅 [reverse_iterator：： operator&#91;&#93;](#op_at) 或 [reverse_iterator：： operator *](#op_star) `reference` 。
 
-## <a name="reverse_iteratorreverse_iterator"></a><a name="reverse_iterator"></a>reverse_iterator：：reverse_iterator
+## <a name="reverse_iteratorreverse_iterator"></a><a name="reverse_iterator"></a> reverse_iterator：： reverse_iterator
 
 构造默认 `reverse_iterator` 或从基础迭代器构造 `reverse_iterator`。
 
@@ -959,9 +960,9 @@ template <class Type>
 reverse_iterator(const reverse_iterator<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*对*\
+*然后*\
 适用于 `reverse_iterator` 的迭代器。
 
 ### <a name="return-value"></a>返回值
@@ -972,7 +973,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 
 将所有反向迭代器与其基础迭代器关联的标识是：
 
-&\*（ `reverse_iterator` *i* ） = \*&（ *i* - 1 ）.
+&\* ( `reverse_iterator` (  ) ) = = &( \* *)* 。
 
 在实际操作中，这意味着在反向序列中，reverse_iterator 将引用迭代器在原有序列中引用的元素之外（右侧）一个位置的元素。 因此，如果迭代器在序列 (2, 4, 6, 8) 中发现元素 6，则 `reverse_iterator` 将在反向序列 (8, 6, 4, 2) 中发现元素 4。
 
@@ -1019,8 +1020,8 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[\<迭代器>](../standard-library/iterator.md)\
-[C++标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

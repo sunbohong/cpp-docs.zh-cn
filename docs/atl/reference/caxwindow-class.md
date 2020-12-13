@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAxWindow 类
 title: CAxWindow 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: b74ecb9af2decf92f873cef8d016907b6c9474cf
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: 0b1cdabbce4fd6a36f6f3e9fb15b3f28249065c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146986"
 ---
 # <a name="caxwindow-class"></a>CAxWindow 类
 
@@ -40,7 +41,7 @@ class CAxWindow : public CWindow
 
 ### <a name="methods"></a>方法
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[AttachControl](#attachcontrol)|将现有 ActiveX 控件附加到 `CAxWindow` 对象。|
 |[CAxWindow](#caxwindow)|构造 `CAxWindow` 对象。|
@@ -54,11 +55,11 @@ class CAxWindow : public CWindow
 
 ### <a name="operators"></a>运算符
 
-|运算符|说明|
+|运算符|描述|
 |-|-|
 |[operator =](#operator_eq)|将 HWND 分配给现有 `CAxWindow` 对象。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类提供用于操作承载 ActiveX 控件的窗口的方法。 托管由 " **AtlAxWin80"** 提供，由包装 `CAxWindow` 。
 
@@ -94,7 +95,7 @@ HRESULT AttachControl(
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在调用之前，必须正确初始化要附加的控件对象 `AttachControl` 。
 
@@ -158,9 +159,9 @@ HTML 资源的资源 ID。 将用指定的资源创建并加载 WebBrowser 控�
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果使用此方法的第二个版本，则会创建一个 HTML 控件，并将其绑定到由 *dwResID*标识的资源。
+如果使用此方法的第二个版本，则会创建一个 HTML 控件，并将其绑定到由 *dwResID* 标识的资源。
 
 此方法提供与调用相同的结果：
 
@@ -225,7 +226,7 @@ HRESULT CreateControlEx(
 中所包含对象上的传出接口的接口标识符。 可以 IID_NULL。
 
 *punkSink*<br/>
-中指向 `IUnknown` 接收器对象的接口的指针，该接收器对象将连接到 *iidSink*指定的包含对象上的连接点。
+中指向 `IUnknown` 接收器对象的接口的指针，该接收器对象将连接到 *iidSink* 指定的包含对象上的连接点。
 
 *dwResID*<br/>
 中HTML 资源的资源 ID。 将用指定的资源创建并加载 WebBrowser 控件。
@@ -234,7 +235,7 @@ HRESULT CreateControlEx(
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法类似于 [CAxWindow：： CreateControl](#createcontrol)，但与该方法不同， `CreateControlEx` 还允许你接收指向新创建的控件的接口指针，并设置一个事件接收器来接收由控件触发的事件。
 
@@ -291,7 +292,7 @@ HRESULT QueryControl(Q** ppUnk);
 *ppUnk*<br/>
 弄指向控件的接口的指针。 在此方法的模板版本中，只要传递具有关联 UUID 的类型化接口，就不需要引用 ID。
 
-*：*<br/>
+*Q*<br/>
 中正在查询的接口。
 
 ### <a name="return-value"></a>返回值
@@ -316,14 +317,14 @@ HRESULT QueryHost(Q** ppUnk);
 *ppUnk*<br/>
 弄指向主机上接口的指针。 在此方法的模板版本中，只要传递具有关联 UUID 的类型化接口，就不需要引用 ID。
 
-*：*<br/>
+*Q*<br/>
 中正在查询的接口。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 宿主的接口允许访问由实现的窗口承载代码的基础功能 `AxWin` 。
 
@@ -361,11 +362,11 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 外部 `IDocHostUIHandlerDispatch` 接口由查询宿主的接口的站点的控件使用 `IDocHostUIHandlerDispatch` 。 WebBrowser 控件是实现此功能的一个控件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ATLCON 示例](../../overview/visual-cpp-samples.md)<br/>
 [CWindow 类](../../atl/reference/cwindow-class.md)<br/>

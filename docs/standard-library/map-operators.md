@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 映射 &gt; 运算符
 title: '&lt;map&gt; 运算符'
 ms.date: 03/27/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 5cfd40add5e2b2503a5eea9610cadffd97bb0a80
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: edd22b4de7c8a4590f2d3570f3315a05abd66f7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743316"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97149417"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 运算符
 
@@ -35,7 +36,7 @@ bool operator!=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `map` 类型的对象。
@@ -100,7 +101,7 @@ bool operator<(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `map` 类型的对象。
@@ -165,7 +166,7 @@ bool operator<=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `map` 类型的对象。
@@ -233,7 +234,7 @@ bool operator==(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `map` 类型的对象。
@@ -298,7 +299,7 @@ bool operator>(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `map` 类型的对象。
@@ -362,7 +363,7 @@ bool operator>=(
       const map <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `map` 类型的对象。
@@ -430,7 +431,7 @@ bool operator!=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multimap` 类型的对象。
@@ -495,7 +496,7 @@ bool operator<(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multimap` 类型的对象。
@@ -560,7 +561,7 @@ bool operator<=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multimap` 类型的对象。
@@ -628,7 +629,7 @@ bool operator==(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multimap` 类型的对象。
@@ -693,7 +694,7 @@ bool operator>(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multimap` 类型的对象。
@@ -758,7 +759,7 @@ bool operator>=(
       const multimap <Key, Type, Traits, Allocator>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 一个 `multimap` 类型的对象。

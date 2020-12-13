@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComAutoThreadModule 类
 title: CComAutoThreadModule 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 405b05548cda2b2d379b849d9278293b8d747d2e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fe6ded878a054bdcdc2569c8ca347e2ac20410b9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146934"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 类
 
@@ -38,7 +39,7 @@ template <class ThreadAllocator = CComSimpleThreadAllocator>
 class CComAutoThreadModule : public CComModule
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ThreadAllocator*<br/>
 中管理线程选择的类。 默认值为 [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。
@@ -47,24 +48,24 @@ class CComAutoThreadModule : public CComModule
 
 ### <a name="methods"></a>方法
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[CreateInstance](#createinstance)|选择一个线程，然后在关联单元中创建对象。|
 |[GetDefaultThreads](#getdefaultthreads)| (静态) 根据处理器数量动态计算模块的线程数。|
 |[Init](#init)|创建模块的线程。|
 |[Lock](#lock)|递增模块和当前线程上的锁计数。|
-|[解锁](#unlock)|递减模块和当前线程上的锁计数。|
+|[Unlock](#unlock)|递减模块和当前线程上的锁计数。|
 
 ### <a name="data-members"></a>数据成员
 
-|数据成员|说明|
+|数据成员|描述|
 |-|-|
 |[dwThreadID](#dwthreadid)|包含当前线程的标识符。|
 |[m_Allocator](#m_allocator)|管理线程选择。|
 |[m_nThreads](#m_nthreads)|包含模块中的线程数。|
 |[m_pApartments](#m_papartments)|管理模块的单元。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 > [!NOTE]
 > 此类已过时，已替换为 [CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md) 和 [CAtlModule](../../atl/reference/catlmodule-class.md) 派生类。 下面的信息适用于更早版本的 ATL。
@@ -108,7 +109,7 @@ HRESULT CreateInstance(
     void** ppvObj);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pfnCreateInstance*<br/>
 中指向 creator 函数的指针。
@@ -117,13 +118,13 @@ HRESULT CreateInstance(
 中所请求的接口的 IID。
 
 *ppvObj*<br/>
-弄指向由 *riid*标识的接口指针的指针。 如果对象不支持此接口，则将 *ppvObj* 设置为 NULL。
+弄指向由 *riid* 标识的接口指针的指针。 如果对象不支持此接口，则将 *ppvObj* 设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 选择一个线程，然后在关联单元中创建对象。
 
@@ -135,7 +136,7 @@ HRESULT CreateInstance(
 DWORD dwThreadID;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 包含当前线程的标识符。
 
@@ -151,7 +152,7 @@ static int GetDefaultThreads();
 
 要在 EXE 模块中创建的线程数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此静态函数根据处理器数量动态计算 EXE 模块的最大线程数。 默认情况下，此返回值将传递给 [Init](#init) 方法以创建线程。
 
@@ -167,12 +168,12 @@ HRESULT Init(
     int nThreads = GetDefaultThreads());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *h-p*<br/>
 中指向对象映射项的数组的指针。
 
-h<br/>
+*h*<br/>
 中传递给或的 `DLLMain` HINSTANCE `WinMain` 。
 
 *plibid*<br/>
@@ -181,9 +182,9 @@ h<br/>
 *nThreads*<br/>
 中要创建的线程数。 默认情况下， *nThreads* 是 [GetDefaultThreads](#getdefaultthreads)返回的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-初始化数据成员，并创建 *nThreads*指定的线程数。
+初始化数据成员，并创建 *nThreads* 指定的线程数。
 
 ## <a name="ccomautothreadmodulelock"></a><a name="lock"></a> CComAutoThreadModule：： Lock
 
@@ -197,7 +198,7 @@ LONG Lock();
 
 可能对诊断或测试有用的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对模块和当前线程的锁计数执行原子增量。 `CComAutoThreadModule` 使用模块锁计数来确定是否有任何客户端访问该模块。 当前线程上的锁计数用于统计目的。
 
@@ -209,7 +210,7 @@ LONG Lock();
 ThreadAllocator  m_Allocator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 管理线程选择的对象。 默认情况下， `ThreadAllocator` 类模板参数为 [CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。
 
@@ -221,7 +222,7 @@ ThreadAllocator  m_Allocator;
 int m_nThreads;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 包含 EXE 模块中的线程数。 调用 [Init](#init) 时，将 `m_nThreads` 设置为 *nThreads* 参数值。 每个线程的关联单元由 [CComApartment](../../atl/reference/ccomapartment-class.md) 对象管理。
 
@@ -233,7 +234,7 @@ int m_nThreads;
 CComApartment* m_pApartments;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 指向 [CComApartment](../../atl/reference/ccomapartment-class.md) 对象的数组，其中每个对象都管理该模块中的一个单元。 数组中的元素数基于 [m_nThreads](#m_nthreads) 成员。
 
@@ -249,13 +250,13 @@ LONG Unlock();
 
 可能对诊断或测试有用的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对模块和当前线程的锁计数执行原子减量。 `CComAutoThreadModule` 使用模块锁计数来确定是否有任何客户端访问该模块。 当前线程上的锁计数用于统计目的。
 
 当模块锁计数达到零时，可以卸载该模块。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)<br/>
 [Module 类](../../atl/atl-module-classes.md)

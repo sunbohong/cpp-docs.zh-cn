@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComObjectRootEx 类
 title: CComObjectRootEx 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: b4dbc42cb0c6fe2c9c6692e0db37267ce3fff361
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9fe0140944e3da5ddf70e0da38d054a35bb648ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142475"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 类
 
@@ -38,7 +39,7 @@ template<class ThreadModel>
 class CComObjectRootEx : public CComObjectRootBase
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *ThreadModel*<br/>
 类，该类的方法实现所需的线程模型。 可以通过将 *ThreadModel* 设置为 [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)或 [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)来显式选择线程模型。 可以通过将 *ThreadModel* 设置为 [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) 或 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)，来接受服务器的默认线程模型。
@@ -47,17 +48,17 @@ class CComObjectRootEx : public CComObjectRootBase
 
 ### <a name="methods"></a>方法
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[CComObjectRootEx](#ccomobjectrootex)|构造函数。|
 |[InternalAddRef](#internaladdref)|递增非聚合对象的引用计数。|
 |[InternalRelease](#internalrelease)|减少非聚合对象的引用计数。|
 |[Lock](#lock)|如果线程模型为多线程模型，则获取临界区对象的所有权。|
-|[解锁](#unlock)|如果线程模型为多线程模型，则释放临界区对象的所有权。|
+|[Unlock](#unlock)|如果线程模型为多线程模型，则释放临界区对象的所有权。|
 
 ### <a name="ccomobjectrootbase-methods"></a>CComObjectRootBase 方法
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[FinalConstruct](#finalconstruct)|在您的类中重写，以执行您的对象所需的任何初始化。|
 |[FinalRelease](#finalrelease)|在您的类中重写，以执行您的对象所需的任何清理。|
@@ -67,19 +68,19 @@ class CComObjectRootEx : public CComObjectRootBase
 
 ### <a name="static-functions"></a>静态函数
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[InternalQueryInterface](#internalqueryinterface)|委托给 `IUnknown` 非聚合对象的。|
 |[ObjectMain](#objectmain)|在模块初始化和终止对象映射中列出的派生类的过程中调用。|
 
 ### <a name="data-members"></a>数据成员
 
-|数据成员|说明|
+|数据成员|描述|
 |-|-|
 |[m_dwRef](#m_dwref)|对于 `m_pOuterUnknown` ，联合的一部分。 在未聚合对象以保存和的引用计数时使用 `AddRef` `Release` 。|
 |[m_pOuterUnknown](#m_pouterunknown)|对于 `m_dwRef` ，联合的一部分。 当聚合对象以保存指向外部未知的指针时使用。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CComObjectRootEx` 处理非聚合对象和聚合对象的对象引用计数管理。 如果未对对象进行聚合，则它保存对象引用计数，如果对象正在聚合，则保存指向外部未知的指针。 对于聚合对象， `CComObjectRootEx` 可以使用方法来处理内部对象的失败，并在释放内部接口或删除内部对象时防止删除外部对象。
 
@@ -119,7 +120,7 @@ HRESULT FinalConstruct();
 
 返回 S_OK 成功或某个标准错误 HRESULT 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下， `CComObjectRootEx::FinalConstruct` 只会返回 S_OK。
 
@@ -159,7 +160,7 @@ HRESULT FinalConstruct();
 void FinalRelease();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认情况下， `CComObjectRootEx::FinalRelease` 不执行任何操作。
 
@@ -177,7 +178,7 @@ ULONG InternalAddRef();
 
 可能对诊断和测试有用的值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果线程模型为多线程模型， `InterlockedIncrement` 则用于防止多个线程同时更改引用计数。
 
@@ -193,7 +194,7 @@ static HRESULT InternalQueryInterface(
     void** ppvObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pThis*<br/>
 中指向对象的指针，该对象包含向公开的接口的 COM 映射 `QueryInterface` 。
@@ -205,13 +206,13 @@ static HRESULT InternalQueryInterface(
 中所请求的接口的 GUID。
 
 *ppvObject*<br/>
-弄指向在 *iid*中指定的接口指针的指针; 如果找不到接口，则为 NULL。
+弄指向在 *iid* 中指定的接口指针的指针; 如果找不到接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT 值之一。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `InternalQueryInterface` 仅处理 COM 映射表中的接口。 如果对象已聚合，则 `InternalQueryInterface` 不会委托给外部未知。 您可以将接口输入到 COM 映射表中，其中的宏 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 或其变量之一。
 
@@ -227,7 +228,7 @@ ULONG InternalRelease();
 
 在非调试和调试生成中，此函数将返回一个值，该值对于诊断或测试可能很有用。 返回的确切值取决于许多因素，如使用的操作系统、可能的和不是引用计数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果线程模型为多线程模型， `InterlockedDecrement` 则用于防止多个线程同时更改引用计数。
 
@@ -239,7 +240,7 @@ ULONG InternalRelease();
 void Lock();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当受保护的代码执行完毕后，线程必须调用 `Unlock` 以释放关键部分的所有权。
 
@@ -253,7 +254,7 @@ void Lock();
 long m_dwRef;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于 `m_pOuterUnknown` ，联合的一部分：
 
@@ -275,7 +276,7 @@ IUnknown*
     m_pOuterUnknown;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于 `m_dwRef` ，联合的一部分：
 
@@ -296,14 +297,14 @@ union {
 static void WINAPI ObjectMain(bool bStarting);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bStarting*<br/>
 弄如果正在初始化该类，则该值为 TRUE;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*BStarting*参数的值指示是否正在初始化或终止模块。 的默认实现 `ObjectMain` 不执行任何操作，但你可以在你的类中重写此函数，以初始化或清理你要为类分配的资源。 请注意，在 `ObjectMain` 请求类的任何实例之前调用。
+*BStarting* 参数的值指示是否正在初始化或终止模块。 的默认实现 `ObjectMain` 不执行任何操作，但你可以在你的类中重写此函数，以初始化或清理你要为类分配的资源。 请注意，在 `ObjectMain` 请求类的任何实例之前调用。
 
 `ObjectMain` 从 DLL 的入口点调用，因此入口点函数可以执行的操作类型受到限制。 有关这些限制的详细信息，请参阅 [dll 和 Visual C++ 运行时库行为](../../build/run-time-library-behavior.md) 和 [DllMain](/windows/win32/Dlls/dllmain)。
 
@@ -331,13 +332,13 @@ ULONG OuterAddRef();
 HRESULT OuterQueryInterface(REFIID iid, void** ppvObject);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 中所请求的接口的 GUID。
 
 *ppvObject*<br/>
-弄指向在 *iid*中指定的接口指针的指针; 如果聚合不支持接口，则为 NULL。
+弄指向在 *iid* 中指定的接口指针的指针; 如果聚合不支持接口，则为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -363,13 +364,13 @@ ULONG OuterRelease();
 void Unlock();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 若要获取所有权，线程必须调用 `Lock` 。 对的每个调用都需要对的 `Lock` 调用， `Unlock` 以释放关键部分的所有权。
 
 如果线程模型是单线程的，则此方法不执行任何操作。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CComAggObject 类](../../atl/reference/ccomaggobject-class.md)<br/>
 [CComObject 类](../../atl/reference/ccomobject-class.md)<br/>

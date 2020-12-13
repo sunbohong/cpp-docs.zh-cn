@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __stosw
 title: __stosw
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2995276fb255858d6c3dd9f438487726e75fdf1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219927"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143684"
 ---
 # <a name="__stosw"></a>__stosw
 
 **Microsoft 专用**
 
-生成存储字符串指令 (`rep stosw`)。
+)  (生成存储字符串指令 `rep stosw` 。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +32,7 @@ void __stosw(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
 弄操作的目标。
@@ -44,15 +45,15 @@ void __stosw(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__stosw`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-结果是将单词*数据*写入*目标*字符串中的*计数*词块。
+结果是将单词 *数据* 写入 *目标* 字符串中的 *计数* 词块。
 
 此例程仅可用作内部函数。
 
