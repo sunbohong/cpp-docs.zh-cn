@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _setmode
 title: _setmode
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: abedba6f1d414191732859e3e44b54cc16acc4e9
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 305e9a247410d762821ed0e3e004505adc1a4034
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008413"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146375"
 ---
 # <a name="_setmode"></a>_setmode
 
@@ -69,14 +70,14 @@ int _setmode (
 
 ## <a name="remarks"></a>备注
 
-**_Setmode**函数将*设置为由 fd 提供的文件*的转换模式。 *fd* 将 **_O_TEXT** 作为 *模式* 进行传递会设置文本 (即已转换) 模式。 回车换行符 (CR-LF) 组合转换为输入的单个换行符。 输出时换行符将转换为 CR-LF 组合。 传递 **_O_BINARY** 会设置二进制 (未翻译) 模式，在此模式下，将禁止显示这些翻译。
+**_Setmode** 函数将 *设置为由 fd 提供的文件* 的转换模式。  将 **_O_TEXT** 作为 *模式* 进行传递会设置文本 (即已转换) 模式。 回车换行符 (CR-LF) 组合转换为输入的单个换行符。 输出时换行符将转换为 CR-LF 组合。 传递 **_O_BINARY** 会设置二进制 (未翻译) 模式，在此模式下，将禁止显示这些翻译。
 
-你还可以传递 **_O_U16TEXT**、 **_O_U8TEXT**或 **_O_WTEXT** ，以启用 Unicode 模式，如本文档后面的第二个示例中所示。
+你还可以传递 **_O_U16TEXT**、 **_O_U8TEXT** 或 **_O_WTEXT** ，以启用 Unicode 模式，如本文档后面的第二个示例中所示。
 
 > [!CAUTION]
 > Unicode 模式适用于宽打印功能 (例如) ， `wprintf` 不适用于窄打印功能。 对 Unicode 模式流使用窄显函数会触发断言。
 
-**_setmode** 通常用于修改 **stdin** 和 **stdout**的默认转换模式，但是可以在任何文件上使用它。 如果将 **_setmode** 应用到流的文件描述符，请在对流执行任何输入或输出操作之前调用 **_setmode** 。
+**_setmode** 通常用于修改 **stdin** 和 **stdout** 的默认转换模式，但是可以在任何文件上使用它。 如果将 **_setmode** 应用到流的文件描述符，请在对流执行任何输入或输出操作之前调用 **_setmode** 。
 
 > [!CAUTION]
 > 如果将数据写入文件流，请先使用 [fflush](fflush.md) 显式刷新代码，然后再使用 **_setmode** 更改模式。 如果不刷新代码，可能会导致意外行为。 如果尚未将数据写入流，则不必刷新代码。

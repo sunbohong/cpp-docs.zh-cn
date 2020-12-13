@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __stosq
 title: __stosq
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5fce587c163da18679750c20ec697c489ecf5d90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143697"
 ---
 # <a name="__stosq"></a>__stosq
 
 **Microsoft 专用**
 
-生成存储字符串指令 (`rep stosq`)。
+)  (生成存储字符串指令 `rep stosq` 。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +32,7 @@ void __stosb(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
 弄操作的目标。
@@ -44,15 +45,15 @@ void __stosb(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-结果就是, 将四 quadwords*数据*写入*目标*字符串中的*计数*块。
+结果就是，将四 quadwords *数据* 写入 *目标* 字符串中的 *计数* 块。
 
 此例程仅可用作内部函数。
 

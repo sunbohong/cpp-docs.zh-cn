@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2261
 title: 编译器错误 C2261
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-ms.openlocfilehash: f23c2a38f8e4d6781af73fb70a25cf4737e2c4e8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c5156a240696f9021613b54cf7013e9372a13b45
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758770"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134610"
 ---
 # <a name="compiler-error-c2261"></a>编译器错误 C2261
 
@@ -19,9 +20,9 @@ ms.locfileid: "74758770"
 
 值无效。
 
-<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 用于指定友元程序集。 例如，如果 .dll 要将 b. 指定为友元程序集，则需要指定（在 .dll 中）： InternalsVisibleTo （"b"）。 然后，运行时允许使用 .dll 访问 .dll 中的所有内容（私有类型除外）。
+<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 用于指定友元程序集。 例如，如果 a.dll 想要将 b.dll 指定为友元程序集，则需要在 a.dll) ： InternalsVisibleTo ( "b" ) 中指定 (。 然后，运行时允许 b.dll 访问 a.dll (除了私有类型) 以外的所有内容。
 
-有关指定友元程序集时的正确语法的详细信息，请参阅[友元程序集C++（）](../../dotnet/friend-assemblies-cpp.md)。
+有关指定友元程序集时的正确语法的详细信息，请参阅 [友元程序集 (c + +) ](../../dotnet/friend-assemblies-cpp.md)。
 
 ## <a name="example"></a>示例
 

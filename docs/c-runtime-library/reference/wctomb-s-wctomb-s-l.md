@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： wctomb_s、_wctomb_s_l
 title: wctomb_s、_wctomb_s_l
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 63839f70fa334fadd961eb173343d1b406268cfd
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 845bdd5fff74e24226700b1f233ccf1e29afc27e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97136820"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s、_wctomb_s_l
 
@@ -64,7 +65,7 @@ errno_t _wctomb_s_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pRetValue*<br/>
 字节数或指明结果的代码。
@@ -73,7 +74,7 @@ errno_t _wctomb_s_l(
 多字节字符的地址。
 
 *sizeInBytes*<br/>
-缓冲区*mbchar*的大小。
+缓冲区 *mbchar* 的大小。
 
 *wchar*<br/>
 宽字符。
@@ -89,25 +90,25 @@ errno_t _wctomb_s_l(
 
 |*mbchar*|*sizeInBytes*|返回值|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**Null**|>0|**EINVAL**|未修改|
+|**NULL**|>0|**EINVAL**|未修改|
 |any|>**INT_MAX**|**EINVAL**|未修改|
 |any|过小|**EINVAL**|未修改|
 
-如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则**wctomb**将返回**EINVAL** ，并将**errno**设置为**EINVAL**。
+如果发生上述错误情况中的任何一个，都会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则 **wctomb** 将返回 **EINVAL** ，并将 **errno** 设置为 **EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**Wctomb_s**函数将其*wchar*参数转换为相应的多字节字符，并将结果存储在*mbchar*中。 可以从任何程序的任何程序点调用该函数。
+**Wctomb_s** 函数将其 *wchar* 参数转换为相应的多字节字符，并将结果存储在 *mbchar* 中。 可以从任何程序的任何程序点调用该函数。
 
-如果**wctomb_s**将宽字符转换为多字节字符，则会将宽字符中的字节数（绝不大于**MB_CUR_MAX**）放入*pRetValue*所指向的整数中。 如果*wchar*为宽字符 null 字符（L ' \ 0 '）， **wctomb_s**将*pRetValue*填充为1。 如果目标指针*mbchar*为**NULL**， **wctomb_s**会将0放入*pRetValue*。 如果当前区域设置中不能进行转换， **wctomb_s**将*pRetValue*中的-1。
+如果 **wctomb_s** 将宽字符转换为多字节字符，则它会将字节数 (该值永远不会大于宽字符中 **MB_CUR_MAX**) ，并将其置于 *PRetValue* 所指向的整数中。 如果 *wchar* 是 "\ 0" )  (的宽字符 null 字符， **wctomb_s** 将 *pRetValue* 填充为1。 如果目标指针 *mbchar* 为 **NULL**， **wctomb_s** 会将0放入 *pRetValue*。 如果当前区域设置中不能进行转换， **wctomb_s** 将 *pRetValue* 中的-1。
 
-**wctomb_s**将当前区域设置用于与区域设置相关的信息;**_wctomb_s_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+**wctomb_s** 将当前区域设置用于与区域设置相关的信息; **_wctomb_s_l** 相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**wctomb_s**|\<stdlib.h>|
 |**_wctomb_s_l**|\<stdlib.h>|
@@ -116,7 +117,7 @@ errno_t _wctomb_s_l(
 
 ## <a name="example"></a>示例
 
-此程序演示**wctomb**函数的行为。
+此程序演示 **wctomb** 函数的行为。
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -142,10 +143,10 @@ Convert a wide character:
    Multibyte character: a
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

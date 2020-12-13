@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSacl 类
 title: CSacl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: d5a060555901361ef6c70c6a4f801605eafd92cf
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 504276d22da963b9e8ec407e88ca73d63dd71541
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746551"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97140850"
 ---
 # <a name="csacl-class"></a>CSacl 类
 
-此类是 SACL（系统访问控制列表）结构的包装器。
+此类是 SACL (系统访问控制列表) 结构的包装器。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -36,35 +37,35 @@ class CSacl : public CAcl
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CSacl：CSacl](#csacl)|构造函数。|
-|[CSacl：*CSacl](#dtor)|析构函数。|
+|[CSacl::CSacl](#csacl)|构造函数。|
+|[CSacl：： ~ CSacl](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CSacl：：添加审核](#addauditace)|向`CSacl`对象添加审核访问控制条目 （ACE）。|
-|[CSacl：获取服务计数](#getacecount)|返回`CSacl`对象中的访问控制条目 （AES） 数。|
-|[CSacl：：删除Ace](#removeace)|从`CSacl`对象中删除特定的 ACE（访问控制条目）。|
-|[CSacl：：删除所有Aces](#removeallaces)|删除`CSacl`对象中包含的所有 ACA。|
+|[CSacl::AddAuditAce](#addauditace)|将 (ACE) 的审核访问控制项添加到 `CSacl` 对象。|
+|[CSacl::GetAceCount](#getacecount)|返回对象中 (Ace) 的访问控制项的数目 `CSacl` 。|
+|[CSacl::RemoveAce](#removeace)|从对象中移除特定 ACE (访问控制项) `CSacl` 。|
+|[CSacl::RemoveAllAces](#removeallaces)|删除对象中包含的所有 Ace `CSacl` 。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CSacl：：运算符 |](#operator_eq)|赋值运算符。|
+|[CSacl：： operator =](#operator_eq)|赋值运算符。|
 
 ## <a name="remarks"></a>备注
 
-SACL 包含访问控制条目 （ACE），用于指定在域控制器的安全事件日志中生成审核记录的访问尝试类型。 请注意，SACL 仅在发生访问尝试的域控制器上生成日志条目，而不是在包含对象副本的每个域控制器上生成日志条目。
+SACL 包含 (Ace) 的访问控制项，用于指定在域控制器的安全事件日志中生成审核记录的访问尝试的类型。 请注意，SACL 仅在发生访问尝试的域控制器上生成日志条目，而不是在包含对象副本的每个域控制器上生成日志条目。
 
-若要在对象的安全描述符中设置或检索 SACL，必须在请求线程的访问令牌中启用SE_SECURITY_NAME权限。 默认情况下，管理员组具有授予此权限的权限，可以授予其他用户或组。 授予权限并非全部必需：在可以执行权限定义的操作之前，必须在安全访问令牌中启用该特权才能生效。 该模型允许仅针对特定的系统操作启用特权，然后在不再需要特权时禁用这些权限。 有关启用SE_SECURITY_NAME的示例，请参阅[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl。](security-global-functions.md#atlsetsacl)
+若要设置或检索对象的安全描述符中的 SACL，必须在请求线程的访问令牌中启用 SE_SECURITY_NAME 特权。 默认情况下，管理员组具有此权限，并且可以被授予其他用户或组。 赋予权限并非全部都是必需的：在可以执行特权定义的操作之前，必须在安全访问令牌中启用权限才能使其生效。 该模型只允许为特定系统操作启用权限，并在不再需要时禁用。 有关启用 SE_SECURITY_NAME 的示例，请参阅 [AtlGetSacl](security-global-functions.md#atlgetsacl) 和 [AtlSetSacl](security-global-functions.md#atlsetsacl) 。
 
-使用提供的类方法从`SACL`对象添加、删除、创建和删除 ACA。 另请参阅[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)。
+使用提供的类方法可以从对象添加、删除、创建和删除 Ace `SACL` 。 另请参阅 [AtlGetSacl](security-global-functions.md#atlgetsacl) 和 [AtlSetSacl](security-global-functions.md#atlsetsacl)。
 
-有关 Windows 中访问控制模型的简介，请参阅 Windows SDK 中[的访问控制](/windows/win32/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介，请参阅 Windows SDK 中的 [访问控制](/windows/win32/SecAuthZ/access-control) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -74,11 +75,11 @@ SACL 包含访问控制条目 （ACE），用于指定在域控制器的安全�
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="csacladdauditace"></a><a name="addauditace"></a>CSacl：：添加审核
+## <a name="csacladdauditace"></a><a name="addauditace"></a> CSacl::AddAuditAce
 
-向`CSacl`对象添加审核访问控制条目 （ACE）。
+将 (ACE) 的审核访问控制项添加到 `CSacl` 对象。
 
 ```
 bool AddAuditAce(
@@ -98,40 +99,40 @@ bool AddAuditAce(
     const GUID* pInheritedObjectType) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)对象。
 
-*访问掩码*<br/>
-指定要审核指定`CSid`对象的访问权限的掩码。
+*AccessMask*<br/>
+为指定的对象指定要审核的访问权限的掩码 `CSid` 。
 
-*b 成功*<br/>
-指定是否审核允许的访问尝试。 将此标志设置为 true 以启用审核;否则，将其设置为 false。
+*bSuccess*<br/>
+指定是否要审核允许的访问尝试。 将此标志设置为 true 可启用审核;否则，请将其设置为 false。
 
-*b失败*<br/>
-指定是否审核被拒绝的访问尝试。 将此标志设置为 true 以启用审核;否则，将其设置为 false。
+*bFailure*<br/>
+指定是否要审核拒绝的访问尝试。 将此标志设置为 true 可启用审核;否则，请将其设置为 false。
 
-*王牌标志*<br/>
+*AceFlags*<br/>
 控制 ACE 继承的一组位标志。
 
-*pObject类型*<br/>
+*pObjectType*<br/>
 对象类型。
 
-*p继承对象类型*<br/>
+*pInheritedObjectType*<br/>
 继承的对象类型。
 
 ### <a name="return-value"></a>返回值
 
-如果 ACE 添加到对象，`CSacl`则返回 TRUE，在失败时返回 FALSE。
+如果将 ACE 添加到 `CSacl` 对象中，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-对象`CSacl`包含访问控制条目 （ACE），用于指定在安全事件日志中生成审核记录的访问尝试类型。 此方法向`CSacl`对象添加这样的 ACE。
+`CSacl`对象包含 (ace) 的访问控制项，这些项指定在安全事件日志中生成审核记录的访问尝试的类型。 此方法将此类 ACE 添加到 `CSacl` 对象。
 
-有关可在*AceFlags*参数中设置的各种标志的说明，请参阅[ACE_HEADER。](/windows/win32/api/winnt/ns-winnt-ace_header)
+有关可以在 *AceFlags* 参数中设置的各种标志的说明，请参阅 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 。
 
-## <a name="csaclcsacl"></a><a name="csacl"></a>CSacl：CSacl
+## <a name="csaclcsacl"></a><a name="csacl"></a> CSacl::CSacl
 
 构造函数。
 
@@ -140,16 +141,16 @@ CSacl() throw();
 CSacl(const ACL& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-rhs**<br/>
-现有`ACL`（访问控制列表）结构。
+*rhs*<br/>
+`ACL`) 结构的现有 (访问控制列表。
 
 ### <a name="remarks"></a>备注
 
-可以使用`CSacl`现有`ACL`结构选择创建对象。 确保此参数是系统访问控制列表 （SACL），而不是任意访问控制列表 （DACL）。 在调试生成中，如果提供 DACL，将发生断言。 在版本版本中，DACL 中的任何条目都将被忽略。
+`CSacl`可以选择使用现有的结构来创建对象 `ACL` 。 请确保此参数是系统访问控制列表 (SACL) ，而不是自由访问控制列表 (DACL) 。 在调试版本中，如果提供了 DACL，则将发生断言。 在版本中，将忽略 DACL 中的任何条目。
 
-## <a name="csaclcsacl"></a><a name="dtor"></a>CSacl：*CSacl
+## <a name="csaclcsacl"></a><a name="dtor"></a> CSacl：： ~ CSacl
 
 析构函数。
 
@@ -159,11 +160,11 @@ rhs**<br/>
 
 ### <a name="remarks"></a>备注
 
-析构函数释放对象获取的任何资源，包括所有访问控制条目 （ACE）。
+析构函数释放对象获取的任何资源，包括 (Ace) 的所有访问控制项。
 
-## <a name="csaclgetacecount"></a><a name="getacecount"></a>CSacl：获取服务计数
+## <a name="csaclgetacecount"></a><a name="getacecount"></a> CSacl::GetAceCount
 
-返回`CSacl`对象中的访问控制条目 （AES） 数。
+返回对象中 (Ace) 的访问控制项的数目 `CSacl` 。
 
 ```
 UINT GetAceCount() const throw();
@@ -171,9 +172,9 @@ UINT GetAceCount() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`CSacl`对象中包含的 ACA 数。
+返回对象中包含的 Ace 的数量 `CSacl` 。
 
-## <a name="csacloperator-"></a><a name="operator_eq"></a>CSacl：：运算符 |
+## <a name="csacloperator-"></a><a name="operator_eq"></a> CSacl：： operator =
 
 赋值运算符。
 
@@ -181,35 +182,35 @@ UINT GetAceCount() const throw();
 CSacl& operator=(const ACL& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-rhs**<br/>
-要`ACL`分配给现有对象的（访问控制列表）。
+*rhs*<br/>
+`ACL`要分配给现有对象)  (访问控制列表。
 
 ### <a name="return-value"></a>返回值
 
-返回对更新`CSacl`对象的引用。 确保`ACL`参数实际上是一个系统访问控制列表 （SACL），而不是一个可自由的访问控制列表 （DACL）。 在调试生成中，将发生断言，在发布版本中，`ACL`参数将被忽略。
+返回对已更新的对象的引用 `CSacl` 。 请确保 `ACL` 参数实际上是系统访问控制列表 (SACL) ，而不是自由访问控制列表 (DACL) 。 在调试版本中，将发生断言，在发布版本中， `ACL` 将忽略参数。
 
-## <a name="csaclremoveace"></a><a name="removeace"></a>CSacl：：删除Ace
+## <a name="csaclremoveace"></a><a name="removeace"></a> CSacl::RemoveAce
 
-从`CSacl`对象中删除特定的 ACE（访问控制条目）。
+从对象中移除特定 ACE (访问控制项) `CSacl` 。
 
 ```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
-要删除的 ACE 条目的索引。
+要移除的 ACE 项的索引。
 
 ### <a name="remarks"></a>备注
 
-此方法派生自[CAtlarray：：removeAt。](../../atl/reference/catlarray-class.md#removeat)
+此方法从 [CAtlArray：： RemoveAt](../../atl/reference/catlarray-class.md#removeat)派生。
 
-## <a name="csaclremoveallaces"></a><a name="removeallaces"></a>CSacl：：删除所有Aces
+## <a name="csaclremoveallaces"></a><a name="removeallaces"></a> CSacl::RemoveAllAces
 
-删除`CSacl`对象中包含的所有访问控制条目 （AES）。
+删除对象中包含 (Ace) 的所有访问控制项 `CSacl` 。
 
 ```cpp
 void RemoveAllAces() throw();
@@ -217,12 +218,12 @@ void RemoveAllAces() throw();
 
 ### <a name="remarks"></a>备注
 
-删除`CSacl`对象`ACE`中的每个结构（如果有）。
+`ACE`如果对象中有任何) ，则删除每个结构 (`CSacl` 。
 
 ## <a name="see-also"></a>请参阅
 
 [CAcl 类](../../atl/reference/cacl-class.md)<br/>
 [ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>
-[A](/windows/win32/SecAuthZ/access-control-entries)<br/>
+[Ace](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
-[安全全局功能](../../atl/reference/security-global-functions.md)
+[安全全局函数](../../atl/reference/security-global-functions.md)

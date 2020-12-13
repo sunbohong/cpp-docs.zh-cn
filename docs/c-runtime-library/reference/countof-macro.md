@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _countof 宏
 title: _countof 宏
 ms.date: 03/22/2018
 api_location:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-ms.openlocfilehash: 3debd63da7d218e29f31847034c69d89b4691643
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 190f47aa7bb6bcf6bbd9478cce9df90aca81b437
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146453"
 ---
 # <a name="_countof-macro"></a>_countof 宏
 
@@ -40,20 +41,20 @@ ms.locfileid: "70942691"
 #define _countof(array) (sizeof(array) / sizeof(array[0]))
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *array*<br/>
 数组的名称。
 
 ## <a name="return-value"></a>返回值
 
-数组中的元素数，表示为**size_t**。
+数组中的元素数，以 **size_t** 表示。
 
 ## <a name="remarks"></a>备注
 
-**_countof**实现为类似于函数的预处理器宏。 如果C++传递的是指针而不是静态声明的数组，则该版本具有要在编译时检测的额外的模板机械。
+**_countof** 实现为类似于函数的预处理器宏。 如果传递的是指针而不是静态声明的数组，则 c + + 版本具有额外的模板机械来检测编译时。
 
-确保*数组*实际上是数组，而不是指针。 在 C 中，如果*数组*是指针， **_countof**将生成错误的结果。 在C++中，如果*array*为指针，则 **_countof**无法编译。  作为参数传递给*decays 到指针*的函数的数组，这意味着在函数内，不能使用 **_countof**来确定数组的范围。
+确保 *数组* 实际上是数组，而不是指针。 在 C 中，如果 *数组* 是指针， **_countof** 会产生错误的结果。 在 c + + 中，如果 *array* 是指针， **_countof** 无法编译。  作为参数传递给 *decays 到指针* 的函数的数组，这意味着在函数内，不能使用 **_countof** 来确定数组的范围。
 
 ## <a name="requirements"></a>要求
 

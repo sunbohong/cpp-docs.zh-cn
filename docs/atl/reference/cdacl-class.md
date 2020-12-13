@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDacl 类
 title: CDacl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 713e78635fe261615a82ab518cdb2c68ac0eeed4
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 0f071cbf426fe9cf89752defa19ff7f212e142d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141994"
 ---
 # <a name="cdacl-class"></a>CDacl 类
 
-此类是 DACL（自由访问控制列表）结构的包装器。
+此类是 DACL (自由访问控制列表) 结构的包装。
 
 > [!IMPORTANT]
-> 此类及其成员不能在 Windows 运行时中执行的应用程序中使用。
+> 此类及其成员不能用于在 Windows 运行时中执行的应用程序。
 
 ## <a name="syntax"></a>语法
 
@@ -37,36 +38,36 @@ class CDacl : public CAcl
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CDacl：CDacl](#cdacl)|构造函数。|
-|[CDacl：*CDacl](#dtor)|析构函数。|
+|[CDacl::CDacl](#cdacl)|构造函数。|
+|[CDacl：： ~ CDacl](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CDacl：：添加允许的Ace](#addallowedace)|向对象添加允许的`CDacl`ACE（访问控制条目）。|
-|[CDacl：：添加否认](#adddeniedace)|向对象添加被拒绝的`CDacl`ACE。|
-|[CDacl：：获取服务计数](#getacecount)|返回对象中的 ACE（访问控制条目）数`CDacl`。|
-|[CDacl：：删除Ace](#removeace)|从`CDacl`对象中删除特定的 ACE（访问控制条目）。|
-|[CDacl：：删除所有Aces](#removeallaces)|删除`CDacl`对象中包含的所有 ACA。|
+|[CDacl::AddAllowedAce](#addallowedace)|向对象添加一个允许的 ACE (访问控制项) `CDacl` 。|
+|[CDacl::AddDeniedAce](#adddeniedace)|将拒绝的 ACE 添加到 `CDacl` 对象。|
+|[CDacl::GetAceCount](#getacecount)|返回对象中)  (访问控制项的数目 `CDacl` 。|
+|[CDacl::RemoveAce](#removeace)|从对象中移除特定 ACE (访问控制项) `CDacl` 。|
+|[CDacl::RemoveAllAces](#removeallaces)|删除对象中包含的所有 Ace `CDacl` 。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CDacl：：运算符 |](#operator_eq)|赋值运算符。|
+|[CDacl：： operator =](#operator_eq)|赋值运算符。|
 
 ## <a name="remarks"></a>备注
 
-对象的安全描述符可以包含 DACL。 DACL 包含零个或多个 ACE（访问控制条目），用于标识可以访问该对象的用户和组。 如果 DACL 为空（即它包含零 ACEs），则不会显式授予访问权限，因此隐式拒绝访问。 但是，如果对象的安全描述符没有 DACL，则该对象不受保护，并且每个人都可以完全访问。
+对象的安全描述符可以包含 DACL。 DACL 包含零个或多个 Ace (访问控制项) 用于标识可以访问对象的用户和组。 如果 DACL 为空 (也就是说，它包含零个 Ace) ，不会显式授予访问权限，因此，拒绝访问。 但是，如果对象的安全描述符没有 DACL，则该对象是不受保护的，并且每个人都具有完全访问权限。
 
-若要检索对象的 DACL，您必须是对象的所有者，或具有对该对象的READ_CONTROL访问权限。 要更改对象的 DACL，必须具有对该对象的WRITE_DAC访问权限。
+若要检索对象的 DACL，你必须是对象的所有者，或者具有 READ_CONTROL 对对象的访问权限。 若要更改对象的 DACL，必须对该对象具有 WRITE_DAC 访问权限。
 
-使用提供的类方法从`CDacl`对象创建、添加、删除和删除 A。 另见[AtlGetDacl](security-global-functions.md#atlgetdacl)和[AtlSetDacl](security-global-functions.md#atlsetdacl)。
+使用提供的类方法创建、添加、删除和删除对象中的 Ace `CDacl` 。 另请参阅 [AtlGetDacl](security-global-functions.md#atlgetdacl) 和 [AtlSetDacl](security-global-functions.md#atlsetdacl)。
 
-有关 Windows 中访问控制模型的简介，请参阅 Windows SDK 中[的访问控制](/windows/win32/SecAuthZ/access-control)。
+有关 Windows 中的访问控制模型的简介，请参阅 Windows SDK 中的 [访问控制](/windows/win32/SecAuthZ/access-control) 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -76,11 +77,11 @@ class CDacl : public CAcl
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlsecurity.h
+**标头：** atlsecurity。h
 
-## <a name="cdacladdallowedace"></a><a name="addallowedace"></a>CDacl：：添加允许的Ace
+## <a name="cdacladdallowedace"></a><a name="addallowedace"></a> CDacl::AddAllowedAce
 
-向对象添加允许的`CDacl`ACE（访问控制条目）。
+向对象添加一个允许的 ACE (访问控制项) `CDacl` 。
 
 ```
 bool AddAllowedAce(
@@ -96,36 +97,36 @@ bool AddAllowedAce(
     const GUID* pInheritedObjectType) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rSid*<br/>
 [CSid](../../atl/reference/csid-class.md)对象。
 
-*访问掩码*<br/>
-指定指定`CSid`对象允许的访问权限的掩码。
+*AccessMask*<br/>
+指定要为指定的对象允许的访问权限的掩码 `CSid` 。
 
-*王牌标志*<br/>
+*AceFlags*<br/>
 控制 ACE 继承的一组位标志。
 
-*pObject类型*<br/>
+*pObjectType*<br/>
 对象类型。
 
-*p继承对象类型*<br/>
+*pInheritedObjectType*<br/>
 继承的对象类型。
 
 ### <a name="return-value"></a>返回值
 
-如果 ACE 添加到对象，`CDacl`则返回 TRUE，在失败时返回 FALSE。
+如果将 ACE 添加到 `CDacl` 对象中，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-对象`CDacl`包含零个或多个 ACE（访问控制条目），用于标识可以访问该对象的用户和组。 此方法添加了允许访问`CDacl`对象的 ACE。
+`CDacl`对象包含零个或多个 ace (访问控制项) 用于标识可以访问对象的用户和组。 此方法添加一个允许访问对象的 ACE `CDacl` 。
 
-有关可在`AceFlags`参数中设置的各种标志的说明，请参阅[ACE_HEADER。](/windows/win32/api/winnt/ns-winnt-ace_header)
+有关[](/windows/win32/api/winnt/ns-winnt-ace_header)可在参数中设置的各种标志的说明，请参阅 ACE_HEADER `AceFlags` 。
 
-## <a name="cdacladddeniedace"></a><a name="adddeniedace"></a>CDacl：：添加否认
+## <a name="cdacladddeniedace"></a><a name="adddeniedace"></a> CDacl::AddDeniedAce
 
-向对象添加被拒绝的`CDacl`ACE（访问控制条目）。
+向对象添加拒绝的 ACE (访问控制项) `CDacl` 。
 
 ```
 bool AddDeniedAce(
@@ -141,34 +142,34 @@ bool AddDeniedAce(
     const GUID* pInheritedObjectType) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rSid*<br/>
 `CSid` 对象。
 
-*访问掩码*<br/>
-指定要拒绝指定`CSid`对象的访问权限的掩码。
+*AccessMask*<br/>
+为指定的对象指定要拒绝的访问权限的掩码 `CSid` 。
 
-*王牌标志*<br/>
-控制 ACE 继承的一组位标志。 在方法的第一种形式中默认为 0。
+*AceFlags*<br/>
+控制 ACE 继承的一组位标志。 在方法的第一种形式下，默认值为0。
 
-*pObject类型*<br/>
+*pObjectType*<br/>
 对象类型。
 
-*p继承对象类型*<br/>
+*pInheritedObjectType*<br/>
 继承的对象类型。
 
 ### <a name="return-value"></a>返回值
 
-如果 ACE 添加到对象，`CDacl`则返回 TRUE，在失败时返回 FALSE。
+如果将 ACE 添加到 `CDacl` 对象中，则返回 TRUE，否则返回 FALSE。
 
 ### <a name="remarks"></a>备注
 
-对象`CDacl`包含零个或多个 ACE（访问控制条目），用于标识可以访问该对象的用户和组。 此方法添加拒绝访问`CDacl`对象的 ACE。
+`CDacl`对象包含零个或多个 ace (访问控制项) 用于标识可以访问对象的用户和组。 此方法添加一个拒绝对对象的访问的 ACE `CDacl` 。
 
-有关可在`AceFlags`参数中设置的各种标志的说明，请参阅[ACE_HEADER。](/windows/win32/api/winnt/ns-winnt-ace_header)
+有关[](/windows/win32/api/winnt/ns-winnt-ace_header)可在参数中设置的各种标志的说明，请参阅 ACE_HEADER `AceFlags` 。
 
-## <a name="cdaclcdacl"></a><a name="cdacl"></a>CDacl：CDacl
+## <a name="cdaclcdacl"></a><a name="cdacl"></a> CDacl::CDacl
 
 构造函数。
 
@@ -177,16 +178,16 @@ CDacl (const ACL& rhs) throw(...);
 CDacl () throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-rhs**<br/>
-现有`ACL`（访问控制列表）结构。
+*rhs*<br/>
+`ACL`) 结构的现有 (访问控制列表。
 
 ### <a name="remarks"></a>备注
 
-可以使用`CDacl`现有`ACL`结构选择创建对象。 请务必注意，应仅传递 DACL（自由访问控制列表），而不是 SACL（系统访问控制列表）。作为此参数传递。 在调试生成中，传递 SACL 将导致 ASSERT。 在发布版本中，传递 SACL 将导致 ACL 中的 ACE（访问控制条目）被忽略，并且不会发生错误。
+`CDacl`可以选择使用现有的结构来创建对象 `ACL` 。 请务必注意，只有 DACL (自由访问控制列表) ，而不是 SACL (系统访问控制列表) ，应作为此参数传递。 在调试版本中，传递 SACL 将导致断言。 在发布版本中，传递 SACL 将导致 Ace 中)  (访问控制项被忽略，并且不会发生错误。
 
-## <a name="cdaclcdacl"></a><a name="dtor"></a>CDacl：*CDacl
+## <a name="cdaclcdacl"></a><a name="dtor"></a> CDacl：： ~ CDacl
 
 析构函数。
 
@@ -196,11 +197,11 @@ rhs**<br/>
 
 ### <a name="remarks"></a>备注
 
-析构函数释放对象获取的任何资源，包括使用[CDacl：：：：removeAllAce](#removeallaces)的所有 ACE（访问控制条目）。
+析构函数释放对象获取的任何资源，包括使用 [CDacl：： RemoveAllAces](#removeallaces)) 的所有 ace (访问控制项。
 
-## <a name="cdaclgetacecount"></a><a name="getacecount"></a>CDacl：：获取服务计数
+## <a name="cdaclgetacecount"></a><a name="getacecount"></a> CDacl::GetAceCount
 
-返回对象中的 ACE（访问控制条目）数`CDacl`。
+返回对象中)  (访问控制项的数目 `CDacl` 。
 
 ```
 UINT GetAceCount() const throw();
@@ -208,9 +209,9 @@ UINT GetAceCount() const throw();
 
 ### <a name="return-value"></a>返回值
 
-返回`CDacl`对象中包含的 ACA 数。
+返回对象中包含的 Ace 的数量 `CDacl` 。
 
-## <a name="cdacloperator-"></a><a name="operator_eq"></a>CDacl：：运算符 |
+## <a name="cdacloperator-"></a><a name="operator_eq"></a> CDacl：： operator =
 
 赋值运算符。
 
@@ -218,39 +219,39 @@ UINT GetAceCount() const throw();
 CDacl& operator= (const ACL& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-rhs**<br/>
-要分配给现有对象的 ACL（访问控制列表）。
+*rhs*<br/>
+要分配给现有对象) ACL (访问控制列表。
 
 ### <a name="return-value"></a>返回值
 
-返回对更新`CDacl`对象的引用。
+返回对已更新的对象的引用 `CDacl` 。
 
 ### <a name="remarks"></a>备注
 
-应确保仅将 DACL（自由访问控制列表）传递给此函数。 将 SACL（系统访问控制列表）传递给此函数将导致调试版本中的 ASSERT，但不会在发布版本中造成错误。
+你应确保仅向此函数传递 DACL (自由访问控制列表) 。 将 SACL (系统访问控制列表) 传递到此函数将导致调试生成中出现断言，但在发布版本中不会引发错误。
 
-## <a name="cdaclremoveace"></a><a name="removeace"></a>CDacl：：删除Ace
+## <a name="cdaclremoveace"></a><a name="removeace"></a> CDacl::RemoveAce
 
-从`CDacl`对象中删除特定的 ACE（访问控制条目）。
+从对象中移除特定 ACE (访问控制项) `CDacl` 。
 
 ```cpp
 void RemoveAce(UINT nIndex) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
-要删除的 ACE 条目的索引。
+要移除的 ACE 项的索引。
 
 ### <a name="remarks"></a>备注
 
-此方法派生自[CAtlarray：：removeAt。](../../atl/reference/catlarray-class.md#removeat)
+此方法从 [CAtlArray：： RemoveAt](../../atl/reference/catlarray-class.md#removeat)派生。
 
-## <a name="cdaclremoveallaces"></a><a name="removeallaces"></a>CDacl：：删除所有Aces
+## <a name="cdaclremoveallaces"></a><a name="removeallaces"></a> CDacl::RemoveAllAces
 
-删除`CDacl`对象中包含的所有 ACE（访问控制条目）。
+删除对象中包含的所有 Ace (访问控制项) `CDacl` 。
 
 ```cpp
 void RemoveAllAces() throw();
@@ -258,13 +259,13 @@ void RemoveAllAces() throw();
 
 ### <a name="remarks"></a>备注
 
-删除`CDacl`对象`ACE`中的每个（访问控制条目）结构（如果有）。
+`ACE`如果对象中有任何) ，则删除每个 (访问控制项) 结构 (`CDacl` 。
 
 ## <a name="see-also"></a>请参阅
 
 [安全示例](../../overview/visual-cpp-samples.md)<br/>
 [CAcl 类](../../atl/reference/cacl-class.md)<br/>
 [ACL](/windows/win32/SecAuthZ/access-control-lists)<br/>
-[A](/windows/win32/SecAuthZ/access-control-entries)<br/>
+[Ace](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>
-[安全全局功能](../../atl/reference/security-global-functions.md)
+[安全全局函数](../../atl/reference/security-global-functions.md)

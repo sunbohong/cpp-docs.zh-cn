@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComEnumOnSTL 类
 title: CComEnumOnSTL 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-ms.openlocfilehash: b0674d64b471318d972d209373e0d74af0fa77f5
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ff73796d7e3eefa76cbecdeb6d997bede2d2be5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146661"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 类
 
@@ -30,10 +31,10 @@ CollType>,
     public CComObjectRootEx<ThreadModel>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *基座*<br/>
-COM 枚举器。 有关示例，请参阅[IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 。
+COM 枚举器。 有关示例，请参阅 [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) 。
 
 *piid*<br/>
 指向枚举器接口的接口 ID 的指针。
@@ -49,7 +50,7 @@ C + + 标准库容器类。
 
 ## <a name="remarks"></a>备注
 
-`CComEnumOnSTL`定义基于 c + + 标准库集合的 COM 枚举器对象。 此类可以单独使用，也可以与[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)一起使用。 下面概述了使用此类的典型步骤。 有关详细信息，请参阅[ATL 集合和枚举](../../atl/atl-collections-and-enumerators.md)器。
+`CComEnumOnSTL` 定义基于 c + + 标准库集合的 COM 枚举器对象。 此类可以单独使用，也可以与 [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)一起使用。 下面概述了使用此类的典型步骤。 有关详细信息，请参阅 [ATL 集合和枚举](../../atl/atl-collections-and-enumerators.md)器。
 
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>若要将此类与 ICollectionOnSTLImpl 一起使用：
 
@@ -57,7 +58,7 @@ C + + 标准库容器类。
 
 - 使用 **`typedef`** 作为专用化中的最终模板参数 `ICollectionOnSTLImpl` 。
 
-有关示例，请参阅[ATL 集合和枚举](../../atl/atl-collections-and-enumerators.md)器。
+有关示例，请参阅 [ATL 集合和枚举](../../atl/atl-collections-and-enumerators.md) 器。
 
 ## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>若要单独使用此类，请使用 ICollectionOnSTLImpl：
 
@@ -67,7 +68,7 @@ C + + 标准库容器类。
 
 - 创建专用化的实例 `CComObject` 。
 
-- 通过调用[IEnumOnSTLImpl：： Init](../../atl/reference/ienumonstlimpl-class.md#init)初始化枚举器对象。
+- 通过调用 [IEnumOnSTLImpl：： Init](../../atl/reference/ienumonstlimpl-class.md#init)初始化枚举器对象。
 
 - 将枚举器接口返回到客户端。
 
@@ -99,7 +100,7 @@ C + + 标准库容器类。
 
 此代码将创建 **`typedef`** 一个 `CComEnumOnSTL` ，它将 `CComVariant` 通过接口公开向量 `IEnumVariant` 。 `CVariantCollection`类只是专门 `CreateSTLEnumerator` 用于处理此类型的枚举器对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
 [ATLCollections 示例：演示 ICollectionOnSTLImpl、CComEnumOnSTL 和自定义复制策略类](../../overview/visual-cpp-samples.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：。启动 (32 位 MASM) '
 title: .STARTUP
 ms.date: 11/05/2019
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - .STARTUP directive
 ms.assetid: 3ce9c878-18bf-49a0-828c-b29928ea3e54
-ms.openlocfilehash: d5fddb6f8f527b0c4d0f52b8ff993678e14e5758
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: d7fbfc6add4a0530a9614267970e5d70b756c86f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317508"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97130983"
 ---
-# <a name="startup-32-bit-masm"></a>.启动（32位 MASM）
+# <a name="startup-32-bit-masm"></a>.启动 (32 位 MASM) 
 
-生成程序启动代码。 （仅限32位 MASM。）
+生成程序启动代码。 仅 (32 位 MASM。 ) 
 
 ## <a name="syntax"></a>语法
 
-> **.STARTUP**
+> **.阶段**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[指令引用](directives-reference.md)\
+[指令参考](directives-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

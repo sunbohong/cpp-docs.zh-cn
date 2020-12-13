@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：。.ERRDIF、。ERRDIFI
 title: .ERRDIF、.ERRDIFI
 ms.date: 05/23/2019
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - .ERRDIF directive
 - .ERRDIFI directive
 ms.assetid: af7cb441-0373-4c7e-af9c-06bcb9ed2b0a
-ms.openlocfilehash: 1bcbdf46e12bacbb5bab68d12605c0cce9cae4d5
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 76def5584a5417055da4f063395d2dd809becdae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75313556"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97131932"
 ---
 # <a name="errdif-errdifi"></a>.ERRDIF、.ERRDIFI
 
@@ -21,14 +22,14 @@ ms.locfileid: "75313556"
 
 ## <a name="syntax"></a>语法
 
-> **..Errdif** *textitem1* __、__ *textitem2* ⟦ __、__ *message*⟧ \
-> **.ERRDIFI** *textitem1* __、__ *textitem2* ⟦ __、__ *message*⟧
+> **..Errdif** *textitem1*__、__ *textitem2* ⟦__、__ *message*⟧ \
+> **.ERRDIFI** *textitem1*__、__ *textitem2* ⟦__、__ *message*⟧
 
 ## <a name="remarks"></a>备注
 
 如果为 **。给定 ERRDIFI** ，比较不区分大小写。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[指令引用](directives-reference.md)\
+[指令参考](directives-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

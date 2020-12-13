@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2259
 title: 编译器错误 C2259
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 640349f5870cd818019029c7f04db3e33a068ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758783"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134688"
 ---
 # <a name="compiler-error-c2259"></a>编译器错误 C2259
 
@@ -21,7 +22,7 @@ ms.locfileid: "74758783"
 
 不能使用一个或多个纯虚函数实例化类或结构。 为了实例化派生类的对象，派生类必须重写每个纯虚函数。
 
-有关详细信息，请参阅[隐式抽象类](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)。
+有关详细信息，请参阅 [隐式抽象类](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)。
 
 下面的示例生成 C2259：
 
@@ -50,7 +51,7 @@ B b;  // OK, B defines func()
 
 - 为在派生类中实现的接口方法使用范围解析运算符，以使实现的方法名称符合接口的名称。
 
-C2259 在 Visual Studio 2005、 **/zc： wchar_t**现在默认处于启用状态，因此也可能导致。 在这种情况下，可以通过使用 **/zc： wchar_t**进行编译来解决 C2599，以便从以前的版本获取行为，或通过更新类型使其兼容。 有关详细信息，请参阅 [/Zc:wchar_t（wchar_t 是本机类型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+C2259 在 Visual Studio 2005、 **/zc： wchar_t** 现在默认处于启用状态，因此也可能导致。 在这种情况下，可以通过使用 **/zc： wchar_t** 进行编译来解决 C2599，以便从以前的版本获取行为，或通过更新类型使其兼容。 有关详细信息，请参阅 [/zc： wchar_t (Wchar_t 是本机类型) ](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 下面的示例生成 C2259：
 

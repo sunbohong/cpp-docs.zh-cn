@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __stosd
 title: __stosd
 ms.date: 09/02/2019
 f1_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - rep stosd instruction
 - __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-ms.openlocfilehash: c46bb124390ff23d79361c66530493c48faf3f0a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 56a29a27790f7f45a9fb3f0ace348759c0b1ff3c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97143710"
 ---
 # <a name="__stosd"></a>__stosd
 
 **Microsoft 专用**
 
-生成存储字符串指令 (`rep stosd`)。
+)  (生成存储字符串指令 `rep stosd` 。
 
 ## <a name="syntax"></a>语法
 
@@ -31,7 +32,7 @@ void __stosd(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
 弄操作的目标。
@@ -44,15 +45,15 @@ void __stosd(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__stosd`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-结果是, 将双字*数据*写入到*目标*所指向的内存位置上的*计数*的双字块中。
+结果是，将双字 *数据* 写入到 *目标* 所指向的内存位置上的 *计数* 的双字块中。
 
 此例程仅可用作内部函数。
 

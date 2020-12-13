@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3655
 title: 编译器错误 C3655
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3655
 ms.assetid: 724919ab-2915-4b61-8794-44648e162d62
-ms.openlocfilehash: 61762612cf5b2153319435532dca100eb77c274d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: aafe0d114b5981d12376b6808841c44de08ab0bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756300"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97134467"
 ---
 # <a name="compiler-error-c3655"></a>编译器错误 C3655
 
 "function"：函数已显式重写
 
-一次只能显式重写一个函数。 有关详细信息，请参阅[显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+一次只能显式重写一个函数。 有关详细信息，请参阅 [显式重写](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 下面的示例生成 C3655：
 

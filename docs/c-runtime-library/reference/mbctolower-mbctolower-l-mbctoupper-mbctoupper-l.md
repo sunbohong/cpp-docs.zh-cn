@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 ms.date: 4/2/2020
 api_name:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 3a3adb32b8620a49110e887788e9f3c4893b6a1a
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: abf09a7a96fc1df9f34f3263638c68da4f9991d1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914293"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146440"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -83,9 +84,9 @@ unsigned int _mbctoupper_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要转换的多字节字符。
 
 *locale*<br/>
@@ -93,22 +94,22 @@ unsigned int _mbctoupper_l(
 
 ## <a name="return-value"></a>返回值
 
-如果可能，这些函数将返回转换后的字符*c*。 否则，它返回的字符*c*不变。
+如果可能，这些函数将返回转换后的字符 *c*。 否则，它返回的字符 *c* 不变。
 
 ## <a name="remarks"></a>备注
 
-函数会测试字符*c* ，如果可能，还会应用以下转换之一。
+函数会测试字符 *c* ，如果可能，还会应用以下转换之一。
 
 |例程|转换|
 |--------------|--------------|
 |**_mbctolower**， **_mbctolower_l**|大写字符到小写字符。|
 |**_mbctoupper**， **_mbctoupper_l**|小写字符到大写字符。|
 
-输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)****。 不带 **_l**后缀的此函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l**后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+输出值受区域设置的 LC_CTYPE 类别设置影响；有关详细信息，请参阅 [setlocale](setlocale-wsetlocale.md)。 不带 **_l** 后缀的此函数的版本对与区域设置相关的行为使用当前区域设置;带有 **_l** 后缀的版本是相同的，只不过它使用传入的区域设置参数。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-在以前的版本中， **_mbctolower**称为**jtolower**， **_mbctoupper**称为**jtoupper**。 对于新代码，请改用新名称。
+在以前的版本中， **_mbctolower** 称为 **jtolower**， **_mbctoupper** 称为 **jtoupper**。 对于新代码，请改用新名称。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -128,7 +129,7 @@ unsigned int _mbctoupper_l(
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [_mbbtombc、_mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>

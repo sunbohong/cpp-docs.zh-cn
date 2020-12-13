@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：。数据
 title: .DATA
 ms.date: 12/17/2019
 f1_keywords:
@@ -6,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - .DATA directive
 ms.assetid: 32797935-9c79-46e0-bf6f-07d0c2bf1dc1
-ms.openlocfilehash: 2bb71c7f9d26f12bfefbef947592acc8bef48214
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3967e3d4852be2da67005195d85dc4473208d9aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97132114"
 ---
 # <a name="data"></a>.DATA
 
- （仅限32位 MASM。）与一起使用时[。模型](dot-model.md)，为已初始化的数据（段名 _DATA）启动 near 数据段。
+ 仅 (32 位 MASM [。与一起使用时，) 。模型](dot-model.md)，为已初始化的数据 (段名 _DATA) 启动一个近乎数据段。
 
 ## <a name="syntax"></a>语法
 
 > **.数据**\
 > ⟦ *segmentItem* ⟧
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[指令引用](directives-reference.md)\
-[.数据？](dot-data-q.md)\
+[指令参考](directives-reference.md)\
+[.数据?](dot-data-q.md)\
 [.CONST](dot-const.md)\
 [.FARDATA](dot-fardata.md)\
-[.FARDATA？](dot-fardata-q.md)\
+[.FARDATA?](dot-fardata-q.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

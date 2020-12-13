@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComPolyObject 类
 title: CComPolyObject 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: c880d170a03196d0e15ea8741c786e560d90ddc4
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 1584fd03882b0eb0618bd20b54134317efd17ba8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81747781"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142397"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 类
 
-类实现`IUnknown`聚合或非聚合对象。
+此类实现 `IUnknown` 聚合或非聚合对象。
 
 ## <a name="syntax"></a>语法
 
@@ -36,50 +37,50 @@ class CComPolyObject : public IUnknown,
       public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*包含*<br/>
-类派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx，](../../atl/reference/ccomobjectrootex-class.md)以及来自要支持的对象的任何其他接口。
+*独立*<br/>
+从 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 或 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)派生的类，以及要在对象上支持的任何其他接口。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CCom波利对象：CComPoly对象](#ccompolyobject)|构造函数。|
-|[CCom波利对象：*CCom波利对象](#dtor)|析构函数。|
+|[CComPolyObject：： CComPolyObject](#ccompolyobject)|构造函数。|
+|[CComPolyObject：： ~ CComPolyObject](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CComPoly 对象：添加参考](#addref)|增加对象的引用计数。|
-|[CComPoly 对象：创建实例](#createinstance)|（静态）允许您创建一个新的**CComPolyObject<**`contained`**>** 对象，而无需[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)的开销。|
-|[CComPoly对象：最终构造](#finalconstruct)|执行`m_contained`的最后初始化。|
-|[CComPoly对象：最终释放](#finalrelease)|对 执行`m_contained`的最后销毁。|
-|[CComPoly对象：查询接口](#queryinterface)|检索指向所请求的接口的指针。|
-|[CComPoly 对象：发布](#release)|取消对象的引用计数。|
+|[CComPolyObject：： AddRef](#addref)|递增对象的引用计数。|
+|[CComPolyObject：： CreateInstance](#createinstance)| (静态) 使你可以创建新的 **CComPolyObject<** `contained` **>** 对象，而不会产生 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)开销。|
+|[CComPolyObject：： FinalConstruct](#finalconstruct)|执行的最终初始化 `m_contained` 。|
+|[CComPolyObject：： FinalRelease](#finalrelease)|执行的最终析构 `m_contained` 。|
+|[CComPolyObject：： QueryInterface](#queryinterface)|检索指向所请求的接口的指针。|
+|[CComPolyObject：： Release](#release)|递减对象的引用计数。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CComPoly 对象：：m_contained](#m_contained)|委托`IUnknown`调用外部未知对象是聚合对象还是对象（`IUnknown`如果对象未聚合）。|
+|[CComPolyObject：： m_contained](#m_contained)|如果对象已聚合，则委托 `IUnknown` 对外部未知的调用; 如果对象未聚合，则委托给 `IUnknown` 对象的。|
 
 ## <a name="remarks"></a>备注
 
-`CComPolyObject`实现聚合或非聚合对象的[I 未知。](/windows/win32/api/unknwn/nn-unknwn-iunknown)
+`CComPolyObject` 实现聚合或非聚合对象的 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。
 
-创建 的`CComPolyObject`实例时，将检查外部未知值。 如果为 NULL，`IUnknown`则为非聚合对象实现。 如果外部未知值不是 NULL，`IUnknown`则为聚合对象实现。
+创建实例时 `CComPolyObject` ，将检查外部未知的值。 如果为 NULL， `IUnknown` 则为非聚合对象实现。 如果外部未知值不为 NULL， `IUnknown` 则为聚合对象实现。
 
-使用`CComPolyObject`的优点是避免在模块中同时使用[CComAggObject](../../atl/reference/ccomaggobject-class.md)和[CComObject](../../atl/reference/ccomobject-class.md)来处理聚合和非聚合情况。 单个`CComPolyObject`对象处理这两种情况。 这意味着模块中仅存在一个 vtable 副本和一个函数副本。 如果 vtable 很大，这可大幅减小模块大小。 但是，如果 vtable 很小，则`CComPolyObject`使用可能会导致模块大小稍大一些，因为它未针对聚合或非聚合对象进行优化，例如`CComAggObject`和`CComObject`。
+使用的优点 `CComPolyObject` 是，你不必在模块中同时使用 [CComAggObject](../../atl/reference/ccomaggobject-class.md) 和 [CComObject](../../atl/reference/ccomobject-class.md) 来处理聚合和非聚合事例。 单个 `CComPolyObject` 对象处理两种情况。 这意味着在您的模块中只存在一个 vtable 副本和一个函数副本。 如果 vtable 很大，这可能会显著降低模块大小。 但是，如果你的 vtable 很小，则使用 `CComPolyObject` 可能会导致模块大小稍微大一些，因为它未针对聚合或非聚合对象进行优化，如 `CComAggObject` 和 `CComObject` 。
 
-如果在对象的类定义中指定了DECLARE_POLY_AGGREGATABLE宏，`CComPolyObject`则将用于创建对象。 如果您使用 ATL 项目向导创建完全控制或 Internet 资源管理器控件，将自动声明DECLARE_POLY_AGGREGATABLE。
+如果在对象的类定义中指定了 DECLARE_POLY_AGGREGATABLE 宏， `CComPolyObject` 将使用来创建对象。 如果使用 ATL 项目向导创建 "完全控制" 或 "Internet Explorer" 控件，则将自动声明 DECLARE_POLY_AGGREGATABLE。
 
-如果聚合，则`CComPolyObject`对象具有其自己的`IUnknown`，与外部对象的分离`IUnknown`，并维护其自己的引用计数。 `CComPolyObject`使用[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)委托给外部未知对象。
+如果聚合，则 `CComPolyObject` 对象具有其自己的 `IUnknown` 、与外部对象的不同， `IUnknown` 并保留其自己的引用计数。 `CComPolyObject` 使用 [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) 委托给外部未知。
 
-有关聚合的详细信息，请参阅[ATL COM 对象的基础](../../atl/fundamentals-of-atl-com-objects.md)文章。
+有关聚合的详细信息，请参阅 [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -93,11 +94,11 @@ class CComPolyObject : public IUnknown,
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlcom.h
+**标头：** atlcom。h
 
-## <a name="ccompolyobjectaddref"></a><a name="addref"></a>CComPoly 对象：添加参考
+## <a name="ccompolyobjectaddref"></a><a name="addref"></a> CComPolyObject：： AddRef
 
-增加对象上的引用计数。
+递增对象的引用计数。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -105,9 +106,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>返回值
 
-可用于诊断或测试的值。
+可能对诊断或测试有用的值。
 
-## <a name="ccompolyobjectccompolyobject"></a><a name="ccompolyobject"></a>CCom波利对象：CComPoly对象
+## <a name="ccompolyobjectccompolyobject"></a><a name="ccompolyobject"></a> CComPolyObject：： CComPolyObject
 
 构造函数。
 
@@ -115,18 +116,18 @@ STDMETHOD_(ULONG, AddRef)();
 CComPolyObject(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*光伏*<br/>
-[在]如果要聚合对象，则指向外部未知指针;如果对象未聚合，则指向 NULL。
+*函数*<br/>
+中如果要聚合对象，则为指向外部未知的指针; 如果对象未聚合，则为 NULL。
 
 ### <a name="remarks"></a>备注
 
-初始化`CComContainedObject`数据成员[，m_contained，](#m_contained)并递增模块锁计数。
+初始化 `CComContainedObject` 数据成员、 [m_contained](#m_contained)，并递增模块锁计数。
 
-析构函数会声明模块锁计数。
+析构函数递减模块锁计数。
 
-## <a name="ccompolyobjectccompolyobject"></a><a name="dtor"></a>CCom波利对象：*CCom波利对象
+## <a name="ccompolyobjectccompolyobject"></a><a name="dtor"></a> CComPolyObject：： ~ CComPolyObject
 
 析构函数。
 
@@ -136,11 +137,11 @@ CComPolyObject(void* pv);
 
 ### <a name="remarks"></a>备注
 
-释放所有分配的资源，调用[FinalRelease，](#finalrelease)并递减模块锁计数。
+释放所有已分配的资源，调用 [FinalRelease](#finalrelease)，并递减模块锁计数。
 
-## <a name="ccompolyobjectcreateinstance"></a><a name="createinstance"></a>CComPoly 对象：创建实例
+## <a name="ccompolyobjectcreateinstance"></a><a name="createinstance"></a> CComPolyObject：： CreateInstance
 
-允许您创建一个新的**CComPolyObject<**`contained`**>** 对象，而无需[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)的开销。
+允许您创建新的 **CComPolyObject<** `contained` **>** 对象，而不会产生 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)开销。
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -148,24 +149,24 @@ static HRESULT WINAPI CreateInstance(
     CComPolyObject<contained>** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Pp*<br/>
-[出]指向**CComPolyObject 的指针<**`contained`**>** 指针。 如果`CreateInstance`不成功 *，pp*设置为 NULL。
+*pp*<br/>
+弄指向 **CComPolyObject<** 指针的指针 `contained` **>** 。 如果 `CreateInstance` 不成功，则 *pp* 设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值。
+标准的 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-返回的对象的引用计数为零，因此立即调用`AddRef`，然后在完成后使用`Release`释放对象指针上的引用。
+返回的对象的引用计数为零，因此立即调用 `AddRef` ，然后在完成后使用 `Release` 释放对象指针上的引用。
 
-如果不需要直接访问该对象，但仍希望创建一个没有开销的新对象`CoCreateInstance`，请使用[CComCoClass：：：createInstance。](../../atl/reference/ccomcoclass-class.md#createinstance)
+如果不需要直接访问对象，但仍想要创建一个不带开销的新对象， `CoCreateInstance` 请改为使用 [CComCoClass：： CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 。
 
-## <a name="ccompolyobjectfinalconstruct"></a><a name="finalconstruct"></a>CComPoly对象：最终构造
+## <a name="ccompolyobjectfinalconstruct"></a><a name="finalconstruct"></a> CComPolyObject：： FinalConstruct
 
-在对象构造的最后阶段调用此方法对[m_contained](#m_contained)数据成员执行任何最终初始化。
+在对象构造的最后阶段调用，此方法对 [m_contained](#m_contained) 数据成员执行任何最终初始化。
 
 ```
 HRESULT FinalConstruct();
@@ -173,34 +174,34 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值。
+标准的 HRESULT 值。
 
-## <a name="ccompolyobjectfinalrelease"></a><a name="finalrelease"></a>CComPoly对象：最终释放
+## <a name="ccompolyobjectfinalrelease"></a><a name="finalrelease"></a> CComPolyObject：： FinalRelease
 
-在对象销毁期间调用此方法释放[m_contained](#m_contained)数据成员。
+在对象销毁过程中调用，此方法将释放 [m_contained](#m_contained) 数据成员。
 
 ```cpp
 void FinalRelease();
 ```
 
-## <a name="ccompolyobjectm_contained"></a><a name="m_contained"></a>CComPoly 对象：：m_contained
+## <a name="ccompolyobjectm_contained"></a><a name="m_contained"></a> CComPolyObject：： m_contained
 
-派生自类的[CComContainedObject 对象](../../atl/reference/ccomcontainedobject-class.md)。
+派生自类的 [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) 对象。
 
 ```
 CComContainedObject<contained> m_contained;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*包含*<br/>
-[在]类派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx，](../../atl/reference/ccomobjectrootex-class.md)以及来自要支持的对象的任何其他接口。
+*独立*<br/>
+中从 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 或 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)派生的类，以及要在对象上支持的任何其他接口。
 
 ### <a name="remarks"></a>备注
 
-`IUnknown`如果对象`m_contained`是聚合的，则通过调用委托给外部未知对象，如果对象未聚合`IUnknown`，则委托给此对象的调用。
+`IUnknown` 如果对象 `m_contained` 已聚合，则会将调用委托给外部未知，如果对象未聚合，则委托给 `IUnknown` 此对象的。
 
-## <a name="ccompolyobjectqueryinterface"></a><a name="queryinterface"></a>CComPoly对象：查询接口
+## <a name="ccompolyobjectqueryinterface"></a><a name="queryinterface"></a> CComPolyObject：： QueryInterface
 
 检索指向所请求的接口的指针。
 
@@ -210,31 +211,31 @@ template <class Q>
 HRESULT QueryInterface(Q** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*问*<br/>
+*Q*<br/>
 COM 接口。
 
-*Iid*<br/>
-[在]要请求的接口的标识符。
+*iid*<br/>
+中所请求的接口的标识符。
 
 *ppvObject*<br/>
-[出]指向*iid*标识的接口指针的指针。 如果对象不支持此接口，*则 ppvObject*设置为 NULL。
+弄指向由 *iid* 标识的接口指针的指针。 如果对象不支持此接口，则将 *ppvObject* 设置为 NULL。
 
-*Pp*<br/>
-[出]指向 标识的接口的`__uuidof(Q)`指针。
+*pp*<br/>
+弄指向由标识的接口的指针 `__uuidof(Q)` 。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值。
+标准的 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-对于聚合对象，如果请求的接口为`IUnknown`，`QueryInterface`则返回指向聚合对象自己的`IUnknown`指针，并递增引用计数。 否则，此方法通过`CComContainedObject`数据成员[m_contained](#m_contained)查询接口。
+对于聚合对象，如果请求的接口为 `IUnknown` ，则 `QueryInterface` 返回一个指向聚合对象自身的指针 `IUnknown` ，并递增引用计数。 否则，此方法将通过 `CComContainedObject` 数据成员（ [m_contained](#m_contained)）来查询接口。
 
-## <a name="ccompolyobjectrelease"></a><a name="release"></a>CComPoly 对象：发布
+## <a name="ccompolyobjectrelease"></a><a name="release"></a> CComPolyObject：： Release
 
-对对象进行引用计数的取消。
+递减对象的引用计数。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -242,7 +243,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>返回值
 
-在调试生成中`Release`，返回可用于诊断或测试的值。 在非调试生成中`Release`，始终返回 0。
+在调试版本中，将 `Release` 返回一个值，该值对于诊断或测试可能很有用。 在 nondebug 生成中， `Release` 始终返回0。
 
 ## <a name="see-also"></a>请参阅
 
