@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _fpieee_flt
 title: _fpieee_flt
 ms.date: 04/05/2018
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-ms.openlocfilehash: c6a77dcba06b58191781900d4e24202c6335cfb8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b01bfa07b959031b81fe3cf02a5d341e17f93a0b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97178701"
 ---
 # <a name="_fpieee_flt"></a>_fpieee_flt
 
@@ -49,7 +50,7 @@ int _fpieee_flt(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *excCode*<br/>
 异常代码。
@@ -62,22 +63,22 @@ int _fpieee_flt(
 
 ## <a name="return-value"></a>返回值
 
-**_Fpieee_flt**的返回值是*处理程序*返回的值。 同样的，IEEE 筛选器例程可用于结构化异常处理 (SEH) 机制的 except 子句。
+**_Fpieee_flt** 的返回值是 *处理程序* 返回的值。 同样的，IEEE 筛选器例程可用于结构化异常处理 (SEH) 机制的 except 子句。
 
 ## <a name="remarks"></a>备注
 
-**_Fpieee_flt**函数为 IEEE 浮点异常调用用户定义的陷阱处理程序，并为其提供所有相关信息。 此例程用作 SEH 机制中的异常筛选器，它会在必要时调用您的 IEEE 异常处理程序。
+**_Fpieee_flt** 函数为 IEEE 浮点异常调用用户定义的陷阱处理程序，并为其提供所有相关信息。 此例程用作 SEH 机制中的异常筛选器，它会在必要时调用您的 IEEE 异常处理程序。
 
-Fpieee.h 中定义的 **_FPIEEE_RECORD**结构包含有关 IEEE 浮点异常的信息。 此结构通过 **_fpieee_flt**传递给用户定义的陷阱处理程序。
+Fpieee.h 中定义的 **_FPIEEE_RECORD** 结构包含有关 IEEE 浮点异常的信息。 此结构通过 **_fpieee_flt** 传递给用户定义的陷阱处理程序。
 
 |_FPIEEE_RECORD 字段|描述|
 |----------------------------|-----------------|
 |**Roundingmode.awayfromzero**<br/>**精度**|这些 **`unsigned int`** 字段包含发生异常时浮点环境的相关信息。|
-|**操作**|此 **`unsigned int`** 字段指示导致陷阱的操作的类型。 如果类型是比较（**_FpCodeCompare**），则可以在 "结果" 的 "**值**" 字段中提供一个特殊的 **_FPIEEE_COMPARE_RESULT**值（在 fpieee.h 中定义）。 转换类型（**_FpCodeConvert**）指示在执行浮点转换操作期间出现了陷阱。 您可以查看**Operand1**和**结果**类型以确定要尝试的转换类型。|
-|**Operand1**<br/>**Operand2**<br/>**结果**|这些 **_FPIEEE_VALUE**结构指示建议的结果和操作数的类型和值。 每个结构都包含以下字段：<br /><br /> **OperandValid** -指示响应值是否有效的标志。<br />相应值的**格式**-数据类型。 可返回格式类型，即使相应的值无效。<br />**值**-结果或操作数的数据值。|
-|**原因**<br/>**启用**<br/>**Status**|对于每种类型的浮点异常 **_FPIEEE_EXCEPTION_FLAGS**包含一个位字段。 这些字段和用于屏蔽提供给 [_controlfp](control87-controlfp-control87-2.md) 的异常的自变量之间存在对应关系。 每个位的确切含义取决于上下文：<br /><br /> **原因**-每个设置位指示已引发的特定异常。<br />**启用**-每个设置位指示特定异常当前已取消屏蔽。<br />**状态**-每个设置位指示特定异常当前处于挂起状态。 这包括因 **_controlfp**屏蔽而未引发的异常。|
+|**操作**|此 **`unsigned int`** 字段指示导致陷阱的操作的类型。 如果该类型是) 的比较 (**_FpCodeCompare** ，则可以在 "结果" 的 "**值**" 字段中提供 (中定义的特殊 **_FPIEEE_COMPARE_RESULT** 值之一。 )  (**_FpCodeConvert** 的转换类型指示在浮点转换操作期间发生了陷阱。 您可以查看 **Operand1** 和 **结果** 类型以确定要尝试的转换类型。|
+|**Operand1**<br/>**Operand2**<br/>**结果**|这些 **_FPIEEE_VALUE** 结构指示建议的结果和操作数的类型和值。 每个结构都包含以下字段：<br /><br /> **OperandValid** -指示响应值是否有效的标志。<br />相应值的 **格式**-数据类型。 可返回格式类型，即使相应的值无效。<br />**值** -结果或操作数的数据值。|
+|**原因**<br/>**启用**<br/>**状态**|对于每种类型的浮点异常 **_FPIEEE_EXCEPTION_FLAGS** 包含一个位字段。 这些字段和用于屏蔽提供给 [_controlfp](control87-controlfp-control87-2.md) 的异常的自变量之间存在对应关系。 每个位的确切含义取决于上下文：<br /><br /> **原因** -每个设置位指示已引发的特定异常。<br />**启用** -每个设置位指示特定异常当前已取消屏蔽。<br />**状态** -每个设置位指示特定异常当前处于挂起状态。 这包括因 **_controlfp** 屏蔽而未引发的异常。|
 
-已禁用的挂起的异常在您启用它们之后将会引发。 当使用 **_fpieee_flt**作为异常筛选器时，这可能会导致未定义的行为。 在启用浮点异常之前，始终调用 [_clearfp](clear87-clearfp.md)。
+已禁用的挂起的异常在您启用它们之后将会引发。 当使用 **_fpieee_flt** 作为异常筛选器时，这可能会导致未定义的行为。 在启用浮点异常之前，始终调用 [_clearfp](clear87-clearfp.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -154,7 +155,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [_control87、_controlfp \_ _control87_2](control87-controlfp-control87-2.md)<br/>

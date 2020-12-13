@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息： (c + +/CLI 和 c + +/CX 中的属性目标) '
 title: 特性目标（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c14f80c277feb7fc540eed8735a8a78e1cb1907
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172615"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177024"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>特性目标（C++/CLI 和 C++/CX）
 
@@ -250,7 +251,7 @@ ms.locfileid: "80172615"
 
 ## <a name="example"></a>示例
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例演示如何指定多个目标。
 
@@ -272,6 +273,6 @@ ref class MyClass {};
 value struct MyStruct {};
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [用户定义的属性](user-defined-attributes-cpp-component-extensions.md)

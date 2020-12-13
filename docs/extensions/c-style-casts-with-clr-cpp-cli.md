@@ -1,16 +1,17 @@
 ---
+description: 了解有关以下内容的详细信息：通过/clr (c + +/CLI) 的 C 样式强制转换
 title: 使用 -clr 时的 C 样式强制转换 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-ms.openlocfilehash: daaf92e36550c5479903dec4869b1cb116c0a65a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: aedd794ca0f305f0cc292fb9048bd8dcceace7d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176985"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C 风格的强制转换和 /clr (C++/CLI)
 
@@ -48,7 +49,7 @@ int main() {
 }
 ```
 
-下面的示例展示了映射到 safe_cast**** 的 C 样式强制转换。
+下面的示例展示了映射到 safe_cast 的 C 样式强制转换。
 
 ```cpp
 // cstyle_casts_2.cpp
@@ -60,7 +61,7 @@ int main() {
 }
 ```
 
-下面的示例演示了一个映射到**safe_cast**加号的 C 样式强制转换 **`const_cast`** 。
+下面的示例演示了一个映射到 **safe_cast** 加号的 C 样式强制转换 **`const_cast`** 。
 
 ```cpp
 // cstyle_casts_3.cpp
@@ -160,6 +161,6 @@ int main() {
 
 编译器选项：`/clr`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 .NET 和 UWP 的组件扩展](component-extensions-for-runtime-platforms.md)

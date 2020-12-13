@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：实用工具 (STL/CLR) '
 title: utility (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - operator<= member [STL/CLR]
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
-ms.openlocfilehash: faf7f607f9433fa3e4813957b24220a5e66e1e49
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: cb55acec88ca7b687ca7ad7790c4b0073944c0c4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008617"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177986"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -64,11 +65,11 @@ ms.locfileid: "92008617"
 
 ## <a name="declarations"></a>声明
 
-|类|说明|
+|类|描述|
 |-----------|-----------------|
 |[pair (STL/CLR)](#pair)|包装一对元素。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[operator== (pair) (STL/CLR)](#op_eq)|配对相等比较。|
 |[operator！ = (对)  (STL/CLR) ](#op_neq)|对不相等比较。|
@@ -77,7 +78,7 @@ ms.locfileid: "92008617"
 |[运算符> (对)  (STL/CLR) ](#op_gt)|配对大于比较。|
 |[运算符>= (对)  (STL/CLR) ](#op_gteq)|大于或等于比较。|
 
-|函数|说明|
+|函数|描述|
 |--------------|-----------------|
 |[make_pair (STL/CLR)](#make_pair)|从一对值进行配对。|
 
@@ -108,17 +109,17 @@ template<typename Value1,
 |[pair::first_type (STL/CLR)](#first_type)|第一个已包装值的类型。|
 |[pair::second_type (STL/CLR)](#second_type)|第二个包装值的类型。|
 
-|Member 对象|说明|
+|Member 对象|描述|
 |-------------------|-----------------|
 |[pair::first (STL/CLR)](#first)|第一个存储的值。|
 |[pair::second (STL/CLR)](#second)|第二个存储的值。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[pair::pair (STL/CLR)](#pair_pair)|构造一个对对象。|
 |[pair::swap (STL/CLR)](#swap)|交换两对的内容。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[pair::operator= (STL/CLR)](#op_as)|替换存储的值对。|
 
@@ -175,7 +176,7 @@ typedef Value1 first_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *Value1*的同义词。
+该类型是模板参数 *Value1* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -217,7 +218,7 @@ pair<Value1, Value2>% operator=(pair<Value1, Value2>% right);
 
 ### <a name="remarks"></a>备注
 
-成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 使用此方法可以将存储的值对替换为 *右侧*存储的值对的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 使用此方法可以将存储的值对替换为 *右侧* 存储的值对的副本。
 
 ### <a name="example"></a>示例
 
@@ -290,7 +291,7 @@ pair(Value1 val1, Value2 val2);
 
 `pair(Value1 val1, Value2 val2);`
 
-用 *val1* 和 *val2*初始化存储对。
+用 *val1* 和 *val2* 初始化存储对。
 
 ### <a name="example"></a>示例
 
@@ -378,7 +379,7 @@ typedef Value2 second_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *Value2*的同义词。
+该类型是模板参数 *Value2* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -420,7 +421,7 @@ void swap(pair<Value1, Value2>% right);
 
 ### <a name="remarks"></a>备注
 
-成员函数交换和右之间存储的值对 **`*this`** 。 *right*
+成员函数交换和右之间存储的值对 **`*this`** 。 
 
 ### <a name="example"></a>示例
 
@@ -548,7 +549,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素对两对进行比较*时，* 是否不向*左*排序。
+Operator 函数返回 `!(left == right)` 。 使用此方法可以测试在按元素对两对进行比较 *时，* 是否不向 *左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -602,7 +603,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` 。 用于测试在按元素对两*对进行比较时，是否向**右端*排序。
+Operator 函数返回 `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second` 。 用于测试在按元素对两 *对进行比较时，是否向**右端* 排序。
 
 ### <a name="example"></a>示例
 
@@ -656,7 +657,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两对进行*比较时，是否向**左*排序。
+Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两对进行 *比较时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -710,7 +711,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `left.first ==` `right.first &&` `left.second ==` `right.second` 。 使用此方法可以测试在按元素对两对进行*比较时，* 是否*向左*排序。
+Operator 函数返回 `left.first ==` `right.first &&` `left.second ==` `right.second` 。 使用此方法可以测试在按元素对两对进行 *比较时，* 是否 *向左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -764,7 +765,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left` 。 用于测试在按元素对两对进行比较*时，是否向**左*排序。
+Operator 函数返回 `right` `<` `left` 。 用于测试在按元素对两对进行比较 *时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -818,7 +819,7 @@ template<typename Value1,
 
 ### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两对进行*比较时，是否向**左*排序。
+Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两对进行 *比较时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 

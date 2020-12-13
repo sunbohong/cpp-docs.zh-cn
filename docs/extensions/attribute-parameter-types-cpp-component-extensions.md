@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息： (c + +/CLI 和 c + +/CX 中的特性参数类型) '
 title: 特性参数类型（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-ms.openlocfilehash: cf33014c455bef145f7b7ec7ee353f27d1157f24
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 7f2d5dd2def4e61d5b2b0406cc193bf818bc3d9b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97177089"
 ---
 # <a name="attribute-parameter-types--ccli-and-ccx"></a>特性参数类型（C++/CLI 和 C++/CX）
 
@@ -67,7 +68,7 @@ ref struct MyStruct {
 
 ## <a name="example-unnamed-arguments-precede-named-arguments"></a>示例：命名参数之前的未命名参数
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 当指定特性时，所有未命名（位置）的自变量必须优先于命名自变量。
 
@@ -101,7 +102,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example-one-dimensional-array-attribute-parameter"></a>示例：一维数组特性参数
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 特性参数可以为上述类型的一维数组。
 
