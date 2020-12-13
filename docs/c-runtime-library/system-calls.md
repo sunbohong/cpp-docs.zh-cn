@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下方面的详细信息：系统调用
 title: 系统调用
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Windows [C++], system calls
 - system calls
 ms.assetid: 0255f2ec-a5a0-487e-8b09-9dad001d81ed
-ms.openlocfilehash: 2d86a35718ab6c1aab941149c9707004b1532d24
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 440ddfcccfd078f63e93e1c0d7f7a426ff6ec89d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749199"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339548"
 ---
 # <a name="system-calls"></a>系统调用
 
@@ -30,5 +31,5 @@ ms.locfileid: "57749199"
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [文件处理](../c-runtime-library/file-handling.md)<br/>
-[目录控制](../c-runtime-library/directory-control.md)<br/>
-[低级别 I/O](../c-runtime-library/low-level-i-o.md)<br/>
+[目录控件](../c-runtime-library/directory-control.md)<br/>
+[低级别 i/o](../c-runtime-library/low-level-i-o.md)<br/>

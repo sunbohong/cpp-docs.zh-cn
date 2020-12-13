@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4305
 title: 编译器警告（等级 1）C4305
 ms.date: 01/17/2018
 f1_keywords:
 - C4305
 helpviewer_keywords:
 - C4305
-ms.openlocfilehash: 567442bc48487e4f7d1f905f871d15f913646e87
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a6cee5be3b5929c0fbf487a8c40d37e269e6a994
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340081"
 ---
 # <a name="compiler-warning-level-1-c4305"></a>编译器警告（等级 1）C4305
 
@@ -41,4 +42,4 @@ int main()
 }
 ```
 
-若要解决此问题，请使用正确类型的值进行初始化，或使用显式强制转换为正确的类型。 例如，使用文本（例如 **`float`** 2.71828 f）而不是 **`double`** （浮点文本的默认类型）来初始化 **`float`** 变量，或传递给采用参数的构造函数 **`float`** 。
+若要解决此问题，请使用正确类型的值进行初始化，或使用显式强制转换为正确的类型。 例如，使用 **`float`** 文本（例如 2.71828 f）而不是 **`double`** (浮点文本的默认类型) 初始化 **`float`** 变量，或传递到采用参数的构造函数 **`float`** 。

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3753
 title: 编译器错误 C3753
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3753
 ms.assetid: a5b99e28-796c-4107-a673-97c2ae3bb2b9
-ms.openlocfilehash: 2970c4851d3e5cbbe9952c12a71c913c5e3ac656
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a6a427001d1d9f0cfbcb1994e996208ee9ef2e2e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755325"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340159"
 ---
 # <a name="compiler-error-c3753"></a>编译器错误 C3753
 
@@ -19,7 +20,7 @@ ms.locfileid: "74755325"
 
 泛型参数列表只能出现在托管类、结构或函数上。
 
-有关详细信息，请参阅[泛型](../../extensions/generics-cpp-component-extensions.md)和[属性](../../extensions/property-cpp-component-extensions.md)。
+有关详细信息，请参阅 [泛型](../../extensions/generics-cpp-component-extensions.md) 和 [属性](../../extensions/property-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

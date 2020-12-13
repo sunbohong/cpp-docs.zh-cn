@@ -1,4 +1,5 @@
 ---
+description: 详细了解：对结构
 title: pair 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pair class
 ms.assetid: 539d3d67-80a2-4170-b347-783495d42109
-ms.openlocfilehash: 0a78d5074c37f4fbbfb736125626fa4b7fc7e275
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 052dd0e95125726f377e9d74585cfad6cc7e8c0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505754"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340809"
 ---
 # <a name="pair-structure"></a>pair 结构
 
@@ -57,7 +58,7 @@ template<class T1, class T2>
     pair(T1, T2) -> pair<T1, T2>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Val1*\
 初始化 `pair` 的第一个元素的值。
@@ -78,7 +79,7 @@ template<class T1, class T2>
 
 第四个构造函数将该对的第一个元素初始化为 *Val1* ，将第二个元素初始化为 *Val2* 使用 [右值引用声明符：  &&](../cpp/rvalue-reference-declarator-amp-amp.md)。  如果这两种类型都是从提供的值类型可构造，则定义它。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 模板结构分别存储类型为和的一对 `T1` 对象 `T2` 。 类型与 `first_type` 模板参数相同 `T1` ，类型与 `second_type` 模板参数相同 `T2` 。 `T1``T2`每个只需要提供一个默认构造函数、一个参数构造函数和一个析构函数。 此类型的所有成员 `pair` 都是公共的，因为该类型声明为 **`struct`** 而不是 **`class`** 。 对的两种最常见用法是作为返回两个值的函数的返回类型以及作为关联容器类 [map 类](../standard-library/map-class.md)和 [multimap 类](../standard-library/multimap-class.md)的元素，这些类具有与每个元素相关联的键和值类型。 后者满足对关联容器的要求，并且具有形式的值类型 `pair< const key_type, mapped_type >` 。
 

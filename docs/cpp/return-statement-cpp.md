@@ -1,4 +1,5 @@
 ---
+description: '了解有关详细信息，请参阅 c + + (return 语句) '
 title: return 语句 (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: 6a1ed4f374f133abd0233826d1b58896d49576cf
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bb847900a0a9fc4c5d723d1b0392f27b6b5cf667
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225860"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340471"
 ---
 # <a name="return-statement-c"></a>return 语句 (C++)
 
@@ -26,7 +27,7 @@ return [expression];
 
 ## <a name="remarks"></a>备注
 
-`expression` 子句（如果存在）将转换为函数声明中指定的类型，就像正在执行初始化一样。 从表达式的类型到函数类型的转换 **`return`** 可创建临时对象。 有关创建临时内存的方式和时间的详细信息，请参阅[临时对象](../cpp/temporary-objects.md)。
+`expression` 子句（如果存在）将转换为函数声明中指定的类型，就像正在执行初始化一样。 从表达式的类型到函数类型的转换 **`return`** 可创建临时对象。 有关创建临时内存的方式和时间的详细信息，请参阅 [临时对象](../cpp/temporary-objects.md)。
 
 `expression` 子句的值将返回调用函数。 如果省略该表达式，则函数的返回值是不确定的。 构造函数、析构函数以及类型的函数 **`void`** 不能在语句中指定表达式 **`return`** 。 所有其他类型的函数必须在语句中指定表达式 **`return`** 。
 
@@ -56,7 +57,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [跳转语句](../cpp/jump-statements-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

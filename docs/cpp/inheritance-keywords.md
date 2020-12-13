@@ -1,4 +1,5 @@
 ---
+description: 了解更多：继承关键字
 title: 继承关键字
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-ms.openlocfilehash: bc9afdcb7971c478c1cad9185cece57ea6326a48
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 05d13303064c2857780af62b1b4beba00483b72e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233725"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340458"
 ---
 # <a name="inheritance-keywords"></a>继承关键字
 
@@ -49,11 +50,11 @@ int S::*p;
 
 在上面的代码中， `p` 被声明为指向类的整数成员的指针。但 `class S` 在此代码中尚未定义; 它只是声明的。 当编译器遇到此类指针时，它必须生成此指针的泛化表示形式。 表示形式的大小依赖于指定的继承模型。 可通过四种方式指定编译器的继承模型：
 
-- 在 IDE 中指向**成员的指针表示形式**
+- 在 IDE 中指向 **成员的指针表示形式**
 
-- 在命令行中使用[/vmg](../build/reference/vmb-vmg-representation-method.md)开关
+- 在命令行中使用 [/vmg](../build/reference/vmb-vmg-representation-method.md) 开关
 
-- 使用[pointers_to_members](../preprocessor/pointers-to-members.md)杂注
+- 使用 [pointers_to_members](../preprocessor/pointers-to-members.md) 杂注
 
 - 使用继承关键字 **`__single_inheritance`** 、 **`__multiple_inheritance`** 和 **`__virtual_inheritance`** 。 此技术控制每个类的继承模型。
 
@@ -74,7 +75,7 @@ int S::*p;
 > [!NOTE]
 > 类的指向成员的指针表示形式的同一向前声明应出现在声明指向该类的成员的指针的每个翻译单元中，并且声明应在声明指向成员的指针之前出现。
 
-为了与早期版本兼容， **_single_inheritance**、 **_multiple_inheritance**和 **_virtual_inheritance**为、和的同义词， **`__single_inheritance`** **`__multiple_inheritance`** **`__virtual_inheritance`** 除非指定编译器选项[/za \( 禁用语言扩展）](../build/reference/za-ze-disable-language-extensions.md) 。
+为了与早期版本兼容， **_single_inheritance**、 **_multiple_inheritance** 和 **_virtual_inheritance** 是、和的同义词， **`__single_inheritance`** **`__multiple_inheritance`** **`__virtual_inheritance`** 除非指定了编译器选项 [/za " \( 禁用语言) 扩展](../build/reference/za-ze-disable-language-extensions.md) "。
 
 **结束 Microsoft 专用**
 

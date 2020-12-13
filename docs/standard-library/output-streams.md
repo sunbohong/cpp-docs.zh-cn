@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：输出流
 title: 输出流
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams
 ms.assetid: b49410e3-5caa-4153-9d0d-c4266408dc83
-ms.openlocfilehash: e650f9fd0bbc7ad483363706e632686e8ec3749e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ec09a6bee1bcd2f329522b61950f3d051fb57889
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450175"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340861"
 ---
 # <a name="output-streams"></a>输出流
 
@@ -45,7 +46,7 @@ ms.locfileid: "68450175"
 
 [为自己的类重载 << 运算符](../standard-library/overloading-the-output-operator-for-your-own-classes.md)
 
-[自行编写无自变量的操控器](../standard-library/writing-your-own-manipulators-without-arguments.md)
+[编写您自己的无参数的操控器](../standard-library/writing-your-own-manipulators-without-arguments.md)
 
 ## <a name="see-also"></a>请参阅
 

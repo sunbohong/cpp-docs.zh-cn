@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __readfsbyte、__readfsdword、__readfsqword、__readfsword
 title: __readfsbyte、__readfsdword、__readfsqword、__readfsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 2b733ced12045253c78e823379c10a5e70f65143
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340978"
 ---
 # <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 
@@ -46,25 +47,25 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *抵销*\
-中从开始读取的`FS`偏移量。
+中从开始读取的偏移量 `FS` 。
 
 ## <a name="return-value"></a>返回值
 
-位置`FS:[Offset]`处的字节、字、双字或四个字节的内存内容 (由调用的函数的名称指示)。
+字节、字、双字或四长四 (的内存内容由位置) 名为的函数的名称指示 `FS:[Offset]` 。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__readfsbyte`|x86|
 |`__readfsdword`|x86|
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
@@ -74,5 +75,5 @@ unsigned __int64 __readfsqword(
 
 ## <a name="see-also"></a>请参阅
 
-[__writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[__writefsbyte、 \_ _writefsdword、 \_ _writefsqword \_ _writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __min
 title: __min
 ms.date: 04/05/2018
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 337d4fc7226044e41a616dc6da8230e013b2702d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951737"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340575"
 ---
 # <a name="__min"></a>__min
 
@@ -45,10 +46,10 @@ ms.locfileid: "70951737"
 #define __min(a,b) (((a) < (b)) ? (a) : (b))
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *a*、 *b*<br/>
-**<** 运算符处理的任何类型的值。
+运算符处理的任何类型的值 **<** 。
 
 ## <a name="return-value"></a>返回值
 
@@ -56,9 +57,9 @@ ms.locfileid: "70951737"
 
 ## <a name="remarks"></a>备注
 
-**__Min**宏比较两个值，并返回较小值的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
+**__Min** 宏比较两个值，并返回较小值的值。 参数可以是任何数字数据类型，有符号或无符号均可。 两个自变量以及返回值必须是同一数据类型。
 
-返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如`*p++`），则这可能会导致意外的结果。
+返回的参数由宏计算两次。 如果参数是在计算时更改其值的表达式（如），则这可能会导致意外的结果 `*p++` 。
 
 ## <a name="requirements"></a>要求
 

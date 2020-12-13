@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： piecewise_linear_distribution 类
 title: piecewise_linear_distribution 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 57c6e19bc56068c98f6c85978c7af68e56cb4f2a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8ba2a0707599c8510488290c5d0c227d464588ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832680"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340731"
 ---
 # <a name="piecewise_linear_distribution-class"></a>piecewise_linear_distribution 类
 
@@ -78,12 +79,12 @@ public:
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *RealType*\
 浮点结果类型，默认为 **`double`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此示例分布包含以线性变化的概率分布在每个区间中的不等宽区间。 有关其他采样分布的信息，请参阅 [piecewise_linear_distribution](../standard-library/piecewise-constant-distribution-class.md) 和 [discrete_distribution](../standard-library/discrete-distribution-class.md)。
 
@@ -245,7 +246,7 @@ piecewise_linear_distribution(size_t count, RealType xmin, RealType xmax, UnaryO
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *firstI*\
 分布范围中第一个元素的输入迭代器。
@@ -274,7 +275,7 @@ xmax\
 *parm*\
 用于构造分布的参数结构。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认构造函数将设置存储参数，以便存在一个概率密度为 1 的 0 到 1 的区间。
 
@@ -288,7 +289,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-使用序列 [，) 上的迭代器 `firstI` `lastI` 和从 *firstW*开始的匹配权重序列来构造分布对象。
+使用序列 [，) 上的迭代器 `firstI` `lastI` 和从 *firstW* 开始的匹配权重序列来构造分布对象。
 
 初始值设定项列表构造函数
 
@@ -299,7 +300,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-使用从函数*weightfunc*生成的初始值设定项列表*间隔*和权重的间隔构造分布对象。
+使用从函数 *weightfunc* 生成的初始值设定项列表 *间隔* 和权重的间隔构造分布对象。
 
 定义为以下内容的构造函数
 
@@ -312,7 +313,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-构造一个在 [] 上均匀分布的 *计数* 间隔的分布对象 `xmin,xmax` ，根据函数 *weightfunc*分配每个间隔权重，而 *weightfunc* 必须接受一个参数并具有一个返回值，这两个参数都可转换为 **`double`** 。 **前提条件：** `xmin < xmax` 。
+构造一个在 [] 上均匀分布的 *计数* 间隔的分布对象 `xmin,xmax` ，根据函数 *weightfunc* 分配每个间隔权重，而 *weightfunc* 必须接受一个参数并具有一个返回值，这两个参数都可转换为 **`double`** 。 **前提条件：** `xmin < xmax` 。
 
 定义为以下内容的构造函数
 
@@ -344,16 +345,16 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 请参阅 [piecewise_linear_distribution](#piecewise_linear_distribution) 的构造函数参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 **前提条件：**`xmin < xmax`
 
 在实例化时，可将此结构传递给分布的类构造函数、传递给 `param()` 成员函数以设置现有分布的存储参数，并传递给 `operator()` 以代替存储参数使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

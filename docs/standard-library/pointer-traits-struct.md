@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： pointer_traits 结构
 title: pointer_traits 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 1ed8d61a52c11ab48fe6f762ff342ea88d107b14
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ba89d4df45517c142cad172860e4c9ab4d386ce1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832693"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340679"
 ---
 # <a name="pointer_traits-struct"></a>pointer_traits 结构
 
@@ -52,7 +53,7 @@ struct Ptr
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`typedef T2 difference_type`|如果 `Ptr::difference_type` 类型存在，则类型 `T2` 为此类型，否则为 `ptrdiff_t`。 如果 `Ptr` 是原始指针，则类型为 `ptrdiff_t`。|
 |`typedef T1 element_type`|如果 `Ptr::element_type` 类型存在，则类型 `T1` 为此类型，否则为 `Ty`。 如果 `Ptr` 是原始指针，则类型为 `Ty`。|
@@ -60,13 +61,13 @@ struct Ptr
 
 ### <a name="structs"></a>结构
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |`rebind`|尝试将基础指针类型转换为指定类型。|
 
 ### <a name="methods"></a>方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|将任意引用转换为 `Ptr` 类的对象。|
 

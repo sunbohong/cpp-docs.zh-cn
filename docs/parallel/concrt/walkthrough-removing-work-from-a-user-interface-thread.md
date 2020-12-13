@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息：演练：从 User-Interface 线程移除工作
 title: 演练：从用户界面线程中移除工作
 ms.date: 08/19/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 003678f3c79f2abfa7ceb0c67fecd69cf178f442
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 816e8446771cda907397f43386c33476cf3665b8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222688"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340913"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>演练：从用户界面线程中移除工作
 
-本文档演示如何使用并发运行时将 Microsoft 基础类（MFC）应用程序中的用户界面（UI）线程执行的工作移到工作线程中。 本文档还演示了如何提高长时间的绘图操作的性能。
+本文档演示如何使用并发运行时将 Microsoft 基础类中的用户界面 (UI) 线程所执行的工作移到 Microsoft 基础类中 (MFC) 应用程序到工作线程。 本文档还演示了如何提高长时间的绘图操作的性能。
 
 通过将阻止操作（例如，绘制）移到工作线程，从 UI 线程删除工作可以提高应用程序的响应能力。 本演练使用一个绘图例程，该例程生成 Mandelbrot 分形以演示长时间的阻止操作。 Mandelbrot 分形的生成也是并行化的理想候选项，因为每个像素的计算都独立于所有其他计算。
 
@@ -32,9 +33,9 @@ ms.locfileid: "87222688"
 
 - [PPL 中的取消操作](cancellation-in-the-ppl.md)
 
-在开始本演练之前，我们还建议你了解 MFC 应用程序开发和 GDI + 的基本知识。 有关 MFC 的详细信息，请参阅[Mfc 桌面应用程序](../../mfc/mfc-desktop-applications.md)。 有关 GDI + 的详细信息，请参阅[Gdi +](/windows/win32/gdiplus/-gdiplus-gdi-start)。
+在开始本演练之前，我们还建议你了解 MFC 应用程序开发和 GDI + 的基本知识。 有关 MFC 的详细信息，请参阅 [Mfc 桌面应用程序](../../mfc/mfc-desktop-applications.md)。 有关 GDI + 的详细信息，请参阅 [Gdi +](/windows/win32/gdiplus/-gdiplus-gdi-start)。
 
-## <a name="sections"></a><a name="top"></a>个
+## <a name="sections"></a><a name="top"></a> 个
 
 本演练包含以下各节：
 
@@ -42,35 +43,35 @@ ms.locfileid: "87222688"
 
 - [实现 Mandelbrot 应用程序的串行版本](#serial)
 
-- [从用户界面线程中移除工作](#removing-work)
+- [删除 User-Interface 线程中的工作](#removing-work)
 
 - [提高绘图性能](#performance)
 
 - [添加取消支持](#cancellation)
 
-## <a name="creating-the-mfc-application"></a><a name="application"></a>创建 MFC 应用程序
+## <a name="creating-the-mfc-application"></a><a name="application"></a> 创建 MFC 应用程序
 
 本部分介绍如何创建基本 MFC 应用程序。
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>创建 Visual C++ MFC 应用程序
 
-1. 使用**Mfc 应用程序向导**创建具有所有默认设置的 mfc 应用程序。 有关如何为你的 Visual Studio 版本打开向导的说明，请参阅[演练：使用新的 MFC Shell 控件](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md)。
+1. 使用 **Mfc 应用程序向导** 创建具有所有默认设置的 mfc 应用程序。 有关如何为你的 Visual Studio 版本打开向导的说明，请参阅 [演练：使用新的 MFC Shell 控件](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) 。
 
 1. 键入项目的名称，例如，， `Mandelbrot` 然后单击 **"确定"** 以显示 " **MFC 应用程序向导**"。
 
-1. 在 "**应用程序类型**" 窗格中，选择 "**单个文档**"。 确保清除 "**文档/视图体系结构支持**" 复选框。
+1. 在 " **应用程序类型** " 窗格中，选择 " **单个文档**"。 确保清除 " **文档/视图体系结构支持** " 复选框。
 
-1. 单击 "**完成**" 以创建项目并关闭 " **MFC 应用程序向导**"。
+1. 单击 " **完成** " 以创建项目并关闭 " **MFC 应用程序向导**"。
 
-   通过生成并运行该应用程序，验证该应用程序是否已成功创建。 若要生成应用程序，请在 "**生成**" 菜单上单击 "**生成解决方案**"。 如果应用程序成功生成，则通过单击 "**调试**" 菜单上的 "**启动调试**" 来运行该应用程序。
+   通过生成并运行该应用程序，验证该应用程序是否已成功创建。 若要生成应用程序，请在 " **生成** " 菜单上单击 " **生成解决方案**"。 如果应用程序成功生成，则通过单击 "**调试**" 菜单上的 "**启动调试**" 来运行该应用程序。
 
-## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a>实现 Mandelbrot 应用程序的串行版本
+## <a name="implementing-the-serial-version-of-the-mandelbrot-application"></a><a name="serial"></a> 实现 Mandelbrot 应用程序的串行版本
 
-本部分介绍如何绘制 Mandelbrot 分形。 此版本将 Mandelbrot 分形绘制到 GDI +[位图](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap)对象，然后将该位图的内容复制到客户端窗口。
+本部分介绍如何绘制 Mandelbrot 分形。 此版本将 Mandelbrot 分形绘制到 GDI + [位图](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap) 对象，然后将该位图的内容复制到客户端窗口。
 
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>实现 Mandelbrot 应用程序的串行版本
 
-1. 在*pch* （Visual Studio 2017 及更早版本中的*stdafx.h* ）中，添加以下 `#include` 指令：
+1. 在 *(Visual* Studio 2017 及更低) 版本的 *stdafx.h* 中，添加以下 `#include` 指令：
 
    [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
@@ -114,17 +115,17 @@ ms.locfileid: "87222688"
 
 [[顶部](#top)]
 
-## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a>从 UI 线程移除工作
+## <a name="removing-work-from-the-ui-thread"></a><a name="removing-work"></a> 从 UI 线程移除工作
 
 本部分说明如何从 Mandelbrot 应用程序中的 UI 线程删除绘图工作。 通过将绘图工作从 UI 线程移到工作线程，UI 线程可以处理消息，因为工作线程会在后台生成图像。
 
-并发运行时提供了三种运行任务的方法：[任务组](../../parallel/concrt/task-parallelism-concurrency-runtime.md)、[异步代理](../../parallel/concrt/asynchronous-agents.md)和[轻量级任务](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 尽管可以使用这些机制中的任何一种从 UI 线程中删除工作，但此示例使用[concurrency：： task_group](reference/task-group-class.md)对象，因为任务组支持取消操作。 此演练稍后将使用取消来减少调整客户端窗口大小时执行的工作量，并在销毁窗口时执行清理。
+并发运行时提供了三种运行任务的方法： [任务组](../../parallel/concrt/task-parallelism-concurrency-runtime.md)、 [异步代理](../../parallel/concrt/asynchronous-agents.md)和 [轻量级任务](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 尽管可以使用这些机制中的任何一种从 UI 线程中删除工作，但此示例使用 [concurrency：： task_group](reference/task-group-class.md) 对象，因为任务组支持取消操作。 此演练稍后将使用取消来减少调整客户端窗口大小时执行的工作量，并在销毁窗口时执行清理。
 
-此示例还使用[concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md)对象，使 UI 线程和工作线程能够彼此通信。 工作线程生成图像后，它会将指向对象的指针发送 `Bitmap` 到对象， `unbounded_buffer` 然后将一个绘制消息发送到 UI 线程。 然后，UI 线程从对象接收对象 `unbounded_buffer` `Bitmap` 并将其绘制到客户端窗口。
+此示例还使用 [concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md) 对象，使 UI 线程和工作线程能够彼此通信。 工作线程生成图像后，它会将指向对象的指针发送 `Bitmap` 到对象， `unbounded_buffer` 然后将一个绘制消息发送到 UI 线程。 然后，UI 线程从对象接收对象 `unbounded_buffer` `Bitmap` 并将其绘制到客户端窗口。
 
 #### <a name="to-remove-the-drawing-work-from-the-ui-thread"></a>从 UI 线程删除绘图工作
 
-1. 在*pch* （Visual Studio 2017 及更早版本中的*stdafx.h* ）中，添加以下 `#include` 指令：
+1. 在 *(Visual* Studio 2017 及更低) 版本的 *stdafx.h* 中，添加以下 `#include` 指令：
 
    [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
@@ -136,7 +137,7 @@ ms.locfileid: "87222688"
 
    [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
-1. 在 `CChildView::DrawMandelbrot` 方法中，在调用后 `Bitmap::UnlockBits` ，调用[concurrency：： send](reference/concurrency-namespace-functions.md#send)函数将 `Bitmap` 对象传递给 UI 线程。 然后将绘制消息发布到 UI 线程，并使工作区无效。
+1. 在 `CChildView::DrawMandelbrot` 方法中，在调用后 `Bitmap::UnlockBits` ，调用 [concurrency：： send](reference/concurrency-namespace-functions.md#send) 函数将 `Bitmap` 对象传递给 UI 线程。 然后将绘制消息发布到 UI 线程，并使工作区无效。
 
    [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
@@ -152,9 +153,9 @@ UI 现在可以更快地响应，因为在后台执行绘图工作。
 
 [[顶部](#top)]
 
-## <a name="improving-drawing-performance"></a><a name="performance"></a>提高绘图性能
+## <a name="improving-drawing-performance"></a><a name="performance"></a> 提高绘图性能
 
-Mandelbrot 分形的生成非常适合用于并行化，因为每个像素的计算都独立于所有其他计算。 若要并行化绘制过程，请将 **`for`** 方法中的外部循环转换为 `CChildView::DrawMandelbrot` 对[concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)算法的调用，如下所示。
+Mandelbrot 分形的生成非常适合用于并行化，因为每个像素的计算都独立于所有其他计算。 若要并行化绘制过程，请将 **`for`** 方法中的外部循环转换为 `CChildView::DrawMandelbrot` 对 [concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) 算法的调用，如下所示。
 
 [!code-cpp[concrt-mandelbrot#301](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_14.cpp)]
 
@@ -162,7 +163,7 @@ Mandelbrot 分形的生成非常适合用于并行化，因为每个像素的计
 
 [[顶部](#top)]
 
-## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a>添加取消支持
+## <a name="adding-support-for-cancellation"></a><a name="cancellation"></a> 添加取消支持
 
 本部分介绍如何处理窗口大小调整，以及如何在销毁窗口时取消任何活动的绘制任务。
 
@@ -172,13 +173,13 @@ Mandelbrot 分形的生成非常适合用于并行化，因为每个像素的计
 
 Mandelbrot 应用程序创建 `Bitmap` 其维度与客户端窗口大小匹配的对象。 每次调整客户端窗口大小时，应用程序将创建一个额外的后台任务，以生成新窗口大小的图像。 应用程序不需要这些中间映像;它只需要用于最终窗口大小的图像。 若要防止应用程序执行此额外的工作，您可以取消和消息的消息处理程序中的任何活动绘图任务， `WM_SIZE` `WM_SIZING` 然后在调整窗口大小后重新计划绘图工作。
 
-若要在调整窗口大小时取消活动的绘制任务，应用程序将在和消息的处理程序中调用[concurrency：： task_group：： cancel](reference/task-group-class.md#cancel)方法 `WM_SIZING` `WM_SIZE` 。 消息的处理程序 `WM_SIZE` 还会调用[concurrency：： task_group：： wait](reference/task-group-class.md#wait)方法以等待所有活动任务完成，然后重新为已更新的窗口大小重新安排绘制任务。
+若要在调整窗口大小时取消活动的绘制任务，应用程序将在和消息的处理程序中调用 [concurrency：： task_group：： cancel](reference/task-group-class.md#cancel) 方法 `WM_SIZING` `WM_SIZE` 。 消息的处理程序 `WM_SIZE` 还会调用 [concurrency：： task_group：： wait](reference/task-group-class.md#wait) 方法以等待所有活动任务完成，然后重新为已更新的窗口大小重新安排绘制任务。
 
 销毁客户端窗口时，最好取消任何活动的绘制任务。 取消任何活动的绘制任务可确保工作线程在销毁客户端窗口之后不会将消息发布到 UI 线程。 应用程序取消消息的处理程序中的任何活动绘制任务 `WM_DESTROY` 。
 
 ### <a name="responding-to-cancellation"></a>响应取消
 
-`CChildView::DrawMandelbrot`执行绘图任务的方法必须响应取消。 由于运行时使用异常处理来取消任务，因此该 `CChildView::DrawMandelbrot` 方法必须使用异常安全机制来确保正确清理所有资源。 此示例使用*资源采集为初始化*（RAII）模式，以确保在取消任务时取消锁定位图位。
+`CChildView::DrawMandelbrot`执行绘图任务的方法必须响应取消。 由于运行时使用异常处理来取消任务，因此该 `CChildView::DrawMandelbrot` 方法必须使用异常安全机制来确保正确清理所有资源。 此示例使用 *资源获取* (RAII) 模式进行初始化，以确保在取消任务时取消锁定位图位。
 
 ##### <a name="to-add-support-for-cancellation-in-the-mandelbrot-application"></a>在 Mandelbrot 应用程序中添加对取消的支持
 
@@ -222,7 +223,7 @@ Mandelbrot 应用程序创建 `Bitmap` 其维度与客户端窗口大小匹配�
 
 [[顶部](#top)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发运行时演练](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
 [任务并行度](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>

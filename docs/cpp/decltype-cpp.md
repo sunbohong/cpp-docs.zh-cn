@@ -1,4 +1,5 @@
 ---
+description: '详细了解： decltype (c + +) '
 title: decltype  (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,29 +10,29 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 9e769bbef66bd1b55b9d445874f00d37a736025e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e581436a43fc9632961fcb888dfb0b23974fc2df
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90683476"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339496"
 ---
 # <a name="decltype--c"></a>decltype  (C++)
 
-**`decltype`** 类型说明符将生成指定表达式的类型。 **`decltype`** 类型说明符与[ `auto` 关键字](../cpp/auto-cpp.md)一起主要用于编写模板库的开发人员。 使用 **`auto`** 和 **`decltype`** 来声明其返回类型依赖于其模板参数类型的模板函数。 或者，使用 **`auto`** 和 **`decltype`** 来声明一个模板函数，该函数包装对其他函数的调用，然后返回包装函数的返回类型。
+**`decltype`** 类型说明符将生成指定表达式的类型。 **`decltype`** 类型说明符与 [ `auto` 关键字](../cpp/auto-cpp.md)一起主要用于编写模板库的开发人员。 使用 **`auto`** 和 **`decltype`** 来声明其返回类型依赖于其模板参数类型的模板函数。 或者，使用 **`auto`** 和 **`decltype`** 来声明一个模板函数，该函数包装对其他函数的调用，然后返回包装函数的返回类型。
 
 ## <a name="syntax"></a>语法
 
 > **`decltype(`***表达式***`)`**
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *表达式*\
 一个表达式。 有关详细信息，请参阅 [表达式](../cpp/expressions-cpp.md)。
 
 ## <a name="return-value"></a>返回值
 
-*表达式*参数的类型。
+*表达式* 参数的类型。
 
 ## <a name="remarks"></a>备注
 
@@ -39,11 +40,11 @@ ms.locfileid: "90683476"
 
 编译器使用以下规则来确定 *expression* 参数的类型。
 
-- 如果 *expression* 参数是标识符或 [类成员访问](../cpp/member-access-operators-dot-and.md)， `decltype(expression)` 则是按 *expression*命名的实体的类型。 如果没有此类实体或 *表达式* 参数命名一组重载函数，则编译器将生成错误消息。
+- 如果 *expression* 参数是标识符或 [类成员访问](../cpp/member-access-operators-dot-and.md)， `decltype(expression)` 则是按 *expression* 命名的实体的类型。 如果没有此类实体或 *表达式* 参数命名一组重载函数，则编译器将生成错误消息。
 
 - 如果 *expression* 参数是对函数或重载运算符函数的调用， `decltype(expression)` 则是函数的返回类型。 将忽略重载运算符两边的括号。
 
-- 如果 *expression* 参数是 [右](../cpp/lvalues-and-rvalues-visual-cpp.md)值， `decltype(expression)` 则为 *表达式*的类型。 如果*expression*参数是[左](../cpp/lvalues-and-rvalues-visual-cpp.md)值， `decltype(expression)` 则是对*表达式*类型的[左值引用](../cpp/lvalue-reference-declarator-amp.md)。
+- 如果 *expression* 参数是 [右](../cpp/lvalues-and-rvalues-visual-cpp.md)值， `decltype(expression)` 则为 *表达式* 的类型。 如果 *expression* 参数是 [左](../cpp/lvalues-and-rvalues-visual-cpp.md)值， `decltype(expression)` 则是对 *表达式* 类型的 [左值引用](../cpp/lvalue-reference-declarator-amp.md)。
 
 下面的代码示例演示了如何使用 **`decltype`** 类型说明符。 首先，假定已编码下列语句。
 
@@ -56,7 +57,7 @@ const A* a = new A();
 
 接下来，检查下表中四个语句返回的类型 **`decltype`** 。
 
-|Statement|类型|说明|
+|语句|类型|注释|
 |---------------|----------|-----------|
 |`decltype(fx());`|`const int&&`|对的 [右](../cpp/rvalue-reference-declarator-amp-amp.md) 值引用 **`const int`** 。|
 |`decltype(var);`|**`int`**|变量 `var` 的类型。|
@@ -76,11 +77,11 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
 
 引入 **`decltype`** 类型说明符使开发人员能够获取模板函数返回的表达式的类型。 使用以后显示的 *替代函数声明语法* 、 **`auto`** 关键字和 **`decltype`** 类型说明符来声明 *后期指定* 的返回类型。 后指定返回类型是在对声明进行编译而不是编码时确定的。
 
-以下原型阐述一个替代函数声明的语法。 请注意， **`const`** 和 **`volatile`** 限定符以及 **`throw`** [异常规范](../cpp/exception-specifications-throw-cpp.md) 都是可选的。 *Function_body*占位符表示指定函数作用的复合语句。 作为最佳编码做法，语句中的 *表达式* 占位符 **`decltype`** 应与 **`return`** *function_body*中的语句（如果有）指定的表达式匹配。
+以下原型阐述一个替代函数声明的语法。 请注意， **`const`** 和 **`volatile`** 限定符以及 **`throw`** [异常规范](../cpp/exception-specifications-throw-cpp.md) 都是可选的。 *Function_body* 占位符表示指定函数作用的复合语句。 作为最佳编码做法，语句中的 *表达式* 占位符 **`decltype`** 应与 **`return`** *function_body* 中的语句（如果有）指定的表达式匹配。
 
-**`auto`***function_name* **`(`***参数*<sub>opt</sub> opt opt **`)`** **`const`** <sub>opt</sub> **`volatile`** <sub>opt</sub> **`->`** **`decltype(`** *表达式* **`)`** **`noexcept`** <sub>opt</sub> **`{`** *function_body***`};`**
+**`auto`***function_name* **`(`***参数*<sub>opt</sub> opt opt **`)`** **`const`** <sub></sub> **`volatile`** <sub></sub> **`->`** **`decltype(`** *表达式* **`)`** **`noexcept`** <sub>opt</sub> **`{`** *function_body***`};`**
 
-在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，该代码示例还使用右值引用和 `forward` 支持 *完美转发*的函数模板。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+在下面的代码示例中，`myFunc` 模板函数的后指定返回类型取决于 `t` 和 `u` 模板参数的类型。 作为最佳编码做法，该代码示例还使用右值引用和 `forward` 支持 *完美转发* 的函数模板。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ```cpp
 //C++11

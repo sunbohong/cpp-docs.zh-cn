@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 title: _vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: a6a3e94167adcc614a5de45a314fca25bdc9e1f2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68ac12f9c9ddbebe613ea92ade0b05eeb8e1ab01
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945665"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339587"
 ---
 # <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
@@ -83,7 +84,7 @@ int _vcwprintf_s_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *format*<br/>
 格式规范。
@@ -100,16 +101,16 @@ int _vcwprintf_s_l(
 
 写入的字符数，如果发生输出错误，则为一个负值。
 
-与这些函数的不安全版本一样，如果*format*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 此外，与这些函数的不太安全版本不同的是，如果*格式*不指定有效的格式，则会生成无效的参数异常。 如果允许执行继续，则这些函数将返回错误代码并将**errno**设置为该错误代码。 如果更具体的值不适用，则默认错误代码为**EINVAL** 。
+与这些函数的不安全版本一样，如果 *format* 为空指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 此外，与这些函数的不太安全版本不同的是，如果 *格式* 不指定有效的格式，则会生成无效的参数异常。 如果允许执行继续，则这些函数将返回错误代码并将 **errno** 设置为该错误代码。 如果更具体的值不适用，则默认错误代码为 **EINVAL** 。
 
 ## <a name="remarks"></a>备注
 
-每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf_s**是 **_vcprintf_s**的宽字符版本。 它将采用一个宽字符字符串作为参数。
+每个函数均采用一个指向参数列表的指针，然后将给定数据格式化并写入到控制台。 **_vcwprintf_s** 是 **_vcprintf_s** 的宽字符版本。 它将采用一个宽字符字符串作为参数。
 
-具有 **_l**后缀的这些函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前区域设置。
 
 > [!IMPORTANT]
-> 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -122,12 +123,12 @@ int _vcwprintf_s_l(
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**_vcprintf_s**、 **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf_s**、 **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf_s**， **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf_s**， **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 、和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -167,5 +168,5 @@ int main()
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>

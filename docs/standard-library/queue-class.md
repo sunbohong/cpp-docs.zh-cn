@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： queue 类
 title: queue 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: e0bfa4ab037b52b237bd674d5f705de4e9699383
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b2b30e7a564fa1889d9adc2bb99e48ec1a623c25
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832602"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340614"
 ---
 # <a name="queue-class"></a>queue 类
 
@@ -40,7 +41,7 @@ template <class Type, class Container = deque <Type>>
 class queue
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 要存储在队列中的元素数据类型
@@ -48,7 +49,7 @@ class queue
 *容器*\
 用来实现队列的基础容器的类型。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `Type`Queue 对象的第一个模板参数中的规定类的元素与[value_type](#value_type)同义，并且必须与 `Container` 第二个模板参数规定的基础容器类中的元素类型相匹配。 `Type`必须是可赋值的，以便可以复制该类型的对象并为该类型的变量赋值。
 
@@ -68,13 +69,13 @@ C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priorit
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[使](#queue)|构造一个空的或者是基容器对象副本的 `queue`。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[container_type](#container_type)|一种类型，它提供将由 `queue` 采用的基容器。|
 |[size_type](#size_type)|可表示 `queue` 中元素数量的无符号整数类型。|
@@ -82,12 +83,12 @@ C++ 标准库定义了三种类型的容器适配器：stack、queue 和 priorit
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[返回](#back)|返回对在 `queue` 后部最近添加的最后一个元素的引用。|
 |[empty](#empty)|测试 `queue` 是否为空。|
 |[主](#front)|返回对 `queue` 前部的第一个元素的引用。|
-|[弹出](#pop)|从 `queue` 前端移除一个元素。|
+|[pop](#pop)|从 `queue` 前端移除一个元素。|
 |[push](#push)|将元素添加到 `queue` 的后部。|
 |[大小](#size)|返回 `queue` 中的元素数量。|
 
@@ -105,7 +106,7 @@ const_reference back() const;
 
 Queue 的最后一个元素。 如果队列为空，则未定义返回值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将 `back` 的返回值分配给 `const_reference`，则无法修改队列对象。 如果将的返回值 `back` 分配给 `reference` ，则可以修改队列对象。
 
@@ -145,7 +146,7 @@ int main( )
 typedef Container container_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是模板参数 `Container` 的同义词。 两个 C++ 标准库序列容器类 - list 类和默认的 deque 类 - 满足用作队列对象的基容器的要求。 也可能使用满足要求的用户定义的类型。
 
@@ -215,7 +216,7 @@ const_reference front() const;
 
 Queue 的第一个元素。 如果队列为空，则未定义返回值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果将 `front` 的返回值分配给 `const_reference`，则无法修改队列对象。 如果将的返回值 `front` 分配给 `reference` ，则可以修改队列对象。
 
@@ -261,7 +262,7 @@ int main() {
 void pop();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 队列不能为空，以便应用成员函数。 队列的顶部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。
 
@@ -317,12 +318,12 @@ After a pop, the element at the front of the queue is 20.
 void push(const Type& val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *初始值*\
 添加到队列后部的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 队列的后部是最近添加的元素所占据的位置，并且是容器末尾处的最后一个元素。
 
@@ -368,12 +369,12 @@ queue();
 explicit queue(const container_type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 **`const`** 构造的队列要作为其副本的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 队列的默认基容器是 deque。 还可以指定列表作为基容器，但不能指定矢量，因为它缺少所需的 `pop_front` 成员函数。
 
@@ -474,7 +475,7 @@ The queue length is now 2.
 typedef typename Container::size_type size_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是由队列调整的基容器的 `size_type` 的同义词。
 
@@ -490,7 +491,7 @@ typedef typename Container::size_type size_type;
 typedef typename Container::value_type value_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是由队列调整的基容器的 `value_type` 的同义词。
 
@@ -524,7 +525,7 @@ The value_type is AnInt = 69
 The element at the front of the queue is 69.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

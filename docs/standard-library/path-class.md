@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息： path 类
 title: path 类
 ms.date: 09/27/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-ms.openlocfilehash: fb56afbc1d29f1d321b394342382f89b06768720
-ms.sourcegitcommit: b5854134553db1d99a5761bec131841c374a3098
+ms.openlocfilehash: 469d594800036b165f8693162ca11ca161736cf0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91958654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340770"
 ---
 # <a name="path-class"></a>path 类
 
-**Path**类存储类型为的对象 `string_type` ，此对象 `myname` 用于处于阐释，适合用作路径名。 `string_type` 是的同义词 `basic_string<value_type>` ，其中 `value_type` 是 **`wchar_t`** 在 Windows 或 POSIX 上的同义词 **`char`** 。
+**Path** 类存储类型为的对象 `string_type` ，此对象 `myname` 用于处于阐释，适合用作路径名。 `string_type` 是的同义词 `basic_string<value_type>` ，其中 `value_type` 是 **`wchar_t`** 在 Windows 或 POSIX 上的同义词 **`char`** 。
 
 有关详细信息和代码示例，请参阅 [文件系统导航 (c + +) ](../standard-library/file-system-navigation.md)。
 
@@ -34,7 +35,7 @@ class path;
 |类型名称|描述|
 |-|-|
 |[const_iterator](#const_iterator)|`iterator` 的同义词。|
-|[器](#iterator)|指定组件的双向常量迭代器 `path` `myname` 。|
+|[iterator](#iterator)|指定组件的双向常量迭代器 `path` `myname` 。|
 |[string_type](#string_type)|该类型是 `basic_string<value_type>` 的同义词。|
 
 ### <a name="member-functions"></a>成员函数
@@ -89,7 +90,7 @@ class path;
 
 ### <a name="operators"></a>运算符
 
-|操作员|描述|
+|运算符|描述|
 |-|-|
 |[operator =](#op_as)|将路径的元素替换为另一个路径的副本。|
 |[运算符 + =](#op_add)|各种 `concat` 表达式。|
@@ -114,7 +115,7 @@ template <class InIt>
 path& append(InIt first, InIt last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *源程序*\
 指定的序列。
@@ -137,7 +138,7 @@ template <class InIt>
 path& assign(InIt first, InIt last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *源程序*\
 指定的序列。
@@ -182,7 +183,7 @@ int compare(const string_type& str) const;
 int compare(const value_type *ptr) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pval*\
 要比较的路径。
@@ -205,7 +206,7 @@ template <class InIt>
 path& concat(InIt first, InIt last);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *源程序*\
 指定的序列。
@@ -248,7 +249,7 @@ iterator end() const;
 path extension() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的后缀 `filename() X` ，以：
 
@@ -407,7 +408,7 @@ class iterator
    };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类描述了一个双向常量迭代器，该迭代器指定 `path` `myname` 序列中的组件：
 
@@ -459,15 +460,15 @@ template <class Source>
 path& operator=(const Source& source);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
-要[path](../standard-library/path-class.md)复制到中的路径 `path` 。
+要[](../standard-library/path-class.md)复制到中的路径 `path` 。
 
 *源程序*\
 源路径。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个成员运算符将复制 `right.myname` 到 `myname` 。 第二个成员运算符移 `right.myname` 到 `myname` 。 第三个成员运算符的行为与相同 `*this = path(source)` 。
 
@@ -488,7 +489,7 @@ template <class Elem>
 path& operator+=(Elem elem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 添加的路径。
@@ -505,7 +506,7 @@ path& operator+=(Elem elem);
 *源程序*\
 添加的源。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数的行为与以下相应表达式相同：
 
@@ -532,7 +533,7 @@ template <class Source>
 path& operator/=(const Source& source);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 添加的路径。
@@ -540,7 +541,7 @@ path& operator/=(const Source& source);
 *源程序*\
 添加的源。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数的行为与以下相应表达式相同：
 
@@ -564,7 +565,7 @@ operator string_type() const;
 path parent_path() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的父路径组件 `myname` ，尤其是 `myname` 删除后的前缀 `filename().native()` 和任何前面紧邻的目录分隔符。  (相等，则 `begin() != end()` 为，如果是，则为通过连续应用的范围中的所有元素 `[begin(), --end())` `operator/=` 。 ) 组件可能为空。
 
@@ -591,7 +592,7 @@ template <class InIt>
 path(InIt first, InIt last, const locale& loc);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 构造的路径要作为其副本的路径。
@@ -608,7 +609,7 @@ path(InIt first, InIt last, const locale& loc);
 *时间*\
 要复制的最后一个元素的位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数均 `myname` 以各种方式构造：
 
@@ -638,7 +639,7 @@ static constexpr value_type preferred_separator == '/';
 #endif // filesystem model now defined
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 请注意，在 Windows 下的大多数上下文中，同样允许在它的位置使用 L'/'。
 
@@ -650,7 +651,7 @@ static constexpr value_type preferred_separator == '/';
 path relative_path() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的相对路径组件 `myname` ，尤其是 `myname` 删除后的后缀 `root_path().native()` 和任何紧随其后的冗余目录分隔符。 组件可能为空。
 
@@ -670,12 +671,12 @@ path& remove_filename();
 path& replace_extension(const path& newext = path());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *newext*\
 新扩展。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 首先删除中的 `extension().native()` 后缀 `myname` 。 如果 `!newext.empty() && newext[0] != dot` (where `dot` `*path(".").c_str()`) ，则 `dot` 将追加到 `myname` 。 然后将 *newext* 追加到 `myname` 。
 
@@ -687,12 +688,12 @@ path& replace_extension(const path& newext = path());
 path& replace_filename(const path& pval);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pval*\
 文件名的路径。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数执行：
 
@@ -711,7 +712,7 @@ return (*this);
 path root_directory() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 组件可能为空。
 
@@ -723,7 +724,7 @@ path root_directory() const;
 path root_name() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 组件可能为空。
 
@@ -735,7 +736,7 @@ path root_name() const;
 path root_path() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的根路径组件 `myname` ，尤其是 `root_name()`  /  `root_directory` 。 组件可能为空。
 
@@ -747,7 +748,7 @@ path root_path() const;
 path stem() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 返回的 `stem` 组件 `myname` ，尤其是 `filename().native()` 删除了任何尾随 `extension().native()` 。 组件可能为空。
 
@@ -761,7 +762,7 @@ basic_string\<Elem, Traits, Alloc> string(const Alloc& al = Alloc()) const;
 string string() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个 (模板) 成员函数按照与相同的方式转换存储的顺序 `mypath` ：
 
@@ -835,6 +836,6 @@ typedef char value_type;
 wstring wstring() const;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

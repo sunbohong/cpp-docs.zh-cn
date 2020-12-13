@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 title: _vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 ms.date: 11/04/2016
 api_name:
@@ -46,12 +47,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
-ms.openlocfilehash: a98c84ae9cfd221fd23da2eaa08c639e01f12ad4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 062fb24abb2f1b9032a462715585afc5a0dd23b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945558"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340536"
 ---
 # <a name="_vfprintf_p-_vfprintf_p_l-_vfwprintf_p-_vfwprintf_p_l"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 
@@ -84,10 +85,10 @@ int _vfwprintf_p_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*stream*<br/>
-指向**文件**结构的指针。
+*流*<br/>
+指向 **文件** 结构的指针。
 
 *format*<br/>
 格式规范。
@@ -102,20 +103,20 @@ int _vfwprintf_p_l(
 
 ## <a name="return-value"></a>返回值
 
-**_vfprintf_p**和 **_vfwprintf_p**返回写入的字符数，不包括终止 null 字符，或在出现输出错误时返回一个负值。
+**_vfprintf_p** 和 **_vfwprintf_p** 返回写入的字符数，不包括终止 null 字符，或者在出现输出错误时返回一个负值。
 
 ## <a name="remarks"></a>备注
 
-其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入到*流*中。 这些函数与 **_vfprint_s**和 **_vfwprint_s**版本的不同之处在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
+其中每个函数都采用一个指向参数列表的指针，然后将给定数据格式化并写入到 *流* 中。 这些函数与 **_vfprint_s** 和 **_vfwprint_s** 版本的不同之处在于它们支持位置参数。 有关详细信息，请参阅 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_vfwprintf_p**是 **_vprintf_p**的宽字符版本;如果在 ANSI 模式下打开流，则这两个函数的行为相同。 **_vprintf_p**当前不支持输出到 UNICODE 流中。
+**_vfwprintf_p** 是 **_vprintf_p** 的宽字符版本;如果在 ANSI 模式下打开流，则这两个函数的行为相同。 **_vprintf_p** 当前不支持输出到 UNICODE 流中。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 > [!IMPORTANT]
-> 确保 format不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 确保 format 不是用户定义的字符串。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*流*或*格式*为 null 指针，或如果格式字符串包含无效的格式字符，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将**errno**设置为**EINVAL**。
+如果 *流* 或 *格式* 为 null 指针，或如果格式字符串包含无效的格式字符，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -128,12 +129,12 @@ int _vfwprintf_p_l(
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**_vfprintf_p**、 **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vfwprintf_p**、 **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vfprintf_p**， **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vfwprintf_p**， **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h> 、和 \<stdarg.h>|\<varargs.h>*|
 
 \* 仅对 UNIX V 兼容性是必需的。
 
-有关其他兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
@@ -141,9 +142,9 @@ int _vfwprintf_p_l(
 [vprintf 函数](../../c-runtime-library/vprintf-functions.md)<br/>
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、 \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>
 [printf_p 位置参数](../../c-runtime-library/printf-p-positional-parameters.md)<br/>
 [_fprintf_p、_fprintf_p_l、_fwprintf_p、_fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l](vsprintf-p-vsprintf-p-l-vswprintf-p-vswprintf-p-l.md)<br/>
-[_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>
+[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>

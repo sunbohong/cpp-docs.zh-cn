@@ -1,4 +1,5 @@
 ---
+description: 了解有关自动化的详细信息
 title: 自动化
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: e5790be14f26f59c2b51b339c8bee7c5eca7d692
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 8a038a3590c3db9c90c8f99eaaa6f98d2c4e20cc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339834"
 ---
 # <a name="automation"></a>自动化
 
@@ -47,9 +48,9 @@ ms.locfileid: "84616512"
 
 许多商业应用程序，如 Microsoft Excel 和 Microsoft Visual C++，允许您自动化大部分功能。 例如，在 Visual C++ 中，可以编写 VBScript 宏来自动执行生成、代码编辑相关工作或调试任务。
 
-## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a>在自动化中传递参数
+## <a name="passing-parameters-in-automation"></a><a name="_core_passing_parameters_in_automation"></a> 在自动化中传递参数
 
-创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **VARIANT** 类型支持很多标准数据类型：2 字节和 4 字节的整数、4 字节和 8 字节的浮点数、字符串和布尔值。 此外，它还支持**HRESULT** （OLE 错误代码）、**货币**（定点数值类型）和**日期**（绝对日期和时间）类型，以及指向 `IUnknown` 和接口的指针 `IDispatch` 。
+创建自动化方法的一个难点是帮助提供一个统一的“安全”机制，以便在自动化服务器和客户端之间传递数据。 自动化使用 **VARIANT** 类型传递数据。 **VARIANT** 类型是带标记的联合。 它有一个表示值的数据成员（这是一个匿名的 C++ 联合）和一个指示存储在该联合中的信息类型的数据成员。 **VARIANT** 类型支持很多标准数据类型：2 字节和 4 字节的整数、4 字节和 8 字节的浮点数、字符串和布尔值。 此外，它还支持 **HRESULT** (OLE 错误代码) 、 (固定点数值类型) 的 **货币** 和 **日期** (绝对日期和时间) 类型，以及指向 `IUnknown` 和接口的指针 `IDispatch` 。
 
 **VARIANT** 类型封装在 [COleVariant](reference/colevariant-class.md) 类中。 支持的 **CURRENCY** 和 **DATE** 类封装在 [COleCurrency](reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 类中。
 
@@ -87,6 +88,6 @@ ms.locfileid: "84616512"
 
 - [采用 C++ 编写自动化客户端](automation-clients.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC COM](mfc-com.md)

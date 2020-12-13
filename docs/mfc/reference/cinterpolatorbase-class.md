@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CInterpolatorBase 类
 title: CInterpolatorBase 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: efa08aa5dd556d7e136323c31451a9f33bd72ec6
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 73204e8b81db862fe30058d1b2451ea468d332e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754956"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340952"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 类
 
@@ -47,27 +48,27 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[C插值器基础：C插值器基础](#cinterpolatorbase)|构造`CInterpolatorBase`对象。|
+|[CInterpolatorBase：： CInterpolatorBase](#cinterpolatorbase)|构造 `CInterpolatorBase` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[C插值器基础：：创建实例](#createinstance)|创建 的`CInterpolatorBase`实例并存储指向自定义插值器的指针，该指针将处理事件。|
-|[CInterpolatorBase：获取依赖性](#getdependencies)|获取插值器的依赖项。 （重写 `CUIAnimationInterpolatorBase::GetDependencies`。）|
-|[C插值器基础：获取持续时间](#getduration)|获取插值器的持续时间。 （重写 `CUIAnimationInterpolatorBase::GetDuration`。）|
-|[C插值器基础：获取最终值](#getfinalvalue)|获取插值器引由的最终值。 （重写 `CUIAnimationInterpolatorBase::GetFinalValue`。）|
-|[C插值器基础：：刑警价值](#interpolatevalue)|插值在给定偏移量处的值（覆盖`CUIAnimationInterpolatorBase::InterpolateValue`. ）|
-|[C插值器基础：：刑警组织](#interpolatevelocity)|插值在给定偏移处的速度（覆盖`CUIAnimationInterpolatorBase::InterpolateVelocity`. ）|
-|[C插值器基础：设置自定义器](#setcustominterpolator)|存储指向自定义插值器的指针，该指针将处理事件。|
-|[C插值器基础：：设置持续时间](#setduration)|设置插值器的持续时间（覆盖`CUIAnimationInterpolatorBase::SetDuration`.）|
-|[C插值器基础：：设置初始值和速度](#setinitialvalueandvelocity)|设置插值器的初始值和速度。 （重写 `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`。）|
+|[CInterpolatorBase：： CreateInstance](#createinstance)|创建的实例 `CInterpolatorBase` ，并存储指向将处理事件的自定义内插程序的指针。|
+|[CInterpolatorBase：： GetDependencies](#getdependencies)|获取内插程序的依赖项。 （重写 `CUIAnimationInterpolatorBase::GetDependencies`。）|
+|[CInterpolatorBase：： GetDuration](#getduration)|获取内插程序的持续时间。 （重写 `CUIAnimationInterpolatorBase::GetDuration`。）|
+|[CInterpolatorBase：： GetFinalValue](#getfinalvalue)|获取该内插的最终值。 （重写 `CUIAnimationInterpolatorBase::GetFinalValue`。）|
+|[CInterpolatorBase：： InterpolateValue](#interpolatevalue)|按给定的偏移量将值内插 (重写 `CUIAnimationInterpolatorBase::InterpolateValue` 。 ) |
+|[CInterpolatorBase：： InterpolateVelocity](#interpolatevelocity)|按给定的偏移量将速度内插 (重写 `CUIAnimationInterpolatorBase::InterpolateVelocity` 。 ) |
+|[CInterpolatorBase：： SetCustomInterpolator](#setcustominterpolator)|存储一个指向自定义内插的指针，该指针将处理事件。|
+|[CInterpolatorBase：： SetDuration](#setduration)|设置插值 (重写的持续时间 `CUIAnimationInterpolatorBase::SetDuration` 。 ) |
+|[CInterpolatorBase：： SetInitialValueAndVelocity](#setinitialvalueandvelocity)|设置内插程序的初始值和速度。 （重写 `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`。）|
 
 ## <a name="remarks"></a>备注
 
-当`IUIAnimationTransitionFactory::CreateTransition``CCustomTransition`对象作为动画初始化过程的一部分（由 启动）`CAnimationController::AnimateGroup`创建并传递给该处理程序时， 通常不需要直接使用此类，它只是将所有事件传递给`CCustomInterpolator`派生类，其指针传递给 的`CCustomTransition`构造函数。
+创建对象时，将创建该处理程序，并将其传递给 `IUIAnimationTransitionFactory::CreateTransition` `CCustomTransition` 作为动画初始化过程的一部分的对象 (`CAnimationController::AnimateGroup`) 启动。 通常不需要直接使用此类，它只是将所有事件从者到 `CCustomInterpolator` 派生类中，其指针传递到的构造函数 `CCustomTransition` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -81,17 +82,17 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 **标头：** afxanimationcontroller.h
 
-## <a name="cinterpolatorbasecinterpolatorbase"></a><a name="cinterpolatorbase"></a>C插值器基础：C插值器基础
+## <a name="cinterpolatorbasecinterpolatorbase"></a><a name="cinterpolatorbase"></a> CInterpolatorBase：： CInterpolatorBase
 
-构造 C插值器基础对象。
+构造 CInterpolatorBase 对象。
 
 ```
 CInterpolatorBase();
 ```
 
-## <a name="cinterpolatorbasecreateinstance"></a><a name="createinstance"></a>C插值器基础：：创建实例
+## <a name="cinterpolatorbasecreateinstance"></a><a name="createinstance"></a> CInterpolatorBase：： CreateInstance
 
-创建 CInterpolatorBase 的实例并存储指向自定义插值器的指针，该指针将处理事件。
+创建 CInterpolatorBase 的实例，并存储指向将处理事件的自定义内插程序的指针。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -99,19 +100,19 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
     IUIAnimationInterpolator** ppHandler);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p插值器*<br/>
-指向自定义插值器的指针。
+*pInterpolator*<br/>
+指向自定义内插的指针。
 
-*普汉德勒*<br/>
+*ppHandler*<br/>
 输出。 当函数返回时，包含指向 CInterpolatorBase 实例的指针。
 
 ### <a name="return-value"></a>返回值
 
-## <a name="cinterpolatorbasegetdependencies"></a><a name="getdependencies"></a>CInterpolatorBase：获取依赖性
+## <a name="cinterpolatorbasegetdependencies"></a><a name="getdependencies"></a> CInterpolatorBase：： GetDependencies
 
-获取插值器的依赖项。
+获取内插程序的依赖项。
 
 ```
 IFACEMETHOD(GetDependencies)(
@@ -120,41 +121,41 @@ IFACEMETHOD(GetDependencies)(
     __out UI_ANIMATION_DEPENDENCIES* durationDependencies);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*初始价值依赖性*<br/>
-输出。 插值器的一些方面，这些插值取决于传递给 Set初始值和Velocity 的初始值。
+*initialValueDependencies*<br/>
+输出。 依赖于传递给 SetInitialValueAndVelocity 的初始值的内插程序的各个方面。
 
-*初始速度依赖性*<br/>
-输出。 插值器的方面，这些插值器取决于传递给 Set 初始值和Velocity的初始速度。
+*initialVelocityDependencies*<br/>
+输出。 取决于传递到 SetInitialValueAndVelocity 的初始速度的内插程序的各个方面。
 
-*持续时间 依赖*<br/>
-输出。 插值器的一些方面，这些插值器取决于传递给 SetDuration 的持续时间。
+*durationDependencies*<br/>
+输出。 取决于传递到 SetDuration 的持续时间的内插程序的各个方面。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，则返回E_FAIL，或者自定义实现从 GetDependencies 方法返回 FALSE。
+如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 GetDependencies 方法返回 FALSE，则它将返回 E_FAIL。
 
-## <a name="cinterpolatorbasegetduration"></a><a name="getduration"></a>C插值器基础：获取持续时间
+## <a name="cinterpolatorbasegetduration"></a><a name="getduration"></a> CInterpolatorBase：： GetDuration
 
-获取插值器的持续时间。
+获取内插程序的持续时间。
 
 ```
 IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *duration*<br/>
-输出。 转换的持续时间，以秒为单位。
+输出。 转换的持续时间（以秒为单位）。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，则返回E_FAIL，或者自定义实现从 GetDuration 方法返回 FALSE。
+如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 GetDuration 方法返回 FALSE，则它将返回 E_FAIL。
 
-## <a name="cinterpolatorbasegetfinalvalue"></a><a name="getfinalvalue"></a>C插值器基础：获取最终值
+## <a name="cinterpolatorbasegetfinalvalue"></a><a name="getfinalvalue"></a> CInterpolatorBase：： GetFinalValue
 
-获取插值器引由的最终值。
+获取该内插的最终值。
 
 ```
 IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
@@ -167,11 +168,11 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，则返回E_FAIL，或者自定义实现从 GetFinalValue 方法返回 FALSE。
+如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 GetFinalValue 方法返回 FALSE，则它将返回 E_FAIL。
 
-## <a name="cinterpolatorbaseinterpolatevalue"></a><a name="interpolatevalue"></a>C插值器基础：：刑警价值
+## <a name="cinterpolatorbaseinterpolatevalue"></a><a name="interpolatevalue"></a> CInterpolatorBase：： InterpolateValue
 
-插值在给定偏移量处的值
+按给定的偏移量内插值
 
 ```
 IFACEMETHOD(InterpolateValue)(
@@ -179,21 +180,21 @@ IFACEMETHOD(InterpolateValue)(
     __out DOUBLE* value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*偏移量*<br/>
-转换开始时的偏移量。 偏移量始终大于或等于零，小于转换的持续时间。 如果转换的持续时间为零，则不调用此方法。
+*offset*<br/>
+与转换开头之间的偏移量。 偏移量始终大于或等于零，并且小于转换的持续时间。 如果转换的持续时间为零，则不会调用此方法。
 
 *value*<br/>
-输出。 插值值。
+输出。 内插值。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或者自定义实现从插值值方法返回 FALSE，则返回E_FAIL。
+如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 InterpolateValue 方法返回 FALSE，则它将返回 E_FAIL。
 
-## <a name="cinterpolatorbaseinterpolatevelocity"></a><a name="interpolatevelocity"></a>C插值器基础：：刑警组织
+## <a name="cinterpolatorbaseinterpolatevelocity"></a><a name="interpolatevelocity"></a> CInterpolatorBase：： InterpolateVelocity
 
-在给定偏移处插入速度
+按给定的偏移量内插速度
 
 ```
 IFACEMETHOD(InterpolateVelocity)(
@@ -201,51 +202,51 @@ IFACEMETHOD(InterpolateVelocity)(
     __out DOUBLE* velocity);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*偏移量*<br/>
-转换开始时的偏移量。 偏移量始终大于或等于零，小于或等于转换的持续时间。 如果转换的持续时间为零，则不调用此方法。
+*offset*<br/>
+与转换开头之间的偏移量。 偏移量始终大于或等于零且小于或等于转换的持续时间。 如果转换的持续时间为零，则不会调用此方法。
 
-*velocity*<br/>
-输出。 偏移处变量的速度。
+*速度*<br/>
+输出。 变量在偏移量处的速度。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或者自定义实现从插值速度方法返回 FALSE，则返回E_FAIL。
+如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 InterpolateVelocity 方法返回 FALSE，则它将返回 E_FAIL。
 
-## <a name="cinterpolatorbasesetcustominterpolator"></a><a name="setcustominterpolator"></a>C插值器基础：设置自定义器
+## <a name="cinterpolatorbasesetcustominterpolator"></a><a name="setcustominterpolator"></a> CInterpolatorBase：： SetCustomInterpolator
 
-存储指向自定义插值器的指针，该指针将处理事件。
+存储一个指向自定义内插的指针，该指针将处理事件。
 
 ```cpp
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p插值器*<br/>
-指向自定义插值器的指针。
+*pInterpolator*<br/>
+指向自定义内插的指针。
 
-## <a name="cinterpolatorbasesetduration"></a><a name="setduration"></a>C插值器基础：：设置持续时间
+## <a name="cinterpolatorbasesetduration"></a><a name="setduration"></a> CInterpolatorBase：： SetDuration
 
-设置插值器的持续时间
+设置内插程序的持续时间
 
 ```
 IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *duration*<br/>
 转换的持续时间。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或者自定义实现从 SetDuration 方法返回 FALSE，则返回E_FAIL。
+如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 SetDuration 方法返回 FALSE，则它将返回 E_FAIL。
 
-## <a name="cinterpolatorbasesetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>C插值器基础：：设置初始值和速度
+## <a name="cinterpolatorbasesetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a> CInterpolatorBase：： SetInitialValueAndVelocity
 
-设置插值器的初始值和速度。
+设置内插程序的初始值和速度。
 
 ```
 IFACEMETHOD(SetInitialValueAndVelocity)(
@@ -253,17 +254,17 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
     __in DOUBLE initialVelocity);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*初始值*<br/>
+*initialValue*<br/>
 转换开始时变量的值。
 
-*初始速度*<br/>
-转换开始时变量的速度。
+*initialVelocity*<br/>
+变量在转换开始时的速度。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，则返回E_FAIL，或者自定义实现从 Set初始值和Velocity 方法返回 FALSE。
+如果该方法成功，则它会返回 S_OK。 如果未设置 CCustomInterpolator，或自定义实现从 SetInitialValueAndVelocity 方法返回 FALSE，则它将返回 E_FAIL。
 
 ## <a name="see-also"></a>请参阅
 

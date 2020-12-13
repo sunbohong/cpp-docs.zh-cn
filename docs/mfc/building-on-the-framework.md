@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：在框架上生成
 title: 基于框架生成
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 2c171b223892c8bca1b32e18c57c09027558c192
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: dd9423bb8cf80463631d6a39212db42ab94a67ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619722"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339782"
 ---
 # <a name="building-on-the-framework"></a>基于框架生成
 
@@ -30,6 +31,6 @@ ms.locfileid: "84619722"
 
 在大多数情况下，你可以按照这些表中所述的步骤来创建 MFC 应用程序，但其中一些步骤是替代选项。 例如，大多数应用程序使用几种类型的视图类，可使用多种类型。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [常规 MFC 主题](general-mfc-topics.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：字符串到数值函数
 title: 字符串到数值函数
 ms.date: 11/04/2016
 api_location:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: b4936e09de5ee26356b71b66154071a93e252b6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f560c83c8ae8d510b70804540e5360982770773c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339561"
 ---
 # <a name="string-to-numeric-value-functions"></a>字符串到数值函数
 
@@ -68,7 +69,7 @@ ms.locfileid: "87213458"
 
 [*空格*][{ **+** &#124; **-** }] [**0** [{ **x** &#124; **x** }]] [ `digits` ]
 
-如果 base 参数在 2 和 36 之间，则将其用作数字的基数。 如果为 0，则转换结束指针引用的初始字符将用于确定基数。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数；否则将其视为十进制数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 `strtoul`和 `_strtoui64` 允许加号（ **+** ）或减号（ **-** ）符号前缀; 前导减号表示返回值为否定。
+如果 base 参数在 2 和 36 之间，则将其用作数字的基数。 如果为 0，则转换结束指针引用的初始字符将用于确定基数。 如果第一个字符为 0，且第二个字符不为“x”或“X”，则将该字符串视为八进制整数；否则将其视为十进制数。 如果第一个字符为“0”，且第二个字符为“x”或“X”，则将该字符串视为十六进制整数。 如果第一个字符是“1”至“9”，则将该字符串视为十进制整数。 为字母“a”到“z”（或“A”到“Z”）分配了 10 到 35 的值；仅允许分配的值小于 *base* 的字母。 `strtoul` 和 `_strtoui64` 允许 (**+**) 或减号 (**-**) 符号前缀; 前导减号表示返回值为否定。
 
 输出值受区域设置的 `LC_NUMERIC` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。
 
@@ -87,14 +88,14 @@ ms.locfileid: "87213458"
 |`_strtoui64`|溢出|**_UI64_MAX**|
 |`_strtoui64`|不进行转换|0|
 
-**_I64_MAX**、_**I64_MIN** 和 **_UI64_MAX** 在 LIMITS.H 中进行定义。
+**_I64_MAX**、_ **I64_MIN** 和 **_UI64_MAX** 在 LIMITS.H 中进行定义。
 
 `wcstod`、`wcstol`、`wcstoul`、`_wcstoi64` 和 `_wcstoui64` 分别是 `strtod`、`strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64` 的宽字符版本。指向每个宽字符函数的转换结束参数的指针都是一个宽字符串。 否则，每个宽字符函数将与其对应的单字节字符的行为相同。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../c-runtime-library/data-conversion.md)<br/>
 [区域设置](../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [浮点支持](../c-runtime-library/floating-point-support.md)<br/>
 [atof、_atof_l、_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

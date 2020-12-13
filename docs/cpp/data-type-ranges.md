@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：数据类型范围
 title: 数据类型范围
 ms.date: 05/28/2020
 helpviewer_keywords:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-ms.openlocfilehash: f7658d0c0a61180193de268414e214595198e8fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8d4ae1b6aae3a4dbf12180248df6000085103efe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87228968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339522"
 ---
 # <a name="data-type-ranges"></a>数据类型范围
 
@@ -79,19 +80,19 @@ Microsoft c + + 32 位和64位编译器可识别本文后面的表中的类型�
 |**`__int64`**|8|**`long long`**, **`signed long long`**|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|
 |**`unsigned __int64`**|8|**`unsigned long long`**|0 到 18,446,744,073,709,551,615|
 |**`bool`**|1|无|**`false`** 或 **`true`**|
-|**`char`**|1|无|-默认为-128 到127<br /><br /> 当使用进行编译时，为0到255[`/J`](../build/reference/j-default-char-type-is-unsigned.md)|
+|**`char`**|1|无|-默认为-128 到127<br /><br /> 当使用进行编译时，为0到255 [`/J`](../build/reference/j-default-char-type-is-unsigned.md)|
 |**`signed char`**|1|无|-128 到 127|
 |**`unsigned char`**|1|无|0 到 255|
 |**`short`**|2|**`short int`**, **`signed short int`**|-32,768 到 32,767|
 |**`unsigned short`**|2|**`unsigned short int`**|0 到 65,535|
 |**`long`**|4|**`long int`**, **`signed long int`**|-2,147,483,648 到 2,147,483,647|
 |**`unsigned long`**|4|**`unsigned long int`**|0 到 4,294,967,295|
-|**`long long`**|8|无（但等效于 **`__int64`** ）|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|
-|**`unsigned long long`**|8|无（但等效于 **`unsigned __int64`** ）|0 到 18,446,744,073,709,551,615|
+|**`long long`**|8|无 (但等效于 **`__int64`**) |-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|
+|**`unsigned long long`**|8|无 (但等效于 **`unsigned __int64`**) |0 到 18,446,744,073,709,551,615|
 |**`enum`**|多种多样|无| |
 |**`float`**|4|无|3.4E +/- 38（7 位数）|
 |**`double`**|8|无|1.7E +/- 308（15 位数）|
-|**`long double`**|相同于**`double`**|无|相同于**`double`**|
+|**`long double`**|相同于 **`double`**|无|相同于 **`double`**|
 |**`wchar_t`**|2|**`__wchar_t`**|0 到 65,535|
 
 根据使用方式，的变量 **`__wchar_t`** 指定宽字符类型或多字节字符类型。 在字符或字符串常量前使用 `L` 前缀以指定宽字符类型常量。
@@ -100,13 +101,13 @@ Microsoft c + + 32 位和64位编译器可识别本文后面的表中的类型�
 
 **`int`** 和 **`unsigned int`** 类型具有四个字节的大小。 但是，可移植代码不应依赖于的大小， **`int`** 因为语言标准允许此功能是特定于实现的。
 
-Visual Studio 中的 C/C++ 还支持按大小分类的整型。 有关详细信息，请参阅 [`__int8, __int16, __int32, __int64`](../cpp/int8-int16-int32-int64.md) 和[整数限制](../cpp/integer-limits.md)。
+Visual Studio 中的 C/C++ 还支持按大小分类的整型。 有关详细信息，请参阅 [`__int8, __int16, __int32, __int64`](../cpp/int8-int16-int32-int64.md) 和 [整数限制](../cpp/integer-limits.md)。
 
-有关每种类型的大小限制的详细信息，请参阅[内置类型](../cpp/fundamental-types-cpp.md)。
+有关每种类型的大小限制的详细信息，请参阅 [内置类型](../cpp/fundamental-types-cpp.md)。
 
 枚举类型的范围因语言上下文和指定的编译器标志而异。 有关详细信息，请参阅 [C 枚举声明](../c-language/c-enumeration-declarations.md) 和 [枚举](../cpp/enumerations-cpp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [内置类型](../cpp/fundamental-types-cpp.md)

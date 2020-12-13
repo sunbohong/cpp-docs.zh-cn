@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： `__declspec`
 title: __declspec
 ms.date: 03/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 06af67a24b7514b22e34852dc2c6ee3f35daa24e
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: d0567c522e0e21f70b9ed8acfa428c3374fd09f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87521117"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97339535"
 ---
 # `__declspec`
 
@@ -26,7 +27,7 @@ ms.locfileid: "87521117"
 &nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *`extended-decl-modifier-seq`*  **`)`**
 
 *`extended-decl-modifier-seq`*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`*<sub>旧版</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;`extended-decl-modifier`<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*`extended-decl-modifier`* *`extended-decl-modifier-seq`*
 
 *`extended-decl-modifier`*:<br/>
@@ -60,7 +61,7 @@ ms.locfileid: "87521117"
 
 、、、、、、、、、 **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** 和 **`uuid`** 存储类特性只是它们所应用到的对象或函数的声明的属性。 此 **`thread`** 属性仅影响数据和对象。 **`naked`** 和 **`spectre`** 特性仅影响函数。 **`dllimport`** 和 **`dllexport`** 特性影响函数、数据和对象。 **`property`**、 **`selectany`** 和 **`uuid`** 特性会影响 COM 对象。
 
-为了与早期版本兼容，为， **`_declspec`** **`__declspec`** 除非指定编译器选项[/za " \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"，否则将是同义词。
+为了与早期版本兼容， **`_declspec`** **`__declspec`** 除非指定了编译器选项/Za " [ \( 禁用语言) 扩展](../build/reference/za-ze-disable-language-extensions.md) "，否则将是同义词。
 
 **`__declspec`** 关键字应置于简单声明的开头。 编译器将忽略任何警告， **`__declspec`** 位于 * 或 & 后面、在声明中的变量标识符前面的任何关键字。
 
@@ -82,7 +83,7 @@ class __declspec(dllimport) X {};
 
 *decl-seq* *init-list*;
 
-*Decl-seq*应包含一个基类型（例如、、、 **`int`** **`float`** **`typedef`** 或类名）、一个存储类（例如 **`static`** ， **`extern`** ）或 **`__declspec`** 扩展的其他方面。 *Init-声明符列表*应包含声明的指针部分。 例如：
+*Decl-seq* 应包含一个基类型 (例如 **`int`** ，、 **`float`** 、 **`typedef`** 或类名) 、存储类 (如 **`static`** 、 **`extern`**) 或 **`__declspec`** 扩展）的类型。 *Init-声明符列表* 应包含声明的指针部分。 例如：
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： plus 结构
 title: plus 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9f4b821da3f31255b71730d0f8c800450141d7c2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372068"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97340718"
 ---
 # <a name="plus-struct"></a>plus 结构
 
@@ -37,16 +38,16 @@ struct plus<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持二元 `operator+` 接受指定或推断类型的操作数的类型。
 
-*离开*\
-加法运算的左操作数。 非专用模板采用*类型 Type*的 lvalue 引用参数。 专用模板对推断型*T*的lvalue和rvalue引用参数进行了完美的转发。
+*左中*\
+加法运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*对*\
-加法运算的右操作数。 非专用模板采用*类型 Type*的 lvalue 引用参数。 专用模板对推断型*U*的lvalue和rvalue引用参数进行了完美的转发。
+*然后*\
+加法运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 
