@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： invalid_operation 类
 title: invalid_operation 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f3050d487f2c374f66f264b6e568fce5244d25ba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140872"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334543"
 ---
 # <a name="invalid_operation-class"></a>invalid_operation 类
 
@@ -25,11 +26,11 @@ ms.locfileid: "77140872"
 class invalid_operation : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[invalid_operation](#ctor)|已重载。 构造 `invalid_operation` 对象。|
 
@@ -49,7 +50,7 @@ class invalid_operation : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>invalid_operation
+## <a name="invalid_operation"></a><a name="ctor"></a> invalid_operation
 
 构造 `invalid_operation` 对象。
 
@@ -59,11 +60,11 @@ explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
 invalid_operation() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

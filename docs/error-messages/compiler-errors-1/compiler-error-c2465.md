@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2465
 title: 编译器错误 C2465
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2465
 ms.assetid: 65ba2a9f-d95e-4af3-b60b-1ac59a1e307c
-ms.openlocfilehash: a10e79eb3fee35d8e7ee1dadb6d7227749c1ad6c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 71d6e8dcf3b46943792fff8ef9145468549451ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333846"
 ---
 # <a name="compiler-error-c2465"></a>编译器错误 C2465
 

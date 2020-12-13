@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： db_table
 title: 'db_table (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: dfdf012550359d0658d53b3f67c0619a124b6309
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3d871961a8ded6070127e5e562615018a4320162
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834188"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333044"
 ---
 # <a name="db_table"></a>db_table
 
@@ -23,12 +24,12 @@ ms.locfileid: "88834188"
 [ db_table(db_table, name, source_name, hresult) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *db_table*<br/>
 一个字符串，该字符串指定数据库表的名称 (如 "Products" ) 。
 
-name <br/>
+name<br/>
  (可选) 用于处理该表的句柄的名称。 如果希望返回多行结果，则必须指定此参数。 **db_table** 生成一个具有指定 *名称* 的变量，该变量可用于遍历行集或执行多个操作查询。
 
 *source_name*<br/>
@@ -37,11 +38,11 @@ name <br/>
 *hresult*<br/>
  (可选) 标识将接收此数据库命令的 HRESULT 的变量。 如果该变量不存在，属性将自动插入。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **db_table** 创建一个 [CTable](../../data/oledb/ctable-class.md) 对象，该对象由 OLE DB 使用者用来打开表。 只能在类级别使用此特性;不能以内联方式使用它。 使用将 `db_column` 表列绑定到变量; 使用 `db_param` 分隔 (设置参数类型，依此类推) 参数。
 
-当使用者特性提供程序将此特性应用于类时，编译器会将类重命名为 \_ *YourClassName*访问器，其中*YourClassName*是您赋予类的名称，并且编译器还将创建一个名为*YourClassName*的类，该类派生自 \_ *YourClassName*访问器。  将在类视图中看到这两个类。
+当使用者特性提供程序将此特性应用于类时，编译器会将类重命名为 \_ *YourClassName* 访问器，其中 *YourClassName* 是您赋予类的名称，并且编译器还将创建一个名为 *YourClassName* 的类，该类派生自 \_ *YourClassName* 访问器。  将在类视图中看到这两个类。
 
 ## <a name="example"></a>示例
 
@@ -73,6 +74,6 @@ class CProducts {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者属性](ole-db-consumer-attributes.md)

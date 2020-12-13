@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 ms.date: 4/2/2020
 api_name:
@@ -57,12 +58,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 75ab00e8ee464e9042ba266b8d72e5ded48785ee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b7c9bd6994506cabd27bfad949bbe7ec3784ffcc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221895"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334247"
 ---
 # <a name="_fstat-_fstat32-_fstat64-_fstati64-_fstat32i64-_fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -97,7 +98,7 @@ int _fstat64i32(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*<br/>
 打开文件的文件描述符。
@@ -107,34 +108,34 @@ int _fstat64i32(
 
 ## <a name="return-value"></a>返回值
 
-如果获取到文件状态信息，则返回 0。 返回值-1 表示错误。 如果文件描述符无效或*缓冲区*为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**ebadf (**（对于无效的文件描述符，则设置为 EINVAL），如果*buffer*为**NULL**，则设置为**EINVAL**。
+如果获取到文件状态信息，则返回 0。 返回值-1 表示错误。 如果文件描述符无效或 *缓冲区* 为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **ebadf (**（对于无效的文件描述符，则设置为 EINVAL），如果 *buffer* 为 **NULL**，则设置为。
 
 ## <a name="remarks"></a>备注
 
-**_Fstat**函数获取与*fd*关联的打开文件的相关信息，并将其存储在*缓冲区*指向的结构中。 在 SYS\Stat.h 中定义的 **_stat**结构包含下列字段。
+**_Fstat** 函数获取与 *fd* 关联的打开文件的相关信息，并将其存储在 *缓冲区* 指向的结构中。 在 SYS\Stat.h 中定义的 **_stat** 结构包含下列字段。
 
 |字段|含义|
 |-|-|
 | **st_atime** | 上次文件访问的时间。 |
 | **st_ctime** | 文件的创建时间。 |
 | **st_dev** | 如果设备， *fd*;否则为0。 |
-| **st_mode** | 文件模式信息的位掩码。 如果*fd*引用设备，则设置 **_S_IFCHR**位。 如果*fd*引用普通文件，则设置 **_S_IFREG**位。 将根据文件的权限模式设置读/写位。 在 Sys\stat.h 中定义 **_S_IFCHR**和其他常量 |
+| **st_mode** | 文件模式信息的位掩码。 如果 *fd* 引用设备，则设置 **_S_IFCHR** 位。 如果 *fd* 引用普通文件，则设置 **_S_IFREG** 位。 将根据文件的权限模式设置读/写位。 在 Sys\stat.h 中定义 **_S_IFCHR** 和其他常量 |
 | **st_mtime** | 上次进行文件修改的时间。 |
 | **st_nlink** | 在非 NTFS 文件系统上始终为 1。 |
 | **st_rdev** | 如果设备， *fd*;否则为0。 |
 | **st_size** | 文件的大小（以字节为单位）。 |
 
-如果*fd*引用设备，则 " **st_atime**"、" **st_ctime**"、" **st_mtime**" 和 " **st_size** " 字段没有意义。
+如果 *fd* 引用设备，则 " **st_atime**"、" **st_ctime**"、" **st_mtime**" 和 " **st_size** " 字段没有意义。
 
 因为 Stat.h 使用 Types.h 中定义的 [_dev_t](../../c-runtime-library/standard-types.md) 类型，所以必须在代码中的 Stat.h 之前包含 Types.h。
 
-使用 **__stat64**结构的 **_fstat64**允许文件创建日期在23:59:59 年12月31日，3000，UTC;其他函数只表示日期为23:59:59 年1月 2038 18 日，UTC。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
+使用 **__stat64** 结构的 **_fstat64** 允许文件创建日期在23:59:59 年12月31日，3000，UTC;其他函数只表示日期为23:59:59 年1月 2038 18 日，UTC。 1970 年 1 月 1 日午夜是所有这些函数的日期范围下限。
 
-这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀（**32**或**64**）表示所用时间类型的大小;第二个后缀是**i32**或**i64**，指示文件大小是否表示为32位或64位整数。
+这些函数的变体支持 32 位或 64 位时间类型以及 32 位或 64 位文件长度。 第一个数字后缀 (**32** 或 **64**) 指示所用时间类型的大小;第二个后缀是 **i32** 或 **i64**，指示文件大小是否表示为32位或64位整数。
 
-**_fstat**等效于 **_fstat64i32**， **`struct`** **_stat**包含64位时间。 除非定义 **_USE_32BIT_TIME_T** ，这种情况下旧行为有效;**_fstat**使用32位时间， **`struct`** **_stat**包含32位时间。 **_Fstati64**也是如此。
+**_fstat** 等效于 **_fstat64i32**， **`struct`** **_stat** 包含64位时间。 除非定义 **_USE_32BIT_TIME_T** ，这种情况下旧行为有效; **_fstat** 使用32位时间， **`struct`** **_stat** 包含32位时间。 **_Fstati64** 也是如此。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="time-type-and-file-length-type-variations-of-_stat"></a>_stat 时间类型和文件长度类型变体
 
@@ -227,7 +228,7 @@ File size     : 16
 Time modified : Wed May 07 15:25:11 2003
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_access、_waccess](access-waccess.md)<br/>

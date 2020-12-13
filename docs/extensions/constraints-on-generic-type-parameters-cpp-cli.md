@@ -1,4 +1,5 @@
 ---
+description: '了解更多相关信息：泛型类型参数的约束 (c + +/CLI) '
 title: 泛型类型参数的约束 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 829f11c9f0c3935f9a415cae381cfc12d88df18a
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: c9e340c229736cbe1c679b931e52f68b0971f8f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686751"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333734"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型类型参数的约束 (C++/CLI)
 
@@ -27,23 +28,23 @@ ms.locfileid: "90686751"
 where type-parameter: constraint list
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类型-参数*<br/>
 要约束的其中一个类型参数。
 
-constraint list**<br/>
-constraint list** 是约束规范的逗号分隔列表。 列表可以包含由类型参数实现的接口。
+constraint list<br/>
+constraint list 是约束规范的逗号分隔列表。 列表可以包含由类型参数实现的接口。
 
 列表也可以包含类。 要让类型参数满足基类约束，它必须与约束的类相同或从约束派生。
 
-还可以指定 gcnew()****，以指明类型参数必须有公共的无参数构造函数；或指定 ref class****，以指明类型参数必须是引用类型（包括任意类、接口、委托或数组类型）；或指定 value class****，以指明类型参数必须是值类型。 可以指定除 Nullable 以外的任何值类型 \<T> 。
+还可以指定 gcnew()，以指明类型参数必须有公共的无参数构造函数；或指定 ref class，以指明类型参数必须是引用类型（包括任意类、接口、委托或数组类型）；或指定 value class，以指明类型参数必须是值类型。 可以指定除 Nullable 以外的任何值类型 \<T> 。
 
 还可以指定泛型参数作为约束。 为要约束的类型提供的类型参数必须是或派生自约束的类型。 这称为裸类型约束。
 
 ## <a name="remarks"></a>备注
 
-约束子句包括 where****，后面依次是类型参数、冒号 (:****)，以及用于指定对类型参数施加的限制性质的约束。 where**** 是上下文相关关键字；有关详细信息，请参阅[上下文相关关键字](context-sensitive-keywords-cpp-component-extensions.md)。 用空格分隔多个 where**** 子句。
+约束子句包括 where，后面依次是类型参数、冒号 (:)，以及用于指定对类型参数施加的限制性质的约束。 where 是上下文相关关键字；有关详细信息，请参阅[上下文相关关键字](context-sensitive-keywords-cpp-component-extensions.md)。 用空格分隔多个 where 子句。
 
 约束可应用于类型参数，可对可用作泛型类型或方法的自变量的类型加以限制。
 
@@ -80,7 +81,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-对于多个类型参数，请对每个类型参数使用一个 where**** 子句。 例如：
+对于多个类型参数，请对每个类型参数使用一个 where 子句。 例如：
 
 ```cpp
 // generics_constraints_3.cpp

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IUMSUnblockNotification 结构
 title: IUMSUnblockNotification 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: 0b88ddd4184e982a5e07c536efc301eaa16f4a41
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bec40ee1e7326ad37e205c3035f965cb3f0ec8d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368062"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334308"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification 结构
 
@@ -30,10 +31,10 @@ struct IUMSUnblockNotification;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[IUMUnSunblock 通知：：获取上下文](#getcontext)|返回与`IExecutionContext`已解除阻止的线程代理关联的执行上下文的接口。 一旦此方法返回，并且通过调用 方法`IThreadProxy::SwitchTo`重新计划基础执行上下文，此接口将不再有效。|
-|[IUMUnSunblock 通知：：获取下一个取消阻止通知](#getnextunblocknotification)|返回从`IUMSUnblockNotification`方法`IUMSCompletionList::GetUnblockNotifications`返回的链中的下一个接口。|
+|[IUMSUnblockNotification：： GetContext](#getcontext)|返回 `IExecutionContext` 与已解除阻止的线程代理关联的执行上下文的接口。 此方法返回并且基础执行上下文通过调用方法重新计划后 `IThreadProxy::SwitchTo` ，此接口将不再有效。|
+|[IUMSUnblockNotification：： GetNextUnblockNotification](#getnextunblocknotification)|返回 `IUMSUnblockNotification` 从方法返回的链中的下一个接口 `IUMSCompletionList::GetUnblockNotifications` 。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -41,13 +42,13 @@ struct IUMSUnblockNotification;
 
 ## <a name="requirements"></a>要求
 
-**标题：** concrtrm.h
+**标头：** concrtrm。h
 
 **命名空间：** 并发
 
-## <a name="iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a>IUMUnSunblock 通知：：获取上下文方法
+## <a name="iumsunblocknotificationgetcontext-method"></a><a name="getcontext"></a> IUMSUnblockNotification：： GetContext 方法
 
-返回与`IExecutionContext`已解除阻止的线程代理关联的执行上下文的接口。 一旦此方法返回，并且通过调用 方法`IThreadProxy::SwitchTo`重新计划基础执行上下文，此接口将不再有效。
+返回 `IExecutionContext` 与已解除阻止的线程代理关联的执行上下文的接口。 此方法返回并且基础执行上下文通过调用方法重新计划后 `IThreadProxy::SwitchTo` ，此接口将不再有效。
 
 ```cpp
 virtual IExecutionContext* GetContext() = 0;
@@ -55,11 +56,11 @@ virtual IExecutionContext* GetContext() = 0;
 
 ### <a name="return-value"></a>返回值
 
-执行`IExecutionContext`上下文的接口，用于已解除阻止的线程代理。
+`IExecutionContext`执行上下文到已取消阻止的线程代理的接口。
 
-## <a name="iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a>IUMUnSunblock 通知：：获取NextUnblock通知方法
+## <a name="iumsunblocknotificationgetnextunblocknotification-method"></a><a name="getnextunblocknotification"></a> IUMSUnblockNotification：： GetNextUnblockNotification 方法
 
-返回从`IUMSUnblockNotification`方法`IUMSCompletionList::GetUnblockNotifications`返回的链中的下一个接口。
+返回 `IUMSUnblockNotification` 从方法返回的链中的下一个接口 `IUMSCompletionList::GetUnblockNotifications` 。
 
 ```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
@@ -67,10 +68,10 @@ virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 
 ### <a name="return-value"></a>返回值
 
-链中的`IUMSUnblockNotification`下一个接口从 方法`IUMSCompletionList::GetUnblockNotifications`返回。
+`IUMSUnblockNotification`从方法返回的链中的下一个接口 `IUMSCompletionList::GetUnblockNotifications` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[concurrency 命名空间](concurrency-namespace.md)<br/>
+[并发命名空间](concurrency-namespace.md)<br/>
 [IUMSScheduler 结构](iumsscheduler-structure.md)<br/>
 [IUMSCompletionList 结构](iumscompletionlist-structure.md)

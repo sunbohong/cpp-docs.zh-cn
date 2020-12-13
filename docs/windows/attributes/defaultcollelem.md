@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： defaultcollelem
 title: defaultcollelem
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: 8eb8658b178061938f7f04f5eb35a85ca1e34d07
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6d1d3bb77a9951fc82cd19a3dc9d6f42ee54b6c3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842359"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333017"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
@@ -25,7 +26,7 @@ ms.locfileid: "88842359"
 
 ## <a name="remarks"></a>备注
 
-**Defaultcollelem** c + + 特性具有与[defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL 特性相同的功能。
+**Defaultcollelem** c + + 特性具有与 [defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -46,7 +47,7 @@ __interface IMyForm
 
 ## <a name="requirements"></a>要求
 
-| 特性上下文 | “值” |
+| 特性上下文 | 值 |
 |-|-|
 |**适用于**|接口方法|
 |**且**|否|
@@ -55,7 +56,7 @@ __interface IMyForm
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)

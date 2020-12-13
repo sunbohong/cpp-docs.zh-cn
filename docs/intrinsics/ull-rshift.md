@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __ull_rshift
 title: __ull_rshift
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-ms.openlocfilehash: bf9fe7775cee1c774c097a1b6bd371721c9fa34f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 5b819e4a1df8db7b7562023c6acc9dbbd94f7f76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80074980"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333626"
 ---
 # <a name="__ull_rshift"></a>__ull_rshift
 
@@ -31,7 +32,7 @@ unsigned __int64 __ull_rshift(
 
 ### <a name="parameters"></a>parameters
 
-*掩码*\
+*掩盖*\
 中要右移的64位整数值。
 
 *nBit*\
@@ -39,7 +40,7 @@ unsigned __int64 __ull_rshift(
 
 ## <a name="return-value"></a>返回值
 
-`nBit` 位移位的掩码。
+按位移动的掩码 `nBit` 。
 
 ## <a name="requirements"></a>要求
 
@@ -47,11 +48,11 @@ unsigned __int64 __ull_rshift(
 |---------------|------------------|
 |`__ull_rshift`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-如果 x86 （x64 上为63）上的第二个参数大于31，则会将该数字取模32（x64 上的64）以确定要移位的位数。 名称中的 `ull` 表示 `unsigned long long (unsigned __int64)`。
+如果第二个参数大于 x64) 上 x86 (63 上的31个，则在 x64) 上取模 32 (64，以确定要移位的位数。 `ull`名称中的指示 `unsigned long long (unsigned __int64)` 。
 
 ## <a name="example"></a>示例
 
@@ -80,7 +81,7 @@ int main()
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [__ll_lshift](../intrinsics/ll-lshift.md)\
 [__ll_rshift](../intrinsics/ll-rshift.md)\

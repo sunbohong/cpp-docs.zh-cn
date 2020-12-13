@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 ms.date: 4/2/2020
 api_name:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 54745c2db33a68b35236c5b6169280e5e7dacfef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334124"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
@@ -85,9 +86,9 @@ int _ismbstrail_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*字符串*<br/>
+*str*<br/>
 指向字符串开头或之前已知的前导字节的指针。
 
 *当前*<br/>
@@ -98,32 +99,32 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>返回值
 
-如果字符是前导字节，则 **_ismbslead**返回-1; 如果字符为尾字节，则 **_ismbstrail**返回-1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任何一个参数为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**NULL** ，并将**Errno**设置为**EINVAL**。
+如果字符是前导字节，则 **_ismbslead** 返回-1; 如果字符为尾字节，则 **_ismbstrail** 返回-1。 如果输入字符串有效，但不是前导字节也不是结尾字节，则这些函数将返回零。 如果任何一个参数为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **NULL** ，并将 **Errno** 设置为 **EINVAL**。
 
 ## <a name="remarks"></a>备注
 
-**_ismbslead**和 **_ismbstrail**的速度比 **_ismbblead**和 **_ismbbtrail**版本慢，因为它们会将字符串上下文纳入考虑范围。
+**_ismbslead** 和 **_ismbstrail** 的速度比 **_ismbblead** 和 **_ismbbtrail** 版本慢，因为它们会将字符串上下文纳入考虑范围。
 
-这些具有 **_l**后缀的函数的版本相同，不同之处在于，对于其与区域设置相关的行为，它们使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l** 后缀的函数的版本相同，不同之处在于，对于其与区域设置相关的行为，它们使用传入的区域设置而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
-|**_ismbslead**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
-|**_ismbstrail**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
-|**_ismbslead_l**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
-|**_ismbstrail_l**|\<mbctype.h 1> 或 \<mbstring.h 1>|\<ctype.h>、* \<limits.h 1>、\<stdlib.h 1>|
+|**_ismbslead**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbslead_l**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbstrail_l**|\<mbctype.h> 或 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
 
 \* 适用于测试条件的清单常量。
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 例程](../../c-runtime-library/ismbc-routines.md)<br/>
-[is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
+[为，isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

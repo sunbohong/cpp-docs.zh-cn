@@ -1,4 +1,5 @@
 ---
+description: 了解更多：翻译阶段
 title: 转换阶段
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -9,18 +10,18 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-ms.openlocfilehash: d072c9aec48d815ba85f8a12576baa6447703f8c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6a561fe9aa61df293a038a9edfd094dbdef4fe89
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218303"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333186"
 ---
 # <a name="phases-of-translation"></a>转换阶段
 
-C 和 C++ 程序包含一个或多个源文件，每个源文件包含程序的一些文本。 源文件及其*包含文件*、使用`#include`预处理器指令包含的文件, 但不包括由条件`#if`编译指令 (如) 删除的代码部分, 称为*翻译单元*。
+C 和 C++ 程序包含一个或多个源文件，每个源文件包含程序的一些文本。 源文件及其 *包含文件*，使用 `#include` 预处理器指令包含的文件，但不包括由条件编译指令（如）删除的代码部分， `#if` 称为 *翻译单元*。
 
-源文件可以在不同时间转换。 事实上, 通常只翻译过期的文件。 翻译后的翻译单元可作为单独的对象文件或对象代码库处理。 然后，将这些单独的已翻译的翻译单元链接起来以构成可执行程序或动态链接库 (DLL)。 有关可用作链接器输入的文件的详细信息, 请参阅[链接输入文件](../build/reference/link-input-files.md)。
+源文件可以在不同时间转换。 事实上，通常只翻译过期的文件。 翻译后的翻译单元可作为单独的对象文件或对象代码库处理。 然后，将这些单独的已翻译的翻译单元链接起来以构成可执行程序或动态链接库 (DLL)。 有关可用作链接器输入的文件的详细信息，请参阅 [链接输入文件](../build/reference/link-input-files.md)。
 
 翻译单元可通过以下项进行通信：
 
@@ -40,7 +41,7 @@ C 和 C++ 程序包含一个或多个源文件，每个源文件包含程序的�
 源文件中的字符将映射到内部源表示形式。 在此阶段，三元组序列将转换为单字符内部表示形式。
 
 *行拼接*\
-后跟换行符的反斜杠 ( **\\** ) 结尾的所有行都将与源文件中的下一行进行联接, 从而形成物理行的逻辑行。 如果源文件不为空, 则该文件必须以不带有反斜杠的换行符结尾。
+以反斜杠结尾的所有行 (**\\**) 后跟换行符，将与源文件中的下一行进行联接，从而形成物理行的逻辑行。 如果源文件不为空，则该文件必须以不带有反斜杠的换行符结尾。
 
 *化*\
 源文件分为预处理标记和空白字符。 源文件中的注释将逐一替换为空白字符。 换行符将保留。
@@ -52,7 +53,7 @@ C 和 C++ 程序包含一个或多个源文件，每个源文件包含程序的�
 所有源字符集成员和转义序列将转换为执行字符集中的等效项。 对于 Microsoft C 和 C++，源和执行字符集都为 ASCII。
 
 *字符串串联*\
-所有相邻字符串和宽字符串文本是串联的。 例如，将 `"String " "concatenation"` 变为 `"String concatenation"`。
+所有相邻字符串和宽字符串文本是串联的。 例如，`"String " "concatenation"` 重命名为 `"String concatenation"`。
 
 *换算*\
 将从语法和语义上分析所有标记；这些标记将转换为对象代码。

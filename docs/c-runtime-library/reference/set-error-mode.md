@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _set_error_mode
 title: _set_error_mode
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-ms.openlocfilehash: c1bb617e0f3792f2ac41d59df13d184423d56a9e
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: f21983702adb0ae080443e5869485fe581a65f85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562033"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334090"
 ---
 # <a name="_set_error_mode"></a>_set_error_mode
 
@@ -48,7 +49,7 @@ int _set_error_mode(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *mode_val*<br/>
 错误消息的目标。
@@ -59,13 +60,13 @@ int _set_error_mode(
 
 ## <a name="remarks"></a>备注
 
-通过设置 **__error_mode**的值来控制错误输出接收器。 例如，可以将输出定向到标准错误或使用 **MessageBox** API。
+通过设置 **__error_mode** 的值来控制错误输出接收器。 例如，可以将输出定向到标准错误或使用 **MessageBox** API。
 
-*Mode_val*参数可以设置为以下值之一。
+*Mode_val* 参数可以设置为以下值之一。
 
-|值|说明|
+|值|描述|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|错误接收器由 **__app_type**确定。|
+|**_OUT_TO_DEFAULT**|错误接收器由 **__app_type** 确定。|
 |**_OUT_TO_STDERR**|错误接收器是一个标准错误。|
 |**_OUT_TO_MSGBOX**|错误接收器是一个消息框。|
 |**_REPORT_ERRMODE**|报告当前 **__error_mode** 值。|
@@ -102,6 +103,6 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [assert 宏、_assert、_wassert](assert-macro-assert-wassert.md)<br/>

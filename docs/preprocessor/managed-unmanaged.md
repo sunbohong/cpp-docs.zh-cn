@@ -1,4 +1,5 @@
 ---
+description: 了解更多：托管、非托管杂注
 title: managed、unmanaged 杂注
 ms.date: 08/29/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 4c13155d1c84966a593df11baf525a0c3539f02c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 10f632b009c9922f67f4321acc862142d895e7ae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218810"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333397"
 ---
 # <a name="managed-unmanaged-pragmas"></a>managed、unmanaged 杂注
 
@@ -27,7 +28,7 @@ ms.locfileid: "70218810"
 
 > **#pragma 托管**\
 > **#pragma 非托管**\
-> **#pragma 托管 (** [**推送,** ] { **on** | **off** } **)** \
+> **#pragma 托管 (** [**推送，** ] { **on**  |  **off** } **)**\
 > **#pragma 托管 (pop)**
 
 ## <a name="remarks"></a>备注
@@ -40,15 +41,15 @@ ms.locfileid: "70218810"
 
 在将应用这些杂注时：
 
-- 将杂注添加到函数之前, 而不是在函数体中。
+- 将杂注添加到函数之前，而不是在函数体中。
 
-- 在 `#include`语句后添加杂注。 请不要在语句前`#include`使用这些杂注。
+- 在 `#include`语句后添加杂注。 请不要在语句前使用这些杂注 `#include` 。
 
-如果`/clr`编译中未使用**托管**和**非托管**杂注, 编译器将忽略它们。
+如果编译中未使用 **托管** 和 **非托管** 杂注，编译器将忽略它们 `/clr` 。
 
-当对模板函数进行实例化时, 在定义模板时, 杂注状态将确定其是否为托管或非托管。
+当对模板函数进行实例化时，在定义模板时，杂注状态将确定其是否为托管或非托管。
 
-有关详细信息, 请参阅[混合程序集的初始化](../dotnet/initialization-of-mixed-assemblies.md)。
+有关详细信息，请参阅 [混合程序集的初始化](../dotnet/initialization-of-mixed-assemblies.md)。
 
 ## <a name="example"></a>示例
 

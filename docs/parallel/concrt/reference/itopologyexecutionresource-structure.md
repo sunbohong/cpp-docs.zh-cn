@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ITopologyExecutionResource 结构
 title: ITopologyExecutionResource 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-ms.openlocfilehash: 2c9221cab1ac2d48bd099a769188e4bee797823c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2567cf9e34e0b27308e331056d5e0dbc99b2779
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368147"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334380"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 结构
 
@@ -30,14 +31,14 @@ struct ITopologyExecutionResource;
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[I拓扑执行资源：GetId](#getid)|返回此执行资源的资源管理器的唯一标识符。|
-|[I拓扑执行资源：获取下一个](#getnext)|返回一个指向枚举顺序中下一执行资源的接口。|
+|[ITopologyExecutionResource：： GetId](#getid)|返回此执行资源的资源管理器的唯一标识符。|
+|[ITopologyExecutionResource：： GetNext](#getnext)|返回一个指向枚举顺序中下一执行资源的接口。|
 
 ## <a name="remarks"></a>备注
 
-此接口通常用于遍历资源管理器观察到的系统拓扑。
+通常使用此接口来遍历由资源管理器观察到的系统拓扑。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -45,11 +46,11 @@ struct ITopologyExecutionResource;
 
 ## <a name="requirements"></a>要求
 
-**标题：** concrtrm.h
+**标头：** concrtrm。h
 
 **命名空间：** 并发
 
-## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a>I拓扑执行资源：GetId 方法
+## <a name="itopologyexecutionresourcegetid-method"></a><a name="getid"></a> ITopologyExecutionResource：： GetId 方法
 
 返回此执行资源的资源管理器的唯一标识符。
 
@@ -61,7 +62,7 @@ virtual unsigned int GetId() const = 0;
 
 此执行资源的资源管理器的唯一标识符。
 
-## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a>I拓扑执行资源：：获取下一个方法
+## <a name="itopologyexecutionresourcegetnext-method"></a><a name="getnext"></a> ITopologyExecutionResource：： GetNext 方法
 
 返回一个指向枚举顺序中下一执行资源的接口。
 
@@ -73,6 +74,6 @@ virtual ITopologyExecutionResource *GetNext() const = 0;
 
 一个指向枚举顺序中下一执行资源的接口。 如果此执行资源所属节点的枚举顺序中没有更多的节点，此方法将返回值 `NULL`。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[concurrency 命名空间](concurrency-namespace.md)
+[并发命名空间](concurrency-namespace.md)

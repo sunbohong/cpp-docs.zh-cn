@@ -1,19 +1,20 @@
 ---
+description: 了解更多： c + + 中的 constexpr lambda 表达式
 title: c + + 中的 constexpr lambda 表达式
 ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: 24c70732093447649b3cfb460f63b2181efdf806
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4ff4b3acf4289a74f8b7320620601e0e2284d356
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333936"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>c + + 中的 constexpr lambda 表达式
 
-**Visual Studio 2017 版本15.3 及更高版本**（可与[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)一起提供）： **`constexpr`** 在常量表达式中允许对其捕获或引入的每个数据成员进行初始化时，可以将 lambda 表达式声明为或在常量表达式中使用。
+**Visual Studio 2017 版本15.3 及更高版本** (随 [/std 提供： c + + 17](../build/reference/std-specify-language-standard-version.md)) ：在常量表达式 **`constexpr`** 中允许对其捕获或引入的每个数据成员进行初始化时，可以将 lambda 表达式声明为或在常量表达式中使用。
 
 ```cpp
     int y = 32;

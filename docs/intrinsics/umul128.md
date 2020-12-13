@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _umul128
 title: _umul128
 ms.date: 09/02/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7fd126b169bd01fc4d51d186879e019f8d86f008
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219690"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333596"
 ---
 # <a name="_umul128"></a>_umul128
 
@@ -29,7 +30,7 @@ unsigned __int64 _umul128(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *乘数*\
 中要相乘的第一个64位整数。
@@ -46,7 +47,7 @@ unsigned __int64 _umul128(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|Header|
+|Intrinsic|体系结构|标头|
 |---------------|------------------|------------|
 |`_umul128`|X64|\<intrin.h>|
 

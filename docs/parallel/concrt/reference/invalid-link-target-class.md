@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： invalid_link_target 类
 title: invalid_link_target 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: bd3d82c06c174c69c60dec33592110f4de72ac99
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d080886c3aab0ecc120d4ce13f5f75f2eecfea8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334591"
 ---
 # <a name="invalid_link_target-class"></a>invalid_link_target 类
 
@@ -25,11 +26,11 @@ ms.locfileid: "77141039"
 class invalid_link_target : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[invalid_link_target](#ctor)|已重载。 构造 `invalid_link_target` 对象。|
 
@@ -45,7 +46,7 @@ class invalid_link_target : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>invalid_link_target
+## <a name="invalid_link_target"></a><a name="ctor"></a> invalid_link_target
 
 构造 `invalid_link_target` 对象。
 
@@ -55,12 +56,12 @@ explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 invalid_link_target() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)

@@ -1,14 +1,15 @@
 ---
+description: '了解详细信息： Windows 运行时 c + + 模板库 (WRL) '
 title: Windows 运行时 C++ 模板库 (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 12bda00d6687340fbddfb8f81bbb83b6c2bd98a6
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: cc94f907964efdf4bf93e8d92922f69373740d85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509795"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333927"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 运行时 C++ 模板库 (WRL)
 
@@ -19,7 +20,7 @@ Windows 运行时 C++ 模板库 (WRL) 是一个提供低级别方式来创作和
 >
 > 使用 c + +/WinRT，可以使用任何符合标准的 c + + 17 编译器来使用和创作 Windows 运行时 Api。 与 Windows 运行时的任何其他语言选项相比，c + +/WinRT 的性能更佳，生成的二进制文件更小。 我们将继续支持 C++/CX 和 WRL，但强烈建议新应用程序使用 C++/WinRT。 有关详细信息，请参阅 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/index)。
 
-## <a name="benefits"></a>优点
+## <a name="benefits"></a>好处
 
 Windows 运行时 c + + 模板库使你可以更轻松地实现和使用组件对象模型 (COM) 组件。 它提供了一些管理技术（如引用计数）来管理对象的生存期和测试 HRESULT 值，以确定操作是成功还是失败。 若要成功使用 Windows 运行时 c + + 模板库，必须认真遵循这些规则和技术。
 
@@ -109,7 +110,7 @@ Windows 运行时 c + + 模板库提供了表示几个基本概念的类型。 �
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) 是一种智能指针 ** 类型，表示由模板参数指定的接口。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时发布接口。
+[ComPtr](comptr-class.md) 是一种智能指针  类型，表示由模板参数指定的接口。 使用 `ComPtr` 可以声明能够访问从接口派生的对象成员的变量。 `ComPtr` 会自动维护基础接口指针的引用计数，并在引用计数变为零时发布接口。
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
@@ -125,7 +126,7 @@ Windows 运行时 c + + 模板库提供了表示几个基本概念的类型。 �
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](eventsource-class.md) 用于管理委托 ** 事件处理程序。 使用 Windows 运行时 c + + 模板库来实现委托，并使用 `EventSource` 来添加、移除和调用委托。
+[EventSource](eventsource-class.md) 用于管理委托  事件处理程序。 使用 Windows 运行时 c + + 模板库来实现委托，并使用 `EventSource` 来添加、移除和调用委托。
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -137,7 +138,7 @@ Windows 运行时 c + + 模板库提供了表示几个基本概念的类型。 �
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](weakref-class.md) 是表示弱引用 ** 的智能指针类型。弱引用可引用能够访问或者不能访问的对象。 `WeakRef`对象只能由 Windows 运行时而不是经典 COM 使用。
+[WeakRef](weakref-class.md) 是表示弱引用 的智能指针类型。弱引用可引用能够访问或者不能访问的对象。 `WeakRef`对象只能由 Windows 运行时而不是经典 COM 使用。
 
 `WeakRef` 对象通常表示由外部线程或应用程序控制其存在性的对象。 例如， `WeakRef` 对象可以引用文件对象。 当文件打开时， `WeakRef` 有效，并且引用的文件可以访问。 当文件关闭时， `WeakRef` 无效，并且文件不可访问。
 
@@ -146,7 +147,7 @@ Windows 运行时 c + + 模板库提供了表示几个基本概念的类型。 �
 [按类别列出的密钥 Api](key-wrl-apis-by-category.md)\
 突出显示主 Windows 运行时 c + + 模板库类型、函数和宏。
 
-[对](wrl-reference.md)\
+[参考](wrl-reference.md)\
 包含 Windows 运行时 c + + 模板库的参考信息。
 
 [C + +/CX (快速参考) ](../../cppcx/quick-reference-c-cx.md)\

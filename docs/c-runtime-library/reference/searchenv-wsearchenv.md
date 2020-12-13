@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _searchenv、_wsearchenv
 title: _searchenv、_wsearchenv
 ms.date: 4/2/2020
 api_name:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: 83ba5663d569d449a0024db5abe2eb3ee903123b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 411cb2b909d3ed948adcce97c41ace1a806f2f02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913223"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334120"
 ---
 # <a name="_searchenv-_wsearchenv"></a>_searchenv、_wsearchenv
 
@@ -81,9 +82,9 @@ void _wsearchenv(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*名字*<br/>
+*filename*<br/>
 要搜索的文件名称。
 
 *varname*<br/>
@@ -94,23 +95,23 @@ void _wsearchenv(
 
 ## <a name="remarks"></a>备注
 
-**_Searchenv**例程搜索指定域中的目标文件。 *Varname*变量可以是任何环境或用户定义的变量（例如， **PATH**、 **LIB**或**INCLUDE**），后者指定目录路径的列表。 由于 **_searchenv**区分大小写，因此*varname*应与环境变量的情况匹配。
+**_Searchenv** 例程搜索指定域中的目标文件。 *Varname* 变量可以是任何环境或用户定义的变量（例如， **PATH**、 **LIB** 或 **INCLUDE**），后者指定目录路径的列表。 由于 **_searchenv** 区分大小写，因此 *varname* 应与环境变量的情况匹配。
 
-例程首先搜索当前工作目录中的文件。 如果找不到文件，它将查找由环境变量指定的目录。 如果目标文件在其中一个目录中，则新创建的路径将被复制到*pathname*。 如果找不到*文件名*文件， *pathname*包含空的以 null 结尾的字符串。
+例程首先搜索当前工作目录中的文件。 如果找不到文件，它将查找由环境变量指定的目录。 如果目标文件在其中一个目录中，则新创建的路径将被复制到 *pathname*。 如果找不到 *文件名* 文件， *pathname* 包含空的以 null 结尾的字符串。
 
-*路径名*缓冲区的长度应至少为 **_MAX_PATH**个字符，以容纳构造的路径名称的完整长度。 否则， **_searchenv**可能会导致*路径名*缓冲区溢出并导致意外的行为。
+*路径名* 缓冲区的长度应至少为 **_MAX_PATH** 个字符，以容纳构造的路径名称的完整长度。 否则， **_searchenv** 可能会导致 *路径名* 缓冲区溢出并导致意外的行为。
 
-**_wsearchenv**是 **_searchenv**的宽字符版本，并且 **_wsearchenv**的参数是宽字符字符串。 否则 **_wsearchenv**和 **_searchenv**的行为相同。
+**_wsearchenv** 是 **_searchenv** 的宽字符版本，并且 **_wsearchenv** 的参数是宽字符字符串。 否则 **_wsearchenv** 和 **_searchenv** 的行为相同。
 
-如果*filename*为空字符串，则这些函数将返回**ENOENT**。
+如果 *filename* 为空字符串，则这些函数将返回 **ENOENT**。
 
-如果*filename*或*pathname*为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将**errno**设置为**EINVAL**。
+如果 *filename* 或 *pathname* 为 **空** 指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回-1，并将 **errno** 设置为 **EINVAL**。
 
-有关**errno**和错误代码的详细信息，请参阅[errno 常量](../../c-runtime-library/errno-constants.md)。
+有关 **errno** 和错误代码的详细信息，请参阅 [errno 常量](../../c-runtime-library/errno-constants.md)。
 
 在 C++ 中，这些函数具有可调用这些函数的更新、更安全的版本的模板重载。 有关详细信息，请参阅[安全模板重载](../../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -120,7 +121,7 @@ void _wsearchenv(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_searchenv**|\<stdlib.h>|
 |**_wsearchenv**|\<stdlib.h> 或 \<wchar.h>|
@@ -159,9 +160,9 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 8\VC\BIN\CL.EXE
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[目录控制](../../c-runtime-library/directory-control.md)<br/>
+[目录控件](../../c-runtime-library/directory-control.md)<br/>
 [getenv、_wgetenv](getenv-wgetenv.md)<br/>
 [_putenv、_wputenv](putenv-wputenv.md)<br/>
 [_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)<br/>

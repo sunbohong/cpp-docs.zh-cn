@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： invalid_scheduler_policy_thread_specification 类
 title: invalid_scheduler_policy_thread_specification 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 97a3910fc83e741c54ece51ed8e20686bbd6c66b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334505"
 ---
 # <a name="invalid_scheduler_policy_thread_specification-class"></a>invalid_scheduler_policy_thread_specification 类
 
@@ -23,13 +24,13 @@ ms.locfileid: "77143038"
 class invalid_scheduler_policy_thread_specification : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|已重载。 构造 `invalid_scheduler_policy_value` 对象。|
+|[invalid_scheduler_policy_thread_specification] (无效的计划程序-值-|已重载。 构造 `invalid_scheduler_policy_value` 对象。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -43,7 +44,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
+## <a name="invalid_scheduler_policy_thread_specification"></a><a name="ctor"></a> invalid_scheduler_policy_thread_specification
 
 构造 `invalid_scheduler_policy_value` 对象。
 
@@ -53,12 +54,12 @@ explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char
 invalid_scheduler_policy_thread_specification() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [SchedulerPolicy 类](schedulerpolicy-class.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： db_param
 title: 'db_param (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 008a7f1ea07e6c23ad6d812ac4fbf3b30ef1da89
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 27666b4cdf027e24b54326a3acc5fe701b9f6f44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833070"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333103"
 ---
 # <a name="db_param"></a>db_param
 
@@ -23,7 +24,7 @@ ms.locfileid: "88833070"
 [ db_param(ordinal, paramtype="DBPARAMIO_INPUT", dbtype, precision, scale, status, length) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *序号*<br/>
  (DBCOLUMNINFO 序号) 对应于要将数据绑定到的行集中的某个字段的列号。
@@ -47,12 +48,12 @@ ms.locfileid: "88833070"
  (可选) 要用于列项的刻度。 有关详细信息，请参阅 `bScale` [DBBINDING 结构](/previous-versions/windows/desktop/ms716845(v=vs.85))的元素说明
 
 *status*<br/>
- (可选) 用于保存此列的状态的成员变量。 状态指示列值是否为数据值或其他值（如 NULL）。 有关可能的值，请参阅*OLE DB 程序员参考*中的[状态](/previous-versions/windows/desktop/ms722617(v=vs.85))。
+ (可选) 用于保存此列的状态的成员变量。 状态指示列值是否为数据值或其他值（如 NULL）。 有关可能的值，请参阅 *OLE DB 程序员参考* 中的 [状态](/previous-versions/windows/desktop/ms722617(v=vs.85))。
 
 *length*<br/>
  (可选) 用于保存列大小的成员变量（以字节为单位）。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 **db_param** 定义在命令中使用的参数;因此，可将它用于 `db_command` 。 例如，可以使用 **db_param** 来绑定 SQL 查询或存储过程中的参数。 存储过程中的参数由问号 (？ ) 表示，您应按照参数出现的顺序对数据成员进行绑定。
 
@@ -60,7 +61,7 @@ ms.locfileid: "88833070"
 
 **db_param** 与 [db_table](db-table.md) 或 [db_command](db-command.md) 特性结合使用。
 
-当使用者特性提供程序将此特性应用于类时，编译器会将类重命名为 \_ *YourClassName*访问器，其中*YourClassName*是您赋予类的名称，并且编译器还将创建一个名为*YourClassName*的类，该类派生自 \_ *YourClassName*访问器。  将在类视图中看到这两个类。
+当使用者特性提供程序将此特性应用于类时，编译器会将类重命名为 \_ *YourClassName* 访问器，其中 *YourClassName* 是您赋予类的名称，并且编译器还将创建一个名为 *YourClassName* 的类，该类派生自 \_ *YourClassName* 访问器。  将在类视图中看到这两个类。
 
 ## <a name="example"></a>示例
 
@@ -113,6 +114,6 @@ struct CSalesbyYear {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者属性](ole-db-consumer-attributes.md)

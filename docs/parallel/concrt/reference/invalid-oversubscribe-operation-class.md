@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： invalid_oversubscribe_operation 类
 title: invalid_oversubscribe_operation 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 0c95d234fee412c1dacb014dd135ca56fc73bf5e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 435e3ce0eba29188711c51aa9253060fc08ac62c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193960"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334524"
 ---
 # <a name="invalid_oversubscribe_operation-class"></a>invalid_oversubscribe_operation 类
 
@@ -45,7 +46,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a>invalid_oversubscribe_operation
+## <a name="invalid_oversubscribe_operation"></a><a name="ctor"></a> invalid_oversubscribe_operation
 
 构造 `invalid_oversubscribe_operation` 对象。
 
@@ -55,11 +56,11 @@ explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) th
 invalid_oversubscribe_operation() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ITarget 类
 title: ITarget 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: 39aebd9d82f098225c1275ac6f43d64fc1ce3ba8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 6a1e900fa67ac5ee72305f18679e7a0fc38a2386
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231710"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334403"
 ---
 # <a name="itarget-class"></a>ITarget 类
 
@@ -31,7 +32,7 @@ template<class T>
 class ITarget;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 目标块接受的消息内的负载的数据类型。
@@ -47,7 +48,7 @@ class ITarget;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[~ ITarget 析构函数](#dtor)|销毁 `ITarget` 对象。|
 
@@ -69,7 +70,7 @@ class ITarget;
 
 ## <a name="remarks"></a>备注
 
-有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。
+有关详细信息，请参阅 [异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -81,7 +82,7 @@ class ITarget;
 
 **命名空间：** 并发
 
-## <a name="itarget"></a><a name="dtor"></a>~ ITarget
+## <a name="itarget"></a><a name="dtor"></a> ~ ITarget
 
 销毁 `ITarget` 对象。
 
@@ -89,7 +90,7 @@ class ITarget;
 virtual ~ITarget();
 ```
 
-## <a name="link_source"></a><a name="link_source"></a>link_source
+## <a name="link_source"></a><a name="link_source"></a> link_source
 
 当在派生类中重写时，将指定的源块链接到此 `ITarget` 块。
 
@@ -97,7 +98,7 @@ virtual ~ITarget();
 virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PSource*<br/>
 `ISource`正在链接到此块的块 `ITarget` 。
@@ -106,7 +107,7 @@ virtual void link_source(_Inout_ ISource<T>* _PSource) = 0;
 
 不应直接在块上调用此函数 `ITarget` 。 块应使用方法连接在一起 `link_target` `ISource` ，这将对 `link_source` 相应目标调用方法。
 
-## <a name="propagate"></a><a name="propagate"></a>传
+## <a name="propagate"></a><a name="propagate"></a> 传
 
 当在派生类中重写时，以异步方式将消息从源块传递到此目标块。
 
@@ -116,7 +117,7 @@ virtual message_status propagate(
     _Inout_opt_ ISource<T>* _PSource) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PMessage*<br/>
 指向 `message` 对象的指针。
@@ -130,9 +131,9 @@ virtual message_status propagate(
 
 ### <a name="remarks"></a>备注
 
-如果[invalid_argument](../../../standard-library/invalid-argument-class.md) `_PMessage` 或参数为，方法将引发 invalid_argument 异常 `_PSource` `NULL` 。
+如果[](../../../standard-library/invalid-argument-class.md) `_PMessage` 或参数为，方法将引发 invalid_argument 异常 `_PSource` `NULL` 。
 
-## <a name="send"></a><a name="send"></a>发送
+## <a name="send"></a><a name="send"></a> 发送
 
 当在派生类中重写时，将消息同步传递到目标块。
 
@@ -142,7 +143,7 @@ virtual message_status send(
     _Inout_ ISource<T>* _PSource) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PMessage*<br/>
 指向 `message` 对象的指针。
@@ -156,13 +157,13 @@ virtual message_status send(
 
 ### <a name="remarks"></a>备注
 
-如果[invalid_argument](../../../standard-library/invalid-argument-class.md) `_PMessage` 或参数为，方法将引发 invalid_argument 异常 `_PSource` `NULL` 。
+如果[](../../../standard-library/invalid-argument-class.md) `_PMessage` 或参数为，方法将引发 invalid_argument 异常 `_PSource` `NULL` 。
 
 使用 `send` 消息启动外的方法和在网络内传播消息是危险的，可能会导致死锁。
 
 当 `send` 返回时，消息已被接受，并传输到目标块中，或者被目标拒绝。
 
-## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a>supports_anonymous_source
+## <a name="supports_anonymous_source"></a><a name="supports_anonymous_source"></a> supports_anonymous_source
 
 在派生类中重写时，根据消息块是否接受未链接到它的源提供的消息返回 true 或 false。 如果重写的方法返回 **`true`** ，则目标无法推迟所提供的消息，因为稍后延迟的消息的使用需要在其源链接注册表中标识源。
 
@@ -174,7 +175,7 @@ virtual bool supports_anonymous_source();
 
 **`true`** 如果块可以接受来自未链接到它的源的消息，则为 **`false`** 。
 
-## <a name="unlink_source"></a><a name="unlink_source"></a>unlink_source
+## <a name="unlink_source"></a><a name="unlink_source"></a> unlink_source
 
 当在派生类中重写时，将指定的源块与此 `ITarget` 块断开。
 
@@ -182,7 +183,7 @@ virtual bool supports_anonymous_source();
 virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PSource*<br/>
 `ISource`正在从该块取消链接的块 `ITarget` 。
@@ -191,7 +192,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 
 不应直接在块上调用此函数 `ITarget` 。 应使用 `unlink_target` 或方法对块断开连接 `unlink_targets` `ISource` ，这将在 `unlink_source` 相应的目标上调用方法。
 
-## <a name="unlink_sources"></a><a name="unlink_sources"></a>unlink_sources
+## <a name="unlink_sources"></a><a name="unlink_sources"></a> unlink_sources
 
 当在派生类中重写时，将所有源块与此 `ITarget` 块断开。
 
@@ -199,7 +200,7 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 virtual void unlink_sources() = 0;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [ISource 类](isource-class.md)
