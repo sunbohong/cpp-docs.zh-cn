@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：了解分析树
 title: ATL 注册器和分析树
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-ms.openlocfilehash: ff74ff879e757a569232ff19244d3f7598063465
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cae5256bf932478135db747f80816378e61429a0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138237"
 ---
 # <a name="understanding-parse-trees"></a>了解分析树
 
@@ -61,6 +62,6 @@ HKEY_CLASSES_ROOT
 
 此时，注册机构最初会打开 (创建) `HKEY_CLASSES_ROOT\MyVeryOwnKey` 。 然后，它会发现 `MyVeryOwnKey` 具有子项。 注册器将 `MyVeryOwnKey` 保留句柄并打开 (`HasASubKey` 使用此父句柄创建) ，而不是将键关闭。 如果没有打开父句柄， (系统注册表的速度会较慢。 ) 因此，打开 `HKEY_CLASSES_ROOT\MyVeryOwnKey` 并 `HasASubKey` 打开 `MyVeryOwnKey` 作为父对象的速度比打开 `MyVeryOwnKey` 、关闭 `MyVeryOwnKey` 、然后打开 `MyVeryOwnKey\HasASubKey` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [创建注册器脚本](../atl/creating-registrar-scripts.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _putw
 title: _putw
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 12f54c54b59e43d9a2861489171dd6c9c9436a8a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e49240d7410f47042f515f310ba79f9a9eb38398
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232425"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97146388"
 ---
 # <a name="_putw"></a>_putw
 
@@ -49,25 +50,25 @@ int _putw(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *binint*<br/>
 要输出的二进制整数。
 
 *流*<br/>
-指向**文件**结构的指针。
+指向 **文件** 结构的指针。
 
 ## <a name="return-value"></a>返回值
 
-返回写入的值。 返回值**EOF**可能指示错误。 由于**EOF**也是合法的整数值，请使用**ferror**来验证错误。 如果*stream*为空指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将**errno**设置为**EINVAL**并返回**EOF**。
+返回写入的值。 返回值 **EOF** 可能指示错误。 由于 **EOF** 也是合法的整数值，请使用 **ferror** 来验证错误。 如果 *stream* 为空指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数会将 **errno** 设置为 **EINVAL** 并返回 **EOF**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Putw**函数将类型的二进制值写入 **`int`** 流的当前位置 *。* **_putw**不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw**主要是为了与以前的库兼容。 **_Putw**可能会出现可移植性问题，因为的大小 **`int`** 和中的字节顺序在 **`int`** 不同系统之间存在差异。
+**_Putw** 函数将类型的二进制值写入 **`int`** 流的当前位置 *。* **_putw** 不会影响流中的项的对齐方式，也不会采用任何特殊的对齐方式。 **_putw** 主要是为了与以前的库兼容。 **_Putw** 可能会出现可移植性问题，因为的大小 **`int`** 和中的字节顺序在 **`int`** 不同系统之间存在差异。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -113,7 +114,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Wrote ten words

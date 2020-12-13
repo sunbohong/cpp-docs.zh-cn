@@ -1,4 +1,5 @@
 ---
+description: 了解更多：字符串转换宏
 title: 字符串转换宏
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 60cccebf4e1db8369ea5a88f04a37b96838ff49f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a7717f7876d9dbe23c0b95fd68b4bcd971e81267
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138770"
 ---
 # <a name="string-conversion-macros"></a>字符串转换宏
 
@@ -34,7 +35,7 @@ ms.locfileid: "88835150"
 MACRONAME( address_of_structure )
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 例如：
 
@@ -59,7 +60,7 @@ and：
 |无|**A**|**W**|
 |**\_UNICODE**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|** \_ UNICODE**和**OLE2ANSI**|**W**|**A**|
+|**\_ UNICODE** 和 **OLE2ANSI**|**W**|**A**|
 
 下表列出了 `DEVMODE` 和 `TEXTMETRIC` 字符串转换宏。
 
@@ -70,6 +71,6 @@ and：
 |DEVMODET2OLE|TEXTMETRICT2OLE|
 |DEVMODEW2A|TEXTMETRICW2A|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [宏](../../atl/reference/atl-macros.md)

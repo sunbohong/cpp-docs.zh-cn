@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：选项、ATL 属性页向导
 title: 选项，ATL 属性页向导
 ms.date: 05/09/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 74cf72feedd8dc8e1186d54a8abe840195964620
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: ea7508f49e48c2ef1387fb4b48b816f4e16cdb99
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92923666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138991"
 ---
 # <a name="options-atl-property-page-wizard"></a>选项，ATL 属性页向导
 
@@ -31,7 +32,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
    有关详细信息，请参阅[指定项目的线程模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)。
 
-   |选项|说明|
+   |选项|描述|
    |------------|-----------------|
    |**单精度**|属性页仅在主 COM 线程中运行。|
    |**单元**|可以在任意一个单线程单元中创建属性页。 默认值。|
@@ -40,7 +41,7 @@ ATL 属性页向导不适用于 Visual Studio 2019 及更高版本。
 
    添加对要创建的属性页的聚合支持。 有关详细信息，请参阅[聚合](../../atl/aggregation.md)。
 
-   |选项|说明|
+   |选项|描述|
    |------------|-----------------|
    |**是**|创建可聚合的属性页。|
    |否|创建不可聚合的属性页。|

@@ -1,4 +1,5 @@
 ---
+description: 了解更多： ML 非严重错误 A2034
 title: ML 非致命错误 A2034
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-ms.openlocfilehash: c27c7d1b62afca760454c39552bfd1fd36857e08
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: dce18ce5256b77483c0613d52d9f60d7b48ea2a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317053"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129202"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>ML 非致命错误 A2034
 
@@ -34,6 +35,6 @@ ms.locfileid: "75317053"
 
 - [组织](org.md)指令
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ML 错误消息](ml-error-messages.md)

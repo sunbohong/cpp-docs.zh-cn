@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDefaultElementTraits 类
 title: CDefaultElementTraits 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CDefaultElementTraits class
 ms.assetid: ac5ee610-7957-4b7c-92b6-38ff72e4118e
-ms.openlocfilehash: 0ee076af5fc4a1c2145162ac510b3a4460e251e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4dd1bae67ef626ef793ecee946d88879a07f194
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141890"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits 类
 
-此类集合类提供默认方法和函数。
+此类提供集合类的默认方法和函数。
 
 ## <a name="syntax"></a>语法
 
@@ -27,20 +28,20 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
     public CDefaultCompareTraits<T>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
-要存储在集合中的数据类型。
+要存储在集合中的数据的类型。
 
 ## <a name="remarks"></a>备注
 
-此类提供默认静态函数和方法用于移动、 复制、 比较和哈希存储在集合类对象中的元素。 此类派生其函数和方法从[CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)， [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)，并[CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)，以及通过利用[CElementTraits](../../atl/reference/celementtraits-class.md)， [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)，和[CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)。
+此类提供了用于移动、复制、比较和哈希集合类对象中存储的元素的默认静态函数和方法。 此类从 [CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)、 [CDefaultHashTraits](../../atl/reference/cdefaulthashtraits-class.md)和 [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)派生其函数和方法，并由 [CElementTraits](../../atl/reference/celementtraits-class.md)、 [CPrimitiveElementTraits](../../atl/reference/cprimitiveelementtraits-class.md)和 [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)使用。
 
-有关详细信息，请参阅[ATL 集合类](../../atl/atl-collection-classes.md)。
+有关详细信息，请参阅 [ATL Collection 类](../../atl/atl-collection-classes.md)。
 
 ## <a name="requirements"></a>要求
 
-**标头：** atlcoll.h
+**标头：** atlcoll
 
 ## <a name="see-also"></a>请参阅
 

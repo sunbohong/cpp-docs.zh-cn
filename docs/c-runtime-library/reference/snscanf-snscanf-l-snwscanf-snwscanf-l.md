@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _snscanf、_snscanf_l、_snwscanf、_snwscanf_l
 title: _snscanf、_snscanf_l、_snwscanf、_snwscanf_l
 ms.date: 11/04/2016
 api_name:
@@ -51,12 +52,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-ms.openlocfilehash: f259eede1b2927b4676467c3450504f7ff7c19de
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0098578a012666a498062a78eb9ae17d362ea466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947944"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137015"
 ---
 # <a name="_snscanf-_snscanf_l-_snwscanf-_snwscanf_l"></a>_snscanf、_snscanf_l、_snwscanf、_snwscanf_l
 
@@ -93,36 +94,36 @@ int __cdecl _snwscanf_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *input*<br/>
 要检查的输入字符串。
 
 *length*<br/>
-*输入*中要检查的字符数。
+*输入* 中要检查的字符数。
 
 *format*<br/>
 一个或多个格式说明符。
 
 *...*<br/>
-用于*存储格式说明符*的格式说明符从输入字符串中提取的值的可选变量。
+用于 *存储格式说明符* 的格式说明符从输入字符串中提取的值的可选变量。
 
 *locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-这两个函数都将返回已成功转换并分配的字段的数目；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，则返回值为**EOF** ; 或者，如果在第一次转换之前到达字符串的末尾，则为。 有关详细信息，请参阅 [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)。
+这两个函数都将返回已成功转换并分配的字段的数目；返回值不包括已读取但未分配的字段。 返回值为 0 表示没有分配任何字段。 如果发生错误，则返回值为 **EOF** ; 或者，如果在第一次转换之前到达字符串的末尾，则为。 有关详细信息，请参阅 [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)。
 
-如果*输入*或*格式*是**NULL**指针，或者*长度*小于或等于零，则会调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回**EOF** ，并将**Errno**设置为**EINVAL**。
+如果 *输入* 或 *格式* 是 **NULL** 指针，或者 *长度* 小于或等于零，则会调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则这些函数将返回 **EOF** ，并将 **Errno** 设置为 **EINVAL**。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-此函数类似于**sscanf** ，只不过它可以指定要从输入字符串中检查的固定数量的字符。 有关详细信息，请参阅 [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)。
+此函数类似于 **sscanf** ，只不过它可以指定要从输入字符串中检查的固定数量的字符。 有关详细信息，请参阅 [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md)。
 
-这些带有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -135,10 +136,10 @@ int __cdecl _snwscanf_l(
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_snscanf**、 **_snscanf_l**|\<stdio.h>|
-|**_snwscanf**、 **_snwscanf_l**|\<stdio.h> 或 \<wchar.h>|
+|**_snscanf**， **_snscanf_l**|\<stdio.h>|
+|**_snwscanf**， **_snwscanf_l**|\<stdio.h> 或 \<wchar.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

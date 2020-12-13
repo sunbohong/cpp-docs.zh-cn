@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：像素/HIMETRIC 转换全局函数
 title: 像素 HIMETRIC 转换全局函数
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-ms.openlocfilehash: e71dccbccbe43ea7df3b6a7005da138a8e31aeb3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 53753ff92b04466a94b821fdc4b4f221117c6ade
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97138978"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>象素/HIMETRIC 转换全局函数
 
@@ -19,7 +20,7 @@ ms.locfileid: "88834682"
 > [!IMPORTANT]
 > 下表中列出的函数不能用于在 Windows 运行时中执行的应用程序。
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|将每个单位 (的 HIMETRIC 单位转换为0.01 毫米) 为像素。|
 |[AtlPixelToHiMetric](#atlpixeltohimetric)|将像素转换为 HIMETRIC 单位 (每个单位的) 为0.01 毫米。|
@@ -34,7 +35,7 @@ extern void AtlHiMetricToPixel(
     LPSIZEL lpSizeInPix);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSizeInHiMetric*<br/>
 中指向对象的大小的指针，以 HIMETRIC 单位表示。
@@ -60,7 +61,7 @@ extern void AtlPixelToHiMetric(
     LPSIZEL lpSizeInHiMetric);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpSizeInPix*<br/>
 中一个指针，指向对象的大小（以像素为单位）。

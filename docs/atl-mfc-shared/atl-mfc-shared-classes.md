@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： ATL/MFC 共享类
 title: ATL-MFC 共享类
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -23,29 +24,29 @@ helpviewer_keywords:
 - CString objects, shared class
 - shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
-ms.openlocfilehash: 5632de3d248ded83c1db2c0b469de165e676bf9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba5927436b5f5c7bd31b21ec6dd7f187e2eb4e83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216865"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97142580"
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 共享类
 
-这些实用程序类可在任何固有C++而无需任何 MFC DLL 的项目。
+这些实用工具类可用于任何本机 c + + 项目中，无需任何 MFC DLL。
 
 ## <a name="in-this-section"></a>本节内容
 
-[MFC 和 ATL 之间共享类](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
-提供指向 MFC 和 atl。 之间共享的类
+[MFC 与 ATL 之间共享的类](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
+提供指向 MFC 与 ATL 之间共享的类的链接。
 
 ## <a name="related-sections"></a>相关章节
 
 [活动模板库 (ATL) 参考](../atl/atl-com-desktop-components.md)<br/>
 提供 ATL 库的参考资料，这是一组基于模板的 C++ 类，用于简化 COM 对象的编程。
 
-[Microsoft 基础类 (MFC) 库参考](../mfc/mfc-desktop-applications.md)<br/>
-提供 MFC 库，一组中的类构成的应用程序框架，这是为 Windows API 编写的应用程序的框架的参考材料。
+[ (MFC) 引用 Microsoft 基础类库](../mfc/mfc-desktop-applications.md)<br/>
+提供 MFC 库的参考材料，中一组构成应用程序框架的类，它是为 Windows API 编写的应用程序的框架。
 
 [调试](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 提供一些链接，所涉及内容为使用 Visual Studio 调试器纠正应用程序或存储过程中的逻辑错误。
