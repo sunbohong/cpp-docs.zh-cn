@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：限制 (C++ AMP) '
 title: restrict (C++ AMP)
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 31db9e8c6f18879e65596593c10a8b3413c5cea9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 928d4f9dde9421d2c5ab244af26a688a9828881e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213263"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151445"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 可将限制说明符应用于函数和 lambda 声明。 它会强制对函数中的代码以及使用 C++ Accelerated Massive Parallelism (C++ AMP) 运行时的应用程序中的函数的行为实施限制。
 
 > [!NOTE]
-> 有关 **`restrict`** 属于存储类特性的关键字的信息 **`__declspec`** ，请参阅[restrict](../cpp/restrict.md)。
+> 有关 **`restrict`** 属于存储类特性的关键字的信息 **`__declspec`** ，请参阅 [restrict](../cpp/restrict.md)。
 
 **`restrict`** 子句采用以下形式：
 
@@ -49,7 +50,7 @@ ms.locfileid: "87213263"
 
   - 递归。
 
-  - 用[volatile](../cpp/volatile-cpp.md)关键字声明的变量。
+  - 用 [volatile](../cpp/volatile-cpp.md) 关键字声明的变量。
 
   - 虚函数。
 
@@ -69,7 +70,7 @@ ms.locfileid: "87213263"
 
   - 全局变量。
 
-  - 静态变量。 请改用[Tile_static 关键字](../cpp/tile-static-keyword.md)。
+  - 静态变量。 请改用 [Tile_static 关键字](../cpp/tile-static-keyword.md) 。
 
   - **`dynamic_cast`** 强制.
 
@@ -79,7 +80,7 @@ ms.locfileid: "87213263"
 
   - Varargs。
 
-有关函数限制的讨论，请参阅[限制（amp）限制](/archive/blogs/nativeconcurrency/restrictamp-restrictions-part-0-of-n-introduction)。
+有关函数限制的讨论，请参阅 [限制 (amp) 限制](/archive/blogs/nativeconcurrency/restrictamp-restrictions-part-0-of-n-introduction)。
 
 ## <a name="example"></a>示例
 
@@ -104,6 +105,6 @@ void callFunctions() restrict(amp)
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解更多： ML 错误 A1007
 title: ML 错误 A1007
 ms.date: 12/17/2019
 ms.custom: error-reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: c9527769e0d9397de90f49cbce98b2cca42bed50
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: c26d5de1c1b44fb37d4a95f51b2cb9480d2ba664
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317118"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97129540"
 ---
 # <a name="ml-fatal-error-a1007"></a>ML 错误 A1007
 
@@ -22,7 +23,7 @@ ms.locfileid: "75317118"
 
 下面其中一个内容嵌套太深：
 
-- 高级指令，如[。如果](dot-if.md)为，则为[。重复](dot-repeat.md)或[。WHILE](dot-while.md)。
+- 高级指令，如 [。如果](dot-if.md)为，则为 [。重复](dot-repeat.md)或 [。WHILE](dot-while.md)。
 
 - 结构定义。
 
@@ -30,7 +31,7 @@ ms.locfileid: "75317118"
 
 - 过程定义。
 
-- [PUSHCONTEXT](pushcontext.md)指令（限制为10）。
+- [PUSHCONTEXT](pushcontext.md)指令 (的限制为 10) 。
 
 - 分段定义。
 
@@ -38,6 +39,6 @@ ms.locfileid: "75317118"
 
 - 宏。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ML 错误消息](ml-error-messages.md)

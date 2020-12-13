@@ -1,23 +1,24 @@
 ---
-title: 如何：使用跟踪引用在C++/CLI
+description: 了解详细信息：如何：在 c + +/CLI 中使用跟踪引用
+title: 如何：在 C++/CLI 中使用跟踪引用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c17101b5711feb503ad727d78b427e8766146960
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387131"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151380"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>如何：使用跟踪引用在C++/CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>如何：在 C++/CLI 中使用跟踪引用
 
-本文介绍如何使用跟踪引用 （%）在C++/CLI 公共语言运行时 (CLR) 类型通过引用来传递。
+本文介绍如何在 c + +/CLI 中使用跟踪引用 (% ) 通过引用 (CLR) 类型传递公共语言运行时。
 
-## <a name="to-pass-clr-types-by-reference"></a>若要通过引用来传递 CLR 类型
+## <a name="to-pass-clr-types-by-reference"></a>通过引用传递 CLR 类型
 
-下面的示例演示如何使用跟踪引用按引用传递 CLR 类型。
+下面的示例演示如何使用跟踪引用通过引用传递 CLR 类型。
 
 ```cpp
 // tracking_reference_handles.cpp
@@ -70,7 +71,7 @@ int main() {
 zip == 20100
 ```
 
-下一个示例演示该采用的地址的跟踪引用返回[interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)，并演示如何修改和通过跟踪引用来访问数据。
+下一个示例显示，采用跟踪引用的地址将返回 [interior_ptr (c + +/cli) ](../extensions/interior-ptr-cpp-cli.md)，并演示如何通过跟踪引用来修改和访问数据。
 
 ```cpp
 // tracking_reference_data.cpp
@@ -124,7 +125,7 @@ ctor: N(int i)
 
 ## <a name="tracking-references-and-interior-pointers"></a>跟踪引用和内部指针
 
-下面的代码示例显示了你可以跟踪引用和内部指针之间转换。
+下面的代码示例演示了如何在跟踪引用和内部指针之间进行转换。
 
 ```cpp
 // tracking_reference_interior_ptr.cpp
@@ -179,7 +180,7 @@ ctor: N(int i)
 
 ## <a name="tracking-references-and-value-types"></a>跟踪引用和值类型
 
-此示例演示通过对值类型的跟踪引用的简单装箱：
+此示例演示如何通过对值类型的跟踪引用进行简单装箱：
 
 ```cpp
 // tracking_reference_valuetypes_1.cpp
@@ -194,7 +195,7 @@ int main() {
 }
 ```
 
-下一个示例演示，您可以跟踪引用和对值类型的本机引用。
+下一个示例显示，您可以同时具有跟踪引用和对值类型的本机引用。
 
 ```cpp
 // tracking_reference_valuetypes_2.cpp
@@ -219,7 +220,7 @@ int main() {
 13
 ```
 
-下面的示例显示了可以使用跟踪引用以及值类型和本机类型。
+下面的示例演示可以结合使用跟踪引用和值类型和本机类型。
 
 ```cpp
 // tracking_reference_valuetypes_3.cpp
@@ -254,7 +255,7 @@ int main() {
 5
 ```
 
-此示例显示了您可以将对值类型的跟踪引用绑定垃圾回收堆上：
+此示例演示可以将跟踪引用绑定到垃圾回收堆上的值类型：
 
 ```cpp
 // tracking_reference_valuetypes_4.cpp
@@ -292,9 +293,9 @@ Boxed new copy V: 1
 Original V: 4, Reference to handle of originally boxed V: 1
 ```
 
-## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>模板函数采用本机、 值或引用参数
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>采用本机、值或引用参数的模板函数
 
-通过在模板函数的签名中使用跟踪引用，可确保可以通过参数的类型为本机，CLR 值或 CLR 引用调用函数。
+通过在模板函数签名中使用跟踪引用，可以确保该函数可以由类型为本机、CLR 值或 CLR 引用的参数调用。
 
 ```cpp
 // tracking_reference_template.cpp

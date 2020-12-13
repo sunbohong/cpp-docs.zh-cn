@@ -1,4 +1,5 @@
 ---
+description: 了解有关详细信息，请参阅如何：包装本机类以供 C 使用#
 title: 如何：包装本机类以供 C# 使用
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1b90cfba08bd22ec6a49ef4de033afd5d2b187ea
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545887"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151367"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包装本机类以供 C\# 使用
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包装本机类以供 C 使用\#
 
-此示例演示如何包装本机C++类，以便它可由中C#创作的代码或其他 .net 语言使用。
+此示例演示如何包装本机 c + + 类，使其可供使用 c # 或其他 .NET 语言编写的代码使用。
 
 ## <a name="example"></a>示例
 
@@ -67,6 +68,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

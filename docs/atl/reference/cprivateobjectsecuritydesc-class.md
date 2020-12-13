@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CPrivateObjectSecurityDesc 类
 title: CPrivateObjectSecurityDesc 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: f62d289418280a05f390bf9cdec23ea30632aed2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 339105d2a6356150c7a7ce8ccf04bc17d3df4911
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97141058"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 类
 
@@ -33,14 +34,14 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|构造函数。|
 |[CPrivateObjectSecurityDesc：： ~ CPrivateObjectSecurityDesc](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|调用此方法可将安全描述符及其访问控制列表 (Acl) 转换为支持 (Ace) 自动传播可继承的访问控制项的格式。|
 |[CPrivateObjectSecurityDesc：： Create](#create)|调用此方法为调用资源管理器创建的私有对象分配和初始化自相关安全描述符。|
@@ -49,11 +50,11 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[operator =](#operator_eq)|赋值运算符。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类派生自 [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)，它提供了用于创建和管理私有对象的安全描述符的方法。
 
@@ -81,7 +82,7 @@ bool ConvertToAutoInherit(
     PGENERIC_MAPPING GenericMapping) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParent*<br/>
 指向引用对象父容器的 [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) 对象的指针。 如果没有父容器，则此参数为 NULL。
@@ -99,7 +100,7 @@ bool ConvertToAutoInherit(
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法尝试确定随机访问控制列表中的 Ace (DACL) 并且当前安全描述符的系统访问控制列表 (SACL) 是否继承自父安全描述符。 它将调用 [ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity) 函数。
 
@@ -111,7 +112,7 @@ bool ConvertToAutoInherit(
 CPrivateObjectSecurityDesc() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 初始化 `CPrivateObjectSecurityDesc` 对象。
 
@@ -123,7 +124,7 @@ CPrivateObjectSecurityDesc() throw();
 ~CPrivateObjectSecurityDesc() throw();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 析构函数释放所有已分配的资源，并删除私有对象的安全说明符。
 
@@ -149,7 +150,7 @@ bool Create(
     PGENERIC_MAPPING GenericMapping) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pParent*<br/>
 指向 [CSecurityDesc](../../atl/reference/csecuritydesc-class.md) 对象的指针，该对象引用要在其中创建新对象的父目录。 如果没有父目录，则设置为 NULL。
@@ -160,7 +161,7 @@ bool Create(
 *bIsDirectoryObject*<br/>
 指定新对象是否可包含其他对象。 如果值为 true，则指示新对象是一个容器。 如果值为 false，则表示新的对象不是容器。
 
-令牌<br/>
+令牌 <br/>
 对 [CAccessToken](../../atl/reference/caccesstoken-class.md) 对象的引用，该对象表示要在其上创建对象的客户端进程。
 
 *GenericMapping*<br/>
@@ -173,13 +174,13 @@ bool Create(
 指定新对象是否可包含其他对象。 如果值为 true，则指示新对象是一个容器。 如果值为 false，则表示新的对象不是容器。
 
 *AutoInheritFlags*<br/>
-控制 (Ace) 的访问控制项如何从 *pParent*继承的一组位标志。 有关更多详细信息，请参阅 [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+控制 (Ace) 的访问控制项如何从 *pParent* 继承的一组位标志。 有关更多详细信息，请参阅 [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法调用 [CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) 或 [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
 
@@ -198,7 +199,7 @@ bool Get(
     CSecurityDesc* pResult) const throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *si*<br/>
 指示要检索的安全描述符部分的一组位标志。 此值可以是 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) 位标志的组合。
@@ -210,7 +211,7 @@ bool Get(
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 安全描述符是包含安全对象的安全信息的结构和关联数据。
 
@@ -222,7 +223,7 @@ bool Get(
 CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) throw(...);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rhs*<br/>
 要分配给当前对象的 `CPrivateObjectSecurityDesc` 对象。
@@ -250,7 +251,7 @@ bool Set(
     const CAccessToken& Token) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *si*<br/>
 指示要设置的安全描述符部分的一组位标志。 此值可以是 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information) 位标志的组合。
@@ -261,21 +262,21 @@ bool Set(
 *GenericMapping*<br/>
 指向 [GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping) 结构的指针，该结构指定从每个泛型权限到对象的特定权限的映射。
 
-令牌<br/>
+令牌 <br/>
 对 [CAccessToken](../../atl/reference/caccesstoken-class.md) 对象的引用，该对象表示要在其上创建对象的客户端进程。
 
 *AutoInheritFlags*<br/>
-控制 (Ace) 的访问控制项如何从 *pParent*继承的一组位标志。 有关更多详细信息，请参阅 [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+控制 (Ace) 的访问控制项如何从 *pParent* 继承的一组位标志。 有关更多详细信息，请参阅 [CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
 
 ### <a name="return-value"></a>返回值
 
 如果成功，则返回 true；如果失败，则返回 false。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第二种方法允许指定对象的对象类型 GUID 或控制 Ace 的继承方式。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [类概述](../../atl/atl-class-overview.md)<br/>

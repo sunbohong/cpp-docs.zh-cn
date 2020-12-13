@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CComAggObject 类
 title: CComAggObject 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: b9200c9c396fc16b6df3f4c2f4c66fb7976316d4
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 84af79678221ae74a151a4821039ff1d7a743cc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81748167"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152355"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 类
 
-此类实现聚合对象的[I 未知](/windows/win32/api/unknwn/nn-unknwn-iunknown)接口。 根据定义，聚合对象包含在外部对象中。 该`CComAggObject`类类似于[CComObject 类](../../atl/reference/ccomobject-class.md)，只不过它公开了外部客户端可直接访问的接口。
+此类为聚合的对象实现 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 接口。 按照定义，聚合对象包含在外部对象中。 `CComAggObject`类类似于[CComObject 类](../../atl/reference/ccomobject-class.md)，只不过它公开了可直接由外部客户端访问的接口。
 
 ## <a name="syntax"></a>语法
 
@@ -36,42 +37,42 @@ class CComAggObject : public IUnknown,
    public CComObjectRootEx<contained::_ThreadModel::ThreadModelNoCS>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*包含*<br/>
-类派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx，](../../atl/reference/ccomobjectrootex-class.md)以及来自要支持的对象的任何其他接口。
+*独立*<br/>
+从 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 或 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)派生的类，以及要在对象上支持的任何其他接口。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CComagg 对象：Ccomagg 对象](#ccomaggobject)|构造函数。|
-|[CComAgg 对象：*CcomAgg 对象](#dtor)|析构函数。|
+|[CComAggObject：： CComAggObject](#ccomaggobject)|构造函数。|
+|[CComAggObject：： ~ CComAggObject](#dtor)|析构函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CComAgg 对象：addRef](#addref)|增加聚合对象的引用计数。|
-|[CComAgg 对象：：创建实例](#createinstance)|此静态函数允许您创建一个新的**CComAggObject<**`contained`**>** 对象，而无需[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)的开销。|
-|[CComAgg 对象：最终构造](#finalconstruct)|执行`m_contained`的最后初始化。|
-|[CComAgg 对象：最终发布](#finalrelease)|对 执行`m_contained`的最后销毁。|
-|[CComAgg 对象：查询接口](#queryinterface)|检索指向所请求的接口的指针。|
-|[CComAgg 对象：：发布](#release)|对聚合对象取消引用计数。|
+|[CComAggObject：： AddRef](#addref)|递增聚合对象上的引用计数。|
+|[CComAggObject：： CreateInstance](#createinstance)|此静态函数允许创建新的 **CComAggObject<** `contained` **>** 对象，而不会产生 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)开销。|
+|[CComAggObject：： FinalConstruct](#finalconstruct)|执行的最终初始化 `m_contained` 。|
+|[CComAggObject：： FinalRelease](#finalrelease)|执行的最终析构 `m_contained` 。|
+|[CComAggObject：： QueryInterface](#queryinterface)|检索指向所请求的接口的指针。|
+|[CComAggObject：： Release](#release)|递减聚合对象上的引用计数。|
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CComAgg 对象：：m_contained](#m_contained)|委托`IUnknown`调用外部未知。|
+|[CComAggObject：： m_contained](#m_contained)|将 `IUnknown` 调用委托给外部未知。|
 
 ## <a name="remarks"></a>备注
 
-`CComAggObject`实现[聚合对象的 I 未知。](/windows/win32/api/unknwn/nn-unknwn-iunknown) `CComAggObject`有自己的`IUnknown`接口，独立于外部对象的`IUnknown`接口，并维护自己的引用计数。
+`CComAggObject` 实现聚合对象的 [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。 `CComAggObject` 具有其自己的 `IUnknown` 接口，与外部对象的 `IUnknown` 接口分离，维护其自己的引用计数。
 
-有关聚合的详细信息，请参阅[ATL COM 对象的基础](../../atl/fundamentals-of-atl-com-objects.md)文章。
+有关聚合的详细信息，请参阅 [ATL COM 对象的基础知识](../../atl/fundamentals-of-atl-com-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -85,11 +86,11 @@ class CComAggObject : public IUnknown,
 
 ## <a name="requirements"></a>要求
 
-**标题：** atlcom.h
+**标头：** atlcom。h
 
-## <a name="ccomaggobjectaddref"></a><a name="addref"></a>CComAgg 对象：addRef
+## <a name="ccomaggobjectaddref"></a><a name="addref"></a> CComAggObject：： AddRef
 
-增加聚合对象的引用计数。
+递增聚合对象上的引用计数。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -97,9 +98,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>返回值
 
-可用于诊断或测试的值。
+可能对诊断或测试有用的值。
 
-## <a name="ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a>CComagg 对象：Ccomagg 对象
+## <a name="ccomaggobjectccomaggobject"></a><a name="ccomaggobject"></a> CComAggObject：： CComAggObject
 
 构造函数。
 
@@ -107,18 +108,18 @@ STDMETHOD_(ULONG, AddRef)();
 CComAggObject(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*光伏*<br/>
-[在]外部未知。
+*函数*<br/>
+中外部未知。
 
 ### <a name="remarks"></a>备注
 
-初始化`CComContainedObject`成员[，m_contained，](#m_contained)并递增模块锁计数。
+初始化 `CComContainedObject` 成员、 [m_contained](#m_contained)，并递增模块锁计数。
 
-析构函数会声明模块锁计数。
+析构函数递减模块锁计数。
 
-## <a name="ccomaggobjectccomaggobject"></a><a name="dtor"></a>CComAgg 对象：*CcomAgg 对象
+## <a name="ccomaggobjectccomaggobject"></a><a name="dtor"></a> CComAggObject：： ~ CComAggObject
 
 析构函数。
 
@@ -128,11 +129,11 @@ CComAggObject(void* pv);
 
 ### <a name="remarks"></a>备注
 
-释放所有分配的资源，调用[FinalRelease，](#finalrelease)并递减模块锁计数。
+释放所有已分配的资源，调用 [FinalRelease](#finalrelease)，并递减模块锁计数。
 
-## <a name="ccomaggobjectcreateinstance"></a><a name="createinstance"></a>CComAgg 对象：：创建实例
+## <a name="ccomaggobjectcreateinstance"></a><a name="createinstance"></a> CComAggObject：： CreateInstance
 
-此静态函数允许您创建一个新的**CComAggObject<**`contained`**>** 对象，而无需[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)的开销。
+此静态函数允许创建新的 **CComAggObject<** `contained` **>** 对象，而不会产生 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)开销。
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -140,24 +141,24 @@ static HRESULT WINAPI CreateInstance(
     CComAggObject<contained>** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Pp*<br/>
-[出]指向**CComAggObject 的\<** 指针<em>包含</em>**>** 指针。 如果`CreateInstance`不成功 *，pp*设置为 NULL。
+*pp*<br/>
+弄指向 **\<**<em> 包含 </em>**> * * 指针的 CComAggObject 的指针。 如果 `CreateInstance` 不成功，则 *pp* 设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值。
+标准的 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-返回的对象的引用计数为零，因此立即调用`AddRef`，然后在完成后使用`Release`释放对象指针上的引用。
+返回的对象的引用计数为零，因此立即调用 `AddRef` ，然后在完成后使用 `Release` 释放对象指针上的引用。
 
-如果不需要直接访问该对象，但仍希望创建一个没有开销的新对象`CoCreateInstance`，请使用[CComCoClass：：：createInstance。](../../atl/reference/ccomcoclass-class.md#createinstance)
+如果不需要直接访问对象，但仍想要创建一个不带开销的新对象， `CoCreateInstance` 请改用 [CComCoClass：： CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 。
 
-## <a name="ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a>CComAgg 对象：最终构造
+## <a name="ccomaggobjectfinalconstruct"></a><a name="finalconstruct"></a> CComAggObject：： FinalConstruct
 
-在对象构造的最后阶段调用此方法，对[m_contained](#m_contained)成员执行任何最终初始化。
+在对象构造的最后阶段调用，此方法对 [m_contained](#m_contained) 成员执行任何最终初始化。
 
 ```
 HRESULT FinalConstruct();
@@ -165,34 +166,34 @@ HRESULT FinalConstruct();
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值。
+标准的 HRESULT 值。
 
-## <a name="ccomaggobjectfinalrelease"></a><a name="finalrelease"></a>CComAgg 对象：最终发布
+## <a name="ccomaggobjectfinalrelease"></a><a name="finalrelease"></a> CComAggObject：： FinalRelease
 
-在对象销毁期间调用此方法释放[m_contained](#m_contained)成员。
+在对象销毁期间调用，此方法释放 [m_contained](#m_contained) 成员。
 
 ```cpp
 void FinalRelease();
 ```
 
-## <a name="ccomaggobjectm_contained"></a><a name="m_contained"></a>CComAgg 对象：：m_contained
+## <a name="ccomaggobjectm_contained"></a><a name="m_contained"></a> CComAggObject：： m_contained
 
-派生自类的[CComContainedObject 对象](../../atl/reference/ccomcontainedobject-class.md)。
+派生自类的 [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) 对象。
 
 ```
 CComContainedObject<contained> m_contained;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*包含*<br/>
-[在]类派生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx，](../../atl/reference/ccomobjectrootex-class.md)以及来自要支持的对象的任何其他接口。
+*独立*<br/>
+中从 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 或 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)派生的类，以及要在对象上支持的任何其他接口。
 
 ### <a name="remarks"></a>备注
 
-所有`IUnknown`通过`m_contained`的呼叫都委托给外部未知。
+所有 `IUnknown` 调用 `m_contained` 都委托给外部未知。
 
-## <a name="ccomaggobjectqueryinterface"></a><a name="queryinterface"></a>CComAgg 对象：查询接口
+## <a name="ccomaggobjectqueryinterface"></a><a name="queryinterface"></a> CComAggObject：： QueryInterface
 
 检索指向所请求的接口的指针。
 
@@ -202,28 +203,28 @@ template <class Q>
 HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Iid*<br/>
-[在]要请求的接口的标识符。
+*iid*<br/>
+中所请求的接口的标识符。
 
 *ppvObject*<br/>
-[出]指向*iid*标识的接口指针的指针。 如果对象不支持此接口，*则 ppvObject*设置为 NULL。
+弄指向由 *iid* 标识的接口指针的指针。 如果对象不支持此接口，则将 *ppvObject* 设置为 NULL。
 
-*Pp*<br/>
-[出]指向类型标识的接口指针`Q`的指针。 如果对象不支持此接口 *，pp*设置为 NULL。
+*pp*<br/>
+弄指向由类型标识的接口指针的指针 `Q` 。 如果对象不支持此接口，则 *pp* 设置为 NULL。
 
 ### <a name="return-value"></a>返回值
 
-标准 HRESULT 值。
+标准的 HRESULT 值。
 
 ### <a name="remarks"></a>备注
 
-如果请求的接口为`IUnknown` `QueryInterface` ，则返回指向聚合对象自己的`IUnknown`指针，并递增引用计数。 否则，此方法通过`CComContainedObject`成员查询接口[，m_contained](#m_contained)。
+如果请求的接口为 `IUnknown` ，则 `QueryInterface` 返回一个指向聚合对象自身的指针 `IUnknown` ，并递增引用计数。 否则，此方法将通过成员 m_contained 来查询接口 `CComContainedObject` 。 [](#m_contained)
 
-## <a name="ccomaggobjectrelease"></a><a name="release"></a>CComAgg 对象：：发布
+## <a name="ccomaggobjectrelease"></a><a name="release"></a> CComAggObject：： Release
 
-对聚合对象取消引用计数。
+递减聚合对象上的引用计数。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -231,7 +232,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>返回值
 
-在调试生成中`Release`，返回可用于诊断或测试的值。 在非调试生成中，`Release`始终返回 0。
+在调试版本中，将 `Release` 返回一个值，该值对于诊断或测试可能很有用。 在非调试版本中， `Release` 始终返回0。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAxWindow2T 类
 title: CAxWindow2T 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-ms.openlocfilehash: e29c30e95116ad68d3498f3f8d3231a63c92c0a7
-ms.sourcegitcommit: d9c94dcabd94537e304be0261b3263c2071b437b
+ms.openlocfilehash: b29ad7bc9a8df17905ef6bc8fc08ebf75e9f847d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91353059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97152394"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T 类
 
@@ -43,13 +44,13 @@ template <class TBase = CWindow>
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAxWindow2T::CAxWindow2T](#caxwindow2t)|构造 `CAxWindow2T` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAxWindow2T：： Create](#create)|创建宿主窗口。|
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|创建授权的 ActiveX 控件，初始化它并在指定窗口中承载它。|
@@ -58,11 +59,11 @@ template <class TBase = CWindow>
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CAxWindow2T：： operator =](#operator_eq)|将 HWND 分配给现有 `CAxWindow2T` 对象。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `CAxWindow2T` 提供用于操作承载 ActiveX 控件的窗口的方法。 `CAxWindow2T` 还支持承载许可的 ActiveX 控件。 托管由 " **AtlAxWinLic80**" 提供，由包装 `CAxWindow2T` 。
 
@@ -115,7 +116,7 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CAxWindow2T::Create` 调用 [CWindow：： Create](../../atl/reference/cwindow-class.md#create) ，并将 LPCTSTR *lpstrWndClass* 参数设置为)  (提供控件承载的窗口类 `AtlAxWinLic80` 。
 
@@ -150,7 +151,7 @@ HRESULT CreateControlLic(
 *bstrLicKey*<br/>
 控件的许可证密钥;如果创建 nonlicensed 控件，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关剩余参数和返回值的说明，请参阅 [CAxWindow：： CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) 。
 
@@ -187,7 +188,7 @@ HRESULT CreateControlLicEx(
 *bstrLicKey*<br/>
 控件的许可证密钥;如果创建 nonlicensed 控件，则为 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关剩余参数和返回值的说明，请参阅 [CAxWindow：： CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) 。
 
@@ -220,7 +221,7 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 *hWnd*<br/>
 现有窗口的句柄。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](../../atl/atl-class-overview.md)<br/>
 [控件包含常见问题](../../atl/atl-control-containment-faq.md)

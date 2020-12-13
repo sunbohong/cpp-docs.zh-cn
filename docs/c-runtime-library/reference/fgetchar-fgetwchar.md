@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _fgetchar、_fgetwchar
 title: _fgetchar、_fgetwchar
 ms.date: 4/2/2020
 api_name:
@@ -38,16 +39,16 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 99febac7de2c2fa4e6587654e854b32b702d299e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 316948485e0ef024bc726da7f333fd4ee329c7f6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232529"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151809"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
-从**stdin**中读取字符。
+从 **stdin** 中读取字符。
 
 ## <a name="syntax"></a>语法
 
@@ -58,17 +59,17 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>返回值
 
-** \_ fgetchar**返回作为读取的字符， **`int`** 或返回 `EOF` 以指示错误或文件尾。 ** \_ fgetwchar**返回[wint_t](../../c-runtime-library/standard-types.md)，它是与读取字符对应的宽字符，或返回 `WEOF` 以指示错误或文件尾。 对于这两个函数，请使用**feof**或**ferror**来区分错误和文件尾条件。
+**\_ fgetchar** 返回作为读取的字符， **`int`** 或返回 `EOF` 以指示错误或文件尾。 **\_ fgetwchar** 返回 [wint_t](../../c-runtime-library/standard-types.md)，它是与读取字符对应的宽字符，或返回 `WEOF` 以指示错误或文件尾。 对于这两个函数，请使用 **feof** 或 **ferror** 来区分错误和文件尾条件。
 
 ## <a name="remarks"></a>备注
 
-这些函数从**stdin**中读取单个字符。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
+这些函数从 **stdin** 中读取单个字符。 然后该函数递增关联的文件指针（如果已定义）以指向下一个字符。 如果流位于文件结尾，则设置流的文件结尾指示器。
 
-**_fgetchar**与等效 `fgetc( stdin )` 。 它还等效于**getchar**，但仅作为函数实现，而不是作为函数和宏实现。 **_fgetwchar**是 **_fgetchar**的宽字符版本。
+**_fgetchar** 与等效 `fgetc( stdin )` 。 它还等效于 **getchar**，但仅作为函数实现，而不是作为函数和宏实现。 **_fgetwchar** 是 **_fgetchar** 的宽字符版本。
 
 这些函数不符合 ANSI 标准。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -83,7 +84,7 @@ wint_t _fgetwchar( void );
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 与控制台（**stdin**、 **stdout**和**stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台（**stdin**、 **stdout** 和 **stderr**）关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -123,7 +124,7 @@ Line two.Line one.
 Line two.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [fputc、fputwc](fputc-fputwc.md)<br/>

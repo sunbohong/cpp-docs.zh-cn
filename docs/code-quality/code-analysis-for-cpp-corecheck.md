@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： C++ Core Guidelines 检测器参考
 title: C++ Core Guidelines 检查器参考
 ms.date: 03/22/2018
 ms.topic: reference
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
-ms.openlocfilehash: a4dc50395a1da0eda68148123651123cf1607184
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 40d0e713d8064a952c785ca44ac5a7ba60f41b61
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97151575"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C++ Core Guidelines 检查器参考
 
@@ -185,10 +186,10 @@ ms.locfileid: "91503385"
 仅分配一次变量 "*variable*"，将其标记为 `const` 。 请参阅 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction)。
 
 [C26497 USE_CONSTEXPR_FOR_FUNCTION](c26497.md)\
-*function* `constexpr` 如果需要编译时计算，则可以将此函数函数标记为。 请参阅 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rf-constexpr)。
+ `constexpr` 如果需要编译时计算，则可以将此函数函数标记为。 请参阅 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rf-constexpr)。
 
 [C26498 USE_CONSTEXPR_FOR_FUNCTIONCALL](c26498.md)\
-*function* `constexpr` 如果需要编译时计算，则此函数调用函数可以使用。 请参阅 [C++ Core Guidelines 5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-constexpr)。
+ `constexpr` 如果需要编译时计算，则此函数调用函数可以使用。 请参阅 [C++ Core Guidelines 5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-constexpr)。
 
 ## <a name="type-group"></a>类型组
 
@@ -246,7 +247,7 @@ ms.locfileid: "91503385"
 只使用常量表达式在数组中建立索引。 请参阅 [C++ Core Guidelines 界限。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 [C26483 STATIC_INDEX_OUT_OF_RANGE](c26483.md)\
-值*值*超出了变量 "*variable*" 的*绑定*)  (0。 仅使用数组界限内的常量表达式对数组进行索引。 请参阅 [C++ Core Guidelines 界限。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
+值 *值* 超出了变量 "*variable*" 的 *绑定*)  (0。 仅使用数组界限内的常量表达式对数组进行索引。 请参阅 [C++ Core Guidelines 界限。 2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)\
 表达式 "*expr*"：没有要进行指针衰减的数组。 请参阅 [C++ Core Guidelines 界限。 3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
