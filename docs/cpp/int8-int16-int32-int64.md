@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __int8、__int16、__int32、__int64
 title: __int8、__int16、__int32、__int64
 ms.date: 10/09/2018
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - __int8 keyword [C++]
 - __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
-ms.openlocfilehash: 7888a282fffbaa2a23783c3875e02838fd0b1826
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8dddb8dc63b8aa9898b78ee02ea2dc904b362442
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227395"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332509"
 ---
 # <a name="__int8-__int16-__int32-__int64"></a>__int8、__int16、__int32、__int64
 
 **Microsoft 专用**
 
-Microsoft C/C++ 功能支持固定大小整数类型。 可以使用类型说明符声明8、16、32或64位整数变量 **`__intN`** ，其中， ***`N`*** 为8、16、32或64。
+Microsoft C/C++ 功能支持固定大小整数类型。 您可以使用类型说明符声明8位、16位、32或64位整数变量 **`__intN`** ，其中 * *_`N`_* _ 为8、16、32或64。
 
 以下示例为这些类型的固定大小整数声明了一个变量：
 
@@ -44,9 +45,9 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-类型 **`__int8`** 、 **`__int16`** 和 **`__int32`** 是大小相同的 ANSI 类型的同义词，用于编写在多个平台上行为相同的可移植代码。 **`__int8`** 数据类型与类型同义，与 **`char`** **`__int16`** 类型同义， **`short`** 并且 **`__int32`** 与类型同义 **`int`** 。 **`__int64`** 类型与类型的同义词 **`long long`** 。
+类型 _ * * `__int8` *、 **`__int16`** 和 **`__int32`** 是大小相同的 ANSI 类型的同义词，用于编写在多个平台上表现完全相同的可移植代码。 **`__int8`** 数据类型与类型同义，与 **`char`** **`__int16`** 类型同义， **`short`** 并且 **`__int32`** 与类型同义 **`int`** 。 **`__int64`** 类型与类型的同义词 **`long long`** 。
 
-为了与早期版本兼容， **`_int8`** 、、和 **`_int16`** **`_int32`** **`_int64`** 是指定了、、和的同义词 **`__int8`** ， **`__int16`** **`__int32`** **`__int64`** 除非指定编译器选项 " [ `/Za` \( 禁用语言扩展](../build/reference/za-ze-disable-language-extensions.md)"。
+为了与早期版本兼容，、、和是、、和的 **`_int8`** **`_int16`** **`_int32`** **`_int64`** 同义词 **`__int8`** ， **`__int16`** **`__int32`** **`__int64`** 除非指定了编译器选项 " [ `/Za` \( 禁用语言扩展")](../build/reference/za-ze-disable-language-extensions.md) 。
 
 ## <a name="example"></a>示例
 
@@ -73,7 +74,7 @@ int main()
 func
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [关键字](../cpp/keywords-cpp.md)<br/>
 [内置类型](../cpp/fundamental-types-cpp.md)<br/>

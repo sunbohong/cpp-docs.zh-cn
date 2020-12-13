@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：并发命名空间常量
 title: 并发命名空间常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ f1_keywords:
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-ms.openlocfilehash: 747796ae0baf46382840afc51283158ead204b62
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 281c8d41ec21d62eb15e58f792093b30f206dd00
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839058"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331315"
 ---
 # <a name="concurrency-namespace-constants"></a>并发命名空间常量
 
@@ -68,7 +69,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
     { 0x7E854EC7, 0xCDC4, 0x405a, { 0xB5, 0xB2, 0xAA, 0xF7, 0xC9, 0xE7, 0xD4, 0x0C } };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类事件当前未由并发运行时触发。
 
@@ -98,7 +99,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
     { 0x72B14A7D, 0x704C, 0x423e, { 0x92, 0xF8, 0x7E, 0x6D, 0x64, 0xBC, 0xB9, 0x2A } };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类事件当前未由并发运行时触发。
 
@@ -144,7 +145,7 @@ const __declspec(selectany) GUID LockEventGuid =
     { 0x79A60DC6, 0x5FC8, 0x4952, { 0xA4, 0x1C, 0x11, 0x63, 0xAE, 0xEC, 0x5E, 0xB8 } };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类事件当前未由并发运行时触发。
 
@@ -192,7 +193,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
     { 0x2718D25B, 0x5BF5, 0x4479, { 0x8E, 0x88, 0xBA, 0xBC, 0x64, 0xBD, 0xBF, 0xCA } };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类事件当前未由并发运行时触发。
 
@@ -205,7 +206,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
     { 0xE8A3BF1F, 0xA86B, 0x4390, { 0x9C, 0x60, 0x53, 0x90, 0xB9, 0x69, 0xD2, 0x2C } };
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类事件当前未由并发运行时触发。
 
@@ -227,6 +228,6 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
     { 0x2f27805f, 0x1676, 0x4ecc, { 0x96, 0xfa, 0x7e, 0xb0, 0x9d, 0x44, 0x30, 0x2f } };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

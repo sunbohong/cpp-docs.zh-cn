@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：在状态栏中显示命令信息
 title: 如何：在状态栏中显示命令信息
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-ms.openlocfilehash: bff5d5b20ecc9b20b7b1e8335cda34d582441425
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 568e8d356659d5267e8c4947f2981cd6243a7056
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622536"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330215"
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>如何：在状态栏中显示命令信息
 
@@ -20,8 +21,8 @@ ms.locfileid: "84622536"
 
 可以通过为添加到程序的菜单项定义提示字符串，将添加到此状态栏帮助。 为此，请在菜单编辑器中编辑菜单项的属性时提供提示字符串。 你定义的字符串存储在应用程序资源文件中;它们具有与它们说明的命令相同的 Id。
 
-默认情况下，应用程序向导添加**AFX_IDS_IDLEMESSAGE**，即标准 "Ready" 消息的 ID，该消息会在程序等待新消息时显示。 如果在应用程序向导中指定上下文相关帮助选项，则该消息将更改为 "获取帮助，请按 F1"。
+默认情况下，应用程序向导添加 **AFX_IDS_IDLEMESSAGE**，即标准 "Ready" 消息的 ID，该消息会在程序等待新消息时显示。 如果在应用程序向导中指定 Context-Sensitive "帮助" 选项，则该消息将更改为 "获取帮助，请按 F1"。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [消息处理和映射](message-handling-and-mapping.md)

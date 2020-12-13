@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： errno、_doserrno、_sys_errlist 和 _sys_nerr
 title: errno、_doserrno、_sys_errlist 和 _sys_nerr
 ms.date: 11/04/2016
 api_name:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: b15091ebfffec891b09f5024b14a8ca7fe0d02e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331167"
 ---
 # <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 
@@ -56,20 +57,20 @@ ms.locfileid: "70944559"
 |------------------|----------------------------|
 |`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md)、[_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md)、[_set_errno](../c-runtime-library/reference/set-errno.md)|
-|`_sys_errlist`， `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+|`_sys_errlist`, `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 库数学例程通过调用 [_matherr](../c-runtime-library/reference/matherr.md) 设置 `errno`。 若要以不同方式处理数学错误，请根据 `_matherr` 引用说明编写你自己的例程，并将其命名为 `_matherr`。
 
-下表中的所有 `errno` 值是在 \<errno.h> 中预定义的常量，并且与 UNIX 兼容。 ISO C99 标准中仅指定了 `ERANGE`、`EILSEQ` 和 `EDOM`。
+`errno`下表中的所有值都是中的预定义常量 \<errno.h> ，并且与 UNIX 兼容。 ISO C99 标准中仅指定了 `ERANGE`、`EILSEQ` 和 `EDOM`。
 
 |返回的常量|系统错误消息|值|
 |--------------|--------------------------|-----------|
 |`EPERM`|不允许执行该操作|1|
-|`ENOENT`|没有此文件或目录|2|
+|`ENOENT`|没有此类文件或目录|2|
 |`ESRCH`|没有此进程|3|
 |`EINTR`|函数中断|4|
 |`EIO`|I/O 错误|5|
-|`ENXIO`|没有此设备或地址|6|
+|`ENXIO`|没有此类设备或地址|6|
 |`E2BIG`|参数列表太长|7|
 |`ENOEXEC`|执行格式错误|8|
 |`EBADF`|文件编号错误|9|
@@ -79,7 +80,7 @@ ms.locfileid: "70944559"
 |`EACCES`|权限被拒绝|13|
 |`EFAULT`|地址错误|14|
 |`EBUSY`|设备或资源忙碌|16|
-|`EEXIST`|文件已存在|17|
+|`EEXIST`|文件存在|17|
 |`EXDEV`|跨设备链接|18|
 |`ENODEV`|没有此设备|19|
 |`ENOTDIR`|不是目录|20|
@@ -109,18 +110,18 @@ ms.locfileid: "70944559"
 
 |全局宏|必需的标头|可选标头|
 |------------------|---------------------|---------------------|
-|`errno`|\<errno.h> 或 \<stdlib.h>，\<cerrno> 或 \<cstdlib> (C++)||
-|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
+|`errno`|\<errno.h> 或 \<stdlib.h> \<cerrno> \<cstdlib> (c + +) ||
+|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>\<cstdlib> (c + +) |\<errno.h>\<cerrno> (c + +) |
 
-`_doserrno`、`_sys_errlist` 和 `_sys_nerr` 宏是 Microsoft 扩展。 有关更多兼容性信息，请参阅 [兼容性](../c-runtime-library/compatibility.md)。
+`_doserrno`、`_sys_errlist` 和 `_sys_nerr` 宏是 Microsoft 扩展。 有关兼容性的详细信息，请参阅[兼容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
 [全局变量](../c-runtime-library/global-variables.md)<br/>
 [errno 常量](../c-runtime-library/errno-constants.md)<br/>
 [perror、_wperror](../c-runtime-library/reference/perror-wperror.md)<br/>
-[strerror、_strerror、_wcserror、\__wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
-[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
+[strerror、_strerror、_wcserror \_ _wcserror](../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)<br/>
+[strerror_s、_strerror_s、_wcserror_s \_ _wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)<br/>
 [_get_doserrno](../c-runtime-library/reference/get-doserrno.md)<br/>
 [_set_doserrno](../c-runtime-library/reference/set-doserrno.md)<br/>
 [_get_errno](../c-runtime-library/reference/get-errno.md)<br/>

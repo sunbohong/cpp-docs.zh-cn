@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 title: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 ms.date: 4/2/2020
 api_name:
@@ -41,12 +42,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-ms.openlocfilehash: 24267a663af1aa68099861bfec1b0e5c18aa83be
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b4dcba09b139d1ad1c80e495477a6b7b2283e3f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919750"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332702"
 ---
 # <a name="iscntrl-iswcntrl-_iscntrl_l-_iswcntrl_l"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 
@@ -71,9 +72,9 @@ int _iswcntrl_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要测试的整数
 
 *locale*<br/>
@@ -81,11 +82,11 @@ int _iswcntrl_l(
 
 ## <a name="return-value"></a>返回值
 
-如果*c*是控制字符的特定表示形式，则每个例程将返回非零值。 如果*c*是一个控制字符（0X00-0X1F 或0x7f），则**iscntrl**将返回一个非零值。 如果*c*是一个控件宽字符，则**iswcntrl**将返回一个非零值。 如果*c*不满足测试条件，则这些例程都将返回0。
+如果 *c* 是控制字符的特定表示形式，则每个例程将返回非零值。 如果 *c* 是 (0X00-0X1F 或 0x7f) 的控制字符，则 **iscntrl** 将返回一个非零值。 如果 *c* 是一个控件宽字符，则 **iswcntrl** 将返回一个非零值。 如果 *c* 不满足测试条件，则这些例程都将返回0。
 
-这些具有 **_l**后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+这些具有 **_l** 后缀的函数的版本使用传入的区域设置参数而不是当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*c*不是 EOF 或介于0到0xff （含0和0xff），则**iscntrl**和 **_iscntrl_l**的行为是不确定的。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
+如果 *c* 不是 EOF 或介于0到0xff （含0和0xff），则 **iscntrl** 和 **_iscntrl_l** 的行为是不确定的。 当使用调试 CRT 库并且 *c* 不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -96,21 +97,21 @@ int _iswcntrl_l(
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**iscntrl**|\<ctype.h>|
-|**iswcntrl**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**iswcntrl**|\<ctype.h> 或 \<wchar.h>|
 |**_iscntrl_l**|\<ctype.h>|
-|**_iswcntrl_l**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**_iswcntrl_l**|\<ctype.h> 或 \<wchar.h>|
 
 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
-[is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[为，isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

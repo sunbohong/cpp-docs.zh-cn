@@ -1,5 +1,6 @@
 ---
-title: C 多页DHtml对话类
+description: 了解详细信息： CMultiPageDHtmlDialog 类
+title: CMultiPageDHtmlDialog 类
 ms.date: 03/27/2019
 f1_keywords:
 - CMultiPageDHtmlDialog
@@ -8,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 89e4830c3b5c6cb663ca2d2935adaaae3f356958
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f7f8c2081687c71a98e427bb5396cfa47a73deb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319656"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331527"
 ---
-# <a name="cmultipagedhtmldialog-class"></a>C 多页DHtml对话类
+# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 类
 
 多页对话框按顺序显示多个 HTML 页并处理每页中的事件。
 
@@ -29,24 +30,24 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[C 多页Html对话：：C多页DHtml对话](#cmultipagedhtmldialog)|构造多页（向导样式）DHTML对话框对象。|
-|[C 多页Html对话：：_c多页DHtml对话](#_dtorcmultipagedhtmldialog)|销毁多页 DHTML 对话框对象。|
+|[CMultiPageDHtmlDialog：： CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|) DHTML 对话框对象构造多页 (向导样式。|
+|[CMultiPageDHtmlDialog：： ~ CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|销毁多页 DHTML 对话框对象。|
 
 ## <a name="remarks"></a>备注
 
-执行此操作的机制是[DHTML 和 URL 事件映射](dhtml-event-maps.md)，其中包含每个页面的嵌入事件映射。
+用于执行此操作的机制为 [DHTML 和 URL 事件映射](dhtml-event-maps.md)，其中包含每个页面的嵌入事件映射。
 
 ## <a name="example"></a>示例
 
-此多页对话框假定三个 HTML 资源定义类似于向导的简单功能。 第一页有一个 **"下一步**"按钮，第二个按钮为 **"Prev"** 和 **"下一步**"按钮，第三页具有 **"Prev"** 按钮。 按下其中一个按钮时，处理程序函数将调用[CDHtmlDialog：：LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource)以加载相应的新页面。
+此多页对话框假设有三个定义类似于向导的简单功能的 HTML 资源。 第一页包含 "**下一步** **" 按钮、** 第二个 **按钮和第** 三 **个按钮。** 按下某个按钮时，处理程序函数会调用 [CDHtmlDialog：： LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) 以加载适当的新页。
 
-类声明的相关部分（在 CMyMultiPageDlg.h 中）：
+类声明的相关部分 (在 CMyMultiPageDlg 中) ：
 
 [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]
 
-类实现的相关部分（在 CMyMultipageDlg.cpp 中）：
+类实现 (在 CMyMultipageDlg) 中的相关部分：
 
 [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]
 
@@ -74,11 +75,11 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxdhtml.h
+**标头：** afxdhtml
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>C 多页Html对话：：C多页DHtml对话
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a> CMultiPageDHtmlDialog：： CMultiPageDHtmlDialog
 
-构造多页（向导样式）DHTML对话框对象。
+) DHTML 对话框对象构造多页 (向导样式。
 
 ```
 CMultiPageDHtmlDialog(
@@ -94,16 +95,16 @@ CMultiPageDHtmlDialog(
 CMultiPageDHtmlDialog();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*lpszTemplate 名称*<br/>
-作为对话框模板资源名称的 null 终止字符串。
+*lpszTemplateName*<br/>
+以 null 结尾的字符串，它是对话框模板资源的名称。
 
-*什奇雷斯ID*<br/>
-作为 HTML 资源名称的 null 终止字符串。
+*szHtmlResID*<br/>
+以 null 结尾的字符串，它是 HTML 资源的名称。
 
-*pparentwnd*<br/>
-指向对话框对象所属的父窗口或所有者窗口对象的指针[（CWnd](../../mfc/reference/cwnd-class.md)类型）。 如果为 NULL，则对话框对象的父窗口将设置为主应用程序窗口。
+*pParentWnd*<br/>
+一个指针，指向该对话框对象所属的) 类型为 [CWnd](../../mfc/reference/cwnd-class.md) 的父或所有者窗口对象 (。 如果为 NULL，则对话框对象的父窗口将设置为主应用程序窗口。
 
 *nIDTemplate*<br/>
 包含对话框模板资源的 ID 号。
@@ -111,7 +112,7 @@ CMultiPageDHtmlDialog();
 *nHtmlResID*<br/>
 包含 HTML 资源的 ID 号。
 
-## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>C 多页Html对话：：_c多页DHtml对话
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a> CMultiPageDHtmlDialog：： ~ CMultiPageDHtmlDialog
 
 销毁多页 DHTML 对话框对象。
 
@@ -119,6 +120,6 @@ CMultiPageDHtmlDialog();
 virtual ~CMultiPageDHtmlDialog();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[CDHtml对话类](../../mfc/reference/cdhtmldialog-class.md)
+[CDHtmlDialog 类](../../mfc/reference/cdhtmldialog-class.md)

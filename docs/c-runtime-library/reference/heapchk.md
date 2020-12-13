@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _heapchk
 title: _heapchk
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57cde789c8d6e6b8c8da91adf4a6f274ce557ed7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916217"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332802"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -50,7 +51,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>返回值
 
-**_heapchk**返回在 Malloc. h 中定义的以下整数清单常量之一。
+**_heapchk** 返回在 Malloc. h 中定义的以下整数清单常量之一。
 
 |返回值|条件|
 |-|-|
@@ -60,17 +61,17 @@ int _heapchk( void );
 | **_HEAPEMPTY** | 尚未初始化堆。 |
 | **_HEAPOK** | 堆看起来一致。 |
 
-此外，如果发生错误， **_heapchk**会将**Errno**设置为**ENOSYS**。
+此外，如果发生错误， **_heapchk** 会将 **Errno** 设置为 **ENOSYS**。
 
 ## <a name="remarks"></a>备注
 
-**_Heapchk**函数通过检查堆的最小一致性来帮助调试堆相关的问题。 如果操作系统不支持 **_heapchk**（例如，Windows 98），该函数将返回 **_HEAPOK**并将**errno**设置为**ENOSYS**。
+**_Heapchk** 函数通过检查堆的最小一致性来帮助调试堆相关的问题。 如果操作系统不支持 **_heapchk** (例如，Windows 98) ，则该函数将返回 **_HEAPOK** 并将 **errno** 设置为 **ENOSYS**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
@@ -119,7 +120,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../../c-runtime-library/heapadd.md)<br/>

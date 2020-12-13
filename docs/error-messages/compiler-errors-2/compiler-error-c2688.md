@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2688
 title: 编译器错误 C2688
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 17219fe6f4358b73ace0435e60d8fc2b7a9b6df8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330685"
 ---
 # <a name="compiler-error-c2688"></a>编译器错误 C2688
 
 "C2：： fgrv"：对 varargs 函数不支持具有多个或虚拟继承的协变返回
 
-当函数包含变量参数时，Visual C++返回类型不受 Visual 支持。
+当函数包含变量参数时，Visual C++ 中不支持协变返回类型。
 
 若要解决此错误，请定义函数，使它们不使用变量参数或使返回值对所有虚函数都是相同的。
 

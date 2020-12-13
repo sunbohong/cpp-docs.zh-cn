@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：输出 (设备上下文) 类
 title: 输出（设备上下文）类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-ms.openlocfilehash: b15f5034604f9d6b67574288140b79b144692478
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: e148999f2423165e7026bf68970fe9fc145930d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615362"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331786"
 ---
 # <a name="output-device-context-classes"></a>输出（设备上下文）类
 
@@ -37,7 +38,7 @@ Windows 的客户端区域的显示上下文。 例如，用于在对鼠标事�
 整个窗口的显示上下文，包括客户端和非工作区。
 
 [CMetaFileDC](reference/cmetafiledc-class.md)<br/>
-Windows 图元文件的设备上下文。 Windows 图元文件包含一系列图形设备接口（GDI）命令，可通过重播这些命令来创建映像。 对的成员函数的调用 `CMetaFileDC` 记录在图元文件中。
+Windows 图元文件的设备上下文。 Windows 图元文件包含一系列图形设备接口 (GDI) 命令，可通过重播这些命令来创建映像。 对的成员函数的调用 `CMetaFileDC` 记录在图元文件中。
 
 ## <a name="related-classes"></a>相关类
 
@@ -65,6 +66,6 @@ Windows 图元文件的设备上下文。 Windows 图元文件包含一系列图
 [CPrintDialog](reference/cprintdialog-class.md)<br/>
 提供用于打印文件的标准对话框。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

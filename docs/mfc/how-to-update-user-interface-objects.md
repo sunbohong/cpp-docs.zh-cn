@@ -1,4 +1,5 @@
 ---
+description: 了解有关详细信息，请参阅如何：更新 User-Interface 对象
 title: 如何：更新用户界面对象
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-ms.openlocfilehash: aec4067a7b5854ef872cfcef19a15db8438dd795
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 32d7c033d03ba679fa295237c1c49c5060c731ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626386"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330170"
 ---
 # <a name="how-to-update-user-interface-objects"></a>如何：更新用户界面对象
 
@@ -32,12 +33,12 @@ ms.locfileid: "84626386"
 
 下列主题介绍了更新处理程序的使用：
 
-- [调用更新处理程序时](when-update-handlers-are-called.md)
+- [何时调用更新处理程序](when-update-handlers-are-called.md)
 
 - [ON_UPDATE_COMMAND_UI 宏](on-update-command-ui-macro.md)
 
 - [CCmdUI 类](the-ccmdui-class.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [菜单](menus-mfc.md)

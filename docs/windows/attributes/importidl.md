@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： importidl
 title: 'importidl (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 8f3c2c5c67ac216d096d1082814c561698f3f732
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b10caa9f4b1467727c70b6d968ca6aa33b58da0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329880"
 ---
 # <a name="importidl"></a>importidl
 
@@ -23,14 +24,14 @@ ms.locfileid: "88842242"
 [ importidl(idl_file) ];
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idl_file*<br/>
 标识要与将为应用程序生成的 .idl 文件合并的 .idl 文件的名称。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Importidl** c + + 特性将该节放置在库块外 (*idl_file*) 到程序生成的 .idl 文件中，并 (将*idl_file*) 到程序生成的 .idl 文件的库部分。
+**Importidl** c + + 特性将该节放置在库块外 (*idl_file*) 到程序生成的 .idl 文件中，并 (将 *idl_file*) 到程序生成的 .idl 文件的库部分。
 
 例如，如果想要在生成的 .idl 文件中使用手编码的 .idl 文件，则可能需要使用 **importidl**。
 
@@ -54,7 +55,7 @@ ms.locfileid: "88842242"
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [编译器特性](compiler-attributes.md)<br/>
 [独立属性](stand-alone-attributes.md)<br/>

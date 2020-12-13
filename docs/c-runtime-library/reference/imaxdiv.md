@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： imaxdiv
 title: imaxdiv
 ms.date: 04/05/2018
 api_name:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-ms.openlocfilehash: 298356da8e8e76c132b963ef4f71db6a3d0e74f7
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3e1f417c1fb45b452b3cd07560bfec68d21fd1a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332771"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -44,7 +45,7 @@ imaxdiv_t imaxdiv(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *收藏*<br/>
 分子。
@@ -54,11 +55,11 @@ imaxdiv_t imaxdiv(
 
 ## <a name="return-value"></a>返回值
 
-使用[intmax_t](../../c-runtime-library/standard-types.md)类型的参数调用的**imaxdiv**返回由商和余数组成[imaxdiv_t](../../c-runtime-library/standard-types.md)类型的结构。
+使用 [intmax_t](../../c-runtime-library/standard-types.md)类型的参数调用的 **imaxdiv** 返回由商和余数组成 [imaxdiv_t](../../c-runtime-library/standard-types.md)类型的结构。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Imaxdiv**函数将*收藏*除以*denom* ，从而计算商和余数。 **Imaxdiv_t**结构包含商、 **intmax_t** **，以及**余数**intmax_t** **rem**。商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
+**Imaxdiv** 函数将 *收藏* 除以 *denom* ，从而计算商和余数。 **Imaxdiv_t** 结构包含商、 **intmax_t** **，以及** 余数 **intmax_t** **rem**。商的符号与数学商的符号相同。 其绝对值是小于数学商的绝对值的最大整数。 如果分母为 0，程序将终止并显示错误消息。
 
 ## <a name="requirements"></a>要求
 

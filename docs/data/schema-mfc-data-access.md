@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：架构 (MFC 数据访问) '
 title: 架构（MFC 数据访问）
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,21 +10,21 @@ helpviewer_keywords:
 - schemas [C++], database
 - structures [C++]
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
-ms.openlocfilehash: 0eac4f47c3d00c34c1aadaef18202a95f831ad82
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 87080cb05d22a5328e0e6ad5a36b25771d319209
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80209088"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332417"
 ---
 # <a name="schema--mfc-data-access"></a>架构（MFC 数据访问）
 
 数据库架构描述了表格的当前结构和数据库中的数据库视图。 一般情况下，向导生成的代码假定数据集所访问的表格的架构不会改变，但数据库类可以处理部分架构更改，如添加、重新排序或删除未绑定的列。 如果表格更改，则必须手动更新表格的记录集，然后重新编译应用程序。
 
-你还可以补充由向导生成的代码来处理在编译时并非完全清楚架构的数据库。 有关详细信息，请参阅[记录集：动态绑定数据列（ODBC）](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+你还可以补充由向导生成的代码来处理在编译时并非完全清楚架构的数据库。 有关详细信息，请参阅 [记录集：动态绑定数据列 (ODBC) ](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[数据访问编程 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[MFC/ATL (的数据访问编程) ](../data/data-access-programming-mfc-atl.md)<br/>
 [SQL](../data/odbc/sql.md)<br/>
 [记录集 (ODBC)](../data/odbc/recordset-odbc.md)

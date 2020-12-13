@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMFCToolBarFontSizeComboBox 类
 title: CMFCToolBarFontSizeComboBox 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: a355e62f2ef538372d70b9b2b393bc16bff2ef4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331750"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 类
 
-包含组合框控件的工具栏按钮，使用户能够选择字体大小。
+包含组合框控件的工具栏按钮，该控件使用户能够选择字体大小。
 
 ## <a name="syntax"></a>语法
 
@@ -35,29 +36,29 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CMFCToolBarFontSsCombox：CMFCToolBarFontSscombox](#cmfctoolbarfontsizecombobox)|构造 `CMFCToolBarFontSizeComboBox` 对象。|
+|[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|构造 `CMFCToolBarFontSizeComboBox` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CMFCToolBarFontSsSsBox：：获取Twipsize](#gettwipsize)|以 twips 返回所选字体大小。|
-|[CMFCToolBarFontSsBox：：重建字体](#rebuildfontsizes)|使用指定字体的所有支持字体大小填充组合框列表。|
-|[CMFCToolBarFontSsSsBox：：SetTwipSize](#settwipsize)|以 twips 设置字体大小。|
+|[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|返回所选字体大小（以缇为单位）。|
+|[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|用指定字体的所有支持的字号填充组合框列表。|
+|[CMFCToolBarFontSizeComboBox::SetTwipSize](#settwipsize)|设置字体大小（以缇为单位）。|
 
 ## <a name="remarks"></a>备注
 
-您可以将`CMFCToolBarFontSizeComboBox`对象与[CMFCToolBarFontComboBox 类](../../mfc/reference/cmfctoolbarfontcombobox-class.md)对象一起使用，以使用户能够选择字体和字体大小。
+可以将 `CMFCToolBarFontSizeComboBox` 对象与 [CMFCToolBarFontComboBox 类](../../mfc/reference/cmfctoolbarfontcombobox-class.md) 对象一起使用，以使用户能够选择字体和字体大小。
 
-您可以添加字体大小组合框按钮到工具栏，就像添加字体组合框按钮一样。 有关详细信息，请参阅[CMFCToolBarFontCombox 类](../../mfc/reference/cmfctoolbarfontcombobox-class.md)。
+您可以将 "字体大小" 组合框按钮添加到工具栏中，就像添加字体组合框按钮一样。 有关详细信息，请参阅 [CMFCToolBarFontComboBox 类](../../mfc/reference/cmfctoolbarfontcombobox-class.md)。
 
-当用户在`CMFCToolBarFontComboBox`对象中选择新字体时，可以使用[CMFCToolBoxSizeComboBox：："重建字体"](#rebuildfontsizes)方法，使用该字体支持的大小填充字体大小组合框。
+当用户在对象中选择新字体时 `CMFCToolBarFontComboBox` ，可以使用 [CMFCToolBarFontSizeComboBox：： RebuildFontSizes](#rebuildfontsizes) 方法填充字体大小组合框，该组合框中的字体大小受支持。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何在`CMFCToolBarFontSizeComboBox`类中使用各种方法来配置`CMFCToolBarFontSizeComboBox`对象。 该示例演示如何从文本框中检索字体大小（以 twips 形式），使用给定字体的所有有效大小填充字体大小组合框，并在 twips 中指定字体大小。 此代码片段属于 [Word Pad 示例](../../overview/visual-cpp-samples.md)。
+下面的示例演示如何使用类中的各种方法 `CMFCToolBarFontSizeComboBox` 配置 `CMFCToolBarFontSizeComboBox` 对象。 该示例演示了如何从文本框中检索字号（以缇为单位），在 "字体大小" 组合框中填充给定字体的所有有效大小，并以缇为单位指定字体大小。 此代码片段属于 [Word Pad 示例](../../overview/visual-cpp-samples.md)。
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 
@@ -67,15 +68,15 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-[CMFCToolBarComBox按钮](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
+[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)
 
-[CMFCToolBarFontSsComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
+[CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxtoolbarfontcombox.h
+**标头：** afxtoolbarfontcombobox
 
-## <a name="cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSsCombox：CMFCToolBarFontSscombox
+## <a name="cmfctoolbarfontsizecomboboxcmfctoolbarfontsizecombobox"></a><a name="cmfctoolbarfontsizecombobox"></a> CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox
 
 构造 `CMFCToolBarFontSizeComboBox` 对象。
 
@@ -83,9 +84,9 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 CMFCToolBarFontSizeComboBox();
 ```
 
-## <a name="cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a>CMFCToolBarFontSsSsBox：：获取Twipsize
+## <a name="cmfctoolbarfontsizecomboboxgettwipsize"></a><a name="gettwipsize"></a> CMFCToolBarFontSizeComboBox::GetTwipSize
 
-从字体大小组合框的文本框中检索字体大小（以 twips 形式显示）。
+从字号组合框的文本框中检索字号（以缇为单位）。
 
 ```
 int GetTwipSize() const;
@@ -93,9 +94,9 @@ int GetTwipSize() const;
 
 ### <a name="return-value"></a>返回值
 
-如果返回值为正，则为 twips 中的字体大小。 如果组合框的文本框为空，则为 -1。 如果发生错误，为 -2。
+如果返回值为正，则它是字号（以缇为单位）。 如果组合框的文本框为空，则为-1。 如果发生错误，则为-2。
 
-## <a name="cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a>CMFCToolBarFontSsBox：：重建字体
+## <a name="cmfctoolbarfontsizecomboboxrebuildfontsizes"></a><a name="rebuildfontsizes"></a> CMFCToolBarFontSizeComboBox::RebuildFontSizes
 
 使用给定字体的所有有效大小填充字体大小组合框。
 
@@ -103,39 +104,39 @@ int GetTwipSize() const;
 void RebuildFontSizes(const CString& strFontName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*串放大缩小字体功能 放大缩小字体功能*<br/>
-[在]指定字体名称。
+*strFontName*<br/>
+中指定字体名称。
 
 ### <a name="remarks"></a>备注
 
-如果要在字体组合框中的选择与字体大小组合框（如[CMFCToolBarFontCombox 类](../../mfc/reference/cmfctoolbarfontcombobox-class.md)）之间进行同步，请调用此功能。
+如果要在字体组合框中的选定内容与字体大小组合框（如 [CMFCToolBarFontComboBox 类](../../mfc/reference/cmfctoolbarfontcombobox-class.md)）之间进行同步，请调用此函数。
 
-## <a name="cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a>CMFCToolBarFontSsSsBox：：SetTwipSize
+## <a name="cmfctoolbarfontsizecomboboxsettwipsize"></a><a name="settwipsize"></a> CMFCToolBarFontSizeComboBox::SetTwipSize
 
-将指定大小（以 twips 为单位）舍入到最近的大小（以磅为单位），然后将组合框中的选定大小设置为该值。
+将指定大小 (以缇为单位舍入为最接近的大小（以磅为) 单位），然后将组合框中的选定大小设置为该值。
 
 ```cpp
 void SetTwipSize(int nSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nSize*<br/>
-[在]指定要设置的字体大小（以 twips 表示）。
+中指定要设置的字号 (以缇) 。
 
 ### <a name="remarks"></a>备注
 
-稍后，您可以通过调用[CMFCToolBarFontSizeComboBox：：GetTwipSize](#gettwipsize)方法来检索以前的有效字体大小。
+稍后可通过调用 [CMFCToolBarFontSizeComboBox：： GetTwipSize](#gettwipsize) 方法检索以前的有效字体大小。
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCToolBar 类](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFC工具栏按钮类](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
+[CMFCToolBarButton 类](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CMFCToolBarComboBoxButton 类](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)<br/>
 [CMFCFontInfo 类](../../mfc/reference/cmfcfontinfo-class.md)<br/>
-[CMFC工具栏：更换按钮](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
+[CMFCToolBar：： ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [演练：将控件置于工具栏上](../../mfc/walkthrough-putting-controls-on-toolbars.md)

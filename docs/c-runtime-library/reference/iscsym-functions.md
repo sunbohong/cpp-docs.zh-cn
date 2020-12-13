@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l
 title: iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l
 ms.date: 11/04/2016
 api_name:
@@ -65,12 +66,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: bc38e72818446a94a51a37b8df5c8c8582971b3f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e6b979800caf404ee79f8913b0431b941acd20cb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857757"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332695"
 ---
 # <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l
 
@@ -111,34 +112,34 @@ int _iswcsymf_l(
 #define iscsymf __iscsymf
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *c*<br/>
-要测试的整数。 对于函数的窄字符版本， *c*应在0-255 范围内。
+要测试的整数。 对于函数的窄字符版本， *c* 应在0-255 范围内。
 
 *locale*<br/>
 要使用的区域设置。
 
 ## <a name="return-value"></a>返回值
 
-如果*c*是字母、下划线或数字，则 **__iscsym**和 **__iswcsym**均返回非零值。 如果*c*是字母或下划线，则 **__iscsymf**和 **__iswcsymf**均返回非零值。 如果*c*不满足测试条件，则这些例程都将返回0。 这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的*区域设置*，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果 *c* 是字母、下划线或数字，则 **__iscsym** 和 **__iswcsym** 均返回非零值。 如果 *c* 是字母或下划线，则 **__iscsymf** 和 **__iswcsymf** 均返回非零值。 如果 *c* 不满足测试条件，则这些例程都将返回0。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的 *区域设置* ，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>备注
 
 除非定义了预处理器宏 _CTYPE_DISABLE_MACROS，否则这些例程将被定义为宏。 在使用这些例程的宏版本时，可多次计算参数。 使用参数列表中带副作用的表达式时要小心。
 
-为实现向后兼容性，仅当未定义[ &#95; &#95;&#95; STDC](../../preprocessor/predefined-macros.md)或将其定义为0时， **iscsym**和**iscsymf**才会定义为宏;否则，它们是不确定的。
+为实现向后兼容性，仅当未定义 [&#95;&#95;STDC&#95;&#95;](../../preprocessor/predefined-macros.md)或将其定义为0时， **iscsym** 和 **iscsymf** 才定义为宏;否则，它们是不确定的。
 
-## <a name="requirements"></a>需求
+## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**iscsym**、 **iscsymf**、 **__iscsym**、 **__iswcsym**、 **__iscsymf**、 **__iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、 **_iswcsymf_l**|C：\<ctype.h><br /><br /> C++：\<cctype> 或 \<ctype.h>|
+|**iscsym**、 **iscsymf**、 **__iscsym**、 **__iswcsym**、 **__iscsymf**、 **__iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、 **_iswcsymf_l**|Ansi-c \<ctype.h><br /><br /> C + +： \<cctype> 或 \<ctype.h>|
 
-**Iscsym**、 **iscsymf**、 **__iscsym**、 **__iswcsym**、 **__iscsymf**、 **__Iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**和 **_iswcsymf_l**例程是 Microsoft 特定的。 有关其他兼容性信息，请参见 [Compatibility](../../c-runtime-library/compatibility.md)。
+**Iscsym**、 **iscsymf**、 **__iscsym**、 **__iswcsym**、 **__iscsymf**、 **__Iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l** 和 **_iswcsymf_l** 例程是 Microsoft 特定的。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
+[为，isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

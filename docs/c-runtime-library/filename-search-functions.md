@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：文件名搜索函数
 title: 文件名搜索函数
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: fb5cc0e18d150d4171e33038e27810989c0f503b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1ab547de95906909a75bdd73f653c5cdae519879
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332947"
 ---
 # <a name="filename-search-functions"></a>文件名搜索函数
 
@@ -67,7 +68,7 @@ ms.locfileid: "87226237"
 不能指定目标属性（如 `_A_RDONLY`来限制执行查找操作。 这些属性在 `attrib` 结构的 `_finddata_t` 字段中返回，并且可能具有以下值（在 IO.h 中定义）。 用户不应依赖可能为 `attrib` 字段中的唯一值的这些值。
 
 `_A_ARCH`<br/>
-存档。 每当文件被**备份**命令更改和清除时设置。 值：0x20。
+存档。 每当文件被 **备份** 命令更改和清除时设置。 值：0x20。
 
 `_A_HIDDEN`<br/>
 隐藏文件。 使用 DIR 命令时通常不可见，除非使用 **/AH** 选项。 返回普通文件和具有此属性的文件的相关信息。 值：0x02。
@@ -104,7 +105,7 @@ ms.locfileid: "87226237"
 |`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|**`__int64`**|
 |`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
-`_fsize_t`是 **`typedef`** **`unsigned long`** （32位）的。
+`_fsize_t` 是 **`typedef`** **`unsigned long`** (32 位) 的。
 
 ## <a name="example"></a>示例
 
@@ -156,6 +157,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [系统调用](../c-runtime-library/system-calls.md)

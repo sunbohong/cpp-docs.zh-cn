@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： RuntimeClassBase 结构
 title: RuntimeClassBase 结构
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-ms.openlocfilehash: 29bcf37ce9bd524dfe09823e00fda4d41eedaf52
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ce5cf3eb4b352427c61db4998b161a82d4469c44
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213585"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330747"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase 结构
 
@@ -24,9 +25,9 @@ struct RuntimeClassBase;
 
 ## <a name="remarks"></a>备注
 
-用于检测[Make](make-function.md)函数中的 `RuntimeClass`。
+用于 `RuntimeClass` 在 [Make](make-function.md) 函数中检测。
 
-**RuntimeClassBase**是一个空的结构。
+**RuntimeClassBase** 是一个空的结构。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -38,6 +39,6 @@ struct RuntimeClassBase;
 
 **命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)
+[Microsoft：： WRL：:D etails 命名空间](microsoft-wrl-details-namespace.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CObList 类
 title: CObList 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -50,12 +51,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: a13363ef9b200051c26781ab6e9870a10de06d88
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: edfa476780e07b41f4f1e0abede24244ad837578
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331450"
 ---
 # <a name="coblist-class"></a>CObList 类
 
@@ -71,13 +72,13 @@ class CObList : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CObList：： CObList](#coblist)|为指针构造空列表 `CObject` 。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CObList：： AddHead](#addhead)|将一个元素 (或另一个列表中的所有元素) 添加到列表的开头 (会成为新的 head) 。|
 |[CObList：： AddTail](#addtail)|将一个元素 (或另一个列表中的所有元素) 添加到列表的尾部 (会生成新的尾部) 。|
@@ -141,13 +142,13 @@ POSITION AddHead(CObject* newElement);
 void AddHead(CObList* pNewList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *（Newelement*<br/>
 `CObject`要添加到此列表中的指针。
 
 *pNewList*<br/>
-指向其他列表的指针 `CObList` 。 *PNewList*中的元素将添加到此列表中。
+指向其他列表的指针 `CObList` 。 *PNewList* 中的元素将添加到此列表中。
 
 ### <a name="return-value"></a>返回值
 
@@ -187,13 +188,13 @@ POSITION AddTail(CObject* newElement);
 void AddTail(CObList* pNewList);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *（Newelement*<br/>
 `CObject`要添加到此列表中的指针。
 
 *pNewList*<br/>
-指向其他列表的指针 `CObList` 。 *PNewList*中的元素将添加到此列表中。
+指向其他列表的指针 `CObList` 。 *PNewList* 中的元素将添加到此列表中。
 
 ### <a name="return-value"></a>返回值
 
@@ -232,7 +233,7 @@ a CAge at $4526 40
 CObList(INT_PTR nBlockSize = 10);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nBlockSize*<br/>
 用于扩展列表的内存分配粒度。
@@ -268,7 +269,7 @@ POSITION Find(
     POSITION startAfter = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *searchValue*<br/>
 要在此列表中找到的对象指针。
@@ -305,7 +306,7 @@ POSITION Find(
 POSITION FindIndex(INT_PTR nIndex) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 要查找的列表元素的从零开始的索引。
@@ -316,7 +317,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 ### <a name="remarks"></a>备注
 
-它从列表的开头开始顺序扫描，在第 *n*个元素处停止。
+它从列表的开头开始顺序扫描，在第 *n* 个元素处停止。
 
 下表显示了与类似的其他成员函数 `CObList::FindIndex` 。
 
@@ -340,7 +341,7 @@ CObject*& GetAt(POSITION position);
 const CObject*& GetAt(POSITION position) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *position*<br/>
 由 previous `GetHeadPosition` 或成员函数调用返回的位置值 `Find` 。
@@ -452,14 +453,14 @@ POSITION GetHeadPosition() const;
 
 ## <a name="coblistgetnext"></a><a name="getnext"></a> CObList：： GetNext
 
-获取由 *rPosition*标识的列表元素，然后将 *rPosition* 设置为 `POSITION` 列表中下一项的值。
+获取由 *rPosition* 标识的列表元素，然后将 *rPosition* 设置为 `POSITION` 列表中下一项的值。
 
 ```
 CObject*& GetNext(POSITION& rPosition);
 const CObject* GetNext(POSITION& rPosition) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rPosition*<br/>
 对上一个 `GetNext` 、 `GetHeadPosition` 或其他成员函数调用返回的位置值的引用。
@@ -503,14 +504,14 @@ a CAge at $46C0 21
 
 ## <a name="coblistgetprev"></a><a name="getprev"></a> CObList：： GetPrev
 
-获取由 *rPosition*标识的列表元素，然后将 *rPosition* 设置为列表中上一项的位置值。
+获取由 *rPosition* 标识的列表元素，然后将 *rPosition* 设置为列表中上一项的位置值。
 
 ```
 CObject*& GetPrev(POSITION& rPosition);
 const CObject* GetPrev(POSITION& rPosition) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rPosition*<br/>
 对上一个 `GetPrev` 或其他成员函数调用返回的位置值的引用。
@@ -644,7 +645,7 @@ POSITION InsertAfter(
     CObject* newElement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *position*<br/>
 先前的 `GetNext` 、 `GetPrev` 或 `Find` 成员函数调用返回的位置值。
@@ -656,7 +657,7 @@ POSITION InsertAfter(
 
 |类|成员函数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|位置**InsertAfter ( 位置***位置* **，void** <strong>\*</strong> `newElement` **) ;**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|位置 **InsertAfter ( 位置***位置* **，void** <strong>\*</strong> `newElement` **) ;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter ( 位置***位置* **，const CString&** `newElement` **) ;**<br /><br /> **位置 InsertAfter ( 位置***位置* **，LPCTSTR** `newElement` **) ;**|
 
 ### <a name="return-value"></a>返回值
@@ -688,7 +689,7 @@ POSITION InsertBefore(
     CObject* newElement);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *position*<br/>
 先前的 `GetNext` 、 `GetPrev` 或 `Find` 成员函数调用返回的位置值。
@@ -704,7 +705,7 @@ POSITION InsertBefore(
 
 |类|成员函数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|位置**InsertBefore ( 位置***位置* **，void** <strong>\*</strong> `newElement` **) ;**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|位置 **InsertBefore ( 位置***位置* **，void** <strong>\*</strong> `newElement` **) ;**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore ( 位置***位置* **，const CString&** `newElement` **) ;**<br /><br /> **位置 InsertBefore ( 位置***位置* **，LPCTSTR** `newElement` **) ;**|
 
 ### <a name="example"></a>示例
@@ -780,7 +781,7 @@ void RemoveAll();
 void RemoveAt(POSITION position);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *position*<br/>
 要从列表中移除的元素的位置。
@@ -800,7 +801,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="example"></a>示例
 
-  在列表迭代期间删除元素时请小心。 下面的示例演示了一种可保证[GetNext](#getnext)的有效**位置**值的删除技术。
+  在列表迭代期间删除元素时请小心。 下面的示例演示了一种可保证 [GetNext](#getnext)的有效 **位置** 值的删除技术。
 
 有关类的列表，请参阅 [CObList：： CObList](#coblist) `CAge` 。
 
@@ -917,7 +918,7 @@ a CAge at $4D98 40
 a CAge at $4DB8 65
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

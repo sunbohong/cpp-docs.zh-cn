@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _isctype、iswctype、_isctype_l、_iswctype_l
 title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 4/2/2020
 api_name:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 2261eab574a8bc206a02f9e505beff88cf4c7fcf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2b8bd10cd4240e4382d17cb8028589ddf4dd8b2d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918954"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332672"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-针对*desc*参数指定的 ctype 属性测试*c* 。 对于*desc*的每个有效值，都有一个等效的宽字符分类例程。
+针对 *desc* 参数指定的 ctype 属性测试 *c* 。 对于 *desc* 的每个有效值，都有一个等效的宽字符分类例程。
 
 ## <a name="syntax"></a>语法
 
@@ -80,9 +81,9 @@ int _iswctype_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要测试的整数。
 
 *desc*<br/>
@@ -93,29 +94,29 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>返回值
 
-如果当前区域设置中的*desc*指定了属性 *，则* **_isctype**和**iswctype**返回非零值; 如果未指定，则返回0。 这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果当前区域设置中的 *desc* 指定了属性 *，则* **_isctype** 和 **iswctype** 返回非零值; 如果未指定，则返回0。 这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置，而不是其与区域设置相关的行为的当前区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-如果*c*不是 EOF 或介于0到0xff （含0和0xff），则不确定 **_isctype**和 **_isctype_l**的行为。 当使用调试 CRT 库并且*c*不是这些值之一时，函数将引发断言。
+如果 *c* 不是 EOF 或介于0到0xff （含0和0xff），则不确定 **_isctype** 和 **_isctype_l** 的行为。 当使用调试 CRT 库并且 *c* 不是这些值之一时，函数将引发断言。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
 |Tchar.h 例程|未定义 _UNICODE 和 _MBCS|已定义 _MBCS|已定义 _UNICODE|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|不适用|**_isctype**|不适用|**_iswctype**|
-|不适用|**_isctype_l**|不适用|**_iswctype_l**|
+|n/a|**_isctype**|n/a|**_iswctype**|
+|n/a|**_isctype_l**|n/a|**_iswctype_l**|
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
-|**iswctype**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**iswctype**|\<ctype.h> 或 \<wchar.h>|
 |**_isctype_l**|\<ctype.h>|
-|**_iswctype_l**|\<ctype.h 1> 或 \<wchar.h 1>|
+|**_iswctype_l**|\<ctype.h> 或 \<wchar.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -123,8 +124,8 @@ int _iswctype_l(
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字符分类](../../c-runtime-library/character-classification.md)<br/>
-[本地](../../c-runtime-library/locale.md)<br/>
-[is、isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>
+[区域设置](../../c-runtime-library/locale.md)<br/>
+[为，isw 例程](../../c-runtime-library/is-isw-routines.md)<br/>

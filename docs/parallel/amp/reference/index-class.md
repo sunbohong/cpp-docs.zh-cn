@@ -1,4 +1,5 @@
 ---
+description: 详细了解： index 类
 title: index 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 50222015e6b365dc161fd4334067c26c7f288337
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 46b49a7e0f65f06ad64ed32367cdfe6f6ca5ed1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365151"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330045"
 ---
 # <a name="index-class"></a>index 类
 
-定义*N-* 维索引矢量。
+定义一个 *N* 维索引向量。
 
 ## <a name="syntax"></a>语法
 
@@ -26,38 +27,38 @@ template <int _Rank>
 class index;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
-排名或维度数。
+级别或维度数。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[索引构造函数](#index_ctor)|初始化 `index` 类的新实例。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[运算符--](#operator--)|声明`index`对象的每个元素。|
-|[运算符%*](#operator_mod_eq)|当该元素除以数字时，`index`计算对象中每个元素的模数（剩余数）。|
-|[运算符*](#operator_star_eq)|将`index`对象的每个元素乘以数字。|
-|[操作员/*](#operator_div_eq)|将`index`对象的每个元素除以数字。|
-|[索引：：运算符\[\]](#operator_at)|返回指定索引处的元素。|
-|[运算符*](#operator_add_add)|增加`index`对象的每个元素。|
-|[运算符*](#operator_add_eq)|将指定的编号添加到`index`对象的每个元素。|
-|[运算符*](#operator_eq)|将指定`index`对象的内容复制到此对象中。|
-|[运算符-*](#operator_-_eq)|从`index`对象的每个元素中减去指定的数字。|
+|[operator--](#operator--)|递减对象的每个元素 `index` 。|
+|[运算符% =](#operator_mod_eq)|计算对象中每个元素的取模 (余数) `index` 。|
+|[运算符 * =](#operator_star_eq)|将对象的每个元素乘以 `index` 一个数字。|
+|[operator/=](#operator_div_eq)|对象的每个元素除以 `index` 一个数字。|
+|[index：： operator\[\]](#operator_at)|返回位于指定索引处的元素。|
+|[operator + +](#operator_add_add)|递增对象的每个元素 `index` 。|
+|[运算符 + =](#operator_add_eq)|将指定的数字添加到对象的每个元素 `index` 。|
+|[operator =](#operator_eq)|将指定对象的内容复制 `index` 到此对象中。|
+|[operator-=](#operator_-_eq)|从对象的每个元素中减去指定数字 `index` 。|
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[排名 常量](#rank)|存储`index`对象的排名。|
+|[rank 常量](#rank)|存储对象的秩 `index` 。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -65,7 +66,7 @@ class index;
 
 ## <a name="remarks"></a>备注
 
-该`index`结构表示*N*整数的坐标矢量，该矢量指定*N-* 维空间中的唯一位置。 矢量中的值从最显著到最不显著进行排序。 可以使用[运算符*](#operator_eq)检索组件的值。
+`index`结构表示在 *n* 维空间中指定唯一位置的 *n* 个整数的坐标向量。 矢量中的值按从最重要到最不重要的顺序排列。 您可以使用 [operator =](#operator_eq)检索组件的值。
 
 ## <a name="requirements"></a>要求
 
@@ -73,7 +74,7 @@ class index;
 
 **命名空间：** 并发
 
-## <a name="index-constructor"></a><a name="index_ctor"></a>索引构造函数
+## <a name="index-constructor"></a><a name="index_ctor"></a> 索引构造函数
 
 初始化索引类的新实例。
 
@@ -104,7 +105,7 @@ explicit index(
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Array*<br/>
 具有排名值的一维数组。
@@ -113,20 +114,20 @@ explicit index(
 一维索引中的索引位置。
 
 *_I0*<br/>
-最重要的维度的长度。
+最有效维度的长度。
 
 *_I1*<br/>
-第二个最重要的维度的长度。
+最高有效维度的长度。
 
 *_I2*<br/>
-最小尺寸的长度。
+最小的有效维度的长度。
 
 *_Other*<br/>
 新索引对象所基于的索引对象。
 
-## <a name="operator--"></a><a name="operator--"></a>运算符--
+## <a name="operator--"></a><a name="operator--"></a> operator--
 
-声明索引对象的每个元素。
+递减索引对象的每个元素。
 
 ```cpp
 index<_Rank>& operator--() restrict(amp,cpu);
@@ -138,9 +139,9 @@ index operator--(
 
 ### <a name="return-values"></a>返回值
 
-对于前缀运算符，索引对象 （*THIS）。 对于后缀运算符，一个新的索引对象。
+对于前缀运算符，索引对象 ( * this) 。 对于后缀运算符，则为新的索引对象。
 
-## <a name="operator"></a><a name="operator_mod_eq"></a>运算符%*
+## <a name="operator"></a><a name="operator_mod_eq"></a> 运算符% =
 
 在元素被某个指定的数除时，计算 index 对象中每个元素的模数（余数）。
 
@@ -150,7 +151,7 @@ index<_Rank>& operator%=(
 ) restrict(cpu, amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rhs*<br/>
 要通过除法查找模数的数字。
@@ -159,9 +160,9 @@ index<_Rank>& operator%=(
 
 The index 对象。
 
-## <a name="operator"></a><a name="operator_star_eq"></a>运算符*
+## <a name="operator"></a><a name="operator_star_eq"></a> 运算符 * =
 
-将索引对象中的每个元素乘以指定数字。
+将索引对象中的每个元素乘以指定的数字。
 
 ```cpp
 index<_Rank>& operator*=(
@@ -169,14 +170,14 @@ index<_Rank>& operator*=(
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rhs*<br/>
-要乘法的数字。
+要相乘的数字。
 
-## <a name="operator"></a><a name="operator_div_eq"></a>操作员/*
+## <a name="operator"></a><a name="operator_div_eq"></a> operator/=
 
-将索引对象中的每个元素除以指定数字。
+将索引对象中的每个元素除以指定的数字。
 
 ```cpp
 index<_Rank>& operator/=(
@@ -184,14 +185,14 @@ index<_Rank>& operator/=(
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rhs*<br/>
-要除的编号。
+要除以的数字。
 
-## <a name="operator"></a><a name="operator_at"></a>算子\[\]
+## <a name="operator"></a><a name="operator_at"></a> 操作员\[\]
 
-返回指定位置的索引的组件。
+返回位于指定位置的索引的组件。
 
 ```cpp
 int operator[] (
@@ -203,18 +204,18 @@ int& operator[] (
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Index*<br/>
-从 0 到排名减去 1 的整数。
+0到级别减1之间的整数。
 
 ### <a name="return-value"></a>返回值
 
-在指定索引处的元素。
+位于指定索引处的元素。
 
 ### <a name="remarks"></a>备注
 
-以下示例显示索引的组件值。
+下面的示例显示索引的组件值。
 
 ```cpp
 // Prints 1 2 3.
@@ -224,9 +225,9 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator"></a><a name="operator_add_add"></a>运算符*
+## <a name="operator"></a><a name="operator_add_add"></a> operator + +
 
-增加索引对象的每个元素。
+递增索引对象的每个元素。
 
 ```cpp
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -238,11 +239,11 @@ index<_Rank> operator++(
 
 ### <a name="return-value"></a>返回值
 
-对于前缀运算符，索引对象 （*THIS）。 对于后缀运算符，一个新的索引对象。
+对于前缀运算符，索引对象 ( * this) 。 对于后缀运算符，则为新的索引对象。
 
-## <a name="operator"></a><a name="operator_add_eq"></a>运算符*
+## <a name="operator"></a><a name="operator_add_eq"></a> 运算符 + =
 
-将指定的编号添加到索引对象的每个元素。
+将指定数字添加到 index 对象的每个元素。
 
 ```cpp
 index<_Rank>& operator+=(
@@ -254,16 +255,16 @@ index<_Rank>& operator+=(
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rhs*<br/>
-要添加的编号。
+要添加的数目。
 
 ### <a name="return-value"></a>返回值
 
 The index 对象。
 
-## <a name="operator"></a><a name="operator_eq"></a>运算符*
+## <a name="operator"></a><a name="operator_eq"></a> operator =
 
 将指定索引对象的内容复制到此对象中。
 
@@ -273,18 +274,18 @@ index<_Rank>& operator=(
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Other*<br/>
-要从中复制的索引对象。
+要从中进行复制的索引对象。
 
 ### <a name="return-value"></a>返回值
 
 对此索引对象的引用。
 
-## <a name="operator-"></a><a name="operator_-_eq"></a>运算符-*
+## <a name="operator-"></a><a name="operator_-_eq"></a> operator-=
 
-从索引对象的每个元素中减去指定的数字。
+从 index 对象的每个元素中减去指定数字。
 
 ```cpp
 index<_Rank>& operator-=(
@@ -296,7 +297,7 @@ index<_Rank>& operator-=(
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rhs*<br/>
 要减去的数字。
@@ -305,7 +306,7 @@ index<_Rank>& operator-=(
 
 The index 对象。
 
-## <a name="rank"></a><a name="rank"></a>排名
+## <a name="rank"></a><a name="rank"></a> 级别
 
 获取 index 对象的秩。
 
@@ -313,6 +314,6 @@ The index 对象。
 static const int rank = _Rank;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Concurrency 命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

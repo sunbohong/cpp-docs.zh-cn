@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： norm_3 类
 title: norm_3 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -72,12 +73,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ac5419ac8bfaa0f0359d15399f163307cf4a6859
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97329975"
 ---
 # <a name="norm_3-class"></a>norm_3 类
 
@@ -89,114 +90,114 @@ ms.locfileid: "77142164"
 class norm_3;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[norm_3 构造函数](#ctor)|已重载。 默认构造函数，用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|norm_3::get_x||
-|norm_3::get_xy||
-|norm_3::get_xyz||
-|norm_3::get_xz||
-|norm_3::get_xzy||
-|norm_3::get_y||
-|norm_3::get_yx||
-|norm_3::get_yxz||
-|norm_3::get_yz||
-|norm_3::get_yzx||
-|norm_3::get_z||
-|norm_3::get_zx||
-|norm_3::get_zxy||
-|norm_3::get_zy||
-|norm_3::get_zyx||
-|norm_3::ref_b||
-|norm_3::ref_g||
-|norm_3::ref_r||
-|norm_3::ref_x||
-|norm_3::ref_y||
-|norm_3::ref_z||
-|norm_3::set_x||
-|norm_3::set_xy||
-|norm_3::set_xyz||
-|norm_3::set_xz||
-|norm_3::set_xzy||
-|norm_3::set_y||
-|norm_3::set_yx||
-|norm_3::set_yxz||
-|norm_3::set_yz||
-|norm_3::set_yzx||
-|norm_3::set_z||
-|norm_3::set_zx||
-|norm_3::set_zxy||
-|norm_3::set_zy||
-|norm_3::set_zyx||
+|norm_3：： get_x||
+|norm_3：： get_xy||
+|norm_3：： get_xyz||
+|norm_3：： get_xz||
+|norm_3：： get_xzy||
+|norm_3：： get_y||
+|norm_3：： get_yx||
+|norm_3：： get_yxz||
+|norm_3：： get_yz||
+|norm_3：： get_yzx||
+|norm_3：： get_z||
+|norm_3：： get_zx||
+|norm_3：： get_zxy||
+|norm_3：： get_zy||
+|norm_3：： get_zyx||
+|norm_3：： ref_b||
+|norm_3：： ref_g||
+|norm_3：： ref_r||
+|norm_3：： ref_x||
+|norm_3：： ref_y||
+|norm_3：： ref_z||
+|norm_3：： set_x||
+|norm_3：： set_xy||
+|norm_3：： set_xyz||
+|norm_3：： set_xz||
+|norm_3：： set_xzy||
+|norm_3：： set_y||
+|norm_3：： set_yx||
+|norm_3：： set_yxz||
+|norm_3：： set_yz||
+|norm_3：： set_yzx||
+|norm_3：： set_z||
+|norm_3：： set_zx||
+|norm_3：： set_zxy||
+|norm_3：： set_zy||
+|norm_3：： set_zyx||
 
-### <a name="public-operators"></a>公用運算子
+### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|norm_3::operator-||
-|norm_3::operator--||
-|norm_3::operator*=||
-|norm_3::operator/=||
-|norm_3::operator++||
-|norm_3::operator+=||
-|norm_3::operator=||
-|norm_3::operator-=||
+|norm_3：： operator-||
+|norm_3：： operator--||
+|norm_3：： operator * =||
+|norm_3：： operator/=||
+|norm_3：： operator + +||
+|norm_3：： operator + =||
+|norm_3：： operator =||
+|norm_3：： operator-=||
 
 ### <a name="public-constants"></a>公共常量
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[大小常量](#size)||
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|norm_3::b||
-|norm_3::bg||
-|norm_3::bgr||
-|norm_3::br||
-|norm_3::brg||
+|norm_3：： b||
+|norm_3：： bg||
+|norm_3：： bgr||
+|norm_3：： br||
+|norm_3：： brg||
 |norm_3：： g||
-|norm_3::gb||
-|norm_3::gbr||
-|norm_3::gr||
-|norm_3::grb||
+|norm_3：： gb||
+|norm_3：： gbr||
+|norm_3：： gr||
+|norm_3：： grb||
 |norm_3：： r||
-|norm_3::rb||
-|norm_3::rbg||
-|norm_3::rg||
-|norm_3::rgb||
-|norm_3::x||
-|norm_3::xy||
-|norm_3::xyz||
-|norm_3::xz||
-|norm_3::xzy||
+|norm_3：： rb||
+|norm_3：： rbg||
+|norm_3：： rg||
+|norm_3：： rgb||
+|norm_3：： x||
+|norm_3：： xy||
+|norm_3：： xyz||
+|norm_3：： xz||
+|norm_3：： xzy||
 |norm_3：： y||
-|norm_3::yx||
-|norm_3::yxz||
-|norm_3::yz||
-|norm_3::yzx||
-|norm_3::z||
-|norm_3::zx||
-|norm_3::zxy||
-|norm_3::zy||
-|norm_3::zyx||
+|norm_3：： yx||
+|norm_3：： yxz||
+|norm_3：： yz||
+|norm_3：： yzx||
+|norm_3：： z||
+|norm_3：： zx||
+|norm_3：： zxy||
+|norm_3：： zy||
+|norm_3：： zyx||
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -208,7 +209,7 @@ class norm_3;
 
 **命名空间：** Concurrency：： graphics
 
-## <a name="ctor"></a>norm_3 构造函数
+## <a name="norm_3-constructor"></a><a name="ctor"></a> norm_3 构造函数
 
 默认构造函数，用0初始化所有元素。
 
@@ -257,7 +258,7 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_V0*<br/>
 要初始化元素0的值。
@@ -282,6 +283,6 @@ explicit inline norm_3(
 static const int size = 3;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Concurrency::graphics 命名空间](concurrency-graphics-namespace.md)

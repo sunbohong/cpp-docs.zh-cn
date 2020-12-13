@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 ms.date: 10/21/2019
 api_name:
@@ -48,19 +49,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 45dcbd93ab689c8c86ab35e53552a65f561dfd18
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65c025c7a02c0bd9493bcaf8d6ff0e29c6c7a217
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234245"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332917"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 从控制台读取格式数据。 提供这些函数的更安全版本。请参阅 [_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)。
 
 > [!NOTE]
-> 在 Visual Studio 2015 中， `printf` 和 `scanf` 系列函数被声明为并 **`inline`** 移至 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现*LNK2019* 。 有关详细信息，请参阅[Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
+> 在 Visual Studio 2015 中， `printf` 和 `scanf` 系列函数被声明为并 **`inline`** 移至 `<stdio.h>` 和 `<conio.h>` 标头。 如果迁移的是较旧的代码，则与这些函数的连接可能会出现 *LNK2019* 。 有关详细信息，请参阅 [Visual C++ change history 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 > [!IMPORTANT]
 > 此 API 不能用于在 Windows 运行时中执行的应用程序。 有关详细信息，请参阅[通用 Windows 平台应用中不支持的 CRT 函数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
@@ -88,7 +89,7 @@ int _cwscanf_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *format*<br/>
 窗体控件字符串。
@@ -101,15 +102,15 @@ argument <br/>
 
 ## <a name="return-value"></a>返回值
 
-已成功转换和分配的字段数。 返回值不包括已读取但未分配的字段。 返回值为**EOF** ，尝试在文件末尾进行读取。 在操作系统命令行级别重定向键盘输入时，会发生这种情况。 返回值为 0 表示没有分配任何字段。
+已成功转换和分配的字段数。 返回值不包括已读取但未分配的字段。 返回值为 **EOF** ，尝试在文件末尾进行读取。 在操作系统命令行级别重定向键盘输入时，会发生这种情况。 返回值为 0 表示没有分配任何字段。
 
 ## <a name="remarks"></a>备注
 
-**_Cscanf**函数将数据直接从控制台读取到由*参数*指定的位置。 [_Getche](getch-getwch.md) 函数用于读取字符。 每个可选参数都必须是指向类型的变量的指针，该类型与*格式*的类型说明符对应。 格式控制输入字段的解释，其形式和函数与[scanf](scanf-scanf-l-wscanf-wscanf-l.md)函数的*format*参数相同。 尽管 **_cscanf**通常会回显输入字符，但如果最后一次调用 **_ungetch**，则不会这样做。
+**_Cscanf** 函数将数据直接从控制台读取到由 *参数* 指定的位置。 [_Getche](getch-getwch.md) 函数用于读取字符。 每个可选参数都必须是指向类型的变量的指针，该类型与 *格式* 的类型说明符对应。 格式控制输入字段的解释，其形式和函数与 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)函数的 *format* 参数相同。 尽管 **_cscanf** 通常会回显输入字符，但如果最后一次调用 **_ungetch**，则不会这样做。
 
-此函数验证其参数。 如果 format 为**NULL**，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**EINVAL** ，并且该函数将返回**EOF**。
+此函数验证其参数。 如果 format 为 **NULL**，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **EINVAL** ，并且该函数将返回 **EOF**。
 
-这些具有 **_l**后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
+这些具有 **_l** 后缀的函数的版本相同，只不过它们使用传入的区域设置参数而不是当前线程区域设置。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -164,7 +165,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

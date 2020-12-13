@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __writegsbyte、__writegsdword、__writegsqword、__writegsword
 title: __writegsbyte, __writegsdword, __writegsqword, __writegsword
 ms.date: 09/02/2019
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-ms.openlocfilehash: 7b9e812776e9b2bb0820905d088111669096db64
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e3dd3284d38f4c1518fbf5f7184d15fc0c9d67d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221202"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331845"
 ---
 # <a name="__writegsbyte-__writegsdword-__writegsqword-__writegsword"></a>__writegsbyte, __writegsdword, __writegsqword, __writegsword
 
@@ -46,7 +47,7 @@ void __writegsqword(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *抵销*\
 中要写入到 GS 开头的偏移量。
@@ -56,14 +57,14 @@ void __writegsqword(
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__writegsbyte`|X64|
 |`__writegsdword`|X64|
 |`__writegsqword`|X64|
 |`__writegsword`|X64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
@@ -73,5 +74,5 @@ void __writegsqword(
 
 ## <a name="see-also"></a>请参阅
 
-[__readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[__readgsbyte、 \_ _readgsdword、 \_ _readgsqword \_ _readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)

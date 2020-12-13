@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CNetAddressCtrl 类
 title: CNetAddressCtrl 类
 ms.date: 11/19/2018
 f1_keywords:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: e92ea79727248afd84dd08058ea8f23cc8d14f44
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 66f2bb647d02b262f9264d5a99f84a3fb23fc119
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686582"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331508"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 类
 
@@ -120,7 +121,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*\
 中要应用于控件的样式的按位组合。 有关详细信息，请参阅 [编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。
@@ -151,10 +152,10 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*\
-中要应用于控件的扩展样式的按位组合 (或) 。 有关详细信息，请参阅[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函数的*dwExStyle*参数。
+中要应用于控件的扩展样式的按位组合 (或) 。 有关详细信息，请参阅 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函数的 *dwExStyle* 参数。
 
 *dwStyle*\
 中要应用于控件的样式的按位组合 (或) 。 有关详细信息，请参阅 [编辑样式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。
@@ -198,7 +199,7 @@ HRESULT DisplayErrorTip();
 HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pAddress*<br/>
 [in，out]指向 [NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address) 结构的指针。  在调用 GetAddress 方法之前，将此结构的 *pAddrInfo* 成员设置为 [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type) 结构的地址。
@@ -239,7 +240,7 @@ DWORD GetAllowType() const;
 HRESULT SetAllowType(DWORD dwAddrMask);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwAddrMask*\
 中按位组合 (或) 指定网络地址控件可以支持的地址类型的标志。 有关详细信息，请参阅 [NET_STRING](/windows/win32/shell/net-string)。

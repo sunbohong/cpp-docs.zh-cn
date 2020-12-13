@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：事件类
 title: event 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 3f2ec71083f7a7905bad5cda014baba914e31e79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 3c33096795d1980ea78cbce8c38fa9305ee45cd0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215798"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331246"
 ---
 # <a name="event-class"></a>event 类
 
@@ -32,7 +33,7 @@ class event;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[~ 事件析构函数](#dtor)|销毁事件。|
 
@@ -42,7 +43,7 @@ class event;
 |----------|-----------------|
 |[reset](#reset)|将事件重置为非终止状态。|
 |[set](#set)|发出事件信号。|
-|[再](#wait)|等待事件进入终止状态。|
+|[wait](#wait)|等待事件进入终止状态。|
 |[wait_for_multiple](#wait_for_multiple)|等待多个事件发出信号。|
 
 ### <a name="public-constants"></a>公共常量
@@ -53,7 +54,7 @@ class event;
 
 ## <a name="remarks"></a>备注
 
-有关详细信息，请参阅[同步数据结构](../../../parallel/concrt/synchronization-data-structures.md)。
+有关详细信息，请参阅 [同步数据结构](../../../parallel/concrt/synchronization-data-structures.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -75,7 +76,7 @@ _CRTIMP event();
 
 ### <a name="remarks"></a>备注
 
-## <a name="event"></a><a name="dtor"></a>~ 事件
+## <a name="event"></a><a name="dtor"></a> ~ 事件
 
 销毁事件。
 
@@ -87,7 +88,7 @@ _CRTIMP event();
 
 当析构函数运行时，预期不会有等待事件的线程。 在线程仍处于等待状态时允许析构事件会导致未定义的行为。
 
-## <a name="reset"></a><a name="reset"></a>&
+## <a name="reset"></a><a name="reset"></a> &
 
 将事件重置为非终止状态。
 
@@ -95,7 +96,7 @@ _CRTIMP event();
 void reset();
 ```
 
-## <a name="set"></a><a name="set"></a>字符集
+## <a name="set"></a><a name="set"></a> 字符集
 
 发出事件信号。
 
@@ -107,7 +108,7 @@ void set();
 
 发出事件信号会导致等待该事件的任意数量的上下文变为可运行。
 
-## <a name="timeout_infinite"></a><a name="timeout_infinite"></a>timeout_infinite
+## <a name="timeout_infinite"></a><a name="timeout_infinite"></a> timeout_infinite
 
 指示等待永远不应超时的值。
 
@@ -115,7 +116,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```
 
-## <a name="wait"></a><a name="wait"></a>再
+## <a name="wait"></a><a name="wait"></a> 再
 
 等待事件进入终止状态。
 
@@ -123,7 +124,7 @@ static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Timeout*<br/>
 指示等待超时前等待的毫秒数。值 `COOPERATIVE_TIMEOUT_INFINITE` 表示没有超时。
@@ -133,9 +134,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 如果已满足等待，则返回值 `0` ; 否则返回值，该值 `COOPERATIVE_WAIT_TIMEOUT` 指示等待超时，而不会向事件发出信号。
 
 > [!IMPORTANT]
-> 在通用 Windows 平台（UWP）应用程序中，不要 `wait` 在 ASTA 线程上调用，因为此调用会阻止当前线程，并可能导致应用程序停止响应。
+> 在通用 Windows 平台 (UWP) 应用程序中，不要 `wait` 在 ASTA 线程上调用，因为此调用会阻止当前线程，并可能导致应用程序停止响应。
 
-## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a>wait_for_multiple
+## <a name="wait_for_multiple"></a><a name="wait_for_multiple"></a> wait_for_multiple
 
 等待多个事件发出信号。
 
@@ -147,7 +148,7 @@ static size_t __cdecl wait_for_multiple(
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PPEvents*<br/>
 要等待的事件的数组。 数组中的事件数由 `count` 参数表示。
@@ -170,8 +171,8 @@ static size_t __cdecl wait_for_multiple(
 如果将参数 `_FWaitAll` 设置为值， **`true`** 以指示所有事件都必须收到信号才能满足等待，则函数返回的索引不会对不是值这一事实产生任何特殊意义 `COOPERATIVE_WAIT_TIMEOUT` 。
 
 > [!IMPORTANT]
-> 在通用 Windows 平台（UWP）应用程序中，不要 `wait_for_multiple` 在 ASTA 线程上调用，因为此调用会阻止当前线程，并可能导致应用程序停止响应。
+> 在通用 Windows 平台 (UWP) 应用程序中，不要 `wait_for_multiple` 在 ASTA 线程上调用，因为此调用会阻止当前线程，并可能导致应用程序停止响应。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

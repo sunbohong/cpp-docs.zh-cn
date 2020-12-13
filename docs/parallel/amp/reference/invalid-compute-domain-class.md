@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： invalid_compute_domain 类
 title: invalid_compute_domain 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 09418991e805e494c1d79ef31980bbec66a2e172
-ms.sourcegitcommit: ced5ff1431ffbd25b20d106901955532723bd188
+ms.openlocfilehash: 7598180a12cacabcdb308c3924c84eb17ec90ed7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92135562"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97330002"
 ---
 # <a name="invalid_compute_domain-class"></a>invalid_compute_domain 类
 
@@ -49,7 +50,7 @@ class invalid_compute_domain : public runtime_exception;
 
 ## <a name="invalid_compute_domain"></a><a name="ctor"></a> invalid_compute_domain
 
-初始化此类的新实例。
+初始化类的新实例。
 
 ### <a name="syntax"></a>语法
 
@@ -60,7 +61,7 @@ explicit invalid_compute_domain(
 invalid_compute_domain() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 对错误的说明。
@@ -69,6 +70,6 @@ invalid_compute_domain() throw();
 
 类的实例 `invalid_compute_domain`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

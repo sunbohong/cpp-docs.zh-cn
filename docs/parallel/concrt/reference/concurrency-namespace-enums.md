@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：并发命名空间枚举
 title: 并发命名空间枚举
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 8b9aec0a3464b921ca80f731ac4a3c26e72ef34e
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9d4f5e2fcdb2beb19d65f96687b53e52ba03ed8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88832238"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331302"
 ---
 # <a name="concurrency-namespace-enums"></a>并发命名空间枚举
 
@@ -54,7 +55,7 @@ enum agent_status;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`agent_canceled`|已取消 `agent`。|
 |`agent_created`|`agent`已创建但尚未启动。|
@@ -62,7 +63,7 @@ enum agent_status;
 |`agent_runnable`|`agent`已启动，但未输入其 `run` 方法。|
 |`agent_started`|`agent`已启动。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关详细信息，请参阅 [异步代理](../../../parallel/concrt/asynchronous-agents.md)。
 
@@ -80,7 +81,7 @@ enum Agents_EventType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`AGENTS_EVENT_CREATE`|表示对象创建的事件类型|
 |`AGENTS_EVENT_DESTROY`|表示对象删除的事件类型|
@@ -105,7 +106,7 @@ enum ConcRT_EventType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`CONCRT_EVENT_ATTACH`|表示附加到计划程序的操作的事件类型。|
 |`CONCRT_EVENT_BLOCK`|表示上下文阻塞行为的事件类型。|
@@ -131,7 +132,7 @@ enum Concrt_TraceFlags;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`AgentEventFlag`||
 |`AllEventsFlag`||
@@ -155,7 +156,7 @@ enum CriticalRegionType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`InsideCriticalRegion`|指示上下文位于关键区域内。 在关键区域内部，将对计划程序隐藏异步挂起。 如果发生这种挂起，资源管理器将等待线程变为可运行，并直接恢复，而不是重新调用计划程序。 在此类区域中执行的任何锁都必须特别小心。|
 |`InsideHyperCriticalRegion`|指示上下文位于超关键区域内。 在超关键区域内，同步和异步挂起都将隐藏在计划程序中。 如果发生此类挂起或阻塞，资源管理器将等待线程变为可运行，并直接恢复，而不是重新调用计划程序。 在此类区域中执行的锁定不得与在此类区域外部运行的代码共享。 这样做将导致不可预知的死锁。|
@@ -175,7 +176,7 @@ enum DynamicProgressFeedbackType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|计划程序不收集进度信息。 重新平衡只是根据基础硬件线程的订阅级别进行的。 有关订阅级别的详细信息，请参阅 [IExecutionResource：： CurrentSubscriptionLevel](IExecutionResource-structure.md)。<br /><br /> 此值保留供运行时使用。|
 |`ProgressFeedbackEnabled`|计划程序收集进度信息，并将其传递给资源管理器。 资源管理器将利用这一统计信息，代表计划程序以及基础硬件线程的订阅级别重新平衡资源。 有关订阅级别的详细信息，请参阅 [IExecutionResource：： CurrentSubscriptionLevel](IExecutionResource-structure.md)。|
@@ -190,7 +191,7 @@ enum join_type;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`greedy`|贪婪 `join` 消息块在传播时立即接受消息。 这种做法更为有效，但根据网络配置的不同，可能会发生实时锁定。|
 |`non_greedy`|非贪婪 `join` 消息块会推迟消息，并在所有消息都到达后尝试使用它们。 这些保证可以正常工作，但速度更慢。|
@@ -209,7 +210,7 @@ enum message_status;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`accepted`|目标已接受消息。|
 |`declined`|目标不接受消息。|
@@ -230,7 +231,7 @@ enum PolicyElementKey;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`ContextPriority`|计划程序中每个上下文的操作系统线程的优先级。 如果将此项设置为值 `INHERIT_THREAD_PRIORITY` ，则计划程序中的上下文将继承创建计划程序的线程的优先级。<br /><br /> 有效值： Windows 函数的任何有效值 `SetThreadPriority` 和特殊值 `INHERIT_THREAD_PRIORITY`<br /><br /> 默认值： `THREAD_PRIORITY_NORMAL`|
 |`ContextStackSize`|计划程序中每个上下文的保留堆栈大小（kb）。<br /><br /> 有效值：正整数<br /><br /> 默认值： `0` ，指示使用进程的默认堆栈大小值。|
@@ -258,7 +259,7 @@ enum SchedulerType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`ThreadScheduler`|指示常规 Win32 线程的显式请求。|
 |`UmsThreadDefault`|Visual Studio 2013 中的并发运行时不支持用户模式计划 (UMS) 线程。 使用 `UmsThreadDefault` 作为 `SchedulerType` 策略的一个值不会导致错误。 不过，通过此策略创建的计划程序将默认使用 Win32 线程。|
@@ -277,7 +278,7 @@ enum SchedulingProtocolType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`EnhanceForwardProgress`|计划程序优先于执行每个任务后通过计划组执行循环。 未阻止的上下文通常按先进先出的 (FIFO) 方式计划。 虚拟处理器不缓存未阻止的上下文。|
 |`EnhanceScheduleGroupLocality`|计划程序在移动到另一个计划组之前，更倾向于继续处理当前计划组中的任务。 不受阻止的上下文按虚拟处理器进行缓存，通常以) 后进先出 (后进先出的方式安排，这种情况会解除它们的阻止。|
@@ -296,13 +297,13 @@ enum SwitchingProxyState;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`Blocking`|指示调用线程以协作方式阻止，应以独占方式由调用方拥有，直到再次运行并执行其他操作。|
 |`Idle`|指示计划程序不再需要调用线程，并且该线程正在返回到资源管理器。 资源管理器无法再利用正在调度的上下文。|
 |`Nesting`|指示调用线程嵌套子计划程序并需要调用方，以便附加到不同的计划程序。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型为的参数 `SwitchingProxyState` 传递给方法， `IThreadProxy::SwitchTo` 以指示资源管理器如何处理正在进行调用的线程代理。
 
@@ -318,7 +319,7 @@ enum task_group_status;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`canceled`|`task_group` 或 `structured_task_group` 对象已取消。 一个或多个任务可能未执行。|
 |`completed`|排入 `task_group` 或 `structured_task_group` 对象的任务已成功完成。|
@@ -338,7 +339,7 @@ enum WinRTInitializationType;
 
 ### <a name="values"></a>值
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`DoNotInitializeWinRT`|当应用程序在 Windows 8 或更高版本的操作系统上运行时，计划程序中的线程不会初始化 Windows 运行时。|
 |`InitializeWinRTAsMTA`|当应用程序在 Windows 8 或更高版本的操作系统上运行时，计划程序中的每个线程都将初始化 Windows 运行时并声明它是多线程单元的一部分。|
@@ -347,6 +348,6 @@ enum WinRTInitializationType;
 
 **标头：** concrt
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

@@ -1,19 +1,20 @@
 ---
+description: '了解详细信息：移植到通用 Windows 平台 (c + +) '
 title: 移植到通用 Windows 平台 (C++)
 ms.date: 10/23/2019
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 7663fbac62687562f09a3a1ed66b8c09b75c51fd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e5bc8dfdfb44fa59e860a571b119914309e5a660
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167636"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331218"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 
-在本主题中，可以找到有关如何将现有的 C++ 代码移植到 Windows 10 应用平台（通用 Windows 平台）的信息。 术语 "*通用*" 的意思是代码可以在运行 Windows 10 的任何设备上运行。 可以创建单个项目和单个基于 XAML 的用户界面，可在运行 Windows 10 的任何设备上正常工作。 可以在 XAML 中使用动态布局功能，以允许应用的 UI 适应不同的显示大小。
+在本主题中，可以找到有关如何将现有的 C++ 代码移植到 Windows 10 应用平台（通用 Windows 平台）的信息。 术语 " *通用* " 的意思是代码可以在运行 Windows 10 的任何设备上运行。 可以创建单个项目和单个基于 XAML 的用户界面，可在运行 Windows 10 的任何设备上正常工作。 可以在 XAML 中使用动态布局功能，以允许应用的 UI 适应不同的显示大小。
 
-Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅 [从 Windows Runtime 8 移动到 UWP](/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。 另请参阅[从桌面应用程序移动到 UWP](/windows/uwp/porting/desktop-to-uwp-migrate)。
+Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Windows 平台的指南。 请参阅 [从 Windows Runtime 8 移动到 UWP](/windows/uwp/porting/w8x-to-uwp-root)。 尽管该指南主要侧重于 C# 代码，但指南的大部分内容都适用于 C++。 下面的过程包含更加详细的信息。 另请参阅 [从桌面应用程序移动到 UWP](/windows/uwp/porting/desktop-to-uwp-migrate)。
 
 本主题包含以下用于将代码移植到 UWP 的过程。
 
@@ -31,9 +32,9 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 1. 如果尚未完成此操作，则在 Visual Studio 2017 中打开 Windows 8.1 应用项目，并按照说明来升级项目文件。
 
-   需要在 Visual Studio 安装程序中安装 Windows 8.1 工具。 如果没有安装这些工具，请从“程序和功能”窗口启动 Visual Studio 安装程序，选择 Visual Studio 2017，再在安装程序窗口中选择“修改”。 找到 Windows 8.1 工具，确保已将其选中，然后选择“确定”。
+   需要 **在 Visual Studio 安装程序中安装 Windows 8.1 工具** 。 如果尚未安装这些工具，请从 "**程序和功能**" 窗口启动 **visual studio** 安装程序，选择 " **visual studio 2017**"，然后在 "设置" 窗口中选择 "**修改**"。 找到 **Windows 8.1 工具**，确保其已选中，然后选择 **"确定"**。
 
-1. 打开“项目属性”窗口，在“C++” **“常规”下将平台工具集设置为 Visual Studio 2017 的工具集 v141** > 。
+1. 打开“项目属性”窗口，在“C++” > “常规”下将平台工具集设置为 Visual Studio 2017 的工具集 v141。
 
 1. 将该项目生成为 Windows 8.1 项目，并解决任何生成错误。 在此阶段的任何错误可能是由于生成工具和库中的重大更改所引起的。 有关可能会影响代码的更改的详细说明，请参阅 [Visual C++ 更改历史记录（2003 - 2015）](../porting/visual-cpp-change-history-2003-2015.md)。
 
@@ -41,21 +42,21 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 1. 使用空白模板创建一个新的通用 Windows 应用项目。 你可能想要将其命名为与你现有的项目相同的名称，但是若要执行此操作，项目必须存在于不同的目录中。
 
-1. 关闭解决方案，然后使用 Windows 资源管理器或命令行将 Windows 8.1 项目中的代码文件（具有扩展名 .cpp、.h 和 .xaml）复制到在步骤 1 中为该项目创建的项目文件 (.vcxproj) 所在的文件夹中。 请不要复制 Package.appxmanifest 文件，并且如果拥有 Windows 8.1 桌面和手机的单独代码，则选择其中一个代码首先进行移植（之后需要执行一些工作以适应另一个代码）。 请确保复制子文件夹及其内容。 如出现系统提示，请选择替换具有相同名称的所有文件。
+1. 关闭解决方案，然后使用 **Windows 资源管理器** 或命令行，将 Windows 8.1 项目中的代码文件)  (复制到您在步骤1中创建的项目的项目文件 ( ".vcxproj) 的项目文件。 请不要复制 Package.appxmanifest 文件，并且如果拥有 Windows 8.1 桌面和手机的单独代码，则选择其中一个代码首先进行移植（之后需要执行一些工作以适应另一个代码）。 请确保复制子文件夹及其内容。 如出现系统提示，请选择替换具有相同名称的所有文件。
 
-1. 重新打开该解决方案，并从项目节点的快捷菜单中选择“添加” **“现有项”**  > 。 选择所有复制的文件，任何已存在于项目中的文件除外。
+1. 重新打开解决方案，并  >  从项目节点的快捷菜单中选择 "添加 **现有项**"。 选择所有复制的文件，任何已存在于项目中的文件除外。
 
    检查所有子文件夹，并确保也在其中添加这些文件。
 
-1. 如果使用与旧项目不同的项目名称，则打开 Package.appxmanifest 文件并更新入口点，以反映  **类的命名空间名称**`App`。
+1. 如果使用与旧项目不同的项目名称，则打开 Package.appxmanifest 文件并更新入口点，以反映 `App` 类的命名空间名称。
 
-   Package.appxmanifest 文件中的“入口点”字段包含 **类的范围名称，其中的命名空间包含** 类`App``App`。 当创建通用 Windows 项目时，命名空间设置为该项目的名称。 如果这不同于从旧项目中复制的文件的内容，则必须更新一个或另一个以使它们能够匹配。
+   Package.appxmanifest 文件中的“入口点”字段包含 `App` 类的范围名称，其中的命名空间包含 `App` 类。 当创建通用 Windows 项目时，命名空间设置为该项目的名称。 如果这不同于从旧项目中复制的文件的内容，则必须更新一个或另一个以使它们能够匹配。
 
 1. 生成项目并解决由不同版本的 Windows SDK 之间的重大更改所引发的任何生成错误。
 
 1. 在本地桌面上运行该项目。 验证不存在部署错误，并且应用的布局看起来合理，能在桌面上正常工作。
 
-1. 如果有单独的代码文件和 .xaml 用于其他设备（如 Windows Phone 8.1），则检查此代码并确定其与标准设备的差异。 如果只有布局中存在差异，则可能能够在 xaml 中使用“视觉状态管理器”根据屏幕大小自定义显示效果。 对于其他区别，可使用运用以下 #if 语句的代码中的条件部分。
+1. 如果有单独的代码文件和 .xaml 用于其他设备（如 Windows Phone 8.1），则检查此代码并确定其与标准设备的差异。 如果差异仅在于布局，则可以在 xaml 中使用 **视觉状态管理器** 根据屏幕大小自定义显示。 对于其他区别，可使用运用以下 #if 语句的代码中的条件部分。
 
     ```cpp
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)
@@ -74,7 +75,7 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>将 Windows 8.1 运行时组件移植到 UWP
 
-1. 在 Visual Studio 2017 的“新建项目”对话框中，找到“Windows 通用”节点。 如果看不到此节点，请先安装 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)。 选择“Windows 运行时组件” 模板，给定组件名称，然后选择“确定”按钮 。 组件名称将被用作命名空间名称，因此你可能想要使用与旧项目的命名空间相同的名称。 这要求你在与旧文件夹不同的文件夹中创建该项目。 如果选择了一个不同的名称，则可以在生成的代码文件中更新命名空间名称。
+1. 在 Visual Studio 2017 的“新建项目”对话框中，找到“Windows 通用”节点。 如果看不到此节点，请先安装 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)。 选择“Windows 运行时组件”  模板，给定组件名称，然后选择“确定”按钮  。 组件名称将被用作命名空间名称，因此你可能想要使用与旧项目的命名空间相同的名称。 这要求你在与旧文件夹不同的文件夹中创建该项目。 如果选择了一个不同的名称，则可以在生成的代码文件中更新命名空间名称。
 
 1. 关闭该项目。
 
@@ -82,7 +83,7 @@ Windows 开发人员中心文档包含将 Windows 8.1 应用移植到通用 Wind
 
 1. 生成，然后解决由不同版本的 Windows SDK 之间的重大更改所引发的任何错误。
 
-## <a name="troubleshooting"></a>故障排除
+## <a name="troubleshooting"></a>疑难解答
 
 在将代码移植到 UWP 的过程中，可能会遇到各种错误。 以下是一些可能遇到的问题。
 
@@ -106,7 +107,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 
 如果使用 Visual Studio 创建新的 UWP 项目，则不应看到此错误。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Visual C++ 迁移指南](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
 [开发通用 Windows 平台 (UWP) 的应用](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

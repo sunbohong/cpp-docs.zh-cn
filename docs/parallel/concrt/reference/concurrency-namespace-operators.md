@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：并发命名空间运算符
 title: 并发命名空间运算符
 ms.date: 11/04/2016
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 97553276a7c4ff687dd8bea4627f943d5666b2e9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c268f823ed0cef9999cfde3eadcbd514614b3d17
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331267"
 ---
 # <a name="concurrency-namespace-operators"></a>并发命名空间运算符
 
@@ -58,7 +59,7 @@ inline task<void> operator||(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ReturnType*<br/>
 已返回任务的类型。
@@ -73,7 +74,7 @@ inline task<void> operator||(
 
 在任一输入任务成功完成时成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::vector<T>`。 如果输入任务的类型为， **`void`** 则输出任务也将是 `task<void>` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果两个任务均被取消或引发异常，则返回的任务将在已取消状态下完成，并且当您对此任务调用 `get()` 或 `wait()` 时将引发一种异常（在遇到异常的情况下）。
 
@@ -107,7 +108,7 @@ inline task<void>  operator&&(
     const task<void>& rhs);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ReturnType*<br/>
 已返回任务的类型。
@@ -122,7 +123,7 @@ inline task<void>  operator&&(
 
 将在两个输入任务成功完成后成功完成的任务。 如果输入任务的类型为 `T`，则此函数的输出将为 `task<std::vector<T>>`。 如果输入任务的类型为， **`void`** 则输出任务也将是 `task<void>` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果其中一个任务被取消或引发异常，则返回的任务将提前完成，在 "已取消" 状态下，如果对该任务调用或，则会引发异常（如果发生） `get()` `wait()` 。
 
@@ -137,7 +138,7 @@ inline bool operator== (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -158,7 +159,7 @@ inline bool operator== (
 
 **`true`** 如果运算符左侧的并发向量等于运算符右侧的并发向量，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果两个并发向量具有相同的元素数，并且它们各自的元素具有相同的值，则这两个向量相等。 否则，它们不相等。
 
@@ -175,7 +176,7 @@ inline bool operator!= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -196,7 +197,7 @@ inline bool operator!= (
 
 **`true`** 如果并发向量不相等，则为; 否则为。 **`false`** 如果并发向量相等，则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果两个并发向量具有相同的元素数，并且它们各自的元素具有相同的值，则这两个向量相等。 否则，它们不相等。
 
@@ -213,7 +214,7 @@ inline bool operator<(
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -234,7 +235,7 @@ inline bool operator<(
 
 **`true`** 如果运算符左侧的并发向量小于运算符右侧的并发向量，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此运算符的行为与 `vector` 命名空间中类的等效运算符相同 `std` 。
 
@@ -251,7 +252,7 @@ inline bool operator<= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -272,7 +273,7 @@ inline bool operator<= (
 
 **`true`** 如果运算符左侧的并发向量小于或等于运算符右侧的并发向量，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此运算符的行为与 `vector` 命名空间中类的等效运算符相同 `std` 。
 
@@ -289,7 +290,7 @@ inline bool operator>(
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -310,7 +311,7 @@ inline bool operator>(
 
 **`true`** 如果运算符左侧的并发向量大于运算符右侧的并发向量，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此运算符的行为与 `vector` 命名空间中类的等效运算符相同 `std` 。
 
@@ -327,7 +328,7 @@ inline bool operator>= (
     const concurrent_vector<T, A2>& _B);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 并发向量中存储的元素的数据类型。
@@ -348,12 +349,12 @@ inline bool operator>= (
 
 **`true`** 如果运算符左侧的并发向量大于或等于运算符右侧的并发向量，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此运算符的行为与 `vector` 命名空间中类的等效运算符相同 `std` 。
 
 此方法对于可能修改并发向量或的任何方法的其他方法而言，并不是并发安全方法 `_A` `_B` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

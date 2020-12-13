@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _lock
 title: _lock
 ms.date: 11/04/2016
 api_name:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: 9ab7cab2209dc2e02cacca6d540927aa39dc3965
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 9b95c8b7ad0f0ce84348f9581d9acb611373a27b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81745384"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97331041"
 ---
 # <a name="_lock"></a>_lock
 
@@ -45,7 +46,7 @@ void __cdecl _lock
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *locknum*<br/>
 [in] 要获取的锁定标识符。
@@ -60,5 +61,5 @@ void __cdecl _lock
 
 ## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_unlock](../c-runtime-library/unlock.md)

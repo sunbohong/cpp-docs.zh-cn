@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _eof
 title: _eof
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5d00be1da0f329c43f1b6ea0f912ede74b307bbb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 98e277c11755d6c3c7cb34a426e006a66f503193
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915058"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332822"
 ---
 # <a name="_eof"></a>_eof
 
@@ -50,20 +51,20 @@ int _eof(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*<br/>
 引用打开的文件的文件说明符。
 
 ## <a name="return-value"></a>返回值
 
-如果当前位置是文件尾，则 **_eof**返回 1; 如果不是，则返回0。 返回值-1 指示错误;在这种情况下，将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将**errno**设置为**ebadf (**，指示无效的文件描述符。
+如果当前位置是文件尾，则 **_eof** 返回 1; 如果不是，则返回0。 返回值-1 指示错误;在这种情况下，将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则将 **errno** 设置为 **ebadf (**，指示无效的文件描述符。
 
 ## <a name="remarks"></a>备注
 
-**_Eof**函数确定是否已到达与*fd*关联的文件的结尾。
+**_Eof** 函数确定是否已到达与 *fd* 关联的文件的结尾。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 

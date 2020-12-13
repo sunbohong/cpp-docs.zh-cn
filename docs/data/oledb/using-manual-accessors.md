@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用手动访问器
 title: 使用手动访问器
 ms.date: 10/24/2018
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - manual accessors
 - accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-ms.openlocfilehash: b76c6a2d0af404bc526fee8f511320a58ffd86ec
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 73363be83e06a3eeced114dc90c65f82601a4a16
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218281"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97332468"
 ---
 # <a name="using-manual-accessors"></a>使用手动访问器
 
@@ -43,8 +44,8 @@ ms.locfileid: "87218281"
 
 1. 调用 `GetNextResult` 以确定是否有更多的行集可用。 重复步骤2到5。
 
-有关手动访问器的示例，请参阅 `CDBListView::CallProcedure` [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)示例中的。
+有关手动访问器的示例，请参阅 `CDBListView::CallProcedure` [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) 示例中的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用访问器](../../data/oledb/using-accessors.md)
