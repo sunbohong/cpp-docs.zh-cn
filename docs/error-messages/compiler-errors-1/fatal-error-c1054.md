@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：严重错误 C1054
 title: 错误 C1054
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1054
 ms.assetid: 9cfb7307-b22a-4418-b7c0-2621b0ab5b1b
-ms.openlocfilehash: d094d0892d43a5f9894f03538f72e59b57bad6db
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1bfe8718fcb0d3edb172f0f5a89bb2f479e56137
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80204459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251656"
 ---
 # <a name="fatal-error-c1054"></a>错误 C1054
 
 编译器限制：初始值设定项嵌套太深
 
-代码超出了初始值设定项的嵌套限制（10-15 级别，具体取决于所初始化的类型的组合）。
+此代码超出了对初始值设定项的嵌套限制 (10-15 级别，具体取决于) 初始化的类型的组合。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用以下可能的解决方案进行修复
 

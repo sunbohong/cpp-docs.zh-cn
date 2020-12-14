@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _getmaxstdio
 title: _getmaxstdio
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-ms.openlocfilehash: cf3f55262e54ec4d5205d08dfcb499f2802ded23
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 78c427ef9e5152708870d7ff48d0a123b7ee5213
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296545"
 ---
 # <a name="_getmaxstdio"></a>_getmaxstdio
 
@@ -47,11 +48,11 @@ int _getmaxstdio( void );
 
 ## <a name="return-value"></a>返回值
 
-返回一个数字，该数字表示**stdio.h**级别当前允许同时打开的文件数。
+返回一个数字，该数字表示 **stdio.h** 级别当前允许同时打开的文件数。
 
 ## <a name="remarks"></a>备注
 
-使用[_setmaxstdio](setmaxstdio.md)配置在**stdio.h**级别允许同时打开的文件数。
+使用 [_setmaxstdio](setmaxstdio.md) 配置 **stdio.h** 级别允许同时打开的文件数。
 
 ## <a name="requirements"></a>要求
 
@@ -59,7 +60,7 @@ int _getmaxstdio( void );
 |-------------|---------------------|
 |**_getmaxstdio**|\<stdio.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 

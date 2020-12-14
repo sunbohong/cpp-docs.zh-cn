@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Reference-Type 函数参数
 title: 引用类型函数自变量
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-ms.openlocfilehash: 5a409efbe2908954d394656cb989ad6b80a9ce22
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e290160b1b897eadbf77f0c8a805f927a26c02f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97260327"
 ---
 # <a name="reference-type-function-arguments"></a>引用类型函数自变量
 
@@ -67,7 +68,7 @@ int main()
 }
 ```
 
-前面的代码显示通过引用传递的结构的成员是使用成员选择运算符（**.**）而不是指针成员选择运算符（）访问的 **->** 。
+前面的代码显示通过引用传递的结构的成员是使用成员选择运算符 (来访问的 **。**) 而不是指针选择运算符 (**->**) 。
 
 尽管作为引用类型传递的参数遵循非指针类型的语法，但它们保留了指针类型的一个重要特征：除非声明为，否则它们是可修改的 **`const`** 。 由于上述代码的目的不是修改对象 `date`，因此更合适的函数原型是：
 
@@ -77,8 +78,8 @@ long DateOfYear( const Date& date );
 
 此原型将确保函数 `DateOfYear` 不会更改其参数。
 
-任何作为采用引用类型的函数都可以接受在其位置具有相同类型的对象，因为存在从*typename*到 typename 的标准转换*typename* <strong>&</strong> 。
+任何作为采用引用类型的函数都可以接受在其位置具有相同类型的对象，因为存在从 *typename* 到 typename 的标准转换 <strong>&</strong> 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [参考](../cpp/references-cpp.md)<br/>

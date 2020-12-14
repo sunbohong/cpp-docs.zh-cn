@@ -1,4 +1,5 @@
 ---
+description: 了解更多： MFC 技术说明
 title: MFC 技术说明
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - technical notes, MFC
 - technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
-ms.openlocfilehash: 251c37f687c0176256f74c7e4dc14cff7f25c99c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 297b571dbd1faaa05d8f972f7d0d468704460c1c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617928"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97251175"
 ---
 # <a name="mfc-technical-notes"></a>MFC 技术说明
 
@@ -25,6 +26,6 @@ ms.locfileid: "84617928"
 
 - [按类别列出的技术说明](technical-notes-by-category.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 桌面应用程序](mfc-desktop-applications.md)

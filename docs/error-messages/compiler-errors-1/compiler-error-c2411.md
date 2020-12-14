@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2411
 title: 编译器错误 C2411
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2411
 ms.assetid: 453317d3-0629-4b42-b8ea-3a0b39698ca5
-ms.openlocfilehash: 84f8c1813c413cac6888008ec0c92e67eccc18e9
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5dd79f38a443b4c651a1f0e196229e2192f54d24
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80205692"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97313406"
 ---
 # <a name="compiler-error-c2411"></a>编译器错误 C2411
 
@@ -21,4 +22,4 @@ ms.locfileid: "80205692"
 
 1. 标识符不是此上下文中的可见结构或联合的成员。
 
-1. 标识符不是使用成员选择（.）运算符指定的结构或联合的成员。
+1. 标识符不是使用成员选择 ( ) 运算符指定的结构或联合的成员。

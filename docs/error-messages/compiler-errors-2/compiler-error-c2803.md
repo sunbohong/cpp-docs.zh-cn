@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2803
 title: 编译器错误 C2803
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
-ms.openlocfilehash: d39f737ba02f3fa9c9d5f61594ddf730db6739a5
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 405c14d05bad4c505d847b8ab2648a7ace3b9a4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97297429"
 ---
 # <a name="compiler-error-c2803"></a>编译器错误 C2803
 
@@ -19,7 +20,7 @@ ms.locfileid: "74760655"
 
 重载运算符缺少类类型的参数。
 
-需要通过引用传递至少一个参数（不使用指针，而不是引用）或通过值来编写 "a < b" （a 和 b 类型为类 A）。
+你需要通过引用传递至少一个参数 (不使用指针，但引用) 或通过值来编写 "a < b" (a 和 b 的类型为类 A) 。
 
 如果这两个参数都是指针，则它将是指针地址的纯粹比较，并且不会使用用户定义的转换。
 

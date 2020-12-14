@@ -1,22 +1,23 @@
 ---
+description: 了解详细信息： &lt; system_error &gt; 枚举
 title: '&lt;system_error&gt; 枚举'
 ms.date: 11/04/2016
 f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: cff8a58545409c4358cd303e41d27520edd5d552
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 63126c8fde91d44dbecf52cca1240c4f8b44b88a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259443"
 ---
 # <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; 枚举
 
-## <a name="errc"></a>errc
+## <a name="errc"></a><a name="errc"></a> errc
 
-为 `<errno.h>`中的 POSIX 定义的所有错误代码宏提供符号名称。
+为中的 POSIX 定义的所有错误代码宏提供符号名称 `<errno.h>` 。
 
 ```cpp
 class errc {
@@ -103,9 +104,9 @@ class errc {
 
 ### <a name="remarks"></a>备注
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a> io_errc
 
-为 \<iostream> 中的错误条件提供符号名称。 可用于创建 [error_condition](../standard-library/error-condition-class.md) 对象，其用于与由 [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()` 函数返回的值进行比较。
+为中的错误条件提供符号名称 \<iostream> 。 可用于创建 [error_condition](../standard-library/error-condition-class.md) 对象，其用于与由 [ios_base::failure](../standard-library/ios-base-class.md#failure)`code()` 函数返回的值进行比较。
 
 ```cpp
 class io_errc {

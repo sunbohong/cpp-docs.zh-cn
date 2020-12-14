@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; system_error&gt;
 title: '&lt;system_error&gt;'
 ms.date: 03/15/2019
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: 18df18379fbee8271ba5cf851b04210f1dfddf57
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 77ff4cae7d40ae4edb393e5d4f6743be1563556c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841878"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259404"
 ---
 # <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
@@ -28,7 +29,7 @@ ms.locfileid: "88841878"
 
 ### <a name="objects"></a>对象
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|表示一般错误的类别。|
 |[is_error_code_enum_v](../standard-library/system-error-functions.md#is_error_code_enum_v)||
@@ -37,14 +38,14 @@ ms.locfileid: "88841878"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|创建一个 `error_code` 对象。|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|创建一个 `error_condition` 对象。|
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator = =](../standard-library/system-error-operators.md#op_eq_eq)|测试运算符左侧的对象是否等于右侧的对象。|
 |[operator！ =](../standard-library/system-error-operators.md#op_neq)|测试运算符左侧的对象是否不等于右侧的对象。|
@@ -53,13 +54,13 @@ ms.locfileid: "88841878"
 
 ### <a name="enums"></a>枚举
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[errc](../standard-library/system-error-enums.md#errc)|为中的 POSIX 定义的所有错误代码宏提供符号名称 `<errno.h>` 。|
 
 ### <a name="classes-and-structs"></a>类和结构
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[error_category](../standard-library/error-category-class.md)|表示描述错误代码类别的对象的抽象、公用基。|
 |[error_code](../standard-library/error-code-class.md)|表示特定于实现的低级别系统错误。|
@@ -69,6 +70,6 @@ ms.locfileid: "88841878"
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|表示测试 [error_condition Class](../standard-library/error-condition-class.md) 枚举的类型谓词。|
 |[system_error](../standard-library/system-error-class.md)|表示为报告低级别系统溢出而引发的所有异常的基类。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

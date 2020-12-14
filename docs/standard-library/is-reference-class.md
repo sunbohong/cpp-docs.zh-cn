@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_reference 类
 title: is_reference 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 85b824f6abe9800f1b85a6e8e81416551cb72155
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455682"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259456"
 ---
-# <a name="isreference-class"></a>is_reference 类
+# <a name="is_reference-class"></a>is_reference 类
 
 测试类型是否为引用。
 
@@ -25,14 +26,14 @@ template <class Ty>
 struct is_reference;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型*Ty*是对对象或函数的引用, 则类型谓词的实例为 true; 否则为 false。
+如果类型 *Ty* 是对对象或函数的引用，则类型谓词的实例为 true; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -71,9 +72,9 @@ is_reference<int(&)()> == true
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

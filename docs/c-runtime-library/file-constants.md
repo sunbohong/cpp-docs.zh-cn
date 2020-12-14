@@ -1,4 +1,5 @@
 ---
+description: 了解更多：文件常量
 title: 文件常量
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: f0bf85dc8f27fca1720cde7f5a8b2029a791849c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: a174a9bd8924f4d209f937187614863ce7111b3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739974"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296597"
 ---
 # <a name="file-constants"></a>文件常量
 
@@ -46,7 +47,7 @@ ms.locfileid: "57739974"
 
 文件常量如下所示：
 
-|返回的常量|说明|
+|返回的常量|描述|
 |-|-|
 | `_O_APPEND`  | 在每次执行写入操作前，将文件指针重新定位到文件尾。  |
 | `_O_CREAT`  | 创建一个文件并打开该文件以进行写入；如果有由 filename 指定的文件存在，则此操作不起作用。  |
