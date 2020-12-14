@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _memccpy
 title: _memccpy
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 097cefb504ffcdbfbe6bf131d5e8b1837d11a47a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f3cbfbd1e112c724d6223a6c6d28f0915dcd7ca0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951968"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240086"
 ---
 # <a name="_memccpy"></a>_memccpy
 
@@ -47,9 +48,9 @@ void *_memccpy(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-dest<br/>
+*目的*<br/>
 指向目标的指针。
 
 *src*<br/>
@@ -58,16 +59,16 @@ dest<br/>
 *c*<br/>
 要复制的最后一个字符。
 
-*count*<br/>
+*计数*<br/>
 字符数。
 
 ## <a name="return-value"></a>返回值
 
-如果复制了字符*c* ，则 **_memccpy**将返回一个指针，该指针指向在*dest*中紧跟在字符后面的字符。 如果未复制*c* ，则返回**NULL**。
+如果复制了字符 *c* ， **_memccpy** 将返回一个指针，指向在 *dest* 中紧跟在字符后面的字符。 如果未复制 *c* ，则返回 **NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_Memccpy**函数将*src*的0个或更多个字符复制到*dest*，并在已复制字符*c*时停止，或在复制*计数*字符后停止。
+**_Memccpy** 函数将 *src* 的0个或更多个字符复制到 *dest*，并在复制了字符 *c* 时停止，或在复制了 *计数* 字符后停止。
 
 **安全说明** 确保目标缓冲区的大小等于或大于源缓冲区的大小。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
@@ -77,7 +78,7 @@ dest<br/>
 |-------------|---------------------|
 |**_memccpy**|\<memory.h> 或 \<string.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -108,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Function: _memccpy 60 characters or to character 's'

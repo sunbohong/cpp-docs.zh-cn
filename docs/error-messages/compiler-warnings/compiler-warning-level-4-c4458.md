@@ -1,27 +1,28 @@
 ---
-title: 编译器警告 （等级 C4458
+description: 详细了解：编译器警告 (级别 4) C4458
+title: 编译器警告 (等级 4) C4458
 ms.date: 11/04/2016
 f1_keywords:
 - C4458
 helpviewer_keywords:
 - C4458
 ms.assetid: 7bdaa1b1-0caf-4d68-98c4-6bdd441c23fb
-ms.openlocfilehash: 9e5eb8dc44968332abc097bfbd16b48e3240695c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f631fe4086c69732c972161ae7bb6096232b2740
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391447"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241256"
 ---
-# <a name="compiler-warning-level-4-c4458"></a>编译器警告 （等级 C4458
+# <a name="compiler-warning-level-4-c4458"></a>编译器警告 (等级 4) C4458
 
-> 声明*标识符*隐藏了类成员
+> "*identifier*" 的声明隐藏了类成员
 
-声明*标识符*在本地作用域中隐藏了相同名称的声明*标识符*在类范围内。 此警告，可以了解到引用*标识符*在此范围内解析为本地声明的版本中，不是类成员版本，可能会也可能不是你的意图。 若要解决此问题，我们建议为指定类成员名称不冲突的本地变量名称。
+局部范围内的 *标识符* 声明隐藏类范围内具有相同名称的 *标识符* 的声明。 此警告使你知道，此范围内的 *标识符* 引用解析为本地声明的版本，而不是类成员版本，这可能是你的意图，也可能不是。 若要解决此问题，我们建议你提供不与类成员名称冲突的局部变量名称。
 
 ## <a name="example"></a>示例
 
-下面的示例生成 C4458，因为参数`x`和局部变量`y`中`member_fn`类中具有相同的数据成员名称。 若要解决此问题，请使用不同的参数和局部变量的名称。
+下面的示例生成 C4458，因为中的参数 `x` 和局部变量 `y` 与 `member_fn` 类中的数据成员具有相同的名称。 若要解决此问题，请使用不同的名称作为参数和局部变量。
 
 ```cpp
 // C4458_hide.cpp

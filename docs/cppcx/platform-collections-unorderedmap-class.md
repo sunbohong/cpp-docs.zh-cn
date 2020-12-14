@@ -1,20 +1,21 @@
 ---
+description: 详细了解： Platform：：集合：： UnorderedMap 类
 title: Platform::Collections::UnorderedMap 类
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: ec458f5d4a47b6eced939c4fe346d5d0414ea7c2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 51acfa7e411f96addd8a33024224779c32ebcda0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839122"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242530"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 类
 
-表示一个无序 ** 映射，它是键值对的集合。
+表示一个无序 映射，它是键值对的集合。
 
 ## <a name="syntax"></a>语法
 
@@ -27,18 +28,18 @@ template <
 ref class Map sealed;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*温度*<br/>
+*K*<br/>
 键值对中键的类型。
 
-*向量*<br/>
+*V*<br/>
 键值对中值的类型。
 
 *C*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下， [std：： \<K> equal_to](../standard-library/equal-to-struct.md)。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 允许的类型是：
 
@@ -60,13 +61,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[UnorderedMap：： UnorderedMap](#ctor)|初始化 Map 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[UnorderedMap：： Clear](#clear)|从当前 Map 对象中移除所有键值对。|
 |[UnorderedMap：： First](#first)|返回指定映射中第一个元素的迭代器。|
@@ -79,7 +80,7 @@ ref class Map sealed;
 
 ### <a name="events"></a>事件
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [Map：： MapChanged](#mapchanged) 事件 | 当映射更改时发生。 |
 
@@ -119,9 +120,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 指定映射中第一个元素的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myUnorderedMap->First();` 。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如 `auto x = myUnorderedMap->First();`。
 
 ## <a name="unorderedmapgetview-method"></a><a name="getview"></a> UnorderedMap：： GetView 方法
 
@@ -149,10 +150,10 @@ bool HasKey(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-用于定位 UnorderedMap 元素的键。 *键*类型为 typename *K*。
+*key*<br/>
+用于定位 UnorderedMap 元素的键。 *键* 类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
@@ -171,13 +172,13 @@ virtual bool Insert(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-键值对中的键部分。 *键*类型为 typename *K*。
+*key*<br/>
+键值对中的键部分。 *键* 类型为 typename *K*。
 
 *value*<br/>
-键值对中的值部分。 *值*的类型为 typename *V*。
+键值对中的值部分。 *值* 的类型为 typename *V*。
 
 ### <a name="return-value"></a>返回值
 
@@ -195,14 +196,14 @@ V Lookup(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-用于定位 UnorderedMap 中的元素的键。 *键*类型为 typename *K*。
+*key*<br/>
+用于定位 UnorderedMap 中的元素的键。 *键* 类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-与 *键*配对的值。 返回值的类型为 typename *V*。
+与 *键* 配对的值。 返回值的类型为 typename *V*。
 
 ## <a name="unorderedmapmapchanged"></a><a name="mapchanged"></a> UnorderedMap：： MapChanged
 
@@ -233,10 +234,10 @@ virtual void Remove(
    K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-键值对中的键部分。 *键*类型为 typename *K*。
+*key*<br/>
+键值对中的键部分。 *键* 类型为 typename *K*。
 
 ## <a name="unorderedmapsize-method"></a><a name="size"></a> UnorderedMap：： Size 方法
 
@@ -337,7 +338,7 @@ UnorderedMap(
     );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *InIt*<br/>
 当前 UnorderedMap 的类型名称。
@@ -360,7 +361,7 @@ Std： [： initializer_list](../standard-library/initializer-list-class.md) [st
 *last*<br/>
 用于初始化当前 UnorderedMap 的一系列元素之后的第一个元素的输入迭代器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)<br/>
 [Platform：：集合命名空间](../cppcx/platform-collections-namespace.md)<br/>

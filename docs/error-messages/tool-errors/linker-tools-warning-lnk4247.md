@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：链接器工具警告 LNK4247
 title: 链接器工具警告 LNK4247
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 88cd04e345b798b6927c3a5297380f1eeb3c5f5c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991156"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241178"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>链接器工具警告 LNK4247
 
 入口点 "decorated_function_name" 已经有一个 thread 属性;已忽略 "attribute"
 
-使用[/ENTRY （入口点符号）](../../build/reference/entry-entry-point-symbol.md)指定的入口点具有一个线程属性，但也使用不同的线程模型指定了[/CLRTHREADATTRIBUTE （设置 CLR 线程特性）](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) 。
+使用/ENTRY 指定的入口点 [ (入口点符号) ](../../build/reference/entry-entry-point-symbol.md)，具有一个线程属性，但也使用不同的线程模型指定了 [/CLRTHREADATTRIBUTE (设置 CLR 线程属性) ](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) 。
 
 链接器忽略了通过/CLRTHREADATTRIBUTE. 指定的值
 

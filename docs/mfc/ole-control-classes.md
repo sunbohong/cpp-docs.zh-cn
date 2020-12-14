@@ -1,4 +1,5 @@
 ---
+description: 了解更多： OLE 控件类
 title: OLE 控件类
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 5aa3899dca5a42cf789dc6dfd4701547495ec618
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: da59fcd66fa21602ad864deecac9f568bd5123bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84617765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244142"
 ---
 # <a name="ole-control-classes"></a>OLE 控件类
 
@@ -42,7 +43,7 @@ ms.locfileid: "84617765"
 显示图形界面（与对话框类似）中的 OLE 控件的属性。
 
 [CPropExchange](reference/cpropexchange-class.md)<br/>
-支持 OLE 控件的属性持久性的实现。 类似于对话框的[CDataExchange](reference/cdataexchange-class.md) 。
+支持 OLE 控件的属性持久性的实现。 类似于对话框的 [CDataExchange](reference/cdataexchange-class.md) 。
 
 [CMonikerFile](reference/cmonikerfile-class.md)<br/>
 采用名字对象或可成为名字对象的字符串表示形式，并以同步方式将其绑定到名字对象为其名称的流。
@@ -62,6 +63,6 @@ ms.locfileid: "84617765"
 [COleSafeArray](reference/colesafearray-class.md)<br/>
 与任意类型和维度的数组一起使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

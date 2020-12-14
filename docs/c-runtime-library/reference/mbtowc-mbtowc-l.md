@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： mbtowc、_mbtowc_l
 title: mbtowc、_mbtowc_l
 ms.date: 4/2/2020
 api_name:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 9502de7b12394277b01a18caca48a7e783efaf4e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8f6ffbd6596e987cd0ec6ba560e4e44da13cf7b5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232477"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240099"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
@@ -59,10 +60,10 @@ int _mbtowc_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *wchar*<br/>
-宽字符（类型）的地址 **`wchar_t`** 。
+宽字符的地址)  (类型 **`wchar_t`** 。
 
 *mbchar*<br/>
 字节（多字节字符）序列的地址。
@@ -75,13 +76,13 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>返回值
 
-如果**mbchar**不为**NULL** ，并且*mbchar*指向的对象构成有效的多字节字符，则**mbtowc**将返回多字节字符的长度（以字节为单位）。 如果*mbchar*为**null**或它所指向的对象为宽字符 null 字符（L "\ 0"），则该函数返回0。 如果*mbchar*指向的对象未形成第一个*计数*字符内的有效多字节字符，则返回-1。
+如果 **mbchar** 不为 **NULL** ，并且 *mbchar* 指向的对象构成有效的多字节字符，则 **mbtowc** 将返回多字节字符的长度（以字节为单位）。 如果 *mbchar* 为 **null** 或它所指向的对象为宽字符 null 字符 (L ' \ 0 ' ) ，则该函数返回0。 如果 *mbchar* 指向的对象未形成第一个 *计数* 字符内的有效多字节字符，则返回-1。
 
 ## <a name="remarks"></a>备注
 
-如果*mbchar*不为**NULL**，则**mbtowc**函数将*mbchar*指向的*计数*或更少的字节转换为相应的宽字符。 如果*wchar*不为**NULL**，则**mbtowc**会将生成的宽字符存储在*wchar 中*。 **mbtowc**不检查超过**MB_CUR_MAX**个字节。 **mbtowc**对与区域设置相关的行为使用当前区域设置;**_mbtowc_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果 *mbchar* 不为 **NULL**，则 **mbtowc** 函数将 *mbchar* 指向的 *计数* 或更少的字节转换为相应的宽字符。 如果 *wchar* 不为 **NULL**，则 **mbtowc** 会将生成的宽字符存储在 *wchar 中*。 **mbtowc** 不检查超过 **MB_CUR_MAX** 个字节。 **mbtowc** 对与区域设置相关的行为使用当前区域设置; **_mbtowc_l** 相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
@@ -152,12 +153,12 @@ Attempt to convert a NULL pointer to a wide character:
    Bytes converted: 0
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [数据转换](../../c-runtime-library/data-conversion.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [区域设置](../../c-runtime-library/locale.md)<br/>
-[多字节字符序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3714
 title: 编译器错误 C3714
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-ms.openlocfilehash: 1078bf8a97f6cb7afeaf7046489fe262c0bb0199
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a01544558a156b746c16e731584e30bab7a77825
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753323"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241620"
 ---
 # <a name="compiler-error-c3714"></a>编译器错误 C3714
 
 "method"：事件处理程序方法必须具有与源 "method" 相同的调用约定
 
-您定义了一个事件处理程序方法，该方法不使用与源事件方法相同的调用约定。 若要修复此错误，请为事件处理程序方法指定与源事件方法相同的调用约定。 例如，在下面的代码中，`handler1` 和 `event1` 匹配（[__cdecl](../../cpp/cdecl.md)或[__stdcall](../../cpp/stdcall.md)或其他内容）进行调用约定。 从这两个声明中删除调用约定关键字还能解决该问题，并导致 `event1` 和 `handler1` 默认为[thiscall](../../cpp/thiscall.md)调用约定。 有关详细信息，请参阅[调用约定](../../cpp/calling-conventions.md)。
+您定义了一个事件处理程序方法，该方法不使用与源事件方法相同的调用约定。 若要修复此错误，请为事件处理程序方法指定与源事件方法相同的调用约定。 例如，在下面的代码中，将 `handler1` 和 `event1` ([__cdecl](../../cpp/cdecl.md) 或 [__stdcall](../../cpp/stdcall.md) 或其他) 的调用约定匹配。 从这两个声明中删除调用约定关键字还将解决此问题，并使 `event1` 和 `handler1` 默认为 [thiscall](../../cpp/thiscall.md) 调用约定。 有关详细信息，请参阅 [调用约定](../../cpp/calling-conventions.md) 。
 
 下面的示例生成 C3714：
 

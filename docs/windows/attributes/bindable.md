@@ -1,4 +1,5 @@
 ---
+description: 了解更多：可绑定
 title: '可绑定 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 27f44259401a42dcef7e2add370d95091d10879d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2427becd3353488cc1b62347c04d7ed62e523352
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838966"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247483"
 ---
 # <a name="bindable"></a>bindable
 
@@ -27,9 +28,9 @@ ms.locfileid: "88838966"
 
 可 **绑定** c + + 属性具有与可 [绑定](/windows/win32/Midl/bindable) MIDL 属性相同的功能。 可以在使用 [propget](propget.md)、 [propput](propput.md)或 [propputref](propputref.md) 特性定义的属性上使用该属性，也可以手动定义可绑定方法。
 
-以下 MFC 示例显示了如何使用可 **绑定**的：
+以下 MFC 示例显示了如何使用可 **绑定** 的：
 
-- [控件示例：基于 MFC 的 ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [控件示例： MFC-Based ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [CIRC 示例： ActiveX 控件](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
@@ -69,7 +70,7 @@ __interface IPropDemo : IDispatch {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>

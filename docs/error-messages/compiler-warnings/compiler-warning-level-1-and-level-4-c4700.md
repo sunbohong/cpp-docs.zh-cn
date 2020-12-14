@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级1和等级 4) C4700
 title: 编译器警告（等级 1 和等级 4）C4700
 ms.date: 02/21/2018
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-ms.openlocfilehash: fa3326bd5ab495dbc4c54130bb168422eb827dce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ba19bdd6d8e25e095f796adc8cdb60b5cc8d325
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300285"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241594"
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>编译器警告（等级 1 和等级 4）C4700
 
-> 未初始化的局部变量*名称*使用
+> 使用了未初始化的局部变量 "*name*"
 
-本地变量*名称*已*使用*，即从阅读，它具有之前尚未分配值。 在 C 和C++，默认情况下不初始化局部变量。 未初始化的变量可以包含任何值，并使用会导致未定义的行为。 警告 C4700 几乎总是指示在程序中可能导致不可预知的结果或崩溃的 bug。
+局部变量 *名称* 已被 *使用*，即在分配值之前从中读取。 在 C 和 c + + 中，默认情况下不初始化局部变量。 未初始化的变量可以包含任何值，其使用会导致未定义的行为。 警告 C4700 几乎总是指示一个 bug，该 bug 可能导致程序中出现不可预测的结果或故障。
 
-若要解决此问题，可以在声明时初始化的局部变量，或为它们赋值，在使用之前。 可以使用函数来初始化的变量，它传递作为引用参数，或当其地址传递作为指针参数。
+若要解决此问题，可以在声明本地变量时对其进行初始化，或在使用之前为它们赋值。 函数可用于初始化作为引用参数传递的变量，或将其地址作为指针参数传递时使用。
 
 ## <a name="example"></a>示例
 
-此示例生成 C4700 之前它们进行了初始化，并显示数值类型的垃圾回收可能会导致使用变量 t、 u 和 v。 变量 x、 y 和 z 是否会导致以下警告，因为它们在使用前初始化：
+此示例在初始化变量 t、u 和 v 之前，生成 C4700，并显示可能产生的垃圾值的种类。 变量 x、y 和 z 不会导致此警告，因为它们会在使用之前进行初始化：
 
 ```cpp
 // c4700.cpp
@@ -53,7 +54,7 @@ int main()
 }
 ```
 
-此代码时运行、 t、 u 和 v 均未初始化，并为 s 的输出是不可预测：
+此代码运行时，t、u 和 v 处于未初始化状态，并且 s 的输出是不可预知的：
 
 ```Output
 Value in s: 37816963

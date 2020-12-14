@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下方面的详细信息：组件类
 title: '组件类 (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-ms.openlocfilehash: 12f7af195f2282955cb16c1f38d4e512ca0f86cb
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9ff2198807407a7dfc56649ed80cb1fa2bafc17c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838875"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247366"
 ---
 # <a name="coclass"></a>coclass
 
@@ -29,7 +30,7 @@ ms.locfileid: "88838875"
 
 定义 coclass 时，还可以指定 " [uuid](uuid-cpp-attributes.md)"、" [版本](version-cpp.md)"、" [线程](threading-cpp.md)"、" [vi_progid](vi-progid.md)" 和 " [progid](progid.md) " 属性。 如果未指定任何一个，则将生成该文件。
 
-如果两个标头文件包含具有 **coclass** 特性的类，但未指定 guid，则编译器将对这两个类使用相同的 guid，这将导致 MIDL 错误。  因此， `uuid` 使用 **coclass**时应使用特性。
+如果两个标头文件包含具有 **coclass** 特性的类，但未指定 guid，则编译器将对这两个类使用相同的 guid，这将导致 MIDL 错误。  因此， `uuid` 使用 **coclass** 时应使用特性。
 
 **ATL 项目**
 
@@ -51,7 +52,7 @@ ms.locfileid: "88838875"
 
 最后，使用嵌入的 IDL 未定义的任何双重接口都将替换为相应的 [IDispatchImpl](../../atl/reference/idispatchimpl-class.md) 类。 如果双重接口在嵌入的 IDL 中定义，则不会修改基列表中的特定接口。
 
-**Coclass**特性还使以下函数可通过插入的代码提供或 `GetObjectCLSID` 作为基类中的静态方法提供 `CComCoClass` ：
+**Coclass** 特性还使以下函数可通过插入的代码提供或 `GetObjectCLSID` 作为基类中的静态方法提供 `CComCoClass` ：
 
 - `UpdateRegistry` 注册目标类的类工厂。
 
@@ -136,7 +137,7 @@ public:
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [COM 特性](com-attributes.md)<br/>

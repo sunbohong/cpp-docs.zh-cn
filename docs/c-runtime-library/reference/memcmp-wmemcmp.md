@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： memcmp、wmemcmp
 title: memcmp、wmemcmp
 ms.date: 11/04/2016
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: b18479e50d5b35c8de3dfd11eb34d0d21d45f223
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 65489d99e0c17e4971a4fa7cf849990b860ad361
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232451"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239982"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -54,7 +55,7 @@ int wmemcmp(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *buffer1*<br/>
 第一个缓冲区。
@@ -63,21 +64,21 @@ int wmemcmp(
 第二个缓冲区。
 
 *计数*<br/>
-要比较的字符数。 （比较**memcmp**的 bytes， **wmemcmp**的宽字符）。
+要比较的字符数。  (比较 **wmemcmp**) 的 **memcmp**、宽字符的字节数。
 
 ## <a name="return-value"></a>返回值
 
 返回值指示缓冲区之间的关系。
 
-|返回值|Buf1 和 buf2 的第一个*计数*字符的关系|
+|返回值|Buf1 和 buf2 的第一个 *计数* 字符的关系|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1*小于*buffer2*|
-|0|*buffer1*等同于*buffer2*|
-|> 0|*buffer1*大于*buffer2*|
+|< 0|*buffer1* 小于 *buffer2*|
+|0|*buffer1* 等同于 *buffer2*|
+|> 0|*buffer1* 大于 *buffer2*|
 
 ## <a name="remarks"></a>备注
 
-比较*buffer1*和*buffer2*的第一个*计数*字符并返回指示它们关系的值。 非零返回值的符号是缓冲区中的第一个不同值对之差的符号。 值被解释为 **`unsigned char`** 适用于**memcmp**和 **`wchar_t`** **wmemcmp**的值。
+比较 *buffer1* 和 *buffer2* 的第一个 *计数* 字符并返回指示它们关系的值。 非零返回值的符号是缓冲区中的第一个不同值对之差的符号。 值被解释为 **`unsigned char`** 适用于 **memcmp** 和 **`wchar_t`** **wmemcmp** 的值。
 
 ## <a name="requirements"></a>要求
 
@@ -140,7 +141,7 @@ Compare '1,2' to '1,2':
 int_arr1 is equal to int_arr2.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

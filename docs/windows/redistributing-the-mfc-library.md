@@ -1,16 +1,17 @@
 ---
+description: 了解更多：重新分发 MFC 库
 title: 重新分发 MFC 库
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: e1434bee6d134d4c02b2c06125d340a68a6c305d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7089b7000d3a9d397291379e47da6b49c4c9da71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81359906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247353"
 ---
 # <a name="redistributing-the-mfc-library"></a>重新分发 MFC 库
 
@@ -19,13 +20,13 @@ ms.locfileid: "81359906"
 > [!NOTE]
 > Visual Studio 2015 RTM 中的可再发行文件目录中省略了 mfc140.dll 文件。 可改用 Visual Studio 2015 在 Windows\system32 和 Windows\syswow64 目录中安装的版本。
 
-由于所有 MFC DLL 都使用共享版本的 C 运行库 (CRT)，因此可能还需重新分发 CRT。 Visual Studio 2015 附带的 MFC 版本使用通用 CRT 库，该库作为 Windows 10 的一部分进行分发。 要在早期版本的 Windows 上运行使用 Visual Studio 2015 生成的 MFC 应用程序，必须重新分发通用 CRT。 有关如何将通用 CRT 重新分发为操作系统组件或如何使用本地部署进行重新分发的信息，请参阅[通用 CRT 简介](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/)。 要下载通用 CRT 以在受支持的 Windows 版本上进行集中部署，请参阅[Windows 10 通用 C 运行时](https://www.microsoft.com/download/details.aspx?id=48234)。 Windows SDK 中提供了用于本地部署的可再发行体系结构特定版本的 ucrtbase.dll。 默认情况下，Visual Studio 将这些文件安装在特定于体系结构的子目录中的 C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\ 中。
+由于所有 MFC DLL 都使用共享版本的 C 运行库 (CRT)，因此可能还需重新分发 CRT。 Visual Studio 2015 附带的 MFC 版本使用通用 CRT 库，该库作为 Windows 10 的一部分进行分发。 要在早期版本的 Windows 上运行使用 Visual Studio 2015 生成的 MFC 应用程序，必须重新分发通用 CRT。 有关如何将通用 CRT 重新分发为操作系统组件或如何使用本地部署进行重新分发的信息，请参阅[通用 CRT 简介](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/)。 若要下载支持的 Windows 版本上的通用 CRT 进行中心部署，请参阅 [windows 10 通用 C 运行时](https://www.microsoft.com/download/details.aspx?id=48234)。 Windows SDK 中提供了用于本地部署的可再发行体系结构特定版本的 ucrtbase.dll。 默认情况下，Visual Studio 将这些文件安装在特定于体系结构的子目录中的 C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\ 中。
 
 如果应用是使用早期版本的 MFC 库生成的，则必须从可再发行文件目录重新分发匹配的 CRT DLL。 例如，如果 MFC 应用程序是使用 Visual Studio 2013 (vc120) 工具集生成的，则必须重新分发 msvcr120.dll。 必须重新分发匹配的 matching mfc`<version>`u.dll 或 mfc`<version>`.dll。
 
-如果将应用程序静态链接到 MFC（即如果在“属性页”对话框的“常规”选项卡上指定“在静态库中使用 MFC”），则无需重新分发 MFC DLL************。 但是，尽管静态链接可能适用于应用程序的测试和内部部署，但不建议使用它来重新分发 MFC。 如需深入了解部署 Visual C++ 库的建议策略，请参阅[选择部署方法](choosing-a-deployment-method.md)。
+如果将应用程序静态链接到 MFC（即如果在“属性页”对话框的“常规”选项卡上指定“在静态库中使用 MFC”），则无需重新分发 MFC DLL。 但是，尽管静态链接可能适用于应用程序的测试和内部部署，但不建议使用它来重新分发 MFC。 如需深入了解部署 Visual C++ 库的建议策略，请参阅[选择部署方法](choosing-a-deployment-method.md)。
 
-如果应用程序使用实现 WebBrowser 控件的 MFC 类（例如，[CHtmlView 类](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 类](../mfc/reference/chtmleditview-class.md)），建议同时安装最新版本的 Microsoft Internet Explorer，以便目标计算机具有最新的通用控件文件。 （至少需要 Internet 资源管理器 4.0。有关如何安装 Internet Explorer 组件的信息，请访问 Microsoft 支持网站上的"第 185375 条：如何创建 Internet 资源管理器的单 EXE 安装"。
+如果应用程序使用实现 WebBrowser 控件的 MFC 类（例如，[CHtmlView 类](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 类](../mfc/reference/chtmleditview-class.md)），建议同时安装最新版本的 Microsoft Internet Explorer，以便目标计算机具有最新的通用控件文件。 至少需要 (Internet Explorer 4.0 ) 。有关如何安装 Internet Explorer 组件的信息，请参阅 Microsoft 支持部门网站上的 "文章185375：如何创建 Internet Explorer 的单一 EXE 安装"。
 
 如果应用程序使用 MFC 数据库类（例如 [CRecordset 类](../mfc/reference/crecordset-class.md)和 [CRecordView 类](../mfc/reference/crecordview-class.md)），则必须重新分发 ODBC 和应用程序使用的任何 ODBC 驱动程序。
 
@@ -33,7 +34,7 @@ ms.locfileid: "81359906"
 
 如果重新分发 MFC DLL，请确保重新分发零售版本，而不是调试版本。 DLL 的调试版本不可再发行。 MFC DLL 的调试版本的名称以“d”结尾，例如 Mfc140d.dll。
 
-可通过以下方法来重新分发 MFC：使用随 Visual Studio 一起安装的合并模块 VCRedist_architecture.exe，或者将 MFC DLL 部署到与应用程序相同的文件夹中**。 有关如何重新分发 MFC 的详细信息，请参阅[重新分发 Visual C++ 文件](redistributing-visual-cpp-files.md)。
+可通过以下方法来重新分发 MFC：使用随 Visual Studio 一起安装的合并模块 VCRedist_architecture.exe，或者将 MFC DLL 部署到与应用程序相同的文件夹中。 有关如何重新分发 MFC 的详细信息，请参阅[重新分发 Visual C++ 文件](redistributing-visual-cpp-files.md)。
 
 ## <a name="installation-of-localized-mfc-components"></a>安装本地化的 MFC 组件
 
@@ -45,6 +46,6 @@ ms.locfileid: "81359906"
 
 通过在应用程序本地文件夹中部署 MFC DLL，可重新分发 MFC 本地化 DLL。 有关如何重新分发 Visual C++ 库的详细信息，请参阅[重新分发 Visual C++ 文件](redistributing-visual-cpp-files.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [重新分发 Visual C++ 文件](redistributing-visual-cpp-files.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：编辑图像
 title: 如何：编辑图像
 ms.date: 02/15/2019
 f1_keywords:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: ecfd69594c05c210743e0c22c804a4713a8229ef
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d03e53ccdcb7978b1708765483cabac281ae08b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509642"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247145"
 ---
 # <a name="how-to-edit-an-image"></a>如何：编辑图像
 
@@ -61,7 +62,7 @@ ms.locfileid: "91509642"
 
 ### <a name="to-select-an-image"></a>选择图像
 
-1. 使用 "**图像编辑器**" 工具栏或 "浏览**Image**  >  " "菜单" "图像**工具**"，然后选择所需的选择工具。
+1. 使用 "**图像编辑器**" 工具栏或 "浏览  >  " "菜单" "图像 **工具**"，然后选择所需的选择工具。
 
 1. 将插入点移动到要选择的图像区域的一个角。 当插入点在图像上时，将显示十字线。
 
@@ -81,7 +82,7 @@ ms.locfileid: "91509642"
 
 #### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>剪切当前选定内容并将其移到剪贴板
 
-中转到菜单**编辑**  >  **剪切**。
+中转到菜单 **编辑**  >  **剪切**。
 
 #### <a name="to-copy-the-selection"></a>复制选定内容
 
@@ -103,12 +104,12 @@ ms.locfileid: "91509642"
 
 #### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>删除当前所选内容，而不将其移动到剪贴板
 
-中转到菜单**编辑**  >  **删除**。
+中转到菜单 **编辑**  >  **删除**。
 
    将用当前背景色填充所选内容的原始区域。
 
 > [!NOTE]
-> 您可以通过在 "**资源视图**" 窗口中右键单击来访问**剪切**、**复制**、**粘贴**和**删除**命令。
+> 您可以通过在 "**资源视图**" 窗口中右键单击来访问 **剪切**、**复制**、**粘贴** 和 **删除** 命令。
 
 #### <a name="to-move-the-selection"></a>移动选定内容
 
@@ -124,11 +125,11 @@ ms.locfileid: "91509642"
 
 您可以翻转或旋转图像，以创建原始的镜像图像，将图像上下翻转，或将图像向右旋转90度。
 
-- 若要**水平翻转图像** (镜像图像) ，请转到 "  >  **水平翻转**" 菜单。
+- 若要 **水平翻转图像** (镜像图像) ，请转到 "  >  **水平翻转**" 菜单。
 
 - 若要垂直翻转图像 (翻转) ，请转到 **"菜单"**"  >  **垂直翻转**"。
 
-- 要旋转图像90度，请转到菜单**图像**  >  **旋转90度**。
+- 要旋转图像90度，请转到菜单 **图像**  >  **旋转90度**。
 
    > [!NOTE]
    > 你还可以使用 [快捷键 (快捷方式) 键](../windows/accelerator-keys-image-editor-for-icons.md) 来执行这些命令，或从快捷菜单中访问命令 (在图像 **编辑器** 中选择 ") "。
@@ -190,7 +191,7 @@ ms.locfileid: "91509642"
 
 您可以在开发环境中打开和编辑图像，就像在任何图形应用程序中一样，例如打开位图进行独立编辑。 所使用的映像不需要是 Visual Studio 项目的一部分。
 
-1. "打开" "打开" 菜单**文件**  >  **Open**。
+1. "打开" "打开" 菜单 **文件**  >  。
 
 1. 在 " **文件类型** " 框中，选择 " **所有文件**"。
 
@@ -200,14 +201,14 @@ ms.locfileid: "91509642"
 
 您可以使用 [属性窗口](/visualstudio/ide/reference/properties-window)来设置或修改图像的属性。
 
-1. 在 **图像编辑器**中打开图像。
+1. 在 **图像编辑器** 中打开图像。
 
 1. 在 " **属性** " 窗口中，更改图像的任意或全部属性。
 
-   |属性|说明|
+   |Property|描述|
    |--------------|-----------------|
    |**颜色**|指定图像的配色方案。 选择 " **单色**"、" **16**" 或 " **256**" 或 " **真彩色**"。<br/><br/>如果已绘制带有16色调色板的图像，则选择 " **单色** " 会导致图像中的颜色的黑色和白色的替换。 对比度并非始终保持不变：例如，红色和绿色的相邻区域都转换为黑色。|
-   |**Filename**|指定图像文件的名称。<br/><br/>默认情况下，Visual Studio 会通过删除默认资源标识符中的前四个字符（ ( "IDB_ ) "）来分配创建的基本文件名， (IDB_BITMAP1) 并添加相应的扩展。 在此示例中，图像的文件名为 *BITMAP1.bmp*。 您可以 *MYBITMAP1.bmp*将其重命名。|
+   |**Filename**|指定图像文件的名称。<br/><br/>默认情况下，Visual Studio 会通过删除默认资源标识符中的前四个字符（ ( "IDB_ ) "）来分配创建的基本文件名， (IDB_BITMAP1) 并添加相应的扩展。 在此示例中，图像的文件名为 *BITMAP1.bmp*。 您可以 *MYBITMAP1.bmp* 将其重命名。|
    |Height |以像素为单位设置图像 (的高度) 。 默认值为48。<br/><br/>裁剪图像或将空白区域添加到现有图像下方。|
    |**ID**|设置资源的标识符。<br/><br/>对于图像，Microsoft Visual Studio 默认情况下会在序列中分配下一个可用标识符： IDB_BITMAP1、IDB_BITMAP2 等。 类似名称用于图标和光标。|
    |**调色板**|更改颜色属性。<br/><br/>双击以选择颜色并显示 " [自定义颜色选择器" 对话框](./image-editor-for-icons.md)。 通过在相应的文本框中键入 RGB 或 HSL 值来定义颜色。|
@@ -216,7 +217,7 @@ ms.locfileid: "91509642"
 
 ## <a name="requirements"></a>要求
 
-None
+无
 
 ## <a name="see-also"></a>请参阅
 

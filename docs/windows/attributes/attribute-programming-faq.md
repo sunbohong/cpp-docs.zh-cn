@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：属性编程常见问题
 title: 特性编程常见问题
 ms.date: 10/02/2018
 ms.topic: conceptual
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: 70fbcc47884214fb998eb63ebfe50e445dbe95b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7a3bdfc8749297d11c5bc33b706265a1f5913a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240424"
 ---
 # <a name="attribute-programming-faq"></a>特性编程常见问题
 
@@ -40,7 +41,7 @@ ms.locfileid: "88843139"
 
 HRESULT 是一种简单的数据类型，通常由特性和 ATL 通常用作返回值。 下表描述了各种值。 标头文件 winerror.h 中包含的值越多。
 
-|名称|说明|值|
+|名称|描述|值|
 |----------|-----------------|-----------|
 |S_OK|操作成功|0x00000000|
 |E_UNEXPECTED|意外故障|0x8000FFFF|
@@ -152,7 +153,7 @@ class CMyClass
 
 ## <a name="how-can-i-use-an-idl-file-in-an-attributed-project"></a><a name="vcconattributeprogrammmingfaqanchor6"></a> 如何在特性化项目中使用 .idl 文件？
 
-您可能有一个要在 ATL 特性化项目中使用的 .idl 文件。 在这种情况下，你将使用[importidl](importidl.md)属性，将 .idl 文件编译为 .h 文件 (查看项目的 "**属性页**" 对话框中的 " [MIDL" 属性页](../../build/reference/midl-property-pages.md)) ，然后将 .h 文件包含在项目中。
+您可能有一个要在 ATL 特性化项目中使用的 .idl 文件。 在这种情况下，你将使用 [importidl](importidl.md)属性，将 .idl 文件编译为 .h 文件 (查看项目的 "**属性页**" 对话框中的 " [MIDL" 属性页](../../build/reference/midl-property-pages.md)) ，然后将 .h 文件包含在项目中。
 
 ## <a name="can-i-modify-code-that-is-injected-by-an-attribute"></a><a name="vcconattributeprogrammmingfaqanchor7"></a> 能否修改由属性注入的代码？
 
@@ -272,6 +273,6 @@ int main() {}
 
 不可以。不支持对从也使用特性的类派生的类使用特性。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [适用于 COM 和 .NET 的 C++ 属性](cpp-attributes-com-net.md)

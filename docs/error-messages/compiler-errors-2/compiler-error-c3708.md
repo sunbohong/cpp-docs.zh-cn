@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3708
 title: 编译器错误 C3708
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3708
 ms.assetid: 45e71564-9c7f-437f-98d8-a735ce162ed0
-ms.openlocfilehash: b5a2688cf138733a7a2891238953bc9fd894e483
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e70bf90fb1ee8c05fd9c51fc18d024773e20774d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241802"
 ---
 # <a name="compiler-error-c3708"></a>编译器错误 C3708
 

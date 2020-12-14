@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： memchr、wmemchr
 title: memchr、wmemchr
 ms.date: 03/31/2019
 api_name:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: b4640004526eda4ff26e9601e15298bcb8ba3c79
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232464"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239995"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -73,12 +74,12 @@ const wchar_t *wmemchr(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *宽限*<br/>
 指向缓冲区的指针。
 
-*ansi-c*<br/>
+*c*<br/>
 要查找的字符。
 
 *计数*<br/>
@@ -86,11 +87,11 @@ const wchar_t *wmemchr(
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回指向*缓冲区*中第一个*c*位置的指针。 否则，它将返回 NULL。
+如果成功，则返回指向 *缓冲区* 中第一个 *c* 位置的指针。 否则，它将返回 NULL。
 
 ## <a name="remarks"></a>备注
 
-`memchr`并 `wmemchr` 在*缓冲区*的第一个*计数*字符中查找*c*的第一个匹配项。 它在找到*c*或已检查第一个*计数*字符时停止。
+`memchr`并 `wmemchr` 在 *缓冲区* 的第一个 *计数* 字符中查找 *c* 的第一个匹配项。 它在找到 *c* 或已检查第一个 *计数* 字符时停止。
 
 在 C 中，这些函数采用 **`const`** 第一个参数的指针。 在 C++ 中，有两个重载可用。 采用指向的指针的重载 **`const`** 返回指向的指针 **`const`** ; 采用指向非的指针的版本返回指向 **`const`** 非的指针 **`const`** 。 \_ \_ \_ \_ 如果 **`const`** 这些函数的和非版本都可用，则会定义宏 CRT 常量正确重载 **`const`** 。 如果 **`const`** 在 c + + 中需要两个 c + + 重载的非行为，请定义符号 \_ CONST \_ 返回。
 
@@ -138,7 +139,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 String to be searched:

@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; regex&gt;
 title: '&lt;regex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 60548e96e0922fdcff00456b03bf9fa15bb7e3b3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 33eefd09c74731b36d3a8f104e2380944da2f43f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841475"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243765"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -37,7 +38,7 @@ ms.locfileid: "88841475"
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[basic_regex](../standard-library/basic-regex-class.md)|包装正则表达式。|
 |[match_results](../standard-library/match-results-class.md)|包含一系列子匹配项。|
@@ -52,7 +53,7 @@ ms.locfileid: "88841475"
 
 ### <a name="type-definitions"></a>类型定义
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[cmatch](../standard-library/regex-typedefs.md#cmatch)|的类型定义 **`char`** `match_results` 。|
 |[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|的类型定义 **`char`** `regex_iterator` 。|
@@ -75,7 +76,7 @@ ms.locfileid: "88841475"
 
 ### <a name="functions"></a>函数
 
-|函数|说明|
+|函数|描述|
 |-|-|
 |[regex_match](../standard-library/regex-functions.md#regex_match)|与正则表达式完全匹配。|
 |[regex_replace](../standard-library/regex-functions.md#regex_replace)|替换匹配正则表达式。|
@@ -84,7 +85,7 @@ ms.locfileid: "88841475"
 
 ### <a name="operators"></a>运算符
 
-|操作员|说明|
+|运算符|描述|
 |-|-|
 |[operator = =](../standard-library/regex-operators.md#op_eq_eq)|比较各种对象，相等。|
 |[operator！ =](../standard-library/regex-operators.md#op_neq)|比较各种对象，不相等。|
@@ -94,7 +95,7 @@ ms.locfileid: "88841475"
 |[运算符>=](../standard-library/regex-operators.md#op_gt_eq)|比较各种对象，大于或等于。|
 |[运算符<<](../standard-library/regex-operators.md#op_lt_lt)|将 `sub_match` 插入流中。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + +)  (正则表达式 ](../standard-library/regular-expressions-cpp.md)\
 [regex_constants 类](../standard-library/regex-constants-class.md)\

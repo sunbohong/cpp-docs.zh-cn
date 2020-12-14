@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： MFC 中的 OLE
 title: MFC 中的 OLE
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 529b6d0eaedaee200da547ef9ed980aab51ea233
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 125a2ad8e900747d859c03b57df33f2e7e5f1c28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622177"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97244090"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 
@@ -31,7 +32,7 @@ ms.locfileid: "84622177"
 
 - 管理 MFC 模块的状态数据，包括导出的 DLL 函数入口点，OLE/COM 接口入口点和窗口过程入口点。
 
-你还可以使用[自动化](automation.md)。
+你还可以使用 [自动化](automation.md)。
 
 > [!NOTE]
 > OLE 一词表示与链接和嵌入关联的技术，包括 OLE 容器、OLE 服务器、OLE 项、就地激活（也称为可视编辑）跟踪器、拖放和菜单合并。 Active 一词适用于组件对象模型 (COM) 和基于 COM 的对象（如 ActiveX 控件）。 OLE 自动化现在称为自动化。
@@ -41,7 +42,7 @@ ms.locfileid: "84622177"
 [OLE 背景](ole-background.md)<br/>
 讨论 OLE 并提供有关它的工作原理的概念性信息。
 
-[激活](activation-cpp.md)<br/>
+[启动](activation-cpp.md)<br/>
 说明激活在编辑 OLE 项中的作用。
 
 [容器](containers.md)<br/>
@@ -62,7 +63,7 @@ ms.locfileid: "84622177"
 [服务器](servers.md)<br/>
 介绍如何创建供容器应用程序使用的 OLE 项（或组件）。
 
-[跟踪](trackers.md)<br/>
+[Trackers](trackers.md)<br/>
 提供有关 `CRectTracker` 类的信息，该类提供了一个供用户与 OLE 客户端项交互的图形界面。
 
 ## <a name="related-sections"></a>相关章节
@@ -76,6 +77,6 @@ ms.locfileid: "84622177"
 [组件对象模型](/windows/win32/com/the-component-object-model)<br/>
 介绍如何在没有 MFC 的情况下使用 OLE。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概念](mfc-concepts.md)

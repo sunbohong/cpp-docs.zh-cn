@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3710
 title: 编译器错误 C3710
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3710
 ms.assetid: 18bec009-5b6f-464a-a21e-5d58a6936504
-ms.openlocfilehash: 3c060d5b01c0d918071681996e76258eba0ce943
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 6e9e146f5ec7370043756998cd162c3e57839671
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74753414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241698"
 ---
 # <a name="compiler-error-c3710"></a>编译器错误 C3710
 
-"function"：在 __hook/\_中指定事件处理程序的语法不正确 _unhook
+"function"：在 __hook/_unhook 中指定事件处理程序的语法不正确 \_
 
-当使用[__hook](../../cpp/hook.md)或[__unhook](../../cpp/unhook.md)指定事件处理程序时，处理程序必须为有效的方法。
+当使用 [__hook](../../cpp/hook.md) 或 [__unhook](../../cpp/unhook.md)指定事件处理程序时，处理程序必须为有效的方法。
 
 ## <a name="example"></a>示例
 

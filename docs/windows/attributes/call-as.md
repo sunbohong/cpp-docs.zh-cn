@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： call_as
 title: 'call_as (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: 9ae620ed6f2b01cc52e4a9c76217f044db925f11
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: de407da1401479327185c6133c625d61e1e221cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838915"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247444"
 ---
 # <a name="call_as"></a>call_as
 
@@ -23,14 +24,14 @@ ms.locfileid: "88838915"
 [ call_as(function) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 调用远程函数时要调用的本地函数。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Call_as** c + + 特性具有与[call_as](/windows/win32/Midl/call-as) MIDL 特性相同的功能。
+**Call_as** c + + 特性具有与 [call_as](/windows/win32/Midl/call-as) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -59,7 +60,7 @@ __interface IMInterface {
 
 有关特性上下文的详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [方法特性](method-attributes.md)<br/>

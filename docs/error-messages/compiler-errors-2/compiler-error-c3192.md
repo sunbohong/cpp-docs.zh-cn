@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3192
 title: 编译器错误 C3192
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3192
 ms.assetid: 8b0083d4-706f-46f6-858a-e1d9af464cf8
-ms.openlocfilehash: 977987c0c4a6d3ba86eaad2a0c1b4ff2664ce37c
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: fc88480a7ef799ced07dc52491b394b432e6525e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74761590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241906"
 ---
 # <a name="compiler-error-c3192"></a>编译器错误 C3192
 
-语法错误： "^" 不是前缀运算符（您是否希望使用 "*"？）
+语法错误： "^" 不是前缀运算符 (是否表示 "*"？ ) 
 
 句柄不能用作取消引用运算符。
 

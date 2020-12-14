@@ -1,19 +1,20 @@
 ---
-title: 编译器警告（等级1） C4020
+description: 了解详细信息：编译器警告 (等级 1) C4020
+title: 编译器警告 (等级 1) C4020
 ms.date: 11/04/2016
 f1_keywords:
 - C4020
 helpviewer_keywords:
 - C4020
 ms.assetid: 8c4cd6be-9371-4c8c-b0ff-a5ad367bbab0
-ms.openlocfilehash: 2136e94a261b2f767165e43acfd66583e8d15e9f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 454bab1eb8a3d1da6d0fe8bf508de8c466d22001
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80164581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97241568"
 ---
-# <a name="compiler-warning-level-1-c4020"></a>编译器警告（等级1） C4020
+# <a name="compiler-warning-level-1-c4020"></a>编译器警告 (等级 1) C4020
 
 "function"：实参太多
 

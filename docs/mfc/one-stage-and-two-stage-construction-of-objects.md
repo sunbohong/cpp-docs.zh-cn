@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： One-Stage 和 Two-Stage 对象的构造
 title: 对象的一阶段和两阶段构建
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-ms.openlocfilehash: 07e006d5b326486c54f23990c604a7d2ee0e4c83
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: d46a8d380c263c4ce18671f02b11d5b058bc8410
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243908"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>对象的一阶段和两阶段构建
 
@@ -43,6 +44,6 @@ ms.locfileid: "84625291"
 
 - [在视图中绘制](drawing-in-a-view.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [图形对象](graphic-objects.md)

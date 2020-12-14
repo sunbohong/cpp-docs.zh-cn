@@ -1,13 +1,14 @@
 ---
+description: '了解有关以下内容的详细信息：属性 (c + +/CX) '
 title: 属性 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5c56dabb080404b074408f60b6c06535558c1d82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239709"
 ---
 # <a name="properties-ccx"></a>属性 (C++/CX)
 
@@ -15,15 +16,15 @@ Windows 运行时类型公开公共数据作为属性。 客户端代码像公�
 
 ### <a name="remarks"></a>备注
 
-属性值包含在私有变量（也称“后备存储”）中，它与该属性的类型相同。 一个属性可以同时包含 set 访问器（将值赋给后备存储）和 get 访问器（检索后备存储的值）。 如果只提供 get 访问器，则属性是只读的，如果只提供 set 访问器，则属性是只写的，如果两种访问器都提供，则属性是可读写的（可修改）。
+属性值包含在私有变量（也称 “后备存储”）中，它与该属性的类型相同。 一个属性可以同时包含 set 访问器（将值赋给后备存储）和 get 访问器（检索后备存储的值）。 如果只提供 get 访问器，则属性是只读的，如果只提供 set 访问器，则属性是只写的，如果两种访问器都提供，则属性是可读写的（可修改）。
 
-trivial 属性是读/写属性，编译器自动为其实现访问器和后备存储。 你无法访问编译器的实现。 但是，你可以声明一个自定义属性并显式声明其访问器和后备存储。 在访问器中，可以执行所需的任何逻辑，如验证对 set 访问器的输入、根据属性值计算值、访问数据库或在属性变化时触发事件。
+ trivial 属性是读/写属性，编译器自动为其实现访问器和后备存储。 你无法访问编译器的实现。 但是，你可以声明一个自定义属性并显式声明其访问器和后备存储。 在访问器中，可以执行所需的任何逻辑，如验证对 set 访问器的输入、根据属性值计算值、访问数据库或在属性变化时触发事件。
 
 实例化 C++/CX ref 类后，在调用其构造函数之前将使用零实例化其内存；因此，在声明时将为所有属性分配默认值零或 nullptr。
 
 ### <a name="examples"></a>示例
 
-下面的代码示例演示如何声明和访问属性。 第一个属性 `Name`称为“trivial” 属性，因为编译器自动生成 `set` 访问器、 `get` 访问器和一个后备存储。
+下面的代码示例演示如何声明和访问属性。 第一个属性 `Name`称为“trivial”  属性，因为编译器自动生成 `set` 访问器、 `get` 访问器和一个后备存储。
 
 第二个属性 `Doctor`是只读属性，因为它指定只显式声明 *访问器的* 属性块 `get` 。 因为声明了属性块，所以必须显式声明一个后备存储，即私有 String^ 变量 `doctor_`。 通常，只读属性只返回后备存储的值。 只有该类自身可以设置后备存储的值，通常是在构造函数中。
 
@@ -38,5 +39,5 @@ trivial 属性是读/写属性，编译器自动为其实现访问器和后备�
 ## <a name="see-also"></a>请参阅
 
 [类型系统](../cppcx/type-system-c-cx.md)<br/>
-[C++/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
-[命名空间参考](../cppcx/namespaces-reference-c-cx.md)
+[C + +/CX 语言参考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[命名空间引用](../cppcx/namespaces-reference-c-cx.md)

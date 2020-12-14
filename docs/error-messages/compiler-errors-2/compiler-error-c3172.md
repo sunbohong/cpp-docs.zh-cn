@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3172
 title: 编译器错误 C3172
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3172
 ms.assetid: 1834e2fd-6036-4c33-aff2-b51bc7c99441
-ms.openlocfilehash: ca0eab35f6e60d81a324156905619ceb7ace8830
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: d8ce88960e725266723c3c37cd9bfbbbd342027b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242166"
 ---
 # <a name="compiler-error-c3172"></a>编译器错误 C3172
 
 "module_name"：不能在项目中指定不同的 idl_module 特性
 
-[idl_module](../../windows/attributes/idl-module.md)在 `dllname` `version` 编译中的两个文件中找到了具有相同名称但具有不同或参数的 idl_module 属性。 `idl_module`每个编译只能指定一个唯一属性。
+[](../../windows/attributes/idl-module.md)在 `dllname` `version` 编译中的两个文件中找到了具有相同名称但具有不同或参数的 idl_module 属性。 `idl_module`每个编译只能指定一个唯一属性。
 
 `idl_module`在多个源代码文件中可以指定相同的特性。
 
