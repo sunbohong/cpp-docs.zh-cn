@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： discrete_distribution 类
 title: discrete_distribution 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -23,12 +24,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5dcac516da088a55d2ddc176275ec25941ad8949
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b84d174a653efdeba47fb0356c903b8c7dd2a8d6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846272"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232754"
 ---
 # <a name="discrete_distribution-class"></a>discrete_distribution 类
 
@@ -70,12 +71,12 @@ public:
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *IntType*\
 整数结果类型，默认为 **`int`** 。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此示例分布包含以等概率分布在每个区间中的等宽区间。 有关其他示例分布的信息，请参阅 [piecewise_linear_distribution 类](../standard-library/piecewise-linear-distribution-class.md)和 [piecewise_constant_distribution 类](../standard-library/piecewise-constant-distribution-class.md)。
 
@@ -196,7 +197,7 @@ discrete_distribution(size_t count, double low, double high, UnaryOperation weig
 explicit discrete_distribution(const param_type& parm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *firstW*\
 从中构造分布的列表中的第一个迭代器。
@@ -207,7 +208,7 @@ explicit discrete_distribution(const param_type& parm);
 *weightlist*\
 从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*count*\
+*计*\
 分布范围中的元素数。 如果 `count==0`，则等效于默认构造函数（始终生成零）。
 
 *低级*\
@@ -222,18 +223,18 @@ explicit discrete_distribution(const param_type& parm);
 *parm*\
 用于构造分布的 `param_type` 结构。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认构造函数构造其存储的概率值仅具有附带值 1 的一个元素的对象。 这将产生始终生成零的分布。
 
 包含 *firstW* 和 *lastW* 参数的迭代器范围构造函数使用通过区间序列 [*firstW*, *lastW*) 的迭代器中获取的加权值构造分布对象。
 
-具有 *weightlist* 参数的初始值设定项列表构造函数使用初始值设定项列表 *weightlist*中的权重来构造分布对象。
+具有 *weightlist* 参数的初始值设定项列表构造函数使用初始值设定项列表 *weightlist* 中的权重来构造分布对象。
 
 包含 *count*、*low*、*high*、和 *weightfunc* 参数的构造函数基于以下规则构造初始化的分布对象：
 
 - 如果 *count* < 1，则 **n** = 1，并且等效于默认构造函数（始终生成零）。
-- 如果 *count* > 0，则 **n** = *count*。 提供**d** = (*高*  -  *低*) / **n**大于零，使用**d**均匀子范围，每个权重都按如下方式分配： `weight[k] = weightfunc(x)` ，其中**x**  =  *低*  +  **k**  *  **d**  +  **d** /2 表示**k** = 0，...， **n** -1。
+- 如果 *count* > 0，则 **n** = *count*。 提供 **d** = (*高*  -  *低*) / **n** 大于零，使用 **d** 均匀子范围，每个权重都按如下方式分配： `weight[k] = weightfunc(x)` ，其中 **x**  =  *低*  +  **k**  *  **d**  +  **d** /2 表示 **k** = 0，...， **n** -1。
 
 包含 `param_type` 参数 *parm* 的构造函数将 *parm* 用作存储的参数结构来构造分布对象。
 
@@ -264,7 +265,7 @@ struct param_type {
    };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *firstW*\
 从中构造分布的列表中的第一个迭代器。
@@ -275,7 +276,7 @@ struct param_type {
 *weightlist*\
 从中构造分布的 [initializer_list](../cpp/initializers.md)。
 
-*count*\
+*计*\
 分布范围中的元素数。 如果 *count* 为 0，则等效于默认构造函数（始终生成零）。
 
 *低级*\
@@ -290,10 +291,10 @@ struct param_type {
 *然后*\
 要与它进行比较的 `param_type` 对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此参数包可传递给 `operator()` 以生成返回值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

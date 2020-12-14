@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：：集合：： MapView 类
 title: Platform::Collections::MapView 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 693854499dafd23752337652ef298907fdecbcc2
-ms.sourcegitcommit: 65fead53d56d531d71be42216056aca5f44def11
+ms.openlocfilehash: 6011948bb3708329f7dcce0841f2bc34879760a7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88610889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258481"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 类
 
-将一个只读视图表示为一个 ** 映射，这是键值对的集合。
+将一个只读视图表示为一个 映射，这是键值对的集合。
 
 ## <a name="syntax"></a>语法
 
@@ -33,18 +34,18 @@ template <
 ref class MapView sealed;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*温度*<br/>
+*K*<br/>
 键值对中键的类型。
 
-*向量*<br/>
+*V*<br/>
 键值对中值的类型。
 
 *C*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在 MapView 中的相对顺序。 默认情况下， [std：： \<K> less](../standard-library/less-struct.md)。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 MapView 是[Windows：： Foundation：：集合：： IMapView \<K,V> ](/uwp/api/windows.foundation.collections.imapview-2)接口的具体 c + + 实现，该实现是跨应用程序二进制接口传递 (ABI) 。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
@@ -52,13 +53,13 @@ MapView 是[Windows：： Foundation：：集合：： IMapView \<K,V> ](/uwp/ap
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[MapView：： MapView](#ctor)|初始化 MapView 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[MapView：： First](#first)|返回初始化为映射视图中第一个元素的迭代器。|
 |[MapView：： HasKey](#haskey)|确定当前 MapView 中是否包含指定键。|
@@ -91,9 +92,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 指定映射视图中第一个元素的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myMapView->First();`。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如 `auto x = myMapView->First();`。
 
 ## <a name="mapviewhaskey-method"></a><a name="haskey"></a> MapView：： HasKey 方法
 
@@ -106,10 +107,10 @@ virtual Windows::Foundation::Collections::IIterator<
 bool HasKey(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-用于定位 MapView 元素的键。 *键*类型为 typename *K*。
+*key*<br/>
+用于定位 MapView 元素的键。 *键* 类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
@@ -125,9 +126,9 @@ bool HasKey(K key);
 V Lookup(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
+*key*<br/>
 用于定位 MapView 中的元素的键。 的类型 `key` 为 Typename *K*。
 
 ### <a name="return-value"></a>返回值
@@ -157,7 +158,7 @@ MapView(
     const C& comp = C());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *InIt*<br/>
 当前 MapView 的类型名称。
@@ -205,7 +206,7 @@ void Split(
                          K, V>^ * secondPartition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *firstPartition*<br/>
 原始 MapView 对象的第一部分。
@@ -213,10 +214,10 @@ void Split(
 *secondPartition*<br/>
 原始 MapView 对象的第二部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法为非操作性的，它不执行任何操作。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)

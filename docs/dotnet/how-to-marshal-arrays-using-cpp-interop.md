@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：使用 c + + 互操作封送数组
 title: 如何：使用 C++ 互操作封送数组
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 0ccf71d40db0bc6989620d2ca126ce74311805da
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 5c91b9f24a801f7bf1bd1ec3132503535f0334d0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258234"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>如何：使用 C++ 互操作封送数组
 
@@ -129,6 +130,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

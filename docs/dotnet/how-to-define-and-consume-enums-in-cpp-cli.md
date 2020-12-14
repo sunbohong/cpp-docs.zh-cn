@@ -1,15 +1,16 @@
 ---
+description: 了解有关详细信息，请参阅如何：在 c + +/CLI 中定义和使用枚举
 title: 如何：在 C++/CLI 中定义和使用枚举
 ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: f09bb6e9fac30b72c3c4e0682c3d90f2ea9f8760
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 26b3c886ca34235f0567fc0f8e9d7df6bfe46814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258337"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定义和使用枚举
 
@@ -79,7 +80,7 @@ a and day2 are the same
 
 以下运算符对 c + +/CLI 中的枚举有效：
 
-|操作员|
+|运算符|
 |--------------|
 |== != \< >\<= >=|
 |+ -|
@@ -92,7 +93,7 @@ a and day2 are the same
 编译器不会对枚举操作的结果进行静态或动态检查;操作可能导致不在枚举的有效枚举器范围内的值。
 
 > [!NOTE]
-> C + + 11 在非托管代码中引入了与 c + +/CLI 中的托管枚举类截然不同的枚举类类型。 特别是，c + + 11 枚举类类型不支持与 c + +/CLI 中的托管枚举类类型相同的运算符，并且 c + +/CLI 源代码必须在托管枚举类声明中提供可访问性说明符，以便将它们与非托管（c + + 11）枚举类声明区分开来。 有关 c + +/CLI、c + +/CX 和 c + + 11 中的枚举类的详细信息，请参阅[enum 类](../extensions/enum-class-cpp-component-extensions.md)。
+> C + + 11 在非托管代码中引入了与 c + +/CLI 中的托管枚举类截然不同的枚举类类型。 特别是，c + + 11 枚举类类型不支持与 c + +/CLI 中的托管枚举类类型相同的运算符，并且 c + +/CLI 源代码必须在托管枚举类声明中提供可访问性说明符，以便将它们与非托管 (c + + 11) 枚举类声明区分开来。 有关 c + +/CLI、c + +/CX 和 c + + 11 中的枚举类的详细信息，请参阅 [enum 类](../extensions/enum-class-cpp-component-extensions.md)。
 
 ```cpp
 // mcppv2_enum_5.cpp
@@ -135,6 +136,6 @@ int main() {
 True
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [枚举类](../extensions/enum-class-cpp-component-extensions.md)

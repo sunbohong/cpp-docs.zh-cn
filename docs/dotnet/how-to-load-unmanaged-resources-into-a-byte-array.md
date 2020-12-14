@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：将非托管资源加载到字节数组中
 title: 如何：将非托管资源加载到一个字节数组
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: b2b98ff3c4bbd857e3f5d861c1e0e8e2bd2f357b
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: e5a7a88a505d3f02b8e9287d6407ddbe77b99dee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685800"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258273"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：将非托管资源加载到一个字节数组
 

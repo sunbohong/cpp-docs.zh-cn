@@ -1,4 +1,5 @@
 ---
+description: 了解更多：多文档类型、视图和框架窗口
 title: 多文档类型、视图和框架窗口
 ms.date: 11/19/2018
 helpviewer_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: 873903aadc1596fbc56f9a0b0b98dbc5a948113d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 05af9f0a86210804f7f83d82d9c18ddb80e47a4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619958"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275589"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多文档类型、视图和框架窗口
 
@@ -36,7 +37,7 @@ ms.locfileid: "84619958"
 
 - [拆分窗口](#_core_splitter_windows)
 
-## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a>多文档类型
+## <a name="multiple-document-types"></a><a name="_core_multiple_document_types"></a> 多文档类型
 
 “MFC 应用程序”向导可为你创建单个文档类。 但在某些情况下，可能需要支持一个以上的文档类型 例如，你的应用程序可能需要工作表文档和图表文档。 每种文档类型由各自的文档类表示，可能的话还由各自的视图类表示。 当用户选择“新建文件”命令时，框架将显示出一个对话框，其中列出了受支持的文档类型。 然后，框架会创建用户所选类型的文档。 每个文档由各自的文档模板对象进行管理。
 
@@ -44,7 +45,7 @@ ms.locfileid: "84619958"
 
 若要使框架知道其他文档类，必须在应用程序类的 [InitInstance](reference/cwinapp-class.md#adddoctemplate) 再添加一个对 [AddDocTemplate](reference/cwinapp-class.md#initinstance) 的的调用。 有关信息信息，请参阅 [文档模板](document-templates-and-the-document-view-creation-process.md)。
 
-## <a name="multiple-views"></a><a name="_core_multiple_views"></a>多个视图
+## <a name="multiple-views"></a><a name="_core_multiple_views"></a> 多个视图
 
 许多文档只要求单个视图，但可能支持每个文档有一个以上的视图。 为了帮助实现多个视图，文档对象会保留其视图的列表，提供用于添加和删除视图的成员函数，以及提供 [UpdateAllViews](reference/cdocument-class.md#updateallviews) 成员函数来通知各个视图关于文档数据发生更改的时间。
 
@@ -71,11 +72,11 @@ MFC 支持在同一文档上要求多个视图的三个通用用户界面。 这
 
 有关 `UpdateAllViews`的详细信息，请参阅 [MFC 参考](reference/cview-class.md) 中的 *CView* 类和 [Scribble 示例](../overview/visual-cpp-samples.md)。
 
-## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a>多个框架窗口
+## <a name="multiple-frame-windows"></a><a name="_core_multiple_frame_windows"></a> 多个框架窗口
 
 可以使用 MDI 应用程序“窗口”菜单上的“新建窗口”命令创建同一文档的第二个框架窗口。 有关详细信息，请参阅多视图用户界面图中的第一个模型。
 
-## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a>拆分窗口
+## <a name="splitter-windows"></a><a name="_core_splitter_windows"></a> 拆分窗口
 
 在拆分窗口中，窗口被（或可以）拆分为两个或更多的可滚动窗格。 窗口框架中滚动条旁边的拆分条控件（或“拆分框”）使用户得以调整窗格的相对大小。 每个窗格是同一文档的一个视图。 在“动态”拆分条中，视图属于同一类，如图多视图用户界面中的 b 部分所示。 在“静态”拆分条中，视图可以属于不同类。 [CSplitterWnd](reference/csplitterwnd-class.md)类支持这两种拆分窗口。
 
@@ -85,6 +86,6 @@ MFC 支持在同一文档上要求多个视图的三个通用用户界面。 这
 
 有关详细信息，请参阅 [MFC 参考](reference/csplitterwnd-class.md) 中的 *CSplitterWnd* 类和 [MFC 示例](../overview/visual-cpp-samples.md#mfc-samples)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文档/视图体系结构](document-view-architecture.md)

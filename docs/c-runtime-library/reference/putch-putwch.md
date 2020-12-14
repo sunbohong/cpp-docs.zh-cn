@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _putch、_putwch
 title: _putch、_putwch
 ms.date: 4/2/2020
 api_name:
@@ -35,12 +36,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 242e7c69330cf86c9c369903812f277fe0018d50
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246339"
 ---
 # <a name="_putch-_putwch"></a>_putch、_putwch
 
@@ -61,22 +62,22 @@ wint_t _putwch(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要输出的字符。
 
 ## <a name="return-value"></a>返回值
 
-如果成功，则返回 *c*。 如果 **_putch**失败，则返回**EOF**;如果 **_putwch**失败，则返回**WEOF**。
+如果成功，则返回 *c*。 如果 **_putch** 失败，则返回 **EOF**;如果 **_putwch** 失败，则返回 **WEOF**。
 
 ## <a name="remarks"></a>备注
 
-这些函数将字符*c*直接写入控制台，而不是进行缓冲处理。 在 Windows NT 中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
+这些函数将字符 *c* 直接写入控制台，而不是进行缓冲处理。 在 Windows NT 中，**_putwch** 使用当前控制台区域设置写入 Unicode 字符。
 
-后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请 **_putch_nolock**参阅 _putch_nolock **_putwch_nolock**。
+后缀为 **_nolock** 的版本是相同的，只不过它们可能会受到其他线程的影响。 有关详细信息，请参阅 _putch_nolock **_putwch_nolock**。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -86,7 +87,7 @@ wint_t _putwch(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|
@@ -101,7 +102,7 @@ wint_t _putwch(
 
 请参阅 [_getch](getch-getwch.md) 的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

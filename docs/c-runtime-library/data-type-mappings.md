@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：数据类型映射
 title: 数据类型映射
 ms.date: 11/04/2016
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - _TEXT type
 - _T type
 ms.assetid: 4e573c05-8800-468b-ae5f-76ff7409835e
-ms.openlocfilehash: d77ac4fa9afcd5a6b8f86261c7a3ba466adc64a4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d76ecebc9bcb01e86cac2f199534ae2cda518c8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215148"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258768"
 ---
 # <a name="data-type-mappings"></a>数据类型映射
 
@@ -56,10 +57,10 @@ TCHAR.H 中定义了这些数据类型映射，具体取决于程序中是否定
 |`_TXCHAR`|**`char`**|**`unsigned char`**|**`wchar_t`**|
 |`_T` 或 `_TEXT`|无效果（由预处理器删除）|无效果（由预处理器删除）|`L`（将以下字符或字符串转换为其 Unicode 对应项）|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [一般文本映射](../c-runtime-library/generic-text-mappings.md)<br/>
 [常量和全局变量映射](../c-runtime-library/constant-and-global-variable-mappings.md)<br/>
 [例程映射](../c-runtime-library/routine-mappings.md)<br/>
-[示例一般文本程序](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[使用一般文本映射](../c-runtime-library/using-generic-text-mappings.md)
+[示例 Generic-Text 程序](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[使用 Generic-Text 映射](../c-runtime-library/using-generic-text-mappings.md)

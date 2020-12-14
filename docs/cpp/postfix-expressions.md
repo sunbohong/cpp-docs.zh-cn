@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：后缀表达式
 title: 后缀表达式
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 9a5c99c78623f2192b59a73f270f3ad5d2a34516
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c6c38fee6b2b44ab9ff390eed8d178bf40653df2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231164"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258520"
 ---
 # <a name="postfix-expressions"></a>后缀表达式
 
@@ -23,8 +24,8 @@ ms.locfileid: "87231164"
 |-------------------|-----------------------|
 |[下标运算符](../cpp/subscript-operator.md)|**[ ]**|
 |[函数调用运算符](../cpp/function-call-operator-parens.md)|**( )**|
-|[显式类型转换运算符](../cpp/explicit-type-conversion-operator-parens.md)|*类型名称* **（）**|
-|[成员访问运算符](../cpp/member-access-operators-dot-and.md)|**.** 或**->**|
+|[显式类型转换运算符](../cpp/explicit-type-conversion-operator-parens.md)|*类型名称* **( )**|
+|[成员访问运算符](../cpp/member-access-operators-dot-and.md)|**.** 或 **->**|
 |[后缀递增运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[后缀递减运算符](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
 
@@ -35,7 +36,7 @@ primary-expression
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
-上面的*后缀表达式*可以是[主表达式](primary-expressions.md)或其他后缀表达式。 后缀表达式从左到右进行分组，这允许表达式按如下方式链接起来：
+上面的 *后缀表达式* 可以是 [主表达式](primary-expressions.md) 或其他后缀表达式。 后缀表达式从左到右进行分组，这允许表达式按如下方式链接起来：
 
 ```cpp
 func(1)->GetValue()++
@@ -53,9 +54,9 @@ simple-type-name ( expression-list )
 
 指示构造函数的调用。  如果 simple-type-name 是基本类型，则表达式列表必须是单个表达式，并且该表达式指示表达式的值将转换为基础类型。  此类强制转换表达式模仿构造函数。  由于此形式允许使用相同的语法来构造基本类型和类，因此它在定义模板类时特别有用。
 
-*Cast 关键字*为 **`dynamic_cast`** 、 **`static_cast`** 或之一 **`reinterpret_cast`** 。  有关详细信息 [`dynamic_cast`](dynamic-cast-operator.md) ，请参阅 [`static_cast`](static-cast-operator.md) 和 [`reinterpet_cast`](reinterpret-cast-operator.md) 。
+*Cast 关键字* 为 **`dynamic_cast`** 、 **`static_cast`** 或之一 **`reinterpret_cast`** 。  有关详细信息 [`dynamic_cast`](dynamic-cast-operator.md) ，请参阅 [`static_cast`](static-cast-operator.md) 和 [`reinterpet_cast`](reinterpret-cast-operator.md) 。
 
-**`typeid`** 运算符被视为后缀表达式。  请参阅**typeid 运算符**。
+**`typeid`** 运算符被视为后缀表达式。  请参阅 **typeid 运算符**。
 
 ## <a name="formal-and-actual-arguments"></a>形式和实际自变量
 
@@ -65,7 +66,7 @@ simple-type-name ( expression-list )
 
 - 计算所有实参（调用方提供的参数）。 没有计算这些自变量的隐含顺序，但所有自变量都会计算，并且所有副作用都会在进入该函数前完成。
 
-- 使用每个形参在表达式列表中对应的实参来初始化该形参。 （形参是在函数头中声明并在函数体中使用的自变量。）转换的完成方式与初始化相同-将实际参数转换为正确的类型时执行标准和用户定义的转换。 以下代码从概念上演示了所执行的初始化：
+- 使用每个形参在表达式列表中对应的实参来初始化该形参。  (形参是在函数头中声明并在函数体中使用的自变量。 ) 转换就像通过初始化一样，即在将实参转换为正确的类型时执行标准和用户定义的转换。 以下代码从概念上演示了所执行的初始化：
 
     ```cpp
     void Func( int i ); // Function prototype
@@ -80,13 +81,13 @@ simple-type-name ( expression-list )
     Func( Temp_i );
     ```
 
-   请注意，初始化就像使用等号语法（而不是括号语法）一样执行。 在将值传递到函数之前制作了 `i` 的副本。 （有关详细信息，请参阅[初始值设定项](../cpp/initializers.md)和[转换](../cpp/user-defined-type-conversions-cpp.md)）。
+   请注意，初始化就像使用等号语法（而不是括号语法）一样执行。 在将值传递到函数之前制作了 `i` 的副本。  (有关详细信息，请参阅 [初始值设定项](../cpp/initializers.md) 和 [转换](../cpp/user-defined-type-conversions-cpp.md)) 。
 
-   因此，如果函数原型（声明）调用了类型为的自变量 **`long`** ，并且调用程序提供了类型的实参 **`int`** ，则使用标准的类型转换 **`long`** （请参阅[标准转换](../cpp/standard-conversions.md)）升级实参。
+   因此，如果函数原型 (声明) 调用类型的参数 **`long`** ，并且调用程序提供了类型的实参 **`int`** ，则使用向类型的标准类型转换来升级实参 **`long`** (参见 [标准转换](../cpp/standard-conversions.md)) 。
 
    如果提供了一个实际自变量，但它没有到形式自变量类型的标准的或用户定义的转换，则是一个错误。
 
-   对于类类型的实际自变量，将通过调用类的构造函数初始化形式自变量。 （有关这些特殊类成员函数的详细信息，请参阅[构造函数](../cpp/constructors-cpp.md)。）
+   对于类类型的实际自变量，将通过调用类的构造函数初始化形式自变量。  (有关这些特殊类成员函数的详细信息，请参阅 [构造函数](../cpp/constructors-cpp.md) 。 ) 
 
 - 执行函数调用。
 
@@ -111,7 +112,7 @@ void func( long param1, double param2 )
 }
 ```
 
-当 `func` 从 main 调用时， `param1` 使用的值 `i` （ `i` 转换为类型 **`long`** 以对应于使用标准转换的正确类型）初始化形参，并使用的 `param2` 值 `j` （ `j` 使用标准转换将转换为类型）初始化形参 **`double`** 。
+当 `func` 从 main 调用时，使用标准转换 `param1`) 将 (的值 `i` `i` 转换为类型 **`long`** 以对应于正确的类型，并使用 `param2` `j` `j` 标准转换) 将 (的值转换为类型 **`double`** ，从而初始化形参。
 
 ## <a name="treatment-of-argument-types"></a>自变量类型的处理
 
@@ -147,11 +148,11 @@ double& func2( double& d, const char *c ) {
 
 - 类类型的所有参数都作为数据结构通过值进行传递；副本是由二进制复制创建的，而不是通过调用类的复制构造函数（如果存在）创建的。
 
-如果使用省略号，则必须在参数列表中最后声明它。 有关传递可变数量的参数的详细信息，请参阅《*运行时库参考*中有关[va_arg、va_start 和 va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)的讨论。
+如果使用省略号，则必须在参数列表中最后声明它。 有关传递可变数量的参数的详细信息，请参阅《*运行时库参考* 中有关 [va_arg、va_start 和 va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)的讨论。
 
-有关 CLR 编程中默认参数的信息，请参阅[变量参数列表（...）（c + +/cli）](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)。
+有关 CLR 编程中默认参数的信息，请参阅 [变量参数列表 ( (c + +/cli) ) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)。
 
-如果函数调用中没有提供值，则可通过默认参数指定参数应采用的值。 以下代码片段演示默认自变量的工作方式。 有关指定默认参数的限制的详细信息，请参阅[默认参数](../cpp/default-arguments.md)。
+如果函数调用中没有提供值，则可通过默认参数指定参数应采用的值。 以下代码片段演示默认自变量的工作方式。 有关指定默认参数的限制的详细信息，请参阅 [默认参数](../cpp/default-arguments.md)。
 
 ```cpp
 // expre_Ellipsis_and_Default_Arguments.cpp
@@ -184,7 +185,7 @@ void print( const char *string, const char *terminator )
 }
 ```
 
-上面的程序声明一个采用两个参数的函数 `print`。 但是，第二个参数*终止符*具有默认值 `"\n"` 。 在中，对的 `main` 前两个调用 `print` 允许默认的第二个参数提供新行以终止打印的字符串。 第三个调用为第二个参数指定显式值。 该程序的输出为
+上面的程序声明一个采用两个参数的函数 `print`。 但是，第二个参数 *终止符* 具有默认值 `"\n"` 。 在中，对的 `main` 前两个调用 `print` 允许默认的第二个参数提供新行以终止打印的字符串。 第三个调用为第二个参数指定显式值。 该程序的输出为
 
 ```Output
 hello,
@@ -192,6 +193,6 @@ world!
 good morning, sunshine.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [表达式的类型](../cpp/types-of-expressions.md)

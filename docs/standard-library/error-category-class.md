@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： error_category 类
 title: error_category 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-ms.openlocfilehash: 218596ff5b81e99f4787efe2582fdc2752533cec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 25ad7f6acfe50cdcc0c4b9df44fb3b8b6244f569
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840162"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232650"
 ---
 # <a name="error_category-class"></a>error_category 类
 
@@ -45,24 +46,24 @@ error_category(const error_category&) = delete
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[value_type](#value_type)|表示存储的错误代码值的类型。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[default_error_condition](#default_error_condition)|存储错误条件对象的错误代码值。|
 |[项](#equivalent)|返回指定错误对象是否相等的值。|
 |[generic_category](#generic)||
 |[message](#message)|返回指定错误代码的名称。|
-|name |返回类别名称。|
+|name|返回类别名称。|
 |[system_category](#system)||
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator =](#op_as)|赋值运算符。|
 |[operator = =](#op_eq_eq)|测试各 `error_category` 对象是否相等。|
@@ -77,7 +78,7 @@ error_category(const error_category&) = delete
 virtual error_condition default_error_condition(int _Errval) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 `_Errval`\
 要存储在 [error_condition](../standard-library/error-condition-class.md) 中的错误代码值。
@@ -86,7 +87,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 返回 `error_condition(_Errval, *this)`。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 ### <a name="equivalent"></a><a name="equivalent"></a> 等效
 
@@ -100,7 +101,7 @@ virtual bool equivalent(const error_code& _Code,
     value_type _Errval) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *_Errval*\
 要比较的错误代码值。
@@ -115,7 +116,7 @@ virtual bool equivalent(const error_code& _Code,
 
 **`true`** 如果类别和值相等，则为;否则为 **`false`** 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 第一个成员函数返回 `*this == _Cond.category() && _Cond.value() == _Errval`。
 
@@ -135,7 +136,7 @@ const error_category& generic_category();
 virtual string message(error_code::value_type val) const = 0;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *初始值*\
 要描述的错误代码值。
@@ -144,7 +145,7 @@ virtual string message(error_code::value_type val) const = 0;
 
 返回类别的错误代码 *val* 的描述性名称。 如果错误代码无法识别，则返回 `"unknown error"` 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 ### <a name="name"></a><a name="name"></a> 名称
 
@@ -172,7 +173,7 @@ error_category& operator=(const error_category&) = delete;
 bool operator==(const error_category& right) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*\
 要测试是否相等的对象。
@@ -181,7 +182,7 @@ bool operator==(const error_category& right) const;
 
 **`true`** 如果对象相等，则为; 否则为。 **`false`** 如果对象不相等，则为。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此成员运算符将返回 `this == &right`。
 
@@ -193,16 +194,16 @@ bool operator==(const error_category& right) const;
 bool operator!=(const error_category& right) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*\
 要测试是否不相等的对象。
 
 #### <a name="return-value"></a>返回值
 
-**`true`** 如果 `error_category` 对象与右传递的对象不相等， `error_category` 则*right*为; 否则为 **`false`** 。
+**`true`** 如果 `error_category` 对象与右传递的对象不相等， `error_category` 则为; 否则为 **`false`** 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该成员运算符将返回 `(!*this == right)`。
 
@@ -214,7 +215,7 @@ bool operator!=(const error_category& right) const;
 bool operator<(const error_category& right) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*\
 要比较的 `error_category` 对象。
@@ -223,7 +224,7 @@ bool operator<(const error_category& right) const;
 
 **`true`** 如果 `error_category` 对象小于 `error_category` 用于比较的对象，则为; 否则为。否则为 **`false`** 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 该成员运算符将返回 `this < &right`。
 
@@ -241,6 +242,6 @@ const error_category& system_category();
 typedef int value_type;
 ```
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 此类型定义是的同义词 **`int`** 。

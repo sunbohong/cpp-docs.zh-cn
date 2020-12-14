@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：数据类型常量
 title: 数据类型常量
 ms.date: 06/25/2018
 f1_keywords:
@@ -139,12 +140,12 @@ helpviewer_keywords:
 - SIZE_MAX constant
 - RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
-ms.openlocfilehash: d9d053611fb733d55424d01be2bab030fc49e6e0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: eb1c16cb730ea40a60a5929867fa8a36b17190ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215161"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258832"
 ---
 # <a name="data-type-constants"></a>数据类型常量
 
@@ -161,15 +162,15 @@ ms.locfileid: "87215161"
 > [!NOTE]
 > [`/J`](../build/reference/j-default-char-type-is-unsigned.md)编译器选项将默认 **`char`** 类型从更改 **`signed char`** 为 **`unsigned char`** 。
 
-|返回的常量|值|描述|
+|返回的常量|“值”|描述|
 |--------------|-----------|-------------|
-|**CHAR_BIT**|8|中的位数**`char`**|
+|**CHAR_BIT**|8|中的位数 **`char`**|
 |**SCHAR_MIN**|(-128)|最小 **`signed char`** 值|
 |**SCHAR_MAX**|127|最大 **`signed char`** 值|
 |**UCHAR_MAX**|255 (0xff)|最大 **`unsigned char`** 值|
-|**CHAR_MIN**|（-128）（如果使用了选项，则为 0 **`/J`** ）|最小 **`char`** 值|
-|**CHAR_MAX**|127（如果使用了选项，则为 255 **`/J`** ）|最大 **`char`** 值|
-|**MB_LEN_MAX**|5|多字节中的最大字节数**`char`**|
+|**CHAR_MIN**| (-128)  (0 if **`/J`** 使用的选项) |最小 **`char`** 值|
+|**CHAR_MAX**|127 (255 if **`/J`**) 使用的选项|最大 **`char`** 值|
+|**MB_LEN_MAX**|5|多字节中的最大字节数 **`char`**|
 |**SHRT_MIN**|-32768|最小 **`signed short`** 值|
 |**SHRT_MAX**|32767|最大 **`signed short`** 值|
 |**USHRT_MAX**|65535 (0xffff)|最大 **`unsigned short`** 值|
@@ -197,8 +198,8 @@ ms.locfileid: "87215161"
 |**_I128_MIN**|(-170141183460469231731687303715884105727i128 - 1)|最小有符号的 128 位数值|
 |**_I128_MAX**|170141183460469231731687303715884105727i128|最大有符号的 128 位数值|
 |**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|最大无符号的 128 位数值|
-|**SIZE_MAX**|如果已定义 _WIN64 或为 UINT_MAX，则与 _UI64_MAX 相同************|最大本机整数大小|
-|**RSIZE_MAX**|与 (SIZE_MAX >> 1) 相同****|最大安全裤整数大小|
+|**SIZE_MAX**|如果已定义 _WIN64 或为 UINT_MAX，则与 _UI64_MAX 相同|最大本机整数大小|
+|**RSIZE_MAX**|与 (SIZE_MAX >> 1) 相同|最大安全裤整数大小|
 
 ## <a name="floating-point-type-constants"></a>浮点类型常量
 
@@ -208,11 +209,11 @@ ms.locfileid: "87215161"
 #include <float.h>
 ```
 
-|返回的常量|值|描述|
+|返回的常量|“值”|描述|
 |--------------|-----------|-----------------|
 |**DBL_DECIMAL_DIG**|17|十进制位数的舍入精度|
 |**DBL_DIG**|15|精度的小数位数|
-|**DBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + DBL_EPSILON != 1.0****|
+|**DBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + DBL_EPSILON != 1.0|
 |**DBL_HAS_SUBNORM**|1|类型支持低能数（非规格化）数|
 |**DBL_MANT_DIG**|53|有效数字（尾数）的位数|
 |**DBL_MAX**|1.7976931348623158e+308|最大值|
@@ -225,7 +226,7 @@ ms.locfileid: "87215161"
 |**DBL_TRUE_MIN**|4.9406564584124654e-324|最小次正规值|
 |**FLT_DECIMAL_DIG**|9|十进制位数的舍入精度|
 |**FLT_DIG**|6|十进制位数的精度|
-|**FLT_EPSILON**|1.192092896e-07F|最小，这样 1.0 + FLT_EPSILON != 1.0****|
+|**FLT_EPSILON**|1.192092896e-07F|最小，这样 1.0 + FLT_EPSILON != 1.0|
 |**FLT_HAS_SUBNORM**|1|类型支持低能数（非规格化）数|
 |**FLT_MANT_DIG**|24|有效数字（尾数）的位数|
 |**FLT_MAX**|3.402823466e+38F|最大值|
@@ -237,7 +238,7 @@ ms.locfileid: "87215161"
 |**FLT_RADIX**|2|指数基数|
 |**FLT_TRUE_MIN**|1.401298464e-45F|最小次正规值|
 |**LDBL_DIG**|15|精度的小数位数|
-|**LDBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + LDBL_EPSILON != 1.0****|
+|**LDBL_EPSILON**|2.2204460492503131e-016|最小，这样 1.0 + LDBL_EPSILON != 1.0|
 |**LDBL_HAS_SUBNORM**|1|类型支持低能数（非规格化）数|
 |**LDBL_MANT_DIG**|53|有效数字（尾数）的位数|
 |**LDBL_MAX**|1.7976931348623158e+308|最大值|
@@ -248,8 +249,8 @@ ms.locfileid: "87215161"
 |**LDBL_MIN_EXP**|(-1021)|最小二进制指数|
 |**_LDBL_RADIX**|2|指数基数|
 |**LDBL_TRUE_MIN**|4.9406564584124654e-324|最小次正规值|
-|**DECIMAL_DIG**|与 DBL_DECIMAL_DIG 相同****|默认（双精度）十进制位数的舍入精度|
+|**DECIMAL_DIG**|与 DBL_DECIMAL_DIG 相同|默认（双精度）十进制位数的舍入精度|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [全局常量](../c-runtime-library/global-constants.md)

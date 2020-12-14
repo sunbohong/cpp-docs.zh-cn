@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： filesystem_error 类
 title: filesystem_error 类
 ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: 1d142057859f1ca173f8953b34c07bbb3803ecba
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8165bfbc0d59dbbdab17d910e2e2f7973988049d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835865"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232429"
 ---
 # <a name="filesystem_error-class"></a>filesystem_error 类
 
@@ -29,13 +30,13 @@ class filesystem_error    : public system_error;
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[filesystem_error](#filesystem_error)|构造 `filesystem_error` 消息。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[path1](#path1)|返回 `mypval1`|
 |[path2](#path2)|返回 `mypval2`|
@@ -49,7 +50,7 @@ class filesystem_error    : public system_error;
 
 ## <a name="filesystem_error"></a><a name="filesystem_error"></a> filesystem_error
 
-第一个构造函数从 *what_arg* 和 *ec*构造其消息。 第二个构造函数还从存储在中的 *pval1 (* 构造其消息 `mypval1` 。 第三个构造函数还从 *pval1 (* 中构造其消息，并从其存储在 `mypval1` *pval2*中 `mypval2` 。
+第一个构造函数从 *what_arg* 和 *ec* 构造其消息。 第二个构造函数还从存储在中的 *pval1 (* 构造其消息 `mypval1` 。 第三个构造函数还从 *pval1 (* 中构造其消息，并从其存储在 `mypval1` *pval2* 中 `mypval2` 。
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -65,7 +66,7 @@ filesystem_error(const string& what_arg,
     error_code ec);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *what_arg*\
 指定的消息。

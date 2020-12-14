@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _daylight、_dstbias、_timezone 和 _tzname
 title: _daylight、_dstbias、_timezone 和 _tzname
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - tzname function
 - time-zone variables
 ms.assetid: d06c7292-6b99-4aba-b284-16a96570c856
-ms.openlocfilehash: 3f9f78d0798140399960cade7ead408f958450ba
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: aaa1d76276e4b4117d5f07695875481215c4122e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748250"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258771"
 ---
-# <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
+# <a name="_daylight-_dstbias-_timezone-and-_tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
 
 `_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 在某些时间和日期例程中用来调整本地时间。 这些全局变量因安全性更高的函数版本（它们取代了全局变量）而被弃用。
 

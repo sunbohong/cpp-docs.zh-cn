@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _pclose
 title: _pclose
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 6b35b8e3faa2f1a193dce102a6f8a11b9fcbb82b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 529af8ccdd1c6cc27f9039adef5d75c8b977aa54
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82910389"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258702"
 ---
 # <a name="_pclose"></a>_pclose
 
@@ -51,26 +52,26 @@ FILE *stream
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *流*<br/>
-对 **_popen**的前一次调用的返回值。
+对 **_popen** 的前一次调用的返回值。
 
 ## <a name="return-value"></a>返回值
 
-返回终止命令处理器的退出状态，如果出现错误，则返回-1。 返回值的格式与 **_cwait**的格式相同，不同之处在于，将交换低序位和高位字节。 如果 stream 为**NULL**， **_pclose**将**errno**设置为**EINVAL** ，并返回-1。
+返回终止命令处理器的退出状态，如果出现错误，则返回-1。 返回值的格式与 **_cwait** 的格式相同，不同之处在于，将交换低序位和高位字节。 如果 stream 为 **NULL**， **_pclose** 将 **errno** 设置为 **EINVAL** ，并返回-1。
 
 有关这些及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>备注
 
-**_Pclose**函数查找关联的 **_popen**调用启动的命令处理器（CMD.EXE）的进程 ID，对新的命令处理器执行[_cwait](cwait.md)调用，并关闭关联管道上的流。
+**_Pclose** 函数查找 ( # A0) 通过关联的 **_popen** 调用启动的命令处理器的进程 ID，对新的命令处理器执行 [_cwait](cwait.md)调用，并关闭关联管道上的流。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 
@@ -80,7 +81,7 @@ FILE *stream
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_pipe](pipe.md)<br/>

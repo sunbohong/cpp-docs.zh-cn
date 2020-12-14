@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _chsize
 title: _chsize
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5b9b58cf3ca4e167b5d54f871ac31c5295adc48b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 16a65c145e33a0fbafcc9d0f2b0fed3b9f2b516f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917205"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97274887"
 ---
 # <a name="_chsize"></a>_chsize
 
@@ -50,31 +51,31 @@ int _chsize(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*<br/>
 引用打开的文件的文件描述符。
 
-size <br/>
+*大小*<br/>
 文件的新长度（以字节为单位）。
 
 ## <a name="return-value"></a>返回值
 
-如果文件大小已成功更改， **_chsize**返回值0。 返回值-1 指示错误：如果指定的文件是只读的，或者指定的文件被锁定以进行访问，则将**errno**设置为**EACCES** ; 如果描述符无效，则为**ebadf (** ; 如果不留在设备上，则为**ENOSPC** ; 如果*size*小于零，则为**EINVAL** 。
+如果文件大小已成功更改， **_chsize** 返回值0。 返回值-1 指示错误：如果指定的文件是只读的，或者指定的文件被锁定以进行访问，则将 **errno** 设置为 **EACCES** ; 如果描述符无效，则为 **ebadf (** ; 如果不留在设备上，则为 **ENOSPC** ; 如果 *size* 小于零，则为 **EINVAL** 。
 
-有关这些和其他返回代码的详细信息，请参阅[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
+有关这些和其他返回代码的详细信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>备注
 
-**_Chsize**函数将与*fd*关联的文件扩展或截断为*大小*指定的长度。 必须在允许写入的模式下打开文件。 如果扩展该文件，将追加 Null 字符 ('\0')。 如果文件被截断，则从缩短的文件的末尾到文件原始长度的所有数据都将丢失。
+**_Chsize** 函数将与 *fd* 关联的文件扩展或截断为 *大小* 指定的长度。 必须在允许写入的模式下打开文件。 如果扩展该文件，将追加 Null 字符 ('\0')。 如果文件被截断，则从缩短的文件的末尾到文件原始长度的所有数据都将丢失。
 
-此函数验证其参数。 如果*size*小于零或*fd*是错误的文件描述符，则调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
+此函数验证其参数。 如果 *size* 小于零或 *fd* 是错误的文件描述符，则调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 
@@ -120,7 +121,7 @@ Size successfully changed
 File length after:  329678
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_close](close.md)<br/>

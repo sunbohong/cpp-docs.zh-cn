@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _putch_nolock、_putwch_nolock
 title: _putch_nolock、_putwch_nolock
 ms.date: 4/2/2020
 api_name:
@@ -39,12 +40,12 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-ms.openlocfilehash: df32b156d8c57d51ee81c4b4893bf11887915672
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a300b70cc128ef1cbefcf745a0ed113f452f6ef3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246352"
 ---
 # <a name="_putch_nolock-_putwch_nolock"></a>_putch_nolock、_putwch_nolock
 
@@ -64,9 +65,9 @@ wchar_t c
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要输出的字符。
 
 ## <a name="return-value"></a>返回值
@@ -77,7 +78,7 @@ wchar_t c
 
 **_putch_nolock** 和 **_putwch_nolock** 分别与 **_putch** 和 **_putwch** 相同，只不过它们可能会受到其他线程的影响。 它们可能更快，因为它们不会产生锁定其他线程的开销。 仅在线程安全的上下文中使用这些函数，如单线程应用程序或调用范围已经处理线程隔离。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -87,7 +88,7 @@ wchar_t c
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_putch_nolock**|\<conio.h>|
 |**_putwch_nolock**|\<conio.h>|
@@ -98,7 +99,7 @@ wchar_t c
 
 [C 运行时库](../../c-runtime-library/crt-library-features.md)的所有版本。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制台和端口 i/o](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

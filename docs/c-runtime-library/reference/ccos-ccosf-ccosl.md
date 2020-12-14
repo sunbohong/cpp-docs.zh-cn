@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ccos、ccosf、ccosl
 title: ccos、ccosf、ccosl
 ms.date: 11/04/2016
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - ccosf function
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
-ms.openlocfilehash: 1d6acddf979b7488be722bd850fe9e16816d1030
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54036a2ddd3d61bba1d11a4841eaab1bd546c0ee
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943179"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275134"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos、ccosf、ccosl
 
@@ -64,30 +65,30 @@ _Lcomplex ccosl(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *z*<br/>
 表示角度的复数（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-*Z*的余弦值（以弧度表示）。
+*Z* 的余弦值（以弧度表示）。
 
 ## <a name="remarks"></a>备注
 
-由于C++允许重载，因此可以调用**ccos**的重载，该重载采用并返回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程序中， **ccos**始终采用并返回 **_Dcomplex**值。
+由于 c + + 允许重载，因此可以调用 **ccos** 的重载，该重载采用并返回 **_Fcomplex** 和 **_Lcomplex** 值。 在 C 程序中， **ccos** 始终采用并返回 **_Dcomplex** 值。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|C 标头|C++ 标头|
 |-------------|--------------|------------------|
-|**ccos**、 **ccosf**、 **ccosl**|\<complex.h>|\<ccomplex>|
+|**ccos**、               **ccosf**、 **ccosl**|\<complex.h>|\<ccomplex>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](crt-alphabetical-function-reference.md)<br/>
 [catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
 [ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
 [catan、catanf、catanl](catan-catanf-catanl.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解有关 (c + +/CLI) 正则表达式的详细信息
 title: 正则表达式 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -28,22 +29,22 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 838bab49-0dbc-4089-a604-ef146269ef5a
-ms.openlocfilehash: 24a278e4d5b208c5d8e3b95b9f5a0bd0306dbab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 429a121ec7acad46437a344b089f5c6a1ce4243b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97245806"
 ---
 # <a name="regular-expressions-ccli"></a>正则表达式 (C++/CLI)
 
-演示如何使用.NET Framework 中的正则表达式类的各种字符串操作。
+演示在 .NET Framework 中使用正则表达式类的各种字符串运算。
 
-以下主题演示如何使用.NET framework<xref:System.Text.RegularExpressions>命名空间 (在一个用例<xref:System.String.Split%2A?displayProperty=fullName>方法) 若要搜索，分析数据并修改字符串。
+以下主题演示了如何使用 .NET Framework <xref:System.Text.RegularExpressions> 命名空间 (并在一种情况下 <xref:System.String.Split%2A?displayProperty=fullName>) 搜索、分析和修改字符串。
 
-## <a name="parse_regex"></a> 使用正则表达式分析字符串
+## <a name="parse-strings-using-regular-expressions"></a><a name="parse_regex"></a> 使用正则表达式分析字符串
 
-下面的代码示例演示如何使用简单的字符串分析<xref:System.Text.RegularExpressions.Regex>类中<xref:System.Text.RegularExpressions?displayProperty=fullName>命名空间。 构造一个包含多个类型的字描绘的字符串。 然后使用分析的字符串<xref:System.Text.RegularExpressions.Regex>类结合<xref:System.Text.RegularExpressions.Match>类。 然后，分别显示在句子中的每个单词。
+下面的代码示例演示如何使用 <xref:System.Text.RegularExpressions.Regex> 命名空间中的类进行简单的字符串分析 <xref:System.Text.RegularExpressions?displayProperty=fullName> 。 构造一个包含多种类型的 word delineators 的字符串。 然后，使用 <xref:System.Text.RegularExpressions.Regex> 类与类一起分析字符串 <xref:System.Text.RegularExpressions.Match> 。 然后，将单独显示句子中的每个单词。
 
 ### <a name="example"></a>示例
 
@@ -79,9 +80,9 @@ int main( )
 }
 ```
 
-## <a name="parse_split"></a> 使用 Split 方法分析字符串
+## <a name="parse-strings-using-the-split-method"></a><a name="parse_split"></a> 使用 Split 方法分析字符串
 
-下面的代码示例演示了如何使用<xref:System.String.Split%2A?displayProperty=fullName>方法以从字符串中提取每个单词。 包含多个类型的字描绘的字符串是构造，然后通过调用分析<xref:System.String.Split%2A>描绘的列表。 然后，分别显示在句子中的每个单词。
+下面的代码示例演示如何使用 <xref:System.String.Split%2A?displayProperty=fullName> 方法从字符串中提取每个单词。 将构造一个包含多个类型的 word delineators 的字符串，然后通过调用 delineators 的列表进行分析 <xref:System.String.Split%2A> 。 然后，将单独显示句子中的每个单词。
 
 ### <a name="example"></a>示例
 
@@ -108,9 +109,9 @@ int main()
 }
 ```
 
-## <a name="regex_simple"></a> 使用正则表达式用于简单匹配
+## <a name="use-regular-expressions-for-simple-matching"></a><a name="regex_simple"></a> 将正则表达式用于简单匹配
 
-下面的代码示例使用正则表达式来查找确切的子字符串匹配项。 由静态执行搜索<xref:System.Text.RegularExpressions.Regex.IsMatch%2A>方法，它使用两个字符串作为输入。 第一个是要搜索的字符串和第二个是要在其中搜索的模式。
+下面的代码示例使用正则表达式查找完全匹配的子字符串。 搜索由静态方法执行，该 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法采用两个字符串作为输入。 第一个是要搜索的字符串，第二个是要搜索的模式。
 
 ### <a name="example"></a>示例
 
@@ -146,9 +147,9 @@ int main()
 }
 ```
 
-## <a name="regex_extract"></a> 使用正则表达式提取数据字段
+## <a name="use-regular-expressions-to-extract-data-fields"></a><a name="regex_extract"></a> 使用正则表达式提取数据字段
 
-下面的代码示例演示如何将正则表达式来从带格式字符串中提取数据。 下面的代码示例使用<xref:System.Text.RegularExpressions.Regex>类指定为电子邮件地址相对应的模式。 此模式包括可用于检索用户和主机名部分的每个电子邮件地址的字段标识符。 <xref:System.Text.RegularExpressions.Match>类用于执行实际的模式匹配。 如果给定的电子邮件地址是否有效，被提取和显示的用户名和主机名。
+下面的代码示例演示如何使用正则表达式从带格式的字符串中提取数据。 下面的代码示例使用 <xref:System.Text.RegularExpressions.Regex> 类来指定与电子邮件地址相对应的模式。 此模式包括字段标识符，可用于检索每个电子邮件地址的用户和主机名部分。 <xref:System.Text.RegularExpressions.Match>类用于执行实际的模式匹配。 如果给定的电子邮件地址有效，则会提取并显示用户名和主机名。
 
 ### <a name="example"></a>示例
 
@@ -193,11 +194,11 @@ int main()
 }
 ```
 
-## <a name="regex_rearrange"></a> 使用正则表达式重新排列数据
+## <a name="use-regular-expressions-to-rearrange-data"></a><a name="regex_rearrange"></a> 使用正则表达式重新排列数据
 
-下面的代码示例演示如何使用.NET Framework 正则表达式支持可以重新排列，或重新设置数据格式。 下面的代码示例使用<xref:System.Text.RegularExpressions.Regex>和<xref:System.Text.RegularExpressions.Match>类，以从字符串中提取第一个和最后一个名称，然后按相反的顺序显示这些名称元素。
+下面的代码示例演示如何使用 .NET Framework 正则表达式支持来重新排列或重新设置数据的格式。 下面的代码示例使用 <xref:System.Text.RegularExpressions.Regex> 和 <xref:System.Text.RegularExpressions.Match> 类从字符串中提取名字和姓氏，然后按相反的顺序显示这些名称元素。
 
-<xref:System.Text.RegularExpressions.Regex>类用于构造描述了当前的数据格式的正则表达式。 这两个名称被假定由逗号分隔，且可使用任何数量的逗号周围的空白区域。 <xref:System.Text.RegularExpressions.Match>方法然后用来分析每个字符串。 如果成功，将从检索第一个和最后一个名称<xref:System.Text.RegularExpressions.Match>对象，并显示。
+<xref:System.Text.RegularExpressions.Regex>类用于构造描述当前数据格式的正则表达式。 假设两个名称之间用逗号分隔，并且可以在逗号前后使用任意数量的空白。 <xref:System.Text.RegularExpressions.Match>然后，使用方法分析每个字符串。 如果成功，则从对象中检索第一个和最后一个名称， <xref:System.Text.RegularExpressions.Match> 并显示。
 
 ### <a name="example"></a>示例
 
@@ -237,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="regex_search"></a> 使用正则表达式进行搜索和替换
+## <a name="use-regular-expressions-to-search-and-replace"></a><a name="regex_search"></a> 使用正则表达式进行搜索和替换
 
-下面的代码示例演示如何在正则表达式类<xref:System.Text.RegularExpressions.Regex>可用于执行搜索和替换。 这通过<xref:System.Text.RegularExpressions.Regex.Replace%2A>方法。 所使用的版本将作为输入的两个字符串： 要进行修改的字符串和字符串 （如果有） 来代替，部分要插入到给定模式相匹配<xref:System.Text.RegularExpressions.Regex>对象。
+下面的代码示例演示如何使用正则表达式类 <xref:System.Text.RegularExpressions.Regex> 来执行搜索和替换。 这是通过方法完成的 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 。 所使用的版本采用两个字符串作为输入：要修改的字符串，以及要插入的位置要插入的字符串 (如果任何与指定给对象的模式匹配的) <xref:System.Text.RegularExpressions.Regex> 。
 
-此代码在字符串中的所有数字都替换为下划线 (_)，然后将都替换具有空字符串，有效地删除它们。 可以在单个步骤中，完成相同的效果，但出于演示目的此处使用两个步骤。
+此代码用下划线 (_ 替换字符串中的所有数字) ，然后将其替换为空字符串，从而有效地删除它们。 相同的效果可以在单个步骤中完成，但此处使用了两个步骤进行演示。
 
 ### <a name="example"></a>示例
 
@@ -269,9 +270,9 @@ int main()
 }
 ```
 
-## <a name="regex_validate"></a> 使用正则表达式验证数据格式
+## <a name="use-regular-expressions-to-validate-data-formatting"></a><a name="regex_validate"></a> 使用正则表达式验证数据格式
 
-下面的代码示例演示如何将正则表达式来验证一个字符串的格式设置。 在下面的代码示例，该字符串应包含有效的电话号码。 下面的代码示例使用字符串"\d{3}-\d{3}-\d{4}"指示每个字段表示有效的电话号码。 在字符串中的"d"指示一个数字，并后每个"d"参数指示必须存在的数字个数。 在这种情况下，数字时需要用短划线分隔。
+下面的代码示例演示如何使用正则表达式来验证字符串的格式。 在下面的代码示例中，字符串应包含有效的电话号码。 下面的代码示例使用字符串 "\d {3} -\d {3} -\d {4} " 来表示每个字段都表示有效的电话号码。 字符串中的 "d" 指示一个数字，每个 "d" 后的参数指示必须存在的位数。 在这种情况下，必须使用短划线分隔数字。
 
 ### <a name="example"></a>示例
 
@@ -318,4 +319,4 @@ int main()
 
 ## <a name="see-also"></a>请参阅
 
-[使用 C++/CLI (Visual C++) 进行 .NET 编程](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+[用 c + +/CLI (Visual C++ 的 .NET 编程) ](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

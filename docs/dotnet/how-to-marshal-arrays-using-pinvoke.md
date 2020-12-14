@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：使用 PInvoke 封送数组
 title: 如何：使用 PInvoke 封送数组
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -8,26 +9,26 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90fd7b2cbefe2fb3621f512d49fbc088240922a1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258214"
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>如何：使用 PInvoke 封送数组
 
-本主题说明如何本机函数的可调用使用 CLR 字符串类型的 C 样式字符串接受<xref:System.String>使用.NET Framework 平台调用支持。 VisualC++编程人员建议使用C++互操作功能，而是 （如果可能） 因为 P/Invoke 提供小的编译时错误报告，不是类型安全的并可能会很麻烦的实现。 如果源代码不可用的非托管的 API 打包为 DLL，P/Invoke 是唯一的选项 (否则，请参阅[使用C++互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md))。
+本主题说明如何使用 CLR 字符串类型（ <xref:System.String> .NET Framework 平台调用支持）来调用接受 C 样式字符串的本机函数。 建议在可能的情况下，建议使用 c + + 互操作功能 () ，因为 P/Invoke 提供的编译时错误报告很少，并且不是类型安全的，并且在实现时可能单调乏味。 Visual C++ 如果将非托管 API 打包为 DLL 并且源代码不可用，则仅 (使用 P/Invoke 选项，否则请参阅 [使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)) 。
 
 ## <a name="example"></a>示例
 
-因为本机和托管数组的布局方式以不同的方式在内存中，在托管/非托管边界之间成功传递需要进行转换或封送处理。 本主题演示如何简单 (blitable) 项的数组将传递到本机函数从托管代码。
+因为本机和托管数组在内存中布局不同，所以跨托管/非托管边界成功传递它们需要转换或封送处理。 本主题演示如何将简单 (blitable) 项的数组从托管代码传递到本机函数。
 
-为 true 的托管/非托管数据封送处理一般情况下，如<xref:System.Runtime.InteropServices.DllImportAttribute>属性用于创建将使用每个本机函数的托管的入口点。 在采用数组作为自变量，函数的情况下<xref:System.Runtime.InteropServices.MarshalAsAttribute>必须也使用属性来向编译器指定的数据将封送。 在以下示例中，<xref:System.Runtime.InteropServices.UnmanagedType>枚举用于指示将作为 C 样式数组封送托管的数组。
+与通常情况下的托管/非托管数据封送处理一样， <xref:System.Runtime.InteropServices.DllImportAttribute> 特性用于为将使用的每个本机函数创建托管入口点。 对于采用数组作为参数的函数， <xref:System.Runtime.InteropServices.MarshalAsAttribute> 还必须使用特性来指定编译器如何封送数据。 在下面的示例中， <xref:System.Runtime.InteropServices.UnmanagedType> 枚举用于指示托管数组将作为 C 样式数组封送。
 
-下面的代码由非托管和托管的模块组成。 非托管的模块是一个 DLL，它定义了一个函数接受一个整数数组。 第二个模块是一个托管的命令行应用程序导入此函数，但定义根据托管数组，并使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>特性以指定应将数组转换为本机数组时调用。
+下面的代码由一个非托管模块和一个托管模块组成。 非托管模块是一个 DLL，它定义接受整数数组的函数。 第二个模块是一种托管的命令行应用程序，它可导入此函数，但会根据托管数组进行定义，并使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性来指定在调用时应将数组转换为本机数组。
 
-使用 /clr 编译的托管的模块。
+用/clr 编译托管模块
 
 ```cpp
 // TraditionalDll4.cpp
@@ -77,8 +78,8 @@ int main() {
 }
 ```
 
-请注意该 DLL 的任何部分公开为通过传统的托管代码 #include 指令。 事实上，因为仅在运行时访问该 DLL，则问题的函数导入与<xref:System.Runtime.InteropServices.DllImportAttribute>不会在编译时检测。
+请注意，DLL 的任何部分都不会通过传统的 #include 指令公开给托管代码。 事实上，由于 DLL 仅在运行时进行访问，因此 <xref:System.Runtime.InteropServices.DllImportAttribute> 在编译时不会检测用导入的函数的问题。
 
 ## <a name="see-also"></a>请参阅
 
-[在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+[在 c + + 中使用显式 PInvoke (DllImport 特性) ](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

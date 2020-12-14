@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：使用 c + + 互操作封送回调和委托
 title: 如何：使用 C++ 互操作封送回调和委托
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: 5d0427962ddb7d6409f07b99c0f618b340ee00df
-ms.sourcegitcommit: 94893973211d0b254c8bcdcf0779997dcc136b0c
+ms.openlocfilehash: 4f32c1918dc3896e43a0055245877ddf4d030ade
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91414290"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258208"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>如何：使用 C++ 互操作封送回调和委托
 
@@ -139,6 +140,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：：集合：： Map 类
 title: Platform::Collections::Map 类
 ms.date: 10/01/2019
 ms.topic: reference
@@ -15,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 40b7d653b21cdc2b0fab4c852c9809ab1db46a12
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8414328a178e4f9e2cfd7c4d97cca07ce7efcd9f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839135"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97258494"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 类
 
@@ -36,20 +37,20 @@ template <
 ref class Map sealed;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*温度*<br/>
+*K*<br/>
 键值对中键的类型。
 
-*向量*<br/>
+*V*<br/>
 键值对中值的类型。
 
 *C*<br/>
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。 默认情况下， [std：： \<K> less](../standard-library/less-struct.md)。
 
-*__is_valid_winrt_type ( # B1 * 编译器生成的函数，用于验证 *K* 和 *V* 类型，并在此类型无法存储在映射中时提供友好错误消息。
+*__is_valid_winrt_type ( # B1* 编译器生成的函数，用于验证 *K* 和 *V* 类型，并在此类型无法存储在映射中时提供友好错误消息。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 允许的类型是：
 
@@ -71,13 +72,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[Map：： Map](#ctor)|初始化 Map 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[Map：： Clear](#clear)|从当前 Map 对象中移除所有键值对。|
 |[Map：： First](#first)|返回指定映射中第一个元素的迭代器。|
@@ -90,7 +91,7 @@ ref class Map sealed;
 
 ### <a name="events"></a>事件
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [Map：： MapChanged](#mapchanged) 事件 | 当映射更改时发生。 |
 
@@ -129,9 +130,9 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 指定映射中第一个元素的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myMap->First();` 。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如 `auto x = myMap->First();`。
 
 ## <a name="mapgetview-method"></a><a name="getview"></a> Map：： GetView 方法
 
@@ -157,10 +158,10 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 bool HasKey(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-用于定位 Map 元素的键。 *键*类型为 typename *K*。
+*key*<br/>
+用于定位 Map 元素的键。 *键* 类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
@@ -176,13 +177,13 @@ bool HasKey(K key);
 virtual bool Insert(K key, V value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-键值对中的键部分。 *键*类型为 typename *K*。
+*key*<br/>
+键值对中的键部分。 *键* 类型为 typename *K*。
 
 *value*<br/>
-键值对中的值部分。 *值*的类型为 typename *V*。
+键值对中的值部分。 *值* 的类型为 typename *V*。
 
 ### <a name="return-value"></a>返回值
 
@@ -198,16 +199,16 @@ virtual bool Insert(K key, V value);
 V Lookup(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-用于定位映射中的元素的键。 *键*类型为 typename *K*。
+*key*<br/>
+用于定位映射中的元素的键。 *键* 类型为 typename *K*。
 
 ### <a name="return-value"></a>返回值
 
-与 *键*配对的值。 返回值的类型为 typename *V*。
+与 *键* 配对的值。 返回值的类型为 typename *V*。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果该键不存在，则将引发 [Platform：： OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md) 。
 
@@ -228,7 +229,7 @@ Map(
    const C& comp = C());
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *InIt*<br/>
 当前映射的类型名称。
@@ -237,7 +238,7 @@ Map(
 提供一个函数对象的类型，该对象可以将两个元素值作为排序键加以比较，以决定它们在映射中的相对顺序。
 
 *m*<br/>
-[rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` 用于初始化当前映射的的引用或对的右值。
+[](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` 用于初始化当前映射的的引用或对的右值。
 
 *first*<br/>
 用于初始化当前映射的一系列元素中的第一个元素的输入迭代器。
@@ -273,10 +274,10 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 virtual void Remove(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*键*<br/>
-键值对中的键部分。 *键*类型为 typename *K*。
+*key*<br/>
+键值对中的键部分。 *键* 类型为 typename *K*。
 
 ## <a name="mapsize-method"></a><a name="size"></a> Map：： Size 方法
 
@@ -292,7 +293,7 @@ virtual property unsigned int Size;
 
 Map 中的元素数目。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [集合 (C++/CX)](collections-c-cx.md)<br/>
 [平台命名空间](platform-namespace-c-cx.md)<br/>
