@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __wbinvd
 title: __wbinvd
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - __wbinvd intrinsic
 - wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
-ms.openlocfilehash: fe888ef578f0c2e077911537d401890b63372a0b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: b40e1b618e49ab317a7b9cdeea647bcd58df7912
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257259"
 ---
 # <a name="__wbinvd"></a>__wbinvd
 
 **Microsoft 专用**
 
-生成写回并使 Cache (`wbinvd`) 指令无效。
+生成写回，并使缓存 (`wbinvd`) 指令无效。
 
 ## <a name="syntax"></a>语法
 
@@ -28,15 +29,15 @@ void __wbinvd(void);
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__wbinvd`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 ## <a name="remarks"></a>备注
 
-此函数仅适用于具有0权限级别 (CPL) 的内核模式, 并且例程只能作为内部函数使用。
+此函数仅在具有权限级别 (CPL) 为0的内核模式下可用，且例程仅可用作内部函数。
 
 **结束 Microsoft 专用**
 

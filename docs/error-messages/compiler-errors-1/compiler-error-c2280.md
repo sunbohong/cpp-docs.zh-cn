@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2280
 title: 编译器错误 C2280
 ms.date: 04/25/2017
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2280
 ms.assetid: e6c5b1fb-2b9b-4554-8ff9-775eeb37161b
-ms.openlocfilehash: 9ee5b8105241ee347812a0dcc083a4f1cc7dca49
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 74ed554006faa20046571971e080e0c0a2054b72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87208403"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295050"
 ---
 # <a name="compiler-error-c2280"></a>编译器错误 C2280
 
 "*声明*"：尝试引用已删除的函数
 
-编译器检测到引用函数的尝试 `deleted` 。 此错误的原因可能是调用了在源代码中显式标记为的成员函数 `= deleted` 。 此错误还可能由编译器调用自动声明并标记为的结构或类的隐式特殊成员函数引起 `deleted` 。 有关编译器自动生成或特殊成员函数的时间的详细信息 **`default`** `deleted` ，请参阅[特殊成员函数](../../cpp/special-member-functions.md)。
+编译器检测到引用函数的尝试 `deleted` 。 此错误的原因可能是调用了在源代码中显式标记为的成员函数 `= deleted` 。 此错误还可能由编译器调用自动声明并标记为的结构或类的隐式特殊成员函数引起 `deleted` 。 有关编译器自动生成或特殊成员函数的时间的详细信息 **`default`** `deleted` ，请参阅 [特殊成员函数](../../cpp/special-member-functions.md)。
 
 ## <a name="example-explicitly-deleted-functions"></a>示例：显式删除的函数
 

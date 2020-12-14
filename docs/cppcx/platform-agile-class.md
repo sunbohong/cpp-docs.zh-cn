@@ -1,4 +1,5 @@
 ---
+description: 了解更多： Platform：： Agile 类
 title: Platform::Agile 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: d39270b7bf05e820ea376a40310abeb8add2c5ad
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 6407bbfecdc84cdb47024e09f632a6e574439814
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742952"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312171"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 类
 
@@ -30,7 +31,7 @@ template <typename T>
 class Agile;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 非敏捷类的类型名称。
@@ -95,7 +96,7 @@ Agile(const Agile<T>& object);
 Agile(Agile<T>&& object);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型名称参数指定的类型。
@@ -135,7 +136,7 @@ T^ Get() const;
 
 用当前敏捷对象表示的对象的句柄。
 
-返回值的类型实际是未公开的内部类型。 保存返回值的一种简便方法是将其分配给使用类型推导关键字声明的变量 **`auto`** 。 例如，`auto x = myAgileTvariable->Get();`。
+返回值的类型实际是未公开的内部类型。 保存返回值的一种简便方法是将其分配给使用类型推导关键字声明的变量 **`auto`** 。 例如 `auto x = myAgileTvariable->Get();`。
 
 ## <a name="agilegetaddressof-method"></a><a name="getaddressof"></a> Agile：： GetAddressOf 方法
 
@@ -147,7 +148,7 @@ T^ Get() const;
 T^* GetAddressOf() throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型名称参数指定的类型。
@@ -170,7 +171,7 @@ T^* GetAddressOf() throw();
 T^* GetAddressOfForInOut()  throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型名称参数指定的类型。
@@ -226,7 +227,7 @@ Agile<T> operator=( Agile<T>&& object ) throw();
 T^ operator=( IUnknown* lp ) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型名称指定的类型。

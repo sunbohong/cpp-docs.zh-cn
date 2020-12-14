@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _com_ptr_t：： QueryInterface
 title: _com_ptr_t::QueryInterface
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - QueryInterface method [C++]
 ms.assetid: d03292f1-6b02-40db-9756-8b0837a97319
-ms.openlocfilehash: 26dda2dff83ff0adbb7ef05c5e75f64b44138bd8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6c6ff19227c920aade762af295942d8058a17ad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97295336"
 ---
 # <a name="_com_ptr_tqueryinterface"></a>_com_ptr_t::QueryInterface
 
 **Microsoft 专用**
 
-在封装的接口指针上调用 `IUnknown` 的**QueryInterface**成员函数。
+调用封装的接口指针上的 **QueryInterface** 成员函数 `IUnknown` 。
 
 ## <a name="syntax"></a>语法
 
@@ -36,17 +37,17 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 #### <a name="parameters"></a>parameters
 
 *iid*<br/>
-接口指针 `IID`。
+`IID` 接口指针。
 
-*p*<br/>
+*h-p*<br/>
 原始接口指针。
 
 ## <a name="remarks"></a>备注
 
-用指定的 `IID` 调用封装的接口指针上 `IUnknown::QueryInterface`，并在*p*中返回生成的原始接口指针。 此例程返回 HRESULT 以指示成功或失败。
+`IUnknown::QueryInterface`在封装的接口指针上调用指定的 `IID` 并返回生成的原始接口指针。  此例程返回 HRESULT 以指示成功或失败。
 
 **结束 Microsoft 专用**
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [_com_ptr_t 类](../cpp/com-ptr-t-class.md)

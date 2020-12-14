@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： &lt; 变体&gt;
 title: '&lt;变量&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - <variant>
 helpviewer_keywords:
 - <variant>
-ms.openlocfilehash: 1a3c861c96fedb7ef95eec66f95888ddc092bed4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 994bd18a66dd78c8f6042afea10df69ff08a1487
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835657"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312459"
 ---
 # <a name="ltvariantgt"></a>&lt;变量&gt;
 
@@ -26,7 +27,7 @@ ms.locfileid: "88835657"
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator = =](../standard-library/forward-list-operators.md#op_eq_eq)|测试运算符左侧的变量对象是否等于右侧的变体对象。|
 |[operator！ =](../standard-library/forward-list-operators.md#op_neq)|测试运算符左侧的变量对象是否不等于右侧的变体对象。|
@@ -37,7 +38,7 @@ ms.locfileid: "88835657"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[get](../standard-library/variant-functions.md#get)|获取对象的变体。|
 |[get_if](../standard-library/variant-functions.md#get_if)|获取对象的变体（如果存在）。|
@@ -47,7 +48,7 @@ ms.locfileid: "88835657"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[bad_variant_access](../standard-library/bad-variant-access-class.md)|引发以报告对变体对象的值的无效访问的对象。|
 |[变量](../standard-library/variant.md)|要保存其替代类型之一的值或没有值的对象。|
@@ -64,10 +65,10 @@ ms.locfileid: "88835657"
 
 ### <a name="objects"></a>对象
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[variant_npos](../standard-library/variant-functions.md#variant_npos)||
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

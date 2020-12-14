@@ -1,14 +1,15 @@
 ---
+description: 了解详细信息： sequenced_policy 类
 title: sequenced_policy 类
 ms.date: 04/18/2019
 f1_keywords:
 - execution/std::execution::sequenced_policy
-ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e4d19e3649e3c768e8efc062baaf735e28a8fc22
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444914"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250408"
 ---
 # <a name="sequenced_policy-class"></a>sequenced_policy 类
 
@@ -22,4 +23,4 @@ class execution::sequenced_policy;
 
 ## <a name="remarks"></a>备注
 
-在使用 `execution::sequenced_policy` 策略执行并行算法期间，如果通过未捕获的异常退出元素访问函数，则应调用 `terminate()`。
+在并行算法与策略的执行过程中 `execution::sequenced_policy` ，如果通过未捕获的异常退出元素访问函数，则 `terminate()` 应调用。

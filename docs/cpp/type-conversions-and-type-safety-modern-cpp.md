@@ -1,14 +1,15 @@
 ---
+description: 了解详细信息：类型转换和类型安全
 title: 类型转换和类型安全
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 28adbc261b5b4376f947e00695fe66650739438d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ce83837a8aec06063b2a4e50c445fe7756b5c076
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223533"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97312184"
 ---
 # <a name="type-conversions-and-type-safety"></a>类型转换和类型安全
 
@@ -20,13 +21,13 @@ ms.locfileid: "87223533"
 
 ## <a name="implicit-type-conversions"></a>隐式类型转换
 
-如果表达式包含不同内置类型的操作数，并且不存在显式强制转换，则编译器将使用内置的*标准转换*来转换其中一个操作数，使这些类型匹配。 编译器将尝试按一个明确定义的顺序进行转换，直到有一个转换成功。 如果所选转换是提升转换，则编译器不会发出警告。 如果转换是收缩转换，则编译器会发出有关数据可能丢失的警告。 尽管是否真的发生数据丢失取决于涉及的实际值，但我们建议您将此警告视为错误。 如果涉及到用户定义的类型，则编译器将尝试使用您在类定义中指定的转换。 如果编译器找不到可接受的转换，则会发出错误且不会编译程序。 有关控制标准转换的规则的详细信息，请参阅[标准转换](../cpp/standard-conversions.md)。 有关用户定义的转换的详细信息，请参阅[用户定义的转换（c + +/cli）](../dotnet/user-defined-conversions-cpp-cli.md)。
+如果表达式包含不同内置类型的操作数，并且不存在显式强制转换，则编译器将使用内置的 *标准转换* 来转换其中一个操作数，使这些类型匹配。 编译器将尝试按一个明确定义的顺序进行转换，直到有一个转换成功。 如果所选转换是提升转换，则编译器不会发出警告。 如果转换是收缩转换，则编译器会发出有关数据可能丢失的警告。 尽管是否真的发生数据丢失取决于涉及的实际值，但我们建议您将此警告视为错误。 如果涉及到用户定义的类型，则编译器将尝试使用您在类定义中指定的转换。 如果编译器找不到可接受的转换，则会发出错误且不会编译程序。 有关控制标准转换的规则的详细信息，请参阅 [标准转换](../cpp/standard-conversions.md)。 有关用户定义的转换的详细信息，请参阅 [ (c + +/cli) 的用户定义的转换 ](../dotnet/user-defined-conversions-cpp-cli.md)。
 
 ### <a name="widening-conversions-promotion"></a>扩大转换（提升）
 
 在扩大转换中，较小的变量中的值将赋给较大的变量，同时不会丢失数据。 由于扩大转换始终是安全的，编译器将在不提示的情况下执行它们且不会发出警告。 以下转换是扩大转换。
 
-|From|收件人|
+|From|功能|
 |----------|--------|
 |Any **`signed`** 或 **`unsigned`** 整型（或除外） **`long long`****`__int64`**|**`double`**|
 |**`bool`** 或 **`char`**|任何其他内置类型|
@@ -73,7 +74,7 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
 ```
 
-请注意，值将在两个方向重新解释。 如果程序生成了奇怪的结果，其中的值的符号似乎与您预期的相反，请查找有符号和无符号整型之间的隐式转换。 在下面的示例中，表达式（0-1）的结果在 **`int`** **`unsigned int`** 存储在中时从隐式转换为 `num` 。 这将导致位模式被重新解释。
+请注意，值将在两个方向重新解释。 如果程序生成了奇怪的结果，其中的值的符号似乎与您预期的相反，请查找有符号和无符号整型之间的隐式转换。 在下面的示例中， ( 0-1) 的表达式的结果在 **`int`** **`unsigned int`** 存储在中时从隐式转换为 `num` 。 这将导致位模式被重新解释。
 
 ```cpp
 unsigned int u3 = 0 - 1;
@@ -155,7 +156,7 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
     }
     ```
 
-   有关详细信息，请参阅[const_cast](../cpp/const-cast-operator.md)。
+   有关详细信息，请参阅 [const_cast](../cpp/const-cast-operator.md)。
 
 - **`reinterpret_cast`**，用于不相关类型（如指针类型和）之间的转换 **`int`** 。
 
@@ -176,9 +177,9 @@ C 样式强制转换运算符与调用运算符 () 相同，因此在代码中�
 
    有关详细信息，请参阅[ `reinterpret_cast` 运算符](../cpp/reinterpret-cast-operator.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 类型系统](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[欢迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[欢迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-[C + + 标准库](../standard-library/cpp-standard-library-reference.md)
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)
