@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/TLBOUT (名称。TLB 文件) '
 title: /TLBOUT（命名 .TLB 文件）
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - .tlb files, renaming
 - -TLBOUT linker option
 ms.assetid: 0df6d078-2e48-46c9-a1a5-02674d85dce8
-ms.openlocfilehash: 62913eaadd0f0a88f05ce347a6778062a1e66f17
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 4e99f3b5a036ddbc424732e771f7bab27aeb228d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509335"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229998"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT（命名 .TLB 文件）
 
@@ -32,19 +33,19 @@ ms.locfileid: "91509335"
 *filename*<br/>
 指定由 MIDL 编译器创建的 .tlb 文件的名称。 不采用任何文件扩展名;如果需要 .tlb 扩展名，请指定 *文件名*.tlb。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 /TLBOUT 选项指定 .tlb 文件的名称和扩展名。
 
 当链接具有 [module](../../windows/attributes/module-cpp.md) 属性的项目时，MSVC 链接器会调用 MIDL 编译器。
 
-如果未指定/TLBOUT，则 .tlb 文件将从 [/IDLOUT](idlout-name-midl-output-files.md) *文件名*获取其名称。 如果未指定/IDLOUT，则会将 .tlb 文件称为 vc70。
+如果未指定/TLBOUT，则 .tlb 文件将从 [/IDLOUT](idlout-name-midl-output-files.md) *文件名* 获取其名称。 如果未指定/IDLOUT，则会将 .tlb 文件称为 vc70。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
 1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击“链接器”文件夹****。
+1. 单击“链接器”文件夹。
 
 1. 单击 **嵌入的 IDL** 属性页。
 

@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息： &lt; typeindex>&gt;
 title: '&lt;typeindex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <typeindex>
 ms.assetid: a9551137-f74b-4f02-af64-ff00214cea1f
-ms.openlocfilehash: 237356a0862ec3fc591264b482b23e62ef2c51cb
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f5aee958aee01bcccc87145087001f093ab6749
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226436"
 ---
 # <a name="lttypeindexgt"></a>&lt;typeindex&gt;
 
-包括标准标头 \<typeindex>，以定义支持类 [type_info](../cpp/type-info-class.md) 的对象索引的类和函数。
+包含标准标头 \<typeindex> 以定义支持类 [type_info](../cpp/type-info-class.md)的对象索引的类和函数。
 
 ## <a name="syntax"></a>语法
 
@@ -29,6 +30,6 @@ ms.locfileid: "68455059"
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库中的线程安全性](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

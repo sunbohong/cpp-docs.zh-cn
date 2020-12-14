@@ -1,5 +1,6 @@
 ---
-title: '&lt;摘要 > （C++文档注释）'
+description: 了解详细信息： &lt; 摘要&gt;
+title: '&lt; (c + + 文档注释> 摘要) '
 ms.date: 11/04/2016
 f1_keywords:
 - <summary>
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 0620273f24573539897809b7892d46ad49b7aa57
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 73e36367ff1a36f2b030525ea22f634ae74b64a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988587"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230219"
 ---
 # <a name="ltsummarygt"></a>&lt;summary&gt;
 
@@ -25,16 +26,16 @@ ms.locfileid: "74988587"
 <summary>description</summary>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 description<br/>
 对象的摘要。
 
 ## <a name="remarks"></a>备注
 
-\<summary> 标记的文本是 IntelliSense 中类型相关信息的唯一源，它也在[对象浏览器](/visualstudio/ide/viewing-the-structure-of-code)和代码注释 Web 报表中显示。
+标记的文本 \<summary> 是有关 IntelliSense 中类型的唯一信息源，并且还会显示在 " [对象浏览器](/visualstudio/ide/viewing-the-structure-of-code) " 和 "代码注释 Web" 报表中。
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 
@@ -57,6 +58,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

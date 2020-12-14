@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息：在 Xcode 与 Visual Studio 之间同步更改
 title: 在 Xcode 和 Visual Studio 之间同步更改
 ms.date: 10/17/2019
 ms.assetid: c71a4d7c-120e-4559-a114-3a99c4b860a9
-ms.openlocfilehash: ab941551c519acee49f658d8a8ff1b9fe0e4ba49
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 60ce41e41f5b6a2a9f877501eaef0d84306dde07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79469979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229049"
 ---
 # <a name="sync-changes-between-xcode-and-visual-studio"></a>在 Xcode 和 Visual Studio 之间同步更改
 
@@ -19,13 +20,13 @@ Visual Studio 中带 C++ 组件的移动开发包括在电脑和 Mac 间同步�
 
 在“解决方案资源管理器”中，右键单击 iOS 应用程序项目以显示上下文菜单。 选择“远程计算机”项，显示可用的远程选项。
 
-![解决方案资源管理器中的“远程计算机”菜单项](../cross-platform/media/cppmdd-u2-remotemachine-menu.jpg "解决方案资源管理器中的 "远程计算机" 菜单项")
+![解决方案资源管理器中的“远程计算机”菜单项](../cross-platform/media/cppmdd-u2-remotemachine-menu.jpg "解决方案资源管理器中的“远程计算机”菜单项")
 
 通过这些命令，可在 Xcode 中打开项目，在 Visual Studio 和 Xcode 之间移动本地更改或整个项目，并可清理远程计算机上的临时文件。
 
 ## <a name="open-in-xcode"></a>在 Xcode 中打开
 
-若要从 Visual Studio 打开 Xcode 中的项目，请在“远程计算机”子菜单上选择“在 Xcode 中打开”以便在配对的远程计算机上打开所选项目。 `vcremote` 服务器用于在 Mac 上打开 Xcode，并导航到 Mac 上创建的包含项目副本的临时目录。 Visual Studio 会弹出一个对话框，显示用于项目的临时目录。 远程计算机上执行的操作也会在 Visual Studio 的“输出”窗口中显示。 若要查看它们，可能需要在“输出”窗口顶部的“显示输出”下拉菜单中选择“Visual C++ 远程计算机”。
+若要在 Visual Studio 的 Xcode 中打开项目，请在 " **远程计算机** " 子菜单上，选择 " **在 Xcode 中打开** "，打开配对远程计算机上的所选项目。 `vcremote` 服务器用于在 Mac 上打开 Xcode，并导航到 Mac 上创建的包含项目副本的临时目录。 Visual Studio 会弹出一个对话框，显示用于项目的临时目录。 远程计算机上执行的操作也会在 Visual Studio 的“输出”窗口中显示。 若要查看它们，可能需要在“输出”窗口顶部的“显示输出”下拉菜单中选择“Visual C++ 远程计算机”。
 
 ![“输出”窗口显示远程计算机操作。](../cross-platform/media/cppmdd-u2-remotemachine-output.png ""输出" 窗口显示远程计算机操作")
 

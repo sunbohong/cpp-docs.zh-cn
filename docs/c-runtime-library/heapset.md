@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _heapset
 title: _heapset
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 5bf27ac8287e785b1c799565781842db54edee4d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 628babf8d49e22d75498aeb9b919283bb7257c1b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837822"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229868"
 ---
 # <a name="_heapset"></a>_heapset
 
@@ -47,7 +48,7 @@ int _heapset(
 );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *适合*<br/>
 填充字符。
@@ -56,7 +57,7 @@ int _heapset(
 
 `_heapset` 返回 Malloc.h 中定义的以下整数清单常量之一。
 
-|值|说明|
+|值|描述|
 |-|-|
 | `_HEAPBADBEGIN`  | 初始标头信息无效或未找到。  |
 | `_HEAPBADNODE`  | 堆已损坏或找到错误节点。  |
@@ -65,7 +66,7 @@ int _heapset(
 
 此外，如果出现错误， `_heapset` 会将 `errno` 设置为 `ENOSYS`。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `_heapset` 函数表示可用内存位置或已经被无意覆盖的节点。
 
@@ -121,7 +122,7 @@ int main( void )
 OK - heap is fine
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../c-runtime-library/memory-allocation.md)<br/>
 [_heapadd](../c-runtime-library/heapadd.md)<br/>

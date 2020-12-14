@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：/SYMBOLS
 title: /SYMBOLS
 ms.date: 09/05/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - /SYMBOLS dumpbin option
 - -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-ms.openlocfilehash: a47b7da9f0b01353ef15e8b5c070c19e7c521c37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0cc213a8b37f99e0cb80f6df88967e4eb5204b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317700"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230141"
 ---
 # <a name="symbols"></a>/SYMBOLS
 
@@ -25,11 +26,11 @@ ms.locfileid: "62317700"
 /SYMBOLS
 ```
 
-此选项显示 COFF 符号表。 符号表存在于所有对象文件。 COFF 符号表将显示的图像文件，仅当使用 /DEBUG 链接。
+此选项显示 COFF 符号表。 符号表存在于所有对象文件中。 仅当 COFF 符号表与/DEBUG 进行链接时，它才会出现在图像文件中。
 
-下面是有关 /SYMBOLS 输出的说明。 可以通过查看在 winnt.h 中的 （IMAGE_SYMBOL 和 IMAGE_AUX_SYMBOL） 或 COFF 文档中找到更多信息的含义的 /SYMBOLS 输出。
+下面是/SYMBOLS. 的输出的说明 有关/SYMBOLS 输出含义的其他信息，请参阅 winnt (IMAGE_SYMBOL 和 IMAGE_AUX_SYMBOL) 或 COFF 文档。
 
-对于以下示例转储：
+假设有以下示例转储：
 
 ```
 Dump of file main.obj
@@ -56,17 +57,17 @@ String Table Size = 0x10 bytes
 
 ## <a name="remarks"></a>备注
 
-符号数字，开头的行的以下说明，介绍列具有与用户相关的信息：
+以下说明对于以符号编号开头的行，描述了包含与用户相关的信息的列：
 
-- 第一个三位数字是符号编号。
+- 前三位数字是符号索引/数字。
 
-- 如果第三个列包含段*x*，那一节的对象文件中定义了符号。 但如果 UNDEF 出现，它不定义该对象中，必须在其他位置解析。
+- 如果第三列包含段 *x*，则符号在对象文件的该部分中定义。 但如果显示了 UNDEF，则它不会在该对象中定义，并且必须在其他位置进行解析。
 
-- 第五个列 （静态、 外部） 指示符号是否仅在该对象内可见或它是否是公共 (可见外部)。 静态符号 _sym 不会链接到公共符号 _sym;这是两个不同实例的名称为 _sym 函数。
+- 第五列 (Static、External) 指示该符号是否仅在该对象内可见，或者该符号是否为公共 (外部) 可见。 静态符号 _sym 不会链接到公共符号 _sym;它们是名为 _sym 的两个不同函数实例。
 
-带编号的行中的最后一列是符号名称，修饰名和未修饰名。
+编号行中的最后一列是符号名称，修饰和未修饰。
 
-仅[/HEADERS](headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](gl-whole-program-optimization.md)编译器选项。
+只有 [/HEADERS](headers.md) DUMPBIN 选项可用于由 [/GL](gl-whole-program-optimization.md) 编译器选项产生的文件。
 
 ## <a name="see-also"></a>请参阅
 

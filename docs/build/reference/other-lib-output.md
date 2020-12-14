@@ -1,15 +1,16 @@
 ---
+description: 了解更多：其他 LIB 输出
 title: 其他 LIB 输出
 ms.date: 11/04/2016
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-ms.openlocfilehash: 4152795c2f1cc2acbeb7a55d0d5ee3419fe6f789
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 76f60f4fdd7797550257186361673039c8fc408d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226332"
 ---
 # <a name="other-lib-output"></a>其他 LIB 输出
 
@@ -17,10 +18,10 @@ ms.locfileid: "79439174"
 
 LIB 显示版权和版本消息，并回显命令文件，除非使用/NOLOGO 选项。
 
-如果键入的 `lib` 没有其他输入，则 LIB 将显示汇总其选项的使用情况语句。
+在 `lib` 不使用其他输入的情况下键入时，LIB 会显示汇总其选项的使用情况语句。
 
-LIB 所颁发的错误消息和警告消息的格式为 ".LNK*nnnn*"。 LINK、DUMPBIN 和 EDITBIN 工具也使用此错误范围。 可以通过在 "输出" 窗口中选择错误并按 F1 来获取帮助。
+LIB 所颁发的错误消息和警告消息的格式为 ".LNK *nnnn*"。 LINK、DUMPBIN 和 EDITBIN 工具也使用此错误范围。 可以通过在 "输出" 窗口中选择错误并按 F1 来获取帮助。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [LIB 概述](overview-of-lib.md)

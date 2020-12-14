@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ismbbkpunct、_ismbbkpunct_l
 title: _ismbbkpunct、_ismbbkpunct_l
 ms.date: 4/2/2020
 api_name:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 8cf2d0d38466c370d0110b71a302471679e64657
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: da17df927b337e67df553baec8d56491db10a3d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915709"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97229725"
 ---
 # <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct、_ismbbkpunct_l
 
@@ -57,9 +58,9 @@ int _ismbbkpunct_l(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*ansi-c*<br/>
+*c*<br/>
 要测试的整数。
 
 *locale*<br/>
@@ -67,22 +68,22 @@ int _ismbbkpunct_l(
 
 ## <a name="return-value"></a>返回值
 
-如果整数*c*是非 ASCII 标点符号，则 **_ismbbkpunct**返回非零值; 如果不是，则返回0。 例如，仅在代码页 932 中，_ismbbkpunct 测试片假名标点****。 **_ismbbkpunct**为任何与区域设置相关的字符设置使用当前区域设置。 **_ismbbkpunct_l**相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
+如果整数 *c* 是非 ASCII 标点符号，则 **_ismbbkpunct** 返回非零值; 如果不是，则返回0。 例如，仅在代码页 932 中，_ismbbkpunct 测试片假名标点。 **_ismbbkpunct** 为任何与区域设置相关的字符设置使用当前区域设置。 **_ismbbkpunct_l** 相同，只不过它使用传入的区域设置。 有关详细信息，请参阅 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>备注
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_ismbbkpunct**|\<mbctype.h>|
 |**_ismbbkpunct_l**|\<mbctype.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字节分类](../../c-runtime-library/byte-classification.md)<br/>
 [_ismbb 例程](../../c-runtime-library/ismbb-routines.md)<br/>

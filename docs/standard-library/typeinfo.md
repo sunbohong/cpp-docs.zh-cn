@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; typeinfo&gt;
 title: '&lt;typeinfo&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - typeinfo header
 ms.assetid: 97ebc4d0-0e0e-41c3-9787-fdef2e38e56f
-ms.openlocfilehash: ee075240725e23c43939dc646c2201cedf379056
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bf257ee0b4f80a4cfbd5cb43507d784aefe9ec6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278691"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226423"
 ---
 # <a name="lttypeinfogt"></a>&lt;typeinfo&gt;
 
-包括标准标头\<typeinfo > 来定义多个类型与类型标识运算符关联[typeid 运算符](../cpp/typeid-operator.md)，其结果为静态和动态类型的信息。
+包括标准标头 \<typeinfo> 以定义与类型标识运算符 [typeid 运算符](../cpp/typeid-operator.md)（可生成静态和动态类型的相关信息）关联的几种类型。
 
 ## <a name="syntax"></a>语法
 
@@ -25,7 +26,7 @@ ms.locfileid: "62278691"
 
 ## <a name="remarks"></a>备注
 
-若要深入了解 \<typeinfo> 中定义的类，请参阅下列主题：
+有关在中定义的类的信息 \<typeinfo> ，请参阅以下主题：
 
 - [bad_cast 异常](../cpp/bad-cast-exception.md)
 

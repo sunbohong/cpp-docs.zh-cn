@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/SWAPRUN (加载链接器输出以交换文件) '
 title: /SWAPRUN（将链接器输出加载到交换文件）
 ms.date: 11/04/2016
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - /SWAPRUN linker option
 - SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-ms.openlocfilehash: bd0b3a46f52ec9b5a292e2f45671523d8c5cdf5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f62d5e32432a2c738b7782c0fbf0cd4fd76a7f9a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317544"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230206"
 ---
 # <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN（将链接器输出加载到交换文件）
 
@@ -30,17 +31,17 @@ ms.locfileid: "62317544"
 
 ## <a name="remarks"></a>备注
 
-/SWAPRUN 选项告知操作系统首次复制到链接器输出到交换文件，然后从那里运行映像。 这是 Windows NT 4.0 （及更高版本） 功能。
+/SWAPRUN 选项告知操作系统首先将链接器输出复制到交换文件，然后从此处运行映像。 这是 Windows NT 4.0 (及更高版本) 功能。
 
-如果指定 NET，则操作系统会首先将二进制文件映像从网络复制到交换文件，并从那里加载它。 此选项可用于在网络上运行应用程序。 当指定 CD 时，操作系统将可移动磁盘上的映像复制到一个页面文件，然后将其加载。
+如果指定 NET，则操作系统将首先将二进制映像从网络复制到交换文件，然后从该文件中加载它。 此选项可用于在网络上运行应用程序。 指定 CD 后，操作系统会将可移动磁盘上的映像复制到页面文件，然后将其加载。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击**链接器**文件夹。
+1. 单击“链接器”文件夹。
 
-1. 单击**系统**属性页。
+1. 单击 " **系统** " 属性页。
 
 1. 修改以下属性之一：
 

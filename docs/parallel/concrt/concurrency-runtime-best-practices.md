@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：并发运行时最佳实践
 title: 并发运行时最佳做法
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - practices to avoid [Concurrency Runtime]
 - Concurrency Runtime, best practices
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
-ms.openlocfilehash: 21bca441a29e6e152cb912139db1b9f56b988edd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aecbe69dba716ad98c209f2a87a3bbfe9b25be8c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226553"
 ---
 # <a name="concurrency-runtime-best-practices"></a>并发运行时最佳做法
 
-本部分介绍可帮助你高效使用并发运行时的最佳做法。 这些最佳做法适用于[并行模式库](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、[异步代理库](../../parallel/concrt/asynchronous-agents-library.md)，并[任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
+本部分介绍可帮助你高效使用并发运行时的最佳做法。 这些最佳做法适用于 [并行模式库](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL) 、 [异步代理库](../../parallel/concrt/asynchronous-agents-library.md)和 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
 
 ## <a name="in-this-section"></a>本节内容
 

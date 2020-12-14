@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CCustomInterpolator 类
 title: CCustomInterpolator 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-ms.openlocfilehash: 00ce0661fa3fbde714a7299ecbbd54df7c9bcc36
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 84fcdc20ce1a90441a508f1469d498095980af83
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749172"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97227749"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 类
 
@@ -57,37 +58,37 @@ class CCustomInterpolator;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[海关组织：：海关插值器](#ccustominterpolator)|已重载。 构造自定义插值器对象，并将持续时间和速度初始化到指定值。|
+|[CCustomInterpolator：： CCustomInterpolator](#ccustominterpolator)|已重载。 构造自定义内插的对象，并将持续时间和速度初始化为指定值。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CCustom 插值器：：获取依赖性](#getdependencies)|获取插值器的依赖项。|
-|[CCustom 插值器：获取持续时间](#getduration)|获取插值器的持续时间。|
-|[CCustom 插值器：：获取最终值](#getfinalvalue)|获取插值器引由的最终值。|
-|[CCustom插值器：：Init](#init)|初始化持续时间和最终值。|
-|[海关组织：：刑警价值](#interpolatevalue)|插值在给定偏移处的值。|
-|[海关刑警：：刑警组织](#interpolatevelocity)|在给定偏移处插入速度|
-|[C自定义设置器：：设置持续时间](#setduration)|设置插值器的持续时间。|
-|[C自定义插值器：：设置初始值和速度](#setinitialvalueandvelocity)|设置插值器的初始值和速度。|
+|[CCustomInterpolator：： GetDependencies](#getdependencies)|获取内插程序的依赖项。|
+|[CCustomInterpolator：： GetDuration](#getduration)|获取内插程序的持续时间。|
+|[CCustomInterpolator：： GetFinalValue](#getfinalvalue)|获取该内插的最终值。|
+|[CCustomInterpolator：： Init](#init)|初始化持续时间和最终值。|
+|[CCustomInterpolator：： InterpolateValue](#interpolatevalue)|按给定的偏移量内插值。|
+|[CCustomInterpolator：： InterpolateVelocity](#interpolatevelocity)|按给定的偏移量内插速度|
+|[CCustomInterpolator：： SetDuration](#setduration)|设置内插程序的持续时间。|
+|[CCustomInterpolator：： SetInitialValueAndVelocity](#setinitialvalueandvelocity)|设置内插程序的初始值和速度。|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[海关组织：：m_currentValue](#m_currentvalue)|插值值。|
-|[C自定义插值器：：m_currentVelocity](#m_currentvelocity)|插值速度。|
-|[C自定义插值器：：m_duration](#m_duration)|转换的持续时间。|
-|[C自定义插值器：：m_finalValue](#m_finalvalue)|转换结束时变量的最终值。|
-|[C自定义插值器：：m_initialValue](#m_initialvalue)|转换开始时变量的值。|
-|[海关：m_initialVelocity](#m_initialvelocity)|转换开始时变量的速度。|
+|[CCustomInterpolator：： m_currentValue](#m_currentvalue)|内插值。|
+|[CCustomInterpolator：： m_currentVelocity](#m_currentvelocity)|内插速度。|
+|[CCustomInterpolator：： m_duration](#m_duration)|转换的持续时间。|
+|[CCustomInterpolator：： m_finalValue](#m_finalvalue)|转换结束时变量的最终值。|
+|[CCustomInterpolator：： m_initialValue](#m_initialvalue)|转换开始时变量的值。|
+|[CCustomInterpolator：： m_initialVelocity](#m_initialvelocity)|变量在转换开始时的速度。|
 
 ## <a name="remarks"></a>备注
 
-从 CCustomInterpolator 派生一个类并重写所有必要的方法，以实现自定义插值算法。 指向此类的指针应作为参数传递给 CCustomTransition。
+从 CCustomInterpolator 派生一个类，并重写所有必要的方法以实现自定义内插算法。 指向此类的指针应作为参数传递给 CCustomTransition。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -97,9 +98,9 @@ class CCustomInterpolator;
 
 **标头：** afxanimationcontroller.h
 
-## <a name="ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a>海关组织：：海关插值器
+## <a name="ccustominterpolatorccustominterpolator"></a><a name="ccustominterpolator"></a> CCustomInterpolator：： CCustomInterpolator
 
-构造自定义插值器对象，并将所有值设置为默认 0。
+构造一个自定义内插的对象，并将所有值设置为默认值0。
 
 ```
 CCustomInterpolator();
@@ -109,20 +110,20 @@ CCustomInterpolator(
     DOUBLE finalValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *duration*<br/>
 转换的持续时间。
 
-*最终价值*
+*finalValue*
 
 ### <a name="remarks"></a>备注
 
-使用 CCustomInterpolator：：Init 在代码的后面部分初始化持续时间和最终值。
+使用 CCustomInterpolator：： Init 初始化代码中的持续时间和最终值。
 
-## <a name="ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a>CCustom 插值器：：获取依赖性
+## <a name="ccustominterpolatorgetdependencies"></a><a name="getdependencies"></a> CCustomInterpolator：： GetDependencies
 
-获取插值器的依赖项。
+获取内插程序的依赖项。
 
 ```
 virtual BOOL GetDependencies(
@@ -131,41 +132,41 @@ virtual BOOL GetDependencies(
     UI_ANIMATION_DEPENDENCIES* durationDependencies);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*初始价值依赖性*<br/>
-输出。 插值器的一些方面，这些插值取决于传递给 Set初始值和Velocity 的初始值。
+*initialValueDependencies*<br/>
+输出。 依赖于传递给 SetInitialValueAndVelocity 的初始值的内插程序的各个方面。
 
-*初始速度依赖性*<br/>
-输出。 插值器的方面，这些插值器取决于传递给 Set 初始值和Velocity的初始速度。
+*initialVelocityDependencies*<br/>
+输出。 取决于传递到 SetInitialValueAndVelocity 的初始速度的内插程序的各个方面。
 
-*持续时间 依赖*<br/>
-输出。 插值器的一些方面，这些插值器取决于传递给 SetDuration 的持续时间。
+*durationDependencies*<br/>
+输出。 取决于传递到 SetDuration 的持续时间的内插程序的各个方面。
 
 ### <a name="return-value"></a>返回值
 
-基本实现始终返回 TRUE。 如果要使事件失败，则从重写的实现返回 FALSE。
+基本实现始终返回 TRUE。 如果希望事件失败，请从重写的实现中返回 FALSE。
 
-## <a name="ccustominterpolatorgetduration"></a><a name="getduration"></a>CCustom 插值器：获取持续时间
+## <a name="ccustominterpolatorgetduration"></a><a name="getduration"></a> CCustomInterpolator：： GetDuration
 
-获取插值器的持续时间。
+获取内插程序的持续时间。
 
 ```
 virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *duration*<br/>
-输出。 转换的持续时间，以秒为单位。
+输出。 转换的持续时间（以秒为单位）。
 
 ### <a name="return-value"></a>返回值
 
-基本实现始终返回 TRUE。 如果要使事件失败，则从重写的实现返回 FALSE。
+基本实现始终返回 TRUE。 如果希望事件失败，请从重写的实现中返回 FALSE。
 
-## <a name="ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a>CCustom 插值器：：获取最终值
+## <a name="ccustominterpolatorgetfinalvalue"></a><a name="getfinalvalue"></a> CCustomInterpolator：： GetFinalValue
 
-获取插值器引由的最终值。
+获取该内插的最终值。
 
 ```
 virtual BOOL GetFinalValue(DOUBLE* value);
@@ -178,9 +179,9 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 
 ### <a name="return-value"></a>返回值
 
-基本实现始终返回 TRUE。 如果要使事件失败，则从重写的实现返回 FALSE。
+基本实现始终返回 TRUE。 如果希望事件失败，请从重写的实现中返回 FALSE。
 
-## <a name="ccustominterpolatorinit"></a><a name="init"></a>CCustom插值器：：Init
+## <a name="ccustominterpolatorinit"></a><a name="init"></a> CCustomInterpolator：： Init
 
 初始化持续时间和最终值。
 
@@ -190,17 +191,17 @@ void Init(
     DOUBLE finalValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *duration*<br/>
 转换的持续时间。
 
-*最终价值*<br/>
+*finalValue*<br/>
 转换结束时变量的最终值。
 
-## <a name="ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a>海关组织：：刑警价值
+## <a name="ccustominterpolatorinterpolatevalue"></a><a name="interpolatevalue"></a> CCustomInterpolator：： InterpolateValue
 
-插值在给定偏移处的值。
+按给定的偏移量内插值。
 
 ```
 virtual BOOL InterpolateValue(
@@ -211,15 +212,15 @@ virtual BOOL InterpolateValue(
 ### <a name="parameters"></a>参数
 
 *value*<br/>
-输出。 插值值。
+输出。 内插值。
 
 ### <a name="return-value"></a>返回值
 
-基本实现始终返回 TRUE。 如果要使事件失败，则从重写的实现返回 FALSE。
+基本实现始终返回 TRUE。 如果希望事件失败，请从重写的实现中返回 FALSE。
 
-## <a name="ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a>海关刑警：：刑警组织
+## <a name="ccustominterpolatorinterpolatevelocity"></a><a name="interpolatevelocity"></a> CCustomInterpolator：： InterpolateVelocity
 
-在给定偏移处插入速度
+按给定的偏移量内插速度
 
 ```
 virtual BOOL InterpolateVelocity(
@@ -227,32 +228,32 @@ virtual BOOL InterpolateVelocity(
     DOUBLE* velocity);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*velocity*<br/>
-输出。 偏移处变量的速度。
+*速度*<br/>
+输出。 变量在偏移量处的速度。
 
 ### <a name="return-value"></a>返回值
 
-基本实现始终返回 TRUE。 如果要使事件失败，则从重写的实现返回 FALSE。
+基本实现始终返回 TRUE。 如果希望事件失败，请从重写的实现中返回 FALSE。
 
-## <a name="ccustominterpolatorm_currentvalue"></a><a name="m_currentvalue"></a>海关组织：：m_currentValue
+## <a name="ccustominterpolatorm_currentvalue"></a><a name="m_currentvalue"></a> CCustomInterpolator：： m_currentValue
 
-插值值。
+内插值。
 
 ```
 DOUBLE m_currentValue;
 ```
 
-## <a name="ccustominterpolatorm_currentvelocity"></a><a name="m_currentvelocity"></a>C自定义插值器：：m_currentVelocity
+## <a name="ccustominterpolatorm_currentvelocity"></a><a name="m_currentvelocity"></a> CCustomInterpolator：： m_currentVelocity
 
-插值速度。
+内插速度。
 
 ```
 DOUBLE m_currentVelocity;
 ```
 
-## <a name="ccustominterpolatorm_duration"></a><a name="m_duration"></a>C自定义插值器：：m_duration
+## <a name="ccustominterpolatorm_duration"></a><a name="m_duration"></a> CCustomInterpolator：： m_duration
 
 转换的持续时间。
 
@@ -260,7 +261,7 @@ DOUBLE m_currentVelocity;
 UI_ANIMATION_SECONDS m_duration;
 ```
 
-## <a name="ccustominterpolatorm_finalvalue"></a><a name="m_finalvalue"></a>C自定义插值器：：m_finalValue
+## <a name="ccustominterpolatorm_finalvalue"></a><a name="m_finalvalue"></a> CCustomInterpolator：： m_finalValue
 
 转换结束时变量的最终值。
 
@@ -268,7 +269,7 @@ UI_ANIMATION_SECONDS m_duration;
 DOUBLE m_finalValue;
 ```
 
-## <a name="ccustominterpolatorm_initialvalue"></a><a name="m_initialvalue"></a>C自定义插值器：：m_initialValue
+## <a name="ccustominterpolatorm_initialvalue"></a><a name="m_initialvalue"></a> CCustomInterpolator：： m_initialValue
 
 转换开始时变量的值。
 
@@ -276,34 +277,34 @@ DOUBLE m_finalValue;
 DOUBLE m_initialValue;
 ```
 
-## <a name="ccustominterpolatorm_initialvelocity"></a><a name="m_initialvelocity"></a>海关：m_initialVelocity
+## <a name="ccustominterpolatorm_initialvelocity"></a><a name="m_initialvelocity"></a> CCustomInterpolator：： m_initialVelocity
 
-转换开始时变量的速度。
+变量在转换开始时的速度。
 
 ```
 DOUBLE m_initialVelocity;
 ```
 
-## <a name="ccustominterpolatorsetduration"></a><a name="setduration"></a>C自定义设置器：：设置持续时间
+## <a name="ccustominterpolatorsetduration"></a><a name="setduration"></a> CCustomInterpolator：： SetDuration
 
-设置插值器的持续时间。
+设置内插程序的持续时间。
 
 ```
 virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *duration*<br/>
 转换的持续时间。
 
 ### <a name="return-value"></a>返回值
 
-基本实现始终返回 TRUE。 如果要使事件失败，则从重写的实现返回 FALSE。
+基本实现始终返回 TRUE。 如果希望事件失败，请从重写的实现中返回 FALSE。
 
-## <a name="ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a>C自定义插值器：：设置初始值和速度
+## <a name="ccustominterpolatorsetinitialvalueandvelocity"></a><a name="setinitialvalueandvelocity"></a> CCustomInterpolator：： SetInitialValueAndVelocity
 
-设置插值器的初始值和速度。
+设置内插程序的初始值和速度。
 
 ```
 virtual BOOL SetInitialValueAndVelocity(
@@ -311,17 +312,17 @@ virtual BOOL SetInitialValueAndVelocity(
     DOUBLE initialVelocity);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*初始值*<br/>
+*initialValue*<br/>
 转换开始时变量的值。
 
-*初始速度*<br/>
-转换开始时变量的速度。
+*initialVelocity*<br/>
+变量在转换开始时的速度。
 
 ### <a name="return-value"></a>返回值
 
-基本实现始终返回 TRUE。 如果要使事件失败，则从重写的实现返回 FALSE。
+基本实现始终返回 TRUE。 如果希望事件失败，请从重写的实现中返回 FALSE。
 
 ## <a name="see-also"></a>请参阅
 

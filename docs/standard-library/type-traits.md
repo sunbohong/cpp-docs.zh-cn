@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; type_traits&gt;
 title: '&lt;type_traits&gt;'
 ms.date: 02/21/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 42c94daf331fd9a17e050067e4c4e495af180b0c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: cf7bb4a5bf73eb49526926c151ffbbd0b55fda5b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226488"
 ---
 # <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
@@ -28,9 +29,9 @@ ms.locfileid: "88841696"
 
 中的类和模板 \<type_traits> 用于在编译时支持类型推理、分类和转换。 它们还用于检测与类型相关的错误，有助于优化一般代码。 一元类型特征描述类型的属性，二进制类型特征描述类型之间的关系，转换特征修改类型的属性。
 
-Helper 类 `integral_constant` 及其模板专用化 `true_type` 并 `false_type` 形成类型谓词的基类。 类型谓词** 是采用一个或多个类型参数的模板。 当类型谓词 *为 true*时，它是从 [true_type](../standard-library/type-traits-typedefs.md#true_type)中直接或间接派生的。 当类型谓词 *为 false*时，它将从 [false_type](../standard-library/type-traits-typedefs.md#false_type)中直接或间接派生。
+Helper 类 `integral_constant` 及其模板专用化 `true_type` 并 `false_type` 形成类型谓词的基类。 类型谓词是采用一个或多个类型参数的模板。 当类型谓词 *为 true* 时，它是从 [true_type](../standard-library/type-traits-typedefs.md#true_type)中直接或间接派生的。 当类型谓词 *为 false* 时，它将从 [false_type](../standard-library/type-traits-typedefs.md#false_type)中直接或间接派生。
 
-类型修饰符** 或转换特征** 是一个模板，包含一个或多个参数以及一个成员 `type`（即修改后的类型）。
+类型修饰符或转换特征是一个模板，包含一个或多个参数以及一个成员 `type`（即修改后的类型）。
 
 ### <a name="alias-templates"></a>别名模板
 
@@ -80,7 +81,7 @@ using add_const_t = typename add_const<T>::type;
 
 帮助程序类和 typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[integral_constant](../standard-library/integral-constant-class-bool-constant-class.md)|从类型和值生成整型常量。|
 |[true_type](../standard-library/type-traits-typedefs.md#true_type)|保留包含值 true 的整数常量。|
@@ -88,7 +89,7 @@ using add_const_t = typename add_const<T>::type;
 
 主要类型类别
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[is_void](../standard-library/is-void-class.md)|测试类型是否为 **`void`** 。|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|测试类型是否为 `std::nullptr_t`。|
@@ -107,7 +108,7 @@ using add_const_t = typename add_const<T>::type;
 
 复合类型类别
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|测试类型是否为引用。|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|测试类型是否为算术型。|
@@ -119,7 +120,7 @@ using add_const_t = typename add_const<T>::type;
 
 Type 属性
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[is_const](../standard-library/is-const-class.md)|测试类型是否为 **`const`** 。|
 |[is_volatile](../standard-library/is-volatile-class.md)|测试类型是否为 **`volatile`** 。|
@@ -172,7 +173,7 @@ Type 属性
 
 Type 属性查询
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[alignment_of](../standard-library/alignment-of-class.md)|获取类型的对齐方式。|
 |[级别](../standard-library/rank-class.md)|获取数组维度数。|
@@ -180,7 +181,7 @@ Type 属性查询
 
 类型关系
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[is_same](../standard-library/is-same-class.md)|确定两个类型是否相同。|
 |[is_base_of](../standard-library/is-base-of-class.md)|测试一种类型是否是另一种类型的基类。|
@@ -188,7 +189,7 @@ Type 属性查询
 
 Const-volatile 修改
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[add_const](../standard-library/add-const-class.md)|**`const`** 从类型生成类型。|
 |[add_volatile](../standard-library/add-volatile-class.md)|**`volatile`** 从类型生成类型。|
@@ -199,7 +200,7 @@ Const-volatile 修改
 
 引用修改
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)|从类型生成一个对类型的引用。|
 |[add_rvalue_reference](../standard-library/add-rvalue-reference-class.md)|从类型生成一个对类型的右值引用|
@@ -207,28 +208,28 @@ Const-volatile 修改
 
 签名修改
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[make_signed](../standard-library/make-signed-class.md)|如果有符号，则生成该类型，或大小大于或等于类型的最小有符号类型。|
 |[make_unsigned](../standard-library/make-unsigned-class.md)|如果无符号，则生成该类型，或大小大于或等于类型的最小无符号类型。|
 
 数组修改
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[remove_all_extents](../standard-library/remove-all-extents-class.md)|从数组类型生成一个非数组类型。|
 |[remove_extent](../standard-library/remove-extent-class.md)|从数组类型生成一个元素类型。|
 
 指针修改
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[add_pointer](../standard-library/add-pointer-class.md)|从类型生成指向类型的指针。|
 |[remove_pointer](../standard-library/remove-pointer-class.md)|从指向类型的指针生成一个类型。|
 
 其他转换
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[aligned_storage](../standard-library/aligned-storage-class.md)|为对齐类型分配未初始化的内存。|
 |[aligned_union](../standard-library/aligned-union-class.md)|为具有不常用构造函数或析构函数的对齐联合分配未初始化的内存。|
@@ -242,12 +243,12 @@ Const-volatile 修改
 
 逻辑运算符特征
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[连接](../standard-library/conjunction-class.md)||
 |[析取](../standard-library/disjunction-class.md)||
 |[求反](../standard-library/negation-class.md)||
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<functional>](../standard-library/functional.md)

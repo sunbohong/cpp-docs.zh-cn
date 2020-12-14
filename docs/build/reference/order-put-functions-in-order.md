@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/ORDER (按顺序放置函数) '
 title: /ORDER（按顺序放置函数）
 ms.date: 09/05/2018
 f1_keywords:
@@ -12,35 +13,35 @@ helpviewer_keywords:
 - LINK tool [C++], swap tuning
 - paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-ms.openlocfilehash: b1927ffd2efc923157fe1956fe905c939bc62719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36888cbb24c869d06eaaa5830b95ae76fc42b860
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320183"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226345"
 ---
 # <a name="order-put-functions-in-order"></a>/ORDER（按顺序放置函数）
 
-指定单独打包 (COMDAT) 函数的链接顺序。
+为单独打包 (COMDAT) 函数指定链接顺序。
 
 ## <a name="syntax"></a>语法
 
-> **/ORDER:\@**<em>文件名</em>
+> **/Order： \@**<em>filename</em>
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *filename*<br/>
 指定 COMDAT 函数的链接顺序的文本文件。
 
 ## <a name="remarks"></a>备注
 
-**/O**编译器选项，可通过将一个函数调用的函数以及组合优化程序的分页行为。 也可以一起分组频繁调用的函数。 这些技术，称为*交换优化*或*分页优化*，增加需要和不需要从磁盘中分页时被调用的函数是在内存中的概率。
+使用 **/order** 编译器选项，可以通过将函数与调用的函数组合在一起来优化程序的分页行为。 你还可以将频繁调用的函数分组在一起。 这些技术称为 *交换优化* 或 *分页优化*，增加了调用的函数在需要时在内存中的可能性，并且无需从磁盘中分页。
 
-在你的源代码编译对象文件，可以指示编译器将放入其自己的部分，名为每个函数*COMDAT*，通过使用[/Gy （启用函数级链接）](gy-enable-function-level-linking.md)编译器选项。 **/O**链接器选项通知链接器将 comdat 放置到可执行映像中所指定的顺序。
+当你将源代码编译到对象文件中时，你可以通过使用 [/gy (启用函数级链接)](gy-enable-function-level-linking.md)编译器选项来告知编译器将每个函数置于其自己的部分（称为 *COMDAT*）。 **/Order** 链接器选项通知链接器按指定的顺序将 comdat 放入可执行图像。
 
-若要指定 COMDAT 顺序，请创建*响应文件*，按名称，每行，你希望它们由链接器放置的顺序列出每个 COMDAT 的文本文件。 将为此文件的名称传递*文件名*的参数 **/O**选项。 有关C++函数的 COMDAT 名称是函数名称的修饰的形式。 使用 C 函数的未修饰的名`main`，并为C++函数声明为`extern "C"`。 函数名称和修饰的名是区分大小写。 修饰名的详细信息，请参阅[修饰名](decorated-names.md)。
+若要指定 COMDAT 顺序，请创建一个 *响应文件*，该文件是按名称列出每个 COMDAT 的文本文件（每行一个），并按链接器放置它们的顺序排列。 以 **/order** 选项的 *filename* 参数的形式传递此文件的名称。 对于 c + + 函数，COMDAT 的名称是函数名称的修饰形式。 对于声明为的 c + + 函数，使用 C 函数、和的未修饰名 `main` `extern "C"` 。 函数名称和修饰名区分大小写。 有关修饰名的详细信息，请参阅 [修饰名](decorated-names.md)。
 
-若要查找你的 Comdat 的修饰的名，请使用[DUMPBIN](dumpbin-reference.md)工具的[/ 符号](symbols.md)上的对象文件的选项。 链接器会自动将前面添加下划线 (**\_**) 函数名称在响应中的文件的名称开头问号除非 (**？**) 或 at 符号 ( **\@**). 例如，如果源文件，example.cpp，包含的函数`int cpp_func(int)`，`extern "C" int c_func(int)`并`int main(void)`，该命令`DUMPBIN /SYMBOLS example.obj`列出了这些修饰的名：
+若要查找 Comdat 的修饰名，请使用对象文件上的 [DUMPBIN](dumpbin-reference.md) 工具的 [/SYMBOLS](symbols.md) 选项。 链接器会自动在 **\_** 响应文件中前面加上一个下划线 () 到函数名称，除非该名称以问号 (**？**) 或符号 (**\@**) 。 例如，如果源文件（例如 .cpp）包含函数 `int cpp_func(int)` ， `extern "C" int c_func(int)` `int main(void)` 则该命令将 `DUMPBIN /SYMBOLS example.obj` 列出这些修饰名：
 
 ```Output
 ...
@@ -50,22 +51,22 @@ ms.locfileid: "62320183"
 ...
 ```
 
-在这种情况下，指定作为名称`?cpp_func@@YAHH@Z`， `c_func`，和`main`响应文件中。
+在这种情况下，请在响应文件中将名称指定为 `?cpp_func@@YAHH@Z` 、 `c_func` 和 `main` 。
 
-如果多个 **/O**选项将出现在链接器选项，指定的最后一个生效。
+如果链接器选项中显示了多个 **/order** 选项，则指定的最后一个选项生效。
 
-**/O**选项禁用增量链接。 你可能会看到链接器警告[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)时指定此选项，如果启用了增量链接，或如果已指定[/ZI (增量 PDB)](z7-zi-zi-debug-information-format.md)编译器选项。 若要提示此警告，可以使用[/incremental: no](incremental-link-incrementally.md)链接器选项将关闭增量链接，并使用[/Zi (生成 PDB)](z7-zi-zi-debug-information-format.md)编译器选项来生成 PDB，而增量链接。
+**/Order** 选项禁用增量链接。 如果启用了增量链接，或指定了[/zi (增量 PDB) ](z7-zi-zi-debug-information-format.md)编译器选项，则在指定此选项时，可能会看到链接器警告[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md) 。 若要解除此警告，可以使用 [/INCREMENTAL： NO](incremental-link-incrementally.md) 链接器选项关闭增量链接，并使用 [/ZI (生成 pdb) ](z7-zi-zi-debug-information-format.md) 编译器选项生成不带增量链接的 pdb。
 
 > [!NOTE]
-> 链接不能进行排序的静态函数，因为静态函数名称不是公共符号名称。 当 **/O**指定，则链接器警告[LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md)生成为静态或找不到订单响应文件中每个符号。
+> 由于静态函数名称不是公共符号名称，因此 LINK 无法对静态函数进行排序。 指定 **/order** 后，将为顺序响应文件中的每个符号（静态或未找到）生成链接器警告 [LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md) 。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**配置属性** > **链接器** > **优化**属性页。
+1. 选择 "**配置属性**  >  **链接器**  >  **优化**" 属性页。
 
-1. 修改**函数顺序**属性以包含响应文件的名称。
+1. 修改 " **函数顺序** " 属性以包含响应文件的名称。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 
