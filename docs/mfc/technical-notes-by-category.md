@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息：按类别列出的技术说明
 title: 按类别列出的技术说明
 ms.date: 11/04/2016
 ms.assetid: b9f1c953-233d-4d64-9e8e-ca69b79460b8
-ms.openlocfilehash: 4f12946efdb57293038e59c078a68b2614b05ba7
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 4787b73c9a9039336beba709aa7ddb5aaf761f65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041843"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216335"
 ---
 # <a name="technical-notes-by-category"></a>按类别列出的技术说明
 
@@ -70,20 +71,20 @@ ms.locfileid: "90041843"
 
 [TN038： MFC/OLE IUnknown 实现](../mfc/tn038-mfc-ole-iunknown-implementation.md)\
 [TN039： MFC/OLE 自动化实现](../mfc/tn039-mfc-ole-automation-implementation.md)\
-[TN040： MFC/OLE 就地调整大小和缩放](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)\
+[TN040： MFC/OLE In-Place 调整大小和缩放](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)\
 [TN041： MFC/OLE1 迁移到 MFC/OLE2](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)\
 [TN049： MFC/OLE MBCS 到 Unicode 转换层 (MFCANS32) ](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)\
 [TN050： MFC/OLE Common 对话框 (MFCUIx32) ](../mfc/tn050-mfc-ole-common-dialogs-mfcuix32.md)\
-[TN064： OLE 控件中的单元模型线程](../mfc/tn064-apartment-model-threading-in-activex-controls.md)\
-[TN065：对 OLE 自动化服务器的双重接口支持](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)\
+[TN064： OLE 控件中的 Apartment-Model 线程处理](../mfc/tn064-apartment-model-threading-in-activex-controls.md)\
+[TN065： OLE 自动化服务器 Dual-Interface 支持](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)\
 [TN071： MFC IOleCommandTarget 实现](../mfc/tn071-mfc-iolecommandtarget-implementation.md)
 
 ### <a name="mfc-resources"></a>MFC 资源
 
 [TN020： ID 命名和编号约定](../mfc/tn020-id-naming-and-numbering-conventions.md)\
 [TN023：标准 MFC 资源](../mfc/tn023-standard-mfc-resources.md)\
-[TN024： MFC 定义的消息和资源](../mfc/tn024-mfc-defined-messages-and-resources.md)\
-[TN028：区分上下文的帮助支持](../mfc/tn028-context-sensitive-help-support.md)\
+[TN024： MFC-Defined 消息和资源](../mfc/tn024-mfc-defined-messages-and-resources.md)\
+[TN028： Context-Sensitive 帮助支持](../mfc/tn028-context-sensitive-help-support.md)\
 [TN035：将多个资源文件和头文件用于 Visual C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)\
 [TN036：将 CFormView 用于执行向导和 ClassWizard](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)\
 [TN070： MFC 窗口类名称](../mfc/tn070-mfc-window-class-names.md)

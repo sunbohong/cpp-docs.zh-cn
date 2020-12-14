@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：注册 OLE 控件
 title: 注册 OLE 控件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-ms.openlocfilehash: 5468f3d4b730cc0b81a6ab814d495b061d292f20
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2556d67e509f7c4217a726ed097bbb69788af7fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218922"
 ---
 # <a name="registering-ole-controls"></a>注册 OLE 控件
 
@@ -20,7 +21,7 @@ ms.locfileid: "88843568"
 
 ### <a name="registering-ole-controls"></a>注册 OLE 控件
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxOleRegisterControlClass](#afxoleregistercontrolclass)|将控件的类添加到注册数据库。|
 |[AfxOleRegisterPropertyPageClass](#afxoleregisterpropertypageclass)|将控件属性页添加到注册数据库。|
@@ -48,7 +49,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
     WORD wVerMinor);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 与控件类关联的模块的实例句柄。
@@ -133,7 +134,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 如果控件类已注册，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这允许控件由 OLE 控件识别的容器使用。 `AfxOleRegisterControlClass` 用系统上的控件的名称和位置更新注册表，还会在注册表中设置控件支持的线程模型。 有关详细信息，请参阅 [技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)"OLE 控件中的单元模型线程处理" 和 Windows SDK 中的 [进程和线程](/windows/win32/ProcThread/about-processes-and-threads) 。
 
@@ -163,7 +164,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
    int nRegFlags);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 与属性页类关联的模块的实例句柄。
@@ -186,7 +187,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 
 如果控件类已注册，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这允许由 OLE 控件识别的容器使用属性页。 `AfxOleRegisterPropertyPageClass` 用属性页名称及其在系统上的位置更新注册表，还会在注册表中设置控件支持的线程模型。 有关详细信息，请参阅 [技术说明 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)"OLE 控件中的单元模型线程处理" 和 Windows SDK 中的 [进程和线程](/windows/win32/ProcThread/about-processes-and-threads) 。
 
@@ -206,7 +207,7 @@ BOOL AfxOleRegisterTypeLib(
     LPCTSTR pszHelpDir  = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hInstance*<br/>
 与类型库关联的应用程序的实例句柄。
@@ -224,7 +225,7 @@ BOOL AfxOleRegisterTypeLib(
 
 如果已注册类型库，则为非零；否则为 0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将在注册表中更新类型库名称及其在系统中的位置。
 
@@ -246,7 +247,7 @@ BOOL AfxOleRegisterTypeLib(
 BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsID*<br/>
 控件或属性页的唯一类 ID。
@@ -270,7 +271,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *tlID*<br/>
 类型库的唯一 ID。
@@ -287,6 +288,6 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 
   **标头** afxdisp.h&gt
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

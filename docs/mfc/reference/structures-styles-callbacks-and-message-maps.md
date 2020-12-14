@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：结构、样式、回调和消息映射
 title: 结构、样式、回调和消息映射
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: 9f3d5c6d23084f91196c091d9d0d41304d37ce2c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b39f3341106c8f064477adb2b579cf07eb9e3e0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215106"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218766"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>结构、样式、回调和消息映射
 

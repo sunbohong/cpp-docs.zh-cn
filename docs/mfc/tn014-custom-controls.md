@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： TN014：自定义控件
 title: TN014：自定义控件
 ms.date: 06/28/2018
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: 2960c5b8585519adb535e5611315ec4ececcf53e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c9b069e0101b279558c5bcd4ffb7f457120e8187
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511181"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215971"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自定义控件
 
-此说明描述 MFC 对自定义和自我绘制控件的支持。 它还介绍动态子类化，并描述了[CWnd](../mfc/reference/cwnd-class.md)对象和`HWND`之间的关系。
+此说明描述 MFC 对自定义和自我绘制控件的支持。 它还介绍动态子类化，并描述了 [CWnd](../mfc/reference/cwnd-class.md) 对象和之间的关系 `HWND` 。
 
-MFC 示例应用程序 CTRLTEST 演示了如何使用许多自定义控件。 请参阅 MFC 常规示例[CTRLTEST](../overview/visual-cpp-samples.md)和联机帮助中的源代码。
+MFC 示例应用程序 CTRLTEST 演示了如何使用许多自定义控件。 请参阅 MFC 常规示例 [CTRLTEST](../overview/visual-cpp-samples.md) 和联机帮助中的源代码。
 
 ## <a name="owner-draw-controlsmenus"></a>所有者描述控件/菜单
 
@@ -40,7 +41,7 @@ MFC 通过下列函数直接支持所有者描述：
 
 ## <a name="self-draw-controls-and-menus"></a>自我描述控件和菜单
 
-MFC 为标准的所有者描述消息提供`CWnd`默认实现（在和[CMenu](../mfc/reference/cmenu-class.md)类中）。 此默认实现将解码所有者描述参数，并将所有者描述消息委派给控件或菜单。 这称为“自我描述”，因为描述代码位于控件或菜单的类中，而不是所有者窗口中。
+MFC 在和 CMenu 类中提供默认实现 (`CWnd`) 用于标准所有者描述的消息。 [](../mfc/reference/cmenu-class.md) 此默认实现将解码所有者描述参数，并将所有者描述消息委派给控件或菜单。 这称为“自我描述”，因为描述代码位于控件或菜单的类中，而不是所有者窗口中。
 
 通过使用自我描述控件，您可生成使用所有者描述语义显示控件的可重用控件类。 描述控件的代码位于控件类而不是其父级中。 这是面向对象来自定义控件编程的方式。 将下面的函数列表添加到自我描述类：
 
@@ -88,51 +89,51 @@ MFC 为标准的所有者描述消息提供`CWnd`默认实现（在和[CMenu](..
     // insert code to delete an item from this combo box
     ```
 
-有关所有者描述结构（[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)、 [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct)、 [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)和[DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)）的详细信息`CWnd::OnDrawItem`， `CWnd::OnMeasureItem` `CWnd::OnCompareItem`请参阅、、和的MFC文档`CWnd::OnDeleteItem`分别。
+有关所有者描述的结构 ([DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)、 [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct)、 [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)和 [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)) 的详细信息，请参阅 MFC 文档：、、 `CWnd::OnDrawItem` `CWnd::OnMeasureItem` `CWnd::OnCompareItem` 和 `CWnd::OnDeleteItem` 。
 
 ## <a name="using-self-draw-controls-and-menus"></a>使用自我描述控件和菜单
 
 对于自我描述菜单，您必须重写 `OnMeasureItem` 和 `OnDrawItem` 方法。
 
-对于自我描述列表框和组合框，您必须重写 `OnMeasureItem` 和 `OnDrawItem`。 您必须为对话框模板中的组合框指定列表框或 CBS_OWNERDRAWVARIABLE 样式的 LBS_OWNERDRAWVARIABLE 样式。 OWNERDRAWFIXED 样式不能用于自绘制项，因为在自绘制控件附加到列表框之前确定了固定项的高度。 （可以使用方法[CListBox：： SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight)和[CComboBox：： SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight)来克服此限制。）
+对于自我描述列表框和组合框，您必须重写 `OnMeasureItem` 和 `OnDrawItem`。 您必须为对话框模板中的组合框指定列表框或 CBS_OWNERDRAWVARIABLE 样式的 LBS_OWNERDRAWVARIABLE 样式。 OWNERDRAWFIXED 样式不能用于自绘制项，因为在自绘制控件附加到列表框之前确定了固定项的高度。  (可以使用方法 [CListBox：： SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) 和 [CComboBox：： SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) 来克服此限制。 ) 
 
 切换到 OWNERDRAWVARIABLE 样式会强制系统将 NOINTEGRALHEIGHT 样式应用于控件。 由于控件无法计算大小可变的项的整体高度，因此 INTEGRALHEIGHT 的默认样式将被忽略，并且控件始终为 NOINTEGRALHEIGHT。 如果项目的高度是固定的，则可通过指定控件大小为项目大小的整数倍数来防止描述部分项目。
 
-对于具有 LBS_SORT 或 CBS_SORT 样式的自绘制列表框和组合框，您必须重写`OnCompareItem`方法。
+对于具有 LBS_SORT 或 CBS_SORT 样式的自绘制列表框和组合框，您必须重写 `OnCompareItem` 方法。
 
 对于自我描述列表框和组合框，一般不会重写 `OnDeleteItem`。 如果要执行任何特殊处理，您可重写 `OnDeleteItem`。 此操作可能适用的一种情况是，每个列表框或组合框项目与其他内存或其他资源一起存储。
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>自我描述控件和菜单的示例
 
-MFC 常规示例[CTRLTEST](../overview/visual-cpp-samples.md)提供自绘制菜单和自绘制列表框的示例。
+MFC 常规示例 [CTRLTEST](../overview/visual-cpp-samples.md) 提供自绘制菜单和自绘制列表框的示例。
 
-自我描述按钮最典型的示例是位图按钮。 位图按钮是显示了不同状态的一个、两个或三个位图图像的按钮。 MFC 类[CBitmapButton](../mfc/reference/cbitmapbutton-class.md)中提供了一个示例。
+自我描述按钮最典型的示例是位图按钮。 位图按钮是显示了不同状态的一个、两个或三个位图图像的按钮。 MFC 类 [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)中提供了一个示例。
 
 ## <a name="dynamic-subclassing"></a>动态子类化
 
 您偶尔需要更改已存在对象的功能。 之前的示例需要您在创建控件之前自定义控件。 利用动态子类化，您可自定义已经创建的控件。
 
-子类化是 Windows 术语，用于将<xref:System.Windows.Forms.Control.WndProc%2A>窗口替换为自定义`WndProc`的，并为默认`WndProc`功能调用旧的。
+子类化是 Windows 术语，用于将 <xref:System.Windows.Forms.Control.WndProc%2A> 窗口替换为自定义的 `WndProc` ，并 `WndProc` 为默认功能调用旧的。
 
-这不应与 C++ 类派生混淆。 为了进行说明， C++术语 *"基类*" 和 "*派生类*" 类似于 Windows 对象模型中的*超类*和*子类*。 使用 MFC 的 C++ 派生和 Windows 子类化在功能上是相同的，只不过 C++ 不支持动态子类化。
+这不应与 C++ 类派生混淆。 为了阐明这一点，c + + 术语 *基类* 和 *派生类* 类似于 Windows 对象模型中的 *超类* 和 *子类* 。 使用 MFC 的 C++ 派生和 Windows 子类化在功能上是相同的，只不过 C++ 不支持动态子类化。
 
 `CWnd` 类提供了 C++ 对象（派生自 `CWnd`）与 Windows 窗口对象（称为 `HWND`）之间的连接。
 
 它们有 3 种常见的相关方式：
 
-- `CWnd` 将创建 `HWND`。 您可通过创建派生自 `CWnd` 的类来修改派生类的行为。 当`HWND`应用程序调用[CWnd：： Create](../mfc/reference/cwnd-class.md#create)时，创建。
+- `CWnd` 将创建 `HWND`。 您可通过创建派生自 `CWnd` 的类来修改派生类的行为。 `HWND`当应用程序调用[CWnd：： Create](../mfc/reference/cwnd-class.md#create)时，创建。
 
-- 应用程序会将 `CWnd` 附加到现有 `HWND`。 未修改现有窗口的行为。 这是委托的一种情况，并且可以通过调用[CWnd：：附加](../mfc/reference/cwnd-class.md#attach)来使现有`HWND` `CWnd`的成为对象的别名。
+- 应用程序会将 `CWnd` 附加到现有 `HWND`。 未修改现有窗口的行为。 这是委托的一种情况，并且可以通过调用 [CWnd：：附加](../mfc/reference/cwnd-class.md#attach) 来使现有的成为对象的别名 `HWND` `CWnd` 。
 
 - `CWnd` 将附加到现有 `HWND`，并且您可修改派生类的行为。 这称为动态子类化，因为我们在运行时更改 Windows 对象的行为，并进而更改类。
 
-可以通过使用[CWnd：： SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow)和[Cwnd：： SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)方法来实现动态子类化。
+可以通过使用 [CWnd：： SubclassWindow](../mfc/reference/cwnd-class.md#subclasswindow) 和[Cwnd：： SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)方法来实现动态子类化。
 
 这两个例程均会将一个 `CWnd` 对象附加到现有 `HWND`。 `SubclassWindow` 将直接采用 `HWND`。 `SubclassDlgItem` 是采用控件 ID 和父窗口的帮助器函数。 `SubclassDlgItem` 旨在将 C++ 对象附加到通过对话框模板创建的对话控件。
 
-有关何时使用`SubclassWindow`和`SubclassDlgItem`的几个示例，请参阅 [CTRLTEST 示例](../overview/visual-cpp-samples.md)。
+有关何时使用和的几个示例，请参阅 [CTRLTEST](../overview/visual-cpp-samples.md) 示例 `SubclassWindow` `SubclassDlgItem` 。
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)

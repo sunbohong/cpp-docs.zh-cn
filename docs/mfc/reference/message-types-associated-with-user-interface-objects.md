@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：与 User-Interface 对象关联的消息类型
 title: 与用户界面对象关联的消息类型
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,24 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-ms.openlocfilehash: 37638d12c65986d40e7df9f0fbfdef4b8207e418
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 78ddb9e5290d17f92714d6b50a57ac097bbf104c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741572"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219273"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>与用户界面对象关联的消息类型
 
-下表显示了类型的对象配合使用，并与之相关联的消息的类型。
+下表显示了你使用的对象类型以及与这些对象关联的消息类型。
 
 ### <a name="user-interface-objects-and-associated-messages"></a>用户界面对象和关联的消息
 
 |对象 ID|消息|
 |---------------|--------------|
-|表示包含窗口的类名称|Windows 消息适合于[CWnd](../../mfc/reference/cwnd-class.md)-派生的类: 对话框、 窗口、 子窗口、 MDI 子窗口或最顶层框架窗口。|
-|菜单或快捷键标识符|命令消息 （执行程序函数）。<br />-UPDATE_COMMAND_UI 消息 （动态更新菜单项）。|
-|控件标识符|选定的控件类型的控件通知消息。|
+|类名，表示包含窗口|适用于 [CWnd](../../mfc/reference/cwnd-class.md)派生类的 Windows 消息：对话框、窗口、子窗口、MDI 子窗口或最顶层框架窗口。|
+|菜单或快捷键标识符|-命令消息 (执行程序函数) 。<br />-UPDATE_COMMAND_UI 消息 (动态更新菜单项) 。|
+|控件标识符|控制所选控件类型的通知消息。|
 
 ## <a name="see-also"></a>请参阅
 

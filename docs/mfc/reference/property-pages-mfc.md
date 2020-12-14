@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息：属性页 (MFC) '
 title: 属性页 (MFC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 9a04395aec8c2eb968e5cefaf410643a1ce03e32
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: fa395272ba74c6b3900d5a1500d4cf47ade4e535
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843581"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218961"
 ---
 # <a name="property-pages-mfc"></a>属性页 (MFC)
 
@@ -20,7 +21,7 @@ ms.locfileid: "88843581"
 
 ### <a name="property-page-data-transfer"></a>属性页数据传输
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DDP_CBIndex](#ddp_cbindex)|将组合框中所选字符串的索引链接到控件的属性。|
 |[DDP_CBString](#ddp_cbstring)|将组合框中选定的字符串链接到控件的属性。 选定的字符串可以以与属性的值相同的字母开头，但不需要完全匹配。|
@@ -39,7 +40,7 @@ ms.locfileid: "88843581"
 
 ### <a name="property-pages"></a>属性页
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_PROPPAGEIDS](#begin_proppageids)|开始属性页 Id 列表。|
 |[END_PROPPAGEIDS](#end_proppageids)|结束属性页 Id 列表。|
@@ -57,21 +58,21 @@ void AFXAPI DDP_CBIndex(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的组合框控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的组合框控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的组合框控件交换的控件属性的属性名称。
+要与由 *id* 指定的组合框控件交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_CBIndex` 函数调用之前调用此函数。
 
@@ -91,21 +92,21 @@ void AFXAPI DDP_CBString(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的组合框控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的组合框控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的组合框字符串交换的控件属性的属性名称。
+要与由 *id* 指定的组合框字符串交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_CBString` 函数调用之前调用此函数。
 
@@ -125,21 +126,21 @@ void AFXAPI DDP_CBStringExact(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的组合框控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的组合框控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的组合框字符串交换的控件属性的属性名称。
+要与由 *id* 指定的组合框字符串交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_CBStringExact` 函数调用之前调用此函数。
 
@@ -159,21 +160,21 @@ void AFXAPI DDP_Check(
     LPCSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的复选框控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的复选框控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的复选框控件交换的控件属性的属性名称。
+要与由 *id* 指定的复选框控件交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_Check` 函数调用之前调用此函数。
 
@@ -193,21 +194,21 @@ void AFXAPI DDP_LBIndex(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的列表框控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的列表框控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的列表框字符串交换的控件属性的属性名称。
+要与由 *id* 指定的列表框字符串交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_LBIndex` 函数调用之前调用此函数。
 
@@ -227,21 +228,21 @@ void AFXAPI DDP_LBString(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的列表框控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的列表框控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的列表框字符串交换的控件属性的属性名称。
+要与由 *id* 指定的列表框字符串交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_LBString` 函数调用之前调用此函数。
 
@@ -261,21 +262,21 @@ void AFXAPI DDP_LBStringExact(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的列表框控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的列表框控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的列表框字符串交换的控件属性的属性名称。
+要与由 *id* 指定的列表框字符串交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_LBStringExact` 函数调用之前调用此函数。
 
@@ -291,12 +292,12 @@ void AFXAPI DDP_LBStringExact(
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在所有数据交换函数都完成后，应调用此函数。 例如：
 
@@ -318,21 +319,21 @@ void AFXAPI DDP_Radio(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的单选按钮控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的单选按钮控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的单选按钮控件交换的控件属性的属性名称。
+要与由 *id* 指定的单选按钮控件交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_Radio` 函数调用之前调用此函数。
 
@@ -394,21 +395,21 @@ void AFXAPI DDP_Text(
     LPCTSTR pszPropName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
 
 *id*<br/>
-与 *pszPropName*指定的控件属性关联的控件的资源 ID。
+与 *pszPropName* 指定的控件属性关联的控件的资源 ID。
 
 *职员*<br/>
-与由 *id* 指定的属性页控件和由 *pszPropName*指定的属性关联的成员变量。
+与由 *id* 指定的属性页控件和由 *pszPropName* 指定的属性关联的成员变量。
 
 *pszPropName*<br/>
-要与由 *id*指定的控件交换的控件属性的属性名称。
+要与由 *id* 指定的控件交换的控件属性的属性名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应在相应的 `DDX_Text` 函数调用之前调用此函数。
 
@@ -424,7 +425,7 @@ void AFXAPI DDP_Text(
 BEGIN_PROPPAGEIDS(class_name,  count)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 正在为其指定属性页的控件类的名称。
@@ -432,7 +433,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 *计数*<br/>
 控件类使用的属性页的数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在实现 ( .cpp) 文件中，该文件定义了类的成员函数，启动带有 BEGIN_PROPPAGEIDS 宏的属性页列表，然后为每个属性页添加宏项，并通过 END_PROPPAGEIDS 宏完成属性页列表。
 
@@ -450,7 +451,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 END_PROPPAGEIDS(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 拥有属性页的控件类的名称。
@@ -467,12 +468,12 @@ END_PROPPAGEIDS(class_name)
 PROPPAGEID(clsid)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clsid*<br/>
 属性页的唯一类 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 必须在控件的实现文件中的 BEGIN_PROPPAGEIDS 和 END_PROPPAGEIDS 宏之间放置所有 PROPPAGEID 宏。
 
@@ -480,6 +481,6 @@ PROPPAGEID(clsid)
 
   **标头** afxctl。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

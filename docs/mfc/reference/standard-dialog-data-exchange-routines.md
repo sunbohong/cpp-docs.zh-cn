@@ -1,15 +1,16 @@
 ---
+description: 了解更多：标准对话框数据交换例程
 title: 标准对话框数据交换例程
 ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: bed60094b25bcc3b1994aa904a8c20324be2abae
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f1d5cb0726168b90e0ba2a7891ce0ffa55b73f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218857"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>标准对话框数据交换例程
 
@@ -20,7 +21,7 @@ ms.locfileid: "88844491"
 
 ### <a name="ddx-functions"></a>DDX 函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DDX_CBIndex](#ddx_cbindex)|初始化或检索组合框控件的当前选定内容的索引。|
 |[DDX_CBString](#ddx_cbstring)|初始化或检索组合框控件的编辑字段的当前内容。|
@@ -50,7 +51,7 @@ void AFXAPI DDX_CBIndex(
     int& index);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -58,12 +59,12 @@ void AFXAPI DDX_CBIndex(
 *nIDC*<br/>
 与控件属性关联的组合框控件的资源 ID。
 
-*index*<br/>
+*索引*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_CBIndex`调用时， *index*设置为当前组合框选择的索引。 如果未选择任何项，则 *index* 设置为0。
+`DDX_CBIndex`调用时， *index* 设置为当前组合框选择的索引。 如果未选择任何项，则 *index* 设置为0。
 
 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -82,7 +83,7 @@ void AFXAPI DDX_CBString(
     CString& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -93,9 +94,9 @@ void AFXAPI DDX_CBString(
 *value*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_CBString`调用时， *value*设置为当前组合框选择。 如果未选择任何项，则将 *值* 设置为长度为零的字符串。
+`DDX_CBString`调用时， *value* 设置为当前组合框选择。 如果未选择任何项，则将 *值* 设置为长度为零的字符串。
 
 > [!NOTE]
 > 如果组合框为下拉列表框，则交换的值限制为255个字符。
@@ -117,7 +118,7 @@ void AFXAPI DDX_CBStringExact(
     CString& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -128,9 +129,9 @@ void AFXAPI DDX_CBStringExact(
 *value*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_CBStringExact`调用时， *value*设置为当前组合框选择。 如果未选择任何项，则将 *值* 设置为长度为零的字符串。
+`DDX_CBStringExact`调用时， *value* 设置为当前组合框选择。 如果未选择任何项，则将 *值* 设置为长度为零的字符串。
 
 > [!NOTE]
 > 如果组合框为下拉列表框，则交换的值限制为255个字符。
@@ -152,7 +153,7 @@ void AFXAPI DDX_Check(
     int& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -163,9 +164,9 @@ void AFXAPI DDX_Check(
 *value*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_Check`调用时， *value*设置为复选框控件的当前状态。 有关可能状态值的列表，请参阅 Windows SDK 中的 [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) 。
+`DDX_Check`调用时， *value* 设置为复选框控件的当前状态。 有关可能状态值的列表，请参阅 Windows SDK 中的 [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) 。
 
 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -175,7 +176,7 @@ void AFXAPI DDX_Check(
 
 ## <a name="ddx_control"></a><a name="ddx_control"></a> DDX_Control
 
-该 `DDX_Control` 函数对由对话框、窗体视图或控件视图对象的 *nIDC*指定的控件进行子类控制。
+该 `DDX_Control` 函数对由对话框、窗体视图或控件视图对象的 *nIDC* 指定的控件进行子类控制。
 
 ```cpp
 void AFXAPI DDX_Control(
@@ -184,7 +185,7 @@ void AFXAPI DDX_Control(
     CWnd& rControl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。
@@ -195,7 +196,7 @@ void AFXAPI DDX_Control(
 *rControl*<br/>
 对与指定控件相关的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 调用函数时， *pDX* 对象由框架提供 `DoDataExchange` 。 因此， `DDX_Control` 只应在重写中调用 `DoDataExchange` 。
 
@@ -226,7 +227,7 @@ void AFXAPI DDX_DateTimeCtrl(
     CString& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。 不需要删除此对象。
@@ -237,9 +238,9 @@ void AFXAPI DDX_DateTimeCtrl(
 *value*<br/>
 在前两个版本中，是指对 `CTime` `COleDateTime` 与其交换数据的或成员变量、对话框、窗体视图或控件视图对象的引用。 在第三个版本中，是对 `CString` 数据成员控件视图对象的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_DateTimeCtrl`调用时，将*value*设置为日期和时间选择器控件的当前状态，或将控件设置为*值*，具体取决于交换的方向。
+`DDX_DateTimeCtrl`调用时，将 *value* 设置为日期和时间选择器控件的当前状态，或将控件设置为 *值*，具体取决于交换的方向。
 
 在上述第三个版本中， `DDX_DateTimeCtrl` 管理 `CString` 日期时间控件和控件视图对象的 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 数据成员之间的数据传输。 使用当前区域设置的日期和时间格式规则对字符串进行格式设置。
 
@@ -263,7 +264,7 @@ void DDX_ManagedControl(
    CWinFormsControl<T>& control );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange 类](cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -274,7 +275,7 @@ void DDX_ManagedControl(
 *control*<br/>
 对 [CWinFormsControl 类](cwinformscontrol-class.md) 对象的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `DDX_ManagedControl` 调用 [CWinFormsControl：： CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) 以创建一个与资源控件 ID 相匹配的控件。 使用 `DDX_ManagedControl` 从 [CDialog：： OnInitDialog](cdialog-class.md#oninitdialog)中的资源 id 创建控件。 对于数据交换，无需将 DDX/DDV 函数用于 Windows 窗体控件。
 
@@ -295,7 +296,7 @@ void AFXAPI DDX_IPAddress(
     DWORD& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -315,9 +316,9 @@ void AFXAPI DDX_IPAddress(
 
 使用 Win32 [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress) 读取值，或使用 [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress) 填充值。 Windows SDK 中介绍了这些消息。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_IPAddress`调用时，将从 IP 地址控件中读取*值*，或者将*值*写入控件，具体取决于交换的方向。
+`DDX_IPAddress`调用时，将从 IP 地址控件中读取 *值*，或者将 *值* 写入控件，具体取决于交换的方向。
 
 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -336,7 +337,7 @@ void AFXAPI DDX_LBIndex(
     int& index);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -344,12 +345,12 @@ void AFXAPI DDX_LBIndex(
 *nIDC*<br/>
 与控件属性关联的列表框控件的资源 ID。
 
-*index*<br/>
+*索引*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_LBIndex`调用时， *index*设置为当前列表框选择的索引。 如果未选择任何项，则 *index* 设置为-1。
+`DDX_LBIndex`调用时， *index* 设置为当前列表框选择的索引。 如果未选择任何项，则 *index* 设置为-1。
 
 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -368,7 +369,7 @@ void AFXAPI DDX_LBString(
     CString& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -379,9 +380,9 @@ void AFXAPI DDX_LBString(
 *value*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_LBString`调用以将数据传输到列表框控件时，将选择控件中其开头匹配*值*的第一项。  (匹配整个项而不只是一个前缀，请使用 [DDX_LBStringExact](#ddx_lbstringexact)) 。如果没有匹配项，则不选择任何项。 匹配不区分大小写。
+`DDX_LBString`调用以将数据传输到列表框控件时，将选择控件中其开头匹配 *值* 的第一项。  (匹配整个项而不只是一个前缀，请使用 [DDX_LBStringExact](#ddx_lbstringexact)) 。如果没有匹配项，则不选择任何项。 匹配不区分大小写。
 
 在 `DDX_LBString` 调用以从列表框控件传输数据时，将 *值* 设置为当前列表框选择。 如果未选择任何项，则将 *值* 设置为长度为零的字符串。
 
@@ -405,7 +406,7 @@ void AFXAPI DDX_LBStringExact(
     CString& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -416,9 +417,9 @@ void AFXAPI DDX_LBStringExact(
 *value*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_LBStringExact`调用以将数据传输到列表框控件时，将选择控件中与*值*匹配的第一项。  (仅匹配前缀而不是整个项目，请使用 [DDX_LBString](#ddx_lbstring)) 。如果没有匹配项，则不选择任何项。 匹配不区分大小写。
+`DDX_LBStringExact`调用以将数据传输到列表框控件时，将选择控件中与 *值* 匹配的第一项。  (仅匹配前缀而不是整个项目，请使用 [DDX_LBString](#ddx_lbstring)) 。如果没有匹配项，则不选择任何项。 匹配不区分大小写。
 
 在 `DDX_CBStringExact` 调用以从列表框控件传输数据时，将 *值* 设置为当前列表框选择。 如果未选择任何项，则将 *值* 设置为长度为零的字符串。
 
@@ -447,7 +448,7 @@ void AFXAPI DDX_MonthCalCtrl(
     COleDateTime& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。 不需要删除此对象。
@@ -458,12 +459,12 @@ void AFXAPI DDX_MonthCalCtrl(
 *value*<br/>
 对用于 `CTime` `COleDateTime` 交换数据的对话框、窗体视图或控件视图对象的或成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 > [!NOTE]
 > 控件仅管理日期值。 Time 对象中的时间字段设置为反映控件窗口的创建时间，或在控件中通过调用设置的任何时间 `CMonthCalCtrl::SetCurSel` 。
 
-`DDX_MonthCalCtrl`调用时， *value*设置为月历控件的当前状态。
+`DDX_MonthCalCtrl`调用时， *value* 设置为月历控件的当前状态。
 
 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -482,7 +483,7 @@ void AFXAPI DDX_Radio(
     int& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -493,9 +494,9 @@ void AFXAPI DDX_Radio(
 *value*<br/>
 对用于交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_Radio`调用时， *value*设置为单选按钮组的当前状态。 此值设置为当前选中的单选控件的从零开始的索引; 如果没有选中任何广播控件，则为-1。
+`DDX_Radio`调用时， *value* 设置为单选按钮组的当前状态。 此值设置为当前选中的单选控件的从零开始的索引; 如果没有选中任何广播控件，则为-1。
 
 例如，在检查组中的第一个单选按钮时 (WS_GROUP 样式的按钮) 成员的值 **`int`** 为0等。
 
@@ -516,7 +517,7 @@ void AFXAPI DDX_Scroll(
     int& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 一个指向 `CDataExchange` 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -527,9 +528,9 @@ void AFXAPI DDX_Scroll(
 *value*<br/>
 对与其交换数据的对话框、窗体视图或控件视图对象的成员变量的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-`DDX_Scroll`调用时， *value*设置为控件的滚动块的当前位置。 有关与控件的滚动块当前位置关联的值的详细信息，请参阅 Windows SDK 中的 [GetScrollPos](/windows/win32/api/winuser/nf-winuser-getscrollpos) 。
+`DDX_Scroll`调用时， *value* 设置为控件的滚动块的当前位置。 有关与控件的滚动块当前位置关联的值的详细信息，请参阅 Windows SDK 中的 [GetScrollPos](/windows/win32/api/winuser/nf-winuser-getscrollpos) 。
 
 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -548,7 +549,7 @@ void AFXAPI DDX_Slider(
     int& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -559,7 +560,7 @@ void AFXAPI DDX_Slider(
 *value*<br/>
 对要交换的值的引用。 此参数包含或设置滑块控件的当前位置。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 当 `DDX_Slider` 调用时， *value* 设置为控件 thumb 的当前位置，或该值接收位置，具体取决于交换的方向。
 
@@ -571,7 +572,7 @@ void AFXAPI DDX_Slider(
 
 ## <a name="ddx_text"></a><a name="ddx_text"></a> DDX_Text
 
-`DDX_Text`函数管理 **`int`** **UINT** **`long`** `CString` **`float`** **`double`** 对话框、窗体视图或控件视图中的编辑控件与对话框、窗体视图或控件视图对象的[CString](../../atl-mfc-shared/reference/cstringt-class.md)数据成员之间的传输、UINT、、DWORD、、或数据。
+`DDX_Text`函数管理 **`int`**  **`long`** `CString` **`float`** **`double`** 对话框、窗体视图或控件视图中的编辑控件与对话框、窗体视图或控件视图对象的 [CString](../../atl-mfc-shared/reference/cstringt-class.md)数据成员之间的传输、UINT、、DWORD、、或数据。
 
 ```cpp
 void AFXAPI DDX_Text(
@@ -630,7 +631,7 @@ void AFXAPI DDX_Text(
     COleDateTime& value);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDX*<br/>
 指向 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 对象的指针。 框架提供了此对象以建立数据交换的上下文，包括其方向。
@@ -639,9 +640,9 @@ void AFXAPI DDX_Text(
 对话框、窗体视图或控件视图对象中编辑控件的 ID。
 
 *value*<br/>
-对对话框、窗体视图或控件视图对象中的数据成员的引用。 *值*的数据类型取决于使用的重载版本中的哪一种 `DDX_Text` 。
+对对话框、窗体视图或控件视图对象中的数据成员的引用。 *值* 的数据类型取决于使用的重载版本中的哪一种 `DDX_Text` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关 DDX 的更多信息，请参阅 [对话框数据交换和验证](../../mfc/dialog-data-exchange-and-validation.md)。
 
@@ -649,7 +650,7 @@ void AFXAPI DDX_Text(
 
   **标头** afxdd_。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标准对话框数据验证例程](standard-dialog-data-validation-routines.md)<br/>
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>

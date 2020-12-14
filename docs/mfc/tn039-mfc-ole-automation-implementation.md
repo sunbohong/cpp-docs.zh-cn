@@ -1,5 +1,6 @@
 ---
-title: TN039:MFC OLE 自动化实现
+description: 了解有关以下内容的详细信息： TN039： MFC/OLE 自动化实现
+title: TN039： MFC OLE 自动化实现
 ms.date: 06/28/2018
 helpviewer_keywords:
 - MFC, COM support
@@ -8,37 +9,37 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-ms.openlocfilehash: e71b3795396aa73135e8dac022182d4371bb19ac
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: caabd3719a467e534e47ca61ed8f9a9f1f0d2eb6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611252"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215412"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>TN039:MFC/OLE 自动化实现
+# <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE 自动化实现
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-## <a name="overview-of-ole-idispatch-interface"></a>OLE IDispatch 接口的概述
+## <a name="overview-of-ole-idispatch-interface"></a>OLE IDispatch 接口概述
 
-`IDispatch`接口是依据应用程序公开的方法和属性，如此一来，其他应用程序，如 Visual BASIC 或其他语言，可使用应用程序的功能的方式。 此接口的最重要部分是`IDispatch::Invoke`函数。 MFC 使用"调度映射"来实现`IDispatch::Invoke`。 调度映射上的布局或"形状"提供的 MFC 实现信息你`CCmdTarget`的派生类中，以便它可以直接操作对象的属性或调用成员函数内您的对象以满足`IDispatch::Invoke`请求数。
+`IDispatch`接口是应用程序公开方法和属性的方法，使其他应用程序（如 VISUAL BASIC 或其他语言）可以利用应用程序的功能。 此接口最重要的部分是 `IDispatch::Invoke` 函数。 MFC 使用 "调度映射" 来实现 `IDispatch::Invoke` 。 调度映射提供有关派生类的布局或 "shape" 的 MFC 实现信息 `CCmdTarget` ，以便它可以直接操作对象的属性，或调用对象中的成员函数来满足 `IDispatch::Invoke` 请求。
 
-大多数情况下，ClassWizard 和 MFC 共同协作以隐藏大部分的应用程序程序员的 OLE 自动化的详细信息。 程序员重点介绍用于公开应用程序中的实际功能，无需担心基础的基本功能。
+大多数情况下，ClassWizard 和 MFC 共同从应用程序程序员中隐藏了 OLE 自动化的大部分细节。 程序员关注要在应用程序中公开的实际功能，无需担心基础管道的问题。
 
-有的情况下，但是，必须先了解 MFC 在后台执行的操作。 本说明将解决框架如何分配**DISPID**的成员函数和属性。 MFC 使用的分配的算法的知识**DISPID**s 才是必需时需要了解的 Id，例如当您创建的"类型库"的应用程序的对象。
+但在某些情况下，有必要了解 MFC 在幕后执行的操作。 此注释将介绍框架如何将 **DISPID** 分配给成员函数和属性。 仅当需要知道 Id （如为应用程序的对象创建 "类型库" 时）时，才需要知道 MFC 用于分配 **DISPID** 的算法。
 
-## <a name="mfc-dispid-assignment"></a>MFC DISPID 分配
+## <a name="mfc-dispid-assignment"></a>MFC DISPID 赋值
 
-尽管自动化 （Visual Basic 用户，例如），最终用户看到的实际名称的属性和方法在其代码 （如目标启用自动化ShowWindow)，实现`IDispatch::Invoke`不会接收的实际名称。 为了优化，它接收**DISPID**，这是一个 32 位"神奇的 cookie"描述的方法或要访问的属性。 这些**DISPID**值返回从`IDispatch`实现通过另一种方法，名为`IDispatch::GetIDsOfNames`。 自动化客户端应用程序将调用`GetIDsOfNames`后它要为每个成员或属性访问，并缓存到更高版本调用`IDispatch::Invoke`。 这样一来，成本高昂的字符串查找只进行一次每次对象使用，而不是一次每个`IDispatch::Invoke`调用。
+尽管自动化 (Visual Basic 用户（例如) ）的最终用户可查看其代码中启用的自动化属性和方法的实际名称 (例如 obj。ShowWindow) ，的实现 `IDispatch::Invoke` 不会接收实际名称。 出于优化原因，它会接收 **DISPID**，这是一个32位 "幻 cookie"，用于描述要访问的方法或属性。 这些 **DISPID** 值 `IDispatch` 通过调用的另一种方法从实现返回 `IDispatch::GetIDsOfNames` 。 自动化客户端应用程序将 `GetIDsOfNames` 为它打算访问的每个成员或属性调用一次，并将其缓存，以便以后调用 `IDispatch::Invoke` 。 这样一来，开销高昂的字符串查找只对每个对象使用一次，而不是每次调用一次 `IDispatch::Invoke` 。
 
-MFC 确定**DISPID**为每个方法和属性基于两件事：
+MFC 根据两项内容确定每个方法和属性的 **DISPID**：
 
-- 从顶部的调度映射 （1 相关） 的距离
+- 从调度映射顶部 (1 相对) 的距离
 
-- 调度映射从派生程度最高的类 (0 相对) 的距离
+- 调度映射距派生程度最高的类的距离 (0 相对) 
 
-**DISPID**分为两个部分。 **使用 LOWORD**的**DISPID**包含第一个组件，从调度映射的顶部的距离。 **HIWORD**包含从派生程度最高的类之间的距离。 例如：
+**DISPID** 分为两部分。 **DISPID** 的 **LOWORD** 包含第一个组件，即与调度映射顶部的距离。 **HIWORD** 包含来自派生程度最高的类的距离。 例如：
 
 ```cpp
 class CDispPoint : public CCmdTarget
@@ -69,18 +70,18 @@ BEGIN_DISPATCH_MAP(CDisp3DPoint, CDispPoint)
 END_DISPATCH_MAP()
 ```
 
-如您所见，有两个类，这两种公开 OLE 自动化接口。 这些类之一派生自另并因此使用基类的功能，包括 OLE 自动化过程 ("x"和"y"属性在此情况下)。
+如您所见，有两个类，两者都公开了 OLE 自动化接口。 其中一个类派生自另一个类，因此利用基类的功能，包括 OLE 自动化部分 ( "x" 和 "y" 属性，这种情况) 。
 
-MFC 将生成**DISPID**s 类 CDispPoint，如下所示：
+MFC 将为类 CDispPoint 生成 **DISPID** 的，如下所示：
 
 ```cpp
 property X    (DISPID)0x00000001
 property Y    (DISPID)0x00000002
 ```
 
-因为属性不在基类**HIWORD**的**DISPID**值始终为零 （从 CDispPoint 的派生程度最高类之间的距离为零）。
+由于属性不在基类中，因此 **DISPID** 的 **HIWORD** 始终为零 (CDispPoint 的派生类的最大距离为) 零。
 
-MFC 将生成**DISPID**s 类 CDisp3DPoint，如下所示：
+MFC 将为类 CDisp3DPoint 生成 **DISPID** 的，如下所示：
 
 ```cpp
 property Z    (DISPID)0x00000001
@@ -88,18 +89,18 @@ property X    (DISPID)0x00010001
 property Y    (DISPID)0x00010002
 ```
 
-Z 属性赋**DISPID**带零**HIWORD**由于它公开的属性，CDisp3DPoint 类中定义。 由于基类中定义的 X 和 Y 属性**HIWORD**的**DISPID**为 1，因为这些属性定义的类是在从派生程度最高的类的一个派生的距离。
+为 Z 属性提供了一个具有零 **HIWORD** 的 **DISPID** ，因为它是在公开属性 CDisp3DPoint 的类中定义的。 由于 X 和 Y 属性是在基类中定义的，因此 **DISPID** 的 **HIWORD** 为1，因为在其中定义这些属性的类是从派生程度最高的类中的一个派生的距离。
 
 > [!NOTE]
-> **使用 LOWORD**始终确定按位置在映射中，即使存在与显式映射中的条目**DISPID** (参阅下一步部分信息 **_ID**新版`DISP_PROPERTY`和`DISP_FUNCTION`宏)。
+> **LOWORD** 始终由地图中的位置确定，即使映射中存在具有显式 **DISPID** 的条目 (参阅下一节，了解有关和宏) 的 **_ID** 版本的信息 `DISP_PROPERTY` `DISP_FUNCTION` 。
 
 ## <a name="advanced-mfc-dispatch-map-features"></a>高级 MFC 调度映射功能
 
-有很多其他功能 ClassWizard 不支持此版本中视觉对象的C++。 支持 ClassWizard `DISP_FUNCTION`， `DISP_PROPERTY`，和`DISP_PROPERTY_EX`用于定义应用程序的方法、 成员变量属性和 get/set 成员函数属性，分别。 这些功能通常所创建大多数自动化服务器所需的所有内容。
+在此版本的 Visual C++ 中，ClassWizard 不支持许多其他功能。 ClassWizard 支持 `DISP_FUNCTION` 、 `DISP_PROPERTY` 和， `DISP_PROPERTY_EX` 分别用于定义方法、成员变量属性和 get/set 成员函数属性。 这些功能通常是创建大多数自动化服务器所需的所有功能。
 
-支持的 ClassWizard 宏不足够时，可以使用以下其他宏： `DISP_PROPERTY_NOTIFY`，和`DISP_PROPERTY_PARAM`。
+如果 ClassWizard 支持的宏不足，则可以使用以下附加宏： `DISP_PROPERTY_NOTIFY` 和 `DISP_PROPERTY_PARAM` 。
 
-## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY — Macro Description
+## <a name="disp_property_notify--macro-description"></a>DISP_PROPERTY_NOTIFY-宏说明
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -110,28 +111,28 @@ DISP_PROPERTY_NOTIFY(
     vtPropType)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*theClass*<br/>
+*类*<br/>
 类的名称。
 
 *pszName*<br/>
 属性的外部名称。
 
-*memberName*<br/>
-在其中存储属性的成员变量的名称。
+*名称*<br/>
+存储属性的成员变量的名称。
 
 *pfnAfterSet*<br/>
 更改属性时要调用的成员函数的名称。
 
 *vtPropType*<br/>
-一个指定属性的类型值。
+一个指定属性类型的值。
 
 ### <a name="remarks"></a>备注
 
-此宏非常类似 DISP_PROPERTY，只不过它接受一个附加参数。 其他参数， *pfnAfterSet，* 应为不返回任何内容并不带任何参数，void OnPropertyNotify() 的成员函数。 它将叫做**后**成员变量已被修改。
+此宏非常类似于 DISP_PROPERTY，只不过它接受其他参数。 附加参数 *pfnAfterSet* 应为不返回任何内容且不带参数的成员函数 "void OnPropertyNotify ( # A1"。 在修改成员变量 **后** ，将调用此方法。
 
-## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM — Macro Description
+## <a name="disp_property_param--macro-description"></a>DISP_PROPERTY_PARAM-宏说明
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -143,42 +144,42 @@ DISP_PROPERTY_PARAM(
     vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*theClass*<br/>
+*类*<br/>
 类的名称。
 
 *pszName*<br/>
 属性的外部名称。
 
 *memberGet*<br/>
-用来获取属性的成员函数的名称。
+用于获取属性的成员函数的名称。
 
-*memberSet*<br/>
+*集*<br/>
 用于设置属性的成员函数的名称。
 
 *vtPropType*<br/>
-一个指定属性的类型值。
+一个指定属性类型的值。
 
 *vtsParams*<br/>
-分隔 VTS_ 空间构成的字符串，每个参数。
+为每个参数分隔 VTS_ 的字符串。
 
 ### <a name="remarks"></a>备注
 
-更像 DISP_PROPERTY_EX 宏，此宏可定义与单独的 Get 和 Set 成员函数访问的属性。 此宏，但是，可以指定属性的参数列表。 这可用于以某种其他方式实现的索引或参数化属性。 参数将始终放在最前面后, 跟该属性的新值。 例如：
+与 DISP_PROPERTY_EX 宏非常类似，此宏定义使用单独的 Get 和 Set 成员函数访问的属性。 不过，此宏允许您为属性指定参数列表。 这对于实现以其他方式编制索引或参数化的属性很有用。 参数将始终位于第一位，后面是属性的新值。 例如：
 
 ```cpp
 DISP_PROPERTY_PARAM(CMyObject, "item", GetItem, SetItem, VT_DISPATCH, VTS_I2 VTS_I2)
 ```
 
-将对应于 get 和 set 成员函数：
+与 get 和 set 成员函数相对应：
 
 ```cpp
 LPDISPATCH CMyObject::GetItem(short row, short col)
 void CMyObject::SetItem(short row, short col, LPDISPATCH newValue)
 ```
 
-## <a name="dispxxxxid--macro-descriptions"></a>DISP_XXXX_ID-宏说明
+## <a name="disp_xxxx_id--macro-descriptions"></a>DISP_XXXX_ID-宏说明
 
 ```cpp
 DISP_FUNCTION_ID(
@@ -218,35 +219,35 @@ DISP_PROPERTY_PARAM_ID(
     vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*theClass*<br/>
+*类*<br/>
 类的名称。
 
 *pszName*<br/>
 属性的外部名称。
 
 *dispid*<br/>
-固定的属性或方法的 DISPID。
+此属性或方法的 DISPID。
 
 *pfnGet*<br/>
-用来获取属性的成员函数的名称。
+用于获取属性的成员函数的名称。
 
 *pfnSet*<br/>
 用于设置属性的成员函数的名称。
 
-*memberName*<br/>
-要映射到属性的成员变量的名称
+*名称*<br/>
+要映射到属性的成员变量的名称。
 
 *vtPropType*<br/>
-一个指定属性的类型值。
+一个指定属性类型的值。
 
 *vtsParams*<br/>
-分隔 VTS_ 空间构成的字符串，每个参数。
+为每个参数分隔 VTS_ 的字符串。
 
 ### <a name="remarks"></a>备注
 
-这些宏，可以指定**DISPID**而不是由 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 追加到宏名称 (例如**DISP_PROPERTY_ID**) 和 ID 由后指定的参数*pszName*参数。 请参阅 AFXDISP。H 表示这些宏的详细信息。 **_ID**条目必须放在调度映射的末尾。 它们会影响自动**DISPID**作为非相同的方式生成 **_ID**宏的版本将 ( **DISPID**s 由位置)。 例如：
+这些宏允许您指定 **DISPID** ，而不是让 MFC 自动分配一个。 这些高级宏具有相同的名称，但该 ID 附加到宏名称后面 (例如 **DISP_PROPERTY_ID**) ，并且 Id 由 *pszName* 参数之后指定的参数决定。 请参阅 AFXDISP.H&GT。H 有关这些宏的详细信息。 必须将 **_ID** 条目置于调度映射的末尾。 它们将以与非 **_ID** 版本的宏相同的方式影响自动 **DISPID** 生成， (**DISPID** 的由位置) 确定。 例如：
 
 ```cpp
 BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)
@@ -256,7 +257,7 @@ BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)
 END_DISPATCH_MAP()
 ```
 
-MFC 将生成 Dispid CDisp3DPoint 类，如下所示：
+MFC 将为类 CDisp3DPoint 生成 Dispid，如下所示：
 
 ```cpp
 property X    (DISPID)0x00020003
@@ -264,11 +265,11 @@ property Y    (DISPID)0x00000002
 property Z    (DISPID)0x00000001
 ```
 
-指定的固定**DISPID**可将保持向后兼容到以前就存在的调度接口，或实现某些系统定义的方法或属性 (通常由负**DISPID**，如**DISPID_NEWENUM**集合)。
+指定固定 **DISPID** 有助于维持之前现有调度接口的向后兼容性，或实现某些系统定义的方法或属性， (通常由消极 **DISPID** 指示，如) **DISPID_NEWENUM** 集合。
 
-## <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>检索 COleClientItem IDispatch 接口
+## <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>检索 COleClientItem 的 IDispatch 接口
 
-许多服务器将支持其文档对象，以及 OLE 服务器功能的自动化功能。 若要访问此自动化接口，则有必要进行直接访问`COleClientItem::m_lpObject`成员变量。 下面的代码将检索`IDispatch`接口的一个派生自`COleClientItem`。 如果找到此功能有必要，您可以在应用程序中包括下面的代码：
+许多服务器将支持其文档对象内的自动化，以及 OLE 服务器功能。 为了获得对此自动化接口的访问权限，需要直接访问 `COleClientItem::m_lpObject` 成员变量。 下面的代码将检索 `IDispatch` 派生自的对象的接口 `COleClientItem` 。 如果你发现此功能是必需的，则可以在应用程序中包括以下代码：
 
 ```cpp
 LPDISPATCH CMyClientItem::GetIDispatch()
@@ -307,9 +308,9 @@ LPDISPATCH CMyClientItem::GetIDispatch()
 }
 ```
 
-调度接口返回的此函数无法然后直接使用或附加到`COleDispatchDriver`为类型安全的访问。 如果直接使用，请确保您调用其`Release`成员时通过使用指针 (`COleDispatchDriver`析构函数执行此默认情况下)。
+然后，可以将从此函数返回的调度接口直接用于或附加到以 `COleDispatchDriver` 进行类型安全的访问。 如果直接使用此方法，请确保在 `Release` 使用指针时调用其成员 (`COleDispatchDriver` 析构函数默认) 。
 
 ## <a name="see-also"></a>请参阅
 
-[按编号列出的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
 [按类别列出的技术说明](../mfc/technical-notes-by-category.md)

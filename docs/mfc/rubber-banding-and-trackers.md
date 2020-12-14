@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Rubber-Banding 和跟踪器
 title: 橡皮筋和跟踪器
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - rubber banding [MFC]
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
-ms.openlocfilehash: 095f3c15546466c6a495f6aa348990ed69b04a9e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 5d641e7553a2891e0319484558f025c6998f9693
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97217830"
 ---
 # <a name="rubber-banding-and-trackers"></a>橡皮筋和跟踪器
 
@@ -25,11 +26,11 @@ ms.locfileid: "77127361"
 
 [!code-cpp[NVC_MFCOClient#6](../mfc/codesnippet/cpp/rubber-banding-and-trackers_1.cpp)]
 
-如果希望在橡胶条中允许跟踪跟踪器的可逆方向，应调用[CRectTracker：： TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) ，并将第三个参数设置为**TRUE**。 请记住，允许可逆方向有时会导致[CRectTracker：： m_rect](../mfc/reference/crecttracker-class.md#m_rect)反转。 可以通过调用[CRect：： NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect)来更正此情况。
+如果希望在橡胶条中允许跟踪跟踪器的可逆方向，应调用 [CRectTracker：： TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) ，并将第三个参数设置为 **TRUE**。 请记住，允许可逆方向有时会导致 [CRectTracker：： m_rect](../mfc/reference/crecttracker-class.md#m_rect) 反转。 可以通过调用 [CRect：： NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect)来更正此情况。
 
-有关详细信息，请参阅[容器客户端项](../mfc/containers-client-items.md)和[OLE 拖放：自定义拖放](../mfc/drag-and-drop-ole.md#customize-drag-and-drop)。
+有关详细信息，请参阅 [容器客户端项](../mfc/containers-client-items.md) 和 [OLE 拖放：自定义拖放](../mfc/drag-and-drop-ole.md#customize-drag-and-drop)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[跟踪器：在 OLE 应用程序内实现跟踪器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
+[跟踪器：在 OLE 应用程序中实现跟踪器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
 [CRectTracker 类](../mfc/reference/crecttracker-class.md)

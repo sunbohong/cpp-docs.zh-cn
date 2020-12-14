@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： Run-Time 对象模型服务
 title: 运行时对象模型服务
 ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 63a82e3b05100f273be04a8718f2ecbb1510f06f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5457b34b13d53a6fbf76a74b893958b03b1d63de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844504"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97218883"
 ---
 # <a name="run-time-object-model-services"></a>运行时对象模型服务
 
@@ -23,11 +24,11 @@ ms.locfileid: "88844504"
 
 下表列出了支持运行时类信息、序列化和动态创建的 MFC 宏。
 
-有关这些运行时对象服务和序列化的详细信息，请参阅 [CObject 类：访问运行时类信息一](../../mfc/accessing-run-time-class-information.md)文。
+有关这些运行时对象服务和序列化的详细信息，请参阅 [CObject 类：访问 Run-Time 类信息](../../mfc/accessing-run-time-class-information.md)一文。
 
 ### <a name="run-time-object-model-services-macros"></a>运行时对象模型服务宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|支持访问运行时类信息（必须在类声明中使用）。|
 |[DECLARE_DYNCREATE](#declare_dyncreate)|支持动态创建和访问运行时类信息（必须在类声明中使用）。|
@@ -43,7 +44,7 @@ Microsoft 基础类库提供了两个特定于 OLE 的宏。
 
 ### <a name="dynamic-creation-of-ole-objects"></a>OLE 对象的动态创建
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)|确定公共控件库是否实现了指定的 API。|
 |[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)|确定公共控件库是否实现了指定的 API。|
@@ -64,12 +65,12 @@ Microsoft 基础类库提供了两个特定于 OLE 的宏。
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *proc*<br/>
 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏确定公共控件库 *进程* (指定的函数，而不是调用 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)。
 
@@ -87,12 +88,12 @@ afxcomctl32.h，afxcomctl32.inl
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *proc*<br/>
 指向包含函数名的以 null 结尾的字符串的指针，或者指定函数的序号值。 如果此参数是序号值，则它必须在低序位字中；高序位字必须为零。 此参数必须采用 Unicode。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用此宏确定公共控件库 *进程* (指定的函数，而不是调用 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)。 此宏是 AFX_COMCTL32_IF_EXISTS 的 Unicode 版本。
 
@@ -108,12 +109,12 @@ afxcomctl32.h，afxcomctl32.inl
 DECLARE_DYNAMIC(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 将 DECLARE_DYNAMIC 宏添加到类的标头 ( .h) 模块，然后将该模块包含在需要访问此类的对象的所有 .cpp 模块中。
 
@@ -139,12 +140,12 @@ DECLARE_DYNAMIC(class_name)
 DECLARE_DYNCREATE(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 框架使用此功能来动态创建新对象。 例如，打开新文档时创建的新视图。 文档、视图和框架类应支持动态创建，因为框架需要动态创建它们。
 
@@ -175,12 +176,12 @@ DECLARE_DYNCREATE(class_name)
 DECLARE_OLECTLTYPE( class_name )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 控件类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `GetUserTypeNameID` 和 `GetMiscStatus` 是中声明的纯虚函数 `COleControl` 。 由于这些函数是纯虚函数，因此必须在控件类中进行重写。 除了 DECLARE_OLECTLTYPE 之外，还必须将 IMPLEMENT_OLECTLTYPE 宏添加到控件类声明中。
 
@@ -198,12 +199,12 @@ DECLARE_OLECTLTYPE( class_name )
 DECLARE_PROPPAGEIDS( class_name )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 拥有属性页的控件类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `DECLARE_PROPPAGEIDS`在类声明的末尾使用宏。 然后，在定义类的成员函数的 .cpp 文件中，使用 `BEGIN_PROPPAGEIDS` 宏、控件的每个属性页的宏条目和 `END_PROPPAGEIDS` 宏声明属性页列表的末尾。
 
@@ -221,12 +222,12 @@ DECLARE_PROPPAGEIDS( class_name )
 DECLARE_SERIAL(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 序列化是指将对象的内容写入文件或从文件中读取对象的过程。
 
@@ -258,7 +259,7 @@ DECLARE_SERIAL 宏包含 DECLARE_DYNAMIC 和 DECLARE_DYNCREATE 的所有功能�
 IMPLEMENT_DYNAMIC(class_name, base_class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
@@ -266,7 +267,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 *base_class_name*<br/>
 基类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在 .cpp 模块中使用 IMPLEMENT_DYNAMIC 宏，然后仅将生成的对象代码链接一次。
 
@@ -290,7 +291,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 IMPLEMENT_DYNCREATE(class_name, base_class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
@@ -298,7 +299,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 *base_class_name*<br/>
 基类的实际名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此框架使用此功能来动态创建新对象，例如，在序列化期间从磁盘读取对象时。 将 IMPLEMENT_DYNCREATE 宏添加到类实现文件中。 有关详细信息，请参阅 [CObject 类主题](../../mfc/using-cobject.md)。
 
@@ -329,7 +330,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
@@ -348,14 +349,14 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8* Components 类的 CLSID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 > [!NOTE]
 > 如果使用 IMPLEMENT_OLECREATE_FLAGS，则可以使用 *nFlags* 参数指定对象支持的线程模型。 如果只想支持单一 treading 模型，请使用 IMPLEMENT_OLECREATE。
 
 外部名称是向其他应用程序公开的标识符。 客户端应用程序使用外部名称从自动化服务器请求此类的对象。
 
-OLE 类 ID 是对象的唯一128位标识符。 它由 **`long`** "语法说明" **WORD**中的 " *l*" **BYTE**、" *w1*"、" *w2*" 和 " *b1*到*b8* " 表示。 应用程序向导和代码向导会根据需要为您创建唯一的 OLE 类 Id。
+OLE 类 ID 是对象的唯一128位标识符。 它由 **`long`** "语法说明" 中的 " *l*" 、" *w1*"、" *w2*" 和 " *b1* 到 *b8* " 表示。 应用程序向导和代码向导会根据需要为您创建唯一的 OLE 类 Id。
 
 ### <a name="requirements"></a>要求
 
@@ -371,7 +372,7 @@ OLE 类 ID 是对象的唯一128位标识符。 它由 **`long`** "语法说明"
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 控件类的名称。
@@ -382,7 +383,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 *dwOleMisc*<br/>
 包含一个或多个标志的枚举。 有关此枚举的详细信息，请参阅 Windows SDK 中的 [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 除了 IMPLEMENT_OLECTLTYPE 之外，还必须将 DECLARE_OLECTLTYPE 宏添加到控件类声明中。
 
@@ -403,7 +404,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
@@ -414,7 +415,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 *wSchema*<br/>
 UINT "版本号"，将在存档中进行编码，以使反序列化程序能够识别和处理早期程序版本创建的数据。 类架构编号不得为-1。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在 .cpp 模块中使用 IMPLEMENT_SERIAL 宏;然后，仅将生成的对象代码链接一次。
 
@@ -440,14 +441,14 @@ UINT "版本号"，将在存档中进行编码，以使反序列化程序能够�
 RUNTIME_CLASS(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称 (没有用引号引起来) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-RUNTIME_CLASS 返回指向*class_name*指定的类的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构的指针。 仅 `CObject` 使用 DECLARE_DYNAMIC、DECLARE_DYNCREATE 或 DECLARE_SERIAL 声明的派生类将返回指向结构的指针 `CRuntimeClass` 。
+RUNTIME_CLASS 返回指向 *class_name* 指定的类的 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)结构的指针。 仅 `CObject` 使用 DECLARE_DYNAMIC、DECLARE_DYNCREATE 或 DECLARE_SERIAL 声明的派生类将返回指向结构的指针 `CRuntimeClass` 。
 
 有关详细信息，请参阅 [CObject 类主题](../../mfc/using-cobject.md)。
 
@@ -467,12 +468,12 @@ RUNTIME_CLASS 返回指向*class_name*指定的类的[CRuntimeClass](../../mfc/r
 DECLARE_OLECREATE(class_name)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏使其他启用 OLE 的应用程序能够创建此类型的对象。
 
@@ -492,7 +493,7 @@ DECLARE_OLECREATE(class_name)
 IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *class_name*<br/>
 类的实际名称。
@@ -502,20 +503,20 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8* Components 类的 CLSID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 > [!NOTE]
 > 如果使用 IMPLEMENT_OLECREATE，则默认情况下仅支持单线程模型。 如果使用 IMPLEMENT_OLECREATE_FLAGS，则可以使用 *nFlags* 参数指定对象支持的线程模型。
 
 外部名称是向其他应用程序公开的标识符。 客户端应用程序使用外部名称从自动化服务器请求此类的对象。
 
-OLE 类 ID 是对象的唯一128位标识符。 它由 **`long`** "语法说明" **WORD**中的 " *l*" **BYTE**、" *w1*"、" *w2*" 和 " *b1*到*b8* " 表示。 应用程序向导和代码向导会根据需要为您创建唯一的 OLE 类 Id。
+OLE 类 ID 是对象的唯一128位标识符。 它由 **`long`** "语法说明" 中的 " *l*" 、" *w1*"、" *w2*" 和 " *b1* 到 *b8* " 表示。 应用程序向导和代码向导会根据需要为您创建唯一的 OLE 类 Id。
 
 ### <a name="requirements"></a>要求
 
 **标头**： afxdisp.h&gt
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>
 [MFC 公共控件库的隔离](../isolation-of-the-mfc-common-controls-library.md)<br/>

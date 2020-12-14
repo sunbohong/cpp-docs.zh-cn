@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： TN031：控件条
 title: TN031：控件条
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,23 +15,23 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-ms.openlocfilehash: 37c3a15c281018260e65508dee3799ab0011dbfe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42dddf1afabdf2ab04ba8441208e7109eeacbd65
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370307"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97215542"
 ---
 # <a name="tn031-control-bars"></a>TN031：控件条
 
 > [!NOTE]
 > 以下技术说明在首次包括在联机文档中后未更新。 因此，某些过程和主题可能已过时或不正确。 要获得最新信息，建议你在联机文档索引中搜索热点话题。
 
-本说明描述了 MFC 中的控制栏类`CDockBar`：常规 CControlBar、CStatusBar、CToolbar、CDialogBar 和 。 [CControlBar](#_mfcnotes_ccontrolbar) [CStatusBar](#_mfcnotes_cstatusbar) [CToolBar](#_mfcnotes_ctoolbar) [CDialogBar](#_mfcnotes_cdialogbar)
+此注释描述 MFC 中的控件条类：常规 [CControlBar](#_mfcnotes_ccontrolbar)、 [CStatusBar](#_mfcnotes_cstatusbar)、 [CToolBar](#_mfcnotes_ctoolbar)、 [CDialogBar](#_mfcnotes_cdialogbar)和 `CDockBar` 。
 
 ## <a name="ccontrolbar"></a><a name="_mfcnotes_ccontrolbar"></a> CControlBar
 
-A`ControlBar`是`CWnd`派生类，用于：
+`ControlBar`是一个 `CWnd` 派生类，它：
 
 - 与框架窗口的顶端或底端对齐。
 
@@ -38,11 +39,11 @@ A`ControlBar`是`CWnd`派生类，用于：
 
 控件条支持附加样式：
 
-- CBRS_TOP（默认值）将控制栏固定到顶部。
+- CBRS_TOP (默认) 将控件条固定到顶部。
 
-- CBRS_BOTTOM将控制杆固定到底部。
+- CBRS_BOTTOM 在底部固定控件条。
 
-- CBRS_NOALIGN当父控件调整大小时，请勿重新定位控制栏。
+- CBRS_NOALIGN 不会在父控件调整大小时重新定位控件条。
 
 从 `CControlBar` 派生的类提供更有趣的实现：
 
@@ -52,7 +53,7 @@ A`ControlBar`是`CWnd`派生类，用于：
 
 - `CDialogBar` 一个像工具栏一样的框架，其中包含标准窗口控件（通过对话框模板资源创建）。
 
-- `CDockBar`其他`CControlBar`派生对象的通用停靠区域。 此类中可用的特定成员函数和变量可能在将来的版本中发生更改。
+- `CDockBar` 其他派生对象的通用停靠区域 `CControlBar` 。 此类中可用的特定成员函数和变量可能在将来的版本中发生更改。
 
 所有控件条对象/窗口都将是某个父框架窗口的子窗口。 它们通常将作为同级添加到框架的工作区（例如，MDI 客户端或视图）。 控件条的子窗口 ID 很重要。 控件条的默认布局仅对 ID 位于 AFX_IDW_CONTROLBAR_FIRST 到 AFX_IDW_CONTROLBAR_LAST 范围的控件条起作用。 请注意，即使具有 256 个控件条 ID，其中前 32 个控件条 ID 也是特定的，因为它们由打印预览体系结构直接支持。
 
@@ -64,10 +65,10 @@ A`ControlBar`是`CWnd`派生类，用于：
 
 - 支持派生类的实现。
 
-C++ 控件条对象一般将作为 `CFrameWnd` 派生类的成员嵌入，并且将在销毁父 `HWND` 和对象时得到清理。 如果需要在堆上分配控件条对象，则可以将 *m_bAutoDestruct* 成员设置为 **TRUE** ，以便在销毁**时使控件条“删除此项”**`HWND` 。
+C++ 控件条对象一般将作为 `CFrameWnd` 派生类的成员嵌入，并且将在销毁父 `HWND` 和对象时得到清理。 如果需要在堆上分配控件条对象，则可以将 *m_bAutoDestruct* 成员设置为 **TRUE** ，以便在销毁 **时使控件条“删除此项”**`HWND` 。
 
 > [!NOTE]
-> 如果`CControlBar`创建自己的派生类，而不是使用 MFC 的派生类之一，例如`CStatusBar`，`CToolBar`或`CDialogBar`， 则需要设置*m_dwStyle*数据成员。 这可以在重写 中完成`Create`：
+> 如果创建自己的 `CControlBar` 派生类，而不是使用 MFC 的派生类之一（如 `CStatusBar` 、或）， `CToolBar` `CDialogBar` 则需要设置 *m_dwStyle* 的数据成员。 这可以在的重写中完成 `Create` ：
 
 ```
 // CMyControlBar is derived from CControlBar
@@ -89,9 +90,9 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
 
 有关更多详细信息，请参阅 `CWnd::RepositionBars` 和 `CFrameWnd::RecalcLayout` 。
 
-MFC 专用 Windows 消息（包括WM_SIZEPARENT）记录在[技术说明 24](../mfc/tn024-mfc-defined-messages-and-resources.md)中。
+MFC 专用 Windows 消息（包括 WM_SIZEPARENT）记录在 [技术说明 24](../mfc/tn024-mfc-defined-messages-and-resources.md)中。
 
-## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a>CStatusbar
+## <a name="cstatusbar"></a><a name="_mfcnotes_cstatusbar"></a> CStatusBar
 
 状态栏是具有一行文本输出窗格的控件条。 使用文本输出窗格的常见方法有两种：
 
@@ -107,7 +108,7 @@ MFC 专用 Windows 消息（包括WM_SIZEPARENT）记录在[技术说明 24](../
 
 状态栏使用的颜色还与 Windows 界面应用程序设计指南建议的颜色保持一致。 这些颜色未经过硬编码，将动态更改以响应控制面板中的用户自定义。
 
-|Item|Windows 颜色值|默认 RGB|
+|项|Windows 颜色值|默认 RGB|
 |----------|-------------------------|-----------------|
 |状态栏背景|COLOR_BTNFACE|RGB(192, 192, 192)|
 |状态栏文本|COLOR_BTNTEXT|RGB(000, 000, 000)|
@@ -116,11 +117,11 @@ MFC 专用 Windows 消息（包括WM_SIZEPARENT）记录在[技术说明 24](../
 
 **CStatusBar 的 CCmdUI 支持**
 
-指标通常更新的方式是通过ON_UPDATE_COMMAND_UI机制。 在空闲时间，状态栏将调用带有指示器窗格的字符串 ID 的ON_UPDATE_COMMAND_UI处理程序。
+指示器的更新方式通常通过 ON_UPDATE_COMMAND_UI 机制来完成。 空闲时，状态栏将调用具有指示器窗格字符串 ID 的 ON_UPDATE_COMMAND_UI 处理程序。
 
-ON_UPDATE_COMMAND_UI处理程序可以调用：
+ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
-- `Enable`：启用或禁用窗格。 禁用窗格看上去与启用窗格完全一样，但文本不可见（即，禁用了文本指示器）。
+- `Enable`：启用或禁用该窗格。 禁用窗格看上去与启用窗格完全一样，但文本不可见（即，禁用了文本指示器）。
 
 - `SetText`：更改文本。 请慎用此设置，因为此窗格不会自动重设大小。
 
@@ -128,9 +129,9 @@ ON_UPDATE_COMMAND_UI处理程序可以调用：
 
 状态栏仅支持一个伸缩窗格，通常是第一个窗格。 该窗格的大小确实最小。 如果状态栏大于所有窗格的最小大小，则任何多余的宽度都将提供给此伸缩窗格。 由于第一个窗格是伸缩窗格，因此具有状态栏的默认应用程序已与 CAP、NUM 和 SCRL 的指示器右对齐。
 
-## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a>CToolBar
+## <a name="ctoolbar"></a><a name="_mfcnotes_ctoolbar"></a> CToolBar
 
-工具栏是具有一行位图按钮（可能包含分隔符）的控件条。 支持两种样式的按钮：按键和复选框按钮。 可以使用复选框按钮构建无线电组功能，并ON_UPDATE_COMMAND_UI。
+工具栏是具有一行位图按钮（可能包含分隔符）的控件条。 支持两种样式的按钮：按键和复选框按钮。 单选按钮组功能可以用复选框按钮和 ON_UPDATE_COMMAND_UI 来生成。
 
 工具栏中的所有位图按钮均来自一个位图。 此位图必须包含每个按钮的一个图像或字形。 通常图像/字形在位图中的顺序与它们在屏幕上绘制的顺序相同。 （这可以使用自定义 API 进行更改。）
 
@@ -140,7 +141,7 @@ ON_UPDATE_COMMAND_UI处理程序可以调用：
 
 工具栏使用的颜色还与 Windows 界面应用程序设计指南建议的颜色也保持一致。 这些颜色未经过硬编码，将动态更改以响应控制面板中的用户自定义。
 
-|Item|Windows 颜色值|默认 RGB|
+|项|Windows 颜色值|默认 RGB|
 |----------|-------------------------|-----------------|
 |工具栏背景|COLOR_BTNFACE|RGB(192,192,192)|
 |工具栏按钮上边缘/左边缘|COLOR_BTNHIGHLIGHT|RGB(255,255,255)|
@@ -161,9 +162,9 @@ ON_UPDATE_COMMAND_UI处理程序可以调用：
 
 ## <a name="ccmdui-support-for-ctoolbar"></a>CToolBar 的 CCmdUI 支持
 
-工具栏按钮始终更新的方式是通过ON_UPDATE_COMMAND_UI机制。 在空闲时间，工具栏将调用带有该按钮的命令 ID 的ON_UPDATE_COMMAND_UI处理程序。 ON_UPDATE_COMMAND_UI不调用分隔符，但称为按钮和复选框按钮。
+工具栏按钮始终更新的方式是通过 ON_UPDATE_COMMAND_UI 机制。 在空闲时，工具栏将用该按钮的命令 ID 调用 ON_UPDATE_COMMAND_UI 处理程序。 不会为分隔符调用 ON_UPDATE_COMMAND_UI，但会为按钮和复选框按钮调用此方法。
 
-ON_UPDATE_COMMAND_UI处理程序可以调用：
+ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
 - `Enable`：启用或禁用按钮。 这对按键和复选框按钮同样起作用。
 
@@ -173,9 +174,9 @@ ON_UPDATE_COMMAND_UI处理程序可以调用：
 
 复选框按钮为“自动”复选框按钮；也就是说，如果用户按它们，则它们将立即更改状态。 “已选中”是按下状态。 无内置用户界面方式将按钮更改为“不确定”状态；此操作必须通过代码来完成。
 
-自定义 API 将允许您更改给定工具栏按钮的状态，最好在工具栏按钮表示的命令ON_UPDATE_COMMAND_UI处理程序中更改这些状态。 请记住，空闲处理将更改工具栏按钮的状态与ON_UPDATE_COMMAND_UI处理程序，因此，通过 SetButtonStyle 对这些状态所做的任何更改可能会在下一个空闲后丢失。
+自定义 Api 将允许您更改指定工具栏按钮的状态，最好是在工具栏按钮表示的命令的 ON_UPDATE_COMMAND_UI 处理程序中更改这些状态。 请记住，空闲处理会使用 ON_UPDATE_COMMAND_UI 处理程序更改工具栏按钮的状态，因此通过 SetButtonStyle 对这些状态所做的任何更改可能会在下次空闲后丢失。
 
-工具栏按钮将发送WM_COMMAND消息（如普通按钮或菜单项），通常由提供ON_UPDATE_COMMAND_UI处理程序的同一类中的ON_COMMAND处理程序处理。
+工具栏按钮将像常规按钮或菜单项一样发送 WM_COMMAND 消息，并且通常由提供 ON_UPDATE_COMMAND_UI 处理程序的同一个类中的 ON_COMMAND 处理程序处理。
 
 用于显示状态的工具栏按钮样式（TBBS_ 值）有 4 种：
 
@@ -191,13 +192,13 @@ ON_UPDATE_COMMAND_UI处理程序可以调用：
 
 - 抬起 = 0
 
-- 鼠标向下 = TBBS_PRESSED（&#124;任何其他样式）
+- 鼠标按下 = TBBS_PRESSED ( # A0 任何其他样式) 
 
 - 已禁用 = TBBS_DISABLED
 
 - 按下 = TBBS_CHECKED
 
-- 已禁用 TBBS_CHECKED&#124;TBBS_DISABLED
+- 已禁用 = TBBS_CHECKED &#124; TBBS_DISABLED
 
 - 不确定 = TBBS_INDETERMINATE
 
@@ -213,9 +214,9 @@ ON_UPDATE_COMMAND_UI处理程序可以调用：
 
 ## <a name="ccmdui-support-for-cdialogbar"></a>CDialogBar 的 CCmdUI 支持
 
-对话框栏按钮应通过ON_UPDATE_COMMAND_UI处理程序机制进行更新。 在空闲时，对话框栏将调用ON_UPDATE_COMMAND_UI处理程序，其中包含 ID >= 0x8000（即命令 ID 范围内）的所有按钮的命令 ID。
+对话栏按钮应该通过 ON_UPDATE_COMMAND_UI 处理程序机制进行更新。 在空闲时，对话栏会使用 ID >= 0x8000 (的所有按钮的命令 ID 调用 ON_UPDATE_COMMAND_UI 处理程序，即在命令 Id) 范围内的所有按钮。
 
-ON_UPDATE_COMMAND_UI处理程序可以调用：
+ON_UPDATE_COMMAND_UI 处理程序可以调用：
 
 - Enable：启用或禁用按钮。
 
@@ -223,7 +224,7 @@ ON_UPDATE_COMMAND_UI处理程序可以调用：
 
 自定义可通过标准窗口管理器 API 来完成。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[技术说明（按编号）](../mfc/technical-notes-by-number.md)<br/>
-[按类别分类的技术说明](../mfc/technical-notes-by-category.md)
+[按编号的技术说明](../mfc/technical-notes-by-number.md)<br/>
+[按类别列出的技术说明](../mfc/technical-notes-by-category.md)

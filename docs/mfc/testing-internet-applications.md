@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：测试 Internet 应用程序
 title: 测试 Internet 应用程序
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - debugging [MFC], Web applications
 - Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
-ms.openlocfilehash: e582fd006a49e672fb21c86b054b8d35f489698f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed3dd9819524e156af47da4070c517e3761380ca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97216257"
 ---
 # <a name="testing-internet-applications"></a>测试 Internet 应用程序
 

@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： Internet URL 分析 Globals 和帮助程序
 title: Internet URL 分析全局和帮助程序
 ms.date: 04/03/2017
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: c7ce6eeee6deb4537d09e102b925a742ada04650
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4dca0946686759a3880c73aa425edcc724d8772d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837159"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219494"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL 分析全局和帮助程序
 
@@ -18,14 +19,14 @@ ms.locfileid: "88837159"
 
 ## <a name="internet-url-parsing-globals"></a>Internet URL 分析全局函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxParseURL](#afxparseurl)|分析 URL 字符串并返回服务类型及其组件。|
 |[AfxParseURLEx](#afxparseurlex)|分析 URL 字符串并返回服务类型及其组件，这与提供用户名和密码一样。|
 
 ## <a name="other-internet-helpers"></a>其他 Internet 帮助器
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxThrowInternetException](#afxthrowinternetexception)|引发与 internet 连接相关的异常。|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|确定 Internet 句柄的类型。|
@@ -43,7 +44,7 @@ BOOL AFXAPI AfxParseURL(
     INTERNET_PORT& nPort);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrURL*<br/>
 一个指针，指向包含要分析的 URL 的字符串。
@@ -94,7 +95,7 @@ URL 引用 (可能为空的对象) 。
 
 如果已成功分析 URL，则为非零值;否则，为0（如果它为空或不包含已知的 Internet 服务类型）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 它分析 URL 字符串并返回服务类型及其组件。
 
@@ -109,7 +110,7 @@ URL 引用 (可能为空的对象) 。
 *dwServiceType* = = #service
 
 > [!NOTE]
-> 若要调用此函数，你的项目必须包含 AFXINET.H。高.
+> 若要调用此函数，你的项目必须包含 AFXINET.H。
 
 ### <a name="requirements"></a>要求
 
@@ -131,7 +132,7 @@ BOOL AFXAPI AfxParseURLEx(
     DWORD dwFlags = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pstrURL*<br/>
 一个指针，指向包含要分析的 URL 的字符串。
@@ -201,12 +202,12 @@ dwFlags <br/>
 
 如果已成功分析 URL，则为非零值;否则，为0（如果它为空或不包含已知的 Internet 服务类型）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 它分析 URL 字符串并返回服务类型及其组件，并提供用户的名称和密码。 标志指示如何处理不安全字符。
 
 > [!NOTE]
-> 若要调用此函数，你的项目必须包含 AFXINET.H。高.
+> 若要调用此函数，你的项目必须包含 AFXINET.H。
 
 ### <a name="requirements"></a>要求
 
@@ -222,16 +223,16 @@ dwFlags <br/>
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hQuery*<br/>
 Internet 查询的句柄。
 
 ### <a name="return-value"></a>返回值
 
-WININET 定义的任何 Internet 服务类型。高. 有关这些 Internet 服务的列表，请参阅 "备注" 部分。 如果句柄为空或无法识别，则函数返回 AFX_INET_SERVICE_UNK。
+WININET 定义的任何 Internet 服务类型。 有关这些 Internet 服务的列表，请参阅 "备注" 部分。 如果句柄为空或无法识别，则函数返回 AFX_INET_SERVICE_UNK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 下面的列表包含返回的可能的 Internet 类型 `AfxGetInternetHandleType` 。
 
@@ -262,7 +263,7 @@ WININET 定义的任何 Internet 服务类型。高. 有关这些 Internet 服�
 - INTERNET_HANDLE_TYPE_HTTP_REQUEST
 
 > [!NOTE]
-> 为了调用此函数，你的项目必须包含 AFXINET.H。高.
+> 为了调用此函数，你的项目必须包含 AFXINET.H。
 
 ### <a name="requirements"></a>要求
 
@@ -278,26 +279,26 @@ WININET 定义的任何 Internet 服务类型。高. 有关这些 Internet 服�
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwContext*<br/>
-导致错误的操作的上下文标识符。 *DwContext*的默认值最初指定在[CInternetSession](cinternetsession-class.md)中，并传递给[CInternetConnection](cinternetconnection-class.md)和[CInternetFile](cinternetfile-class.md)派生的类。 对于在连接或文件上执行的特定操作，通常使用自己的 *dwContext* 替代默认值。 此值随后返回到 [CInternetSession：： OnStatusCallback](cinternetsession-class.md#onstatuscallback) 以标识特定操作的状态。
+导致错误的操作的上下文标识符。 *DwContext* 的默认值最初指定在 [CInternetSession](cinternetsession-class.md)中，并传递给 [CInternetConnection](cinternetconnection-class.md)和 [CInternetFile](cinternetfile-class.md)派生的类。 对于在连接或文件上执行的特定操作，通常使用自己的 *dwContext* 替代默认值。 此值随后返回到 [CInternetSession：： OnStatusCallback](cinternetsession-class.md#onstatuscallback) 以标识特定操作的状态。
 
 *dwError*<br/>
 导致异常的错误。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 你负责根据操作系统错误代码确定原因。
 
 > [!NOTE]
-> 若要调用此函数，你的项目必须包含 AFXINET.H。高.
+> 若要调用此函数，你的项目必须包含 AFXINET.H。
 
 ### <a name="requirements"></a>要求
 
 **标头：** afxinet。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](mfc-macros-and-globals.md)<br/>
 [CInternetException 类](cinternetexception-class.md)<br/>

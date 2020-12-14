@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： IView 接口
 title: IView 接口
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 9233ee5a8330c4b2c79ebc7b79e0616612c00204
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: e0229d61d12638935d7e4d928626a4bd7f5a830a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90743420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219442"
 ---
 # <a name="iview-interface"></a>IView 接口
 
@@ -59,9 +60,9 @@ interface class IView
 void OnActivateView(bool activate);
 ```
 
-## <a name="parameters"></a>参数
+## <a name="parameters"></a>parameters
 
-*激活*<br/>
+*启用*<br/>
 指示是否正在激活或停用视图。
 
 ## <a name="iviewoninitialupdate"></a><a name="oninitialupdate"></a> IView：： OnInitialUpdate
