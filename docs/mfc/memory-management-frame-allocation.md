@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：内存管理：帧分配
 title: 内存管理：帧分配
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-ms.openlocfilehash: cb66a0c0aea16f7e6831b6a1aff1a125df355210
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1763d332275f17ee082b891830641ebc61cad054
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225041"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193430"
 ---
 # <a name="memory-management-frame-allocation"></a>内存管理：帧分配
 
@@ -33,12 +34,12 @@ ms.locfileid: "87225041"
 
 [!code-cpp[NVC_MFC_Utilities#10](codesnippet/cpp/memory-management-frame-allocation_1.cpp)]
 
-对于局部函数变量，当函数存在时会发生此范围转换，但如果使用嵌套括号，则帧变量的范围会比函数的范围小。 此自动删除帧变量的功能是非常重要的。 对于简单的基元类型（如 **`int`** 或**byte**）、数组或数据结构，自动删除只会回收变量使用的内存。 由于变量超出了范围，因此无法访问它。 不过，对于 C++ 对象，自动删除过程会更复杂一点。
+对于局部函数变量，当函数存在时会发生此范围转换，但如果使用嵌套括号，则帧变量的范围会比函数的范围小。 此自动删除帧变量的功能是非常重要的。 对于简单的基元类型 (例如 **`int`** 或 **字节**) 、数组或数据结构，自动删除只会回收变量使用的内存。 由于变量超出了范围，因此无法访问它。 不过，对于 C++ 对象，自动删除过程会更复杂一点。
 
 在将某个对象定义为帧变量时，会在遇到定义的位置自动调用其构造函数。 如果对象超出范围，则在回收此对象的内存之前将自动调用其析构函数。 此自动构造和析构非常方便，但您必须意识到自动调用，特别是对于析构函数。
 
-在帧上分配对象的主要好处是可自动删除这些对象。 在帧上分配对象时，不必担心忘记导致内存泄漏的对象。 （有关内存泄漏的详细信息，请参阅在[MFC 中检测内存泄漏](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100))一文。）帧分配的缺点是帧变量不能在其作用域外使用。 选择帧分配还是堆分配所依据的另一个因素是：对于大型结构和对象，通常更好的选择是使用堆而不是存储堆栈，因为堆栈空间通常是有限的。
+在帧上分配对象的主要好处是可自动删除这些对象。 在帧上分配对象时，不必担心忘记导致内存泄漏的对象。  (有关内存泄漏的详细信息，请参阅在 [MFC 中检测内存泄漏](/previous-versions/visualstudio/visual-studio-2010/c99kz476(v=vs.100))一文。 ) 帧分配的缺点是无法在其作用域外使用帧变量。 选择帧分配还是堆分配所依据的另一个因素是：对于大型结构和对象，通常更好的选择是使用堆而不是存储堆栈，因为堆栈空间通常是有限的。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存管理](memory-management.md)

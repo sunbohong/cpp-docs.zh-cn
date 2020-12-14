@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：常量和全局变量映射
 title: 常量和全局变量映射
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - _tenviron function
 - _tfinddata_t function
 ms.assetid: 3af4fd3e-9ed5-4ed9-96fd-7031e5126fd1
-ms.openlocfilehash: 1bd96c7a305f588a24b0c6d31b2a0132d6546574
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6078564a5f9d6ef28de704f4991264b5de58041b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750189"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195757"
 ---
 # <a name="constant-and-global-variable-mappings"></a>常量和全局变量映射
 
@@ -38,5 +39,5 @@ TCHAR.H 中定义了这些一般文本常量、全局变量和标准类型映射
 [一般文本映射](../c-runtime-library/generic-text-mappings.md)<br/>
 [数据类型映射](../c-runtime-library/data-type-mappings.md)<br/>
 [例程映射](../c-runtime-library/routine-mappings.md)<br/>
-[示例一般文本程序](../c-runtime-library/a-sample-generic-text-program.md)<br/>
-[使用一般文本映射](../c-runtime-library/using-generic-text-mappings.md)
+[示例 Generic-Text 程序](../c-runtime-library/a-sample-generic-text-program.md)<br/>
+[使用 Generic-Text 映射](../c-runtime-library/using-generic-text-mappings.md)

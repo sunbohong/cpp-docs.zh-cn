@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： Exception 类
 title: Platform::Exception 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: bfdd8b3df720073e6b4a19cdb5b34db23e659fd0
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 1b6ad35e04ae239d90dbfceecaaf72223ae6a7ce
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90741964"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195211"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 类
 
@@ -77,7 +78,7 @@ Exception^ CreateException(int32 hr);
 Exception^ CreateException(int32 hr, Platform::String^ message);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *小时*<br/>
 调用 COM 方法时通常获取的 HRESULT 值。 如果该值为0（等于 S_OK），则此方法将引发 [Platform：： InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md) ，因为成功的 COM 方法不应引发异常。
@@ -106,7 +107,7 @@ Exception(int32 hresult);
 Exception(int32 hresult, ::Platform::String^ message);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hresult*<br/>
 由异常表示的错误 HRESULT。

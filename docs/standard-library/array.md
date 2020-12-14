@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 数组&gt;
 title: '&lt;数组&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: b515578e658d658722f92e48a7ac5ab78727c465
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c7c593fec9cf240ae28f8d05e1c56c743a7a3e42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88834942"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193066"
 ---
 # <a name="ltarraygt"></a>&lt;数组&gt;
 
@@ -30,7 +31,7 @@ ms.locfileid: "88834942"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[array](../standard-library/array-class-stl.md)|存储元素的固定长度序列。|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|包装数组元素的类型。|
@@ -38,7 +39,7 @@ ms.locfileid: "88834942"
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator = =](../standard-library/array-operators.md#op_eq_eq)|数组比较，等于|
 |[operator！ =](../standard-library/array-operators.md#op_neq)|数组比较，不等于|
@@ -49,12 +50,12 @@ ms.locfileid: "88834942"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[get](../standard-library/array-functions.md#get)|获取指定的数组元素。|
 |[swap](../standard-library/array-functions.md#swap)|将一个数组的内容与另一个数组的内容进行交换。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<tuple>](../standard-library/tuple.md)\
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

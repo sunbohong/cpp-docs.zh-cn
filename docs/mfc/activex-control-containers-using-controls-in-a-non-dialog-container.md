@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ActiveX 控件容器：使用非对话框容器中的控件
 title: ActiveX 控件容器：使用非对话框容器中的控件
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,30 +9,30 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: f3f0bc7c89ff2bea1c344f2c876e1624ba82fb87
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 699f1faa5c88eb965a320c210de6e5e6c2ee94ef
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214160"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197668"
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控件容器：使用非对话框容器中的控件
 
-在某些应用程序（如 SDI 或 MDI 应用程序）中，您需要将在应用程序的窗口中嵌入一个控件。 Visual C++ 插入的包装类的**create**成员函数可以动态创建控件的实例，而无需使用对话框。
+在某些应用程序（如 SDI 或 MDI 应用程序）中，您需要将在应用程序的窗口中嵌入一个控件。 Visual C++ 插入的包装类的 **create** 成员函数可以动态创建控件的实例，而无需使用对话框。
 
-**Create**成员函数具有以下参数：
+**Create** 成员函数具有以下参数：
 
 *lpszWindowName*<br/>
 指向要在控件的“Text”或“Caption”属性（如果有）中显示的文本的指针。
 
 *dwStyle*<br/>
-窗口样式。 有关完整列表，请参阅[CWnd：： CreateControl](reference/cwnd-class.md#createcontrol)。
+窗口样式。 有关完整列表，请参阅 [CWnd：： CreateControl](reference/cwnd-class.md#createcontrol)。
 
 *rect*<br/>
 指定控件的大小和位置。
 
 *pParentWnd*<br/>
-指定控件的父窗口，通常为 `CDialog`。 它不能为**NULL**。
+指定控件的父窗口，通常为 `CDialog`。 它不能为 **NULL**。
 
 *nID*<br/>
 指定控件 ID，并且可由容器用来引用控件。
@@ -61,6 +62,6 @@ ms.locfileid: "87214160"
 
 1. 重新生成项目。 每当创建应用程序的视图时，都会动态创建一个 Circ 控件。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [ActiveX 控件容器](activex-control-containers.md)

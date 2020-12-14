@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：框架 (MFC) '
 title: 框架 (MFC)
 ms.date: 09/17/2019
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: b02d5a1862a278f46591895f20f58a97367b5ab2
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 12e5a28e231dfadec867213ebf1cea6fd6ae7300
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618789"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193482"
 ---
 # <a name="framework-mfc"></a>框架 (MFC)
 
-在使用 Microsoft 基础类 (MFC) 库框架时很大程度上基于几个主要的类和 Visual C++ 工具。 一些类封装了 Win32 应用程序编程接口 (API) 的一大部分。 其他类封装了应用程序概念，如文档、视图和应用程序本身。 还有其他类封装了 OLE 功能以及 ODBC 和 DAO 数据访问功能。  （DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。）
+在使用 Microsoft 基础类 (MFC) 库框架时很大程度上基于几个主要的类和 Visual C++ 工具。 一些类封装了 Win32 应用程序编程接口 (API) 的一大部分。 其他类封装了应用程序概念，如文档、视图和应用程序本身。 还有其他类封装了 OLE 功能以及 ODBC 和 DAO 数据访问功能。   (DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 ) 
 
 例如，Win32 的窗口概念由 MFC 类 `CWnd` 封装。 也就是说，名为 `CWnd` 的 C++ 类封装或“包装”了表示 Windows 窗口的 `HWND` 句柄。 同样，`CDialog` 类封装了 Win32 对话框。
 
@@ -49,6 +50,6 @@ ms.locfileid: "84618789"
 
 [窗口对象](window-objects.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用类编写适用于 Windows 的应用程序](using-the-classes-to-write-applications-for-windows.md)

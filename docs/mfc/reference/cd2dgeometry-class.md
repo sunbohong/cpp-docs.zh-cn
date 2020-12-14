@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CD2DGeometry 类
 title: CD2DGeometry 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -46,16 +47,16 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 4727f7b1799604001134ee2f4d2d2e1ce6db87fa
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 2c902554ba5377ce9f7a4a481d4001a9ef7a47f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81754784"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193443"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 类
 
-ID2D1 几何体的包装器。
+ID2D1Geometry 的包装器。
 
 ## <a name="syntax"></a>语法
 
@@ -67,67 +68,67 @@ class CD2DGeometry : public CD2DResource;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CD2D 几何：CD2D几何](#cd2dgeometry)|构造 CD2D 几何对象。|
-|[CD2D几何：*CD2D几何](#_dtorcd2dgeometry)|析构函数。 销毁 D2D 几何对象时调用。|
+|[CD2DGeometry：： CD2DGeometry](#cd2dgeometry)|构造 CD2DGeometry 对象。|
+|[CD2DGeometry：： ~ CD2DGeometry](#_dtorcd2dgeometry)|析构函数。 当 D2D geometry 对象被销毁时调用。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[CD2D 几何：附加](#attach)|将现有资源接口附加到对象|
-|[CD2D几何：：与几何体结合](#combinewithgeometry)|将此几何体与指定的几何体相结合，并将结果存储在 ID2D1 简化几何结构中。|
-|[CD2D几何：：与几何体比较](#comparewithgeometry)|描述此几何体和指定几何体之间的交集。 比较使用指定的展平容差执行。|
-|[CD2D 几何：计算区域](#computearea)|计算几何体的面积后，它已被指定的矩阵转换，并使用指定的容差拼平。|
-|[CD2D 几何：计算长度](#computelength)|计算几何的长度，就像每个线段都展开成一条线一样。|
-|[CD2D 几何：：计算点长度](#computepointatlength)|计算沿几何体的指定距离的点和切线矢量，然后由指定的矩阵转换并使用指定的容差进行拼合。|
-|[CD2D 几何：:D](#destroy)|销毁 CD2D 几何对象。 （覆盖[CD2D 资源：:D）](../../mfc/reference/cd2dresource-class.md#destroy)|
-|[CD2D 几何：:D](#detach)|从对象分离资源接口|
-|[CD2D 几何：：填充包含点](#fillcontainspoint)|指示几何图形填充的区域是否包含给定指定平整容差的指定点。|
-|[CD2D 几何：获取](#get)|返回 ID2D1 几何接口|
-|[CD2D 几何：获取绑定](#getbounds)||
-|[CD2D 几何：：获取加束](#getwidenedbounds)|在几何体被指定的描边宽度和样式加宽并由指定的矩阵转换后获取几何体的边界。|
-|[CD2D 几何：有效](#isvalid)|检查资源有效性（覆盖[CD2D 资源：：有效](../../mfc/reference/cd2dresource-class.md#isvalid)。）|
-|[CD2D 几何：大纲](#outline)|计算几何体的轮廓并将结果写入 ID2D1 简化几何结构。|
-|[CD2D 几何：简化](#simplify)|创建仅包含线条和（可选）立方贝塞尔曲线的几何图形的简化版本，并将结果写入 ID2D1 简化几何结构。|
-|[CD2D 几何：：笔画包含点](#strokecontainspoint)|确定几何体的描边是否包含指定描边厚度、样式和变换的指定点。|
-|[CD2D 几何：：底纹](#tessellate)|在使用指定的矩形转换和使用指定的容差平展几何图形后，创建一组覆盖该几何图形的顺时针方向的三角形。|
-|[CD2D 几何：宽宽](#widen)|通过指定的描边加宽几何体，并将结果写入 ID2D1SimplifiedGeometrySink 后，该结果被指定的矩阵转换并使用指定的容差进行拼合。|
+|[CD2DGeometry：： Attach](#attach)|将现有资源接口附加到对象|
+|[CD2DGeometry：： CombineWithGeometry](#combinewithgeometry)|将此几何图形与指定几何图形合并，并将结果存储在 ID2D1SimplifiedGeometrySink 中。|
+|[CD2DGeometry：： CompareWithGeometry](#comparewithgeometry)|描述此几何与指定几何之间的交集。 使用指定的平展公差执行比较。|
+|[CD2DGeometry：： ComputeArea](#computearea)|在几何图形由指定的矩阵转换并使用指定的公差平展之后计算该区域。|
+|[CD2DGeometry：： ComputeLength](#computelength)|计算几何长度，就好像每个段被 unrolled 到一条直线。|
+|[CD2DGeometry：： ComputePointAtLength](#computepointatlength)|在几何图形由指定的矩阵转换后，使用指定的公差按指定的矩阵转换后的指定距离，计算点和正切向量。|
+|[CD2DGeometry：:D estroy](#destroy)|销毁 CD2DGeometry 对象。  (重写 [CD2DResource：:D estroy](../../mfc/reference/cd2dresource-class.md#destroy)。 ) |
+|[CD2DGeometry：:D etach](#detach)|从对象分离资源接口|
+|[CD2DGeometry：： FillContainsPoint](#fillcontainspoint)|指示根据指定的平展公差，几何图形是否包含指定的点。|
+|[CD2DGeometry：： Get](#get)|返回 ID2D1Geometry 接口|
+|[CD2DGeometry：： GetBounds](#getbounds)||
+|[CD2DGeometry：： GetWidenedBounds](#getwidenedbounds)|在几何图形由指定的笔划宽度和样式加宽并由指定的矩阵转换后，获取该几何图形的边界。|
+|[CD2DGeometry：： IsValid](#isvalid)|检查资源有效性 (重写 [CD2DResource：： IsValid](../../mfc/reference/cd2dresource-class.md#isvalid). ) |
+|[CD2DGeometry：：镂空](#outline)|计算几何图形的轮廓并将结果写入 ID2D1SimplifiedGeometrySink。|
+|[CD2DGeometry：：化简](#simplify)|创建仅包含行和 (（可选）) 三次方贝塞尔曲线并将结果写入 ID2D1SimplifiedGeometrySink 的几何图形的简化版本。|
+|[CD2DGeometry：： StrokeContainsPoint](#strokecontainspoint)|确定几何图形的笔画是否包含给定指定笔画粗细、样式和转换的指定点。|
+|[CD2DGeometry：：进行分割](#tessellate)|在使用指定的矩形转换和使用指定的容差平展几何图形后，创建一组覆盖该几何图形的顺时针方向的三角形。|
+|[CD2DGeometry：：加宽](#widen)|在指定的矩阵转换并使用指定的公差平展后，使几何图形按指定的笔划扩大并将结果写入 ID2D1SimplifiedGeometrySink。|
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CD2D几何：：操作员 ID2D1 几何*](#operator_id2d1geometry_star)|返回 ID2D1 几何接口|
+|[CD2DGeometry：： operator ID2D1Geometry *](#operator_id2d1geometry_star)|返回 ID2D1Geometry 接口|
 
 ### <a name="protected-data-members"></a>受保护的数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
-|[CD2D 几何：：m_pGeometry](#m_pgeometry)|指向 ID2D1 几何体的指针。|
+|[CD2DGeometry：： m_pGeometry](#m_pgeometry)|指向 ID2D1Geometry 的指针。|
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2D 资源](../../mfc/reference/cd2dresource-class.md)
+[CD2DResource](../../mfc/reference/cd2dresource-class.md)
 
 `CD2DGeometry`
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxrendertarget.h
+**标头：** afxrendertarget
 
-## <a name="cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a>CD2D几何：*CD2D几何
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="_dtorcd2dgeometry"></a> CD2DGeometry：： ~ CD2DGeometry
 
-析构函数。 销毁 D2D 几何对象时调用。
+析构函数。 当 D2D geometry 对象被销毁时调用。
 
 ```
 virtual ~CD2DGeometry();
 ```
 
-## <a name="cd2dgeometryattach"></a><a name="attach"></a>CD2D 几何：附加
+## <a name="cd2dgeometryattach"></a><a name="attach"></a> CD2DGeometry：： Attach
 
 将现有资源接口附加到对象
 
@@ -135,14 +136,14 @@ virtual ~CD2DGeometry();
 void Attach(ID2D1Geometry* pResource);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p资源*<br/>
-现有资源接口。 不能为 NULL
+*pResource*<br/>
+现有的资源接口。 不能为 NULL
 
-## <a name="cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a>CD2D 几何：CD2D几何
+## <a name="cd2dgeometrycd2dgeometry"></a><a name="cd2dgeometry"></a> CD2DGeometry：： CD2DGeometry
 
-构造 CD2D 几何对象。
+构造 CD2DGeometry 对象。
 
 ```
 CD2DGeometry(
@@ -150,17 +151,17 @@ CD2DGeometry(
     BOOL bAutoDestroy = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*p 父目标*<br/>
-指向渲染目标的指针。
+*pParentTarget*<br/>
+指向呈现器目标的指针。
 
-*bAuto销毁*<br/>
-指示对象将被所有者（pParentTarget）销毁。
+*bAutoDestroy*<br/>
+指示对象将被所有者 (pParentTarget) 销毁。
 
-## <a name="cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a>CD2D几何：：与几何体结合
+## <a name="cd2dgeometrycombinewithgeometry"></a><a name="combinewithgeometry"></a> CD2DGeometry：： CombineWithGeometry
 
-将此几何体与指定的几何体相结合，并将结果存储在 ID2D1 简化几何结构中。
+将此几何图形与指定几何图形合并，并将结果存储在 ID2D1SimplifiedGeometrySink 中。
 
 ```
 BOOL CombineWithGeometry(
@@ -171,30 +172,30 @@ BOOL CombineWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*输入几何学*<br/>
-要与此实例组合的几何体。
+*inputGeometry*<br/>
+要与此实例合并的几何图形。
 
-*组合模式*<br/>
+*combineMode*<br/>
 要执行的组合操作的类型。
 
-*输入几何转换*<br/>
-要应用于输入几何的转换，然后再合并。
+*inputGeometryTransform*<br/>
+组合之前要应用于 inputGeometry 的转换。
 
-*几何结构*<br/>
-合并操作的结果。
+*geometrySink*<br/>
+合并运算的结果。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a>CD2D几何：：与几何体比较
+## <a name="cd2dgeometrycomparewithgeometry"></a><a name="comparewithgeometry"></a> CD2DGeometry：： CompareWithGeometry
 
-描述此几何体和指定几何体之间的交集。 比较使用指定的展平容差执行。
+描述此几何与指定几何之间的交集。 使用指定的平展公差执行比较。
 
 ```
 D2D1_GEOMETRY_RELATION CompareWithGeometry(
@@ -203,24 +204,24 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*输入几何学*<br/>
-要测试的几何体。
+*inputGeometry*<br/>
+要测试的几何图形。
 
-*输入几何转换*<br/>
-应用于输入几何的转换。
+*inputGeometryTransform*<br/>
+要应用于 inputGeometry 的转换。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrycomputearea"></a><a name="computearea"></a>CD2D 几何：计算区域
+## <a name="cd2dgeometrycomputearea"></a><a name="computearea"></a> CD2DGeometry：： ComputeArea
 
-计算几何体的面积后，它已被指定的矩阵转换，并使用指定的容差拼平。
+在几何图形由指定的矩阵转换并使用指定的公差平展之后计算该区域。
 
 ```
 BOOL ComputeArea(
@@ -229,24 +230,24 @@ BOOL ComputeArea(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*世界转型*<br/>
-在计算其面积之前应用于此几何体的转换。
+*worldTransform*<br/>
+在计算其区域前应用于此几何图形的转换。
 
-*地区*<br/>
-当此方法返回时，包含指向此几何体的转换的拼合版本的区域的指针。 您必须为此参数分配存储。
+*图*<br/>
+此方法返回时，包含指向此几何图形的已转换平展版本区域的指针。 必须为此参数分配存储空间。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrycomputelength"></a><a name="computelength"></a>CD2D 几何：计算长度
+## <a name="cd2dgeometrycomputelength"></a><a name="computelength"></a> CD2DGeometry：： ComputeLength
 
-计算几何的长度，就像每个线段都展开成一条线一样。
+计算几何长度，就好像每个段被 unrolled 到一条直线。
 
 ```
 BOOL ComputeLength(
@@ -255,24 +256,24 @@ BOOL ComputeLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*世界转型*<br/>
-在计算几何体的长度之前应用于几何体的变换。
+*worldTransform*<br/>
+要在计算其长度之前应用于几何图形的转换。
 
 *length*<br/>
-当此方法返回时，包含指向几何长度的指针。 对于闭合几何体，长度包括隐式闭合段。 您必须为此参数分配存储。
+此方法返回时，包含指向几何图形长度的指针。 对于闭合的几何图形，长度包含隐式闭合段。 必须为此参数分配存储空间。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a>CD2D 几何：：计算点长度
+## <a name="cd2dgeometrycomputepointatlength"></a><a name="computepointatlength"></a> CD2DGeometry：： ComputePointAtLength
 
-计算沿几何体的指定距离的点和切线矢量，然后由指定的矩阵转换并使用指定的容差进行拼合。
+在几何图形由指定的矩阵转换后，使用指定的公差按指定的矩阵转换后的指定距离，计算点和正切向量。
 
 ```
 BOOL ComputePointAtLength(
@@ -283,36 +284,36 @@ BOOL ComputePointAtLength(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *length*<br/>
-沿点的几何体和要查找的切线的距离。 如果此距离小于 0，则此方法计算几何体中的第一个点。 如果此距离大于几何的长度，则此方法计算几何体中的最后一个点。
+沿点和切线的几何图形要查找的距离。 如果此距离小于0，此方法将计算几何图形中的第一个点。 如果此距离大于几何图形的长度，此方法将计算几何图形中的最后一个点。
 
-*世界转型*<br/>
-在计算指定点和切线之前应用于几何体的变换。
+*worldTransform*<br/>
+要在计算指定点和正切之前应用于几何图形的转换。
 
-*点*<br/>
-沿几何图形指定距离的位置。 如果几何体为空，则此点包含 NaN 作为其 x 和 y 值。
+*情况*<br/>
+沿几何图形指定距离的位置。 如果几何图形为空，则此点包含 NaN 作为其 x 和 y 值。
 
-*单位唐特矢量*<br/>
-当此方法返回时，包含指向沿几何体指定距离的切线矢量的指针。 如果几何体为空，则此矢量包含 NaN 作为其 x 和 y 值。 您必须为此参数分配存储。
+*unitTangentVector*<br/>
+此方法返回时，包含一个指针，该指针指向沿几何图形上指定距离的正切向量。 如果几何图形为空，则此向量包含 NaN 作为其 x 和 y 值。 必须为此参数分配存储空间。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrydestroy"></a><a name="destroy"></a>CD2D 几何：:D
+## <a name="cd2dgeometrydestroy"></a><a name="destroy"></a> CD2DGeometry：:D estroy
 
-销毁 CD2D 几何对象。
+销毁 CD2DGeometry 对象。
 
 ```
 virtual void Destroy();
 ```
 
-## <a name="cd2dgeometrydetach"></a><a name="detach"></a>CD2D 几何：:D
+## <a name="cd2dgeometrydetach"></a><a name="detach"></a> CD2DGeometry：:D etach
 
 从对象分离资源接口
 
@@ -322,11 +323,11 @@ ID2D1Geometry* Detach();
 
 ### <a name="return-value"></a>返回值
 
-指向分离的资源接口的指针。
+指向已分离资源接口的指针。
 
-## <a name="cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a>CD2D 几何：：填充包含点
+## <a name="cd2dgeometryfillcontainspoint"></a><a name="fillcontainspoint"></a> CD2DGeometry：： FillContainsPoint
 
-指示几何图形填充的区域是否包含给定指定平整容差的指定点。
+指示根据指定的平展公差，几何图形是否包含指定的点。
 
 ```
 BOOL FillContainsPoint(
@@ -336,27 +337,27 @@ BOOL FillContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
+*情况*<br/>
 要测试的点。
 
-*世界转型*<br/>
-在测试包含之前应用于几何体的转换。
+*worldTransform*<br/>
+在测试包含之前应用于几何图形的转换。
 
-*包含*<br/>
-当此方法返回时，如果几何图形填充的区域包含点，则包含为 TRUE 的 bool 值;否则，FALSE。 您必须为此参数分配存储。
+*contains*<br/>
+此方法返回时，包含一个布尔值，如果由几何图形填充的区域包含点，则该布尔值为 TRUE;否则为 FALSE。 必须为此参数分配存储空间。
 
-*扁平公差*<br/>
-计算精确几何路径和路径交集的数字精度。 内仍考虑缺少小于容差的填充点。 值越小，生成的结果就越准确，但执行速度会变慢。
+*flatteningTolerance*<br/>
+用于计算精确几何路径和路径交集的数值精度。 缺少填充量小于容差的点仍被视为内部点。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometryget"></a><a name="get"></a>CD2D 几何：获取
+## <a name="cd2dgeometryget"></a><a name="get"></a> CD2DGeometry：： Get
 
-返回 ID2D1 几何接口
+返回 ID2D1Geometry 接口
 
 ```
 ID2D1Geometry* Get();
@@ -364,9 +365,9 @@ ID2D1Geometry* Get();
 
 ### <a name="return-value"></a>返回值
 
-如果对象尚未初始化，则指向 ID2D1 几何接口或 NULL 的指针。
+指向 ID2D1Geometry 接口的指针; 如果对象尚未初始化，则为 NULL。
 
-## <a name="cd2dgeometrygetbounds"></a><a name="getbounds"></a>CD2D 几何：获取绑定
+## <a name="cd2dgeometrygetbounds"></a><a name="getbounds"></a> CD2DGeometry：： GetBounds
 
 ```
 BOOL GetBounds(
@@ -374,16 +375,16 @@ const D2D1_MATRIX_3X2_F& worldTransform,
 CD2DRectF& bounds) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*世界转型*<br/>
-*边界*
+*worldTransform*<br/>
+*汇编*
 
 ### <a name="return-value"></a>返回值
 
-## <a name="cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a>CD2D 几何：：获取加束
+## <a name="cd2dgeometrygetwidenedbounds"></a><a name="getwidenedbounds"></a> CD2DGeometry：： GetWidenedBounds
 
-在几何体被指定的描边宽度和样式加宽并由指定的矩阵转换后获取几何体的边界。
+在几何图形由指定的笔划宽度和样式加宽并由指定的矩阵转换后，获取该几何图形的边界。
 
 ```
 BOOL GetWidenedBounds(
@@ -394,28 +395,28 @@ BOOL GetWidenedBounds(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*笔画宽度*<br/>
-通过抚摸几何轮廓来扩大几何体的数量。
+*strokeWidth*<br/>
+通过对其轮廓进行描边使几何变宽的量。
 
-*笔画样式*<br/>
-宽大几何形状的描边样式。
+*strokeStyle*<br/>
+加宽几何图形的笔画样式。
 
-*世界转型*<br/>
-转换几何体后和几何图形描边后应用于几何图形的变换。
+*worldTransform*<br/>
+要在转换几何图形后和对几何图形进行描边之后应用于几何图形的转换。
 
-*边界*<br/>
-当此方法返回时，包含加宽几何体的边界。 您必须为此参数分配存储。
+*汇编*<br/>
+此方法返回时，包含加宽的几何图形的界限。 必须为此参数分配存储空间。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometryisvalid"></a><a name="isvalid"></a>CD2D 几何：有效
+## <a name="cd2dgeometryisvalid"></a><a name="isvalid"></a> CD2DGeometry：： IsValid
 
 检查资源有效性
 
@@ -425,19 +426,19 @@ virtual BOOL IsValid() const;
 
 ### <a name="return-value"></a>返回值
 
-如果资源有效，则为 TRUE;否则 FALSE。
+如果资源有效，则为 TRUE;否则为 FALSE。
 
-## <a name="cd2dgeometrym_pgeometry"></a><a name="m_pgeometry"></a>CD2D 几何：：m_pGeometry
+## <a name="cd2dgeometrym_pgeometry"></a><a name="m_pgeometry"></a> CD2DGeometry：： m_pGeometry
 
-指向 ID2D1 几何体的指针。
+指向 ID2D1Geometry 的指针。
 
 ```
 ID2D1Geometry* m_pGeometry;
 ```
 
-## <a name="cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a>CD2D几何：：操作员 ID2D1 几何*
+## <a name="cd2dgeometryoperator-id2d1geometry"></a><a name="operator_id2d1geometry_star"></a> CD2DGeometry：： operator ID2D1Geometry *
 
-返回 ID2D1 几何接口
+返回 ID2D1Geometry 接口
 
 ```
 operator ID2D1Geometry*();
@@ -445,11 +446,11 @@ operator ID2D1Geometry*();
 
 ### <a name="return-value"></a>返回值
 
-如果对象尚未初始化，则指向 ID2D1 几何接口或 NULL 的指针。
+指向 ID2D1Geometry 接口的指针; 如果对象尚未初始化，则为 NULL。
 
-## <a name="cd2dgeometryoutline"></a><a name="outline"></a>CD2D 几何：大纲
+## <a name="cd2dgeometryoutline"></a><a name="outline"></a> CD2DGeometry：：镂空
 
-计算几何体的轮廓并将结果写入 ID2D1 简化几何结构。
+计算几何图形的轮廓并将结果写入 ID2D1SimplifiedGeometrySink。
 
 ```
 BOOL Outline(
@@ -458,24 +459,24 @@ BOOL Outline(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*世界转型*<br/>
-要应用于几何轮廓的变换。
+*worldTransform*<br/>
+要应用于几何轮廓的转换。
 
-*几何结构*<br/>
-附加几何体变换轮廓的 ID2D1 简化几何图形。
+*geometrySink*<br/>
+几何转换后的轮廓附加到的 ID2D1SimplifiedGeometrySink。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrysimplify"></a><a name="simplify"></a>CD2D 几何：简化
+## <a name="cd2dgeometrysimplify"></a><a name="simplify"></a> CD2DGeometry：：化简
 
-创建仅包含线条和（可选）立方贝塞尔曲线的几何图形的简化版本，并将结果写入 ID2D1 简化几何结构。
+创建仅包含行和 (（可选）) 三次方贝塞尔曲线并将结果写入 ID2D1SimplifiedGeometrySink 的几何图形的简化版本。
 
 ```
 BOOL Simplify(
@@ -485,27 +486,27 @@ BOOL Simplify(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*简化选项*<br/>
-指定简化几何图形是否应包含曲线的值。
+*simplificationOption*<br/>
+一个值，该值指定简化几何是否应包含曲线。
 
-*世界转型*<br/>
-要应用于简化几何体的变换。
+*worldTransform*<br/>
+要应用于简化几何图形的转换。
 
-*几何结构*<br/>
-附加简化几何图形的 ID2D1 简化几何图形。
+*geometrySink*<br/>
+简化几何追加到的 ID2D1SimplifiedGeometrySink。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a>CD2D 几何：：笔画包含点
+## <a name="cd2dgeometrystrokecontainspoint"></a><a name="strokecontainspoint"></a> CD2DGeometry：： StrokeContainsPoint
 
-确定几何体的描边是否包含指定描边厚度、样式和变换的指定点。
+确定几何图形的笔画是否包含给定指定笔画粗细、样式和转换的指定点。
 
 ```
 BOOL StrokeContainsPoint(
@@ -517,31 +518,31 @@ BOOL StrokeContainsPoint(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*点*<br/>
+*情况*<br/>
 要进行包容测试的点。
 
-*笔画宽度*<br/>
-要应用的描边的厚度。
+*strokeWidth*<br/>
+要应用的笔划的粗细。
 
-*笔画样式*<br/>
-要应用的笔画样式。
+*strokeStyle*<br/>
+要应用的笔划的样式。
 
-*世界转型*<br/>
-要应用于描边几何的变换。
+*worldTransform*<br/>
+要应用于描边几何图形的转换。
 
-*包含*<br/>
-当此方法返回时，如果几何体的描边包含指定的点，则包含设置为 TRUE 的布尔值;否则，FALSE。 您必须为此参数分配存储。
+*contains*<br/>
+此方法返回时，如果几何图形的笔划包含指定的点，则包含一个设置为 TRUE 的布尔值;否则为 FALSE。 必须为此参数分配存储空间。
 
-*扁平公差*<br/>
-计算精确几何路径和路径交集的数字精度。 内仍考虑以小于容差的笔画点。 值越小，生成的结果就越准确，但执行速度会变慢。
+*flatteningTolerance*<br/>
+用于计算精确几何路径和路径交集的数值精度。 如果点缺少描边，则仍会将其视为内部点。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrytessellate"></a><a name="tessellate"></a>CD2D 几何：：底纹
+## <a name="cd2dgeometrytessellate"></a><a name="tessellate"></a> CD2DGeometry：：进行分割
 
 在使用指定的矩形转换和使用指定的容差平展几何图形后，创建一组覆盖该几何图形的顺时针方向的三角形。
 
@@ -552,24 +553,24 @@ BOOL Tessellate(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*世界转型*<br/>
-要应用于此几何体或 NULL 的变换。
+*worldTransform*<br/>
+要应用于此几何图形的转换，或为 NULL。
 
-*镶嵌*<br/>
-附加镶嵌的 ID2D1Tesssink。
+*tessellationSink*<br/>
+分割附加到的 ID2D1TessellationSink。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
-## <a name="cd2dgeometrywiden"></a><a name="widen"></a>CD2D 几何：宽宽
+## <a name="cd2dgeometrywiden"></a><a name="widen"></a> CD2DGeometry：：加宽
 
-通过指定的描边加宽几何体，并将结果写入 ID2D1SimplifiedGeometrySink 后，该结果被指定的矩阵转换并使用指定的容差进行拼合。
+在指定的矩阵转换并使用指定的公差平展后，使几何图形按指定的笔划扩大并将结果写入 ID2D1SimplifiedGeometrySink。
 
 ```
 BOOL Widen(
@@ -580,26 +581,26 @@ BOOL Widen(
     FLOAT flatteningTolerance = D2D1_DEFAULT_FLATTENING_TOLERANCE) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*笔画宽度*<br/>
-加宽几何体的数量。
+*strokeWidth*<br/>
+要将几何图形加宽的量。
 
-*笔画样式*<br/>
-要应用于几何体或 NULL 的描边样式。
+*strokeStyle*<br/>
+要应用于几何图形的笔画样式，或为 NULL。
 
-*世界转型*<br/>
-在加宽几何体后应用于几何体的变换。
+*worldTransform*<br/>
+在扩大后要应用于几何图形的转换。
 
-*几何结构*<br/>
-附加加宽几何图形的 ID2D1 简化几何图形。
+*geometrySink*<br/>
+要向其追加加宽的几何图形的 ID2D1SimplifiedGeometrySink。
 
-*扁平公差*<br/>
+*flatteningTolerance*<br/>
 几何图形的多边形近似中两点间距离的上限。 值越小，生成的结果就越准确，但执行速度会变慢。
 
 ### <a name="return-value"></a>返回值
 
-如果该方法成功，它将返回 TRUE。 否则，它将返回 FALSE。
+如果该方法成功，则返回 TRUE。 否则，返回 FALSE。
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： &lt; ostream &gt; 运算符
 title: '&lt;ostream&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
-ms.openlocfilehash: a4dfee6c70f068e5a61294e6b2863a8a12a9c378
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 51422031de786d560b70a8ccaf8a072151630bbe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97193053"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 运算符
 
@@ -76,7 +77,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
     Ty val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Ch*\
 一个字符。
@@ -113,7 +114,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-确定从 str 开始的序列的长度 N = `traits_type::` [length](../standard-library/char-traits-struct.md#length) (`str`) 长度*str*，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 如果 (，则会在序列之前重复 `_Ostr` 。 [flags](../standard-library/ios-base-class.md#flags)  &  标志 `adjustfield`！ = [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 函数返回 *_Ostr*。
+确定从 str 开始的序列的长度 N = `traits_type::` [](../standard-library/char-traits-struct.md#length) (`str`) 长度，并插入序列。 如果 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width)，则该函数还将插入 `_Ostr.width` 的重复项 - N 个填充字符。 如果 (，则会在序列之前重复 `_Ostr` 。 [](../standard-library/ios-base-class.md#flags)  &  标志 `adjustfield`！ = [left](../standard-library/ios-functions.md#left)。 否则，重复项在该序列后。 函数返回 *_Ostr*。
 
 模板函数
 
@@ -144,7 +145,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-除了从*str*开始的序列的每个元素 *_Ch*都转换为类型的对象， `Elem` 方法是调用 `_Ostr.` [put](../standard-library/basic-ostream-class.md#put) (`_Ostr.` [放宽](../standard-library/basic-ios-class.md#widen) (`_Ch`) # A3。
+除了从 *str* 开始的序列的每个元素 *_Ch* 都转换为类型的对象， `Elem` 方法是调用 `_Ostr.` [put](../standard-library/basic-ostream-class.md#put) (`_Ostr.` [放宽](../standard-library/basic-ios-class.md#widen) (`_Ch`) # A3。
 
 模板函数
 
@@ -265,6 +266,6 @@ basic_ostream<_Elem, _Tr>& operator<<(
 
 有关使用 `operator<<` 的示例，请参阅 [flush](../standard-library/ostream-functions.md#flush)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<ostream>](../standard-library/ostream.md)

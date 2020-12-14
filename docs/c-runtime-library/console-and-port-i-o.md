@@ -1,4 +1,5 @@
 ---
+description: 了解更多：控制台和端口 i/o
 title: 控制台和端口 I/O
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 5b4dc2a081ea11bd84d932f55b5b247de81f296a
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 99419db614d4b4493f0fc5de3febb522c8bbb3dd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443443"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97195783"
 ---
 # <a name="console-and-port-io"></a>控制台和端口 I/O
 
@@ -22,7 +23,7 @@ ms.locfileid: "79443443"
 
 ## <a name="console-and-port-io-routines"></a>控制台和端口 I/O 例程
 
-|例程|使用|
+|例程所返回的值|使用|
 |-------------|---------|
 |[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)、[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|从控制台读取字符串|
 |[_cprintf、_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)、[_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|将格式化的数据写入控制台|
@@ -40,7 +41,7 @@ ms.locfileid: "79443443"
 |[_putch、_putwch](../c-runtime-library/reference/putch-putwch.md)|将字符写入控制台|
 |[_ungetch、_ungetwch](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)|“取消获取”从控制台读取的最后一个字符，以便让它成为下一个被读取的字符|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [输入和输出](../c-runtime-library/input-and-output.md)<br/>
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>
