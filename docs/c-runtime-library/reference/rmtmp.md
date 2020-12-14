@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _rmtmp
 title: _rmtmp
 ms.date: 4/2/2020
 api_name:
@@ -31,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: ca5c693a1baed7e5f31219cdbee712b5c77f2a85
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fd87dd407b2e392d197e7eb407bc307b48ea2263
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917640"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250187"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -51,17 +52,17 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>返回值
 
-**_rmtmp**返回已关闭和删除的临时文件的数目。
+**_rmtmp** 返回已关闭和删除的临时文件的数目。
 
 ## <a name="remarks"></a>备注
 
-**_Rmtmp**函数将清除当前目录中的所有临时文件。 函数仅删除由**tmpfile**创建的文件;仅在创建临时文件的相同目录中使用它。
+**_Rmtmp** 函数将清除当前目录中的所有临时文件。 函数仅删除由 **tmpfile** 创建的文件;仅在创建临时文件的相同目录中使用它。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
@@ -75,7 +76,7 @@ int _rmtmp( void );
 
 请参阅 [tmpfile](tmpfile.md) 的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>

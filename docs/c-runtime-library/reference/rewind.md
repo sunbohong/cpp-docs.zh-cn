@@ -1,4 +1,5 @@
 ---
+description: 了解更多：倒带
 title: rewind
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - file pointers [C++], repositioning
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
-ms.openlocfilehash: 645b8bf105641b9f13a9f9fc0605e6b8526b4b56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1b66ee84e562ebbb743413c6f76f67071c754a67
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917759"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250291"
 ---
 # <a name="rewind"></a>rewind
 
@@ -48,30 +49,30 @@ void rewind(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *流*<br/>
-指向**文件**结构的指针。
+指向 **文件** 结构的指针。
 
 ## <a name="remarks"></a>备注
 
-**倒带**函数将与*stream*关联的文件指针重新定位到文件的开头。 对 **rewind** 的调用类似于
+**倒带** 函数将与 *stream* 关联的文件指针重新定位到文件的开头。 对 **rewind** 的调用类似于
 
-**（void） fseek （** _stream_**，0L，SEEK_SET）;**
+**(void) fseek (** _stream_**，0L，SEEK_SET ) ;**
 
-但是，与[fseek](fseek-fseeki64.md)不同，**倒带**会清除流的错误指示符和文件尾指示符。 另外，与[fseek](fseek-fseeki64.md)不同的是，**倒带**不会返回一个值以指示是否已成功移动指针。
+但是，与 [fseek](fseek-fseeki64.md)不同， **倒带** 会清除流的错误指示符和文件尾指示符。 另外，与 [fseek](fseek-fseeki64.md)不同的是， **倒带** 不会返回一个值以指示是否已成功移动指针。
 
-若要清除键盘缓冲区，请在默认情况下，使用与键盘关联的流**stdin**来**倒带**。
+若要清除键盘缓冲区，请在默认情况下，使用与键盘关联的流 **stdin** 来 **倒带**。
 
-如果 stream 为**空**指针，则将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数返回并将**errno**设置为**EINVAL**。
+如果 stream 为 **空** 指针，则将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果允许执行继续，则此函数返回并将 **errno** 设置为 **EINVAL**。
 
 有关这些代码及其他错误代码的信息，请参阅 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**后退**|\<stdio.h>|
 
@@ -114,7 +115,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 The values written are: 1 and -37

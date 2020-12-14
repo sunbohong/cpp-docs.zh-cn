@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：向 MFC 项目添加 ATL 支持
 title: 向 MFC 项目添加 ATL 支持
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 94303d1dfc7c06171def1224982f5e0aa5716ce4
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 1d02bd6e63a01334fcb9a907dc9ea4fe78ff4a48
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924470"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248237"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>向 MFC 项目添加 ATL 支持
 
@@ -25,7 +26,7 @@ ms.locfileid: "92924470"
 
 1. 在解决方案资源管理器中，右键单击项目节点。
 
-1. 在快捷菜单中，依次单击“添加”  和“新项”  。
+1. 在快捷菜单中，依次单击“添加”和“新项”。
 
 1. 选择左窗格中的 " **atl** "，然后在中间窗格中选择 " **atl 支持** "。
 
@@ -37,7 +38,7 @@ ms.locfileid: "92924470"
 
 1. 在解决方案资源管理器中，右键单击项目节点。
 
-1. 在快捷菜单上，单击 " **添加** "，然后单击 " **添加类** "。
+1. 在快捷菜单上，单击 " **添加**"，然后单击 " **添加类**"。
 
 1. 在左窗格中选择 " **atl** "，然后在中间窗格中选择 " **将 atl 支持添加到 MFC 项目** "。
 

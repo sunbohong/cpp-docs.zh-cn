@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3833
 title: 编译器错误 C3833
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: c762ca80dc52398d9f246ada86ab29cb6e902129
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e43ec93c222d3190bacb427cc06c0eae643fcfe1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741542"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249185"
 ---
 # <a name="compiler-error-c3833"></a>编译器错误 C3833
 
 "type"： pointer_type 的目标类型无效
 
-未正确声明[interior_ptr](../../extensions/interior-ptr-cpp-cli.md)或[pin_ptr](../../extensions/pin-ptr-cpp-cli.md) 。
+未正确声明 [interior_ptr](../../extensions/interior-ptr-cpp-cli.md) 或 [pin_ptr](../../extensions/pin-ptr-cpp-cli.md) 。
 
 下面的示例生成 C3833：
 

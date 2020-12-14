@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CDaoRecordset 类
 title: CDaoRecordset 类
 ms.date: 08/27/2018
 f1_keywords:
@@ -166,12 +167,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 4a1026c6b652bc5141855670db3b1ee34e7974b9
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: cc24894c0efc61ae37d57ff3c01ca43e71beddf3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040270"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97248204"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 类
 
@@ -187,13 +188,13 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDaoRecordset：： CDaoRecordset](#cdaorecordset)|构造 `CDaoRecordset` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CDaoRecordset：： AddNew](#addnew)|准备添加新记录。 调用 [Update](#update) 来完成添加。|
 |[CDaoRecordset：： CanAppend](#canappend)|如果可以通过 [AddNew](#addnew) 成员函数将新记录添加到记录集中，则返回非零值。|
@@ -270,7 +271,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>公共数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CDaoRecordset：： m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|包含一个标志，该标志指示是否将字段自动标记为已更改。|
 |[CDaoRecordset：： m_nFields](#m_nfields)|包含记录集类中的字段数据成员数，以及从数据源中记录集选择的列数。|
@@ -490,7 +491,7 @@ BOOL CanUpdate() const;
 
 ### <a name="remarks"></a>备注
 
-如果基础数据源为只读，或者如果在 `dbReadOnly` 为记录集调用[Open](#open)时为*nOptions*指定了，则记录集可能为只读。
+如果基础数据源为只读，或者如果在 `dbReadOnly` 为记录集调用 [Open](#open)时为 *nOptions* 指定了，则记录集可能为只读。
 
 有关相关信息，请参阅 DAO 帮助中的 "AddNew 方法"、"编辑方法"、"删除方法"、"更新方法" 和 "可更新属性" 主题。
 
@@ -502,7 +503,7 @@ BOOL CanUpdate() const;
 CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDatabase*<br/>
 包含指向 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 对象的指针或值 NULL。 如果不为 NULL，并且 `CDaoDatabase` `Open` 尚未调用对象的成员函数以将其连接到数据源，则记录集会在其自身的 [打开](#open) 调用期间尝试打开它。 如果传递 NULL，则将 `CDaoDatabase` 使用指定的数据源信息为你构造并连接一个对象，前提是你从派生记录集类 `CDaoRecordset` 。
@@ -528,7 +529,7 @@ virtual void Close();
 
 由于不 `Close` 会销毁 `CDaoRecordset` 对象，因此可以通过 `Open` 对同一数据源或其他数据源调用来重用该对象。
 
-取消所有挂起的 [AddNew](#addnew) 或 [Edit](#edit) 语句，并回滚所有挂起的事务。 如果要保留挂起的添加或编辑，请在[Update](#update) `Close` 为每个记录集调用之前调用 Update。
+取消所有挂起的 [AddNew](#addnew) 或 [Edit](#edit) 语句，并回滚所有挂起的事务。 如果要保留挂起的添加或编辑，请在[](#update) `Close` 为每个记录集调用之前调用 Update。
 
 可以 `Open` 在调用后再次调用 `Close` 。 这使您可以重复使用 recordset 对象。 如果可能，更好的替代方法是调用 [Requery](#requery)。
 
@@ -565,7 +566,7 @@ virtual void Delete();
 virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFX*<br/>
 包含指向对象的指针 `CDaoFieldExchange` 。 框架将已设置此对象，以指定字段交换操作的上下文。
@@ -632,7 +633,7 @@ void FillCache(
     COleVariant* pBookmark = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pSize*<br/>
 指定要在缓存中填充的行数。 如果省略此参数，则该值由基础 DAO 对象的 CacheSize 属性设置确定。
@@ -664,7 +665,7 @@ virtual BOOL Find(
     LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lFindType*<br/>
 一个值，该值指示所需的查找操作的类型。 可能的值为：
@@ -678,7 +679,7 @@ virtual BOOL Find(
 - AFX_DAO_LAST 查找匹配字符串的最后一个位置。
 
 *lpszFilter*<br/>
-字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词) ** 。 例如：
+字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词)** 。 例如：
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
@@ -705,10 +706,10 @@ virtual BOOL Find(
 BOOL FindFirst(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
-字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词) ** 。
+字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词)** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -759,10 +760,10 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 BOOL FindLast(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
-字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词) ** 。
+字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词)** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -801,10 +802,10 @@ BOOL FindLast(LPCTSTR lpszFilter);
 BOOL FindNext(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
-字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词) ** 。
+字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词)** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -843,10 +844,10 @@ BOOL FindNext(LPCTSTR lpszFilter);
 BOOL FindPrev(LPCTSTR lpszFilter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszFilter*<br/>
-字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词) ** 。
+字符串表达式 (类似于 SQL 语句中的 **where** 子句，不包含用于定位记录 **的单词)** 。
 
 ### <a name="return-value"></a>返回值
 
@@ -1077,7 +1078,7 @@ short GetEditMode();
 
 ### <a name="remarks"></a>备注
 
-|值|说明|
+|值|描述|
 |-----------|-----------------|
 |`dbEditNone`|没有正在进行的编辑操作。|
 |`dbEditInProgress`|已调用 `Edit`。|
@@ -1117,7 +1118,7 @@ void GetFieldInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 记录集的字段集合中预定义字段的从零开始的索引，用于按索引查找。
@@ -1141,7 +1142,7 @@ void GetFieldInfo(
 
 函数的一个版本允许您按索引查找字段。 其他版本允许您按名称查找字段。
 
-有关所返回信息的说明，请参阅 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions*中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取任何以前的级别的信息。
+有关所返回信息的说明，请参阅 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions* 中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取任何以前的级别的信息。
 
 有关相关信息，请参阅 DAO 帮助中的 "属性属性" 主题。
 
@@ -1162,7 +1163,7 @@ virtual COleVariant GetFieldValue(LPCTSTR lpszName);
 virtual COleVariant GetFieldValue(int nIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向包含字段名称的字符串的指针。
@@ -1224,7 +1225,7 @@ void GetIndexInfo(
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 表的索引集合中从零开始的索引，用于按数字位置查找。
@@ -1248,7 +1249,7 @@ void GetIndexInfo(
 
 函数的一个版本可让你按索引在集合中的位置进行查找。 其他版本允许您按名称查找索引。
 
-有关所返回信息的说明，请参阅 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions*中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取任何以前的级别的信息。
+有关所返回信息的说明，请参阅 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 结构。 此结构中有与 *dwInfoOptions* 中的说明中列出的信息项对应的成员。 当你在一个级别请求信息时，还会获取任何以前的级别的信息。
 
 有关相关信息，请参阅 DAO 帮助中的 "属性属性" 主题。
 
@@ -1321,7 +1322,7 @@ virtual COleVariant GetParamValue(int nIndex);
 virtual COleVariant GetParamValue(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 基础 DAOParameter 对象中参数的数字位置。
@@ -1403,7 +1404,7 @@ CString GetSQL() const;
 
 这通常是一个 SQL **SELECT** 语句。
 
-返回的字符串 `GetSQL` 通常不同于你可能已传递给[Open](#open)成员函数的*lpszSQL*参数中的记录集的任何字符串。 这是因为，记录集基于您传递到的内容 `Open` 、使用 ClassWizard 指定的内容以及您在 [m_strFilter](#m_strfilter) 和 [m_strSort](#m_strsort) 数据成员中指定的内容来构造完整的 SQL 语句。
+返回的字符串 `GetSQL` 通常不同于你可能已传递给 [Open](#open)成员函数的 *lpszSQL* 参数中的记录集的任何字符串。 这是因为，记录集基于您传递到的内容 `Open` 、使用 ClassWizard 指定的内容以及您在 [m_strFilter](#m_strfilter) 和 [m_strSort](#m_strsort) 数据成员中指定的内容来构造完整的 SQL 语句。
 
 > [!NOTE]
 > 仅在调用后调用此成员函数 `Open` 。
@@ -1500,7 +1501,7 @@ BOOL IsBOF() const;
 
 |状态|MoveFirst、MoveLast|MovePrev<br /><br /> 移动 < 0|移动0|MoveNext<br /><br /> 移动 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|然后用户才能访问|异常|异常|然后用户才能访问|
+|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|允许|异常|异常|允许|
 |`IsBOF`=0,<br /><br /> `IsEOF`= 非零|允许|允许|异常|异常|
 |均为非零|异常|异常|异常|异常|
 |均为0|允许|允许|允许|允许|
@@ -1509,7 +1510,7 @@ BOOL IsBOF() const;
 
 `IsBOF`下表显示了在和 "设置" 的值上没有找到记录的移动操作的效果 `IsEOF` 。
 
-|Operations|IsBOF|IsEOF|
+|操作|IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|非零|非零|
 |`Move` 0|没有变化|没有变化|
@@ -1573,7 +1574,7 @@ BOOL IsEOF() const;
 
 |状态|MoveFirst、MoveLast|MovePrev<br /><br /> 移动 < 0|移动0|MoveNext<br /><br /> 移动 > 0|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
-|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|然后用户才能访问|异常|异常|然后用户才能访问|
+|`IsBOF`= 非零，<br /><br /> `IsEOF`=0|允许|异常|异常|允许|
 |`IsBOF`=0,<br /><br /> `IsEOF`= 非零|允许|允许|异常|异常|
 |均为非零|异常|异常|异常|异常|
 |均为0|允许|允许|允许|允许|
@@ -1582,7 +1583,7 @@ BOOL IsEOF() const;
 
 `IsBOF`下表显示了在和 "设置" 的值上没有找到记录的移动操作的效果 `IsEOF` 。
 
-|Operations|IsBOF|IsEOF|
+|操作|IsBOF|IsEOF|
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|非零|非零|
 |`Move` 0|没有变化|没有变化|
@@ -1599,7 +1600,7 @@ BOOL IsEOF() const;
 BOOL IsFieldDirty(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段处于脏状态。
@@ -1622,7 +1623,7 @@ BOOL IsFieldDirty(void* pv);
 BOOL IsFieldNull(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段为 Null。
@@ -1651,7 +1652,7 @@ BOOL IsFieldNull(void* pv);
 BOOL IsFieldNullable(void* pv);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 指向要检查其状态的字段数据成员的指针，或为 NULL 以确定是否有任何字段为 Null。
@@ -1709,7 +1710,7 @@ BOOL IsOpen() const;
 
 ### <a name="remarks"></a>备注
 
-如果记录集类有任何参数数据成员，则该类的构造函数必须用正确的数字初始化 *m_nParams* 。 *M_nParams*的值默认为0。 如果你添加参数数据成员（必须手动执行此操作），则还必须在类构造函数中手动添加初始化，以反映 (的参数数目，这些参数至少必须与 *m_strFilter* 或 *m_strSort* 字符串) 中的 "" 占位符的数目相同。
+如果记录集类有任何参数数据成员，则该类的构造函数必须用正确的数字初始化 *m_nParams* 。 *M_nParams* 的值默认为0。 如果你添加参数数据成员（必须手动执行此操作），则还必须在类构造函数中手动添加初始化，以反映 (的参数数目，这些参数至少必须与 *m_strFilter* 或 *m_strSort* 字符串) 中的 "" 占位符的数目相同。
 
 参数化记录集的查询时，框架使用此数字。
 
@@ -1754,7 +1755,7 @@ BOOL IsOpen() const;
 
 ## <a name="cdaorecordsetm_strsort"></a><a name="m_strsort"></a> CDaoRecordset：： m_strSort
 
-包含一个字符串，该字符串包含没有保留字词**ORDERBY**的 SQL 语句的**ORDERBY**子句。
+包含一个字符串，该字符串包含没有保留字词 **ORDERBY** 的 SQL 语句的 **ORDERBY** 子句。
 
 ### <a name="remarks"></a>备注
 
@@ -1774,7 +1775,7 @@ BOOL IsOpen() const;
 virtual void Move(long lRows);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lRows*<br/>
 向前或向后移动的记录数。 正值表示向前移动，直到记录集的末尾。 负值将向后移动。
@@ -1929,12 +1930,12 @@ virtual void Open(
     int nOptions = 0);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nOpenType*<br/>
 以下值之一：
 
-- `dbOpenDynaset` 具有双向滚动的动态集类型记录集。 这是默认设置。
+- `dbOpenDynaset` 具有双向滚动的动态集类型记录集。 这是默认值。
 
 - `dbOpenTable` 带有双向滚动的表类型记录集。
 
@@ -2010,7 +2011,7 @@ virtual void Open(
 |--------------------------------------|----------------------------------------|-------------|
 |Null|返回的字符串 `GetDefaultSQL` 。||
 |一个或多个 tabledefs 和/或 querydef 名称的逗号分隔列表。|中表示的所有列 `DoFieldExchange` 。|`"Customer"`|
-|从表列表**中****选择**列列表|指定的 tabledef 中指定的列 (s) 和/或 querydef (s) 。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
+|从表列表 **中****选择** 列列表|指定的 tabledef 中指定的列 (s) 和/或 querydef (s) 。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
 通常的过程是将 NULL 传递到 `Open` ; 在这种情况下， `Open` 调用 `GetDefaultSQL` ，ClassWizard 在创建派生类时生成的可重写成员函数 `CDaoRecordset` 。 此值提供在 ClassWizard 中指定的 tabledef (s) 和/或 querydef 名称 () 。 您可以改为在 *lpszSQL* 参数中指定其他信息。
 
@@ -2078,7 +2079,7 @@ BOOL Seek(
     WORD nKeys);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszComparison*<br/>
 以下字符串表达式之一： "<"、" \<=", "=", "> =" 或 ">"。
@@ -2111,9 +2112,9 @@ BOOL Seek(
 
 `Seek` 启用对表类型记录集的高性能索引搜索。 在调用之前，必须通过调用来设置当前索引 `SetCurrentIndex` `Seek` 。 如果索引标识不唯一的键字段，则 `Seek` 定位满足条件的第一条记录。 如果未设置索引，则会引发异常。
 
-请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 对象必须显式声明为 ANSI。 为此，可以使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) ** (** *lpszSrc* **，** *vtSrc* **) **构造函数的构造函数，并将*vtSrc*设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数[SetString](../../mfc/reference/colevariant-class.md#setstring) ** (** *lpszSrc* **，** *vtSrc* **) **并将*vtSrc*设置为 `VT_BSTRT` 。
+请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 对象必须显式声明为 ANSI。 为此，可以使用 [COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **，** *vtSrc* **)** 构造函数的构造函数，并将 *vtSrc* 设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数 [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **，** *vtSrc* **)** 并将 *vtSrc* 设置为 `VT_BSTRT` 。
 
-调用时 `Seek` ，传递一个或多个键值和比较运算符， ( "<"、" \<=", "=", "> =" 或 ">" ) 。 `Seek` 搜索指定的键字段并查找满足 *lpszComparison* 和 *pKey1*指定的条件的第一条记录。 找到后，将 `Seek` 返回非零值，并使该记录成为最新记录。 如果 `Seek` 无法找到匹配项，则 `Seek` 返回零，且当前记录未定义。 当直接使用 DAO 时，必须显式检查 NoMatch 属性。
+调用时 `Seek` ，传递一个或多个键值和比较运算符， ( "<"、" \<=", "=", "> =" 或 ">" ) 。 `Seek` 搜索指定的键字段并查找满足 *lpszComparison* 和 *pKey1* 指定的条件的第一条记录。 找到后，将 `Seek` 返回非零值，并使该记录成为最新记录。 如果 `Seek` 无法找到匹配项，则 `Seek` 返回零，且当前记录未定义。 当直接使用 DAO 时，必须显式检查 NoMatch 属性。
 
 如果 `lpszComparison` 为 "="、">=" 或 ">"，则从 `Seek` 索引的开头开始。 如果 *lpszComparison* 为 "<" 或 "<="，则 `Seek` 从索引的末尾开始，直到末尾有重复的索引条目时向后搜索。 在这种情况下， `Seek` 将在索引末尾的重复索引项之间的任意项开始。
 
@@ -2133,7 +2134,7 @@ BOOL Seek(
 void SetAbsolutePosition(long lPosition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lPosition*<br/>
 对应于记录集中当前记录的序号位置。
@@ -2162,7 +2163,7 @@ void SetAbsolutePosition(long lPosition);
 void SetBookmark(COleVariant varBookmark);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varBookmark*<br/>
 一个包含特定记录的书签值的 [COleVariant](../../mfc/reference/colevariant-class.md) 对象。
@@ -2174,7 +2175,7 @@ void SetBookmark(COleVariant varBookmark);
 > [!NOTE]
 > 调用 [Requery](#requery) 会更改 DAO 书签。
 
-请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) ** (** *lpszSrc* **，** *vtSrc* **) **构造函数的构造函数，并将*vtSrc*设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数[SetString](../../mfc/reference/colevariant-class.md#setstring) ** (** *lpszSrc* **，** *vtSrc* **) **并将*vtSrc*设置为 `VT_BSTRT` 。
+请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用 [COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **，** *vtSrc* **)** 构造函数的构造函数，并将 *vtSrc* 设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数 [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **，** *vtSrc* **)** 并将 *vtSrc* 设置为 `VT_BSTRT` 。
 
 有关相关信息，请参阅 DAO 帮助中的主题 "Bookmark 属性" 和 Bookmarkable 属性 "。
 
@@ -2186,7 +2187,7 @@ void SetBookmark(COleVariant varBookmark);
 void SetCacheSize(long lSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lSize*<br/>
 指定记录数。 典型值为100。 设置为0将禁用缓存。 此设置必须介于5到1200条记录之间。 缓存可能会占用大量内存。
@@ -2207,7 +2208,7 @@ void SetCacheSize(long lSize);
 void SetCacheStart(COleVariant varBookmark);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *varBookmark*<br/>
 一个 [COleVariant](../../mfc/reference/colevariant-class.md) ，指定要缓存的记录集中的第一条记录的书签。
@@ -2222,7 +2223,7 @@ Microsoft Jet 数据库引擎在缓存范围内请求缓存中的记录，并从
 
 若要强制执行所有缓存数据的更新，请将的 *lSize* 参数传递 `SetCacheSize` 为0， `SetCacheSize` 并使用最初请求的缓存大小再次调用，然后调用 `FillCache` 成员函数。
 
-请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) ** (** *lpszSrc* **，** *vtSrc* **) **构造函数的构造函数，并将*vtSrc*设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数[SetString](../../mfc/reference/colevariant-class.md#setstring) ** (** *lpszSrc* **，** *vtSrc* **) **并将*vtSrc*设置为 `VT_BSTRT` 。
+请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用 [COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **，** *vtSrc* **)** 构造函数的构造函数，并将 *vtSrc* 设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数 [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **，** *vtSrc* **)** 并将 *vtSrc* 设置为 `VT_BSTRT` 。
 
 相关信息，请参阅 DAO 帮助中的主题 CacheSize，CacheStart Properties。
 
@@ -2234,7 +2235,7 @@ Microsoft Jet 数据库引擎在缓存范围内请求缓存中的记录，并从
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszIndex*<br/>
 一个指针，它包含要设置的索引的名称。
@@ -2245,7 +2246,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
 
 您可以通过调用 [CDaoTableDef：： CreateIndex](../../mfc/reference/cdaotabledef-class.md#createindex) 并将新索引追加到基础 Tabledef 的索引 [集合，然后](../../mfc/reference/cdaotabledef-class.md#append)重新打开记录集，为该表创建新索引。
 
-从表类型记录集返回的记录只能由为基础 tabledef 定义的索引进行排序。 若要按其他顺序对记录进行排序，可以使用存储在[CDaoRecordset：： m_strSort](#m_strsort)中的 SQL **ORDERBY**子句打开动态集类型或快照类型的记录集。
+从表类型记录集返回的记录只能由为基础 tabledef 定义的索引进行排序。 若要按其他顺序对记录进行排序，可以使用存储在 [CDaoRecordset：： m_strSort](#m_strsort)中的 SQL **ORDERBY** 子句打开动态集类型或快照类型的记录集。
 
 有关相关信息，请参阅 DAO 帮助中的主题 "索引对象" 和定义 "当前索引"。
 
@@ -2259,7 +2260,7 @@ void SetFieldDirty(
     BOOL bDirty = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 包含记录集的字段数据成员的地址，或为 NULL。 如果为 NULL，则对记录集中的所有字段数据成员进行标记。  (c + + NULL 与数据库术语中的 Null 不相同，这意味着 "无值"。) 
@@ -2302,7 +2303,7 @@ void SetFieldNull(
     BOOL bNull = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *函数*<br/>
 包含记录集的字段数据成员的地址，或为 NULL。 如果为 NULL，则对记录集中的所有字段数据成员进行标记。  (c + + NULL 与数据库术语中的 Null 不相同，这意味着 "无值"。) 
@@ -2353,7 +2354,7 @@ void SetFieldValue(
     LPCTSTR lpszValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszName*<br/>
 指向包含字段名称的字符串的指针。
@@ -2371,7 +2372,7 @@ void SetFieldValue(
 
 使用 `SetFieldValue` 和 [GetFieldValue](#getfieldvalue) 在运行时动态绑定字段，而不是使用 [DoFieldExchange](#dofieldexchange) 机制静态绑定列。
 
-请注意，如果不创建 UNICODE 记录集，则必须使用 `SetFieldValue` 不包含参数的形式 `COleVariant` ，或者 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) ** (** *lpszSrc* **，** *vtSrc* **) **构造函数的构造函数，并将*vtSrc*设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数[SetString](../../mfc/reference/colevariant-class.md#setstring) ** (** *lpszSrc* **，** *vtSrc* **) **并将*vtSrc*设置为 `VT_BSTRT` 。
+请注意，如果不创建 UNICODE 记录集，则必须使用 `SetFieldValue` 不包含参数的形式 `COleVariant` ，或者 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用 [COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **，** *vtSrc* **)** 构造函数的构造函数，并将 *vtSrc* 设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数 [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **，** *vtSrc* **)** 并将 *vtSrc* 设置为 `VT_BSTRT` 。
 
 有关相关信息，请参阅 DAO 帮助中的主题 "字段对象" 和 "值属性"。
 
@@ -2384,7 +2385,7 @@ void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 记录集中的字段索引，用于按从零开始的索引查找。
@@ -2406,7 +2407,7 @@ C + + NULL 与 Null 不同，后者在数据库术语中意味着 "无值"。
 void SetLockingMode(BOOL bPessimistic);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bPessimistic*<br/>
 指示锁定类型的标志。
@@ -2437,7 +2438,7 @@ virtual void SetParamValue(
     const COleVariant& varValue);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 Querydef 的参数集合中的参数的数字位置。
@@ -2452,7 +2453,7 @@ Querydef 的参数集合中的参数的数字位置。
 
 该参数必须已作为记录集的 SQL 字符串的一部分已建立。 可以通过名称或其在集合中的索引位置访问参数。
 
-指定要设置为对象的值 `COleVariant` 。 有关在对象中设置所需值和类型的信息 `COleVariant` ，请参阅类 [COleVariant](../../mfc/reference/colevariant-class.md)。 请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用[COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) ** (** *lpszSrc* **，** *vtSrc* **) **构造函数的构造函数，并将*vtSrc*设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数[SetString](../../mfc/reference/colevariant-class.md#setstring) ** (** *lpszSrc* **，** *vtSrc* **) **并将*vtSrc*设置为 `VT_BSTRT` 。
+指定要设置为对象的值 `COleVariant` 。 有关在对象中设置所需值和类型的信息 `COleVariant` ，请参阅类 [COleVariant](../../mfc/reference/colevariant-class.md)。 请注意，如果不创建 UNICODE 记录集，则 `COleVariant` 必须将该对象显式声明为 ANSI。 为此，可以使用 [COleVariant：： COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **，** *vtSrc* **)** 构造函数的构造函数，并将 *vtSrc* 设置为 `VT_BSTRT` (ANSI) 或使用 `COleVariant` 函数 [SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **，** *vtSrc* **)** 并将 *vtSrc* 设置为 `VT_BSTRT` 。
 
 ## <a name="cdaorecordsetsetparamvaluenull"></a><a name="setparamvaluenull"></a> CDaoRecordset：： SetParamValueNull
 
@@ -2463,7 +2464,7 @@ void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIndex*<br/>
 记录集中的字段索引，用于按从零开始的索引查找。
@@ -2483,7 +2484,7 @@ C + + NULL 与 Null 不同，后者在数据库术语中意味着 "无值"。
 void SetPercentPosition(float fPosition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fPosition*<br/>
 一个介于 0 和 100 之间的数字。
@@ -2525,7 +2526,7 @@ virtual void Update();
 
 有关相关信息，请参阅 DAO 帮助中的 "AddNew 方法"、"CancelUpdate 方法"、"删除方法"、"LastModified 属性"、"更新方法" 和 "EditMode 属性" 主题。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CObject 类](../../mfc/reference/cobject-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

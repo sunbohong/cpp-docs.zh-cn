@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：并发：:d irect3d 命名空间
 title: Concurrency::direct3d 命名空间
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: e1374acbd7061afaba372100cf6e69d9d717da8a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 9fb0e7d4f5abbccbd9cd931fe2c4520e9410cbc9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247730"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空间
 
-`direct3d` 命名空间提供支持 D3D 互操作性的函数。 它允许你使用 D3D 资源进行 AMP 代码计算。 它还允许使用 D3D 代码中创建的资源，而无需创建冗余的中间副本。 你可以使用C++ amp 增量加速 DirectX 应用程序的计算密集型部分，并在从 AMP 计算生成的数据上使用 D3D API。
+`direct3d`命名空间提供支持 D3D 互操作性的函数。 它允许你使用 D3D 资源进行 AMP 代码计算。 它还允许使用 D3D 代码中创建的资源，而无需创建冗余的中间副本。 你可以使用 C++ AMP 增量加速 DirectX 应用程序的计算密集型部分，并在从 AMP 计算生成的数据上使用 D3D API。
 
 ## <a name="syntax"></a>语法
 
@@ -27,23 +28,23 @@ ms.locfileid: "77127028"
 namespace direct3d;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="classes"></a>类
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
-|[scoped_d3d_access_lock 类](scoped-d3d-access-lock-class.md)|`accelerator_view` 对象上的 D3D 访问锁的 RAII 包装器。|
+|[scoped_d3d_access_lock 类](scoped-d3d-access-lock-class.md)|对象上的 D3D 访问锁的 RAII 包装器 `accelerator_view` 。|
 
-### <a name="structures"></a>结构
+### <a name="structures"></a>結構
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[adopt_d3d_access_lock_t 结构](adopt-d3d-access-lock-t-structure.md)|标记类型表示应采用 D3D 访问锁定，而不是获得。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|返回参数的绝对值。|
 |[固定](concurrency-direct3d-namespace-functions-amp.md#clamp)|已重载。 夹紧 _X 指定的 _Min 和 _Max 范围|
@@ -55,7 +56,7 @@ namespace direct3d;
 |[firstbithigh](concurrency-direct3d-namespace-functions-amp.md#firstbithigh)|获取 _X 中第一组位的位置，从最高序位开始，到下工作|
 |[firstbitlow](concurrency-direct3d-namespace-functions-amp.md#firstbitlow)|获取 _X 中第一组位的位置，从最低顺序位开始，然后向上工作|
 |[get_buffer](concurrency-direct3d-namespace-functions-amp.md#get_buffer)|获取数组基础的 D3D 缓冲区接口。|
-|[imax](concurrency-direct3d-namespace-functions-amp.md#imax)|比较两个值，并返回大于的值。|
+|[IMAX 巨幕](concurrency-direct3d-namespace-functions-amp.md#imax)|比较两个值，并返回大于的值。|
 |[imin](concurrency-direct3d-namespace-functions-amp.md#imin)|比较两个值，并返回较小的值。|
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|返回一个布尔标志，指示是否为指定的 accelerator_view 禁用超时。|
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|已重载。 对三个参数执行算术乘法/add 运算： _X \* _Y + _Z|
@@ -77,6 +78,6 @@ namespace direct3d;
 
 **命名空间：** 并发
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[并发命名空间 (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

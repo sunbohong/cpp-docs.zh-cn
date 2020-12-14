@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_trivial 类
 title: is_trivial 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivial
 ms.assetid: 6beb11d4-2f38-4c7e-9959-ca5d26250df7
-ms.openlocfilehash: 1d218848fd65ca68022e3e66df02201582626711
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 56e5a3c915893b88228f4a40307d2c1e3c32555d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97247652"
 ---
-# <a name="istrivial-class"></a>is_trivial 类
+# <a name="is_trivial-class"></a>is_trivial 类
 
 测试类型是否为通常类型。
 
@@ -24,20 +25,20 @@ template <class T>
 struct is_trivial;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型*T*是普通类型, 则类型谓词的实例为 true; 否则为 false。 常用类型是标量类型、完全可复制类类型、这些类型的数组以及这些类型的 cv 限定版本。
+如果类型 *T* 是普通类型，则类型谓词的实例为 true; 否则为 false。 常用类型是标量类型、完全可复制类类型、这些类型的数组以及这些类型的 cv 限定版本。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

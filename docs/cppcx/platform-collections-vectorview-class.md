@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：：集合：： VectorView 类
 title: Platform::Collections::VectorView 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -12,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 207f5d517eaae475af1c65a284a3d1ebe50621af
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f0d1244ed5331fa9732bdfef1f1b7e2133f99442
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218385"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250031"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 类
 
@@ -30,12 +31,12 @@ template <typename T, typename E>
    ref class VectorView sealed;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 `VectorView` 对象中包含的元素的类型。
 
-*电邮*<br/>
+*E*<br/>
 使用 `T`类型的值指定测试相等性的二进制谓词。 默认值为 `std::equal_to<T>`。
 
 ### <a name="remarks"></a>备注
@@ -46,7 +47,7 @@ template <typename T, typename E>
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[VectorView：： VectorView](#ctor)|初始化 VectorView 类的新实例。|
 
@@ -70,7 +71,7 @@ template <typename T, typename E>
 
 **命名空间：** Platform::Collections
 
-## <a name="vectorviewfirst-method"></a><a name="first"></a>VectorView：： First 方法
+## <a name="vectorviewfirst-method"></a><a name="first"></a> VectorView：： First 方法
 
 返回指定 VectorView 中的第一个元素的迭代器。
 
@@ -88,9 +89,9 @@ virtual Windows::Foundation::Collections::IIterator<T>^
 
 ### <a name="remarks"></a>备注
 
-保存第一个（）返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myVectorView->First();`。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如 `auto x = myVectorView->First();`。
 
-## <a name="vectorviewgetat-method"></a><a name="getat"></a>VectorView：： GetAt 方法
+## <a name="vectorviewgetat-method"></a><a name="getat"></a> VectorView：： GetAt 方法
 
 检索由指定的索引表示的当前 VectorView 的元素。
 
@@ -110,9 +111,9 @@ T GetAt(
 
 ### <a name="return-value"></a>返回值
 
-`index` 参数指定的元素。 元素类型由 VectorView 模板参数*T*指定。
+`index` 参数指定的元素。 元素类型由 VectorView 模板参数 *T* 指定。
 
-## <a name="vectorviewgetmany-method"></a><a name="getmany"></a>VectorView：： GetMany 方法
+## <a name="vectorviewgetmany-method"></a><a name="getmany"></a> VectorView：： GetMany 方法
 
 从当前 VectorView 检索项序列，从指定索引处开始。
 
@@ -126,7 +127,7 @@ virtual unsigned int GetMany(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *startIndex*<br/>
 要检索的项开头从零开始的索引。
@@ -138,7 +139,7 @@ virtual unsigned int GetMany(
 
 已检索的项的数量。
 
-## <a name="vectorviewindexof-method"></a><a name="indexof"></a>VectorView：： IndexOf 方法
+## <a name="vectorviewindexof-method"></a><a name="indexof"></a> VectorView：： IndexOf 方法
 
 在当前 VectorView 中搜索指定项，如果找到，则返回该项的索引。
 
@@ -157,16 +158,16 @@ virtual bool IndexOf(
 *value*<br/>
 要查找的项。
 
-*index*<br/>
+*索引*<br/>
 如果找到参数 `value`，则为该项的从零开始的索引；否则，为 0。
 
-如果*index*项是的第一个元素 `VectorView` 或未找到该项，则索引参数为0。 如果返回值为 **`true`** ，则发现该项并且它是第一个元素; 否则找不到该项。
+如果项是的第一个元素 `VectorView` 或未找到该项，则索引参数为0。 如果返回值为 **`true`** ，则发现该项并且它是第一个元素; 否则找不到该项。
 
 ### <a name="return-value"></a>返回值
 
 **`true`** 如果找到指定的项，则为;否则为 **`false`** 。
 
-## <a name="vectorviewsize-method"></a><a name="size"></a>VectorView：： Size 方法
+## <a name="vectorviewsize-method"></a><a name="size"></a> VectorView：： Size 方法
 
 返回当前 VectorView 对象中的元素数目。
 
@@ -181,7 +182,7 @@ virtual property unsigned int Size;
 
 当前 VectorView 中的元素数目。
 
-## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a>VectorView：： VectorView 构造函数
+## <a name="vectorviewvectorview-constructor"></a><a name="ctor"></a> VectorView：： VectorView 构造函数
 
 初始化 VectorView 类的新实例。
 
@@ -239,7 +240,7 @@ VectorView(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *InIt*<br/>
 用于初始化当前 VectorView 的对象集合的类型。
@@ -247,7 +248,7 @@ VectorView(
 *il*<br/>
 [Std：： initializer_list](../standard-library/initializer-list-class.md) ，其元素将用于初始化 VectorView。
 
-N**<br/>
+N<br/>
 用于初始化当前 VectorView 的对象集合中元素的数量。
 
 *大小*<br/>
@@ -256,25 +257,25 @@ VectorView 中元素的数量。
 *value*<br/>
 用于初始化当前 VectorView 中每个元素的值。
 
-*向量*<br/>
+*v*<br/>
 用于初始化当前 VectorView 的[std：： vector](../standard-library/vector-class.md)的[左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 *ptr*<br/>
 指向用于初始化当前 VectorView 的 `std::vector` 的指针。
 
 *arr*<br/>
-用于初始化当前 VectorView 的[Platform：： Array](../cppcx/platform-array-class.md)对象。
+用于初始化当前 VectorView 的 [Platform：： Array](../cppcx/platform-array-class.md) 对象。
 
 *的*<br/>
-用于初始化当前 VectorView 的[std：： array](../standard-library/array-class-stl.md)对象。
+用于初始化当前 VectorView 的 [std：： array](../standard-library/array-class-stl.md) 对象。
 
 *first*<br/>
-用于初始化当前 VectorView 的对象序列中的第一个元素。 的类型 `first` 是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+用于初始化当前 VectorView 的对象序列中的第一个元素。 的类型 `first` 是通过 *完美转发* 传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 *last*<br/>
-用于初始化当前 VectorView 的对象序列中的最后一个元素。 的类型 `last` 是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+用于初始化当前 VectorView 的对象序列中的最后一个元素。 的类型 `last` 是通过 *完美转发* 传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)<br/>
 [用 C++ 创建 Windows 运行时组件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

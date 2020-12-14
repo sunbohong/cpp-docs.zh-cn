@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3828
 title: 编译器错误 C3828
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: 4b47ddbf0775cab2bd7214f68d1b4ed6e06e6eea
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 90c731ffc636355b5c9a1963facbcccabf356700
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74741698"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249316"
 ---
 # <a name="compiler-error-c3828"></a>编译器错误 C3828
 
 "object type"：在创建托管或 WinRTclasses 的实例时不允许使用位置参数
 
-创建托管类型或 Windows 运行时类型的对象时，不能使用运算符[ref new、gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)或[new](../../cpp/new-operator-cpp.md)的放置形式。
+创建托管类型或 Windows 运行时类型的对象时，不能使用运算符 [ref new、gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) 或 [new](../../cpp/new-operator-cpp.md)的放置形式。
 
 下列示例生成 C3828 并演示如何修复此错误：
 

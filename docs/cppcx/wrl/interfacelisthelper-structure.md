@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： InterfaceListHelper 结构
 title: InterfaceListHelper 结构
 ms.date: 10/03/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-ms.openlocfilehash: 1a7b4c19bbcdd4161e9078274f18f96a48f9e7d7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ca9e13e66acb6f27fba76a7653388305c57146dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213845"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97249797"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 结构
 
@@ -44,10 +45,10 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 *T0*<br/>
 模板参数0，这是必需的。
 
-T1<br/>
+*T1*<br/>
 模板参数1，默认情况下未指定。
 
-T2<br/>
+*T2*<br/>
 模板参数2，默认情况下未指定。第三个模板参数。
 
 *T3*<br/>
@@ -73,15 +74,15 @@ T2<br/>
 
 ## <a name="remarks"></a>备注
 
-通过递归应用指定的模板参数自变量来生成 `InterfaceList` 类型。
+`InterfaceList`通过递归应用指定的模板参数参数生成类型。
 
-**InterfaceListHelper**模板使用模板参数*T0*来定义 `InterfaceList` 结构中的第一个数据成员，然后以递归方式将**InterfaceListHelper**模板应用到任何剩余的模板参数。 当没有剩余的模板参数时， **InterfaceListHelper**将停止。
+**InterfaceListHelper** 模板使用模板参数 *T0* 来定义结构中的第一个数据成员 `InterfaceList` ，然后以递归方式将 **InterfaceListHelper** 模板应用到任何剩余的模板参数。 当没有剩余的模板参数时， **InterfaceListHelper** 将停止。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`TypeT`|InterfaceList 类型的同义词。|
 
@@ -95,6 +96,6 @@ T2<br/>
 
 **命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Microsoft::WRL::Details 命名空间](microsoft-wrl-details-namespace.md)
+[Microsoft：： WRL：:D etails 命名空间](microsoft-wrl-details-namespace.md)

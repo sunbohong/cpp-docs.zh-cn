@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：指向成员的指针
 title: 指向成员的指针
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,18 +9,18 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: fe92f848c5d5240f1afc657f5fb176513c8f9d88
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e9c40ac8903aa61a808468ca18fa379c84f2fb81
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213289"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250109"
 ---
 # <a name="pointers-to-members"></a>指向成员的指针
 
 指向成员的指针的声明是指针声明的特例。  它们使用以下顺序进行声明：
 
-> *存储类说明符*<sub>可选</sub> *cv 限定符*<sub>opt</sub> *类型说明符**可选的*<sub>opt</sub> *名称* **`::*`** *cv 限定符*<sub>opt</sub> opt*标识符* *，初始值设定项*<sub>opt</sub>**`;`**
+> *存储类说明符*<sub>可选</sub> *cv 限定符*<sub>opt</sub> *类型说明符**可选的*<sub></sub> *名称* **`::*`** *cv 限定符*<sub></sub> opt *标识符* *，初始值设定项*<sub>opt</sub>**`;`**
 
 1. 声明说明符：
 
@@ -31,7 +32,7 @@ ms.locfileid: "87213289"
 
 1. 声明符：
 
-   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅[Microsoft 特定的修饰符](../cpp/microsoft-specific-modifiers.md)。
+   - 可选的 Microsoft 专用修饰符。 有关详细信息，请参阅 [Microsoft 特定的修饰符](../cpp/microsoft-specific-modifiers.md)。
 
    - 包含要指向的成员的类的限定名。
 
@@ -102,7 +103,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 // pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-**`.*`** 和 **`->*`** 运算符（指向成员的指针运算符）之间的差异在于 **`.*`** ，运算符选择给定对象或对象引用的成员，而 **`->*`** 运算符通过指针选择成员。 有关这些运算符的详细信息，请参阅[具有指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。
+**`.*`** 和 **`->*`** 运算符 (指向成员的指针运算符) 的差异在于 **`.*`** ，运算符选择给定对象或对象引用的成员，而 **`->*`** 运算符则通过指针选择成员。 有关这些运算符的详细信息，请参阅 [具有指向成员的指针运算符的表达式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。
 
 指向成员的指针运算符的结果是成员的类型。 在本例中，该值为 `char *`。
 
@@ -125,13 +126,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>针对指向成员的指针的限制
 
-静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 给定类的所有对象只存在一个静态成员实例。 这意味着，可以使用普通的（ **&** ）地址和取消引用（ <strong>\*</strong> ）运算符。
+静态成员的地址不是指向成员的指针。 它是指向静态成员的一个实例的常规指针。 给定类的所有对象只存在一个静态成员实例。 这意味着，可以使用普通的 (地址 **&**) 和取消引用 (<strong>\*</strong>) 运算符。
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>指向成员和虚函数的指针
 
 通过指向成员函数的指针调用虚函数的工作方式与直接调用函数相同。 在 v 表中查找并调用了正确的函数。
 
-一直以来，虚函数工作的关键是通过指向基类的指针来调用它们。 （有关虚函数的详细信息，请参阅[虚函数](../cpp/virtual-functions.md)。）
+一直以来，虚函数工作的关键是通过指向基类的指针来调用它们。  (有关虚函数的详细信息，请参阅 [虚函数](../cpp/virtual-functions.md)。 ) 
 
 以下代码演示如何通过指向成员函数的指针调用虚函数：
 

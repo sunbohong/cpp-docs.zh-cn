@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： FtmBase 类
 title: FtmBase 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::ReleaseMarshalData method
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
-ms.openlocfilehash: b28b7ee0038e4f828f43fcc3f0d49a2d9e092315
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: dc7ae3768233dd51d34b48da8c12a2d4b6bed773
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844036"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97250083"
 ---
 # <a name="ftmbase-class"></a>FtmBase 类
 
@@ -54,13 +55,13 @@ class FtmBase :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-| “属性”                         | 说明                                        |
+| “属性”                         | 描述                                        |
 | ---------------------------- | -------------------------------------------------- |
 | [FtmBase：： FtmBase](#ftmbase) | 初始化 `FtmBase` 类的新实例。 |
 
 ### <a name="public-methods"></a>公共方法
 
-| “属性”                                                               | 说明                                                                                                                                                          |
+| “属性”                                                               | 描述                                                                                                                                                          |
 | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [FtmBase：： CreateGlobalInterfaceTable](#createglobalinterfacetable) |  (GIT) 创建全局接口表。                                                                                                                              |
 | [FtmBase：:D isconnectObject](#disconnectobject)                     | 强制释放到对象的所有外部连接。 对象的服务器在关闭之前调用此方法的对象实现。                |
@@ -72,7 +73,7 @@ class FtmBase :
 
 ### <a name="public-data-members"></a>公共数据成员
 
-| 名称                                | 说明                                       |
+| 名称                                | 描述                                       |
 | ----------------------------------- | ------------------------------------------------- |
 | [FtmBase：： marshaller_](#marshaller) | 保留对自由线程封送拆收器的引用。 |
 
@@ -96,7 +97,7 @@ static HRESULT CreateGlobalInterfaceTable(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *git*<br/>
 此操作完成后，指向全局接口表的指针。
@@ -105,7 +106,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 如果成功，则为 S_OK；否则为指示错误的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关详细信息，请参阅 [`IGlobalInterfaceTable`](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable)。
 
@@ -119,7 +120,7 @@ STDMETHODIMP DisconnectObject(
 ) override;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwReserved*<br/>
 留待将来使用；必须为零。
@@ -151,7 +152,7 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *riid*<br/>
 对要封送处理的接口的标识符的引用。
@@ -194,7 +195,7 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *riid*<br/>
 对要封送处理的接口的标识符的引用。
@@ -236,7 +237,7 @@ STDMETHODIMP MarshalInterface(
 ) override;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStm*<br/>
 一个指针，指向要在封送处理期间使用的流。
@@ -288,7 +289,7 @@ STDMETHODIMP ReleaseMarshalData(
 ) override;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStm*<br/>
 指向包含要销毁的数据包的流的指针。
@@ -309,7 +310,7 @@ STDMETHODIMP UnmarshalInterface(
 ) override;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pStm*<br/>
 指向要从中取消封送接口指针的流的指针。
@@ -318,7 +319,7 @@ STDMETHODIMP UnmarshalInterface(
 引用要取消封送的接口的标识符。
 
 *ppv*<br/>
-此操作完成后，将接收在 *riid*中请求的接口指针的指针变量的地址。 如果此操作成功，则 **ppv* 包含要取消封送的接口所请求的接口指针。
+此操作完成后，将接收在 *riid* 中请求的接口指针的指针变量的地址。 如果此操作成功，则 **ppv* 包含要取消封送的接口所请求的接口指针。
 
 ### <a name="return-value"></a>返回值
 
