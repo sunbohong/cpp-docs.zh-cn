@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：：集合：： Vector 类
 title: Platform::Collections::Vector 类
 ms.date: 12/04/2019
 ms.topic: reference
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: dc467b8db3cd6ec88395554eef7f109877f10d41
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b13221c6280e0e94572cb4b6710bb59fbd7db4c1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839083"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221184"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 类
 
@@ -39,15 +40,15 @@ template <typename T, typename E>
    ref class Vector sealed;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 向量对象中包含的元素的类型。
 
-*电邮*<br/>
-指定一个二元谓词，用于测试与类型 *T*的值的相等性。默认值为 `std::equal_to<T>` 。
+*E*<br/>
+指定一个二元谓词，用于测试与类型 *T* 的值的相等性。默认值为 `std::equal_to<T>` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 允许的类型是：
 
@@ -61,7 +62,7 @@ template <typename T, typename E>
 
 1. 公共枚举类
 
-**Vector**类是[Windows：： Foundation：：集合：： IVector](/uwp/api/windows.foundation.collections.ivector-1)接口的 c + + 具体实现。
+**Vector** 类是 [Windows：： Foundation：：集合：： IVector](/uwp/api/windows.foundation.collections.ivector-1)接口的 c + + 具体实现。
 
 如果尝试在公共返回值或参数中使用 **Vector** 类型，则会引发编译器错误 C3986。 通过将参数或返回值的类型更改为 [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1)可修复该错误。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
@@ -69,13 +70,13 @@ template <typename T, typename E>
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[Vector：： Vector](#ctor)|初始化 Vector 类的新实例。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[Vector::Append](#append)|在当前向量中的最后一项后插入指定项。|
 |[Vector：： Clear](#clear)|删除当前向量中的所有元素。|
@@ -93,7 +94,7 @@ template <typename T, typename E>
 
 ### <a name="events"></a>事件
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | 事件 [Windows：： Foundation：： Collection：： VectorChangedEventHandler \<T> ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1) | 当向量更改时发生。 |
 
@@ -120,7 +121,7 @@ virtual void Append(T item);
 ### <a name="parameters"></a>参数
 
 *index*<br/>
-要插入到向量中的项。 *项*的类型由*T*类型名称定义。
+要插入到向量中的项。 *项* 的类型由 *T* 类型名称定义。
 
 ## <a name="vectorclear-method"></a><a name="clear"></a> Vector：： Clear 方法
 
@@ -146,9 +147,9 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 指向该向量中第一个元素的迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myVector->First();` 。 此迭代器知道该集合的长度。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如 `auto x = myVector->First();`。 此迭代器知道该集合的长度。
 
 如果需要将一对迭代器传递到 STL 函数，请使用 free 函数 [Windows：： foundation：：集合：： begin](../cppcx/begin-function.md) 和 [Windows：： Foundation：：集合：： end](../cppcx/end-function.md)
 
@@ -183,7 +184,7 @@ virtual unsigned int GetMany(
     Platform::WriteOnlyArray<T>^ dest);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *startIndex*<br/>
 要检索的项开头从零开始的索引。
@@ -195,7 +196,7 @@ virtual unsigned int GetMany(
 
 已检索的项的数量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数并非旨在由客户端代码直接使用。 它用于在 [To_vector 函数](../cppcx/to-vector-function.md) 内部使用，以启用 Platform：： vector 实例所在到 std：： vector 实例的有效转换。
 
@@ -228,7 +229,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 *value*<br/>
 要查找的项。
 
-*index*<br/>
+*索引*<br/>
 如果找到参数 *值* ，则为该项的从零开始的索引;否则为0。
 
 如果项是向量的第一个元素或未找到该项，则 *索引* 参数为0。 如果返回值为 **`true`** ，则发现该项并且它是第一个元素; 否则找不到该项。
@@ -237,7 +238,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 **`true`** 如果找到指定的项，则为;否则为 **`false`** 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 IndexOf 使用 std::find_if 查找该项目。 因此，自定义元素类型应该重载 == 和 != 运算符以支持 find_if 所需的相等性比较。
 
@@ -257,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
 *item*<br/>
-要插入到 Vector 中由 *index*指定的元素的项。 *项*的类型由*T*类型名称定义。
+要插入到 Vector 中由 *index* 指定的元素的项。 *项* 的类型由 *T* 类型名称定义。
 
 ## <a name="vectorremoveat-method"></a><a name="removeat"></a> Vector：： RemoveAt 方法
 
@@ -294,7 +295,7 @@ virtual void RemoveAtEnd();
 virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *arr*<br/>
 对象的数组，其类型由 *T* 类型名称定义。
@@ -315,7 +316,7 @@ virtual void SetAt(unsigned int index, T item);
 从零开始的无符号整数，用于指定 Vector 对象中的特定元素。
 
 *item*<br/>
-要分配给指定元素的值。 *项*的类型由*T*类型名称定义。
+要分配给指定元素的值。 *项* 的类型由 *T* 类型名称定义。
 
 ## <a name="vectorsize-method"></a><a name="size"></a> Vector：： Size 方法
 
@@ -354,7 +355,7 @@ template <typename InIt> Vector(InIt first, InIt last);
 Vector(std::initializer_list<T> il);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *的*<br/>
 将用于初始化向量的 [std：： array](../standard-library/array-class-stl.md) 。
@@ -366,9 +367,9 @@ Vector(std::initializer_list<T> il);
 用于初始化当前向量的对象集合的类型。
 
 *il*<br/>
-将用于初始化向量的类型为*T*的对象的[std：： initializer_list](../standard-library/initializer-list-class.md) 。
+将用于初始化向量的类型为 *T* 的对象的 [std：： initializer_list](../standard-library/initializer-list-class.md) 。
 
-N**<br/>
+N<br/>
 用于初始化当前向量的对象集合中的元素数。
 
 *大小*<br/>
@@ -377,19 +378,19 @@ N**<br/>
 *value*<br/>
 用于初始化当前向量中每个元素的值。
 
-*向量*<br/>
+*v*<br/>
 [左值和右](../cpp/lvalues-and-rvalues-visual-cpp.md)到用于初始化当前向量的[std：： vector](../standard-library/vector-class.md) 。
 
 *ptr*<br/>
 指向用于初始化当前向量的 `std::vector` 的指针。
 
 *first*<br/>
-用于初始化当前向量的对象序列中的第一个元素。 *第一*种类型是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+用于初始化当前向量的对象序列中的第一个元素。 *第一* 种类型是通过 *完美转发* 传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 *last*<br/>
-用于初始化当前向量的对象序列中的最后一个元素。 *最后一*种方法是通过*完美转发*传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+用于初始化当前向量的对象序列中的最后一个元素。 *最后一* 种方法是通过 *完美转发* 传递的。 有关详细信息，请参阅[右值引用声明符：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [集合 (C++/CX)](collections-c-cx.md)<br/>
 [平台命名空间](platform-namespace-c-cx.md)<br/>

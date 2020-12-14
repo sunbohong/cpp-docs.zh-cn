@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3618
 title: 编译器错误 C3618
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3618
 ms.assetid: cacc105d-4389-4cb8-ae6c-41a3622e9a86
-ms.openlocfilehash: 6f0edf1addf753054fbc50a1591b5b1a37394087
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 09e1a2a77410cc7836c00a3dd11cf5ed36553273
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759719"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223069"
 ---
 # <a name="compiler-error-c3618"></a>编译器错误 C3618
 
 "function"：标记为 DllImport 的方法无法定义
 
-用 <xref:System.Runtime.InteropServices.DllImportAttribute> 标记的方法是在指定的中定义的.DLL.
+用标记的方法 <xref:System.Runtime.InteropServices.DllImportAttribute> 在 specified.DLL 中定义。
 
 ## <a name="example"></a>示例
 

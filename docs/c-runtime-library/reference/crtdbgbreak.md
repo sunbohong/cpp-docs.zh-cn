@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CrtDbgBreak
 title: _CrtDbgBreak
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-ms.openlocfilehash: 9471b1a93abd9777c3a53c54c2517e59896d8160
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e92fa20e32ae02eab1b289878ad05826d8da0a85
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942586"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221561"
 ---
 # <a name="_crtdbgbreak"></a>_CrtDbgBreak
 
@@ -48,7 +49,7 @@ void _CrtDbgBreak( void );
 
 ## <a name="remarks"></a>备注
 
-**_CrtDbgBreak**函数在函数所在的特定代码行上设置调试断点。 此函数仅在调试模式下使用，并且依赖于先前定义的 **_debug** 。
+**_CrtDbgBreak** 函数在函数所在的特定代码行上设置调试断点。 此函数仅在调试模式下使用，并且依赖于先前定义的 **_DEBUG** 。
 
 有关使用其他具有挂钩功能的运行时函数和编写你自己的客户端定义挂钩函数的详细信息，请参阅[编写你自己的调试挂钩函数](/visualstudio/debugger/debug-hook-function-writing)。
 

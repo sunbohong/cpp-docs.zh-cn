@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：事件映射
 title: 事件映射
 ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: aa11dbe1a0a3dc45893d1a05cda0ef1addb9e665
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3a6e949a4dc40927fc8946610707fbb404a400b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837341"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219845"
 ---
 # <a name="event-maps"></a>事件映射
 
@@ -29,7 +30,7 @@ Microsoft 基础类库提供了针对触发事件而优化的编程模型。 在
 
 ### <a name="event-map-declaration-and-demarcation"></a>事件映射声明和划分
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[DECLARE_EVENT_MAP](#declare_event_map)|声明事件映射将在类中用于将事件映射到事件触发函数（必须在类声明中使用）。|
 |[BEGIN_EVENT_MAP](#begin_event_map)|开始事件映射的定义（必须在类实现中使用）。|
@@ -37,14 +38,14 @@ Microsoft 基础类库提供了针对触发事件而优化的编程模型。 在
 
 ### <a name="event-mapping-macros"></a>事件映射宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[EVENT_CUSTOM](#event_custom)|指示将触发指定事件的事件触发函数。|
 |[EVENT_CUSTOM_ID](#event_custom_id)|使用指定调度 ID 指示将触发指定事件的事件触发函数。|
 
 ### <a name="message-mapping-macros"></a>消息映射宏
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|指示 OLE 控件处理的自定义谓词。|
 |[ON_STDOLEVERB](#on_stdoleverb)|重写 OLE 控件的标准谓词映射。|
@@ -57,7 +58,7 @@ Microsoft 基础类库提供了针对触发事件而优化的编程模型。 在
 DECLARE_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在类声明的末尾使用 DECLARE_EVENT_MAP 宏。 然后，在定义类的成员函数的 .cpp 文件中，使用 BEGIN_EVENT_MAP 宏、每个控件事件的宏条目和 END_EVENT_MAP 宏声明事件列表的末尾。
 
@@ -75,15 +76,15 @@ DECLARE_EVENT_MAP()
 BEGIN_EVENT_MAP(theClass,  baseClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 指定其事件映射为的控件类的名称。
 
 *baseClass*<br/>
-指定 *类*的基类的名称。
+指定 *类* 的基类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在实现 ( .cpp) 文件中，该文件定义了类的成员函数，用 BEGIN_EVENT_MAP 宏启动事件映射，然后为每个事件添加宏项，并通过 END_EVENT_MAP 宏完成事件映射。
 
@@ -113,7 +114,7 @@ END_EVENT_MAP()
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 事件的名称。
@@ -124,9 +125,9 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 *vtsParams*<br/>
 用空格分隔的列表，其中的一个或多个常量指定函数的参数列表。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*VtsParams*参数是常量的以空格分隔的值列表 `VTS_` 。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
+*VtsParams* 参数是常量的以空格分隔的值列表 `VTS_` 。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -143,7 +144,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|CURRENCY|
 |VTS_DATE|DATE|
-|VTS_BSTR|**`const`**__char \* __|
+|VTS_BSTR|**`const`**__char \*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|句柄|
@@ -173,7 +174,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ## <a name="event_custom_id"></a><a name="event_custom_id"></a> EVENT_CUSTOM_ID
 
-定义属于 *dispid*指定的调度 ID 的自定义事件的事件触发函数。
+定义属于 *dispid* 指定的调度 ID 的自定义事件的事件触发函数。
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -183,7 +184,7 @@ EVENT_CUSTOM_ID(
     vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pszName*<br/>
 事件的名称。
@@ -197,9 +198,9 @@ EVENT_CUSTOM_ID(
 *vtsParams*<br/>
 引发事件时传递到控件容器的参数的变量列表。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*VtsParams*参数是常量的以空格分隔的值列表 `VTS_` 。 这些值中的一个或多个由空格（而不是逗号）分隔）指定函数的参数列表。 例如：
+*VtsParams* 参数是常量的以空格分隔的值列表 `VTS_` 。 这些值中的一个或多个由空格（而不是逗号）分隔）指定函数的参数列表。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -219,7 +220,7 @@ EVENT_CUSTOM_ID(
 ON_OLEVERB(idsVerbName,  memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *idsVerbName*<br/>
 谓词名称的字符串资源 ID。
@@ -227,11 +228,11 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 *memberFxn*<br/>
 框架在调用谓词时调用的函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 资源编辑器可用于创建添加到字符串表的自定义谓词名称。
 
-*MemberFxn*的函数原型是：
+*MemberFxn* 的函数原型是：
 
 ```cpp
 BOOL memberFxn(
@@ -240,7 +241,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-*LpMsg*、 *hWndParent*和*lpRect*参数的值取自成员函数的相应参数 `IOleObject::DoVerb` 。
+*LpMsg*、 *hWndParent* 和 *lpRect* 参数的值取自成员函数的相应参数 `IOleObject::DoVerb` 。
 
 ### <a name="requirements"></a>要求
 
@@ -254,7 +255,7 @@ BOOL memberFxn(
 ON_STDOLEVERB(iVerb, memberFxn)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iVerb*<br/>
 重写谓词的标准谓词索引。
@@ -262,16 +263,16 @@ ON_STDOLEVERB(iVerb, memberFxn)
 *memberFxn*<br/>
 框架在调用谓词时调用的函数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 标准谓词索引的形式为 `OLEIVERB_` ，后跟一个操作。 OLEIVERB_SHOW、OLEIVERB_HIDE 和 OLEIVERB_UIACTIVATE 是标准谓词的一些示例。
 
-有关要用作*memberFxn*参数的函数原型的说明，请参阅[ON_OLEVERB](#on_oleverb) 。
+有关要用作 *memberFxn* 参数的函数原型的说明，请参阅 [ON_OLEVERB](#on_oleverb) 。
 
 ### <a name="requirements"></a>要求
 
 **标头** afxole
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

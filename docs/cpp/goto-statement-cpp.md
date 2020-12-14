@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： goto 语句 (c + +) '
 title: goto 语句 (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-ms.openlocfilehash: e56ebfadea0d643ac68e2ace722a39587bd01312
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8f94a5c2dfbd6ff3bd33223944180a4d1642b0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223702"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221379"
 ---
 # <a name="goto-statement-c"></a>goto 语句 (C++)
 
@@ -50,7 +51,7 @@ exit:
 
 **`break`** 如果可能，使用、 **`continue`** 和 **`return`** 语句而不是语句，是一种很好的编程风格 **`goto`** 。 但是，由于 **`break`** 语句只从循环的一个级别退出，因此您可能必须使用 **`goto`** 语句退出深度嵌套的循环。
 
-有关标签和语句的详细信息 **`goto`** ，请参阅[标记的语句](../cpp/labeled-statements.md)。
+有关标签和语句的详细信息 **`goto`** ，请参阅 [标记的语句](../cpp/labeled-statements.md)。
 
 ## <a name="example"></a>示例
 
@@ -97,7 +98,7 @@ Inner loop executing. j = 0
 Jumped to stop. i = 3
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [跳转语句](../cpp/jump-statements-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

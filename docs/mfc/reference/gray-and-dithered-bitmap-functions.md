@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：灰色和抖色位图函数
 title: 灰色和抖色位图函数
 ms.date: 11/19/2018
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 57f163fd36c0f25508d94a84495fcaf1956e277d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 20391f0ee7227827e1d9d6e18c2379be1fd43612
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837198"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219728"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>灰色和抖色位图函数
 
@@ -24,7 +25,7 @@ MFC 提供了两个函数为位图提供已禁用控件的外观。
 
 ![灰色图标版本与原始图标版本之比较](../../mfc/reference/media/vcgraybitmap.gif "灰色图标版本与原始图标版本之比较")
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxDrawGrayBitmap](#afxdrawgraybitmap)|绘制灰色版本的位图。|
 |[AfxGetGrayBitmap](#afxgetgraybitmap)|复制灰色版本的位图。|
@@ -35,7 +36,7 @@ MFC 还提供了两个函数以将位图背景替换为抖色样式。
 
 ![抖动图标版本与原始图标版本之比较](../../mfc/reference/media/vcditheredbitmap.gif "抖动图标版本与原始图标版本之比较")
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|绘制抖色背景位图。|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|复制抖色背景位图。|
@@ -53,7 +54,7 @@ void AFXAPI AfxDrawGrayBitmap(
     COLORREF crBackground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向目标值 DC 的指针。
@@ -70,7 +71,7 @@ void AFXAPI AfxDrawGrayBitmap(
 *crBackground*<br/>
 新背景色（通常为灰色，如 COLOR_MENU）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 `AfxDrawGrayBitmap` 绘制的位图将具有禁用控件的外观。
 
@@ -95,7 +96,7 @@ void AFXAPI AfxGetGrayBitmap(
     COLORREF crBackground);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *.Rsrc*<br/>
 源位图。
@@ -106,7 +107,7 @@ void AFXAPI AfxGetGrayBitmap(
 *crBackground*<br/>
 新背景色（通常为灰色，如 COLOR_MENU）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 使用 `AfxGetGrayBitmap` 复制的位图将具有禁用控件的外观。
 
@@ -134,7 +135,7 @@ void AFXAPI AfxDrawDitheredBitmap(
     COLORREF cr2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pDC*<br/>
 指向目标值 DC 的指针。
@@ -154,7 +155,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 *cr2*<br/>
 另一种递色，通常为浅灰色 (COLOR_MENU)。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 源位图是在目标 DC 上绘制的，其中包含双色 (*cr1* 和 *cr2*) 棋盘模式，用来替换位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。
 
@@ -180,7 +181,7 @@ void AFXAPI AfxGetDitheredBitmap(
     COLORREF cr2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *.Rsrc*<br/>
 源位图。
@@ -194,7 +195,7 @@ void AFXAPI AfxGetDitheredBitmap(
 *cr2*<br/>
 另一种递色，通常为浅灰色 (COLOR_MENU)。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 源位图复制到目标位图，其中包含双色 (*cr1* 和 *cr2*) 棋盘模式，用来替换源位图的背景。 根据定义，源位图的背景指的是指位图的白色像素以及与位图左上角的像素颜色匹配的所有像素。
 
@@ -208,6 +209,6 @@ void AFXAPI AfxGetDitheredBitmap(
 
 **标头:** afxwin.h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

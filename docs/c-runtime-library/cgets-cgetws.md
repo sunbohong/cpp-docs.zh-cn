@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _cgets、_cgetws
 title: _cgets、_cgetws
 ms.date: 4/2/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ac712c7ee51c3f06dfe1dd4e881630768a7e6b20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917434"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221678"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets、_cgetws
 
@@ -69,14 +70,14 @@ wchar_t *_cgetws(
 ); // C++ only
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *宽限*<br/>
 数据的存储位置。
 
 ## <a name="return-value"></a>返回值
 
-在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果`buffer`为**NULL**，则这些函数将调用无效参数处理程序，如[参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 NULL，并将 `errno` 设置为 `EINVAL`****。
+在 `buffer[2]`，`_cgets` 和 `_cgetws` 返回指向字符串起始位置的指针。 如果 `buffer` 为 **NULL**，则这些函数将调用无效参数处理程序，如 [参数验证](../c-runtime-library/parameter-validation.md)中所述。 如果允许继续执行，这些函数则返回 NULL，并将 `errno` 设置为 `EINVAL`。
 
 ## <a name="remarks"></a>备注
 
@@ -86,7 +87,7 @@ wchar_t *_cgetws(
 
 在 C++ 中，这些函数具有模板重载，以调用这些函数的更新、更安全副本。 有关详细信息，请参阅[安全模板重载](../c-runtime-library/secure-template-overloads.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -96,7 +97,7 @@ wchar_t *_cgetws(
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> 或 \<wchar.h>|
@@ -147,7 +148,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制台和端口 i/o](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch、_getwch](../c-runtime-library/reference/getch-getwch.md)

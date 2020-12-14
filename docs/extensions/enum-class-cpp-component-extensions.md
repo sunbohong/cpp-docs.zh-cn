@@ -1,14 +1,15 @@
 ---
+description: '了解详细信息： enum 类 (c + +/CLI 和 c + +/CX) '
 title: enum class（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 9acf93976b2f7751e85bf3ed0ddd2735c29e121c
-ms.sourcegitcommit: 9451db8480992017c46f9d2df23fb17b503bbe74
+ms.openlocfilehash: 309a1defa7288ec13ca058cc366d9cb8deac01ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91590311"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220664"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>enum class（C++/CLI 和 C++/CX）
 
@@ -18,7 +19,7 @@ ms.locfileid: "91590311"
 
 ### <a name="remarks"></a>备注
 
-C++/CX 和 C++/CLI 支持 public enum class**** 和 private enum class****，它们与标准 C++ enum class**** 类似，不同之处在于增加了可访问性说明符。 在 /clr**** 下，允许使用 C++11 enum class**** 类型，但会生成警告 C4472，这是为了确保你确认自己确实需要使用 ISO 枚举类型，而不是 C++/CX 和 C++/CLI 类型。 有关 ISO 标准 c + + 关键字的详细信息 **`enum`** ，请参阅 [枚举](../cpp/enumerations-cpp.md)。
+C++/CX 和 C++/CLI 支持 public enum class 和 private enum class，它们与标准 C++ enum class 类似，不同之处在于增加了可访问性说明符。 在 /clr下，允许使用 C++11 enum class 类型，但会生成警告 C4472，这是为了确保你确认自己确实需要使用 ISO 枚举类型，而不是 C++/CX 和 C++/CLI 类型。 有关 ISO 标准 c + + 关键字的详细信息 **`enum`** ，请参阅 [枚举](../cpp/enumerations-cpp.md)。
 
 ## <a name="windows-runtime"></a>Windows 运行时
 
@@ -48,7 +49,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 *枚举器列表*<br/>
 以逗号分隔的枚举器名称列表。
 
-每个枚举器的值都是由编译器隐式定义或由表示法*枚举器* `=` *常量表达式*显式定义的常量表达式。 如果隐式定义第一个枚举器，则其值为零。 每个后续的隐式定义的枚举器值是前一个枚举器的值 + 1。
+每个枚举器的值都是由编译器隐式定义或由表示法 *枚举器* `=` *常量表达式* 显式定义的常量表达式。 如果隐式定义第一个枚举器，则其值为零。 每个后续的隐式定义的枚举器值是前一个枚举器的值 + 1。
 
 *var*<br/>
 （可选）枚举类型的变量的名称。
@@ -57,7 +58,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 有关详细信息和示例，请参阅 [枚举](../cppcx/enums-c-cx.md)。
 
-请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type*表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如：
+请注意，如果可定义枚举器的值的常数表达式不能由 *underlying-type* 表示，则编译器将发出错误消息。  但是，编译器不会报告不适用于基础类型的值的错误。 例如：
 
 - 如果 *基础类型* 是数字，并且枚举器指定了该类型的最大值，则无法表示下一个隐式定义的枚举的值。
 
@@ -88,11 +89,11 @@ accessenum structname [:type] { enumerator-list } var;
 *枚举器列表*<br/>
 枚举中以逗号分隔的标识符（枚举器）列表。
 
-*name*<br/>
+name<br/>
 枚举的名称。 不允许匿名托管枚举。
 
 type<br/>
-（可选）identifiers** 的基础类型。 这可以是任何标量类型，如、或的已签名或未签名的版本 **`int`** **`short`** **`long`** 。  **`bool`****`char`** 也允许使用或。
+（可选）identifiers 的基础类型。 这可以是任何标量类型，如、或的已签名或未签名的版本 **`int`** **`short`** **`long`** 。  **`bool`****`char`** 也允许使用或。
 
 *var*<br/>
 （可选）枚举类型的变量的名称。

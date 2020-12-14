@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编辑消息处理程序
 title: 编辑消息处理程序
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-ms.openlocfilehash: e6679ed97af77775e431cf77c3b7bc659b6eb445
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 303c790535211d1b065d6d12bcb150ed568f0045
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219858"
 ---
 # <a name="editing-a-message-handler"></a>编辑消息处理程序
 
-一旦定义消息处理程序，你可以转到成员函数的定义，以添加或修改代码。
+定义消息处理程序后，可以使用成员函数的定义来添加或修改代码。
 
-若要跳转到成员函数定义从[对话框编辑器](../../windows/dialog-editor.md)，双击一个处理程序已为其定义的控件。 使用它可导航到在其中定义所选的控件的消息处理程序的文件。
+若要从 " [对话框编辑器](../../windows/dialog-editor.md)" 跳转到成员函数定义，请双击已为其定义了处理程序的控件。 这会导航到在其中定义所选控件的消息处理程序的文件。
 
-若要跳转到成员函数定义从[类视图](/visualstudio/ide/viewing-the-structure-of-code)，双击类视图中的函数名称。
+若要跳转到 [类视图](/visualstudio/ide/viewing-the-structure-of-code)中的成员函数定义，请在类视图中双击函数名称。
 
 ## <a name="see-also"></a>请参阅
 

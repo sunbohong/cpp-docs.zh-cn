@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：事件接收器映射
 title: 事件接收器映射
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 2cbfbc70ae14ccda95c377cb1587bf9d2a1ad3e6
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: df18cdbba849ff0c8d7be5b038f997b6cc5df849
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837259"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97219832"
 ---
 # <a name="event-sink-maps"></a>事件接收器映射
 
@@ -17,7 +18,7 @@ ms.locfileid: "88837259"
 
 ### <a name="event-sink-maps"></a>事件接收器映射
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_EVENTSINK_MAP](#begin_eventsink_map)|启动事件接收器映射的定义。|
 |[DECLARE_EVENTSINK_MAP](#declare_eventsink_map)|声明事件接收器映射。|
@@ -37,15 +38,15 @@ ms.locfileid: "88837259"
 BEGIN_EVENTSINK_MAP(theClass, baseClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 指定其事件接收器映射的控件类的名称。
 
 *baseClass*<br/>
-指定 *类*的基类的名称。
+指定 *类* 的基类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在实现 ( 为类定义成员函数) 文件中，用 BEGIN_EVENTSINK_MAP 宏启动事件接收器映射，然后为要通知的每个事件添加宏条目，并通过 END_EVENTSINK_MAP 宏完成事件接收器映射。
 
@@ -63,7 +64,7 @@ OLE 容器可提供事件接收器映射来指定通知容器的事件。
 DECLARE_EVENTSINK_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在类声明的末尾使用 DECLARE_EVENTSINK_MAP 宏。 然后，在中。CPP 文件，用于定义类的成员函数，使用 BEGIN_EVENTSINK_MAP 宏，为要通知的每个事件使用宏项，并使用 END_EVENTSINK_MAP 宏来声明事件接收器列表的末尾。
 
@@ -93,7 +94,7 @@ END_EVENTSINK_MAP()
 ON_EVENT(theClass, id, dispid, pfnHandler,  vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 此事件接收器映射所属的类。
@@ -110,9 +111,9 @@ OLE 控件的控件 ID。
 *vtsParams*<br/>
 指定事件的参数类型的 **VTS_** 常数的序列。 它们与调度映射项（如 DISP_FUNCTION）中使用的常量相同。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*VtsParams*参数是一个空格分隔列表，其中列出了**VTS_** 常量中的值。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
+*VtsParams* 参数是一个空格分隔列表，其中列出了 **VTS_** 常量中的值。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -132,7 +133,7 @@ OLE 控件的控件 ID。
 ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 此事件接收器映射所属的类。
@@ -152,9 +153,9 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 *vtsParams*<br/>
 指定事件的参数类型的 **VTS_** 常数的序列。 对于控件 ID，第一个常量应为 VTS_I4 类型。 它们与调度映射项（如 DISP_FUNCTION）中使用的常量相同。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*VtsParams*参数是一个空格分隔列表，其中列出了**VTS_** 常量中的值。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
+*VtsParams* 参数是一个空格分隔列表，其中列出了 **VTS_** 常量中的值。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -184,7 +185,7 @@ ON_EVENT_RANGE(theClass, idFirst, idLast, dispid, pfnHandler,  vtsParams)
 ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 此事件接收器映射所属的类。
@@ -198,9 +199,9 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 *vtsParams*<br/>
 指定事件的参数类型的 **VTS_** 常数的序列。 它们与调度映射项（如 DISP_FUNCTION）中使用的常量相同。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*VtsParams*参数是一个空格分隔列表，其中列出了**VTS_** 常量中的值。
+*VtsParams* 参数是一个空格分隔列表，其中列出了 **VTS_** 常量中的值。
 
 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
 
@@ -222,7 +223,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 ON_PROPNOTIFY(theClass, id, dispid, pfnRequest, pfnChanged)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 此事件接收器映射所属的类。
@@ -234,14 +235,14 @@ OLE 控件的控件 ID。
 通知中涉及的属性的调度 ID。
 
 *pfnRequest*<br/>
-指向成员函数的指针，该成员函数用于处理 `OnRequestEdit` 此属性的通知。 此函数应具有 BOOL 返回类型和**布尔** <strong>\*</strong> 参数。 此函数应将参数设置为 TRUE，以允许属性更改，并将 FALSE 设置为禁止。 函数应返回 TRUE 以指示已处理通知;否则为 FALSE。
+指向成员函数的指针，该成员函数用于处理 `OnRequestEdit` 此属性的通知。 此函数应具有 BOOL 返回类型和 **布尔** <strong>\*</strong> 参数。 此函数应将参数设置为 TRUE，以允许属性更改，并将 FALSE 设置为禁止。 函数应返回 TRUE 以指示已处理通知;否则为 FALSE。
 
 *pfnChanged*<br/>
 指向成员函数的指针，该成员函数用于处理 `OnChanged` 此属性的通知。 函数应具有 BOOL 返回类型和 UINT 参数。 函数应返回 TRUE 以指示已处理通知;否则为 FALSE。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*VtsParams*参数是一个空格分隔列表，其中列出了**VTS_** 常量中的值。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
+*VtsParams* 参数是一个空格分隔列表，其中列出了 **VTS_** 常量中的值。 这些值中的一个或多个用空格分隔 (不能使用逗号) 指定函数的参数列表。 例如：
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -258,7 +259,7 @@ OLE 控件的控件 ID。
 ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 此事件接收器映射所属的类。
@@ -291,7 +292,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 此事件接收器映射所属的类。
@@ -300,7 +301,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 通知中涉及的属性的调度 ID。
 
 *pfnRequest*<br/>
-指向成员函数的指针，该成员函数用于处理 `OnRequestEdit` 此属性的通知。 此函数应具有 BOOL 返回类型和**布尔** <strong>\*</strong> 参数。 此函数应将参数设置为 TRUE，以允许属性更改，并将 FALSE 设置为禁止。 函数应返回 TRUE 以指示已处理通知;否则为 FALSE。
+指向成员函数的指针，该成员函数用于处理 `OnRequestEdit` 此属性的通知。 此函数应具有 BOOL 返回类型和 **布尔** <strong>\*</strong> 参数。 此函数应将参数设置为 TRUE，以允许属性更改，并将 FALSE 设置为禁止。 函数应返回 TRUE 以指示已处理通知;否则为 FALSE。
 
 *pfnChanged*<br/>
 指向成员函数的指针，该成员函数用于处理 `OnChanged` 此属性的通知。 函数应具有 BOOL 返回类型，并且不包含任何参数。 函数应返回 TRUE 以指示已处理通知;否则为 FALSE。
@@ -309,6 +310,6 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 
   **标头** afxdisp.h&gt
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)

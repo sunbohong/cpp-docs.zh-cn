@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _CIatan
 title: _CIatan
 ms.date: 4/2/2020
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - CIatan intrinsic
 - _CIatan intrinsic
 ms.assetid: 3baa0429-fe46-4bab-8b00-868e2186dc8c
-ms.openlocfilehash: c24e01fbb3ab2f8a78cb9cc3d1336476c29ffe1c
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 47c4f1be2622c272cd4d513f819afed7dedc281f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918137"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221626"
 ---
 # <a name="_ciatan"></a>_CIatan
 
@@ -48,13 +49,13 @@ void __cdecl _CIatan();
 
 生成的值被将被推送到堆栈顶部。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 **平台：** x86
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[按字母顺序的函数参考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[字母函数引用](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [atan、atanf、atanl、atan2、atan2f、atan2l](../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)

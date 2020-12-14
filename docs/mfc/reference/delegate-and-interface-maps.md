@@ -1,4 +1,5 @@
 ---
+description: 了解更多：委托和接口映射宏
 title: " (MFC) 的委托和接口映射宏"
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -6,18 +7,18 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: 01f5cbfb1f751823d218761410bc9091b73cb0a3
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 222625514fa0d6d1d683a6ee4098812298f7ed72
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220144"
 ---
 # <a name="delegate-and-interface-map-macros"></a>委托和接口映射宏
 
 MFC 为委托和接口映射支持以下宏：
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_DELEGATE_MAP](#begin_delegate_map)|开始一个委托映射。|
 |[BEGIN_INTERFACE_MAP](#begin_interface_map)|开始接口映射的定义。|
@@ -38,12 +39,12 @@ MFC 为委托和接口映射支持以下宏：
 BEGIN_DELEGATE_MAP(  CLASS );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *班级*<br/>
 承载托管控件的类。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此宏标记委托项列表的开头，这些委托项构成一个委托映射。 有关如何使用此宏的示例，请参阅 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)。
 
@@ -61,7 +62,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 要在其中定义接口映射的类
@@ -69,7 +70,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 *baseClass*<br/>
 从中派生 *类* 的类。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于实现的每个接口，都存在一个或多个 INTERFACE_PART 宏调用。 对于类使用的每个聚合，都有一个 INTERFACE_AGGREGATE 宏调用。
 
@@ -89,12 +90,12 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 delegate void CommandHandler(  UINT^ cmdID  );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 命令 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此委托将向命令源注册回调方法。 当您将一个委托添加到命令源对象时，回调方法将成为来自指定源的命令的处理程序。
 
@@ -116,7 +117,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cmdID*<br/>
 命令 ID。
@@ -124,7 +125,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 *cmdUI*<br/>
 命令消息 ID。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此委托使用用户界面更新命令消息注册回调方法。 `CommandUIHandler` 类似于 [CommandHandler](#commandhandler) ，只不过此委托与用户界面对象更新命令一起使用。 应将用户界面更新命令与消息处理程序方法相互映射。
 
@@ -180,7 +181,7 @@ END_INTERFACE_MAP( )
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *职员*<br/>
 要附加到控件的事件处理程序方法。
@@ -191,7 +192,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 *ARG1*<br/>
 托管事件处理程序方法的第二个参数，如 `EventArgs^` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 委托映射中的每个条目对应于 [MAKE_DELEGATE](#make_delegate)创建的托管事件处理程序委托。
 
@@ -219,7 +220,7 @@ END_DELEGATE_MAP()
 INTERFACE_PART( theClass, iid, localClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 包含接口映射的类的名称。
@@ -228,9 +229,9 @@ INTERFACE_PART( theClass, iid, localClass)
 *localClass*<br/>
 局部类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-它允许你将 IID 映射到 *类* 和 *localClass*指示的类的成员。
+它允许你将 IID 映射到 *类* 和 *localClass* 指示的类的成员。
 
 有关接口映射的详细信息，请参阅 [技术说明 38](../tn038-mfc-ole-iunknown-implementation.md)。
 
@@ -248,7 +249,7 @@ INTERFACE_PART( theClass, iid, localClass)
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *委托*<br/>
 托管事件处理程序委托的类型，如 [EventHandler](/dotnet/api/system.eventhandler)。
@@ -256,9 +257,9 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 *职员*<br/>
 要附加到控件的事件处理程序方法的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-此宏创建 *委托* 类型和名称 *成员*的托管事件处理程序委托。 托管事件处理程序委托允许本机类处理托管事件。
+此宏创建 *委托* 类型和名称 *成员* 的托管事件处理程序委托。 托管事件处理程序委托允许本机类处理托管事件。
 
 ### <a name="example"></a>示例
 
@@ -278,7 +279,7 @@ void CMyView::OnInitialUpdate()
 
 **标头：** msclr\event。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [如何：接收来自本机 c + + 类的 Windows 窗体事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
 [如何：将命令路由添加到 Windows 窗体控件](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>

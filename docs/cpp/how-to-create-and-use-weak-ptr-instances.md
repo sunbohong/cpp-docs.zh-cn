@@ -1,21 +1,22 @@
-﻿---
+---
+description: 了解有关详细信息，请参阅如何：创建和使用 weak_ptr 实例
 title: 如何：创建和使用 weak_ptr 实例
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: d7caea7cfd13b3a41a1cd20f88a9914267cf9677
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c1a68d8027e29cced7fb1a767d5a986ab0677ec8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87187850"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221236"
 ---
 # <a name="how-to-create-and-use-weak_ptr-instances"></a>如何：创建和使用 weak_ptr 实例
 
-有时，对象必须存储一种方法来访问[shared_ptr](../standard-library/shared-ptr-class.md)的基础对象，而不会导致引用计数递增。 通常情况下，在实例之间具有循环引用时，会发生这种情况 `shared_ptr` 。
+有时，对象必须存储一种方法来访问 [shared_ptr](../standard-library/shared-ptr-class.md) 的基础对象，而不会导致引用计数递增。 通常情况下，在实例之间具有循环引用时，会发生这种情况 `shared_ptr` 。
 
-最佳设计是避免在任何时候都能实现指针的共享所有权。 但是，如果您必须有实例的共享所有权 `shared_ptr` ，请避免它们之间存在循环引用。 如果无法避免循环引用，或者出于某种原因更可取，则使用[weak_ptr](../standard-library/weak-ptr-class.md)向一个或多个所有者提供对另一个的弱引用 `shared_ptr` 。 通过使用 `weak_ptr` ，可以创建一个 `shared_ptr` 联接到一组现有相关实例的，但前提是基础内存资源仍有效。 本身并不 `weak_ptr` 参与引用计数，因此它无法阻止引用计数转到零。 但是，你可以使用 `weak_ptr` 来尝试获取用于初始化的的新副本 `shared_ptr` 。 如果已删除内存，则的 `weak_ptr` bool 运算符将返回 **`false`** 。 如果内存仍有效，新的共享指针会递增引用计数，并保证只要 `shared_ptr` 变量保持在范围内，内存就有效。
+最佳设计是避免在任何时候都能实现指针的共享所有权。 但是，如果您必须有实例的共享所有权 `shared_ptr` ，请避免它们之间存在循环引用。 如果无法避免循环引用，或者出于某种原因更可取，则使用 [weak_ptr](../standard-library/weak-ptr-class.md) 向一个或多个所有者提供对另一个的弱引用 `shared_ptr` 。 通过使用 `weak_ptr` ，可以创建一个 `shared_ptr` 联接到一组现有相关实例的，但前提是基础内存资源仍有效。 本身并不 `weak_ptr` 参与引用计数，因此它无法阻止引用计数转到零。 但是，你可以使用 `weak_ptr` 来尝试获取用于初始化的的新副本 `shared_ptr` 。 如果已删除内存，则的 `weak_ptr` bool 运算符将返回 **`false`** 。 如果内存仍有效，新的共享指针会递增引用计数，并保证只要 `shared_ptr` 变量保持在范围内，内存就有效。
 
 ## <a name="example"></a>示例
 
@@ -84,6 +85,6 @@ Press any key
 
 作为试验，将 vector 修改 `others` 为 `vector<shared_ptr<Controller>>` ，然后在输出中，请注意，当返回时不调用析构函数 `TestRun` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [智能指针（现代 C++）](../cpp/smart-pointers-modern-cpp.md)

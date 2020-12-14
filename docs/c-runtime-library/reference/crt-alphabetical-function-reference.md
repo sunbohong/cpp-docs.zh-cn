@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： UCRT 字母函数引用
 title: UCRT 字母函数引用
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-ms.openlocfilehash: 73fd08ffa58aabfd9a40e0296b21d4a5baea8750
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: af75a52dcc6659e80ae1155ffe4de2c8c1dee4bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499402"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221600"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>UCRT 字母函数引用
 
@@ -319,7 +320,7 @@ ms.locfileid: "91499402"
 
 [_clearfp](clear87-clearfp.md)
 
-[clock](clock.md)
+[时钟](clock.md)
 
 [clog](clog-clogf-clogl.md)
 
@@ -2431,7 +2432,7 @@ ms.locfileid: "91499402"
 
 [_statusfp2](status87-statusfp-statusfp2.md)
 
-[strcat](strcat-wcscat-mbscat.md)
+strcat
 
 [strcat_s](strcat-s-wcscat-s-mbscat-s.md)
 
@@ -2487,7 +2488,7 @@ ms.locfileid: "91499402"
 
 [_strinc](strinc-wcsinc-mbsinc-mbsinc-l.md)
 
-[strlen](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
+strlen
 
 [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)
 
@@ -3487,7 +3488,7 @@ ms.locfileid: "91499402"
 
 ## <a name="x"></a>X
 
-[xor](xor.md)
+[运算](xor.md)
 
 [xor_eq](xor-eq.md)
 
@@ -3507,4 +3508,4 @@ ms.locfileid: "91499402"
 
 ## <a name="see-also"></a>请参阅
 
-[C 运行时库参考](../../c-runtime-library/c-run-time-library-reference.md)<br/>
+[C Run-Time 库参考](../../c-runtime-library/c-run-time-library-reference.md)<br/>

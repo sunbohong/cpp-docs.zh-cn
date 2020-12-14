@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： back_inserter 函数
 title: back_inserter 函数
 ms.date: 12/30/2016
 f1_keywords:
@@ -6,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - back_inserter Function
 ms.assetid: 91476338-5548-44b7-bc7e-2150f4fbe31a
-ms.openlocfilehash: 82df6b06389fa9f1c3ab83fa7b1da3bab092c68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d2483c9947fbf3a7bc04024221ec6e582e416f84
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209437"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223576"
 ---
-# <a name="backinserter-function"></a>back_inserter 函数
+# <a name="back_inserter-function"></a>back_inserter 函数
 
 返回用于在指定集合末尾插入元素的迭代器。
 
@@ -30,7 +31,7 @@ Platform::BackInsertIterator<T>
    back_inserter(IObservableVector<T>^ v);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型参数。
@@ -44,10 +45,10 @@ Platform::BackInsertIterator<T>
 
 ### <a name="requirements"></a>要求
 
-**标头：** collection.h
+**标头：** 集合。h
 
 **命名空间：** Windows::Foundation::Collections
 
 ## <a name="see-also"></a>请参阅
 
-[Windows::Foundation::Collections 命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows：： Foundation：：集合命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)

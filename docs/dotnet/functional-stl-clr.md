@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下方面的详细信息：函数 (STL/CLR) '
 title: functional (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -63,12 +64,12 @@ helpviewer_keywords:
 - unary_delegate_noreturn function [STL/CLR]
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-ms.openlocfilehash: 00d719df2fdba892d1d9362da2b2172bac9ca16f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 48db11b7a30ae46eb52ff73cd961759e6be93fc5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499705"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97223563"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -88,14 +89,14 @@ ms.locfileid: "91499705"
 
 ## <a name="declarations"></a>声明
 
-|委托|说明|
+|委托|描述|
 |--------------|-----------------|
 |[binary_delegate (STL/CLR)](#binary_delegate)|双参数委托。|
 |[binary_delegate_noreturn (STL/CLR)](#binary_delegate_noreturn)|返回的双参数委托 **`void`** 。|
 |[unary_delegate (STL/CLR)](#unary_delegate)|单参数委托。|
 |[unary_delegate_noreturn (STL/CLR)](#unary_delegate_noreturn)|返回的单参数委托 **`void`** 。|
 
-|类|说明|
+|类|描述|
 |-----------|-----------------|
 |[binary_negate (STL/CLR)](#binary_negate)|函子对双参数函子进行反运算。|
 |[binder1st (STL/CLR)](#binder1st)|函子用于将第一个参数绑定到两个参数函子。|
@@ -117,7 +118,7 @@ ms.locfileid: "91499705"
 |[plus (STL/CLR)](#plus)|添加函子。|
 |[unary_negate (STL/CLR)](#unary_negate)|函子对单参数函子进行反运算。|
 
-|函数|说明|
+|函数|描述|
 |--------------|-----------------|
 |[bind1st (STL/CLR)](#bind1st)|为参数和函子生成 binder1st。|
 |[bind2nd (STL/CLR)](#bind2nd)|为参数和函子生成 binder2nd。|
@@ -139,7 +140,7 @@ generic<typename Arg1,
     delegate Result binary_delegate(Arg1, Arg2);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *Arg1*<br/>
 第一个参数的类型。
@@ -150,7 +151,7 @@ generic<typename Arg1,
 *结果*<br/>
 返回类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 Genereic 委托描述了一个双参数函数。
 
@@ -214,7 +215,7 @@ generic<typename Arg1,
     delegate void binary_delegate(Arg1, Arg2);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *Arg1*<br/>
 第一个参数的类型。
@@ -222,7 +223,7 @@ generic<typename Arg1,
 *Arg2*<br/>
 第二个参数的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 Genereic 委托介绍了返回的两参数函数 **`void`** 。
 
@@ -300,7 +301,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *趣*<br/>
 存储的函子的类型。
@@ -315,16 +316,16 @@ public:
 |second_argument_type|函子第二个参数的类型。|
 |stored_function_type|函子的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |binary_negate|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子，用于存储另一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，它返回使用两个参数调用的存储函子的逻辑。
 
@@ -415,7 +416,7 @@ template<typename Fun,
 *左中*<br/>
 要换行的第一个参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回[binder1st (STL/CLR) ](#binder1st) `<Fun>(functor, left)` 。 使用该方法可以方便地将两个参数的函子和其第一个参数包装在一个参数函子中，后者使用第二个参数调用它。
 
@@ -496,7 +497,7 @@ template<typename Fun,
 *然后*<br/>
 要换行的第二个参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回[binder2nd (STL/CLR) ](#binder2nd) `<Fun>(functor, right)` 。 使用该方法可以方便地将两个参数的函子和它的第二个参数封装在一个参数函子中，该参数使用第一个参数调用它。
 
@@ -575,7 +576,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *趣*<br/>
 存储的函子的类型。
@@ -590,16 +591,16 @@ public:
 |second_argument_type|函子第二个参数的类型。|
 |stored_function_type|函子的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |binder1st|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个参数函子，用于存储两个参数函子和第一个参数。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，它返回使用存储的第一个参数和提供的第二个参数调用存储的函子的结果。
 
@@ -680,7 +681,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *趣*<br/>
 存储的函子的类型。
@@ -695,16 +696,16 @@ public:
 |second_argument_type|函子第二个参数的类型。|
 |stored_function_type|函子的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |binder2nd|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个参数函子，用于存储两个参数函子和第二个参数。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，它返回使用提供的第一个参数和存储的第二个参数调用存储的函子的结果。
 
@@ -785,7 +786,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数和返回值的类型。
@@ -799,16 +800,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |divides|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便当对象作为函数调用时，它将返回第一个自变量除以第二个参数。
 
@@ -886,7 +887,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -900,16 +901,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |equal_to|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^ ( # A1|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数等于第二个参数时，它才返回 true。
 
@@ -987,7 +988,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1001,16 +1002,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |greater|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数大于第二个参数时，它才返回 true。
 
@@ -1088,7 +1089,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1102,16 +1103,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |greater_equal|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数大于或等于第二个参数时，它才返回 true。
 
@@ -1189,7 +1190,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1203,16 +1204,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |less|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数小于第二个参数时，它才返回 true。
 
@@ -1290,7 +1291,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1304,16 +1305,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |less_equal|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数小于或等于第二个参数时，它才返回 true。
 
@@ -1391,7 +1392,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1405,16 +1406,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |logical_and|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数和第二个测试都为 true 时，它才返回 true。
 
@@ -1490,7 +1491,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1503,16 +1504,16 @@ public:
 |delegate_type|泛型委托的类型。|
 |result_type|函子结果的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |logical_not|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了单参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，它仅在其参数测试为 false 时返回 true。
 
@@ -1582,7 +1583,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1596,16 +1597,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |logical_or|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数或第二个参数为 true 时，它才返回 true。
 
@@ -1683,7 +1684,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数和返回值的类型。
@@ -1697,16 +1698,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |minus|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便当对象作为函数调用时，它将返回第一个参数减去第二个参数。
 
@@ -1784,7 +1785,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数和返回值的类型。
@@ -1798,16 +1799,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |modulus|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便当对象作为函数调用时，它将返回第一个参数取模。
 
@@ -1885,7 +1886,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数和返回值的类型。
@@ -1899,16 +1900,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |multiplies|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便当对象作为函数调用时，它将返回第二个参数的时间。
 
@@ -1984,7 +1985,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -1997,16 +1998,16 @@ public:
 |delegate_type|泛型委托的类型。|
 |result_type|函子结果的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |negate|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了单参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，它将返回其自变量。
 
@@ -2076,7 +2077,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数的类型。
@@ -2090,16 +2091,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |not_equal_to|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，仅当第一个参数不等于第二个参数时，它才返回 true。
 
@@ -2171,7 +2172,7 @@ template<typename Fun>
 *函子*<br/>
 要包装的函子。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回[unary_negate (STL/CLR) ](#unary_negate) `<Fun>(functor)` 。 使用该方法可以方便地在传递其逻辑 NOT 的函子中包装单参数函子。
 
@@ -2243,7 +2244,7 @@ template<typename Fun>
 *函子*<br/>
 要包装的函子。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回[binary_negate (STL/CLR) ](#negate) `<Fun>(functor)` 。 使用该方法可以方便地将两个参数函子在函子中，用于传递其逻辑。
 
@@ -2330,7 +2331,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 参数和返回值的类型。
@@ -2344,16 +2345,16 @@ public:
 |result_type|函子结果的类型。|
 |second_argument_type|函子第二个参数的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |plus|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |操作员 delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个双参数函子。 它定义成员运算符， `operator()` 以便当对象作为函数调用时，它将返回第一个参数加上第二个参数。
 
@@ -2416,7 +2417,7 @@ generic<typename Arg,
     delegate Result unary_delegate(Arg);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 自变量类型。
@@ -2424,7 +2425,7 @@ generic<typename Arg,
 *结果*<br/>
 返回类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 Genereic 委托说明了单参数函数。
 
@@ -2481,12 +2482,12 @@ generic<typename Arg>
     delegate void unary_delegate_noreturn(Arg);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *与我们联系*<br/>
 自变量类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 Genereic 委托介绍返回的单参数函数 **`void`** 。
 
@@ -2559,7 +2560,7 @@ public:
     };
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *趣*<br/>
 存储的函子的类型。
@@ -2572,16 +2573,16 @@ public:
 |delegate_type|泛型委托的类型。|
 |result_type|函子结果的类型。|
 
-|成员|说明|
+|成员|描述|
 |------------|-----------------|
 |unary_negate|构造函子。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |operator()|计算所需的函数。|
 |delegate_type ^|将函子转换为委托。|
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此模板类描述了一个参数函子，用于存储另一个参数函子。 它定义成员运算符， `operator()` 以便在将对象作为函数调用时，它返回使用参数调用的存储函子的逻辑。
 

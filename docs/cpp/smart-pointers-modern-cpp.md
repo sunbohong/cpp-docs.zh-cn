@@ -1,14 +1,15 @@
 ---
+description: '了解详细信息：智能指针 (新式 c + +) '
 title: 智能指针（现代 C++）
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-ms.openlocfilehash: e511cc513cdb35b06b976ce022c5e4edea35040b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b26b038b040f1bed5197fc1cd9b5518249c0ad95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500689"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221210"
 ---
 # <a name="smart-pointers-modern-c"></a>智能指针（现代 C++）
 
@@ -118,4 +119,4 @@ C++ 智能指针思路类似于在语言（如 C#）中创建对象的过程：�
 
 [指针](pointers-cpp.md)<br/>
 [C++ 语言参考](../cpp/cpp-language-reference.md)<br/>
-[C + + 标准库](../standard-library/cpp-standard-library-reference.md)
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAccessorBase 类
 title: CAccessorBase 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - IsAutoAccessor method
 - ReleaseAccessors method
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-ms.openlocfilehash: 81b0ecd8ded7acb0c0e376d0869decb2bfcb590e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 43d3f507f8ee003605cf2b3f964b06a3c1088233
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91509111"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97221171"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 类
 
@@ -46,7 +47,7 @@ OLE DB 模板中的所有访问器都从此类派生。 `CAccessorBase` 允许�
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |--|--|
 | [关闭](#close) | 关闭访问器。 |
 | [GetHAccessor](#geth) | 检索访问器句柄。 |
@@ -82,7 +83,7 @@ void Close();
 HACCESSOR GetHAccessor(ULONG nAccessor) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nAccessor*<br/>
 [in] 访问器的零偏移量。
@@ -115,7 +116,7 @@ ULONG GetNumAccessors() const;
 bool IsAutoAccessor(ULONG nAccessor) const;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nAccessor*<br/>
 [in] 访问器的零偏移量。
@@ -134,7 +135,7 @@ bool IsAutoAccessor(ULONG nAccessor) const;
 HRESULT ReleaseAccessors(IUnknown* pUnk);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pUnk*<br/>
 中指向为 `IUnknown` 其创建了访问器的 COM 对象的接口的指针。
@@ -143,7 +144,7 @@ HRESULT ReleaseAccessors(IUnknown* pUnk);
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 从 [CAccessorRowset：： Close](./caccessorrowset-class.md#close)调用。
 

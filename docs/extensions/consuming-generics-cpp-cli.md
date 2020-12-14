@@ -1,16 +1,17 @@
 ---
+description: '了解详细信息：使用泛型 (c + +/CLI) '
 title: 使用泛型 (C++/CLI)
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-ms.openlocfilehash: 9abe97e3ec2b04bf631dcad7644f3c7dd668440e
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 3ecfd9f98a8397f96b18ff916bdf9eafe6444a33
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505998"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97220677"
 ---
 # <a name="consuming-generics-ccli"></a>使用泛型 (C++/CLI)
 
@@ -18,7 +19,7 @@ ms.locfileid: "91505998"
 
 ## <a name="example-generic-class-defined-in-c"></a>示例：在 C 中定义的泛型类 #
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例中演示 C# 定义的泛型类。
 
@@ -82,7 +83,7 @@ public class CircularList<ItemType> {
 
 ## <a name="example-consume-assembly-authored-in-c"></a>示例：使用用 C 编写的程序集 #
 
-### <a name="description"></a>说明
+### <a name="description"></a>描述
 
 此示例使用 C# 编写的程序集。
 
