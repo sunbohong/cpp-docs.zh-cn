@@ -1,4 +1,5 @@
 ---
+description: 了解更多： Platform：:D etails：： HeapEntryHandler 委托
 title: Platform::Details::HeapEntryHandler 委托
 ms.date: 12/30/2016
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Details::HeapEntryHandler Delegate
 ms.assetid: 97ba4e47-ac0f-47c6-a93c-67a21c0a16d3
-ms.openlocfilehash: e7acdef091511982a2117f15cff1042037d7b2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 722af46db815972275ca8b44ff0ffe7aa0b22c1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330396"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97305762"
 ---
 # <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler 委托
 
@@ -34,10 +35,10 @@ delegate HeapEntryHandler;
 
 ### <a name="requirements"></a>要求
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 **命名空间：** Platform::Details
 
 ## <a name="see-also"></a>请参阅
 
-[平台 Namespace](platform-namespace-c-cx.md)
+[平台命名空间](platform-namespace-c-cx.md)

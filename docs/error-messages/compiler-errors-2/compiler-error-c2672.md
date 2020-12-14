@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2672
 title: 编译器错误 C2672
 ms.date: 10/24/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2672
 ms.assetid: 7e86338a-2d4b-40fe-9dd2-ac6886f3f31a
-ms.openlocfilehash: 9f844b54285a7df69bfb4387a7afcc82dfef9252
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2de901eaa416f3ee675c7b09c342de74dc7207fe
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80177126"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97282076"
 ---
 # <a name="compiler-error-c2672"></a>编译器错误 C2672
 
@@ -19,7 +20,7 @@ ms.locfileid: "80177126"
 
 编译器找不到与指定函数匹配的重载函数。 找不到采用匹配参数的函数，或者没有任何匹配的函数在上下文中具有所需的可访问性。
 
-当由某些标准库容器或算法使用时，你的类型必须提供满足容器或算法的要求的可访问成员或友元函数。 例如，迭代器类型应派生自 `std::iterator<>`。 在容器元素类型上进行比较运算或使用其他运算符时，可能需要将类型视为左操作数和右操作数。 将类型用作右侧操作数可能需要将运算符作为类型的非成员函数来实现。
+当由某些标准库容器或算法使用时，你的类型必须提供满足容器或算法的要求的可访问成员或友元函数。 例如，迭代器类型应派生自 `std::iterator<>` 。 在容器元素类型上进行比较运算或使用其他运算符时，可能需要将类型视为左操作数和右操作数。 将类型用作右侧操作数可能需要将运算符作为类型的非成员函数来实现。
 
 ## <a name="example"></a>示例
 

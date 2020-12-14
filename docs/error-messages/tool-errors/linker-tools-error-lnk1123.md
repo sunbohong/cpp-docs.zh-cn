@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：链接器工具错误 LNK1123
 title: 链接器工具错误 LNK1123
 ms.date: 12/29/2017
 f1_keywords:
 - LNK1123
 helpviewer_keywords:
 - LNK1123
-ms.openlocfilehash: 31fd634291bfb0af17348197ae8a6225ac490c89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f9ee04a8e46c34e6ac5133c90488ed49619734d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509912"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281361"
 ---
 # <a name="linker-tools-error-lnk1123"></a>链接器工具错误 LNK1123
 
@@ -25,18 +26,18 @@ ms.locfileid: "69509912"
 
 - 将所有服务包和更新应用到你的 Visual Studio 版本。 这对于 Visual Studio 2010 尤为重要。
 
-- 禁用了尝试使用增量链接生成。 在菜单栏上，依次选择“项目”、“属性”。 在 "**属性页**" 对话框中, 展开 "**配置属性**"、"**链接器**"。 将 "**启用增量链接**" 的值更改为 "**否**"。
+- 禁用了尝试使用增量链接生成。 在菜单栏上，依次选择 " **项目**"、" **属性**"。 在 " **属性页** " 对话框中，展开 " **配置属性**"、" **链接器**"。 将 " **启用增量链接** " 的值更改为 " **否**"。
 
 - 验证在 PATH 环境变量中首次发现的 CVTRES.EXE 版本是否与由你的项目使用的生成工具的版本或平台工具集的版本相匹配。
 
-- 尝试关闭嵌入清单选项。 在菜单栏上，依次选择“项目”、“属性”。 在 "**属性页**" 对话框中, 展开 "**配置属性**"、"**清单工具**"、"**输入和输出**"。 将 "**嵌入清单**" 的值更改为 "**否**"。
+- 尝试关闭嵌入清单选项。 在菜单栏上，依次选择 " **项目**"、" **属性**"。 在 " **属性页** " 对话框中，展开 " **配置属性**"、" **清单工具**"、" **输入和输出**"。 将 " **嵌入清单** " 的值更改为 " **否**"。
 
-- 确保文件类型有效。 例如，确保 OMF 对象是 32 位而不是 16 位。 有关详细信息, 请参阅[。作为链接器输入](../../build/reference/dot-obj-files-as-linker-input.md)和[PE 格式](/windows/win32/Debug/pe-format)的 .obj 文件。
+- 确保文件类型有效。 例如，确保 OMF 对象是 32 位而不是 16 位。 有关详细信息，请参阅 [。作为链接器输入](../../build/reference/dot-obj-files-as-linker-input.md) 和 [PE 格式](/windows/win32/Debug/pe-format)的 .obj 文件。
 
 - 确保文件未损坏。 如有必要，请重新生成。
 
 ## <a name="see-also"></a>请参阅
 
-[用作链接器输入的 .Obj 文件](../../build/reference/dot-obj-files-as-linker-input.md)<br/>
-[EDITBIN 参考](../../build/reference/editbin-reference.md)<br/>
-[DUMPBIN 参考](../../build/reference/dumpbin-reference.md)
+[.作为链接器输入的 .obj 文件](../../build/reference/dot-obj-files-as-linker-input.md)<br/>
+[EDITBIN 引用](../../build/reference/editbin-reference.md)<br/>
+[DUMPBIN 引用](../../build/reference/dumpbin-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：如何：在 System：： Guid 和 _GUID 之间转换
 title: 如何：在 System::Guid 与 _GUID 之间进行转换
 ms.custom: get-started-article
 ms.date: 11/04/2016
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-ms.openlocfilehash: a0150053157d2694788cd50bf64097805a8eda88
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 1f2eb87f23e7f47221b4506c2c9e328803b800e7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545059"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304384"
 ---
 # <a name="how-to-convert-between-systemguid-and-_guid"></a>如何：在 System::Guid 与 _GUID 之间进行转换
 
-下面的代码示例演示如何在 <xref:System.Guid> 和 `_GUID`之间进行转换。
+下面的代码示例演示如何在和之间转换 <xref:System.Guid> `_GUID` 。
 
 ## <a name="example"></a>示例
 
@@ -65,6 +66,6 @@ int main() {
 11111111-2222-3333-4455-555555555555
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[使用 C++ 互操作（隐式 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+[使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md)

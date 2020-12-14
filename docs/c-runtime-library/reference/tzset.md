@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _tzset
 title: _tzset
 ms.date: 4/2/2020
 api_name:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 0791fe6002b751906c6bc6f83dafe1ccf202bc8b
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 3841acf0a0fa13b23a8c41dcf955feec76bc82d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562020"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97304527"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -50,7 +51,7 @@ void _tzset( void );
 
 ## <a name="remarks"></a>备注
 
-**_Tzset**函数使用环境变量**TZ**的当前设置将值分配给三个全局变量： **_daylight**、 **_timezone**和 **_tzname**。 这些变量由 [_ftime](ftime-ftime32-ftime64.md) 和 [localtime](localtime-localtime32-localtime64.md) 函数用来从协调世界时 (UTC) 到本地时间，以及从 [系统时间计算](time-time32-time64.md) utc。 使用以下语法设置 **TZ** 环境变量：
+**_Tzset** 函数使用环境变量 **TZ** 的当前设置将值分配给三个全局变量： **_daylight**、 **_timezone** 和 **_tzname**。 这些变量由 [_ftime](ftime-ftime32-ftime64.md) 和 [localtime](localtime-localtime32-localtime64.md) 函数用来从协调世界时 (UTC) 到本地时间，以及从 [系统时间计算](time-time32-time64.md) utc。 使用以下语法设置 **TZ** 环境变量：
 
 > **set TZ =**_tzn_ \[ **+**&#124;**-** ]*hh* \[ **：**_mm_ \[ **：**_ss_]] [*dzn*]
 
@@ -64,10 +65,10 @@ void _tzset( void );
  分钟。 与 *hh* 之间用冒号分隔 (**：**) 。
 
  *汇总* \
- 秒。 *用冒号*分隔 (**：**) 。
+ 秒。 *用冒号* 分隔 (**：**) 。
 
  *dzn* \
- 三字母夏令时区域，如 PDT。 如果夏令时中的夏时制永不生效，请将 **TZ** 设置为不使用 *dzn*值。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。
+ 三字母夏令时区域，如 PDT。 如果夏令时中的夏时制永不生效，请将 **TZ** 设置为不使用 *dzn* 值。 C 运行时库假设使用美国规则实现夏令时 (DST) 的计算。
 
 > [!NOTE]
 > 在计算时间差异的符号时一定要小心。 由于时间差异是从本地时间到 UTC 间（不是相反）的偏移量，因此其符号可能会与你直觉上判断的符号相反。 对于早于 UTC 的时区，时间差异为负；对于晚于 UTC 的时区，时间差异为正。
@@ -80,9 +81,9 @@ void _tzset( void );
 
 如果未设置 **TZ** 值， **_tzset** 将尝试使用由操作系统指定的时区信息。 在 Windows 操作系统中，此信息在控制面板的日期/时间应用程序中指定。 如果 **_tzset** 无法获取此信息，则默认情况下使用 PST8PDT，它表示太平洋时区。
 
-基于**TZ**环境变量值，以下值分配给全局变量 **_daylight**、 **_timezone**和在调用 **_tzset**时 **_tzname** ：
+基于 **TZ** 环境变量值，以下值分配给全局变量 **_daylight**、 **_timezone** 和在调用 **_tzset** 时 **_tzname** ：
 
-|全局变量|说明|默认值|
+|全局变量|描述|默认值|
 |---------------------|-----------------|-------------------|
 |**_daylight**|如果在 **TZ** 设置中指定了夏令时时区，则为非零值;否则为0。|1|
 |**_timezone**|UTC 和当地时间之间的差异（以秒为单位）。|28800（28800 秒等于 8 小时）|
@@ -99,7 +100,7 @@ void _tzset( void );
 |-------------|---------------------|
 |**_tzset**|\<time.h>|
 
-**_Tzset**函数是 Microsoft 特定的。 有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+**_Tzset** 函数是 Microsoft 特定的。 有关详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -136,7 +137,7 @@ _timezone = 28800
 _tzname[0] = Pacific Standard Time
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [时间管理](../../c-runtime-library/time-management.md)<br/>
 [asctime、_wasctime](asctime-wasctime.md)<br/>
