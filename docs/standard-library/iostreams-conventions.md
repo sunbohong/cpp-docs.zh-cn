@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： iostreams 约定
 title: iostreams 约定
 ms.date: 11/04/2016
 helpviewer_keywords:
 - iostream header
 - C++ Standard Library, iostreams
 ms.assetid: 9fe5ded0-37a1-48d1-9671-c81ffc4760ad
-ms.openlocfilehash: 7bfc497ec7c55a611d29cd62d076c0ac2e9b6e9f
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 3676c6aa14a5ebac1d39ed50821449caa7313e40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845453"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231389"
 ---
 # <a name="iostreams-conventions"></a>iostreams 约定
 
@@ -33,7 +34,7 @@ iostreams 标头支持文本和编码格式间的转换，以及支持输入和�
 
 剩余标头提供支持服务，通常只与 iostreams 类的最高级用户直接相关。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\

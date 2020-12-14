@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：模数 Struct
 title: modulus 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - modulus class
 - modulus struct
 ms.assetid: 86d342f7-b7b1-46a4-b0bb-6b7ae827369b
-ms.openlocfilehash: 20f2070c5b835d67e06d64a0a1b05141f08cf373
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f14edbcdb73a09fb9d44ff8d3dbd29bc0cdd2cdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246796"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230479"
 ---
 # <a name="modulus-struct"></a>modulus 结构
 
-执行模数除法运算的预定义的函数对象 (`operator%`) 对其自变量。
+执行模数除法运算的预定义函数对象 (`operator%` 对其参数) 。
 
 ## <a name="syntax"></a>语法
 
@@ -37,16 +38,16 @@ struct modulus<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*类型*， *T*， *U*\
+*Type*、 *T*、 *U*\
 支持 `operator%` 接受指定或推断类型的操作数的任何类型。
 
-*左侧*\
-取模运算的左操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*T*。
+*左中*\
+取模运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
-*右侧*\
-取模运算的右操作数。 专用化的模板采用类型的左值引用参数*类型*。 专用化的模板可完美转移左值和右值引用参数的类型推断*U*。
+*然后*\
+取模运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ## <a name="return-value"></a>返回值
 

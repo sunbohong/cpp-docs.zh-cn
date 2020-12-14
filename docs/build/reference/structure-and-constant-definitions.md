@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息：结构和常量定义
 title: 结构和常量定义
 ms.date: 11/04/2016
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-ms.openlocfilehash: ea7aa1ec25bcd0e8531ef63848de26da164da668
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a9e372815e25883cf69497c77388002a7015572
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317856"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230323"
 ---
 # <a name="structure-and-constant-definitions"></a>结构和常量定义
 
-默认帮助器例程使用几种结构与挂钩函数和过程的任何异常进行通信。 下面是通知和失败值、 信息结构和传递挂钩到的挂钩函数指针类型：
+默认 helper 例程使用几个结构与挂钩函数通信，并在出现任何异常期间进行通信。 下面是通知和失败值、信息结构和传递给挂钩的指针挂钩函数类型：
 
 ```
 //

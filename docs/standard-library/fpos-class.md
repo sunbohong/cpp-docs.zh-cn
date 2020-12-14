@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： fpos 类
 title: fpos 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 37536443455ca4ddc40568e15951b814982d4ad9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 22b9a5e69b179ef4206a0664b51b92cc55d4320d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87193297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232325"
 ---
 # <a name="fpos-class"></a>fpos 类
 
@@ -35,14 +36,14 @@ template <class Statetype>
 class fpos
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Statetype*\
 状态信息。
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[fpos](#fpos)|创建一个包含有关流中位置（偏移量）信息的对象。|
 
@@ -51,11 +52,11 @@ class fpos
 |成员函数|说明|
 |-|-|
 |[seekpos](#seekpos)|仅由 C++ 标准库内部使用。 请勿从代码中调用此方法。|
-|State|设置或返回转换状态。|
+|[state](#state)|设置或返回转换状态。|
 
 ### <a name="operators"></a>运算符
 
-|操作员|描述|
+|运算符|描述|
 |-|-|
 |[operator！ =](#op_neq)|测试文件位置指示器是否不相等。|
 |[operator +](#op_add)|递增文件位置指示器。|
@@ -71,7 +72,7 @@ class fpos
 
 **命名空间:** std
 
-## <a name="fposfpos"></a><a name="fpos"></a>fpos：： fpos
+## <a name="fposfpos"></a><a name="fpos"></a> fpos：： fpos
 
 创建一个包含有关流中位置（偏移量）信息的对象。
 
@@ -81,7 +82,7 @@ fpos(streamoff _Off = 0);
 fpos(Statetype _State, fpos_t _Filepos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Off*\
 进入流的偏移量。
@@ -94,11 +95,11 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="remarks"></a>备注
 
-第一个构造函数存储相对于文件开头和初始转换状态（如果有问题）的偏移量 *_Off*。 如果 *_Off*为-1，则生成的对象表示无效的流位置。
+第一个构造函数存储相对于文件开头和初始转换状态的偏移量 *_Off* (如果该问题) 。 如果 *_Off* 为-1，则生成的对象表示无效的流位置。
 
 第二个构造函数存储零偏移量并且对象 *_State*。
 
-## <a name="fposoperator"></a><a name="op_neq"></a>fpos：： operator！ =
+## <a name="fposoperator"></a><a name="op_neq"></a> fpos：： operator！ =
 
 测试文件位置指示器是否不相等。
 
@@ -106,7 +107,7 @@ fpos(Statetype _State, fpos_t _Filepos);
 bool operator!=(const fpos<Statetype>& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要与之比较的文件位置指示器。
@@ -171,7 +172,7 @@ int main( )
 }
 ```
 
-## <a name="fposoperator"></a><a name="op_add"></a>fpos：： operator +
+## <a name="fposoperator"></a><a name="op_add"></a> fpos：： operator +
 
 递增文件位置指示器。
 
@@ -179,7 +180,7 @@ int main( )
 fpos<Statetype> operator+(streamoff _Off) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Off*\
 要按其递增文件位置指示器的偏移量。
@@ -196,7 +197,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator+` 的示例。
 
-## <a name="fposoperator"></a><a name="op_add_eq"></a>fpos：： operator + =
+## <a name="fposoperator"></a><a name="op_add_eq"></a> fpos：： operator + =
 
 递增文件位置指示器。
 
@@ -204,7 +205,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 fpos<Statetype>& operator+=(streamoff _Off);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Off*\
 要按其递增文件位置指示器的偏移量。
@@ -215,13 +216,13 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>备注
 
-成员函数将 *_Off*添加到存储的 offset 成员对象，然后返回** \* this**。 对于文件内的位置，结果通常仅对不具有状态依赖编码的二进制流有效。
+成员函数将 *_Off* 添加到存储的 offset 成员对象，然后返回 **\* this**。 对于文件内的位置，结果通常仅对不具有状态依赖编码的二进制流有效。
 
 ### <a name="example"></a>示例
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator+=` 的示例。
 
-## <a name="fposoperator-"></a><a name="operator-"></a>fpos：： operator-
+## <a name="fposoperator-"></a><a name="operator-"></a> fpos：： operator-
 
 递减文件位置指示器。
 
@@ -231,7 +232,7 @@ streamoff operator-(const fpos<Statetype>& right) const;
 fpos<Statetype> operator-(streamoff _Off) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 文件位置。
@@ -247,7 +248,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator-` 的示例。
 
-## <a name="fposoperator-"></a><a name="operator-_eq"></a>fpos：： operator-=
+## <a name="fposoperator-"></a><a name="operator-_eq"></a> fpos：： operator-=
 
 递减文件位置指示器。
 
@@ -255,7 +256,7 @@ fpos<Statetype> operator-(streamoff _Off) const;
 fpos<Statetype>& operator-=(streamoff _Off);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Off*\
 流偏移量。
@@ -272,7 +273,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator-=` 的示例。
 
-## <a name="fposoperator"></a><a name="op_eq_eq"></a>fpos：： operator = =
+## <a name="fposoperator"></a><a name="op_eq_eq"></a> fpos：： operator = =
 
 测试文件位置指示器是否相等。
 
@@ -280,7 +281,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 bool operator==(const fpos<Statetype>& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要与之比较的文件位置指示器。
@@ -297,7 +298,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 请参阅 [operator!=](#op_neq)，了解使用 `operator+=` 的示例。
 
-## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a>fpos：： operator streamoff
+## <a name="fposoperator-streamoff"></a><a name="op_streamoff"></a> fpos：： operator streamoff
 
 将 `fpos` 类型的对象转换为 `streamoff` 类型的对象。
 
@@ -336,7 +337,7 @@ int main( )
 0
 ```
 
-## <a name="fposseekpos"></a><a name="seekpos"></a>fpos：： seekpos
+## <a name="fposseekpos"></a><a name="seekpos"></a> fpos：： seekpos
 
 此方法仅由 C++ 标准库内部使用。 请勿从代码中调用此方法。
 
@@ -344,7 +345,7 @@ int main( )
 fpos_t seekpos() const;
 ```
 
-## <a name="fposstate"></a><a name="state"></a>fpos：： state
+## <a name="fposstate"></a><a name="state"></a> fpos：： state
 
 设置或返回转换状态。
 
@@ -354,7 +355,7 @@ Statetype state() const;
 void state(Statetype _State);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_State*\
 新的转换状态。
@@ -365,7 +366,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>备注
 
-第一个成员函数返回存储在成员对象中的值 `St` 。 第二个成员函数将 *_State*存储在 `St` 成员对象中。
+第一个成员函数返回存储在成员对象中的值 `St` 。 第二个成员函数将 *_State* 存储在 `St` 成员对象中。
 
 ### <a name="example"></a>示例
 
@@ -392,7 +393,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\

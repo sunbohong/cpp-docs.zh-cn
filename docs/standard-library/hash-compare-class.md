@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： hash_compare 类
 title: hash_compare 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: 4fb44a371630a66275f6ef59a0bf66b4cb73a71f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 510de9901e58e130a53410b688c22324714b9962
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689564"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231935"
 ---
 # <a name="hash_compare-class"></a>hash_compare 类
 
-类模板描述了一个对象，任何哈希关联容器（hash_map、hash_multimap、hash_set 或 hash_multiset）都可使用该对象来对它们所包含的元素进行排序和哈希处理。
+类模板描述了一个对象，任何哈希关联容器（hash_map、hash_multimap、hash_set 或 hash_multiset）都可以使用该对象来对它们所包含的元素进行排序和哈希处理。
 
 ## <a name="syntax"></a>语法
 
@@ -23,15 +24,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>备注
 
-每个哈希关联容器都存储一个 `Traits` 类型的哈希特征对象（模板参数）。 可以从 hash_compare 专用化中派生一个类，用于选择性地重写某些函数和对象，也可以在满足某些最低要求时提供你所拥有的该类的版本。 具体而言，对于类型 `hash_compare<Key, Traits>` 的对象 hash_comp，上述容器需要以下行为：
+每个哈希关联容器都存储一个类型为 `Traits` (模板参数) 的哈希特征对象。 可以从 hash_compare 专用化中派生一个类，用于选择性地重写某些函数和对象，也可以在满足某些最低要求时提供你所拥有的该类的版本。 具体而言，对于类型为的对象 hash_comp `hash_compare<Key, Traits>` ，上述容器需要以下行为：
 
-- 对于 `Key` 类型 `key` 的所有值，调用**hash_comp**（`key`）将用作哈希函数，该函数将生成类型 `size_t` 的值的分布。 由 hash_compare 提供的函数将返回 `key`。
+- 对于类型的所有值 `key` `Key` ，调用 **hash_comp** (`key`) 用作哈希函数，这将产生类型的值的分布 `size_t` 。 由 hash_compare 提供的函数将返回 `key`。
 
-- 对于在序列中 `key2` 前面 `key1` 类型 `Key` 的任何值，并且具有相同的哈希值（由哈希函数返回的值）， **hash_comp**（`key2`，`key1`）为 false。 函数必须对类型 `Key` 的值施加总计排序。 Hash_compare 提供的函数将返回*comp*（`key2`、`key1`） `,` 其中， *comp*是在构造对象 hash_comp 时可以指定的类型 `Traits` 的存储对象。 对于默认 `Traits` 参数类型 `less<Key>`，排序键从不减小值。
+- 对于位于序列中之前的类型的任何值， `key1` `Key` `key2` 并且具有相同的哈希值 (哈希函数返回的值) ， **hash_comp** (`key2` ， `key1`) 为 false。 函数必须对类型为的值施加总计排序 `Key` 。 Hash_compare 提供的函数 *(返回* `key2` `key1`) ，其中， `,` *comp* 是一个类型为的存储对象， `Traits` 您可以在构造对象 hash_comp 时指定该对象。 对于默认 `Traits` 参数类型 `less<Key>` ，排序键的值不会减少。
 
-- 整数常量 `bucket_size` 指定容器不应尝试超过的每个 "存储桶" （哈希表项）的平均元素数。 该数目必须大于零。 由 hash_compare 提供的值为 4。
+- 整数常量 `bucket_size` 指定容器应不应尝试超过的每个 "bucket" (哈希表条目) 元素的平均数量。 该数目必须大于零。 由 hash_compare 提供的值为 4。
 
-- 整数常量 `min_buckets` 指定要在哈希表中维护的最小存储桶数。 该数目必须是 2 的幂且大于零。 Hash_compare 提供的值为 8。
+- 整数常量 `min_buckets` 指定要保留在哈希表中的存储桶的最小数目。 该数目必须是 2 的幂且大于零。 Hash_compare 提供的值为 8。
 
 ## <a name="example"></a>示例
 
@@ -39,11 +40,11 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<hash_map>
+**标头：**\<hash_map>
 
 **命名空间：** stdext
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 标准库参考](../standard-library/cpp-standard-library-reference.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

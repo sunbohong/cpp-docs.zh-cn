@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 函数 &gt; 函数
 title: '&lt;functional&gt; 函数'
 ms.date: 02/21/2019
 f1_keywords:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 5e3aa35395c8fd5a42d7127d0b6072a3edf4ace5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: f3ae9fca75801555c0341923d0fc42db94546cd1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232156"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 函数
 
@@ -63,7 +64,7 @@ template <class RTy, class FT, class T1, class T2, ..., class TN>
     unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fey*\
 要调用的对象的类型。
@@ -77,11 +78,11 @@ template <class RTy, class FT, class T1, class T2, ..., class TN>
 *tN*\
 第 N 个调用参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 `FT, T1, T2, ..., TN` 必须为可构造，且 `INVOKE(fn, t1, ..., tN)` 必须是某些值的有效表达式 `w1, w2, ..., wN` 。
 
-第一个模板函数返回具有弱结果类型的转发调用包装器 `g`。 Invoke_result 的效果 `g(u1, u2, ..., uM)` `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md) `<FT cv (V1, V2, ..., VN)>::type)` ，其中 `cv` 是的 cv 限定符， `g` 绑定参数的值和类型 `v1, v2, ..., vN` 按以下指定确定。 你可以使用它将参数绑定到可调用的对象，从而使可调用对象具有定制的参数列表。
+第一个模板函数返回具有弱结果类型的转发调用包装器 `g`。 Invoke_result 的效果 `g(u1, u2, ..., uM)` `INVOKE(f, v1, v2, ..., vN,` [](../standard-library/invoke-result-class.md) `<FT cv (V1, V2, ..., VN)>::type)` ，其中 `cv` 是的 cv 限定符， `g` 绑定参数的值和类型 `v1, v2, ..., vN` 按以下指定确定。 你可以使用它将参数绑定到可调用的对象，从而使可调用对象具有定制的参数列表。
 
 第二个模板函数返回转移调用包装器 `g`，该包装器具有作为 `RTy` 的同义词的嵌套类型 `result_type`。 `g(u1, u2, ..., uM)` 产生的作用是 `INVOKE(f, v1, v2, ..., vN, RTy)`，其中 `cv` 是 `g` 的 cv 限定符，绑定参数 `v1, v2, ..., vN` 的值和类型按以下指定内容确定。 你可以使用它将参数绑定到可调用的对象，从而使可调用对象具有定制的参数列表和指定的返回类型。
 
@@ -161,7 +162,7 @@ template <class Operation, class Type>
     binder1st <Operation> bind1st (const Operation& func, const Type& left);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *求*\
 要转换为一元函数对象的二元函数对象。
@@ -171,9 +172,9 @@ template <class Operation, class Type>
 
 ### <a name="return-value"></a>返回值
 
-将二元函数对象的第一个参数绑定到 *左侧*值后生成的一元函数对象。
+将二元函数对象的第一个参数绑定到 *左侧* 值后生成的一元函数对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数联编器是一种函数适配器。 由于它们返回函数对象，因此可以在某些类型的函数组合中使用它们来构造更复杂且功能强大的表达式。
 
@@ -255,7 +256,7 @@ template <class Operation, class Type>
     binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *求*\
 要转换为一元函数对象的二元函数对象。
@@ -265,9 +266,9 @@ template <class Operation, class Type>
 
 ### <a name="return-value"></a>返回值
 
-将二元函数对象的第二个参数绑定到 *右*的一元函数对象结果。
+将二元函数对象的第二个参数绑定到 *右* 的一元函数对象结果。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数联编器是一种函数适配器。 由于它们返回函数对象，因此可以在某些类型的函数组合中使用它们来构造更复杂且功能强大的表达式。
 
@@ -362,22 +363,22 @@ struct bit_and<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Type*、 *T*、 *U*\
 支持 `operator&` 接受指定或推断类型的操作数的任何类型。
 
 *左中*\
-按位 AND 运算的左操作数。 非专用化的模板 *采用类型为*的左值引用参数。 专用模板完全转发推断类型 *T*的左值和右值引用参数。
+按位 AND 运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
 *然后*\
-按位 AND 运算的右操作数。 非专用化的模板 *采用类型为*的左值引用参数。 专用模板完全转发推断类型 *U*的左值和右值引用参数。
+按位 AND 运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ### <a name="return-value"></a>返回值
 
 `Left & Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator&` 返回的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `bit_and` 函子被限制为基本数据类型的整型类型，或限制为实现二元 `operator&` 的用户定义的类型。
 
@@ -401,19 +402,19 @@ struct bit_not<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 支持一元 `operator~` 的类型。
 
 *然后*\
-按位求补运算的操作数。 非专用化的模板 *采用类型为*的左值引用参数。 专用模板完全转发推断 *类型类型的*左值或右值引用自变量。
+按位求补运算的操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断 *类型类型的* 左值或右值引用自变量。
 
 ### <a name="return-value"></a>返回值
 
 `~ Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator~` 返回的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `bit_not` 函子被限制为基本数据类型的整型类型，或限制为实现二元 `operator~` 的用户定义的类型。
 
@@ -439,22 +440,22 @@ struct bit_or<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Type*、 *T*、 *U*\
 支持 `operator|` 接受指定或推断类型的操作数的任何类型。
 
 *左中*\
-按位或运算的左操作数。 非专用化的模板 *采用类型为*的左值引用参数。 专用模板完全转发推断类型 *T*的左值和右值引用参数。
+按位或运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
 *然后*\
-按位或运算的右操作数。 非专用化的模板 *采用类型为*的左值引用参数。 专用模板完全转发推断类型 *U*的左值和右值引用参数。
+按位或运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ### <a name="return-value"></a>返回值
 
 `Left | Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator|` 返回的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `bit_or` 函子被限制为基本数据类型的整型类型，或限制为实现 `operator|` 的用户定义的类型。
 
@@ -480,22 +481,22 @@ struct bit_xor<void>
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Type*、 *T*、 *U*\
 支持 `operator^` 接受指定或推断类型的操作数的任何类型。
 
 *左中*\
-按位 XOR 运算的左操作数。 非专用化的模板 *采用类型为*的左值引用参数。 专用模板完全转发推断类型 *T*的左值和右值引用参数。
+按位 XOR 运算的左操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *T* 的左值和右值引用参数。
 
 *然后*\
-按位 XOR 运算的右操作数。 非专用化的模板 *采用类型为*的左值引用参数。 专用模板完全转发推断类型 *U*的左值和右值引用参数。
+按位 XOR 运算的右操作数。 非专用化的模板 *采用类型为* 的左值引用参数。 专用模板完全转发推断类型 *U* 的左值和右值引用参数。
 
 ### <a name="return-value"></a>返回值
 
 `Left ^ Right` 的结果。 专专用化模板可完美转移结果，该结果具有由 `operator^` 返回的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `bit_xor` 函子被限制为基本数据类型的整型类型，或限制为实现二元 `operator^` 的用户定义的类型。
 
@@ -511,7 +512,7 @@ template <class Ty>
 reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要包装的参数的类型。
@@ -519,7 +520,7 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 *与我们联系*\
 要包装的参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个函数返回 `reference_wrapper<const Ty>(arg.get())`。 可以使用它来包装常量引用。 第二个函数返回 `reference_wrapper<const Ty>(arg)`。 可以使用它将包装的引用重新包装为常量引用。
 
@@ -565,7 +566,7 @@ invoke_result_t<Callable, Args...>
     invoke(Callable&& fn, Args&&... args) noexcept(/* specification */);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *多次*\
 要调用的对象的类型。
@@ -582,9 +583,9 @@ invoke_result_t<Callable, Args...>
 *版*\
 **`noexcept`** 规范 `std::is_nothrow_invocable_v<Callable, Args>)` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-使用*parameters 参数*调用可调用对象*fn* 。 实际上， `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` 伪函数指的是 `INVOKE(f, t1, t2, ..., tN)` 下列其中一项：
+使用 *parameters 参数* 调用可调用对象 *fn* 。 实际上， `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)` 伪函数指的是 `INVOKE(f, t1, t2, ..., tN)` 下列其中一项：
 
 - 当 `f` 是指向类 `T` 的成员函数的指针，且 `t1` 是类型 `T` 的对象、对类型 `T` 的对象的引用或对派生自 `T` 的类型的对象的引用时，它表示 `(t1.*f)(t2, ..., tN)`。 也就是说，当 `std::is_base_of<T, std::decay_t<decltype(t1)>>::value` 为 true 时。
 
@@ -685,7 +686,7 @@ template <class RTy, class Ty>
 unspecified mem_fn(RTy Ty::*pm);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *也*\
 包装函数的返回类型。
@@ -693,13 +694,13 @@ unspecified mem_fn(RTy Ty::*pm);
 *Ty*\
 成员函数指针的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数返回一个具有弱结果类型的简单调用包装器 `cw` ，使表达式与 `cw(t, a2, ..., aN)` 相同 `INVOKE(pm, t, a2, ..., aN)` 。 它不会引发任何异常。
 
 返回的调用包装派生自 `std::unary_function<cv Ty*, RTy>` (，并将嵌套类型定义 `result_type` 为 *也* 的同义词，将) 嵌套类型定义为 `argument_type` `cv Ty*` 仅当类型 *Ty* 为包含 cv 限定符的成员函数的指针时， `cv` 不使用参数。
 
-返回的调用包装器派生自 `std::binary_function<cv Ty*, T2, RTy>` (，并将嵌套类型定义为也的同义词，将嵌套类型定义为的同义词 `result_type` ，将嵌套类型定义为) 的*RTy* `first argument_type` `cv Ty*` `second argument_type` 同义词 `T2` 。仅当类型*Ty*是指向具有 cv 限定符的成员函数的指针时 `cv` ，它具有一个类型为的参数 `T2` 。
+返回的调用包装器派生自 `std::binary_function<cv Ty*, T2, RTy>` (，并将嵌套类型定义为也的同义词，将嵌套类型定义为的同义词 `result_type` ，将嵌套类型定义为) 的 `first argument_type` `cv Ty*` `second argument_type` 同义词 `T2` 。仅当类型 *Ty* 是指向具有 cv 限定符的成员函数的指针时 `cv` ，它具有一个类型为的参数 `T2` 。
 
 ### <a name="example"></a>示例
 
@@ -757,7 +758,7 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMem*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
@@ -844,7 +845,7 @@ template <class Result, class Type, class Arg>
 const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) const);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pMem*\
 一个指针，指向要转换为函数对象的 `Type` 类成员函数。
@@ -940,7 +941,7 @@ template <class UnaryPredicate>
 unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *推断*\
 要求反的一元谓词。
@@ -949,7 +950,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 已修改的一元谓词的求反的一元谓词。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 `unary_negate` 是从一元谓词构造的 `predicate(x)` ，则返回 `!predicate(x)` 。
 
@@ -1012,7 +1013,7 @@ template <class BinaryPredicate>
 binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *求*\
 要进行求反的二元谓词。
@@ -1021,7 +1022,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 已修改的二元谓词的求反的二元谓词。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果 `binary_negate` 是从二元谓词构造的 `binary_predicate(x, y)` ，则返回 `!binary_predicate(x, y)` 。
 
@@ -1088,12 +1089,12 @@ template <class Callable>
 /* unspecified */ not_fn(Callable&& func);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *求*\
 用于构造转发调用包装器的可调用对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 根据此处于阐释类，模板函数返回的调用包装器（例如 `return call_wrapper(std::forward<Callable>(func))` ）：
 
@@ -1191,18 +1192,18 @@ template <class Arg1, class Arg2, class Result>
 pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(Result (*pfunc)(Arg1, Arg2));
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pfunc*\
 要转换为自适应函数的一元或二元函数指针。
 
 ### <a name="return-value"></a>返回值
 
-第一个模板函数[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)  < `Arg`> () **Result**返回一元函数 pointer_to_unary_function \* `pfunc` 。
+第一个模板函数[](../standard-library/pointer-to-unary-function-class.md)  < `Arg`> () 返回一元函数 pointer_to_unary_function \* `pfunc` 。
 
 第二个模板函数将 [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \<**Arg1**, **Arg2**, **Result**> () 返回二元函数 \* `pfunc` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 函数指针是一个函数对象。 它可以被传递到需要函数作为参数的任何算法，但它不具有适应性。 若要将其与适配器一起使用，需要使用其嵌套类型的相关信息，例如，将值绑定到它或对其求反。 通过 `ptr_fun` 帮助程序函数转换一元和二元函数指针可允许函数适配器使用一元和二元函数指针。
 
@@ -1311,7 +1312,7 @@ template <class FT>
     void swap(function<FT>& f1, function<FT>& f2);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *英尺*\
 由函数对象控制的类型。
@@ -1322,7 +1323,7 @@ template <class FT>
 *组合键*\
 第二个函数对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该函数返回 `f1.swap(f2)`。
 

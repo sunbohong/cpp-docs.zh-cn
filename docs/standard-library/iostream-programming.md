@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： iostream 编程
 title: iostream 编程
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4b9c4e889a8c63512a4df8891116ee8d99bbe50f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231376"
 ---
 # <a name="iostream-programming"></a>iostream 编程
 
@@ -40,7 +41,7 @@ ms.locfileid: "68449069"
 
 [输入/输出流](../standard-library/input-output-streams.md)
 
-[带自变量的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)
+[带参数的自定义操控器](../standard-library/custom-manipulators-with-arguments.md)
 
 ## <a name="see-also"></a>请参阅
 

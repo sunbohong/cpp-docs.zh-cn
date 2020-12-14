@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： messages_byname 类
 title: messages_byname 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 960db9dd411e4ac42f81a0027e91ae1001b7877d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689333"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230518"
 ---
 # <a name="messages_byname-class"></a>messages_byname 类
 
@@ -37,24 +38,24 @@ protected:
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Locname* \
+*_Locname*\
 已命名的区域设置。
 
-*_Refs* \
+*_Refs*\
 初始引用计数。
 
 ## <a name="remarks"></a>备注
 
-其行为由已命名的区域设置 *_Locname*确定。 每个构造函数通过 [messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) 初始化其基对象。
+其行为由已命名的区域设置 *_Locname* 确定。 每个构造函数都将 () 的[消息](../standard-library/messages-class.md#messages)初始化其基对象 \<CharType> `_Refs` 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

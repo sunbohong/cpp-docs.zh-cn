@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：存根
 title: STUB
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - STUB .def file statement
 ms.assetid: 0a3b9643-19ed-47e9-8173-ee16bc8ed056
-ms.openlocfilehash: 5224fdaa2a03dc615c9e7e7bb7f7ba822a40807e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79a2002c119bf211652e2aab51d9656b36e3d159
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318116"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230284"
 ---
 # <a name="stub"></a>STUB
 
-生成虚拟设备驱动程序 (VxD) 的模块定义文件中使用时，可以指定文件的名称包含 IMAGE_DOS_HEADER 结构 （WINNT 中定义。H) 若要在虚拟设备驱动程序 (VxD) 中使用而不是默认标头。
+当在 (VxD) 的虚拟设备驱动程序生成虚拟设备驱动程序的模块定义文件中使用时，允许您指定一个文件名，该文件包含在 WINNT 中定义 (IMAGE_DOS_HEADER 结构。H) 用于虚拟设备驱动程序 (VxD) ，而不是默认标头。
 
 ```
 STUB:filename
@@ -23,10 +24,10 @@ STUB:filename
 
 ## <a name="remarks"></a>备注
 
-另一种方法指定*文件名*是与[/存根](stub-ms-dos-stub-file-name.md)链接器选项。
+指定 *filename* 的等效方法是使用 [/STUB](stub-ms-dos-stub-file-name.md) 链接器选项。
 
-存根 （stub） 是有效的模块定义文件中仅在生成 VxD 时。
+存根仅在生成 VxD 时在模块定义文件中有效。
 
 ## <a name="see-also"></a>请参阅
 
-[模块定义语句的规则](rules-for-module-definition-statements.md)
+[Module-Definition 语句的规则](rules-for-module-definition-statements.md)

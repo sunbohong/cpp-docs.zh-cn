@@ -1,4 +1,5 @@
 ---
+description: 了解更多：函数类
 title: function 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 052cbba69aa99d33de963a3e360e6951a6006bec
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 30e81e297791691ba5736b4e116fc08ab4229f0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831458"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232168"
 ---
 # <a name="function-class"></a>function 类
 
@@ -77,7 +78,7 @@ public:
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fty*\
 要包装的函数类型。
@@ -85,7 +86,7 @@ public:
 *Ax150*\
 allocator 函数。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 类模板是调用签名为的调用包装器 `Ret(T1, T2, ..., TN)` 。 你可以使用它在统一包装器中包含各种可调用对象。
 
@@ -107,19 +108,19 @@ allocator 函数。
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[函数](#function)|构造一个包装器，该包装器或者为空，或者存储具有固定签名的任意类型的可调用对象。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[result_type](#result_type)|存储的可调对象的返回类型。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[assign](#assign)|将可调用对象分配给此函数对象。|
 |[swap](#swap)|交换两个可调用对象。|
@@ -128,7 +129,7 @@ allocator 函数。
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[运算符未指定](#op_unspecified)|测试存储的可调用对象是否存在。|
 |[运算符 ( # B1 ](#op_call)|调用可调用的对象。|
@@ -150,7 +151,7 @@ template <class Fx, class Alloc>
         const Alloc& Ax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Func*\
 可调用的对象。
@@ -161,7 +162,7 @@ template <class Fx, class Alloc>
 *Ax150*\
 分配器对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个成员函数将 `callable object` 保留的替换 **`*this`** 为作为传递的可调用对象 `operand` 。 这两个方法都将存储分配给分配器对象 *Ax*。
 
@@ -188,7 +189,7 @@ template <class Fx, class Alloc>
         const Alloc& Ax);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要复制的函数对象。
@@ -208,7 +209,7 @@ template <class Fx, class Alloc>
 *_Fnref*\
 要包装的可调用对象引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 前两个构造函数构造一个空 `function` 对象。 接下来的三个构造函数构造一个 `function` 对象，它保存作为操作数传递的可调用对象。 最后两个构造函数使用分配器对象 Ax 分配存储。
 
@@ -290,7 +291,7 @@ g is empty (correct).
 operator unspecified();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅当对象不为空时，运算符才会返回一个可转换为且为 true 的值 **`bool`** 。 可将它用于测试对象是否为空。
 
@@ -335,7 +336,7 @@ result_type operator()(
     TN tN);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TN*\
 第 N 个调用参数的类型。
@@ -343,7 +344,7 @@ result_type operator()(
 *tN*\
 第 N 个调用参数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回 `INVOKE(fn, t1, t2, ..., tN, Ret)` ，其中 `fn` 是存储在中的目标对象 **`*this`** 。 可以使用它来调用包装的可调用对象。
 
@@ -388,7 +389,7 @@ template <class Fty>
     function& operator=(reference_wrapper<Fty> fnref);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *npc*\
 空指针常量。
@@ -402,7 +403,7 @@ template <class Fty>
 *fnref*\
 要包装的可调用对象引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个运算符都 **`*this`** 用作为操作数传递的可调用对象替换持有的可调用对象。
 
@@ -465,7 +466,7 @@ val == -3
 typedef Ret result_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 typedef 是模板调用签名内类型 `Ret` 的同义词。 你可以使用它来确定包装的可调用对象的返回类型。
 
@@ -507,14 +508,14 @@ val == -3
 void swap(function& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要进行交换的函数对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数交换和右之间的目标 **`*this`** 对象*right*。 它定时执行此操作且不引发异常。
+成员函数交换和右之间的目标 **`*this`** 对象。 它定时执行此操作且不引发异常。
 
 ### <a name="example"></a>示例
 
@@ -569,12 +570,12 @@ template <class Fty2>
     const Fty2 *target() const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Fty2*\
 要测试的目标可调用对象类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型 *Fty2* 对于参数类型和返回类型必须是可调用的 `T1, T2, ..., TN` `Ret` 。 如果 `target_type() == typeid(Fty2)`，则成员模板函数返回目标对象的地址；否则返回 0。
 
@@ -627,7 +628,7 @@ no target == true
 const std::type_info& target_type() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果为空，则成员函数将返回; `typeid(void)` **`*this`** 否则返回 `typeid(T)` ，其中 `T` 是目标对象的类型。
 

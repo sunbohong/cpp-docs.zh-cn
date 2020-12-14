@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; 未来 &gt; 函数
 title: '&lt;future&gt; 函数'
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: d419984243d3970533f30814fe0ff451199afb34
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 56a43ecec155f580d8f798917ea6e53ce41bdd76
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837965"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232104"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函数
 
@@ -31,7 +32,7 @@ ms.locfileid: "88837965"
 
 ## <a name="async"></a><a name="async"></a> 异步
 
-表示一个异步提供程序**。
+表示一个异步提供程序。
 
 ```cpp
 template <class Fn, class... ArgTypes>
@@ -43,16 +44,16 @@ future<typename result_of<Fn(ArgTypes...)>::type>
     async(launch policy, Fn&& fn, ArgTypes&&... args);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *政策*\
 一个 [launch](../standard-library/future-enums.md#launch) 值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 缩写的定义：
 
-|缩写|说明|
+|缩写|描述|
 |-|-|
 |*dfn*|调用 `decay_copy(forward<Fn>(fn))` 的结果。|
 |*dargs*|调用 `decay_copy(forward<ArgsTypes>(args...))` 的结果。|
@@ -60,7 +61,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 第一个模板函数返回 `async(launch::any, fn, args...)`。
 
-第二个函数返回一个 `future<Ty>` 对象，其关联的异步状态** 包含一个结果以及 dfn** 和 dargs** 的值和一个用于管理单独的执行线程的线程对象。
+第二个函数返回一个 `future<Ty>` 对象，其关联的异步状态包含一个结果以及 dfn 和 dargs 的值和一个用于管理单独的执行线程的线程对象。
 
 除非 `decay<Fn>::type` 是一种不同于 launch 的类型，否则第二个函数将不参与重载解析。
 
@@ -68,7 +69,7 @@ C + + 标准表明，如果 policy 为启动：： async，函数将创建一个
 
 如果 *策略* 为 `launch::deferred` ，则函数会将其关联异步状态标记为包含一个 *延迟函数* 并返回。 对任何等待关联异步状态生效的非计时函数的第一次调用都将通过计算 `INVOKE(dfn, dargs..., Ty)` 来调用延迟函数。
 
-任何情况下，在通过引发异常或正常返回完成 `INVOKE(dfn, dargs..., Ty)` 的计算之前，`future` 对象的关联异步状态不会设置为** 就绪。 如果引发了异常，则关联异步状态的结果为异常，否则为计算返回的任何值。
+任何情况下，在通过引发异常或正常返回完成 `INVOKE(dfn, dargs..., Ty)` 的计算之前，`future` 对象的关联异步状态不会设置为就绪。 如果引发了异常，则关联异步状态的结果为异常，否则为计算返回的任何值。
 
 > [!NOTE]
 > 对于一个附加到以 `std::async` 开头的任务的 `future`（或最后一个 [shared_future](../standard-library/shared-future-class.md)），如果任务尚未完成，则析构函数将阻塞；即，如果此线程尚未调用 `.get()` 或 `.wait()` 且任务仍在进行，则析构函数将阻塞。 如果从 `future` 中获得的 `std::async` 移出局部范围，则使用它的其他代码必须知道其析构函数可能在共享状态变成已就绪时阻塞。
@@ -91,7 +92,7 @@ const error_category& future_category() noexcept;
 inline error_code make_error_code(future_errc Errno) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Errno*\
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
@@ -108,7 +109,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 inline error_condition make_error_condition(future_errc Errno) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Errno*\
 一个标识已报告错误的 [future_errc](../standard-library/future-enums.md#future_errc) 值。
@@ -119,7 +120,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ## <a name="swap"></a><a name="swap"></a> 购
 
-将一个 `promise` 对象的关联异步状态** 与另一对象的关联异步状态交换。
+将一个 `promise` 对象的关联异步状态与另一对象的关联异步状态交换。
 
 ```cpp
 template <class Ty>
@@ -129,7 +130,7 @@ template <class Ty, class... ArgTypes>
 void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& Right) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 左 `promise` 对象。
@@ -137,6 +138,6 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 *然后*\
 正确的 `promise` 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<future>](../standard-library/future.md)

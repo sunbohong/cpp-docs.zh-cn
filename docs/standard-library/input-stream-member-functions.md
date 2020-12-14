@@ -1,26 +1,27 @@
 ---
+description: 了解详细信息：输入流成员函数
 title: 输入流成员函数
 ms.date: 07/19/2019
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-ms.openlocfilehash: 8aa211a03bb6e9b1d910db360066b4a2ca76571a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 8b75470d39e5c376da497f721c725eaad8424b3d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233166"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231597"
 ---
 # <a name="input-stream-member-functions"></a>输入流成员函数
 
 输入流成员函数用于磁盘输入。
 
-## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a>未
+## <a name="open"></a><a name="vclrftheopenfunctionforinputstreamsanchor11"></a> 未
 
-如果使用的是输入文件流（ `ifstream` ），则必须将该流与特定磁盘文件相关联。 您可以在构造函数中执行此操作，也可以使用 `open` 函数。 在这两种情况下，参数都相同。
+如果使用 () 的输入文件流 `ifstream` ，则必须将该流与特定磁盘文件相关联。 您可以在构造函数中执行此操作，也可以使用 `open` 函数。 在这两种情况下，参数都相同。
 
-当你打开与输入流关联的文件时，通常会指定[ios_base：： openmode](../standard-library/ios-base-class.md#openmode)标志（默认模式为 `ios::in` ）。 有关标志的列表 `openmode` ，请参阅[ios_base：： openmode](../standard-library/ios-base-class.md#openmode)。 这些标志可与按位 OR ( &#124; ) 运算符组合。
+当你打开与输入流关联的文件时，通常会指定 [ios_base：： openmode](../standard-library/ios-base-class.md#openmode) 标志， (默认模式为 `ios::in`) 。 有关标志的列表 `openmode` ，请参阅 [ios_base：： openmode](../standard-library/ios-base-class.md#openmode)。 这些标志可与按位 OR ( &#124; ) 运算符组合。
 
 若要读取文件，请首先使用 `fail` 成员函数来确定该文件是否存在：
 
@@ -31,9 +32,9 @@ if (ifile.fail())
 // The file does not exist ...
 ```
 
-## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a>获取
+## <a name="get"></a><a name="vclrfthegetfunctionanchor12"></a> 获取
 
-无格式的 `get` 成员函数的工作方式与运算符类似， `>>` 但有两个例外。 首先，该 `get` 函数包括空白字符，而提取程序在设置标志时不包括空格 `skipws` （默认值）。 其次， `get` 函数不太可能导致绑定的输出流（ `cout` 例如）被刷新。
+无格式的 `get` 成员函数的工作方式与运算符类似， `>>` 但有两个例外。 首先，该 `get` 函数包括空白字符，而当 `skipws` 标志设置 (默认) 时，提取程序会排除空格。 其次，此 `get` 函数不太可能导致绑定的输出流 (`cout` ，例如) 要刷新。
 
 函数的变体 `get` 指定缓冲区地址和要读取的最大字符数。 这在限制发送给特定变量的字符数时非常有用，如本例所示：
 
@@ -66,7 +67,7 @@ int main()
 1234
 ```
 
-## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a>getline
+## <a name="getline"></a><a name="vclrfthegetlinefunctionanchor13"></a> getline
 
 `getline`成员函数类似于 `get` 函数。 这两个函数均允许用于指定输入终止字符的第三个参数。 默认值为换行字符。 这两个函数均会保留一个字符作为所需终止字符。 但是，会将 `get` 终止字符保留在流中，并 `getline` 删除终止字符。
 
@@ -93,7 +94,7 @@ int main( )
 test
 ```
 
-## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a>读取
+## <a name="read"></a><a name="vclrfthereadfunctionanchor14"></a> 读取
 
 该 `read` 成员函数将字节从文件读取到指定的内存区域。 长度参数决定了所读取字节的数量。 如果未包含该参数，则到达文件物理末尾时，或在文本模式文件的情况下读取到嵌入的 `EOF` 字符时，将停止读取。
 
@@ -125,7 +126,7 @@ int main()
 
 该程序假定数据记录的格式设置与结构指定的格式完全相同，无终止回车符或换行符。
 
-## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a>seekg 和 tellg
+## <a name="seekg-and-tellg"></a><a name="vclrftheseekgandtellgfunctionsanchor7"></a> seekg 和 tellg
 
 输入文件流会使内部指针保持处于文件中接下来要读取数据的位置。 使用 `seekg` 函数设置此指针，如此处所示：
 
@@ -180,10 +181,10 @@ int main( )
 }
 ```
 
-## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a>封闭
+## <a name="close"></a><a name="vclrftheclosefunctionforinputstreamsanchor15"></a> 封闭
 
 该 `close` 成员函数将关闭与输入文件流关联的磁盘文件，并释放操作系统文件句柄。 [`ifstream`](../standard-library/basic-ifstream-class.md)析构函数将关闭该文件，但 `close` 如果您需要为同一个流对象打开另一个文件，则可以使用函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [输入流](../standard-library/input-streams.md)
