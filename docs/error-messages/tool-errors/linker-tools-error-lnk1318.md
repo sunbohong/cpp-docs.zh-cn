@@ -1,24 +1,25 @@
 ---
+description: 了解详细信息：链接器工具错误 LNK1318
 title: 链接器工具错误 LNK1318
 ms.date: 05/29/2018
 f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
-ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
+ms.openlocfilehash: c92a88f7c26e750ff7d5aace1683827c4d61da1e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86446696"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310664"
 ---
 # <a name="linker-tools-error-lnk1318"></a>链接器工具错误 LNK1318
 
-> 意外的 PDB 错误;*原因*"*详细信息*"
+> 意外的 PDB 错误; *原因* "*详细信息*"
 
 链接器在打开、读取或写入 PDB 文件时遇到意外错误。
 
-对于 PDB 文件中的罕见问题，将生成此错误消息。 *原因*和*详细信息*表示当发生故障时链接器可用的信息。 这可能并不是很有用，因为在处理 PDB 文件时出现常见错误，它们具有不同的、更丰富的错误消息。
+对于 PDB 文件中的罕见问题，将生成此错误消息。 *原因* 和 *详细信息* 表示当发生故障时链接器可用的信息。 这可能并不是很有用，因为在处理 PDB 文件时出现常见错误，它们具有不同的、更丰富的错误消息。
 
 由于错误的根源并不常见，因此仅有可用于解决此问题的通用建议：
 

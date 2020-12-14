@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： signbit
 title: signbit
 ms.date: 01/31/2019
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 7f6416647db67a49bd6950c011575b72f4c43f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87216734"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97303461"
 ---
 # <a name="signbit"></a>signbit
 
@@ -37,18 +38,18 @@ inline bool signbit(
 ) throw(); /* C++-only overloaded function */
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*<br/>
 要测试的浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**signbit** **`true`** 如果参数*x*为负或负无穷，则 signbit 返回非零值（在 c + + 中为）。 **`false`** 如果参数为非负数、正无穷或 NAN，则返回0（在 c + + 中为）。
+ **`true`** 如果参数 *x* 为负或负无穷，则 Signbit 将返回 c + +)  (的非零值。 **`false`** 如果参数为非负、正无穷或 NAN，则它会在 c + +) 返回 0 (。
 
 ## <a name="remarks"></a>备注
 
-在编译为 C 时， **signbit**是宏，而在编译为 c + + 时则是重载内联函数。
+在编译为 C 时， **signbit** 是宏，而在编译为 c + + 时则是重载内联函数。
 
 ## <a name="requirements"></a>要求
 
@@ -58,7 +59,7 @@ inline bool signbit(
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>

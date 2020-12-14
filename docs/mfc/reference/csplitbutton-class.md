@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CSplitButton 类
 title: CSplitButton 类
 ms.date: 11/19/2018
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 484cef2787c9e5c166a7b20b017251b559d7221c
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: e73273bbeb0d03dc5ca2a3a2e6daa1be05936280
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88562540"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345116"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 类
 
@@ -35,20 +36,20 @@ class CSplitButton : public CButton
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSplitButton：： CSplitButton](#csplitbutton)|构造 `CSplitButton` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CSplitButton：： Create](#create)|创建具有指定样式的拆分按钮控件，并将其附加到当前 `CSplitButton` 对象。|
 |[CSplitButton：： SetDropDownMenu](#setdropdownmenu)|设置当用户单击当前拆分按钮控件的下拉箭头时显示的下拉菜单。|
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CSplitButton：： OnDropDown](#ondropdown)|处理用户单击当前拆分按钮控件的下拉箭头时系统发送的 BCN_DROPDOWN 通知。|
 
@@ -92,7 +93,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*\
 中要应用于控件的样式的按位组合 (或) 。 有关详细信息，请参阅 [按钮样式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。
@@ -123,7 +124,7 @@ CSplitButton(
 CSplitButton(CMenu* pMenu)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMenuId*\
 中菜单栏的资源 ID。
@@ -148,7 +149,7 @@ afx_msg void OnDropDown(
     LRESULT* pResult);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pNMHDR*\
 中指向 [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) 结构的指针，该结构包含有关 [BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown) 通知的信息。
@@ -183,7 +184,7 @@ void SetDropDownMenu(
 void SetDropDownMenu(CMenu* pMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nMenuId*\
 中菜单栏的资源 ID。
@@ -196,7 +197,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="remarks"></a>备注
 
-*NMenuId*参数标识菜单栏，它是菜单栏项的水平列表。 *NSubMenuId*参数是从零开始的索引号，它标识子菜单，这是与每个菜单栏项关联的菜单项的下拉列表。 例如，典型的应用程序有一个菜单，其中包含菜单栏项 "文件"、"编辑" 和 "帮助"。 "文件" 菜单栏项包含一个子菜单，其中包含菜单项 "打开"、"关闭" 和 "退出"。 单击拆分按钮控件的下拉箭头时，控件将显示指定的子菜单，而不是菜单栏。
+*NMenuId* 参数标识菜单栏，它是菜单栏项的水平列表。 *NSubMenuId* 参数是从零开始的索引号，它标识子菜单，这是与每个菜单栏项关联的菜单项的下拉列表。 例如，典型的应用程序有一个菜单，其中包含菜单栏项 "文件"、"编辑" 和 "帮助"。 "文件" 菜单栏项包含一个子菜单，其中包含菜单项 "打开"、"关闭" 和 "退出"。 单击拆分按钮控件的下拉箭头时，控件将显示指定的子菜单，而不是菜单栏。
 
 下图描绘了一个对话框，其中包含一个页导航控件和一个 (1) 拆分按钮控件。 已单击 (2) 下拉箭头，并显示 (3) 子菜单。
 
@@ -204,11 +205,11 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="example"></a>示例
 
-下面的代码示例中的第一个语句演示了 [CSplitButton：： SetDropDownMenu](#setdropdownmenu) 方法。 我们创建了具有 Visual Studio 资源编辑器的菜单，该编辑器自动命名为菜单栏 ID IDR_MENU1。 *NSubMenuId*参数为零，表示菜单栏的唯一子菜单。
+下面的代码示例中的第一个语句演示了 [CSplitButton：： SetDropDownMenu](#setdropdownmenu) 方法。 我们创建了具有 Visual Studio 资源编辑器的菜单，该编辑器自动命名为菜单栏 ID IDR_MENU1。 *NSubMenuId* 参数为零，表示菜单栏的唯一子菜单。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CSplitButton 类](../../mfc/reference/csplitbutton-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

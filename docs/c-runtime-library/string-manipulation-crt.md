@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息： (CRT 的字符串操作) '
 title: 字符串操作 (CRT)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - string manipulation
 - manipulating strings
 ms.assetid: 6545861a-59e7-408d-9d29-2ec9134fc91a
-ms.openlocfilehash: 7ea66c38f73e32a99981f331249362e8e0a789c1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d6903adf623e8f03dbf953b0a83f591af8edcdb8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742833"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97284416"
 ---
 # <a name="string-manipulation-crt"></a>字符串操作 (CRT)
 

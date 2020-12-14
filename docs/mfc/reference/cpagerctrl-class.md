@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CPagerCtrl 类
 title: CPagerCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -48,12 +49,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: 9b3af31e7d352e93144cde0c321620693111e145
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: ba01d07ebd6d638a1d505d555e44e9562e4bd27b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561903"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345220"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 类
 
@@ -69,13 +70,13 @@ class CPagerCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CPagerCtrl：： CPagerCtrl](#cpagerctrl)|构造 `CPagerCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CPagerCtrl：： Create](#create)|创建具有指定样式的页导航控件，并将其附加到当前 `CPagerCtrl` 对象。|
 |[CPagerCtrl：： CreateEx](#createex)|创建具有指定扩展样式的页导航控件，并将其附加到当前 `CPagerCtrl` 对象。|
@@ -144,7 +145,7 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwStyle*\
 中要应用于控件的 [窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles) 和 [页导航控件样式](/windows/win32/Controls/pager-control-styles) 的按位组合 (或) 。
@@ -185,10 +186,10 @@ virtual BOOL CreateEx(
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwExStyle*\
-中要应用于控件的扩展样式的按位组合。 有关详细信息，请参阅[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函数的*dwExStyle*参数。
+中要应用于控件的扩展样式的按位组合。 有关详细信息，请参阅 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函数的 *dwExStyle* 参数。
 
 *dwStyle*\
 中要应用于控件的 [窗口样式](../../mfc/reference/styles-used-by-mfc.md#window-styles) 和 [页导航控件样式](/windows/win32/Controls/pager-control-styles) 的按位组合 (或) 。
@@ -218,7 +219,7 @@ virtual BOOL CreateEx(
 void ForwardMouse(BOOL bForward);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bForward*\
 中若要转发鼠标消息，则为 TRUE; 如果为 FALSE，则不转发鼠标消息。
@@ -297,14 +298,14 @@ int GetButtonSize() const;
 DWORD GetButtonState(int iButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*\
 中指示要为其检索状态的按钮。 如果页导航控件样式为 PGS_HORZ，请为左按钮指定 PGB_TOPORLEFT，并为右按钮指定 PGB_BOTTOMORRIGHT。 如果页导航控件样式为 PGS_VERT，请为顶部按钮指定 PGB_TOPORLEFT，并为底部按钮指定 PGB_BOTTOMORRIGHT。 有关详细信息，请参阅 [页导航控件样式](/windows/win32/Controls/pager-control-styles)。
 
 ### <a name="return-value"></a>返回值
 
-*IButton*参数指定的按钮的状态。 状态为 PGF_INVISIBLE、PGF_NORMAL、PGF_GRAYED、PGF_DEPRESSED 或 PGF_HOT。 有关详细信息，请参阅 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) 消息的 "返回值" 部分。
+*IButton* 参数指定的按钮的状态。 状态为 PGF_INVISIBLE、PGF_NORMAL、PGF_GRAYED、PGF_DEPRESSED 或 PGF_HOT。 有关详细信息，请参阅 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate) 消息的 "返回值" 部分。
 
 ### <a name="remarks"></a>备注
 
@@ -358,7 +359,7 @@ int GetScrollPos() const;
 BOOL IsButtonDepressed(int iButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*\
 中指示要为其检索状态的按钮。 如果页导航控件样式为 PGS_HORZ，请为左按钮指定 PGB_TOPORLEFT，并为右按钮指定 PGB_BOTTOMORRIGHT。 如果页导航控件样式为 PGS_VERT，请为顶部按钮指定 PGB_TOPORLEFT，并为底部按钮指定 PGB_BOTTOMORRIGHT。 有关详细信息，请参阅 [页导航控件样式](/windows/win32/Controls/pager-control-styles)。
@@ -379,7 +380,7 @@ BOOL IsButtonDepressed(int iButton) const;
 BOOL IsButtonGrayed(int iButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*\
 中指示要为其检索状态的按钮。 如果页导航控件样式为 PGS_HORZ，请为左按钮指定 PGB_TOPORLEFT，并为右按钮指定 PGB_BOTTOMORRIGHT。 如果页导航控件样式为 PGS_VERT，请为顶部按钮指定 PGB_TOPORLEFT，并为底部按钮指定 PGB_BOTTOMORRIGHT。 有关详细信息，请参阅 [页导航控件样式](/windows/win32/Controls/pager-control-styles)。
@@ -400,7 +401,7 @@ BOOL IsButtonGrayed(int iButton) const;
 BOOL IsButtonHot(int iButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*\
 中指示要为其检索状态的按钮。 如果页导航控件样式为 PGS_HORZ，请为左按钮指定 PGB_TOPORLEFT，并为右按钮指定 PGB_BOTTOMORRIGHT。 如果页导航控件样式为 PGS_VERT，请为顶部按钮指定 PGB_TOPORLEFT，并为底部按钮指定 PGB_BOTTOMORRIGHT。 有关详细信息，请参阅 [页导航控件样式](/windows/win32/Controls/pager-control-styles)。
@@ -421,7 +422,7 @@ BOOL IsButtonHot(int iButton) const;
 BOOL IsButtonInvisible(int iButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*\
 中指示要为其检索状态的按钮。 如果页导航控件样式为 PGS_HORZ，请为左按钮指定 PGB_TOPORLEFT，并为右按钮指定 PGB_BOTTOMORRIGHT。 如果页导航控件样式为 PGS_VERT，请为顶部按钮指定 PGB_TOPORLEFT，并为底部按钮指定 PGB_BOTTOMORRIGHT。 有关详细信息，请参阅 [页导航控件样式](/windows/win32/Controls/pager-control-styles)。
@@ -450,7 +451,7 @@ BOOL IsButtonInvisible(int iButton) const;
 BOOL IsButtonNormal(int iButton) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButton*\
 中指示要为其检索状态的按钮。 如果页导航控件样式为 PGS_HORZ，请为左按钮指定 PGB_TOPORLEFT，并为右按钮指定 PGB_BOTTOMORRIGHT。 如果页导航控件样式为 PGS_VERT，请为顶部按钮指定 PGB_TOPORLEFT，并为底部按钮指定 PGB_BOTTOMORRIGHT。 有关详细信息，请参阅 [页导航控件样式](/windows/win32/Controls/pager-control-styles)。
@@ -495,7 +496,7 @@ void RecalcSize();
 COLORREF SetBkColor(COLORREF clrBk);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *clrBk*\
 中一个 [COLORREF](/windows/win32/gdi/colorref) 值，该值包含页导航控件的新背景色。
@@ -522,7 +523,7 @@ COLORREF SetBkColor(COLORREF clrBk);
 int SetBorder(int iBorder);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iBorder*\
 中新的边框大小，以像素为单位。 如果 *iBorder* 参数为负数，则将边框大小设置为零。
@@ -549,7 +550,7 @@ int SetBorder(int iBorder);
 int SetButtonSize(int iButtonSize);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iButtonSize*\
 中新的按钮大小，以像素为单位。
@@ -578,7 +579,7 @@ int SetButtonSize(int iButtonSize);
 void SetChild(HWND hwndChild);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hwndChild*\
 中要包含的窗口的句柄。
@@ -603,7 +604,7 @@ void SetChild(HWND hwndChild);
 void SetScrollPos(int iPos);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iPos*\
 中新的滚动位置（以像素为单位）。
@@ -612,7 +613,7 @@ void SetScrollPos(int iPos);
 
 此方法发送 Windows SDK 中描述的 [PGM_SETPOS](/windows/win32/Controls/pgm-setpos) 消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CPagerCtrl 类](../../mfc/reference/cpagerctrl-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

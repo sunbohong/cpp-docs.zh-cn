@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：连接映射
 title: 连接映射
 ms.date: 11/04/2016
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: 517017e9e60b86e96daa24f7822538e91c609fb4
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 61d2e7023ab97aa00952aee4786b34e60ba57af7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841410"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97345246"
 ---
 # <a name="connection-maps"></a>连接映射
 
@@ -21,7 +22,7 @@ Microsoft 基础类库提供支持连接点的编程模型。 在此模型中，
 
 ### <a name="connection-map-declaration-and-demarcation"></a>连接映射声明和分界
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[BEGIN_CONNECTION_PART](#begin_connection_part)|声明一个实现附加连接点的嵌入类， (必须在类声明) 中使用。|
 |[END_CONNECTION_PART](#end_connection_part)|结束连接点的声明 (必须在类声明) 中使用。|
@@ -35,7 +36,7 @@ Microsoft 基础类库提供支持连接点的编程模型。 在此模型中，
 
 ### <a name="initializationtermination-of-connection-points"></a>连接点的初始化/终止
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[AfxConnectionAdvise](#afxconnectionadvise)|在源和接收器之间建立连接。|
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|中断源和接收器之间的连接。|
@@ -48,7 +49,7 @@ Microsoft 基础类库提供支持连接点的编程模型。 在此模型中，
 BEGIN_CONNECTION_PART(theClass, localClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 指定其连接点为的控件类的名称。
@@ -56,7 +57,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 *localClass*<br/>
 指定实现连接点的局部类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在定义类的成员函数的声明 ( .h) 文件中，用 BEGIN_CONNECTION_PART 宏启动连接点，然后添加 CONNECTION_IID 宏以及任何其他要实现的成员函数，并通过 END_CONNECTION_PART 宏完成连接点映射。
 
@@ -72,7 +73,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 END_CONNECTION_PART(localClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *localClass*<br/>
 指定实现连接点的局部类的名称。
@@ -89,14 +90,14 @@ END_CONNECTION_PART(localClass)
 CONNECTION_IID(iid)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iid*<br/>
 接口的接口 ID 由连接点调用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*Iid*参数是一个接口 ID，用于标识连接点在其连接的接收器上调用的接口。 例如：
+*Iid* 参数是一个接口 ID，用于标识连接点在其连接的接收器上调用的接口。 例如：
 
 [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]
 
@@ -114,7 +115,7 @@ CONNECTION_IID(iid)
 DECLARE_CONNECTION_MAP()
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果控件支持其他点，请在类声明的末尾使用 DECLARE_CONNECTION_MAP 宏。 然后，在定义类的成员函数的 .cpp 文件中，使用 BEGIN_CONNECTION_MAP 宏，CONNECTION_PART 控件的每个连接点的宏，并使用 END_CONNECTION_MAP 宏来声明连接映射的结尾。
 
@@ -130,15 +131,15 @@ DECLARE_CONNECTION_MAP()
 BEGIN_CONNECTION_MAP(theClass, theBase)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 指定连接映射所属的控件类的名称。
 
 *theBase*<br/>
-指定 *类*的基类的名称。
+指定 *类* 的基类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 在实现 (。CPP) 文件，该文件定义类的成员函数，使用 BEGIN_CONNECTION_MAP 宏启动连接映射，然后使用 [CONNECTION_PART](#connection_part) 宏为每个连接点添加宏条目。 最后，通过 [END_CONNECTION_MAP](#end_connection_map) 宏来完成连接映射。
 
@@ -166,7 +167,7 @@ END_CONNECTION_MAP()
 CONNECTION_PART(theClass, iid, localClass)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类*<br/>
 指定其连接点为的控件类的名称。
@@ -177,7 +178,7 @@ CONNECTION_PART(theClass, iid, localClass)
 *localClass*<br/>
 指定实现连接点的局部类的名称。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 例如：
 
@@ -191,7 +192,7 @@ CONNECTION_PART(theClass, iid, localClass)
 
 ## <a name="afxconnectionadvise"></a><a name="afxconnectionadvise"></a> AfxConnectionAdvise
 
-调用此函数可在源（由 *pUnkSrc*指定）和由 *pUnkSink*指定的接收器之间建立连接。
+调用此函数可在源（由 *pUnkSrc* 指定）和由 *pUnkSink* 指定的接收器之间建立连接。
 
 ```
 BOOL AFXAPI AfxConnectionAdvise(
@@ -202,7 +203,7 @@ BOOL AFXAPI AfxConnectionAdvise(
     DWORD FAR* pdwCookie);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnkSrc*<br/>
 指向调用接口的对象的指针。
@@ -233,7 +234,7 @@ TRUE 表示创建连接应导致 *pUnkSink* 的引用计数递增。 FALSE 指�
 
 ## <a name="afxconnectionunadvise"></a><a name="afxconnectionunadvise"></a> AfxConnectionUnadvise
 
-调用此函数可断开由 *pUnkSrc*指定的源与 *pUnkSink*指定的接收器之间的连接。
+调用此函数可断开由 *pUnkSrc* 指定的源与 *pUnkSink* 指定的接收器之间的连接。
 
 ```
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -244,7 +245,7 @@ BOOL AFXAPI AfxConnectionUnadvise(
     DWORD dwCookie);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnkSrc*<br/>
 指向调用接口的对象的指针。
@@ -273,6 +274,6 @@ BOOL AFXAPI AfxConnectionUnadvise(
 
 **标头：** afxctl。h
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 宏和全局函数](../../mfc/reference/mfc-macros-and-globals.md)
