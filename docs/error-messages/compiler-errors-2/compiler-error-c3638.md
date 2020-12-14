@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3638
 title: 编译器错误 C3638
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
-ms.openlocfilehash: f8d67ac0ff6a1fa5d9efbb8d85747ff94d75c648
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 1d1cc59cd8065a5b0e661292b717ba885c6febeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742491"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97239189"
 ---
 # <a name="compiler-error-c3638"></a>编译器错误 C3638
 
@@ -19,7 +20,7 @@ ms.locfileid: "74742491"
 
 编译器为每个托管类定义一个转换运算符，以支持隐式装箱。 不能重新定义此运算符。
 
-有关详细信息，请参阅[隐式装箱](../../extensions/boxing-cpp-component-extensions.md)。
+有关详细信息，请参阅 [隐式装箱](../../extensions/boxing-cpp-component-extensions.md)。
 
 下面的示例生成 C3638：
 

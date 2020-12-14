@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：编译器错误 C2700 到 C2799
 title: 编译器错误 C2700 - C2799
 ms.date: 04/21/2019
 f1_keywords:
@@ -40,12 +41,12 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: 174f6a9c8ec9e44deadfca090ba492cb32d53e9f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9093c7cbdc884b23bef77fb8206a80e081dc4f2
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87197509"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97238851"
 ---
 # <a name="compiler-errors-c2700-through-c2799"></a>编译器错误 C2700 - C2799
 
@@ -57,26 +58,26 @@ ms.locfileid: "87197509"
 
 |错误|消息|
 |-----------|-------------|
-|[编译器错误 C2700](compiler-error-c2700.md)|"*type*"：无法引发（有关详细信息，请使用/W4）|
+|[编译器错误 C2700](compiler-error-c2700.md)|"*type*"：无法引发 (使用/W4 了解详细信息) |
 |[编译器错误 C2701](compiler-error-c2701.md)|"*function*"：函数模板/泛型不能是局部类的友元|
 |[编译器错误 C2702](compiler-error-c2702.md)| 终止块中可能不会出现 __except|
 |[编译器错误 C2703](compiler-error-c2703.md)|非法的 __leave 语句|
 |[编译器错误 C2704](compiler-error-c2704.md)|"*function*"：仅在 varargs 中允许 __va_start 内部函数|
 |[编译器错误 C2705](compiler-error-c2705.md)|"*label*"：非法跳转到 "*exception_block*" 范围|
-|[编译器错误 C2706](compiler-error-c2706.md)|没有匹配的 __except __try （__try 块中缺少 "}"？）|
+|[编译器错误 C2706](compiler-error-c2706.md)|没有匹配的 __try (在 __try 块中缺少 "}" 的非法 __except？ ) |
 |[编译器错误 C2707](compiler-error-c2707.md)|"*identifier*"：内部函数的错误上下文|
 |[编译器错误 C2708](compiler-error-c2708.md)|"*identifier*"：实参的字节长度不同于以前的调用或引用|
 |[编译器错误 C2709](compiler-error-c2709.md)|"*identifier*"：形参的字节长度不同于以前的声明|
-|[编译器错误 C2710](compiler-error-c2710.md)|"*identifier*"： "__declspec （*修饰符*）" 只能应用于返回指针的函数|
+|[编译器错误 C2710](compiler-error-c2710.md)|"*identifier*"： "__declspec (*修饰符*) " 只能应用于返回指针的函数|
 |[编译器错误 C2711](compiler-error-c2711.md)|"*function*"：此函数不能编译为托管，请考虑使用 #pragma 非托管|
 |[编译器错误 C2712](compiler-error-c2712.md)|不能在要求对象展开的函数中使用 __try|
 |[编译器错误 C2713](compiler-error-c2713.md)|每个函数只允许一种形式的异常处理|
-|[编译器错误 C2714](compiler-error-c2714.md)| `alignof(void)`不允许|
+|[编译器错误 C2714](compiler-error-c2714.md)| `alignof(void)` 不允许|
 |[编译器错误 C2715](compiler-error-c2715.md)|"*type*"：无法引发或捕捉此类型|
 |编译器错误 C2716|已过时。|
 |编译器错误 C2717|已过时。|
-|[编译器错误 C2718](compiler-error-c2718.md)|"*type*"：请求的*数字*对齐方式的实际参数不会对齐|
-|[编译器错误 C2719](compiler-error-c2719.md)|"*parameter*"：请求的*数字*对齐的形参将不对齐|
+|[编译器错误 C2718](compiler-error-c2718.md)|"*type*"：请求的 *数字* 对齐方式的实际参数不会对齐|
+|[编译器错误 C2719](compiler-error-c2719.md)|"*parameter*"：请求的 *数字* 对齐的形参将不对齐|
 |[编译器错误 C2720](compiler-error-c2720.md)|"*identifier*"：成员上的 "*说明符*" 存储类说明符非法|
 |[编译器错误 C2721](compiler-error-c2721.md)|"*说明符*"：运算符关键字和类型之间的存储类说明符非法|
 |[编译器错误 C2722](compiler-error-c2722.md)|"：：*operator*"：非法的运算符命令;使用 "operator *operator*"|
@@ -121,13 +122,13 @@ ms.locfileid: "87197509"
 |[编译器错误 C2761](compiler-error-c2761.md)|"*function*"：不允许使用成员函数重新声明|
 |[编译器错误 C2762](compiler-error-c2762.md)|"*template*"：作为 "*parameter*" 的模板参数的表达式无效|
 |编译器错误 C2763|"*template*"：将字符串文字用作 "*parameter*" 的模板参数无效|
-|[编译器错误 C2764](compiler-error-c2764.md)|"*parameter*"：在部分专用化 "*专用*化" 中未使用或 deducible 的模板参数|
+|[编译器错误 C2764](compiler-error-c2764.md)|"*parameter*"：在部分专用化 "*专用* 化" 中未使用或 deducible 的模板参数|
 |[编译器错误 C2765](compiler-error-c2765.md)|"*function*"：函数模板的显式专用化不能有任何默认参数|
 |[编译器错误 C2766](compiler-error-c2766.md)|显式专用化;已定义 "*专用化*"|
-|[编译器错误 C2767](compiler-error-c2767.md)|托管/WinRT 数组维度不匹配：应提供*数字**参数（s* ）|
+|[编译器错误 C2767](compiler-error-c2767.md)|托管/WinRT 数组维度不匹配：所 *提供的**数量* 参数 (s) |
 |[编译器错误 C2768](compiler-error-c2768.md)|"*function*"：非法使用显式模板参数|
 |编译器错误 C2769|不能用大括号初始化基/成员初始值设定项列表中的托管/WinRT 数组|
-|[编译器错误 C2770](compiler-error-c2770.md)|"*template*" 的显式模板/泛型参数无效|
+|[编译器错误 C2770](compiler-error-c2770.md)|"*template*" 的显式模板/泛型参数 (s) 无效|
 |[编译器错误 C2771](compiler-error-c2771.md)|#import 只能在全局或命名空间范围内使用 |
 |编译器错误 C2772|已过时。|
 |[编译器错误 C2773](compiler-error-c2773.md)|仅在 c + + 编译器中可用 #import 和 #using|
@@ -135,10 +136,10 @@ ms.locfileid: "87197509"
 |[编译器错误 C2775](compiler-error-c2775.md)|"*identifier*"：没有 "get" 方法与该属性关联|
 |[编译器错误 C2776](compiler-error-c2776.md)|每个属性只能指定一个 "get" 方法|
 |[编译器错误 C2777](compiler-error-c2777.md)|每个属性只能指定一个 "put" 方法|
-|[编译器错误 C2778](compiler-error-c2778.md)|__declspec （uuid （））中的 GUID 格式不正确|
+|[编译器错误 C2778](compiler-error-c2778.md)|__declspec (uuid 中的 GUID 格式不正确 ( # A2 # A3|
 |[编译器错误 C2779](compiler-error-c2779.md)|"*声明*"：属性方法只能与非静态数据成员关联|
-|[编译器错误 C2780](compiler-error-c2780.md)|"*声明*"：需要*数字*参数-提供的*数字*|
-|[编译器错误 C2781](compiler-error-c2781.md)|"*声明*"：应至少提供*数字**参数号*|
+|[编译器错误 C2780](compiler-error-c2780.md)|"*声明*"：需要 *数字* 参数-提供的 *数字*|
+|[编译器错误 C2781](compiler-error-c2781.md)|"*声明*"：应至少提供 *数字**参数号*|
 |[编译器错误 C2782](compiler-error-c2782.md)|"*声明*"：模板/泛型参数 "*parameter*" 不明确|
 |[编译器错误 C2783](compiler-error-c2783.md)|"*声明*"：无法推导 "*identifier*" 的模板/泛型参数|
 |[编译器错误 C2784](compiler-error-c2784.md)|"*声明*"：无法从 "*type2*" 推导 "*type1*" 的模板/泛型参数|
@@ -154,11 +155,11 @@ ms.locfileid: "87197509"
 |[编译器错误 C2794](compiler-error-c2794.md)|"*identifier*"：不是 "*class*" 的任何直接或间接基类的成员|
 |[编译器错误 C2795](compiler-error-c2795.md)|"super：：*identifier*" 不是成员函数|
 |编译器错误 C2796|"ref new" 只能用于创建 WinRT 类型的实例|
-|[编译器错误 C2797](compiler-error-c2797.md)|弃用"*identifier*"：未实现成员初始值设定项列表或非静态数据成员初始值设定项内的列表初始化|
+|[编译器错误 C2797](compiler-error-c2797.md)| (过时) "*identifier*"：未实现成员初始值设定项列表或非静态数据成员初始值设定项内的列表初始化|
 |[编译器错误 C2798](compiler-error-c2798.md)|"super：：*identifier*" 不明确|
 |编译器错误 C2799|"*identifier*"：必须初始化没有用户提供的默认构造函数的常量限定类类型的对象|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C/c + + 编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [编译器错误 C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)
