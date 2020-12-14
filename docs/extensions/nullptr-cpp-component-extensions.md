@@ -1,4 +1,5 @@
 ---
+description: '详细了解： nullptr (c + +/CLI 和 c + +/CX) '
 title: nullptr（C++/CLI 和 C++/CX）
 ms.date: 10/12/2018
 ms.topic: reference
@@ -6,22 +7,22 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 7e9cf88fdc0444f736f1cfac0d06dfc675a162cc
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: cf531e81e31af2e3f3790b9f57b54278ad574733
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257636"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr（C++/CLI 和 C++/CX）
 
-**`nullptr`** 关键字表示*null 指针值*。 空指针值可用于指明对象句柄、内部指针或本机指针类型不指向对象。
+**`nullptr`** 关键字表示 *null 指针值*。 空指针值可用于指明对象句柄、内部指针或本机指针类型不指向对象。
 
 使用 **`nullptr`** 托管代码或本机代码。 编译器为托管空指针值和本机空指针值发出相应但不同的指令。 若要了解如何使用此关键字的 ISO 标准 C++ 版本，请参阅 [nullptr](../cpp/nullptr.md)。
 
-**__Nullptr**关键字是 Microsoft 特定的关键字，其含义与相同 **`nullptr`** ，但仅适用于本机代码。 如果你使用 **`nullptr`** with 本机 C/c + + 代码，然后使用 [/clr](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项进行编译，则编译器无法确定是否 **`nullptr`** 指示本机或托管 null 指针值。 为了使你的意图对编译器清楚，请使用 **`nullptr`** 指定托管值或 **__nullptr** 来指定本机值。
+**__Nullptr** 关键字是 Microsoft 特定的关键字，其含义与相同 **`nullptr`** ，但仅适用于本机代码。 如果你使用 **`nullptr`** with 本机 C/c + + 代码，然后使用 [/clr](../build/reference/clr-common-language-runtime-compilation.md) 编译器选项进行编译，则编译器无法确定是否 **`nullptr`** 指示本机或托管 null 指针值。 为了使你的意图对编译器清楚，请使用 **`nullptr`** 指定托管值或 **__nullptr** 来指定本机值。
 
-**`nullptr`** 关键字与 c # 中**的**Visual Basic 和**null**都等效。
+**`nullptr`** 关键字与 c # 中 **的** Visual Basic 和 **null** 都等效。
 
 ## <a name="usage"></a>使用情况
 
