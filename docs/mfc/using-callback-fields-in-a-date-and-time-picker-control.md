@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：在日期和时间选取器控件中使用回调字段
 title: 在日期和时间选取器控件中使用回调字段
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-ms.openlocfilehash: 50350e51b6747d8c010db9d0dcaa9dff2e56e1f3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3ff0ae2af8e71a53cceff4d5d8df652f701b1ef1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366559"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202621"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>在日期和时间选取器控件中使用回调字段
 
@@ -30,7 +31,7 @@ ms.locfileid: "81366559"
 您可以通过重复“X”字符在自定义字符串中区分多个回调字段。 因此，格式字符串“XXddddMMMdd', 'yyyXXX”包含两个唯一的回调字段“XX”和“XXX”。
 
 > [!NOTE]
-> 回调字段被视为有效字段，因此必须准备处理DTN_WMKEYDOWN通知消息。
+> 回调字段被视为有效的字段，因此应用程序必须准备好处理 DTN_WMKEYDOWN 通知消息。
 
 在日期和时间选取器控件中实现回调字段的过程分为三个部分：
 
@@ -42,7 +43,7 @@ ms.locfileid: "81366559"
 
 ## <a name="initializing-the-custom-format-string"></a>初始化自定义格式字符串
 
-通过调用 `CDateTimeCtrl::SetFormat` 初始化自定义字符串。 有关详细信息，请参阅[在日期和时间选取器控件中使用自定义格式字符串](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)。 设置自定义格式字符串的一个常见位置是在所属对话框类的 `OnInitDialog` 函数或所属视图类的 `OnInitialUpdate` 函数中。
+通过调用 `CDateTimeCtrl::SetFormat` 初始化自定义字符串。 有关详细信息，请参阅 [在日期和时间选取器控件中使用自定义格式字符串](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)。 设置自定义格式字符串的一个常见位置是在所属对话框类的 `OnInitDialog` 函数或所属视图类的 `OnInitialUpdate` 函数中。
 
 ## <a name="handling-the-dtn_formatquery-notification"></a>处理 DTN_FORMATQUERY 通知
 
@@ -50,13 +51,13 @@ ms.locfileid: "81366559"
 
 发送 DTN_FORMATQUERY 通知以检索将显示在当前回调字段中的字符串的最大允许大小（以像素为单位）。
 
-若要正确地计算此值，则必须使用控件的显示字体计算将替换该字段的字符串高度和宽度。 使用调用[GetText范围Point32 Win32](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32w)函数，可以轻松实现字符串的实际计算。 确定大小之后，将该值传递回应用程序并退出处理程序函数。
+若要正确地计算此值，则必须使用控件的显示字体计算将替换该字段的字符串高度和宽度。 可以通过调用 [GetTextExtentPoint32](/windows/win32/api/wingdi/nf-wingdi-gettextextentpoint32w) Win32 函数轻松实现字符串的实际计算。 确定大小之后，将该值传递回应用程序并退出处理程序函数。
 
 以下示例是一种提供回调字符串的大小的方法：
 
 [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]
 
-计算了当前回调字段的大小之后，您必须提供该字段的值。 这在DTN_FORMAT通知的处理程序中完成。
+计算了当前回调字段的大小之后，您必须提供该字段的值。 此操作在 DTN_FORMAT 通知的处理程序中完成。
 
 ## <a name="handling-the-dtn_format-notification"></a>处理 DTN_FORMAT 通知
 
@@ -65,9 +66,9 @@ ms.locfileid: "81366559"
 [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]
 
 > [!NOTE]
-> 通过将通知处理程序的第一个参数强制转换到正确的类型，找到指向**NMDATETIME信息**结构的指针。
+> 通过将通知处理程序的第一个参数强制转换为正确的类型，找到指向 **NMDATETIMEFORMAT** 结构的指针。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)<br/>
 [控件](../mfc/controls-mfc.md)

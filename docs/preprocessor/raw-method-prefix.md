@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： raw_method_prefix
 title: raw_method_prefix
 ms.date: 08/29/2019
 f1_keywords:
@@ -6,36 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - raw_method_prefix attribute
 ms.assetid: 71490313-af78-4bb2-b28a-eee67950d30b
-ms.openlocfilehash: b1bc536507716e5c117718ec825bf7fe76c84b61
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9e05f70814e48a4460287e96905b543f7d76dde6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216143"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201984"
 ---
 # <a name="raw_method_prefix"></a>raw_method_prefix
 
-**C++相关**
+**C++ 专用**
 
 指定不同的前缀以避免名称冲突。
 
 ## <a name="syntax"></a>语法
 
-> **#import***类型库***raw_method_prefix (** "*prefix*" **)**
+> **#import** *类型库* **raw_method_prefix (** "*前缀*" **)**
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *作为*\
 要使用的前缀。
 
 ## <a name="remarks"></a>备注
 
-低级别属性和方法由使用默认前缀**raw_** 命名的成员函数公开, 以避免与高级错误处理成员函数发生名称冲突。
+低级别属性和方法由使用 **raw_** 默认前缀命名的成员函数公开，以避免与高级错误处理成员函数发生名称冲突。
 
 > [!NOTE]
-> **Raw_method_prefix**属性的效果在出现[raw_interfaces_only](raw-interfaces-only.md)属性时保持不变。 在指定前缀时, raw_method_prefix `raw_interfaces_only`始终优先于。 如果在同一`#import`语句中同时使用这两个属性, 则使用**raw_method_prefix**属性指定的前缀。
+> **Raw_method_prefix** 属性的效果在存在 [raw_interfaces_only](raw-interfaces-only.md)属性时保持不变。 在指定前缀时， **raw_method_prefix** 始终优先于 `raw_interfaces_only` 。 如果在同一语句中同时使用这两个特性 `#import` ，则使用 **raw_method_prefix** 特性指定的前缀。
 
-**结束C++特定**
+**结束 C++ 专用**
 
 ## <a name="see-also"></a>请参阅
 

@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3646
 title: 编译器错误 C3646
 ms.date: 06/14/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: 5c11133fbf28cfb98de1367955c00c899e8b1042
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c6f731a09612e6c128756de8d0690c922047e49
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214524"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97203778"
 ---
 # <a name="compiler-error-c3646"></a>编译器错误 C3646
 
@@ -21,9 +22,9 @@ ms.locfileid: "87214524"
 
 编译器在预期找到重写说明符的位置找到了一个标记，但编译器无法识别该标记。
 
-例如，如果 **_NOEXCEPT**无法识别的*说明符*，请将其替换为关键字 **`noexcept`** 。
+例如，如果 **_NOEXCEPT** 无法识别的 *说明符*，请将其替换为关键字 **`noexcept`** 。
 
-有关详细信息，请参阅[重写说明符](../../extensions/override-specifiers-cpp-component-extensions.md)。
+有关详细信息，请参阅 [重写说明符](../../extensions/override-specifiers-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

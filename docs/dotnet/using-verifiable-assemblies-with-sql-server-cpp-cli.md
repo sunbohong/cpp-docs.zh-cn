@@ -1,32 +1,33 @@
 ---
+description: '了解更多相关信息：结合使用可验证程序集和 SQL Server (c + +/CLI) '
 title: 结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b155fb0360fb373f5931f51de3af557d06858a71
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384408"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97204194"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>结合使用 SQL Server 和可验证的程序集 (C++/CLI)
 
-扩展存储的过程，打包为动态链接库 (Dll)，提供一种方法来扩展 SQL Server 功能，通过使用视觉对象开发的函数C++。 扩展存储的过程将作为 Dll 中的函数。 除了函数外，还可以定义扩展存储的过程[用户定义类型](../cpp/classes-and-structs-cpp.md)和聚合函数 （如 SUM 或 AVG）。
+作为动态链接库打包 (Dll) 的扩展存储过程提供了一种通过 Visual C++ 开发的函数来扩展 SQL Server 功能的方法。 扩展存储过程在 Dll 内实现为函数。 除了函数外，扩展存储过程还可以定义 [用户定义类型](../cpp/classes-and-structs-cpp.md) 和聚合函数 (例如 SUM 或 AVG) 。
 
-当客户端执行扩展存储的过程时，SQL Server DLL 的搜索与扩展存储过程相关联，并加载此 DLL。 SQL Server 调用请求的扩展存储的过程，并指定的安全上下文下执行。 扩展存储，然后传递结果集，并将参数返回给服务器的过程。
+当客户端执行扩展存储过程时，SQL Server 搜索与扩展存储过程关联的 DLL 并加载 DLL。 SQL Server 调用请求的扩展存储过程，并在指定的安全上下文中执行它。 然后，扩展存储过程将传递结果集并将参数返回给服务器。
 
-SQL Server transact-sql (T-SQL) 以允许你可验证程序集安装到 SQL Server 中提供的扩展。 SQL Server 的权限集指定安全上下文中，具有以下级别的安全性：
+SQL Server 提供 Transact-sql (T-sql) 的扩展，以允许您将可验证的程序集安装到 SQL Server 中。 SQL Server 权限集指定安全上下文，安全级别如下：
 
-- 不受限制的模式：您自己承担; 运行代码代码不需要是可验证类型安全的。
+- 无限制模式：运行代码的风险由你自己承担;代码不必是可验证类型安全的。
 
-- 安全模式：运行可验证类型安全代码;使用 /clr: safe 编译。
+- 安全模式：运行已验证的类型安全代码;用/clr： safe 编译的。
 
 > [!IMPORTANT]
-> 不推荐使用 visual Studio 2015 和 Visual Studio 2017 不支持 **/clr: pure**并 **/clr: safe**创建可验证项目。 如果需要可验证代码，我们建议将转换为 C# 代码。
+> Visual Studio 2015 已弃用，并且 Visual Studio 2017 不支持 **/clr： pure** 和 **/clr：** 可验证项目的安全创建。 如果需要可验证代码，建议将代码转换为 c #。
 
-若要创建和可验证的程序集加载到 SQL Server，请使用 TRANSACT-SQL 命令创建程序集和删除程序集，如下所示：
+若要创建可验证的程序集并将其加载到 SQL Server，请使用 Transact-sql 命令 CREATE ASSEMBLY 和 DROP ASSEMBLY，如下所示：
 
 ```sql
 CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
@@ -34,9 +35,9 @@ CREATE ASSEMBLY <assemblyName> FROM <'Assembly UNC Path'> WITH
 DROP ASSEMBLY <assemblyName>
 ```
 
-PERMISSION_SET 命令指定安全上下文中，且可以具有不受限制的、 安全的或扩展的值。
+PERMISSION_SET 命令指定安全上下文，并且值不受限制、安全或扩展。
 
-此外，您可以使用 CREATE FUNCTION 命令将绑定到类中的方法名称：
+此外，还可以使用 CREATE FUNCTION 命令绑定到类中的方法名称：
 
 ```sql
 CREATE FUNCTION <FunctionName>(<FunctionParams>)
@@ -46,7 +47,7 @@ RETURNS returnType
 
 ## <a name="example"></a>示例
 
-以下 SQL 脚本 (例如，名为"MyScript.sql") 将程序集加载到 SQL Server，并使类的方法可用：
+下面的 SQL 脚本 (例如，名为 "MyScript" ) 将程序集加载到 SQL Server，并使类的方法可用：
 
 ```sql
 -- Create assembly without external access
@@ -70,7 +71,7 @@ select dbo.GetQuoteNoEA('MSFT')
 go
 ```
 
-在 SQL 查询分析器或在命令行使用 sqlcmd.exe 实用工具，可以以交互方式执行 SQL 脚本。 下面的命令行连接到 MyServer、 使用的默认数据库，使用可信的连接、 输入 MyScript.sql，并输出 MyResult.txt。
+可以在 SQL 查询分析器中或在命令行中通过 sqlcmd.exe 实用程序以交互方式执行 SQL 脚本。 以下命令行连接到 MyServer，使用默认数据库，使用可信连接，输入 MyScript，然后 MyResult.txt 输出。
 
 ```cmd
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt

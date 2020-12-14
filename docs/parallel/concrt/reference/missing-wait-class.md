@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： missing_wait 类
 title: missing_wait 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: bfbfdf4c2a52573d08c048bac278386aed1dc5a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142378"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202179"
 ---
 # <a name="missing_wait-class"></a>missing_wait 类
 
@@ -25,17 +26,17 @@ ms.locfileid: "77142378"
 class missing_wait : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[missing_wait](#ctor)|已重载。 构造 `missing_wait` 对象。|
 
 ## <a name="remarks"></a>备注
 
-缺少异常流，你负责在允许该对象销毁之前，调用 `task_group` 或 `structured_task_group` 对象的 `wait` 或 `run_and_wait` 方法。 运行时引发此异常，表示你忘记调用 `wait` 或 `run_and_wait` 方法。
+缺少异常流，你负责在 `wait` `run_and_wait` `task_group` `structured_task_group` 允许该对象销毁之前，调用或对象的或方法。 运行时引发此异常，表示你忘记调用 `wait` 或 `run_and_wait` 方法。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,7 +50,7 @@ class missing_wait : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>missing_wait
+## <a name="missing_wait"></a><a name="ctor"></a> missing_wait
 
 构造 `missing_wait` 对象。
 
@@ -59,15 +60,15 @@ explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 missing_wait() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [task_group 类](task-group-class.md)<br/>
-[再](task-group-class.md)<br/>
+[wait](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group 类](structured-task-group-class.md)

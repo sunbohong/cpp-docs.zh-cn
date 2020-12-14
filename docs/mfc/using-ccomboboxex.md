@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用 CComboBoxEx
 title: 使用 CComboBoxEx
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], CComboBoxEx class
 - CComboBox class [MFC], extended
 ms.assetid: c23cbfe8-75d2-4f98-a753-c942416eda52
-ms.openlocfilehash: a9f3ca623ca729837da56c5b8a8be92b29a5c913
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bd8a31a44b74671465ec817d32aa69f9d17369ed
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447096"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202595"
 ---
 # <a name="using-ccomboboxex"></a>使用 CComboBoxEx
 
@@ -30,6 +31,6 @@ ms.locfileid: "79447096"
 
 - [处理扩展组合框控件中的通知消息](../mfc/processing-notification-messages-in-extended-combo-box-controls.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控件](../mfc/controls-mfc.md)

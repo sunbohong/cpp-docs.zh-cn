@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：在对话框中使用公共控件
 title: 在对话框中使用公共控件
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-ms.openlocfilehash: 1a3dcb7151952b52affcfeb838ced15f0d116fce
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 73395ae5b3542f338f3783fd5f0c41116821fed6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500347"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97202400"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>在对话框中使用公共控件
 
@@ -23,7 +24,7 @@ Windows 公共控件可用于 [对话框](../mfc/dialog-boxes.md)、窗体视图
 
 1. [使用对话框编辑器](../mfc/using-the-dialog-editor-to-add-controls.md)将控件放置在对话框模板上。
 
-1. 向对话框类添加表示控件的成员变量。 在 "**添加成员变量**" 对话框中，选中 "**控制变量**" 并确保为该**类别**选择了 "**控件**"。
+1. 向对话框类添加表示控件的成员变量。 在 "**添加成员变量**" 对话框中，选中 "**控制变量**" 并确保为该 **类别** 选择了 "**控件**"。
 
 1. 如果此公共控件提供至程序的输入，则在对话框类中声明其他成员变量以处理这些输入值。
 
@@ -42,7 +43,7 @@ Windows 公共控件可用于 [对话框](../mfc/dialog-boxes.md)、窗体视图
     > [!NOTE]
     >  您还可使用对话框数据交换在对话框中设置或检索控件中的值。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 向对话框添加一些公共控件将导致对话框不再工作。 若要详细了解如何处理这种情况，请参阅 [将控件添加到对话框会导致对话框不再工作](../windows/adding-editing-or-deleting-controls.md) 。
 
