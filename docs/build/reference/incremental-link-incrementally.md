@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/INCREMENTAL (链接增量) '
 title: /INCREMENTAL（增量链接）
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b115bd88bed5b012c29c3d0e61d471aa869b78a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191285"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL（增量链接）
 
@@ -31,16 +32,16 @@ ms.locfileid: "62270005"
 
 默认情况下，链接器以增量模式运行。 若要重写默认增量链接，请指定 /INCREMENTAL:NO。
 
-增量链接的程序是功能上等效于非增量链接的程序。 但是，因为它已准备好进行后续的增量链接，以增量方式链接的可执行文件、 静态库或动态链接库文件：
+增量链接的程序在功能上等效于非增量链接的程序。 但是，因为它是为后续增量链接而准备的，所以增量链接的可执行文件、静态库或动态链接库文件：
 
-- 由于代码和数据的填充量大于非增量链接的程序。 填充使链接器以扩大而无需重新创建该文件的函数和数据。
+- 大于非增量链接的程序，因为有代码和数据的填充。 填充使链接器可以增加函数和数据的大小，而无需重新创建文件。
 
 - 可以包含跳转 thunk 以处理函数重定位到新地址。
 
    > [!NOTE]
-   > 若要确保您的最终发布版本不包含填充或 thunk，请非增量链接你的程序。
+   > 为了确保最终发布版本不包含填充或 thunk，请以非增量方式链接程序。
 
-若要增量链接而不管默认值，请指定 /INCREMENTAL。 选中此选项后，链接器将发出警告，如果它不能以增量方式，链接，然后非增量链接程序。 某些选项和情况重写 /INCREMENTAL。
+若要增量链接而不管默认值，请指定 /INCREMENTAL。 选中此选项后，如果链接器无法增量链接，则链接器将发出警告，然后以非增量方式链接程序。 某些选项和情况重写 /INCREMENTAL。
 
 大多数程序都可以增量链接。 但是，某些更改太大，还有某些选项与增量链接不兼容。 如果指定了以下任一选项，则 LINK 执行完全链接：
 
@@ -54,13 +55,13 @@ ms.locfileid: "62270005"
 
 - 选定 /ORDER
 
-/ 增量时隐式[/debug](debug-generate-debug-info.md)指定。
+指定 [/debug](debug-generate-debug-info.md) 时，/INCREMENTAL 是隐含的。
 
 此外，如果发生以下任何情况，则 LINK 执行完全链接：
 
 - 缺少增量状态 (.ilk) 文件。 （LINK 将创建新的 .ilk 文件以为后面的增量链接作准备。）
 
-- 对 .ilk 文件没有写入权限。 （LINK 忽略.ilk 文件并链接以非增量方式。）
+- 对 .ilk 文件没有写入权限。  (链接将忽略 .ilk 文件并以非增量方式链接。 ) 
 
 - 缺少 .exe 或 .dll 输出文件。
 
@@ -72,13 +73,13 @@ ms.locfileid: "62270005"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 选择**链接器**文件夹。
+1. 选择 " **链接器** " 文件夹。
 
 1. 选择 **“常规”** 属性页。
 
-1. 修改**启用增量链接**属性。
+1. 修改 " **启用增量链接** " 属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

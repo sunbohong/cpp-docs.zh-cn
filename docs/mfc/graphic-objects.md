@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：图形对象
 title: 图形对象
 ms.date: 11/04/2016
 f1_keywords:
@@ -41,19 +42,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: a7d038a971fd1d280c100024f8af9a1ec74d8627
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7fbb4b6a4eb7586773eff309daddf60d98c7ec3b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618655"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189244"
 ---
 # <a name="graphic-objects"></a>图形对象
 
 Windows 提供了各种可在设备上下文中使用的绘图工具。 它提供了用于绘制线条的笔、用于填充内部的画笔以及用于绘制文本的字体。 MFC 提供等效于 Windows 中的绘图工具的图形对象类。 下表显示可用类以及等效的 Windows 图形设备接口 (GDI) 句柄类型。
 
 > [!NOTE]
-> 有关详细信息，请参阅[Gdi + SDK 文档](/windows/win32/gdiplus/-gdiplus-gdi-start)。
+> 有关详细信息，请参阅 [Gdi + SDK 文档](/windows/win32/gdiplus/-gdiplus-gdi-start)。
 
 本文说明了这些图形对象类的用法：
 
@@ -69,7 +70,7 @@ Windows 提供了各种可在设备上下文中使用的绘图工具。 它提�
 |[CRgn](reference/crgn-class.md)|**HRGN**|
 
 > [!NOTE]
-> 类[CImage](../atl-mfc-shared/reference/cimage-class.md)提供增强的位图支持。
+> 类 [CImage](../atl-mfc-shared/reference/cimage-class.md) 提供增强的位图支持。
 
 类库中的每个图形对象类都具有一个构造函数，使你可以创建该类的图形对象，随后必须使用适当的创建函数（如 `CreatePen`）初始化这些对象。
 
@@ -81,7 +82,7 @@ Windows 提供了各种可在设备上下文中使用的绘图工具。 它提�
 
 #### <a name="to-create-a-graphic-object-in-a-device-context"></a>在设备上下文中创建图形对象
 
-1. 在堆栈帧上定义图形对象。 使用特定于类型的创建函数（如 `CreatePen`）初始化对象。 或者，在构造函数中初始化对象。 请参阅[一阶段和两阶段创建](one-stage-and-two-stage-construction-of-objects.md)的讨论，其中提供了示例代码。
+1. 在堆栈帧上定义图形对象。 使用特定于类型的创建函数（如 `CreatePen`）初始化对象。 或者，在构造函数中初始化对象。 请参阅 [一阶段和两阶段创建](one-stage-and-two-stage-construction-of-objects.md)的讨论，其中提供了示例代码。
 
 1. [选择对象到当前设备上下文](selecting-a-graphic-object-into-a-device-context.md)中，保存之前选择的旧图形对象。
 
@@ -102,6 +103,6 @@ Windows 提供了各种可在设备上下文中使用的绘图工具。 它提�
 
 - [设备上下文](device-contexts.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [窗口对象](window-objects.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： ScheduleGroup 类
 title: ScheduleGroup 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ca6678cd8d8c13c5d62b3d98b0a0bb1ab14e29c9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424229"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188906"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 类
 
@@ -30,18 +31,18 @@ class ScheduleGroup;
 
 ## <a name="members"></a>成员
 
-### <a name="protected-constructors"></a>受保护构造函数
+### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[~ ScheduleGroup 析构函数](#dtor)||
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|说明|
 |----------|-----------------|
 |[Id](#id)|返回计划组的标识符，该标识符在该组所属的计划程序中是唯一的。|
-|[参考](#reference)|递增计划组的引用计数。|
+|[引用](#reference)|递增计划组的引用计数。|
 |[版本](#release)|递减计划程序组的引用计数。|
 |[ScheduleTask](#scheduletask)|计划计划组内的轻量任务。|
 
@@ -55,7 +56,7 @@ class ScheduleGroup;
 
 **命名空间：** 并发
 
-## <a name="id"></a>识别
+## <a name="id"></a><a name="id"></a> 识别
 
 返回计划组的标识符，该标识符在该组所属的计划程序中是唯一的。
 
@@ -67,9 +68,9 @@ virtual unsigned int Id() const = 0;
 
 计划组的标识符，该标识符在该组所属的计划程序中是唯一的。
 
-## <a name="operator_delete"></a>运算符删除
+## <a name="operator-delete"></a><a name="operator_delete"></a> 运算符删除
 
-当释放对象的所有外部引用时，运行时在内部销毁 `ScheduleGroup` 的对象。 不能显式删除它。
+`ScheduleGroup`当释放对象的所有外部引用时，运行时在内部销毁对象。 不能显式删除它。
 
 ```cpp
 void operator delete(
@@ -87,7 +88,7 @@ const char *,
 *_PObject*<br/>
 指向要删除的对象的指针。
 
-## <a name="reference"></a>对
+## <a name="reference"></a><a name="reference"></a> 对
 
 递增计划组的引用计数。
 
@@ -101,9 +102,9 @@ virtual unsigned int Reference() = 0;
 
 ### <a name="remarks"></a>备注
 
-这通常用于管理组合的计划组的生存期。 当计划组的引用计数降为零时，计划组会被运行时删除。 使用[CurrentScheduler：： CreateScheduleGroup](currentscheduler-class.md#createschedulegroup)方法创建的计划组，或[计划程序：： CreateScheduleGroup](scheduler-class.md#createschedulegroup)方法开始时引用计数为1。
+这通常用于管理组合的计划组的生存期。 当计划组的引用计数降为零时，计划组会被运行时删除。 使用 [CurrentScheduler：： CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) 方法创建的计划组，或 [计划程序：： CreateScheduleGroup](scheduler-class.md#createschedulegroup) 方法开始时引用计数为1。
 
-## <a name="release"></a>拆卸
+## <a name="release"></a><a name="release"></a> 拆卸
 
 递减计划程序组的引用计数。
 
@@ -121,13 +122,13 @@ virtual unsigned int Release() = 0;
 
 计划组与特定计划程序实例相关联。 必须确保对于计划组的所有引用都在所有对计划程序的引用释放之前释放，因为后者可能导致计划程序破坏。 否则，会导致未定义的行为。
 
-## <a name="dtor"></a>~ ScheduleGroup
+## <a name="schedulegroup"></a><a name="dtor"></a> ~ ScheduleGroup
 
 ```cpp
 virtual ~ScheduleGroup();
 ```
 
-## <a name="scheduletask"></a>ScheduleTask
+## <a name="scheduletask"></a><a name="scheduletask"></a> ScheduleTask
 
 计划计划组内的轻量任务。
 
@@ -147,11 +148,11 @@ virtual void ScheduleTask(
 
 ### <a name="remarks"></a>备注
 
-调用 `ScheduleTask` 方法会将引用计数隐式放置在任务执行后在适当时间由运行时删除的计划组。
+调用 `ScheduleTask` 方法会将引用计数隐式放置在任务执行后在适当的时间由运行时删除的计划组。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [CurrentScheduler 类](currentscheduler-class.md)<br/>
-[Scheduler 类](scheduler-class.md)<br/>
+[计划程序类](scheduler-class.md)<br/>
 [任务计划程序](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

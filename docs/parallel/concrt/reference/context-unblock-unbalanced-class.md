@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： context_unblock_unbalanced 类
 title: context_unblock_unbalanced 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d262ff52a675935f95664d2f7ddd69aa159aa0bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143099"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188958"
 ---
 # <a name="context_unblock_unbalanced-class"></a>context_unblock_unbalanced 类
 
-此类描述对 `Block` 对象的 `Unblock` 和 `Context` 方法的调用未恰当配对时引发的异常。
+此类描述对 `Context` 对象的 `Block` 和 `Unblock` 方法的调用未恰当配对时引发的异常。
 
 ## <a name="syntax"></a>语法
 
@@ -25,17 +26,17 @@ ms.locfileid: "77143099"
 class context_unblock_unbalanced : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[context_unblock_unbalanced](#ctor)|已重载。 构造 `context_unblock_unbalanced` 对象。|
 
 ## <a name="remarks"></a>备注
 
-对 `Context` 对象的 `Block` 和 `Unblock` 方法的调用必须始终正确配对。 并发运行时允许按照任意顺序执行操作。 例如，调用 `Block` 后可以调用 `Unblock`，反之亦然。 例如，如果在某个 `Context` 行中对 `Unblock` 方法发出了两次调用，则会引发此异常。
+对对象的 `Block` 和 `Unblock` 方法的调用 `Context` 必须始终正确配对。 并发运行时允许按照任意顺序执行操作。 例如，调用 `Block` 后可以调用 `Unblock`，反之亦然。 例如，如果 `Unblock` 在某一行中对未被阻止的对象执行了两次调用方法，则会引发此异常 `Context` 。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -49,7 +50,7 @@ class context_unblock_unbalanced : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>context_unblock_unbalanced
+## <a name="context_unblock_unbalanced"></a><a name="ctor"></a> context_unblock_unbalanced
 
 构造 `context_unblock_unbalanced` 对象。
 
@@ -59,11 +60,11 @@ explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw()
 context_unblock_unbalanced() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

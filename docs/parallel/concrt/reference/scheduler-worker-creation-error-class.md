@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： scheduler_worker_creation_error 类
 title: scheduler_worker_creation_error 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: f0fbb0aed19738bb88e4cbfe3a72580627c4fca9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142755"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188711"
 ---
 # <a name="scheduler_worker_creation_error-class"></a>scheduler_worker_creation_error 类
 
@@ -25,11 +26,11 @@ ms.locfileid: "77142755"
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[scheduler_worker_creation_error](#ctor)|已重载。 构造 `scheduler_worker_creation_error` 对象。|
 
@@ -51,7 +52,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>scheduler_worker_creation_error
+## <a name="scheduler_worker_creation_error"></a><a name="ctor"></a> scheduler_worker_creation_error
 
 构造 `scheduler_worker_creation_error` 对象。
 
@@ -64,14 +65,14 @@ explicit _CRTIMP scheduler_worker_creation_error(
     HRESULT _Hresult) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
 *_Hresult*<br/>
-导致异常的错误的 `HRESULT` 值。
+`HRESULT`导致异常的错误的值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

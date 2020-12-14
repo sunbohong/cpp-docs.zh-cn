@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： &lt; 向量&gt;
 title: '&lt;vector&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 7cecff1e5e0014c4f1a4294a5c6ba25c5d38da67
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1f787afb00a3f94ba6b5148fe064badbc5d373ec
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840006"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187853"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -75,7 +76,7 @@ void swap (
 }  // namespace std
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *类别*\
 向量中所存储的数据类型的模板参数。
@@ -93,7 +94,7 @@ void swap (
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[操作员!=](../standard-library/vector-operators.md#op_neq)|测试运算符左侧的向量对象是否等于右侧的向量对象。|
 |[运算符<](../standard-library/vector-operators.md#op_lt)|测试运算符左侧的向量对象是否小于右侧的向量对象。|
@@ -104,13 +105,13 @@ void swap (
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[vector 类](../standard-library/vector-class.md)|序列容器的一个类模板，它将给定类型的元素以线性排列方式进行排列，并且允许快速随机访问任何元素。|
 
 ### <a name="specializations"></a>专用化
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |hash|返回向量的哈希值。|
 |[vector \<bool> 类](../standard-library/vector-bool-class.md)|针对类型的元素的类模板向量的完全专用化，它 **`bool`** 具有专用化所使用的基础类型的分配器。|
@@ -121,7 +122,7 @@ void swap (
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

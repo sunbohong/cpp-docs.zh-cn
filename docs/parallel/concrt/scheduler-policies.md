@@ -1,19 +1,20 @@
 ---
+description: 了解详细信息：计划程序策略
 title: 计划程序策略
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: a962c00d23c41d97087e705d395b601afc7b1910
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 42b5fa951c320fcc3bab8fe5abe3bb4988e6c368
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042038"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188009"
 ---
 # <a name="scheduler-policies"></a>计划程序策略
 
-本文档介绍并发运行时中计划程序策略的角色。 *计划程序策略*控制计划程序在管理任务时使用的策略。 例如，假设一个应用程序需要某些任务在 `THREAD_PRIORITY_NORMAL` 上执行，而其他任务在 `THREAD_PRIORITY_HIGHEST` 上执行。  您可以创建两个计划程序实例：一个指定 `ContextPriority` 策略为 `THREAD_PRIORITY_NORMAL`，另一个指定同一策略为 `THREAD_PRIORITY_HIGHEST`。
+本文档介绍并发运行时中计划程序策略的角色。 *计划程序策略* 控制计划程序在管理任务时使用的策略。 例如，假设一个应用程序需要某些任务在 `THREAD_PRIORITY_NORMAL` 上执行，而其他任务在 `THREAD_PRIORITY_HIGHEST` 上执行。  您可以创建两个计划程序实例：一个指定 `ContextPriority` 策略为 `THREAD_PRIORITY_NORMAL`，另一个指定同一策略为 `THREAD_PRIORITY_HIGHEST`。
 
 通过使用计划程序策略，您可以划分可用处理资源并将一组固定的资源分配给每个计划程序。 例如，假设并行算法不能扩展到四个处理器。 可以创建计划程序策略，将其任务限制为使用四个以上的处理器。
 
@@ -51,7 +52,7 @@ ms.locfileid: "90042038"
 
 若要检查使用特定计划程序策略来控制计划程序行为的示例，请参阅 [如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) 和 [如何：创建使用特定计划程序策略的代理](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [任务计划程序](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [如何：指定特定的计划程序策略](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>

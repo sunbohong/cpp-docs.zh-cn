@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： wbuffer_convert 类
 title: wbuffer_convert 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - wbuffer_convert class
 ms.assetid: 4a56f9bf-4138-4612-b516-525fea401358
-ms.openlocfilehash: ba8c98075741ae6cb8db0ecdfcb1e18cf4f4f89c
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: 1aa7258c3cc0a4f78a749f655e9cfb7cd4957378
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561110"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187840"
 ---
 # <a name="wbuffer_convert-class"></a>wbuffer_convert 类
 
@@ -25,7 +26,7 @@ class wbuffer_convert
     : public std::basic_streambuf<Elem, Traits>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Codecvt*\
 表示转换对象的[区域设置](../standard-library/locale-class.md)方面。
@@ -34,7 +35,7 @@ class wbuffer_convert
 宽字符元素类型。
 
 *特征*\
-与 Elem** 关联的特征。
+与 Elem 关联的特征。
 
 ## <a name="remarks"></a>备注
 

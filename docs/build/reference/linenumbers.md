@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：/LINENUMBERS
 title: /LINENUMBERS
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - -LINENUMBERS dumpbin option
 - /LINENUMBERS dumpbin option
 ms.assetid: 1681d582-2c2f-484e-9920-109959549055
-ms.openlocfilehash: ea4c3ac2ad582e0fe364f2da26511a66e9dc376c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9df3d88476a82466f86ec23147c9f8f35f9b3f1d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269236"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97191012"
 ---
 # <a name="linenumbers"></a>/LINENUMBERS
 
@@ -24,9 +25,9 @@ ms.locfileid: "62269236"
 
 ## <a name="remarks"></a>备注
 
-此选项显示 COFF 行号。 在对象文件中存在的行数，如果它使用编译的程序数据库 (/Zi) C7 兼容 (/ Z7)，或仅限行号 (/Zd)。 可执行文件或 DLL 包含 COFF 行号，如果它与生成调试信息链接 (/debug)。
+此选项显示 COFF 行号。 如果某个对象文件是使用程序数据库编译的，则该对象文件中存在行号 (/Zi) ，与 C7 兼容 (/Z7) 或行号仅 (/Zd) 。 可执行文件或 DLL 包含 COFF 行号（如果它是通过生成调试信息 (/DEBUG) 来链接的。
 
-仅[/HEADERS](headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](gl-whole-program-optimization.md)编译器选项。
+只有 [/HEADERS](headers.md) DUMPBIN 选项可用于由 [/GL](gl-whole-program-optimization.md) 编译器选项产生的文件。
 
 ## <a name="see-also"></a>请参阅
 

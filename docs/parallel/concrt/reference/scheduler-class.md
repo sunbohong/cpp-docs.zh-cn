@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：计划程序类
 title: Scheduler 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 19016630f9d35f365e9ba249e0f3617515d7ca33
+ms.openlocfilehash: 2a509017c84f7f6c845c153c8c187f5885839035
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92274720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188893"
 ---
 # <a name="scheduler-class"></a>Scheduler 类
 
@@ -42,21 +43,21 @@ class Scheduler;
 
 ### <a name="protected-constructors"></a>受保护的构造函数
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[计划程序](#ctor)|类的对象 `Scheduler` 只能使用工厂方法创建，或隐式创建。|
 |[~ 计划程序析构函数](#dtor)|`Scheduler`当对类的所有外部引用停止存在时，该类的对象将被隐式销毁。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[附加](#attach)|将计划程序附加到调用上下文。 此方法返回后，调用上下文由计划程序管理，计划程序将成为当前计划程序。|
 |[创建](#create)|创建新的计划程序，该计划程序的行为由 `_Policy` 参数描述，将初始引用置于计划程序上，并返回指向它的指针。|
 |[CreateScheduleGroup](#createschedulegroup)|已重载。 在计划程序中创建新的计划组。 采用参数的版本 `_Placement` 导致新创建的计划组内的任务偏离到在该参数指定的位置执行。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|返回计划程序的当前虚拟处理器数。|
 |[GetPolicy](#getpolicy)|返回创建计划程序所使用的策略的副本。|
-|[Id](#id)|返回计划程序的唯一标识符。|
+|Id|返回计划程序的唯一标识符。|
 |[IsAvailableLocation](#isavailablelocation)|确定给定位置在计划程序上是否可用。|
 |[引用](#reference)|递增计划程序引用计数。|
 |[RegisterShutdownEvent](#registershutdownevent)|导致 `_Event` 当计划程序关闭并销毁自身时，在参数中传递的 Windows 事件句柄发出信号。 在事件终止时，已计划计划程序的所有工作都已完成。 可以通过此方法注册多个关闭事件。|
@@ -107,7 +108,7 @@ virtual void Attach() = 0;
 static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Policy*<br/>
 描述新创建的计划程序行为的计划程序策略。
@@ -134,7 +135,7 @@ virtual ScheduleGroup* CreateScheduleGroup() = 0;
 virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Placement*<br/>
 对计划组中的任务在其下执行的偏差位置的引用。
@@ -193,7 +194,7 @@ virtual unsigned int Id() const = 0;
 virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Placement*<br/>
 用于查询计划程序的位置的引用。
@@ -232,7 +233,7 @@ virtual unsigned int Reference() = 0 ;
 virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Event*<br/>
 Windows 事件对象的句柄，当计划程序关闭并销毁自身时，运行时将向其发出信号。
@@ -302,7 +303,7 @@ virtual void ScheduleTask(
     location& _Placement) = 0;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Proc*<br/>
 一个指针，指向用于执行轻量任务的主体的函数。
@@ -321,7 +322,7 @@ virtual void ScheduleTask(
 static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Policy*<br/>
 要设置为默认计划程序策略的策略。
@@ -330,7 +331,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 如果在 `SetDefaultSchedulerPolicy` 进程内已存在默认计划程序时调用该方法，则运行时将引发 [default_scheduler_exists](default-scheduler-exists-class.md) 异常。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [计划程序类](scheduler-class.md)<br/>

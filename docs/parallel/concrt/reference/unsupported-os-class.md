@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： unsupported_os 类
 title: unsupported_os 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-ms.openlocfilehash: 253cd76182e1b6f85be3701663bd10c86c10e6ba
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 1f9ee74db42d2b34c1b4e24a1951d84a442224bc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142346"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188087"
 ---
 # <a name="unsupported_os-class"></a>unsupported_os 类
 
@@ -25,11 +26,11 @@ ms.locfileid: "77142346"
 class unsupported_os : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[unsupported_os](#ctor)|已重载。 构造 `unsupported_os` 对象。|
 
@@ -45,7 +46,7 @@ class unsupported_os : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="ctor"></a>unsupported_os
+## <a name="unsupported_os"></a><a name="ctor"></a> unsupported_os
 
 构造 `unsupported_os` 对象。
 
@@ -57,11 +58,11 @@ explicit _CRTIMP unsupported_os(_In_z_ const char* _Message) throw();
 unsupported_os() throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

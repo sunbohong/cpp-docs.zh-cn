@@ -1,15 +1,16 @@
 ---
+description: '了解详细信息： task_options 类 (并发运行时) '
 title: task_options 类（并发运行时）
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: e79dd7979b587ae807c8984a04b79be362b03758
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3752d23e68096df22d076afc5c07dc3d66cc881a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188204"
 ---
 # <a name="task_options-class-concurrency-runtime"></a>task_options 类（并发运行时）
 
@@ -25,13 +26,13 @@ class task_options;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[task_options::task_options 构造函数（并发运行时）](#ctor)|已重载。 任务创建选项的默认列表|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[task_options::get_cancellation_token 方法（并发运行时）](#get_cancellation_token)|返回取消标记|
 |[task_options::get_continuation_context 方法（并发运行时）](#get_continuation_context)|返回持续上下文|
@@ -47,11 +48,11 @@ class task_options;
 
 ## <a name="requirements"></a>要求
 
-**标题：** ppltasks.h
+**标头：** ppltasks。h
 
 **命名空间：** 并发
 
-## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a>task_options：get_cancellation_token方法（并发运行时）
+## <a name="task_optionsget_cancellation_token-method-concurrency-runtime"></a><a name="get_cancellation_token"></a> task_options：： get_cancellation_token 方法 (并发运行时) 
 
 返回取消标记
 
@@ -61,7 +62,7 @@ cancellation_token get_cancellation_token() const;
 
 ### <a name="return-value"></a>返回值
 
-## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a>task_options：：get_continuation_context方法（并发运行时）
+## <a name="task_optionsget_continuation_context-method-concurrency-runtime"></a><a name="get_continuation_context"></a> task_options：： get_continuation_context 方法 (并发运行时) 
 
 返回持续上下文
 
@@ -71,7 +72,7 @@ task_continuation_context get_continuation_context() const;
 
 ### <a name="return-value"></a>返回值
 
-## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a>task_options：：get_scheduler方法（并发运行时）
+## <a name="task_optionsget_scheduler-method-concurrency-runtime"></a><a name="get_scheduler"></a> task_options：： get_scheduler 方法 (并发运行时) 
 
 返回计划程序
 
@@ -81,7 +82,7 @@ scheduler_ptr get_scheduler() const;
 
 ### <a name="return-value"></a>返回值
 
-## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a>task_options：：has_cancellation_token方法（并发运行时）
+## <a name="task_optionshas_cancellation_token-method-concurrency-runtime"></a><a name="has_cancellation_token"></a> task_options：： has_cancellation_token 方法 (并发运行时) 
 
 指示用户是否指定了取消标记
 
@@ -91,7 +92,7 @@ bool has_cancellation_token() const;
 
 ### <a name="return-value"></a>返回值
 
-## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a>task_options：：has_scheduler方法（并发运行时）
+## <a name="task_optionshas_scheduler-method-concurrency-runtime"></a><a name="has_scheduler"></a> task_options：： has_scheduler 方法 (并发运行时) 
 
 指示用户是否指定了计划程序
 
@@ -101,7 +102,7 @@ bool has_scheduler() const;
 
 ### <a name="return-value"></a>返回值
 
-## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a>task_options：：set_cancellation_token方法（并发运行时）
+## <a name="task_optionsset_cancellation_token-method-concurrency-runtime"></a><a name="set_cancellation_token"></a> task_options：： set_cancellation_token 方法 (并发运行时) 
 
 在选项中设置给定的标记
 
@@ -109,11 +110,11 @@ bool has_scheduler() const;
 void set_cancellation_token(cancellation_token _Token);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 `_Token`
 
-## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a>task_options：：set_continuation_context方法（并发运行时）
+## <a name="task_optionsset_continuation_context-method-concurrency-runtime"></a><a name="set_continuation_context"></a> task_options：： set_continuation_context 方法 (并发运行时) 
 
 在选项中设置给定的持续上下文
 
@@ -121,11 +122,11 @@ void set_cancellation_token(cancellation_token _Token);
 void set_continuation_context(task_continuation_context _ContinuationContext);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 `_ContinuationContext`
 
-## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a>task_options：：task_options构造函数（并发运行时）
+## <a name="task_optionstask_options-constructor-concurrency-runtime"></a><a name="ctor"></a> task_options：： task_options 构造函数 (并发运行时) 
 
 任务创建选项的默认列表
 
@@ -156,7 +157,7 @@ task_options(
     const task_options& _TaskOptions);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 `_SchedType`
 
@@ -168,6 +169,6 @@ task_options(
 
 `_TaskOptions`
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[concurrency 命名空间](concurrency-namespace.md)
+[并发命名空间](concurrency-namespace.md)

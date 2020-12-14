@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _SCL_SECURE_NO_WARNINGS
 title: _SCL_SECURE_NO_WARNINGS
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - _SCL_SECURE_NO_DEPRECATE
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
-ms.openlocfilehash: d19d47fe7120301740e1431765fc6edbeaa48c60
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 383aeed0bdedc4830076248100c8cf0a1acf34b1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448196"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187918"
 ---
-# <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
+# <a name="_scl_secure_no_warnings"></a>_SCL_SECURE_NO_WARNINGS
 
-在C++标准库中调用任何可能不安全的方法都会导致[编译器警告 (等级 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要禁用此警告, 请在代码中定义宏 _SCL_SECURE_NO_WARNINGS:
+如果调用 c + + 标准库中任何可能不安全的方法，将导致 [编译器警告 (级别 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要禁用此警告，可在代码中将宏定义为 _SCL_SECURE_NO_WARNINGS：
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-如果使用预编译头, 请将此指令置于预编译头文件中, 然后再添加任何 C 运行库或标准库标头。 如果将其放在单独的源代码文件中, 然后再包含预编译头文件, 编译器将忽略该文件。
+如果使用预编译头，请将此指令置于预编译头文件中，然后再添加任何 C 运行库或标准库标头。 如果将其放在单独的源代码文件中，然后再包含预编译头文件，编译器将忽略该文件。
 
 ## <a name="remarks"></a>备注
 
@@ -31,7 +32,7 @@ ms.locfileid: "68448196"
 
 - 使用 [/D（预处理器定义）](../build/reference/d-preprocessor-definitions.md)编译器选项：
 
-   > cl/D_SCL_SECURE_NO_WARNINGS [其他编译器选项] myfile.txt
+   > cl/D_SCL_SECURE_NO_WARNINGS [其他编译器选项] myfile.txt .cpp
 
 - 使用 [/w](../build/reference/compiler-option-warning-level.md) 编译器选项：
 
@@ -43,7 +44,7 @@ ms.locfileid: "68448196"
    #pragma warning(disable:4996)
    ```
 
-此外，还可以使用 **/w\<l>\<n>** 编译器选项手动更改警告 C4996 的级别。 例如，可将警告 C4996 设置为级别 4：
+此外，还可以手动更改 C4996 和 **/w \<l> \<n>** 编译器选项的警告级别。 例如，可将警告 C4996 设置为级别 4：
 
 > cl/w44996 [其他编译器选项] myfile.txt
 
@@ -51,4 +52,4 @@ ms.locfileid: "68448196"
 
 ## <a name="see-also"></a>请参阅
 
-[：C++ 标准库](../standard-library/safe-libraries-cpp-standard-library.md)
+[安全库： c + + 标准库](../standard-library/safe-libraries-cpp-standard-library.md)

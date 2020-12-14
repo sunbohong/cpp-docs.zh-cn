@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： task_completion_event 类
 title: task_completion_event 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: b63e8c6986508806cedc8c094a4e8844491dd2fa
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 791b68d6a67ea2f8a9697b69266e8744455f845c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87219503"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188360"
 ---
 # <a name="task_completion_event-class"></a>task_completion_event 类
 
@@ -31,7 +32,7 @@ template<>
 class task_completion_event<void>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_ResultType*<br/>
 此 `task_completion_event` 类的结果类型。
@@ -40,7 +41,7 @@ class task_completion_event<void>;
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[task_completion_event](#ctor)|构造 `task_completion_event` 对象。|
 
@@ -69,7 +70,7 @@ class task_completion_event<void>;
 
 **命名空间：** 并发
 
-## <a name="set"></a><a name="set"></a>字符集
+## <a name="set"></a><a name="set"></a> 字符集
 
 设置任务完成事件。
 
@@ -79,7 +80,7 @@ bool set(_ResultType _Result) const ;
 bool set() const ;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Result*<br/>
 要为其设置此事件的结果。
@@ -90,9 +91,9 @@ bool set() const ;
 
 ### <a name="remarks"></a>备注
 
-如果存在多个或并发调用，则 `set` 只有第一个调用将成功，并且其结果（如果有）将存储在任务完成事件中。 剩余的集被忽略，并且方法将返回 false。 设置任务完成事件时，从该事件创建的所有任务都将立即完成，并将计划其延续任务（如果有）。 除之外的任务完成对象 `_ResultType` **`void`** 将值传递给其延续。
+如果存在多个或多个对的调用 `set` ，则只有第一次调用将成功，并且如果在任务完成事件中存储任何) ，则其结果 (。 剩余的集被忽略，并且方法将返回 false。 设置任务完成事件时，从该事件创建的所有任务都将立即完成，并将计划其延续任务（如果有）。 除之外的任务完成对象 `_ResultType` **`void`** 将值传递给其延续。
 
-## <a name="set_exception"></a><a name="set_exception"></a>set_exception
+## <a name="set_exception"></a><a name="set_exception"></a> set_exception
 
 传播与此事件关联的所有任务的一个例外情况。
 
@@ -103,7 +104,7 @@ __declspec(noinline) bool set_exception(_E _Except) const;
 __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const ;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_E*<br/>
 异常类型。
@@ -116,7 +117,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 
 ### <a name="return-value"></a>返回值
 
-## <a name="task_completion_event"></a><a name="ctor"></a>task_completion_event
+## <a name="task_completion_event"></a><a name="ctor"></a> task_completion_event
 
 构造 `task_completion_event` 对象。
 
@@ -124,6 +125,6 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 task_completion_event();
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

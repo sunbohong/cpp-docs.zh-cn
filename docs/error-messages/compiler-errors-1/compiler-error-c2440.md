@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2440
 title: 编译器错误 C2440
 ms.date: 03/28/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: 74c5032338b3f4cf30bdb75bdf070cee7b67ce58
-ms.sourcegitcommit: 72161bcd21d1ad9cc3f12261aa84a5b026884afa
+ms.openlocfilehash: 918f071f7d7ecc294ddab92764c03da98ad86555
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90742107"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97189738"
 ---
 # <a name="compiler-error-c2440"></a>编译器错误 C2440
 
@@ -74,7 +75,7 @@ Base * func(Derived * d) {
 }
 ```
 
-下一个示例中第15行和第16行的 C2440 错误都是通过消息进行限定的 `Incompatible calling conventions for UDT return value` 。 *UDT*是用户定义的类型，如类、结构或联合。 当前向声明的返回类型中指定的 UDT 的调用约定与 UDT 的实际调用约定冲突以及涉及函数指针时，将导致这种不兼容性错误。
+下一个示例中第15行和第16行的 C2440 错误都是通过消息进行限定的 `Incompatible calling conventions for UDT return value` 。 *UDT* 是用户定义的类型，如类、结构或联合。 当前向声明的返回类型中指定的 UDT 的调用约定与 UDT 的实际调用约定冲突以及涉及函数指针时，将导致这种不兼容性错误。
 
 在此示例中，第一个结构和一个返回该结构的函数的前向声明;编译器假定结构使用 c + + 调用约定。 接下来是结构定义，默认情况下使用 C 调用约定。 由于编译器不知道结构的调用约定，直到它完成整个结构的读取，因此的返回类型中的结构的调用约定 `get_c2` 也假设为 c + +。
 
@@ -180,7 +181,7 @@ int main() {
 // [ module(name="PropDemoLib", version="1.0") ];
 ```
 
-当编译使用 **/clr**编程的源代码时，Microsoft c + + 编译器不再允许[const_cast 运算符](../../cpp/const-cast-operator.md)向下转换。
+当编译使用 **/clr** 编程的源代码时，Microsoft c + + 编译器不再允许 [const_cast 运算符](../../cpp/const-cast-operator.md)向下转换。
 
 若要解决此 C2440，请使用正确的强制转换运算符。 有关详细信息，请参阅 [强制转换运算符](../../cpp/casting-operators.md)。
 

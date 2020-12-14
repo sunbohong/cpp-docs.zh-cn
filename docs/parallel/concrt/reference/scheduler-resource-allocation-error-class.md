@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： scheduler_resource_allocation_error 类
 title: scheduler_resource_allocation_error 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 50f84cbf76d30a415e2393797baa7d6cfa1e89f9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143328"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188724"
 ---
 # <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error 类
 
@@ -26,17 +27,17 @@ ms.locfileid: "77143328"
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[scheduler_resource_allocation_error](#ctor)|已重载。 构造 `scheduler_resource_allocation_error` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|返回导致异常的错误代码。|
 
@@ -56,7 +57,7 @@ class scheduler_resource_allocation_error : public std::exception;
 
 **命名空间：** 并发
 
-## <a name="get_error_code"></a>get_error_code
+## <a name="get_error_code"></a><a name="get_error_code"></a> get_error_code
 
 返回导致异常的错误代码。
 
@@ -66,9 +67,9 @@ HRESULT get_error_code() const throw();
 
 ### <a name="return-value"></a>返回值
 
-导致异常的错误的 `HRESULT` 值。
+`HRESULT`导致异常的错误的值。
 
-## <a name="ctor"></a>scheduler_resource_allocation_error
+## <a name="scheduler_resource_allocation_error"></a><a name="ctor"></a> scheduler_resource_allocation_error
 
 构造 `scheduler_resource_allocation_error` 对象。
 
@@ -81,14 +82,14 @@ explicit _CRTIMP scheduler_resource_allocation_error(
     HRESULT _Hresult) throw();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Message*<br/>
 错误的描述性消息。
 
 *_Hresult*<br/>
-导致异常的错误的 `HRESULT` 值。
+`HRESULT`导致异常的错误的值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)

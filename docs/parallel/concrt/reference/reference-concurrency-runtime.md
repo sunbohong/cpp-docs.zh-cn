@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：引用 (并发运行时) '
 title: 参考（并发运行时）
 ms.date: 11/04/2016
 f1_keywords:
@@ -452,24 +453,24 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f5d07f856c37417da1ceddbbefa772b2e7f11fff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97188919"
 ---
 # <a name="reference-concurrency-runtime"></a>参考（并发运行时）
 
 本部分包含并发运行时的参考信息。
 
 > [!Note]
-> C++语言标准保留使用以下划线（_）字符开头的标识符，用于实现（如库）。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 由于这些原因，并发运行时文档中省略了此类代码元素。
+> C + + 语言标准保留以下划线开头的标识符 (_) 字符用于实现（如库）。 请勿在代码中使用这些名称。 其名称遵循此约定的代码元素的行为尚未得到保证，在将来发布的版本中可能会有更改。 由于这些原因，并发运行时文档中省略了此类代码元素。
 
 ## <a name="in-this-section"></a>本节内容
 
 [并发命名空间](concurrency-namespace.md)<br/>
-并发命名空间提供了一些类和函数，使你可以访问并发运行时，这是的一个C++并发编程框架。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
+并发命名空间提供了一些类和函数，使你可以访问并发运行时，这是 c + + 的并发编程框架。 有关详细信息，请参阅[并发运行时](../concurrency-runtime.md)。
 
 [std 命名空间](std-namespace.md)
 
