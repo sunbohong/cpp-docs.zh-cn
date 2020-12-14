@@ -1,5 +1,6 @@
 ---
-title: 如何：封送嵌入式指针使用 PInvoke
+description: 了解详细信息：如何：使用 PInvoke 封送嵌入式指针
+title: 如何：使用 PInvoke 封送嵌入式指针
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,22 +10,22 @@ helpviewer_keywords:
 - marshaling [C++], embedded pointers
 - data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-ms.openlocfilehash: 943a1a2784a37353157cd38da7ebdc9827006fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d31660a9a8ba345b380d442bb4484e332fe9d7cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325203"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302551"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>如何：封送嵌入式指针使用 PInvoke
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送嵌入式指针
 
-可以从使用平台调用 (P/Invoke) 功能的托管代码调用非托管 Dll 中实现的函数。 如果该 DLL 的源代码不可用，P/Invoke 是唯一的选项之间的互操作。 但是，与其他.NET 语言，Visual 不同C++提供了 P/Invoke 的替代方法。 有关详细信息，请参阅[使用C++互操作 (隐式 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)并[如何：封送嵌入式指针使用C++互操作](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
+在非托管 Dll 中实现的函数可以使用平台调用 (P/Invoke) 功能从托管代码调用。 如果 DLL 的源代码不可用，则 P/Invoke 是用于互操作的唯一选项。 但是，与其他 .NET 语言不同，Visual C++ 提供了 P/Invoke 的替代方法。 有关详细信息，请参阅 [使用 c + + 互操作 (隐式 PInvoke) ](../dotnet/using-cpp-interop-implicit-pinvoke.md) 和 [如何：使用 c + + 互操作封送嵌入式指针](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
 
 ## <a name="example"></a>示例
 
-将结构传递给本机代码需要创建方面的数据布局到本机结构等效的托管的结构。 但是，包含指针的结构要求特殊处理。 对于本机结构中每个嵌入的指针，该结构的托管的版本应包含的实例<xref:System.IntPtr>类型。 此外，内存必须显式分配这些实例，经过初始化，并释放<xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>， <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>，和<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>方法。
+如果将结构传递给本机代码，则会要求创建一个等效于将数据布局作为本地结构的托管结构。 但是，包含指针的结构需要特殊处理。 对于本机结构中的每个嵌入指针，结构的托管版本应包含类型的实例 <xref:System.IntPtr> 。 此外，必须使用 <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A> 、和方法显式分配、初始化和释放这些实例的内存 <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> 。
 
-下面的代码由非托管和托管的模块组成。 非托管的模块是定义接受称为 ListString 包含指针的结构的函数和一个名为 TakesListStruct 函数的 DLL。 托管的模块是一个命令行应用程序的导入 TakesListStruct 函数，并定义一个称为 MListStruct，只不过使用表示双 * 等效于本机 ListStruct 结构<xref:System.IntPtr>实例。 调用 TakesListStruct 之前, 的主函数分配并初始化此字段将引用的内存。
+下面的代码由一个非托管模块和一个托管模块组成。 非托管模块是一个 DLL，它定义了一个函数，该函数接受一个名为 ListString 的结构，该结构包含一个指针和一个名为 TakesListStruct 的函数。 托管模块是一个命令行应用程序，该应用程序导入 TakesListStruct 函数并定义一个名为 MListStruct 的结构，该结构等效于本机 ListStruct，只不过 double * 表示为 <xref:System.IntPtr> 实例。 在调用 TakesListStruct 之前，main 函数将分配并初始化此字段引用的内存。
 
 ```cpp
 // TraditionalDll6.cpp
@@ -98,8 +99,8 @@ int main() {
 }
 ```
 
-请注意该 DLL 的任何部分公开给托管代码使用的传统 #include 指令。 实际上，该 DLL 在运行时访问，因此问题的函数导入与<xref:System.Runtime.InteropServices.DllImportAttribute>不会在编译时检测。
+请注意，不会向托管代码公开使用传统 #include 指令的任何部分。 事实上，DLL 仅在运行时进行访问，因此 <xref:System.Runtime.InteropServices.DllImportAttribute> 在编译时不会检测通过导入的函数的问题。
 
 ## <a name="see-also"></a>请参阅
 
-[在 C++ 中使用显式 PInvoke（DllImport 特性）](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+[在 c + + 中使用显式 PInvoke (DllImport 特性) ](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

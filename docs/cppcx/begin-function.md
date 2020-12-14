@@ -1,4 +1,5 @@
 ---
+description: 了解有关： begin 函数的详细信息
 title: begin 函数
 ms.date: 01/22/2017
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-ms.openlocfilehash: 1b95e4d32321aadf7de65ecb25109fbecd9eb614
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae59a4b4344da520d86c216f4c9979953e16753c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258286"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302759"
 ---
 # <a name="begin-function"></a>begin 函数
 
@@ -38,16 +39,16 @@ template <typename T>
           IIterable<T>^ i         );
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 模板类型参数。
 
 *v*<br/>
-向量的集合\<T > 或 VectorView\<T > 对象访问的 IVector\<T > 或 IVectorView\<T > 接口。
+\<T> \<T> 由 IVector \<T> 或 IVectorView 接口访问的 Vector 或 VectorView 对象的集合 \<T> 。
 
 *i*<br/>
-任意对象集合的 Windows 运行时访问的 IIterable\<T > 接口。
+Iiterable<t> 接口访问的任意 Windows 运行时对象的集合 \<T> 。
 
 ### <a name="return-value"></a>返回值
 
@@ -57,14 +58,14 @@ template <typename T>
 
 前两个模板函数返回迭代器，第三个模板函数返回输入迭代器。
 
-返回的对象开始的 VectorIterator 是存储类型 VectorProxy 元素的代理迭代器\<T >。 不过，代理对象对于用户代码应该不可见。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+Begin 返回的 VectorIterator 对象是存储 VectorProxy 类型的元素的代理迭代器 \<T> 。 不过，代理对象对于用户代码应该不可见。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="requirements"></a>要求
 
-**标头：** collection.h
+**标头：** 集合。h
 
 **命名空间：** Windows::Foundation::Collections
 
 ## <a name="see-also"></a>请参阅
 
-[Windows::Foundation::Collections 命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows：： Foundation：：集合命名空间](../cppcx/windows-foundation-collections-namespace-c-cx.md)

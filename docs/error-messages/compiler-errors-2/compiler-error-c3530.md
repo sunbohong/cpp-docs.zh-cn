@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3530
 title: 编译器错误 C3530
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-ms.openlocfilehash: 152157824cb270f32b1233f39225abab7741eda5
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 74cd9ade2805ba26c700d476c53f87ea86a3baba
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97315369"
 ---
 # <a name="compiler-error-c3530"></a>编译器错误 C3530
 
@@ -25,7 +26,7 @@ ms.locfileid: "91507055"
 
 ## <a name="example"></a>示例
 
-下面的示例将生成 C3530，因为变量 `x` 同时用 **`auto`** 关键字和类型声明 **`int`** ，并且该示例是用 **/zc： auto**编译的。
+下面的示例将生成 C3530，因为变量 `x` 同时用 **`auto`** 关键字和类型声明 **`int`** ，并且该示例是用 **/zc： auto** 编译的。
 
 ```cpp
 // C3530.cpp

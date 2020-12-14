@@ -1,17 +1,18 @@
 ---
+description: '了解详细信息：装箱 (c + +/CX) '
 title: 装箱 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 59c7f8ec56a912ed993316fba093b87bd85e16b1
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 50b7f3f071fcd0109a85fb24985024666bd8fad3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87233530"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97302733"
 ---
 # <a name="boxing-ccx"></a>装箱 (C++/CX)
 
-*Boxing*在将变量传递给采用 Platform：： Object ^ 作为其输入类型的方法时，装箱会将值类型变量（如[Windows：： Foundation：:D atetime](/uwp/api/windows.foundation.datetime)）或基础标量类型（如 **`int`** ）封装在 ref 类中。 [Platform::Object^](../cppcx/platform-object-class.md)
+在将变量传递给采用 Platform：： Object ^ 作为其输入类型的方法时，装箱会将值类型变量（如 [Windows：： Foundation：:D atetime](/uwp/api/windows.foundation.datetime)）或基础标量类型（如 **`int`** ）封装在 ref 类中。 [](../cppcx/platform-object-class.md)
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>将值类型传递给 Object^ 参数
 
@@ -36,7 +37,7 @@ C# 和 Visual Basic 支持可以为 null 的值类型的概念。 在 c + +/CX �
     var result = obj.Multiply(a,b); //result = null
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类型系统 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [强制转换 (C++/CX)](../cppcx/casting-c-cx.md)<br/>
