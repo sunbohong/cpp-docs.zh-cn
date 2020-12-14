@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：链接器工具警告 LNK4197
 title: 链接器工具警告 LNK4197
 ms.date: 09/05/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4197
 ms.assetid: 8a976fd7-a74b-4c83-ab66-a9e7d7073c4a
-ms.openlocfilehash: 92702864a00455e4b70f00dfc9988bfb754e2e64
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a2054caf5e60cc7333c0da70c6027966536e8406
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183275"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294348"
 ---
 # <a name="linker-tools-warning-lnk4197"></a>链接器工具警告 LNK4197
 
@@ -33,6 +34,6 @@ EXPORTS
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>通过检查以下可能的原因进行修复
 
-1. 在命令行上同时指定相同的导出：通过导出：并在 .def 文件中。
+1. 在命令行上指定相同的导出 (通过导出： ) 并在 .def 文件中。
 
 2. 同一导出在 .def 文件中列出了两次，具有不同的属性。

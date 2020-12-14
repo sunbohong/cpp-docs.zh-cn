@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息：处理自定义通知
 title: 处理自定义通知
 ms.date: 11/04/2016
 f1_keywords:
@@ -47,18 +48,18 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-ms.openlocfilehash: d88e1efe12fd5b31a9f78b8fe439ba1aefa72d1e
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: b5e104f118ac0eeff96965692615ce9143c5c178
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84625730"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254958"
 ---
 # <a name="handling-customization-notifications"></a>处理自定义通知
 
 Windows 工具栏公共控件有内置的自定义功能，包括一个系统定义的自定义对话框，使用户可以插入、删除或重排工具栏按钮。 应用程序确定自定义功能是否可用，并控制用户可以自定义工具栏的程度。
 
-可以通过为工具栏提供**CCS_ADJUSTABLE**样式，使这些自定义功能对用户可用。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示 **** “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。
+可以通过为工具栏提供 **CCS_ADJUSTABLE** 样式，使这些自定义功能对用户可用。 用户可以通过自定义功能将按钮拖动到新位置，或通过将按钮拖出工具栏删除该按钮。 此外，用户可以双击工具栏以显示  “自定义工具栏”对话框，以便添加、删除和重排工具栏按钮。 应用程序通过使用 [Customize](reference/ctoolbarctrl-class.md#customize) 成员函数来显示对话框。
 
 工具控件在自定义过程的每一步都会向父窗口发送通知消息。 如果用户按住 SHIFT 键并开始拖动按钮，工具栏将自动处理拖动操作。 工具栏将向父窗口发送 **TBN_QUERYDELETE** 通知消息，确定是否可删除该按钮。 如果父窗口返回 **FALSE**，则结束拖动操作。 否则，工具栏将捕获鼠标输入并等待用户释放鼠标按钮。
 
@@ -66,13 +67,13 @@ Windows 工具栏公共控件有内置的自定义功能，包括一个系统定
 
 如果用户没有按住 SHIFT 键就开始拖动操作，工具栏控件将向所有者窗口发送 **TBN_BEGINDRAG** 通知消息。 实现了自己的按钮拖动代码的应用程序可以将此消息用作开始拖动操作的信号。 工具栏将发送 **TBN_ENDDRAG** 通知消息，表示拖动操作结束。
 
-工具栏控件在用户通过使用 **** “自定义工具栏”对话框自定义工具栏时，将发送通知消息。 工具栏将在用户双击工具栏之后，在创建对话框之前发送 **TBN_BEGINADJUST** 。 然后，工具栏开始发送一系列 **TBN_QUERYINSERT** 通知消息，以确定工具栏是否允许插入按钮。 当父窗口返回 **TRUE**时，工具栏将停止发送 **TBN_QUERYINSERT** 通知消息。 如果父窗口对于任何按钮未返回 **TRUE** ，工具栏将销毁对话框。
+工具栏控件在用户通过使用  “自定义工具栏”对话框自定义工具栏时，将发送通知消息。 工具栏将在用户双击工具栏之后，在创建对话框之前发送 **TBN_BEGINADJUST** 。 然后，工具栏开始发送一系列 **TBN_QUERYINSERT** 通知消息，以确定工具栏是否允许插入按钮。 当父窗口返回 **TRUE** 时，工具栏将停止发送 **TBN_QUERYINSERT** 通知消息。 如果父窗口对于任何按钮未返回 **TRUE** ，工具栏将销毁对话框。
 
 然后，工具栏控件将确定通过对工具栏上的每个按钮发送 **TBN_QUERYDELETE** 通知消息，确定是否可从工具栏中删除任何按钮。 父窗口返回 **TRUE** ，表示可以删除某个按钮；返回 **FALSE**，表示不可以删除。 工具栏将所有的工具栏按钮都添加到对话框，但用灰色表示不可删除的按钮。
 
 每当工具栏控件需要自定义工具栏对话框中某个按钮的信息时，它都会发送 **TBN_GETBUTTONINFO** 通知消息，用于指定需要其信息的按钮的索引和 **TBNOTIFY** 结构的地址。 父窗口必须使用相关信息填充该结构。
 
-**** “自定义工具栏”对话框包括“帮助”按钮和“重置”按钮。 当用户选择“帮助”按钮时，工具栏控件将发送 **TBN_CUSTHELP** 通知消息。 父窗口应通过显示帮助信息进行响应。 当用户选择“重置”按钮时，对话框中将发送 **TBN_RESET** 通知消息。 此消息表示工具栏将重新初始化对话框。
+ “自定义工具栏”对话框包括“帮助”按钮和“重置”按钮。 当用户选择“帮助”按钮时，工具栏控件将发送 **TBN_CUSTHELP** 通知消息。 父窗口应通过显示帮助信息进行响应。 当用户选择“重置”按钮时，对话框中将发送 **TBN_RESET** 通知消息。 此消息表示工具栏将重新初始化对话框。
 
 这些消息都是 **WM_NOTIFY** 消息。将下列形式的消息映射项添加到所有者窗口消息映射中，就可以在所有者窗口中处理这些消息：
 
@@ -98,7 +99,7 @@ ON_NOTIFY( wNotifyCode, idControl, memberFxn )
 afx_msg void memberFxn( NMHDR * pNotifyStruct, LRESULT * result );
 ```
 
-如果消息通知处理程序返回一个值，它应将其放入由 **result** 指向的 *LRESULT*中。
+如果消息通知处理程序返回一个值，它应将其放入由 **result** 指向的 *LRESULT* 中。
 
 对于每一条消息， `pNotifyStruct` 不是指向 **NMHDR** 结构，就是指向 **TBNOTIFY** 结构。 这些结构如下所述：
 
@@ -162,7 +163,7 @@ typedef struct {
 
 - **tbButton**
 
-   包含与通知关联的工具栏按钮有关的信息的**TBBUTTON**结构。
+   包含与通知关联的工具栏按钮有关的信息的 **TBBUTTON** 结构。
 
 - **cchText**
 
@@ -214,7 +215,7 @@ typedef struct {
 
    在用户自定义工具栏控件后发送。 指针指向包含有关通知消息的信息的 **NMHDR** 结构。 处理程序不需要返回任何特定值。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [使用 CToolBarCtrl](using-ctoolbarctrl.md)<br/>
 [控件](controls-mfc.md)

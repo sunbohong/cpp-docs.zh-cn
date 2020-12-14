@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：处理 "应用" 按钮
 title: 处理应用按钮
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: cd1254a31491e713513f0db0d4cf87baddd9bb23
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a626dcab04d68d19efba79465bfca46545ff6670
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618605"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254932"
 ---
 # <a name="handling-the-apply-button"></a>处理应用按钮
 
@@ -26,12 +27,12 @@ ms.locfileid: "84618605"
 
 若要将页面报告为已修改并启用 "应用" 按钮，请调用 `CPropertyPage::SetModified( TRUE )` 。 如果任何页报告“正在修改”，则“应用”按钮都将保持启用状态，无论当前活动页是否已修改都是如此。
 
-每当用户更改页面中的任何设置时，均应调用[CPropertyPage：： SetModified](reference/cpropertypage-class.md#setmodified) 。 检测用户何时更改页面设置的一种方法是为属性页中的每个控件实现更改通知处理程序，如**EN_CHANGE**或**BN_CLICKED**。
+每当用户更改页面中的任何设置时，均应调用 [CPropertyPage：： SetModified](reference/cpropertypage-class.md#setmodified) 。 检测用户何时更改页面设置的一种方法是为属性页中的每个控件实现更改通知处理程序，如 **EN_CHANGE** 或 **BN_CLICKED**。
 
 若要实现“应用”按钮的效果，属性表必须告知其所有者或应用程序中的其他外部对象，应用属性页中的当前设置。 同时，属性表应通过调用 `CPropertyPage::SetModified( FALSE )` 所有将其修改应用到外部对象的页来禁用 "应用" 按钮。
 
-有关此过程的示例，请参阅 MFC 常规示例[PROPDLG](../overview/visual-cpp-samples.md)。
+有关此过程的示例，请参阅 MFC 常规示例 [PROPDLG](../overview/visual-cpp-samples.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [属性表](property-sheets-mfc.md)

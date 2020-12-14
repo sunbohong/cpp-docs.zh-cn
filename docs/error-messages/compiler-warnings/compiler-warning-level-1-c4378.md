@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4378
 title: 编译器警告（等级 1）C4378
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-ms.openlocfilehash: 20897ba27350835b4b896c5afd89790331c59220
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 0b85224cb2262025617f2d5c46c9a38c27e42d40
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90685601"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311365"
 ---
 # <a name="compiler-warning-level-1-c4378"></a>编译器警告（等级 1）C4378
 
 必须获得函数指针才能运行初始值设定项;请考虑 System：： ModuleHandle：： ResolveMethodHandle
 
-在 **/clr**下，初始值设定项符号包含函数标记，而不包含函数指针。  需要使用将令牌转换为指针 <xref:System.ModuleHandle.ResolveMethodHandle%2A> 。
+在 **/clr** 下，初始值设定项符号包含函数标记，而不包含函数指针。  需要使用将令牌转换为指针 <xref:System.ModuleHandle.ResolveMethodHandle%2A> 。
 
 ## <a name="examples"></a>示例
 

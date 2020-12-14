@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4374
 title: 编译器警告（等级 1）C4374
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: a0dbfbe931ec30c0bde2e82718e0817dcfa243b7
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0b1d8eef5f168f12cc41f1108fcea24040f806ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80187032"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97311328"
 ---
 # <a name="compiler-warning-level-1-c4374"></a>编译器警告（等级 1）C4374
 
 "function1"：接口方法不能由非虚方法 "function2" 实现
 
-编译器需要在方法定义中查找[虚](../../cpp/virtual-specifier.md)关键字。
+编译器需要在方法定义中查找 [虚](../../cpp/virtual-specifier.md) 关键字。
 
 下面的示例生成 C4374：
 
