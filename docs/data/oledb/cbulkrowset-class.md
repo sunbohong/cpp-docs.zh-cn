@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CBulkRowset 类
 title: CBulkRowset 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -95,12 +96,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: 5c1c7bc381d30f701bad123807689b08ea47f65d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 106a8ffb3d70a021adbdb03b426e53ca39285b02
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88838459"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198370"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 类
 
@@ -113,7 +114,7 @@ template <class TAccessor>
 class CBulkRowset : public CRowset<TAccessor>
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 一个访问器类。
@@ -126,7 +127,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[AddRefRows](#addrefrows)|递增引用计数。|
 |[CBulkRowset](#cbulkrowset)|构造函数。|
@@ -236,7 +237,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    DBCOUNTITEM lSkip = 0) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 bookmark<br/>
 [in] 标记要从其提取数据的位置的书签。
@@ -246,7 +247,7 @@ bookmark<br/>
 
 ### <a name="return-value"></a>返回值
 
-请参阅*OLE DB 程序员参考*中的[IRowset：：：](/previous-versions/windows/desktop/ms716988(v=vs.85))
+请参阅 *OLE DB 程序员参考* 中的 [IRowset：：：](/previous-versions/windows/desktop/ms716988(v=vs.85))
 
 ## <a name="cbulkrowsetmovetoratio"></a><a name="movetoratio"></a> CBulkRowset：： MoveToRatio
 
@@ -259,7 +260,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator)throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *nNumerator*<br/>
 中用于确定从中提取数据的小数位置的分子。
@@ -271,13 +272,13 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `MoveToRatio` 按照以下公式大致提取行：
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-其中 `RowsetSize` 是行集的大小，以行为单位。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅*OLE DB 程序员参考*中的[IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 。
+其中 `RowsetSize` 是行集的大小，以行为单位。 此公式的准确性取决于特定的提供程序。 有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [IRowsetScroll：： GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85)) 。
 
 ## <a name="cbulkrowsetreleaserows"></a><a name="releaserows"></a> CBulkRowset：： ReleaseRows
 
@@ -303,16 +304,16 @@ HRESULT ReleaseRows() throw();
 void SetRows(DBROWCOUNT nRows) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-nRows**<br/>
+nRows<br/>
 [in] 行集的新大小（行数）。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果调用此函数，则它必须在行集之前打开。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE DB 使用者模板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 使用者模板参考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _locking
 title: _locking
 ms.date: 4/2/2020
 api_name:
@@ -30,12 +31,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: c1c211ffaa63a0e4711374b01b0530ed8db20dfb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 087fc65edbb30bdb6e36b7410f29cf165b119d38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198799"
 ---
 # <a name="_locking"></a>_locking
 
@@ -51,7 +52,7 @@ int _locking(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *fd*<br/>
 文件描述符。
@@ -64,40 +65,40 @@ int _locking(
 
 ## <a name="return-value"></a>返回值
 
-如果成功， **_locking**将返回0。 返回值-1 指示失败，在这种情况下， [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)设置为以下值之一。
+如果成功， **_locking** 将返回0。 返回值-1 指示失败，在这种情况下， [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 设置为以下值之一。
 
 |errno 值|条件|
 |-|-|
 | **EACCES** | 锁定冲突（文件已锁定或已解锁）。 |
 | **EBADF** | 无效的文件描述符。 |
-| **EDEADLOCK** | 锁定冲突。 当指定 **_LK_LOCK**或 **_LK_RLCK**标志并且文件在10次尝试后无法锁定时返回。 |
-| **EINVAL** | 为 **_locking**提供的参数无效。 |
+| **EDEADLOCK** | 锁定冲突。 当指定 **_LK_LOCK** 或 **_LK_RLCK** 标志并且文件在10次尝试后无法锁定时返回。 |
+| **EINVAL** | 为 **_locking** 提供的参数无效。 |
 
 如果失败是由错误参数导致，如无效的文件描述符，则调用无效的参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>备注
 
-**_Locking**函数锁定或解锁*fd*指定的文件的*nbytes*字节。 锁定文件中的字节将阻止其他进程访问这些字节。 所有锁定或解锁在文件指针的当前位置开始，并继续到接下来的 *nbytes* 字节。 可能会锁定超出文件尾的字节。
+**_Locking** 函数锁定或解锁 *fd* 指定的文件的 *nbytes* 字节。 锁定文件中的字节将阻止其他进程访问这些字节。 所有锁定或解锁在文件指针的当前位置开始，并继续到接下来的 *nbytes* 字节。 可能会锁定超出文件尾的字节。
 
 *mode* 必须是 Locking.h 中定义的以下清单常量之一。
 
-|*模式*值|效果|
+|*模式* 值|效果|
 |-|-|
 | **_LK_LOCK** | 锁定指定字节。 如果无法锁定字节，该程序会立即在 1 秒后再次尝试。 如果在 10 次尝试后仍无法锁定字节，该常量将返回一个错误。 |
 | **_LK_NBLCK** | 锁定指定字节。 如果无法锁定字节，该常量将返回一个错误。 |
-| **_LK_NBRLCK** | 与 **_LK_NBLCK**相同。 |
-| **_LK_RLCK** | 与 **_LK_LOCK**相同。 |
+| **_LK_NBRLCK** | 与 **_LK_NBLCK** 相同。 |
+| **_LK_RLCK** | 与 **_LK_LOCK** 相同。 |
 | **_LK_UNLCK** | 要解锁的指定字节必须在之前锁定过。 |
 
-可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 **_locking**不会合并相邻区域;如果两个锁定区域相邻，则必须单独解锁每个区域。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。
+可以锁定文件中不重叠的多个区域。 正在解锁的区域必须在之前锁定过。 **_locking** 不会合并相邻区域;如果两个锁定区域相邻，则必须单独解锁每个区域。 区域应只是暂时锁定，在关闭文件或退出程序前应进行解锁。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|可选标头|
+|例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|---------------------|
-|**_locking**|\<io.h 1> 和 \<sys/locking.h 1>|\<errno.h>|
+|**_locking**|\<io.h> 和 \<sys/locking.h>|\<errno.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -170,7 +171,7 @@ No one can change these bytes while I'm reading them
 Now I'm done. Do what you will with them
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>

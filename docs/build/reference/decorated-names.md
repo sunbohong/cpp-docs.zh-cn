@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：修饰名
 title: 修饰名
 ms.date: 09/05/2018
 helpviewer_keywords:
@@ -6,16 +7,16 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 0cda21b1650fa660175248c15560a7ab0b251d07
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 65135b4f5b85cfae7a25513763b998d304e79a0c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504253"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97201711"
 ---
 # <a name="decorated-names"></a>修饰名
 
-C 和 C++ 程序中的函数、数据和对象均在内部由其修饰名表示。 *修饰名*是编译器在对象、数据或函数定义的编译过程中创建的编码字符串。 它记录名称以及调用约定、类型、函数参数和其他信息。 此名称修饰（也称为 *名称重整*）有助于链接器在链接可执行文件时查找正确的函数和对象。
+C 和 C++ 程序中的函数、数据和对象均在内部由其修饰名表示。 *修饰名* 是编译器在对象、数据或函数定义的编译过程中创建的编码字符串。 它记录名称以及调用约定、类型、函数参数和其他信息。 此名称修饰（也称为 *名称重整*）有助于链接器在链接可执行文件时查找正确的函数和对象。
 
 修饰命名约定在各种版本的 Visual Studio 中已发生更改，也可以在不同的目标体系结构上有所不同。 若要与使用 Visual Studio 创建的源文件正确链接，应使用相同的编译器工具集、标志和目标体系结构编译 C 和 c + + Dll 和库。
 

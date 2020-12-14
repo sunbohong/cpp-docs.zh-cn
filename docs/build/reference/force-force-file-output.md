@@ -1,4 +1,5 @@
 ---
+description: '详细了解：/FORCE (强制文件输出) '
 title: /FORCE（强制文件输出）
 ms.date: 07/19/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d84810828eef85c4db3558b70953630c70f8f82e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200450"
 ---
 # <a name="force-force-file-output"></a>/FORCE（强制文件输出）
 
@@ -37,17 +38,17 @@ ms.locfileid: "80079630"
 
 使用此选项创建的文件可能无法按预期运行。 指定/FORCE 选项后，链接器不会进行增量链接。
 
-如果模块是使用 **/clr**编译的，则 **/force**将不会创建映像。
+如果模块是使用 **/clr** 编译的，则 **/force** 将不会创建映像。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 右键单击 "**解决方案资源管理器**中的项目，然后选择"**属性**"。
+1. 右键单击 " **解决方案资源管理器** 中的项目，然后选择" **属性**"。
 
 1. 单击“链接器”文件夹。
 
-1. 点击“命令行” 属性页。
+1. 点击“命令行”  属性页。
 
-1. 在 "**附加选项**" 框中键入选项。
+1. 在 " **附加选项** " 框中键入选项。
 
 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
@@ -55,7 +56,7 @@ ms.locfileid: "80079630"
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息：为 CLR 项目创建的文件
 title: 为 CLR 项目创建的文件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Visual Studio C++ projects, CLR programming
 - .NET applications, C++
 ms.assetid: 59ae9020-5f26-4ad0-bbdd-97c2e2023a20
-ms.openlocfilehash: 45295a3395f19d32dbf29948e1cbd15cd844adb4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 14aa07d891a75307f119f33ace5c32dbb2aa18db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200518"
 ---
 # <a name="files-created-for-clr-projects"></a>为 CLR 项目创建的文件
 
@@ -24,6 +25,6 @@ ms.locfileid: "80169001"
 |projname.vsdisco|XML 部署文件，其中包含指向描述 XML Web 服务的其他资源的链接。|
 |projname.h|项目的主要包含文件，其中包含所有声明、全局符号和其他头文件的 `#include` 指令。|
 |projname.sln|开发环境中用于将项目的所有元素整理到单个解决方案中的解决方案文件。|
-|projname.suo|开发环境中使用的解决方案选项文件。|
-|projname.vcxproj|开发环境中使用的项目文件，用于存储特定于此项目的信息。|
+|*projname*|开发环境中使用的解决方案选项文件。|
+|*projname*. .vcxproj|开发环境中使用的项目文件，用于存储特定于此项目的信息。|
 |ReadMe.txt|一个使用模板创建的实际文件名描述项目中每个文件的文件。|

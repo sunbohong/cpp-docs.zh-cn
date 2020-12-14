@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4076
 title: 编译器警告（等级 1）C4076
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4076
 ms.assetid: 04581066-313a-4a11-bb60-721e6d038d75
-ms.openlocfilehash: 1958aec4d6642188af1467ab4cab1ecf55c29165
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0bae49d3af23e499851fbf70fb24fdeb817ee03c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223312"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198253"
 ---
 # <a name="compiler-warning-level-1-c4076"></a>编译器警告（等级 1）C4076
 
@@ -19,7 +20,7 @@ ms.locfileid: "87223312"
 
 ## <a name="remarks"></a>备注
 
-类型修饰符（无论是 **`signed`** 还是 **`unsigned`** ）不能用于非整数类型。 已忽略*type 修饰符*。
+类型修饰符（无论是 **`signed`** 还是 **`unsigned`** ）不能用于非整数类型。 已忽略 *type 修饰符*。
 
 ## <a name="example"></a>示例
 

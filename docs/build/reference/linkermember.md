@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：/LINKERMEMBER
 title: /LINKERMEMBER
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - LINKERMEMBER dumpbin option
 - -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-ms.openlocfilehash: a0456fd9ed1729b4a6cfa200a54ba211a64e94ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76c842bcc2299b4245847e7d4e9a64656e88d2d9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199384"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
 
@@ -23,9 +24,9 @@ ms.locfileid: "62216579"
 
 ## <a name="remarks"></a>备注
 
-此选项显示在库中定义的公共符号。 指定要显示在对象的顺序，以及它们的偏移量的符号的 1 参数。 指定要显示的偏移量和对象的索引号的 2 个自变量，然后列出按字母顺序，以及每个对象索引的符号。 若要获取这两个输出，请指定不带该数字参数 /LINKERMEMBER。
+此选项显示库中定义的公共符号。 指定1参数以按对象顺序显示符号及其偏移量。 指定2参数以显示对象的偏移量和索引编号，然后按字母顺序列出符号以及每个参数的对象索引。 若要获取两个输出，请指定不带 number 参数的/LINKERMEMBER。
 
-仅[/HEADERS](headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](gl-whole-program-optimization.md)编译器选项。
+只有 [/HEADERS](headers.md) DUMPBIN 选项可用于由 [/GL](gl-whole-program-optimization.md) 编译器选项产生的文件。
 
 ## <a name="see-also"></a>请参阅
 

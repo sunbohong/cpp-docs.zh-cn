@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _lock_file
 title: _lock_file
 ms.date: 4/2/2020
 api_name:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 1eba161b5083235c1ef0724284e74e6f0f7df0cd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911526"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198825"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-锁定**文件**对象，以确保线程同时访问**文件**对象的一致性。
+锁定 **文件** 对象，以确保线程同时访问 **文件** 对象的一致性。
 
 ## <a name="syntax"></a>语法
 
@@ -46,20 +47,20 @@ ms.locfileid: "82911526"
 void _lock_file( FILE* file );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*文件*<br/>
+*file*<br/>
 文件句柄。
 
 ## <a name="remarks"></a>备注
 
-**_Lock_file**函数将锁定*文件*指定的**文件**对象。 **_Lock_file**未锁定基础文件。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 调用 **_lock_file**和 **_unlock_file**必须在线程中匹配。
+**_Lock_file** 函数将锁定 *文件* 指定的 **文件** 对象。 **_Lock_file** 未锁定基础文件。 使用 [_unlock_file](unlock-file.md) 解除对该文件的锁定。 调用 **_lock_file** 和 **_unlock_file** 必须在线程中匹配。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
@@ -140,7 +141,7 @@ tS
 eFciornsdt
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [文件处理](../../c-runtime-library/file-handling.md)<br/>
 [_creat、_wcreat](creat-wcreat.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：激活 (c + +) '
 title: Activation (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: 47640a59180348bd3513013b65029a775545e211
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 726c64344f684c8ca9e79d9296daea80882af08f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619186"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97197715"
 ---
 # <a name="activation-c"></a>Activation (C++)
 
@@ -31,7 +32,7 @@ ms.locfileid: "84619186"
 
 还可以在单独的窗口中编辑嵌入的 OLE 项。 如果容器或服务器应用程序不支持就地激活，则会发生这种情况。 在这种情况下，当用户双击嵌入项时，将在单独的窗口中启动服务器应用程序，并且嵌入项显示为其自己的文档。 用户编辑此窗口中的项。 完成编辑后，用户会关闭服务器应用程序并返回到容器应用程序。
 
-作为替代方法，用户可以使用 "**编辑**" 菜单上的 " ** \<object> 打开**" 命令选择 "打开编辑"。 这将在单独的窗口中打开对象。
+作为替代方法，用户可以使用 "**编辑**" 菜单上的 " **\<object> 打开**" 命令选择 "打开编辑"。 这将在单独的窗口中打开对象。
 
 > [!NOTE]
 > 在单独的窗口中编辑嵌入项是 OLE 版本1中的标准行为，某些 OLE 应用程序可能只支持这种编辑样式。
@@ -40,9 +41,9 @@ ms.locfileid: "84619186"
 
 MFC 不支持嵌套就地激活。 如果你构建容器/服务器应用程序，并且该容器/服务器嵌入另一个容器并就地激活，则它不能就地激活嵌入在其中的对象。
 
-当用户双击嵌入项时，它会发生什么情况取决于为该项定义的谓词。 有关信息，请参阅[激活：谓词](activation-verbs.md)。
+当用户双击嵌入项时，它会发生什么情况取决于为该项定义的谓词。 有关信息，请参阅 [激活：谓词](activation-verbs.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [OLE](ole-in-mfc.md)<br/>
 [容器](containers.md)<br/>

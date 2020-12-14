@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： FactoryCacheFlags 枚举
 title: FactoryCacheFlags 枚举
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::FactoryCacheFlags
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-ms.openlocfilehash: 3381b2bcfcbf298270b547199ae614291855a2f7
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 68a86049bf1f6287a84ae4df2e27dbe3c63c91c5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88843269"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198500"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags 枚举
 
@@ -26,7 +27,7 @@ enum FactoryCacheFlags;
 
 默认情况下，创建[Module](module-class.md)对象时，出厂缓存策略指定为[ModuleType](moduletype-enumeration.md)模板参数。 若要重写此策略，请在创建工厂对象时指定 **FactoryCacheFlags** 值。
 
-| 策略 | 说明 |
+| 策略 | 描述 |
 |-|-|
 |`FactoryCacheDefault`|将使用 `Module` 对象的缓存策略。|
 |`FactoryCacheEnabled`|启用工厂缓存，无论用于创建 `ModuleType` 对象的 `Module` 模板参数如何都是如此。|
@@ -38,6 +39,6 @@ enum FactoryCacheFlags;
 
 **命名空间：** Microsoft::WRL
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Microsoft：： WRL 命名空间](microsoft-wrl-namespace.md)

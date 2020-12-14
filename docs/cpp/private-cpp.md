@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：私有 (c + +) '
 title: private (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - private keyword [C++]
 ms.assetid: 94e99983-46a5-4e21-800c-28f8a7c6a8ff
-ms.openlocfilehash: 3b9df2ee2abcaca1c7c11c08ef73ae795a84310d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f9060dbbe32662a62fcda84b628877b52d87bdfc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232243"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198617"
 ---
 # <a name="private-c"></a>private (C++)
 
@@ -37,10 +38,10 @@ private base-class
 
 ## <a name="clr-specific"></a>/clr 专用
 
-在 CLR 类型中，c + + 访问说明符关键字（ **`public`** 、 **`private`** 和 **`protected`** ）会影响程序集的类型和方法的可见性。 有关详细信息，请参阅[成员访问控制](member-access-control-cpp.md)。
+在 CLR 类型中，c + + 访问说明符关键字 (**`public`** 、 **`private`** 和 **`protected`**) 可能会影响有关程序集的类型和方法的可见性。 有关详细信息，请参阅 [成员访问控制](member-access-control-cpp.md)。
 
 > [!NOTE]
-> 使用[/LN](../build/reference/ln-create-msil-module.md)编译的文件不受此行为的影响。 在这种情况下，所有托管类（公共或私有）都将可见。
+> 使用 [/LN](../build/reference/ln-create-msil-module.md) 编译的文件不受此行为的影响。 在这种情况下，所有托管类（公共或私有）都将可见。
 
 ## <a name="end-clr-specific"></a>END /clr 专用
 
@@ -81,7 +82,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [控制对类成员的访问](member-access-control-cpp.md)<br/>
 [关键字](../cpp/keywords-cpp.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：/LOADCONFIG
 title: /LOADCONFIG
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - -LOADCONFIG dumpbin option
 - /LOADCONFIG dumpbin option
 ms.assetid: 24667afe-9bee-4f6e-ae72-f534c0050428
-ms.openlocfilehash: 689fd64e3d13cd609f709a3e4d3e9035ca711274
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3a8e23360fdf3fd21d33b5b5f8c3353b13970a39
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342507"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199150"
 ---
 # <a name="loadconfig"></a>/LOADCONFIG
 
@@ -23,9 +24,9 @@ ms.locfileid: "64342507"
 
 ## <a name="remarks"></a>备注
 
-此选项将转储 IMAGE_LOAD_CONFIG_DIRECTORY 结构，WINNT 中定义的 Windows NT 加载程序使用的可选结构。H.
+此选项会转储 IMAGE_LOAD_CONFIG_DIRECTORY 结构，这是 Windows NT 加载程序使用的、在 WINNT.SIF 中定义的可选结构。
 
-仅[/HEADERS](headers.md) DUMPBIN 选项仅适用于使用产生的文件[/GL](gl-whole-program-optimization.md)编译器选项。
+只有 [/HEADERS](headers.md) DUMPBIN 选项可用于由 [/GL](gl-whole-program-optimization.md) 编译器选项产生的文件。
 
 ## <a name="see-also"></a>请参阅
 

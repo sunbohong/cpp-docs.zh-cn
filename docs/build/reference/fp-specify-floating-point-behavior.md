@@ -1,4 +1,5 @@
 ---
+description: '详细了解：/fp (指定浮点行为) '
 title: /fp（指定浮点行为）
 ms.date: 11/09/2018
 f1_keywords:
@@ -11,20 +12,20 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 7a8ae885bbbf00ae916505bf5df646b32268a17a
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 5d57bae24af9cd415a2dcfde073e276f51ce3ea3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040907"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200437"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp（指定浮点行为）
 
-指定编译器如何处理浮点表达式、优化和异常。 **/Fp**选项指定生成的代码是否允许浮点环境更改为舍入模式、异常掩码和次正常行为，以及浮点状态检查是否返回当前的准确结果。 它控制编译器是否生成维护源操作和表达式排序并符合 NaN 传播标准的代码，或者是否生成更有效的代码，这些代码可以重新排序或合并操作，并简化标准不允许的代数转换。
+指定编译器如何处理浮点表达式、优化和异常。 **/Fp** 选项指定生成的代码是否允许浮点环境更改为舍入模式、异常掩码和次正常行为，以及浮点状态检查是否返回当前的准确结果。 它控制编译器是否生成维护源操作和表达式排序并符合 NaN 传播标准的代码，或者是否生成更有效的代码，这些代码可以重新排序或合并操作，并简化标准不允许的代数转换。
 
 ## <a name="syntax"></a>语法
 
-> **/fp：**[**精确**  |  **严格**地  |  **快速**，  |  **但**[ **-** ]]
+> **/fp：**[**精确**  |  **严格** 地  |  **快速**，  |  **但**[ **-** ]]
 
 ### <a name="arguments"></a>参数
 
@@ -69,7 +70,7 @@ ms.locfileid: "90040907"
 
 [/Za](za-ze-disable-language-extensions.md) (ANSI 兼容性) 选项与不兼容 `/fp` 。
 
-### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>使用编译器指令控制浮点行为
+### <a name="using-compiler-directives-to-control-floating-point-behavior"></a>使用编译器指令控制 Floating-Point 行为
 
 编译器提供了三个杂注指令用于重写命令行上指定的浮点行为： [float_control](../../preprocessor/float-control.md)、 [fenv_access](../../preprocessor/fenv-access.md)和 [fp_contract](../../preprocessor/fp-contract.md)。 您可以使用这些指令在函数级别控制浮点行为，而不是在函数中。 请注意，这些指令并不直接对应于 `/fp` 选项。 下表显示了 `/fp` 选项和杂注指令如何相互映射。 有关详细信息，请参阅各个选项和杂注指令的文档。
 
@@ -266,7 +267,7 @@ float casting(float a, float b)
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)<br/>
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)<br/>

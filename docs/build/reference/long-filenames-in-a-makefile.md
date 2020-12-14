@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息：生成文件中的长文件名
 title: 生成文件中的长文件名
 ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, long filenames
 - long filenames
 ms.assetid: 626d56fc-8879-46ba-9c2d-dd386c78cccc
-ms.openlocfilehash: 758f81e2e1b822c00b54cdaedfe996c9c7db2ef2
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4a432fbdfb9ee66d46451082067f9fea161b9444
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342280"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199111"
 ---
 # <a name="long-filenames-in-a-makefile"></a>生成文件中的长文件名
 
-将长文件名用双引号引起来，如下所示：
+用双引号将长文件名括起来，如下所示：
 
 ```
 all : "VeryLongFileName.exe"

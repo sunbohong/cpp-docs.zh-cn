@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： EventTargetArray 类
 title: EventTargetArray 类
 ms.date: 10/03/2018
 ms.topic: reference
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::EventTargetArray::Length method
 - Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
-ms.openlocfilehash: 9ea8800aa22a6b5cae0b3342cf337786fb53fc76
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ac3199d2374a47e94705f8f51672bfedd0b7bf20
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371499"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198578"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray 类
 
@@ -44,25 +45,25 @@ class EventTargetArray :
 
 表示事件处理程序的数组。
 
-与[EventSource](eventsource-class.md)对象关联的事件处理程序存储在受保护的`EventTargetArray`数据成员中。
+与 [EventSource](eventsource-class.md) 对象关联的事件处理程序存储在受保护的 `EventTargetArray` 数据成员中。
 
 ## <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-名称                                                           | 说明
+“属性”                                                           | 描述
 -------------------------------------------------------------- | -----------------------------------------------------------
-[事件目标数组：事件目标数组](#eventtargetarray)        | 初始化 `EventTargetArray` 类的新实例。
-[事件目标数组：*事件目标数组](#tilde-eventtargetarray) | 取消初始化当前`EventTargetArray`类。
+[EventTargetArray：： EventTargetArray](#eventtargetarray)        | 初始化 `EventTargetArray` 类的新实例。
+[EventTargetArray：： ~ EventTargetArray](#tilde-eventtargetarray) | 取消初始化当前 `EventTargetArray` 类。
 
 ### <a name="public-methods"></a>公共方法
 
-名称                                  | 说明
+“属性”                                  | 描述
 ------------------------------------- | ---------------------------------------------------------------------------------------
-[事件目标数组：：添加尾翼](#addtail) | 将指定的事件处理程序追加到事件处理程序的内部数组的末尾。
-[事件目标数组：：开始](#begin)     | 获取事件处理程序内部数组中第一个元素的地址。
-[事件目标数组：结束](#end)         | 获取事件处理程序内部数组中最后一个元素的地址。
-[事件目标数组：长度](#length)   | 获取事件处理程序内部数组中的当前元素数。
+[EventTargetArray：： AddTail](#addtail) | 将指定的事件处理程序追加到事件处理程序的内部数组的末尾。
+[EventTargetArray：： Begin](#begin)     | 获取事件处理程序内部数组中第一个元素的地址。
+[EventTargetArray：： End](#end)         | 获取事件处理程序内部数组中最后一个元素的地址。
+[EventTargetArray：： Length](#length)   | 获取事件处理程序内部数组中元素的当前数目。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -70,11 +71,11 @@ class EventTargetArray :
 
 ## <a name="requirements"></a>要求
 
-**标题：** 事件.h
+**标头：** 事件。h
 
-**命名空间：** 微软：：WRL：:D
+**命名空间：** Microsoft：： WRL：:D etails
 
-## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a>事件目标数组：*事件目标数组
+## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a> EventTargetArray：： ~ EventTargetArray
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -84,9 +85,9 @@ class EventTargetArray :
 
 ### <a name="remarks"></a>备注
 
-取消初始化当前`EventTargetArray`类。
+取消初始化当前 `EventTargetArray` 类。
 
-## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a>事件目标数组：：添加尾翼
+## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a> EventTargetArray：： AddTail
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -96,18 +97,18 @@ void AddTail(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*元素*<br/>
+*element*<br/>
 指向要追加的事件处理程序的指针。
 
 ### <a name="remarks"></a>备注
 
 将指定的事件处理程序追加到事件处理程序的内部数组的末尾。
 
-`AddTail()`打算仅由`EventSource`类在内部使用。
+`AddTail()` 仅供类在内部使用 `EventSource` 。
 
-## <a name="eventtargetarraybegin"></a><a name="begin"></a>事件目标数组：：开始
+## <a name="eventtargetarraybegin"></a><a name="begin"></a> EventTargetArray：： Begin
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -123,7 +124,7 @@ ComPtr<IUnknown>* Begin();
 
 获取事件处理程序内部数组中第一个元素的地址。
 
-## <a name="eventtargetarrayend"></a><a name="end"></a>事件目标数组：结束
+## <a name="eventtargetarrayend"></a><a name="end"></a> EventTargetArray：： End
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -139,7 +140,7 @@ ComPtr<IUnknown>* End();
 
 获取事件处理程序内部数组中最后一个元素的地址。
 
-## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a>事件目标数组：事件目标数组
+## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a> EventTargetArray：： EventTargetArray
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -150,30 +151,30 @@ EventTargetArray(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*人力资源*<br/>
-在此构造函数操作后，参数*hr*指示数组的分配是成功还是失败。 下面的列表显示了*hr*的可能值。
+*小时*<br/>
+此构造函数操作完成后，参数 *hr* 指示数组的分配是成功还是失败。 以下列表显示了 *hr* 的可能值。
 
 - S_OK<br/>
   操作成功。
 
 - E_OUTOFMEMORY<br/>
-  无法为阵列分配内存。
+  无法为数组分配内存。
 
 - S_FALSE<br/>
-  参数*项*小于或等于零。
+  参数 *项* 小于或等于零。
 
-*项目*<br/>
-要分配的数组元素的数量。
+*items*<br/>
+要分配的数组元素的数目。
 
 ### <a name="remarks"></a>备注
 
 初始化 `EventTargetArray` 类的新实例。
 
-`EventTargetArray`用于在`EventSource`对象中保留事件处理程序数组。
+`EventTargetArray` 用于在对象中保留事件处理程序的数组 `EventSource` 。
 
-## <a name="eventtargetarraylength"></a><a name="length"></a>事件目标数组：长度
+## <a name="eventtargetarraylength"></a><a name="length"></a> EventTargetArray：： Length
 
 支持 WRL 基础结构，不应在代码中直接使用。
 
@@ -183,8 +184,8 @@ size_t Length();
 
 ### <a name="return-value"></a>返回值
 
-事件处理程序的内部数组中的当前元素数。
+事件处理程序内部数组中元素的当前数目。
 
 ### <a name="remarks"></a>备注
 
-获取事件处理程序内部数组中的当前元素数。
+获取事件处理程序内部数组中元素的当前数目。

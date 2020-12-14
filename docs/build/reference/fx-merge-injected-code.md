@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/Fx (合并注入的代码) '
 title: /Fx（合并插入的代码）
 ms.date: 11/04/2016
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - merging injected code
 - /Fx compiler option [C++]
 ms.assetid: 14f0e301-3bab-45a3-bbdf-e7ce66f20560
-ms.openlocfilehash: b928ca63171f0f6d28859d049a1ed5008b908686
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 0c0aeea4c3a72f37848615d80c5ee6a5a807d838
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91500101"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97200346"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx（合并插入的代码）
 
@@ -66,9 +67,9 @@ ms.locfileid: "91500101"
 
 1. 单击 **“C/C++”** 文件夹。
 
-1. 单击“输出文件” **** 属性页。
+1. 单击“输出文件”  属性页。
 
-1. 修改“展开特性化源” **** 属性。
+1. 修改“展开特性化源”  属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
@@ -78,4 +79,4 @@ ms.locfileid: "91500101"
 
 [Output-File (/F) 选项](output-file-f-options.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)
