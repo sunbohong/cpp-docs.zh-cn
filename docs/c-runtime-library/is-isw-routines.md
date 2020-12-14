@@ -1,4 +1,5 @@
 ---
+description: 了解更多： is、isw 例程
 title: is、isw 例程
 ms.date: 11/04/2016
 api_location:
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - is routines
 - isw routines
 ms.assetid: 1e171a57-2cde-41f6-a75f-a080fa3c12e5
-ms.openlocfilehash: 632bd371f8a6da4b57eeb1ce88e2a37eb6923355
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d9229d2437ea7a7e57178acc5fd40ba2afea043b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839382"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246694"
 ---
 # <a name="is-isw-routines"></a>is、isw 例程
 
@@ -51,7 +52,7 @@ ms.locfileid: "88839382"
    :::column-end:::
 :::row-end:::
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 特定条件下的例程测试字符。
 
@@ -60,7 +61,7 @@ ms.locfileid: "88839382"
 > [!CAUTION]
 > 对于 **is** 例程，传递类型的参数 **`char`** 可能会产生不可预知的结果。 类型为的 SBCS 或 MBCS 单字节字符的 **`char`** 值大于0x7f，为负数。 如果 **`char`** 传递了，编译器可能会将值转换为 **`signed int`** 或 **`signed long`** 。 该值可能由编译器进行符号扩展，产生意外的结果。
 
-对于从 -1 (**WEOF**) 到 0xFFFF（含）的任何整数值，**isw** 例程都会产生有意义的结果。 **Wint_t**数据类型是在 WCHAR 中定义的。H 作为 **`unsigned short`** ; 它可以保留任何宽字符或宽字符文件尾 (**WEOF**) 值。
+对于从 -1 (**WEOF**) 到 0xFFFF（含）的任何整数值，**isw** 例程都会产生有意义的结果。 **Wint_t** 数据类型是在 WCHAR 中定义的。H 作为 **`unsigned short`** ; 它可以保留任何宽字符或宽字符文件尾 (**WEOF**) 值。
 
 输出值受区域设置的 `LC_CTYPE` 类别设置影响；有关详细信息，请参阅 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 这些不带 **_l** 后缀的函数版本使用此区域设置相关的行为的当前区域设置；带有 **_l** 后缀的版本相同，只不过它们使用传递的区域设置参数。
 
@@ -217,7 +218,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 00            AS  C                              .
@@ -355,5 +356,5 @@ int main( void )
 [字符分类](../c-runtime-library/character-classification.md)<br/>
 [区域设置](../c-runtime-library/locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
-[多字节字符序列的解释](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Multibyte-Character 序列的解释](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [to 函数](../c-runtime-library/to-functions.md)

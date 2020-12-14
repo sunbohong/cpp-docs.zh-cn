@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：内部 CRT 全局和函数
 title: 内部 CRT 全局和函数
 ms.date: 4/2/2020
 api_name:
@@ -930,12 +931,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: fe9b466ca839cb09011dc7cc38650b8b85037e86
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0ace61d708744d6d7ef715158d7a4452a3bf5b03
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914174"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246697"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT 全局和函数
 
@@ -1170,14 +1171,14 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 |__p___wargv|
 |__p___winitenv|
 |\__acmdln|
-|[__p\__commode](../c-runtime-library/p-commode.md)|
+|[__p \_ _commode](../c-runtime-library/p-commode.md)|
 |__p\__crtAssertBusy|
 |__p\__crtBreakAlloc|
 |__p\__crtDbgFlag|
 |__p\__daylight|
 |__p\__dstbias|
 |__p\__environ|
-|[__p\__fmode](../c-runtime-library/p-fmode.md)|
+|[__p \_ _fmode](../c-runtime-library/p-fmode.md)|
 |__p\__iob|
 |__p\__mbcasemap|
 |__p\__mbctype|
@@ -1270,6 +1271,6 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [按类别分的通用 C 运行时例程](../c-runtime-library/run-time-routines-by-category.md)<br/>

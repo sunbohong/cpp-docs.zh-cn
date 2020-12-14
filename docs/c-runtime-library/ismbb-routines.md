@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _ismbb 例程
 title: _ismbb 例程
 ms.date: 11/04/2016
 api_location:
@@ -20,12 +21,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: b8828018040b8b6b7b13c88c08599333dc1124d0
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4eb82433c4ad7712c2d3ac40f9eeb0120e6fea07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839369"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246605"
 ---
 # <a name="_ismbb-routines"></a>_ismbb 例程
 
@@ -50,7 +51,7 @@ ms.locfileid: "88839369"
    :::column-end:::
 :::row-end:::
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 `_ismbb` 系列中的每个例程会针对特定条件测试给定整数值 `c` 。 测试结果取决于有效的多字节代码页。 默认情况下，多字节代码页设置为在程序启动时从操作系统获取的 ANSI 代码页。 可使用 [_getmbcp](../c-runtime-library/reference/getmbcp.md) 查询所使用的多字节代码页，或使用 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 更改它。
 
@@ -75,7 +76,7 @@ ms.locfileid: "88839369"
 
 下表显示组成这些例程测试条件的经过“或”运算的值。 清单常量 `_BLANK`、 `_DIGIT`、 `_LOWER`、 `_PUNCT`和 `_UPPER` 在 Ctype.h 中进行定义。
 
-|例程所返回的值|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> text|Non-<br /><br /> ASCII<br /><br /> punct|
+|例程所返回的值|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|Non-<br /><br /> ASCII<br /><br /> 文本|Non-<br /><br /> ASCII<br /><br /> punct|
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|
 |`_ismbbalnum`|—|x|x|—|x|x|—|
 |`_ismbbalpha`|—|—|x|—|x|x|—|
@@ -89,7 +90,7 @@ ms.locfileid: "88839369"
 
 `_ismbb` 例程同时以函数和宏的形式来实现。 若要深入了解如何选择任一实现，请参阅[关于选择函数和宏的建议](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [字节分类](../c-runtime-library/byte-classification.md)<br/>
 [为，isw 例程](../c-runtime-library/is-isw-routines.md)<br/>
