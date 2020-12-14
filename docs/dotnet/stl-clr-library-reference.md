@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： STL/CLR 库参考
 title: STL/CLR 库参考
 ms.date: 09/18/2018
 ms.topic: reference
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: e6804dab814eca4ecc5fd23c74cbbb21eac3be77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: c051b58b76a70dd5ef3bd17b1f9bec1cbeeccebf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88839694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335327"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 库参考
 
@@ -75,6 +76,6 @@ STL/CLR 库提供了类似于 STL 的接口，可与 c + + 和 .NET Framework �
    :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[C + + 标准库](../standard-library/cpp-standard-library-reference.md)
+[C++ 标准库](../standard-library/cpp-standard-library-reference.md)

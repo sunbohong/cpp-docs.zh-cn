@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __vmx_vmread
 title: __vmx_vmread
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,18 +8,18 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 409835ac29d6f2e839de62291cc5b142166a465c
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 39ea9c0566d3f9c9d3fc6d980861fb3580293895
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219429"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97333506"
 ---
 # <a name="__vmx_vmread"></a>__vmx_vmread
 
 **Microsoft 专用**
 
-从当前虚拟机控制结构 (VMCS) 读取指定字段, 并将其放在指定位置。
+从当前虚拟机控制结构中读取指定字段 (VMCS) 并将其放在指定位置。
 
 ## <a name="syntax"></a>语法
 
@@ -29,13 +30,13 @@ unsigned char __vmx_vmread(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *定义域*\
 中要读取的 VMCS 字段。
 
 *FieldValue*\
-中一个指针, 指向用于存储从`Field`参数指定的 VMCS 字段中读取的值的位置。
+中一个指针，指向用于存储从参数指定的 VMCS 字段中读取的值的位置 `Field` 。
 
 ## <a name="return-value"></a>返回值
 
@@ -47,15 +48,15 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>备注
 
-`__vmx_vmread` 函数等同于 `VMREAD` 计算机指令。 `Field`参数的值是一个编码的字段索引, 在 Intel 文档中进行了介绍。 有关详细信息, 请在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站点搜索 "适用于 IA-32 Intel 体系结构的 Intel 虚拟化技术规范" 的附录 C。
+`__vmx_vmread` 函数等同于 `VMREAD` 计算机指令。 参数的值 `Field` 是一个编码的字段索引，在 Intel 文档中进行了介绍。 有关详细信息，请在 [Intel Corporation](https://software.intel.com/articles/intel-sdm) 站点搜索 "适用于 IA-32 Intel 体系结构的 Intel 虚拟化技术规范" 的附录 C。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__vmx_vmread`|X64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 **结束 Microsoft 专用**
 

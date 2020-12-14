@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： STL/CLR 容器
 title: STL/CLR 容器
 ms.date: 09/18/2018
 ms.topic: reference
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 04ba56bf4f134ac5e9b906f7f84563c00ffe1b96
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 945533f616abe37763d9963d46d87f02a3c077fa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87214862"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335338"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
@@ -21,7 +22,7 @@ STL/CLR 库包含类似于 c + + 标准库中的容器，但它在 .NET Framewor
 
 ## <a name="requirements-for-container-elements"></a>容器元素的需求
 
-插入到 STL/CLR 容器中的所有元素都必须遵循特定的准则。 有关详细信息，请参阅[STL/CLR 容器元素的要求](../dotnet/requirements-for-stl-clr-container-elements.md)。
+插入到 STL/CLR 容器中的所有元素都必须遵循特定的准则。 有关详细信息，请参阅 [STL/CLR 容器元素的要求](../dotnet/requirements-for-stl-clr-container-elements.md)。
 
 ## <a name="valid-container-elements"></a>有效的容器元素
 
@@ -37,11 +38,11 @@ STL/CLR 容器可容纳以下两种元素类型之一：
 
 ### <a name="handles-to-reference-types"></a>指向引用类型的句柄
 
-您可以将指向引用类型的句柄插入到 STL/CLR 容器中。 C++ 中面向 CLR 的句柄与 C++ 中的指针类似。 有关详细信息，请参阅[对象的句柄运算符（^）](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
+您可以将指向引用类型的句柄插入到 STL/CLR 容器中。 C++ 中面向 CLR 的句柄与 C++ 中的指针类似。 有关详细信息，请参阅 [对象操作员的 Handle (^) ](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
 
 #### <a name="example"></a>示例
 
-下面的示例演示如何在[cliext：： set](../dotnet/set-stl-clr.md)中插入 Employee 对象的句柄。
+下面的示例演示如何在 [cliext：： set](../dotnet/set-stl-clr.md)中插入 Employee 对象的句柄。
 
 ```cpp
 // cliext_container_valid_reference_handle.cpp
@@ -227,9 +228,9 @@ int main()
 
 ### <a name="unboxed-value-types"></a>未装箱的值类型
 
-您还可以将未装箱的值类型插入到 STL/CLR 容器中。 未装箱的值类型是未*装箱*到引用类型中的值类型。
+您还可以将未装箱的值类型插入到 STL/CLR 容器中。 未装箱的值类型是未 *装箱* 到引用类型中的值类型。
 
-值类型元素可以是标准值类型之一（如 **`int`** ），也可以是用户定义的值类型，如 **`value class`** 。 有关详细信息，请参阅[类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)
+值类型元素可以是标准值类型之一（如 **`int`** ），也可以是用户定义的值类型，如 **`value class`** 。 有关详细信息，请参阅 [类和结构](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>示例
 
@@ -296,7 +297,7 @@ int main()
 }
 ```
 
-如果尝试将值类型的句柄插入到容器中，则会生成[编译器错误 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) 。
+如果尝试将值类型的句柄插入到容器中，则会生成 [编译器错误 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) 。
 
 ### <a name="performance-and-memory-implications"></a>性能和内存含义
 
@@ -310,6 +311,6 @@ STL/CLR 中的容器处理值语义。 每次将一个元素插入到容器中�
 
 当您调用句柄对象容器的清除或擦除方法时，不会从内存中释放句柄引用的对象。 您必须显式地删除对象，或者允许垃圾回收器在确定不再使用对象之后立即释放内存，因为这些对象驻留在托管堆上。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMDIFrameWnd 类
 title: CMDIFrameWnd 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 321ad0364257d7c20d54f9fdc884073381117c6f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70192fb68710e54872f0aecbe862cfb00df14fcc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222948"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336679"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 类
 
@@ -55,13 +56,13 @@ class CMDIFrameWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMDIFrameWnd：： CMDIFrameWnd](#cmdiframewnd)|构造一个 `CMDIFrameWnd`。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMDIFrameWnd：： CreateClient](#createclient)|为此创建 Windows MDICLIENT 窗口 `CMDIFrameWnd` 。 由的 `OnCreate` 成员函数调用 `CWnd` 。|
 |[CMDIFrameWnd：： CreateNewChild](#createnewchild)|创建一个新的子窗口。|
@@ -81,19 +82,19 @@ class CMDIFrameWnd : public CFrameWnd
 
 若要为应用程序创建有用的 MDI 框架窗口，请从派生一个类 `CMDIFrameWnd` 。 向派生类添加成员变量，以存储特定于应用程序的数据。 可派生类中实现消息处理程序成员函数和消息映射，以指定在消息定向到窗口时所发生的情况。
 
-可以通过调用的[Create](../../mfc/reference/cframewnd-class.md#create)或[LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)成员函数来构造 MDI 框架窗口 `CFrameWnd` 。
+可以通过调用的 [Create](../../mfc/reference/cframewnd-class.md#create) 或 [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) 成员函数来构造 MDI 框架窗口 `CFrameWnd` 。
 
-在调用 `Create` 或之前 `LoadFrame` ，必须使用 c + + 运算符在堆上构造框架窗口对象 **`new`** 。 在调用之前 `Create` ，还可以使用[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数注册一个窗口类，以设置该框架的图标和类样式。
+在调用 `Create` 或之前 `LoadFrame` ，必须使用 c + + 运算符在堆上构造框架窗口对象 **`new`** 。 在调用之前 `Create` ，还可以使用 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 全局函数注册一个窗口类，以设置该框架的图标和类样式。
 
 使用 `Create` 成员函数将框架的创建参数作为直接参数传递。
 
-`LoadFrame`需要的参数少于 `Create` ，而是从资源中检索其大多数默认值，包括框架的标题、图标、快捷键对应表和菜单。 要访问的 `LoadFrame` 所有资源都必须具有相同的资源 ID （例如 IDR_MAINFRAME）。
+`LoadFrame` 需要的参数少于 `Create` ，而是从资源中检索其大多数默认值，包括框架的标题、图标、快捷键对应表和菜单。 要访问的 `LoadFrame` 所有资源都必须具有相同的资源 ID (例如 IDR_MAINFRAME) 。
 
 尽管 `MDIFrameWnd` 派生自 `CFrameWnd` ，但 `CMDIFrameWnd` 不需要使用声明派生自的框架窗口类 `DECLARE_DYNCREATE` 。
 
-`CMDIFrameWnd`类从继承它的很多默认实现 `CFrameWnd` 。 有关这些功能的详细列表，请参阅[CFrameWnd](../../mfc/reference/cframewnd-class.md)类说明。 `CMDIFrameWnd`类具有以下附加功能：
+`CMDIFrameWnd`类从继承它的很多默认实现 `CFrameWnd` 。 有关这些功能的详细列表，请参阅 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 类说明。 `CMDIFrameWnd`类具有以下附加功能：
 
-- MDI 框架窗口管理 "MDICLIENT" 窗口，并与控件条一起重新定位。 MDI 客户端窗口是 MDI 子框架窗口的直接父级。 在上指定的 WS_HSCROLL 和 WS_VSCROLL 窗口样式 `CMDIFrameWnd` 应用于 mdi 客户端窗口，而不是主框架窗口，因此用户可以滚动 mdi 工作区（例如，在 Windows 程序管理器中）。
+- MDI 框架窗口管理 "MDICLIENT" 窗口，并与控件条一起重新定位。 MDI 客户端窗口是 MDI 子框架窗口的直接父级。 在上指定的 WS_HSCROLL 和 WS_VSCROLL 窗口样式 `CMDIFrameWnd` 应用于 mdi 客户端窗口，而不是主框架窗口，因此用户可以在 Windows 程序管理器中 (滚动 MDI 工作区，例如) 。
 
 - MDI 框架窗口拥有默认菜单，该菜单在没有活动的 MDI 子窗口时用作菜单栏。 如果有活动的 MDI 子窗口，mdi 框架窗口的菜单栏会自动替换为 MDI 子窗口菜单。
 
@@ -113,7 +114,7 @@ class CMDIFrameWnd : public CFrameWnd
 
 不要使用 c + + **`delete`** 运算符销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd` `PostNcDestroy` 当销毁窗口时，的实现将删除 c + + 对象。 当用户关闭框架窗口时，默认 `OnClose` 处理程序将调用 `DestroyWindow` 。
 
-有关的详细信息 `CMDIFrameWnd` ，请参阅[框架窗口](../../mfc/frame-windows.md)。
+有关的详细信息 `CMDIFrameWnd` ，请参阅 [框架窗口](../../mfc/frame-windows.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -131,7 +132,7 @@ class CMDIFrameWnd : public CFrameWnd
 
 **标头:** afxwin.h
 
-## <a name="cmdiframewndcmdiframewnd"></a><a name="cmdiframewnd"></a>CMDIFrameWnd：： CMDIFrameWnd
+## <a name="cmdiframewndcmdiframewnd"></a><a name="cmdiframewnd"></a> CMDIFrameWnd：： CMDIFrameWnd
 
 构造 `CMDIFrameWnd` 对象。
 
@@ -147,7 +148,7 @@ CMDIFrameWnd();
 
 [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]
 
-## <a name="cmdiframewndcreateclient"></a><a name="createclient"></a>CMDIFrameWnd：： CreateClient
+## <a name="cmdiframewndcreateclient"></a><a name="createclient"></a> CMDIFrameWnd：： CreateClient
 
 创建用于管理对象的 MDI 客户端窗口 `CMDIChildWnd` 。
 
@@ -157,10 +158,10 @@ virtual BOOL CreateClient(
     CMenu* pWindowMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpCreateStruct*<br/>
-指向[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)结构的长指针。
+指向 [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) 结构的长指针。
 
 *pWindowMenu*<br/>
 指向窗口弹出菜单的指针。
@@ -177,7 +178,7 @@ virtual BOOL CreateClient(
 
 [!code-cpp[NVC_MFCWindowing#14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]
 
-## <a name="cmdiframewndcreatenewchild"></a><a name="createnewchild"></a>CMDIFrameWnd：： CreateNewChild
+## <a name="cmdiframewndcreatenewchild"></a><a name="createnewchild"></a> CMDIFrameWnd：： CreateNewChild
 
 创建一个新的子窗口。
 
@@ -189,7 +190,7 @@ CMDIChildWnd* CreateNewChild(
     HACCEL hAccel = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pClass*<br/>
 要创建的子窗口的运行时类。
@@ -211,15 +212,15 @@ CMDIChildWnd* CreateNewChild(
 
 [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]
 
-## <a name="cmdiframewndgetwindowmenupopup"></a><a name="getwindowmenupopup"></a>CMDIFrameWnd：： GetWindowMenuPopup
+## <a name="cmdiframewndgetwindowmenupopup"></a><a name="getwindowmenupopup"></a> CMDIFrameWnd：： GetWindowMenuPopup
 
-调用此成员函数以获取名为 "Window" 的当前弹出菜单的句柄（弹出菜单，其中包含用于 MDI 窗口管理的菜单项）。
+调用此成员函数以获取名为 "Window" 的当前弹出菜单的句柄， (带有 MDI 窗口管理) 菜单项的弹出菜单。
 
 ```
 virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hMenuBar*<br/>
 当前菜单栏。
@@ -238,7 +239,7 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 
 [!code-cpp[NVC_MFCWindowing#16](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]
 
-## <a name="cmdiframewndmdiactivate"></a><a name="mdiactivate"></a>CMDIFrameWnd：： MDIActivate
+## <a name="cmdiframewndmdiactivate"></a><a name="mdiactivate"></a> CMDIFrameWnd：： MDIActivate
 
 激活不同的 MDI 子窗口。
 
@@ -246,25 +247,25 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 void MDIActivate(CWnd* pWndActivate);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWndActivate*<br/>
 指向要激活的 MDI 子窗口。
 
 ### <a name="remarks"></a>备注
 
-此成员函数将[WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate)消息发送到正在激活的子窗口，并且子窗口被停用。
+此成员函数将 [WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate) 消息发送到正在激活的子窗口，并且子窗口被停用。
 
 如果用户使用鼠标或键盘将焦点更改为 MDI 子窗口，则会发送此消息。
 
 > [!NOTE]
-> 将独立于 MDI 框架窗口激活 MDI 子窗口。 当框架变为活动状态时，最后激活的子窗口将发送[WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate)消息来绘制活动窗口框架和标题栏，但不会收到另一 WM_MDIACTIVATE 消息。
+> 将独立于 MDI 框架窗口激活 MDI 子窗口。 当框架变为活动状态时，最后激活的子窗口将发送 [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) 消息来绘制活动窗口框架和标题栏，但不会收到另一 WM_MDIACTIVATE 消息。
 
 ### <a name="example"></a>示例
 
-请参阅[CMDIFrameWnd：： GetWindowMenuPopup](#getwindowmenupopup)的示例。
+请参阅 [CMDIFrameWnd：： GetWindowMenuPopup](#getwindowmenupopup)的示例。
 
-## <a name="cmdiframewndmdicascade"></a><a name="mdicascade"></a>CMDIFrameWnd：： MDICascade
+## <a name="cmdiframewndmdicascade"></a><a name="mdicascade"></a> CMDIFrameWnd：： MDICascade
 
 以层叠格式排列所有 MDI 子窗口。
 
@@ -273,20 +274,20 @@ void MDICascade();
 void MDICascade(int nType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-nType**<br/>
+nType<br/>
 指定级联标志。 只能指定以下标志： MDITILE_SKIPDISABLED，这会阻止已禁用的 MDI 子窗口进行级联。
 
 ### <a name="remarks"></a>备注
 
-的第一个版本 `MDICascade` （没有参数）将所有 MDI 子窗口（包括已禁用的子窗口）进行级联。 如果为*n*参数指定了 MDITILE_SKIPDISABLED，则第二个版本可以选择不级联禁用的 MDI 子窗口。
+的第一个版本 `MDICascade` （没有参数）将所有 MDI 子窗口（包括已禁用的子窗口）进行级联。 如果为 *n* 参数指定了 MDITILE_SKIPDISABLED，则第二个版本可以选择不级联禁用的 MDI 子窗口。
 
 ### <a name="example"></a>示例
 
 [!code-cpp[NVC_MFCWindowing#17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]
 
-## <a name="cmdiframewndmdigetactive"></a><a name="mdigetactive"></a>CMDIFrameWnd：： MDIGetActive
+## <a name="cmdiframewndmdigetactive"></a><a name="mdigetactive"></a> CMDIFrameWnd：： MDIGetActive
 
 检索当前的活动 MDI 子窗口，以及指示子窗口是否最大化的标志。
 
@@ -294,7 +295,7 @@ nType**<br/>
 CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pbMaximized*<br/>
 指向 BOOL 返回值的指针。 如果窗口处于最大化状态，则将设置为 TRUE;否则为 FALSE。
@@ -305,9 +306,9 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 
 ### <a name="example"></a>示例
 
-请参阅[CMDIChildWnd：： MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)的示例。
+请参阅 [CMDIChildWnd：： MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)的示例。
 
-## <a name="cmdiframewndmdiiconarrange"></a><a name="mdiiconarrange"></a>CMDIFrameWnd：： MDIIconArrange
+## <a name="cmdiframewndmdiiconarrange"></a><a name="mdiiconarrange"></a> CMDIFrameWnd：： MDIIconArrange
 
 排列所有最小化的文档子窗口。
 
@@ -321,9 +322,9 @@ void MDIIconArrange();
 
 ### <a name="example"></a>示例
 
-请参阅[CMDIFrameWnd：： MDICascade](#mdicascade)的示例。
+请参阅 [CMDIFrameWnd：： MDICascade](#mdicascade)的示例。
 
-## <a name="cmdiframewndmdimaximize"></a><a name="mdimaximize"></a>CMDIFrameWnd：： MDIMaximize
+## <a name="cmdiframewndmdimaximize"></a><a name="mdimaximize"></a> CMDIFrameWnd：： MDIMaximize
 
 最大化指定的 MDI 子窗口。
 
@@ -331,7 +332,7 @@ void MDIIconArrange();
 void MDIMaximize(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向窗口以最大化。
@@ -344,9 +345,9 @@ void MDIMaximize(CWnd* pWnd);
 
 ### <a name="example"></a>示例
 
-请参阅[CMDIChildWnd：： MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)的示例。
+请参阅 [CMDIChildWnd：： MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)的示例。
 
-## <a name="cmdiframewndmdinext"></a><a name="mdinext"></a>CMDIFrameWnd：： MDINext
+## <a name="cmdiframewndmdinext"></a><a name="mdinext"></a> CMDIFrameWnd：： MDINext
 
 激活当前处于活动状态的子窗口之后的子窗口，并将当前处于活动状态的子窗口置于所有其他子窗口之后。
 
@@ -362,7 +363,7 @@ void MDINext();
 
 [!code-cpp[NVC_MFCWindowing#18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]
 
-## <a name="cmdiframewndmdiprev"></a><a name="mdiprev"></a>CMDIFrameWnd：： MDIPrev
+## <a name="cmdiframewndmdiprev"></a><a name="mdiprev"></a> CMDIFrameWnd：： MDIPrev
 
 激活上一个子窗口，并紧靠其后放置当前处于活动状态的子窗口。
 
@@ -374,7 +375,7 @@ void MDIPrev();
 
 如果当前处于活动状态的 MDI 子窗口处于最大化状态，则成员函数将还原当前活动的子窗口并最大化新激活的子窗口。
 
-## <a name="cmdiframewndmdirestore"></a><a name="mdirestore"></a>CMDIFrameWnd：： MDIRestore
+## <a name="cmdiframewndmdirestore"></a><a name="mdirestore"></a> CMDIFrameWnd：： MDIRestore
 
 从最大化或最小化的大小还原 MDI 子窗口。
 
@@ -382,16 +383,16 @@ void MDIPrev();
 void MDIRestore(CWnd* pWnd);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pWnd*<br/>
 指向要还原的窗口。
 
 ### <a name="example"></a>示例
 
-请参阅[CMDIChildWnd：： MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore)的示例。
+请参阅 [CMDIChildWnd：： MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore)的示例。
 
-## <a name="cmdiframewndmdisetmenu"></a><a name="mdisetmenu"></a>CMDIFrameWnd：： MDISetMenu
+## <a name="cmdiframewndmdisetmenu"></a><a name="mdisetmenu"></a> CMDIFrameWnd：： MDISetMenu
 
 替换 MDI 框架窗口和/或窗口弹出菜单的菜单。
 
@@ -401,7 +402,7 @@ CMenu* MDISetMenu(
     CMenu* pWindowMenu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pFrameMenu*<br/>
 指定新框架窗口菜单的菜单。 如果为 NULL，则不更改菜单。
@@ -415,7 +416,7 @@ CMenu* MDISetMenu(
 
 ### <a name="remarks"></a>备注
 
-调用后 `MDISetMenu` ，应用程序必须调用的[DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)成员函数 `CWnd` 以更新菜单栏。
+调用后 `MDISetMenu` ，应用程序必须调用的 [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar) 成员函数 `CWnd` 以更新菜单栏。
 
 如果此调用替换窗口弹出菜单，则会从上一个窗口菜单中删除 MDI 子窗口菜单项，并将其添加到新的窗口弹出菜单。
 
@@ -429,7 +430,7 @@ CMenu* MDISetMenu(
 
 [!code-cpp[NVC_MFCWindowing#20](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]
 
-## <a name="cmdiframewndmditile"></a><a name="mditile"></a>CMDIFrameWnd：： MDITile
+## <a name="cmdiframewndmditile"></a><a name="mditile"></a> CMDIFrameWnd：： MDITile
 
 以平铺格式排列所有子窗口。
 
@@ -438,9 +439,9 @@ void MDITile();
 void MDITile(int nType);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-nType**<br/>
+nType<br/>
 指定平铺标志。 此参数可以是以下任何一个标志：
 
 - MDITILE_HORIZONTAL 平铺显示 MDI 子窗口，使一个窗口出现在另一个窗口之上。
@@ -451,13 +452,13 @@ nType**<br/>
 
 ### <a name="remarks"></a>备注
 
-不带参数的第一个版本 `MDITile` 在 windows 版本3.1 和更高版本下垂直平铺窗口。 第二个版本根据*n*参数的值，垂直或水平平铺窗口。
+不带参数的第一个版本 `MDITile` 在 windows 版本3.1 和更高版本下垂直平铺窗口。 第二个版本根据 *n* 参数的值，垂直或水平平铺窗口。
 
 ### <a name="example"></a>示例
 
-请参阅[CMDIFrameWnd：： MDICascade](#mdicascade)的示例。
+请参阅 [CMDIFrameWnd：： MDICascade](#mdicascade)的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [MFC 示例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>

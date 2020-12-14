@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3399
 title: 编译器错误 C3399
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: d20b5e816930969278536fe3771df4ad38c3c86b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a950857e88c5cfcad50ac2efb064af4d7a5c0cf1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74737512"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316422"
 ---
 # <a name="compiler-error-c3399"></a>编译器错误 C3399
 
@@ -19,7 +20,7 @@ ms.locfileid: "74737512"
 
 当指定 `gcnew()` 约束时，指定约束类型将具有无参数的构造函数。 因此，尝试实例化此类型并传递参数是错误的。
 
-有关详细信息，请参阅[泛型C++类型参数（/Cli）的约束](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
+有关详细信息，请参阅有关 [c + +/cli)  (泛型类型参数的约束 ](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 。
 
 ## <a name="example"></a>示例
 

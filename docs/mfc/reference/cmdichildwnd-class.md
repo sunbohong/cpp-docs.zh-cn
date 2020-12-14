@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMDIChildWnd 类
 title: CMDIChildWnd 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0acd42db19151001d9e292561ef20e469f9e14ea
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 4e9bf936cbb4f07401e8d54c56516f8846f2fc0d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222961"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336695"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 类
 
@@ -43,13 +44,13 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMDIChildWnd：： CMDIChildWnd](#cmdichildwnd)|构造 `CMDIChildWnd` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMDIChildWnd：： Create](#create)|创建与对象关联的 Windows MDI 子窗口 `CMDIChildWnd` 。|
 |[CMDIChildWnd：： GetMDIFrame](#getmdiframe)|返回 MDI 客户端窗口的父 MDI 帧。|
@@ -73,17 +74,17 @@ MDI 子窗口的外观非常类似于典型的框架窗口，只不过 MDI 子�
 
 - 通过文档模板间接构造它。
 
-在调用 `Create` 或之前 `LoadFrame` ，必须使用 c + + 运算符在堆上构造框架窗口对象 **`new`** 。 在调用之前 `Create` ，还可以使用[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)全局函数注册一个窗口类，以设置该框架的图标和类样式。
+在调用 `Create` 或之前 `LoadFrame` ，必须使用 c + + 运算符在堆上构造框架窗口对象 **`new`** 。 在调用之前 `Create` ，还可以使用 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 全局函数注册一个窗口类，以设置该框架的图标和类样式。
 
 使用 `Create` 成员函数将框架的创建参数作为直接参数传递。
 
-`LoadFrame`需要的参数少于 `Create` ，而是从资源中检索其大多数默认值，包括框架的标题、图标、快捷键对应表和菜单。 要使其可供访问 `LoadFrame` ，所有这些资源都必须具有相同的资源 ID （例如 IDR_MAINFRAME）。
+`LoadFrame` 需要的参数少于 `Create` ，而是从资源中检索其大多数默认值，包括框架的标题、图标、快捷键对应表和菜单。 若要访问 `LoadFrame` ，所有这些资源都必须具有相同的资源 ID (例如 IDR_MAINFRAME) 。
 
-当 `CMDIChildWnd` 对象包含视图和文档时，框架会间接创建它们，而不是直接由程序员创建。 `CDocTemplate`对象协调框架创建、创建包含视图的过程，以及将视图连接到相应的文档。 构造函数的参数 `CDocTemplate` 指定 `CRuntimeClass` 所涉及的三个类（文档、框架和视图）的。 `CRuntimeClass`当用户指定时，框架使用对象动态创建新帧（例如，通过使用 "文件" "新建" 或 "MDI 窗口" "新建" 命令）。
+当 `CMDIChildWnd` 对象包含视图和文档时，框架会间接创建它们，而不是直接由程序员创建。 `CDocTemplate`对象协调框架创建、创建包含视图的过程，以及将视图连接到相应的文档。 构造函数的参数 `CDocTemplate` 指定 `CRuntimeClass` (文档、框架和视图) 所涉及的三个类的。 `CRuntimeClass`对象由框架用于在用户指定时动态创建新框架 (例如，通过使用 "文件" "新建" 命令或 "MDI 窗口" "新建" 命令) 。
 
 从派生的框架窗口类 `CMDIChildWnd` 必须使用 DECLARE_DYNCREATE 进行声明，这样上述 RUNTIME_CLASS 机制才能正常工作。
 
-`CMDIChildWnd`类从继承它的很多默认实现 `CFrameWnd` 。 有关这些功能的详细列表，请参阅[CFrameWnd](../../mfc/reference/cframewnd-class.md)类说明。 `CMDIChildWnd`类具有以下附加功能：
+`CMDIChildWnd`类从继承它的很多默认实现 `CFrameWnd` 。 有关这些功能的详细列表，请参阅 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 类说明。 `CMDIChildWnd`类具有以下附加功能：
 
 - 与 `CMultiDocTemplate` 类一起， `CMDIChildWnd` 同一文档模板中的多个对象共享相同的菜单，保存 Windows 系统资源。
 
@@ -91,7 +92,7 @@ MDI 子窗口的外观非常类似于典型的框架窗口，只不过 MDI 子�
 
 不要使用 c + + **`delete`** 运算符销毁框架窗口。 请改用 `CWnd::DestroyWindow`。 `CFrameWnd` `PostNcDestroy` 当销毁窗口时，的实现将删除 c + + 对象。 当用户关闭框架窗口时，默认 `OnClose` 处理程序将调用 `DestroyWindow` 。
 
-有关的详细信息 `CMDIChildWnd` ，请参阅[框架窗口](../../mfc/frame-windows.md)。
+有关的详细信息 `CMDIChildWnd` ，请参阅 [框架窗口](../../mfc/frame-windows.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -109,7 +110,7 @@ MDI 子窗口的外观非常类似于典型的框架窗口，只不过 MDI 子�
 
 **标头:** afxwin.h
 
-## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a>CMDIChildWnd：： CMDIChildWnd
+## <a name="cmdichildwndcmdichildwnd"></a><a name="cmdichildwnd"></a> CMDIChildWnd：： CMDIChildWnd
 
 调用构造 `CMDIChildWnd` 对象。
 
@@ -123,9 +124,9 @@ CMDIChildWnd();
 
 ### <a name="example"></a>示例
 
-  请参阅[CMDIChildWnd：： Create](#create)的示例。
+  请参阅 [CMDIChildWnd：： Create](#create)的示例。
 
-## <a name="cmdichildwndcreate"></a><a name="create"></a>CMDIChildWnd：： Create
+## <a name="cmdichildwndcreate"></a><a name="create"></a> CMDIChildWnd：： Create
 
 调用此成员函数以创建 Windows MDI 子窗口，并将其附加到 `CMDIChildWnd` 对象。
 
@@ -139,16 +140,16 @@ virtual BOOL Create(
     CCreateContext* pContext = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszClassName*<br/>
-指向以 null 结尾的字符串，该字符串对 Windows 类（ [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)结构）进行命名。 类名称可以是注册到[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) global 函数的任何名称。 对于标准，应为 NULL `CMDIChildWnd` 。
+指向以 null 结尾的字符串，该字符串将 Windows 类命名为 ([WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw) 结构) 。 类名称可以是注册到 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) global 函数的任何名称。 对于标准，应为 NULL `CMDIChildWnd` 。
 
 *lpszWindowName*<br/>
 指向以 null 结尾的字符串，该字符串表示窗口名称。 用作标题栏的文本。
 
 *dwStyle*<br/>
-指定窗口[样式](../../mfc/reference/styles-used-by-mfc.md#window-styles)特性。 WS_CHILD 样式是必需的。
+指定窗口 [样式](../../mfc/reference/styles-used-by-mfc.md#window-styles) 特性。 WS_CHILD 样式是必需的。
 
 *rect*<br/>
 包含窗口的大小和位置。 `rectDefault`该值允许 Windows 指定新的大小和位置 `CMDIChildWnd` 。
@@ -157,7 +158,7 @@ virtual BOOL Create(
 指定窗口的父级。 如果为 NULL，则使用主应用程序窗口。
 
 *pContext*<br/>
-指定[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)结构。 此参数可以为 NULL。
+指定 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) 结构。 此参数可以为 NULL。
 
 ### <a name="return-value"></a>返回值
 
@@ -167,7 +168,7 @@ virtual BOOL Create(
 
 当前处于活动状态的 MDI 子框架窗口可以确定父框架窗口的标题。 此功能通过关闭子框架窗口的 FWS_ADDTOTITLE 样式位而禁用。
 
-框架调用此成员函数来响应用户命令以创建子窗口，框架使用*pContext*参数将子窗口正确地连接到应用程序。 调用时 `Create` ， *pContext*可以为 NULL。
+框架调用此成员函数来响应用户命令以创建子窗口，框架使用 *pContext* 参数将子窗口正确地连接到应用程序。 调用时 `Create` ， *pContext* 可以为 NULL。
 
 ### <a name="example"></a>示例
 
@@ -183,7 +184,7 @@ virtual BOOL Create(
 
 [!code-cpp[NVC_MFCWindowing#9](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_3.cpp)]
 
-## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a>CMDIChildWnd：： GetMDIFrame
+## <a name="cmdichildwndgetmdiframe"></a><a name="getmdiframe"></a> CMDIChildWnd：： GetMDIFrame
 
 调用此函数可返回 MDI 父框架。
 
@@ -197,13 +198,13 @@ CMDIFrameWnd* GetMDIFrame();
 
 ### <a name="remarks"></a>备注
 
-返回的帧是从中删除的两个父级 `CMDIChildWnd` ，是管理对象的 MDICLIENT 类型的窗口的父级 `CMDIChildWnd` 。 调用[GetParent](../../mfc/reference/cwnd-class.md#getparent)成员函数，以将 `CMDIChildWnd` 对象的直属 MDICLIENT 父级作为临时指针返回 `CWnd` 。
+返回的帧是从中删除的两个父级 `CMDIChildWnd` ，是管理对象的 MDICLIENT 类型的窗口的父级 `CMDIChildWnd` 。 调用 [GetParent](../../mfc/reference/cwnd-class.md#getparent) 成员函数，以将 `CMDIChildWnd` 对象的直属 MDICLIENT 父级作为临时指针返回 `CWnd` 。
 
 ### <a name="example"></a>示例
 
-  请参阅[CMDIFrameWnd：： MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu)的示例。
+  请参阅 [CMDIFrameWnd：： MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu)的示例。
 
-## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a>CMDIChildWnd：： MDIActivate
+## <a name="cmdichildwndmdiactivate"></a><a name="mdiactivate"></a> CMDIChildWnd：： MDIActivate
 
 调用此成员函数以独立于 MDI 框架窗口激活 MDI 子窗口。
 
@@ -217,9 +218,9 @@ void MDIActivate();
 
 ### <a name="example"></a>示例
 
-  请参阅[CMDIFrameWnd：： GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup)的示例。
+  请参阅 [CMDIFrameWnd：： GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup)的示例。
 
-## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a>CMDIChildWnd：： MDIDestroy
+## <a name="cmdichildwndmdidestroy"></a><a name="mdidestroy"></a> CMDIChildWnd：： MDIDestroy
 
 调用此成员函数以销毁 MDI 子窗口。
 
@@ -235,7 +236,7 @@ void MDIDestroy();
 
 [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]
 
-## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a>CMDIChildWnd：： MDIMaximize
+## <a name="cmdichildwndmdimaximize"></a><a name="mdimaximize"></a> CMDIChildWnd：： MDIMaximize
 
 调用此成员函数以最大化 MDI 子窗口。
 
@@ -251,7 +252,7 @@ void MDIMaximize();
 
 [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]
 
-## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a>CMDIChildWnd：： MDIRestore
+## <a name="cmdichildwndmdirestore"></a><a name="mdirestore"></a> CMDIChildWnd：： MDIRestore
 
 调用此成员函数以从最大化或最小化的大小还原 MDI 子窗口。
 
@@ -263,7 +264,7 @@ void MDIRestore();
 
 [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]
 
-## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a>CMDIChildWnd：： SetHandles
+## <a name="cmdichildwndsethandles"></a><a name="sethandles"></a> CMDIChildWnd：： SetHandles
 
 设置菜单和快捷键资源的句柄。
 
@@ -273,7 +274,7 @@ void SetHandles(
     HACCEL hAccel);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hMenu*<br/>
 菜单资源的句柄。
@@ -285,7 +286,7 @@ void SetHandles(
 
 调用此函数可设置 MDI 子窗口对象所使用的菜单和快捷键资源。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC 示例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [MFC 示例 MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>

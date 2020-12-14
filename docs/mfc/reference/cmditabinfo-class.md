@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CMDITabInfo 类
 title: CMDITabInfo 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: 8e4053bf16672d693adc104c9e88bb46a67ba7dd
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 4769bedc48e143e2dae6f35c50d2d1fef488e655
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845908"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97336670"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo 类
 
@@ -49,19 +50,19 @@ class CMDITabInfo
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`CMDITabInfo::CMDITabInfo`|默认构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CMDITabInfo：：串行化](#serialize)|从存档读取该对象或将该对象写入存档。|
 
 ### <a name="data-members"></a>数据成员
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CMDITabInfo：： m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|指定是否在活动选项卡的标签上显示 " **关闭** " 按钮。|
 |[CMDITabInfo：： m_bAutoColor](#m_bautocolor)|指定是否为 MDI 选项卡着色。|
@@ -75,7 +76,7 @@ class CMDITabInfo
 |[CMDITabInfo：： m_style](#m_style)|指定选项卡标签的样式。|
 |[CMDITabInfo：： m_tabLocation](#m_tablocation)|指定选项卡标签是位于页面的顶部还是底部。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 此类指定框架创建的 MDI 选项卡组的参数。
 
@@ -101,7 +102,7 @@ class CMDITabInfo
 BOOL m_bActiveTabCloseButton;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果为 TRUE，则活动选项卡的标签将显示 " **关闭** " 按钮。 将从选项卡区域的右上角删除 " **关闭** " 按钮。 否则，活动选项卡的标签将不会显示 " **关闭** " 按钮。 " **关闭** " 按钮将显示在选项卡区域的右上角。
 
@@ -113,7 +114,7 @@ BOOL m_bActiveTabCloseButton;
 BOOL m_bAutoColor;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果为 TRUE，则每个选项卡都有自己的颜色。 颜色集由 MFC 库管理。 否则，选项卡将显示为白色。 默认值是 FALSE。
 
@@ -125,7 +126,7 @@ BOOL m_bAutoColor;
 BOOL m_bDocumentMenu;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果为 TRUE，则每个选项卡窗口将显示一个弹出菜单，该菜单在选项卡区域的右边缘显示已打开文档的列表;否则，选项卡窗口将在选项卡区域的右边缘显示滚动按钮。 默认值是 FALSE。
 
@@ -137,7 +138,7 @@ BOOL m_bDocumentMenu;
 BOOL m_bEnableTabSwap;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果为 TRUE，则用户可以通过拖动选项卡来更改选项卡位置。 否则，用户无法更改选项卡位置。 默认值为 TRUE。
 
@@ -157,9 +158,9 @@ BOOL m_bFlatFrame;
 BOOL m_bTabCloseButton;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果为 TRUE，则每个选项卡窗口将显示选项卡右边缘上的 " **关闭** " 按钮。否则，将不显示 " **关闭** " 按钮。 默认值为 TRUE。
+如果为 TRUE，则每个选项卡窗口都显示选项卡右边缘上的 " **关闭** " 按钮。否则，不显示 " **关闭** " 按钮。 默认值为 TRUE。
 
 ## <a name="cmditabinfom_btabcustomtooltips"></a><a name="m_btabcustomtooltips"></a> CMDITabInfo：： m_bTabCustomTooltips
 
@@ -169,7 +170,7 @@ BOOL m_bTabCloseButton;
 BOOL m_bTabCustomTooltips;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果为 TRUE，则应用程序向主框架发送 AFX_WM_ON_GET_TAB_TOOLTIP 消息。 您可以通过使用 ON_REGISTERED_MESSAGE 宏来处理此消息。
 
@@ -181,9 +182,9 @@ BOOL m_bTabCustomTooltips;
 BOOL m_bTabIcons;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果为 TRUE，则图标显示在每个 MDI 选项卡上。否则，图标不会显示在选项卡上。 默认值是 FALSE。
+如果为 TRUE，则图标显示在每个 MDI 选项卡上。否则，选项卡上不会显示图标。 默认值是 FALSE。
 
 ## <a name="cmditabinfom_ntabbordersize"></a><a name="m_ntabbordersize"></a> CMDITabInfo：： m_nTabBorderSize
 
@@ -193,7 +194,7 @@ BOOL m_bTabIcons;
 int m_nTabBorderSize;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 [CMFCVisualManager：： GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize) 返回默认值。
 
@@ -205,7 +206,7 @@ int m_nTabBorderSize;
 CMFCTabCtrl::Style m_style
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 为选项卡标签指定以下样式之一：
 
@@ -226,7 +227,7 @@ CMFCTabCtrl::Style m_style
 CMFCTabCtrl::Location m_tabLocation;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 应用于选项卡以下位置标志之一：
 
@@ -242,12 +243,12 @@ CMFCTabCtrl::Location m_tabLocation;
 void Serialize(CArchive& ar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ar*<br/>
 中要序列化的 [CArchive 类](../../mfc/reference/carchive-class.md) 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CMDIFrameWndEx 类](../../mfc/reference/cmdiframewndex-class.md)<br/>
 [MDI 选项卡式组](../../mfc/mdi-tabbed-groups.md)<br/>

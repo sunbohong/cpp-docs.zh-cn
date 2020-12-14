@@ -1,13 +1,14 @@
 ---
+description: 详细了解：多线程 C 程序示例
 title: 多线程 C 程序示例
 ms.date: 08/09/2019
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-ms.openlocfilehash: 355024b995dc638b89a335983bd2e0f2cb0d96ce
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: a46bd370a309a29c6877eacaea428ff9fc42902e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924763"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342330"
 ---
 # <a name="sample-multithread-c-program"></a>多线程 C 程序示例
 
@@ -23,7 +24,7 @@ ms.locfileid: "92924763"
 
 1. 在“文件”菜单上，选择“新建”>“项目”。
 
-1. 在 " **创建新项目** " 对话框中，选择包含 **c + +** 、 **Windows** 和 **控制台** 标记的 **控制台应用程序** 模板。 选择“下一步”  以继续。
+1. 在 "**创建新项目**" 对话框中，选择包含 **c + +**、 **Windows** 和 **控制台** 标记的 **控制台应用程序** 模板。 选择“下一步”  以继续。
 
 1. 在 " **配置新项目** " 对话框中，输入项目的名称，例如 "弹跳"。 选择 " **创建** " 以继续。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CCommand 类
 title: CCommand 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,12 +50,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 109998dd742828b3c41672fa2afa8716e4687f6a
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 150d543b666896964794503d185637680e6da8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91501002"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335506"
 ---
 # <a name="ccommand-class"></a>CCommand 类
 
@@ -72,7 +73,7 @@ class CCommand :
    public TMultiple
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *TAccessor*<br/>
 你希望命令使用的访问器类的类型（如 `CDynamicParameterAccessor`、`CDynamicStringAccessor` 或 `CEnumeratorAccessor`）。 默认值为 `CNoAccessor`，它指定该类不支持参数或输出列。
@@ -91,7 +92,7 @@ class CCommand :
 
 ### <a name="methods"></a>方法
 
-| 名称 | 说明 |
+| 名称 | 描述 |
 |-|-|
 |[关闭](#close)|关闭当前命令。|
 |[GetNextResult](#getnextresult)|在使用多个结果集时提取下一个结果。|
@@ -109,7 +110,7 @@ class CCommand :
 |[SetParameterInfo](#setparameterinfo)|指定每个命令参数的本机类型。|
 |[Unprepare](#unprepare)|放弃当前命令执行计划。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 需要执行基于参数的操作或执行命令时，请使用此类。 如果只需打开简单行集，请改用 [CTable](../../data/oledb/ctable-class.md) 。
 
@@ -152,7 +153,7 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
    bool bBind = true) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *pulRowsAffected*<br/>
 [in/out]一个指向内存的指针，它将返回受命令影响的行计数。
@@ -164,11 +165,11 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果以前已获取结果集，则此函数将释放以前的结果集并取消绑定列。 如果 *bBind* 为 **`true`** ，则绑定新列。
 
-仅当通过设置 `CCommand` 模板参数*TMultiple*指定了多个结果时，才应调用此函数 = `CMultipleResults` 。
+仅当通过设置 `CCommand` 模板参数 *TMultiple* 指定了多个结果时，才应调用此函数 = `CMultipleResults` 。
 
 ## <a name="ccommandopen"></a><a name="open"></a> CCommand：： Open
 
@@ -207,43 +208,43 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
    ULONG ulPropSets = 0) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *会议*<br/>
 中要在其中执行命令的会话。
 
 *wszCommand*<br/>
-中作为 Unicode 字符串传递的要执行的命令。 使用时可以为 NULL `CAccessor` ，在这种情况下，将从传递给 [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) 宏的值中检索命令。 有关详细信息，请参阅*OLE DB 程序员参考*中的[ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
+中作为 Unicode 字符串传递的要执行的命令。 使用时可以为 NULL `CAccessor` ，在这种情况下，将从传递给 [DEFINE_COMMAND](./macros-and-global-functions-for-ole-db-consumer-templates.md#define_command) 宏的值中检索命令。 有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ICommand：： Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 。
 
 *szCommand*<br/>
 中与 *wszCommand* 相同，只不过此参数使用 ANSI 命令字符串。 此方法的第四种形式可以采用 NULL 值。 有关详细信息，请参阅本主题后面的 "备注"。
 
 *pPropSet*<br/>
-中指向包含要设置的属性和值的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组的指针。 请参阅 Windows SDK 中*OLE DB 程序员参考*中的[属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。
+中指向包含要设置的属性和值的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) 结构的数组的指针。 请参阅 Windows SDK 中 *OLE DB 程序员参考* 中的 [属性集和属性组](/previous-versions/windows/desktop/ms713696(v=vs.85))。
 
 *pRowsAffected*<br/>
-[in/out]一个指向内存的指针，它将返回受命令影响的行计数。 如果* \* PROWSAFFECTED*为 NULL，则不返回行计数。 否则， `Open` 根据以下条件设置* \* pRowsAffected* ：
+[in/out]一个指向内存的指针，它将返回受命令影响的行计数。 如果 *\* PROWSAFFECTED* 为 NULL，则不返回行计数。 否则， `Open` 根据以下条件设置 *\* pRowsAffected* ：
 
 |如果|Then|
 |--------|----------|
-|的 `cParamSets` 元素 `pParams` 大于1|* \* pRowsAffected*表示在执行中指定的所有参数集所影响的总行数。|
-|受影响的行数不可用|* \* pRowsAffected*设置为-1。|
-|此命令不会更新、删除或插入行|* \* pRowsAffected*未定义。|
+|的 `cParamSets` 元素 `pParams` 大于1|*\* pRowsAffected* 表示在执行中指定的所有参数集所影响的总行数。|
+|受影响的行数不可用|*\* pRowsAffected* 设置为-1。|
+|此命令不会更新、删除或插入行|*\* pRowsAffected* 未定义。|
 
 *guidCommand*<br/>
-中一个 GUID，指定提供程序在分析命令文本时使用的语法和一般规则。 有关详细信息，请参阅*OLE DB 程序员参考*中的[ICommandText：： GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))和[ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) 。
+中一个 GUID，指定提供程序在分析命令文本时使用的语法和一般规则。 有关详细信息，请参阅 *OLE DB 程序员参考* 中的 [ICommandText：： GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))和 [ICommandText：： SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) 。
 
 *bBind*<br/>
 中指定是否在执行后自动绑定命令。 默认值为 **`true`** ，这将导致自动绑定命令。 将 *bBind* 设置为可 **`false`** 阻止自动绑定命令，以便可以手动绑定。  (手动绑定对 OLAP 用户特别感兴趣。 ) 
 
 *ulPropSets*<br/>
-中在*传入 ppropset*参数中传递的[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。
+中在 *传入 ppropset* 参数中传递的 [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))结构的数目。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 的前三种形式 `Open` 会创建一个会话，创建一个命令，然后执行该命令，并根据需要绑定任何参数。
 
@@ -274,7 +275,7 @@ HRESULT CCommandBase::Create(const CSession& session,
    REFGUID guidCommand = DBGUID_DEFAULT) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *会议*<br/>
 中要在其上创建命令的会话。
@@ -286,13 +287,13 @@ HRESULT CCommandBase::Create(const CSession& session,
 中指向命令字符串的 ANSI 文本的指针。
 
 *guidCommand*<br/>
-中一个 GUID，指定提供程序在分析命令文本时使用的语法和一般规则。 有关方言的说明，请参阅*OLE DB 程序员参考*中的[ICommandText：： GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 。
+中一个 GUID，指定提供程序在分析命令文本时使用的语法和一般规则。 有关方言的说明，请参阅 *OLE DB 程序员参考* 中的 [ICommandText：： GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 的第一种形式 `Create` 采用 Unicode 命令字符串。 的第二种形式 `Create` 采用一个 ANSI 命令字符串 (提供以便与现有 ANSI 应用程序) 向后兼容。
 
@@ -306,7 +307,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *会议*<br/>
 中 `CSession` 要与新命令关联的对象。
@@ -315,7 +316,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法使用指定的会话对象创建一个命令。
 
@@ -331,9 +332,9 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
    OLECHAR** ppNamesBuffer) throw ();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommandWithParameters：： GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommandWithParameters：： GetParameterInfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -349,7 +350,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *cExpectedRuns*<br/>
 中希望执行命令的次数。
@@ -358,7 +359,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法包装 OLE DB 方法 [ICommandPrepare：:P 准备](/previous-versions/windows/desktop/ms718370(v=vs.85))。
 
@@ -388,9 +389,9 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
    const DBPARAMBINDINFO* pParamInfo) throw();
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-请参阅*OLE DB 程序员参考*中的[ICommandWithParameters：： SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) 。
+请参阅 *OLE DB 程序员参考* 中的 [ICommandWithParameters：： SetParameterInfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) 。
 
 ### <a name="return-value"></a>返回值
 
@@ -410,7 +411,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 标准的 HRESULT。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此方法包装 OLE DB 方法 [ICommandPrepare：： Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85))。
 

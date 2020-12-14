@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3450
 title: 编译器错误 C3450
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-ms.openlocfilehash: 7b57b67e8f4542266818ad5b3d90d78a1a943d55
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e56382a3f71b59fee42b6a545318cf3846e1a1f7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756222"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316045"
 ---
 # <a name="compiler-error-c3450"></a>编译器错误 C3450
 
@@ -19,7 +20,7 @@ ms.locfileid: "74756222"
 
 用户定义的托管特性必须继承自 <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>。 Windows 运行时特性必须在 `Windows::Foundation::Metadata` 命名空间中定义。
 
-有关更多信息，请参见 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
+有关详细信息，请参阅 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
 ## <a name="example"></a>示例
 

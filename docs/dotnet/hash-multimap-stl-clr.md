@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下方面的详细信息： hash_multimap (STL/CLR) '
 title: hash_multimap (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
-ms.openlocfilehash: b4fa42b53f496f1689523d8881c6f0411e6072aa
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 92bcdd5c241dc73a9cc49c07668c9627f7183c66
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507193"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335501"
 ---
 # <a name="hash_multimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -136,9 +137,9 @@ template<typename Key,
     { ..... };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*Key*<br/>
+*键*<br/>
 受控序列中元素的键组件的类型。
 
 *贴*<br/>
@@ -173,7 +174,7 @@ template<typename Key,
 |[hash_multimap::value_compare (STL/CLR)](#value_compare)|两个元素值的排序委托。|
 |[hash_multimap::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[hash_multimap::begin (STL/CLR)](#begin)|指定受控序列的开头。|
 |[hash_multimap::bucket_count (STL/CLR)](#bucket_count)|计算 bucket 的数目。|
@@ -201,13 +202,13 @@ template<typename Key,
 |[hash_multimap::upper_bound (STL/CLR)](#upper_bound)|查找与指定键匹配的范围的末尾。|
 |[hash_multimap::value_comp (STL/CLR)](#value_comp)|复制两个元素值的排序委托。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[hash_multimap::operator= (STL/CLR)](#op)|替换受控序列。|
 
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>界面
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |<xref:System.Collections.IEnumerable>|通过元素进行排序。|
@@ -216,7 +217,7 @@ template<typename Key,
 |<xref:System.Collections.Generic.ICollection%601>|维护类型化元素组。|
 |IHash\<Key, Value>|维护泛型容器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 对象为其控制的序列分配并释放存储，并将其控制为双向链接列表中的单个节点。 为了加快访问速度，对象还会在哈希表)  (的列表中保留一个长度可变的指针数组，从而有效地将整个列表作为子列表或存储桶序列进行管理。 它通过更改节点之间的链接，将元素插入到存储桶中，而不是将一个节点的内容复制到另一个节点。 这意味着，无需干扰剩余元素，即可随意插入和移除元素。
 
@@ -574,14 +575,14 @@ int main()
 size_type count(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-该成员函数将返回受控序列中与 *键*具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
+该成员函数将返回受控序列中与 *键* 具有等效排序的元素的数目。 用于确定受控序列中当前与指定键匹配的元素数。
 
 ### <a name="example"></a>示例
 
@@ -787,12 +788,12 @@ int main()
 cliext::pair<iterator, iterator> equal_range(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数返回一对迭代器 `cliext::pair<iterator, iterator>(` [hash_multimap：： lower_bound (stl/clr) ](#lower_bound) `(key),` [hash_multimap：： upper_bound (STL/clr) ](#upper_bound) `(key))` 。 用于确定受控序列中当前与指定键匹配的元素范围。
 
@@ -850,7 +851,7 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要清除的范围的开头。
@@ -864,13 +865,13 @@ bool erase(key_type key)
 *where*<br/>
 要清除的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个成员函数删除由*where*指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则为[hash_multimap：)  (](#end) 。 `()` 使用它可以删除单个元素。
+第一个成员函数删除由 *where* 指向的受控序列的元素，并返回一个迭代器，该迭代器指定在删除的元素之外保留的第一个元素; 如果此类元素不存在，则为 [hash_multimap：)  (](#end) 。 `()` 使用它可以删除单个元素。
 
 第二个成员函数删除范围 [，) 中的受控序列的元素， `first` `last` 并返回一个迭代器，该迭代器指定删除的任何元素之外保留的第一个元素; `end()` 如果此类元素不存在，则为。 使用它可以删除零个或多个连续元素。
 
-第三个成员函数删除受控序列中其键与 *键*具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
+第三个成员函数删除受控序列中其键与 *键* 具有等效顺序的任何元素，并返回所移除的元素数的计数。 使用它可删除与指定键匹配的所有元素并对其进行计数。
 
 每个元素擦除与受控序列中的元素数的对数成正比。
 
@@ -941,14 +942,14 @@ erase(L'e') = 1
 iterator find(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果受控序列中的至少一个元素具有与*键*等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回[hash_multimap：： end (STL/CLR) ](#end) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
+如果受控序列中的至少一个元素具有与 *键* 等效的排序，则成员函数将返回一个指定这些元素之一的迭代器;否则，它将返回 [hash_multimap：： end (STL/CLR)](#end) `()` 。 用于查找当前位于受控序列中的元素，该元素与指定的键匹配。
 
 ### <a name="example"></a>示例
 
@@ -1286,7 +1287,7 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要插入的范围的开头。
@@ -1303,7 +1304,7 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *然后*<br/>
 要插入的对象或范围。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数：
 
@@ -1315,25 +1316,25 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `explicit hash_multimap(key_compare^ pred);`
 
-用 *pred*和默认哈希函数初始化不带元素的受控序列。 使用指定的排序谓词和默认哈希函数，可以使用它指定一个空的初始受控序列。
+用 *pred* 和默认哈希函数初始化不带元素的受控序列。 使用指定的排序谓词和默认哈希函数，可以使用它指定一个空的初始受控序列。
 
 构造函数：
 
 `hash_multimap(key_compare^ pred, hasher^ hashfn);`
 
-用 *pred*和哈希函数 *hashfn*初始化没有元素的受控序列。 使用指定的排序谓词和哈希函数，可以使用它指定一个空的初始受控序列。
+用 *pred* 和哈希函数 *hashfn* 初始化没有元素的受控序列。 使用指定的排序谓词和哈希函数，可以使用它指定一个空的初始受控序列。
 
 构造函数：
 
 `hash_multimap(hash_multimap<Key, Mapped>% right);`
 
-用序列 [ `right.begin()` ， `right.end()`) 和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象 *权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
+用序列 [ `right.begin()` ， `right.end()`) 和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象 *权限* 控制的序列的副本，具有默认的排序谓词和哈希函数。
 
 构造函数：
 
 `hash_multimap(hash_multimap<Key, Mapped>^ right);`
 
-用序列 [ `right->begin()` ， `right->end()`) 和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象 *权限*控制的序列的副本，具有默认的排序谓词和哈希函数。
+用序列 [ `right->begin()` ， `right->end()`) 和默认的哈希函数初始化受控序列。 用于指定初始受控序列，该序列是由 hash_multimap 对象 *权限* 控制的序列的副本，具有默认的排序谓词和哈希函数。
 
 构造函数：
 
@@ -1351,25 +1352,25 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`
 
-用序列谓词 [，) 初始化受控序列， `first` `last` 并将排序谓词 *pred*和哈希函数 *hashfn*。 使用指定的排序谓词和哈希函数可将其用于使受控序列成为另一个序列的副本。
+用序列谓词 [，) 初始化受控序列， `first` `last` 并将排序谓词 *pred* 和哈希函数 *hashfn*。 使用指定的排序谓词和哈希函数可将其用于使受控序列成为另一个序列的副本。
 
 构造函数：
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-使用枚举器 *右端*指定的序列、默认的排序谓词和默认哈希函数初始化受控序列。 使用它可以通过默认的排序谓词和哈希函数使受控序列成为枚举器描述的另一序列的副本。
+使用枚举器 *右端* 指定的序列、默认的排序谓词和默认哈希函数初始化受控序列。 使用它可以通过默认的排序谓词和哈希函数使受控序列成为枚举器描述的另一序列的副本。
 
 构造函数：
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-使用由枚举器 *右端*指定的序列、排序谓词 *pred*和默认哈希函数初始化受控序列。 使用它可以通过指定的排序谓词和默认哈希函数，使受控序列成为枚举器描述的另一序列的副本。
+使用由枚举器 *右端* 指定的序列、排序谓词 *pred* 和默认哈希函数初始化受控序列。 使用它可以通过指定的排序谓词和默认哈希函数，使受控序列成为枚举器描述的另一序列的副本。
 
 构造函数：
 
 `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`
 
-使用由枚举器 *右端*指定的序列、排序谓词 *pred*和哈希函数 *hashfn*初始化受控序列。 使用此方法可以通过指定的排序谓词和哈希函数，使受控序列成为枚举器描述的另一序列的副本。
+使用由枚举器 *右端* 指定的序列、排序谓词 *pred* 和哈希函数 *hashfn* 初始化受控序列。 使用此方法可以通过指定的排序谓词和哈希函数，使受控序列成为枚举器描述的另一序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -1555,7 +1556,7 @@ template<typename InIter>
 void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *first*<br/>
 要插入的范围的开头。
@@ -1572,17 +1573,17 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *where*<br/>
 容器中要插入的位置 (提示仅) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个成员函数都插入由剩余操作数指定的序列。
 
-第一个成员函数插入一个具有值 *val*的元素，并返回指定新插入的元素的迭代器。 用于插入单个元素。
+第一个成员函数插入一个具有值 *val* 的元素，并返回指定新插入的元素的迭代器。 用于插入单个元素。
 
-第二个成员函数插入具有值 *val*的元素，使用 *where* 作为提示 (提高性能) ，并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
+第二个成员函数插入具有值 *val* 的元素，使用 *where* 作为提示 (提高性能) ，并返回指定新插入的元素的迭代器。 使用它可以插入一个元素，该元素可能与你知道的元素相邻。
 
 第三个成员函数插入序列 [ `first` ， `last`) 。 用于插入从另一个序列复制的零个或多个元素。
 
-第四个成员函数插入由 *权限*指定的序列。 使用它可以插入枚举器描述的序列。
+第四个成员函数插入由 *权限* 指定的序列。 使用它可以插入枚举器描述的序列。
 
 每个元素插入时间与受控序列中的元素数的对数成正比。 但是，如果指定一个在插入点附近指定元素的提示，则可能会在分期常量时间内进行插入。
 
@@ -1832,7 +1833,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *键*的同义词。
+该类型是模板参数 *键* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1949,14 +1950,14 @@ max_load_factor() = 0.25
 iterator lower_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数确定受控序列中的第一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键*等效的排序。 如果此类元素不存在，它将返回[hash_multimap：： end (STL/CLR) ](#end) `()` ; 否则，它将返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
+成员函数确定受控序列中的第一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键* 等效的排序。 如果此类元素不存在，它将返回[hash_multimap：： end (STL/CLR) ](#end) `()` ; 否则，它将返回指定的迭代器 `X` 。 用于查找当前在受控序列中与指定键匹配的一系列元素的开头。
 
 ### <a name="example"></a>示例
 
@@ -2008,7 +2009,7 @@ lower_bound(L'x')==end() = True
 static value_type make_value(key_type key, mapped_type mapped);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要使用的密钥值。
@@ -2016,9 +2017,9 @@ static value_type make_value(key_type key, mapped_type mapped);
 *已映射*<br/>
 要搜索的映射值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数返回一个 `value_type` 对象，其键为 *key* ，并 *映射*其映射值。 使用它来编写适用于多个其他成员函数的对象。
+成员函数返回一个 `value_type` 对象，其键为 *key* ，并 *映射* 其映射值。 使用它来编写适用于多个其他成员函数的对象。
 
 ### <a name="example"></a>示例
 
@@ -2059,7 +2060,7 @@ typedef Mapped mapped_type;
 
 ### <a name="remarks"></a>备注
 
-类型是 *映射*的模板参数的同义词。
+类型是 *映射* 的模板参数的同义词。
 
 ### <a name="example"></a>示例
 
@@ -2103,12 +2104,12 @@ float max_load_factor();
 void max_load_factor(float new_factor);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *new_factor*<br/>
 要存储的新的最大加载因子。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个成员函数将返回当前存储的最大加载因子。 使用它来确定最大平均存储桶大小。
 
@@ -2184,14 +2185,14 @@ max_load_factor() = 0.25
 hash_multimap<Key, Mapped>% operator=(hash_multimap<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 用于复制的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧* 受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -2604,14 +2605,14 @@ end()-begin() = 3
 void swap(hash_multimap<Key, Mapped>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要与其交换内容的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数交换和右之间的受控 **`this`** 序列*right*。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
+成员函数交换和右之间的受控 **`this`** 序列。 它在固定时间内执行此操作，并且不会引发异常。 使用该方法可以快速交换两个容器的内容。
 
 ### <a name="example"></a>示例
 
@@ -2722,14 +2723,14 @@ int main()
 iterator upper_bound(key_type key);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *key*<br/>
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数确定受控序列中的最后一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键*等效的排序。 如果此类元素不存在，或 `X` 为受控序列中的最后一个元素，则它将返回[hash_multimap：： END (STL/CLR) ](#end) `()` ; 否则，它将返回一个指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
+成员函数确定受控序列中的最后一个元素 `X` ，该元素将哈希处理为与 *键* 相同的存储桶并具有与 *键* 等效的排序。 如果此类元素不存在，或 `X` 为受控序列中的最后一个元素，则它将返回[hash_multimap：： END (STL/CLR) ](#end) `()` ; 否则，它将返回一个指定第一个元素的迭代器 `X` 。 使用它可以查找受控序列中当前与指定键匹配的元素序列的末尾。
 
 ### <a name="example"></a>示例
 

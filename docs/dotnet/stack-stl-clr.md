@@ -1,4 +1,5 @@
 ---
+description: '详细了解： stack (STL/CLR) '
 title: stack (STL/CLR)
 ms.date: 11/04/2016
 ms.topic: reference
@@ -53,12 +54,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 316899aae024fbc8d9e568d6b5684ec4cfb11558
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 2903af3bce3f4eba09324202dbb071b11e440573
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91499661"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97335377"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -78,9 +79,9 @@ template<typename Value,
     { ..... };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*值*<br/>
+值<br/>
 受控序列中的元素的类型。
 
 *容器*<br/>
@@ -105,7 +106,7 @@ template<typename Value,
 |[stack::size_type (STL/CLR)](#size_type)|两个元素间的带符号距离的类型。|
 |[stack::value_type (STL/CLR)](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |---------------------|-----------------|
 |[stack::assign (STL/CLR)](#assign)|替换所有元素。|
 |[stack::empty (STL/CLR)](#empty)|测试元素是否存在。|
@@ -117,11 +118,11 @@ template<typename Value,
 |[stack::top (STL/CLR)](#top)|访问最后一个元素。|
 |[stack::to_array (STL/CLR)](#to_array)|将受控序列复制到新数组。|
 
-|属性|说明|
+|Property|描述|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|访问最后一个元素。|
 
-|运算符|说明|
+|运算符|描述|
 |--------------|-----------------|
 |[stack::operator= (STL/CLR)](#op_as)|替换受控序列。|
 |[operator！ = (stack)  (STL/CLR) ](#op_neq)|确定对象是否 `stack` 不等于另一个 `stack` 对象。|
@@ -131,16 +132,16 @@ template<typename Value,
 |[operator> (stack)  (STL/CLR) ](#op_gt)|确定 `stack` 对象是否大于另一个 `stack` 对象。|
 |[运算符>= (stack)  (STL/CLR) ](#op_gteq)|确定 `stack` 对象是否大于或等于另一个 `stack` 对象。|
 
-## <a name="interfaces"></a>接口
+## <a name="interfaces"></a>界面
 
-|接口|说明|
+|接口|描述|
 |---------------|-----------------|
 |<xref:System.ICloneable>|复制对象。|
 |IStack\<Value, Container>|维护泛型容器适配器。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-对象可为其控制的序列分配并释放 *存储，以*存储 *值* 元素并按需增长。 对象将访问限制为仅推送和弹出最后一个元素，实现最后一个的第一个队列 (也称为 LIFO 队列，或 stack) 。
+对象可为其控制的序列分配并释放 *存储，以* 存储 *值* 元素并按需增长。 对象将访问限制为仅推送和弹出最后一个元素，实现最后一个的第一个队列 (也称为 LIFO 队列，或 stack) 。
 
 ## <a name="members"></a>成员
 
@@ -154,12 +155,12 @@ template<typename Value,
 void assign(stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要插入的容器适配器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将分配 `right.get_container()` 给基础容器。 使用此方法可以更改堆栈的全部内容。
 
@@ -569,14 +570,14 @@ a b c
 stack <Value, Container>% operator=(stack <Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要复制的容器适配器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧*受控序列的副本。
+成员运算符 *直接* 复制到对象，然后返回 **`*this`** 。 用于将受控序列替换为 *右侧* 受控序列的副本。
 
 ### <a name="example"></a>示例
 
@@ -867,7 +868,7 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *然后*<br/>
 要复制的对象。
@@ -875,7 +876,7 @@ explicit stack(container_type% wrapped);
 *覆盖*<br/>
 要使用的已包装容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 构造函数：
 
@@ -887,7 +888,7 @@ explicit stack(container_type% wrapped);
 
 `stack(stack<Value, Container>% right);`
 
-创建作为的副本的已包装容器 `right.get_container()` 。 用于指定初始受控序列，该序列是由 stack 对象 *权限*控制的序列的副本。
+创建作为的副本的已包装容器 `right.get_container()` 。 用于指定初始受控序列，该序列是由 stack 对象 *权限* 控制的序列的副本。
 
 构造函数：
 
@@ -1113,7 +1114,7 @@ typedef Value value_type;
 
 ### <a name="remarks"></a>备注
 
-该类型是模板参数 *值*的同义词。
+该类型是模板参数 *值* 的同义词。
 
 ### <a name="example"></a>示例
 
@@ -1159,7 +1160,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -1167,9 +1168,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left == right)` 。 使用它可以测试在按元素对两个堆栈进行比较*时，是否按原样对**左侧*进行排序。
+Operator 函数返回 `!(left == right)` 。 使用它可以测试在按元素对两个堆栈进行比较 *时，是否按原样对**左侧* 进行排序。
 
 ### <a name="example"></a>示例
 
@@ -1230,7 +1231,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -1238,9 +1239,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它将返回 `left->` [stack：： size (STL/CLR) ](#size) `() <` `right->size()` 使用它来测试在按元素对两*right*个堆栈进行比较时，是否向*左*排序。
+如果为，则运算符函数返回 true，适用于的最低位置 `i` `!(right[i] < left[i])` `left[i] < right[i]` 。 否则，它将返回 `left->` [stack：： size (STL/CLR)](#size) `() <` `right->size()` 使用它来测试在按元素对两个堆栈进行比较时，是否向 *左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -1301,7 +1302,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -1309,9 +1310,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个堆栈进行比较*时，是否向**左*排序。
+Operator 函数返回 `!(right < left)` 。 用于测试在按元素对两个堆栈进行比较 *时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -1372,7 +1373,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -1380,9 +1381,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个堆栈进行*比较时，是否按原样对**左侧*排序。
+仅当由 *左* 和 *右* 控制的序列具有相同的长度，并且对于每个位置，operator 函数才返回 true `i` `left[i] ==` `right[i]` 。 用于测试在按元素对两个堆栈进行 *比较时，是否按原样对**左侧* 排序。
 
 ### <a name="example"></a>示例
 
@@ -1443,7 +1444,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -1451,9 +1452,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `right` `<` `left` 。 使用此方法可以测试是否在按元素对两个堆栈进行比较时*向**左*排序。
+Operator 函数返回 `right` `<` `left` 。 使用此方法可以测试是否在按元素对两个堆栈进行比较时 *向**左* 排序。
 
 ### <a name="example"></a>示例
 
@@ -1514,7 +1515,7 @@ template<typename Value,
         stack<Value, Container>% right);
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *左中*<br/>
 要比较的左容器。
@@ -1522,9 +1523,9 @@ template<typename Value,
 *然后*<br/>
 要比较的右容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个堆栈进行比较*时，是否向**左*排序。
+Operator 函数返回 `!(left < right)` 。 用于测试在按元素对两个堆栈进行比较 *时，是否向**左* 排序。
 
 ### <a name="example"></a>示例
 

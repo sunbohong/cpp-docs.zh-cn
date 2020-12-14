@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C3445
 title: 编译器错误 C3445
 ms.date: 04/10/2017
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-ms.openlocfilehash: 2eddeb5a56c953ca0864e29187fbe28c53bdee24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 992c0e4f6e8b068bf6c038a6a5f58b45dd80a3c6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328630"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97316025"
 ---
 # <a name="compiler-error-c3445"></a>编译器错误 C3445
 
-> 复制列表初始化的 '*类型*不能使用的显式构造函数
+> "*type*" 的复制列表初始化不能使用显式构造函数
 
-根据 ISO 标准 C + + 17 中，编译器需要考虑用于重载决策中复制列表初始化的显式构造函数，但如果实际选择该重载必须引发错误。
+根据 ISO c + + 17 标准，编译器需要在复制列表初始化中考虑使用显式构造函数进行重载解析，但如果实际选择了该重载，则必须引发错误。
 
-从 Visual Studio 2017 中，编译器找找不到由 Visual Studio 2015 的错误与对象创建相关使用初始值设定项列表。 这些错误可能会导致崩溃或未定义在运行时的行为。
+从 Visual Studio 2017 开始，编译器将使用 Visual Studio 2015 找不到的初始值设定项列表查找与对象创建相关的错误。 这些错误可能导致运行时出现故障或未定义的行为。
 
 ## <a name="example"></a>示例
 
