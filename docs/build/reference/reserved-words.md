@@ -1,4 +1,5 @@
 ---
+description: 了解更多：保留字
 title: 保留字
 ms.date: 11/04/2016
 f1_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 62893d4af1633bc2c89d2d6a0fa71309a0411ad5
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 6d5c5971d8d01dffa1dcd1e7f6a5228fb239d4dc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836837"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225188"
 ---
 # <a name="reserved-words"></a>保留字
 
@@ -47,16 +48,16 @@ ms.locfileid: "88836837"
       `FIXED`<sup>1</sup>
    :::column-end:::
    :::column span="":::
-      **`FUNCTIONS`**<sup>pps-2</sup>\
+      **`FUNCTIONS`** <sup>2</sup>\
       **`HEAPSIZE`**\
       **`IMPORTS`**\
       **`IMPURE`**<sup>2</sup>\
-      **`INCLUDE`**<sup>pps-2</sup>\
-      **`INITINSTANCE`**<sup>pps-2</sup>\
+      **`INCLUDE`** <sup>2</sup>\
+      **`INITINSTANCE`** <sup>2</sup>\
       **`IOPL`**\
       **`LIBRARY`**<sup>2</sup>\
       **`LOADONCALL`**<sup>2</sup>\
-      **`LONGNAMES`**<sup>pps-2</sup>\
+      **`LONGNAMES`** <sup>2</sup>\
       **`MOVABLE`**<sup>2</sup>\
       **`MOVEABLE`**<sup>2</sup>\
       **`MULTIPLE`**\
@@ -76,7 +77,7 @@ ms.locfileid: "88836837"
       **`OLD`**<sup>2</sup>\
       **`PRELOAD`**\
       **`PRIVATE`**\
-      **`PROTMODE`**<sup>pps-2</sup>\
+      **`PROTMODE`** <sup>2</sup>\
       **`PURE`**<sup>2</sup>\
       **`READONLY`**
    :::column-end:::
@@ -102,7 +103,7 @@ ms.locfileid: "88836837"
 
 <sup>2</sup> 链接器忽略此词，但不发出警告。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 - [MSVC 链接器参考](linking.md)
 - [MSVC 链接器选项](linker-options.md)

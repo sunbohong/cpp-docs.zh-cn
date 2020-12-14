@@ -1,5 +1,6 @@
 ---
-title: '&lt;返回 > （C++文档注释）'
+description: 了解更多： &lt; 返回&gt;
+title: '&lt;返回> (c + + 文档注释) '
 ms.date: 11/04/2016
 f1_keywords:
 - returns
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - returns C++ XML tag
 - <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
-ms.openlocfilehash: 1315ec09271c2c97f7bcaf3fb6f9c75f514b5d2d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: c07439610fa0259a38a4c1993ead7f0f06023e5e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225045"
 ---
 # <a name="ltreturnsgt"></a>&lt;returns&gt;
 
@@ -25,14 +26,14 @@ ms.locfileid: "74988628"
 <returns>description</returns>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 description<br/>
 返回值的说明。
 
 ## <a name="remarks"></a>备注
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 
@@ -49,6 +50,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

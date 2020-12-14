@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：返回值 cl.exe
 title: cl.exe 的返回值
 ms.date: 09/05/2018
 helpviewer_keywords:
 - cl.exe compiler, return value
 ms.assetid: 7c2d7f33-ee0d-4199-8ef4-75fe2b007670
-ms.openlocfilehash: 06e0993f6a96117ab73f22e73857843dfcc334a1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 2d324488e0d83979824d1b0c9244070c974e65af
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836720"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225084"
 ---
 # <a name="return-value-of-clexe"></a>cl.exe 的返回值
 
@@ -21,7 +22,7 @@ cl.exe 在成功（无错误）时返回零；否则返回非零值。
 
 还可使用 Visual Studio 中的错误查找实用工具来了解编译器错误消息的意思。 在 Visual Studio 命令行界面中，输入 **errlook.exe** 以启动该实用工具;或在 Visual Studio IDE 中的菜单栏上，依次选择 " **工具**"、" **错误查找**"。 输入错误值以查找与错误相关的描述性文本。 有关详细信息，请参阅 [ERRLOOK Reference](errlook-reference.md)。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 下面是一个使用 cl.exe 的返回值的示例 .bat 文件。
 
@@ -49,6 +50,6 @@ cl /W4 t.cpp
 :end
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

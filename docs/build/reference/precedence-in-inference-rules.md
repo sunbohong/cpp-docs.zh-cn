@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：推理规则中的优先级
 title: 推理规则中的优先级
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,20 +7,20 @@ helpviewer_keywords:
 - rules, inference
 - precedence, inference rule
 ms.assetid: 69e3dc02-0815-4c3a-b02b-1cb85fceaf24
-ms.openlocfilehash: ca24134fd1829ad3d97ca67b8c30aae3af4109ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b56d01cce63aaaac92e011630e45bcf43e7fe0b3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225903"
 ---
 # <a name="precedence-in-inference-rules"></a>推理规则中的优先级
 
-如果有多个定义推理规则，NMAKE 使用优先级最高的定义。 以下列表显示了从最高优先级到最低的优先级顺序：
+如果对推理规则进行了多次定义，NMAKE 将使用最高优先级的定义。 以下列表显示了优先级从高到低的顺序：
 
-1. 生成文件; 中定义的推理规则更高版本的定义具有的优先级。
+1. 生成文件中定义的推理规则;稍后定义优先。
 
-1. Tools.ini; 中定义的推理规则更高版本的定义具有的优先级。
+1. 在 Tools.ini 中定义的推理规则;稍后定义优先。
 
 1. 预定义的推理规则。
 

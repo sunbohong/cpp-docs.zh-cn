@@ -1,5 +1,6 @@
 ---
-title: '&lt;seealso > （C++文档注释）'
+description: 了解详细信息： &lt; seealso&gt;
+title: '&lt;seealso> (c + + 文档注释) '
 ms.date: 11/04/2016
 f1_keywords:
 - <seealso>
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - seealso C++ XML tag
 - <seealso> C++ XML tag
 ms.assetid: cb33d100-9c50-4485-8d0c-573429eff155
-ms.openlocfilehash: 698db2df462f561acd897d0d0e56b3106a915466
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 70f5f0147ff56dd6327e99f073f80c28a7cce539
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988606"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224720"
 ---
 # <a name="ltseealsogt"></a>&lt;seealso&gt;
 
@@ -25,18 +26,18 @@ ms.locfileid: "74988606"
 <seealso cref="member"/>
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*member*<br/>
+*职员*<br/>
 对可从当前编译环境调用的成员或字段的引用。  将名称括在单引号或双引号中。
 
 编译器检查是否存在给定的码位元素，并将 `member` 解析为输出 XML 中的元素名称。  如果编译器没有找到 `member`，它会发出警告。
 
-有关如何创建对泛型类型的 cref 引用的信息，请参阅 [\<see>](see-visual-cpp.md)。
+有关如何创建对泛型类型的 cref 引用的信息，请参阅 [\<see>](see-visual-cpp.md) 。
 
 ## <a name="remarks"></a>备注
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 有关使用 \<seealso> 的示例，请参阅 [\<summary>](summary-visual-cpp.md)。
 
@@ -68,6 +69,6 @@ public ref struct B {
 };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

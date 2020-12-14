@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/RELEASE (设置校验和) '
 title: /RELEASE（设置校验和）
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - checksum setting
 - RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-ms.openlocfilehash: 1dc09b38beeb763733f8fa6a8ffa972059b30e03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed1e55dffb02ace26e91e262bd3e9514f056196e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318922"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97225318"
 ---
 # <a name="release-set-the-checksum"></a>/RELEASE（设置校验和）
 
@@ -25,21 +26,21 @@ ms.locfileid: "62318922"
 
 ## <a name="remarks"></a>备注
 
-/RELEASE 选项的.exe 文件头中设置校验和。
+/RELEASE 选项在 .exe 文件的标头中设置校验和。
 
-操作系统要求的设备驱动程序的校验和。 设置发布版本的设备驱动程序的校验和，以确保与将来的操作系统的兼容性。
+操作系统需要设备驱动程序的校验和。 为设备驱动程序的发行版本设置校验和，以确保与将来的操作系统兼容。
 
-默认情况下设置 /RELEASE 选项时[已](subsystem-specify-subsystem.md)指定选项。
+如果指定了 [/SUBSYSTEM： NATIVE](subsystem-specify-subsystem.md) 选项，则默认情况下将设置/RELEASE 选项。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此链接器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
-1. 单击**链接器**文件夹。
+1. 单击“链接器”文件夹。
 
-1. 单击**高级**属性页。
+1. 单击 " **高级** " 属性页。
 
-1. 修改**设置校验和**属性。
+1. 修改 " **设置校验和** " 属性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>以编程方式设置此链接器选项
 

@@ -1,25 +1,26 @@
 ---
+description: 了解详细信息：流状态
 title: 流状态
 ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: f725fa16e8d669975dbc02c6eefd727085bbeb7c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: c691c1fd01feb9f78ff0929775505f08cb625ecc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743354"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224174"
 ---
 # <a name="stream-states"></a>流状态
 
 下图中显示了流的有效状态及状态转换。
 
-![流状态图](../c-runtime-library/media/stream.gif "Stream state diagram")
+![流状态关系图](../c-runtime-library/media/stream.gif "流状态关系图")
 
 每个圆圈代表一种稳定的状态。 每一行代表由对流进行的函数调用所导致的转换。 五组函数可以导致状态转换。
 
-前三个组中的函数在 \<stdio.h> 中声明：
+前三个组中的函数在中声明 \<stdio.h> ：
 
 - 字节读取函数 — [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md)、[fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fread](../c-runtime-library/reference/fread.md)、[fscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)、[getc](../c-runtime-library/reference/getc-getwc.md)、[getchar](../c-runtime-library/reference/getc-getwc.md)、[gets](../c-runtime-library/gets-getws.md)、[scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 和 [ungetc](../c-runtime-library/reference/ungetc-ungetwc.md)
 
@@ -27,7 +28,7 @@ ms.locfileid: "57743354"
 
 - 位置函数 — [fflush](../c-runtime-library/reference/fflush.md)、[fseek](../c-runtime-library/reference/fseek-fseeki64.md)、[fsetpos](../c-runtime-library/reference/fsetpos.md) 和 [rewind](../c-runtime-library/reference/rewind.md)
 
-剩余的两个组中的函数在 \<wchar.h> 中声明：
+其余两个组中的函数在中声明 \<wchar.h> ：
 
 - 宽读取函数 — [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)、[getwc](../c-runtime-library/reference/getc-getwc.md)、[getwchar](../c-runtime-library/reference/getc-getwc.md)、[ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md) 和 [wscanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)，
 

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/Zs (语法检查) '
 title: /Zs（只进行语法检查）
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,16 +10,16 @@ helpviewer_keywords:
 - Zs compiler option
 - /Zs compiler option [C++]
 ms.assetid: b4b41e6a-3f41-4d09-9cb6-fde5aa2cfecf
-ms.openlocfilehash: e3713312b71c4cd539d40e09a3eaa821a2e5caed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4f5e2227104003a637db1d921fd959ea0a11ad7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315412"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224291"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs（只进行语法检查）
 
-告知编译器仅在命令行上的源文件的语法检查。
+指示编译器仅在命令行上检查源文件的语法。
 
 ## <a name="syntax"></a>语法
 
@@ -28,13 +29,13 @@ ms.locfileid: "62315412"
 
 ## <a name="remarks"></a>备注
 
-使用此选项时，不创建任何输出文件，和错误消息写入到标准输出。
+使用此选项时，不会创建任何输出文件，并且会将错误消息写入标准输出。
 
-**/Zs**选项，可以快速查找和更正语法错误之前编译和链接的源文件。
+**/Zs** 选项提供了在编译和链接源文件之前查找和更正语法错误的快速方法。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
-1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目的“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 单击 **“C/C++”** 文件夹。
 
@@ -49,4 +50,4 @@ ms.locfileid: "62315412"
 ## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：指定要延迟加载的 Dll
 title: 指定要延迟加载的 DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: 2b6737abd76c03186881e83bbd2bf286be6ffe2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece96ea6f818c7e0bc6b6e032ce523e96a9f4ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318142"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224538"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>指定要延迟加载的 DLL
 
-您可以指定哪个 Dll 延迟加载，出现[/delayload](delayload-delay-load-import.md):`dllname`链接器选项。 如果您不打算使用您自己的一个帮助程序函数版本，您还必须链接您的程序与 delayimp.lib （对于桌面应用程序） 或 dloadhelper.lib （针对应用商店应用）。
+可以通过 [/delayload](delayload-delay-load-import.md)： `dllname` 链接器选项指定要延迟加载的 dll。 如果您不打算使用您自己的一个帮助程序函数版本，您还必须链接您的程序与 delayimp.lib （对于桌面应用程序） 或 dloadhelper.lib （针对应用商店应用）。
 
 以下是延迟加载 DLL 的一个简单示例：
 
@@ -37,4 +38,4 @@ int main() {
 
 ## <a name="see-also"></a>请参阅
 
-[延迟加载 DLL 的链接器支持](linker-support-for-delay-loaded-dlls.md)
+[Delay-Loaded Dll 的链接器支持](linker-support-for-delay-loaded-dlls.md)

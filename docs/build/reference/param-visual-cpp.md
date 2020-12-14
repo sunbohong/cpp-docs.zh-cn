@@ -1,5 +1,6 @@
 ---
-title: '&lt;param > (C++文档注释)'
+description: 了解详细信息： &lt; param&gt;
+title: '&lt;参数> (c + + 文档注释) '
 ms.date: 11/04/2016
 f1_keywords:
 - param
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - param C++ XML tag
 - <param> C++ XML tag
 ms.assetid: 66c1a1c3-4f98-4bcf-8c7d-9a40308982fb
-ms.openlocfilehash: d8ea4feddbe1ec2d5898f8ef698cc2d69d255933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3baabc6aef9a4cabdd7c7a9023fb628bd53793
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226137"
 ---
 # <a name="ltparamgt"></a>&lt;param&gt;
 
@@ -30,14 +31,14 @@ ms.locfileid: "62320001"
 *name*<br/>
 方法参数的名称。  将名称括在单引号或双引号中。  如果编译器没有找到 `name`，它会发出警告。
 
-*description*<br/>
+description<br/>
 参数的说明。
 
 ## <a name="remarks"></a>备注
 
-\<param> 标记的文本将显示在 IntelliSense、[对象浏览器](/visualstudio/ide/viewing-the-structure-of-code)和代码注释 Web 报表中。
+标记的文本 \<param> 将显示在 IntelliSense、 [对象浏览器](/visualstudio/ide/viewing-the-structure-of-code)和代码注释 Web 报表中。
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

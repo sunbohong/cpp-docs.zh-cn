@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/Zp (结构成员对齐) '
 title: /Zp（结构成员对齐）
 ms.date: 04/04/2019
 f1_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: c78e670303bde68299725e18c6f588f5e410a971
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b2029ebded53bcae1b44b5cd72bf59494e58ec4b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87234297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97224304"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp（结构成员对齐）
 
@@ -28,17 +29,17 @@ ms.locfileid: "87234297"
 
 ## <a name="remarks"></a>备注
 
-**`/ZpN`** 选项告诉编译器存储每个结构成员的位置。 编译器将成员存储在边界上第一个成员的边界上，该边界是成员类型的大小或*N*字节边界。
+**`/ZpN`** 选项告诉编译器存储每个结构成员的位置。 编译器将成员存储在边界上第一个成员的边界上，该边界是成员类型的大小或 *N* 字节边界。
 
 下表描述了可用的封装值：
 
 |/Zp 参数|效果|
 |-|-|
-|1|将结构打包在1个字节的边界上。 与相同 **`/Zp`** 。|
+|1|将结构打包在1个字节的边界上。 与 `/Zp` 相同。|
 |2|将结构打包到2个字节的边界上。|
 |4|将结构打包在4个字节的边界上。|
-|8|将结构打包到8字节边界（x86、ARM 和 ARM64 的默认值）。|
-|16| 在16字节边界上打包结构（x64 默认值）。|
+|8|将结构打包到8字节边界 (x86、ARM 和 ARM64) 的默认值。|
+|16| 为 x64)  (默认值的16字节边界包结构。|
 
 不要使用此选项，除非有特定的对齐要求。
 
@@ -49,11 +50,11 @@ ms.locfileid: "87234297"
 
 - [`align`](../../cpp/align-cpp.md)
 
-- [`alignof`操作员](../../cpp/alignof-operator.md)
+- [`alignof` 操作员](../../cpp/alignof-operator.md)
 
 - [`__unaligned`](../../cpp/unaligned.md)
 
-- [`/ALIGN`（节对齐）](align-section-alignment.md)
+- [`/ALIGN` (节对齐) ](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -61,13 +62,13 @@ ms.locfileid: "87234297"
 
 1. 选择 "**配置属性**" "  >  **c/c + +**  >  **代码生成**" 属性页。
 
-1. 修改**结构成员对齐**属性。
+1. 修改 **结构成员对齐** 属性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.StructMemberAlignment%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md) \
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

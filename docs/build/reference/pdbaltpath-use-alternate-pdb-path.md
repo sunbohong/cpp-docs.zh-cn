@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/PDBALTPATH (使用备用 PDB 路径) '
 title: /PDBALTPATH（使用备用 PDB 路径）
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - /PDBALTPATH dumpbin option
 - PDB files, path
 ms.assetid: 72e200aa-e2c3-4ad8-b687-25528da1aaaf
-ms.openlocfilehash: 660e39a97b9fed0c5a9228fe011e7c0fa2566e68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f85a39fb4570773f01a98331e746f6b37b76c161
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97226059"
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH（使用备用 PDB 路径）
 
@@ -23,7 +24,7 @@ ms.locfileid: "62320027"
 /PDBALTPATH:pdb_file_name
 ```
 
-## <a name="arguments"></a>自变量
+## <a name="arguments"></a>参数
 
 *pdb_file_name*<br/>
 .pdb 文件的路径和文件名。
@@ -32,7 +33,7 @@ ms.locfileid: "62320027"
 
 使用此选项可以在已编译二进制文件中为程序数据库 (.pdb) 文件提供一个备用位置。 通常，链接器将 .pdb 文件的位置记录到它所生成的二进制文件中。 使用此选项可以为 .pdb 文件提供另一个路径和文件名。 /PDBALTPATH 提供的信息不会更改实际 .pdb 文件的位置或名称；它更改链接器写入二进制文件中的信息。 这样，你可以提供一个独立于生成计算机的文件结构的路径。 此选项的两个常见用途是提供网络路径或不包含路径信息的文件。
 
-值*pdb_file_name*可以是任意字符串、 环境变量，或 **%_PDB %**。 链接器将展开环境变量，例如 **%systemroot%**，为其值。 链接器将定义环境变量 **%_PDB %** 并 **%_EXT %**。 **%_PDB %** 扩展为实际.pdb 文件不包含任何路径信息的文件名称和 **%_EXT %** 是生成可执行文件的扩展名。
+*Pdb_file_name* 的值可以是任意字符串、环境变量或 **% _PDB%**。 链接器会将环境变量（如 **% SystemRoot%**）展开为其值。 链接器定义环境变量 **% _PDB%** 和 **% _EXT%**。 **% _PDB%** 展开为实际 .pdb 文件的文件名，而不包含任何路径信息， **% _EXT%** 是生成的可执行文件的扩展名。
 
 ## <a name="see-also"></a>请参阅
 
