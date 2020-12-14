@@ -1,4 +1,5 @@
 ---
+description: 了解更多： &lt; regex &gt; 运算符
 title: '&lt;regex&gt; 运算符'
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: f3117ce7e962468855172a463c375392930e7c81
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: bc0eddc9f3c7db600c49e317335a131bc6646a5d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833226"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254269"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 运算符
 
@@ -66,7 +67,7 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 迭代器类型。
@@ -83,7 +84,7 @@ allocator 类。
 *然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 各模板运算符返回 `!(left == right)`。
 
@@ -181,7 +182,7 @@ bool operator<(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 迭代器类型。
@@ -198,9 +199,9 @@ allocator 类。
 *然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-每个模板运算符将其参数转换为字符串类型，并且仅当转换 *后的值* 与 *right*的转换值小于时才返回 true。
+每个模板运算符将其参数转换为字符串类型，并且仅当转换 *后的值* 与 *right* 的转换值小于时才返回 true。
 
 ### <a name="example"></a>示例
 
@@ -266,7 +267,7 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
     const sub_match<BidIt>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Elem*\
 元素类型。
@@ -286,7 +287,7 @@ allocator 类。
 *然后*\
 要插入的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板运算符返回 `os << right.str()`。
 
@@ -351,7 +352,7 @@ bool operator<=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 迭代器类型。
@@ -368,7 +369,7 @@ allocator 类。
 *然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 各模板运算符返回 `!(right < left)`。
 
@@ -465,7 +466,7 @@ bool operator==(const match_results<BidIt, Alloc>& left,
     const match_results<BidIt, Alloc>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 迭代器类型。
@@ -482,7 +483,7 @@ allocator 类。
 *然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 每个模板运算符将每个参数转换为字符串类型，并比较转换对象是否相等，然后返回相应结果。
 
@@ -588,7 +589,7 @@ bool operator>(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 迭代器类型。
@@ -605,7 +606,7 @@ allocator 类。
 *然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 各模板运算符返回 `right < left`。
 
@@ -698,7 +699,7 @@ bool operator>=(const sub_match<BidIt>& left,
     const typename iterator_traits<BidIt>::value_type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 迭代器类型。
@@ -715,7 +716,7 @@ allocator 类。
 *然后*\
 要比较的右边的对象。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 各模板运算符返回 `!(left < right)`。
 
@@ -773,7 +774,7 @@ sub >= "aab" == false
 sub >= 'a' == true
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<regex>](../standard-library/regex.md)\
 [regex_constants 类](../standard-library/regex-constants-class.md)\

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：内存管理
 title: 内存管理
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 4e274820ce82cf8b338c6a62349440e944f21f7a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84626261"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253372"
 ---
 # <a name="memory-management"></a>内存管理
 
@@ -21,7 +22,7 @@ ms.locfileid: "84626261"
 
 这两种分配方法之间的一个主要区别是：使用帧分配，您通常可处理实际内存块；使用堆分配，您总是会获得一个指向内存块的指针。 这两个方案之间的另一个主要区别是：帧对象会被自动删除，而堆对象必须由程序员显式删除。
 
-有关 Windows 程序中的内存管理的非 MFC 信息，请参阅 Windows SDK 中的[内存管理](/windows/win32/memory/memory-management)。
+有关 Windows 程序中的内存管理的非 MFC 信息，请参阅 Windows SDK 中的 [内存管理](/windows/win32/memory/memory-management) 。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
@@ -39,7 +40,7 @@ ms.locfileid: "84626261"
 
 - [可调整大小的内存块](memory-management-resizable-memory-blocks.md)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [概念](mfc-concepts.md)<br/>
 [常规 MFC 主题](general-mfc-topics.md)

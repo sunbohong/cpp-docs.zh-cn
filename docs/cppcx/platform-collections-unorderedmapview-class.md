@@ -1,20 +1,21 @@
 ---
+description: 详细了解： Platform：：集合：： UnorderedMapView 类
 title: Platform::Collections::UnorderedMapView 类
 ms.date: 12/30/2016
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: acfc168959deb83244c98c5d361cf9e73c1388f2
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 39f33fd75db92e81fa5321d8983b1b5ea9fce79a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213055"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97252371"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 类
 
-将一个只读视图表示为一个 ** 映射，这是键值对的集合。
+将一个只读视图表示为一个 映射，这是键值对的集合。
 
 ## <a name="syntax"></a>语法
 
@@ -26,12 +27,12 @@ template <
 ref class UnorderedMapView sealed;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
-*温度*<br/>
+*K*<br/>
 键值对中键的类型。
 
-*向量*<br/>
+*V*<br/>
 键值对中值的类型。
 
 *C*<br/>
@@ -39,13 +40,13 @@ ref class UnorderedMapView sealed;
 
 ### <a name="remarks"></a>备注
 
-UnorderedMapView 是跨应用程序二进制接口（ABI）传递的[Windows：： Foundation：： \<K,V> 集合：： IMapView](/uwp/api/windows.foundation.collections.imapview-2)接口的具体 c + + 实现。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+UnorderedMapView 是[Windows：： Foundation：：集合：： IMapView \<K,V> ](/uwp/api/windows.foundation.collections.imapview-2)接口的具体 c + + 实现，该实现是跨应用程序二进制接口传递 (ABI) 。 有关更多信息，请参见 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成员
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|描述|
+|“属性”|描述|
 |----------|-----------------|
 |[UnorderedMapView：： UnorderedMapView](#ctor)|初始化 UnorderedMapView 类的新实例。|
 
@@ -69,7 +70,7 @@ UnorderedMapView 是跨应用程序二进制接口（ABI）传递的[Windows：�
 
 **命名空间：** Platform::Collections
 
-## <a name="unorderedmapviewfirst-method"></a><a name="first"></a>UnorderedMapView：： First 方法
+## <a name="unorderedmapviewfirst-method"></a><a name="first"></a> UnorderedMapView：： First 方法
 
 返回一个迭代器，该迭代器指定无序映射中的第一个[Windows \<K,V> ：： Foundation：：集合：： IKeyValuePair](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素。
 
@@ -87,9 +88,9 @@ virtual Windows::Foundation::Collections::IIterator<
 
 ### <a name="remarks"></a>备注
 
-保存第一个（）返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如，`auto x = myMapView->First();`。
+保存由第一个 ( # A1 返回的迭代器的一种简便方法是将返回值分配给使用 **`auto`** 类型推导关键字声明的变量。 例如 `auto x = myMapView->First();`。
 
-## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a>UnorderedMapView：： HasKey 方法
+## <a name="unorderedmapviewhaskey-method"></a><a name="haskey"></a> UnorderedMapView：： HasKey 方法
 
 确定当前 UnorderedMap 中是否包含指定键。
 
@@ -99,7 +100,7 @@ virtual Windows::Foundation::Collections::IIterator<
 bool HasKey(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *key*<br/>
 用于定位元素的键。 的类型 `key` 为 Typename *K*。
@@ -108,7 +109,7 @@ bool HasKey(K key);
 
 **`true`** 如果找到该键，则为;否则为 **`false`** 。
 
-## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a>UnorderedMapView：： Lookup 方法
+## <a name="unorderedmapviewlookup-method"></a><a name="lookup"></a> UnorderedMapView：： Lookup 方法
 
 检索与类型 K 的指定键关联的类型 V 的值。
 
@@ -118,7 +119,7 @@ bool HasKey(K key);
 V Lookup(K key);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *key*<br/>
 用于定位 UnorderedMapView 中的元素的键。 的类型 `key` 为 Typename *K*。
@@ -127,7 +128,7 @@ V Lookup(K key);
 
 与 `key` 配对的值。 返回值的类型为 typename *V*。
 
-## <a name="unorderedmapviewsize-method"></a><a name="size"></a>UnorderedMapView：： Size 方法
+## <a name="unorderedmapviewsize-method"></a><a name="size"></a> UnorderedMapView：： Size 方法
 
 返回 UnorderedMapView 中的[Windows：： Foundation：：集合：： IKeyValuePair \<K,V> ](/uwp/api/windows.foundation.collections.ikeyvaluepair-2)元素的数目。
 
@@ -141,7 +142,7 @@ virtual property unsigned int Size;
 
 UnorderedMapView 中的元素数目。
 
-## <a name="unorderedmapviewsplit-method"></a><a name="split"></a>UnorderedMapView：： Split 方法
+## <a name="unorderedmapviewsplit-method"></a><a name="split"></a> UnorderedMapView：： Split 方法
 
 将当前 UnorderedMapView 对象分成两个 UnorderedMapView 对象。 此方法为非操作性的。
 
@@ -155,7 +156,7 @@ void Split(
                          K,V>^ * secondPartition);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *firstPartition*<br/>
 原始 UnorderedMapView 对象的第一部分。
@@ -167,7 +168,7 @@ void Split(
 
 此方法为非操作性的，它不执行任何操作。
 
-## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a>UnorderedMapView：： UnorderedMapView 构造函数
+## <a name="unorderedmapviewunorderedmapview-constructor"></a><a name="ctor"></a> UnorderedMapView：： UnorderedMapView 构造函数
 
 初始化 UnorderedMapView 类的新实例。
 
@@ -239,7 +240,7 @@ UnorderedMapView 的类型名称。
 *last*<br/>
 用于初始化 UnorderedMapView 的一系列元素之后的第一个元素的输入迭代器。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [Platform：：集合命名空间](../cppcx/platform-collections-namespace.md)<br/>
 [Windows::Foundation::IMapView](/uwp/api/windows.foundation.collections.imapview-2)

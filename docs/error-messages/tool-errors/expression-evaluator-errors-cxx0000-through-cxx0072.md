@@ -1,17 +1,18 @@
 ---
+description: 了解详细信息： (CXXxxxx) 表达式计算器错误
 title: 表达式计算器错误
 ms.date: 04/16/2019
 ms.assetid: a47a9866-7fb2-4b21-978c-2b77402c7105
-ms.openlocfilehash: 04b0dde3fe60d2a00e9bb788386d6a242e210a52
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 58cdae5ab7e8df0d8581e1afbbca888d220ece8f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857180"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261757"
 ---
 # <a name="expression-evaluator-errors-cxxxxxx"></a>表达式计算器错误 (CXXxxxx)
 
-本部分是对调试程序和诊断工具生成的错误的引用。 这些工具会生成错误的窗体 CXX*xxxx*或可以*xxxx*，其中*xxxx*是一个四位数字。
+本节是对调试器和诊断工具所生成的错误的引用。 这些工具会生成 .CXX *xxxx* 格式的 *错误，也可以是 xxxx，* 其中 *xxxx* 是一个四位数字。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -87,4 +88,4 @@ ms.locfileid: "64857180"
 
 ## <a name="see-also"></a>请参阅
 
-[C /C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ 编译器和生成工具错误与警告](../compiler-errors-1/c-cpp-build-errors.md)

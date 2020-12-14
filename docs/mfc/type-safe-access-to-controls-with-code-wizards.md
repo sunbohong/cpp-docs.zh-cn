@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用代码向导 Type-Safe 对控件的访问权限
 title: 通过代码向导对控件进行类型安全的访问
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-ms.openlocfilehash: ee7c49f75dcdc2b6c32f2b391ace7260b46d197b
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: b68331df61c1586f4cc63413f162ac1af107ce88
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507885"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263798"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>通过代码向导对控件进行类型安全的访问
 
@@ -25,7 +26,7 @@ ms.locfileid: "91507885"
 > [!NOTE]
 > 对于给定的控件，你可以根据需要，使用具有值属性的多个成员变量，并且最多有一个具有控件属性的成员变量。 您只能将一个 MFC 对象映射到一个控件，因为附加到控件的多个对象或任何其他窗口会导致消息映射中出现歧义。
 
-您可以使用此对象为控制对象调用任何成员函数。 此类调用会影响对话框中的控件。 例如，对于由类型为的变量 *m_Checkbox*表示的复选框控件，可以 `CButton` 调用：
+您可以使用此对象为控制对象调用任何成员函数。 此类调用会影响对话框中的控件。 例如，对于由类型为的变量 *m_Checkbox* 表示的复选框控件，可以 `CButton` 调用：
 
 [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： marshal_context 类
 title: marshal_context 类
 ms.date: 01/16/2019
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: aa5935332cfa12c02e8084136a311a7593a4f3b9
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 6fa625ed52ac69682574d52c423e54d200461e73
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91508589"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253644"
 ---
 # <a name="marshal_context-class"></a>marshal_context 类
 
@@ -35,14 +36,14 @@ class marshal_context
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|名称|描述|
 |---------|-----------|
 |[marshal_context::marshal_context](#marshal-context)|构造用于在 `marshal_context` 托管和本机数据类型之间进行数据转换的对象。|
 |[marshal_context：： ~ marshal_context](#tilde-marshal-context)|销毁 `marshal_context` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|名称|描述|
 |---------|-----------|
 |[marshal_context::marshal_as](#marshal-as)|对特定数据对象执行封送处理，以在托管和本机数据类型之间转换它。|
 
@@ -60,7 +61,7 @@ class marshal_context
 marshal_context();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 某些数据转换需要封送上下文。 若要详细了解哪些翻译需要使用上下文以及哪些封送处理文件必须包含在应用程序中，请参阅 [c + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)。
 
@@ -76,7 +77,7 @@ marshal_context();
 ~marshal_context();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 某些数据转换需要封送上下文。 请参阅 [c + + 中的封送概述](../dotnet/overview-of-marshaling-in-cpp.md) ，了解有关哪些翻译需要上下文以及哪些封送文件必须包含在你的应用程序中的详细信息。
 
@@ -92,7 +93,7 @@ To_Type marshal_as<To_Type>(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *input*<br/>
 中要封送到变量的值 `To_Type` 。
@@ -101,7 +102,7 @@ To_Type marshal_as<To_Type>(
 
 类型的变量 `To_Type` ，它是的转换后的值 `input` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数将对特定数据对象执行封送处理。 仅将此函数用于 [c + + 中的封送处理概述](../dotnet/overview-of-marshaling-in-cpp.md)表中所指示的转换。
 

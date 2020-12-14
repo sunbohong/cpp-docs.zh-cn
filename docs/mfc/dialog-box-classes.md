@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：对话框类
 title: 对话框类
 ms.date: 11/04/2016
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-ms.openlocfilehash: 2399b27fc081dcc810277079729b0e62ef80d603
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5c178bc6895e338bf4b2876be5233c1b80007abc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616938"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97261549"
 ---
 # <a name="dialog-box-classes"></a>对话框类
 
@@ -87,7 +88,7 @@ OLE 将几个常见对话框添加到 Windows。 这些类封装了 OLE 通用�
 显示“更改源”对话框，即用于更改链接的目标或源的标准用户界面。
 
 [COleBusyDialog](reference/colebusydialog-class.md)<br/>
-显示“服务器忙”和“服务器不响应”对话框，即用于处理对繁忙的应用程序的调用的标准用户界面。 通常由[COleMessageFilter](reference/colemessagefilter-class.md)实现自动显示。
+显示“服务器忙”和“服务器不响应”对话框，即用于处理对繁忙的应用程序的调用的标准用户界面。 通常由 [COleMessageFilter](reference/colemessagefilter-class.md) 实现自动显示。
 
 ## <a name="property-sheet-classes"></a>属性表类
 
@@ -121,14 +122,14 @@ OLE 将几个常见对话框添加到 Windows。 这些类封装了 OLE 通用�
 其布局在对话框模板中定义的滚动视图。 从派生一个类 `CFormView` ，以实现基于对话框模板的用户界面。
 
 [CDaoRecordView](reference/cdaorecordview-class.md)<br/>
-提供直接连接到数据访问对象（DAO）记录集对象的窗体视图。 与所有窗体视图一样， `CDaoRecordView` 是基于对话框模板的。
+提供直接连接到 (DAO) recordset 对象的数据访问对象的窗体视图。 与所有窗体视图一样， `CDaoRecordView` 是基于对话框模板的。
 
 [CRecordView](reference/crecordview-class.md)<br/>
-提供直接连接到开放式数据库连接（ODBC）记录集对象的窗体视图。 与所有窗体视图一样， `CRecordView` 是基于对话框模板的。
+提供直接连接到开放式数据库连接 (ODBC) recordset 对象的窗体视图。 与所有窗体视图一样， `CRecordView` 是基于对话框模板的。
 
 [CPrintInfo](reference/cprintinfo-structure.md)<br/>
-包含打印或打印预览作业相关信息的结构。 由[CView](reference/cview-class.md)打印体系结构使用。
+包含打印或打印预览作业相关信息的结构。 由 [CView](reference/cview-class.md)打印体系结构使用。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： helpstringcontext
 title: 'helpstringcontext (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: 9e089c210ad52d8ee07291c174a151f5077ae074
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: afcd1d4052f7422cc6078c8dfdd0a0242c667f0f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88830977"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263356"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -23,14 +24,14 @@ ms.locfileid: "88830977"
 [ helpstringcontext(contextID) ]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *contextID*<br/>
-**帮助**文件中的32位帮助上下文标识符。
+**帮助** 文件中的32位帮助上下文标识符。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**Helpstringcontext** c + + 特性具有与[helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL 特性相同的功能。
+**Helpstringcontext** c + + 特性具有与 [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -59,7 +60,7 @@ __interface IMyI
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [接口特性](interface-attributes.md)<br/>

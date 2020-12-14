@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： iterator Struct
 title: iterator 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: b45cdb5c3d4608296cca34ad6a0be6e25b588d28
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 81a35fd749b3393a0235fdac8c4bf13a1ef5af79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254321"
 ---
 # <a name="iterator-struct"></a>iterator 结构
 
@@ -59,7 +60,7 @@ struct iterator {
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<iterator>](../standard-library/iterator.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： &lt; type_traits &gt; typedef
 title: '&lt;type_traits&gt; typedef'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 - type_traits/std::true_type
 - xtr1common/std::true_type
 ms.assetid: 8ac040ca-ed2d-4570-adc9-cb5626530053
-ms.openlocfilehash: 70894689f934ef8008bfa2d82ae63727c2e2605d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ec5902ce21b3ca26e44acb66cc738a12b6478010
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841735"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253294"
 ---
 # <a name="lttype_traitsgt-typedefs"></a>&lt;type_traits&gt; typedef
 
@@ -27,7 +28,7 @@ ms.locfileid: "88841735"
 typedef integral_constant<bool, false> false_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是模板 `integral_constant` 的专用化的同义词。
 
@@ -60,7 +61,7 @@ true_type == true
 typedef integral_constant<bool, true> true_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型是模板 `integral_constant` 的专用化的同义词。
 
@@ -87,6 +88,6 @@ false_type == false
 true_type == true
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

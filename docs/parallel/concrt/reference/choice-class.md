@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： choice 类
 title: choice 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -20,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: a5b9bc26b6d9ec66dc74e7adaad31eea1eece118
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a7597a3bd530185e316cdc42ebbc4696162d498f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224976"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254464"
 ---
 # <a name="choice-class"></a>choice 类
 
@@ -40,7 +41,7 @@ template<
 class choice: public ISource<size_t>;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 一个 `tuple` 基于的类型，表示输入源的负载。
@@ -49,39 +50,39 @@ class choice: public ISource<size_t>;
 
 ### <a name="public-typedefs"></a>公共 Typedef
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |`type`|的类型别名 `T` 。|
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[choice](#ctor)|已重载。 构造 `choice` 消息块。|
 |[~ choice 析构函数](#dtor)|销毁 `choice` 消息块。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[接受](#accept)|接受此块提供的消息 `choice` ，并将所有权转移到调用方。|
 |[acquire_ref](#acquire_ref)|获取此消息块上的引用计数 `choice` ，以防止删除。|
 |[接受](#consume)|使用以前由此消息块提供的消息 `choice` ，并通过目标成功保留该消息，并将所有权转移给调用方。|
 |[has_value](#has_value)|检查是否已 `choice` 使用值初始化此消息块。|
-|[index](#index)|返回 `tuple` 表示消息块所选元素的索引 `choice` 。|
+|[索引](#index)|返回 `tuple` 表示消息块所选元素的索引 `choice` 。|
 |[link_target](#link_target)|将目标块链接到此 `choice` 消息块。|
 |[拆卸](#release)|释放以前成功的消息保留。|
 |[release_ref](#release_ref)|释放此消息块上的引用计数 `choice` 。|
 |[保留](#reserve)|保留此消息块先前提供的消息 `choice` 。|
 |[unlink_target](#unlink_target)|将目标块与此 `choice` 消息块断开。|
-|[unlink_targets](#unlink_targets)|从此消息块取消所有目标的 `choice` 锁定。 （重写[ISource：： unlink_targets](isource-class.md#unlink_targets)。）|
+|[unlink_targets](#unlink_targets)|从此消息块取消所有目标的 `choice` 锁定。  (重写 [ISource：： unlink_targets](isource-class.md#unlink_targets)。 ) |
 |[value](#value)|获取消息块已选择其索引的消息 `choice` 。|
 
 ## <a name="remarks"></a>备注
 
 选择块可确保仅使用其中一个传入消息。
 
-有关详细信息，请参阅[异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。
+有关详细信息，请参阅 [异步消息块](../../../parallel/concrt/asynchronous-message-blocks.md)。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -95,7 +96,7 @@ class choice: public ISource<size_t>;
 
 **命名空间：** 并发
 
-## <a name="accept"></a><a name="accept"></a>接受
+## <a name="accept"></a><a name="accept"></a> 接受
 
 接受此块提供的消息 `choice` ，并将所有权转移到调用方。
 
@@ -105,7 +106,7 @@ virtual message<size_t>* accept(
     _Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 `runtime_object_identity`所提供的 `message` 对象的。
@@ -117,7 +118,7 @@ virtual message<size_t>* accept(
 
 指向调用方现在具有所有权的消息的指针。
 
-## <a name="acquire_ref"></a><a name="acquire_ref"></a>acquire_ref
+## <a name="acquire_ref"></a><a name="acquire_ref"></a> acquire_ref
 
 获取此消息块上的引用计数 `choice` ，以防止删除。
 
@@ -125,7 +126,7 @@ virtual message<size_t>* accept(
 virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 指向正在调用此方法的目标块的指针。
@@ -134,7 +135,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 
 此方法由在 `ITarget` 方法中链接到此源的对象调用 `link_target` 。
 
-## <a name="choice"></a><a name="ctor"></a>选择
+## <a name="choice"></a><a name="ctor"></a> 选择
 
 构造 `choice` 消息块。
 
@@ -154,7 +155,7 @@ choice(
     choice&& _Choice);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Tuple*<br/>
 choice 的源的 `tuple` 。
@@ -174,7 +175,7 @@ choice 的源的 `tuple` 。
 
 在锁定状态下不执行移动构造，这意味着应由用户确保在移动期间没有轻量任务处于飞行状态。 否则可能会发生大量争用，从而导致异常或不一致的状态。
 
-## <a name="choice"></a><a name="dtor"></a>~ choice
+## <a name="choice"></a><a name="dtor"></a> ~ choice
 
 销毁 `choice` 消息块。
 
@@ -182,7 +183,7 @@ choice 的源的 `tuple` 。
 ~choice();
 ```
 
-## <a name="consume"></a><a name="consume"></a>接受
+## <a name="consume"></a><a name="consume"></a> 接受
 
 使用以前由此消息块提供的消息 `choice` ，并通过目标成功保留该消息，并将所有权转移给调用方。
 
@@ -192,7 +193,7 @@ virtual message<size_t>* consume(
     _Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 `runtime_object_identity`保留 `message` 对象的。
@@ -208,7 +209,7 @@ virtual message<size_t>* consume(
 
 此 `consume` 方法类似于 `accept` ，但必须始终在之前调用 `reserve` 返回的 **`true`** 。
 
-## <a name="has_value"></a><a name="has_value"></a>has_value
+## <a name="has_value"></a><a name="has_value"></a> has_value
 
 检查是否已 `choice` 使用值初始化此消息块。
 
@@ -220,7 +221,7 @@ bool has_value() const;
 
 **`true`** 如果块接收了值，则 **`false`** 为; 否则为。
 
-## <a name="index"></a><a name="index"></a>编入
+## <a name="index"></a><a name="index"></a> 编入
 
 返回 `tuple` 表示消息块所选元素的索引 `choice` 。
 
@@ -236,7 +237,7 @@ size_t index();
 
 可以使用方法提取消息有效负载 `get` 。
 
-## <a name="link_target"></a><a name="link_target"></a>link_target
+## <a name="link_target"></a><a name="link_target"></a> link_target
 
 将目标块链接到此 `choice` 消息块。
 
@@ -244,12 +245,12 @@ size_t index();
 virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 指向 `ITarget` 链接到此消息块的块的指针 `choice` 。
 
-## <a name="release"></a><a name="release"></a>拆卸
+## <a name="release"></a><a name="release"></a> 拆卸
 
 释放以前成功的消息保留。
 
@@ -259,7 +260,7 @@ virtual void release(
     _Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 `runtime_object_identity` `message` 要释放的对象的。
@@ -267,7 +268,7 @@ virtual void release(
 *_PTarget*<br/>
 指向调用方法的目标块的指针 `release` 。
 
-## <a name="release_ref"></a><a name="release_ref"></a>release_ref
+## <a name="release_ref"></a><a name="release_ref"></a> release_ref
 
 释放此消息块上的引用计数 `choice` 。
 
@@ -275,7 +276,7 @@ virtual void release(
 virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 指向正在调用此方法的目标块的指针。
@@ -284,7 +285,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 
 此方法由 `ITarget` 正在从此源取消链接的对象调用。 允许源块释放为目标块保留的任何资源。
 
-## <a name="reserve"></a><a name="reserve"></a>保留
+## <a name="reserve"></a><a name="reserve"></a> 保留
 
 保留此消息块先前提供的消息 `choice` 。
 
@@ -294,7 +295,7 @@ virtual bool reserve(
     _Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_MsgId*<br/>
 `runtime_object_identity` `message` 保留的对象的。
@@ -310,7 +311,7 @@ virtual bool reserve(
 
 调用后 `reserve` ，如果成功，则必须调用或，才能 `consume` `release` 分别获取或放弃消息的所有权。
 
-## <a name="unlink_target"></a><a name="unlink_target"></a>unlink_target
+## <a name="unlink_target"></a><a name="unlink_target"></a> unlink_target
 
 将目标块与此 `choice` 消息块断开。
 
@@ -318,12 +319,12 @@ virtual bool reserve(
 virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_PTarget*<br/>
 指向 `ITarget` 要从此消息块断开链接的块的指针 `choice` 。
 
-## <a name="unlink_targets"></a><a name="unlink_targets"></a>unlink_targets
+## <a name="unlink_targets"></a><a name="unlink_targets"></a> unlink_targets
 
 从此消息块取消所有目标的 `choice` 锁定。
 
@@ -346,7 +347,7 @@ template <
 _Payload_type const& value();
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Payload_type*<br/>
 消息负载的类型。
@@ -359,7 +360,7 @@ _Payload_type const& value();
 
 因为 `choice` 消息块可以采用不同负载类型的输入，您必须指定检索时的负载类型。 您可以根据方法的结果确定类型 `index` 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace.md)<br/>
 [联接类](join-class.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _recalloc_dbg
 title: _recalloc_dbg
 ms.date: 11/04/2016
 api_name:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - _recalloc_dbg function
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
-ms.openlocfilehash: 6274e749b2c4e6f64c7c7f82f8764dcf5ba642fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abad8ff877a78bc589a48da689766322ad8438de
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949478"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254256"
 ---
 # <a name="_recalloc_dbg"></a>_recalloc_dbg
 
@@ -49,43 +50,43 @@ void *_recalloc_dbg(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *userData*<br/>
 指向之前分配的内存块的指针。
 
-*number*<br/>
+*数字*<br/>
 内存块的请求数量。
 
-*size*<br/>
+*大小*<br/>
 每个内存块的请求大小（以字节为单位）。
 
 *blockType*<br/>
-内存块的请求类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+内存块的请求类型： **_CLIENT_BLOCK** 或 **_NORMAL_BLOCK**。
 
 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。
 
 *filename*<br/>
-指向已请求分配操作的源文件名的指针或**NULL**。
+指向已请求分配操作的源文件名的指针或 **NULL**。
 
 *linenumber*<br/>
-请求分配操作所在的源文件中的行号或**NULL**。
+请求分配操作所在的源文件中的行号或 **NULL**。
 
-仅当已显式调用 **_recalloc_dbg**或已定义[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器常量时， *filename*和*linenumber*参数才可用。
+仅当已显式调用 **_recalloc_dbg** 或已定义 [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)预处理器常量时， *filename* 和 *linenumber* 参数才可用。
 
 ## <a name="return-value"></a>返回值
 
-成功完成后，此函数将返回指向重新分配的内存块的用户部分的指针，调用新的处理程序函数，或返回**NULL**。 有关返回行为的完整说明，请参阅以下“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [_recalloc](recalloc.md) 函数。
+成功完成后，此函数将返回指向重新分配的内存块的用户部分的指针，调用新的处理程序函数，或返回 **NULL**。 有关返回行为的完整说明，请参阅以下“备注”部分。 有关如何使用新处理程序函数的详细信息，请参阅 [_recalloc](recalloc.md) 函数。
 
 ## <a name="remarks"></a>备注
 
-**_recalloc_dbg**是[_recalloc](recalloc.md)函数的调试版本。 未定义[_debug](../../c-runtime-library/debug.md)时，对 **_recalloc_dbg**的每次调用都会减少到对 **_recalloc**的调用。 **_Recalloc**和 **_recalloc_dbg**都重新分配基堆中的内存块，但 **_recalloc_dbg**提供了若干调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、块类型参数跟踪特定分配类型，并指定*filename*/*linenumber*信息以确定分配请求的源。
+**_recalloc_dbg** 是 [_recalloc](recalloc.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，对 **_recalloc_dbg** 的每次调用都会减少到对 **_recalloc** 的调用。 **_Recalloc** 和 **_recalloc_dbg** 都在基堆中重新分配内存块，但 **_recalloc_dbg** 提供了若干调试功能：用于测试泄漏的块的用户部分两侧的缓冲区、用于跟踪特定分配类型的块类型参数，以及 / 用于确定分配请求的源的 filename *linenumber* 信息。
 
-**_recalloc_dbg**重新分配指定的内存块，其空间小于所请求的大小（*数字* * *大小*），可能大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
+**_recalloc_dbg** 重新分配指定的内存块，其空间小于所请求的大小 (*数量*  *  *大小*) 可能大于或小于最初分配的内存块的大小。 其他空间将由调试堆管理器用于链接调试内存块，以及提供具有调试标头信息的应用程序和覆盖缓冲区。 重新分配可能会导致将原始内存块移动到堆中的其他位置，也可能会导致内存块的大小发生更改。 使用值 0xCD 填充该块的用户部分，使用值 0xFD 填充每个覆盖缓冲区。
 
-如果内存分配失败，则 **_recalloc_dbg**将**Errno**设置为**ENOMEM** ;如果所需的内存量（包括前面提到的开销）超过 **_HEAP_MAXREQ**，则返回**EINVAL** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果内存分配失败， **_recalloc_dbg** 将 **Errno** 设置为 **ENOMEM** ;如果 (包括前面提到的开销) 所需的内存量超过 **_HEAP_MAXREQ**，则返回 **EINVAL** 。 有关此代码及其他错误代码的信息，请参阅 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
+若要了解如何在基堆的调试版本中分配、初始化和管理内存块，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
 ## <a name="requirements"></a>要求
 
@@ -93,7 +94,7 @@ void *_recalloc_dbg(
 |-------------|---------------------|
 |**_recalloc_dbg**|\<crtdbg.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 

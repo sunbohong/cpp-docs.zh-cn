@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 title: isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 ms.date: 01/31/2019
 f1_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 90e01de2caeb5a73b1b48a0c78678d975cdca6e1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220712"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262966"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 
@@ -104,7 +105,7 @@ inline bool isunordered(
 ) throw(); /* C++-only template function */
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *x*、 *y*<br/>
 要比较的浮点值。
@@ -113,11 +114,11 @@ inline bool isunordered(
 
 在所有比较中，相同符号比较的无穷大等于相等。 负无穷小于任何有限值或正无穷。 正无穷大于任何有限值或负无穷。 无论符号如何，0都是相等的。 Nan 不小于、等于或大于任何值（包括另一个 NaN）。
 
-如果这两个参数都不是 NaN，则如果*x*和*y*之间的指定排序关系为 true，则顺序宏**isgreater**、 **isgreaterequal**、 **isless**和**islessequal**将返回非零值。 如果其中一个参数或两个参数均为 Nan，则这些宏将返回 0; 如果排序关系为 false，则返回。 函数窗体的行为方式相同，但返回 **`true`** 或 **`false`** 。
+如果这两个参数都不是 NaN，则如果 *x* 和 *y* 之间的指定排序关系为 true，则顺序宏 **isgreater**、 **isgreaterequal**、 **isless** 和 **islessequal** 将返回非零值。 如果其中一个参数或两个参数均为 Nan，则这些宏将返回 0; 如果排序关系为 false，则返回。 函数窗体的行为方式相同，但返回 **`true`** 或 **`false`** 。
 
-如果*x*和*y*不是 nan 并且*x*小于或大于*y*，则**islessgreater**宏将返回一个非零值。 如果其中一个或两个参数均为 Nan，则返回 0; 如果值相等，则返回。 函数形式的行为方式相同，但返回 **`true`** 或 **`false`** 。
+如果 *x* 和 *y* 不是 nan 并且 *x* 小于或大于 *y*，则 **islessgreater** 宏将返回一个非零值。 如果其中一个或两个参数均为 Nan，则返回 0; 如果值相等，则返回。 函数形式的行为方式相同，但返回 **`true`** 或 **`false`** 。
 
-如果*x*、 *y*或两者均为 nan，则**isunordered**宏将返回一个非零值。 否则，返回 0。 函数形式的行为方式相同，但返回 **`true`** 或 **`false`** 。
+如果 *x*、 *y* 或两者均为 nan，则 **isunordered** 宏将返回一个非零值。 否则，返回 0。 函数形式的行为方式相同，但返回 **`true`** 或 **`false`** 。
 
 ## <a name="remarks"></a>备注
 
@@ -131,7 +132,7 @@ inline bool isunordered(
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/vd (禁用构造置换) '
 title: /vd（禁用构造置换）
 ms.date: 11/04/2016
 f1_keywords:
@@ -16,12 +17,12 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-ms.openlocfilehash: df8891cc71dd5a4cfd417969578c0c1b46ae3be3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9c90e2fa4f93ea0ba3892a07e13f2a15e848d608
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253190"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd（禁用构造置换）
 
@@ -40,9 +41,9 @@ ms.locfileid: "87223806"
 启用隐藏 vtordisp 构造函数/析构函数置换成员的创建。 此选项为默认选项。
 
 **2**<br/>
-允许对正在构造的对象使用[Dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md)。 例如，从虚拟基类到派生类的 dynamic_cast。
+允许对正在构造的对象使用 [Dynamic_cast 运算符](../../cpp/dynamic-cast-operator.md) 。 例如，从虚拟基类到派生类的 dynamic_cast。
 
-当具有虚拟函数的虚拟基时， **/vd2**会添加 vtordisp 字段。 **/vd1**应该足以满足需要。 最常见的情况是， **/vd2**的唯一虚拟函数是一个析构函数。
+当具有虚拟函数的虚拟基时， **/vd2** 会添加 vtordisp 字段。 **/vd1** 应该足以满足需要。 最常见的情况是， **/vd2** 的唯一虚拟函数是一个析构函数。
 
 ## <a name="remarks"></a>备注
 
@@ -54,7 +55,7 @@ Visual C++ 在使用虚拟继承的情况下实现 c + + 构造置换支持。 �
 
 默认情况下，只要代码定义用户定义的构造函数和析构函数，并且还会重写虚拟基的虚函数，就会引入 vtordisp 字段。
 
-这些选项会影响整个源文件。 使用[vtordisp](../../preprocessor/vtordisp.md)逐个类地取消和重新启用 vtordisp 字段。
+这些选项会影响整个源文件。 使用 [vtordisp](../../preprocessor/vtordisp.md) 逐个类地取消和重新启用 vtordisp 字段。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -62,7 +63,7 @@ Visual C++ 在使用虚拟继承的情况下实现 c + + 构造置换支持。 �
 
 1. 单击 **“C/C++”** 文件夹。
 
-1. 点击“命令行” **** 属性页。
+1. 点击“命令行”  属性页。
 
 1. 在 **“附加选项”** 框中键入编译器选项。
 
@@ -70,7 +71,7 @@ Visual C++ 在使用虚拟继承的情况下实现 c + + 构造置换支持。 �
 
 - 请参阅 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

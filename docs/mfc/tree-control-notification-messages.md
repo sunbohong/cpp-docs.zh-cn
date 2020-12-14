@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：树控件通知消息
 title: 树控件通知消息
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,31 +9,31 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-ms.openlocfilehash: 90e2e112d7862dfed7d8af31cfb72ff45633a2c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 899b6469a2de9a076dd33e62c5023f502448d45f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181628"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263980"
 ---
 # <a name="tree-control-notification-messages"></a>树控件通知消息
 
-树控件 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 将作为 WM_NOTIFY 消息中发送以下通知消息：
+ ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 的树控件作为 WM_NOTIFY 消息发送以下通知消息：
 
 |通知消息|描述|
 |--------------------------|-----------------|
-|TVN_BEGINDRAG|表示开始拖放操作|
-|TVN_BEGINLABELEDIT|表示开始就地标签编辑|
-|TVN_BEGINRDRAG|表示使用鼠标右键的拖放操作的开始|
-|TVN_DELETEITEM|表示特定项目的删除|
-|TVN_ENDLABELEDIT|表示结束标签编辑|
-|TVN_GETDISPINFO|树控件显示项所需的请求信息|
-|TVN_ITEMEXPANDED|父项的子项列表已展开或折叠的信号|
-|TVN_ITEMEXPANDING|父项的子项列表是要展开或折叠的信号|
-|TVN_KEYDOWN|表示键盘事件|
-|TVN_SELCHANGED|所选内容已从一项更改为另一个的信号|
-|TVN_SELCHANGING|所选内容即将从一项更改为另一个的信号|
-|TVN_SETDISPINFO|若要维护的项的信息更新的通知|
+|TVN_BEGINDRAG|发出拖放操作开始信号|
+|TVN_BEGINLABELEDIT|指示就地标签编辑开始|
+|TVN_BEGINRDRAG|使用鼠标右键指示开始拖放操作的开始|
+|TVN_DELETEITEM|指示删除特定项|
+|TVN_ENDLABELEDIT|发出标签编辑结束信号|
+|TVN_GETDISPINFO|请求树控件显示项所需的信息|
+|TVN_ITEMEXPANDED|指示已展开或折叠父项的子项列表|
+|TVN_ITEMEXPANDING|通知要展开或折叠父项的子项列表|
+|TVN_KEYDOWN|通知键盘事件|
+|TVN_SELCHANGED|指示所选内容已从一项更改为另一项|
+|TVN_SELCHANGING|指示所选内容将从一项更改为另一项|
+|TVN_SETDISPINFO|用于更新为某项维护的信息的通知|
 
 ## <a name="see-also"></a>请参阅
 

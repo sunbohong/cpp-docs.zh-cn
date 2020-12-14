@@ -1,4 +1,5 @@
 ---
+description: '了解有关以下方面的详细信息：资源文件 (c + +) '
 title: 资源文件 (C++)
 ms.date: 02/14/2019
 f1_keywords:
@@ -24,17 +25,17 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 463c27959b049436e29f872c966bc276c6ef5f2d
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 8d76a8778cc3c94dd06b6b5b0ea3d6ee6b951e28
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91507016"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263318"
 ---
 # <a name="resource-files-c"></a>资源文件 (C++)
 
 > [!NOTE]
-> 由于 .NET 编程语言中的项目不使用资源脚本文件，因此必须从 **解决方案资源管理器**打开资源。 使用 [图像编辑器](../windows/image-editor-for-icons.md) 和 [二进制编辑器](binary-editor.md) 处理托管项目中的资源文件。
+> 由于 .NET 编程语言中的项目不使用资源脚本文件，因此必须从 **解决方案资源管理器** 打开资源。 使用 [图像编辑器](../windows/image-editor-for-icons.md) 和 [二进制编辑器](binary-editor.md) 处理托管项目中的资源文件。
 >
 > 你要编辑的任何托管资源都必须是链接的资源。 Visual Studio 资源编辑器不支持编辑嵌入的资源。
 
@@ -85,7 +86,7 @@ ms.locfileid: "91507016"
 | 文件名 | 说明 |
 |---|---|
 | Resource.h | 开发环境生成的包含符号定义的标头文件。<br/><br/>在源代码管理中包含此文件。 |
-| Filename.aps | 用于快速加载的当前资源脚本文件的二进制版本。<br /><br /> 资源编辑器不会直接读取 .rc 或 resource .h 文件。 资源编译器将它们编译为资源编辑器使用的 ap 文件。 该文件是一个编译步骤，只存储符号数据。<br/><br/>对于普通的编译过程，在编译过程中不会丢弃符号（如注释）以外的信息。<br/><br/>每当 ap 文件与 .rc 文件不同步时，就会重新生成 .rc 文件。 例如，在 **保存**时，资源编辑器会覆盖 .rc 文件和资源 .h 文件。 对资源本身所做的任何更改都将保留在 .rc 文件中，但在覆盖 .rc 文件后，注释将始终会丢失。 有关如何保留注释的信息，请参阅 [在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。<br/><br/>通常，不应在源代码管理中包含 ap 文件。 |
+| Filename.aps | 用于快速加载的当前资源脚本文件的二进制版本。<br /><br /> 资源编辑器不会直接读取 .rc 或 resource .h 文件。 资源编译器将它们编译为资源编辑器使用的 ap 文件。 该文件是一个编译步骤，只存储符号数据。<br/><br/>对于普通的编译过程，在编译过程中不会丢弃符号（如注释）以外的信息。<br/><br/>每当 ap 文件与 .rc 文件不同步时，就会重新生成 .rc 文件。 例如，在 **保存** 时，资源编辑器会覆盖 .rc 文件和资源 .h 文件。 对资源本身所做的任何更改都将保留在 .rc 文件中，但在覆盖 .rc 文件后，注释将始终会丢失。 有关如何保留注释的信息，请参阅 [在编译时包含资源](../windows/how-to-include-resources-at-compile-time.md)。<br/><br/>通常，不应在源代码管理中包含 ap 文件。 |
 | .rc | 包含当前项目中的资源脚本的资源脚本文件。 每当进行保存时，.aps 文件就会覆盖此文件。<br/><br/>在源代码管理中包含此文件。 |
 
 ## <a name="manifest-resources"></a>清单资源

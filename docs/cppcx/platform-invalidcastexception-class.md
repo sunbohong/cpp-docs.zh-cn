@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： Platform：： InvalidCastException 类
 title: Platform::InvalidCastException 类
 ms.date: 12/30/2016
 ms.topic: reference
@@ -8,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::InvalidCastException
 ms.assetid: 0215131d-1251-4913-9561-824410e045b6
-ms.openlocfilehash: 6e502346cb373d9dec5450987c4807b445234b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 187e6d5026edd241e88e4ba1c25d58b835650780
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301445"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262901"
 ---
 # <a name="platforminvalidcastexception-class"></a>Platform::InvalidCastException 类
 
@@ -37,8 +38,8 @@ public ref class InvalidCastException : COMException,    IException,    IPrintab
 
 **命名空间：** Platform
 
-**元数据：** platform.winmd
+**Metadata：** platform.string
 
 ## <a name="see-also"></a>请参阅
 
-[Platform::COMException 类](../cppcx/platform-comexception-class.md)
+[Platform：： COMException 类](../cppcx/platform-comexception-class.md)

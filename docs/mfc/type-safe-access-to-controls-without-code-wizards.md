@@ -1,16 +1,17 @@
 ---
+description: 了解更多相关信息： Type-Safe 访问控件而不使用代码向导
 title: 不通过代码向导对控件进行类型安全的访问
 ms.date: 11/04/2016
 helpviewer_keywords:
 - dialog boxes [MFC], accessing controls
 - dialog box controls [MFC], accessing
 ms.assetid: 325b4927-d49b-42b4-8e0b-fc84f31fb059
-ms.openlocfilehash: 5b4b604bf42a327edf3ac7a83dcfc42a5e0d8c54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e59353a17f0d841cd69fa64f792dcc7cdbfa6ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180806"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97263772"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>不通过代码向导对控件进行类型安全的访问
 
@@ -25,4 +26,4 @@ ms.locfileid: "62180806"
 ## <a name="see-also"></a>请参阅
 
 [对对话框中的控件进行类型安全的访问](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
-[对控件进行类型安全的访问（使用代码向导）](../mfc/type-safe-access-to-controls-with-code-wizards.md)
+[使用代码向导对控件进行类型安全的访问](../mfc/type-safe-access-to-controls-with-code-wizards.md)

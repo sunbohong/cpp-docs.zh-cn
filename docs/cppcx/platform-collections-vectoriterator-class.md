@@ -1,4 +1,5 @@
 ---
+description: 详细了解： Platform：：集合：： VectorIterator 类
 title: Platform::Collections::VectorIterator 类
 ms.date: 03/27/2019
 ms.topic: reference
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: bade67a104774c3ab6187e250c6faf6969002c0c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ad572a8b426092fb0ddb39db44f387598674c988
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218411"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253905"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 类
 
@@ -27,7 +28,7 @@ template <typename T>
 class VectorIterator;
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *T*<br/>
 VectorIterator 模板类的类型名称。
@@ -80,7 +81,7 @@ VectorIterator 模板类的类型名称。
 
 **命名空间：** Platform::Collections
 
-## <a name="vectoriteratoroperator-gt-operator"></a><a name="operator-arrow"></a>VectorIterator：： operator- &gt; 运算符
+## <a name="vectoriteratoroperator-gt-operator"></a><a name="operator-arrow"></a> VectorIterator：： operator- &gt; 运算符
 
 检索当前 VectorIterator 引用的元素的地址。
 
@@ -96,7 +97,7 @@ Detail::ArrowProxy<T> operator->() const;
 
 返回值的类型是此运算符的实现所需的未指定内部类型。
 
-## <a name="vectoriteratoroperator---operator"></a><a name="operator-decrement"></a>VectorIterator：： operator--运算符
+## <a name="vectoriteratoroperator---operator"></a><a name="operator-decrement"></a> VectorIterator：： operator--运算符
 
 递减当前 VectorIterator。
 
@@ -118,7 +119,7 @@ VectorIterator operator--(int);
 
 第二个语法后递减当前 VectorIterator。 **`int`** 第二个语法中的类型指示后减量操作，而不是实际整数操作数。
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-dereference"></a>VectorIterator：： operator \* 运算符
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-dereference"></a> VectorIterator：： operator \* 运算符
 
 检索当前 VectorIterator 指定的元素的地址。
 
@@ -132,7 +133,7 @@ reference operator*() const;
 
 当前 VectorIterator 指定的元素。
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-equality"></a>VectorIterator：： operator = = 运算符
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-equality"></a> VectorIterator：： operator = = 运算符
 
 指示当前 VectorIterator 是否等于指定的 VectorIterator。
 
@@ -142,16 +143,16 @@ reference operator*() const;
 bool operator==(const VectorIterator& other) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 另一 VectorIterator。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果当前 VectorIterator 等于*其他*值，则为; 否则为。否则为 **`false`** 。
+**`true`** 如果当前 VectorIterator 等于 *其他* 值，则为; 否则为。否则为 **`false`** 。
 
-## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>VectorIterator：： operator &gt; 运算符
+## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than"></a> VectorIterator：： operator &gt; 运算符
 
 指示当前 VectorIterator 是否大于指定的 VectorIterator。
 
@@ -161,16 +162,16 @@ bool operator==(const VectorIterator& other) const;
 bool operator>(const VectorIterator& other) const
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 另一 VectorIterator。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果当前 VectorIterator 大于*另*一个，则为;否则为 **`false`** 。
+**`true`** 如果当前 VectorIterator 大于 *另* 一个，则为;否则为 **`false`** 。
 
-## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>VectorIterator：： operator &gt; = 运算符
+## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a> VectorIterator：： operator &gt; = 运算符
 
 指示当前 VectorIterator 是否大于或等于指定的 VectorIterator。
 
@@ -180,16 +181,16 @@ bool operator>(const VectorIterator& other) const
 bool operator>=(const VectorIterator& other) const
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 另一 VectorIterator。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果当前 VectorIterator 大于或等于*另*一个，则为; 否则为。否则为 **`false`** 。
+**`true`** 如果当前 VectorIterator 大于或等于 *另* 一个，则为; 否则为。否则为 **`false`** 。
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-increment"></a>VectorIterator：： operator + + 运算符
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-increment"></a> VectorIterator：： operator + + 运算符
 
 递增当前 VectorIterator。
 
@@ -210,7 +211,7 @@ VectorIterator operator++(int);
 
 第二个语法后递增当前 VectorIterator。 **`int`** 第二个语法中的类型指示递增后操作，而不是实际整数操作数。
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-inequality"></a>VectorIterator：： operator！ = 运算符
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-inequality"></a> VectorIterator：： operator！ = 运算符
 
 指示当前 VectorIterator 是否不等于指定的 VectorIterator。
 
@@ -220,16 +221,16 @@ VectorIterator operator++(int);
 bool operator!=(const VectorIterator& other) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 另一 VectorIterator。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果当前 VectorIterator 不等于*其他*值，则为; 否则为。否则为 **`false`** 。
+**`true`** 如果当前 VectorIterator 不等于 *其他* 值，则为; 否则为。否则为 **`false`** 。
 
-## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than"></a>VectorIterator：： operator &lt; 运算符
+## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than"></a> VectorIterator：： operator &lt; 运算符
 
 指示当前 VectorIterator 是否小于指定的 VectorIterator。
 
@@ -239,16 +240,16 @@ bool operator!=(const VectorIterator& other) const;
 bool operator<(const VectorIterator& other) const
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 另一 VectorIterator。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果当前 VectorIterator 小于*另*一个，则为;否则为 **`false`** 。
+**`true`** 如果当前 VectorIterator 小于 *另* 一个，则为;否则为 **`false`** 。
 
-## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>VectorIterator：： operator &lt; = 运算符
+## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a> VectorIterator：： operator &lt; = 运算符
 
 指示当前 VectorIterator 是否小于或等于指定的 VectorIterator。
 
@@ -258,16 +259,16 @@ bool operator<(const VectorIterator& other) const
 bool operator<=(const VectorIterator& other) const
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *以外*<br/>
 另一 VectorIterator。
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果当前 VectorIterator 小于或等于*其他*值，则为; 否则为。否则为 **`false`** 。
+**`true`** 如果当前 VectorIterator 小于或等于 *其他* 值，则为; 否则为。否则为 **`false`** 。
 
-## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus"></a>VectorIterator：： operator-运算符
+## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus"></a> VectorIterator：： operator-运算符
 
 从当前迭代器中减去指定数目的元素以生成新迭代器，或者从当前迭代器中减去指定的迭代器以生成迭代器之间的元素数目。
 
@@ -292,7 +293,7 @@ difference_type operator-(const VectorIterator& other) const;
 
 第一个运算符语法返回一个 VectorIterator 对象，该对象比当前 VectorIterator 少 `n` 个元素。 第二个运算符语法返回介于当前 VectorIterator 和 `other` VectorIterator 之间的元素数目。
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus-assign"></a>VectorIterator：： operator + = 运算符
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus-assign"></a> VectorIterator：： operator + = 运算符
 
 按指定偏移量递增当前 VectorIterator。
 
@@ -311,7 +312,7 @@ VectorIterator& operator+=(difference_type n);
 
 更新的 VectorIterator。
 
-## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus"></a>VectorIterator：： operator + 运算符
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus"></a> VectorIterator：： operator + 运算符
 
 返回引用偏移指定 VectorIterator 指定偏移量处的元素的 VectorIterator。
 
@@ -327,7 +328,7 @@ inline VectorIterator<T> operator+(
   const VectorIterator<T>& i);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *T*<br/>
 在第二个语法中，VectorIterator 的类型名称。
@@ -348,7 +349,7 @@ inline VectorIterator<T> operator+(
 
 第一个语法示例
 
-## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus-equals"></a>VectorIterator：： operator-= 运算符
+## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus-equals"></a> VectorIterator：： operator-= 运算符
 
 按指定偏移量递减当前 VectorIterator。
 
@@ -367,7 +368,7 @@ VectorIterator& operator-=(difference_type n);
 
 更新的 VectorIterator。
 
-## <a name="vectoriteratoroperator"></a><a name="operator-at"></a>VectorIterator：： operator\[\]
+## <a name="vectoriteratoroperator"></a><a name="operator-at"></a> VectorIterator：： operator\[\]
 
 检索对属于当前 VectorIterator 的指定偏移量的元素的引用。
 
@@ -386,7 +387,7 @@ reference operator[](difference_type n) const;
 
 `n` 元素从当前 VectorIterator 移置开的元素。
 
-## <a name="vectoriteratorvectoriterator-constructor"></a><a name="ctor"></a>VectorIterator：： VectorIterator 构造函数
+## <a name="vectoriteratorvectoriterator-constructor"></a><a name="ctor"></a> VectorIterator：： VectorIterator 构造函数
 
 初始化 VectorIterator 类的新实例。
 
@@ -399,15 +400,15 @@ explicit VectorIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*向量*<br/>
+*v*<br/>
 一个 IVector \<T> 对象。
 
 ### <a name="remarks"></a>备注
 
 第一个语法示例是默认构造函数。 第二个语法示例是用于从 IVector 对象构造 VectorIterator 的显式构造函数 \<T> 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [平台命名空间](platform-namespace-c-cx.md)

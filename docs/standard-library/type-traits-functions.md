@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; type_traits &gt; 函数
 title: '&lt;type_traits&gt; 函数'
 ms.date: 11/04/2016
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 11defadff0b1785f6e4c5aba6356f7b68a78b9fc
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: a1608ddc9d846ca9e8e851ef67d390aebb6f840e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88841774"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253320"
 ---
 # <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt; 函数
 
@@ -39,14 +40,14 @@ ms.locfileid: "88841774"
 
 ## <a name="is_assignable"></a><a name="is_assignable"></a> is_assignable
 
-测试*从*类型的值是否可以分配*给类型。*
+测试 *从* 类型的值是否可以分配 *给类型。*
 
 ```cpp
 template <class To, class From>
 struct is_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *自*\
 接收赋值的对象的类型。
@@ -54,9 +55,9 @@ struct is_assignable;
 *从*\
 提供值的对象的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 *From*和*To*都必须是完整类型、 **`void`** 或未知绑定的数组。
+未计算的表达式 `declval<To>() = declval<From>()` 必须具有正确格式。 *From* 和 *To* 都必须是完整类型、 **`void`** 或未知绑定的数组。
 
 ## <a name="is_copy_assignable"></a><a name="is_copy_assignable"></a> is_copy_assignable
 
@@ -67,12 +68,12 @@ template <class Ty>
 struct is_copy_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型 *Ty* 是具有复制赋值运算符的类，则类型谓词的实例为 true; 否则为 false。 等效于 is_assignable \<Ty&, const Ty&> 。
 
@@ -85,12 +86,12 @@ template <class Ty>
 struct is_copy_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型 *Ty* 是具有复制构造函数的类，则类型谓词的实例为 true; 否则为 false。
 
@@ -137,12 +138,12 @@ template <class Ty>
 struct is_default_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型 *T* 是具有默认构造函数的类类型，则类型谓词的实例为 true; 否则为 false。 这等效于谓词 `is_constructible<T>`。 类型 *T* 必须是完整类型、 **`void`** 或未知绑定的数组。
 
@@ -189,12 +190,12 @@ template <class T>
 struct is_move_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型的右值引用可赋予此类型的引用，则该类型可移动赋值。 类型谓词等效于 `is_assignable<T&, T&&>`。 可移动赋值的类型包括可引用的标量类型和类类型，这些类型具有编译器生成的移动赋值运算符或用户定义的移动赋值运算符。
 
@@ -207,12 +208,12 @@ template <class T>
 struct is_move_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要计算的类型
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果可以使用移动操作构造类型 *T* ，则其计算结果为 true 的类型谓词。 此谓词等效于 `is_constructible<T, T&&>`。
 
@@ -225,12 +226,12 @@ template <class Ty>
 struct is_nothrow_move_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型 *Ty* 具有 nothrow 移动赋值运算符，则类型谓词的实例为 true; 否则为 false。
 
@@ -267,12 +268,12 @@ template <class Ty>
 struct is_trivially_copy_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *关心*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型 *T* 是具有普通复制赋值运算符的类，则类型谓词的实例为 true; 否则为 false。
 
@@ -287,12 +288,12 @@ template <class Ty>
 struct is_trivially_move_assignable;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型 *Ty* 是具有普通移动赋值运算符的类，则类型谓词的实例为 true; 否则为 false。
 
@@ -317,12 +318,12 @@ template <class Ty>
 struct is_trivially_move_constructible;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果类型 *Ty* 是一个具有普通移动构造函数的类，则类型谓词的实例为 true; 否则为 false。
 
@@ -344,6 +345,6 @@ struct is_trivially_move_constructible;
 
 类的类型数组的所有非静态数据成员的类具有普通构造函数
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)

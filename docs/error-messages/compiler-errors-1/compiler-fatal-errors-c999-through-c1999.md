@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： C999 到 C1999 的编译器错误
 title: 编译器致命错误 C999 - C1999
 ms.date: 04/21/2019
 f1_keywords:
@@ -50,33 +51,33 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 93b1e9d3998a3ad29d45e2b1c197807bf61e4176
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626568"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97262836"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>编译器致命错误 C999 - C1999
 
-文档的本节中的文章介绍了由 Microsoft C/C++编译器生成的错误消息的子集。
+文档的本节中的文章介绍了由 Microsoft C/c + + 编译器生成的错误消息的子集。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>错误消息
 
-|Error|消息|
+|错误|消息|
 |-----------|-------------|
 |[错误 C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|未知消息请在 Visual C++ 帮助菜单上，选择技术支持命令，或打开技术支持帮助文件了解详细信息|
-|[错误 C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|编译器中发生了内部错误。<br /> （编译器文件“*file*”中的第 *number*行）<br /> 若要解决此问题，请尝试简化或更改以上所列出位置附近的程序。 请在 Visual C++ 帮助菜单上，选择技术支持命令，或打开技术支持帮助文件了解详细信息|
+|[错误 C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|编译器中发生了内部错误。<br /> （编译器文件“*file*”中的第 *number* 行）<br /> 若要解决此问题，请尝试简化或更改以上所列出位置附近的程序。 请在 Visual C++ 帮助菜单上，选择技术支持命令，或打开技术支持帮助文件了解详细信息|
 |[错误 C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|在第 2 遍中编译器的堆空间不足|
 |[错误 C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|错误计数超过 *number*；正在停止编译|
 |[错误 C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|发现意外的文件尾|
-|[错误 C1005](../../error-messages/compiler-errors-1/fatal-error-c1005.md)|字符串过大，无法缓冲|
+|[错误 C1005](../../error-messages/compiler-errors-1/fatal-error-c1005.md)|字符串对于缓冲区太大|
 |[错误 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|无法识别的标志“*string*”（在“*option*”中）|
 |[错误 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|没有指定输入文件|
 |[错误 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|编译器限制: 宏嵌套太深|
-|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记将 "#include \<*文件*>" 添加到源？|
+|[错误 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|查找预编译头时意外的文件尾。 是否忘记将 "#include" 添加 \<*file*> 到源？|
 |[错误 C1012](fatal-error-c1012.md)|括号不匹配：缺少“*character*”|
 |[错误 C1013](fatal-error-c1013.md)|编译器限制: 左括号太多|
 |[错误 C1014](fatal-error-c1014.md)|包含文件太多：深度 = *number*|
@@ -117,8 +118,8 @@ ms.locfileid: "73626568"
 |错误 C1069|无法读取编译器命令行|
 |[错误 C1070](fatal-error-c1070.md)|文件“*file*”中的 #if/#endif 对不匹配|
 |[错误 C1071](../../error-messages/compiler-errors-1/fatal-error-c1071.md)|在注释中遇到意外的文件结束|
-|[错误 C1073](../../error-messages/compiler-errors-1/fatal-error-c1073.md)|涉及增量编译的内部错误（编译器文件“*file*”中的第 *number*行）|
-|[错误 C1074](fatal-error-c1074.md)|“IDB”是 PDB 文件 *file*的非法扩展名|
+|[错误 C1073](../../error-messages/compiler-errors-1/fatal-error-c1073.md)|涉及增量编译的内部错误（编译器文件“*file*”中的第 *number* 行）|
+|[错误 C1074](fatal-error-c1074.md)|“IDB”是 PDB 文件 *file* 的非法扩展名|
 |[错误 C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|左侧的 *token* 与文件结尾不匹配|
 |[错误 C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|编译器限制: 达到内部堆限制；使用 /Zm 指定更高的限制|
 |[错误 C1077](fatal-error-c1077.md)|编译器限制：不能有 *number* 个以上的命令行选项|
@@ -137,7 +138,7 @@ ms.locfileid: "73626568"
 |[错误 C1091](fatal-error-c1091.md)|编译器限制：字符串长度超过 *number* 个字节|
 |[错误 C1092](../../error-messages/compiler-errors-1/fatal-error-c1092.md)|“编辑并继续”不支持对数据类型的更改；需要生成|
 |[错误 C1093](../../error-messages/compiler-errors-1/fatal-error-c1093.md)|API 调用“*function*”对“*HRESULT*”失败：“*description*”|
-|[错误 C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|“-Zm*number*”：命令行选项与用于生成预编译头（“-Zm*number*”）的值不一致|
+|[错误 C1094](../../error-messages/compiler-errors-1/fatal-error-c1094.md)|“-Zm *number*”：命令行选项与用于生成预编译头（“-Zm *number*”）的值不一致|
 |[错误 C1098](fatal-error-c1098.md)|版本与“编辑并继续”引擎不匹配|
 |[错误 C1099](fatal-error-c1099.md)|“编辑并继续”引擎正在终止编译|
 |[错误 C1100](fatal-error-c1100.md)|无法初始化 OLE： *error*|
@@ -158,13 +159,13 @@ ms.locfileid: "73626568"
 |[错误 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|调用 CryptoAPI 失败|
 |[错误 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自动分配超过 *size*|
 |[错误 C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|节数超过对象文件格式限制: 请使用 /bigobj 进行编译|
-|[错误 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error： *message*|
+|[错误 C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error： *消息*|
 |[错误 C1190](fatal-error-c1190.md)|托管目标代码需要“/clr”选项|
 |[错误 C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|只能在全局范围内导入“*file*”|
 |[错误 C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|在“*file*”上 #using 失败|
 |错误 C1193|*file*(*line*) 中预期的错误未出现|
 |错误 C1195|在同一命令行上使用 /Yu 和 /Yc 与 /clr 选项不兼容|
-|[错误 C1196](fatal-error-c1196.md)|“*identifier*”：在类型库“*typelib*”中找到的标识符不是有效的 C++ 标识符|
+|[错误 C1196](fatal-error-c1196.md)|"*identifier*"：在类型库 "*typelib*" 中找到的标识符不是有效的 c + + 标识符|
 |[错误 C1197](../../error-messages/compiler-errors-1/fatal-error-c1197.md)|无法引用“*file*”，因为程序已经引用了“*file*”|
 |[错误 C1201](fatal-error-c1201.md)|类模板定义中出现语法错误后无法继续|
 |[错误 C1202](fatal-error-c1202.md)|递归类型或函数依赖项上下文太复杂|
@@ -176,13 +177,13 @@ ms.locfileid: "73626568"
 |[错误 C1210](fatal-error-c1210.md)|安装的运行时版本不支持 /clr:pure 和 /clr:safe|
 |[错误 C1211](fatal-error-c1211.md)|安装的运行时版本不支持 TypeForwardedTo 自定义特性|
 |错误 C1300|访问程序数据库 *file* (*message*) 时出错|
-|错误 C1301|访问程序数据库 *file*时出错，无效的格式，请删除并重新生成|
+|错误 C1301|访问程序数据库 *file* 时出错，无效的格式，请删除并重新生成|
 |错误 C1302|在配置文件数据库“*file*”中没有模块“*module*”的配置文件数据|
 |[错误 C1305](../../error-messages/compiler-errors-1/fatal-error-c1305.md)|配置文件数据库“*file*”是用于另一个体系结构的|
 |错误 C1306|配置文件数据基“*file*”的上次修改不是优化分析；优化决策可能已经过期|
 |[错误 C1307](../../error-messages/compiler-errors-1/fatal-error-c1307.md)|自收集配置文件数据后已编辑了程序|
 |[错误 C1308](../../error-messages/compiler-errors-1/fatal-error-c1308.md)|*file*：不支持链接程序集|
-|[错误 C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|C2.DLL 和 PGODB*ver*.DLL 的版本不匹配|
+|[错误 C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|C2.DLL 和 PGODB *ver*.DLL 的版本不匹配|
 |[错误 C1310](fatal-error-c1310.md)|按配置优化不能与 OpenMP 一起使用|
 |[错误 C1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|COFF 格式无法以静态方式初始化“*symbol*”（地址为 *number* 个字节）|
 |[错误 C1312](fatal-error-c1312.md)|函数中的条件分支太多。  简化或重构源代码。|
@@ -215,4 +216,4 @@ ms.locfileid: "73626568"
 
 ## <a name="see-also"></a>请参阅
 
-[C/C++编译器和生成工具错误和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++ 编译器和生成工具错误与警告](../compiler-errors-1/c-cpp-build-errors.md)

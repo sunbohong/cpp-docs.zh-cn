@@ -1,4 +1,5 @@
 ---
+description: 了解更多： c + + 内置运算符、优先级和结合性
 title: C + + 内置运算符、优先级和结合性
 ms.date: 07/23/2020
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-ms.openlocfilehash: 10c9e5db569ba211ed8d42386816b4f6bb71ee29
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: ff8ae84a62ef47449364d0815922326d7b8566d4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87221765"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253957"
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 内置运算符、优先级和结合性
 
@@ -25,7 +26,7 @@ C++ 语言包括所有 C 运算符并添加多个新的运算符。 运算符指
 
 ## <a name="precedence-and-associativity"></a>优先级和结合性
 
-运算符*优先级*指定包含多个运算符的表达式中的运算顺序。 运算符*关联*性指定是否在包含多个具有相同优先级的运算符的表达式中，将操作数分组在其左侧或右侧的一个。
+运算符 *优先级* 指定包含多个运算符的表达式中的运算顺序。 运算符 *关联* 性指定是否在包含多个具有相同优先级的运算符的表达式中，将操作数分组在其左侧或右侧的一个。
 
 ## <a name="alternative-spellings"></a>备用拼写
 
@@ -35,12 +36,12 @@ C + + 为某些运算符指定替代拼写。 在 C 中，在标头中以宏形�
 
 下表显示 C++ 运算符的优先级和关联性（从最高优先级到最低优先级）。 优先级别编号相同的运算符具有等同的优先级别，除非由括号显式施加另一种关系。
 
-| 运算符说明 | 操作员 | 替代方法 |
+| 运算符说明 | 运算符 | 替代方法 |
 |--|--|--|
 | **组1优先级，无关联性** |
 | [作用域解析](../cpp/scope-resolution-operator.md) | [`::`](../cpp/scope-resolution-operator.md) |
 | **组2优先顺序，从左到右的关联性** |
-| [成员选择（对象或指针）](../cpp/member-access-operators-dot-and.md) | [`.`或`->`](../cpp/member-access-operators-dot-and.md) |
+| [成员选择（对象或指针）](../cpp/member-access-operators-dot-and.md) | [`.` 或 `->`](../cpp/member-access-operators-dot-and.md) |
 | [数组下标](../cpp/subscript-operator.md) | [`[]`](../cpp/subscript-operator.md) |
 | [函数调用](../cpp/function-call-operator-parens.md) | [`()`](../cpp/function-call-operator-parens.md) |
 | [后缀递增](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) | [`++`](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md) |
@@ -64,25 +65,25 @@ C + + 为某些运算符指定替代拼写。 在 C 中，在标头中以宏形�
 | [销毁对象](../cpp/delete-operator-cpp.md) | [`delete`](../cpp/delete-operator-cpp.md) |
 | [计](../cpp/cast-operator-parens.md) | [`()`](../cpp/cast-operator-parens.md) |
 | **组4优先级，从左到右的关联性** |
-| [指向成员的指针（对象或指针）](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*`或`->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
+| [指向成员的指针（对象或指针）](../cpp/pointer-to-member-operators-dot-star-and-star.md) | [`.*` 或 `->*`](../cpp/pointer-to-member-operators-dot-star-and-star.md) |
 | **组5优先级，从左到右的关联性** |
-| [乘法](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [倍增](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`*`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | [部门](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`/`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
-| [Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
+| [模块](../cpp/multiplicative-operators-and-the-modulus-operator.md) | [`%`](../cpp/multiplicative-operators-and-the-modulus-operator.md) |
 | **组6优先顺序，从左到右的关联性** |
-| [加法](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
+| [相加](../cpp/additive-operators-plus-and.md) | [`+`](../cpp/additive-operators-plus-and.md) |
 | [减法](../cpp/additive-operators-plus-and.md) | [`-`](../cpp/additive-operators-plus-and.md) |
 | **组7优先级，从左到右的关联性** |
 | [左移](../cpp/left-shift-and-right-shift-operators-input-and-output.md) | [`<<`](../cpp/left-shift-and-right-shift-operators-input-and-output.md) |
 | [右移](../cpp/left-shift-and-right-shift-operators-input-and-output.md) | [`>>`](../cpp/left-shift-and-right-shift-operators-input-and-output.md) |
 | **组8优先级，从左到右的关联性** |
 | [小于](../cpp/relational-operators-equal-and-equal.md) | [`<`](../cpp/relational-operators-equal-and-equal.md) |
-| [大于](../cpp/relational-operators-equal-and-equal.md) | [`>`](../cpp/relational-operators-equal-and-equal.md) |
+| 大于 | [`>`](../cpp/relational-operators-equal-and-equal.md) |
 | [小于或等于](../cpp/relational-operators-equal-and-equal.md) | [`<=`](../cpp/relational-operators-equal-and-equal.md) |
-| [大于等于](../cpp/relational-operators-equal-and-equal.md) | [`>=`](../cpp/relational-operators-equal-and-equal.md) |
+| [大于或等于](../cpp/relational-operators-equal-and-equal.md) | [`>=`](../cpp/relational-operators-equal-and-equal.md) |
 | **组9优先级，从左到右的关联性** |
-| [等式](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`==`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) |
-| [相等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`!=`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | **`not_eq`** |
+| [相等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`==`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) |
+| [不相等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | [`!=`](../cpp/equality-operators-equal-equal-and-exclpt-equal.md) | **`not_eq`** |
 | **组10优先级从左到右的关联性** |
 | [位与](../cpp/bitwise-and-operator-amp.md) | [`&`](../cpp/bitwise-and-operator-amp.md) | **`bitand`** |
 | **组11优先级，从左到右的关联性** |
@@ -110,8 +111,8 @@ C + + 为某些运算符指定替代拼写。 在 C 中，在标头中以宏形�
 | **组17优先级，从右到左的关联性** |
 | [引发表达式](../cpp/try-throw-and-catch-statements-cpp.md) | [`throw`](../cpp/try-throw-and-catch-statements-cpp.md) |
 | **组18优先级，从左到右的关联性** |
-| [跟](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
+| [逗号](../cpp/comma-operator.md) | [,](../cpp/comma-operator.md) |
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [运算符重载](operator-overloading.md)

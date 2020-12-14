@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/vmb、/vmg (表示法方法) '
 title: /vmb、/vmg（表示方法）
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,20 +14,20 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: 25d24d7f92537f16e36213b8a8fd7b945fda7f5a
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 19d183ef8d1dd152043d7249d907c9d5b48de230
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97254275"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb、/vmg（表示方法）
 
-选择编译器用来表示对类成员的指针的方法。
+选择编译器用来表示指向类成员的指针的方法。
 
-使用 **/vmb**如果始终在声明类的成员的指针之前定义一个类。
+如果在声明指向类成员的指针之前始终定义类，请使用 **/vmb** 。
 
-使用 **/vmg**来定义类之前声明指向类的成员。 如果在相互引用的两个不同的类中定义成员，可能会发生这种需求。 对于这种相互引用的类，首先定义必须引用一个类。
+在定义类之前，使用 **/vmg** 声明指向类的成员的指针。 如果在两个不同的类中定义成员，则会出现这种需要。 对于这种相互引用的类，必须在定义类之前对其进行引用。
 
 ## <a name="syntax"></a>语法
 
@@ -37,7 +38,7 @@ ms.locfileid: "66504297"
 
 ## <a name="remarks"></a>备注
 
-此外可以使用[pointers_to_members](../../preprocessor/pointers-to-members.md)或[继承关键字](../../cpp/inheritance-keywords.md)代码中用于指定指针表示形式。
+你还可以在代码中使用 [pointers_to_members](../../preprocessor/pointers-to-members.md) 或 [继承关键字](../../cpp/inheritance-keywords.md) 来指定指针表示形式。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 开发环境中设置此编译器选项
 
@@ -56,4 +57,4 @@ ms.locfileid: "66504297"
 ## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

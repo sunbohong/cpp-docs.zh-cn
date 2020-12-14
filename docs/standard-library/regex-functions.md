@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： &lt; regex &gt; 函数
 title: '&lt;regex&gt; 函数'
 ms.date: 09/10/2018
 f1_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: fd7087025939a0aacf17153f201e37fc377653f9
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: aa2186d7b394d1b603d5600d1977efa8d268a32f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88842866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97253333"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[regex_match](#regex_match)|测试正则表达式是否与整个目标字符串相匹配。|
 |[regex_replace](#regex_replace)|替换匹配正则表达式。|
@@ -82,7 +83,7 @@ bool regex_match(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 子匹配项的迭代器类型。 对于常见情况，这是 `string::const_iterator` 、 `wstring::const_iterator` `const char*` 或 `const wchar_t*` 。
@@ -124,11 +125,11 @@ bool regex_match(
 要匹配的正则表达式。 `regex`为 `string` 和键入 `char*` ，或 `wregex` 为 `wstring` 和键入 `wchar_t*` 。
 
 *字符串*\
-要匹配的字符串。 对应于 *Elem*的类型。
+要匹配的字符串。 对应于 *Elem* 的类型。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-仅当整个操作数序列 *str* 与正则表达式参数 *re*完全匹配时，每个模板函数才返回 true。 使用 [regex_search](../standard-library/regex-functions.md#regex_search) 匹配目标序列中的子字符串，并 `regex_iterator` 查找多个匹配项。 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
+仅当整个操作数序列 *str* 与正则表达式参数 *re* 完全匹配时，每个模板函数才返回 true。 使用 [regex_search](../standard-library/regex-functions.md#regex_search) 匹配目标序列中的子字符串，并 `regex_iterator` 查找多个匹配项。 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
 
 采用 `match_results` 对象的函数将其成员设置为反映匹配是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
 
@@ -218,7 +219,7 @@ basic_string<Elem> regex_replace(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *OutIt*\
 替换内容的迭代器类型。
@@ -256,9 +257,9 @@ basic_string<Elem> regex_replace(
 *字符串*\
 要匹配的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个函数构造 [Regex_iterator 类](../standard-library/regex-iterator-class.md) 对象 `iter(first, last, re, flags)` ，并使用它将其输入范围拆分为 `[first, last)` 一系列个子序列 `T0 M0 T1 M1...TN-1 MN-1 TN` ，其中 `Mn` 是迭代器检测到的第 n 个匹配项。 如果找不到任何匹配项，`T0` 则为整个输入范围且 `N` 为零。 如果 `(flags & format_first_only) != 0`，则仅使用第一个匹配项，`T1` 是匹配项后跟的全部输入文本，且 `N` 为 1。 对于范围中的每个 `i` `[0, N)` ，如果 `(flags & format_no_copy) == 0` 它将范围内的文本复制 `Ti` 到迭代器 *外*。然后调用 `m.format(out, fmt, flags)` ，其中 `m` 是子序列的 `match_results` 迭代器对象返回的对象 `iter` `Mi` 。 最后，如果将 `(flags & format_no_copy) == 0` 范围内的文本复制 `TN` 到迭代器*外*，则为。函数*返回。*
+第一个函数构造 [Regex_iterator 类](../standard-library/regex-iterator-class.md) 对象 `iter(first, last, re, flags)` ，并使用它将其输入范围拆分为 `[first, last)` 一系列个子序列 `T0 M0 T1 M1...TN-1 MN-1 TN` ，其中 `Mn` 是迭代器检测到的第 n 个匹配项。 如果找不到任何匹配项，`T0` 则为整个输入范围且 `N` 为零。 如果 `(flags & format_first_only) != 0`，则仅使用第一个匹配项，`T1` 是匹配项后跟的全部输入文本，且 `N` 为 1。 对于范围中的每个 `i` `[0, N)` ，如果 `(flags & format_no_copy) == 0` 它将范围内的文本复制 `Ti` 到迭代器 *外*。然后调用 `m.format(out, fmt, flags)` ，其中 `m` 是子序列的 `match_results` 迭代器对象返回的对象 `iter` `Mi` 。 最后，如果将 `(flags & format_no_copy) == 0` 范围内的文本复制 `TN` 到迭代器 *外*，则为。函数 *返回。*
 
 第二个函数构造 `basic_string<charT>` 类型的本地变量 `result` 并调用 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`。 它将返回 `result`。
 
@@ -351,7 +352,7 @@ bool regex_search(
     match_flag_type flags = match_default);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *BidIt*\
 子匹配项的迭代器类型。
@@ -395,7 +396,7 @@ bool regex_search(
 *字符串*\
 要匹配的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 仅当对其操作数序列中的正则表达式 *参数的搜索* 成功时，每个模板函数才返回 true。 采用 `match_results` 对象的函数将其成员设置为反映搜索是否成功，以及如果成功，正则表达式中的各种捕获组所捕获的内容。
 
@@ -471,7 +472,7 @@ void swap(
     match_results<BidIt, Alloc>& right) noexcept;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Elem*\
 要匹配的元素的类型。
@@ -479,7 +480,7 @@ void swap(
 *RXtraits*\
 元素的特征类。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 模板函数在常量时间内交换各自参数的内容，并且不会引发异常。
 
@@ -518,7 +519,7 @@ length == 3
 string == aaa
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<regex>](../standard-library/regex.md)\
 [regex_constants 类](../standard-library/regex-constants-class.md)\
