@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：并发命名空间函数 (AMP) '
 title: 并发命名空间函数 (AMP)
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,12 +14,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: b03a6189d2205dff62d94f07bc597ca2e1013a28
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 65255f14acdc402003be46de5f978da6d9a8f8ff
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88840201"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211812"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>并发命名空间函数 (AMP)
 
@@ -62,7 +63,7 @@ ms.locfileid: "88840201"
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Barrier*<br/>
 `tile_barrier` 对象。
@@ -93,7 +94,7 @@ inline bool atomic_compare_exchange(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 从中进行比较的值的读取位置，若要存储新值（如果有），则为。
@@ -129,7 +130,7 @@ inline float atomic_exchange(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 指向目标位置的指针。
@@ -157,7 +158,7 @@ inline unsigned int atomic_fetch_add(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 指向该内存位置的指针。
@@ -185,7 +186,7 @@ inline unsigned int atomic_fetch_and(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 指向该内存位置的指针。
@@ -208,7 +209,7 @@ inline int atomic_fetch_dec(_Inout_ int* _Dest
 inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 要递减的值在内存中的位置。
@@ -227,7 +228,7 @@ inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
 inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 要递增的值在内存中的位置。
@@ -252,7 +253,7 @@ inline unsigned int atomic_fetch_max(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 从中进行比较的值的读取位置，最多可存储两个值中的最大值。
@@ -280,7 +281,7 @@ inline unsigned int atomic_fetch_min(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 要从中进行比较的值的读取位置，最小值为存储的两个值。
@@ -308,7 +309,7 @@ inline unsigned int atomic_fetch_or(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 指向该内存位置的指针。
@@ -336,7 +337,7 @@ inline unsigned int atomic_fetch_sub(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 指向目标位置的指针。
@@ -364,7 +365,7 @@ inline unsigned int atomic_fetch_xor(
     ) restrict(amp)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 指向该内存位置的指针。
@@ -444,7 +445,7 @@ void copy(
     OutputIterator _DestIter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 要复制到的对象。
@@ -533,7 +534,7 @@ concurrency::completion_future copy_async(
     const array_view<value_type, _Rank>& _Src, OutputIterator _DestIter);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Dest*<br/>
 要复制到的对象。
@@ -602,7 +603,7 @@ void direct3d_printf(
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Barrier*<br/>
 一个 tile_barrier 对象
@@ -657,7 +658,7 @@ void parallel_for_each(
     const _Kernel_type& _Kernel);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Accl_view*<br/>
 `accelerator_view`要对其运行并行计算的对象。
@@ -691,11 +692,11 @@ Lambda 或函子。
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Barrier*<br/>
 一个 tile_barrier 对象。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间 (C++ AMP) ](concurrency-namespace-cpp-amp.md)

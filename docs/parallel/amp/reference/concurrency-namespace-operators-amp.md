@@ -1,13 +1,14 @@
 ---
+description: '了解详细信息：并发命名空间运算符 (AMP) '
 title: 并发命名空间运算符 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 1b6353e1edbe216dcb8aa5a342e139d826b82c6c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: d57edbf790a1ebc4da179878dcf5082f53b45400
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845336"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211721"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>并发命名空间运算符 (AMP)
 
@@ -43,7 +44,7 @@ bool operator== (
     const _Tuple_type<_Rank>& _Rhs) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
 元组参数的秩。
@@ -72,7 +73,7 @@ bool operator!= (
     const _Tuple_type<_Rank>& _Rhs) restrict(amp);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
 元组参数的秩。
@@ -117,7 +118,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
 元组参数的秩。
@@ -162,7 +163,7 @@ _Tuple_type<_Rank>   operator-(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
 元组参数的秩。
@@ -199,7 +200,7 @@ _Tuple_type<_Rank>   operator*(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp, cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
 元组参数的秩。
@@ -236,7 +237,7 @@ _Tuple_type<_Rank>   operator/(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
 元组参数的秩。
@@ -273,7 +274,7 @@ _Tuple_type<_Rank>   operator%(
     const _Tuple_type<_Rank>& _Rhs) restrict(amp,cpu);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_Rank*<br/>
 元组参数的秩。
@@ -288,6 +289,6 @@ _Tuple_type<_Rank>   operator%(
 
 第一个指定参数的结果将指定第二个指定的参数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [并发命名空间](concurrency-namespace-cpp-amp.md)

@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：记录集：为预定义查询声明类 (ODBC) '
 title: 记录集：为预定义查询声明一个类 (ODBC)
 ms.date: 05/09/2019
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: f9618f25d738c092ab1818ef7c4ea52928e2ea60
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2071270bbff92e56b7fc3a2064e7e2f99f2044b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367042"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97210941"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>记录集：为预定义查询声明一个类 (ODBC)
 
@@ -25,7 +26,7 @@ ms.locfileid: "81367042"
 本主题介绍如何为预定义查询（有时称为存储过程，例如在 Microsoft SQL Server 中）创建记录集类。
 
 > [!NOTE]
-> 本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果实现了批量提取行，此过程则非常相似。 要了解实现批量行提取的记录集与不执行批量行提取的记录集之间的差异，请参阅[记录集：批量提取记录 （ODBC）。](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+> 本主题适用于从 `CRecordset` 派生的对象，其中尚未实现批量提取行。 如果实现了批量提取行，此过程则非常相似。 若要了解实现批量行提取的记录集和不执行的记录集之间的差异，请参阅 [记录集：批量 (ODBC) 中获取记录 ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
 某些数据库管理系统 (DBMS) 使你能够创建预定义查询并从程序中像函数一样进行调用。 查询具有名称，可能会采用参数，并且可能会返回记录。 本主题中的过程描述了如何调用返回记录（可能还会采用参数）的预定义查询。
 
@@ -38,7 +39,7 @@ ms.locfileid: "81367042"
 
 #### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>创建用于调用预定义查询（存储过程）的类
 
-1. 使用“添加类”中的 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)为表创建一个记录集类，此表提供了查询返回的大部分列****。 这使你能够为接下来的操作做好准备。
+1. 使用“添加类”中的 [MFC ODBC 使用者向导](../../mfc/reference/adding-an-mfc-odbc-consumer.md)为表创建一个记录集类，此表提供了查询返回的大部分列。 这使你能够为接下来的操作做好准备。
 
 1. 手动为查询返回的但向导未创建的任何表的任何列添加字段数据成员。
 
@@ -66,7 +67,7 @@ ms.locfileid: "81367042"
 
 1. 如果查询会采用参数，则为每个参数添加参数数据成员、RFX 函数调用和初始化。
 
-1. 必须为每个添加的参数递增 `m_nParams`，就像在此过程的步骤 4 中为添加的字段执行 `m_nFields` 一样。 有关详细信息，请参阅[记录集：参数化记录集 （ODBC）。](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+1. 必须为每个添加的参数递增 `m_nParams`，就像在此过程的步骤 4 中为添加的字段执行 `m_nFields` 一样。 有关详细信息，请参阅 [记录集： (ODBC) 参数化记录集 ](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。
 
 1. 采用以下格式手动编写 SQL 语句字符串：
 
@@ -74,13 +75,13 @@ ms.locfileid: "81367042"
     {CALL proc-name [(? [, ?]...)]}
     ```
 
-   其中“CALL”是 ODBC 关键字，“proc-name”是数据源上已知的查询名称，“?”项是你在运行时提供给记录集的参数值的占位符（如果有）********。 以下示例为一个参数准备占位符：
+   其中“CALL”是 ODBC 关键字，“proc-name”是数据源上已知的查询名称，“?”项是你在运行时提供给记录集的参数值的占位符（如果有）。 以下示例为一个参数准备占位符：
 
     ```
     CString mySQL = "{CALL Delinquent_Accts (?)}";
     ```
 
-1. 在打开记录集的代码中，设置记录集的参数数据成员的值，然后调用 `Open` 成员函数，从而为 lpszSQL 参数传递你的 SQL 字符串**。 或者，替换类中由 `GetDefaultSQL` 成员函数返回的字符串。
+1. 在打开记录集的代码中，设置记录集的参数数据成员的值，然后调用 `Open` 成员函数，从而为 lpszSQL 参数传递你的 SQL 字符串。 或者，替换类中由 `GetDefaultSQL` 成员函数返回的字符串。
 
 以下示例显示了调用名为 `Delinquent_Accts` 的预定义查询的过程，这将为销售地区编号采用一个参数。 此查询返回三列：`Acct_No`、`L_Name`、`Phone`。 所有列都来自“客户”表。
 
@@ -153,9 +154,9 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 > [!TIP]
 > 你可能需要处理来自存储过程的返回值（输出参数）。 有关详细信息和示例，请参阅 [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [记录集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[记录集：再次查询记录集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[记录集：声明表的类 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[记录集：执行联接 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[记录集：重新查询记录集 (ODBC) ](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[记录集：为表声明类 (ODBC) ](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[记录集：执行联接 (ODBC) ](../../data/odbc/recordset-performing-a-join-odbc.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _set_se_translator
 title: _set_se_translator
 ms.date: 02/21/2018
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 9de0c62b9e9a0bca0753d31ef64396e00c379253
-ms.sourcegitcommit: 43cee7a0d41a062661229043c2f7cbc6ace17fa3
+ms.openlocfilehash: 5ba0f0816b7876f24dfc010c83711e9ca652edad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92008624"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97211227"
 ---
 # <a name="_set_se_translator"></a>_set_se_translator
 
@@ -52,13 +53,13 @@ _se_translator_function _set_se_translator(
 
 ## <a name="return-value"></a>返回值
 
-返回指向 **_set_se_translator**注册的上一个转换器函数的指针，以便稍后可以还原以前的函数。 如果以前未设置任何函数，则返回值可用于还原默认行为;此值可以为 **`nullptr`** 。
+返回指向 **_set_se_translator** 注册的上一个转换器函数的指针，以便稍后可以还原以前的函数。 如果以前未设置任何函数，则返回值可用于还原默认行为;此值可以为 **`nullptr`** 。
 
 ## <a name="remarks"></a>备注
 
-**_Set_se_translator**函数提供了一种方法，用于处理 Win32 异常 (c 结构化异常) 作为 c + + 类型的异常。 若要允许 c + + 处理程序处理每个 C 异常 **`catch`** ，请先定义一个可以使用或从中派生的 c 异常包装器类，以将特定的类类型属性指定为 C 异常。 若要使用此类，请安装自定义 C 异常转换器函数，该函数在每次引发 C 异常时由内部异常处理机制调用。 在转换器函数内，您可以引发可由匹配的 c + + 处理程序捕获的任意类型异常 **`catch`** 。
+**_Set_se_translator** 函数提供了一种方法，用于处理 Win32 异常 (c 结构化异常) 作为 c + + 类型的异常。 若要允许 c + + 处理程序处理每个 C 异常 **`catch`** ，请先定义一个可以使用或从中派生的 c 异常包装器类，以将特定的类类型属性指定为 C 异常。 若要使用此类，请安装自定义 C 异常转换器函数，该函数在每次引发 C 异常时由内部异常处理机制调用。 在转换器函数内，您可以引发可由匹配的 c + + 处理程序捕获的任意类型异常 **`catch`** 。
 
-使用 **_set_se_translator**时，必须使用[/eha](../../build/reference/eh-exception-handling-model.md) 。
+使用 **_set_se_translator** 时，必须使用 [/eha](../../build/reference/eh-exception-handling-model.md) 。
 
 若要指定自定义转换函数，请使用转换函数的名称作为其参数，调用 **_set_se_translator** 。 对于具有块的堆栈上的每个函数调用，将调用您编写的转换器函数一次 **`try`** 。 没有默认的转换器函数。
 
