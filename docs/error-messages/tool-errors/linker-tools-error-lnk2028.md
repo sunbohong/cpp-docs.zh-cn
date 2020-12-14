@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：链接器工具错误 LNK2028
 title: 链接器工具错误 LNK2028
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-ms.openlocfilehash: 29aaed167f750186d956589e9daa0d21c441149e
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 31b20cc572a44b1260f58eb03519b60050c0246c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684192"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275719"
 ---
 # <a name="linker-tools-error-lnk2028"></a>链接器工具错误 LNK2028
 
-"*exported_function*" (在函数 "*Function_containing_function_call*" 中引用*decorated_name*) * (decorated_name) *
+"*exported_function*" (在函数 "*Function_containing_function_call*" 中引用 *decorated_name*) *(decorated_name)*
 
 ## <a name="remarks"></a>备注
 
 尝试将本机函数导入纯映像时，请记住，本机编译和纯编译之间的隐式调用约定有所不同。
 
-**/Clr： pure**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
+**/Clr： pure** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
 ## <a name="examples"></a>示例
 

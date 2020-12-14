@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息：测试提取错误
 title: 测试提取错误
 ms.date: 11/04/2016
 helpviewer_keywords:
 - extraction errors
 ms.assetid: 6a681028-adba-4557-8f7b-f137932905f8
-ms.openlocfilehash: db551a21fd33665d83b11373f040be158406d492
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c4a9b5c1ffe4f78718563b33e39012272cfb8042
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453668"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259352"
 ---
 # <a name="testing-for-extraction-errors"></a>测试提取错误
 

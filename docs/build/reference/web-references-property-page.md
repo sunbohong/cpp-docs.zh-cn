@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： "Web 引用" 属性页
 title: “Web 引用”属性页
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-ms.openlocfilehash: 9e33fc1d53253c3da09e812110015cfdfdbe2d02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371642cd7ffcac9cccaea980f7790f729c8e74b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316465"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259157"
 ---
 # <a name="web-references-property-page"></a>“Web 引用”属性页
 
@@ -34,12 +35,12 @@ ms.locfileid: "62316465"
 
    指定所生成的 Web 代理的名称。
 
-- **其他引用**
+- 其他参考
 
    指定代理 DLL 引用的其他 DLL。
 
-有关如何访问的信息**Web 引用**属性页中，请参阅[设置C++Visual Studio 中的编译器和生成属性](../working-with-project-properties.md)。
+有关如何访问 " **Web 引用** " 属性页的信息，请参阅 [在 Visual Studio 中设置 c + + 编译器和生成属性](../working-with-project-properties.md)。
 
 ## <a name="see-also"></a>请参阅
 
-[C++项目属性页引用](property-pages-visual-cpp.md)
+[C++ 项目属性页参考](property-pages-visual-cpp.md)

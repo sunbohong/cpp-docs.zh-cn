@@ -1,4 +1,5 @@
 ---
+description: '了解详细信息：/volatile (volatile 关键字转译) '
 title: /volatile（volatile 关键字解释）
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: 7c2c1cd477b424f56e66bd9246e7bde76ad06120
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e75a9932cff59748cf75b89a3a85e89130de84f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223780"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259209"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile（volatile 关键字解释）
 
-指定如何解释[volatile](../../cpp/volatile-cpp.md)关键字。
+指定如何解释 [volatile](../../cpp/volatile-cpp.md) 关键字。
 
 ## <a name="syntax"></a>语法
 
@@ -38,9 +39,9 @@ ms.locfileid: "87223780"
 
 ## <a name="remarks"></a>备注
 
-当处理跨线程共享的内存时，强烈建议使用 **/volatile： iso**以及显式同步基元和编译器内部函数。 有关详细信息，请参阅[volatile](../../cpp/volatile-cpp.md)。
+当处理跨线程共享的内存时，强烈建议使用 **/volatile： iso** 以及显式同步基元和编译器内部函数。 有关详细信息，请参阅 [volatile](../../cpp/volatile-cpp.md)。
 
-如果在项目中间移植现有代码或更改此选项，则启用警告[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)可能会很有帮助，以便识别受语义差异影响的代码位置。
+如果在项目中间移植现有代码或更改此选项，则启用警告 [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md) 可能会很有帮助，以便识别受语义差异影响的代码位置。
 
 没有 `#pragma` 等效于控制此选项。
 
@@ -50,10 +51,10 @@ ms.locfileid: "87223780"
 
 1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 在 "**附加选项**" 框中，添加 **/volatile： iso**或 **/volatile： Ms** ，然后选择 **"确定" 或 "** **应用**" 保存更改。
+1. 在 " **附加选项** " 框中，添加 **/volatile： iso** 或 **/volatile： Ms** ，然后选择 **"确定" 或 "** **应用** " 保存更改。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

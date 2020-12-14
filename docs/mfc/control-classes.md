@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息：控件类
 title: 控件类
 ms.date: 11/04/2016
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - text, controls for input [MFC]
 - user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
-ms.openlocfilehash: 277802bff3e4833396c4bf114ff8880fcd26343d
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: eb0bee6d865867a052b5f49408bdaa1b70da343f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623005"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97310117"
 ---
 # <a name="control-classes"></a>控件类
 
@@ -38,7 +39,7 @@ ms.locfileid: "84623005"
 可编辑文本控件窗口。 编辑控件用于接受来自用户的文本输入。
 
 [CIPAddressCtrl](reference/cipaddressctrl-class.md)<br/>
-支持编辑框来处理 Internet 协议（IP）地址。
+支持用于处理 Internet 协议 (IP) 地址的编辑框。
 
 [CRichEditCtrl](reference/cricheditctrl-class.md)<br/>
 用户可在其中输入和编辑文本的控件。 与中封装的控件不同 `CEdit` ，富编辑控件支持字符和段落格式设置以及 OLE 对象。
@@ -91,10 +92,10 @@ ms.locfileid: "84623005"
 ## <a name="toolbars-and-status-bars"></a>工具栏和状态栏
 
 [CToolBarCtrl](reference/ctoolbarctrl-class.md)<br/>
-提供 Windows 工具栏公共控件的功能。 大多数 MFC 程序使用[CToolBar](reference/ctoolbar-class.md) ，而不是此类。
+提供 Windows 工具栏公共控件的功能。 大多数 MFC 程序使用 [CToolBar](reference/ctoolbar-class.md) ，而不是此类。
 
 [CStatusBarCtrl](reference/cstatusbarctrl-class.md)<br/>
-水平窗口，通常分为窗格，应用程序可以在其中显示状态信息。 大多数 MFC 程序使用[CStatusBar](reference/cstatusbar-class.md) ，而不是此类。
+水平窗口，通常分为窗格，应用程序可以在其中显示状态信息。 大多数 MFC 程序使用 [CStatusBar](reference/cstatusbar-class.md) ，而不是此类。
 
 ## <a name="miscellaneous-controls"></a>其他控件
 
@@ -145,6 +146,6 @@ ms.locfileid: "84623005"
 [CTreeView](reference/ctreeview-class.md)<br/>
 包含 Windows 树控件的视图。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [类概述](class-library-overview.md)

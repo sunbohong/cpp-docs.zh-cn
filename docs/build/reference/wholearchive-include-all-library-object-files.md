@@ -1,26 +1,27 @@
 ---
-title: /WHOLEARCHIVE （包括所有库对象文件）
+description: '了解详细信息：/WHOLEARCHIVE (包括所有库对象文件) '
+title: '/WHOLEARCHIVE (包括所有库对象文件) '
 ms.date: 02/12/2020
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: 95685c9c0dfde45c42449bbcad67228a0e21b36a
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 1cbc2ad29bab124af90551d2f4a96ee9f08c578c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259170"
 ---
-# <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE （包括所有库对象文件）
+# <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE (包括所有库对象文件) 
 
 强制链接器在链接的可执行文件中包含静态库中的所有对象文件。
 
 ## <a name="syntax"></a>语法
 
 > **/WHOLEARCHIVE**\
-> **/WHOLEARCHIVE：** _库_
+> **/WHOLEARCHIVE：**_库_
 
 ### <a name="arguments"></a>参数
 
-*库*\
+*类库*\
 静态库的可选路径名。 链接器包含此库中的每个对象文件。
 
 ## <a name="remarks"></a>备注
@@ -33,13 +34,13 @@ Visual Studio 2015 Update 2 中引入了/WHOLEARCHIVE 选项。
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中设置此链接器选项
 
-1. 打开项目“属性页” 对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
+1. 打开项目“属性页”  对话框。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](../working-with-project-properties.md)。
 
 1. 选择 "**配置属性**"、"**链接器**" 下的 "**命令行**" 属性页。
 
-1. 将/WHOLEARCHIVE 选项添加到 "**其他选项**" 文本框中。
+1. 将/WHOLEARCHIVE 选项添加到 " **其他选项** " 文本框中。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 链接器参考](linking.md)<br/>
 [MSVC 链接器选项](linker-options.md)

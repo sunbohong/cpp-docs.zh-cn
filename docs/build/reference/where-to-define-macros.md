@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：定义宏的位置
 title: 定义宏的位置
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,20 +7,20 @@ helpviewer_keywords:
 - macros, NMAKE
 - NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-ms.openlocfilehash: dc03644adea4619b3eabe33c481d71f704a9f410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5fc7d6e1fd8247816993929791bf734596d00e6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316361"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259196"
 ---
 # <a name="where-to-define-macros"></a>定义宏的位置
 
-在命令行、 命令文件，生成文件或 Tools.ini 文件中定义的宏。
+在命令行、命令文件、生成文件或 Tools.ini 文件中定义宏。
 
-在生成文件或 Tools.ini 文件中，每个宏的定义必须出现在单独的行，并且不能以空格或制表符开头。忽略空格或等号两侧的选项卡。 所有[字符的字符串](defining-an-nmake-macro.md)都是文本，包括引号和嵌入的空格。
+在生成文件或 Tools.ini 文件中，每个宏定义都必须出现在单独的行上，并且不能以空格或制表符开头。将忽略等号周围的空格或制表符。 所有 [字符串字符](defining-an-nmake-macro.md) 都是文本，包括环绕引号和嵌入空格。
 
-在命令行或命令文件中，空格和制表符分隔自变量并不能出现在等号。 如果`string`有嵌入空格或制表符，将该字符串本身或整个宏括在双引号 ("")。
+在命令行或命令文件中，空格和制表符分隔参数，不能用等号括起来。 如果 `string` 有嵌入的空格或制表符，请将字符串本身或整个宏用双引号引起来， ( "" ) 。
 
 ## <a name="see-also"></a>请参阅
 

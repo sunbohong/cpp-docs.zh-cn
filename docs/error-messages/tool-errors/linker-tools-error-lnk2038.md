@@ -1,20 +1,21 @@
 ---
+description: 了解详细信息：链接器工具错误 LNK2038
 title: 链接器工具错误 LNK2038
 ms.date: 12/15/2017
 f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: ea1509d846c0bc5a85f0f0252b611dfd38496bcb
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 17fa86010b4248b68234292dd909fe50f6379c7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91506004"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275654"
 ---
 # <a name="linker-tools-error-lnk2038"></a>链接器工具错误 LNK2038
 
-> 检测到 "*name*" 的不匹配项：值 "*value_1*" 与*文件名 .obj*中的值 "*value_2*" 不匹配
+> 检测到 "*name*" 的不匹配项：值 "*value_1*" 与 *文件名 .obj* 中的值 "*value_2*" 不匹配
 
 链接器检测到符号不匹配。 此错误表示应用程序的不同部分（包括库或应用程序链接到的其他对象代码）使用了冲突的符号定义。 [检测不匹配](../../preprocessor/detect-mismatch.md)杂注用于定义此类符号并检测它们的冲突值。
 
@@ -30,7 +31,7 @@ Visual Studio 定义以下符号以防止链接不兼容的代码，这种代码
 
 - `_ITERATOR_DEBUG_LEVEL` 指示 c + + 标准库中启用的安全和调试功能的级别。 这些功能可更改某些 C++ 标准库对象的表示方式，从而使它们与使用不同的安全和调试功能的 C++ 标准库对象不兼容。 有关详细信息，请参阅 [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)。
 
-- `RuntimeLibrary` 指示应用程序或库使用的 c + + 标准库和 C 运行时的版本。 使用一个 C++ 标准库或 C 运行时版本的代码与使用另一个版本的代码的不兼容。 有关详细信息，请参阅 [/md、/mt、/ld (使用运行时库) ](../../build/reference/md-mt-ld-use-run-time-library.md)。
+- `RuntimeLibrary` 指示应用程序或库使用的 c + + 标准库和 C 运行时的版本。 使用一个 C++ 标准库或 C 运行时版本的代码与使用另一个版本的代码的不兼容。 有关详细信息，请参阅 [/md、/mt、/ld (使用 Run-Time 库) ](../../build/reference/md-mt-ld-use-run-time-library.md)。
 
 - `_PPLTASKS_WITH_WINRT` 指示使用 [并行模式库 (PPL) ](../../parallel/concrt/parallel-patterns-library-ppl.md) 的代码链接到使用 [/ZW](../../build/reference/zw-windows-runtime-compilation.md) 编译器选项的其他设置编译的对象。  (**/ZW** 支持 c + +/cx ) 使用或依赖于 PPL 的代码必须使用应用程序其余部分中使用的相同 **/ZW** 设置进行编译。
 

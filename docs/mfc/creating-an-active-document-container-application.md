@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：创建活动文档容器应用程序
 title: 创建活动文档容器应用程序
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: 860a8531a96a0671c808dba13523b492026eafe0
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9bf00a73e7520cde45d4e43ae79813896d4c1129
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84616342"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97309987"
 ---
 # <a name="creating-an-active-document-container-application"></a>创建活动文档容器应用程序
 
@@ -25,15 +26,15 @@ ms.locfileid: "84616342"
 
 1. 在左侧窗格中，单击 " **Visual C++** 项目类型"。
 
-1. 从右窗格中选择 " **MFC 应用程序**"。
+1. 从右窗格中选择 " **MFC 应用程序** "。
 
-1. 将项目命名为*myproj.csproj*，然后单击 **"确定"**。
+1. 将项目命名为 *myproj.csproj*，然后单击 **"确定"**。
 
-1. 选择 "**复合文档支持**" 页。
+1. 选择 " **复合文档支持** " 页。
 
-1. 选择**容器**或**容器/完全服务器**选项。
+1. 选择 **容器** 或 **容器/完全服务器** 选项。
 
-1. 选中 "**活动文档容器**" 复选框。
+1. 选中 " **活动文档容器** " 复选框。
 
 1. 单击“完成”。
 
@@ -41,7 +42,7 @@ ms.locfileid: "84616342"
 
    - *MyProjview.cpp*
 
-1. 在*MyProjview*中进行以下更改：
+1. 在 *MyProjview* 中进行以下更改：
 
    - 在 `CMyProjView::OnPreparePrinting` 中，将函数内容替换为下列代码：
 
@@ -61,6 +62,6 @@ ms.locfileid: "84616342"
 
 1. 添加您自己的任何实现并生成应用程序。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [活动文档包容](active-document-containment.md)

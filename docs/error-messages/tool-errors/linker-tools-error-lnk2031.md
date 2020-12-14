@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：链接器工具错误 LNK2031
 title: 链接器工具错误 LNK2031
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 73ca4a51737d1c073b3164f7e5aaa6deba369a38
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: 3d955f106f569f91df9640bacfcca4df511ffd95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90684178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275667"
 ---
 # <a name="linker-tools-error-lnk2031"></a>链接器工具错误 LNK2031
 
-> 无法为 "*function_declaration*" *decorated_name*生成 p/invoke;元数据中缺少调用约定
+> 无法为 "*function_declaration*" *decorated_name* 生成 p/invoke;元数据中缺少调用约定
 
 ## <a name="remarks"></a>备注
 
 尝试将本机函数导入纯映像时，请记住，本机编译和纯编译之间的隐式调用约定有所不同。 有关纯映像的详细信息，请参阅 [纯代码和可验证代码 (c + +/cli) ](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
-**/Clr： pure**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
+**/Clr： pure** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
 ## <a name="examples"></a>示例
 
