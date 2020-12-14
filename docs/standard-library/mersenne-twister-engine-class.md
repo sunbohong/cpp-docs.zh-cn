@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： mersenne_twister_engine 类
 title: mersenne_twister_engine 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 24663b12efaef66f29c7f755ab45df5ef973755c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 7f5a2d74493194cb07bb4dd628cf3e483b1fd99b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88846415"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97230622"
 ---
 # <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine 类
 
@@ -27,7 +28,7 @@ template <class UIntType,
 class mersenne_twister_engine;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *UIntType*\
 无符号的整数结果类型。 有关可能的类型，请参阅 [\<random>](../standard-library/random.md) 。
@@ -69,13 +70,13 @@ class mersenne_twister_engine;
 
 有关引擎成员的详细信息，请参阅 [\<random>](../standard-library/random.md) 。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-此类模板描述了一个随机数字引擎，返回已关闭间隔 [ `0` ， `2` <sup>W</sup>] 的值  -  `1` 。 它将保留 `W * (N - 1) + R` 位的较大整数值。 它从这个大值中一次提取 *W* 位，并且当它已使用所有位时，通过移动并混合该位来旋转大值，以便它具有一组要从中提取的新位。 如果至少调用了 N 次，则引擎的状态是所使用的最后一个 `N` `W` 位的值 `operator()` ，否则是已使用的*N* `M` `W` 位值和种子的最后一个 `N - M` 值。
+此类模板描述了一个随机数字引擎，返回已关闭间隔 [ `0` ， `2` <sup>W</sup>] 的值  -  `1` 。 它将保留 `W * (N - 1) + R` 位的较大整数值。 它从这个大值中一次提取 *W* 位，并且当它已使用所有位时，通过移动并混合该位来旋转大值，以便它具有一组要从中提取的新位。 如果至少调用了 N 次，则引擎的状态是所使用的最后一个 `N` `W` 位的值 `operator()` ，否则是已使用的 `M` `W` 位值和种子的最后一个 `N - M` 值。
 
-生成器使用移位值 *N* 和 *M*、一个扭转值 *R*和一个条件 XOR 掩码 *a*定义的旋转，从而将它保留的大值。此外，根据由值 *U*、 *D*、 *S*、 *B*、 *T*、 *C*和 *L*定义的位硬编码矩阵， (调和) 对原始移位寄存器的位进行了打乱编码。
+生成器使用移位值 *N* 和 *M*、一个扭转值 *R* 和一个条件 XOR 掩码 *a* 定义的旋转，从而将它保留的大值。此外，根据由值 *U*、 *D*、 *S*、 *B*、 *T*、 *C* 和 *L* 定义的位硬编码矩阵， (调和) 对原始移位寄存器的位进行了打乱编码。
 
-模板参数 `UIntType` 必须大到足以容纳最多 W 个值 `2` <sup>W</sup>  -  `1` 。 其他模板参数的值必须满足以下要求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
+模板参数 `UIntType` 必须大到足以容纳最多 W 个值 `2` <sup></sup>  -  `1` 。 其他模板参数的值必须满足以下要求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
 
 虽然可以从此引擎直接构造生成器，但是建议使用以下预定义的 typedef 中的一个：
 
@@ -113,6 +114,6 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<random>](../standard-library/random.md)

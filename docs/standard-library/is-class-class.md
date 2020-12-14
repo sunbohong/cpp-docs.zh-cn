@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： is_class 类
 title: is_class 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 4122ad2b4adbd0ed290f26428560c569b3754d7d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9aa7646ca46aa82176c97d90d42a65ad76bc45eb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222441"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97231246"
 ---
 # <a name="is_class-class"></a>is_class 类
 
@@ -25,14 +26,14 @@ template <class Ty>
 struct is_class;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Ty*\
 要查询的类型。
 
 ## <a name="remarks"></a>备注
 
-如果类型*Ty*是定义为或的类型或其中一个类型的形式，则类型谓词的实例为 true **`class`** **`struct`** `cv-qualified` ; 否则为 false。
+如果类型 *Ty* 是定义为或的类型或其中一个类型的形式，则类型谓词的实例为 true **`class`** **`struct`** `cv-qualified` ; 否则为 false。
 
 ## <a name="example"></a>示例
 
@@ -69,7 +70,7 @@ is_class<int> == false
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [<type_traits>](../standard-library/type-traits.md)\
 [is_compound 类](../standard-library/is-compound-class.md)\

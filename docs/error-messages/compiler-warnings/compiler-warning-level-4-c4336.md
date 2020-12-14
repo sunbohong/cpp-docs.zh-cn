@@ -1,4 +1,5 @@
 ---
+description: 详细了解：编译器警告 (级别 4) C4336
 title: 编译器警告（等级 4）C4336
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: e83bac9028980bdf3ef7449fbef065a8c9316d2d
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: d41ca5584864327b3012e79af97f2857e3f93d42
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991334"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97257714"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>编译器警告（等级 4）C4336
 
 导入 "type_lib2" 之前，导入交叉引用的类型库 "type_lib1"
 
-使用[#import](../../preprocessor/hash-import-directive-cpp.md)指令引用了类型库。 但是，类型库包含对未使用 `#import`引用的另一个类型库的引用。 编译器找到了其他 .tlb 文件。
+使用 [#import](../../preprocessor/hash-import-directive-cpp.md) 指令引用了类型库。 但是，类型库包含对未引用的另一个类型库的引用 `#import` 。 编译器找到了其他 .tlb 文件。
 
-在通过以下两个文件创建的磁盘上提供两个类型库（用 midl 编译）：
+从以下两个文件创建的磁盘上有两个类型库， (通过 midl.exe) 进行编译：
 
 ```
 // c4336a.idl
