@@ -1,4 +1,5 @@
 ---
+description: 了解有关以下内容的详细信息： vector &lt; bool &gt; 类
 title: vector&lt;bool&gt; 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,16 +12,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: 24a18197c6b335172b88d2db37e8ac7ed57f58b8
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: ecc7c083825a92aca429f9418d35ff9d4cf7dcca
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845414"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280503"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 类
 
-`vector<bool>`类是类型的元素的[矢量](../standard-library/vector-class.md)的部分专用化 **`bool`** 。 它具有用于专用化的基础类型的分配器，此分配器通过每个位存储一个值来提供空间优化 **`bool`** 。
+`vector<bool>`类是类型的元素的 [矢量](../standard-library/vector-class.md)的部分专用化 **`bool`** 。 它具有用于专用化的基础类型的分配器，此分配器通过每个位存储一个值来提供空间优化 **`bool`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -56,7 +57,7 @@ class vector<bool, Allocator>
 
 ### <a name="proxy-class"></a>代理类
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[vector \<bool> 引用类](#reference_class)|一种用做代理以模拟 `bool&` 行为的类，其对象可提供对 `vector<bool>` 对象中的元素（一位）的引用。|
 
@@ -82,7 +83,7 @@ typedef const_iterator const_pointer;
 typedef bool const_reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关详细信息和代码示例，请参阅 [vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)。
 
@@ -134,7 +135,7 @@ vector<bool>::reference operator[](size_type Pos);
 vector&<bool&>::const_reference operator[](size_type Pos) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *位置*\
 `vector<bool>` 元素的位置。
@@ -145,7 +146,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 如果指定的位置大于或等于容器大小，则结果为 undefined。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果使用 _ITERATOR_DEBUG_LEVEL 集进行编译，则当你尝试访问矢量边界之外的元素时，将发生运行时错误。  有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
@@ -192,7 +193,7 @@ typedef iterator pointer;
 
 `vector<bool>::reference`类是由[vector \<bool> 类](../standard-library/vector-bool-class.md)提供的用于模拟的代理类 `bool&` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 必须使用模拟引用，因为 C++ 不允许直接引用位。 `vector<bool>` 每个元素只使用一个位，这可以使用此代理类来引用。 但是，引用模拟不会完成，原因是某些赋值无效。 例如，由于 `vector<bool>::reference` 无法采用对象的地址，因此，以下使用 [vector \<bool> ：： operator&#91;&#93;](#op_at) 的代码不正确：
 
@@ -262,7 +263,7 @@ operator bool() const;
 
 Vector 对象的元素的布尔值 \<bool> 。
 
-#### <a name="remarks"></a>注解
+#### <a name="remarks"></a>备注
 
 `vector<bool>` 对象无法通过此运算符修改。
 
@@ -275,7 +276,7 @@ reference& operator=(const reference& Right);
 reference& operator=(bool Val);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要将值赋给位的元素引用。
@@ -364,7 +365,7 @@ static void swap(
     reference Right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *左中*\
 要与 *右侧* 元素交换的元素。
@@ -372,11 +373,11 @@ static void swap(
 *然后*\
 要与 *左侧* 元素交换的元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此重载支持 `vector<bool>` 的特殊代理要求。 [vector](../standard-library/vector-class.md)::swap 的功能与 `vector<bool>::swap()` 的单参数重载相同。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C + + 标准库参考](../standard-library/cpp-standard-library-reference.md)

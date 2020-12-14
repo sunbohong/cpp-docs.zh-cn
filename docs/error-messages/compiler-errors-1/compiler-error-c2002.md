@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2002
 title: 编译器错误 C2002
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2002
 ms.assetid: 91982314-203a-4de1-b884-94e39a623f61
-ms.openlocfilehash: c37a9b94be837248c8025a4fc069d8a242128542
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: acf6e0679f2579d25d37ccf0c11965bc1d8b436a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97298612"
 ---
 # <a name="compiler-error-c2002"></a>编译器错误 C2002
 
@@ -33,4 +34,4 @@ ms.locfileid: "80208242"
     L'mbconst'
     ```
 
-1. 对于 Microsoft C++，预处理器指令的文本参数必须为 ASCII。 例如，指令 `#pragma message(L"string")`无效。
+1. 对于 Microsoft c + +，预处理器指令的文本参数必须为 ASCII。 例如，指令 `#pragma message(L"string")` 无效。

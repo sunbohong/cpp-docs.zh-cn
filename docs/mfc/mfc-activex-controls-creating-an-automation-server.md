@@ -1,4 +1,5 @@
 ---
+description: 了解更多相关信息： MFC ActiveX 控件：创建自动化服务器
 title: MFC ActiveX 控件：创建自动化服务器
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-ms.openlocfilehash: f2c941e43e810845560b4c35c558ec70248c21ed
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: ffac05d48a17e0f8b40f268709393fff392a3b95
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622383"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280724"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控件：创建自动化服务器
 
@@ -19,23 +20,23 @@ ms.locfileid: "84622383"
 
 ### <a name="to-create-a-control-as-an-automation-server"></a>创建控件作为自动化服务器
 
-1. [创建](reference/mfc-activex-control-wizard.md)控件。
+1. [创建](reference/mfc-activex-control-wizard.md) 控件。
 
 1. [添加方法](mfc-activex-controls-methods.md)。
 
-1. 重写[IsInvokeAllowed](reference/colecontrol-class.md#isinvokeallowed)。
+1. 重写 [IsInvokeAllowed](reference/colecontrol-class.md#isinvokeallowed)。
 
 1. 生成控件。
 
 ### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>以编程方式访问自动化服务器中的方法
 
-1. 创建一个应用程序，例如[MFC exe](reference/mfc-application-wizard.md)。
+1. 创建一个应用程序，例如 [MFC exe](reference/mfc-application-wizard.md)。
 
 1. 在函数的开头 `InitInstance` ，添加以下行：
 
    [!code-cpp[NVC_MFC_AxCont#17](codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
-1. 在类视图中，右键单击项目节点，然后选择 "**从 Typelib 添加类**" 以导入类型库。
+1. 在类视图中，右键单击项目节点，然后选择 " **从 Typelib 添加类** " 以导入类型库。
 
    这会将文件扩展名为 .h 和 .cpp 的文件添加到项目。
 
@@ -47,6 +48,6 @@ ms.locfileid: "84622383"
 
 如果在应用程序中使用 ActiveX 控件后将这些方法添加到 ActiveX 控件，则可以通过删除在导入类型库时创建的文件，开始在应用程序中使用最新版本的控件。 然后再次导入类型库。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](mfc-activex-controls.md)

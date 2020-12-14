@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器警告 C4936
 title: 编译器警告 C4936
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-ms.openlocfilehash: 9b1c3d1de662451432fe4fa0f058c503dc1f7b39
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e12cb789d3d008ec61672591cde78f1b7dc61da6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220114"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314979"
 ---
 # <a name="compiler-warning-c4936"></a>编译器警告 C4936
 
@@ -19,9 +20,9 @@ ms.locfileid: "87220114"
 
 ## <a name="remarks"></a>备注
 
-**/Clr： pure**编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
+**/Clr： pure** 编译器选项在 visual studio 2015 中已弃用，在 visual studio 2017 中不受支持。
 
-**`__declspec`** 使用了修饰符，但只有在 **`__declspec`** 使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)选项之一编译时，修饰符才有效。
+**`__declspec`** 使用了修饰符，但只有在 **`__declspec`** 使用 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)选项之一编译时，修饰符才有效。
 
 有关详细信息，请参见 [应用程序域](../../cpp/appdomain.md) 和 [过程](../../cpp/process.md)。
 

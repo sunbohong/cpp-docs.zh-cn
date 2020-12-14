@@ -1,4 +1,5 @@
 ---
+description: 了解更多： MFC ActiveX 控件：高级主题
 title: MFC ActiveX 控件：高级主题
 ms.date: 09/12/2018
 helpviewer_keywords:
@@ -12,16 +13,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 5ae29ed40d9cc5b78945fb9846a36d6b5a0b27d7
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1b37c3621c515153f068633b8272420a68a06c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87225028"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280737"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控件：高级主题
 
-本文介绍与开发 ActiveX 控件相关的高级主题。 其中包括:
+本文介绍与开发 ActiveX 控件相关的高级主题。 其中包括：
 
 - [在 ActiveX 控件中使用数据库类](#_core_using_database_classes_in_activex_controls)
 
@@ -34,26 +35,26 @@ ms.locfileid: "87225028"
 - [访问运行时不可见的对话框控件](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX 是一种不能用于新开发的旧技术。 有关取代 ActiveX 的新式技术的详细信息，请参阅[Activex 控件](activex-controls.md)。
+> ActiveX 是一种不能用于新开发的旧技术。 有关取代 ActiveX 的新式技术的详细信息，请参阅 [Activex 控件](activex-controls.md)。
 
-## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a>在 ActiveX 控件中使用数据库类
+## <a name="using-database-classes-in-activex-controls"></a><a name="_core_using_database_classes_in_activex_controls"></a> 在 ActiveX 控件中使用数据库类
 
 由于 ActiveX 控件类是类库的一部分，因此可以应用相同的过程和规则，以便在标准 MFC 应用程序中使用数据库类来开发使用 MFC 数据库类的 ActiveX 控件。
 
-有关 MFC 数据库类的一般概述，请参阅[Mfc 数据库类（DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 本文介绍 MFC ODBC 类和 MFC DAO 类，并指导您了解其中的任何一项。
+有关 MFC 数据库类的一般概述，请参阅 [Mfc Database 类 (DAO 和 ODBC) ](../data/mfc-database-classes-odbc-and-dao.md)。 本文介绍 MFC ODBC 类和 MFC DAO 类，并指导您了解其中的任何一项。
 
 > [!NOTE]
-> DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 Visual C++ 环境和向导不支持 DAO （尽管包含 DAO 类，但仍可以使用）。 Microsoft 建议你将[OLE DB 模板](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)用于新项目。 只应在维护现有应用程序时使用 DAO。
+> DAO 受 Office 2013 的支持。 DAO 3.6 是最终版本，被视为已过时。 尽管包含 DAO 类，但仍可以) 使用 dao 类，但 Visual C++ 环境和向导不支持 DAO (。 Microsoft 建议你将 [OLE DB 模板](../data/oledb/ole-db-programming.md) 或 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 用于新项目。 只应在维护现有应用程序时使用 DAO。
 
-## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a>实现参数化属性
+## <a name="implementing-a-parameterized-property"></a><a name="_core_implementing_a_parameterized_property"></a> 实现参数化属性
 
-参数化属性（有时称为属性数组）是一个方法，用于将值的同类集合公开为控件的单个属性。 例如，可以使用参数化属性将数组或字典公开为属性。 在 Visual Basic 中，使用数组表示法访问此类属性：
+参数化属性 (有时称为属性数组) 是一种将同类值集合作为控件的单个属性公开的方法。 例如，可以使用参数化属性将数组或字典公开为属性。 在 Visual Basic 中，使用数组表示法访问此类属性：
 
 [!code-vb[NVC_MFC_AxVb#1](codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]
 
 使用添加属性向导实现参数化属性。 添加属性向导通过添加一对 Get/Set 函数来实现属性，这些函数允许控件用户使用以上表示法或标准方式访问属性。
 
-与方法和属性类似，参数化属性也对允许的参数数目有限制。 对于参数化属性，限制为15个参数（为存储属性值保留一个参数）。
+与方法和属性类似，参数化属性也对允许的参数数目有限制。 对于参数化属性，限制为15个参数， (为存储属性值) 保留一个参数。
 
 下面的过程添加了一个名为 Array 的参数化属性，该属性可作为二维整数数组进行访问。
 
@@ -65,25 +66,25 @@ ms.locfileid: "87225028"
 
 1. 右键单击控件的接口节点（库节点的第二个节点）以打开快捷菜单。
 
-1. 在快捷菜单中，单击 "**添加**"，然后单击 "**添加属性**"。
+1. 在快捷菜单中，单击 " **添加** "，然后单击 " **添加属性**"。
 
-1. 在 "**属性名称**" 框中，键入 `Array` 。
+1. 在 " **属性名称** " 框中，键入 `Array` 。
 
-1. 在 "**属性类型**" 框中，选择 **`short`** 。
+1. 在 " **属性类型** " 框中，选择 **`short`** 。
 
-1. 对于 "**实现**类型"，请单击 " **Get/Set 方法**"。
+1. 对于 " **实现** 类型"，请单击 " **Get/Set 方法**"。
 
-1. 在**Get 函数**和**set 函数**框中，为 Get 和 set 函数键入唯一名称，或接受默认名称。
+1. 在 **Get 函数** 和 **set 函数** 框中，为 Get 和 set 函数键入唯一名称，或接受默认名称。
 
-1. 使用**参数名称**和**参数类型**控件，添加一个名为*row* （类型为*short*）的参数。
+1. 使用 **参数名称** 和 **参数类型** 控件，添加一个名为 *row* (类型为 *short*) 的参数。
 
-1. 添加第二个名为*column*的参数（类型为*short*）。
+1. 添加第二个名为 *列* (类型为 *short*) 的参数。
 
-1. 单击 **“完成”** 。
+1. 单击“完成”。
 
 ### <a name="changes-made-by-the-add-property-wizard"></a>添加属性向导所做的更改
 
-添加自定义属性时，添加属性向导会更改控件类标头（。H）和实现（。CPP）文件。
+添加自定义属性时，添加属性向导会更改控件类标头 (。H) 和实现 (。CPP) 文件。
 
 将以下行添加到控件类中。H 文件：
 
@@ -91,7 +92,7 @@ ms.locfileid: "87225028"
 
 此代码声明了两个 `GetArray` 名 `SetArray` 为的函数，使用户可以在访问属性时请求特定的行和列。
 
-此外，"添加属性向导" 将以下行添加到控件调度映射，位于控件类实现（。CPP）文件：
+此外，"添加属性向导" 将以下行添加到控件调度映射，位于控件类实现 ( 中。CPP) 文件：
 
 [!code-cpp[NVC_MFC_AxUI#36](codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
@@ -99,15 +100,15 @@ ms.locfileid: "87225028"
 
 若要使此属性有用，可以在类型为的控件类中声明一个二维数组成员变量， **`short`** 以存储参数化属性的值。 然后，您可以修改 Get 函数以返回按参数所指示的正确行和列存储的值，然后修改 Set 函数以更新由 row 和 column 参数引用的值。
 
-## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a>处理 ActiveX 控件中的错误
+## <a name="handling-errors-in-your-activex-control"></a><a name="_core_handling_errors_in_your_activex_control"></a> 处理 ActiveX 控件中的错误
 
-如果控件中出现错误条件，则可能需要将错误报告给控件容器。 有两种报告错误的方法，具体取决于错误发生的情况。 如果错误发生在属性的 Get 或 Set 函数中，或在 OLE 自动化方法的实现中出现，则该控件应调用[COleControl：： ThrowError](reference/colecontrol-class.md#throwerror)，它向控制用户发出错误已发生的信号。 如果在任何其他时间发生错误，控件应调用[COleControl：： FireError](reference/colecontrol-class.md#fireerror)，这将激发 stock 错误事件。
+如果控件中出现错误条件，则可能需要将错误报告给控件容器。 有两种报告错误的方法，具体取决于错误发生的情况。 如果错误发生在属性的 Get 或 Set 函数中，或在 OLE 自动化方法的实现中出现，则该控件应调用 [COleControl：： ThrowError](reference/colecontrol-class.md#throwerror)，它向控制用户发出错误已发生的信号。 如果在任何其他时间发生错误，控件应调用 [COleControl：： FireError](reference/colecontrol-class.md#fireerror)，这将激发 stock 错误事件。
 
 若要指示发生的错误类型，控件必须将错误代码传递到 `ThrowError` 或 `FireError` 。 错误代码是具有32位值的 OLE 状态代码。 如果可能，请从 OLECTL 中定义的标准代码集中选择错误代码。H 标头文件。 下表总结了这些代码。
 
 ### <a name="activex-control-error-codes"></a>ActiveX 控件错误代码
 
-|错误|说明|
+|错误|描述|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|非法的函数调用|
 |CTL_E_OVERFLOW|溢出|
@@ -156,11 +157,11 @@ ms.locfileid: "87225028"
 
 如果要创建一个 ActiveX 控件来替换现有的 VBX 控件，请使用与 VBX 控件相同的数值来定义 ActiveX 控件错误代码，以确保错误代码兼容。
 
-## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a>处理控件中的特殊键
+## <a name="handling-special-keys-in-the-control"></a><a name="_core_handling_special_keys_in_your_control"></a> 处理控件中的特殊键
 
 在某些情况下，你可能想要以特殊方式处理某些击键组合;例如，在多行文本框控件中按 ENTER 键时插入新行，或在按下某个方向键 ID 时在一组编辑控件之间移动。
 
-如果 ActiveX 控件的基类是 `COleControl` ，则可以重写[CWnd：:P retranslatemessage](reference/cwnd-class.md#pretranslatemessage) ，以便在容器处理消息前处理这些消息。 使用此方法时，如果您在重写中处理消息，则始终返回**TRUE** `PreTranslateMessage` 。
+如果 ActiveX 控件的基类是 `COleControl` ，则可以重写 [CWnd：:P retranslatemessage](reference/cwnd-class.md#pretranslatemessage) ，以便在容器处理消息前处理这些消息。 使用此方法时，如果您在重写中处理消息，则始终返回 **TRUE** `PreTranslateMessage` 。
 
 下面的代码示例演示了一种可能的方法来处理与方向键相关的任何消息。
 
@@ -168,18 +169,18 @@ ms.locfileid: "87225028"
 
 有关为 ActiveX 控件处理键盘接口的详细信息，请参阅 ActiveX SDK 文档。
 
-## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>访问运行时不可见的对话框控件
+## <a name="accessing-dialog-controls-that-are-invisible-at-run-time"></a><a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> 访问运行时不可见的对话框控件
 
-您可以创建没有用户界面并且在运行时不可见的对话框控件。 如果在运行时 ActiveX 控件添加到对话框并使用[CWnd：： GetDlgItem](reference/cwnd-class.md#getdlgitem)访问控件，则控件将无法正常工作。 相反，应使用以下方法之一来获取表示控件的对象：
+您可以创建没有用户界面并且在运行时不可见的对话框控件。 如果在运行时 ActiveX 控件添加到对话框并使用 [CWnd：： GetDlgItem](reference/cwnd-class.md#getdlgitem) 访问控件，则控件将无法正常工作。 相反，应使用以下方法之一来获取表示控件的对象：
 
-- 使用 "添加成员变量" 向导，选择 "**控制变量**"，然后选择控件的 ID。 输入成员变量名称并选择控件的包装器类作为**控件类型**。
+- 使用 "添加成员变量" 向导，选择 " **控制变量** "，然后选择控件的 ID。 输入成员变量名称并选择控件的包装器类作为 **控件类型**。
 
      -或-
 
-- 将局部变量和子类声明为对话框项。 插入类似于以下内容的代码（ `CMyCtrl` 是包装类，IDC_MYCTRL1 是控件的 ID）：
+- 将局部变量和子类声明为对话框项。 插入类似于下面的代码 (`CMyCtrl` 是包装类，IDC_MYCTRL1 是控件的 ID) ：
 
    [!code-cpp[NVC_MFC_AxCont#19](codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MFC ActiveX 控件](mfc-activex-controls.md)

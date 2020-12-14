@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： __svm_invlpga
 title: __svm_invlpga
 ms.date: 09/02/2019
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: e0f8ef02efdb64f70bb65f6f017449fcc03beca1
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: dc976f535381fcfdfec0da5c1a280c4df281c114
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219888"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97314745"
 ---
 # <a name="__svm_invlpga"></a>__svm_invlpga
 
@@ -26,25 +27,25 @@ ms.locfileid: "70219888"
 void __svm_invlpga(void *Vaddr, int as_id);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *Vaddr*\
 中要使其无效的页的虚拟地址。
 
 *as_id*\
-中要使其无效的页的地址空间标识符 (ASID)。
+中要使其无效的页的地址空间标识符 (ASID) 。
 
 ## <a name="remarks"></a>备注
 
-`__svm_invlpga` 函数等同于 `INVLPGA` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息, 请搜索文档 "AMD64 体系结构程序员手册卷 2:系统编程, "文档编号 24593, 修订版 3.11, 位于[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站点。
+`__svm_invlpga` 函数等同于 `INVLPGA` 计算机指令。 此函数支持主机的虚拟机监视器与来宾操作系统及其应用程序进行交互。 有关详细信息，请在 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) 站点搜索文档 "AMD64 体系结构程序员手册卷2：系统编程，文档编号24593，修订版 3.11"。
 
 ## <a name="requirements"></a>要求
 
-|内部函数|体系结构|
+|Intrinsic|体系结构|
 |---------------|------------------|
 |`__svm_invlpga`|x86、x64|
 
-**标头文件**\<intrin.h >
+**头文件** \<intrin.h>
 
 **结束 Microsoft 专用**
 

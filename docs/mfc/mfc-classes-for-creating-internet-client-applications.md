@@ -1,4 +1,5 @@
 ---
+description: 了解更多：用于创建 Internet 客户端应用程序的 MFC 类
 title: 用于创建 Internet 客户端应用程序的 MFC 类
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,16 +9,16 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: d65a2e8b373f26fe928e4c3e7c0193aec4edf2d6
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c68110182b01d9c425090a926ee1e352ca3d3bdf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84618039"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97280672"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>用于创建 Internet 客户端应用程序的 MFC 类
 
-MFC 提供了以下用于编写 Internet 客户端应用程序的类和全局函数。 缩进指示类派生自其上方的未缩进的类。 `CGopherFile``CHttpFile` `CInternetFile` 例如，派生自。 这些类和全局函数在 AFXINET.H 中声明。H， `CFileFind` 在 AFX 中声明的除外。高.
+MFC 提供了以下用于编写 Internet 客户端应用程序的类和全局函数。 缩进指示类派生自其上方的未缩进的类。 `CGopherFile``CHttpFile` `CInternetFile` 例如，派生自。 这些类和全局函数在 AFXINET.H 中声明。H， `CFileFind` 在 AFX 中声明的除外。
 
 ## <a name="classes"></a>类
 
@@ -55,8 +56,8 @@ MFC 提供了以下用于编写 Internet 客户端应用程序的类和全局函
 
 - [AfxThrowInternetException](reference/internet-url-parsing-globals.md#afxthrowinternetexception)
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[Win32 Internet 扩展（WinInet）](win32-internet-extensions-wininet.md)<br/>
+[ (WinInet) 的 Win32 Internet 扩展 ](win32-internet-extensions-wininet.md)<br/>
 [Internet 客户端类的先决条件](prerequisites-for-internet-client-classes.md)<br/>
 [使用 MFC WinInet 类编写 Internet 客户端应用程序](writing-an-internet-client-application-using-mfc-wininet-classes.md)
