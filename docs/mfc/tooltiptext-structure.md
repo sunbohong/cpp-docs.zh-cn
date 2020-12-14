@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： TOOLTIPTEXT 结构
 title: TOOLTIPTEXT 结构
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,16 +8,16 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 80b95225a277a7985c30e5ea453597b06e501753
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 077d4c27392b626a0e9665851eadf227245029b6
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513297"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264292"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 结构
 
-编写[工具提示通知处理程序](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)时, 需要使用**TOOLTIPTEXT**结构。 **TOOLTIPTEXT**结构的成员包括:
+编写 [工具提示通知处理程序](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)时，需要使用 **TOOLTIPTEXT** 结构。 **TOOLTIPTEXT** 结构的成员包括：
 
 ```cpp
 typedef struct {
@@ -31,7 +32,7 @@ typedef struct {
 ```
 
 *hdr*<br/>
-确定需要文本的工具。 您可能需要的此结构的唯一成员是控件的命令 ID。 控件的命令 ID 将位于**NMHDR**结构`hdr.idFrom`的*idFrom*成员中, 可通过语法访问。 有关**NMHDR**结构的成员的讨论, 请参阅[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) 。
+确定需要文本的工具。 您可能需要的此结构的唯一成员是控件的命令 ID。 控件的命令 ID 将位于 **NMHDR** 结构的 *idFrom* 成员中，可通过语法访问 `hdr.idFrom` 。 有关 **NMHDR** 结构的成员的讨论，请参阅 [NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr) 。
 
 *lpszText*<br/>
 接收工具文本的字符串的地址。
@@ -40,16 +41,16 @@ typedef struct {
 接收工具提示文本的缓存区。 应用程序可将文本复制到此缓冲区以作为指定字符串地址的替代方法。
 
 *hinst*<br/>
-包含要用作工具提示文本的字符串的实例的句柄。 如果*lpszText*是工具提示文本的地址, 则此成员为 NULL。
+包含要用作工具提示文本的字符串的实例的句柄。 如果 *lpszText* 是工具提示文本的地址，则此成员为 NULL。
 
 当处理 `TTN_NEEDTEXT` 通知消息时，请指定要用以下方式之一显示的字符串：
 
-- 将文本复制到*szText*成员指定的缓冲区。
+- 将文本复制到 *szText* 成员指定的缓冲区。
 
-- 将包含文本的缓冲区的地址复制到*lpszText*成员。
+- 将包含文本的缓冲区的地址复制到 *lpszText* 成员。
 
-- 将字符串资源的标识符复制到*lpszText*成员, 并将包含该资源的实例的句柄复制到*hinst*成员。
+- 将字符串资源的标识符复制到 *lpszText* 成员，并将包含该资源的实例的句柄复制到 *hinst* 成员。
 
 ## <a name="see-also"></a>请参阅
 
-[Windows 中未从 CFrameWnd 派生的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+[Windows 中不是从 CFrameWnd 派生的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)

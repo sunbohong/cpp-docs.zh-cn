@@ -1,30 +1,31 @@
 ---
+description: 了解详细信息：工具栏
 title: 工具栏
 ms.date: 11/04/2016
 helpviewer_keywords:
 - toolbars [MFC]
 - command bars [MFC], MFC toolbars
 ms.assetid: c22ecc5b-a84c-4979-8d1a-8e3e71d5ce33
-ms.openlocfilehash: fe294b42f6c149a32d3e96ee9e0e2dc18103fc5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 843fcd0da9cd2647af69f8b81e8d62f3e525a7db
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264305"
 ---
 # <a name="toolbars"></a>工具栏
 
-工具栏系列文章介绍 MFC 工具栏以及如何创建和使用它们。
+工具栏文章系列介绍了 MFC 工具栏以及如何创建和使用它们。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 - [MFC 工具栏实现](../mfc/mfc-toolbar-implementation.md)
 
 - [工具栏基础知识](../mfc/toolbar-fundamentals.md)
 
-- [如何更新用户界面对象 （启用/禁用工具栏按钮）](../mfc/how-to-update-user-interface-objects.md)
+- [如何 (启用/禁用工具栏按钮来更新 User-Interface 对象) ](../mfc/how-to-update-user-interface-objects.md)
 
-- [CToolBar](../mfc/reference/ctoolbar-class.md)并[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)类
+- [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)类
 
 - [示例](../mfc/toolbar-sample-list.md)
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：工具提示
 title: 工具提示
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - buttons [MFC], tool tips
 ms.assetid: 7f0bba86-7c55-4bf6-8455-687a4dcb2be8
-ms.openlocfilehash: ec7795a524420d62b2307f26954bbf205d19dea9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9446974df623ff03d1417ee393242d9995a6cf6c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167967"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264448"
 ---
 # <a name="tool-tips"></a>工具提示
 
-这些过程是不同的工具提示添加到窗口中包含的控件派生自 MFC 类[CFrameWnd](../mfc/reference/cframewnd-class.md)和 windows 不是派生自`CFrameWnd`。
+为向派生自 MFC 类 [CFrameWnd](../mfc/reference/cframewnd-class.md) 和 windows 派生自的窗口中包含的控件添加工具提示，过程是不同的 `CFrameWnd` 。
 
-## <a name="what-do-you-want-to-know-more-about"></a>你想要了解更多信息
+## <a name="what-do-you-want-to-know-more-about"></a>要了解有关的详细信息
 
 窗口控件的工具提示，其是：
 
-- [工具栏工具提示 （派生自 CFrameWnd）](../mfc/toolbar-tool-tips.md)
+- [工具栏工具提示（派生自 CFrameWnd）](../mfc/toolbar-tool-tips.md)
 
-- [未从 CFrameWnd 派生的 Windows 中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+- [不是派生自 CFrameWnd 的窗口中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 
 ## <a name="see-also"></a>请参阅
 

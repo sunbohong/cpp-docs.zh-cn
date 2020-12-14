@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CTabbedPane 类
 title: CTabbedPane 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: cfc0a3099b1d5ff9bd1093cc911745bd61cde64c
-ms.sourcegitcommit: c1fd917a8c06c6504f66f66315ff352d0c046700
+ms.openlocfilehash: a337a68cdeadfec229b24e10a615ba49145ec1ad
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90686634"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97264474"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 类
 
@@ -71,7 +72,7 @@ class CTabbedPane : public CBaseTabbedPane
 
 ### <a name="data-members"></a>数据成员
 
-|“属性”|描述|
+|名称|描述|
 |----------|-----------------|
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|选项卡在应用程序中的的默认位置。|
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|自定义 `CMFCTabCtrl`-派生对象的运行时类信息。|
@@ -169,7 +170,7 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pBar*<br/>
 
@@ -187,7 +188,7 @@ virtual BOOL DetachPane(
 static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *bEnable*<br/>
 中若要启用选项卡的自动着色，则为 TRUE;否则为 FALSE。
@@ -210,7 +211,7 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 中 *pBar*<br/>
 中 *nTabID*<br/>
@@ -231,7 +232,7 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *rectTabAreaTop*<br/>
 弄包含顶部选项卡区域的大小和位置（以屏幕坐标表示）。
@@ -327,7 +328,7 @@ static void ResetTabs();
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *arColors*<br/>
 中包含要设置的颜色的数组。
@@ -341,7 +342,7 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 ## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane 类](../../mfc/reference/cdockablepane-class.md)<br/>
 [CBaseTabbedPane 类](../../mfc/reference/cbasetabbedpane-class.md)<br/>
 [CMFCOutlookBar 类](../../mfc/reference/cmfcoutlookbar-class.md)
