@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：编译器警告 (等级 1) C4532
 title: 编译器警告（等级 1）C4532
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: b8c7503c7d1c1b711006415a327c360731222042
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9468ca1242397289c832fec28d71cf245c6c8a5f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87196339"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97294803"
 ---
 # <a name="compiler-warning-level-1-c4532"></a>编译器警告（等级 1）C4532
 
@@ -25,9 +26,9 @@ ms.locfileid: "87196339"
 
 - [goto](../../cpp/goto-statement-cpp.md)
 
-导致在异常终止期间跳出[__finally](../../cpp/try-finally-statement.md)或[finally](../../dotnet/finally.md)块。
+导致在异常终止期间跳出 [__finally](../../cpp/try-finally-statement.md) 或 [finally](../../dotnet/finally.md) 块。
 
-如果发生了异常，并且在终止处理程序的执行过程中（ **`__finally`** 或 finally 块）正在展开堆栈，并且代码在 **`__finally`** 块结束之前跳出块 **`__finally`** ，则行为是不确定的。 控件不能返回到展开代码，因此异常可能不会得到正确处理。
+如果发生了异常，并且在终止处理程序的执行过程中在终止处理程序期间展开堆栈 (**`__finally`** 或 finally 块) ，并且代码在 **`__finally`** **`__finally`** 块结束之前跳出，则该行为是不确定的。 控件不能返回到展开代码，因此异常可能不会得到正确处理。
 
 如果必须跳出某个 **`__finally`** 块，请首先检查异常终止。
 

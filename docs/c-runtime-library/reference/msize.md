@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _msize
 title: _msize
 ms.date: 4/2/2020
 api_name:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: cc8eef0d28f649340715edbf4b1ebdfea85c2ff2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: e1a913f008037673bf8c10e73095a898610039d3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914610"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256349"
 ---
 # <a name="_msize"></a>_msize
 
@@ -48,28 +49,28 @@ size_t _msize(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *memblock*<br/>
 指向内存块的指针。
 
 ## <a name="return-value"></a>返回值
 
-**_msize**返回无符号整数形式的大小（以字节为单位）。
+**_msize** 以字节为单位返回) 为无符号整数的大小 (。
 
 ## <a name="remarks"></a>备注
 
-**_Msize**函数返回通过调用**calloc**、 **malloc**或**realloc**分配的内存块的大小（以字节为单位）。
+**_Msize** 函数返回通过调用 **calloc**、 **malloc** 或 **realloc** 分配的内存块的大小（以字节为单位）。
 
-当应用程序与调试版的 C 运行时库链接时， **_msize**解析为[_msize_dbg](msize-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
+当应用程序与调试版的 C 运行时库链接时， **_msize** 解析为 [_msize_dbg](msize-dbg.md)。 有关在调试过程中如何托管堆的详细信息，请参阅 [CRT 调试堆](/visualstudio/debugger/crt-debug-heap-details)。
 
-此函数验证其参数。 如果*memblock*为 null 指针， **_msize**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数会将**errno**设置为**EINVAL** ，并返回-1。
+此函数验证其参数。 如果 *memblock* 为 null 指针， **_msize** 将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数会将 **errno** 设置为 **EINVAL** ，并返回-1。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
-|例程|必需的标头|
+|例程所返回的值|必需的标头|
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 
@@ -83,7 +84,7 @@ size_t _msize(
 
 请参阅 [realloc](realloc.md) 的示例。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [内存分配](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

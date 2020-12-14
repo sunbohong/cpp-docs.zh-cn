@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： getchar、getwchar
 title: getchar、getwchar
 ms.date: 06/23/2020
 api_name:
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: c6a02f16c3ee3d3e3bc4f86026719a1bd2885416
-ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
+ms.openlocfilehash: d8480d179cc31d30d68c07fbe92bf389226ccd53
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334979"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256752"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -55,15 +56,15 @@ wint_t getwchar();
 
 返回读取的字符。 这些函数将等待输入，在输入可用之前不会返回。
 
-若要指示读取错误或文件尾条件， **getchar**将返回**EOF**，并且**getwchar**将返回**WEOF**。 对于**getchar**，请使用**ferror**或**feof**检查是否有错误或文件结束。
+若要指示读取错误或文件尾条件， **getchar** 将返回 **EOF**，并且 **getwchar** 将返回 **WEOF**。 对于 **getchar**，请使用 **ferror** 或 **feof** 检查是否有错误或文件结束。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-每个例程从**stdin**中读取单个字符，并递增关联的文件指针，使之指向下一个字符。 **getchar**与[_fgetchar](fgetc-fgetwc.md)相同，但它作为函数和宏实现。
+每个例程从 **stdin** 中读取单个字符，并递增关联的文件指针，使之指向下一个字符。 **getchar** 与 [_fgetchar](fgetc-fgetwc.md)相同，但它作为函数和宏实现。
 
 这些函数也会锁定调用线程，并且是线程安全的。 有关非锁定版本，请参阅 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
 
-默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅[CRT 中的全局状态](../global-state.md)。
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文本例程映射
 
@@ -78,7 +79,7 @@ wint_t getwchar();
 |**getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台（UWP）应用中不支持控制台。 与控制台、 **stdin**、 **stdout**和**stderr**关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平台 (UWP) 应用中不支持控制台。 与控制台、 **stdin**、 **stdout** 和 **stderr** 关联的标准流句柄必须重定向，然后 C 运行时函数才能在 UWP 应用中使用它们。 有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -110,7 +111,7 @@ int main()
 This textInput was: This text
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
 [getc、getwc](getc-getwc.md)<br/>

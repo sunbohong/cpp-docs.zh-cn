@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： _msize_dbg
 title: _msize_dbg
 ms.date: 11/04/2016
 api_name:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8ead0257e990322e88e20ce6111ff590dbc71686
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951481"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256388"
 ---
 # <a name="_msize_dbg"></a>_msize_dbg
 
@@ -46,25 +47,25 @@ size_t _msize_dbg(
 );
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *userData*<br/>
 指向可确定大小的内存块的指针。
 
 *blockType*<br/>
-指定内存块的类型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+指定内存块的类型： **_CLIENT_BLOCK** 或 **_NORMAL_BLOCK**。
 
 ## <a name="return-value"></a>返回值
 
-成功完成后， **_msize_dbg**将返回指定内存块的大小（以字节为单位）;否则，它将返回**NULL**。
+成功完成后， **_msize_dbg** 返回指定内存块的大小（以字节为) 单位） (;否则，它将返回 **NULL**。
 
 ## <a name="remarks"></a>备注
 
-**_msize_dbg**是 _[msize](msize.md)函数的调试版本。 未定义[_debug](../../c-runtime-library/debug.md)时，对 **_msize_dbg**的每次调用都会减少到对 **_msize**的调用。 **_Msize**和 **_msize_dbg**都计算基堆中的内存块的大小，但 **_msize_dbg**添加了两个调试功能：它在返回大小的内存块的用户部分的任一侧包含缓冲区，并允许对特定块类型进行大小计算。
+**_msize_dbg** 是 _ [msize](msize.md) 函数的调试版本。 未定义 [_DEBUG](../../c-runtime-library/debug.md) 时，对 **_msize_dbg** 的每次调用都会减少到对 **_msize** 的调用。 **_Msize** 和 **_msize_dbg** 都计算基堆中的内存块的大小，但 **_msize_dbg** 会添加两个调试功能：它在返回大小的内存块的用户部分的任一侧包含缓冲区，并允许对特定块类型进行大小计算。
 
-有关如何在基堆的调试版本中分配、初始化和管理内存块的信息，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
+若要了解如何在基堆的调试版本中分配、初始化和管理内存块，请参阅 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 有关分配块类型及其使用方式的信息，请参阅[调试堆上的块类型](/visualstudio/debugger/crt-debug-heap-details)。 有关在应用程序的调试版本中调用标准堆函数及其调试版本之间差异的信息，请参阅[堆分配函数的调试版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
-此函数验证其参数。 如果*memblock*为 null 指针，则 **_msize**将调用无效参数处理程序，如[参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数会将**errno**设置为**EINVAL** ，并返回-1。
+此函数验证其参数。 如果 *memblock* 为 null 指针， **_msize** 将调用无效参数处理程序，如 [参数验证](../../c-runtime-library/parameter-validation.md)中所述。 如果处理错误，函数会将 **errno** 设置为 **EINVAL** ，并返回-1。
 
 ## <a name="requirements"></a>要求
 
@@ -72,7 +73,7 @@ size_t _msize_dbg(
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 
-有关更多兼容性信息，请参阅 [兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -130,7 +131,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>输出
 
 ```Output
 Size of block after _malloc_dbg of 40 longs: 160
