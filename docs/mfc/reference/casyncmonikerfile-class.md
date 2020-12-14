@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CAsyncMonikerFile 类
 title: CAsyncMonikerFile 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -32,12 +33,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 259d31b9c1e198b326ba616481dbbf5315225546
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 559ffd5ed3a8b7100d9901dc70fe4f5349c05f7f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845934"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343524"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 类
 
@@ -53,13 +54,13 @@ class CAsyncMonikerFile : public CMonikerFile
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAsyncMonikerFile：： CAsyncMonikerFile](#casyncmonikerfile)|构造 `CAsyncMonikerFile` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CAsyncMonikerFile：： Close](#close)|关闭并释放所有资源。|
 |[CAsyncMonikerFile：： GetBinding](#getbinding)|检索指向异步传输绑定的指针。|
@@ -68,7 +69,7 @@ class CAsyncMonikerFile : public CMonikerFile
 
 ### <a name="protected-methods"></a>受保护的方法
 
-|名称|说明|
+|名称|描述|
 |----------|-----------------|
 |[CAsyncMonikerFile：： CreateBindStatusCallback](#createbindstatuscallback)|创建一个实现的 COM 对象 `IBindStatusCallback` 。|
 |[CAsyncMonikerFile：： GetBindInfo](#getbindinfo)|由 OLE 系统库调用以请求要创建的绑定类型的信息。|
@@ -79,7 +80,7 @@ class CAsyncMonikerFile : public CMonikerFile
 |[CAsyncMonikerFile：： OnStartBinding](#onstartbinding)|当绑定启动时调用。|
 |[CAsyncMonikerFile：： OnStopBinding](#onstopbinding)|当异步传输停止时调用。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 从 [CMonikerFile](../../mfc/reference/cmonikerfile-class.md)派生而来，后者又派生自 [COleStreamFile](../../mfc/reference/colestreamfile-class.md)，它 `CAsyncMonikerFile` 使用 [IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker) 接口异步访问任何数据流，包括从 URL 异步加载文件。 这些文件可以是 ActiveX 控件的数据路径属性。
 
@@ -115,7 +116,7 @@ class CAsyncMonikerFile : public CMonikerFile
 CAsyncMonikerFile();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 它不会创建 `IBindHost` 接口。 `IBindHost` 仅当在成员函数中提供时才使用 `Open` 。
 
@@ -129,7 +130,7 @@ CAsyncMonikerFile();
 virtual void Close();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 可对未打开或已关闭的文件调用。
 
@@ -141,7 +142,7 @@ virtual void Close();
 virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pUnkControlling*<br/>
 指向外部) 的 "控制未知" (的指针 `IUnknown` ; 如果未使用聚合，则为 NULL。
@@ -150,7 +151,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 
 如果 *pUnkControlling* 不为 NULL，则该函数返回一个指针，该指针指向 `IUnknown` 支持的新 COM 对象上的内部 `IBindStatusCallback` 。 如果 `pUnkControlling` 为 NULL，则函数返回指向 `IUnknown` 支持的新 COM 对象上的的指针 `IBindStatusCallback` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `CAsyncMonikerFile` 需要一个实现的 COM 对象 `IBindStatusCallback` 。 MFC 实现此类对象，而且它是可聚合的。 可以重写 `CreateBindStatusCallback` 以返回自己的 COM 对象。 通过 `CreateBindStatusCallback` 使用 com 对象的 "未知" 控制，com 对象可聚合 MFC 的实现。 使用 `CCmdTarget` com 支持实现的 com 对象可以使用检索控制未知 `CCmdTarget::GetControllingUnknown` 。
 
@@ -172,7 +173,7 @@ virtual DWORD GetBindInfo() const;
 
 检索的设置 `IBindStatusCallBack` 。 有关接口的说明 `IBindStatusCallback` ，请参阅 Windows SDK。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现将绑定设置为异步，以使用存储介质 (流) ，并使用数据推送模型。 如果要更改绑定的行为，请重写此函数。
 
@@ -190,7 +191,7 @@ IBinding* GetBinding() const;
 
 指向 `IBinding` 异步传输开始时提供的接口的指针。 如果出于任何原因而无法以异步方式进行传输，则返回 NULL。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 这允许您通过接口控制数据传输过程， `IBinding` 例如，使用 `IBinding::Abort` 、 `IBinding::Pause` 和 `IBinding::Resume` 。
 
@@ -220,7 +221,7 @@ virtual LONG GetPriority() const;
 
 将进行异步传输的优先级。 标准线程优先级标志之一： THREAD_PRIORITY_ABOVE_NORMAL、THREAD_PRIORITY_BELOW_NORMAL、THREAD_PRIORITY_HIGHEST、THREAD_PRIORITY_IDLE、THREAD_PRIORITY_LOWEST、THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 有关这些值的说明，请参阅 Windows 函数 [参见 setthreadpriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `GetPriority` 不应直接调用。 默认实现返回 THREAD_PRIORITY_NORMAL。
 
@@ -232,7 +233,7 @@ virtual LONG GetPriority() const;
 virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *dwSize*<br/>
 自绑定开始以来可用数据) 的累计量 (（以字节为单位）。 可以为零，表示数据量与操作无关，或者没有特定的可用量。
@@ -246,7 +247,7 @@ BSCF 枚举值。 可以是以下一个或多个值：
 
 - BSCF_LASTDATANOTIFICATION 标识绑定操作的最后一次调用 `OnDataAvailable` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数的默认实现不执行任何操作。 有关示例实现，请参阅以下示例。
 
@@ -262,7 +263,7 @@ BSCF 枚举值。 可以是以下一个或多个值：
 virtual void OnLowResource();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 默认实现调用 `GetBinding( )-> Abort( )` 。
 
@@ -278,10 +279,10 @@ virtual void OnProgress(
     LPCTSTR szStatusText);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *ulProgress*<br/>
-指示绑定操作的当前进度，相对于 *ulProgressMax*中指示的预期最大值。
+指示绑定操作的当前进度，相对于 *ulProgressMax* 中指示的预期最大值。
 
 *ulProgressMax*<br/>
 指示此操作的调用持续时间内的预期最大 *ulProgress* 值 `OnProgress` 。
@@ -290,23 +291,23 @@ virtual void OnProgress(
 提供有关绑定操作进度的其他信息。 有效值取自 `BINDSTATUS` 枚举。 有关可能的值，请参阅备注。
 
 *szStatusText*<br/>
-有关当前进度的信息，具体取决于 *ulStatusCode*的值。 有关可能的值，请参阅备注。
+有关当前进度的信息，具体取决于 *ulStatusCode* 的值。 有关可能的值，请参阅备注。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-*UlStatusCode* (的可能值和每个值) 的*szStatusText*为：
+*UlStatusCode* (的可能值和每个值) 的 *szStatusText* 为：
 
-| 值 | 说明 |
+| 值 | 描述 |
 |--|--|
-| BINDSTATUS_FINDINGRESOURCE | 绑定操作正在查找保存要绑定到的对象或存储的资源。 *SzStatusText*提供要 (搜索的资源的显示名称，例如 "www.microsoft.com" ) 。 |
-| BINDSTATUS_CONNECTING | 绑定操作将连接到保存要绑定到的对象或存储的资源。 *SzStatusText*提供要连接到 (的资源的显示名称，例如，) 的 IP 地址。 |
-| BINDSTATUS_SENDINGREQUEST | 绑定操作请求将对象或存储绑定到。 *SzStatusText*提供对象的显示名称 (例如，文件名) 。 |
-| BINDSTATUS_REDIRECTING | 绑定操作已重定向到不同的数据位置。 *SzStatusText*提供新数据位置的显示名称。 |
-| BINDSTATUS_USINGCACHEDCOPY | 绑定操作正在从缓存副本中检索请求的对象或存储。 *SzStatusText*为 NULL。 |
-| BINDSTATUS_BEGINDOWNLOADDATA | 绑定操作已开始接收要绑定到的对象或存储。 *SzStatusText*提供数据位置的显示名称。 |
-| BINDSTATUS_DOWNLOADINGDATA | 绑定操作将继续接收要绑定到的对象或存储。 *SzStatusText*提供数据位置的显示名称。 |
-| BINDSTATUS_ENDDOWNLOADDATA | 绑定操作已完成接收要绑定到的对象或存储。 *SzStatusText*提供数据位置的显示名称。 |
-| BINDSTATUS_CLASSIDAVAILABLE | 要绑定到的对象的实例即将创建。 *SzStatusText*以字符串格式提供新对象的 CLSID，从而允许客户端根据需要取消绑定操作。 |
+| BINDSTATUS_FINDINGRESOURCE | 绑定操作正在查找保存要绑定到的对象或存储的资源。 *SzStatusText* 提供要 (搜索的资源的显示名称，例如 "www.microsoft.com" ) 。 |
+| BINDSTATUS_CONNECTING | 绑定操作将连接到保存要绑定到的对象或存储的资源。 *SzStatusText* 提供要连接到 (的资源的显示名称，例如，) 的 IP 地址。 |
+| BINDSTATUS_SENDINGREQUEST | 绑定操作请求将对象或存储绑定到。 *SzStatusText* 提供对象的显示名称 (例如，文件名) 。 |
+| BINDSTATUS_REDIRECTING | 绑定操作已重定向到不同的数据位置。 *SzStatusText* 提供新数据位置的显示名称。 |
+| BINDSTATUS_USINGCACHEDCOPY | 绑定操作正在从缓存副本中检索请求的对象或存储。 *SzStatusText* 为 NULL。 |
+| BINDSTATUS_BEGINDOWNLOADDATA | 绑定操作已开始接收要绑定到的对象或存储。 *SzStatusText* 提供数据位置的显示名称。 |
+| BINDSTATUS_DOWNLOADINGDATA | 绑定操作将继续接收要绑定到的对象或存储。 *SzStatusText* 提供数据位置的显示名称。 |
+| BINDSTATUS_ENDDOWNLOADDATA | 绑定操作已完成接收要绑定到的对象或存储。 *SzStatusText* 提供数据位置的显示名称。 |
+| BINDSTATUS_CLASSIDAVAILABLE | 要绑定到的对象的实例即将创建。 *SzStatusText* 以字符串格式提供新对象的 CLSID，从而允许客户端根据需要取消绑定操作。 |
 
 ## <a name="casyncmonikerfileonstartbinding"></a><a name="onstartbinding"></a> CAsyncMonikerFile：： OnStartBinding
 
@@ -316,7 +317,7 @@ virtual void OnProgress(
 virtual void OnStartBinding();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数由名字对象回调。 默认实现不执行任何操作。
 
@@ -328,7 +329,7 @@ virtual void OnStartBinding();
 virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *hresult*<br/>
 作为错误或警告值的 HRESULT。
@@ -336,7 +337,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 *szErrort*<br/>
 描述错误的字符串。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重写此函数以在传输停止时执行操作。 默认情况下，该函数将释放 `IBinding` 。
 
@@ -386,7 +387,7 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszURL*<br/>
 指向要异步打开的文件的指针。 该文件可以是任何有效的 URL 或文件名。
@@ -410,7 +411,7 @@ virtual BOOL Open(
 
 如果成功打开文件，则为非零值;否则为0。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此调用启动绑定过程。
 
@@ -422,7 +423,7 @@ virtual BOOL Open(
 
 [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CMonikerFile 类](../../mfc/reference/cmonikerfile-class.md)<br/>
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： OpenMP 环境变量
 title: OpenMP 环境变量
 ms.date: 03/20/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 3f9117c531bdf0c5a0c94e0b18a055591f431036
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 58ca563033906f4e5e7e9d59089dc463396aa91c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503756"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342382"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP 环境变量
 
@@ -29,7 +30,7 @@ OpenMP 标准的 Visual C++ 实现包括以下环境变量。 这些环境变量
 
 |环境变量|说明|
 |--------------------|-----------|
-|[OMP_SCHEDULE](#omp-schedule)|当[schedule](openmp-clauses.md#schedule) `schedule(runtime)` 在或指令中指定时，修改 schedule 子句的 `for` 行为 `parallel for` 。|
+|[OMP_SCHEDULE](#omp-schedule)|当[](openmp-clauses.md#schedule) `schedule(runtime)` 在或指令中指定时，修改 schedule 子句的 `for` 行为 `parallel for` 。|
 |[OMP_NUM_THREADS](#omp-num-threads)|设置并行区域中的最大线程数，除非由 [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) 或 [num_threads](openmp-clauses.md#num-threads)重写。|
 |[OMP_DYNAMIC](#omp-dynamic)|指定 OpenMP 运行时是否可以调整并行区域中的线程数。|
 |[OMP_NESTED](#omp-nested)|指定是否启用嵌套并行，除非启用或禁用了嵌套并行机制 `omp_set_nested` 。|
@@ -42,7 +43,7 @@ OpenMP 标准的 Visual C++ 实现包括以下环境变量。 这些环境变量
 set OMP_DYNAMIC[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `OMP_DYNAMIC` [Omp_set_dynamic](openmp-functions.md#omp-set-dynamic)函数可以重写环境变量。
 
@@ -72,7 +73,7 @@ set OMP_DYNAMIC
 set OMP_NESTED[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `OMP_NESTED` [Omp_set_nested](openmp-functions.md#omp-set-nested)函数可以重写环境变量。
 
@@ -102,12 +103,12 @@ set OMP_NESTED
 set OMP_NUM_THREADS[=num]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*num*<br/>
+*编号*<br/>
 并行区域中所需的最大线程数，最大为64，Visual C++ 实现。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `OMP_NUM_THREADS`可以通过[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)函数或[num_threads](openmp-clauses.md#num-threads)来重写环境变量。
 
@@ -131,13 +132,13 @@ set OMP_NUM_THREADS
 
 ## <a name="omp_schedule"></a><a name="omp-schedule"></a> OMP_SCHEDULE
 
-当[schedule](openmp-clauses.md#schedule) `schedule(runtime)` 在或指令中指定时，修改 schedule 子句的 `for` 行为 `parallel for` 。
+当[](openmp-clauses.md#schedule) `schedule(runtime)` 在或指令中指定时，修改 schedule 子句的 `for` 行为 `parallel for` 。
 
 ```cmd
 set OMP_SCHEDULE[=type[,size]]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *大小*<br/>
  (可选) 指定迭代的大小。 *大小* 必须为正整数。 默认值为 `1` ，但当 *类型* 为 static 时除外。 当 *类型* 为时无效 `runtime` 。
@@ -145,7 +146,7 @@ set OMP_SCHEDULE[=type[,size]]
 type<br/>
 计划的类型，为 `dynamic` 、、 `guided` `runtime` 或 `static` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 OpenMP 标准的 Visual C++ 实现中的默认值为 `OMP_SCHEDULE=static,0` 。
 

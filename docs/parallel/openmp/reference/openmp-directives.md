@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： OpenMP 指令
 title: OpenMP 指令
 ms.date: 03/20/2019
 f1_keywords:
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: 21270e8cdeb17b6d06d903d328962435c627759f
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 03730b1f5cda0972dbf86b345c6e44bdad4e949b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503827"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342395"
 ---
 # <a name="openmp-directives"></a>OpenMP 指令
 
@@ -47,7 +48,7 @@ Visual C++ 支持以下 OpenMP 指令。
 |[并行](#parallel)|定义一个并行区域，这是将由多个线程并行执行的代码。|
 |[for](#for-openmp)|导致在并行区域内的循环中完成的工作 `for` 被拆分到多个线程中。|
 |[个](#sections-openmp)|标识要在所有线程间划分的代码段。|
-|single|允许您指定应在单个线程上执行代码部分，而不一定是主线程。|
+|[single](#single)|允许您指定应在单个线程上执行代码部分，而不一定是主线程。|
 
 对于 master 和同步：
 
@@ -78,9 +79,9 @@ Visual C++ 支持以下 OpenMP 指令。
 ### <a name="parameters"></a>参数
 
 *expression*<br/>
-具有 *lvalue*的语句，其内存位置要针对多个写入进行保护。
+具有 *lvalue* 的语句，其内存位置要针对多个写入进行保护。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `atomic`指令不支持子句。
 
@@ -119,7 +120,7 @@ Number of threads: 10
 #pragma omp barrier
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `barrier`指令不支持子句。
 
@@ -145,7 +146,7 @@ Number of threads: 10
 *name*<br/>
  (可选) 用于标识关键代码的名称。 名称必须括在括号中。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `critical`指令不支持子句。
 
@@ -217,12 +218,12 @@ max = 29358
 #pragma omp flush [(var)]
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
  (可选) 逗号分隔的变量列表，这些变量表示要同步的对象。 如果未指定 *变量* ，则会刷新所有内存。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `flush`指令不支持子句。
 
@@ -294,7 +295,7 @@ data = 2
    for_statement
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *分组*<br/>
  (可选) 零个或多个子句，请参阅 " **备注** " 部分。
@@ -302,7 +303,7 @@ data = 2
 *for_statement*<br/>
 一个 `for` 循环。 如果循环中的用户代码更改索引变量，将导致未定义的行为 `for` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `for`指令支持以下子句：
 
@@ -393,7 +394,7 @@ The sum of 1 through 10 is 55
 }
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `master`指令不支持子句。
 
@@ -453,7 +454,7 @@ a[4] = 16
    structured-block
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `ordered`指令必须在[for](#for-openmp)的动态范围内，或 `parallel for` 使用子句进行构造 `ordered` 。
 
@@ -526,12 +527,12 @@ test2() iteration 4
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *分组*<br/>
  (可选) 零个或多个子句，请参阅 " **备注** " 部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `parallel`指令支持以下子句：
 
@@ -588,12 +589,12 @@ Hello from thread 3
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *分组*<br/>
  (可选) 零个或多个子句，请参阅 " **备注** " 部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `sections`指令可包含零个或多个 `section` 指令。
 
@@ -643,12 +644,12 @@ Hello from thread 0
 }
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *分组*<br/>
  (可选) 零个或多个子句，请参阅 " **备注** " 部分。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `single`指令支持以下子句：
 
@@ -701,12 +702,12 @@ write output
 #pragma omp threadprivate(var)
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *var*<br/>
 要使其专用于线程的以逗号分隔的变量列表。 *var* 必须是全局或命名空间范围的变量或局部静态变量。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `threadprivate`指令不支持子句。
 
@@ -714,7 +715,7 @@ write output
 
 你可以 `threadprivate` 在进程启动时静态加载的 dll 中使用，但是，你不能 `threadprivate` 在将通过 [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) 加载的 dll （如使用 [/DELAYLOAD (延迟负载导) 入 ](../../../build/reference/delayload-delay-load-import.md)加载的 dll）中使用，后者也使用 `LoadLibrary` 。
 
-`threadprivate`不保证*易损坏*类型的变量调用其析构函数。 例如：
+`threadprivate`不保证 *易损坏* 类型的变量调用其析构函数。 例如：
 
 ```cpp
 struct MyType

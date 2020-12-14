@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CWinFormsDialog 类
 title: CWinFormsDialog 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: a25823982b9276309e99a2a26cef8d6fe2e764bd
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 501f9c354bd6f0b7a628aabb93f4680155f74a69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040660"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97342616"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 类
 
@@ -33,7 +34,7 @@ class CWinFormsDialog :
     public CDialog
 ```
 
-#### <a name="parameters"></a>参数
+#### <a name="parameters"></a>parameters
 
 *TManagedControl*<br/>
 要在 MFC 应用程序中显示的 .NET Framework 用户控件。
@@ -42,13 +43,13 @@ class CWinFormsDialog :
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CWinFormsDialog：： CWinFormsDialog](#cwinformsdialog)|构造 `CWinFormsDialog` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CWinFormsDialog：： GetControl](#getcontrol)|检索对 Windows 窗体用户控件的引用。|
 |[CWinFormsDialog：： GetControlHandle](#getcontrolhandle)|检索 Windows 窗体用户控件的窗口句柄。|
@@ -56,7 +57,7 @@ class CWinFormsDialog :
 
 ### <a name="public-operators"></a>公共运算符
 
-|名称|说明|
+|名称|描述|
 |----------|-|
 |[CWinFormsDialog：： operator-&gt;](#operator_-_gt)|替换表达式中的 [CWinFormsDialog：： GetControl](#getcontrol) 。|
 |[CWinFormsDialog：： operator TManagedControl ^](#operator-tmanagedcontrol-hat)|将类型强制转换为对 Windows 窗体用户控件的引用。|
@@ -79,7 +80,7 @@ class CWinFormsDialog :
 CWinFormsDialog(UINT nIDTemplate = IDD);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *nIDTemplate*<br/>
 包含对话框模板资源的 ID。 使用对话框编辑器创建对话框模板并将其存储在应用程序的资源脚本文件中。 有关对话框模板的详细信息，请参阅 [CDialog 类](../../mfc/reference/cdialog-class.md)。
@@ -152,7 +153,7 @@ inline operator TManagedControl^() const throw();
 
 此运算符将类型转换为对 Windows 窗体控件的引用。 它用于将一个对话框传递 `CWinFormsDialog<TManagedControl>` 到接受指向 Windows 窗体用户控件对象的指针的函数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [CWnd 类](../../mfc/reference/cwnd-class.md)<br/>
 [CWinFormsView 类](../../mfc/reference/cwinformsview-class.md)<br/>

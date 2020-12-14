@@ -1,5 +1,6 @@
 ---
-title: CSsDockSiteInfo 类
+description: 了解详细信息： CRecentDockSiteInfo 类
+title: CRecentDockSiteInfo 类
 ms.date: 11/04/2016
 f1_keywords:
 - CRecentDockSiteInfo
@@ -30,16 +31,16 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: 9f23d5aff2bac65363086c077af45e35c3263f65
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: e33ef48be2b091477200f15a31c194d845693399
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97343092"
 ---
-# <a name="crecentdocksiteinfo-class"></a>CSsDockSiteInfo 类
+# <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 类
 
-该`CRecentDockSiteInfo`类是一个帮助类，用于存储[CPane 类](../../mfc/reference/cpane-class.md)的最近状态信息。
+`CRecentDockSiteInfo`类是存储[CPane 类](../../mfc/reference/cpane-class.md)的最新状态信息的帮助器类。
 
 ## <a name="syntax"></a>语法
 
@@ -51,24 +52,24 @@ class CRecentDockSiteInfo : public CObject
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |`CRecentDockSiteInfo::CRecentDockSiteInfo`|默认构造函数。|
 
 ### <a name="public-methods"></a>公共方法
 
-|名称|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CRecentDockSiteInfo::CleanUp](#cleanup)||
-|[CSsDock 网站信息：：获取最新默认窗格分隔器](#getrecentdefaultpanedivider)||
-|[CSsDockSite信息：：获取最新停靠百分比](#getrecentdockedpercent)||
-|[CSsDockSite信息：：获取最新多克](#getrecentdockedrect)||
-|[CSsdock 网站信息：：获取最新列表的窗格](#getrecentlistofpanes)||
-|[CSsDockSite信息：：获取最新窗格容器](#getrecentpanecontainer)||
-|[CSsdockSite信息：：获取最新选项卡容器](#getrecenttabcontainer)||
+|[CRecentDockSiteInfo::GetRecentDefaultPaneDivider](#getrecentdefaultpanedivider)||
+|[CRecentDockSiteInfo::GetRecentDockedPercent](#getrecentdockedpercent)||
+|[CRecentDockSiteInfo::GetRecentDockedRect](#getrecentdockedrect)||
+|[CRecentDockSiteInfo::GetRecentListOfPanes](#getrecentlistofpanes)||
+|[CRecentDockSiteInfo::GetRecentPaneContainer](#getrecentpanecontainer)||
+|[CRecentDockSiteInfo::GetRecentTabContainer](#getrecenttabcontainer)||
 |[CRecentDockSiteInfo::Init](#init)||
 |[CRecentDockSiteInfo::IsRecentLeftPane](#isrecentleftpane)||
-|[CSsDockSite信息：：操作员 |](#operator_eq)||
+|[CRecentDockSiteInfo：： operator =](#operator_eq)||
 |[CRecentDockSiteInfo::SaveListOfRecentPanes](#savelistofrecentpanes)||
 |[CRecentDockSiteInfo::SetInfo](#setinfo)||
 |[CRecentDockSiteInfo::StoreDockInfo](#storedockinfo)||
@@ -77,7 +78,7 @@ class CRecentDockSiteInfo : public CObject
 
 `CRecentDockSiteInfo` 类是数据管理类。 它在 `CPane` 在停靠与浮动之间转换时跟踪其最近状态。 当用户双击浮动的可停靠窗格时，它会成为停靠状态。 双击停靠的窗格会使它恢复为以前的位置、大小和状态。 同样，当窗格重新停靠时，它会返回到以前的停靠位置。 通过此数据类可以实现此行为。 由于此类的成员存储停靠的窗格的状态信息，因此它们不应由应用程序直接修改。
 
-每次创建窗格时会创建一个 `CRecentDockSiteInfo` 对象。 每个`CPane`对象都有一个成员变量[CPane：m_recentDockInfo，](../../mfc/reference/cpane-class.md#m_recentdockinfo)用于存储此信息。
+每次创建窗格时会创建一个 `CRecentDockSiteInfo` 对象。 每个 `CPane` 对象都有一个成员变量， [CPane：： m_recentDockInfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)用于存储此信息。
 
 ## <a name="inheritance-hierarchy"></a>继承层次结构
 
@@ -87,9 +88,9 @@ class CRecentDockSiteInfo : public CObject
 
 ## <a name="requirements"></a>要求
 
-**标题：** afxssdockSiteInfo.h
+**标头：** afxrecentDockSiteInfo
 
-## <a name="crecentdocksiteinfocleanup"></a><a name="cleanup"></a>CSsdock网站信息：：清理
+## <a name="crecentdocksiteinfocleanup"></a><a name="cleanup"></a> CRecentDockSiteInfo：：清理
 
 ```cpp
 void CleanUp();
@@ -97,19 +98,19 @@ void CleanUp();
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfocrecentdocksiteinfo"></a><a name="crecentdocksiteinfo"></a>CSsDock网站信息：：C_ssdock网站信息
+## <a name="crecentdocksiteinfocrecentdocksiteinfo"></a><a name="crecentdocksiteinfo"></a> CRecentDockSiteInfo::CRecentDockSiteInfo
 
 ```
 CRecentDockSiteInfo(CPane* pBar);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*pBar*<br/>
+中 *pBar*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfogetrecentdefaultpanedivider"></a><a name="getrecentdefaultpanedivider"></a>CSsDock 网站信息：：获取最新默认窗格分隔器
+## <a name="crecentdocksiteinfogetrecentdefaultpanedivider"></a><a name="getrecentdefaultpanedivider"></a> CRecentDockSiteInfo::GetRecentDefaultPaneDivider
 
 ```
 CPaneDivider* GetRecentDefaultPaneDivider();
@@ -119,77 +120,77 @@ CPaneDivider* GetRecentDefaultPaneDivider();
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfogetrecentdockedpercent"></a><a name="getrecentdockedpercent"></a>CSsDockSite信息：：获取最新停靠百分比
+## <a name="crecentdocksiteinfogetrecentdockedpercent"></a><a name="getrecentdockedpercent"></a> CRecentDockSiteInfo::GetRecentDockedPercent
 
 ```
 int GetRecentDockedPercent(BOOL bForSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bForSlider*<br/>
+中 *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfogetrecentdockedrect"></a><a name="getrecentdockedrect"></a>CSsDockSite信息：：获取最新多克
+## <a name="crecentdocksiteinfogetrecentdockedrect"></a><a name="getrecentdockedrect"></a> CRecentDockSiteInfo::GetRecentDockedRect
 
 ```
 CRect& GetRecentDockedRect(BOOL bForSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bForSlider*<br/>
+中 *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfogetrecentlistofpanes"></a><a name="getrecentlistofpanes"></a>CSsdock 网站信息：：获取最新列表的窗格
+## <a name="crecentdocksiteinfogetrecentlistofpanes"></a><a name="getrecentlistofpanes"></a> CRecentDockSiteInfo::GetRecentListOfPanes
 
 ```
 CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bForSlider*<br/>
+中 *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfogetrecentpanecontainer"></a><a name="getrecentpanecontainer"></a>CSsDockSite信息：：获取最新窗格容器
+## <a name="crecentdocksiteinfogetrecentpanecontainer"></a><a name="getrecentpanecontainer"></a> CRecentDockSiteInfo::GetRecentPaneContainer
 
 ```
 CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bForSlider*<br/>
+中 *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfogetrecenttabcontainer"></a><a name="getrecenttabcontainer"></a>CSsdockSite信息：：获取最新选项卡容器
+## <a name="crecentdocksiteinfogetrecenttabcontainer"></a><a name="getrecenttabcontainer"></a> CRecentDockSiteInfo::GetRecentTabContainer
 
 ```
 CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bForSlider*<br/>
+中 *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfoinit"></a><a name="init"></a>CSinDockSite信息：：Init
+## <a name="crecentdocksiteinfoinit"></a><a name="init"></a> CRecentDockSiteInfo：： Init
 
 ```cpp
 void Init();
@@ -197,35 +198,35 @@ void Init();
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfoisrecentleftpane"></a><a name="isrecentleftpane"></a>CSsdocksite信息：：最近左窗格
+## <a name="crecentdocksiteinfoisrecentleftpane"></a><a name="isrecentleftpane"></a> CRecentDockSiteInfo::IsRecentLeftPane
 
 ```
 BOOL IsRecentLeftPane(BOOL bForSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bForSlider*<br/>
+中 *bForSlider*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfooperator-"></a><a name="operator_eq"></a>CSsDockSite信息：：操作员 |
+## <a name="crecentdocksiteinfooperator-"></a><a name="operator_eq"></a> CRecentDockSiteInfo：： operator =
 
 ```
 CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*斯尔克*<br/>
+中 *src*<br/>
 
 ### <a name="return-value"></a>返回值
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfosavelistofrecentpanes"></a><a name="savelistofrecentpanes"></a>CS.DockSite信息：：保存最近窗格列表
+## <a name="crecentdocksiteinfosavelistofrecentpanes"></a><a name="savelistofrecentpanes"></a> CRecentDockSiteInfo::SaveListOfRecentPanes
 
 ```cpp
 void SaveListOfRecentPanes(CList<HWND,
@@ -233,15 +234,15 @@ void SaveListOfRecentPanes(CList<HWND,
     BOOL bForSlider);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*CList<HWND*<br/>
-[在]*lstOrg*<br/>
-[在]*bForSlider*<br/>
+中 *CList<HWND*<br/>
+中 *lstOrg*<br/>
+中 *bForSlider*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfosetinfo"></a><a name="setinfo"></a>CSsDock网站信息：：SetInfo
+## <a name="crecentdocksiteinfosetinfo"></a><a name="setinfo"></a> CRecentDockSiteInfo：： SetInfo
 
 ```
 virtual void SetInfo(
@@ -249,14 +250,14 @@ virtual void SetInfo(
     CRecentDockSiteInfo& srcInfo);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*bForSlider*<br/>
-[在]*srcInfo*<br/>
+中 *bForSlider*<br/>
+中 *srcInfo*<br/>
 
 ### <a name="remarks"></a>备注
 
-## <a name="crecentdocksiteinfostoredockinfo"></a><a name="storedockinfo"></a>CSsDock网站信息：：商店多克信息
+## <a name="crecentdocksiteinfostoredockinfo"></a><a name="storedockinfo"></a> CRecentDockSiteInfo::StoreDockInfo
 
 ```
 virtual void StoreDockInfo(
@@ -264,15 +265,15 @@ virtual void StoreDockInfo(
     CDockablePane* pTabbedBar = NULL);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-[在]*p最新容器*<br/>
-[在]*pTabbedBar*<br/>
+中 *pRecentContainer*<br/>
+中 *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>备注
 
 ## <a name="see-also"></a>请参阅
 
-[层次结构图表](../../mfc/hierarchy-chart.md)<br/>
-[类](../../mfc/reference/mfc-classes.md)<br/>
-[CDockSite Class](../../mfc/reference/cdocksite-class.md)
+[层次结构图](../../mfc/hierarchy-chart.md)<br/>
+[Classes](../../mfc/reference/mfc-classes.md)<br/>
+[CDockSite 类](../../mfc/reference/cdocksite-class.md)
