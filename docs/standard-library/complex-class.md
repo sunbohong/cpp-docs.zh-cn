@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：复杂类
 title: complex 类
 ms.date: 03/27/2019
 f1_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: c7e2ca2c14ed0ac5f561fab446f6cd2dcc19649d
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 224b59e79119496ea7484378a010c4861f32e404
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836539"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233898"
 ---
 # <a name="complex-class"></a>complex 类
 
@@ -46,26 +47,26 @@ class complex
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[过于](#complex)|构造一个具有指定实部和虚部的复数，或作为某些其他复数的副本的复数。|
 
 ### <a name="typedefs"></a>Typedef
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[value_type](#value_type)|该类型代表用于表示复数的实部和虚部的数据类型。|
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[imag](#imag)|提取复数的虚分量。|
 |[real](#real)|提取复数的实分量。|
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[运算符 * =](#op_star_eq)|用一个系数乘以目标复数，这可能是复数或与复数的实部和虚部相同的类型。|
 |[运算符 + =](#op_add_eq)|向目标复数添加一个数，其中所添加的数可能是复数或与所添加的复数的实部和虚部相同的类型。|
@@ -87,7 +88,7 @@ constexpr complex(
     const complex<Other>& complexNum);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_RealVal*\
 用于初始化正在构造的复数的实部值。
@@ -98,9 +99,9 @@ constexpr complex(
 *complexNum*\
 一个复数，其实部和虚部用于初始化正在构造的复数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-第一个构造函数将存储的实部初始化为* \_ RealVal* ，将存储的虚部初始化为* \_ Imagval*。 第二个构造函数将存储的实部初始化为 `complexNum.real()` ，将存储的虚部初始化为 `complexNum.imag()` 。
+第一个构造函数将存储的实部初始化为 *\_ RealVal* ，将存储的虚部初始化为 *\_ Imagval*。 第二个构造函数将存储的实部初始化为 `complexNum.real()` ，将存储的虚部初始化为 `complexNum.imag()` 。
 
 在此实现中，如果转换器不支持成员模板函数，则模板：
 
@@ -167,7 +168,7 @@ T imag() const;
 T imag(const T& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要提取其虚数值的复数。
@@ -176,7 +177,7 @@ T imag(const T& right);
 
 复数的虚部。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于复数 *a + bi*，虚部或 Component 是 *Im (a + bi) = b*。
 
@@ -224,7 +225,7 @@ complex<Type>& operator*=(const Type& right);
 complex<Type>& operator*=(const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 复数或与目标复数的参数具有相同类型的数。
@@ -233,7 +234,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 已使用指定为参数的数乘以复数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -309,7 +310,7 @@ complex<Type>& operator+=(const Type& right);
 complex<Type>& operator+=(const complex<Type>& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 复数或与目标复数的参数具有相同类型的数。
@@ -318,7 +319,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 已为复数添加了指定为参数的数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -412,7 +413,7 @@ complex<Type>& operator-=(const Type& _RealPart);
 complex<Type>& operator-=(const complex<Type>& complexNum);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *complexNum*\
 要从目标复数减去的复数。
@@ -424,7 +425,7 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 已为复数从中减去了指定为参数的数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -520,7 +521,7 @@ complex<Type>& operator/=(const Type& _RealPart);
 complex<Type>& operator/=(const complex<Type>& complexNum);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *complexNum*\
 要从目标复数减去的复数。
@@ -532,7 +533,7 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 将复数除以指定为参数的数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -622,7 +623,7 @@ complex<Type>& operator=(const complex<Other>& right);
 complex<Type>& operator=(const Type& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 复数或与目标复数的参数具有相同类型的数。
@@ -631,7 +632,7 @@ complex<Type>& operator=(const Type& right);
 
 为复数分配了指定为参数的数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 重载该操作，以执行简单的算术运算，而无需将数据转换为特定格式。
 
@@ -699,7 +700,7 @@ constexpr T real() const;
 T real(const T& right);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
 要提取其实数值的复数。
@@ -708,7 +709,7 @@ T real(const T& right);
 
 复数的实部。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于复数 *a + bi*，实部或组件会 *重新 (+ bi) = a*。
 
@@ -751,7 +752,7 @@ The imaginary part of c1 is c1.imag() = 3.
 typedef Type value_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `value_type` 是类复杂模板参数的同义词 `Type` 。
 
@@ -780,6 +781,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

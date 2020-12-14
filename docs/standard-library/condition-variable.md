@@ -1,15 +1,16 @@
 ---
+description: 了解详细信息： &lt; condition_variable&gt;
 title: '&lt;condition_variable&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: d13b58fc05055ceecb6472003d7682c41c76e23d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: d3179677c1440777e0f9c1d5c6ff21ba13681aaa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87222532"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233794"
 ---
 # <a name="ltcondition_variablegt"></a>&lt;condition_variable&gt;
 
@@ -24,7 +25,7 @@ ms.locfileid: "87222532"
 **命名空间:** std
 
 > [!NOTE]
-> 在使用 **/clr**编译的代码中，此标头被阻止。
+> 在使用 **/clr** 编译的代码中，此标头被阻止。
 
 ### <a name="remarks"></a>备注
 
@@ -34,7 +35,7 @@ ms.locfileid: "87222532"
 
 若要等待某个事件，首先锁定 mutex，然后调用条件变量上的其中一个 `wait` 方法。 `wait` 调用在其他线程向条件变量发出信号前将保持阻止状态。
 
-当等待条件变量的线程在没有适当的通知的情况下变为取消阻止时发生*虚假唤醒*。 若要识别此类虚假唤醒，等待条件变为 true 的代码应在代码从等待函数返回时显式检查该条件。 这通常是通过使用循环来实现的；可以使用 `wait(unique_lock<mutex>& lock, Predicate pred)` 为你执行此循环。
+当等待条件变量的线程在没有适当的通知的情况下变为取消阻止时发生 *虚假唤醒*。 若要识别此类虚假唤醒，等待条件变为 true 的代码应在代码从等待函数返回时显式检查该条件。 这通常是通过使用循环来实现的；可以使用 `wait(unique_lock<mutex>& lock, Predicate pred)` 为你执行此循环。
 
 ```cpp
 while (condition is false)
@@ -65,7 +66,7 @@ void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
 enum class cv_status { no_timeout, timeout };
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [condition_variable 类](../standard-library/condition-variable-class.md)\

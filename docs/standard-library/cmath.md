@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; h&gt;
 title: '&lt;cmath&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 193961dab5e8825e15919fd325f1f199a3ad4fb3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459268"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234093"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
@@ -575,6 +576,6 @@ long double sph_neumannl(unsigned n, long double x);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

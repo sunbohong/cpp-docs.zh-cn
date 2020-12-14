@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2296
 title: 编译器错误 C2296
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 4c36eb5f01b970b9435b45c75232d875de5818a8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759069"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235224"
 ---
 # <a name="compiler-error-c2296"></a>编译器错误 C2296
 
 "operator"：左操作数错误
 
-与 `operator` 一起使用的左操作数无效。
+与一起使用的左操作数 `operator` 无效。
 
 例如，编译器可能会看到你打算在其中进行函数调用的声明。
 

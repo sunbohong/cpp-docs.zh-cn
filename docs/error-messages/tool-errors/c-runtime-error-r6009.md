@@ -1,4 +1,5 @@
 ---
+description: 了解更多： C 运行时错误 R6009
 title: C 运行时错误 R6009
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6009
 ms.assetid: edfb1f8b-3807-48f4-a994-318923b747ae
-ms.openlocfilehash: 64391f8ec05a99bb85a9d6cd00d6488a945fdb62
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 797e1f98247705afcacc59c0372e241748154a0a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197348"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237707"
 ---
 # <a name="c-runtime-error-r6009"></a>C 运行时错误 R6009
 
@@ -23,13 +24,13 @@ ms.locfileid: "80197348"
 > 可以尝试以下步骤来修复此错误：
 >
 > - 关闭其他正在运行的应用程序或重新启动计算机以释放内存。
-> - 使用**控制面板**中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
+> - 使用 **控制面板** 中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
 > - 检查 "**控制面板**" 中的 "软件更新" **Windows 更新**。
 > - 检查应用的更新版本。 如果问题仍然存在，请与应用程序供应商联系。
 
 **面向程序员的信息**
 
-有足够的内存来加载程序，但没有足够的内存来创建**envp**数组。  这可能是由于内存不足的情况或极大的环境变量使用而导致的。 请考虑以下解决方案之一：
+有足够的内存来加载程序，但没有足够的内存来创建 **envp** 数组。  这可能是由于内存不足的情况或极大的环境变量使用而导致的。 请考虑以下解决方案之一：
 
 - 增加程序可用的内存量。
 

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; cwchar&gt;
 title: '&lt;cwchar&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - cwchar header
 ms.assetid: 7380b1bf-a220-46e5-b832-9f9f4e543aac
-ms.openlocfilehash: e1406bf154cb677be6400bf1cf4122627f64f2ad
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 54cc8996b0c64bf4a35c2caa2c5245061d7f79f5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454178"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232975"
 ---
 # <a name="ltcwchargt"></a>&lt;cwchar&gt;
 
@@ -120,6 +121,6 @@ size_t wcsrtombs(char* dst, const wchar_t** src, size_t len, mbstate_t* ps);
 
 ## <a name="see-also"></a>请参阅
 
-[头文件引用](../standard-library/cpp-standard-library-header-files.md)\
-[C++ 标准库概述](../standard-library/cpp-standard-library-overview.md)\
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
+[C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)\
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

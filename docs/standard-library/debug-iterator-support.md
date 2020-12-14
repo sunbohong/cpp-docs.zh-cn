@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：调试迭代器支持
 title: Debug Iterator Support
 ms.date: 09/13/2018
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: bd2de8423cb7235fdb54a3d0cfe852081ea32b18
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231580"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232949"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -126,7 +127,7 @@ int main()
 }
 ```
 
-请注意，本示例使用 lambda 表达式 `[] (int& elem) { elem *= 2; }` 而不是某个函数。 虽然此选项对于断言失败没有任何影响 - 类似函数会导致相同的故障，lambda 是完成 compact 函数对象任务非常有用的方式。 有关 lambda 表达式的详细信息，请参阅[Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。
+请注意，本示例使用 lambda 表达式 `[] (int& elem) { elem *= 2; }` 而不是某个函数。 虽然此选项对于断言失败没有任何影响 - 类似函数会导致相同的故障，lambda 是完成 compact 函数对象任务非常有用的方式。 有关 lambda 表达式的详细信息，请参阅 [Lambda 表达式](../cpp/lambda-expressions-in-cpp.md)。
 
 ## <a name="iterators-going-out-of-scope"></a>迭代器超出范围
 
@@ -173,6 +174,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [C + + 标准库概述](../standard-library/cpp-standard-library-overview.md)

@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： first_is
 title: 'first_is (c + + COM 特性) '
 ms.date: 10/02/2018
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 1a06206d7df4dace3f749fdc8ceae7f68aaf095c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 151a9defdde078a062f000860ebb40c3d1c9b466
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845258"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236264"
 ---
 # <a name="first_is"></a>first_is
 
@@ -28,9 +29,9 @@ ms.locfileid: "88845258"
 *expression*<br/>
 一个或多个 C 语言表达式。 允许空参数槽。
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
-**First_is** c + + 特性具有与[first_is](/windows/win32/Midl/first-is) MIDL 特性相同的功能。
+**First_is** c + + 特性具有与 [first_is](/windows/win32/Midl/first-is) MIDL 特性相同的功能。
 
 ## <a name="example"></a>示例
 
@@ -67,7 +68,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 有关详细信息，请参见 [特性上下文](cpp-attributes-com-net.md#contexts)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [IDL 特性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 特性](typedef-enum-union-and-struct-attributes.md)<br/>

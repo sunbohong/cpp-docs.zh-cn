@@ -1,4 +1,5 @@
 ---
+description: 了解更多：编译器错误 C2297
 title: 编译器错误 C2297
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
-ms.openlocfilehash: 5f07d522f7594d78df566b6a4be47ad0dadd4b3d
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: d9843592a366054d72b3cc179aec6da85843f105
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74759082"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97235198"
 ---
 # <a name="compiler-error-c2297"></a>编译器错误 C2297
 
 "operator"：右操作数错误
 
-与 `operator` 一起使用的右操作数无效。
+与一起使用的右操作数 `operator` 无效。
 
 例如，编译器可能会看到你打算在其中进行函数调用的声明。
 

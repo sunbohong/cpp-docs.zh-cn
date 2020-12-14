@@ -1,4 +1,5 @@
 ---
+description: 了解更多： C 运行时错误 R6018
 title: C 运行时错误 R6018
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
-ms.openlocfilehash: 83ad191fe1518e5e6bab0798840415ef392db71e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 778b57c7071ab6ce042c9e1c434541c1dbcfad13
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80197283"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97237655"
 ---
 # <a name="c-runtime-error-r6018"></a>C 运行时错误 R6018
 
@@ -22,7 +23,7 @@ ms.locfileid: "80197283"
 >
 > 可以尝试以下步骤来修复此错误：
 >
-> - 使用**控制面板**中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
+> - 使用 **控制面板** 中的 "**应用和功能**" 或 "**程序和功能**" 页来修复或重新安装该程序。
 > - 检查 "**控制面板**" 中的 "软件更新" **Windows 更新**。
 > - 检查应用的更新版本。 如果问题仍然存在，请与应用程序供应商联系。
 
@@ -32,4 +33,4 @@ ms.locfileid: "80197283"
 
 如果程序无意中更改了运行时堆数据，通常会发生此错误。 但是，它也可能是由运行时或操作系统代码中的内部错误引起的。
 
-若要解决此问题，请检查代码中的堆损坏错误。 有关详细信息和示例，请参阅[CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。 接下来，请检查是否正在使用适用于你的应用部署的最新可再发行组件。 有关信息，请参阅[ C++Visual 中的部署](../../windows/deployment-in-visual-cpp.md)。
+若要解决此问题，请检查代码中的堆损坏错误。 有关详细信息和示例，请参阅 [CRT 调试堆详细信息](/visualstudio/debugger/crt-debug-heap-details)。 接下来，请检查是否正在使用适用于你的应用部署的最新可再发行组件。 有关信息，请参阅 [Visual C++ 中的部署](../../windows/deployment-in-visual-cpp.md)。

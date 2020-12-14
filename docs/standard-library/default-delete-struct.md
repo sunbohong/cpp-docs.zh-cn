@@ -1,16 +1,17 @@
 ---
+description: 了解详细信息： default_delete 结构
 title: default_delete 结构
 ms.date: 04/04/2019
 f1_keywords:
 - memory/std::default_delete
 helpviewer_keywords:
 - default_delete struct
-ms.openlocfilehash: 8baa9f5d294cf083fd55414cd529e438f328d1a1
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 5b7d652dbb556957acf96ba63ac9ce14b628fb7e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88845076"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232962"
 ---
 # <a name="default_delete-struct"></a>default_delete 结构
 
@@ -33,13 +34,13 @@ template <class T>
 
 ### <a name="constructors"></a>构造函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[default_delete](#default_delete)|`default_delete` 类型的对象的构造函数。|
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[运算符 ( # B1 ](#op_paren)|要访问的引用运算符 `default_delete` 。|
 
@@ -61,6 +62,6 @@ template <class U>
 void operator()(T*) const;
 ```
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [\<memory>](../standard-library/memory.md)

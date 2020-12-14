@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; codecvt &gt; 枚举
 title: '&lt;codecvt&gt; 枚举'
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,16 +7,16 @@ f1_keywords:
 ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
-ms.openlocfilehash: e67290d8de0b8251191c4a93b66b7e19a293ed61
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bcd40f72f563b3ecf91125f7167f206d4b1b6517
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371946"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234054"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; 枚举
 
-## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a>codecvt_mode枚举
+## <a name="codecvt_mode-enumeration"></a><a name="codecvt_mode"></a> codecvt_mode 枚举
 
 指定 [locale](../standard-library/locale-class.md) facet 的配置信息。
 
@@ -29,7 +30,7 @@ enum codecvt_mode {
 
 ### <a name="remarks"></a>备注
 
-枚举定义了三个常量，这些常量向[\<codecvt>](../standard-library/codecvt.md)中声明的区域设置面提供配置信息。 非重复值为：
+枚举定义了三个常量，它们向中声明的区域设置 facet 提供配置信息 [\<codecvt>](../standard-library/codecvt.md) 。 非重复值为：
 
 - `consume_header`，在读取多字节序列时使用初始标头序列，并确定要读取的后续多字节序列的字节顺序
 
@@ -39,6 +40,6 @@ enum codecvt_mode {
 
 这些常量可以任意组合并用“OR”连在一起。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
-[\<编码>](../standard-library/codecvt.md)
+[\<codecvt>](../standard-library/codecvt.md)

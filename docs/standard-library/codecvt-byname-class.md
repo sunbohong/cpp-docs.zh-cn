@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： codecvt_byname 类
 title: codecvt_byname 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: b48f01126eba7082230fc5e19150d42d1dfad2f3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 526988f46b729e1a3d4ab6892d2c8f1fecba78a4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688291"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97234067"
 ---
 # <a name="codecvt_byname-class"></a>codecvt_byname 类
 
@@ -41,26 +42,26 @@ protected:
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
-*_Locname* \
+*_Locname*\
 已命名的区域设置。
 
-*_Refs* \
+*_Refs*\
 初始引用计数。
 
 ## <a name="remarks"></a>备注
 
 构造已命名的区域设置时，将自动创建 Byname facet。
 
-其行为由已命名的区域设置 *_Locname*确定。 每个构造函数使用 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基对象。
+其行为由已命名的区域设置 *_Locname* 确定。 每个构造函数都用[codecvt](../standard-library/codecvt-class.md) \<CharType, Byte, StateType> () 初始化其基对象 `_Refs` 。
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<locale>
+**标头：**\<locale>
 
 **命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 
-[C++ 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

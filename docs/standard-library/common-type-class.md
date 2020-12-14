@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： common_type 类
 title: common_type 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - common_type class
 - common_type
 ms.assetid: 02bc4e7b-c63d-49de-9f8a-511d3a5c1e7f
-ms.openlocfilehash: 3605b34a2bfc50831c889976ac5ea884053bb642
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7dc41b443f6ec93c9d07ba8e3871346fae09d94f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449494"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233911"
 ---
-# <a name="commontype-class"></a>common_type 类
+# <a name="common_type-class"></a>common_type 类
 
 确定一个或多个类型的通用类型。
 
@@ -41,7 +42,7 @@ struct common_type<T, U, V...> {
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 状态为[已完成类型](../c-language/incomplete-types.md)或无效的类型列表。
 
@@ -92,7 +93,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>输出
 
 ```Output
 Test for typedefs of common_type int
@@ -116,9 +117,9 @@ ClassType: true
 
 ## <a name="requirements"></a>要求
 
-**标头：** \<type_traits>
+**标头：**\<type_traits>
 
-**命名空间：** std
+**命名空间:** std
 
 ## <a name="see-also"></a>请参阅
 

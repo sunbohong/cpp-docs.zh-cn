@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： directory_iterator 类
 title: directory_iterator 类
 ms.date: 09/10/2018
 f1_keywords:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator*
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
-ms.openlocfilehash: a7ccc2a941da079e14092af5b81dc537db4a48c0
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 1bc0ac1d2d7816986bca1f48a41316270e547834
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87215772"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97232780"
 ---
 # <a name="directory_iterator-class"></a>directory_iterator 类
 
@@ -54,7 +55,7 @@ class directory_iterator;
 
 ### <a name="constructors"></a>构造函数
 
-|构造函数|描述|
+|构造函数|说明|
 |-|-|
 |[directory_iterator](#directory_iterator)|构造通过目录中的文件名进行排序的输入迭代器。|
 
@@ -66,11 +67,11 @@ class directory_iterator;
 
 ### <a name="operators"></a>运算符
 
-|操作员|描述|
+|运算符|描述|
 |-|-|
 |[operator！ =](#op_neq)|返回 `!(*this == right)`。|
 |[operator =](#op_as)|默认成员赋值运算符的行为符合预期。|
-|[operator = =](#op_eq)|**`true`** 仅当 **`*this`** 和*权限*都是序列末尾迭代器，或者两者都不是序列的结束迭代器时返回。|
+|[operator = =](#op_eq)|**`true`** 仅当 **`*this`** 和 *权限* 都是序列末尾迭代器，或者两者都不是序列的结束迭代器时返回。|
 |[操作员](#op_star)|返回 `myentry`。|
 |[operator->](#op_cast)|返回 `&**this`。|
 |[operator + +](#op_increment)|调用 `increment()` ，然后返回 **`*this`** 对象的副本，调用 `increment()` ，然后返回副本。|
@@ -81,9 +82,9 @@ class directory_iterator;
 
 **命名空间：** std::experimental::filesystem
 
-## <a name="directory_iteratordirectory_iterator"></a><a name="directory_iterator"></a>directory_iterator：:d irectory_iterator
+## <a name="directory_iteratordirectory_iterator"></a><a name="directory_iterator"></a> directory_iterator：:d irectory_iterator
 
-第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数将*pval*存储在中 `mydir` ，然后尝试将其作为目录打开和读取 `mydir` 。 如果成功，它们会将中的第一个文件名存储在中 `myentry` ; 否则，它们将生成序列末迭代器。
+第一个构造函数将生成序列末迭代器。 第二个和第三个构造函数将 *pval* 存储在中 `mydir` ，然后尝试将其作为目录打开和读取 `mydir` 。 如果成功，它们会将中的第一个文件名存储在中 `myentry` ; 否则，它们将生成序列末迭代器。
 
 默认构造函数的行为符合预期。
 
@@ -96,7 +97,7 @@ directory_iterator(const directory_iterator&) = default;
 directory_iterator(directory_iterator&&) noexcept = default;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pval*\
 存储的文件名路径。
@@ -107,7 +108,7 @@ directory_iterator(directory_iterator&&) noexcept = default;
 *directory_iterator*\
 存储的对象。
 
-## <a name="directory_iteratorincrement"></a><a name="increment"></a>directory_iterator：：递增值
+## <a name="directory_iteratorincrement"></a><a name="increment"></a> directory_iterator：：递增值
 
 该函数尝试转到目录中的下一个文件名。 如果成功，它会将该文件名存储在中 `myentry` ; 否则，它将生成序列末迭代器。
 
@@ -115,7 +116,7 @@ directory_iterator(directory_iterator&&) noexcept = default;
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-## <a name="directory_iteratoroperator"></a><a name="op_neq"></a>directory_iterator：： operator！ =
+## <a name="directory_iteratoroperator"></a><a name="op_neq"></a> directory_iterator：： operator！ =
 
 该成员运算符将返回 `!(*this == right)`。
 
@@ -123,12 +124,12 @@ directory_iterator& increment(error_code& ec) noexcept;
 bool operator!=(const directory_iterator& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
-要[directory_iterator](../standard-library/directory-iterator-class.md)与进行比较的 directory_iterator `directory_iterator` 。
+要[](../standard-library/directory-iterator-class.md)与进行比较的 directory_iterator `directory_iterator` 。
 
-## <a name="directory_iteratoroperator"></a><a name="op_as"></a>directory_iterator：： operator =
+## <a name="directory_iteratoroperator"></a><a name="op_as"></a> directory_iterator：： operator =
 
 默认成员赋值运算符的行为符合预期。
 
@@ -137,25 +138,25 @@ directory_iterator& operator=(const directory_iterator&) = default;
 directory_iterator& operator=(directory_iterator&&) noexcept = default;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
-要[directory_iterator](../standard-library/directory-iterator-class.md)复制到中的 directory_iterator `directory_iterator` 。
+要[](../standard-library/directory-iterator-class.md)复制到中的 directory_iterator `directory_iterator` 。
 
-## <a name="directory_iteratoroperator"></a><a name="op_eq"></a>directory_iterator：： operator = =
+## <a name="directory_iteratoroperator"></a><a name="op_eq"></a> directory_iterator：： operator = =
 
-**`true`** 仅当 **`*this`** 和*right*均为序列末尾迭代器，或者两者都不是序列的结束迭代器时，成员运算符才返回。
+**`true`** 仅当 **`*this`** 和 *right* 均为序列末尾迭代器，或者两者都不是序列的结束迭代器时，成员运算符才返回。
 
 ```cpp
 bool operator==(const directory_iterator& right) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *然后*\
-要[directory_iterator](../standard-library/directory-iterator-class.md)与进行比较的 directory_iterator `directory_iterator` 。
+要[](../standard-library/directory-iterator-class.md)与进行比较的 directory_iterator `directory_iterator` 。
 
-## <a name="directory_iteratoroperator"></a><a name="op_star"></a>directory_iterator：： operator *
+## <a name="directory_iteratoroperator"></a><a name="op_star"></a> directory_iterator：： operator *
 
 该成员运算符将返回 `myentry`。
 
@@ -163,7 +164,7 @@ bool operator==(const directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="directory_iteratoroperator-"></a><a name="op_cast"></a>directory_iterator：： operator->
+## <a name="directory_iteratoroperator-"></a><a name="op_cast"></a> directory_iterator：： operator->
 
 成员函数返回 `&**this`。
 
@@ -171,7 +172,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```
 
-## <a name="directory_iteratoroperator"></a><a name="op_increment"></a>directory_iterator：： operator + +
+## <a name="directory_iteratoroperator"></a><a name="op_increment"></a> directory_iterator：： operator + +
 
 第一个成员函数调用 `increment()` ，然后返回 **`*this`** 。 第二个成员函数将创建对象的副本，调用 `increment()` ，然后返回副本。
 
@@ -180,12 +181,12 @@ directory_iterator& operator++();
 directory_iterator& operator++(int);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *整形*\
 增量数。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)\

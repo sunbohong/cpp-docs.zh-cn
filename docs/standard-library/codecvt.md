@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; codecvt&gt;
 title: '&lt;codecvt&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: ec403bd02df0b937269acc71ddf87e1942bb4c5c
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 454637427b4a2c058b8ee8cf4bb5b8bc99215e74
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88836590"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233963"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -44,13 +45,13 @@ ms.locfileid: "88836590"
 
 ### <a name="enumerations"></a>枚举
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[codecvt_mode](../standard-library/codecvt-enums.md#codecvt_mode)|指定区域设置 facet 的配置信息。|
 
 ### <a name="classes"></a>类
 
-|类|说明|
+|类|描述|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|表示在编码为 UCS-2 或 UCS-4 的宽字符和编码为 UTF-8 的字节流之间转换的区域设置 facet。|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|表示在编码为 UTF-16 的宽字符和编码为 UTF-8 的字节流之间转换的区域设置 facet。|
@@ -62,6 +63,6 @@ ms.locfileid: "88836590"
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [头文件引用](../standard-library/cpp-standard-library-header-files.md)

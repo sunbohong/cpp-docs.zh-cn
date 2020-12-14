@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： CLinkCtrl 类
 title: CLinkCtrl 类
 ms.date: 11/04/2016
 f1_keywords:
@@ -34,12 +35,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 80548015ff9f24127280ee94421c8fbda7a647ea
-ms.sourcegitcommit: 1839405b97036891b6e4d37c99def044d6f37eff
+ms.openlocfilehash: a9a106d7511757fac0abfd19194081729a7d4977
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88561409"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97236751"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 类
 
@@ -55,13 +56,13 @@ class CLinkCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CLinkCtrl：： CLinkCtrl](#clinkctrl)|构造 `CLinkCtrl` 对象。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|说明|
+|“属性”|描述|
 |----------|-----------------|
 |[CLinkCtrl：： Create](#create)|创建一个链接控件，并将其附加到 `CLinkCtrl` 对象。|
 |[CLinkCtrl：： CreateEx](#createex)|创建具有扩展样式的链接控件，并将其附加到 `CLinkCtrl` 对象。|
@@ -125,7 +126,7 @@ virtual BOOL Create(DWORD dwStyle,
     UINT nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszLinkMarkup*<br/>
 指向以零结尾的字符串的指针，该字符串包含要显示的标记的文本。 有关详细信息，请参阅 [SysLink 控件概述](/windows/win32/Controls/syslink-overview)中的 "标记和链接访问" 一节。
@@ -184,13 +185,13 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
     UINT  nID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *lpszLinkMarkup*<br/>
 指向以零结尾的字符串的指针，该字符串包含要显示的标记的文本。 有关详细信息，请参阅 [SysLink 控件概述](/windows/win32/Controls/syslink-overview)中的 "标记和链接访问" 一节。
 
 *dwExStyle*<br/>
-指定链接控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*参数。
+指定链接控件的扩展样式。 有关扩展 Windows 样式的列表，请参阅 Windows SDK 中 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的 *dwExStyle* 参数。
 
 *dwStyle*<br/>
 指定链接控件的样式。 应用任何控件样式组合。 有关详细信息，请参阅 Windows SDK 中的 [常见控件样式](/windows/win32/Controls/common-control-styles) 。
@@ -240,13 +241,13 @@ int GetIdealSize(
     SIZE* pSize) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *cxMaxWidth*\
 中链接的最大宽度（以像素为单位）。
 
 *pSize*\
-弄指向 Windows [大小](/windows/win32/api/windef/ns-windef-size) 结构的指针。 此方法返回时，结构的 *cy* 成员将 `SIZE` 包含 *cxMaxWidth*指定的链接文本宽度的理想链接文本高度。 结构的 *cx* 成员包含实际所需的链接文本宽度。
+弄指向 Windows [大小](/windows/win32/api/windef/ns-windef-size) 结构的指针。 此方法返回时，结构的 *cy* 成员将 `SIZE` 包含 *cxMaxWidth* 指定的链接文本宽度的理想链接文本高度。 结构的 *cx* 成员包含实际所需的链接文本宽度。
 
 ### <a name="return-value"></a>返回值
 
@@ -266,7 +267,7 @@ int GetIdealSize(
 BOOL GetItem(PLITEM pItem) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pItem*<br/>
 指向用于接收项信息的 [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) 结构的指针。
@@ -294,7 +295,7 @@ BOOL GetItemID(
     UINT cchID) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iLink*<br/>
 链接控件项的索引。
@@ -306,7 +307,7 @@ BOOL GetItemID(
 一个以 null 结尾的字符串，其中包含指定项的 ID。
 
 *cchID*<br/>
-*SzID*缓冲区的大小（以字符为限）。
+*SzID* 缓冲区的大小（以字符为限）。
 
 ### <a name="return-value"></a>返回值
 
@@ -330,7 +331,7 @@ BOOL GetItemState(
     UINT stateMask = LIS_FOCUSED | LIS_ENABLED | LIS_VISITED) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iLink*<br/>
 链接控件项的索引。
@@ -364,7 +365,7 @@ BOOL GetItemUrl(
     UINT cchUrl) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iLink*<br/>
 链接控件项的索引。
@@ -376,7 +377,7 @@ BOOL GetItemUrl(
 一个以 null 结尾的字符串，其中包含由指定项表示的 URL
 
 *cchUrl*<br/>
-*SzURL*缓冲区的大小（以字符为限）。
+*SzURL* 缓冲区的大小（以字符为限）。
 
 ### <a name="return-value"></a>返回值
 
@@ -397,7 +398,7 @@ BOOL GetItemUrl(
 BOOL HitTest(PLHITTESTINFO phti) const;
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *phti*<br/>
 指向一个结构的指针， `LHITTESTINFO` 该结构包含有关用户所单击的链接的任何信息。
@@ -418,7 +419,7 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 BOOL SetItem(PLITEM pItem);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *pItem*<br/>
 指向 [LITEM](/windows/win32/api/commctrl/ns-commctrl-litem) 结构的指针，该结构包含要设置的信息。
@@ -441,7 +442,7 @@ BOOL SetItemID(
     LPCWSTR szID);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iLink*<br/>
 链接控件项的索引。
@@ -468,7 +469,7 @@ BOOL SetItemState(
     UINT stateMask = LIS_FOCUSED | LIS_ENABLED | LIS_VISITED);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iLink*<br/>
 链接控件项的索引。
@@ -497,7 +498,7 @@ BOOL SetItemUrl(
     LPCWSTR szUrl);
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *iLink*<br/>
 链接控件项的索引。
@@ -513,7 +514,7 @@ BOOL SetItemUrl(
 
 设置由指定的链接控件项表示的 URL。 有关详细信息，请参阅 Windows SDK 中的 Win32 消息 [LM_SETITEM](/windows/win32/Controls/lm-setitem) 。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CWnd 类](../../mfc/reference/cwnd-class.md)

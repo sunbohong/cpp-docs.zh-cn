@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息： &lt; 复杂&gt;
 title: '&lt;complex&gt;'
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: f63fe99238450b8dffbf459ab078a8ecf6623b77
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: b16798cf1725ba6fa681b04f735d44f02a2b1b82
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88831497"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233833"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -24,7 +25,7 @@ ms.locfileid: "88831497"
 
 **命名空间:** std
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 一个复数是有序的实数对。 在纯粹几何术语中，复平面是真实的二维平面。 将复平面与实平面区分开来的特质在于它具有其他代数结构。 这种代数结构有两个基本操作：
 
@@ -42,9 +43,9 @@ ms.locfileid: "88831497"
 
     (*a* */ (*<sup>2</sup>  +  *b*<sup>2</sup>) ，-*b*/ (*a*<sup>2</sup>  +  *b*<sup>2</sup>) # A5
 
-通过表示*z*a bi 形式的复数*z* = (*a*， *b*) ，  =  *a*  +  *bi*其中*i*<sup>2</sup> =-1，实数集的代数的规则可应用于一组复数及其组件。 例如：
+通过表示 *z* a bi 形式的复数 *z* = (*a*， *b*) ，  =    +  其中 *i*<sup>2</sup> =-1，实数集的代数的规则可应用于一组复数及其组件。 例如：
 
-    (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4) *i* =-4 + 7*i*
+    (1 + 2 *i*) \* (2 + 3 *i*) = 1 \* (2 + 3 *i*) + 2 *i* \* (2 + 3 *i*) = (2 + 3 *i*) + (4 *i* + 6 *i*<sup>2</sup>) = (2-6) + (3 + 4) *i* =-4 + 7 *i*
 
 复数的系统是一个域，但它不是一个有序域。 对于实数及其子集的字段，不能进行复数排序，因此不相等不能应用于复数，因为它是实际数字。
 
@@ -62,7 +63,7 @@ ms.locfileid: "88831497"
 
 - 笛卡尔坐标虚分量或虚部 *b*。
 
-- 复数 *r*的模数或绝对值。
+- 复数 *r* 的模数或绝对值。
 
 - 参数或相位角度 *p* （以弧度表示）。
 
@@ -72,7 +73,7 @@ ms.locfileid: "88831497"
 
 ### <a name="functions"></a>函数
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|计算复数的模数。|
 |[acos](../standard-library/complex-functions.md#acos)||
@@ -90,7 +91,7 @@ ms.locfileid: "88831497"
 |[日志](../standard-library/complex-functions.md#log)|返回复数的自然对数。|
 |[log10](../standard-library/complex-functions.md#log10)|返回复数的以 10 为底的对数。|
 |[norm](../standard-library/complex-functions.md#norm)|提取复数的范数。|
-|[polar](../standard-library/complex-functions.md#polar)|返回以笛卡尔坐标形式表示的，对应于指定模数和自变量的复数。|
+|[直流](../standard-library/complex-functions.md#polar)|返回以笛卡尔坐标形式表示的，对应于指定模数和自变量的复数。|
 |[pow](../standard-library/complex-functions.md#pow)|计算通过进行底数为复数的另一个复数次幂运算获得的复数。|
 |[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|提取复数的实分量。|
@@ -102,7 +103,7 @@ ms.locfileid: "88831497"
 
 ### <a name="operators"></a>运算符
 
-|名称|说明|
+|名称|描述|
 |-|-|
 |[operator！ =](../standard-library/complex-operators.md#op_neq)|测试两个复数是否不相等，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。|
 |[操作员](../standard-library/complex-operators.md#op_star)|将两个复数相乘，这两个复数或其中一个可能属于其类型与实部和虚部的类型相同的子集。|
@@ -115,7 +116,7 @@ ms.locfileid: "88831497"
 
 ### <a name="classes"></a>类
 
-|“属性”|说明|
+|“属性”|描述|
 |-|-|
 |[过于\<double>](../standard-library/complex-double.md)|显式专用化的类模板描述了一个对象，该对象存储两个都为类型的有序对象对， **`double`** 其中第一个对象表示复数的实部，第二个对象表示虚部。|
 |[过于\<float>](../standard-library/complex-float.md)|显式专用化的类模板描述了一个对象，该对象存储两个都为类型的有序对象对， **`float`** 其中第一个对象表示复数的实部，第二个对象表示虚部。|
@@ -126,13 +127,13 @@ ms.locfileid: "88831497"
 
 \<complex>标头定义了以下[用户定义的文本](../cpp/user-defined-literals-cpp.md)，这些文本创建了实部为零的复数，虚部为输入参数的值。
 
-|声明|说明|
+|声明|描述|
 |-|-|
 |`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|返回：`complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|返回：`complex<double>{0.0, static_cast<double>(d)}`。|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|返回：`complex<float>{0.0f, static_cast<float>(d)}`。|
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

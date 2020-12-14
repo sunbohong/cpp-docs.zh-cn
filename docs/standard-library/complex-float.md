@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：复杂 &lt; 浮点&gt;
 title: complex&lt;float&gt;
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: 441006c977b4a4249270d0f4809da0fba0163395
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: f3efa0425bbf7b6d1df4a6211d549ccf6693fd5c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87230060"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97233846"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -39,7 +40,7 @@ constexpr complex(
 };
 ```
 
-### <a name="parameters"></a>参数
+### <a name="parameters"></a>parameters
 
 *_RealVal*\
 **`float`** 正在构造的复数的实部的类型值。
@@ -58,7 +59,7 @@ constexpr complex(
 
 类模板复杂的类模板的显式专用化只与它所 **`float`** 定义的构造函数中的类模板不同。 允许从到的转换是 **`float`** **`double`** 隐式的，但从到的到的安全转换不一定是 **`float`** **`long double`** **`explicit`** 。 使用 **`explicit`** 赋值语法将规则用于类型转换的启动。
 
-有关类模板的详细信息 `complex` ，请参阅[complex 类](../standard-library/complex-class.md)。 有关类模板的成员列表 `complex` ，请参见。
+有关类模板的详细信息 `complex` ，请参阅 [complex 类](../standard-library/complex-class.md)。 有关类模板的成员列表 `complex` ，请参见。
 
 ## <a name="example"></a>示例
 
@@ -118,11 +119,11 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="requirements"></a>要求
 
-**标头**：\<complex>
+**标头**： \<complex>
 
 **命名空间:** std
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [complex 类](../standard-library/complex-class.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
