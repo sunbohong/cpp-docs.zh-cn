@@ -1,4 +1,5 @@
 ---
+description: 了解详细信息：使用 SAL 注释减少 C/c + + 代码缺陷
 title: 使用 SAL 批注以减少 C/C++ 代码缺陷
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - SAL annotations
 - code analysis, annotation
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
-ms.openlocfilehash: 1d47608137e2a9d9ed13740a5f4424cc0aff2902
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 96339db124c8f9d1438e9ec2eade9b7e860e1b96
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97288459"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>使用 SAL 批注以减少 C/C++ 代码缺陷
 
@@ -42,7 +43,7 @@ SAL 是 Microsoft 源代码批注语言。 通过使用源代码批注，你可�
 
 - [指定何时以及在何处应用批注](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 
-     列出指定其他 SAL 批注的条件或范围（位置）的 SAL 批注。
+     列出指定其他 SAL 批注的条件或范围 (放置) 的 SAL 注释。
 
 - [内部函数](../code-quality/intrinsic-functions.md)
 
