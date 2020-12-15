@@ -4,16 +4,16 @@ description: Microsoft C/c + + 编译器命令行选项的按字母顺序排列�
 ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 81f2fbfe385e8655193c5862455e6ffca3719c96
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 532ee4aceef281f7aa52fee6cd405a3520409218
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520857"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514549"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>按字母顺序列出的编译器选项
 
-此表包含编译器选项的按字母顺序排序的列表。 有关按类别列出的编译器选项的列表，请参阅[按类别列出的编译器选项](compiler-options-listed-by-category.md)一文。
+此表包含编译器选项的按字母顺序排序的列表。 有关按类别列出的编译器选项的列表，请参阅 [按类别列出的编译器选项](compiler-options-listed-by-category.md) 一文。
 
 ## <a name="compiler-options"></a>编译器选项
 
@@ -24,7 +24,7 @@ ms.locfileid: "87520857"
 | [`/AI`](ai-specify-metadata-directories.md) | 指定要搜索以解析传递到指令的文件引用的目录 [`#using`](../../preprocessor/hash-using-directive-cpp.md) 。 |
 | [`/analyze`](analyze-code-analysis.md) | 启用代码分析。 |
 | [`/arch`](arch-minimum-cpu-architecture.md) | 为代码生成指定体系结构。 |
-| [`/await`](await-enable-coroutine-support.md) | 启用协同程序（可恢复函数）扩展。 |
+| [`/await`](await-enable-coroutine-support.md) | ) 扩展启用协同程序 (可恢复的函数。 |
 | [`/bigobj`](bigobj-increase-number-of-sections-in-dot-obj-file.md) | 增加 .obj 文件中可寻址节的数目。 |
 | [`/C`](c-preserve-comments-during-preprocessing.md) | 在预处理期间保留注释。 |
 | [`/c`](c-compile-without-linking.md) | 编译但不链接。 |
@@ -37,10 +37,10 @@ ms.locfileid: "87520857"
 | [`/E`](e-preprocess-to-stdout.md) | 将预处理器输出复制到标准输出。 |
 | [`/EH`](eh-exception-handling-model.md) | 指定异常处理模型。 |
 | [`/EP`](ep-preprocess-to-stdout-without-hash-line-directives.md) | 将预处理器输出复制到标准输出。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已弃用。 错误报告由 [Windows 错误报告 (WER) ](/windows/win32/wer/windows-error-reporting) 设置控制。 |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | 设置执行字符集。 |
 | [`/experimental:module`](experimental-module.md) | 启用实验性模块支持。 |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | 启用实验相容预处理器支持。 |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | 已弃用。 启用实验相容预处理器支持。 使用 [`/Zc:preprocessor`](zc-preprocessor.md) |
 | [`/F`](f-set-stack-size.md) | 设置堆栈大小。 |
 | [`/favor`](favor-optimize-for-architecture-specifics.md) | 生成针对特定 x64 体系结构进行了优化的代码。 或者，适用于 AMD64 和 EM64T 体系结构中的特定微体系结构。 |
 | [`/FA`](fa-fa-listing-file.md) | 创建列表文件。 |
@@ -55,11 +55,11 @@ ms.locfileid: "87520857"
 | [`/fp`](fp-specify-floating-point-behavior.md) | 指定浮点行为。 |
 | [`/Fp`](fp-name-dot-pch-file.md) | 指定预编译头文件名。 |
 | [`/FR`](fr-fr-create-dot-sbr-file.md)<br /><br /> [`/Fr`](fr-fr-create-dot-sbr-file.md) | 生成浏览器文件。 **`/Fr`** 已弃用。 |
-| [`/FS`](fs-force-synchronous-pdb-writes.md) | 通过 MSPDBSRV.EXE 强制对程序数据库（PDB）文件的所有写入操作进行序列化。 |
+| [`/FS`](fs-force-synchronous-pdb-writes.md) | 通过 MSPDBSRV.EXE (PDB) 文件强制对程序数据库执行所有写入操作的序列化。 |
 | [`/FU`](fu-name-forced-hash-using-file.md) | 强制使用文件名，就像它已被传递到 [`#using`](../../preprocessor/hash-using-directive-cpp.md) 指令一样。 |
 | [`/Fx`](fx-merge-injected-code.md) | 将插入的代码与源文件合并。 |
 | [`/GA`](ga-optimize-for-windows-application.md) | 优化 Windows 应用程序的代码。 |
-| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__cdecl`** 调用约定（仅限 x86）。 |
+| [`/Gd`](gd-gr-gv-gz-calling-convention.md) | **`__cdecl`** 仅 (x86) 使用调用约定。 |
 | [`/Ge`](ge-enable-stack-probes.md) | 已弃用。 激活堆栈探测。 |
 | [`/GF`](gf-eliminate-duplicate-strings.md) | 启用字符串池。 |
 | [`/GH`](gh-enable-pexit-hook-function.md) | 调用挂钩函数 `_pexit`。 |
@@ -67,7 +67,7 @@ ms.locfileid: "87520857"
 | [`/GL`](gl-whole-program-optimization.md) | 启用全程序优化。 |
 | [`/Gm`](gm-enable-minimal-rebuild.md) | 已弃用。 启用最小重新生成。 |
 | [`/GR`](gr-enable-run-time-type-information.md) | 启用运行时类型信息 (RTTI)。 |
-| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__fastcall`** 调用约定（仅限 x86）。 |
+| [`/Gr`](gd-gr-gv-gz-calling-convention.md) | **`__fastcall`** 仅 (x86) 使用调用约定。 |
 | [`/GS`](gs-buffer-security-check.md) | 缓冲区安全检查。 |
 | [`/Gs`](gs-control-stack-checking-calls.md) | 控制堆栈探测。 |
 | [`/GT`](gt-support-fiber-safe-thread-local-storage.md) | 支持使用静态线程本地存储区分配的数据的纤程安全。 |
@@ -77,11 +77,11 @@ ms.locfileid: "87520857"
 | [`/Gw`](gw-optimize-global-data.md) | 启用全程序全局数据优化。 |
 | [`/GX`](gx-enable-exception-handling.md) | 已弃用。 启用同步异常处理。 改为使用 [`/EH`](eh-exception-handling-model.md) 。 |
 | [`/Gy`](gy-enable-function-level-linking.md) | 启用函数级链接。 |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已弃用。 与相同 [`/RTC1`](rtc-run-time-error-checks.md) 。 |
-| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__stdcall`** 调用约定（仅限 x86）。 |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已弃用。 与 `/RTC1` 相同。 |
+| [`/Gz`](gd-gr-gv-gz-calling-convention.md) | **`__stdcall`** 仅 (x86) 使用调用约定。 |
 | [`/H`](h-restrict-length-of-external-names.md) | 已弃用。 限制外部（公共）名称的长度。 |
 | [`/HELP`](help-compiler-command-line-help.md) | 列出编译器选项。 |
-| [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 x64 编译器（本机编译和跨平台编译）。 |
+| [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 x64 编译器 (本机编译和跨平台编译) 。 |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | 创建热可修补映像。 |
 | [`/I`](i-additional-include-directories.md) | 在目录中搜索包含文件。 |
 | [`/J`](j-default-char-type-is-unsigned.md) | 更改默认 **`char`** 类型。 |
@@ -114,12 +114,12 @@ ms.locfileid: "87520857"
 | [`/QIfist`](qifist-suppress-ftol.md) | 已弃用。 当需要从浮点类型转换为整型时（仅限 x86）取消 `_ftol` 。 |
 | [`/Qimprecise_fwaits`](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md) | 删除 `fwait` 块内 **`try`** 的命令。 |
 | [`/QIntel-jcc-erratum`](qintel-jcc-erratum.md) | 缓解 Intel JCC 错误微代码更新对性能的影响。 |
-| [/Qpar （自动并行）](qpar-auto-parallelizer.md) | 对标记有 [#pragma loop()](../../preprocessor/loop.md) 指令的循环启用自动并行化。 |
+| [/Qpar (自动并行) ](qpar-auto-parallelizer.md) | 对标记有 [#pragma loop()](../../preprocessor/loop.md) 指令的循环启用自动并行化。 |
 | [`/Qsafe_fp_loads`](qsafe-fp-loads.md) | 将整数移动指令用于浮点值，并禁用特定浮点加载优化。 |
 | [`/Qspectre`](qspectre.md) | 指定编译器生成指令以缓解某些 Spectre 变体 1 安全漏洞。 |
 | [`/Qspectre-load`](qspectre-load.md) | 指定编译器生成序列化说明，以根据负载说明减少 Spectre 的安全漏洞。 |
 | [`/Qspectre-load-cf`](qspectre-load-cf.md) | 指定编译器的序列化说明的生成，以根据加载内存的控制流指令来减少 Spectre 的安全漏洞。 |
-| [`/Qvec-report`（自动向量化报表级别）](qvec-report-auto-vectorizer-reporting-level.md) | 启用自动矢量化的报告级别。 |
+| [`/Qvec-report` (自动向量化报表级别) ](qvec-report-auto-vectorizer-reporting-level.md) | 启用自动矢量化的报告级别。 |
 | [`/RTC`](rtc-run-time-error-checks.md) | 启用运行时错误检查。 |
 | [`/sdl`](sdl-enable-additional-security-checks.md) | 启用更多安全功能和警告。 |
 | [`/showIncludes`](showincludes-list-include-files.md) | 在编译期间显示包含文件的列表。 |
@@ -175,7 +175,7 @@ ms.locfileid: "87520857"
 | [`/Zs`](zs-syntax-check-only.md) | 只检查语法。 |
 | [`/ZW`](zw-windows-runtime-compilation.md) | 生成要在 Windows 运行时上运行的输出文件。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)\
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

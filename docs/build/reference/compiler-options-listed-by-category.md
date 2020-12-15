@@ -5,16 +5,16 @@ ms.date: 07/29/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: beb10404075d9541872ff4780a725e177356a3b8
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: bf12948658b5f7e3211c423b5302bc52d1b87729
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520948"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514558"
 ---
 # <a name="compiler-options-listed-by-category"></a>按类别列出的编译器选项
 
-本文包含编译器选项的分类列表。 有关按字母顺序排列的列表，请参阅[按字母顺序列出的编译器选项](compiler-options-listed-alphabetically.md)。
+本文包含编译器选项的分类列表。 有关按字母顺序排列的列表，请参阅 [按字母顺序列出的编译器选项](compiler-options-listed-alphabetically.md)。
 
 ## <a name="optimization"></a>优化
 
@@ -59,9 +59,9 @@ ms.locfileid: "87520948"
 | [`/Gw`](gw-optimize-global-data.md) | 启用全程序全局数据优化。 |
 | [`/GX`](gx-enable-exception-handling.md) | 已弃用。 启用同步异常处理。 改为使用 [`/EH`](eh-exception-handling-model.md) 。 |
 | [`/Gy`](gy-enable-function-level-linking.md) | 启用函数级链接。 |
-| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已弃用。 启用快速检查。 （与相同 [`/RTC1`](rtc-run-time-error-checks.md) ） |
+| [`/GZ`](gz-enable-stack-frame-run-time-error-checking.md) | 已弃用。 启用快速检查。 与)  (相同 [`/RTC1`](rtc-run-time-error-checks.md) |
 | [`/Gz`](gd-gr-gv-gz-calling-convention.md) | 使用 **`__stdcall`** 调用约定。 (仅限 x86) |
-| [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 x64 编译器（本机编译和跨平台编译）。 |
+| [`/homeparams`](homeparams-copy-register-parameters-to-stack.md) | 强制将传入寄存器的参数写入其在函数入口的堆栈上的位置。 此编译器选项仅适用于 x64 编译器 (本机编译和跨平台编译) 。 |
 | [`/hotpatch`](hotpatch-create-hotpatchable-image.md) | 创建可热修补的映像。 |
 | [`/Qfast_transcendentals`](qfast-transcendentals-force-fast-transcendentals.md) | 生成快速先验。 |
 | [`/QIfist`](qifist-suppress-ftol.md) | 已弃用。 当需要从浮点型转换为整型时，取消调用 Helper 函数 `_ftol` 。 (仅限 x86) |
@@ -102,7 +102,7 @@ ms.locfileid: "87520948"
 | [`/E`](e-preprocess-to-stdout.md) | 将预处理器输出复制到标准输出。 |
 | [`/EP`](ep-preprocess-to-stdout-without-hash-line-directives.md) | 将预处理器输出复制到标准输出。 |
 | [`/FI`](fi-name-forced-include-file.md) | 预处理指定的包含文件。 |
-| [`/FU`](fu-name-forced-hash-using-file.md) | 强制使用文件名，就像它已被传递到[#using](../../preprocessor/hash-using-directive-cpp.md)指令一样。 |
+| [`/FU`](fu-name-forced-hash-using-file.md) | 强制使用文件名，就像它已被传递到 [#using](../../preprocessor/hash-using-directive-cpp.md) 指令一样。 |
 | [`/Fx`](fx-merge-injected-code.md) | 将插入的代码与源文件合并。 |
 | [`/I`](i-additional-include-directories.md) | 在目录中搜索包含文件。 |
 | [`/P`](p-preprocess-to-a-file.md) | 将预处理器输出写入文件。 |
@@ -144,10 +144,10 @@ ms.locfileid: "87520948"
 | [`/LDd`](md-mt-ld-use-run-time-library.md) | 创建调试动态链接库。 |
 | [`/link`](link-pass-options-to-linker.md) | 将指定的选项传递给 LINK。 |
 | [`/LN`](ln-create-msil-module.md) | 创建 MSIL 模块。 |
-| [`/MD`](md-mt-ld-use-run-time-library.md) | 使用*msvcrt.lib*编译以创建多线程 DLL。 |
-| [`/MDd`](md-mt-ld-use-run-time-library.md) | 使用*msvcrtd.lib*编译以创建调试多线程 DLL。 |
-| [`/MT`](md-mt-ld-use-run-time-library.md) | 使用*libcmt.lib*编译以创建多线程可执行文件。 |
-| [`/MTd`](md-mt-ld-use-run-time-library.md) | 使用*libcmtd.lib*编译以创建调试多线程可执行文件。 |
+| [`/MD`](md-mt-ld-use-run-time-library.md) | 使用 *msvcrt.lib* 编译以创建多线程 DLL。 |
+| [`/MDd`](md-mt-ld-use-run-time-library.md) | 使用 *msvcrtd.lib* 编译以创建调试多线程 DLL。 |
+| [`/MT`](md-mt-ld-use-run-time-library.md) | 使用 *libcmt.lib* 编译以创建多线程可执行文件。 |
+| [`/MTd`](md-mt-ld-use-run-time-library.md) | 使用 *libcmtd.lib* 编译以创建调试多线程可执行文件。 |
 
 ## <a name="miscellaneous"></a>杂项
 
@@ -158,10 +158,10 @@ ms.locfileid: "87520948"
 | [`/analyze`](analyze-code-analysis.md) | 启用代码分析。 |
 | [`/bigobj`](bigobj-increase-number-of-sections-in-dot-obj-file.md) | 增加 .obj 文件中可寻址节的数目。 |
 | [`/c`](c-compile-without-linking.md) | 编译但不链接。 |
-| [`/cgthreads`](cgthreads-code-generation-threads.md) | 指定用于优化和代码生成的*cl.exe*线程数。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
-| [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | 在诊断文本中显示传递给*cl.exe*的源代码文件的完整路径。 |
-| [`/FS`](fs-force-synchronous-pdb-writes.md) | 强制写入 PDB 文件，以便通过*MSPDBSRV.EXE*进行序列化。 |
+| [`/cgthreads`](cgthreads-code-generation-threads.md) | 指定用于优化和代码生成的 *cl.exe* 线程数。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已弃用。 错误报告由 [Windows 错误报告 (WER) ](/windows/win32/wer/windows-error-reporting) 设置控制。 |
+| [`/FC`](fc-full-path-of-source-code-file-in-diagnostics.md) | 在诊断文本中显示传递给 *cl.exe* 的源代码文件的完整路径。 |
+| [`/FS`](fs-force-synchronous-pdb-writes.md) | 强制写入 PDB 文件，以便通过 *MSPDBSRV.EXE* 进行序列化。 |
 | [`/H`](h-restrict-length-of-external-names.md) | 已弃用。 限制外部（公共）名称的长度。 |
 | [`/HELP`](help-compiler-command-line-help.md) | 列出编译器选项。 |
 | [`/J`](j-default-char-type-is-unsigned.md) | 更改默认 **`char`** 类型。 |
@@ -193,7 +193,7 @@ ms.locfileid: "87520948"
 | [`/Yu`](yu-use-precompiled-header-file.md) | 在生成期间使用预编译头文件。 |
 | [`/Y-`](y-ignore-precompiled-header-options.md) | 忽略当前生成中的所有其他预编译头编译器选项。 |
 | [`/Zm`](zm-specify-precompiled-header-memory-allocation-limit.md) | 指定预编译头内存分配限制。 |
-| [`/await`](await-enable-coroutine-support.md) | 启用协同程序（可恢复函数）扩展。 |
+| [`/await`](await-enable-coroutine-support.md) | ) 扩展启用协同程序 (可恢复的函数。 |
 | [`/source-charset`](source-charset-set-source-character-set.md) | 设置源字符集。 |
 | [`/execution-charset`](execution-charset-set-execution-character-set.md) | 设置执行字符集。 |
 | [`/utf-8`](utf-8-set-source-and-executable-character-sets-to-utf-8.md) | 将源和执行字符集设置为 UTF-8。 |
@@ -204,19 +204,19 @@ ms.locfileid: "87520948"
 
 ## <a name="experimental-options"></a>实验性选项
 
-实验性选项只能由某些版本的编译器支持。 它们在不同的编译器版本中也可能具有不同的行为。 对于试验性选项，通常是最好的文档，也是[Microsoft c + + 团队博客](https://devblogs.microsoft.com/cppblog/)。
+实验性选项只能由某些版本的编译器支持。 它们在不同的编译器版本中也可能具有不同的行为。 对于试验性选项，通常是最好的文档，也是 [Microsoft c + + 团队博客](https://devblogs.microsoft.com/cppblog/)。
 
 | 选项 | 目标 |
 |--|--|
 | [`/experimental:module`](experimental-module.md) | 启用实验性模块支持。 |
-| [`/experimental:preprocessor`](experimental-preprocessor.md) | 启用实验相容预处理器支持。 |
+| [`/experimental:preprocessor`](experimental-preprocessor.md) | 已弃用。 启用实验相容预处理器支持。 使用 [`/Zc:preprocessor`](zc-preprocessor.md) |
 
 ## <a name="deprecated-and-removed-compiler-options"></a>弃用并删除的编译器选项
 
 | 选项 | 目标 |
 |--|--|
-| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | 已弃用。 请改用[ `/LN` （创建 MSIL 模块）](ln-create-msil-module.md) 。 |
-| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已弃用。 错误报告由[Windows 错误报告（WER）](/windows/win32/wer/windows-error-reporting)设置控制。 |
+| [`/clr:noAssembly`](clr-common-language-runtime-compilation.md) | 已弃用。 改用[ `/LN` (创建 MSIL 模块) ](ln-create-msil-module.md) 。 |
+| [`/errorReport`](errorreport-report-internal-compiler-errors.md) | 已弃用。 错误报告由 [Windows 错误报告 (WER) ](/windows/win32/wer/windows-error-reporting) 设置控制。 |
 | [`/Fr`](fr-fr-create-dot-sbr-file.md) | 已弃用。 创建无局部变量的浏览信息文件。 |
 | [`/Ge`](ge-enable-stack-probes.md) | 已弃用。 激活堆栈探测。 默认已启用。 |
 | [`/Gm`](gm-enable-minimal-rebuild.md) | 已弃用。 启用最小重新生成。 |
@@ -232,7 +232,7 @@ ms.locfileid: "87520948"
 | [`/Ze`](za-ze-disable-language-extensions.md) | 已弃用。 启用语言扩展。 |
 | [`/Zg`](zg-generate-function-prototypes.md) | 在 Visual Studio 2015 中移除。 生成函数原型。 |
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C/c + + 生成参考](c-cpp-building-reference.md)\
 [MSVC 编译器选项](compiler-options.md)\

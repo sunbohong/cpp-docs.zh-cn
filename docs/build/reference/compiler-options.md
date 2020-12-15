@@ -1,20 +1,19 @@
 ---
 description: 了解更多：编译器选项
 title: MSVC 编译器选项
-ms.date: 05/06/2019
+ms.date: 12/14/2020
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
 - ARM MSVC compiler
 - compiler options, C++
 - x64 MSVC compiler
-ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: a6b124fa5fce68844d53c1324da48c17ef5a9ccf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f89695b00be4ed67a00f947c6b76943bfa5eaf59
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97197018"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514575"
 ---
 # <a name="compiler-options"></a>编译器选项
 
@@ -25,7 +24,7 @@ cl.exe 是一种工具，用于控制 Microsoft c + + (MSVC) C 和 c + + 编译�
 
 编译器生成常见的对象文件格式 (COFF) 对象 ( .obj) 文件。 链接器 () 文件或动态链接库 (Dll) 生成可执行文件或动态链接库。
 
-请注意，所有编译器选项都区分大小写。 可以使用正斜杠 (`/`) 或短划线 (`-`) 来指定编译器选项。
+所有编译器选项都区分大小写。 可以使用正斜杠 (`/`) 或短划线 (`-`) 来指定编译器选项。
 
 若要编译但不链接，请使用 [/c](c-compile-without-linking.md) 选项。
 

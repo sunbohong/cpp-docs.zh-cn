@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: 876e0ca46dd8774796c8a4f9d7572cbff5caa93c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 74bf5b68696499ea8b1d88722d8a9e55f2ecab2d
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97149651"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514585"
 ---
 # <a name="variadic-macros"></a>可变参数宏
 
@@ -21,7 +21,7 @@ ms.locfileid: "97149651"
 
 若要使用可变参数宏，可以在宏定义中将省略号指定为最后一个形参，并且 `__VA_ARGS__` 可以在定义中使用替换标识符来插入额外参数。  `__VA_ARGS__` 替换为与省略号匹配的所有参数，其中包括它们之间的逗号。
 
-C 标准指定必须至少将一个参数传递给省略号，以确保宏不会解析为带有尾随逗号的表达式。 如果没有参数传递给省略号，则传统的 Microsoft c + + 实现将禁止尾随逗号。 如果 `/experimental:preprocessor` 设置了编译器选项，则不会取消尾部的逗号。
+C 标准指定必须至少将一个参数传递给省略号，以确保宏不会解析为带有尾随逗号的表达式。 如果没有参数传递给省略号，则传统的 Microsoft c + + 实现将禁止尾随逗号。 如果 [`/Zc:preprocessor`](../build/reference/zc-preprocessor.md) 设置了编译器选项，则不会取消尾部的逗号。
 
 ## <a name="example"></a>示例
 
