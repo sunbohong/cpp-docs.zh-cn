@@ -138,6 +138,8 @@
           href: ../c-language/name-spaces.md
     - name: 声明和类型
       items:
+        - name: 对齐 (C11)
+          href: ../c-language/alignment-c.md
         - name: 声明和类型
           href: ../c-language/declarations-and-types.md
         - name: 声明概述

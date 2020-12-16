@@ -1,19 +1,18 @@
 ---
 title: 演练：创建和使用自己的动态链接库 (C++)
 description: 使用 C++ 在 Visual Studio 中创建 Windows 动态链接库 (DLL)。
-ms.custom:
-- walkthrough
-- contperfq2
+ms.custom: contperf-fy21q2
+ms.topic: tutorial
 ms.date: 08/22/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
-ms.openlocfilehash: ca9aebd7103d36918940e52638b3c2cb52612c25
-ms.sourcegitcommit: 43a6ff739516dff62fee521d401eb4b1201cea8c
+ms.openlocfilehash: 985d187b88780c8b877f264fe76c1cdcac2a15db
+ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94870683"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412149"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>演练：创建和使用自己的动态链接库 (C++)
 
