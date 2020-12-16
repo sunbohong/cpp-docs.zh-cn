@@ -2,7 +2,7 @@
 title: 预定义宏
 description: 列出并说明 Microsoft C++ 编译器预定义预处理器宏。
 ms.custom: update_every_version
-ms.date: 09/11/2020
+ms.date: 12/14/2020
 f1_keywords:
 - _ATL_VER
 - __ATOM__
@@ -240,12 +240,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: b5e2b34357456c4937d8ed17dee5661d36b7b0c0
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: e4577f7b74c6057df8ebe795ffa0056dbdeae298
+ms.sourcegitcommit: 48b897797b3132ae934b1d191e3870c3c2466335
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448457"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97514535"
 ---
 # <a name="predefined-macros"></a>预定义宏
 
@@ -525,7 +525,9 @@ MSVC 支持以下其他预定义宏。
 
 - `__MSVC_RUNTIME_CHECKS`：当设置了其中一个 `/RTC` 编译器选项时，定义为 1。 其他情况下则不定义。
 
-- `_MSVC_TRADITIONAL`：当设置了预处理器一致性模式 `/experimental:preprocessor` 编译器选项，定义为 0。 默认情况下，或者当设置了 `/experimental:preprocessor-` 编译器选项时，定义为 1，指示正在使用传统预处理器。 从 Visual Studio 2017 版本 15.8 开始，提供 `_MSVC_TRADITIONAL` 宏和 [`/experimental:preprocessor`（启用预处理器一致性模式）](../build/reference/experimental-preprocessor.md)编译器选项。
+- `_MSVC_TRADITIONAL`:
+    - 从 Visual Studio 2017 版本15.8 开始提供：当设置了预处理器一致性模式 [`/experimental:preprocessor`](../build/reference/experimental-preprocessor.md) 编译器选项，定义为 0。 默认情况下，或者当设置了 `/experimental:preprocessor-` 编译器选项时，定义为 1，指示正在使用传统预处理器。
+    - 从 Visual Studio 2019 版本 16.5 开始提供：当设置了预处理器一致性模式 [`/Zc:preprocessor`](../build/reference/zc-preprocessor.md) 编译器选项，定义为 0。 默认情况下，或者当设置了 `/Zc:preprocessor-` 编译器选项时，定义为 1，指示正在使用传统预处理器（实质上，即 `/Zc:preprocessor` 取代了已弃用的 `/experimental:preprocessor`）。
 
    ```cpp
    #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
