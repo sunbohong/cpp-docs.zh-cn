@@ -1,13 +1,14 @@
 ---
+description: 详细了解：整数值的范围
 title: 整数值的范围
 ms.date: 11/04/2016
 ms.assetid: 0e9c6161-8f3f-4bfb-9fcc-a6c8dc97d702
-ms.openlocfilehash: 3a7bff54e3048c7eb52d153aff5aa8ecf24a0516
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fd4def2e255db6a266b009d99b8b5203cacdad07
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227785"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97137353"
 ---
 # <a name="range-of-integer-values"></a>整数值的范围
 

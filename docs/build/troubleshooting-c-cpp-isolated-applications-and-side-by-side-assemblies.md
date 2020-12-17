@@ -1,4 +1,5 @@
 ---
+description: 详细了解：C/C++ 独立应用程序和并行程序集疑难解答
 title: C/C++ 独立应用程序和并行程序集疑难解答
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 0dc8488acc90f1a38a4c0de0f052590ef4f398af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3a93ec13ce36e67f88d772f1dcbad9443fca188
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335436"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277409"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 独立应用程序和并行程序集疑难解答
 

@@ -1,16 +1,17 @@
 ---
+description: 详细了解：操作说明：修改目标框架和平台工具集
 title: 如何：修改目标框架和平台工具集
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 8b3de299652efcdd8fd94622b890b6cec7b059e8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73964906"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156250"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>如何：修改目标框架和平台工具集
 
@@ -55,7 +56,7 @@ Visual Studio 还对 C++ 项目支持多定向。 可以使用 Visual Studio IDE
 
 ### <a name="to-change-the-platform-toolset"></a>更改平台工具集
 
-1. 在 Visual Studio 中，在 **解决方案资源管理器**中，打开您的项目（不适用于您的解决方案）的快捷菜单，然后选择 **属性** 可打开 **项目属性页** 对话框。
+1. 在 Visual Studio 中，在 **解决方案资源管理器** 中，打开您的项目（不适用于您的解决方案）的快捷菜单，然后选择 **属性** 可打开 **项目属性页** 对话框。
 
 1. 在 **“属性页”** 对话框中，打开 **“配置”** 下拉列表，然后选择 **“所有配置”** 。
 

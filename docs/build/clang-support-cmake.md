@@ -1,15 +1,16 @@
 ---
+description: 详细了解：Visual Studio CMake 项目中的 Clang/LLVM 支持
 title: Visual Studio CMake 项目中的 Clang/LLVM 支持
 ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: e23da02a0c3af624ddb30cec8dbb5afda55660c9
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 134a6c5edc62d826000752d3c2d1db370f338836
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919574"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157030"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Visual Studio CMake 项目中的 Clang/LLVM 支持
 
@@ -23,7 +24,7 @@ Visual Studio 2019 中已提供 Clang 支持。
 
 可以将 Clang 和 Visual Studio 配合使用来编辑和调试以 Windows 或 Linux 为目标的 C++ CMake 项目。
 
-**Windows** ：Visual Studio 2019 版本 16.1 支持在 CMake 项目中以 Windows 为目标使用 Clang/LLVM 进行编辑、生成和调试。
+**Windows**：Visual Studio 2019 版本 16.1 支持在 CMake 项目中以 Windows 为目标使用 Clang/LLVM 进行编辑、生成和调试。
 
 Linux  ：对于 Linux CMake 项目，不需要特殊的 Visual Studio 支持。 可以使用发行版的包管理器安装 Clang，并在 CMakeLists.txt 文件中添加适当的命令。
 

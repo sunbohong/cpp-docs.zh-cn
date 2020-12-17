@@ -1,4 +1,5 @@
 ---
+description: 详细了解：针对 64 位 x64 目标配置 C++ 项目
 title: 针对 64 位 x64 目标配置 C++ 项目
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], about 64-bit programming
 - programming [C++], 64-bit
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: 906591544717ed107c284dfb41bbbf2dfdd3c253
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ff8735f2af1621483c52cfda76332d439f98e69
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493295"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156796"
 ---
 # <a name="configure-c-projects-for-64-bit-x64-targets"></a>针对 64 位 x64 目标配置 C++ 项目
 

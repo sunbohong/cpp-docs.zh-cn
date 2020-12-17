@@ -1,4 +1,5 @@
 ---
+description: 详细了解：添加属性
 title: 添加属性
 ms.date: 11/09/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 63985643973782ea2b4240a338d66cb5cc2195dc
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: bc5a93d42e8694d000da11cd667d48812a075f27
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91504686"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97208081"
 ---
 # <a name="add-a-property"></a>添加属性
 

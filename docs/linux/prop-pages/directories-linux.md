@@ -1,13 +1,14 @@
 ---
+description: 详细了解：VC++ 目录 (Linux C++)
 title: VC++ 目录 (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 12d45b93-0a5c-455e-b12a-9b9aad9a6d6c
-ms.openlocfilehash: 764e04b9aa05f4feec51d98a3578812c04bbabb6
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: e1c217558c8b534ed196faaa079cf768e4604dae
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924511"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169783"
 ---
 # <a name="vc-directories-linux-c"></a>VC++ 目录 (Linux C++)
 
@@ -19,7 +20,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ::: moniker range=">=msvc-150"
 
-| Property | 描述 |
+| Property | 说明 |
 |--|--|
 | 包含目录 | 构建 VC++ 项目期间，搜索包含文件时使用的路径。  与环境变量 INCLUDE 相对应。 |
 | 库目录 | 构建 VC++ 项目期间，搜索库文件时使用的路径。  与环境变量 LIB 相对应。 |

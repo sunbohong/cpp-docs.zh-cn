@@ -1,4 +1,5 @@
 ---
+description: 详细了解：DLL 类型
 title: DLL 类型
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: dae44d2dd39597420ce2a2c4e1642e8a7f0784e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 284881d9091791038c547914887275ee02605156
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328505"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156133"
 ---
 # <a name="kinds-of-dlls"></a>DLL 类型
 

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：类型转换 (C)
 title: 类型转换 (C)
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - integral promotions
 - type casts, when performed
 ms.assetid: d130ee7c-03c3-48f4-af7b-1fdba0d3b086
-ms.openlocfilehash: 7d7c55c15a8f3e2a53e350da947cf524ae064a09
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: e352a311c586631db08dc1f3e678d4242afdd797
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87231424"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242855"
 ---
 # <a name="type-conversions-c"></a>类型转换 (C)
 

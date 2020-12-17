@@ -1,4 +1,5 @@
 ---
+description: 详细了解：文件缓冲
 title: 文件缓冲
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - buffers [C++], file buffering
 - files [C++], buffering
 ms.assetid: 6bca67d1-a98f-43ac-9c6e-6c0504357aba
-ms.openlocfilehash: 9bf71601a397e94f7f80e1f3451ae5b822b8b9fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c136ecb63d9ab8390e70e63c9a5b3b8e7e60b2e0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62233786"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97196225"
 ---
 # <a name="file-buffering"></a>文件缓冲
 

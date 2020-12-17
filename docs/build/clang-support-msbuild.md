@@ -1,15 +1,16 @@
 ---
+description: 详细了解：Visual Studio 项目中的 Clang/LLVM 支持
 title: Visual Studio Visual Studio 项目中的 Clang/LLVM 支持
 ms.date: 06/02/2020
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ MSBuild projects
-ms.openlocfilehash: 0b29322c46d7a92dbb265610f93b084a84f37d0d
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 0008eddf41da672a820be02adb723af0b8673285
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922239"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163153"
 ---
 # <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio 项目中的 Clang/LLVM 支持
 

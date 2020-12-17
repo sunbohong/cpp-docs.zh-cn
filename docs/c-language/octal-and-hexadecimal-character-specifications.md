@@ -1,16 +1,17 @@
 ---
+description: 详细了解：八进制和十六进制字符规范
 title: 八进制和十六进制字符规范
 ms.date: 11/04/2016
 helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-ms.openlocfilehash: bcd6eb84503b80b1e38be5d134e7506a0f490891
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 91646244a30cb3ec5ad965914f1bee855fba05d7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229579"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243271"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八进制和十六进制字符规范
 

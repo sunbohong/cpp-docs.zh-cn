@@ -1,13 +1,14 @@
 ---
+description: 详细了解：演练：在命令行上编译 C++/CLI 程序
 title: 演练：在命令行上编译 C++/CLI 程序
 ms.date: 04/23/2019
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-ms.openlocfilehash: 8a5c5659367350a80725b365ef9c431bbec209d1
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 075ac90f08f62fb75c9a220b398f34841eafa60d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877455"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97198994"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>演练：在命令行上编译 C++/CLI 程序
 

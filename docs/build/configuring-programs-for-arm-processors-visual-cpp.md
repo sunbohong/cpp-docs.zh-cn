@@ -1,13 +1,14 @@
 ---
+description: 详细了解：将 C++ 项目配置为可用于 ARM 处理器
 title: 将 C++ 项目配置为可用于 ARM 处理器
 ms.date: 07/11/2018
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
-ms.openlocfilehash: 0dc87e9a119f82c03a11dde0d90c27de71618f5a
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 6ad22cd9e6c51b18bd08dad8be85eafa0ca4efdc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163428"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163011"
 ---
 # <a name="configure-c-projects-for-arm-processors"></a>将 C++ 项目配置为可用于 ARM 处理器
 

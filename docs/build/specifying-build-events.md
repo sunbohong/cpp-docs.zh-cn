@@ -1,4 +1,5 @@
 ---
+description: 详细了解：指定生成事件
 title: 指定生成事件
 ms.date: 12/28/2017
 f1_keywords:
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d1dc9a1f0e379c3abe36117beaf9ef58bcbd064
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315230"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275394"
 ---
 # <a name="specifying-build-events"></a>指定生成事件
 

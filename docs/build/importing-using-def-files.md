@@ -1,4 +1,5 @@
 ---
+description: 详细了解：使用 DEF 文件导入
 title: 使用 DEF 文件导入
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: e4ac48dc013874c240411f78a733d32e116df25d
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9eb4face47bf999daa8f969282cc621708a76006
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87223962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156146"
 ---
 # <a name="importing-using-def-files"></a>使用 DEF 文件导入
 
@@ -30,7 +31,7 @@ EXPORTS
 
 |关键字|在导入库中发出|导出|
 |-------------|---------------------------------|-------------|
-|`CONSTANT`|`_imp_ulDataInDll`，`_ulDataInDll`|`_ulDataInDll`|
+|`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
 使用 `__declspec(dllimport)` 和 CONSTANT 会列出为允许显式链接而创建的 .lib DLL 导入库中的 `imp` 版本和未修饰名。 使用 `__declspec(dllimport)` 和 DATA 只会列出名称的 `imp` 版本。

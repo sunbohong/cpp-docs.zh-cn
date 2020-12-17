@@ -1,4 +1,5 @@
 ---
+description: 详细了解：基本类型的存储
 title: 基本类型的存储
 ms.date: 10/02/2019
 helpviewer_keywords:
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-ms.openlocfilehash: 973866a912b694510d587df765ac8dd54176638e
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: c8ae057de19e04327491fd73e45bcd32c1db7738
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211666"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296636"
 ---
 # <a name="storage-of-basic-types"></a>基本类型的存储
 
@@ -36,11 +37,11 @@ ms.locfileid: "87211666"
 
 |类型|存储|
 |----------|-------------|
-|**`char`** , **`unsigned char`** , **`signed char`**|1 个字节|
-|**`short`** , **`unsigned short`**|2 个字节|
-|**`int`** , **`unsigned int`**|4 个字节|
-|**`long`** , **`unsigned long`**|4 个字节|
-|**`long long`** , **`unsigned long long`**|8 个字节|
+|**`char`**, **`unsigned char`**, **`signed char`**|1 个字节|
+|**`short`**, **`unsigned short`**|2 个字节|
+|**`int`**, **`unsigned int`**|4 个字节|
+|**`long`**, **`unsigned long`**|4 个字节|
+|**`long long`**, **`unsigned long long`**|8 个字节|
 |**`float`**|4 个字节|
 |**`double`**|8 个字节|
 |**`long double`**|8 个字节|

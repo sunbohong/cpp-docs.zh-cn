@@ -1,13 +1,14 @@
 ---
+description: 了解详细信息：x64 prolog 和 epilog
 title: x64 prolog 和 epilog
 ms.date: 12/17/2018
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-ms.openlocfilehash: d0b7444af6e434a09f6af5f5b1c144b46c79ad56
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3bd4e2350a678e16a1c506ec8cd16497f78b7ec9
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328435"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179767"
 ---
 # <a name="x64-prolog-and-epilog"></a>x64 prolog 和 epilog
 

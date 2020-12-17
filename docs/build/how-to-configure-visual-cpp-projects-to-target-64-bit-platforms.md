@@ -1,4 +1,5 @@
 ---
+description: 详细了解：操作说明：针对 64 位 x64 平台配置 Visual Studio C++ 项目
 title: 如何：针对 64 位 x64 平台配置 Visual Studio C++ 项目
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 762fd5d6ddbb55713cf2fc5e34cb33fb91b08eb9
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 717f9db302f4a7bfef12d30830336b22f9fc5169
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492242"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156367"
 ---
 # <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>如何：针对 64 位 x64 平台配置 Visual Studio C++ 项目
 
@@ -24,11 +25,11 @@ ms.locfileid: "68492242"
 1. 打开该项目的属性页面。 有关详细信息，请参阅[在 Visual Studio 中设置 C++ 编译器和生成属性](working-with-project-properties.md)。
 
    > [!NOTE]
-   > 对于.NET 项目，请确保在“\<项目名称>属性页面”对话框中选择“配置属性”节点或一个子节点；否则“配置管理器”按钮仍然不可用    。
+   > 对于.NET 项目，请确保在“\<Projectname> 属性页面”对话框中选择“配置属性”节点或一个子节点；否则“配置管理器”按钮仍然不可用。
 
 1. 选择“配置管理器”  按钮以打开“配置管理器”  对话框。
 
-1. 在“活动解决方案平台”下拉列表中，选择“\<新建...>”选项来打开“新建解决方案平台”对话框    。
+1. 在“活动解决方案平台”下拉列表中，选择“\<New...>”选项来打开“新建解决方案平台”对话框。
 
 1. 在“键入或选择新平台”  下拉列表中，选择 64 位目标平台。
 
@@ -37,7 +38,7 @@ ms.locfileid: "68492242"
 
 1. 选择“确定”  按钮。 前一步中选择的平台出现在“配置管理器”对话框的“活动解决方案平台”下   。
 
-1. 请在“配置管理器”对话框中选择“关闭”按钮，然后在“\<项目名称>属性页面”对话框中选择“确定”按钮     。
+1. 请在“配置管理器”对话框中选择“关闭”按钮，然后在“\<Projectname>属性页面”对话框中选择“确定”按钮。
 
 ### <a name="to-copy-win32-project-settings-into-a-64-bit-project-configuration"></a>将 Win32 项目设置复制到 64 位项目配置中
 

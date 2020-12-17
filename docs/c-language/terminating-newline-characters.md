@@ -1,13 +1,14 @@
 ---
+description: 详细了解：终止换行符
 title: 终止换行符
 ms.date: 11/04/2016
 ms.assetid: ab145180-a098-41b5-8db0-2520272964ba
-ms.openlocfilehash: e600ad6a515965c6ce01280d555e7eab3134b8fd
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b8bc460235473d35c73487786f689e71b1c759aa
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343027"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114347"
 ---
 # <a name="terminating-newline-characters"></a>终止换行符
 

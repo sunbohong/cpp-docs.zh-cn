@@ -1,4 +1,5 @@
 ---
+description: 详细了解：声明符和变量声明
 title: 声明符和变量声明
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: b20cde6982e99dedaff59518b71c041233a01dd8
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 920c44e3345c6143489815de55ea81470e46d279
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226446"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97306412"
 ---
 # <a name="declarators-and-variable-declarations"></a>声明符和变量声明
 
@@ -63,7 +64,7 @@ __declspec(thread) char *var;
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list type-qualifier*
 
 > [!NOTE]
-> 有关引用 *declarator* 的语法，请参阅[声明概述](../c-language/overview-of-declarations.md)或 [C 语言语法摘要](../c-language/c-language-syntax-summary.md)中的 *declaration* 的语法。
+> 有关引用 *declarator* 的语法，请参阅 [声明概述](../c-language/overview-of-declarations.md)或 [C 语言语法摘要](../c-language/c-language-syntax-summary.md)中的 *declaration* 的语法。
 
 当声明符包含未修改的标识符时，正在声明的项将具有基类型。 如果星号 (<strong>\*</strong>) 显示在标识符的左侧，则将类型修改为指针类型。 如果标识符后跟方括号 ( **[ ]** )，则将类型修改为数组类型。 如果标识符后跟圆括号，则将类型修改为函数类型。 有关解释声明中的优先级的详细信息，请参阅[解释更复杂的声明符](../c-language/interpreting-more-complex-declarators.md)。
 

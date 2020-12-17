@@ -1,15 +1,16 @@
 ---
+description: 详细了解：使用调试版本检查内存改写
 title: 使用调试版本检查内存改写
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-ms.openlocfilehash: 152f72749d2ebdacd46dd3e4db671bc5705d4b6a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 03981696a0314632aebb959d6fa1d986145c087c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87213744"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97199059"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用调试版本检查内存改写
 

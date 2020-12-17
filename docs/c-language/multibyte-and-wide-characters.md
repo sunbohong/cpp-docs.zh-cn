@@ -1,4 +1,5 @@
 ---
+description: 详细了解：多字节和宽字符
 title: 多字节和宽字符
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - character codes [C++], wide
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
-ms.openlocfilehash: 8e27a1832284c109cc2d8a4655f6d093bf7a2d99
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 48063824b66df42d41b51ca491b0eec5f7679274
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87199654"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243383"
 ---
 # <a name="multibyte-and-wide-characters"></a>多字节和宽字符
 

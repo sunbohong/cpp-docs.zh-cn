@@ -1,18 +1,17 @@
 ---
 title: C 关键字
 description: 标准 C 和 Microsoft C 编译器扩展中的关键字。
-ms.date: 10/30/2020
+ms.date: 12/8/2020
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
-ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-ms.openlocfilehash: 9efa3fc353a2386a465227c39f4ae83565ae12c3
-ms.sourcegitcommit: 4abc6c4c9694f91685cfd77940987e29a51e3143
+ms.openlocfilehash: 23a701333220ca58b6e28323fb6aced156337b3f
+ms.sourcegitcommit: be469dd87453255b0e35e333712c8207b09b3dd4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93238481"
+ms.lasthandoff: 12/14/2020
+ms.locfileid: "97412435"
 ---
 # <a name="c-keywords"></a>C 关键字
 
@@ -64,12 +63,12 @@ C 语言使用下列关键字：
     :::column-end:::
     :::column:::
         **`while`**\
-        **`_Alignas`** <sup>2, a</sup>\
-        **`_Alignof`** <sup>2, a</sup>\
+        **[`_Alignas`](alignment-c.md#alignas-and-_alignas-c11)** <sup>2, a</sup>\
+        **[`_Alignof`](alignment-c.md#alignof-and-_alignof-c11)** <sup>2, a</sup>\
         **`_Atomic`** <sup>2, b</sup>\
         **`_Bool`** <sup>1, a</sup>\
         **`_Complex`** <sup>1, b</sup>\
-        **`_Generic`** <sup>2, a</sup>\
+        **[`_Generic`](generic_selection.md)** <sup>2, a</sup>\
         **`_Imaginary`** <sup>1, b</sup>\
         **`_Noreturn`** <sup>2, a</sup>\
         **`_Static_assert`** <sup>2, a</sup>\
