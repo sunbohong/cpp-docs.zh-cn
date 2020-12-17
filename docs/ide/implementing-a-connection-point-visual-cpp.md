@@ -1,16 +1,17 @@
 ---
+description: 详细了解：实现连接点
 title: 实现连接点
 ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: bee04d28036ca5a2dfb0f4913adf39f1fdcca565
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182597"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97281153"
 ---
 # <a name="implement-a-connection-point"></a>实现连接点
 
@@ -30,11 +31,11 @@ ms.locfileid: "66182597"
 
 1. 在类视图中，右键单击 ATL 对象的类名。
 
-1. 从快捷菜单中选择“添加”，然后选择“添加连接点”，显示[实现连接点向导](#implement-connection-point-wizard)   。
+1. 从快捷菜单中选择“添加”，然后选择“添加连接点”，显示[实现连接点向导](#implement-connection-point-wizard)。
 
-1. 从适当的类型库中选择要实现的连接点接口，然后选择“完成”  。
+1. 从适当的类型库中选择要实现的连接点接口，然后选择“完成”。
 
-1. 在类视图中，检查为每个连接点创建的代理类。 类显示为 CProxyInterfaceName\<T>，且派生自 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)  。
+1. 在类视图中，检查为每个连接点创建的代理类。 类显示为 CProxyInterfaceName\<T> 且派生自 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)。
 
 1. 双击连接点类，显示连接点类的定义。
 
@@ -53,7 +54,7 @@ ms.locfileid: "66182597"
 
    - 如果实现其他接口的连接点，则定义包括接口的方法，每个方法前都为 `Fire_`。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - [实现连接点向导](#implement-connection-point-wizard)
 
@@ -69,19 +70,19 @@ ms.locfileid: "66182597"
 
 - **位置**
 
-  显示“可用类型库”列表中当前选择的类型库的位置  。
+  显示“可用类型库”列表中当前选择的类型库的位置。
 
 - **接口**
 
-  显示其定义包含在“可用类型库”框中当前选定的类型库中的接口  。
+  显示其定义包含在“可用类型库”框中当前选定的类型库中的接口。
 
   |传输按钮|说明|
   |---------------------|-----------------|
-  |**>**|将当前在“接口”列表中选择的接口名称添加到“实现连接点”列表中   。|
-  |**>>**|将在“接口”列表中可用的所有接口名称添加到“实现连接点”列表中   。|
-  |**\<**|删除当前在“实现连接点”列表中所选的接口名称  。|
-  |**\<\<**|删除当前在“实现连接点”列表中列出的所有接口名称  。|
+  |**>**|将当前在“接口”列表中选择的接口名称添加到“实现连接点”列表中。|
+  |**>>**|将在“接口”列表中可用的所有接口名称添加到“实现连接点”列表中。|
+  |**\<**|删除当前在“实现连接点”列表中所选的接口名称。|
+  |**\<\<**|删除当前在“实现连接点”列表中列出的所有接口名称。|
 
 - **实现连接点**
 
-  选择“完成”时显示实现其连接点的接口的名称  。
+  选择“完成”时显示实现其连接点的接口的名称。
