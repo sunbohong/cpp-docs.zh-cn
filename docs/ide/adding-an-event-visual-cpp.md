@@ -1,4 +1,5 @@
 ---
+description: 详细了解：添加事件
 title: 添加事件
 ms.date: 11/12/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - events [C++], ActiveX controls
 - add event wizard [C++]
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-ms.openlocfilehash: 1d5a8f5666dd04e00f8a438fdbf00320c37e14f4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c369be0fe241867b101ab458344ae706b1fd440d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693420"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97240814"
 ---
 # <a name="add-an-event"></a>添加事件
 
@@ -32,7 +33,7 @@ ms.locfileid: "51693420"
 
 1. 选择“完成”，将事件添加到项目。
 
-## <a name="in-this-section"></a>本节内容
+## <a name="in-this-section"></a>在本节中
 
 - [添加事件向导](#add-event-wizard)
 
@@ -65,7 +66,7 @@ ms.locfileid: "51693420"
 
    设置要通过事件传递的参数名称。 键入名称后，必须选择“添加”才能将其添加到参数列表中。
 
-   选择“添加”后，参数名称随即显示在“参数列表”中。
+   选择“添加”后，参数名称随即显示在“参数列表”中 。
 
    > [!NOTE]
    > 如果提供参数名称，且随后在选择“添加”前先选择“完成”，则不会将该参数添加到事件中。 必须找到该方法并手动插入参数。

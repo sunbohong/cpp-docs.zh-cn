@@ -1,4 +1,5 @@
 ---
+description: 详细了解：演练：测试项目 (C++)
 title: 演练：测试项目 (C++)
 ms.date: 04/25/2019
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: e0422b4f862b5438a313e25dac421d591bbbb9a5
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 0469f6c161689d2638cfb206c91c2530b72cd00b
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273701"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97334763"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>演练：测试项目 (C++)
 
@@ -19,7 +20,7 @@ ms.locfileid: "70273701"
 
 在本演练中，将在程序运行时观察变量的值，并推导出为什么该值不是期望的值。
 
-## <a name="prerequisites"></a>系统必备
+## <a name="prerequisites"></a>先决条件
 
 - 本演练假定你具备 C++ 语言的基础知识。
 
@@ -33,32 +34,32 @@ ms.locfileid: "70273701"
 
    `Cardgame solitaire(1);`
 
-1. 要在该行上设置断点，请在菜单栏上选择“调试”   > “切换断点”  ，或选择 F9  键。 行的左侧出现一个红色圆圈，它表示已设置断点。 要删除断点，可再次选择菜单命令或 F9  键。
+1. 要在该行上设置断点，请在菜单栏上选择“调试” > “切换断点”，或选择 F9 键。 行的左侧出现一个红色圆圈，它表示已设置断点。 要删除断点，可再次选择菜单命令或 F9 键。
 
    如果使用鼠标，也可通过单击左边距来设置或删除断点。
 
-1. 在菜单栏上，依次选择“调试”   > “启动调试”  ，或选择 F5  键。
+1. 在菜单栏上，依次选择“调试” > “启动调试”，或选择 F5 键。
 
    程序到达具有断点的行时，暂时停止执行，因为程序处于中断模式。 代码行左侧的黄色箭头表示它是要执行的下一行。
 
-1. 要检查变量 `Cardgame::totalParticipants` 的值，请将指针移到 `Cardgame` 上，然后将其移到工具提示窗口左侧的扩展控件上。 显示变量名称 `totalParticipants` 及其值 12  。
+1. 要检查变量 `Cardgame::totalParticipants` 的值，请将指针移到 `Cardgame` 上，然后将其移到工具提示窗口左侧的扩展控件上。 显示变量名称 `totalParticipants` 及其值 12。
 
-   打开变量 `Cardgame::totalParticipants` 的快捷菜单，然后选择“添加监视”以在“监视 1”窗口中显示该变量   。 也可突出显示一个变量并将其拖动到“监视 1”  窗口。
+   打开变量 `Cardgame::totalParticipants` 的快捷菜单，然后选择“添加监视”以在“监视 1”窗口中显示该变量。 也可突出显示一个变量并将其拖动到“监视 1”窗口。
 
-1. 要转到下一代码行，请在菜单栏上依次选择“调试”   > “逐过程执行”  或选择 F10  键。
+1. 要转到下一代码行，请在菜单栏上依次选择“调试” > “逐过程执行”或选择 F10 键。
 
-   “监视 1”  窗口中 `Cardgame::totalParticipants` 的值现在显示为 13  。
+   “监视 1”窗口中 `Cardgame::totalParticipants` 的值现在显示为 13。
 
-1. 打开 `return 0;` 语句的快捷菜单，然后选择“运行到光标处”  。 代码左侧的黄色箭头指向要执行的下一语句。
+1. 打开 `return 0;` 语句的快捷菜单，然后选择“运行到光标处”。 代码左侧的黄色箭头指向要执行的下一语句。
 
-1. `Cardgame` 终止时，`Cardgame::totalParticipants` 数应减少。 此时，`Cardgame::totalParticipants` 应等于 0，因为已删除所有 `Cardgame` 实例，但“监视 1”  窗口指示 `Cardgame::totalparticipants` 等于 18  。 此差异表明代码中存在 bug，可通过完成下一个演练来检测和修复，[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)。
+1. `Cardgame` 终止时，`Cardgame::totalParticipants` 数应减少。 此时，`Cardgame::totalParticipants` 应等于 0，因为已删除所有 `Cardgame` 实例，但“监视 1”窗口指示 `Cardgame::totalparticipants` 等于 18。 此差异表明代码中存在 bug，可通过完成下一个演练（[演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)）来检测和修复该 bug。
 
-1. 要停止该程序，请在菜单栏上选择“调试”   > “停止调试”  或选择 Shift  +F5  键盘快捷方式。
+1. 要停止该程序，请在菜单栏上选择“调试” > “停止调试”或选择 Shift+F5 键盘快捷方式。
 
 ## <a name="next-steps"></a>后续步骤
 
-上一步：  [演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**下一篇：** [演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
+**上一步：** [演练：生成项目 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**下一步：** [演练：调试项目 (C++)](../ide/walkthrough-debugging-a-project-cpp.md)
 
 ## <a name="see-also"></a>请参阅
 

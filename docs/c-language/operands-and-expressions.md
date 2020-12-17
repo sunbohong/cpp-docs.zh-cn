@@ -1,4 +1,5 @@
 ---
+description: 详细了解：操作数和表达式
 title: 操作数和表达式
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - operands, definition
 - operands
 ms.assetid: 8453b095-a017-4c70-9a64-e3b2bd1e35e5
-ms.openlocfilehash: d7e389279c943d6343b28184e6933b62535daae0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1e18cf5a49e1cdcb410baae9a445966e1c655cb4
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64343237"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243189"
 ---
 # <a name="operands-and-expressions"></a>操作数和表达式
 

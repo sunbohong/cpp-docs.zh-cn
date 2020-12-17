@@ -1,16 +1,17 @@
 ---
+description: 详细了解：生存期和可见性的摘要
 title: 生存期和可见性的摘要
 ms.date: 11/04/2016
 helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a1ce139b4fdc2562862eaef1828ec481685eca60
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87220803"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97114476"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>生存期和可见性的摘要
 

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：源文件和源程序
 title: 源文件和源程序
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9fd389f74efac11288b805d95dc2d95d4ec6d2bf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349877"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296896"
 ---
 # <a name="source-files-and-source-programs"></a>源文件和源程序
 

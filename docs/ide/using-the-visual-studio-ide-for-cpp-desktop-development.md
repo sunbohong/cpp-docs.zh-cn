@@ -1,16 +1,17 @@
 ---
+description: 详细了解：使用 Visual Studio IDE 进行 C++ 桌面开发
 title: 使用 Visual Studio IDE 进行 C++ 桌面开发
 ms.date: 04/25/2019
 helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 082aa353d3046d9c9b20669e075e200c96017bce
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: d82b3717525758810720121f1319c763e3de8f43
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371753"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318697"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>使用 Visual Studio IDE 进行 C++ 桌面开发
 
@@ -18,7 +19,7 @@ Visual Studio 集成开发环境 (IDE) 提供一组功能，帮助你管理大�
 
 ## <a name="prerequisites"></a>先决条件
 
-如果尚未安装 Visual Studio，现在即可安装。 有关下载链接和快速演练，请参阅[在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)。 有关如何常规安装 Visual Studio 的详细信息以及出现错误时的故障排除提示，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 安装 Visual Studio 时，请务必选择“使用 C++ 的桌面开发”工作负荷以包含 C++ 编译器、工具和库，因为不会默认安装它们****。
+如果尚未安装 Visual Studio，现在即可安装。 有关下载链接和快速演练，请参阅[在 Visual Studio 中安装 C++ 支持](../build/vscpp-step-0-installation.md)。 有关如何常规安装 Visual Studio 的详细信息以及出现错误时的故障排除提示，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 安装 Visual Studio 时，请务必选择“使用 C++ 的桌面开发”工作负荷以包含 C++ 编译器、工具和库，因为不会默认安装它们。
 
 这些演练假定已安装 Visual Studio 和 Windows 桌面开发所需的 C++ 组件。 我们假定你了解 C++ 语言的基础知识。 如果需要了解 C++，这里有许多可用的书籍和 Web 资源。 “标准 C++ 基础”网站的[快速入门](https://isocpp.org/get-started)是一个不错的开始。
 
@@ -30,11 +31,11 @@ Visual Studio 集成开发环境 (IDE) 提供一组功能，帮助你管理大�
 
 **Visual Studio 2017 安装**
 
-若要获取 Visual Studio 2017，可从[下载 Visual Studio 的旧版本](https://www.visualstudio.com/vs/older-downloads/)进行下载。 请确保在安装 Visual Studio 时包含 C++ 开发工具，因为这些工具不会默认安装。 有关如何安装 Visual Studio 的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 要查看 Visual Studio 2017 的说明，请将 Visual Studio**版本**选择器控件设置为 Visual Studio 2017。 它在页面上的目录顶部找到。
+若要获取 Visual Studio 2017，可从[下载 Visual Studio 的旧版本](https://www.visualstudio.com/vs/older-downloads/)进行下载。 请确保在安装 Visual Studio 时包含 C++ 开发工具，因为这些工具不会默认安装。 有关如何安装 Visual Studio 的详细信息，请参阅[安装 Visual Studio](/visualstudio/install/install-visual-studio)。 若要查看有关 Visual Studio 2017 的说明，请将 Visual Studio“版本”选择器控件设置为 Visual Studio 2017。 它位于页面上目录表的顶部。
 
 **Visual Studio 2015 安装**
 
-若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择“自定义安装”****，然后选择 C++ 组件。
+若要安装 Visual Studio 2015，请转到[下载较旧版本的 Visual Studio](https://www.visualstudio.com/vs/older-downloads/)。 运行安装程序并选择“自定义安装”，然后选择 C++ 组件。
 
 Visual Studio 安装完毕后，即可继续进行。
 

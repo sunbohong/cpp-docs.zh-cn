@@ -1,15 +1,16 @@
 ---
+description: 详细了解：操作说明：在 MSBuild 项目中使用生成事件
 title: 如何：在 MSBuild 项目中使用生成事件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7c35abbcabe62da2e60fbc2393c575e7c3872cf3
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 0c94f02851df3fa41791542841f8ed84305cc9e5
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87224001"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156198"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 项目中使用生成事件
 

@@ -1,15 +1,16 @@
 ---
+description: 详细了解：tasks.vs.json 架构参考 (C++)
 title: tasks.vs.json 架构参考 (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - tasks.vs.json file [C++]
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: a2aea1b64d5a6c62604c680bf1a4a26478b7b52a
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 1fd4cfb960afa1260c8ea85c0e7fe9274c77ac68
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88844985"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97275316"
 ---
 # <a name="tasksvsjson-schema-reference-c"></a>tasks.vs.json 架构参考 (C++)
 
@@ -21,7 +22,7 @@ ms.locfileid: "88844985"
 
 默认属性可用于所有类型的任务：
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`taskLabel`|string| （必选。）指定在用户界面中使用的任务标签。|
 |`appliesTo`|string| （必选。）指定可对其执行命令的文件。 支持使用通配符，例如：“ *”、“* .cpp”、“/*.txt”|
@@ -34,7 +35,7 @@ ms.locfileid: "88844985"
 
 任务类型为 `launch` 时，可以使用以下属性：
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`command`|string| 指定要启动的进程或脚本的完整路径。|
 |`args`|array| 指定传递给命令的参数的逗号分隔列表。|
@@ -86,7 +87,7 @@ ms.locfileid: "88844985"
 
 任务类型为 `remote` 时，可以使用以下属性：
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`remoteMachineName`|string|远程计算机的名称。 必须与“连接管理器”  中的计算机名称匹配。|
 |`command`|string|要发送到远程计算机的命令。 默认情况下，将在远程系统上的 $HOME 目录中执行命令。|
@@ -126,7 +127,7 @@ ms.locfileid: "88844985"
 
 任务类型为 `msbuild` 时，可以使用以下属性：
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`verbosity`|string| 指定 MSBuild 项目生成输出 verbosityAllowed 值：“Quiet”、“Minimal”、“Normal”、“Detailed”、“Diagnostic”。|
 |`toolsVersion`|string| 指定用于生成项目的工具集版本，例如“2.0”、“3.5”、“4.0”、“Current”。 默认为“Current”。|

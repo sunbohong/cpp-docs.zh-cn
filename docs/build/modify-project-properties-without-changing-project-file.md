@@ -1,14 +1,15 @@
 ---
+description: 详细了解：操作说明：在不更改项目文件的情况下修改 C++ 项目属性和目标
 title: 如何：在不更改项目文件的情况下修改 C++ 项目属性和目标
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: a1ba5647542f69cfc7748986e512e74401bfc404
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 91f71ccf7764307fef174d31a63583d6a3ce2aeb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88833356"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97179858"
 ---
 # <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>如何：在不更改项目文件的情况下修改 C++ 项目属性和目标
 

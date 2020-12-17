@@ -1,13 +1,14 @@
 ---
+description: 详细了解：字符测试
 title: 字符测试
 ms.date: 11/04/2016
 ms.assetid: 376ba061-bae3-427e-9569-33fa5949a199
-ms.openlocfilehash: b02d07ca2796e5088c3021f1ae8795ea92761943
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: b7d73bce671787622814e11d8f3add7a1092572a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740102"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97190531"
 ---
 # <a name="character-testing"></a>字符测试
 

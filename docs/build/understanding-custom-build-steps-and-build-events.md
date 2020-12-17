@@ -1,4 +1,5 @@
 ---
+description: 详细了解：了解自定义生成步骤和生成事件
 title: 了解自定义生成步骤和生成事件
 ms.date: 08/29/2019
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: da7e9399a1502c3d7ddaccbfb10a4d2b71fb85cf
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177324"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277396"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自定义生成步骤和生成事件
 

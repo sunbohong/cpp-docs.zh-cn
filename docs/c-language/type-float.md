@@ -1,4 +1,5 @@
 ---
+description: 详细了解：float 类型
 title: float 类型
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-ms.openlocfilehash: 61bfd094801165e0c3e41e5de6fcbfb0c5e59504
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d2245db663885d084ee231d10b7dc944016ea4d
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97242829"
 ---
 # <a name="type-float"></a>float 类型
 
@@ -51,7 +52,7 @@ ms.locfileid: "62346322"
 
 浮点包可以将二进制浮点数存储为非标准化数，而不使用刚刚介绍的存储方法。 “非标准化数”是带有保留指数值的非零浮点数，其中尾数的最高有效位为 0。 通过使用非标准化格式，浮点数的范围可以扩展，但会失去精度。 您无法控制浮点数以标准化形式还是非标准化形式表示；浮点包决定了表示形式。 浮点包从不使用非标准化形式，除非指数变为小于可以标准化形式表示的最小值。
 
-下表显示了可在每种浮点类型的变量中存储的最小值和最大值。 此表中所列的值仅适用于标准化浮点数；非标准化浮点数的最小值更小。 请注意，在 80*x*87 寄存器中保留的数字始终以 80 位标准化形式表示；数字存储在 32 位或 64 位浮点变量（float 类型和 long 类型的变量）中时只能以非标准化形式表示。
+下表显示了可在每种浮点类型的变量中存储的最小值和最大值。 此表中所列的值仅适用于标准化浮点数；非标准化浮点数的最小值更小。 请注意，在 80 *x* 87 寄存器中保留的数字始终以 80 位标准化形式表示；数字存储在 32 位或 64 位浮点变量（float 类型和 long 类型的变量）中时只能以非标准化形式表示。
 
 ### <a name="range-of-floating-point-types"></a>浮点类型的范围
 

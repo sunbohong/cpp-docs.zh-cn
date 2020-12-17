@@ -1,16 +1,17 @@
 ---
+description: 详细了解：按配置文件优化
 title: 按配置文件优化
 ms.date: 04/23/2019
 helpviewer_keywords:
 - profile-guided optimizations
 - optimization, profile-guided [C++]
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
-ms.openlocfilehash: efa4c35810f6272b89ff11cd1c890a7f535cfc1c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: cd6a9627de72ef170e88493ef3e2147a0ccc2bc7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87232724"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187320"
 ---
 # <a name="profile-guided-optimizations"></a>按配置文件优化
 

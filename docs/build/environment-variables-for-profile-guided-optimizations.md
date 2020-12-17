@@ -1,15 +1,16 @@
 ---
+description: 详细了解：用于按配置文件优化的环境变量
 title: 用于按配置优化的环境变量
 ms.date: 03/14/2018
 helpviewer_keywords:
 - profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-ms.openlocfilehash: 099e57f1ac69223adafe7bec1af4cc3452915e86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd78db781fc19b7ecfd451e01dc046b21bd87d11
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195257"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156666"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>用于按配置优化的环境变量
 

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：操作说明：从现有代码创建 C++ 项目
 title: 如何：从现有代码创建 C++ 项目
 ms.date: 05/06/2019
 helpviewer_keywords:
@@ -10,12 +11,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 5e59230186380b787c95dbe08914bcd9d3ca2407
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 0bd08275a812ebc6a2a99d0e12c8b71e30a24b90
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078550"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162776"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>如何：从现有代码创建 C++ 项目
 

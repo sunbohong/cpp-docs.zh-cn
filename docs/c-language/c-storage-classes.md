@@ -1,4 +1,5 @@
 ---
+description: 详细了解：C 存储类
 title: C 存储类
 ms.date: 08/31/2018
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 4f793e8485628faf0a80445ce0414835e3b71d1f
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 000cb06047a948de413dc9bd55d5ec992459d11c
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217163"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214238"
 ---
 # <a name="c-storage-classes"></a>C 存储类
 
@@ -31,7 +32,7 @@ C 提供了以下存储类说明符：
 &nbsp;&nbsp;&nbsp;&nbsp; **`register`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`static`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`extern`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`__declspec (` extended-decl-modifier-seq `)` /\* 特定于 Microsoft \*/
 
 除了 `__declspec` 之外，只能在声明中的 declaration-specifier 内使用一个 storage-class-specifier。 如果没有制定存储类规范，块中的声明将创建自动对象。

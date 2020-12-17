@@ -1,16 +1,17 @@
 ---
+description: 详细了解：独立应用程序和并行程序集的概念
 title: 独立应用程序和并行程序集的概念
 ms.date: 05/06/2019
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: f75a95ccca214f437152d13e099fbd9d03eaaee2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d66e70f95c4d969fdb41b44d609fb8a6c9feacbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493298"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156783"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>独立应用程序和并行程序集的概念
 

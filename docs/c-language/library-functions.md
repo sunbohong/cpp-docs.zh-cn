@@ -1,13 +1,14 @@
 ---
+description: 详细了解：库函数
 title: 库函数
 ms.date: 11/04/2016
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
-ms.openlocfilehash: 6cb9c0197ad625487a2c0e98d176c46c4bba4139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fceed64171e687cff3c987bab9782823147d6fbc
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232778"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243544"
 ---
 # <a name="library-functions"></a>库函数
 

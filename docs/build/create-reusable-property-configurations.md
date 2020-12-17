@@ -1,14 +1,15 @@
 ---
+description: 详细了解：共享或重用 Visual Studio 项目设置
 title: 共享或重用 Visual Studio 项目设置 - C++
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: bcf54be0531c7150c1506eb6f5dda2b5bc95161f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5108bba6526c6c3140680cc12013b0c6232c9a0e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328694"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156835"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>共享或重用 Visual Studio 项目设置
 
@@ -17,7 +18,7 @@ ms.locfileid: "81328694"
 > [!IMPORTANT]
 > **.user 文件以及它们存在问题的原因**
 >
-> 过去的 Visual Studio 版本使用了全局属性表，此表包含 .user 文件名扩展，并且位于\<userprofile>\AppData\Local\Microsoft\MSBuild\v4.0\ folder。 我们不再推荐这些文件，因为它们是针对每个用户、每台计算机来设置项目配置属性的。 特别是如果你在生成计算机上面向多个平台，此类“全局”设置会影响生成。 例如，如果你同时拥有一个 MFC 项目和 Windows Phone 项目，则其中一个项目的 .user 属性将会无效。 可重用的属性表更为灵活，而且更加可靠。
+> 过去的 Visual Studio 版本使用了全局属性表，此表包含 .user 文件名扩展，并且位于 \<userprofile>userprofile>\AppData\Local\Microsoft\MSBuild\v4.0\ 文件夹。 我们不再推荐这些文件，因为它们是针对每个用户、每台计算机来设置项目配置属性的。 特别是如果你在生成计算机上面向多个平台，此类“全局”设置会影响生成。 例如，如果你同时拥有一个 MFC 项目和 Windows Phone 项目，则其中一个项目的 .user 属性将会无效。 可重用的属性表更为灵活，而且更加可靠。
 >
 > 尽管 Visual Studio 仍安装 .user 文件并参与属性继承，但默认情况下，这些文件为空。 最佳做法是删除项目在“属性管理器”中的引用，以确保项目按每个计算机设置和每个用户独立运行。这对确保 SCC（源代码管理）环境中的正确行为来说非常重要  。
 

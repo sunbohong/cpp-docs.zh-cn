@@ -1,14 +1,15 @@
 ---
+description: 详细了解：launch.vs.json 架构参考 (C++)
 title: Launch.vs.json 架构参考 (C++)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 1e235b5f1ff4d7573ddbe57ac4e3c7c9bdbc2eb8
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: a7b18de57208017003717b3cda38fb214fad7f79
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91505676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97172058"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>Launch.vs.json 架构参考 (C++)
 
@@ -16,7 +17,7 @@ ms.locfileid: "91505676"
 
 ## <a name="default-properties"></a>默认属性
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`name`|string|指定调试目标下拉列表中条目的名称。|
 |`type`|string|指定项目是 dll 还是 .exe（默认为 .exe）|
@@ -35,7 +36,7 @@ ms.locfileid: "91505676"
 
 ## <a name="c-linux-properties"></a>C++ Linux 属性
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`program`|string|远程计算机上的程序可执行文件的完整路径。 使用 CMake 时，宏 `${debugInfo.fullTargetPath}` 可用作此字段的值。|
 |`processId`|integer|要将调试程序附加到的可选进程 ID。|
@@ -65,7 +66,7 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 
 与 `setupCommands` 属性配合使用：
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`text`|string|要执行的调试程序命令。|
 |`description`|string|命令的可选说明。|
@@ -75,7 +76,7 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 
 与 `pipeTransport` 属性配合使用：
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`pipeCwd`|string|管道程序工作目录的完全限定的路径。|
 |`pipeProgram`|string|要执行的完全限定的管道命令。|
@@ -88,7 +89,7 @@ externalConsole|boolean|如果为 true，则为调试对象启动控制台。 �
 
 与 `sourceFileMap` 属性配合使用：
 
-|属性|类型|说明|
+|properties|类型|说明|
 |-|-|-|
 |`editorPath`|string|编辑器要查找的源代码的位置。|
 |`useForBreakpoints`|boolean|设置断点时，应使用此源映射。 如果为 `false`，则只有文件名和行号用于设置断点。 如果为 `true`，则只有在使用此源映射时，才会使用文件的完整路径和行号设置断点。 否则，设置断点时将仅使用文件名和行号。 默认为 `true`。|

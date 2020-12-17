@@ -1,4 +1,5 @@
 ---
+description: 详细了解：返回类型
 title: 返回类型
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 1d905e02be02784b562b9d1a8f72a9bfa4057b9b
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 5f4c3c59dd5d89a3c9083eb177bb72e4049ab454
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87226322"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293022"
 ---
 # <a name="return-type"></a>返回类型
 
@@ -37,7 +38,7 @@ function-definition  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`void`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`char`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`short`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`int`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`int`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`__int8` /\* 特定于 Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`__int16` /\* 特定于 Microsoft \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`__int32` /\* 特定于 Microsoft \*/<br/>
@@ -46,7 +47,7 @@ function-definition  ：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`float`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`double`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`signed`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`unsigned`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*

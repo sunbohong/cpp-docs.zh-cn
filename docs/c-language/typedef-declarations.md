@@ -1,4 +1,5 @@
 ---
+description: 详细了解：Typedef 声明
 title: Typedef 声明
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 3d477e33def7168d01f9c5f8a64579fed0b497eb
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: fdb478d0654f0ee9dca30f89e232e9f36bae3f10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87190060"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97319838"
 ---
 # <a name="typedef-declarations"></a>Typedef 声明
 
@@ -30,7 +31,7 @@ typedef 声明的解释方式与变量或函数声明的解释方式相同，只
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier declaration-specifiers*<sub>opt</sub>
 
 *storage-class-specifier*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`typedef`**
+&nbsp;&nbsp;&nbsp;&nbsp;**`typedef`**
 
 *type-specifier*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`void`**<br/>
@@ -41,7 +42,7 @@ typedef 声明的解释方式与变量或函数声明的解释方式相同，只
 &nbsp;&nbsp;&nbsp;&nbsp; **`float`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`double`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`signed`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`unsigned`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`unsigned`**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*

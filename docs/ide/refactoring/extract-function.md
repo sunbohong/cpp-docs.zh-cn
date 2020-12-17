@@ -1,13 +1,14 @@
 ---
+description: 详细了解：提取函数
 title: 提取函数
 ms.date: 11/16/2016
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
-ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae5e858c658d14e72db8740232b74935c655292
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692315"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97259755"
 ---
 # <a name="extract-function"></a>提取函数
 

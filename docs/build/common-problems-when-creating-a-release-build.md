@@ -1,4 +1,5 @@
 ---
+description: 详细了解：创建发行版本时遇到的常见问题
 title: 创建发行版本时遇到的常见问题
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -17,12 +18,12 @@ helpviewer_keywords:
 - troubleshooting release builds
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
-ms.openlocfilehash: 9bd1cafe40417872d42f2e9e1427e5f2eccad7a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7470b87a33b9dc0cb6f7e85b9cfa7b7c1216a936
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328865"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163088"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>创建发行版本时遇到的常见问题
 

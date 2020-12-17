@@ -1,4 +1,5 @@
 ---
+description: 详细了解：参数
 title: 参数
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - ellipsis (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 57648747bbb50ffe46b199a03563757c331f088a
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: b68cd5934e597e486b00f2772e913f627e584ecb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229566"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256817"
 ---
 # <a name="parameters"></a>参数
 
@@ -25,12 +26,12 @@ ms.locfileid: "87229566"
 
 ## <a name="syntax"></a>语法
 
-*`function-definition`* :<br/>
+*`function-definition`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`declaration-specifiers`<sub>opt</sub> `attribute-seq`<sub>opt</sub> `declarator` `declaration-list`<sub>opt</sub> `compound-statement`
 
 /\* `attribute-seq` 是特定于 Microsoft 的 \*/
 
-*`declarator`* :<br/>
+*`declarator`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`pointer`<sub>opt</sub> `direct-declarator`
 
 `direct-declarator`: /\* 函数声明符 \*/<br/>
@@ -38,15 +39,15 @@ ms.locfileid: "87229566"
 &nbsp;&nbsp;&nbsp;&nbsp;`direct-declarator`  `(`  `identifier-list`<sub>opt</sub> `)` /\* 已过时样式声明符 \*/
 
 `parameter-type-list`: /\* 参数列表 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* **`, ...`**
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`, ...`**
 
-*`parameter-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-declaration`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`parameter-list`* **`,`**  *`parameter-declaration`*
+*`parameter-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-declaration`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`parameter-list`* **`,`**  *`parameter-declaration`*
 
-*`parameter-declaration`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declaration-specifiers`* *`declarator`*<br/>
+*`parameter-declaration`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declaration-specifiers`* *`declarator`*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`declaration-specifiers` `abstract-declarator`<sub>opt</sub>
 
 `parameter-type-list` 是以逗号分隔的参数声明序列。 参数列表中的每个参数的格式如下所示：

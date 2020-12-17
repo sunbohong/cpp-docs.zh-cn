@@ -1,13 +1,14 @@
 ---
+description: 详细了解：ARM 异常处理
 title: ARM 异常处理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 4bdf0c88f0c2fe445f3a8865353ca1259ba586fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d37d0ad65f436d1ff67677032f378a30b44e32a3
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323224"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97157121"
 ---
 # <a name="arm-exception-handling"></a>ARM 异常处理
 

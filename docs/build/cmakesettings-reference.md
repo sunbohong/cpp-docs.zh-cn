@@ -1,15 +1,16 @@
 ---
+description: 详细了解：CMakeSettings.json 架构引用
 title: CMakeSettings.json 架构引用
 ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 61da0fd70ad68928872a2212b70377ab8a83a76a
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 2be5edb616764d56e7c08a51be19aab11a62f227
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919392"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156900"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 架构引用
 

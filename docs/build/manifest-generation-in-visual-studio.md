@@ -1,15 +1,16 @@
 ---
+description: 详细了解：Visual Studio 中的清单生成
 title: Visual Studio 中的清单生成
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88d6cac19e7a0c24a28252edda5ac22ca3cadd64
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273349"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176439"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Visual Studio 中的清单生成
 

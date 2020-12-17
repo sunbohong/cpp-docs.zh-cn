@@ -1,4 +1,5 @@
 ---
+description: 详细了解：MFC 应用程序中已本地化的资源：附属 DLL
 title: MFC 应用程序中已本地化的资源：附属 DLL
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: 1f512cc17832564b5eb530b97f8bfb2642c43d43
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 4af771999c97af40ffe50399c77e91aec1af992a
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220740"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97176465"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 应用程序中已本地化的资源：附属 DLL
 

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：do-while 语句 (C)
 title: do-while 语句 (C)
 ms.date: 11/04/2016
 f1_keywords:
@@ -6,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 4a10b9df9f7276eb8e241d76726bca26f2c0cb75
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 9d80bb2aea047d0dc9cc2b7be417a7a44ced9050
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87218866"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97246989"
 ---
 # <a name="do-while-statement-c"></a>do-while 语句 (C)
 

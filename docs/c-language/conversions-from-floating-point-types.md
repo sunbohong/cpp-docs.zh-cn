@@ -1,16 +1,17 @@
 ---
+description: 详细了解：从浮点类型的转换
 title: 从浮点类型的转换
 ms.date: 10/02/2019
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-ms.openlocfilehash: 72d0f95a6e48dcf0a5e8fea3757e85f9a03bf7e4
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 2e2a78a68b39d9109a2304d78070bddef36e9b52
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227889"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97293230"
 ---
 # <a name="conversions-from-floating-point-types"></a>从浮点类型的转换
 

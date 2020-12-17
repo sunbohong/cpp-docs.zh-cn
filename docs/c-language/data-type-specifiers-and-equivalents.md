@@ -1,5 +1,6 @@
 ---
 title: 数据类型说明符和等效项
+description: 介绍 Microsoft Visual C 数据类型说明符及其等效项。
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type specifiers [C++], list
@@ -11,17 +12,16 @@ helpviewer_keywords:
 - data types [C++], specifiers
 - simple types, names
 - type names [C++], simple
-ms.assetid: 0d4b515a-4f68-4786-83cf-a5d43c7cb6f3
-ms.openlocfilehash: cc8ba746bea7f6ea885beb625de414d83367b53f
-ms.sourcegitcommit: f2a135d69a2a8ef1777da60c53d58fe06980c997
+ms.openlocfilehash: 6a1231bc19617dddf1cc01d4c5e7db2863f1055f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87520676"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207041"
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>数据类型说明符和等效项
 
-本书通常使用下表中列出的类型说明符的形式（而不是长形式），并且假定 `char` 类型在默认情况下是带符号的。 因此，在本书中，`char` 与 `signed char` 等效。
+该文档通常使用下表中列出的类型说明符的形式（而不是长形式）。 该文档还假定默认情况下 **`char`** 类型是带符号的。 在整个文档中， **`char`** 与 **`signed char`** 等效。
 
 ## <a name="type-specifiers-and-equivalents"></a>类型说明符和等效项
 
@@ -29,8 +29,8 @@ ms.locfileid: "87520676"
 |--|--|
 | `signed char`<sup>1</sup> | **`char`** |
 | **`signed int`** | **`signed`** , **`int`** |
-| **`signed short int`** | **`short`** , **`signed short`** |
-| **`signed long int`** | **`long`** , **`signed long`** |
+| **`signed short int`** | **`short`**, **`signed short`** |
+| **`signed long int`** | **`long`**, **`signed long`** |
 | **`unsigned char`** | — |
 | **`unsigned int`** | **`unsigned`** |
 | **`unsigned short int`** | **`unsigned short`** |

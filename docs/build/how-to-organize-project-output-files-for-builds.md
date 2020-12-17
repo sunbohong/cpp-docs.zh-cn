@@ -1,16 +1,17 @@
 ---
+description: 详细了解：操作说明：组织生成的项目输出文件
 title: 如何：组织生成的项目输出文件
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1283cb1cc275100551eb9de0a2c0af370aaec51
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328528"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97162659"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>如何：组织生成的项目输出文件
 

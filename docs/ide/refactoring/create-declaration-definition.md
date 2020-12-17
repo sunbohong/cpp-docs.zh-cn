@@ -1,13 +1,14 @@
 ---
+description: 详细了解：创建声明/定义
 title: 创建声明/定义
 ms.date: 10/19/2018
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
-ms.openlocfilehash: 59ae3ebc23303554a35eea17c7e28850a4a1499a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cd111e05f531cc01c499094521cbd51d98980c4e
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97185517"
 ---
 # <a name="create-declaration--definition"></a>创建声明/定义
 

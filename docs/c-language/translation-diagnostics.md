@@ -1,13 +1,14 @@
 ---
+description: 详细了解：翻译：诊断
 title: 翻译：诊断
 ms.date: 11/04/2016
 ms.assetid: 3730ca7c-0147-452d-bd4a-6a1e97e9793e
-ms.openlocfilehash: a274b7c5f29b091b2bf29922abfa4d66d3447b47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09fc44dea8d51dbb267d402745c8c2a095b969d8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344962"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243050"
 ---
 # <a name="translation-diagnostics"></a>翻译：诊断
 

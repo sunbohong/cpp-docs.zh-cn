@@ -1,13 +1,14 @@
 ---
+description: 详细了解：链接器属性 (Linux C++)
 title: 链接器属性 (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: d6c6bc44a4d681f442a5a85ca9d5865c4590f884
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 93ded9016cecb629fe17d171387260179b208f77
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921485"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97169744"
 ---
 # <a name="linker-properties-linux-c"></a>链接器属性 (Linux C++)
 
@@ -21,11 +22,11 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="general"></a>常规
 
-| Property | 描述 | 选项 |
+| properties | 说明 | 选项 |
 |--|--|--|
 | 输出文件 | 该选项可重写链接器创建的程序的默认名称和位置。 (-o) |
 | 显示进度 | 打印链接器进度消息。 |
-| Version | -version 选项让链接器将版本号置于可执行文件的标头中。 |
+| 版本 | -version 选项让链接器将版本号置于可执行文件的标头中。 |
 | 启用详细输出 | -verbose 选项通知链接器输出调试的详细消息。 |
 | 跟踪 | --trace 选项通知链接器输出被处理的输入文件。 |
 | 跟踪符号 | 打印显示有符号的文件列表。 (--trace-symbol=symbol) |
@@ -40,24 +41,24 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="input"></a>输入
 
-| Property | 描述 | 选项 |
+| properties | 说明 | 选项 |
 |--|--|--|
 | 忽略特定默认库 | 指定一个或多个要忽略的默认库的名称。 （--exclude-libs lib、lib） |
 | 忽略默认库 | 忽略默认库，仅搜索明确指定的库。 |
-| 强制取消定义符号引用 | 强制将符号作为未定义符号输入到输入文件中。 (-u symbol --undefined=symbol) |
+| 强制取消定义符号引用 | 强制将符号作为未定义符号输入到输出文件中。 (-u symbol --undefined=symbol) |
 | 库依赖项 | 此选项可指定要添加到链接器命令行的附加库。 会将其他库添加到前缀为“lib”和结尾扩展名为“.a”的链接器命令行的末尾。  (-lFILE) |
 | 附加依赖项 | 指定要添加到链接命令行的附加项。 |
 
 ## <a name="debugging"></a>调试
 
-| Property | 描述 | 选项 |
+| properties | 说明 | 选项 |
 |--|--|--|
-| 调试程序符号信息 | 输出文件中的调试程序符号信息。 | 全部包含 <br>仅忽略调试程序符号信息 <br>忽略所有符号信息 <br> |
+| 调试程序符号信息 | 输出文件中的调试程序符号信息。 | **全部包括**<br>仅忽略调试器符号信息<br>忽略所有符号信息<br> |
 | 映射文件名 | “映射”选项通知链接器使用用户指定的名称创建映射文件。 (-Map=) |
 
 ## <a name="advanced"></a>高级
 
-| Property | 描述 | 选项 |
+| properties | 说明 | 选项 |
 |--|--|--|
 | 重定位之后将变量标记为只读 | 此选项在重定位之后将变量标记为只读。 |
 | 启用即时函数绑定 | 此选项标记用于即时函数绑定的对象。 |

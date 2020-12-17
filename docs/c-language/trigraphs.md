@@ -1,4 +1,5 @@
 ---
+description: 详细了解：三字符组
 title: 三字符组
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -15,18 +16,18 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-ms.openlocfilehash: 3ed8849656ac57f4774825294aba7bb41a050eee
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 70844472de698b581f33adea5dd6b6fa5cdfc8fb
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87227746"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97243063"
 ---
 # <a name="trigraphs"></a>三字符组
 
 C 源程序的源字符集包含在 7 位 ASCII 字符集中，但它是 ISO 646-1983 固定语言代码集的超集。 三元组序列仅允许使用 ISO（国际标准组织）固定语言代码集编写 C 程序。 三元组是三字符序列（由两个连续问号引入），编译器会将它替换为其相应的标点字符。 可以将 C 源文件中的三元组与不包含某些标点字符的方便图形表示形式的字符集一起使用。
 
-C++ 17 从语言中删除三字符组。 实现可能会继续支持三元组作为从物理源文件到*基本源字符集*的实现定义的映射的一部分，但标准不鼓励实现这样做。 通过 C++ 14，三元组受到如在 C 中一样的支持。
+C++ 17 从语言中删除三字符组。 实现可能会继续支持三元组作为从物理源文件到 *基本源字符集* 的实现定义的映射的一部分，但标准不鼓励实现这样做。 通过 C++ 14，三元组受到如在 C 中一样的支持。
 
 Visual C++ 继续支持三元组替换，但默认处于禁用状态。 若要了解如何启用三元组替换，请参阅 [`/Zc:trigraphs`（三元组替换）](../build/reference/zc-trigraphs-trigraphs-substitution.md)。
 

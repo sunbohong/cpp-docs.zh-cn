@@ -1,4 +1,5 @@
 ---
+description: 详细了解：存储类
 title: 存储类
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - static storage class specifiers
 ms.assetid: 39a79ba6-edf5-42b6-8e45-f94227603dd6
-ms.openlocfilehash: 872a014dfc7c21b46f9af810f1cb3463016c7e09
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 87f53c38b2f71acc15499a496e98b1f9c7173210
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87211679"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296727"
 ---
 # <a name="storage-class"></a>存储类
 
@@ -35,7 +36,7 @@ function-definition  ：<br/>
 
 storage-class-specifier  : /\* 针对函数定义 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **`extern`**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **`static`**
+&nbsp;&nbsp;&nbsp;&nbsp;**`static`**
 
 如果函数定义不包括 storage-class-specifier，则存储类默认为 `extern`。 可以将函数显式声明为 `extern`，但这不是必需的。
 

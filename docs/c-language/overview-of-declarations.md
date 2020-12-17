@@ -1,16 +1,17 @@
 ---
+description: 详细了解：声明概述
 title: 声明概述
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 066c0fd307c7562d70c57c31dff23960a6305f2c
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: 53b8c808771aa3bb455655e6e0c5b06ff1fa9acd
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217072"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97256843"
 ---
 # <a name="overview-of-declarations"></a>声明概述
 
@@ -18,23 +19,23 @@ ms.locfileid: "87217072"
 
 ## <a name="syntax"></a>语法
 
-*`declaration`* :<br/>
+*`declaration`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`declaration-specifiers` `attribute-seq`<sub>opt</sub> `init-declarator-list`<sub>opt</sub> **`;`**
 
 /\* `attribute-seq`<sub>opt</sub> 是特定于 Microsoft 的 */
 
-*`declaration-specifiers`* :<br/>
+*`declaration-specifiers`*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`storage-class-specifier` `declaration-specifiers`<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`type-specifier` `declaration-specifiers`<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;`type-qualifier` `declaration-specifiers`<sub>opt</sub>
 
-*`init-declarator-list`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`init-declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`init-declarator-list`* **`,`** *`init-declarator`*
+*`init-declarator-list`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`init-declarator-list`* **`,`** *`init-declarator`*
 
-*`init-declarator`* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declarator`*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; *`declarator`* **`=`** *`initializer`*
+*`init-declarator`*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*`declarator`* **`=`** *`initializer`*
 
 > [!NOTE]
 > 下面几个部分中不会重复这种 `declaration` 语法。 下面几个部分中的语法通常以 `declarator` 非终止符开头。

@@ -1,13 +1,14 @@
 ---
+description: 详细了解：指定调用转换
 title: 指定调用转换
 ms.date: 11/04/2016
 ms.assetid: d6b23b76-eab5-4f6d-8731-9a89b6089d28
-ms.openlocfilehash: b817a5f67462cb250477e2015499022bd6c0fe6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 417c62bae540c97c2b6a0fa64a3fff8f1c628f38
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158206"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97296909"
 ---
 # <a name="specifying-calling-conventions"></a>指定调用转换
 

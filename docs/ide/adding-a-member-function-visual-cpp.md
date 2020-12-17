@@ -1,4 +1,5 @@
 ---
+description: 详细了解：添加成员函数
 title: 添加成员函数
 ms.date: 11/09/2018
 f1_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - classes [C++], adding members
 - add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-ms.openlocfilehash: 0e63771e3e01c3829e20d2fe62fa2caf0f8b26f5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 7e40cd3b70b90026ebaebe2ec0af2224d89868f1
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90040777"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97160150"
 ---
 # <a name="add-a-member-function"></a>添加成员函数
 

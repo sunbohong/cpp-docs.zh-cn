@@ -1,16 +1,17 @@
 ---
+description: 详细了解：C 类型说明符
 title: C 类型说明符
 ms.date: 01/29/2018
 helpviewer_keywords:
 - type specifiers, C
 - specifiers, type
 ms.assetid: fbe13441-04c3-4829-b047-06d374adc2b6
-ms.openlocfilehash: 652388fdf345cab7878bbd8c054b769377b322a9
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: afff33e385564f5ef8d04988255a239135be13b0
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87217150"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97214199"
 ---
 # <a name="c-type-specifiers"></a>C 类型说明符
 

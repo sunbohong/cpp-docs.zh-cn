@@ -1,14 +1,15 @@
 ---
+description: 详细了解：自定义 CMake 生成设置
 title: 在 Visual Studio 中自定义 CMake 生成设置
 ms.date: 08/20/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 9fa1a21b26088482fb64441d0ccf0ad968bd480f
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: a7a0dcf946d4bef3a1dc7eb63fd2c22be6740682
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92919262"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97156848"
 ---
 # <a name="customize-cmake-build-settings"></a>自定义 CMake 生成设置
 

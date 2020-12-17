@@ -1,13 +1,14 @@
 ---
+description: 详细了解：移动定义位置
 title: 移动定义位置
 ms.date: 11/16/2016
 ms.assetid: c6d507ac-c61e-4da2-95c8-d504b42e2520
-ms.openlocfilehash: 7957e18732dfae92b7b3ae9cf7ecea441fc3a6b4
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5c0ae4ed5e14a50f4d54226fb298c34099c8aec7
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693200"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97318710"
 ---
 # <a name="move-definition-location"></a>移动定义位置
 

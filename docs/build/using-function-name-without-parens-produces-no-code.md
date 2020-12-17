@@ -1,15 +1,16 @@
 ---
+description: 详细了解：使用没有 () 的函数名不产生代码
 title: 使用没有 () 的函数名不产生代码
 ms.date: 11/04/2016
 helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-ms.openlocfilehash: 51be77dc8f4fe072ea6cc46dd51e38862649feda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fedc296422a759878c26469ccc20955043b3913
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314593"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97277253"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>使用没有 () 的函数名不产生代码
 

@@ -1,4 +1,5 @@
 ---
+description: 详细了解：支持的平台 (Visual C++)
 title: 支持的平台 (Visual C++)
 ms.date: 12/02/2019
 ms.technology: cpp-tools
@@ -6,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, platforms supported
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
-ms.openlocfilehash: 049b28d23c7f5f5f023f3b2964577b75992c2998
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 80f8693a8cef7368953779d82100ce02e41f5cd8
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "75793825"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97207509"
 ---
 # <a name="supported-platforms-visual-c"></a>支持的平台 (Visual C++)
 
@@ -32,17 +33,17 @@ ms.locfileid: "75793825"
 |iOS \*\*|X|X|X|X|
 |Linux \*\*\*|X|X|X|X|
 
-\* 可以使用 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012 Update 1 中包括的 Windows XP 平台工具集生成 Windows XP 和 Windows Server 2003 项目。 有关如何使用此平台工具集的信息，请参阅[配置适用于 Windows XP 的程序](../build/configuring-programs-for-windows-xp.md)。 有关更改平台工具集的其他信息，请参阅 [如何：修改目标框架和平台工具集](../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
+\* 可以使用 Visual Studio 2017、Visual Studio 2015、Visual Studio 2013 和 Visual Studio 2012 Update 1 中包括的 Windows XP 平台工具集生成 Windows XP 和 Windows Server 2003 项目。 有关如何使用此平台工具集的信息，请参阅[配置适用于 Windows XP 的程序](../build/configuring-programs-for-windows-xp.md)。 有关更改平台工具集的其他信息，请参阅[如何：修改目标框架和平台工具集](../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
 
-\*\*可安装 Visual Studio 2017 及更高版本安装程序中的**使用 C++ 的移动开发**工作负荷。 在 Visual Studio 2015 安装程序中，选择**用于跨平台移动开发的 Visual C++** 可选组件，以面向 iOS 或 Android 平台。 有关说明，请参阅[安装用于跨平台移动开发的 Visual C++](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)。 要生成 iOS 代码，必须拥有 Mac 计算机并满足其他需求。 有关先决条件和安装说明的列表，请参阅[安装和配置工具以使用 iOS 进行生成](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios)。 可以生成 x86 或 ARM 代码以匹配目标硬件。 使用 x86 配置以针对 iOS 模拟器、Microsoft Visual Studio Emulator for Android 和某些 Android 设备进行生成。 使用 ARM 配置以针对 iOS 设备和大多数 Android 设备进行生成。
+\*\*可安装 Visual Studio 2017 及更高版本安装程序中的 **使用 C++ 的移动开发** 工作负荷。 在 Visual Studio 2015 安装程序中，选择 **用于跨平台移动开发的 Visual C++** 可选组件，以面向 iOS 或 Android 平台。 有关说明，请参阅[安装用于跨平台移动开发的 Visual C++](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development)。 要生成 iOS 代码，必须拥有 Mac 计算机并满足其他需求。 有关先决条件和安装说明的列表，请参阅[安装和配置工具以使用 iOS 进行生成](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios)。 可以生成 x86 或 ARM 代码以匹配目标硬件。 使用 x86 配置以针对 iOS 模拟器、Microsoft Visual Studio Emulator for Android 和某些 Android 设备进行生成。 使用 ARM 配置以针对 iOS 设备和大多数 Android 设备进行生成。
 
-\*\*\*可安装 Visual Studio 2017 及更高版本安装程序中的**使用 C++ 的 Linux 开发**工作负荷，以面向 Linux 平台。 有关说明，请参阅[下载、安装和设置 Linux 工作负荷](../linux/download-install-and-setup-the-linux-development-workload.md)。 此工具集在目标计算机上编译可执行文件，使用户能够为支持的任何体系结构执行生成操作。
+\*\*\*可安装 Visual Studio 2017 及更高版本安装程序中的 **使用 C++ 的 Linux 开发** 工作负荷，以面向 Linux 平台。 有关说明，请参阅[下载、安装和设置 Linux 工作负荷](../linux/download-install-and-setup-the-linux-development-workload.md)。 此工具集在目标计算机上编译可执行文件，使用户能够为支持的任何体系结构执行生成操作。
 
 \*\*\*\*ARM64 支持在 Visual Studio 2017 及更高版本中提供。
 
-有关如何设置目标平台配置的信息，请参阅 [如何：针对 64 位 x64 平台配置 Visual C++ 项目](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
+有关如何设置目标平台配置的信息，请参阅[如何：针对 64 位 x64 平台配置 Visual C++ 项目](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [Visual Studio 版本中的 Visual C++ 工具和功能](visual-cpp-tools-and-features-in-visual-studio-editions.md)
 - [入门](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)

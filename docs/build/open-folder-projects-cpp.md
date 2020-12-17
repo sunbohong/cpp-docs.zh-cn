@@ -1,15 +1,16 @@
 ---
+description: 详细了解：对 Visual Studio 中 C++ 生成系统的“打开文件夹”支持
 title: 对 Visual Studio 中 C++ 生成系统的“打开文件夹”支持
 ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 03c6a07d19599958de81a604ca77e2772168d441
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 056ad4d1d611f2fc8b1c2d5594057a82b3e54a10
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92924121"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97187567"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>对 Visual Studio 中 C++ 生成系统的“打开文件夹”支持
 

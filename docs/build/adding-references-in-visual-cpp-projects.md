@@ -1,4 +1,5 @@
 ---
+description: 详细了解：使用库和组件
 title: 在 C++ 项目中使用库和组件
 ms.date: 12/10/2018
 f1_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 37c0120b7879678ad65dfbbffc17bd6d6791fdfe
-ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.openlocfilehash: a8933afc1d3d9257e4a8b1d80a39c5fa15a9d438
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87229904"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163257"
 ---
 # <a name="consuming-libraries-and-components"></a>使用库和组件
 
@@ -110,7 +111,7 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
 - **链接库依赖项**
 
-   此属性为 **True**时，项目系统将独立项目生成的 .lib 文件链接到相关项目。 通常，你将指定 **True**。
+   此属性为 **True** 时，项目系统将独立项目生成的 .lib 文件链接到相关项目。 通常，你将指定 **True**。
 
 - **项目标识符**
 
@@ -118,7 +119,7 @@ ActiveX 引用属性仅可用于对 COM 组件的引用。 只有在“引用”
 
 - **使用库依赖项输入**
 
-   当此属性为 **False**时，项目系统不会将库中由独立项目生成的 .obj 文件链接到相关项目。 因此，此值会禁用增量链接。 你通常将指定 **False** ，因为如果存在多个独立项目，则构建应用程序可能会花很长时间。
+   当此属性为 **False** 时，项目系统不会将库中由独立项目生成的 .obj 文件链接到相关项目。 因此，此值会禁用增量链接。 你通常将指定 **False** ，因为如果存在多个独立项目，则构建应用程序可能会花很长时间。
 
 ### <a name="read-only-reference-properties-com--net"></a>只读引用属性（COM 和 .NET）
 

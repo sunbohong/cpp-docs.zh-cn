@@ -1,14 +1,15 @@
 ---
+description: 详细了解：CppProperties.json 参考
 title: CppProperties.json 参考
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: 31b4e7901bf35986e553a9e280da0243d61982a2
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 9067a186d3ab111eda11246d06e3a9d7a164455f
+ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88837900"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97163049"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties.json 参考
 
@@ -125,7 +126,7 @@ Visual Studio 2019 版本 16.3 及更早版本  ：使用环境时，必须在 `
 
 可访问 CppProperties.json  中的下列内置宏：
 
-|宏|描述|
+|宏|说明|
 |-|-|
 |`${workspaceRoot}`| 工作区文件夹的完整路径|
 |`${projectRoot}`| CppProperties.json  所在文件夹的完整路径|
