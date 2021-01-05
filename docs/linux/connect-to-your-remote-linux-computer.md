@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中连接到你的目标 Linux 系统
 description: 如何从 Visual Studio C++ 项目连接到远程 Linux 计算机或适用于 Linux 的 Windows 子系统。
 ms.date: 01/17/2020
-ms.openlocfilehash: da74d1c735a29304fdf46e920eac45580f386259
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: b1907cc4c1c80a9d8ffba06849c9a80f1a8fbfbe
+ms.sourcegitcommit: 387ce22a3b0137f99cbb856a772b5a910c9eba99
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92921784"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97645210"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>在 Visual Studio 中连接到你的目标 Linux 系统
 
@@ -116,7 +116,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="command-line-utility-for-the-connection-manager"></a>用于连接管理器的命令行实用工具  
 
-**Visual Studio 2019 版本 16.5 或更高版本** ：ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 有关 ConnectionManager 命令的示例和完整参考，请参阅 [ConnectionManager 参考](connectionmanager-reference.md)。  
+**Visual Studio 2019 版本 16.5 或更高版本**：ConnectionManager.exe 是用于在 Visual Studio 之外管理远程开发连接的命令行实用工具。 它对于预配新开发计算机之类的任务非常有用。 你也可以使用它来设置 Visual Studio 进行持续集成。 有关 ConnectionManager 命令的示例和完整参考，请参阅 [ConnectionManager 参考](connectionmanager-reference.md)。  
 
 ::: moniker-end
 
@@ -124,7 +124,7 @@ Linux 支持在 Visual Studio 2017 及更高版本中提供。
 
 ## <a name="tcp-port-forwarding"></a>TCP 端口转发
 
-Visual Studio 的 Linux 支持依赖于 TCP 端口转发。 如果在远程系统上 TCP 端口转移处于禁用状态，Rsync  和 gdbserver  会受到影响。 如果你受此依赖关系的影响，则可以从开发者社区取消对此[建议票证](https://developercommunity.visualstudio.com/idea/840265/dont-rely-on-ssh-tcp-port-forwarding-for-c-remote.html)投赞成票。
+Visual Studio 的 Linux 支持依赖于 TCP 端口转发。 如果在远程系统上 TCP 端口转移处于禁用状态，Rsync  和 gdbserver  会受到影响。 如果你受此依赖关系的影响，则可以从开发者社区取消对此[建议票证](https://developercommunity2.visualstudio.com/t/shDonshshtsh-shrelysh-s/840265?space=62)投赞成票。
 
 rsync 由基于 MSBuild 的 Linux 项目和 CMake 项目用来[将标题从远程系统复制到 Windows，以供 IntelliSense 使用](configure-a-linux-project.md#remote_intellisense)。 如果无法启用 TCP 端口转发，请禁用远程标头的自动下载。 要禁用它，请使用“工具”>“选项”>“跨平台”>“连接管理器”>“远程标头 IntelliSense 管理器”  。 如果远程系统没有启用 TCP 端口转发，则当开始下载 IntelliSense 的远程标头时会出现此错误：
 
