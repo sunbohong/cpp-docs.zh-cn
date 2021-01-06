@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 8774f2ec77b9e721733edccdcd0a83e96cb62fe0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 0c38a5eba3a49791c472d5da0f733a18422058ba
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97115438"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951445"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC Internet 编程基础知识
 
@@ -73,7 +73,7 @@ MFC 提供支持 Internet 编程的类。 可以使用 [COleControl](reference/c
 
 有关 Microsoft Internet 技术的详细信息，请参阅 [联网和 Internet](/windows/win32/networking)。
 
-[万维网联合会 (W3C) ](https://go.microsoft.com/fwlink/p/?linkid=37125)发布 HTML、HTTP、CGI 和其他万维网技术的规范。
+[万维网联合会 (W3C) ](https://www.w3.org/)发布 HTML、HTTP、CGI 和其他万维网技术的规范。
 
 ## <a name="more-internet-help"></a><a name="_core_more_internet_help"></a> 更多 internet 帮助
 

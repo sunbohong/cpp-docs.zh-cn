@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: f9552dcd6f5304c96d550e153870f69d78d932ad
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 5d2323e3be78154c6a9d3ded55ab9e1a951d78b7
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97318463"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951486"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 类
 
@@ -32,17 +32,17 @@ class CWaitCursor
 
 ### <a name="public-constructors"></a>公共构造函数
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[CWaitCursor::CWaitCursor](#cwaitcursor)|构造一个 `CWaitCursor` 对象并显示等待光标。|
 
 ### <a name="public-methods"></a>公共方法
 
-|“属性”|描述|
+|“属性”|说明|
 |----------|-----------------|
 |[CWaitCursor：： Restore](#restore)|在等待游标发生更改后将其还原。|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `CWaitCursor` 没有基类。
 
@@ -82,7 +82,7 @@ class CWaitCursor
 CWaitCursor();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 构造函数会自动导致显示等待光标。
 
@@ -105,7 +105,7 @@ CWaitCursor();
 void Restore();
 ```
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 `Restore`即使当前显示等待光标也是一样的。
 
@@ -115,11 +115,11 @@ void Restore();
 
 [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [层次结构图](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget：： BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor)<br/>
 [CCmdTarget：： EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor)<br/>
 [CCmdTarget：： RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)<br/>
 [CWinApp：:D oWaitCursor](../../mfc/reference/cwinapp-class.md#dowaitcursor)<br/>
-[如何实现：在 Microsoft 基础类应用程序中更改鼠标光标](https://go.microsoft.com/fwlink/p/?linkid=128044)
+[使用 Visual C++ 更改 MFC 中窗口的鼠标指针](/troubleshoot/cpp/change-mouse-pointer-window-mfc)

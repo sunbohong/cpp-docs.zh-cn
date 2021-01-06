@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: cefd56e1d11da77f288333fb0e1f9c10ef684d12
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b5ca521bdddb78c3cd7c5dd41f8999b99cb92e20
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97119403"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951432"
 ---
 # <a name="project-build-error-prj0003"></a>项目生成错误 PRJ0003
 
@@ -22,7 +22,7 @@ ms.locfileid: "97119403"
 
 此错误的可能原因包括：
 
-- 你的项目依赖于 ATL 服务器。 从 Visual Studio 2008 开始，ATL Server 不再作为 Visual Studio 的一部分提供，而是在 CodePlex 中作为共享源项目发布。 若要下载 ATL 服务器源代码和工具，请参阅 [Atl 服务器库和工具](https://go.microsoft.com/fwlink/p/?linkid=81979)。
+- 你的项目依赖于 ATL 服务器。 从 Visual Studio 2008 开始，ATL Server 不再作为 Visual Studio 的一部分提供，而是在 CodePlex 中作为共享源项目发布。 若要下载 ATL 服务器源代码和工具，请参阅 [Atl 服务器库和工具](https://archive.codeplex.com/?p=atlserver)。
 
 - 系统资源不足。 关闭一些应用程序以解决此问题。
 
@@ -32,6 +32,6 @@ ms.locfileid: "97119403"
 
 - 对于生成文件项目，缺少在 **生成命令行** 或 **重新生成命令行** 上运行的命令。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [项目生成错误和警告 (PRJxxxx) ](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

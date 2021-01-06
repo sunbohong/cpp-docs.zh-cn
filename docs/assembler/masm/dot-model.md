@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: f4f69b88a2041a13a0b92445c61c4a84d43e442f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a4324b89f1194227edd7f1d5b7bd70560eca16be
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97131425"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951415"
 ---
 # <a name="model-32-bit-masm"></a>. (32 位 MASM) 模型
 
@@ -22,7 +22,7 @@ ms.locfileid: "97131425"
 
 > **.模型***内存-模型*⟦__，__ *语言类型*⟧⟦__，__ *堆栈选项*⟧
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *内存模型*\
 必需参数，确定代码和数据指针的大小。
@@ -37,7 +37,7 @@ ms.locfileid: "97131425"
 
 指定 **NEARSTACK** 将堆栈段组合成单个物理段 (**DGROUP**) 以及数据。 堆栈段寄存器 (**SS**) 假定为与数据段注册 (**DS**) 相同的地址。 **FARSTACK** 不会将堆栈分组到 **DGROUP**;因此， **SS** 不等于 **DS**。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **.**[对于 x64 ( # A0)](masm-for-x64-ml64-exe.md)，不使用模型。
 
@@ -51,7 +51,7 @@ ms.locfileid: "97131425"
 
 ## <a name="code"></a>代码
 
-对于 MASM 的相关示例，可从 [Visual Studio 2010 的 Visual C++ 示例和相关文档](https://go.microsoft.com/fwlink/p/?linkid=178749)下载编译器示例。
+对于 MASM 的相关示例，可从 [Visual Studio 2010 的 Visual C++ 示例和相关文档](https://github.com/Microsoft/vcsamples)下载编译器示例。
 
 下面的示例演示 `.MODEL` 指令的用法。
 
@@ -87,7 +87,7 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [指令参考](directives-reference.md)\
 [MASM BNF 语法](masm-bnf-grammar.md)

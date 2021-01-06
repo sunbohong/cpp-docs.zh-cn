@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 44d885e8e6c7529bd15fa0aa2e7930773400361f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: ac6afbbc2bfef3793e9685a7c9e1054b7d677bd8
+ms.sourcegitcommit: 6183207b11575d7b44ebd7c18918e916a0d8c63d
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97172422"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97951511"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>并行诊断工具（并发运行时）
 
@@ -28,13 +28,13 @@ Visual Studio 调试器包括 " **并行堆栈** " 窗口、" **并行任务** "
 
 并发运行时使用 [Windows 的事件跟踪](/windows/win32/ETW/event-tracing-portal) (ETW) 通知检测工具，例如探查器在发生各种事件时。 这些事件包括当激活或停用计划程序、上下文开始、结束、阻止、取消阻止或生成时，以及并行算法开始或结束的时间。
 
-[并发可视化](/visualstudio/profiling/concurrency-visualizer)工具等工具利用此功能;因此，您通常不需要直接处理这些事件。 但是，当你在开发自定义探查器时，或使用事件跟踪工具（如 [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628)）时，这些事件非常有用。
+[并发可视化](/visualstudio/profiling/concurrency-visualizer)工具等工具利用此功能;因此，您通常不需要直接处理这些事件。 但是，当你在开发自定义探查器或使用 [Windows 性能工具包](/windows-hardware/test/wpt/)等事件跟踪工具时，这些事件非常有用。
 
 仅当启用跟踪时，并发运行时才会引发这些事件。 调用 [concurrency：： EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) 函数可启用事件跟踪，使用 [Concurrency：:D isabletracing](reference/concurrency-namespace-functions.md#disabletracing) 函数来禁用跟踪。
 
 下表介绍了启用事件跟踪时运行时引发的事件：
 
-|事件|描述|值|
+|事件|说明|“值”|
 |-----------|-----------------|-----------|
 |[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|并发运行时的 ETW 提供程序标识符。|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
 |[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|标记与上下文相关的事件。|`5727a00f-50be-4519-8256-f7699871fecb`|
@@ -64,6 +64,6 @@ Visual Studio 调试器包括 " **并行堆栈** " 窗口、" **并行任务** "
 
 运行时跟踪调用和的次数 `EnableTracing` `DisableTracing` 。 因此，如果多次调用 `EnableTracing` ，则必须调用 `DisableTracing` 相同的次数才能禁用跟踪。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [并发运行时](../../parallel/concrt/concurrency-runtime.md)
