@@ -68,7 +68,18 @@
     - name: CMake 预定义配置架构参考
       href: ../build/cmake-predefined-configuration-reference.md
 - name: vcpkg：适用于 C++ 的包管理器
-  href: ../build/vcpkg.md
+  expanded: false
+  items:
+    - name: vcpkg：适用于 C++ 的包管理器
+      href: ../build/vcpkg.md
+    - name: 安装 vcpkg
+      href: ../build/install-vcpkg.md
+    - name: 集成 vcpkg
+      href: ../build/integrate-vcpkg.md
+    - name: 通过 vcpkg 管理库
+      href: ../build/manage-libraries-with-vcpkg.md
+    - name: vcpkg 命令行参考
+      href: ../build/vcpkg-command-line-reference.md
 - name: C++ 生成见解
   href: ../build-insights/get-started-with-cpp-build-insights.md
 - name: 预编译标头文件

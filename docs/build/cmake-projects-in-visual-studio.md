@@ -5,16 +5,16 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 693179c6da368fa84a5ccb0ffaf2b1b1596972b8
-ms.sourcegitcommit: 9c2b3df9b837879cd17932ae9f61cdd142078260
+ms.openlocfilehash: 8aa11d05aba2fe5f0e781dce2c4b801533bede26
+ms.sourcegitcommit: 6acb62dae8e46d9cfaea7c564a7135b2ca037889
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92922334"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97905226"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio 中的 CMake 项目
 
-CMake 是一种跨平台开源工具，用于定义在多个平台上运行的生成过程。 本文假定你熟悉 CMake。 可在[使用 CMake 生成、测试和打包软件](https://cmake.org/)时了解更多关于它的信息。
+[CMake](https://cmake.org) 是一种跨平台开源工具，用于定义在多个平台上运行的生成过程。 本文假定你熟悉 CMake。 有关 CMake 的详细信息，请参阅 [CMake 文档](https://cmake.org/cmake/help/latest/index.html#)。 建议从 [CMake 教程](https://cmake.org/cmake/help/latest/guide/tutorial/index.html#guide:CMake%20Tutorial) 开始了解详细信息。 
 
 > [!NOTE]
 > 在过去的几个版本中，CMake 已越来越多地与 Visual Studio 集成在一起。 若要查看 Visual Studio 首选项的文档，请使用“版本”选择器控件。 它位于此页面上目录表的顶部。
@@ -132,9 +132,9 @@ Visual Studio 使用名为 CMakeSettings.json 的配置文件。 此文件使你
 
 - 查看缓存：从编辑器中的生成根文件夹打开 CMakeCache.txt 文件。 （如果清除缓存，则将擦除在此处对 CMakeCache.txt 进行的任何编辑。 若要在清除缓存后依然保留更改，请参阅[自定义 CMake 设置](customize-cmake-settings.md)。）
 
-- **打开缓存文件夹** ：打开生成根文件夹的资源管理器窗口。
+- **打开缓存文件夹**：打开生成根文件夹的资源管理器窗口。
 
-- **清理缓存** ：删除生成根文件夹，使下一个 CMake 配置步骤从清理缓存开始。
+- **清理缓存**：删除生成根文件夹，使下一个 CMake 配置步骤从清理缓存开始。
 
 - 生成缓存：即使 Visual Studio 认为环境是最新的，也强制运行生成步骤。
 
@@ -269,9 +269,9 @@ Visual Studio 使用名为 CMakeSettings.json 的文件存储 Cmake.exe 的环�
 
 - 查看缓存：从编辑器中的生成根文件夹打开 CMakeCache.txt 文件。 （如果清除缓存，则将擦除在此处对 CMakeCache.txt 进行的任何编辑。 若要在清除缓存后依然保留更改，请参阅[自定义 CMake 设置](customize-cmake-settings.md)。）
 
-- **打开缓存文件夹** ：打开生成根文件夹的资源管理器窗口。
+- **打开缓存文件夹**：打开生成根文件夹的资源管理器窗口。
 
-- **清理缓存** ：删除生成根文件夹，使下一个 CMake 配置步骤从清理缓存开始。
+- **清理缓存**：删除生成根文件夹，使下一个 CMake 配置步骤从清理缓存开始。
 
 - 生成缓存：即使 Visual Studio 认为环境是最新的，也强制运行生成步骤。
 
