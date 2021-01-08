@@ -511,7 +511,7 @@
                   href: ../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md
                 - name: /errorReport（报告内部编译器错误）
                   href: ../build/reference/errorreport-report-internal-compiler-errors.md
-                - name: /execution/charset（设置执行字符集）
+                - name: /execution-charset（设置执行字符集）
                   href: ../build/reference/execution-charset-set-execution-character-set.md
                 - name: '/experimental:module'
                   href: ../build/reference/experimental-module.md
