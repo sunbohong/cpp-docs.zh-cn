@@ -3,17 +3,15 @@ description: 了解详细信息： &lt; 内存&gt;
 title: '&lt;memory&gt;'
 ms.date: 08/04/2019
 f1_keywords:
-- memory/std::<memory>
 - <memory>
-- std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 27aea86d8329ee37c3aa1409b7dde7091cfe43bf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 05d5b6e87b23ea2a88e4ff5a8a11c2d6b054691f
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97183771"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126515"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -119,7 +117,7 @@ ms.locfileid: "97183771"
 |-|-|
 |[器\<void>](../standard-library/allocator-void-class.md)|类模板分配器到类型的专用化 **`void`** ，仅定义在此专用化上下文中有意义的成员类型。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

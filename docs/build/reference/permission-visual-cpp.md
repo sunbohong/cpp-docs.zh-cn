@@ -3,18 +3,17 @@ description: 了解有关以下方面的详细信息： &lt; 权限&gt;
 title: '&lt; (c + + 文档注释> 权限) '
 ms.date: 11/04/2016
 f1_keywords:
-- permission
 - <permission>
 helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: cd815b5df831632afd399e752e4525082f20b063
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: faade1711afa1f086d26104242dbdb3cb8814462
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97226020"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126099"
 ---
 # <a name="ltpermissiongt"></a>permission&lt;&gt;
 
@@ -26,7 +25,7 @@ ms.locfileid: "97226020"
 <permission cref="member">description</permission>
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *职员*<br/>
 对可从当前编译环境调用的成员或字段的引用。 编译器检查是否存在给定的代码元素，并将 `member` 转换为输出 XML 中规范的元素名称。  将名称括在单引号或双引号中。
@@ -58,6 +57,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

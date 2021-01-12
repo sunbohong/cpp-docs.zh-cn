@@ -3,17 +3,16 @@ description: 了解更多： &lt; 字符串&gt;
 title: '&lt;字符串&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- string/std::<string>
 - <string>
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 4a5598189be96cb15ff423f57e45fd91e2d93216
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d0c685eae1bb05faaac55aae614fc10e60472759
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97183537"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126541"
 ---
 # <a name="ltstringgt"></a>&lt;字符串&gt;
 
@@ -102,7 +101,7 @@ C++ 语言和 C++ 标准库支持两种类型的字符串：
 
 - **命名空间:** std
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

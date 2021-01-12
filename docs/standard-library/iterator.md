@@ -4,16 +4,15 @@ title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <iterator>
-- iterator/std::<iterator>
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 9c40d46c5cde45baa66c8173d2b6d8f0186d1bc9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9376f26acef4cfb5feda4644881d43511b3b77f6
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97112058"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126502"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -107,7 +106,7 @@ Visual Studio 为 C++ 标准库迭代器增加了一些扩展，以便支持多�
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|类模板描述的行为类似于随机访问迭代器的对象，仅反向进行。|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|一种使用随机访问未检查迭代器来访问数组的类。 **注意：** 此类为 C++ 标准库的 Microsoft 扩展。 使用该函数实现的代码不可移植到不支持该 Microsoft 扩展的 C++ 标准生成环境中。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

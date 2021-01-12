@@ -4,15 +4,14 @@ title: '&lt;hash_map&gt;'
 ms.date: 01/18/2018
 f1_keywords:
 - <hash_map>
-- std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: b3e46a3f8ef1638525414c1a1414c4eb6e418c31
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9d8274958a0f6b89892ec2c1c70080cd090d1c03
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97231870"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125969"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
@@ -55,7 +54,7 @@ ms.locfileid: "97231870"
 
 **命名空间：** stdext
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](thread-safety-in-the-cpp-standard-library.md)\

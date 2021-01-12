@@ -4,16 +4,15 @@ title: '&lt;cstdbool&gt;'
 ms.date: 07/11/2019
 f1_keywords:
 - <cstdbool>
-- cstdbool
 helpviewer_keywords:
 - cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0711c05ff136f90a701ff707976a172d2bcb1315
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: de36d4088c3494cf9b8efcf5175a527da7af8ece
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324730"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126593"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
@@ -32,7 +31,7 @@ ms.locfileid: "97324730"
 
 包括此标头可确保在命名空间中声明使用 C 标准库标头中的外部链接声明的名称 `std` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](cpp-standard-library-header-files.md)\
 [C + + 标准库概述](cpp-standard-library-overview.md)\

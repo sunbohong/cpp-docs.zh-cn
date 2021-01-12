@@ -3,17 +3,16 @@ description: 了解详细信息： &lt; 限制&gt;
 title: '&lt;limits&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- limits/std::<limits>
 - <limits>
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: 5347a5035e3650a2685d3be9166b41506fc14b1f
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 23601b4b7f7ea06071a6b1f5fbd87ce0a0babce3
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97312834"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126385"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -44,7 +43,7 @@ ms.locfileid: "97312834"
 |-|-|
 |[numeric_limits 类](../standard-library/numeric-limits-class.md)|类模板描述内置数值类型的算术属性。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

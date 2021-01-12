@@ -4,17 +4,15 @@ title: '&lt;ostream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ostream>
-- ostream/std::<ostream>
-- std::<ostream>
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 3b17ff221e08b9fc709f1d2c32c5862f6075e451
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a31ffe801fca16e3b7fc1037c59613150e383933
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97193027"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126424"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -54,7 +52,7 @@ ms.locfileid: "97193027"
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|类模板描述了控制元素和编码对象插入流缓冲区的对象。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

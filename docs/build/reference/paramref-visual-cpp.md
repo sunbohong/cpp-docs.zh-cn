@@ -1,23 +1,23 @@
 ---
-title: '&lt;paramref > （C++文档注释）'
+title: '&lt;paramref> (c + + 文档注释) '
+description: 了解有关 paramref c + + XML 文档标记的更多信息。
 ms.date: 11/04/2016
 f1_keywords:
-- paramref
 - <paramref>
 helpviewer_keywords:
 - paramref C++ XML tag
 - <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-ms.openlocfilehash: 1f4e9cb0e6b39e4da78e78048342dac2ecc9deea
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 393703e7816368fb80f71d962dc190a0db1cea03
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988686"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126151"
 ---
 # <a name="ltparamrefgt"></a>&lt;paramref&gt;
 
-\<paramref> 标记提供一种指示某字为参数的方法。 可处理 .xml 文件，以某种不同的方式设置此参数格式。
+\<paramref>标记提供了一种方法，用于指示某个字是参数。 可处理 .xml 文件，以某种不同的方式设置此参数格式。
 
 ## <a name="syntax"></a>语法
 
@@ -32,7 +32,7 @@ ms.locfileid: "74988686"
 
 ## <a name="remarks"></a>备注
 
-使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译可以将文档注释处理到文件中。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 进行编译，将文档注释处理到文件中。
 
 ## <a name="example"></a>示例
 

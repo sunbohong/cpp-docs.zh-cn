@@ -4,16 +4,15 @@ title: '&lt;ciso646&gt;'
 ms.date: 07/11/2019
 f1_keywords:
 - <ciso646>
-- ciso646
 helpviewer_keywords:
 - ciso646 header
 ms.assetid: 9d570924-d299-4225-9a58-8c4c820f5903
-ms.openlocfilehash: 556b3d882cb6465db829eefc735215069d79a5c5
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: cf12d7fb597aecfe7ea768784f35ceaeec192e7c
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325122"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126645"
 ---
 # <a name="ltciso646gt"></a>&lt;ciso646&gt;
 
@@ -32,7 +31,7 @@ ms.locfileid: "97325122"
 
 包括此标头可确保在命名空间中声明使用 C 标准库标头中的外部链接声明的名称 `std` 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](cpp-standard-library-header-files.md)\
 [C + + 标准库概述](cpp-standard-library-overview.md)\

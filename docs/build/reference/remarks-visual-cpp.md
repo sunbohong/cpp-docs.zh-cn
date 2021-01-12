@@ -3,18 +3,17 @@ description: 了解详细信息： &lt; 注释&gt;
 title: '&lt; (c + + 文档注释> 说明) '
 ms.date: 11/04/2016
 f1_keywords:
-- remarks
 - <remarks>
 helpviewer_keywords:
 - <remarks> C++ XML tag
 - remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-ms.openlocfilehash: 0c919ba3101282fd755450489eacc6c0800fb437
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 3e3590bff827606ad38f3772b72fa4e79563c2e1
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97225214"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126086"
 ---
 # <a name="ltremarksgt"></a>&lt;remarks&gt;
 
@@ -26,7 +25,7 @@ ms.locfileid: "97225214"
 <remarks>description</remarks>
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 description<br/>
 对成员的说明。
@@ -53,6 +52,6 @@ using namespace System;
 public ref class MyClass {};
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [XML 文档](xml-documentation-visual-cpp.md)

@@ -4,16 +4,15 @@ title: '&lt;hash_set&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <hash_set>
-- std::<hash_set>
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: 353ec0a4f57662380e912893ca60c93025e577af
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: aec05414d11bd5312febf4dd61b71db1b3f04452
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97231779"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98125956"
 ---
 # <a name="lthash_setgt"></a>&lt;hash_set&gt;
 
@@ -51,7 +50,7 @@ ms.locfileid: "97231779"
 |[hash_set 类](../standard-library/hash-set-class.md)|用于存储和快速检索集合中的数据，此集合中包含的元素值是唯一的并且用作键值。|
 |[hash_multiset 类](../standard-library/hash-multiset-class.md)|用于存储和快速检索集合中的数据，此集合中包含的元素值是唯一的并且用作键值。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

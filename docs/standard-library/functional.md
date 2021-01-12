@@ -4,18 +4,16 @@ title: '&lt;functional&gt;'
 ms.date: 02/21/2019
 f1_keywords:
 - <functional>
-- functional/std::<functional>
-- std::<functional>
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: a13ddeb7bdb45b02bb8b35052e34a3b9601c6fec
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: fe9a42c2992557bd9cf1237a6fe66c4fbfcc232d
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97232143"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126125"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -141,7 +139,7 @@ C + + 11、c + + 14 和 c + + 17 中添加了以下功能：
 |[logical_not](../standard-library/logical-not-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行求反逻辑运算，并测试结果是 ture 还是 false。|
 |[logical_or](../standard-library/logical-or-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行析取逻辑运算，并测试结果是 ture 还是 false。|
 |[差](../standard-library/minus-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行减法算术运算。|
-|[modulus](../standard-library/modulus-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行取模算术运算。|
+|[模块](../standard-library/modulus-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行取模算术运算。|
 |[multiplies](../standard-library/multiplies-struct.md)|此类提供预定义的函数对象，后者对指定值类型的元素执行乘法算术运算。|
 |[negate](../standard-library/negate-struct.md)|此类提供预定义的函数对象，后者返回元素值的负值。|
 |[not_equal_to](../standard-library/not-equal-to-struct.md)|此二元谓词测试指定类型的一个值是否不等于该类型的另一个值。|
@@ -161,7 +159,7 @@ C + + 11、c + + 14 和 c + + 17 中添加了以下功能：
 |[operator = =](../standard-library/functional-operators.md#op_eq_eq)|不允许对可调用对象进行相等性比较。|
 |[operator！ =](../standard-library/functional-operators.md#op_neq)|不允许对可调用对象进行不等性比较。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

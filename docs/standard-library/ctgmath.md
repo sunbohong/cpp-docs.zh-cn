@@ -4,16 +4,15 @@ title: '&lt;ctgmath&gt;'
 ms.date: 07/11/2019
 f1_keywords:
 - <ctgmath>
-- ctgmath
 helpviewer_keywords:
 - ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: f1033a944699f4c124114c49e0e30f8b30804a1e
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1968422bc32695eb15cff69c53fcaadf63ac5c14
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97324690"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126580"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
@@ -32,7 +31,7 @@ ms.locfileid: "97324690"
 
 C 标准库标头的功能 \<tgmath.h> 由和中的重载提供 \<complex> \<cmath> 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [\<complex>](complex.md)\
 [\<cmath>](cmath.md)\

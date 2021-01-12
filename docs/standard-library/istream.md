@@ -3,18 +3,16 @@ description: 了解详细信息： &lt; istream&gt;
 title: '&lt;istream&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- istream/std::<istream>
 - <istream>
-- std::<istream>
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: c897441eef935cd6ef5a8b4e9f4676d06a57e1af
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9b9b647b044cd0333349931285c4bffce000d062
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97277812"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126528"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -55,7 +53,7 @@ ms.locfileid: "97277812"
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可以完成输入和输出的流类。|
 |[basic_istream](../standard-library/basic-istream-class.md)|类模板描述了一个对象，该对象控制从流缓冲区提取元素和编码对象，该缓冲区包含类型为的元素 `Elem` （也称为 [char_type](../standard-library/basic-ios-class.md#char_type)），其字符特征由类 `Tr` （也称为 [traits_type](../standard-library/basic-ios-class.md#traits_type)）确定。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 编程](../standard-library/iostream-programming.md)\

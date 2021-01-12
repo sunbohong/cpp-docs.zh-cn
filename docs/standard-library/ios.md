@@ -4,16 +4,15 @@ title: '&lt;ios&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <ios>
-- ios/std::<ios>
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: d9ea336c3dc36b6f9afa76d00496965bb860d1be
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 9904c91c46eb34bc278a0ce877e157f01a6f9a26
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97231402"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126034"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -61,7 +60,7 @@ istr>> noskipws;
 |[十进制](../standard-library/ios-functions.md#dec)|指定以十进制计数法形式显示整数变量。|
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|配置 `ios_base` 对象的标记以使用浮点值的默认显示格式。|
 |[fixed](../standard-library/ios-functions.md#fixed)|指定浮点数以自动设置小数点表示法显示。|
-|[表示](../standard-library/ios-functions.md#hex)|指定以十六进制计数法形式显示整数变量。|
+|[hex](../standard-library/ios-functions.md#hex)|指定以十六进制计数法形式显示整数变量。|
 |[hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|导致数字的符号左对齐，数字右对齐。|
 |[左中](../standard-library/ios-functions.md#left)|导致宽度比输出宽度短的文本在流刷新过程中显示时带有左边距。|
@@ -100,7 +99,7 @@ istr>> noskipws;
 |[fpos](../standard-library/fpos-class.md)|类模板描述了一个对象，该对象可以存储还原任何流内的任意文件位置指示器所需的所有信息。|
 |[ios_base](../standard-library/ios-base-class.md)|此类描述了不依赖模板参数的输入和输出流通用的存储和成员函数。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

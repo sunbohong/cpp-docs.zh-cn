@@ -3,17 +3,16 @@ description: 了解详细信息： &lt; iomanip&gt;
 title: '&lt;iomanip&gt;'
 ms.date: 11/04/2016
 f1_keywords:
-- iomanip/std::<iomanip>
 - <iomanip>
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 7419900d4cd852ab260a6eeb92ee51623f8f71ee
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 2042ab5fb2ac9797d05d81056e65db202b4d6595
+ms.sourcegitcommit: 118e4ad82c0f1c9ac120f105d84224e5fe4cef28
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97231480"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98126476"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
@@ -45,7 +44,7 @@ ms.locfileid: "97231480"
 |[setprecision](../standard-library/iomanip-functions.md#setprecision)|为浮点值设置精度。|
 |[setw](../standard-library/iomanip-functions.md#setw)|指定显示字段的宽度。|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [标头文件引用](../standard-library/cpp-standard-library-header-files.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
