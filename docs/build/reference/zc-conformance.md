@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 13e06cd75f1ee684c2ee1ad6239aeb77b805675e
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: 15027182d632c1076c78e2e8a1335e1059ac7e3b
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041518"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104760"
 ---
 # <a name="zc-conformance"></a>`/Zc` (一致性) 
 
@@ -33,10 +33,10 @@ ms.locfileid: "90041518"
 |--|--|
 | [`/Zc:alignedNew`](zc-alignednew.md) | 默认情况下，在 c + + 17) 中启用 c + + 17 双向动态分配 (。 |
 | [`/Zc:auto`](zc-auto-deduce-variable-type.md) | 默认情况下，强制实施新的标准 c + + 表示 **`auto`** () 。 |
-| [`/Zc__cplusplus`](zc-cplusplus.md) | 启用 `__cplusplus` 宏，以便在默认情况下报告支持的标准 () 。 |
+| [`/Zc:__cplusplus`](zc-cplusplus.md) | 启用 `__cplusplus` 宏，以便在默认情况下报告支持的标准 () 。 |
 | [`/Zc:externConstexpr`](zc-externconstexpr.md) | 默认情况下，启用变量的外部链接 **`constexpr`** (关闭) 。 |
 | [`/Zc:forScope`](zc-forscope-force-conformance-in-for-loop-scope.md) | 默认情况下，强制实施标准 c + + **`for`** 范围规则 () 。 |
-| [`/ZcimplicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | 默认情况下，启用隐式 **`noexcept`** on 必需函数 () 。 |
+| [`/Zc:implicitNoexcept`](zc-implicitnoexcept-implicit-exception-specifiers.md) | 默认情况下，启用隐式 **`noexcept`** on 必需函数 () 。 |
 | [`/Zc:inline`](zc-inline-remove-unreferenced-comdat.md) | 删除未引用的函数或数据（如果它是 COMDAT）或仅 (默认关闭) 的内部链接。 |
 | [`/Zc:noexceptTypes`](zc-noexcepttypes.md) | **`noexcept`** 默认情况下，在 c + + 17 或更高版本中 (启用 c + + 17 规则) 。 |
 | [`/Zc:preprocessor`](zc-preprocessor.md) | 默认情况下，使用新的相容预处理器 (关闭，C11/C17) 除外。 |
@@ -53,7 +53,7 @@ ms.locfileid: "90041518"
 
 有关 Visual C++ 中一致性问题的详细信息，请参阅 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
-## <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
-[MSVC 编译器命令行语法](compiler-command-line-syntax.md)
+[MSVC 编译器 Command-Line 语法](compiler-command-line-syntax.md)

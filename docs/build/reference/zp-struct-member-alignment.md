@@ -1,7 +1,7 @@
 ---
 description: '了解详细信息：/Zp (结构成员对齐) '
 title: /Zp（结构成员对齐）
-ms.date: 04/04/2019
+ms.date: 01/08/2021
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: b2029ebded53bcae1b44b5cd72bf59494e58ec4b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 8d29c442726aff9503a42378fce6a7b8b09526ed
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97224304"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104773"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp（结构成员对齐）
 
@@ -44,9 +44,9 @@ ms.locfileid: "97224304"
 不要使用此选项，除非有特定的对齐要求。
 
 > [!WARNING]
-> Windows SDK 设置中的 c + + 标头并在 **`/Zp8`** 内部采用打包。 如果在 **`/Zp`** Windows SDK 标头内更改了设置，则可能会发生内存损坏。 **`/Zp`** 在命令行上设置的任何选项都不会影响标头。
+> Windows SDK 中的 C/c + + 标头采用了 **`/Zp8`** 内部封装。 当包含 Windows SDK 标头时，请不要更改默认设置，方法是 **`/Zp`** 在命令行上使用或使用 `#pragma pack` 。 否则，应用程序可能会导致运行时出现内存损坏。
 
-你还可以使用 [`pack`](../../preprocessor/pack.md) 控制结构打包。 有关对齐的详细信息，请参阅：
+你还可以使用[ `pack` 杂注](../../preprocessor/pack.md)来控制结构打包。 有关对齐的详细信息，请参阅：
 
 - [`align`](../../cpp/align-cpp.md)
 

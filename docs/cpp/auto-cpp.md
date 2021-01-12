@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 2237c8aa3cb1b1078a8b90ba5a3ba6cba0a7134b
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 061ddac33af4b8e1587b2ab1035d9f96ba18b108
+ms.sourcegitcommit: 14d6ae0d527d05d153e26463d4cd5ada0f43e864
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97319464"
+ms.lasthandoff: 01/11/2021
+ms.locfileid: "98104747"
 ---
 # <a name="auto-c"></a>`auto` (C++)
 
@@ -50,7 +50,16 @@ ms.locfileid: "97319464"
 
 若要使用 **`auto`** 关键字，请使用它（而不是类型）来声明变量，并指定初始化表达式。 此外，还可以 **`auto`** 使用说明符和声明符（如 **`const`** 、 **`volatile`** 、指针 (**`*`**) 、引用 (**`&`**) 和右值引用 (**`&&`**) 来修改关键字。 编译器计算初始化表达式，然后使用该信息来推断变量类型。
 
-初始化表达式可以是赋值 (等号语法) 、直接初始化 (函数样式的语法) 、 [`operator new`](new-operator-cpp.md) 表达式或初始化表达式可以是 [基于范围的 `for` 语句 (c + +)](../cpp/range-based-for-statement-cpp.md)语句中的 *范围声明* 参数。 有关详细信息，请参阅本文档后面的 [初始值设定项](../cpp/initializers.md) 和代码示例。
+**`auto`** 初始化表达式可以采用多种形式：
+
+- 通用初始化语法，如 `auto a { 42 };` 。
+- 赋值语法，如 `auto b = 0;` 。
+- 通用赋值语法，它结合了前两种形式，例如 `auto c = { 3.14156 };` 。
+- 直接初始化或构造函数样式语法，如 `auto d( 1.41421f );` 。
+
+有关详细信息，请参阅本文档后面的 [初始值设定项](../cpp/initializers.md) 和代码示例。
+
+当 **`auto`** 用于在基于范围的语句中声明循环参数时 **`for`** ，它将使用不同的初始化语法，例如 `for (auto& i : iterable) do_action(i);` 。 有关详细信息，请参阅 [基于范围的 `for` 语句 (c + +) ](../cpp/range-based-for-statement-cpp.md)。
 
 **`auto`** 关键字是类型的占位符，但它本身不是类型。 因此， **`auto`** 关键字不能用于 [`sizeof`](../cpp/sizeof-operator.md) c + +/cli) 的强制转换或运算符（例如和） ([`typeid`](../extensions/typeid-cpp-component-extensions.md) 。
 
