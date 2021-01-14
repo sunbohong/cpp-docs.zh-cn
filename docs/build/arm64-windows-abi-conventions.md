@@ -2,12 +2,12 @@
 description: 详细了解：ARM64 ABI 约定概述
 title: ARM64 ABI 约定概述
 ms.date: 03/27/2019
-ms.openlocfilehash: fbdb709eaa960446bb76712962dbbc3bfb66d38a
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d597a50b771524b69ef2f2091082d7ca4d19d453
+ms.sourcegitcommit: e71b8da6c8a357aa06bb6b36936a8f4ecae082ad
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97157108"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "97976331"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 约定概述
 
@@ -204,7 +204,13 @@ AArch64 体系结构还支持 32 个浮点/SIMD 寄存器，下面进行了总�
 
 浮点值以适当方式在 s0、d0 或 v0 中返回。
 
-HFA 和 HVA 值以适当方式在 s0-s3、d0-d3 或 v0-v3 中返回。
+如果满足下列所有项，则类型会是视为 HFA 或 HVA：
+
+- 它不为空，
+- 它没有任何重要的默认或复制构造函数，或赋值运算符，
+- 它的所有成员具有相同的 HFA 或 HVA 类型，或者是与其他成员的 HFA 或 HVA 类型匹配的 float、float 或 neon 类型。
+
+具有 4 个或更少元素的 HFA 和 HVA 值以适当方式在 s0-s3、d0-d3 或 v0-v3 中返回。
 
 通过值返回的类型的处理方式因它们是否具有某些属性而异，且因函数是否为非静态成员函数而异。 具有所有这些属性的类型，
 
