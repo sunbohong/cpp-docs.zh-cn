@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： memcmp、wmemcmp
 title: memcmp、wmemcmp
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - memcmp
 - wmemcmp
@@ -18,6 +18,7 @@ api_location:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +30,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 65489d99e0c17e4971a4fa7cf849990b860ad361
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 52f770cd2f5fee5c7d8e016682d80e81672588b8
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97239982"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243146"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -55,7 +56,7 @@ int wmemcmp(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *buffer1*<br/>
 第一个缓冲区。
@@ -76,7 +77,7 @@ int wmemcmp(
 |0|*buffer1* 等同于 *buffer2*|
 |> 0|*buffer1* 大于 *buffer2*|
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 比较 *buffer1* 和 *buffer2* 的第一个 *计数* 字符并返回指示它们关系的值。 非零返回值的符号是缓冲区中的第一个不同值对之差的符号。 值被解释为 **`unsigned char`** 适用于 **memcmp** 和 **`wchar_t`** **wmemcmp** 的值。
 
@@ -141,7 +142,7 @@ Compare '1,2' to '1,2':
 int_arr1 is equal to int_arr2.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [缓冲区操作](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

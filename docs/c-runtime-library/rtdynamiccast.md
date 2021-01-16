@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： __RTDynamicCast
 title: __RTDynamicCast
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - __RTDynamicCast
 api_location:
@@ -12,6 +12,7 @@ api_location:
 - msvcr100.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: 8e9cb906468c02ac065601e8f093b0e97c1b70bd
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: cefd5248e0409b72f97c959d08aa30b1c0167e26
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97284481"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243107"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -44,7 +45,7 @@ PVOID __RTDynamicCast (
    ) throw(...)
 ```
 
-#### <a name="parameters"></a>parameters
+#### <a name="parameters"></a>参数
 
 *inptr*<br/>
 指向多态对象的指针。
@@ -69,7 +70,7 @@ PVOID __RTDynamicCast (
 
 如果 `bad_cast()` 的输入为引用并且转换失败，则为 `dynamic_cast<>`。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 将 `inptr` 转换为 `TargetType` 类型的对象。 如果 `TargetType` 是指针，则 `inptr` 类型必须为指针，或者如果 `TargetType` 是引用，则为左值。 `TargetType` 必须是针对以前定义的类类型的指针或引用，或者是指向 void 的指针。
 

@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： longjmp
 title: longjmp
-ms.date: 08/14/2018
+ms.date: 1/14/2021
 api_name:
 - longjmp
 api_location:
@@ -16,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: bfcbac2ea54e167f65f0d303e08d6450e53ff0e1
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 80d5c547be3e620329939297066a4101cef46789
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97299977"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243068"
 ---
 # <a name="longjmp"></a>longjmp
 
@@ -46,7 +47,7 @@ void longjmp(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *env*<br/>
 存储变量的环境。
@@ -54,7 +55,7 @@ void longjmp(
 *value*<br/>
 要返回到 `setjmp` 调用的值。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **Longjmp** 函数将还原以前通过 *env* 保存的堆栈环境和执行区域设置 `setjmp` 。 `setjmp` 和 **longjmp** 提供了一种执行非本地的方法 **`goto`** ; 它们通常用于将执行控制传递给之前调用的例程中的错误处理或恢复代码，而不使用正常调用和返回约定。
 
@@ -95,7 +96,7 @@ void longjmp(
 
 请参阅 [_fpreset](fpreset.md) 的示例。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [进程和环境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [setjmp](setjmp.md)

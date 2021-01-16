@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： _get_purecall_handler、_set_purecall_handler
 title: _get_purecall_handler、_set_purecall_handler
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - _set_purecall_handler
 - _set_purecall_handler_m
@@ -17,6 +17,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +39,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 7971847c4ce0861db272ea3c722666b0ba0318d0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: d46e5848f440449cedaaa66c591d2814dbac0745
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97339017"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242600"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler、_set_purecall_handler
 
@@ -59,7 +60,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *函数*<br/>
 要在调用纯虚函数时调用的函数。 **_Purecall_handler** 函数的返回类型必须为空。
@@ -68,7 +69,7 @@ _purecall_handler __cdecl _set_purecall_handler(
 
 上一个 **_purecall_handler**。 **`nullptr`** 如果没有上一个处理程序，则返回。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 **_Get_purecall_handler** 和 **_set_purecall_handler** 函数是特定于 Microsoft 的，仅适用于 c + + 代码。
 
@@ -135,7 +136,7 @@ int _tmain(int argc, _TCHAR* argv[])
 In _purecall_handler.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [错误处理](../../c-runtime-library/error-handling-crt.md)<br/>
 [_purecall](purecall.md)<br/>

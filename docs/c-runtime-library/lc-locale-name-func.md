@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： ___lc_locale_name_func
 title: ___lc_locale_name_func
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - ___lc_locale_name_func
 - _o____lc_locale_name_func
@@ -14,6 +14,7 @@ api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +24,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_locale_name_func
 ms.assetid: ef858308-872e-43de-95e0-9b1b4084343e
-ms.openlocfilehash: 3431318608516fda908cd3c8ab9562c5044d20ae
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 4747b64c0fc61e0f5d77eacb92c04c9f6d2e2759
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97246547"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242860"
 ---
 # <a name="___lc_locale_name_func"></a>___lc_locale_name_func
 
@@ -44,7 +45,7 @@ wchar_t** ___lc_locale_name_func(void);
 
 指向包含线程的当前区域设置名称的字符串的指针。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `___lc_locale_name_func` 是一个内部 CRT 函数，其他 CRT 函数可将其用于从 CRT 数据的线程本地存储中获取当前区域设置名称。 也可通过使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 函数或 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 函数提供此信息。
 
@@ -58,7 +59,7 @@ wchar_t** ___lc_locale_name_func(void);
 |-------------|---------------------|
 |`___lc_locale_name_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

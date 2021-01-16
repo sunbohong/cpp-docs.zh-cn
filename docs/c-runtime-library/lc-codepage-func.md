@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： ___lc_codepage_func
 title: ___lc_codepage_func
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - ___lc_codepage_func
 - _o____lc_codepage_func
@@ -14,6 +14,7 @@ api_location:
 - msvcr110.dll
 - msvcrt.dll
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: b59443b8b448eb91e54548700ba7171fc0c00fd9
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: afe49a10498f65c01b501874b602079e79af3be8
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97246534"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242977"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -45,7 +46,7 @@ UINT ___lc_codepage_func(void);
 
 线程的当前代码页。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `___lc_codepage_func` 是一个内部 CRT 函数，其他 CRT 函数可将其用于从 CRT 数据的线程本地存储中获取当前代码页。 也可通过使用 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 函数提供此信息。
 
@@ -61,7 +62,7 @@ UINT ___lc_codepage_func(void);
 |-------------|---------------------|
 |`___lc_codepage_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： memchr、wmemchr
 title: memchr、wmemchr
-ms.date: 03/31/2019
+ms.date: 1/14/2021
 api_name:
 - wmemchr
 - memchr
@@ -17,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +29,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 695973fd9551758de6c0638493057b31e9a74aab
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: f9643dd9c84244916dfdf151efbec1b0014b42e3
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97239995"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243159"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -74,7 +75,7 @@ const wchar_t *wmemchr(
 ); // C++ only
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
 *宽限*<br/>
 指向缓冲区的指针。
@@ -89,7 +90,7 @@ const wchar_t *wmemchr(
 
 如果成功，则返回指向 *缓冲区* 中第一个 *c* 位置的指针。 否则，它将返回 NULL。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 `memchr`并 `wmemchr` 在 *缓冲区* 的第一个 *计数* 字符中查找 *c* 的第一个匹配项。 它在找到 *c* 或已检查第一个 *计数* 字符时停止。
 

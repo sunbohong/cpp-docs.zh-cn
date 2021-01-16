@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： _set_se_translator
 title: _set_se_translator
-ms.date: 02/21/2018
+ms.date: 1/14/2021
 api_name:
 - _set_se_translator
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,14 +28,14 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 5ba0f0816b7876f24dfc010c83711e9ca652edad
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: bde7b716bcb69f38ba6ab64151e2ec4fe93e0c9c
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97211227"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98243002"
 ---
-# <a name="_set_se_translator"></a>_set_se_translator
+# `_set_se_translator`
 
 设置每个线程的回调函数，以便将 Win32 异常 (C 结构化异常) 转换为 c + + 类型的异常。
 
@@ -46,28 +47,28 @@ _se_translator_function _set_se_translator(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*seTransFunction*<br/>
+*`seTransFunction`*\
 指向您编写的 C 结构化异常转换器函数的指针。
 
 ## <a name="return-value"></a>返回值
 
-返回指向 **_set_se_translator** 注册的上一个转换器函数的指针，以便稍后可以还原以前的函数。 如果以前未设置任何函数，则返回值可用于还原默认行为;此值可以为 **`nullptr`** 。
+返回指向由注册的上一个转换器函数的指针 **`_set_se_translator`** ，以便稍后可以还原以前的函数。 如果以前未设置任何函数，则返回值可用于还原默认行为;此值可以为 **`nullptr`** 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**_Set_se_translator** 函数提供了一种方法，用于处理 Win32 异常 (c 结构化异常) 作为 c + + 类型的异常。 若要允许 c + + 处理程序处理每个 C 异常 **`catch`** ，请先定义一个可以使用或从中派生的 c 异常包装器类，以将特定的类类型属性指定为 C 异常。 若要使用此类，请安装自定义 C 异常转换器函数，该函数在每次引发 C 异常时由内部异常处理机制调用。 在转换器函数内，您可以引发可由匹配的 c + + 处理程序捕获的任意类型异常 **`catch`** 。
+**`_set_se_translator`** 函数提供了一种方法来处理 Win32 异常 (c 结构化异常) 为 c + + 类型的异常。 若要允许 c + + 处理程序处理每个 C 异常 **`catch`** ，请先定义一个可以使用或从中派生的 c 异常包装器类，以将特定的类类型属性指定为 C 异常。 若要使用此类，请安装自定义 C 异常转换器函数，该函数在每次引发 C 异常时由内部异常处理机制调用。 在转换器函数内，您可以引发可由匹配的 c + + 处理程序捕获的任意类型异常 **`catch`** 。
 
-使用 **_set_se_translator** 时，必须使用 [/eha](../../build/reference/eh-exception-handling-model.md) 。
+[`/EHa`](../../build/reference/eh-exception-handling-model.md)使用 **_set_se_translator** 时，必须使用。
 
-若要指定自定义转换函数，请使用转换函数的名称作为其参数，调用 **_set_se_translator** 。 对于具有块的堆栈上的每个函数调用，将调用您编写的转换器函数一次 **`try`** 。 没有默认的转换器函数。
+若要指定自定义转换函数，请 **`_set_se_translator`** 使用转换函数的名称作为其参数。 对于具有块的堆栈上的每个函数调用，将调用您编写的转换器函数一次 **`try`** 。 没有默认的转换器函数。
 
-转换器函数只能是引发 C++ 类型的异常。 如果它执行了除引发异常之外的任何操作（例如，对日志文件进行写入操作），您的程序可能不会按预期方式运行，因为调用转换器函数的次数是与平台相关的。
+转换器函数只能是引发 C++ 类型的异常。 如果除了引发 (（如写入日志文件）外还执行任何操作，例如) 程序可能不会按预期方式运行，因为调用转换器函数的次数与平台相关。
 
-在多线程环境中，单独为每个线程维护转换器函数。 每个新线程都需要安装它自己的转换器函数。 因此，每个线程都负责处理它自己的转换。 **_set_se_translator** 特定于一个线程;另一个 DLL 可安装不同的转换函数。
+在多线程环境中，单独为每个线程维护转换器函数。 每个新线程都需要安装它自己的转换器函数。 因此，每个线程都负责处理它自己的转换。 **`_set_se_translator`** 特定于一个线程，另一个 DLL 可安装不同的转换函数。
 
-你编写的 *seTransFunction* 函数必须是本机编译的函数， (未使用/clr) 编译。 它必须采用一个无符号整数和一个指向 Win32 **_EXCEPTION_POINTERS** 结构的指针作为参数。 参数分别是对 Win32 API **GetExceptionCode** 和 **GetExceptionInformation** 函数的调用的返回值。
+你编写的 *seTransFunction* 函数必须是本机编译的函数， (未使用/clr) 编译。 它必须采用一个无符号整数和一个指向 Win32 结构的指针 **`_EXCEPTION_POINTERS`** 作为参数。 参数分别是对 Win32 API 和函数的调用的返回 **`GetExceptionCode`** 值 **`GetExceptionInformation`** 。
 
 ```cpp
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
@@ -75,7 +76,7 @@ typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_
 
 对于 **_set_se_translator**，动态链接到 CRT 时会有影响;进程中的另一个 DLL 可能调用 **_set_se_translator** ，并将您的处理程序替换为它自己的处理程序。
 
-当使用 **_set_se_translator** 来自托管代码 (使用/clr) 或混合本机代码和托管代码编译的代码时，请注意转换器仅影响本机代码中生成的异常。 托管代码中生成的任何托管异常（例如，在引发 `System::Exception` 时）都不会通过转换器函数进行传送。 使用 Win32 函数 **RaiseException** 或由系统异常（如被零除异常）导致的托管代码中引发的异常将通过转换器进行路由。
+当使用 **_set_se_translator** 来自托管代码 (使用/clr) 或混合本机代码和托管代码编译的代码时，请注意转换器仅影响本机代码中生成的异常。 托管代码中生成的任何托管异常 (例如，引发 `System::Exception`) 不会通过转换器函数进行路由。 使用 Win32 函数 **RaiseException** 或由系统异常（如被零除异常）导致的托管代码中引发的异常将通过转换器进行路由。
 
 ## <a name="requirements"></a>要求
 
@@ -231,10 +232,10 @@ int main() {
 Caught SE_Exception, error c0000094
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
-[set_terminate](set-terminate-crt.md)<br/>
-[set_unexpected](set-unexpected-crt.md)<br/>
-[终止](terminate-crt.md)<br/>
-[之外](unexpected-crt.md)<br/>
+[异常处理例程](../../c-runtime-library/exception-handling-routines.md)\
+[`set_terminate`](set-terminate-crt.md)\
+[`set_unexpected`](set-unexpected-crt.md)\
+[`terminate`](terminate-crt.md)\
+[`unexpected`](unexpected-crt.md)\

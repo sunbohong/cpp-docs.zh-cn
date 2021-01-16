@@ -1,7 +1,7 @@
 ---
 description: 了解详细信息： _resetstkoflw
 title: _resetstkoflw
-ms.date: 4/2/2020
+ms.date: 1/14/2021
 api_name:
 - _resetstkoflw
 - _o__resetstkoflw
@@ -17,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-private-l1-1-0.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,14 +31,14 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: 02eb973c63bb372e43e57c413385b8e1b13d9f38
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 092eea34de10ff77a31b5be35fa84dc1eb887328
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97250343"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242964"
 ---
-# <a name="_resetstkoflw"></a>_resetstkoflw
+# `_resetstkoflw`
 
 从堆栈溢出恢复。
 
@@ -54,11 +55,11 @@ int _resetstkoflw( void );
 
 如果函数成功，则为非零值；如果失败，则为 0。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**_Resetstkoflw** 函数从堆栈溢出情况恢复，使程序可以继续，而不会因出现严重异常错误而失败。 如果未调用 **_resetstkoflw** 函数，则在前一个异常后不会有任何防护页。 下次发生堆栈溢出时，将不会有任何异常，且进程会在无警告的情况下终止。
+**`_resetstkoflw`** 函数从堆栈溢出条件中恢复，使程序可以继续，而不会因出现严重异常错误而失败。 如果 **`_resetstkoflw`** 未调用函数，则在上一个异常之后没有任何保护页。 下一次发生堆栈溢出时，没有任何异常，进程将终止而不发出警告。
 
-如果应用程序中的线程导致 **EXCEPTION_STACK_OVERFLOW** 异常，则该线程的堆栈将处于损坏状态。 这与其他异常（如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO**）不同，在那些异常中，堆栈是未损坏的。 首次加载程序时，堆栈将设置为任意的较小的值。 然后，堆栈会根据需要增长以满足线程的需求。 这将通过在当前堆栈的结尾处放置一个带 PAGE_GUARD 访问权的页面来实现。 有关更多信息，请参见[创建保护页](/windows/win32/Memory/creating-guard-pages)。
+如果应用程序中的线程引发 **`EXCEPTION_STACK_OVERFLOW`** 异常，则该线程会使其堆栈处于损坏状态。 这与其他异常（如 **`EXCEPTION_ACCESS_VIOLATION`** 或 **`EXCEPTION_INT_DIVIDE_BY_ZERO`** ）相反，堆栈不会损坏。 首次加载程序时，堆栈将设置为任意的较小的值。 然后，堆栈会根据需要增长以满足线程的需求。 这将通过在当前堆栈的结尾处放置一个带 PAGE_GUARD 访问权的页面来实现。 有关更多信息，请参见[创建保护页](/windows/win32/Memory/creating-guard-pages)。
 
 当代码导致堆栈指针指向此页上的一个地址时，会发生异常，并且系统将执行以下三个操作：
 
@@ -68,7 +69,7 @@ int _resetstkoflw( void );
 
 - 重新运行引发异常的命令。
 
-通过这种方式，系统可以自动增大线程的堆栈大小。 进程中的每个线程都具有最大堆栈大小。 堆栈大小在编译时由 [/STACK（堆栈分配）](../../build/reference/stack-stack-allocations.md)设置，或由项目的 .def 文件中的 [STACKSIZE](../../build/reference/stacksize.md) 语句设置。
+通过这种方式，系统可以自动增大线程的堆栈大小。 进程中的每个线程都具有最大堆栈大小。 堆栈大小在编译时由[ `/STACK` (堆栈分配) ](../../build/reference/stack-stack-allocations.md)或 [`STACKSIZE`](../../build/reference/stacksize.md) 项目文件中的语句设置 `.def` 。
 
 当超过最大堆栈大小时，系统将执行以下三个操作：
 
@@ -78,9 +79,9 @@ int _resetstkoflw( void );
 
 - 引发异常，以便线程可以在异常块中处理它。
 
-请注意，此时堆栈不再具有保护页。 当程序下一次将堆栈增大到堆栈结尾（此处应有一个保护页）时，程序将在堆栈结尾之外写入并导致访问冲突。
+此时，堆栈不再具有保护页。 当程序下一次将堆栈增大到堆栈结尾（此处应有一个保护页）时，程序将在堆栈结尾之外写入并导致访问冲突。
 
-调用 **_resetstkoflw** 以在发生堆栈溢出异常后执行恢复时还原保护页。 可从块的主体内部或块外调用此函数 **`__except`** **`__except`** 。 但是，对于何时使用该函数有一些限制。 绝不应从以下内容调用 **_resetstkoflw** ：
+调用 **`_resetstkoflw`** 以在发生堆栈溢出异常后恢复时还原保护页。 可从块的主体内部或块外调用此函数 **`__except`** **`__except`** 。 但是，对于何时使用该函数有一些限制。 **`_resetstkoflw`** 不应从以下内容调用：
 
 - 筛选器表达式。
 
@@ -94,13 +95,13 @@ int _resetstkoflw( void );
 
 在这些点上，堆栈尚未充分展开。
 
-堆栈溢出异常作为结构化异常而非 c + + 异常生成，因此 **_resetstkoflw** 在普通块中不起作用， **`catch`** 因为它不会捕获堆栈溢出异常。 但是，如果使用 [_set_se_translator](set-se-translator.md) 来实现引发 C++ 异常的结构化异常转换器（如第二个示例所示），则堆栈溢出异常会导致可由 C++ catch 块处理的 C++ 异常。
+堆栈溢出异常作为结构化异常而非 c + + 异常生成，因此 **`_resetstkoflw`** 在普通块中不起作用， **`catch`** 因为它不会捕获堆栈溢出异常。 但是，如果 [`_set_se_translator`](set-se-translator.md) 使用来实现 (如第二个示例) 中所示引发 c + + 异常的结构化异常转换器，则堆栈溢出异常会导致可由 c + + catch 块处理的 c + + 异常。
 
-在 C++ catch 块中调用 **_resetstkoflw** 是不安全的，因为这是从通过结构化的异常转换器函数引发的异常到达的。 在这种情况下，不会释放堆栈空间，并且堆栈指针只有在 catch 块之外才会重置，即使已先于 catch 块对任何易损坏的对象调用析构函数。 在释放堆栈空间并且已重置堆栈指针之前，不应调用此函数。 因此，仅在退出 catch 块之后才调用它。 catch 块中应尽可能少地使用堆栈空间，因为在 catch 块自行尝试从上一个堆栈溢出中恢复时出现的堆栈溢出是不可恢复的，并且在 catch 块中的溢出触发其本身由同一个 catch 处理的异常时可能会导致程序停止响应。
+**`_resetstkoflw`** 在从结构化异常转换器函数引发的异常到达的 c + + catch 块中调用时，不安全。 在这种情况下，不会释放堆栈空间，并且堆栈指针直到 catch 块之外才会重置，即使已为 catch 块之前的任何易损坏对象调用了析构函数。 在释放堆栈空间并且已重置堆栈指针之前，不应调用此函数。 因此，仅在退出 catch 块之后才调用它。 在 catch 块中应使用尽可能少的堆栈空间，因为在 catch 块中发生的堆栈溢出会自行尝试从上一个堆栈溢出中恢复，并且可能会导致程序停止响应，因为 catch 块中的溢出触发其本身由同一个 catch 块处理的异常。
 
-在某些情况下，即使在正确的位置（例如，在块中）使用 **_resetstkoflw** 也可能会失败 **`__except`** 。 甚至在展开堆栈后，如果仍未留下足够的堆栈空间来执行 **_resetstkoflw**，而且未写入到堆栈的最后一页，则 **_resetstkoflw** 无法将堆栈的最后一页重置为保护页并且将返回 0（这指示失败）。 因此，此函数的安全用法应包括检查返回值而不是假定可安全使用堆栈。
+在某些情况下 **`_resetstkoflw`** ，即使在正确的位置（例如，在块中）使用，也可能会失败 **`__except`** 。 即使在展开堆栈后，仍没有足够的堆栈空间来执行， **`_resetstkoflw`** 无需写入堆栈的最后一页，也 **`_resetstkoflw`** 无法将堆栈的最后一页重置为保护页，并返回0来指示失败。 此函数的安全用法应包括检查返回值，而不是假定堆栈可以安全使用。
 
-使用 **/clr** 编译应用程序时，结构化异常处理将不会捕获 **STATUS_STACK_OVERFLOW** 异常 (请参阅 [/Clr (公共语言运行时编译)](../../build/reference/clr-common-language-runtime-compilation.md)) 。
+当使用编译应用程序时，结构化异常处理将不会捕获 **`STATUS_STACK_OVERFLOW`** 异常 **`/clr`** (参阅 [ `/clr ` (公共语言运行时编译)](../../build/reference/clr-common-language-runtime-compilation.md)) 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -108,7 +109,7 @@ int _resetstkoflw( void );
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**_resetstkoflw**|\<malloc.h>|
+|**`_resetstkoflw`**|\<malloc.h>|
 
 有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
@@ -116,7 +117,7 @@ int _resetstkoflw( void );
 
 ## <a name="example"></a>示例
 
-下面的示例演示 **_resetstkoflw** 函数的推荐用法。
+下面的示例演示了函数的推荐用法 **`_resetstkoflw`** 。
 
 ```C
 // crt_resetstkoflw.c
@@ -142,7 +143,7 @@ int stack_overflow_exception_filter(int exception_code)
    if (exception_code == EXCEPTION_STACK_OVERFLOW)
    {
        // Do not call _resetstkoflw here, because
-       // at this point, the stack is not yet unwound.
+       // at this point, the stack isn't yet unwound.
        // Instead, signal that the handler (the __except block)
        // is to be executed.
        return EXCEPTION_EXECUTE_HANDLER;
@@ -218,9 +219,9 @@ loop #10
 resetting stack overflow
 ```
 
-### <a name="description"></a>描述
+### <a name="description"></a>说明
 
-下面的示例演示了在将结构化异常转换为 c + + 异常的程序中建议使用 **_resetstkoflw** 。
+下面的示例演示了 **`_resetstkoflw`** 在将结构化异常转换为 c + + 异常的程序中的推荐用法。
 
 ### <a name="code"></a>代码
 
@@ -312,4 +313,4 @@ Recovered from stack overflow and allocated 100,000 bytes using _alloca.
 
 ## <a name="see-also"></a>请参阅
 
-[_alloca](alloca.md)<br/>
+[`_alloca`](alloca.md)<br/>

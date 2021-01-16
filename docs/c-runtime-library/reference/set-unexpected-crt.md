@@ -1,7 +1,7 @@
 ---
 description: '了解详细信息： set_unexpected (CRT) '
 title: set_unexpected (CRT)
-ms.date: 11/04/2016
+ms.date: 1/14/2021
 api_name:
 - set_unexpected
 api_location:
@@ -15,6 +15,7 @@ api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +27,16 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-ms.openlocfilehash: b9665a73f87d64cd991ff8ce296a4c14957b30ed
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: b9918e152a5d27c853aef7769b932ee4efedeef8
+ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97211071"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242626"
 ---
-# <a name="set_unexpected-crt"></a>set_unexpected (CRT)
+# <a name="set_unexpected-crt"></a>`set_unexpected` (CRT) 
 
-安装要由 **unexpected** 调用的自身的终止函数。
+安装要由调用的自己的终止函数 **`unexpected`** 。
 
 ## <a name="syntax"></a>语法
 
@@ -43,46 +44,46 @@ ms.locfileid: "97211071"
 unexpected_function set_unexpected( unexpected_function unexpFunction );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*unexpFunction*<br/>
-指向一个函数的指针，该函数用于替换 **意外** 的函数。
+*`unexpFunction`*\
+指向一个函数的指针，您可以编写该函数来替换 **`unexpected`** 函数。
 
 ## <a name="return-value"></a>返回值
 
-返回指向 **_set_unexpected** 注册的上一个终止函数的指针，以便稍后可以还原以前的函数。 如果以前未设置函数，则返回值可用于还原默认行为;此值可以为 **NULL**。
+返回指向注册的上一个终止函数的指针， **`_set_unexpected`** 以便稍后可以还原以前的函数。 如果以前未设置函数，则返回值可用于还原默认行为;此值可以为 **`NULL`** 。
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Set_unexpected** 函数将 *unexpFunction* 安装为 **意外** 调用的函数。 当前 c + + 异常处理实现中未 **使用异常。** **Unexpected_function** 类型在 EH 中定义。H 作为指向用户定义的意外函数的指针， *unexpFunction* 返回 **`void`** 。 自定义 *unexpFunction* 函数不应返回到其调用方。
+**`set_unexpected`** 函数将 *unexpFunction* 安装为由调用的函数 **`unexpected`** 。 **`unexpected`** 不在当前 c + + 异常处理实现中使用。 该 **`unexpected_function`** 类型在 EH 中定义。H 作为指向用户定义的意外函数的指针， *unexpFunction* 返回 **`void`** 。 自定义 *unexpFunction* 函数不应返回到其调用方。
 
 ```cpp
 typedef void ( *unexpected_function )( );
 ```
 
-默认情况下， **意外** 调用 **终止**。 可以通过以下方式更改此默认行为：编写自己的终止函数并调用 **set_unexpected** ，并将函数名称作为其参数。 **意外** 调用最后一个函数作为 **set_unexpected** 的参数。
+默认情况下，会 **`unexpected`** 调用 **`terminate`** 。 可以通过以下方式更改此默认行为：编写自己的终止函数并调用 **`set_unexpected`** 作为参数的函数名称。 **`unexpected`** 调用作为的参数提供的最后一个函数 **`set_unexpected`** 。
 
-与通过调用 **set_terminate** 安装的自定义终止函数不同， *unexpFunction* 中可能会引发异常。
+不同于通过调用安装的自定义终止功能 **`set_terminate`** ，可以从中引发异常 **`unexpFunction`** 。
 
 在多线程环境中，单独为每个线程维护意外函数。 每个新线程都需要安装它自己的意外函数。 因此，每个线程都负责它自己的意外处理。
 
-在当前的 c + + 异常处理实现中， **意外** 调用会在默认情况下 **终止** ，并从不由异常处理运行时库调用。 不会有任何特定的优势来调用 **意外** 而不是 **终止**。
+在当前的 c + + 异常处理实现中 **`unexpected`** ， **`terminate`** 默认情况下调用，而不是由异常处理运行时库调用。 调用（而不是 term'inate）没有特别的优势 **`unexpected`** 。 
 
-所有动态链接的 Dll 或 Exe 都有单个 **set_unexpected** 处理程序;即使你调用 **set_unexpected** 你的处理程序也可能被另一个 DLL 或 EXE 替换为其他 DLL 或 EXE。
+**`set_unexpected`** 对于所有动态链接的 dll 或 exe，都有一个处理程序; 即使调用 **`set_unexpected`** 处理程序可以被另一个 DLL 或 exe 替换为其他 DLL 或 exe，也是如此。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**set_unexpected**|\<eh.h>|
+|**`set_unexpected`**|`<eh.h>`|
 
-有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[异常处理例程](../../c-runtime-library/exception-handling-routines.md)<br/>
-[中止](abort.md)<br/>
-[_get_unexpected](get-unexpected.md)<br/>
-[set_terminate](set-terminate-crt.md)<br/>
-[终止](terminate-crt.md)<br/>
-[之外](unexpected-crt.md)<br/>
+[异常处理例程](../../c-runtime-library/exception-handling-routines.md)\
+[`abort`](abort.md)\
+[`_get_unexpected`](get-unexpected.md)\
+[`set_terminate`](set-terminate-crt.md)\
+[`terminate`](terminate-crt.md)\
+[`unexpected`](unexpected-crt.md)\
