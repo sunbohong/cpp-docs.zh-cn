@@ -421,7 +421,7 @@ MSVC 支持以下其他预定义宏。
 
 - `__INTELLISENSE__`：当在 Visual Studio IDE 中传递 IntelliSense 编译器时，定义为 1。 其他情况下则不定义。 可使用此宏来保护 IntelliSense 编译器不理解的代码，也可使用它在生成和 IntelliSense 编译器之间进行切换。 有关详细信息，请参阅 [IntelliSense 缓慢疑难解答提示](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)。
 
-- `_ISO_VOLATILE`：如果设置了 `/volatile:iso` 编译器选项，则定义为 1。 其他情况下则不定义。
+- `_ISO_VOLATILE`：如果设置了 [`/volatile:iso`](../build/reference/volatile-volatile-keyword-interpretation.md) 编译器选项，则定义为 1。 其他情况下则不定义。
 
 - `_KERNEL_MODE`：如果设置了 [`/kernel`（创建内核模式二进制）](../build/reference/kernel-create-kernel-mode-binary.md)编译器选项，则定义为 1。 其他情况下则不定义。
 
