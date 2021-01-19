@@ -227,6 +227,7 @@ api_name:
 - __std_exception_copy
 - __std_exception_destroy
 - __std_type_info_destroy_list
+- __std_type_info_name
 - __stdio_common_vfprintf
 - __stdio_common_vfprintf_p
 - __stdio_common_vfprintf_s
@@ -271,6 +272,7 @@ api_name:
 - _W_Getdays
 - _W_Getmonths
 - _W_Getnames
+- _W_Gettnames
 - _wassert
 - _Wcsftime
 - __wcsncnt
@@ -931,17 +933,16 @@ helpviewer_keywords:
 - _wsopen_dispatch
 - _Xbad_alloc
 - _Xlength_error
-ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 9087998c91a3da5022fd3fe559e5d535416eeff5
-ms.sourcegitcommit: 1cd8f8a75fd036ffa57bc70f3ca869042d8019d4
+ms.openlocfilehash: 05d9666ce77c593c6b6fa366f43f8a593cb7a4a9
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98243172"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563947"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT 全局和函数
 
-C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变量。 其中一些函数和全局变量作为实现详细信息公开在公共标头中。 虽然可通过公共导出访问这些函数和全局变量，但是不应将它们用于你的代码。 建议你更改使用这些函数和变量的任何代码，以改为使用等效的公用库。 这些函数可能会在版本之间发生更改。 将它们列在此处以帮助你进行标识。 存在其他文档时，提供链接，但一般情况下，不记录这些实现的详细信息。
+C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变量。 其中一些函数和全局变量作为实现详细信息公开在公共标头中。 虽然可通过公共导出访问这些函数和全局变量，但是不应将它们用于你的代码。 建议你更改使用这些函数和变量的任何代码，以改为使用等效的公用库。 这些函数可能会在版本之间发生更改。 此处列出了这些内容以帮助你识别它们。 存在其他文档时，提供链接，但一般情况下，这些实现细节并未记录。
 
 ## <a name="internal-crt-globals-and-value-macros"></a>内部 CRT 全局和值宏
 
@@ -1219,6 +1220,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 |__std_exception_copy|
 |__std_exception_destroy|
 |__std_type_info_destroy_list|
+|__std_type_info_name|
 |__stdio_common_vfprintf|
 |__stdio_common_vfprintf_p|
 |__stdio_common_vfprintf_s|
@@ -1264,6 +1266,7 @@ C 运行时 (CRT) 库包含仅用于支持公用库接口的函数和全局变�
 |_W_Getdays|
 |_W_Getmonths|
 |_W_Getnames|
+|_W_Gettnames|
 |_wassert|
 |_Wcsftime|
 |__wcsncnt|

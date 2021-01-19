@@ -1,12 +1,13 @@
 ---
 title: tanh、tanhf、tanhl
 description: 适用于 tanh、tanhf 和 tanhl 的 API 参考;计算浮点值的双曲正切值。
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - tanh
 - tanhf
 - tanhl
 - _o_tanh
+- _o_tanhf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,14 +37,14 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 5fa93f56ebec5e8aa06c7317534adb12ae9e68e2
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: c09655b4a86010ff6a476f7dacbce4f9f73ab3cc
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556575"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564116"
 ---
-# <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
+# <a name="tanh-tanhf-tanhl"></a>`tanh`, `tanhf`, `tanhl`
 
 计算双曲正切值。
 
@@ -63,22 +64,22 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x-blade*\
+*`x`*\
 角度（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**Tanh**函数返回*x*的双曲正切值。 无错误返回。
+**`tanh`** 函数返回的双曲正切值 *`x`* 。 无错误返回。
 
-|输入|SEH 异常|**Matherr** 异常|
+|输入|SEH 异常|**`Matherr`** 异常|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|无|_DOMAIN|
+|± `QNAN`,`IND`|无|`_DOMAIN`|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用 **tanh** 的重载，该重载采用和返回 **`float`** 或 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **tanh** 始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用 **`tanh`** 采用和返回 **`float`** 或 **`long double`** 值的重载。 在 C 程序中，除非使用 `<tgmath.h>` 宏调用此函数，否则 **`tanh`** 始终采用并返回 **`double`** 。
 
-如果使用 \<tgmath.h> `tanh()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+如果使用 `<tgmath.h>` `tanh()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -86,10 +87,10 @@ long double tanh( long double x );  // C++ only
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C)|
 |-------------|---------------------|-|
-|**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> 或 \<math.h>|
-|**tanh ( # B1 ** 宏 | \<tgmath.h> ||
+|**`tanh`**, **`tanhf`**, **`tanhl`**|`<math.h>`|`<cmath>` 或 `<math.h>`|
+|**`tanh()`** 宏定义 | `<tgmath.h>` ||
 
-有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -121,9 +122,9 @@ tanh( 1.000000 ) = 0.761594
 
 ## <a name="see-also"></a>另请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>
-[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
-[atanh、atanhf、atanhl](atanh-atanhf-atanhl.md)<br/>
-[cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>
-[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)\
+[`acosh, acoshf, acoshl`](acosh-acoshf-acoshl.md)\
+[`asinh, asinhf, asinhl`](asinh-asinhf-asinhl.md)\
+[`atanh, atanhf, atanhl`](atanh-atanhf-atanhl.md)\
+[`cosh, coshf, coshl`](cosh-coshf-coshl.md)\
+[`sinh, sinhf, sinhl`](sinh-sinhf-sinhl.md)

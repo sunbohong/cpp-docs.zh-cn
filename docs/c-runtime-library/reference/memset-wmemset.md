@@ -1,10 +1,11 @@
 ---
-description: 了解详细信息： memset、wmemset
 title: memset、wmemset
-ms.date: 11/04/2016
+description: 了解详细信息： memset、wmemset
+ms.date: 1/15/2021
 api_name:
 - wmemset
 - memset
+- _o_memset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +20,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,15 +31,14 @@ f1_keywords:
 helpviewer_keywords:
 - wmemset function
 - memset function
-ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: 547cbbcab4966291ab540b6e57f68d4057995ff8
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 1ee5b3cb3653a3d5486eecb0f3b033e69d9db9fa
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97171343"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563960"
 ---
-# <a name="memset-wmemset"></a>memset、wmemset
+# <a name="memset-wmemset"></a>`memset`, `wmemset`
 
 将缓冲区设置为指定的字符。
 
@@ -56,35 +57,37 @@ wchar_t *wmemset(
 );
 ```
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>参数
 
-*目的*<br/>
+*`dest`*\
 指向目标的指针。
 
-*c*<br/>
+*`c`*\
 要设置的字符。
 
-*计数*<br/>
+*`count`*\
 字符数。
 
 ## <a name="return-value"></a>返回值
 
-*Dest* 的值。
+的值 *`dest`* 。
 
 ## <a name="remarks"></a>备注
 
-将 *dest* 的第一个 *计数* 字符设置为字符 *c*。
+将的前 *`count`* 个字符设置 *`dest`* 为字符 *`c`* 。
 
-**安全说明** 请确保目标缓冲区有足够的空间来容纳至少 *数量* 的字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+**安全说明** 请确保目标缓冲区有足够的空间来容纳至少 *`count`* 个字符。 有关详细信息，请参阅 [避免缓冲区溢出](/windows/win32/SecBP/avoiding-buffer-overruns)。
+
+默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
 ## <a name="requirements"></a>要求
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**memset**|\<memory.h> 或 \<string.h>|
-|**wmemset**|\<wchar.h>|
+|**`memset`**|`<memory.h>` 或 `<string.h>`|
+|**`wmemset`**|`<wchar.h>`|
 
-有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>库
 
@@ -148,9 +151,9 @@ After:  **** is a test of the wmemset function
 
 ## <a name="see-also"></a>请参阅
 
-[缓冲区操作](../../c-runtime-library/buffer-manipulation.md)<br/>
-[_memccpy](memccpy.md)<br/>
-[memchr、wmemchr](memchr-wmemchr.md)<br/>
-[memcmp、wmemcmp](memcmp-wmemcmp.md)<br/>
-[memcpy、wmemcpy](memcpy-wmemcpy.md)<br/>
-[_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
+[缓冲区操作](../../c-runtime-library/buffer-manipulation.md)\
+[`_memccpy`](memccpy.md)\
+[`memchr`, `wmemchr`](memchr-wmemchr.md)\
+[`memcmp`, `wmemcmp`](memcmp-wmemcmp.md)\
+[`memcpy`，wmemcpy](memcpy-wmemcpy.md)\
+[`_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l`](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)

@@ -141,12 +141,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: f8ffd7b3990f2d0ab40f8059e65f0aba4d4c8e0c
-ms.sourcegitcommit: a1676bf6caae05ecd698f26ed80c08828722b237
+ms.openlocfilehash: 81428295f79d71227bf0fdf72e18f2fde30ac763
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91503580"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564103"
 ---
 # <a name="unordered_map-class"></a>unordered_map 类
 
@@ -191,21 +191,21 @@ allocator 类。
 |[const_reference](#const_reference)|元素的常量引用的类型。|
 |[difference_type](#difference_type)|两个元素间的带符号距离的类型。|
 |[hasher](#hasher)|哈希函数的类型。|
-|[器](#iterator)|受控序列的迭代器的类型。|
+|[iterator](#iterator)|受控序列的迭代器的类型。|
 |[key_equal](#key_equal)|比较函数的类型。|
 |[key_type](#key_type)|排序键的类型。|
 |[local_iterator](#local_iterator)|受控序列的存储桶迭代器的类型。|
 |[mapped_type](#mapped_type)|与每个键关联的映射值的类型。|
-|[变为](#pointer)|指向元素的指针的类型。|
+|[指针 (pointer)](#pointer)|指向元素的指针的类型。|
 |[reference](#reference)|元素的引用的类型。|
 |[size_type](#size_type)|两个元素间的无符号距离的类型。|
 |[value_type](#value_type)|元素的类型。|
 
-|成员函数|说明|
+|成员函数|描述|
 |-|-|
 |[at](#at)|查找具有指定键的元素。|
 |[准备](#begin)|指定受控序列的开头。|
-|[Bucket](#bucket)|获取键值的存储桶编号。|
+|[地址](#bucket)|获取键值的存储桶编号。|
 |[bucket_count](#bucket_count)|获取存储桶数。|
 |[bucket_size](#bucket_size)|获取存储桶的大小。|
 |[cbegin](#cbegin)|指定受控序列的开头。|
@@ -233,12 +233,12 @@ allocator 类。
 |[swap](#swap)|交换两个容器的内容。|
 |[unordered_map](#unordered_map)|构造容器对象。|
 
-|运算符|说明|
+|运算符|描述|
 |-|-|
 |[unordered_map：： operator []](#op_at)|查找或插入具有指定键的元素。|
 |[unordered_map：： operator =](#op_eq)|复制哈希表。|
 
-## <a name="remarks"></a>注解
+## <a name="remarks"></a>备注
 
 对象通过调用两个存储对象，即一个 [unordered_map::key_equal](#key_equal) 类型的比较函数对象和一个 [unordered_map::hasher](#hasher) 类型的哈希函数对象，对它控制的序列进行排序。 可以通过调用成员函数[unordered_map：： key_eq](#key_eq)来访问第一个存储的对象 `()` ，并通过调用成员函数[unordered_map：： hash_function](#hash)访问第二个存储的对象 `()` 。 具体而言，对于所有 `X` 类型的值 `Y` 和 `Key`，`key_eq()(X, Y)` 调用将仅在两个参数值拥有等效顺序时返回 true；`hash_function()(keyval)` 调用将生成 `size_t` 类型的值的分布。 与类模板 [Unordered_multimap 类](../standard-library/unordered-multimap-class.md)不同，类型为的对象 `unordered_map` 可确保 `key_eq()(X, Y)` 对于受控序列的任意两个元素始终为 false。 （键是唯一的。）
 
@@ -262,7 +262,7 @@ allocator 类。
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是模板参数 `Alloc` 的同义词。
 
@@ -310,7 +310,7 @@ const Ty& at(const Key& key) const;
 
 对找到的元素数据值的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果未找到参数键值，函数将引发类 `out_of_range`的对象。
 
@@ -322,7 +322,6 @@ const Ty& at(const Key& key) const;
 #include <unordered_map>
 #include <iostream>
 
-typedef std::unordered_map<char, int> Mymap;
 typedef std::unordered_map<char, int> Mymap;
 int main()
 {
@@ -357,7 +356,7 @@ const_local_iterator begin(size_type nbucket) const;
 *nbucket*\
 存储桶编号。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 前两个编号函数返回向前迭代器，指向序列的第一个元素（或紧邻空序列后的位置）。 最后两个成员函数返回一个向前迭代器，该迭代器指向 bucket (*nbucket* 的第一个元素，或刚超出空 bucket) 的末尾。
 
@@ -369,7 +368,7 @@ const_local_iterator begin(size_type nbucket) const;
 #include <unordered_map>
 #include <iostream>
 
-#typedef std::unordered_map<char, int> Mymap;
+typedef std::unordered_map<char, int> Mymap;
 int main()
 {
     Mymap c1;
@@ -418,9 +417,9 @@ size_type bucket(const Key& keyval) const;
 *keyval*\
 要映射的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-此成员函数返回当前与键值 *keyval*对应的 bucket 数。
+此成员函数返回当前与键值 *keyval* 对应的 bucket 数。
 
 ### <a name="example"></a>示例
 
@@ -469,7 +468,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员函数将返回存储桶的当前数量。
 
@@ -560,9 +559,9 @@ size_type bucket_size(size_type nbucket) const;
 *nbucket*\
 存储桶编号。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数返回存储桶号 *nbucket*的大小。
+成员函数返回存储桶号 *nbucket* 的大小。
 
 ### <a name="example"></a>示例
 
@@ -615,7 +614,7 @@ const_iterator cbegin() const;
 
 一个 **`const`** 向前访问迭代器，指向范围的第一个元素，或刚超出空范围末尾 (空范围) 的位置 `cbegin() == cend()` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 由于使用 `cbegin` 的返回值，因此不能修改范围中的元素。
 
@@ -641,7 +640,7 @@ const_iterator cend() const;
 
 **`const`** 指向刚超出范围末尾的位置的向前访问迭代器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
@@ -664,7 +663,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数调用 [unordered_map::erase](#erase)`(` [unordered_map::begin](#begin)`(),` [unordered_map::end](#end)`())`。
 
@@ -731,7 +730,7 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类型描述为可用作受控序列的常量向前迭代器的对象。 在此处描述为实现定义的 `T1`类型的同义词。
 
@@ -774,7 +773,7 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型描述了可用作存储桶的常量向前迭代器的对象。 在此处描述为实现定义的 `T5`类型的同义词。
 
@@ -822,7 +821,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型描述了可用作指向受控序列中元素的常量指针的对象。
 
@@ -868,7 +867,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型将可作为常量引用的对象描述为受控序列中的元素。
 
@@ -928,7 +927,7 @@ bool contains(const Key& key) const;
 
 `true` 如果在容器中找到元素，则为; 否则为。 `false` 否则为。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 `contains()` 是 c + + 20 中的新增项。 若要使用它，请指定 [/std： c + + 最新](../build/reference/std-specify-language-standard-version.md) 编译器选项。
 
@@ -971,7 +970,7 @@ size_type count(const Key& keyval) const;
 *keyval*\
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员函数返回由[unordered_map：： equal_range](#equal_range)分隔的范围中的元素数目 `(keyval)` 。
 
@@ -1021,7 +1020,7 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 带符号的整数类型描述一个可表示受控序列中任意两个元素的地址之间的差异的对象。 在此处描述为实现定义的 `T3`类型的同义词。
 
@@ -1092,7 +1091,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 若要访问此成员函数返回的 `pr` 对的迭代器组件，请使用 `pr.first`；若要对其取消引用，请使用 `*(pr.first)`。 若要访问 **`bool`** `pr` 此成员函数返回的对的组件，请使用 `pr.second` 。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不会使迭代器或引用无效。
 
@@ -1123,7 +1122,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 如果因元素已存在导致插入失败，则将迭代器返回现有元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此函数不会使引用无效。
 
@@ -1141,7 +1140,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 bool empty() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 对于空受控序列，该成员函数返回 true。
 
@@ -1216,9 +1215,9 @@ const_local_iterator end(size_type nbucket) const;
 *nbucket*\
 存储桶编号。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器，它指向刚超出存储桶 *nbucket*结尾的位置。
+前两个成员函数返回一个向前迭代器，它指向刚超出序列末尾的位置。 最后两个成员函数返回一个向前迭代器，它指向刚超出存储桶 *nbucket* 结尾的位置。
 
 ## <a name="unordered_mapequal_range"></a><a name="equal_range"></a> unordered_map：： equal_range
 
@@ -1234,9 +1233,9 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 *keyval*\
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数返回一对迭代器 `X` ，以便 `[X.first, X.second)` 仅分隔受控序列中与 *keyval*具有等效排序的那些元素。 如果不存在此类元素，则两个迭代器均为 `end()`。
+成员函数返回一对迭代器 `X` ，以便 `[X.first, X.second)` 仅分隔受控序列中与 *keyval* 具有等效排序的那些元素。 如果不存在此类元素，则两个迭代器均为 `end()`。
 
 ### <a name="example"></a>示例
 
@@ -1318,7 +1317,7 @@ size_type erase(const key_type& Key);
 
 对于第三个成员函数，返回已从 unordered_map 中删除的元素数目。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 有关代码示例，请参阅 [map::erase](../standard-library/map-class.md#erase)。
 
@@ -1335,7 +1334,7 @@ const_iterator find(const Key& keyval) const;
 *keyval*\
 要搜索的键值。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此成员函数返回[unordered_map：： equal_range](#equal_range) `(keyval).first` 。
 
@@ -1390,7 +1389,7 @@ find('b') == true: [b, 2]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员函数将返回存储的分配器对象。
 
@@ -1428,7 +1427,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将返回存储的哈希函数对象。
 
@@ -1466,7 +1465,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是模板参数 `Hash` 的同义词。
 
@@ -1557,7 +1556,7 @@ IList);
 
 附带提示的单个元素的成员函数 (3) 和 (4) 返回迭代器，该迭代器指向将新元素插入到 unordered_map 中的位置，如果具有等效键的元素已经存在，则指向现有元素。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 任何迭代器、指针或引用都不会因为此函数而失效。
 
@@ -1583,7 +1582,7 @@ IList);
 typedef T0 iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型描述为可用作受控序列的前向迭代器的对象。 在此处描述为实现定义的 `T0`类型的同义词。
 
@@ -1626,7 +1625,7 @@ int main()
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将返回存储的比较函数对象。
 
@@ -1666,7 +1665,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是模板参数 `Pred` 的同义词。
 
@@ -1706,7 +1705,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是模板参数 `Key` 的同义词。
 
@@ -1761,7 +1760,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数返回 `(float)` [unordered_map：： size](#size) `() / (float)` [unordered_map：： bucket_count](#bucket_count) `()` ，即每个存储桶的平均元素数。
 
@@ -1847,7 +1846,7 @@ max_load_factor() == 0.1
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 此类型描述可用作存储桶的向前迭代器的对象。 在此处描述为实现定义的 `T4`类型的同义词。
 
@@ -1895,7 +1894,7 @@ int main()
 typedef Ty mapped_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 类型是模板参数 `Ty` 的同义词。
 
@@ -1950,7 +1949,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员函数将返回当前允许的最大存储桶数。
 
@@ -2043,7 +2042,7 @@ void max_load_factor(float factor);
 *一元*\
 新的最大加载因子。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个成员函数将返回存储的最大加载因子。 第二个成员函数将存储的最大加载因子替换为 *因素*。
 
@@ -2129,7 +2128,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该成员函数将返回对象可控制的最长序列的长度。
 
@@ -2175,11 +2174,11 @@ Ty& operator[](Key&& keyval);
 
 对插入元素的数据值的引用。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 如果未找到自变量键值，则它将与数据类型的默认值一起插入。
 
-`operator[]`可用于将元素插入到使用*m*[*Key*] = 的映射*m*中 `DataValue` ; 其中 `DataValue` ，是 `mapped_type` 具有键值的元素的的值。 *Key*
+`operator[]`可用于将元素插入到使用 *m*[*Key*] = 的映射 *m* 中 `DataValue` ; 其中 `DataValue` ，是 `mapped_type` 具有键值的元素的的值。 
 
 使用 `operator[]` 插入元素时，返回的引用不指示插入是更改预先存在的元素还是创建一个新元素。 成员函数 [find](../standard-library/map-class.md#find) 和 [insert](../standard-library/map-class.md#insert) 可用于确定具有指定键的元素在插入前是否已存在。
 
@@ -2238,7 +2237,7 @@ c2[move(str)] == 0
 c2["abc"] == 1
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将迭代器 `where` 确定为 [unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())` 的返回值。  (如果此类元素不存在，它将插入具有指定键的元素。 ) 它返回对的引用 `(*where).second` 。
 
@@ -2257,7 +2256,7 @@ unordered_map& operator=(unordered_map&& right);
 *然后*\
 运算符函数从中分配内容的 unordered_map。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个版本将所有元素从 *右* 复制到此 unordered_map。
 
@@ -2310,7 +2309,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型描述了可用作指向受控序列中元素的指针的对象。
 
@@ -2356,7 +2355,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型描述了可用作对受控序列中元素的引用的对象。
 
@@ -2407,7 +2406,7 @@ void rehash(size_type nbuckets);
 *nbuckets*\
 请求的存储桶数。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将存储桶数更改为至少 *nbuckets* ，并根据需要重新生成哈希表。
 
@@ -2480,7 +2479,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 成员函数将返回受控序列的长度。
 
@@ -2547,7 +2546,7 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 无符号的整数类型描述可表示任何受控序列长度的对象。 在此处描述为实现定义的 `T2`类型的同义词。
 
@@ -2588,9 +2587,9 @@ void swap(unordered_map& right);
 *然后*\
 要交换的容器。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
-成员函数交换和右之间的受控 **`*this`** 序列*right*。 如果[unordered_map：： get_allocator](#get_allocator) `() == right.get_allocator()` ，它在固定时间内执行此操作，它仅在复制类型的存储特征对象时引发异常 `Tr` ，并且不会使指定两个受控序列中的元素的引用、指针或迭代器无效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。
+成员函数交换和右之间的受控 **`*this`** 序列。 如果[unordered_map：： get_allocator](#get_allocator) `() == right.get_allocator()` ，它在固定时间内执行此操作，它仅在复制类型的存储特征对象时引发异常 `Tr` ，并且不会使指定两个受控序列中的元素的引用、指针或迭代器无效。 否则，它所执行的元素分配和构造函数调用数量会与两个受控序列中的元素数量成正比。
 
 ### <a name="example"></a>示例
 
@@ -2718,13 +2717,13 @@ unordered_map(
 *IList*\
 包含要复制的元素的 initializer_list。
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 第一个构造函数指定通过 `right` 控制的序列副本。 第二个构造函数指定空的受控序列。 第三个构造函数插入元素值 `[first, last)` 的序列。 第四个构造函数通过移动 `right` 指定序列副本。
 
-所有构造函数还初始化若干存储的值。 对于复制构造函数，值从 *右*获取。 否则：
+所有构造函数还初始化若干存储的值。 对于复制构造函数，值从 *右* 获取。 否则：
 
-最小存储桶数是 *Bucket_count*的参数（如果存在）;否则，它是在此处描述为实现定义的值的默认值 `N0` 。
+最小存储桶数是 *Bucket_count* 的参数（如果存在）;否则，它是在此处描述为实现定义的值的默认值 `N0` 。
 
 哈 *希函数对象是自变量*（如果有）。否则为 `Hash()` 。
 
@@ -2874,7 +2873,7 @@ int main()
 typedef std::pair<const Key, Ty> value_type;
 ```
 
-### <a name="remarks"></a>注解
+### <a name="remarks"></a>备注
 
 该类型描述了受控序列的元素。
 
@@ -2921,7 +2920,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

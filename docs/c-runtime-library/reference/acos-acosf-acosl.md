@@ -1,12 +1,13 @@
 ---
 title: acos、acosf、acosl
-description: 、和的 API 参考 `acos` `acosf` ; 用于 `acosl` 计算浮点值的反余弦值。
-ms.date: 08/31/2020
+description: 适用于 acos、acosf 和 acosl 的 API 参考;计算浮点值的反余弦值。
+ms.date: 1/15/2021
 api_name:
 - acosf
 - acos
 - acosl
 - _o_acos
+- _o_acosf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,15 +37,14 @@ helpviewer_keywords:
 - acosf function
 - trigonometric functions
 - arccosine function
-ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: eeee51cea2a81882ee1ed8b014312ee9f9095dc6
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 63a9c9577e252c506191b7a49ec9da6502968095
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555093"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563830"
 ---
-# <a name="acos-acosf-acosl"></a>acos、acosf、acosl
+# <a name="acos-acosf-acosl"></a>`acos`, `acosf`, `acosl`
 
 计算反余弦值。
 
@@ -62,26 +62,26 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x-blade*\
+*`x`*\
 介于-1 和1之间的值，计算反余弦的反余弦 () 。
 
 ## <a name="return-value"></a>返回值
 
-**Acos**函数返回0到π弧度范围内*x*的反余弦。
+**`acos`** 函数返回0到π弧度范围内 *x* 的反余弦。
 
-默认情况下，如果 *x* 小于-1 或大于1，则 **acos** 将返回无限值。
+默认情况下，如果 *`x`* 小于-1 或大于1，则 **`acos`** 返回无限期的。
 
-|输入|SEH 异常|Matherr 异常|
+|输入|`SEH` 异常|`Matherr` 异常|
 |-----------|-------------------|-----------------------|
-|± ∞|INVALID|_DOMAIN|
-|± QNAN，IND|无|_DOMAIN|
-|&#124;x&#124;>1|INVALID|_DOMAIN|
+|`± ∞`|`INVALID`|`_DOMAIN`|
+|`± QNAN, IND`|无|`_DOMAIN`|
+|&#124;`x`&#124;>1|`INVALID`|`_DOMAIN`|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此你可以调用采用并返回和类型的 **acos** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则， **acos** 始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用 **`acos`** 采用并返回 **`float`** 和类型的的重载 **`long double`** 。 在 C 程序中，除非使用 `<tgmath.h>` 宏调用此函数，否则 **`acos`** 始终采用并返回 **`double`** 。
 
-如果使用 \<tgmath.h> `acos()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+如果使用 `<tgmath.h>` `acos()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -89,8 +89,8 @@ long double acos( long double x );   // C++ only
 
 |例程所返回的值|必需的标头|可选标头|
 |-------------|---------------------|----------------------|
-|**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
-|**acos ( # B1 ** 宏 | \<tgmath.h> ||
+|**`acos`**, **`acosf`**, **`acosl`**|`<math.h>`|`<errno.h>`|
+|**`acos()`** 宏定义 | `<tgmath.h>` ||
 
 ## <a name="example"></a>示例
 
@@ -144,10 +144,10 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>另请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[asin、asinf、asinl](asin-asinf-asinl.md)<br/>
-[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos、cosf、cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin、sinf、sinl](sin-sinf-sinl.md)<br/>
-[tan、tanf、tanl](tan-tanf-tanl.md)
+[浮点支持](../../c-runtime-library/floating-point-support.md)\
+[`asin`, `asinf`, `asinl`](asin-asinf-asinl.md)\
+[`atan`, `atanf`, `atanl`, `atan2`, `atan2f`, `atan2l`](atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+[`cos`, `cosf`, `cosl`](cos-cosf-cosl.md)\
+[`_matherr`](matherr.md)\
+[`sin`, `sinf`, `sinl`](sin-sinf-sinl.md)\
+[`tan`, `tanf`, `tanl`](tan-tanf-tanl.md)

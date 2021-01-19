@@ -1,12 +1,13 @@
 ---
 title: tan、tanf、tanl
 description: 适用于 tan、tanf 和 tanl 的 API 参考;计算浮点值的正切值。
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - tan
 - tanf
 - tanl
 - _o_tan
+- _o_tanf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -38,14 +39,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 8137bf4cbce59083e8e7c09557400fbff4f6b1df
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 056afdf0bbac422c498bd54c2a154472bfd97c34
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556536"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564051"
 ---
-# <a name="tan-tanf-tanl"></a>tan、tanf、tanl
+# <a name="tan-tanf-tanl"></a>`tan`, `tanf`, `tanl`
 
 计算正切值。
 
@@ -65,23 +66,23 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x-blade*\
+*`x`*\
 角度（以弧度为单位）。
 
 ## <a name="return-value"></a>返回值
 
-**Tan**函数返回*x*的正切值。 如果 *x* 大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
+**`tan`** 函数返回的正切值 *`x`* 。 如果 *`x`* 大于或等于263，或者小于或等于-263，则结果中的结果会丢失。
 
-|输入|SEH 异常|**Matherr** 异常|
+|输入|SEH 异常|**`Matherr`** 异常|
 |-----------|-------------------|-------------------------|
-|± QNAN，IND|无|_DOMAIN|
-|± INF|**无效**|_DOMAIN|
+|`± QNAN`,`IND`|无|`_DOMAIN`|
+|`± INF`|**无效**|`_DOMAIN`|
 
 ## <a name="remarks"></a>备注
 
-由于 c + + 允许重载，因此可以调用采用和返回或值的 **茶色** 重载 **`float`** **`long double`** 。 在 C 程序中，除非使用 \<tgmath.h> 宏调用此函数，否则 **tan** 始终采用并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以调用 **`tan`** 采用和返回 **`float`** 或 **`long double`** 值的重载。 在 C 程序中，除非使用 `<tgmath.h>` 宏调用此函数，否则 **`tan`** 始终采用并返回 **`double`** 。
 
-如果使用 \<tgmath.h> `tan()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+如果使用 `<tgmath.h>` `tan()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -89,10 +90,10 @@ long double tan( long double x );  // C++ only
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
-|**tan ( # B1 ** 宏 | \<tgmath.h> ||
+|**`tan`**, **`tanf`**, **`tanl`**|`<math.h>`|`<cmath>` 或 `<math.h>`|
+|**`tan()`** 宏定义 | `<tgmath.h>` ||
 
-有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -120,10 +121,10 @@ tan( 0.785398 ) = 1.000000
 
 ## <a name="see-also"></a>另请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[acos、acosf、acosl](acos-acosf-acosl.md)<br/>
-[asin、asinf、asinl](asin-asinf-asinl.md)<br/>
-[atan、atanf、atanl、atan2、atan2f、atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
-[cos、cosf、cosl](cos-cosf-cosl.md)<br/>
-[sin、sinf、sinl](sin-sinf-sinl.md)<br/>
-[_CItan](../../c-runtime-library/citan.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)\
+[`acos, acosf, acosl`](acos-acosf-acosl.md)\
+[`asin, asinf, asinl`](asin-asinf-asinl.md)\
+[`atan, atanf, atanl, atan2, atan2f, atan2l`](atan-atanf-atanl-atan2-atan2f-atan2l.md)\
+[`cos, cosf, cosl`](cos-cosf-cosl.md)\
+[`sin, sinf, sinl`](sin-sinf-sinl.md)\
+[`_CItan`](../../c-runtime-library/citan.md)

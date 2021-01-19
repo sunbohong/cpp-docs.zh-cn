@@ -1,12 +1,13 @@
 ---
 title: fmod、fmodf、fmodl
 description: 适用于 fmod、fmodf 和 fmodl 的 API 参考;计算浮点余数的。
-ms.date: 9/1/2020
+ms.date: 1/15/2021
 api_name:
 - fmod
 - fmodf
 - fmodl
 - _o_fmod
+- _o_fmodf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -34,15 +35,14 @@ helpviewer_keywords:
 - fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
-ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 2b610dec79c98b973af09f8efb147ad6797f7946
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: 8d2c3bcb0f871eb707f264478c4ce492bbb9c80c
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556081"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98563933"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
+# <a name="fmod-fmodf-fmodl"></a>`fmod`, `fmodf`, `fmodl`
 
 计算浮点余数。
 
@@ -75,20 +75,20 @@ long double fmodl(
 
 ### <a name="parameters"></a>参数
 
-*x*、 *y*\
+*`x`*, *`y`*\
 浮点值。
 
 ## <a name="return-value"></a>返回值
 
-**fmod**返回*x*  /  *y*的浮点余数。 如果 *y* 的值为0.0，则 **fmod** 将返回静默的 NaN。 有关 **printf** 系列的 quiet NaN 表示形式的信息，请参阅 [printf](printf-printf-l-wprintf-wprintf-l.md)。
+**`fmod`** 返回的浮点余数 *`x`*  /  *`y`* 。 如果的值 *`y`* 为0.0，则 **`fmod`** 返回静默的 NaN。 有关系列的 quiet NaN 表示形式的信息 **`printf`** ，请参阅 [printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>备注
 
-**Fmod**函数计算*x*y 的浮点余数*f*  /  *y* ，这是*x*  =  *i* \* *y*  +  *f*，其中*i*是整数， *f*与*x*具有相同的符号， *f*的绝对值小于*y*的绝对值。
+**`fmod`** 函数计算的浮点余数 *f* *`x`*  /  *`y`* *`x`*  =   \* *`y`*  +  *`f`* ，其中， *`i`* 是一个整数，其 *`f`* 符号与相同 *`x`* ，并且的绝对值 *`f`* 小于的绝对值 *`y`* 。
 
-C + + 允许重载，因此你可以调用 **fmod** 的重载，该重载采用和返回 **`float`** 和 **`long double`** 值。 在 C 程序中，除非使用 \<tgmath.h> 宏来调用此函数，否则 **fmod** 始终采用两个 **`double`** 参数并返回一个 **`double`** 。
+C + + 允许重载，因此你可以调用 **`fmod`** 采用并返回 **`float`** 和值的重载 **`long double`** 。 在 C 程序中，除非使用 `<tgmath.h>` 宏调用此函数，否则 **`fmod`** 始终采用两个参数， **`double`** 并返回 **`double`** 。
 
-如果使用 \<tgmath.h> `fmod()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+如果使用 `<tgmath.h>` `fmod()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -96,10 +96,10 @@ C + + 允许重载，因此你可以调用 **fmod** 的重载，该重载采用�
 
 |函数|必需的标头|
 |--------------|---------------------|
-|**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
-|**fmod** 宏 | \<tgmath.h> |
+|**`fmod`**, **`fmodf`**, **`fmodl`**|`<math.h>`|
+|**`fmod`** 宏定义 | `<tgmath.h>` |
 
-有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -125,8 +125,8 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>另请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
-[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
-[floor、floorf、floorl](floor-floorf-floorl.md)<br/>
-[_CIfmod](../../c-runtime-library/cifmod.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)\
+[`ceil, ceilf, ceill`](ceil-ceilf-ceill.md)\
+[`fabs, fabsf, fabsl`](fabs-fabsf-fabsl.md)\
+[果`loor, floorf, floorl`](floor-floorf-floorl.md)\
+[`_CIfmod`](../../c-runtime-library/cifmod.md)

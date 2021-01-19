@@ -1,12 +1,13 @@
 ---
 title: modf、modff、modfl
 description: 适用于 modf、modff 和 modfl 的 API 参考;将浮点值拆分为小数部分和整数部分。
-ms.date: 4/2/2020
+ms.date: 1/15/2021
 api_name:
 - modff
 - modf
 - modfl
 - _o_modf
+- _o_modff
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,15 +37,14 @@ helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
-ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 0d3522079acc8a9d2c8409b1cad78e7f50a7f788
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: fbc68c3369e8b992350534e3baa5f19b0f2a5e39
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89556757"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564013"
 ---
-# <a name="modf-modff-modfl"></a>modf、modff、modfl
+# <a name="modf-modff-modfl"></a>`modf`, `modff`, `modfl`
 
 将浮点值拆分为小数部分和整数部分。
 
@@ -63,23 +63,23 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*<br/>
+*`x`*\
 浮点值。
 
-*intptr*<br/>
+*`intptr`*\
 指向存储整数部分的指针。
 
 ## <a name="return-value"></a>返回值
 
-此函数返回 *x* 的有符号小数部分。 无错误返回。
+此函数返回的带符号小数部分 *`x`* 。 无错误返回。
 
 ## <a name="remarks"></a>备注
 
-**Modf**函数将浮点值*x*分解为小数部分和整数部分，每个部分都具有与*x*相同的符号。 返回 *x* 的带符号小数部分。 整数部分存储为介于 *intptr*的浮点值。
+**Modf** 函数将浮点值分解 *`x`* 为小数部分和整数部分，每个部分都具有与相同的符号 *`x`* 。 返回的带符号小数部分 *`x`* 。 整数部分在中存储为浮点值 *`intptr`* 。
 
-**modf** 具有使用流式处理 simd 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**modf** 具有使用流式处理 simd 扩展 2 (SSE2) 的实现。 [`_set_SSE2_enable`](set-sse2-enable.md)有关使用 SSE2 实现的信息和限制，请参阅。
 
-C + + 允许重载，因此你可以调用采用和返回或参数的 **modf** 的重载 **`float`** **`long double`** 。 在 C 程序中， **modf** 始终采用两个双精度值并返回一个双精度值。
+C + + 允许重载，因此你可以调用 **`modf`** 采用和返回 **`float`** 或参数的重载 **`long double`** 。 在 C 程序中， **`modf`** 始终采用两个双精度值并返回一个双精度值。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -87,9 +87,9 @@ C + + 允许重载，因此你可以调用采用和返回或参数的 **modf** �
 
 |例程所返回的值|必需的标头|
 |-------------|---------------------|
-|**modf**、 **modff**、 **modfl**|Ansi-c \<math.h><br /><br /> C + +：、 \<cmath> 或 \<math.h>|
+|**`modf`**, **`modff`**, **`modfl`**|Ansi-c `<math.h>`<br /><br /> C + +：、 `<cmath>` 或 `<math.h>`|
 
-有关其他兼容性信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
+有关兼容性的详细信息，请参阅[兼容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>示例
 
@@ -117,6 +117,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>另请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[frexp](frexp.md)<br/>
-[ldexp](ldexp.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)\
+[`frexp`](frexp.md)\
+[`ldexp`](ldexp.md)

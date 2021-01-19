@@ -1,7 +1,7 @@
 ---
 title: atan、atanf、atanl、atan2、atan2f、atan2l
 description: 适用于 atan、atanf、atanl、atan2、atan2f 和 atan2l 的 API 参考;计算浮点值的反正切值。
-ms.date: 08/31/2020
+ms.date: 1/15/2021
 api_name:
 - atan2f
 - atan2l
@@ -12,6 +12,7 @@ api_name:
 - _o_atan
 - _o_atan2
 - _o_atan2f
+- _o_atanf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -45,17 +46,16 @@ helpviewer_keywords:
 - arctangent function
 - trigonometric functions
 - atan2f function
-ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-ms.openlocfilehash: 1f1d33aac86d94ab3731dd5cf5b124af99ccb3f2
-ms.sourcegitcommit: 4ed2d68634eb2fb77e18110a2d26bc0008be369c
+ms.openlocfilehash: bbfc08507bd48e1b9eb0b91350b2b39948d19a5f
+ms.sourcegitcommit: 92dc6d99ba5dcf3b64dee164df2d29beb1e608da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89555625"
+ms.lasthandoff: 01/18/2021
+ms.locfileid: "98564064"
 ---
-# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
+# <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>`atan`, `atanf`, `atanl`, `atan2`, `atan2f`, `atan2l`
 
-计算**x** (**atan**、 **atanf**和**atanl**) 的反正切值，或**y** / **x** (**atan2**、 **atan2f**和**atan2l**) 的反正切值。
+计算 **`x`** (**`atan`** 、 **`atanf`** **`atanl`**) 或 **`y`** / **`x`** (**`atan2`** 、 **`atan2f`** 和 **`atan2l`**) 的反正切的反正切值。
 
 ## <a name="syntax"></a>语法
 
@@ -79,28 +79,28 @@ long double atan2( long double y, long double x );  // C++ only
 
 ### <a name="parameters"></a>参数
 
-*x*、 *y*\
+*`x`*, *`y`*\
 任意数字。
 
 ## <a name="return-value"></a>返回值
 
-**atan** 返回 *x* 的反正切值，范围为-π/2 到π/2 弧度。 **atan2**返回*y* / 范围-π到π弧度的 y*x*的反正切值。 如果 *x* 为0，则 **atan** 将返回0。 如果 **atan2** 的两个参数均为0，则该函数返回0。 所有结果都都以弧度为单位。
+**`atan`** 返回 *`x`* 在-π/2 到π/2 弧度范围内的反正切值。 **`atan2`** 返回 *`y`* / *`x`* 在-π到π弧度范围内的反正切值。 如果 *`x`* 为0，则 **`atan`** 返回0。 如果的两个参数 **`atan2`** 均为0，则该函数返回0。 所有结果都都以弧度为单位。
 
-**atan2** 使用两个参数的符号来确定返回值的象限。
+**`atan2`** 使用两个参数的符号来确定返回值的象限。
 
 |输入|SEH 异常|Matherr 异常|
 |-----------|-------------------|-----------------------|
-|± **QNAN**， **IND**|无|**_DOMAIN**|
+|± **`QNAN`**, **`IND`**|无|**`_DOMAIN`**|
 
 ## <a name="remarks"></a>备注
 
-**Atan**函数计算*x*的反正切函数) 的反正切 (。 **atan2**计算*y* / *x* (的反正切值。如果*x*等于0，则如果*y*为正值，则**atan2**返回π/2;*如果 y*为负，则返回-π/2; 如果*y*为0，则返回 0 ) 。
+**`atan`** 函数计算反切线函数) 的反正切 (*`x`* 。 **`atan2`** 如果等于0，则计算 (的反正切; *`y`* / *`x`* *`x`* 如果为 **`atan2`** 正，则返回π/2; 如果为负，则返回 *`y`* 0; 如果为0，则返回 *`y`* 0 *`y`* 。 ) 
 
-如果使用 \<tgmath.h> `atan()` 或 `atan2()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
+如果使用 `<tgmath.h>` `atan()` 或 `atan2()` 宏，则参数的类型将决定选择哪个版本的函数。 有关详细信息，请参阅 [类型-泛型数学](../../c-runtime-library/tgmath.md) 。
 
-**atan** 具有使用流式处理 simd 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [_set_SSE2_enable](set-sse2-enable.md)。
+**`atan`** 具有使用流式处理 SIMD 扩展 2 (SSE2) 的实现。 有关使用 SSE2 实现的信息和限制，请参阅 [`_set_SSE2_enable`](set-sse2-enable.md) 。
 
-由于 c + + 允许重载，因此你可以调用采用或参数的 **atan** 和 **atan2** 的重载 **`float`** **`long double`** 。 在 C 程序中，除非你使用 \<tgmath.h> 宏来调用此函数，否则， **atan** 和 **atan2** 始终采用 **`double`** 参数并返回 **`double`** 。
+由于 c + + 允许重载，因此你可以 **`atan`** 调用 **`atan2`** 采用或参数的和的重载 **`float`** **`long double`** 。 在 C 程序中，除非你使用 `<tgmath.h>` 宏来调用此函数， **`atan`** 并且 **`atan2`** 始终采用 **`double`** 参数并返回 **`double`** 。
 
 默认情况下，此函数的全局状态的作用域限定为应用程序。 若要更改此项，请参阅 [CRT 中的全局状态](../global-state.md)。
 
@@ -108,8 +108,8 @@ long double atan2( long double y, long double x );  // C++ only
 
 |例程所返回的值|必需的标头 (C)|必需的标头 (C++)|
 |-------------|---------------------|-|
-|**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> 或 \<math.h>|
-|**atan ( # B1 **， **atan2** 宏 | \<tgmath.h> ||
+|**`atan`**, **`atan2`**, **`atanf`**, **`atan2f`**, **`atanl`**, **`atan2l`**|`<math.h>`|`<cmath>` 或 `<math.h>`|
+|**`atan()`**、 **`atan2`** 宏 | `<tgmath.h>` ||
 
 ## <a name="example"></a>示例
 
@@ -144,12 +144,12 @@ Arctangent of 0.500000 / 5.000000: 0.099669
 
 ## <a name="see-also"></a>另请参阅
 
-[浮点支持](../../c-runtime-library/floating-point-support.md)<br/>
-[acos、acosf、acosl](acos-acosf-acosl.md)<br/>
-[asin、asinf、asinl](asin-asinf-asinl.md)<br/>
-[cos、cosf、cosl](cos-cosf-cosl.md)<br/>
-[_matherr](matherr.md)<br/>
-[sin、sinf、sinl](sin-sinf-sinl.md)<br/>
-[tan、tanf、tanl](tan-tanf-tanl.md)<br/>
-[_CIatan](../../c-runtime-library/ciatan.md)<br/>
-[_CIatan2](../../c-runtime-library/ciatan2.md)<br/>
+[浮点支持](../../c-runtime-library/floating-point-support.md)\
+[`acos`, `acosf`, `acosl`](acos-acosf-acosl.md)\
+[`asin`, `asinf`, `asinl`](asin-asinf-asinl.md)\
+[`cos`, `cosf`, `cosl`](cos-cosf-cosl.md)\
+[`_matherr`](matherr.md)\
+[`sin`, `sinf`, `sinl`](sin-sinf-sinl.md)\
+[`tan`, `tanf`, `tanl`](tan-tanf-tanl.md)\
+[`_CIatan`](../../c-runtime-library/ciatan.md)\
+[`_CIatan2`](../../c-runtime-library/ciatan2.md)
