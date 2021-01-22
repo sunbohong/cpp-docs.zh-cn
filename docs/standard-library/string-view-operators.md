@@ -1,7 +1,7 @@
 ---
 title: '&lt;string_view &gt; 运算符'
 description: '`string_view`用于比较两个对象的运算符的 API 参考， `string_view` 或一个 `string_view` 其他字符串对象'
-ms.date: 9/4/2020
+ms.date: 01/15/2021
 f1_keywords:
 - xstring/basic_string_view::operator!=
 - xstring/basic_string_view::operator&gt;
@@ -11,6 +11,10 @@ f1_keywords:
 - xstring/basic_string_view::operator&lt;=
 - xstring/basic_string_view::operator+
 - xstring/basic_string_view::operator==
+- xstring/std::literals::string_view_literals::operator "sv
+- std::literals::string_view_literals::operator sv
+- std::literals::string_view_literals
+- string_view_literals
 helpviewer_keywords:
 - std::basic_string_view::operator!=
 - std::basic_string_view::operator&gt;
@@ -18,27 +22,27 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 832e49aaf01a4ea124b7a6881b93bd93b7337215
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+ms.openlocfilehash: a14d82dc0b29f88cb25f5b24f0836f033d2b828e
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90039880"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666896"
 ---
-# <a name="ltstring_viewgt-operators"></a>&lt;string_view &gt; 运算符
+# <a name="string_view-operators"></a>`<string_view>` 运算符
 
-使用这些运算符比较两个 string_view 对象，或 string_view 以及为其提供了隐式转换的其他某个字符串对象 (例如[std：： string](basic-string-class.md)或**char \* **) 。
+使用这些运算符来比较两个 `string_view` 对象，或者 `string_view` 和一个其他字符串对象 (例如 [`std::string`](basic-string-class.md) ，或 `char*` 为其提供了隐式转换的) 。
 
-[operator！ =](#op_neq)\
-[操作员&gt;](#op_gt)\
-[操作员&gt;=](#op_gt_eq)\
-[操作员&lt;](#op_lt)\
-[操作员&lt;&lt;](#op_lt_lt)\
-[操作员&lt;=](#op_lt_eq)\
-[operator = =](#op_eq_eq)\
-[运算符 "" sv](#op_sv)
+[`operator!=`](#op_neq)\
+[`operator>`](#op_gt)\
+[`operator>=`](#op_gt_eq)\
+[`operator<`](#op_lt)\
+[`operator<<`](#op_lt_lt)\
+[`operator<=`](#op_lt_eq)\
+[`operator==`](#op_eq_eq)\
+[`operator""sv`](#op_sv)
 
-## <a name="operator"></a><a name="op_neq"></a> operator！ =
+## <a name="operator"></a><a name="op_neq"></a> `operator!=`
 
 测试运算符左侧的对象是否不等于右侧的对象。
 
@@ -71,13 +75,13 @@ bool operator!=(
 
 **`true`** 如果运算符左侧的对象不按字典顺序等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-从 *convertible_string_type* 到另一侧的 string_view 必须存在隐式转换。
+在另一侧，隐式转换必须从 *convertible_string_type* 到的 `string_view` 。
 
 比较基于对字符序列进行成对字典比较。 如果它们具有相同数量的元素，并且元素都相等，则这两个对象相等。 否则，它们不相等。
 
-## <a name="operator"></a><a name="op_eq_eq"></a> operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a> `operator==`
 
 测试运算符左侧的对象是否等于右侧的对象。
 
@@ -110,15 +114,15 @@ bool operator==(
 
 **`true`** 如果运算符左侧的对象按字典顺序等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-从 *convertible_string_type* 到另一侧的 string_view 必须存在隐式转换。
+在另一侧，隐式转换必须从 *convertible_string_type* 到的 `string_view` 。
 
 比较基于对字符序列进行成对字典比较。 如果它们具有相同数量的元素，并且元素都相等，则这两个对象相等。
 
-## <a name="operatorlt"></a><a name="op_lt"></a> 操作员&lt;
+## <a name="operator"></a><a name="op_lt"></a> `operator<`
 
-测试运算符左侧的对象是否小于右端的对象 sidestring_view
+测试运算符左侧的对象是否小于右侧的对象。
 
 ```cpp
 template <class CharType, class Traits>
@@ -149,7 +153,7 @@ bool operator<(
 
 **`true`** 如果运算符左侧的对象按字典顺序小于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
 从 *convertible_string_type* 到另一侧的 string_view 必须存在隐式转换。
 
@@ -177,7 +181,7 @@ int main()
 }
 ```
 
-## <a name="operatorlt"></a><a name="op_lt_eq"></a> 操作员&lt;=
+## <a name="operator"></a><a name="op_lt_eq"></a> `operator<=`
 
 测试运算符左侧的对象是否小于或等于右侧的对象。
 
@@ -210,13 +214,13 @@ bool operator<=(
 
 **`true`** 如果运算符左侧的对象按字典顺序小于或等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-请[参阅 &lt; 运算符](#op_lt)。
+请参阅 [`operator<`](#op_lt)。
 
-## <a name="operatorltlt"></a><a name="op_lt_lt"></a> 操作员&lt;&lt;
+## <a name="operator"></a><a name="op_lt_lt"></a> `operator<<`
 
-将 string_view 写入到输出流中。
+将写入 `string_view` 到输出流中。
 
 ```cpp
 template <class CharType, class Traits>
@@ -226,21 +230,21 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>参数
 
-*Ostr*\
+*`Ostr`*\
 要写入的输出流。
 
-*字符串*\
+*`Str`*\
 要输入到输出流中的 string_view。
 
 ### <a name="return-value"></a>返回值
 
 要写入的输出流。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-使用此运算符将 string_view 的内容插入到输出流中，例如使用 [std：： cout](iostream.md#cout)。
+使用此运算符将的内容插入 `string_view` 到输出流中，例如使用 [`std::cout`](iostream.md#cout) 。
 
-## <a name="operatorgt"></a><a name="op_gt"></a> 操作员&gt;
+## <a name="operator"></a><a name="op_gt"></a> `operator>`
 
 测试运算符左侧的对象是否大于右侧的对象。
 
@@ -271,13 +275,13 @@ bool operator>(
 
 ### <a name="return-value"></a>返回值
 
-**`true`** 如果运算符左侧的对象按字典顺序大于右侧的 string_view 对象，则为; 否则为。否则为 **`false`** 。
+**`true`** 如果运算符左侧的对象按字典顺序大于 `string_view` 右侧的对象，则为; 否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-请[参阅 &lt; 运算符](#op_lt)。
+请参阅 [`operator<`](#op_lt)。
 
-## <a name="operatorgt"></a><a name="op_gt_eq"></a> 操作员&gt;=
+## <a name="operator"></a><a name="op_gt_eq"></a> `operator>=`
 
 测试运算符左侧的对象是否大于或等于右侧的对象。
 
@@ -300,23 +304,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>参数
 
-*左中*\
+*`left`*\
 任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
-*然后*\
+*`right`*\
 任何可转换的字符串类型或要比较的类型的对象 `basic_string_view` 。
 
 ### <a name="return-value"></a>返回值
 
 **`true`** 如果运算符左侧的对象按字典顺序大于或等于右侧的对象，则为; 否则为。否则为 **`false`** 。
 
-### <a name="remarks"></a>备注
+### <a name="remarks"></a>注解
 
-请[参阅 &lt; 运算符](#op_lt)。
+请参阅 [`operator<`](#op_lt)。
 
-## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a> 运算符 "" sv (string_view 文本) 
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>`operator"" sv` (`string_view` 文字) 
 
-从字符串文本构造 string_view。 需要命名空间 `std::literals::string_view_literals` 。
+`string_view`从字符串文本构造。 需要命名空间 `std::literals::string_view_literals` 。
 
 ### <a name="example"></a>示例
 
@@ -333,8 +337,8 @@ using namespace literals::string_view_literals;
 
 ## <a name="requirements"></a>要求
 
-[/std:c++17](../build/reference/std-specify-language-standard-version.md)
+[`/std:c++17`](../build/reference/std-specify-language-standard-version.md)
 
 ## <a name="see-also"></a>另请参阅
 
-[\<string_view>](../standard-library/string-view.md)
+[`<string_view>`](../standard-library/string-view.md)

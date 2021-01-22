@@ -1,10 +1,12 @@
 ---
 title: '&lt;filesystem&gt;'
 description: 描述 filesystem 标准 c + + 库标头中的类、函数和类型。
-ms.date: 01/22/2020
+ms.date: 01/15/2021
 f1_keywords:
 - <filesystem>
-ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
+- filesystem/std::filesystem
+- std::filesystem
+- std::experimental::filesystem
 no-loc:
 - filesystem
 - experimental
@@ -12,16 +14,16 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: 0cf5e16eb21c02cfb96577c1dada873f087a71cf
-ms.sourcegitcommit: ec6dd97ef3d10b44e0fedaa8e53f41696f49ac7b
+ms.openlocfilehash: 8dc81692c7c7dc467f3ab8e2ceb8cac19e004ab8
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88835826"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667479"
 ---
-# &lt;filesystem&gt;
+# `filesystem`
 
-包括标头 &lt; filesystem> 用于访问操作和检索有关路径、文件和目录的信息的类和函数。
+包括标头 `<filesystem>` 以访问用于操作和检索有关路径、文件和目录的信息的类和函数。
 
 ## <a name="syntax"></a>语法
 
@@ -99,18 +101,18 @@ using namespace std::experimental::filesystem::v1;
 
 |“属性”|说明|
 |-|-|
-|[directory_entry 类](../standard-library/directory-entry-class.md)|描述由 `directory_iterator` 或返回 `recursive_directory_iterator` 并包含的对象 `path` 。|
-|[directory_iterator 类](../standard-library/directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。|
-|[filesystem_error 类](../standard-library/filesystem-error-class.md)|所引发以报告低级系统溢出的异常的基类。|
-|[path 类](../standard-library/path-class.md)|定义一个类，该类存储适合用作文件名的模板类型 `String` 的对象。|
-|[recursive_directory_iterator 类](../standard-library/recursive-directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。 迭代器还可以降到子目录中。|
-|[file_status 类](../standard-library/file-status-class.md)|包装 `file_type`。|
+|[`directory_entry` 班级](../standard-library/directory-entry-class.md)|描述由 `directory_iterator` 或返回 `recursive_directory_iterator` 并包含的对象 `path` 。|
+|[`directory_iterator` 班级](../standard-library/directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。|
+|[`filesystem_error` 班级](../standard-library/filesystem-error-class.md)|所引发以报告低级系统溢出的异常的基类。|
+|[`path` 班级](../standard-library/path-class.md)|定义一个类，该类存储适合用作文件名的模板类型 `String` 的对象。|
+|[`recursive_directory_iterator` 班级](../standard-library/recursive-directory-iterator-class.md)|描述通过文件系统目录中的文件名排序的输入迭代器。 迭代器还可以降到子目录中。|
+|[`file_status` 班级](../standard-library/file-status-class.md)|包装 `file_type`。|
 
 ### <a name="structs"></a>结构
 
 |名称|说明|
 |-|-|
-|[space_info 结构](../standard-library/space-info-structure.md)|保存有关卷的信息。|
+|[`space_info` 构造](../standard-library/space-info-structure.md)|保存有关卷的信息。|
 
 ## <a name="functions"></a>函数
 
@@ -124,11 +126,11 @@ using namespace std::experimental::filesystem::v1;
 
 |名称|说明|
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](../standard-library/filesystem-functions.md#copy_file) 一起使用的枚举将决定行为。|
-|[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|为目录迭代器指定选项的枚举。|
-|[file_type](../standard-library/filesystem-enumerations.md#file_type)|文件类型的枚举。|
-|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| 枚举函数的选项 `permissions` 。 |
-|[perms](../standard-library/filesystem-enumerations.md#perms)|用于传达权限和权限选项的位掩码类型|
+|[`copy_options`](../standard-library/filesystem-enumerations.md#copy_options)|如果目标文件已存在，则与 [copy_file](../standard-library/filesystem-functions.md#copy_file) 一起使用的枚举将决定行为。|
+|[`directory_options`](../standard-library/filesystem-enumerations.md#directory_options)|为目录迭代器指定选项的枚举。|
+|[`file_type`](../standard-library/filesystem-enumerations.md#file_type)|文件类型的枚举。|
+|[`perm_options`](../standard-library/filesystem-enumerations.md#perm_options)| 枚举函数的选项 `permissions` 。 |
+|[`perms`](../standard-library/filesystem-enumerations.md#perms)|用于传达权限和权限选项的位掩码类型|
 
 ## <a name="see-also"></a>另请参阅
 

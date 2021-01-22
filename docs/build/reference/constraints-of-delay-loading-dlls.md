@@ -1,44 +1,43 @@
 ---
 description: 了解详细信息：延迟加载 Dll 的约束
 title: 延迟加载 DLL 的约束
-ms.date: 11/04/2016
+ms.date: 01/19/2021
 helpviewer_keywords:
 - constraints [C++], delayed loading of DLLs
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
-ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 45f54ca57b57bc689752a8aa80f4c03bbe096817
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 0bc29695aa48fea08a0126d4b814329656a5d3bf
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97197005"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98666974"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>延迟加载 DLL 的约束
 
-导入延迟加载有一些约束。
+DLL 导入的延迟加载有几个约束。
 
-- 不支持数据导入。 变通的办法是使用 `LoadLibrary`（或者，如果知道延迟加载 Helper 已加载了 DLL，则使用 `GetModuleHandle`）和 `GetProcAddress` 自己显式处理数据导入。
+- 不支持导入数据。 一种解决方法是使用 `LoadLibrary` (或在 `GetModuleHandle` 知道延迟加载帮助程序已将 DLL 加载到) 和后使用来显式处理数据导入 `GetProcAddress` 。
 
-- 不支持延迟加载 Kernel32.dll。 延迟加载 Helper 例程执行延迟加载时需要该 DLL。
+- *`Kernel32.dll`* 不支持延迟加载。 必须加载此 DLL，延迟加载帮助程序例程才能工作。
 
-- 不支持转发的入口点的[绑定](binding-imports.md)。
+- 不支持[绑定](binding-imports.md)已转发的入口点。
 
-- 如果在延迟加载的 DLL 的入口点发生每个进程初始化，则 DLL 的延迟加载可能不会造成进程行为相同。 其他情况包括静态 TLS (线程本地存储) ，使用 [__declspec (线程) ](../../cpp/thread.md)声明，这在通过加载 DLL 时不处理 `LoadLibrary` 。 使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue` 的动态 TLS 仍可在静态或者延迟加载的 DLL 中使用。
+- 如果 DLL 延迟加载，则进程可能具有不同的行为，而不是在启动时加载。 如果在延迟加载的 DLL 的入口点发生了每个进程初始化，则会出现此情况。 其他情况包括静态 TLS (线程本地存储) ，使用声明， [`__declspec(thread)`](../../cpp/thread.md) 这在通过加载 DLL 时不会得到处理 `LoadLibrary` 。 使用 `TlsAlloc`、`TlsFree`、`TlsGetValue` 和 `TlsSetValue` 的动态 TLS 仍可在静态或者延迟加载的 DLL 中使用。
 
-- 初次调用静态（全局）函数后，应将其指针重新初始化为导入函数。 这是因为该函数指针在初次使用时将指向 thunk。
+- 在第一次调用每个函数后，将静态全局函数指针重新初始化为导入的函数。 这是必需的，因为首次使用函数指针将指向 thunk，而不是加载的函数。
 
-- 目前还没有办法在使用正常导入机制时，只延迟加载 DLL 中的特定过程。
+- 当前在使用正常导入机制时，没有办法延迟加载 DLL 中的特定过程。
 
-- 不支持自定义调用约定（例如在 x86 体系结构上使用条件代码）。 此外，任何平台上都不保存浮点寄存器。 如果自定义 Helper 例程或挂钩例程使用浮点类型，则它们需要在具有浮点参数的寄存器调用约定的计算机上完全保存和恢复浮点状态。 如果在 Help 函数中调用采用数值数据处理器 (NDP) 堆栈上的浮点参数的 CRT 函数，延迟加载 CRT DLL 时请小心谨慎。
+- 自定义调用约定 (如使用 x86 体系结构上的条件代码) 不受支持。 而且，浮点寄存器不会保存在任何平台上。 如果自定义帮助程序例程或挂钩例程使用浮点类型，则需要在使用带有浮点参数的寄存器调用约定的计算机上保存和还原完整的浮点状态。 请注意延迟加载 CRT DLL 的情况，尤其是在调用在 NDP 中使用浮点参数的 CRT 函数时，在帮助函数中 () stack。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Delay-Loaded Dll 的链接器支持](linker-support-for-delay-loaded-dlls.md)<br/>
-[LoadLibrary 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
-[GetModuleHandle 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
-[GetProcAddress 函数](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
-[TlsAlloc 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
-[TlsFree 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
-[TlsGetValue 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
-[TlsSetValue 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+[链接器对延迟加载的 Dll 的支持](linker-support-for-delay-loaded-dlls.md)\
+[`LoadLibrary` 才能](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)\
+[`GetModuleHandle` 才能](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)\
+[`GetProcAddress` 才能](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)\
+[`TlsAlloc` 才能](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)\
+[`TlsFree` 才能](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)\
+[`TlsGetValue` 才能](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)\
+[`TlsSetValue` 函数](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

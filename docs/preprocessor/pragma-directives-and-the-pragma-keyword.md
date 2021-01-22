@@ -1,42 +1,45 @@
 ---
-title: Pragma 指令和 __pragma 关键字
+title: Pragma 指令和 __pragma 和 _Pragma 关键字
 description: '介绍了 Microsoft Visual C 和 c + + (MSVC 中提供的杂注指令) '
-ms.date: 10/30/2020
+ms.date: 01/19/2021
 f1_keywords:
 - '#pragma'
+- _Pragma
+- __pragma
 helpviewer_keywords:
 - '#pragma directives, C/C++'
 - __pragma keyword
+- _Pragma keyword
 - pragma directives, C/C++
 - pragmas, C/C++
 - preprocessor
 - pragmas
 - preprocessor, pragmas
 - pragma directives (#pragma)
-ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 784cd413b6b81033c9e49b22d979ece72e5ee101
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: ee518dc096143d1caca95fa1812b9ce0e45527d3
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381540"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667203"
 ---
-# <a name="pragma-directives-and-the-__pragma-keyword"></a>Pragma 指令和 __pragma 关键字
+# <a name="pragma-directives-and-the-__pragma-and-_pragma-keywords"></a>杂注指令和 `__pragma` 和 `_Pragma` 关键字
 
-杂注指令指定计算机或操作系统特定的编译器功能。 **__Pragma** 关键字，它是特定于 Microsoft 编译器的，可让你在宏定义中编码杂注指令。
+杂注指令指定计算机或操作系统特定的编译器功能。 **`__pragma`** 关键字专用于 Microsoft 编译器，使您能够在宏定义中编码杂注指令。
 
 ## <a name="syntax"></a>语法
 
-> **#`pragma`***标记-字符串*\
-> **`__pragma(`***标记-字符串* **`)`** 两个前导下划线-Microsoft 特定扩展 **`_Pragma(`** *字符串文本* **`)`** //C99
+> **`#pragma`***标记-字符串*\
+> **`__pragma(`***标记-字符串* **`)`** 两个前导下划线-Microsoft 专用扩展 \
+> **`_Pragma(`***字符串-文本* **`)`** C99
 
 ## <a name="remarks"></a>注解
 
-C 和 C++ 的每个实现均支持某些对其主机或操作系统唯一的功能。 例如，某些程序必须对内存中的数据位置进行精确控制，或控制某些函数接收参数的方式。 **#Pragma** 指令为每个编译器提供了一种提供计算机和操作系统特定功能的方法，同时保持与 c 和 c + + 语言的总体兼容性。
+C 和 C++ 的每个实现均支持某些对其主机或操作系统唯一的功能。 例如，某些程序必须对内存中的数据位置进行精确控制，或控制某些函数接收参数的方式。 **`#pragma`** 指令为每个编译器提供了一种提供计算机和操作系统特定功能的方法，同时保持与 c 和 c + + 语言的总体兼容性。
 
 杂注是计算机或操作系统特定于定义的，并且对于每个编译器通常是不同的。 杂注可用于条件指令，提供新的预处理器功能，或向编译器提供实现定义的信息。
 
-*标记字符串* 是表示特定编译器指令和参数（如果有）的一系列字符。 数字符号 ( **#** ) 必须是包含杂注的行上的第一个非空白字符。 空白字符可以分隔数字符号和词 "pragma"。 **#Pragma** 后，编写转换器可分析为预处理令牌的任何文本。 **#Pragma** 的参数受宏展开的限制。
+*标记字符串* 是表示特定编译器指令和参数（如果有）的一系列字符。 数字符号 (**`#`**) 必须是包含杂注的行上的第一个非空白字符。 空白字符可以分隔数字符号和词 "pragma"。 下面 **`#pragma`** ，编写转换器可分析为预处理标记的任何文本。 的参数 **`#pragma`** 受宏展开的限制。
 
 *字符串文本* 是的输入 `_Pragma` 。 删除外部引号和前导/尾随空格。 `\"` 将替换为 `"` ，并 `\\` 将替换为 `\` 。
 
@@ -100,7 +103,7 @@ Microsoft C 和 C++ 编译器识别以下杂注：
 
 ## <a name="pragmas-and-compiler-options"></a>杂注和编译器选项
 
-某些杂注提供与编译器选项相同的功能。 在源代码中遇到杂注时，将重写编译器选项所指定的行为。 例如，如果指定 [了/zp8](../build/reference/zp-struct-member-alignment.md)，则可以用 [pack](../preprocessor/pack.md)的代码的特定部分重写此编译器设置：
+某些杂注提供与编译器选项相同的功能。 在源代码中遇到杂注时，将重写编译器选项所指定的行为。 例如，如果指定了 [`/Zp8`](../build/reference/zp-struct-member-alignment.md) ，则可以通过以下方式替代代码的特定部分的此编译器设置 [`pack`](../preprocessor/pack.md) ：
 
 ```cmd
 cl /Zp8 some_file.cpp
@@ -115,7 +118,7 @@ cl /Zp8 some_file.cpp
 // ...
 ```
 
-## <a name="the-__pragma-keyword"></a>__Pragma ( # A1 关键字
+## <a name="the-__pragma-keyword"></a>`__pragma()` 关键字
 
 编译器还支持 Microsoft 特定的 **`__pragma`** 关键字，该关键字具有与指令相同的功能 **`#pragma`** 。 差别在于， **`__pragma`** 关键字可在宏定义中以内联方式使用。 **`#pragma`** 指令在宏定义中无法使用，因为编译器会将指令中的数字符号字符（ ( "# ) "）解释为 [字符串化运算符 ( # )](../preprocessor/stringizing-operator-hash.md)。
 
@@ -181,8 +184,8 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[C/c + + 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)\
+[C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)\
 [C 杂注](../c-language/c-pragmas.md)\
 [关键字](../cpp/keywords-cpp.md)

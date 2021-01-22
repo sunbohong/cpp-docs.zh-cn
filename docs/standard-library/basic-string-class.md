@@ -1,7 +1,7 @@
 ---
 title: basic_string 类
 description: 标准 c + + 字符串类的 API 参考 `basic_string` 。
-ms.date: 10/26/2020
+ms.date: 01/15/2021
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -61,6 +61,11 @@ f1_keywords:
 - xstring/std::basic_string::ends_with
 - xstring/std::basic_string::starts_with
 - xstring/std::basic_string::swap
+- xstring/std::literals::string_literals
+- std::literals::string_literals
+- string_literals
+- xstring/std::literals::string_literals::operator "s
+- std::literals::string_literals::operator s
 helpviewer_keywords:
 - std::basic_string [C++]
 - std::basic_string [C++], allocator_type
@@ -120,17 +125,16 @@ helpviewer_keywords:
 - std::basic_string [C++], ends_with
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
-ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 87eda4064ff63a22add49b2872a26c76ac15bc6a
-ms.sourcegitcommit: 3f0c1dcdcce25865d1a1022bcc5b9eec79f69025
+ms.openlocfilehash: ebd8f4c35a1e51a96f09069ed78c67345d71ab32
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94381644"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667582"
 ---
 # <a name="basic_string-class"></a>`basic_string` 类
 
-由类型的对象控制的序列 `basic_string` 是标准 c + + 字符串类，通常称为字符串，但不应与在整个 c + + 标准库中使用的以 null 结尾的 c 样式字符串相混淆。 标准 C++ 字符串是一个容器，它可使字符串作为普通类型使用，例如，比较和连接操作、迭代器、C++ 标准库算法以及复制由类分配器管理的内存和使用它进行分配。 如需要将标准 C++ 字符串转换为以 null 结尾的 C 样式字符串，请使用 [basic_string::c_str](#c_str) 成员。
+由类型的对象控制的序列 `basic_string` 是标准 c + + 字符串类，通常称为字符串，但不应与在整个 c + + 标准库中使用的以 null 结尾的 c 样式字符串相混淆。 标准 c + + 字符串是一个容器，可将字符串作为普通类型使用，例如，比较和连接操作、迭代器、c + + 标准库算法，以及使用类分配器托管内存进行复制和分配。 如果需要将标准 c + + 字符串转换为以 null 结尾的 C 样式字符串，请使用 [`basic_string::c_str`](#c_str) 成员。
 
 ## <a name="syntax"></a>语法
 
@@ -190,7 +194,7 @@ class basic_string;
 |[`cend`](#cend)|返回发现字符串中最后一个元素之后的位置的常量迭代器。|
 |[`clear`](#clear)|清除字符串中的全部元素。|
 |[`compare`](#compare)|将字符串与指定字符串比较，确定两个字符串是否相等或按字典顺序一个字符串是否小于另一个。|
-|[`copy`](#copy)|将指定数目的字符从源字符串中的索引位置复制到目标字符组。 已弃用。 改为使用 [`basic_string::_Copy_s`](#copy_s) 。|
+|[`copy`](#copy)|将指定数目的字符从源字符串中的索引位置复制到目标字符组。 已否决。 改为使用 [`basic_string::_Copy_s`](#copy_s) 。|
 |[`crbegin`](#crbegin)|返回发现反向字符串中第一个元素的位置的常量迭代器。|
 |[`crend`](#crend)|返回发现反向字符串中最后一个元素之后的位置的常量迭代器。|
 |[`_Copy_s`](#copy_s)|将指定数目的字符从源字符串中的索引位置复制到目标字符组。|
@@ -206,7 +210,7 @@ class basic_string;
 |[`find_last_of`](#find_last_of)|在字符串中搜索属于指定字符串中一个元素的最后一个字符。|
 |[`front`](#front)|返回对字符串中第一个元素的引用。|
 |[`get_allocator`](#get_allocator)|返回用于构造字符串的 `allocator` 对象的副本。|
-|[`insert`](#insert)|将一个、多个或一些列元素插入字符串中的指定位置。|
+|[`insert`](#insert)|将一个元素、多个元素或一系列元素插入到指定位置的字符串中。|
 |[`length`](#length)|返回字符串中元素的当前数目。|
 |[`max_size`](#max_size)|返回字符串可包含的字符的最大数目。|
 |[`pop_back`](#pop_back)|删除字符串的最后一个元素。|
@@ -230,6 +234,18 @@ class basic_string;
 |[`operator+=`](#op_add_eq)|向字符串追加字符。|
 |[`operator=`](#op_eq)|对字符串的内容赋新的字符值。|
 |[`operator`&#91;&#93;](#op_at)|使用字符串中的指定索引提供对字符的引用。|
+
+### <a name="literals"></a>文本
+
+定义的标头 `basic_string` 还定义了以下 [用户定义的文本](../cpp/user-defined-literals-cpp.md)，这些文本从输入参数创建指定类型的字符串。
+
+| 声明 | 说明 |
+|--|--|
+| `inline string operator"" s(const char* str, size_t len)` | 返回：`string(str, len)` |
+| `inline string operator"" s(const wchar_t* str, size_t len)` | 返回：`wstring(str, len)` |
+| `inline basic_string<char8_t> operator"" s(const char8_t* str, size_t len)` | 返回：`basic_string<char8_t>(str, len)` |
+| `inline u16string operator"" s(const char16_t* str, size_t len)` | 返回：`u16string(str, len)` |
+| `inline u32string operator"" s(const char32_t* str, size_t len)` | 返回：`u32string(str, len)` |
 
 ## <a name="remarks"></a>注解
 
@@ -621,7 +637,7 @@ reference at(size_type offset);
 
 成员[ `operator`&#91;&#93;](#op_at)比 `at` 用于提供对字符串元素的读取和写入访问权限的成员函数快。
 
-成员 `operator[]` 不检查作为参数传递的索引是否有效，但成员函数是否有效 `at` ，如果有效性不确定，则应使用。 传递给成员函数的索引无效索引（小于零或大于或等于字符串大小的索引） `at` 引发 [out_of_range 类](../standard-library/out-of-range-class.md) 异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
+成员 `operator[]` 不检查作为参数传递的索引是否有效，但成员函数是否有效 `at` ，如果有效性不确定，则应使用。 传递给成员函数的索引（索引小于零或大于或等于字符串大小的索引） `at` 引发[ `out_of_range` 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
 
 返回的引用可能会因字符串重新分配或非字符串修改而失效 `const` 。
 
@@ -784,7 +800,7 @@ C 字符串，其字符将用于初始化正在构造的 `string`。 此值不�
 
 ### <a name="remarks"></a>注解
 
-所有构造函数都存储 [`basic_string::allocator_type`](#allocator_type) 并初始化受控序列。 分配器对象是参数 `al`（如果存在）。 对于复制构造函数，它是 `right.` [`basic_string::get_allocator`](#get_allocator) `()` 。 否则，分配器为 `Alloc()` 。
+所有构造函数都存储 [`basic_string::allocator_type`](#allocator_type) 并初始化受控序列。 分配器对象是参数 `al`（如果存在）。 对于复制构造函数，它是 `right.get_allocator()` 对的调用 [`basic_string::get_allocator`](#get_allocator) 。 否则，分配器为 `Alloc()` 。
 
 受控序列初始化为剩余操作数指定的操作数序列的副本。 没有操作数序列的构造函数指定空的初始受控序列。 如果 `InputIterator` 是模板构造函数中的整数类型，则操作数序列 `first,  last` 的行为与相同 `(size_type) first, (value_type) last` 。
 
@@ -897,13 +913,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>返回值
 
-指向调用字符串的 C 样式版本的指针。  在 `const` 对象的 basic_string 类中调用非函数（包括析构函数）后，指针值无效。
+指向调用字符串的 C 样式版本的指针。  在 `const` 对象的类中调用非函数（包括析构函数）后，指针值无效 `basic_string` 。
 
 ### <a name="remarks"></a>注解
 
-属于类模板的字符串类型的对象 `basic_string<char>` 不一定要终止 null。 空字符“\0”用作 C 字符串中的特殊字符，以标记字符串的末尾，但在类型字符串对象中并无特殊含义，且可能像其他字符一样是字符串的一部分。 有一个从到字符串的自动转换 `const char *` ，但字符串类不提供从 C 样式字符串到类型对象的自动转换 `basic_string<char>` 。
+属于类模板的字符串类型的对象 `basic_string<char>` 不一定要终止 null。 空字符用作 `'\0'` C 字符串中的特殊字符，以标记字符串的末尾，但在类型字符串的对象中没有任何特殊含义，并且可能与任何其他字符一样是字符串的一部分。 有一个从到字符串的自动转换 `const char *` ，但字符串类不提供从 C 样式字符串到类型对象的自动转换 `basic_string<char>` 。
 
-不应修改返回的 C 样式字符串，因为这可能会使指向字符串的指针无效，或被删除，因为字符串具有有限的生存期且由类字符串拥有。
+不应修改返回的 C 样式字符串，这可能使指向字符串的指针无效，或被删除，因为字符串具有有限的生存期且由类字符串拥有。
 
 ### <a name="example"></a>示例
 
@@ -1037,7 +1053,7 @@ const_iterator cbegin() const;
 
 如果返回值为 `cbegin` ，则不能修改范围中的元素。
 
-可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 `const`) 容器 `begin()` `cbegin()` 。
+可以使用此成员函数替代 `begin()` 成员函数，以保证返回值为 `const_iterator`。 通常情况下，它与 [`auto`](../cpp/auto-cpp.md) 类型推导关键字一起使用，如下面的示例中所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 `const`) 容器 `begin()` `cbegin()` 。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1063,7 +1079,7 @@ const_iterator cend() const;
 
 `cend` 用于测试迭代器是否超过了其范围的末尾。
 
-可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 它一般与 [auto](../cpp/auto-cpp.md) 类型推导关键字联合使用，如下例所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 `const`) 容器 `end()` `cend()` 。
+可以使用此成员函数替代 `end()` 成员函数，以保证返回值为 `const_iterator`。 通常情况下，它与 [`auto`](../cpp/auto-cpp.md) 类型推导关键字一起使用，如下面的示例中所示。 在此示例中，将视为 `Container` 支持和的任何类型的可修改 (非 `const`) 容器 `end()` `cend()` 。
 
 ```cpp
 auto i1 = Container.end();
@@ -1794,7 +1810,7 @@ bool empty() const;
 
 ### <a name="remarks"></a>注解
 
-成员函数等效于 [size](#size) == 0。
+成员函数等效于 [`size`](#size) = = 0。
 
 ### <a name="example"></a>示例
 
@@ -3009,7 +3025,7 @@ allocator_type get_allocator() const;
 
 该成员函数将返回存储的分配器对象。
 
-字符串类的分配器指定类管理存储的方式。 容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 C++ 主题。
+字符串类的分配器指定类管理存储的方式。 容器类提供的默认分配器足以满足大多编程需求。 编写和使用你自己的分配器类是高级 c + + 功能。
 
 ### <a name="example"></a>示例
 
@@ -3038,7 +3054,7 @@ int main( )
 
 ## <a name="basic_stringinsert"></a><a name="insert"></a> `basic_string::insert`
 
-将一个、多个或一些列元素插入字符串中的指定位置。
+将一个元素、多个元素或一系列元素插入到指定位置的字符串中。
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
@@ -3124,7 +3140,7 @@ void insert(
 
 ### <a name="return-value"></a>返回值
 
-对由成员函数所分配新字符的字符串对象的引用，或者在插入单个字符的情况下，对插入字符（或无，具体取决于特定成员函数）的位置进行寻址的迭代器。
+对字符串对象的引用，该对象由成员函数获取赋给的新字符，或者在单个字符插入的情况下，用于寻址插入字符的位置的迭代器，或无，具体取决于特定成员函数。
 
 ### <a name="example"></a>示例
 
@@ -3311,7 +3327,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>注解
 
-如果操作生成的字符串的长度大于最大大小，则会引发 [Length_error 类](../standard-library/length-error-class.md) 类型的异常。
+当操作生成的字符串的长度大于最大值时，将引发[ `length_error` 类](../standard-library/length-error-class.md)类型的异常。
 
 ### <a name="example"></a>示例
 
@@ -3586,15 +3602,15 @@ reference operator[](size_type offset);
 
 ### <a name="remarks"></a>注解
 
-字符串的第一个元素的索引为零，其后续元素由正整数进行连续地索引，以使长度为 *n* 的字符串具有由数字 *n* - 1 索引的 *n* th 元素。
+字符串的第一个元素的索引为零，并按正整数连续索引以下元素。 这意味着，长度为 *n* 的字符串具有由数字 *n* -1 索引的第 *n* 个元素。
 
 `operator[]` 比 [`at`](#at) 用于提供对字符串元素的读取和写入访问权限的成员函数快。
 
-`operator[]` 不会检查作为参数传递的索引是否有效，但成员函数的 `at` 作用并不一定要在有效性中使用。 索引 (小于零或大于等于) 传递给成员函数的字符串大小的索引无效，将 `at` 引发 [out_of_range 类](../standard-library/out-of-range-class.md) 异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
+`operator[]` 不会检查作为参数传递的索引是否有效，但成员函数的 `at` 作用并不一定要在有效性中使用。 索引 (小于零或大于等于) 传递给成员函数的字符串大小的索引无效， `at` 引发[ `out_of_range` 类](../standard-library/out-of-range-class.md)异常。 传递给 `operator[]` 的无效索引导致未定义行为，但是等于字符串长度的索引对于常量字符串而言是有效索引，且运算符在传递此索引时返回空字符。
 
 返回的引用可能会因字符串重新分配或非字符串修改而失效 `const` 。
 
-当使用[ \_ 迭代器 \_ 调试 \_ 级别](../standard-library/iterator-debug-level.md)设置为1或2进行编译时，如果尝试访问字符串边界之外的元素，将发生运行时错误。 有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
+当使用 [`_ITERATOR_DEBUG_LEVEL`](../standard-library/iterator-debug-level.md) 设置为1或2的进行编译时，如果尝试访问字符串边界之外的元素，将发生运行时错误。 有关更多信息，请参见 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>示例
 
@@ -3699,7 +3715,7 @@ void push_back(value_type char_value);
 
 ### <a name="remarks"></a>注解
 
-成员函数 char_value ) 有效地调用 [`insert`](#insert) ( [`end`](#end) 。 *char_value*
+成员函数有效地调用 `insert( end, char_value )` 。 有关详细信息，请参阅 [`insert`](#insert) 和 [`end`](#end)。
 
 ### <a name="example"></a>示例
 
@@ -3915,7 +3931,7 @@ The string str2 is empty.
 
 ## <a name="basic_stringreplace"></a><a name="replace"></a> `basic_string::replace`
 
-用指定字符或者从其他范围、字符串或 C 字符串复制的字符来替代字符串中指定位置的元素。
+用指定的字符或从其他范围、字符串或 C 字符串复制的字符替换字符串中的元素。
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
@@ -4225,9 +4241,9 @@ void reserve(size_type count = 0);
 
 ### <a name="remarks"></a>注解
 
-具有足够的容量很重要，因为重新分配是一个耗时的过程，并会使引用字符串中字符的所有引用、指针和迭代器无效。
+具有足够的容量非常重要，因为重新分配是一个耗时的过程。 并且，它会使引用字符串中的字符的所有引用、指针和迭代器失效。
 
-字符串类型的对象的容量概念与类型为的对象的容量的概念相同 `vector` 。 与不同 `vector` ， `reserve` 可以调用成员函数来收缩对象的容量。 这是非绑定请求，不一定会发生。 由于参数的默认值为零，对的调用 `reserve` 是一种非绑定请求，用来收缩字符串的容量，使之符合当前字符串中的字符数。 该容量永远不会减少到当前字符数以下。
+String 对象类型的容量概念与类型的对象的概念相同 `vector` 。 与不同 `vector` ， `reserve` 可以调用成员函数来收缩对象的容量。 这是非绑定请求，不一定会发生。 由于参数的默认值为零，对的调用 `reserve` 是一种非绑定请求，用来收缩字符串的容量，使之符合当前字符串中的字符数。 该容量永远不会减少到当前字符数以下。
 
 调用 `reserve` 是减小字符串容量的唯一可能方法。 但是，如上文所述，这是非绑定请求，可能不会发生。
 
@@ -4319,7 +4335,7 @@ void resize(
 字符串的新大小。
 
 *`char_value`*\
-在需要其他元素的情况下，用于初始化追加字符的值。
+如果需要更多元素，则会用初始化追加字符的值。
 
 ### <a name="remarks"></a>注解
 
@@ -4802,7 +4818,7 @@ basic_string<CharType, Traits, Allocator> substr(
 
 ### <a name="return-value"></a>返回值
 
-子字符串对象，它是由第一个参数指定的位置开头的字符串操作数元素的副本。
+一个 substring 对象，它是字符串操作数的元素的副本，从第一个参数指定的位置开始。
 
 ### <a name="example"></a>示例
 
@@ -4853,7 +4869,7 @@ void swap(
 ### <a name="parameters"></a>参数
 
 *`str`*\
-要与目标字符串中的元素进行交换的元素的源字符串。
+其元素将与目标字符串中的元素进行交换的源字符串。
 
 ### <a name="remarks"></a>注解
 
@@ -4863,7 +4879,7 @@ void swap(
 - 不引发异常。
 - 不会使指定两个字符串中的元素的引用、指针或迭代器无效。
 
-否则，它将执行与两个受控序列中的元素数成正比的若干元素分配和构造函数调用。
+否则，会使元素分配和构造函数调用与两个受控序列中的元素数成正比。
 
 ### <a name="example"></a>示例
 
@@ -4956,7 +4972,7 @@ The character ch1 is: G.
 The character ch2 is: H.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [`<string>`](../standard-library/string.md)\
 [C + + 标准库中的线程安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

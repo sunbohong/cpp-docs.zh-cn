@@ -1,18 +1,21 @@
 ---
-description: 了解详细信息： chrono 文本
+description: 了解更多： `chrono` 文本
 title: chrono 文本
-ms.date: 11/04/2016
-ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-ms.openlocfilehash: 497094d920a25635496fb0aa30295d378571418c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+f1_keywords:
+- chrono/std::literals::chrono_literals
+- std::literals::chrono_literals
+- chrono_literals
+ms.date: 01/15/2021
+ms.openlocfilehash: 84540d111b33738c8bb1bcb4b43966e1c50682c0
+ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325150"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667549"
 ---
-# <a name="chrono-literals"></a>chrono 文本
+# <a name="chrono-literals"></a>`chrono` 文本
 
- (c + + 14) \<chrono> 标头定义12个 [用户定义的文本](../cpp/user-defined-literals-cpp.md) ，以方便使用表示小时、分钟、秒、毫秒、微秒和纳秒的文本。 每个用户定义的文本都具有一个整型重载和一个浮点重载。 这些文本是在 literals::chrono_literals 内联命名空间中定义的，当 std::chrono 位于范围内时，该命名空间将被自动置于范围中。
+ (c + + 14) `<chrono>` 标头定义12个 [用户定义的文本](../cpp/user-defined-literals-cpp.md) ，这些文本表示小时、分钟、秒、毫秒、微秒和纳秒。 每个用户定义的文本都具有一个整型重载和一个浮点重载。 文本是在 `literals::chrono_literals` 内联命名空间中定义的，当处于范围内时，会自动将其置于范围中 `std::chrono` 。
 
 ## <a name="syntax"></a>语法
 
@@ -61,11 +64,11 @@ inline namespace literals {
 
 ## <a name="return-value"></a>返回值
 
-采用参数的文本 **`long long`** 返回值或相应的类型。 采用浮点参数的文本返回 [duration](../standard-library/duration-class.md)。
+采用参数的文本 **`long long`** 返回值或相应的类型。 采用浮点参数的文本返回 [`duration`](../standard-library/duration-class.md) 。
 
 ## <a name="example"></a>示例
 
-下面的示例演示如何使用 chrono 文本。
+下面的示例演示如何使用 `chrono` 文本。
 
 ```cpp
 constexpr auto day = 24h;
