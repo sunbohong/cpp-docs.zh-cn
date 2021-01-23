@@ -1,34 +1,35 @@
 ---
-description: 了解详细信息： include_alias 杂注
-title: include_alias 杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c/c + + 中的 include_alias 指令
+title: include_alias pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
 helpviewer_keywords:
-- pragmas, include_alias
+- pragma, include_alias
 - include_alias pragma
-ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 1a1855ce4c908c6678cfce7617c98aa671c57fac
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: a9586748794704b3b3bcaf3d8ede7ef2f2f74545
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97236511"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713592"
 ---
-# <a name="include_alias-pragma"></a>include_alias 杂注
+# <a name="include_alias-no-locpragma"></a>`include_alias` pragma
 
 指定在指令中找到 *alias_filename* 时 `#include` ，编译器会在其位置替换 *actual_filename* 。
 
 ## <a name="syntax"></a>语法
 
 <!-- localization note - it's important to have the italic and bold characters immediately adjacent here. -->
-> **#pragma include_alias (** "*alias_filename*" **、** "*actual_filename*" **)**\
-> **#pragma include_alias (** \<*alias_filename*>**,** \<*actual_filename*>**)**
+> **`#pragma include_alias(`** "*alias_filename*" **`,`** *actual_filename*" **`)`**\
+> **`#pragma include_alias(`** \<*alias_filename*> **`,`** \<*actual_filename*> **`)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**Include_alias** 杂注指令允许您将具有不同名称或路径的文件替换为源文件中包含的文件名。 例如，某些文件系统允许超过 8.3 FAT 文件系统限制的标头文件名。 编译器不能将更长的名称截断到8.3，因为较长的标头文件名的前八个字符可能不是唯一的。 只要编译器发现指令中的 *alias_filename* 字符串 `#include` ，就会改为替换 *actual_filename* 名称。 然后加载 *actual_filename* 头文件。 此杂注必须在相应的 `#include` 指令之前出现。 例如：
+**`include_alias`** pragma 指令允许用不同的名称或路径替换源文件中包含的文件名。 例如，某些文件系统允许超过 8.3 FAT 文件系统限制的标头文件名。 编译器不能将更长的名称截断到8.3，因为较长的标头文件名的前八个字符可能不是唯一的。 只要编译器发现指令中的 *alias_filename* 字符串 `#include` ，就会改为替换 *actual_filename* 名称。 然后加载 *actual_filename* 头文件。 它 pragma 必须出现在相应的 `#include` 指令之前。 例如：
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -42,7 +43,7 @@ ms.locfileid: "97236511"
 #include "GraphicsMenu.h"
 ```
 
-要搜索的别名必须与规范完全匹配。 用双引号或尖括号括起来的情况必须全部匹配。 **Include_alias** 杂注对文件名执行简单的字符串匹配。 不执行其他文件名验证。 例如，给定下列指令，
+要搜索的别名必须与规范完全匹配。 用双引号或尖括号括起来的情况必须全部匹配。 对 **`include_alias`** pragma 文件名执行简单的字符串匹配。 不执行其他文件名验证。 例如，给定下列指令，
 
 ```cpp
 #pragma include_alias("mymath.h", "math.h")
@@ -50,7 +51,7 @@ ms.locfileid: "97236511"
 #include "sys/mymath.h"
 ```
 
-由于标头文件字符串不完全匹配，因此不执行任何别名替换。 此外，用作和编译器选项的参数的标头文件名 `/Yu` `/Yc` 或 `hdrstop` 杂注不会被替换。 例如，如果源文件包含以下指令，
+由于标头文件字符串不完全匹配，因此不执行任何别名替换。 此外，用作和编译器选项的参数的标头文件名 **`/Yu`** **`/Yc`** ，或不会被 `hdrstop` pragma 替换。 例如，如果源文件包含以下指令，
 
 ```cpp
 #include <AppleSystemHeaderStop.h>
@@ -58,9 +59,9 @@ ms.locfileid: "97236511"
 
 则相应的编译器选项应为
 
-> **/YcAppleSystemHeaderStop.h**
+> **`/YcAppleSystemHeaderStop.h`**
 
-您可以使用 **include_alias** 杂注将任何标头文件名映射到另一个。 例如：
+可以使用将 **`include_alias`** pragma 任何标头文件名映射到另一个标头文件名。 例如：
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -89,7 +90,7 @@ ms.locfileid: "97236511"
 #include "VERYLONGFILENAME.H"
 ```
 
-VERYLONGFILENAME 中的错误 *。H* 产生以下错误消息：
+中的错误 *`VERYLONGFILENAME.H`* 生成以下错误消息：
 
 ```Output
 myfile.h(15) : error C2059 : syntax error
@@ -103,8 +104,8 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-编译器会搜索文件 *两个 .h* ，而不是 *三个 .h*。
+编译器会搜索文件 *`two.h`* 而不是 *`three.h`* 。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

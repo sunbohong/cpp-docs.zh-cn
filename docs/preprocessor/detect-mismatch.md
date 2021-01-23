@@ -1,32 +1,33 @@
 ---
-description: 了解详细信息： detect_mismatch 杂注
-title: detect_mismatch 杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c/c + + 中的 detect_mismatch 指令
+title: detect_mismatch pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.detect_mismatch
 - detect_mismatch_CPP
 helpviewer_keywords:
-- pragmas, detect_mismatch
+- pragma, detect_mismatch
 - detect_mismatch pragma
-ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-ms.openlocfilehash: e57ffac731409fb14b61d35f780ee19094108655
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 33bc899eaaed73329e24e7f210fa91adc8addaa9
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97300731"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713670"
 ---
-# <a name="detect_mismatch-pragma"></a>detect_mismatch 杂注
+# <a name="detect_mismatch-no-locpragma"></a>`detect_mismatch` pragma
 
 将记录放在一个对象中。 链接器将检查这些记录中的潜在不匹配项。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma detect_mismatch (** "*name*" **、** "*value*" **)**
+> **`#pragma detect_mismatch(`** "*name*" **`,`** "*value*" **`)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-链接项目时，如果项目包含两个具有相同 *名称* 的对象，但每个对象具有不同的 *值*，则链接器将引发 [LNK2038](../error-messages/tool-errors/linker-tools-error-lnk2038.md)错误。 使用此杂注可防止链接中存在不一致的对象文件。
+链接项目时，如果项目包含两个具有相同 *名称* 的对象，但每个对象具有不同的 *值*，则链接器将引发 [LNK2038](../error-messages/tool-errors/linker-tools-error-lnk2038.md)错误。 用于 pragma 阻止链接对象文件不一致。
 
 *名称* 和 *值* 都是字符串文本，并遵循有关转义字符和串联的字符串文字的规则。 它们是区分大小写的，不能包含逗号、等号、引号或 **null** 字符。
 
@@ -46,8 +47,8 @@ int main ()
 #pragma detect_mismatch("myLib_version", "1")
 ```
 
-如果使用命令行 `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp` 编译这两个文件，则会收到错误 `LNK2038`。
+如果使用命令行编译这两个文件 `cl pragma_directive_detect_mismatch_a.cpp pragma_directive_detect_mismatch_b.cpp` ，则将收到错误 LNK2038。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

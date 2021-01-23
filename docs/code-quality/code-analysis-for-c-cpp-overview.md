@@ -17,12 +17,12 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-ms.openlocfilehash: 4d018185e74926c880f8a174eb81cea344167782
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: a7726046e6d14607009bd077d7f021dbefb0c515
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97323296"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712669"
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/C++ 代码分析概述
 
@@ -46,7 +46,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>#pragma 支持
 
-您可以使用 `#pragma` 指令将警告视为错误; 启用或禁用警告，并禁止显示单个代码行的警告。 有关详细信息，请参阅 [Pragma 指令和 __Pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
+您可以使用 `#pragma` 指令将警告视为错误; 启用或禁用警告，并禁止显示单个代码行的警告。 有关详细信息，请参阅 [杂注指令和 `__pragma` 和 `_Pragma` 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
 ## <a name="annotation-support"></a>批注支持
 
@@ -60,7 +60,7 @@ C:\>cl /analyze Sample.cpp
 
 在 Azure DevOps 生成过程中，可以使用生成系统的集成功能来运行代码分析工具。 有关详细信息，请参阅 [Azure Pipelines](/azure/devops/pipelines/index)。
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [快速入门： C/c + + 代码分析](quick-start-code-analysis-for-c-cpp.md)
 - [演练：分析 C/c + + 代码的缺陷](walkthrough-analyzing-c-cpp-code-for-defects.md)

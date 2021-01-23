@@ -1,23 +1,24 @@
 ---
-description: 了解详细信息： init_seg 杂注
-title: init_seg 杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c/c + + 中的 init_seg 指令
+title: init_seg pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
 helpviewer_keywords:
-- pragmas, init_seg
+- pragma, init_seg
 - init_seg pragma
 - data segment initializing [C++]
-ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: cab1c82acd3e06a0ace4d55be3ce82e8fd7aed1c
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 77ca6f2454ad18c8adcefcddc4cf1f9c0d4f4532
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97236459"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713579"
 ---
-# <a name="init_seg-pragma"></a>init_seg 杂注
+# <a name="init_seg-no-locpragma"></a>`init_seg` pragma
 
 **C++ 专用**
 
@@ -25,34 +26,34 @@ ms.locfileid: "97236459"
 
 ## <a name="syntax"></a>语法
 
-> **#pragma init_seg (** {**编译器**  |  **lib**  |  **用户**|"*节名*" [ **，** *函数名*]} **)**
+> **`#pragma init_seg(`** { **`compiler`** | **`lib`** | **`user`** |"*节名*" [ **`,`** *func* ]} **`)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
 术语 " *段* " 和 " *节* " 在本文中具有相同的含义。
 
-由于有时代码需要初始化全局静态对象，因此必须指定何时构造对象。 特别要注意的是，在动态链接库 (Dll) 或需要初始化的库中使用 **init_seg** 杂注非常重要。
+由于有时代码需要初始化全局静态对象，因此必须指定何时构造对象。 具体而言， **`init_seg`** pragma 在动态链接库中使用 (dll) 或需要初始化的库中，这一点很重要。
 
-**Init_seg** 杂注的选项如下：
+的选项 **`init_seg`** pragma 是：
 
-**编译程序**\
+**`compiler`**\
 保留以供 Microsoft C 运行库初始化使用. 首先构造该组中的对象。
 
-**lib**\
-可用于第三方类库供应商的初始化。 此组中的对象将在标记为 **编译器** 之后但在任何其他对象之前构造。
+**`lib`**\
+可用于第三方类库供应商的初始化。 此组中的对象将在标记为之后 **`compiler`** 但在任何其他对象之前构造。
 
-**用户**\
+**`user`**\
 可供任何用户使用。 最后构造此组中的对象。
 
 *节名称*\
 允许初始化部分的显式规范。 用户指定的 *节名* 中的对象不是隐式构造的。 但是，它们的地址位于按 *节名称* 命名的部分中。
 
-所赋的 *节名称* 将包含指向 helper 函数的指针，这些函数将构造在该模块中的杂注之后声明的全局对象。
+所赋的 *节名称* 将包含指向 helper 函数的指针，这些函数将构造 pragma 在该模块中的之后声明的全局对象。
 
-有关创建部分时不应使用的名称的列表，请参阅 [/SECTION](../build/reference/section-specify-section-attributes.md)。
+有关创建部分时不应使用的名称的列表，请参阅 [`/SECTION`](../build/reference/section-specify-section-attributes.md) 。
 
 *func-名称*\
-指定在程序退出时为替换 `atexit` 而调用的函数。 此 helper 函数还通过指向全局对象的析构函数的指针调用 [atexit](../c-runtime-library/reference/atexit.md) 。 如果以杂注形式指定函数标识符，
+指定在程序退出时为替换 `atexit` 而调用的函数。 此 helper 函数还 [`atexit`](../c-runtime-library/reference/atexit.md) 通过指向全局对象的析构函数的指针进行调用。 如果在窗体的中指定函数标识符 pragma ，
 
 ```cpp
 int __cdecl myexit (void (__cdecl *pf)(void))
@@ -64,13 +65,13 @@ int __cdecl myexit (void (__cdecl *pf)(void))
 
 `atexit` 替换的标识符周围没有引号。
 
-您的对象仍将被置于由其他杂注定义的部分中 `XXX_seg` 。
+你的对象仍将被放在由其他指令定义的部分中 `XXX_seg` pragma 。
 
 在模块中声明的对象不会由 C 运行时自动初始化。 你的代码必须执行初始化。
 
 默认情况下，`init_seg` 部分是只读的。 如果节名称为 `.CRT` ，则编译器会将属性以无提示方式更改为只读，即使它标记为读取、写入。
 
-不能在翻译单元中多次指定 **init_seg** 。
+不能 **`init_seg`** 在翻译单元中多次指定。
 
 即使您的对象没有用户定义的构造函数（在代码中显式定义的构造函数），编译器可能会为您生成一个。 例如，可以创建一个绑定 v-表指针。 如果需要，你的代码将调用编译器生成的构造函数。
 
@@ -155,6 +156,6 @@ A()
 ~A()
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

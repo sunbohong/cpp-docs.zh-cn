@@ -1,130 +1,129 @@
 ---
 title: 预处理器语法摘要 (C/C++)
-description: 定义并描述 Microsoft C/C++编译器（MSVC）预处理器语法语法。
-ms.date: 08/29/2019
+description: 定义并描述 Microsoft C/c + + 编译器 (MSVC) 预处理器语法语法。
+ms.date: 01/22/2021
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
-ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: 68e5f09acfc6444afb46bcbc0f7e9db10b04afed
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: dbe46a67337bf55cb98100878dedb8c92120472b
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076874"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713631"
 ---
 # <a name="preprocessor-grammar-summary-cc"></a>预处理器语法摘要 (C/C++)
 
-本文介绍 C 和C++预处理器的正式语法。 其中包含预处理指令和运算符的语法。 有关详细信息，请参阅[预处理器](../preprocessor/preprocessor.md)和[杂注指令以及 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
+本文介绍 C 和 c + + 预处理器的正式语法。 其中包含预处理指令和运算符的语法。 有关详细信息，请参阅 [预处理器](../preprocessor/preprocessor.md) 和 [杂注指令以及 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)。
 
-## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a>语法摘要的定义
+## <a name="definitions-for-the-grammar-summary"></a><a name="definitions"></a> 语法摘要的定义
 
 终止符是语法定义中的终结点。 不提供其他解决方法。 终止符包括保留字和用户定义的标识符的集。
 
-非终止符是语法中的占位符。 它们中的大多数是在此语法摘要中的其他位置定义的。 定义可是递归的。 以下非终止符在 *C++语言参考*的 "[词法约定](../cpp/lexical-conventions.md)" 部分中定义：
+非终止符是语法中的占位符。 它们中的大多数是在此语法摘要中的其他位置定义的。 定义可是递归的。 以下非终止符在 *c + + 语言参考* 的 "[词法约定](../cpp/lexical-conventions.md)" 部分中定义：
 
-*常量*、*常量表达式*、*标识符*、*关键字*、*运算符*、*标点符号*
+*`constant`*, *`constant-expression`*, *`identifier`*, *`keyword`*, *`operator`*, *`punctuator`*
 
 可选组件由带下标的 <sub>opt</sub> 指示。 例如，下面的语法指示括在大括号中的可选表达式：
 
-**{** *expression*<sub>opt</sub> **}**
+**`{`***`expression`* <sub>opt</sub>**`}`**
 
-## <a name="document-conventions"></a><a name="conventions"></a>文档约定
+## <a name="document-conventions"></a><a name="conventions"></a> 文档约定
 
 约定将对不同的语法组件使用不同的字体特性。 符号和字体如下所示：
 
-| Attribute | 说明 |
+| 特性 | 说明 |
 |---------------|-----------------|
-| nonterminal | 斜体类型指示非终止符。 |
-| **#include** | 粗体类型的终止符是必须按所示方式输入的文本保留字和符号。 此上下文中的字符始终区分大小写。 |
+| *`nonterminal`* | 斜体类型指示非终止符。 |
+| **`#include`** | 粗体类型的终止符是必须按所示方式输入的文本保留字和符号。 此上下文中的字符始终区分大小写。 |
 | <sub>opt</sub> | 后跟 <sub>opt </sub> 的非终止符始终是可选的。|
 | default typeface | 用此字样描述或列出的集中的字符可在语句中用作终止符。 |
 
-跟在非终止符之后的冒号 (:) 引入其定义。 替代定义在单独的行上列出。
+**`:`** 非终止符后面) 的冒号 (引入了其定义。 替代定义在单独的行上列出。
 
 在代码语法块中，默认字样中的这些符号具有特殊含义：
 
 | 符号 | 说明 |
 |---|---|
 | \[ ] | 方括号括起一个可选元素。 |
-| {\|} | 大括号环绕替代元素，用竖线分隔。 |
+| { \| } | 大括号环绕替代元素，用竖线分隔。 |
 | ... | 指示上一个元素模式可以重复。 |
 
-在代码语法块中，逗号（`,`）、句点（`.`）、分号（`;`）、冒号（`:`）、括号（`( )`）、双引号（`"`）和单引号（`'`）都是文本。
+在代码语法块中，逗号 (`,`) 、句点 (`.`) 、分号 () `;` 、冒号 () `:` 、括号 (`( )`) 、双引号 () `"` 和单引号 () `'` 是文本。
 
-## <a name="preprocessor-grammar"></a><a name="grammar"></a>预处理器语法
+## <a name="preprocessor-grammar"></a><a name="grammar"></a> 预处理器语法
 
-*控件行*： \
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *标识符* *标记-字符串*<sub>opt</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *标识符* **（** *标识符*<sub>opt</sub> **，** ... **，** *标识符*<sub>opt</sub> **）** *标记字符串*<sub>opt</sub>\
-&nbsp; **#include** &nbsp;&nbsp; **&nbsp;\** _path-spec_ **"**
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<>** _\_
-&nbsp;&nbsp;&nbsp;&nbsp; **#line** *数字序列* **"** _filename_ **"** <sub>opt</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *标识符*\
-&nbsp;#error &nbsp;&nbsp; **#error** *&nbsp;\*
-&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *标记-字符串*
+*`control-line`*:\
+&emsp;**`#define`***`identifier`* *`token-string`* <sub>opt</sub>\
+&emsp;**`#define`***`identifier`* **`(`** *`identifier`*<sub>opt</sub> **`,`**... **`,`***`identifier`* <sub></sub> **`)`** opt *`token-string`*<sub>opt</sub>\
+&emsp;**`#include`** **`"`**_`path-spec`_**`"`**\
+&emsp;**`#include`** **`<`**_`path-spec`_**`>`**\
+&emsp;**`#line`***`digit-sequence`* **`"`**_`filename`_**`"`**<sub>opt</sub>\
+&emsp;**`#undef`** *`identifier`*\
+&emsp;**`#error`** *`token-string`*\
+&emsp;**`#pragma`** *`token-string`*
 
-*常量-表达式*： \
-&nbsp;定义的 &nbsp;&nbsp;&nbsp; **（** *标识符* **）** \
-&nbsp;**定义**的*标识符*&nbsp;&nbsp;&nbsp;\
-&nbsp;任何其他常量表达式的 &nbsp;&nbsp;&nbsp;
+*`constant-expression`*:\
+&emsp;**`defined(`** *`identifier`* **`)`**\
+&emsp;**`defined`** *`identifier`*\
+&emsp;任何其他常数表达式
 
-*条件*： \
-<sub>opt</sub> *else-part*<sub>opt</sub> &nbsp;&nbsp; *&nbsp;&nbsp;* *elif*; part opt *endif-line*
+*`conditional`*:\
+&emsp; *`if-part`* *`elif-parts`* <sub>opt</sub> *`else-part`* <sub>opt</sub> *`endif-line`*
 
-*如果-部分*： \
-&nbsp;&nbsp;&nbsp;&nbsp;*的行* *文本*
+*`if-part`*:\
+&emsp;*`if-line`* *`text`*
 
-*如果为-line*： \
-&nbsp;&nbsp;&nbsp;&nbsp; **#if** *常数表达式*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *标识符*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *标识符*
+*`if-line`*:\
+&emsp;**`#if`** *`constant-expression`*\
+&emsp;**`#ifdef`** *`identifier`*\
+&emsp;**`#ifndef`** *`identifier`*
 
-*elif*：
-&nbsp;&nbsp;&nbsp;&nbsp;*elif* *文本*\
-&nbsp;&nbsp;&nbsp;&nbsp;*elif* *elif* *文本*
+*`elif-parts`*:\
+&emsp;*`elif-line`* *`text`*\
+&emsp;*`elif-parts`* *`elif-line`* *`text`*
 
-*elif*： \
-&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *常数表达式*
+*`elif-line`*:\
+&emsp;**`#elif`** *`constant-expression`*
 
-*else-部分*： \
-&nbsp;&nbsp;&nbsp;&nbsp;*行* *文本*
+*`else-part`*:\
+&emsp;*`else-line`* *`text`*
 
-*else-line*： \
-&nbsp;&nbsp;&nbsp;&nbsp; **#else**
+*`else-line`*:\
+&emsp;**`#else`**
 
-*endif 行*： \
-&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
+*`endif-line`*:\
+&emsp;**`#endif`**
 
-*数字序列*： \
-&nbsp;&nbsp;&nbsp;&nbsp;*数字*\
-&nbsp;&nbsp;&nbsp;&nbsp;*数字序列* *数字*
+*`digit-sequence`*:\
+&emsp;*`digit`*\
+&emsp;*`digit-sequence`* *`digit`*
 
-*数字*：1
-&nbsp;&nbsp;&nbsp;&nbsp;0 1 2 3 4 5 6 7 8 9
+*`digit`* ：以下之一\
+&emsp;**`0` `1` `2` `3` `4` `5` `6` `7` `8` `9`**
 
-*标记-字符串*： \
-&nbsp;&nbsp;&nbsp;&nbsp;的标记字符串
+*`token-string`*:\
+&emsp;字符串 *`token`*
 
-*令牌*： \
-&nbsp;&nbsp;&nbsp;&nbsp;*关键字*\
-&nbsp;*标识符*&nbsp;&nbsp;&nbsp;\
-&nbsp;&nbsp;&nbsp;&nbsp;*常量*\
-&nbsp;&nbsp;&nbsp;&nbsp;*运算符*\
-&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
+*`token`*:\
+&emsp;*`keyword`*\
+&emsp;*`identifier`*\
+&emsp;*`constant`*\
+&emsp;*`operator`*\
+&emsp;*`punctuator`*
 
-*filename*： \
-&nbsp;&nbsp;&nbsp;合法操作系统文件名 &nbsp;
+*`filename`*:\
+&emsp;合法操作系统文件名
 
-*路径-规范*： \
-&nbsp;&nbsp;&nbsp;&nbsp;合法文件路径
+*`path-spec`*:\
+&emsp;合法文件路径
 
-*文本*： \
-&nbsp;任意文本序列 &nbsp;&nbsp;&nbsp;
+*`text`*:\
+&emsp;文本的任何序列
 
 > [!NOTE]
-> 以下非终止符在 *C++语言参考*：*常量*、*常量表达式*、*标识符*、*关键字*、*运算符*和*标点符号*的 "[词法约定](../cpp/lexical-conventions.md)" 部分中展开。
+> 以下非终止符在 *c + + 语言参考*：、、、、和的 "[词法约定](../cpp/lexical-conventions.md)" 部分中展开 *`constant`* *`constant-expression`* *`identifier`* *`keyword`* *`operator`* *`punctuator`* 。
 
 ## <a name="see-also"></a>另请参阅
 
-[C/C++预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)
+[C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)

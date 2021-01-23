@@ -1,51 +1,52 @@
 ---
-description: 了解详细信息：符合杂注
-title: conform 杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c/c + + 中的符合指令
+title: 符合 pragma
+ms.date: 01/22/2021
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
 helpviewer_keywords:
 - conform pragma
 - forScope conform pragma
-- pragmas, conform
-ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: bb9f62194196ea32e5f3326116894ea56ef83611
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, conform
+no-loc:
+- pragma
+ms.openlocfilehash: baaeb41e2364daac8de91ca15251226bf3dd1e2a
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97300757"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713696"
 ---
-# <a name="conform-pragma"></a>conform 杂注
+# <a name="conform-no-locpragma"></a>`conform` pragma
 
 **C++ 专用**
 
-指定 [/zc： forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 编译器选项的运行时行为。
+指定编译器选项的运行时行为 [`/Zc:forScope`](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma 符合 (** *名称*[ **，show** ] [ **，** { **on**  |  **off** }] [[ **，** { **push**  |  **pop** }] [ **，** *标识符*[ **，** { **on**  |  **off** }]]] **)**
+> **`#pragma conform(`***name* [ **`, show`** ] [ **`,`** { **`on`**  |  **`off`** }] [[ **`,`** { **`push`**  |  **`pop`** }] [ **`,`** *标识符*[ **`,`** { **`on`**  |  **`off`** }]]]**`)`**
 
-### <a name="parameters"></a>parameters
+### <a name="parameters"></a>Parameters
 
 *路径名*\
 指定要修改的编译器选项的名称。 唯一有效的 *名称* 为 `forScope` 。
 
-**向**\
- (可选) 使 *名称* (true 或 false) 的当前设置在编译过程中通过警告消息显示。 例如 `#pragma conform(forScope, show)`。
+**`show`**\
+ (可选) 使 *名称* (true 或 false) 的当前设置在编译过程中通过警告消息显示。 例如，`#pragma conform(forScope, show)`。
 
-**打开**、 **关闭**\
- (可选 *) 设置为* **on 时** 启用 [/zc： forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 编译器选项。 默认值为 **off**。
+**`on`**, **`off`**\
+ (可选) 设置 *名称* 以 **`on`** 启用 [/zc： forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 编译器选项。 默认值为 **`off`** 。
 
-**请求**\
- (可选) 将 *name* 的当前值推送到内部编译器堆栈上。 如果指定 "*标识符*"，则可以为要推送到堆栈上的 *名称* 指定 "**开**" 或 "**关**" 值。 例如 `#pragma conform(forScope, push, myname, on)`。
+**`push`**\
+ (可选) 将 *name* 的当前值推送到内部编译器堆栈上。 如果指定 *标识符*，则可以为 **`on`** **`off`** 要推送到堆栈的 *名称* 指定或值。 例如，`#pragma conform(forScope, push, myname, on)`。
 
-**弹出**\
- (可选) 将 *name* 的值设置为内部编译器堆栈顶部的值，然后弹出堆栈。 如果用 **pop** 指定了标识符，则会弹出堆栈，直到找到具有 *标识符* 的记录，该记录也会被弹出;堆栈中的下一条记录的 *名称* 的当前值将成为 *name* 的新值。 如果指定 **pop** 时使用的 *标识符* 不在堆栈上的记录中，则将忽略 **pop** 。
+**`pop`**\
+ (可选) 将 *name* 的值设置为内部编译器堆栈顶部的值，然后弹出堆栈。 如果为指定了标识符 **`pop`** ，则将向后弹出堆栈，直到找到具有 *标识符* 的记录（这也会被弹出）; 堆栈上的下一条记录中的 *名称* 的当前值将成为新的 *name* 值。 如果指定的 **`pop`** *标识符* 不在堆栈上的记录中，则 **`pop`** 将忽略。
 
 *identifier*\
-可以通过 **push** 或 **pop** 命令包含 (可选) 。 如果使用了 *标识符* ，则也可以使用 **on** 或 **off** 说明符。
+ (可选的) 可以包含在 **`push`** 或 **`pop`** 命令中。 如果使用了 *标识符* ，则 **`on`** **`off`** 也可以使用或说明符。
 
 ## <a name="example"></a>示例
 
@@ -65,6 +66,6 @@ ms.locfileid: "97300757"
 int main() {}
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

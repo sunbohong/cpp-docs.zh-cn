@@ -1,7 +1,7 @@
 ---
-description: 了解更多：托管、非托管杂注
-title: managed、unmanaged 杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c + + 中的托管和非托管指令
+title: 托管和非托管 pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.unmanaged
 - managed_CPP
@@ -9,45 +9,46 @@ f1_keywords:
 - vc-pragma.managed
 helpviewer_keywords:
 - managed pragma
-- pragmas, unmanaged
-- pragmas, managed
+- pragma, unmanaged
+- pragma, managed
 - unmanaged pragma
-ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-ms.openlocfilehash: 10f632b009c9922f67f4321acc862142d895e7ae
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: a106e9a1370daeedb94bbf5e4d092ae85457a3d2
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97333397"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713501"
 ---
-# <a name="managed-unmanaged-pragmas"></a>managed、unmanaged 杂注
+# <a name="managed-and-unmanaged-no-locpragma"></a>`managed` 和 `unmanaged` pragma
 
 启用函数级控件以将函数编译为托管或非托管。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma 托管**\
-> **#pragma 非托管**\
-> **#pragma 托管 (** [**推送，** ] { **on**  |  **off** } **)**\
-> **#pragma 托管 (pop)**
+> **`#pragma managed`**\
+> **`#pragma unmanaged`**\
+> **`#pragma managed(`** [ **`push,`** ] { **`on`** | **`off`** } **`)`**\
+> **`#pragma managed(pop)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-[/Clr](../build/reference/clr-common-language-runtime-compilation.md)编译器选项提供用于将函数编译为托管或非托管的模块级控件。
+[`/clr`](../build/reference/clr-common-language-runtime-compilation.md)编译器选项提供用于将函数编译为托管或非托管的模块级控件。
 
-将为本机平台编译非托管函数。 此部分程序的执行将由公共语言运行时传递给本机平台。
+为本机平台编译非托管函数。 此部分程序的执行将由公共语言运行时传递给本机平台。
 
-当使用了 `/clr` 时，默认情况下将函数编译为托管函数。
+使用时，函数默认编译为托管 **`/clr`** 。
 
-在将应用这些杂注时：
+在应用 **`managed`** 或时 **`unmanaged`** pragma ：
 
-- 将杂注添加到函数之前，而不是在函数体中。
+- 添加 pragma 函数前面的，而不是函数体中。
 
-- 在 `#include`语句后添加杂注。 请不要在语句前使用这些杂注 `#include` 。
+- 添加 pragma after `#include` 语句。 请勿在任何语句前使用它 `#include` 。
 
-如果编译中未使用 **托管** 和 **非托管** 杂注，编译器将忽略它们 `/clr` 。
+**`managed`** **`unmanaged`** pragma 如果 **`/clr`** 编译中未使用，则编译器将忽略和。
 
-当对模板函数进行实例化时，在定义模板时，杂注状态将确定其是否为托管或非托管。
+当对模板函数进行实例化时， pragma 定义模板时的状态决定了它是托管的还是非托管的。
 
 有关详细信息，请参阅 [混合程序集的初始化](../dotnet/initialization-of-mixed-assemblies.md)。
 
@@ -87,6 +88,6 @@ In managed function.
 In unmanaged function.
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

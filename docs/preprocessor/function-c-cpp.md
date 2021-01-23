@@ -1,34 +1,35 @@
 ---
-description: 了解更多：函数杂注
-title: 函数杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c/c + + 中的函数指令
+title: 才能 pragma
+ms.date: 01/22/2021
 f1_keywords:
 - function_CPP
 - vc-pragma.function
 helpviewer_keywords:
 - function pragma
-- pragmas, function
-ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: 77b215458f9ffdb6be605d0ae4b239451a1fe1bf
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, function
+no-loc:
+- pragma
+ms.openlocfilehash: 3d4b1e2f50cd118e613235271428588ac585affc
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97269297"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712825"
 ---
-# <a name="function-pragma"></a>函数杂注
+# <a name="function-no-locpragma"></a>`function` pragma
 
-通知编译器生成对杂注的参数列表中指定的函数的调用，而不是内联它们。
+通知编译器生成对的参数列表中指定的函数的调用 pragma ，而不是内联它们。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma 函数 (** *function1* [ **，** *function2* ...] **)**
+> **`#pragma function(`***function1* [ **`,`** *function2* ]**`)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-内部函数通常生成为内联代码，而不是函数调用。 如果使用 [内部杂注](intrinsic.md) 或 [/Oi](../build/reference/oi-generate-intrinsic-functions.md) 编译器选项告知编译器生成内部函数，则可以使用 **函数** 杂注显式强制执行函数调用。 出现 **函数** 杂注后，它将在包含指定的内部函数的第一个函数定义处生效。 该效果将继续到源文件的末尾，或 `intrinsic` 指定相同内部函数的杂注的外观。 在全局级别，只能在函数之外使用 **函数** 杂注。
+内部函数通常生成为内联代码，而不是函数调用。 如果使用 [ `intrinsic` pragma](intrinsic.md)或 [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) 编译器选项告知编译器生成内部函数，则可以使用 **`function`** pragma 显式强制执行函数调用。 一旦 **`function`** pragma 出现，它会在包含指定内部函数的第一个函数定义上生效。 该效果将继续到源文件的末尾，或 `intrinsic` pragma 指定相同内部函数的外观。 在 **`function`** pragma 全局级别，只能在函数之外使用。
 
-有关具有内部形式的函数的列表，请参阅 [内部杂注](intrinsic.md)。
+有关具有内部形式的函数的列表，请参阅[ `intrinsic` pragma ](intrinsic.md)。
 
 ## <a name="example"></a>示例
 
@@ -82,6 +83,6 @@ str is 'Now************'
 str is '!!!!!!!!!!!!!!!'
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

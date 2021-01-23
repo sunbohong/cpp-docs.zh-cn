@@ -1,40 +1,41 @@
 ---
-description: 了解详细信息： fp_contract 杂注
-title: fp_contract 杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c/c + + 中的 fp_contract 指令
+title: fp_contract pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
 helpviewer_keywords:
-- pragmas, fp_contract
+- pragma, fp_contract
 - fp_contract pragma
-ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: cefcf0519f08b3fd68a0f8b464938ea7cdbda6d0
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+no-loc:
+- pragma
+ms.openlocfilehash: 3263d1ec9675e0f8a9402ac7da78751b988e7bdf
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97261172"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713644"
 ---
-# <a name="fp_contract-pragma"></a>fp_contract 杂注
+# <a name="fp_contract-no-locpragma"></a>`fp_contract` pragma
 
 确定是否发生浮点缩写式。 浮点缩写式是一个指令，如 FMA (的) ，将两个单独的浮点运算合并为一个指令。 使用这些指令可能会影响浮点精度，因为在执行每个运算后，处理器可能仅舍入一次。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma fp_contract (** { **on**  |  **off** } **)**
+> **`#pragma fp_contract (`** { **`on`** | **`off`** } **`)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-默认情况下， **fp_contract** 为 **on**。 这会告知编译器尽可能使用浮点缩写式指令。 将 **fp_contract** 设置为 **off** ，以保留单个浮点指令。
+默认情况下， **`fp_contract`** 为 **`on`** 。 这会告知编译器尽可能使用浮点缩写式指令。 设置 **`fp_contract`** 为 **`off`** 以保留单个浮点指令。
 
-有关浮点行为的详细信息，请参阅 [/fp (指定 Floating-Point 行为) ](../build/reference/fp-specify-floating-point-behavior.md)。
+有关浮点行为的详细信息，请参阅[ `/fp` (指定浮点行为) ](../build/reference/fp-specify-floating-point-behavior.md)。
 
-其他浮点杂注包括：
+其他浮点 pragma 指令包括：
 
-- [fenv_access](../preprocessor/fenv-access.md)
+- [`fenv_access`](../preprocessor/fenv-access.md)
 
-- [float_control](../preprocessor/float-control.md)
+- [`float_control`](../preprocessor/float-control.md)
 
 ## <a name="example"></a>示例
 
@@ -76,6 +77,6 @@ out = 3.629600000000000e+03
 out = 4.587525000000000e+03
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

@@ -1,32 +1,33 @@
 ---
-description: 了解详细信息： pop_macro 杂注
-title: pop_macro 杂注
-ms.date: 08/29/2019
+description: 详细了解 pragma Microsoft c/c + + 中的 pop_macro 指令
+title: pop_macro pragma
+ms.date: 01/22/2021
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
 helpviewer_keywords:
 - pop_macro pragma
-- pragmas, pop_macro
-ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 395e107586b9534b2e9db616f30ddd88b15b93ec
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+- pragma, pop_macro
+no-loc:
+- pragma
+ms.openlocfilehash: 99b0567838bac2a683f2a31fe13dd423e2efe651
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97325701"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713358"
 ---
-# <a name="pop_macro-pragma"></a>pop_macro 杂注
+# <a name="pop_macro-no-locpragma"></a>`pop_macro` pragma
 
 将 *宏名称* 宏的值设置为此宏的堆栈顶部的值。
 
 ## <a name="syntax"></a>语法
 
-> **#pragma pop_macro (** "*宏名*" **)**
+> **`#pragma pop_macro(`** "*宏名*" **`)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-必须先发出 *宏名* 的 [push_macro](../preprocessor/push-macro.md) ，然后才能执行 **pop_macro**。
+[`push_macro`](../preprocessor/push-macro.md)必须先发出用于 *宏名* 的，然后才能执行 **`pop_macro`** 。
 
 ## <a name="example"></a>示例
 
@@ -62,6 +63,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 __pragma 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)

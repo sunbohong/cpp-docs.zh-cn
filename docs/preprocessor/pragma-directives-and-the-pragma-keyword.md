@@ -1,6 +1,6 @@
 ---
-title: Pragma 指令和 __pragma 和 _Pragma 关键字
-description: '介绍了 Microsoft Visual C 和 c + + (MSVC 中提供的杂注指令) '
+title: Pragma 指令和 __ pragma 和 _Pragma 关键字
+description: '介绍了 pragma Microsoft Visual C 和 c + + (MSVC 中可用的指令) '
 ms.date: 01/19/2021
 f1_keywords:
 - '#pragma'
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - pragmas
 - preprocessor, pragmas
 - pragma directives (#pragma)
-ms.openlocfilehash: ee518dc096143d1caca95fa1812b9ce0e45527d3
-ms.sourcegitcommit: 3d9cfde85df33002e3b3d7f3509ff6a8dc4c0a21
+no-loc:
+- pragma
+ms.openlocfilehash: fb6daf4c2912ea2168c38bfe2d1ae2650aaecc20
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98667203"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713345"
 ---
-# <a name="pragma-directives-and-the-__pragma-and-_pragma-keywords"></a>杂注指令和 `__pragma` 和 `_Pragma` 关键字
+# <a name="pragma-directives-and-the-__no-locpragma-and-_pragma-keywords"></a>杂注指令和 `__pragma` 和 `_Pragma` 关键字
 
-杂注指令指定计算机或操作系统特定的编译器功能。 **`__pragma`** 关键字专用于 Microsoft 编译器，使您能够在宏定义中编码杂注指令。
+杂注指令指定计算机特定或操作系统特定的编译器功能。 **`__pragma`** 关键字专用于 Microsoft 编译器，使你能够 pragma 在宏定义内编写指令代码。 标准 **`_Pragma`** 预处理器运算符是在 C99 中引入的，由 c + + 11 采用。
 
 ## <a name="syntax"></a>语法
 
@@ -37,15 +39,15 @@ ms.locfileid: "98667203"
 
 C 和 C++ 的每个实现均支持某些对其主机或操作系统唯一的功能。 例如，某些程序必须对内存中的数据位置进行精确控制，或控制某些函数接收参数的方式。 **`#pragma`** 指令为每个编译器提供了一种提供计算机和操作系统特定功能的方法，同时保持与 c 和 c + + 语言的总体兼容性。
 
-杂注是计算机或操作系统特定于定义的，并且对于每个编译器通常是不同的。 杂注可用于条件指令，提供新的预处理器功能，或向编译器提供实现定义的信息。
+杂注指令是特定于计算机的，也可以是特定于操作系统的定义，并且对于每个编译器通常是不同的。 pragma可在条件指令中使用，以提供新的预处理器功能。 或者，使用一个向编译器提供实现定义的信息。
 
-*标记字符串* 是表示特定编译器指令和参数（如果有）的一系列字符。 数字符号 (**`#`**) 必须是包含杂注的行上的第一个非空白字符。 空白字符可以分隔数字符号和词 "pragma"。 下面 **`#pragma`** ，编写转换器可分析为预处理标记的任何文本。 的参数 **`#pragma`** 受宏展开的限制。
+*标记字符串* 是表示特定编译器指令和参数（如果有）的一系列字符。 数字符号 (**`#`**) 必须是包含的行中的第一个非空白字符 pragma 。 空白字符可以分隔数字符号和词 " pragma "。 下面 **`#pragma`** ，编写转换器可分析为预处理标记的任何文本。 的参数 **`#pragma`** 受宏展开的限制。
 
 *字符串文本* 是的输入 `_Pragma` 。 删除外部引号和前导/尾随空格。 `\"` 将替换为 `"` ，并 `\\` 将替换为 `\` 。
 
-编译器在找到它无法识别的杂注时发出警告并继续编译。
+当编译器发现 pragma 它无法识别的时，它会发出警告并继续编译。
 
-Microsoft C 和 C++ 编译器识别以下杂注：
+Microsoft C 和 c + + 编译器识别以下 pragma 指令：
 
 :::row:::
    :::column span="":::
@@ -63,6 +65,7 @@ Microsoft C 和 C++ 编译器识别以下杂注：
    :::column-end:::
    :::column span="":::
       [`detect_mismatch`](../preprocessor/detect-mismatch.md)\
+      [`endregion`](../preprocessor/region-endregion.md)\
       [`fenv_access`](../preprocessor/fenv-access.md)\
       [`float_control`](../preprocessor/float-control.md)\
       [`fp_contract`](../preprocessor/fp-contract.md)\
@@ -88,7 +91,7 @@ Microsoft C 和 C++ 编译器识别以下杂注：
    :::column span="":::
       [`pop_macro`](../preprocessor/pop-macro.md)\
       [`push_macro`](../preprocessor/push-macro.md)\
-      [`region`，endregion](../preprocessor/region-endregion.md)\
+      [`region`](../preprocessor/region-endregion.md)\
       [`runtime_checks`](../preprocessor/runtime-checks.md)\
       [`section`](../preprocessor/section.md)\
       [`setlocale`](../preprocessor/setlocale.md)\
@@ -101,9 +104,9 @@ Microsoft C 和 C++ 编译器识别以下杂注：
 
 <sup>1</sup> 仅由 c + + 编译器支持。
 
-## <a name="pragmas-and-compiler-options"></a>杂注和编译器选项
+## <a name="pragma-directives-and-compiler-options"></a>Pragma 指令和编译器选项
 
-某些杂注提供与编译器选项相同的功能。 在源代码中遇到杂注时，将重写编译器选项所指定的行为。 例如，如果指定了 [`/Zp8`](../build/reference/zp-struct-member-alignment.md) ，则可以通过以下方式替代代码的特定部分的此编译器设置 [`pack`](../preprocessor/pack.md) ：
+某些 pragma 指令提供与编译器选项相同的功能。 当 pragma 在源代码中到达时，它将重写编译器选项指定的行为。 例如，如果指定了 [`/Zp8`](../build/reference/zp-struct-member-alignment.md) ，则可以通过以下方式替代代码的特定部分的此编译器设置 [`pack`](../preprocessor/pack.md) ：
 
 ```cmd
 cl /Zp8 some_file.cpp
@@ -118,7 +121,7 @@ cl /Zp8 some_file.cpp
 // ...
 ```
 
-## <a name="the-__pragma-keyword"></a>`__pragma()` 关键字
+## <a name="the-__no-locpragma-keyword"></a>`__pragma()` 关键字
 
 编译器还支持 Microsoft 特定的 **`__pragma`** 关键字，该关键字具有与指令相同的功能 **`#pragma`** 。 差别在于， **`__pragma`** 关键字可在宏定义中以内联方式使用。 **`#pragma`** 指令在宏定义中无法使用，因为编译器会将指令中的数字符号字符（ ( "# ) "）解释为 [字符串化运算符 ( # )](../preprocessor/stringizing-operator-hash.md)。
 
@@ -146,7 +149,7 @@ return _hr; \
 
 `_Pragma` 类似于 Microsoft 特定的 [`__pragma`](#the-__pragma-keyword) 关键字，只不过它是标准的一部分。 它是在 C99 中为 C 引入的。 对于 c + +，它是在 c + + 11 中引入的。
 
- 它允许将杂注放入宏定义中。 它有一个前导下划线 `_` ，而不是由 Microsoft 特定的关键字拥有的两个前导下划线 `__` ，第一个字母大写。
+ 它允许将指令放 pragma 入宏定义中。 它有一个前导下划线 `_` ，而不是由 Microsoft 特定的关键字拥有的两个前导下划线 `__` ，第一个字母大写。
 
 字符串应为后面放置语句的字符串 *`#pragma`* 。 例如：
 
@@ -155,11 +158,11 @@ return _hr; \
 _Pragma ("message( \"the _Pragma way\")") 
 ```
 
-引号和反斜杠应进行转义，如上所示。 忽略无法识别的杂注字符串。
+引号和反斜杠应进行转义，如上所示。 不 pragma 识别的字符串将被忽略。
 
 下面的代码示例演示 **`_Pragma`** 当条件表达式恰好为常量时，如果不希望收到警告，则在类似于断言的宏中如何使用关键字。 
 
-宏定义为多语句宏使用 do/while (0) 方法，以便可以像使用一个语句一样使用它。 有关详细信息，请参阅 Stack Overflow 上的 [C 多行宏](https://stackoverflow.com/questions/1067226/c-multi-line-macro-do-while0-vs-scope-block) 。 _Pragma 语句仅适用于其后的代码行。
+宏定义 `do` - `while(0)` 为多语句宏使用了方法，以便可以像使用一个语句一样使用它。 有关详细信息，请参阅 Stack Overflow 上的 [C 多行宏](https://stackoverflow.com/questions/1067226/c-multi-line-macro-do-while0-vs-scope-block) 。 **`_Pragma`** 语句仅适用于其后的代码行。
 
 ```C
 // Compile with /W4
@@ -187,5 +190,5 @@ int main()
 ## <a name="see-also"></a>另请参阅
 
 [C/C++ 预处理器参考](../preprocessor/c-cpp-preprocessor-reference.md)\
-[C 杂注](../c-language/c-pragmas.md)\
+[C pragma 指令](../c-language/c-pragmas.md)\
 [关键字](../cpp/keywords-cpp.md)

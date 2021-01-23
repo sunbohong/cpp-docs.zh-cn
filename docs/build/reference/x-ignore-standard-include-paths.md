@@ -1,7 +1,7 @@
 ---
 description: '了解详细信息： `/X` (忽略标准包含路径) '
 title: /X（忽略标准包含路径）
-ms.date: 07/31/2020
+ms.date: 01/21/2021
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 69936b80893de2c45622ec9973a218a94e8029a4
-ms.sourcegitcommit: d6af41e42699628c3e2e6063ec7b03931a49a098
+ms.openlocfilehash: 97d19027c41df7db9103c1c21d2f2d7b8d398e7e
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97261003"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712799"
 ---
 # <a name="x-ignore-standard-include-paths"></a>`/X` (忽略标准包含路径) 
 
-阻止编译器在路径中指定的目录中搜索包含文件，并包括环境变量。
+阻止编译器在 `PATH` 和环境变量中指定的目录中搜索包含文件 `INCLUDE` 。
 
 ## <a name="syntax"></a>语法
 
@@ -48,13 +48,13 @@ ms.locfileid: "97261003"
 
 ## <a name="example"></a>示例
 
-在下面的命令中， **`/X`** 通知编译器忽略由路径指定的位置并包含环境变量，并 **`/I`** 指定要在其中查找包含文件的目录：
+在下面的命令中， **`/X`** 通知编译器忽略由 `PATH` 和环境变量指定的位置 `INCLUDE` ，并 **`/I`** 指定要在其中查找包含文件的目录：
 
 ```cmd
 CL /X /I \ALT\INCLUDE MAIN.C
 ```
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 [MSVC 编译器选项](compiler-options.md)<br/>
 [MSVC 编译器命令行语法](compiler-command-line-syntax.md)

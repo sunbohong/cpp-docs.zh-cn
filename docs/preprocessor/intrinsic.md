@@ -1,34 +1,35 @@
 ---
-title: intrinsic 杂注
-description: MSVC 内部杂注用于指定要用作内部函数的支持的内部函数。
-ms.date: 07/08/2020
+title: 内在 pragma
+description: MSVC 内部 pragma 函数用于指定要用作内部函数的支持的内部函数。
+ms.date: 01/22/2021
 f1_keywords:
 - intrinsic_CPP
 - vc-pragma.intrinsic
 helpviewer_keywords:
 - intrinsic pragma
-- pragmas, intrinsic
-ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
-ms.openlocfilehash: 45a5a13f3bda3657b93e1a89e7a842a4465b01d5
-ms.sourcegitcommit: 6280a4c629de0f638ebc2edd446de2a9b11f0406
+- pragma, intrinsic
+no-loc:
+- pragma
+ms.openlocfilehash: 618705c42c20baf2b99f89e138b30d5633b9e592
+ms.sourcegitcommit: a26a66a3cf479e0e827d549a9b850fad99b108d1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90041102"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98713540"
 ---
-# <a name="intrinsic-pragma"></a>`intrinsic` 杂注
+# <a name="intrinsic-no-locpragma"></a>`intrinsic` pragma
 
-指定对杂注参数列表中指定的函数的调用是内部的。
+指定对的参数列表中指定的函数的调用 pragma 是内部的。
 
 ## <a name="syntax"></a>语法
 
-> **`#pragma intrinsic(`** *`function1`* [**`,`** _`function2`_ ... ] **`)`**
+> **`#pragma intrinsic(`***function_1* [ **`,`** *function_2* ...]**`)`**
 
-## <a name="remarks"></a>备注
+## <a name="remarks"></a>注解
 
-**`intrinsic`** 杂注告诉编译器函数具有已知行为。 编译器可以调用函数，并且不将函数调用替换为内联说明（如果将实现更好的性能）。
+**`intrinsic`** pragma 指示编译器函数具有已知行为。 编译器可以调用函数，并且不将函数调用替换为内联说明（如果将实现更好的性能）。
 
-下面列出了带内部形式的库函数。 **`intrinsic`** 检测到杂注后，它会在包含指定内部函数的第一个函数定义处生效。 该效果将继续到源文件末尾或 `function` 指定相同内部函数的杂注的外观。 **`intrinsic`** 杂注只能在全局级别的函数定义之外使用。
+下面列出了带内部形式的库函数。 一旦 **`intrinsic`** pragma 检测到，它将在包含指定内部函数的第一个函数定义处生效。 该效果将继续到源文件末尾或 `function` pragma 指定相同内部函数的的外观。 在 **`intrinsic`** pragma 全局级别，只能在函数定义之外使用。
 
 以下函数具有内部形式，当你指定时，将使用内部形式的窗体 [`/Oi`](../build/reference/oi-generate-intrinsic-functions.md) ：
 
@@ -137,5 +138,5 @@ int main() {
 
 ## <a name="see-also"></a>另请参阅
 
-[Pragma 指令和 `__pragma` 关键字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[杂注指令和 `__pragma` 和 `_Pragma` 关键字](./pragma-directives-and-the-pragma-keyword.md)\
 [编译器内部函数](../intrinsics/compiler-intrinsics.md)
