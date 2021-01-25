@@ -55,6 +55,8 @@
       href: ../build/cmake-projects-in-visual-studio.md
     - name: 教程：在 Visual Studio 中创建 C++ 跨平台项目
       href: ../build/get-started-linux-cmake.md
+    - name: 教程：远程运行和调试 CMake 项目
+      href: ../build/cmake-remote-debugging.md
     - name: CMake 项目中的 Clang/LLVM
       href: ../build/clang-support-cmake.md
     - name: 配置 Linux CMake 项目
@@ -1086,7 +1088,7 @@
               href: ../build/reference/specifying-dlls-to-delay-load.md
             - name: 显式卸载延迟加载的 DLL
               href: ../build/reference/explicitly-unloading-a-delay-loaded-dll.md
-            - name: 绑定导入
+            - name: 绑定延迟加载的导入
               href: ../build/reference/binding-imports.md
             - name: 加载被延迟加载的 DLL 的所有导入
               href: ../build/reference/loading-all-imports-for-a-delay-loaded-dll.md
@@ -1105,10 +1107,10 @@
               href: ../build/reference/dumping-delay-loaded-imports.md
             - name: 延迟加载 DLL 的约束
               href: ../build/reference/constraints-of-delay-loading-dlls.md
-            - name: 了解 Helper 函数
+            - name: 了解针对延迟加载的 helper 函数
               expanded: false
               items:
-                - name: 了解 Helper 函数
+                - name: 了解 helper 函数
                   href: ../build/reference/understanding-the-helper-function.md
                 - name: 自 Visual C++ 6.0 以来 DLL 延迟加载 Helper 函数所做的更改
                   href: ../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md
@@ -1120,7 +1122,7 @@
                   href: ../build/reference/calculating-necessary-values.md
                 - name: 卸载延迟加载的 DLL
                   href: ../build/reference/unloading-a-delay-loaded-dll.md
-            - name: 开发自己的 Helper 函数
+            - name: 开发自己的 helper 函数
               href: ../build/reference/developing-your-own-helper-function.md
     - name: 其他 MSVC 生成工具
       expanded: false
