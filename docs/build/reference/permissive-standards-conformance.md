@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: ae4ab62f6027d984217d750294f16138a6969f16
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: c8d654540deb492a5bebff304ef01ca4c71f044a
+ms.sourcegitcommit: 74e58bee5cffb30b66e17be6dbfde2544369638e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448472"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98763818"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive-（标准符合性）
 
@@ -140,6 +140,8 @@ void g() {
     f(p); // Hidden friend now found via argument-dependent lookup.
 }
 ```
+
+您可以使用单独启用隐藏的 friend name 查找规则 **`/permissive`** [`/Zc:hiddenFriend`](./zc-hiddenfriend.md) 。 如果希望隐藏的友元名称查找的行为相同，但需要 **`/permissive-`** 行为，请使用 **`/Zc:hiddenFriend-`** 选项。
 
 #### <a name="use-scoped-enums-in-array-bounds"></a>在数组边界内使用范围枚举
 
@@ -450,17 +452,17 @@ Windows 2018 年4月更新 SDK (10.0.17134.0) 、Windows 秋季创意者更新 S
 
 1. 打开项目的 " **属性页** " 对话框。
 
-1. 选择 " **配置属性** " "  >  **c/c + +**  >  **语言** " 属性页。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **语言**" 属性页。
 
-1. 将 **一致性模式** 属性值更改为 **Yes (/permissive-)** 。 选择 **"确定" 或 "** **应用** " 保存更改。
+1. 将 **一致性模式** 属性值更改为 **Yes (/permissive-)**。 选择 **"确定" 或 "** **应用** " 保存更改。
 
 在 Visual Studio 2017 版本15.5 之前的版本中，使用此过程：
 
 1. 打开项目的 " **属性页** " 对话框。
 
-1. 选择 " **配置属性** " "  >  **c/c + +**  >  **命令行** " 属性页。
+1. 选择 "**配置属性**" "  >  **c/c + +**  >  **命令行**" 属性页。
 
-1. 在 " **附加选项** " 框中输入 **/permissive-** 编译器选项。 选择 **"确定" 或 "** **应用** " 保存更改。
+1. 在 "**附加选项**" 框中输入 **/permissive-** 编译器选项。 选择 **"确定" 或 "** **应用** " 保存更改。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>以编程方式设置此编译器选项
 
