@@ -761,6 +761,8 @@
                       href: ../build/reference/zc-externconstexpr.md
                     - name: '/Zc:forScope（强制 for 循环范围中的一致性）'
                       href: ../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md
+                    - name: '/Zc:hiddenFriend（强制实施标准 C++ 隐藏好友规则）'
+                      href: ../build/reference/zc-hiddenfriend.md
                     - name: '/Zc:implicitNoexcept（隐式异常说明符）'
                       href: ../build/reference/zc-implicitnoexcept-implicit-exception-specifiers.md
                     - name: '/Zc:inline（移除未引用的 COMDAT）'
