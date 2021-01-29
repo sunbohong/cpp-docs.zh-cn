@@ -3,12 +3,12 @@ title: C++ 的符合性改进
 description: Visual Studio 中的 Microsoft C++ 正朝着完全符合 C++20 语言标准的方向发展。
 ms.date: 11/10/2020
 ms.technology: cpp-language
-ms.openlocfilehash: ff4d75626b75c55e001601ef7005bc23be60869d
-ms.sourcegitcommit: 25f6d52eb9e5d84bd0218c46372db85572af81da
+ms.openlocfilehash: 251f4cd4add40356b14dfdb878a09418171387d2
+ms.sourcegitcommit: 74e58bee5cffb30b66e17be6dbfde2544369638e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94448485"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98763869"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 符合性改进
 
@@ -1480,7 +1480,7 @@ option 最常见的值为：
 | 选项 | 说明 |
 |--|--|
 | **`/Zc:twoPhase-`** | 对于 C++20 模块，两阶段名称查找是必需的，并由 `permissive-` 包含。 |
-| **`/Zc:hiddenFriend-`** | 启用标准隐藏朋友名称查找规则。 对于 C++20 模块，是必需的，并由 `permissive-` 包含。 |
+| **`/Zc:hiddenFriend-`** | 对于 C++20 模块，标准隐藏朋友名称查找规则是必需的，并且由 `permissive-` 所包含。 |
 | **`/Zc:preprocessor-`** | 仅 C++20 标头单元使用和创建需要符合性预处理器。 命名模块无需此选项。 |
 
 若要使用 Visual Studio 随附的 `std.*` 模块，仍需使用 [`/experimental:module`](../build/reference/experimental-module.md) 选项，因为这些模块尚未标准化。
